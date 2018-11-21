@@ -1,0 +1,44 @@
+c_files/pr17844-1.c:12:9: warning: incompatible pointer types initializing 'enum e *' with an expression of type 'unsigned char *' [-Wincompatible-pointer-types]
+enum e *ep = &uv;
+        ^    ~~~
+c_files/pr17844-1.c:13:16: warning: incompatible pointer types initializing 'unsigned char *' with an expression of type 'enum e *' [-Wincompatible-pointer-types]
+unsigned char *up = &ev;
+               ^    ~~~
+2 warnings generated.
+TranslationUnitDecl 0x7fd9980264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd998026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd998026740 '__int128'
+|-TypedefDecl 0x7fd998026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd998026760 'unsigned __int128'
+|-TypedefDecl 0x7fd998026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd998026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd998026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd998026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd998026dc0 'char *'
+|   `-BuiltinType 0x7fd998026560 'char'
+|-TypedefDecl 0x7fd9980270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd998027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd998026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd998026e58 '__va_list_tag'
+|-EnumDecl 0x7fd998027120 <c_files/pr17844-1.c:8:1, col:15> col:6 e
+| |-EnumConstantDecl 0x7fd998825a00 <col:10> col:10 referenced A 'int'
+| `-EnumConstantDecl 0x7fd998825a48 <col:13> col:13 referenced B 'int'
+|-VarDecl 0x7fd998825ae0 <line:10:1, col:8> col:8 used ev 'enum e':'enum e'
+|-VarDecl 0x7fd998825b98 <line:11:1, col:15> col:15 used uv 'unsigned char'
+|-VarDecl 0x7fd998825c80 <line:12:1, col:15> col:9 ep 'enum e *' cinit
+| `-ImplicitCastExpr 0x7fd998825d58 <col:14, col:15> 'enum e *' <BitCast>
+|   `-UnaryOperator 0x7fd998825d38 <col:14, col:15> 'unsigned char *' prefix '&'
+|     `-DeclRefExpr 0x7fd998825ce0 <col:15> 'unsigned char' lvalue Var 0x7fd998825b98 'uv' 'unsigned char'
+|-VarDecl 0x7fd998826138 <line:13:1, col:22> col:16 up 'unsigned char *' cinit
+| `-ImplicitCastExpr 0x7fd9988261e0 <col:21, col:22> 'unsigned char *' <BitCast>
+|   `-UnaryOperator 0x7fd9988261c0 <col:21, col:22> 'enum e *' prefix '&'
+|     `-DeclRefExpr 0x7fd998826198 <col:22> 'enum e':'enum e' lvalue Var 0x7fd998825ae0 'ev' 'enum e':'enum e'
+|-VarDecl 0x7fd998826210 <line:15:1, col:5> col:5 used i 'int'
+|-VarDecl 0x7fd9988262f8 <line:16:1, col:15> col:15 used te 'typeof (A)':'int'
+|-VarDecl 0x7fd9988263a0 <line:17:1, col:12> col:6 ip 'int *' cinit
+| `-UnaryOperator 0x7fd998826458 <col:11, col:12> 'typeof (A) *' prefix '&'
+|   `-DeclRefExpr 0x7fd998826400 <col:12> 'typeof (A)':'int' lvalue Var 0x7fd9988262f8 'te' 'typeof (A)':'int'
+|-VarDecl 0x7fd998826520 <line:18:1, col:23> col:16 tep 'typeof (B) *' cinit
+| `-UnaryOperator 0x7fd9988265a8 <col:22, col:23> 'int *' prefix '&'
+|   `-DeclRefExpr 0x7fd998826580 <col:23> 'int' lvalue Var 0x7fd998826210 'i' 'int'
+`-VarDecl 0x7fd9988267c0 <line:20:1, col:44> col:5 x 'int [1]'

@@ -1,0 +1,93 @@
+FileAST: 
+  Decl: au, [], [], []
+    ArrayDecl: []
+      TypeDecl: au, []
+        IdentifierType: ['int']
+      Constant: int, 4
+    InitList: 
+      Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: dc, [], [], []
+        TypeDecl: dc, []
+          IdentifierType: ['int']
+      Decl: m7, [], [], []
+        TypeDecl: m7, []
+          IdentifierType: ['int']
+      Decl: lv, [], [], []
+        TypeDecl: lv, []
+          IdentifierType: ['int']
+      Decl: f2, [], [], []
+        TypeDecl: f2, []
+          IdentifierType: ['int']
+      Decl: uq, [], [], []
+        ArrayDecl: []
+          TypeDecl: uq, []
+            IdentifierType: ['int']
+          Constant: int, 3
+        InitList: 
+          Constant: int, 1
+      For: 
+        Assignment: =
+          ID: dc
+          Constant: int, 0
+        BinaryOp: <
+          ID: dc
+          Constant: int, 2
+        UnaryOp: ++
+          ID: dc
+        Compound: 
+          For: 
+            Assignment: =
+              ID: lv
+              Constant: int, 0
+            BinaryOp: <
+              ID: lv
+              Constant: int, 2
+            UnaryOp: ++
+              ID: lv
+            For: 
+              Assignment: =
+                ID: m7
+                Constant: int, 0
+              BinaryOp: <
+                ID: m7
+                Constant: int, 3
+              UnaryOp: ++
+                ID: m7
+              Compound: 
+                If: 
+                  BinaryOp: ==
+                    ArrayRef: 
+                      ID: uq
+                      ID: dc
+                    Constant: int, 0
+                  Continue: 
+                For: 
+                  Assignment: =
+                    ID: f2
+                    Constant: int, 0
+                  BinaryOp: <
+                    ID: f2
+                    Constant: int, 3
+                  UnaryOp: ++
+                    ID: f2
+                  Assignment: =
+                    ArrayRef: 
+                      ID: au
+                      BinaryOp: +
+                        ID: dc
+                        Constant: int, 2
+                    ArrayRef: 
+                      ID: uq
+                      ID: f2
+      Return: 
+        Constant: int, 0

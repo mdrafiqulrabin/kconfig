@@ -1,0 +1,133 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['int']
+        TypeDecl: f1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: |=
+        ArrayRef: 
+          ID: x
+          BinaryOp: /
+            ID: z
+            Constant: int, 8
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+          BinaryOp: >>
+            Constant: int, 0x80
+            ID: y
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: f2, []
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Assignment: =
+        ID: x
+        BinaryOp: |
+          ID: x
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'char']
+            BinaryOp: >>
+              Constant: int, 0x80
+              ID: y
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: f3, []
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Assignment: =
+        ID: x
+        BinaryOp: |
+          ID: x
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'char']
+            BinaryOp: &
+              ID: y
+              Constant: int, 255
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: f4, []
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Assignment: =
+        ID: x
+        BinaryOp: |
+          ID: x
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'char']
+            BinaryOp: &
+              ID: y
+              Constant: int, 255
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: f5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: f5, []
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Assignment: =
+        ID: x
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+          BinaryOp: &
+            ID: y
+            Constant: int, 255
+      Return: 
+        ID: x

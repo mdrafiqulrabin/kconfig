@@ -1,0 +1,120 @@
+c_files/pr60196-2.c:3:10: fatal error: 'tree-vect.h' file not found
+#include "tree-vect.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fe86e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe86e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe86e026740 '__int128'
+|-TypedefDecl 0x7fe86e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe86e026760 'unsigned __int128'
+|-TypedefDecl 0x7fe86e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe86e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe86e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe86e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe86e026dc0 'char *'
+|   `-BuiltinType 0x7fe86e026560 'char'
+|-TypedefDecl 0x7fe86e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe86e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe86e026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe86e026e58 '__va_list_tag'
+|-VarDecl 0x7fe86e078400 <c_files/pr60196-2.c:5:1, col:51> col:20 used a 'const short [8]' static cinit
+| `-InitListExpr 0x7fe86e078620 <col:27, col:51> 'const short [8]'
+|   |-ImplicitCastExpr 0x7fe86e0786a0 <col:28> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe86e0784a0 <col:28> 'int' 1
+|   |-ImplicitCastExpr 0x7fe86e0786b8 <col:31> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe86e0784c0 <col:31> 'int' 1
+|   |-ImplicitCastExpr 0x7fe86e0786d0 <col:34> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe86e0784e0 <col:34> 'int' 1
+|   |-ImplicitCastExpr 0x7fe86e0786e8 <col:37> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe86e078500 <col:37> 'int' 1
+|   |-ImplicitCastExpr 0x7fe86e078700 <col:40> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe86e078520 <col:40> 'int' 1
+|   |-ImplicitCastExpr 0x7fe86e078718 <col:43> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe86e078540 <col:43> 'int' 1
+|   |-ImplicitCastExpr 0x7fe86e078730 <col:46> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe86e078560 <col:46> 'int' 1
+|   `-ImplicitCastExpr 0x7fe86e078748 <col:49> 'short' <IntegralCast>
+|     `-IntegerLiteral 0x7fe86e078580 <col:49> 'int' 1
+|-VarDecl 0x7fe86e078820 <line:6:1, col:59> col:28 used b 'const unsigned char [8]' static cinit
+| `-InitListExpr 0x7fe86e078a00 <col:35, col:59> 'const unsigned char [8]'
+|   |-ImplicitCastExpr 0x7fe86e078a80 <col:36> 'unsigned char' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe86e078880 <col:36> 'int' 0
+|   |-ImplicitCastExpr 0x7fe86e078a98 <col:39> 'unsigned char' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe86e0788a0 <col:39> 'int' 0
+|   |-ImplicitCastExpr 0x7fe86e078ab0 <col:42> 'unsigned char' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe86e0788c0 <col:42> 'int' 0
+|   |-ImplicitCastExpr 0x7fe86e078ac8 <col:45> 'unsigned char' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe86e0788e0 <col:45> 'int' 0
+|   |-ImplicitCastExpr 0x7fe86e078ae0 <col:48> 'unsigned char' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe86e078900 <col:48> 'int' 0
+|   |-ImplicitCastExpr 0x7fe86e078af8 <col:51> 'unsigned char' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe86e078920 <col:51> 'int' 0
+|   |-ImplicitCastExpr 0x7fe86e078b10 <col:54> 'unsigned char' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe86e078940 <col:54> 'int' 0
+|   `-ImplicitCastExpr 0x7fe86e078b28 <col:57> 'unsigned char' <IntegralCast>
+|     `-IntegerLiteral 0x7fe86e078960 <col:57> 'int' 0
+|-FunctionDecl 0x7fe86e078c08 <line:8:1, line:15:1> line:9:1 used bar 'int (void)' static
+| |-CompoundStmt 0x7fe86e079280 <line:10:1, line:15:1>
+| | |-DeclStmt 0x7fe86e078e10 <line:11:3, col:17>
+| | | |-VarDecl 0x7fe86e078d00 <col:3, col:13> col:7 used sum 'int' cinit
+| | | | `-IntegerLiteral 0x7fe86e078d60 <col:13> 'int' 0
+| | | `-VarDecl 0x7fe86e078d98 <col:3, col:16> col:16 used i 'int'
+| | |-ForStmt 0x7fe86e0791f0 <line:12:3, line:13:22>
+| | | |-BinaryOperator 0x7fe86e078e70 <line:12:8, col:12> 'int' '='
+| | | | |-DeclRefExpr 0x7fe86e078e28 <col:8> 'int' lvalue Var 0x7fe86e078d98 'i' 'int'
+| | | | `-IntegerLiteral 0x7fe86e078e50 <col:12> 'int' 0
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fe86e078ef8 <col:15, col:19> 'int' '<'
+| | | | |-ImplicitCastExpr 0x7fe86e078ee0 <col:15> 'int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fe86e078e98 <col:15> 'int' lvalue Var 0x7fe86e078d98 'i' 'int'
+| | | | `-IntegerLiteral 0x7fe86e078ec0 <col:19> 'int' 8
+| | | |-UnaryOperator 0x7fe86e078f48 <col:22, col:24> 'int' prefix '++'
+| | | | `-DeclRefExpr 0x7fe86e078f20 <col:24> 'int' lvalue Var 0x7fe86e078d98 'i' 'int'
+| | | `-CompoundAssignOperator 0x7fe86e0791b8 <line:13:5, col:22> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+| | |   |-DeclRefExpr 0x7fe86e078f68 <col:5> 'int' lvalue Var 0x7fe86e078d00 'sum' 'int'
+| | |   `-BinaryOperator 0x7fe86e079190 <col:12, col:22> 'int' '*'
+| | |     |-ImplicitCastExpr 0x7fe86e079148 <col:12, col:15> 'int' <IntegralCast>
+| | |     | `-ImplicitCastExpr 0x7fe86e079130 <col:12, col:15> 'short' <LValueToRValue>
+| | |     |   `-ArraySubscriptExpr 0x7fe86e079038 <col:12, col:15> 'const short' lvalue
+| | |     |     |-ImplicitCastExpr 0x7fe86e079008 <col:12> 'const short *' <ArrayToPointerDecay>
+| | |     |     | `-DeclRefExpr 0x7fe86e078f90 <col:12> 'const short [8]' lvalue Var 0x7fe86e078400 'a' 'const short [8]'
+| | |     |     `-ImplicitCastExpr 0x7fe86e079020 <col:14> 'int' <LValueToRValue>
+| | |     |       `-DeclRefExpr 0x7fe86e078fb8 <col:14> 'int' lvalue Var 0x7fe86e078d98 'i' 'int'
+| | |     `-ImplicitCastExpr 0x7fe86e079178 <col:19, col:22> 'int' <IntegralCast>
+| | |       `-ImplicitCastExpr 0x7fe86e079160 <col:19, col:22> 'unsigned char' <LValueToRValue>
+| | |         `-ArraySubscriptExpr 0x7fe86e079108 <col:19, col:22> 'const unsigned char' lvalue
+| | |           |-ImplicitCastExpr 0x7fe86e0790d8 <col:19> 'const unsigned char *' <ArrayToPointerDecay>
+| | |           | `-DeclRefExpr 0x7fe86e079060 <col:19> 'const unsigned char [8]' lvalue Var 0x7fe86e078820 'b' 'const unsigned char [8]'
+| | |           `-ImplicitCastExpr 0x7fe86e0790f0 <col:21> 'int' <LValueToRValue>
+| | |             `-DeclRefExpr 0x7fe86e079088 <col:21> 'int' lvalue Var 0x7fe86e078d98 'i' 'int'
+| | `-ReturnStmt 0x7fe86e079268 <line:14:3, col:10>
+| |   `-ImplicitCastExpr 0x7fe86e079250 <col:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fe86e079228 <col:10> 'int' lvalue Var 0x7fe86e078d00 'sum' 'int'
+| `-NoInlineAttr 0x7fe86e078ca0 <line:8:16>
+|-FunctionDecl 0x7fe86e07a400 <line:17:1, line:22:1> line:18:1 used foo 'void (void)'
+| |-CompoundStmt 0x7fe86e07a750 <line:19:1, line:22:1>
+| | `-IfStmt 0x7fe86e07a718 <line:20:3, line:21:12>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fe86e07a598 <line:20:7, col:17> 'int' '!='
+| |   | |-CallExpr 0x7fe86e07a550 <col:7, col:12> 'int'
+| |   | | `-ImplicitCastExpr 0x7fe86e07a538 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+| |   | |   `-DeclRefExpr 0x7fe86e07a4e0 <col:7> 'int (void)' Function 0x7fe86e078c08 'bar' 'int (void)'
+| |   | `-IntegerLiteral 0x7fe86e07a578 <col:17> 'int' 0
+| |   |-CallExpr 0x7fe86e07a6f0 <line:21:5, col:12> 'void'
+| |   | `-ImplicitCastExpr 0x7fe86e07a6d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   |   `-DeclRefExpr 0x7fe86e07a688 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fe86e07a5f0 'abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7fe86e07a498 <line:17:16>
+|-FunctionDecl 0x7fe86e07a5f0 <line:21:5> col:5 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe86e07a7c0 <line:24:1, line:30:1> line:25:1 main 'int ()'
+| `-CompoundStmt 0x7fe86e07aa70 <line:26:1, line:30:1>
+|   |-CallExpr 0x7fe86e07a980 <line:27:3, col:15> 'int'
+|   | `-ImplicitCastExpr 0x7fe86e07a968 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fe86e07a918 <col:3> 'int ()' Function 0x7fe86e07a880 'check_vect' 'int ()'
+|   |-CallExpr 0x7fe86e07aa10 <line:28:3, col:8> 'void'
+|   | `-ImplicitCastExpr 0x7fe86e07a9f8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fe86e07a9a8 <col:3> 'void (void)' Function 0x7fe86e07a400 'foo' 'void (void)'
+|   `-ReturnStmt 0x7fe86e07aa58 <line:29:3, col:10>
+|     `-IntegerLiteral 0x7fe86e07aa38 <col:10> 'int' 0
+`-FunctionDecl 0x7fe86e07a880 <<invalid sloc>> line:27:3 implicit used check_vect 'int ()'

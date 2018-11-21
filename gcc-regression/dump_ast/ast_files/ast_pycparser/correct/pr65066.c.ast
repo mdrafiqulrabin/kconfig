@@ -1,0 +1,31 @@
+FileAST: 
+  Decl: sscanf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: ['restrict']
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        Typename: None, ['const']
+          PtrDecl: ['restrict']
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        EllipsisParam: 
+      TypeDecl: sscanf, []
+        IdentifierType: ['int']
+  Decl: a, [], [], []
+    PtrDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: sscanf
+        ExprList: 
+          Constant: int, 0
+          Constant: string, "0x%x  #"
+          ID: a

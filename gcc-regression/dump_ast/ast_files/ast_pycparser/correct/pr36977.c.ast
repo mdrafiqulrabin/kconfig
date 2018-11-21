@@ -1,0 +1,121 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: cbig, [], [], []
+        TypeDecl: cbig, []
+          Struct: None
+            Decl: c, [], [], []
+              ArrayDecl: []
+                TypeDecl: c, []
+                  IdentifierType: ['char']
+                Constant: int, 100
+      Decl: ibig, [], [], []
+        TypeDecl: ibig, []
+          Struct: None
+            Decl: i, [], [], []
+              ArrayDecl: []
+                TypeDecl: i, []
+                  IdentifierType: ['int']
+                Constant: int, 800
+      Decl: lbig, [], [], []
+        TypeDecl: lbig, []
+          Struct: None
+            Decl: l, [], [], []
+              ArrayDecl: []
+                TypeDecl: l, []
+                  IdentifierType: ['long']
+                Constant: int, 900
+      Decl: fbig, [], [], []
+        TypeDecl: fbig, []
+          Struct: None
+            Decl: f, [], [], []
+              ArrayDecl: []
+                TypeDecl: f, []
+                  IdentifierType: ['float']
+                Constant: int, 200
+      Decl: dbig, [], [], []
+        TypeDecl: dbig, []
+          Struct: None
+            Decl: d, [], [], []
+              ArrayDecl: []
+                TypeDecl: d, []
+                  IdentifierType: ['double']
+                Constant: int, 300
+      Decl: sbig, [], [], []
+        TypeDecl: sbig, []
+          Struct: None
+            Decl: s, [], [], []
+              ArrayDecl: []
+                TypeDecl: s, []
+                  IdentifierType: ['short']
+                Constant: int, 400
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: ibig
+            ID: i
+          Constant: int, 0
+        Constant: int, 55
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: ibig
+            ID: i
+          Constant: int, 100
+        Constant: int, 5
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: cbig
+            ID: c
+          Constant: int, 0
+        Constant: char, '\0'
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: cbig
+            ID: c
+          Constant: int, 99
+        Constant: char, 'A'
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: fbig
+            ID: f
+          Constant: int, 100
+        Constant: float, 11.0
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: dbig
+            ID: d
+          Constant: int, 202
+        Constant: float, 9.0
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: sbig
+            ID: s
+          Constant: int, 90
+        Constant: int, 255
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: lbig
+            ID: l
+          Constant: int, 333
+        Constant: int, 999
+      FuncCall: 
+        ID: foo
+      Return: 
+        Constant: int, 0

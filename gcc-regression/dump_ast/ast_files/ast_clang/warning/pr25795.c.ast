@@ -1,0 +1,23 @@
+c_files/pr25795.c:7:35: warning: unknown attribute 'externally_visible' ignored [-Wunknown-attributes]
+const char *mystr __attribute__ ((externally_visible));
+                                  ^
+1 warning generated.
+TranslationUnitDecl 0x7f92728264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9272826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9272826740 '__int128'
+|-TypedefDecl 0x7f9272826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9272826760 'unsigned __int128'
+|-TypedefDecl 0x7f9272826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9272826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9272826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9272826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9272826dc0 'char *'
+|   `-BuiltinType 0x7f9272826560 'char'
+|-TypedefDecl 0x7f92728270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9272827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9272826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9272826e58 '__va_list_tag'
+|-VarDecl 0x7f9272827138 <c_files/pr25795.c:6:1, col:20> col:20 mystr 'const char *' extern
+|-VarDecl 0x7f9272878400 prev 0x7f9272827138 <line:7:1, col:13> col:13 mystr 'const char *'
+`-FunctionDecl 0x7f92728784b0 <line:8:1, line:11:1> line:9:1 main 'int ()'
+  `-CompoundStmt 0x7f9272878548 <line:10:1, line:11:1>

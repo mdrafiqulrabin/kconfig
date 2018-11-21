@@ -1,0 +1,57 @@
+FileAST: 
+  Decl: block, ['const'], [], []
+    PtrDecl: []
+      TypeDecl: block, ['const']
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: final, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: final, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: data, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: data, ['const']
+            IdentifierType: ['unsigned', 'char']
+        Cast: 
+          Typename: None, ['const']
+            PtrDecl: []
+              TypeDecl: None, ['const']
+                IdentifierType: ['unsigned', 'char']
+          Constant: string, "\0"
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 8
+        UnaryOp: p++
+          ID: i
+        For: 
+          BinaryOp: <
+            BinaryOp: +
+              ID: j
+              Constant: int, 63
+            Constant: int, 1
+          Assignment: +=
+            ID: j
+            Constant: int, 64
+          Assignment: =
+            ID: block
+            Cast: 
+              Typename: None, ['const']
+                PtrDecl: []
+                  TypeDecl: None, ['const']
+                    IdentifierType: ['int']
+              UnaryOp: &
+                ArrayRef: 
+                  ID: data
+                  ID: j

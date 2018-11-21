@@ -1,0 +1,69 @@
+FileAST: 
+  Typedef: ZVALUE, [], ['typedef']
+    TypeDecl: ZVALUE, []
+      Struct: None
+        Decl: v, [], [], []
+          PtrDecl: []
+            TypeDecl: v, []
+              IdentifierType: ['void']
+        Decl: len, [], [], []
+          TypeDecl: len, []
+            IdentifierType: ['int']
+        Decl: sign, [], [], []
+          TypeDecl: sign, []
+            IdentifierType: ['int']
+  Decl: pred, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['ZVALUE']
+      TypeDecl: pred, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: small_factor, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['ZVALUE']
+        TypeDecl: small_factor, []
+          IdentifierType: ['unsigned', 'long']
+    Compound: 
+      If: 
+        BinaryOp: >
+          StructRef: .
+            ID: z
+            ID: len
+          Constant: int, 0
+        Return: 
+          Constant: int, 0
+      Return: 
+        TernaryOp: 
+          FuncCall: 
+            ID: pred
+            ExprList: 
+              ID: z
+          UnaryOp: -
+            Constant: int, 1
+          Constant: int, 0
+  FuncDef: 
+    Decl: zfactor, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['ZVALUE']
+        TypeDecl: zfactor, []
+          IdentifierType: ['unsigned', 'long']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: z
+          ID: sign
+        Constant: int, 0
+      Return: 
+        FuncCall: 
+          ID: small_factor
+          ExprList: 
+            ID: z

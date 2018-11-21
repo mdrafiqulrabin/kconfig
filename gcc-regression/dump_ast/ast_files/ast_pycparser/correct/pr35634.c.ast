@@ -1,0 +1,69 @@
+FileAST: 
+  Decl: abort, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: exit, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: exit, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: n, [], ['static'], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: ||
+          BinaryOp: <
+            ID: i
+            UnaryOp: -
+              Constant: int, 128
+          BinaryOp: >
+            ID: i
+            Constant: int, 127
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: >
+          UnaryOp: ++
+            ID: n
+          Constant: int, 1000
+        FuncCall: 
+          ID: exit
+          ExprList: 
+            Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['signed', 'char']
+      For: 
+        Assignment: =
+          ID: c
+          Constant: int, 0
+        UnaryOp: p++
+          ID: c
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            ID: c

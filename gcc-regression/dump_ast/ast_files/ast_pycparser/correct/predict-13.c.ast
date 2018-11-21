@@ -1,0 +1,40 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argc, [], [], []
+            TypeDecl: argc, []
+              IdentifierType: ['int']
+          Decl: argv, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: argv, []
+                  IdentifierType: ['char']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Switch: 
+        ID: argc
+        Compound: 
+          Case: 
+            Constant: int, 1
+            Return: 
+              Constant: int, 1
+          Case: 
+            Constant: int, 2
+            Return: 
+              Constant: int, 2
+          Case: 
+            Constant: int, 3
+            FuncCall: 
+              ID: __builtin_abort
+          Case: 
+            Constant: int, 4
+            FuncCall: 
+              ID: __builtin_abort
+          Default: 
+            Return: 
+              Constant: int, 5
+      Return: 
+        Constant: int, 10

@@ -1,0 +1,134 @@
+FileAST: 
+  Decl: strcpy, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: s1, [], [], []
+          PtrDecl: []
+            TypeDecl: s1, []
+              IdentifierType: ['char']
+        Decl: s2, ['const'], [], []
+          PtrDecl: []
+            TypeDecl: s2, ['const']
+              IdentifierType: ['char']
+      PtrDecl: []
+        TypeDecl: strcpy, []
+          IdentifierType: ['char']
+  Decl: None, [], [], []
+    Struct: S
+      Decl: s, [], [], []
+        ArrayDecl: []
+          TypeDecl: s, []
+            IdentifierType: ['char']
+          Constant: int, 4
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: y, []
+                  IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: a, ['const']
+            IdentifierType: ['char']
+      Decl: b, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: b, ['const']
+            IdentifierType: ['char']
+      Decl: s, [], [], []
+        ArrayDecl: []
+          TypeDecl: s, []
+            Struct: S
+          Constant: int, 9
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['long']
+      If: 
+        BinaryOp: >
+          ID: x
+          Constant: int, 1
+        Assignment: =
+          ID: a
+          ArrayRef: 
+            ID: y
+            Constant: int, 1
+        Assignment: =
+          ID: a
+          Constant: string, "abc"
+      If: 
+        BinaryOp: >
+          ID: x
+          Constant: int, 2
+        Assignment: =
+          ID: b
+          ArrayRef: 
+            ID: y
+            Constant: int, 2
+        Assignment: =
+          ID: b
+          Constant: string, "def"
+      FuncCall: 
+        ID: strcpy
+        ExprList: 
+          StructRef: .
+            ArrayRef: 
+              ID: s
+              Constant: int, 0
+            ID: s
+          ID: a
+      FuncCall: 
+        ID: strcpy
+        ExprList: 
+          StructRef: .
+            ArrayRef: 
+              ID: s
+              Constant: int, 1
+            ID: s
+          ID: b
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 2
+        BinaryOp: &&
+          BinaryOp: <
+            ID: i
+            BinaryOp: -
+              ID: x
+              Constant: int, 2
+          BinaryOp: <
+            ID: i
+            Constant: int, 8
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: strcpy
+          ExprList: 
+            StructRef: .
+              ArrayRef: 
+                ID: s
+                ID: i
+              ID: s
+            ArrayRef: 
+              ID: y
+              BinaryOp: +
+                ID: i
+                Constant: int, 1
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ArrayRef: 
+              ID: s
+              ID: i
+            ID: s
+          Constant: int, 0
+        Constant: char, '\0'
+      Return: 
+        Constant: int, 0

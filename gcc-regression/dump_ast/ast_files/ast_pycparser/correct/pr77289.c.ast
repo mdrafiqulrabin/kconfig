@@ -1,0 +1,122 @@
+FileAST: 
+  Decl: dummy0, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+      TypeDecl: dummy0, []
+        IdentifierType: ['void']
+  Decl: bar0, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+      TypeDecl: bar0, []
+        IdentifierType: ['float']
+  FuncDef: 
+    Decl: foo0, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['long']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long']
+        TypeDecl: foo0, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        ArrayDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['float']
+          Constant: int, 0
+      Assignment: =
+        ID: b
+        Constant: int, 0
+      For: 
+        BinaryOp: <
+          ID: b
+          ID: a
+        UnaryOp: p++
+          ID: b
+        Assignment: =
+          ArrayRef: 
+            ID: c
+            ID: b
+          FuncCall: 
+            ID: bar0
+            ExprList: 
+              ArrayRef: 
+                ID: c
+                ID: b
+      FuncCall: 
+        ID: dummy0
+        ExprList: 
+          ID: c
+  Decl: dummy1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['long']
+      TypeDecl: dummy1, []
+        IdentifierType: ['void']
+  Decl: bar1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['long']
+      TypeDecl: bar1, []
+        IdentifierType: ['long']
+  FuncDef: 
+    Decl: foo1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['long']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long']
+        TypeDecl: foo1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: array, [], [], []
+        ArrayDecl: []
+          TypeDecl: array, []
+            IdentifierType: ['long']
+          Constant: int, 128
+      Decl: c, [], [], []
+        PtrDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['long']
+        ID: array
+      For: 
+        Assignment: =
+          ID: b
+          Constant: int, 0
+        BinaryOp: <
+          ID: b
+          ID: a
+        UnaryOp: p++
+          ID: b
+        Assignment: =
+          ArrayRef: 
+            ID: c
+            ID: b
+          FuncCall: 
+            ID: bar1
+            ExprList: 
+              ArrayRef: 
+                ID: c
+                ID: b
+      FuncCall: 
+        ID: dummy1
+        ExprList: 
+          ID: c

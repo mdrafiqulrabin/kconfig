@@ -1,0 +1,78 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: g_2, [], ['static'], []
+    TypeDecl: g_2, []
+      IdentifierType: ['unsigned', 'char']
+    Constant: int, 1
+  Decl: g_9, [], ['static'], []
+    TypeDecl: g_9, []
+      IdentifierType: ['int']
+  Decl: l_8, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: l_8, []
+        IdentifierType: ['int']
+    UnaryOp: &
+      ID: g_9
+  FuncDef: 
+    Decl: func_12, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p_13, [], [], []
+            TypeDecl: p_13, []
+              IdentifierType: ['int']
+        TypeDecl: func_12, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: l_17, [], [], []
+        PtrDecl: []
+          TypeDecl: l_17, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: g_9
+      Assignment: &=
+        UnaryOp: *
+          ID: l_17
+        BinaryOp: <
+          Constant: int, 0
+          ID: p_13
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: l_11, [], [], []
+        TypeDecl: l_11, []
+          IdentifierType: ['unsigned', 'char']
+        Constant: int, 254
+      Assignment: |=
+        UnaryOp: *
+          ID: l_8
+        ID: g_2
+      Assignment: |=
+        ID: l_11
+        UnaryOp: *
+          ID: l_8
+      FuncCall: 
+        ID: func_12
+        ExprList: 
+          ID: l_11
+      If: 
+        BinaryOp: !=
+          ID: g_9
+          Constant: int, 1
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

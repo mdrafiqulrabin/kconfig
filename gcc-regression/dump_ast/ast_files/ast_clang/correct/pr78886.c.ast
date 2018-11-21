@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fc5ae825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc5ae826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc5ae825d40 '__int128'
+|-TypedefDecl 0x7fc5ae826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc5ae825d60 'unsigned __int128'
+|-TypedefDecl 0x7fc5ae826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc5ae826170 'struct __NSConstantString_tag'
+|   `-Record 0x7fc5ae8260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc5ae826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc5ae8263c0 'char *'
+|   `-BuiltinType 0x7fc5ae825b60 'char'
+|-TypedefDecl 0x7fc5ae8266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc5ae826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc5ae8264e0 'struct __va_list_tag'
+|     `-Record 0x7fc5ae826458 '__va_list_tag'
+|-TypedefDecl 0x7fc5ae826738 <c_files/pr78886.c:4:15, col:37> col:37 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fc5ae825c80 'unsigned long'
+|-FunctionDecl 0x7fc5ae026508 <line:5:7> col:7 implicit used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7fc5ae0265a0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fc5ae026608 prev 0x7fc5ae026508 <col:1, col:22> col:7 used malloc 'void *(unsigned long)'
+| `-ParmVarDecl 0x7fc5ae026400 <col:14, col:21> col:21 x 'size_t':'unsigned long'
+`-FunctionDecl 0x7fc5ae026770 <line:7:1, line:12:1> line:7:6 foo 'void (void)'
+  `-CompoundStmt 0x7fc5ae0269e8 <line:8:1, line:12:1>
+    |-DeclStmt 0x7fc5ae0268c0 <line:9:2, col:16>
+    | `-VarDecl 0x7fc5ae026860 <col:2, col:15> col:15 used i 'volatile int'
+    |-CallExpr 0x7fc5ae026960 <line:10:2, col:10> 'void *'
+    | |-ImplicitCastExpr 0x7fc5ae026948 <col:2> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc5ae0268d8 <col:2> 'void *(unsigned long)' Function 0x7fc5ae026608 'malloc' 'void *(unsigned long)'
+    | `-ImplicitCastExpr 0x7fc5ae026990 <col:9> 'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fc5ae026900 <col:9> 'int' 1
+    `-ImplicitCastExpr 0x7fc5ae0269d0 <line:11:2> 'int' <LValueToRValue>
+      `-DeclRefExpr 0x7fc5ae0269a8 <col:2> 'volatile int' lvalue Var 0x7fc5ae026860 'i' 'volatile int'

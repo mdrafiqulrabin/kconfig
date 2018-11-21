@@ -1,0 +1,60 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: locale_time_t
+      Decl: abday, ['const'], [], []
+        ArrayDecl: []
+          PtrDecl: []
+            TypeDecl: abday, ['const']
+              IdentifierType: ['char']
+          Constant: int, 7
+      Decl: wabday, ['const'], [], []
+        ArrayDecl: []
+          PtrDecl: []
+            TypeDecl: wabday, ['const']
+              IdentifierType: ['unsigned', 'int']
+          Constant: int, 7
+  Decl: empty_wstr, ['const'], ['static'], []
+    ArrayDecl: []
+      TypeDecl: empty_wstr, ['const']
+        IdentifierType: ['unsigned', 'int']
+      Constant: int, 1
+    InitList: 
+      Constant: int, 0
+  FuncDef: 
+    Decl: time_read, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: time, [], [], []
+            PtrDecl: []
+              TypeDecl: time, []
+                Struct: locale_time_t
+        TypeDecl: time_read, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: cnt, [], [], []
+        TypeDecl: cnt, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: cnt
+          Constant: int, 0
+        BinaryOp: <
+          ID: cnt
+          Constant: int, 7
+        UnaryOp: p++
+          ID: cnt
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              StructRef: ->
+                ID: time
+                ID: abday
+              ID: cnt
+            Constant: string, ""
+          Assignment: =
+            ArrayRef: 
+              StructRef: ->
+                ID: time
+                ID: wabday
+              ID: cnt
+            ID: empty_wstr

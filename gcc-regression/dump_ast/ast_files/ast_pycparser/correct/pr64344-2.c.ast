@@ -1,0 +1,29 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, ['const'], ['static'], []
+        TypeDecl: a, ['const']
+          IdentifierType: ['int']
+        Constant: float, 0.5
+      Decl: b, ['const'], ['static'], []
+        TypeDecl: b, ['const']
+          IdentifierType: ['int']
+        BinaryOp: +
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            Constant: float, 13.5
+          Constant: int, 1
+      Return: 
+        BinaryOp: +
+          ID: a
+          ID: b

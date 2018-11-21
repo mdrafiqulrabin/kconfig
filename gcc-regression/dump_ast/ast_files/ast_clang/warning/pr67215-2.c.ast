@@ -1,0 +1,47 @@
+c_files/pr67215-2.c:4:40: warning: unknown attribute 'noplt' ignored [-Wunknown-attributes]
+extern char* bar (int) __attribute__ ((noplt));
+                                       ^
+1 warning generated.
+TranslationUnitDecl 0x7fe5910264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe591026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe591026740 '__int128'
+|-TypedefDecl 0x7fe591026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe591026760 'unsigned __int128'
+|-TypedefDecl 0x7fe591026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe591026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe591026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe591026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe591026dc0 'char *'
+|   `-BuiltinType 0x7fe591026560 'char'
+|-TypedefDecl 0x7fe5910270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe591027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe591026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe591026e58 '__va_list_tag'
+|-FunctionDecl 0x7fe591826a30 <c_files/pr67215-2.c:4:1, col:46> col:14 used bar 'char *(int)' extern
+| `-ParmVarDecl 0x7fe591027138 <col:19> col:22 'int'
+|-VarDecl 0x7fe591826b90 <line:5:1, col:20> col:14 used arr 'char *[32]' extern
+`-FunctionDecl 0x7fe591826cb0 <line:7:1, line:14:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7fe591827110 <line:9:1, line:14:1>
+    |-DeclStmt 0x7fe591826dc0 <line:10:3, col:8>
+    | `-VarDecl 0x7fe591826d60 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fe5918270d8 <line:12:3, line:13:22>
+      |-BinaryOperator 0x7fe591826e20 <line:12:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fe591826dd8 <col:8> 'int' lvalue Var 0x7fe591826d60 'i' 'int'
+      | `-IntegerLiteral 0x7fe591826e00 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe591826ea8 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fe591826e90 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe591826e48 <col:15> 'int' lvalue Var 0x7fe591826d60 'i' 'int'
+      | `-IntegerLiteral 0x7fe591826e70 <col:19> 'int' 32
+      |-UnaryOperator 0x7fe591826ef8 <col:23, col:24> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fe591826ed0 <col:23> 'int' lvalue Var 0x7fe591826d60 'i' 'int'
+      `-BinaryOperator 0x7fe5918270b0 <line:13:5, col:22> 'char *' '='
+        |-ArraySubscriptExpr 0x7fe591826fc8 <col:5, col:10> 'char *' lvalue
+        | |-ImplicitCastExpr 0x7fe591826f98 <col:5> 'char **' <ArrayToPointerDecay>
+        | | `-DeclRefExpr 0x7fe591826f18 <col:5> 'char *[32]' lvalue Var 0x7fe591826b90 'arr' 'char *[32]'
+        | `-ImplicitCastExpr 0x7fe591826fb0 <col:9> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fe591826f40 <col:9> 'int' lvalue Var 0x7fe591826d60 'i' 'int'
+        `-CallExpr 0x7fe591827080 <col:14, col:22> 'char *'
+          |-ImplicitCastExpr 0x7fe591827068 <col:14> 'char *(*)(int)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fe591826ff0 <col:14> 'char *(int)' Function 0x7fe591826a30 'bar' 'char *(int)'
+          `-IntegerLiteral 0x7fe591827018 <col:19> 'int' 128

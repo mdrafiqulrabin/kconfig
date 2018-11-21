@@ -1,0 +1,82 @@
+c_files/pr71478.c:17:17: error: use of unknown builtin '__builtin_shuffle' [-Wimplicit-function-declaration]
+  uv2si j = k * __builtin_shuffle (z, z, (uv2si) {1, 3});
+                ^
+1 error generated.
+TranslationUnitDecl 0x7ff8d80166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff8d8016c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff8d8016940 '__int128'
+|-TypedefDecl 0x7ff8d8016c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff8d8016960 'unsigned __int128'
+|-TypedefDecl 0x7ff8d8016f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff8d8016d70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff8d8016ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff8d8017000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff8d8016fc0 'char *'
+|   `-BuiltinType 0x7ff8d8016760 'char'
+|-TypedefDecl 0x7ff8d80172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff8d8017270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff8d80170e0 'struct __va_list_tag'
+|     `-Record 0x7ff8d8017058 '__va_list_tag'
+|-TypedefDecl 0x7ff8d8017378 <c_files/pr71478.c:5:1, col:56> col:56 referenced uv2si '__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7ff8d8017340 '__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' 2
+|   `-BuiltinType 0x7ff8d8016860 'unsigned int'
+|-TypedefDecl 0x7ff8d8826a38 <line:6:1, col:47> col:47 referenced v2si '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7ff8d8826a00 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7ff8d80167c0 'int'
+|-FunctionDecl 0x7ff8d8826be0 <line:8:1, col:16> col:7 used bar 'uv2si (v2si)'
+| `-ParmVarDecl 0x7ff8d8826ae0 <col:12> col:16 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|-FunctionDecl 0x7ff8d8826db0 <line:10:1, line:19:1> line:11:1 foo 'uv2si (void)'
+| `-CompoundStmt 0x7ff8d88278f0 <line:12:1, line:19:1>
+|   |-DeclStmt 0x7ff8d8826f60 <line:13:3, col:41>
+|   | `-VarDecl 0x7ff8d8826e58 <col:3, col:40> col:8 used x 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' cinit
+|   |   `-CStyleCastExpr 0x7ff8d8826f38 <col:12, col:40> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <BitCast>
+|   |     `-ParenExpr 0x7ff8d8826f18 <col:19, col:40> 'unsigned long'
+|   |       `-IntegerLiteral 0x7ff8d8826eb8 <col:20> 'unsigned long' 140735340904448
+|   |-DeclStmt 0x7ff8d8827090 <line:14:3, col:41>
+|   | `-VarDecl 0x7ff8d8826f88 <col:3, col:40> col:8 used y 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' cinit
+|   |   `-CStyleCastExpr 0x7ff8d8827068 <col:12, col:40> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <BitCast>
+|   |     `-ParenExpr 0x7ff8d8827048 <col:19, col:40> 'unsigned long'
+|   |       `-IntegerLiteral 0x7ff8d8826fe8 <col:20> 'unsigned long' 10347442352053813248
+|   |-DeclStmt 0x7ff8d88271d8 <line:15:3, col:19>
+|   | `-VarDecl 0x7ff8d88270b8 <col:3, col:18> col:9 used z 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7ff8d88271c0 <col:13, col:18> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' <BitCast>
+|   |     `-BinaryOperator 0x7ff8d8827198 <col:13, col:18> '__attribute__((__vector_size__(2 * sizeof(int)))) int' '>='
+|   |       |-ImplicitCastExpr 0x7ff8d8827168 <col:13> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7ff8d8827118 <col:13> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7ff8d8826e58 'x' 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|   |       `-ImplicitCastExpr 0x7ff8d8827180 <col:18> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff8d8827140 <col:18> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7ff8d8826f88 'y' 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|   |-DeclStmt 0x7ff8d8827368 <line:16:3, col:20>
+|   | `-VarDecl 0x7ff8d8827200 <col:3, col:19> col:9 used k 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' cinit
+|   |   `-CallExpr 0x7ff8d8827320 <col:13, col:19> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+|   |     |-ImplicitCastExpr 0x7ff8d8827308 <col:13> 'uv2si (*)(v2si)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7ff8d8827260 <col:13> 'uv2si (v2si)' Function 0x7ff8d8826be0 'bar' 'uv2si (v2si)'
+|   |     `-ImplicitCastExpr 0x7ff8d8827350 <col:18> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff8d8827288 <col:18> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7ff8d8826e58 'x' 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|   |-DeclStmt 0x7ff8d8827818 <line:17:3, col:57>
+|   | `-VarDecl 0x7ff8d8827390 <col:3, col:56> col:9 used j 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' cinit
+|   |   `-BinaryOperator 0x7ff8d88277f0 <col:13, col:56> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' '*'
+|   |     |-ImplicitCastExpr 0x7ff8d88277a8 <col:13> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7ff8d88273f0 <col:13> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7ff8d8827200 'k' 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+|   |     `-ImplicitCastExpr 0x7ff8d88277d8 <col:17, col:56> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' <VectorSplat>
+|   |       `-ImplicitCastExpr 0x7ff8d88277c0 <col:17, col:56> 'unsigned int' <IntegralCast>
+|   |         `-CallExpr 0x7ff8d8827720 <col:17, col:56> 'int'
+|   |           |-ImplicitCastExpr 0x7ff8d8827708 <col:17> 'int (*)()' <FunctionToPointerDecay>
+|   |           | `-DeclRefExpr 0x7ff8d8827518 <col:17> 'int ()' Function 0x7ff8d8827480 '__builtin_shuffle' 'int ()'
+|   |           |-ImplicitCastExpr 0x7ff8d8827760 <col:36> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|   |           | `-DeclRefExpr 0x7ff8d8827540 <col:36> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7ff8d88270b8 'z' 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+|   |           |-ImplicitCastExpr 0x7ff8d8827778 <col:39> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|   |           | `-DeclRefExpr 0x7ff8d8827568 <col:39> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7ff8d88270b8 'z' 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+|   |           `-ImplicitCastExpr 0x7ff8d8827790 <col:42, col:55> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|   |             `-CompoundLiteralExpr 0x7ff8d88276b0 <col:42, col:55> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue
+|   |               `-InitListExpr 0x7ff8d8827630 <col:50, col:55> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+|   |                 |-ImplicitCastExpr 0x7ff8d8827680 <col:51> 'unsigned int' <IntegralCast>
+|   |                 | `-IntegerLiteral 0x7ff8d88275a0 <col:51> 'int' 1
+|   |                 `-ImplicitCastExpr 0x7ff8d8827698 <col:54> 'unsigned int' <IntegralCast>
+|   |                   `-IntegerLiteral 0x7ff8d88275c0 <col:54> 'int' 3
+|   `-ReturnStmt 0x7ff8d88278d8 <line:18:3, col:14>
+|     `-BinaryOperator 0x7ff8d88278b0 <col:10, col:14> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' '*'
+|       |-ImplicitCastExpr 0x7ff8d8827880 <col:10> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff8d8827830 <col:10> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7ff8d8827200 'k' 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+|       `-ImplicitCastExpr 0x7ff8d8827898 <col:14> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|         `-DeclRefExpr 0x7ff8d8827858 <col:14> 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7ff8d8827390 'j' 'uv2si':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+`-FunctionDecl 0x7ff8d8827480 <<invalid sloc>> line:17:17 implicit used __builtin_shuffle 'int ()'

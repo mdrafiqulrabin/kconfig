@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7ff35e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff35e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff35e826740 '__int128'
+|-TypedefDecl 0x7ff35e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff35e826760 'unsigned __int128'
+|-TypedefDecl 0x7ff35e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff35e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff35e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff35e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff35e826dc0 'char *'
+|   `-BuiltinType 0x7ff35e826560 'char'
+|-TypedefDecl 0x7ff35e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff35e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff35e826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff35e826e58 '__va_list_tag'
+`-FunctionDecl 0x7ff35e877400 <c_files/pr48716.c:5:1, line:24:1> line:6:1 main 'int (void)'
+  `-CompoundStmt 0x7ff35e877918 <line:7:1, line:24:1>
+    |-CompoundStmt 0x7ff35e8776d8 <line:9:3, line:15:3>
+    | |-DeclStmt 0x7ff35e877580 <line:10:5, col:17>
+    | | `-VarDecl 0x7ff35e877520 <col:5, col:16> col:16 used s 'int' static
+    | |-DeclStmt 0x7ff35e877630 <line:11:5, col:14>
+    | | `-VarDecl 0x7ff35e8775b0 <col:5, col:13> col:9 used t 'int' cinit
+    | |   `-IntegerLiteral 0x7ff35e877610 <col:13> 'int' 0
+    | |-UnaryOperator 0x7ff35e877670 <line:13:5, col:6> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7ff35e877648 <col:5> 'int' lvalue Var 0x7ff35e877520 's' 'int'
+    | `-UnaryOperator 0x7ff35e8776b8 <line:14:5, col:6> 'int' postfix '++'
+    |   `-DeclRefExpr 0x7ff35e877690 <col:5> 'int' lvalue Var 0x7ff35e8775b0 't' 'int'
+    `-CompoundStmt 0x7ff35e8778e0 <line:17:3, line:23:3>
+      |-DeclStmt 0x7ff35e877788 <line:18:5, col:17>
+      | `-VarDecl 0x7ff35e877728 <col:5, col:16> col:16 used s 'int' static
+      |-DeclStmt 0x7ff35e877838 <line:19:5, col:14>
+      | `-VarDecl 0x7ff35e8777b8 <col:5, col:13> col:9 used t 'int' cinit
+      |   `-IntegerLiteral 0x7ff35e877818 <col:13> 'int' 0
+      |-UnaryOperator 0x7ff35e877878 <line:21:5, col:6> 'int' postfix '++'
+      | `-DeclRefExpr 0x7ff35e877850 <col:5> 'int' lvalue Var 0x7ff35e877728 's' 'int'
+      `-UnaryOperator 0x7ff35e8778c0 <line:22:5, col:6> 'int' postfix '++'
+        `-DeclRefExpr 0x7ff35e877898 <col:5> 'int' lvalue Var 0x7ff35e8777b8 't' 'int'

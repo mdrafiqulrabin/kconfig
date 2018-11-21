@@ -1,0 +1,87 @@
+FileAST: 
+  Typedef: u64, [], ['typedef']
+    TypeDecl: u64, []
+      IdentifierType: ['unsigned', 'long']
+  Typedef: u128, [], ['typedef']
+    TypeDecl: u128, []
+      Struct: None
+        Decl: hi, [], [], []
+          TypeDecl: hi, []
+            IdentifierType: ['u64']
+        Decl: lo, [], [], []
+          TypeDecl: lo, []
+            IdentifierType: ['u64']
+  FuncDef: 
+    Decl: add_u128, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['u128']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['u128']
+        TypeDecl: add_u128, []
+          IdentifierType: ['u128']
+    Compound: 
+      Assignment: +=
+        StructRef: .
+          ID: a
+          ID: hi
+        StructRef: .
+          ID: b
+          ID: hi
+      Assignment: +=
+        StructRef: .
+          ID: a
+          ID: lo
+        StructRef: .
+          ID: b
+          ID: lo
+      If: 
+        BinaryOp: <
+          StructRef: .
+            ID: a
+            ID: lo
+          StructRef: .
+            ID: b
+            ID: lo
+        UnaryOp: p++
+          StructRef: .
+            ID: a
+            ID: hi
+      Return: 
+        ID: a
+  Decl: t1, [], ['extern'], []
+    TypeDecl: t1, []
+      IdentifierType: ['u128']
+  Decl: t2, [], ['extern'], []
+    TypeDecl: t2, []
+      IdentifierType: ['u128']
+  Decl: t3, [], ['extern'], []
+    TypeDecl: t3, []
+      IdentifierType: ['u128']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: t1
+        FuncCall: 
+          ID: add_u128
+          ExprList: 
+            ID: t1
+            ID: t2
+      Assignment: =
+        ID: t1
+        FuncCall: 
+          ID: add_u128
+          ExprList: 
+            ID: t1
+            ID: t3

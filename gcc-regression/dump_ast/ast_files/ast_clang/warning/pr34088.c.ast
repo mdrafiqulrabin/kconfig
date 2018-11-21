@@ -1,0 +1,86 @@
+c_files/pr34088.c:19:37: warning: if statement has empty body [-Wempty-body]
+  while ( ({ if (foo(*p) && foo(*p)); p; }) );
+                                    ^
+c_files/pr34088.c:19:37: note: put the semicolon on a separate line to silence this warning
+1 warning generated.
+TranslationUnitDecl 0x7fc64e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc64e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc64e026740 '__int128'
+|-TypedefDecl 0x7fc64e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc64e026760 'unsigned __int128'
+|-TypedefDecl 0x7fc64e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc64e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc64e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc64e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc64e026dc0 'char *'
+|   `-BuiltinType 0x7fc64e026560 'char'
+|-TypedefDecl 0x7fc64e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc64e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc64e026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc64e026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc64e825630 <c_files/pr34088.c:5:1, col:12> col:5 used F0 'int (int)'
+| `-ParmVarDecl 0x7fc64e027138 <col:9> col:12 'int'
+|-FunctionDecl 0x7fc64e8257b8 <line:6:1, col:32> col:5 F1 'int (int)'
+| |-ParmVarDecl 0x7fc64e825728 <col:9, col:13> col:13 used t 'int'
+| `-CompoundStmt 0x7fc64e825950 <col:16, col:32>
+|   `-ReturnStmt 0x7fc64e825938 <col:18, col:29>
+|     `-CallExpr 0x7fc64e8258f0 <col:25, col:29> 'int'
+|       |-ImplicitCastExpr 0x7fc64e8258d8 <col:25> 'int (*)(int)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fc64e825858 <col:25> 'int (int)' Function 0x7fc64e825630 'F0' 'int (int)'
+|       `-ImplicitCastExpr 0x7fc64e825920 <col:28> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fc64e825880 <col:28> 'int' lvalue ParmVar 0x7fc64e825728 't' 'int'
+|-FunctionDecl 0x7fc64e825a18 <line:7:1, col:32> col:5 F2 'int (int)'
+| |-ParmVarDecl 0x7fc64e825988 <col:9, col:13> col:13 used t 'int'
+| `-CompoundStmt 0x7fc64e825b80 <col:16, col:32>
+|   `-ReturnStmt 0x7fc64e825b68 <col:18, col:29>
+|     `-CallExpr 0x7fc64e825b20 <col:25, col:29> 'int'
+|       |-ImplicitCastExpr 0x7fc64e825b08 <col:25> 'int (*)(int)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fc64e825ab8 <col:25> 'int (int)' Function 0x7fc64e825630 'F0' 'int (int)'
+|       `-ImplicitCastExpr 0x7fc64e825b50 <col:28> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fc64e825ae0 <col:28> 'int' lvalue ParmVar 0x7fc64e825988 't' 'int'
+|-VarDecl 0x7fc64e825bf0 <line:9:1, col:14> col:12 used X 'int []' extern
+|-FunctionDecl 0x7fc64e825cf8 <line:10:1, line:13:1> line:10:19 used foo 'int (int)' static inline
+| |-ParmVarDecl 0x7fc64e825c68 <col:23, col:27> col:27 used i 'int'
+| `-CompoundStmt 0x7fc64e825ea0 <line:11:1, line:13:1>
+|   `-ReturnStmt 0x7fc64e825e88 <line:12:3, col:13>
+|     `-ImplicitCastExpr 0x7fc64e825e70 <col:10, col:13> 'int' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fc64e825e48 <col:10, col:13> 'int' lvalue
+|         |-ImplicitCastExpr 0x7fc64e825e18 <col:10> 'int *' <ArrayToPointerDecay>
+|         | `-DeclRefExpr 0x7fc64e825d98 <col:10> 'int []' lvalue Var 0x7fc64e825bf0 'X' 'int []'
+|         `-ImplicitCastExpr 0x7fc64e825e30 <col:12> 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x7fc64e825dc0 <col:12> 'int' lvalue ParmVar 0x7fc64e825c68 'i' 'int'
+`-FunctionDecl 0x7fc64e825fa8 <line:15:1, line:22:1> line:15:5 bar 'int (int *)'
+  |-ParmVarDecl 0x7fc64e825ed8 <col:9, col:14> col:14 used p 'int *'
+  `-CompoundStmt 0x7fc64e826428 <line:16:1, line:22:1>
+    |-DeclStmt 0x7fc64e8260c0 <line:17:3, col:8>
+    | `-VarDecl 0x7fc64e826060 <col:3, col:7> col:7 used i 'int'
+    |-WhileStmt 0x7fc64e8263b0 <line:19:3, col:46>
+    | |-<<<NULL>>>
+    | |-StmtExpr 0x7fc64e826380 <col:11, col:43> 'int *'
+    | | `-CompoundStmt 0x7fc64e826358 <col:12, col:42>
+    | |   |-IfStmt 0x7fc64e8262e0 <col:14, col:37>
+    | |   | |-<<<NULL>>>
+    | |   | |-<<<NULL>>>
+    | |   | |-BinaryOperator 0x7fc64e8262a8 <col:18, col:35> 'int' '&&'
+    | |   | | |-CallExpr 0x7fc64e826178 <col:18, col:24> 'int'
+    | |   | | | |-ImplicitCastExpr 0x7fc64e826160 <col:18> 'int (*)(int)' <FunctionToPointerDecay>
+    | |   | | | | `-DeclRefExpr 0x7fc64e8260d8 <col:18> 'int (int)' Function 0x7fc64e825cf8 'foo' 'int (int)'
+    | |   | | | `-ImplicitCastExpr 0x7fc64e8261a8 <col:22, col:23> 'int' <LValueToRValue>
+    | |   | | |   `-UnaryOperator 0x7fc64e826140 <col:22, col:23> 'int' lvalue prefix '*'
+    | |   | | |     `-ImplicitCastExpr 0x7fc64e826128 <col:23> 'int *' <LValueToRValue>
+    | |   | | |       `-DeclRefExpr 0x7fc64e826100 <col:23> 'int *' lvalue ParmVar 0x7fc64e825ed8 'p' 'int *'
+    | |   | | `-CallExpr 0x7fc64e826260 <col:29, col:35> 'int'
+    | |   | |   |-ImplicitCastExpr 0x7fc64e826248 <col:29> 'int (*)(int)' <FunctionToPointerDecay>
+    | |   | |   | `-DeclRefExpr 0x7fc64e8261c0 <col:29> 'int (int)' Function 0x7fc64e825cf8 'foo' 'int (int)'
+    | |   | |   `-ImplicitCastExpr 0x7fc64e826290 <col:33, col:34> 'int' <LValueToRValue>
+    | |   | |     `-UnaryOperator 0x7fc64e826228 <col:33, col:34> 'int' lvalue prefix '*'
+    | |   | |       `-ImplicitCastExpr 0x7fc64e826210 <col:34> 'int *' <LValueToRValue>
+    | |   | |         `-DeclRefExpr 0x7fc64e8261e8 <col:34> 'int *' lvalue ParmVar 0x7fc64e825ed8 'p' 'int *'
+    | |   | |-NullStmt 0x7fc64e8262d0 <col:37>
+    | |   | `-<<<NULL>>>
+    | |   `-ImplicitCastExpr 0x7fc64e826340 <col:39> 'int *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fc64e826318 <col:39> 'int *' lvalue ParmVar 0x7fc64e825ed8 'p' 'int *'
+    | `-NullStmt 0x7fc64e8263a0 <col:46>
+    `-ReturnStmt 0x7fc64e826410 <line:21:3, col:10>
+      `-ImplicitCastExpr 0x7fc64e8263f8 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fc64e8263d0 <col:10> 'int' lvalue Var 0x7fc64e826060 'i' 'int'

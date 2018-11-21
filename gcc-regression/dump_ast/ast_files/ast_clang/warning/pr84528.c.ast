@@ -1,0 +1,70 @@
+c_files/pr84528.c:6:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+main()
+^
+c_files/pr84528.c:13:7: warning: implicitly declaring library function 'abort' with type 'void (void) __attribute__((noreturn))' [-Wimplicit-function-declaration]
+      abort();
+      ^
+c_files/pr84528.c:13:7: note: include the header <stdlib.h> or explicitly provide a declaration for 'abort'
+c_files/pr84528.c:15:3: warning: implicitly declaring library function 'exit' with type 'void (int) __attribute__((noreturn))' [-Wimplicit-function-declaration]
+  exit (0);
+  ^
+c_files/pr84528.c:15:3: note: include the header <stdlib.h> or explicitly provide a declaration for 'exit'
+3 warnings generated.
+TranslationUnitDecl 0x7fa7470264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa747026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa747026740 '__int128'
+|-TypedefDecl 0x7fa747026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa747026760 'unsigned __int128'
+|-TypedefDecl 0x7fa747026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa747026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa747026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa747026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa747026dc0 'char *'
+|   `-BuiltinType 0x7fa747026560 'char'
+|-TypedefDecl 0x7fa7470270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa747027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa747026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa747026e58 '__va_list_tag'
+|-FunctionDecl 0x7fa747825a00 <c_files/pr84528.c:6:1, line:16:1> line:6:1 main 'int ()'
+| `-CompoundStmt 0x7fa747826710 <line:7:1, line:16:1>
+|   |-DeclStmt 0x7fa747825c80 <line:8:3, col:20>
+|   | `-VarDecl 0x7fa747825b60 <col:3, col:19> col:7 used a 'int [8]' cinit
+|   |   `-InitListExpr 0x7fa747825c28 <col:17, col:19> 'int [8]'
+|   |     |-array filler
+|   |     | `-ImplicitValueInitExpr 0x7fa747825c70 <<invalid sloc>> 'int'
+|   |     `-IntegerLiteral 0x7fa747825bc0 <col:18> 'int' 1
+|   |-DeclStmt 0x7fa747825d10 <line:9:3, col:8>
+|   | `-VarDecl 0x7fa747825cb0 <col:3, col:7> col:7 used i 'int'
+|   |-ForStmt 0x7fa7478264e0 <line:11:3, line:13:13>
+|   | |-BinaryOperator 0x7fa747825d70 <line:11:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7fa747825d28 <col:8> 'int' lvalue Var 0x7fa747825cb0 'i' 'int'
+|   | | `-IntegerLiteral 0x7fa747825d50 <col:12> 'int' 1
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa747825df8 <col:15, line:4:14> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fa747825de0 <line:11:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa747825d98 <col:15> 'int' lvalue Var 0x7fa747825cb0 'i' 'int'
+|   | | `-IntegerLiteral 0x7fa747825dc0 <line:4:14> 'int' 8
+|   | |-UnaryOperator 0x7fa747825e48 <line:11:25, col:26> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fa747825e20 <col:25> 'int' lvalue Var 0x7fa747825cb0 'i' 'int'
+|   | `-IfStmt 0x7fa7478264a8 <line:12:5, line:13:13>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7fa747825f78 <line:12:9, col:17> 'int' '!='
+|   |   | |-ImplicitCastExpr 0x7fa747825f60 <col:9, col:12> 'int' <LValueToRValue>
+|   |   | | `-ArraySubscriptExpr 0x7fa747825f18 <col:9, col:12> 'int' lvalue
+|   |   | |   |-ImplicitCastExpr 0x7fa747825ee8 <col:9> 'int *' <ArrayToPointerDecay>
+|   |   | |   | `-DeclRefExpr 0x7fa747825e68 <col:9> 'int [8]' lvalue Var 0x7fa747825b60 'a' 'int [8]'
+|   |   | |   `-ImplicitCastExpr 0x7fa747825f00 <col:11> 'int' <LValueToRValue>
+|   |   | |     `-DeclRefExpr 0x7fa747825e90 <col:11> 'int' lvalue Var 0x7fa747825cb0 'i' 'int'
+|   |   | `-IntegerLiteral 0x7fa747825f40 <col:17> 'int' 0
+|   |   |-CallExpr 0x7fa747826480 <line:13:7, col:13> 'void'
+|   |   | `-ImplicitCastExpr 0x7fa747826468 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   |   `-DeclRefExpr 0x7fa747826418 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7fa747826380 'abort' 'void (void) __attribute__((noreturn))'
+|   |   `-<<<NULL>>>
+|   `-CallExpr 0x7fa7478266e0 <line:15:3, col:10> 'void'
+|     |-ImplicitCastExpr 0x7fa7478266c8 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fa747826658 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fa747826558 'exit' 'void (int) __attribute__((noreturn))'
+|     `-IntegerLiteral 0x7fa747826680 <col:9> 'int' 0
+|-FunctionDecl 0x7fa747826380 <line:13:7> col:7 implicit used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fa747826558 <line:15:3> col:3 implicit used exit 'void (int) __attribute__((noreturn))' extern
+  `-ParmVarDecl 0x7fa7478265f0 <<invalid sloc>> <invalid sloc> 'int'

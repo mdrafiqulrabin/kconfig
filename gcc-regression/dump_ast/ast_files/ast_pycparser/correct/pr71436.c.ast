@@ -1,0 +1,77 @@
+FileAST: 
+  Pragma: pack(1)
+  Decl: None, [], [], []
+    Struct: S0
+      Decl: f0, ['volatile'], [], []
+        TypeDecl: f0, ['volatile']
+          IdentifierType: ['int']
+      Decl: f2, [], [], []
+        TypeDecl: f2, []
+          IdentifierType: ['short']
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: S0
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: b, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: b, []
+        Struct: S0
+      Constant: int, 5
+  Decl: c, [], ['static'], []
+    TypeDecl: c, []
+      Struct: S0
+  Decl: fn1, [], [], []
+    FuncDecl: 
+      TypeDecl: fn1, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['void']
+    Compound: 
+      Compound: 
+        Decl: e, [], [], []
+          TypeDecl: e, []
+            Struct: S0
+        For: 
+          ID: d
+          FuncCall: 
+            ID: fn1
+          Compound: 
+            Compound: 
+              Assignment: =
+                ID: a
+                Constant: int, 3
+              For: 
+                BinaryOp: >=
+                  ID: a
+                  Constant: int, 0
+                Assignment: -=
+                  ID: a
+                  Constant: int, 1
+                Compound: 
+                  Compound: 
+                    Assignment: =
+                      ID: e
+                      ID: c
+                  Assignment: =
+                    ArrayRef: 
+                      ID: b
+                      ID: a
+                    ID: e
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: b

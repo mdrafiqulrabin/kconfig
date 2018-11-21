@@ -1,0 +1,80 @@
+FileAST: 
+  Decl: s, [], [], []
+    TypeDecl: s, []
+      Struct: S
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 1
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 1
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 1
+        Decl: d, [], [], []
+          TypeDecl: d, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 6
+        Decl: e, [], [], []
+          TypeDecl: e, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 14
+        Decl: f, [], [], []
+          TypeDecl: f, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 6
+        Decl: g, [], [], []
+          TypeDecl: g, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 1
+        Decl: h, [], [], []
+          TypeDecl: h, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 1
+        Decl: i, [], [], []
+          TypeDecl: i, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 1
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              Struct: S
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: &&
+          BinaryOp: &&
+            BinaryOp: &&
+              BinaryOp: &&
+                BinaryOp: &&
+                  BinaryOp: &&
+                    StructRef: .
+                      ID: x
+                      ID: a
+                    StructRef: .
+                      ID: x
+                      ID: i
+                  StructRef: .
+                    ID: x
+                    ID: b
+                StructRef: .
+                  ID: x
+                  ID: h
+              StructRef: .
+                ID: x
+                ID: c
+            StructRef: .
+              ID: x
+              ID: g
+          BinaryOp: ==
+            StructRef: .
+              ID: x
+              ID: e
+            Constant: int, 131

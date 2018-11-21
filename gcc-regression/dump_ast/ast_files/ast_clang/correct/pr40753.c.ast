@@ -1,0 +1,71 @@
+TranslationUnitDecl 0x7fdab20194d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdab2019a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdab2019740 '__int128'
+|-TypedefDecl 0x7fdab2019a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdab2019760 'unsigned __int128'
+|-TypedefDecl 0x7fdab2019d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdab2019b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdab2019ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdab2019e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdab2019dc0 'char *'
+|   `-BuiltinType 0x7fdab2019560 'char'
+|-TypedefDecl 0x7fdab201a0c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdab201a070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdab2019ee0 'struct __va_list_tag'
+|     `-Record 0x7fdab2019e58 '__va_list_tag'
+|-RecordDecl 0x7fdab201a120 <c_files/pr40753.c:1:9, line:3:1> line:1:9 struct definition
+| `-FieldDecl 0x7fdab1832c00 <line:2:5, col:14> col:14 nargs 'unsigned int'
+|-TypedefDecl 0x7fdab1832ca0 <line:1:1, line:3:3> col:3 referenced ffi_cif 'struct ffi_cif':'ffi_cif'
+| `-ElaboratedType 0x7fdab1832c50 'struct ffi_cif' sugar
+|   `-RecordType 0x7fdab201a1b0 'ffi_cif'
+|     `-Record 0x7fdab201a120 ''
+|-RecordDecl 0x7fdab1832d10 <line:4:9, line:7:1> line:4:9 struct definition
+| |-FieldDecl 0x7fdab1832e38 <line:5:5, col:18> col:10 referenced tramp 'char [24]'
+| `-FieldDecl 0x7fdab1832f08 <line:6:5, col:14> col:14 referenced cif 'ffi_cif *'
+|-TypedefDecl 0x7fdab1832fa0 <line:4:1, line:7:3> col:3 referenced ffi_closure 'struct ffi_closure':'ffi_closure'
+| `-ElaboratedType 0x7fdab1832f50 'struct ffi_closure' sugar
+|   `-RecordType 0x7fdab1832da0 'ffi_closure'
+|     `-Record 0x7fdab1832d10 ''
+|-FunctionDecl 0x7fdab1833238 <line:8:14> col:14 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fdab18332d0 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fdab1833330 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fdab1833390 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fdab1833408 prev 0x7fdab1833238 <col:1, col:57> col:14 used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fdab1833028 <col:22, col:27> col:28 'void *'
+| |-ParmVarDecl 0x7fdab18330d0 <col:30, col:41> col:42 'const void *'
+| `-ParmVarDecl 0x7fdab1833148 <<built-in>:75:23, col:37> c_files/pr40753.c:8:57 'unsigned long'
+|-FunctionDecl 0x7fdab1833580 <line:9:1, col:38> col:13 used ffi_closure_LINUX64 'void (void)' extern
+`-FunctionDecl 0x7fdab1833878 <line:11:1, line:20:1> line:12:1 ffi_prep_closure_loc 'int (ffi_closure *, ffi_cif *)'
+  |-ParmVarDecl 0x7fdab18336e8 <col:23, col:36> col:36 used closure 'ffi_closure *'
+  |-ParmVarDecl 0x7fdab1833758 <col:45, col:54> col:54 used cif 'ffi_cif *'
+  `-CompoundStmt 0x7fdab1834e58 <line:13:1, line:20:1>
+    |-DeclStmt 0x7fdab1833af8 <line:14:3, col:46>
+    | `-VarDecl 0x7fdab1833960 <col:3, col:45> col:10 used tramp 'void **' cinit
+    |   `-CStyleCastExpr 0x7fdab1833ad0 <col:18, col:45> 'void **' <BitCast>
+    |     `-UnaryOperator 0x7fdab1833a98 <col:28, col:45> 'char *' prefix '&'
+    |       `-ArraySubscriptExpr 0x7fdab1833a70 <col:29, col:45> 'char' lvalue
+    |         |-ImplicitCastExpr 0x7fdab1833a58 <col:29, col:38> 'char *' <ArrayToPointerDecay>
+    |         | `-MemberExpr 0x7fdab1833a00 <col:29, col:38> 'char [24]' lvalue ->tramp 0x7fdab1832e38
+    |         |   `-ImplicitCastExpr 0x7fdab18339e8 <col:29> 'ffi_closure *' <LValueToRValue>
+    |         |     `-DeclRefExpr 0x7fdab18339c0 <col:29> 'ffi_closure *' lvalue ParmVar 0x7fdab18336e8 'closure' 'ffi_closure *'
+    |         `-IntegerLiteral 0x7fdab1833a38 <col:44> 'int' 0
+    |-CallExpr 0x7fdab1834ca0 <line:16:3, col:50> 'void *'
+    | |-ImplicitCastExpr 0x7fdab1834c88 <col:3> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fdab1833b10 <col:3> 'void *(void *, const void *, unsigned long)' Function 0x7fdab1833408 'memcpy' 'void *(void *, const void *, unsigned long)'
+    | |-ImplicitCastExpr 0x7fdab1834cf8 <col:11> 'void *' <BitCast>
+    | | `-ImplicitCastExpr 0x7fdab1834ce0 <col:11> 'void **' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fdab1833b38 <col:11> 'void **' lvalue Var 0x7fdab1833960 'tramp' 'void **'
+    | |-ImplicitCastExpr 0x7fdab1834d10 <col:18, col:27> 'const void *' <BitCast>
+    | | `-CStyleCastExpr 0x7fdab1834c00 <col:18, col:27> 'char *' <BitCast>
+    | |   `-ImplicitCastExpr 0x7fdab1833bc8 <col:27> 'void (*)(void)' <FunctionToPointerDecay>
+    | |     `-DeclRefExpr 0x7fdab1833b60 <col:27> 'void (void)' Function 0x7fdab1833580 'ffi_closure_LINUX64' 'void (void)'
+    | `-ImplicitCastExpr 0x7fdab1834d28 <col:48> 'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fdab1834c28 <col:48> 'int' 16
+    |-BinaryOperator 0x7fdab1834df8 <line:17:3, col:18> 'ffi_cif *' '='
+    | |-MemberExpr 0x7fdab1834d80 <col:3, col:12> 'ffi_cif *' lvalue ->cif 0x7fdab1832f08
+    | | `-ImplicitCastExpr 0x7fdab1834d68 <col:3> 'ffi_closure *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fdab1834d40 <col:3> 'ffi_closure *' lvalue ParmVar 0x7fdab18336e8 'closure' 'ffi_closure *'
+    | `-ImplicitCastExpr 0x7fdab1834de0 <col:18> 'ffi_cif *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fdab1834db8 <col:18> 'ffi_cif *' lvalue ParmVar 0x7fdab1833758 'cif' 'ffi_cif *'
+    `-ReturnStmt 0x7fdab1834e40 <line:19:3, col:10>
+      `-IntegerLiteral 0x7fdab1834e20 <col:10> 'int' 0

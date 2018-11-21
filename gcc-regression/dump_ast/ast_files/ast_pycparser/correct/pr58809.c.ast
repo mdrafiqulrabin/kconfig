@@ -1,0 +1,16 @@
+FileAST: 
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  Pragma: omp threadprivate (i)
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['_Complex', 'int']
+      Pragma: omp parallel copyin (i) reduction (&&:j)
+      EmptyStatement: 

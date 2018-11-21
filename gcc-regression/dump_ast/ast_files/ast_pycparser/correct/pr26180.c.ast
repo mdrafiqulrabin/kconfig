@@ -1,0 +1,148 @@
+FileAST: 
+  Decl: abort, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x1, [], [], []
+        TypeDecl: x1, []
+          IdentifierType: ['int']
+      Decl: y1, [], [], []
+        TypeDecl: y1, []
+          IdentifierType: ['int']
+      Decl: x2, [], [], []
+        TypeDecl: x2, []
+          IdentifierType: ['int']
+      Decl: y2, [], [], []
+        TypeDecl: y2, []
+          IdentifierType: ['int']
+      Decl: x3, [], [], []
+        TypeDecl: x3, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: y3, [], [], []
+        TypeDecl: y3, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: w, [], [], []
+        TypeDecl: w, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      Assignment: =
+        ID: x1
+        BinaryOp: <
+          ID: x
+          BinaryOp: <<
+            Constant: int, 1
+            Constant: int, 30
+      Assignment: =
+        ID: y1
+        BinaryOp: <
+          ID: y
+          BinaryOp: <<
+            Constant: int, 1
+            Constant: int, 30
+      If: 
+        ID: x1
+        If: 
+          ID: y1
+          Compound: 
+            Assignment: =
+              ID: x2
+              TernaryOp: 
+                BinaryOp: >
+                  ID: x
+                  Constant: int, 0
+                ID: x
+                UnaryOp: -
+                  ID: x
+            Assignment: =
+              ID: y2
+              TernaryOp: 
+                BinaryOp: >
+                  ID: y
+                  Constant: int, 0
+                ID: y
+                UnaryOp: -
+                  ID: y
+            Assignment: =
+              ID: x3
+              ID: x2
+            Assignment: =
+              ID: y3
+              ID: y2
+            Assignment: =
+              ID: w
+              BinaryOp: *
+                ID: x3
+                ID: y3
+            If: 
+              BinaryOp: >=
+                ID: w
+                BinaryOp: <<
+                  Constant: int, 1
+                  Constant: int, 30
+              Compound: 
+                Assignment: =
+                  ID: z
+                  Constant: int, 1
+              Compound: 
+                Assignment: =
+                  ID: z
+                  UnaryOp: -
+                    Constant: int, 1
+      Return: 
+        ID: z
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: x
+        Constant: int, 536870912
+      Assignment: =
+        ID: y
+        Constant: int, 2
+      Assignment: =
+        ID: z
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: x
+            ID: y
+      If: 
+        BinaryOp: !=
+          ID: z
+          Constant: int, 1
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

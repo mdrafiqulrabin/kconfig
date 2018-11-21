@@ -1,0 +1,49 @@
+FileAST: 
+  FuncDef: 
+    Decl: test1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: apic_tpr_addr, [], [], []
+        PtrDecl: []
+          TypeDecl: apic_tpr_addr, []
+            IdentifierType: ['int']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+          Constant: int, 0xfee00080
+      Assignment: +=
+        UnaryOp: *
+          ID: apic_tpr_addr
+        Constant: int, 4
+  FuncDef: 
+    Decl: test2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: apic_tpr_addr, [], [], []
+        PtrDecl: []
+          TypeDecl: apic_tpr_addr, []
+            IdentifierType: ['int']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+          Constant: int, 0xfee00080
+      Assignment: =
+        UnaryOp: *
+          ID: apic_tpr_addr
+        Constant: int, 0

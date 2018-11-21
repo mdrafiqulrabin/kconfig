@@ -1,0 +1,109 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['short']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __sync_val_compare_and_swap
+        ExprList: 
+          ID: x
+          Constant: int, 1
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_bool_compare_and_swap
+        ExprList: 
+          ID: x
+          Constant: int, 1
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_lock_test_and_set
+        ExprList: 
+          ID: x
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_fetch_and_add
+        ExprList: 
+          ID: x
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_fetch_and_add
+        ExprList: 
+          ID: x
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_fetch_and_add
+        ExprList: 
+          ID: x
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_fetch_and_sub
+        ExprList: 
+          ID: x
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_fetch_and_and
+        ExprList: 
+          ID: x
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_fetch_and_or
+        ExprList: 
+          ID: x
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_fetch_and_xor
+        ExprList: 
+          ID: x
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_fetch_and_nand
+        ExprList: 
+          ID: x
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_add_and_fetch
+        ExprList: 
+          ID: x
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_add_and_fetch
+        ExprList: 
+          ID: x
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_add_and_fetch
+        ExprList: 
+          ID: x
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_sub_and_fetch
+        ExprList: 
+          ID: x
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_and_and_fetch
+        ExprList: 
+          ID: x
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_or_and_fetch
+        ExprList: 
+          ID: x
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_xor_and_fetch
+        ExprList: 
+          ID: x
+          Constant: int, 0
+      FuncCall: 
+        ID: __sync_nand_and_fetch
+        ExprList: 
+          ID: x
+          Constant: int, 0

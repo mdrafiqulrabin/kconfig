@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7f95200264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9520026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9520026740 '__int128'
+|-TypedefDecl 0x7f9520026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9520026760 'unsigned __int128'
+|-TypedefDecl 0x7f9520026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9520026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9520026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9520026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9520026dc0 'char *'
+|   `-BuiltinType 0x7f9520026560 'char'
+|-TypedefDecl 0x7f95200270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9520027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9520026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9520026e58 '__va_list_tag'
+|-RecordDecl 0x7f9520027120 <c_files/pr48226.c:11:1, line:13:1> line:11:8 struct vector definition
+| `-FieldDecl 0x7f9520825a60 <line:12:3, col:12> col:9 v 'float [4]'
+`-VarDecl 0x7f9520825b00 <line:15:1, col:45> col:15 vector 'struct vector':'struct vector' cinit
+  `-InitListExpr 0x7f9520825c80 <col:24, col:45> 'struct vector':'struct vector'
+    `-InitListExpr 0x7f9520825cc8 <col:26, col:41> 'float [4]'
+      |-ImplicitCastExpr 0x7f9520825d28 <col:26> 'float' <FloatingCast>
+      | `-FloatingLiteral 0x7f9520825ba0 <col:26> 'double' 1.000000e+00
+      |-ImplicitCastExpr 0x7f9520825d40 <col:31> 'float' <FloatingCast>
+      | `-FloatingLiteral 0x7f9520825bc0 <col:31> 'double' 2.000000e+00
+      |-ImplicitCastExpr 0x7f9520825d58 <col:36> 'float' <FloatingCast>
+      | `-FloatingLiteral 0x7f9520825be0 <col:36> 'double' 3.000000e+00
+      `-ImplicitCastExpr 0x7f9520825d70 <col:41> 'float' <FloatingCast>
+        `-FloatingLiteral 0x7f9520825c00 <col:41> 'double' 4.000000e+00

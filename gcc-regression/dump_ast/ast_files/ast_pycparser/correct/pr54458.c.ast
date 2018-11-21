@@ -1,0 +1,44 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      DoWhile: 
+        Constant: int, 1
+        Compound: 
+          If: 
+            TernaryOp: 
+              BinaryOp: ==
+                ID: a
+                Constant: int, 0
+              Constant: int, 1
+              BinaryOp: %
+                Constant: int, 1
+                ID: a
+            For: 
+              ID: b
+              UnaryOp: p--
+                ID: b
+              Label: lab
+                EmptyStatement: 
+            While: 
+              ID: x
+              EmptyStatement: 
+          If: 
+            ID: c
+            Goto: lab

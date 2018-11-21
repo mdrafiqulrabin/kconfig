@@ -1,0 +1,38 @@
+FileAST: 
+  Decl: n, [], [], []
+    TypeDecl: n, []
+      IdentifierType: ['int']
+  Decl: o, [], [], []
+    TypeDecl: o, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Pragma: omp parallel firstprivate (n)
+      Compound: 
+        Decl: i, [], [], []
+          TypeDecl: i, []
+            IdentifierType: ['int']
+        Pragma: omp parallel for firstprivate (n)
+        For: 
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          BinaryOp: <
+            ID: i
+            Constant: int, 10
+          UnaryOp: p++
+            ID: i
+          UnaryOp: ++
+            ID: n
+        Pragma: omp atomic
+        Assignment: +=
+          ID: o
+          ID: n

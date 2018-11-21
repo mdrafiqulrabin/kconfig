@@ -1,0 +1,25 @@
+c_files/pr78541-2.c:9:21: error: function definition is not allowed here
+  int hack_digit () { __quadmath_mpn_extract_flt128 (fp_input); }
+                    ^
+1 error generated.
+TranslationUnitDecl 0x7fa35b8166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa35b816c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa35b816940 '__int128'
+|-TypedefDecl 0x7fa35b816c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa35b816960 'unsigned __int128'
+|-TypedefDecl 0x7fa35b816f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa35b816d70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa35b816ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa35b817000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa35b816fc0 'char *'
+|   `-BuiltinType 0x7fa35b816760 'char'
+|-TypedefDecl 0x7fa35b8172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa35b817270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa35b8170e0 'struct __va_list_tag'
+|     `-Record 0x7fa35b817058 '__va_list_tag'
+|-FunctionDecl 0x7fa35b036428 <c_files/pr78541-2.c:4:1, col:51> col:6 __quadmath_mpn_extract_flt128 'void (long *)'
+| `-ParmVarDecl 0x7fa35b817360 <col:37, col:43> col:43 fp_input 'long *'
+`-FunctionDecl 0x7fa35b036560 <line:6:1, line:10:1> line:6:5 fn1 'int ()'
+  `-CompoundStmt 0x7fa35b0366f8 <line:7:1, line:10:1>
+    `-DeclStmt 0x7fa35b0366e0 <line:8:3, col:19>
+      `-VarDecl 0x7fa35b036680 <col:3, col:18> col:8 fp_input 'long [1]'

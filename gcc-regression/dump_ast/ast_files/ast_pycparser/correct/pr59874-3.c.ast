@@ -1,0 +1,16 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_popcount
+          ExprList: 
+            ID: x

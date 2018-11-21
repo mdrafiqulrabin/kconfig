@@ -1,0 +1,38 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          Union: None
+            Decl: l, [], [], []
+              TypeDecl: l, []
+                IdentifierType: ['unsigned', 'long', 'long']
+            Decl: d, [], [], []
+              TypeDecl: d, []
+                IdentifierType: ['double']
+        InitList: 
+          Constant: int, 0x7ff0000000000000ULL
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['double']
+        Constant: int, 0
+      Decl: w, [], [], []
+        TypeDecl: w, []
+          IdentifierType: ['double']
+        UnaryOp: -
+          StructRef: .
+            ID: u
+            ID: d
+      If: 
+        ID: w
+        Assignment: =
+          ID: w
+          ID: v

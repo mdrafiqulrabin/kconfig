@@ -1,0 +1,31 @@
+c_files/pr43404.c:8:3: error: non-ASM statement in naked function is not supported
+  long foo; /* { dg-error "cannot allocate stack for variable" } */
+  ^
+c_files/pr43404.c:5:17: note: attribute is here
+__attribute__ ((naked))
+                ^
+1 error generated.
+TranslationUnitDecl 0x7fae208264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fae20826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fae20826740 '__int128'
+|-TypedefDecl 0x7fae20826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fae20826760 'unsigned __int128'
+|-TypedefDecl 0x7fae20826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fae20826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fae20826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fae20826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fae20826dc0 'char *'
+|   `-BuiltinType 0x7fae20826560 'char'
+|-TypedefDecl 0x7fae208270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fae20827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fae20826ee0 'struct __va_list_tag'
+|     `-Record 0x7fae20826e58 '__va_list_tag'
+`-FunctionDecl 0x7fae21026a00 <c_files/pr43404.c:5:1, line:10:1> line:6:6 invalid __data_abort 'void (void)'
+  |-CompoundStmt 0x7fae21026cb0 <line:7:1, line:10:1>
+  | |-DeclStmt 0x7fae21026b98 <line:8:3, col:11>
+  | | `-VarDecl 0x7fae21026b38 <col:3, col:8> col:8 used foo 'long'
+  | `-DeclStmt 0x7fae21026c98 <line:9:3, col:19>
+  |   `-VarDecl 0x7fae21026bf0 <col:3, col:16> col:9 bar 'long *' cinit
+  |     `-UnaryOperator 0x7fae21026c78 <col:15, col:16> 'long *' prefix '&'
+  |       `-DeclRefExpr 0x7fae21026c50 <col:16> 'long' lvalue Var 0x7fae21026b38 'foo' 'long'
+  `-NakedAttr 0x7fae21026a98 <line:5:17>

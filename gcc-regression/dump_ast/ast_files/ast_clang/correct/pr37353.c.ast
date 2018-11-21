@@ -1,0 +1,526 @@
+TranslationUnitDecl 0x7ff0bf8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff0bf826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff0bf826740 '__int128'
+|-TypedefDecl 0x7ff0bf826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff0bf826760 'unsigned __int128'
+|-TypedefDecl 0x7ff0bf826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff0bf826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff0bf826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff0bf826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff0bf826dc0 'char *'
+|   `-BuiltinType 0x7ff0bf826560 'char'
+|-TypedefDecl 0x7ff0bf8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff0bf827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff0bf826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff0bf826e58 '__va_list_tag'
+|-FunctionDecl 0x7ff0c0025a30 <c_files/pr37353.c:5:15> col:15 implicit used exp 'double (double)' extern
+| |-ParmVarDecl 0x7ff0c0025ac8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff0c0025b30 <col:15> Implicit
+| `-NoThrowAttr 0x7ff0c0025b78 <col:15> Implicit
+|-FunctionDecl 0x7ff0c0025b88 prev 0x7ff0c0025a30 <col:1, col:26> col:15 used exp 'double (double)' extern
+| |-ParmVarDecl 0x7ff0bf827138 <col:20> col:26 'double'
+| |-ConstAttr 0x7ff0c0025c60 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff0c0025c70 <col:15> Inherited Implicit
+`-FunctionDecl 0x7ff0c0025d60 <line:11:1, line:15:1> line:12:1 foo 'void (double)'
+  |-ParmVarDecl 0x7ff0c0025c98 <col:6, col:13> col:13 used arg 'double'
+  `-CompoundStmt 0x7ff0c002bf50 <line:13:1, line:15:1>
+    |-CallExpr 0x7ff0c0025ed0 <line:7:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0025eb8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0025e40 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0025f00 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0025e68 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0025f80 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0025f68 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0025f18 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0025fb0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0025f40 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0026030 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0026018 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0025fc8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0026060 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0025ff0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00260e0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c00260c8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0026078 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0026110 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c00260a0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0026190 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0026178 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0026128 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00261c0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0026150 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0026240 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0026228 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c00261d8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0026270 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0026200 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00262f0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c00262d8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0026288 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0026320 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c00262b0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00263a0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0026388 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0026338 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00263d0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0026360 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0026450 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0026438 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c00263e8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0026480 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0026410 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0026500 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c00264e8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0026498 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0026530 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c00264c0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00265b0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0026598 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0026548 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00265e0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0026570 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0026660 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0026648 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c00265f8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0026690 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0026620 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0026710 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c00266f8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c00266a8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0026740 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c00266d0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00267c0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c00267a8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0026758 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00267f0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0026780 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0026870 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0026858 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0026808 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00268a0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0026830 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0026920 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0026908 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c00268b8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0026950 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c00268e0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00269d0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c00269b8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0026968 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0027a00 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0026990 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0027a80 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0027a68 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0027a18 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0027ab0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0027a40 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0027b30 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0027b18 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0027ac8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0027b60 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0027af0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0027be0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0027bc8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0027b78 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0027c10 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0027ba0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0027c90 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0027c78 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0027c28 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0027cc0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0027c50 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0027d40 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0027d28 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0027cd8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0027d70 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0027d00 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0027df0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0027dd8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0027d88 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0027e20 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0027db0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0027ea0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0027e88 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0027e38 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0027ed0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0027e60 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0027f50 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0027f38 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0027ee8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0027f80 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0027f10 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028000 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0027fe8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0027f98 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028030 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0027fc0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00280b0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028098 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028048 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00280e0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028070 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028160 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028148 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c00280f8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028190 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028120 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028210 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c00281f8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c00281a8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028240 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c00281d0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00282c0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c00282a8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028258 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00282f0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028280 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028370 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028358 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028308 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00283a0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028330 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028420 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028408 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c00283b8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028450 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c00283e0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00284d0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c00284b8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028468 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028500 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028490 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028580 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028568 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028518 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00285b0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028540 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028630 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028618 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c00285c8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028660 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c00285f0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00286e0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c00286c8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028678 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028710 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c00286a0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028790 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028778 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028728 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00287c0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028750 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028840 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028828 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c00287d8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028870 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028800 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00288f0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c00288d8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028888 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028920 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c00288b0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00289a0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028988 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028938 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00289d0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028960 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028a68 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028a50 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028a00 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028a98 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028a28 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028b18 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028b00 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028ab0 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028b48 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028ad8 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028bc8 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028bb0 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028b60 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028bf8 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028b88 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028c78 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028c60 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028c10 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028ca8 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028c38 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028d28 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028d10 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028cc0 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028d58 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028ce8 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028dd8 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028dc0 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028d70 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028e08 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028d98 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028e88 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028e70 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028e20 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028eb8 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028e48 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028f38 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028f20 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028ed0 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0028f68 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028ef8 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0028fe8 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0028fd0 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0028f80 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0029018 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0028fa8 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0029098 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0029080 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0029030 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00290c8 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0029058 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0029148 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0029130 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c00290e0 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0029178 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0029108 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00291f8 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c00291e0 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0029190 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0029228 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c00291b8 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00292a8 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0029290 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0029240 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00292d8 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0029268 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0029358 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0029340 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c00292f0 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0029388 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0029318 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0029408 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c00293f0 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c00293a0 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0029438 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c00293c8 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00294b8 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c00294a0 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0029450 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00294e8 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0029478 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0029568 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0029550 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0029500 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0029598 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0029528 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0029618 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0029600 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c00295b0 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0029648 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c00295d8 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00296c8 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c00296b0 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0029660 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00296f8 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0029688 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0029778 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0029760 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0029710 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00297a8 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0029738 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0029828 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0029810 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c00297c0 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0029858 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c00297e8 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c00298d8 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c00298c0 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0029870 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c0029908 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0029898 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c0029988 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c0029970 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c0029920 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c00299b8 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c0029948 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002a640 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002a628 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c00299d0 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002a670 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002a600 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002a6f0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002a6d8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002a688 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002a720 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002a6b0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002a7a0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002a788 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002a738 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002a7d0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002a760 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002a850 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002a838 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002a7e8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002a880 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002a810 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002a900 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002a8e8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002a898 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002a930 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002a8c0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002a9b0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002a998 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002a948 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002a9e0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002a970 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002aa60 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002aa48 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002a9f8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002aa90 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002aa20 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002ab10 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002aaf8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002aaa8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002ab40 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002aad0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002abc0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002aba8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002ab58 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002abf0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002ab80 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002ac70 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002ac58 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002ac08 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002aca0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002ac30 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002ad20 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002ad08 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002acb8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002ad50 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002ace0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002add0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002adb8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002ad68 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002ae00 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002ad90 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002ae80 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002ae68 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002ae18 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002aeb0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002ae40 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002af30 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002af18 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002aec8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002af60 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002aef0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002afe0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002afc8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002af78 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002b010 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002afa0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002b090 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002b078 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002b028 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002b0c0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002b050 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002b140 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002b128 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002b0d8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002b170 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002b100 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002b1f0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002b1d8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002b188 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002b220 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002b1b0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002b2a0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002b288 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002b238 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002b2d0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002b260 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002b350 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002b338 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002b2e8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002b380 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002b310 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002b400 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002b3e8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002b398 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002b430 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002b3c0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002b4b0 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002b498 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002b448 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002b4e0 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002b470 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002b560 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002b548 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002b4f8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002b590 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002b520 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002b618 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002b600 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002b5a8 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002b648 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002b5d0 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002b6c8 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002b6b0 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002b660 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002b6f8 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002b688 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002b778 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002b760 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002b710 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002b7a8 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002b738 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002b828 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002b810 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002b7c0 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002b858 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002b7e8 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002b8d8 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002b8c0 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002b870 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002b908 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002b898 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002b988 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002b970 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002b920 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002b9b8 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002b948 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002ba38 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002ba20 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002b9d0 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002ba68 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002b9f8 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002bae8 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002bad0 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002ba80 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002bb18 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002baa8 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002bb98 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002bb80 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002bb30 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002bbc8 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002bb58 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002bc48 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002bc30 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002bbe0 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002bc78 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002bc08 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002bcf8 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002bce0 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002bc90 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002bd28 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002bcb8 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002bda8 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002bd90 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002bd40 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002bdd8 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002bd68 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    |-CallExpr 0x7ff0c002be58 <col:11, col:19> 'double'
+    | |-ImplicitCastExpr 0x7ff0c002be40 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff0c002bdf0 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+    | `-ImplicitCastExpr 0x7ff0c002be88 <col:16> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c002be18 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'
+    `-CallExpr 0x7ff0c002bf08 <col:11, col:19> 'double'
+      |-ImplicitCastExpr 0x7ff0c002bef0 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff0c002bea0 <col:11> 'double (double)' Function 0x7ff0c0025b88 'exp' 'double (double)'
+      `-ImplicitCastExpr 0x7ff0c002bf38 <col:16> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7ff0c002bec8 <col:16> 'double' lvalue ParmVar 0x7ff0c0025c98 'arg' 'double'

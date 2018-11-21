@@ -1,0 +1,101 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1_float, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['float']
+        TypeDecl: f1_float, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['float']
+        BinaryOp: +
+          ID: x
+          ID: z
+      Assignment: =
+        ID: y
+        BinaryOp: +
+          ID: y
+          ID: x
+      Assignment: =
+        ID: y
+        BinaryOp: +
+          ID: y
+          ID: x
+      Assignment: =
+        ID: y
+        BinaryOp: +
+          ID: y
+          ID: x
+      Assignment: =
+        ID: y
+        BinaryOp: +
+          ID: y
+          ID: x
+      Assignment: =
+        ID: y
+        BinaryOp: +
+          ID: y
+          ID: x
+      Assignment: =
+        ID: y
+        BinaryOp: +
+          ID: y
+          ID: x
+      Assignment: =
+        ID: y
+        BinaryOp: +
+          ID: y
+          ID: x
+      Return: 
+        ID: y
+  FuncDef: 
+    Decl: f1_float2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+        TypeDecl: f1_float2, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['float']
+        BinaryOp: +
+          BinaryOp: +
+            ID: x
+            BinaryOp: *
+              Constant: int, 3
+              ID: x
+          ID: x
+      Return: 
+        ID: y
+  FuncDef: 
+    Decl: f1_int, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: f1_int, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: +
+          BinaryOp: +
+            ID: x
+            BinaryOp: *
+              Constant: int, 4
+              ID: x
+          ID: x
+      Return: 
+        ID: y

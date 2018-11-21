@@ -1,0 +1,40 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: err
+      EnumeratorList: 
+        Enumerator: err_IO
+          Constant: int, 0x8a450000
+        Enumerator: err_NM
+        Enumerator: err_EOF
+        Enumerator: err_SE
+        Enumerator: err_PT
+  Decl: E_, [], ['static'], []
+    TypeDecl: E_, []
+      Enum: err
+  FuncDef: 
+    Decl: error, [], [], []
+      FuncDecl: 
+        TypeDecl: error, []
+          IdentifierType: ['int']
+    Compound: 
+      Switch: 
+        ID: E_
+        Compound: 
+          Case: 
+            ID: err_IO
+            Break: 
+          Case: 
+            ID: err_NM
+            Break: 
+          Case: 
+            ID: err_EOF
+            Break: 
+          Case: 
+            ID: err_SE
+            Break: 
+          Case: 
+            ID: err_PT
+            Break: 
+          Default: 
+            Return: 
+              Constant: int, 0

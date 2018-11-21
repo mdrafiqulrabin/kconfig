@@ -1,0 +1,41 @@
+c_files/pr48857.c:16:9: error: unknown type name 'vector'
+typedef vector long long v2di_type;
+        ^
+c_files/pr48857.c:16:16: error: expected identifier or '('
+typedef vector long long v2di_type;
+               ^
+c_files/pr48857.c:18:1: error: unknown type name 'v2di_type'
+v2di_type
+^
+c_files/pr48857.c:19:14: error: unknown type name 'v2di_type'
+return_v2di (v2di_type *ptr)
+             ^
+c_files/pr48857.c:29:12: error: unknown type name 'v2di_type'
+pass_v2di (v2di_type arg, v2di_type *ptr)
+           ^
+c_files/pr48857.c:29:27: error: unknown type name 'v2di_type'
+pass_v2di (v2di_type arg, v2di_type *ptr)
+                          ^
+6 errors generated.
+TranslationUnitDecl 0x7ffce48264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffce4826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffce4826740 '__int128'
+|-TypedefDecl 0x7ffce4826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffce4826760 'unsigned __int128'
+|-TypedefDecl 0x7ffce4826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffce4826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffce4826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffce4826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffce4826dc0 'char *'
+|   `-BuiltinType 0x7ffce4826560 'char'
+|-TypedefDecl 0x7ffce48270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffce4827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffce4826ee0 'struct __va_list_tag'
+|     `-Record 0x7ffce4826e58 '__va_list_tag'
+|-FunctionDecl 0x7ffce5026a68 <c_files/pr48857.c:18:1, line:26:1> line:19:1 invalid return_v2di 'int (int *)'
+| |-ParmVarDecl 0x7ffce4827180 <col:14, col:25> col:25 invalid ptr 'int *'
+| `-CompoundStmt 0x7ffce5026b08 <line:20:1, line:26:1>
+`-FunctionDecl 0x7ffce5026c80 <line:28:1, line:35:1> line:29:1 invalid pass_v2di 'void (int, int *)'
+  |-ParmVarDecl 0x7ffce5026b38 <col:12, col:22> col:22 invalid arg 'int'
+  |-ParmVarDecl 0x7ffce5026bb0 <col:27, col:38> col:38 invalid ptr 'int *'
+  `-CompoundStmt 0x7ffce5026d28 <line:30:1, line:35:1>

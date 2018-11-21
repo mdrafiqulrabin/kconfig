@@ -1,0 +1,86 @@
+FileAST: 
+  Decl: crc_table, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: crc_table, []
+        IdentifierType: ['unsigned', 'short', 'int']
+      Constant: int, 256
+  FuncDef: 
+    Decl: AC3_encode_init, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: AC3_encode_init, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['unsigned', 'int']
+      For: 
+        Assignment: =
+          ID: n
+          Constant: int, 0
+        BinaryOp: <
+          ID: n
+          Constant: int, 256
+        UnaryOp: p++
+          ID: n
+        Compound: 
+          Assignment: =
+            ID: c
+            BinaryOp: <<
+              ID: n
+              Constant: int, 8
+          For: 
+            Assignment: =
+              ID: k
+              Constant: int, 0
+            BinaryOp: <
+              ID: k
+              Constant: int, 8
+            UnaryOp: p++
+              ID: k
+            Compound: 
+              If: 
+                BinaryOp: &
+                  ID: c
+                  BinaryOp: <<
+                    Constant: int, 1
+                    Constant: int, 15
+                Assignment: =
+                  ID: c
+                  BinaryOp: ^
+                    BinaryOp: &
+                      BinaryOp: <<
+                        ID: c
+                        Constant: int, 1
+                      Constant: int, 0xffff
+                    BinaryOp: &
+                      BinaryOp: |
+                        BinaryOp: |
+                          BinaryOp: |
+                            BinaryOp: <<
+                              Constant: int, 1
+                              Constant: int, 0
+                            BinaryOp: <<
+                              Constant: int, 1
+                              Constant: int, 2
+                          BinaryOp: <<
+                            Constant: int, 1
+                            Constant: int, 15
+                        BinaryOp: <<
+                          Constant: int, 1
+                          Constant: int, 16
+                      Constant: int, 0xffff
+          Assignment: =
+            ArrayRef: 
+              ID: crc_table
+              ID: n
+            ID: c

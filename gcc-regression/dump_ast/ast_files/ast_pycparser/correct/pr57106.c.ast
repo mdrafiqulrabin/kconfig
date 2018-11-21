@@ -1,0 +1,51 @@
+FileAST: 
+  Typedef: block128_f, [], ['typedef']
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: block128_f, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: out, [], [], []
+            PtrDecl: []
+              TypeDecl: out, []
+                IdentifierType: ['int']
+          Decl: iv, [], [], []
+            PtrDecl: []
+              TypeDecl: iv, []
+                IdentifierType: ['int']
+          Decl: block, [], [], []
+            TypeDecl: block, []
+              IdentifierType: ['block128_f']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        Constant: int, 1
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              ID: out
+            BinaryOp: ^
+              UnaryOp: *
+                ID: out
+              UnaryOp: *
+                ID: iv
+          FuncCall: 
+            ID: block
+            ExprList: 
+              ID: out
+              UnaryOp: *
+                ID: out
+          Assignment: =
+            ID: iv
+            ID: out

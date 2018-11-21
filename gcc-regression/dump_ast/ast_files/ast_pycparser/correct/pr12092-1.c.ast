@@ -1,0 +1,37 @@
+FileAST: 
+  FuncDef: 
+    Decl: DecodeAC, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: index, [], [], []
+            TypeDecl: index, []
+              IdentifierType: ['int']
+          Decl: matrix, [], [], []
+            PtrDecl: []
+              TypeDecl: matrix, []
+                IdentifierType: ['int']
+        TypeDecl: DecodeAC, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: mptr, [], [], []
+        PtrDecl: []
+          TypeDecl: mptr, []
+            IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: mptr
+          BinaryOp: +
+            ID: matrix
+            ID: index
+        BinaryOp: <
+          ID: mptr
+          BinaryOp: +
+            ID: matrix
+            Constant: int, 64
+        UnaryOp: p++
+          ID: mptr
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              ID: mptr
+            Constant: int, 0

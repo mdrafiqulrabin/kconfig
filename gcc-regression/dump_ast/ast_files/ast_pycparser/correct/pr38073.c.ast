@@ -1,0 +1,35 @@
+FileAST: 
+  FuncDef: 
+    Decl: test_seg, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: test_seg, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: b
+        UnaryOp: p++
+          ID: i
+        Assignment: *=
+          ID: r
+          ID: a
+      Return: 
+        ID: r

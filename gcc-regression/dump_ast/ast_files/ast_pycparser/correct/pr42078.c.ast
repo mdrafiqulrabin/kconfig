@@ -1,0 +1,63 @@
+FileAST: 
+  Decl: sqrt, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['double']
+      TypeDecl: sqrt, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+        TypeDecl: foo, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['float']
+        FuncCall: 
+          ID: sqrt
+          ExprList: 
+            ID: x
+      Return: 
+        BinaryOp: /
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: bar, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+        TypeDecl: bar, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['float']
+        FuncCall: 
+          ID: sqrt
+          ExprList: 
+            ID: x
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['float']
+        ID: y
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['float']
+        ID: y
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['float']
+        ID: y
+      Return: 
+        BinaryOp: /
+          ID: x
+          ID: y

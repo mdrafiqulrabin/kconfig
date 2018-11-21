@@ -1,0 +1,31 @@
+FileAST: 
+  Typedef: regex_t, [], ['typedef']
+    TypeDecl: regex_t, []
+      Struct: Tcl_ResolvedVarInfo
+        Decl: re_guts, [], [], []
+          PtrDecl: []
+            TypeDecl: re_guts, []
+              IdentifierType: ['char']
+  FuncDef: 
+    Decl: TclReComp, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: re, [], [], []
+            PtrDecl: []
+              TypeDecl: re, []
+                IdentifierType: ['regex_t']
+        TypeDecl: TclReComp, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          StructRef: ->
+            ID: re
+            ID: re_guts
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+        EmptyStatement: 

@@ -1,0 +1,40 @@
+FileAST: 
+  Decl: mdct_win, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: mdct_win, []
+        IdentifierType: ['int']
+      Constant: int, 8
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: decode_init, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['double']
+        TypeDecl: decode_init, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 4
+        ID: j
+        UnaryOp: p--
+          ID: j
+        Compound: 
+          Assignment: *=
+            ID: d
+            Constant: float, 0.5
+          Assignment: =
+            ArrayRef: 
+              ID: mdct_win
+              ID: j
+            BinaryOp: *
+              ID: d
+              Constant: int, 3

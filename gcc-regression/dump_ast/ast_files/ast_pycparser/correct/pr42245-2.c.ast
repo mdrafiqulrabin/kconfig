@@ -1,0 +1,61 @@
+FileAST: 
+  FuncDef: 
+    Decl: strictly_smaller_name, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['char']
+          Decl: t, [], [], []
+            PtrDecl: []
+              TypeDecl: t, []
+                IdentifierType: ['char']
+        TypeDecl: strictly_smaller_name, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: ss, [], [], []
+        TypeDecl: ss, []
+          IdentifierType: ['int']
+      Decl: tt, [], [], []
+        TypeDecl: tt, []
+          IdentifierType: ['int']
+      While: 
+        BinaryOp: ||
+          BinaryOp: !=
+            UnaryOp: *
+              ID: s
+            Constant: char, '\0'
+          BinaryOp: !=
+            UnaryOp: *
+              ID: t
+            Constant: char, '\0'
+        Compound: 
+          If: 
+            BinaryOp: ==
+              UnaryOp: *
+                ID: s
+              Constant: char, '\0'
+            Assignment: =
+              ID: ss
+              Constant: char, '*'
+            Assignment: =
+              ID: ss
+              UnaryOp: *
+                UnaryOp: p++
+                  ID: s
+          If: 
+            BinaryOp: !=
+              UnaryOp: *
+                ID: t
+              Constant: char, '\0'
+            Assignment: =
+              ID: tt
+              UnaryOp: *
+                ID: t
+          If: 
+            BinaryOp: ==
+              ID: ss
+              ID: tt
+            Return: 
+              Constant: int, 0

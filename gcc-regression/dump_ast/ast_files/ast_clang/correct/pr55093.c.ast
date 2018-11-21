@@ -1,0 +1,303 @@
+TranslationUnitDecl 0x7fa32c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa32c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa32c826740 '__int128'
+|-TypedefDecl 0x7fa32c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa32c826760 'unsigned __int128'
+|-TypedefDecl 0x7fa32c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa32c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa32c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa32c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa32c826dc0 'char *'
+|   `-BuiltinType 0x7fa32c826560 'char'
+|-TypedefDecl 0x7fa32c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa32c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa32c826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa32c826e58 '__va_list_tag'
+|-RecordDecl 0x7fa32c827120 <c_files/pr55093.c:5:9, col:15> col:15 union tree_node
+|-TypedefDecl 0x7fa32d800080 <col:1, col:26> col:26 referenced tree 'union tree_node *'
+| `-PointerType 0x7fa32d800030 'union tree_node *'
+|   `-ElaboratedType 0x7fa32c8271d0 'union tree_node' sugar
+|     `-RecordType 0x7fa32c8271b0 'union tree_node'
+|       `-Record 0x7fa32d801698 'tree_node'
+|-TypedefDecl 0x7fa32d800170 <line:6:1, col:32> col:32 referenced const_tree 'const union tree_node *'
+| `-PointerType 0x7fa32d800120 'const union tree_node *'
+|   `-QualType 0x7fa32c8271d1 'const union tree_node' const
+|     `-ElaboratedType 0x7fa32c8271d0 'union tree_node' sugar
+|       `-RecordType 0x7fa32c8271b0 'union tree_node'
+|         `-Record 0x7fa32d801698 'tree_node'
+|-RecordDecl 0x7fa32d8001c8 <line:7:9, line:10:1> line:7:9 struct definition
+| |-FieldDecl 0x7fa32d800288 <line:8:3, col:22> col:22 low 'unsigned long long'
+| `-FieldDecl 0x7fa32d8002e8 <line:9:3, col:13> col:13 high 'long long'
+|-TypedefDecl 0x7fa32d800380 <line:7:1, line:10:3> col:3 referenced double_int 'struct double_int':'double_int'
+| `-ElaboratedType 0x7fa32d800330 'struct double_int' sugar
+|   `-RecordType 0x7fa32d800250 'double_int'
+|     `-Record 0x7fa32d8001c8 ''
+|-RecordDecl 0x7fa32d8003f0 <line:11:1, line:12:1> line:11:8 struct real_value definition
+|-RecordDecl 0x7fa32d8004a0 <line:13:1, line:15:1> line:13:8 struct real_format definition
+| `-FieldDecl 0x7fa32d800568 <line:14:3, col:7> col:7 referenced has_signed_zero 'int'
+|-VarDecl 0x7fa32d8006d0 <line:16:1, col:58> col:37 used real_format_for_mode 'const struct real_format *[]' extern
+|-FunctionDecl 0x7fa32d800928 <line:17:1, col:53> col:12 used real_isnegzero 'int (const struct real_value *)' extern
+| `-ParmVarDecl 0x7fa32d800820 <col:28, col:52> col:53 'const struct real_value *'
+|-EnumDecl 0x7fa32d8009c8 <line:18:1, col:37> col:6 tree_code
+| |-EnumConstantDecl 0x7fa32d800a80 <col:18> col:18 referenced REAL_CST 'int'
+| `-EnumConstantDecl 0x7fa32d800ac8 <col:28> col:28 referenced SSA_NAME 'int'
+|-RecordDecl 0x7fa32d800b10 <line:19:1, line:25:1> line:19:8 struct tree_base definition
+| |-FieldDecl 0x7fa32d800c30 <line:20:3, col:25> col:18 referenced code 'enum tree_code':'enum tree_code'
+| | `-IntegerLiteral 0x7fa32d800bc0 <col:25> 'int' 16
+| |-RecordDecl 0x7fa32d800c78 <line:21:3, line:23:3> line:21:3 union definition
+| | `-FieldDecl 0x7fa32d800d38 <line:22:5, col:18> col:18 referenced version 'unsigned int'
+| `-FieldDecl 0x7fa32d800dd0 <line:21:3, line:24:3> col:3 referenced u 'union (anonymous union at c_files/pr55093.c:21:3)':'union tree_base::(anonymous at c_files/pr55093.c:21:3)'
+|-FunctionDecl 0x7fa32d8015e0 <line:26:1, col:121> col:13 used tree_check_failed 'void (const_tree, const char *, int, const char *, ...) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7fa32d800e50 <col:32> col:42 'const_tree':'const union tree_node *'
+| |-ParmVarDecl 0x7fa32d800ec8 <col:44, col:55> col:56 'const char *'
+| |-ParmVarDecl 0x7fa32d800f40 <col:58> col:61 'int'
+| `-ParmVarDecl 0x7fa32d801400 <col:63, col:74> col:75 'const char *'
+|-RecordDecl 0x7fa32d801698 prev 0x7fa32c827120 <line:27:1, line:29:1> line:27:7 union tree_node definition
+| `-FieldDecl 0x7fa32d801770 <line:28:3, col:20> col:20 referenced base 'struct tree_base':'struct tree_base'
+|-FunctionDecl 0x7fa32d801bd0 <line:30:1, line:34:1> line:30:13 used tree_check 'tree (tree, const char *, int, const char *, enum tree_code)' inline
+| |-ParmVarDecl 0x7fa32d801880 <col:25, col:30> col:30 used __t 'tree':'union tree_node *'
+| |-ParmVarDecl 0x7fa32d8018f8 <col:35, col:47> col:47 used __f 'const char *'
+| |-ParmVarDecl 0x7fa32d801970 <col:52, col:56> col:56 used __l 'int'
+| |-ParmVarDecl 0x7fa32d8019e8 <col:61, col:73> col:73 used __g 'const char *'
+| |-ParmVarDecl 0x7fa32d801a68 <col:78, col:93> col:93 used __c 'enum tree_code':'enum tree_code'
+| `-CompoundStmt 0x7fa32d8021c0 <col:98, line:34:1>
+|   |-IfStmt 0x7fa32d802130 <line:31:3, line:32:50>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa32d801e80 <line:31:7, col:46> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fa32d801e38 <col:7, col:41> 'unsigned int' <IntegralCast>
+|   | | | `-ParenExpr 0x7fa32d801df0 <col:7, col:41> 'enum tree_code':'enum tree_code'
+|   | | |   `-CStyleCastExpr 0x7fa32d801dc8 <col:8, col:37> 'enum tree_code':'enum tree_code' <NoOp>
+|   | | |     `-ImplicitCastExpr 0x7fa32d801db0 <col:25, col:37> 'enum tree_code':'enum tree_code' <LValueToRValue>
+|   | | |       `-MemberExpr 0x7fa32d801d58 <col:25, col:37> 'enum tree_code':'enum tree_code' lvalue bitfield .code 0x7fa32d800c30
+|   | | |         `-MemberExpr 0x7fa32d801d20 <col:25, col:32> 'struct tree_base':'struct tree_base' lvalue ->base 0x7fa32d801770
+|   | | |           `-ImplicitCastExpr 0x7fa32d801d08 <col:25, col:29> 'tree':'union tree_node *' <LValueToRValue>
+|   | | |             `-ParenExpr 0x7fa32d801ce8 <col:25, col:29> 'tree':'union tree_node *' lvalue
+|   | | |               `-DeclRefExpr 0x7fa32d801c90 <col:26> 'tree':'union tree_node *' lvalue ParmVar 0x7fa32d801880 '__t' 'tree':'union tree_node *'
+|   | | `-ImplicitCastExpr 0x7fa32d801e68 <col:46> 'unsigned int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7fa32d801e50 <col:46> 'enum tree_code':'enum tree_code' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fa32d801e10 <col:46> 'enum tree_code':'enum tree_code' lvalue ParmVar 0x7fa32d801a68 '__c' 'enum tree_code':'enum tree_code'
+|   | |-CallExpr 0x7fa32d802030 <line:32:5, col:50> 'void'
+|   | | |-ImplicitCastExpr 0x7fa32d802018 <col:5> 'void (*)(const_tree, const char *, int, const char *, ...) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fa32d801ea8 <col:5> 'void (const_tree, const char *, int, const char *, ...) __attribute__((noreturn))' Function 0x7fa32d8015e0 'tree_check_failed' 'void (const_tree, const char *, int, const char *, ...) __attribute__((noreturn))'
+|   | | |-ImplicitCastExpr 0x7fa32d8020a0 <col:24> 'const_tree':'const union tree_node *' <BitCast>
+|   | | | `-ImplicitCastExpr 0x7fa32d802088 <col:24> 'tree':'union tree_node *' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7fa32d801ed0 <col:24> 'tree':'union tree_node *' lvalue ParmVar 0x7fa32d801880 '__t' 'tree':'union tree_node *'
+|   | | |-ImplicitCastExpr 0x7fa32d8020b8 <col:29> 'const char *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa32d801ef8 <col:29> 'const char *' lvalue ParmVar 0x7fa32d8018f8 '__f' 'const char *'
+|   | | |-ImplicitCastExpr 0x7fa32d8020d0 <col:34> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa32d801f20 <col:34> 'int' lvalue ParmVar 0x7fa32d801970 '__l' 'int'
+|   | | |-ImplicitCastExpr 0x7fa32d8020e8 <col:39> 'const char *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa32d801f48 <col:39> 'const char *' lvalue ParmVar 0x7fa32d8019e8 '__g' 'const char *'
+|   | | |-ImplicitCastExpr 0x7fa32d802118 <col:44> 'unsigned int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7fa32d802100 <col:44> 'enum tree_code':'enum tree_code' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7fa32d801f70 <col:44> 'enum tree_code':'enum tree_code' lvalue ParmVar 0x7fa32d801a68 '__c' 'enum tree_code':'enum tree_code'
+|   | | `-IntegerLiteral 0x7fa32d801f98 <col:49> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fa32d8021a8 <line:33:3, col:10>
+|     `-ImplicitCastExpr 0x7fa32d802190 <col:10> 'tree':'union tree_node *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa32d802168 <col:10> 'tree':'union tree_node *' lvalue ParmVar 0x7fa32d801880 '__t' 'tree':'union tree_node *'
+|-RecordDecl 0x7fa32d8021e8 <line:35:1, line:39:1> line:35:8 struct prop_value_d definition
+| |-FieldDecl 0x7fa32d8022a8 <line:36:3, col:7> col:7 referenced lattice_val 'int'
+| |-FieldDecl 0x7fa32d802300 <line:37:3, col:8> col:8 referenced value 'tree':'union tree_node *'
+| `-FieldDecl 0x7fa32d802380 <line:38:3, col:14> col:14 mask 'double_int':'double_int'
+|-TypedefDecl 0x7fa32d804820 <line:40:1, col:29> col:29 referenced prop_value_t 'struct prop_value_d':'struct prop_value_d'
+| `-ElaboratedType 0x7fa32d8023d0 'struct prop_value_d' sugar
+|   `-RecordType 0x7fa32d802270 'struct prop_value_d'
+|     `-Record 0x7fa32d8021e8 'prop_value_d'
+|-VarDecl 0x7fa32d804908 <line:41:1, col:22> col:22 used const_val 'prop_value_t *' static
+|-FunctionDecl 0x7fa32d804a80 <line:42:1, col:53> col:13 used canonicalize_float_value 'void (prop_value_t *)' static
+| `-ParmVarDecl 0x7fa32d804978 <col:39, col:52> col:53 'prop_value_t *'
+|-TypedefDecl 0x7fa32d804cd0 <line:43:1, col:53> col:16 referenced ssa_prop_visit_stmt_fn 'void (*)(prop_value_t)'
+| `-PointerType 0x7fa32d804c70 'void (*)(prop_value_t)'
+|   `-ParenType 0x7fa32d804c10 'void (prop_value_t)' sugar
+|     `-FunctionProtoType 0x7fa32d804bd0 'void (prop_value_t)' cdecl
+|       |-BuiltinType 0x7fa32c826520 'void'
+|       `-TypedefType 0x7fa32d804880 'prop_value_t' sugar
+|         |-Typedef 0x7fa32d804820 'prop_value_t'
+|         `-ElaboratedType 0x7fa32d8023d0 'struct prop_value_d' sugar
+|           `-RecordType 0x7fa32d802270 'struct prop_value_d'
+|             `-Record 0x7fa32d8021e8 'prop_value_d'
+|-TypedefDecl 0x7fa32d804e88 <line:44:1, col:44> col:16 referenced ssa_prop_visit_phi_fn 'void (*)(void)'
+| `-PointerType 0x7fa32d804e30 'void (*)(void)'
+|   `-ParenType 0x7fa32d804dd0 'void (void)' sugar
+|     `-FunctionProtoType 0x7fa32d804da0 'void (void)' cdecl
+|       `-BuiltinType 0x7fa32c826520 'void'
+|-TypedefDecl 0x7fa32d805060 <line:45:1, col:49> col:16 referenced ssa_prop_fold_stmt_fn 'void (*)(void *)'
+| `-PointerType 0x7fa32d805000 'void (*)(void *)'
+|   `-ParenType 0x7fa32d804fa0 'void (void *)' sugar
+|     `-FunctionProtoType 0x7fa32d804f60 'void (void *)' cdecl
+|       |-BuiltinType 0x7fa32c826520 'void'
+|       `-PointerType 0x7fa32c8269a0 'void *'
+|         `-BuiltinType 0x7fa32c826520 'void'
+|-TypedefDecl 0x7fa32d8051f0 <line:46:1, col:58> col:16 referenced ssa_prop_get_value_fn 'void (*)(prop_value_t *)'
+| `-PointerType 0x7fa32d805190 'void (*)(prop_value_t *)'
+|   `-ParenType 0x7fa32d805130 'void (prop_value_t *)' sugar
+|     `-FunctionProtoType 0x7fa32d804a20 'void (prop_value_t *)' cdecl
+|       |-BuiltinType 0x7fa32c826520 'void'
+|       `-PointerType 0x7fa32d8048d0 'prop_value_t *'
+|         `-TypedefType 0x7fa32d804880 'prop_value_t' sugar
+|           |-Typedef 0x7fa32d804820 'prop_value_t'
+|           `-ElaboratedType 0x7fa32d8023d0 'struct prop_value_d' sugar
+|             `-RecordType 0x7fa32d802270 'struct prop_value_d'
+|               `-Record 0x7fa32d8021e8 'prop_value_d'
+|-FunctionDecl 0x7fa32d805420 <line:47:1, col:66> col:6 used ssa_propagate 'void (ssa_prop_visit_stmt_fn, ssa_prop_visit_phi_fn)'
+| |-ParmVarDecl 0x7fa32d805280 <col:21> col:43 'ssa_prop_visit_stmt_fn':'void (*)(prop_value_t)'
+| `-ParmVarDecl 0x7fa32d805310 <col:45> col:66 'ssa_prop_visit_phi_fn':'void (*)(void)'
+|-FunctionDecl 0x7fa32d8056a8 <line:48:1, col:70> col:5 used substitute_and_fold 'int (ssa_prop_get_value_fn, ssa_prop_fold_stmt_fn)'
+| |-ParmVarDecl 0x7fa32d805500 <col:26> col:47 'ssa_prop_get_value_fn':'void (*)(prop_value_t *)'
+| `-ParmVarDecl 0x7fa32d805590 <col:49> col:70 'ssa_prop_fold_stmt_fn':'void (*)(void *)'
+|-FunctionDecl 0x7fa32d805800 <line:49:1, col:27> col:6 used ccp_fold_stmt 'void (void *)'
+| `-ParmVarDecl 0x7fa32d805768 <col:21, col:26> col:27 'void *'
+|-FunctionDecl 0x7fa32d805938 <line:50:1, line:52:1> line:50:13 used get_constant_value 'void (prop_value_t *)' static
+| |-ParmVarDecl 0x7fa32d8058b0 <col:33, col:47> col:47 used val 'prop_value_t *'
+| `-CompoundStmt 0x7fa32d805ab8 <col:52, line:52:1>
+|   `-CallExpr 0x7fa32d805a70 <line:51:3, col:32> 'void'
+|     |-ImplicitCastExpr 0x7fa32d805a58 <col:3> 'void (*)(prop_value_t *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fa32d8059d8 <col:3> 'void (prop_value_t *)' Function 0x7fa32d804a80 'canonicalize_float_value' 'void (prop_value_t *)'
+|     `-ImplicitCastExpr 0x7fa32d805aa0 <col:29> 'prop_value_t *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa32d805a00 <col:29> 'prop_value_t *' lvalue ParmVar 0x7fa32d8058b0 'val' 'prop_value_t *'
+|-FunctionDecl 0x7fa32d805b70 prev 0x7fa32d804a80 <line:53:1, line:62:1> line:53:13 used canonicalize_float_value 'void (prop_value_t *)' static
+| |-ParmVarDecl 0x7fa32d805ae8 <col:39, col:53> col:53 used val 'prop_value_t *'
+| `-CompoundStmt 0x7fa32d8065b8 <col:58, line:62:1>
+|   |-DeclStmt 0x7fa32d805c88 <line:54:3, col:11>
+|   | `-VarDecl 0x7fa32d805c28 <col:3, col:7> col:7 used mode 'int'
+|   |-DeclStmt 0x7fa32d805d20 <line:55:3, col:22>
+|   | `-VarDecl 0x7fa32d805cc0 <col:3, col:21> col:21 used d 'struct real_value':'struct real_value'
+|   |-IfStmt 0x7fa32d8060a0 <line:56:3, line:58:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa32d806060 <line:56:7, line:57:56> 'int' '||'
+|   | | |-BinaryOperator 0x7fa32d805de8 <line:56:7, col:27> 'int' '!='
+|   | | | |-ImplicitCastExpr 0x7fa32d805dd0 <col:7, col:12> 'int' <LValueToRValue>
+|   | | | | `-MemberExpr 0x7fa32d805d78 <col:7, col:12> 'int' lvalue ->lattice_val 0x7fa32d8022a8
+|   | | | |   `-ImplicitCastExpr 0x7fa32d805d60 <col:7> 'prop_value_t *' <LValueToRValue>
+|   | | | |     `-DeclRefExpr 0x7fa32d805d38 <col:7> 'prop_value_t *' lvalue ParmVar 0x7fa32d805ae8 'val' 'prop_value_t *'
+|   | | | `-IntegerLiteral 0x7fa32d805db0 <col:27> 'int' 1
+|   | | `-BinaryOperator 0x7fa32d806038 <line:57:10, col:56> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7fa32d806008 <col:10, col:51> 'unsigned int' <IntegralCast>
+|   | |   | `-ParenExpr 0x7fa32d805fc0 <col:10, col:51> 'enum tree_code':'enum tree_code'
+|   | |   |   `-CStyleCastExpr 0x7fa32d805f98 <col:11, col:47> 'enum tree_code':'enum tree_code' <NoOp>
+|   | |   |     `-ImplicitCastExpr 0x7fa32d805f80 <col:28, col:47> 'enum tree_code':'enum tree_code' <LValueToRValue>
+|   | |   |       `-MemberExpr 0x7fa32d805f28 <col:28, col:47> 'enum tree_code':'enum tree_code' lvalue bitfield .code 0x7fa32d800c30
+|   | |   |         `-MemberExpr 0x7fa32d805ef0 <col:28, col:42> 'struct tree_base':'struct tree_base' lvalue ->base 0x7fa32d801770
+|   | |   |           `-ImplicitCastExpr 0x7fa32d805ed8 <col:28, col:39> 'tree':'union tree_node *' <LValueToRValue>
+|   | |   |             `-ParenExpr 0x7fa32d805eb8 <col:28, col:39> 'tree':'union tree_node *' lvalue
+|   | |   |               `-MemberExpr 0x7fa32d805e50 <col:29, col:34> 'tree':'union tree_node *' lvalue ->value 0x7fa32d802300
+|   | |   |                 `-ImplicitCastExpr 0x7fa32d805e38 <col:29> 'prop_value_t *' <LValueToRValue>
+|   | |   |                   `-DeclRefExpr 0x7fa32d805e10 <col:29> 'prop_value_t *' lvalue ParmVar 0x7fa32d805ae8 'val' 'prop_value_t *'
+|   | |   `-ImplicitCastExpr 0x7fa32d806020 <col:56> 'unsigned int' <IntegralCast>
+|   | |     `-DeclRefExpr 0x7fa32d805fe0 <col:56> 'int' EnumConstant 0x7fa32d800a80 'REAL_CST' 'int'
+|   | |-ReturnStmt 0x7fa32d806088 <line:58:5>
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fa32d806190 <line:59:3, col:15> 'int' '='
+|   | |-DeclRefExpr 0x7fa32d8060d8 <col:3> 'int' lvalue Var 0x7fa32d805c28 'mode' 'int'
+|   | `-ImplicitCastExpr 0x7fa32d806178 <col:10, col:15> 'int' <LValueToRValue>
+|   |   `-MemberExpr 0x7fa32d806140 <col:10, col:15> 'int' lvalue ->lattice_val 0x7fa32d8022a8
+|   |     `-ImplicitCastExpr 0x7fa32d806128 <col:10> 'prop_value_t *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fa32d806100 <col:10> 'prop_value_t *' lvalue ParmVar 0x7fa32d805ae8 'val' 'prop_value_t *'
+|   `-IfStmt 0x7fa32d806580 <line:60:3, line:61:21>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fa32d8064b0 <line:60:7, col:72> 'int' '&&'
+|     | |-ImplicitCastExpr 0x7fa32d806498 <col:7, col:35> 'int' <LValueToRValue>
+|     | | `-MemberExpr 0x7fa32d8062d8 <col:7, col:35> 'const int' lvalue ->has_signed_zero 0x7fa32d800568
+|     | |   `-ImplicitCastExpr 0x7fa32d8062c0 <col:7, col:32> 'const struct real_format *' <LValueToRValue>
+|     | |     `-ArraySubscriptExpr 0x7fa32d806298 <col:7, col:32> 'const struct real_format *' lvalue
+|     | |       |-ImplicitCastExpr 0x7fa32d806268 <col:7> 'const struct real_format **' <ArrayToPointerDecay>
+|     | |       | `-DeclRefExpr 0x7fa32d8061b8 <col:7> 'const struct real_format *[]' lvalue Var 0x7fa32d8006d0 'real_format_for_mode' 'const struct real_format *[]'
+|     | |       `-ImplicitCastExpr 0x7fa32d806280 <col:28> 'int' <LValueToRValue>
+|     | |         `-DeclRefExpr 0x7fa32d8061e0 <col:28> 'int' lvalue Var 0x7fa32d805c28 'mode' 'int'
+|     | `-CallExpr 0x7fa32d806450 <col:54, col:72> 'int'
+|     |   |-ImplicitCastExpr 0x7fa32d806438 <col:54> 'int (*)(const struct real_value *)' <FunctionToPointerDecay>
+|     |   | `-DeclRefExpr 0x7fa32d806310 <col:54> 'int (const struct real_value *)' Function 0x7fa32d800928 'real_isnegzero' 'int (const struct real_value *)'
+|     |   `-ImplicitCastExpr 0x7fa32d806480 <col:70, col:71> 'const struct real_value *' <BitCast>
+|     |     `-UnaryOperator 0x7fa32d8063b8 <col:70, col:71> 'struct real_value *' prefix '&'
+|     |       `-DeclRefExpr 0x7fa32d806338 <col:71> 'struct real_value':'struct real_value' lvalue Var 0x7fa32d805cc0 'd' 'struct real_value':'struct real_value'
+|     |-CallExpr 0x7fa32d806538 <line:61:5, col:21> 'void'
+|     | |-ImplicitCastExpr 0x7fa32d806520 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7fa32d8064d8 <col:5> 'void (void *)' Function 0x7fa32d805800 'ccp_fold_stmt' 'void (void *)'
+|     | `-ImplicitCastExpr 0x7fa32d806568 <col:20> 'void *' <NullToPointer>
+|     |   `-IntegerLiteral 0x7fa32d806500 <col:20> 'int' 0
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fa32d807000 <line:63:1, line:69:1> line:63:13 used set_lattice_value 'void (tree, prop_value_t)' static
+| |-ParmVarDecl 0x7fa32d806608 <col:32, col:37> col:37 used var 'tree':'union tree_node *'
+| |-ParmVarDecl 0x7fa32d806678 <col:42, col:55> col:55 used new_val 'prop_value_t':'struct prop_value_d'
+| `-CompoundStmt 0x7fa32d8076b0 <col:64, line:69:1>
+|   |-DeclStmt 0x7fa32d807530 <line:64:3, line:66:38>
+|   | `-VarDecl 0x7fa32d8070b8 <line:64:3, line:66:37> line:64:17 used old_val 'prop_value_t *' cinit
+|   |   `-UnaryOperator 0x7fa32d807510 <col:27, line:66:37> 'prop_value_t *' prefix '&'
+|   |     `-ArraySubscriptExpr 0x7fa32d8074e8 <line:64:28, line:66:37> 'prop_value_t':'struct prop_value_d' lvalue
+|   |       |-ImplicitCastExpr 0x7fa32d8074b8 <line:64:28> 'prop_value_t *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fa32d807118 <col:28> 'prop_value_t *' lvalue Var 0x7fa32d804908 'const_val' 'prop_value_t *'
+|   |       `-ImplicitCastExpr 0x7fa32d8074d0 <col:38, line:66:30> 'unsigned int' <LValueToRValue>
+|   |         `-MemberExpr 0x7fa32d807480 <line:64:38, line:66:30> 'unsigned int' lvalue .version 0x7fa32d800d38
+|   |           `-MemberExpr 0x7fa32d807448 <line:64:38, line:66:28> 'union (anonymous union at c_files/pr55093.c:21:3)':'union tree_base::(anonymous at c_files/pr55093.c:21:3)' lvalue .u 0x7fa32d800dd0
+|   |             `-MemberExpr 0x7fa32d807410 <line:64:38, line:66:23> 'struct tree_base':'struct tree_base' lvalue ->base 0x7fa32d801770
+|   |               `-ParenExpr 0x7fa32d8073f0 <line:64:38, line:66:20> 'tree':'union tree_node *'
+|   |                 `-CallExpr 0x7fa32d807310 <line:64:39, line:66:19> 'tree':'union tree_node *'
+|   |                   |-ImplicitCastExpr 0x7fa32d8072f8 <line:64:39> 'tree (*)(tree, const char *, int, const char *, enum tree_code)' <FunctionToPointerDecay>
+|   |                   | `-DeclRefExpr 0x7fa32d807140 <col:39> 'tree (tree, const char *, int, const char *, enum tree_code)' Function 0x7fa32d801bd0 'tree_check' 'tree (tree, const char *, int, const char *, enum tree_code)'
+|   |                   |-ImplicitCastExpr 0x7fa32d807360 <col:51, col:55> 'tree':'union tree_node *' <LValueToRValue>
+|   |                   | `-ParenExpr 0x7fa32d807190 <col:51, col:55> 'tree':'union tree_node *' lvalue
+|   |                   |   `-DeclRefExpr 0x7fa32d807168 <col:52> 'tree':'union tree_node *' lvalue ParmVar 0x7fa32d806608 'var' 'tree':'union tree_node *'
+|   |                   |-ImplicitCastExpr 0x7fa32d807390 <col:58> 'const char *' <BitCast>
+|   |                   | `-ImplicitCastExpr 0x7fa32d807378 <col:58> 'char *' <ArrayToPointerDecay>
+|   |                   |   `-StringLiteral 0x7fa32d8071e8 <col:58> 'char [1]' lvalue ""
+|   |                   |-IntegerLiteral 0x7fa32d807210 <line:65:9> 'int' 0
+|   |                   |-ImplicitCastExpr 0x7fa32d8073c0 <col:12> 'const char *' <BitCast>
+|   |                   | `-ImplicitCastExpr 0x7fa32d8073a8 <col:12> 'char *' <ArrayToPointerDecay>
+|   |                   |   `-StringLiteral 0x7fa32d807230 <col:12> 'char [1]' lvalue ""
+|   |                   `-ImplicitCastExpr 0x7fa32d8073d8 <line:66:9, col:18> 'enum tree_code':'enum tree_code' <IntegralCast>
+|   |                     `-ParenExpr 0x7fa32d807280 <col:9, col:18> 'int'
+|   |                       `-DeclRefExpr 0x7fa32d807258 <col:10> 'int' EnumConstant 0x7fa32d800ac8 'SSA_NAME' 'int'
+|   |-CallExpr 0x7fa32d8075d0 <line:67:3, col:37> 'void'
+|   | |-ImplicitCastExpr 0x7fa32d8075b8 <col:3> 'void (*)(prop_value_t *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fa32d807548 <col:3> 'void (prop_value_t *)' Function 0x7fa32d805b70 'canonicalize_float_value' 'void (prop_value_t *)'
+|   | `-UnaryOperator 0x7fa32d807598 <col:29, col:30> 'prop_value_t *' prefix '&'
+|   |   `-DeclRefExpr 0x7fa32d807570 <col:30> 'prop_value_t':'struct prop_value_d' lvalue ParmVar 0x7fa32d806678 'new_val' 'prop_value_t':'struct prop_value_d'
+|   `-CallExpr 0x7fa32d807668 <line:68:3, col:36> 'void'
+|     |-ImplicitCastExpr 0x7fa32d807650 <col:3> 'void (*)(prop_value_t *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fa32d807600 <col:3> 'void (prop_value_t *)' Function 0x7fa32d805b70 'canonicalize_float_value' 'void (prop_value_t *)'
+|     `-ImplicitCastExpr 0x7fa32d807698 <col:29> 'prop_value_t *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa32d807628 <col:29> 'prop_value_t *' lvalue Var 0x7fa32d8070b8 'old_val' 'prop_value_t *'
+|-FunctionDecl 0x7fa32d807770 <line:70:1, line:73:1> line:70:13 used ccp_visit_phi_node 'void (void)' static
+| `-CompoundStmt 0x7fa32d8079d8 <col:39, line:73:1>
+|   |-DeclStmt 0x7fa32d807878 <line:71:3, col:23>
+|   | `-VarDecl 0x7fa32d807818 <col:3, col:16> col:16 used new_val 'prop_value_t':'struct prop_value_d'
+|   `-CallExpr 0x7fa32d807970 <line:72:3, col:32> 'void'
+|     |-ImplicitCastExpr 0x7fa32d807958 <col:3> 'void (*)(tree, prop_value_t)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fa32d807890 <col:3> 'void (tree, prop_value_t)' Function 0x7fa32d807000 'set_lattice_value' 'void (tree, prop_value_t)'
+|     |-ImplicitCastExpr 0x7fa32d8079a8 <col:22> 'tree':'union tree_node *' <NullToPointer>
+|     | `-IntegerLiteral 0x7fa32d8078b8 <col:22> 'int' 0
+|     `-ImplicitCastExpr 0x7fa32d8079c0 <col:25> 'prop_value_t':'struct prop_value_d' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa32d8078d8 <col:25> 'prop_value_t':'struct prop_value_d' lvalue Var 0x7fa32d807818 'new_val' 'prop_value_t':'struct prop_value_d'
+|-FunctionDecl 0x7fa32d807a98 <line:74:1, line:76:1> line:74:13 used ccp_visit_stmt 'void (prop_value_t)' static
+| |-ParmVarDecl 0x7fa32d807a10 <col:29, col:42> col:42 used v 'prop_value_t':'struct prop_value_d'
+| `-CompoundStmt 0x7fa32d807c28 <col:45, line:76:1>
+|   `-CallExpr 0x7fa32d807bc0 <line:75:3, col:26> 'void'
+|     |-ImplicitCastExpr 0x7fa32d807ba8 <col:3> 'void (*)(tree, prop_value_t)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fa32d807b38 <col:3> 'void (tree, prop_value_t)' Function 0x7fa32d807000 'set_lattice_value' 'void (tree, prop_value_t)'
+|     |-ImplicitCastExpr 0x7fa32d807bf8 <col:22> 'tree':'union tree_node *' <NullToPointer>
+|     | `-IntegerLiteral 0x7fa32d807b60 <col:22> 'int' 0
+|     `-ImplicitCastExpr 0x7fa32d807c10 <col:25> 'prop_value_t':'struct prop_value_d' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa32d807b80 <col:25> 'prop_value_t':'struct prop_value_d' lvalue ParmVar 0x7fa32d807a10 'v' 'prop_value_t':'struct prop_value_d'
+`-FunctionDecl 0x7fa32d807d18 <line:77:1, line:81:1> line:77:14 do_ssa_ccp 'unsigned int (void)'
+  `-CompoundStmt 0x7fa32d808cf8 <col:32, line:81:1>
+    |-CallExpr 0x7fa32d807ea0 <line:78:3, col:52> 'void'
+    | |-ImplicitCastExpr 0x7fa32d807e88 <col:3> 'void (*)(ssa_prop_visit_stmt_fn, ssa_prop_visit_phi_fn)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa32d807db0 <col:3> 'void (ssa_prop_visit_stmt_fn, ssa_prop_visit_phi_fn)' Function 0x7fa32d805420 'ssa_propagate' 'void (ssa_prop_visit_stmt_fn, ssa_prop_visit_phi_fn)'
+    | |-ImplicitCastExpr 0x7fa32d807f08 <col:18> 'void (*)(prop_value_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa32d807dd8 <col:18> 'void (prop_value_t)' Function 0x7fa32d807a98 'ccp_visit_stmt' 'void (prop_value_t)'
+    | `-ImplicitCastExpr 0x7fa32d807f20 <col:34> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fa32d807e00 <col:34> 'void (void)' Function 0x7fa32d807770 'ccp_visit_phi_node' 'void (void)'
+    |-CallExpr 0x7fa32d808c40 <line:79:3, col:57> 'int'
+    | |-ImplicitCastExpr 0x7fa32d808c28 <col:3> 'int (*)(ssa_prop_get_value_fn, ssa_prop_fold_stmt_fn)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa32d807f38 <col:3> 'int (ssa_prop_get_value_fn, ssa_prop_fold_stmt_fn)' Function 0x7fa32d8056a8 'substitute_and_fold' 'int (ssa_prop_get_value_fn, ssa_prop_fold_stmt_fn)'
+    | |-ImplicitCastExpr 0x7fa32d808c78 <col:24> 'void (*)(prop_value_t *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa32d807f60 <col:24> 'void (prop_value_t *)' Function 0x7fa32d805938 'get_constant_value' 'void (prop_value_t *)'
+    | `-ImplicitCastExpr 0x7fa32d808c90 <col:44> 'void (*)(void *)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fa32d807f88 <col:44> 'void (void *)' Function 0x7fa32d805800 'ccp_fold_stmt' 'void (void *)'
+    `-ReturnStmt 0x7fa32d808ce0 <line:80:3, col:10>
+      `-ImplicitCastExpr 0x7fa32d808cc8 <col:10> 'unsigned int' <IntegralCast>
+        `-IntegerLiteral 0x7fa32d808ca8 <col:10> 'int' 0

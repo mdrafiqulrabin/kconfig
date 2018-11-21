@@ -1,0 +1,47 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Switch: 
+        UnaryOp: *
+          ID: a
+        Compound: 
+          Case: 
+            Constant: int, 0
+          Case: 
+            Constant: int, 3
+          Case: 
+            Constant: int, 1
+          Case: 
+            Constant: int, 2
+          Case: 
+            Constant: int, 4
+          Case: 
+            Constant: int, 23
+          Case: 
+            Constant: int, 26
+          Case: 
+            Constant: int, 19
+          Case: 
+            Constant: int, 5
+          Case: 
+            Constant: int, 21
+          Case: 
+            Constant: int, 20
+          Case: 
+            Constant: int, 22
+          Case: 
+            Constant: int, 27
+            Return: 
+              Constant: int, 1
+          Default: 
+            Return: 
+              Constant: int, 0

@@ -1,0 +1,351 @@
+FileAST: 
+  Decl: w, [], [], []
+    TypeDecl: w, []
+      IdentifierType: ['int']
+  Decl: h, [], [], []
+    TypeDecl: h, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              ArrayDecl: []
+                TypeDecl: x, []
+                  IdentifierType: ['float']
+                Constant: int, 4
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: a
+        Constant: int, 2
+      Assignment: =
+        ID: b
+        Constant: int, 2
+      Assignment: =
+        ID: c
+        Constant: int, 274
+      Assignment: =
+        ID: d
+        Constant: int, 274
+      If: 
+        UnaryOp: !
+          ID: z
+        Assignment: =
+          ID: a
+          Constant: int, 12
+      If: 
+        UnaryOp: !
+          ID: y
+        Assignment: =
+          ID: b
+          Constant: int, 12
+      If: 
+        BinaryOp: >=
+          BinaryOp: +
+            ID: z
+            Constant: int, 266
+          BinaryOp: -
+            ID: h
+            Constant: int, 2
+        Assignment: =
+          ID: c
+          BinaryOp: -
+            BinaryOp: +
+              Constant: int, 8
+              ID: h
+            ID: z
+      If: 
+        BinaryOp: >=
+          BinaryOp: +
+            ID: y
+            Constant: int, 266
+          BinaryOp: -
+            ID: w
+            Constant: int, 2
+        Assignment: =
+          ID: d
+          BinaryOp: -
+            BinaryOp: +
+              Constant: int, 8
+              ID: w
+            ID: y
+      For: 
+        Assignment: =
+          ID: e
+          ID: a
+        BinaryOp: <
+          ID: e
+          ID: c
+        UnaryOp: p++
+          ID: e
+        For: 
+          ExprList: 
+            Assignment: =
+              ID: f
+              ID: b
+            Assignment: =
+              ID: g
+              BinaryOp: +
+                BinaryOp: *
+                  ID: e
+                  Constant: int, 276
+                ID: f
+          BinaryOp: <
+            ID: f
+            ID: d
+          ExprList: 
+            UnaryOp: p++
+              ID: f
+            UnaryOp: p++
+              ID: g
+          Compound: 
+            Decl: h, [], [], []
+              PtrDecl: []
+                ArrayDecl: []
+                  TypeDecl: h, []
+                    IdentifierType: ['float']
+                  Constant: int, 4
+              BinaryOp: +
+                ID: x
+                BinaryOp: -
+                  ID: g
+                  Constant: int, 277
+            Decl: k, [], [], []
+              TypeDecl: k, []
+                IdentifierType: ['float']
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 0
+            Decl: l, [], [], []
+              TypeDecl: l, []
+                IdentifierType: ['float']
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 1
+            Decl: m, [], [], []
+              TypeDecl: m, []
+                IdentifierType: ['float']
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 2
+            UnaryOp: p++
+              ID: h
+            Assignment: +=
+              ID: k
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 0
+            Assignment: +=
+              ID: l
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 1
+            Assignment: +=
+              ID: m
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 2
+            UnaryOp: p++
+              ID: h
+            Assignment: +=
+              ID: k
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 0
+            Assignment: +=
+              ID: l
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 1
+            Assignment: +=
+              ID: m
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 2
+            Assignment: +=
+              ID: h
+              Constant: int, 274
+            Assignment: +=
+              ID: k
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 0
+            Assignment: +=
+              ID: l
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 1
+            Assignment: +=
+              ID: m
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 2
+            Assignment: +=
+              ID: h
+              Constant: int, 2
+            Assignment: +=
+              ID: k
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 0
+            Assignment: +=
+              ID: l
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 1
+            Assignment: +=
+              ID: m
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 2
+            Assignment: +=
+              ID: h
+              Constant: int, 274
+            Assignment: +=
+              ID: k
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 0
+            Assignment: +=
+              ID: l
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 1
+            Assignment: +=
+              ID: m
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 2
+            UnaryOp: p++
+              ID: h
+            Assignment: +=
+              ID: k
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 0
+            Assignment: +=
+              ID: l
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 1
+            Assignment: +=
+              ID: m
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 2
+            UnaryOp: p++
+              ID: h
+            Assignment: +=
+              ID: k
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 0
+            Assignment: +=
+              ID: l
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 1
+            Assignment: +=
+              ID: m
+              ArrayRef: 
+                UnaryOp: *
+                  ID: h
+                Constant: int, 2
+            Assignment: *=
+              ID: k
+              Constant: float, 0.125f
+            Assignment: *=
+              ID: l
+              Constant: float, 0.125f
+            Assignment: *=
+              ID: m
+              Constant: float, 0.125f
+            Assignment: =
+              ID: k
+              BinaryOp: +
+                ID: k
+                BinaryOp: -
+                  ArrayRef: 
+                    ArrayRef: 
+                      ID: x
+                      ID: g
+                    Constant: int, 1
+                  ID: l
+            Assignment: =
+              ID: m
+              BinaryOp: +
+                ID: m
+                BinaryOp: -
+                  ArrayRef: 
+                    ArrayRef: 
+                      ID: x
+                      ID: g
+                    Constant: int, 1
+                  ID: l
+            Assignment: =
+              ArrayRef: 
+                ArrayRef: 
+                  ID: x
+                  ID: g
+                Constant: int, 0
+              ID: k
+            Assignment: =
+              ArrayRef: 
+                ArrayRef: 
+                  ID: x
+                  ID: g
+                Constant: int, 2
+              ID: m

@@ -1,0 +1,39 @@
+c_files/pr45449.c:13:3: warning: expression result unused [-Wunused-value]
+  &s;
+  ^~
+1 warning generated.
+TranslationUnitDecl 0x7fb9f1815cd0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb9f1816220 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb9f1815f40 '__int128'
+|-TypedefDecl 0x7fb9f1816290 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb9f1815f60 'unsigned __int128'
+|-TypedefDecl 0x7fb9f1816568 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb9f1816370 'struct __NSConstantString_tag'
+|   `-Record 0x7fb9f18162e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb9f1816600 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb9f18165c0 'char *'
+|   `-BuiltinType 0x7fb9f1815d60 'char'
+|-TypedefDecl 0x7fb9f18168c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb9f1816870 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb9f18166e0 'struct __va_list_tag'
+|     `-Record 0x7fb9f1816658 '__va_list_tag'
+|-RecordDecl 0x7fb9f1816920 <c_files/pr45449.c:5:1, line:7:1> line:5:8 struct S definition
+|-FunctionDecl 0x7fb9f1866cb0 <line:9:1, line:14:1> line:10:1 used baz 'void (void)'
+| `-CompoundStmt 0x7fb9f1866ef8 <line:11:1, line:14:1>
+|   |-DeclStmt 0x7fb9f1866e40 <line:12:3, col:13>
+|   | `-VarDecl 0x7fb9f1866de0 <col:3, col:12> col:12 used s 'struct S':'struct S'
+|   `-UnaryOperator 0x7fb9f1866ed8 <line:13:3, col:4> 'struct S *' prefix '&'
+|     `-DeclRefExpr 0x7fb9f1866e58 <col:4> 'struct S':'struct S' lvalue Var 0x7fb9f1866de0 's' 'struct S':'struct S'
+|-FunctionDecl 0x7fb9f1866fe8 <line:16:1, col:14> col:5 used bar 'int (void)'
+`-FunctionDecl 0x7fb9f1867110 <line:18:1, line:23:1> line:19:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb9f1867300 <line:20:1, line:23:1>
+    `-IfStmt 0x7fb9f18672c8 <line:21:3, line:22:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-CallExpr 0x7fb9f1867210 <line:21:7, col:12> 'int'
+      | `-ImplicitCastExpr 0x7fb9f18671f8 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fb9f18671a8 <col:7> 'int (void)' Function 0x7fb9f1866fe8 'bar' 'int (void)'
+      |-CallExpr 0x7fb9f18672a0 <line:22:5, col:10> 'void'
+      | `-ImplicitCastExpr 0x7fb9f1867288 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fb9f1867238 <col:5> 'void (void)' Function 0x7fb9f1866cb0 'baz' 'void (void)'
+      `-<<<NULL>>>

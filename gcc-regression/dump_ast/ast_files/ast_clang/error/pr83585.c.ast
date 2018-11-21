@@ -1,0 +1,60 @@
+c_files/pr83585.c:17:3: error: non-void function 'foo' should return a value [-Wreturn-type]
+  return;
+  ^
+1 error generated.
+TranslationUnitDecl 0x7fb3698264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb369826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb369826740 '__int128'
+|-TypedefDecl 0x7fb369826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb369826760 'unsigned __int128'
+|-TypedefDecl 0x7fb369826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb369826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb369826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb369826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb369826dc0 'char *'
+|   `-BuiltinType 0x7fb369826560 'char'
+|-TypedefDecl 0x7fb3698270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb369827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb369826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb369826e58 '__va_list_tag'
+`-FunctionDecl 0x7fb36a025a30 <c_files/pr83585.c:5:1, line:18:1> line:6:1 foo 'int (int)'
+  |-ParmVarDecl 0x7fb369827138 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fb36a026068 <line:7:1, line:18:1>
+    |-DeclStmt 0x7fb36a025c18 <line:8:3, col:11>
+    | |-VarDecl 0x7fb36a025b28 <col:3, col:7> col:7 used a 'int'
+    | `-VarDecl 0x7fb36a025ba0 <col:3, col:10> col:10 used b 'int'
+    |-ForStmt 0x7fb36a026018 <line:9:3, line:15:7>
+    | |-BinaryOperator 0x7fb36a025c78 <line:9:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fb36a025c30 <col:8> 'int' lvalue Var 0x7fb36a025b28 'a' 'int'
+    | | `-IntegerLiteral 0x7fb36a025c58 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb36a025d00 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fb36a025ce8 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fb36a025ca0 <col:15> 'int' lvalue Var 0x7fb36a025b28 'a' 'int'
+    | | `-IntegerLiteral 0x7fb36a025cc8 <col:19> 'int' 2
+    | |-UnaryOperator 0x7fb36a025d50 <col:22, col:24> 'int' prefix '++'
+    | | `-DeclRefExpr 0x7fb36a025d28 <col:24> 'int' lvalue Var 0x7fb36a025b28 'a' 'int'
+    | `-IfStmt 0x7fb36a025fe0 <line:10:5, line:15:7>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7fb36a025dd0 <line:10:9, col:14> 'int' '!='
+    |   | |-ImplicitCastExpr 0x7fb36a025db8 <col:9> 'int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7fb36a025d70 <col:9> 'int' lvalue ParmVar 0x7fb369827138 'x' 'int'
+    |   | `-IntegerLiteral 0x7fb36a025d98 <col:14> 'int' 0
+    |   |-CompoundStmt 0x7fb36a025fb8 <line:11:7, line:15:7>
+    |   | |-ForStmt 0x7fb36a025f48 <line:12:9, line:13:11>
+    |   | | |-BinaryOperator 0x7fb36a025e40 <line:12:14, col:18> 'int' '='
+    |   | | | |-DeclRefExpr 0x7fb36a025df8 <col:14> 'int' lvalue Var 0x7fb36a025ba0 'b' 'int'
+    |   | | | `-IntegerLiteral 0x7fb36a025e20 <col:18> 'int' 0
+    |   | | |-<<<NULL>>>
+    |   | | |-BinaryOperator 0x7fb36a025ec8 <col:21, col:25> 'int' '<'
+    |   | | | |-ImplicitCastExpr 0x7fb36a025eb0 <col:21> 'int' <LValueToRValue>
+    |   | | | | `-DeclRefExpr 0x7fb36a025e68 <col:21> 'int' lvalue Var 0x7fb36a025ba0 'b' 'int'
+    |   | | | `-IntegerLiteral 0x7fb36a025e90 <col:25> 'int' 2
+    |   | | |-UnaryOperator 0x7fb36a025f18 <col:28, col:30> 'int' prefix '++'
+    |   | | | `-DeclRefExpr 0x7fb36a025ef0 <col:30> 'int' lvalue Var 0x7fb36a025ba0 'b' 'int'
+    |   | | `-NullStmt 0x7fb36a025f38 <line:13:11>
+    |   | `-ReturnStmt 0x7fb36a025fa0 <line:14:9, col:16>
+    |   |   `-IntegerLiteral 0x7fb36a025f80 <col:16> 'int' 0
+    |   `-<<<NULL>>>
+    `-ReturnStmt 0x7fb36a026050 <line:17:3>

@@ -1,0 +1,108 @@
+TranslationUnitDecl 0x7fe1e18264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe1e1826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe1e1826740 '__int128'
+|-TypedefDecl 0x7fe1e1826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe1e1826760 'unsigned __int128'
+|-TypedefDecl 0x7fe1e1826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe1e1826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe1e1826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe1e1826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe1e1826dc0 'char *'
+|   `-BuiltinType 0x7fe1e1826560 'char'
+|-TypedefDecl 0x7fe1e18270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe1e1827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe1e1826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe1e1826e58 '__va_list_tag'
+|-FunctionDecl 0x7fe1e2025a30 <c_files/pr55023.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe1e2025ac8 prev 0x7fe1e2025a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-TypedefDecl 0x7fe1e2025b78 <line:6:1, col:19> col:19 referenced int64_t 'long long'
+| `-BuiltinType 0x7fe1e1826600 'long long'
+|-RecordDecl 0x7fe1e2025bd0 <line:8:1, line:11:1> line:8:8 struct foo definition
+| |-FieldDecl 0x7fe1e2025c98 <line:9:5, col:9> col:9 referenced x 'int'
+| `-FieldDecl 0x7fe1e2025cf8 <line:10:5, col:9> col:9 referenced y 'int'
+|-FunctionDecl 0x7fe1e2025f80 <line:13:1, line:16:1> line:13:9 used foo 'int64_t (int64_t, int64_t, int64_t)'
+| |-ParmVarDecl 0x7fe1e2025d70 <col:13, col:21> col:21 used a 'int64_t':'long long'
+| |-ParmVarDecl 0x7fe1e2025de0 <col:24, col:32> col:32 used b 'int64_t':'long long'
+| |-ParmVarDecl 0x7fe1e2025e50 <col:35, col:43> col:43 used c 'int64_t':'long long'
+| `-CompoundStmt 0x7fe1e2026198 <line:14:1, line:16:1>
+|   `-ReturnStmt 0x7fe1e2026180 <line:15:5, col:20>
+|     `-BinaryOperator 0x7fe1e2026158 <col:12, col:20> 'long long' '+'
+|       |-BinaryOperator 0x7fe1e20260f0 <col:12, col:16> 'long long' '+'
+|       | |-ImplicitCastExpr 0x7fe1e20260c0 <col:12> 'int64_t':'long long' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fe1e2026070 <col:12> 'int64_t':'long long' lvalue ParmVar 0x7fe1e2025d70 'a' 'int64_t':'long long'
+|       | `-ImplicitCastExpr 0x7fe1e20260d8 <col:16> 'int64_t':'long long' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fe1e2026098 <col:16> 'int64_t':'long long' lvalue ParmVar 0x7fe1e2025de0 'b' 'int64_t':'long long'
+|       `-ImplicitCastExpr 0x7fe1e2026140 <col:20> 'int64_t':'long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe1e2026118 <col:20> 'int64_t':'long long' lvalue ParmVar 0x7fe1e2025e50 'c' 'int64_t':'long long'
+|-FunctionDecl 0x7fe1e2026430 <line:18:1, line:23:1> line:18:9 used bar 'int64_t (int64_t, struct foo, struct foo)'
+| |-ParmVarDecl 0x7fe1e20261c8 <col:13, col:21> col:21 used a 'int64_t':'long long'
+| |-ParmVarDecl 0x7fe1e2026280 <col:24, col:35> col:35 used bq 'struct foo':'struct foo'
+| |-ParmVarDecl 0x7fe1e2026300 <col:39, col:50> col:50 used cq 'struct foo':'struct foo'
+| `-CompoundStmt 0x7fe1e202bc60 <line:19:1, line:23:1>
+|   |-DeclStmt 0x7fe1e20266d0 <line:20:5, col:28>
+|   | `-VarDecl 0x7fe1e20264f0 <col:5, col:27> col:13 used b 'int64_t':'long long' cinit
+|   |   `-ImplicitCastExpr 0x7fe1e2026668 <col:17, col:27> 'int64_t':'long long' <IntegralCast>
+|   |     `-BinaryOperator 0x7fe1e2026640 <col:17, col:27> 'int' '+'
+|   |       |-ImplicitCastExpr 0x7fe1e2026610 <col:17, col:20> 'int' <LValueToRValue>
+|   |       | `-MemberExpr 0x7fe1e2026578 <col:17, col:20> 'int' lvalue .x 0x7fe1e2025c98
+|   |       |   `-DeclRefExpr 0x7fe1e2026550 <col:17> 'struct foo':'struct foo' lvalue ParmVar 0x7fe1e2026280 'bq' 'struct foo':'struct foo'
+|   |       `-ImplicitCastExpr 0x7fe1e2026628 <col:24, col:27> 'int' <LValueToRValue>
+|   |         `-MemberExpr 0x7fe1e20265d8 <col:24, col:27> 'int' lvalue .y 0x7fe1e2025cf8
+|   |           `-DeclRefExpr 0x7fe1e20265b0 <col:24> 'struct foo':'struct foo' lvalue ParmVar 0x7fe1e2026280 'bq' 'struct foo':'struct foo'
+|   |-DeclStmt 0x7fe1e2026888 <line:21:5, col:28>
+|   | `-VarDecl 0x7fe1e20266f8 <col:5, col:27> col:13 used c 'int64_t':'long long' cinit
+|   |   `-ImplicitCastExpr 0x7fe1e2026870 <col:17, col:27> 'int64_t':'long long' <IntegralCast>
+|   |     `-BinaryOperator 0x7fe1e2026848 <col:17, col:27> 'int' '+'
+|   |       |-ImplicitCastExpr 0x7fe1e2026818 <col:17, col:20> 'int' <LValueToRValue>
+|   |       | `-MemberExpr 0x7fe1e2026780 <col:17, col:20> 'int' lvalue .x 0x7fe1e2025c98
+|   |       |   `-DeclRefExpr 0x7fe1e2026758 <col:17> 'struct foo':'struct foo' lvalue ParmVar 0x7fe1e2026300 'cq' 'struct foo':'struct foo'
+|   |       `-ImplicitCastExpr 0x7fe1e2026830 <col:24, col:27> 'int' <LValueToRValue>
+|   |         `-MemberExpr 0x7fe1e20267e0 <col:24, col:27> 'int' lvalue .y 0x7fe1e2025cf8
+|   |           `-DeclRefExpr 0x7fe1e20267b8 <col:24> 'struct foo':'struct foo' lvalue ParmVar 0x7fe1e2026300 'cq' 'struct foo':'struct foo'
+|   `-ReturnStmt 0x7fe1e202bc48 <line:22:5, col:23>
+|     `-CallExpr 0x7fe1e20269b0 <col:12, col:23> 'int64_t':'long long'
+|       |-ImplicitCastExpr 0x7fe1e2026998 <col:12> 'int64_t (*)(int64_t, int64_t, int64_t)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe1e20268a0 <col:12> 'int64_t (int64_t, int64_t, int64_t)' Function 0x7fe1e2025f80 'foo' 'int64_t (int64_t, int64_t, int64_t)'
+|       |-ImplicitCastExpr 0x7fe1e202bc00 <col:16> 'int64_t':'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe1e20268c8 <col:16> 'int64_t':'long long' lvalue ParmVar 0x7fe1e20261c8 'a' 'int64_t':'long long'
+|       |-ImplicitCastExpr 0x7fe1e202bc18 <col:19> 'int64_t':'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe1e20268f0 <col:19> 'int64_t':'long long' lvalue Var 0x7fe1e20264f0 'b' 'int64_t':'long long'
+|       `-ImplicitCastExpr 0x7fe1e202bc30 <col:22> 'int64_t':'long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe1e2026918 <col:22> 'int64_t':'long long' lvalue Var 0x7fe1e20266f8 'c' 'int64_t':'long long'
+`-FunctionDecl 0x7fe1e202bd58 <line:25:1, line:33:1> line:25:5 main 'int (void)'
+  `-CompoundStmt 0x7fe1e202c4c8 <line:26:1, line:33:1>
+    |-DeclStmt 0x7fe1e202bec0 <line:27:3, col:16>
+    | `-VarDecl 0x7fe1e202be28 <col:3, col:15> col:11 used a 'int64_t':'long long' cinit
+    |   `-ImplicitCastExpr 0x7fe1e202bea8 <col:15> 'int64_t':'long long' <IntegralCast>
+    |     `-IntegerLiteral 0x7fe1e202be88 <col:15> 'int' 1
+    |-DeclStmt 0x7fe1e202c038 <line:28:3, col:26>
+    | `-VarDecl 0x7fe1e202bef8 <col:3, col:25> col:14 used b 'struct foo':'struct foo' cinit
+    |   `-InitListExpr 0x7fe1e202bfe8 <col:18, col:25> 'struct foo':'struct foo'
+    |     |-IntegerLiteral 0x7fe1e202bf58 <col:20> 'int' 2
+    |     `-IntegerLiteral 0x7fe1e202bf78 <col:23> 'int' 3
+    |-DeclStmt 0x7fe1e202c1b0 <line:29:3, col:26>
+    | `-VarDecl 0x7fe1e202c070 <col:3, col:25> col:14 used c 'struct foo':'struct foo' cinit
+    |   `-InitListExpr 0x7fe1e202c160 <col:18, col:25> 'struct foo':'struct foo'
+    |     |-IntegerLiteral 0x7fe1e202c0d0 <col:20> 'int' 4
+    |     `-IntegerLiteral 0x7fe1e202c0f0 <col:23> 'int' 5
+    |-IfStmt 0x7fe1e202c458 <line:30:3, line:31:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe1e202c3a0 <line:30:7, col:24> 'int' '!='
+    | | |-CallExpr 0x7fe1e202c2e0 <col:7, col:19> 'int64_t':'long long'
+    | | | |-ImplicitCastExpr 0x7fe1e202c2c8 <col:7> 'int64_t (*)(int64_t, struct foo, struct foo)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fe1e202c1c8 <col:7> 'int64_t (int64_t, struct foo, struct foo)' Function 0x7fe1e2026430 'bar' 'int64_t (int64_t, struct foo, struct foo)'
+    | | | |-ImplicitCastExpr 0x7fe1e202c320 <col:12> 'int64_t':'long long' <LValueToRValue>
+    | | | | `-DeclRefExpr 0x7fe1e202c1f0 <col:12> 'int64_t':'long long' lvalue Var 0x7fe1e202be28 'a' 'int64_t':'long long'
+    | | | |-ImplicitCastExpr 0x7fe1e202c338 <col:15> 'struct foo':'struct foo' <LValueToRValue>
+    | | | | `-DeclRefExpr 0x7fe1e202c218 <col:15> 'struct foo':'struct foo' lvalue Var 0x7fe1e202bef8 'b' 'struct foo':'struct foo'
+    | | | `-ImplicitCastExpr 0x7fe1e202c350 <col:18> 'struct foo':'struct foo' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fe1e202c240 <col:18> 'struct foo':'struct foo' lvalue Var 0x7fe1e202c070 'c' 'struct foo':'struct foo'
+    | | `-ImplicitCastExpr 0x7fe1e202c388 <col:24> 'long long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fe1e202c368 <col:24> 'int' 15
+    | |-CallExpr 0x7fe1e202c430 <line:31:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fe1e202c418 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe1e202c3c8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fe1e2025ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe1e202c4b0 <line:32:3, col:10>
+      `-IntegerLiteral 0x7fe1e202c490 <col:10> 'int' 0

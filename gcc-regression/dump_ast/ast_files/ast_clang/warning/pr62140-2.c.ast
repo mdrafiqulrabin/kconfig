@@ -1,0 +1,38 @@
+c_files/pr62140-2.c:4:5: warning: incompatible redeclaration of library function 'strlen' [-Wincompatible-library-redeclaration]
+int strlen (const char *p);
+    ^
+c_files/pr62140-2.c:4:5: note: 'strlen' is a builtin with type 'unsigned long (const char *)'
+1 warning generated.
+TranslationUnitDecl 0x7f99118264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9911826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9911826740 '__int128'
+|-TypedefDecl 0x7f9911826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9911826760 'unsigned __int128'
+|-TypedefDecl 0x7f9911826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9911826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9911826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9911826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9911826dc0 'char *'
+|   `-BuiltinType 0x7f9911826560 'char'
+|-TypedefDecl 0x7f99118270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9911827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9911826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9911826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9911877468 <c_files/pr62140-2.c:4:5> col:5 implicit used strlen 'unsigned long (const char *)' extern
+| `-ParmVarDecl 0x7f9911877500 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f9911877568 prev 0x7f9911877468 <col:1, col:26> col:5 used strlen 'int (const char *)'
+| `-ParmVarDecl 0x7f9911827138 <col:13, col:25> col:25 p 'const char *'
+`-FunctionDecl 0x7f9911877aa8 <line:6:1, line:10:1> line:6:5 f 'int (char *)'
+  |-ParmVarDecl 0x7f99118779d8 <col:8, col:14> col:14 used p 'char *'
+  `-CompoundStmt 0x7f9911877d60 <line:7:1, line:10:1>
+    |-DeclStmt 0x7f9911877cf0 <line:8:5, col:23>
+    | `-VarDecl 0x7f9911877ba0 <col:5, col:22> col:9 used x 'int' cinit
+    |   `-CallExpr 0x7f9911877c90 <col:13, col:22> 'int'
+    |     |-ImplicitCastExpr 0x7f9911877c78 <col:13> 'int (*)(const char *)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f9911877c00 <col:13> 'int (const char *)' Function 0x7f9911877568 'strlen' 'int (const char *)'
+    |     `-ImplicitCastExpr 0x7f9911877cd8 <col:21> 'const char *' <BitCast>
+    |       `-ImplicitCastExpr 0x7f9911877cc0 <col:21> 'char *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f9911877c28 <col:21> 'char *' lvalue ParmVar 0x7f99118779d8 'p' 'char *'
+    `-ReturnStmt 0x7f9911877d48 <line:9:5, col:12>
+      `-ImplicitCastExpr 0x7f9911877d30 <col:12> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f9911877d08 <col:12> 'int' lvalue Var 0x7f9911877ba0 'x' 'int'

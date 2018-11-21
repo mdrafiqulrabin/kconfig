@@ -1,0 +1,40 @@
+c_files/pr30045.c:6:3: error: function definition is not allowed here
+  {
+  ^
+c_files/pr30045.c:13:12: warning: implicit declaration of function 'g' is invalid in C99 [-Wimplicit-function-declaration]
+    return g(a);
+           ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fd2a18264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd2a1826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd2a1826740 '__int128'
+|-TypedefDecl 0x7fd2a1826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd2a1826760 'unsigned __int128'
+|-TypedefDecl 0x7fd2a1826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd2a1826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd2a1826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd2a1826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd2a1826dc0 'char *'
+|   `-BuiltinType 0x7fd2a1826560 'char'
+|-TypedefDecl 0x7fd2a18270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd2a1827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd2a1826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd2a1826e58 '__va_list_tag'
+|-FunctionDecl 0x7fd2a2025a30 <c_files/pr30045.c:3:1, line:15:1> line:3:5 f 'int (int *)'
+| |-ParmVarDecl 0x7fd2a1827160 <col:7, col:12> col:12 used a 'int *'
+| `-CompoundStmt 0x7fd2a2025e40 <line:4:1, line:15:1>
+|   |-IfStmt 0x7fd2a2025dd0 <line:12:3, line:13:15>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fd2a2025bd0 <line:12:7> 'int *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fd2a2025ba8 <col:7> 'int *' lvalue ParmVar 0x7fd2a1827160 'a' 'int *'
+|   | |-ReturnStmt 0x7fd2a2025db8 <line:13:5, col:15>
+|   | | `-CallExpr 0x7fd2a2025d70 <col:12, col:15> 'int'
+|   | |   |-ImplicitCastExpr 0x7fd2a2025d58 <col:12> 'int (*)()' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fd2a2025cd8 <col:12> 'int ()' Function 0x7fd2a2025c40 'g' 'int ()'
+|   | |   `-ImplicitCastExpr 0x7fd2a2025da0 <col:14> 'int *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fd2a2025d00 <col:14> 'int *' lvalue ParmVar 0x7fd2a1827160 'a' 'int *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fd2a2025e28 <line:14:3, col:10>
+|     `-IntegerLiteral 0x7fd2a2025e08 <col:10> 'int' 1
+`-FunctionDecl 0x7fd2a2025c40 <<invalid sloc>> line:13:12 implicit used g 'int ()'

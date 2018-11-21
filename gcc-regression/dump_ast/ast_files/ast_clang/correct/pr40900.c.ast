@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7f93a60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f93a6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f93a6026740 '__int128'
+|-TypedefDecl 0x7f93a6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f93a6026760 'unsigned __int128'
+|-TypedefDecl 0x7f93a6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f93a6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f93a6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f93a6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f93a6026dc0 'char *'
+|   `-BuiltinType 0x7f93a6026560 'char'
+|-TypedefDecl 0x7f93a60270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f93a6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f93a6026ee0 'struct __va_list_tag'
+|     `-Record 0x7f93a6026e58 '__va_list_tag'
+|-FunctionDecl 0x7f93a6825a00 <c_files/pr40900.c:4:1, col:22> col:14 used shortv2 'short ()' extern
+`-FunctionDecl 0x7f93a6825b00 <line:5:1, line:8:1> line:5:7 shortv1 'short ()'
+  `-CompoundStmt 0x7f93a6825c40 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7f93a6825c28 <line:7:3, col:18>
+      `-CallExpr 0x7f93a6825c00 <col:10, col:18> 'short'
+        `-ImplicitCastExpr 0x7f93a6825be8 <col:10> 'short (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f93a6825b98 <col:10> 'short ()' Function 0x7f93a6825a00 'shortv2' 'short ()'

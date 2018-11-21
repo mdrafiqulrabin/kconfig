@@ -1,0 +1,73 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: inode
+      Decl: i_mode, [], [], []
+        TypeDecl: i_mode, []
+          IdentifierType: ['unsigned', 'short']
+      Decl: i_flags, [], [], []
+        TypeDecl: i_flags, []
+          IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: is_sxid, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: mode, [], [], []
+            TypeDecl: mode, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: is_sxid, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: ||
+          BinaryOp: &
+            ID: mode
+            Constant: int, 0004000
+          BinaryOp: &&
+            BinaryOp: &
+              ID: mode
+              Constant: int, 0002000
+            BinaryOp: &
+              ID: mode
+              Constant: int, 00010
+  FuncDef: 
+    Decl: gfs2_set_inode_flags, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ip, [], [], []
+            TypeDecl: ip, []
+              IdentifierType: ['int']
+          Decl: inode, [], [], []
+            PtrDecl: []
+              TypeDecl: inode, []
+                Struct: inode
+        TypeDecl: gfs2_set_inode_flags, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: flags, [], [], []
+        TypeDecl: flags, []
+          IdentifierType: ['unsigned', 'int']
+        StructRef: ->
+          ID: inode
+          ID: i_flags
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            ID: ip
+            Constant: int, 0
+          UnaryOp: !
+            FuncCall: 
+              ID: is_sxid
+              ExprList: 
+                StructRef: ->
+                  ID: inode
+                  ID: i_mode
+        Assignment: |=
+          StructRef: ->
+            ID: inode
+            ID: i_flags
+          Constant: int, 4096
+      Assignment: =
+        StructRef: ->
+          ID: inode
+          ID: i_flags
+        ID: flags

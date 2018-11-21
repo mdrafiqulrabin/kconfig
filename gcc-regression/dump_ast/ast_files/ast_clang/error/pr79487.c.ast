@@ -1,0 +1,70 @@
+c_files/pr79487.c:7:3: error: GNU decimal type extension not supported
+  _Decimal32 a = (-9223372036854775807LL - 1LL); 
+  ^
+c_files/pr79487.c:8:3: error: GNU decimal type extension not supported
+  _Decimal32 b = -9.223372E+18DF;
+  ^
+c_files/pr79487.c:8:31: error: invalid suffix 'DF' on floating constant
+  _Decimal32 b = -9.223372E+18DF;
+                              ^
+c_files/pr79487.c:9:19: error: invalid suffix 'DF' on floating constant
+  if (b - a != 0.0DF)
+                  ^
+c_files/pr79487.c:11:3: error: GNU decimal type extension not supported
+  _Decimal64 c = (-9223372036854775807LL - 1LL); 
+  ^
+c_files/pr79487.c:12:3: error: GNU decimal type extension not supported
+  _Decimal64 d = -9.223372036854776E+18DD;
+  ^
+c_files/pr79487.c:12:40: error: invalid suffix 'DD' on floating constant
+  _Decimal64 d = -9.223372036854776E+18DD;
+                                       ^
+c_files/pr79487.c:13:19: error: invalid suffix 'DD' on floating constant
+  if (d - c != 0.0DD)
+                  ^
+8 errors generated.
+TranslationUnitDecl 0x7fb31e0166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb31e016c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb31e016940 '__int128'
+|-TypedefDecl 0x7fb31e016c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb31e016960 'unsigned __int128'
+|-TypedefDecl 0x7fb31e016f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb31e016d70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb31e016ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb31e017000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb31e016fc0 'char *'
+|   `-BuiltinType 0x7fb31e016760 'char'
+|-TypedefDecl 0x7fb31e0172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb31e017270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb31e0170e0 'struct __va_list_tag'
+|     `-Record 0x7fb31e017058 '__va_list_tag'
+|-FunctionDecl 0x7fb31e067600 <c_files/pr79487.c:4:1, line:16:1> line:5:1 main 'int ()'
+| `-CompoundStmt 0x7fb31e067d60 <line:6:1, line:16:1>
+|   |-DeclStmt 0x7fb31e0677f8 <line:7:3, col:48>
+|   | `-VarDecl 0x7fb31e0676f0 <col:3, col:14> col:14 invalid a 'int'
+|   |-DeclStmt 0x7fb31e067888 <line:8:3, col:33>
+|   | `-VarDecl 0x7fb31e067828 <col:3, col:14> col:14 invalid b 'int'
+|   |-IfStmt 0x7fb31e067a68 <line:9:3, line:10:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7fb31e067a48 <<invalid sloc>> '_Bool'
+|   | |-CallExpr 0x7fb31e067a20 <col:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fb31e067a08 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fb31e0679b0 <col:5> '<builtin fn type>' Function 0x7fb31e0678d0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-DeclStmt 0x7fb31e067bc0 <line:11:3, col:48>
+|   | `-VarDecl 0x7fb31e067ab8 <col:3, col:14> col:14 invalid c 'int'
+|   |-DeclStmt 0x7fb31e067c50 <line:12:3, col:42>
+|   | `-VarDecl 0x7fb31e067bf0 <col:3, col:14> col:14 invalid d 'int'
+|   |-IfStmt 0x7fb31e067cf0 <line:13:3, line:14:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7fb31e067cd0 <<invalid sloc>> '_Bool'
+|   | |-CallExpr 0x7fb31e067ca8 <col:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fb31e067c90 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fb31e067c68 <col:5> '<builtin fn type>' Function 0x7fb31e0678d0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fb31e067d48 <line:15:3, col:10>
+|     `-IntegerLiteral 0x7fb31e067d28 <col:10> 'int' 0
+`-FunctionDecl 0x7fb31e0678d0 <line:10:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fb31e067968 <col:5> Implicit

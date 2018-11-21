@@ -1,0 +1,75 @@
+TranslationUnitDecl 0x7fa323015ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa323016420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa323016140 '__int128'
+|-TypedefDecl 0x7fa323016490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa323016160 'unsigned __int128'
+|-TypedefDecl 0x7fa323016768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa323016570 'struct __NSConstantString_tag'
+|   `-Record 0x7fa3230164e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa323016800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa3230167c0 'char *'
+|   `-BuiltinType 0x7fa323015f60 'char'
+|-TypedefDecl 0x7fa323016ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa323016a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa3230168e0 'struct __va_list_tag'
+|     `-Record 0x7fa323016858 '__va_list_tag'
+|-FunctionDecl 0x7fa323066e30 <c_files/pr48124-2.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fa323066ec8 prev 0x7fa323066e30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fa323066f60 <line:5:17, line:8:1> line:5:24 struct S0 definition
+| |-FieldDecl 0x7fa323067090 <line:6:5, col:15> col:11 f3 'short [9]'
+| `-FieldDecl 0x7fa323067110 <line:7:5, col:19> col:14 referenced f8 'unsigned int'
+|   `-IntegerLiteral 0x7fa3230670d8 <col:19> 'int' 15
+|-VarDecl 0x7fa3230671b0 <line:5:1, line:8:9> col:3 used s 'volatile struct S0':'volatile struct S0' static cinit
+| `-InitListExpr 0x7fa3230672b8 <col:7, col:9> 'struct S0':'struct S0'
+|   |-InitListExpr 0x7fa323067308 <col:8> 'short [9]'
+|   | |-array filler
+|   | | `-ImplicitValueInitExpr 0x7fa3230673a8 <<invalid sloc>> 'short'
+|   | `-ImplicitCastExpr 0x7fa323067390 <col:8> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fa323067250 <col:8> 'int' 1
+|   `-ImplicitValueInitExpr 0x7fa3230673b8 <<invalid sloc>> 'unsigned int'
+|-VarDecl 0x7fa3230673f8 <line:9:1, col:28> col:23 used sh 'unsigned short' static cinit
+| `-ImplicitCastExpr 0x7fa323067478 <col:28> 'unsigned short' <IntegralCast>
+|   `-IntegerLiteral 0x7fa323067458 <col:28> 'int' 4660
+|-VarDecl 0x7fa3230674b0 <line:11:1, col:11> col:11 used a 'struct S0':'struct S0'
+|-VarDecl 0x7fa323067530 <col:1, col:14> col:14 used b 'struct S0':'struct S0'
+|-VarDecl 0x7fa3230675c0 <line:12:1, col:10> col:5 used vi 'int' cinit
+| `-IntegerLiteral 0x7fa323067620 <col:10> 'int' 0
+|-FunctionDecl 0x7fa323067688 <line:14:1, line:19:1> line:14:6 used func_4 'void ()'
+| `-CompoundStmt 0x7fa3230679b8 <line:15:1, line:19:1>
+|   |-CompoundAssignOperator 0x7fa3230677a0 <line:16:3, col:11> 'unsigned int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-MemberExpr 0x7fa323067748 <col:3, col:5> 'volatile unsigned int' lvalue bitfield .f8 0x7fa323067110
+|   | | `-DeclRefExpr 0x7fa323067720 <col:3> 'volatile struct S0':'volatile struct S0' lvalue Var 0x7fa3230671b0 's' 'volatile struct S0':'volatile struct S0'
+|   | `-IntegerLiteral 0x7fa323067780 <col:11> 'int' 1
+|   |-BinaryOperator 0x7fa323067888 <line:17:3, col:8> 'unsigned short' '='
+|   | |-DeclRefExpr 0x7fa323067828 <col:3> 'unsigned short' lvalue Var 0x7fa3230673f8 'sh' 'unsigned short'
+|   | `-ImplicitCastExpr 0x7fa323067870 <col:8> 'unsigned short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fa323067850 <col:8> 'int' 15
+|   `-IfStmt 0x7fa323067980 <line:18:3, col:15>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fa3230678d8 <col:7> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa3230678b0 <col:7> 'int' lvalue Var 0x7fa3230675c0 'vi' 'int'
+|     |-BinaryOperator 0x7fa323067958 <col:11, col:15> 'struct S0':'struct S0' '='
+|     | |-DeclRefExpr 0x7fa3230678f0 <col:11> 'struct S0':'struct S0' lvalue Var 0x7fa3230674b0 'a' 'struct S0':'struct S0'
+|     | `-ImplicitCastExpr 0x7fa323067940 <col:15> 'struct S0':'struct S0' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fa323067918 <col:15> 'struct S0':'struct S0' lvalue Var 0x7fa323067530 'b' 'struct S0':'struct S0'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fa323067a40 <line:21:1, line:27:1> line:21:5 main 'int ()'
+  `-CompoundStmt 0x7fa323067d08 <line:22:1, line:27:1>
+    |-CallExpr 0x7fa323067b40 <line:23:3, col:10> 'void'
+    | `-ImplicitCastExpr 0x7fa323067b28 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fa323067ad8 <col:3> 'void ()' Function 0x7fa323067688 'func_4' 'void ()'
+    |-IfStmt 0x7fa323067c98 <line:24:3, line:25:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa323067be0 <line:24:7, col:13> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fa323067bc8 <col:7> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fa323067bb0 <col:7> 'unsigned short' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fa323067b68 <col:7> 'unsigned short' lvalue Var 0x7fa3230673f8 'sh' 'unsigned short'
+    | | `-IntegerLiteral 0x7fa323067b90 <col:13> 'int' 15
+    | |-CallExpr 0x7fa323067c70 <line:25:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fa323067c58 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fa323067c08 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fa323066ec8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fa323067cf0 <line:26:3, col:10>
+      `-IntegerLiteral 0x7fa323067cd0 <col:10> 'int' 0

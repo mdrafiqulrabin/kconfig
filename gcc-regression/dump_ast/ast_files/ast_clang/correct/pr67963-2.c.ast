@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fa9b08264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa9b0826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa9b0826740 '__int128'
+|-TypedefDecl 0x7fa9b0826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa9b0826760 'unsigned __int128'
+|-TypedefDecl 0x7fa9b0826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa9b0826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa9b0826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa9b0826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa9b0826dc0 'char *'
+|   `-BuiltinType 0x7fa9b0826560 'char'
+|-TypedefDecl 0x7fa9b08270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa9b0827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa9b0826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa9b0826e58 '__va_list_tag'
+`-FunctionDecl 0x7fa9b0878458 <c_files/pr67963-2.c:4:1, line:9:1> line:6:1 foo 'float (void)'
+  |-CompoundStmt 0x7fa9b08785c8 <line:7:1, line:9:1>
+  | `-ReturnStmt 0x7fa9b08785b0 <line:8:3, col:10>
+  |   `-FloatingLiteral 0x7fa9b0878590 <col:10> 'float' 0.000000e+00
+  `-TargetAttr 0x7fa9b08784f0 <line:5:16, col:38> "arch=lakemont"

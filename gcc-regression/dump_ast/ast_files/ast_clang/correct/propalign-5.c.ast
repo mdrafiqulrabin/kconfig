@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7fd7df8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd7df826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd7df826740 '__int128'
+|-TypedefDecl 0x7fd7df826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd7df826760 'unsigned __int128'
+|-TypedefDecl 0x7fd7df826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd7df826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd7df826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd7df826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd7df826dc0 'char *'
+|   `-BuiltinType 0x7fd7df826560 'char'
+|-TypedefDecl 0x7fd7df8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd7df827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd7df826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd7df826e58 '__va_list_tag'
+|-VarDecl 0x7fd7df827138 <c_files/propalign-5.c:5:1, col:5> col:5 used n 'int'
+|-FunctionDecl 0x7fd7e0026ac0 <line:7:1, line:12:1> line:9:1 used test 'void (void *)' static
+| |-ParmVarDecl 0x7fd7e0026a00 <col:6, col:12> col:12 used a 'void *'
+| |-CompoundStmt 0x7fd7e0026fa8 <line:10:1, line:12:1>
+| | `-CallExpr 0x7fd7e0026f20 <line:11:3, col:26> 'void *'
+| |   |-ImplicitCastExpr 0x7fd7e0026f08 <col:3> 'void *(*)(void *, int, unsigned long)' <BuiltinFnToFnPtr>
+| |   | `-DeclRefExpr 0x7fd7e0026e10 <col:3> '<builtin fn type>' Function 0x7fd7e0026bf8 '__builtin_memset' 'void *(void *, int, unsigned long)'
+| |   |-ImplicitCastExpr 0x7fd7e0026f60 <col:21> 'void *' <LValueToRValue>
+| |   | `-DeclRefExpr 0x7fd7e0026e38 <col:21> 'void *' lvalue ParmVar 0x7fd7e0026a00 'a' 'void *'
+| |   |-IntegerLiteral 0x7fd7e0026e60 <col:23> 'int' 0
+| |   `-ImplicitCastExpr 0x7fd7e0026f90 <col:25> 'unsigned long' <IntegralCast>
+| |     `-ImplicitCastExpr 0x7fd7e0026f78 <col:25> 'int' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fd7e0026e80 <col:25> 'int' lvalue Var 0x7fd7df827138 'n' 'int'
+| `-NoInlineAttr 0x7fd7e0026b60 <line:8:17>
+|-FunctionDecl 0x7fd7e0026bf8 <line:11:3> col:3 implicit used __builtin_memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fd7e0026c90 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fd7e0026cf0 <<invalid sloc>> <invalid sloc> 'int'
+| |-ParmVarDecl 0x7fd7e0026d50 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fd7e0026dc8 <col:3> Implicit
+`-FunctionDecl 0x7fd7e0027020 <line:14:1, line:22:1> line:15:1 main 'int ()'
+  `-CompoundStmt 0x7fd7e0027440 <line:16:1, line:22:1>
+    |-DeclStmt 0x7fd7e0027130 <line:17:3, col:9>
+    | `-VarDecl 0x7fd7e00270d0 <col:3, col:7> col:7 used aa 'int'
+    |-DeclStmt 0x7fd7e00271c0 <line:18:3, col:11>
+    | `-VarDecl 0x7fd7e0027160 <col:3, col:9> col:9 used bb 'short'
+    |-CallExpr 0x7fd7e00272c0 <line:19:3, col:12> 'void'
+    | |-ImplicitCastExpr 0x7fd7e00272a8 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd7e00271d8 <col:3> 'void (void *)' Function 0x7fd7e0026ac0 'test' 'void (void *)'
+    | `-ImplicitCastExpr 0x7fd7e00272f0 <col:9, col:10> 'void *' <BitCast>
+    |   `-UnaryOperator 0x7fd7e0027258 <col:9, col:10> 'int *' prefix '&'
+    |     `-DeclRefExpr 0x7fd7e0027200 <col:10> 'int' lvalue Var 0x7fd7e00270d0 'aa' 'int'
+    |-CallExpr 0x7fd7e00273c0 <line:20:3, col:12> 'void'
+    | |-ImplicitCastExpr 0x7fd7e00273a8 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd7e0027308 <col:3> 'void (void *)' Function 0x7fd7e0026ac0 'test' 'void (void *)'
+    | `-ImplicitCastExpr 0x7fd7e00273f0 <col:9, col:10> 'void *' <BitCast>
+    |   `-UnaryOperator 0x7fd7e0027388 <col:9, col:10> 'short *' prefix '&'
+    |     `-DeclRefExpr 0x7fd7e0027330 <col:10> 'short' lvalue Var 0x7fd7e0027160 'bb' 'short'
+    `-ReturnStmt 0x7fd7e0027428 <line:21:3, col:10>
+      `-IntegerLiteral 0x7fd7e0027408 <col:10> 'int' 0

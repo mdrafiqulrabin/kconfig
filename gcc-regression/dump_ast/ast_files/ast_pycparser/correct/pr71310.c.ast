@@ -1,0 +1,50 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: mmu_gather
+      Decl: end, [], [], []
+        TypeDecl: end, []
+          IdentifierType: ['long']
+      Decl: fullmm, [], [], []
+        TypeDecl: fullmm, []
+          IdentifierType: ['int']
+        Constant: int, 1
+  FuncDef: 
+    Decl: __tlb_reset_range, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            PtrDecl: []
+              TypeDecl: p1, []
+                Struct: mmu_gather
+        TypeDecl: __tlb_reset_range, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        StructRef: ->
+          ID: p1
+          ID: fullmm
+        Assignment: =
+          StructRef: ->
+            ID: p1
+            ID: end
+          Constant: int, 0
+  FuncDef: 
+    Decl: tlb_gather_mmu, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            PtrDecl: []
+              TypeDecl: p1, []
+                Struct: mmu_gather
+        TypeDecl: tlb_gather_mmu, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: p1
+          ID: fullmm
+        Constant: int, 1
+      FuncCall: 
+        ID: __tlb_reset_range
+        ExprList: 
+          ID: p1

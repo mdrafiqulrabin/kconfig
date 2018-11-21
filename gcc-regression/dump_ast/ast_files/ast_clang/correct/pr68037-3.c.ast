@@ -1,0 +1,184 @@
+TranslationUnitDecl 0x7fcc840264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcc84026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcc84026740 '__int128'
+|-TypedefDecl 0x7fcc84026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcc84026760 'unsigned __int128'
+|-TypedefDecl 0x7fcc84026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcc84026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcc84026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcc84026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcc84026dc0 'char *'
+|   `-BuiltinType 0x7fcc84026560 'char'
+|-TypedefDecl 0x7fcc840270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcc84027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcc84026ee0 'struct __va_list_tag'
+|     `-Record 0x7fcc84026e58 '__va_list_tag'
+|-TypedefDecl 0x7fcc84027138 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stddef.h:51:1, col:26> col:26 referenced ptrdiff_t 'long'
+| `-BuiltinType 0x7fcc840265e0 'long'
+|-TypedefDecl 0x7fcc840271a8 <line:62:1, col:23> col:23 size_t 'unsigned long'
+| `-BuiltinType 0x7fcc84026680 'unsigned long'
+|-TypedefDecl 0x7fcc8482a018 <line:90:1, col:24> col:24 wchar_t 'int'
+| `-BuiltinType 0x7fcc840265c0 'int'
+|-TypedefDecl 0x7fcc8482a088 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/__stddef_max_align_t.h:32:1, col:21> col:21 max_align_t 'long double'
+| `-BuiltinType 0x7fcc84026700 'long double'
+|-FunctionDecl 0x7fcc8482a1f8 <c_files/pr68037-3.c:6:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fcc8482a290 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fcc8482a2f8 prev 0x7fcc8482a1f8 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fcc8482a0f8 <col:19> col:22 'int'
+|-TypedefDecl 0x7fcc8482a3c0 <line:8:1, col:22> col:22 referenced uword_t 'unsigned long'
+| |-BuiltinType 0x7fcc84026680 'unsigned long'
+| `-ModeAttr 0x7fcc8482a428 <col:46, col:60> __word__
+|-TypedefDecl 0x7fcc8482a4b0 <line:9:1, col:13> col:13 referenced aligned 'int'
+| |-BuiltinType 0x7fcc840265c0 'int'
+| `-AlignedAttr 0x7fcc8482a508 <col:36, col:46> aligned
+|   `-IntegerLiteral 0x7fcc8482a478 <col:44> 'int' 64
+|-RecordDecl 0x7fcc8482a558 <line:22:1, line:29:1> line:22:8 struct interrupt_frame definition
+| |-FieldDecl 0x7fcc8482a630 <line:24:3, col:11> col:11 referenced ip 'uword_t':'unsigned long'
+| |-FieldDecl 0x7fcc8482a688 <line:25:3, col:11> col:11 referenced cs 'uword_t':'unsigned long'
+| |-FieldDecl 0x7fcc8482a6e0 <line:26:3, col:11> col:11 referenced flags 'uword_t':'unsigned long'
+| |-FieldDecl 0x7fcc8482a738 <line:27:3, col:11> col:11 referenced sp 'uword_t':'unsigned long'
+| `-FieldDecl 0x7fcc8482a790 <line:28:3, col:11> col:11 referenced ss 'uword_t':'unsigned long'
+|-FunctionDecl 0x7fcc8482a978 <line:31:1, line:38:1> line:32:1 used check_int 'int (int *, int)'
+| |-ParmVarDecl 0x7fcc8482a820 <col:12, col:17> col:17 used i 'int *'
+| |-ParmVarDecl 0x7fcc8482a898 <col:20, col:24> col:24 used align 'int'
+| `-CompoundStmt 0x7fcc8482afa0 <line:33:1, line:38:1>
+|   |-BinaryOperator 0x7fcc8482aae0 <line:34:3, col:8> 'int' '='
+|   | |-UnaryOperator 0x7fcc8482aaa0 <col:3, col:4> 'int' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7fcc8482aa88 <col:4> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fcc8482aa60 <col:4> 'int *' lvalue ParmVar 0x7fcc8482a820 'i' 'int *'
+|   | `-IntegerLiteral 0x7fcc8482aac0 <col:8> 'int' 20
+|   |-IfStmt 0x7fcc8482aed8 <line:35:3, line:36:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fcc8482ad08 <line:35:7, col:42> 'int' '!='
+|   | | |-ParenExpr 0x7fcc8482acb0 <col:7, col:37> 'long'
+|   | | | `-BinaryOperator 0x7fcc8482ac88 <col:8, col:36> 'long' '&'
+|   | | |   |-ParenExpr 0x7fcc8482aba8 <col:8, col:22> 'ptrdiff_t':'long'
+|   | | |   | `-CStyleCastExpr 0x7fcc8482ab80 <col:9, col:21> 'ptrdiff_t':'long' <PointerToIntegral>
+|   | | |   |   `-ImplicitCastExpr 0x7fcc8482ab68 <col:21> 'int *' <LValueToRValue>
+|   | | |   |     `-DeclRefExpr 0x7fcc8482ab30 <col:21> 'int *' lvalue ParmVar 0x7fcc8482a820 'i' 'int *'
+|   | | |   `-ImplicitCastExpr 0x7fcc8482ac70 <col:26, col:36> 'long' <IntegralCast>
+|   | | |     `-ParenExpr 0x7fcc8482ac50 <col:26, col:36> 'int'
+|   | | |       `-BinaryOperator 0x7fcc8482ac28 <col:27, col:35> 'int' '-'
+|   | | |         |-ImplicitCastExpr 0x7fcc8482ac10 <col:27> 'int' <LValueToRValue>
+|   | | |         | `-DeclRefExpr 0x7fcc8482abc8 <col:27> 'int' lvalue ParmVar 0x7fcc8482a898 'align' 'int'
+|   | | |         `-IntegerLiteral 0x7fcc8482abf0 <col:35> 'int' 1
+|   | | `-ImplicitCastExpr 0x7fcc8482acf0 <col:42> 'long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fcc8482acd0 <col:42> 'int' 0
+|   | |-CallExpr 0x7fcc8482aeb0 <line:36:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fcc8482ae98 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fcc8482ae40 <col:5> '<builtin fn type>' Function 0x7fcc8482ad60 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fcc8482af88 <line:37:3, col:11>
+|     `-ImplicitCastExpr 0x7fcc8482af70 <col:10, col:11> 'int' <LValueToRValue>
+|       `-UnaryOperator 0x7fcc8482af50 <col:10, col:11> 'int' lvalue prefix '*'
+|         `-ImplicitCastExpr 0x7fcc8482af38 <col:11> 'int *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fcc8482af10 <col:11> 'int *' lvalue ParmVar 0x7fcc8482a820 'i' 'int *'
+|-FunctionDecl 0x7fcc8482ad60 <line:36:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fcc8482adf8 <col:5> Implicit
+|-FunctionDecl 0x7fcc84832180 <line:40:1, line:60:1> line:42:1 used fn 'void (struct interrupt_frame *)'
+| |-ParmVarDecl 0x7fcc84832080 <col:5, col:29> col:29 used frame 'struct interrupt_frame *'
+| |-CompoundStmt 0x7fcc84832e60 <line:43:1, line:60:1>
+| | |-DeclStmt 0x7fcc84832320 <line:44:3, col:12>
+| | | `-VarDecl 0x7fcc848322c0 <col:3, col:11> col:11 used i 'aligned':'int'
+| | |-IfStmt 0x7fcc848325a0 <line:45:3, line:46:22>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fcc84832510 <line:45:7, col:41> 'int' '!='
+| | | | |-CallExpr 0x7fcc84832480 <col:7, col:36> 'int'
+| | | | | |-ImplicitCastExpr 0x7fcc84832468 <col:7> 'int (*)(int *, int)' <FunctionToPointerDecay>
+| | | | | | `-DeclRefExpr 0x7fcc84832338 <col:7> 'int (int *, int)' Function 0x7fcc8482a978 'check_int' 'int (int *, int)'
+| | | | | |-UnaryOperator 0x7fcc848323b8 <col:18, col:19> 'aligned *' prefix '&'
+| | | | | | `-DeclRefExpr 0x7fcc84832360 <col:19> 'aligned':'int' lvalue Var 0x7fcc848322c0 'i' 'aligned':'int'
+| | | | | `-ImplicitCastExpr 0x7fcc848324b8 <col:22, col:35> 'int' <IntegralCast>
+| | | | |   `-UnaryExprOrTypeTraitExpr 0x7fcc84832420 <col:22, col:35> 'unsigned long' alignof
+| | | | |     `-ParenExpr 0x7fcc84832400 <col:33, col:35> 'aligned':'int' lvalue
+| | | | |       `-DeclRefExpr 0x7fcc848323d8 <col:34> 'aligned':'int' lvalue Var 0x7fcc848322c0 'i' 'aligned':'int'
+| | | | `-ImplicitCastExpr 0x7fcc848324f8 <col:41> 'aligned':'int' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fcc848324d0 <col:41> 'aligned':'int' lvalue Var 0x7fcc848322c0 'i' 'aligned':'int'
+| | | |-CallExpr 0x7fcc84832578 <line:46:5, col:22> 'void'
+| | | | `-ImplicitCastExpr 0x7fcc84832560 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | | |   `-DeclRefExpr 0x7fcc84832538 <col:5> '<builtin fn type>' Function 0x7fcc8482ad60 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | |-IfStmt 0x7fcc84832730 <line:48:3, line:49:22>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fcc848326a0 <line:11:13, line:48:20> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7fcc84832688 <line:11:13> 'unsigned long' <IntegralCast>
+| | | | | `-IntegerLiteral 0x7fcc848325d8 <col:13> 'int' 305419889
+| | | | `-ImplicitCastExpr 0x7fcc84832670 <line:48:13, col:20> 'uword_t':'unsigned long' <LValueToRValue>
+| | | |   `-MemberExpr 0x7fcc84832638 <col:13, col:20> 'uword_t':'unsigned long' lvalue ->ip 0x7fcc8482a630
+| | | |     `-ImplicitCastExpr 0x7fcc84832620 <col:13> 'struct interrupt_frame *' <LValueToRValue>
+| | | |       `-DeclRefExpr 0x7fcc848325f8 <col:13> 'struct interrupt_frame *' lvalue ParmVar 0x7fcc84832080 'frame' 'struct interrupt_frame *'
+| | | |-CallExpr 0x7fcc84832708 <line:49:5, col:22> 'void'
+| | | | `-ImplicitCastExpr 0x7fcc848326f0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | | |   `-DeclRefExpr 0x7fcc848326c8 <col:5> '<builtin fn type>' Function 0x7fcc8482ad60 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | |-IfStmt 0x7fcc848328c0 <line:50:3, line:51:22>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fcc84832830 <line:12:13, line:50:20> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7fcc84832818 <line:12:13> 'unsigned long' <IntegralCast>
+| | | | | `-IntegerLiteral 0x7fcc84832768 <col:13> 'int' 305419890
+| | | | `-ImplicitCastExpr 0x7fcc84832800 <line:50:13, col:20> 'uword_t':'unsigned long' <LValueToRValue>
+| | | |   `-MemberExpr 0x7fcc848327c8 <col:13, col:20> 'uword_t':'unsigned long' lvalue ->cs 0x7fcc8482a688
+| | | |     `-ImplicitCastExpr 0x7fcc848327b0 <col:13> 'struct interrupt_frame *' <LValueToRValue>
+| | | |       `-DeclRefExpr 0x7fcc84832788 <col:13> 'struct interrupt_frame *' lvalue ParmVar 0x7fcc84832080 'frame' 'struct interrupt_frame *'
+| | | |-CallExpr 0x7fcc84832898 <line:51:5, col:22> 'void'
+| | | | `-ImplicitCastExpr 0x7fcc84832880 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | | |   `-DeclRefExpr 0x7fcc84832858 <col:5> '<builtin fn type>' Function 0x7fcc8482ad60 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | |-IfStmt 0x7fcc84832a50 <line:52:3, line:53:22>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fcc848329c0 <line:13:16, line:52:23> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7fcc848329a8 <line:13:16> 'unsigned long' <IntegralCast>
+| | | | | `-IntegerLiteral 0x7fcc848328f8 <col:16> 'int' 305419891
+| | | | `-ImplicitCastExpr 0x7fcc84832990 <line:52:16, col:23> 'uword_t':'unsigned long' <LValueToRValue>
+| | | |   `-MemberExpr 0x7fcc84832958 <col:16, col:23> 'uword_t':'unsigned long' lvalue ->flags 0x7fcc8482a6e0
+| | | |     `-ImplicitCastExpr 0x7fcc84832940 <col:16> 'struct interrupt_frame *' <LValueToRValue>
+| | | |       `-DeclRefExpr 0x7fcc84832918 <col:16> 'struct interrupt_frame *' lvalue ParmVar 0x7fcc84832080 'frame' 'struct interrupt_frame *'
+| | | |-CallExpr 0x7fcc84832a28 <line:53:5, col:22> 'void'
+| | | | `-ImplicitCastExpr 0x7fcc84832a10 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | | |   `-DeclRefExpr 0x7fcc848329e8 <col:5> '<builtin fn type>' Function 0x7fcc8482ad60 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | |-IfStmt 0x7fcc84832be0 <line:54:3, line:55:22>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fcc84832b50 <line:14:13, line:54:20> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7fcc84832b38 <line:14:13> 'unsigned long' <IntegralCast>
+| | | | | `-IntegerLiteral 0x7fcc84832a88 <col:13> 'int' 305419892
+| | | | `-ImplicitCastExpr 0x7fcc84832b20 <line:54:13, col:20> 'uword_t':'unsigned long' <LValueToRValue>
+| | | |   `-MemberExpr 0x7fcc84832ae8 <col:13, col:20> 'uword_t':'unsigned long' lvalue ->sp 0x7fcc8482a738
+| | | |     `-ImplicitCastExpr 0x7fcc84832ad0 <col:13> 'struct interrupt_frame *' <LValueToRValue>
+| | | |       `-DeclRefExpr 0x7fcc84832aa8 <col:13> 'struct interrupt_frame *' lvalue ParmVar 0x7fcc84832080 'frame' 'struct interrupt_frame *'
+| | | |-CallExpr 0x7fcc84832bb8 <line:55:5, col:22> 'void'
+| | | | `-ImplicitCastExpr 0x7fcc84832ba0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | | |   `-DeclRefExpr 0x7fcc84832b78 <col:5> '<builtin fn type>' Function 0x7fcc8482ad60 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | |-IfStmt 0x7fcc84832d70 <line:56:3, line:57:22>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fcc84832ce0 <line:15:13, line:56:20> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7fcc84832cc8 <line:15:13> 'unsigned long' <IntegralCast>
+| | | | | `-IntegerLiteral 0x7fcc84832c18 <col:13> 'int' 305419893
+| | | | `-ImplicitCastExpr 0x7fcc84832cb0 <line:56:13, col:20> 'uword_t':'unsigned long' <LValueToRValue>
+| | | |   `-MemberExpr 0x7fcc84832c78 <col:13, col:20> 'uword_t':'unsigned long' lvalue ->ss 0x7fcc8482a790
+| | | |     `-ImplicitCastExpr 0x7fcc84832c60 <col:13> 'struct interrupt_frame *' <LValueToRValue>
+| | | |       `-DeclRefExpr 0x7fcc84832c38 <col:13> 'struct interrupt_frame *' lvalue ParmVar 0x7fcc84832080 'frame' 'struct interrupt_frame *'
+| | | |-CallExpr 0x7fcc84832d48 <line:57:5, col:22> 'void'
+| | | | `-ImplicitCastExpr 0x7fcc84832d30 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | | |   `-DeclRefExpr 0x7fcc84832d08 <col:5> '<builtin fn type>' Function 0x7fcc8482ad60 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | `-CallExpr 0x7fcc84832e30 <line:59:3, col:10> 'void'
+| |   |-ImplicitCastExpr 0x7fcc84832e18 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7fcc84832da8 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fcc8482a2f8 'exit' 'void (int) __attribute__((noreturn))'
+| |   `-IntegerLiteral 0x7fcc84832dd0 <col:9> 'int' 0
+| |-UsedAttr 0x7fcc84832220 <line:40:27>
+| |-AnyX86InterruptAttr 0x7fcc84832268 <col:16>
+| `-UsedAttr 0x7fcc84832278 <<invalid sloc>> Implicit
+`-FunctionDecl 0x7fcc84832f10 <line:62:1, line:72:1> line:63:1 main 'int ()'
+  `-CompoundStmt 0x7fcc84815148 <line:64:1, line:72:1>
+    |-GCCAsmStmt 0x7fcc848150c8 <line:65:3, line:70:23>
+    `-ReturnStmt 0x7fcc84815130 <line:71:3, col:10>
+      `-IntegerLiteral 0x7fcc84815110 <col:10> 'int' 0

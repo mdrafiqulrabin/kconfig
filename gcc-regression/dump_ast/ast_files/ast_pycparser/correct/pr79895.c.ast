@@ -1,0 +1,19 @@
+FileAST: 
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['unsigned', '__int128']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: g
+        BinaryOp: <<
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', '__int128']
+            Constant: int, 1
+          Constant: int, 127

@@ -1,0 +1,19 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argc, [], [], []
+            TypeDecl: argc, []
+              IdentifierType: ['int']
+          Decl: argv, [], [], []
+            ArrayDecl: []
+              PtrDecl: []
+                TypeDecl: argv, []
+                  IdentifierType: ['char']
+          EllipsisParam: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 0

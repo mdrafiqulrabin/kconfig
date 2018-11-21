@@ -1,0 +1,51 @@
+FileAST: 
+  Decl: a, [], ['extern'], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], ['extern'], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: d, [], ['extern'], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: c, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: c, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        Compound: 
+          If: 
+            ID: b
+            Compound: 
+              Label: LABEL_T5T5T
+                For: 
+                  BinaryOp: <
+                    ID: d
+                    ID: a
+                  UnaryOp: p++
+                    ID: d
+                  Assignment: =
+                    ArrayRef: 
+                      ID: c
+                      ID: d
+                    Constant: int, 6
+          Break: 
+      If: 
+        BinaryOp: >
+          ID: a
+          Constant: int, 6
+        Compound: 
+          Assignment: =
+            ID: a
+            Constant: int, 4
+          Goto: LABEL_T5T5T

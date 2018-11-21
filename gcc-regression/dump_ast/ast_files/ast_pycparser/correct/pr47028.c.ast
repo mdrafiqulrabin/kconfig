@@ -1,0 +1,52 @@
+FileAST: 
+  FuncDef: 
+    Decl: fib, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: fib, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: <=
+          ID: n
+          Constant: int, 1
+        Return: 
+          Constant: int, 1
+      Return: 
+        BinaryOp: +
+          FuncCall: 
+            ID: fib
+            ExprList: 
+              BinaryOp: -
+                ID: n
+                Constant: int, 2
+          FuncCall: 
+            ID: fib
+            ExprList: 
+              BinaryOp: -
+                ID: n
+                Constant: int, 1
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: fib
+            ExprList: 
+              Constant: int, 5
+          Constant: int, 8
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,42 @@
+FileAST: 
+  Typedef: uint8_t, [], ['typedef']
+    TypeDecl: uint8_t, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: uint_least32_t, [], ['typedef']
+    TypeDecl: uint_least32_t, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: __off, [], [], []
+          TypeDecl: __off, []
+            IdentifierType: ['long', 'int']
+      TypeDecl: foo, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: write, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: chunk_len, [], [], []
+            TypeDecl: chunk_len, []
+              IdentifierType: ['uint_least32_t']
+        TypeDecl: write, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: tmp, [], [], []
+        ArrayDecl: []
+          TypeDecl: tmp, []
+            IdentifierType: ['uint8_t']
+          Constant: int, 4
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          BinaryOp: -
+            UnaryOp: -
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['long']
+                ID: chunk_len
+            UnaryOp: sizeof
+              ID: tmp

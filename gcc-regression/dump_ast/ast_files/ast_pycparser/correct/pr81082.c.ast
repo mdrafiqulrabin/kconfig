@@ -1,0 +1,77 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+          Decl: b1, [], [], []
+            TypeDecl: b1, []
+              IdentifierType: ['int']
+          Decl: b2, [], [], []
+            TypeDecl: b2, []
+              IdentifierType: ['int']
+          Decl: b3, [], [], []
+            TypeDecl: b3, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: foo, [], [], []
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        DeclList: 
+          Decl: i1, [], [], []
+            TypeDecl: i1, []
+              IdentifierType: ['int']
+            Constant: int, 0
+        BinaryOp: <
+          ID: i1
+          ID: b1
+        UnaryOp: ++
+          ID: i1
+        For: 
+          DeclList: 
+            Decl: i2, [], [], []
+              TypeDecl: i2, []
+                IdentifierType: ['int']
+              Constant: int, 0
+          BinaryOp: <
+            ID: i2
+            ID: b2
+          UnaryOp: ++
+            ID: i2
+          For: 
+            DeclList: 
+              Decl: i3, [], [], []
+                TypeDecl: i3, []
+                  IdentifierType: ['int']
+                Constant: int, 0
+            BinaryOp: <
+              ID: i3
+              ID: b3
+            UnaryOp: ++
+              ID: i3
+            Assignment: +=
+              ID: foo
+              ArrayRef: 
+                ID: x
+                BinaryOp: +
+                  BinaryOp: +
+                    BinaryOp: *
+                      BinaryOp: *
+                        ID: i1
+                        ID: b2
+                      ID: b3
+                    BinaryOp: *
+                      ID: i2
+                      ID: b3
+                  BinaryOp: -
+                    ID: i3
+                    Constant: int, 1
+      Return: 
+        ID: foo

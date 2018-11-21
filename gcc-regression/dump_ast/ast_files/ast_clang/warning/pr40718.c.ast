@@ -1,0 +1,79 @@
+c_files/pr40718.c:9:24: warning: calling convention '__stdcall__' ignored for this target [-Wignored-attributes]
+  void (__attribute__((__stdcall__)) *f) (struct S *);
+                       ^
+c_files/pr40718.c:13:21: warning: calling convention '__stdcall__' ignored for this target [-Wignored-attributes]
+void __attribute__((__stdcall__))
+                    ^
+c_files/pr40718.c:19:21: warning: calling convention '__stdcall__' ignored for this target [-Wignored-attributes]
+void __attribute__((__stdcall__))
+                    ^
+3 warnings generated.
+TranslationUnitDecl 0x7fc44c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc44c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc44c826740 '__int128'
+|-TypedefDecl 0x7fc44c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc44c826760 'unsigned __int128'
+|-TypedefDecl 0x7fc44c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc44c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc44c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc44c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc44c826dc0 'char *'
+|   `-BuiltinType 0x7fc44c826560 'char'
+|-TypedefDecl 0x7fc44c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc44c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc44c826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc44c826e58 '__va_list_tag'
+|-FunctionDecl 0x7fc44c877430 <c_files/pr40718.c:5:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc44c8774c8 prev 0x7fc44c877430 <col:1, col:17> col:6 used abort 'void (void) __attribute__((noreturn))'
+|-RecordDecl 0x7fc44c877560 <line:7:1, line:11:1> line:7:8 struct S definition
+| |-FieldDecl 0x7fc44c8778a8 <line:9:3, col:39> col:39 referenced f 'void (*)(struct S *) __attribute__((stdcall))'
+| `-FieldDecl 0x7fc44c877908 <line:10:3, col:7> col:7 referenced i 'int'
+|-FunctionDecl 0x7fc44c877a50 <line:13:1, line:17:1> line:14:1 used foo 'void (struct S *) __attribute__((stdcall))':'void (struct S *)'
+| |-ParmVarDecl 0x7fc44c877978 <col:6, col:16> col:16 used s 'struct S *'
+| `-CompoundStmt 0x7fc44c877bc8 <line:15:1, line:17:1>
+|   `-UnaryOperator 0x7fc44c877ba8 <line:16:3, col:7> 'int' postfix '++'
+|     `-MemberExpr 0x7fc44c877b70 <col:3, col:6> 'int' lvalue ->i 0x7fc44c877908
+|       `-ImplicitCastExpr 0x7fc44c877b58 <col:3> 'struct S *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fc44c877b30 <col:3> 'struct S *' lvalue ParmVar 0x7fc44c877978 's' 'struct S *'
+|-FunctionDecl 0x7fc44c877cb0 <line:19:1, line:24:1> line:20:1 used bar 'void (struct S *) __attribute__((stdcall))':'void (struct S *)'
+| |-ParmVarDecl 0x7fc44c877c10 <col:6, col:16> col:16 used s 'struct S *'
+| `-CompoundStmt 0x7fc44c877f28 <line:21:1, line:24:1>
+|   |-CallExpr 0x7fc44c877de0 <line:22:3, col:8> 'void'
+|   | |-ImplicitCastExpr 0x7fc44c877dc8 <col:3> 'void (*)(struct S *) __attribute__((stdcall))' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fc44c877d50 <col:3> 'void (struct S *) __attribute__((stdcall))':'void (struct S *)' Function 0x7fc44c877a50 'foo' 'void (struct S *) __attribute__((stdcall))':'void (struct S *)'
+|   | `-ImplicitCastExpr 0x7fc44c877e10 <col:7> 'struct S *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc44c877d78 <col:7> 'struct S *' lvalue ParmVar 0x7fc44c877c10 's' 'struct S *'
+|   `-CallExpr 0x7fc44c877ee0 <line:23:3, col:9> 'void'
+|     |-ImplicitCastExpr 0x7fc44c877ec8 <col:3, col:6> 'void (*)(struct S *) __attribute__((stdcall))' <LValueToRValue>
+|     | `-MemberExpr 0x7fc44c877e68 <col:3, col:6> 'void (*)(struct S *) __attribute__((stdcall))' lvalue ->f 0x7fc44c8778a8
+|     |   `-ImplicitCastExpr 0x7fc44c877e50 <col:3> 'struct S *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7fc44c877e28 <col:3> 'struct S *' lvalue ParmVar 0x7fc44c877c10 's' 'struct S *'
+|     `-ImplicitCastExpr 0x7fc44c877f10 <col:8> 'struct S *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc44c877ea0 <col:8> 'struct S *' lvalue ParmVar 0x7fc44c877c10 's' 'struct S *'
+`-FunctionDecl 0x7fc44c878018 <line:26:1, line:35:1> line:26:5 main 'int (void)'
+  `-CompoundStmt 0x7fc44c879558 <line:27:1, line:35:1>
+    |-DeclStmt 0x7fc44c878258 <line:28:3, col:26>
+    | `-VarDecl 0x7fc44c8780f8 <col:3, col:25> col:12 used s 'struct S':'struct S' cinit
+    |   `-InitListExpr 0x7fc44c8781f0 <col:16, col:25> 'struct S':'struct S'
+    |     |-ImplicitCastExpr 0x7fc44c878240 <col:18> 'void (*)(struct S *) __attribute__((stdcall))' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fc44c878158 <col:18> 'void (struct S *) __attribute__((stdcall))':'void (struct S *)' Function 0x7fc44c877a50 'foo' 'void (struct S *) __attribute__((stdcall))':'void (struct S *)'
+    |     `-IntegerLiteral 0x7fc44c878180 <col:23> 'int' 0
+    |-CallExpr 0x7fc44c8782f8 <line:30:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fc44c8782e0 <col:3> 'void (*)(struct S *) __attribute__((stdcall))' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc44c878270 <col:3> 'void (struct S *) __attribute__((stdcall))':'void (struct S *)' Function 0x7fc44c877cb0 'bar' 'void (struct S *) __attribute__((stdcall))':'void (struct S *)'
+    | `-UnaryOperator 0x7fc44c8782c0 <col:8, col:9> 'struct S *' prefix '&'
+    |   `-DeclRefExpr 0x7fc44c878298 <col:9> 'struct S':'struct S' lvalue Var 0x7fc44c8780f8 's' 'struct S':'struct S'
+    |-IfStmt 0x7fc44c8794e8 <line:31:3, line:32:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc44c8783c0 <line:31:7, col:14> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fc44c8783a8 <col:7, col:9> 'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7fc44c878350 <col:7, col:9> 'int' lvalue .i 0x7fc44c877908
+    | | |   `-DeclRefExpr 0x7fc44c878328 <col:7> 'struct S':'struct S' lvalue Var 0x7fc44c8780f8 's' 'struct S':'struct S'
+    | | `-IntegerLiteral 0x7fc44c878388 <col:14> 'int' 2
+    | |-CallExpr 0x7fc44c8794c0 <line:32:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc44c8794a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc44c879450 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc44c8774c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc44c879540 <line:34:3, col:10>
+      `-IntegerLiteral 0x7fc44c879520 <col:10> 'int' 0

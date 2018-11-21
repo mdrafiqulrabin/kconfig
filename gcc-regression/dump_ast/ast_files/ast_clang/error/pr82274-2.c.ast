@@ -1,0 +1,116 @@
+c_files/pr82274-2.c:19:8: error: use of unknown builtin '__builtin_mul_overflow_p' [-Wimplicit-function-declaration]
+  if (!__builtin_mul_overflow_p (mv, mv, r))
+       ^
+c_files/pr82274-2.c:19:8: note: did you mean '__builtin_mul_overflow'?
+c_files/pr82274-2.c:17:8: note: '__builtin_mul_overflow' declared here
+  if (!__builtin_mul_overflow (mv, mv, &r))
+       ^
+1 error generated.
+TranslationUnitDecl 0x7ffae98264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffae9826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffae9826740 '__int128'
+|-TypedefDecl 0x7ffae9826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffae9826760 'unsigned __int128'
+|-TypedefDecl 0x7ffae9826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffae9826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffae9826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffae9826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffae9826dc0 'char *'
+|   `-BuiltinType 0x7ffae9826560 'char'
+|-TypedefDecl 0x7ffae98270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffae9827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffae9826ee0 'struct __va_list_tag'
+|     `-Record 0x7ffae9826e58 '__va_list_tag'
+|-FunctionDecl 0x7ffae9877400 <c_files/pr82274-2.c:5:1, line:26:1> line:6:1 main 'int ()'
+| `-CompoundStmt 0x7ffaea000418 <line:7:1, line:26:1>
+|   |-DeclStmt 0x7ffae9877708 <line:9:3, col:75>
+|   | `-VarDecl 0x7ffae98774f0 <col:3, col:74> col:12 used m '__int128' cinit
+|   |   `-UnaryOperator 0x7ffae98776e8 <col:16, col:74> '__int128' prefix '-'
+|   |     `-ParenExpr 0x7ffae98776c8 <col:17, col:74> '__int128'
+|   |       `-BinaryOperator 0x7ffae98776a0 <col:18, col:73> '__int128' '<<'
+|   |         |-ParenExpr 0x7ffae98775b0 <col:18, col:31> '__int128'
+|   |         | `-CStyleCastExpr 0x7ffae9877588 <col:19, col:30> '__int128' <IntegralCast>
+|   |         |   `-IntegerLiteral 0x7ffae9877550 <col:30> 'int' 1
+|   |         `-ParenExpr 0x7ffae9877680 <col:36, col:73> 'int'
+|   |           `-BinaryOperator 0x7ffae9877658 <<built-in>:30:22, c_files/pr82274-2.c:9:72> 'int' '/'
+|   |             |-BinaryOperator 0x7ffae9877610 <<built-in>:30:22, line:55:27> 'int' '*'
+|   |             | |-IntegerLiteral 0x7ffae98775d0 <line:30:22> 'int' 8
+|   |             | `-IntegerLiteral 0x7ffae98775f0 <line:55:27> 'int' 16
+|   |             `-IntegerLiteral 0x7ffae9877638 <c_files/pr82274-2.c:9:72> 'int' 2
+|   |-DeclStmt 0x7ffae98777d8 <line:10:3, col:27>
+|   | `-VarDecl 0x7ffae9877738 <col:3, col:26> col:21 used mv 'volatile __int128' cinit
+|   |   `-ImplicitCastExpr 0x7ffae98777c0 <col:26> '__int128' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7ffae9877798 <col:26> '__int128' lvalue Var 0x7ffae98774f0 'm' '__int128'
+|   |-DeclStmt 0x7ffae9877868 <line:11:3, col:13>
+|   | `-VarDecl 0x7ffae9877808 <col:3, col:12> col:12 used r '__int128'
+|   |-IfStmt 0x7ffae9877cc8 <line:17:3, line:18:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7ffae9877b00 <line:17:7, col:42> 'int' prefix '!'
+|   | | `-CallExpr 0x7ffae9877ac0 <col:8, col:42> '_Bool'
+|   | |   |-ImplicitCastExpr 0x7ffae9877aa8 <col:8> 'void (*)()' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7ffae9877988 <col:8> '<builtin fn type>' Function 0x7ffae98778a8 '__builtin_mul_overflow' 'void ()'
+|   | |   |-DeclRefExpr 0x7ffae98779b0 <col:32> 'volatile __int128' lvalue Var 0x7ffae9877738 'mv' 'volatile __int128'
+|   | |   |-DeclRefExpr 0x7ffae98779d8 <col:36> 'volatile __int128' lvalue Var 0x7ffae9877738 'mv' 'volatile __int128'
+|   | |   `-UnaryOperator 0x7ffae9877a58 <col:40, col:41> '__int128 *' prefix '&'
+|   | |     `-DeclRefExpr 0x7ffae9877a00 <col:41> '__int128' lvalue Var 0x7ffae9877808 'r' '__int128'
+|   | |-CallExpr 0x7ffae9877ca0 <line:18:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7ffae9877c88 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7ffae9877c30 <col:5> '<builtin fn type>' Function 0x7ffae9877b50 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7ffae9877fd0 <line:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7ffae9877f48 <line:19:7, col:43> 'int' prefix '!'
+|   | | `-CallExpr 0x7ffae9877ec0 <col:8, col:43> 'int'
+|   | |   |-ImplicitCastExpr 0x7ffae9877ea8 <col:8> 'int (*)()' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7ffae9877dd8 <col:8> 'int ()' Function 0x7ffae9877d40 '__builtin_mul_overflow_p' 'int ()'
+|   | |   |-ImplicitCastExpr 0x7ffae9877f00 <col:34> '__int128' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7ffae9877e00 <col:34> 'volatile __int128' lvalue Var 0x7ffae9877738 'mv' 'volatile __int128'
+|   | |   |-ImplicitCastExpr 0x7ffae9877f18 <col:38> '__int128' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7ffae9877e28 <col:38> 'volatile __int128' lvalue Var 0x7ffae9877738 'mv' 'volatile __int128'
+|   | |   `-ImplicitCastExpr 0x7ffae9877f30 <col:42> '__int128' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7ffae9877e50 <col:42> '__int128' lvalue Var 0x7ffae9877808 'r' '__int128'
+|   | |-CallExpr 0x7ffae9877fa8 <line:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7ffae9877f90 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7ffae9877f68 <col:5> '<builtin fn type>' Function 0x7ffae9877b50 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7ffae98781a8 <line:21:3, line:22:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7ffae9878120 <line:21:7, col:40> 'int' prefix '!'
+|   | | `-CallExpr 0x7ffae98780e0 <col:8, col:40> '_Bool'
+|   | |   |-ImplicitCastExpr 0x7ffae98780c8 <col:8> 'void (*)()' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7ffae9878008 <col:8> '<builtin fn type>' Function 0x7ffae98778a8 '__builtin_mul_overflow' 'void ()'
+|   | |   |-DeclRefExpr 0x7ffae9878030 <col:32> '__int128' lvalue Var 0x7ffae98774f0 'm' '__int128'
+|   | |   |-DeclRefExpr 0x7ffae9878058 <col:35> '__int128' lvalue Var 0x7ffae98774f0 'm' '__int128'
+|   | |   `-UnaryOperator 0x7ffae98780a8 <col:38, col:39> '__int128 *' prefix '&'
+|   | |     `-DeclRefExpr 0x7ffae9878080 <col:39> '__int128' lvalue Var 0x7ffae9877808 'r' '__int128'
+|   | |-CallExpr 0x7ffae9878180 <line:22:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7ffae9878168 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7ffae9878140 <col:5> '<builtin fn type>' Function 0x7ffae9877b50 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7ffae98783a8 <line:23:3, line:24:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7ffae9878320 <line:23:7, col:41> 'int' prefix '!'
+|   | | `-CallExpr 0x7ffae9878298 <col:8, col:41> 'int'
+|   | |   |-ImplicitCastExpr 0x7ffae9878280 <col:8> 'int (*)()' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7ffae98781e0 <col:8> 'int ()' Function 0x7ffae9877d40 '__builtin_mul_overflow_p' 'int ()'
+|   | |   |-ImplicitCastExpr 0x7ffae98782d8 <col:34> '__int128' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7ffae9878208 <col:34> '__int128' lvalue Var 0x7ffae98774f0 'm' '__int128'
+|   | |   |-ImplicitCastExpr 0x7ffae98782f0 <col:37> '__int128' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7ffae9878230 <col:37> '__int128' lvalue Var 0x7ffae98774f0 'm' '__int128'
+|   | |   `-ImplicitCastExpr 0x7ffae9878308 <col:40> '__int128' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7ffae9878258 <col:40> '__int128' lvalue Var 0x7ffae9877808 'r' '__int128'
+|   | |-CallExpr 0x7ffae9878380 <line:24:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7ffae9878368 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7ffae9878340 <col:5> '<builtin fn type>' Function 0x7ffae9877b50 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7ffaea000400 <line:25:3, col:10>
+|     `-IntegerLiteral 0x7ffae98783e0 <col:10> 'int' 0
+|-FunctionDecl 0x7ffae98778a8 <line:17:8> col:8 implicit used __builtin_mul_overflow 'void ()' extern
+| `-NoThrowAttr 0x7ffae9877940 <col:8> Implicit
+|-FunctionDecl 0x7ffae9877b50 <line:18:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7ffae9877be8 <col:5> Implicit
+`-FunctionDecl 0x7ffae9877d40 <<invalid sloc>> line:19:8 implicit used __builtin_mul_overflow_p 'int ()'

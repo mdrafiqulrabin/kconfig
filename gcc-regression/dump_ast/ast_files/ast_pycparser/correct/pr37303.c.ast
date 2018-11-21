@@ -1,0 +1,18 @@
+FileAST: 
+  Decl: s, [], [], []
+    TypeDecl: s, []
+      Struct: S
+        Decl: x, ['const'], [], []
+          PtrDecl: []
+            TypeDecl: x, ['const']
+              IdentifierType: ['int']
+    InitList: 
+      CompoundLiteral: 
+        Typename: None, ['const']
+          ArrayDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['int']
+        InitList: 
+          Constant: int, 1
+          Constant: int, 2
+          Constant: int, 3

@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7fedd78264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fedd7826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fedd7826740 '__int128'
+|-TypedefDecl 0x7fedd7826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fedd7826760 'unsigned __int128'
+|-TypedefDecl 0x7fedd7826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fedd7826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fedd7826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fedd7826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fedd7826dc0 'char *'
+|   `-BuiltinType 0x7fedd7826560 'char'
+|-TypedefDecl 0x7fedd78270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fedd7827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fedd7826ee0 'struct __va_list_tag'
+|     `-Record 0x7fedd7826e58 '__va_list_tag'
+|-RecordDecl 0x7fedd7827120 <c_files/pr24620.c:6:1, line:12:1> line:6:8 struct rgba definition
+| |-FieldDecl 0x7fedd7877400 <line:8:3, col:17> col:17 referenced r 'unsigned char'
+| |-FieldDecl 0x7fedd7877460 <line:9:3, col:17> col:17 referenced g 'unsigned char'
+| |-FieldDecl 0x7fedd78774c0 <line:10:3, col:17> col:17 referenced b 'unsigned char'
+| `-FieldDecl 0x7fedd7877520 <line:11:3, col:17> col:17 referenced a 'unsigned char'
+|-FunctionDecl 0x7fedd78776c0 <line:14:1, col:20> col:6 used g 'void (struct rgba)'
+| `-ParmVarDecl 0x7fedd78775c0 <col:9, col:16> col:20 'struct rgba':'struct rgba'
+`-FunctionDecl 0x7fedd7877860 <line:16:1, line:26:1> line:16:6 f 'void (void)'
+  `-CompoundStmt 0x7fedd7877df8 <line:17:1, line:26:1>
+    |-DeclStmt 0x7fedd7877978 <line:18:3, col:16>
+    | `-VarDecl 0x7fedd7877918 <col:3, col:15> col:15 used x 'struct rgba':'struct rgba'
+    |-BinaryOperator 0x7fedd7877a28 <line:20:3, col:9> 'unsigned char' '='
+    | |-MemberExpr 0x7fedd78779b8 <col:3, col:5> 'unsigned char' lvalue .r 0x7fedd7877400
+    | | `-DeclRefExpr 0x7fedd7877990 <col:3> 'struct rgba':'struct rgba' lvalue Var 0x7fedd7877918 'x' 'struct rgba':'struct rgba'
+    | `-ImplicitCastExpr 0x7fedd7877a10 <col:9> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fedd78779f0 <col:9> 'int' 0
+    |-BinaryOperator 0x7fedd7877b48 <line:21:3, col:9> 'unsigned char' '='
+    | |-MemberExpr 0x7fedd7877ad8 <col:3, col:5> 'unsigned char' lvalue .g 0x7fedd7877460
+    | | `-DeclRefExpr 0x7fedd7877ab0 <col:3> 'struct rgba':'struct rgba' lvalue Var 0x7fedd7877918 'x' 'struct rgba':'struct rgba'
+    | `-ImplicitCastExpr 0x7fedd7877b30 <col:9> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fedd7877b10 <col:9> 'int' 128
+    |-BinaryOperator 0x7fedd7877c08 <line:22:3, col:9> 'unsigned char' '='
+    | |-MemberExpr 0x7fedd7877b98 <col:3, col:5> 'unsigned char' lvalue .b 0x7fedd78774c0
+    | | `-DeclRefExpr 0x7fedd7877b70 <col:3> 'struct rgba':'struct rgba' lvalue Var 0x7fedd7877918 'x' 'struct rgba':'struct rgba'
+    | `-ImplicitCastExpr 0x7fedd7877bf0 <col:9> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fedd7877bd0 <col:9> 'int' 128
+    |-BinaryOperator 0x7fedd7877cc8 <line:23:3, col:9> 'unsigned char' '='
+    | |-MemberExpr 0x7fedd7877c58 <col:3, col:5> 'unsigned char' lvalue .a 0x7fedd7877520
+    | | `-DeclRefExpr 0x7fedd7877c30 <col:3> 'struct rgba':'struct rgba' lvalue Var 0x7fedd7877918 'x' 'struct rgba':'struct rgba'
+    | `-ImplicitCastExpr 0x7fedd7877cb0 <col:9> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fedd7877c90 <col:9> 'int' 26
+    `-CallExpr 0x7fedd7877db0 <line:25:3, col:7> 'void'
+      |-ImplicitCastExpr 0x7fedd7877d98 <col:3> 'void (*)(struct rgba)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fedd7877cf0 <col:3> 'void (struct rgba)' Function 0x7fedd78776c0 'g' 'void (struct rgba)'
+      `-ImplicitCastExpr 0x7fedd7877de0 <col:6> 'struct rgba':'struct rgba' <LValueToRValue>
+        `-DeclRefExpr 0x7fedd7877d18 <col:6> 'struct rgba':'struct rgba' lvalue Var 0x7fedd7877918 'x' 'struct rgba':'struct rgba'

@@ -1,0 +1,76 @@
+c_files/pr41182-1.c:4:11: warning: implicitly declaring library function 'strlen' with type 'unsigned long (const char *)' [-Wimplicit-function-declaration]
+  return (strlen ("on") < ((size_t) ((pe-&pr[2])>(strlen("on"))                
+          ^
+c_files/pr41182-1.c:4:11: note: include the header <string.h> or explicitly provide a declaration for 'strlen'
+1 warning generated.
+TranslationUnitDecl 0x7ffbbe8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffbbe826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffbbe826740 '__int128'
+|-TypedefDecl 0x7ffbbe826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffbbe826760 'unsigned __int128'
+|-TypedefDecl 0x7ffbbe826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffbbe826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffbbe826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffbbe826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffbbe826dc0 'char *'
+|   `-BuiltinType 0x7ffbbe826560 'char'
+|-TypedefDecl 0x7ffbbe8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffbbe827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffbbe826ee0 'struct __va_list_tag'
+|     `-Record 0x7ffbbe826e58 '__va_list_tag'
+|-TypedefDecl 0x7ffbbe827138 <c_files/pr41182-1.c:1:1, col:27> col:27 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7ffbbe826680 'unsigned long'
+|-FunctionDecl 0x7ffbbf025b58 <line:2:1, line:6:1> line:2:5 _lae_process_opts 'int (char *, char *)'
+| |-ParmVarDecl 0x7ffbbf025a00 <col:23, col:29> col:29 used pr 'char *'
+| |-ParmVarDecl 0x7ffbbf025a78 <col:33, col:39> col:39 used pe 'char *'
+| `-CompoundStmt 0x7ffbbf0268a0 <line:3:1, line:6:1>
+|   `-ReturnStmt 0x7ffbbf026888 <line:4:3, line:5:70>
+|     `-ParenExpr 0x7ffbbf026868 <line:4:10, line:5:70> 'int'
+|       `-BinaryOperator 0x7ffbbf026840 <line:4:11, line:5:69> 'int' '<'
+|         |-CallExpr 0x7ffbbf026220 <line:4:11, col:23> 'unsigned long'
+|         | |-ImplicitCastExpr 0x7ffbbf026208 <col:11> 'unsigned long (*)(const char *)' <FunctionToPointerDecay>
+|         | | `-DeclRefExpr 0x7ffbbf026130 <col:11> 'unsigned long (const char *)' Function 0x7ffbbf026030 'strlen' 'unsigned long (const char *)'
+|         | `-ImplicitCastExpr 0x7ffbbf026268 <col:19> 'const char *' <BitCast>
+|         |   `-ImplicitCastExpr 0x7ffbbf026250 <col:19> 'char *' <ArrayToPointerDecay>
+|         |     `-StringLiteral 0x7ffbbf026198 <col:19> 'char [3]' lvalue "on"
+|         `-ParenExpr 0x7ffbbf026820 <col:27, line:5:69> 'size_t':'unsigned long'
+|           `-CStyleCastExpr 0x7ffbbf0267f8 <line:4:28, line:5:68> 'size_t':'unsigned long' <NoOp>
+|             `-ParenExpr 0x7ffbbf0267d8 <line:4:37, line:5:68> 'unsigned long'
+|               `-ConditionalOperator 0x7ffbbf026768 <line:4:38, line:5:67> 'unsigned long'
+|                 |-BinaryOperator 0x7ffbbf0264f0 <line:4:38, col:63> 'int' '>'
+|                 | |-ImplicitCastExpr 0x7ffbbf0264d8 <col:38, col:48> 'unsigned long' <IntegralCast>
+|                 | | `-ParenExpr 0x7ffbbf0263b0 <col:38, col:48> 'long'
+|                 | |   `-BinaryOperator 0x7ffbbf026388 <col:39, col:47> 'long' '-'
+|                 | |     |-ImplicitCastExpr 0x7ffbbf026370 <col:39> 'char *' <LValueToRValue>
+|                 | |     | `-DeclRefExpr 0x7ffbbf0262a0 <col:39> 'char *' lvalue ParmVar 0x7ffbbf025a78 'pe' 'char *'
+|                 | |     `-UnaryOperator 0x7ffbbf026350 <col:42, col:47> 'char *' prefix '&'
+|                 | |       `-ArraySubscriptExpr 0x7ffbbf026328 <col:43, col:47> 'char' lvalue
+|                 | |         |-ImplicitCastExpr 0x7ffbbf026310 <col:43> 'char *' <LValueToRValue>
+|                 | |         | `-DeclRefExpr 0x7ffbbf0262c8 <col:43> 'char *' lvalue ParmVar 0x7ffbbf025a00 'pr' 'char *'
+|                 | |         `-IntegerLiteral 0x7ffbbf0262f0 <col:46> 'int' 2
+|                 | `-ParenExpr 0x7ffbbf0264b8 <col:50, col:63> 'unsigned long'
+|                 |   `-CallExpr 0x7ffbbf026458 <col:51, col:62> 'unsigned long'
+|                 |     |-ImplicitCastExpr 0x7ffbbf026440 <col:51> 'unsigned long (*)(const char *)' <FunctionToPointerDecay>
+|                 |     | `-DeclRefExpr 0x7ffbbf0263d0 <col:51> 'unsigned long (const char *)' Function 0x7ffbbf026030 'strlen' 'unsigned long (const char *)'
+|                 |     `-ImplicitCastExpr 0x7ffbbf0264a0 <col:58> 'const char *' <BitCast>
+|                 |       `-ImplicitCastExpr 0x7ffbbf026488 <col:58> 'char *' <ArrayToPointerDecay>
+|                 |         `-StringLiteral 0x7ffbbf0263f8 <col:58> 'char [3]' lvalue "on"
+|                 |-ImplicitCastExpr 0x7ffbbf026750 <line:5:40, col:50> 'unsigned long' <IntegralCast>
+|                 | `-ParenExpr 0x7ffbbf026628 <col:40, col:50> 'long'
+|                 |   `-BinaryOperator 0x7ffbbf026600 <col:41, col:49> 'long' '-'
+|                 |     |-ImplicitCastExpr 0x7ffbbf0265e8 <col:41> 'char *' <LValueToRValue>
+|                 |     | `-DeclRefExpr 0x7ffbbf026518 <col:41> 'char *' lvalue ParmVar 0x7ffbbf025a78 'pe' 'char *'
+|                 |     `-UnaryOperator 0x7ffbbf0265c8 <col:44, col:49> 'char *' prefix '&'
+|                 |       `-ArraySubscriptExpr 0x7ffbbf0265a0 <col:45, col:49> 'char' lvalue
+|                 |         |-ImplicitCastExpr 0x7ffbbf026588 <col:45> 'char *' <LValueToRValue>
+|                 |         | `-DeclRefExpr 0x7ffbbf026540 <col:45> 'char *' lvalue ParmVar 0x7ffbbf025a00 'pr' 'char *'
+|                 |         `-IntegerLiteral 0x7ffbbf026568 <col:48> 'int' 2
+|                 `-ParenExpr 0x7ffbbf026730 <col:54, col:67> 'unsigned long'
+|                   `-CallExpr 0x7ffbbf0266d0 <col:55, col:66> 'unsigned long'
+|                     |-ImplicitCastExpr 0x7ffbbf0266b8 <col:55> 'unsigned long (*)(const char *)' <FunctionToPointerDecay>
+|                     | `-DeclRefExpr 0x7ffbbf026648 <col:55> 'unsigned long (const char *)' Function 0x7ffbbf026030 'strlen' 'unsigned long (const char *)'
+|                     `-ImplicitCastExpr 0x7ffbbf026718 <col:62> 'const char *' <BitCast>
+|                       `-ImplicitCastExpr 0x7ffbbf026700 <col:62> 'char *' <ArrayToPointerDecay>
+|                         `-StringLiteral 0x7ffbbf026670 <col:62> 'char [3]' lvalue "on"
+`-FunctionDecl 0x7ffbbf026030 <line:4:11> col:11 implicit used strlen 'unsigned long (const char *)' extern
+  `-ParmVarDecl 0x7ffbbf0260c8 <<invalid sloc>> <invalid sloc> 'const char *'

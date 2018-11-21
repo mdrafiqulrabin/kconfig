@@ -1,0 +1,77 @@
+TranslationUnitDecl 0x7f81110264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8111026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8111026740 '__int128'
+|-TypedefDecl 0x7f8111026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8111026760 'unsigned __int128'
+|-TypedefDecl 0x7f8111026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8111026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8111026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8111026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8111026dc0 'char *'
+|   `-BuiltinType 0x7f8111026560 'char'
+|-TypedefDecl 0x7f81110270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8111027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8111026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8111026e58 '__va_list_tag'
+|-RecordDecl 0x7f8111027120 <c_files/pr19853.c:1:1, col:23> col:8 struct test definition
+| `-FieldDecl 0x7f8111825a18 <col:15, col:20> col:20 x 'int *'
+|-VarDecl 0x7f8111825ab0 <col:1, col:25> col:25 used global_test 'struct test':'struct test'
+|-VarDecl 0x7f8111825b80 <line:2:1, col:5> col:5 used global_int 'int'
+|-VarDecl 0x7f8111825bf8 <line:4:1, col:5> col:5 used flag 'int'
+|-FunctionDecl 0x7f8111825d30 <line:6:1, line:19:1> line:6:6 test 'void (char *)'
+| |-ParmVarDecl 0x7f8111825c70 <col:12, col:18> col:18 used dummy 'char *'
+| `-CompoundStmt 0x7f8111826810 <line:7:1, line:19:1>
+|   |-DeclStmt 0x7f8111825f28 <line:8:3, col:56>
+|   | `-VarDecl 0x7f8111825df0 <col:3, col:55> col:28 used const_test 'const struct test':'const struct test' static cinit
+|   |   `-InitListExpr 0x7f8111825ee0 <col:41, col:55> 'struct test':'struct test'
+|   |     `-UnaryOperator 0x7f8111825e78 <col:43, col:44> 'int *' prefix '&'
+|   |       `-DeclRefExpr 0x7f8111825e50 <col:44> 'int' lvalue Var 0x7f8111825b80 'global_int' 'int'
+|   |-DeclStmt 0x7f8111825fc0 <line:9:3, col:25>
+|   | `-VarDecl 0x7f8111825f60 <col:3, col:15> col:15 used local_test 'struct test':'struct test'
+|   |-DeclStmt 0x7f8111826050 <line:11:3, col:8>
+|   | `-VarDecl 0x7f8111825ff0 <col:3, col:7> col:7 used i 'int'
+|   |-ForStmt 0x7f8111826268 <line:12:3, line:13:14>
+|   | |-BinaryOperator 0x7f81118260b0 <line:12:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7f8111826068 <col:8> 'int' lvalue Var 0x7f8111825ff0 'i' 'int'
+|   | | `-IntegerLiteral 0x7f8111826090 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8111826138 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f8111826120 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f81118260d8 <col:15> 'int' lvalue Var 0x7f8111825ff0 'i' 'int'
+|   | | `-IntegerLiteral 0x7f8111826100 <col:19> 'int' 1
+|   | |-UnaryOperator 0x7f8111826188 <col:22, col:23> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f8111826160 <col:22> 'int' lvalue Var 0x7f8111825ff0 'i' 'int'
+|   | `-BinaryOperator 0x7f8111826240 <line:13:5, col:14> 'char' '='
+|   |   |-UnaryOperator 0x7f81118261e8 <col:5, col:6> 'char' lvalue prefix '*'
+|   |   | `-ImplicitCastExpr 0x7f81118261d0 <col:6> 'char *' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7f81118261a8 <col:6> 'char *' lvalue ParmVar 0x7f8111825c70 'dummy' 'char *'
+|   |   `-ImplicitCastExpr 0x7f8111826228 <col:14> 'char' <IntegralCast>
+|   |     `-IntegerLiteral 0x7f8111826208 <col:14> 'int' 0
+|   |-IfStmt 0x7f81118266b8 <line:14:3, line:15:35>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f81118262c8 <line:14:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f81118262a0 <col:7> 'int' lvalue Var 0x7f8111825bf8 'flag' 'int'
+|   | |-CallExpr 0x7f8111826630 <line:15:5, col:35> 'void *'
+|   | | |-ImplicitCastExpr 0x7f8111826618 <col:5> 'void *(*)(void *, int, unsigned long)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7f8111826540 <col:5> '<builtin fn type>' Function 0x7f8111826328 '__builtin_memset' 'void *(void *, int, unsigned long)'
+|   | | |-ImplicitCastExpr 0x7f8111826688 <col:23> 'void *' <BitCast>
+|   | | | `-ImplicitCastExpr 0x7f8111826670 <col:23> 'char *' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f8111826568 <col:23> 'char *' lvalue ParmVar 0x7f8111825c70 'dummy' 'char *'
+|   | | |-IntegerLiteral 0x7f8111826590 <col:30> 'int' 0
+|   | | `-ImplicitCastExpr 0x7f81118266a0 <col:33> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f81118265b0 <col:33> 'int' 16
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8111826758 <line:17:3, col:16> 'struct test':'struct test' '='
+|   | |-DeclRefExpr 0x7f81118266f0 <col:3> 'struct test':'struct test' lvalue Var 0x7f8111825f60 'local_test' 'struct test':'struct test'
+|   | `-ImplicitCastExpr 0x7f8111826740 <col:16> 'struct test':'struct test' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8111826718 <col:16> 'const struct test':'const struct test' lvalue Var 0x7f8111825df0 'const_test' 'const struct test':'const struct test'
+|   `-BinaryOperator 0x7f81118267e8 <line:18:3, col:17> 'struct test':'struct test' '='
+|     |-DeclRefExpr 0x7f8111826780 <col:3> 'struct test':'struct test' lvalue Var 0x7f8111825ab0 'global_test' 'struct test':'struct test'
+|     `-ImplicitCastExpr 0x7f81118267d0 <col:17> 'struct test':'struct test' <LValueToRValue>
+|       `-DeclRefExpr 0x7f81118267a8 <col:17> 'struct test':'struct test' lvalue Var 0x7f8111825f60 'local_test' 'struct test':'struct test'
+`-FunctionDecl 0x7f8111826328 <line:15:5> col:5 implicit used __builtin_memset 'void *(void *, int, unsigned long)' extern
+  |-ParmVarDecl 0x7f81118263c0 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7f8111826420 <<invalid sloc>> <invalid sloc> 'int'
+  |-ParmVarDecl 0x7f8111826480 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7f81118264f8 <col:5> Implicit

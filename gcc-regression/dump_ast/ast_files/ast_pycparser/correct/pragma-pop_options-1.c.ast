@@ -1,0 +1,6 @@
+FileAST: 
+  Pragma: push_options
+  Pragma: pop_options
+  Decl: foo, [], [], []
+    TypeDecl: foo, []
+      IdentifierType: ['int']

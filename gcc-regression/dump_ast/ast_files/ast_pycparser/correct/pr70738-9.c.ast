@@ -1,0 +1,69 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: cal, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: cal, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: sum, [], [], []
+        TypeDecl: sum, []
+          IdentifierType: ['int']
+        BinaryOp: +
+          ID: a
+          ID: b
+      Decl: sum1, [], [], []
+        TypeDecl: sum1, []
+          IdentifierType: ['int']
+        BinaryOp: *
+          ID: a
+          ID: b
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            BinaryOp: +
+              ID: a
+              ID: b
+            ID: sum
+          ID: sum1
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argc, [], [], []
+            TypeDecl: argc, []
+              IdentifierType: ['int']
+          Decl: argv, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: argv, []
+                  IdentifierType: ['char']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: ret, [], [], []
+        TypeDecl: ret, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: cal
+          ExprList: 
+            Constant: int, 1
+            Constant: int, 2
+      If: 
+        BinaryOp: !=
+          ID: ret
+          Constant: int, 8
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

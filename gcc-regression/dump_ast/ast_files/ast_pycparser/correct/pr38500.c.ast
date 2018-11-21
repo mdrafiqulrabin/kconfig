@@ -1,0 +1,182 @@
+FileAST: 
+  Typedef: U8, [], ['typedef']
+    TypeDecl: U8, []
+      IdentifierType: ['unsigned', 'char']
+  Decl: test1, [], ['extern'], []
+    TypeDecl: test1, []
+      IdentifierType: ['char']
+  Decl: Perl_screaminstr, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      PtrDecl: []
+        TypeDecl: Perl_screaminstr, []
+          IdentifierType: ['char']
+  Decl: Perl_utf8_distance, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['U8']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['U8']
+      TypeDecl: Perl_utf8_distance, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: Perl_re_intuit_start, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: minlen, [], [], []
+            TypeDecl: minlen, []
+              IdentifierType: ['int']
+          Decl: strend, [], [], []
+            PtrDecl: []
+              TypeDecl: strend, []
+                IdentifierType: ['char']
+          Decl: flags, [], [], []
+            TypeDecl: flags, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: Perl_re_intuit_start, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: start_shift, [], ['register'], []
+        TypeDecl: start_shift, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: end_shift, [], ['register'], []
+        TypeDecl: end_shift, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: s, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: s, []
+            IdentifierType: ['char']
+      Decl: strbeg, [], [], []
+        PtrDecl: []
+          TypeDecl: strbeg, []
+            IdentifierType: ['char']
+      Decl: t, [], [], []
+        PtrDecl: []
+          TypeDecl: t, []
+            IdentifierType: ['char']
+      If: 
+        BinaryOp: >
+          ID: i
+          Constant: int, 0
+        Goto: success_at_start
+      Decl: end, [], [], []
+        TypeDecl: end, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: eshift, [], [], []
+        TypeDecl: eshift, []
+          IdentifierType: ['int']
+        BinaryOp: -
+          TernaryOp: 
+            ID: test1
+            FuncCall: 
+              ID: Perl_utf8_distance
+              ExprList: 
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['U8']
+                  ID: strend
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['U8']
+                  ID: s
+            BinaryOp: -
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['U8']
+                ID: strend
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['U8']
+                ID: s
+          ID: end
+      If: 
+        BinaryOp: <
+          ID: end_shift
+          ID: eshift
+        Assignment: =
+          ID: end_shift
+          ID: eshift
+      Label: restart
+        Assignment: =
+          ID: s
+          FuncCall: 
+            ID: Perl_screaminstr
+            ExprList: 
+              BinaryOp: +
+                ID: start_shift
+                BinaryOp: -
+                  ID: s
+                  ID: strbeg
+              ID: end_shift
+              Constant: int, 0
+      While: 
+        BinaryOp: <
+          ID: t
+          BinaryOp: -
+            ID: strend
+            ID: minlen
+        Compound: 
+      Label: success_at_start
+        Assignment: =
+          ID: eshift
+          BinaryOp: -
+            TernaryOp: 
+              ID: test1
+              FuncCall: 
+                ID: Perl_utf8_distance
+                ExprList: 
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['U8']
+                    ID: strend
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['U8']
+                    ID: s
+              BinaryOp: -
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['U8']
+                  ID: strend
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['U8']
+                  ID: s
+            ID: end
+      Goto: restart

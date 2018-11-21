@@ -1,0 +1,100 @@
+FileAST: 
+  Decl: abort, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: d, [], [], []
+    ArrayDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['int']
+      Constant: int, 1024
+  Decl: e, [], [], []
+    ArrayDecl: []
+      TypeDecl: e, []
+        IdentifierType: ['int']
+      Constant: int, 1024
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 1024
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: s
+          BinaryOp: -
+            ArrayRef: 
+              ID: d
+              ID: i
+            ArrayRef: 
+              ID: e
+              ID: i
+      Return: 
+        ID: s
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 1024
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: d
+              ID: i
+            BinaryOp: *
+              ID: i
+              Constant: int, 2
+          Assignment: =
+            ArrayRef: 
+              ID: e
+              ID: i
+            ID: i
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+          BinaryOp: /
+            BinaryOp: *
+              Constant: int, 1023
+              Constant: int, 1024
+            Constant: int, 2
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

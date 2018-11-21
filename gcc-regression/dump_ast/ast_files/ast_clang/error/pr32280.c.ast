@@ -1,0 +1,43 @@
+c_files/pr32280.c:8:18: error: use of unknown builtin '__builtin_ia32_pslldqi128' [-Wimplicit-function-declaration]
+ return (__m128i)__builtin_ia32_pslldqi128 (__a, 8);
+                 ^
+c_files/pr32280.c:8:9: error: invalid conversion between vector type '__m128i' (vector of 2 'long long' values) and integer type 'int' of different size
+ return (__m128i)__builtin_ia32_pslldqi128 (__a, 8);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr32280.c:13:18: error: use of unknown builtin '__builtin_ia32_psrldqi128' [-Wimplicit-function-declaration]
+ return (__m128i)__builtin_ia32_psrldqi128 (__a, 8);
+                 ^
+c_files/pr32280.c:13:18: note: did you mean '__builtin_ia32_pslldqi128'?
+c_files/pr32280.c:8:18: note: '__builtin_ia32_pslldqi128' declared here
+ return (__m128i)__builtin_ia32_pslldqi128 (__a, 8);
+                 ^
+c_files/pr32280.c:13:9: error: invalid conversion between vector type '__m128i' (vector of 2 'long long' values) and integer type 'int' of different size
+ return (__m128i)__builtin_ia32_psrldqi128 (__a, 8);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4 errors generated.
+TranslationUnitDecl 0x7fa1f80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa1f8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa1f8026740 '__int128'
+|-TypedefDecl 0x7fa1f8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa1f8026760 'unsigned __int128'
+|-TypedefDecl 0x7fa1f8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa1f8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa1f8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa1f8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa1f8026dc0 'char *'
+|   `-BuiltinType 0x7fa1f8026560 'char'
+|-TypedefDecl 0x7fa1f80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa1f8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa1f8026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa1f8026e58 '__va_list_tag'
+|-TypedefDecl 0x7fa1f8027178 <c_files/pr32280.c:4:1, col:19> col:19 referenced __m128i '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-VectorType 0x7fa1f8027140 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+|   `-BuiltinType 0x7fa1f8026600 'long long'
+|-FunctionDecl 0x7fa1f8826b00 <line:6:1, line:9:1> line:6:9 foo1 '__m128i (__m128i)'
+| |-ParmVarDecl 0x7fa1f8826a00 <col:14, col:22> col:22 used __a '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fa1f88271b0 <line:7:1, line:9:1>
+|-FunctionDecl 0x7fa1f8826c50 <<invalid sloc>> line:8:18 implicit used __builtin_ia32_pslldqi128 'int ()'
+|-FunctionDecl 0x7fa1f8827260 <line:11:1, line:14:1> line:11:9 foo2 '__m128i (__m128i)'
+| |-ParmVarDecl 0x7fa1f88271d8 <col:14, col:22> col:22 used __a '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fa1f88274a8 <line:12:1, line:14:1>
+`-FunctionDecl 0x7fa1f8827328 <<invalid sloc>> line:13:18 implicit used __builtin_ia32_psrldqi128 'int ()'

@@ -1,0 +1,70 @@
+FileAST: 
+  FuncDef: 
+    Decl: mach_parse_compressed, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ptr, [], [], []
+            PtrDecl: []
+              TypeDecl: ptr, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: val, [], [], []
+            PtrDecl: []
+              TypeDecl: val, []
+                IdentifierType: ['unsigned', 'long', 'int']
+        TypeDecl: mach_parse_compressed, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: <
+          ArrayRef: 
+            ID: ptr
+            Constant: int, 0
+          Constant: int, 0xC0U
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              ID: val
+            BinaryOp: +
+              ArrayRef: 
+                ID: ptr
+                Constant: int, 0
+              ArrayRef: 
+                ID: ptr
+                Constant: int, 1
+          Return: 
+      Assignment: =
+        UnaryOp: *
+          ID: val
+        BinaryOp: |
+          BinaryOp: |
+            BinaryOp: |
+              BinaryOp: <<
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned', 'long', 'int']
+                  ArrayRef: 
+                    ID: ptr
+                    Constant: int, 0
+                Constant: int, 24
+              BinaryOp: <<
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned', 'long', 'int']
+                  ArrayRef: 
+                    ID: ptr
+                    Constant: int, 1
+                Constant: int, 16
+            BinaryOp: <<
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'long', 'int']
+                ArrayRef: 
+                  ID: ptr
+                  Constant: int, 2
+              Constant: int, 8
+          ArrayRef: 
+            ID: ptr
+            Constant: int, 3

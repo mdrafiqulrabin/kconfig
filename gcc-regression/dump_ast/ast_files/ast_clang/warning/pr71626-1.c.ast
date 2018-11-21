@@ -1,0 +1,60 @@
+c_files/pr71626-1.c:5:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone)) V
+                         ^
+1 warning generated.
+TranslationUnitDecl 0x7fa99a825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa99a826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa99a825d40 '__int128'
+|-TypedefDecl 0x7fa99a826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa99a825d60 'unsigned __int128'
+|-TypedefDecl 0x7fa99a826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa99a826170 'struct __NSConstantString_tag'
+|   `-Record 0x7fa99a8260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa99a826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa99a8263c0 'char *'
+|   `-BuiltinType 0x7fa99a825b60 'char'
+|-TypedefDecl 0x7fa99a8266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa99a826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa99a8264e0 'struct __va_list_tag'
+|     `-Record 0x7fa99a826458 '__va_list_tag'
+|-TypedefDecl 0x7fa99a826798 <c_files/pr71626-1.c:3:1, col:25> col:25 referenced V '__attribute__((__vector_size__(1 * sizeof(long)))) long'
+| `-VectorType 0x7fa99a826760 '__attribute__((__vector_size__(1 * sizeof(long)))) long' 1
+|   `-BuiltinType 0x7fa99a825be0 'long'
+|-FunctionDecl 0x7fa99b027a98 <line:5:1, line:10:1> line:6:1 used foo 'V ()'
+| |-CompoundStmt 0x7fa99b027e08 <line:7:1, line:10:1>
+| | |-DeclStmt 0x7fa99b027d98 <line:8:3, col:34>
+| | | `-VarDecl 0x7fa99b027bc8 <col:3, col:33> col:5 used v 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long' cinit
+| | |   `-InitListExpr 0x7fa99b027d50 <col:9, col:33> 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long'
+| | |     `-CStyleCastExpr 0x7fa99b027ce0 <col:11, col:29> 'long' <PointerToIntegral>
+| | |       `-ImplicitCastExpr 0x7fa99b027cc8 <col:29> 'V (*)()' <FunctionToPointerDecay>
+| | |         `-DeclRefExpr 0x7fa99b027c28 <col:29> 'V ()' Function 0x7fa99b027a98 'foo' 'V ()'
+| | `-ReturnStmt 0x7fa99b027df0 <line:9:3, col:10>
+| |   `-ImplicitCastExpr 0x7fa99b027dd8 <col:10> 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fa99b027db0 <col:10> 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long' lvalue Var 0x7fa99b027bc8 'v' 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long'
+| `-NoInlineAttr 0x7fa99b027b30 <line:5:16>
+|-FunctionDecl 0x7fa99b027e80 <line:12:1, line:19:1> line:13:1 main 'int ()'
+| `-CompoundStmt 0x7fa99b028358 <line:14:1, line:19:1>
+|   |-DeclStmt 0x7fa99b027ff0 <line:15:3, col:15>
+|   | `-VarDecl 0x7fa99b027f28 <col:3, col:14> col:5 used v 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long' cinit
+|   |   `-CallExpr 0x7fa99b027fc8 <col:9, col:14> 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long'
+|   |     `-ImplicitCastExpr 0x7fa99b027fb0 <col:9> 'V (*)()' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fa99b027f88 <col:9> 'V ()' Function 0x7fa99b027a98 'foo' 'V ()'
+|   |-IfStmt 0x7fa99b0282e8 <line:16:3, line:17:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa99b028110 <line:16:7, col:33> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fa99b0280f8 <col:7, col:10> 'long' <LValueToRValue>
+|   | | | `-ArraySubscriptExpr 0x7fa99b028050 <col:7, col:10> 'long' lvalue vectorcomponent
+|   | | |   |-DeclRefExpr 0x7fa99b028008 <col:7> 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long' lvalue Var 0x7fa99b027f28 'v' 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long'
+|   | | |   `-IntegerLiteral 0x7fa99b028030 <col:9> 'int' 0
+|   | | `-CStyleCastExpr 0x7fa99b0280d0 <col:15, col:33> 'long' <PointerToIntegral>
+|   | |   `-ImplicitCastExpr 0x7fa99b0280b8 <col:33> 'V (*)()' <FunctionToPointerDecay>
+|   | |     `-DeclRefExpr 0x7fa99b028078 <col:33> 'V ()' Function 0x7fa99b027a98 'foo' 'V ()'
+|   | |-CallExpr 0x7fa99b0282c0 <line:17:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fa99b0282a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fa99b028250 <col:5> '<builtin fn type>' Function 0x7fa99b028170 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fa99b028340 <line:18:3, col:10>
+|     `-IntegerLiteral 0x7fa99b028320 <col:10> 'int' 0
+`-FunctionDecl 0x7fa99b028170 <line:17:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fa99b028208 <col:5> Implicit

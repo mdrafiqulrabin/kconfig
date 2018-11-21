@@ -1,0 +1,20 @@
+FileAST: 
+  Pragma: GCC push_options
+  Pragma: GCC optimize ("-fno-stack-protector")
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 0
+  Pragma: GCC pop_options
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo

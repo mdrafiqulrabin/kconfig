@@ -1,0 +1,52 @@
+TranslationUnitDecl 0x7fc7d00264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc7d0026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc7d0026740 '__int128'
+|-TypedefDecl 0x7fc7d0026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc7d0026760 'unsigned __int128'
+|-TypedefDecl 0x7fc7d0026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc7d0026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc7d0026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc7d0026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc7d0026dc0 'char *'
+|   `-BuiltinType 0x7fc7d0026560 'char'
+|-TypedefDecl 0x7fc7d00270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc7d0027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc7d0026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc7d0026e58 '__va_list_tag'
+|-RecordDecl 0x7fc7d0027120 <c_files/pr23401.c:4:1, line:9:1> line:4:8 struct f definition
+| |-RecordDecl 0x7fc7d0825a00 <line:6:3, line:8:3> line:6:3 struct definition
+| | `-FieldDecl 0x7fc7d0825ac8 <line:7:7, col:11> col:11 referenced i 'int'
+| `-FieldDecl 0x7fc7d0825c58 <line:6:3, line:8:10> col:5 referenced ff 'struct (anonymous struct at c_files/pr23401.c:6:3) [10]'
+|-VarDecl 0x7fc7d0825cf0 <line:11:1, col:10> col:10 used g 'struct f':'struct f'
+`-FunctionDecl 0x7fc7d0825e78 <line:12:1, line:18:1> line:12:5 ffff 'int (int)'
+  |-ParmVarDecl 0x7fc7d0825da8 <col:10, col:14> col:14 used i 'int'
+  `-CompoundStmt 0x7fc7d0826468 <line:13:1, line:18:1>
+    |-DeclStmt 0x7fc7d0825fb0 <line:14:3, col:13>
+    | `-VarDecl 0x7fc7d0825f30 <col:3, col:12> col:7 used t1 'int' cinit
+    |   `-IntegerLiteral 0x7fc7d0825f90 <col:12> 'int' 0
+    |-DeclStmt 0x7fc7d08261d0 <line:15:3, col:22>
+    | `-VarDecl 0x7fc7d0825fe0 <col:3, col:21> col:7 used i1 'int' cinit
+    |   `-ImplicitCastExpr 0x7fc7d08261b8 <col:12, col:21> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7fc7d0826180 <col:12, col:21> 'int' lvalue .i 0x7fc7d0825ac8
+    |       `-ArraySubscriptExpr 0x7fc7d0826158 <col:12, col:19> 'struct (anonymous struct at c_files/pr23401.c:6:3)':'struct f::(anonymous at c_files/pr23401.c:6:3)' lvalue
+    |         |-ImplicitCastExpr 0x7fc7d0826128 <col:12, col:14> 'struct (anonymous struct at c_files/pr23401.c:6:3) *' <ArrayToPointerDecay>
+    |         | `-MemberExpr 0x7fc7d0826068 <col:12, col:14> 'struct (anonymous struct at c_files/pr23401.c:6:3) [10]' lvalue .ff 0x7fc7d0825c58
+    |         |   `-DeclRefExpr 0x7fc7d0826040 <col:12> 'struct f':'struct f' lvalue Var 0x7fc7d0825cf0 'g' 'struct f':'struct f'
+    |         `-ImplicitCastExpr 0x7fc7d0826140 <col:17> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fc7d08260a0 <col:17> 'int' lvalue Var 0x7fc7d0825f30 't1' 'int'
+    |-DeclStmt 0x7fc7d0826390 <line:16:3, col:21>
+    | `-VarDecl 0x7fc7d0826200 <col:3, col:20> col:7 used i2 'int' cinit
+    |   `-ImplicitCastExpr 0x7fc7d0826378 <col:12, col:20> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7fc7d0826340 <col:12, col:20> 'int' lvalue .i 0x7fc7d0825ac8
+    |       `-ArraySubscriptExpr 0x7fc7d0826318 <col:12, col:18> 'struct (anonymous struct at c_files/pr23401.c:6:3)':'struct f::(anonymous at c_files/pr23401.c:6:3)' lvalue
+    |         |-ImplicitCastExpr 0x7fc7d08262e8 <col:12, col:14> 'struct (anonymous struct at c_files/pr23401.c:6:3) *' <ArrayToPointerDecay>
+    |         | `-MemberExpr 0x7fc7d0826288 <col:12, col:14> 'struct (anonymous struct at c_files/pr23401.c:6:3) [10]' lvalue .ff 0x7fc7d0825c58
+    |         |   `-DeclRefExpr 0x7fc7d0826260 <col:12> 'struct f':'struct f' lvalue Var 0x7fc7d0825cf0 'g' 'struct f':'struct f'
+    |         `-ImplicitCastExpr 0x7fc7d0826300 <col:17> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fc7d08262c0 <col:17> 'int' lvalue ParmVar 0x7fc7d0825da8 'i' 'int'
+    `-ReturnStmt 0x7fc7d0826450 <line:17:3, col:15>
+      `-BinaryOperator 0x7fc7d0826428 <col:10, col:15> 'int' '+'
+        |-ImplicitCastExpr 0x7fc7d08263f8 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fc7d08263a8 <col:10> 'int' lvalue Var 0x7fc7d0825fe0 'i1' 'int'
+        `-ImplicitCastExpr 0x7fc7d0826410 <col:15> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fc7d08263d0 <col:15> 'int' lvalue Var 0x7fc7d0826200 'i2' 'int'

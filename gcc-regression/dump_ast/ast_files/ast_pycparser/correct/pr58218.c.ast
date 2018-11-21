@@ -1,0 +1,12 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Struct: None
+        Decl: x, [], [], []
+          ArrayDecl: []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+            Constant: int, 16385
+    InitList: 
+      InitList: 
+        Constant: float, 0.f

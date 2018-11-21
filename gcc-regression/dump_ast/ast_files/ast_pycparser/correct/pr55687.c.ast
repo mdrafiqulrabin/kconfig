@@ -1,0 +1,125 @@
+FileAST: 
+  Typedef: FILE, [], ['typedef']
+    TypeDecl: FILE, []
+      Struct: _IO_FILE
+  Typedef: gshort, [], ['typedef']
+    TypeDecl: gshort, []
+      IdentifierType: ['short']
+  Typedef: GString, [], ['typedef']
+    TypeDecl: GString, []
+      Struct: _GString
+  Decl: fgets, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['FILE']
+      PtrDecl: []
+        TypeDecl: fgets, []
+          IdentifierType: ['char']
+  Decl: g_string_append_c_inline, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['GString']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['char']
+      TypeDecl: g_string_append_c_inline, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: verbose_text_loop, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: data, [], [], []
+            PtrDecl: []
+              TypeDecl: data, []
+                IdentifierType: ['void']
+        TypeDecl: verbose_text_loop, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: dev_vcs, [], [], []
+        PtrDecl: []
+          TypeDecl: dev_vcs, []
+            IdentifierType: ['FILE']
+      Decl: buf, [], [], []
+        ArrayDecl: []
+          TypeDecl: buf, []
+            IdentifierType: ['char']
+          Constant: int, 81
+      Decl: buf_str, [], [], []
+        PtrDecl: []
+          TypeDecl: buf_str, []
+            IdentifierType: ['GString']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['gshort']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['gshort']
+      While: 
+        Constant: int, 1
+        Compound: 
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 1
+            BinaryOp: <=
+              ID: i
+              Constant: int, 7
+            UnaryOp: p++
+              ID: i
+            Compound: 
+              While: 
+                FuncCall: 
+                  ID: fgets
+                  ExprList: 
+                    ID: buf
+                    Constant: int, 81
+                    ID: dev_vcs
+                Compound: 
+                  For: 
+                    Assignment: =
+                      ID: j
+                      Constant: int, 0
+                    BinaryOp: <
+                      ID: j
+                      FuncCall: 
+                        ID: __builtin_strlen
+                        ExprList: 
+                          ID: buf
+                    UnaryOp: p++
+                      ID: j
+                    If: 
+                      BinaryOp: !=
+                        ArrayRef: 
+                          ID: buf
+                          ID: j
+                        Constant: char, ' '
+                      Break: 
+                  For: 
+                    BinaryOp: <
+                      ID: j
+                      FuncCall: 
+                        ID: __builtin_strlen
+                        ExprList: 
+                          ID: buf
+                    UnaryOp: p++
+                      ID: j
+                    FuncCall: 
+                      ID: g_string_append_c_inline
+                      ExprList: 
+                        ID: buf_str
+                        ArrayRef: 
+                          ID: buf
+                          ID: j

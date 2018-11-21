@@ -1,0 +1,22 @@
+FileAST: 
+  FuncDef: 
+    Decl: bb_getopt_ulflags, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['char']
+        TypeDecl: bb_getopt_ulflags, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        If: 
+          ArrayRef: 
+            ID: s
+            Constant: int, 1
+          DoWhile: 
+            UnaryOp: *
+              ID: s
+            UnaryOp: p++
+              ID: s

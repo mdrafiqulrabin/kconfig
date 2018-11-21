@@ -1,0 +1,35 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Pragma: acc parallel loop tile (2, 3)
+      For: 
+        DeclList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['short']
+            Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        UnaryOp: ++
+          ID: i
+        For: 
+          DeclList: 
+            Decl: j, [], [], []
+              TypeDecl: j, []
+                IdentifierType: ['short']
+              Constant: int, 0
+          BinaryOp: <
+            ID: j
+            Constant: int, 10
+          UnaryOp: ++
+            ID: j
+          EmptyStatement: 

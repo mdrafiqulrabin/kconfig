@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fa3800210d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa380021620 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa380021340 '__int128'
+|-TypedefDecl 0x7fa380021690 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa380021360 'unsigned __int128'
+|-TypedefDecl 0x7fa380021968 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa380021770 'struct __NSConstantString_tag'
+|   `-Record 0x7fa3800216e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa380021a00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa3800219c0 'char *'
+|   `-BuiltinType 0x7fa380021160 'char'
+|-TypedefDecl 0x7fa380021cc8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa380021c70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa380021ae0 'struct __va_list_tag'
+|     `-Record 0x7fa380021a58 '__va_list_tag'
+|-RecordDecl 0x7fa380021d20 <c_files/pr78967-1.c:7:1, line:12:1> line:7:8 struct S1 definition
+| |-FieldDecl 0x7fa381028600 <line:9:3, col:17> col:17 pad1 'unsigned char'
+| |-FieldDecl 0x7fa381028660 <line:10:3, col:17> col:17 referenced val 'unsigned char'
+| `-FieldDecl 0x7fa3810286c0 <line:11:3, col:18> col:18 pad2 'unsigned short'
+`-FunctionDecl 0x7fa381028900 <line:14:1, line:19:1> line:14:11 foo 'struct S1 (struct S1, struct S1)'
+  |-ParmVarDecl 0x7fa381028760 <col:16, col:26> col:26 used a 'struct S1':'struct S1'
+  |-ParmVarDecl 0x7fa3810287e0 <col:29, col:39> col:39 used b 'struct S1':'struct S1'
+  `-CompoundStmt 0x7fa381028b98 <line:15:1, line:19:1>
+    |-BinaryOperator 0x7fa381028ac0 <line:16:3, col:13> 'unsigned char' '='
+    | |-MemberExpr 0x7fa381028a10 <col:3, col:5> 'unsigned char' lvalue .val 0x7fa381028660
+    | | `-DeclRefExpr 0x7fa3810289e8 <col:3> 'struct S1':'struct S1' lvalue ParmVar 0x7fa381028760 'a' 'struct S1':'struct S1'
+    | `-ImplicitCastExpr 0x7fa381028aa8 <col:11, col:13> 'unsigned char' <LValueToRValue>
+    |   `-MemberExpr 0x7fa381028a70 <col:11, col:13> 'unsigned char' lvalue .val 0x7fa381028660
+    |     `-DeclRefExpr 0x7fa381028a48 <col:11> 'struct S1':'struct S1' lvalue ParmVar 0x7fa3810287e0 'b' 'struct S1':'struct S1'
+    `-ReturnStmt 0x7fa381028b80 <line:18:3, col:10>
+      `-ImplicitCastExpr 0x7fa381028b68 <col:10> 'struct S1':'struct S1' <LValueToRValue>
+        `-DeclRefExpr 0x7fa381028b40 <col:10> 'struct S1':'struct S1' lvalue ParmVar 0x7fa381028760 'a' 'struct S1':'struct S1'

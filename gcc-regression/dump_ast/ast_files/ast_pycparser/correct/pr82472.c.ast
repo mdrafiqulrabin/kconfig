@@ -1,0 +1,88 @@
+FileAST: 
+  Decl: xj, [], [], []
+    TypeDecl: xj, []
+      IdentifierType: ['long', 'int']
+  FuncDef: 
+    Decl: cx, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ox, [], [], []
+            PtrDecl: []
+              TypeDecl: ox, []
+                IdentifierType: ['long', 'int']
+          Decl: mk, [], [], []
+            TypeDecl: mk, []
+              IdentifierType: ['short', 'int']
+          Decl: tf, [], [], []
+            TypeDecl: tf, []
+              IdentifierType: ['char']
+        TypeDecl: cx, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: si, [], [], []
+        TypeDecl: si, []
+          IdentifierType: ['int']
+      Decl: f9, [], [], []
+        TypeDecl: f9, []
+          IdentifierType: ['int']
+      Decl: p4, [], [], []
+        PtrDecl: []
+          TypeDecl: p4, []
+            IdentifierType: ['char']
+        UnaryOp: &
+          ID: tf
+      Decl: rm, [], [], []
+        PtrDecl: []
+          TypeDecl: rm, []
+            IdentifierType: ['short', 'int']
+        TernaryOp: 
+          BinaryOp: !=
+            ID: tf
+            Constant: int, 0
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['short', 'int']
+            UnaryOp: &
+              ID: f9
+          UnaryOp: &
+            ID: mk
+      For: 
+        Assignment: =
+          ID: f9
+          Constant: int, 0
+        BinaryOp: <
+          ID: f9
+          Constant: int, 2
+        UnaryOp: ++
+          ID: f9
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              ID: rm
+            Constant: int, 0
+          Assignment: =
+            UnaryOp: *
+              ID: p4
+            UnaryOp: *
+              ID: ox
+          Assignment: =
+            ID: si
+            ID: mk
+          Assignment: =
+            ID: xj
+            Constant: int, 0
+          While: 
+            BinaryOp: <
+              ID: p4
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['char']
+                ID: rm
+            UnaryOp: ++
+              ID: p4
+      Return: 
+        ID: si

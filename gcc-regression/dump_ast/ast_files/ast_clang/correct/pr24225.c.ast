@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7f9acc8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9acc826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9acc826740 '__int128'
+|-TypedefDecl 0x7f9acc826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9acc826760 'unsigned __int128'
+|-TypedefDecl 0x7f9acc826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9acc826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9acc826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9acc826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9acc826dc0 'char *'
+|   `-BuiltinType 0x7f9acc826560 'char'
+|-TypedefDecl 0x7f9acc8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9acc827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9acc826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9acc826e58 '__va_list_tag'
+`-FunctionDecl 0x7f9acd025ad8 <c_files/pr24225.c:7:1, line:16:1> line:8:1 foo 'int (int, int)'
+  |-ParmVarDecl 0x7f9acc827138 <col:6, col:10> col:10 used a 'int'
+  |-ParmVarDecl 0x7f9acd025a00 <col:13, col:17> col:17 used b 'int'
+  `-CompoundStmt 0x7f9acd025de8 <line:9:1, line:16:1>
+    |-IfStmt 0x7f9acd025c38 <line:10:3, line:11:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f9acd025be8 <line:10:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f9acd025bc0 <col:7> 'int' lvalue ParmVar 0x7f9acc827138 'a' 'int'
+    | |-ReturnStmt 0x7f9acd025c20 <line:11:5, col:12>
+    | | `-IntegerLiteral 0x7f9acd025c00 <col:12> 'int' 1
+    | `-<<<NULL>>>
+    `-CompoundStmt 0x7f9acd025dc0 <line:12:3, line:15:3>
+      |-DeclStmt 0x7f9acd025d70 <line:13:5, col:14>
+      | `-VarDecl 0x7f9acd025d10 <col:5, col:13> col:9 s 'int [b]'
+      `-ReturnStmt 0x7f9acd025da8 <line:14:5, col:12>
+        `-IntegerLiteral 0x7f9acd025d88 <col:12> 'int' 0

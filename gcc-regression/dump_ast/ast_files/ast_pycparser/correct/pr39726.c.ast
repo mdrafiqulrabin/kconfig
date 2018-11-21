@@ -1,0 +1,224 @@
+FileAST: 
+  Decl: v, [], [], []
+    TypeDecl: v, []
+      IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: a0bs, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: a0bs, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: -
+            ID: u
+            ID: w
+          Constant: int, 0x80
+        Assignment: =
+          ID: v
+          Constant: int, 1
+  FuncDef: 
+    Decl: a1bs, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: a1bs, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: +
+            ID: u
+            ID: w
+          Constant: int, 0x80
+        Assignment: =
+          ID: v
+          Constant: int, 1
+  FuncDef: 
+    Decl: a0b, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: a0b, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: -
+            ID: u
+            ID: w
+          Constant: int, 0x22
+        Assignment: =
+          ID: v
+          Constant: int, 1
+  FuncDef: 
+    Decl: a1b, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: a1b, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: +
+            ID: u
+            ID: w
+          Constant: int, 0x22
+        Assignment: =
+          ID: v
+          Constant: int, 1
+  FuncDef: 
+    Decl: a0ws, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: a0ws, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: -
+            ID: u
+            ID: w
+          Constant: int, 0x8000
+        Assignment: =
+          ID: v
+          Constant: int, 1
+  FuncDef: 
+    Decl: a1ws, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: a1ws, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: +
+            ID: u
+            ID: w
+          Constant: int, 0x8000
+        Assignment: =
+          ID: v
+          Constant: int, 1
+  FuncDef: 
+    Decl: a0wbs, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: a0wbs, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: -
+            ID: u
+            ID: w
+          Constant: int, 0x80
+        Assignment: =
+          ID: v
+          Constant: int, 1
+  FuncDef: 
+    Decl: a1wbs, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: a1wbs, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: +
+            ID: u
+            ID: w
+          Constant: int, 0x80
+        Assignment: =
+          ID: v
+          Constant: int, 1
+  FuncDef: 
+    Decl: a0w, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: a0w, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: -
+            ID: u
+            ID: w
+          Constant: int, 0x8421
+        Assignment: =
+          ID: v
+          Constant: int, 1
+  FuncDef: 
+    Decl: a1w, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: a1w, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: +
+            ID: u
+            ID: w
+          Constant: int, 0x8421
+        Assignment: =
+          ID: v
+          Constant: int, 1

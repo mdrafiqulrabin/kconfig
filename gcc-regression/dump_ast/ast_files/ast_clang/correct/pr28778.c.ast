@@ -1,0 +1,87 @@
+TranslationUnitDecl 0x7ffb5a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffb5a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffb5a026740 '__int128'
+|-TypedefDecl 0x7ffb5a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffb5a026760 'unsigned __int128'
+|-TypedefDecl 0x7ffb5a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffb5a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffb5a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffb5a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffb5a026dc0 'char *'
+|   `-BuiltinType 0x7ffb5a026560 'char'
+|-TypedefDecl 0x7ffb5a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffb5a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffb5a026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffb5a026e58 '__va_list_tag'
+|-FunctionDecl 0x7ffb5a825a30 <c_files/pr28778.c:1:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ffb5a825ac8 prev 0x7ffb5a825a30 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-TypedefDecl 0x7ffb5a825b78 <line:2:1, col:14> col:14 referenced GLint 'long'
+| `-BuiltinType 0x7ffb5a0265e0 'long'
+|-FunctionDecl 0x7ffb5a825d60 <line:3:1, col:41> col:6 used aglChoosePixelFormat 'void (const GLint *)'
+| `-ParmVarDecl 0x7ffb5a825c58 <col:28, col:40> col:41 'const GLint *'
+|-FunctionDecl 0x7ffb5a825f20 <line:5:1, line:18:1> line:6:1 used find 'void (const int *)'
+| |-ParmVarDecl 0x7ffb5a825e58 <col:7, col:18> col:18 used alistp 'const int *'
+| `-CompoundStmt 0x7ffb5a8265f8 <line:7:1, line:18:1>
+|   |-DeclStmt 0x7ffb5a826038 <line:8:3, col:19>
+|   | `-VarDecl 0x7ffb5a825fd8 <col:3, col:14> col:14 used blist 'const int *'
+|   |-DeclStmt 0x7ffb5a826130 <line:9:3, col:15>
+|   | `-VarDecl 0x7ffb5a8260d0 <col:3, col:14> col:7 used list 'int [32]'
+|   |-IfStmt 0x7ffb5a8263e0 <line:10:3, line:16:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7ffb5a826170 <line:10:7> 'const int *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7ffb5a826148 <col:7> 'const int *' lvalue ParmVar 0x7ffb5a825e58 'alistp' 'const int *'
+|   | |-BinaryOperator 0x7ffb5a8261f0 <line:11:5, col:13> 'const int *' '='
+|   | | |-DeclRefExpr 0x7ffb5a826188 <col:5> 'const int *' lvalue Var 0x7ffb5a825fd8 'blist' 'const int *'
+|   | | `-ImplicitCastExpr 0x7ffb5a8261d8 <col:13> 'const int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7ffb5a8261b0 <col:13> 'const int *' lvalue ParmVar 0x7ffb5a825e58 'alistp' 'const int *'
+|   | `-CompoundStmt 0x7ffb5a8263b8 <line:13:5, line:16:5>
+|   |   |-BinaryOperator 0x7ffb5a8262e8 <line:14:7, col:17> 'int' '='
+|   |   | |-ArraySubscriptExpr 0x7ffb5a8262a0 <col:7, col:13> 'int' lvalue
+|   |   | | |-ImplicitCastExpr 0x7ffb5a826288 <col:7> 'int *' <ArrayToPointerDecay>
+|   |   | | | `-DeclRefExpr 0x7ffb5a826218 <col:7> 'int [32]' lvalue Var 0x7ffb5a8260d0 'list' 'int [32]'
+|   |   | | `-IntegerLiteral 0x7ffb5a826240 <col:12> 'int' 3
+|   |   | `-IntegerLiteral 0x7ffb5a8262c8 <col:17> 'int' 42
+|   |   `-BinaryOperator 0x7ffb5a826390 <line:15:7, col:15> 'const int *' '='
+|   |     |-DeclRefExpr 0x7ffb5a826310 <col:7> 'const int *' lvalue Var 0x7ffb5a825fd8 'blist' 'const int *'
+|   |     `-ImplicitCastExpr 0x7ffb5a826378 <col:15> 'const int *' <BitCast>
+|   |       `-ImplicitCastExpr 0x7ffb5a826360 <col:15> 'int *' <ArrayToPointerDecay>
+|   |         `-DeclRefExpr 0x7ffb5a826338 <col:15> 'int [32]' lvalue Var 0x7ffb5a8260d0 'list' 'int [32]'
+|   `-CallExpr 0x7ffb5a8265b0 <line:17:3, col:40> 'void'
+|     |-ImplicitCastExpr 0x7ffb5a826598 <col:3> 'void (*)(const GLint *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7ffb5a826418 <col:3> 'void (const GLint *)' Function 0x7ffb5a825d60 'aglChoosePixelFormat' 'void (const GLint *)'
+|     `-ImplicitCastExpr 0x7ffb5a8265e0 <col:25, col:35> 'const GLint *' <BitCast>
+|       `-CStyleCastExpr 0x7ffb5a826518 <col:25, col:35> 'GLint *' <BitCast>
+|         `-ImplicitCastExpr 0x7ffb5a8264d8 <col:35> 'const int *' <LValueToRValue>
+|           `-DeclRefExpr 0x7ffb5a826440 <col:35> 'const int *' lvalue Var 0x7ffb5a825fd8 'blist' 'const int *'
+|-FunctionDecl 0x7ffb5a8266c8 prev 0x7ffb5a825d60 <line:20:1, line:26:1> line:21:1 used aglChoosePixelFormat 'void (const GLint *)'
+| |-ParmVarDecl 0x7ffb5a826640 <col:23, col:37> col:37 used a 'const GLint *'
+| `-CompoundStmt 0x7ffb5a827a38 <line:22:1, line:26:1>
+|   |-DeclStmt 0x7ffb5a826860 <line:23:3, col:21>
+|   | `-VarDecl 0x7ffb5a826780 <col:3, col:20> col:8 used b 'int *' cinit
+|   |   `-CStyleCastExpr 0x7ffb5a826838 <col:12, col:20> 'int *' <BitCast>
+|   |     `-ImplicitCastExpr 0x7ffb5a826820 <col:20> 'const GLint *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ffb5a8267e0 <col:20> 'const GLint *' lvalue ParmVar 0x7ffb5a826640 'a' 'const GLint *'
+|   `-IfStmt 0x7ffb5a827a00 <line:24:3, line:25:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ffb5a826938 <line:24:7, col:15> 'int' '!='
+|     | |-ImplicitCastExpr 0x7ffb5a826920 <col:7, col:10> 'int' <LValueToRValue>
+|     | | `-ArraySubscriptExpr 0x7ffb5a8268d8 <col:7, col:10> 'int' lvalue
+|     | |   |-ImplicitCastExpr 0x7ffb5a8268c0 <col:7> 'int *' <LValueToRValue>
+|     | |   | `-DeclRefExpr 0x7ffb5a826878 <col:7> 'int *' lvalue Var 0x7ffb5a826780 'b' 'int *'
+|     | |   `-IntegerLiteral 0x7ffb5a8268a0 <col:9> 'int' 3
+|     | `-IntegerLiteral 0x7ffb5a826900 <col:15> 'int' 42
+|     |-CallExpr 0x7ffb5a8269d0 <line:25:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7ffb5a8269b8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7ffb5a826960 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ffb5a825ac8 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7ffb5a827b28 <line:28:1, line:33:1> line:29:1 main 'int (void)'
+  `-CompoundStmt 0x7ffb5a827cf0 <line:30:1, line:33:1>
+    |-CallExpr 0x7ffb5a827c70 <line:31:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7ffb5a827c58 <col:3> 'void (*)(const int *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ffb5a827be8 <col:3> 'void (const int *)' Function 0x7ffb5a825f20 'find' 'void (const int *)'
+    | `-ImplicitCastExpr 0x7ffb5a827ca0 <col:9> 'const int *' <NullToPointer>
+    |   `-IntegerLiteral 0x7ffb5a827c10 <col:9> 'int' 0
+    `-ReturnStmt 0x7ffb5a827cd8 <line:32:3, col:10>
+      `-IntegerLiteral 0x7ffb5a827cb8 <col:10> 'int' 0

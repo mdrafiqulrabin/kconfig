@@ -1,0 +1,101 @@
+TranslationUnitDecl 0x7ff4df0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff4df026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff4df026740 '__int128'
+|-TypedefDecl 0x7ff4df026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff4df026760 'unsigned __int128'
+|-TypedefDecl 0x7ff4df026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff4df026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff4df026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff4df026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff4df026dc0 'char *'
+|   `-BuiltinType 0x7ff4df026560 'char'
+|-TypedefDecl 0x7ff4df0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff4df027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff4df026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff4df026e58 '__va_list_tag'
+|-TypedefDecl 0x7ff4df027138 <c_files/pr69170.c:3:1, col:14> col:14 referenced sha2_word_t 'long'
+| `-BuiltinType 0x7ff4df0265e0 'long'
+|-RecordDecl 0x7ff4df077400 <line:4:9, line:7:1> line:4:9 struct definition
+| |-FieldDecl 0x7ff4df0774e0 <line:5:5, col:17> col:17 referenced length_upper 'sha2_word_t':'long'
+| |-FieldDecl 0x7ff4df077538 <col:5, col:31> col:31 referenced length_lower 'sha2_word_t':'long'
+| `-FieldDecl 0x7ff4df0775c8 <line:6:5, col:14> col:10 referenced buf 'char []'
+|-TypedefDecl 0x7ff4df077660 <line:4:1, line:7:3> col:3 referenced hash_state 'struct hash_state':'hash_state'
+| `-ElaboratedType 0x7ff4df077610 'struct hash_state' sugar
+|   `-RecordType 0x7ff4df077490 'hash_state'
+|     `-Record 0x7ff4df077400 ''
+|-VarDecl 0x7ff4df0776e8 <line:8:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7ff4df0777c0 <line:9:1, col:12> col:12 used b 'hash_state':'hash_state'
+`-FunctionDecl 0x7ff4df077868 <line:10:1, line:18:1> line:10:6 fn1 'void ()'
+  `-CompoundStmt 0x7ff4df078310 <line:11:1, line:18:1>
+    |-BinaryOperator 0x7ff4df077948 <line:12:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7ff4df077900 <col:3> 'int' lvalue Var 0x7ff4df0776e8 'a' 'int'
+    | `-IntegerLiteral 0x7ff4df077928 <col:7> 'int' 0
+    |-ForStmt 0x7ff4df077dd8 <line:13:3, line:14:55>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff4df0779d0 <line:13:10, col:14> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff4df0779b8 <col:10> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff4df077970 <col:10> 'int' lvalue Var 0x7ff4df0776e8 'a' 'int'
+    | | `-IntegerLiteral 0x7ff4df077998 <col:14> 'int' 8
+    | |-UnaryOperator 0x7ff4df077a20 <col:17, col:18> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7ff4df0779f8 <col:17> 'int' lvalue Var 0x7ff4df0776e8 'a' 'int'
+    | `-BinaryOperator 0x7ff4df077d58 <line:14:5, col:55> 'char' '='
+    |   |-ArraySubscriptExpr 0x7ff4df077b88 <col:5, col:23> 'char' lvalue
+    |   | |-ImplicitCastExpr 0x7ff4df077b70 <col:5, col:7> 'char *' <ArrayToPointerDecay>
+    |   | | `-MemberExpr 0x7ff4df077a68 <col:5, col:7> 'char []' lvalue .buf 0x7ff4df0775c8
+    |   | |   `-DeclRefExpr 0x7ff4df077a40 <col:5> 'hash_state':'hash_state' lvalue Var 0x7ff4df0777c0 'b' 'hash_state':'hash_state'
+    |   | `-BinaryOperator 0x7ff4df077b48 <col:11, col:22> 'int' '+'
+    |   |   |-ImplicitCastExpr 0x7ff4df077b30 <col:11> 'int' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x7ff4df077aa0 <col:11> 'int' lvalue Var 0x7ff4df0776e8 'a' 'int'
+    |   |   `-BinaryOperator 0x7ff4df077b08 <col:15, col:22> 'int' '/'
+    |   |     |-IntegerLiteral 0x7ff4df077ac8 <col:15> 'int' 1024
+    |   |     `-IntegerLiteral 0x7ff4df077ae8 <col:22> 'int' 8
+    |   `-ImplicitCastExpr 0x7ff4df077d40 <col:27, col:55> 'char' <IntegralCast>
+    |     `-BinaryOperator 0x7ff4df077d18 <col:27, col:55> 'sha2_word_t':'long' '>>'
+    |       |-ImplicitCastExpr 0x7ff4df077d00 <col:27, col:29> 'sha2_word_t':'long' <LValueToRValue>
+    |       | `-MemberExpr 0x7ff4df077bd8 <col:27, col:29> 'sha2_word_t':'long' lvalue .length_upper 0x7ff4df0774e0
+    |       |   `-DeclRefExpr 0x7ff4df077bb0 <col:27> 'hash_state':'hash_state' lvalue Var 0x7ff4df0777c0 'b' 'hash_state':'hash_state'
+    |       `-BinaryOperator 0x7ff4df077cd8 <col:45, col:55> 'int' '*'
+    |         |-ParenExpr 0x7ff4df077c98 <col:45, col:51> 'int'
+    |         | `-BinaryOperator 0x7ff4df077c70 <col:46, col:50> 'int' '-'
+    |         |   |-IntegerLiteral 0x7ff4df077c10 <col:46> 'int' 1
+    |         |   `-ImplicitCastExpr 0x7ff4df077c58 <col:50> 'int' <LValueToRValue>
+    |         |     `-DeclRefExpr 0x7ff4df077c30 <col:50> 'int' lvalue Var 0x7ff4df0776e8 'a' 'int'
+    |         `-IntegerLiteral 0x7ff4df077cb8 <col:55> 'int' 5
+    |-BinaryOperator 0x7ff4df077e58 <line:15:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7ff4df077e10 <col:3> 'int' lvalue Var 0x7ff4df0776e8 'a' 'int'
+    | `-IntegerLiteral 0x7ff4df077e38 <col:7> 'int' 0
+    `-ForStmt 0x7ff4df0782d8 <line:16:3, line:17:59>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff4df077ee0 <line:16:10, col:14> 'int' '<'
+      | |-ImplicitCastExpr 0x7ff4df077ec8 <col:10> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff4df077e80 <col:10> 'int' lvalue Var 0x7ff4df0776e8 'a' 'int'
+      | `-IntegerLiteral 0x7ff4df077ea8 <col:14> 'int' 8
+      |-UnaryOperator 0x7ff4df077f30 <col:17, col:18> 'int' postfix '++'
+      | `-DeclRefExpr 0x7ff4df077f08 <col:17> 'int' lvalue Var 0x7ff4df0776e8 'a' 'int'
+      `-BinaryOperator 0x7ff4df0782b0 <line:17:5, col:59> 'char' '='
+        |-ArraySubscriptExpr 0x7ff4df0780e0 <col:5, col:27> 'char' lvalue
+        | |-ImplicitCastExpr 0x7ff4df0780c8 <col:5, col:7> 'char *' <ArrayToPointerDecay>
+        | | `-MemberExpr 0x7ff4df077f78 <col:5, col:7> 'char []' lvalue .buf 0x7ff4df0775c8
+        | |   `-DeclRefExpr 0x7ff4df077f50 <col:5> 'hash_state':'hash_state' lvalue Var 0x7ff4df0777c0 'b' 'hash_state':'hash_state'
+        | `-BinaryOperator 0x7ff4df0780a0 <col:11, col:26> 'int' '+'
+        |   |-BinaryOperator 0x7ff4df078058 <col:11, col:22> 'int' '+'
+        |   | |-ImplicitCastExpr 0x7ff4df078040 <col:11> 'int' <LValueToRValue>
+        |   | | `-DeclRefExpr 0x7ff4df077fb0 <col:11> 'int' lvalue Var 0x7ff4df0776e8 'a' 'int'
+        |   | `-BinaryOperator 0x7ff4df078018 <col:15, col:22> 'int' '/'
+        |   |   |-IntegerLiteral 0x7ff4df077fd8 <col:15> 'int' 1024
+        |   |   `-IntegerLiteral 0x7ff4df077ff8 <col:22> 'int' 8
+        |   `-IntegerLiteral 0x7ff4df078080 <col:26> 'int' 8
+        `-ImplicitCastExpr 0x7ff4df078298 <col:31, col:59> 'char' <IntegralCast>
+          `-BinaryOperator 0x7ff4df078270 <col:31, col:59> 'sha2_word_t':'long' '>>'
+            |-ImplicitCastExpr 0x7ff4df078258 <col:31, col:33> 'sha2_word_t':'long' <LValueToRValue>
+            | `-MemberExpr 0x7ff4df078130 <col:31, col:33> 'sha2_word_t':'long' lvalue .length_lower 0x7ff4df077538
+            |   `-DeclRefExpr 0x7ff4df078108 <col:31> 'hash_state':'hash_state' lvalue Var 0x7ff4df0777c0 'b' 'hash_state':'hash_state'
+            `-BinaryOperator 0x7ff4df078230 <col:49, col:59> 'int' '*'
+              |-ParenExpr 0x7ff4df0781f0 <col:49, col:55> 'int'
+              | `-BinaryOperator 0x7ff4df0781c8 <col:50, col:54> 'int' '-'
+              |   |-IntegerLiteral 0x7ff4df078168 <col:50> 'int' 1
+              |   `-ImplicitCastExpr 0x7ff4df0781b0 <col:54> 'int' <LValueToRValue>
+              |     `-DeclRefExpr 0x7ff4df078188 <col:54> 'int' lvalue Var 0x7ff4df0776e8 'a' 'int'
+              `-IntegerLiteral 0x7ff4df078210 <col:59> 'int' 5

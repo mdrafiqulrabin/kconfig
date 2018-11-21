@@ -1,0 +1,31 @@
+c_files/pr81650.c:8:10: error: use of unknown builtin '__builtin_malloc' [-Wimplicit-function-declaration]
+  return __builtin_malloc (5);
+         ^
+c_files/pr81650.c:8:10: warning: incompatible integer to pointer conversion returning 'int' from a function with result type 'void *' [-Wint-conversion]
+  return __builtin_malloc (5);
+         ^~~~~~~~~~~~~~~~~~~~
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fbfc10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbfc1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbfc1026740 '__int128'
+|-TypedefDecl 0x7fbfc1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbfc1026760 'unsigned __int128'
+|-TypedefDecl 0x7fbfc1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbfc1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbfc1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbfc1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbfc1026dc0 'char *'
+|   `-BuiltinType 0x7fbfc1026560 'char'
+|-TypedefDecl 0x7fbfc10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbfc1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbfc1026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbfc1026e58 '__va_list_tag'
+|-FunctionDecl 0x7fbfc1077400 <c_files/pr81650.c:5:1, line:9:1> line:6:1 foo 'void *(void)'
+| `-CompoundStmt 0x7fbfc1077a78 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fbfc1077a60 <line:8:3, col:29>
+|     `-ImplicitCastExpr 0x7fbfc1077690 <col:10, col:29> 'void *' <IntegralToPointer>
+|       `-CallExpr 0x7fbfc1077660 <col:10, col:29> 'int'
+|         |-ImplicitCastExpr 0x7fbfc1077648 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fbfc10775d8 <col:10> 'int ()' Function 0x7fbfc1077540 '__builtin_malloc' 'int ()'
+|         `-IntegerLiteral 0x7fbfc1077600 <col:28> 'int' 5
+`-FunctionDecl 0x7fbfc1077540 <<invalid sloc>> col:10 implicit used __builtin_malloc 'int ()'

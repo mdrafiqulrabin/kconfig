@@ -1,0 +1,13 @@
+FileAST: 
+  Typedef: A, ['const'], ['typedef']
+    ArrayDecl: []
+      TypeDecl: A, ['const']
+        IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: S
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['A']

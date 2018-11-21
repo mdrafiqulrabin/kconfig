@@ -1,0 +1,127 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+      Decl: u, [], [], []
+        ArrayDecl: []
+          TypeDecl: u, []
+            IdentifierType: ['int']
+          Constant: int, 2
+  Decl: z, ['const'], [], []
+    ArrayDecl: []
+      TypeDecl: z, ['const']
+        IdentifierType: ['signed', 'char']
+    InitList: 
+      NamedInitializer: 
+        Constant: int, 0x100
+        Constant: int, 0
+      NamedInitializer: 
+        Constant: int, 0x101
+        Constant: int, 2
+  Decl: A, [], [], []
+    ArrayDecl: []
+      TypeDecl: A, []
+        IdentifierType: ['int']
+    InitList: 
+      Constant: int, 0
+      Constant: int, 0x80000000
+      Constant: int, 0xA
+      Constant: int, 0x80000000
+      Constant: int, 0xA
+      Constant: int, 0xA
+      Constant: int, 0x80000000
+  Decl: p, [], [], []
+    PtrDecl: []
+      TypeDecl: p, []
+        IdentifierType: ['int']
+    CompoundLiteral: 
+      Typename: None, []
+        ArrayDecl: []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      InitList: 
+        Constant: int, 0x80000000
+  Decl: u, [], [], []
+    TypeDecl: u, []
+      Union: None
+        Decl: k, [], [], []
+          TypeDecl: k, []
+            IdentifierType: ['int']
+    InitList: 
+      NamedInitializer: 
+        Constant: int, 0x80000000
+        ID: k
+  Typedef: H, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: H, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['signed', 'char']
+            Constant: int, 3
+        InitList: 
+          InitList: 
+            Constant: int, 0x100
+            Constant: int, 1
+            Constant: int, 0x100
+          InitList: 
+            Constant: char, '\0'
+            Constant: int, 0x100
+            Constant: char, '\0'
+      CompoundLiteral: 
+        Typename: None, ['const']
+          ArrayDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['signed', 'char']
+        InitList: 
+          Constant: int, 0x100
+      CompoundLiteral: 
+        Typename: None, ['const']
+          ArrayDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['float']
+        InitList: 
+          Constant: float, 1e0
+          Constant: float, 1e1
+          Constant: float, 1e100
+      Decl: s1, [], [], []
+        TypeDecl: s1, []
+          Struct: S
+        InitList: 
+          Constant: int, 0x80000000
+      Decl: s2, [], [], []
+        TypeDecl: s2, []
+          Struct: S
+        InitList: 
+          NamedInitializer: 
+            Constant: int, 0x80000000
+            ID: n
+      Decl: s3, [], [], []
+        TypeDecl: s3, []
+          Struct: S
+        InitList: 
+          NamedInitializer: 
+            Constant: int, 0x80000000
+            ID: u
+            Constant: int, 1
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['H']
+        InitList: 
+          Constant: int, 1
+          Constant: int, 2
+          Constant: int, 0x80000000

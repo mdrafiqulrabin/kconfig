@@ -1,0 +1,62 @@
+TranslationUnitDecl 0x7fe7610264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe761026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe761026740 '__int128'
+|-TypedefDecl 0x7fe761026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe761026760 'unsigned __int128'
+|-TypedefDecl 0x7fe761026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe761026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe761026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe761026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe761026dc0 'char *'
+|   `-BuiltinType 0x7fe761026560 'char'
+|-TypedefDecl 0x7fe7610270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe761027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe761026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe761026e58 '__va_list_tag'
+|-RecordDecl 0x7fe761027120 <c_files/pr58432.c:5:1, line:8:1> line:5:1 struct definition
+| |-FieldDecl 0x7fe761825a00 <line:6:5, col:9> col:9 prefix 'int'
+| `-FieldDecl 0x7fe761825a60 <line:7:5, col:9> col:9 referenced dir_idx 'int'
+|-VarDecl 0x7fe761825b60 <line:5:1, line:8:4> col:4 used a 'struct (anonymous struct at c_files/pr58432.c:5:1) *'
+|-VarDecl 0x7fe761825c30 <line:9:1, col:5> col:5 used b 'int'
+`-FunctionDecl 0x7fe761825cd8 <line:10:1, line:17:1> line:10:6 fn1 'void ()'
+  `-CompoundStmt 0x7fe761826330 <col:12, line:17:1>
+    |-DeclStmt 0x7fe761825ea0 <line:11:5, col:15>
+    | |-VarDecl 0x7fe761825db0 <col:5, col:10> col:10 used c 'int *'
+    | `-VarDecl 0x7fe761825e28 <col:5, col:14> col:14 used d 'int *'
+    `-ForStmt 0x7fe7618262f8 <line:12:5, line:16:7>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fe761825ee0 <line:12:12> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fe761825eb8 <col:12> 'int' lvalue Var 0x7fe761825c30 'b' 'int'
+      |-UnaryOperator 0x7fe761825f20 <col:15, col:16> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fe761825ef8 <col:15> 'int' lvalue Var 0x7fe761825c30 'b' 'int'
+      `-IfStmt 0x7fe7618262c0 <line:13:7, line:16:7>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-ImplicitCastExpr 0x7fe761825fe8 <line:13:11, col:14> 'int' <LValueToRValue>
+        | `-ArraySubscriptExpr 0x7fe761825fc0 <col:11, col:14> 'int' lvalue
+        |   |-ImplicitCastExpr 0x7fe761825f90 <col:11> 'int *' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fe761825f40 <col:11> 'int *' lvalue Var 0x7fe761825e28 'd' 'int *'
+        |   `-ImplicitCastExpr 0x7fe761825fa8 <col:13> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fe761825f68 <col:13> 'int' lvalue Var 0x7fe761825c30 'b' 'int'
+        |-CompoundStmt 0x7fe761826298 <col:17, line:16:7>
+        | |-BinaryOperator 0x7fe761826168 <line:14:4, col:14> 'int' '='
+        | | |-ArraySubscriptExpr 0x7fe761826080 <col:4, col:7> 'int' lvalue
+        | | | |-ImplicitCastExpr 0x7fe761826050 <col:4> 'int *' <LValueToRValue>
+        | | | | `-DeclRefExpr 0x7fe761826000 <col:4> 'int *' lvalue Var 0x7fe761825db0 'c' 'int *'
+        | | | `-ImplicitCastExpr 0x7fe761826068 <col:6> 'int' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7fe761826028 <col:6> 'int' lvalue Var 0x7fe761825c30 'b' 'int'
+        | | `-ImplicitCastExpr 0x7fe761826150 <col:11, col:14> 'int' <LValueToRValue>
+        | |   `-ArraySubscriptExpr 0x7fe761826128 <col:11, col:14> 'int' lvalue
+        | |     |-ImplicitCastExpr 0x7fe7618260f8 <col:11> 'int *' <LValueToRValue>
+        | |     | `-DeclRefExpr 0x7fe7618260a8 <col:11> 'int *' lvalue Var 0x7fe761825e28 'd' 'int *'
+        | |     `-ImplicitCastExpr 0x7fe761826110 <col:13> 'int' <LValueToRValue>
+        | |       `-DeclRefExpr 0x7fe7618260d0 <col:13> 'int' lvalue Var 0x7fe761825c30 'b' 'int'
+        | `-BinaryOperator 0x7fe761826270 <line:15:4, col:19> 'int' '='
+        |   |-MemberExpr 0x7fe761826218 <col:4, col:9> 'int' lvalue .dir_idx 0x7fe761825a60
+        |   | `-ArraySubscriptExpr 0x7fe7618261f0 <col:4, col:7> 'struct (anonymous struct at c_files/pr58432.c:5:1)':'struct (anonymous at c_files/pr58432.c:5:1)' lvalue
+        |   |   |-ImplicitCastExpr 0x7fe7618261d8 <col:4> 'struct (anonymous struct at c_files/pr58432.c:5:1) *' <LValueToRValue>
+        |   |   | `-DeclRefExpr 0x7fe761826190 <col:4> 'struct (anonymous struct at c_files/pr58432.c:5:1) *' lvalue Var 0x7fe761825b60 'a' 'struct (anonymous struct at c_files/pr58432.c:5:1) *'
+        |   |   `-IntegerLiteral 0x7fe7618261b8 <col:6> 'int' 0
+        |   `-IntegerLiteral 0x7fe761826250 <col:19> 'int' 0
+        `-<<<NULL>>>

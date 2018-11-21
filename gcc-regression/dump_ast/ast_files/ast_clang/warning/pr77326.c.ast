@@ -1,0 +1,69 @@
+c_files/pr77326.c:6:25: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline,noclone))
+                        ^
+c_files/pr77326.c:12:25: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline,noclone))
+                        ^
+c_files/pr77326.c:24:3: error: use of unknown builtin '__builtin_exit' [-Wimplicit-function-declaration]
+  __builtin_exit (0);
+  ^
+c_files/pr77326.c:24:3: note: did you mean '__builtin_abort'?
+c_files/pr77326.c:18:5: note: '__builtin_abort' declared here
+    __builtin_abort ();
+    ^
+2 warnings and 1 error generated.
+TranslationUnitDecl 0x7fe0228264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe022826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe022826740 '__int128'
+|-TypedefDecl 0x7fe022826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe022826760 'unsigned __int128'
+|-TypedefDecl 0x7fe022826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe022826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe022826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe022826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe022826dc0 'char *'
+|   `-BuiltinType 0x7fe022826560 'char'
+|-TypedefDecl 0x7fe0228270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe022827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe022826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe022826e58 '__va_list_tag'
+|-FunctionDecl 0x7fe023026a00 <c_files/pr77326.c:4:1, col:46> col:13 used test1 'void (void)' extern
+| `-WeakAttr 0x7fe023026a98 <col:41>
+|-FunctionDecl 0x7fe023026c00 <line:6:1, line:10:1> line:7:13 used va_pseudo 'void (int, ...)' static
+| |-ParmVarDecl 0x7fe023026b38 <col:24, col:28> col:28 flag 'int'
+| |-CompoundStmt 0x7fe023026da0 <line:8:1, line:10:1>
+| | `-GCCAsmStmt 0x7fe023026d58 <line:9:3, col:16>
+| `-NoInlineAttr 0x7fe023026ca0 <line:6:16>
+|-FunctionDecl 0x7fe023026e50 <line:12:1, line:19:1> line:13:13 used func 'void (void)' static
+| |-CompoundStmt 0x7fe0230272b0 <line:14:1, line:19:1>
+| | |-CallExpr 0x7fe023027020 <line:15:3, col:24> 'void'
+| | | |-ImplicitCastExpr 0x7fe023027008 <col:3> 'void (*)(int, ...)' <FunctionToPointerDecay>
+| | | | `-DeclRefExpr 0x7fe023026f30 <col:3> 'void (int, ...)' Function 0x7fe023026c00 'va_pseudo' 'void (int, ...)'
+| | | |-IntegerLiteral 0x7fe023026f58 <col:14> 'int' 0
+| | | |-IntegerLiteral 0x7fe023026f78 <col:17> 'int' 0
+| | | |-IntegerLiteral 0x7fe023026f98 <col:20> 'int' 0
+| | | `-IntegerLiteral 0x7fe023026fb8 <col:23> 'int' 0
+| | `-IfStmt 0x7fe023027278 <line:17:3, line:18:22>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-ImplicitCastExpr 0x7fe0230270b8 <line:17:7> 'void (*)(void)' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7fe023027068 <col:7> 'void (void)' Function 0x7fe023026a00 'test1' 'void (void)'
+| |   |-CallExpr 0x7fe023027250 <line:18:5, col:22> 'void'
+| |   | `-ImplicitCastExpr 0x7fe023027238 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| |   |   `-DeclRefExpr 0x7fe0230271e0 <col:5> '<builtin fn type>' Function 0x7fe023027100 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7fe023026ee8 <line:12:16>
+|-FunctionDecl 0x7fe023027100 <line:18:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fe023027198 <col:5> Implicit
+|-FunctionDecl 0x7fe0230273a8 <line:21:1, line:26:1> line:21:5 main 'int (void)'
+| `-CompoundStmt 0x7fe0230276c8 <line:22:1, line:26:1>
+|   |-CallExpr 0x7fe0230274a8 <line:23:3, col:8> 'void'
+|   | `-ImplicitCastExpr 0x7fe023027490 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fe023027468 <col:3> 'void (void)' Function 0x7fe023026e50 'func' 'void (void)'
+|   |-CallExpr 0x7fe023027660 <line:24:3, col:20> 'int'
+|   | |-ImplicitCastExpr 0x7fe023027648 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fe0230275d8 <col:3> 'int ()' Function 0x7fe023027540 '__builtin_exit' 'int ()'
+|   | `-IntegerLiteral 0x7fe023027600 <col:19> 'int' 0
+|   `-ReturnStmt 0x7fe0230276b0 <line:25:3, col:10>
+|     `-IntegerLiteral 0x7fe023027690 <col:10> 'int' 0
+`-FunctionDecl 0x7fe023027540 <<invalid sloc>> line:24:3 implicit used __builtin_exit 'int ()'

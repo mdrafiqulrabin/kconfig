@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7f89c40264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f89c4026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f89c4026740 '__int128'
+|-TypedefDecl 0x7f89c4026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f89c4026760 'unsigned __int128'
+|-TypedefDecl 0x7f89c4026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f89c4026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f89c4026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f89c4026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f89c4026dc0 'char *'
+|   `-BuiltinType 0x7f89c4026560 'char'
+|-TypedefDecl 0x7f89c40270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f89c4027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f89c4026ee0 'struct __va_list_tag'
+|     `-Record 0x7f89c4026e58 '__va_list_tag'
+|-FunctionDecl 0x7f89c4825a00 <c_files/pr24117.c:4:1, col:22> col:6 used link_error 'void (void)'
+|-RecordDecl 0x7f89c4825ad8 <line:6:9, line:9:1> line:6:9 struct definition
+| |-FieldDecl 0x7f89c4825b98 <line:7:3, col:7> col:7 referenced x 'int'
+| `-FieldDecl 0x7f89c4825bf8 <line:8:3, col:7> col:7 referenced z 'int'
+|-TypedefDecl 0x7f89c4825c90 <line:6:1, line:9:3> col:3 referenced Foo_t 'struct Foo_t':'Foo_t'
+| `-ElaboratedType 0x7f89c4825c40 'struct Foo_t' sugar
+|   `-RecordType 0x7f89c4825b60 'Foo_t'
+|     `-Record 0x7f89c4825ad8 ''
+|-VarDecl 0x7f89c4825d18 <line:11:1, col:7> col:7 used xm 'char *'
+|-FunctionDecl 0x7f89c4825e08 <line:12:1, col:14> col:6 used bar 'void (void)'
+`-FunctionDecl 0x7f89c4825f30 <line:14:1, line:24:1> line:14:6 foo 'void (void)'
+  `-CompoundStmt 0x7f89c4826548 <line:15:1, line:24:1>
+    |-DeclStmt 0x7f89c4826060 <line:16:3, col:10>
+    | `-VarDecl 0x7f89c4826000 <col:3, col:9> col:9 used x 'Foo_t':'Foo_t'
+    |-BinaryOperator 0x7f89c48260f8 <line:17:3, col:9> 'int' '='
+    | |-MemberExpr 0x7f89c48260a0 <col:3, col:5> 'int' lvalue .x 0x7f89c4825b98
+    | | `-DeclRefExpr 0x7f89c4826078 <col:3> 'Foo_t':'Foo_t' lvalue Var 0x7f89c4826000 'x' 'Foo_t':'Foo_t'
+    | `-IntegerLiteral 0x7f89c48260d8 <col:9> 'int' 1
+    |-BinaryOperator 0x7f89c48261f0 <line:18:3, col:9> 'int' '='
+    | |-MemberExpr 0x7f89c4826198 <col:3, col:5> 'int' lvalue .z 0x7f89c4825bf8
+    | | `-DeclRefExpr 0x7f89c4826170 <col:3> 'Foo_t':'Foo_t' lvalue Var 0x7f89c4826000 'x' 'Foo_t':'Foo_t'
+    | `-IntegerLiteral 0x7f89c48261d0 <col:9> 'int' 2
+    |-BinaryOperator 0x7f89c4826328 <line:19:3, col:17> 'char *' '='
+    | |-DeclRefExpr 0x7f89c4826218 <col:3> 'char *' lvalue Var 0x7f89c4825d18 'xm' 'char *'
+    | `-CStyleCastExpr 0x7f89c4826300 <col:8, col:17> 'char *' <BitCast>
+    |   `-UnaryOperator 0x7f89c48262c8 <col:16, col:17> 'Foo_t *' prefix '&'
+    |     `-DeclRefExpr 0x7f89c4826240 <col:17> 'Foo_t':'Foo_t' lvalue Var 0x7f89c4826000 'x' 'Foo_t':'Foo_t'
+    |-CallExpr 0x7f89c48263c0 <line:20:3, col:7> 'void'
+    | `-ImplicitCastExpr 0x7f89c48263a8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f89c4826350 <col:3> 'void (void)' Function 0x7f89c4825e08 'bar' 'void (void)'
+    `-IfStmt 0x7f89c4826510 <line:22:3, line:23:17>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f89c4826480 <line:22:7, col:14> 'int' '!='
+      | |-ImplicitCastExpr 0x7f89c4826468 <col:7, col:9> 'int' <LValueToRValue>
+      | | `-MemberExpr 0x7f89c4826410 <col:7, col:9> 'int' lvalue .z 0x7f89c4825bf8
+      | |   `-DeclRefExpr 0x7f89c48263e8 <col:7> 'Foo_t':'Foo_t' lvalue Var 0x7f89c4826000 'x' 'Foo_t':'Foo_t'
+      | `-IntegerLiteral 0x7f89c4826448 <col:14> 'int' 2
+      |-CallExpr 0x7f89c48264e8 <line:23:5, col:17> 'void'
+      | `-ImplicitCastExpr 0x7f89c48264d0 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7f89c48264a8 <col:5> 'void (void)' Function 0x7f89c4825a00 'link_error' 'void (void)'
+      `-<<<NULL>>>

@@ -1,0 +1,52 @@
+FileAST: 
+  Decl: f, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: f, []
+        IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: s
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['int']
+      Decl: q, [], [], []
+        PtrDecl: []
+          TypeDecl: q, []
+            IdentifierType: ['int']
+  Decl: a, [], ['extern'], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: c, ['const'], ['extern'], []
+    TypeDecl: c, ['const']
+      Struct: s
+  Decl: c, ['const'], [], []
+    TypeDecl: c, ['const']
+      Struct: s
+    InitList: 
+      UnaryOp: &
+        ID: a
+      Constant: int, 0
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: buf, [], [], []
+        ArrayDecl: []
+          TypeDecl: buf, []
+            IdentifierType: ['char']
+          Constant: int, 4
+        InitList: 
+          Constant: int, 0
+          Constant: int, 1
+          Constant: int, 2
+          Constant: int, 3

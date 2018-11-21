@@ -1,0 +1,18 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          UnaryOp: ~
+            ID: __INT_MAX__
+          BinaryOp: /
+            Constant: int, 0
+            Constant: int, 0

@@ -1,0 +1,29 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        TernaryOp: 
+          BinaryOp: ==
+            Constant: int, 1
+            Constant: int, 2
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+            Constant: int, 0
+          Assignment: =
+            ID: v
+            Constant: int, 0
+      Return: 
+        ID: v

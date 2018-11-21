@@ -1,0 +1,26 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['void']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['char']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: memcmp
+          ExprList: 
+            ID: x
+            ID: y
+            ID: z

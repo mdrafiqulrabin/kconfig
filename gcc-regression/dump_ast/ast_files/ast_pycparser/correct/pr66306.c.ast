@@ -1,0 +1,68 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: line_map
+      Decl: start_location, [], [], []
+        TypeDecl: start_location, []
+          IdentifierType: ['unsigned']
+      Decl: ordinary, [], [], []
+        TypeDecl: ordinary, []
+          IdentifierType: ['unsigned']
+  Decl: linemap_resolve_location, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: loc_map, [], [], []
+          PtrDecl: []
+            PtrDecl: []
+              TypeDecl: loc_map, []
+                Struct: line_map
+      TypeDecl: linemap_resolve_location, []
+        IdentifierType: ['unsigned']
+  FuncDef: 
+    Decl: linemap_position_for_loc_and_offset, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: h, [], [], []
+            TypeDecl: h, []
+              IdentifierType: ['unsigned']
+          Decl: loc, [], [], []
+            TypeDecl: loc, []
+              IdentifierType: ['unsigned']
+        TypeDecl: linemap_position_for_loc_and_offset, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Decl: map, [], [], []
+        PtrDecl: []
+          TypeDecl: map, []
+            Struct: line_map
+        Constant: int, 0
+      FuncCall: 
+        ID: linemap_resolve_location
+        ExprList: 
+          UnaryOp: &
+            ID: map
+      If: 
+        BinaryOp: <=
+          StructRef: ->
+            ID: map
+            ID: ordinary
+          BinaryOp: +
+            BinaryOp: +
+              ID: loc
+              StructRef: ->
+                ID: map
+                ID: start_location
+            StructRef: ->
+              ID: map
+              ID: ordinary
+        FuncCall: 
+          ID: __builtin_abort
+      If: 
+        BinaryOp: >=
+          ID: h
+          BinaryOp: +
+            ID: loc
+            StructRef: ->
+              ID: map
+              ID: start_location
+        FuncCall: 
+          ID: __builtin_abort

@@ -1,0 +1,34 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: len, [], [], []
+        TypeDecl: len, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 1
+      Decl: P, [], [], []
+        PtrDecl: []
+          ArrayDecl: []
+            ArrayDecl: []
+              TypeDecl: P, []
+                IdentifierType: ['float']
+              ID: len
+            ID: len
+        Constant: int, 0
+      Assignment: =
+        ArrayRef: 
+          ArrayRef: 
+            UnaryOp: *
+              ID: P
+            Constant: int, 0
+          Constant: int, 0
+        Constant: int, 1
+      Return: 
+        Constant: int, 0

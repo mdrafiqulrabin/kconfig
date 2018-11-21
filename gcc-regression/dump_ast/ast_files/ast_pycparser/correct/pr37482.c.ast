@@ -1,0 +1,67 @@
+FileAST: 
+  FuncDef: 
+    Decl: SexiALI_Convert, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: vdest, [], [], []
+            PtrDecl: []
+              TypeDecl: vdest, []
+                IdentifierType: ['void']
+          Decl: vsrc, [], [], []
+            PtrDecl: []
+              TypeDecl: vsrc, []
+                IdentifierType: ['void']
+          Decl: frames, [], [], []
+            TypeDecl: frames, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: SexiALI_Convert, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: src, [], [], []
+        PtrDecl: []
+          TypeDecl: src, []
+            IdentifierType: ['short']
+        ID: vsrc
+      Decl: dest, [], [], []
+        PtrDecl: []
+          TypeDecl: dest, []
+            IdentifierType: ['unsigned', 'char']
+        ID: vdest
+      For: 
+        Assignment: =
+          ID: x
+          Constant: int, 0
+        BinaryOp: <
+          ID: x
+          Constant: int, 256
+        UnaryOp: p++
+          ID: x
+        Compound: 
+          Decl: tmp, [], [], []
+            TypeDecl: tmp, []
+              IdentifierType: ['int']
+          Assignment: =
+            ID: tmp
+            UnaryOp: *
+              ID: src
+          UnaryOp: p++
+            ID: src
+          Assignment: +=
+            ID: tmp
+            UnaryOp: *
+              ID: src
+          UnaryOp: p++
+            ID: src
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: dest
+            ID: tmp
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: dest
+            ID: tmp

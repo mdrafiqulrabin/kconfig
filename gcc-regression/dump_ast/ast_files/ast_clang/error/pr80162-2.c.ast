@@ -1,0 +1,32 @@
+c_files/pr80162-2.c:6:19: error: register 'xmm7' unsuitable for global register variables on this target
+register V u asm ("xmm7");
+                  ^
+c_files/pr80162-2.c:6:1: error: bad type for named register variable
+register V u asm ("xmm7");
+^
+2 errors generated.
+TranslationUnitDecl 0x7f87f60058d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f87f6005e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f87f6005b40 '__int128'
+|-TypedefDecl 0x7f87f6005e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f87f6005b60 'unsigned __int128'
+|-TypedefDecl 0x7f87f6006168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f87f6005f70 'struct __NSConstantString_tag'
+|   `-Record 0x7f87f6005ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f87f6006200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f87f60061c0 'char *'
+|   `-BuiltinType 0x7f87f6005960 'char'
+|-TypedefDecl 0x7f87f60064c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f87f6006470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f87f60062e0 'struct __va_list_tag'
+|     `-Record 0x7f87f6006258 '__va_list_tag'
+|-TypedefDecl 0x7f87f6006578 <c_files/pr80162-2.c:5:1, col:13> col:13 referenced V '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7f87f6006540 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7f87f60059c0 'int'
+|-VarDecl 0x7f87f6823c78 <line:6:1, col:12> col:12 invalid u 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' register
+| `-AsmLabelAttr 0x7f87f6823cd8 <col:19> "xmm7"
+|-FunctionDecl 0x7f87f6823e18 <line:8:1, line:12:1> line:9:1 foo 'int (int)'
+| |-ParmVarDecl 0x7f87f6823d48 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7f87f6823f20 <line:10:1, line:12:1>
+`-FunctionDecl 0x7f87f6824008 <line:14:1, line:18:1> line:15:1 bar 'int (void)'
+  `-CompoundStmt 0x7f87f68240c0 <line:16:1, line:18:1>

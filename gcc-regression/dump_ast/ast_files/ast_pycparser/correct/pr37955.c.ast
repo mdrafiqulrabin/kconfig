@@ -1,0 +1,55 @@
+FileAST: 
+  Typedef: AEP_CONNECTION_ENTRY, [], ['typedef']
+    TypeDecl: AEP_CONNECTION_ENTRY, []
+      Struct: None
+        Decl: conn_state, [], [], []
+          TypeDecl: conn_state, []
+            Enum: None
+              EnumeratorList: 
+                Enumerator: NotConnected
+                  Constant: int, 0
+        Decl: conn_hndl, [], [], []
+          TypeDecl: conn_hndl, []
+            IdentifierType: ['unsigned', 'int']
+  Decl: aep_app_conn_table, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: aep_app_conn_table, []
+        IdentifierType: ['AEP_CONNECTION_ENTRY']
+      Constant: int, 256
+  FuncDef: 
+    Decl: aep_mod_exp, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: aep_mod_exp, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: count, [], [], []
+        TypeDecl: count, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: count
+          Constant: int, 0
+        BinaryOp: <
+          ID: count
+          Constant: int, 256
+        UnaryOp: p++
+          ID: count
+        Compound: 
+          Assignment: =
+            StructRef: .
+              ArrayRef: 
+                ID: aep_app_conn_table
+                ID: count
+              ID: conn_state
+            ID: NotConnected
+          Assignment: =
+            StructRef: .
+              ArrayRef: 
+                ID: aep_app_conn_table
+                ID: count
+              ID: conn_hndl
+            Constant: int, 0

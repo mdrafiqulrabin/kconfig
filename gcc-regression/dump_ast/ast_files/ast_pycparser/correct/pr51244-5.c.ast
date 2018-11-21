@@ -1,0 +1,134 @@
+FileAST: 
+  FuncDef: 
+    Decl: test_00, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            PtrDecl: []
+              TypeDecl: c, []
+                IdentifierType: ['int']
+          Decl: d, [], [], []
+            PtrDecl: []
+              TypeDecl: d, []
+                IdentifierType: ['short']
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: test_00, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: d
+        BinaryOp: !=
+          ID: x
+          Constant: int, 0
+      Assignment: =
+        UnaryOp: *
+          ID: c
+        UnaryOp: -
+          Constant: int, 1
+      If: 
+        BinaryOp: !=
+          ID: x
+          Constant: int, 0
+        Return: 
+          BinaryOp: >
+            ID: a
+            Constant: int, 0
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: test_01, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: test_01, []
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: <
+            ID: x
+            Constant: int, 58
+          BinaryOp: >
+            ID: x
+            Constant: int, 47
+        Return: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: test_02, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: test_02, []
+          IdentifierType: ['char']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: <
+            ID: x
+            Constant: int, 58
+          BinaryOp: >
+            ID: x
+            Constant: int, 47
+        Return: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: test_03, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: test_03, []
+          IdentifierType: ['unsigned', 'short']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: <
+            ID: x
+            Constant: int, 58
+          BinaryOp: >
+            ID: x
+            Constant: int, 47
+        Return: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: test_04, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: test_04, []
+          IdentifierType: ['short']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: <
+            ID: x
+            Constant: int, 58
+          BinaryOp: >
+            ID: x
+            Constant: int, 47
+        Return: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0

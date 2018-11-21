@@ -1,0 +1,145 @@
+TranslationUnitDecl 0x7fb3410264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb341026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb341026740 '__int128'
+|-TypedefDecl 0x7fb341026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb341026760 'unsigned __int128'
+|-TypedefDecl 0x7fb341026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb341026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb341026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb341026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb341026dc0 'char *'
+|   `-BuiltinType 0x7fb341026560 'char'
+|-TypedefDecl 0x7fb3410270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb341027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb341026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb341026e58 '__va_list_tag'
+|-TypedefDecl 0x7fb341027178 <c_files/pr53144.c:3:1, col:55> col:55 referenced uvec '__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+| `-VectorType 0x7fb341027140 '__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' 4
+|   `-BuiltinType 0x7fb341026620 'unsigned char'
+`-FunctionDecl 0x7fb341078628 <line:5:1, line:20:1> line:5:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fb341078400 <col:11, col:15> col:15 used argc 'int'
+  |-ParmVarDecl 0x7fb341078510 <col:21, col:32> col:27 argv 'char **':'char **'
+  `-CompoundStmt 0x7fb34107acf8 <col:35, line:20:1>
+    |-DeclStmt 0x7fb341078788 <line:6:5, col:10>
+    | `-VarDecl 0x7fb341078728 <col:5, col:9> col:9 used i 'int'
+    |-DeclStmt 0x7fb341078838 <line:7:5, col:14>
+    | `-VarDecl 0x7fb3410787b8 <col:5, col:13> col:9 used x 'int' cinit
+    |   `-IntegerLiteral 0x7fb341078818 <col:13> 'int' 0
+    |-DeclStmt 0x7fb341078af0 <line:8:5, col:41>
+    | `-VarDecl 0x7fb341078880 <col:5, col:40> col:10 used uc0 'uvec':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' cinit
+    |   `-ImplicitCastExpr 0x7fb341078ad8 <col:16, col:40> 'uvec':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+    |     `-CompoundLiteralExpr 0x7fb341078ab0 <col:16, col:40> 'uvec':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue
+    |       `-InitListExpr 0x7fb3410789d8 <col:23, col:40> 'uvec':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+    |         |-ImplicitCastExpr 0x7fb341078a50 <col:24> 'unsigned char' <IntegralCast>
+    |         | `-ImplicitCastExpr 0x7fb341078a38 <col:24> 'int' <LValueToRValue>
+    |         |   `-DeclRefExpr 0x7fb3410788f0 <col:24> 'int' lvalue ParmVar 0x7fb341078400 'argc' 'int'
+    |         |-ImplicitCastExpr 0x7fb341078a68 <col:30> 'unsigned char' <IntegralCast>
+    |         | `-IntegerLiteral 0x7fb341078918 <col:30> 'int' 1
+    |         |-ImplicitCastExpr 0x7fb341078a80 <col:34> 'unsigned char' <IntegralCast>
+    |         | `-IntegerLiteral 0x7fb341078938 <col:34> 'int' 2
+    |         `-ImplicitCastExpr 0x7fb341078a98 <col:38> 'unsigned char' <IntegralCast>
+    |           `-IntegerLiteral 0x7fb341078958 <col:38> 'int' 10
+    |-DeclStmt 0x7fb341078d90 <line:9:5, col:42>
+    | `-VarDecl 0x7fb341078b90 <col:5, col:41> col:19 used uc1 'unsigned char [4]' cinit
+    |   `-InitListExpr 0x7fb341078cd0 <col:28, col:41> 'unsigned char [4]'
+    |     |-ImplicitCastExpr 0x7fb341078d30 <col:29> 'unsigned char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fb341078bf0 <col:29> 'int' 0
+    |     |-ImplicitCastExpr 0x7fb341078d48 <col:32> 'unsigned char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fb341078c10 <col:32> 'int' 3
+    |     |-ImplicitCastExpr 0x7fb341078d60 <col:35> 'unsigned char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fb341078c30 <col:35> 'int' 2
+    |     `-ImplicitCastExpr 0x7fb341078d78 <col:38> 'unsigned char' <IntegralCast>
+    |       `-IntegerLiteral 0x7fb341078c50 <col:38> 'int' 200
+    |-DeclStmt 0x7fb341079030 <line:10:5, col:39>
+    | `-VarDecl 0x7fb341078e30 <col:5, col:38> col:17 used ucg 'signed char [4]' cinit
+    |   `-InitListExpr 0x7fb341078f70 <col:26, col:38> 'signed char [4]'
+    |     |-ImplicitCastExpr 0x7fb341078fd0 <col:27> 'signed char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fb341078e90 <col:27> 'int' 1
+    |     |-ImplicitCastExpr 0x7fb341078fe8 <col:30> 'signed char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fb341078eb0 <col:30> 'int' 0
+    |     |-ImplicitCastExpr 0x7fb341079000 <col:33> 'signed char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fb341078ed0 <col:33> 'int' 0
+    |     `-ImplicitCastExpr 0x7fb341079018 <col:36> 'signed char' <IntegralCast>
+    |       `-IntegerLiteral 0x7fb341078ef0 <col:36> 'int' 0
+    |-DeclStmt 0x7fb341079290 <line:11:5, col:39>
+    | `-VarDecl 0x7fb341079090 <col:5, col:38> col:17 used ucl 'signed char [4]' cinit
+    |   `-InitListExpr 0x7fb3410791d0 <col:26, col:38> 'signed char [4]'
+    |     |-ImplicitCastExpr 0x7fb341079230 <col:27> 'signed char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fb3410790f0 <col:27> 'int' 0
+    |     |-ImplicitCastExpr 0x7fb341079248 <col:30> 'signed char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fb341079110 <col:30> 'int' 1
+    |     |-ImplicitCastExpr 0x7fb341079260 <col:33> 'signed char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fb341079130 <col:33> 'int' 0
+    |     `-ImplicitCastExpr 0x7fb341079278 <col:36> 'signed char' <IntegralCast>
+    |       `-IntegerLiteral 0x7fb341079150 <col:36> 'int' 1
+    |-ForStmt 0x7fb34107ac68 <line:15:5, line:18:5>
+    | |-BinaryOperator 0x7fb3410792f0 <line:15:10, col:14> 'int' '='
+    | | |-DeclRefExpr 0x7fb3410792a8 <col:10> 'int' lvalue Var 0x7fb341078728 'i' 'int'
+    | | `-IntegerLiteral 0x7fb3410792d0 <col:14> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb341079378 <col:17, col:21> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fb341079360 <col:17> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fb341079318 <col:17> 'int' lvalue Var 0x7fb341078728 'i' 'int'
+    | | `-IntegerLiteral 0x7fb341079340 <col:21> 'int' 4
+    | |-UnaryOperator 0x7fb3410793c8 <col:24, col:26> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fb3410793a0 <col:24> 'int' lvalue Var 0x7fb341078728 'i' 'int'
+    | `-CompoundStmt 0x7fb34107ac40 <col:30, line:18:5>
+    |   |-CompoundAssignOperator 0x7fb34107a848 <line:16:2, col:34> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   | |-DeclRefExpr 0x7fb34107a400 <col:2> 'int' lvalue Var 0x7fb3410787b8 'x' 'int'
+    |   | `-BinaryOperator 0x7fb34107a820 <col:7, col:34> 'int' '!='
+    |   |   |-ImplicitCastExpr 0x7fb34107a808 <col:7, col:12> 'int' <IntegralCast>
+    |   |   | `-ImplicitCastExpr 0x7fb34107a7f0 <col:7, col:12> 'signed char' <LValueToRValue>
+    |   |   |   `-ArraySubscriptExpr 0x7fb34107a4d8 <col:7, col:12> 'signed char' lvalue
+    |   |   |     |-ImplicitCastExpr 0x7fb34107a4a8 <col:7> 'signed char *' <ArrayToPointerDecay>
+    |   |   |     | `-DeclRefExpr 0x7fb34107a428 <col:7> 'signed char [4]' lvalue Var 0x7fb341078e30 'ucg' 'signed char [4]'
+    |   |   |     `-ImplicitCastExpr 0x7fb34107a4c0 <col:11> 'int' <LValueToRValue>
+    |   |   |       `-DeclRefExpr 0x7fb34107a450 <col:11> 'int' lvalue Var 0x7fb341078728 'i' 'int'
+    |   |   `-ParenExpr 0x7fb34107a7d0 <col:17, col:34> 'int'
+    |   |     `-BinaryOperator 0x7fb34107a7a8 <line:13:14, line:16:33> 'int' '>'
+    |   |       |-ImplicitCastExpr 0x7fb34107a760 <line:13:14, line:16:24> 'int' <IntegralCast>
+    |   |       | `-ImplicitCastExpr 0x7fb34107a748 <line:13:14, line:16:24> 'unsigned char' <LValueToRValue>
+    |   |       |   `-ArraySubscriptExpr 0x7fb34107a678 <line:13:14, line:16:24> 'unsigned char' lvalue
+    |   |       |     |-ParenExpr 0x7fb34107a618 <line:13:14, col:36> 'unsigned char *'
+    |   |       |     | `-CStyleCastExpr 0x7fb34107a5f0 <col:15, col:33> 'unsigned char *' <BitCast>
+    |   |       |     |   `-UnaryOperator 0x7fb34107a588 <col:32, col:33> 'uvec *' prefix '&'
+    |   |       |     |     `-DeclRefExpr 0x7fb34107a500 <col:33> 'uvec':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fb341078880 'uc0' 'uvec':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+    |   |       |     `-ImplicitCastExpr 0x7fb34107a660 <line:16:23> 'int' <LValueToRValue>
+    |   |       |       `-DeclRefExpr 0x7fb34107a638 <col:23> 'int' lvalue Var 0x7fb341078728 'i' 'int'
+    |   |       `-ImplicitCastExpr 0x7fb34107a790 <col:28, col:33> 'int' <IntegralCast>
+    |   |         `-ImplicitCastExpr 0x7fb34107a778 <col:28, col:33> 'unsigned char' <LValueToRValue>
+    |   |           `-ArraySubscriptExpr 0x7fb34107a720 <col:28, col:33> 'unsigned char' lvalue
+    |   |             |-ImplicitCastExpr 0x7fb34107a6f0 <col:28> 'unsigned char *' <ArrayToPointerDecay>
+    |   |             | `-DeclRefExpr 0x7fb34107a6a0 <col:28> 'unsigned char [4]' lvalue Var 0x7fb341078b90 'uc1' 'unsigned char [4]'
+    |   |             `-ImplicitCastExpr 0x7fb34107a708 <col:32> 'int' <LValueToRValue>
+    |   |               `-DeclRefExpr 0x7fb34107a6c8 <col:32> 'int' lvalue Var 0x7fb341078728 'i' 'int'
+    |   `-CompoundAssignOperator 0x7fb34107ac08 <line:17:2, col:34> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+    |     |-DeclRefExpr 0x7fb34107a880 <col:2> 'int' lvalue Var 0x7fb3410787b8 'x' 'int'
+    |     `-BinaryOperator 0x7fb34107abe0 <col:7, col:34> 'int' '!='
+    |       |-ImplicitCastExpr 0x7fb34107abc8 <col:7, col:12> 'int' <IntegralCast>
+    |       | `-ImplicitCastExpr 0x7fb34107abb0 <col:7, col:12> 'signed char' <LValueToRValue>
+    |       |   `-ArraySubscriptExpr 0x7fb34107a928 <col:7, col:12> 'signed char' lvalue
+    |       |     |-ImplicitCastExpr 0x7fb34107a8f8 <col:7> 'signed char *' <ArrayToPointerDecay>
+    |       |     | `-DeclRefExpr 0x7fb34107a8a8 <col:7> 'signed char [4]' lvalue Var 0x7fb341079090 'ucl' 'signed char [4]'
+    |       |     `-ImplicitCastExpr 0x7fb34107a910 <col:11> 'int' <LValueToRValue>
+    |       |       `-DeclRefExpr 0x7fb34107a8d0 <col:11> 'int' lvalue Var 0x7fb341078728 'i' 'int'
+    |       `-ParenExpr 0x7fb34107ab90 <col:17, col:34> 'int'
+    |         `-BinaryOperator 0x7fb34107ab68 <line:13:14, line:17:33> 'int' '<'
+    |           |-ImplicitCastExpr 0x7fb34107ab20 <line:13:14, line:17:24> 'int' <IntegralCast>
+    |           | `-ImplicitCastExpr 0x7fb34107ab08 <line:13:14, line:17:24> 'unsigned char' <LValueToRValue>
+    |           |   `-ArraySubscriptExpr 0x7fb34107aa38 <line:13:14, line:17:24> 'unsigned char' lvalue
+    |           |     |-ParenExpr 0x7fb34107a9d8 <line:13:14, col:36> 'unsigned char *'
+    |           |     | `-CStyleCastExpr 0x7fb34107a9b0 <col:15, col:33> 'unsigned char *' <BitCast>
+    |           |     |   `-UnaryOperator 0x7fb34107a978 <col:32, col:33> 'uvec *' prefix '&'
+    |           |     |     `-DeclRefExpr 0x7fb34107a950 <col:33> 'uvec':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fb341078880 'uc0' 'uvec':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+    |           |     `-ImplicitCastExpr 0x7fb34107aa20 <line:17:23> 'int' <LValueToRValue>
+    |           |       `-DeclRefExpr 0x7fb34107a9f8 <col:23> 'int' lvalue Var 0x7fb341078728 'i' 'int'
+    |           `-ImplicitCastExpr 0x7fb34107ab50 <col:28, col:33> 'int' <IntegralCast>
+    |             `-ImplicitCastExpr 0x7fb34107ab38 <col:28, col:33> 'unsigned char' <LValueToRValue>
+    |               `-ArraySubscriptExpr 0x7fb34107aae0 <col:28, col:33> 'unsigned char' lvalue
+    |                 |-ImplicitCastExpr 0x7fb34107aab0 <col:28> 'unsigned char *' <ArrayToPointerDecay>
+    |                 | `-DeclRefExpr 0x7fb34107aa60 <col:28> 'unsigned char [4]' lvalue Var 0x7fb341078b90 'uc1' 'unsigned char [4]'
+    |                 `-ImplicitCastExpr 0x7fb34107aac8 <col:32> 'int' <LValueToRValue>
+    |                   `-DeclRefExpr 0x7fb34107aa88 <col:32> 'int' lvalue Var 0x7fb341078728 'i' 'int'
+    `-ReturnStmt 0x7fb34107ace0 <line:19:5, col:12>
+      `-ImplicitCastExpr 0x7fb34107acc8 <col:12> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fb34107aca0 <col:12> 'int' lvalue Var 0x7fb3410787b8 'x' 'int'

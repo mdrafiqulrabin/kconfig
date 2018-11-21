@@ -1,0 +1,91 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['unsigned']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['short']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['char']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['char']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['char']
+  Decl: fn1, [], [], []
+    FuncDecl: 
+      TypeDecl: fn1, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        TypeDecl: fn2, []
+          IdentifierType: ['void']
+    Compound: 
+      UnaryOp: p++
+        ID: a
+      For: 
+        ID: a
+        FuncCall: 
+          ID: fn1
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 0
+  FuncDef: 
+    Decl: fn3, [], [], []
+      FuncDecl: 
+        TypeDecl: fn3, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: fn2
+      Label: l1
+        EmptyStatement: 
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['unsigned', 'char']
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['short']
+      Decl: h, [], [], []
+        PtrDecl: []
+          TypeDecl: h, []
+            IdentifierType: ['unsigned', 'char']
+        UnaryOp: &
+          ID: f
+      Assignment: +=
+        ID: g
+        TernaryOp: 
+          UnaryOp: &
+            ID: h
+          TernaryOp: 
+            ID: e
+            Assignment: =
+              ID: g
+              Constant: int, 1
+            Constant: int, 0
+          Constant: int, 0
+      Assignment: =
+        ID: d
+        ID: g
+      BinaryOp: *
+        ID: c
+        ID: f
+      If: 
+        BinaryOp: &
+          ID: d
+          BinaryOp: <
+            Assignment: %=
+              ID: b
+              UnaryOp: *
+                ID: h
+            BinaryOp: /
+              BinaryOp: *
+                ID: f
+                ID: d
+              Assignment: -=
+                ID: d
+                Constant: int, 0
+        Goto: l1

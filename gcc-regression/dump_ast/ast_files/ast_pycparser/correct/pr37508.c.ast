@@ -1,0 +1,135 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: foo1
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        Constant: int, 1
+  Decl: None, [], [], []
+    Struct: foo2
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned']
+        Constant: int, 1
+  FuncDef: 
+    Decl: test1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: foo1
+        TypeDecl: test1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        StructRef: ->
+          ID: x
+          ID: i
+      If: 
+        BinaryOp: ==
+          ID: i
+          Constant: int, 0
+        Return: 
+          Constant: int, 1
+        If: 
+          BinaryOp: ==
+            ID: i
+            UnaryOp: -
+              Constant: int, 1
+          Return: 
+            Constant: int, 1
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: test2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: foo2
+        TypeDecl: test2, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          StructRef: ->
+            ID: x
+            ID: i
+          Constant: int, 0
+        Return: 
+          Constant: int, 1
+        If: 
+          BinaryOp: ==
+            StructRef: ->
+              ID: x
+              ID: i
+            UnaryOp: -
+              Constant: int, 1
+          Return: 
+            Constant: int, 1
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: test3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: foo1
+        TypeDecl: test3, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          StructRef: ->
+            ID: x
+            ID: i
+          Constant: int, 0
+        Return: 
+          Constant: int, 1
+        If: 
+          BinaryOp: ==
+            StructRef: ->
+              ID: x
+              ID: i
+            Constant: int, 1
+          Return: 
+            Constant: int, 1
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: test4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: foo2
+        TypeDecl: test4, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'int']
+        StructRef: ->
+          ID: x
+          ID: i
+      If: 
+        BinaryOp: ==
+          ID: i
+          Constant: int, 0
+        Return: 
+          Constant: int, 1
+        If: 
+          BinaryOp: ==
+            ID: i
+            Constant: int, 1
+          Return: 
+            Constant: int, 1
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fdbf78124d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdbf7812a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdbf7812740 '__int128'
+|-TypedefDecl 0x7fdbf7812a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdbf7812760 'unsigned __int128'
+|-TypedefDecl 0x7fdbf7812d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdbf7812b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdbf7812ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdbf7812e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdbf7812dc0 'char *'
+|   `-BuiltinType 0x7fdbf7812560 'char'
+|-TypedefDecl 0x7fdbf78130c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdbf7813070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdbf7812ee0 'struct __va_list_tag'
+|     `-Record 0x7fdbf7812e58 '__va_list_tag'
+`-VarDecl 0x7fdbf78131a0 <c_files/pr56297_1.c:2:1, col:14> col:14 i 'int' register
+  `-AsmLabelAttr 0x7fdbf7039a00 <col:20> "esp"

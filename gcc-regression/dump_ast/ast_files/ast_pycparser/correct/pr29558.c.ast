@@ -1,0 +1,150 @@
+FileAST: 
+  FuncDef: 
+    Decl: stpi_unpack_16_1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: length, [], [], []
+            TypeDecl: length, []
+              IdentifierType: ['int']
+          Decl: out, [], [], []
+            PtrDecl: []
+              TypeDecl: out, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: bit, [], [], []
+            TypeDecl: bit, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: stpi_unpack_16_1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: tempin, [], [], []
+        TypeDecl: tempin, []
+          IdentifierType: ['unsigned', 'char']
+      Decl: temp, [], [], []
+        ArrayDecl: []
+          TypeDecl: temp, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 16
+      For: 
+        Assignment: =
+          ID: bit
+          Constant: int, 128
+        BinaryOp: >
+          ID: length
+          Constant: int, 0
+        UnaryOp: p--
+          ID: length
+        Compound: 
+          If: 
+            BinaryOp: &
+              ID: tempin
+              Constant: int, 128
+            Assignment: |=
+              ArrayRef: 
+                ID: temp
+                Constant: int, 0
+              ID: bit
+            Compound: 
+              Assignment: =
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: out
+                ArrayRef: 
+                  ID: temp
+                  Constant: int, 1
+              Assignment: =
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: out
+                ArrayRef: 
+                  ID: temp
+                  Constant: int, 2
+              Assignment: =
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: out
+                ArrayRef: 
+                  ID: temp
+                  Constant: int, 3
+              Assignment: =
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: out
+                ArrayRef: 
+                  ID: temp
+                  Constant: int, 4
+              Assignment: =
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: out
+                ArrayRef: 
+                  ID: temp
+                  Constant: int, 5
+              Assignment: =
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: out
+                ArrayRef: 
+                  ID: temp
+                  Constant: int, 6
+              Assignment: =
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: out
+                ArrayRef: 
+                  ID: temp
+                  Constant: int, 7
+              Assignment: =
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: out
+                ArrayRef: 
+                  ID: temp
+                  Constant: int, 9
+              Assignment: =
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: out
+                ArrayRef: 
+                  ID: temp
+                  Constant: int, 10
+              Assignment: =
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: out
+                ArrayRef: 
+                  ID: temp
+                  Constant: int, 11
+              Assignment: =
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: out
+                ArrayRef: 
+                  ID: temp
+                  Constant: int, 12
+              Assignment: =
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: out
+                ArrayRef: 
+                  ID: temp
+                  Constant: int, 13
+              Assignment: =
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: out
+                ArrayRef: 
+                  ID: temp
+                  Constant: int, 14
+              Assignment: =
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: out
+                ArrayRef: 
+                  ID: temp
+                  Constant: int, 15
+              FuncCall: 
+                ID: __builtin_memset
+                ExprList: 
+                  ID: temp
+                  Constant: int, 0
+                  Constant: int, 16

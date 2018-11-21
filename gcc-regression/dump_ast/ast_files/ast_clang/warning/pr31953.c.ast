@@ -1,0 +1,46 @@
+c_files/pr31953.c:5:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+toggle_hexedit_mode (struct WView *view)
+^
+c_files/pr31953.c:14:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+TranslationUnitDecl 0x7fd4af0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd4af026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd4af026740 '__int128'
+|-TypedefDecl 0x7fd4af026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd4af026760 'unsigned __int128'
+|-TypedefDecl 0x7fd4af026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd4af026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd4af026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd4af026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd4af026dc0 'char *'
+|   `-BuiltinType 0x7fd4af026560 'char'
+|-TypedefDecl 0x7fd4af0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd4af027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd4af026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd4af026e58 '__va_list_tag'
+|-RecordDecl 0x7fd4af027120 <c_files/pr31953.c:1:1, line:4:1> line:1:8 struct WView definition
+| `-FieldDecl 0x7fd4af825a18 <line:3:3, col:20> col:7 referenced hexedit_mode 'int'
+|   `-IntegerLiteral 0x7fd4af0271d0 <col:20> 'int' 1
+`-FunctionDecl 0x7fd4af825c18 <line:5:1, line:14:1> line:5:1 toggle_hexedit_mode 'int (struct WView *)'
+  |-ParmVarDecl 0x7fd4af825b10 <col:22, col:36> col:36 used view 'struct WView *'
+  `-CompoundStmt 0x7fd4af825f48 <line:6:1, line:14:1>
+    `-IfStmt 0x7fd4af825f10 <line:7:3, line:13:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fd4af825d70 <line:7:7, col:13> 'int' <LValueToRValue>
+      | `-MemberExpr 0x7fd4af825d38 <col:7, col:13> 'int' lvalue bitfield ->hexedit_mode 0x7fd4af825a18
+      |   `-ImplicitCastExpr 0x7fd4af825d20 <col:7> 'struct WView *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fd4af825cf8 <col:7> 'struct WView *' lvalue ParmVar 0x7fd4af825b10 'view' 'struct WView *'
+      |-CompoundStmt 0x7fd4af825d88 <line:8:5, line:9:5>
+      `-CompoundStmt 0x7fd4af825ef0 <line:11:5, line:13:5>
+        `-BinaryOperator 0x7fd4af825ec8 <line:12:7, col:35> 'int' '='
+          |-MemberExpr 0x7fd4af825de0 <col:7, col:13> 'int' lvalue bitfield ->hexedit_mode 0x7fd4af825a18
+          | `-ImplicitCastExpr 0x7fd4af825dc8 <col:7> 'struct WView *' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fd4af825da0 <col:7> 'struct WView *' lvalue ParmVar 0x7fd4af825b10 'view' 'struct WView *'
+          `-UnaryOperator 0x7fd4af825ea8 <col:28, col:35> 'int' prefix '!'
+            `-ImplicitCastExpr 0x7fd4af825e90 <col:29, col:35> 'int' <LValueToRValue>
+              `-MemberExpr 0x7fd4af825e58 <col:29, col:35> 'int' lvalue bitfield ->hexedit_mode 0x7fd4af825a18
+                `-ImplicitCastExpr 0x7fd4af825e40 <col:29> 'struct WView *' <LValueToRValue>
+                  `-DeclRefExpr 0x7fd4af825e18 <col:29> 'struct WView *' lvalue ParmVar 0x7fd4af825b10 'view' 'struct WView *'

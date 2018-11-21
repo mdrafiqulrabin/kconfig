@@ -1,0 +1,85 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    PtrDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['int']
+  Decl: f, [], [], []
+    ArrayDecl: []
+      PtrDecl: []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+      Constant: int, 1
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: j, [], [], []
+            PtrDecl: []
+              TypeDecl: j, []
+                IdentifierType: ['int']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['int']
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      For: 
+        ID: e
+        UnaryOp: p++
+          ID: e
+        Compound: 
+          If: 
+            BinaryOp: >
+              ID: g
+              Constant: int, 0
+            Compound: 
+              Assignment: =
+                ID: d
+                ID: j
+              Return: 
+          If: 
+            UnaryOp: !
+              ID: h
+            While: 
+              ID: g
+              EmptyStatement: 
+          While: 
+            BinaryOp: <
+              ID: h
+              Constant: int, 1
+            If: 
+              ID: a
+              Compound: 
+                FuncCall: 
+                  ID: fn1
+                  ExprList: 
+                    UnaryOp: &
+                      ID: h
+                Assignment: =
+                  ID: h
+                  Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ID: f
+              ID: e
+            UnaryOp: &
+              ID: c
+      While: 
+        Constant: int, 1
+        EmptyStatement: 

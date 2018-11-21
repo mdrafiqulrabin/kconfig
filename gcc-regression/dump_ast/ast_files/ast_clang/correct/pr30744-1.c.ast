@@ -1,0 +1,74 @@
+TranslationUnitDecl 0x7fb2440264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb244026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb244026740 '__int128'
+|-TypedefDecl 0x7fb244026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb244026760 'unsigned __int128'
+|-TypedefDecl 0x7fb244026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb244026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb244026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb244026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb244026dc0 'char *'
+|   `-BuiltinType 0x7fb244026560 'char'
+|-TypedefDecl 0x7fb2440270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb244027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb244026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb244026e58 '__va_list_tag'
+|-TypedefDecl 0x7fb244027138 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stddef.h:51:1, col:26> col:26 ptrdiff_t 'long'
+| `-BuiltinType 0x7fb2440265e0 'long'
+|-TypedefDecl 0x7fb2440271a8 <line:62:1, col:23> col:23 size_t 'unsigned long'
+| `-BuiltinType 0x7fb244026680 'unsigned long'
+|-TypedefDecl 0x7fb24482a018 <line:90:1, col:24> col:24 wchar_t 'int'
+| `-BuiltinType 0x7fb2440265c0 'int'
+|-TypedefDecl 0x7fb24482a088 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/__stddef_max_align_t.h:32:1, col:21> col:21 max_align_t 'long double'
+| `-BuiltinType 0x7fb244026700 'long double'
+|-TypedefDecl 0x7fb24482a0f8 <c_files/pr30744-1.c:5:1, col:25> col:25 referenced my_intptr_t 'long'
+| `-BuiltinType 0x7fb2440265e0 'long'
+|-RecordDecl 0x7fb24482a150 <line:7:9, line:9:1> line:7:9 struct definition
+| `-FieldDecl 0x7fb24482a230 <line:8:3, col:15> col:15 referenced unique 'my_intptr_t':'long'
+|-TypedefDecl 0x7fb24482a2d0 <line:7:1, line:9:3> col:3 referenced G 'struct G':'G'
+| `-ElaboratedType 0x7fb24482a280 'struct G' sugar
+|   `-RecordType 0x7fb24482a1e0 'G'
+|     `-Record 0x7fb24482a150 ''
+`-FunctionDecl 0x7fb24482a4d0 <line:11:1, line:17:1> line:11:6 r 'void (G *)'
+  |-ParmVarDecl 0x7fb24482a3c8 <col:8, col:11> col:11 used n 'G *'
+  `-CompoundStmt 0x7fb24482acc0 <line:12:1, line:17:1>
+    |-DeclStmt 0x7fb24482a620 <line:13:3, col:16>
+    | `-VarDecl 0x7fb24482a5c0 <col:3, col:15> col:15 used p 'my_intptr_t':'long'
+    `-IfStmt 0x7fb24482ac88 <line:14:3, line:16:3>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fb24482a910 <line:14:7, col:60> 'int' '!='
+      | |-ParenExpr 0x7fb24482a858 <col:7, col:45> 'G *'
+      | | `-CStyleCastExpr 0x7fb24482a830 <col:8, col:44> 'G *' <BitCast>
+      | |   `-ParenExpr 0x7fb24482a810 <col:14, col:44> 'void *'
+      | |     `-CStyleCastExpr 0x7fb24482a7a8 <col:15, col:43> 'void *' <IntegralToPointer>
+      | |       `-ParenExpr 0x7fb24482a788 <col:23, col:43> 'my_intptr_t':'long'
+      | |         `-ParenExpr 0x7fb24482a720 <col:24, col:42> 'my_intptr_t':'long'
+      | |           `-UnaryOperator 0x7fb24482a700 <col:25, col:41> 'my_intptr_t':'long' prefix '~'
+      | |             `-CStyleCastExpr 0x7fb24482a6d8 <col:26, col:41> 'my_intptr_t':'long' <NoOp>
+      | |               `-ImplicitCastExpr 0x7fb24482a6c0 <col:39, col:41> 'my_intptr_t':'long' <LValueToRValue>
+      | |                 `-ParenExpr 0x7fb24482a6a0 <col:39, col:41> 'my_intptr_t':'long' lvalue
+      | |                   `-DeclRefExpr 0x7fb24482a638 <col:40> 'my_intptr_t':'long' lvalue Var 0x7fb24482a5c0 'p' 'my_intptr_t':'long'
+      | `-ImplicitCastExpr 0x7fb24482a8f8 <col:50, col:60> 'G *' <BitCast>
+      |   `-ParenExpr 0x7fb24482a8d8 <col:50, col:60> 'void *'
+      |     `-CStyleCastExpr 0x7fb24482a8b0 <col:51, col:59> 'void *' <NullToPointer>
+      |       `-IntegerLiteral 0x7fb24482a878 <col:59> 'int' 0
+      |-CompoundStmt 0x7fb24482ac68 <col:63, line:16:3>
+      | `-BinaryOperator 0x7fb24482ac40 <line:15:5, col:58> 'my_intptr_t':'long' '='
+      |   |-MemberExpr 0x7fb24482ab78 <col:5, col:46> 'my_intptr_t':'long' lvalue ->unique 0x7fb24482a230
+      |   | `-ParenExpr 0x7fb24482ab58 <col:5, col:43> 'G *'
+      |   |   `-CStyleCastExpr 0x7fb24482ab30 <col:6, col:42> 'G *' <BitCast>
+      |   |     `-ParenExpr 0x7fb24482ab10 <col:12, col:42> 'void *'
+      |   |       `-CStyleCastExpr 0x7fb24482aaa8 <col:13, col:41> 'void *' <IntegralToPointer>
+      |   |         `-ParenExpr 0x7fb24482aa88 <col:21, col:41> 'my_intptr_t':'long'
+      |   |           `-ParenExpr 0x7fb24482aa20 <col:22, col:40> 'my_intptr_t':'long'
+      |   |             `-UnaryOperator 0x7fb24482aa00 <col:23, col:39> 'my_intptr_t':'long' prefix '~'
+      |   |               `-CStyleCastExpr 0x7fb24482a9d8 <col:24, col:39> 'my_intptr_t':'long' <NoOp>
+      |   |                 `-ImplicitCastExpr 0x7fb24482a9c0 <col:37, col:39> 'my_intptr_t':'long' <LValueToRValue>
+      |   |                   `-ParenExpr 0x7fb24482a9a0 <col:37, col:39> 'my_intptr_t':'long' lvalue
+      |   |                     `-DeclRefExpr 0x7fb24482a938 <col:38> 'my_intptr_t':'long' lvalue Var 0x7fb24482a5c0 'p' 'my_intptr_t':'long'
+      |   `-ImplicitCastExpr 0x7fb24482ac28 <col:55, col:58> 'my_intptr_t':'long' <LValueToRValue>
+      |     `-MemberExpr 0x7fb24482abf0 <col:55, col:58> 'my_intptr_t':'long' lvalue ->unique 0x7fb24482a230
+      |       `-ImplicitCastExpr 0x7fb24482abd8 <col:55> 'G *' <LValueToRValue>
+      |         `-DeclRefExpr 0x7fb24482abb0 <col:55> 'G *' lvalue ParmVar 0x7fb24482a3c8 'n' 'G *'
+      `-<<<NULL>>>

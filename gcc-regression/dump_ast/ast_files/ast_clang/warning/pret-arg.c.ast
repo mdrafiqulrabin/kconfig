@@ -1,0 +1,38 @@
+c_files/pret-arg.c:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+foo (a, b, c, d, e, f, g, h, i, j, xx)
+^
+1 warning generated.
+TranslationUnitDecl 0x7fab450254d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fab45025a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fab45025740 '__int128'
+|-TypedefDecl 0x7fab45025a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fab45025760 'unsigned __int128'
+|-TypedefDecl 0x7fab45025d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fab45025b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fab45025ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fab45025e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fab45025dc0 'char *'
+|   `-BuiltinType 0x7fab45025560 'char'
+|-TypedefDecl 0x7fab450260c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fab45026070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fab45025ee0 'struct __va_list_tag'
+|     `-Record 0x7fab45025e58 '__va_list_tag'
+`-FunctionDecl 0x7fab440269a8 <c_files/pret-arg.c:1:1, line:5:1> line:1:1 foo 'int (int, int, int, int, int, int, int, int, int, int, double)'
+  |-ParmVarDecl 0x7fab44026838 <col:6> col:6 a 'int'
+  |-ParmVarDecl 0x7fab440267c0 <col:9> col:9 b 'int'
+  |-ParmVarDecl 0x7fab44026748 <col:12> col:12 c 'int'
+  |-ParmVarDecl 0x7fab440266d0 <col:15> col:15 d 'int'
+  |-ParmVarDecl 0x7fab44026658 <col:18> col:18 e 'int'
+  |-ParmVarDecl 0x7fab440265e0 <col:21> col:21 f 'int'
+  |-ParmVarDecl 0x7fab44026568 <col:24> col:24 g 'int'
+  |-ParmVarDecl 0x7fab440264f0 <col:27> col:27 h 'int'
+  |-ParmVarDecl 0x7fab44026478 <col:30> col:30 i 'int'
+  |-ParmVarDecl 0x7fab44026400 <col:33> col:33 j 'int'
+  |-ParmVarDecl 0x7fab45026138 <line:2:6, col:13> col:13 used xx 'double'
+  `-CompoundStmt 0x7fab44026b90 <line:3:1, line:5:1>
+    `-ReturnStmt 0x7fab44026b78 <line:4:3, col:15>
+      `-ImplicitCastExpr 0x7fab44026b60 <col:10, col:15> 'int' <FloatingToIntegral>
+        `-BinaryOperator 0x7fab44026b38 <col:10, col:15> 'double' '+'
+          |-ImplicitCastExpr 0x7fab44026b20 <col:10> 'double' <LValueToRValue>
+          | `-DeclRefExpr 0x7fab44026ad8 <col:10> 'double' lvalue ParmVar 0x7fab45026138 'xx' 'double'
+          `-FloatingLiteral 0x7fab44026b00 <col:15> 'double' 1.234500e+00

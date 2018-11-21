@@ -1,0 +1,53 @@
+c_files/pr84425.c:12:16: warning: unknown attribute 'optimize' ignored [-Wunknown-attributes]
+__attribute__((optimize(0))) void
+               ^
+1 warning generated.
+TranslationUnitDecl 0x7fbfb1025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbfb1026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbfb1025d40 '__int128'
+|-TypedefDecl 0x7fbfb1026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbfb1025d60 'unsigned __int128'
+|-TypedefDecl 0x7fbfb1026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbfb1026170 'struct __NSConstantString_tag'
+|   `-Record 0x7fbfb10260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbfb1026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbfb10263c0 'char *'
+|   `-BuiltinType 0x7fbfb1025b60 'char'
+|-TypedefDecl 0x7fbfb10266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbfb1026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbfb10264e0 'struct __va_list_tag'
+|     `-Record 0x7fbfb1026458 '__va_list_tag'
+|-FunctionDecl 0x7fbfb1825a00 <c_files/pr84425.c:3:1, col:14> col:6 used bar 'void (int)'
+| `-ParmVarDecl 0x7fbfb1026738 <col:11> col:14 'int'
+|-FunctionDecl 0x7fbfb1825b80 <line:5:1, line:10:1> line:6:1 used foo 'void (int)'
+| |-ParmVarDecl 0x7fbfb1825af8 <col:6, col:10> col:10 used x 'int'
+| `-CompoundStmt 0x7fbfb1825dc0 <line:7:1, line:10:1>
+|   `-IfStmt 0x7fbfb1825d88 <line:8:3, line:9:11>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fbfb1825c80 <line:8:7, col:11> 'int' '<'
+|     | |-ImplicitCastExpr 0x7fbfb1825c68 <col:7> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fbfb1825c20 <col:7> 'int' lvalue ParmVar 0x7fbfb1825af8 'x' 'int'
+|     | `-IntegerLiteral 0x7fbfb1825c48 <col:11> 'int' 5
+|     |-CallExpr 0x7fbfb1825d40 <line:9:5, col:11> 'void'
+|     | |-ImplicitCastExpr 0x7fbfb1825d28 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7fbfb1825ca8 <col:5> 'void (int)' Function 0x7fbfb1825a00 'bar' 'void (int)'
+|     | `-ImplicitCastExpr 0x7fbfb1825d70 <col:10> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fbfb1825cd0 <col:10> 'int' lvalue ParmVar 0x7fbfb1825af8 'x' 'int'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fbfb1825ea0 prev 0x7fbfb1825a00 <line:12:1, line:17:1> line:13:1 used bar 'void (int)'
+  |-ParmVarDecl 0x7fbfb1825e18 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fbfb18260b0 <line:14:1, line:17:1>
+    `-IfStmt 0x7fbfb1826078 <line:15:3, line:16:11>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fbfb1825fa0 <line:15:7, col:11> 'int' '>'
+      | |-ImplicitCastExpr 0x7fbfb1825f88 <col:7> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fbfb1825f40 <col:7> 'int' lvalue ParmVar 0x7fbfb1825e18 'x' 'int'
+      | `-IntegerLiteral 0x7fbfb1825f68 <col:11> 'int' 10
+      |-CallExpr 0x7fbfb1826030 <line:16:5, col:11> 'void'
+      | |-ImplicitCastExpr 0x7fbfb1826018 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7fbfb1825fc8 <col:5> 'void (int)' Function 0x7fbfb1825b80 'foo' 'void (int)'
+      | `-ImplicitCastExpr 0x7fbfb1826060 <col:10> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fbfb1825ff0 <col:10> 'int' lvalue ParmVar 0x7fbfb1825e18 'x' 'int'
+      `-<<<NULL>>>

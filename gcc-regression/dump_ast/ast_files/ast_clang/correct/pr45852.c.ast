@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fe6d50264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe6d5026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe6d5026740 '__int128'
+|-TypedefDecl 0x7fe6d5026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe6d5026760 'unsigned __int128'
+|-TypedefDecl 0x7fe6d5026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe6d5026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe6d5026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe6d5026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe6d5026dc0 'char *'
+|   `-BuiltinType 0x7fe6d5026560 'char'
+|-TypedefDecl 0x7fe6d50270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe6d5027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe6d5026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe6d5026e58 '__va_list_tag'
+|-RecordDecl 0x7fe6d5027120 <c_files/pr45852.c:6:1, col:19> col:8 struct S definition
+| `-FieldDecl 0x7fe6d5825a00 <col:12, col:16> col:16 s 'int'
+|-VarDecl 0x7fe6d5825b10 <line:8:1, col:73> col:19 used globvar 'volatile struct S':'volatile struct S' cinit
+| |-InitListExpr 0x7fe6d5825c80 <col:68, col:73> 'struct S':'struct S'
+| | `-UnaryOperator 0x7fe6d5825c18 <col:70, col:71> 'int' prefix '-'
+| |   `-IntegerLiteral 0x7fe6d5825bf8 <col:71> 'int' 6
+| `-VisibilityAttr 0x7fe6d5825b70 <col:42, col:62> Hidden
+`-FunctionDecl 0x7fe6d5825d90 <line:10:1, line:14:1> line:11:1 foo 'void (void)'
+  `-CompoundStmt 0x7fe6d5825eb8 <line:12:1, line:14:1>
+    `-BinaryOperator 0x7fe6d5825e90 <line:13:3, col:13> 'struct S':'struct S' '='
+      |-DeclRefExpr 0x7fe6d5825e28 <col:3> 'volatile struct S':'volatile struct S' lvalue Var 0x7fe6d5825b10 'globvar' 'volatile struct S':'volatile struct S'
+      `-ImplicitCastExpr 0x7fe6d5825e78 <col:13> 'struct S':'struct S' <LValueToRValue>
+        `-DeclRefExpr 0x7fe6d5825e50 <col:13> 'volatile struct S':'volatile struct S' lvalue Var 0x7fe6d5825b10 'globvar' 'volatile struct S':'volatile struct S'

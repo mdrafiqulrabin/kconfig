@@ -1,0 +1,85 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['short']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['short']
+  Decl: p, [], [], []
+    PtrDecl: []
+      TypeDecl: p, []
+        IdentifierType: ['short']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      If: 
+        ID: c
+        Label: lbl1
+          For: 
+            Assignment: =
+              ID: a
+              Constant: int, 0
+            BinaryOp: <
+              ID: a
+              Constant: int, 1
+            UnaryOp: p++
+              ID: a
+            Compound: 
+              For: 
+                Assignment: =
+                  ID: c
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: c
+                  Constant: int, 1
+                UnaryOp: p++
+                  ID: c
+                Compound: 
+                  Goto: lbl1
+                  While: 
+                    UnaryOp: *
+                      UnaryOp: p++
+                        ID: p
+                    Label: lbl2
+                      EmptyStatement: 
+      For: 
+        UnaryOp: p++
+          ID: b
+        Compound: 
+          If: 
+            ID: c
+            Goto: lbl2
+          Label: lbl3
+            For: 
+              Assignment: =
+                ID: c
+                Constant: int, 0
+              BinaryOp: <
+                ID: c
+                Constant: int, 9
+              UnaryOp: p++
+                ID: c
+              For: 
+                Assignment: =
+                  ID: c
+                  UnaryOp: -
+                    Constant: int, 17
+                BinaryOp: <
+                  ID: c
+                  Constant: int, 2
+                UnaryOp: p++
+                  ID: c
+                If: 
+                  UnaryOp: *
+                    ID: p
+                  Goto: lbl3

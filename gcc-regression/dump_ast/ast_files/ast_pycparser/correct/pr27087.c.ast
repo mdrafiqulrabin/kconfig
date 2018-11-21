@@ -1,0 +1,54 @@
+FileAST: 
+  Decl: ptbl, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: ptbl, []
+        IdentifierType: ['int']
+      Constant: int, 4
+  Decl: ctbl, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: ctbl, []
+        IdentifierType: ['int']
+      Constant: int, 4
+  FuncDef: 
+    Decl: doViews, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: doViews, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        PtrDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+        ID: ctbl
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['int']
+        ID: ptbl
+      While: 
+        Constant: int, 1
+        Compound: 
+          UnaryOp: p++
+            ID: p
+          UnaryOp: p++
+            ID: c
+          If: 
+            UnaryOp: *
+              ID: p
+            Compound: 
+              If: 
+                BinaryOp: ==
+                  ID: c
+                  ID: p
+                Compound: 
+                  If: 
+                    UnaryOp: *
+                      ID: c
+                    Return: 
+                Return: 
+      FuncCall: 
+        ID: g

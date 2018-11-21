@@ -1,0 +1,22 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['long']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['float']
+      Assignment: =
+        ID: x
+        ID: i
+      Return: 
+        FuncCall: 
+          ID: __builtin_lroundf
+          ExprList: 
+            ID: x

@@ -1,0 +1,56 @@
+FileAST: 
+  Typedef: U032, [], ['typedef']
+    TypeDecl: U032, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: RivaBitmap, ['volatile'], ['typedef']
+    TypeDecl: RivaBitmap, ['volatile']
+      Struct: X
+        Decl: Monochrome, [], [], []
+          ArrayDecl: []
+            TypeDecl: Monochrome, []
+              IdentifierType: ['U032']
+            Constant: int, 1
+        Decl: UnclippedRectangle, [], [], []
+          ArrayDecl: []
+            TypeDecl: UnclippedRectangle, []
+              Struct: None
+                Decl: WidthHeight, [], [], []
+                  TypeDecl: WidthHeight, []
+                    IdentifierType: ['U032']
+            Constant: int, 1
+  Decl: writel, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: writel, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: rivafb_fillrect, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: bm, [], [], []
+            PtrDecl: []
+              TypeDecl: bm, []
+                IdentifierType: ['RivaBitmap']
+        TypeDecl: rivafb_fillrect, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: writel
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            UnaryOp: &
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: bm
+                    ID: UnclippedRectangle
+                  Constant: int, 0
+                ID: WidthHeight

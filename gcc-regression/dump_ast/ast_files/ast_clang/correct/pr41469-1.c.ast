@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fa3ea8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa3ea826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa3ea826740 '__int128'
+|-TypedefDecl 0x7fa3ea826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa3ea826760 'unsigned __int128'
+|-TypedefDecl 0x7fa3ea826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa3ea826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa3ea826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa3ea826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa3ea826dc0 'char *'
+|   `-BuiltinType 0x7fa3ea826560 'char'
+|-TypedefDecl 0x7fa3ea8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa3ea827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa3ea826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa3ea826e58 '__va_list_tag'
+|-FunctionDecl 0x7fa3eb025a00 <c_files/pr41469-1.c:4:1, col:17> col:6 used af 'void (void *)'
+| `-ParmVarDecl 0x7fa3ea827138 <col:10, col:16> col:16 a 'void *'
+`-FunctionDecl 0x7fa3eb025ba0 <line:6:1, line:12:1> line:7:1 bf 'void (void)'
+  `-CompoundStmt 0x7fa3eb025ef0 <line:8:1, line:12:1>
+    |-DeclStmt 0x7fa3eb025cd0 <line:9:3, col:12>
+    | `-VarDecl 0x7fa3eb025c50 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x7fa3eb025cb0 <col:11> 'int' 1
+    |-DeclStmt 0x7fa3eb025de8 <line:10:3, col:12>
+    | `-VarDecl 0x7fa3eb025d88 <col:3, col:11> col:8 used v 'char [i]'
+    `-CallExpr 0x7fa3eb025e90 <line:11:3, col:8> 'void'
+      |-ImplicitCastExpr 0x7fa3eb025e78 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa3eb025e00 <col:3> 'void (void *)' Function 0x7fa3eb025a00 'af' 'void (void *)'
+      `-ImplicitCastExpr 0x7fa3eb025ed8 <col:7> 'void *' <BitCast>
+        `-ImplicitCastExpr 0x7fa3eb025ec0 <col:7> 'char *' <ArrayToPointerDecay>
+          `-DeclRefExpr 0x7fa3eb025e28 <col:7> 'char [i]' lvalue Var 0x7fa3eb025d88 'v' 'char [i]'

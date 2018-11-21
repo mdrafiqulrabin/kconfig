@@ -1,0 +1,37 @@
+FileAST: 
+  Decl: a, [], ['extern'], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], ['extern'], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: k, [], ['extern'], []
+    TypeDecl: k, []
+      IdentifierType: ['int']
+  Decl: q, [], ['extern'], []
+    TypeDecl: q, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: a
+        Compound: 
+          While: 
+            ID: q
+            Compound: 
+              Label: lbl
+                If: 
+                  ID: a
+                  Compound: 
+                    Assignment: =
+                      ID: a
+                      Constant: int, 0
+                    Goto: lbl
+          Assignment: =
+            ID: b
+            ID: k
+      Goto: lbl

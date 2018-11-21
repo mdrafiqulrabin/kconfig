@@ -1,0 +1,64 @@
+TranslationUnitDecl 0x7fcc908264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcc90826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcc90826740 '__int128'
+|-TypedefDecl 0x7fcc90826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcc90826760 'unsigned __int128'
+|-TypedefDecl 0x7fcc90826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcc90826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcc90826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcc90826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcc90826dc0 'char *'
+|   `-BuiltinType 0x7fcc90826560 'char'
+|-TypedefDecl 0x7fcc908270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcc90827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcc90826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcc90826e58 '__va_list_tag'
+|-FunctionDecl 0x7fcc91025a00 <c_files/pr82556.c:3:1, col:16> col:12 used foo 'int ()' extern
+|-RecordDecl 0x7fcc91025ad8 <line:4:9, line:8:1> line:4:9 struct definition
+| |-FieldDecl 0x7fcc91025b90 <line:5:3, col:8> col:8 id 'char'
+| |-FieldDecl 0x7fcc91025bf0 <line:6:3, col:17> col:17 referenced fork_flags 'unsigned char'
+| `-FieldDecl 0x7fcc91025c50 <line:7:3, col:9> col:9 data_length 'short'
+|-TypedefDecl 0x7fcc91025cf0 <line:4:1, line:8:3> col:3 referenced Header 'struct Header':'Header'
+| `-ElaboratedType 0x7fcc91025ca0 'struct Header' sugar
+|   `-RecordType 0x7fcc91025b60 'Header'
+|     `-Record 0x7fcc91025ad8 ''
+|-VarDecl 0x7fcc91025d78 <line:9:1, col:5> col:5 used a 'int'
+|-FunctionDecl 0x7fcc91025e28 <line:10:1, line:19:1> line:10:6 X 'void ()'
+| `-CompoundStmt 0x7fcc910267b0 <col:10, line:19:1>
+|   `-DoStmt 0x7fcc91026790 <line:11:3, line:18:13>
+|     |-CompoundStmt 0x7fcc91026730 <line:11:6, line:18:3>
+|     | |-DeclStmt 0x7fcc91025f38 <line:12:5, col:12>
+|     | | `-VarDecl 0x7fcc91025ed8 <col:5, col:11> col:11 used b 'char *'
+|     | |-DeclStmt 0x7fcc91025fe0 <line:13:5, col:13>
+|     | | `-VarDecl 0x7fcc91025f80 <col:5, col:12> col:12 used c 'Header':'Header'
+|     | |-IfStmt 0x7fcc91026148 <line:14:5, line:15:23>
+|     | | |-<<<NULL>>>
+|     | | |-<<<NULL>>>
+|     | | |-ImplicitCastExpr 0x7fcc91026020 <line:14:9> 'int' <LValueToRValue>
+|     | | | `-DeclRefExpr 0x7fcc91025ff8 <col:9> 'int' lvalue Var 0x7fcc91025d78 'a' 'int'
+|     | | |-CompoundAssignOperator 0x7fcc910260b8 <line:15:7, col:23> 'unsigned char' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|     | | | |-MemberExpr 0x7fcc91026060 <col:7, col:9> 'unsigned char' lvalue .fork_flags 0x7fcc91025bf0
+|     | | | | `-DeclRefExpr 0x7fcc91026038 <col:7> 'Header':'Header' lvalue Var 0x7fcc91025f80 'c' 'Header':'Header'
+|     | | | `-IntegerLiteral 0x7fcc91026098 <col:23> 'int' 1
+|     | | `-<<<NULL>>>
+|     | |-CallExpr 0x7fcc910265b0 <line:16:5, col:68> 'void *'
+|     | | |-ImplicitCastExpr 0x7fcc91026598 <col:5> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|     | | | `-DeclRefExpr 0x7fcc91026410 <col:5> '<builtin fn type>' Function 0x7fcc910261f8 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|     | | |-ImplicitCastExpr 0x7fcc91026608 <col:22> 'void *' <BitCast>
+|     | | | `-ImplicitCastExpr 0x7fcc910265f0 <col:22> 'char *' <LValueToRValue>
+|     | | |   `-DeclRefExpr 0x7fcc91026438 <col:22> 'char *' lvalue Var 0x7fcc91025ed8 'b' 'char *'
+|     | | |-ImplicitCastExpr 0x7fcc91026620 <col:25, col:26> 'const void *' <BitCast>
+|     | | | `-UnaryOperator 0x7fcc910264e8 <col:25, col:26> 'Header *' prefix '&'
+|     | | |   `-DeclRefExpr 0x7fcc91026460 <col:26> 'Header':'Header' lvalue Var 0x7fcc91025f80 'c' 'Header':'Header'
+|     | | `-OffsetOfExpr 0x7fcc91026518 <col:29, col:67> 'unsigned long'
+|     | `-CompoundAssignOperator 0x7fcc910266f8 <line:17:5, col:14> 'char *' '+=' ComputeLHSTy='char *' ComputeResultTy='char *'
+|     |   |-DeclRefExpr 0x7fcc91026638 <col:5> 'char *' lvalue Var 0x7fcc91025ed8 'b' 'char *'
+|     |   `-CallExpr 0x7fcc910266d0 <col:10, col:14> 'int'
+|     |     `-ImplicitCastExpr 0x7fcc910266b8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|     |       `-DeclRefExpr 0x7fcc91026660 <col:10> 'int ()' Function 0x7fcc91025a00 'foo' 'int ()'
+|     `-IntegerLiteral 0x7fcc91026770 <line:18:12> 'int' 1
+`-FunctionDecl 0x7fcc910261f8 <line:16:5> col:5 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7fcc91026290 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fcc910262f0 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fcc91026350 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fcc910263c8 <col:5> Implicit

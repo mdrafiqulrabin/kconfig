@@ -1,0 +1,180 @@
+c_files/pr55019.c:32:24: error: use of unknown builtin '__builtin_complex' [-Wimplicit-function-declaration]
+  _Complex double cr = __builtin_complex (a, b);
+                       ^
+c_files/pr55019.c:33:31: error: initializer element is not a compile-time constant
+  static _Complex double cs = __builtin_complex (0.0, 0.0);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7ffafa8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffafa826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffafa826740 '__int128'
+|-TypedefDecl 0x7ffafa826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffafa826760 'unsigned __int128'
+|-TypedefDecl 0x7ffafa826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffafa826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffafa826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffafa826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffafa826dc0 'char *'
+|   `-BuiltinType 0x7ffafa826560 'char'
+|-TypedefDecl 0x7ffafa8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffafa827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffafa826ee0 'struct __va_list_tag'
+|     `-Record 0x7ffafa826e58 '__va_list_tag'
+|-FunctionDecl 0x7ffafb025a38 <c_files/pr55019.c:5:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7ffafb025ad0 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7ffafb025b38 prev 0x7ffafb025a38 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7ffafa827138 <col:19> col:22 'int'
+|-FunctionDecl 0x7ffafb025cd0 <line:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ffafb025d68 prev 0x7ffafb025cd0 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ffafb025f60 <line:8:1, line:25:1> line:9:1 used compare 'void (double, double)'
+| |-ParmVarDecl 0x7ffafb025e18 <col:10, col:17> col:17 used a 'double'
+| |-ParmVarDecl 0x7ffafb025e90 <col:20, col:27> col:27 used b 'double'
+| `-CompoundStmt 0x7ffafb027ea0 <line:10:1, line:25:1>
+|   `-DoStmt 0x7ffafb027e80 <line:11:3, line:24:15>
+|     |-CompoundStmt 0x7ffafb027e20 <line:12:5, line:24:5>
+|     | |-DeclStmt 0x7ffafb026400 <line:13:7, col:55>
+|     | | `-VarDecl 0x7ffafb026060 <col:7, col:54> col:14 used s1 'double' cinit
+|     | |   `-CallExpr 0x7ffafb0263b0 <col:19, col:54> 'double'
+|     | |     |-ImplicitCastExpr 0x7ffafb026398 <col:19> 'double (*)(double, double)' <BuiltinFnToFnPtr>
+|     | |     | `-DeclRefExpr 0x7ffafb0262c0 <col:19> '<builtin fn type>' Function 0x7ffafb026100 '__builtin_copysign' 'double (double, double)'
+|     | |     |-CStyleCastExpr 0x7ffafb026320 <col:39, col:48> 'double' <NoOp>
+|     | |     | `-FloatingLiteral 0x7ffafb0262e8 <col:48> 'double' 1.000000e+00
+|     | |     `-ImplicitCastExpr 0x7ffafb0263e8 <col:53> 'double' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7ffafb026348 <col:53> 'double' lvalue ParmVar 0x7ffafb025e18 'a' 'double'
+|     | |-DeclStmt 0x7ffafb0265a8 <line:14:7, col:55>
+|     | | `-VarDecl 0x7ffafb026430 <col:7, col:54> col:14 used s2 'double' cinit
+|     | |   `-CallExpr 0x7ffafb026558 <col:19, col:54> 'double'
+|     | |     |-ImplicitCastExpr 0x7ffafb026540 <col:19> 'double (*)(double, double)' <BuiltinFnToFnPtr>
+|     | |     | `-DeclRefExpr 0x7ffafb026490 <col:19> '<builtin fn type>' Function 0x7ffafb026100 '__builtin_copysign' 'double (double, double)'
+|     | |     |-CStyleCastExpr 0x7ffafb0264f0 <col:39, col:48> 'double' <NoOp>
+|     | |     | `-FloatingLiteral 0x7ffafb0264b8 <col:48> 'double' 1.000000e+00
+|     | |     `-ImplicitCastExpr 0x7ffafb026590 <col:53> 'double' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7ffafb026518 <col:53> 'double' lvalue ParmVar 0x7ffafb025e90 'b' 'double'
+|     | |-IfStmt 0x7ffafb0266f8 <line:16:7, line:17:16>
+|     | | |-<<<NULL>>>
+|     | | |-<<<NULL>>>
+|     | | |-BinaryOperator 0x7ffafb026640 <line:16:11, col:17> 'int' '!='
+|     | | | |-ImplicitCastExpr 0x7ffafb026610 <col:11> 'double' <LValueToRValue>
+|     | | | | `-DeclRefExpr 0x7ffafb0265c0 <col:11> 'double' lvalue Var 0x7ffafb026060 's1' 'double'
+|     | | | `-ImplicitCastExpr 0x7ffafb026628 <col:17> 'double' <LValueToRValue>
+|     | | |   `-DeclRefExpr 0x7ffafb0265e8 <col:17> 'double' lvalue Var 0x7ffafb026430 's2' 'double'
+|     | | |-CallExpr 0x7ffafb0266d0 <line:17:9, col:16> 'void'
+|     | | | `-ImplicitCastExpr 0x7ffafb0266b8 <col:9> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | | |   `-DeclRefExpr 0x7ffafb026668 <col:9> 'void (void) __attribute__((noreturn))' Function 0x7ffafb025d68 'abort' 'void (void) __attribute__((noreturn))'
+|     | | `-<<<NULL>>>
+|     | |-IfStmt 0x7ffafb027b40 <line:19:7, line:20:16>
+|     | | |-<<<NULL>>>
+|     | | |-<<<NULL>>>
+|     | | |-BinaryOperator 0x7ffafb027ab0 <line:19:11, col:66> 'int' '!='
+|     | | | |-ParenExpr 0x7ffafb026970 <col:11, col:36> 'int'
+|     | | | | `-BinaryOperator 0x7ffafb026948 <col:12, col:35> 'int' '!='
+|     | | | |   |-CallExpr 0x7ffafb0268e0 <col:12, col:30> 'int'
+|     | | | |   | |-ImplicitCastExpr 0x7ffafb0268c8 <col:12> 'int (*)()' <BuiltinFnToFnPtr>
+|     | | | |   | | `-DeclRefExpr 0x7ffafb026848 <col:12> '<builtin fn type>' Function 0x7ffafb026758 '__builtin_isnan' 'int ()'
+|     | | | |   | `-ImplicitCastExpr 0x7ffafb026910 <col:29> 'double' <LValueToRValue>
+|     | | | |   |   `-DeclRefExpr 0x7ffafb026870 <col:29> 'double' lvalue ParmVar 0x7ffafb025e18 'a' 'double'
+|     | | | |   `-IntegerLiteral 0x7ffafb026928 <col:35> 'int' 0
+|     | | | `-ParenExpr 0x7ffafb027a90 <col:41, col:66> 'int'
+|     | | |   `-BinaryOperator 0x7ffafb027a68 <col:42, col:65> 'int' '!='
+|     | | |     |-CallExpr 0x7ffafb027a00 <col:42, col:60> 'int'
+|     | | |     | |-ImplicitCastExpr 0x7ffafb0269e0 <col:42> 'int (*)()' <BuiltinFnToFnPtr>
+|     | | |     | | `-DeclRefExpr 0x7ffafb026990 <col:42> '<builtin fn type>' Function 0x7ffafb026758 '__builtin_isnan' 'int ()'
+|     | | |     | `-ImplicitCastExpr 0x7ffafb027a30 <col:59> 'double' <LValueToRValue>
+|     | | |     |   `-DeclRefExpr 0x7ffafb0269b8 <col:59> 'double' lvalue ParmVar 0x7ffafb025e90 'b' 'double'
+|     | | |     `-IntegerLiteral 0x7ffafb027a48 <col:65> 'int' 0
+|     | | |-CallExpr 0x7ffafb027b18 <line:20:9, col:16> 'void'
+|     | | | `-ImplicitCastExpr 0x7ffafb027b00 <col:9> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | | |   `-DeclRefExpr 0x7ffafb027ad8 <col:9> 'void (void) __attribute__((noreturn))' Function 0x7ffafb025d68 'abort' 'void (void) __attribute__((noreturn))'
+|     | | `-<<<NULL>>>
+|     | `-IfStmt 0x7ffafb027de8 <line:22:7, line:23:16>
+|     |   |-<<<NULL>>>
+|     |   |-<<<NULL>>>
+|     |   |-BinaryOperator 0x7ffafb027d58 <line:22:11, col:48> 'int' '!='
+|     |   | |-ParenExpr 0x7ffafb027c20 <col:11, col:18> 'int'
+|     |   | | `-BinaryOperator 0x7ffafb027bf8 <col:12, col:17> 'int' '!='
+|     |   | |   |-ImplicitCastExpr 0x7ffafb027bc8 <col:12> 'double' <LValueToRValue>
+|     |   | |   | `-DeclRefExpr 0x7ffafb027b78 <col:12> 'double' lvalue ParmVar 0x7ffafb025e18 'a' 'double'
+|     |   | |   `-ImplicitCastExpr 0x7ffafb027be0 <col:17> 'double' <LValueToRValue>
+|     |   | |     `-DeclRefExpr 0x7ffafb027ba0 <col:17> 'double' lvalue ParmVar 0x7ffafb025e90 'b' 'double'
+|     |   | `-ParenExpr 0x7ffafb027d38 <col:23, col:48> 'int'
+|     |   |   `-BinaryOperator 0x7ffafb027d10 <col:24, col:47> 'int' '!='
+|     |   |     |-CallExpr 0x7ffafb027ca8 <col:24, col:42> 'int'
+|     |   |     | |-ImplicitCastExpr 0x7ffafb027c90 <col:24> 'int (*)()' <BuiltinFnToFnPtr>
+|     |   |     | | `-DeclRefExpr 0x7ffafb027c40 <col:24> '<builtin fn type>' Function 0x7ffafb026758 '__builtin_isnan' 'int ()'
+|     |   |     | `-ImplicitCastExpr 0x7ffafb027cd8 <col:41> 'double' <LValueToRValue>
+|     |   |     |   `-DeclRefExpr 0x7ffafb027c68 <col:41> 'double' lvalue ParmVar 0x7ffafb025e18 'a' 'double'
+|     |   |     `-IntegerLiteral 0x7ffafb027cf0 <col:47> 'int' 0
+|     |   |-CallExpr 0x7ffafb027dc0 <line:23:9, col:16> 'void'
+|     |   | `-ImplicitCastExpr 0x7ffafb027da8 <col:9> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   |   `-DeclRefExpr 0x7ffafb027d80 <col:9> 'void (void) __attribute__((noreturn))' Function 0x7ffafb025d68 'abort' 'void (void) __attribute__((noreturn))'
+|     |   `-<<<NULL>>>
+|     `-IntegerLiteral 0x7ffafb027e60 <line:24:14> 'int' 0
+|-FunctionDecl 0x7ffafb026100 <line:13:19> col:19 implicit used __builtin_copysign 'double (double, double)' extern
+| |-ParmVarDecl 0x7ffafb026198 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ffafb0261f8 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7ffafb026268 <col:19> Implicit
+| `-ConstAttr 0x7ffafb0262b0 <col:19> Implicit
+|-FunctionDecl 0x7ffafb026758 <line:19:12> col:12 implicit used __builtin_isnan 'int ()' extern
+| |-NoThrowAttr 0x7ffafb0267f0 <col:12> Implicit
+| `-ConstAttr 0x7ffafb026838 <col:12> Implicit
+|-FunctionDecl 0x7ffafb027ee8 <line:27:1, line:41:1> line:28:1 main 'int ()'
+| `-CompoundStmt 0x7ffafb0289a0 <line:29:1, line:41:1>
+|   |-DeclStmt 0x7ffafb028018 <line:30:3, col:17>
+|   | `-VarDecl 0x7ffafb027f98 <col:3, col:14> col:10 used a 'double' cinit
+|   |   `-FloatingLiteral 0x7ffafb027ff8 <col:14> 'double' 0.000000e+00
+|   |-DeclStmt 0x7ffafb0280c8 <line:31:3, col:17>
+|   | `-VarDecl 0x7ffafb028048 <col:3, col:14> col:10 used b 'double' cinit
+|   |   `-FloatingLiteral 0x7ffafb0280a8 <col:14> 'double' 0.000000e+00
+|   |-DeclStmt 0x7ffafb028350 <line:32:3, col:48>
+|   | `-VarDecl 0x7ffafb0280f0 <col:3, col:47> col:19 used cr '_Complex double' cinit
+|   |   `-ImplicitCastExpr 0x7ffafb028338 <col:24, col:47> '_Complex double' <FloatingRealToComplex>
+|   |     `-ImplicitCastExpr 0x7ffafb028320 <col:24, col:47> 'double' <IntegralToFloating>
+|   |       `-CallExpr 0x7ffafb0282b8 <col:24, col:47> 'int'
+|   |         |-ImplicitCastExpr 0x7ffafb0282a0 <col:24> 'int (*)()' <FunctionToPointerDecay>
+|   |         | `-DeclRefExpr 0x7ffafb028228 <col:24> 'int ()' Function 0x7ffafb028190 '__builtin_complex' 'int ()'
+|   |         |-ImplicitCastExpr 0x7ffafb0282f0 <col:43> 'double' <LValueToRValue>
+|   |         | `-DeclRefExpr 0x7ffafb028250 <col:43> 'double' lvalue Var 0x7ffafb027f98 'a' 'double'
+|   |         `-ImplicitCastExpr 0x7ffafb028308 <col:46> 'double' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7ffafb028278 <col:46> 'double' lvalue Var 0x7ffafb028048 'b' 'double'
+|   |-DeclStmt 0x7ffafb0284c0 <line:33:3, col:59>
+|   | `-VarDecl 0x7ffafb028378 <col:3, col:58> col:26 used cs '_Complex double' static cinit
+|   |   `-ImplicitCastExpr 0x7ffafb0284a8 <col:31, col:58> '_Complex double' <FloatingRealToComplex>
+|   |     `-ImplicitCastExpr 0x7ffafb028490 <col:31, col:58> 'double' <IntegralToFloating>
+|   |       `-CallExpr 0x7ffafb028458 <col:31, col:58> 'int'
+|   |         |-ImplicitCastExpr 0x7ffafb028440 <col:31> 'int (*)()' <FunctionToPointerDecay>
+|   |         | `-DeclRefExpr 0x7ffafb0283d8 <col:31> 'int ()' Function 0x7ffafb028190 '__builtin_complex' 'int ()'
+|   |         |-FloatingLiteral 0x7ffafb028400 <col:50> 'double' 0.000000e+00
+|   |         `-FloatingLiteral 0x7ffafb028420 <col:55> 'double' 0.000000e+00
+|   |-CallExpr 0x7ffafb0285b0 <line:35:3, col:28> 'void'
+|   | |-ImplicitCastExpr 0x7ffafb028598 <col:3> 'void (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ffafb0284d8 <col:3> 'void (double, double)' Function 0x7ffafb025f60 'compare' 'void (double, double)'
+|   | |-ImplicitCastExpr 0x7ffafb0285e8 <col:12, col:21> 'double' <LValueToRValue>
+|   | | `-UnaryOperator 0x7ffafb028528 <col:12, col:21> 'double' lvalue prefix '__real'
+|   | |   `-DeclRefExpr 0x7ffafb028500 <col:21> '_Complex double' lvalue Var 0x7ffafb0280f0 'cr' '_Complex double'
+|   | `-FloatingLiteral 0x7ffafb028548 <col:25> 'double' 0.000000e+00
+|   |-CallExpr 0x7ffafb0286a8 <line:36:3, col:28> 'void'
+|   | |-ImplicitCastExpr 0x7ffafb028690 <col:3> 'void (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ffafb028600 <col:3> 'void (double, double)' Function 0x7ffafb025f60 'compare' 'void (double, double)'
+|   | |-ImplicitCastExpr 0x7ffafb0286e0 <col:12, col:21> 'double' <LValueToRValue>
+|   | | `-UnaryOperator 0x7ffafb028650 <col:12, col:21> 'double' lvalue prefix '__imag'
+|   | |   `-DeclRefExpr 0x7ffafb028628 <col:21> '_Complex double' lvalue Var 0x7ffafb0280f0 'cr' '_Complex double'
+|   | `-FloatingLiteral 0x7ffafb028670 <col:25> 'double' 0.000000e+00
+|   |-CallExpr 0x7ffafb0287a0 <line:37:3, col:28> 'void'
+|   | |-ImplicitCastExpr 0x7ffafb028788 <col:3> 'void (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ffafb0286f8 <col:3> 'void (double, double)' Function 0x7ffafb025f60 'compare' 'void (double, double)'
+|   | |-ImplicitCastExpr 0x7ffafb0287d8 <col:12, col:21> 'double' <LValueToRValue>
+|   | | `-UnaryOperator 0x7ffafb028748 <col:12, col:21> 'double' lvalue prefix '__real'
+|   | |   `-DeclRefExpr 0x7ffafb028720 <col:21> '_Complex double' lvalue Var 0x7ffafb028378 'cs' '_Complex double'
+|   | `-FloatingLiteral 0x7ffafb028768 <col:25> 'double' 0.000000e+00
+|   |-CallExpr 0x7ffafb028898 <line:38:3, col:28> 'void'
+|   | |-ImplicitCastExpr 0x7ffafb028880 <col:3> 'void (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ffafb0287f0 <col:3> 'void (double, double)' Function 0x7ffafb025f60 'compare' 'void (double, double)'
+|   | |-ImplicitCastExpr 0x7ffafb0288d0 <col:12, col:21> 'double' <LValueToRValue>
+|   | | `-UnaryOperator 0x7ffafb028840 <col:12, col:21> 'double' lvalue prefix '__imag'
+|   | |   `-DeclRefExpr 0x7ffafb028818 <col:21> '_Complex double' lvalue Var 0x7ffafb028378 'cs' '_Complex double'
+|   | `-FloatingLiteral 0x7ffafb028860 <col:25> 'double' 0.000000e+00
+|   `-CallExpr 0x7ffafb028970 <line:40:3, col:10> 'void'
+|     |-ImplicitCastExpr 0x7ffafb028958 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7ffafb0288e8 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7ffafb025b38 'exit' 'void (int) __attribute__((noreturn))'
+|     `-IntegerLiteral 0x7ffafb028910 <col:9> 'int' 0
+`-FunctionDecl 0x7ffafb028190 <<invalid sloc>> line:32:24 implicit used __builtin_complex 'int ()'

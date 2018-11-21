@@ -1,0 +1,147 @@
+c_files/pr34312.c:20:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr34312.c:34:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+TranslationUnitDecl 0x7f95c28264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f95c2826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f95c2826740 '__int128'
+|-TypedefDecl 0x7f95c2826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f95c2826760 'unsigned __int128'
+|-TypedefDecl 0x7f95c2826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f95c2826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f95c2826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f95c2826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f95c2826dc0 'char *'
+|   `-BuiltinType 0x7f95c2826560 'char'
+|-TypedefDecl 0x7f95c28270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f95c2827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f95c2826ee0 'struct __va_list_tag'
+|     `-Record 0x7f95c2826e58 '__va_list_tag'
+|-RecordDecl 0x7f95c2827120 <c_files/pr34312.c:6:9, line:9:1> line:6:9 struct definition
+| `-FieldDecl 0x7f95c2877460 <line:8:3, col:22> col:17 referenced seq 'unsigned char [3]'
+|-TypedefDecl 0x7f95c2877500 <line:6:1, line:9:3> col:3 referenced JamoNormMap 'struct JamoNormMap':'JamoNormMap'
+| `-ElaboratedType 0x7f95c28774b0 'struct JamoNormMap' sugar
+|   `-RecordType 0x7f95c28271b0 'JamoNormMap'
+|     `-Record 0x7f95c2827120 ''
+|-FunctionDecl 0x7f95c2877810 <line:11:1, line:20:1> line:12:1 used JamoClusterSearch 'const JamoNormMap *(JamoNormMap, const JamoNormMap *, short)' static
+| |-ParmVarDecl 0x7f95c28775a0 <col:20, col:32> col:32 used aKey 'JamoNormMap':'JamoNormMap'
+| |-ParmVarDecl 0x7f95c2877668 <col:38, col:58> col:58 used aClusters 'const JamoNormMap *'
+| |-ParmVarDecl 0x7f95c28776e0 <line:13:6, col:12> col:12 used aClustersSize 'short'
+| `-CompoundStmt 0x7f95c2878438 <line:14:1, line:20:1>
+|   |-DeclStmt 0x7f95c2877af8 <line:15:3, col:46>
+|   | |-VarDecl 0x7f95c2877918 <col:3, col:22> col:18 used l 'unsigned short' cinit
+|   | | `-ImplicitCastExpr 0x7f95c2877998 <col:22> 'unsigned short' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f95c2877978 <col:22> 'int' 0
+|   | `-VarDecl 0x7f95c28779c8 <col:3, col:45> col:25 used u 'unsigned short' cinit
+|   |   `-ImplicitCastExpr 0x7f95c2877ac8 <col:29, col:45> 'unsigned short' <IntegralCast>
+|   |     `-BinaryOperator 0x7f95c2877aa0 <col:29, col:45> 'int' '-'
+|   |       |-ImplicitCastExpr 0x7f95c2877a88 <col:29> 'int' <IntegralCast>
+|   |       | `-ImplicitCastExpr 0x7f95c2877a70 <col:29> 'short' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f95c2877a28 <col:29> 'short' lvalue ParmVar 0x7f95c28776e0 'aClustersSize' 'short'
+|   |       `-IntegerLiteral 0x7f95c2877a50 <col:45> 'int' 1
+|   |-DeclStmt 0x7f95c2877ce0 <line:16:3, col:33>
+|   | `-VarDecl 0x7f95c2877b28 <col:3, col:32> col:18 used h 'unsigned short' cinit
+|   |   `-ImplicitCastExpr 0x7f95c2877cc8 <col:22, col:32> 'unsigned short' <IntegralCast>
+|   |     `-BinaryOperator 0x7f95c2877ca0 <col:22, col:32> 'int' '/'
+|   |       |-ParenExpr 0x7f95c2877c60 <col:22, col:28> 'int'
+|   |       | `-BinaryOperator 0x7f95c2877c38 <col:23, col:27> 'int' '+'
+|   |       |   |-ImplicitCastExpr 0x7f95c2877bf0 <col:23> 'int' <IntegralCast>
+|   |       |   | `-ImplicitCastExpr 0x7f95c2877bd8 <col:23> 'unsigned short' <LValueToRValue>
+|   |       |   |   `-DeclRefExpr 0x7f95c2877b88 <col:23> 'unsigned short' lvalue Var 0x7f95c2877918 'l' 'unsigned short'
+|   |       |   `-ImplicitCastExpr 0x7f95c2877c20 <col:27> 'int' <IntegralCast>
+|   |       |     `-ImplicitCastExpr 0x7f95c2877c08 <col:27> 'unsigned short' <LValueToRValue>
+|   |       |       `-DeclRefExpr 0x7f95c2877bb0 <col:27> 'unsigned short' lvalue Var 0x7f95c28779c8 'u' 'unsigned short'
+|   |       `-IntegerLiteral 0x7f95c2877c80 <col:32> 'int' 2
+|   `-IfStmt 0x7f95c2878400 <line:18:3, line:19:59>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f95c2878060 <line:18:7, col:45> 'int' '<'
+|     | |-ParenExpr 0x7f95c2878020 <col:7, col:41> 'int'
+|     | | `-BinaryOperator 0x7f95c2877ff8 <col:8, col:40> 'int' '-'
+|     | |   |-ImplicitCastExpr 0x7f95c2877fb0 <col:8, col:18> 'int' <IntegralCast>
+|     | |   | `-ImplicitCastExpr 0x7f95c2877f98 <col:8, col:18> 'unsigned char' <LValueToRValue>
+|     | |   |   `-ArraySubscriptExpr 0x7f95c2877dc0 <col:8, col:18> 'unsigned char' lvalue
+|     | |   |     |-ImplicitCastExpr 0x7f95c2877da8 <col:8, col:13> 'unsigned char *' <ArrayToPointerDecay>
+|     | |   |     | `-MemberExpr 0x7f95c2877d20 <col:8, col:13> 'unsigned char [3]' lvalue .seq 0x7f95c2877460
+|     | |   |     |   `-DeclRefExpr 0x7f95c2877cf8 <col:8> 'JamoNormMap':'JamoNormMap' lvalue ParmVar 0x7f95c28775a0 'aKey' 'JamoNormMap':'JamoNormMap'
+|     | |   |     `-IntegerLiteral 0x7f95c2877d58 <col:17> 'int' 1
+|     | |   `-ImplicitCastExpr 0x7f95c2877fe0 <col:22, col:40> 'int' <IntegralCast>
+|     | |     `-ImplicitCastExpr 0x7f95c2877fc8 <col:22, col:40> 'unsigned char' <LValueToRValue>
+|     | |       `-ArraySubscriptExpr 0x7f95c2877f70 <col:22, col:40> 'const unsigned char' lvalue
+|     | |         |-ImplicitCastExpr 0x7f95c2877f58 <col:22, col:35> 'const unsigned char *' <ArrayToPointerDecay>
+|     | |         | `-MemberExpr 0x7f95c2877e90 <col:22, col:35> 'unsigned char const[3]' lvalue .seq 0x7f95c2877460
+|     | |         |   `-ArraySubscriptExpr 0x7f95c2877e68 <col:22, col:33> 'const JamoNormMap':'const JamoNormMap' lvalue
+|     | |         |     |-ImplicitCastExpr 0x7f95c2877e38 <col:22> 'const JamoNormMap *' <LValueToRValue>
+|     | |         |     | `-DeclRefExpr 0x7f95c2877de8 <col:22> 'const JamoNormMap *' lvalue ParmVar 0x7f95c2877668 'aClusters' 'const JamoNormMap *'
+|     | |         |     `-ImplicitCastExpr 0x7f95c2877e50 <col:32> 'unsigned short' <LValueToRValue>
+|     | |         |       `-DeclRefExpr 0x7f95c2877e10 <col:32> 'unsigned short' lvalue Var 0x7f95c2877b28 'h' 'unsigned short'
+|     | |         `-IntegerLiteral 0x7f95c2877ec8 <col:39> 'int' 1
+|     | `-IntegerLiteral 0x7f95c2878040 <col:45> 'int' 0
+|     |-ReturnStmt 0x7f95c28783c0 <line:19:5, col:59>
+|     | `-CallExpr 0x7f95c2878350 <col:12, col:59> 'const JamoNormMap *'
+|     |   |-ImplicitCastExpr 0x7f95c2878338 <col:12> 'const JamoNormMap *(*)(JamoNormMap, const JamoNormMap *, short)' <FunctionToPointerDecay>
+|     |   | `-DeclRefExpr 0x7f95c28780d0 <col:12> 'const JamoNormMap *(JamoNormMap, const JamoNormMap *, short)' Function 0x7f95c2877810 'JamoClusterSearch' 'const JamoNormMap *(JamoNormMap, const JamoNormMap *, short)'
+|     |   |-ImplicitCastExpr 0x7f95c2878390 <col:31> 'JamoNormMap':'JamoNormMap' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7f95c28780f8 <col:31> 'JamoNormMap':'JamoNormMap' lvalue ParmVar 0x7f95c28775a0 'aKey' 'JamoNormMap':'JamoNormMap'
+|     |   |-UnaryOperator 0x7f95c28781e8 <col:37, col:51> 'const JamoNormMap *' prefix '&'
+|     |   | `-ParenExpr 0x7f95c28781c8 <col:38, col:51> 'const JamoNormMap':'const JamoNormMap' lvalue
+|     |   |   `-ArraySubscriptExpr 0x7f95c28781a0 <col:39, col:50> 'const JamoNormMap':'const JamoNormMap' lvalue
+|     |   |     |-ImplicitCastExpr 0x7f95c2878170 <col:39> 'const JamoNormMap *' <LValueToRValue>
+|     |   |     | `-DeclRefExpr 0x7f95c2878120 <col:39> 'const JamoNormMap *' lvalue ParmVar 0x7f95c2877668 'aClusters' 'const JamoNormMap *'
+|     |   |     `-ImplicitCastExpr 0x7f95c2878188 <col:49> 'unsigned short' <LValueToRValue>
+|     |   |       `-DeclRefExpr 0x7f95c2878148 <col:49> 'unsigned short' lvalue Var 0x7f95c2877918 'l' 'unsigned short'
+|     |   `-ImplicitCastExpr 0x7f95c28783a8 <col:54, col:58> 'short' <IntegralCast>
+|     |     `-BinaryOperator 0x7f95c28782b8 <col:54, col:58> 'int' '-'
+|     |       |-ImplicitCastExpr 0x7f95c2878270 <col:54> 'int' <IntegralCast>
+|     |       | `-ImplicitCastExpr 0x7f95c2878258 <col:54> 'unsigned short' <LValueToRValue>
+|     |       |   `-DeclRefExpr 0x7f95c2878208 <col:54> 'unsigned short' lvalue Var 0x7f95c2877b28 'h' 'unsigned short'
+|     |       `-ImplicitCastExpr 0x7f95c28782a0 <col:58> 'int' <IntegralCast>
+|     |         `-ImplicitCastExpr 0x7f95c2878288 <col:58> 'unsigned short' <LValueToRValue>
+|     |           `-DeclRefExpr 0x7f95c2878230 <col:58> 'unsigned short' lvalue Var 0x7f95c2877918 'l' 'unsigned short'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f95c2878818 <line:22:1, line:34:1> line:23:1 JamoSrchReplace 'short (const JamoNormMap *, unsigned short, unsigned short *, unsigned int *, unsigned short)'
+  |-ParmVarDecl 0x7f95c2878478 <col:18, col:38> col:38 used aClusters 'const JamoNormMap *'
+  |-ParmVarDecl 0x7f95c28784f0 <col:49, col:64> col:64 used aClustersSize 'unsigned short'
+  |-ParmVarDecl 0x7f95c2878590 <line:24:4, col:21> col:21 aIn 'unsigned short *'
+  |-ParmVarDecl 0x7f95c2878630 <col:26, col:41> col:41 aLength 'unsigned int *'
+  |-ParmVarDecl 0x7f95c28786a8 <line:25:4, col:19> col:19 aOffset 'unsigned short'
+  `-CompoundStmt 0x7f95c2878e18 <line:26:1, line:34:1>
+    |-DeclStmt 0x7f95c2878948 <line:27:3, col:18>
+    | `-VarDecl 0x7f95c28788e8 <col:3, col:15> col:15 used key 'JamoNormMap':'JamoNormMap'
+    |-BinaryOperator 0x7f95c2878a58 <line:29:3, col:16> 'unsigned char' '='
+    | |-ArraySubscriptExpr 0x7f95c28789f8 <col:3, col:12> 'unsigned char' lvalue
+    | | |-ImplicitCastExpr 0x7f95c28789e0 <col:3, col:7> 'unsigned char *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7f95c2878988 <col:3, col:7> 'unsigned char [3]' lvalue .seq 0x7f95c2877460
+    | | |   `-DeclRefExpr 0x7f95c2878960 <col:3> 'JamoNormMap':'JamoNormMap' lvalue Var 0x7f95c28788e8 'key' 'JamoNormMap':'JamoNormMap'
+    | | `-IntegerLiteral 0x7f95c28789c0 <col:11> 'int' 0
+    | `-ImplicitCastExpr 0x7f95c2878a40 <col:16> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7f95c2878a20 <col:16> 'int' 0
+    |-BinaryOperator 0x7f95c2878b78 <line:30:3, col:16> 'unsigned char' '='
+    | |-ArraySubscriptExpr 0x7f95c2878b18 <col:3, col:12> 'unsigned char' lvalue
+    | | |-ImplicitCastExpr 0x7f95c2878b00 <col:3, col:7> 'unsigned char *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7f95c2878aa8 <col:3, col:7> 'unsigned char [3]' lvalue .seq 0x7f95c2877460
+    | | |   `-DeclRefExpr 0x7f95c2878a80 <col:3> 'JamoNormMap':'JamoNormMap' lvalue Var 0x7f95c28788e8 'key' 'JamoNormMap':'JamoNormMap'
+    | | `-IntegerLiteral 0x7f95c2878ae0 <col:11> 'int' 1
+    | `-ImplicitCastExpr 0x7f95c2878b60 <col:16> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7f95c2878b40 <col:16> 'int' 1
+    |-BinaryOperator 0x7f95c2878c98 <line:31:3, col:16> 'unsigned char' '='
+    | |-ArraySubscriptExpr 0x7f95c2878c38 <col:3, col:12> 'unsigned char' lvalue
+    | | |-ImplicitCastExpr 0x7f95c2878c20 <col:3, col:7> 'unsigned char *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7f95c2878bc8 <col:3, col:7> 'unsigned char [3]' lvalue .seq 0x7f95c2877460
+    | | |   `-DeclRefExpr 0x7f95c2878ba0 <col:3> 'JamoNormMap':'JamoNormMap' lvalue Var 0x7f95c28788e8 'key' 'JamoNormMap':'JamoNormMap'
+    | | `-IntegerLiteral 0x7f95c2878c00 <col:11> 'int' 2
+    | `-ImplicitCastExpr 0x7f95c2878c80 <col:16> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7f95c2878c60 <col:16> 'int' 2
+    `-CallExpr 0x7f95c2878d78 <line:33:3, col:51> 'const JamoNormMap *'
+      |-ImplicitCastExpr 0x7f95c2878d60 <col:3> 'const JamoNormMap *(*)(JamoNormMap, const JamoNormMap *, short)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f95c2878cc0 <col:3> 'const JamoNormMap *(JamoNormMap, const JamoNormMap *, short)' Function 0x7f95c2877810 'JamoClusterSearch' 'const JamoNormMap *(JamoNormMap, const JamoNormMap *, short)'
+      |-ImplicitCastExpr 0x7f95c2878db8 <col:22> 'JamoNormMap':'JamoNormMap' <LValueToRValue>
+      | `-DeclRefExpr 0x7f95c2878ce8 <col:22> 'JamoNormMap':'JamoNormMap' lvalue Var 0x7f95c28788e8 'key' 'JamoNormMap':'JamoNormMap'
+      |-ImplicitCastExpr 0x7f95c2878dd0 <col:27> 'const JamoNormMap *' <LValueToRValue>
+      | `-DeclRefExpr 0x7f95c2878d10 <col:27> 'const JamoNormMap *' lvalue ParmVar 0x7f95c2878478 'aClusters' 'const JamoNormMap *'
+      `-ImplicitCastExpr 0x7f95c2878e00 <col:38> 'short' <IntegralCast>
+        `-ImplicitCastExpr 0x7f95c2878de8 <col:38> 'unsigned short' <LValueToRValue>
+          `-DeclRefExpr 0x7f95c2878d38 <col:38> 'unsigned short' lvalue ParmVar 0x7f95c28784f0 'aClustersSize' 'unsigned short'

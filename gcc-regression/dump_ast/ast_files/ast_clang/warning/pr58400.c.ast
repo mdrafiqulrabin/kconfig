@@ -1,0 +1,1667 @@
+c_files/pr58400.c:59:89: warning: declaration of 'struct shrink_control' will not be visible outside of this function [-Wvisibility]
+ struct shrinker {  unsigned long (*count_objects)(struct shrinker *,            struct shrink_control *sc);  unsigned long (*scan_objects)(struct shrinker *,           struct shrink_control *sc);  int seeks;  long batch;  unsigned long flags;  struct list_head list;  atomic_long_t *nr_deferred; };
+                                                                                        ^
+c_files/pr58400.c:59:177: warning: declaration of 'struct shrink_control' will not be visible outside of this function [-Wvisibility]
+ struct shrinker {  unsigned long (*count_objects)(struct shrinker *,            struct shrink_control *sc);  unsigned long (*scan_objects)(struct shrinker *,           struct shrink_control *sc);  int seeks;  long batch;  unsigned long flags;  struct list_head list;  atomic_long_t *nr_deferred; };
+                                                                                                                                                                                ^
+c_files/pr58400.c:72:37: warning: declaration of 'struct work_struct' will not be visible outside of this function [-Wvisibility]
+ typedef void (*work_func_t)(struct work_struct *work);
+                                    ^
+c_files/pr58400.c:83:184: warning: implicit declaration of function 'bgl_lock_ptr' is invalid in C99 [-Wimplicit-function-declaration]
+ static inline __attribute__((always_inline)) __attribute__((no_instrument_function)) spinlock_t *ext4_group_lock_ptr(struct super_block *sb,            ext4_group_t group) {  return bgl_lock_ptr(EXT4_SB(sb)->s_blockgroup_lock, group); }
+                                                                                                                                                                                       ^
+c_files/pr58400.c:83:184: warning: incompatible integer to pointer conversion returning 'int' from a function with result type 'spinlock_t *' (aka 'struct spinlock *') [-Wint-conversion]
+ static inline __attribute__((always_inline)) __attribute__((no_instrument_function)) spinlock_t *ext4_group_lock_ptr(struct super_block *sb,            ext4_group_t group) {  return bgl_lock_ptr(EXT4_SB(sb)->s_blockgroup_lock, group); }
+                                                                                                                                                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr58400.c:88:174: warning: implicit declaration of function '__clear_bit_le' is invalid in C99 [-Wimplicit-function-declaration]
+ static inline __attribute__((always_inline)) __attribute__((no_instrument_function)) void mb_clear_bit(int bit, void *addr) {  addr = mb_correct_addr_and_bit(&bit, addr);  __clear_bit_le(bit, addr); }
+                                                                                                                                                                             ^
+c_files/pr58400.c:90:121: warning: implicit declaration of function 'mb_find_buddy' is invalid in C99 [-Wimplicit-function-declaration]
+ static void mb_buddy_mark_free(struct ext4_buddy *e4b, int first, int last) {  int max;  int order = 1;  void *buddy = mb_find_buddy(e4b, order, &max);  while (buddy) {   void *buddy2;   if (first & 1)    e4b->bd_info->bb_counters[order] += mb_buddy_adjust_border(&first, buddy, -1);   if (!(last & 1))    e4b->bd_info->bb_counters[order] += mb_buddy_adjust_border(&last, buddy, 1);   if (first > last)    break;   order++;   if (first == last || !(buddy2 = mb_find_buddy(e4b, order, &max))) {    mb_clear_bits(buddy, first, last - first + 1);    e4b->bd_info->bb_counters[order - 1] += last - first + 1;    break;   }   first >>= 1;   last >>= 1;   buddy = buddy2;  } }
+                                                                                                                        ^
+c_files/pr58400.c:90:113: warning: incompatible integer to pointer conversion initializing 'void *' with an expression of type 'int' [-Wint-conversion]
+ static void mb_buddy_mark_free(struct ext4_buddy *e4b, int first, int last) {  int max;  int order = 1;  void *buddy = mb_find_buddy(e4b, order, &max);  while (buddy) {   void *buddy2;   if (first & 1)    e4b->bd_info->bb_counters[order] += mb_buddy_adjust_border(&first, buddy, -1);   if (!(last & 1))    e4b->bd_info->bb_counters[order] += mb_buddy_adjust_border(&last, buddy, 1);   if (first > last)    break;   order++;   if (first == last || !(buddy2 = mb_find_buddy(e4b, order, &max))) {    mb_clear_bits(buddy, first, last - first + 1);    e4b->bd_info->bb_counters[order - 1] += last - first + 1;    break;   }   first >>= 1;   last >>= 1;   buddy = buddy2;  } }
+                                                                                                                ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr58400.c:90:458: warning: incompatible integer to pointer conversion assigning to 'void *' from 'int' [-Wint-conversion]
+ static void mb_buddy_mark_free(struct ext4_buddy *e4b, int first, int last) {  int max;  int order = 1;  void *buddy = mb_find_buddy(e4b, order, &max);  while (buddy) {   void *buddy2;   if (first & 1)    e4b->bd_info->bb_counters[order] += mb_buddy_adjust_border(&first, buddy, -1);   if (!(last & 1))    e4b->bd_info->bb_counters[order] += mb_buddy_adjust_border(&last, buddy, 1);   if (first > last)    break;   order++;   if (first == last || !(buddy2 = mb_find_buddy(e4b, order, &max))) {    mb_clear_bits(buddy, first, last - first + 1);    e4b->bd_info->bb_counters[order - 1] += last - first + 1;    break;   }   first >>= 1;   last >>= 1;   buddy = buddy2;  } }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr58400.c:90:499: warning: implicit declaration of function 'mb_clear_bits' is invalid in C99 [-Wimplicit-function-declaration]
+ static void mb_buddy_mark_free(struct ext4_buddy *e4b, int first, int last) {  int max;  int order = 1;  void *buddy = mb_find_buddy(e4b, order, &max);  while (buddy) {   void *buddy2;   if (first & 1)    e4b->bd_info->bb_counters[order] += mb_buddy_adjust_border(&first, buddy, -1);   if (!(last & 1))    e4b->bd_info->bb_counters[order] += mb_buddy_adjust_border(&last, buddy, 1);   if (first > last)    break;   order++;   if (first == last || !(buddy2 = mb_find_buddy(e4b, order, &max))) {    mb_clear_bits(buddy, first, last - first + 1);    e4b->bd_info->bb_counters[order - 1] += last - first + 1;    break;   }   first >>= 1;   last >>= 1;   buddy = buddy2;  } }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+c_files/pr58400.c:91:297: warning: implicit declaration of function 'printk' is invalid in C99 [-Wimplicit-function-declaration]
+ void mb_free_blocks(struct inode *inode, struct ext4_buddy *e4b,       int first, int count) {  int left_is_free = 0;  int right_is_free = 0;  int block;  int last = first + count - 1;  struct super_block *sb = e4b->bd_sb;  do { if (__builtin_expect(!!(last >= (sb->s_blocksize << 3)), 0)) do { printk("BUG: failure at %s:%d/%s()!\n", "fs/ext4/mballoc.c", 1400, __func__); panic("BUG!"); } while (0); } while(0);  do { if (__builtin_expect(!!(!((&(&(ext4_group_lock_ptr(sb, e4b->bd_group))->rlock)->raw_lock)->slock == 0)), 0)) do { printk("BUG: failure at %s:%d/%s()!\n", "fs/ext4/mballoc.c", 1401, __func__); panic("BUG!"); } while (0); } while(0);  ;  mb_free_blocks_double(inode, e4b, first, count);  e4b->bd_info->bb_free += count;  if (first < e4b->bd_info->bb_first_free)   e4b->bd_info->bb_first_free = first;  if (first != 0)   left_is_free = !mb_test_bit(first - 1, e4b->bd_bitmap);  block = mb_test_and_clear_bits(e4b->bd_bitmap, first, count);  if (last + 1 < EXT4_SB(sb)->s_mb_maxs[0])   right_is_free = !mb_test_bit(last + 1, e4b->bd_bitmap);  if (__builtin_expect(!!(block != -1), 0)) {   ext4_fsblk_t blocknr;   blocknr = ext4_group_first_block_no(sb, e4b->bd_group);   blocknr += ((block) << (EXT4_SB(sb))->s_cluster_bits);   __ext4_grp_locked_error(__func__,  1427   , sb, e4b->bd_group, inode ? inode->i_ino : 0, blocknr, "freeing already freed block " "(bit %u)", block)                             ;   mb_regenerate_buddy(e4b);   goto done;  }  if (left_is_free && right_is_free)   e4b->bd_info->bb_fragments--;  else if (!left_is_free && !right_is_free)   e4b->bd_info->bb_fragments++;  if (first & 1) {   first += !left_is_free;   e4b->bd_info->bb_counters[0] += left_is_free ? -1 : 1;  }  if (!(last & 1)) {   last -= !right_is_free;   e4b->bd_info->bb_counters[0] += right_is_free ? -1 : 1;  }  if (first <= last)   mb_buddy_mark_free(e4b, first >> 1, last >> 1); done:  mb_set_largest_free_order(sb, e4b->bd_info);  ; }
+                                                                                                                                                                                                                                                                                                        ^
+c_files/pr58400.c:91:375: warning: implicit declaration of function 'panic' is invalid in C99 [-Wimplicit-function-declaration]
+ void mb_free_blocks(struct inode *inode, struct ext4_buddy *e4b,       int first, int count) {  int left_is_free = 0;  int right_is_free = 0;  int block;  int last = first + count - 1;  struct super_block *sb = e4b->bd_sb;  do { if (__builtin_expect(!!(last >= (sb->s_blocksize << 3)), 0)) do { printk("BUG: failure at %s:%d/%s()!\n", "fs/ext4/mballoc.c", 1400, __func__); panic("BUG!"); } while (0); } while(0);  do { if (__builtin_expect(!!(!((&(&(ext4_group_lock_ptr(sb, e4b->bd_group))->rlock)->raw_lock)->slock == 0)), 0)) do { printk("BUG: failure at %s:%d/%s()!\n", "fs/ext4/mballoc.c", 1401, __func__); panic("BUG!"); } while (0); } while(0);  ;  mb_free_blocks_double(inode, e4b, first, count);  e4b->bd_info->bb_free += count;  if (first < e4b->bd_info->bb_first_free)   e4b->bd_info->bb_first_free = first;  if (first != 0)   left_is_free = !mb_test_bit(first - 1, e4b->bd_bitmap);  block = mb_test_and_clear_bits(e4b->bd_bitmap, first, count);  if (last + 1 < EXT4_SB(sb)->s_mb_maxs[0])   right_is_free = !mb_test_bit(last + 1, e4b->bd_bitmap);  if (__builtin_expect(!!(block != -1), 0)) {   ext4_fsblk_t blocknr;   blocknr = ext4_group_first_block_no(sb, e4b->bd_group);   blocknr += ((block) << (EXT4_SB(sb))->s_cluster_bits);   __ext4_grp_locked_error(__func__,  1427   , sb, e4b->bd_group, inode ? inode->i_ino : 0, blocknr, "freeing already freed block " "(bit %u)", block)                             ;   mb_regenerate_buddy(e4b);   goto done;  }  if (left_is_free && right_is_free)   e4b->bd_info->bb_fragments--;  else if (!left_is_free && !right_is_free)   e4b->bd_info->bb_fragments++;  if (first & 1) {   first += !left_is_free;   e4b->bd_info->bb_counters[0] += left_is_free ? -1 : 1;  }  if (!(last & 1)) {   last -= !right_is_free;   e4b->bd_info->bb_counters[0] += right_is_free ? -1 : 1;  }  if (first <= last)   mb_buddy_mark_free(e4b, first >> 1, last >> 1); done:  mb_set_largest_free_order(sb, e4b->bd_info);  ; }
+                                                                                                                                                                                                                                                                                                                                                                                      ^
+c_files/pr58400.c:91:657: warning: implicit declaration of function 'mb_free_blocks_double' is invalid in C99 [-Wimplicit-function-declaration]
+ void mb_free_blocks(struct inode *inode, struct ext4_buddy *e4b,       int first, int count) {  int left_is_free = 0;  int right_is_free = 0;  int block;  int last = first + count - 1;  struct super_block *sb = e4b->bd_sb;  do { if (__builtin_expect(!!(last >= (sb->s_blocksize << 3)), 0)) do { printk("BUG: failure at %s:%d/%s()!\n", "fs/ext4/mballoc.c", 1400, __func__); panic("BUG!"); } while (0); } while(0);  do { if (__builtin_expect(!!(!((&(&(ext4_group_lock_ptr(sb, e4b->bd_group))->rlock)->raw_lock)->slock == 0)), 0)) do { printk("BUG: failure at %s:%d/%s()!\n", "fs/ext4/mballoc.c", 1401, __func__); panic("BUG!"); } while (0); } while(0);  ;  mb_free_blocks_double(inode, e4b, first, count);  e4b->bd_info->bb_free += count;  if (first < e4b->bd_info->bb_first_free)   e4b->bd_info->bb_first_free = first;  if (first != 0)   left_is_free = !mb_test_bit(first - 1, e4b->bd_bitmap);  block = mb_test_and_clear_bits(e4b->bd_bitmap, first, count);  if (last + 1 < EXT4_SB(sb)->s_mb_maxs[0])   right_is_free = !mb_test_bit(last + 1, e4b->bd_bitmap);  if (__builtin_expect(!!(block != -1), 0)) {   ext4_fsblk_t blocknr;   blocknr = ext4_group_first_block_no(sb, e4b->bd_group);   blocknr += ((block) << (EXT4_SB(sb))->s_cluster_bits);   __ext4_grp_locked_error(__func__,  1427   , sb, e4b->bd_group, inode ? inode->i_ino : 0, blocknr, "freeing already freed block " "(bit %u)", block)                             ;   mb_regenerate_buddy(e4b);   goto done;  }  if (left_is_free && right_is_free)   e4b->bd_info->bb_fragments--;  else if (!left_is_free && !right_is_free)   e4b->bd_info->bb_fragments++;  if (first & 1) {   first += !left_is_free;   e4b->bd_info->bb_counters[0] += left_is_free ? -1 : 1;  }  if (!(last & 1)) {   last -= !right_is_free;   e4b->bd_info->bb_counters[0] += right_is_free ? -1 : 1;  }  if (first <= last)   mb_buddy_mark_free(e4b, first >> 1, last >> 1); done:  mb_set_largest_free_order(sb, e4b->bd_info);  ; }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^
+c_files/pr58400.c:91:904: warning: implicit declaration of function 'mb_test_and_clear_bits' is invalid in C99 [-Wimplicit-function-declaration]
+ void mb_free_blocks(struct inode *inode, struct ext4_buddy *e4b,       int first, int count) {  int left_is_free = 0;  int right_is_free = 0;  int block;  int last = first + count - 1;  struct super_block *sb = e4b->bd_sb;  do { if (__builtin_expect(!!(last >= (sb->s_blocksize << 3)), 0)) do { printk("BUG: failure at %s:%d/%s()!\n", "fs/ext4/mballoc.c", 1400, __func__); panic("BUG!"); } while (0); } while(0);  do { if (__builtin_expect(!!(!((&(&(ext4_group_lock_ptr(sb, e4b->bd_group))->rlock)->raw_lock)->slock == 0)), 0)) do { printk("BUG: failure at %s:%d/%s()!\n", "fs/ext4/mballoc.c", 1401, __func__); panic("BUG!"); } while (0); } while(0);  ;  mb_free_blocks_double(inode, e4b, first, count);  e4b->bd_info->bb_free += count;  if (first < e4b->bd_info->bb_first_free)   e4b->bd_info->bb_first_free = first;  if (first != 0)   left_is_free = !mb_test_bit(first - 1, e4b->bd_bitmap);  block = mb_test_and_clear_bits(e4b->bd_bitmap, first, count);  if (last + 1 < EXT4_SB(sb)->s_mb_maxs[0])   right_is_free = !mb_test_bit(last + 1, e4b->bd_bitmap);  if (__builtin_expect(!!(block != -1), 0)) {   ext4_fsblk_t blocknr;   blocknr = ext4_group_first_block_no(sb, e4b->bd_group);   blocknr += ((block) << (EXT4_SB(sb))->s_cluster_bits);   __ext4_grp_locked_error(__func__,  1427   , sb, e4b->bd_group, inode ? inode->i_ino : 0, blocknr, "freeing already freed block " "(bit %u)", block)                             ;   mb_regenerate_buddy(e4b);   goto done;  }  if (left_is_free && right_is_free)   e4b->bd_info->bb_fragments--;  else if (!left_is_free && !right_is_free)   e4b->bd_info->bb_fragments++;  if (first & 1) {   first += !left_is_free;   e4b->bd_info->bb_counters[0] += left_is_free ? -1 : 1;  }  if (!(last & 1)) {   last -= !right_is_free;   e4b->bd_info->bb_counters[0] += right_is_free ? -1 : 1;  }  if (first <= last)   mb_buddy_mark_free(e4b, first >> 1, last >> 1); done:  mb_set_largest_free_order(sb, e4b->bd_info);  ; }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ^
+c_files/pr58400.c:91:1140: warning: implicit declaration of function 'ext4_group_first_block_no' is invalid in C99 [-Wimplicit-function-declaration]
+ void mb_free_blocks(struct inode *inode, struct ext4_buddy *e4b,       int first, int count) {  int left_is_free = 0;  int right_is_free = 0;  int block;  int last = first + count - 1;  struct super_block *sb = e4b->bd_sb;  do { if (__builtin_expect(!!(last >= (sb->s_blocksize << 3)), 0)) do { printk("BUG: failure at %s:%d/%s()!\n", "fs/ext4/mballoc.c", 1400, __func__); panic("BUG!"); } while (0); } while(0);  do { if (__builtin_expect(!!(!((&(&(ext4_group_lock_ptr(sb, e4b->bd_group))->rlock)->raw_lock)->slock == 0)), 0)) do { printk("BUG: failure at %s:%d/%s()!\n", "fs/ext4/mballoc.c", 1401, __func__); panic("BUG!"); } while (0); } while(0);  ;  mb_free_blocks_double(inode, e4b, first, count);  e4b->bd_info->bb_free += count;  if (first < e4b->bd_info->bb_first_free)   e4b->bd_info->bb_first_free = first;  if (first != 0)   left_is_free = !mb_test_bit(first - 1, e4b->bd_bitmap);  block = mb_test_and_clear_bits(e4b->bd_bitmap, first, count);  if (last + 1 < EXT4_SB(sb)->s_mb_maxs[0])   right_is_free = !mb_test_bit(last + 1, e4b->bd_bitmap);  if (__builtin_expect(!!(block != -1), 0)) {   ext4_fsblk_t blocknr;   blocknr = ext4_group_first_block_no(sb, e4b->bd_group);   blocknr += ((block) << (EXT4_SB(sb))->s_cluster_bits);   __ext4_grp_locked_error(__func__,  1427   , sb, e4b->bd_group, inode ? inode->i_ino : 0, blocknr, "freeing already freed block " "(bit %u)", block)                             ;   mb_regenerate_buddy(e4b);   goto done;  }  if (left_is_free && right_is_free)   e4b->bd_info->bb_fragments--;  else if (!left_is_free && !right_is_free)   e4b->bd_info->bb_fragments++;  if (first & 1) {   first += !left_is_free;   e4b->bd_info->bb_counters[0] += left_is_free ? -1 : 1;  }  if (!(last & 1)) {   last -= !right_is_free;   e4b->bd_info->bb_counters[0] += right_is_free ? -1 : 1;  }  if (first <= last)   mb_buddy_mark_free(e4b, first >> 1, last >> 1); done:  mb_set_largest_free_order(sb, e4b->bd_info);  ; }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+c_files/pr58400.c:91:1245: warning: implicit declaration of function '__ext4_grp_locked_error' is invalid in C99 [-Wimplicit-function-declaration]
+ void mb_free_blocks(struct inode *inode, struct ext4_buddy *e4b,       int first, int count) {  int left_is_free = 0;  int right_is_free = 0;  int block;  int last = first + count - 1;  struct super_block *sb = e4b->bd_sb;  do { if (__builtin_expect(!!(last >= (sb->s_blocksize << 3)), 0)) do { printk("BUG: failure at %s:%d/%s()!\n", "fs/ext4/mballoc.c", 1400, __func__); panic("BUG!"); } while (0); } while(0);  do { if (__builtin_expect(!!(!((&(&(ext4_group_lock_ptr(sb, e4b->bd_group))->rlock)->raw_lock)->slock == 0)), 0)) do { printk("BUG: failure at %s:%d/%s()!\n", "fs/ext4/mballoc.c", 1401, __func__); panic("BUG!"); } while (0); } while(0);  ;  mb_free_blocks_double(inode, e4b, first, count);  e4b->bd_info->bb_free += count;  if (first < e4b->bd_info->bb_first_free)   e4b->bd_info->bb_first_free = first;  if (first != 0)   left_is_free = !mb_test_bit(first - 1, e4b->bd_bitmap);  block = mb_test_and_clear_bits(e4b->bd_bitmap, first, count);  if (last + 1 < EXT4_SB(sb)->s_mb_maxs[0])   right_is_free = !mb_test_bit(last + 1, e4b->bd_bitmap);  if (__builtin_expect(!!(block != -1), 0)) {   ext4_fsblk_t blocknr;   blocknr = ext4_group_first_block_no(sb, e4b->bd_group);   blocknr += ((block) << (EXT4_SB(sb))->s_cluster_bits);   __ext4_grp_locked_error(__func__,  1427   , sb, e4b->bd_group, inode ? inode->i_ino : 0, blocknr, "freeing already freed block " "(bit %u)", block)                             ;   mb_regenerate_buddy(e4b);   goto done;  }  if (left_is_free && right_is_free)   e4b->bd_info->bb_fragments--;  else if (!left_is_free && !right_is_free)   e4b->bd_info->bb_fragments++;  if (first & 1) {   first += !left_is_free;   e4b->bd_info->bb_counters[0] += left_is_free ? -1 : 1;  }  if (!(last & 1)) {   last -= !right_is_free;   e4b->bd_info->bb_counters[0] += right_is_free ? -1 : 1;  }  if (first <= last)   mb_buddy_mark_free(e4b, first >> 1, last >> 1); done:  mb_set_largest_free_order(sb, e4b->bd_info);  ; }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+c_files/pr58400.c:91:1425: warning: implicit declaration of function 'mb_regenerate_buddy' is invalid in C99 [-Wimplicit-function-declaration]
+ void mb_free_blocks(struct inode *inode, struct ext4_buddy *e4b,       int first, int count) {  int left_is_free = 0;  int right_is_free = 0;  int block;  int last = first + count - 1;  struct super_block *sb = e4b->bd_sb;  do { if (__builtin_expect(!!(last >= (sb->s_blocksize << 3)), 0)) do { printk("BUG: failure at %s:%d/%s()!\n", "fs/ext4/mballoc.c", 1400, __func__); panic("BUG!"); } while (0); } while(0);  do { if (__builtin_expect(!!(!((&(&(ext4_group_lock_ptr(sb, e4b->bd_group))->rlock)->raw_lock)->slock == 0)), 0)) do { printk("BUG: failure at %s:%d/%s()!\n", "fs/ext4/mballoc.c", 1401, __func__); panic("BUG!"); } while (0); } while(0);  ;  mb_free_blocks_double(inode, e4b, first, count);  e4b->bd_info->bb_free += count;  if (first < e4b->bd_info->bb_first_free)   e4b->bd_info->bb_first_free = first;  if (first != 0)   left_is_free = !mb_test_bit(first - 1, e4b->bd_bitmap);  block = mb_test_and_clear_bits(e4b->bd_bitmap, first, count);  if (last + 1 < EXT4_SB(sb)->s_mb_maxs[0])   right_is_free = !mb_test_bit(last + 1, e4b->bd_bitmap);  if (__builtin_expect(!!(block != -1), 0)) {   ext4_fsblk_t blocknr;   blocknr = ext4_group_first_block_no(sb, e4b->bd_group);   blocknr += ((block) << (EXT4_SB(sb))->s_cluster_bits);   __ext4_grp_locked_error(__func__,  1427   , sb, e4b->bd_group, inode ? inode->i_ino : 0, blocknr, "freeing already freed block " "(bit %u)", block)                             ;   mb_regenerate_buddy(e4b);   goto done;  }  if (left_is_free && right_is_free)   e4b->bd_info->bb_fragments--;  else if (!left_is_free && !right_is_free)   e4b->bd_info->bb_fragments++;  if (first & 1) {   first += !left_is_free;   e4b->bd_info->bb_counters[0] += left_is_free ? -1 : 1;  }  if (!(last & 1)) {   last -= !right_is_free;   e4b->bd_info->bb_counters[0] += right_is_free ? -1 : 1;  }  if (first <= last)   mb_buddy_mark_free(e4b, first >> 1, last >> 1); done:  mb_set_largest_free_order(sb, e4b->bd_info);  ; }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^
+c_files/pr58400.c:91:1898: warning: implicit declaration of function 'mb_set_largest_free_order' is invalid in C99 [-Wimplicit-function-declaration]
+ void mb_free_blocks(struct inode *inode, struct ext4_buddy *e4b,       int first, int count) {  int left_is_free = 0;  int right_is_free = 0;  int block;  int last = first + count - 1;  struct super_block *sb = e4b->bd_sb;  do { if (__builtin_expect(!!(last >= (sb->s_blocksize << 3)), 0)) do { printk("BUG: failure at %s:%d/%s()!\n", "fs/ext4/mballoc.c", 1400, __func__); panic("BUG!"); } while (0); } while(0);  do { if (__builtin_expect(!!(!((&(&(ext4_group_lock_ptr(sb, e4b->bd_group))->rlock)->raw_lock)->slock == 0)), 0)) do { printk("BUG: failure at %s:%d/%s()!\n", "fs/ext4/mballoc.c", 1401, __func__); panic("BUG!"); } while (0); } while(0);  ;  mb_free_blocks_double(inode, e4b, first, count);  e4b->bd_info->bb_free += count;  if (first < e4b->bd_info->bb_first_free)   e4b->bd_info->bb_first_free = first;  if (first != 0)   left_is_free = !mb_test_bit(first - 1, e4b->bd_bitmap);  block = mb_test_and_clear_bits(e4b->bd_bitmap, first, count);  if (last + 1 < EXT4_SB(sb)->s_mb_maxs[0])   right_is_free = !mb_test_bit(last + 1, e4b->bd_bitmap);  if (__builtin_expect(!!(block != -1), 0)) {   ext4_fsblk_t blocknr;   blocknr = ext4_group_first_block_no(sb, e4b->bd_group);   blocknr += ((block) << (EXT4_SB(sb))->s_cluster_bits);   __ext4_grp_locked_error(__func__,  1427   , sb, e4b->bd_group, inode ? inode->i_ino : 0, blocknr, "freeing already freed block " "(bit %u)", block)                             ;   mb_regenerate_buddy(e4b);   goto done;  }  if (left_is_free && right_is_free)   e4b->bd_info->bb_fragments--;  else if (!left_is_free && !right_is_free)   e4b->bd_info->bb_fragments++;  if (first & 1) {   first += !left_is_free;   e4b->bd_info->bb_counters[0] += left_is_free ? -1 : 1;  }  if (!(last & 1)) {   last -= !right_is_free;   e4b->bd_info->bb_counters[0] += right_is_free ? -1 : 1;  }  if (first <= last)   mb_buddy_mark_free(e4b, first >> 1, last >> 1); done:  mb_set_largest_free_order(sb, e4b->bd_info);  ; }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^
+18 warnings generated.
+TranslationUnitDecl 0x7fc002818ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc002819420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc002819140 '__int128'
+|-TypedefDecl 0x7fc002819490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc002819160 'unsigned __int128'
+|-TypedefDecl 0x7fc002819768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc002819570 'struct __NSConstantString_tag'
+|   `-Record 0x7fc0028194e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc002819800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc0028197c0 'char *'
+|   `-BuiltinType 0x7fc002818f60 'char'
+|-TypedefDecl 0x7fc002819ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc002819a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc0028198e0 'struct __va_list_tag'
+|     `-Record 0x7fc002819858 '__va_list_tag'
+|-TypedefDecl 0x7fc002819b38 <c_files/pr58400.c:4:2, col:25> col:25 referenced __u16 'unsigned short'
+| `-BuiltinType 0x7fc002819040 'unsigned short'
+|-TypedefDecl 0x7fc002819ba8 <line:5:2, col:25> col:25 referenced __s32 'int'
+| `-BuiltinType 0x7fc002818fc0 'int'
+|-TypedefDecl 0x7fc002869e18 <line:6:2, col:23> col:23 referenced __u32 'unsigned int'
+| `-BuiltinType 0x7fc002819060 'unsigned int'
+|-TypedefDecl 0x7fc002869e88 <line:7:2, col:24> col:24 referenced u8 'unsigned char'
+| `-BuiltinType 0x7fc002819020 'unsigned char'
+|-TypedefDecl 0x7fc002869ef8 <line:8:2, col:23> col:23 referenced u32 'unsigned int'
+| `-BuiltinType 0x7fc002819060 'unsigned int'
+|-TypedefDecl 0x7fc002869f68 <line:9:2, col:27> col:27 referenced s64 'long long'
+| `-BuiltinType 0x7fc002819000 'long long'
+|-TypedefDecl 0x7fc002869fd8 <line:10:2, col:29> col:29 referenced u64 'unsigned long long'
+| `-BuiltinType 0x7fc0028190a0 'unsigned long long'
+|-TypedefDecl 0x7fc00286a048 <line:11:2, col:15> col:15 referenced __kernel_long_t 'long'
+| `-BuiltinType 0x7fc002818fe0 'long'
+|-TypedefDecl 0x7fc00286a0b8 <line:12:2, col:23> col:23 referenced __kernel_uid32_t 'unsigned int'
+| `-BuiltinType 0x7fc002819060 'unsigned int'
+|-TypedefDecl 0x7fc00286a128 <line:13:2, col:23> col:23 referenced __kernel_gid32_t 'unsigned int'
+| `-BuiltinType 0x7fc002819060 'unsigned int'
+|-TypedefDecl 0x7fc00286a198 <line:14:2, col:20> col:20 referenced __kernel_loff_t 'long long'
+| `-BuiltinType 0x7fc002819000 'long long'
+|-TypedefDecl 0x7fc00286a220 <line:15:2, col:26> col:26 referenced __kernel_time_t '__kernel_long_t':'long'
+| `-TypedefType 0x7fc00286a1f0 '__kernel_long_t' sugar
+|   |-Typedef 0x7fc00286a048 '__kernel_long_t'
+|   `-BuiltinType 0x7fc002818fe0 'long'
+|-TypedefDecl 0x7fc00286a2b0 <line:16:2, col:16> col:16 referenced __kernel_dev_t '__u32':'unsigned int'
+| `-TypedefType 0x7fc00286a280 '__u32' sugar
+|   |-Typedef 0x7fc002869e18 '__u32'
+|   `-BuiltinType 0x7fc002819060 'unsigned int'
+|-TypedefDecl 0x7fc00286a340 <line:17:2, col:25> col:25 referenced dev_t '__kernel_dev_t':'unsigned int'
+| `-TypedefType 0x7fc00286a310 '__kernel_dev_t' sugar
+|   |-Typedef 0x7fc00286a2b0 '__kernel_dev_t'
+|   `-TypedefType 0x7fc00286a280 '__u32' sugar
+|     |-Typedef 0x7fc002869e18 '__u32'
+|     `-BuiltinType 0x7fc002819060 'unsigned int'
+|-TypedefDecl 0x7fc00286a3b0 <line:18:2, col:25> col:25 referenced umode_t 'unsigned short'
+| `-BuiltinType 0x7fc002819040 'unsigned short'
+|-TypedefDecl 0x7fc00286a440 <line:19:2, col:27> col:27 referenced uid_t '__kernel_uid32_t':'unsigned int'
+| `-TypedefType 0x7fc00286a410 '__kernel_uid32_t' sugar
+|   |-Typedef 0x7fc00286a0b8 '__kernel_uid32_t'
+|   `-BuiltinType 0x7fc002819060 'unsigned int'
+|-TypedefDecl 0x7fc00286a4d0 <line:20:2, col:27> col:27 referenced gid_t '__kernel_gid32_t':'unsigned int'
+| `-TypedefType 0x7fc00286a4a0 '__kernel_gid32_t' sugar
+|   |-Typedef 0x7fc00286a128 '__kernel_gid32_t'
+|   `-BuiltinType 0x7fc002819060 'unsigned int'
+|-TypedefDecl 0x7fc00286a560 <line:21:2, col:26> col:26 referenced loff_t '__kernel_loff_t':'long long'
+| `-TypedefType 0x7fc00286a530 '__kernel_loff_t' sugar
+|   |-Typedef 0x7fc00286a198 '__kernel_loff_t'
+|   `-BuiltinType 0x7fc002819000 'long long'
+|-TypedefDecl 0x7fc00286a5f0 <line:22:2, col:14> col:14 referenced blkcnt_t 'u64':'unsigned long long'
+| `-TypedefType 0x7fc00286a5c0 'u64' sugar
+|   |-Typedef 0x7fc002869fd8 'u64'
+|   `-BuiltinType 0x7fc0028190a0 'unsigned long long'
+|-TypedefDecl 0x7fc00286a660 <line:23:2, col:19> col:19 referenced gfp_t 'unsigned int'
+| `-BuiltinType 0x7fc002819060 'unsigned int'
+|-TypedefDecl 0x7fc00286a6d0 <line:24:2, col:19> col:19 referenced fmode_t 'unsigned int'
+| `-BuiltinType 0x7fc002819060 'unsigned int'
+|-RecordDecl 0x7fc00286a728 <line:25:10, col:33> col:10 struct definition
+| `-FieldDecl 0x7fc00286a7e8 <col:20, col:24> col:24 counter 'int'
+|-TypedefDecl 0x7fc00286a880 <col:2, line:26:2> col:2 referenced atomic_t 'struct atomic_t':'atomic_t'
+| `-ElaboratedType 0x7fc00286a830 'struct atomic_t' sugar
+|   `-RecordType 0x7fc00286a7b0 'atomic_t'
+|     `-Record 0x7fc00286a728 ''
+|-RecordDecl 0x7fc00286a8f0 <line:27:2, col:53> col:9 struct list_head definition
+| |-FieldDecl 0x7fc00286aa50 <col:22, col:40> col:40 next 'struct list_head *'
+| `-FieldDecl 0x7fc00286aac0 <col:22, col:47> col:47 prev 'struct list_head *'
+|-RecordDecl 0x7fc00286ab08 <line:28:2, col:49> col:9 struct hlist_head definition
+| |-RecordDecl 0x7fc00286abb0 parent 0x7fc002818ed0 <col:23, col:30> col:30 struct hlist_node
+| `-FieldDecl 0x7fc00286ad20 <col:23, col:42> col:42 first 'struct hlist_node *'
+|-RecordDecl 0x7fc00286ad68 prev 0x7fc00286abb0 <line:29:2, col:57> col:9 struct hlist_node definition
+| |-FieldDecl 0x7fc00286ae28 <col:23, col:42> col:42 next 'struct hlist_node *'
+| `-FieldDecl 0x7fc00286aef0 <col:23, col:50> col:50 pprev 'struct hlist_node **'
+|-RecordDecl 0x7fc00286af38 <line:30:2, col:97> col:9 struct callback_head definition
+| |-FieldDecl 0x7fc00286b090 <col:26, col:48> col:48 next 'struct callback_head *'
+| `-FieldDecl 0x7fc00286b2a0 <col:55, col:94> col:62 func 'void (*)(struct callback_head *)'
+|-FunctionDecl 0x7fc00286b470 <line:31:2, col:915> col:96 used set_bit 'void (int, volatile unsigned long *)' static inline
+| |-ParmVarDecl 0x7fc00286b300 <col:104, col:108> col:108 used nr 'int'
+| |-ParmVarDecl 0x7fc00286b3a0 <col:112, col:136> col:136 used addr 'volatile unsigned long *'
+| |-CompoundStmt 0x7fc00286ec90 <col:142, col:915>
+| | |-DeclStmt 0x7fc00286b650 <col:144, col:174>
+| | | `-VarDecl 0x7fc00286b5f0 <col:144, col:168> col:168 used b_addr 'volatile unsigned char *'
+| | |-BinaryOperator 0x7fc00286b878 <col:176, col:232> 'volatile unsigned char *' '='
+| | | |-DeclRefExpr 0x7fc00286b668 <col:176> 'volatile unsigned char *' lvalue Var 0x7fc00286b5f0 'b_addr' 'volatile unsigned char *'
+| | | `-BinaryOperator 0x7fc00286b850 <col:185, col:232> 'volatile unsigned char *' '+'
+| | |   |-CStyleCastExpr 0x7fc00286b718 <col:185, col:211> 'volatile unsigned char *' <BitCast>
+| | |   | `-ImplicitCastExpr 0x7fc00286b6d0 <col:211> 'volatile unsigned long *' <LValueToRValue>
+| | |   |   `-DeclRefExpr 0x7fc00286b690 <col:211> 'volatile unsigned long *' lvalue ParmVar 0x7fc00286b3a0 'addr' 'volatile unsigned long *'
+| | |   `-ParenExpr 0x7fc00286b830 <col:218, col:232> 'int'
+| | |     `-BinaryOperator 0x7fc00286b808 <col:219, col:231> 'int' '^'
+| | |       |-ParenExpr 0x7fc00286b7c8 <col:219, col:227> 'int'
+| | |       | `-BinaryOperator 0x7fc00286b7a0 <col:220, col:226> 'int' '>>'
+| | |       |   |-ImplicitCastExpr 0x7fc00286b788 <col:220> 'int' <LValueToRValue>
+| | |       |   | `-DeclRefExpr 0x7fc00286b740 <col:220> 'int' lvalue ParmVar 0x7fc00286b300 'nr' 'int'
+| | |       |   `-IntegerLiteral 0x7fc00286b768 <col:226> 'int' 3
+| | |       `-IntegerLiteral 0x7fc00286b7e8 <col:231> 'int' 3
+| | `-IfStmt 0x7fc00286ec58 <col:235, col:913>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-CallExpr 0x7fc00286ba50 <col:239, col:262> 'int'
+| |   | |-ImplicitCastExpr 0x7fc00286ba38 <col:239> 'int (*)()' <BuiltinFnToFnPtr>
+| |   | | `-DeclRefExpr 0x7fc00286b9b8 <col:239> '<builtin fn type>' Function 0x7fc00286b8c8 '__builtin_constant_p' 'int ()'
+| |   | `-DeclRefExpr 0x7fc00286b9e0 <col:260> 'int' lvalue ParmVar 0x7fc00286b300 'nr' 'int'
+| |   |-CompoundStmt 0x7fc00286ea10 <col:265, col:846>
+| |   | `-SwitchStmt 0x7fc00286bb08 <col:267, col:844>
+| |   |   |-<<<NULL>>>
+| |   |   |-<<<NULL>>>
+| |   |   |-BinaryOperator 0x7fc00286bae0 <col:274, col:279> 'int' '&'
+| |   |   | |-ImplicitCastExpr 0x7fc00286bac8 <col:274> 'int' <LValueToRValue>
+| |   |   | | `-DeclRefExpr 0x7fc00286ba80 <col:274> 'int' lvalue ParmVar 0x7fc00286b300 'nr' 'int'
+| |   |   | `-IntegerLiteral 0x7fc00286baa8 <col:279> 'int' 7
+| |   |   `-CompoundStmt 0x7fc00286e978 <col:282, col:844>
+| |   |     |-CaseStmt 0x7fc00286bb58 <col:284, col:344>
+| |   |     | |-IntegerLiteral 0x7fc00286bb38 <col:289> 'int' 0
+| |   |     | |-<<<NULL>>>
+| |   |     | `-GCCAsmStmt 0x7fc00286bd20 <col:292, col:344>
+| |   |     |   `-ImplicitCastExpr 0x7fc00286bd08 <col:328> 'volatile unsigned char *' <LValueToRValue>
+| |   |     |     `-DeclRefExpr 0x7fc00286bc78 <col:328> 'volatile unsigned char *' lvalue Var 0x7fc00286b5f0 'b_addr' 'volatile unsigned char *'
+| |   |     |-BreakStmt 0x7fc00286bd88 <col:347>
+| |   |     |-CaseStmt 0x7fc00286bdb0 <col:354, col:414>
+| |   |     | |-IntegerLiteral 0x7fc00286bd90 <col:359> 'int' 1
+| |   |     | |-<<<NULL>>>
+| |   |     | `-GCCAsmStmt 0x7fc00286dee8 <col:362, col:414>
+| |   |     |   `-ImplicitCastExpr 0x7fc00286ded0 <col:398> 'volatile unsigned char *' <LValueToRValue>
+| |   |     |     `-DeclRefExpr 0x7fc00286de78 <col:398> 'volatile unsigned char *' lvalue Var 0x7fc00286b5f0 'b_addr' 'volatile unsigned char *'
+| |   |     |-BreakStmt 0x7fc00286df50 <col:417>
+| |   |     |-CaseStmt 0x7fc00286df78 <col:424, col:484>
+| |   |     | |-IntegerLiteral 0x7fc00286df58 <col:429> 'int' 2
+| |   |     | |-<<<NULL>>>
+| |   |     | `-GCCAsmStmt 0x7fc00286e098 <col:432, col:484>
+| |   |     |   `-ImplicitCastExpr 0x7fc00286e080 <col:468> 'volatile unsigned char *' <LValueToRValue>
+| |   |     |     `-DeclRefExpr 0x7fc00286e028 <col:468> 'volatile unsigned char *' lvalue Var 0x7fc00286b5f0 'b_addr' 'volatile unsigned char *'
+| |   |     |-BreakStmt 0x7fc00286e100 <col:487>
+| |   |     |-CaseStmt 0x7fc00286e128 <col:494, col:554>
+| |   |     | |-IntegerLiteral 0x7fc00286e108 <col:499> 'int' 3
+| |   |     | |-<<<NULL>>>
+| |   |     | `-GCCAsmStmt 0x7fc00286e248 <col:502, col:554>
+| |   |     |   `-ImplicitCastExpr 0x7fc00286e230 <col:538> 'volatile unsigned char *' <LValueToRValue>
+| |   |     |     `-DeclRefExpr 0x7fc00286e1d8 <col:538> 'volatile unsigned char *' lvalue Var 0x7fc00286b5f0 'b_addr' 'volatile unsigned char *'
+| |   |     |-BreakStmt 0x7fc00286e2b0 <col:557>
+| |   |     |-CaseStmt 0x7fc00286e2d8 <col:564, col:624>
+| |   |     | |-IntegerLiteral 0x7fc00286e2b8 <col:569> 'int' 4
+| |   |     | |-<<<NULL>>>
+| |   |     | `-GCCAsmStmt 0x7fc00286e3f8 <col:572, col:624>
+| |   |     |   `-ImplicitCastExpr 0x7fc00286e3e0 <col:608> 'volatile unsigned char *' <LValueToRValue>
+| |   |     |     `-DeclRefExpr 0x7fc00286e388 <col:608> 'volatile unsigned char *' lvalue Var 0x7fc00286b5f0 'b_addr' 'volatile unsigned char *'
+| |   |     |-BreakStmt 0x7fc00286e460 <col:627>
+| |   |     |-CaseStmt 0x7fc00286e488 <col:634, col:694>
+| |   |     | |-IntegerLiteral 0x7fc00286e468 <col:639> 'int' 5
+| |   |     | |-<<<NULL>>>
+| |   |     | `-GCCAsmStmt 0x7fc00286e5a8 <col:642, col:694>
+| |   |     |   `-ImplicitCastExpr 0x7fc00286e590 <col:678> 'volatile unsigned char *' <LValueToRValue>
+| |   |     |     `-DeclRefExpr 0x7fc00286e538 <col:678> 'volatile unsigned char *' lvalue Var 0x7fc00286b5f0 'b_addr' 'volatile unsigned char *'
+| |   |     |-BreakStmt 0x7fc00286e610 <col:697>
+| |   |     |-CaseStmt 0x7fc00286e638 <col:704, col:764>
+| |   |     | |-IntegerLiteral 0x7fc00286e618 <col:709> 'int' 6
+| |   |     | |-<<<NULL>>>
+| |   |     | `-GCCAsmStmt 0x7fc00286e758 <col:712, col:764>
+| |   |     |   `-ImplicitCastExpr 0x7fc00286e740 <col:748> 'volatile unsigned char *' <LValueToRValue>
+| |   |     |     `-DeclRefExpr 0x7fc00286e6e8 <col:748> 'volatile unsigned char *' lvalue Var 0x7fc00286b5f0 'b_addr' 'volatile unsigned char *'
+| |   |     |-BreakStmt 0x7fc00286e7c0 <col:767>
+| |   |     |-CaseStmt 0x7fc00286e7e8 <col:774, col:834>
+| |   |     | |-IntegerLiteral 0x7fc00286e7c8 <col:779> 'int' 7
+| |   |     | |-<<<NULL>>>
+| |   |     | `-GCCAsmStmt 0x7fc00286e908 <col:782, col:834>
+| |   |     |   `-ImplicitCastExpr 0x7fc00286e8f0 <col:818> 'volatile unsigned char *' <LValueToRValue>
+| |   |     |     `-DeclRefExpr 0x7fc00286e898 <col:818> 'volatile unsigned char *' lvalue Var 0x7fc00286b5f0 'b_addr' 'volatile unsigned char *'
+| |   |     `-BreakStmt 0x7fc00286e970 <col:837>
+| |   `-CompoundStmt 0x7fc00286ec38 <col:853, col:913>
+| |     `-GCCAsmStmt 0x7fc00286ebb8 <col:855, col:910>
+| |       |-ImplicitCastExpr 0x7fc00286eb88 <col:886> 'int' <LValueToRValue>
+| |       | `-DeclRefExpr 0x7fc00286ead8 <col:886> 'int' lvalue ParmVar 0x7fc00286b300 'nr' 'int'
+| |       `-ImplicitCastExpr 0x7fc00286eba0 <col:894> 'volatile unsigned char *' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fc00286eb30 <col:894> 'volatile unsigned char *' lvalue Var 0x7fc00286b5f0 'b_addr' 'volatile unsigned char *'
+| |-NoInstrumentFunctionAttr 0x7fc00286b518 <col:66>
+| `-AlwaysInlineAttr 0x7fc00286b560 <col:35> always_inline
+|-FunctionDecl 0x7fc00286b8c8 <col:239> col:239 implicit used __builtin_constant_p 'int ()' extern
+| |-NoThrowAttr 0x7fc00286b960 <col:239> Implicit
+| `-ConstAttr 0x7fc00286b9a8 <col:239> Implicit
+|-FunctionDecl 0x7fc00286ee78 <line:32:2, col:244> col:95 used test_bit 'int (int, const unsigned long *)' static inline
+| |-ParmVarDecl 0x7fc00286ecd8 <col:104, col:108> col:108 used nr 'int'
+| |-ParmVarDecl 0x7fc00286ed80 <col:112, col:133> col:133 used addr 'const unsigned long *'
+| |-CompoundStmt 0x7fc00286f398 <col:139, col:244>
+| | `-ReturnStmt 0x7fc00286f380 <col:142, col:241>
+| |   `-BinaryOperator 0x7fc00286f358 <col:149, col:241> 'int' '!='
+| |     |-ParenExpr 0x7fc00286f300 <col:149, col:236> 'unsigned long'
+| |     | `-BinaryOperator 0x7fc00286f2d8 <col:150, col:235> 'unsigned long' '&'
+| |     |   |-ImplicitCastExpr 0x7fc00286f2c0 <col:150, col:215> 'unsigned long' <IntegralCast>
+| |     |   | `-ImplicitCastExpr 0x7fc00286f2a8 <col:150, col:215> 'unsigned char' <LValueToRValue>
+| |     |   |   `-UnaryOperator 0x7fc00286f178 <col:150, col:215> 'volatile unsigned char' lvalue prefix '*'
+| |     |   |     `-ParenExpr 0x7fc00286f158 <col:151, col:215> 'volatile unsigned char *'
+| |     |   |       `-BinaryOperator 0x7fc00286f130 <col:152, col:214> 'volatile unsigned char *' '+'
+| |     |   |         |-CStyleCastExpr 0x7fc00286eff8 <col:152, col:178> 'volatile unsigned char *' <BitCast>
+| |     |   |         | `-ImplicitCastExpr 0x7fc00286efb8 <col:178> 'const unsigned long *' <LValueToRValue>
+| |     |   |         |   `-DeclRefExpr 0x7fc00286ef78 <col:178> 'const unsigned long *' lvalue ParmVar 0x7fc00286ed80 'addr' 'const unsigned long *'
+| |     |   |         `-ParenExpr 0x7fc00286f110 <col:200, col:214> 'int'
+| |     |   |           `-BinaryOperator 0x7fc00286f0e8 <col:201, col:213> 'int' '^'
+| |     |   |             |-ParenExpr 0x7fc00286f0a8 <col:201, col:209> 'int'
+| |     |   |             | `-BinaryOperator 0x7fc00286f080 <col:202, col:208> 'int' '>>'
+| |     |   |             |   |-ImplicitCastExpr 0x7fc00286f068 <col:202> 'int' <LValueToRValue>
+| |     |   |             |   | `-DeclRefExpr 0x7fc00286f020 <col:202> 'int' lvalue ParmVar 0x7fc00286ecd8 'nr' 'int'
+| |     |   |             |   `-IntegerLiteral 0x7fc00286f048 <col:208> 'int' 3
+| |     |   |             `-IntegerLiteral 0x7fc00286f0c8 <col:213> 'int' 3
+| |     |   `-ParenExpr 0x7fc00286f288 <col:219, col:235> 'unsigned long'
+| |     |     `-BinaryOperator 0x7fc00286f260 <col:220, col:234> 'unsigned long' '<<'
+| |     |       |-IntegerLiteral 0x7fc00286f198 <col:220> 'unsigned long' 1
+| |     |       `-ParenExpr 0x7fc00286f240 <col:227, col:234> 'int'
+| |     |         `-BinaryOperator 0x7fc00286f218 <col:228, col:233> 'int' '&'
+| |     |           |-ImplicitCastExpr 0x7fc00286f200 <col:228> 'int' <LValueToRValue>
+| |     |           | `-DeclRefExpr 0x7fc00286f1b8 <col:228> 'int' lvalue ParmVar 0x7fc00286ecd8 'nr' 'int'
+| |     |           `-IntegerLiteral 0x7fc00286f1e0 <col:233> 'int' 7
+| |     `-ImplicitCastExpr 0x7fc00286f340 <col:241> 'unsigned long' <IntegralCast>
+| |       `-IntegerLiteral 0x7fc00286f320 <col:241> 'int' 0
+| |-NoInstrumentFunctionAttr 0x7fc00286ef20 <col:66>
+| `-AlwaysInlineAttr 0x7fc00286ef68 <col:35> always_inline
+|-FunctionDecl 0x7fc00286f528 <line:33:2, col:178> col:91 used test_bit_le 'int (int, const void *)' static inline
+| |-ParmVarDecl 0x7fc00286f3d0 <col:103, col:107> col:107 used nr 'int'
+| |-ParmVarDecl 0x7fc00286f448 <col:111, col:123> col:123 used addr 'const void *'
+| |-CompoundStmt 0x7fc00286f8b0 <col:129, col:178>
+| | `-ReturnStmt 0x7fc00286f898 <col:132, col:175>
+| |   `-CallExpr 0x7fc00286f830 <col:139, col:175> 'int'
+| |     |-ImplicitCastExpr 0x7fc00286f818 <col:139> 'int (*)(int, const unsigned long *)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fc00286f628 <col:139> 'int (int, const unsigned long *)' Function 0x7fc00286ee78 'test_bit' 'int (int, const unsigned long *)'
+| |     |-BinaryOperator 0x7fc00286f7a0 <col:148, col:168> 'int' '^'
+| |     | |-ImplicitCastExpr 0x7fc00286f788 <col:148> 'int' <LValueToRValue>
+| |     | | `-DeclRefExpr 0x7fc00286f650 <col:148> 'int' lvalue ParmVar 0x7fc00286f3d0 'nr' 'int'
+| |     | `-ParenExpr 0x7fc00286f768 <col:153, col:168> 'int'
+| |     |   `-BinaryOperator 0x7fc00286f740 <col:154, col:165> 'int' '&'
+| |     |     |-ParenExpr 0x7fc00286f6e0 <col:154, col:160> 'int'
+| |     |     | `-BinaryOperator 0x7fc00286f6b8 <col:155, col:159> 'int' '-'
+| |     |     |   |-IntegerLiteral 0x7fc00286f678 <col:155> 'int' 32
+| |     |     |   `-IntegerLiteral 0x7fc00286f698 <col:159> 'int' 1
+| |     |     `-UnaryOperator 0x7fc00286f720 <col:164, col:165> 'int' prefix '~'
+| |     |       `-IntegerLiteral 0x7fc00286f700 <col:165> 'int' 7
+| |     `-ImplicitCastExpr 0x7fc00286f880 <col:171> 'const unsigned long *' <BitCast>
+| |       `-ImplicitCastExpr 0x7fc00286f868 <col:171> 'const void *' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fc00286f7c8 <col:171> 'const void *' lvalue ParmVar 0x7fc00286f448 'addr' 'const void *'
+| |-NoInstrumentFunctionAttr 0x7fc00286f5d0 <col:62>
+| `-AlwaysInlineAttr 0x7fc00286f618 <col:31> always_inline
+|-FunctionDecl 0x7fc00286fa30 <line:34:2, col:169> col:92 used __set_bit_le 'void (int, void *)' static inline
+| |-ParmVarDecl 0x7fc00286f8e8 <col:105, col:109> col:109 used nr 'int'
+| |-ParmVarDecl 0x7fc00286f960 <col:113, col:119> col:119 used addr 'void *'
+| |-CompoundStmt 0x7fc00286fde8 <col:125, col:169>
+| | `-CallExpr 0x7fc00286fd80 <col:128, col:166> 'void'
+| |   |-ImplicitCastExpr 0x7fc00286fd68 <col:128> 'void (*)(int, volatile unsigned long *)' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7fc00286fb30 <col:128> 'void (int, volatile unsigned long *)' Function 0x7fc00286b470 'set_bit' 'void (int, volatile unsigned long *)'
+| |   |-ParenExpr 0x7fc00286fcd0 <col:136, col:158> 'int'
+| |   | `-BinaryOperator 0x7fc00286fca8 <col:137, col:157> 'int' '^'
+| |   |   |-ImplicitCastExpr 0x7fc00286fc90 <col:137> 'int' <LValueToRValue>
+| |   |   | `-DeclRefExpr 0x7fc00286fb58 <col:137> 'int' lvalue ParmVar 0x7fc00286f8e8 'nr' 'int'
+| |   |   `-ParenExpr 0x7fc00286fc70 <col:142, col:157> 'int'
+| |   |     `-BinaryOperator 0x7fc00286fc48 <col:143, col:154> 'int' '&'
+| |   |       |-ParenExpr 0x7fc00286fbe8 <col:143, col:149> 'int'
+| |   |       | `-BinaryOperator 0x7fc00286fbc0 <col:144, col:148> 'int' '-'
+| |   |       |   |-IntegerLiteral 0x7fc00286fb80 <col:144> 'int' 32
+| |   |       |   `-IntegerLiteral 0x7fc00286fba0 <col:148> 'int' 1
+| |   |       `-UnaryOperator 0x7fc00286fc28 <col:153, col:154> 'int' prefix '~'
+| |   |         `-IntegerLiteral 0x7fc00286fc08 <col:154> 'int' 7
+| |   `-ImplicitCastExpr 0x7fc00286fdd0 <col:160, col:165> 'volatile unsigned long *' <BitCast>
+| |     `-ImplicitCastExpr 0x7fc00286fdb8 <col:160, col:165> 'void *' <LValueToRValue>
+| |       `-ParenExpr 0x7fc00286fd18 <col:160, col:165> 'void *' lvalue
+| |         `-DeclRefExpr 0x7fc00286fcf0 <col:161> 'void *' lvalue ParmVar 0x7fc00286f960 'addr' 'void *'
+| |-NoInstrumentFunctionAttr 0x7fc00286fad8 <col:62>
+| `-AlwaysInlineAttr 0x7fc00286fb20 <col:31> always_inline
+|-RecordDecl 0x7fc00286fe08 <line:35:10, col:49> col:10 struct definition
+| `-FieldDecl 0x7fc00286fec8 <col:20, col:42> col:42 referenced slock 'volatile unsigned int'
+|-TypedefDecl 0x7fc00286ff60 <col:2, line:36:2> col:2 referenced arch_spinlock_t 'struct arch_spinlock_t':'arch_spinlock_t'
+| `-ElaboratedType 0x7fc00286ff10 'struct arch_spinlock_t' sugar
+|   `-RecordType 0x7fc00286fe90 'arch_spinlock_t'
+|     `-Record 0x7fc00286fe08 ''
+|-RecordDecl 0x7fc00286ffd0 <line:37:10, col:105> col:17 struct raw_spinlock definition
+| |-FieldDecl 0x7fc0028700b0 <col:33, col:49> col:49 referenced raw_lock 'arch_spinlock_t':'arch_spinlock_t'
+| |-FieldDecl 0x7fc002870110 <col:60, col:73> col:73 magic 'unsigned int'
+| |-FieldDecl 0x7fc002870170 <col:60, col:80> col:80 owner_cpu 'unsigned int'
+| `-FieldDecl 0x7fc0028701d0 <col:92, col:98> col:98 owner 'void *'
+|-TypedefDecl 0x7fc0028702b0 <col:2, line:38:2> col:2 referenced raw_spinlock_t 'struct raw_spinlock':'struct raw_spinlock'
+| `-ElaboratedType 0x7fc002870260 'struct raw_spinlock' sugar
+|   `-RecordType 0x7fc002870060 'struct raw_spinlock'
+|     `-Record 0x7fc00286ffd0 'raw_spinlock'
+|-RecordDecl 0x7fc002870320 <line:39:10, col:70> col:17 struct spinlock definition
+| |-RecordDecl 0x7fc0028703d0 <col:29, col:67> col:29 union definition
+| | `-FieldDecl 0x7fc0028704a0 <col:39, col:59> col:59 referenced rlock 'struct raw_spinlock':'struct raw_spinlock'
+| |-FieldDecl 0x7fc0028705a0 <col:29> col:29 implicit referenced 'union spinlock::(anonymous at c_files/pr58400.c:39:29)'
+| `-IndirectFieldDecl 0x7fc0028705f8 <col:59> col:59 implicit rlock 'struct raw_spinlock':'struct raw_spinlock'
+|   |-Field 0x7fc0028705a0 '' 'union spinlock::(anonymous at c_files/pr58400.c:39:29)'
+|   `-Field 0x7fc0028704a0 'rlock' 'struct raw_spinlock':'struct raw_spinlock'
+|-TypedefDecl 0x7fc0028706d0 <col:2, line:40:2> col:2 referenced spinlock_t 'struct spinlock':'struct spinlock'
+| `-ElaboratedType 0x7fc002870680 'struct spinlock' sugar
+|   `-RecordType 0x7fc0028703b0 'struct spinlock'
+|     `-Record 0x7fc002870320 'spinlock'
+|-TypedefDecl 0x7fc002870770 <line:41:2, col:19> col:19 referenced atomic_long_t 'atomic_t':'atomic_t'
+| `-TypedefType 0x7fc002870740 'atomic_t' sugar
+|   |-Typedef 0x7fc00286a880 'atomic_t'
+|   `-ElaboratedType 0x7fc00286a830 'struct atomic_t' sugar
+|     `-RecordType 0x7fc00286a7b0 'atomic_t'
+|       `-Record 0x7fc00286a728 ''
+|-RecordDecl 0x7fc0028707c8 <line:42:10, col:39> col:10 struct definition
+| `-FieldDecl 0x7fc002870888 <col:20, col:30> col:30 counter 'long long'
+|-TypedefDecl 0x7fc002870920 <col:2, line:43:2> col:2 referenced atomic64_t 'struct atomic64_t':'atomic64_t'
+| `-ElaboratedType 0x7fc0028708d0 'struct atomic64_t' sugar
+|   `-RecordType 0x7fc002870850 'atomic64_t'
+|     `-Record 0x7fc0028707c8 ''
+|-RecordDecl 0x7fc002870990 <line:44:2, col:76> col:9 struct __wait_queue_head definition
+| |-FieldDecl 0x7fc002870a70 <col:30, col:41> col:41 lock 'spinlock_t':'struct spinlock'
+| `-FieldDecl 0x7fc002870ad8 <col:48, col:65> col:65 task_list 'struct list_head':'struct list_head'
+|-TypedefDecl 0x7fc002870bc0 <line:45:2, col:35> col:35 referenced wait_queue_head_t 'struct __wait_queue_head':'struct __wait_queue_head'
+| `-ElaboratedType 0x7fc002870b70 'struct __wait_queue_head' sugar
+|   `-RecordType 0x7fc002870a20 'struct __wait_queue_head'
+|     `-Record 0x7fc002870990 '__wait_queue_head'
+|-RecordDecl 0x7fc002870c18 <line:46:2, col:67> col:9 struct completion definition
+| |-FieldDecl 0x7fc002870cd8 <col:23, col:36> col:36 done 'unsigned int'
+| `-FieldDecl 0x7fc002870d50 <col:43, col:61> col:61 wait 'wait_queue_head_t':'struct __wait_queue_head'
+|-RecordDecl 0x7fc002870e00 <line:47:2, col:55> col:9 struct hlist_bl_head definition
+| |-RecordDecl 0x7fc002870eb0 parent 0x7fc002818ed0 <col:26, col:33> col:33 struct hlist_bl_node
+| `-FieldDecl 0x7fc002871020 <col:26, col:48> col:48 first 'struct hlist_bl_node *'
+|-RecordDecl 0x7fc002871068 <line:48:2, col:60> col:9 struct timespec definition
+| |-FieldDecl 0x7fc002871140 <col:21, col:37> col:37 tv_sec '__kernel_time_t':'long'
+| `-FieldDecl 0x7fc0028711a0 <col:46, col:51> col:51 tv_nsec 'long'
+|-RecordDecl 0x7fc0028711e8 <line:49:10, col:31> col:10 struct definition
+| `-FieldDecl 0x7fc0028712c0 <col:20, col:26> col:26 val 'uid_t':'unsigned int'
+|-TypedefDecl 0x7fc002871360 <col:2, line:50:2> col:2 referenced kuid_t 'struct kuid_t':'kuid_t'
+| `-ElaboratedType 0x7fc002871310 'struct kuid_t' sugar
+|   `-RecordType 0x7fc002871270 'kuid_t'
+|     `-Record 0x7fc0028711e8 ''
+|-RecordDecl 0x7fc0028713d0 <line:51:10, col:31> col:10 struct definition
+| `-FieldDecl 0x7fc0028714b0 <col:20, col:26> col:26 val 'gid_t':'unsigned int'
+|-TypedefDecl 0x7fc002871550 <col:2, line:52:2> col:2 referenced kgid_t 'struct kgid_t':'kgid_t'
+| `-ElaboratedType 0x7fc002871500 'struct kgid_t' sugar
+|   `-RecordType 0x7fc002871460 'kgid_t'
+|     `-Record 0x7fc0028713d0 ''
+|-RecordDecl 0x7fc0028715c0 <line:53:10, col:101> col:10 struct definition
+| `-FieldDecl 0x7fc0028719f0 <col:19, col:98> col:33 bits 'unsigned long [1]'
+|-TypedefDecl 0x7fc002871a90 <col:2, line:54:2> col:2 referenced nodemask_t 'struct nodemask_t':'nodemask_t'
+| `-ElaboratedType 0x7fc002871a40 'struct nodemask_t' sugar
+|   `-RecordType 0x7fc002871650 'nodemask_t'
+|     `-Record 0x7fc0028715c0 ''
+|-RecordDecl 0x7fc002871b00 <line:55:2, col:75> col:9 struct list_lru definition
+| |-RecordDecl 0x7fc002871bb0 parent 0x7fc002818ed0 <col:21, col:28> col:28 struct list_lru_node
+| |-FieldDecl 0x7fc002871d20 <col:21, col:43> col:43 node 'struct list_lru_node *'
+| `-FieldDecl 0x7fc002871da0 <col:50, col:61> col:61 active_nodes 'nodemask_t':'nodemask_t'
+|-RecordDecl 0x7fc002872e00 <line:56:2, col:98> col:9 struct radix_tree_root definition
+| |-FieldDecl 0x7fc002872ec8 <col:28, col:41> col:41 height 'unsigned int'
+| |-FieldDecl 0x7fc002872f40 <col:50, col:56> col:56 gfp_mask 'gfp_t':'unsigned int'
+| |-RecordDecl 0x7fc002872f88 parent 0x7fc002818ed0 <col:67, col:74> col:74 struct radix_tree_node
+| `-FieldDecl 0x7fc0028730f0 <col:67, col:91> col:91 rnode 'struct radix_tree_node *'
+|-RecordDecl 0x7fc002873138 <line:57:2, col:45> col:9 struct rb_root definition
+| |-RecordDecl 0x7fc0028731e0 parent 0x7fc002818ed0 <col:20, col:27> col:27 struct rb_node
+| `-FieldDecl 0x7fc002873350 <col:20, col:36> col:36 rb_node 'struct rb_node *'
+|-RecordDecl 0x7fc002873398 <line:58:2, col:147> col:9 struct mutex definition
+| |-FieldDecl 0x7fc002873450 <col:18, col:27> col:27 count 'atomic_t':'atomic_t'
+| |-FieldDecl 0x7fc0028734a8 <col:35, col:46> col:46 wait_lock 'spinlock_t':'struct spinlock'
+| |-FieldDecl 0x7fc002873510 <col:58, col:75> col:75 wait_list 'struct list_head':'struct list_head'
+| |-RecordDecl 0x7fc002873558 parent 0x7fc002818ed0 <col:87, col:94> col:94 struct task_struct
+| |-FieldDecl 0x7fc0028736c0 <col:87, col:107> col:107 owner 'struct task_struct *'
+| |-FieldDecl 0x7fc002873720 <col:115, col:127> col:127 name 'const char *'
+| `-FieldDecl 0x7fc002873780 <col:134, col:140> col:140 magic 'void *'
+|-RecordDecl 0x7fc002873810 <line:59:2, col:298> col:9 struct shrinker definition
+| |-RecordDecl 0x7fc0028739d0 parent 0x7fc002818ed0 <col:82, col:89> col:89 struct shrink_control
+| |-FieldDecl 0x7fc0028792b0 <col:21, col:107> col:37 count_objects 'unsigned long (*)(struct shrinker *, struct shrink_control *)'
+| |-RecordDecl 0x7fc002879380 parent 0x7fc002818ed0 <col:170, col:177> col:177 struct shrink_control
+| |-FieldDecl 0x7fc0028796a0 <col:111, col:195> col:127 scan_objects 'unsigned long (*)(struct shrinker *, struct shrink_control *)'
+| |-FieldDecl 0x7fc002879700 <col:199, col:203> col:203 seeks 'int'
+| |-FieldDecl 0x7fc002879760 <col:211, col:216> col:216 batch 'long'
+| |-FieldDecl 0x7fc0028797c0 <col:224, col:238> col:238 flags 'unsigned long'
+| |-FieldDecl 0x7fc002879828 <col:246, col:263> col:263 list 'struct list_head':'struct list_head'
+| `-FieldDecl 0x7fc0028798f8 <col:270, col:285> col:285 nr_deferred 'atomic_long_t *'
+|-RecordDecl 0x7fc002879940 <line:60:2, col:97> col:9 struct rw_semaphore definition
+| |-FieldDecl 0x7fc002879a20 <col:25, col:31> col:31 activity '__s32':'int'
+| |-FieldDecl 0x7fc002879aa0 <col:42, col:57> col:57 wait_lock 'raw_spinlock_t':'struct raw_spinlock'
+| `-FieldDecl 0x7fc002879b08 <col:69, col:86> col:86 wait_list 'struct list_head':'struct list_head'
+|-RecordDecl 0x7fc002879b50 <line:61:2, col:38> col:9 struct percpu_counter definition
+| `-FieldDecl 0x7fc002879c30 <col:27, col:31> col:31 count 's64':'long long'
+|-TypedefDecl 0x7fc002879c90 <line:62:2, col:20> col:20 referenced qsize_t 'long long'
+| `-BuiltinType 0x7fc002819000 'long long'
+|-RecordDecl 0x7fc002879ce8 <line:63:2, col:255> col:9 struct mem_dqinfo definition
+| |-RecordDecl 0x7fc002879d90 parent 0x7fc002818ed0 <col:23, col:30> col:30 struct quota_format_type
+| |-FieldDecl 0x7fc002879f00 <col:23, col:49> col:49 dqi_format 'struct quota_format_type *'
+| |-FieldDecl 0x7fc002879f60 <col:62, col:66> col:66 dqi_fmt_id 'int'
+| |-FieldDecl 0x7fc00287b000 <col:79, col:96> col:96 dqi_dirty_list 'struct list_head':'struct list_head'
+| |-FieldDecl 0x7fc00287b060 <col:113, col:127> col:127 dqi_flags 'unsigned long'
+| |-FieldDecl 0x7fc00287b0c0 <col:139, col:152> col:152 dqi_bgrace 'unsigned int'
+| |-FieldDecl 0x7fc00287b120 <col:165, col:178> col:178 dqi_igrace 'unsigned int'
+| |-FieldDecl 0x7fc00287b1a0 <col:191, col:199> col:199 dqi_maxblimit 'qsize_t':'long long'
+| |-FieldDecl 0x7fc00287b1f8 <col:215, col:223> col:223 dqi_maxilimit 'qsize_t':'long long'
+| `-FieldDecl 0x7fc00287b258 <col:239, col:245> col:245 dqi_priv 'void *'
+|-RecordDecl 0x7fc00287b2a0 <line:64:2, col:223> col:9 struct quota_info definition
+| |-FieldDecl 0x7fc00287b368 <col:23, col:36> col:36 flags 'unsigned int'
+| |-FieldDecl 0x7fc00287b400 <col:44, col:57> col:57 dqio_mutex 'struct mutex':'struct mutex'
+| |-FieldDecl 0x7fc00287b468 <col:70, col:83> col:83 dqonoff_mutex 'struct mutex':'struct mutex'
+| |-FieldDecl 0x7fc00287b500 <col:99, col:119> col:119 dqptr_sem 'struct rw_semaphore':'struct rw_semaphore'
+| |-RecordDecl 0x7fc00287b548 parent 0x7fc002818ed0 <col:131, col:138> col:138 struct inode
+| |-FieldDecl 0x7fc00287b760 <col:131, col:152> col:145 files 'struct inode *[2]'
+| |-FieldDecl 0x7fc00287b988 <col:156, col:180> col:174 info 'struct mem_dqinfo [2]'
+| |-RecordDecl 0x7fc00287b9d0 parent 0x7fc002818ed0 <col:190, col:197> col:197 struct quota_format_ops
+| `-FieldDecl 0x7fc00287bbf0 <col:184, col:220> col:215 ops 'const struct quota_format_ops *[2]'
+|-RecordDecl 0x7fc00287bc38 <line:65:2, col:471> col:9 struct address_space definition
+| |-AlignedAttr 0x7fc00287c620 <line:66:17, col:37> aligned
+| | `-UnaryExprOrTypeTraitExpr 0x7fc00287c600 <col:25, col:36> 'unsigned long' sizeof 'long'
+| |-FieldDecl 0x7fc00287bd08 <line:65:26, col:40> col:40 host 'struct inode *'
+| |-FieldDecl 0x7fc00287bda0 <col:47, col:70> col:70 page_tree 'struct radix_tree_root':'struct radix_tree_root'
+| |-FieldDecl 0x7fc00287bdf8 <col:82, col:93> col:93 tree_lock 'spinlock_t':'struct spinlock'
+| |-FieldDecl 0x7fc00287be58 <col:105, col:118> col:118 i_mmap_writable 'unsigned int'
+| |-FieldDecl 0x7fc00287bef0 <col:136, col:151> col:151 i_mmap 'struct rb_root':'struct rb_root'
+| |-FieldDecl 0x7fc00287bf58 <col:160, col:177> col:177 i_mmap_nonlinear 'struct list_head':'struct list_head'
+| |-FieldDecl 0x7fc00287c000 <col:196, col:209> col:209 i_mmap_mutex 'struct mutex':'struct mutex'
+| |-FieldDecl 0x7fc00287c060 <col:224, col:238> col:238 nrpages 'unsigned long'
+| |-FieldDecl 0x7fc00287c0c0 <col:248, col:262> col:262 writeback_index 'unsigned long'
+| |-RecordDecl 0x7fc00287c108 parent 0x7fc002818ed0 <col:286, col:293> col:293 struct address_space_operations
+| |-FieldDecl 0x7fc00287c270 <col:280, col:319> col:319 a_ops 'const struct address_space_operations *'
+| |-FieldDecl 0x7fc00287c2d0 <col:327, col:341> col:341 flags 'unsigned long'
+| |-RecordDecl 0x7fc00287c318 parent 0x7fc002818ed0 <col:349, col:356> col:356 struct backing_dev_info
+| |-FieldDecl 0x7fc00287c480 <col:349, col:374> col:374 backing_dev_info 'struct backing_dev_info *'
+| |-FieldDecl 0x7fc00287c4d8 <col:393, col:404> col:404 private_lock 'spinlock_t':'struct spinlock'
+| |-FieldDecl 0x7fc00287c540 <col:419, col:436> col:436 private_list 'struct list_head':'struct list_head'
+| `-FieldDecl 0x7fc00287c5a0 <col:451, col:457> col:457 private_data 'void *'
+|-RecordDecl 0x7fc00287c670 prev 0x7fc00287b548 <line:67:2, col:1299> col:9 struct inode definition
+| |-FieldDecl 0x7fc00287c730 <col:18, col:26> col:26 i_mode 'umode_t':'unsigned short'
+| |-FieldDecl 0x7fc00287c790 <col:35, col:50> col:50 i_opflags 'unsigned short'
+| |-FieldDecl 0x7fc00287c810 <col:62, col:69> col:69 i_uid 'kuid_t':'kuid_t'
+| |-FieldDecl 0x7fc00287c890 <col:77, col:84> col:84 i_gid 'kgid_t':'kgid_t'
+| |-FieldDecl 0x7fc00287c8f0 <col:92, col:105> col:105 i_flags 'unsigned int'
+| |-RecordDecl 0x7fc00287c938 parent 0x7fc002818ed0 <col:115, col:122> col:122 struct posix_acl
+| |-FieldDecl 0x7fc00287caa0 <col:115, col:133> col:133 i_acl 'struct posix_acl *'
+| |-FieldDecl 0x7fc00287cb10 <col:141, col:159> col:159 i_default_acl 'struct posix_acl *'
+| |-RecordDecl 0x7fc00287cb58 parent 0x7fc002818ed0 <col:181, col:188> col:188 struct inode_operations
+| |-FieldDecl 0x7fc00287ccc0 <col:175, col:206> col:206 i_op 'const struct inode_operations *'
+| |-RecordDecl 0x7fc00287cd08 parent 0x7fc002818ed0 <col:213, col:220> col:220 struct super_block
+| |-FieldDecl 0x7fc00287ce70 <col:213, col:233> col:233 i_sb 'struct super_block *'
+| |-FieldDecl 0x7fc00287cf70 <col:240, col:262> col:262 i_mapping 'struct address_space *'
+| |-FieldDecl 0x7fc00287e000 <col:274, col:280> col:280 i_security 'void *'
+| |-FieldDecl 0x7fc00287e060 <col:293, col:307> col:307 referenced i_ino 'unsigned long'
+| |-RecordDecl 0x7fc00287e0a8 <col:315, col:380> col:315 union definition
+| | |-FieldDecl 0x7fc00287e168 <col:325, col:344> col:344 i_nlink 'const unsigned int'
+| | `-FieldDecl 0x7fc00287e1c8 <col:355, col:368> col:368 __i_nlink 'unsigned int'
+| |-FieldDecl 0x7fc00287e260 <col:315> col:315 implicit 'union inode::(anonymous at c_files/pr58400.c:67:315)'
+| |-IndirectFieldDecl 0x7fc00287e2b8 <col:344> col:344 implicit i_nlink 'const unsigned int'
+| | |-Field 0x7fc00287e260 '' 'union inode::(anonymous at c_files/pr58400.c:67:315)'
+| | `-Field 0x7fc00287e168 'i_nlink' 'const unsigned int'
+| |-IndirectFieldDecl 0x7fc00287e308 <col:368> col:368 implicit __i_nlink 'unsigned int'
+| | |-Field 0x7fc00287e260 '' 'union inode::(anonymous at c_files/pr58400.c:67:315)'
+| | `-Field 0x7fc00287e1c8 '__i_nlink' 'unsigned int'
+| |-FieldDecl 0x7fc00287e380 <col:384, col:390> col:390 i_rdev 'dev_t':'unsigned int'
+| |-FieldDecl 0x7fc00287e400 <col:399, col:406> col:406 i_size 'loff_t':'long long'
+| |-FieldDecl 0x7fc00287e4a0 <col:415, col:431> col:431 i_atime 'struct timespec':'struct timespec'
+| |-FieldDecl 0x7fc00287e508 <col:441, col:457> col:457 i_mtime 'struct timespec':'struct timespec'
+| |-FieldDecl 0x7fc00287e570 <col:467, col:483> col:483 i_ctime 'struct timespec':'struct timespec'
+| |-FieldDecl 0x7fc00287e5c8 <col:493, col:504> col:504 i_lock 'spinlock_t':'struct spinlock'
+| |-FieldDecl 0x7fc00287e628 <col:513, col:528> col:528 i_bytes 'unsigned short'
+| |-FieldDecl 0x7fc00287e688 <col:538, col:551> col:551 i_blkbits 'unsigned int'
+| |-FieldDecl 0x7fc00287e700 <col:563, col:572> col:572 i_blocks 'blkcnt_t':'unsigned long long'
+| |-FieldDecl 0x7fc00287e760 <col:583, col:597> col:597 i_state 'unsigned long'
+| |-FieldDecl 0x7fc00287e7c8 <col:607, col:620> col:620 i_mutex 'struct mutex':'struct mutex'
+| |-FieldDecl 0x7fc00287e828 <col:630, col:644> col:644 dirtied_when 'unsigned long'
+| |-FieldDecl 0x7fc00287e890 <col:659, col:677> col:677 i_hash 'struct hlist_node':'struct hlist_node'
+| |-FieldDecl 0x7fc00287e8f8 <col:686, col:703> col:703 i_wb_list 'struct list_head':'struct list_head'
+| |-FieldDecl 0x7fc00287e960 <col:715, col:732> col:732 i_lru 'struct list_head':'struct list_head'
+| |-FieldDecl 0x7fc00287e9c8 <col:740, col:757> col:757 i_sb_list 'struct list_head':'struct list_head'
+| |-RecordDecl 0x7fc00287ea10 <col:769, col:838> col:769 union definition
+| | |-FieldDecl 0x7fc00287eb10 <col:779, col:797> col:797 i_dentry 'struct hlist_head':'struct hlist_head'
+| | `-FieldDecl 0x7fc00287eb78 <col:809, col:830> col:830 i_rcu 'struct callback_head':'struct callback_head'
+| |-FieldDecl 0x7fc00287ec60 <col:769> col:769 implicit 'union inode::(anonymous at c_files/pr58400.c:67:769)'
+| |-IndirectFieldDecl 0x7fc00287ecb8 <col:797> col:797 implicit i_dentry 'struct hlist_head':'struct hlist_head'
+| | |-Field 0x7fc00287ec60 '' 'union inode::(anonymous at c_files/pr58400.c:67:769)'
+| | `-Field 0x7fc00287eb10 'i_dentry' 'struct hlist_head':'struct hlist_head'
+| |-IndirectFieldDecl 0x7fc00287ed08 <col:830> col:830 implicit i_rcu 'struct callback_head':'struct callback_head'
+| | |-Field 0x7fc00287ec60 '' 'union inode::(anonymous at c_files/pr58400.c:67:769)'
+| | `-Field 0x7fc00287eb78 'i_rcu' 'struct callback_head':'struct callback_head'
+| |-FieldDecl 0x7fc00287ed58 <col:842, col:846> col:846 i_version 'u64':'unsigned long long'
+| |-FieldDecl 0x7fc00287edb0 <col:858, col:867> col:867 i_count 'atomic_t':'atomic_t'
+| |-FieldDecl 0x7fc00287ee08 <col:877, col:886> col:886 i_dio_count 'atomic_t':'atomic_t'
+| |-FieldDecl 0x7fc00287ee60 <col:900, col:909> col:909 i_writecount 'atomic_t':'atomic_t'
+| |-RecordDecl 0x7fc00287eea8 parent 0x7fc002818ed0 <col:930, col:937> col:937 struct file_operations
+| |-FieldDecl 0x7fc00287f028 <col:924, col:954> col:954 i_fop 'const struct file_operations *'
+| |-RecordDecl 0x7fc00287f070 parent 0x7fc002818ed0 <col:962, col:969> col:969 struct file_lock
+| |-FieldDecl 0x7fc00287f1e0 <col:962, col:980> col:980 i_flock 'struct file_lock *'
+| |-FieldDecl 0x7fc00287f248 <col:990, col:1011> col:1011 i_data 'struct address_space':'struct address_space'
+| |-RecordDecl 0x7fc00287f290 parent 0x7fc002818ed0 <col:1020, col:1027> col:1027 struct dquot
+| |-FieldDecl 0x7fc00287f4b0 <col:1020, col:1043> col:1034 i_dquot 'struct dquot *[2]'
+| |-FieldDecl 0x7fc00287f518 <col:1047, col:1064> col:1064 i_devices 'struct list_head':'struct list_head'
+| |-RecordDecl 0x7fc00287f560 <col:1076, col:1173> col:1076 union definition
+| | |-RecordDecl 0x7fc00287f610 parent 0x7fc002818ed0 <col:1086, col:1093> col:1093 struct pipe_inode_info
+| | |-FieldDecl 0x7fc00287f780 <col:1086, col:1110> col:1110 i_pipe 'struct pipe_inode_info *'
+| | |-RecordDecl 0x7fc00287f7c8 parent 0x7fc002818ed0 <col:1120, col:1127> col:1127 struct block_device
+| | |-FieldDecl 0x7fc00287f930 <col:1120, col:1141> col:1141 i_bdev 'struct block_device *'
+| | |-RecordDecl 0x7fc00287f978 parent 0x7fc002818ed0 <col:1151, col:1158> col:1158 struct cdev
+| | `-FieldDecl 0x7fc00287fae0 <col:1151, col:1164> col:1164 i_cdev 'struct cdev *'
+| |-FieldDecl 0x7fc00287fb80 <col:1076> col:1076 implicit 'union inode::(anonymous at c_files/pr58400.c:67:1076)'
+| |-IndirectFieldDecl 0x7fc00287fbd8 <col:1110> col:1110 implicit i_pipe 'struct pipe_inode_info *'
+| | |-Field 0x7fc00287fb80 '' 'union inode::(anonymous at c_files/pr58400.c:67:1076)'
+| | `-Field 0x7fc00287f780 'i_pipe' 'struct pipe_inode_info *'
+| |-IndirectFieldDecl 0x7fc00287fc28 <col:1141> col:1141 implicit i_bdev 'struct block_device *'
+| | |-Field 0x7fc00287fb80 '' 'union inode::(anonymous at c_files/pr58400.c:67:1076)'
+| | `-Field 0x7fc00287f930 'i_bdev' 'struct block_device *'
+| |-IndirectFieldDecl 0x7fc00287fc78 <col:1164> col:1164 implicit i_cdev 'struct cdev *'
+| | |-Field 0x7fc00287fb80 '' 'union inode::(anonymous at c_files/pr58400.c:67:1076)'
+| | `-Field 0x7fc00287fae0 'i_cdev' 'struct cdev *'
+| |-FieldDecl 0x7fc00287fcc8 <col:1177, col:1183> col:1183 i_generation '__u32':'unsigned int'
+| |-FieldDecl 0x7fc00287fd20 <col:1198, col:1204> col:1204 i_fsnotify_mask '__u32':'unsigned int'
+| |-FieldDecl 0x7fc00287fd88 <col:1222, col:1240> col:1240 i_fsnotify_marks 'struct hlist_head':'struct hlist_head'
+| |-FieldDecl 0x7fc00287fde0 <col:1259, col:1268> col:1268 i_readcount 'atomic_t':'atomic_t'
+| `-FieldDecl 0x7fc00287fe40 <col:1282, col:1288> col:1288 i_private 'void *'
+|-EnumDecl 0x7fc00287fe88 <line:68:2, col:119> col:2
+| |-EnumConstantDecl 0x7fc00287ff60 <col:10, col:24> col:10 SB_UNFROZEN 'int'
+| | `-IntegerLiteral 0x7fc00287ff40 <col:24> 'int' 0
+| |-EnumConstantDecl 0x7fc002881000 <col:28, col:46> col:28 SB_FREEZE_WRITE 'int'
+| | `-IntegerLiteral 0x7fc00287ffa8 <col:46> 'int' 1
+| |-EnumConstantDecl 0x7fc002881068 <col:50, col:72> col:50 SB_FREEZE_PAGEFAULT 'int'
+| | `-IntegerLiteral 0x7fc002881048 <col:72> 'int' 2
+| |-EnumConstantDecl 0x7fc0028810d0 <col:76, col:91> col:76 SB_FREEZE_FS 'int'
+| | `-IntegerLiteral 0x7fc0028810b0 <col:91> 'int' 3
+| `-EnumConstantDecl 0x7fc002881138 <col:95, col:116> col:95 referenced SB_FREEZE_COMPLETE 'int'
+|   `-IntegerLiteral 0x7fc002881118 <col:116> 'int' 4
+|-RecordDecl 0x7fc002881180 <line:69:2, col:152> col:9 struct sb_writers definition
+| |-FieldDecl 0x7fc0028813e8 <col:23, col:77> col:45 counter 'struct percpu_counter [3]'
+| |-FieldDecl 0x7fc002881440 <col:81, col:99> col:99 wait 'wait_queue_head_t':'struct __wait_queue_head'
+| |-FieldDecl 0x7fc0028814a0 <col:106, col:110> col:110 frozen 'int'
+| `-FieldDecl 0x7fc0028814f8 <col:119, col:137> col:137 wait_unfrozen 'wait_queue_head_t':'struct __wait_queue_head'
+|-RecordDecl 0x7fc002881540 prev 0x7fc00287cd08 <line:70:2, col:1216> col:9 struct super_block definition
+| |-FieldDecl 0x7fc0028815e8 <col:24, col:41> col:41 s_list 'struct list_head':'struct list_head'
+| |-FieldDecl 0x7fc002881640 <col:50, col:56> col:56 s_dev 'dev_t':'unsigned int'
+| |-FieldDecl 0x7fc0028816a0 <col:64, col:78> col:78 s_blocksize_bits 'unsigned char'
+| |-FieldDecl 0x7fc002881700 <col:97, col:111> col:111 referenced s_blocksize 'unsigned long'
+| |-FieldDecl 0x7fc002881758 <col:125, col:132> col:132 s_maxbytes 'loff_t':'long long'
+| |-RecordDecl 0x7fc0028817a0 parent 0x7fc002818ed0 <col:145, col:152> col:152 struct file_system_type
+| |-FieldDecl 0x7fc002881910 <col:145, col:170> col:170 s_type 'struct file_system_type *'
+| |-RecordDecl 0x7fc002881958 parent 0x7fc002818ed0 <col:185, col:192> col:192 struct super_operations
+| |-FieldDecl 0x7fc002881ac0 <col:179, col:210> col:210 s_op 'const struct super_operations *'
+| |-RecordDecl 0x7fc002881b08 parent 0x7fc002818ed0 <col:223, col:230> col:230 struct dquot_operations
+| |-FieldDecl 0x7fc002881c70 <col:217, col:248> col:248 dq_op 'const struct dquot_operations *'
+| |-RecordDecl 0x7fc002881cb8 parent 0x7fc002818ed0 <col:262, col:269> col:269 struct quotactl_ops
+| |-FieldDecl 0x7fc002881e20 <col:256, col:283> col:283 s_qcop 'const struct quotactl_ops *'
+| |-RecordDecl 0x7fc002881e68 parent 0x7fc002818ed0 <col:298, col:305> col:305 struct export_operations
+| |-FieldDecl 0x7fc002883000 <col:292, col:324> col:324 s_export_op 'const struct export_operations *'
+| |-FieldDecl 0x7fc002883060 <col:338, col:352> col:352 s_flags 'unsigned long'
+| |-FieldDecl 0x7fc0028830c0 <col:362, col:376> col:376 s_magic 'unsigned long'
+| |-RecordDecl 0x7fc002883108 parent 0x7fc002818ed0 <col:386, col:393> col:393 struct dentry
+| |-FieldDecl 0x7fc002883270 <col:386, col:401> col:401 s_root 'struct dentry *'
+| |-FieldDecl 0x7fc0028832d8 <col:410, col:430> col:430 s_umount 'struct rw_semaphore':'struct rw_semaphore'
+| |-FieldDecl 0x7fc002883338 <col:441, col:445> col:445 s_count 'int'
+| |-FieldDecl 0x7fc002883390 <col:455, col:464> col:464 s_active 'atomic_t':'atomic_t'
+| |-FieldDecl 0x7fc0028833f0 <col:475, col:481> col:481 s_security 'void *'
+| |-RecordDecl 0x7fc002883438 parent 0x7fc002818ed0 <col:500, col:507> col:507 struct xattr_handler
+| |-FieldDecl 0x7fc002883600 <col:494, col:523> col:523 s_xattr 'const struct xattr_handler **'
+| |-FieldDecl 0x7fc002883668 <col:533, col:550> col:550 s_inodes 'struct list_head':'struct list_head'
+| |-FieldDecl 0x7fc002883700 <col:561, col:582> col:582 s_anon 'struct hlist_bl_head':'struct hlist_bl_head'
+| |-FieldDecl 0x7fc002883768 <col:591, col:608> col:608 s_files 'struct list_head':'struct list_head'
+| |-FieldDecl 0x7fc0028837d0 <col:618, col:635> col:635 s_mounts 'struct list_head':'struct list_head'
+| |-FieldDecl 0x7fc002883840 <col:646, col:667> col:667 s_bdev 'struct block_device *'
+| |-FieldDecl 0x7fc0028838b0 <col:676, col:701> col:701 s_bdi 'struct backing_dev_info *'
+| |-RecordDecl 0x7fc0028838f8 parent 0x7fc002818ed0 <col:709, col:716> col:716 struct mtd_info
+| |-FieldDecl 0x7fc002883a60 <col:709, col:726> col:726 s_mtd 'struct mtd_info *'
+| |-FieldDecl 0x7fc002883ac8 <col:734, col:752> col:752 s_instances 'struct hlist_node':'struct hlist_node'
+| |-FieldDecl 0x7fc002883b60 <col:766, col:784> col:784 s_dquot 'struct quota_info':'struct quota_info'
+| |-FieldDecl 0x7fc002883c00 <col:794, col:812> col:812 s_writers 'struct sb_writers':'struct sb_writers'
+| |-FieldDecl 0x7fc002883cc8 <col:824, col:836> col:829 s_id 'char [32]'
+| |-FieldDecl 0x7fc002883de8 <col:840, col:852> col:843 s_uuid 'u8 [16]'
+| |-FieldDecl 0x7fc002883e48 <col:856, col:862> col:862 referenced s_fs_info 'void *'
+| |-FieldDecl 0x7fc002883ea8 <col:874, col:887> col:887 s_max_links 'unsigned int'
+| |-FieldDecl 0x7fc002883f20 <col:901, col:909> col:909 s_mode 'fmode_t':'unsigned int'
+| |-FieldDecl 0x7fc002883fa0 <col:918, col:922> col:922 s_time_gran 'u32':'unsigned int'
+| |-FieldDecl 0x7fc002884020 <col:936, col:949> col:949 s_vfs_rename_mutex 'struct mutex':'struct mutex'
+| |-FieldDecl 0x7fc002884080 <col:970, col:976> col:976 s_subtype 'char *'
+| |-FieldDecl 0x7fc0028840e0 <col:988, col:994> col:994 s_options 'char *'
+| |-RecordDecl 0x7fc002884128 parent 0x7fc002818ed0 <col:1012, col:1019> col:1019 struct dentry_operations
+| |-FieldDecl 0x7fc002884290 <col:1006, col:1038> col:1038 s_d_op 'const struct dentry_operations *'
+| |-FieldDecl 0x7fc0028842f0 <col:1047, col:1051> col:1051 cleancache_poolid 'int'
+| |-FieldDecl 0x7fc002884358 <col:1071, col:1087> col:1087 s_shrink 'struct shrinker':'struct shrinker'
+| |-FieldDecl 0x7fc0028843b0 <col:1098, col:1112> col:1112 s_remove_count 'atomic_long_t':'atomic_t'
+| |-FieldDecl 0x7fc002884410 <col:1129, col:1133> col:1133 s_readonly_remount 'int'
+| |-FieldDecl 0x7fc0028844b0 <col:1154, col:1170> col:1170 s_dentry_lru 'struct list_lru':'struct list_lru'
+| `-FieldDecl 0x7fc002884518 <col:1186, col:1202> col:1202 s_inode_lru 'struct list_lru':'struct list_lru'
+|-RecordDecl 0x7fc002884560 <line:71:2, col:220> col:9 struct timer_list definition
+| |-FieldDecl 0x7fc002884630 <col:23, col:40> col:40 entry 'struct list_head':'struct list_head'
+| |-FieldDecl 0x7fc002884690 <col:48, col:62> col:62 expires 'unsigned long'
+| |-RecordDecl 0x7fc0028846d8 parent 0x7fc002818ed0 <col:72, col:79> col:79 struct tvec_base
+| |-FieldDecl 0x7fc002884840 <col:72, col:90> col:90 base 'struct tvec_base *'
+| |-FieldDecl 0x7fc002884a00 <col:97, col:127> col:104 function 'void (*)(unsigned long)'
+| |-FieldDecl 0x7fc002884a60 <col:131, col:145> col:145 data 'unsigned long'
+| |-FieldDecl 0x7fc002884ac0 <col:152, col:156> col:156 slack 'int'
+| |-FieldDecl 0x7fc002884b20 <col:164, col:168> col:168 start_pid 'int'
+| |-FieldDecl 0x7fc002884b80 <col:180, col:186> col:186 start_site 'void *'
+| `-FieldDecl 0x7fc002884c48 <col:199, col:217> col:204 start_comm 'char [16]'
+|-RecordDecl 0x7fc002884c90 <line:72:30, col:37> col:37 struct work_struct
+|-TypedefDecl 0x7fc002884f90 <col:2, col:54> col:17 referenced work_func_t 'void (*)(struct work_struct *)'
+| `-PointerType 0x7fc002884f30 'void (*)(struct work_struct *)'
+|   `-ParenType 0x7fc002884ed0 'void (struct work_struct *)' sugar
+|     `-FunctionProtoType 0x7fc002884e90 'void (struct work_struct *)' cdecl
+|       |-BuiltinType 0x7fc002818f20 'void'
+|       `-PointerType 0x7fc002884da0 'struct work_struct *'
+|         `-ElaboratedType 0x7fc002884d40 'struct work_struct' sugar
+|           `-RecordType 0x7fc002884d20 'struct work_struct'
+|             `-Record 0x7fc002884c90 'work_struct'
+|-RecordDecl 0x7fc002885000 <line:73:2, col:88> col:9 struct work_struct definition
+| |-FieldDecl 0x7fc0028850c0 <col:24, col:38> col:38 data 'atomic_long_t':'atomic_t'
+| |-FieldDecl 0x7fc002885128 <col:45, col:62> col:62 entry 'struct list_head':'struct list_head'
+| `-FieldDecl 0x7fc0028851a0 <col:70, col:82> col:82 func 'work_func_t':'void (*)(struct work_struct *)'
+|-RecordDecl 0x7fc0028851e8 <line:74:2, col:116> col:9 struct delayed_work definition
+| |-FieldDecl 0x7fc0028852e0 <col:25, col:44> col:44 work 'struct work_struct':'struct work_struct'
+| |-FieldDecl 0x7fc002885380 <col:51, col:69> col:69 timer 'struct timer_list':'struct timer_list'
+| |-RecordDecl 0x7fc0028853c8 parent 0x7fc002818ed0 <col:77, col:84> col:84 struct workqueue_struct
+| |-FieldDecl 0x7fc002885530 <col:77, col:102> col:102 wq 'struct workqueue_struct *'
+| `-FieldDecl 0x7fc002885590 <col:107, col:111> col:111 cpu 'int'
+|-RecordDecl 0x7fc002885630 <line:75:2, col:36> col:9 struct kref definition
+| `-FieldDecl 0x7fc0028856f0 <col:17, col:26> col:26 refcount 'atomic_t':'atomic_t'
+|-RecordDecl 0x7fc002885738 <line:76:2, col:390> col:9 struct kobject definition
+| |-FieldDecl 0x7fc0028857f8 <col:20, col:32> col:32 name 'const char *'
+| |-FieldDecl 0x7fc002885860 <col:39, col:56> col:56 entry 'struct list_head':'struct list_head'
+| |-FieldDecl 0x7fc002885960 <col:64, col:80> col:80 parent 'struct kobject *'
+| |-RecordDecl 0x7fc0028859a8 parent 0x7fc002818ed0 <col:89, col:96> col:96 struct kset
+| |-FieldDecl 0x7fc002885b10 <col:89, col:102> col:102 kset 'struct kset *'
+| |-RecordDecl 0x7fc002885b58 parent 0x7fc002818ed0 <col:109, col:116> col:116 struct kobj_type
+| |-FieldDecl 0x7fc002885cc0 <col:109, col:127> col:127 ktype 'struct kobj_type *'
+| |-RecordDecl 0x7fc002885d08 parent 0x7fc002818ed0 <col:135, col:142> col:142 struct sysfs_dirent
+| |-FieldDecl 0x7fc002885e70 <col:135, col:156> col:156 sd 'struct sysfs_dirent *'
+| |-FieldDecl 0x7fc002885f10 <col:161, col:173> col:173 kref 'struct kref':'struct kref'
+| |-FieldDecl 0x7fc002885fb0 <col:180, col:200> col:200 release 'struct delayed_work':'struct delayed_work'
+| |-FieldDecl 0x7fc002886038 <col:210, col:241> col:223 state_initialized 'unsigned int'
+| | `-IntegerLiteral 0x7fc002886000 <col:241> 'int' 1
+| |-FieldDecl 0x7fc0028860b8 <col:245, col:273> col:258 state_in_sysfs 'unsigned int'
+| | `-IntegerLiteral 0x7fc002886080 <col:273> 'int' 1
+| |-FieldDecl 0x7fc002886138 <col:277, col:312> col:290 state_add_uevent_sent 'unsigned int'
+| | `-IntegerLiteral 0x7fc002886100 <col:312> 'int' 1
+| |-FieldDecl 0x7fc0028861b8 <col:316, col:354> col:329 state_remove_uevent_sent 'unsigned int'
+| | `-IntegerLiteral 0x7fc002886180 <col:354> 'int' 1
+| `-FieldDecl 0x7fc002886238 <col:358, col:387> col:371 uevent_suppress 'unsigned int'
+|   `-IntegerLiteral 0x7fc002886200 <col:387> 'int' 1
+|-TypedefDecl 0x7fc002886298 <line:77:2, col:14> col:14 referenced ext4_grpblk_t 'int'
+| `-BuiltinType 0x7fc002818fc0 'int'
+|-TypedefDecl 0x7fc002886308 <line:78:2, col:29> col:29 referenced ext4_fsblk_t 'unsigned long long'
+| `-BuiltinType 0x7fc0028190a0 'unsigned long long'
+|-TypedefDecl 0x7fc002886378 <line:79:2, col:23> col:23 referenced ext4_group_t 'unsigned int'
+| `-BuiltinType 0x7fc002819060 'unsigned int'
+|-RecordDecl 0x7fc0028863d0 <line:80:2, col:3410> col:9 struct ext4_sb_info definition
+| |-FieldDecl 0x7fc002886498 <col:25, col:39> col:39 s_desc_size 'unsigned long'
+| |-FieldDecl 0x7fc0028864f8 <col:53, col:67> col:67 s_inodes_per_block 'unsigned long'
+| |-FieldDecl 0x7fc002886558 <col:88, col:102> col:102 s_blocks_per_group 'unsigned long'
+| |-FieldDecl 0x7fc0028865b8 <col:123, col:137> col:137 s_clusters_per_group 'unsigned long'
+| |-FieldDecl 0x7fc002886618 <col:160, col:174> col:174 s_inodes_per_group 'unsigned long'
+| |-FieldDecl 0x7fc002886678 <col:195, col:209> col:209 s_itb_per_group 'unsigned long'
+| |-FieldDecl 0x7fc0028866d8 <col:227, col:241> col:241 s_gdb_count 'unsigned long'
+| |-FieldDecl 0x7fc002886738 <col:255, col:269> col:269 s_desc_per_block 'unsigned long'
+| |-FieldDecl 0x7fc0028867b0 <col:288, col:301> col:301 s_groups_count 'ext4_group_t':'unsigned int'
+| |-FieldDecl 0x7fc002886808 <col:318, col:331> col:331 s_blockfile_groups 'ext4_group_t':'unsigned int'
+| |-FieldDecl 0x7fc002886868 <col:352, col:366> col:366 s_overhead 'unsigned long'
+| |-FieldDecl 0x7fc0028868c8 <col:379, col:392> col:392 s_cluster_ratio 'unsigned int'
+| |-FieldDecl 0x7fc002886928 <col:410, col:423> col:423 referenced s_cluster_bits 'unsigned int'
+| |-FieldDecl 0x7fc002886980 <col:440, col:447> col:447 s_bitmap_maxbytes 'loff_t':'long long'
+| |-RecordDecl 0x7fc0028869c8 parent 0x7fc002818ed0 <col:467, col:474> col:474 struct buffer_head
+| |-FieldDecl 0x7fc002886b30 <col:467, col:488> col:488 s_sbh 'struct buffer_head *'
+| |-RecordDecl 0x7fc002886b78 parent 0x7fc002818ed0 <col:496, col:503> col:503 struct ext4_super_block
+| |-FieldDecl 0x7fc002886ce0 <col:496, col:521> col:521 s_es 'struct ext4_super_block *'
+| |-FieldDecl 0x7fc002886db0 <col:528, col:549> col:549 s_group_desc 'struct buffer_head **'
+| |-FieldDecl 0x7fc002886e10 <col:564, col:577> col:577 s_mount_opt 'unsigned int'
+| |-FieldDecl 0x7fc002886e70 <col:591, col:604> col:604 s_mount_opt2 'unsigned int'
+| |-FieldDecl 0x7fc002886ed0 <col:619, col:632> col:632 s_mount_flags 'unsigned int'
+| |-FieldDecl 0x7fc002886f30 <col:648, col:661> col:661 s_def_mount_opt 'unsigned int'
+| |-FieldDecl 0x7fc002886fb0 <col:679, col:692> col:692 s_sb_block 'ext4_fsblk_t':'unsigned long long'
+| |-FieldDecl 0x7fc002888030 <col:705, col:716> col:716 s_resv_clusters 'atomic64_t':'atomic64_t'
+| |-FieldDecl 0x7fc002888088 <col:734, col:741> col:741 s_resuid 'kuid_t':'kuid_t'
+| |-FieldDecl 0x7fc0028880e0 <col:752, col:759> col:759 s_resgid 'kgid_t':'kgid_t'
+| |-FieldDecl 0x7fc002888140 <col:770, col:785> col:785 s_mount_state 'unsigned short'
+| |-FieldDecl 0x7fc0028881a0 <col:801, col:816> col:816 s_pad 'unsigned short'
+| |-FieldDecl 0x7fc002888200 <col:824, col:828> col:828 s_addr_per_block_bits 'int'
+| |-FieldDecl 0x7fc002888260 <col:852, col:856> col:856 s_desc_per_block_bits 'int'
+| |-FieldDecl 0x7fc0028882c0 <col:880, col:884> col:884 s_inode_size 'int'
+| |-FieldDecl 0x7fc002888320 <col:899, col:903> col:903 s_first_ino 'int'
+| |-FieldDecl 0x7fc002888380 <col:917, col:930> col:930 s_inode_readahead_blks 'unsigned int'
+| |-FieldDecl 0x7fc0028883e0 <col:955, col:968> col:968 s_inode_goal 'unsigned int'
+| |-FieldDecl 0x7fc002888438 <col:983, col:994> col:994 s_next_gen_lock 'spinlock_t':'struct spinlock'
+| |-FieldDecl 0x7fc002888490 <col:1012, col:1016> col:1016 s_next_generation 'u32':'unsigned int'
+| |-FieldDecl 0x7fc002888598 <col:1036, col:1053> col:1040 s_hash_seed 'u32 [4]'
+| |-FieldDecl 0x7fc0028885f8 <col:1057, col:1061> col:1061 s_def_hash_version 'int'
+| |-FieldDecl 0x7fc002888658 <col:1082, col:1086> col:1086 s_hash_unsigned 'int'
+| |-FieldDecl 0x7fc0028886c0 <col:1104, col:1126> col:1126 s_freeclusters_counter 'struct percpu_counter':'struct percpu_counter'
+| |-FieldDecl 0x7fc002888728 <col:1151, col:1173> col:1173 s_freeinodes_counter 'struct percpu_counter':'struct percpu_counter'
+| |-FieldDecl 0x7fc002888790 <col:1196, col:1218> col:1218 s_dirs_counter 'struct percpu_counter':'struct percpu_counter'
+| |-FieldDecl 0x7fc0028887f8 <col:1235, col:1257> col:1257 s_dirtyclusters_counter 'struct percpu_counter':'struct percpu_counter'
+| |-RecordDecl 0x7fc002888840 parent 0x7fc002818ed0 <col:1283, col:1290> col:1290 struct blockgroup_lock
+| |-FieldDecl 0x7fc0028889b0 <col:1283, col:1307> col:1307 referenced s_blockgroup_lock 'struct blockgroup_lock *'
+| |-RecordDecl 0x7fc0028889f8 parent 0x7fc002818ed0 <col:1327, col:1334> col:1334 struct proc_dir_entry
+| |-FieldDecl 0x7fc002888b60 <col:1327, col:1350> col:1350 s_proc 'struct proc_dir_entry *'
+| |-FieldDecl 0x7fc002888bc8 <col:1359, col:1374> col:1374 s_kobj 'struct kobject':'struct kobject'
+| |-FieldDecl 0x7fc002888c60 <col:1383, col:1401> col:1401 s_kobj_unregister 'struct completion':'struct completion'
+| |-FieldDecl 0x7fc002888cd0 <col:1421, col:1441> col:1441 s_sb 'struct super_block *'
+| |-RecordDecl 0x7fc002888d18 parent 0x7fc002818ed0 <col:1448, col:1455> col:1455 struct journal_s
+| |-FieldDecl 0x7fc002888e80 <col:1448, col:1466> col:1466 s_journal 'struct journal_s *'
+| |-FieldDecl 0x7fc002888ee8 <col:1478, col:1495> col:1495 s_orphan 'struct list_head':'struct list_head'
+| |-FieldDecl 0x7fc002888f50 <col:1506, col:1519> col:1519 s_orphan_lock 'struct mutex':'struct mutex'
+| |-FieldDecl 0x7fc002888fb0 <col:1535, col:1549> col:1549 s_resize_flags 'unsigned long'
+| |-FieldDecl 0x7fc002889018 <col:1566, col:1580> col:1580 s_commit_interval 'unsigned long'
+| |-FieldDecl 0x7fc002889070 <col:1600, col:1604> col:1604 s_max_batch_time 'u32':'unsigned int'
+| |-FieldDecl 0x7fc0028890c8 <col:1623, col:1627> col:1627 s_min_batch_time 'u32':'unsigned int'
+| |-FieldDecl 0x7fc002889138 <col:1646, col:1667> col:1667 journal_bdev 'struct block_device *'
+| |-FieldDecl 0x7fc002889200 <col:1682, col:1700> col:1688 s_qf_names 'char *[2]'
+| |-FieldDecl 0x7fc002889260 <col:1704, col:1708> col:1708 s_jquota_fmt 'int'
+| |-FieldDecl 0x7fc0028892c0 <col:1723, col:1736> col:1736 s_want_extra_isize 'unsigned int'
+| |-FieldDecl 0x7fc002889328 <col:1757, col:1772> col:1772 system_blks 'struct rb_root':'struct rb_root'
+| |-RecordDecl 0x7fc002889370 parent 0x7fc002818ed0 <col:1786, col:1793> col:1793 struct ext4_group_info
+| |-FieldDecl 0x7fc0028895a8 <col:1786, col:1812> col:1812 s_group_info 'struct ext4_group_info ***'
+| |-FieldDecl 0x7fc002889618 <col:1827, col:1841> col:1841 s_buddy_cache 'struct inode *'
+| |-FieldDecl 0x7fc002889670 <col:1857, col:1868> col:1868 s_md_lock 'spinlock_t':'struct spinlock'
+| |-FieldDecl 0x7fc002889700 <col:1880, col:1896> col:1896 s_mb_offsets 'unsigned short *'
+| |-FieldDecl 0x7fc002889790 <col:1911, col:1925> col:1925 referenced s_mb_maxs 'unsigned int *'
+| |-FieldDecl 0x7fc0028897f0 <col:1937, col:1950> col:1950 s_group_info_size 'unsigned int'
+| |-FieldDecl 0x7fc002889850 <col:1970, col:1984> col:1984 s_stripe 'unsigned long'
+| |-FieldDecl 0x7fc0028898b0 <col:1995, col:2008> col:2008 s_mb_stream_request 'unsigned int'
+| |-FieldDecl 0x7fc002889910 <col:2030, col:2043> col:2043 s_mb_max_to_scan 'unsigned int'
+| |-FieldDecl 0x7fc002889970 <col:2062, col:2075> col:2075 s_mb_min_to_scan 'unsigned int'
+| |-FieldDecl 0x7fc0028899d0 <col:2094, col:2107> col:2107 s_mb_stats 'unsigned int'
+| |-FieldDecl 0x7fc002889a30 <col:2120, col:2133> col:2133 s_mb_order2_reqs 'unsigned int'
+| |-FieldDecl 0x7fc002889a90 <col:2152, col:2165> col:2165 s_mb_group_prealloc 'unsigned int'
+| |-FieldDecl 0x7fc002889af0 <col:2187, col:2200> col:2200 s_max_dir_size_kb 'unsigned int'
+| |-FieldDecl 0x7fc002889b50 <col:2220, col:2234> col:2234 s_mb_last_group 'unsigned long'
+| |-FieldDecl 0x7fc002889bb0 <col:2252, col:2266> col:2266 s_mb_last_start 'unsigned long'
+| |-FieldDecl 0x7fc002889c08 <col:2284, col:2293> col:2293 s_bal_reqs 'atomic_t':'atomic_t'
+| |-FieldDecl 0x7fc002889c60 <col:2306, col:2315> col:2315 s_bal_success 'atomic_t':'atomic_t'
+| |-FieldDecl 0x7fc002889cb8 <col:2331, col:2340> col:2340 s_bal_allocated 'atomic_t':'atomic_t'
+| |-FieldDecl 0x7fc002889d10 <col:2358, col:2367> col:2367 s_bal_ex_scanned 'atomic_t':'atomic_t'
+| |-FieldDecl 0x7fc002889d68 <col:2386, col:2395> col:2395 s_bal_goals 'atomic_t':'atomic_t'
+| |-FieldDecl 0x7fc002889dc0 <col:2409, col:2418> col:2418 s_bal_breaks 'atomic_t':'atomic_t'
+| |-FieldDecl 0x7fc002889e18 <col:2433, col:2442> col:2442 s_bal_2orders 'atomic_t':'atomic_t'
+| |-FieldDecl 0x7fc002889e70 <col:2458, col:2469> col:2469 s_bal_lock 'spinlock_t':'struct spinlock'
+| |-FieldDecl 0x7fc002889ed0 <col:2482, col:2496> col:2496 s_mb_buddies_generated 'unsigned long'
+| |-FieldDecl 0x7fc002889f30 <col:2521, col:2540> col:2540 s_mb_generation_time 'unsigned long long'
+| |-FieldDecl 0x7fc002889f88 <col:2563, col:2572> col:2572 s_mb_lost_chunks 'atomic_t':'atomic_t'
+| |-FieldDecl 0x7fc00288b600 <col:2591, col:2600> col:2600 s_mb_preallocated 'atomic_t':'atomic_t'
+| |-FieldDecl 0x7fc00288b658 <col:2620, col:2629> col:2629 s_mb_discarded 'atomic_t':'atomic_t'
+| |-FieldDecl 0x7fc00288b6b0 <col:2646, col:2655> col:2655 s_lock_busy 'atomic_t':'atomic_t'
+| |-RecordDecl 0x7fc00288b6f8 parent 0x7fc002818ed0 <col:2669, col:2676> col:2676 struct ext4_locality_group
+| |-FieldDecl 0x7fc00288b860 <col:2669, col:2697> col:2697 s_locality_groups 'struct ext4_locality_group *'
+| |-FieldDecl 0x7fc00288b8c0 <col:2717, col:2731> col:2731 s_sectors_written_start 'unsigned long'
+| |-FieldDecl 0x7fc00288b918 <col:2757, col:2761> col:2761 s_kbytes_written 'u64':'unsigned long long'
+| |-FieldDecl 0x7fc00288b978 <col:2780, col:2793> col:2793 s_extent_max_zeroout_kb 'unsigned int'
+| |-FieldDecl 0x7fc00288b9d8 <col:2819, col:2832> col:2832 s_log_groups_per_flex 'unsigned int'
+| |-RecordDecl 0x7fc00288ba20 parent 0x7fc002818ed0 <col:2856, col:2863> col:2863 struct flex_groups
+| |-FieldDecl 0x7fc00288bb90 <col:2856, col:2876> col:2876 s_flex_groups 'struct flex_groups *'
+| |-FieldDecl 0x7fc00288bbe8 <col:2892, col:2905> col:2905 s_flex_groups_allocated 'ext4_group_t':'unsigned int'
+| |-FieldDecl 0x7fc00288bc58 <col:2931, col:2956> col:2956 unrsv_conversion_wq 'struct workqueue_struct *'
+| |-FieldDecl 0x7fc00288bcc8 <col:2978, col:3003> col:3003 rsv_conversion_wq 'struct workqueue_struct *'
+| |-FieldDecl 0x7fc00288bd30 <col:3023, col:3041> col:3041 s_err_report 'struct timer_list':'struct timer_list'
+| |-RecordDecl 0x7fc00288bd78 parent 0x7fc002818ed0 <col:3056, col:3063> col:3063 struct ext4_li_request
+| |-FieldDecl 0x7fc00288bee0 <col:3056, col:3080> col:3080 s_li_request 'struct ext4_li_request *'
+| |-FieldDecl 0x7fc00288bf40 <col:3095, col:3108> col:3108 s_li_wait_mult 'unsigned int'
+| |-FieldDecl 0x7fc00288bfb0 <col:3125, col:3145> col:3145 s_mmp_tsk 'struct task_struct *'
+| |-FieldDecl 0x7fc00288c008 <col:3157, col:3166> col:3166 s_last_trim_minblks 'atomic_t':'atomic_t'
+| |-RecordDecl 0x7fc00288c050 parent 0x7fc002818ed0 <col:3188, col:3195> col:3195 struct crypto_shash
+| |-FieldDecl 0x7fc00288c1c0 <col:3188, col:3209> col:3209 s_chksum_driver 'struct crypto_shash *'
+| |-FieldDecl 0x7fc00288c218 <col:3227, col:3233> col:3233 s_csum_seed '__u32':'unsigned int'
+| |-FieldDecl 0x7fc00288c280 <col:3247, col:3263> col:3263 s_es_shrinker 'struct shrinker':'struct shrinker'
+| |-FieldDecl 0x7fc00288c2e8 <col:3279, col:3296> col:3296 s_es_lru 'struct list_head':'struct list_head'
+| |-FieldDecl 0x7fc00288c348 <col:3307, col:3321> col:3321 s_es_last_sorted 'unsigned long'
+| |-FieldDecl 0x7fc00288c3b0 <col:3340, col:3362> col:3362 s_extent_cache_cnt 'struct percpu_counter':'struct percpu_counter'
+| `-FieldDecl 0x7fc00288c408 <col:3383, col:3394> col:3394 s_es_lru_lock 'spinlock_t':'struct spinlock'
+|-FunctionDecl 0x7fc00288d440 <line:81:2, col:165> col:108 used EXT4_SB 'struct ext4_sb_info *(struct super_block *)' static inline
+| |-ParmVarDecl 0x7fc00288c478 <col:116, col:136> col:136 used sb 'struct super_block *'
+| |-CompoundStmt 0x7fc00288d5f8 <col:140, col:165>
+| | `-ReturnStmt 0x7fc00288d5e0 <col:143, col:154>
+| |   `-ImplicitCastExpr 0x7fc00288d5c8 <col:150, col:154> 'struct ext4_sb_info *' <BitCast>
+| |     `-ImplicitCastExpr 0x7fc00288d5b0 <col:150, col:154> 'void *' <LValueToRValue>
+| |       `-MemberExpr 0x7fc00288d578 <col:150, col:154> 'void *' lvalue ->s_fs_info 0x7fc002883e48
+| |         `-ImplicitCastExpr 0x7fc00288d560 <col:150> 'struct super_block *' <LValueToRValue>
+| |           `-DeclRefExpr 0x7fc00288d538 <col:150> 'struct super_block *' lvalue ParmVar 0x7fc00288c478 'sb' 'struct super_block *'
+| |-NoInstrumentFunctionAttr 0x7fc00288d4e0 <col:62>
+| `-AlwaysInlineAttr 0x7fc00288d528 <col:31> always_inline
+|-RecordDecl 0x7fc00288d618 prev 0x7fc002889370 <line:82:2, col:301> col:9 struct ext4_group_info definition
+| |-FieldDecl 0x7fc00288d6b8 <col:28, col:42> col:42 bb_state 'unsigned long'
+| |-FieldDecl 0x7fc00288d720 <col:53, col:68> col:68 bb_free_root 'struct rb_root':'struct rb_root'
+| |-FieldDecl 0x7fc00288d7a0 <col:83, col:97> col:97 referenced bb_first_free 'ext4_grpblk_t':'int'
+| |-FieldDecl 0x7fc00288d7f8 <col:113, col:127> col:127 referenced bb_free 'ext4_grpblk_t':'int'
+| |-FieldDecl 0x7fc00288d850 <col:137, col:151> col:151 referenced bb_fragments 'ext4_grpblk_t':'int'
+| |-FieldDecl 0x7fc00288d8a8 <col:166, col:180> col:180 bb_largest_free_order 'ext4_grpblk_t':'int'
+| |-FieldDecl 0x7fc00288d910 <col:204, col:221> col:221 bb_prealloc_list 'struct list_head':'struct list_head'
+| |-FieldDecl 0x7fc00288d978 <col:240, col:260> col:260 alloc_sem 'struct rw_semaphore':'struct rw_semaphore'
+| `-FieldDecl 0x7fc00288da38 <col:272, col:298> col:286 referenced bb_counters 'ext4_grpblk_t []'
+|-FunctionDecl 0x7fc00288dc90 <line:83:2, col:237> col:99 used ext4_group_lock_ptr 'spinlock_t *(struct super_block *, ext4_group_t)' static inline
+| |-ParmVarDecl 0x7fc00288daa8 <col:119, col:139> col:139 used sb 'struct super_block *'
+| |-ParmVarDecl 0x7fc00288db18 <col:154, col:167> col:167 used group 'ext4_group_t':'unsigned int'
+| |-CompoundStmt 0x7fc00288e098 <col:174, col:237>
+| | `-ReturnStmt 0x7fc00288e080 <col:177, col:234>
+| |   `-ImplicitCastExpr 0x7fc00288e068 <col:184, col:234> 'spinlock_t *' <IntegralToPointer>
+| |     `-CallExpr 0x7fc00288e000 <col:184, col:234> 'int'
+| |       |-ImplicitCastExpr 0x7fc00288dfe8 <col:184> 'int (*)()' <FunctionToPointerDecay>
+| |       | `-DeclRefExpr 0x7fc00288de50 <col:184> 'int ()' Function 0x7fc00288ddb8 'bgl_lock_ptr' 'int ()'
+| |       |-ImplicitCastExpr 0x7fc00288e038 <col:197, col:210> 'struct blockgroup_lock *' <LValueToRValue>
+| |       | `-MemberExpr 0x7fc00288df88 <col:197, col:210> 'struct blockgroup_lock *' lvalue ->s_blockgroup_lock 0x7fc0028889b0
+| |       |   `-CallExpr 0x7fc00288df40 <col:197, col:207> 'struct ext4_sb_info *'
+| |       |     |-ImplicitCastExpr 0x7fc00288df28 <col:197> 'struct ext4_sb_info *(*)(struct super_block *)' <FunctionToPointerDecay>
+| |       |     | `-DeclRefExpr 0x7fc00288de78 <col:197> 'struct ext4_sb_info *(struct super_block *)' Function 0x7fc00288d440 'EXT4_SB' 'struct ext4_sb_info *(struct super_block *)'
+| |       |     `-ImplicitCastExpr 0x7fc00288df70 <col:205> 'struct super_block *' <LValueToRValue>
+| |       |       `-DeclRefExpr 0x7fc00288dea0 <col:205> 'struct super_block *' lvalue ParmVar 0x7fc00288daa8 'sb' 'struct super_block *'
+| |       `-ImplicitCastExpr 0x7fc00288e050 <col:229> 'ext4_group_t':'unsigned int' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fc00288dfc0 <col:229> 'ext4_group_t':'unsigned int' lvalue ParmVar 0x7fc00288db18 'group' 'ext4_group_t':'unsigned int'
+| |-NoInstrumentFunctionAttr 0x7fc00288dd38 <col:62>
+| `-AlwaysInlineAttr 0x7fc00288dd80 <col:31> always_inline
+|-FunctionDecl 0x7fc00288ddb8 <<invalid sloc>> col:184 implicit used bgl_lock_ptr 'int ()'
+|-RecordDecl 0x7fc00288e0b8 <line:84:2, col:221> col:9 struct ext4_buddy definition
+| |-RecordDecl 0x7fc00288e160 parent 0x7fc002818ed0 <col:23, col:30> col:30 struct page
+| |-FieldDecl 0x7fc00288e2d0 <col:23, col:36> col:36 bd_buddy_page 'struct page *'
+| |-FieldDecl 0x7fc00288e330 <col:52, col:58> col:58 bd_buddy 'void *'
+| |-FieldDecl 0x7fc00288e3a0 <col:69, col:82> col:82 bd_bitmap_page 'struct page *'
+| |-FieldDecl 0x7fc002890c00 <col:99, col:105> col:105 referenced bd_bitmap 'void *'
+| |-FieldDecl 0x7fc002890c70 <col:117, col:141> col:141 referenced bd_info 'struct ext4_group_info *'
+| |-FieldDecl 0x7fc002890ce0 <col:151, col:171> col:171 referenced bd_sb 'struct super_block *'
+| |-FieldDecl 0x7fc002890d60 <col:179, col:185> col:185 bd_blkbits '__u16':'unsigned short'
+| `-FieldDecl 0x7fc002890db8 <col:198, col:211> col:211 referenced bd_group 'ext4_group_t':'unsigned int'
+|-FunctionDecl 0x7fc002890f98 <line:85:2, col:247> col:93 used mb_correct_addr_and_bit 'void *(int *, void *)' static inline
+| |-ParmVarDecl 0x7fc002890e40 <col:117, col:122> col:122 used bit 'int *'
+| |-ParmVarDecl 0x7fc002890eb8 <col:127, col:133> col:133 used addr 'void *'
+| |-CompoundStmt 0x7fc002891480 <col:139, col:247>
+| | |-CompoundAssignOperator 0x7fc002891228 <col:142, col:182> 'int' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+| | | |-UnaryOperator 0x7fc0028910d8 <col:142, col:143> 'int' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7fc0028910c0 <col:143> 'int *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fc002891098 <col:143> 'int *' lvalue ParmVar 0x7fc002890e40 'bit' 'int *'
+| | | `-BinaryOperator 0x7fc002891200 <col:150, col:182> 'unsigned long' '<<'
+| | |   |-ParenExpr 0x7fc0028911c0 <col:150, col:177> 'unsigned long'
+| | |   | `-BinaryOperator 0x7fc002891198 <col:151, col:174> 'unsigned long' '&'
+| | |   |   |-CStyleCastExpr 0x7fc002891150 <col:151, col:167> 'unsigned long' <PointerToIntegral>
+| | |   |   | `-ImplicitCastExpr 0x7fc002891138 <col:167> 'void *' <LValueToRValue>
+| | |   |   |   `-DeclRefExpr 0x7fc0028910f8 <col:167> 'void *' lvalue ParmVar 0x7fc002890eb8 'addr' 'void *'
+| | |   |   `-IntegerLiteral 0x7fc002891178 <col:174> 'unsigned long' 3
+| | |   `-IntegerLiteral 0x7fc0028911e0 <col:182> 'int' 3
+| | |-BinaryOperator 0x7fc002891400 <col:186, col:230> 'void *' '='
+| | | |-DeclRefExpr 0x7fc002891260 <col:186> 'void *' lvalue ParmVar 0x7fc002890eb8 'addr' 'void *'
+| | | `-CStyleCastExpr 0x7fc0028913d8 <col:193, col:230> 'void *' <IntegralToPointer>
+| | |   `-ParenExpr 0x7fc0028913b8 <col:202, col:230> 'unsigned long'
+| | |     `-BinaryOperator 0x7fc002891348 <col:203, col:227> 'unsigned long' '&'
+| | |       |-CStyleCastExpr 0x7fc0028912e0 <col:203, col:219> 'unsigned long' <PointerToIntegral>
+| | |       | `-ImplicitCastExpr 0x7fc0028912c8 <col:219> 'void *' <LValueToRValue>
+| | |       |   `-DeclRefExpr 0x7fc002891288 <col:219> 'void *' lvalue ParmVar 0x7fc002890eb8 'addr' 'void *'
+| | |       `-UnaryOperator 0x7fc002891328 <col:226, col:227> 'unsigned long' prefix '~'
+| | |         `-IntegerLiteral 0x7fc002891308 <col:227> 'unsigned long' 3
+| | `-ReturnStmt 0x7fc002891468 <col:234, col:241>
+| |   `-ImplicitCastExpr 0x7fc002891450 <col:241> 'void *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fc002891428 <col:241> 'void *' lvalue ParmVar 0x7fc002890eb8 'addr' 'void *'
+| |-NoInstrumentFunctionAttr 0x7fc002891040 <col:62>
+| `-AlwaysInlineAttr 0x7fc002891088 <col:31> always_inline
+|-FunctionDecl 0x7fc002891618 <line:86:2, col:203> col:91 used mb_test_bit 'int (int, void *)' static inline
+| |-ParmVarDecl 0x7fc0028914c8 <col:103, col:107> col:107 used bit 'int'
+| |-ParmVarDecl 0x7fc002891540 <col:112, col:118> col:118 used addr 'void *'
+| |-CompoundStmt 0x7fc0028919e8 <col:124, col:203>
+| | |-BinaryOperator 0x7fc002891870 <col:127, col:168> 'void *' '='
+| | | |-DeclRefExpr 0x7fc002891718 <col:127> 'void *' lvalue ParmVar 0x7fc002891540 'addr' 'void *'
+| | | `-CallExpr 0x7fc002891820 <col:134, col:168> 'void *'
+| | |   |-ImplicitCastExpr 0x7fc002891808 <col:134> 'void *(*)(int *, void *)' <FunctionToPointerDecay>
+| | |   | `-DeclRefExpr 0x7fc002891740 <col:134> 'void *(int *, void *)' Function 0x7fc002890f98 'mb_correct_addr_and_bit' 'void *(int *, void *)'
+| | |   |-UnaryOperator 0x7fc002891790 <col:158, col:159> 'int *' prefix '&'
+| | |   | `-DeclRefExpr 0x7fc002891768 <col:159> 'int' lvalue ParmVar 0x7fc0028914c8 'bit' 'int'
+| | |   `-ImplicitCastExpr 0x7fc002891858 <col:164> 'void *' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7fc0028917b0 <col:164> 'void *' lvalue ParmVar 0x7fc002891540 'addr' 'void *'
+| | `-ReturnStmt 0x7fc0028919d0 <col:172, col:200>
+| |   `-CallExpr 0x7fc002891950 <col:179, col:200> 'int'
+| |     |-ImplicitCastExpr 0x7fc002891938 <col:179> 'int (*)(int, const void *)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fc002891898 <col:179> 'int (int, const void *)' Function 0x7fc00286f528 'test_bit_le' 'int (int, const void *)'
+| |     |-ImplicitCastExpr 0x7fc002891988 <col:191> 'int' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fc0028918c0 <col:191> 'int' lvalue ParmVar 0x7fc0028914c8 'bit' 'int'
+| |     `-ImplicitCastExpr 0x7fc0028919b8 <col:196> 'const void *' <BitCast>
+| |       `-ImplicitCastExpr 0x7fc0028919a0 <col:196> 'void *' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fc0028918e8 <col:196> 'void *' lvalue ParmVar 0x7fc002891540 'addr' 'void *'
+| |-NoInstrumentFunctionAttr 0x7fc0028916c0 <col:62>
+| `-AlwaysInlineAttr 0x7fc002891708 <col:31> always_inline
+|-FunctionDecl 0x7fc002891b30 <line:87:2, col:197> col:92 used mb_set_bit 'void (int, void *)' static inline
+| |-ParmVarDecl 0x7fc002891a28 <col:103, col:107> col:107 used bit 'int'
+| |-ParmVarDecl 0x7fc002891aa0 <col:112, col:118> col:118 used addr 'void *'
+| |-CompoundStmt 0x7fc002891eb8 <col:124, col:197>
+| | |-BinaryOperator 0x7fc002891d70 <col:127, col:168> 'void *' '='
+| | | |-DeclRefExpr 0x7fc002891c48 <col:127> 'void *' lvalue ParmVar 0x7fc002891aa0 'addr' 'void *'
+| | | `-CallExpr 0x7fc002891d20 <col:134, col:168> 'void *'
+| | |   |-ImplicitCastExpr 0x7fc002891d08 <col:134> 'void *(*)(int *, void *)' <FunctionToPointerDecay>
+| | |   | `-DeclRefExpr 0x7fc002891c70 <col:134> 'void *(int *, void *)' Function 0x7fc002890f98 'mb_correct_addr_and_bit' 'void *(int *, void *)'
+| | |   |-UnaryOperator 0x7fc002891cc0 <col:158, col:159> 'int *' prefix '&'
+| | |   | `-DeclRefExpr 0x7fc002891c98 <col:159> 'int' lvalue ParmVar 0x7fc002891a28 'bit' 'int'
+| | |   `-ImplicitCastExpr 0x7fc002891d58 <col:164> 'void *' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7fc002891ce0 <col:164> 'void *' lvalue ParmVar 0x7fc002891aa0 'addr' 'void *'
+| | `-CallExpr 0x7fc002891e50 <col:172, col:194> 'void'
+| |   |-ImplicitCastExpr 0x7fc002891e38 <col:172> 'void (*)(int, void *)' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7fc002891d98 <col:172> 'void (int, void *)' Function 0x7fc00286fa30 '__set_bit_le' 'void (int, void *)'
+| |   |-ImplicitCastExpr 0x7fc002891e88 <col:185> 'int' <LValueToRValue>
+| |   | `-DeclRefExpr 0x7fc002891dc0 <col:185> 'int' lvalue ParmVar 0x7fc002891a28 'bit' 'int'
+| |   `-ImplicitCastExpr 0x7fc002891ea0 <col:190> 'void *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fc002891de8 <col:190> 'void *' lvalue ParmVar 0x7fc002891aa0 'addr' 'void *'
+| |-NoInstrumentFunctionAttr 0x7fc002891bd8 <col:62>
+| `-AlwaysInlineAttr 0x7fc002891c38 <col:31> always_inline
+|-FunctionDecl 0x7fc002892000 <line:88:2, col:201> col:92 used mb_clear_bit 'void (int, void *)' static inline
+| |-ParmVarDecl 0x7fc002891ef8 <col:105, col:109> col:109 used bit 'int'
+| |-ParmVarDecl 0x7fc002891f70 <col:114, col:120> col:120 used addr 'void *'
+| |-CompoundStmt 0x7fc002892408 <col:126, col:201>
+| | |-BinaryOperator 0x7fc002892228 <col:129, col:170> 'void *' '='
+| | | |-DeclRefExpr 0x7fc002892100 <col:129> 'void *' lvalue ParmVar 0x7fc002891f70 'addr' 'void *'
+| | | `-CallExpr 0x7fc0028921d8 <col:136, col:170> 'void *'
+| | |   |-ImplicitCastExpr 0x7fc0028921c0 <col:136> 'void *(*)(int *, void *)' <FunctionToPointerDecay>
+| | |   | `-DeclRefExpr 0x7fc002892128 <col:136> 'void *(int *, void *)' Function 0x7fc002890f98 'mb_correct_addr_and_bit' 'void *(int *, void *)'
+| | |   |-UnaryOperator 0x7fc002892178 <col:160, col:161> 'int *' prefix '&'
+| | |   | `-DeclRefExpr 0x7fc002892150 <col:161> 'int' lvalue ParmVar 0x7fc002891ef8 'bit' 'int'
+| | |   `-ImplicitCastExpr 0x7fc002892210 <col:166> 'void *' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7fc002892198 <col:166> 'void *' lvalue ParmVar 0x7fc002891f70 'addr' 'void *'
+| | `-CallExpr 0x7fc0028923a0 <col:174, col:198> 'int'
+| |   |-ImplicitCastExpr 0x7fc002892388 <col:174> 'int (*)()' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7fc002892310 <col:174> 'int ()' Function 0x7fc002892278 '__clear_bit_le' 'int ()'
+| |   |-ImplicitCastExpr 0x7fc0028923d8 <col:189> 'int' <LValueToRValue>
+| |   | `-DeclRefExpr 0x7fc002892338 <col:189> 'int' lvalue ParmVar 0x7fc002891ef8 'bit' 'int'
+| |   `-ImplicitCastExpr 0x7fc0028923f0 <col:194> 'void *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fc002892360 <col:194> 'void *' lvalue ParmVar 0x7fc002891f70 'addr' 'void *'
+| |-NoInstrumentFunctionAttr 0x7fc0028920a8 <col:62>
+| `-AlwaysInlineAttr 0x7fc0028920f0 <col:31> always_inline
+|-FunctionDecl 0x7fc002892278 <<invalid sloc>> col:174 implicit used __clear_bit_le 'int ()'
+|-FunctionDecl 0x7fc002892628 <line:89:2, col:324> col:91 used mb_buddy_adjust_border 'int (int *, void *, int)' static inline
+| |-ParmVarDecl 0x7fc002892448 <col:114, col:119> col:119 used bit 'int *'
+| |-ParmVarDecl 0x7fc0028924c0 <col:124, col:130> col:130 used bitmap 'void *'
+| |-ParmVarDecl 0x7fc002892538 <col:138, col:142> col:142 used side 'int'
+| |-CompoundStmt 0x7fc002892e68 <col:148, col:324>
+| | `-IfStmt 0x7fc002892e30 <col:151, col:322>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-CallExpr 0x7fc0028928a0 <col:155, col:186> 'int'
+| |   | |-ImplicitCastExpr 0x7fc002892888 <col:155> 'int (*)(int, void *)' <FunctionToPointerDecay>
+| |   | | `-DeclRefExpr 0x7fc002892730 <col:155> 'int (int, void *)' Function 0x7fc002891618 'mb_test_bit' 'int (int, void *)'
+| |   | |-BinaryOperator 0x7fc002892810 <col:167, col:174> 'int' '+'
+| |   | | |-ImplicitCastExpr 0x7fc0028927e0 <col:167, col:168> 'int' <LValueToRValue>
+| |   | | | `-UnaryOperator 0x7fc002892798 <col:167, col:168> 'int' lvalue prefix '*'
+| |   | | |   `-ImplicitCastExpr 0x7fc002892780 <col:168> 'int *' <LValueToRValue>
+| |   | | |     `-DeclRefExpr 0x7fc002892758 <col:168> 'int *' lvalue ParmVar 0x7fc002892448 'bit' 'int *'
+| |   | | `-ImplicitCastExpr 0x7fc0028927f8 <col:174> 'int' <LValueToRValue>
+| |   | |   `-DeclRefExpr 0x7fc0028927b8 <col:174> 'int' lvalue ParmVar 0x7fc002892538 'side' 'int'
+| |   | `-ImplicitCastExpr 0x7fc0028928d8 <col:180> 'void *' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7fc002892838 <col:180> 'void *' lvalue ParmVar 0x7fc0028924c0 'bitmap' 'void *'
+| |   |-CompoundStmt 0x7fc002892b50 <col:189, col:252>
+| |   | |-CallExpr 0x7fc0028929b8 <col:193, col:218> 'void'
+| |   | | |-ImplicitCastExpr 0x7fc0028929a0 <col:193> 'void (*)(int, void *)' <FunctionToPointerDecay>
+| |   | | | `-DeclRefExpr 0x7fc0028928f0 <col:193> 'void (int, void *)' Function 0x7fc002892000 'mb_clear_bit' 'void (int, void *)'
+| |   | | |-ImplicitCastExpr 0x7fc0028929f0 <col:206, col:207> 'int' <LValueToRValue>
+| |   | | | `-UnaryOperator 0x7fc002892958 <col:206, col:207> 'int' lvalue prefix '*'
+| |   | | |   `-ImplicitCastExpr 0x7fc002892940 <col:207> 'int *' <LValueToRValue>
+| |   | | |     `-DeclRefExpr 0x7fc002892918 <col:207> 'int *' lvalue ParmVar 0x7fc002892448 'bit' 'int *'
+| |   | | `-ImplicitCastExpr 0x7fc002892a08 <col:212> 'void *' <LValueToRValue>
+| |   | |   `-DeclRefExpr 0x7fc002892978 <col:212> 'void *' lvalue ParmVar 0x7fc0028924c0 'bitmap' 'void *'
+| |   | |-CompoundAssignOperator 0x7fc002892ae0 <col:223, col:233> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+| |   | | |-ParenExpr 0x7fc002892a80 <col:223, col:228> 'int' lvalue
+| |   | | | `-UnaryOperator 0x7fc002892a60 <col:224, col:225> 'int' lvalue prefix '*'
+| |   | | |   `-ImplicitCastExpr 0x7fc002892a48 <col:225> 'int *' <LValueToRValue>
+| |   | | |     `-DeclRefExpr 0x7fc002892a20 <col:225> 'int *' lvalue ParmVar 0x7fc002892448 'bit' 'int *'
+| |   | | `-ImplicitCastExpr 0x7fc002892ac8 <col:233> 'int' <LValueToRValue>
+| |   | |   `-DeclRefExpr 0x7fc002892aa0 <col:233> 'int' lvalue ParmVar 0x7fc002892538 'side' 'int'
+| |   | `-ReturnStmt 0x7fc002892b38 <col:241, col:248>
+| |   |   `-IntegerLiteral 0x7fc002892b18 <col:248> 'int' 1
+| |   `-CompoundStmt 0x7fc002892e00 <col:260, col:322>
+| |     |-CompoundAssignOperator 0x7fc002892c40 <col:264, col:274> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+| |     | |-ParenExpr 0x7fc002892be0 <col:264, col:269> 'int' lvalue
+| |     | | `-UnaryOperator 0x7fc002892bc0 <col:265, col:266> 'int' lvalue prefix '*'
+| |     | |   `-ImplicitCastExpr 0x7fc002892ba8 <col:266> 'int *' <LValueToRValue>
+| |     | |     `-DeclRefExpr 0x7fc002892b80 <col:266> 'int *' lvalue ParmVar 0x7fc002892448 'bit' 'int *'
+| |     | `-ImplicitCastExpr 0x7fc002892c28 <col:274> 'int' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7fc002892c00 <col:274> 'int' lvalue ParmVar 0x7fc002892538 'side' 'int'
+| |     |-CallExpr 0x7fc002892d40 <col:282, col:305> 'void'
+| |     | |-ImplicitCastExpr 0x7fc002892d28 <col:282> 'void (*)(int, void *)' <FunctionToPointerDecay>
+| |     | | `-DeclRefExpr 0x7fc002892c78 <col:282> 'void (int, void *)' Function 0x7fc002891b30 'mb_set_bit' 'void (int, void *)'
+| |     | |-ImplicitCastExpr 0x7fc002892d78 <col:293, col:294> 'int' <LValueToRValue>
+| |     | | `-UnaryOperator 0x7fc002892ce0 <col:293, col:294> 'int' lvalue prefix '*'
+| |     | |   `-ImplicitCastExpr 0x7fc002892cc8 <col:294> 'int *' <LValueToRValue>
+| |     | |     `-DeclRefExpr 0x7fc002892ca0 <col:294> 'int *' lvalue ParmVar 0x7fc002892448 'bit' 'int *'
+| |     | `-ImplicitCastExpr 0x7fc002892d90 <col:299> 'void *' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7fc002892d00 <col:299> 'void *' lvalue ParmVar 0x7fc0028924c0 'bitmap' 'void *'
+| |     `-ReturnStmt 0x7fc002892de8 <col:310, col:318>
+| |       `-UnaryOperator 0x7fc002892dc8 <col:317, col:318> 'int' prefix '-'
+| |         `-IntegerLiteral 0x7fc002892da8 <col:318> 'int' 1
+| |-NoInstrumentFunctionAttr 0x7fc0028926d8 <col:62>
+| `-AlwaysInlineAttr 0x7fc002892720 <col:31> always_inline
+|-FunctionDecl 0x7fc002893160 <line:90:2, col:671> col:14 used mb_buddy_mark_free 'void (struct ext4_buddy *, int, int)' static
+| |-ParmVarDecl 0x7fc002892f40 <col:33, col:52> col:52 used e4b 'struct ext4_buddy *'
+| |-ParmVarDecl 0x7fc002892fb8 <col:57, col:61> col:61 used first 'int'
+| |-ParmVarDecl 0x7fc002893030 <col:68, col:72> col:72 used last 'int'
+| `-CompoundStmt 0x7fc002894a70 <col:78, col:671>
+|   |-DeclStmt 0x7fc002893288 <col:81, col:88>
+|   | `-VarDecl 0x7fc002893228 <col:81, col:85> col:85 used max 'int'
+|   |-DeclStmt 0x7fc002893338 <col:91, col:104>
+|   | `-VarDecl 0x7fc0028932b8 <col:91, col:103> col:95 used order 'int' cinit
+|   |   `-IntegerLiteral 0x7fc002893318 <col:103> 'int' 1
+|   |-DeclStmt 0x7fc0028935e8 <col:107, col:152>
+|   | `-VarDecl 0x7fc002893368 <col:107, col:151> col:113 used buddy 'void *' cinit
+|   |   `-ImplicitCastExpr 0x7fc0028935d0 <col:121, col:151> 'void *' <IntegralToPointer>
+|   |     `-CallExpr 0x7fc002893560 <col:121, col:151> 'int'
+|   |       |-ImplicitCastExpr 0x7fc002893548 <col:121> 'int (*)()' <FunctionToPointerDecay>
+|   |       | `-DeclRefExpr 0x7fc002893488 <col:121> 'int ()' Function 0x7fc0028933f0 'mb_find_buddy' 'int ()'
+|   |       |-ImplicitCastExpr 0x7fc0028935a0 <col:135> 'struct ext4_buddy *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc0028934b0 <col:135> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002892f40 'e4b' 'struct ext4_buddy *'
+|   |       |-ImplicitCastExpr 0x7fc0028935b8 <col:140> 'int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc0028934d8 <col:140> 'int' lvalue Var 0x7fc0028932b8 'order' 'int'
+|   |       `-UnaryOperator 0x7fc002893528 <col:147, col:148> 'int *' prefix '&'
+|   |         `-DeclRefExpr 0x7fc002893500 <col:148> 'int' lvalue Var 0x7fc002893228 'max' 'int'
+|   `-WhileStmt 0x7fc002894a50 <col:155, col:669>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fc002893628 <col:162> 'void *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fc002893600 <col:162> 'void *' lvalue Var 0x7fc002893368 'buddy' 'void *'
+|     `-CompoundStmt 0x7fc0028949f0 <col:169, col:669>
+|       |-DeclStmt 0x7fc0028936b8 <col:173, col:185>
+|       | `-VarDecl 0x7fc002893658 <col:173, col:179> col:179 used buddy2 'void *'
+|       |-IfStmt 0x7fc002893a80 <col:189, col:283>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7fc002893730 <col:193, col:201> 'int' '&'
+|       | | |-ImplicitCastExpr 0x7fc002893718 <col:193> 'int' <LValueToRValue>
+|       | | | `-DeclRefExpr 0x7fc0028936d0 <col:193> 'int' lvalue ParmVar 0x7fc002892fb8 'first' 'int'
+|       | | `-IntegerLiteral 0x7fc0028936f8 <col:201> 'int' 1
+|       | |-CompoundAssignOperator 0x7fc002893a48 <col:207, col:283> 'ext4_grpblk_t':'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|       | | |-ArraySubscriptExpr 0x7fc0028938a8 <col:207, col:238> 'ext4_grpblk_t':'int' lvalue
+|       | | | |-ImplicitCastExpr 0x7fc002893878 <col:207, col:221> 'ext4_grpblk_t *' <ArrayToPointerDecay>
+|       | | | | `-MemberExpr 0x7fc0028937e8 <col:207, col:221> 'ext4_grpblk_t []' lvalue ->bb_counters 0x7fc00288da38
+|       | | | |   `-ImplicitCastExpr 0x7fc0028937d0 <col:207, col:212> 'struct ext4_group_info *' <LValueToRValue>
+|       | | | |     `-MemberExpr 0x7fc002893798 <col:207, col:212> 'struct ext4_group_info *' lvalue ->bd_info 0x7fc002890c70
+|       | | | |       `-ImplicitCastExpr 0x7fc002893780 <col:207> 'struct ext4_buddy *' <LValueToRValue>
+|       | | | |         `-DeclRefExpr 0x7fc002893758 <col:207> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002892f40 'e4b' 'struct ext4_buddy *'
+|       | | | `-ImplicitCastExpr 0x7fc002893890 <col:233> 'int' <LValueToRValue>
+|       | | |   `-DeclRefExpr 0x7fc002893820 <col:233> 'int' lvalue Var 0x7fc0028932b8 'order' 'int'
+|       | | `-CallExpr 0x7fc0028939f0 <col:243, col:283> 'int'
+|       | |   |-ImplicitCastExpr 0x7fc0028939d8 <col:243> 'int (*)(int *, void *, int)' <FunctionToPointerDecay>
+|       | |   | `-DeclRefExpr 0x7fc0028938d0 <col:243> 'int (int *, void *, int)' Function 0x7fc002892628 'mb_buddy_adjust_border' 'int (int *, void *, int)'
+|       | |   |-UnaryOperator 0x7fc002893920 <col:266, col:267> 'int *' prefix '&'
+|       | |   | `-DeclRefExpr 0x7fc0028938f8 <col:267> 'int' lvalue ParmVar 0x7fc002892fb8 'first' 'int'
+|       | |   |-ImplicitCastExpr 0x7fc002893a30 <col:274> 'void *' <LValueToRValue>
+|       | |   | `-DeclRefExpr 0x7fc002893940 <col:274> 'void *' lvalue Var 0x7fc002893368 'buddy' 'void *'
+|       | |   `-UnaryOperator 0x7fc002893988 <col:281, col:282> 'int' prefix '-'
+|       | |     `-IntegerLiteral 0x7fc002893968 <col:282> 'int' 1
+|       | `-<<<NULL>>>
+|       |-IfStmt 0x7fc002893e30 <col:288, col:382>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-UnaryOperator 0x7fc002893b60 <col:292, col:302> 'int' prefix '!'
+|       | | `-ParenExpr 0x7fc002893b40 <col:293, col:302> 'int'
+|       | |   `-BinaryOperator 0x7fc002893b18 <col:294, col:301> 'int' '&'
+|       | |     |-ImplicitCastExpr 0x7fc002893b00 <col:294> 'int' <LValueToRValue>
+|       | |     | `-DeclRefExpr 0x7fc002893ab8 <col:294> 'int' lvalue ParmVar 0x7fc002893030 'last' 'int'
+|       | |     `-IntegerLiteral 0x7fc002893ae0 <col:301> 'int' 1
+|       | |-CompoundAssignOperator 0x7fc002893df8 <col:308, col:382> 'ext4_grpblk_t':'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|       | | |-ArraySubscriptExpr 0x7fc002893ca8 <col:308, col:339> 'ext4_grpblk_t':'int' lvalue
+|       | | | |-ImplicitCastExpr 0x7fc002893c78 <col:308, col:322> 'ext4_grpblk_t *' <ArrayToPointerDecay>
+|       | | | | `-MemberExpr 0x7fc002893c18 <col:308, col:322> 'ext4_grpblk_t []' lvalue ->bb_counters 0x7fc00288da38
+|       | | | |   `-ImplicitCastExpr 0x7fc002893c00 <col:308, col:313> 'struct ext4_group_info *' <LValueToRValue>
+|       | | | |     `-MemberExpr 0x7fc002893bc0 <col:308, col:313> 'struct ext4_group_info *' lvalue ->bd_info 0x7fc002890c70
+|       | | | |       `-ImplicitCastExpr 0x7fc002893ba8 <col:308> 'struct ext4_buddy *' <LValueToRValue>
+|       | | | |         `-DeclRefExpr 0x7fc002893b80 <col:308> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002892f40 'e4b' 'struct ext4_buddy *'
+|       | | | `-ImplicitCastExpr 0x7fc002893c90 <col:334> 'int' <LValueToRValue>
+|       | | |   `-DeclRefExpr 0x7fc002893c50 <col:334> 'int' lvalue Var 0x7fc0028932b8 'order' 'int'
+|       | | `-CallExpr 0x7fc002893da0 <col:344, col:382> 'int'
+|       | |   |-ImplicitCastExpr 0x7fc002893d88 <col:344> 'int (*)(int *, void *, int)' <FunctionToPointerDecay>
+|       | |   | `-DeclRefExpr 0x7fc002893cd0 <col:344> 'int (int *, void *, int)' Function 0x7fc002892628 'mb_buddy_adjust_border' 'int (int *, void *, int)'
+|       | |   |-UnaryOperator 0x7fc002893d20 <col:367, col:368> 'int *' prefix '&'
+|       | |   | `-DeclRefExpr 0x7fc002893cf8 <col:368> 'int' lvalue ParmVar 0x7fc002893030 'last' 'int'
+|       | |   |-ImplicitCastExpr 0x7fc002893de0 <col:374> 'void *' <LValueToRValue>
+|       | |   | `-DeclRefExpr 0x7fc002893d40 <col:374> 'void *' lvalue Var 0x7fc002893368 'buddy' 'void *'
+|       | |   `-IntegerLiteral 0x7fc002893d68 <col:381> 'int' 1
+|       | `-<<<NULL>>>
+|       |-IfStmt 0x7fc002893f18 <col:387, col:408>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7fc002893ee8 <col:391, col:399> 'int' '>'
+|       | | |-ImplicitCastExpr 0x7fc002893eb8 <col:391> 'int' <LValueToRValue>
+|       | | | `-DeclRefExpr 0x7fc002893e68 <col:391> 'int' lvalue ParmVar 0x7fc002892fb8 'first' 'int'
+|       | | `-ImplicitCastExpr 0x7fc002893ed0 <col:399> 'int' <LValueToRValue>
+|       | |   `-DeclRefExpr 0x7fc002893e90 <col:399> 'int' lvalue ParmVar 0x7fc002893030 'last' 'int'
+|       | |-BreakStmt 0x7fc002893f10 <col:408>
+|       | `-<<<NULL>>>
+|       |-UnaryOperator 0x7fc002893f78 <col:417, col:422> 'int' postfix '++'
+|       | `-DeclRefExpr 0x7fc002893f50 <col:417> 'int' lvalue Var 0x7fc0028932b8 'order' 'int'
+|       |-IfStmt 0x7fc0028947f8 <col:428, col:619>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7fc002894230 <col:432, col:491> 'int' '||'
+|       | | |-BinaryOperator 0x7fc002894018 <col:432, col:441> 'int' '=='
+|       | | | |-ImplicitCastExpr 0x7fc002893fe8 <col:432> 'int' <LValueToRValue>
+|       | | | | `-DeclRefExpr 0x7fc002893f98 <col:432> 'int' lvalue ParmVar 0x7fc002892fb8 'first' 'int'
+|       | | | `-ImplicitCastExpr 0x7fc002894000 <col:441> 'int' <LValueToRValue>
+|       | | |   `-DeclRefExpr 0x7fc002893fc0 <col:441> 'int' lvalue ParmVar 0x7fc002893030 'last' 'int'
+|       | | `-UnaryOperator 0x7fc002894210 <col:449, col:491> 'int' prefix '!'
+|       | |   `-ParenExpr 0x7fc0028941f0 <col:450, col:491> 'void *'
+|       | |     `-BinaryOperator 0x7fc0028941c8 <col:451, col:490> 'void *' '='
+|       | |       |-DeclRefExpr 0x7fc002894040 <col:451> 'void *' lvalue Var 0x7fc002893658 'buddy2' 'void *'
+|       | |       `-ImplicitCastExpr 0x7fc0028941b0 <col:460, col:490> 'void *' <IntegralToPointer>
+|       | |         `-CallExpr 0x7fc002894140 <col:460, col:490> 'int'
+|       | |           |-ImplicitCastExpr 0x7fc002894128 <col:460> 'int (*)()' <FunctionToPointerDecay>
+|       | |           | `-DeclRefExpr 0x7fc002894068 <col:460> 'int ()' Function 0x7fc0028933f0 'mb_find_buddy' 'int ()'
+|       | |           |-ImplicitCastExpr 0x7fc002894180 <col:474> 'struct ext4_buddy *' <LValueToRValue>
+|       | |           | `-DeclRefExpr 0x7fc002894090 <col:474> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002892f40 'e4b' 'struct ext4_buddy *'
+|       | |           |-ImplicitCastExpr 0x7fc002894198 <col:479> 'int' <LValueToRValue>
+|       | |           | `-DeclRefExpr 0x7fc0028940b8 <col:479> 'int' lvalue Var 0x7fc0028932b8 'order' 'int'
+|       | |           `-UnaryOperator 0x7fc002894108 <col:486, col:487> 'int *' prefix '&'
+|       | |             `-DeclRefExpr 0x7fc0028940e0 <col:487> 'int' lvalue Var 0x7fc002893228 'max' 'int'
+|       | |-CompoundStmt 0x7fc0028947c8 <col:494, col:619>
+|       | | |-CallExpr 0x7fc002894498 <col:499, col:543> 'int'
+|       | | | |-ImplicitCastExpr 0x7fc002894480 <col:499> 'int (*)()' <FunctionToPointerDecay>
+|       | | | | `-DeclRefExpr 0x7fc002894318 <col:499> 'int ()' Function 0x7fc002894280 'mb_clear_bits' 'int ()'
+|       | | | |-ImplicitCastExpr 0x7fc0028944d8 <col:513> 'void *' <LValueToRValue>
+|       | | | | `-DeclRefExpr 0x7fc002894340 <col:513> 'void *' lvalue Var 0x7fc002893368 'buddy' 'void *'
+|       | | | |-ImplicitCastExpr 0x7fc0028944f0 <col:520> 'int' <LValueToRValue>
+|       | | | | `-DeclRefExpr 0x7fc002894368 <col:520> 'int' lvalue ParmVar 0x7fc002892fb8 'first' 'int'
+|       | | | `-BinaryOperator 0x7fc002894458 <col:527, col:542> 'int' '+'
+|       | | |   |-BinaryOperator 0x7fc002894410 <col:527, col:534> 'int' '-'
+|       | | |   | |-ImplicitCastExpr 0x7fc0028943e0 <col:527> 'int' <LValueToRValue>
+|       | | |   | | `-DeclRefExpr 0x7fc002894390 <col:527> 'int' lvalue ParmVar 0x7fc002893030 'last' 'int'
+|       | | |   | `-ImplicitCastExpr 0x7fc0028943f8 <col:534> 'int' <LValueToRValue>
+|       | | |   |   `-DeclRefExpr 0x7fc0028943b8 <col:534> 'int' lvalue ParmVar 0x7fc002892fb8 'first' 'int'
+|       | | |   `-IntegerLiteral 0x7fc002894438 <col:542> 'int' 1
+|       | | |-CompoundAssignOperator 0x7fc002894788 <col:549, col:604> 'ext4_grpblk_t':'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|       | | | |-ArraySubscriptExpr 0x7fc002894670 <col:549, col:584> 'ext4_grpblk_t':'int' lvalue
+|       | | | | |-ImplicitCastExpr 0x7fc002894658 <col:549, col:563> 'ext4_grpblk_t *' <ArrayToPointerDecay>
+|       | | | | | `-MemberExpr 0x7fc002894598 <col:549, col:563> 'ext4_grpblk_t []' lvalue ->bb_counters 0x7fc00288da38
+|       | | | | |   `-ImplicitCastExpr 0x7fc002894580 <col:549, col:554> 'struct ext4_group_info *' <LValueToRValue>
+|       | | | | |     `-MemberExpr 0x7fc002894548 <col:549, col:554> 'struct ext4_group_info *' lvalue ->bd_info 0x7fc002890c70
+|       | | | | |       `-ImplicitCastExpr 0x7fc002894530 <col:549> 'struct ext4_buddy *' <LValueToRValue>
+|       | | | | |         `-DeclRefExpr 0x7fc002894508 <col:549> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002892f40 'e4b' 'struct ext4_buddy *'
+|       | | | | `-BinaryOperator 0x7fc002894630 <col:575, col:583> 'int' '-'
+|       | | | |   |-ImplicitCastExpr 0x7fc002894618 <col:575> 'int' <LValueToRValue>
+|       | | | |   | `-DeclRefExpr 0x7fc0028945d0 <col:575> 'int' lvalue Var 0x7fc0028932b8 'order' 'int'
+|       | | | |   `-IntegerLiteral 0x7fc0028945f8 <col:583> 'int' 1
+|       | | | `-BinaryOperator 0x7fc002894760 <col:589, col:604> 'int' '+'
+|       | | |   |-BinaryOperator 0x7fc002894718 <col:589, col:596> 'int' '-'
+|       | | |   | |-ImplicitCastExpr 0x7fc0028946e8 <col:589> 'int' <LValueToRValue>
+|       | | |   | | `-DeclRefExpr 0x7fc002894698 <col:589> 'int' lvalue ParmVar 0x7fc002893030 'last' 'int'
+|       | | |   | `-ImplicitCastExpr 0x7fc002894700 <col:596> 'int' <LValueToRValue>
+|       | | |   |   `-DeclRefExpr 0x7fc0028946c0 <col:596> 'int' lvalue ParmVar 0x7fc002892fb8 'first' 'int'
+|       | | |   `-IntegerLiteral 0x7fc002894740 <col:604> 'int' 1
+|       | | `-BreakStmt 0x7fc0028947c0 <col:610>
+|       | `-<<<NULL>>>
+|       |-CompoundAssignOperator 0x7fc002894890 <col:623, col:633> 'int' '>>=' ComputeLHSTy='int' ComputeResultTy='int'
+|       | |-DeclRefExpr 0x7fc002894830 <col:623> 'int' lvalue ParmVar 0x7fc002892fb8 'first' 'int'
+|       | `-IntegerLiteral 0x7fc002894858 <col:633> 'int' 1
+|       |-CompoundAssignOperator 0x7fc002894928 <col:638, col:647> 'int' '>>=' ComputeLHSTy='int' ComputeResultTy='int'
+|       | |-DeclRefExpr 0x7fc0028948c8 <col:638> 'int' lvalue ParmVar 0x7fc002893030 'last' 'int'
+|       | `-IntegerLiteral 0x7fc0028948f0 <col:647> 'int' 1
+|       `-BinaryOperator 0x7fc0028949c8 <col:652, col:660> 'void *' '='
+|         |-DeclRefExpr 0x7fc002894960 <col:652> 'void *' lvalue Var 0x7fc002893368 'buddy' 'void *'
+|         `-ImplicitCastExpr 0x7fc0028949b0 <col:660> 'void *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fc002894988 <col:660> 'void *' lvalue Var 0x7fc002893658 'buddy2' 'void *'
+|-FunctionDecl 0x7fc0028933f0 <<invalid sloc>> col:121 implicit used mb_find_buddy 'int ()'
+|-FunctionDecl 0x7fc002894280 <<invalid sloc>> col:499 implicit used mb_clear_bits 'int ()'
+|-FunctionDecl 0x7fc002895bc0 <line:91:2, col:1946> col:7 mb_free_blocks 'void (struct inode *, struct ext4_buddy *, int, int)'
+| |-ParmVarDecl 0x7fc002894ad0 <col:22, col:36> col:36 used inode 'struct inode *'
+| |-ParmVarDecl 0x7fc002894b58 <col:43, col:62> col:62 used e4b 'struct ext4_buddy *'
+| |-ParmVarDecl 0x7fc002895a00 <col:73, col:77> col:77 used first 'int'
+| |-ParmVarDecl 0x7fc002895a78 <col:84, col:88> col:88 used count 'int'
+| `-CompoundStmt 0x7fc00289a5c0 <col:95, col:1946>
+|   |-DeclStmt 0x7fc002895d10 <col:98, col:118>
+|   | `-VarDecl 0x7fc002895c90 <col:98, col:117> col:102 used left_is_free 'int' cinit
+|   |   `-IntegerLiteral 0x7fc002895cf0 <col:117> 'int' 0
+|   |-DeclStmt 0x7fc002895dc0 <col:121, col:142>
+|   | `-VarDecl 0x7fc002895d40 <col:121, col:141> col:125 used right_is_free 'int' cinit
+|   |   `-IntegerLiteral 0x7fc002895da0 <col:141> 'int' 0
+|   |-DeclStmt 0x7fc002895e50 <col:145, col:154>
+|   | `-VarDecl 0x7fc002895df0 <col:145, col:149> col:149 used block 'int'
+|   |-DeclStmt 0x7fc002895fd0 <col:157, col:185>
+|   | `-VarDecl 0x7fc002895e80 <col:157, col:184> col:161 used last 'int' cinit
+|   |   `-BinaryOperator 0x7fc002895fa8 <col:168, col:184> 'int' '-'
+|   |     |-BinaryOperator 0x7fc002895f60 <col:168, col:176> 'int' '+'
+|   |     | |-ImplicitCastExpr 0x7fc002895f30 <col:168> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fc002895ee0 <col:168> 'int' lvalue ParmVar 0x7fc002895a00 'first' 'int'
+|   |     | `-ImplicitCastExpr 0x7fc002895f48 <col:176> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc002895f08 <col:176> 'int' lvalue ParmVar 0x7fc002895a78 'count' 'int'
+|   |     `-IntegerLiteral 0x7fc002895f88 <col:184> 'int' 1
+|   |-DeclStmt 0x7fc002896100 <col:188, col:223>
+|   | `-VarDecl 0x7fc002896010 <col:188, col:218> col:208 used sb 'struct super_block *' cinit
+|   |   `-ImplicitCastExpr 0x7fc0028960e8 <col:213, col:218> 'struct super_block *' <LValueToRValue>
+|   |     `-MemberExpr 0x7fc0028960b0 <col:213, col:218> 'struct super_block *' lvalue ->bd_sb 0x7fc002890ce0
+|   |       `-ImplicitCastExpr 0x7fc002896098 <col:213> 'struct ext4_buddy *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fc002896070 <col:213> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   |-DoStmt 0x7fc002896c68 <col:226, col:412>
+|   | |-CompoundStmt 0x7fc002896c28 <col:229, col:403>
+|   | | `-IfStmt 0x7fc002896bf0 <col:231, col:400>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-CallExpr 0x7fc002896580 <col:235, col:289> 'long'
+|   | |   | |-ImplicitCastExpr 0x7fc002896568 <col:235> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   | | `-DeclRefExpr 0x7fc002896320 <col:235> '<builtin fn type>' Function 0x7fc002896160 '__builtin_expect' 'long (long, long)'
+|   | |   | |-ImplicitCastExpr 0x7fc0028965b8 <col:252, col:285> 'long' <IntegralCast>
+|   | |   | | `-UnaryOperator 0x7fc002896500 <col:252, col:285> 'int' prefix '!'
+|   | |   | |   `-UnaryOperator 0x7fc0028964e0 <col:253, col:285> 'int' prefix '!'
+|   | |   | |     `-ParenExpr 0x7fc0028964c0 <col:254, col:285> 'int'
+|   | |   | |       `-BinaryOperator 0x7fc002896498 <col:255, col:284> 'int' '>='
+|   | |   | |         |-ImplicitCastExpr 0x7fc002896480 <col:255> 'unsigned long' <IntegralCast>
+|   | |   | |         | `-ImplicitCastExpr 0x7fc002896468 <col:255> 'int' <LValueToRValue>
+|   | |   | |         |   `-DeclRefExpr 0x7fc002896348 <col:255> 'int' lvalue Var 0x7fc002895e80 'last' 'int'
+|   | |   | |         `-ParenExpr 0x7fc002896448 <col:263, col:284> 'unsigned long'
+|   | |   | |           `-BinaryOperator 0x7fc002896420 <col:264, col:283> 'unsigned long' '<<'
+|   | |   | |             |-ImplicitCastExpr 0x7fc002896408 <col:264, col:268> 'unsigned long' <LValueToRValue>
+|   | |   | |             | `-MemberExpr 0x7fc0028963b0 <col:264, col:268> 'unsigned long' lvalue ->s_blocksize 0x7fc002881700
+|   | |   | |             |   `-ImplicitCastExpr 0x7fc002896398 <col:264> 'struct super_block *' <LValueToRValue>
+|   | |   | |             |     `-DeclRefExpr 0x7fc002896370 <col:264> 'struct super_block *' lvalue Var 0x7fc002896010 'sb' 'struct super_block *'
+|   | |   | |             `-IntegerLiteral 0x7fc0028963e8 <col:283> 'int' 3
+|   | |   | `-ImplicitCastExpr 0x7fc0028965d0 <col:288> 'long' <IntegralCast>
+|   | |   |   `-IntegerLiteral 0x7fc002896520 <col:288> 'int' 0
+|   | |   |-DoStmt 0x7fc002896bd0 <col:292, col:400>
+|   | |   | |-CompoundStmt 0x7fc002896b88 <col:295, col:390>
+|   | |   | | |-CallExpr 0x7fc0028968d8 <col:297, col:372> 'int'
+|   | |   | | | |-ImplicitCastExpr 0x7fc0028968c0 <col:297> 'int (*)()' <FunctionToPointerDecay>
+|   | |   | | | | `-DeclRefExpr 0x7fc0028966a8 <col:297> 'int ()' Function 0x7fc002896610 'printk' 'int ()'
+|   | |   | | | |-ImplicitCastExpr 0x7fc002896920 <col:304> 'char *' <ArrayToPointerDecay>
+|   | |   | | | | `-StringLiteral 0x7fc002896708 <col:304> 'char [29]' lvalue "BUG: failure at %s:%d/%s()!\n"
+|   | |   | | | |-ImplicitCastExpr 0x7fc002896938 <col:337> 'char *' <ArrayToPointerDecay>
+|   | |   | | | | `-StringLiteral 0x7fc002896788 <col:337> 'char [18]' lvalue "fs/ext4/mballoc.c"
+|   | |   | | | |-IntegerLiteral 0x7fc0028967c8 <col:358> 'int' 1400
+|   | |   | | | `-ImplicitCastExpr 0x7fc002896950 <col:364> 'const char *' <ArrayToPointerDecay>
+|   | |   | | |   `-PredefinedExpr 0x7fc0028968a0 <col:364> 'const char [15]' lvalue __func__
+|   | |   | | |     `-StringLiteral 0x7fc002896868 <col:364> 'const char [15]' lvalue "mb_free_blocks"
+|   | |   | | `-CallExpr 0x7fc002896b40 <col:375, col:387> 'int'
+|   | |   | |   |-ImplicitCastExpr 0x7fc002896b28 <col:375> 'int (*)()' <FunctionToPointerDecay>
+|   | |   | |   | `-DeclRefExpr 0x7fc002896a98 <col:375> 'int ()' Function 0x7fc002896a00 'panic' 'int ()'
+|   | |   | |   `-ImplicitCastExpr 0x7fc002896b70 <col:381> 'char *' <ArrayToPointerDecay>
+|   | |   | |     `-StringLiteral 0x7fc002896af8 <col:381> 'char [5]' lvalue "BUG!"
+|   | |   | `-IntegerLiteral 0x7fc002896bb0 <col:399> 'int' 0
+|   | |   `-<<<NULL>>>
+|   | `-IntegerLiteral 0x7fc002896c48 <col:411> 'int' 0
+|   |-DoStmt 0x7fc0028975c0 <col:416, col:650>
+|   | |-CompoundStmt 0x7fc002897580 <col:419, col:641>
+|   | | `-IfStmt 0x7fc002897548 <col:421, col:638>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-CallExpr 0x7fc0028971f0 <col:425, col:527> 'long'
+|   | |   | |-ImplicitCastExpr 0x7fc0028971d8 <col:425> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   | | `-DeclRefExpr 0x7fc002896c88 <col:425> '<builtin fn type>' Function 0x7fc002896160 '__builtin_expect' 'long (long, long)'
+|   | |   | |-ImplicitCastExpr 0x7fc002897228 <col:442, col:523> 'long' <IntegralCast>
+|   | |   | | `-UnaryOperator 0x7fc002897198 <col:442, col:523> 'int' prefix '!'
+|   | |   | |   `-UnaryOperator 0x7fc002897178 <col:443, col:523> 'int' prefix '!'
+|   | |   | |     `-ParenExpr 0x7fc002897158 <col:444, col:523> 'int'
+|   | |   | |       `-UnaryOperator 0x7fc002897138 <col:445, col:522> 'int' prefix '!'
+|   | |   | |         `-ParenExpr 0x7fc002897118 <col:446, col:522> 'int'
+|   | |   | |           `-BinaryOperator 0x7fc0028970f0 <col:447, col:521> 'int' '=='
+|   | |   | |             |-ImplicitCastExpr 0x7fc0028970c0 <col:447, col:512> 'unsigned int' <LValueToRValue>
+|   | |   | |             | `-MemberExpr 0x7fc002897068 <col:447, col:512> 'volatile unsigned int' lvalue ->slock 0x7fc00286fec8
+|   | |   | |             |   `-ParenExpr 0x7fc002897048 <col:447, col:509> 'arch_spinlock_t *'
+|   | |   | |             |     `-UnaryOperator 0x7fc002897028 <col:448, col:501> 'arch_spinlock_t *' prefix '&'
+|   | |   | |             |       `-MemberExpr 0x7fc002896f98 <col:449, col:501> 'arch_spinlock_t':'arch_spinlock_t' lvalue ->raw_lock 0x7fc0028700b0
+|   | |   | |             |         `-ParenExpr 0x7fc002896f78 <col:449, col:498> 'struct raw_spinlock *'
+|   | |   | |             |           `-UnaryOperator 0x7fc002896f58 <col:450, col:493> 'struct raw_spinlock *' prefix '&'
+|   | |   | |             |             `-MemberExpr 0x7fc002896ec8 <col:451, col:493> 'struct raw_spinlock':'struct raw_spinlock' lvalue .rlock 0x7fc0028704a0
+|   | |   | |             |               `-MemberExpr 0x7fc002896e78 <col:451, col:493> 'union spinlock::(anonymous at c_files/pr58400.c:39:29)' lvalue -> 0x7fc0028705a0
+|   | |   | |             |                 `-ParenExpr 0x7fc002896e58 <col:451, col:490> 'spinlock_t *'
+|   | |   | |             |                   `-CallExpr 0x7fc002896df0 <col:452, col:489> 'spinlock_t *'
+|   | |   | |             |                     |-ImplicitCastExpr 0x7fc002896dd8 <col:452> 'spinlock_t *(*)(struct super_block *, ext4_group_t)' <FunctionToPointerDecay>
+|   | |   | |             |                     | `-DeclRefExpr 0x7fc002896cb0 <col:452> 'spinlock_t *(struct super_block *, ext4_group_t)' Function 0x7fc00288dc90 'ext4_group_lock_ptr' 'spinlock_t *(struct super_block *, ext4_group_t)'
+|   | |   | |             |                     |-ImplicitCastExpr 0x7fc002896e28 <col:472> 'struct super_block *' <LValueToRValue>
+|   | |   | |             |                     | `-DeclRefExpr 0x7fc002896cd8 <col:472> 'struct super_block *' lvalue Var 0x7fc002896010 'sb' 'struct super_block *'
+|   | |   | |             |                     `-ImplicitCastExpr 0x7fc002896e40 <col:476, col:481> 'ext4_group_t':'unsigned int' <LValueToRValue>
+|   | |   | |             |                       `-MemberExpr 0x7fc002896d40 <col:476, col:481> 'ext4_group_t':'unsigned int' lvalue ->bd_group 0x7fc002890db8
+|   | |   | |             |                         `-ImplicitCastExpr 0x7fc002896d28 <col:476> 'struct ext4_buddy *' <LValueToRValue>
+|   | |   | |             |                           `-DeclRefExpr 0x7fc002896d00 <col:476> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   | |   | |             `-ImplicitCastExpr 0x7fc0028970d8 <col:521> 'unsigned int' <IntegralCast>
+|   | |   | |               `-IntegerLiteral 0x7fc0028970a0 <col:521> 'int' 0
+|   | |   | `-ImplicitCastExpr 0x7fc002897240 <col:526> 'long' <IntegralCast>
+|   | |   |   `-IntegerLiteral 0x7fc0028971b8 <col:526> 'int' 0
+|   | |   |-DoStmt 0x7fc002897528 <col:530, col:638>
+|   | |   | |-CompoundStmt 0x7fc0028974e0 <col:533, col:628>
+|   | |   | | |-CallExpr 0x7fc002897398 <col:535, col:610> 'int'
+|   | |   | | | |-ImplicitCastExpr 0x7fc002897380 <col:535> 'int (*)()' <FunctionToPointerDecay>
+|   | |   | | | | `-DeclRefExpr 0x7fc002897258 <col:535> 'int ()' Function 0x7fc002896610 'printk' 'int ()'
+|   | |   | | | |-ImplicitCastExpr 0x7fc0028973e0 <col:542> 'char *' <ArrayToPointerDecay>
+|   | |   | | | | `-StringLiteral 0x7fc002897280 <col:542> 'char [29]' lvalue "BUG: failure at %s:%d/%s()!\n"
+|   | |   | | | |-ImplicitCastExpr 0x7fc0028973f8 <col:575> 'char *' <ArrayToPointerDecay>
+|   | |   | | | | `-StringLiteral 0x7fc0028972c8 <col:575> 'char [18]' lvalue "fs/ext4/mballoc.c"
+|   | |   | | | |-IntegerLiteral 0x7fc002897308 <col:596> 'int' 1401
+|   | |   | | | `-ImplicitCastExpr 0x7fc002897410 <col:602> 'const char *' <ArrayToPointerDecay>
+|   | |   | | |   `-PredefinedExpr 0x7fc002897360 <col:602> 'const char [15]' lvalue __func__
+|   | |   | | |     `-StringLiteral 0x7fc002897328 <col:602> 'const char [15]' lvalue "mb_free_blocks"
+|   | |   | | `-CallExpr 0x7fc002897498 <col:613, col:625> 'int'
+|   | |   | |   |-ImplicitCastExpr 0x7fc002897480 <col:613> 'int (*)()' <FunctionToPointerDecay>
+|   | |   | |   | `-DeclRefExpr 0x7fc002897428 <col:613> 'int ()' Function 0x7fc002896a00 'panic' 'int ()'
+|   | |   | |   `-ImplicitCastExpr 0x7fc0028974c8 <col:619> 'char *' <ArrayToPointerDecay>
+|   | |   | |     `-StringLiteral 0x7fc002897450 <col:619> 'char [5]' lvalue "BUG!"
+|   | |   | `-IntegerLiteral 0x7fc002897508 <col:637> 'int' 0
+|   | |   `-<<<NULL>>>
+|   | `-IntegerLiteral 0x7fc0028975a0 <col:649> 'int' 0
+|   |-NullStmt 0x7fc0028975e0 <col:654>
+|   |-CallExpr 0x7fc002897790 <col:657, col:703> 'int'
+|   | |-ImplicitCastExpr 0x7fc002897778 <col:657> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fc0028976b0 <col:657> 'int ()' Function 0x7fc002897618 'mb_free_blocks_double' 'int ()'
+|   | |-ImplicitCastExpr 0x7fc0028977d8 <col:679> 'struct inode *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fc0028976d8 <col:679> 'struct inode *' lvalue ParmVar 0x7fc002894ad0 'inode' 'struct inode *'
+|   | |-ImplicitCastExpr 0x7fc0028977f0 <col:686> 'struct ext4_buddy *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fc002897700 <col:686> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   | |-ImplicitCastExpr 0x7fc002897808 <col:691> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fc002897728 <col:691> 'int' lvalue ParmVar 0x7fc002895a00 'first' 'int'
+|   | `-ImplicitCastExpr 0x7fc002897820 <col:698> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc002897750 <col:698> 'int' lvalue ParmVar 0x7fc002895a78 'count' 'int'
+|   |-CompoundAssignOperator 0x7fc002897940 <col:707, col:732> 'ext4_grpblk_t':'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-MemberExpr 0x7fc0028978c8 <col:707, col:721> 'ext4_grpblk_t':'int' lvalue ->bb_free 0x7fc00288d7f8
+|   | | `-ImplicitCastExpr 0x7fc0028978b0 <col:707, col:712> 'struct ext4_group_info *' <LValueToRValue>
+|   | |   `-MemberExpr 0x7fc002897878 <col:707, col:712> 'struct ext4_group_info *' lvalue ->bd_info 0x7fc002890c70
+|   | |     `-ImplicitCastExpr 0x7fc002897860 <col:707> 'struct ext4_buddy *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7fc002897838 <col:707> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   | `-ImplicitCastExpr 0x7fc002897928 <col:732> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc002897900 <col:732> 'int' lvalue ParmVar 0x7fc002895a78 'count' 'int'
+|   |-IfStmt 0x7fc002897c10 <col:740, col:813>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc002897ab8 <col:744, col:766> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fc002897a88 <col:744> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc002897978 <col:744> 'int' lvalue ParmVar 0x7fc002895a00 'first' 'int'
+|   | | `-ImplicitCastExpr 0x7fc002897aa0 <col:752, col:766> 'ext4_grpblk_t':'int' <LValueToRValue>
+|   | |   `-MemberExpr 0x7fc002897a50 <col:752, col:766> 'ext4_grpblk_t':'int' lvalue ->bb_first_free 0x7fc00288d7a0
+|   | |     `-ImplicitCastExpr 0x7fc002897a38 <col:752, col:757> 'struct ext4_group_info *' <LValueToRValue>
+|   | |       `-MemberExpr 0x7fc002897a00 <col:752, col:757> 'struct ext4_group_info *' lvalue ->bd_info 0x7fc002890c70
+|   | |         `-ImplicitCastExpr 0x7fc0028979c8 <col:752> 'struct ext4_buddy *' <LValueToRValue>
+|   | |           `-DeclRefExpr 0x7fc0028979a0 <col:752> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   | |-BinaryOperator 0x7fc002897be8 <col:783, col:813> 'ext4_grpblk_t':'int' '='
+|   | | |-MemberExpr 0x7fc002897b70 <col:783, col:797> 'ext4_grpblk_t':'int' lvalue ->bb_first_free 0x7fc00288d7a0
+|   | | | `-ImplicitCastExpr 0x7fc002897b58 <col:783, col:788> 'struct ext4_group_info *' <LValueToRValue>
+|   | | |   `-MemberExpr 0x7fc002897b20 <col:783, col:788> 'struct ext4_group_info *' lvalue ->bd_info 0x7fc002890c70
+|   | | |     `-ImplicitCastExpr 0x7fc002897b08 <col:783> 'struct ext4_buddy *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7fc002897ae0 <col:783> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   | | `-ImplicitCastExpr 0x7fc002897bd0 <col:813> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fc002897ba8 <col:813> 'int' lvalue ParmVar 0x7fc002895a00 'first' 'int'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fc002897ed0 <col:821, col:892>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc002897ca8 <col:825, col:834> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fc002897c90 <col:825> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc002897c48 <col:825> 'int' lvalue ParmVar 0x7fc002895a00 'first' 'int'
+|   | | `-IntegerLiteral 0x7fc002897c70 <col:834> 'int' 0
+|   | |-BinaryOperator 0x7fc002897ea8 <col:839, col:892> 'int' '='
+|   | | |-DeclRefExpr 0x7fc002897cd0 <col:839> 'int' lvalue Var 0x7fc002895c90 'left_is_free' 'int'
+|   | | `-UnaryOperator 0x7fc002897e88 <col:854, col:892> 'int' prefix '!'
+|   | |   `-CallExpr 0x7fc002897e38 <col:855, col:892> 'int'
+|   | |     |-ImplicitCastExpr 0x7fc002897e20 <col:855> 'int (*)(int, void *)' <FunctionToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7fc002897cf8 <col:855> 'int (int, void *)' Function 0x7fc002891618 'mb_test_bit' 'int (int, void *)'
+|   | |     |-BinaryOperator 0x7fc002897d80 <col:867, col:875> 'int' '-'
+|   | |     | |-ImplicitCastExpr 0x7fc002897d68 <col:867> 'int' <LValueToRValue>
+|   | |     | | `-DeclRefExpr 0x7fc002897d20 <col:867> 'int' lvalue ParmVar 0x7fc002895a00 'first' 'int'
+|   | |     | `-IntegerLiteral 0x7fc002897d48 <col:875> 'int' 1
+|   | |     `-ImplicitCastExpr 0x7fc002897e70 <col:878, col:883> 'void *' <LValueToRValue>
+|   | |       `-MemberExpr 0x7fc002897de8 <col:878, col:883> 'void *' lvalue ->bd_bitmap 0x7fc002890c00
+|   | |         `-ImplicitCastExpr 0x7fc002897dd0 <col:878> 'struct ext4_buddy *' <LValueToRValue>
+|   | |           `-DeclRefExpr 0x7fc002897da8 <col:878> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fc002898180 <col:896, col:955> 'int' '='
+|   | |-DeclRefExpr 0x7fc002897f08 <col:896> 'int' lvalue Var 0x7fc002895df0 'block' 'int'
+|   | `-CallExpr 0x7fc0028980f8 <col:904, col:955> 'int'
+|   |   |-ImplicitCastExpr 0x7fc0028980e0 <col:904> 'int (*)()' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fc002897ff0 <col:904> 'int ()' Function 0x7fc002897f58 'mb_test_and_clear_bits' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fc002898138 <col:927, col:932> 'void *' <LValueToRValue>
+|   |   | `-MemberExpr 0x7fc002898058 <col:927, col:932> 'void *' lvalue ->bd_bitmap 0x7fc002890c00
+|   |   |   `-ImplicitCastExpr 0x7fc002898040 <col:927> 'struct ext4_buddy *' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7fc002898018 <col:927> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   |   |-ImplicitCastExpr 0x7fc002898150 <col:943> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fc002898090 <col:943> 'int' lvalue ParmVar 0x7fc002895a00 'first' 'int'
+|   |   `-ImplicitCastExpr 0x7fc002898168 <col:950> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fc0028980b8 <col:950> 'int' lvalue ParmVar 0x7fc002895a78 'count' 'int'
+|   |-IfStmt 0x7fc0028985d0 <col:959, col:1056>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc0028983a8 <col:963, col:998> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fc002898390 <col:963, col:970> 'unsigned int' <IntegralCast>
+|   | | | `-BinaryOperator 0x7fc002898208 <col:963, col:970> 'int' '+'
+|   | | |   |-ImplicitCastExpr 0x7fc0028981f0 <col:963> 'int' <LValueToRValue>
+|   | | |   | `-DeclRefExpr 0x7fc0028981a8 <col:963> 'int' lvalue Var 0x7fc002895e80 'last' 'int'
+|   | | |   `-IntegerLiteral 0x7fc0028981d0 <col:970> 'int' 1
+|   | | `-ImplicitCastExpr 0x7fc002898378 <col:974, col:998> 'unsigned int' <LValueToRValue>
+|   | |   `-ArraySubscriptExpr 0x7fc002898350 <col:974, col:998> 'unsigned int' lvalue
+|   | |     |-ImplicitCastExpr 0x7fc002898338 <col:974, col:987> 'unsigned int *' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7fc0028982e0 <col:974, col:987> 'unsigned int *' lvalue ->s_mb_maxs 0x7fc002889790
+|   | |     |   `-CallExpr 0x7fc002898298 <col:974, col:984> 'struct ext4_sb_info *'
+|   | |     |     |-ImplicitCastExpr 0x7fc002898280 <col:974> 'struct ext4_sb_info *(*)(struct super_block *)' <FunctionToPointerDecay>
+|   | |     |     | `-DeclRefExpr 0x7fc002898230 <col:974> 'struct ext4_sb_info *(struct super_block *)' Function 0x7fc00288d440 'EXT4_SB' 'struct ext4_sb_info *(struct super_block *)'
+|   | |     |     `-ImplicitCastExpr 0x7fc0028982c8 <col:982> 'struct super_block *' <LValueToRValue>
+|   | |     |       `-DeclRefExpr 0x7fc002898258 <col:982> 'struct super_block *' lvalue Var 0x7fc002896010 'sb' 'struct super_block *'
+|   | |     `-IntegerLiteral 0x7fc002898318 <col:997> 'int' 0
+|   | |-BinaryOperator 0x7fc0028985a8 <col:1003, col:1056> 'int' '='
+|   | | |-DeclRefExpr 0x7fc0028983d0 <col:1003> 'int' lvalue Var 0x7fc002895d40 'right_is_free' 'int'
+|   | | `-UnaryOperator 0x7fc002898588 <col:1019, col:1056> 'int' prefix '!'
+|   | |   `-CallExpr 0x7fc002898538 <col:1020, col:1056> 'int'
+|   | |     |-ImplicitCastExpr 0x7fc002898520 <col:1020> 'int (*)(int, void *)' <FunctionToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7fc0028983f8 <col:1020> 'int (int, void *)' Function 0x7fc002891618 'mb_test_bit' 'int (int, void *)'
+|   | |     |-BinaryOperator 0x7fc002898480 <col:1032, col:1039> 'int' '+'
+|   | |     | |-ImplicitCastExpr 0x7fc002898468 <col:1032> 'int' <LValueToRValue>
+|   | |     | | `-DeclRefExpr 0x7fc002898420 <col:1032> 'int' lvalue Var 0x7fc002895e80 'last' 'int'
+|   | |     | `-IntegerLiteral 0x7fc002898448 <col:1039> 'int' 1
+|   | |     `-ImplicitCastExpr 0x7fc002898570 <col:1042, col:1047> 'void *' <LValueToRValue>
+|   | |       `-MemberExpr 0x7fc0028984e8 <col:1042, col:1047> 'void *' lvalue ->bd_bitmap 0x7fc002890c00
+|   | |         `-ImplicitCastExpr 0x7fc0028984d0 <col:1042> 'struct ext4_buddy *' <LValueToRValue>
+|   | |           `-DeclRefExpr 0x7fc0028984a8 <col:1042> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fc002899480 <col:1060, col:1465>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fc002898770 <col:1064, col:1099> 'long'
+|   | | |-ImplicitCastExpr 0x7fc002898758 <col:1064> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7fc002898608 <col:1064> '<builtin fn type>' Function 0x7fc002896160 '__builtin_expect' 'long (long, long)'
+|   | | |-ImplicitCastExpr 0x7fc0028987a8 <col:1081, col:1095> 'long' <IntegralCast>
+|   | | | `-UnaryOperator 0x7fc002898718 <col:1081, col:1095> 'int' prefix '!'
+|   | | |   `-UnaryOperator 0x7fc0028986f8 <col:1082, col:1095> 'int' prefix '!'
+|   | | |     `-ParenExpr 0x7fc0028986d8 <col:1083, col:1095> 'int'
+|   | | |       `-BinaryOperator 0x7fc0028986b0 <col:1084, col:1094> 'int' '!='
+|   | | |         |-ImplicitCastExpr 0x7fc002898698 <col:1084> 'int' <LValueToRValue>
+|   | | |         | `-DeclRefExpr 0x7fc002898630 <col:1084> 'int' lvalue Var 0x7fc002895df0 'block' 'int'
+|   | | |         `-UnaryOperator 0x7fc002898678 <col:1093, col:1094> 'int' prefix '-'
+|   | | |           `-IntegerLiteral 0x7fc002898658 <col:1094> 'int' 1
+|   | | `-ImplicitCastExpr 0x7fc0028987c0 <col:1098> 'long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fc002898738 <col:1098> 'int' 0
+|   | |-CompoundStmt 0x7fc002899438 <col:1102, col:1465>
+|   | | |-DeclStmt 0x7fc002898848 <col:1106, col:1126>
+|   | | | `-VarDecl 0x7fc0028987e8 <col:1106, col:1119> col:1119 used blocknr 'ext4_fsblk_t':'unsigned long long'
+|   | | |-BinaryOperator 0x7fc002898ad0 <col:1130, col:1183> 'ext4_fsblk_t':'unsigned long long' '='
+|   | | | |-DeclRefExpr 0x7fc002898860 <col:1130> 'ext4_fsblk_t':'unsigned long long' lvalue Var 0x7fc0028987e8 'blocknr' 'ext4_fsblk_t':'unsigned long long'
+|   | | | `-ImplicitCastExpr 0x7fc002898ab8 <col:1140, col:1183> 'ext4_fsblk_t':'unsigned long long' <IntegralCast>
+|   | | |   `-CallExpr 0x7fc002898a50 <col:1140, col:1183> 'int'
+|   | | |     |-ImplicitCastExpr 0x7fc002898a38 <col:1140> 'int (*)()' <FunctionToPointerDecay>
+|   | | |     | `-DeclRefExpr 0x7fc002898948 <col:1140> 'int ()' Function 0x7fc0028988b0 'ext4_group_first_block_no' 'int ()'
+|   | | |     |-ImplicitCastExpr 0x7fc002898a88 <col:1166> 'struct super_block *' <LValueToRValue>
+|   | | |     | `-DeclRefExpr 0x7fc002898970 <col:1166> 'struct super_block *' lvalue Var 0x7fc002896010 'sb' 'struct super_block *'
+|   | | |     `-ImplicitCastExpr 0x7fc002898aa0 <col:1170, col:1175> 'ext4_group_t':'unsigned int' <LValueToRValue>
+|   | | |       `-MemberExpr 0x7fc002898a00 <col:1170, col:1175> 'ext4_group_t':'unsigned int' lvalue ->bd_group 0x7fc002890db8
+|   | | |         `-ImplicitCastExpr 0x7fc0028989c0 <col:1170> 'struct ext4_buddy *' <LValueToRValue>
+|   | | |           `-DeclRefExpr 0x7fc002898998 <col:1170> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   | | |-CompoundAssignOperator 0x7fc002898d00 <col:1188, col:1240> 'ext4_fsblk_t':'unsigned long long' '+=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+|   | | | |-DeclRefExpr 0x7fc002898af8 <col:1188> 'ext4_fsblk_t':'unsigned long long' lvalue Var 0x7fc0028987e8 'blocknr' 'ext4_fsblk_t':'unsigned long long'
+|   | | | `-ImplicitCastExpr 0x7fc002898ce8 <col:1199, col:1240> 'unsigned long long' <IntegralCast>
+|   | | |   `-ParenExpr 0x7fc002898cc8 <col:1199, col:1240> 'int'
+|   | | |     `-BinaryOperator 0x7fc002898ca0 <col:1200, col:1226> 'int' '<<'
+|   | | |       |-ImplicitCastExpr 0x7fc002898c70 <col:1200, col:1206> 'int' <LValueToRValue>
+|   | | |       | `-ParenExpr 0x7fc002898b48 <col:1200, col:1206> 'int' lvalue
+|   | | |       |   `-DeclRefExpr 0x7fc002898b20 <col:1201> 'int' lvalue Var 0x7fc002895df0 'block' 'int'
+|   | | |       `-ImplicitCastExpr 0x7fc002898c88 <col:1211, col:1226> 'unsigned int' <LValueToRValue>
+|   | | |         `-MemberExpr 0x7fc002898c38 <col:1211, col:1226> 'unsigned int' lvalue ->s_cluster_bits 0x7fc002886928
+|   | | |           `-ParenExpr 0x7fc002898c18 <col:1211, col:1223> 'struct ext4_sb_info *'
+|   | | |             `-CallExpr 0x7fc002898bd0 <col:1212, col:1222> 'struct ext4_sb_info *'
+|   | | |               |-ImplicitCastExpr 0x7fc002898bb8 <col:1212> 'struct ext4_sb_info *(*)(struct super_block *)' <FunctionToPointerDecay>
+|   | | |               | `-DeclRefExpr 0x7fc002898b68 <col:1212> 'struct ext4_sb_info *(struct super_block *)' Function 0x7fc00288d440 'EXT4_SB' 'struct ext4_sb_info *(struct super_block *)'
+|   | | |               `-ImplicitCastExpr 0x7fc002898c00 <col:1220> 'struct super_block *' <LValueToRValue>
+|   | | |                 `-DeclRefExpr 0x7fc002898b90 <col:1220> 'struct super_block *' lvalue Var 0x7fc002896010 'sb' 'struct super_block *'
+|   | | |-CallExpr 0x7fc002899170 <col:1245, col:1391> 'int'
+|   | | | |-ImplicitCastExpr 0x7fc002899158 <col:1245> 'int (*)()' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7fc002898df8 <col:1245> 'int ()' Function 0x7fc002898d60 '__ext4_grp_locked_error' 'int ()'
+|   | | | |-ImplicitCastExpr 0x7fc0028991d8 <col:1269> 'const char *' <ArrayToPointerDecay>
+|   | | | | `-PredefinedExpr 0x7fc002898e58 <col:1269> 'const char [15]' lvalue __func__
+|   | | | |   `-StringLiteral 0x7fc002898e20 <col:1269> 'const char [15]' lvalue "mb_free_blocks"
+|   | | | |-IntegerLiteral 0x7fc002898e78 <col:1280> 'int' 1427
+|   | | | |-ImplicitCastExpr 0x7fc0028991f0 <col:1289> 'struct super_block *' <LValueToRValue>
+|   | | | | `-DeclRefExpr 0x7fc002898e98 <col:1289> 'struct super_block *' lvalue Var 0x7fc002896010 'sb' 'struct super_block *'
+|   | | | |-ImplicitCastExpr 0x7fc002899208 <col:1293, col:1298> 'ext4_group_t':'unsigned int' <LValueToRValue>
+|   | | | | `-MemberExpr 0x7fc002898f00 <col:1293, col:1298> 'ext4_group_t':'unsigned int' lvalue ->bd_group 0x7fc002890db8
+|   | | | |   `-ImplicitCastExpr 0x7fc002898ee8 <col:1293> 'struct ext4_buddy *' <LValueToRValue>
+|   | | | |     `-DeclRefExpr 0x7fc002898ec0 <col:1293> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   | | | |-ConditionalOperator 0x7fc002899040 <col:1308, col:1331> 'unsigned long'
+|   | | | | |-ImplicitCastExpr 0x7fc002898ff8 <col:1308> 'struct inode *' <LValueToRValue>
+|   | | | | | `-DeclRefExpr 0x7fc002898f38 <col:1308> 'struct inode *' lvalue ParmVar 0x7fc002894ad0 'inode' 'struct inode *'
+|   | | | | |-ImplicitCastExpr 0x7fc002899010 <col:1316, col:1323> 'unsigned long' <LValueToRValue>
+|   | | | | | `-MemberExpr 0x7fc002898fa0 <col:1316, col:1323> 'unsigned long' lvalue ->i_ino 0x7fc00287e060
+|   | | | | |   `-ImplicitCastExpr 0x7fc002898f88 <col:1316> 'struct inode *' <LValueToRValue>
+|   | | | | |     `-DeclRefExpr 0x7fc002898f60 <col:1316> 'struct inode *' lvalue ParmVar 0x7fc002894ad0 'inode' 'struct inode *'
+|   | | | | `-ImplicitCastExpr 0x7fc002899028 <col:1331> 'unsigned long' <IntegralCast>
+|   | | | |   `-IntegerLiteral 0x7fc002898fd8 <col:1331> 'int' 0
+|   | | | |-ImplicitCastExpr 0x7fc002899220 <col:1334> 'ext4_fsblk_t':'unsigned long long' <LValueToRValue>
+|   | | | | `-DeclRefExpr 0x7fc002899070 <col:1334> 'ext4_fsblk_t':'unsigned long long' lvalue Var 0x7fc0028987e8 'blocknr' 'ext4_fsblk_t':'unsigned long long'
+|   | | | |-ImplicitCastExpr 0x7fc002899238 <col:1343, col:1374> 'char *' <ArrayToPointerDecay>
+|   | | | | `-StringLiteral 0x7fc0028990d8 <col:1343, col:1374> 'char [37]' lvalue "freeing already freed block (bit %u)"
+|   | | | `-ImplicitCastExpr 0x7fc002899250 <col:1386> 'int' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7fc002899130 <col:1386> 'int' lvalue Var 0x7fc002895df0 'block' 'int'
+|   | | |-CallExpr 0x7fc002899390 <col:1425, col:1448> 'int'
+|   | | | |-ImplicitCastExpr 0x7fc002899378 <col:1425> 'int (*)()' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7fc002899328 <col:1425> 'int ()' Function 0x7fc002899290 'mb_regenerate_buddy' 'int ()'
+|   | | | `-ImplicitCastExpr 0x7fc0028993c0 <col:1445> 'struct ext4_buddy *' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7fc002899350 <col:1445> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   | | `-GotoStmt 0x7fc002899420 <col:1453, col:1458> 'done' 0x7fc0028993d8
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fc002899850 <col:1468, col:1606>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc002899538 <col:1472, col:1488> 'int' '&&'
+|   | | |-ImplicitCastExpr 0x7fc002899508 <col:1472> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc0028994b8 <col:1472> 'int' lvalue Var 0x7fc002895c90 'left_is_free' 'int'
+|   | | `-ImplicitCastExpr 0x7fc002899520 <col:1488> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fc0028994e0 <col:1488> 'int' lvalue Var 0x7fc002895d40 'right_is_free' 'int'
+|   | |-UnaryOperator 0x7fc002899628 <col:1505, col:1531> 'ext4_grpblk_t':'int' postfix '--'
+|   | | `-MemberExpr 0x7fc0028995f0 <col:1505, col:1519> 'ext4_grpblk_t':'int' lvalue ->bb_fragments 0x7fc00288d850
+|   | |   `-ImplicitCastExpr 0x7fc0028995d8 <col:1505, col:1510> 'struct ext4_group_info *' <LValueToRValue>
+|   | |     `-MemberExpr 0x7fc0028995a0 <col:1505, col:1510> 'struct ext4_group_info *' lvalue ->bd_info 0x7fc002890c70
+|   | |       `-ImplicitCastExpr 0x7fc002899588 <col:1505> 'struct ext4_buddy *' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x7fc002899560 <col:1505> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   | `-IfStmt 0x7fc002899818 <col:1541, col:1606>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7fc002899708 <col:1545, col:1563> 'int' '&&'
+|   |   | |-UnaryOperator 0x7fc002899688 <col:1545, col:1546> 'int' prefix '!'
+|   |   | | `-ImplicitCastExpr 0x7fc002899670 <col:1546> 'int' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7fc002899648 <col:1546> 'int' lvalue Var 0x7fc002895c90 'left_is_free' 'int'
+|   |   | `-UnaryOperator 0x7fc0028996e8 <col:1562, col:1563> 'int' prefix '!'
+|   |   |   `-ImplicitCastExpr 0x7fc0028996d0 <col:1563> 'int' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7fc0028996a8 <col:1563> 'int' lvalue Var 0x7fc002895d40 'right_is_free' 'int'
+|   |   |-UnaryOperator 0x7fc0028997f8 <col:1580, col:1606> 'ext4_grpblk_t':'int' postfix '++'
+|   |   | `-MemberExpr 0x7fc0028997c0 <col:1580, col:1594> 'ext4_grpblk_t':'int' lvalue ->bb_fragments 0x7fc00288d850
+|   |   |   `-ImplicitCastExpr 0x7fc0028997a8 <col:1580, col:1585> 'struct ext4_group_info *' <LValueToRValue>
+|   |   |     `-MemberExpr 0x7fc002899770 <col:1580, col:1585> 'struct ext4_group_info *' lvalue ->bd_info 0x7fc002890c70
+|   |   |       `-ImplicitCastExpr 0x7fc002899758 <col:1580> 'struct ext4_buddy *' <LValueToRValue>
+|   |   |         `-DeclRefExpr 0x7fc002899730 <col:1580> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   |   `-<<<NULL>>>
+|   |-IfStmt 0x7fc002899c30 <col:1611, col:1712>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc0028998e8 <col:1615, col:1623> 'int' '&'
+|   | | |-ImplicitCastExpr 0x7fc0028998d0 <col:1615> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc002899888 <col:1615> 'int' lvalue ParmVar 0x7fc002895a00 'first' 'int'
+|   | | `-IntegerLiteral 0x7fc0028998b0 <col:1623> 'int' 1
+|   | |-CompoundStmt 0x7fc002899c08 <col:1626, col:1712>
+|   | | |-CompoundAssignOperator 0x7fc002899998 <col:1630, col:1640> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | | | |-DeclRefExpr 0x7fc002899910 <col:1630> 'int' lvalue ParmVar 0x7fc002895a00 'first' 'int'
+|   | | | `-UnaryOperator 0x7fc002899978 <col:1639, col:1640> 'int' prefix '!'
+|   | | |   `-ImplicitCastExpr 0x7fc002899960 <col:1640> 'int' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fc002899938 <col:1640> 'int' lvalue Var 0x7fc002895c90 'left_is_free' 'int'
+|   | | `-CompoundAssignOperator 0x7fc002899bd0 <col:1656, col:1708> 'ext4_grpblk_t':'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |   |-ArraySubscriptExpr 0x7fc002899ad8 <col:1656, col:1683> 'ext4_grpblk_t':'int' lvalue
+|   | |   | |-ImplicitCastExpr 0x7fc002899ac0 <col:1656, col:1670> 'ext4_grpblk_t *' <ArrayToPointerDecay>
+|   | |   | | `-MemberExpr 0x7fc002899a68 <col:1656, col:1670> 'ext4_grpblk_t []' lvalue ->bb_counters 0x7fc00288da38
+|   | |   | |   `-ImplicitCastExpr 0x7fc002899a50 <col:1656, col:1661> 'struct ext4_group_info *' <LValueToRValue>
+|   | |   | |     `-MemberExpr 0x7fc002899a18 <col:1656, col:1661> 'struct ext4_group_info *' lvalue ->bd_info 0x7fc002890c70
+|   | |   | |       `-ImplicitCastExpr 0x7fc002899a00 <col:1656> 'struct ext4_buddy *' <LValueToRValue>
+|   | |   | |         `-DeclRefExpr 0x7fc0028999d0 <col:1656> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   | |   | `-IntegerLiteral 0x7fc002899aa0 <col:1682> 'int' 0
+|   | |   `-ConditionalOperator 0x7fc002899ba0 <col:1688, col:1708> 'int'
+|   | |     |-ImplicitCastExpr 0x7fc002899b88 <col:1688> 'int' <LValueToRValue>
+|   | |     | `-DeclRefExpr 0x7fc002899b00 <col:1688> 'int' lvalue Var 0x7fc002895c90 'left_is_free' 'int'
+|   | |     |-UnaryOperator 0x7fc002899b48 <col:1703, col:1704> 'int' prefix '-'
+|   | |     | `-IntegerLiteral 0x7fc002899b28 <col:1704> 'int' 1
+|   | |     `-IntegerLiteral 0x7fc002899b68 <col:1708> 'int' 1
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fc00289a048 <col:1715, col:1819>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fc002899d10 <col:1719, col:1729> 'int' prefix '!'
+|   | | `-ParenExpr 0x7fc002899cf0 <col:1720, col:1729> 'int'
+|   | |   `-BinaryOperator 0x7fc002899cc8 <col:1721, col:1728> 'int' '&'
+|   | |     |-ImplicitCastExpr 0x7fc002899cb0 <col:1721> 'int' <LValueToRValue>
+|   | |     | `-DeclRefExpr 0x7fc002899c68 <col:1721> 'int' lvalue Var 0x7fc002895e80 'last' 'int'
+|   | |     `-IntegerLiteral 0x7fc002899c90 <col:1728> 'int' 1
+|   | |-CompoundStmt 0x7fc00289a020 <col:1732, col:1819>
+|   | | |-CompoundAssignOperator 0x7fc002899db8 <col:1736, col:1745> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | | | |-DeclRefExpr 0x7fc002899d30 <col:1736> 'int' lvalue Var 0x7fc002895e80 'last' 'int'
+|   | | | `-UnaryOperator 0x7fc002899d98 <col:1744, col:1745> 'int' prefix '!'
+|   | | |   `-ImplicitCastExpr 0x7fc002899d80 <col:1745> 'int' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fc002899d58 <col:1745> 'int' lvalue Var 0x7fc002895d40 'right_is_free' 'int'
+|   | | `-CompoundAssignOperator 0x7fc002899fe8 <col:1762, col:1815> 'ext4_grpblk_t':'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |   |-ArraySubscriptExpr 0x7fc002899ef0 <col:1762, col:1789> 'ext4_grpblk_t':'int' lvalue
+|   | |   | |-ImplicitCastExpr 0x7fc002899ed8 <col:1762, col:1776> 'ext4_grpblk_t *' <ArrayToPointerDecay>
+|   | |   | | `-MemberExpr 0x7fc002899e80 <col:1762, col:1776> 'ext4_grpblk_t []' lvalue ->bb_counters 0x7fc00288da38
+|   | |   | |   `-ImplicitCastExpr 0x7fc002899e68 <col:1762, col:1767> 'struct ext4_group_info *' <LValueToRValue>
+|   | |   | |     `-MemberExpr 0x7fc002899e30 <col:1762, col:1767> 'struct ext4_group_info *' lvalue ->bd_info 0x7fc002890c70
+|   | |   | |       `-ImplicitCastExpr 0x7fc002899e18 <col:1762> 'struct ext4_buddy *' <LValueToRValue>
+|   | |   | |         `-DeclRefExpr 0x7fc002899df0 <col:1762> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   | |   | `-IntegerLiteral 0x7fc002899eb8 <col:1788> 'int' 0
+|   | |   `-ConditionalOperator 0x7fc002899fb8 <col:1794, col:1815> 'int'
+|   | |     |-ImplicitCastExpr 0x7fc002899fa0 <col:1794> 'int' <LValueToRValue>
+|   | |     | `-DeclRefExpr 0x7fc002899f18 <col:1794> 'int' lvalue Var 0x7fc002895d40 'right_is_free' 'int'
+|   | |     |-UnaryOperator 0x7fc002899f60 <col:1810, col:1811> 'int' prefix '-'
+|   | |     | `-IntegerLiteral 0x7fc002899f40 <col:1811> 'int' 1
+|   | |     `-IntegerLiteral 0x7fc002899f80 <col:1815> 'int' 1
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fc00289a358 <col:1822, col:1888>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc00289a100 <col:1826, col:1835> 'int' '<='
+|   | | |-ImplicitCastExpr 0x7fc00289a0d0 <col:1826> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc00289a080 <col:1826> 'int' lvalue ParmVar 0x7fc002895a00 'first' 'int'
+|   | | `-ImplicitCastExpr 0x7fc00289a0e8 <col:1835> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fc00289a0a8 <col:1835> 'int' lvalue Var 0x7fc002895e80 'last' 'int'
+|   | |-CallExpr 0x7fc00289a300 <col:1843, col:1888> 'void'
+|   | | |-ImplicitCastExpr 0x7fc00289a2e8 <col:1843> 'void (*)(struct ext4_buddy *, int, int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fc00289a128 <col:1843> 'void (struct ext4_buddy *, int, int)' Function 0x7fc002893160 'mb_buddy_mark_free' 'void (struct ext4_buddy *, int, int)'
+|   | | |-ImplicitCastExpr 0x7fc00289a340 <col:1862> 'struct ext4_buddy *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc00289a150 <col:1862> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   | | |-BinaryOperator 0x7fc00289a1d8 <col:1867, col:1876> 'int' '>>'
+|   | | | |-ImplicitCastExpr 0x7fc00289a1c0 <col:1867> 'int' <LValueToRValue>
+|   | | | | `-DeclRefExpr 0x7fc00289a178 <col:1867> 'int' lvalue ParmVar 0x7fc002895a00 'first' 'int'
+|   | | | `-IntegerLiteral 0x7fc00289a1a0 <col:1876> 'int' 1
+|   | | `-BinaryOperator 0x7fc00289a260 <col:1879, col:1887> 'int' '>>'
+|   | |   |-ImplicitCastExpr 0x7fc00289a248 <col:1879> 'int' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7fc00289a200 <col:1879> 'int' lvalue Var 0x7fc002895e80 'last' 'int'
+|   | |   `-IntegerLiteral 0x7fc00289a228 <col:1887> 'int' 1
+|   | `-<<<NULL>>>
+|   |-LabelStmt 0x7fc00289a598 <col:1891, col:1940> 'done'
+|   | `-CallExpr 0x7fc00289a530 <col:1898, col:1940> 'int'
+|   |   |-ImplicitCastExpr 0x7fc00289a518 <col:1898> 'int (*)()' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fc00289a450 <col:1898> 'int ()' Function 0x7fc00289a3b8 'mb_set_largest_free_order' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fc00289a568 <col:1924> 'struct super_block *' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fc00289a478 <col:1924> 'struct super_block *' lvalue Var 0x7fc002896010 'sb' 'struct super_block *'
+|   |   `-ImplicitCastExpr 0x7fc00289a580 <col:1928, col:1933> 'struct ext4_group_info *' <LValueToRValue>
+|   |     `-MemberExpr 0x7fc00289a4e0 <col:1928, col:1933> 'struct ext4_group_info *' lvalue ->bd_info 0x7fc002890c70
+|   |       `-ImplicitCastExpr 0x7fc00289a4c8 <col:1928> 'struct ext4_buddy *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fc00289a4a0 <col:1928> 'struct ext4_buddy *' lvalue ParmVar 0x7fc002894b58 'e4b' 'struct ext4_buddy *'
+|   `-NullStmt 0x7fc00289a5b0 <col:1944>
+|-FunctionDecl 0x7fc002896160 <col:235> col:235 implicit used __builtin_expect 'long (long, long)' extern
+| |-ParmVarDecl 0x7fc0028961f8 <<invalid sloc>> <invalid sloc> 'long'
+| |-ParmVarDecl 0x7fc002896258 <<invalid sloc>> <invalid sloc> 'long'
+| |-NoThrowAttr 0x7fc0028962c8 <col:235> Implicit
+| `-ConstAttr 0x7fc002896310 <col:235> Implicit
+|-FunctionDecl 0x7fc002896610 <<invalid sloc>> col:297 implicit used printk 'int ()'
+|-FunctionDecl 0x7fc002896a00 <<invalid sloc>> col:375 implicit used panic 'int ()'
+|-FunctionDecl 0x7fc002897618 <<invalid sloc>> col:657 implicit used mb_free_blocks_double 'int ()'
+|-FunctionDecl 0x7fc002897f58 <<invalid sloc>> col:904 implicit used mb_test_and_clear_bits 'int ()'
+|-FunctionDecl 0x7fc0028988b0 <<invalid sloc>> col:1140 implicit used ext4_group_first_block_no 'int ()'
+|-FunctionDecl 0x7fc002898d60 <<invalid sloc>> col:1245 implicit used __ext4_grp_locked_error 'int ()'
+|-FunctionDecl 0x7fc002899290 <<invalid sloc>> col:1425 implicit used mb_regenerate_buddy 'int ()'
+`-FunctionDecl 0x7fc00289a3b8 <<invalid sloc>> col:1898 implicit used mb_set_largest_free_order 'int ()'

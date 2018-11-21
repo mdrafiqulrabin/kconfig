@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7fdb90825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdb90826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdb90825d40 '__int128'
+|-TypedefDecl 0x7fdb90826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdb90825d60 'unsigned __int128'
+|-TypedefDecl 0x7fdb90826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdb90826170 'struct __NSConstantString_tag'
+|   `-Record 0x7fdb908260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdb90826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdb908263c0 'char *'
+|   `-BuiltinType 0x7fdb90825b60 'char'
+|-TypedefDecl 0x7fdb908266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdb90826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdb908264e0 'struct __va_list_tag'
+|     `-Record 0x7fdb90826458 '__va_list_tag'
+|-TypedefDecl 0x7fdb90028400 <c_files/pr70633.c:3:1, col:14> col:14 referenced V '__attribute__((__vector_size__(4 * sizeof(long)))) long'
+| `-VectorType 0x7fdb908267c0 '__attribute__((__vector_size__(4 * sizeof(long)))) long' 4
+|   `-BuiltinType 0x7fdb90825be0 'long'
+|-FunctionDecl 0x7fdb900285f0 <line:5:1, col:14> col:6 used foo 'void (V *)'
+| `-ParmVarDecl 0x7fdb900284e8 <col:11, col:13> col:14 'V *'
+`-FunctionDecl 0x7fdb90028790 <line:7:1, line:12:1> line:8:1 referenced bar 'void (void)'
+  `-CompoundStmt 0x7fdb90028be0 <line:9:1, line:12:1>
+    |-DeclStmt 0x7fdb90028ab0 <line:10:3, col:32>
+    | `-VarDecl 0x7fdb90028838 <col:3, col:31> col:5 used b 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long' cinit
+    |   `-InitListExpr 0x7fdb90028a08 <col:9, col:31> 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+    |     |-CStyleCastExpr 0x7fdb90028920 <col:11, col:18> 'long' <PointerToIntegral>
+    |     | `-ImplicitCastExpr 0x7fdb90028908 <col:18> 'void (*)(void)' <FunctionToPointerDecay>
+    |     |   `-DeclRefExpr 0x7fdb90028898 <col:18> 'void (void)' Function 0x7fdb90028790 'bar' 'void (void)'
+    |     |-ImplicitCastExpr 0x7fdb90028a68 <col:23> 'long' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fdb90028948 <col:23> 'int' 0
+    |     |-ImplicitCastExpr 0x7fdb90028a80 <col:26> 'long' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fdb90028968 <col:26> 'int' 0
+    |     `-ImplicitCastExpr 0x7fdb90028a98 <col:29> 'long' <IntegralCast>
+    |       `-IntegerLiteral 0x7fdb90028988 <col:29> 'int' 0
+    `-CallExpr 0x7fdb90028bb0 <line:11:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fdb90028b98 <col:3> 'void (*)(V *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fdb90028ac8 <col:3> 'void (V *)' Function 0x7fdb900285f0 'foo' 'void (V *)'
+      `-UnaryOperator 0x7fdb90028b18 <col:8, col:9> 'V *' prefix '&'
+        `-DeclRefExpr 0x7fdb90028af0 <col:9> 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long' lvalue Var 0x7fdb90028838 'b' 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long'

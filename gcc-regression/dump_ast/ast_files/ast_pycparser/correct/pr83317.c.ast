@@ -1,0 +1,58 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['double']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      Struct: S
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: buf, [], [], []
+    ArrayDecl: []
+      PtrDecl: []
+        TypeDecl: buf, []
+          IdentifierType: ['void']
+      Constant: int, 64
+  Decl: setjmp, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+      TypeDecl: setjmp, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: setjmp
+        ExprList: 
+          ID: buf
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          Struct: S
+      If: 
+        ID: d
+        Assignment: =
+          StructRef: .
+            ID: g
+            ID: a
+          FuncCall: 
+            ID: __builtin_copysign
+            ExprList: 
+              ID: e
+              ID: d
+      Assignment: =
+        ID: c
+        ID: g

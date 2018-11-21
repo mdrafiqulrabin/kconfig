@@ -1,0 +1,74 @@
+c_files/pr62199-2.c:16:10: warning: comparison of constant 1 with boolean expression is always false [-Wtautological-constant-out-of-range-compare]
+  r = !b > 1; /* { dg-bogus "logical not is only applied to the left hand side of comparison" } */
+      ~~ ^ ~
+c_files/pr62199-2.c:19:10: warning: comparison of constant 1 with boolean expression is always true [-Wtautological-constant-out-of-range-compare]
+  r = !b <= 1; /* { dg-bogus "logical not is only applied to the left hand side of comparison" } */
+      ~~ ^  ~
+2 warnings generated.
+TranslationUnitDecl 0x7fbd8f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbd8f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbd8f026740 '__int128'
+|-TypedefDecl 0x7fbd8f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbd8f026760 'unsigned __int128'
+|-TypedefDecl 0x7fbd8f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbd8f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbd8f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbd8f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbd8f026dc0 'char *'
+|   `-BuiltinType 0x7fbd8f026560 'char'
+|-TypedefDecl 0x7fbd8f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbd8f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbd8f026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbd8f026e58 '__va_list_tag'
+|-VarDecl 0x7fbd8f027130 <c_files/pr62199-2.c:6:15, line:9:6> col:6 used r '_Bool'
+`-FunctionDecl 0x7fbd8f825ac0 <line:11:1, line:20:1> line:12:1 foo 'void (_Bool)'
+  |-ParmVarDecl 0x7fbd8f825a00 <line:6:15, line:12:11> col:11 used b '_Bool'
+  `-CompoundStmt 0x7fbd8f8261c0 <line:13:1, line:20:1>
+    |-BinaryOperator 0x7fbd8f825c48 <line:14:3, col:13> '_Bool' '='
+    | |-DeclRefExpr 0x7fbd8f825b60 <col:3> '_Bool' lvalue Var 0x7fbd8f027130 'r' '_Bool'
+    | `-ImplicitCastExpr 0x7fbd8f825c30 <col:7, col:13> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fbd8f825c08 <col:7, col:13> 'int' '=='
+    |     |-UnaryOperator 0x7fbd8f825bc8 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7fbd8f825bb0 <col:8> '_Bool' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fbd8f825b88 <col:8> '_Bool' lvalue ParmVar 0x7fbd8f825a00 'b' '_Bool'
+    |     `-IntegerLiteral 0x7fbd8f825be8 <col:13> 'int' 1
+    |-BinaryOperator 0x7fbd8f825d58 <line:15:3, col:13> '_Bool' '='
+    | |-DeclRefExpr 0x7fbd8f825c70 <col:3> '_Bool' lvalue Var 0x7fbd8f027130 'r' '_Bool'
+    | `-ImplicitCastExpr 0x7fbd8f825d40 <col:7, col:13> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fbd8f825d18 <col:7, col:13> 'int' '!='
+    |     |-UnaryOperator 0x7fbd8f825cd8 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7fbd8f825cc0 <col:8> '_Bool' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fbd8f825c98 <col:8> '_Bool' lvalue ParmVar 0x7fbd8f825a00 'b' '_Bool'
+    |     `-IntegerLiteral 0x7fbd8f825cf8 <col:13> 'int' 1
+    |-BinaryOperator 0x7fbd8f825e68 <line:16:3, col:12> '_Bool' '='
+    | |-DeclRefExpr 0x7fbd8f825d80 <col:3> '_Bool' lvalue Var 0x7fbd8f027130 'r' '_Bool'
+    | `-ImplicitCastExpr 0x7fbd8f825e50 <col:7, col:12> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fbd8f825e28 <col:7, col:12> 'int' '>'
+    |     |-UnaryOperator 0x7fbd8f825de8 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7fbd8f825dd0 <col:8> '_Bool' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fbd8f825da8 <col:8> '_Bool' lvalue ParmVar 0x7fbd8f825a00 'b' '_Bool'
+    |     `-IntegerLiteral 0x7fbd8f825e08 <col:12> 'int' 1
+    |-BinaryOperator 0x7fbd8f825f78 <line:17:3, col:13> '_Bool' '='
+    | |-DeclRefExpr 0x7fbd8f825e90 <col:3> '_Bool' lvalue Var 0x7fbd8f027130 'r' '_Bool'
+    | `-ImplicitCastExpr 0x7fbd8f825f60 <col:7, col:13> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fbd8f825f38 <col:7, col:13> 'int' '>='
+    |     |-UnaryOperator 0x7fbd8f825ef8 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7fbd8f825ee0 <col:8> '_Bool' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fbd8f825eb8 <col:8> '_Bool' lvalue ParmVar 0x7fbd8f825a00 'b' '_Bool'
+    |     `-IntegerLiteral 0x7fbd8f825f18 <col:13> 'int' 1
+    |-BinaryOperator 0x7fbd8f826088 <line:18:3, col:12> '_Bool' '='
+    | |-DeclRefExpr 0x7fbd8f825fa0 <col:3> '_Bool' lvalue Var 0x7fbd8f027130 'r' '_Bool'
+    | `-ImplicitCastExpr 0x7fbd8f826070 <col:7, col:12> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fbd8f826048 <col:7, col:12> 'int' '<'
+    |     |-UnaryOperator 0x7fbd8f826008 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7fbd8f825ff0 <col:8> '_Bool' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fbd8f825fc8 <col:8> '_Bool' lvalue ParmVar 0x7fbd8f825a00 'b' '_Bool'
+    |     `-IntegerLiteral 0x7fbd8f826028 <col:12> 'int' 1
+    `-BinaryOperator 0x7fbd8f826198 <line:19:3, col:13> '_Bool' '='
+      |-DeclRefExpr 0x7fbd8f8260b0 <col:3> '_Bool' lvalue Var 0x7fbd8f027130 'r' '_Bool'
+      `-ImplicitCastExpr 0x7fbd8f826180 <col:7, col:13> '_Bool' <IntegralToBoolean>
+        `-BinaryOperator 0x7fbd8f826158 <col:7, col:13> 'int' '<='
+          |-UnaryOperator 0x7fbd8f826118 <col:7, col:8> 'int' prefix '!'
+          | `-ImplicitCastExpr 0x7fbd8f826100 <col:8> '_Bool' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fbd8f8260d8 <col:8> '_Bool' lvalue ParmVar 0x7fbd8f825a00 'b' '_Bool'
+          `-IntegerLiteral 0x7fbd8f826138 <col:13> 'int' 1

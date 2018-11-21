@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f97d48068d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f97d4806e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f97d4806b40 '__int128'
+|-TypedefDecl 0x7f97d4806e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f97d4806b60 'unsigned __int128'
+|-TypedefDecl 0x7f97d4807168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f97d4806f70 'struct __NSConstantString_tag'
+|   `-Record 0x7f97d4806ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f97d4807200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f97d48071c0 'char *'
+|   `-BuiltinType 0x7f97d4806960 'char'
+|-TypedefDecl 0x7f97d48074c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f97d4807470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f97d48072e0 'struct __va_list_tag'
+|     `-Record 0x7f97d4807258 '__va_list_tag'
+|-RecordDecl 0x7f97d4807520 <c_files/pr71104-2.c:3:1, col:28> col:8 struct Foo definition
+| `-FieldDecl 0x7f97d5025a58 <col:14, col:25> col:19 c 'char [1024]'
+|-FunctionDecl 0x7f97d5025b60 <line:4:1, col:14> col:6 used foo 'void (void)'
+|-FunctionDecl 0x7f97d5025d70 <line:5:1, col:51> col:12 used baz 'struct Foo (void)'
+| `-ReturnsTwiceAttr 0x7f97d5025e08 <col:37>
+|-VarDecl 0x7f97d5025ed0 <line:6:1, col:13> col:13 used p 'struct Foo *'
+`-FunctionDecl 0x7f97d5025fc0 <line:8:1, line:12:1> line:8:6 bar 'void (void)'
+  `-CompoundStmt 0x7f97d5026230 <line:9:1, line:12:1>
+    |-CallExpr 0x7f97d50260c0 <line:10:3, col:7> 'void'
+    | `-ImplicitCastExpr 0x7f97d50260a8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f97d5026058 <col:3> 'void (void)' Function 0x7f97d5025b60 'foo' 'void (void)'
+    `-BinaryOperator 0x7f97d5026208 <line:11:3, col:12> 'struct Foo':'struct Foo' '='
+      |-UnaryOperator 0x7f97d5026128 <col:3, col:4> 'struct Foo':'struct Foo' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7f97d5026110 <col:4> 'struct Foo *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f97d50260e8 <col:4> 'struct Foo *' lvalue Var 0x7f97d5025ed0 'p' 'struct Foo *'
+      `-CallExpr 0x7f97d50261e0 <col:8, col:12> 'struct Foo':'struct Foo'
+        `-ImplicitCastExpr 0x7f97d50261c8 <col:8> 'struct Foo (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f97d5026148 <col:8> 'struct Foo (void)' Function 0x7f97d5025d70 'baz' 'struct Foo (void)'

@@ -1,0 +1,49 @@
+c_files/pr66568.c:11:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7f8c700264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8c70026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8c70026740 '__int128'
+|-TypedefDecl 0x7f8c70026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8c70026760 'unsigned __int128'
+|-TypedefDecl 0x7f8c70026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8c70026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8c70026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8c70026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8c70026dc0 'char *'
+|   `-BuiltinType 0x7f8c70026560 'char'
+|-TypedefDecl 0x7f8c700270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8c70027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8c70026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8c70026e58 '__va_list_tag'
+|-FunctionDecl 0x7f8c70825a38 <c_files/pr66568.c:5:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7f8c70825ad0 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7f8c70825b38 prev 0x7f8c70825a38 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7f8c70027138 <col:19> col:22 'int'
+|-VarDecl 0x7f8c70825bf0 <line:6:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7f8c70825ca8 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7f8c70825d20 <col:1, col:11> col:11 used c 'int'
+`-FunctionDecl 0x7f8c70825df0 <line:7:1, line:11:1> line:7:7 set_test 'void *()'
+  `-CompoundStmt 0x7f8c70826150 <col:19, line:11:1>
+    |-IfStmt 0x7f8c70826088 <line:8:3, line:9:27>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f8c70825eb0 <line:8:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f8c70825e88 <col:7> 'int' lvalue Var 0x7f8c70825ca8 'b' 'int'
+    | |-ConditionalOperator 0x7f8c70826058 <line:9:5, col:27> 'void'
+    | | |-ImplicitCastExpr 0x7f8c70826040 <col:5> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f8c70825ec8 <col:5> 'int' lvalue Var 0x7f8c70825bf0 'a' 'int'
+    | | |-CallExpr 0x7f8c70825f80 <col:9, col:16> 'void'
+    | | | |-ImplicitCastExpr 0x7f8c70825f68 <col:9> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f8c70825ef0 <col:9> 'void (int) __attribute__((noreturn))' Function 0x7f8c70825b38 'exit' 'void (int) __attribute__((noreturn))'
+    | | | `-IntegerLiteral 0x7f8c70825f18 <col:15> 'int' 0
+    | | `-CallExpr 0x7f8c70826010 <col:20, col:27> 'void'
+    | |   |-ImplicitCastExpr 0x7f8c70825ff8 <col:20> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7f8c70825fb0 <col:20> 'void (int) __attribute__((noreturn))' Function 0x7f8c70825b38 'exit' 'void (int) __attribute__((noreturn))'
+    | |   `-IntegerLiteral 0x7f8c70825fd8 <col:26> 'int' 1
+    | `-<<<NULL>>>
+    `-BinaryOperator 0x7f8c70826128 <line:10:3, col:7> 'int' '='
+      |-DeclRefExpr 0x7f8c708260c0 <col:3> 'int' lvalue Var 0x7f8c70825ca8 'b' 'int'
+      `-ImplicitCastExpr 0x7f8c70826110 <col:7> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f8c708260e8 <col:7> 'int' lvalue Var 0x7f8c70825d20 'c' 'int'

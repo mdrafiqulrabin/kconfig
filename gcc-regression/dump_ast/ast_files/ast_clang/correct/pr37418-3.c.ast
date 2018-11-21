@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fa0ad0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa0ad026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa0ad026740 '__int128'
+|-TypedefDecl 0x7fa0ad026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa0ad026760 'unsigned __int128'
+|-TypedefDecl 0x7fa0ad026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa0ad026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa0ad026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa0ad026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa0ad026dc0 'char *'
+|   `-BuiltinType 0x7fa0ad026560 'char'
+|-TypedefDecl 0x7fa0ad0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa0ad027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa0ad026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa0ad026e58 '__va_list_tag'
+|-TypedefDecl 0x7fa0ad825a00 <c_files/pr37418-3.c:1:1, col:20> col:14 referenced ft 'void (int)'
+| `-FunctionProtoType 0x7fa0ad0271a0 'void (int)' cdecl
+|   |-BuiltinType 0x7fa0ad026520 'void'
+|   `-BuiltinType 0x7fa0ad0265c0 'int'
+|-FunctionDecl 0x7fa0ad825af8 <line:2:1, col:38> col:6 used f 'void (int)'
+| |-ParmVarDecl 0x7fa0ad825a70 <col:8, col:12> col:12 args 'int'
+| `-ConstAttr 0x7fa0ad825b98 <col:32>
+`-FunctionDecl 0x7fa0ad825df0 <line:3:1, line:6:1> line:3:6 f2 'void (ft *)'
+  |-ParmVarDecl 0x7fa0ad825ca8 <col:9, col:13> col:13 used p 'ft *'
+  | `-ConstAttr 0x7fa0ad825d08 <col:30>
+  `-CompoundStmt 0x7fa0ad825f20 <line:4:1, line:6:1>
+    `-BinaryOperator 0x7fa0ad825ef8 <line:5:3, col:7> 'ft *' '='
+      |-DeclRefExpr 0x7fa0ad825e90 <col:3> 'ft *' lvalue ParmVar 0x7fa0ad825ca8 'p' 'ft *'
+      `-ImplicitCastExpr 0x7fa0ad825ee0 <col:7> 'void (*)(int)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fa0ad825eb8 <col:7> 'void (int)' Function 0x7fa0ad825af8 'f' 'void (int)'

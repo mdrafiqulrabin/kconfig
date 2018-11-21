@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7f948581c6d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f948581cc20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f948581c940 '__int128'
+|-TypedefDecl 0x7f948581cc90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f948581c960 'unsigned __int128'
+|-TypedefDecl 0x7f948581cf68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f948581cd70 'struct __NSConstantString_tag'
+|   `-Record 0x7f948581cce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f948581d000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f948581cfc0 'char *'
+|   `-BuiltinType 0x7f948581c760 'char'
+|-TypedefDecl 0x7f948581d2c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f948581d270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f948581d0e0 'struct __va_list_tag'
+|     `-Record 0x7f948581d058 '__va_list_tag'
+|-FunctionDecl 0x7f948586d600 <c_files/pr67400-5.c:4:1, col:22> col:13 used foo 'void (void)' extern
+|-FunctionDecl 0x7f948586dae0 <line:5:1, col:54> col:13 used bar 'void (int, int, int, int, int, int, void *)' extern
+| |-ParmVarDecl 0x7f948586d6f0 <col:18> col:21 'int'
+| |-ParmVarDecl 0x7f948586d768 <col:23> col:26 'int'
+| |-ParmVarDecl 0x7f948586d7e0 <col:28> col:31 'int'
+| |-ParmVarDecl 0x7f948586d858 <col:33> col:36 'int'
+| |-ParmVarDecl 0x7f948586d8d0 <col:38> col:41 'int'
+| |-ParmVarDecl 0x7f948586d948 <col:43> col:46 'int'
+| `-ParmVarDecl 0x7f948586d9c0 <col:48, col:53> col:54 'void *'
+`-FunctionDecl 0x7f948586dc40 <line:7:1, line:11:1> line:8:1 x 'void (void)'
+  `-CompoundStmt 0x7f948586dee8 <line:9:1, line:11:1>
+    `-CallExpr 0x7f948586de30 <line:10:3, col:29> 'void'
+      |-ImplicitCastExpr 0x7f948586de18 <col:3> 'void (*)(int, int, int, int, int, int, void *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f948586dcd8 <col:3> 'void (int, int, int, int, int, int, void *)' Function 0x7f948586dae0 'bar' 'void (int, int, int, int, int, int, void *)'
+      |-IntegerLiteral 0x7f948586dd00 <col:8> 'int' 1
+      |-IntegerLiteral 0x7f948586dd20 <col:11> 'int' 2
+      |-IntegerLiteral 0x7f948586dd40 <col:14> 'int' 3
+      |-IntegerLiteral 0x7f948586dd60 <col:17> 'int' 4
+      |-IntegerLiteral 0x7f948586dd80 <col:20> 'int' 5
+      |-IntegerLiteral 0x7f948586dda0 <col:23> 'int' 6
+      `-ImplicitCastExpr 0x7f948586ded0 <col:26> 'void *' <BitCast>
+        `-ImplicitCastExpr 0x7f948586deb8 <col:26> 'void (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f948586ddc0 <col:26> 'void (void)' Function 0x7f948586d600 'foo' 'void (void)'

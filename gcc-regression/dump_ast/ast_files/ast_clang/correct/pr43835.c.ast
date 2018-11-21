@@ -1,0 +1,136 @@
+TranslationUnitDecl 0x7fbbe30264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbbe3026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbbe3026740 '__int128'
+|-TypedefDecl 0x7fbbe3026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbbe3026760 'unsigned __int128'
+|-TypedefDecl 0x7fbbe3026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbbe3026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbbe3026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbbe3026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbbe3026dc0 'char *'
+|   `-BuiltinType 0x7fbbe3026560 'char'
+|-TypedefDecl 0x7fbbe30270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbbe3027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbbe3026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbbe3026e58 '__va_list_tag'
+|-RecordDecl 0x7fbbe3027120 <c_files/pr43835.c:1:1, line:3:1> line:1:8 struct PMC definition
+| `-FieldDecl 0x7fbbe3825a00 <line:2:5, col:14> col:14 referenced flags 'unsigned int'
+|-RecordDecl 0x7fbbe3825a48 <line:5:9, line:10:1> line:5:16 struct Pcc_cell definition
+| |-FieldDecl 0x7fbbe3825ba0 <line:7:5, col:17> col:17 referenced p 'struct PMC *'
+| |-FieldDecl 0x7fbbe3825c00 <line:8:5, col:10> col:10 referenced bla 'long'
+| `-FieldDecl 0x7fbbe3825c60 <line:9:5, col:10> col:10 referenced type 'long'
+|-TypedefDecl 0x7fbbe3825d00 <line:5:1, line:10:3> col:3 referenced Pcc_cell 'struct Pcc_cell':'struct Pcc_cell'
+| `-ElaboratedType 0x7fbbe3825cb0 'struct Pcc_cell' sugar
+|   `-RecordType 0x7fbbe3825ad0 'struct Pcc_cell'
+|     `-Record 0x7fbbe3825a48 'Pcc_cell'
+|-FunctionDecl 0x7fbbe3825df0 <line:12:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbbe3825e88 prev 0x7fbbe3825df0 <col:1, col:20> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbbe3826130 <line:13:1, line:14:30> line:13:13 used Parrot_gc_mark_PMC_alive_fun 'void (int *, struct PMC *)' extern
+| |-ParmVarDecl 0x7fbbe3825f90 <col:42, col:48> col:48 interp 'int *'
+| |-ParmVarDecl 0x7fbbe3826018 <col:56, col:68> col:68 pmc 'struct PMC *'
+| `-NoInlineAttr 0x7fbbe38261d8 <line:14:21>
+|-FunctionDecl 0x7fbbe3826390 prev 0x7fbbe3826130 <line:16:1, line:19:1> line:16:6 used Parrot_gc_mark_PMC_alive_fun 'void (int *, struct PMC *)'
+| |-ParmVarDecl 0x7fbbe3826278 <col:36, col:42> col:42 interp 'int *'
+| |-ParmVarDecl 0x7fbbe3826300 <col:50, col:62> col:62 pmc 'struct PMC *'
+| |-CompoundStmt 0x7fbbe3826518 <line:17:1, line:19:1>
+| | `-CallExpr 0x7fbbe38264f0 <line:18:3, col:10> 'void'
+| |   `-ImplicitCastExpr 0x7fbbe38264d8 <col:3> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7fbbe3826480 <col:3> 'void (void) __attribute__((noreturn))' Function 0x7fbbe3825e88 'abort' 'void (void) __attribute__((noreturn))'
+| `-NoInlineAttr 0x7fbbe3826470 <line:14:21> Inherited
+|-FunctionDecl 0x7fbbe3826790 <line:21:1, line:24:33> line:21:13 used mark_cell 'void (int *, Pcc_cell *)' static
+| |-ParmVarDecl 0x7fbbe3826550 <col:23, col:29> col:29 interp 'int *'
+| |-ParmVarDecl 0x7fbbe3826638 <col:37, col:47> col:47 c 'Pcc_cell *'
+| |-NoInlineAttr 0x7fbbe3826838 <line:24:24>
+| |-NonNullAttr 0x7fbbe3826880 <line:23:24, col:37> 1
+| `-NonNullAttr 0x7fbbe38268a8 <line:22:24, col:37> 0
+|-FunctionDecl 0x7fbbe382cc00 prev 0x7fbbe3826790 <line:26:1, line:32:1> line:27:1 used mark_cell 'void (int *, Pcc_cell *)' static
+| |-ParmVarDecl 0x7fbbe38268e0 <col:11, col:17> col:17 used interp 'int *'
+| |-ParmVarDecl 0x7fbbe3826950 <col:25, col:35> col:35 used c 'Pcc_cell *'
+| |-CompoundStmt 0x7fbbe382d2d0 <line:28:1, line:32:1>
+| | `-IfStmt 0x7fbbe382d298 <line:29:13, line:31:49>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fbbe382d0c8 <line:29:17, line:30:29> 'int' '&&'
+| |   | |-BinaryOperator 0x7fbbe382ceb8 <line:29:17, col:36> 'int' '&&'
+| |   | | |-BinaryOperator 0x7fbbe382ce00 <col:17, col:28> 'int' '=='
+| |   | | | |-ImplicitCastExpr 0x7fbbe382cdd0 <col:17, col:20> 'long' <LValueToRValue>
+| |   | | | | `-MemberExpr 0x7fbbe382cd78 <col:17, col:20> 'long' lvalue ->type 0x7fbbe3825c60
+| |   | | | |   `-ImplicitCastExpr 0x7fbbe382cd60 <col:17> 'Pcc_cell *' <LValueToRValue>
+| |   | | | |     `-DeclRefExpr 0x7fbbe382cd38 <col:17> 'Pcc_cell *' lvalue ParmVar 0x7fbbe3826950 'c' 'Pcc_cell *'
+| |   | | | `-ImplicitCastExpr 0x7fbbe382cde8 <col:28> 'long' <IntegralCast>
+| |   | | |   `-IntegerLiteral 0x7fbbe382cdb0 <col:28> 'int' 4
+| |   | | `-ImplicitCastExpr 0x7fbbe382cea0 <col:33, col:36> 'struct PMC *' <LValueToRValue>
+| |   | |   `-MemberExpr 0x7fbbe382ce68 <col:33, col:36> 'struct PMC *' lvalue ->p 0x7fbbe3825ba0
+| |   | |     `-ImplicitCastExpr 0x7fbbe382ce50 <col:33> 'Pcc_cell *' <LValueToRValue>
+| |   | |       `-DeclRefExpr 0x7fbbe382ce28 <col:33> 'Pcc_cell *' lvalue ParmVar 0x7fbbe3826950 'c' 'Pcc_cell *'
+| |   | `-UnaryOperator 0x7fbbe382d0a8 <line:30:6, col:29> 'int' prefix '!'
+| |   |   `-ParenExpr 0x7fbbe382d088 <col:7, col:29> 'unsigned int'
+| |   |     `-BinaryOperator 0x7fbbe382d060 <col:8, col:28> 'unsigned int' '&'
+| |   |       |-ImplicitCastExpr 0x7fbbe382d030 <col:8, col:14> 'unsigned int' <LValueToRValue>
+| |   |       | `-MemberExpr 0x7fbbe382cf70 <col:8, col:14> 'unsigned int' lvalue ->flags 0x7fbbe3825a00
+| |   |       |   `-ImplicitCastExpr 0x7fbbe382cf58 <col:8, col:11> 'struct PMC *' <LValueToRValue>
+| |   |       |     `-MemberExpr 0x7fbbe382cf20 <col:8, col:11> 'struct PMC *' lvalue ->p 0x7fbbe3825ba0
+| |   |       |       `-ImplicitCastExpr 0x7fbbe382cf08 <col:8> 'Pcc_cell *' <LValueToRValue>
+| |   |       |         `-DeclRefExpr 0x7fbbe382cee0 <col:8> 'Pcc_cell *' lvalue ParmVar 0x7fbbe3826950 'c' 'Pcc_cell *'
+| |   |       `-ImplicitCastExpr 0x7fbbe382d048 <col:22, col:28> 'unsigned int' <IntegralCast>
+| |   |         `-ParenExpr 0x7fbbe382d010 <col:22, col:28> 'int'
+| |   |           `-BinaryOperator 0x7fbbe382cfe8 <col:23, col:26> 'int' '<<'
+| |   |             |-IntegerLiteral 0x7fbbe382cfa8 <col:23> 'int' 1
+| |   |             `-IntegerLiteral 0x7fbbe382cfc8 <col:26> 'int' 18
+| |   |-CallExpr 0x7fbbe382d230 <line:31:8, col:49> 'void'
+| |   | |-ImplicitCastExpr 0x7fbbe382d218 <col:8> 'void (*)(int *, struct PMC *)' <FunctionToPointerDecay>
+| |   | | `-DeclRefExpr 0x7fbbe382d0f0 <col:8> 'void (int *, struct PMC *)' Function 0x7fbbe3826390 'Parrot_gc_mark_PMC_alive_fun' 'void (int *, struct PMC *)'
+| |   | |-ImplicitCastExpr 0x7fbbe382d268 <col:37> 'int *' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fbbe382d118 <col:37> 'int *' lvalue ParmVar 0x7fbbe38268e0 'interp' 'int *'
+| |   | `-ImplicitCastExpr 0x7fbbe382d280 <col:45, col:48> 'struct PMC *' <LValueToRValue>
+| |   |   `-MemberExpr 0x7fbbe382d180 <col:45, col:48> 'struct PMC *' lvalue ->p 0x7fbbe3825ba0
+| |   |     `-ImplicitCastExpr 0x7fbbe382d168 <col:45> 'Pcc_cell *' <LValueToRValue>
+| |   |       `-DeclRefExpr 0x7fbbe382d140 <col:45> 'Pcc_cell *' lvalue ParmVar 0x7fbbe3826950 'c' 'Pcc_cell *'
+| |   `-<<<NULL>>>
+| |-NoInlineAttr 0x7fbbe382cce0 <line:24:24> Inherited
+| |-NonNullAttr 0x7fbbe382ccf0 <line:23:24> Inherited 1
+| `-NonNullAttr 0x7fbbe382cd18 <line:22:24> Inherited 0
+|-FunctionDecl 0x7fbbe382d408 <line:34:1, col:35> col:6 used foo 'void (int *, Pcc_cell *)'
+| |-ParmVarDecl 0x7fbbe382d308 <col:10, col:16> col:16 interp 'int *'
+| `-ParmVarDecl 0x7fbbe382d378 <col:24, col:34> col:34 c 'Pcc_cell *'
+|-FunctionDecl 0x7fbbe382d5c8 prev 0x7fbbe382d408 <line:36:1, line:40:1> line:37:1 used foo 'void (int *, Pcc_cell *)'
+| |-ParmVarDecl 0x7fbbe382d4c8 <col:5, col:11> col:11 used interp 'int *'
+| |-ParmVarDecl 0x7fbbe382d538 <col:19, col:29> col:29 used c 'Pcc_cell *'
+| `-CompoundStmt 0x7fbbe382d7c8 <line:38:1, line:40:1>
+|   `-CallExpr 0x7fbbe382d760 <line:39:3, col:22> 'void'
+|     |-ImplicitCastExpr 0x7fbbe382d748 <col:3> 'void (*)(int *, Pcc_cell *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fbbe382d670 <col:3> 'void (int *, Pcc_cell *)' Function 0x7fbbe382cc00 'mark_cell' 'void (int *, Pcc_cell *)'
+|     |-ImplicitCastExpr 0x7fbbe382d798 <col:13> 'int *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fbbe382d698 <col:13> 'int *' lvalue ParmVar 0x7fbbe382d4c8 'interp' 'int *'
+|     `-ImplicitCastExpr 0x7fbbe382d7b0 <col:21> 'Pcc_cell *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fbbe382d6c0 <col:21> 'Pcc_cell *' lvalue ParmVar 0x7fbbe382d538 'c' 'Pcc_cell *'
+`-FunctionDecl 0x7fbbe382d840 <line:42:1, line:51:1> line:42:5 main 'int ()'
+  `-CompoundStmt 0x7fbbe382e1d8 <line:43:1, line:51:1>
+    |-DeclStmt 0x7fbbe382d950 <line:44:3, col:8>
+    | `-VarDecl 0x7fbbe382d8f0 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7fbbe382d9d8 <line:45:3, col:13>
+    | `-VarDecl 0x7fbbe382d978 <col:3, col:12> col:12 used c 'Pcc_cell':'struct Pcc_cell'
+    |-BinaryOperator 0x7fbbe382da88 <line:46:3, col:9> 'struct PMC *' '='
+    | |-MemberExpr 0x7fbbe382da18 <col:3, col:5> 'struct PMC *' lvalue .p 0x7fbbe3825ba0
+    | | `-DeclRefExpr 0x7fbbe382d9f0 <col:3> 'Pcc_cell':'struct Pcc_cell' lvalue Var 0x7fbbe382d978 'c' 'Pcc_cell':'struct Pcc_cell'
+    | `-ImplicitCastExpr 0x7fbbe382da70 <col:9> 'struct PMC *' <NullToPointer>
+    |   `-IntegerLiteral 0x7fbbe382da50 <col:9> 'int' 0
+    |-BinaryOperator 0x7fbbe382db48 <line:47:3, col:11> 'long' '='
+    | |-MemberExpr 0x7fbbe382dad8 <col:3, col:5> 'long' lvalue .bla 0x7fbbe3825c00
+    | | `-DeclRefExpr 0x7fbbe382dab0 <col:3> 'Pcc_cell':'struct Pcc_cell' lvalue Var 0x7fbbe382d978 'c' 'Pcc_cell':'struct Pcc_cell'
+    | `-ImplicitCastExpr 0x7fbbe382db30 <col:11> 'long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fbbe382db10 <col:11> 'int' 42
+    |-BinaryOperator 0x7fbbe382e070 <line:48:3, col:12> 'long' '='
+    | |-MemberExpr 0x7fbbe382e000 <col:3, col:5> 'long' lvalue .type 0x7fbbe3825c60
+    | | `-DeclRefExpr 0x7fbbe382dbc8 <col:3> 'Pcc_cell':'struct Pcc_cell' lvalue Var 0x7fbbe382d978 'c' 'Pcc_cell':'struct Pcc_cell'
+    | `-ImplicitCastExpr 0x7fbbe382e058 <col:12> 'long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fbbe382e038 <col:12> 'int' 4
+    |-CallExpr 0x7fbbe382e168 <line:49:3, col:14> 'void'
+    | |-ImplicitCastExpr 0x7fbbe382e150 <col:3> 'void (*)(int *, Pcc_cell *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fbbe382e098 <col:3> 'void (int *, Pcc_cell *)' Function 0x7fbbe382d5c8 'foo' 'void (int *, Pcc_cell *)'
+    | |-UnaryOperator 0x7fbbe382e0e8 <col:8, col:9> 'int *' prefix '&'
+    | | `-DeclRefExpr 0x7fbbe382e0c0 <col:9> 'int' lvalue Var 0x7fbbe382d8f0 'i' 'int'
+    | `-UnaryOperator 0x7fbbe382e130 <col:12, col:13> 'Pcc_cell *' prefix '&'
+    |   `-DeclRefExpr 0x7fbbe382e108 <col:13> 'Pcc_cell':'struct Pcc_cell' lvalue Var 0x7fbbe382d978 'c' 'Pcc_cell':'struct Pcc_cell'
+    `-ReturnStmt 0x7fbbe382e1c0 <line:50:3, col:10>
+      `-IntegerLiteral 0x7fbbe382e1a0 <col:10> 'int' 0

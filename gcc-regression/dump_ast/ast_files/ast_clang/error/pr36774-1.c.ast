@@ -1,0 +1,32 @@
+c_files/pr36774-1.c:7:20: error: function definition is not allowed here
+    int bar(int b) { return b; } /* { dg-bogus "no previous prototype" } */
+                   ^
+c_files/pr36774-1.c:8:12: warning: implicit declaration of function 'bar' is invalid in C99 [-Wimplicit-function-declaration]
+    return bar(a);
+           ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fa8de80e4d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa8de80ea20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa8de80e740 '__int128'
+|-TypedefDecl 0x7fa8de80ea90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa8de80e760 'unsigned __int128'
+|-TypedefDecl 0x7fa8de80ed68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa8de80eb70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa8de80eae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa8de80ee00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa8de80edc0 'char *'
+|   `-BuiltinType 0x7fa8de80e560 'char'
+|-TypedefDecl 0x7fa8de80f0c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa8de80f070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa8de80eee0 'struct __va_list_tag'
+|     `-Record 0x7fa8de80ee58 '__va_list_tag'
+|-FunctionDecl 0x7fa8de03d230 <c_files/pr36774-1.c:6:1, line:9:1> line:6:5 foo 'int (int)'
+| |-ParmVarDecl 0x7fa8de80f138 <col:9, col:13> col:13 used a 'int'
+| `-CompoundStmt 0x7fa8de03d570 <col:16, line:9:1>
+|   `-ReturnStmt 0x7fa8de03d558 <line:8:5, col:17>
+|     `-CallExpr 0x7fa8de03d510 <col:12, col:17> 'int'
+|       |-ImplicitCastExpr 0x7fa8de03d4f8 <col:12> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fa8de03d478 <col:12> 'int ()' Function 0x7fa8de03d3e0 'bar' 'int ()'
+|       `-ImplicitCastExpr 0x7fa8de03d540 <col:16> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fa8de03d4a0 <col:16> 'int' lvalue ParmVar 0x7fa8de80f138 'a' 'int'
+`-FunctionDecl 0x7fa8de03d3e0 <<invalid sloc>> col:12 implicit used bar 'int ()'

@@ -1,0 +1,136 @@
+FileAST: 
+  FuncDef: 
+    Decl: convert_image, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: in, [], [], []
+            PtrDecl: []
+              TypeDecl: in, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: out, [], [], []
+            PtrDecl: []
+              TypeDecl: out, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: size, [], [], []
+            TypeDecl: size, []
+              IdentifierType: ['int']
+        TypeDecl: convert_image, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: read, [], [], []
+        PtrDecl: []
+          TypeDecl: read, []
+            IdentifierType: ['unsigned', 'char']
+        ID: in
+      Decl: write, [], [], []
+        PtrDecl: []
+          TypeDecl: write, []
+            IdentifierType: ['unsigned', 'char']
+        ID: out
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: size
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: r, [], [], []
+            TypeDecl: r, []
+              IdentifierType: ['unsigned', 'char']
+            UnaryOp: *
+              UnaryOp: p++
+                ID: read
+          Decl: g, [], [], []
+            TypeDecl: g, []
+              IdentifierType: ['unsigned', 'char']
+            UnaryOp: *
+              UnaryOp: p++
+                ID: read
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned', 'char']
+            UnaryOp: *
+              UnaryOp: p++
+                ID: read
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: m, [], [], []
+            TypeDecl: m, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: tmp, [], [], []
+            TypeDecl: tmp, []
+              IdentifierType: ['unsigned', 'char']
+          Assignment: =
+            ID: c
+            BinaryOp: -
+              Constant: int, 255
+              ID: r
+          Assignment: =
+            ID: m
+            BinaryOp: -
+              Constant: int, 255
+              ID: g
+          Assignment: =
+            ID: y
+            BinaryOp: -
+              Constant: int, 255
+              ID: b
+          If: 
+            BinaryOp: <
+              ID: c
+              ID: m
+            Assignment: =
+              ID: k
+              TernaryOp: 
+                BinaryOp: >
+                  ID: c
+                  ID: y
+                ID: y
+                ID: c
+            Assignment: =
+              ID: k
+              TernaryOp: 
+                BinaryOp: >
+                  ID: m
+                  ID: y
+                ID: y
+                ID: m
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: write
+            BinaryOp: -
+              ID: c
+              ID: k
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: write
+            BinaryOp: -
+              ID: m
+              ID: k
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: write
+            BinaryOp: -
+              ID: y
+              ID: k
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: write
+            ID: k

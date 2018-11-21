@@ -1,0 +1,64 @@
+c_files/pr39902-2.c:9:8: error: GNU decimal type extension not supported
+extern _Decimal32 a32, b32;
+       ^
+c_files/pr39902-2.c:10:8: error: GNU decimal type extension not supported
+extern _Decimal64 a64, b64;
+       ^
+c_files/pr39902-2.c:11:8: error: GNU decimal type extension not supported
+extern _Decimal128 a128, b128;
+       ^
+c_files/pr39902-2.c:16:3: error: use of undeclared identifier 'b32'; did you mean 'a32'?
+  b32 = a32 * -1.0DF;
+  ^~~
+  a32
+c_files/pr39902-2.c:9:19: note: 'a32' declared here
+extern _Decimal32 a32, b32;
+                  ^
+c_files/pr39902-2.c:16:19: error: invalid suffix 'DF' on floating constant
+  b32 = a32 * -1.0DF;
+                  ^
+c_files/pr39902-2.c:22:3: error: use of undeclared identifier 'b64'; did you mean 'a64'?
+  b64 = a64 * -1.0DD;
+  ^~~
+  a64
+c_files/pr39902-2.c:10:19: note: 'a64' declared here
+extern _Decimal64 a64, b64;
+                  ^
+c_files/pr39902-2.c:22:19: error: invalid suffix 'DD' on floating constant
+  b64 = a64 * -1.0DD;
+                  ^
+c_files/pr39902-2.c:28:3: error: use of undeclared identifier 'b128'; did you mean 'a128'?
+  b128 = a128 * -1.0DL;
+  ^~~~
+  a128
+c_files/pr39902-2.c:11:20: note: 'a128' declared here
+extern _Decimal128 a128, b128;
+                   ^
+c_files/pr39902-2.c:28:21: error: invalid suffix 'DL' on floating constant
+  b128 = a128 * -1.0DL;
+                    ^
+9 errors generated.
+TranslationUnitDecl 0x7f87500264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8750026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8750026740 '__int128'
+|-TypedefDecl 0x7f8750026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8750026760 'unsigned __int128'
+|-TypedefDecl 0x7f8750026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8750026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8750026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8750026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8750026dc0 'char *'
+|   `-BuiltinType 0x7f8750026560 'char'
+|-TypedefDecl 0x7f87500270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8750027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8750026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8750026e58 '__va_list_tag'
+|-VarDecl 0x7f8750027138 <c_files/pr39902-2.c:9:1, col:19> col:19 invalid a32 'int' extern
+|-VarDecl 0x7f8750077400 <line:10:1, col:19> col:19 invalid a64 'int' extern
+|-VarDecl 0x7f8750077478 <line:11:1, col:20> col:20 invalid a128 'int' extern
+|-FunctionDecl 0x7f87500775a0 <line:13:1, line:17:1> line:14:1 foo32 'void (void)'
+| `-CompoundStmt 0x7f8750077690 <line:15:1, line:17:1>
+|-FunctionDecl 0x7f8750077738 <line:19:1, line:23:1> line:20:1 foo64 'void (void)'
+| `-CompoundStmt 0x7f87500777d0 <line:21:1, line:23:1>
+`-FunctionDecl 0x7f8750077878 <line:25:1, line:29:1> line:26:1 foo128 'void (void)'
+  `-CompoundStmt 0x7f8750077910 <line:27:1, line:29:1>

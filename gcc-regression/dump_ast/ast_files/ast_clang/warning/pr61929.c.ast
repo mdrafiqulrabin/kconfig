@@ -1,0 +1,67 @@
+c_files/pr61929.c:10:1: warning: return type of 'main' is not 'int' [-Wmain-return-type]
+void main () {}
+^
+c_files/pr61929.c:10:1: note: change return type to 'int'
+void main () {}
+^~~~
+int
+1 warning generated.
+TranslationUnitDecl 0x7fef280264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fef28026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fef28026740 '__int128'
+|-TypedefDecl 0x7fef28026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fef28026760 'unsigned __int128'
+|-TypedefDecl 0x7fef28026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fef28026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fef28026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fef28026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fef28026dc0 'char *'
+|   `-BuiltinType 0x7fef28026560 'char'
+|-TypedefDecl 0x7fef280270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fef28027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fef28026ee0 'struct __va_list_tag'
+|     `-Record 0x7fef28026e58 '__va_list_tag'
+|-RecordDecl 0x7fef28027120 <c_files/pr61929.c:4:9, line:7:1> line:4:16 struct m definition
+| |-FieldDecl 0x7fef28825a00 <line:5:3, col:9> col:9 referenced A 'char *'
+| `-FieldDecl 0x7fef28825a60 <line:6:3, col:9> col:9 referenced B 'char *'
+|-TypedefDecl 0x7fef28825b00 <line:4:1, line:7:3> col:3 referenced mystruct 'struct m':'struct m'
+| `-ElaboratedType 0x7fef28825ab0 'struct m' sugar
+|   `-RecordType 0x7fef280271b0 'struct m'
+|     `-Record 0x7fef28027120 'm'
+|-VarDecl 0x7fef28825c98 <line:8:1, col:16> col:10 used arr 'mystruct [52]'
+|-FunctionDecl 0x7fef28825d88 <line:10:1, col:15> col:6 main 'void ()'
+| `-CompoundStmt 0x7fef28825e20 <col:14, col:15>
+`-FunctionDecl 0x7fef28825f00 <line:11:1, line:19:1> line:11:6 generateICE 'void (void)'
+  `-CompoundStmt 0x7fef288264f0 <line:12:1, line:19:1>
+    |-DeclStmt 0x7fef28826010 <line:13:3, col:8>
+    | `-VarDecl 0x7fef28825fb0 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fef288264b8 <line:14:3, line:18:5>
+      |-BinaryOperator 0x7fef28826070 <line:14:8, col:10> 'int' '='
+      | |-DeclRefExpr 0x7fef28826028 <col:8> 'int' lvalue Var 0x7fef28825fb0 'i' 'int'
+      | `-IntegerLiteral 0x7fef28826050 <col:10> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fef288260f8 <col:13, col:15> 'int' '<'
+      | |-ImplicitCastExpr 0x7fef288260e0 <col:13> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fef28826098 <col:13> 'int' lvalue Var 0x7fef28825fb0 'i' 'int'
+      | `-IntegerLiteral 0x7fef288260c0 <col:15> 'int' 52
+      |-UnaryOperator 0x7fef28826148 <col:19, col:20> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fef28826120 <col:19> 'int' lvalue Var 0x7fef28825fb0 'i' 'int'
+      `-CompoundStmt 0x7fef28826490 <line:15:5, line:18:5>
+        |-BinaryOperator 0x7fef28826328 <line:16:7, col:18> 'char *' '='
+        | |-MemberExpr 0x7fef28826270 <col:7, col:14> 'char *' lvalue .A 0x7fef28825a00
+        | | `-ArraySubscriptExpr 0x7fef28826248 <col:7, col:12> 'mystruct':'struct m' lvalue
+        | |   |-ImplicitCastExpr 0x7fef28826218 <col:7> 'mystruct *' <ArrayToPointerDecay>
+        | |   | `-DeclRefExpr 0x7fef28826168 <col:7> 'mystruct [52]' lvalue Var 0x7fef28825c98 'arr' 'mystruct [52]'
+        | |   `-ImplicitCastExpr 0x7fef28826230 <col:11> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fef28826190 <col:11> 'int' lvalue Var 0x7fef28825fb0 'i' 'int'
+        | `-ImplicitCastExpr 0x7fef28826310 <col:18> 'char *' <ArrayToPointerDecay>
+        |   `-StringLiteral 0x7fef288262e8 <col:18> 'char [1]' lvalue ""
+        `-BinaryOperator 0x7fef28826468 <line:17:7, col:18> 'char *' '='
+          |-MemberExpr 0x7fef288263f8 <col:7, col:14> 'char *' lvalue .B 0x7fef28825a60
+          | `-ArraySubscriptExpr 0x7fef288263d0 <col:7, col:12> 'mystruct':'struct m' lvalue
+          |   |-ImplicitCastExpr 0x7fef288263a0 <col:7> 'mystruct *' <ArrayToPointerDecay>
+          |   | `-DeclRefExpr 0x7fef28826350 <col:7> 'mystruct [52]' lvalue Var 0x7fef28825c98 'arr' 'mystruct [52]'
+          |   `-ImplicitCastExpr 0x7fef288263b8 <col:11> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fef28826378 <col:11> 'int' lvalue Var 0x7fef28825fb0 'i' 'int'
+          `-ImplicitCastExpr 0x7fef28826450 <col:18> 'char *' <NullToPointer>
+            `-IntegerLiteral 0x7fef28826430 <col:18> 'int' 0

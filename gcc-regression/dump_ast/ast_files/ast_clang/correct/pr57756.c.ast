@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fc59f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc59f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc59f026740 '__int128'
+|-TypedefDecl 0x7fc59f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc59f026760 'unsigned __int128'
+|-TypedefDecl 0x7fc59f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc59f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc59f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc59f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc59f026dc0 'char *'
+|   `-BuiltinType 0x7fc59f026560 'char'
+|-TypedefDecl 0x7fc59f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc59f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc59f026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc59f026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc59f826a00 <c_files/pr57756.c:5:1, line:9:1> line:6:14 used callee 'int ()' inline
+| |-CompoundStmt 0x7fc59f826b78 <line:7:1, line:9:1>
+| | `-ReturnStmt 0x7fc59f826b60 <line:8:3, col:10>
+| |   `-IntegerLiteral 0x7fc59f826b40 <col:10> 'int' 0
+| |-TargetAttr 0x7fc59f826a98 <line:5:30, col:45> "sse4.2"
+| `-AlwaysInlineAttr 0x7fc59f826af0 <col:16> always_inline
+|-FunctionDecl 0x7fc59f826c30 <line:11:1, line:15:1> line:12:21 used caller 'int ()' static inline
+| |-CompoundStmt 0x7fc59f826dd0 <line:13:1, line:15:1>
+| | `-ReturnStmt 0x7fc59f826db8 <line:14:3, col:17>
+| |   `-CallExpr 0x7fc59f826d90 <col:10, col:17> 'int'
+| |     `-ImplicitCastExpr 0x7fc59f826d78 <col:10> 'int (*)()' <FunctionToPointerDecay>
+| |       `-DeclRefExpr 0x7fc59f826d20 <col:10> 'int ()' Function 0x7fc59f826a00 'callee' 'int ()'
+| `-TargetAttr 0x7fc59f826cc8 <line:11:16, col:28> "sse"
+`-FunctionDecl 0x7fc59f826e18 <line:17:1, line:20:1> line:17:5 main 'int ()'
+  `-CompoundStmt 0x7fc59f826f30 <line:18:1, line:20:1>
+    `-ReturnStmt 0x7fc59f826f18 <line:19:3, col:17>
+      `-CallExpr 0x7fc59f826ef0 <col:10, col:17> 'int'
+        `-ImplicitCastExpr 0x7fc59f826ed8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fc59f826eb0 <col:10> 'int ()' Function 0x7fc59f826c30 'caller' 'int ()'

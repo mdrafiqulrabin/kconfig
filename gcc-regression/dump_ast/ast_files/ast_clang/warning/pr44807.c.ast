@@ -1,0 +1,131 @@
+c_files/pr44807.c:36:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7f9a8a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9a8a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9a8a026740 '__int128'
+|-TypedefDecl 0x7f9a8a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9a8a026760 'unsigned __int128'
+|-TypedefDecl 0x7f9a8a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9a8a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9a8a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9a8a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9a8a026dc0 'char *'
+|   `-BuiltinType 0x7f9a8a026560 'char'
+|-TypedefDecl 0x7f9a8a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9a8a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9a8a026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9a8a026e58 '__va_list_tag'
+|-FunctionDecl 0x7f9a8a825a30 <c_files/pr44807.c:3:1, col:23> col:5 used sigemptyset 'int (int *)'
+| `-ParmVarDecl 0x7f9a8a027160 <col:18, col:22> col:23 'int *'
+|-FunctionDecl 0x7f9a8a825c78 <line:4:1, col:23> col:5 used sigaddset 'int (int, int)'
+| |-ParmVarDecl 0x7f9a8a825b28 <col:15> col:18 'int'
+| `-ParmVarDecl 0x7f9a8a825ba0 <col:20> col:23 'int'
+|-FunctionDecl 0x7f9a8a825d70 <line:5:1, col:18> col:5 used sigprocmask 'int ()'
+|-RecordDecl 0x7f9a8a825e08 <line:6:1, line:9:1> line:6:8 struct jobstats definition
+| `-FieldDecl 0x7f9a8a825ec8 <line:8:3, col:7> col:7 referenced j_jobslots 'int'
+|-VarDecl 0x7f9a8a825f60 <line:10:1, col:17> col:17 used js 'struct jobstats':'struct jobstats'
+|-VarDecl 0x7f9a8a825fd8 <line:11:1, col:6> col:6 used jobs 'int *'
+|-TypedefDecl 0x7f9a8a8262b8 <line:13:1, col:52> col:13 referenced sh_job_map_func_t 'int (int *, int, int, int)'
+| `-FunctionProtoType 0x7f9a8a826220 'int (int *, int, int, int)' cdecl
+|   |-BuiltinType 0x7f9a8a0265c0 'int'
+|   |-PointerType 0x7f9a8a027120 'int *'
+|   | `-BuiltinType 0x7f9a8a0265c0 'int'
+|   |-BuiltinType 0x7f9a8a0265c0 'int'
+|   |-BuiltinType 0x7f9a8a0265c0 'int'
+|   `-BuiltinType 0x7f9a8a0265c0 'int'
+|-FunctionDecl 0x7f9a8a8264d0 <line:15:1, line:30:1> line:16:1 used map_over_jobs 'void (sh_job_map_func_t *)' static
+| |-ParmVarDecl 0x7f9a8a8263d0 <col:16, col:34> col:34 used func 'sh_job_map_func_t *':'sh_job_map_func_t *'
+| `-CompoundStmt 0x7f9a8a8270a0 <line:17:1, line:30:1>
+|   |-DeclStmt 0x7f9a8a8265e8 <line:18:3, col:8>
+|   | `-VarDecl 0x7f9a8a826588 <col:3, col:7> col:7 used i 'int'
+|   |-DeclStmt 0x7f9a8a826708 <line:19:3, col:16>
+|   | |-VarDecl 0x7f9a8a826618 <col:3, col:7> col:7 used set 'int'
+|   | `-VarDecl 0x7f9a8a826690 <col:3, col:12> col:12 used oset 'int'
+|   |-IfStmt 0x7f9a8a8267b0 <line:20:3, line:21:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f9a8a826780 <line:20:7, col:10> 'int' <LValueToRValue>
+|   | | `-MemberExpr 0x7f9a8a826748 <col:7, col:10> 'int' lvalue .j_jobslots 0x7f9a8a825ec8
+|   | |   `-DeclRefExpr 0x7f9a8a826720 <col:7> 'struct jobstats':'struct jobstats' lvalue Var 0x7f9a8a825f60 'js' 'struct jobstats':'struct jobstats'
+|   | |-ReturnStmt 0x7f9a8a826798 <line:21:5>
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7f9a8a8268a0 <line:22:3, col:20> 'int'
+|   | |-ImplicitCastExpr 0x7f9a8a826888 <col:3> 'int (*)(int *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f9a8a8267e8 <col:3> 'int (int *)' Function 0x7f9a8a825a30 'sigemptyset' 'int (int *)'
+|   | `-UnaryOperator 0x7f9a8a826838 <col:16, col:17> 'int *' prefix '&'
+|   |   `-DeclRefExpr 0x7f9a8a826810 <col:17> 'int' lvalue Var 0x7f9a8a826618 'set' 'int'
+|   |-CallExpr 0x7f9a8a826980 <line:23:3, col:21> 'int'
+|   | |-ImplicitCastExpr 0x7f9a8a826968 <col:3> 'int (*)(int, int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f9a8a8268d0 <col:3> 'int (int, int)' Function 0x7f9a8a825c78 'sigaddset' 'int (int, int)'
+|   | |-ImplicitCastExpr 0x7f9a8a8269b8 <col:14> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f9a8a8268f8 <col:14> 'int' lvalue Var 0x7f9a8a826618 'set' 'int'
+|   | `-IntegerLiteral 0x7f9a8a826920 <col:19> 'int' 17
+|   |-CallExpr 0x7f9a8a826a60 <line:24:3, col:21> 'int'
+|   | |-ImplicitCastExpr 0x7f9a8a826a48 <col:3> 'int (*)(int *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f9a8a8269d0 <col:3> 'int (int *)' Function 0x7f9a8a825a30 'sigemptyset' 'int (int *)'
+|   | `-UnaryOperator 0x7f9a8a826a28 <col:16, col:17> 'int *' prefix '&'
+|   |   `-DeclRefExpr 0x7f9a8a826a00 <col:17> 'int' lvalue Var 0x7f9a8a826690 'oset' 'int'
+|   |-CallExpr 0x7f9a8a826b70 <line:25:3, col:28> 'int'
+|   | |-ImplicitCastExpr 0x7f9a8a826b58 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f9a8a826a90 <col:3> 'int ()' Function 0x7f9a8a825d70 'sigprocmask' 'int ()'
+|   | |-IntegerLiteral 0x7f9a8a826ab8 <col:16> 'int' 0
+|   | |-ImplicitCastExpr 0x7f9a8a826bb0 <col:19> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f9a8a826ad8 <col:19> 'int' lvalue Var 0x7f9a8a826618 'set' 'int'
+|   | `-ImplicitCastExpr 0x7f9a8a826bc8 <col:24> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f9a8a826b00 <col:24> 'int' lvalue Var 0x7f9a8a826690 'oset' 'int'
+|   |-ForStmt 0x7f9a8a826f30 <line:26:3, line:28:26>
+|   | |-BinaryOperator 0x7f9a8a826c28 <line:26:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7f9a8a826be0 <col:8> 'int' lvalue Var 0x7f9a8a826588 'i' 'int'
+|   | | `-IntegerLiteral 0x7f9a8a826c08 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f9a8a826cb0 <col:15, col:18> 'int' <LValueToRValue>
+|   | | `-MemberExpr 0x7f9a8a826c78 <col:15, col:18> 'int' lvalue .j_jobslots 0x7f9a8a825ec8
+|   | |   `-DeclRefExpr 0x7f9a8a826c50 <col:15> 'struct jobstats':'struct jobstats' lvalue Var 0x7f9a8a825f60 'js' 'struct jobstats':'struct jobstats'
+|   | |-UnaryOperator 0x7f9a8a826cf0 <col:30, col:31> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f9a8a826cc8 <col:30> 'int' lvalue Var 0x7f9a8a826588 'i' 'int'
+|   | `-IfStmt 0x7f9a8a826ef8 <line:27:5, line:28:26>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-ImplicitCastExpr 0x7f9a8a826db8 <line:27:9, col:15> 'int' <LValueToRValue>
+|   |   | `-ArraySubscriptExpr 0x7f9a8a826d90 <col:9, col:15> 'int' lvalue
+|   |   |   |-ImplicitCastExpr 0x7f9a8a826d60 <col:9> 'int *' <LValueToRValue>
+|   |   |   | `-DeclRefExpr 0x7f9a8a826d10 <col:9> 'int *' lvalue Var 0x7f9a8a825fd8 'jobs' 'int *'
+|   |   |   `-ImplicitCastExpr 0x7f9a8a826d78 <col:14> 'int' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7f9a8a826d38 <col:14> 'int' lvalue Var 0x7f9a8a826588 'i' 'int'
+|   |   |-CallExpr 0x7f9a8a826e98 <line:28:7, col:26> 'int'
+|   |   | |-ImplicitCastExpr 0x7f9a8a826e80 <col:7> 'sh_job_map_func_t *':'sh_job_map_func_t *' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7f9a8a826dd0 <col:7> 'sh_job_map_func_t *':'sh_job_map_func_t *' lvalue ParmVar 0x7f9a8a8263d0 'func' 'sh_job_map_func_t *':'sh_job_map_func_t *'
+|   |   | |-ImplicitCastExpr 0x7f9a8a826ee0 <col:13> 'int *' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7f9a8a826df8 <col:13> 'int *' lvalue Var 0x7f9a8a825fd8 'jobs' 'int *'
+|   |   | |-IntegerLiteral 0x7f9a8a826e20 <col:19> 'int' 0
+|   |   | |-IntegerLiteral 0x7f9a8a826e40 <col:22> 'int' 0
+|   |   | `-IntegerLiteral 0x7f9a8a826e60 <col:25> 'int' 0
+|   |   `-<<<NULL>>>
+|   `-CallExpr 0x7f9a8a827050 <line:29:3, col:34> 'int'
+|     |-ImplicitCastExpr 0x7f9a8a827038 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f9a8a826f68 <col:3> 'int ()' Function 0x7f9a8a825d70 'sigprocmask' 'int ()'
+|     |-ImplicitCastExpr 0x7f9a8a827088 <col:16> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f9a8a826f90 <col:16> 'int' lvalue Var 0x7f9a8a826690 'oset' 'int'
+|     `-ParenExpr 0x7f9a8a827018 <col:22, col:33> 'void *'
+|       `-CStyleCastExpr 0x7f9a8a826ff0 <col:23, col:32> 'void *' <NullToPointer>
+|         `-IntegerLiteral 0x7f9a8a826fb8 <col:32> 'int' 0
+|-FunctionDecl 0x7f9a8a827328 <line:32:1, line:36:1> line:33:1 used print_job 'int (int *, int, int, int)'
+| |-ParmVarDecl 0x7f9a8a827118 <col:12, col:17> col:17 job 'int *'
+| |-ParmVarDecl 0x7f9a8a827190 <col:22, col:26> col:26 format 'int'
+| |-ParmVarDecl 0x7f9a8a827208 <col:34, col:38> col:38 state 'int'
+| |-ParmVarDecl 0x7f9a8a827280 <col:45, col:49> col:49 job_index 'int'
+| `-CompoundStmt 0x7f9a8a8274e8 <line:34:1, line:36:1>
+|   `-CallExpr 0x7f9a8a8274a0 <line:35:3, col:27> 'void'
+|     |-ImplicitCastExpr 0x7f9a8a827488 <col:3> 'void (*)(sh_job_map_func_t *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f9a8a8273e0 <col:3> 'void (sh_job_map_func_t *)' Function 0x7f9a8a8264d0 'map_over_jobs' 'void (sh_job_map_func_t *)'
+|     `-ImplicitCastExpr 0x7f9a8a8274d0 <col:18> 'int (*)(int *, int, int, int)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f9a8a827408 <col:18> 'int (int *, int, int, int)' Function 0x7f9a8a827328 'print_job' 'int (int *, int, int, int)'
+`-FunctionDecl 0x7f9a8a8275d0 <line:38:1, line:42:1> line:39:1 list_running_jobs 'void (void)'
+  `-CompoundStmt 0x7f9a8a827718 <line:40:1, line:42:1>
+    `-CallExpr 0x7f9a8a8276d0 <line:41:3, col:27> 'void'
+      |-ImplicitCastExpr 0x7f9a8a8276b8 <col:3> 'void (*)(sh_job_map_func_t *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f9a8a827668 <col:3> 'void (sh_job_map_func_t *)' Function 0x7f9a8a8264d0 'map_over_jobs' 'void (sh_job_map_func_t *)'
+      `-ImplicitCastExpr 0x7f9a8a827700 <col:18> 'int (*)(int *, int, int, int)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7f9a8a827690 <col:18> 'int (int *, int, int, int)' Function 0x7f9a8a827328 'print_job' 'int (int *, int, int, int)'

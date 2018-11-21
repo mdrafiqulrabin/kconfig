@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7ffed18264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffed1826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffed1826740 '__int128'
+|-TypedefDecl 0x7ffed1826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffed1826760 'unsigned __int128'
+|-TypedefDecl 0x7ffed1826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffed1826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffed1826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffed1826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffed1826dc0 'char *'
+|   `-BuiltinType 0x7ffed1826560 'char'
+|-TypedefDecl 0x7ffed18270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffed1827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffed1826ee0 'struct __va_list_tag'
+|     `-Record 0x7ffed1826e58 '__va_list_tag'
+`-FunctionDecl 0x7ffed181bcd8 <c_files/pr42575.c:6:1, line:9:1> line:6:11 longfunc 'long long (long long, long long)'
+  |-ParmVarDecl 0x7ffed1827138 <col:20, col:30> col:30 used x 'long long'
+  |-ParmVarDecl 0x7ffed181bc00 <col:33, col:43> col:43 used y 'long long'
+  `-CompoundStmt 0x7ffed181be80 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7ffed181be68 <line:8:7, col:18>
+      `-BinaryOperator 0x7ffed181be40 <col:14, col:18> 'long long' '*'
+        |-ImplicitCastExpr 0x7ffed181be10 <col:14> 'long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7ffed181bdc0 <col:14> 'long long' lvalue ParmVar 0x7ffed1827138 'x' 'long long'
+        `-ImplicitCastExpr 0x7ffed181be28 <col:18> 'long long' <LValueToRValue>
+          `-DeclRefExpr 0x7ffed181bde8 <col:18> 'long long' lvalue ParmVar 0x7ffed181bc00 'y' 'long long'

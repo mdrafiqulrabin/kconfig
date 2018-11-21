@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7f835f01a6d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f835f01ac20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f835f01a940 '__int128'
+|-TypedefDecl 0x7f835f01ac90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f835f01a960 'unsigned __int128'
+|-TypedefDecl 0x7f835f01af68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f835f01ad70 'struct __NSConstantString_tag'
+|   `-Record 0x7f835f01ace8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f835f01b000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f835f01afc0 'char *'
+|   `-BuiltinType 0x7f835f01a760 'char'
+|-TypedefDecl 0x7f835f01b2c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f835f01b270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f835f01b0e0 'struct __va_list_tag'
+|     `-Record 0x7f835f01b058 '__va_list_tag'
+|-VarDecl 0x7f835f01b338 <c_files/pr70155-6.c:4:1, col:17> col:17 used a '__int128' extern
+`-FunctionDecl 0x7f835f8230b0 <line:6:1, line:10:1> line:7:1 foo 'void (void)'
+  `-CompoundStmt 0x7f835f8231f0 <line:8:1, line:10:1>
+    `-BinaryOperator 0x7f835f8231c8 <line:9:3, col:8> '__int128' '='
+      |-DeclRefExpr 0x7f835f823148 <col:3> '__int128' lvalue Var 0x7f835f01b338 'a' '__int128'
+      `-ImplicitCastExpr 0x7f835f8231b0 <col:7, col:8> '__int128' <IntegralCast>
+        `-UnaryOperator 0x7f835f823190 <col:7, col:8> 'int' prefix '-'
+          `-IntegerLiteral 0x7f835f823170 <col:8> 'int' 1

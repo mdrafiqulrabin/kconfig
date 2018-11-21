@@ -1,0 +1,37 @@
+FileAST: 
+  FuncDef: 
+    Decl: emit_package, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['int']
+        TypeDecl: emit_package, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+          Constant: int, 0
+      Assignment: =
+        ID: a
+        FuncCall: 
+          ID: __fprintf_chk
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 0
+            Constant: string, ""
+  FuncDef: 
+    Decl: emit_lua, [], [], []
+      FuncDecl: 
+        TypeDecl: emit_lua, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: emit_package
+        ExprList: 
+          Constant: int, 0

@@ -1,0 +1,182 @@
+FileAST: 
+  Typedef: size_t, [], ['typedef']
+    TypeDecl: size_t, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: ptrdiff_t, [], ['typedef']
+    TypeDecl: ptrdiff_t, []
+      IdentifierType: ['int']
+  Typedef: int8_t, [], ['typedef']
+    TypeDecl: int8_t, []
+      IdentifierType: ['signed', 'char']
+  Typedef: int64_t, [], ['typedef']
+    TypeDecl: int64_t, []
+      IdentifierType: ['signed', 'long', 'long']
+  Typedef: GFC_INTEGER_1, [], ['typedef']
+    TypeDecl: GFC_INTEGER_1, []
+      IdentifierType: ['int8_t']
+  Typedef: GFC_LOGICAL_1, [], ['typedef']
+    TypeDecl: GFC_LOGICAL_1, []
+      IdentifierType: ['GFC_INTEGER_1']
+  Typedef: GFC_INTEGER_8, [], ['typedef']
+    TypeDecl: GFC_INTEGER_8, []
+      IdentifierType: ['int64_t']
+  Typedef: GFC_LOGICAL_8, [], ['typedef']
+    TypeDecl: GFC_LOGICAL_8, []
+      IdentifierType: ['GFC_INTEGER_8']
+  Typedef: index_type, [], ['typedef']
+    TypeDecl: index_type, []
+      IdentifierType: ['ptrdiff_t']
+  Typedef: descriptor_dimension, [], ['typedef']
+    TypeDecl: descriptor_dimension, []
+      Struct: descriptor_dimension
+        Decl: lower_bound, [], [], []
+          TypeDecl: lower_bound, []
+            IdentifierType: ['index_type']
+        Decl: _ubound, [], [], []
+          TypeDecl: _ubound, []
+            IdentifierType: ['index_type']
+  Typedef: gfc_array_l1, [], ['typedef']
+    TypeDecl: gfc_array_l1, []
+      Struct: None
+        Decl: base_addr, [], [], []
+          PtrDecl: []
+            TypeDecl: base_addr, []
+              IdentifierType: ['GFC_LOGICAL_1']
+        Decl: offset, [], [], []
+          TypeDecl: offset, []
+            IdentifierType: ['size_t']
+        Decl: dtype, [], [], []
+          TypeDecl: dtype, []
+            IdentifierType: ['index_type']
+        Decl: dim, [], [], []
+          ArrayDecl: []
+            TypeDecl: dim, []
+              IdentifierType: ['descriptor_dimension']
+            Constant: int, 7
+  Typedef: gfc_array_l8, [], ['typedef']
+    TypeDecl: gfc_array_l8, []
+      Struct: None
+        Decl: base_addr, [], [], []
+          PtrDecl: []
+            TypeDecl: base_addr, []
+              IdentifierType: ['GFC_LOGICAL_8']
+        Decl: offset, [], [], []
+          TypeDecl: offset, []
+            IdentifierType: ['size_t']
+        Decl: dtype, [], [], []
+          TypeDecl: dtype, []
+            IdentifierType: ['index_type']
+        Decl: dim, [], [], []
+          ArrayDecl: []
+            TypeDecl: dim, []
+              IdentifierType: ['descriptor_dimension']
+            Constant: int, 7
+  FuncDef: 
+    Decl: all_l8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: retarray, [], [], []
+            PtrDecl: ['const', 'restrict']
+              TypeDecl: retarray, []
+                IdentifierType: ['gfc_array_l8']
+          Decl: array, [], [], []
+            PtrDecl: ['const', 'restrict']
+              TypeDecl: array, []
+                IdentifierType: ['gfc_array_l1']
+          Decl: pdim, ['const'], [], []
+            PtrDecl: ['const', 'restrict']
+              TypeDecl: pdim, ['const']
+                IdentifierType: ['index_type']
+        TypeDecl: all_l8, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: dest, [], [], []
+        PtrDecl: ['restrict']
+          TypeDecl: dest, []
+            IdentifierType: ['GFC_LOGICAL_8']
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['index_type']
+      Decl: len, [], [], []
+        TypeDecl: len, []
+          IdentifierType: ['index_type']
+      Decl: delta, [], [], []
+        TypeDecl: delta, []
+          IdentifierType: ['index_type']
+      Decl: dim, [], [], []
+        TypeDecl: dim, []
+          IdentifierType: ['index_type']
+      Assignment: =
+        ID: dim
+        BinaryOp: -
+          UnaryOp: *
+            ID: pdim
+          Constant: int, 1
+      Assignment: =
+        ID: len
+        BinaryOp: -
+          BinaryOp: +
+            StructRef: .
+              ArrayRef: 
+                StructRef: ->
+                  ID: array
+                  ID: dim
+                ID: dim
+              ID: _ubound
+            Constant: int, 1
+          StructRef: .
+            ArrayRef: 
+              StructRef: ->
+                ID: array
+                ID: dim
+              ID: dim
+            ID: lower_bound
+      For: 
+        Assignment: =
+          ID: n
+          Constant: int, 0
+        BinaryOp: <
+          ID: n
+          ID: dim
+        UnaryOp: p++
+          ID: n
+        Compound: 
+          Decl: src, ['const'], [], []
+            PtrDecl: ['restrict']
+              TypeDecl: src, ['const']
+                IdentifierType: ['GFC_LOGICAL_1']
+          Decl: result, [], [], []
+            TypeDecl: result, []
+              IdentifierType: ['GFC_LOGICAL_8']
+          Compound: 
+            Assignment: =
+              ID: result
+              Constant: int, 1
+            Compound: 
+              For: 
+                Assignment: =
+                  ID: n
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: n
+                  ID: len
+                ExprList: 
+                  UnaryOp: p++
+                    ID: n
+                  Assignment: +=
+                    ID: src
+                    ID: delta
+                Compound: 
+                  If: 
+                    UnaryOp: !
+                      UnaryOp: *
+                        ID: src
+                    Compound: 
+                      Assignment: =
+                        ID: result
+                        Constant: int, 0
+                      Break: 
+              Assignment: =
+                UnaryOp: *
+                  ID: dest
+                ID: result

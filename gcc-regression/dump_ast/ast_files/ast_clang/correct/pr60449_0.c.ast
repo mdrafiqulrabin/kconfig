@@ -1,0 +1,64 @@
+TranslationUnitDecl 0x7fccbe0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fccbe026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fccbe026740 '__int128'
+|-TypedefDecl 0x7fccbe026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fccbe026760 'unsigned __int128'
+|-TypedefDecl 0x7fccbe026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fccbe026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fccbe026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fccbe026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fccbe026dc0 'char *'
+|   `-BuiltinType 0x7fccbe026560 'char'
+|-TypedefDecl 0x7fccbe0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fccbe027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fccbe026ee0 'struct __va_list_tag'
+|     `-Record 0x7fccbe026e58 '__va_list_tag'
+|-FunctionDecl 0x7fccbe825a68 <c_files/pr60449_0.c:4:12> col:12 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fccbe825b00 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fccbe825b68 <col:12> Implicit printf 1 2
+|-FunctionDecl 0x7fccbe825bc0 prev 0x7fccbe825a68 <col:1, col:56> col:12 used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fccbe027138 <col:20, col:43> col:43 __format 'const char *__restrict'
+| `-FormatAttr 0x7fccbe825c98 <col:12> Inherited printf 1 2
+|-TypedefDecl 0x7fccbe825cd0 <line:5:1, col:18> col:18 referenced __time_t 'long'
+| `-BuiltinType 0x7fccbe0265e0 'long'
+|-TypedefDecl 0x7fccbe825d40 <line:6:1, col:18> col:18 referenced __suseconds_t 'long'
+| `-BuiltinType 0x7fccbe0265e0 'long'
+|-RecordDecl 0x7fccbe825d98 <line:8:1, line:12:3> line:8:8 struct timeval definition
+| |-FieldDecl 0x7fccbe825e70 <line:10:5, col:14> col:14 tv_sec '__time_t':'long'
+| `-FieldDecl 0x7fccbe825ef0 <line:11:5, col:19> col:19 tv_usec '__suseconds_t':'long'
+|-RecordDecl 0x7fccbe825f38 <line:14:1, line:18:3> line:14:8 struct timezone definition
+| |-FieldDecl 0x7fccbe825ff8 <line:16:5, col:9> col:9 tz_minuteswest 'int'
+| `-FieldDecl 0x7fccbe826058 <line:17:5, col:9> col:9 referenced tz_dsttime 'int'
+|-TypedefDecl 0x7fccbe826150 <line:19:1, col:37> col:37 referenced __timezone_ptr_t 'struct timezone *__restrict'
+| `-QualType 0x7fccbe826102 'struct timezone *__restrict' __restrict
+|   `-PointerType 0x7fccbe826100 'struct timezone *'
+|     `-ElaboratedType 0x7fccbe8260a0 'struct timezone' sugar
+|       `-RecordType 0x7fccbe825fc0 'struct timezone'
+|         `-Record 0x7fccbe825f38 'timezone'
+|-FunctionDecl 0x7fccbe826408 <line:21:1, col:80> col:12 used gettimeofday 'int (struct timeval *__restrict, __timezone_ptr_t)' extern
+| |-ParmVarDecl 0x7fccbe826260 <col:26, col:53> col:53 __tv 'struct timeval *__restrict'
+| `-ParmVarDecl 0x7fccbe8262f0 <col:59, col:76> col:76 __tz '__timezone_ptr_t':'struct timezone *__restrict'
+`-FunctionDecl 0x7fccbe8265b8 <line:23:1, line:31:1> line:23:5 bar 'int (void)'
+  `-CompoundStmt 0x7fccbe826af8 <line:24:1, line:31:1>
+    |-DeclStmt 0x7fccbe8266d0 <line:25:3, col:20>
+    | `-VarDecl 0x7fccbe826670 <col:3, col:18> col:18 used tv 'struct timeval':'struct timeval'
+    |-DeclStmt 0x7fccbe826768 <line:26:3, col:21>
+    | `-VarDecl 0x7fccbe826708 <col:3, col:19> col:19 used tz 'struct timezone':'struct timezone'
+    |-CallExpr 0x7fccbe8268b0 <line:28:3, col:25> 'int'
+    | |-ImplicitCastExpr 0x7fccbe826898 <col:3> 'int (*)(struct timeval *__restrict, __timezone_ptr_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fccbe826780 <col:3> 'int (struct timeval *__restrict, __timezone_ptr_t)' Function 0x7fccbe826408 'gettimeofday' 'int (struct timeval *__restrict, __timezone_ptr_t)'
+    | |-UnaryOperator 0x7fccbe8267d0 <col:17, col:18> 'struct timeval *' prefix '&'
+    | | `-DeclRefExpr 0x7fccbe8267a8 <col:18> 'struct timeval':'struct timeval' lvalue Var 0x7fccbe826670 'tv' 'struct timeval':'struct timeval'
+    | `-UnaryOperator 0x7fccbe826818 <col:22, col:23> 'struct timezone *' prefix '&'
+    |   `-DeclRefExpr 0x7fccbe8267f0 <col:23> 'struct timezone':'struct timezone' lvalue Var 0x7fccbe826708 'tz' 'struct timezone':'struct timezone'
+    |-CallExpr 0x7fccbe826a40 <line:29:3, col:49> 'int'
+    | |-ImplicitCastExpr 0x7fccbe826a28 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fccbe8268e8 <col:3> 'int (const char *, ...)' Function 0x7fccbe825bc0 'printf' 'int (const char *, ...)'
+    | |-ImplicitCastExpr 0x7fccbe826a90 <col:11> 'const char *' <BitCast>
+    | | `-ImplicitCastExpr 0x7fccbe826a78 <col:11> 'char *' <ArrayToPointerDecay>
+    | |   `-StringLiteral 0x7fccbe826948 <col:11> 'char [21]' lvalue "This is from bar %i\n"
+    | `-ImplicitCastExpr 0x7fccbe826aa8 <col:36, col:39> 'int' <LValueToRValue>
+    |   `-MemberExpr 0x7fccbe8269b0 <col:36, col:39> 'int' lvalue .tz_dsttime 0x7fccbe826058
+    |     `-DeclRefExpr 0x7fccbe826988 <col:36> 'struct timezone':'struct timezone' lvalue Var 0x7fccbe826708 'tz' 'struct timezone':'struct timezone'
+    `-ReturnStmt 0x7fccbe826ae0 <line:30:3, col:10>
+      `-IntegerLiteral 0x7fccbe826ac0 <col:10> 'int' 5

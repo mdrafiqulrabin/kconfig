@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7fdaa90264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdaa9026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdaa9026740 '__int128'
+|-TypedefDecl 0x7fdaa9026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdaa9026760 'unsigned __int128'
+|-TypedefDecl 0x7fdaa9026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdaa9026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdaa9026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdaa9026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdaa9026dc0 'char *'
+|   `-BuiltinType 0x7fdaa9026560 'char'
+|-TypedefDecl 0x7fdaa90270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdaa9027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdaa9026ee0 'struct __va_list_tag'
+|     `-Record 0x7fdaa9026e58 '__va_list_tag'
+|-RecordDecl 0x7fdaa9027120 <c_files/pr20928.c:1:8, col:15> col:15 struct bar_t
+|-VarDecl 0x7fdaa9825a20 <col:1, col:21> col:21 used bar 'struct bar_t':'struct bar_t' extern
+|-VarDecl 0x7fdaa9825af0 <line:2:1, col:7> col:7 used a 'void *'
+`-FunctionDecl 0x7fdaa9825c10 <line:3:1, line:10:1> line:4:1 foo 'void (void)'
+  `-CompoundStmt 0x7fdaa9826108 <line:5:1, line:10:1>
+    |-DeclStmt 0x7fdaa9825da8 <line:6:3, col:15>
+    | `-VarDecl 0x7fdaa9825cf0 <col:3, col:14> col:10 used p 'void **' cinit
+    |   `-ImplicitCastExpr 0x7fdaa9825d90 <col:14> 'void **' <BitCast>
+    |     `-ImplicitCastExpr 0x7fdaa9825d78 <col:14> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fdaa9825d50 <col:14> 'void *' lvalue Var 0x7fdaa9825af0 'a' 'void *'
+    `-DoStmt 0x7fdaa98260e8 <line:7:3, line:9:13>
+      |-CompoundStmt 0x7fdaa9826088 <line:7:6, line:9:3>
+      | `-BinaryOperator 0x7fdaa9826060 <line:8:5, col:68> 'void *' '='
+      |   |-UnaryOperator 0x7fdaa9825e08 <col:5, col:7> 'void *' lvalue prefix '*'
+      |   | `-UnaryOperator 0x7fdaa9825de8 <col:6, col:7> 'void **' postfix '++'
+      |   |   `-DeclRefExpr 0x7fdaa9825dc0 <col:6> 'void **' lvalue Var 0x7fdaa9825cf0 'p' 'void **'
+      |   `-ImplicitCastExpr 0x7fdaa9826048 <col:12, col:68> 'void *' <BitCast>
+      |     `-ParenExpr 0x7fdaa9826028 <col:12, col:68> 'unsigned char *'
+      |       `-BinaryOperator 0x7fdaa9826000 <col:13, col:67> 'unsigned char *' '+'
+      |         |-CStyleCastExpr 0x7fdaa9825f10 <col:13, col:32> 'unsigned char *' <BitCast>
+      |         | `-UnaryOperator 0x7fdaa9825ea8 <col:31, col:32> 'struct bar_t *' prefix '&'
+      |         |   `-DeclRefExpr 0x7fdaa9825e28 <col:32> 'struct bar_t':'struct bar_t' lvalue Var 0x7fdaa9825a20 'bar' 'struct bar_t':'struct bar_t'
+      |         `-ParenExpr 0x7fdaa9825fe0 <col:38, col:67> 'unsigned long'
+      |           `-BinaryOperator 0x7fdaa9825fb8 <col:39, col:65> 'unsigned long' '<<'
+      |             |-CStyleCastExpr 0x7fdaa9825f70 <col:39, col:59> 'unsigned long' <IntegralCast>
+      |             | `-IntegerLiteral 0x7fdaa9825f38 <col:59> 'long' 1
+      |             `-IntegerLiteral 0x7fdaa9825f98 <col:65> 'int' 31
+      `-ImplicitCastExpr 0x7fdaa98260d0 <line:9:12> 'void **' <LValueToRValue>
+        `-DeclRefExpr 0x7fdaa98260a8 <col:12> 'void **' lvalue Var 0x7fdaa9825cf0 'p' 'void **'

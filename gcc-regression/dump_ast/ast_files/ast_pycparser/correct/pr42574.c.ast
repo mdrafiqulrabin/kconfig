@@ -1,0 +1,84 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+          Constant: int, 400
+      Decl: c, [], [], []
+        PtrDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['float']
+  Decl: glob, [], [], []
+    TypeDecl: glob, []
+      Struct: A
+  Decl: func, [], [], []
+    FuncDecl: 
+      TypeDecl: func, []
+        IdentifierType: ['void']
+  Decl: func1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+      TypeDecl: func1, []
+        IdentifierType: ['void']
+  Decl: func2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: func2, []
+        IdentifierType: ['int']
+  Decl: func3, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+      TypeDecl: func3, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: func1
+        ExprList: 
+          StructRef: .
+            ID: glob
+            ID: c
+      If: 
+        FuncCall: 
+          ID: func2
+          ExprList: 
+            StructRef: .
+              ID: glob
+              ID: c
+            ID: p
+        Compound: 
+          FuncCall: 
+            ID: func
+      FuncCall: 
+        ID: func3
+        ExprList: 
+          StructRef: .
+            ID: glob
+            ID: c

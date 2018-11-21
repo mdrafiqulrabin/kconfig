@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7ffac70264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffac7026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffac7026740 '__int128'
+|-TypedefDecl 0x7ffac7026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffac7026760 'unsigned __int128'
+|-TypedefDecl 0x7ffac7026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffac7026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffac7026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffac7026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffac7026dc0 'char *'
+|   `-BuiltinType 0x7ffac7026560 'char'
+|-TypedefDecl 0x7ffac70270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffac7027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffac7026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffac7026e58 '__va_list_tag'
+|-FunctionDecl 0x7ffac7077430 <c_files/pr42774.c:4:1, line:10:1> line:4:14 ntfs_getinfo 'unsigned int (void *)'
+| |-ParmVarDecl 0x7ffac7027138 <col:27, col:33> col:33 used p 'void *'
+| `-CompoundStmt 0x7ffac7077c10 <line:5:1, line:10:1>
+|   |-DeclStmt 0x7ffac70775e8 <line:6:5, col:21>
+|   | `-VarDecl 0x7ffac7077588 <col:5, col:20> col:10 used bootsect 'char [8]'
+|   |-CallExpr 0x7ffac70779c0 <line:8:5, col:50> 'void *'
+|   | |-ImplicitCastExpr 0x7ffac70779a8 <col:5> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7ffac7077890 <col:5> '<builtin fn type>' Function 0x7ffac7077678 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7ffac7077a18 <col:22> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7ffac7077a00 <col:22> 'char *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7ffac70778b8 <col:22> 'char [8]' lvalue Var 0x7ffac7077588 'bootsect' 'char [8]'
+|   | |-ImplicitCastExpr 0x7ffac7077a48 <col:32> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7ffac7077a30 <col:32> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7ffac70778e0 <col:32> 'void *' lvalue ParmVar 0x7ffac7027138 'p' 'void *'
+|   | `-UnaryExprOrTypeTraitExpr 0x7ffac7077930 <col:35, col:42> 'unsigned long' sizeof
+|   |   `-DeclRefExpr 0x7ffac7077908 <col:42> 'char [8]' lvalue Var 0x7ffac7077588 'bootsect' 'char [8]'
+|   `-ReturnStmt 0x7ffac7077bf8 <line:9:5, col:44>
+|     `-ImplicitCastExpr 0x7ffac7077be0 <col:12, col:44> 'unsigned int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7ffac7077bc8 <col:12, col:44> 'unsigned short' <LValueToRValue>
+|         `-UnaryOperator 0x7ffac7077ba8 <col:12, col:44> 'unsigned short' lvalue prefix '*'
+|           `-CStyleCastExpr 0x7ffac7077b80 <col:13, col:44> 'unsigned short *' <BitCast>
+|             `-ParenExpr 0x7ffac7077b60 <col:31, col:44> 'char *'
+|               `-BinaryOperator 0x7ffac7077ac0 <col:32, col:43> 'char *' '+'
+|                 |-ImplicitCastExpr 0x7ffac7077aa8 <col:32> 'char *' <ArrayToPointerDecay>
+|                 | `-DeclRefExpr 0x7ffac7077a60 <col:32> 'char [8]' lvalue Var 0x7ffac7077588 'bootsect' 'char [8]'
+|                 `-IntegerLiteral 0x7ffac7077a88 <col:43> 'int' 3
+`-FunctionDecl 0x7ffac7077678 <line:8:5> col:5 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7ffac7077710 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7ffac7077770 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7ffac70777d0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7ffac7077848 <col:5> Implicit

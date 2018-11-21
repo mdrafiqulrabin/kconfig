@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fb1718264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb171826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb171826740 '__int128'
+|-TypedefDecl 0x7fb171826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb171826760 'unsigned __int128'
+|-TypedefDecl 0x7fb171826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb171826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb171826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb171826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb171826dc0 'char *'
+|   `-BuiltinType 0x7fb171826560 'char'
+|-TypedefDecl 0x7fb1718270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb171827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb171826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb171826e58 '__va_list_tag'
+|-RecordDecl 0x7fb171827120 <c_files/pr40432.c:4:1, line:7:1> line:4:7 union U definition
+| |-RecordDecl 0x7fb172025a00 parent 0x7fb1718264d0 <line:5:3, col:10> col:10 struct something
+| |-FieldDecl 0x7fb172025b70 <col:3, col:21> col:21 sth 'struct something *'
+| `-FieldDecl 0x7fb172025bd0 <line:6:3, col:9> col:9 referenced nothing 'void *'
+`-FunctionDecl 0x7fb172025e60 <line:9:1, line:17:1> line:10:1 foo 'void (union U *, void *)'
+  |-ParmVarDecl 0x7fb172025cd0 <col:6, col:15> col:15 used target 'union U *'
+  |-ParmVarDecl 0x7fb172025d48 <col:23, col:29> col:29 used p 'void *'
+  `-CompoundStmt 0x7fb172026188 <line:11:1, line:17:1>
+    |-DeclStmt 0x7fb172025fc8 <line:12:3, col:12>
+    | `-VarDecl 0x7fb172025f68 <col:3, col:11> col:11 used u 'union U':'union U'
+    |-BinaryOperator 0x7fb172026080 <line:14:3, col:15> 'void *' '='
+    | |-MemberExpr 0x7fb172026008 <col:3, col:5> 'void *' lvalue .nothing 0x7fb172025bd0
+    | | `-DeclRefExpr 0x7fb172025fe0 <col:3> 'union U':'union U' lvalue Var 0x7fb172025f68 'u' 'union U':'union U'
+    | `-ImplicitCastExpr 0x7fb172026068 <col:15> 'void *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb172026040 <col:15> 'void *' lvalue ParmVar 0x7fb172025d48 'p' 'void *'
+    |-BinaryOperator 0x7fb172026148 <line:15:3, col:13> 'union U':'union U' '='
+    | |-UnaryOperator 0x7fb1720260e8 <col:3, col:4> 'union U':'union U' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fb1720260d0 <col:4> 'union U *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fb1720260a8 <col:4> 'union U *' lvalue ParmVar 0x7fb172025cd0 'target' 'union U *'
+    | `-ImplicitCastExpr 0x7fb172026130 <col:13> 'union U':'union U' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb172026108 <col:13> 'union U':'union U' lvalue Var 0x7fb172025f68 'u' 'union U':'union U'
+    `-ReturnStmt 0x7fb172026170 <line:16:3>

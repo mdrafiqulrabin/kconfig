@@ -1,0 +1,83 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: h, [], [], []
+    TypeDecl: h, []
+      IdentifierType: ['int']
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  Decl: k, [], [], []
+    TypeDecl: k, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          IdentifierType: ['char']
+      For: 
+        Compound: 
+          For: 
+            Compound: 
+              Assignment: =
+                ID: e
+                Assignment: =
+                  ID: f
+                  Constant: int, 1
+              If: 
+                ID: i
+                Assignment: =
+                  ID: d
+                  Assignment: =
+                    ID: h
+                    Constant: int, 0
+                Assignment: =
+                  ID: a
+                  Constant: int, 0
+              Break: 
+          Assignment: =
+            ID: k
+            Constant: int, 0
+          If: 
+            ID: f
+            Assignment: =
+              ID: a
+              Constant: int, 3
+          If: 
+            ID: d
+            Assignment: =
+              ID: f
+              Constant: int, 0
+          If: 
+            BinaryOp: >
+              ID: a
+              BinaryOp: <
+                ID: i
+                Constant: int, 1
+            Compound: 
+              If: 
+                ID: e
+                Break: 
+            Assignment: =
+              ID: i
+              ID: m
+          Assignment: =
+            ID: k
+            TernaryOp: 
+              ID: i
+              ID: a
+              ID: i

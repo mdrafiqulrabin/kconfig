@@ -1,0 +1,44 @@
+c_files/pr61817-1.c:20:1: error: static_assert failed "c == 15"
+A(c == 15);
+^ ~~~~~~~
+c_files/pr61817-1.c:4:14: note: expanded from macro 'A'
+#define A(x) _Static_assert(x, #x)
+             ^              ~
+1 error generated.
+TranslationUnitDecl 0x7f8ca5825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8ca5826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8ca5825d40 '__int128'
+|-TypedefDecl 0x7f8ca5826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8ca5825d60 'unsigned __int128'
+|-TypedefDecl 0x7f8ca5826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8ca5826170 'struct __NSConstantString_tag'
+|   `-Record 0x7f8ca58260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8ca5826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8ca58263c0 'char *'
+|   `-BuiltinType 0x7f8ca5825b60 'char'
+|-TypedefDecl 0x7f8ca58266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8ca5826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8ca58264e0 'struct __va_list_tag'
+|     `-Record 0x7f8ca5826458 '__va_list_tag'
+|-EnumDecl 0x7f8ca5826720 <c_files/pr61817-1.c:7:1, line:16:1> line:7:1
+| |-EnumConstantDecl 0x7f8ca6027c00 <line:5:20, <scratch space>:3:1> c_files/pr61817-1.c:5:20 referenced a 'int'
+| | `-IntegerLiteral 0x7f8ca58267e0 <<scratch space>:3:1> 'int' 15
+| |-EnumConstantDecl 0x7f8ca6027c68 <c_files/pr61817-1.c:5:34, <scratch space>:5:1> c_files/pr61817-1.c:5:34 referenced b 'int'
+| | `-IntegerLiteral 0x7f8ca6027c48 <<scratch space>:5:1> 'int' 15
+| `-EnumConstantDecl 0x7f8ca6027cd0 <c_files/pr61817-1.c:5:46, <scratch space>:2:1> c_files/pr61817-1.c:5:46 referenced c 'int'
+|   `-IntegerLiteral 0x7f8ca6027cb0 <<scratch space>:2:1> 'int' 14
+|-StaticAssertDecl 0x7f8ca6027e10 <c_files/pr61817-1.c:4:14, col:34> col:14
+| |-BinaryOperator 0x7f8ca6027d60 <line:18:3, col:8> 'int' '=='
+| | |-DeclRefExpr 0x7f8ca6027d18 <col:3> 'int' EnumConstant 0x7f8ca6027c00 'a' 'int'
+| | `-IntegerLiteral 0x7f8ca6027d40 <col:8> 'int' 15
+| `-StringLiteral 0x7f8ca6027dc8 <<scratch space>:6:1> 'char [8]' lvalue "a == 15"
+|-StaticAssertDecl 0x7f8ca6027f00 <c_files/pr61817-1.c:4:14, col:34> col:14
+| |-BinaryOperator 0x7f8ca6027e90 <line:19:3, col:8> 'int' '=='
+| | |-DeclRefExpr 0x7f8ca6027e48 <col:3> 'int' EnumConstant 0x7f8ca6027c68 'b' 'int'
+| | `-IntegerLiteral 0x7f8ca6027e70 <col:8> 'int' 15
+| `-StringLiteral 0x7f8ca6027eb8 <<scratch space>:7:1> 'char [8]' lvalue "b == 15"
+`-StaticAssertDecl 0x7f8ca6027ff0 <c_files/pr61817-1.c:4:14, col:34> col:14
+  |-BinaryOperator 0x7f8ca6027f80 <line:20:3, col:8> 'int' '=='
+  | |-DeclRefExpr 0x7f8ca6027f38 <col:3> 'int' EnumConstant 0x7f8ca6027cd0 'c' 'int'
+  | `-IntegerLiteral 0x7f8ca6027f60 <col:8> 'int' 15
+  `-StringLiteral 0x7f8ca6027fa8 <<scratch space>:8:1> 'char [8]' lvalue "c == 15"

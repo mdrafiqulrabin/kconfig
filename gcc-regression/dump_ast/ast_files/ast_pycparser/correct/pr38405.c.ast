@@ -1,0 +1,92 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: printf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: __format, [], [], []
+          PtrDecl: []
+            TypeDecl: __format, []
+              IdentifierType: ['char']
+        EllipsisParam: 
+      TypeDecl: printf, []
+        IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: vpiBinaryConst
+      Decl: signed_flag, [], [], []
+        TypeDecl: signed_flag, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      Decl: sized_flag, [], [], []
+        TypeDecl: sized_flag, []
+          IdentifierType: ['int']
+        Constant: int, 1
+  FuncDef: 
+    Decl: binary_get, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: code, [], [], []
+            TypeDecl: code, []
+              IdentifierType: ['int']
+          Decl: rfp, [], [], []
+            PtrDecl: []
+              TypeDecl: rfp, []
+                Struct: vpiBinaryConst
+        TypeDecl: binary_get, []
+          IdentifierType: ['int']
+    Compound: 
+      Switch: 
+        ID: code
+        Compound: 
+          Case: 
+            Constant: int, 1
+            Return: 
+              TernaryOp: 
+                StructRef: ->
+                  ID: rfp
+                  ID: signed_flag
+                Constant: int, 1
+                Constant: int, 0
+          Default: 
+            FuncCall: 
+              ID: printf
+              ExprList: 
+                Constant: string, "error: %d not supported\n"
+                ID: code
+            Return: 
+              ID: code
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          Struct: vpiBinaryConst
+        InitList: 
+          Constant: int, 1
+          Constant: int, 0
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: binary_get
+          ExprList: 
+            Constant: int, 1
+            UnaryOp: &
+              ID: x
+      If: 
+        BinaryOp: !=
+          ID: y
+          Constant: int, 1
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

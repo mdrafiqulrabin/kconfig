@@ -1,0 +1,52 @@
+FileAST: 
+  Decl: sin, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: sin, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: fn, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+        TypeDecl: fn, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        ArrayDecl: []
+          PtrDecl: []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+        InitList: 
+          UnaryOp: &
+            ID: p
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+          UnaryOp: &
+            ID: p
+      Decl: d, [], [], []
+        ArrayDecl: []
+          TypeDecl: d, []
+            IdentifierType: ['double']
+        InitList: 
+          FuncCall: 
+            ID: sin
+            ExprList: 
+              Constant: float, 1.0
+          Constant: float, 8.8
+          FuncCall: 
+            ID: sin
+            ExprList: 
+              Constant: float, 1.0
+          Constant: float, 2.6

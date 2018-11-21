@@ -1,0 +1,93 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: test1
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: test2
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['float']
+      Decl: sub, [], [], []
+        TypeDecl: sub, []
+          Struct: test1
+  Decl: global, [], [], []
+    TypeDecl: global, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: bla, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: xa, [], [], []
+            PtrDecl: []
+              TypeDecl: xa, []
+                Struct: test1
+          Decl: xb, [], [], []
+            PtrDecl: []
+              TypeDecl: xb, []
+                Struct: test2
+        TypeDecl: bla, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: global
+        Constant: int, 1
+      Assignment: =
+        StructRef: .
+          StructRef: ->
+            ID: xb
+            ID: sub
+          ID: a
+        Constant: int, 1
+      Assignment: =
+        StructRef: ->
+          ID: xa
+          ID: a
+        Constant: int, 8
+      Return: 
+        StructRef: .
+          StructRef: ->
+            ID: xb
+            ID: sub
+          ID: a
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: pom, [], [], []
+        TypeDecl: pom, []
+          Struct: test2
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: bla
+            ExprList: 
+              UnaryOp: &
+                StructRef: .
+                  ID: pom
+                  ID: sub
+              UnaryOp: &
+                ID: pom
+          Constant: int, 8
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

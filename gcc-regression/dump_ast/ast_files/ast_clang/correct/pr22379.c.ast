@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7fa9cf8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa9cf826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa9cf826740 '__int128'
+|-TypedefDecl 0x7fa9cf826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa9cf826760 'unsigned __int128'
+|-TypedefDecl 0x7fa9cf826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa9cf826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa9cf826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa9cf826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa9cf826dc0 'char *'
+|   `-BuiltinType 0x7fa9cf826560 'char'
+|-TypedefDecl 0x7fa9cf8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa9cf827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa9cf826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa9cf826e58 '__va_list_tag'
+|-FunctionDecl 0x7fa9d0025a00 <c_files/pr22379.c:1:1, col:30> col:6 __add_entropy_words 'void (void)'
+|-FunctionDecl 0x7fa9d0025b68 <line:2:1, col:20> col:6 used __wake_up 'void (void)'
+|-FunctionDecl 0x7fa9d0025c90 <line:3:1, col:23> col:6 SHATransform 'void (void)'
+|-FunctionDecl 0x7fa9d0025db8 <line:4:1, col:75> col:51 used add_entropy_words 'void (void)' static inline
+| |-CompoundStmt 0x7fa9d0025e98 <col:74, col:75>
+| `-AlwaysInlineAttr 0x7fa9d0025e50 <col:30> always_inline
+|-FunctionDecl 0x7fa9d0025f40 <line:5:1, col:26> col:6 used extract_entropy 'void (void)'
+|-FunctionDecl 0x7fa9d0026068 <line:6:1, line:10:1> line:6:51 used xfer_secondary_pool 'void (void)' static inline
+| |-CompoundStmt 0x7fa9d0026240 <line:7:1, line:10:1>
+| | |-CallExpr 0x7fa9d00261b0 <line:8:1, col:17> 'void'
+| | | `-ImplicitCastExpr 0x7fa9d0026198 <col:1> 'void (*)(void)' <FunctionToPointerDecay>
+| | |   `-DeclRefExpr 0x7fa9d0026148 <col:1> 'void (void)' Function 0x7fa9d0025f40 'extract_entropy' 'void (void)'
+| | `-CallExpr 0x7fa9d0026218 <line:9:1, col:19> 'void'
+| |   `-ImplicitCastExpr 0x7fa9d0026200 <col:1> 'void (*)(void)' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7fa9d00261d8 <col:1> 'void (void)' Function 0x7fa9d0025db8 'add_entropy_words' 'void (void)'
+| `-AlwaysInlineAttr 0x7fa9d0026100 <line:6:30> always_inline
+|-FunctionDecl 0x7fa9d00262f8 prev 0x7fa9d0025f40 <line:11:1, line:15:1> line:11:6 used extract_entropy 'void (void)'
+| `-CompoundStmt 0x7fa9d0026460 <line:12:1, line:15:1>
+|   |-CallExpr 0x7fa9d00263d0 <line:13:1, col:21> 'void'
+|   | `-ImplicitCastExpr 0x7fa9d00263b8 <col:1> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fa9d0026390 <col:1> 'void (void)' Function 0x7fa9d0026068 'xfer_secondary_pool' 'void (void)'
+|   `-CallExpr 0x7fa9d0026438 <line:14:1, col:11> 'void'
+|     `-ImplicitCastExpr 0x7fa9d0026420 <col:1> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fa9d00263f8 <col:1> 'void (void)' Function 0x7fa9d0025b68 '__wake_up' 'void (void)'
+|-FunctionDecl 0x7fa9d0026518 <line:16:1, line:19:1> line:16:6 used init_std_data 'void (void)'
+| `-CompoundStmt 0x7fa9d0026618 <line:17:1, line:19:1>
+|   `-CallExpr 0x7fa9d00265f0 <line:18:1, col:19> 'void'
+|     `-ImplicitCastExpr 0x7fa9d00265d8 <col:1> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fa9d00265b0 <col:1> 'void (void)' Function 0x7fa9d0025db8 'add_entropy_words' 'void (void)'
+`-FunctionDecl 0x7fa9d00266c8 <line:20:1, line:23:1> line:20:6 rand_initialize 'void (void)'
+  `-CompoundStmt 0x7fa9d00267c8 <line:21:1, line:23:1>
+    `-CallExpr 0x7fa9d00267a0 <line:22:1, col:15> 'void'
+      `-ImplicitCastExpr 0x7fa9d0026788 <col:1> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fa9d0026760 <col:1> 'void (void)' Function 0x7fa9d0026518 'init_std_data' 'void (void)'

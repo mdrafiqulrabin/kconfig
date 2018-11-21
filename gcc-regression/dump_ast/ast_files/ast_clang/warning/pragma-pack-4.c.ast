@@ -1,0 +1,25 @@
+c_files/pragma-pack-4.c:5:9: warning: expected #pragma pack parameter to be '1', '2', '4', '8', or '16' [-Wignored-pragmas]
+#pragma pack(0.5)         /* { dg-warning "invalid constant" } */
+        ^
+c_files/pragma-pack-4.c:6:9: warning: expected #pragma pack parameter to be '1', '2', '4', '8', or '16' [-Wignored-pragmas]
+#pragma pack(push,0.5)    /* { dg-warning "invalid constant" } */
+        ^
+c_files/pragma-pack-4.c:7:9: warning: expected #pragma pack parameter to be '1', '2', '4', '8', or '16' [-Wignored-pragmas]
+#pragma pack(push,x,0.5)  /* { dg-warning "invalid constant" } */
+        ^
+3 warnings generated.
+TranslationUnitDecl 0x7fcac98254d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcac9825a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcac9825740 '__int128'
+|-TypedefDecl 0x7fcac9825a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcac9825760 'unsigned __int128'
+|-TypedefDecl 0x7fcac9825d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcac9825b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcac9825ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcac9825e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcac9825dc0 'char *'
+|   `-BuiltinType 0x7fcac9825560 'char'
+`-TypedefDecl 0x7fcac98260c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fcac9826070 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fcac9825ee0 'struct __va_list_tag'
+      `-Record 0x7fcac9825e58 '__va_list_tag'

@@ -1,0 +1,77 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    ArrayDecl: []
+      TypeDecl: e, []
+        IdentifierType: ['int']
+      Constant: int, 100
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: f, [], [], []
+        PtrDecl: []
+          TypeDecl: f, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: d
+      Assignment: =
+        ID: c
+        Constant: int, 6
+      For: 
+        ID: c
+        UnaryOp: p--
+          ID: c
+        Compound: 
+          Assignment: =
+            ID: b
+            Constant: int, 0
+          For: 
+            BinaryOp: <=
+              ID: b
+              Constant: int, 5
+            UnaryOp: p++
+              ID: b
+            Compound: 
+              Decl: g, [], [], []
+                TypeDecl: g, []
+                  IdentifierType: ['short']
+                ArrayRef: 
+                  ID: e
+                  BinaryOp: +
+                    BinaryOp: *
+                      BinaryOp: +
+                        ID: b
+                        Constant: int, 2
+                      Constant: int, 9
+                    ID: c
+              Assignment: =
+                UnaryOp: *
+                  ID: f
+                BinaryOp: &&
+                  BinaryOp: ==
+                    UnaryOp: *
+                      ID: f
+                    ID: a
+                  ArrayRef: 
+                    ID: e
+                    BinaryOp: +
+                      BinaryOp: *
+                        BinaryOp: +
+                          ID: b
+                          Constant: int, 2
+                        Constant: int, 9
+                      ID: c

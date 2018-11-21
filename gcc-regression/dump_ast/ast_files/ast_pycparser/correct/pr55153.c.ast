@@ -1,0 +1,21 @@
+FileAST: 
+  Decl: a, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_prefetch
+        ExprList: 
+          ID: a
+          Constant: int, 0
+          Constant: int, 0

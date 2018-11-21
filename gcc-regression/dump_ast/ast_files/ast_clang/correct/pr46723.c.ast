@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fdbe78264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdbe7826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdbe7826740 '__int128'
+|-TypedefDecl 0x7fdbe7826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdbe7826760 'unsigned __int128'
+|-TypedefDecl 0x7fdbe7826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdbe7826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdbe7826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdbe7826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdbe7826dc0 'char *'
+|   `-BuiltinType 0x7fdbe7826560 'char'
+|-TypedefDecl 0x7fdbe78270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdbe7827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdbe7826ee0 'struct __va_list_tag'
+|     `-Record 0x7fdbe7826e58 '__va_list_tag'
+|-VarDecl 0x7fdbe7827160 <c_files/pr46723.c:3:1, col:8> col:8 used m 'short *'
+`-FunctionDecl 0x7fdbe7877448 <line:4:1, line:10:1> line:4:6 test 'void ()'
+  `-CompoundStmt 0x7fdbe7877a60 <line:5:1, line:10:1>
+    |-DeclStmt 0x7fdbe7877590 <line:6:3, col:16>
+    | `-VarDecl 0x7fdbe78774f8 <col:3, col:13> col:9 used x 'short' cinit
+    |   `-ImplicitCastExpr 0x7fdbe7877578 <col:13> 'short' <IntegralCast>
+    |     `-IntegerLiteral 0x7fdbe7877558 <col:13> 'int' 128
+    |-DeclStmt 0x7fdbe7877620 <line:7:3, col:17>
+    | `-VarDecl 0x7fdbe78775c0 <col:3, col:16> col:16 used i 'unsigned int'
+    `-ForStmt 0x7fdbe7877a28 <line:8:3, line:9:12>
+      |-BinaryOperator 0x7fdbe7877698 <line:8:8, col:12> 'unsigned int' '='
+      | |-DeclRefExpr 0x7fdbe7877638 <col:8> 'unsigned int' lvalue Var 0x7fdbe78775c0 'i' 'unsigned int'
+      | `-ImplicitCastExpr 0x7fdbe7877680 <col:12> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7fdbe7877660 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fdbe7877738 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fdbe7877708 <col:15> 'unsigned int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fdbe78776c0 <col:15> 'unsigned int' lvalue Var 0x7fdbe78775c0 'i' 'unsigned int'
+      | `-ImplicitCastExpr 0x7fdbe7877720 <col:19> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7fdbe78776e8 <col:19> 'int' 128
+      |-BinaryOperator 0x7fdbe78778f0 <col:24, col:53> 'short' ','
+      | |-UnaryOperator 0x7fdbe7877788 <col:24, col:26> 'unsigned int' prefix '++'
+      | | `-DeclRefExpr 0x7fdbe7877760 <col:26> 'unsigned int' lvalue Var 0x7fdbe78775c0 'i' 'unsigned int'
+      | `-BinaryOperator 0x7fdbe78778c8 <col:29, col:53> 'short' '='
+      |   |-DeclRefExpr 0x7fdbe78777a8 <col:29> 'short' lvalue Var 0x7fdbe78774f8 'x' 'short'
+      |   `-ImplicitCastExpr 0x7fdbe78778b0 <col:33, col:53> 'short' <IntegralCast>
+      |     `-BinaryOperator 0x7fdbe7877888 <col:33, col:53> 'int' '+'
+      |       |-ImplicitCastExpr 0x7fdbe7877870 <col:33, col:49> 'int' <IntegralCast>
+      |       | `-CStyleCastExpr 0x7fdbe7877828 <col:33, col:49> 'unsigned short' <IntegralCast>
+      |       |   `-ImplicitCastExpr 0x7fdbe7877810 <col:49> 'short' <LValueToRValue>
+      |       |     `-DeclRefExpr 0x7fdbe78777d0 <col:49> 'short' lvalue Var 0x7fdbe78774f8 'x' 'short'
+      |       `-IntegerLiteral 0x7fdbe7877850 <col:53> 'int' 1
+      `-BinaryOperator 0x7fdbe7877a00 <line:9:5, col:12> 'short' '='
+        |-ArraySubscriptExpr 0x7fdbe7877998 <col:5, col:8> 'short' lvalue
+        | |-ImplicitCastExpr 0x7fdbe7877968 <col:5> 'short *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fdbe7877918 <col:5> 'short *' lvalue Var 0x7fdbe7827160 'm' 'short *'
+        | `-ImplicitCastExpr 0x7fdbe7877980 <col:7> 'unsigned int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fdbe7877940 <col:7> 'unsigned int' lvalue Var 0x7fdbe78775c0 'i' 'unsigned int'
+        `-ImplicitCastExpr 0x7fdbe78779e8 <col:12> 'short' <LValueToRValue>
+          `-DeclRefExpr 0x7fdbe78779c0 <col:12> 'short' lvalue Var 0x7fdbe78774f8 'x' 'short'

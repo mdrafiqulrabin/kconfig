@@ -1,0 +1,95 @@
+FileAST: 
+  Typedef: d, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: d, []
+        Struct: None
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              Struct: None
+                Decl: a, [], [], []
+                  TypeDecl: a, []
+                    IdentifierType: ['int']
+                Decl: b, [], [], []
+                  TypeDecl: b, []
+                    IdentifierType: ['int']
+  Typedef: g, [], ['typedef']
+    TypeDecl: g, []
+      Struct: None
+        Decl: e, [], [], []
+          TypeDecl: e, []
+            IdentifierType: ['unsigned']
+        Decl: f, [], [], []
+          ArrayDecl: []
+            TypeDecl: f, []
+              IdentifierType: ['d']
+  Decl: h, [], [], []
+    TypeDecl: h, []
+      IdentifierType: ['g']
+  Decl: k, [], [], []
+    PtrDecl: []
+      TypeDecl: k, []
+        IdentifierType: ['d']
+  FuncDef: 
+    Decl: i, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+        TypeDecl: i, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        ID: j
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              ID: k
+            UnaryOp: *
+              StructRef: .
+                ID: h
+                ID: f
+          Return: 
+            Constant: int, 1
+      Return: 
+        Constant: int, 0
+  Decl: l, [], [], []
+    TypeDecl: l, []
+      IdentifierType: ['int']
+  Decl: m, [], [], []
+    TypeDecl: m, []
+      IdentifierType: ['int']
+  Decl: n, [], [], []
+    TypeDecl: n, []
+      IdentifierType: ['int']
+  Decl: o, [], [], []
+    TypeDecl: o, []
+      IdentifierType: ['d']
+  FuncDef: 
+    Decl: p, [], [], []
+      FuncDecl: 
+        TypeDecl: p, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        FuncCall: 
+          ID: i
+          ExprList: 
+            ID: l
+        UnaryOp: p++
+          ID: l
+        Compound: 
+          Assignment: +=
+            ID: n
+            StructRef: .
+              StructRef: ->
+                ID: o
+                ID: c
+              ID: a
+          Assignment: +=
+            ID: m
+            StructRef: .
+              StructRef: ->
+                ID: o
+                ID: c
+              ID: b

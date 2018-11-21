@@ -1,0 +1,167 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: f1, []
+            IdentifierType: ['void']
+    Compound: 
+      Decl: b, [], [], []
+        PtrDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: a
+      Decl: c, [], [], []
+        PtrDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: a
+      Return: 
+        FuncCall: 
+          ID: __builtin___mempcpy_chk
+          ExprList: 
+            ID: b
+            ID: c
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+            Constant: int, 0
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: f2, []
+            IdentifierType: ['void']
+    Compound: 
+      Decl: b, [], [], []
+        PtrDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: a
+      Return: 
+        FuncCall: 
+          ID: __builtin___mempcpy_chk
+          ExprList: 
+            ID: b
+            ID: b
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+            Constant: int, 0
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: f3, []
+            IdentifierType: ['void']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin___mempcpy_chk
+          ExprList: 
+            UnaryOp: &
+              ID: a
+            UnaryOp: &
+              ID: a
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+            Constant: int, 0
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: f4, []
+            IdentifierType: ['void']
+    Compound: 
+      Decl: b, [], [], []
+        PtrDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: a
+      Decl: c, [], [], []
+        PtrDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: a
+      Return: 
+        FuncCall: 
+          ID: __builtin___mempcpy_chk
+          ExprList: 
+            ID: b
+            ID: c
+            ID: x
+            Constant: int, 0
+  FuncDef: 
+    Decl: f5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: f5, []
+            IdentifierType: ['void']
+    Compound: 
+      Decl: b, [], [], []
+        PtrDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: a
+      Return: 
+        FuncCall: 
+          ID: __builtin___mempcpy_chk
+          ExprList: 
+            ID: b
+            ID: b
+            ID: x
+            Constant: int, 0
+  FuncDef: 
+    Decl: f6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: f6, []
+            IdentifierType: ['void']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin___mempcpy_chk
+          ExprList: 
+            UnaryOp: &
+              ID: a
+            UnaryOp: &
+              ID: a
+            ID: x
+            Constant: int, 0

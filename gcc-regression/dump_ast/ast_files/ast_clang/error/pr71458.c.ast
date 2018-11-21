@@ -1,0 +1,41 @@
+c_files/pr71458.c:5:7: error: use of empty enum
+enum {} a[0];
+      ^
+c_files/pr71458.c:7:18: warning: array index -1 is before the beginning of the array [-Warray-bounds]
+void fn2() { fn1(a[-1]); }
+                 ^ ~~
+c_files/pr71458.c:5:1: note: array 'a' declared here
+enum {} a[0];
+^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fbaa20264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbaa2026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbaa2026740 '__int128'
+|-TypedefDecl 0x7fbaa2026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbaa2026760 'unsigned __int128'
+|-TypedefDecl 0x7fbaa2026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbaa2026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbaa2026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbaa2026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbaa2026dc0 'char *'
+|   `-BuiltinType 0x7fbaa2026560 'char'
+|-TypedefDecl 0x7fbaa20270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbaa2027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbaa2026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbaa2026e58 '__va_list_tag'
+|-EnumDecl 0x7fbaa2027120 <c_files/pr71458.c:5:1, col:7> col:1
+|-VarDecl 0x7fbaa2825ad8 <col:1, col:12> col:9 used a 'enum (anonymous enum at c_files/pr71458.c:5:1) [0]'
+|-FunctionDecl 0x7fbaa2825c70 <line:6:1, col:13> col:6 used fn1 'void (int)'
+| `-ParmVarDecl 0x7fbaa2825ba8 <col:10> col:13 'int'
+`-FunctionDecl 0x7fbaa2825d58 <line:7:1, col:26> col:6 fn2 'void ()'
+  `-CompoundStmt 0x7fbaa2825fc0 <col:12, col:26>
+    `-CallExpr 0x7fbaa2825f60 <col:14, col:23> 'void'
+      |-ImplicitCastExpr 0x7fbaa2825f48 <col:14> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fbaa2825df0 <col:14> 'void (int)' Function 0x7fbaa2825c70 'fn1' 'void (int)'
+      `-ImplicitCastExpr 0x7fbaa2825fa8 <col:18, col:22> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fbaa2825f90 <col:18, col:22> 'enum (anonymous enum at c_files/pr71458.c:5:1)':'enum (anonymous at c_files/pr71458.c:5:1)' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fbaa2825ef0 <col:18, col:22> 'enum (anonymous enum at c_files/pr71458.c:5:1)':'enum (anonymous at c_files/pr71458.c:5:1)' lvalue
+            |-ImplicitCastExpr 0x7fbaa2825ed8 <col:18> 'enum (anonymous enum at c_files/pr71458.c:5:1) *' <ArrayToPointerDecay>
+            | `-DeclRefExpr 0x7fbaa2825e18 <col:18> 'enum (anonymous enum at c_files/pr71458.c:5:1) [0]' lvalue Var 0x7fbaa2825ad8 'a' 'enum (anonymous enum at c_files/pr71458.c:5:1) [0]'
+            `-UnaryOperator 0x7fbaa2825e60 <col:20, col:21> 'int' prefix '-'
+              `-IntegerLiteral 0x7fbaa2825e40 <col:21> 'int' 1

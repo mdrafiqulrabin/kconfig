@@ -1,0 +1,116 @@
+c_files/pr44971.c:19:4: warning: address of 'event_base' will always evaluate to 'true' [-Wpointer-bool-conversion]
+  &event_base
+   ^~~~~~~~~~
+c_files/pr44971.c:20:4: warning: expression result unused [-Wunused-value]
+   && dpy[createIfNecessary] != 0;
+   ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr44971.c:25:19: warning: incompatible integer to pointer conversion passing 'int' to parameter of type 'int *'; take the address with & [-Wint-conversion]
+  _XftintInfoGet (dpy, 0);
+                  ^~~
+                  &
+c_files/pr44971.c:16:28: note: passing argument to parameter 'dpy' here
+void _XftintInfoGet (int * dpy, FcBool createIfNecessary)
+                           ^
+c_files/pr44971.c:26:13: warning: incompatible pointer types assigning to 'XftintInfo **' from 'int *' [-Wincompatible-pointer-types]
+  for (prev = &_XftintInfo; info = *prev; prev = &(*prev)->next)
+            ^ ~~~~~~~~~~~~
+c_files/pr44971.c:26:34: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  for (prev = &_XftintInfo; info = *prev; prev = &(*prev)->next)
+                            ~~~~~^~~~~~~
+c_files/pr44971.c:26:34: note: place parentheses around the assignment to silence this warning
+  for (prev = &_XftintInfo; info = *prev; prev = &(*prev)->next)
+                                 ^
+                            (           )
+c_files/pr44971.c:26:34: note: use '==' to turn this assignment into an equality comparison
+  for (prev = &_XftintInfo; info = *prev; prev = &(*prev)->next)
+                                 ^
+                                 ==
+c_files/pr44971.c:26:48: warning: incompatible pointer types assigning to 'XftintInfo **' from 'struct _XftintInfo **' [-Wincompatible-pointer-types]
+  for (prev = &_XftintInfo; info = *prev; prev = &(*prev)->next)
+                                               ^ ~~~~~~~~~~~~~~
+6 warnings generated.
+TranslationUnitDecl 0x7f9e5d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9e5d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9e5d026740 '__int128'
+|-TypedefDecl 0x7f9e5d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9e5d026760 'unsigned __int128'
+|-TypedefDecl 0x7f9e5d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9e5d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9e5d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9e5d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9e5d026dc0 'char *'
+|   `-BuiltinType 0x7f9e5d026560 'char'
+|-TypedefDecl 0x7f9e5d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9e5d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9e5d026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9e5d026e58 '__va_list_tag'
+|-RecordDecl 0x7f9e5d027120 <c_files/pr44971.c:5:9, line:8:1> line:5:9 struct definition
+| `-FieldDecl 0x7f9e5d825a00 <line:7:3, col:7> col:7 default_screen 'int'
+|-TypedefDecl 0x7f9e5d825b00 <line:5:1, line:8:4> col:4 _XPrivint 'struct (anonymous struct at c_files/pr44971.c:5:9) *'
+| `-PointerType 0x7f9e5d825ab0 'struct (anonymous struct at c_files/pr44971.c:5:9) *'
+|   `-ElaboratedType 0x7f9e5d825a50 'struct (anonymous struct at c_files/pr44971.c:5:9)' sugar
+|     `-RecordType 0x7f9e5d0271b0 'struct (anonymous at c_files/pr44971.c:5:9)'
+|       `-Record 0x7f9e5d027120 ''
+|-TypedefDecl 0x7f9e5d825b88 <line:9:1, col:13> col:13 referenced FcBool 'int'
+| `-BuiltinType 0x7f9e5d0265c0 'int'
+|-RecordDecl 0x7f9e5d825be0 <line:10:9, line:13:1> line:10:9 struct definition
+| |-RecordDecl 0x7f9e5d825c90 parent 0x7f9e5d0264d0 <line:12:3, col:10> col:10 struct _XftintInfo
+| `-FieldDecl 0x7f9e5d825e00 <col:3, col:23> col:23 referenced next 'struct _XftintInfo *'
+|-TypedefDecl 0x7f9e5d825ea0 <line:10:1, line:13:3> col:3 referenced XftintInfo 'struct XftintInfo':'XftintInfo'
+| `-ElaboratedType 0x7f9e5d825e50 'struct XftintInfo' sugar
+|   `-RecordType 0x7f9e5d825c70 'XftintInfo'
+|     `-Record 0x7f9e5d825be0 ''
+|-VarDecl 0x7f9e5d825f28 <line:14:1, col:5> col:5 used _XftintInfo 'int'
+|-FunctionDecl 0x7f9e5d8261b0 <line:16:1, line:21:1> line:16:6 used _XftintInfoGet 'void (int *, FcBool)'
+| |-ParmVarDecl 0x7f9e5d826010 <col:22, col:28> col:28 used dpy 'int *'
+| |-ParmVarDecl 0x7f9e5d8260a0 <col:33, col:40> col:40 used createIfNecessary 'FcBool':'int'
+| `-CompoundStmt 0x7f9e5d826460 <line:17:1, line:21:1>
+|   |-DeclStmt 0x7f9e5d8262d0 <line:18:3, col:17>
+|   | `-VarDecl 0x7f9e5d826270 <col:3, col:7> col:7 used event_base 'int'
+|   `-BinaryOperator 0x7f9e5d826438 <line:19:3, line:20:33> 'int' '&&'
+|     |-UnaryOperator 0x7f9e5d826310 <line:19:3, col:4> 'int *' prefix '&'
+|     | `-DeclRefExpr 0x7f9e5d8262e8 <col:4> 'int' lvalue Var 0x7f9e5d826270 'event_base' 'int'
+|     `-BinaryOperator 0x7f9e5d826410 <line:20:7, col:33> 'int' '!='
+|       |-ImplicitCastExpr 0x7f9e5d8263f8 <col:7, col:28> 'int' <LValueToRValue>
+|       | `-ArraySubscriptExpr 0x7f9e5d8263b0 <col:7, col:28> 'int' lvalue
+|       |   |-ImplicitCastExpr 0x7f9e5d826380 <col:7> 'int *' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7f9e5d826330 <col:7> 'int *' lvalue ParmVar 0x7f9e5d826010 'dpy' 'int *'
+|       |   `-ImplicitCastExpr 0x7f9e5d826398 <col:11> 'FcBool':'int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7f9e5d826358 <col:11> 'FcBool':'int' lvalue ParmVar 0x7f9e5d8260a0 'createIfNecessary' 'FcBool':'int'
+|       `-IntegerLiteral 0x7f9e5d8263d8 <col:33> 'int' 0
+`-FunctionDecl 0x7f9e5d826790 <line:23:1, line:28:1> line:23:6 _XftCloseint 'void (int, XftintInfo *, XftintInfo **)'
+  |-ParmVarDecl 0x7f9e5d8264a0 <col:20, col:24> col:24 used dpy 'int'
+  |-ParmVarDecl 0x7f9e5d826588 <col:29, col:42> col:42 used info 'XftintInfo *'
+  |-ParmVarDecl 0x7f9e5d826660 <col:47, col:62> col:62 used prev 'XftintInfo **'
+  `-CompoundStmt 0x7f9e5d82c2d0 <line:24:1, line:28:1>
+    |-CallExpr 0x7f9e5d826920 <line:25:3, col:25> 'void'
+    | |-ImplicitCastExpr 0x7f9e5d826908 <col:3> 'void (*)(int *, FcBool)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f9e5d826840 <col:3> 'void (int *, FcBool)' Function 0x7f9e5d8261b0 '_XftintInfoGet' 'void (int *, FcBool)'
+    | |-ImplicitCastExpr 0x7f9e5d826970 <col:19> 'int *' <IntegralToPointer>
+    | | `-ImplicitCastExpr 0x7f9e5d826958 <col:19> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9e5d826868 <col:19> 'int' lvalue ParmVar 0x7f9e5d8264a0 'dpy' 'int'
+    | `-IntegerLiteral 0x7f9e5d826890 <col:24> 'int' 0
+    `-ForStmt 0x7f9e5d82c298 <line:26:3, line:27:5>
+      |-BinaryOperator 0x7f9e5d82bfe8 <line:26:8, col:16> 'XftintInfo **' '='
+      | |-DeclRefExpr 0x7f9e5d82bf60 <col:8> 'XftintInfo **' lvalue ParmVar 0x7f9e5d826660 'prev' 'XftintInfo **'
+      | `-ImplicitCastExpr 0x7f9e5d82bfd0 <col:15, col:16> 'XftintInfo **' <BitCast>
+      |   `-UnaryOperator 0x7f9e5d82bfb0 <col:15, col:16> 'int *' prefix '&'
+      |     `-DeclRefExpr 0x7f9e5d82bf88 <col:16> 'int' lvalue Var 0x7f9e5d825f28 '_XftintInfo' 'int'
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9e5d82c0b0 <col:29, col:37> 'XftintInfo *' '='
+      | |-DeclRefExpr 0x7f9e5d82c010 <col:29> 'XftintInfo *' lvalue ParmVar 0x7f9e5d826588 'info' 'XftintInfo *'
+      | `-ImplicitCastExpr 0x7f9e5d82c098 <col:36, col:37> 'XftintInfo *' <LValueToRValue>
+      |   `-UnaryOperator 0x7f9e5d82c078 <col:36, col:37> 'XftintInfo *' lvalue prefix '*'
+      |     `-ImplicitCastExpr 0x7f9e5d82c060 <col:37> 'XftintInfo **' <LValueToRValue>
+      |       `-DeclRefExpr 0x7f9e5d82c038 <col:37> 'XftintInfo **' lvalue ParmVar 0x7f9e5d826660 'prev' 'XftintInfo **'
+      |-BinaryOperator 0x7f9e5d82c260 <col:43, col:60> 'XftintInfo **' '='
+      | |-DeclRefExpr 0x7f9e5d82c0d8 <col:43> 'XftintInfo **' lvalue ParmVar 0x7f9e5d826660 'prev' 'XftintInfo **'
+      | `-ImplicitCastExpr 0x7f9e5d82c248 <col:50, col:60> 'XftintInfo **' <BitCast>
+      |   `-UnaryOperator 0x7f9e5d82c228 <col:50, col:60> 'struct _XftintInfo **' prefix '&'
+      |     `-MemberExpr 0x7f9e5d82c198 <col:51, col:60> 'struct _XftintInfo *' lvalue ->next 0x7f9e5d825e00
+      |       `-ImplicitCastExpr 0x7f9e5d82c180 <col:51, col:57> 'XftintInfo *' <LValueToRValue>
+      |         `-ParenExpr 0x7f9e5d82c160 <col:51, col:57> 'XftintInfo *' lvalue
+      |           `-UnaryOperator 0x7f9e5d82c140 <col:52, col:53> 'XftintInfo *' lvalue prefix '*'
+      |             `-ImplicitCastExpr 0x7f9e5d82c128 <col:53> 'XftintInfo **' <LValueToRValue>
+      |               `-DeclRefExpr 0x7f9e5d82c100 <col:53> 'XftintInfo **' lvalue ParmVar 0x7f9e5d826660 'prev' 'XftintInfo **'
+      `-NullStmt 0x7f9e5d82c288 <line:27:5>

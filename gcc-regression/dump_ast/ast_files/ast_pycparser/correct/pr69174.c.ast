@@ -1,0 +1,82 @@
+FileAST: 
+  Typedef: pixval, [], ['typedef']
+    TypeDecl: pixval, []
+      IdentifierType: ['int']
+  Typedef: xel, [], ['typedef']
+    TypeDecl: xel, []
+      Struct: None
+        Decl: r, [], [], []
+          TypeDecl: r, []
+            IdentifierType: ['pixval']
+        Decl: g, [], [], []
+          TypeDecl: g, []
+            IdentifierType: ['pixval']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['pixval']
+  Decl: convertRow_sample, [], [], []
+    TypeDecl: convertRow_sample, []
+      IdentifierType: ['int']
+  Decl: convertRaster_col, [], [], []
+    TypeDecl: convertRaster_col, []
+      IdentifierType: ['int']
+  Decl: convertRow_samplebuf, [], [], []
+    PtrDecl: []
+      TypeDecl: convertRow_samplebuf, []
+        IdentifierType: ['short']
+  Decl: convertRow_xelrow, [], [], []
+    PtrDecl: []
+      TypeDecl: convertRow_xelrow, []
+        IdentifierType: ['xel']
+  Decl: convertRow_spp, [], [], []
+    TypeDecl: convertRow_spp, []
+      IdentifierType: ['short']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: alpharow, [], [], []
+        PtrDecl: []
+          TypeDecl: alpharow, []
+            IdentifierType: ['int']
+      For: 
+        ID: convertRaster_col
+        ExprList: 
+          UnaryOp: ++
+            ID: convertRaster_col
+          Assignment: +=
+            ID: convertRow_sample
+            ID: convertRow_spp
+        Compound: 
+          Assignment: =
+            StructRef: .
+              ArrayRef: 
+                ID: convertRow_xelrow
+                ID: convertRaster_col
+              ID: r
+            Assignment: =
+              StructRef: .
+                ArrayRef: 
+                  ID: convertRow_xelrow
+                  ID: convertRaster_col
+                ID: g
+              Assignment: =
+                StructRef: .
+                  ArrayRef: 
+                    ID: convertRow_xelrow
+                    ID: convertRaster_col
+                  ID: b
+                ArrayRef: 
+                  ID: convertRow_samplebuf
+                  ID: convertRow_sample
+          Assignment: =
+            ArrayRef: 
+              ID: alpharow
+              ID: convertRaster_col
+            ArrayRef: 
+              ID: convertRow_samplebuf
+              BinaryOp: +
+                ID: convertRow_sample
+                Constant: int, 3

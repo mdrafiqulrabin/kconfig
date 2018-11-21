@@ -1,0 +1,195 @@
+c_files/pr35595.c:42:9: warning: implicit declaration of function '__kernel_sinf' is invalid in C99 [-Wimplicit-function-declaration]
+    y = __kernel_sinf (pi * y, zero, 0);
+        ^
+c_files/pr35595.c:43:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+TranslationUnitDecl 0x7ffe010264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffe01026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffe01026740 '__int128'
+|-TypedefDecl 0x7ffe01026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffe01026760 'unsigned __int128'
+|-TypedefDecl 0x7ffe01026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffe01026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffe01026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffe01026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffe01026dc0 'char *'
+|   `-BuiltinType 0x7ffe01026560 'char'
+|-TypedefDecl 0x7ffe010270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffe01027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffe01026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffe01026e58 '__va_list_tag'
+|-TypedefDecl 0x7ffe01027138 <c_files/pr35595.c:2:1, col:20> col:20 referenced __int32_t 'int'
+| `-BuiltinType 0x7ffe010265c0 'int'
+|-TypedefDecl 0x7ffe010271a8 <line:3:1, col:22> col:22 referenced __uint32_t 'unsigned int'
+| `-BuiltinType 0x7ffe01026660 'unsigned int'
+|-RecordDecl 0x7ffe01825a00 <line:4:9, line:8:1> line:4:9 union definition
+| |-FieldDecl 0x7ffe01825ac8 <line:6:3, col:9> col:9 referenced value 'float'
+| `-FieldDecl 0x7ffe01825b40 <line:7:3, col:14> col:14 referenced word '__uint32_t':'unsigned int'
+|-TypedefDecl 0x7ffe01825be0 <line:4:1, line:9:1> col:1 referenced ieee_float_shape_type 'union ieee_float_shape_type':'ieee_float_shape_type'
+| `-ElaboratedType 0x7ffe01825b90 'union ieee_float_shape_type' sugar
+|   `-RecordType 0x7ffe01825a90 'ieee_float_shape_type'
+|     `-Record 0x7ffe01825a00 ''
+|-VarDecl 0x7ffe01825c68 <line:10:1, col:28> col:20 used two23 'const float' static cinit
+| `-ImplicitCastExpr 0x7ffe01825d28 <col:28> 'float' <FloatingCast>
+|   `-FloatingLiteral 0x7ffe01825d08 <col:28> 'double' 8.388608e+06
+|-VarDecl 0x7ffe01825d58 <line:11:1, col:25> col:20 used pi 'const float' static cinit
+| `-ImplicitCastExpr 0x7ffe01825dd8 <col:25> 'float' <FloatingCast>
+|   `-FloatingLiteral 0x7ffe01825db8 <col:25> 'double' 3.141593e+00
+|-VarDecl 0x7ffe01825e08 <line:12:1, col:27> col:20 used zero 'const float' static cinit
+| `-ImplicitCastExpr 0x7ffe01825e88 <col:27> 'float' <FloatingCast>
+|   `-FloatingLiteral 0x7ffe01825e68 <col:27> 'double' 0.000000e+00
+|-FunctionDecl 0x7ffe01825f88 <line:13:1, line:43:1> line:14:1 used sin_pif 'float (float)' static
+| |-ParmVarDecl 0x7ffe01825eb8 <col:10, col:16> col:16 x 'float'
+| `-CompoundStmt 0x7ffe018270e0 <line:15:1, line:43:1>
+|   |-DeclStmt 0x7ffe018260d8 <line:16:3, col:14>
+|   | `-VarDecl 0x7ffe01826040 <col:3, col:13> col:9 used y 'float' cinit
+|   |   `-ImplicitCastExpr 0x7ffe018260c0 <col:13> 'float' <IntegralToFloating>
+|   |     `-IntegerLiteral 0x7ffe018260a0 <col:13> 'int' 0
+|   |-DeclStmt 0x7ffe018261a0 <line:17:3, col:14>
+|   | `-VarDecl 0x7ffe01826108 <col:3, col:13> col:9 used z 'float' cinit
+|   |   `-ImplicitCastExpr 0x7ffe01826188 <col:13> 'float' <IntegralToFloating>
+|   |     `-IntegerLiteral 0x7ffe01826168 <col:13> 'int' 0
+|   |-DeclStmt 0x7ffe01826270 <line:18:3, col:18>
+|   | `-VarDecl 0x7ffe018261f0 <col:3, col:17> col:13 used n '__int32_t':'int' cinit
+|   |   `-IntegerLiteral 0x7ffe01826250 <col:17> 'int' 0
+|   |-DeclStmt 0x7ffe01826318 <line:19:3, col:19>
+|   | `-VarDecl 0x7ffe01826298 <col:3, col:18> col:13 used ix '__int32_t':'int' cinit
+|   |   `-IntegerLiteral 0x7ffe018262f8 <col:18> 'int' 0
+|   |-DoStmt 0x7ffe01826638 <line:20:3, line:25:11>
+|   | |-CompoundStmt 0x7ffe018265f0 <line:21:5, line:24:5>
+|   | | |-DeclStmt 0x7ffe01826488 <line:22:7, col:41>
+|   | | | `-VarDecl 0x7ffe01826360 <col:7, col:40> col:29 used gf_u 'ieee_float_shape_type':'ieee_float_shape_type' cinit
+|   | | |   `-InitListExpr 0x7ffe01826428 <col:36, col:40> 'ieee_float_shape_type':'ieee_float_shape_type' field Field 0x7ffe01825ac8 'value' 'float'
+|   | | |     `-ImplicitCastExpr 0x7ffe01826470 <col:38> 'float' <IntegralToFloating>
+|   | | |       `-IntegerLiteral 0x7ffe018263c0 <col:38> 'int' 0
+|   | | `-BinaryOperator 0x7ffe01826578 <line:23:7, col:19> '__int32_t':'int' '='
+|   | |   |-ParenExpr 0x7ffe018264c8 <col:7, col:10> '__int32_t':'int' lvalue
+|   | |   | `-DeclRefExpr 0x7ffe018264a0 <col:8> '__int32_t':'int' lvalue Var 0x7ffe01826298 'ix' '__int32_t':'int'
+|   | |   `-ImplicitCastExpr 0x7ffe01826560 <col:14, col:19> '__int32_t':'int' <IntegralCast>
+|   | |     `-ImplicitCastExpr 0x7ffe01826548 <col:14, col:19> '__uint32_t':'unsigned int' <LValueToRValue>
+|   | |       `-MemberExpr 0x7ffe01826510 <col:14, col:19> '__uint32_t':'unsigned int' lvalue .word 0x7ffe01825b40
+|   | |         `-DeclRefExpr 0x7ffe018264e8 <col:14> 'ieee_float_shape_type':'ieee_float_shape_type' lvalue Var 0x7ffe01826360 'gf_u' 'ieee_float_shape_type':'ieee_float_shape_type'
+|   | `-IntegerLiteral 0x7ffe01826618 <line:25:10> 'int' 0
+|   |-IfStmt 0x7ffe01826cb0 <line:26:3, line:40:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ffe018266d8 <line:26:7, col:12> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7ffe018266a8 <col:7> 'float' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ffe01826658 <col:7> 'float' lvalue Var 0x7ffe01826108 'z' 'float'
+|   | | `-ImplicitCastExpr 0x7ffe018266c0 <col:12> 'float' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7ffe01826680 <col:12> 'float' lvalue Var 0x7ffe01826040 'y' 'float'
+|   | |-CompoundStmt 0x7ffe01826c90 <line:27:5, line:40:5>
+|   | | `-IfStmt 0x7ffe01826c58 <line:28:7, line:39:2>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-BinaryOperator 0x7ffe01826760 <line:28:11, col:16> 'int' '<'
+|   | |   | |-ImplicitCastExpr 0x7ffe01826748 <col:11> '__int32_t':'int' <LValueToRValue>
+|   | |   | | `-DeclRefExpr 0x7ffe01826700 <col:11> '__int32_t':'int' lvalue Var 0x7ffe01826298 'ix' '__int32_t':'int'
+|   | |   | `-IntegerLiteral 0x7ffe01826728 <col:16> 'int' 1266679808
+|   | |   |-CompoundStmt 0x7ffe01826c30 <line:29:2, line:39:2>
+|   | |   | |-IfStmt 0x7ffe01826908 <line:30:4, line:31:14>
+|   | |   | | |-<<<NULL>>>
+|   | |   | | |-<<<NULL>>>
+|   | |   | | |-BinaryOperator 0x7ffe018267e8 <line:30:8, col:13> 'int' '<'
+|   | |   | | | |-ImplicitCastExpr 0x7ffe018267d0 <col:8> '__int32_t':'int' <LValueToRValue>
+|   | |   | | | | `-DeclRefExpr 0x7ffe01826788 <col:8> '__int32_t':'int' lvalue Var 0x7ffe01826298 'ix' '__int32_t':'int'
+|   | |   | | | `-IntegerLiteral 0x7ffe018267b0 <col:13> 'int' 1258291200
+|   | |   | | |-BinaryOperator 0x7ffe018268e0 <line:31:6, col:14> 'float' '='
+|   | |   | | | |-DeclRefExpr 0x7ffe01826810 <col:6> 'float' lvalue Var 0x7ffe01826108 'z' 'float'
+|   | |   | | | `-BinaryOperator 0x7ffe018268b8 <col:10, col:14> 'float' '+'
+|   | |   | | |   |-ImplicitCastExpr 0x7ffe01826888 <col:10> 'float' <LValueToRValue>
+|   | |   | | |   | `-DeclRefExpr 0x7ffe01826838 <col:10> 'float' lvalue Var 0x7ffe01826040 'y' 'float'
+|   | |   | | |   `-ImplicitCastExpr 0x7ffe018268a0 <col:14> 'float' <LValueToRValue>
+|   | |   | | |     `-DeclRefExpr 0x7ffe01826860 <col:14> 'const float' lvalue Var 0x7ffe01825c68 'two23' 'const float'
+|   | |   | | `-<<<NULL>>>
+|   | |   | `-DoStmt 0x7ffe01826c10 <line:32:4, line:38:12>
+|   | |   |   |-CompoundStmt 0x7ffe01826bc0 <line:33:6, line:37:6>
+|   | |   |   | |-DeclStmt 0x7ffe018269b0 <line:34:8, col:34>
+|   | |   |   | | `-VarDecl 0x7ffe01826950 <col:8, col:30> col:30 used gf_u 'ieee_float_shape_type':'ieee_float_shape_type'
+|   | |   |   | |-BinaryOperator 0x7ffe01826a98 <line:35:8, col:23> 'float' '='
+|   | |   |   | | |-MemberExpr 0x7ffe01826a00 <col:8, col:13> 'float' lvalue .value 0x7ffe01825ac8
+|   | |   |   | | | `-DeclRefExpr 0x7ffe018269c8 <col:8> 'ieee_float_shape_type':'ieee_float_shape_type' lvalue Var 0x7ffe01826950 'gf_u' 'ieee_float_shape_type':'ieee_float_shape_type'
+|   | |   |   | | `-ImplicitCastExpr 0x7ffe01826a80 <col:21, col:23> 'float' <LValueToRValue>
+|   | |   |   | |   `-ParenExpr 0x7ffe01826a60 <col:21, col:23> 'float' lvalue
+|   | |   |   | |     `-DeclRefExpr 0x7ffe01826a38 <col:22> 'float' lvalue Var 0x7ffe01826108 'z' 'float'
+|   | |   |   | `-BinaryOperator 0x7ffe01826b98 <line:36:8, col:19> '__int32_t':'int' '='
+|   | |   |   |   |-ParenExpr 0x7ffe01826ae8 <col:8, col:10> '__int32_t':'int' lvalue
+|   | |   |   |   | `-DeclRefExpr 0x7ffe01826ac0 <col:9> '__int32_t':'int' lvalue Var 0x7ffe018261f0 'n' '__int32_t':'int'
+|   | |   |   |   `-ImplicitCastExpr 0x7ffe01826b80 <col:14, col:19> '__int32_t':'int' <IntegralCast>
+|   | |   |   |     `-ImplicitCastExpr 0x7ffe01826b68 <col:14, col:19> '__uint32_t':'unsigned int' <LValueToRValue>
+|   | |   |   |       `-MemberExpr 0x7ffe01826b30 <col:14, col:19> '__uint32_t':'unsigned int' lvalue .word 0x7ffe01825b40
+|   | |   |   |         `-DeclRefExpr 0x7ffe01826b08 <col:14> 'ieee_float_shape_type':'ieee_float_shape_type' lvalue Var 0x7ffe01826950 'gf_u' 'ieee_float_shape_type':'ieee_float_shape_type'
+|   | |   |   `-IntegerLiteral 0x7ffe01826bf0 <line:38:11> 'int' 0
+|   | |   `-<<<NULL>>>
+|   | `-<<<NULL>>>
+|   `-IfStmt 0x7ffe018270a8 <line:41:3, line:42:39>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ffe01826d48 <line:41:7, col:12> 'int' '=='
+|     | |-ImplicitCastExpr 0x7ffe01826d30 <col:7> '__int32_t':'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7ffe01826ce8 <col:7> '__int32_t':'int' lvalue Var 0x7ffe018261f0 'n' '__int32_t':'int'
+|     | `-IntegerLiteral 0x7ffe01826d10 <col:12> 'int' 0
+|     |-BinaryOperator 0x7ffe01827080 <line:42:5, col:39> 'float' '='
+|     | |-DeclRefExpr 0x7ffe01826d70 <col:5> 'float' lvalue Var 0x7ffe01826040 'y' 'float'
+|     | `-ImplicitCastExpr 0x7ffe01827068 <col:9, col:39> 'float' <IntegralToFloating>
+|     |   `-CallExpr 0x7ffe01826fe0 <col:9, col:39> 'int'
+|     |     |-ImplicitCastExpr 0x7ffe01826fc8 <col:9> 'int (*)()' <FunctionToPointerDecay>
+|     |     | `-DeclRefExpr 0x7ffe01826e88 <col:9> 'int ()' Function 0x7ffe01826df0 '__kernel_sinf' 'int ()'
+|     |     |-ImplicitCastExpr 0x7ffe01827020 <col:24, col:29> 'double' <FloatingCast>
+|     |     | `-BinaryOperator 0x7ffe01826f30 <col:24, col:29> 'float' '*'
+|     |     |   |-ImplicitCastExpr 0x7ffe01826f00 <col:24> 'float' <LValueToRValue>
+|     |     |   | `-DeclRefExpr 0x7ffe01826eb0 <col:24> 'const float' lvalue Var 0x7ffe01825d58 'pi' 'const float'
+|     |     |   `-ImplicitCastExpr 0x7ffe01826f18 <col:29> 'float' <LValueToRValue>
+|     |     |     `-DeclRefExpr 0x7ffe01826ed8 <col:29> 'float' lvalue Var 0x7ffe01826040 'y' 'float'
+|     |     |-ImplicitCastExpr 0x7ffe01827050 <col:32> 'double' <FloatingCast>
+|     |     | `-ImplicitCastExpr 0x7ffe01827038 <col:32> 'float' <LValueToRValue>
+|     |     |   `-DeclRefExpr 0x7ffe01826f58 <col:32> 'const float' lvalue Var 0x7ffe01825e08 'zero' 'const float'
+|     |     `-IntegerLiteral 0x7ffe01826f80 <col:38> 'int' 0
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7ffe01826df0 <<invalid sloc>> col:9 implicit used __kernel_sinf 'int ()'
+`-FunctionDecl 0x7ffe018272c8 <line:45:1, line:59:1> line:46:1 __ieee754_lgammaf_r 'float (float, int *)'
+  |-ParmVarDecl 0x7ffe01827148 <col:22, col:28> col:28 used x 'float'
+  |-ParmVarDecl 0x7ffe018271f0 <col:31, col:36> col:36 signgamp 'int *'
+  `-CompoundStmt 0x7ffe018279d8 <line:47:1, line:59:1>
+    |-DeclStmt 0x7ffe01827420 <line:48:3, col:14>
+    | `-VarDecl 0x7ffe01827388 <col:3, col:13> col:9 used t 'float' cinit
+    |   `-ImplicitCastExpr 0x7ffe01827408 <col:13> 'float' <IntegralToFloating>
+    |     `-IntegerLiteral 0x7ffe018273e8 <col:13> 'int' 0
+    |-DeclStmt 0x7ffe018274c8 <line:49:3, col:19>
+    | `-VarDecl 0x7ffe01827448 <col:3, col:18> col:13 used hx '__int32_t':'int' cinit
+    |   `-IntegerLiteral 0x7ffe018274a8 <col:18> 'int' 0
+    |-DoStmt 0x7ffe01827778 <line:50:3, line:55:11>
+    | |-CompoundStmt 0x7ffe01827730 <line:51:5, line:54:5>
+    | | |-DeclStmt 0x7ffe01827618 <line:52:7, col:41>
+    | | | `-VarDecl 0x7ffe018274f0 <col:7, col:40> col:29 used gf_u 'ieee_float_shape_type':'ieee_float_shape_type' cinit
+    | | |   `-InitListExpr 0x7ffe018275b8 <col:36, col:40> 'ieee_float_shape_type':'ieee_float_shape_type' field Field 0x7ffe01825ac8 'value' 'float'
+    | | |     `-ImplicitCastExpr 0x7ffe01827600 <col:38> 'float' <IntegralToFloating>
+    | | |       `-IntegerLiteral 0x7ffe01827550 <col:38> 'int' 0
+    | | `-BinaryOperator 0x7ffe01827708 <line:53:7, col:19> '__int32_t':'int' '='
+    | |   |-ParenExpr 0x7ffe01827658 <col:7, col:10> '__int32_t':'int' lvalue
+    | |   | `-DeclRefExpr 0x7ffe01827630 <col:8> '__int32_t':'int' lvalue Var 0x7ffe01827448 'hx' '__int32_t':'int'
+    | |   `-ImplicitCastExpr 0x7ffe018276f0 <col:14, col:19> '__int32_t':'int' <IntegralCast>
+    | |     `-ImplicitCastExpr 0x7ffe018276d8 <col:14, col:19> '__uint32_t':'unsigned int' <LValueToRValue>
+    | |       `-MemberExpr 0x7ffe018276a0 <col:14, col:19> '__uint32_t':'unsigned int' lvalue .word 0x7ffe01825b40
+    | |         `-DeclRefExpr 0x7ffe01827678 <col:14> 'ieee_float_shape_type':'ieee_float_shape_type' lvalue Var 0x7ffe018274f0 'gf_u' 'ieee_float_shape_type':'ieee_float_shape_type'
+    | `-IntegerLiteral 0x7ffe01827758 <line:55:10> 'int' 0
+    |-IfStmt 0x7ffe01827950 <line:56:3, line:57:19>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ffe018277f8 <line:56:7, col:12> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ffe018277e0 <col:7> '__int32_t':'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ffe01827798 <col:7> '__int32_t':'int' lvalue Var 0x7ffe01827448 'hx' '__int32_t':'int'
+    | | `-IntegerLiteral 0x7ffe018277c0 <col:12> 'int' 0
+    | |-BinaryOperator 0x7ffe01827928 <line:57:5, col:19> 'float' '='
+    | | |-DeclRefExpr 0x7ffe01827820 <col:5> 'float' lvalue Var 0x7ffe01827388 't' 'float'
+    | | `-CallExpr 0x7ffe018278e0 <col:9, col:19> 'float'
+    | |   |-ImplicitCastExpr 0x7ffe018278c8 <col:9> 'float (*)(float)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7ffe01827848 <col:9> 'float (float)' Function 0x7ffe01825f88 'sin_pif' 'float (float)'
+    | |   `-ImplicitCastExpr 0x7ffe01827910 <col:18> 'float' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7ffe01827870 <col:18> 'float' lvalue ParmVar 0x7ffe01827148 'x' 'float'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ffe018279c0 <line:58:3, col:10>
+      `-ImplicitCastExpr 0x7ffe018279a8 <col:10> 'float' <IntegralToFloating>
+        `-IntegerLiteral 0x7ffe01827988 <col:10> 'int' 0

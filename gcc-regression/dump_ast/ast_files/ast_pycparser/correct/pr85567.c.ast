@@ -1,0 +1,85 @@
+FileAST: 
+  Decl: sincos, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['double']
+        Decl: sinx, [], [], []
+          PtrDecl: []
+            TypeDecl: sinx, []
+              IdentifierType: ['double']
+        Decl: cosx, [], [], []
+          PtrDecl: []
+            TypeDecl: cosx, []
+              IdentifierType: ['double']
+      TypeDecl: sincos, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: apply, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            PtrDecl: []
+              FuncDecl: 
+                ParamList: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['double']
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['double']
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['double']
+                TypeDecl: f, []
+                  IdentifierType: ['void']
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+          Decl: sinx, [], [], []
+            PtrDecl: []
+              TypeDecl: sinx, []
+                IdentifierType: ['double']
+          Decl: cosx, [], [], []
+            PtrDecl: []
+              TypeDecl: cosx, []
+                IdentifierType: ['double']
+        TypeDecl: apply, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: f
+        ExprList: 
+          ID: x
+          ID: sinx
+          ID: cosx
+      Return: 
+  FuncDef: 
+    Decl: apply_sincos, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+          Decl: sinx, [], [], []
+            PtrDecl: []
+              TypeDecl: sinx, []
+                IdentifierType: ['double']
+          Decl: cosx, [], [], []
+            PtrDecl: []
+              TypeDecl: cosx, []
+                IdentifierType: ['double']
+        TypeDecl: apply_sincos, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: apply
+        ExprList: 
+          ID: sincos
+          ID: x
+          ID: sinx
+          ID: cosx
+      Return: 

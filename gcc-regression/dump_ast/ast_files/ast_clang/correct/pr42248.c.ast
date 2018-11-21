@@ -1,0 +1,72 @@
+TranslationUnitDecl 0x7fb14e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb14e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb14e826740 '__int128'
+|-TypedefDecl 0x7fb14e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb14e826760 'unsigned __int128'
+|-TypedefDecl 0x7fb14e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb14e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb14e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb14e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb14e826dc0 'char *'
+|   `-BuiltinType 0x7fb14e826560 'char'
+|-TypedefDecl 0x7fb14e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb14e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb14e826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb14e826e58 '__va_list_tag'
+|-RecordDecl 0x7fb14e827120 <c_files/pr42248.c:1:9, line:4:1> line:1:9 struct definition
+| |-FieldDecl 0x7fb14f025a00 <line:2:3, col:19> col:19 referenced a '_Complex double'
+| `-FieldDecl 0x7fb14f025a58 <line:3:3, col:19> col:19 b '_Complex double'
+|-TypedefDecl 0x7fb14f025af0 <line:1:1, line:4:3> col:3 referenced Scf10 'struct Scf10':'Scf10'
+| `-ElaboratedType 0x7fb14f025aa0 'struct Scf10' sugar
+|   `-RecordType 0x7fb14e8271b0 'Scf10'
+|     `-Record 0x7fb14e827120 ''
+|-VarDecl 0x7fb14f025b90 <line:6:1, col:7> col:7 used g1s 'Scf10':'Scf10'
+|-FunctionDecl 0x7fb14f025dc0 <line:8:1, line:12:1> line:9:1 used check 'void (Scf10, _Complex double)'
+| |-ParmVarDecl 0x7fb14f025c40 <col:8, col:14> col:14 used x 'Scf10':'Scf10'
+| |-ParmVarDecl 0x7fb14f025cb0 <col:17, col:33> col:33 used y '_Complex double'
+| `-CompoundStmt 0x7fb14f026180 <line:10:1, line:12:1>
+|   `-IfStmt 0x7fb14f026148 <line:11:3, col:34>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fb14f025f20 <col:7, col:14> 'int' '!='
+|     | |-ImplicitCastExpr 0x7fb14f025ef0 <col:7, col:9> '_Complex double' <LValueToRValue>
+|     | | `-MemberExpr 0x7fb14f025e90 <col:7, col:9> '_Complex double' lvalue .a 0x7fb14f025a00
+|     | |   `-DeclRefExpr 0x7fb14f025e68 <col:7> 'Scf10':'Scf10' lvalue ParmVar 0x7fb14f025c40 'x' 'Scf10':'Scf10'
+|     | `-ImplicitCastExpr 0x7fb14f025f08 <col:14> '_Complex double' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fb14f025ec8 <col:14> '_Complex double' lvalue ParmVar 0x7fb14f025cb0 'y' '_Complex double'
+|     |-CallExpr 0x7fb14f026120 <col:17, col:34> 'void'
+|     | `-ImplicitCastExpr 0x7fb14f026108 <col:17> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7fb14f0260b0 <col:17> '<builtin fn type>' Function 0x7fb14f025fd0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fb14f025fd0 <col:17> col:17 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fb14f026068 <col:17> Implicit
+|-FunctionDecl 0x7fb14f026390 <line:14:1, line:18:1> line:15:1 used init 'void (Scf10 *, _Complex double)'
+| |-ParmVarDecl 0x7fb14f026208 <col:7, col:14> col:14 used p 'Scf10 *'
+| |-ParmVarDecl 0x7fb14f026278 <col:17, col:33> col:33 used y '_Complex double'
+| `-CompoundStmt 0x7fb14f026518 <line:16:1, line:18:1>
+|   `-BinaryOperator 0x7fb14f0264f0 <line:17:3, col:10> '_Complex double' '='
+|     |-MemberExpr 0x7fb14f026478 <col:3, col:6> '_Complex double' lvalue ->a 0x7fb14f025a00
+|     | `-ImplicitCastExpr 0x7fb14f026460 <col:3> 'Scf10 *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fb14f026438 <col:3> 'Scf10 *' lvalue ParmVar 0x7fb14f026208 'p' 'Scf10 *'
+|     `-ImplicitCastExpr 0x7fb14f0264d8 <col:10> '_Complex double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb14f0264b0 <col:10> '_Complex double' lvalue ParmVar 0x7fb14f026278 'y' '_Complex double'
+`-FunctionDecl 0x7fb14f026590 <line:20:1, line:27:1> line:21:1 main 'int ()'
+  `-CompoundStmt 0x7fb14f026978 <line:22:1, line:27:1>
+    |-CallExpr 0x7fb14f026780 <line:23:3, col:33> 'void'
+    | |-ImplicitCastExpr 0x7fb14f026768 <col:3> 'void (*)(Scf10 *, _Complex double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fb14f026628 <col:3> 'void (Scf10 *, _Complex double)' Function 0x7fb14f026390 'init' 'void (Scf10 *, _Complex double)'
+    | |-UnaryOperator 0x7fb14f026678 <col:9, col:10> 'Scf10 *' prefix '&'
+    | | `-DeclRefExpr 0x7fb14f026650 <col:10> 'Scf10':'Scf10' lvalue Var 0x7fb14f025b90 'g1s' 'Scf10':'Scf10'
+    | `-CStyleCastExpr 0x7fb14f0266e0 <col:15, col:32> '_Complex double' <FloatingRealToComplex>
+    |   `-ImplicitCastExpr 0x7fb14f0266c8 <col:32> 'double' <IntegralToFloating>
+    |     `-IntegerLiteral 0x7fb14f026698 <col:32> 'int' 1
+    |-CallExpr 0x7fb14f0268f0 <line:24:3, col:33> 'void'
+    | |-ImplicitCastExpr 0x7fb14f0268d8 <col:3> 'void (*)(Scf10, _Complex double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fb14f0267b8 <col:3> 'void (Scf10, _Complex double)' Function 0x7fb14f025dc0 'check' 'void (Scf10, _Complex double)'
+    | |-ImplicitCastExpr 0x7fb14f026928 <col:10> 'Scf10':'Scf10' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fb14f0267e0 <col:10> 'Scf10':'Scf10' lvalue Var 0x7fb14f025b90 'g1s' 'Scf10':'Scf10'
+    | `-CStyleCastExpr 0x7fb14f026850 <col:15, col:32> '_Complex double' <FloatingRealToComplex>
+    |   `-ImplicitCastExpr 0x7fb14f026838 <col:32> 'double' <IntegralToFloating>
+    |     `-IntegerLiteral 0x7fb14f026808 <col:32> 'int' 1
+    `-ReturnStmt 0x7fb14f026960 <line:26:3, col:10>
+      `-IntegerLiteral 0x7fb14f026940 <col:10> 'int' 0

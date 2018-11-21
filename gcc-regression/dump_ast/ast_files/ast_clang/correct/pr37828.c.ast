@@ -1,0 +1,94 @@
+TranslationUnitDecl 0x7f8baf0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8baf026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8baf026740 '__int128'
+|-TypedefDecl 0x7f8baf026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8baf026760 'unsigned __int128'
+|-TypedefDecl 0x7f8baf026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8baf026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8baf026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8baf026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8baf026dc0 'char *'
+|   `-BuiltinType 0x7f8baf026560 'char'
+|-TypedefDecl 0x7f8baf0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8baf027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8baf026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8baf026e58 '__va_list_tag'
+|-RecordDecl 0x7f8baf027120 <c_files/pr37828.c:3:9, line:6:1> line:3:16 struct foo definition
+| `-FieldDecl 0x7f8baf825ae0 <line:5:3, col:16> col:16 referenced Node 'struct foo **'
+|-TypedefDecl 0x7f8baf825b48 <line:3:1, line:6:3> col:3 referenced foo 'struct foo':'struct foo'
+| `-ElaboratedType 0x7f8baf0271d0 'struct foo' sugar
+|   `-RecordType 0x7f8baf0271b0 'struct foo'
+|     `-Record 0x7f8baf027120 'foo'
+|-FunctionDecl 0x7f8baf825e78 <line:8:1, line:17:1> line:8:12 used sort_and_split 'int (foo **, foo **, long)' static
+| |-ParmVarDecl 0x7f8baf825c50 <col:28, col:34> col:34 used Root 'foo **'
+| |-ParmVarDecl 0x7f8baf825cc8 <col:40, col:46> col:46 used Finite 'foo **'
+| |-ParmVarDecl 0x7f8baf825d40 <col:54, col:59> col:59 used first 'long'
+| `-CompoundStmt 0x7f8baf826670 <line:9:1, line:17:1>
+|   |-DeclStmt 0x7f8baf825fd8 <line:10:3, col:10>
+|   | `-VarDecl 0x7f8baf825f78 <col:3, col:8> col:8 used cd 'foo *'
+|   |-DeclStmt 0x7f8baf826068 <line:11:3, col:9>
+|   | `-VarDecl 0x7f8baf826008 <col:3, col:8> col:8 used i 'long'
+|   |-ForStmt 0x7f8baf826440 <line:12:3, line:13:33>
+|   | |-BinaryOperator 0x7f8baf8260e0 <line:12:8, col:12> 'long' '='
+|   | | |-DeclRefExpr 0x7f8baf826080 <col:8> 'long' lvalue Var 0x7f8baf826008 'i' 'long'
+|   | | `-ImplicitCastExpr 0x7f8baf8260c8 <col:12> 'long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f8baf8260a8 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8baf826188 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f8baf826158 <col:15> 'long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f8baf826108 <col:15> 'long' lvalue Var 0x7f8baf826008 'i' 'long'
+|   | | `-ImplicitCastExpr 0x7f8baf826170 <col:19> 'long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8baf826130 <col:19> 'long' lvalue ParmVar 0x7f8baf825d40 'first' 'long'
+|   | |-UnaryOperator 0x7f8baf8261d8 <col:26, col:27> 'long' postfix '++'
+|   | | `-DeclRefExpr 0x7f8baf8261b0 <col:26> 'long' lvalue Var 0x7f8baf826008 'i' 'long'
+|   | `-BinaryOperator 0x7f8baf826418 <line:13:5, col:33> 'struct foo *' '='
+|   |   |-ArraySubscriptExpr 0x7f8baf8262c8 <col:5, col:15> 'struct foo *' lvalue
+|   |   | |-ImplicitCastExpr 0x7f8baf826298 <col:5, col:9> 'struct foo **' <LValueToRValue>
+|   |   | | `-MemberExpr 0x7f8baf826238 <col:5, col:9> 'struct foo **' lvalue ->Node 0x7f8baf825ae0
+|   |   | |   `-ImplicitCastExpr 0x7f8baf826220 <col:5> 'foo *' <LValueToRValue>
+|   |   | |     `-DeclRefExpr 0x7f8baf8261f8 <col:5> 'foo *' lvalue Var 0x7f8baf825f78 'cd' 'foo *'
+|   |   | `-ImplicitCastExpr 0x7f8baf8262b0 <col:14> 'long' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7f8baf826270 <col:14> 'long' lvalue Var 0x7f8baf826008 'i' 'long'
+|   |   `-ImplicitCastExpr 0x7f8baf826400 <col:19, col:33> 'foo *' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7f8baf8263d8 <col:19, col:33> 'foo *' lvalue
+|   |       |-ImplicitCastExpr 0x7f8baf8263c0 <col:19> 'foo **' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7f8baf8262f0 <col:19> 'foo **' lvalue ParmVar 0x7f8baf825cc8 'Finite' 'foo **'
+|   |       `-BinaryOperator 0x7f8baf826398 <col:26, col:32> 'long' '+'
+|   |         |-ImplicitCastExpr 0x7f8baf826368 <col:26> 'long' <LValueToRValue>
+|   |         | `-DeclRefExpr 0x7f8baf826318 <col:26> 'long' lvalue ParmVar 0x7f8baf825d40 'first' 'long'
+|   |         `-ImplicitCastExpr 0x7f8baf826380 <col:32> 'long' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f8baf826340 <col:32> 'long' lvalue Var 0x7f8baf826008 'i' 'long'
+|   |-CallExpr 0x7f8baf826590 <line:15:3, col:37> 'int'
+|   | |-ImplicitCastExpr 0x7f8baf826578 <col:3> 'int (*)(foo **, foo **, long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f8baf826478 <col:3> 'int (foo **, foo **, long)' Function 0x7f8baf825e78 'sort_and_split' 'int (foo **, foo **, long)'
+|   | |-ImplicitCastExpr 0x7f8baf8265d0 <col:18> 'foo **' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f8baf8264a0 <col:18> 'foo **' lvalue ParmVar 0x7f8baf825c50 'Root' 'foo **'
+|   | |-ImplicitCastExpr 0x7f8baf8265e8 <col:24> 'foo **' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f8baf8264c8 <col:24> 'foo **' lvalue ParmVar 0x7f8baf825cc8 'Finite' 'foo **'
+|   | `-ImplicitCastExpr 0x7f8baf826600 <col:32> 'long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8baf8264f0 <col:32> 'long' lvalue ParmVar 0x7f8baf825d40 'first' 'long'
+|   `-ReturnStmt 0x7f8baf826658 <line:16:3, col:12>
+|     `-ParenExpr 0x7f8baf826638 <col:10, col:12> 'int'
+|       `-IntegerLiteral 0x7f8baf826618 <col:11> 'int' 0
+`-FunctionDecl 0x7f8baf8268f0 <line:20:1, line:24:1> line:20:6 Build_foo 'void (foo **, foo **, foo **)'
+  |-ParmVarDecl 0x7f8baf8266c8 <col:16, col:22> col:22 used Root 'foo **'
+  |-ParmVarDecl 0x7f8baf826740 <col:28, col:34> col:34 used Finite 'foo **'
+  |-ParmVarDecl 0x7f8baf8267b8 <col:42, col:48> col:48 Infinite 'foo **'
+  `-CompoundStmt 0x7f8baf82bec0 <line:21:1, line:24:1>
+    |-DeclStmt 0x7f8baf82bcf0 <line:22:3, col:17>
+    | |-VarDecl 0x7f8baf82bc00 <col:3, col:8> col:8 used low 'long'
+    | `-VarDecl 0x7f8baf82bc78 <col:3, col:13> col:13 high 'long'
+    `-WhileStmt 0x7f8baf82bea0 <line:23:3, col:49>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8baf82be68 <col:10, col:47> 'int' '=='
+      | |-CallExpr 0x7f8baf82bdc0 <col:10, col:42> 'int'
+      | | |-ImplicitCastExpr 0x7f8baf82bda8 <col:10> 'int (*)(foo **, foo **, long)' <FunctionToPointerDecay>
+      | | | `-DeclRefExpr 0x7f8baf82bd08 <col:10> 'int (foo **, foo **, long)' Function 0x7f8baf825e78 'sort_and_split' 'int (foo **, foo **, long)'
+      | | |-ImplicitCastExpr 0x7f8baf82be00 <col:25> 'foo **' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7f8baf82bd30 <col:25> 'foo **' lvalue ParmVar 0x7f8baf8266c8 'Root' 'foo **'
+      | | |-ImplicitCastExpr 0x7f8baf82be18 <col:31> 'foo **' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7f8baf82bd58 <col:31> 'foo **' lvalue ParmVar 0x7f8baf826740 'Finite' 'foo **'
+      | | `-ImplicitCastExpr 0x7f8baf82be30 <col:39> 'long' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7f8baf82bd80 <col:39> 'long' lvalue Var 0x7f8baf82bc00 'low' 'long'
+      | `-IntegerLiteral 0x7f8baf82be48 <col:47> 'int' 0
+      `-NullStmt 0x7f8baf82be90 <col:49>

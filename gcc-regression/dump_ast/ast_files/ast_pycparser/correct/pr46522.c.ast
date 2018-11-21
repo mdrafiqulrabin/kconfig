@@ -1,0 +1,97 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['unsigned']
+  FuncDef: 
+    Decl: bar, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                Struct: S
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          UnaryOp: p++
+            StructRef: ->
+              ID: s
+              ID: i
+          Constant: int, 1
+        Compound: 
+          Assignment: =
+            StructRef: ->
+              ID: s
+              ID: i
+            Constant: int, 0
+          UnaryOp: p++
+            StructRef: ->
+              ID: s
+              ID: j
+  FuncDef: 
+    Decl: foo1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                Struct: S
+        TypeDecl: foo1, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: s
+  FuncDef: 
+    Decl: foo2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s1, [], [], []
+            TypeDecl: s1, []
+              Struct: S
+          Decl: s2, [], [], []
+            TypeDecl: s2, []
+              Struct: S
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: foo2, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        BinaryOp: !=
+          StructRef: .
+            ID: s1
+            ID: i
+          StructRef: .
+            ID: s2
+            ID: i
+        Compound: 
+          If: 
+            ID: i
+            Assignment: |=
+              UnaryOp: *
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned']
+                  Constant: int, 0
+              BinaryOp: <<
+                Constant: int, 1U
+                StructRef: .
+                  ID: s1
+                  ID: i
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              UnaryOp: &
+                ID: s1

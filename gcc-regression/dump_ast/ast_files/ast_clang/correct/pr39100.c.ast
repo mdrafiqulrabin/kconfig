@@ -1,0 +1,252 @@
+TranslationUnitDecl 0x7fbf5600e4d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbf5600ea20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbf5600e740 '__int128'
+|-TypedefDecl 0x7fbf5600ea90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbf5600e760 'unsigned __int128'
+|-TypedefDecl 0x7fbf5600ed68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbf5600eb70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbf5600eae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbf5600ee00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbf5600edc0 'char *'
+|   `-BuiltinType 0x7fbf5600e560 'char'
+|-TypedefDecl 0x7fbf5600f0c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbf5600f070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbf5600eee0 'struct __va_list_tag'
+|     `-Record 0x7fbf5600ee58 '__va_list_tag'
+|-RecordDecl 0x7fbf5600f120 <c_files/pr39100.c:4:9, line:8:1> line:4:16 struct E definition
+| |-FieldDecl 0x7fbf5583d400 <line:6:3, col:7> col:7 referenced p 'int'
+| `-FieldDecl 0x7fbf5583d500 <line:7:3, col:13> col:13 referenced n 'struct E *'
+|-TypedefDecl 0x7fbf5583d570 <line:4:1, line:8:4> col:4 referenced EP 'struct E *'
+| `-PointerType 0x7fbf5583d4b0 'struct E *'
+|   `-ElaboratedType 0x7fbf5583d450 'struct E' sugar
+|     `-RecordType 0x7fbf5600f1b0 'struct E'
+|       `-Record 0x7fbf5600f120 'E'
+|-RecordDecl 0x7fbf5583d5e0 <line:10:9, line:14:1> line:10:16 struct C definition
+| |-FieldDecl 0x7fbf5583d6c0 <line:12:3, col:6> col:6 referenced x 'EP':'struct E *'
+| |-FieldDecl 0x7fbf5583d720 <line:13:3, col:9> col:9 referenced cn 'short'
+| `-FieldDecl 0x7fbf5583d780 <col:3, col:13> col:13 referenced cp 'short'
+|-TypedefDecl 0x7fbf5583d880 <line:10:1, line:14:4> col:4 referenced CP 'struct C *'
+| `-PointerType 0x7fbf5583d830 'struct C *'
+|   `-ElaboratedType 0x7fbf5583d7d0 'struct C' sugar
+|     `-RecordType 0x7fbf5583d670 'struct C'
+|       `-Record 0x7fbf5583d5e0 'C'
+|-FunctionDecl 0x7fbf5583daa0 <line:16:1, line:44:1> line:17:1 used foo 'CP (CP, EP)'
+| |-ParmVarDecl 0x7fbf5583d920 <col:6, col:9> col:9 used h 'CP':'struct C *'
+| |-ParmVarDecl 0x7fbf5583d990 <col:12, col:15> col:15 used x 'EP':'struct E *'
+| |-CompoundStmt 0x7fbf5583fc18 <line:18:1, line:44:1>
+| | |-DeclStmt 0x7fbf5583dda8 <line:19:3, col:23>
+| | | |-VarDecl 0x7fbf5583dbe0 <col:3, col:11> col:6 used pl 'EP':'struct E *' cinit
+| | | | `-ImplicitCastExpr 0x7fbf5583dc60 <col:11> 'EP':'struct E *' <NullToPointer>
+| | | |   `-IntegerLiteral 0x7fbf5583dc40 <col:11> 'int' 0
+| | | `-VarDecl 0x7fbf5583dce8 <col:3, col:21> col:15 used pa 'EP *' cinit
+| | |   `-UnaryOperator 0x7fbf5583dd70 <col:20, col:21> 'EP *' prefix '&'
+| | |     `-DeclRefExpr 0x7fbf5583dd48 <col:21> 'EP':'struct E *' lvalue Var 0x7fbf5583dbe0 'pl' 'EP':'struct E *'
+| | |-DeclStmt 0x7fbf5583df38 <line:20:3, col:23>
+| | | |-VarDecl 0x7fbf5583ddd0 <col:3, col:11> col:6 used nl 'EP':'struct E *' cinit
+| | | | `-ImplicitCastExpr 0x7fbf5583de50 <col:11> 'EP':'struct E *' <NullToPointer>
+| | | |   `-IntegerLiteral 0x7fbf5583de30 <col:11> 'int' 0
+| | | `-VarDecl 0x7fbf5583de78 <col:3, col:21> col:15 used na 'EP *' cinit
+| | |   `-UnaryOperator 0x7fbf5583df00 <col:20, col:21> 'EP *' prefix '&'
+| | |     `-DeclRefExpr 0x7fbf5583ded8 <col:21> 'EP':'struct E *' lvalue Var 0x7fbf5583ddd0 'nl' 'EP':'struct E *'
+| | |-DeclStmt 0x7fbf5583dfc0 <line:21:3, col:7>
+| | | `-VarDecl 0x7fbf5583df60 <col:3, col:6> col:6 used n 'EP':'struct E *'
+| | |-WhileStmt 0x7fbf5583f938 <line:23:3, line:39:5>
+| | | |-<<<NULL>>>
+| | | |-ImplicitCastExpr 0x7fbf5583e000 <line:23:10> 'EP':'struct E *' <LValueToRValue>
+| | | | `-DeclRefExpr 0x7fbf5583dfd8 <col:10> 'EP':'struct E *' lvalue ParmVar 0x7fbf5583d990 'x' 'EP':'struct E *'
+| | | `-CompoundStmt 0x7fbf5583f908 <line:24:5, line:39:5>
+| | |   |-BinaryOperator 0x7fbf5583e0d0 <line:25:7, col:14> 'EP':'struct E *' '='
+| | |   | |-DeclRefExpr 0x7fbf5583e018 <col:7> 'EP':'struct E *' lvalue Var 0x7fbf5583df60 'n' 'EP':'struct E *'
+| | |   | `-ImplicitCastExpr 0x7fbf5583e0b8 <col:11, col:14> 'struct E *' <LValueToRValue>
+| | |   |   `-MemberExpr 0x7fbf5583e080 <col:11, col:14> 'struct E *' lvalue ->n 0x7fbf5583d500
+| | |   |     `-ImplicitCastExpr 0x7fbf5583e068 <col:11> 'EP':'struct E *' <LValueToRValue>
+| | |   |       `-DeclRefExpr 0x7fbf5583e040 <col:11> 'EP':'struct E *' lvalue ParmVar 0x7fbf5583d990 'x' 'EP':'struct E *'
+| | |   |-IfStmt 0x7fbf5583f840 <line:26:7, line:37:9>
+| | |   | |-<<<NULL>>>
+| | |   | |-<<<NULL>>>
+| | |   | |-BinaryOperator 0x7fbf5583e210 <line:26:11, col:25> 'int' '=='
+| | |   | | |-ParenExpr 0x7fbf5583e1d0 <col:11, col:20> 'int'
+| | |   | | | `-BinaryOperator 0x7fbf5583e1a8 <col:12, col:19> 'int' '&'
+| | |   | | |   |-ImplicitCastExpr 0x7fbf5583e190 <col:12, col:15> 'int' <LValueToRValue>
+| | |   | | |   | `-MemberExpr 0x7fbf5583e138 <col:12, col:15> 'int' lvalue ->p 0x7fbf5583d400
+| | |   | | |   |   `-ImplicitCastExpr 0x7fbf5583e120 <col:12> 'EP':'struct E *' <LValueToRValue>
+| | |   | | |   |     `-DeclRefExpr 0x7fbf5583e0f8 <col:12> 'EP':'struct E *' lvalue ParmVar 0x7fbf5583d990 'x' 'EP':'struct E *'
+| | |   | | |   `-IntegerLiteral 0x7fbf5583e170 <col:19> 'int' 1
+| | |   | | `-IntegerLiteral 0x7fbf5583e1f0 <col:25> 'int' 1
+| | |   | |-CompoundStmt 0x7fbf5583f520 <line:27:9, line:31:9>
+| | |   | | |-UnaryOperator 0x7fbf5583e2b0 <line:28:11, col:16> 'short' postfix '++'
+| | |   | | | `-MemberExpr 0x7fbf5583e278 <col:11, col:14> 'short' lvalue ->cp 0x7fbf5583d780
+| | |   | | |   `-ImplicitCastExpr 0x7fbf5583e260 <col:11> 'CP':'struct C *' <LValueToRValue>
+| | |   | | |     `-DeclRefExpr 0x7fbf5583e238 <col:11> 'CP':'struct C *' lvalue ParmVar 0x7fbf5583d920 'h' 'CP':'struct C *'
+| | |   | | |-BinaryOperator 0x7fbf5583e370 <line:29:11, col:17> 'EP':'struct E *' '='
+| | |   | | | |-UnaryOperator 0x7fbf5583e310 <col:11, col:12> 'EP':'struct E *' lvalue prefix '*'
+| | |   | | | | `-ImplicitCastExpr 0x7fbf5583e2f8 <col:12> 'EP *' <LValueToRValue>
+| | |   | | | |   `-DeclRefExpr 0x7fbf5583e2d0 <col:12> 'EP *' lvalue Var 0x7fbf5583dce8 'pa' 'EP *'
+| | |   | | | `-ImplicitCastExpr 0x7fbf5583e358 <col:17> 'EP':'struct E *' <LValueToRValue>
+| | |   | | |   `-DeclRefExpr 0x7fbf5583e330 <col:17> 'EP':'struct E *' lvalue ParmVar 0x7fbf5583d990 'x' 'EP':'struct E *'
+| | |   | | `-BinaryOperator 0x7fbf5583f4f8 <line:30:11, col:26> 'EP *' '='
+| | |   | |   |-DeclRefExpr 0x7fbf5583e398 <col:11> 'EP *' lvalue Var 0x7fbf5583dce8 'pa' 'EP *'
+| | |   | |   `-UnaryOperator 0x7fbf5583f4d8 <col:16, col:26> 'struct E **' prefix '&'
+| | |   | |     `-ParenExpr 0x7fbf5583f490 <col:17, col:26> 'struct E *' lvalue
+| | |   | |       `-MemberExpr 0x7fbf5583f458 <col:18, col:25> 'struct E *' lvalue ->n 0x7fbf5583d500
+| | |   | |         `-ImplicitCastExpr 0x7fbf5583f440 <col:18, col:22> 'EP':'struct E *' <LValueToRValue>
+| | |   | |           `-ParenExpr 0x7fbf5583f420 <col:18, col:22> 'EP':'struct E *' lvalue
+| | |   | |             `-UnaryOperator 0x7fbf5583f400 <col:19, col:20> 'EP':'struct E *' lvalue prefix '*'
+| | |   | |               `-ImplicitCastExpr 0x7fbf5583e3e8 <col:20> 'EP *' <LValueToRValue>
+| | |   | |                 `-DeclRefExpr 0x7fbf5583e3c0 <col:20> 'EP *' lvalue Var 0x7fbf5583dce8 'pa' 'EP *'
+| | |   | `-CompoundStmt 0x7fbf5583f810 <line:33:9, line:37:9>
+| | |   |   |-UnaryOperator 0x7fbf5583f5c8 <line:34:11, col:16> 'short' postfix '++'
+| | |   |   | `-MemberExpr 0x7fbf5583f590 <col:11, col:14> 'short' lvalue ->cn 0x7fbf5583d720
+| | |   |   |   `-ImplicitCastExpr 0x7fbf5583f578 <col:11> 'CP':'struct C *' <LValueToRValue>
+| | |   |   |     `-DeclRefExpr 0x7fbf5583f550 <col:11> 'CP':'struct C *' lvalue ParmVar 0x7fbf5583d920 'h' 'CP':'struct C *'
+| | |   |   |-BinaryOperator 0x7fbf5583f688 <line:35:11, col:17> 'EP':'struct E *' '='
+| | |   |   | |-UnaryOperator 0x7fbf5583f628 <col:11, col:12> 'EP':'struct E *' lvalue prefix '*'
+| | |   |   | | `-ImplicitCastExpr 0x7fbf5583f610 <col:12> 'EP *' <LValueToRValue>
+| | |   |   | |   `-DeclRefExpr 0x7fbf5583f5e8 <col:12> 'EP *' lvalue Var 0x7fbf5583de78 'na' 'EP *'
+| | |   |   | `-ImplicitCastExpr 0x7fbf5583f670 <col:17> 'EP':'struct E *' <LValueToRValue>
+| | |   |   |   `-DeclRefExpr 0x7fbf5583f648 <col:17> 'EP':'struct E *' lvalue ParmVar 0x7fbf5583d990 'x' 'EP':'struct E *'
+| | |   |   `-BinaryOperator 0x7fbf5583f7e8 <line:36:11, col:26> 'EP *' '='
+| | |   |     |-DeclRefExpr 0x7fbf5583f6b0 <col:11> 'EP *' lvalue Var 0x7fbf5583de78 'na' 'EP *'
+| | |   |     `-UnaryOperator 0x7fbf5583f7c8 <col:16, col:26> 'struct E **' prefix '&'
+| | |   |       `-ParenExpr 0x7fbf5583f7a8 <col:17, col:26> 'struct E *' lvalue
+| | |   |         `-MemberExpr 0x7fbf5583f770 <col:18, col:25> 'struct E *' lvalue ->n 0x7fbf5583d500
+| | |   |           `-ImplicitCastExpr 0x7fbf5583f758 <col:18, col:22> 'EP':'struct E *' <LValueToRValue>
+| | |   |             `-ParenExpr 0x7fbf5583f738 <col:18, col:22> 'EP':'struct E *' lvalue
+| | |   |               `-UnaryOperator 0x7fbf5583f718 <col:19, col:20> 'EP':'struct E *' lvalue prefix '*'
+| | |   |                 `-ImplicitCastExpr 0x7fbf5583f700 <col:20> 'EP *' <LValueToRValue>
+| | |   |                   `-DeclRefExpr 0x7fbf5583f6d8 <col:20> 'EP *' lvalue Var 0x7fbf5583de78 'na' 'EP *'
+| | |   `-BinaryOperator 0x7fbf5583f8e0 <line:38:7, col:11> 'EP':'struct E *' '='
+| | |     |-DeclRefExpr 0x7fbf5583f878 <col:7> 'EP':'struct E *' lvalue ParmVar 0x7fbf5583d990 'x' 'EP':'struct E *'
+| | |     `-ImplicitCastExpr 0x7fbf5583f8c8 <col:11> 'EP':'struct E *' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7fbf5583f8a0 <col:11> 'EP':'struct E *' lvalue Var 0x7fbf5583df60 'n' 'EP':'struct E *'
+| | |-BinaryOperator 0x7fbf5583f9f8 <line:40:3, col:9> 'EP':'struct E *' '='
+| | | |-UnaryOperator 0x7fbf5583f998 <col:3, col:4> 'EP':'struct E *' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7fbf5583f980 <col:4> 'EP *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fbf5583f958 <col:4> 'EP *' lvalue Var 0x7fbf5583dce8 'pa' 'EP *'
+| | | `-ImplicitCastExpr 0x7fbf5583f9e0 <col:9> 'EP':'struct E *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fbf5583f9b8 <col:9> 'EP':'struct E *' lvalue Var 0x7fbf5583ddd0 'nl' 'EP':'struct E *'
+| | |-BinaryOperator 0x7fbf5583fab8 <line:41:3, col:9> 'EP':'struct E *' '='
+| | | |-UnaryOperator 0x7fbf5583fa60 <col:3, col:4> 'EP':'struct E *' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7fbf5583fa48 <col:4> 'EP *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fbf5583fa20 <col:4> 'EP *' lvalue Var 0x7fbf5583de78 'na' 'EP *'
+| | | `-ImplicitCastExpr 0x7fbf5583faa0 <col:9> 'EP':'struct E *' <NullToPointer>
+| | |   `-IntegerLiteral 0x7fbf5583fa80 <col:9> 'int' 0
+| | |-BinaryOperator 0x7fbf5583fb98 <line:42:3, col:10> 'EP':'struct E *' '='
+| | | |-MemberExpr 0x7fbf5583fb20 <col:3, col:6> 'EP':'struct E *' lvalue ->x 0x7fbf5583d6c0
+| | | | `-ImplicitCastExpr 0x7fbf5583fb08 <col:3> 'CP':'struct C *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fbf5583fae0 <col:3> 'CP':'struct C *' lvalue ParmVar 0x7fbf5583d920 'h' 'CP':'struct C *'
+| | | `-ImplicitCastExpr 0x7fbf5583fb80 <col:10> 'EP':'struct E *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fbf5583fb58 <col:10> 'EP':'struct E *' lvalue Var 0x7fbf5583dbe0 'pl' 'EP':'struct E *'
+| | `-ReturnStmt 0x7fbf5583fc00 <line:43:3, col:10>
+| |   `-ImplicitCastExpr 0x7fbf5583fbe8 <col:10> 'CP':'struct C *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fbf5583fbc0 <col:10> 'CP':'struct C *' lvalue ParmVar 0x7fbf5583d920 'h' 'CP':'struct C *'
+| `-NoInlineAttr 0x7fbf5583db48 <line:16:16>
+|-FunctionDecl 0x7fbf5583fd38 <line:46:1, line:63:1> line:47:1 main 'int (void)'
+| `-CompoundStmt 0x7fbf558410c0 <line:48:1, line:63:1>
+|   |-DeclStmt 0x7fbf5583ffd0 <line:49:3, col:27>
+|   | `-VarDecl 0x7fbf5583fe18 <col:3, col:26> col:12 used c 'struct C':'struct C' cinit
+|   |   `-InitListExpr 0x7fbf5583ff30 <col:16, col:26> 'struct C':'struct C'
+|   |     |-ImplicitCastExpr 0x7fbf5583ff88 <col:18> 'EP':'struct E *' <NullToPointer>
+|   |     | `-IntegerLiteral 0x7fbf5583fe78 <col:18> 'int' 0
+|   |     |-ImplicitCastExpr 0x7fbf5583ffa0 <col:21> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fbf5583fe98 <col:21> 'int' 0
+|   |     `-ImplicitCastExpr 0x7fbf5583ffb8 <col:24> 'short' <IntegralCast>
+|   |       `-IntegerLiteral 0x7fbf5583feb8 <col:24> 'int' 0
+|   |-DeclStmt 0x7fbf55840468 <line:50:3, col:45>
+|   | `-VarDecl 0x7fbf55840108 <col:3, col:44> col:12 used e 'struct E [2]' cinit
+|   |   `-InitListExpr 0x7fbf55840360 <col:19, col:44> 'struct E [2]'
+|   |     |-InitListExpr 0x7fbf558403b0 <col:21, col:32> 'struct E':'struct E'
+|   |     | |-IntegerLiteral 0x7fbf55840168 <col:23> 'int' 0
+|   |     | `-UnaryOperator 0x7fbf55840210 <col:26, col:30> 'struct E *' prefix '&'
+|   |     |   `-ArraySubscriptExpr 0x7fbf558401e8 <col:27, col:30> 'struct E':'struct E' lvalue
+|   |     |     |-ImplicitCastExpr 0x7fbf558401d0 <col:27> 'struct E *' <ArrayToPointerDecay>
+|   |     |     | `-DeclRefExpr 0x7fbf55840188 <col:27> 'struct E [2]' lvalue Var 0x7fbf55840108 'e' 'struct E [2]'
+|   |     |     `-IntegerLiteral 0x7fbf558401b0 <col:29> 'int' 1
+|   |     `-InitListExpr 0x7fbf55840400 <col:35, col:42> 'struct E':'struct E'
+|   |       |-IntegerLiteral 0x7fbf55840280 <col:37> 'int' 1
+|   |       `-ImplicitCastExpr 0x7fbf55840450 <col:40> 'struct E *' <NullToPointer>
+|   |         `-IntegerLiteral 0x7fbf558402a0 <col:40> 'int' 0
+|   |-DeclStmt 0x7fbf558404f0 <line:51:3, col:7>
+|   | `-VarDecl 0x7fbf55840490 <col:3, col:6> col:6 p 'EP':'struct E *'
+|   |-CallExpr 0x7fbf55840690 <line:53:3, col:17> 'CP':'struct C *'
+|   | |-ImplicitCastExpr 0x7fbf55840678 <col:3> 'CP (*)(CP, EP)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fbf55840508 <col:3> 'CP (CP, EP)' Function 0x7fbf5583daa0 'foo' 'CP (CP, EP)'
+|   | |-UnaryOperator 0x7fbf55840558 <col:8, col:9> 'struct C *' prefix '&'
+|   | | `-DeclRefExpr 0x7fbf55840530 <col:9> 'struct C':'struct C' lvalue Var 0x7fbf5583fe18 'c' 'struct C':'struct C'
+|   | `-UnaryOperator 0x7fbf55840600 <col:12, col:16> 'struct E *' prefix '&'
+|   |   `-ArraySubscriptExpr 0x7fbf558405d8 <col:13, col:16> 'struct E':'struct E' lvalue
+|   |     |-ImplicitCastExpr 0x7fbf558405c0 <col:13> 'struct E *' <ArrayToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fbf55840578 <col:13> 'struct E [2]' lvalue Var 0x7fbf55840108 'e' 'struct E [2]'
+|   |     `-IntegerLiteral 0x7fbf558405a0 <col:15> 'int' 0
+|   |-IfStmt 0x7fbf55840aa8 <line:54:3, line:55:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fbf558408d0 <line:54:7, col:28> 'int' '||'
+|   | | |-BinaryOperator 0x7fbf55840778 <col:7, col:15> 'int' '!='
+|   | | | |-ImplicitCastExpr 0x7fbf55840760 <col:7, col:9> 'int' <IntegralCast>
+|   | | | | `-ImplicitCastExpr 0x7fbf55840748 <col:7, col:9> 'short' <LValueToRValue>
+|   | | | |   `-MemberExpr 0x7fbf558406f0 <col:7, col:9> 'short' lvalue .cn 0x7fbf5583d720
+|   | | | |     `-DeclRefExpr 0x7fbf558406c8 <col:7> 'struct C':'struct C' lvalue Var 0x7fbf5583fe18 'c' 'struct C':'struct C'
+|   | | | `-IntegerLiteral 0x7fbf55840728 <col:15> 'int' 1
+|   | | `-BinaryOperator 0x7fbf55840850 <col:20, col:28> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7fbf55840838 <col:20, col:22> 'int' <IntegralCast>
+|   | |   | `-ImplicitCastExpr 0x7fbf55840820 <col:20, col:22> 'short' <LValueToRValue>
+|   | |   |   `-MemberExpr 0x7fbf558407c8 <col:20, col:22> 'short' lvalue .cp 0x7fbf5583d780
+|   | |   |     `-DeclRefExpr 0x7fbf558407a0 <col:20> 'struct C':'struct C' lvalue Var 0x7fbf5583fe18 'c' 'struct C':'struct C'
+|   | |   `-IntegerLiteral 0x7fbf55840800 <col:28> 'int' 1
+|   | |-CallExpr 0x7fbf55840a80 <line:55:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fbf55840a68 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fbf55840a10 <col:5> '<builtin fn type>' Function 0x7fbf55840930 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fbf55840c90 <line:56:3, line:57:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fbf55840c00 <line:56:7, col:18> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fbf55840be8 <col:7, col:9> 'EP':'struct E *' <LValueToRValue>
+|   | | | `-MemberExpr 0x7fbf55840b08 <col:7, col:9> 'EP':'struct E *' lvalue .x 0x7fbf5583d6c0
+|   | | |   `-DeclRefExpr 0x7fbf55840ae0 <col:7> 'struct C':'struct C' lvalue Var 0x7fbf5583fe18 'c' 'struct C':'struct C'
+|   | | `-UnaryOperator 0x7fbf55840bc8 <col:14, col:18> 'struct E *' prefix '&'
+|   | |   `-ArraySubscriptExpr 0x7fbf55840ba0 <col:15, col:18> 'struct E':'struct E' lvalue
+|   | |     |-ImplicitCastExpr 0x7fbf55840b88 <col:15> 'struct E *' <ArrayToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7fbf55840b40 <col:15> 'struct E [2]' lvalue Var 0x7fbf55840108 'e' 'struct E [2]'
+|   | |     `-IntegerLiteral 0x7fbf55840b68 <col:17> 'int' 1
+|   | |-CallExpr 0x7fbf55840c68 <line:57:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fbf55840c50 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fbf55840c28 <col:5> '<builtin fn type>' Function 0x7fbf55840930 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fbf55840ed8 <line:58:3, line:59:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fbf55840e48 <line:58:7, col:21> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fbf55840e30 <col:7, col:12> 'struct E *' <LValueToRValue>
+|   | | | `-MemberExpr 0x7fbf55840d50 <col:7, col:12> 'struct E *' lvalue .n 0x7fbf5583d500
+|   | | |   `-ArraySubscriptExpr 0x7fbf55840d28 <col:7, col:10> 'struct E':'struct E' lvalue
+|   | | |     |-ImplicitCastExpr 0x7fbf55840d10 <col:7> 'struct E *' <ArrayToPointerDecay>
+|   | | |     | `-DeclRefExpr 0x7fbf55840cc8 <col:7> 'struct E [2]' lvalue Var 0x7fbf55840108 'e' 'struct E [2]'
+|   | | |     `-IntegerLiteral 0x7fbf55840cf0 <col:9> 'int' 1
+|   | | `-UnaryOperator 0x7fbf55840e10 <col:17, col:21> 'struct E *' prefix '&'
+|   | |   `-ArraySubscriptExpr 0x7fbf55840de8 <col:18, col:21> 'struct E':'struct E' lvalue
+|   | |     |-ImplicitCastExpr 0x7fbf55840dd0 <col:18> 'struct E *' <ArrayToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7fbf55840d88 <col:18> 'struct E [2]' lvalue Var 0x7fbf55840108 'e' 'struct E [2]'
+|   | |     `-IntegerLiteral 0x7fbf55840db0 <col:20> 'int' 0
+|   | |-CallExpr 0x7fbf55840eb0 <line:59:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fbf55840e98 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fbf55840e70 <col:5> '<builtin fn type>' Function 0x7fbf55840930 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fbf55841050 <line:60:3, line:61:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fbf55840fd0 <line:60:7, col:12> 'struct E *' <LValueToRValue>
+|   | | `-MemberExpr 0x7fbf55840f98 <col:7, col:12> 'struct E *' lvalue .n 0x7fbf5583d500
+|   | |   `-ArraySubscriptExpr 0x7fbf55840f70 <col:7, col:10> 'struct E':'struct E' lvalue
+|   | |     |-ImplicitCastExpr 0x7fbf55840f58 <col:7> 'struct E *' <ArrayToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7fbf55840f10 <col:7> 'struct E [2]' lvalue Var 0x7fbf55840108 'e' 'struct E [2]'
+|   | |     `-IntegerLiteral 0x7fbf55840f38 <col:9> 'int' 0
+|   | |-CallExpr 0x7fbf55841028 <line:61:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fbf55841010 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fbf55840fe8 <col:5> '<builtin fn type>' Function 0x7fbf55840930 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fbf558410a8 <line:62:3, col:10>
+|     `-IntegerLiteral 0x7fbf55841088 <col:10> 'int' 0
+`-FunctionDecl 0x7fbf55840930 <line:55:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fbf558409c8 <col:5> Implicit

@@ -1,0 +1,96 @@
+FileAST: 
+  Decl: _xgetw, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: _xgetw, []
+        IdentifierType: ['int']
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: foo, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: test_readmode, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ascii_mode, [], [], []
+            TypeDecl: ascii_mode, []
+              IdentifierType: ['int']
+        TypeDecl: test_readmode, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: outbuffer, ['const'], ['static'], []
+        ArrayDecl: []
+          TypeDecl: outbuffer, ['const']
+            IdentifierType: ['char']
+        Constant: string, "0,1,2,3,4,5,6,7,8,9\r\n\r\nA,B,C,D,E\r\nX,Y,Z"
+      Decl: buffer, [], [], []
+        ArrayDecl: []
+          TypeDecl: buffer, []
+            IdentifierType: ['char']
+          BinaryOp: +
+            BinaryOp: *
+              Constant: int, 2
+              Constant: int, 512
+            Constant: int, 256
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: ao, [], [], []
+        TypeDecl: ao, []
+          IdentifierType: ['int']
+      Decl: fp, [], [], []
+        TypeDecl: fp, []
+          IdentifierType: ['unsigned', 'int']
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: buffer
+      For: 
+        ExprList: 
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          Assignment: =
+            ID: j
+            Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 6
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          If: 
+            BinaryOp: ||
+              BinaryOp: ==
+                ID: ao
+                Constant: int, 0
+              BinaryOp: !=
+                ArrayRef: 
+                  ID: outbuffer
+                  BinaryOp: +
+                    BinaryOp: -
+                      ID: fp
+                      Constant: int, 3
+                    ID: i
+                Constant: char, '\r'
+            Assignment: =
+              ArrayRef: 
+                ID: buffer
+                UnaryOp: p++
+                  ID: j
+              ArrayRef: 
+                ID: outbuffer
+                BinaryOp: +
+                  BinaryOp: -
+                    ID: fp
+                    Constant: int, 3
+                  ID: i
+      FuncCall: 
+        ID: _xgetw

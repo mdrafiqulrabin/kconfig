@@ -1,0 +1,66 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    PtrDecl: []
+      TypeDecl: e, []
+        IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['char']
+        TypeDecl: baz, []
+          IdentifierType: ['char']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          ID: p1
+          ID: a
+  Decl: func_65, [], [], []
+    FuncDecl: 
+      TypeDecl: func_65, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: func_1, [], [], []
+      FuncDecl: 
+        TypeDecl: func_1, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: func_65
+      FuncCall: 
+        ID: func_65
+  FuncDef: 
+    Decl: func_65, [], [], []
+      FuncDecl: 
+        TypeDecl: func_65, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: d
+        FuncCall: 
+          ID: baz
+          ExprList: 
+            UnaryOp: p--
+              ID: b
+      If: 
+        UnaryOp: *
+          ID: e
+        UnaryOp: p--
+          ID: b
+      Assignment: =
+        ID: c
+        Constant: int, 0

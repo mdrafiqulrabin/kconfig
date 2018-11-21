@@ -1,0 +1,77 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['char']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['short']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['unsigned']
+        Constant: int, 2
+      Decl: timeout, [], [], []
+        TypeDecl: timeout, []
+          IdentifierType: ['unsigned']
+        Constant: int, 0
+      For: 
+        BinaryOp: <
+          ID: c
+          Constant: int, 2
+        UnaryOp: p++
+          ID: c
+        Compound: 
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+            BinaryOp: /
+              UnaryOp: ~
+                ID: e
+              Constant: int, 7
+          If: 
+            ID: f
+            Assignment: =
+              ID: a
+              Assignment: =
+                ID: e
+                UnaryOp: ~
+                  BinaryOp: &&
+                    ID: b
+                    ID: d
+          While: 
+            BinaryOp: <
+              ID: e
+              Constant: int, 94
+            Compound: 
+              UnaryOp: p++
+                ID: e
+              If: 
+                BinaryOp: >
+                  UnaryOp: ++
+                    ID: timeout
+                  Constant: int, 100
+                Goto: die
+      Return: 
+        Constant: int, 0
+      Label: die
+        FuncCall: 
+          ID: abort

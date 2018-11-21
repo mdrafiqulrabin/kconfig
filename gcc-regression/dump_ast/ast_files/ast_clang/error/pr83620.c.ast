@@ -1,0 +1,50 @@
+c_files/pr83620.c:13:5: error: assigning to 'V' (vector of 4 'unsigned __int128' values) from incompatible type '__attribute__((__vector_size__(4 * sizeof(char)))) char' (vector of 4 'char' values)
+  v = (V){f} == u;
+    ^ ~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fd47c0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd47c026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd47c026740 '__int128'
+|-TypedefDecl 0x7fd47c026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd47c026760 'unsigned __int128'
+|-TypedefDecl 0x7fd47c026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd47c026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd47c026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd47c026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd47c026dc0 'char *'
+|   `-BuiltinType 0x7fd47c026560 'char'
+|-TypedefDecl 0x7fd47c0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd47c027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd47c026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd47c026e58 '__va_list_tag'
+|-TypedefDecl 0x7fd47c027178 <c_files/pr83620.c:5:1, col:27> col:27 referenced V '__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+| `-VectorType 0x7fd47c027140 '__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' 4
+|   `-BuiltinType 0x7fd47c026760 'unsigned __int128'
+|-VarDecl 0x7fd47c078400 <line:7:1, col:3> col:3 used u 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+|-VarDecl 0x7fd47c0784b0 <col:1, col:6> col:6 used v 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+`-FunctionDecl 0x7fd47c078880 <line:9:1, line:15:1> line:10:1 foo 'V (char, short, int, long, __int128)'
+  |-ParmVarDecl 0x7fd47c078538 <col:6, col:11> col:11 used c 'char'
+  |-ParmVarDecl 0x7fd47c0785b0 <col:14, col:20> col:20 d 'short'
+  |-ParmVarDecl 0x7fd47c078628 <col:23, col:27> col:27 used e 'int'
+  |-ParmVarDecl 0x7fd47c0786a0 <col:30, col:35> col:35 used f 'long'
+  |-ParmVarDecl 0x7fd47c078718 <col:38, col:47> col:47 used g '__int128'
+  `-CompoundStmt 0x7fd47c0791b0 <line:11:1, line:15:1>
+    |-CompoundAssignOperator 0x7fd47c078a20 <line:12:3, col:13> 'long' '>>=' ComputeLHSTy='long' ComputeResultTy='long'
+    | |-DeclRefExpr 0x7fd47c078940 <col:3> 'long' lvalue ParmVar 0x7fd47c0786a0 'f' 'long'
+    | `-BinaryOperator 0x7fd47c0789e0 <col:9, col:13> 'int' '&'
+    |   |-ImplicitCastExpr 0x7fd47c0789c8 <col:9> 'int' <IntegralCast>
+    |   | `-ImplicitCastExpr 0x7fd47c0789b0 <col:9> 'char' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fd47c078968 <col:9> 'char' lvalue ParmVar 0x7fd47c078538 'c' 'char'
+    |   `-IntegerLiteral 0x7fd47c078990 <col:13> 'int' 63
+    `-ReturnStmt 0x7fd47c079198 <line:14:3, col:18>
+      `-BinaryOperator 0x7fd47c079170 <col:10, col:18> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' '+'
+        |-ImplicitCastExpr 0x7fd47c079158 <col:10, col:14> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' <VectorSplat>
+        | `-ImplicitCastExpr 0x7fd47c079140 <col:10, col:14> 'unsigned __int128' <IntegralCast>
+        |   `-BinaryOperator 0x7fd47c0790d8 <col:10, col:14> '__int128' '+'
+        |     |-ImplicitCastExpr 0x7fd47c0790c0 <col:10> '__int128' <IntegralCast>
+        |     | `-ImplicitCastExpr 0x7fd47c079090 <col:10> 'int' <LValueToRValue>
+        |     |   `-DeclRefExpr 0x7fd47c079040 <col:10> 'int' lvalue ParmVar 0x7fd47c078628 'e' 'int'
+        |     `-ImplicitCastExpr 0x7fd47c0790a8 <col:14> '__int128' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fd47c079068 <col:14> '__int128' lvalue ParmVar 0x7fd47c078718 'g' '__int128'
+        `-ImplicitCastExpr 0x7fd47c079128 <col:18> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' <LValueToRValue>
+          `-DeclRefExpr 0x7fd47c079100 <col:18> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' lvalue Var 0x7fd47c0784b0 'v' 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'

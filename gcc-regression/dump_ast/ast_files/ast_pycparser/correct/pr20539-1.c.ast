@@ -1,0 +1,46 @@
+FileAST: 
+  Decl: l7_en, [], [], []
+    TypeDecl: l7_en, []
+      IdentifierType: ['char']
+  Decl: l6_data_Z_0th, [], [], []
+    TypeDecl: l6_data_Z_0th, []
+      IdentifierType: ['long', 'long']
+  Decl: t, [], [], []
+    TypeDecl: t, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['char']
+            BinaryOp: &
+              BinaryOp: >>
+                ID: l6_data_Z_0th
+                Constant: int, 1
+              Constant: int, 1U
+          BinaryOp: |
+            BinaryOp: &
+              ID: l6_data_Z_0th
+              Constant: int, 1U
+            UnaryOp: !
+              BinaryOp: ==
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['char']
+                  BinaryOp: &
+                    BinaryOp: >>
+                      ID: l6_data_Z_0th
+                      Constant: int, 35
+                    Constant: int, 15U
+                Constant: int, 14U
+        Assignment: =
+          ID: t
+          Constant: int, 0ULL

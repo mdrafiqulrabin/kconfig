@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7ffd1d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffd1d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffd1d026740 '__int128'
+|-TypedefDecl 0x7ffd1d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffd1d026760 'unsigned __int128'
+|-TypedefDecl 0x7ffd1d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffd1d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffd1d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffd1d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffd1d026dc0 'char *'
+|   `-BuiltinType 0x7ffd1d026560 'char'
+|-TypedefDecl 0x7ffd1d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffd1d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffd1d026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffd1d026e58 '__va_list_tag'
+|-FunctionDecl 0x7ffd1d825b18 <c_files/pr35503-1.c:4:1, col:63> col:5 used foo 'int (char *__restrict, const char *__restrict, ...)'
+| |-ParmVarDecl 0x7ffd1d027138 <col:10, col:27> col:27 buf 'char *__restrict'
+| `-ParmVarDecl 0x7ffd1d825a00 <col:32, col:55> col:55 fmt 'const char *__restrict'
+`-FunctionDecl 0x7ffd1d825cc0 <line:6:1, line:10:1> line:6:6 f 'void (void)'
+  `-CompoundStmt 0x7ffd1d8260d0 <line:7:1, line:10:1>
+    |-DeclStmt 0x7ffd1d825ea8 <line:8:3, col:26>
+    | `-VarDecl 0x7ffd1d825dd8 <col:3, col:19> col:8 used buf 'char [100]' cinit
+    |   `-StringLiteral 0x7ffd1d825e78 <col:19> 'char [100]' lvalue "hello"
+    `-CallExpr 0x7ffd1d826010 <line:9:3, col:34> 'int'
+      |-ImplicitCastExpr 0x7ffd1d825ff8 <col:3> 'int (*)(char *__restrict, const char *__restrict, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ffd1d825ec0 <col:3> 'int (char *__restrict, const char *__restrict, ...)' Function 0x7ffd1d825b18 'foo' 'int (char *__restrict, const char *__restrict, ...)'
+      |-ImplicitCastExpr 0x7ffd1d826058 <col:8> 'char *' <ArrayToPointerDecay>
+      | `-DeclRefExpr 0x7ffd1d825ee8 <col:8> 'char [100]' lvalue Var 0x7ffd1d825dd8 'buf' 'char [100]'
+      |-ImplicitCastExpr 0x7ffd1d826088 <col:13> 'const char *' <BitCast>
+      | `-ImplicitCastExpr 0x7ffd1d826070 <col:13> 'char *' <ArrayToPointerDecay>
+      |   `-StringLiteral 0x7ffd1d825f10 <col:13> 'char [6]' lvalue "%s-%s"
+      |-ImplicitCastExpr 0x7ffd1d8260a0 <col:22> 'char *' <ArrayToPointerDecay>
+      | `-DeclRefExpr 0x7ffd1d825f40 <col:22> 'char [100]' lvalue Var 0x7ffd1d825dd8 'buf' 'char [100]'
+      `-ImplicitCastExpr 0x7ffd1d8260b8 <col:27> 'char *' <ArrayToPointerDecay>
+        `-StringLiteral 0x7ffd1d825f68 <col:27> 'char [6]' lvalue "world"

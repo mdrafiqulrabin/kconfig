@@ -1,0 +1,14 @@
+FileAST: 
+  Decl: memcpy, [], ['extern'], []
+    FuncDecl: 
+      PtrDecl: []
+        TypeDecl: memcpy, []
+          IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: memcpy

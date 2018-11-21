@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fa7a381b4d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa7a381ba20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa7a381b740 '__int128'
+|-TypedefDecl 0x7fa7a381ba90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa7a381b760 'unsigned __int128'
+|-TypedefDecl 0x7fa7a381bd68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa7a381bb70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa7a381bae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa7a381be00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa7a381bdc0 'char *'
+|   `-BuiltinType 0x7fa7a381b560 'char'
+|-TypedefDecl 0x7fa7a381c0c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa7a381c070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa7a381bee0 'struct __va_list_tag'
+|     `-Record 0x7fa7a381be58 '__va_list_tag'
+|-FunctionDecl 0x7fa7a386c560 <c_files/pr83059.c:4:1, line:10:1> line:5:1 foo 'void (int *, int *, int *)'
+| |-ParmVarDecl 0x7fa7a381c160 <col:6, col:11> col:11 used p 'int *'
+| |-ParmVarDecl 0x7fa7a386c400 <col:14, col:19> col:19 used q 'int *'
+| |-ParmVarDecl 0x7fa7a386c478 <col:22, col:27> col:27 used r 'int *'
+| `-CompoundStmt 0x7fa7a386c978 <line:6:1, line:10:1>
+|   `-AtomicExpr 0x7fa7a386c928 <line:7:3, col:47> '_Bool'
+|     |-ImplicitCastExpr 0x7fa7a386c8c8 <col:30> 'int *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa7a386c738 <col:30> 'int *' lvalue ParmVar 0x7fa7a381c160 'p' 'int *'
+|     |-IntegerLiteral 0x7fa7a386c7d0 <col:42> 'int' 0
+|     |-ImplicitCastExpr 0x7fa7a386c8e0 <col:33> 'int *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa7a386c760 <col:33> 'int *' lvalue ParmVar 0x7fa7a386c400 'q' 'int *'
+|     |-UnaryOperator 0x7fa7a386c810 <col:45, col:46> 'int' prefix '-'
+|     | `-IntegerLiteral 0x7fa7a386c7f0 <col:46> 'int' 1
+|     |-ImplicitCastExpr 0x7fa7a386c8f8 <col:36> 'int *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa7a386c788 <col:36> 'int *' lvalue ParmVar 0x7fa7a386c478 'r' 'int *'
+|     `-ImplicitCastExpr 0x7fa7a386c910 <col:39> '_Bool' <IntegralToBoolean>
+|       `-IntegerLiteral 0x7fa7a386c7b0 <col:39> 'int' 0
+`-FunctionDecl 0x7fa7a386c678 <col:3> col:3 implicit used __atomic_compare_exchange 'void ()' extern

@@ -1,0 +1,82 @@
+TranslationUnitDecl 0x7fd39f025ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd39f026420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd39f026140 '__int128'
+|-TypedefDecl 0x7fd39f026490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd39f026160 'unsigned __int128'
+|-TypedefDecl 0x7fd39f026768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd39f026570 'struct __NSConstantString_tag'
+|   `-Record 0x7fd39f0264e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd39f026800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd39f0267c0 'char *'
+|   `-BuiltinType 0x7fd39f025f60 'char'
+|-TypedefDecl 0x7fd39f026ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd39f026a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd39f0268e0 'struct __va_list_tag'
+|     `-Record 0x7fd39f026858 '__va_list_tag'
+|-FunctionDecl 0x7fd39f076e30 <c_files/pr47446-1.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd39f076ec8 prev 0x7fd39f076e30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-EnumDecl 0x7fd39f076f60 <line:5:1, line:17:1> line:5:1
+| |-EnumConstantDecl 0x7fd39f077040 <line:7:3, col:16> col:3 referenced __GCONV_OK 'int'
+| | `-IntegerLiteral 0x7fd39f077020 <col:16> 'int' 0
+| |-EnumConstantDecl 0x7fd39f077088 <line:8:3> col:3 __GCONV_NOCONV 'int'
+| |-EnumConstantDecl 0x7fd39f0770d0 <line:9:3> col:3 __GCONV_NODB 'int'
+| |-EnumConstantDecl 0x7fd39f077118 <line:10:3> col:3 __GCONV_NOMEM 'int'
+| |-EnumConstantDecl 0x7fd39f077160 <line:11:3> col:3 referenced __GCONV_EMPTY_INPUT 'int'
+| |-EnumConstantDecl 0x7fd39f0771a8 <line:12:3> col:3 referenced __GCONV_FULL_OUTPUT 'int'
+| |-EnumConstantDecl 0x7fd39f0771f0 <line:13:3> col:3 referenced __GCONV_ILLEGAL_INPUT 'int'
+| |-EnumConstantDecl 0x7fd39f077238 <line:14:3> col:3 referenced __GCONV_INCOMPLETE_INPUT 'int'
+| |-EnumConstantDecl 0x7fd39f077280 <line:15:3> col:3 __GCONV_ILLEGAL_DESCRIPTOR 'int'
+| `-EnumConstantDecl 0x7fd39f0772c8 <line:16:3> col:3 __GCONV_INTERNAL_ERROR 'int'
+`-FunctionDecl 0x7fd39f0773f8 <line:18:1, line:40:1> line:19:1 foo 'int (int)'
+  |-ParmVarDecl 0x7fd39f077328 <col:6, col:10> col:10 used result 'int'
+  `-CompoundStmt 0x7fd39f077b58 <line:20:1, line:40:1>
+    |-DeclStmt 0x7fd39f077570 <line:21:3, col:23>
+    | `-VarDecl 0x7fd39f0774f0 <col:3, col:22> col:7 used irreversible 'int' cinit
+    |   `-IntegerLiteral 0x7fd39f077550 <col:22> 'int' 0
+    |-SwitchStmt 0x7fd39f0775c8 <line:22:3, line:38:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fd39f0775b0 <line:22:11> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fd39f077588 <col:11> 'int' lvalue ParmVar 0x7fd39f077328 'result' 'int'
+    | `-CompoundStmt 0x7fd39f077aa8 <line:23:5, line:38:5>
+    |   |-CaseStmt 0x7fd39f077620 <line:24:5, line:25:23>
+    |   | |-DeclRefExpr 0x7fd39f0775f8 <line:24:10> 'int' EnumConstant 0x7fd39f0771f0 '__GCONV_ILLEGAL_INPUT' 'int'
+    |   | |-<<<NULL>>>
+    |   | `-BinaryOperator 0x7fd39f0776d8 <line:25:7, col:23> 'int' '='
+    |   |   |-DeclRefExpr 0x7fd39f077658 <col:7> 'int' lvalue Var 0x7fd39f0774f0 'irreversible' 'int'
+    |   |   `-ImplicitCastExpr 0x7fd39f0776c0 <col:22, col:23> 'int' <IntegralCast>
+    |   |     `-UnaryOperator 0x7fd39f0776a0 <col:22, col:23> 'long' prefix '-'
+    |   |       `-IntegerLiteral 0x7fd39f077680 <col:23> 'long' 1
+    |   |-BreakStmt 0x7fd39f077700 <line:26:7>
+    |   |-CaseStmt 0x7fd39f077730 <line:27:5, line:28:23>
+    |   | |-DeclRefExpr 0x7fd39f077708 <line:27:10> 'int' EnumConstant 0x7fd39f0771a8 '__GCONV_FULL_OUTPUT' 'int'
+    |   | |-<<<NULL>>>
+    |   | `-BinaryOperator 0x7fd39f0777e8 <line:28:7, col:23> 'int' '='
+    |   |   |-DeclRefExpr 0x7fd39f077768 <col:7> 'int' lvalue Var 0x7fd39f0774f0 'irreversible' 'int'
+    |   |   `-ImplicitCastExpr 0x7fd39f0777d0 <col:22, col:23> 'int' <IntegralCast>
+    |   |     `-UnaryOperator 0x7fd39f0777b0 <col:22, col:23> 'long' prefix '-'
+    |   |       `-IntegerLiteral 0x7fd39f077790 <col:23> 'long' 2
+    |   |-BreakStmt 0x7fd39f077810 <line:29:7>
+    |   |-CaseStmt 0x7fd39f077840 <line:30:5, line:31:23>
+    |   | |-DeclRefExpr 0x7fd39f077818 <line:30:10> 'int' EnumConstant 0x7fd39f077238 '__GCONV_INCOMPLETE_INPUT' 'int'
+    |   | |-<<<NULL>>>
+    |   | `-BinaryOperator 0x7fd39f0778f8 <line:31:7, col:23> 'int' '='
+    |   |   |-DeclRefExpr 0x7fd39f077878 <col:7> 'int' lvalue Var 0x7fd39f0774f0 'irreversible' 'int'
+    |   |   `-ImplicitCastExpr 0x7fd39f0778e0 <col:22, col:23> 'int' <IntegralCast>
+    |   |     `-UnaryOperator 0x7fd39f0778c0 <col:22, col:23> 'long' prefix '-'
+    |   |       `-IntegerLiteral 0x7fd39f0778a0 <col:23> 'long' 3
+    |   |-BreakStmt 0x7fd39f077920 <line:32:7>
+    |   |-CaseStmt 0x7fd39f077950 <line:33:5, line:35:7>
+    |   | |-DeclRefExpr 0x7fd39f077928 <line:33:10> 'int' EnumConstant 0x7fd39f077160 '__GCONV_EMPTY_INPUT' 'int'
+    |   | |-<<<NULL>>>
+    |   | `-CaseStmt 0x7fd39f0779b0 <line:34:5, line:35:7>
+    |   |   |-DeclRefExpr 0x7fd39f077988 <line:34:10> 'int' EnumConstant 0x7fd39f077040 '__GCONV_OK' 'int'
+    |   |   |-<<<NULL>>>
+    |   |   `-BreakStmt 0x7fd39f0779e8 <line:35:7>
+    |   `-DefaultStmt 0x7fd39f077a88 <line:36:5, line:37:14>
+    |     `-CallExpr 0x7fd39f077a60 <col:7, col:14> 'void'
+    |       `-ImplicitCastExpr 0x7fd39f077a48 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x7fd39f0779f0 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7fd39f076ec8 'abort' 'void (void) __attribute__((noreturn))'
+    `-ReturnStmt 0x7fd39f077b40 <line:39:3, col:10>
+      `-ImplicitCastExpr 0x7fd39f077b28 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fd39f077b00 <col:10> 'int' lvalue Var 0x7fd39f0774f0 'irreversible' 'int'

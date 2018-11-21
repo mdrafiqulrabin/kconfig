@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7feada0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feada026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feada026740 '__int128'
+|-TypedefDecl 0x7feada026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feada026760 'unsigned __int128'
+|-TypedefDecl 0x7feada026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feada026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7feada026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feada026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feada026dc0 'char *'
+|   `-BuiltinType 0x7feada026560 'char'
+|-TypedefDecl 0x7feada0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feada027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feada026ee0 'struct __va_list_tag'
+|     `-Record 0x7feada026e58 '__va_list_tag'
+|-VarDecl 0x7feada0271a0 <c_files/pr26983.c:7:1, col:15> col:7 used jmpbuf 'void *[6]'
+|-FunctionDecl 0x7feada825b00 <line:9:1, line:13:1> line:10:1 foo 'void (void)'
+| `-CompoundStmt 0x7feada825e48 <line:11:1, line:13:1>
+|   `-CallExpr 0x7feada825e00 <line:12:3, col:27> 'int'
+|     |-ImplicitCastExpr 0x7feada825de8 <col:3> 'int (*)(void **)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7feada825d50 <col:3> '<builtin fn type>' Function 0x7feada825c08 '__builtin_setjmp' 'int (void **)'
+|     `-ImplicitCastExpr 0x7feada825e30 <col:21> 'void **' <ArrayToPointerDecay>
+|       `-DeclRefExpr 0x7feada825d78 <col:21> 'void *[6]' lvalue Var 0x7feada0271a0 'jmpbuf' 'void *[6]'
+|-FunctionDecl 0x7feada825c08 <col:3> col:3 implicit used __builtin_setjmp 'int (void **)' extern
+| |-ParmVarDecl 0x7feada825ca0 <<invalid sloc>> <invalid sloc> 'void **'
+| `-ReturnsTwiceAttr 0x7feada825d08 <col:3> Implicit
+`-FunctionDecl 0x7feada825f38 <line:15:1, line:19:1> line:16:1 main 'int (void)'
+  `-CompoundStmt 0x7feada826030 <line:17:1, line:19:1>
+    `-ReturnStmt 0x7feada826018 <line:18:3, col:10>
+      `-IntegerLiteral 0x7feada825ff8 <col:10> 'int' 0

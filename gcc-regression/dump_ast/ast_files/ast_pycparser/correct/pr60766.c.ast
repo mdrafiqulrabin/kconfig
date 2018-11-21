@@ -1,0 +1,45 @@
+FileAST: 
+  Decl: m, [], [], []
+    TypeDecl: m, []
+      IdentifierType: ['int']
+    Constant: int, 9
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: n
+        ID: m
+      For: 
+        Assignment: =
+          ID: x
+          Constant: int, 0
+        BinaryOp: <=
+          ID: x
+          ID: n
+        UnaryOp: p++
+          ID: x
+        If: 
+          BinaryOp: ==
+            ID: n
+            BinaryOp: +
+              BinaryOp: +
+                ID: x
+                BinaryOp: +
+                  ID: x
+                  Constant: int, 1
+              BinaryOp: +
+                ID: x
+                Constant: int, 2
+          Return: 
+            Constant: int, 0
+      FuncCall: 
+        ID: __builtin_abort

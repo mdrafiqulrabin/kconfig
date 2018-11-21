@@ -1,0 +1,89 @@
+c_files/pr32372.c:15:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+MPV_encode_init (AVCodecContext *avctx)
+^
+c_files/pr32372.c:21:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+TranslationUnitDecl 0x7f8da30264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8da3026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8da3026740 '__int128'
+|-TypedefDecl 0x7f8da3026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8da3026760 'unsigned __int128'
+|-TypedefDecl 0x7f8da3026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8da3026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8da3026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8da3026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8da3026dc0 'char *'
+|   `-BuiltinType 0x7f8da3026560 'char'
+|-TypedefDecl 0x7f8da30270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8da3027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8da3026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8da3026e58 '__va_list_tag'
+|-RecordDecl 0x7f8da3027120 <c_files/pr32372.c:1:9, line:6:1> line:1:16 struct AVCodecContext definition
+| |-FieldDecl 0x7f8da3825a00 <line:3:3, col:7> col:7 referenced flags 'int'
+| |-FieldDecl 0x7f8da3825a60 <line:4:3, col:9> col:9 referenced priv_data 'void *'
+| `-FieldDecl 0x7f8da3825b28 <line:5:3, col:21> col:8 codec_name 'char [32]'
+|-TypedefDecl 0x7f8da3825bc0 <line:1:1, line:7:1> col:1 referenced AVCodecContext 'struct AVCodecContext':'struct AVCodecContext'
+| `-ElaboratedType 0x7f8da3825b70 'struct AVCodecContext' sugar
+|   `-RecordType 0x7f8da30271b0 'struct AVCodecContext'
+|     `-Record 0x7f8da3027120 'AVCodecContext'
+|-RecordDecl 0x7f8da3825c30 <line:8:9, line:13:1> line:8:16 struct ScanTable definition
+| |-FieldDecl 0x7f8da3825cf8 <line:10:3, col:7> col:7 referenced obmc 'int'
+| |-FieldDecl 0x7f8da3825d58 <line:11:3, col:7> col:7 referenced umvplus 'int'
+| `-FieldDecl 0x7f8da3825db8 <line:12:3, col:7> col:7 referenced h263_aic 'int'
+|-TypedefDecl 0x7f8da3825e50 <line:8:1, line:14:1> col:1 referenced MpegEncContext 'struct ScanTable':'struct ScanTable'
+| `-ElaboratedType 0x7f8da3825e00 'struct ScanTable' sugar
+|   `-RecordType 0x7f8da3825cc0 'struct ScanTable'
+|     `-Record 0x7f8da3825c30 'ScanTable'
+`-FunctionDecl 0x7f8da3826058 <line:15:1, line:21:1> line:15:1 MPV_encode_init 'int (AVCodecContext *)'
+  |-ParmVarDecl 0x7f8da3825f48 <col:18, col:34> col:34 used avctx 'AVCodecContext *'
+  `-CompoundStmt 0x7f8da38268e0 <line:16:1, line:21:1>
+    |-DeclStmt 0x7f8da38262d0 <line:17:3, col:39>
+    | `-VarDecl 0x7f8da38261c8 <col:3, col:30> col:19 used s 'MpegEncContext *' cinit
+    |   `-ImplicitCastExpr 0x7f8da38262b8 <col:23, col:30> 'MpegEncContext *' <BitCast>
+    |     `-ImplicitCastExpr 0x7f8da38262a0 <col:23, col:30> 'void *' <LValueToRValue>
+    |       `-MemberExpr 0x7f8da3826268 <col:23, col:30> 'void *' lvalue ->priv_data 0x7f8da3825a60
+    |         `-ImplicitCastExpr 0x7f8da3826250 <col:23> 'AVCodecContext *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7f8da3826228 <col:23> 'AVCodecContext *' lvalue ParmVar 0x7f8da3825f48 'avctx' 'AVCodecContext *'
+    |-BinaryOperator 0x7f8da38264c8 <line:18:3, col:50> 'int' '='
+    | |-MemberExpr 0x7f8da3826328 <col:3, col:6> 'int' lvalue ->umvplus 0x7f8da3825d58
+    | | `-ImplicitCastExpr 0x7f8da3826310 <col:3> 'MpegEncContext *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f8da38262e8 <col:3> 'MpegEncContext *' lvalue Var 0x7f8da38261c8 's' 'MpegEncContext *'
+    | `-ConditionalOperator 0x7f8da3826498 <col:16, col:50> 'int'
+    |   |-ParenExpr 0x7f8da3826438 <col:16, col:42> 'int'
+    |   | `-BinaryOperator 0x7f8da3826410 <col:17, col:32> 'int' '&'
+    |   |   |-ImplicitCastExpr 0x7f8da38263f8 <col:17, col:24> 'int' <LValueToRValue>
+    |   |   | `-MemberExpr 0x7f8da38263a0 <col:17, col:24> 'int' lvalue ->flags 0x7f8da3825a00
+    |   |   |   `-ImplicitCastExpr 0x7f8da3826388 <col:17> 'AVCodecContext *' <LValueToRValue>
+    |   |   |     `-DeclRefExpr 0x7f8da3826360 <col:17> 'AVCodecContext *' lvalue ParmVar 0x7f8da3825f48 'avctx' 'AVCodecContext *'
+    |   |   `-IntegerLiteral 0x7f8da38263d8 <col:32> 'int' 33554432
+    |   |-IntegerLiteral 0x7f8da3826458 <col:46> 'int' 1
+    |   `-IntegerLiteral 0x7f8da3826478 <col:50> 'int' 0
+    |-BinaryOperator 0x7f8da38266d0 <line:19:3, col:51> 'int' '='
+    | |-MemberExpr 0x7f8da3826530 <col:3, col:6> 'int' lvalue ->h263_aic 0x7f8da3825db8
+    | | `-ImplicitCastExpr 0x7f8da3826518 <col:3> 'MpegEncContext *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f8da38264f0 <col:3> 'MpegEncContext *' lvalue Var 0x7f8da38261c8 's' 'MpegEncContext *'
+    | `-ConditionalOperator 0x7f8da38266a0 <col:17, col:51> 'int'
+    |   |-ParenExpr 0x7f8da3826640 <col:17, col:43> 'int'
+    |   | `-BinaryOperator 0x7f8da3826618 <col:18, col:33> 'int' '&'
+    |   |   |-ImplicitCastExpr 0x7f8da3826600 <col:18, col:25> 'int' <LValueToRValue>
+    |   |   | `-MemberExpr 0x7f8da38265a8 <col:18, col:25> 'int' lvalue ->flags 0x7f8da3825a00
+    |   |   |   `-ImplicitCastExpr 0x7f8da3826590 <col:18> 'AVCodecContext *' <LValueToRValue>
+    |   |   |     `-DeclRefExpr 0x7f8da3826568 <col:18> 'AVCodecContext *' lvalue ParmVar 0x7f8da3825f48 'avctx' 'AVCodecContext *'
+    |   |   `-IntegerLiteral 0x7f8da38265e0 <col:33> 'int' 16777216
+    |   |-IntegerLiteral 0x7f8da3826660 <col:47> 'int' 1
+    |   `-IntegerLiteral 0x7f8da3826680 <col:51> 'int' 0
+    `-BinaryOperator 0x7f8da38268b8 <line:20:3, col:31> 'int' '='
+      |-MemberExpr 0x7f8da3826738 <col:3, col:6> 'int' lvalue ->h263_aic 0x7f8da3825db8
+      | `-ImplicitCastExpr 0x7f8da3826720 <col:3> 'MpegEncContext *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f8da38266f8 <col:3> 'MpegEncContext *' lvalue Var 0x7f8da38261c8 's' 'MpegEncContext *'
+      `-BinaryOperator 0x7f8da3826890 <col:17, col:31> 'int' '||'
+        |-ImplicitCastExpr 0x7f8da3826860 <col:17, col:20> 'int' <LValueToRValue>
+        | `-MemberExpr 0x7f8da38267b0 <col:17, col:20> 'int' lvalue ->obmc 0x7f8da3825cf8
+        |   `-ImplicitCastExpr 0x7f8da3826798 <col:17> 'MpegEncContext *' <LValueToRValue>
+        |     `-DeclRefExpr 0x7f8da3826770 <col:17> 'MpegEncContext *' lvalue Var 0x7f8da38261c8 's' 'MpegEncContext *'
+        `-ImplicitCastExpr 0x7f8da3826878 <col:28, col:31> 'int' <LValueToRValue>
+          `-MemberExpr 0x7f8da3826828 <col:28, col:31> 'int' lvalue ->umvplus 0x7f8da3825d58
+            `-ImplicitCastExpr 0x7f8da3826810 <col:28> 'MpegEncContext *' <LValueToRValue>
+              `-DeclRefExpr 0x7f8da38267e8 <col:28> 'MpegEncContext *' lvalue Var 0x7f8da38261c8 's' 'MpegEncContext *'

@@ -1,0 +1,57 @@
+c_files/pr71062.c:7:29: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+int __attribute__((noinline,noclone))
+                            ^
+1 warning generated.
+TranslationUnitDecl 0x7f947f018ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f947f019020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f947f018d40 '__int128'
+|-TypedefDecl 0x7f947f019090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f947f018d60 'unsigned __int128'
+|-TypedefDecl 0x7f947f019368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f947f019170 'struct __NSConstantString_tag'
+|   `-Record 0x7f947f0190e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f947f019400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f947f0193c0 'char *'
+|   `-BuiltinType 0x7f947f018b60 'char'
+|-TypedefDecl 0x7f947f0196c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f947f019670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f947f0194e0 'struct __va_list_tag'
+|     `-Record 0x7f947f019458 '__va_list_tag'
+|-FunctionDecl 0x7f947f825a30 <c_files/pr71062.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f947f825ac8 prev 0x7f947f825a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7f947f825b70 <line:5:1, col:6> col:6 used bar 'char'
+|-FunctionDecl 0x7f947f825d38 <line:7:1, line:13:1> line:8:1 used foo 'int (char *__restrict)'
+| |-ParmVarDecl 0x7f947f825c28 <col:6, col:23> col:23 used p 'char *__restrict'
+| |-CompoundStmt 0x7f947f825f78 <line:9:1, line:13:1>
+| | |-IfStmt 0x7f947f825f08 <line:10:3, line:11:12>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7f947f825ea8 <line:10:7, col:13> 'int' '=='
+| | | | |-ImplicitCastExpr 0x7f947f825e90 <col:7> 'char *' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7f947f825e20 <col:7> 'char *__restrict' lvalue ParmVar 0x7f947f825c28 'p' 'char *__restrict'
+| | | | `-UnaryOperator 0x7f947f825e70 <col:12, col:13> 'char *' prefix '&'
+| | | |   `-DeclRefExpr 0x7f947f825e48 <col:13> 'char' lvalue Var 0x7f947f825b70 'bar' 'char'
+| | | |-ReturnStmt 0x7f947f825ef0 <line:11:5, col:12>
+| | | | `-IntegerLiteral 0x7f947f825ed0 <col:12> 'int' 1
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7f947f825f60 <line:12:3, col:10>
+| |   `-IntegerLiteral 0x7f947f825f40 <col:10> 'int' 0
+| `-NoInlineAttr 0x7f947f825dd8 <line:7:20>
+`-FunctionDecl 0x7f947f825ff0 <line:15:1, line:20:1> line:15:5 main 'int ()'
+  `-CompoundStmt 0x7f947f8262e8 <line:16:1, line:20:1>
+    |-IfStmt 0x7f947f826278 <line:17:3, line:18:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f947f8261c0 <line:17:7, col:21> 'int' '!='
+    | | |-CallExpr 0x7f947f826170 <col:7, col:16> 'int'
+    | | | |-ImplicitCastExpr 0x7f947f826158 <col:7> 'int (*)(char *__restrict)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f947f826088 <col:7> 'int (char *__restrict)' Function 0x7f947f825d38 'foo' 'int (char *__restrict)'
+    | | | `-UnaryOperator 0x7f947f8260d8 <col:12, col:13> 'char *' prefix '&'
+    | | |   `-DeclRefExpr 0x7f947f8260b0 <col:13> 'char' lvalue Var 0x7f947f825b70 'bar' 'char'
+    | | `-IntegerLiteral 0x7f947f8261a0 <col:21> 'int' 1
+    | |-CallExpr 0x7f947f826250 <line:18:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f947f826238 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f947f8261e8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f947f825ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f947f8262d0 <line:19:3, col:10>
+      `-IntegerLiteral 0x7f947f8262b0 <col:10> 'int' 0

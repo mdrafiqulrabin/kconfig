@@ -1,0 +1,133 @@
+FileAST: 
+  Decl: abs, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: abs, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: find_sad_16x16, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: mode, [], [], []
+            PtrDecl: []
+              TypeDecl: mode, []
+                IdentifierType: ['int']
+        TypeDecl: find_sad_16x16, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: current, [], [], []
+        TypeDecl: current, []
+          IdentifierType: ['int']
+      Decl: best, [], [], []
+        TypeDecl: best, []
+          IdentifierType: ['int']
+      Decl: M1, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: M1, []
+              IdentifierType: ['int']
+            Constant: int, 16
+          Constant: int, 16
+      Decl: M0, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            ArrayDecl: []
+              ArrayDecl: []
+                TypeDecl: M0, []
+                  IdentifierType: ['int']
+                Constant: int, 4
+              Constant: int, 4
+            Constant: int, 4
+          Constant: int, 4
+      Decl: M3, [], [], []
+        ArrayDecl: []
+          TypeDecl: M3, []
+            IdentifierType: ['int']
+          Constant: int, 4
+      Decl: M4, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: M4, []
+              IdentifierType: ['int']
+            Constant: int, 4
+          Constant: int, 4
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Decl: ii, [], [], []
+        TypeDecl: ii, []
+          IdentifierType: ['int']
+      Decl: jj, [], [], []
+        TypeDecl: jj, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: jj
+          Constant: int, 0
+        BinaryOp: <
+          ID: jj
+          Constant: int, 4
+        UnaryOp: p++
+          ID: jj
+        For: 
+          Assignment: =
+            ID: ii
+            Constant: int, 0
+          BinaryOp: <
+            ID: ii
+            Constant: int, 4
+          UnaryOp: p++
+            ID: ii
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              Constant: int, 4
+            UnaryOp: p++
+              ID: j
+            For: 
+              Assignment: =
+                ID: j
+                Constant: int, 0
+              BinaryOp: <
+                ID: j
+                Constant: int, 4
+              UnaryOp: p++
+                ID: j
+              Assignment: +=
+                ID: current
+                FuncCall: 
+                  ID: abs
+                  ExprList: 
+                    ArrayRef: 
+                      ArrayRef: 
+                        ArrayRef: 
+                          ArrayRef: 
+                            ID: M0
+                            ID: i
+                          ID: ii
+                        ID: j
+                      ID: jj
+      If: 
+        BinaryOp: <
+          ID: current
+          ID: best
+        Compound: 
+          Assignment: =
+            ID: best
+            ID: current
+          Assignment: =
+            UnaryOp: *
+              ID: mode
+            ID: k

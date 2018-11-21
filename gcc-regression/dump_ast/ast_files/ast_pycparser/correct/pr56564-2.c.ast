@@ -1,0 +1,54 @@
+FileAST: 
+  Decl: s, [], [], []
+    TypeDecl: s, []
+      Struct: S
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['long']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['long']
+    InitList: 
+      Constant: int, 5
+      Constant: int, 6
+  Decl: t, [], [], []
+    ArrayDecl: []
+      TypeDecl: t, []
+        IdentifierType: ['char']
+      Constant: int, 16
+    InitList: 
+      Constant: int, 7
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: &
+          BinaryOp: &
+            ID: __UINTPTR_TYPE__
+            ID: s
+          Constant: int, 15
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: &
+          BinaryOp: &
+            ID: __UINTPTR_TYPE__
+            ArrayRef: 
+              ID: t
+              Constant: int, 0
+          Constant: int, 15

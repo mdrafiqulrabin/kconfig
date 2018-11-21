@@ -1,0 +1,96 @@
+c_files/pr52750.c:10:8: error: use of unknown builtin '__builtin_shuffle' [-Wimplicit-function-declaration]
+  *x = __builtin_shuffle (*x, m);
+       ^
+c_files/pr52750.c:10:6: error: assigning to 'V' (vector of 32 'signed char' values) from incompatible type 'int'
+  *x = __builtin_shuffle (*x, m);
+     ^ ~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7fc5f5025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc5f5026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc5f5025d40 '__int128'
+|-TypedefDecl 0x7fc5f5026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc5f5025d60 'unsigned __int128'
+|-TypedefDecl 0x7fc5f5026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc5f5026170 'struct __NSConstantString_tag'
+|   `-Record 0x7fc5f50260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc5f5026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc5f50263c0 'char *'
+|   `-BuiltinType 0x7fc5f5025b60 'char'
+|-TypedefDecl 0x7fc5f50266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc5f5026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc5f50264e0 'struct __va_list_tag'
+|     `-Record 0x7fc5f5026458 '__va_list_tag'
+|-TypedefDecl 0x7fc5f5026778 <c_files/pr52750.c:3:1, col:21> col:21 referenced V '__attribute__((__vector_size__(32 * sizeof(signed char)))) signed char'
+| `-VectorType 0x7fc5f5026740 '__attribute__((__vector_size__(32 * sizeof(signed char)))) signed char' 32
+|   `-BuiltinType 0x7fc5f5025b80 'signed char'
+|-FunctionDecl 0x7fc5f5077b70 <line:5:1, line:11:1> line:6:1 foo 'void (V *)'
+| |-ParmVarDecl 0x7fc5f5077a68 <col:6, col:9> col:9 used x 'V *'
+| `-CompoundStmt 0x7fc5f507aad0 <line:7:1, line:11:1>
+|   `-DeclStmt 0x7fc5f5078640 <line:8:3, line:9:67>
+|     `-VarDecl 0x7fc5f5077c60 <line:8:3, line:9:66> line:8:5 used m 'V':'__attribute__((__vector_size__(32 * sizeof(signed char)))) signed char' cinit
+|       `-InitListExpr 0x7fc5f5078200 <col:9, line:9:66> 'V':'__attribute__((__vector_size__(32 * sizeof(signed char)))) signed char'
+|         |-ImplicitCastExpr 0x7fc5f5078340 <line:8:11> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077cc0 <col:11> 'int' 0
+|         |-ImplicitCastExpr 0x7fc5f5078358 <col:14> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077ce0 <col:14> 'int' 1
+|         |-ImplicitCastExpr 0x7fc5f5078370 <col:17> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077d00 <col:17> 'int' 2
+|         |-ImplicitCastExpr 0x7fc5f5078388 <col:20> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077d20 <col:20> 'int' 3
+|         |-ImplicitCastExpr 0x7fc5f50783a0 <col:23> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077d40 <col:23> 'int' 4
+|         |-ImplicitCastExpr 0x7fc5f50783b8 <col:26> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077d60 <col:26> 'int' 5
+|         |-ImplicitCastExpr 0x7fc5f50783d0 <col:29> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077d80 <col:29> 'int' 6
+|         |-ImplicitCastExpr 0x7fc5f50783e8 <col:32> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077da0 <col:32> 'int' 7
+|         |-ImplicitCastExpr 0x7fc5f5078400 <col:35> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077dc0 <col:35> 'int' 8
+|         |-ImplicitCastExpr 0x7fc5f5078418 <col:38> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077de0 <col:38> 'int' 9
+|         |-ImplicitCastExpr 0x7fc5f5078430 <col:41> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077e00 <col:41> 'int' 10
+|         |-ImplicitCastExpr 0x7fc5f5078448 <col:45> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077e20 <col:45> 'int' 11
+|         |-ImplicitCastExpr 0x7fc5f5078460 <col:49> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077e40 <col:49> 'int' 12
+|         |-ImplicitCastExpr 0x7fc5f5078478 <col:53> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077e60 <col:53> 'int' 13
+|         |-ImplicitCastExpr 0x7fc5f5078490 <col:57> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077e80 <col:57> 'int' 14
+|         |-ImplicitCastExpr 0x7fc5f50784a8 <col:61> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077ea0 <col:61> 'int' 15
+|         |-ImplicitCastExpr 0x7fc5f50784c0 <line:9:4> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077ec0 <col:4> 'int' 16
+|         |-ImplicitCastExpr 0x7fc5f50784d8 <col:8> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077ee0 <col:8> 'int' 17
+|         |-ImplicitCastExpr 0x7fc5f50784f0 <col:12> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077f00 <col:12> 'int' 18
+|         |-ImplicitCastExpr 0x7fc5f5078508 <col:16> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077f20 <col:16> 'int' 19
+|         |-ImplicitCastExpr 0x7fc5f5078520 <col:20> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077f40 <col:20> 'int' 20
+|         |-ImplicitCastExpr 0x7fc5f5078538 <col:24> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077f60 <col:24> 'int' 21
+|         |-ImplicitCastExpr 0x7fc5f5078550 <col:28> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077f80 <col:28> 'int' 22
+|         |-ImplicitCastExpr 0x7fc5f5078568 <col:32> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077fa0 <col:32> 'int' 23
+|         |-ImplicitCastExpr 0x7fc5f5078580 <col:36> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077fc0 <col:36> 'int' 24
+|         |-ImplicitCastExpr 0x7fc5f5078598 <col:40> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5077fe0 <col:40> 'int' 25
+|         |-ImplicitCastExpr 0x7fc5f50785b0 <col:44> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5078000 <col:44> 'int' 26
+|         |-ImplicitCastExpr 0x7fc5f50785c8 <col:48> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5078020 <col:48> 'int' 27
+|         |-ImplicitCastExpr 0x7fc5f50785e0 <col:52> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5078040 <col:52> 'int' 28
+|         |-ImplicitCastExpr 0x7fc5f50785f8 <col:56> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5078060 <col:56> 'int' 29
+|         |-ImplicitCastExpr 0x7fc5f5078610 <col:60> 'signed char' <IntegralCast>
+|         | `-IntegerLiteral 0x7fc5f5078080 <col:60> 'int' 30
+|         `-ImplicitCastExpr 0x7fc5f5078628 <col:64> 'signed char' <IntegralCast>
+|           `-IntegerLiteral 0x7fc5f50780a0 <col:64> 'int' 31
+`-FunctionDecl 0x7fc5f5078720 <<invalid sloc>> line:10:8 implicit used __builtin_shuffle 'int ()'

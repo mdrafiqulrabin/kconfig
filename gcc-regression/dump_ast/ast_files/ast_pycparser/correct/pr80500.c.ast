@@ -1,0 +1,28 @@
+FileAST: 
+  Decl: v, [], [], []
+    TypeDecl: v, []
+      IdentifierType: ['signed', 'char']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        BinaryOp: !=
+          ID: x
+          Constant: int, 0
+        Compound: 
+          Assignment: =
+            ID: v
+            BinaryOp: +
+              BinaryOp: >=
+                ID: x
+                Constant: int, 0
+              Constant: int, 1
+          UnaryOp: ++
+            ID: x

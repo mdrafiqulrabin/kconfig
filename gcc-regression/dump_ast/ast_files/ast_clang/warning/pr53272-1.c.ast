@@ -1,0 +1,116 @@
+c_files/pr53272-1.c:14:31: warning: unknown attribute '__noclone__' ignored [-Wunknown-attributes]
+__attribute__ ((__noinline__, __noclone__))
+                              ^
+c_files/pr53272-1.c:16:31: warning: unknown attribute '__noclone__' ignored [-Wunknown-attributes]
+__attribute__ ((__noinline__, __noclone__))
+                              ^
+c_files/pr53272-1.c:19:31: warning: unknown attribute '__noclone__' ignored [-Wunknown-attributes]
+__attribute__ ((__noinline__, __noclone__))
+                              ^
+3 warnings generated.
+TranslationUnitDecl 0x7ff3310264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff331026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff331026740 '__int128'
+|-TypedefDecl 0x7ff331026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff331026760 'unsigned __int128'
+|-TypedefDecl 0x7ff331026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff331026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff331026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff331026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff331026dc0 'char *'
+|   `-BuiltinType 0x7ff331026560 'char'
+|-TypedefDecl 0x7ff3310270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff331027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff331026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff331026e58 '__va_list_tag'
+|-RecordDecl 0x7ff331027120 <c_files/pr53272-1.c:3:1, line:5:1> line:3:8 struct rtc_class_ops definition
+| `-FieldDecl 0x7ff3310775f0 <line:4:2, col:39> col:8 referenced f 'int (*)(void *, unsigned int)'
+|-RecordDecl 0x7ff331077638 <line:7:1, line:12:1> line:7:8 struct rtc_device definition
+| |-FieldDecl 0x7ff3310776f8 <line:9:2, col:8> col:8 referenced owner 'void *'
+| |-FieldDecl 0x7ff3310777f0 <line:10:2, col:30> col:30 referenced ops 'const struct rtc_class_ops *'
+| `-FieldDecl 0x7ff331077850 <line:11:2, col:6> col:6 referenced ops_lock 'int'
+|-FunctionDecl 0x7ff331077978 <line:14:1, line:15:22> col:12 used foo 'int (void *)' extern
+| |-ParmVarDecl 0x7ff3310778b0 <col:16, col:21> col:22 'void *'
+| `-NoInlineAttr 0x7ff331077a18 <line:14:17>
+|-FunctionDecl 0x7ff331077b80 <line:16:1, line:17:26> col:13 used foobar 'void (void *)' extern
+| |-ParmVarDecl 0x7ff331077ab8 <col:20, col:25> col:26 'void *'
+| `-NoInlineAttr 0x7ff331077c20 <line:16:17>
+`-FunctionDecl 0x7ff331077eb8 <line:19:1, line:39:1> line:20:5 rtc_update_irq_enable 'int (struct rtc_device *, unsigned int)'
+  |-ParmVarDecl 0x7ff331077d20 <col:27, col:46> col:46 used rtc 'struct rtc_device *'
+  |-ParmVarDecl 0x7ff331077d98 <col:51, col:64> col:64 used enabled 'unsigned int'
+  |-CompoundStmt 0x7ff331079aa0 <line:21:1, line:39:1>
+  | |-DeclStmt 0x7ff331078020 <line:22:2, col:9>
+  | | `-VarDecl 0x7ff331077fc0 <col:2, col:6> col:6 used err 'int'
+  | |-GCCAsmStmt 0x7ff3310780a0 <line:23:2, col:18>
+  | |-BinaryOperator 0x7ff331078288 <line:25:2, col:26> 'int' '='
+  | | |-DeclRefExpr 0x7ff3310780e8 <col:2> 'int' lvalue Var 0x7ff331077fc0 'err' 'int'
+  | | `-CallExpr 0x7ff331078240 <col:8, col:26> 'int'
+  | |   |-ImplicitCastExpr 0x7ff331078228 <col:8> 'int (*)(void *)' <FunctionToPointerDecay>
+  | |   | `-DeclRefExpr 0x7ff331078110 <col:8> 'int (void *)' Function 0x7ff331077978 'foo' 'int (void *)'
+  | |   `-ImplicitCastExpr 0x7ff331078270 <col:12, col:18> 'void *' <BitCast>
+  | |     `-UnaryOperator 0x7ff3310781d8 <col:12, col:18> 'int *' prefix '&'
+  | |       `-MemberExpr 0x7ff331078178 <col:13, col:18> 'int' lvalue ->ops_lock 0x7ff331077850
+  | |         `-ImplicitCastExpr 0x7ff331078160 <col:13> 'struct rtc_device *' <LValueToRValue>
+  | |           `-DeclRefExpr 0x7ff331078138 <col:13> 'struct rtc_device *' lvalue ParmVar 0x7ff331077d20 'rtc' 'struct rtc_device *'
+  | |-IfStmt 0x7ff331078348 <line:27:2, line:28:10>
+  | | |-<<<NULL>>>
+  | | |-<<<NULL>>>
+  | | |-ImplicitCastExpr 0x7ff3310782d8 <line:27:6> 'int' <LValueToRValue>
+  | | | `-DeclRefExpr 0x7ff3310782b0 <col:6> 'int' lvalue Var 0x7ff331077fc0 'err' 'int'
+  | | |-ReturnStmt 0x7ff331078330 <line:28:3, col:10>
+  | | | `-ImplicitCastExpr 0x7ff331078318 <col:10> 'int' <LValueToRValue>
+  | | |   `-DeclRefExpr 0x7ff3310782f0 <col:10> 'int' lvalue Var 0x7ff331077fc0 'err' 'int'
+  | | `-<<<NULL>>>
+  | |-IfStmt 0x7ff3310798c8 <line:30:2, line:35:40>
+  | | |-<<<NULL>>>
+  | | |-<<<NULL>>>
+  | | |-UnaryOperator 0x7ff331079418 <line:30:6, col:12> 'int' prefix '!'
+  | | | `-ImplicitCastExpr 0x7ff331079400 <col:7, col:12> 'const struct rtc_class_ops *' <LValueToRValue>
+  | | |   `-MemberExpr 0x7ff3310783c0 <col:7, col:12> 'const struct rtc_class_ops *' lvalue ->ops 0x7ff3310777f0
+  | | |     `-ImplicitCastExpr 0x7ff3310783a8 <col:7> 'struct rtc_device *' <LValueToRValue>
+  | | |       `-DeclRefExpr 0x7ff331078380 <col:7> 'struct rtc_device *' lvalue ParmVar 0x7ff331077d20 'rtc' 'struct rtc_device *'
+  | | |-BinaryOperator 0x7ff3310794a0 <line:31:3, col:10> 'int' '='
+  | | | |-DeclRefExpr 0x7ff331079438 <col:3> 'int' lvalue Var 0x7ff331077fc0 'err' 'int'
+  | | | `-UnaryOperator 0x7ff331079480 <col:9, col:10> 'int' prefix '-'
+  | | |   `-IntegerLiteral 0x7ff331079460 <col:10> 'int' 19
+  | | `-IfStmt 0x7ff331079890 <line:32:7, line:35:40>
+  | |   |-<<<NULL>>>
+  | |   |-<<<NULL>>>
+  | |   |-UnaryOperator 0x7ff3310795a8 <line:32:11, col:22> 'int' prefix '!'
+  | |   | `-ImplicitCastExpr 0x7ff331079590 <col:12, col:22> 'int (*)(void *, unsigned int)' <LValueToRValue>
+  | |   |   `-MemberExpr 0x7ff331079558 <col:12, col:22> 'int (*const)(void *, unsigned int)' lvalue ->f 0x7ff3310775f0
+  | |   |     `-ImplicitCastExpr 0x7ff331079540 <col:12, col:17> 'const struct rtc_class_ops *' <LValueToRValue>
+  | |   |       `-MemberExpr 0x7ff331079508 <col:12, col:17> 'const struct rtc_class_ops *' lvalue ->ops 0x7ff3310777f0
+  | |   |         `-ImplicitCastExpr 0x7ff3310794f0 <col:12> 'struct rtc_device *' <LValueToRValue>
+  | |   |           `-DeclRefExpr 0x7ff3310794c8 <col:12> 'struct rtc_device *' lvalue ParmVar 0x7ff331077d20 'rtc' 'struct rtc_device *'
+  | |   |-BinaryOperator 0x7ff331079630 <line:33:3, col:10> 'int' '='
+  | |   | |-DeclRefExpr 0x7ff3310795c8 <col:3> 'int' lvalue Var 0x7ff331077fc0 'err' 'int'
+  | |   | `-UnaryOperator 0x7ff331079610 <col:9, col:10> 'int' prefix '-'
+  | |   |   `-IntegerLiteral 0x7ff3310795f0 <col:10> 'int' 22
+  | |   `-BinaryOperator 0x7ff331079868 <line:35:3, col:40> 'int' '='
+  | |     |-DeclRefExpr 0x7ff331079658 <col:3> 'int' lvalue Var 0x7ff331077fc0 'err' 'int'
+  | |     `-CallExpr 0x7ff331079800 <col:9, col:40> 'int'
+  | |       |-ImplicitCastExpr 0x7ff3310797e8 <col:9, col:19> 'int (*)(void *, unsigned int)' <LValueToRValue>
+  | |       | `-MemberExpr 0x7ff331079710 <col:9, col:19> 'int (*const)(void *, unsigned int)' lvalue ->f 0x7ff3310775f0
+  | |       |   `-ImplicitCastExpr 0x7ff3310796f8 <col:9, col:14> 'const struct rtc_class_ops *' <LValueToRValue>
+  | |       |     `-MemberExpr 0x7ff3310796c0 <col:9, col:14> 'const struct rtc_class_ops *' lvalue ->ops 0x7ff3310777f0
+  | |       |       `-ImplicitCastExpr 0x7ff3310796a8 <col:9> 'struct rtc_device *' <LValueToRValue>
+  | |       |         `-DeclRefExpr 0x7ff331079680 <col:9> 'struct rtc_device *' lvalue ParmVar 0x7ff331077d20 'rtc' 'struct rtc_device *'
+  | |       |-ImplicitCastExpr 0x7ff331079838 <col:21, col:26> 'void *' <LValueToRValue>
+  | |       | `-MemberExpr 0x7ff331079788 <col:21, col:26> 'void *' lvalue ->owner 0x7ff3310776f8
+  | |       |   `-ImplicitCastExpr 0x7ff331079770 <col:21> 'struct rtc_device *' <LValueToRValue>
+  | |       |     `-DeclRefExpr 0x7ff331079748 <col:21> 'struct rtc_device *' lvalue ParmVar 0x7ff331077d20 'rtc' 'struct rtc_device *'
+  | |       `-ImplicitCastExpr 0x7ff331079850 <col:33> 'unsigned int' <LValueToRValue>
+  | |         `-DeclRefExpr 0x7ff3310797c0 <col:33> 'unsigned int' lvalue ParmVar 0x7ff331077d98 'enabled' 'unsigned int'
+  | |-CallExpr 0x7ff331079a00 <line:37:2, col:23> 'void'
+  | | |-ImplicitCastExpr 0x7ff3310799e8 <col:2> 'void (*)(void *)' <FunctionToPointerDecay>
+  | | | `-DeclRefExpr 0x7ff331079900 <col:2> 'void (void *)' Function 0x7ff331077b80 'foobar' 'void (void *)'
+  | | `-ImplicitCastExpr 0x7ff331079a30 <col:9, col:15> 'void *' <BitCast>
+  | |   `-UnaryOperator 0x7ff3310799a0 <col:9, col:15> 'int *' prefix '&'
+  | |     `-MemberExpr 0x7ff331079968 <col:10, col:15> 'int' lvalue ->ops_lock 0x7ff331077850
+  | |       `-ImplicitCastExpr 0x7ff331079950 <col:10> 'struct rtc_device *' <LValueToRValue>
+  | |         `-DeclRefExpr 0x7ff331079928 <col:10> 'struct rtc_device *' lvalue ParmVar 0x7ff331077d20 'rtc' 'struct rtc_device *'
+  | `-ReturnStmt 0x7ff331079a88 <line:38:2, col:9>
+  |   `-ImplicitCastExpr 0x7ff331079a70 <col:9> 'int' <LValueToRValue>
+  |     `-DeclRefExpr 0x7ff331079a48 <col:9> 'int' lvalue Var 0x7ff331077fc0 'err' 'int'
+  `-NoInlineAttr 0x7ff331077f60 <line:19:17>

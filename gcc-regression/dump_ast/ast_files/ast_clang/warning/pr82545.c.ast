@@ -1,0 +1,46 @@
+c_files/pr82545.c:12:5: warning: expression result unused [-Wunused-value]
+    &b;
+    ^~
+1 warning generated.
+TranslationUnitDecl 0x7f9ebe0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9ebe026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9ebe026740 '__int128'
+|-TypedefDecl 0x7f9ebe026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9ebe026760 'unsigned __int128'
+|-TypedefDecl 0x7f9ebe026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9ebe026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9ebe026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9ebe026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9ebe026dc0 'char *'
+|   `-BuiltinType 0x7f9ebe026560 'char'
+|-TypedefDecl 0x7f9ebe0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9ebe027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9ebe026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9ebe026e58 '__va_list_tag'
+|-FunctionDecl 0x7f9ebe01b200 <c_files/pr82545.c:4:1, col:18> col:13 used c 'void (int)' extern
+| `-ParmVarDecl 0x7f9ebe027138 <col:15> col:18 'int'
+|-FunctionDecl 0x7f9ebe01b3a0 <line:5:1, col:19> col:13 used d 'void (void)' extern
+|-VarDecl 0x7f9ebe01b4c0 <line:7:1, col:12> col:7 used buf 'void *[5]'
+|-FunctionDecl 0x7f9ebe01b5b0 <line:9:1, line:17:1> line:9:6 a 'void (void)'
+| `-CompoundStmt 0x7f9ebe01bba8 <col:14, line:17:1>
+|   |-CompoundStmt 0x7f9ebe01bad8 <line:10:3, line:15:3>
+|   | |-DeclStmt 0x7f9ebe01b6c0 <line:11:5, col:10>
+|   | | `-VarDecl 0x7f9ebe01b660 <col:5, col:9> col:9 used b 'int'
+|   | |-UnaryOperator 0x7f9ebe01b728 <line:12:5, col:6> 'int *' prefix '&'
+|   | | `-DeclRefExpr 0x7f9ebe01b6d8 <col:6> 'int' lvalue Var 0x7f9ebe01b660 'b' 'int'
+|   | |-CallExpr 0x7f9ebe01b9b0 <line:13:5, col:25> 'int'
+|   | | |-ImplicitCastExpr 0x7f9ebe01b998 <col:5> 'int (*)(void **)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7f9ebe01b900 <col:5> '<builtin fn type>' Function 0x7f9ebe01b7b8 '__builtin_setjmp' 'int (void **)'
+|   | | `-ImplicitCastExpr 0x7f9ebe01b9e0 <col:22> 'void **' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9ebe01b928 <col:22> 'void *[5]' lvalue Var 0x7f9ebe01b4c0 'buf' 'void *[5]'
+|   | `-CallExpr 0x7f9ebe01ba90 <line:14:5, col:8> 'void'
+|   |   |-ImplicitCastExpr 0x7f9ebe01ba78 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7f9ebe01b9f8 <col:5> 'void (int)' Function 0x7f9ebe01b200 'c' 'void (int)'
+|   |   `-ImplicitCastExpr 0x7f9ebe01bac0 <col:7> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f9ebe01ba20 <col:7> 'int' lvalue Var 0x7f9ebe01b660 'b' 'int'
+|   `-CallExpr 0x7f9ebe01bb80 <line:16:3, col:5> 'void'
+|     `-ImplicitCastExpr 0x7f9ebe01bb68 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f9ebe01bb10 <col:3> 'void (void)' Function 0x7f9ebe01b3a0 'd' 'void (void)'
+`-FunctionDecl 0x7f9ebe01b7b8 <line:13:5> col:5 implicit used __builtin_setjmp 'int (void **)' extern
+  |-ParmVarDecl 0x7f9ebe01b850 <<invalid sloc>> <invalid sloc> 'void **'
+  `-ReturnsTwiceAttr 0x7f9ebe01b8b8 <col:5> Implicit

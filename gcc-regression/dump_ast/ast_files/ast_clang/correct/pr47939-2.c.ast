@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7f812b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f812b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f812b826740 '__int128'
+|-TypedefDecl 0x7f812b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f812b826760 'unsigned __int128'
+|-TypedefDecl 0x7f812b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f812b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f812b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f812b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f812b826dc0 'char *'
+|   `-BuiltinType 0x7f812b826560 'char'
+|-TypedefDecl 0x7f812b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f812b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f812b826ee0 'struct __va_list_tag'
+|     `-Record 0x7f812b826e58 '__va_list_tag'
+|-RecordDecl 0x7f812b827120 <c_files/pr47939-2.c:4:15, col:42> col:22 struct _Harry definition
+| `-FieldDecl 0x7f812c025a00 <col:31, col:35> col:35 dummy 'int'
+|-TypedefDecl 0x7f812c025aa0 <col:1, col:44> col:44 referenced Harry_t 'const struct _Harry':'const struct _Harry'
+| `-QualType 0x7f812c025a51 'const struct _Harry' const
+|   `-ElaboratedType 0x7f812c025a50 'struct _Harry' sugar
+|     `-RecordType 0x7f812b8271b0 'struct _Harry'
+|       `-Record 0x7f812b827120 '_Harry'
+`-VarDecl 0x7f812c025b40 <line:5:1, col:9> col:9 harry 'Harry_t':'const struct _Harry'

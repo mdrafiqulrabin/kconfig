@@ -1,0 +1,129 @@
+TranslationUnitDecl 0x7f94bf0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f94bf026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f94bf026740 '__int128'
+|-TypedefDecl 0x7f94bf026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f94bf026760 'unsigned __int128'
+|-TypedefDecl 0x7f94bf026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f94bf026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f94bf026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f94bf026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f94bf026dc0 'char *'
+|   `-BuiltinType 0x7f94bf026560 'char'
+|-TypedefDecl 0x7f94bf0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f94bf027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f94bf026ee0 'struct __va_list_tag'
+|     `-Record 0x7f94bf026e58 '__va_list_tag'
+|-RecordDecl 0x7f94bf027120 <c_files/pr83312.c:3:1, line:5:1> line:3:8 struct ptlrpcd_ctl definition
+| `-FieldDecl 0x7f94c0004a58 <line:4:3, col:18> col:8 referenced pc_name 'char [20]'
+|-RecordDecl 0x7f94c0004aa0 <line:6:1, line:8:1> line:6:8 struct ptlrpcd definition
+| `-FieldDecl 0x7f94c0004c98 <line:7:3, col:34> col:22 referenced pd_threads 'struct ptlrpcd_ctl [6]'
+|-VarDecl 0x7f94c0004d90 <line:9:1, col:17> col:17 used ptlrpcd_init_pd 'struct ptlrpcd *'
+|-FunctionDecl 0x7f94c0005040 <line:10:1, line:15:1> line:10:13 used ptlrpcd_ctl_init 'void (struct ptlrpcd_ctl *, int)' static
+| |-ParmVarDecl 0x7f94c0004eb0 <col:30, col:50> col:50 used pc 'struct ptlrpcd_ctl *'
+| |-ParmVarDecl 0x7f94c0004f28 <col:54, col:58> col:58 used index 'int'
+| `-CompoundStmt 0x7f94c0005970 <col:65, line:15:1>
+|   `-IfStmt 0x7f94c0005938 <line:11:3, line:14:77>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f94c0005148 <line:11:7, col:15> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f94c0005130 <col:7> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f94c00050e8 <col:7> 'int' lvalue ParmVar 0x7f94c0004f28 'index' 'int'
+|     | `-IntegerLiteral 0x7f94c0005110 <col:15> 'int' 0
+|     |-CallExpr 0x7f94c0005600 <line:12:5, col:71> 'int'
+|     | |-ImplicitCastExpr 0x7f94c00055e8 <col:5> 'int (*)(char *, unsigned long, const char *, ...)' <BuiltinFnToFnPtr>
+|     | | `-DeclRefExpr 0x7f94c00053f0 <col:5> '<builtin fn type>' Function 0x7f94c00051b8 '__builtin_snprintf' 'int (char *, unsigned long, const char *, ...)'
+|     | |-ImplicitCastExpr 0x7f94c0005640 <col:24, col:28> 'char *' <ArrayToPointerDecay>
+|     | | `-MemberExpr 0x7f94c0005458 <col:24, col:28> 'char [20]' lvalue ->pc_name 0x7f94c0004a58
+|     | |   `-ImplicitCastExpr 0x7f94c0005440 <col:24> 'struct ptlrpcd_ctl *' <LValueToRValue>
+|     | |     `-DeclRefExpr 0x7f94c0005418 <col:24> 'struct ptlrpcd_ctl *' lvalue ParmVar 0x7f94c0004eb0 'pc' 'struct ptlrpcd_ctl *'
+|     | |-UnaryExprOrTypeTraitExpr 0x7f94c0005528 <col:37, col:55> 'unsigned long' sizeof
+|     | | `-ParenExpr 0x7f94c0005508 <col:43, col:55> 'char [20]' lvalue
+|     | |   `-MemberExpr 0x7f94c00054d0 <col:44, col:48> 'char [20]' lvalue ->pc_name 0x7f94c0004a58
+|     | |     `-ImplicitCastExpr 0x7f94c00054b8 <col:44> 'struct ptlrpcd_ctl *' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7f94c0005490 <col:44> 'struct ptlrpcd_ctl *' lvalue ParmVar 0x7f94c0004eb0 'pc' 'struct ptlrpcd_ctl *'
+|     | `-ImplicitCastExpr 0x7f94c0005670 <col:58> 'const char *' <BitCast>
+|     |   `-ImplicitCastExpr 0x7f94c0005658 <col:58> 'char *' <ArrayToPointerDecay>
+|     |     `-StringLiteral 0x7f94c0005588 <col:58> 'char [12]' lvalue "ptlrpcd_rcv"
+|     `-CallExpr 0x7f94c0005890 <line:14:5, col:77> 'int'
+|       |-ImplicitCastExpr 0x7f94c0005878 <col:5> 'int (*)(char *, unsigned long, const char *, ...)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7f94c0005688 <col:5> '<builtin fn type>' Function 0x7f94c00051b8 '__builtin_snprintf' 'int (char *, unsigned long, const char *, ...)'
+|       |-ImplicitCastExpr 0x7f94c00058d8 <col:24, col:28> 'char *' <ArrayToPointerDecay>
+|       | `-MemberExpr 0x7f94c00056f0 <col:24, col:28> 'char [20]' lvalue ->pc_name 0x7f94c0004a58
+|       |   `-ImplicitCastExpr 0x7f94c00056d8 <col:24> 'struct ptlrpcd_ctl *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7f94c00056b0 <col:24> 'struct ptlrpcd_ctl *' lvalue ParmVar 0x7f94c0004eb0 'pc' 'struct ptlrpcd_ctl *'
+|       |-UnaryExprOrTypeTraitExpr 0x7f94c00057c0 <col:37, col:55> 'unsigned long' sizeof
+|       | `-ParenExpr 0x7f94c00057a0 <col:43, col:55> 'char [20]' lvalue
+|       |   `-MemberExpr 0x7f94c0005768 <col:44, col:48> 'char [20]' lvalue ->pc_name 0x7f94c0004a58
+|       |     `-ImplicitCastExpr 0x7f94c0005750 <col:44> 'struct ptlrpcd_ctl *' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7f94c0005728 <col:44> 'struct ptlrpcd_ctl *' lvalue ParmVar 0x7f94c0004eb0 'pc' 'struct ptlrpcd_ctl *'
+|       |-ImplicitCastExpr 0x7f94c0005908 <col:58> 'const char *' <BitCast>
+|       | `-ImplicitCastExpr 0x7f94c00058f0 <col:58> 'char *' <ArrayToPointerDecay>
+|       |   `-StringLiteral 0x7f94c0005818 <col:58> 'char [11]' lvalue "ptlrpcd_%d"
+|       `-ImplicitCastExpr 0x7f94c0005920 <col:72> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f94c0005850 <col:72> 'int' lvalue ParmVar 0x7f94c0004f28 'index' 'int'
+|-FunctionDecl 0x7f94c00051b8 <line:12:5> col:5 implicit used __builtin_snprintf 'int (char *, unsigned long, const char *, ...)' extern
+| |-ParmVarDecl 0x7f94c0005250 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7f94c00052b0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7f94c0005310 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-FormatAttr 0x7f94c0005388 <col:5> Implicit printf 3 4
+| `-NoThrowAttr 0x7f94c00053e0 <col:5> Implicit
+|-VarDecl 0x7f94c0005e00 <line:16:1, col:5> col:5 used ptlrpcd_init_ncpts 'int'
+|-FunctionDecl 0x7f94c0005f48 <line:17:1, line:25:1> line:17:12 used ptlrpcd_init 'int (int)' static
+| |-ParmVarDecl 0x7f94c0005e78 <col:25, col:29> col:29 used nthreads 'int'
+| `-CompoundStmt 0x7f94c00066c8 <col:39, line:25:1>
+|   |-DeclStmt 0x7f94c0006060 <line:18:3, col:8>
+|   | `-VarDecl 0x7f94c0006000 <col:3, col:7> col:7 used j 'int'
+|   |-IfStmt 0x7f94c0006658 <line:19:3, line:23:3>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f94c00060a0 <line:19:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f94c0006078 <col:7> 'int' lvalue Var 0x7f94c0005e00 'ptlrpcd_init_ncpts' 'int'
+|   | |-CompoundStmt 0x7f94c0006630 <col:27, line:23:3>
+|   | | |-CallExpr 0x7f94c0006290 <line:20:5, col:57> 'void'
+|   | | | |-ImplicitCastExpr 0x7f94c0006278 <col:5> 'void (*)(struct ptlrpcd_ctl *, int)' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7f94c00060b8 <col:5> 'void (struct ptlrpcd_ctl *, int)' Function 0x7f94c0005040 'ptlrpcd_ctl_init' 'void (struct ptlrpcd_ctl *, int)'
+|   | | | |-UnaryOperator 0x7f94c00061b8 <col:22, col:52> 'struct ptlrpcd_ctl *' prefix '&'
+|   | | | | `-ArraySubscriptExpr 0x7f94c0006190 <col:23, col:52> 'struct ptlrpcd_ctl':'struct ptlrpcd_ctl' lvalue
+|   | | | |   |-ImplicitCastExpr 0x7f94c0006178 <col:23, col:40> 'struct ptlrpcd_ctl *' <ArrayToPointerDecay>
+|   | | | |   | `-MemberExpr 0x7f94c0006120 <col:23, col:40> 'struct ptlrpcd_ctl [6]' lvalue ->pd_threads 0x7f94c0004c98
+|   | | | |   |   `-ImplicitCastExpr 0x7f94c0006108 <col:23> 'struct ptlrpcd *' <LValueToRValue>
+|   | | | |   |     `-DeclRefExpr 0x7f94c00060e0 <col:23> 'struct ptlrpcd *' lvalue Var 0x7f94c0004d90 'ptlrpcd_init_pd' 'struct ptlrpcd *'
+|   | | | |   `-IntegerLiteral 0x7f94c0006158 <col:51> 'int' 0
+|   | | | `-UnaryOperator 0x7f94c00061f8 <col:55, col:56> 'int' prefix '-'
+|   | | |   `-IntegerLiteral 0x7f94c00061d8 <col:56> 'int' 1
+|   | | `-ForStmt 0x7f94c00065f8 <line:21:5, line:22:58>
+|   | |   |-BinaryOperator 0x7f94c0006310 <line:21:10, col:14> 'int' '='
+|   | |   | |-DeclRefExpr 0x7f94c00062c8 <col:10> 'int' lvalue Var 0x7f94c0006000 'j' 'int'
+|   | |   | `-IntegerLiteral 0x7f94c00062f0 <col:14> 'int' 1
+|   | |   |-<<<NULL>>>
+|   | |   |-BinaryOperator 0x7f94c00063b8 <col:17, col:21> 'int' '<'
+|   | |   | |-ImplicitCastExpr 0x7f94c0006388 <col:17> 'int' <LValueToRValue>
+|   | |   | | `-DeclRefExpr 0x7f94c0006338 <col:17> 'int' lvalue Var 0x7f94c0006000 'j' 'int'
+|   | |   | `-ImplicitCastExpr 0x7f94c00063a0 <col:21> 'int' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x7f94c0006360 <col:21> 'int' lvalue ParmVar 0x7f94c0005e78 'nthreads' 'int'
+|   | |   |-UnaryOperator 0x7f94c0006408 <col:31, col:32> 'int' postfix '++'
+|   | |   | `-DeclRefExpr 0x7f94c00063e0 <col:31> 'int' lvalue Var 0x7f94c0006000 'j' 'int'
+|   | |   `-CallExpr 0x7f94c00065a8 <line:22:7, col:58> 'void'
+|   | |     |-ImplicitCastExpr 0x7f94c0006590 <col:7> 'void (*)(struct ptlrpcd_ctl *, int)' <FunctionToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7f94c0006428 <col:7> 'void (struct ptlrpcd_ctl *, int)' Function 0x7f94c0005040 'ptlrpcd_ctl_init' 'void (struct ptlrpcd_ctl *, int)'
+|   | |     |-UnaryOperator 0x7f94c0006548 <col:24, col:54> 'struct ptlrpcd_ctl *' prefix '&'
+|   | |     | `-ArraySubscriptExpr 0x7f94c0006520 <col:25, col:54> 'struct ptlrpcd_ctl':'struct ptlrpcd_ctl' lvalue
+|   | |     |   |-ImplicitCastExpr 0x7f94c00064f0 <col:25, col:42> 'struct ptlrpcd_ctl *' <ArrayToPointerDecay>
+|   | |     |   | `-MemberExpr 0x7f94c0006490 <col:25, col:42> 'struct ptlrpcd_ctl [6]' lvalue ->pd_threads 0x7f94c0004c98
+|   | |     |   |   `-ImplicitCastExpr 0x7f94c0006478 <col:25> 'struct ptlrpcd *' <LValueToRValue>
+|   | |     |   |     `-DeclRefExpr 0x7f94c0006450 <col:25> 'struct ptlrpcd *' lvalue Var 0x7f94c0004d90 'ptlrpcd_init_pd' 'struct ptlrpcd *'
+|   | |     |   `-ImplicitCastExpr 0x7f94c0006508 <col:53> 'int' <LValueToRValue>
+|   | |     |     `-DeclRefExpr 0x7f94c00064c8 <col:53> 'int' lvalue Var 0x7f94c0006000 'j' 'int'
+|   | |     `-ImplicitCastExpr 0x7f94c00065e0 <col:57> 'int' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f94c0006568 <col:57> 'int' lvalue Var 0x7f94c0006000 'j' 'int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f94c00066b0 <line:24:3, col:10>
+|     `-IntegerLiteral 0x7f94c0006690 <col:10> 'int' 0
+|-VarDecl 0x7f94c0006710 <line:26:1, col:5> col:5 used ptlrpcd_init_groupsize 'int'
+`-FunctionDecl 0x7f94c0006830 <line:27:1, line:29:1> line:27:6 ptlrpcd_addref 'void (void)'
+  `-CompoundStmt 0x7f94c00069a8 <col:27, line:29:1>
+    `-CallExpr 0x7f94c0006960 <line:28:5, col:40> 'int'
+      |-ImplicitCastExpr 0x7f94c0006948 <col:5> 'int (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f94c00068c8 <col:5> 'int (int)' Function 0x7f94c0005f48 'ptlrpcd_init' 'int (int)'
+      `-ImplicitCastExpr 0x7f94c0006990 <col:18> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f94c00068f0 <col:18> 'int' lvalue Var 0x7f94c0006710 'ptlrpcd_init_groupsize' 'int'

@@ -1,0 +1,89 @@
+FileAST: 
+  Typedef: closure_test_type3, [], ['typedef']
+    PtrDecl: []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['double']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+        TypeDecl: closure_test_type3, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: pcl, [], [], []
+            TypeDecl: pcl, []
+              IdentifierType: ['closure_test_type3']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: res, [], [], []
+        TypeDecl: res, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: res
+        FuncCall: 
+          ID: pcl
+          ExprList: 
+            Constant: float, 1.1
+            Constant: float, 2.2
+            Constant: float, 3.3
+            Constant: float, 4.4
+            Constant: float, 5.5
+            Constant: float, 6.6
+            Constant: float, 7.7
+            Constant: float, 8.8
+            Constant: int, 9
+            Constant: int, 10
+            Constant: float, 11.11
+            Constant: float, 12.0
+            Constant: int, 13
+            Constant: float, 19.19
+            Constant: float, 21.21
+            Constant: int, 1

@@ -1,0 +1,53 @@
+c_files/pr34607.c:8:15: error: expected expression
+  for (int i =; i < 2; ++i)     /* { dg-error "expected expression before" } */
+              ^
+c_files/pr34607.c:11:8: error: use of undeclared identifier 'T'
+  for (T i = 54; i < 56; i++)   /* { dg-error "unknown type name" } */
+       ^
+c_files/pr34607.c:11:18: error: use of undeclared identifier 'i'
+  for (T i = 54; i < 56; i++)   /* { dg-error "unknown type name" } */
+                 ^
+c_files/pr34607.c:11:26: error: use of undeclared identifier 'i'
+  for (T i = 54; i < 56; i++)   /* { dg-error "unknown type name" } */
+                         ^
+c_files/pr34607.c:13:3: error: use of undeclared identifier 'T'
+  T j;                          /* { dg-error "unknown type name" } */
+  ^
+c_files/pr34607.c:15:8: error: use of undeclared identifier 'j'
+  for (j = 1; j < 3; j++)
+       ^
+c_files/pr34607.c:15:15: error: use of undeclared identifier 'j'
+  for (j = 1; j < 3; j++)
+              ^
+c_files/pr34607.c:15:22: error: use of undeclared identifier 'j'
+  for (j = 1; j < 3; j++)
+                     ^
+8 errors generated.
+TranslationUnitDecl 0x7ff3fa0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff3fa026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff3fa026740 '__int128'
+|-TypedefDecl 0x7ff3fa026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff3fa026760 'unsigned __int128'
+|-TypedefDecl 0x7ff3fa026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff3fa026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff3fa026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff3fa026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff3fa026dc0 'char *'
+|   `-BuiltinType 0x7ff3fa026560 'char'
+|-TypedefDecl 0x7ff3fa0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff3fa027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff3fa026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff3fa026e58 '__va_list_tag'
+`-FunctionDecl 0x7ff3fa027168 <c_files/pr34607.c:4:1, line:17:1> line:5:1 foo 'void ()'
+  `-CompoundStmt 0x7ff3fa077720 <line:6:1, line:17:1>
+    `-ForStmt 0x7ff3fa0775b0 <line:8:3, line:9:5>
+      |-DeclStmt 0x7ff3fa0774b8 <line:8:8, col:15>
+      | `-VarDecl 0x7ff3fa077458 <col:8, col:12> col:12 used i 'int'
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff3fa077530 <col:17, col:21> 'int' '<'
+      | |-ImplicitCastExpr 0x7ff3fa077518 <col:17> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff3fa0774d0 <col:17> 'int' lvalue Var 0x7ff3fa077458 'i' 'int'
+      | `-IntegerLiteral 0x7ff3fa0774f8 <col:21> 'int' 2
+      |-UnaryOperator 0x7ff3fa077580 <col:24, col:26> 'int' prefix '++'
+      | `-DeclRefExpr 0x7ff3fa077558 <col:26> 'int' lvalue Var 0x7ff3fa077458 'i' 'int'
+      `-NullStmt 0x7ff3fa0775a0 <line:9:5>

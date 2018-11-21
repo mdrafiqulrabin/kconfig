@@ -1,0 +1,106 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['long']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['long']
+  Decl: baz, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: baz, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: bar, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: S
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        ArrayDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['char']
+          Constant: int, 8
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 8
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: c
+            ID: i
+          BinaryOp: >>
+            StructRef: ->
+              ID: x
+              ID: a
+            BinaryOp: *
+              BinaryOp: -
+                Constant: int, 7
+                ID: i
+              Constant: int, 8
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: c
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['char']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                Struct: S
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          Struct: S
+        UnaryOp: *
+          ID: y
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        UnaryOp: *
+          ID: x
+        UnaryOp: p++
+          ID: x
+        UnaryOp: p++
+          ID: i
+      If: 
+        BinaryOp: !=
+          ID: i
+          Constant: int, 1
+        Return: 
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          UnaryOp: &
+            ID: d

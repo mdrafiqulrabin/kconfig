@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7fe9358264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe935826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe935826740 '__int128'
+|-TypedefDecl 0x7fe935826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe935826760 'unsigned __int128'
+|-TypedefDecl 0x7fe935826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe935826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe935826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe935826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe935826dc0 'char *'
+|   `-BuiltinType 0x7fe935826560 'char'
+|-TypedefDecl 0x7fe9358270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe935827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe935826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe935826e58 '__va_list_tag'
+|-EnumDecl 0x7fe935827120 <c_files/pr82404.c:6:1, col:53> col:6 eShape
+| |-EnumConstantDecl 0x7fe936025a00 <col:15> col:15 referenced eSquare 'int'
+| |-EnumConstantDecl 0x7fe936025a48 <col:24> col:24 referenced eCircle 'int'
+| |-EnumConstantDecl 0x7fe936025a90 <col:33> col:33 referenced eShpere 'int'
+| `-EnumConstantDecl 0x7fe936025ad8 <col:42> col:42 referenced eTetraeder 'int'
+`-FunctionDecl 0x7fe936025d08 <line:8:1, line:15:1> line:8:8 test_switch_native 'double (enum eShape, double)'
+  |-ParmVarDecl 0x7fe936025b70 <col:27, col:39> col:39 used shape 'enum eShape':'enum eShape'
+  |-ParmVarDecl 0x7fe936025be8 <col:46, col:53> col:53 r 'double'
+  `-CompoundStmt 0x7fe9360261d0 <col:56, line:15:1>
+    `-SwitchStmt 0x7fe936025e48 <line:9:5, line:14:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fe936025e30 <line:9:12> 'unsigned int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fe936025e18 <col:12> 'enum eShape':'enum eShape' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe936025df0 <col:12> 'enum eShape':'enum eShape' lvalue ParmVar 0x7fe936025b70 'shape' 'enum eShape':'enum eShape'
+      `-CompoundStmt 0x7fe936026138 <col:19, line:14:5>
+        |-CaseStmt 0x7fe936025ea0 <line:10:5, col:29>
+        | |-ImplicitCastExpr 0x7fe9360261b8 <col:10> 'unsigned int' <IntegralCast>
+        | | `-DeclRefExpr 0x7fe936025e78 <col:10> 'int' EnumConstant 0x7fe936025a00 'eSquare' 'int'
+        | |-<<<NULL>>>
+        | `-ReturnStmt 0x7fe936025f10 <col:22, col:29>
+        |   `-ImplicitCastExpr 0x7fe936025ef8 <col:29> 'double' <IntegralToFloating>
+        |     `-IntegerLiteral 0x7fe936025ed8 <col:29> 'int' 2
+        |-CaseStmt 0x7fe936025f50 <line:11:5, col:29>
+        | |-ImplicitCastExpr 0x7fe9360261a0 <col:10> 'unsigned int' <IntegralCast>
+        | | `-DeclRefExpr 0x7fe936025f28 <col:10> 'int' EnumConstant 0x7fe936025a48 'eCircle' 'int'
+        | |-<<<NULL>>>
+        | `-ReturnStmt 0x7fe936025fc0 <col:22, col:29>
+        |   `-ImplicitCastExpr 0x7fe936025fa8 <col:29> 'double' <IntegralToFloating>
+        |     `-IntegerLiteral 0x7fe936025f88 <col:29> 'int' 3
+        |-CaseStmt 0x7fe936026000 <line:12:5, col:29>
+        | |-ImplicitCastExpr 0x7fe936026188 <col:10> 'unsigned int' <IntegralCast>
+        | | `-DeclRefExpr 0x7fe936025fd8 <col:10> 'int' EnumConstant 0x7fe936025a90 'eShpere' 'int'
+        | |-<<<NULL>>>
+        | `-ReturnStmt 0x7fe936026070 <col:22, col:29>
+        |   `-ImplicitCastExpr 0x7fe936026058 <col:29> 'double' <IntegralToFloating>
+        |     `-IntegerLiteral 0x7fe936026038 <col:29> 'int' 4
+        `-CaseStmt 0x7fe9360260b0 <line:13:5, col:29>
+          |-ImplicitCastExpr 0x7fe936026170 <col:10> 'unsigned int' <IntegralCast>
+          | `-DeclRefExpr 0x7fe936026088 <col:10> 'int' EnumConstant 0x7fe936025ad8 'eTetraeder' 'int'
+          |-<<<NULL>>>
+          `-ReturnStmt 0x7fe936026120 <col:22, col:29>
+            `-ImplicitCastExpr 0x7fe936026108 <col:29> 'double' <IntegralToFloating>
+              `-IntegerLiteral 0x7fe9360260e8 <col:29> 'int' 5

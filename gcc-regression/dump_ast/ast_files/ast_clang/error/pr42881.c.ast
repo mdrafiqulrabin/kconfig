@@ -1,0 +1,48 @@
+c_files/pr42881.c:6:10: fatal error: 'sse2-check.h' file not found
+#include "sse2-check.h"
+         ^~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fb6d50264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb6d5026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb6d5026740 '__int128'
+|-TypedefDecl 0x7fb6d5026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb6d5026760 'unsigned __int128'
+|-TypedefDecl 0x7fb6d5026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb6d5026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb6d5026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb6d5026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb6d5026dc0 'char *'
+|   `-BuiltinType 0x7fb6d5026560 'char'
+|-TypedefDecl 0x7fb6d50270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb6d5027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb6d5026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb6d5026e58 '__va_list_tag'
+|-FunctionDecl 0x7fb6d5826a00 <c_files/pr42881.c:7:1, line:15:1> line:8:1 sse2_test 'void (void)' static
+| `-CompoundStmt 0x7fb6d5827130 <line:9:1, line:15:1>
+|   |-DeclStmt 0x7fb6d5826bc0 <line:10:3, col:14>
+|   | `-VarDecl 0x7fb6d5826b60 <col:3, col:13> col:10 used a 'double [2]'
+|   `-IfStmt 0x7fb6d58270f8 <line:13:3, line:14:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fb6d5826f20 <line:13:7, col:30> 'int' '||'
+|     | |-BinaryOperator 0x7fb6d5826e10 <col:7, col:15> 'int' '!='
+|     | | |-ImplicitCastExpr 0x7fb6d5826df8 <col:7, col:10> 'double' <LValueToRValue>
+|     | | | `-ArraySubscriptExpr 0x7fb6d5826db0 <col:7, col:10> 'double' lvalue
+|     | | |   |-ImplicitCastExpr 0x7fb6d5826d98 <col:7> 'double *' <ArrayToPointerDecay>
+|     | | |   | `-DeclRefExpr 0x7fb6d5826d28 <col:7> 'double [2]' lvalue Var 0x7fb6d5826b60 'a' 'double [2]'
+|     | | |   `-IntegerLiteral 0x7fb6d5826d50 <col:9> 'int' 0
+|     | | `-FloatingLiteral 0x7fb6d5826dd8 <col:15> 'double' 3.000000e+00
+|     | `-BinaryOperator 0x7fb6d5826ef8 <col:22, col:30> 'int' '!='
+|     |   |-ImplicitCastExpr 0x7fb6d5826ee0 <col:22, col:25> 'double' <LValueToRValue>
+|     |   | `-ArraySubscriptExpr 0x7fb6d5826e98 <col:22, col:25> 'double' lvalue
+|     |   |   |-ImplicitCastExpr 0x7fb6d5826e80 <col:22> 'double *' <ArrayToPointerDecay>
+|     |   |   | `-DeclRefExpr 0x7fb6d5826e38 <col:22> 'double [2]' lvalue Var 0x7fb6d5826b60 'a' 'double [2]'
+|     |   |   `-IntegerLiteral 0x7fb6d5826e60 <col:24> 'int' 1
+|     |   `-FloatingLiteral 0x7fb6d5826ec0 <col:30> 'double' 3.000000e+00
+|     |-CallExpr 0x7fb6d58270d0 <line:14:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7fb6d58270b8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7fb6d5827060 <col:5> '<builtin fn type>' Function 0x7fb6d5826f80 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fb6d5826c40 <<invalid sloc>> line:12:3 implicit used _mm_storeu_pd 'int ()'
+`-FunctionDecl 0x7fb6d5826f80 <line:14:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fb6d5827018 <col:5> Implicit

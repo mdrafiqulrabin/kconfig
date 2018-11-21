@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fd0090264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd009026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd009026740 '__int128'
+|-TypedefDecl 0x7fd009026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd009026760 'unsigned __int128'
+|-TypedefDecl 0x7fd009026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd009026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd009026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd009026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd009026dc0 'char *'
+|   `-BuiltinType 0x7fd009026560 'char'
+|-TypedefDecl 0x7fd0090270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd009027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd009026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd009026e58 '__va_list_tag'
+`-FunctionDecl 0x7fd009077470 <c_files/pr26869.c:3:1, line:7:1> line:3:16 f '_Complex float (_Complex float, _Complex float)'
+  |-ParmVarDecl 0x7fd009027130 <col:19, col:34> col:34 b '_Complex float'
+  |-ParmVarDecl 0x7fd0090271a0 <col:37, col:52> col:52 used c '_Complex float'
+  `-CompoundStmt 0x7fd009077738 <line:4:1, line:7:1>
+    |-DeclStmt 0x7fd009077660 <line:5:3, col:32>
+    | `-VarDecl 0x7fd009077568 <col:3, col:28> col:18 used a '_Complex float' cinit
+    |   `-ImplicitCastExpr 0x7fd009077648 <col:22, col:28> '_Complex float' <FloatingComplexCast>
+    |     `-BinaryOperator 0x7fd009077620 <col:22, col:28> '_Complex double' '+'
+    |       |-FloatingLiteral 0x7fd0090775c8 <col:22> 'double' 1.000000e+00
+    |       `-ImaginaryLiteral 0x7fd009077608 <col:28> '_Complex double'
+    |         `-FloatingLiteral 0x7fd0090775e8 <col:28> 'double' 0.000000e+00
+    `-ReturnStmt 0x7fd009077720 <line:6:3, col:14>
+      `-BinaryOperator 0x7fd0090776f8 <col:10, col:14> '_Complex float' '/'
+        |-ImplicitCastExpr 0x7fd0090776c8 <col:10> '_Complex float' <LValueToRValue>
+        | `-DeclRefExpr 0x7fd009077678 <col:10> '_Complex float' lvalue Var 0x7fd009077568 'a' '_Complex float'
+        `-ImplicitCastExpr 0x7fd0090776e0 <col:14> '_Complex float' <LValueToRValue>
+          `-DeclRefExpr 0x7fd0090776a0 <col:14> '_Complex float' lvalue ParmVar 0x7fd0090271a0 'c' '_Complex float'

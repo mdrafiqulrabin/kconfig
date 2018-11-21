@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fab200264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fab20026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fab20026740 '__int128'
+|-TypedefDecl 0x7fab20026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fab20026760 'unsigned __int128'
+|-TypedefDecl 0x7fab20026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fab20026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fab20026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fab20026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fab20026dc0 'char *'
+|   `-BuiltinType 0x7fab20026560 'char'
+|-TypedefDecl 0x7fab200270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fab20027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fab20026ee0 'struct __va_list_tag'
+|     `-Record 0x7fab20026e58 '__va_list_tag'
+|-RecordDecl 0x7fab20027120 <c_files/pr26421.c:4:9, line:8:1> line:4:9 struct definition
+| |-FieldDecl 0x7fab20825a00 <line:5:3, col:7> col:7 referenced i 'int'
+| |-FieldDecl 0x7fab20825a60 <line:6:3, col:7> col:7 j 'int'
+| `-FieldDecl 0x7fab20825ac0 <line:7:3, col:7> col:7 k 'int'
+|-TypedefDecl 0x7fab20825b60 <line:4:1, line:8:3> col:3 referenced Foo 'struct Foo':'Foo'
+| `-ElaboratedType 0x7fab20825b10 'struct Foo' sugar
+|   `-RecordType 0x7fab200271b0 'Foo'
+|     `-Record 0x7fab20027120 ''
+|-FunctionDecl 0x7fab20825d60 <line:10:1, col:14> col:6 used bar 'void (Foo *)'
+| `-ParmVarDecl 0x7fab20825c58 <col:10, col:13> col:14 'Foo *'
+`-FunctionDecl 0x7fab20825f08 <line:11:1, line:17:1> line:11:5 foo 'int (void)'
+  `-CompoundStmt 0x7fab208262d0 <line:12:1, line:17:1>
+    |-DeclStmt 0x7fab20826010 <line:13:3, col:8>
+    | `-VarDecl 0x7fab20825fb0 <col:3, col:7> col:7 used a 'Foo':'Foo'
+    |-BinaryOperator 0x7fab208260a8 <line:14:3, col:9> 'int' '='
+    | |-MemberExpr 0x7fab20826050 <col:3, col:5> 'int' lvalue .i 0x7fab20825a00
+    | | `-DeclRefExpr 0x7fab20826028 <col:3> 'Foo':'Foo' lvalue Var 0x7fab20825fb0 'a' 'Foo':'Foo'
+    | `-IntegerLiteral 0x7fab20826088 <col:9> 'int' 1
+    |-CallExpr 0x7fab20826210 <line:15:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7fab208261f8 <col:3> 'void (*)(Foo *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fab20826128 <col:3> 'void (Foo *)' Function 0x7fab20825d60 'bar' 'void (Foo *)'
+    | `-UnaryOperator 0x7fab20826178 <col:7, col:8> 'Foo *' prefix '&'
+    |   `-DeclRefExpr 0x7fab20826150 <col:8> 'Foo':'Foo' lvalue Var 0x7fab20825fb0 'a' 'Foo':'Foo'
+    `-ReturnStmt 0x7fab208262b8 <line:16:3, col:12>
+      `-ImplicitCastExpr 0x7fab208262a0 <col:10, col:12> 'int' <LValueToRValue>
+        `-MemberExpr 0x7fab20826268 <col:10, col:12> 'int' lvalue .i 0x7fab20825a00
+          `-DeclRefExpr 0x7fab20826240 <col:10> 'Foo':'Foo' lvalue Var 0x7fab20825fb0 'a' 'Foo':'Foo'

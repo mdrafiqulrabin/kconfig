@@ -1,0 +1,44 @@
+c_files/pr15698-1.c:12:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr15698-1.c:20:21: warning: promoted type 'char *' of K&R function parameter is not compatible with the parameter type 'const char *' declared in a previous prototype [-Wknr-promoted-parameter]
+     register char *a, b; /* { dg-warning "argument 'a' doesn't match built-in prototype" } */
+                    ^
+2 warnings generated.
+TranslationUnitDecl 0x7fda990264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fda99026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fda99026740 '__int128'
+|-TypedefDecl 0x7fda99026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fda99026760 'unsigned __int128'
+|-TypedefDecl 0x7fda99026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fda99026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fda99026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fda99026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fda99026dc0 'char *'
+|   `-BuiltinType 0x7fda99026560 'char'
+|-TypedefDecl 0x7fda990270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fda99027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fda99026ee0 'struct __va_list_tag'
+|     `-Record 0x7fda99026e58 '__va_list_tag'
+|-FunctionDecl 0x7fda99077400 <c_files/pr15698-1.c:7:1, col:13> col:5 foobar 'int ()'
+|-FunctionDecl 0x7fda990775b8 <line:9:1, line:12:1> line:9:5 func 'int (int)'
+| |-ParmVarDecl 0x7fda990774f0 <col:11, col:15> col:15 blah 'int'
+| `-CompoundStmt 0x7fda990779e8 <line:10:1, line:12:1>
+|   `-DeclStmt 0x7fda990779d0 <line:11:3, col:17>
+|     `-FunctionDecl 0x7fda99077858 parent 0x7fda990264d0 prev 0x7fda990776f0 <col:3, col:16> col:9 rindex 'char *(const char *, int)'
+|       |-ParmVarDecl 0x7fda99077900 <<invalid sloc>> <invalid sloc> implicit 'const char *'
+|       `-ParmVarDecl 0x7fda99077960 <<invalid sloc>> <invalid sloc> implicit 'int'
+|-FunctionDecl 0x7fda990776f0 <col:9> col:9 implicit rindex 'char *(const char *, int)' extern
+| |-ParmVarDecl 0x7fda99077788 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7fda990777e8 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fda99077a30 prev 0x7fda99077400 <line:14:1, line:17:1> line:14:5 foobar 'int ()'
+| `-CompoundStmt 0x7fda99077b00 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7fda99077ae8 <line:16:3, col:10>
+|     `-IntegerLiteral 0x7fda99077ac8 <col:10> 'int' 0
+`-FunctionDecl 0x7fda99077c88 prev 0x7fda99077858 <line:19:1, line:23:1> line:19:7 rindex 'char *(char *, char)'
+  |-ParmVarDecl 0x7fda99077b38 <line:20:6, col:21> col:21 a 'char *' register
+  |-ParmVarDecl 0x7fda99077ba8 <col:6, col:24> col:24 b 'char' register
+  `-CompoundStmt 0x7fda99078170 <line:21:1, line:23:1>
+    `-ReturnStmt 0x7fda99078158 <line:22:3, col:10>
+      `-ImplicitCastExpr 0x7fda99078140 <col:10> 'char *' <NullToPointer>
+        `-IntegerLiteral 0x7fda99078120 <col:10> 'int' 0

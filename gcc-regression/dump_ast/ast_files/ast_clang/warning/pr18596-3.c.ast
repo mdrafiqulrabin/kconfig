@@ -1,0 +1,58 @@
+c_files/pr18596-3.c:6:10: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+  static g () = 0; /* { dg-error "invalid storage class" } */
+  ~~~~~~ ^
+c_files/pr18596-3.c:6:3: error: function declared in block scope cannot have 'static' storage class
+  static g () = 0; /* { dg-error "invalid storage class" } */
+  ^
+c_files/pr18596-3.c:6:10: error: illegal initializer (only variables can be initialized)
+  static g () = 0; /* { dg-error "invalid storage class" } */
+         ^
+c_files/pr18596-3.c:7:3: error: function declared in block scope cannot have 'static' storage class
+  static int f () = 1; /* { dg-error "invalid storage class" } */
+  ^
+c_files/pr18596-3.c:7:14: error: illegal initializer (only variables can be initialized)
+  static int f () = 1; /* { dg-error "invalid storage class" } */
+             ^
+c_files/pr18596-3.c:8:3: error: illegal storage class on function
+  auto int h () = 0; /* { dg-error "initialized like a variable" } */
+  ^
+c_files/pr18596-3.c:10:3: error: function declared in block scope cannot have 'static' storage class
+  static int i () = { 0 }; /* { dg-error "invalid storage class" } */
+  ^
+c_files/pr18596-3.c:10:14: error: illegal initializer (only variables can be initialized)
+  static int i () = { 0 }; /* { dg-error "invalid storage class" } */
+             ^
+c_files/pr18596-3.c:11:3: error: function declared in block scope cannot have 'static' storage class
+  static int j () = /* { dg-error "invalid storage class" } */
+  ^
+c_files/pr18596-3.c:11:14: error: illegal initializer (only variables can be initialized)
+  static int j () = /* { dg-error "invalid storage class" } */
+             ^
+1 warning and 9 errors generated.
+TranslationUnitDecl 0x7fb05f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb05f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb05f026740 '__int128'
+|-TypedefDecl 0x7fb05f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb05f026760 'unsigned __int128'
+|-TypedefDecl 0x7fb05f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb05f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb05f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb05f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb05f026dc0 'char *'
+|   `-BuiltinType 0x7fb05f026560 'char'
+|-TypedefDecl 0x7fb05f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb05f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb05f026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb05f026e58 '__va_list_tag'
+`-FunctionDecl 0x7fb05f077400 <c_files/pr18596-3.c:4:1, line:13:1> line:4:5 foo 'int ()'
+  `-CompoundStmt 0x7fb05f077ab8 <line:5:1, line:13:1>
+    |-DeclStmt 0x7fb05f0775c8 <line:6:3, col:18>
+    | `-FunctionDecl 0x7fb05f077500 parent 0x7fb05f0264d0 <col:3, col:13> col:10 invalid g 'int ()'
+    |-DeclStmt 0x7fb05f0776d0 <line:7:3, col:22>
+    | `-FunctionDecl 0x7fb05f077608 parent 0x7fb05f0264d0 <col:3, col:17> col:14 invalid f 'int ()'
+    |-DeclStmt 0x7fb05f0777d8 <line:8:3, col:20>
+    | `-FunctionDecl 0x7fb05f077710 parent 0x7fb05f0264d0 <col:3, col:15> col:12 invalid h 'int ()'
+    |-DeclStmt 0x7fb05f077928 <line:10:3, col:26>
+    | `-FunctionDecl 0x7fb05f077818 parent 0x7fb05f0264d0 <col:3, col:17> col:14 invalid i 'int ()'
+    `-DeclStmt 0x7fb05f077aa0 <line:11:3, line:12:12>
+      `-FunctionDecl 0x7fb05f077968 parent 0x7fb05f0264d0 <line:11:3, col:17> col:14 invalid j 'int ()'

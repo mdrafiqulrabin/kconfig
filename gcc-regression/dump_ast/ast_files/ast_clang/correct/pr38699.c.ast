@@ -1,0 +1,282 @@
+TranslationUnitDecl 0x7fade80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fade8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fade8026740 '__int128'
+|-TypedefDecl 0x7fade8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fade8026760 'unsigned __int128'
+|-TypedefDecl 0x7fade8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fade8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fade8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fade8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fade8026dc0 'char *'
+|   `-BuiltinType 0x7fade8026560 'char'
+|-TypedefDecl 0x7fade80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fade8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fade8026ee0 'struct __va_list_tag'
+|     `-Record 0x7fade8026e58 '__va_list_tag'
+|-FunctionDecl 0x7fade8826a00 <c_files/pr38699.c:21:1, line:29:1> line:21:13 used delay_wait_us 'void (unsigned char)' static
+| |-ParmVarDecl 0x7fade8027138 <col:28, col:42> col:42 used timeout 'unsigned char'
+| `-CompoundStmt 0x7fade8827280 <col:52, line:29:1>
+|   |-GCCAsmStmt 0x7fade8826b48 <line:22:5, col:32>
+|   |-BinaryOperator 0x7fade8826d58 <line:11:27, line:24:13> 'unsigned char' '='
+|   | |-ParenExpr 0x7fade8826cf8 <line:11:27, col:73> 'volatile unsigned char' lvalue
+|   | | `-UnaryOperator 0x7fade8826cd8 <col:28, col:72> 'volatile unsigned char' lvalue prefix '*'
+|   | |   `-CStyleCastExpr 0x7fade8826cb0 <col:29, col:72> 'volatile unsigned char *' <IntegralToPointer>
+|   | |     `-ParenExpr 0x7fade8826c90 <col:55, col:72> 'int'
+|   | |       `-BinaryOperator 0x7fade8826bf0 <col:56, col:68> 'int' '+'
+|   | |         |-ParenExpr 0x7fade8826bb0 <col:56, col:64> 'int'
+|   | |         | `-IntegerLiteral 0x7fade8826b90 <line:13:27> 'int' 50
+|   | |         `-IntegerLiteral 0x7fade8826bd0 <line:11:68> 'int' 32
+|   | `-ImplicitCastExpr 0x7fade8826d40 <line:24:13> 'unsigned char' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fade8826d18 <col:13> 'unsigned char' lvalue ParmVar 0x7fade8027138 'timeout' 'unsigned char'
+|   |-CompoundAssignOperator 0x7fade8826f80 <line:11:27, line:25:25> 'unsigned char' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-ParenExpr 0x7fade8826eb8 <line:11:27, col:73> 'volatile unsigned char' lvalue
+|   | | `-UnaryOperator 0x7fade8826e98 <col:28, col:72> 'volatile unsigned char' lvalue prefix '*'
+|   | |   `-CStyleCastExpr 0x7fade8826e70 <col:29, col:72> 'volatile unsigned char *' <IntegralToPointer>
+|   | |     `-ParenExpr 0x7fade8826e50 <col:55, col:72> 'int'
+|   | |       `-BinaryOperator 0x7fade8826de0 <col:56, col:68> 'int' '+'
+|   | |         |-ParenExpr 0x7fade8826da0 <col:56, col:64> 'int'
+|   | |         | `-IntegerLiteral 0x7fade8826d80 <line:14:26> 'int' 56
+|   | |         `-IntegerLiteral 0x7fade8826dc0 <line:11:68> 'int' 32
+|   | `-ParenExpr 0x7fade8826f60 <line:25:13, col:25> 'int'
+|   |   `-BinaryOperator 0x7fade8826f38 <col:14, col:24> 'int' '<<'
+|   |     |-IntegerLiteral 0x7fade8826ed8 <col:14> 'int' 1
+|   |     `-ParenExpr 0x7fade8826f18 <col:19, col:24> 'int'
+|   |       `-IntegerLiteral 0x7fade8826ef8 <line:12:17> 'int' 0
+|   `-WhileStmt 0x7fade8827260 <line:28:5, col:35>
+|     |-<<<NULL>>>
+|     |-UnaryOperator 0x7fade8827230 <col:11, col:33> 'int' prefix '!'
+|     | `-ParenExpr 0x7fade8827210 <col:12, col:33> 'int'
+|     |   `-BinaryOperator 0x7fade88271e8 <line:11:27, line:28:32> 'int' '&'
+|     |     |-ImplicitCastExpr 0x7fade88271d0 <line:11:27, col:73> 'int' <IntegralCast>
+|     |     | `-ImplicitCastExpr 0x7fade88271b8 <col:27, col:73> 'unsigned char' <LValueToRValue>
+|     |     |   `-ParenExpr 0x7fade88270f0 <col:27, col:73> 'volatile unsigned char' lvalue
+|     |     |     `-UnaryOperator 0x7fade88270d0 <col:28, col:72> 'volatile unsigned char' lvalue prefix '*'
+|     |     |       `-CStyleCastExpr 0x7fade88270a8 <col:29, col:72> 'volatile unsigned char *' <IntegralToPointer>
+|     |     |         `-ParenExpr 0x7fade8827088 <col:55, col:72> 'int'
+|     |     |           `-BinaryOperator 0x7fade8827018 <col:56, col:68> 'int' '+'
+|     |     |             |-ParenExpr 0x7fade8826fd8 <col:56, col:64> 'int'
+|     |     |             | `-IntegerLiteral 0x7fade8826fb8 <line:14:26> 'int' 56
+|     |     |             `-IntegerLiteral 0x7fade8826ff8 <line:11:68> 'int' 32
+|     |     `-ParenExpr 0x7fade8827198 <line:28:20, col:32> 'int'
+|     |       `-BinaryOperator 0x7fade8827170 <col:21, col:31> 'int' '<<'
+|     |         |-IntegerLiteral 0x7fade8827110 <col:21> 'int' 1
+|     |         `-ParenExpr 0x7fade8827150 <col:26, col:31> 'int'
+|     |           `-IntegerLiteral 0x7fade8827130 <line:12:17> 'int' 0
+|     `-NullStmt 0x7fade8827250 <line:28:35>
+|-VarDecl 0x7fade88272d0 <line:34:1, col:5> col:5 used a 'int'
+|-FunctionDecl 0x7fade88273d0 <line:35:1, line:37:1> line:35:13 used delay_wait_us_ms 'void (unsigned char)' static
+| |-ParmVarDecl 0x7fade8827348 <col:31, col:45> col:45 used timeout 'unsigned char'
+| `-CompoundStmt 0x7fade88275e8 <col:55, line:37:1>
+|   `-CallExpr 0x7fade88275a0 <line:36:5, col:32> 'void'
+|     |-ImplicitCastExpr 0x7fade8827588 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fade8827470 <col:5> 'void (unsigned char)' Function 0x7fade8826a00 'delay_wait_us' 'void (unsigned char)'
+|     `-ImplicitCastExpr 0x7fade88275d0 <col:20, col:30> 'unsigned char' <IntegralCast>
+|       `-BinaryOperator 0x7fade8827530 <col:20, col:30> 'int' '*'
+|         |-ImplicitCastExpr 0x7fade8827500 <col:20> 'int' <IntegralCast>
+|         | `-ImplicitCastExpr 0x7fade88274e8 <col:20> 'unsigned char' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fade8827498 <col:20> 'unsigned char' lvalue ParmVar 0x7fade8827348 'timeout' 'unsigned char'
+|         `-ImplicitCastExpr 0x7fade8827518 <col:30> 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x7fade88274c0 <col:30> 'int' lvalue Var 0x7fade88272d0 'a' 'int'
+`-FunctionDecl 0x7fade88276a8 <line:40:1, line:77:1> line:40:6 makeUseOfTimerWait 'void (unsigned char)'
+  |-ParmVarDecl 0x7fade8827620 <col:26, col:40> col:40 used val 'unsigned char'
+  `-CompoundStmt 0x7fade882a3b8 <col:46, line:77:1>
+    |-CallExpr 0x7fade88277a8 <line:41:5, col:23> 'void'
+    | |-ImplicitCastExpr 0x7fade8827790 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8827748 <col:5> 'void (unsigned char)' Function 0x7fade8826a00 'delay_wait_us' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade88277d8 <col:20> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8827770 <col:20> 'int' 10
+    |-CompoundAssignOperator 0x7fade8827968 <line:11:27, line:42:13> 'unsigned char' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-ParenExpr 0x7fade8827928 <line:11:27, col:73> 'volatile unsigned char' lvalue
+    | | `-UnaryOperator 0x7fade8827908 <col:28, col:72> 'volatile unsigned char' lvalue prefix '*'
+    | |   `-CStyleCastExpr 0x7fade88278e0 <col:29, col:72> 'volatile unsigned char *' <IntegralToPointer>
+    | |     `-ParenExpr 0x7fade88278c0 <col:55, col:72> 'int'
+    | |       `-BinaryOperator 0x7fade8827850 <col:56, col:68> 'int' '+'
+    | |         |-ParenExpr 0x7fade8827810 <col:56, col:64> 'int'
+    | |         | `-IntegerLiteral 0x7fade88277f0 <line:15:26> 'int' 20
+    | |         `-IntegerLiteral 0x7fade8827830 <line:11:68> 'int' 32
+    | `-IntegerLiteral 0x7fade8827948 <line:42:13> 'int' 16
+    |-CallExpr 0x7fade8828a00 <line:43:5, col:23> 'void'
+    | |-ImplicitCastExpr 0x7fade88279e8 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade88279a0 <col:5> 'void (unsigned char)' Function 0x7fade8826a00 'delay_wait_us' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8828a30 <col:20> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade88279c8 <col:20> 'int' 10
+    |-CompoundAssignOperator 0x7fade8828bc0 <line:11:27, line:44:13> 'unsigned char' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-ParenExpr 0x7fade8828b80 <line:11:27, col:73> 'volatile unsigned char' lvalue
+    | | `-UnaryOperator 0x7fade8828b60 <col:28, col:72> 'volatile unsigned char' lvalue prefix '*'
+    | |   `-CStyleCastExpr 0x7fade8828b38 <col:29, col:72> 'volatile unsigned char *' <IntegralToPointer>
+    | |     `-ParenExpr 0x7fade8828b18 <col:55, col:72> 'int'
+    | |       `-BinaryOperator 0x7fade8828aa8 <col:56, col:68> 'int' '+'
+    | |         |-ParenExpr 0x7fade8828a68 <col:56, col:64> 'int'
+    | |         | `-IntegerLiteral 0x7fade8828a48 <line:16:26> 'int' 17
+    | |         `-IntegerLiteral 0x7fade8828a88 <line:11:68> 'int' 32
+    | `-IntegerLiteral 0x7fade8828ba0 <line:44:13> 'int' 32
+    |-CallExpr 0x7fade8828c58 <line:46:5, col:23> 'void'
+    | |-ImplicitCastExpr 0x7fade8828c40 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8828bf8 <col:5> 'void (unsigned char)' Function 0x7fade8826a00 'delay_wait_us' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8828c88 <col:20> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8828c20 <col:20> 'int' 20
+    |-CompoundAssignOperator 0x7fade8828e38 <line:11:27, line:47:15> 'unsigned char' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-ParenExpr 0x7fade8828dd8 <line:11:27, col:73> 'volatile unsigned char' lvalue
+    | | `-UnaryOperator 0x7fade8828db8 <col:28, col:72> 'volatile unsigned char' lvalue prefix '*'
+    | |   `-CStyleCastExpr 0x7fade8828d90 <col:29, col:72> 'volatile unsigned char *' <IntegralToPointer>
+    | |     `-ParenExpr 0x7fade8828d70 <col:55, col:72> 'int'
+    | |       `-BinaryOperator 0x7fade8828d00 <col:56, col:68> 'int' '+'
+    | |         |-ParenExpr 0x7fade8828cc0 <col:56, col:64> 'int'
+    | |         | `-IntegerLiteral 0x7fade8828ca0 <line:17:27> 'int' 21
+    | |         `-IntegerLiteral 0x7fade8828ce0 <line:11:68> 'int' 32
+    | `-UnaryOperator 0x7fade8828e18 <line:47:14, col:15> 'int' prefix '~'
+    |   `-IntegerLiteral 0x7fade8828df8 <col:15> 'int' 16
+    |-CallExpr 0x7fade8828ed0 <line:48:5, col:23> 'void'
+    | |-ImplicitCastExpr 0x7fade8828eb8 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8828e70 <col:5> 'void (unsigned char)' Function 0x7fade8826a00 'delay_wait_us' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8828f00 <col:20> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8828e98 <col:20> 'int' 10
+    |-CompoundAssignOperator 0x7fade88290b0 <line:11:27, line:49:15> 'unsigned char' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-ParenExpr 0x7fade8829050 <line:11:27, col:73> 'volatile unsigned char' lvalue
+    | | `-UnaryOperator 0x7fade8829030 <col:28, col:72> 'volatile unsigned char' lvalue prefix '*'
+    | |   `-CStyleCastExpr 0x7fade8829008 <col:29, col:72> 'volatile unsigned char *' <IntegralToPointer>
+    | |     `-ParenExpr 0x7fade8828fe8 <col:55, col:72> 'int'
+    | |       `-BinaryOperator 0x7fade8828f78 <col:56, col:68> 'int' '+'
+    | |         |-ParenExpr 0x7fade8828f38 <col:56, col:64> 'int'
+    | |         | `-IntegerLiteral 0x7fade8828f18 <line:18:27> 'int' 18
+    | |         `-IntegerLiteral 0x7fade8828f58 <line:11:68> 'int' 32
+    | `-UnaryOperator 0x7fade8829090 <line:49:14, col:15> 'int' prefix '~'
+    |   `-IntegerLiteral 0x7fade8829070 <col:15> 'int' 32
+    |-CallExpr 0x7fade8829148 <line:51:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade8829130 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade88290e8 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8829178 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8829110 <col:23> 'int' 5
+    |-CallExpr 0x7fade88291f0 <line:52:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade88291d8 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8829190 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8829220 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade88291b8 <col:23> 'int' 5
+    |-CallExpr 0x7fade8829298 <line:53:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade8829280 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8829238 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade88292c8 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8829260 <col:23> 'int' 5
+    |-CallExpr 0x7fade8829340 <line:54:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade8829328 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade88292e0 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8829370 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8829308 <col:23> 'int' 5
+    |-CallExpr 0x7fade88293e8 <line:55:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade88293d0 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8829388 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8829418 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade88293b0 <col:23> 'int' 5
+    |-CallExpr 0x7fade8829490 <line:56:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade8829478 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8829430 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade88294c0 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8829458 <col:23> 'int' 5
+    |-CallExpr 0x7fade8829538 <line:57:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade8829520 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade88294d8 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8829568 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8829500 <col:23> 'int' 5
+    |-CallExpr 0x7fade88295e0 <line:58:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade88295c8 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8829580 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8829610 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade88295a8 <col:23> 'int' 5
+    |-CallExpr 0x7fade8829688 <line:59:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade8829670 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8829628 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade88296b8 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8829650 <col:23> 'int' 5
+    |-CallExpr 0x7fade8829730 <line:60:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade8829718 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade88296d0 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8829760 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade88296f8 <col:23> 'int' 5
+    |-CallExpr 0x7fade88297d8 <line:61:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade88297c0 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8829778 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8829808 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade88297a0 <col:23> 'int' 5
+    |-CallExpr 0x7fade8829880 <line:62:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade8829868 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8829820 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade88298b0 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8829848 <col:23> 'int' 5
+    |-CallExpr 0x7fade8829928 <line:63:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade8829910 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade88298c8 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8829958 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade88298f0 <col:23> 'int' 5
+    |-CallExpr 0x7fade88299d0 <line:64:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade88299b8 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8829970 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8829a00 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8829998 <col:23> 'int' 5
+    |-CallExpr 0x7fade8829a78 <line:65:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade8829a60 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8829a18 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8829aa8 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8829a40 <col:23> 'int' 5
+    |-CallExpr 0x7fade8829b20 <line:66:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade8829b08 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8829ac0 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8829b50 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8829ae8 <col:23> 'int' 5
+    |-CallExpr 0x7fade8829bc8 <line:67:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade8829bb0 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8829b68 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8829bf8 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8829b90 <col:23> 'int' 5
+    |-CallExpr 0x7fade8829c70 <line:68:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade8829c58 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8829c10 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8829ca0 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8829c38 <col:23> 'int' 5
+    |-CallExpr 0x7fade8829d18 <line:69:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade8829d00 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8829cb8 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8829d48 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8829ce0 <col:23> 'int' 5
+    |-CallExpr 0x7fade8829dc0 <line:70:5, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fade8829da8 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade8829d60 <col:5> 'void (unsigned char)' Function 0x7fade88273d0 'delay_wait_us_ms' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade8829df0 <col:23> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade8829d88 <col:23> 'int' 5
+    |-CompoundAssignOperator 0x7fade882a000 <line:11:27, line:72:20> 'unsigned char' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-ParenExpr 0x7fade8829f40 <line:11:27, col:73> 'volatile unsigned char' lvalue
+    | | `-UnaryOperator 0x7fade8829f20 <col:28, col:72> 'volatile unsigned char' lvalue prefix '*'
+    | |   `-CStyleCastExpr 0x7fade8829ef8 <col:29, col:72> 'volatile unsigned char *' <IntegralToPointer>
+    | |     `-ParenExpr 0x7fade8829ed8 <col:55, col:72> 'int'
+    | |       `-BinaryOperator 0x7fade8829e68 <col:56, col:68> 'int' '+'
+    | |         |-ParenExpr 0x7fade8829e28 <col:56, col:64> 'int'
+    | |         | `-IntegerLiteral 0x7fade8829e08 <line:17:27> 'int' 21
+    | |         `-IntegerLiteral 0x7fade8829e48 <line:11:68> 'int' 32
+    | `-BinaryOperator 0x7fade8829fd8 <line:72:14, col:20> 'int' '&'
+    |   |-ImplicitCastExpr 0x7fade8829fc0 <col:14> 'int' <IntegralCast>
+    |   | `-ImplicitCastExpr 0x7fade8829fa8 <col:14> 'unsigned char' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fade8829f60 <col:14> 'unsigned char' lvalue ParmVar 0x7fade8827620 'val' 'unsigned char'
+    |   `-IntegerLiteral 0x7fade8829f88 <col:20> 'int' 16
+    |-CallExpr 0x7fade882a098 <line:73:5, col:23> 'void'
+    | |-ImplicitCastExpr 0x7fade882a080 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fade882a038 <col:5> 'void (unsigned char)' Function 0x7fade8826a00 'delay_wait_us' 'void (unsigned char)'
+    | `-ImplicitCastExpr 0x7fade882a0c8 <col:20> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fade882a060 <col:20> 'int' 10
+    |-CompoundAssignOperator 0x7fade882a2d8 <line:11:27, line:74:20> 'unsigned char' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-ParenExpr 0x7fade882a218 <line:11:27, col:73> 'volatile unsigned char' lvalue
+    | | `-UnaryOperator 0x7fade882a1f8 <col:28, col:72> 'volatile unsigned char' lvalue prefix '*'
+    | |   `-CStyleCastExpr 0x7fade882a1d0 <col:29, col:72> 'volatile unsigned char *' <IntegralToPointer>
+    | |     `-ParenExpr 0x7fade882a1b0 <col:55, col:72> 'int'
+    | |       `-BinaryOperator 0x7fade882a140 <col:56, col:68> 'int' '+'
+    | |         |-ParenExpr 0x7fade882a100 <col:56, col:64> 'int'
+    | |         | `-IntegerLiteral 0x7fade882a0e0 <line:18:27> 'int' 18
+    | |         `-IntegerLiteral 0x7fade882a120 <line:11:68> 'int' 32
+    | `-BinaryOperator 0x7fade882a2b0 <line:74:14, col:20> 'int' '&'
+    |   |-ImplicitCastExpr 0x7fade882a298 <col:14> 'int' <IntegralCast>
+    |   | `-ImplicitCastExpr 0x7fade882a280 <col:14> 'unsigned char' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fade882a238 <col:14> 'unsigned char' lvalue ParmVar 0x7fade8827620 'val' 'unsigned char'
+    |   `-IntegerLiteral 0x7fade882a260 <col:20> 'int' 32
+    `-CallExpr 0x7fade882a370 <line:76:5, col:23> 'void'
+      |-ImplicitCastExpr 0x7fade882a358 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fade882a310 <col:5> 'void (unsigned char)' Function 0x7fade8826a00 'delay_wait_us' 'void (unsigned char)'
+      `-ImplicitCastExpr 0x7fade882a3a0 <col:20> 'unsigned char' <IntegralCast>
+        `-IntegerLiteral 0x7fade882a338 <col:20> 'int' 10

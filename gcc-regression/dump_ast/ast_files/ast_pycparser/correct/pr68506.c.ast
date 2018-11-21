@@ -1,0 +1,238 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: m, [], [], []
+    TypeDecl: m, []
+      IdentifierType: ['int']
+  Decl: n, [], [], []
+    TypeDecl: n, []
+      IdentifierType: ['int']
+  Decl: o, [], [], []
+    TypeDecl: o, []
+      IdentifierType: ['int']
+  Decl: p, [], [], []
+    TypeDecl: p, []
+      IdentifierType: ['int']
+  Decl: s, [], [], []
+    TypeDecl: s, []
+      IdentifierType: ['int']
+  Decl: u, [], [], []
+    TypeDecl: u, []
+      IdentifierType: ['int']
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['char']
+  Decl: q, [], [], []
+    TypeDecl: q, []
+      IdentifierType: ['char']
+  Decl: y, [], [], []
+    TypeDecl: y, []
+      IdentifierType: ['char']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['short']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['unsigned', 'char']
+  Decl: f, [], ['static'], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: h, [], ['static'], []
+    TypeDecl: h, []
+      IdentifierType: ['int']
+  Decl: g, [], ['static'], []
+    TypeDecl: g, []
+      IdentifierType: ['short']
+  Decl: r, [], ['static'], []
+    TypeDecl: r, []
+      IdentifierType: ['short']
+  Decl: v, [], ['static'], []
+    TypeDecl: v, []
+      IdentifierType: ['short']
+  Decl: t, [], [], []
+    TypeDecl: t, []
+      IdentifierType: ['unsigned']
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['int']
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          ID: a
+          ID: p1
+          BinaryOp: +
+            ID: p1
+            ID: a
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: p2, [], [], []
+            TypeDecl: p2, []
+              IdentifierType: ['int']
+        TypeDecl: fn2, []
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: >=
+            ID: p2
+            Constant: int, 2
+          ID: p1
+          BinaryOp: >>
+            ID: p1
+            ID: p2
+  FuncDef: 
+    Decl: fn3, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: fn3, []
+          IdentifierType: ['short']
+    Compound: 
+      Decl: w, [], [], []
+        TypeDecl: w, []
+          IdentifierType: ['int']
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        BinaryOp: <
+          ID: p
+          Constant: int, 31
+        UnaryOp: p++
+          ID: p
+        Compound: 
+          Assignment: =
+            ID: s
+            FuncCall: 
+              ID: fn1
+              ExprList: 
+                BinaryOp: |
+                  ID: c
+                  BinaryOp: ==
+                    BinaryOp: &&
+                      Constant: int, 1
+                      ID: c
+                    ID: c
+          Assignment: =
+            ID: t
+            FuncCall: 
+              ID: fn2
+              ExprList: 
+                ID: s
+                ID: x
+          Assignment: =
+            ID: c
+            BinaryOp: &&
+              BinaryOp: >
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned']
+                  ID: c
+                UnaryOp: -
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned']
+                    BinaryOp: <=
+                      Assignment: =
+                        ID: o
+                        BinaryOp: ==
+                          Assignment: =
+                            ID: m
+                            Assignment: =
+                              ID: d
+                              ID: t
+                          ID: p
+                      Constant: int, 4UL
+              ID: n
+          Assignment: =
+            ID: v
+            UnaryOp: -
+              ID: c
+          Assignment: =
+            ID: y
+            Constant: int, 1
+          For: 
+            ID: y
+            UnaryOp: p++
+              ID: y
+            Assignment: =
+              ID: e
+              BinaryOp: ==
+                ID: v
+                Constant: int, 1
+          Assignment: =
+            ID: d
+            Constant: int, 0
+          For: 
+            BinaryOp: !=
+              ID: h
+              Constant: int, 2
+            Compound: 
+              For: 
+                Compound: 
+                  If: 
+                    UnaryOp: !
+                      ID: m
+                    FuncCall: 
+                      ID: abort
+                  Assignment: =
+                    ID: r
+                    BinaryOp: -
+                      Constant: int, 7
+                      ID: f
+                  Assignment: =
+                    ID: x
+                    Assignment: =
+                      ID: e
+                      BinaryOp: |
+                        ID: i
+                        ID: r
+                  Assignment: =
+                    ID: q
+                    BinaryOp: *
+                      ID: u
+                      ID: g
+                  Assignment: =
+                    ID: w
+                    BinaryOp: ==
+                      ID: b
+                      ID: q
+                  If: 
+                    ID: w
+                    Break: 
+              Break: 
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: fn3
+      Return: 
+        Constant: int, 0

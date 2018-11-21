@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7f83768254d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8376825a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8376825740 '__int128'
+|-TypedefDecl 0x7f8376825a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8376825760 'unsigned __int128'
+|-TypedefDecl 0x7f8376825d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8376825b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8376825ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8376825e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8376825dc0 'char *'
+|   `-BuiltinType 0x7f8376825560 'char'
+|-TypedefDecl 0x7f83768260c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8376826070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8376825ee0 'struct __va_list_tag'
+|     `-Record 0x7f8376825e58 '__va_list_tag'
+|-FunctionDecl 0x7f8377026ad8 <c_files/pr82001.c:4:1, line:12:1> line:5:1 mullo 'int (int, int)'
+| |-ParmVarDecl 0x7f8376826138 <col:8, col:12> col:12 used a 'int'
+| |-ParmVarDecl 0x7f8377026a00 <col:15, col:19> col:19 used b 'int'
+| `-CompoundStmt 0x7f8377026e00 <line:6:1, line:12:1>
+|   |-GCCAsmStmt 0x7f8377026d30 <line:7:3, line:10:9>
+|   | |-DeclRefExpr 0x7f8377026cb0 <line:9:6> 'int' lvalue ParmVar 0x7f8376826138 'a' 'int'
+|   | `-DeclRefExpr 0x7f8377026d08 <line:10:7> 'int' lvalue ParmVar 0x7f8377026a00 'b' 'int'
+|   `-ReturnStmt 0x7f8377026de8 <line:11:3, col:10>
+|     `-ImplicitCastExpr 0x7f8377026dd0 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8377026da8 <col:10> 'int' lvalue ParmVar 0x7f8376826138 'a' 'int'
+`-FunctionDecl 0x7f8377026f50 <line:14:1, line:19:1> line:15:1 mulhi 'int (int, int)'
+  |-ParmVarDecl 0x7f8377026e40 <col:8, col:12> col:12 used a 'int'
+  |-ParmVarDecl 0x7f8377026eb8 <col:15, col:19> col:19 used b 'int'
+  `-CompoundStmt 0x7f83770271b8 <line:16:1, line:19:1>
+    |-GCCAsmStmt 0x7f83770270e8 <line:17:3, col:52>
+    | |-DeclRefExpr 0x7f8377027068 <col:41> 'int' lvalue ParmVar 0x7f8377026e40 'a' 'int'
+    | `-DeclRefExpr 0x7f83770270c0 <col:50> 'int' lvalue ParmVar 0x7f8377026eb8 'b' 'int'
+    `-ReturnStmt 0x7f83770271a0 <line:18:3, col:10>
+      `-ImplicitCastExpr 0x7f8377027188 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f8377027160 <col:10> 'int' lvalue ParmVar 0x7f8377026e40 'a' 'int'

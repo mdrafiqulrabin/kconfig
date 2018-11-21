@@ -1,0 +1,113 @@
+c_files/pr62554.c:42:22: warning: address of function 'fn1' will always evaluate to 'true' [-Wpointer-bool-conversion]
+              while (fn1);
+                     ^~~
+c_files/pr62554.c:42:22: note: prefix with the address-of operator to silence this warning
+              while (fn1);
+                     ^
+                     &
+c_files/pr62554.c:51:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+TranslationUnitDecl 0x7ff0a70264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff0a7026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff0a7026740 '__int128'
+|-TypedefDecl 0x7ff0a7026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff0a7026760 'unsigned __int128'
+|-TypedefDecl 0x7ff0a7026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff0a7026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff0a7026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff0a7026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff0a7026dc0 'char *'
+|   `-BuiltinType 0x7ff0a7026560 'char'
+|-TypedefDecl 0x7ff0a70270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff0a7027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff0a7026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff0a7026e58 '__va_list_tag'
+|-RecordDecl 0x7ff0a7027120 <c_files/pr62554.c:6:9, line:10:1> line:6:9 struct definition
+| |-FieldDecl 0x7ff0a7825a00 <line:8:3, col:8> col:8 referenced bits 'char'
+| `-FieldDecl 0x7ff0a7825a60 <line:9:3, col:9> col:9 val 'short'
+|-TypedefDecl 0x7ff0a7825b00 <line:6:1, line:10:3> col:3 referenced code 'struct code':'code'
+| `-ElaboratedType 0x7ff0a7825ab0 'struct code' sugar
+|   `-RecordType 0x7ff0a70271b0 'code'
+|     `-Record 0x7ff0a7027120 ''
+|-RecordDecl 0x7ff0a7825b70 <line:12:1, line:16:1> line:12:7 union uu definition
+| |-FieldDecl 0x7ff0a7825c38 <line:14:3, col:9> col:9 referenced us 'short'
+| `-FieldDecl 0x7ff0a7825cf8 <line:15:3, col:11> col:8 referenced b 'char [2]'
+|-VarDecl 0x7ff0a7825d58 <line:18:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7ff0a7825e10 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7ff0a7825e88 <col:1, col:11> col:11 used c 'int'
+|-VarDecl 0x7ff0a7825f00 <col:1, col:14> col:14 used f 'int'
+|-VarDecl 0x7ff0a7825f78 <col:1, col:17> col:17 used g 'int'
+|-VarDecl 0x7ff0a7825ff0 <col:1, col:20> col:20 used h 'int'
+|-VarDecl 0x7ff0a7826118 <line:19:1, col:7> col:7 used d 'code *'
+|-VarDecl 0x7ff0a7826188 <line:21:1, col:6> col:6 used e 'code':'code'
+`-FunctionDecl 0x7ff0a78262b8 <line:23:1, line:51:1> line:24:1 referenced fn1 'int (void)'
+  `-CompoundStmt 0x7ff0a7826d88 <line:25:1, line:51:1>
+    |-DeclStmt 0x7ff0a78263c0 <line:26:3, col:9>
+    | `-VarDecl 0x7ff0a7826360 <col:3, col:8> col:8 used i 'char'
+    `-DoStmt 0x7ff0a7826d68 <line:27:3, line:50:11>
+      |-IfStmt 0x7ff0a7826cf0 <line:28:5, line:49:7>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | |-ImplicitCastExpr 0x7ff0a7826438 <line:28:9, col:11> 'char' <LValueToRValue>
+      | | `-MemberExpr 0x7ff0a7826400 <col:9, col:11> 'char' lvalue .bits 0x7ff0a7825a00
+      | |   `-DeclRefExpr 0x7ff0a78263d8 <col:9> 'code':'code' lvalue Var 0x7ff0a7826188 'e' 'code':'code'
+      | |-CompoundStmt 0x7ff0a7826cc8 <line:29:7, line:49:7>
+      | | |-LabelStmt 0x7ff0a7826528 <line:30:7, line:31:13> 'dodist'
+      | | | `-BinaryOperator 0x7ff0a78264b8 <col:9, col:13> 'int' '='
+      | | |   |-DeclRefExpr 0x7ff0a7826450 <col:9> 'int' lvalue Var 0x7ff0a7825f00 'f' 'int'
+      | | |   `-ImplicitCastExpr 0x7ff0a78264a0 <col:13> 'int' <LValueToRValue>
+      | | |     `-DeclRefExpr 0x7ff0a7826478 <col:13> 'int' lvalue Var 0x7ff0a7825e88 'c' 'int'
+      | | `-IfStmt 0x7ff0a7826c90 <line:32:9, line:48:11>
+      | |   |-<<<NULL>>>
+      | |   |-<<<NULL>>>
+      | |   |-BinaryOperator 0x7ff0a78265f0 <line:32:13, col:22> 'int' '&'
+      | |   | |-ImplicitCastExpr 0x7ff0a78265d8 <col:13, col:15> 'int' <IntegralCast>
+      | |   | | `-ImplicitCastExpr 0x7ff0a78265c0 <col:13, col:15> 'char' <LValueToRValue>
+      | |   | |   `-MemberExpr 0x7ff0a7826568 <col:13, col:15> 'char' lvalue .bits 0x7ff0a7825a00
+      | |   | |     `-DeclRefExpr 0x7ff0a7826540 <col:13> 'code':'code' lvalue Var 0x7ff0a7826188 'e' 'code':'code'
+      | |   | `-IntegerLiteral 0x7ff0a78265a0 <col:22> 'int' 6
+      | |   |-CompoundStmt 0x7ff0a7826b18 <line:33:11, line:43:11>
+      | |   | |-UnaryOperator 0x7ff0a7826690 <line:34:13, col:15> 'char' prefix '++'
+      | |   | | `-DeclRefExpr 0x7ff0a7826668 <col:15> 'char' lvalue Var 0x7ff0a7826360 'i' 'char'
+      | |   | `-IfStmt 0x7ff0a7826ae0 <line:35:13, line:42:25>
+      | |   |   |-<<<NULL>>>
+      | |   |   |-<<<NULL>>>
+      | |   |   |-ImplicitCastExpr 0x7ff0a78266d8 <line:35:17> 'int' <LValueToRValue>
+      | |   |   | `-DeclRefExpr 0x7ff0a78266b0 <col:17> 'int' lvalue Var 0x7ff0a7825f78 'g' 'int'
+      | |   |   |-DoStmt 0x7ff0a7826ac0 <line:36:15, line:42:25>
+      | |   |   | |-CompoundStmt 0x7ff0a7826a28 <line:37:17, line:41:17>
+      | |   |   | | |-DeclStmt 0x7ff0a78267a0 <line:38:19, col:29>
+      | |   |   | | | `-VarDecl 0x7ff0a7826740 <col:19, col:28> col:28 used j 'union uu':'union uu'
+      | |   |   | | |-BinaryOperator 0x7ff0a78268d0 <line:39:19, col:28> 'char' '='
+      | |   |   | | | |-ArraySubscriptExpr 0x7ff0a7826850 <col:19, col:24> 'char' lvalue
+      | |   |   | | | | |-ImplicitCastExpr 0x7ff0a7826838 <col:19, col:21> 'char *' <ArrayToPointerDecay>
+      | |   |   | | | | | `-MemberExpr 0x7ff0a78267e0 <col:19, col:21> 'char [2]' lvalue .b 0x7ff0a7825cf8
+      | |   |   | | | | |   `-DeclRefExpr 0x7ff0a78267b8 <col:19> 'union uu':'union uu' lvalue Var 0x7ff0a7826740 'j' 'union uu':'union uu'
+      | |   |   | | | | `-IntegerLiteral 0x7ff0a7826818 <col:23> 'int' 1
+      | |   |   | | | `-ImplicitCastExpr 0x7ff0a78268b8 <col:28> 'char' <IntegralCast>
+      | |   |   | | |   `-ImplicitCastExpr 0x7ff0a78268a0 <col:28> 'int' <LValueToRValue>
+      | |   |   | | |     `-DeclRefExpr 0x7ff0a7826878 <col:28> 'int' lvalue Var 0x7ff0a7825d58 'a' 'int'
+      | |   |   | | `-BinaryOperator 0x7ff0a7826a00 <line:40:19, col:25> 'int' '='
+      | |   |   | |   |-DeclRefExpr 0x7ff0a7826948 <col:19> 'int' lvalue Var 0x7ff0a7825ff0 'h' 'int'
+      | |   |   | |   `-ImplicitCastExpr 0x7ff0a78269e8 <col:23, col:25> 'int' <IntegralCast>
+      | |   |   | |     `-ImplicitCastExpr 0x7ff0a78269d0 <col:23, col:25> 'short' <LValueToRValue>
+      | |   |   | |       `-MemberExpr 0x7ff0a7826998 <col:23, col:25> 'short' lvalue .us 0x7ff0a7825c38
+      | |   |   | |         `-DeclRefExpr 0x7ff0a7826970 <col:23> 'union uu':'union uu' lvalue Var 0x7ff0a7826740 'j' 'union uu':'union uu'
+      | |   |   | `-ImplicitCastExpr 0x7ff0a7826aa8 <line:42:22> 'int (*)(void)' <FunctionToPointerDecay>
+      | |   |   |   `-DeclRefExpr 0x7ff0a7826a58 <col:22> 'int (void)' Function 0x7ff0a78262b8 'fn1' 'int (void)'
+      | |   |   `-<<<NULL>>>
+      | |   `-CompoundStmt 0x7ff0a7826c68 <line:45:11, line:48:11>
+      | |     |-BinaryOperator 0x7ff0a7826c28 <line:46:13, col:20> 'code':'code' '='
+      | |     | |-DeclRefExpr 0x7ff0a7826b40 <col:13> 'code':'code' lvalue Var 0x7ff0a7826188 'e' 'code':'code'
+      | |     | `-ImplicitCastExpr 0x7ff0a7826c10 <col:17, col:20> 'code':'code' <LValueToRValue>
+      | |     |   `-ArraySubscriptExpr 0x7ff0a7826be8 <col:17, col:20> 'code':'code' lvalue
+      | |     |     |-ImplicitCastExpr 0x7ff0a7826bb8 <col:17> 'code *' <LValueToRValue>
+      | |     |     | `-DeclRefExpr 0x7ff0a7826b68 <col:17> 'code *' lvalue Var 0x7ff0a7826118 'd' 'code *'
+      | |     |     `-ImplicitCastExpr 0x7ff0a7826bd0 <col:19> 'int' <LValueToRValue>
+      | |     |       `-DeclRefExpr 0x7ff0a7826b90 <col:19> 'int' lvalue Var 0x7ff0a7825e10 'b' 'int'
+      | |     `-GotoStmt 0x7ff0a7826c50 <line:47:13, col:18> 'dodist' 0x7ff0a78264e0
+      | `-<<<NULL>>>
+      `-ImplicitCastExpr 0x7ff0a7826d50 <line:50:10> 'char' <LValueToRValue>
+        `-DeclRefExpr 0x7ff0a7826d28 <col:10> 'char' lvalue Var 0x7ff0a7826360 'i' 'char'

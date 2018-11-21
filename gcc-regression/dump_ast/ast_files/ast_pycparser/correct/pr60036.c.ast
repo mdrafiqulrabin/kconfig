@@ -1,0 +1,98 @@
+FileAST: 
+  Decl: fn, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fn, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 9
+      Assignment: +=
+        ID: f
+        BinaryOp: ||
+          FuncCall: 
+            ID: fn
+          ID: i
+      Assignment: +=
+        ID: f
+        BinaryOp: &&
+          FuncCall: 
+            ID: fn
+          ID: i
+      Assignment: +=
+        ID: f
+        UnaryOp: !
+          FuncCall: 
+            ID: fn
+      Assignment: -=
+        ID: f
+        BinaryOp: ==
+          FuncCall: 
+            ID: fn
+          ID: i
+      Assignment: |=
+        ID: f
+        BinaryOp: !=
+          FuncCall: 
+            ID: fn
+          ID: i
+      Assignment: &=
+        ID: f
+        BinaryOp: <
+          FuncCall: 
+            ID: fn
+          ID: i
+      Assignment: ^=
+        ID: f
+        BinaryOp: >
+          FuncCall: 
+            ID: fn
+          ID: i
+      Assignment: &=
+        ID: f
+        BinaryOp: <=
+          FuncCall: 
+            ID: fn
+          ID: i
+      Assignment: ^=
+        ID: f
+        BinaryOp: >=
+          FuncCall: 
+            ID: fn
+          ID: i
+      Assignment: +=
+        ID: f
+        FuncCall: 
+          ID: fn
+      Assignment: +=
+        ID: f
+        BinaryOp: |
+          FuncCall: 
+            ID: fn
+          ID: i
+      Assignment: +=
+        ID: f
+        BinaryOp: &
+          FuncCall: 
+            ID: fn
+          ID: i
+      Assignment: +=
+        ID: f
+        BinaryOp: ^
+          FuncCall: 
+            ID: fn
+          ID: i

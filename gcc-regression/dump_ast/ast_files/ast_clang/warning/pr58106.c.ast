@@ -1,0 +1,190 @@
+c_files/pr58106.c:26:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr58106.c:44:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+TranslationUnitDecl 0x7feaca8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feaca826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feaca826740 '__int128'
+|-TypedefDecl 0x7feaca826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feaca826760 'unsigned __int128'
+|-TypedefDecl 0x7feaca826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feaca826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7feaca826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feaca826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feaca826dc0 'char *'
+|   `-BuiltinType 0x7feaca826560 'char'
+|-TypedefDecl 0x7feaca8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feaca827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feaca826ee0 'struct __va_list_tag'
+|     `-Record 0x7feaca826e58 '__va_list_tag'
+|-RecordDecl 0x7feaca827120 <c_files/pr58106.c:6:9, col:16> col:16 struct rtx_def
+|-TypedefDecl 0x7feacb025a80 <col:1, col:25> col:25 referenced rtx 'struct rtx_def *'
+| `-PointerType 0x7feacb025a30 'struct rtx_def *'
+|   `-ElaboratedType 0x7feaca8271d0 'struct rtx_def' sugar
+|     `-RecordType 0x7feaca8271b0 'struct rtx_def'
+|       `-Record 0x7feacb025dc0 'rtx_def'
+|-EnumDecl 0x7feacb025af0 <line:7:1, line:8:27> line:7:6 rtx_code
+| `-EnumConstantDecl 0x7feacb025bb0 <line:8:3> col:3 referenced LAST_AND_UNUSED_RTX_CODE 'int'
+|-VarDecl 0x7feacb025d20 <line:9:1, col:70> col:27 used rtx_format 'const char *const [0]' extern
+|-RecordDecl 0x7feacb025dc0 prev 0x7feaca827120 <line:10:1, line:12:1> line:10:8 struct rtx_def definition
+| `-FieldDecl 0x7feacb025ea0 <line:11:3, col:17> col:17 referenced code 'enum rtx_code':'enum rtx_code'
+|-TypedefDecl 0x7feacb0261a0 <line:13:1, col:43> col:15 referenced rtx_function 'int (*)(rtx *, void *)'
+| `-PointerType 0x7feacb026130 'int (*)(rtx *, void *)'
+|   `-ParenType 0x7feacb0260d0 'int (rtx *, void *)' sugar
+|     `-FunctionProtoType 0x7feacb026090 'int (rtx *, void *)' cdecl
+|       |-BuiltinType 0x7feaca8265c0 'int'
+|       |-PointerType 0x7feacb025f40 'rtx *'
+|       | `-TypedefType 0x7feacb025ef0 'rtx' sugar
+|       |   |-Typedef 0x7feacb025a80 'rtx'
+|       |   `-PointerType 0x7feacb025a30 'struct rtx_def *'
+|       |     `-ElaboratedType 0x7feaca8271d0 'struct rtx_def' sugar
+|       |       `-RecordType 0x7feaca8271b0 'struct rtx_def'
+|       |         `-Record 0x7feacb025dc0 'rtx_def'
+|       `-PointerType 0x7feaca8269a0 'void *'
+|         `-BuiltinType 0x7feaca826520 'void'
+|-FunctionDecl 0x7feacb026458 <line:14:1, col:53> col:12 used for_each_rtx 'int (rtx *, rtx_function, void *)' extern
+| |-ParmVarDecl 0x7feacb026208 <col:26, col:30> col:31 'rtx *'
+| |-ParmVarDecl 0x7feacb0262a0 <col:33> col:45 'rtx_function':'int (*)(rtx *, void *)'
+| `-ParmVarDecl 0x7feacb026318 <col:47, col:52> col:53 'void *'
+|-FunctionDecl 0x7feacb026628 <line:15:1, line:26:1> line:16:1 referenced replace_label 'int (rtx *, void *)'
+| |-ParmVarDecl 0x7feacb026518 <col:16, col:21> col:21 used x 'rtx *'
+| |-ParmVarDecl 0x7feacb026590 <col:24, col:30> col:30 used data 'void *'
+| `-CompoundStmt 0x7feacb027bf8 <line:17:1, line:26:1>
+|   |-DeclStmt 0x7feacb0267b8 <line:18:3, col:13>
+|   | `-VarDecl 0x7feacb0266e0 <col:3, col:12> col:7 used l 'rtx':'struct rtx_def *' cinit
+|   |   `-ImplicitCastExpr 0x7feacb0267a0 <col:11, col:12> 'rtx':'struct rtx_def *' <LValueToRValue>
+|   |     `-UnaryOperator 0x7feacb026780 <col:11, col:12> 'rtx':'struct rtx_def *' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7feacb026768 <col:12> 'rtx *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7feacb026740 <col:12> 'rtx *' lvalue ParmVar 0x7feacb026518 'x' 'rtx *'
+|   `-IfStmt 0x7feacb027bc0 <line:19:3, line:25:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7feacb026868 <line:19:7, col:18> 'int' '=='
+|     | |-ImplicitCastExpr 0x7feacb026850 <col:7> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7feacb0267d0 <col:7> 'rtx':'struct rtx_def *' lvalue Var 0x7feacb0266e0 'l' 'rtx':'struct rtx_def *'
+|     | `-CStyleCastExpr 0x7feacb026828 <col:12, col:18> 'rtx':'struct rtx_def *' <NullToPointer>
+|     |   `-IntegerLiteral 0x7feacb0267f8 <col:18> 'int' 0
+|     |-CompoundStmt 0x7feacb027ba0 <line:20:5, line:25:5>
+|     | `-CompoundStmt 0x7feacb027b78 <line:21:2, line:24:2>
+|     |   |-DeclStmt 0x7feacb026988 <line:22:4, col:20>
+|     |   | |-VarDecl 0x7feacb0268a0 <col:4, col:8> col:8 used new_c 'rtx':'struct rtx_def *'
+|     |   | `-VarDecl 0x7feacb026910 <col:4, col:15> col:15 new_l 'rtx':'struct rtx_def *'
+|     |   `-CallExpr 0x7feacb027ae0 <line:23:4, col:45> 'int'
+|     |     |-ImplicitCastExpr 0x7feacb027ac8 <col:4> 'int (*)(rtx *, rtx_function, void *)' <FunctionToPointerDecay>
+|     |     | `-DeclRefExpr 0x7feacb0269a0 <col:4> 'int (rtx *, rtx_function, void *)' Function 0x7feacb026458 'for_each_rtx' 'int (rtx *, rtx_function, void *)'
+|     |     |-UnaryOperator 0x7feacb027a00 <col:18, col:19> 'rtx *' prefix '&'
+|     |     | `-DeclRefExpr 0x7feacb0269c8 <col:19> 'rtx':'struct rtx_def *' lvalue Var 0x7feacb0268a0 'new_c' 'rtx':'struct rtx_def *'
+|     |     |-ImplicitCastExpr 0x7feacb027b48 <col:26> 'int (*)(rtx *, void *)' <FunctionToPointerDecay>
+|     |     | `-DeclRefExpr 0x7feacb027a20 <col:26> 'int (rtx *, void *)' Function 0x7feacb026628 'replace_label' 'int (rtx *, void *)'
+|     |     `-ImplicitCastExpr 0x7feacb027b60 <col:41> 'void *' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7feacb027a48 <col:41> 'void *' lvalue ParmVar 0x7feacb026590 'data' 'void *'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7feacb027ed8 <line:27:1, line:44:1> line:28:1 used for_each_rtx_1 'int (rtx, int, rtx_function, void *)' static
+| |-ParmVarDecl 0x7feacb027c30 <col:17, col:21> col:21 used exp 'rtx':'struct rtx_def *'
+| |-ParmVarDecl 0x7feacb027ca8 <col:26, col:30> col:30 used n 'int'
+| |-ParmVarDecl 0x7feacb027d18 <col:33, col:46> col:46 used f 'rtx_function':'int (*)(rtx *, void *)'
+| |-ParmVarDecl 0x7feacb027d90 <col:49, col:55> col:55 used data 'void *'
+| `-CompoundStmt 0x7feacb028c60 <line:29:1, line:44:1>
+|   |-DeclStmt 0x7feacb028118 <line:30:3, col:19>
+|   | |-VarDecl 0x7feacb027fa8 <col:3, col:7> col:7 used result 'int'
+|   | |-VarDecl 0x7feacb028020 <col:3, col:15> col:15 used i 'int'
+|   | `-VarDecl 0x7feacb028098 <col:3, col:18> col:18 j 'int'
+|   |-DeclStmt 0x7feacb028450 <line:31:3, col:75>
+|   | `-VarDecl 0x7feacb028148 <col:3, col:74> col:15 used format 'const char *' cinit
+|   |   `-ImplicitCastExpr 0x7feacb028438 <col:24, col:74> 'const char *' <LValueToRValue>
+|   |     `-ParenExpr 0x7feacb028418 <col:24, col:74> 'const char *const' lvalue
+|   |       `-ArraySubscriptExpr 0x7feacb0283f0 <col:25, col:73> 'const char *const' lvalue
+|   |         |-ImplicitCastExpr 0x7feacb0283d8 <col:25> 'const char *const *' <ArrayToPointerDecay>
+|   |         | `-DeclRefExpr 0x7feacb0281a8 <col:25> 'const char *const [0]' lvalue Var 0x7feacb025d20 'rtx_format' 'const char *const [0]'
+|   |         `-CStyleCastExpr 0x7feacb028380 <col:36, col:72> 'int' <IntegralCast>
+|   |           `-ParenExpr 0x7feacb028360 <col:42, col:72> 'enum rtx_code':'enum rtx_code'
+|   |             `-ParenExpr 0x7feacb0282f8 <col:43, col:71> 'enum rtx_code':'enum rtx_code'
+|   |               `-CStyleCastExpr 0x7feacb0282d0 <col:44, col:67> 'enum rtx_code':'enum rtx_code' <NoOp>
+|   |                 `-ImplicitCastExpr 0x7feacb0282b8 <col:60, col:67> 'enum rtx_code':'enum rtx_code' <LValueToRValue>
+|   |                   `-MemberExpr 0x7feacb028260 <col:60, col:67> 'enum rtx_code':'enum rtx_code' lvalue ->code 0x7feacb025ea0
+|   |                     `-ImplicitCastExpr 0x7feacb028248 <col:60, col:64> 'rtx':'struct rtx_def *' <LValueToRValue>
+|   |                       `-ParenExpr 0x7feacb028228 <col:60, col:64> 'rtx':'struct rtx_def *' lvalue
+|   |                         `-DeclRefExpr 0x7feacb0281d0 <col:61> 'rtx':'struct rtx_def *' lvalue ParmVar 0x7feacb027c30 'exp' 'rtx':'struct rtx_def *'
+|   |-DeclStmt 0x7feacb0284d8 <line:32:3, col:9>
+|   | `-VarDecl 0x7feacb028478 <col:3, col:8> col:8 used x 'rtx *'
+|   `-ForStmt 0x7feacb028c28 <line:33:3, line:43:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7feacb0285e0 <line:33:10, col:23> 'int' '!='
+|     | |-ImplicitCastExpr 0x7feacb0285c8 <col:10, col:18> 'int' <IntegralCast>
+|     | | `-ImplicitCastExpr 0x7feacb0285b0 <col:10, col:18> 'char' <LValueToRValue>
+|     | |   `-ArraySubscriptExpr 0x7feacb028570 <col:10, col:18> 'const char' lvalue
+|     | |     |-ImplicitCastExpr 0x7feacb028540 <col:10> 'const char *' <LValueToRValue>
+|     | |     | `-DeclRefExpr 0x7feacb0284f0 <col:10> 'const char *' lvalue Var 0x7feacb028148 'format' 'const char *'
+|     | |     `-ImplicitCastExpr 0x7feacb028558 <col:17> 'int' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7feacb028518 <col:17> 'int' lvalue ParmVar 0x7feacb027ca8 'n' 'int'
+|     | `-CharacterLiteral 0x7feacb028598 <col:23> 'int' 0
+|     |-UnaryOperator 0x7feacb028630 <col:29, col:30> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7feacb028608 <col:29> 'int' lvalue ParmVar 0x7feacb027ca8 'n' 'int'
+|     `-CompoundStmt 0x7feacb028c08 <line:34:5, line:43:5>
+|       `-SwitchStmt 0x7feacb028728 <line:35:7, line:42:2>
+|         |-<<<NULL>>>
+|         |-<<<NULL>>>
+|         |-ImplicitCastExpr 0x7feacb028710 <line:35:15, col:23> 'int' <IntegralCast>
+|         | `-ImplicitCastExpr 0x7feacb0286f8 <col:15, col:23> 'char' <LValueToRValue>
+|         |   `-ArraySubscriptExpr 0x7feacb0286d0 <col:15, col:23> 'const char' lvalue
+|         |     |-ImplicitCastExpr 0x7feacb0286a0 <col:15> 'const char *' <LValueToRValue>
+|         |     | `-DeclRefExpr 0x7feacb028650 <col:15> 'const char *' lvalue Var 0x7feacb028148 'format' 'const char *'
+|         |     `-ImplicitCastExpr 0x7feacb0286b8 <col:22> 'int' <LValueToRValue>
+|         |       `-DeclRefExpr 0x7feacb028678 <col:22> 'int' lvalue ParmVar 0x7feacb027ca8 'n' 'int'
+|         `-CompoundStmt 0x7feacb028be0 <line:36:2, line:42:2>
+|           |-CaseStmt 0x7feacb028770 <line:37:2, line:38:26>
+|           | |-CharacterLiteral 0x7feacb028758 <line:37:7> 'int' 101
+|           | |-<<<NULL>>>
+|           | `-BinaryOperator 0x7feacb028920 <line:38:4, col:26> 'int' '='
+|           |   |-DeclRefExpr 0x7feacb0287a8 <col:4> 'int' lvalue Var 0x7feacb027fa8 'result' 'int'
+|           |   `-CallExpr 0x7feacb0288b8 <col:13, col:26> 'int'
+|           |     |-ImplicitCastExpr 0x7feacb0288a0 <col:13, col:16> 'int (*)(rtx *, void *)' <FunctionToPointerDecay>
+|           |     | `-ParenExpr 0x7feacb028830 <col:13, col:16> 'int (rtx *, void *)':'int (rtx *, void *)'
+|           |     |   `-UnaryOperator 0x7feacb028810 <col:14, col:15> 'int (rtx *, void *)':'int (rtx *, void *)' prefix '*'
+|           |     |     `-ImplicitCastExpr 0x7feacb0287f8 <col:15> 'rtx_function':'int (*)(rtx *, void *)' <LValueToRValue>
+|           |     |       `-DeclRefExpr 0x7feacb0287d0 <col:15> 'rtx_function':'int (*)(rtx *, void *)' lvalue ParmVar 0x7feacb027d18 'f' 'rtx_function':'int (*)(rtx *, void *)'
+|           |     |-ImplicitCastExpr 0x7feacb0288f0 <col:19> 'rtx *' <LValueToRValue>
+|           |     | `-DeclRefExpr 0x7feacb028850 <col:19> 'rtx *' lvalue Var 0x7feacb028478 'x' 'rtx *'
+|           |     `-ImplicitCastExpr 0x7feacb028908 <col:22> 'void *' <LValueToRValue>
+|           |       `-DeclRefExpr 0x7feacb028878 <col:22> 'void *' lvalue ParmVar 0x7feacb027d90 'data' 'void *'
+|           `-CompoundStmt 0x7feacb028bc0 <line:39:6, line:41:6>
+|             `-BinaryOperator 0x7feacb028b98 <line:40:8, col:47> 'int' '='
+|               |-DeclRefExpr 0x7feacb028948 <col:8> 'int' lvalue Var 0x7feacb027fa8 'result' 'int'
+|               `-CallExpr 0x7feacb028af0 <col:17, col:47> 'int'
+|                 |-ImplicitCastExpr 0x7feacb028ad8 <col:17> 'int (*)(rtx, int, rtx_function, void *)' <FunctionToPointerDecay>
+|                 | `-DeclRefExpr 0x7feacb028970 <col:17> 'int (rtx, int, rtx_function, void *)' Function 0x7feacb027ed8 'for_each_rtx_1' 'int (rtx, int, rtx_function, void *)'
+|                 |-ImplicitCastExpr 0x7feacb028b38 <col:33, col:34> 'rtx':'struct rtx_def *' <LValueToRValue>
+|                 | `-UnaryOperator 0x7feacb0289d8 <col:33, col:34> 'rtx':'struct rtx_def *' lvalue prefix '*'
+|                 |   `-ImplicitCastExpr 0x7feacb0289c0 <col:34> 'rtx *' <LValueToRValue>
+|                 |     `-DeclRefExpr 0x7feacb028998 <col:34> 'rtx *' lvalue Var 0x7feacb028478 'x' 'rtx *'
+|                 |-ImplicitCastExpr 0x7feacb028b50 <col:37> 'int' <LValueToRValue>
+|                 | `-DeclRefExpr 0x7feacb028a00 <col:37> 'int' lvalue Var 0x7feacb028020 'i' 'int'
+|                 |-ImplicitCastExpr 0x7feacb028b68 <col:40> 'rtx_function':'int (*)(rtx *, void *)' <LValueToRValue>
+|                 | `-DeclRefExpr 0x7feacb028a28 <col:40> 'rtx_function':'int (*)(rtx *, void *)' lvalue ParmVar 0x7feacb027d18 'f' 'rtx_function':'int (*)(rtx *, void *)'
+|                 `-ImplicitCastExpr 0x7feacb028b80 <col:43> 'void *' <LValueToRValue>
+|                   `-DeclRefExpr 0x7feacb028a50 <col:43> 'void *' lvalue ParmVar 0x7feacb027d90 'data' 'void *'
+`-FunctionDecl 0x7feacb028e30 prev 0x7feacb026458 <line:45:1, line:50:1> line:46:1 used for_each_rtx 'int (rtx *, rtx_function, void *)'
+  |-ParmVarDecl 0x7feacb028ca8 <col:15, col:20> col:20 used x 'rtx *'
+  |-ParmVarDecl 0x7feacb028d18 <col:23, col:36> col:36 used f 'rtx_function':'int (*)(rtx *, void *)'
+  |-ParmVarDecl 0x7feacb028d90 <col:39, col:45> col:45 used data 'void *'
+  `-CompoundStmt 0x7feacb029148 <line:47:1, line:50:1>
+    |-DeclStmt 0x7feacb028f58 <line:48:3, col:8>
+    | `-VarDecl 0x7feacb028ef8 <col:3, col:7> col:7 used i 'int'
+    `-ReturnStmt 0x7feacb029130 <line:49:3, col:40>
+      `-CallExpr 0x7feacb029088 <col:10, col:40> 'int'
+        |-ImplicitCastExpr 0x7feacb029070 <col:10> 'int (*)(rtx, int, rtx_function, void *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7feacb028f70 <col:10> 'int (rtx, int, rtx_function, void *)' Function 0x7feacb027ed8 'for_each_rtx_1' 'int (rtx, int, rtx_function, void *)'
+        |-ImplicitCastExpr 0x7feacb0290d0 <col:26, col:27> 'rtx':'struct rtx_def *' <LValueToRValue>
+        | `-UnaryOperator 0x7feacb028fd8 <col:26, col:27> 'rtx':'struct rtx_def *' lvalue prefix '*'
+        |   `-ImplicitCastExpr 0x7feacb028fc0 <col:27> 'rtx *' <LValueToRValue>
+        |     `-DeclRefExpr 0x7feacb028f98 <col:27> 'rtx *' lvalue ParmVar 0x7feacb028ca8 'x' 'rtx *'
+        |-ImplicitCastExpr 0x7feacb0290e8 <col:30> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7feacb028ff8 <col:30> 'int' lvalue Var 0x7feacb028ef8 'i' 'int'
+        |-ImplicitCastExpr 0x7feacb029100 <col:33> 'rtx_function':'int (*)(rtx *, void *)' <LValueToRValue>
+        | `-DeclRefExpr 0x7feacb029020 <col:33> 'rtx_function':'int (*)(rtx *, void *)' lvalue ParmVar 0x7feacb028d18 'f' 'rtx_function':'int (*)(rtx *, void *)'
+        `-ImplicitCastExpr 0x7feacb029118 <col:36> 'void *' <LValueToRValue>
+          `-DeclRefExpr 0x7feacb029048 <col:36> 'void *' lvalue ParmVar 0x7feacb028d90 'data' 'void *'

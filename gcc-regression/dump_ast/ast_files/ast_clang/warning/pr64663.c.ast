@@ -1,0 +1,50 @@
+c_files/pr64663.c:9:3: warning: array index -8 is before the beginning of the array [-Warray-bounds]
+  a[-8] = 0;
+  ^ ~~
+c_files/pr64663.c:8:3: note: array 'a' declared here
+  int a[9];
+  ^
+c_files/pr64663.c:16:3: warning: array index -9 is before the beginning of the array [-Warray-bounds]
+  a[-9] = 0;
+  ^ ~~
+c_files/pr64663.c:15:3: note: array 'a' declared here
+  int a[9];
+  ^
+2 warnings generated.
+TranslationUnitDecl 0x7fd85c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd85c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd85c826740 '__int128'
+|-TypedefDecl 0x7fd85c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd85c826760 'unsigned __int128'
+|-TypedefDecl 0x7fd85c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd85c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd85c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd85c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd85c826dc0 'char *'
+|   `-BuiltinType 0x7fd85c826560 'char'
+|-TypedefDecl 0x7fd85c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd85c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd85c826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd85c826e58 '__va_list_tag'
+|-FunctionDecl 0x7fd85d025a00 <c_files/pr64663.c:5:1, line:10:1> line:6:1 foo 'void (void)'
+| `-CompoundStmt 0x7fd85d025cf0 <line:7:1, line:10:1>
+|   |-DeclStmt 0x7fd85d025bc0 <line:8:3, col:11>
+|   | `-VarDecl 0x7fd85d025b60 <col:3, col:10> col:7 used a 'int [9]'
+|   `-BinaryOperator 0x7fd85d025cc8 <line:9:3, col:11> 'int' '='
+|     |-ArraySubscriptExpr 0x7fd85d025c80 <col:3, col:7> 'int' lvalue
+|     | |-ImplicitCastExpr 0x7fd85d025c68 <col:3> 'int *' <ArrayToPointerDecay>
+|     | | `-DeclRefExpr 0x7fd85d025bd8 <col:3> 'int [9]' lvalue Var 0x7fd85d025b60 'a' 'int [9]'
+|     | `-UnaryOperator 0x7fd85d025c20 <col:5, col:6> 'int' prefix '-'
+|     |   `-IntegerLiteral 0x7fd85d025c00 <col:6> 'int' 8
+|     `-IntegerLiteral 0x7fd85d025ca8 <col:11> 'int' 0
+`-FunctionDecl 0x7fd85d025da8 <line:12:1, line:17:1> line:13:1 bar 'void (void)'
+  `-CompoundStmt 0x7fd85d025ff0 <line:14:1, line:17:1>
+    |-DeclStmt 0x7fd85d025ee8 <line:15:3, col:11>
+    | `-VarDecl 0x7fd85d025e88 <col:3, col:10> col:7 used a 'int [9]'
+    `-BinaryOperator 0x7fd85d025fc8 <line:16:3, col:11> 'int' '='
+      |-ArraySubscriptExpr 0x7fd85d025f80 <col:3, col:7> 'int' lvalue
+      | |-ImplicitCastExpr 0x7fd85d025f68 <col:3> 'int *' <ArrayToPointerDecay>
+      | | `-DeclRefExpr 0x7fd85d025f00 <col:3> 'int [9]' lvalue Var 0x7fd85d025e88 'a' 'int [9]'
+      | `-UnaryOperator 0x7fd85d025f48 <col:5, col:6> 'int' prefix '-'
+      |   `-IntegerLiteral 0x7fd85d025f28 <col:6> 'int' 9
+      `-IntegerLiteral 0x7fd85d025fa8 <col:11> 'int' 0

@@ -1,0 +1,31 @@
+c_files/pr60606-4.c:7:36: error: unknown register name 'r1' in asm
+  register unsigned int r[50] asm ("r1"); /* { dg-error "suitable for a register" } */
+                                   ^
+1 error generated.
+TranslationUnitDecl 0x7fe687825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe687826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe687825d40 '__int128'
+|-TypedefDecl 0x7fe687826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe687825d60 'unsigned __int128'
+|-TypedefDecl 0x7fe687826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe687826170 'struct __NSConstantString_tag'
+|   `-Record 0x7fe6878260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe687826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe6878263c0 'char *'
+|   `-BuiltinType 0x7fe687825b60 'char'
+|-TypedefDecl 0x7fe6878266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe687826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe6878264e0 'struct __va_list_tag'
+|     `-Record 0x7fe687826458 '__va_list_tag'
+`-FunctionDecl 0x7fe687026400 <c_files/pr60606-4.c:4:1, line:9:1> line:5:1 f 'int (void)'
+  `-CompoundStmt 0x7fe6870267a0 <line:6:1, line:9:1>
+    |-DeclStmt 0x7fe687026688 <line:7:3, col:41>
+    | `-VarDecl 0x7fe6870265d0 <col:3, col:29> col:25 used r 'unsigned int [50]' register
+    |   `-AsmLabelAttr 0x7fe687026630 <col:36> "r1"
+    `-ReturnStmt 0x7fe687026788 <line:8:3, col:13>
+      `-ImplicitCastExpr 0x7fe687026770 <col:10, col:13> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fe687026758 <col:10, col:13> 'unsigned int' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fe687026730 <col:10, col:13> 'unsigned int' lvalue
+            |-ImplicitCastExpr 0x7fe687026718 <col:10> 'unsigned int *' <ArrayToPointerDecay>
+            | `-DeclRefExpr 0x7fe6870266a0 <col:10> 'unsigned int [50]' lvalue Var 0x7fe6870265d0 'r' 'unsigned int [50]'
+            `-IntegerLiteral 0x7fe6870266c8 <col:12> 'int' 1

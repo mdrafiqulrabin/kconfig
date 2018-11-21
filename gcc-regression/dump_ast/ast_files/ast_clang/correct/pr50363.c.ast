@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fc2438264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc243826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc243826740 '__int128'
+|-TypedefDecl 0x7fc243826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc243826760 'unsigned __int128'
+|-TypedefDecl 0x7fc243826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc243826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc243826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc243826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc243826dc0 'char *'
+|   `-BuiltinType 0x7fc243826560 'char'
+|-TypedefDecl 0x7fc2438270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc243827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc243826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc243826e58 '__va_list_tag'
+`-FunctionDecl 0x7fc244025af0 <c_files/pr50363.c:4:1, line:10:1> line:5:1 foo 'void (int *__restrict *, int)'
+  |-ParmVarDecl 0x7fc243827198 <col:6, col:26> col:26 used r 'int *__restrict *'
+  |-ParmVarDecl 0x7fc244025a18 <col:29, col:33> col:33 used n 'int'
+  `-CompoundStmt 0x7fc244025f08 <line:6:1, line:10:1>
+    |-DeclStmt 0x7fc244025c50 <line:7:3, col:9>
+    | `-VarDecl 0x7fc244025bf0 <col:3, col:8> col:8 used p 'int *'
+    `-ForStmt 0x7fc244025ed0 <line:8:3, line:9:5>
+      |-BinaryOperator 0x7fc244025d08 <line:8:8, col:13> 'int *' '='
+      | |-DeclRefExpr 0x7fc244025c68 <col:8> 'int *' lvalue Var 0x7fc244025bf0 'p' 'int *'
+      | `-ImplicitCastExpr 0x7fc244025cf0 <col:12, col:13> 'int *' <LValueToRValue>
+      |   `-UnaryOperator 0x7fc244025cd0 <col:12, col:13> 'int *__restrict' lvalue prefix '*'
+      |     `-ImplicitCastExpr 0x7fc244025cb8 <col:13> 'int *__restrict *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fc244025c90 <col:13> 'int *__restrict *' lvalue ParmVar 0x7fc243827198 'r' 'int *__restrict *'
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc244025e50 <col:16, col:25> 'int' '<'
+      | |-ImplicitCastExpr 0x7fc244025e38 <col:16> 'int *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fc244025d30 <col:16> 'int *' lvalue Var 0x7fc244025bf0 'p' 'int *'
+      | `-BinaryOperator 0x7fc244025e10 <col:20, col:25> 'int *' '+'
+      |   |-ImplicitCastExpr 0x7fc244025de0 <col:20, col:21> 'int *' <LValueToRValue>
+      |   | `-UnaryOperator 0x7fc244025d98 <col:20, col:21> 'int *__restrict' lvalue prefix '*'
+      |   |   `-ImplicitCastExpr 0x7fc244025d80 <col:21> 'int *__restrict *' <LValueToRValue>
+      |   |     `-DeclRefExpr 0x7fc244025d58 <col:21> 'int *__restrict *' lvalue ParmVar 0x7fc243827198 'r' 'int *__restrict *'
+      |   `-ImplicitCastExpr 0x7fc244025df8 <col:25> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fc244025db8 <col:25> 'int' lvalue ParmVar 0x7fc244025a18 'n' 'int'
+      |-UnaryOperator 0x7fc244025ea0 <col:28, col:29> 'int *' postfix '++'
+      | `-DeclRefExpr 0x7fc244025e78 <col:28> 'int *' lvalue Var 0x7fc244025bf0 'p' 'int *'
+      `-NullStmt 0x7fc244025ec0 <line:9:5>

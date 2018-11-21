@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fe62a825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe62a826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe62a825d40 '__int128'
+|-TypedefDecl 0x7fe62a826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe62a825d60 'unsigned __int128'
+|-TypedefDecl 0x7fe62a826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe62a826170 'struct __NSConstantString_tag'
+|   `-Record 0x7fe62a8260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe62a826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe62a8263c0 'char *'
+|   `-BuiltinType 0x7fe62a825b60 'char'
+|-TypedefDecl 0x7fe62a8266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe62a826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe62a8264e0 'struct __va_list_tag'
+|     `-Record 0x7fe62a826458 '__va_list_tag'
+|-VarDecl 0x7fe62a826738 <c_files/pr70799-2.c:7:1, col:20> col:20 used a 'unsigned long long'
+|-VarDecl 0x7fe62b025a00 <col:1, col:23> col:23 used b 'unsigned long long'
+|-FunctionDecl 0x7fe62b025b40 <line:9:1, line:12:1> line:9:6 test1 'void (void)'
+| `-CompoundStmt 0x7fe62b025cb0 <line:10:1, line:12:1>
+|   `-BinaryOperator 0x7fe62b025c88 <line:11:3, col:12> 'unsigned long long' '='
+|     |-DeclRefExpr 0x7fe62b025bd8 <col:3> 'unsigned long long' lvalue Var 0x7fe62a826738 'a' 'unsigned long long'
+|     `-BinaryOperator 0x7fe62b025c60 <col:7, col:12> 'unsigned long long' '<<'
+|       |-ImplicitCastExpr 0x7fe62b025c48 <col:7> 'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe62b025c00 <col:7> 'unsigned long long' lvalue Var 0x7fe62b025a00 'b' 'unsigned long long'
+|       `-IntegerLiteral 0x7fe62b025c28 <col:12> 'int' 21
+`-FunctionDecl 0x7fe62b025d60 <line:14:1, line:17:1> line:14:6 test2 'void (void)'
+  `-CompoundStmt 0x7fe62b025ed0 <line:15:1, line:17:1>
+    `-BinaryOperator 0x7fe62b025ea8 <line:16:3, col:12> 'unsigned long long' '='
+      |-DeclRefExpr 0x7fe62b025df8 <col:3> 'unsigned long long' lvalue Var 0x7fe62a826738 'a' 'unsigned long long'
+      `-BinaryOperator 0x7fe62b025e80 <col:7, col:12> 'unsigned long long' '>>'
+        |-ImplicitCastExpr 0x7fe62b025e68 <col:7> 'unsigned long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7fe62b025e20 <col:7> 'unsigned long long' lvalue Var 0x7fe62b025a00 'b' 'unsigned long long'
+        `-IntegerLiteral 0x7fe62b025e48 <col:12> 'int' 21

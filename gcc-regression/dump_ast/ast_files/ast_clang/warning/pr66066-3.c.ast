@@ -1,0 +1,384 @@
+c_files/pr66066-3.c:6:13: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+int a1 = -1 << 0;               /* { dg-error "initializer element is not a constant expression" } */
+         ~~ ^
+c_files/pr66066-3.c:7:13: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+int a2 = -1 << 0 | 0;           /* { dg-error "initializer element is not a constant expression" } */
+         ~~ ^
+c_files/pr66066-3.c:8:13: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+int a3 = -1 << 0 & 1;           /* { dg-error "initializer element is not a constant expression" } */
+         ~~ ^
+c_files/pr66066-3.c:9:13: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+int a4 = -1 << 2 ^ 1;           /* { dg-error "initializer element is not a constant expression" } */
+         ~~ ^
+c_files/pr66066-3.c:10:17: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+int a5 = 4 & -1 << 2;           /* { dg-error "initializer element is not a constant expression" } */
+             ~~ ^
+c_files/pr66066-3.c:11:14: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+int a6 = (-1 << 2) ^ (1 >> 1);  /* { dg-error "initializer element is not a constant expression" } */
+          ~~ ^
+c_files/pr66066-3.c:12:19: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+int a7 = 0 || (-1 << 1);        /* { dg-error "initializer element is not a constant expression" } */
+               ~~ ^
+c_files/pr66066-3.c:12:12: warning: use of logical '||' with constant operand [-Wconstant-logical-operand]
+int a7 = 0 || (-1 << 1);        /* { dg-error "initializer element is not a constant expression" } */
+           ^  ~~~~~~~~~
+c_files/pr66066-3.c:12:12: note: use '|' for a bitwise operation
+int a7 = 0 || (-1 << 1);        /* { dg-error "initializer element is not a constant expression" } */
+           ^~
+           |
+c_files/pr66066-3.c:13:22: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+int a8 = 0 ? 2 : (-1 << 1);     /* { dg-error "initializer element is not a constant expression" } */
+                  ~~ ^
+c_files/pr66066-3.c:14:18: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+int a9 = 1 && -1 << 0;          /* { dg-error "initializer element is not a constant expression" } */
+              ~~ ^
+c_files/pr66066-3.c:14:12: warning: use of logical '&&' with constant operand [-Wconstant-logical-operand]
+int a9 = 1 && -1 << 0;          /* { dg-error "initializer element is not a constant expression" } */
+           ^  ~~~~~~~
+c_files/pr66066-3.c:14:12: note: use '&' for a bitwise operation
+int a9 = 1 && -1 << 0;          /* { dg-error "initializer element is not a constant expression" } */
+           ^~
+           &
+c_files/pr66066-3.c:14:12: note: remove constant to silence this warning
+int a9 = 1 && -1 << 0;          /* { dg-error "initializer element is not a constant expression" } */
+          ~^~~~~~~~~~
+c_files/pr66066-3.c:15:16: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+int a10 = !(-1 << 0);           /* { dg-error "initializer element is not a constant expression" } */
+            ~~ ^
+c_files/pr66066-3.c:18:12: warning: division by zero is undefined [-Wdivision-by-zero]
+int b1 = 1 / 0;         /* { dg-error "initializer element is not constant" } */
+           ^ ~
+c_files/pr66066-3.c:18:12: error: initializer element is not a compile-time constant
+int b1 = 1 / 0;         /* { dg-error "initializer element is not constant" } */
+         ~~^~~
+c_files/pr66066-3.c:19:17: warning: division by zero is undefined [-Wdivision-by-zero]
+int b2 = 1 / (1 / 0);   /* { dg-error "initializer element is not constant" } */
+                ^ ~
+c_files/pr66066-3.c:19:12: error: initializer element is not a compile-time constant
+int b2 = 1 / (1 / 0);   /* { dg-error "initializer element is not constant" } */
+         ~~^~~~~~~~~
+c_files/pr66066-3.c:20:20: warning: division by zero is undefined [-Wdivision-by-zero]
+int b3 = 0 ? 2 : 1 / 0; /* { dg-error "initializer element is not constant" } */
+                   ^ ~
+c_files/pr66066-3.c:20:10: error: initializer element is not a compile-time constant
+int b3 = 0 ? 2 : 1 / 0; /* { dg-error "initializer element is not constant" } */
+         ^~~~~~~~~~~~~
+c_files/pr66066-3.c:21:17: warning: division by zero is undefined [-Wdivision-by-zero]
+int b4 = 0 || 1 / 0;    /* { dg-error "initializer element is not constant" } */
+                ^ ~
+c_files/pr66066-3.c:21:12: error: initializer element is not a compile-time constant
+int b4 = 0 || 1 / 0;    /* { dg-error "initializer element is not constant" } */
+         ~~^~~~~~~~
+c_files/pr66066-3.c:22:17: warning: division by zero is undefined [-Wdivision-by-zero]
+int b5 = 0 * (1 / 0);   /* { dg-error "initializer element is not constant" } */
+                ^ ~
+c_files/pr66066-3.c:22:12: error: initializer element is not a compile-time constant
+int b5 = 0 * (1 / 0);   /* { dg-error "initializer element is not constant" } */
+         ~~^~~~~~~~~
+c_files/pr66066-3.c:23:17: warning: division by zero is undefined [-Wdivision-by-zero]
+int b6 = 1 * (1 / 0);   /* { dg-error "initializer element is not constant" } */
+                ^ ~
+c_files/pr66066-3.c:23:12: error: initializer element is not a compile-time constant
+int b6 = 1 * (1 / 0);   /* { dg-error "initializer element is not constant" } */
+         ~~^~~~~~~~~
+c_files/pr66066-3.c:24:13: warning: division by zero is undefined [-Wdivision-by-zero]
+int b7 = (1 / 0) * 0;   /* { dg-error "initializer element is not constant" } */
+            ^ ~
+c_files/pr66066-3.c:24:18: error: initializer element is not a compile-time constant
+int b7 = (1 / 0) * 0;   /* { dg-error "initializer element is not constant" } */
+         ~~~~~~~~^~~
+c_files/pr66066-3.c:25:13: warning: division by zero is undefined [-Wdivision-by-zero]
+int b8 = (1 / 0) * 1;   /* { dg-error "initializer element is not constant" } */
+            ^ ~
+c_files/pr66066-3.c:25:18: error: initializer element is not a compile-time constant
+int b8 = (1 / 0) * 1;   /* { dg-error "initializer element is not constant" } */
+         ~~~~~~~~^~~
+c_files/pr66066-3.c:26:17: warning: division by zero is undefined [-Wdivision-by-zero]
+int b9 = 1 && 1 / 0;    /* { dg-error "initializer element is not constant" } */
+                ^ ~
+c_files/pr66066-3.c:26:12: error: initializer element is not a compile-time constant
+int b9 = 1 && 1 / 0;    /* { dg-error "initializer element is not constant" } */
+         ~~^~~~~~~~
+c_files/pr66066-3.c:27:15: warning: division by zero is undefined [-Wdivision-by-zero]
+int b10 = !(1 / 0);     /* { dg-error "initializer element is not constant" } */
+              ^ ~
+c_files/pr66066-3.c:27:11: error: initializer element is not a compile-time constant
+int b10 = !(1 / 0);     /* { dg-error "initializer element is not constant" } */
+          ^~~~~~~~
+c_files/pr66066-3.c:28:12: warning: remainder by zero is undefined [-Wdivision-by-zero]
+int c1 = 1 % 0;         /* { dg-error "initializer element is not constant" } */
+           ^ ~
+c_files/pr66066-3.c:28:12: error: initializer element is not a compile-time constant
+int c1 = 1 % 0;         /* { dg-error "initializer element is not constant" } */
+         ~~^~~
+c_files/pr66066-3.c:29:17: warning: remainder by zero is undefined [-Wdivision-by-zero]
+int c2 = 1 / (1 % 0);   /* { dg-error "initializer element is not constant" } */
+                ^ ~
+c_files/pr66066-3.c:29:12: error: initializer element is not a compile-time constant
+int c2 = 1 / (1 % 0);   /* { dg-error "initializer element is not constant" } */
+         ~~^~~~~~~~~
+c_files/pr66066-3.c:30:20: warning: remainder by zero is undefined [-Wdivision-by-zero]
+int c3 = 0 ? 2 : 1 % 0; /* { dg-error "initializer element is not constant" } */
+                   ^ ~
+c_files/pr66066-3.c:30:10: error: initializer element is not a compile-time constant
+int c3 = 0 ? 2 : 1 % 0; /* { dg-error "initializer element is not constant" } */
+         ^~~~~~~~~~~~~
+c_files/pr66066-3.c:31:17: warning: remainder by zero is undefined [-Wdivision-by-zero]
+int c4 = 0 || 1 % 0;    /* { dg-error "initializer element is not constant" } */
+                ^ ~
+c_files/pr66066-3.c:31:12: error: initializer element is not a compile-time constant
+int c4 = 0 || 1 % 0;    /* { dg-error "initializer element is not constant" } */
+         ~~^~~~~~~~
+c_files/pr66066-3.c:32:17: warning: remainder by zero is undefined [-Wdivision-by-zero]
+int c5 = 0 * (1 % 0);   /* { dg-error "initializer element is not constant" } */
+                ^ ~
+c_files/pr66066-3.c:32:12: error: initializer element is not a compile-time constant
+int c5 = 0 * (1 % 0);   /* { dg-error "initializer element is not constant" } */
+         ~~^~~~~~~~~
+c_files/pr66066-3.c:33:17: warning: remainder by zero is undefined [-Wdivision-by-zero]
+int c6 = 1 * (1 % 0);   /* { dg-error "initializer element is not constant" } */
+                ^ ~
+c_files/pr66066-3.c:33:12: error: initializer element is not a compile-time constant
+int c6 = 1 * (1 % 0);   /* { dg-error "initializer element is not constant" } */
+         ~~^~~~~~~~~
+c_files/pr66066-3.c:34:13: warning: remainder by zero is undefined [-Wdivision-by-zero]
+int c7 = (1 % 0) * 0;   /* { dg-error "initializer element is not constant" } */
+            ^ ~
+c_files/pr66066-3.c:34:18: error: initializer element is not a compile-time constant
+int c7 = (1 % 0) * 0;   /* { dg-error "initializer element is not constant" } */
+         ~~~~~~~~^~~
+c_files/pr66066-3.c:35:13: warning: remainder by zero is undefined [-Wdivision-by-zero]
+int c8 = (1 % 0) * 1;   /* { dg-error "initializer element is not constant" } */
+            ^ ~
+c_files/pr66066-3.c:35:18: error: initializer element is not a compile-time constant
+int c8 = (1 % 0) * 1;   /* { dg-error "initializer element is not constant" } */
+         ~~~~~~~~^~~
+c_files/pr66066-3.c:36:17: warning: remainder by zero is undefined [-Wdivision-by-zero]
+int c9 = 1 && 1 % 0;    /* { dg-error "initializer element is not constant" } */
+                ^ ~
+c_files/pr66066-3.c:36:12: error: initializer element is not a compile-time constant
+int c9 = 1 && 1 % 0;    /* { dg-error "initializer element is not constant" } */
+         ~~^~~~~~~~
+c_files/pr66066-3.c:37:15: warning: remainder by zero is undefined [-Wdivision-by-zero]
+int c10 = !(1 % 0);     /* { dg-error "initializer element is not constant" } */
+              ^ ~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+32 warnings and 20 errors generated.
+TranslationUnitDecl 0x7f9c470264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9c47026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9c47026740 '__int128'
+|-TypedefDecl 0x7f9c47026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9c47026760 'unsigned __int128'
+|-TypedefDecl 0x7f9c47026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9c47026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9c47026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9c47026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9c47026dc0 'char *'
+|   `-BuiltinType 0x7f9c47026560 'char'
+|-TypedefDecl 0x7f9c470270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9c47027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9c47026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9c47026e58 '__va_list_tag'
+|-VarDecl 0x7f9c47027138 <c_files/pr66066-3.c:6:1, col:16> col:5 a1 'int' cinit
+| `-BinaryOperator 0x7f9c47825a40 <col:10, col:16> 'int' '<<'
+|   |-UnaryOperator 0x7f9c47825a00 <col:10, col:11> 'int' prefix '-'
+|   | `-IntegerLiteral 0x7f9c470271d8 <col:11> 'int' 1
+|   `-IntegerLiteral 0x7f9c47825a20 <col:16> 'int' 0
+|-VarDecl 0x7f9c47825a80 <line:7:1, col:20> col:5 a2 'int' cinit
+| `-BinaryOperator 0x7f9c47825b88 <col:10, col:20> 'int' '|'
+|   |-BinaryOperator 0x7f9c47825b40 <col:10, col:16> 'int' '<<'
+|   | |-UnaryOperator 0x7f9c47825b00 <col:10, col:11> 'int' prefix '-'
+|   | | `-IntegerLiteral 0x7f9c47825ae0 <col:11> 'int' 1
+|   | `-IntegerLiteral 0x7f9c47825b20 <col:16> 'int' 0
+|   `-IntegerLiteral 0x7f9c47825b68 <col:20> 'int' 0
+|-VarDecl 0x7f9c47825bc8 <line:8:1, col:20> col:5 a3 'int' cinit
+| `-BinaryOperator 0x7f9c47825cd0 <col:10, col:20> 'int' '&'
+|   |-BinaryOperator 0x7f9c47825c88 <col:10, col:16> 'int' '<<'
+|   | |-UnaryOperator 0x7f9c47825c48 <col:10, col:11> 'int' prefix '-'
+|   | | `-IntegerLiteral 0x7f9c47825c28 <col:11> 'int' 1
+|   | `-IntegerLiteral 0x7f9c47825c68 <col:16> 'int' 0
+|   `-IntegerLiteral 0x7f9c47825cb0 <col:20> 'int' 1
+|-VarDecl 0x7f9c47825d10 <line:9:1, col:20> col:5 a4 'int' cinit
+| `-BinaryOperator 0x7f9c47825e18 <col:10, col:20> 'int' '^'
+|   |-BinaryOperator 0x7f9c47825dd0 <col:10, col:16> 'int' '<<'
+|   | |-UnaryOperator 0x7f9c47825d90 <col:10, col:11> 'int' prefix '-'
+|   | | `-IntegerLiteral 0x7f9c47825d70 <col:11> 'int' 1
+|   | `-IntegerLiteral 0x7f9c47825db0 <col:16> 'int' 2
+|   `-IntegerLiteral 0x7f9c47825df8 <col:20> 'int' 1
+|-VarDecl 0x7f9c47825e58 <line:10:1, col:20> col:5 a5 'int' cinit
+| `-BinaryOperator 0x7f9c47825f60 <col:10, col:20> 'int' '&'
+|   |-IntegerLiteral 0x7f9c47825eb8 <col:10> 'int' 4
+|   `-BinaryOperator 0x7f9c47825f38 <col:14, col:20> 'int' '<<'
+|     |-UnaryOperator 0x7f9c47825ef8 <col:14, col:15> 'int' prefix '-'
+|     | `-IntegerLiteral 0x7f9c47825ed8 <col:15> 'int' 1
+|     `-IntegerLiteral 0x7f9c47825f18 <col:20> 'int' 2
+|-VarDecl 0x7f9c47825fa0 <line:11:1, col:29> col:5 a6 'int' cinit
+| `-BinaryOperator 0x7f9c47826130 <col:10, col:29> 'int' '^'
+|   |-ParenExpr 0x7f9c47826088 <col:10, col:18> 'int'
+|   | `-BinaryOperator 0x7f9c47826060 <col:11, col:17> 'int' '<<'
+|   |   |-UnaryOperator 0x7f9c47826020 <col:11, col:12> 'int' prefix '-'
+|   |   | `-IntegerLiteral 0x7f9c47826000 <col:12> 'int' 1
+|   |   `-IntegerLiteral 0x7f9c47826040 <col:17> 'int' 2
+|   `-ParenExpr 0x7f9c47826110 <col:22, col:29> 'int'
+|     `-BinaryOperator 0x7f9c478260e8 <col:23, col:28> 'int' '>>'
+|       |-IntegerLiteral 0x7f9c478260a8 <col:23> 'int' 1
+|       `-IntegerLiteral 0x7f9c478260c8 <col:28> 'int' 1
+|-VarDecl 0x7f9c47826170 <line:12:1, col:23> col:5 a7 'int' cinit
+| `-BinaryOperator 0x7f9c47826298 <col:10, col:23> 'int' '||'
+|   |-IntegerLiteral 0x7f9c478261d0 <col:10> 'int' 0
+|   `-ParenExpr 0x7f9c47826278 <col:15, col:23> 'int'
+|     `-BinaryOperator 0x7f9c47826250 <col:16, col:22> 'int' '<<'
+|       |-UnaryOperator 0x7f9c47826210 <col:16, col:17> 'int' prefix '-'
+|       | `-IntegerLiteral 0x7f9c478261f0 <col:17> 'int' 1
+|       `-IntegerLiteral 0x7f9c47826230 <col:22> 'int' 1
+|-VarDecl 0x7f9c478262d8 <line:13:1, col:26> col:5 a8 'int' cinit
+| `-ConditionalOperator 0x7f9c47826420 <col:10, col:26> 'int'
+|   |-IntegerLiteral 0x7f9c47826338 <col:10> 'int' 0
+|   |-IntegerLiteral 0x7f9c47826358 <col:14> 'int' 2
+|   `-ParenExpr 0x7f9c47826400 <col:18, col:26> 'int'
+|     `-BinaryOperator 0x7f9c478263d8 <col:19, col:25> 'int' '<<'
+|       |-UnaryOperator 0x7f9c47826398 <col:19, col:20> 'int' prefix '-'
+|       | `-IntegerLiteral 0x7f9c47826378 <col:20> 'int' 1
+|       `-IntegerLiteral 0x7f9c478263b8 <col:25> 'int' 1
+|-VarDecl 0x7f9c47826468 <line:14:1, col:21> col:5 a9 'int' cinit
+| `-BinaryOperator 0x7f9c47826570 <col:10, col:21> 'int' '&&'
+|   |-IntegerLiteral 0x7f9c478264c8 <col:10> 'int' 1
+|   `-BinaryOperator 0x7f9c47826548 <col:15, col:21> 'int' '<<'
+|     |-UnaryOperator 0x7f9c47826508 <col:15, col:16> 'int' prefix '-'
+|     | `-IntegerLiteral 0x7f9c478264e8 <col:16> 'int' 1
+|     `-IntegerLiteral 0x7f9c47826528 <col:21> 'int' 0
+|-VarDecl 0x7f9c478265b0 <line:15:1, col:20> col:5 a10 'int' cinit
+| `-UnaryOperator 0x7f9c478266b8 <col:11, col:20> 'int' prefix '!'
+|   `-ParenExpr 0x7f9c47826698 <col:12, col:20> 'int'
+|     `-BinaryOperator 0x7f9c47826670 <col:13, col:19> 'int' '<<'
+|       |-UnaryOperator 0x7f9c47826630 <col:13, col:14> 'int' prefix '-'
+|       | `-IntegerLiteral 0x7f9c47826610 <col:14> 'int' 1
+|       `-IntegerLiteral 0x7f9c47826650 <col:19> 'int' 0
+|-VarDecl 0x7f9c478266f0 <line:18:1, col:14> col:5 b1 'int' cinit
+| `-BinaryOperator 0x7f9c47826790 <col:10, col:14> 'int' '/'
+|   |-IntegerLiteral 0x7f9c47826750 <col:10> 'int' 1
+|   `-IntegerLiteral 0x7f9c47826770 <col:14> 'int' 0
+|-VarDecl 0x7f9c478267d0 <line:19:1, col:20> col:5 b2 'int' cinit
+| `-BinaryOperator 0x7f9c478268d8 <col:10, col:20> 'int' '/'
+|   |-IntegerLiteral 0x7f9c47826830 <col:10> 'int' 1
+|   `-ParenExpr 0x7f9c478268b8 <col:14, col:20> 'int'
+|     `-BinaryOperator 0x7f9c47826890 <col:15, col:19> 'int' '/'
+|       |-IntegerLiteral 0x7f9c47826850 <col:15> 'int' 1
+|       `-IntegerLiteral 0x7f9c47826870 <col:19> 'int' 0
+|-VarDecl 0x7f9c47826918 <line:20:1, col:22> col:5 b3 'int' cinit
+| `-ConditionalOperator 0x7f9c47827a28 <col:10, col:22> 'int'
+|   |-IntegerLiteral 0x7f9c47826978 <col:10> 'int' 0
+|   |-IntegerLiteral 0x7f9c47826998 <col:14> 'int' 2
+|   `-BinaryOperator 0x7f9c47827a00 <col:18, col:22> 'int' '/'
+|     |-IntegerLiteral 0x7f9c478269b8 <col:18> 'int' 1
+|     `-IntegerLiteral 0x7f9c478269d8 <col:22> 'int' 0
+|-VarDecl 0x7f9c47827a70 <line:21:1, col:19> col:5 b4 'int' cinit
+| `-BinaryOperator 0x7f9c47827b58 <col:10, col:19> 'int' '||'
+|   |-IntegerLiteral 0x7f9c47827ad0 <col:10> 'int' 0
+|   `-BinaryOperator 0x7f9c47827b30 <col:15, col:19> 'int' '/'
+|     |-IntegerLiteral 0x7f9c47827af0 <col:15> 'int' 1
+|     `-IntegerLiteral 0x7f9c47827b10 <col:19> 'int' 0
+|-VarDecl 0x7f9c47827b98 <line:22:1, col:20> col:5 b5 'int' cinit
+| `-BinaryOperator 0x7f9c47827ca0 <col:10, col:20> 'int' '*'
+|   |-IntegerLiteral 0x7f9c47827bf8 <col:10> 'int' 0
+|   `-ParenExpr 0x7f9c47827c80 <col:14, col:20> 'int'
+|     `-BinaryOperator 0x7f9c47827c58 <col:15, col:19> 'int' '/'
+|       |-IntegerLiteral 0x7f9c47827c18 <col:15> 'int' 1
+|       `-IntegerLiteral 0x7f9c47827c38 <col:19> 'int' 0
+|-VarDecl 0x7f9c47827ce0 <line:23:1, col:20> col:5 b6 'int' cinit
+| `-BinaryOperator 0x7f9c47827de8 <col:10, col:20> 'int' '*'
+|   |-IntegerLiteral 0x7f9c47827d40 <col:10> 'int' 1
+|   `-ParenExpr 0x7f9c47827dc8 <col:14, col:20> 'int'
+|     `-BinaryOperator 0x7f9c47827da0 <col:15, col:19> 'int' '/'
+|       |-IntegerLiteral 0x7f9c47827d60 <col:15> 'int' 1
+|       `-IntegerLiteral 0x7f9c47827d80 <col:19> 'int' 0
+|-VarDecl 0x7f9c47827e28 <line:24:1, col:20> col:5 b7 'int' cinit
+| `-BinaryOperator 0x7f9c47827f30 <col:10, col:20> 'int' '*'
+|   |-ParenExpr 0x7f9c47827ef0 <col:10, col:16> 'int'
+|   | `-BinaryOperator 0x7f9c47827ec8 <col:11, col:15> 'int' '/'
+|   |   |-IntegerLiteral 0x7f9c47827e88 <col:11> 'int' 1
+|   |   `-IntegerLiteral 0x7f9c47827ea8 <col:15> 'int' 0
+|   `-IntegerLiteral 0x7f9c47827f10 <col:20> 'int' 0
+|-VarDecl 0x7f9c47827f70 <line:25:1, col:20> col:5 b8 'int' cinit
+| `-BinaryOperator 0x7f9c47828078 <col:10, col:20> 'int' '*'
+|   |-ParenExpr 0x7f9c47828038 <col:10, col:16> 'int'
+|   | `-BinaryOperator 0x7f9c47828010 <col:11, col:15> 'int' '/'
+|   |   |-IntegerLiteral 0x7f9c47827fd0 <col:11> 'int' 1
+|   |   `-IntegerLiteral 0x7f9c47827ff0 <col:15> 'int' 0
+|   `-IntegerLiteral 0x7f9c47828058 <col:20> 'int' 1
+|-VarDecl 0x7f9c478280b8 <line:26:1, col:19> col:5 b9 'int' cinit
+| `-BinaryOperator 0x7f9c478281a0 <col:10, col:19> 'int' '&&'
+|   |-IntegerLiteral 0x7f9c47828118 <col:10> 'int' 1
+|   `-BinaryOperator 0x7f9c47828178 <col:15, col:19> 'int' '/'
+|     |-IntegerLiteral 0x7f9c47828138 <col:15> 'int' 1
+|     `-IntegerLiteral 0x7f9c47828158 <col:19> 'int' 0
+|-VarDecl 0x7f9c478281e0 <line:27:1, col:18> col:5 b10 'int' cinit
+| `-UnaryOperator 0x7f9c478282c8 <col:11, col:18> 'int' prefix '!'
+|   `-ParenExpr 0x7f9c478282a8 <col:12, col:18> 'int'
+|     `-BinaryOperator 0x7f9c47828280 <col:13, col:17> 'int' '/'
+|       |-IntegerLiteral 0x7f9c47828240 <col:13> 'int' 1
+|       `-IntegerLiteral 0x7f9c47828260 <col:17> 'int' 0
+|-VarDecl 0x7f9c47828300 <line:28:1, col:14> col:5 c1 'int' cinit
+| `-BinaryOperator 0x7f9c478283a0 <col:10, col:14> 'int' '%'
+|   |-IntegerLiteral 0x7f9c47828360 <col:10> 'int' 1
+|   `-IntegerLiteral 0x7f9c47828380 <col:14> 'int' 0
+|-VarDecl 0x7f9c478283e0 <line:29:1, col:20> col:5 c2 'int' cinit
+| `-BinaryOperator 0x7f9c478284e8 <col:10, col:20> 'int' '/'
+|   |-IntegerLiteral 0x7f9c47828440 <col:10> 'int' 1
+|   `-ParenExpr 0x7f9c478284c8 <col:14, col:20> 'int'
+|     `-BinaryOperator 0x7f9c478284a0 <col:15, col:19> 'int' '%'
+|       |-IntegerLiteral 0x7f9c47828460 <col:15> 'int' 1
+|       `-IntegerLiteral 0x7f9c47828480 <col:19> 'int' 0
+|-VarDecl 0x7f9c47828528 <line:30:1, col:22> col:5 c3 'int' cinit
+| `-ConditionalOperator 0x7f9c47828630 <col:10, col:22> 'int'
+|   |-IntegerLiteral 0x7f9c47828588 <col:10> 'int' 0
+|   |-IntegerLiteral 0x7f9c478285a8 <col:14> 'int' 2
+|   `-BinaryOperator 0x7f9c47828608 <col:18, col:22> 'int' '%'
+|     |-IntegerLiteral 0x7f9c478285c8 <col:18> 'int' 1
+|     `-IntegerLiteral 0x7f9c478285e8 <col:22> 'int' 0
+|-VarDecl 0x7f9c47828678 <line:31:1, col:19> col:5 c4 'int' cinit
+| `-BinaryOperator 0x7f9c47828760 <col:10, col:19> 'int' '||'
+|   |-IntegerLiteral 0x7f9c478286d8 <col:10> 'int' 0
+|   `-BinaryOperator 0x7f9c47828738 <col:15, col:19> 'int' '%'
+|     |-IntegerLiteral 0x7f9c478286f8 <col:15> 'int' 1
+|     `-IntegerLiteral 0x7f9c47828718 <col:19> 'int' 0
+|-VarDecl 0x7f9c478287a0 <line:32:1, col:20> col:5 c5 'int' cinit
+| `-BinaryOperator 0x7f9c478288a8 <col:10, col:20> 'int' '*'
+|   |-IntegerLiteral 0x7f9c47828800 <col:10> 'int' 0
+|   `-ParenExpr 0x7f9c47828888 <col:14, col:20> 'int'
+|     `-BinaryOperator 0x7f9c47828860 <col:15, col:19> 'int' '%'
+|       |-IntegerLiteral 0x7f9c47828820 <col:15> 'int' 1
+|       `-IntegerLiteral 0x7f9c47828840 <col:19> 'int' 0
+|-VarDecl 0x7f9c478288e8 <line:33:1, col:20> col:5 c6 'int' cinit
+| `-BinaryOperator 0x7f9c47826a00 <col:10, col:20> 'int' '*'
+|   |-IntegerLiteral 0x7f9c47828948 <col:10> 'int' 1
+|   `-ParenExpr 0x7f9c478289d0 <col:14, col:20> 'int'
+|     `-BinaryOperator 0x7f9c478289a8 <col:15, col:19> 'int' '%'
+|       |-IntegerLiteral 0x7f9c47828968 <col:15> 'int' 1
+|       `-IntegerLiteral 0x7f9c47828988 <col:19> 'int' 0
+|-VarDecl 0x7f9c47826a40 <line:34:1, col:20> col:5 c7 'int' cinit
+| `-BinaryOperator 0x7f9c47826b48 <col:10, col:20> 'int' '*'
+|   |-ParenExpr 0x7f9c47826b08 <col:10, col:16> 'int'
+|   | `-BinaryOperator 0x7f9c47826ae0 <col:11, col:15> 'int' '%'
+|   |   |-IntegerLiteral 0x7f9c47826aa0 <col:11> 'int' 1
+|   |   `-IntegerLiteral 0x7f9c47826ac0 <col:15> 'int' 0
+|   `-IntegerLiteral 0x7f9c47826b28 <col:20> 'int' 0
+|-VarDecl 0x7f9c47826b88 <line:35:1, col:20> col:5 c8 'int' cinit
+| `-BinaryOperator 0x7f9c47826c90 <col:10, col:20> 'int' '*'
+|   |-ParenExpr 0x7f9c47826c50 <col:10, col:16> 'int'
+|   | `-BinaryOperator 0x7f9c47826c28 <col:11, col:15> 'int' '%'
+|   |   |-IntegerLiteral 0x7f9c47826be8 <col:11> 'int' 1
+|   |   `-IntegerLiteral 0x7f9c47826c08 <col:15> 'int' 0
+|   `-IntegerLiteral 0x7f9c47826c70 <col:20> 'int' 1
+|-VarDecl 0x7f9c47826cd0 <line:36:1, col:19> col:5 c9 'int' cinit
+| `-BinaryOperator 0x7f9c47826db8 <col:10, col:19> 'int' '&&'
+|   |-IntegerLiteral 0x7f9c47826d30 <col:10> 'int' 1
+|   `-BinaryOperator 0x7f9c47826d90 <col:15, col:19> 'int' '%'
+|     |-IntegerLiteral 0x7f9c47826d50 <col:15> 'int' 1
+|     `-IntegerLiteral 0x7f9c47826d70 <col:19> 'int' 0
+`-VarDecl 0x7f9c47826df8 <line:37:1, col:18> col:5 c10 'int' cinit
+  `-UnaryOperator 0x7f9c47826ee0 <col:11, col:18> 'int' prefix '!'
+    `-ParenExpr 0x7f9c47826ec0 <col:12, col:18> 'int'
+      `-BinaryOperator 0x7f9c47826e98 <col:13, col:17> 'int' '%'
+        |-IntegerLiteral 0x7f9c47826e58 <col:13> 'int' 1
+        `-IntegerLiteral 0x7f9c47826e78 <col:17> 'int' 0

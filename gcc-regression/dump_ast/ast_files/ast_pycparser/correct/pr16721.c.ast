@@ -1,0 +1,21 @@
+FileAST: 
+  Decl: p, [], [], []
+    PtrDecl: []
+      TypeDecl: p, []
+        Struct: data
+          Decl: addr, ['volatile'], [], []
+            PtrDecl: []
+              TypeDecl: addr, ['volatile']
+                IdentifierType: ['unsigned', 'long']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        TypeDecl: test, []
+          IdentifierType: ['int']
+    Compound: 
+      UnaryOp: *
+        StructRef: ->
+          ID: p
+          ID: addr
+      Return: 
+        Constant: int, 0

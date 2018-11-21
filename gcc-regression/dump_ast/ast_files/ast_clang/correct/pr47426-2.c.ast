@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7f881c0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f881c026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f881c026740 '__int128'
+|-TypedefDecl 0x7f881c026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f881c026760 'unsigned __int128'
+|-TypedefDecl 0x7f881c026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f881c026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f881c026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f881c026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f881c026dc0 'char *'
+|   `-BuiltinType 0x7f881c026560 'char'
+|-TypedefDecl 0x7f881c0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f881c027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f881c026ee0 'struct __va_list_tag'
+|     `-Record 0x7f881c026e58 '__va_list_tag'
+|-TypedefDecl 0x7f881c825a28 <c_files/pr47426-2.c:1:1, col:25> col:14 referenced tfoo 'void (int *)'
+| `-FunctionProtoType 0x7f881c0271c0 'void (int *)' cdecl
+|   |-BuiltinType 0x7f881c026520 'void'
+|   `-PointerType 0x7f881c027120 'int *'
+|     `-BuiltinType 0x7f881c0265c0 'int'
+|-FunctionDecl 0x7f881c825bf0 <line:2:1, col:19> col:7 used getfoo 'tfoo *(void)'
+|-FunctionDecl 0x7f881c825d68 <line:4:1, line:8:1> line:5:1 bar 'void (int *)'
+| |-ParmVarDecl 0x7f881c825ce0 <col:6, col:11> col:11 used i 'int *'
+| `-CompoundStmt 0x7f881c825ea8 <line:6:1, line:8:1>
+|   `-UnaryOperator 0x7f881c825e88 <line:7:3, col:7> 'int' postfix '--'
+|     `-ParenExpr 0x7f881c825e68 <col:3, col:6> 'int' lvalue
+|       `-UnaryOperator 0x7f881c825e48 <col:4, col:5> 'int' lvalue prefix '*'
+|         `-ImplicitCastExpr 0x7f881c825e30 <col:5> 'int *' <LValueToRValue>
+|           `-DeclRefExpr 0x7f881c825e08 <col:5> 'int *' lvalue ParmVar 0x7f881c825ce0 'i' 'int *'
+|-FunctionDecl 0x7f881c825f20 <line:10:1, line:18:1> line:11:1 main 'int ()'
+| `-CompoundStmt 0x7f881c8263f8 <line:12:1, line:18:1>
+|   |-DeclStmt 0x7f881c826050 <line:13:3, col:12>
+|   | `-VarDecl 0x7f881c825fd0 <col:3, col:11> col:7 used i 'int' cinit
+|   |   `-IntegerLiteral 0x7f881c826030 <col:11> 'int' 1
+|   |-CallExpr 0x7f881c826170 <line:14:3, col:15> 'void'
+|   | |-CallExpr 0x7f881c826100 <col:3, col:11> 'tfoo *'
+|   | | `-ImplicitCastExpr 0x7f881c8260e8 <col:3> 'tfoo *(*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f881c826068 <col:3> 'tfoo *(void)' Function 0x7f881c825bf0 'getfoo' 'tfoo *(void)'
+|   | `-UnaryOperator 0x7f881c826150 <col:13, col:14> 'int *' prefix '&'
+|   |   `-DeclRefExpr 0x7f881c826128 <col:14> 'int' lvalue Var 0x7f881c825fd0 'i' 'int'
+|   |-IfStmt 0x7f881c826388 <line:15:3, line:16:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f881c8261c8 <line:15:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f881c8261a0 <col:7> 'int' lvalue Var 0x7f881c825fd0 'i' 'int'
+|   | |-CallExpr 0x7f881c826360 <line:16:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f881c826348 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f881c8262f0 <col:5> '<builtin fn type>' Function 0x7f881c826210 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f881c8263e0 <line:17:3, col:10>
+|     `-IntegerLiteral 0x7f881c8263c0 <col:10> 'int' 0
+`-FunctionDecl 0x7f881c826210 <line:16:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f881c8262a8 <col:5> Implicit

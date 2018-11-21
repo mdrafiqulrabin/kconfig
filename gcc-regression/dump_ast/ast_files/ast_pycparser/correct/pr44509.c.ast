@@ -1,0 +1,15 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        BinaryOp: -
+          ID: __DBL_MAX__
+          ID: __FLT_MAX__

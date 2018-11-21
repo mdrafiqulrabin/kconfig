@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fac8a0234d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fac8a023a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fac8a023740 '__int128'
+|-TypedefDecl 0x7fac8a023a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fac8a023760 'unsigned __int128'
+|-TypedefDecl 0x7fac8a023d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fac8a023b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fac8a023ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fac8a023e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fac8a023dc0 'char *'
+|   `-BuiltinType 0x7fac8a023560 'char'
+|-TypedefDecl 0x7fac8a0240c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fac8a024070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fac8a023ee0 'struct __va_list_tag'
+|     `-Record 0x7fac8a023e58 '__va_list_tag'
+|-VarDecl 0x7fac8a024138 <c_files/pr44085.c:6:1, col:5> col:5 used thr1 'int'
+|-VarDecl 0x7fac89828c00 <col:1, col:11> col:11 used thr2 'int'
+|-FunctionDecl 0x7fac89828d40 <line:9:1, line:17:1> line:10:1 foo 'void (void)'
+| `-CompoundStmt 0x7fac89828ec8 <line:11:1, line:17:1>
+|   `-CompoundStmt 0x7fac89828ea0 <line:13:3, line:16:3>
+|     |-UnaryOperator 0x7fac89828e00 <line:14:5, col:9> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7fac89828dd8 <col:5> 'int' lvalue Var 0x7fac8a024138 'thr1' 'int'
+|     `-CompoundAssignOperator 0x7fac89828e68 <line:15:5, col:13> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|       |-DeclRefExpr 0x7fac89828e20 <col:5> 'int' lvalue Var 0x7fac89828c00 'thr2' 'int'
+|       `-IntegerLiteral 0x7fac89828e48 <col:13> 'int' 4
+`-FunctionDecl 0x7fac89828f78 <line:19:1, line:27:1> line:20:1 bar 'void (void)'
+  `-CompoundStmt 0x7fac89829100 <line:21:1, line:27:1>
+    `-CompoundStmt 0x7fac898290d8 <line:23:3, line:26:3>
+      |-UnaryOperator 0x7fac89829038 <line:24:5, col:9> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fac89829010 <col:5> 'int' lvalue Var 0x7fac8a024138 'thr1' 'int'
+      `-CompoundAssignOperator 0x7fac898290a0 <line:25:5, col:13> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+        |-DeclRefExpr 0x7fac89829058 <col:5> 'int' lvalue Var 0x7fac89828c00 'thr2' 'int'
+        `-IntegerLiteral 0x7fac89829080 <col:13> 'int' 4

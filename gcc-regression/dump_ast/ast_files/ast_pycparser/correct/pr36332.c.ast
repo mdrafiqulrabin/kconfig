@@ -1,0 +1,31 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ld, [], [], []
+            TypeDecl: ld, []
+              IdentifierType: ['long', 'double']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: ==
+          ID: ld
+          FuncCall: 
+            ID: __builtin_infl
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            ID: __LDBL_MAX__
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

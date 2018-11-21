@@ -1,0 +1,92 @@
+TranslationUnitDecl 0x7f9f080264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9f08026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9f08026740 '__int128'
+|-TypedefDecl 0x7f9f08026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9f08026760 'unsigned __int128'
+|-TypedefDecl 0x7f9f08026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9f08026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9f08026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9f08026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9f08026dc0 'char *'
+|   `-BuiltinType 0x7f9f08026560 'char'
+|-TypedefDecl 0x7f9f080270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9f08027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9f08026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9f08026e58 '__va_list_tag'
+|-VarDecl 0x7f9f08027138 <c_files/pr52132.c:10:1, col:5> col:5 used l 'int'
+|-FunctionDecl 0x7f9f080774b0 <line:11:1, col:15> col:6 used bar 'void (void)'
+`-FunctionDecl 0x7f9f080776e0 <line:13:1, line:27:1> line:14:1 foo 'void (int *, float)'
+  |-ParmVarDecl 0x7f9f08077590 <col:6, col:11> col:11 used x 'int *'
+  |-ParmVarDecl 0x7f9f08077608 <col:14, col:20> col:20 used y 'float'
+  `-CompoundStmt 0x7f9f08078438 <line:15:1, line:27:1>
+    |-DeclStmt 0x7f9f08077800 <line:16:3, col:10>
+    | `-VarDecl 0x7f9f080777a0 <col:3, col:9> col:9 used b 'float'
+    |-DeclStmt 0x7f9f08077b58 <line:17:3, col:43>
+    | |-RecordDecl 0x7f9f08077818 <col:3, col:27> col:3 union definition
+    | | |-FieldDecl 0x7f9f080778d8 <col:11, col:17> col:17 referenced f 'float'
+    | | `-FieldDecl 0x7f9f08077938 <col:20, col:24> col:24 referenced i 'int'
+    | `-VarDecl 0x7f9f080779d0 <col:3, col:42> col:29 used u 'union (anonymous union at c_files/pr52132.c:17:3)':'union (anonymous at c_files/pr52132.c:17:3)' cinit
+    |   `-InitListExpr 0x7f9f08077ae0 <col:33, col:42> 'union (anonymous union at c_files/pr52132.c:17:3)':'union (anonymous at c_files/pr52132.c:17:3)' field Field 0x7f9f080778d8 'f' 'float'
+    |     `-ImplicitCastExpr 0x7f9f08077b28 <col:40> 'float' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9f08077a30 <col:40> 'float' lvalue ParmVar 0x7f9f08077608 'y' 'float'
+    |-CompoundAssignOperator 0x7f9f08077c38 <line:21:3, col:17> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-MemberExpr 0x7f9f08077b98 <col:3, col:5> 'int' lvalue .i 0x7f9f08077938
+    | | `-DeclRefExpr 0x7f9f08077b70 <col:3> 'union (anonymous union at c_files/pr52132.c:17:3)':'union (anonymous at c_files/pr52132.c:17:3)' lvalue Var 0x7f9f080779d0 'u' 'union (anonymous union at c_files/pr52132.c:17:3)':'union (anonymous at c_files/pr52132.c:17:3)'
+    | `-BinaryOperator 0x7f9f08077c10 <col:10, col:17> 'int' '<<'
+    |   |-IntegerLiteral 0x7f9f08077bd0 <col:10> 'int' 127
+    |   `-IntegerLiteral 0x7f9f08077bf0 <col:17> 'int' 23
+    |-BinaryOperator 0x7f9f08078048 <line:23:3, col:48> 'float' '='
+    | |-MemberExpr 0x7f9f08077ce8 <col:3, col:5> 'float' lvalue .f 0x7f9f080778d8
+    | | `-DeclRefExpr 0x7f9f08077cc0 <col:3> 'union (anonymous union at c_files/pr52132.c:17:3)':'union (anonymous at c_files/pr52132.c:17:3)' lvalue Var 0x7f9f080779d0 'u' 'union (anonymous union at c_files/pr52132.c:17:3)':'union (anonymous at c_files/pr52132.c:17:3)'
+    | `-BinaryOperator 0x7f9f08078020 <col:9, col:48> 'float' '-'
+    |   |-BinaryOperator 0x7f9f08077f78 <col:9, col:37> 'float' '*'
+    |   | |-ParenExpr 0x7f9f08077ee0 <col:9, col:31> 'float'
+    |   | | `-BinaryOperator 0x7f9f08077eb8 <col:10, col:30> 'float' '+'
+    |   | |   |-BinaryOperator 0x7f9f08077e58 <col:10, col:26> 'float' '*'
+    |   | |   | |-ParenExpr 0x7f9f08077dc0 <col:10, col:20> 'float'
+    |   | |   | | `-BinaryOperator 0x7f9f08077d98 <col:11, col:19> 'float' '/'
+    |   | |   | |   |-UnaryOperator 0x7f9f08077d40 <col:11, col:12> 'float' prefix '-'
+    |   | |   | |   | `-FloatingLiteral 0x7f9f08077d20 <col:12> 'float' 1.000000e+00
+    |   | |   | |   `-ImplicitCastExpr 0x7f9f08077d80 <col:19> 'float' <IntegralToFloating>
+    |   | |   | |     `-IntegerLiteral 0x7f9f08077d60 <col:19> 'int' 3
+    |   | |   | `-ImplicitCastExpr 0x7f9f08077e40 <col:24, col:26> 'float' <LValueToRValue>
+    |   | |   |   `-MemberExpr 0x7f9f08077e08 <col:24, col:26> 'float' lvalue .f 0x7f9f080778d8
+    |   | |   |     `-DeclRefExpr 0x7f9f08077de0 <col:24> 'union (anonymous union at c_files/pr52132.c:17:3)':'union (anonymous at c_files/pr52132.c:17:3)' lvalue Var 0x7f9f080779d0 'u' 'union (anonymous union at c_files/pr52132.c:17:3)':'union (anonymous at c_files/pr52132.c:17:3)'
+    |   | |   `-ImplicitCastExpr 0x7f9f08077ea0 <col:30> 'float' <IntegralToFloating>
+    |   | |     `-IntegerLiteral 0x7f9f08077e80 <col:30> 'int' 2
+    |   | `-ImplicitCastExpr 0x7f9f08077f60 <col:35, col:37> 'float' <LValueToRValue>
+    |   |   `-MemberExpr 0x7f9f08077f28 <col:35, col:37> 'float' lvalue .f 0x7f9f080778d8
+    |   |     `-DeclRefExpr 0x7f9f08077f00 <col:35> 'union (anonymous union at c_files/pr52132.c:17:3)':'union (anonymous at c_files/pr52132.c:17:3)' lvalue Var 0x7f9f080779d0 'u' 'union (anonymous union at c_files/pr52132.c:17:3)':'union (anonymous at c_files/pr52132.c:17:3)'
+    |   `-BinaryOperator 0x7f9f08077ff8 <col:41, col:48> 'float' '/'
+    |     |-FloatingLiteral 0x7f9f08077fa0 <col:41> 'float' 2.000000e+00
+    |     `-ImplicitCastExpr 0x7f9f08077fe0 <col:48> 'float' <IntegralToFloating>
+    |       `-IntegerLiteral 0x7f9f08077fc0 <col:48> 'int' 3
+    |-BinaryOperator 0x7f9f08078228 <line:24:3, col:21> 'float' '='
+    | |-DeclRefExpr 0x7f9f08078070 <col:3> 'float' lvalue Var 0x7f9f080777a0 'b' 'float'
+    | `-ImplicitCastExpr 0x7f9f08078210 <col:7, col:21> 'float' <FloatingCast>
+    |   `-BinaryOperator 0x7f9f080781e8 <col:7, col:21> 'double' '*'
+    |     |-FloatingLiteral 0x7f9f08078098 <col:7> 'double' 5.000000e-01
+    |     `-ImplicitCastExpr 0x7f9f080781d0 <col:13, col:21> 'double' <FloatingCast>
+    |       `-ParenExpr 0x7f9f080781b0 <col:13, col:21> 'float'
+    |         `-BinaryOperator 0x7f9f08078188 <col:14, col:20> 'float' '+'
+    |           |-ImplicitCastExpr 0x7f9f08078140 <col:14, col:16> 'float' <LValueToRValue>
+    |           | `-MemberExpr 0x7f9f080780e0 <col:14, col:16> 'float' lvalue .f 0x7f9f080778d8
+    |           |   `-DeclRefExpr 0x7f9f080780b8 <col:14> 'union (anonymous union at c_files/pr52132.c:17:3)':'union (anonymous at c_files/pr52132.c:17:3)' lvalue Var 0x7f9f080779d0 'u' 'union (anonymous union at c_files/pr52132.c:17:3)':'union (anonymous at c_files/pr52132.c:17:3)'
+    |           `-ImplicitCastExpr 0x7f9f08078170 <col:20> 'float' <IntegralToFloating>
+    |             `-ImplicitCastExpr 0x7f9f08078158 <col:20> 'int' <LValueToRValue>
+    |               `-DeclRefExpr 0x7f9f08078118 <col:20> 'int' lvalue Var 0x7f9f08027138 'l' 'int'
+    `-IfStmt 0x7f9f08078400 <line:25:3, line:26:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9f08078320 <line:25:7, col:13> 'int' '>='
+      | |-ImplicitCastExpr 0x7f9f080782d8 <col:7> 'float' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f9f08078250 <col:7> 'float' lvalue Var 0x7f9f080777a0 'b' 'float'
+      | `-ImplicitCastExpr 0x7f9f08078308 <col:12, col:13> 'float' <IntegralToFloating>
+      |   `-ImplicitCastExpr 0x7f9f080782f0 <col:12, col:13> 'int' <LValueToRValue>
+      |     `-UnaryOperator 0x7f9f080782b8 <col:12, col:13> 'int' lvalue prefix '*'
+      |       `-ImplicitCastExpr 0x7f9f080782a0 <col:13> 'int *' <LValueToRValue>
+      |         `-DeclRefExpr 0x7f9f08078278 <col:13> 'int *' lvalue ParmVar 0x7f9f08077590 'x' 'int *'
+      |-CallExpr 0x7f9f080783b0 <line:26:5, col:10> 'void'
+      | `-ImplicitCastExpr 0x7f9f08078398 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7f9f08078348 <col:5> 'void (void)' Function 0x7f9f080774b0 'bar' 'void (void)'
+      `-<<<NULL>>>

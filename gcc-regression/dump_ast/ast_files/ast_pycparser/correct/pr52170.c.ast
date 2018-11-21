@@ -1,0 +1,60 @@
+FileAST: 
+  Typedef: uint8_t, [], ['typedef']
+    TypeDecl: uint8_t, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: uint32_t, [], ['typedef']
+    TypeDecl: uint32_t, []
+      IdentifierType: ['unsigned', 'long']
+  FuncDef: 
+    Decl: f0a, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: result, [], [], []
+            PtrDecl: []
+              TypeDecl: result, []
+                IdentifierType: ['uint32_t']
+          Decl: arg1, [], [], []
+            PtrDecl: []
+              TypeDecl: arg1, []
+                IdentifierType: ['uint32_t']
+        TypeDecl: f0a, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: idx, [], [], []
+        TypeDecl: idx, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: idx
+          Constant: int, 0
+        BinaryOp: <
+          ID: idx
+          Constant: int, 96
+        Assignment: +=
+          ID: idx
+          Constant: int, 1
+        Compound: 
+          Decl: temp_5, [], [], []
+            TypeDecl: temp_5, []
+              IdentifierType: ['uint8_t']
+          Decl: temp_6, [], [], []
+            TypeDecl: temp_6, []
+              IdentifierType: ['uint8_t']
+          Assignment: =
+            ID: temp_5
+            UnaryOp: ~
+              UnaryOp: *
+                ID: arg1
+          Assignment: =
+            ID: temp_6
+            BinaryOp: -
+              BinaryOp: +
+                UnaryOp: *
+                  ID: arg1
+                Constant: int, 1
+              ID: temp_5
+          Assignment: =
+            ArrayRef: 
+              ID: result
+              ID: idx
+            ID: temp_6

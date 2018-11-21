@@ -1,0 +1,38 @@
+c_files/pr17408.c:3:12: warning: 'extern' variable has an initializer [-Wextern-initializer]
+extern int t = 0;
+           ^
+c_files/pr17408.c:5:10: warning: implicit declaration of function 'h' is invalid in C99 [-Wimplicit-function-declaration]
+void g(){h(&t);}
+         ^
+2 warnings generated.
+TranslationUnitDecl 0x7fa4378264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa437826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa437826740 '__int128'
+|-TypedefDecl 0x7fa437826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa437826760 'unsigned __int128'
+|-TypedefDecl 0x7fa437826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa437826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa437826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa437826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa437826dc0 'char *'
+|   `-BuiltinType 0x7fa437826560 'char'
+|-TypedefDecl 0x7fa4378270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa437827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa437826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa437826e58 '__va_list_tag'
+|-VarDecl 0x7fa437827138 <c_files/pr17408.c:2:1, col:12> col:12 used t 'int' extern
+|-VarDecl 0x7fa438025a00 prev 0x7fa437827138 <line:3:1, col:16> col:12 used t 'int' extern cinit
+| `-IntegerLiteral 0x7fa438025a60 <col:16> 'int' 0
+|-FunctionDecl 0x7fa438025ac8 <line:4:1, col:15> col:6 f 'void ()'
+| `-CompoundStmt 0x7fa438025bd0 <col:9, col:15>
+|   `-BinaryOperator 0x7fa438025ba8 <col:10, col:13> 'int' '='
+|     |-DeclRefExpr 0x7fa438025b60 <col:10> 'int' lvalue Var 0x7fa438025a00 't' 'int'
+|     `-IntegerLiteral 0x7fa438025b88 <col:13> 'int' 0
+|-FunctionDecl 0x7fa438025c10 <line:5:1, col:16> col:6 g 'void ()'
+| `-CompoundStmt 0x7fa438025eb0 <col:9, col:16>
+|   `-CallExpr 0x7fa438025e80 <col:10, col:14> 'int'
+|     |-ImplicitCastExpr 0x7fa438025e68 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fa438025d98 <col:10> 'int ()' Function 0x7fa438025d00 'h' 'int ()'
+|     `-UnaryOperator 0x7fa438025e18 <col:12, col:13> 'int *' prefix '&'
+|       `-DeclRefExpr 0x7fa438025dc0 <col:13> 'int' lvalue Var 0x7fa438025a00 't' 'int'
+`-FunctionDecl 0x7fa438025d00 <<invalid sloc>> col:10 implicit used h 'int ()'

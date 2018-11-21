@@ -1,0 +1,29 @@
+c_files/pr43897.c:10:50: error: invalid output constraint '=f' in asm
+    __asm__ __volatile__ ("frcpa.s0 %0,p1=f0,f0":"=f" (tmp)::"p1");
+                                                 ^
+1 error generated.
+TranslationUnitDecl 0x7f9d028264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9d02826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9d02826740 '__int128'
+|-TypedefDecl 0x7f9d02826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9d02826760 'unsigned __int128'
+|-TypedefDecl 0x7f9d02826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9d02826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9d02826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9d02826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9d02826dc0 'char *'
+|   `-BuiltinType 0x7f9d02826560 'char'
+|-TypedefDecl 0x7f9d028270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9d02827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9d02826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9d02826e58 '__va_list_tag'
+`-FunctionDecl 0x7f9d03025a30 <c_files/pr43897.c:5:1, line:12:1> line:6:1 sub 'int (int)'
+  |-ParmVarDecl 0x7f9d02827138 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7f9d03025dc0 <line:7:1, line:12:1>
+    |-DeclStmt 0x7f9d03025b88 <line:8:3, col:12>
+    | `-VarDecl 0x7f9d03025b28 <col:3, col:9> col:9 used tmp 'float'
+    `-ReturnStmt 0x7f9d03025da8 <line:11:3, col:14>
+      `-BinaryOperator 0x7f9d03025d80 <col:10, col:14> 'int' '+'
+        |-ImplicitCastExpr 0x7f9d03025d68 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f9d03025d20 <col:10> 'int' lvalue ParmVar 0x7f9d02827138 'i' 'int'
+        `-IntegerLiteral 0x7f9d03025d48 <col:14> 'int' 10

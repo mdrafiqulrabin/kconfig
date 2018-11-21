@@ -1,0 +1,518 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argc, [], [], []
+            TypeDecl: argc, []
+              IdentifierType: ['int']
+          Decl: argv, [], [], []
+            ArrayDecl: []
+              PtrDecl: []
+                TypeDecl: argv, []
+                  IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: !=
+            ID: argc
+            Constant: int, 1
+          BinaryOp: !=
+            ID: argc
+            Constant: int, 2
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: &&
+          BinaryOp: <
+            ID: argc
+            Constant: int, 0
+          BinaryOp: >
+            ID: argc
+            Constant: int, 10
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: ||
+          ID: argc
+          UnaryOp: !
+            ID: argc
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: &&
+          ID: argc
+          UnaryOp: !
+            ID: argc
+        Return: 
+          Constant: int, 1
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: ||
+            BinaryOp: !=
+              ID: argc
+              Constant: int, 1
+            BinaryOp: !=
+              ID: argc
+              Constant: int, 2
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: &&
+            BinaryOp: <
+              ID: argc
+              Constant: int, 0
+            BinaryOp: >
+              ID: argc
+              Constant: int, 10
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: ||
+            ID: argc
+            UnaryOp: !
+              ID: argc
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: &&
+            ID: argc
+            UnaryOp: !
+              ID: argc
+      Return: 
+        TernaryOp: 
+          BinaryOp: ||
+            BinaryOp: !=
+              ID: argc
+              Constant: int, 1
+            BinaryOp: !=
+              ID: argc
+              Constant: int, 2
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        TernaryOp: 
+          BinaryOp: &&
+            BinaryOp: <
+              ID: argc
+              Constant: int, 0
+            BinaryOp: >
+              ID: argc
+              Constant: int, 10
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        TernaryOp: 
+          BinaryOp: ||
+            ID: argc
+            UnaryOp: !
+              ID: argc
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        TernaryOp: 
+          BinaryOp: &&
+            ID: argc
+            UnaryOp: !
+              ID: argc
+          Constant: int, 1
+          Constant: int, 0
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            ID: argc
+            Constant: int, 2
+          BinaryOp: ==
+            ID: argc
+            Constant: int, 1
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: &&
+          BinaryOp: <
+            ID: argc
+            Constant: int, 0
+          BinaryOp: >
+            ID: argc
+            Constant: int, 10
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: ||
+          ID: argc
+          UnaryOp: !
+            ID: argc
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: &&
+          ID: argc
+          UnaryOp: !
+            ID: argc
+        Return: 
+          Constant: int, 1
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: &&
+            BinaryOp: ==
+              ID: argc
+              Constant: int, 2
+            BinaryOp: ==
+              ID: argc
+              Constant: int, 1
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: &&
+            BinaryOp: <
+              ID: argc
+              Constant: int, 0
+            BinaryOp: >
+              ID: argc
+              Constant: int, 10
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: ||
+            ID: argc
+            UnaryOp: !
+              ID: argc
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: &&
+            ID: argc
+            UnaryOp: !
+              ID: argc
+      Return: 
+        TernaryOp: 
+          BinaryOp: &&
+            BinaryOp: ==
+              ID: argc
+              Constant: int, 2
+            BinaryOp: ==
+              ID: argc
+              Constant: int, 1
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        TernaryOp: 
+          BinaryOp: &&
+            BinaryOp: <
+              ID: argc
+              Constant: int, 0
+            BinaryOp: >
+              ID: argc
+              Constant: int, 10
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        TernaryOp: 
+          BinaryOp: ||
+            ID: argc
+            UnaryOp: !
+              ID: argc
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        TernaryOp: 
+          BinaryOp: &&
+            ID: argc
+            UnaryOp: !
+              ID: argc
+          Constant: int, 1
+          Constant: int, 0
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            ID: argc
+            Constant: int, 2
+          BinaryOp: ==
+            ID: argc
+            Constant: int, 1
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: &&
+          BinaryOp: <
+            ID: argc
+            Constant: int, 0
+          BinaryOp: >
+            ID: argc
+            Constant: int, 10
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: ||
+          UnaryOp: !
+            ID: argc
+          ID: argc
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: &&
+          UnaryOp: !
+            ID: argc
+          ID: argc
+        Return: 
+          Constant: int, 1
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: &&
+            BinaryOp: ==
+              ID: argc
+              Constant: int, 2
+            BinaryOp: ==
+              ID: argc
+              Constant: int, 1
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: &&
+            BinaryOp: <
+              ID: argc
+              Constant: int, 0
+            BinaryOp: >
+              ID: argc
+              Constant: int, 10
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: ||
+            UnaryOp: !
+              ID: argc
+            ID: argc
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: &&
+            UnaryOp: !
+              ID: argc
+            ID: argc
+      Return: 
+        TernaryOp: 
+          BinaryOp: &&
+            BinaryOp: ==
+              ID: argc
+              Constant: int, 2
+            BinaryOp: ==
+              ID: argc
+              Constant: int, 1
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        TernaryOp: 
+          BinaryOp: &&
+            BinaryOp: <
+              ID: argc
+              Constant: int, 0
+            BinaryOp: >
+              ID: argc
+              Constant: int, 10
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        TernaryOp: 
+          BinaryOp: ||
+            UnaryOp: !
+              ID: argc
+            ID: argc
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        TernaryOp: 
+          BinaryOp: &&
+            UnaryOp: !
+              ID: argc
+            ID: argc
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: foo2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argc, [], [], []
+            TypeDecl: argc, []
+              IdentifierType: ['int']
+        TypeDecl: foo2, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: !=
+            Constant: int, 5
+            Constant: int, 1
+          BinaryOp: !=
+            Constant: int, 5
+            Constant: int, 2
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: &&
+          BinaryOp: <
+            Constant: int, 5
+            Constant: int, 0
+          BinaryOp: >
+            Constant: int, 5
+            Constant: int, 10
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: ||
+          Constant: int, 1
+          Constant: int, 0
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: &&
+          Constant: int, 0
+          Constant: int, 1
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: ||
+          Constant: int, 2
+          UnaryOp: !
+            Constant: int, 2
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: &&
+          Constant: int, 2
+          UnaryOp: !
+            Constant: int, 2
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: ||
+          UnaryOp: !
+            UnaryOp: !
+              Constant: int, 2
+          UnaryOp: !
+            Constant: int, 2
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: &&
+          UnaryOp: !
+            UnaryOp: !
+              Constant: int, 2
+          UnaryOp: !
+            Constant: int, 2
+        Return: 
+          Constant: int, 1
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: ||
+            BinaryOp: !=
+              Constant: int, 5
+              Constant: int, 1
+            BinaryOp: !=
+              Constant: int, 5
+              Constant: int, 2
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: &&
+            BinaryOp: <
+              Constant: int, 5
+              Constant: int, 0
+            BinaryOp: >
+              Constant: int, 5
+              Constant: int, 10
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: ||
+            Constant: int, 1
+            Constant: int, 0
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: &&
+            Constant: int, 0
+            Constant: int, 1
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: ||
+            Constant: int, 2
+            UnaryOp: !
+              Constant: int, 2
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: &&
+            Constant: int, 2
+            UnaryOp: !
+              Constant: int, 2
+      Return: 
+        TernaryOp: 
+          BinaryOp: ||
+            BinaryOp: !=
+              Constant: int, 5
+              Constant: int, 1
+            BinaryOp: !=
+              Constant: int, 5
+              Constant: int, 2
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        TernaryOp: 
+          BinaryOp: &&
+            BinaryOp: <
+              Constant: int, 5
+              Constant: int, 0
+            BinaryOp: >
+              Constant: int, 5
+              Constant: int, 10
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        TernaryOp: 
+          BinaryOp: ||
+            Constant: int, 1
+            Constant: int, 0
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        TernaryOp: 
+          BinaryOp: &&
+            Constant: int, 0
+            Constant: int, 1
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        TernaryOp: 
+          BinaryOp: ||
+            Constant: int, 2
+            UnaryOp: !
+              Constant: int, 2
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        TernaryOp: 
+          BinaryOp: &&
+            Constant: int, 2
+            UnaryOp: !
+              Constant: int, 2
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,185 @@
+c_files/pr35869.c:36:8: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+extern f(const char*);
+~~~~~~ ^
+1 warning generated.
+TranslationUnitDecl 0x7fbb3e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbb3e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbb3e826740 '__int128'
+|-TypedefDecl 0x7fbb3e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbb3e826760 'unsigned __int128'
+|-TypedefDecl 0x7fbb3e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbb3e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbb3e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbb3e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbb3e826dc0 'char *'
+|   `-BuiltinType 0x7fbb3e826560 'char'
+|-TypedefDecl 0x7fbb3e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbb3e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbb3e826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbb3e826e58 '__va_list_tag'
+|-RecordDecl 0x7fbb3e827120 <c_files/pr35869.c:1:1, line:6:1> line:1:8 struct texture_stage_op definition
+| |-FieldDecl 0x7fbb3f025a00 <line:3:5, col:18> col:18 referenced carg1 'unsigned int'
+| |-FieldDecl 0x7fbb3f025a60 <col:5, col:25> col:25 carg2 'unsigned int'
+| |-FieldDecl 0x7fbb3f025ac0 <col:5, col:32> col:32 carg0 'unsigned int'
+| |-FieldDecl 0x7fbb3f025b20 <line:4:5, col:18> col:18 aarg1 'unsigned int'
+| |-FieldDecl 0x7fbb3f025b80 <col:5, col:25> col:25 aarg2 'unsigned int'
+| |-FieldDecl 0x7fbb3f025be0 <col:5, col:32> col:32 aarg0 'unsigned int'
+| `-FieldDecl 0x7fbb3f025c40 <line:5:5, col:18> col:18 dst 'unsigned int'
+|-FunctionDecl 0x7fbb3f025d68 <line:8:1, line:16:1> line:8:20 used debug_register 'const char *(unsigned int)' static
+| |-ParmVarDecl 0x7fbb3f025ca0 <col:35, col:48> col:48 used reg 'unsigned int'
+| `-CompoundStmt 0x7fbb3f026440 <col:53, line:16:1>
+|   `-SwitchStmt 0x7fbb3f025e88 <line:9:5, line:15:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fbb3f025e70 <line:9:12> 'unsigned int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fbb3f025e48 <col:12> 'unsigned int' lvalue ParmVar 0x7fbb3f025ca0 'reg' 'unsigned int'
+|     `-CompoundStmt 0x7fbb3f0263a0 <col:17, line:15:5>
+|       |-CaseStmt 0x7fbb3f025ed8 <line:10:9, col:29>
+|       | |-ImplicitCastExpr 0x7fbb3f026428 <col:14> 'unsigned int' <IntegralCast>
+|       | | `-IntegerLiteral 0x7fbb3f025eb8 <col:14> 'int' 35105
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7fbb3f025fb0 <col:22, col:29>
+|       |   `-ImplicitCastExpr 0x7fbb3f025f98 <col:29> 'const char *' <BitCast>
+|       |     `-ImplicitCastExpr 0x7fbb3f025f80 <col:29> 'char *' <ArrayToPointerDecay>
+|       |       `-StringLiteral 0x7fbb3f025f48 <col:29> 'char [13]' lvalue "GL_REG_0_ATI"
+|       |-CaseStmt 0x7fbb3f025fe8 <line:11:9, col:29>
+|       | |-ImplicitCastExpr 0x7fbb3f026410 <col:14> 'unsigned int' <IntegralCast>
+|       | | `-IntegerLiteral 0x7fbb3f025fc8 <col:14> 'int' 35107
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7fbb3f026088 <col:22, col:29>
+|       |   `-ImplicitCastExpr 0x7fbb3f026070 <col:29> 'const char *' <BitCast>
+|       |     `-ImplicitCastExpr 0x7fbb3f026058 <col:29> 'char *' <ArrayToPointerDecay>
+|       |       `-StringLiteral 0x7fbb3f026020 <col:29> 'char [13]' lvalue "GL_REG_2_ATI"
+|       |-CaseStmt 0x7fbb3f0260c0 <line:12:9, col:26>
+|       | |-ImplicitCastExpr 0x7fbb3f0263f8 <col:14> 'unsigned int' <IntegralCast>
+|       | | `-IntegerLiteral 0x7fbb3f0260a0 <col:14> 'int' 0
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7fbb3f026198 <col:19, col:26>
+|       |   `-ImplicitCastExpr 0x7fbb3f026180 <col:26> 'const char *' <BitCast>
+|       |     `-ImplicitCastExpr 0x7fbb3f026168 <col:26> 'char *' <ArrayToPointerDecay>
+|       |       `-StringLiteral 0x7fbb3f026138 <col:26> 'char [8]' lvalue "GL_ZERO"
+|       |-CaseStmt 0x7fbb3f0261d0 <line:13:9, col:26>
+|       | |-ImplicitCastExpr 0x7fbb3f0263e0 <col:14> 'unsigned int' <IntegralCast>
+|       | | `-IntegerLiteral 0x7fbb3f0261b0 <col:14> 'int' 1
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7fbb3f0262a8 <col:19, col:26>
+|       |   `-ImplicitCastExpr 0x7fbb3f026290 <col:26> 'const char *' <BitCast>
+|       |     `-ImplicitCastExpr 0x7fbb3f026278 <col:26> 'char *' <ArrayToPointerDecay>
+|       |       `-StringLiteral 0x7fbb3f026248 <col:26> 'char [7]' lvalue "GL_ONE"
+|       `-DefaultStmt 0x7fbb3f026380 <line:14:9, col:25>
+|         `-ReturnStmt 0x7fbb3f026368 <col:18, col:25>
+|           `-ImplicitCastExpr 0x7fbb3f026350 <col:25> 'const char *' <BitCast>
+|             `-ImplicitCastExpr 0x7fbb3f026338 <col:25> 'char *' <ArrayToPointerDecay>
+|               `-StringLiteral 0x7fbb3f0262f8 <col:25> 'char [18]' lvalue "Unknown register\n"
+|-FunctionDecl 0x7fbb3f026778 <line:18:1, line:34:1> line:18:21 used find_tmpreg 'unsigned int (struct texture_stage_op *)' static
+| |-ParmVarDecl 0x7fbb3f026670 <col:33, col:61> col:57 used op 'struct texture_stage_op *':'struct texture_stage_op *'
+| `-CompoundStmt 0x7fbb3f0271f0 <col:64, line:34:1>
+|   |-DeclStmt 0x7fbb3f026890 <line:19:5, col:10>
+|   | `-VarDecl 0x7fbb3f026830 <col:5, col:9> col:9 used i 'int'
+|   |-DeclStmt 0x7fbb3f026990 <line:20:5, col:20>
+|   | `-VarDecl 0x7fbb3f026930 <col:5, col:19> col:9 used tex_used 'int [8]'
+|   |-ForStmt 0x7fbb3f026de0 <line:22:5, line:26:5>
+|   | |-BinaryOperator 0x7fbb3f026a00 <line:22:9, col:13> 'int' '='
+|   | | |-DeclRefExpr 0x7fbb3f0269a8 <col:9> 'int' lvalue Var 0x7fbb3f026830 'i' 'int'
+|   | | `-IntegerLiteral 0x7fbb3f0269d0 <col:13> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fbb3f026a88 <col:16, col:20> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fbb3f026a70 <col:16> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fbb3f026a28 <col:16> 'int' lvalue Var 0x7fbb3f026830 'i' 'int'
+|   | | `-IntegerLiteral 0x7fbb3f026a50 <col:20> 'int' 8
+|   | |-UnaryOperator 0x7fbb3f026ad8 <col:23, col:24> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fbb3f026ab0 <col:23> 'int' lvalue Var 0x7fbb3f026830 'i' 'int'
+|   | `-CompoundStmt 0x7fbb3f026dc0 <col:28, line:26:5>
+|   |   `-IfStmt 0x7fbb3f026d88 <line:23:9, line:25:9>
+|   |     |-<<<NULL>>>
+|   |     |-<<<NULL>>>
+|   |     |-BinaryOperator 0x7fbb3f026c28 <line:23:12, col:27> 'int' '=='
+|   |     | |-ImplicitCastExpr 0x7fbb3f026bf8 <col:12, col:18> 'unsigned int' <LValueToRValue>
+|   |     | | `-MemberExpr 0x7fbb3f026ba0 <col:12, col:18> 'unsigned int' lvalue .carg1 0x7fbb3f025a00
+|   |     | |   `-ArraySubscriptExpr 0x7fbb3f026b78 <col:12, col:16> 'struct texture_stage_op':'struct texture_stage_op' lvalue
+|   |     | |     |-ImplicitCastExpr 0x7fbb3f026b48 <col:12> 'struct texture_stage_op *':'struct texture_stage_op *' <LValueToRValue>
+|   |     | |     | `-DeclRefExpr 0x7fbb3f026af8 <col:12> 'struct texture_stage_op *':'struct texture_stage_op *' lvalue ParmVar 0x7fbb3f026670 'op' 'struct texture_stage_op *':'struct texture_stage_op *'
+|   |     | |     `-ImplicitCastExpr 0x7fbb3f026b60 <col:15> 'int' <LValueToRValue>
+|   |     | |       `-DeclRefExpr 0x7fbb3f026b20 <col:15> 'int' lvalue Var 0x7fbb3f026830 'i' 'int'
+|   |     | `-ImplicitCastExpr 0x7fbb3f026c10 <col:27> 'unsigned int' <IntegralCast>
+|   |     |   `-IntegerLiteral 0x7fbb3f026bd8 <col:27> 'int' 2
+|   |     |-CompoundStmt 0x7fbb3f026d68 <col:40, line:25:9>
+|   |     | `-BinaryOperator 0x7fbb3f026d40 <line:24:13, col:27> 'int' '='
+|   |     |   |-ArraySubscriptExpr 0x7fbb3f026cf8 <col:13, col:23> 'int' lvalue
+|   |     |   | |-ImplicitCastExpr 0x7fbb3f026cc8 <col:13> 'int *' <ArrayToPointerDecay>
+|   |     |   | | `-DeclRefExpr 0x7fbb3f026c50 <col:13> 'int [8]' lvalue Var 0x7fbb3f026930 'tex_used' 'int [8]'
+|   |     |   | `-ImplicitCastExpr 0x7fbb3f026ce0 <col:22> 'int' <LValueToRValue>
+|   |     |   |   `-DeclRefExpr 0x7fbb3f026c78 <col:22> 'int' lvalue Var 0x7fbb3f026830 'i' 'int'
+|   |     |   `-IntegerLiteral 0x7fbb3f026d20 <col:27> 'int' 1
+|   |     `-<<<NULL>>>
+|   |-ForStmt 0x7fbb3f027168 <line:28:5, line:32:5>
+|   | |-BinaryOperator 0x7fbb3f026e60 <line:28:9, col:13> 'int' '='
+|   | | |-DeclRefExpr 0x7fbb3f026e18 <col:9> 'int' lvalue Var 0x7fbb3f026830 'i' 'int'
+|   | | `-IntegerLiteral 0x7fbb3f026e40 <col:13> 'int' 1
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fbb3f026ee8 <col:16, col:20> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fbb3f026ed0 <col:16> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fbb3f026e88 <col:16> 'int' lvalue Var 0x7fbb3f026830 'i' 'int'
+|   | | `-IntegerLiteral 0x7fbb3f026eb0 <col:20> 'int' 6
+|   | |-UnaryOperator 0x7fbb3f026f38 <col:23, col:24> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fbb3f026f10 <col:23> 'int' lvalue Var 0x7fbb3f026830 'i' 'int'
+|   | `-CompoundStmt 0x7fbb3f027148 <col:28, line:32:5>
+|   |   `-IfStmt 0x7fbb3f027110 <line:29:9, line:31:9>
+|   |     |-<<<NULL>>>
+|   |     |-<<<NULL>>>
+|   |     |-UnaryOperator 0x7fbb3f027018 <line:29:12, col:23> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7fbb3f027000 <col:13, col:23> 'int' <LValueToRValue>
+|   |     |   `-ArraySubscriptExpr 0x7fbb3f026fd8 <col:13, col:23> 'int' lvalue
+|   |     |     |-ImplicitCastExpr 0x7fbb3f026fa8 <col:13> 'int *' <ArrayToPointerDecay>
+|   |     |     | `-DeclRefExpr 0x7fbb3f026f58 <col:13> 'int [8]' lvalue Var 0x7fbb3f026930 'tex_used' 'int [8]'
+|   |     |     `-ImplicitCastExpr 0x7fbb3f026fc0 <col:22> 'int' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7fbb3f026f80 <col:22> 'int' lvalue Var 0x7fbb3f026830 'i' 'int'
+|   |     |-CompoundStmt 0x7fbb3f0270f0 <col:26, line:31:9>
+|   |     | `-ReturnStmt 0x7fbb3f0270d8 <line:30:17, col:33>
+|   |     |   `-ImplicitCastExpr 0x7fbb3f0270c0 <col:24, col:33> 'unsigned int' <IntegralCast>
+|   |     |     `-BinaryOperator 0x7fbb3f027098 <col:24, col:33> 'int' '+'
+|   |     |       |-IntegerLiteral 0x7fbb3f027038 <col:24> 'int' 35105
+|   |     |       `-ImplicitCastExpr 0x7fbb3f027080 <col:33> 'int' <LValueToRValue>
+|   |     |         `-DeclRefExpr 0x7fbb3f027058 <col:33> 'int' lvalue Var 0x7fbb3f026830 'i' 'int'
+|   |     `-<<<NULL>>>
+|   `-ReturnStmt 0x7fbb3f0271d8 <line:33:5, col:12>
+|     `-ImplicitCastExpr 0x7fbb3f0271c0 <col:12> 'unsigned int' <IntegralCast>
+|       `-IntegerLiteral 0x7fbb3f0271a0 <col:12> 'int' 0
+|-FunctionDecl 0x7fbb3f027318 <line:36:1, col:21> col:8 used f 'int (const char *)' extern
+| `-ParmVarDecl 0x7fbb3f027248 <col:10, col:20> col:21 'const char *'
+`-FunctionDecl 0x7fbb3f027408 <line:38:1, line:47:1> line:38:6 g 'void ()'
+  `-CompoundStmt 0x7fbb3f027aa8 <col:10, line:47:1>
+    |-DeclStmt 0x7fbb3f027550 <line:39:5, col:34>
+    | `-VarDecl 0x7fbb3f0274f0 <col:5, col:33> col:29 used op 'struct texture_stage_op [8]'
+    |-DeclStmt 0x7fbb3f0276e8 <line:40:5, col:42>
+    | `-VarDecl 0x7fbb3f027580 <col:5, col:41> col:18 used tmparg 'unsigned int' cinit
+    |   `-CallExpr 0x7fbb3f0276a0 <col:27, col:41> 'unsigned int'
+    |     |-ImplicitCastExpr 0x7fbb3f027688 <col:27> 'unsigned int (*)(struct texture_stage_op *)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fbb3f0275e0 <col:27> 'unsigned int (struct texture_stage_op *)' Function 0x7fbb3f026778 'find_tmpreg' 'unsigned int (struct texture_stage_op *)'
+    |     `-ImplicitCastExpr 0x7fbb3f0276d0 <col:39> 'struct texture_stage_op *' <ArrayToPointerDecay>
+    |       `-DeclRefExpr 0x7fbb3f027608 <col:39> 'struct texture_stage_op [8]' lvalue Var 0x7fbb3f0274f0 'op' 'struct texture_stage_op [8]'
+    |-DeclStmt 0x7fbb3f027778 <line:41:5, col:24>
+    | `-VarDecl 0x7fbb3f027718 <col:5, col:18> col:18 used dstreg 'unsigned int'
+    |-IfStmt 0x7fbb3f027848 <line:43:5, col:23>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbb3f027808 <col:8, col:18> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fbb3f0277d8 <col:8> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fbb3f027790 <col:8> 'unsigned int' lvalue Var 0x7fbb3f027580 'tmparg' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7fbb3f0277f0 <col:18> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fbb3f0277b8 <col:18> 'int' 0
+    | |-ReturnStmt 0x7fbb3f027830 <col:23>
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fbb3f0278e8 <line:44:5, col:14> 'unsigned int' '='
+    | |-DeclRefExpr 0x7fbb3f027880 <col:5> 'unsigned int' lvalue Var 0x7fbb3f027718 'dstreg' 'unsigned int'
+    | `-ImplicitCastExpr 0x7fbb3f0278d0 <col:14> 'unsigned int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fbb3f0278a8 <col:14> 'unsigned int' lvalue Var 0x7fbb3f027580 'tmparg' 'unsigned int'
+    |-CallExpr 0x7fbb3f027a60 <line:45:5, col:29> 'int'
+    | |-ImplicitCastExpr 0x7fbb3f027a48 <col:5> 'int (*)(const char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fbb3f027910 <col:5> 'int (const char *)' Function 0x7fbb3f027318 'f' 'int (const char *)'
+    | `-CallExpr 0x7fbb3f0279d0 <col:7, col:28> 'const char *'
+    |   |-ImplicitCastExpr 0x7fbb3f0279b8 <col:7> 'const char *(*)(unsigned int)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fbb3f027938 <col:7> 'const char *(unsigned int)' Function 0x7fbb3f025d68 'debug_register' 'const char *(unsigned int)'
+    |   `-ImplicitCastExpr 0x7fbb3f027a00 <col:22> 'unsigned int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fbb3f027960 <col:22> 'unsigned int' lvalue Var 0x7fbb3f027718 'dstreg' 'unsigned int'
+    `-ReturnStmt 0x7fbb3f027a90 <line:46:5>

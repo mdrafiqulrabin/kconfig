@@ -1,0 +1,158 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: str, [], [], []
+        ArrayDecl: []
+          TypeDecl: str, []
+            IdentifierType: ['char']
+          Constant: int, 8
+      Decl: v, [], [], []
+        PtrDecl: []
+          TypeDecl: v, []
+            IdentifierType: ['void']
+  Decl: varf, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: fmt, [], [], []
+          PtrDecl: []
+            TypeDecl: fmt, []
+              IdentifierType: ['char']
+        EllipsisParam: 
+      TypeDecl: varf, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              Struct: A
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              Struct: A
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: varf
+        ExprList: 
+          Constant: string, "%s%s"
+          StructRef: .
+            ID: b
+            ID: str
+          StructRef: .
+            ID: b
+            ID: str
+  Decl: x64, [], [], []
+    TypeDecl: x64, []
+      IdentifierType: ['long', 'long']
+  FuncDef: 
+    Decl: foo2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: j0, [], [], []
+            TypeDecl: j0, []
+              IdentifierType: ['long', 'long']
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              Struct: A
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              Struct: A
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              Struct: A
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              Struct: A
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              Struct: A
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              Struct: A
+          Decl: g, [], [], []
+            TypeDecl: g, []
+              Struct: A
+          Decl: h, [], [], []
+            TypeDecl: h, []
+              Struct: A
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              Struct: A
+          Decl: j1, [], [], []
+            TypeDecl: j1, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: foo2, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: varf
+        ExprList: 
+          Constant: string, "%s%s"
+          StructRef: .
+            ID: i
+            ID: str
+          StructRef: .
+            ID: i
+            ID: str
+          ID: x64
+          BinaryOp: +
+            ID: j1
+            ID: j0
+  FuncDef: 
+    Decl: foo3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: j0, [], [], []
+            TypeDecl: j0, []
+              IdentifierType: ['long', 'long']
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              Struct: A
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              Struct: A
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              Struct: A
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              Struct: A
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              Struct: A
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              Struct: A
+          Decl: g, [], [], []
+            TypeDecl: g, []
+              Struct: A
+          Decl: h, [], [], []
+            TypeDecl: h, []
+              Struct: A
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              Struct: A
+          Decl: j1, [], [], []
+            TypeDecl: j1, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: foo3, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: varf
+        ExprList: 
+          Constant: string, "%s%s"
+          UnaryOp: &
+            StructRef: .
+              ID: i
+              ID: str
+          UnaryOp: &
+            StructRef: .
+              ID: b
+              ID: str
+          ID: x64
+          BinaryOp: +
+            ID: j1
+            ID: j0

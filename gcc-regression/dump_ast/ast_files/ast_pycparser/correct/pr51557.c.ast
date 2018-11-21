@@ -1,0 +1,91 @@
+FileAST: 
+  Decl: baz, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: baz, []
+        IdentifierType: ['int']
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: synth, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: values, [], [], []
+            PtrDecl: []
+              TypeDecl: values, []
+                IdentifierType: ['int']
+          Decl: n_values, [], [], []
+            TypeDecl: n_values, []
+              IdentifierType: ['int']
+          Decl: ci, [], [], []
+            TypeDecl: ci, []
+              IdentifierType: ['int']
+          Decl: s1, [], [], []
+            TypeDecl: s1, []
+              IdentifierType: ['int']
+          Decl: v, [], [], []
+            TypeDecl: v, []
+              IdentifierType: ['int']
+          Decl: s2, [], [], []
+            TypeDecl: s2, []
+              IdentifierType: ['int']
+        TypeDecl: synth, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        UnaryOp: --
+          ID: s1
+        Compound: 
+          Decl: r1, [], [], []
+            TypeDecl: r1, []
+              IdentifierType: ['int']
+            ArrayRef: 
+              ID: values
+              ID: s1
+          Decl: co, [], [], []
+            TypeDecl: co, []
+              IdentifierType: ['int']
+            TernaryOp: 
+              ID: ci
+              ID: r1
+              BinaryOp: <
+                FuncCall: 
+                  ID: baz
+                ID: r1
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              Constant: int, 0
+              ID: n_values
+              ID: s1
+              ID: s2
+              ID: v
+              ID: co
+              Constant: int, 0

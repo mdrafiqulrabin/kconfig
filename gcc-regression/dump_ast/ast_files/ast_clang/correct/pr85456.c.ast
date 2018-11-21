@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fd9e98264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd9e9826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd9e9826740 '__int128'
+|-TypedefDecl 0x7fd9e9826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd9e9826760 'unsigned __int128'
+|-TypedefDecl 0x7fd9e9826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd9e9826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd9e9826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd9e9826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd9e9826dc0 'char *'
+|   `-BuiltinType 0x7fd9e9826560 'char'
+|-TypedefDecl 0x7fd9e98270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd9e9827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd9e9826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd9e9826e58 '__va_list_tag'
+|-FunctionDecl 0x7fd9ea025ad8 <c_files/pr85456.c:8:1, line:12:1> line:9:1 do_powl 'long double (long double, int)'
+| |-ParmVarDecl 0x7fd9e9827138 <col:10, col:22> col:22 used a 'long double'
+| |-ParmVarDecl 0x7fd9ea025a00 <col:25, col:29> col:29 used i 'int'
+| `-CompoundStmt 0x7fd9ea025ec0 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7fd9ea025ea8 <line:11:3, col:31>
+|     `-CallExpr 0x7fd9ea025e40 <col:10, col:31> 'long double'
+|       |-ImplicitCastExpr 0x7fd9ea025e28 <col:10> 'long double (*)(long double, int)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fd9ea025d80 <col:10> '<builtin fn type>' Function 0x7fd9ea025bc0 '__builtin_powil' 'long double (long double, int)'
+|       |-ImplicitCastExpr 0x7fd9ea025e78 <col:27> 'long double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fd9ea025da8 <col:27> 'long double' lvalue ParmVar 0x7fd9e9827138 'a' 'long double'
+|       `-ImplicitCastExpr 0x7fd9ea025e90 <col:30> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fd9ea025dd0 <col:30> 'int' lvalue ParmVar 0x7fd9ea025a00 'i' 'int'
+`-FunctionDecl 0x7fd9ea025bc0 <col:10> col:10 implicit used __builtin_powil 'long double (long double, int)' extern
+  |-ParmVarDecl 0x7fd9ea025c58 <<invalid sloc>> <invalid sloc> 'long double'
+  |-ParmVarDecl 0x7fd9ea025cb8 <<invalid sloc>> <invalid sloc> 'int'
+  |-NoThrowAttr 0x7fd9ea025d28 <col:10> Implicit
+  `-ConstAttr 0x7fd9ea025d70 <col:10> Implicit

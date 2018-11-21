@@ -1,0 +1,41 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: iu, [], [], []
+        TypeDecl: iu, []
+          IdentifierType: ['unsigned', 'int']
+  Decl: None, [], [], []
+    Union: U
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          Struct: S
+      Decl: is, [], [], []
+        TypeDecl: is, []
+          IdentifierType: ['signed', 'int']
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: bar, []
+        IdentifierType: ['signed', 'int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          Struct: S
+    Compound: 
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          Union: U
+      Assignment: =
+        StructRef: .
+          ID: u
+          ID: is
+        FuncCall: 
+          ID: bar
+      Return: 
+        StructRef: .
+          ID: u
+          ID: s

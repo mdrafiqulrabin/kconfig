@@ -1,0 +1,36 @@
+FileAST: 
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+  FuncDef: 
+    Decl: t106_1mul, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: t106_1mul, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['int']
+      If: 
+        FuncCall: 
+          ID: __builtin_mul_overflow
+          ExprList: 
+            ID: x
+            ID: y
+            UnaryOp: &
+              ID: r
+        Compound: 
+          FuncCall: 
+            ID: bar
+      Return: 
+        ID: r

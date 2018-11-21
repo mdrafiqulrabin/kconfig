@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fee6f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fee6f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fee6f026740 '__int128'
+|-TypedefDecl 0x7fee6f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fee6f026760 'unsigned __int128'
+|-TypedefDecl 0x7fee6f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fee6f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fee6f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fee6f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fee6f026dc0 'char *'
+|   `-BuiltinType 0x7fee6f026560 'char'
+|-TypedefDecl 0x7fee6f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fee6f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fee6f026ee0 'struct __va_list_tag'
+|     `-Record 0x7fee6f026e58 '__va_list_tag'
+|-RecordDecl 0x7fee6f027120 <c_files/pr40026.c:1:9, line:3:1> line:1:9 struct definition
+| `-FieldDecl 0x7fee6f825a00 <line:2:5, col:19> col:19 bits 'unsigned long'
+|-TypedefDecl 0x7fee6f825aa0 <line:1:1, line:3:3> col:3 referenced S 'struct S':'S'
+| `-ElaboratedType 0x7fee6f825a50 'struct S' sugar
+|   `-RecordType 0x7fee6f0271b0 'S'
+|     `-Record 0x7fee6f027120 ''
+|-RecordDecl 0x7fee6f825b10 <line:4:1, line:7:1> line:4:8 struct T definition
+| |-FieldDecl 0x7fee6f825bf0 <line:5:5, col:7> col:7 span 'S':'S'
+| `-FieldDecl 0x7fee6f825c50 <line:6:5, col:9> col:9 flags 'int'
+`-FunctionDecl 0x7fee6f825e40 <line:9:1, line:15:1> line:9:10 f 'struct T (int)'
+  |-ParmVarDecl 0x7fee6f825cf8 <col:12, col:16> col:16 used x 'int'
+  `-CompoundStmt 0x7fee6f8262a0 <line:10:1, line:15:1>
+    `-ReturnStmt 0x7fee6f826288 <line:11:3, line:14:3>
+      `-ImplicitCastExpr 0x7fee6f826270 <line:11:10, line:14:3> 'struct T':'struct T' <LValueToRValue>
+        `-CompoundLiteralExpr 0x7fee6f826248 <line:11:10, line:14:3> 'struct T':'struct T' lvalue
+          `-InitListExpr 0x7fee6f8261e0 <line:11:21, line:14:3> 'struct T':'struct T'
+            |-ImplicitCastExpr 0x7fee6f826230 <line:12:15, col:25> 'S':'S' <LValueToRValue>
+            | `-CompoundLiteralExpr 0x7fee6f826000 <col:15, col:25> 'S':'S' lvalue
+            |   `-InitListExpr 0x7fee6f825fb8 <col:19, col:25> 'S':'S'
+            |     `-IntegerLiteral 0x7fee6f825f50 <col:21> 'unsigned long' 0
+            `-ParenExpr 0x7fee6f826118 <line:13:16, col:28> 'int'
+              `-ConditionalOperator 0x7fee6f8260e8 <col:17, col:27> 'int'
+                |-ImplicitCastExpr 0x7fee6f8260d0 <col:17> 'int' <LValueToRValue>
+                | `-DeclRefExpr 0x7fee6f826068 <col:17> 'int' lvalue ParmVar 0x7fee6f825cf8 'x' 'int'
+                |-IntegerLiteral 0x7fee6f826090 <col:21> 'int' 256
+                `-IntegerLiteral 0x7fee6f8260b0 <col:27> 'int' 0

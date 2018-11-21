@@ -1,0 +1,39 @@
+FileAST: 
+  Decl: data, [], ['static'], []
+    ArrayDecl: []
+      PtrDecl: []
+        TypeDecl: data, []
+          IdentifierType: ['int']
+      Constant: int, 100
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['long']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long']
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      DoWhile: 
+        BinaryOp: <=
+          ID: a
+          ID: b
+        Compound: 
+          If: 
+            BinaryOp: <
+              ID: a
+              ID: b
+            Compound: 
+              Assignment: =
+                ArrayRef: 
+                  ID: data
+                  ID: a
+                ArrayRef: 
+                  ID: data
+                  ID: b
+              UnaryOp: p++
+                ID: a

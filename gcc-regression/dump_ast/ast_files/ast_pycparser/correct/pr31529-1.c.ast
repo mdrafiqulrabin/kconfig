@@ -1,0 +1,15 @@
+FileAST: 
+  FuncDef: 
+    Decl: getline, [], [], []
+      FuncDecl: 
+        TypeDecl: getline, []
+          IdentifierType: ['int']
+    Compound: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 0

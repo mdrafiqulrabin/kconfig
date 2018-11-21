@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7fe3e70264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe3e7026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe3e7026740 '__int128'
+|-TypedefDecl 0x7fe3e7026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe3e7026760 'unsigned __int128'
+|-TypedefDecl 0x7fe3e7026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe3e7026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe3e7026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe3e7026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe3e7026dc0 'char *'
+|   `-BuiltinType 0x7fe3e7026560 'char'
+|-TypedefDecl 0x7fe3e70270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe3e7027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe3e7026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe3e7026e58 '__va_list_tag'
+|-VarDecl 0x7fe3e7027138 <c_files/pr68013.c:1:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fe3e7825a00 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7fe3e7825a78 <col:1, col:11> col:11 used c 'int'
+|-VarDecl 0x7fe3e7825af0 <col:1, col:14> col:14 used d 'int'
+|-VarDecl 0x7fe3e7825b68 <col:1, col:17> col:17 used e 'int'
+|-VarDecl 0x7fe3e7825be0 <col:1, col:20> col:20 used f 'int'
+`-FunctionDecl 0x7fe3e7825cc8 <line:3:1, line:16:1> line:4:1 fn1 'void ()'
+  `-CompoundStmt 0x7fe3e78261c0 <line:5:1, line:16:1>
+    `-ForStmt 0x7fe3e7826188 <line:6:3, line:15:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fe3e7825d88 <line:6:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fe3e7825d60 <col:10> 'int' lvalue Var 0x7fe3e7825b68 'e' 'int'
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7fe3e7826158 <line:7:5, line:15:5>
+        |-BinaryOperator 0x7fe3e7825e08 <line:8:7, col:11> 'int' '='
+        | |-DeclRefExpr 0x7fe3e7825da0 <col:7> 'int' lvalue Var 0x7fe3e7825b68 'e' 'int'
+        | `-ImplicitCastExpr 0x7fe3e7825df0 <col:11> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fe3e7825dc8 <col:11> 'int' lvalue Var 0x7fe3e7825be0 'f' 'int'
+        |-ForStmt 0x7fe3e78260b0 <line:9:7, line:13:2>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7fe3e7825e58 <line:9:14> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fe3e7825e30 <col:14> 'int' lvalue Var 0x7fe3e7825a00 'b' 'int'
+        | |-<<<NULL>>>
+        | `-CompoundStmt 0x7fe3e7826088 <line:10:2, line:13:2>
+        |   |-BinaryOperator 0x7fe3e7825ed8 <line:11:4, col:8> 'int' '='
+        |   | |-DeclRefExpr 0x7fe3e7825e70 <col:4> 'int' lvalue Var 0x7fe3e7825a00 'b' 'int'
+        |   | `-ImplicitCastExpr 0x7fe3e7825ec0 <col:8> 'int' <LValueToRValue>
+        |   |   `-DeclRefExpr 0x7fe3e7825e98 <col:8> 'int' lvalue Var 0x7fe3e7027138 'a' 'int'
+        |   `-BinaryOperator 0x7fe3e7826060 <line:12:4, col:21> 'int' '='
+        |     |-DeclRefExpr 0x7fe3e7825f00 <col:4> 'int' lvalue Var 0x7fe3e7825be0 'f' 'int'
+        |     `-ConditionalOperator 0x7fe3e7826030 <col:8, col:21> 'int'
+        |       |-BinaryOperator 0x7fe3e7825fa8 <col:8, col:13> 'int' '||'
+        |       | |-ImplicitCastExpr 0x7fe3e7825f78 <col:8> 'int' <LValueToRValue>
+        |       | | `-DeclRefExpr 0x7fe3e7825f28 <col:8> 'int' lvalue Var 0x7fe3e7027138 'a' 'int'
+        |       | `-ImplicitCastExpr 0x7fe3e7825f90 <col:13> 'int' <LValueToRValue>
+        |       |   `-DeclRefExpr 0x7fe3e7825f50 <col:13> 'int' lvalue Var 0x7fe3e7825af0 'd' 'int'
+        |       |-IntegerLiteral 0x7fe3e7825fd0 <col:17> 'int' 0
+        |       `-ImplicitCastExpr 0x7fe3e7826018 <col:21> 'int' <LValueToRValue>
+        |         `-DeclRefExpr 0x7fe3e7825ff0 <col:21> 'int' lvalue Var 0x7fe3e7825a78 'c' 'int'
+        `-BinaryOperator 0x7fe3e7826130 <line:14:7, col:11> 'int' '='
+          |-DeclRefExpr 0x7fe3e78260e8 <col:7> 'int' lvalue Var 0x7fe3e7825af0 'd' 'int'
+          `-IntegerLiteral 0x7fe3e7826110 <col:11> 'int' 0

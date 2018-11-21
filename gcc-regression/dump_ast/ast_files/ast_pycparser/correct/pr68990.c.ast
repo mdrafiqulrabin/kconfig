@@ -1,0 +1,170 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['short']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['char']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['char']
+    Constant: int, 1
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['long', 'long']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['short']
+    Compound: 
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['unsigned']
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['unsigned']
+        Constant: int, 0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        BinaryOp: ||
+          Constant: int, 0
+          BinaryOp: *
+            ID: d
+            BinaryOp: |
+              ID: b
+              ID: e
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['char']
+        BinaryOp: <<
+          ID: a
+          ID: i
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['char']
+        ID: a
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['short']
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          IdentifierType: ['int']
+        UnaryOp: -
+          ID: b
+      If: 
+        BinaryOp: <
+          ID: m
+          ID: b
+        Compound: 
+          Assignment: =
+            ID: k
+            Assignment: =
+              ID: m
+              ID: b
+          Assignment: =
+            ID: g
+            BinaryOp: /
+              BinaryOp: ||
+                ID: k
+                ID: l
+              BinaryOp: /
+                ID: b
+                ID: e
+          If: 
+            ID: b
+            FuncCall: 
+              ID: __builtin_printf
+              ExprList: 
+                Constant: string, "foo=%lld\n"
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['long', 'long']
+                  ID: a
+      Assignment: =
+        ID: a
+        Assignment: =
+          ID: b
+          ID: m
+      If: 
+        BinaryOp: ||
+          ID: j
+          ID: e
+        Compound: 
+          Assignment: =
+            ID: h
+            ID: g
+          Assignment: =
+            ID: i
+            ID: m
+          Assignment: =
+            ID: g
+            BinaryOp: /
+              BinaryOp: *
+                ID: j
+                ID: k
+              BinaryOp: -
+                ID: i
+                ID: d
+          If: 
+            ID: m
+            Assignment: =
+              ID: b
+              BinaryOp: &&
+                ID: j
+                ID: b
+          Assignment: =
+            ID: e
+            BinaryOp: ||
+              BinaryOp: *
+                ID: b
+                BinaryOp: &
+                  ID: h
+                  ID: d
+              ID: g
+      Assignment: =
+        ID: b
+        ID: i
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['char']
+        BinaryOp: ||
+          ID: e
+          BinaryOp: |
+            ID: h
+            ID: d
+      Assignment: =
+        ID: e
+        BinaryOp: &
+          BinaryOp: <
+            ID: i
+            ID: d
+          BinaryOp: /
+            ID: k
+            ID: n
+      Return: 
+        ID: f
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        FuncCall: 
+          ID: foo
+        If: 
+          ID: c
+          Label: lab
+            Goto: lab
+      Return: 
+        Constant: int, 0

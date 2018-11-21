@@ -1,0 +1,61 @@
+c_files/pr60351.c:7:5: warning: expression result unused [-Wunused-value]
+  i >> -1; /* { dg-warning "5:right shift count is negative" } */
+  ~ ^  ~~
+c_files/pr60351.c:8:5: warning: expression result unused [-Wunused-value]
+  i >> 250; /* { dg-warning "5:right shift count >= width of type" } */
+  ~ ^  ~~~
+c_files/pr60351.c:9:5: warning: expression result unused [-Wunused-value]
+  i << -1; /* { dg-warning "5:left shift count is negative" } */
+  ~ ^  ~~
+c_files/pr60351.c:10:5: warning: expression result unused [-Wunused-value]
+  i << 250; /* { dg-warning "5:left shift count >= width of type" } */
+  ~ ^  ~~~
+c_files/pr60351.c:7:5: warning: shift count is negative [-Wshift-count-negative]
+  i >> -1; /* { dg-warning "5:right shift count is negative" } */
+    ^  ~~
+c_files/pr60351.c:8:5: warning: shift count >= width of type [-Wshift-count-overflow]
+  i >> 250; /* { dg-warning "5:right shift count >= width of type" } */
+    ^  ~~~
+c_files/pr60351.c:9:5: warning: shift count is negative [-Wshift-count-negative]
+  i << -1; /* { dg-warning "5:left shift count is negative" } */
+    ^  ~~
+c_files/pr60351.c:10:5: warning: shift count >= width of type [-Wshift-count-overflow]
+  i << 250; /* { dg-warning "5:left shift count >= width of type" } */
+    ^  ~~~
+8 warnings generated.
+TranslationUnitDecl 0x7ffaf68264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffaf6826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffaf6826740 '__int128'
+|-TypedefDecl 0x7ffaf6826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffaf6826760 'unsigned __int128'
+|-TypedefDecl 0x7ffaf6826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffaf6826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffaf6826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffaf6826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffaf6826dc0 'char *'
+|   `-BuiltinType 0x7ffaf6826560 'char'
+|-TypedefDecl 0x7ffaf68270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffaf6827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffaf6826ee0 'struct __va_list_tag'
+|     `-Record 0x7ffaf6826e58 '__va_list_tag'
+`-FunctionDecl 0x7ffaf7025a00 <c_files/pr60351.c:4:1, line:11:1> line:5:1 f 'void (int)'
+  |-ParmVarDecl 0x7ffaf6827138 <col:4, col:8> col:8 used i 'int'
+  `-CompoundStmt 0x7ffaf7025d40 <line:6:1, line:11:1>
+    |-BinaryOperator 0x7ffaf7025b60 <line:7:3, col:9> 'int' '>>'
+    | |-ImplicitCastExpr 0x7ffaf7025b48 <col:3> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ffaf7025ae0 <col:3> 'int' lvalue ParmVar 0x7ffaf6827138 'i' 'int'
+    | `-UnaryOperator 0x7ffaf7025b28 <col:8, col:9> 'int' prefix '-'
+    |   `-IntegerLiteral 0x7ffaf7025b08 <col:9> 'int' 1
+    |-BinaryOperator 0x7ffaf7025be8 <line:8:3, col:8> 'int' '>>'
+    | |-ImplicitCastExpr 0x7ffaf7025bd0 <col:3> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ffaf7025b88 <col:3> 'int' lvalue ParmVar 0x7ffaf6827138 'i' 'int'
+    | `-IntegerLiteral 0x7ffaf7025bb0 <col:8> 'int' 250
+    |-BinaryOperator 0x7ffaf7025c90 <line:9:3, col:9> 'int' '<<'
+    | |-ImplicitCastExpr 0x7ffaf7025c78 <col:3> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ffaf7025c10 <col:3> 'int' lvalue ParmVar 0x7ffaf6827138 'i' 'int'
+    | `-UnaryOperator 0x7ffaf7025c58 <col:8, col:9> 'int' prefix '-'
+    |   `-IntegerLiteral 0x7ffaf7025c38 <col:9> 'int' 1
+    `-BinaryOperator 0x7ffaf7025d18 <line:10:3, col:8> 'int' '<<'
+      |-ImplicitCastExpr 0x7ffaf7025d00 <col:3> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7ffaf7025cb8 <col:3> 'int' lvalue ParmVar 0x7ffaf6827138 'i' 'int'
+      `-IntegerLiteral 0x7ffaf7025ce0 <col:8> 'int' 250

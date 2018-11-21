@@ -1,0 +1,48 @@
+FileAST: 
+  Decl: f, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            PtrDecl: ['const']
+              TypeDecl: None, []
+                IdentifierType: ['char']
+      TypeDecl: f, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: o, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: o, []
+                  IdentifierType: ['char']
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: multilib_exclusions_raw, ['const'], ['static'], []
+        ArrayDecl: []
+          PtrDecl: ['const']
+            TypeDecl: multilib_exclusions_raw, ['const']
+              IdentifierType: ['char']
+        InitList: 
+          Constant: int, 0
+      Decl: q, ['const'], [], []
+        PtrDecl: []
+          PtrDecl: ['const']
+            TypeDecl: q, ['const']
+              IdentifierType: ['char']
+        ID: multilib_exclusions_raw
+      FuncCall: 
+        ID: f
+        ExprList: 
+          ID: o
+      While: 
+        UnaryOp: *
+          UnaryOp: p++
+            ID: q
+        FuncCall: 
+          ID: f
+          ExprList: 
+            ID: o

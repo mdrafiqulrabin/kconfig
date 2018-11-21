@@ -1,0 +1,83 @@
+FileAST: 
+  Typedef: complex16_t, [], ['typedef']
+    TypeDecl: complex16_t, []
+      Struct: None
+        Decl: real, [], [], []
+          TypeDecl: real, []
+            IdentifierType: ['short']
+        Decl: imag, [], [], []
+          TypeDecl: imag, []
+            IdentifierType: ['short']
+  FuncDef: 
+    Decl: libvector_AccSquareNorm_ref, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: acc, [], [], []
+            PtrDecl: []
+              TypeDecl: acc, []
+                IdentifierType: ['unsigned', 'int']
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['complex16_t']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['unsigned']
+        TypeDecl: libvector_AccSquareNorm_ref, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: len
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ArrayRef: 
+            ID: acc
+            ID: i
+          BinaryOp: +
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'int']
+              BinaryOp: *
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+                  StructRef: .
+                    ArrayRef: 
+                      ID: x
+                      ID: i
+                    ID: real
+                StructRef: .
+                  ArrayRef: 
+                    ID: x
+                    ID: i
+                  ID: real
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'int']
+              BinaryOp: *
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+                  StructRef: .
+                    ArrayRef: 
+                      ID: x
+                      ID: i
+                    ID: imag
+                StructRef: .
+                  ArrayRef: 
+                    ID: x
+                    ID: i
+                  ID: imag

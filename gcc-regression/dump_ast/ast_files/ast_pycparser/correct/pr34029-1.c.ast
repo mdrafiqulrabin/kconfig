@@ -1,0 +1,92 @@
+FileAST: 
+  Decl: s, ['const'], ['static'], []
+    ArrayDecl: []
+      TypeDecl: s, ['const']
+        IdentifierType: ['char']
+    Constant: string, "ab.cd.efghijk"
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: a, ['const']
+            IdentifierType: ['char']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Assignment: =
+        ID: a
+        FuncCall: 
+          ID: __builtin_strchr
+          ExprList: 
+            ID: s
+            Constant: char, '.'
+      If: 
+        BinaryOp: ==
+          ID: a
+          Constant: int, 0
+        Assignment: =
+          ID: b
+          Constant: int, 1
+        If: 
+          BinaryOp: ==
+            Assignment: =
+              ID: a
+              FuncCall: 
+                ID: __builtin_strchr
+                ExprList: 
+                  BinaryOp: +
+                    ID: a
+                    Constant: int, 1
+                  Constant: char, '.'
+            Constant: int, 0
+          Assignment: =
+            ID: b
+            Constant: int, 1
+          If: 
+            FuncCall: 
+              ID: __builtin_strncmp
+              ExprList: 
+                ID: s
+                ID: x
+                BinaryOp: -
+                  ID: a
+                  ID: s
+            Assignment: =
+              ID: b
+              Constant: int, 1
+            If: 
+              BinaryOp: <
+                FuncCall: 
+                  ID: __builtin_strncmp
+                  ExprList: 
+                    BinaryOp: +
+                      ID: a
+                      Constant: int, 1
+                    BinaryOp: +
+                      ID: x
+                      BinaryOp: +
+                        BinaryOp: -
+                          ID: a
+                          ID: s
+                        Constant: int, 1
+                    Constant: int, 4
+                Constant: int, 0
+              Assignment: =
+                ID: b
+                Constant: int, 1
+      If: 
+        ID: b
+        Return: 
+          Constant: int, 4
+      Return: 
+        Constant: int, 0

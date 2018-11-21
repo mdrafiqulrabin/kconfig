@@ -1,0 +1,20 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['float']
+  Decl: sin, [], [], []
+    FuncDecl: 
+      TypeDecl: sin, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: update_filter, [], [], []
+      FuncDecl: 
+        TypeDecl: update_filter, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: a
+        FuncCall: 
+          ID: sin
+          ExprList: 
+            Constant: int, 0

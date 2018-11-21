@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fdc0900e4d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdc0900ea20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdc0900e740 '__int128'
+|-TypedefDecl 0x7fdc0900ea90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdc0900e760 'unsigned __int128'
+|-TypedefDecl 0x7fdc0900ed68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdc0900eb70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdc0900eae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdc0900ee00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdc0900edc0 'char *'
+|   `-BuiltinType 0x7fdc0900e560 'char'
+|-TypedefDecl 0x7fdc0900f0c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdc0900f070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdc0900eee0 'struct __va_list_tag'
+|     `-Record 0x7fdc0900ee58 '__va_list_tag'
+|-VarDecl 0x7fdc0900f168 <c_files/pr71280.c:5:1, col:15> col:13 used v 'char []' extern
+`-FunctionDecl 0x7fdc0905fa90 <line:7:1, line:15:1> line:8:1 foo 'int ()'
+  `-CompoundStmt 0x7fdc09060188 <line:9:1, line:15:1>
+    |-DeclStmt 0x7fdc0905fbc0 <line:10:3, col:12>
+    | `-VarDecl 0x7fdc0905fb40 <col:3, col:11> col:7 used k 'int' cinit
+    |   `-IntegerLiteral 0x7fdc0905fba0 <col:11> 'int' 0
+    |-DeclStmt 0x7fdc0905fcb0 <line:11:3, col:21>
+    | `-TypedefDecl 0x7fdc0905fc58 <col:3, col:20> col:16 referenced T 'char [64]'
+    |   `-ConstantArrayType 0x7fdc0905fc00 'char [64]' 64 
+    |     `-BuiltinType 0x7fdc0900e560 'char'
+    |-ForStmt 0x7fdc090600f8 <line:12:3, line:13:26>
+    | |-DeclStmt 0x7fdc0905fd60 <line:12:8, col:17>
+    | | `-VarDecl 0x7fdc0905fce0 <col:8, col:16> col:12 used i 'int' cinit
+    | |   `-IntegerLiteral 0x7fdc0905fd40 <col:16> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fdc0905fdd8 <col:19, col:23> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fdc0905fdc0 <col:19> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fdc0905fd78 <col:19> 'int' lvalue Var 0x7fdc0905fce0 'i' 'int'
+    | | `-IntegerLiteral 0x7fdc0905fda0 <col:23> 'int' 64
+    | |-UnaryOperator 0x7fdc0905fe28 <col:27, col:28> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fdc0905fe00 <col:27> 'int' lvalue Var 0x7fdc0905fce0 'i' 'int'
+    | `-CompoundAssignOperator 0x7fdc090600c0 <line:13:5, col:26> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-DeclRefExpr 0x7fdc0905fe48 <col:5> 'int' lvalue Var 0x7fdc0905fb40 'k' 'int'
+    |   `-ImplicitCastExpr 0x7fdc090600a8 <col:10, col:26> 'int' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7fdc09060090 <col:10, col:26> 'char' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7fdc09060068 <col:10, col:26> 'char' lvalue
+    |         |-ImplicitCastExpr 0x7fdc09060038 <col:10, col:23> 'char *' <ArrayToPointerDecay>
+    |         | `-ParenExpr 0x7fdc0905fff0 <col:10, col:23> 'T':'char [64]' lvalue
+    |         |   `-UnaryOperator 0x7fdc0905ffd0 <col:11, col:22> 'T':'char [64]' lvalue prefix '*'
+    |         |     `-CStyleCastExpr 0x7fdc0905ffa8 <col:12, col:22> 'T *' <BitCast>
+    |         |       `-UnaryOperator 0x7fdc0905ff18 <col:18, col:22> 'char *' prefix '&'
+    |         |         `-ArraySubscriptExpr 0x7fdc0905fef0 <col:19, col:22> 'char' lvalue
+    |         |           |-ImplicitCastExpr 0x7fdc0905fed8 <col:19> 'char *' <ArrayToPointerDecay>
+    |         |           | `-DeclRefExpr 0x7fdc0905fe90 <col:19> 'char []' lvalue Var 0x7fdc0900f168 'v' 'char []'
+    |         |           `-IntegerLiteral 0x7fdc0905feb8 <col:21> 'int' 0
+    |         `-ImplicitCastExpr 0x7fdc09060050 <col:25> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fdc09060010 <col:25> 'int' lvalue Var 0x7fdc0905fce0 'i' 'int'
+    `-ReturnStmt 0x7fdc09060170 <line:14:3, col:10>
+      `-ImplicitCastExpr 0x7fdc09060158 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fdc09060130 <col:10> 'int' lvalue Var 0x7fdc0905fb40 'k' 'int'

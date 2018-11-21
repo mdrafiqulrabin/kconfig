@@ -1,0 +1,50 @@
+FileAST: 
+  FuncDef: 
+    Decl: caller, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: reg_type, [], [], []
+            TypeDecl: reg_type, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: caller, []
+          IdentifierType: ['int']
+    Compound: 
+      Switch: 
+        ID: reg_type
+        Compound: 
+          Case: 
+            Constant: int, 0x80000000
+            Return: 
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                FuncCall: 
+                  ID: foo
+          Case: 
+            Constant: int, 0x80000003
+            Return: 
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                FuncCall: 
+                  ID: bar
+          Case: 
+            Constant: int, 0x80000001
+            Return: 
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                FuncCall: 
+                  ID: baz
+          Case: 
+            Constant: int, 0x80000004
+            Return: 
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                FuncCall: 
+                  ID: fooz

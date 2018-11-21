@@ -1,0 +1,20 @@
+FileAST: 
+  FuncDef: 
+    Decl: testf, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['float']
+        TypeDecl: testf, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_copysignf
+          ExprList: 
+            ID: x
+            ID: y

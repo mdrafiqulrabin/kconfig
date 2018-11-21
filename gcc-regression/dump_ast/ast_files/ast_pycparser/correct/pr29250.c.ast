@@ -1,0 +1,100 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: TSparseEntry
+      Decl: feat_index, [], [], []
+        TypeDecl: feat_index, []
+          IdentifierType: ['int']
+      Decl: entry, [], [], []
+        TypeDecl: entry, []
+          IdentifierType: ['double']
+  Decl: None, [], [], []
+    Struct: TSparse
+      Decl: vec_index, [], [], []
+        TypeDecl: vec_index, []
+          IdentifierType: ['int']
+      Decl: num_feat_entries, [], [], []
+        TypeDecl: num_feat_entries, []
+          IdentifierType: ['int']
+      Decl: features, [], [], []
+        PtrDecl: []
+          TypeDecl: features, []
+            Struct: TSparseEntry
+  FuncDef: 
+    Decl: get_full_feature_matrix, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: sparse_feature_matrix, [], [], []
+            PtrDecl: []
+              TypeDecl: sparse_feature_matrix, []
+                Struct: TSparse
+          Decl: num_vec, [], [], []
+            TypeDecl: num_vec, []
+              IdentifierType: ['int']
+        TypeDecl: get_full_feature_matrix, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: fm, [], [], []
+        PtrDecl: []
+          TypeDecl: fm, []
+            IdentifierType: ['double']
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['int']
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: v
+          Constant: int, 0
+        BinaryOp: <
+          ID: v
+          ID: num_vec
+        UnaryOp: p++
+          ID: v
+        Compound: 
+          For: 
+            Assignment: =
+              ID: f
+              Constant: int, 0
+            BinaryOp: <
+              ID: f
+              StructRef: .
+                ArrayRef: 
+                  ID: sparse_feature_matrix
+                  ID: v
+                ID: num_feat_entries
+            UnaryOp: p++
+              ID: f
+            Compound: 
+              Decl: offs, [], [], []
+                TypeDecl: offs, []
+                  IdentifierType: ['long', 'long']
+                BinaryOp: +
+                  StructRef: .
+                    ArrayRef: 
+                      ID: sparse_feature_matrix
+                      ID: v
+                    ID: vec_index
+                  StructRef: .
+                    ArrayRef: 
+                      StructRef: .
+                        ArrayRef: 
+                          ID: sparse_feature_matrix
+                          ID: v
+                        ID: features
+                      ID: f
+                    ID: feat_index
+              Assignment: =
+                ArrayRef: 
+                  ID: fm
+                  ID: offs
+                StructRef: .
+                  ArrayRef: 
+                    StructRef: .
+                      ArrayRef: 
+                        ID: sparse_feature_matrix
+                        ID: v
+                      ID: features
+                    ID: f
+                  ID: entry

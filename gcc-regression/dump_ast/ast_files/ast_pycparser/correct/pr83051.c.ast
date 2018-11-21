@@ -1,0 +1,128 @@
+FileAST: 
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+      Constant: int, 1
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  Decl: h, [], [], []
+    TypeDecl: h, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: ^
+          BinaryOp: ^
+            BinaryOp: >>
+              ID: b
+              Constant: int, 8
+            BinaryOp: >>
+              ArrayRef: 
+                ID: a
+                BinaryOp: ^
+                  ID: b
+                  BinaryOp: &
+                    ID: c
+                    Constant: int, 5
+              Constant: int, 8
+          ArrayRef: 
+            ID: a
+            BinaryOp: &
+              BinaryOp: ^
+                ID: b
+                ID: c
+              Constant: int, 5
+      Assignment: =
+        ID: b
+        BinaryOp: ^
+          BinaryOp: >>
+            ID: b
+            Constant: int, 8
+          ArrayRef: 
+            ID: a
+            BinaryOp: &
+              BinaryOp: ^
+                ID: b
+                ID: c
+              Constant: int, 5
+  FuncDef: 
+    Decl: fn2, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: fn2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      While: 
+        Constant: int, 1
+        While: 
+          ID: e
+          Compound: 
+            While: 
+              ID: g
+              While: 
+                ID: h
+                For: 
+                  Assignment: =
+                    ID: k
+                    Constant: int, 0
+                  BinaryOp: <
+                    ID: k
+                    Constant: int, 6
+                  UnaryOp: p++
+                    ID: k
+                  While: 
+                    ID: f
+                    FuncCall: 
+                      ID: fn1
+                      ExprList: 
+                        Constant: int, 0
+            FuncCall: 
+              ID: fn1
+              ExprList: 
+                Constant: int, 0
+            FuncCall: 
+              ID: fn1
+              ExprList: 
+                Constant: int, 0
+            FuncCall: 
+              ID: fn1
+              ExprList: 
+                Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: fn2
+      Return: 
+        Constant: int, 0

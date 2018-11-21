@@ -1,0 +1,86 @@
+c_files/pr80706.c:7:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone)) double
+                         ^
+c_files/pr80706.c:14:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone)) double
+                         ^
+2 warnings generated.
+TranslationUnitDecl 0x7fe41a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe41a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe41a826740 '__int128'
+|-TypedefDecl 0x7fe41a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe41a826760 'unsigned __int128'
+|-TypedefDecl 0x7fe41a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe41a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe41a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe41a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe41a826dc0 'char *'
+|   `-BuiltinType 0x7fe41a826560 'char'
+|-TypedefDecl 0x7fe41a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe41a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe41a826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe41a826e58 '__va_list_tag'
+|-RecordDecl 0x7fe41a827120 <c_files/pr80706.c:5:1, col:63> col:7 union U definition
+| |-FieldDecl 0x7fe41b025a00 <col:11, col:18> col:18 referenced value 'double'
+| |-RecordDecl 0x7fe41b025a48 parent 0x7fe41a8264d0 <col:25, col:54> col:32 struct S definition
+| | |-FieldDecl 0x7fe41b025b18 <col:36, col:40> col:40 referenced lsw 'int'
+| | `-FieldDecl 0x7fe41b025b78 <col:45, col:49> col:49 msw 'int'
+| `-FieldDecl 0x7fe41b025c10 <col:25, col:56> col:56 referenced parts 'struct S':'struct S'
+|-FunctionDecl 0x7fe41b025d28 <line:7:1, line:12:1> line:8:1 used foo 'double (void)'
+| |-CompoundStmt 0x7fe41b025fa0 <line:9:1, line:12:1>
+| | |-GCCAsmStmt 0x7fe41b025f18 <line:10:3, col:36>
+| | `-ReturnStmt 0x7fe41b025f88 <line:11:3, col:10>
+| |   `-FloatingLiteral 0x7fe41b025f68 <col:10> 'double' 2.000000e+00
+| `-NoInlineAttr 0x7fe41b025dc0 <line:7:16>
+|-FunctionDecl 0x7fe41b026060 <line:14:1, line:22:1> line:15:1 used bar 'double (void)'
+| |-CompoundStmt 0x7fe41b026770 <line:16:1, line:22:1>
+| | |-DeclStmt 0x7fe41b026248 <line:17:3, col:20>
+| | | `-VarDecl 0x7fe41b026158 <col:3, col:19> col:10 used s 'double' cinit
+| | |   `-CallExpr 0x7fe41b026220 <col:14, col:19> 'double'
+| | |     `-ImplicitCastExpr 0x7fe41b026208 <col:14> 'double (*)(void)' <FunctionToPointerDecay>
+| | |       `-DeclRefExpr 0x7fe41b0261b8 <col:14> 'double (void)' Function 0x7fe41b025d28 'foo' 'double (void)'
+| | |-DeclStmt 0x7fe41b026310 <line:18:3, col:12>
+| | | `-VarDecl 0x7fe41b0262b0 <col:3, col:11> col:11 used z 'union U':'union U'
+| | |-BinaryOperator 0x7fe41b0263c8 <line:19:3, col:13> 'double' '='
+| | | |-MemberExpr 0x7fe41b026350 <col:3, col:5> 'double' lvalue .value 0x7fe41b025a00
+| | | | `-DeclRefExpr 0x7fe41b026328 <col:3> 'union U':'union U' lvalue Var 0x7fe41b0262b0 'z' 'union U':'union U'
+| | | `-ImplicitCastExpr 0x7fe41b0263b0 <col:13> 'double' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fe41b026388 <col:13> 'double' lvalue Var 0x7fe41b026158 's' 'double'
+| | |-BinaryOperator 0x7fe41b0264a8 <line:20:3, col:17> 'int' '='
+| | | |-MemberExpr 0x7fe41b026450 <col:3, col:11> 'int' lvalue .lsw 0x7fe41b025b18
+| | | | `-MemberExpr 0x7fe41b026418 <col:3, col:5> 'struct S':'struct S' lvalue .parts 0x7fe41b025c10
+| | | |   `-DeclRefExpr 0x7fe41b0263f0 <col:3> 'union U':'union U' lvalue Var 0x7fe41b0262b0 'z' 'union U':'union U'
+| | | `-IntegerLiteral 0x7fe41b026488 <col:17> 'int' 0
+| | `-ReturnStmt 0x7fe41b026758 <line:21:3, col:34>
+| |   `-BinaryOperator 0x7fe41b026730 <col:10, col:34> 'double' '+'
+| |     |-BinaryOperator 0x7fe41b026660 <col:10, col:22> 'double' '*'
+| |     | |-ImplicitCastExpr 0x7fe41b026630 <col:10, col:12> 'double' <LValueToRValue>
+| |     | | `-MemberExpr 0x7fe41b026598 <col:10, col:12> 'double' lvalue .value 0x7fe41b025a00
+| |     | |   `-DeclRefExpr 0x7fe41b026570 <col:10> 'union U':'union U' lvalue Var 0x7fe41b0262b0 'z' 'union U':'union U'
+| |     | `-ImplicitCastExpr 0x7fe41b026648 <col:20, col:22> 'double' <LValueToRValue>
+| |     |   `-MemberExpr 0x7fe41b0265f8 <col:20, col:22> 'double' lvalue .value 0x7fe41b025a00
+| |     |     `-DeclRefExpr 0x7fe41b0265d0 <col:20> 'union U':'union U' lvalue Var 0x7fe41b0262b0 'z' 'union U':'union U'
+| |     `-BinaryOperator 0x7fe41b026708 <col:30, col:34> 'double' '*'
+| |       |-ImplicitCastExpr 0x7fe41b0266d8 <col:30> 'double' <LValueToRValue>
+| |       | `-DeclRefExpr 0x7fe41b026688 <col:30> 'double' lvalue Var 0x7fe41b026158 's' 'double'
+| |       `-ImplicitCastExpr 0x7fe41b0266f0 <col:34> 'double' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fe41b0266b0 <col:34> 'double' lvalue Var 0x7fe41b026158 's' 'double'
+| `-NoInlineAttr 0x7fe41b0260f8 <line:14:16>
+|-FunctionDecl 0x7fe41b026800 <line:24:1, line:30:1> line:25:1 main 'int ()'
+| `-CompoundStmt 0x7fe41b027be8 <line:26:1, line:30:1>
+|   |-IfStmt 0x7fe41b027b78 <line:27:3, line:28:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fe41b026920 <line:27:7, col:17> 'int' '!='
+|   | | |-CallExpr 0x7fe41b0268d8 <col:7, col:12> 'double'
+|   | | | `-ImplicitCastExpr 0x7fe41b0268c0 <col:7> 'double (*)(void)' <FunctionToPointerDecay>
+|   | | |   `-DeclRefExpr 0x7fe41b026898 <col:7> 'double (void)' Function 0x7fe41b026060 'bar' 'double (void)'
+|   | | `-FloatingLiteral 0x7fe41b026900 <col:17> 'double' 8.000000e+00
+|   | |-CallExpr 0x7fe41b027b50 <line:28:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fe41b027b38 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fe41b027ae0 <col:5> '<builtin fn type>' Function 0x7fe41b027a00 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fe41b027bd0 <line:29:3, col:10>
+|     `-IntegerLiteral 0x7fe41b027bb0 <col:10> 'int' 0
+`-FunctionDecl 0x7fe41b027a00 <line:28:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fe41b027a98 <col:5> Implicit

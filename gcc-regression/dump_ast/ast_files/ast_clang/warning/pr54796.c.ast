@@ -1,0 +1,62 @@
+c_files/pr54796.c:5:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone)) void
+                         ^
+c_files/pr54796.c:11:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone)) void
+                         ^
+2 warnings generated.
+TranslationUnitDecl 0x7f94e38264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f94e3826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f94e3826740 '__int128'
+|-TypedefDecl 0x7f94e3826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f94e3826760 'unsigned __int128'
+|-TypedefDecl 0x7f94e3826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f94e3826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f94e3826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f94e3826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f94e3826dc0 'char *'
+|   `-BuiltinType 0x7f94e3826560 'char'
+|-TypedefDecl 0x7f94e38270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f94e3827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f94e3826ee0 'struct __va_list_tag'
+|     `-Record 0x7f94e3826e58 '__va_list_tag'
+|-FunctionDecl 0x7f94e4026ad0 <c_files/pr54796.c:5:1, line:9:1> line:6:1 used bar 'void (char *, int)'
+| |-ParmVarDecl 0x7f94e3827138 <col:6, col:12> col:12 used a 'char *'
+| |-ParmVarDecl 0x7f94e4026a00 <col:15, col:19> col:19 used b 'int'
+| |-CompoundStmt 0x7f94e4026e38 <line:7:1, line:9:1>
+| | `-GCCAsmStmt 0x7f94e4026db8 <line:8:3, col:55>
+| |   |-DeclRefExpr 0x7f94e4026cc8 <col:30> 'char *' lvalue ParmVar 0x7f94e3827138 'a' 'char *'
+| |   `-DeclRefExpr 0x7f94e4026d20 <col:40> 'int' lvalue ParmVar 0x7f94e4026a00 'b' 'int'
+| `-NoInlineAttr 0x7f94e4026b78 <line:5:16>
+|-FunctionDecl 0x7f94e4026fc0 <line:11:1, line:18:1> line:12:1 used foo 'void (int, int)'
+| |-ParmVarDecl 0x7f94e4026e70 <col:6, col:10> col:10 used a 'int'
+| |-ParmVarDecl 0x7f94e4026ee8 <col:13, col:17> col:17 used b 'int'
+| |-CompoundStmt 0x7f94e4027468 <line:13:1, line:18:1>
+| | |-DeclStmt 0x7f94e4027168 <line:14:3, col:12>
+| | | `-VarDecl 0x7f94e40270c8 <col:3, col:11> col:7 c 'int' cinit
+| | |   `-ImplicitCastExpr 0x7f94e4027150 <col:11> 'int' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7f94e4027128 <col:11> 'int' lvalue ParmVar 0x7f94e4026e70 'a' 'int'
+| | |-DeclStmt 0x7f94e4027278 <line:15:3, col:12>
+| | | `-VarDecl 0x7f94e4027218 <col:3, col:11> col:8 used d 'char [b]'
+| | |-CallExpr 0x7f94e4027340 <line:16:3, col:12> 'void'
+| | | |-ImplicitCastExpr 0x7f94e4027328 <col:3> 'void (*)(char *, int)' <FunctionToPointerDecay>
+| | | | `-DeclRefExpr 0x7f94e4027290 <col:3> 'void (char *, int)' Function 0x7f94e4026ad0 'bar' 'void (char *, int)'
+| | | |-ImplicitCastExpr 0x7f94e4027378 <col:8> 'char *' <ArrayToPointerDecay>
+| | | | `-DeclRefExpr 0x7f94e40272b8 <col:8> 'char [b]' lvalue Var 0x7f94e4027218 'd' 'char [b]'
+| | | `-IntegerLiteral 0x7f94e40272e0 <col:11> 'int' 2
+| | `-CallExpr 0x7f94e4027418 <line:17:3, col:12> 'void'
+| |   |-ImplicitCastExpr 0x7f94e4027400 <col:3> 'void (*)(char *, int)' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7f94e4027390 <col:3> 'void (char *, int)' Function 0x7f94e4026ad0 'bar' 'void (char *, int)'
+| |   |-ImplicitCastExpr 0x7f94e4027450 <col:8> 'char *' <ArrayToPointerDecay>
+| |   | `-DeclRefExpr 0x7f94e40273b8 <col:8> 'char [b]' lvalue Var 0x7f94e4027218 'd' 'char [b]'
+| |   `-IntegerLiteral 0x7f94e40273e0 <col:11> 'int' 4
+| `-NoInlineAttr 0x7f94e4027068 <line:11:16>
+`-FunctionDecl 0x7f94e40274f0 <line:20:1, line:25:1> line:21:1 main 'int ()'
+  `-CompoundStmt 0x7f94e40276a0 <line:22:1, line:25:1>
+    |-CallExpr 0x7f94e4027630 <line:23:3, col:12> 'void'
+    | |-ImplicitCastExpr 0x7f94e4027618 <col:3> 'void (*)(int, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f94e4027588 <col:3> 'void (int, int)' Function 0x7f94e4026fc0 'foo' 'void (int, int)'
+    | |-IntegerLiteral 0x7f94e40275b0 <col:8> 'int' 5
+    | `-IntegerLiteral 0x7f94e40275d0 <col:11> 'int' 6
+    `-ReturnStmt 0x7f94e4027688 <line:24:3, col:10>
+      `-IntegerLiteral 0x7f94e4027668 <col:10> 'int' 0

@@ -1,0 +1,37 @@
+FileAST: 
+  Decl: a, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+      TernaryOp: 
+        BinaryOp: !=
+          ID: __SIZEOF_FPREG__
+          UnaryOp: sizeof
+            ID: __fpreg
+        UnaryOp: -
+          Constant: int, 1
+        Constant: int, 1
+  Decl: b, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['int']
+      TernaryOp: 
+        BinaryOp: !=
+          ID: __SIZEOF_FLOAT80__
+          UnaryOp: sizeof
+            ID: __float80
+        UnaryOp: -
+          Constant: int, 1
+        Constant: int, 1
+  Decl: c, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: c, []
+        IdentifierType: ['int']
+      TernaryOp: 
+        BinaryOp: !=
+          ID: __SIZEOF_FLOAT128__
+          UnaryOp: sizeof
+            ID: __float128
+        UnaryOp: -
+          Constant: int, 1
+        Constant: int, 1

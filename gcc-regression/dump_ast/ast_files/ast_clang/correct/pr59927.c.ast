@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fbb4a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbb4a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbb4a026740 '__int128'
+|-TypedefDecl 0x7fbb4a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbb4a026760 'unsigned __int128'
+|-TypedefDecl 0x7fbb4a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbb4a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbb4a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbb4a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbb4a026dc0 'char *'
+|   `-BuiltinType 0x7fbb4a026560 'char'
+|-TypedefDecl 0x7fbb4a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbb4a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbb4a026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbb4a026e58 '__va_list_tag'
+|-FunctionDecl 0x7fbb4a826a70 <c_files/pr59927.c:5:1, col:50> col:13 used baz 'void (int) __attribute__((ms_abi))':'void (int) __attribute__((ms_abi))' extern
+| `-ParmVarDecl 0x7fbb4a027138 <col:18> col:21 'int'
+|-FunctionDecl 0x7fbb4a826e50 <line:7:1, line:11:1> line:8:1 foo 'void (void (*)(int) __attribute__((ms_abi)))'
+| |-ParmVarDecl 0x7fbb4a826d48 <col:6, col:38> col:38 used fn 'void (*)(int) __attribute__((ms_abi))'
+| `-CompoundStmt 0x7fbb4a826f80 <line:9:1, line:11:1>
+|   `-CallExpr 0x7fbb4a826f50 <line:10:3, col:8> 'void'
+|     |-ImplicitCastExpr 0x7fbb4a826f38 <col:3> 'void (*)(int) __attribute__((ms_abi))' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fbb4a826ef0 <col:3> 'void (*)(int) __attribute__((ms_abi))' lvalue ParmVar 0x7fbb4a826d48 'fn' 'void (*)(int) __attribute__((ms_abi))'
+|     `-IntegerLiteral 0x7fbb4a826f18 <col:7> 'int' 0
+`-FunctionDecl 0x7fbb4a827060 <line:13:1, line:17:1> line:14:1 bar 'void (void)'
+  `-CompoundStmt 0x7fbb4a8271b0 <line:15:1, line:17:1>
+    `-CallExpr 0x7fbb4a827180 <line:16:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fbb4a827168 <col:3> 'void (*)(int) __attribute__((ms_abi))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fbb4a8270f8 <col:3> 'void (int) __attribute__((ms_abi))':'void (int) __attribute__((ms_abi))' Function 0x7fbb4a826a70 'baz' 'void (int) __attribute__((ms_abi))':'void (int) __attribute__((ms_abi))'
+      `-IntegerLiteral 0x7fbb4a827120 <col:8> 'int' 0

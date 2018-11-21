@@ -1,0 +1,496 @@
+c_files/pr59063-2.c:8:8: warning: address of function 'clock_gettime' will always evaluate to 'true' [-Wpointer-bool-conversion]
+  if (!clock_gettime)
+      ~^~~~~~~~~~~~~
+c_files/pr59063-2.c:8:8: note: prefix with the address-of operator to silence this warning
+  if (!clock_gettime)
+       ^
+       &
+1 warning generated.
+TranslationUnitDecl 0x7ff95d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff95d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff95d026740 '__int128'
+|-TypedefDecl 0x7ff95d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff95d026760 'unsigned __int128'
+|-TypedefDecl 0x7ff95d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff95d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff95d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff95d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff95d026dc0 'char *'
+|   `-BuiltinType 0x7ff95d026560 'char'
+|-TypedefDecl 0x7ff95d0270c8 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff95d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff95d026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff95d026e58 '__va_list_tag'
+|-TypedefDecl 0x7ff95d027138 </usr/include/i386/_types.h:37:1, col:24> col:24 __int8_t 'signed char'
+| `-BuiltinType 0x7ff95d026580 'signed char'
+|-TypedefDecl 0x7ff95d0271a8 <line:41:1, col:24> col:24 __uint8_t 'unsigned char'
+| `-BuiltinType 0x7ff95d026620 'unsigned char'
+|-TypedefDecl 0x7ff95d093c18 <line:42:1, col:17> col:17 __int16_t 'short'
+| `-BuiltinType 0x7ff95d0265a0 'short'
+|-TypedefDecl 0x7ff95d093c88 <line:43:1, col:25> col:25 referenced __uint16_t 'unsigned short'
+| `-BuiltinType 0x7ff95d026640 'unsigned short'
+|-TypedefDecl 0x7ff95d093cf8 <line:44:1, col:15> col:15 referenced __int32_t 'int'
+| `-BuiltinType 0x7ff95d0265c0 'int'
+|-TypedefDecl 0x7ff95d093d68 <line:45:1, col:23> col:23 referenced __uint32_t 'unsigned int'
+| `-BuiltinType 0x7ff95d026660 'unsigned int'
+|-TypedefDecl 0x7ff95d093dd8 <line:46:1, col:20> col:20 referenced __int64_t 'long long'
+| `-BuiltinType 0x7ff95d026600 'long long'
+|-TypedefDecl 0x7ff95d093e48 <line:47:1, col:28> col:28 referenced __uint64_t 'unsigned long long'
+| `-BuiltinType 0x7ff95d0266a0 'unsigned long long'
+|-TypedefDecl 0x7ff95d093eb8 <line:49:1, col:16> col:16 referenced __darwin_intptr_t 'long'
+| `-BuiltinType 0x7ff95d0265e0 'long'
+|-TypedefDecl 0x7ff95d093f28 <line:50:1, col:23> col:23 referenced __darwin_natural_t 'unsigned int'
+| `-BuiltinType 0x7ff95d026660 'unsigned int'
+|-TypedefDecl 0x7ff95d093f98 <line:70:1, col:15> col:15 __darwin_ct_rune_t 'int'
+| `-BuiltinType 0x7ff95d0265c0 'int'
+|-RecordDecl 0x7ff95d093ff0 <line:76:9, line:79:1> line:76:9 union definition
+| |-FieldDecl 0x7ff95d094118 <line:77:2, col:22> col:8 __mbstate8 'char [128]'
+| `-FieldDecl 0x7ff95d094178 <line:78:2, col:12> col:12 _mbstateL 'long long'
+|-TypedefDecl 0x7ff95d094210 <line:76:1, line:79:3> col:3 referenced __mbstate_t 'union __mbstate_t':'__mbstate_t'
+| `-ElaboratedType 0x7ff95d0941c0 'union __mbstate_t' sugar
+|   `-RecordType 0x7ff95d094080 '__mbstate_t'
+|     `-Record 0x7ff95d093ff0 ''
+|-TypedefDecl 0x7ff95d0942b0 <line:81:1, col:22> col:22 __darwin_mbstate_t '__mbstate_t':'__mbstate_t'
+| `-TypedefType 0x7ff95d094280 '__mbstate_t' sugar
+|   |-Typedef 0x7ff95d094210 '__mbstate_t'
+|   `-ElaboratedType 0x7ff95d0941c0 'union __mbstate_t' sugar
+|     `-RecordType 0x7ff95d094080 '__mbstate_t'
+|       `-Record 0x7ff95d093ff0 ''
+|-TypedefDecl 0x7ff95d094320 <line:84:1, col:26> col:26 __darwin_ptrdiff_t 'long'
+| `-BuiltinType 0x7ff95d0265e0 'long'
+|-TypedefDecl 0x7ff95d094390 <line:92:1, col:24> col:24 referenced __darwin_size_t 'unsigned long'
+| `-BuiltinType 0x7ff95d026680 'unsigned long'
+|-TypedefDecl 0x7ff95d094420 <line:98:1, col:27> col:27 __darwin_va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7ff95d0943f0 '__builtin_va_list' sugar
+|   |-Typedef 0x7ff95d0270c8 '__builtin_va_list'
+|   `-ConstantArrayType 0x7ff95d027070 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7ff95d026ee0 'struct __va_list_tag'
+|       `-Record 0x7ff95d026e58 '__va_list_tag'
+|-TypedefDecl 0x7ff95d094490 <line:104:1, col:25> col:25 referenced __darwin_wchar_t 'int'
+| `-BuiltinType 0x7ff95d0265c0 'int'
+|-TypedefDecl 0x7ff95d094520 <line:109:1, col:26> col:26 __darwin_rune_t '__darwin_wchar_t':'int'
+| `-TypedefType 0x7ff95d0944f0 '__darwin_wchar_t' sugar
+|   |-Typedef 0x7ff95d094490 '__darwin_wchar_t'
+|   `-BuiltinType 0x7ff95d0265c0 'int'
+|-TypedefDecl 0x7ff95d094590 <line:112:1, col:24> col:24 __darwin_wint_t 'int'
+| `-BuiltinType 0x7ff95d0265c0 'int'
+|-TypedefDecl 0x7ff95d094600 <line:117:1, col:24> col:24 referenced __darwin_clock_t 'unsigned long'
+| `-BuiltinType 0x7ff95d026680 'unsigned long'
+|-TypedefDecl 0x7ff95d094690 <line:118:1, col:21> col:21 __darwin_socklen_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7ff95d094660 '__uint32_t' sugar
+|   |-Typedef 0x7ff95d093d68 '__uint32_t'
+|   `-BuiltinType 0x7ff95d026660 'unsigned int'
+|-TypedefDecl 0x7ff95d094700 <line:119:1, col:16> col:16 __darwin_ssize_t 'long'
+| `-BuiltinType 0x7ff95d0265e0 'long'
+|-TypedefDecl 0x7ff95d094770 <line:120:1, col:16> col:16 referenced __darwin_time_t 'long'
+| `-BuiltinType 0x7ff95d0265e0 'long'
+|-TypedefDecl 0x7ff95d094800 </usr/include/sys/_types.h:55:1, col:19> col:19 __darwin_blkcnt_t '__int64_t':'long long'
+| `-TypedefType 0x7ff95d0947d0 '__int64_t' sugar
+|   |-Typedef 0x7ff95d093dd8 '__int64_t'
+|   `-BuiltinType 0x7ff95d026600 'long long'
+|-TypedefDecl 0x7ff95d094890 <line:56:1, col:19> col:19 __darwin_blksize_t '__int32_t':'int'
+| `-TypedefType 0x7ff95d094860 '__int32_t' sugar
+|   |-Typedef 0x7ff95d093cf8 '__int32_t'
+|   `-BuiltinType 0x7ff95d0265c0 'int'
+|-TypedefDecl 0x7ff95d0948f8 <line:57:1, col:19> col:19 __darwin_dev_t '__int32_t':'int'
+| `-TypedefType 0x7ff95d094860 '__int32_t' sugar
+|   |-Typedef 0x7ff95d093cf8 '__int32_t'
+|   `-BuiltinType 0x7ff95d0265c0 'int'
+|-TypedefDecl 0x7ff95d094968 <line:58:1, col:22> col:22 __darwin_fsblkcnt_t 'unsigned int'
+| `-BuiltinType 0x7ff95d026660 'unsigned int'
+|-TypedefDecl 0x7ff95d0949d8 <line:59:1, col:22> col:22 __darwin_fsfilcnt_t 'unsigned int'
+| `-BuiltinType 0x7ff95d026660 'unsigned int'
+|-TypedefDecl 0x7ff95d094a40 <line:60:1, col:20> col:20 __darwin_gid_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7ff95d094660 '__uint32_t' sugar
+|   |-Typedef 0x7ff95d093d68 '__uint32_t'
+|   `-BuiltinType 0x7ff95d026660 'unsigned int'
+|-TypedefDecl 0x7ff95d094aa8 <line:61:1, col:20> col:20 __darwin_id_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7ff95d094660 '__uint32_t' sugar
+|   |-Typedef 0x7ff95d093d68 '__uint32_t'
+|   `-BuiltinType 0x7ff95d026660 'unsigned int'
+|-TypedefDecl 0x7ff95d094b30 <line:62:1, col:20> col:20 referenced __darwin_ino64_t '__uint64_t':'unsigned long long'
+| `-TypedefType 0x7ff95d094b00 '__uint64_t' sugar
+|   |-Typedef 0x7ff95d093e48 '__uint64_t'
+|   `-BuiltinType 0x7ff95d0266a0 'unsigned long long'
+|-TypedefDecl 0x7ff95d095c00 <line:64:1, col:26> col:26 __darwin_ino_t '__darwin_ino64_t':'unsigned long long'
+| `-TypedefType 0x7ff95d094b90 '__darwin_ino64_t' sugar
+|   |-Typedef 0x7ff95d094b30 '__darwin_ino64_t'
+|   `-TypedefType 0x7ff95d094b00 '__uint64_t' sugar
+|     |-Typedef 0x7ff95d093e48 '__uint64_t'
+|     `-BuiltinType 0x7ff95d0266a0 'unsigned long long'
+|-TypedefDecl 0x7ff95d095c90 <line:68:1, col:28> col:28 referenced __darwin_mach_port_name_t '__darwin_natural_t':'unsigned int'
+| `-TypedefType 0x7ff95d095c60 '__darwin_natural_t' sugar
+|   |-Typedef 0x7ff95d093f28 '__darwin_natural_t'
+|   `-BuiltinType 0x7ff95d026660 'unsigned int'
+|-TypedefDecl 0x7ff95d095d20 <line:69:1, col:35> col:35 __darwin_mach_port_t '__darwin_mach_port_name_t':'unsigned int'
+| `-TypedefType 0x7ff95d095cf0 '__darwin_mach_port_name_t' sugar
+|   |-Typedef 0x7ff95d095c90 '__darwin_mach_port_name_t'
+|   `-TypedefType 0x7ff95d095c60 '__darwin_natural_t' sugar
+|     |-Typedef 0x7ff95d093f28 '__darwin_natural_t'
+|     `-BuiltinType 0x7ff95d026660 'unsigned int'
+|-TypedefDecl 0x7ff95d095db0 <line:70:1, col:20> col:20 __darwin_mode_t '__uint16_t':'unsigned short'
+| `-TypedefType 0x7ff95d095d80 '__uint16_t' sugar
+|   |-Typedef 0x7ff95d093c88 '__uint16_t'
+|   `-BuiltinType 0x7ff95d026640 'unsigned short'
+|-TypedefDecl 0x7ff95d095e18 <line:71:1, col:19> col:19 __darwin_off_t '__int64_t':'long long'
+| `-TypedefType 0x7ff95d0947d0 '__int64_t' sugar
+|   |-Typedef 0x7ff95d093dd8 '__int64_t'
+|   `-BuiltinType 0x7ff95d026600 'long long'
+|-TypedefDecl 0x7ff95d095e80 <line:72:1, col:19> col:19 __darwin_pid_t '__int32_t':'int'
+| `-TypedefType 0x7ff95d094860 '__int32_t' sugar
+|   |-Typedef 0x7ff95d093cf8 '__int32_t'
+|   `-BuiltinType 0x7ff95d0265c0 'int'
+|-TypedefDecl 0x7ff95d095ee8 <line:73:1, col:20> col:20 __darwin_sigset_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7ff95d094660 '__uint32_t' sugar
+|   |-Typedef 0x7ff95d093d68 '__uint32_t'
+|   `-BuiltinType 0x7ff95d026660 'unsigned int'
+|-TypedefDecl 0x7ff95d095f50 <line:74:1, col:19> col:19 __darwin_suseconds_t '__int32_t':'int'
+| `-TypedefType 0x7ff95d094860 '__int32_t' sugar
+|   |-Typedef 0x7ff95d093cf8 '__int32_t'
+|   `-BuiltinType 0x7ff95d0265c0 'int'
+|-TypedefDecl 0x7ff95d095fb8 <line:75:1, col:20> col:20 __darwin_uid_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7ff95d094660 '__uint32_t' sugar
+|   |-Typedef 0x7ff95d093d68 '__uint32_t'
+|   `-BuiltinType 0x7ff95d026660 'unsigned int'
+|-TypedefDecl 0x7ff95d096020 <line:76:1, col:20> col:20 __darwin_useconds_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7ff95d094660 '__uint32_t' sugar
+|   |-Typedef 0x7ff95d093d68 '__uint32_t'
+|   `-BuiltinType 0x7ff95d026660 'unsigned int'
+|-TypedefDecl 0x7ff95d096100 <line:77:1, col:41> col:23 __darwin_uuid_t 'unsigned char [16]'
+| `-ConstantArrayType 0x7ff95d0960a0 'unsigned char [16]' 16 
+|   `-BuiltinType 0x7ff95d026620 'unsigned char'
+|-TypedefDecl 0x7ff95d0961d8 <line:78:1, col:39> col:14 __darwin_uuid_string_t 'char [37]'
+| `-ConstantArrayType 0x7ff95d096180 'char [37]' 37 
+|   `-BuiltinType 0x7ff95d026560 'char'
+|-RecordDecl 0x7ff95d096230 </usr/include/sys/_pthread/_pthread_types.h:57:1, line:61:1> line:57:8 struct __darwin_pthread_handler_rec definition
+| |-FieldDecl 0x7ff95d096460 <line:58:2, col:26> col:9 __routine 'void (*)(void *)'
+| |-FieldDecl 0x7ff95d0964c0 <line:59:2, col:8> col:8 __arg 'void *'
+| `-FieldDecl 0x7ff95d0965c0 <line:60:2, col:39> col:39 __next 'struct __darwin_pthread_handler_rec *'
+|-RecordDecl 0x7ff95d096608 <line:63:1, line:66:1> line:63:8 struct _opaque_pthread_attr_t definition
+| |-FieldDecl 0x7ff95d0966c8 <line:64:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7ff95d096788 <line:65:2, col:37> col:7 __opaque 'char [56]'
+|-RecordDecl 0x7ff95d0967d0 <line:68:1, line:71:1> line:68:8 struct _opaque_pthread_cond_t definition
+| |-FieldDecl 0x7ff95d096898 <line:69:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7ff95d096958 <line:70:2, col:37> col:7 __opaque 'char [40]'
+|-RecordDecl 0x7ff95d0969a0 <line:73:1, line:76:1> line:73:8 struct _opaque_pthread_condattr_t definition
+| |-FieldDecl 0x7ff95d096a68 <line:74:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7ff95d096b28 <line:75:2, col:41> col:7 __opaque 'char [8]'
+|-RecordDecl 0x7ff95d096b70 <line:78:1, line:81:1> line:78:8 struct _opaque_pthread_mutex_t definition
+| |-FieldDecl 0x7ff95d098c38 <line:79:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7ff95d098cc0 <line:80:2, col:38> col:7 __opaque 'char [56]'
+|-RecordDecl 0x7ff95d098d08 <line:83:1, line:86:1> line:83:8 struct _opaque_pthread_mutexattr_t definition
+| |-FieldDecl 0x7ff95d098dc8 <line:84:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7ff95d098e50 <line:85:2, col:42> col:7 __opaque 'char [8]'
+|-RecordDecl 0x7ff95d098e98 <line:88:1, line:91:1> line:88:8 struct _opaque_pthread_once_t definition
+| |-FieldDecl 0x7ff95d098f58 <line:89:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7ff95d098fe0 <line:90:2, col:37> col:7 __opaque 'char [8]'
+|-RecordDecl 0x7ff95d099028 <line:93:1, line:96:1> line:93:8 struct _opaque_pthread_rwlock_t definition
+| |-FieldDecl 0x7ff95d0990e8 <line:94:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7ff95d0991a8 <line:95:2, col:39> col:7 __opaque 'char [192]'
+|-RecordDecl 0x7ff95d0991f0 <line:98:1, line:101:1> line:98:8 struct _opaque_pthread_rwlockattr_t definition
+| |-FieldDecl 0x7ff95d0992b8 <line:99:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7ff95d099378 <line:100:2, col:43> col:7 __opaque 'char [16]'
+|-RecordDecl 0x7ff95d0993c0 <line:103:1, line:107:1> line:103:8 struct _opaque_pthread_t definition
+| |-FieldDecl 0x7ff95d099488 <line:104:2, col:7> col:7 __sig 'long'
+| |-FieldDecl 0x7ff95d0994f8 <line:105:2, col:40> col:40 __cleanup_stack 'struct __darwin_pthread_handler_rec *'
+| `-FieldDecl 0x7ff95d0995b8 <line:106:2, col:32> col:7 __opaque 'char [8176]'
+|-TypedefDecl 0x7ff95d099650 <line:109:1, col:39> col:39 __darwin_pthread_attr_t 'struct _opaque_pthread_attr_t':'struct _opaque_pthread_attr_t'
+| `-ElaboratedType 0x7ff95d099600 'struct _opaque_pthread_attr_t' sugar
+|   `-RecordType 0x7ff95d096690 'struct _opaque_pthread_attr_t'
+|     `-Record 0x7ff95d096608 '_opaque_pthread_attr_t'
+|-TypedefDecl 0x7ff95d099700 <line:110:1, col:39> col:39 __darwin_pthread_cond_t 'struct _opaque_pthread_cond_t':'struct _opaque_pthread_cond_t'
+| `-ElaboratedType 0x7ff95d0996b0 'struct _opaque_pthread_cond_t' sugar
+|   `-RecordType 0x7ff95d096860 'struct _opaque_pthread_cond_t'
+|     `-Record 0x7ff95d0967d0 '_opaque_pthread_cond_t'
+|-TypedefDecl 0x7ff95d0997b0 <line:111:1, col:43> col:43 __darwin_pthread_condattr_t 'struct _opaque_pthread_condattr_t':'struct _opaque_pthread_condattr_t'
+| `-ElaboratedType 0x7ff95d099760 'struct _opaque_pthread_condattr_t' sugar
+|   `-RecordType 0x7ff95d096a30 'struct _opaque_pthread_condattr_t'
+|     `-Record 0x7ff95d0969a0 '_opaque_pthread_condattr_t'
+|-TypedefDecl 0x7ff95d099820 <line:112:1, col:23> col:23 __darwin_pthread_key_t 'unsigned long'
+| `-BuiltinType 0x7ff95d026680 'unsigned long'
+|-TypedefDecl 0x7ff95d0998d0 <line:113:1, col:40> col:40 __darwin_pthread_mutex_t 'struct _opaque_pthread_mutex_t':'struct _opaque_pthread_mutex_t'
+| `-ElaboratedType 0x7ff95d099880 'struct _opaque_pthread_mutex_t' sugar
+|   `-RecordType 0x7ff95d098c00 'struct _opaque_pthread_mutex_t'
+|     `-Record 0x7ff95d096b70 '_opaque_pthread_mutex_t'
+|-TypedefDecl 0x7ff95d099980 <line:114:1, col:44> col:44 __darwin_pthread_mutexattr_t 'struct _opaque_pthread_mutexattr_t':'struct _opaque_pthread_mutexattr_t'
+| `-ElaboratedType 0x7ff95d099930 'struct _opaque_pthread_mutexattr_t' sugar
+|   `-RecordType 0x7ff95d098d90 'struct _opaque_pthread_mutexattr_t'
+|     `-Record 0x7ff95d098d08 '_opaque_pthread_mutexattr_t'
+|-TypedefDecl 0x7ff95d099a30 <line:115:1, col:39> col:39 __darwin_pthread_once_t 'struct _opaque_pthread_once_t':'struct _opaque_pthread_once_t'
+| `-ElaboratedType 0x7ff95d0999e0 'struct _opaque_pthread_once_t' sugar
+|   `-RecordType 0x7ff95d098f20 'struct _opaque_pthread_once_t'
+|     `-Record 0x7ff95d098e98 '_opaque_pthread_once_t'
+|-TypedefDecl 0x7ff95d099ae0 <line:116:1, col:41> col:41 __darwin_pthread_rwlock_t 'struct _opaque_pthread_rwlock_t':'struct _opaque_pthread_rwlock_t'
+| `-ElaboratedType 0x7ff95d099a90 'struct _opaque_pthread_rwlock_t' sugar
+|   `-RecordType 0x7ff95d0990b0 'struct _opaque_pthread_rwlock_t'
+|     `-Record 0x7ff95d099028 '_opaque_pthread_rwlock_t'
+|-TypedefDecl 0x7ff95d099b90 <line:117:1, col:45> col:45 __darwin_pthread_rwlockattr_t 'struct _opaque_pthread_rwlockattr_t':'struct _opaque_pthread_rwlockattr_t'
+| `-ElaboratedType 0x7ff95d099b40 'struct _opaque_pthread_rwlockattr_t' sugar
+|   `-RecordType 0x7ff95d099280 'struct _opaque_pthread_rwlockattr_t'
+|     `-Record 0x7ff95d0991f0 '_opaque_pthread_rwlockattr_t'
+|-TypedefDecl 0x7ff95d099cb0 <line:118:1, col:35> col:35 __darwin_pthread_t 'struct _opaque_pthread_t *'
+| `-PointerType 0x7ff95d099c60 'struct _opaque_pthread_t *'
+|   `-ElaboratedType 0x7ff95d099c00 'struct _opaque_pthread_t' sugar
+|     `-RecordType 0x7ff95d099450 'struct _opaque_pthread_t'
+|       `-Record 0x7ff95d0993c0 '_opaque_pthread_t'
+|-TypedefDecl 0x7ff95d099d20 </usr/include/_types.h:40:1, col:14> col:14 __darwin_nl_item 'int'
+| `-BuiltinType 0x7ff95d0265c0 'int'
+|-TypedefDecl 0x7ff95d099d90 <line:41:1, col:14> col:14 __darwin_wctrans_t 'int'
+| `-BuiltinType 0x7ff95d0265c0 'int'
+|-TypedefDecl 0x7ff95d099df8 <line:43:1, col:20> col:20 __darwin_wctype_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7ff95d094660 '__uint32_t' sugar
+|   |-Typedef 0x7ff95d093d68 '__uint32_t'
+|   `-BuiltinType 0x7ff95d026660 'unsigned int'
+|-TypedefDecl 0x7ff95d099e68 </usr/include/sys/_types/_int8_t.h:30:1, col:24> col:24 int8_t 'signed char'
+| `-BuiltinType 0x7ff95d026580 'signed char'
+|-TypedefDecl 0x7ff95d099ed8 </usr/include/sys/_types/_int16_t.h:30:1, col:17> col:17 int16_t 'short'
+| `-BuiltinType 0x7ff95d0265a0 'short'
+|-TypedefDecl 0x7ff95d099f48 </usr/include/sys/_types/_int32_t.h:30:1, col:15> col:15 int32_t 'int'
+| `-BuiltinType 0x7ff95d0265c0 'int'
+|-TypedefDecl 0x7ff95d099fb8 </usr/include/sys/_types/_int64_t.h:30:1, col:20> col:20 referenced int64_t 'long long'
+| `-BuiltinType 0x7ff95d026600 'long long'
+|-TypedefDecl 0x7ff95d09a028 </usr/include/sys/_types/_u_int8_t.h:30:1, col:24> col:24 u_int8_t 'unsigned char'
+| `-BuiltinType 0x7ff95d026620 'unsigned char'
+|-TypedefDecl 0x7ff95d09a098 </usr/include/sys/_types/_u_int16_t.h:30:1, col:26> col:26 u_int16_t 'unsigned short'
+| `-BuiltinType 0x7ff95d026640 'unsigned short'
+|-TypedefDecl 0x7ff95d09a108 </usr/include/sys/_types/_u_int32_t.h:30:1, col:23> col:23 u_int32_t 'unsigned int'
+| `-BuiltinType 0x7ff95d026660 'unsigned int'
+|-TypedefDecl 0x7ff95d09a178 </usr/include/sys/_types/_u_int64_t.h:30:1, col:28> col:28 referenced u_int64_t 'unsigned long long'
+| `-BuiltinType 0x7ff95d0266a0 'unsigned long long'
+|-TypedefDecl 0x7ff95d09a200 </usr/include/i386/types.h:87:1, col:19> col:19 register_t 'int64_t':'long long'
+| `-TypedefType 0x7ff95d09a1d0 'int64_t' sugar
+|   |-Typedef 0x7ff95d099fb8 'int64_t'
+|   `-BuiltinType 0x7ff95d026600 'long long'
+|-TypedefDecl 0x7ff95d09a290 </usr/include/sys/_types/_intptr_t.h:32:1, col:27> col:27 intptr_t '__darwin_intptr_t':'long'
+| `-TypedefType 0x7ff95d09a260 '__darwin_intptr_t' sugar
+|   |-Typedef 0x7ff95d093eb8 '__darwin_intptr_t'
+|   `-BuiltinType 0x7ff95d0265e0 'long'
+|-TypedefDecl 0x7ff95d09a300 </usr/include/sys/_types/_uintptr_t.h:30:1, col:24> col:24 uintptr_t 'unsigned long'
+| `-BuiltinType 0x7ff95d026680 'unsigned long'
+|-TypedefDecl 0x7ff95d09a390 </usr/include/i386/types.h:97:1, col:20> col:20 user_addr_t 'u_int64_t':'unsigned long long'
+| `-TypedefType 0x7ff95d09a360 'u_int64_t' sugar
+|   |-Typedef 0x7ff95d09a178 'u_int64_t'
+|   `-BuiltinType 0x7ff95d0266a0 'unsigned long long'
+|-TypedefDecl 0x7ff95d09a3f8 <line:98:1, col:20> col:20 user_size_t 'u_int64_t':'unsigned long long'
+| `-TypedefType 0x7ff95d09a360 'u_int64_t' sugar
+|   |-Typedef 0x7ff95d09a178 'u_int64_t'
+|   `-BuiltinType 0x7ff95d0266a0 'unsigned long long'
+|-TypedefDecl 0x7ff95d09a460 <line:99:1, col:19> col:19 user_ssize_t 'int64_t':'long long'
+| `-TypedefType 0x7ff95d09a1d0 'int64_t' sugar
+|   |-Typedef 0x7ff95d099fb8 'int64_t'
+|   `-BuiltinType 0x7ff95d026600 'long long'
+|-TypedefDecl 0x7ff95d09a4c8 <line:100:1, col:19> col:19 user_long_t 'int64_t':'long long'
+| `-TypedefType 0x7ff95d09a1d0 'int64_t' sugar
+|   |-Typedef 0x7ff95d099fb8 'int64_t'
+|   `-BuiltinType 0x7ff95d026600 'long long'
+|-TypedefDecl 0x7ff95d09a530 <line:101:1, col:20> col:20 user_ulong_t 'u_int64_t':'unsigned long long'
+| `-TypedefType 0x7ff95d09a360 'u_int64_t' sugar
+|   |-Typedef 0x7ff95d09a178 'u_int64_t'
+|   `-BuiltinType 0x7ff95d0266a0 'unsigned long long'
+|-TypedefDecl 0x7ff95d09a598 <line:102:1, col:19> col:19 user_time_t 'int64_t':'long long'
+| `-TypedefType 0x7ff95d09a1d0 'int64_t' sugar
+|   |-Typedef 0x7ff95d099fb8 'int64_t'
+|   `-BuiltinType 0x7ff95d026600 'long long'
+|-TypedefDecl 0x7ff95d09a600 <line:103:1, col:19> col:19 user_off_t 'int64_t':'long long'
+| `-TypedefType 0x7ff95d09a1d0 'int64_t' sugar
+|   |-Typedef 0x7ff95d099fb8 'int64_t'
+|   `-BuiltinType 0x7ff95d026600 'long long'
+|-TypedefDecl 0x7ff95d09a668 <line:111:1, col:20> col:20 syscall_arg_t 'u_int64_t':'unsigned long long'
+| `-TypedefType 0x7ff95d09a360 'u_int64_t' sugar
+|   |-Typedef 0x7ff95d09a178 'u_int64_t'
+|   `-BuiltinType 0x7ff95d0266a0 'unsigned long long'
+|-TypedefDecl 0x7ff95d09a6f0 </usr/include/sys/_types/_clock_t.h:31:1, col:33> col:33 referenced clock_t '__darwin_clock_t':'unsigned long'
+| `-TypedefType 0x7ff95d09a6c0 '__darwin_clock_t' sugar
+|   |-Typedef 0x7ff95d094600 '__darwin_clock_t'
+|   `-BuiltinType 0x7ff95d026680 'unsigned long'
+|-TypedefDecl 0x7ff95d09a780 </usr/include/sys/_types/_size_t.h:31:1, col:32> col:32 referenced size_t '__darwin_size_t':'unsigned long'
+| `-TypedefType 0x7ff95d09a750 '__darwin_size_t' sugar
+|   |-Typedef 0x7ff95d094390 '__darwin_size_t'
+|   `-BuiltinType 0x7ff95d026680 'unsigned long'
+|-TypedefDecl 0x7ff95d09a810 </usr/include/sys/_types/_time_t.h:31:1, col:26> col:26 referenced time_t '__darwin_time_t':'long'
+| `-TypedefType 0x7ff95d09a7e0 '__darwin_time_t' sugar
+|   |-Typedef 0x7ff95d094770 '__darwin_time_t'
+|   `-BuiltinType 0x7ff95d0265e0 'long'
+|-RecordDecl 0x7ff95d09a868 </usr/include/sys/_types/_timespec.h:29:26, line:37:1> line:29:33 struct timespec definition
+| |-FieldDecl 0x7ff95d09a920 <line:35:2, col:18> col:18 tv_sec '__darwin_time_t':'long'
+| `-FieldDecl 0x7ff95d09a980 <line:36:2, col:18> col:18 tv_nsec 'long'
+|-RecordDecl 0x7ff95d09a9c8 </usr/include/time.h:74:1, line:86:1> line:74:8 struct tm definition
+| |-FieldDecl 0x7ff95d09aa88 <line:75:2, col:6> col:6 tm_sec 'int'
+| |-FieldDecl 0x7ff95d09aae8 <line:76:2, col:6> col:6 tm_min 'int'
+| |-FieldDecl 0x7ff95d09ab48 <line:77:2, col:6> col:6 tm_hour 'int'
+| |-FieldDecl 0x7ff95d09aba8 <line:78:2, col:6> col:6 tm_mday 'int'
+| |-FieldDecl 0x7ff95d823218 <line:79:2, col:6> col:6 tm_mon 'int'
+| |-FieldDecl 0x7ff95d823278 <line:80:2, col:6> col:6 tm_year 'int'
+| |-FieldDecl 0x7ff95d8232d8 <line:81:2, col:6> col:6 tm_wday 'int'
+| |-FieldDecl 0x7ff95d823338 <line:82:2, col:6> col:6 tm_yday 'int'
+| |-FieldDecl 0x7ff95d823398 <line:83:2, col:6> col:6 tm_isdst 'int'
+| |-FieldDecl 0x7ff95d8233f8 <line:84:2, col:7> col:7 tm_gmtoff 'long'
+| `-FieldDecl 0x7ff95d823458 <line:85:2, col:8> col:8 tm_zone 'char *'
+|-VarDecl 0x7ff95d8234f0 <line:97:1, col:21> col:14 tzname 'char *[]' extern
+|-VarDecl 0x7ff95d8235a8 <line:100:1, col:12> col:12 getdate_err 'int' extern
+|-VarDecl 0x7ff95d8236a0 <line:102:1, col:13> col:13 timezone 'long' extern
+| `-AsmLabelAttr 0x7ff95d823700 </usr/include/sys/cdefs.h:569:36> "_timezone"
+|-VarDecl 0x7ff95d823778 </usr/include/time.h:104:1, col:12> col:12 daylight 'int' extern
+|-FunctionDecl 0x7ff95d823998 <line:107:1, col:32> col:7 asctime 'char *(const struct tm *)'
+| `-ParmVarDecl 0x7ff95d823890 <col:15, col:31> col:32 'const struct tm *'
+|-FunctionDecl 0x7ff95d823bc0 <line:108:1, /usr/include/sys/cdefs.h:569:73> /usr/include/time.h:108:9 clock 'clock_t (void)'
+| `-AsmLabelAttr 0x7ff95d823c58 </usr/include/sys/cdefs.h:569:36> "_clock"
+|-FunctionDecl 0x7ff95d823e48 </usr/include/time.h:109:1, col:27> col:7 ctime 'char *(const time_t *)'
+| `-ParmVarDecl 0x7ff95d823d38 <col:13, col:26> col:27 'const time_t *'
+|-FunctionDecl 0x7ff95d824088 <line:110:1, col:31> col:8 difftime 'double (time_t, time_t)'
+| |-ParmVarDecl 0x7ff95d823ef8 <col:17> col:23 'time_t':'long'
+| `-ParmVarDecl 0x7ff95d823f68 <col:25> col:31 'time_t':'long'
+|-FunctionDecl 0x7ff95d825ae8 <line:111:1, col:32> col:12 getdate 'struct tm *(const char *)'
+| `-ParmVarDecl 0x7ff95d824148 <col:20, col:31> col:32 'const char *'
+|-FunctionDecl 0x7ff95d825cb8 <line:112:1, col:33> col:12 gmtime 'struct tm *(const time_t *)'
+| `-ParmVarDecl 0x7ff95d825b98 <col:19, col:32> col:33 'const time_t *'
+|-FunctionDecl 0x7ff95d825e08 <line:113:1, col:36> col:12 localtime 'struct tm *(const time_t *)'
+| `-ParmVarDecl 0x7ff95d825d68 <col:22, col:35> col:36 'const time_t *'
+|-FunctionDecl 0x7ff95d826010 <line:114:1, /usr/include/sys/cdefs.h:569:73> /usr/include/time.h:114:8 mktime 'time_t (struct tm *)'
+| |-ParmVarDecl 0x7ff95d825ed0 <col:15, col:25> col:26 'struct tm *'
+| `-AsmLabelAttr 0x7ff95d8260a8 </usr/include/sys/cdefs.h:569:36> "_mktime"
+|-FunctionDecl 0x7ff95d826440 </usr/include/time.h:115:1, /usr/include/sys/cdefs.h:569:73> /usr/include/time.h:115:8 strftime 'size_t (char *__restrict, size_t, const char *__restrict, const struct tm *__restrict)'
+| |-ParmVarDecl 0x7ff95d826148 <col:17, col:22> col:34 'char *__restrict'
+| |-ParmVarDecl 0x7ff95d8261b8 <col:36> col:42 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff95d826230 <col:44, col:55> col:67 'const char *__restrict'
+| |-ParmVarDecl 0x7ff95d8262b8 <col:69, col:85> col:97 'const struct tm *__restrict'
+| `-AsmLabelAttr 0x7ff95d8264d8 </usr/include/sys/cdefs.h:569:36> "_strftime"
+|-FunctionDecl 0x7ff95d8267e8 </usr/include/time.h:116:1, /usr/include/sys/cdefs.h:569:73> /usr/include/time.h:116:7 strptime 'char *(const char *__restrict, const char *__restrict, struct tm *__restrict)'
+| |-ParmVarDecl 0x7ff95d826570 <col:16, col:27> col:39 'const char *__restrict'
+| |-ParmVarDecl 0x7ff95d8265e8 <col:41, col:52> col:64 'const char *__restrict'
+| |-ParmVarDecl 0x7ff95d826670 <col:66, col:76> col:88 'struct tm *__restrict'
+| `-AsmLabelAttr 0x7ff95d826880 </usr/include/sys/cdefs.h:569:36> "_strptime"
+|-FunctionDecl 0x7ff95d8272a0 </usr/include/time.h:117:1, col:21> col:8 time 'time_t (time_t *)'
+| `-ParmVarDecl 0x7ff95d826968 <col:13, col:20> col:21 'time_t *'
+|-FunctionDecl 0x7ff95d827400 <line:120:1, col:16> col:6 tzset 'void (void)'
+|-FunctionDecl 0x7ff95d827658 <line:124:1, col:64> col:7 asctime_r 'char *(const struct tm *__restrict, char *__restrict)'
+| |-ParmVarDecl 0x7ff95d8274c0 <col:17, col:33> col:45 'const struct tm *__restrict'
+| `-ParmVarDecl 0x7ff95d827538 <col:47, col:52> col:64 'char *__restrict'
+|-FunctionDecl 0x7ff95d8278a8 <line:125:1, col:37> col:7 ctime_r 'char *(const time_t *, char *)'
+| |-ParmVarDecl 0x7ff95d827710 <col:15, col:28> col:29 'const time_t *'
+| `-ParmVarDecl 0x7ff95d827788 <col:31, col:36> col:37 'char *'
+|-FunctionDecl 0x7ff95d827b18 <line:126:1, col:70> col:12 gmtime_r 'struct tm *(const time_t *__restrict, struct tm *__restrict)'
+| |-ParmVarDecl 0x7ff95d827960 <col:21, col:34> col:46 'const time_t *__restrict'
+| `-ParmVarDecl 0x7ff95d8279e8 <col:48, col:58> col:70 'struct tm *__restrict'
+|-FunctionDecl 0x7ff95d827d00 <line:127:1, col:73> col:12 localtime_r 'struct tm *(const time_t *__restrict, struct tm *__restrict)'
+| |-ParmVarDecl 0x7ff95d827bd0 <col:24, col:37> col:49 'const time_t *__restrict'
+| `-ParmVarDecl 0x7ff95d827c58 <col:51, col:61> col:73 'struct tm *__restrict'
+|-FunctionDecl 0x7ff95d827ec0 <line:130:1, col:25> col:8 posix2time 'time_t (time_t)'
+| `-ParmVarDecl 0x7ff95d827db8 <col:19> col:25 'time_t':'long'
+|-FunctionDecl 0x7ff95d827ff0 <line:134:1, col:20> col:6 tzsetwall 'void (void)'
+|-FunctionDecl 0x7ff95d828120 <line:135:1, col:25> col:8 time2posix 'time_t (time_t)'
+| `-ParmVarDecl 0x7ff95d828098 <col:19> col:25 'time_t':'long'
+|-FunctionDecl 0x7ff95d8282c0 <line:136:1, col:35> col:8 timelocal 'time_t (struct tm *const)'
+| `-ParmVarDecl 0x7ff95d828200 <col:18, col:28> col:35 'struct tm *const'
+|-FunctionDecl 0x7ff95d828410 <line:137:1, col:32> col:8 timegm 'time_t (struct tm *const)'
+| `-ParmVarDecl 0x7ff95d828388 <col:15, col:25> col:32 'struct tm *const'
+|-FunctionDecl 0x7ff95d8287d8 <line:141:1, /usr/include/sys/cdefs.h:570:103> /usr/include/time.h:141:5 nanosleep 'int (const struct timespec *, struct timespec *)'
+| |-ParmVarDecl 0x7ff95d828560 <col:15, col:38> col:38 __rqtp 'const struct timespec *'
+| |-ParmVarDecl 0x7ff95d828640 <col:46, col:63> col:63 __rmtp 'struct timespec *'
+| `-AsmLabelAttr 0x7ff95d828870 </usr/include/sys/cdefs.h:570:38> "_nanosleep"
+|-EnumDecl 0x7ff95d8288e0 </usr/include/time.h:152:9, line:171:1> line:152:9
+| |-EnumConstantDecl 0x7ff95d828a00 <line:153:1, col:40> col:1 _CLOCK_REALTIME 'int'
+| | |-IntegerLiteral 0x7ff95d8289e0 <col:40> 'int' 0
+| | |-AvailabilityAttr 0x7ff95d828a48 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7ff95d828ae8 <col:81, col:115> tvos 10.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7ff95d828b50 <col:81, col:115> ios 10.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7ff95d828bb8 <col:81, col:115> macos 10.12 0 0 "" ""
+| |-EnumConstantDecl 0x7ff95d828c80 </usr/include/time.h:155:1, col:41> col:1 referenced _CLOCK_MONOTONIC 'int'
+| | |-IntegerLiteral 0x7ff95d828c60 <col:41> 'int' 6
+| | |-AvailabilityAttr 0x7ff95d828cc8 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7ff95d828d68 <col:81, col:115> tvos 10.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7ff95d828dd0 <col:81, col:115> ios 10.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7ff95d828e38 <col:81, col:115> macos 10.12 0 0 "" ""
+| |-EnumConstantDecl 0x7ff95d828f00 </usr/include/time.h:158:1, col:45> col:1 _CLOCK_MONOTONIC_RAW 'int'
+| | |-IntegerLiteral 0x7ff95d828ee0 <col:45> 'int' 4
+| | |-AvailabilityAttr 0x7ff95d828f48 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7ff95d828fe8 <col:81, col:115> tvos 10.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7ff95d829050 <col:81, col:115> ios 10.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7ff95d8290b8 <col:81, col:115> macos 10.12 0 0 "" ""
+| |-EnumConstantDecl 0x7ff95d829180 </usr/include/time.h:160:1, col:52> col:1 _CLOCK_MONOTONIC_RAW_APPROX 'int'
+| | |-IntegerLiteral 0x7ff95d829160 <col:52> 'int' 5
+| | |-AvailabilityAttr 0x7ff95d830200 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7ff95d8302a0 <col:81, col:115> tvos 10.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7ff95d830308 <col:81, col:115> ios 10.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7ff95d830370 <col:81, col:115> macos 10.12 0 0 "" ""
+| |-EnumConstantDecl 0x7ff95d830438 </usr/include/time.h:162:1, col:42> col:1 _CLOCK_UPTIME_RAW 'int'
+| | |-IntegerLiteral 0x7ff95d830418 <col:42> 'int' 8
+| | |-AvailabilityAttr 0x7ff95d830480 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7ff95d830520 <col:81, col:115> tvos 10.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7ff95d830588 <col:81, col:115> ios 10.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7ff95d8305f0 <col:81, col:115> macos 10.12 0 0 "" ""
+| |-EnumConstantDecl 0x7ff95d8306b8 </usr/include/time.h:164:1, col:49> col:1 _CLOCK_UPTIME_RAW_APPROX 'int'
+| | |-IntegerLiteral 0x7ff95d830698 <col:49> 'int' 9
+| | |-AvailabilityAttr 0x7ff95d830700 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7ff95d8307a0 <col:81, col:115> tvos 10.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7ff95d830808 <col:81, col:115> ios 10.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7ff95d830870 <col:81, col:115> macos 10.12 0 0 "" ""
+| |-EnumConstantDecl 0x7ff95d830938 </usr/include/time.h:167:1, col:50> col:1 _CLOCK_PROCESS_CPUTIME_ID 'int'
+| | |-IntegerLiteral 0x7ff95d830918 <col:50> 'int' 12
+| | |-AvailabilityAttr 0x7ff95d830980 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7ff95d830a20 <col:81, col:115> tvos 10.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7ff95d830a88 <col:81, col:115> ios 10.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7ff95d830af0 <col:81, col:115> macos 10.12 0 0 "" ""
+| `-EnumConstantDecl 0x7ff95d830bb8 </usr/include/time.h:169:1, col:49> col:1 _CLOCK_THREAD_CPUTIME_ID 'int'
+|   |-IntegerLiteral 0x7ff95d830b98 <col:49> 'int' 16
+|   |-AvailabilityAttr 0x7ff95d830c00 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+|   |-AvailabilityAttr 0x7ff95d830ca0 <col:81, col:115> tvos 10.0 0 0 "" ""
+|   |-AvailabilityAttr 0x7ff95d830d08 <col:81, col:115> ios 10.0 0 0 "" ""
+|   `-AvailabilityAttr 0x7ff95d830d70 <col:81, col:115> macos 10.12 0 0 "" ""
+|-TypedefDecl 0x7ff95d830e30 </usr/include/time.h:152:1, line:171:3> col:3 referenced clockid_t 'enum clockid_t':'clockid_t'
+| `-ElaboratedType 0x7ff95d830de0 'enum clockid_t' sugar
+|   `-EnumType 0x7ff95d828980 'clockid_t'
+|     `-Enum 0x7ff95d8288e0 ''
+|-FunctionDecl 0x7ff95d8310b8 </usr/include/Availability.h:231:66, /usr/include/time.h:174:62> col:5 clock_getres 'int (clockid_t, struct timespec *)'
+| |-ParmVarDecl 0x7ff95d830f10 <col:18, col:28> col:28 __clock_id 'clockid_t':'clockid_t'
+| |-ParmVarDecl 0x7ff95d830f98 <col:40, col:57> col:57 __res 'struct timespec *'
+| |-AvailabilityAttr 0x7ff95d831160 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| |-AvailabilityAttr 0x7ff95d831200 <col:81, col:115> tvos 10.0 0 0 "" ""
+| |-AvailabilityAttr 0x7ff95d831268 <col:81, col:115> ios 10.0 0 0 "" ""
+| `-AvailabilityAttr 0x7ff95d8312d0 <col:81, col:115> macos 10.12 0 0 "" ""
+|-FunctionDecl 0x7ff95d8314a8 <col:66, /usr/include/time.h:177:62> col:5 used clock_gettime 'int (clockid_t, struct timespec *)'
+| |-ParmVarDecl 0x7ff95d831388 <col:19, col:29> col:29 __clock_id 'clockid_t':'clockid_t'
+| |-ParmVarDecl 0x7ff95d831410 <col:41, col:58> col:58 __tp 'struct timespec *'
+| |-AvailabilityAttr 0x7ff95d831550 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| |-AvailabilityAttr 0x7ff95d8315f0 <col:81, col:115> tvos 10.0 0 0 "" ""
+| |-AvailabilityAttr 0x7ff95d831658 <col:81, col:115> ios 10.0 0 0 "" ""
+| `-AvailabilityAttr 0x7ff95d8316c0 <col:81, col:115> macos 10.12 0 0 "" ""
+|-FunctionDecl 0x7ff95d831880 <col:66, /usr/include/time.h:181:54> col:12 clock_gettime_nsec_np '__uint64_t (clockid_t)'
+| |-ParmVarDecl 0x7ff95d831778 <col:34, col:44> col:44 __clock_id 'clockid_t':'clockid_t'
+| |-AvailabilityAttr 0x7ff95d831920 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| |-AvailabilityAttr 0x7ff95d8319c0 <col:81, col:115> tvos 10.0 0 0 "" ""
+| |-AvailabilityAttr 0x7ff95d831a28 <col:81, col:115> ios 10.0 0 0 "" ""
+| `-AvailabilityAttr 0x7ff95d831a90 <col:81, col:115> macos 10.12 0 0 "" ""
+|-FunctionDecl 0x7ff95d831ce8 <col:66, /usr/include/time.h:186:68> col:5 clock_settime 'int (clockid_t, const struct timespec *)'
+| |-ParmVarDecl 0x7ff95d831b48 <col:19, col:29> col:29 __clock_id 'clockid_t':'clockid_t'
+| |-ParmVarDecl 0x7ff95d831bd0 <col:41, col:64> col:64 __tp 'const struct timespec *'
+| |-AvailabilityAttr 0x7ff95d831d90 </usr/include/Availability.h:231:81, col:115> watchos 0 0 0 Unavailable "" ""
+| |-AvailabilityAttr 0x7ff95d831e30 <col:81, col:115> tvos 0 0 0 Unavailable "" ""
+| |-AvailabilityAttr 0x7ff95d831e98 <col:81, col:115> ios 0 0 0 Unavailable "" ""
+| `-AvailabilityAttr 0x7ff95d831f00 <col:81, col:115> macos 10.12 0 0 "" ""
+|-FunctionDecl 0x7ff95d832108 <c_files/pr59063-2.c:5:1, line:6:47> line:5:12 used weak_gettime 'int (clockid_t, struct timespec *)' static
+| |-ParmVarDecl 0x7ff95d831f78 <col:26, col:36> col:36 clk_id 'clockid_t':'clockid_t'
+| |-ParmVarDecl 0x7ff95d832000 <col:44, col:61> col:61 tp 'struct timespec *'
+| |-AliasAttr 0x7ff95d8321b0 <line:6:18, col:45> "clock_gettime"
+| `-WeakRefAttr 0x7ff95d833238 <col:18, col:45> ""
+`-FunctionDecl 0x7ff95d8332a0 <line:7:1, line:12:1> line:7:5 main 'int ()'
+  `-CompoundStmt 0x7ff95d833610 <col:12, line:12:1>
+    |-IfStmt 0x7ff95d833428 <line:8:3, line:9:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7ff95d8333d0 <line:8:7, col:8> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7ff95d8333b8 <col:8> 'int (*)(clockid_t, struct timespec *)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff95d833338 <col:8> 'int (clockid_t, struct timespec *)' Function 0x7ff95d8314a8 'clock_gettime' 'int (clockid_t, struct timespec *)'
+    | |-ReturnStmt 0x7ff95d833410 <line:9:5, col:12>
+    | | `-IntegerLiteral 0x7ff95d8333f0 <col:12> 'int' 0
+    | `-<<<NULL>>>
+    |-DeclStmt 0x7ff95d8334e0 <line:10:3, col:21>
+    | `-VarDecl 0x7ff95d833480 <col:3, col:19> col:19 used ts 'struct timespec':'struct timespec'
+    `-ReturnStmt 0x7ff95d8335f8 <line:11:3, col:43>
+      `-CallExpr 0x7ff95d8335a8 <col:10, col:43> 'int'
+        |-ImplicitCastExpr 0x7ff95d833590 <col:10> 'int (*)(clockid_t, struct timespec *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7ff95d8334f8 <col:10> 'int (clockid_t, struct timespec *)' Function 0x7ff95d832108 'weak_gettime' 'int (clockid_t, struct timespec *)'
+        |-ImplicitCastExpr 0x7ff95d8335e0 </usr/include/time.h:156:25> 'clockid_t':'clockid_t' <IntegralCast>
+        | `-DeclRefExpr 0x7ff95d833520 <col:25> 'int' EnumConstant 0x7ff95d828c80 '_CLOCK_MONOTONIC' 'int'
+        `-UnaryOperator 0x7ff95d833570 <c_files/pr59063-2.c:11:40, col:41> 'struct timespec *' prefix '&'
+          `-DeclRefExpr 0x7ff95d833548 <col:41> 'struct timespec':'struct timespec' lvalue Var 0x7ff95d833480 'ts' 'struct timespec':'struct timespec'

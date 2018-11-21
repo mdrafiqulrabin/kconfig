@@ -1,0 +1,87 @@
+FileAST: 
+  Typedef: __u64, [], ['typedef']
+    TypeDecl: __u64, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  Decl: ext2_max_sizes, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: ext2_max_sizes, []
+        IdentifierType: ['__u64']
+      BinaryOp: +
+        BinaryOp: -
+          Constant: int, 16
+          Constant: int, 10
+        Constant: int, 1
+  FuncDef: 
+    Decl: e2fsck_pass1, [], [], []
+      FuncDecl: 
+        TypeDecl: e2fsck_pass1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: max_sizes, [], [], []
+        TypeDecl: max_sizes, []
+          IdentifierType: ['__u64']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 10
+        BinaryOp: <=
+          ID: i
+          Constant: int, 16
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: max_sizes
+            BinaryOp: +
+              Constant: int, 12
+              BinaryOp: <<
+                Constant: int, 1ULL
+                BinaryOp: -
+                  ID: i
+                  Constant: int, 2
+          Assignment: =
+            ID: max_sizes
+            BinaryOp: +
+              ID: max_sizes
+              BinaryOp: *
+                BinaryOp: <<
+                  Constant: int, 1ULL
+                  BinaryOp: -
+                    ID: i
+                    Constant: int, 2
+                BinaryOp: <<
+                  Constant: int, 1ULL
+                  BinaryOp: -
+                    ID: i
+                    Constant: int, 2
+          Assignment: =
+            ID: max_sizes
+            BinaryOp: +
+              ID: max_sizes
+              BinaryOp: *
+                BinaryOp: *
+                  BinaryOp: <<
+                    Constant: int, 1ULL
+                    BinaryOp: -
+                      ID: i
+                      Constant: int, 2
+                  BinaryOp: <<
+                    Constant: int, 1ULL
+                    BinaryOp: -
+                      ID: i
+                      Constant: int, 2
+                BinaryOp: <<
+                  Constant: int, 1ULL
+                  BinaryOp: -
+                    ID: i
+                    Constant: int, 2
+          Assignment: =
+            ArrayRef: 
+              ID: ext2_max_sizes
+              BinaryOp: -
+                ID: i
+                Constant: int, 10
+            ID: max_sizes

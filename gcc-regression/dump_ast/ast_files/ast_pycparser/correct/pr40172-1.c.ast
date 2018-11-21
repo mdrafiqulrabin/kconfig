@@ -1,0 +1,101 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: rtx_def
+  Typedef: rtx, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: rtx, []
+        Struct: rtx_def
+  Decl: foo, [], ['extern'], []
+    TypeDecl: foo, []
+      IdentifierType: ['int']
+  Decl: bar, [], ['extern'], []
+    TypeDecl: bar, []
+      IdentifierType: ['int']
+  Decl: xxx, [], ['extern'], []
+    TypeDecl: xxx, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        TernaryOp: 
+          BinaryOp: &&
+            BinaryOp: !=
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['rtx']
+                Constant: int, 0
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['rtx']
+                Constant: int, 0
+            ID: xxx
+          ID: foo
+          ID: bar
+        Return: 
+          Constant: int, 1
+        If: 
+          BinaryOp: &&
+            BinaryOp: &
+              ID: foo
+              Constant: int, 0
+            ID: xxx
+          Return: 
+            Constant: int, 2
+          If: 
+            BinaryOp: &
+              ID: foo
+              Constant: int, 0
+            Return: 
+              Constant: int, 3
+            If: 
+              BinaryOp: &&
+                Constant: int, 0
+                ID: xxx
+              Return: 
+                Constant: int, 4
+              If: 
+                Constant: int, 0
+                Return: 
+                  Constant: int, 5
+      If: 
+        TernaryOp: 
+          BinaryOp: &&
+            BinaryOp: !=
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                Constant: int, 0
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                Constant: int, 0
+            ID: bar
+          ID: foo
+          ID: xxx
+        Return: 
+          Constant: int, 6
+        If: 
+          TernaryOp: 
+            BinaryOp: &&
+              BinaryOp: !=
+                Constant: int, 0
+                Constant: int, 0
+              ID: foo
+            ID: xxx
+            ID: bar
+          Return: 
+            Constant: int, 7
+          Return: 
+            Constant: int, 0

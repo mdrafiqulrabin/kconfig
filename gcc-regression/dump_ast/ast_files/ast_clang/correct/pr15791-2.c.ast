@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7f8c620264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8c62026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8c62026740 '__int128'
+|-TypedefDecl 0x7f8c62026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8c62026760 'unsigned __int128'
+|-TypedefDecl 0x7f8c62026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8c62026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8c62026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8c62026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8c62026dc0 'char *'
+|   `-BuiltinType 0x7f8c62026560 'char'
+|-TypedefDecl 0x7f8c620270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8c62027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8c62026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8c62026e58 '__va_list_tag'
+|-FunctionDecl 0x7f8c62027168 <c_files/pr15791-2.c:4:1, col:18> col:6 used link_error 'void ()'
+|-RecordDecl 0x7f8c62825a40 <line:5:1, col:11> col:8 struct a definition
+`-FunctionDecl 0x7f8c62825b40 <line:6:1, line:12:1> line:6:5 main 'int ()'
+  `-CompoundStmt 0x7f8c62826068 <line:7:1, line:12:1>
+    |-DeclStmt 0x7f8c62825d78 <line:8:3, col:16>
+    | `-VarDecl 0x7f8c62825d18 <col:3, col:15> col:12 used b 'struct a [2]'
+    |-IfStmt 0x7f8c62825ff8 <line:9:3, line:10:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8c62825f40 <line:9:7, col:20> 'int' '!='
+    | | |-UnaryOperator 0x7f8c62825e78 <col:7, col:11> 'struct a *' prefix '&'
+    | | | `-ArraySubscriptExpr 0x7f8c62825e50 <col:8, col:11> 'struct a':'struct a' lvalue
+    | | |   |-ImplicitCastExpr 0x7f8c62825e38 <col:8> 'struct a *' <ArrayToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7f8c62825d90 <col:8> 'struct a [2]' lvalue Var 0x7f8c62825d18 'b' 'struct a [2]'
+    | | |   `-IntegerLiteral 0x7f8c62825db8 <col:10> 'int' 0
+    | | `-UnaryOperator 0x7f8c62825f20 <col:16, col:20> 'struct a *' prefix '&'
+    | |   `-ArraySubscriptExpr 0x7f8c62825ef8 <col:17, col:20> 'struct a':'struct a' lvalue
+    | |     |-ImplicitCastExpr 0x7f8c62825ee0 <col:17> 'struct a *' <ArrayToPointerDecay>
+    | |     | `-DeclRefExpr 0x7f8c62825e98 <col:17> 'struct a [2]' lvalue Var 0x7f8c62825d18 'b' 'struct a [2]'
+    | |     `-IntegerLiteral 0x7f8c62825ec0 <col:19> 'int' 1
+    | |-CallExpr 0x7f8c62825fd0 <line:10:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7f8c62825fb8 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f8c62825f68 <col:5> 'void ()' Function 0x7f8c62027168 'link_error' 'void ()'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f8c62826050 <line:11:3, col:10>
+      `-IntegerLiteral 0x7f8c62826030 <col:10> 'int' 0

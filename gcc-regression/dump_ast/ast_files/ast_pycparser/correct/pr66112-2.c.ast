@@ -1,0 +1,79 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'short', 'int']
+    Compound: 
+      Decl: res, [], [], []
+        TypeDecl: res, []
+          IdentifierType: ['unsigned', 'short', 'int']
+      Assignment: &=
+        ID: a
+        Constant: int, 0xffff
+      Assignment: &=
+        ID: b
+        Constant: int, 0xffff
+      If: 
+        FuncCall: 
+          ID: __builtin_mul_overflow
+          ExprList: 
+            ID: a
+            ID: b
+            UnaryOp: &
+              ID: res
+        Assignment: =
+          ID: res
+          Constant: int, 0x123
+      Return: 
+        ID: res
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['short', 'int']
+    Compound: 
+      Decl: res, [], [], []
+        TypeDecl: res, []
+          IdentifierType: ['short', 'int']
+      Assignment: =
+        ID: a
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['short', 'int']
+          ID: a
+      Assignment: =
+        ID: b
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['short', 'int']
+          ID: b
+      If: 
+        FuncCall: 
+          ID: __builtin_mul_overflow
+          ExprList: 
+            ID: a
+            ID: b
+            UnaryOp: &
+              ID: res
+        Assignment: =
+          ID: res
+          Constant: int, 0x123
+      Return: 
+        ID: res

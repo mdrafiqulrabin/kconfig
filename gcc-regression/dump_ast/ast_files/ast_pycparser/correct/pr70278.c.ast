@@ -1,0 +1,176 @@
+FileAST: 
+  Typedef: ieee_double_shape_type, [], ['typedef']
+    TypeDecl: ieee_double_shape_type, []
+      Union: None
+        Decl: value, [], [], []
+          TypeDecl: value, []
+            IdentifierType: ['double']
+        Decl: parts, [], [], []
+          TypeDecl: parts, []
+            Struct: None
+              Decl: msw, [], [], []
+                TypeDecl: msw, []
+                  IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: __ieee754_hypot, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['double']
+        TypeDecl: __ieee754_hypot, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['double']
+        ID: x
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['double']
+        ID: y
+      Decl: t1, [], [], []
+        TypeDecl: t1, []
+          IdentifierType: ['double']
+      Decl: t2, [], [], []
+        TypeDecl: t2, []
+          IdentifierType: ['double']
+      Decl: y1, [], [], []
+        TypeDecl: y1, []
+          IdentifierType: ['double']
+      Decl: y2, [], [], []
+        TypeDecl: y2, []
+          IdentifierType: ['double']
+      Decl: w, [], [], []
+        TypeDecl: w, []
+          IdentifierType: ['double']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Decl: ha, [], [], []
+        TypeDecl: ha, []
+          IdentifierType: ['int']
+      Decl: hb, [], [], []
+        TypeDecl: hb, []
+          IdentifierType: ['int']
+      DoWhile: 
+        Constant: int, 0
+        Compound: 
+          Decl: gh_u, [], [], []
+            TypeDecl: gh_u, []
+              IdentifierType: ['ieee_double_shape_type']
+          Assignment: =
+            StructRef: .
+              ID: gh_u
+              ID: value
+            ID: x
+          Assignment: =
+            ID: ha
+            StructRef: .
+              StructRef: .
+                ID: gh_u
+                ID: parts
+              ID: msw
+      EmptyStatement: 
+      If: 
+        BinaryOp: >
+          ID: hb
+          ID: ha
+        Compound: 
+          Assignment: =
+            ID: a
+            ID: y
+          Assignment: =
+            ID: b
+            ID: x
+          Assignment: =
+            ID: j
+            ID: ha
+          Assignment: =
+            ID: ha
+            ID: hb
+          Assignment: =
+            ID: hb
+            ID: j
+        Compound: 
+          Assignment: =
+            ID: a
+            ID: x
+          Assignment: =
+            ID: b
+            ID: y
+      If: 
+        BinaryOp: >
+          ID: ha
+          Constant: int, 0x5f300000
+        Compound: 
+          DoWhile: 
+            Constant: int, 0
+            Compound: 
+              Decl: sh_u, [], [], []
+                TypeDecl: sh_u, []
+                  IdentifierType: ['ieee_double_shape_type']
+              Assignment: =
+                StructRef: .
+                  ID: sh_u
+                  ID: value
+                ID: a
+              Assignment: =
+                StructRef: .
+                  StructRef: .
+                    ID: sh_u
+                    ID: parts
+                  ID: msw
+                ID: ha
+              Assignment: =
+                ID: a
+                StructRef: .
+                  ID: sh_u
+                  ID: value
+          EmptyStatement: 
+      Assignment: =
+        ID: w
+        BinaryOp: -
+          ID: a
+          ID: b
+      If: 
+        BinaryOp: <=
+          ID: w
+          ID: b
+        Compound: 
+          Assignment: =
+            ID: t2
+            BinaryOp: -
+              ID: a
+              ID: t1
+          Assignment: =
+            ID: w
+            BinaryOp: -
+              BinaryOp: *
+                ID: t1
+                ID: y1
+              BinaryOp: -
+                BinaryOp: *
+                  ID: w
+                  UnaryOp: -
+                    ID: w
+                BinaryOp: +
+                  BinaryOp: *
+                    ID: t1
+                    ID: y2
+                  BinaryOp: *
+                    ID: t2
+                    ID: b
+      If: 
+        BinaryOp: !=
+          ID: k
+          Constant: int, 0
+        Compound: 
+        Return: 
+          ID: w

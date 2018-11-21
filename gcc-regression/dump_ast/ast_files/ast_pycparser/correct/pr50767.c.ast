@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: s, [], [], []
+        PtrDecl: []
+          TypeDecl: s, []
+            Struct: S
+  Decl: ss, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: ss, []
+        Struct: S
+  Decl: s, [], [], []
+    PtrDecl: []
+      TypeDecl: s, []
+        Struct: S
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        Compound: 
+          Assignment: =
+            StructRef: ->
+              ID: s
+              ID: s
+            ID: ss
+          FuncCall: 
+            ID: bar

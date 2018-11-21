@@ -1,0 +1,43 @@
+c_files/pr63845.c:5:31: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+int __attribute__ ((noinline, noclone))
+                              ^
+1 warning generated.
+TranslationUnitDecl 0x7fd1dd0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd1dd026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd1dd026740 '__int128'
+|-TypedefDecl 0x7fd1dd026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd1dd026760 'unsigned __int128'
+|-TypedefDecl 0x7fd1dd026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd1dd026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd1dd026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd1dd026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd1dd026dc0 'char *'
+|   `-BuiltinType 0x7fd1dd026560 'char'
+|-TypedefDecl 0x7fd1dd0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd1dd027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd1dd026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd1dd026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd1dd078430 <c_files/pr63845.c:5:1, line:9:1> line:6:1 used foo 'int (void *)'
+| |-ParmVarDecl 0x7fd1dd027138 <col:6, col:12> col:12 used p 'void *'
+| |-CompoundStmt 0x7fd1dd078650 <line:7:1, line:9:1>
+| | `-ReturnStmt 0x7fd1dd078638 <line:8:3, col:17>
+| |   `-ImplicitCastExpr 0x7fd1dd078620 <col:10, col:17> 'int' <LValueToRValue>
+| |     `-UnaryOperator 0x7fd1dd078600 <col:10, col:17> 'int' lvalue prefix '*'
+| |       `-CStyleCastExpr 0x7fd1dd0785d8 <col:11, col:17> 'int *' <BitCast>
+| |         `-ImplicitCastExpr 0x7fd1dd0785c0 <col:17> 'void *' <LValueToRValue>
+| |           `-DeclRefExpr 0x7fd1dd078558 <col:17> 'void *' lvalue ParmVar 0x7fd1dd027138 'p' 'void *'
+| `-NoInlineAttr 0x7fd1dd0784d0 <line:5:21>
+`-FunctionDecl 0x7fd1dd0786c0 <line:11:1, line:16:1> line:11:5 main 'int ()'
+  `-CompoundStmt 0x7fd1dd078950 <line:12:1, line:16:1>
+    |-DeclStmt 0x7fd1dd078800 <line:13:3, col:13>
+    | `-VarDecl 0x7fd1dd078768 <col:3, col:12> col:8 used a 'char' cinit
+    |   `-ImplicitCastExpr 0x7fd1dd0787e8 <col:12> 'char' <IntegralCast>
+    |     `-IntegerLiteral 0x7fd1dd0787c8 <col:12> 'int' 0
+    |-CallExpr 0x7fd1dd0788d0 <line:14:3, col:10> 'int'
+    | |-ImplicitCastExpr 0x7fd1dd0788b8 <col:3> 'int (*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd1dd078818 <col:3> 'int (void *)' Function 0x7fd1dd078430 'foo' 'int (void *)'
+    | `-ImplicitCastExpr 0x7fd1dd078900 <col:8, col:9> 'void *' <BitCast>
+    |   `-UnaryOperator 0x7fd1dd078868 <col:8, col:9> 'char *' prefix '&'
+    |     `-DeclRefExpr 0x7fd1dd078840 <col:9> 'char' lvalue Var 0x7fd1dd078768 'a' 'char'
+    `-ReturnStmt 0x7fd1dd078938 <line:15:3, col:10>
+      `-IntegerLiteral 0x7fd1dd078918 <col:10> 'int' 0

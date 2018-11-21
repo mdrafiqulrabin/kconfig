@@ -1,0 +1,21 @@
+c_files/pr67653.c:7:24: error: invalid lvalue in asm input for constraint 'm'
+  __asm__ ("" : : "m" (({ static int a; a; })));        /* { dg-warning "memory input 0 is not directly addressable" } */
+                       ^~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fe5fc81a6d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe5fc81ac20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe5fc81a940 '__int128'
+|-TypedefDecl 0x7fe5fc81ac90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe5fc81a960 'unsigned __int128'
+|-TypedefDecl 0x7fe5fc81af68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe5fc81ad70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe5fc81ace8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe5fc81b000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe5fc81afc0 'char *'
+|   `-BuiltinType 0x7fe5fc81a760 'char'
+|-TypedefDecl 0x7fe5fc81b2c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe5fc81b270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe5fc81b0e0 'struct __va_list_tag'
+|     `-Record 0x7fe5fc81b058 '__va_list_tag'
+`-FunctionDecl 0x7fe5fc86b600 <c_files/pr67653.c:4:1, line:8:1> line:5:1 foo 'void (void)'
+  `-CompoundStmt 0x7fe5fc86b8c0 <line:6:1, line:8:1>

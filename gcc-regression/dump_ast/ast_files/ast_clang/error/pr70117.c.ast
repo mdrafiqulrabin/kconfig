@@ -1,0 +1,390 @@
+c_files/pr70117.c:28:7: error: use of unknown builtin '__builtin_isinfl' [-Wimplicit-function-declaration]
+  if (__builtin_isinfl (ld))
+      ^
+1 error generated.
+TranslationUnitDecl 0x7f8cb88218d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8cb8821e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8cb8821b40 '__int128'
+|-TypedefDecl 0x7f8cb8821e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8cb8821b60 'unsigned __int128'
+|-TypedefDecl 0x7f8cb8822168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8cb8821f70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8cb8821ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8cb8822200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8cb88221c0 'char *'
+|   `-BuiltinType 0x7f8cb8821960 'char'
+|-TypedefDecl 0x7f8cb88224c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8cb8822470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8cb88222e0 'struct __va_list_tag'
+|     `-Record 0x7f8cb8822258 '__va_list_tag'
+|-RecordDecl 0x7f8cb8822520 <c_files/pr70117.c:6:1, line:10:1> line:6:7 union gl_long_double_union definition
+| |-RecordDecl 0x7f8cb7031a00 <line:8:3, col:34> col:3 struct definition
+| | |-FieldDecl 0x7f8cb7031ac8 <col:12, col:19> col:19 hi 'double'
+| | `-FieldDecl 0x7f8cb7031b28 <col:23, col:30> col:30 lo 'double'
+| |-FieldDecl 0x7f8cb7031bc0 <col:3, col:36> col:36 dd 'struct (anonymous struct at c_files/pr70117.c:8:3)':'struct gl_long_double_union::(anonymous at c_files/pr70117.c:8:3)'
+| `-FieldDecl 0x7f8cb7031c20 <line:9:3, col:15> col:15 referenced ld 'long double'
+|-VarDecl 0x7f8cb7031d10 <line:14:1, line:15:70> line:14:37 used gl_LDBL_MAX 'volatile union gl_long_double_union':'volatile union gl_long_double_union' cinit
+| `-InitListExpr 0x7f8cb7031f98 <line:15:3, col:70> 'union gl_long_double_union':'union gl_long_double_union' field Field 0x7f8cb7031bc0 'dd' 'struct (anonymous struct at c_files/pr70117.c:8:3)':'struct gl_long_double_union::(anonymous at c_files/pr70117.c:8:3)'
+|   `-InitListExpr 0x7f8cb7031fe0 <col:5, col:68> 'struct (anonymous struct at c_files/pr70117.c:8:3)':'struct gl_long_double_union::(anonymous at c_files/pr70117.c:8:3)'
+|     |-FloatingLiteral 0x7f8cb7031db0 <<built-in>:120:21> 'double' 1.797693e+308
+|     `-BinaryOperator 0x7f8cb7031ed8 <col:21, c_files/pr70117.c:15:56> 'double' '/'
+|       |-BinaryOperator 0x7f8cb7031e50 <<built-in>:120:21, c_files/pr70117.c:15:34> 'double' '/'
+|       | |-FloatingLiteral 0x7f8cb7031dd0 <<built-in>:120:21> 'double' 1.797693e+308
+|       | `-CStyleCastExpr 0x7f8cb7031e28 <c_files/pr70117.c:15:26, col:34> 'double' <IntegralToFloating>
+|       |   `-IntegerLiteral 0x7f8cb7031df0 <col:34> 'unsigned long' 134217728
+|       `-CStyleCastExpr 0x7f8cb7031eb0 <col:48, col:56> 'double' <IntegralToFloating>
+|         `-IntegerLiteral 0x7f8cb7031e78 <col:56> 'unsigned long' 134217728
+|-VarDecl 0x7f8cb7032048 <line:17:1, col:30> col:17 used min_denorm 'volatile double' cinit
+| `-FloatingLiteral 0x7f8cb70320a8 <col:30> 'double' 4.940656e-324
+|-VarDecl 0x7f8cb70320e0 <line:18:1, col:26> col:17 used ld_low 'volatile double' cinit
+| `-FloatingLiteral 0x7f8cb7032140 <col:26> 'double' 2.004168e-292
+|-VarDecl 0x7f8cb7032178 <line:19:1, col:28> col:17 used dinf 'volatile double' cinit
+| `-BinaryOperator 0x7f8cb7032218 <col:24, col:28> 'double' '/'
+|   |-FloatingLiteral 0x7f8cb70321d8 <col:24> 'double' 1.000000e+00
+|   `-FloatingLiteral 0x7f8cb70321f8 <col:28> 'double' 0.000000e+00
+|-VarDecl 0x7f8cb7032258 <line:20:1, col:28> col:17 used dnan 'volatile double' cinit
+| `-BinaryOperator 0x7f8cb70322f8 <col:24, col:28> 'double' '/'
+|   |-FloatingLiteral 0x7f8cb70322b8 <col:24> 'double' 0.000000e+00
+|   `-FloatingLiteral 0x7f8cb70322d8 <col:28> 'double' 0.000000e+00
+|-FunctionDecl 0x7f8cb70323e8 <line:22:1, line:92:1> line:23:1 main 'int (void)'
+| `-CompoundStmt 0x7f8cb7035118 <line:24:1, line:92:1>
+|   |-DeclStmt 0x7f8cb7032520 <line:25:3, col:17>
+|   | `-VarDecl 0x7f8cb70324c0 <col:3, col:15> col:15 used ld 'long double'
+|   |-BinaryOperator 0x7f8cb70325d8 <line:27:3, col:20> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb7032538 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-ImplicitCastExpr 0x7f8cb70325c0 <col:8, col:20> 'long double' <LValueToRValue>
+|   |   `-MemberExpr 0x7f8cb7032588 <col:8, col:20> 'volatile long double' lvalue .ld 0x7f8cb7031c20
+|   |     `-DeclRefExpr 0x7f8cb7032560 <col:8> 'volatile union gl_long_double_union':'volatile union gl_long_double_union' lvalue Var 0x7f8cb7031d10 'gl_LDBL_MAX' 'volatile union gl_long_double_union':'volatile union gl_long_double_union'
+|   |-IfStmt 0x7f8cb7032998 <line:28:3, line:29:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8cb70327a0 <line:28:7, col:27> 'int'
+|   | | |-ImplicitCastExpr 0x7f8cb7032788 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8cb7032708 <col:7> 'int ()' Function 0x7f8cb7032670 '__builtin_isinfl' 'int ()'
+|   | | `-ImplicitCastExpr 0x7f8cb70327d0 <col:25> 'long double' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8cb7032730 <col:25> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb7032970 <line:29:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb7032958 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb7032900 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb7016a98 <line:30:3, col:21> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb70329d0 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-UnaryOperator 0x7f8cb7016a78 <col:8, col:21> 'long double' prefix '-'
+|   |   `-ImplicitCastExpr 0x7f8cb7016a60 <col:9, col:21> 'long double' <LValueToRValue>
+|   |     `-MemberExpr 0x7f8cb7016a28 <col:9, col:21> 'volatile long double' lvalue .ld 0x7f8cb7031c20
+|   |       `-DeclRefExpr 0x7f8cb7016a00 <col:9> 'volatile union gl_long_double_union':'volatile union gl_long_double_union' lvalue Var 0x7f8cb7031d10 'gl_LDBL_MAX' 'volatile union gl_long_double_union':'volatile union gl_long_double_union'
+|   |-IfStmt 0x7f8cb7016bd8 <line:31:3, line:32:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8cb7016b28 <line:31:7, col:27> 'int'
+|   | | |-ImplicitCastExpr 0x7f8cb7016b10 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8cb7016ac0 <col:7> 'int ()' Function 0x7f8cb7032670 '__builtin_isinfl' 'int ()'
+|   | | `-ImplicitCastExpr 0x7f8cb7016b58 <col:25> 'long double' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8cb7016ae8 <col:25> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb7016bb0 <line:32:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb7016b98 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb7016b70 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb7016cb0 <line:34:3, col:20> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb7016c10 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-ImplicitCastExpr 0x7f8cb7016c98 <col:8, col:20> 'long double' <LValueToRValue>
+|   |   `-MemberExpr 0x7f8cb7016c60 <col:8, col:20> 'volatile long double' lvalue .ld 0x7f8cb7031c20
+|   |     `-DeclRefExpr 0x7f8cb7016c38 <col:8> 'volatile union gl_long_double_union':'volatile union gl_long_double_union' lvalue Var 0x7f8cb7031d10 'gl_LDBL_MAX' 'volatile union gl_long_double_union':'volatile union gl_long_double_union'
+|   |-IfStmt 0x7f8cb7016f00 <line:35:3, line:36:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8cb7016e78 <line:35:7, col:30> 'int' prefix '!'
+|   | | `-CallExpr 0x7f8cb7016e30 <col:8, col:30> 'int'
+|   | |   |-ImplicitCastExpr 0x7f8cb7016e18 <col:8> 'int (*)()' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7f8cb7016dc8 <col:8> '<builtin fn type>' Function 0x7f8cb7016cd8 '__builtin_isfinite' 'int ()'
+|   | |   `-ImplicitCastExpr 0x7f8cb7016e60 <col:28> 'long double' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8cb7016df0 <col:28> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb7016ed8 <line:36:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb7016ec0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb7016e98 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb7016ff8 <line:37:3, col:21> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb7016f38 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-UnaryOperator 0x7f8cb7016fd8 <col:8, col:21> 'long double' prefix '-'
+|   |   `-ImplicitCastExpr 0x7f8cb7016fc0 <col:9, col:21> 'long double' <LValueToRValue>
+|   |     `-MemberExpr 0x7f8cb7016f88 <col:9, col:21> 'volatile long double' lvalue .ld 0x7f8cb7031c20
+|   |       `-DeclRefExpr 0x7f8cb7016f60 <col:9> 'volatile union gl_long_double_union':'volatile union gl_long_double_union' lvalue Var 0x7f8cb7031d10 'gl_LDBL_MAX' 'volatile union gl_long_double_union':'volatile union gl_long_double_union'
+|   |-IfStmt 0x7f8cb7017158 <line:38:3, line:39:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8cb70170d0 <line:38:7, col:30> 'int' prefix '!'
+|   | | `-CallExpr 0x7f8cb7017088 <col:8, col:30> 'int'
+|   | |   |-ImplicitCastExpr 0x7f8cb7017070 <col:8> 'int (*)()' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7f8cb7017020 <col:8> '<builtin fn type>' Function 0x7f8cb7016cd8 '__builtin_isfinite' 'int ()'
+|   | |   `-ImplicitCastExpr 0x7f8cb70170b8 <col:28> 'long double' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8cb7017048 <col:28> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb7017130 <line:39:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb7017118 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb70170f0 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb7017210 <line:41:3, col:8> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb7017190 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-ImplicitCastExpr 0x7f8cb70171f8 <col:8> 'long double' <FloatingCast>
+|   |   `-ImplicitCastExpr 0x7f8cb70171e0 <col:8> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8cb70171b8 <col:8> 'volatile double' lvalue Var 0x7f8cb70320e0 'ld_low' 'volatile double'
+|   |-IfStmt 0x7f8cb7017460 <line:42:3, line:43:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8cb70173d8 <line:42:7, col:30> 'int' prefix '!'
+|   | | `-CallExpr 0x7f8cb7017390 <col:8, col:30> 'int'
+|   | |   |-ImplicitCastExpr 0x7f8cb7017378 <col:8> 'int (*)()' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7f8cb7017328 <col:8> '<builtin fn type>' Function 0x7f8cb7017238 '__builtin_isnormal' 'int ()'
+|   | |   `-ImplicitCastExpr 0x7f8cb70173c0 <col:28> 'long double' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8cb7017350 <col:28> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb7017438 <line:43:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb7017420 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb70173f8 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb7017538 <line:44:3, col:9> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb7017498 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-ImplicitCastExpr 0x7f8cb7017520 <col:8, col:9> 'long double' <FloatingCast>
+|   |   `-UnaryOperator 0x7f8cb7017500 <col:8, col:9> 'double' prefix '-'
+|   |     `-ImplicitCastExpr 0x7f8cb70174e8 <col:9> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f8cb70174c0 <col:9> 'volatile double' lvalue Var 0x7f8cb70320e0 'ld_low' 'volatile double'
+|   |-IfStmt 0x7f8cb7017698 <line:45:3, line:46:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8cb7017610 <line:45:7, col:30> 'int' prefix '!'
+|   | | `-CallExpr 0x7f8cb70175c8 <col:8, col:30> 'int'
+|   | |   |-ImplicitCastExpr 0x7f8cb70175b0 <col:8> 'int (*)()' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7f8cb7017560 <col:8> '<builtin fn type>' Function 0x7f8cb7017238 '__builtin_isnormal' 'int ()'
+|   | |   `-ImplicitCastExpr 0x7f8cb70175f8 <col:28> 'long double' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8cb7017588 <col:28> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb7017670 <line:46:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb7017658 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb7017630 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb7017770 <line:48:3, col:9> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb70176d0 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-ImplicitCastExpr 0x7f8cb7017758 <col:8, col:9> 'long double' <FloatingCast>
+|   |   `-UnaryOperator 0x7f8cb7017738 <col:8, col:9> 'double' prefix '-'
+|   |     `-ImplicitCastExpr 0x7f8cb7017720 <col:9> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f8cb70176f8 <col:9> 'volatile double' lvalue Var 0x7f8cb7032048 'min_denorm' 'volatile double'
+|   |-CompoundAssignOperator 0x7f8cb7017818 <line:49:3, col:9> 'long double' '+=' ComputeLHSTy='long double' ComputeResultTy='long double'
+|   | |-DeclRefExpr 0x7f8cb7017798 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-ImplicitCastExpr 0x7f8cb7017800 <col:9> 'long double' <FloatingCast>
+|   |   `-ImplicitCastExpr 0x7f8cb70177e8 <col:9> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8cb70177c0 <col:9> 'volatile double' lvalue Var 0x7f8cb70320e0 'ld_low' 'volatile double'
+|   |-IfStmt 0x7f8cb7017968 <line:50:3, line:51:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8cb70178b8 <line:50:7, col:29> 'int'
+|   | | |-ImplicitCastExpr 0x7f8cb70178a0 <col:7> 'int (*)()' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7f8cb7017850 <col:7> '<builtin fn type>' Function 0x7f8cb7017238 '__builtin_isnormal' 'int ()'
+|   | | `-ImplicitCastExpr 0x7f8cb70178e8 <col:27> 'long double' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8cb7017878 <col:27> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb7017940 <line:51:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb7017928 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb7017900 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb7033a30 <line:52:3, col:8> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb70179a0 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-ImplicitCastExpr 0x7f8cb7033a18 <col:8> 'long double' <FloatingCast>
+|   |   `-ImplicitCastExpr 0x7f8cb7033a00 <col:8> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8cb70179c8 <col:8> 'volatile double' lvalue Var 0x7f8cb7032048 'min_denorm' 'volatile double'
+|   |-CompoundAssignOperator 0x7f8cb7033ad8 <line:53:3, col:9> 'long double' '-=' ComputeLHSTy='long double' ComputeResultTy='long double'
+|   | |-DeclRefExpr 0x7f8cb7033a58 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-ImplicitCastExpr 0x7f8cb7033ac0 <col:9> 'long double' <FloatingCast>
+|   |   `-ImplicitCastExpr 0x7f8cb7033aa8 <col:9> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8cb7033a80 <col:9> 'volatile double' lvalue Var 0x7f8cb70320e0 'ld_low' 'volatile double'
+|   |-IfStmt 0x7f8cb7033c28 <line:54:3, line:55:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8cb7033b78 <line:54:7, col:29> 'int'
+|   | | |-ImplicitCastExpr 0x7f8cb7033b60 <col:7> 'int (*)()' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7f8cb7033b10 <col:7> '<builtin fn type>' Function 0x7f8cb7017238 '__builtin_isnormal' 'int ()'
+|   | | `-ImplicitCastExpr 0x7f8cb7033ba8 <col:27> 'long double' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8cb7033b38 <col:27> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb7033c00 <line:55:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb7033be8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb7033bc0 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb7033cc0 <line:57:3, col:8> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb7033c60 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-ImplicitCastExpr 0x7f8cb7033ca8 <col:8> 'long double' <FloatingCast>
+|   |   `-FloatingLiteral 0x7f8cb7033c88 <col:8> 'double' 0.000000e+00
+|   |-IfStmt 0x7f8cb7033e00 <line:58:3, line:59:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8cb7033d50 <line:58:7, col:29> 'int'
+|   | | |-ImplicitCastExpr 0x7f8cb7033d38 <col:7> 'int (*)()' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7f8cb7033ce8 <col:7> '<builtin fn type>' Function 0x7f8cb7017238 '__builtin_isnormal' 'int ()'
+|   | | `-ImplicitCastExpr 0x7f8cb7033d80 <col:27> 'long double' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8cb7033d10 <col:27> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb7033dd8 <line:59:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb7033dc0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb7033d98 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb7033eb8 <line:60:3, col:9> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb7033e38 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-ImplicitCastExpr 0x7f8cb7033ea0 <col:8, col:9> 'long double' <FloatingCast>
+|   |   `-UnaryOperator 0x7f8cb7033e80 <col:8, col:9> 'double' prefix '-'
+|   |     `-FloatingLiteral 0x7f8cb7033e60 <col:9> 'double' 0.000000e+00
+|   |-IfStmt 0x7f8cb7033ff8 <line:61:3, line:62:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8cb7033f48 <line:61:7, col:29> 'int'
+|   | | |-ImplicitCastExpr 0x7f8cb7033f30 <col:7> 'int (*)()' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7f8cb7033ee0 <col:7> '<builtin fn type>' Function 0x7f8cb7017238 '__builtin_isnormal' 'int ()'
+|   | | `-ImplicitCastExpr 0x7f8cb7033f78 <col:27> 'long double' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8cb7033f08 <col:27> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb7033fd0 <line:62:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb7033fb8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb7033f90 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb7034088 <line:64:3, <built-in>:134:22> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb7034030 <c_files/pr70117.c:64:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-FloatingLiteral 0x7f8cb7034058 <<built-in>:134:22> 'long double' INF
+|   |-IfStmt 0x7f8cb70341e8 <c_files/pr70117.c:65:3, line:66:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8cb7034160 <line:65:7, col:30> 'int' prefix '!'
+|   | | `-CallExpr 0x7f8cb7034118 <col:8, col:30> 'int'
+|   | |   |-ImplicitCastExpr 0x7f8cb7034100 <col:8> 'int (*)()' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7f8cb70340b0 <col:8> '<builtin fn type>' Function 0x7f8cb7017238 '__builtin_isnormal' 'int ()'
+|   | |   `-ImplicitCastExpr 0x7f8cb7034148 <col:28> 'long double' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8cb70340d8 <col:28> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb70341c0 <line:66:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb70341a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb7034180 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb7034298 <line:67:3, <built-in>:134:22> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb7034220 <c_files/pr70117.c:67:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-UnaryOperator 0x7f8cb7034278 <col:8, <built-in>:134:22> 'long double' prefix '-'
+|   |   `-FloatingLiteral 0x7f8cb7034248 <col:22> 'long double' INF
+|   |-IfStmt 0x7f8cb70343f8 <c_files/pr70117.c:68:3, line:69:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8cb7034370 <line:68:7, col:30> 'int' prefix '!'
+|   | | `-CallExpr 0x7f8cb7034328 <col:8, col:30> 'int'
+|   | |   |-ImplicitCastExpr 0x7f8cb7034310 <col:8> 'int (*)()' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7f8cb70342c0 <col:8> '<builtin fn type>' Function 0x7f8cb7017238 '__builtin_isnormal' 'int ()'
+|   | |   `-ImplicitCastExpr 0x7f8cb7034358 <col:28> 'long double' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8cb70342e8 <col:28> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb70343d0 <line:69:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb70343b8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb7034390 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb70344d0 <line:71:3, col:20> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb7034430 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-ImplicitCastExpr 0x7f8cb70344b8 <col:8, col:20> 'long double' <LValueToRValue>
+|   |   `-MemberExpr 0x7f8cb7034480 <col:8, col:20> 'volatile long double' lvalue .ld 0x7f8cb7031c20
+|   |     `-DeclRefExpr 0x7f8cb7034458 <col:8> 'volatile union gl_long_double_union':'volatile union gl_long_double_union' lvalue Var 0x7f8cb7031d10 'gl_LDBL_MAX' 'volatile union gl_long_double_union':'volatile union gl_long_double_union'
+|   |-IfStmt 0x7f8cb7034630 <line:72:3, line:73:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8cb70345a8 <line:72:7, col:30> 'int' prefix '!'
+|   | | `-CallExpr 0x7f8cb7034560 <col:8, col:30> 'int'
+|   | |   |-ImplicitCastExpr 0x7f8cb7034548 <col:8> 'int (*)()' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7f8cb70344f8 <col:8> '<builtin fn type>' Function 0x7f8cb7017238 '__builtin_isnormal' 'int ()'
+|   | |   `-ImplicitCastExpr 0x7f8cb7034590 <col:28> 'long double' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8cb7034520 <col:28> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb7034608 <line:73:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb70345f0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb70345c8 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb7034728 <line:74:3, col:21> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb7034668 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-UnaryOperator 0x7f8cb7034708 <col:8, col:21> 'long double' prefix '-'
+|   |   `-ImplicitCastExpr 0x7f8cb70346f0 <col:9, col:21> 'long double' <LValueToRValue>
+|   |     `-MemberExpr 0x7f8cb70346b8 <col:9, col:21> 'volatile long double' lvalue .ld 0x7f8cb7031c20
+|   |       `-DeclRefExpr 0x7f8cb7034690 <col:9> 'volatile union gl_long_double_union':'volatile union gl_long_double_union' lvalue Var 0x7f8cb7031d10 'gl_LDBL_MAX' 'volatile union gl_long_double_union':'volatile union gl_long_double_union'
+|   |-IfStmt 0x7f8cb7034888 <line:75:3, line:76:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8cb7034800 <line:75:7, col:30> 'int' prefix '!'
+|   | | `-CallExpr 0x7f8cb70347b8 <col:8, col:30> 'int'
+|   | |   |-ImplicitCastExpr 0x7f8cb70347a0 <col:8> 'int (*)()' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7f8cb7034750 <col:8> '<builtin fn type>' Function 0x7f8cb7017238 '__builtin_isnormal' 'int ()'
+|   | |   `-ImplicitCastExpr 0x7f8cb70347e8 <col:28> 'long double' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8cb7034778 <col:28> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb7034860 <line:76:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb7034848 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb7034820 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb7034940 <line:78:3, col:8> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb70348c0 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-ImplicitCastExpr 0x7f8cb7034928 <col:8> 'long double' <FloatingCast>
+|   |   `-ImplicitCastExpr 0x7f8cb7034910 <col:8> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8cb70348e8 <col:8> 'volatile double' lvalue Var 0x7f8cb7032178 'dinf' 'volatile double'
+|   |-IfStmt 0x7f8cb7034a80 <line:79:3, line:80:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8cb70349d0 <line:79:7, col:29> 'int'
+|   | | |-ImplicitCastExpr 0x7f8cb70349b8 <col:7> 'int (*)()' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7f8cb7034968 <col:7> '<builtin fn type>' Function 0x7f8cb7017238 '__builtin_isnormal' 'int ()'
+|   | | `-ImplicitCastExpr 0x7f8cb7034a00 <col:27> 'long double' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8cb7034990 <col:27> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb7034a58 <line:80:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb7034a40 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb7034a18 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb7034b58 <line:81:3, col:9> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb7034ab8 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-ImplicitCastExpr 0x7f8cb7034b40 <col:8, col:9> 'long double' <FloatingCast>
+|   |   `-UnaryOperator 0x7f8cb7034b20 <col:8, col:9> 'double' prefix '-'
+|   |     `-ImplicitCastExpr 0x7f8cb7034b08 <col:9> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f8cb7034ae0 <col:9> 'volatile double' lvalue Var 0x7f8cb7032178 'dinf' 'volatile double'
+|   |-IfStmt 0x7f8cb7034c98 <line:82:3, line:83:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8cb7034be8 <line:82:7, col:29> 'int'
+|   | | |-ImplicitCastExpr 0x7f8cb7034bd0 <col:7> 'int (*)()' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7f8cb7034b80 <col:7> '<builtin fn type>' Function 0x7f8cb7017238 '__builtin_isnormal' 'int ()'
+|   | | `-ImplicitCastExpr 0x7f8cb7034c18 <col:27> 'long double' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8cb7034ba8 <col:27> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb7034c70 <line:83:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb7034c58 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb7034c30 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb7034d50 <line:85:3, col:8> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb7034cd0 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-ImplicitCastExpr 0x7f8cb7034d38 <col:8> 'long double' <FloatingCast>
+|   |   `-ImplicitCastExpr 0x7f8cb7034d20 <col:8> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8cb7034cf8 <col:8> 'volatile double' lvalue Var 0x7f8cb7032258 'dnan' 'volatile double'
+|   |-IfStmt 0x7f8cb7034e90 <line:86:3, line:87:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8cb7034de0 <line:86:7, col:29> 'int'
+|   | | |-ImplicitCastExpr 0x7f8cb7034dc8 <col:7> 'int (*)()' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7f8cb7034d78 <col:7> '<builtin fn type>' Function 0x7f8cb7017238 '__builtin_isnormal' 'int ()'
+|   | | `-ImplicitCastExpr 0x7f8cb7034e10 <col:27> 'long double' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8cb7034da0 <col:27> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb7034e68 <line:87:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb7034e50 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb7034e28 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8cb7034f68 <line:88:3, col:9> 'long double' '='
+|   | |-DeclRefExpr 0x7f8cb7034ec8 <col:3> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | `-ImplicitCastExpr 0x7f8cb7034f50 <col:8, col:9> 'long double' <FloatingCast>
+|   |   `-UnaryOperator 0x7f8cb7034f30 <col:8, col:9> 'double' prefix '-'
+|   |     `-ImplicitCastExpr 0x7f8cb7034f18 <col:9> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f8cb7034ef0 <col:9> 'volatile double' lvalue Var 0x7f8cb7032258 'dnan' 'volatile double'
+|   |-IfStmt 0x7f8cb70350a8 <line:89:3, line:90:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8cb7034ff8 <line:89:7, col:29> 'int'
+|   | | |-ImplicitCastExpr 0x7f8cb7034fe0 <col:7> 'int (*)()' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7f8cb7034f90 <col:7> '<builtin fn type>' Function 0x7f8cb7017238 '__builtin_isnormal' 'int ()'
+|   | | `-ImplicitCastExpr 0x7f8cb7035028 <col:27> 'long double' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8cb7034fb8 <col:27> 'long double' lvalue Var 0x7f8cb70324c0 'ld' 'long double'
+|   | |-CallExpr 0x7f8cb7035080 <line:90:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8cb7035068 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8cb7035040 <col:5> '<builtin fn type>' Function 0x7f8cb7032820 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8cb7035100 <line:91:3, col:10>
+|     `-IntegerLiteral 0x7f8cb70350e0 <col:10> 'int' 0
+|-FunctionDecl 0x7f8cb7032670 <<invalid sloc>> line:28:7 implicit used __builtin_isinfl 'int ()'
+|-FunctionDecl 0x7f8cb7032820 <line:29:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7f8cb70328b8 <col:5> Implicit
+|-FunctionDecl 0x7f8cb7016cd8 <line:35:8> col:8 implicit used __builtin_isfinite 'int ()' extern
+| |-NoThrowAttr 0x7f8cb7016d70 <col:8> Implicit
+| `-ConstAttr 0x7f8cb7016db8 <col:8> Implicit
+`-FunctionDecl 0x7f8cb7017238 <line:42:8> col:8 implicit used __builtin_isnormal 'int ()' extern
+  |-NoThrowAttr 0x7f8cb70172d0 <col:8> Implicit
+  `-ConstAttr 0x7f8cb7017318 <col:8> Implicit

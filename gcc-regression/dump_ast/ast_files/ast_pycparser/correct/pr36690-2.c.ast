@@ -1,0 +1,69 @@
+FileAST: 
+  Decl: cnt, [], [], []
+    TypeDecl: cnt, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: +=
+        ID: cnt
+        ID: i
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        UnaryOp: !
+          ID: i
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            Constant: int, 0
+        Compound: 
+          Decl: varz, [], ['static'], []
+            TypeDecl: varz, []
+              IdentifierType: ['int']
+            Constant: int, 5
+          Goto: f1
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          Constant: int, 1
+      Label: f1
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            Constant: int, 2
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Constant: int, 0
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0

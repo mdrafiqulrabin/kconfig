@@ -1,0 +1,23 @@
+FileAST: 
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: tmp, [], [], []
+        ArrayDecl: []
+          TypeDecl: tmp, []
+            IdentifierType: ['char']
+          Constant: int, 128
+      FuncCall: 
+        ID: __builtin_snprintf
+        ExprList: 
+          ID: tmp
+          UnaryOp: sizeof
+            ID: tmp
+          Constant: string, "The Base Band sends this value as a response to a request for IMSI detach sent over the control channel uplink (see section 7.6.1)."

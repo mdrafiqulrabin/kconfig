@@ -1,0 +1,24 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['long', 'long']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          ID: i
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['long', 'long']
+            UnaryOp: !
+              ID: j
+          Constant: int, 0

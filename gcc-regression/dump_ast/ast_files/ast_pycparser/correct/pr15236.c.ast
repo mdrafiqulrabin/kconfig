@@ -1,0 +1,9 @@
+FileAST: 
+  Typedef: OMX_ERRORTYPE, [], ['typedef']
+    TypeDecl: OMX_ERRORTYPE, []
+      Enum: OMX_ERRORTYPE
+        EnumeratorList: 
+          Enumerator: OMX_ErrorNone
+            Constant: int, 0
+          Enumerator: OMX_ErrorInsufficientResources
+            Constant: int, 0x80001000

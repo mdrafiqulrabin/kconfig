@@ -1,0 +1,7 @@
+FileAST: 
+  FuncDef: 
+    Decl: debug_hook, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: debug_hook, []
+          IdentifierType: ['int']
+    Compound: 

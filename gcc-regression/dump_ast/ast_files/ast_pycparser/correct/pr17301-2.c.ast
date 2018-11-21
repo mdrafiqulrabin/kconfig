@@ -1,0 +1,15 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: format, [], [], []
+            PtrDecl: []
+              TypeDecl: format, []
+                IdentifierType: ['char']
+          EllipsisParam: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_va_start

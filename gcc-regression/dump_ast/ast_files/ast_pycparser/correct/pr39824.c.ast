@@ -1,0 +1,117 @@
+FileAST: 
+  Decl: internalEndianMagic, ['const'], ['static'], []
+    TypeDecl: internalEndianMagic, ['const']
+      IdentifierType: ['double']
+    Constant: float, 7.949928895127363e-275
+  Decl: ieee_754_mantissa_mask, ['const'], ['static'], []
+    ArrayDecl: []
+      TypeDecl: ieee_754_mantissa_mask, ['const']
+        IdentifierType: ['unsigned', 'char']
+    InitList: 
+      Constant: int, 0x00
+      Constant: int, 0x0F
+      Constant: int, 0xFF
+      Constant: int, 0xFF
+      Constant: int, 0xFF
+      Constant: int, 0xFF
+      Constant: int, 0xFF
+      Constant: int, 0xFF
+  FuncDef: 
+    Decl: trio_isnan, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: number, [], [], []
+            TypeDecl: number, []
+              IdentifierType: ['double']
+        TypeDecl: trio_isnan, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: has_mantissa, [], [], []
+        TypeDecl: has_mantissa, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: current, [], [], []
+        TypeDecl: current, []
+          IdentifierType: ['unsigned', 'char']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'int']
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['double']
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: current
+            ArrayRef: 
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned', 'char']
+                UnaryOp: &
+                  ID: number
+              ArrayRef: 
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned', 'char']
+                  UnaryOp: &
+                    ID: internalEndianMagic
+                BinaryOp: -
+                  Constant: int, 7
+                  ID: i
+          Assignment: |=
+            ID: has_mantissa
+            BinaryOp: &
+              ID: current
+              ArrayRef: 
+                ID: ieee_754_mantissa_mask
+                ID: i
+      Return: 
+        ID: has_mantissa
+  FuncDef: 
+    Decl: xmlXPathEqualNodeSetFloat, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: nodeNr, [], [], []
+            TypeDecl: nodeNr, []
+              IdentifierType: ['int']
+          Decl: v, [], [], []
+            TypeDecl: v, []
+              IdentifierType: ['double']
+        TypeDecl: xmlXPathEqualNodeSetFloat, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: nodeNr
+        UnaryOp: p++
+          ID: i
+        If: 
+          UnaryOp: !
+            FuncCall: 
+              ID: trio_isnan
+              ExprList: 
+                ID: v
+          Break: 

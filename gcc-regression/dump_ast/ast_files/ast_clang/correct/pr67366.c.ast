@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7f8cc70264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8cc7026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8cc7026740 '__int128'
+|-TypedefDecl 0x7f8cc7026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8cc7026760 'unsigned __int128'
+|-TypedefDecl 0x7f8cc7026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8cc7026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8cc7026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8cc7026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8cc7026dc0 'char *'
+|   `-BuiltinType 0x7f8cc7026560 'char'
+|-TypedefDecl 0x7f8cc70270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8cc7027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8cc7026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8cc7026e58 '__va_list_tag'
+|-TypedefDecl 0x7f8cc7027138 <c_files/pr67366.c:5:1, col:22> col:22 referenced u32 'unsigned int'
+| `-BuiltinType 0x7f8cc7026660 'unsigned int'
+|-FunctionDecl 0x7f8cc7825b00 <line:6:1, line:12:1> line:7:1 read32 'u32 (const void *)'
+| |-ParmVarDecl 0x7f8cc7825a00 <col:9, col:21> col:21 used ptr 'const void *'
+| `-CompoundStmt 0x7f8cc7826148 <line:8:1, line:12:1>
+|   |-DeclStmt 0x7f8cc7825c50 <line:9:3, col:8>
+|   | `-VarDecl 0x7f8cc7825bf0 <col:3, col:7> col:7 used v 'u32':'unsigned int'
+|   |-CallExpr 0x7f8cc7826080 <line:10:3, col:39> 'void *'
+|   | |-ImplicitCastExpr 0x7f8cc7826068 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f8cc7825ed0 <col:3> '<builtin fn type>' Function 0x7f8cc7825cb8 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f8cc78260c0 <col:21, col:22> 'void *' <BitCast>
+|   | | `-UnaryOperator 0x7f8cc7825f78 <col:21, col:22> 'u32 *' prefix '&'
+|   | |   `-DeclRefExpr 0x7f8cc7825ef8 <col:22> 'u32':'unsigned int' lvalue Var 0x7f8cc7825bf0 'v' 'u32':'unsigned int'
+|   | |-ImplicitCastExpr 0x7f8cc78260d8 <col:25> 'const void *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f8cc7825f98 <col:25> 'const void *' lvalue ParmVar 0x7f8cc7825a00 'ptr' 'const void *'
+|   | `-UnaryExprOrTypeTraitExpr 0x7f8cc7826008 <col:30, col:38> 'unsigned long' sizeof
+|   |   `-ParenExpr 0x7f8cc7825fe8 <col:36, col:38> 'u32':'unsigned int' lvalue
+|   |     `-DeclRefExpr 0x7f8cc7825fc0 <col:37> 'u32':'unsigned int' lvalue Var 0x7f8cc7825bf0 'v' 'u32':'unsigned int'
+|   `-ReturnStmt 0x7f8cc7826130 <line:11:3, col:10>
+|     `-ImplicitCastExpr 0x7f8cc7826118 <col:10> 'u32':'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8cc78260f0 <col:10> 'u32':'unsigned int' lvalue Var 0x7f8cc7825bf0 'v' 'u32':'unsigned int'
+`-FunctionDecl 0x7f8cc7825cb8 <line:10:3> col:3 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7f8cc7825d50 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7f8cc7825db0 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7f8cc7825e10 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7f8cc7825e88 <col:3> Implicit

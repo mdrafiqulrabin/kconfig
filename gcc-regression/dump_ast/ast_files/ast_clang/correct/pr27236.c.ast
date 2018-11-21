@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7fa7220264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa722026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa722026740 '__int128'
+|-TypedefDecl 0x7fa722026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa722026760 'unsigned __int128'
+|-TypedefDecl 0x7fa722026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa722026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa722026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa722026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa722026dc0 'char *'
+|   `-BuiltinType 0x7fa722026560 'char'
+|-TypedefDecl 0x7fa7220270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa722027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa722026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa722026e58 '__va_list_tag'
+|-FunctionDecl 0x7fa722825a30 <c_files/pr27236.c:4:1, line:7:1> line:4:19 used inline_read 'int (volatile int *)' static inline
+| |-ParmVarDecl 0x7fa722027160 <col:31, col:45> col:45 used mem 'volatile int *'
+| `-CompoundStmt 0x7fa722825ba0 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7fa722825b88 <line:6:9, col:17>
+|     `-ImplicitCastExpr 0x7fa722825b70 <col:16, col:17> 'int' <LValueToRValue>
+|       `-UnaryOperator 0x7fa722825b50 <col:16, col:17> 'volatile int' lvalue prefix '*'
+|         `-ImplicitCastExpr 0x7fa722825b38 <col:17> 'volatile int *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fa722825b10 <col:17> 'volatile int *' lvalue ParmVar 0x7fa722027160 'mem' 'volatile int *'
+|-FunctionDecl 0x7fa722825c68 <line:8:1, line:12:1> line:9:5 used foo_read 'int (volatile int *)'
+| |-ParmVarDecl 0x7fa722825bd8 <col:14, col:28> col:28 used mem 'volatile int *'
+| |-CompoundStmt 0x7fa722825e40 <line:10:1, line:12:1>
+| | `-ReturnStmt 0x7fa722825e28 <line:11:9, col:31>
+| |   `-CallExpr 0x7fa722825de0 <col:16, col:31> 'int'
+| |     |-ImplicitCastExpr 0x7fa722825dc8 <col:16> 'int (*)(volatile int *)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fa722825d50 <col:16> 'int (volatile int *)' Function 0x7fa722825a30 'inline_read' 'int (volatile int *)'
+| |     `-ImplicitCastExpr 0x7fa722825e10 <col:28> 'volatile int *' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fa722825d78 <col:28> 'volatile int *' lvalue ParmVar 0x7fa722825bd8 'mem' 'volatile int *'
+| `-NoInlineAttr 0x7fa722825d08 <line:8:17>
+`-FunctionDecl 0x7fa722825f48 <line:13:1, line:17:1> line:13:14 foo 'unsigned int (volatile int *)'
+  |-ParmVarDecl 0x7fa722825e78 <col:18, col:32> col:32 used mem 'volatile int *'
+  `-CompoundStmt 0x7fa722826178 <line:14:1, line:17:1>
+    |-CallExpr 0x7fa722826050 <line:15:9, col:21> 'int'
+    | |-ImplicitCastExpr 0x7fa722826038 <col:9> 'int (*)(volatile int *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa722825fe8 <col:9> 'int (volatile int *)' Function 0x7fa722825c68 'foo_read' 'int (volatile int *)'
+    | `-ImplicitCastExpr 0x7fa722826080 <col:18> 'volatile int *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fa722826010 <col:18> 'volatile int *' lvalue ParmVar 0x7fa722825e78 'mem' 'volatile int *'
+    `-ReturnStmt 0x7fa722826160 <line:16:9, col:28>
+      `-ImplicitCastExpr 0x7fa722826148 <col:16, col:28> 'unsigned int' <IntegralCast>
+        `-CallExpr 0x7fa722826100 <col:16, col:28> 'int'
+          |-ImplicitCastExpr 0x7fa7228260e8 <col:16> 'int (*)(volatile int *)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fa722826098 <col:16> 'int (volatile int *)' Function 0x7fa722825c68 'foo_read' 'int (volatile int *)'
+          `-ImplicitCastExpr 0x7fa722826130 <col:25> 'volatile int *' <LValueToRValue>
+            `-DeclRefExpr 0x7fa7228260c0 <col:25> 'volatile int *' lvalue ParmVar 0x7fa722825e78 'mem' 'volatile int *'

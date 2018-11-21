@@ -1,0 +1,34 @@
+c_files/pr44337.c:9:3: warning: array index 1 is past the end of the array (which contains 1 element) [-Warray-bounds]
+  v[1] = 0;
+  ^ ~
+c_files/pr44337.c:8:3: note: array 'v' declared here
+  _Complex float v[1];
+  ^
+1 warning generated.
+TranslationUnitDecl 0x7ffd7e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffd7e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffd7e026740 '__int128'
+|-TypedefDecl 0x7ffd7e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffd7e026760 'unsigned __int128'
+|-TypedefDecl 0x7ffd7e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffd7e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffd7e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffd7e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffd7e026dc0 'char *'
+|   `-BuiltinType 0x7ffd7e026560 'char'
+|-TypedefDecl 0x7ffd7e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffd7e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffd7e026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffd7e026e58 '__va_list_tag'
+`-FunctionDecl 0x7ffd7e077400 <c_files/pr44337.c:5:1, line:10:1> line:6:1 foo 'void (void)'
+  `-CompoundStmt 0x7ffd7e077700 <line:7:1, line:10:1>
+    |-DeclStmt 0x7ffd7e0775b8 <line:8:3, col:22>
+    | `-VarDecl 0x7ffd7e077558 <col:3, col:21> col:18 used v '_Complex float [1]'
+    `-BinaryOperator 0x7ffd7e0776d8 <line:9:3, col:10> '_Complex float' '='
+      |-ArraySubscriptExpr 0x7ffd7e077660 <col:3, col:6> '_Complex float' lvalue
+      | |-ImplicitCastExpr 0x7ffd7e077648 <col:3> '_Complex float *' <ArrayToPointerDecay>
+      | | `-DeclRefExpr 0x7ffd7e0775d0 <col:3> '_Complex float [1]' lvalue Var 0x7ffd7e077558 'v' '_Complex float [1]'
+      | `-IntegerLiteral 0x7ffd7e0775f8 <col:5> 'int' 1
+      `-ImplicitCastExpr 0x7ffd7e0776c0 <col:10> '_Complex float' <FloatingRealToComplex>
+        `-ImplicitCastExpr 0x7ffd7e0776a8 <col:10> 'float' <IntegralToFloating>
+          `-IntegerLiteral 0x7ffd7e077688 <col:10> 'int' 0

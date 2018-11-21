@@ -1,0 +1,111 @@
+FileAST: 
+  Decl: ce, [], [], []
+    ArrayDecl: []
+      TypeDecl: ce, []
+        IdentifierType: ['int']
+      Constant: int, 2
+  Decl: o5, [], [], []
+    TypeDecl: o5, []
+      IdentifierType: ['int']
+  Decl: p7, [], [], []
+    TypeDecl: p7, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: j1, [], [], []
+        TypeDecl: j1, []
+          IdentifierType: ['int']
+      Assignment: =
+        ArrayRef: 
+          ID: ce
+          Constant: int, 0
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: j1
+          Constant: int, 0
+        BinaryOp: <
+          ID: j1
+          Constant: int, 2
+        UnaryOp: ++
+          ID: j1
+        For: 
+          Assignment: =
+            ID: o5
+            Constant: int, 1
+          BinaryOp: >=
+            ID: o5
+            Constant: int, 0
+          UnaryOp: --
+            ID: o5
+          Assignment: +=
+            ID: p7
+            ArrayRef: 
+              ID: ce
+              ID: o5
+      Return: 
+        Constant: int, 0
+  Decl: du, [], [], []
+    TypeDecl: du, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: u7, [], [], []
+        ArrayDecl: []
+          TypeDecl: u7, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      Decl: ar, [], [], []
+        TypeDecl: ar, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: ar
+          Constant: int, 0
+        BinaryOp: <
+          ID: ar
+          Constant: int, 2
+        UnaryOp: ++
+          ID: ar
+        Compound: 
+          Decl: xo, [], [], []
+            TypeDecl: xo, []
+              IdentifierType: ['int']
+          For: 
+            Assignment: =
+              ID: xo
+              Constant: int, 0
+            BinaryOp: <
+              ID: xo
+              Constant: int, 2
+            UnaryOp: ++
+              ID: xo
+            Compound: 
+              Assignment: +=
+                ID: du
+                ArrayRef: 
+                  ID: u7
+                  ID: ar
+              Assignment: =
+                ArrayRef: 
+                  ID: u7
+                  Constant: int, 0
+                Constant: int, 0
+      Return: 
+        Constant: int, 0

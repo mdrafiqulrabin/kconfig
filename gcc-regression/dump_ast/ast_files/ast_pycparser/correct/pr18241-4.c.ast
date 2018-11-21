@@ -1,0 +1,76 @@
+FileAST: 
+  Decl: abort, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i1243, [], [], []
+            TypeDecl: i1243, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        ArrayDecl: []
+          TypeDecl: i, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      Decl: i1, [], [], []
+        PtrDecl: []
+          TypeDecl: i1, []
+            IdentifierType: ['int']
+        ID: i
+      Assignment: =
+        ArrayRef: 
+          ID: i
+          Constant: int, 0
+        Constant: int, 1
+      Decl: i2, ['volatile'], [], []
+        PtrDecl: []
+          TypeDecl: i2, ['volatile']
+            IdentifierType: ['int']
+        ID: i1
+      Assignment: =
+        ArrayRef: 
+          ID: i2
+          Constant: int, 1
+        Constant: int, 1
+      Assignment: =
+        ID: i1243
+        Constant: int, 0
+      Return: 
+        BinaryOp: +
+          ArrayRef: 
+            ID: i2
+            Constant: int, 1
+          ArrayRef: 
+            ID: i2
+            Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: f
+            ExprList: 
+              Constant: int, 100
+          Constant: int, 2
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

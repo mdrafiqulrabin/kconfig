@@ -1,0 +1,18 @@
+FileAST: 
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Pragma: omp parallel
+      Compound: 
+        Decl: j, [], [], []
+          TypeDecl: j, []
+            IdentifierType: ['int']
+        Assignment: =
+          ID: i
+          ID: j

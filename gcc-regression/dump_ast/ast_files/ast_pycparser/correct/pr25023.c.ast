@@ -1,0 +1,16 @@
+FileAST: 
+  Decl: v, [], ['extern'], []
+    TypeDecl: v, []
+      IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        ID: v

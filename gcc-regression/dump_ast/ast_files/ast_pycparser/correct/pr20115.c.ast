@@ -1,0 +1,104 @@
+FileAST: 
+  Decl: func_pure, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: func_pure, []
+        IdentifierType: ['int']
+  Decl: func_other, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: func_other, []
+        IdentifierType: ['void']
+  Decl: global_int, [], [], []
+    TypeDecl: global_int, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: func_pure, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: func_pure, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ID: global_int
+  FuncDef: 
+    Decl: func_other, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: func_other, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: global_int
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: a
+        FuncCall: 
+          ID: func_pure
+      FuncCall: 
+        ID: func_other
+        ExprList: 
+          ID: a
+      Assignment: =
+        ID: a
+        FuncCall: 
+          ID: func_pure
+      Return: 
+        ID: a
+  Decl: abort, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: global_int
+        Constant: int, 10
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: f
+          Constant: int, 11
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

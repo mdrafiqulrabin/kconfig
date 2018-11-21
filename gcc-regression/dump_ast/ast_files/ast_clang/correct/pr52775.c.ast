@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fc2d08264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc2d0826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc2d0826740 '__int128'
+|-TypedefDecl 0x7fc2d0826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc2d0826760 'unsigned __int128'
+|-TypedefDecl 0x7fc2d0826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc2d0826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc2d0826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc2d0826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc2d0826dc0 'char *'
+|   `-BuiltinType 0x7fc2d0826560 'char'
+|-TypedefDecl 0x7fc2d08270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc2d0827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc2d0826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc2d0826e58 '__va_list_tag'
+|-FunctionDecl 0x7fc2d1025a30 <c_files/pr52775.c:7:1, line:11:1> line:8:1 int_to_double 'double (int *)'
+| |-ParmVarDecl 0x7fc2d0827160 <col:16, col:21> col:21 used p 'int *'
+| `-CompoundStmt 0x7fc2d1025be0 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fc2d1025bc8 <line:10:3, col:19>
+|     `-CStyleCastExpr 0x7fc2d1025ba0 <col:10, col:19> 'double' <IntegralToFloating>
+|       `-ImplicitCastExpr 0x7fc2d1025b88 <col:18, col:19> 'int' <LValueToRValue>
+|         `-UnaryOperator 0x7fc2d1025b50 <col:18, col:19> 'int' lvalue prefix '*'
+|           `-ImplicitCastExpr 0x7fc2d1025b38 <col:19> 'int *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fc2d1025b10 <col:19> 'int *' lvalue ParmVar 0x7fc2d0827160 'p' 'int *'
+`-FunctionDecl 0x7fc2d1025d08 <line:13:1, line:17:1> line:14:1 long_long_to_double 'double (long long *)'
+  |-ParmVarDecl 0x7fc2d1025c40 <col:22, col:33> col:33 used p 'long long *'
+  `-CompoundStmt 0x7fc2d1025e78 <line:15:1, line:17:1>
+    `-ReturnStmt 0x7fc2d1025e60 <line:16:3, col:19>
+      `-CStyleCastExpr 0x7fc2d1025e38 <col:10, col:19> 'double' <IntegralToFloating>
+        `-ImplicitCastExpr 0x7fc2d1025e20 <col:18, col:19> 'long long' <LValueToRValue>
+          `-UnaryOperator 0x7fc2d1025de8 <col:18, col:19> 'long long' lvalue prefix '*'
+            `-ImplicitCastExpr 0x7fc2d1025dd0 <col:19> 'long long *' <LValueToRValue>
+              `-DeclRefExpr 0x7fc2d1025da8 <col:19> 'long long *' lvalue ParmVar 0x7fc2d1025c40 'p' 'long long *'

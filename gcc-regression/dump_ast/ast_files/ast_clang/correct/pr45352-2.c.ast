@@ -1,0 +1,390 @@
+TranslationUnitDecl 0x7fbe770264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbe77026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbe77026740 '__int128'
+|-TypedefDecl 0x7fbe77026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbe77026760 'unsigned __int128'
+|-TypedefDecl 0x7fbe77026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbe77026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbe77026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbe77026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbe77026dc0 'char *'
+|   `-BuiltinType 0x7fbe77026560 'char'
+|-TypedefDecl 0x7fbe770270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbe77027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbe77026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbe77026e58 '__va_list_tag'
+|-TypedefDecl 0x7fbe77027130 <c_files/pr45352-2.c:4:1, col:14> col:14 referenced uint8_t 'char'
+| `-BuiltinType 0x7fbe77026560 'char'
+|-TypedefDecl 0x7fbe770271a0 <line:5:1, col:13> col:13 referenced uint32_t 'int'
+| `-BuiltinType 0x7fbe770265c0 'int'
+|-TypedefDecl 0x7fbe77825a18 <line:6:1, col:13> col:13 vo_frame_t 'int'
+| `-BuiltinType 0x7fbe770265c0 'int'
+|-TypedefDecl 0x7fbe77825a88 <line:7:15, col:37> col:37 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fbe77026680 'unsigned long'
+|-RecordDecl 0x7fbe77825ae0 <line:9:1, line:12:18> line:9:8 struct vo_frame_s definition
+| |-FieldDecl 0x7fbe77825c68 <line:11:5, col:19> col:13 referenced base 'uint8_t [3]'
+| `-FieldDecl 0x7fbe77825d30 <line:12:3, col:16> col:7 referenced pitches 'int [3]'
+|-RecordDecl 0x7fbe77825d78 <line:13:9, line:18:1> line:13:9 struct definition
+| `-FieldDecl 0x7fbe77825f78 <line:15:1, line:17:10> line:16:7 referenced proc_macro_block 'void (*)(void)'
+|-TypedefDecl 0x7fbe77826010 <line:13:1, line:19:1> col:1 referenced xine_xvmc_t 'struct xine_xvmc_t':'xine_xvmc_t'
+| `-ElaboratedType 0x7fbe77825fc0 'struct xine_xvmc_t' sugar
+|   `-RecordType 0x7fbe77825e00 'xine_xvmc_t'
+|     `-Record 0x7fbe77825d78 ''
+|-RecordDecl 0x7fbe77826080 <line:20:9, line:24:1> line:20:9 struct definition
+| |-FieldDecl 0x7fbe77826218 <line:22:3, col:19> col:11 referenced ref 'uint8_t [2][3]'
+| `-FieldDecl 0x7fbe77826278 <line:23:1, col:5> col:5 pmv 'int'
+|-TypedefDecl 0x7fbe77826310 <line:20:1, line:25:1> col:1 referenced motion_t 'struct motion_t':'motion_t'
+| `-ElaboratedType 0x7fbe778262c0 'struct motion_t' sugar
+|   `-RecordType 0x7fbe77826110 'motion_t'
+|     `-Record 0x7fbe77826080 ''
+|-RecordDecl 0x7fbe77826380 <line:26:9, line:39:34> line:26:9 struct definition
+| |-FieldDecl 0x7fbe77826460 <line:28:3, col:12> col:12 referenced bitstream_buf 'uint32_t':'int'
+| |-FieldDecl 0x7fbe778264c0 <line:29:3, col:7> col:7 referenced bitstream_bits 'int'
+| |-FieldDecl 0x7fbe77826548 <line:30:5, col:15> col:15 referenced bitstream_ptr 'uint8_t *'
+| |-FieldDecl 0x7fbe778265d0 <line:31:5, col:19> col:13 referenced dest 'uint8_t [3]'
+| |-FieldDecl 0x7fbe77826660 <line:32:3, col:16> col:7 referenced pitches 'int [3]'
+| |-FieldDecl 0x7fbe778266c0 <line:33:3, col:7> col:7 referenced offset 'int'
+| |-FieldDecl 0x7fbe77826740 <line:34:5, col:14> col:14 b_motion 'motion_t':'motion_t'
+| |-FieldDecl 0x7fbe77826798 <line:35:5, col:14> col:14 referenced f_motion 'motion_t':'motion_t'
+| |-FieldDecl 0x7fbe778267f8 <line:36:3, col:7> col:7 referenced v_offset 'int'
+| |-FieldDecl 0x7fbe77826858 <line:37:3, col:7> col:7 referenced coded_picture_width 'int'
+| |-FieldDecl 0x7fbe778268b8 <line:38:3, col:7> col:7 referenced picture_structure 'int'
+| `-FieldDecl 0x7fbe778269b0 <line:39:1, col:20> col:20 referenced current_frame 'struct vo_frame_s *'
+|-TypedefDecl 0x7fbe77826a50 <line:26:1, line:40:1> col:1 referenced picture_t 'struct picture_t':'picture_t'
+| `-ElaboratedType 0x7fbe77826a00 'struct picture_t' sugar
+|   `-RecordType 0x7fbe77826410 'picture_t'
+|     `-Record 0x7fbe77826380 ''
+|-RecordDecl 0x7fbe77826ac0 <line:41:9, line:43:26> line:41:9 struct definition
+| `-FieldDecl 0x7fbe77826b88 <line:43:1, col:5> col:5 referenced xvmc_last_slice_code 'int'
+|-TypedefDecl 0x7fbe77826c20 <line:41:1, line:44:1> col:1 referenced mpeg2dec_accel_t 'struct mpeg2dec_accel_t':'mpeg2dec_accel_t'
+| `-ElaboratedType 0x7fbe77826bd0 'struct mpeg2dec_accel_t' sugar
+|   `-RecordType 0x7fbe77826b50 'mpeg2dec_accel_t'
+|     `-Record 0x7fbe77826ac0 ''
+|-FunctionDecl 0x7fbe77826ea8 <line:45:1, line:49:1> line:45:12 used bitstream_init 'int (picture_t *, void *)' static
+| |-ParmVarDecl 0x7fbe77826d18 <col:28, col:40> col:40 used picture 'picture_t *'
+| |-ParmVarDecl 0x7fbe77826d90 <col:49, col:55> col:55 used start 'void *'
+| `-CompoundStmt 0x7fbe77827180 <line:46:1, line:49:1>
+|   |-BinaryOperator 0x7fbe77827060 <line:47:3, col:28> 'uint8_t *' '='
+|   | |-MemberExpr 0x7fbe77826fd0 <col:3, col:12> 'uint8_t *' lvalue ->bitstream_ptr 0x7fbe77826548
+|   | | `-ImplicitCastExpr 0x7fbe77826fb8 <col:3> 'picture_t *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fbe77826f90 <col:3> 'picture_t *' lvalue ParmVar 0x7fbe77826d18 'picture' 'picture_t *'
+|   | `-ImplicitCastExpr 0x7fbe77827048 <col:28> 'uint8_t *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fbe77827030 <col:28> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fbe77827008 <col:28> 'void *' lvalue ParmVar 0x7fbe77826d90 'start' 'void *'
+|   `-ReturnStmt 0x7fbe77827168 <line:48:3, col:25>
+|     `-CStyleCastExpr 0x7fbe77827140 <col:10, col:25> 'int' <IntegralCast>
+|       `-CStyleCastExpr 0x7fbe77827100 <col:16, col:25> 'size_t':'unsigned long' <PointerToIntegral>
+|         `-ImplicitCastExpr 0x7fbe778270e8 <col:25> 'void *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fbe778270b0 <col:25> 'void *' lvalue ParmVar 0x7fbe77826d90 'start' 'void *'
+|-FunctionDecl 0x7fbe77827340 <line:50:1, line:90:1> line:50:13 used slice_xvmc_init 'void (picture_t *, int)' static
+| |-ParmVarDecl 0x7fbe778271b8 <col:30, col:42> col:42 used picture 'picture_t *'
+| |-ParmVarDecl 0x7fbe77827230 <col:51, col:55> col:55 code 'int'
+| `-CompoundStmt 0x7fbe7782a608 <line:51:1, line:90:1>
+|   |-DeclStmt 0x7fbe77827460 <line:52:3, col:13>
+|   | `-VarDecl 0x7fbe77827400 <col:3, col:7> col:7 used offset 'int'
+|   |-DeclStmt 0x7fbe77827500 <line:53:3, col:45>
+|   | `-VarDecl 0x7fbe778274a0 <col:3, col:22> col:22 used forward_reference_frame 'struct vo_frame_s *'
+|   |-BinaryOperator 0x7fbe77827618 <line:54:3, col:42> 'int' '='
+|   | |-DeclRefExpr 0x7fbe77827518 <col:3> 'int' lvalue Var 0x7fbe77827400 'offset' 'int'
+|   | `-BinaryOperator 0x7fbe778275f0 <col:12, col:42> 'int' '=='
+|   |   |-ImplicitCastExpr 0x7fbe778275d8 <col:12, col:21> 'int' <LValueToRValue>
+|   |   | `-MemberExpr 0x7fbe77827580 <col:12, col:21> 'int' lvalue ->picture_structure 0x7fbe778268b8
+|   |   |   `-ImplicitCastExpr 0x7fbe77827568 <col:12> 'picture_t *' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7fbe77827540 <col:12> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   |   `-IntegerLiteral 0x7fbe778275b8 <col:42> 'int' 2
+|   |-BinaryOperator 0x7fbe77827888 <line:55:3, col:58> 'int' '='
+|   | |-ArraySubscriptExpr 0x7fbe77827720 <col:3, col:21> 'int' lvalue
+|   | | |-ImplicitCastExpr 0x7fbe77827708 <col:3, col:12> 'int *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7fbe77827680 <col:3, col:12> 'int [3]' lvalue ->pitches 0x7fbe77826660
+|   | | |   `-ImplicitCastExpr 0x7fbe77827668 <col:3> 'picture_t *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fbe77827640 <col:3> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   | | `-IntegerLiteral 0x7fbe778276b8 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fbe77827870 <col:25, col:58> 'int' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7fbe77827848 <col:25, col:58> 'int' lvalue
+|   |     |-ImplicitCastExpr 0x7fbe77827830 <col:25, col:49> 'int *' <ArrayToPointerDecay>
+|   |     | `-MemberExpr 0x7fbe778277d8 <col:25, col:49> 'int [3]' lvalue ->pitches 0x7fbe77825d30
+|   |     |   `-ImplicitCastExpr 0x7fbe778277c0 <col:25, col:34> 'struct vo_frame_s *' <LValueToRValue>
+|   |     |     `-MemberExpr 0x7fbe77827788 <col:25, col:34> 'struct vo_frame_s *' lvalue ->current_frame 0x7fbe778269b0
+|   |     |       `-ImplicitCastExpr 0x7fbe77827770 <col:25> 'picture_t *' <LValueToRValue>
+|   |     |         `-DeclRefExpr 0x7fbe77827748 <col:25> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   |     `-IntegerLiteral 0x7fbe77827810 <col:57> 'int' 0
+|   |-BinaryOperator 0x7fbe77828ac8 <line:56:3, col:58> 'int' '='
+|   | |-ArraySubscriptExpr 0x7fbe77827960 <col:3, col:21> 'int' lvalue
+|   | | |-ImplicitCastExpr 0x7fbe77827948 <col:3, col:12> 'int *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7fbe778278f0 <col:3, col:12> 'int [3]' lvalue ->pitches 0x7fbe77826660
+|   | | |   `-ImplicitCastExpr 0x7fbe778278d8 <col:3> 'picture_t *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fbe778278b0 <col:3> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   | | `-IntegerLiteral 0x7fbe77827928 <col:20> 'int' 1
+|   | `-ImplicitCastExpr 0x7fbe77828ab0 <col:25, col:58> 'int' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7fbe77828a88 <col:25, col:58> 'int' lvalue
+|   |     |-ImplicitCastExpr 0x7fbe77828a70 <col:25, col:49> 'int *' <ArrayToPointerDecay>
+|   |     | `-MemberExpr 0x7fbe77828a18 <col:25, col:49> 'int [3]' lvalue ->pitches 0x7fbe77825d30
+|   |     |   `-ImplicitCastExpr 0x7fbe77828a00 <col:25, col:34> 'struct vo_frame_s *' <LValueToRValue>
+|   |     |     `-MemberExpr 0x7fbe778279c8 <col:25, col:34> 'struct vo_frame_s *' lvalue ->current_frame 0x7fbe778269b0
+|   |     |       `-ImplicitCastExpr 0x7fbe778279b0 <col:25> 'picture_t *' <LValueToRValue>
+|   |     |         `-DeclRefExpr 0x7fbe77827988 <col:25> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   |     `-IntegerLiteral 0x7fbe77828a50 <col:57> 'int' 1
+|   |-IfStmt 0x7fbe77829038 <line:57:3, line:61:92>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fbe77828b18 <line:57:7> 'picture_t *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fbe77828af0 <col:7> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   | |-BinaryOperator 0x7fbe77829010 <line:58:5, line:61:92> 'uint8_t':'char' '='
+|   | | |-ArraySubscriptExpr 0x7fbe77828cd0 <line:58:5, line:60:9> 'uint8_t':'char' lvalue
+|   | | | |-ImplicitCastExpr 0x7fbe77828cb8 <line:58:5, line:59:9> 'uint8_t *' <ArrayToPointerDecay>
+|   | | | | `-ArraySubscriptExpr 0x7fbe77828c70 <line:58:5, line:59:9> 'uint8_t [3]' lvalue
+|   | | | |   |-ImplicitCastExpr 0x7fbe77828c58 <line:58:5, col:23> 'uint8_t (*)[3]' <ArrayToPointerDecay>
+|   | | | |   | `-MemberExpr 0x7fbe77828ba8 <col:5, col:23> 'uint8_t [2][3]' lvalue .ref 0x7fbe77826218
+|   | | | |   |   `-MemberExpr 0x7fbe77828b70 <col:5, col:14> 'motion_t':'motion_t' lvalue ->f_motion 0x7fbe77826798
+|   | | | |   |     `-ImplicitCastExpr 0x7fbe77828b58 <col:5> 'picture_t *' <LValueToRValue>
+|   | | | |   |       `-DeclRefExpr 0x7fbe77828b30 <col:5> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   | | | |   `-IntegerLiteral 0x7fbe77828be0 <line:59:8> 'int' 0
+|   | | | `-IntegerLiteral 0x7fbe77828c98 <line:60:8> 'int' 0
+|   | | `-CStyleCastExpr 0x7fbe77828fe8 <line:61:9, col:92> 'char' <IntegralCast>
+|   | |   `-CStyleCastExpr 0x7fbe77828fb0 <col:16, col:92> 'size_t':'unsigned long' <PointerToIntegral>
+|   | |     `-ParenExpr 0x7fbe77828f90 <col:25, col:92> 'uint8_t *'
+|   | |       `-BinaryOperator 0x7fbe77828f28 <col:26, col:91> 'uint8_t *' '+'
+|   | |         |-ImplicitCastExpr 0x7fbe77828f10 <col:26, col:51> 'uint8_t *' <ArrayToPointerDecay>
+|   | |         | `-MemberExpr 0x7fbe77828d38 <col:26, col:51> 'uint8_t [3]' lvalue ->base 0x7fbe77825c68
+|   | |         |   `-ImplicitCastExpr 0x7fbe77828d20 <col:26> 'struct vo_frame_s *' <LValueToRValue>
+|   | |         |     `-DeclRefExpr 0x7fbe77828cf8 <col:26> 'struct vo_frame_s *' lvalue Var 0x7fbe778274a0 'forward_reference_frame' 'struct vo_frame_s *'
+|   | |         `-ParenExpr 0x7fbe77828ef0 <col:58, col:91> 'int'
+|   | |           `-ConditionalOperator 0x7fbe77828ec0 <col:59, col:90> 'int'
+|   | |             |-ImplicitCastExpr 0x7fbe77828e90 <col:59> 'int' <LValueToRValue>
+|   | |             | `-DeclRefExpr 0x7fbe77828d70 <col:59> 'int' lvalue Var 0x7fbe77827400 'offset' 'int'
+|   | |             |-ImplicitCastExpr 0x7fbe77828ea8 <col:68, col:86> 'int' <LValueToRValue>
+|   | |             | `-ArraySubscriptExpr 0x7fbe77828e48 <col:68, col:86> 'int' lvalue
+|   | |             |   |-ImplicitCastExpr 0x7fbe77828e30 <col:68, col:77> 'int *' <ArrayToPointerDecay>
+|   | |             |   | `-MemberExpr 0x7fbe77828dd8 <col:68, col:77> 'int [3]' lvalue ->pitches 0x7fbe77826660
+|   | |             |   |   `-ImplicitCastExpr 0x7fbe77828dc0 <col:68> 'picture_t *' <LValueToRValue>
+|   | |             |   |     `-DeclRefExpr 0x7fbe77828d98 <col:68> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   | |             |   `-IntegerLiteral 0x7fbe77828e10 <col:85> 'int' 0
+|   | |             `-IntegerLiteral 0x7fbe77828e70 <col:90> 'int' 0
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fbe77829258 <line:62:3, col:40> 'uint8_t':'char' '='
+|   | |-ArraySubscriptExpr 0x7fbe778291b8 <col:3, col:29> 'uint8_t':'char' lvalue
+|   | | |-ImplicitCastExpr 0x7fbe778291a0 <col:3, col:26> 'uint8_t *' <ArrayToPointerDecay>
+|   | | | `-ArraySubscriptExpr 0x7fbe77829158 <col:3, col:26> 'uint8_t [3]' lvalue
+|   | | |   |-ImplicitCastExpr 0x7fbe77829140 <col:3, col:21> 'uint8_t (*)[3]' <ArrayToPointerDecay>
+|   | | |   | `-MemberExpr 0x7fbe778290e8 <col:3, col:21> 'uint8_t [2][3]' lvalue .ref 0x7fbe77826218
+|   | | |   |   `-MemberExpr 0x7fbe778290b0 <col:3, col:12> 'motion_t':'motion_t' lvalue ->f_motion 0x7fbe77826798
+|   | | |   |     `-ImplicitCastExpr 0x7fbe77829098 <col:3> 'picture_t *' <LValueToRValue>
+|   | | |   |       `-DeclRefExpr 0x7fbe77829070 <col:3> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   | | |   `-IntegerLiteral 0x7fbe77829120 <col:25> 'int' 0
+|   | | `-IntegerLiteral 0x7fbe77829180 <col:28> 'int' 1
+|   | `-ImplicitCastExpr 0x7fbe77829240 <col:33, col:40> 'uint8_t':'char' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7fbe77829228 <col:33, col:40> 'int' <LValueToRValue>
+|   |     `-ParenExpr 0x7fbe77829208 <col:33, col:40> 'int' lvalue
+|   |       `-DeclRefExpr 0x7fbe778291e0 <col:34> 'int' lvalue Var 0x7fbe77827400 'offset' 'int'
+|   |-IfStmt 0x7fbe77829580 <line:63:3, line:64:55>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fbe778292f8 <line:63:7, col:16> 'int' <LValueToRValue>
+|   | | `-MemberExpr 0x7fbe778292c0 <col:7, col:16> 'int' lvalue ->picture_structure 0x7fbe778268b8
+|   | |   `-ImplicitCastExpr 0x7fbe778292a8 <col:7> 'picture_t *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fbe77829280 <col:7> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   | |-CompoundAssignOperator 0x7fbe77829548 <line:64:7, col:55> 'int' '<<=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | | |-ArraySubscriptExpr 0x7fbe778293c0 <col:7, col:25> 'int' lvalue
+|   | | | |-ImplicitCastExpr 0x7fbe778293a8 <col:7, col:16> 'int *' <ArrayToPointerDecay>
+|   | | | | `-MemberExpr 0x7fbe77829350 <col:7, col:16> 'int [3]' lvalue ->pitches 0x7fbe77826660
+|   | | | |   `-ImplicitCastExpr 0x7fbe77829338 <col:7> 'picture_t *' <LValueToRValue>
+|   | | | |     `-DeclRefExpr 0x7fbe77829310 <col:7> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   | | | `-IntegerLiteral 0x7fbe77829388 <col:24> 'int' 0
+|   | | `-CompoundAssignOperator 0x7fbe778294f8 <col:31, col:55> 'int' '<<=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |   |-ArraySubscriptExpr 0x7fbe77829498 <col:31, col:49> 'int' lvalue
+|   | |   | |-ImplicitCastExpr 0x7fbe77829480 <col:31, col:40> 'int *' <ArrayToPointerDecay>
+|   | |   | | `-MemberExpr 0x7fbe77829428 <col:31, col:40> 'int [3]' lvalue ->pitches 0x7fbe77826660
+|   | |   | |   `-ImplicitCastExpr 0x7fbe77829410 <col:31> 'picture_t *' <LValueToRValue>
+|   | |   | |     `-DeclRefExpr 0x7fbe778293e8 <col:31> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   | |   | `-IntegerLiteral 0x7fbe77829460 <col:48> 'int' 1
+|   | |   `-IntegerLiteral 0x7fbe778294c0 <col:55> 'int' 1
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fbe77829600 <line:65:3, col:12> 'int' '='
+|   | |-DeclRefExpr 0x7fbe778295b8 <col:3> 'int' lvalue Var 0x7fbe77827400 'offset' 'int'
+|   | `-IntegerLiteral 0x7fbe778295e0 <col:12> 'int' 0
+|   |-WhileStmt 0x7fbe77829c08 <line:66:3, line:78:5>
+|   | |-<<<NULL>>>
+|   | |-IntegerLiteral 0x7fbe77829628 <line:66:10> 'int' 1
+|   | `-CompoundStmt 0x7fbe77829be0 <line:67:5, line:78:5>
+|   |   |-IfStmt 0x7fbe77829728 <line:68:7, line:69:4>
+|   |   | |-<<<NULL>>>
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7fbe778296f8 <line:68:11, col:37> 'int' '>='
+|   |   | | |-ImplicitCastExpr 0x7fbe778296e0 <col:11, col:20> 'uint32_t':'int' <LValueToRValue>
+|   |   | | | `-MemberExpr 0x7fbe77829688 <col:11, col:20> 'uint32_t':'int' lvalue ->bitstream_buf 0x7fbe77826460
+|   |   | | |   `-ImplicitCastExpr 0x7fbe77829670 <col:11> 'picture_t *' <LValueToRValue>
+|   |   | | |     `-DeclRefExpr 0x7fbe77829648 <col:11> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   |   | | `-IntegerLiteral 0x7fbe778296c0 <col:37> 'int' 134217728
+|   |   | |-BreakStmt 0x7fbe77829720 <line:69:4>
+|   |   | `-<<<NULL>>>
+|   |   `-SwitchStmt 0x7fbe77829838 <line:70:7, line:77:2>
+|   |     |-<<<NULL>>>
+|   |     |-<<<NULL>>>
+|   |     |-BinaryOperator 0x7fbe77829810 <line:70:15, col:41> 'uint32_t':'int' '>>'
+|   |     | |-ImplicitCastExpr 0x7fbe778297f8 <col:15, col:24> 'uint32_t':'int' <LValueToRValue>
+|   |     | | `-MemberExpr 0x7fbe778297a0 <col:15, col:24> 'uint32_t':'int' lvalue ->bitstream_buf 0x7fbe77826460
+|   |     | |   `-ImplicitCastExpr 0x7fbe77829788 <col:15> 'picture_t *' <LValueToRValue>
+|   |     | |     `-DeclRefExpr 0x7fbe77829760 <col:15> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   |     | `-IntegerLiteral 0x7fbe778297d8 <col:41> 'int' 12
+|   |     `-CompoundStmt 0x7fbe77829bb8 <line:71:2, line:77:2>
+|   |       |-CaseStmt 0x7fbe77829888 <line:72:2, line:73:14>
+|   |       | |-IntegerLiteral 0x7fbe77829868 <line:72:7> 'int' 8
+|   |       | |-<<<NULL>>>
+|   |       | `-CompoundAssignOperator 0x7fbe77829908 <line:73:4, col:14> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   |       |   |-DeclRefExpr 0x7fbe778298c0 <col:4> 'int' lvalue Var 0x7fbe77827400 'offset' 'int'
+|   |       |   `-IntegerLiteral 0x7fbe778298e8 <col:14> 'int' 33
+|   |       `-CompoundAssignOperator 0x7fbe77829b80 <line:74:3, line:76:43> 'uint32_t':'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   |         |-MemberExpr 0x7fbe77829980 <line:74:3, col:12> 'uint32_t':'int' lvalue ->bitstream_buf 0x7fbe77826460
+|   |         | `-ImplicitCastExpr 0x7fbe77829968 <col:3> 'picture_t *' <LValueToRValue>
+|   |         |   `-DeclRefExpr 0x7fbe77829940 <col:3> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   |         `-BinaryOperator 0x7fbe77829b58 <line:76:5, col:43> 'int' '<<'
+|   |           |-ImplicitCastExpr 0x7fbe77829b28 <col:5, col:29> 'int' <IntegralCast>
+|   |           | `-ImplicitCastExpr 0x7fbe77829b10 <col:5, col:29> 'uint8_t':'char' <LValueToRValue>
+|   |           |   `-ArraySubscriptExpr 0x7fbe77829a70 <col:5, col:29> 'uint8_t':'char' lvalue
+|   |           |     |-ImplicitCastExpr 0x7fbe77829a58 <col:5, col:14> 'uint8_t *' <LValueToRValue>
+|   |           |     | `-MemberExpr 0x7fbe77829a00 <col:5, col:14> 'uint8_t *' lvalue ->bitstream_ptr 0x7fbe77826548
+|   |           |     |   `-ImplicitCastExpr 0x7fbe778299e0 <col:5> 'picture_t *' <LValueToRValue>
+|   |           |     |     `-DeclRefExpr 0x7fbe778299b8 <col:5> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   |           |     `-IntegerLiteral 0x7fbe77829a38 <col:28> 'int' 1
+|   |           `-ImplicitCastExpr 0x7fbe77829b40 <col:34, col:43> 'int' <LValueToRValue>
+|   |             `-MemberExpr 0x7fbe77829ad8 <col:34, col:43> 'int' lvalue ->bitstream_bits 0x7fbe778264c0
+|   |               `-ImplicitCastExpr 0x7fbe77829ac0 <col:34> 'picture_t *' <LValueToRValue>
+|   |                 `-DeclRefExpr 0x7fbe77829a98 <col:34> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   |-BinaryOperator 0x7fbe77829d00 <line:79:3, col:28> 'int' '='
+|   | |-MemberExpr 0x7fbe77829c68 <col:3, col:12> 'int' lvalue ->offset 0x7fbe778266c0
+|   | | `-ImplicitCastExpr 0x7fbe77829c50 <col:3> 'picture_t *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fbe77829c28 <col:3> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|   | `-ImplicitCastExpr 0x7fbe77829ce8 <col:21, col:28> 'int' <LValueToRValue>
+|   |   `-ParenExpr 0x7fbe77829cc8 <col:21, col:28> 'int' lvalue
+|   |     `-DeclRefExpr 0x7fbe77829ca0 <col:22> 'int' lvalue Var 0x7fbe77827400 'offset' 'int'
+|   `-WhileStmt 0x7fbe7782a5e8 <line:80:3, line:89:5>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fbe77829e90 <line:80:10, col:60> 'int' '>='
+|     | |-BinaryOperator 0x7fbe77829e48 <col:10, col:37> 'int' '-'
+|     | | |-ImplicitCastExpr 0x7fbe77829e18 <col:10, col:19> 'int' <LValueToRValue>
+|     | | | `-MemberExpr 0x7fbe77829d68 <col:10, col:19> 'int' lvalue ->offset 0x7fbe778266c0
+|     | | |   `-ImplicitCastExpr 0x7fbe77829d50 <col:10> 'picture_t *' <LValueToRValue>
+|     | | |     `-DeclRefExpr 0x7fbe77829d28 <col:10> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|     | | `-ImplicitCastExpr 0x7fbe77829e30 <col:28, col:37> 'int' <LValueToRValue>
+|     | |   `-MemberExpr 0x7fbe77829de0 <col:28, col:37> 'int' lvalue ->coded_picture_width 0x7fbe77826858
+|     | |     `-ImplicitCastExpr 0x7fbe77829dc8 <col:28> 'picture_t *' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7fbe77829da0 <col:28> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|     | `-IntegerLiteral 0x7fbe77829e70 <col:60> 'int' 0
+|     `-CompoundStmt 0x7fbe7782a5b8 <line:81:5, line:89:5>
+|       |-CompoundAssignOperator 0x7fbe77829fc0 <line:82:7, col:35> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+|       | |-MemberExpr 0x7fbe77829ef8 <col:7, col:16> 'int' lvalue ->offset 0x7fbe778266c0
+|       | | `-ImplicitCastExpr 0x7fbe77829ee0 <col:7> 'picture_t *' <LValueToRValue>
+|       | |   `-DeclRefExpr 0x7fbe77829eb8 <col:7> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|       | `-ImplicitCastExpr 0x7fbe77829fa8 <col:26, col:35> 'int' <LValueToRValue>
+|       |   `-MemberExpr 0x7fbe77829f70 <col:26, col:35> 'int' lvalue ->coded_picture_width 0x7fbe77826858
+|       |     `-ImplicitCastExpr 0x7fbe77829f58 <col:26> 'picture_t *' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7fbe77829f30 <col:26> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|       |-IfStmt 0x7fbe7782a4b0 <line:83:7, line:87:2>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-ImplicitCastExpr 0x7fbe7782a070 <line:83:11, col:20> 'struct vo_frame_s *' <LValueToRValue>
+|       | | `-MemberExpr 0x7fbe7782a038 <col:11, col:20> 'struct vo_frame_s *' lvalue ->current_frame 0x7fbe778269b0
+|       | |   `-ImplicitCastExpr 0x7fbe7782a020 <col:11> 'picture_t *' <LValueToRValue>
+|       | |     `-DeclRefExpr 0x7fbe77829ff8 <col:11> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|       | |-CompoundStmt 0x7fbe7782a488 <line:84:2, line:87:2>
+|       | | |-CompoundAssignOperator 0x7fbe7782a250 <line:85:4, col:42> 'uint8_t':'char' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|       | | | |-ArraySubscriptExpr 0x7fbe7782a138 <col:4, col:19> 'uint8_t':'char' lvalue
+|       | | | | |-ImplicitCastExpr 0x7fbe7782a120 <col:4, col:13> 'uint8_t *' <ArrayToPointerDecay>
+|       | | | | | `-MemberExpr 0x7fbe7782a0c8 <col:4, col:13> 'uint8_t [3]' lvalue ->dest 0x7fbe778265d0
+|       | | | | |   `-ImplicitCastExpr 0x7fbe7782a0b0 <col:4> 'picture_t *' <LValueToRValue>
+|       | | | | |     `-DeclRefExpr 0x7fbe7782a088 <col:4> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|       | | | | `-IntegerLiteral 0x7fbe7782a100 <col:18> 'int' 0
+|       | | | `-ImplicitCastExpr 0x7fbe7782a238 <col:24, col:42> 'int' <LValueToRValue>
+|       | | |   `-ArraySubscriptExpr 0x7fbe7782a210 <col:24, col:42> 'int' lvalue
+|       | | |     |-ImplicitCastExpr 0x7fbe7782a1f8 <col:24, col:33> 'int *' <ArrayToPointerDecay>
+|       | | |     | `-MemberExpr 0x7fbe7782a1a0 <col:24, col:33> 'int [3]' lvalue ->pitches 0x7fbe77826660
+|       | | |     |   `-ImplicitCastExpr 0x7fbe7782a188 <col:24> 'picture_t *' <LValueToRValue>
+|       | | |     |     `-DeclRefExpr 0x7fbe7782a160 <col:24> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|       | | |     `-IntegerLiteral 0x7fbe7782a1d8 <col:41> 'int' 0
+|       | | `-CompoundAssignOperator 0x7fbe7782a450 <line:86:4, col:42> 'uint8_t':'char' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|       | |   |-ArraySubscriptExpr 0x7fbe7782a338 <col:4, col:19> 'uint8_t':'char' lvalue
+|       | |   | |-ImplicitCastExpr 0x7fbe7782a320 <col:4, col:13> 'uint8_t *' <ArrayToPointerDecay>
+|       | |   | | `-MemberExpr 0x7fbe7782a2c8 <col:4, col:13> 'uint8_t [3]' lvalue ->dest 0x7fbe778265d0
+|       | |   | |   `-ImplicitCastExpr 0x7fbe7782a2b0 <col:4> 'picture_t *' <LValueToRValue>
+|       | |   | |     `-DeclRefExpr 0x7fbe7782a288 <col:4> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|       | |   | `-IntegerLiteral 0x7fbe7782a300 <col:18> 'int' 1
+|       | |   `-ImplicitCastExpr 0x7fbe7782a438 <col:24, col:42> 'int' <LValueToRValue>
+|       | |     `-ArraySubscriptExpr 0x7fbe7782a410 <col:24, col:42> 'int' lvalue
+|       | |       |-ImplicitCastExpr 0x7fbe7782a3f8 <col:24, col:33> 'int *' <ArrayToPointerDecay>
+|       | |       | `-MemberExpr 0x7fbe7782a3a0 <col:24, col:33> 'int [3]' lvalue ->pitches 0x7fbe77826660
+|       | |       |   `-ImplicitCastExpr 0x7fbe7782a388 <col:24> 'picture_t *' <LValueToRValue>
+|       | |       |     `-DeclRefExpr 0x7fbe7782a360 <col:24> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|       | |       `-IntegerLiteral 0x7fbe7782a3d8 <col:41> 'int' 1
+|       | `-<<<NULL>>>
+|       `-CompoundAssignOperator 0x7fbe7782a580 <line:88:7, col:28> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|         |-MemberExpr 0x7fbe7782a528 <col:7, col:16> 'int' lvalue ->v_offset 0x7fbe778267f8
+|         | `-ImplicitCastExpr 0x7fbe7782a510 <col:7> 'picture_t *' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fbe7782a4e8 <col:7> 'picture_t *' lvalue ParmVar 0x7fbe778271b8 'picture' 'picture_t *'
+|         `-IntegerLiteral 0x7fbe7782a560 <col:28> 'int' 16
+`-FunctionDecl 0x7fbe7782aa48 <line:92:1, line:111:1> line:93:1 mpeg2_xvmc_slice 'void (mpeg2dec_accel_t *, picture_t *, int, uint8_t, int)'
+  |-ParmVarDecl 0x7fbe7782a708 <line:94:4, col:23> col:23 used accel 'mpeg2dec_accel_t *'
+  |-ParmVarDecl 0x7fbe7782a778 <col:30, col:42> col:42 used picture 'picture_t *'
+  |-ParmVarDecl 0x7fbe7782a7f0 <col:51, col:55> col:55 used code 'int'
+  |-ParmVarDecl 0x7fbe7782a860 <col:61, col:69> col:69 used buffer 'uint8_t':'char'
+  |-ParmVarDecl 0x7fbe7782a8d8 <col:76, col:80> col:80 used mba_inc 'int'
+  `-CompoundStmt 0x7fbe7782b430 <line:95:1, line:111:1>
+    |-DeclStmt 0x7fbe7782ae30 <line:96:3, col:99>
+    | `-VarDecl 0x7fbe7782ab98 <col:3, col:98> col:17 used xvmc 'xine_xvmc_t *' cinit
+    |   `-CStyleCastExpr 0x7fbe7782ae08 <col:24, col:98> 'xine_xvmc_t *' <IntegralToPointer>
+    |     `-CStyleCastExpr 0x7fbe7782add0 <col:40, col:98> 'size_t':'unsigned long' <IntegralCast>
+    |       `-CallExpr 0x7fbe7782ad70 <col:49, col:98> 'int'
+    |         |-ImplicitCastExpr 0x7fbe7782ad58 <col:49> 'int (*)(picture_t *, void *)' <FunctionToPointerDecay>
+    |         | `-DeclRefExpr 0x7fbe7782abf8 <col:49> 'int (picture_t *, void *)' Function 0x7fbe77826ea8 'bitstream_init' 'int (picture_t *, void *)'
+    |         |-ImplicitCastExpr 0x7fbe7782ada8 <col:65> 'picture_t *' <LValueToRValue>
+    |         | `-DeclRefExpr 0x7fbe7782ac20 <col:65> 'picture_t *' lvalue ParmVar 0x7fbe7782a778 'picture' 'picture_t *'
+    |         `-CStyleCastExpr 0x7fbe7782acd8 <col:74, col:92> 'void *' <IntegralToPointer>
+    |           `-CStyleCastExpr 0x7fbe7782ac98 <col:83, col:92> 'size_t':'unsigned long' <IntegralCast>
+    |             `-ImplicitCastExpr 0x7fbe7782ac80 <col:92> 'uint8_t':'char' <LValueToRValue>
+    |               `-DeclRefExpr 0x7fbe7782ac48 <col:92> 'uint8_t':'char' lvalue ParmVar 0x7fbe7782a860 'buffer' 'uint8_t':'char'
+    |-CallExpr 0x7fbe7782af30 <line:97:3, col:33> 'void'
+    | |-ImplicitCastExpr 0x7fbe7782af18 <col:3> 'void (*)(picture_t *, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fbe7782ae48 <col:3> 'void (picture_t *, int)' Function 0x7fbe77827340 'slice_xvmc_init' 'void (picture_t *, int)'
+    | |-ImplicitCastExpr 0x7fbe7782af68 <col:20> 'picture_t *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fbe7782ae70 <col:20> 'picture_t *' lvalue ParmVar 0x7fbe7782a778 'picture' 'picture_t *'
+    | `-ImplicitCastExpr 0x7fbe7782af80 <col:29> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fbe7782ae98 <col:29> 'int' lvalue ParmVar 0x7fbe7782a7f0 'code' 'int'
+    `-WhileStmt 0x7fbe7782b410 <line:98:5, line:110:7>
+      |-<<<NULL>>>
+      |-IntegerLiteral 0x7fbe7782af98 <line:98:12> 'int' 1
+      `-CompoundStmt 0x7fbe7782b3e8 <line:99:7, line:110:7>
+        |-IfStmt 0x7fbe7782b000 <line:100:2, line:101:6>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7fbe7782afe0 <line:100:6> 'picture_t *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fbe7782afb8 <col:6> 'picture_t *' lvalue ParmVar 0x7fbe7782a778 'picture' 'picture_t *'
+        | |-BreakStmt 0x7fbe7782aff8 <line:101:6>
+        | `-<<<NULL>>>
+        `-SwitchStmt 0x7fbe7782b0c8 <line:102:2, line:109:4>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7fbe7782b0b0 <line:102:10, col:19> 'uint32_t':'int' <LValueToRValue>
+          | `-MemberExpr 0x7fbe7782b078 <col:10, col:19> 'uint32_t':'int' lvalue ->bitstream_buf 0x7fbe77826460
+          |   `-ImplicitCastExpr 0x7fbe7782b060 <col:10> 'picture_t *' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fbe7782b038 <col:10> 'picture_t *' lvalue ParmVar 0x7fbe7782a778 'picture' 'picture_t *'
+          `-CompoundStmt 0x7fbe7782b3b8 <line:103:4, line:109:4>
+            |-CaseStmt 0x7fbe7782b118 <line:104:4, line:105:47>
+            | |-IntegerLiteral 0x7fbe7782b0f8 <line:104:9> 'int' 8
+            | |-<<<NULL>>>
+            | `-CompoundAssignOperator 0x7fbe7782b258 <line:105:6, col:47> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+            |   |-DeclRefExpr 0x7fbe7782b150 <col:6> 'int' lvalue ParmVar 0x7fbe7782a8d8 'mba_inc' 'int'
+            |   `-BinaryOperator 0x7fbe7782b230 <col:17, col:47> 'int' '='
+            |     |-MemberExpr 0x7fbe7782b1b8 <col:17, col:24> 'int' lvalue ->xvmc_last_slice_code 0x7fbe77826b88
+            |     | `-ImplicitCastExpr 0x7fbe7782b1a0 <col:17> 'mpeg2dec_accel_t *' <LValueToRValue>
+            |     |   `-DeclRefExpr 0x7fbe7782b178 <col:17> 'mpeg2dec_accel_t *' lvalue ParmVar 0x7fbe7782a708 'accel' 'mpeg2dec_accel_t *'
+            |     `-ImplicitCastExpr 0x7fbe7782b218 <col:47> 'int' <LValueToRValue>
+            |       `-DeclRefExpr 0x7fbe7782b1f0 <col:47> 'int' lvalue ParmVar 0x7fbe7782a7f0 'code' 'int'
+            |-CallExpr 0x7fbe7782b320 <line:106:5, col:31> 'void'
+            | `-ImplicitCastExpr 0x7fbe7782b308 <col:5, col:11> 'void (*)(void)' <LValueToRValue>
+            |   `-MemberExpr 0x7fbe7782b2d0 <col:5, col:11> 'void (*)(void)' lvalue ->proc_macro_block 0x7fbe77825f78
+            |     `-ImplicitCastExpr 0x7fbe7782b2b8 <col:5> 'xine_xvmc_t *' <LValueToRValue>
+            |       `-DeclRefExpr 0x7fbe7782b290 <col:5> 'xine_xvmc_t *' lvalue Var 0x7fbe7782ab98 'xvmc' 'xine_xvmc_t *'
+            `-WhileStmt 0x7fbe7782b398 <line:107:6, line:108:8>
+              |-<<<NULL>>>
+              |-ImplicitCastExpr 0x7fbe7782b370 <line:107:13> 'int' <LValueToRValue>
+              | `-DeclRefExpr 0x7fbe7782b348 <col:13> 'int' lvalue ParmVar 0x7fbe7782a8d8 'mba_inc' 'int'
+              `-NullStmt 0x7fbe7782b388 <line:108:8>

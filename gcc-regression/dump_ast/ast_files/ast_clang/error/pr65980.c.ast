@@ -1,0 +1,80 @@
+c_files/pr65980.c:13:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : "m" (v->b) : : l);
+      ^
+1 error generated.
+TranslationUnitDecl 0x7fc7668264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc766826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc766826740 '__int128'
+|-TypedefDecl 0x7fc766826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc766826760 'unsigned __int128'
+|-TypedefDecl 0x7fc766826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc766826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc766826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc766826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc766826dc0 'char *'
+|   `-BuiltinType 0x7fc766826560 'char'
+|-TypedefDecl 0x7fc7668270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc766827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc766826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc766826e58 '__va_list_tag'
+|-RecordDecl 0x7fc766827120 <c_files/pr65980.c:6:9, col:25> col:9 struct definition
+| `-FieldDecl 0x7fc766877400 <col:18, col:22> col:22 b 'int'
+|-TypedefDecl 0x7fc7668774a0 <col:1, col:27> col:27 referenced A 'struct A':'A'
+| `-ElaboratedType 0x7fc766877450 'struct A' sugar
+|   `-RecordType 0x7fc7668271b0 'A'
+|     `-Record 0x7fc766827120 ''
+|-VarDecl 0x7fc766877690 <line:7:1, col:15> col:8 used a 'void (*)(int)'
+|-VarDecl 0x7fc766877748 <line:8:1, col:5> col:5 used b 'int'
+|-FunctionDecl 0x7fc766877948 <line:10:1, line:17:1> line:11:1 used foo 'int (A *)'
+| |-ParmVarDecl 0x7fc766877838 <col:6, col:9> col:9 v 'A *'
+| `-CompoundStmt 0x7fc766877ab8 <line:12:1, line:17:1>
+|   |-ReturnStmt 0x7fc766877a08 <line:14:3, col:10>
+|   | `-IntegerLiteral 0x7fc7668779e8 <col:10> 'int' 0
+|   `-LabelStmt 0x7fc766877aa0 <line:15:1, line:16:10> 'l'
+|     `-ReturnStmt 0x7fc766877a40 <col:3, col:10>
+|       `-IntegerLiteral 0x7fc766877a20 <col:10> 'int' 1
+`-FunctionDecl 0x7fc766877ba8 <line:19:1, line:31:1> line:20:1 bar 'int (void)'
+  `-CompoundStmt 0x7fc766878160 <line:21:1, line:31:1>
+    |-IfStmt 0x7fc766877f18 <line:22:3, line:27:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fc766877c68 <line:22:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fc766877c40 <col:7> 'int' lvalue Var 0x7fc766877748 'b' 'int'
+    | |-CompoundStmt 0x7fc766877ef0 <line:23:5, line:27:5>
+    | | |-IfStmt 0x7fc766877e80 <line:24:7, line:25:6>
+    | | | |-<<<NULL>>>
+    | | | |-<<<NULL>>>
+    | | | |-BinaryOperator 0x7fc766877dc8 <line:24:11, col:22> 'int' '&&'
+    | | | | |-CallExpr 0x7fc766877d40 <col:11, col:17> 'int'
+    | | | | | |-ImplicitCastExpr 0x7fc766877d28 <col:11> 'int (*)(A *)' <FunctionToPointerDecay>
+    | | | | | | `-DeclRefExpr 0x7fc766877c80 <col:11> 'int (A *)' Function 0x7fc766877948 'foo' 'int (A *)'
+    | | | | | `-ImplicitCastExpr 0x7fc766877d70 <col:16> 'A *' <NullToPointer>
+    | | | | |   `-IntegerLiteral 0x7fc766877ca8 <col:16> 'int' 0
+    | | | | `-ImplicitCastExpr 0x7fc766877db0 <col:22> 'void (*)(int)' <LValueToRValue>
+    | | | |   `-DeclRefExpr 0x7fc766877d88 <col:22> 'void (*)(int)' lvalue Var 0x7fc766877690 'a' 'void (*)(int)'
+    | | | |-CallExpr 0x7fc766877e50 <line:25:2, col:6> 'void'
+    | | | | |-ImplicitCastExpr 0x7fc766877e38 <col:2> 'void (*)(int)' <LValueToRValue>
+    | | | | | `-DeclRefExpr 0x7fc766877df0 <col:2> 'void (*)(int)' lvalue Var 0x7fc766877690 'a' 'void (*)(int)'
+    | | | | `-IntegerLiteral 0x7fc766877e18 <col:5> 'int' 0
+    | | | `-<<<NULL>>>
+    | | `-ReturnStmt 0x7fc766877ed8 <line:26:7, col:14>
+    | |   `-IntegerLiteral 0x7fc766877eb8 <col:14> 'int' 0
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc7668780f0 <line:28:3, line:29:9>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc766878038 <line:28:7, col:18> 'int' '&&'
+    | | |-CallExpr 0x7fc766877fb0 <col:7, col:13> 'int'
+    | | | |-ImplicitCastExpr 0x7fc766877f98 <col:7> 'int (*)(A *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fc766877f50 <col:7> 'int (A *)' Function 0x7fc766877948 'foo' 'int (A *)'
+    | | | `-ImplicitCastExpr 0x7fc766877fe0 <col:12> 'A *' <NullToPointer>
+    | | |   `-IntegerLiteral 0x7fc766877f78 <col:12> 'int' 0
+    | | `-ImplicitCastExpr 0x7fc766878020 <col:18> 'void (*)(int)' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fc766877ff8 <col:18> 'void (*)(int)' lvalue Var 0x7fc766877690 'a' 'void (*)(int)'
+    | |-CallExpr 0x7fc7668780c0 <line:29:5, col:9> 'void'
+    | | |-ImplicitCastExpr 0x7fc7668780a8 <col:5> 'void (*)(int)' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fc766878060 <col:5> 'void (*)(int)' lvalue Var 0x7fc766877690 'a' 'void (*)(int)'
+    | | `-IntegerLiteral 0x7fc766878088 <col:8> 'int' 0
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc766878148 <line:30:3, col:10>
+      `-IntegerLiteral 0x7fc766878128 <col:10> 'int' 0

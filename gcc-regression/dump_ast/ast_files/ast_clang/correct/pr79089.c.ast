@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fb2db0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb2db026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb2db026740 '__int128'
+|-TypedefDecl 0x7fb2db026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb2db026760 'unsigned __int128'
+|-TypedefDecl 0x7fb2db026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb2db026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb2db026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb2db026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb2db026dc0 'char *'
+|   `-BuiltinType 0x7fb2db026560 'char'
+|-TypedefDecl 0x7fb2db0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb2db027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb2db026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb2db026e58 '__va_list_tag'
+|-RecordDecl 0x7fb2db027120 <c_files/pr79089.c:3:1, col:19> col:8 struct S definition
+| `-FieldDecl 0x7fb2db077400 <col:12, col:16> col:16 b 'int'
+|-RecordDecl 0x7fb2db077448 <line:4:1, col:24> col:8 struct T definition
+| `-FieldDecl 0x7fb2db077540 <col:12, col:21> col:21 referenced c 'struct S':'struct S'
+|-VarDecl 0x7fb2db077620 <col:1, col:26> col:26 used a 'struct T':'struct T'
+|-VarDecl 0x7fb2db0776f0 <line:5:1, col:5> col:5 used d 'int'
+|-VarDecl 0x7fb2db077770 <line:6:1, col:10> col:10 used e 'struct S':'struct S'
+`-FunctionDecl 0x7fb2db077818 <line:8:1, line:12:1> line:9:1 foo 'void ()'
+  `-CompoundStmt 0x7fb2db077b10 <line:10:1, line:12:1>
+    `-BinaryOperator 0x7fb2db077ae8 <line:11:3, col:37> 'struct S':'struct S' '='
+      |-DeclRefExpr 0x7fb2db0778b0 <col:3> 'struct S':'struct S' lvalue Var 0x7fb2db077770 'e' 'struct S':'struct S'
+      `-StmtExpr 0x7fb2db077ac8 <col:7, col:37> 'struct S':'struct S'
+        `-CompoundStmt 0x7fb2db077aa0 <col:8, col:36>
+          |-UnaryOperator 0x7fb2db077900 <col:10, col:11> 'int' postfix '++'
+          | `-DeclRefExpr 0x7fb2db0778d8 <col:10> 'int' lvalue Var 0x7fb2db0776f0 'd' 'int'
+          `-BinaryOperator 0x7fb2db077a78 <col:15, col:33> 'struct S':'struct S' '='
+            |-MemberExpr 0x7fb2db077948 <col:15, col:17> 'struct S':'struct S' lvalue .c 0x7fb2db077540
+            | `-DeclRefExpr 0x7fb2db077920 <col:15> 'struct T':'struct T' lvalue Var 0x7fb2db077620 'a' 'struct T':'struct T'
+            `-ImplicitCastExpr 0x7fb2db077a60 <col:21, col:33> 'struct S':'struct S' <LValueToRValue>
+              `-CompoundLiteralExpr 0x7fb2db077a38 <col:21, col:33> 'struct S':'struct S' lvalue
+                `-InitListExpr 0x7fb2db0779e0 <col:32, col:33> 'struct S':'struct S'
+                  `-ImplicitValueInitExpr 0x7fb2db077a28 <<invalid sloc>> 'int'

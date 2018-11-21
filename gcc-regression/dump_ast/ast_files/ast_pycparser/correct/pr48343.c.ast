@@ -1,0 +1,91 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 0
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: s, [], [], []
+        ArrayDecl: []
+          TypeDecl: s, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 256
+      Decl: t, [], [], []
+        ArrayDecl: []
+          TypeDecl: t, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 64
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: s
+          ID: t
+      Assignment: =
+        ArrayRef: 
+          ID: t
+          Constant: int, 0
+        ID: y
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 256
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: j
+            BinaryOp: &
+              BinaryOp: +
+                BinaryOp: +
+                  ID: j
+                  ArrayRef: 
+                    ID: s
+                    ID: i
+                ArrayRef: 
+                  ID: t
+                  BinaryOp: %
+                    ID: i
+                    ID: x
+              Constant: int, 0xff
+          Assignment: =
+            ID: k
+            ID: i
+          Assignment: =
+            ID: i
+            ID: j
+          Assignment: =
+            ID: j
+            ID: k

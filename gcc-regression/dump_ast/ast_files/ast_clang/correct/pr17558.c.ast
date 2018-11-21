@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fb4668264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb466826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb466826740 '__int128'
+|-TypedefDecl 0x7fb466826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb466826760 'unsigned __int128'
+|-TypedefDecl 0x7fb466826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb466826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb466826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb466826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb466826dc0 'char *'
+|   `-BuiltinType 0x7fb466826560 'char'
+|-TypedefDecl 0x7fb4668270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb466827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb466826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb466826e58 '__va_list_tag'
+|-RecordDecl 0x7fb466827120 <c_files/pr17558.c:1:1, line:3:1> line:1:8 struct xobject definition
+| `-FieldDecl 0x7fb467025a00 <line:2:8, col:13> col:13 type 'char'
+|-FunctionDecl 0x7fb467025c18 <line:4:1, col:54> col:24 t1_Xform 'struct xobject *(struct xobject *)' extern
+| `-ParmVarDecl 0x7fb467025b00 <col:35, col:51> col:51 obj 'struct xobject *'
+`-FunctionDecl 0x7fb467025dc0 prev 0x7fb467025c18 <line:5:1, line:10:1> line:6:1 t1_Xform 'struct xobject *(struct xobject *)'
+  |-ParmVarDecl 0x7fb467025d20 <col:10, col:26> col:26 used obj 'struct xobject *'
+  `-CompoundStmt 0x7fb4670261a8 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fb4670260c8 <line:8:3, col:48>
+    | |-RecordDecl 0x7fb467025e60 <col:12, col:19> col:19 struct font
+    | `-VarDecl 0x7fb467025fc0 <col:3, col:45> col:25 used F 'struct font *' register cinit
+    |   `-CStyleCastExpr 0x7fb467026088 <col:29, col:45> 'struct font *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fb467026070 <col:45> 'struct xobject *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fb467026020 <col:45> 'struct xobject *' lvalue ParmVar 0x7fb467025d20 'obj' 'struct xobject *'
+    `-ReturnStmt 0x7fb467026190 <line:9:3, col:28>
+      `-ParenExpr 0x7fb467026170 <col:9, col:28> 'struct xobject *'
+        `-CStyleCastExpr 0x7fb467026148 <col:10, col:27> 'struct xobject *' <BitCast>
+          `-ImplicitCastExpr 0x7fb467026130 <col:27> 'struct font *' <LValueToRValue>
+            `-DeclRefExpr 0x7fb4670260e0 <col:27> 'struct font *' lvalue Var 0x7fb467025fc0 'F' 'struct font *'

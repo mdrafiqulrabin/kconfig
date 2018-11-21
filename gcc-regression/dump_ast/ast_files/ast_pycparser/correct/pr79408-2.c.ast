@@ -1,0 +1,86 @@
+FileAST: 
+  Decl: link_error, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: link_error, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: <=
+          ID: y
+          Constant: int, 7312
+        Return: 
+      If: 
+        BinaryOp: !=
+          BinaryOp: %
+            Constant: int, 7312
+            ID: y
+          Constant: int, 7312
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: <=
+          ID: y
+          Constant: int, 7312
+        Return: 
+      If: 
+        BinaryOp: !=
+          BinaryOp: %
+            Constant: int, 7312
+            ID: y
+          Constant: int, 7312
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: <=
+          ID: y
+          Constant: int, 7312
+        Return: 
+      If: 
+        BinaryOp: !=
+          BinaryOp: %
+            UnaryOp: -
+              Constant: int, 7312
+            ID: y
+          UnaryOp: -
+            Constant: int, 7312
+        FuncCall: 
+          ID: link_error

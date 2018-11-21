@@ -1,0 +1,25 @@
+FileAST: 
+  Pragma: GCC visibility push(hidden)
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: arg, [], [], []
+          TypeDecl: arg, []
+            IdentifierType: ['double', '_Complex']
+      TypeDecl: foo, []
+        IdentifierType: ['double', '_Complex']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arg, [], [], []
+            TypeDecl: arg, []
+              IdentifierType: ['double', '_Complex']
+        TypeDecl: bar, []
+          IdentifierType: ['double', '_Complex']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            ID: arg

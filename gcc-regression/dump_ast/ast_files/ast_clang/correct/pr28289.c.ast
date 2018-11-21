@@ -1,0 +1,67 @@
+TranslationUnitDecl 0x7ffdbc00c8d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffdbc00ce20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffdbc00cb40 '__int128'
+|-TypedefDecl 0x7ffdbc00ce90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffdbc00cb60 'unsigned __int128'
+|-TypedefDecl 0x7ffdbc00d168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffdbc00cf70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffdbc00cee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffdbc00d200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffdbc00d1c0 'char *'
+|   `-BuiltinType 0x7ffdbc00c960 'char'
+|-TypedefDecl 0x7ffdbc00d4c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffdbc00d470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffdbc00d2e0 'struct __va_list_tag'
+|     `-Record 0x7ffdbc00d258 '__va_list_tag'
+|-FunctionDecl 0x7ffdbd021230 <c_files/pr28289.c:1:1, col:19> col:12 used ok 'int (int)' extern
+| `-ParmVarDecl 0x7ffdbc00d538 <col:16> col:19 'int'
+|-FunctionDecl 0x7ffdbd021398 <line:2:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7ffdbd021430 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7ffdbd021498 prev 0x7ffdbd021398 <col:1, col:19> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7ffdbd021558 <<invalid sloc>> <invalid sloc> implicit 'int'
+|-FunctionDecl 0x7ffdbd021668 <line:3:1, col:32> col:12 used gen_x86_64_shrd 'int (int)' static
+| `-ParmVarDecl 0x7ffdbd0215d8 <col:29> col:32 'int'
+|-FunctionDecl 0x7ffdbd0217f8 prev 0x7ffdbd021668 <line:4:1, line:8:1> line:5:1 used gen_x86_64_shrd 'int (int)' static
+| |-ParmVarDecl 0x7ffdbd021720 <col:17, col:21> col:21 a 'int'
+| | `-UnusedAttr 0x7ffdbd021780 <col:39> unused
+| `-CompoundStmt 0x7ffdbd0218d0 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7ffdbd0218b8 <line:7:3, col:10>
+|     `-IntegerLiteral 0x7ffdbd021898 <col:10> 'int' 0
+|-FunctionDecl 0x7ffdbd021998 <line:10:1, col:31> col:12 gen_x86_shrd_1 'int (int)' extern
+| `-ParmVarDecl 0x7ffdbd021908 <col:28> col:31 'int'
+|-FunctionDecl 0x7ffdbd021b10 <line:11:1, col:33> col:13 used ix86_split_ashr 'void (int)' extern
+| `-ParmVarDecl 0x7ffdbd021a50 <col:30> col:33 'int'
+|-FunctionDecl 0x7ffdbd021c50 prev 0x7ffdbd021b10 <line:13:1, line:19:1> line:14:1 used ix86_split_ashr 'void (int)'
+| |-ParmVarDecl 0x7ffdbd021bc8 <col:18, col:22> col:22 used mode 'int'
+| `-CompoundStmt 0x7ffdbd021f90 <line:15:1, line:19:1>
+|   `-CallExpr 0x7ffdbd021f60 <line:16:11, line:18:44> 'int'
+|     |-ParenExpr 0x7ffdbd021f20 <line:16:11, line:18:40> 'int (*)(int)'
+|     | `-ConditionalOperator 0x7ffdbd021ef0 <line:16:12, line:18:25> 'int (*)(int)'
+|     |   |-BinaryOperator 0x7ffdbd021d50 <line:16:12, col:20> 'int' '!='
+|     |   | |-ImplicitCastExpr 0x7ffdbd021d38 <col:12> 'int' <LValueToRValue>
+|     |   | | `-DeclRefExpr 0x7ffdbd021cf0 <col:12> 'int' lvalue ParmVar 0x7ffdbd021bc8 'mode' 'int'
+|     |   | `-IntegerLiteral 0x7ffdbd021d18 <col:20> 'int' 0
+|     |   |-ImplicitCastExpr 0x7ffdbd021df8 <line:17:25> 'int (*)(int)' <FunctionToPointerDecay>
+|     |   | `-DeclRefExpr 0x7ffdbd021d78 <col:25> 'int (int)' Function 0x7ffdbd021230 'ok' 'int (int)'
+|     |   `-ImplicitCastExpr 0x7ffdbd021e10 <line:18:25> 'int (*)(int)' <FunctionToPointerDecay>
+|     |     `-DeclRefExpr 0x7ffdbd021da0 <col:25> 'int (int)' Function 0x7ffdbd0217f8 'gen_x86_64_shrd' 'int (int)'
+|     `-IntegerLiteral 0x7ffdbd021f40 <col:43> 'int' 0
+|-VarDecl 0x7ffdbd021fc8 <line:21:1, col:20> col:14 used one 'volatile int' cinit
+| `-IntegerLiteral 0x7ffdbd022028 <col:20> 'int' 1
+|-FunctionDecl 0x7ffdbd022118 <line:22:1, line:27:1> line:23:1 main 'int (void)'
+| `-CompoundStmt 0x7ffdbd8010f0 <line:24:1, line:27:1>
+|   |-CallExpr 0x7ffdbd801070 <line:25:3, col:23> 'void'
+|   | |-ImplicitCastExpr 0x7ffdbd801058 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ffdbd0221d8 <col:3> 'void (int)' Function 0x7ffdbd021c50 'ix86_split_ashr' 'void (int)'
+|   | `-ImplicitCastExpr 0x7ffdbd8010a0 <col:20> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7ffdbd801000 <col:20> 'volatile int' lvalue Var 0x7ffdbd021fc8 'one' 'volatile int'
+|   `-ReturnStmt 0x7ffdbd8010d8 <line:26:3, col:10>
+|     `-IntegerLiteral 0x7ffdbd8010b8 <col:10> 'int' 1
+`-FunctionDecl 0x7ffdbd8011c0 prev 0x7ffdbd021230 <line:29:1, line:33:1> line:30:1 used ok 'int (int)'
+  |-ParmVarDecl 0x7ffdbd801130 <col:5, col:9> col:9 used i 'int'
+  `-CompoundStmt 0x7ffdbd801338 <line:31:1, line:33:1>
+    `-CallExpr 0x7ffdbd8012f0 <line:32:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7ffdbd8012d8 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ffdbd801260 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7ffdbd021498 'exit' 'void (int) __attribute__((noreturn))'
+      `-ImplicitCastExpr 0x7ffdbd801320 <col:9> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7ffdbd801288 <col:9> 'int' lvalue ParmVar 0x7ffdbd801130 'i' 'int'

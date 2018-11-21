@@ -1,0 +1,144 @@
+FileAST: 
+  Decl: g_19, [], [], []
+    TypeDecl: g_19, []
+      IdentifierType: ['int']
+  Decl: g_42, [], [], []
+    PtrDecl: []
+      TypeDecl: g_42, []
+        IdentifierType: ['int']
+  Decl: g, [], [], []
+    PtrDecl: ['volatile']
+      PtrDecl: []
+        TypeDecl: g, []
+          IdentifierType: ['int']
+    UnaryOp: &
+      ID: g_42
+  Decl: g_67, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: g_67, []
+              IdentifierType: ['int']
+            Constant: int, 1
+          Constant: int, 2
+        Constant: int, 9
+      Constant: int, 5
+    InitList: 
+  FuncDef: 
+    Decl: func_4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p_5, [], [], []
+            TypeDecl: p_5, []
+              IdentifierType: ['int']
+          Decl: p_6, [], [], []
+            TypeDecl: p_6, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: p_7, [], [], []
+            TypeDecl: p_7, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: func_4, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: l_8, [], [], []
+        ArrayDecl: []
+          TypeDecl: l_8, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 1
+      If: 
+        ID: p_6
+        Goto: lbl_13
+      For: 
+        Assignment: =
+          ID: p_6
+          Constant: int, 0
+        ID: p_6
+        Assignment: =
+          ID: p_6
+          ExprList: 
+            ID: p_6
+            Constant: int, 0
+        If: 
+          Constant: int, 0
+          Compound: 
+          Label: lbl_13
+            For: 
+              Assignment: =
+                ID: p_6
+                Constant: int, 0
+              BinaryOp: <
+                ID: p_6
+                Constant: int, 1
+              Assignment: +=
+                ID: p_6
+                Constant: int, 1
+              Assignment: =
+                ArrayRef: 
+                  ID: l_8
+                  ID: p_6
+                Constant: int, 0
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: func_45, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p_46, [], [], []
+            TypeDecl: p_46, []
+              IdentifierType: ['unsigned', 'long']
+          Decl: p_47, [], [], []
+            TypeDecl: p_47, []
+              IdentifierType: ['unsigned', 'char']
+        PtrDecl: []
+          TypeDecl: func_45, []
+            IdentifierType: ['int']
+    Compound: 
+      Decl: l_56, [], [], []
+        PtrDecl: []
+          TypeDecl: l_56, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: g_19
+      BinaryOp: |
+        BinaryOp: !=
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            UnaryOp: &
+              ID: l_56
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            UnaryOp: &
+              ID: g
+        BinaryOp: ^
+          BinaryOp: ==
+            UnaryOp: !
+              Constant: int, 1
+            FuncCall: 
+              ID: func_4
+              ExprList: 
+                Constant: int, 0
+                ArrayRef: 
+                  ArrayRef: 
+                    ArrayRef: 
+                      ArrayRef: 
+                        ID: g_67
+                        Constant: int, 2
+                      Constant: int, 6
+                    Constant: int, 1
+                  Constant: int, 0
+                Constant: int, 0
+          FuncCall: 
+            ID: func_4
+            ExprList: 
+              Constant: int, 1
+              Constant: int, 0
+              Constant: int, 0
+      Return: 
+        Constant: int, 0

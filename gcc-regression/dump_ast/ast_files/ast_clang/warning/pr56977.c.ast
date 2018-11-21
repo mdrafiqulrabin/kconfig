@@ -1,0 +1,38 @@
+c_files/pr56977.c:4:16: warning: unknown attribute '__error__' ignored [-Wunknown-attributes]
+__attribute__((__error__("error"))) void error ();
+               ^
+1 warning generated.
+TranslationUnitDecl 0x7fabf98264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fabf9826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fabf9826740 '__int128'
+|-TypedefDecl 0x7fabf9826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fabf9826760 'unsigned __int128'
+|-TypedefDecl 0x7fabf9826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fabf9826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fabf9826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fabf9826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fabf9826dc0 'char *'
+|   `-BuiltinType 0x7fabf9826560 'char'
+|-TypedefDecl 0x7fabf98270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fabf9827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fabf9826ee0 'struct __va_list_tag'
+|     `-Record 0x7fabf9826e58 '__va_list_tag'
+|-FunctionDecl 0x7fabfb008a00 <c_files/pr56977.c:4:1, col:49> col:42 used error 'void ()'
+|-FunctionDecl 0x7fabfb008bb0 <line:6:1, line:10:1> line:6:6 f 'void (int)'
+| |-ParmVarDecl 0x7fabfb008af0 <col:9, col:13> col:13 used i 'int'
+| `-CompoundStmt 0x7fabfb008f20 <col:16, line:10:1>
+|   `-IfStmt 0x7fabfb008ee8 <line:7:5, line:9:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-CallExpr 0x7fabfb008e00 <line:7:9, col:32> 'int'
+|     | |-ImplicitCastExpr 0x7fabfb008de8 <col:9> 'int (*)()' <BuiltinFnToFnPtr>
+|     | | `-DeclRefExpr 0x7fabfb008d68 <col:9> '<builtin fn type>' Function 0x7fabfb008c78 '__builtin_constant_p' 'int ()'
+|     | `-DeclRefExpr 0x7fabfb008d90 <col:31> 'int' lvalue ParmVar 0x7fabfb008af0 'i' 'int'
+|     |-CompoundStmt 0x7fabfb008ec8 <col:35, line:9:5>
+|     | `-CallExpr 0x7fabfb008ea0 <line:8:2, col:9> 'void'
+|     |   `-ImplicitCastExpr 0x7fabfb008e88 <col:2> 'void (*)()' <FunctionToPointerDecay>
+|     |     `-DeclRefExpr 0x7fabfb008e30 <col:2> 'void ()' Function 0x7fabfb008a00 'error' 'void ()'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fabfb008c78 <line:7:9> col:9 implicit used __builtin_constant_p 'int ()' extern
+  |-NoThrowAttr 0x7fabfb008d10 <col:9> Implicit
+  `-ConstAttr 0x7fabfb008d58 <col:9> Implicit

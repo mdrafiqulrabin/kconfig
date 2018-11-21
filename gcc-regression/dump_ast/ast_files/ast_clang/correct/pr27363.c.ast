@@ -1,0 +1,141 @@
+TranslationUnitDecl 0x7f8a5c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8a5c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8a5c826740 '__int128'
+|-TypedefDecl 0x7f8a5c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8a5c826760 'unsigned __int128'
+|-TypedefDecl 0x7f8a5c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8a5c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8a5c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8a5c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8a5c826dc0 'char *'
+|   `-BuiltinType 0x7f8a5c826560 'char'
+|-TypedefDecl 0x7f8a5c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8a5c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8a5c826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8a5c826e58 '__va_list_tag'
+|-FunctionDecl 0x7f8a5c877430 <c_files/pr27363.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f8a5c8774c8 prev 0x7f8a5c877430 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7f8a5c877560 <line:7:1, line:9:1> line:7:8 struct snd_mask definition
+| `-FieldDecl 0x7f8a5c877690 <line:8:5, col:24> col:18 referenced bits 'unsigned int [6]'
+|-FunctionDecl 0x7f8a5c877898 <line:11:1, line:21:1> line:12:1 used snd_mask_refine 'int (struct snd_mask *)' static
+| |-ParmVarDecl 0x7f8a5c877790 <col:17, col:34> col:34 used mask 'struct snd_mask *'
+| |-CompoundStmt 0x7f8a5c8780d8 <line:13:1, line:21:1>
+| | |-DeclStmt 0x7f8a5c877a40 <line:14:3, col:22>
+| | | `-VarDecl 0x7f8a5c8779e0 <col:3, col:19> col:19 used old 'struct snd_mask':'struct snd_mask'
+| | |-BinaryOperator 0x7f8a5c877af8 <line:16:3, col:10> 'struct snd_mask':'struct snd_mask' '='
+| | | |-DeclRefExpr 0x7f8a5c877a58 <col:3> 'struct snd_mask':'struct snd_mask' lvalue Var 0x7f8a5c8779e0 'old' 'struct snd_mask':'struct snd_mask'
+| | | `-ImplicitCastExpr 0x7f8a5c877ae0 <col:9, col:10> 'struct snd_mask':'struct snd_mask' <LValueToRValue>
+| | |   `-UnaryOperator 0x7f8a5c877ac0 <col:9, col:10> 'struct snd_mask':'struct snd_mask' lvalue prefix '*'
+| | |     `-ImplicitCastExpr 0x7f8a5c877aa8 <col:10> 'struct snd_mask *' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7f8a5c877a80 <col:10> 'struct snd_mask *' lvalue ParmVar 0x7f8a5c877790 'mask' 'struct snd_mask *'
+| | |-IfStmt 0x7f8a5c877e50 <line:17:3, line:18:12>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7f8a5c877df0 <line:17:7, col:42> 'int' '&&'
+| | | | |-BinaryOperator 0x7f8a5c877c78 <col:7, col:22> 'int' '=='
+| | | | | |-ImplicitCastExpr 0x7f8a5c877c48 <col:7, col:19> 'unsigned int' <LValueToRValue>
+| | | | | | `-ArraySubscriptExpr 0x7f8a5c877c00 <col:7, col:19> 'unsigned int' lvalue
+| | | | | |   |-ImplicitCastExpr 0x7f8a5c877be8 <col:7, col:13> 'unsigned int *' <ArrayToPointerDecay>
+| | | | | |   | `-MemberExpr 0x7f8a5c877b60 <col:7, col:13> 'unsigned int [6]' lvalue ->bits 0x7f8a5c877690
+| | | | | |   |   `-ImplicitCastExpr 0x7f8a5c877b48 <col:7> 'struct snd_mask *' <LValueToRValue>
+| | | | | |   |     `-DeclRefExpr 0x7f8a5c877b20 <col:7> 'struct snd_mask *' lvalue ParmVar 0x7f8a5c877790 'mask' 'struct snd_mask *'
+| | | | | |   `-IntegerLiteral 0x7f8a5c877b98 <col:18> 'int' 0
+| | | | | `-ImplicitCastExpr 0x7f8a5c877c60 <col:22> 'unsigned int' <IntegralCast>
+| | | | |   `-IntegerLiteral 0x7f8a5c877c28 <col:22> 'int' 0
+| | | | `-BinaryOperator 0x7f8a5c877dc8 <col:27, col:42> 'int' '=='
+| | | |   |-ImplicitCastExpr 0x7f8a5c877d98 <col:27, col:39> 'unsigned int' <LValueToRValue>
+| | | |   | `-ArraySubscriptExpr 0x7f8a5c877d50 <col:27, col:39> 'unsigned int' lvalue
+| | | |   |   |-ImplicitCastExpr 0x7f8a5c877d38 <col:27, col:33> 'unsigned int *' <ArrayToPointerDecay>
+| | | |   |   | `-MemberExpr 0x7f8a5c877ce0 <col:27, col:33> 'unsigned int [6]' lvalue ->bits 0x7f8a5c877690
+| | | |   |   |   `-ImplicitCastExpr 0x7f8a5c877cc8 <col:27> 'struct snd_mask *' <LValueToRValue>
+| | | |   |   |     `-DeclRefExpr 0x7f8a5c877ca0 <col:27> 'struct snd_mask *' lvalue ParmVar 0x7f8a5c877790 'mask' 'struct snd_mask *'
+| | | |   |   `-IntegerLiteral 0x7f8a5c877d18 <col:38> 'int' 1
+| | | |   `-ImplicitCastExpr 0x7f8a5c877db0 <col:42> 'unsigned int' <IntegralCast>
+| | | |     `-IntegerLiteral 0x7f8a5c877d78 <col:42> 'int' 0
+| | | |-ReturnStmt 0x7f8a5c877e38 <line:18:5, col:12>
+| | | | `-IntegerLiteral 0x7f8a5c877e18 <col:12> 'int' 1
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7f8a5c8780c0 <line:20:3, col:37>
+| |   `-BinaryOperator 0x7f8a5c878050 <col:10, col:37> 'int' '!='
+| |     |-ImplicitCastExpr 0x7f8a5c878020 <col:10, col:20> 'unsigned int' <LValueToRValue>
+| |     | `-ArraySubscriptExpr 0x7f8a5c877f20 <col:10, col:20> 'unsigned int' lvalue
+| |     |   |-ImplicitCastExpr 0x7f8a5c877f08 <col:10, col:14> 'unsigned int *' <ArrayToPointerDecay>
+| |     |   | `-MemberExpr 0x7f8a5c877eb0 <col:10, col:14> 'unsigned int [6]' lvalue .bits 0x7f8a5c877690
+| |     |   |   `-DeclRefExpr 0x7f8a5c877e88 <col:10> 'struct snd_mask':'struct snd_mask' lvalue Var 0x7f8a5c8779e0 'old' 'struct snd_mask':'struct snd_mask'
+| |     |   `-IntegerLiteral 0x7f8a5c877ee8 <col:19> 'int' 0
+| |     `-ImplicitCastExpr 0x7f8a5c878038 <col:25, col:37> 'unsigned int' <LValueToRValue>
+| |       `-ArraySubscriptExpr 0x7f8a5c877ff8 <col:25, col:37> 'unsigned int' lvalue
+| |         |-ImplicitCastExpr 0x7f8a5c877fe0 <col:25, col:31> 'unsigned int *' <ArrayToPointerDecay>
+| |         | `-MemberExpr 0x7f8a5c877f88 <col:25, col:31> 'unsigned int [6]' lvalue ->bits 0x7f8a5c877690
+| |         |   `-ImplicitCastExpr 0x7f8a5c877f70 <col:25> 'struct snd_mask *' <LValueToRValue>
+| |         |     `-DeclRefExpr 0x7f8a5c877f48 <col:25> 'struct snd_mask *' lvalue ParmVar 0x7f8a5c877790 'mask' 'struct snd_mask *'
+| |         `-IntegerLiteral 0x7f8a5c877fc0 <col:36> 'int' 0
+| `-NoInlineAttr 0x7f8a5c877938 <line:11:27>
+`-FunctionDecl 0x7f8a5c878358 <line:23:1, line:39:1> line:23:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7f8a5c878128 <col:10, col:14> col:14 argc 'int'
+  |-ParmVarDecl 0x7f8a5c878240 <col:20, col:31> col:26 argv 'char **':'char **'
+  `-CompoundStmt 0x7f8a5c879d78 <line:24:1, line:39:1>
+    |-DeclStmt 0x7f8a5c879480 <line:25:3, col:23>
+    | `-VarDecl 0x7f8a5c879420 <col:3, col:19> col:19 used mask 'struct snd_mask':'struct snd_mask'
+    |-BinaryOperator 0x7f8a5c879590 <line:28:3, col:18> 'unsigned int' '='
+    | |-ArraySubscriptExpr 0x7f8a5c879530 <col:3, col:14> 'unsigned int' lvalue
+    | | |-ImplicitCastExpr 0x7f8a5c879518 <col:3, col:8> 'unsigned int *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7f8a5c8794c0 <col:3, col:8> 'unsigned int [6]' lvalue .bits 0x7f8a5c877690
+    | | |   `-DeclRefExpr 0x7f8a5c879498 <col:3> 'struct snd_mask':'struct snd_mask' lvalue Var 0x7f8a5c879420 'mask' 'struct snd_mask':'struct snd_mask'
+    | | `-IntegerLiteral 0x7f8a5c8794f8 <col:13> 'int' 0
+    | `-ImplicitCastExpr 0x7f8a5c879578 <col:18> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8a5c879558 <col:18> 'int' 23
+    |-BinaryOperator 0x7f8a5c8796b0 <line:29:3, col:18> 'unsigned int' '='
+    | |-ArraySubscriptExpr 0x7f8a5c879650 <col:3, col:14> 'unsigned int' lvalue
+    | | |-ImplicitCastExpr 0x7f8a5c879638 <col:3, col:8> 'unsigned int *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7f8a5c8795e0 <col:3, col:8> 'unsigned int [6]' lvalue .bits 0x7f8a5c877690
+    | | |   `-DeclRefExpr 0x7f8a5c8795b8 <col:3> 'struct snd_mask':'struct snd_mask' lvalue Var 0x7f8a5c879420 'mask' 'struct snd_mask':'struct snd_mask'
+    | | `-IntegerLiteral 0x7f8a5c879618 <col:13> 'int' 1
+    | `-ImplicitCastExpr 0x7f8a5c879698 <col:18> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8a5c879678 <col:18> 'int' 42
+    |-BinaryOperator 0x7f8a5c8797d0 <line:30:3, col:18> 'unsigned int' '='
+    | |-ArraySubscriptExpr 0x7f8a5c879770 <col:3, col:14> 'unsigned int' lvalue
+    | | |-ImplicitCastExpr 0x7f8a5c879758 <col:3, col:8> 'unsigned int *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7f8a5c879700 <col:3, col:8> 'unsigned int [6]' lvalue .bits 0x7f8a5c877690
+    | | |   `-DeclRefExpr 0x7f8a5c8796d8 <col:3> 'struct snd_mask':'struct snd_mask' lvalue Var 0x7f8a5c879420 'mask' 'struct snd_mask':'struct snd_mask'
+    | | `-IntegerLiteral 0x7f8a5c879738 <col:13> 'int' 2
+    | `-ImplicitCastExpr 0x7f8a5c8797b8 <col:18> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8a5c879798 <col:18> 'int' 0
+    |-BinaryOperator 0x7f8a5c8798f0 <line:31:3, col:18> 'unsigned int' '='
+    | |-ArraySubscriptExpr 0x7f8a5c879890 <col:3, col:14> 'unsigned int' lvalue
+    | | |-ImplicitCastExpr 0x7f8a5c879878 <col:3, col:8> 'unsigned int *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7f8a5c879820 <col:3, col:8> 'unsigned int [6]' lvalue .bits 0x7f8a5c877690
+    | | |   `-DeclRefExpr 0x7f8a5c8797f8 <col:3> 'struct snd_mask':'struct snd_mask' lvalue Var 0x7f8a5c879420 'mask' 'struct snd_mask':'struct snd_mask'
+    | | `-IntegerLiteral 0x7f8a5c879858 <col:13> 'int' 3
+    | `-ImplicitCastExpr 0x7f8a5c8798d8 <col:18> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8a5c8798b8 <col:18> 'int' 0
+    |-BinaryOperator 0x7f8a5c879a10 <line:32:3, col:18> 'unsigned int' '='
+    | |-ArraySubscriptExpr 0x7f8a5c8799b0 <col:3, col:14> 'unsigned int' lvalue
+    | | |-ImplicitCastExpr 0x7f8a5c879998 <col:3, col:8> 'unsigned int *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7f8a5c879940 <col:3, col:8> 'unsigned int [6]' lvalue .bits 0x7f8a5c877690
+    | | |   `-DeclRefExpr 0x7f8a5c879918 <col:3> 'struct snd_mask':'struct snd_mask' lvalue Var 0x7f8a5c879420 'mask' 'struct snd_mask':'struct snd_mask'
+    | | `-IntegerLiteral 0x7f8a5c879978 <col:13> 'int' 4
+    | `-ImplicitCastExpr 0x7f8a5c8799f8 <col:18> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8a5c8799d8 <col:18> 'int' 0
+    |-BinaryOperator 0x7f8a5c879b30 <line:33:3, col:18> 'unsigned int' '='
+    | |-ArraySubscriptExpr 0x7f8a5c879ad0 <col:3, col:14> 'unsigned int' lvalue
+    | | |-ImplicitCastExpr 0x7f8a5c879ab8 <col:3, col:8> 'unsigned int *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7f8a5c879a60 <col:3, col:8> 'unsigned int [6]' lvalue .bits 0x7f8a5c877690
+    | | |   `-DeclRefExpr 0x7f8a5c879a38 <col:3> 'struct snd_mask':'struct snd_mask' lvalue Var 0x7f8a5c879420 'mask' 'struct snd_mask':'struct snd_mask'
+    | | `-IntegerLiteral 0x7f8a5c879a98 <col:13> 'int' 5
+    | `-ImplicitCastExpr 0x7f8a5c879b18 <col:18> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8a5c879af8 <col:18> 'int' 0
+    |-IfStmt 0x7f8a5c879d08 <line:36:3, line:37:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7f8a5c879c40 <line:36:7, col:28> 'int'
+    | | |-ImplicitCastExpr 0x7f8a5c879c28 <col:7> 'int (*)(struct snd_mask *)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7f8a5c879b58 <col:7> 'int (struct snd_mask *)' Function 0x7f8a5c877898 'snd_mask_refine' 'int (struct snd_mask *)'
+    | | `-UnaryOperator 0x7f8a5c879ba8 <col:23, col:24> 'struct snd_mask *' prefix '&'
+    | |   `-DeclRefExpr 0x7f8a5c879b80 <col:24> 'struct snd_mask':'struct snd_mask' lvalue Var 0x7f8a5c879420 'mask' 'struct snd_mask':'struct snd_mask'
+    | |-CallExpr 0x7f8a5c879ce0 <line:37:5, col:11> 'void'
+    | | `-ImplicitCastExpr 0x7f8a5c879cc8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f8a5c879c70 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f8a5c8774c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f8a5c879d60 <line:38:3, col:10>
+      `-IntegerLiteral 0x7f8a5c879d40 <col:10> 'int' 0

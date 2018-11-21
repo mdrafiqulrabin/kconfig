@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: s, [], ['static'], []
+    TypeDecl: s, []
+      IdentifierType: ['int']
+    Constant: int, 42
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: l, [], [], []
+        ArrayDecl: []
+          PtrDecl: []
+            TypeDecl: l, []
+              IdentifierType: ['int']
+          Constant: int, 18
+        InitList: 
+          UnaryOp: &
+            ID: s
+          UnaryOp: &
+            ID: s
+          UnaryOp: &
+            ID: s
+          UnaryOp: &
+            ID: s
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+      Return: 
+        Constant: int, 0

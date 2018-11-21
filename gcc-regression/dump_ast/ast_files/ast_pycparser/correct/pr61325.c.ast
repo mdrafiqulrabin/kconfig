@@ -1,0 +1,59 @@
+FileAST: 
+  Typedef: wchar_t, [], ['typedef']
+    TypeDecl: wchar_t, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: size_t, [], ['typedef']
+    TypeDecl: size_t, []
+      IdentifierType: ['long', 'unsigned', 'int']
+  FuncDef: 
+    Decl: wcstombs, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['char']
+          Decl: pwcs, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: pwcs, ['const']
+                IdentifierType: ['wchar_t']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['size_t']
+        TypeDecl: wcstombs, []
+          IdentifierType: ['size_t']
+    Compound: 
+      Decl: count, [], [], []
+        TypeDecl: count, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      If: 
+        BinaryOp: !=
+          ID: n
+          Constant: int, 0
+        Compound: 
+          DoWhile: 
+            BinaryOp: !=
+              UnaryOp: --
+                ID: n
+              Constant: int, 0
+            Compound: 
+              If: 
+                BinaryOp: ==
+                  Assignment: =
+                    UnaryOp: *
+                      UnaryOp: p++
+                        ID: s
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['char']
+                      UnaryOp: *
+                        UnaryOp: p++
+                          ID: pwcs
+                  Constant: int, 0
+                Break: 
+              UnaryOp: p++
+                ID: count
+      Return: 
+        ID: count

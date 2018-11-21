@@ -1,0 +1,60 @@
+TranslationUnitDecl 0x7fead08264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fead0826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fead0826740 '__int128'
+|-TypedefDecl 0x7fead0826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fead0826760 'unsigned __int128'
+|-TypedefDecl 0x7fead0826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fead0826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fead0826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fead0826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fead0826dc0 'char *'
+|   `-BuiltinType 0x7fead0826560 'char'
+|-TypedefDecl 0x7fead08270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fead0827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fead0826ee0 'struct __va_list_tag'
+|     `-Record 0x7fead0826e58 '__va_list_tag'
+|-TypedefDecl 0x7fead0827138 <c_files/pr42025-1.c:1:1, col:15> col:15 referenced Ptr 'void *'
+| `-PointerType 0x7fead08269a0 'void *'
+|   `-BuiltinType 0x7fead0826520 'void'
+|-RecordDecl 0x7fead1025a00 <line:3:1, line:11:1> line:3:8 struct A definition
+| |-FieldDecl 0x7fead1025ac8 <line:5:3, col:7> col:7 referenced i 'int'
+| |-RecordDecl 0x7fead1025b10 <line:6:3, line:10:3> line:6:3 union definition
+| | |-FieldDecl 0x7fead1025bf0 <line:8:5, col:9> col:9 referenced p 'Ptr':'void *'
+| | `-FieldDecl 0x7fead1025c50 <line:9:5, col:11> col:11 referenced q 'char *'
+| `-FieldDecl 0x7fead1025cf0 <line:6:3, line:10:5> col:5 referenced u 'union (anonymous union at c_files/pr42025-1.c:6:3)':'union A::(anonymous at c_files/pr42025-1.c:6:3)'
+|-FunctionDecl 0x7fead1025f80 <line:13:1, line:19:1> line:13:13 used foo 'void (struct A *, char *)' static
+| |-ParmVarDecl 0x7fead1025df0 <col:17, col:27> col:27 used p 'struct A *'
+| |-ParmVarDecl 0x7fead1025e68 <col:30, col:36> col:36 used q 'char *'
+| `-CompoundStmt 0x7fead1026358 <line:14:1, line:19:1>
+|   `-IfStmt 0x7fead1026320 <line:15:3, line:18:14>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fead10260e0 <line:15:7, col:10> 'int' <LValueToRValue>
+|     | `-MemberExpr 0x7fead10260a8 <col:7, col:10> 'int' lvalue ->i 0x7fead1025ac8
+|     |   `-ImplicitCastExpr 0x7fead1026090 <col:7> 'struct A *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7fead1026068 <col:7> 'struct A *' lvalue ParmVar 0x7fead1025df0 'p' 'struct A *'
+|     |-BinaryOperator 0x7fead10261e0 <line:16:5, col:14> 'Ptr':'void *' '='
+|     | |-MemberExpr 0x7fead1026170 <col:5, col:10> 'Ptr':'void *' lvalue .p 0x7fead1025bf0
+|     | | `-MemberExpr 0x7fead1026138 <col:5, col:8> 'union (anonymous union at c_files/pr42025-1.c:6:3)':'union A::(anonymous at c_files/pr42025-1.c:6:3)' lvalue ->u 0x7fead1025cf0
+|     | |   `-ImplicitCastExpr 0x7fead1026120 <col:5> 'struct A *' <LValueToRValue>
+|     | |     `-DeclRefExpr 0x7fead10260f8 <col:5> 'struct A *' lvalue ParmVar 0x7fead1025df0 'p' 'struct A *'
+|     | `-ImplicitCastExpr 0x7fead10261c8 <col:14> 'Ptr':'void *' <NullToPointer>
+|     |   `-IntegerLiteral 0x7fead10261a8 <col:14> 'int' 0
+|     `-BinaryOperator 0x7fead10262f8 <line:18:5, col:14> 'char *' '='
+|       |-MemberExpr 0x7fead1026280 <col:5, col:10> 'char *' lvalue .q 0x7fead1025c50
+|       | `-MemberExpr 0x7fead1026248 <col:5, col:8> 'union (anonymous union at c_files/pr42025-1.c:6:3)':'union A::(anonymous at c_files/pr42025-1.c:6:3)' lvalue ->u 0x7fead1025cf0
+|       |   `-ImplicitCastExpr 0x7fead1026230 <col:5> 'struct A *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fead1026208 <col:5> 'struct A *' lvalue ParmVar 0x7fead1025df0 'p' 'struct A *'
+|       `-ImplicitCastExpr 0x7fead10262e0 <col:14> 'char *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fead10262b8 <col:14> 'char *' lvalue ParmVar 0x7fead1025e68 'q' 'char *'
+`-FunctionDecl 0x7fead10264a8 <line:21:1, line:24:1> line:21:6 bar 'void (struct A *, char *)'
+  |-ParmVarDecl 0x7fead10263a0 <col:10, col:20> col:20 used p 'struct A *'
+  |-ParmVarDecl 0x7fead1026418 <col:23, col:29> col:29 used q 'char *'
+  `-CompoundStmt 0x7fead10266a8 <line:22:1, line:24:1>
+    `-CallExpr 0x7fead1026640 <line:23:3, col:11> 'void'
+      |-ImplicitCastExpr 0x7fead1026628 <col:3> 'void (*)(struct A *, char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fead1026550 <col:3> 'void (struct A *, char *)' Function 0x7fead1025f80 'foo' 'void (struct A *, char *)'
+      |-ImplicitCastExpr 0x7fead1026678 <col:7> 'struct A *' <LValueToRValue>
+      | `-DeclRefExpr 0x7fead1026578 <col:7> 'struct A *' lvalue ParmVar 0x7fead10263a0 'p' 'struct A *'
+      `-ImplicitCastExpr 0x7fead1026690 <col:10> 'char *' <LValueToRValue>
+        `-DeclRefExpr 0x7fead10265a0 <col:10> 'char *' lvalue ParmVar 0x7fead1026418 'q' 'char *'

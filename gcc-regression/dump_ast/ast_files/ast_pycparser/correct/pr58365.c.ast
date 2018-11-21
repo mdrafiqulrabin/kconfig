@@ -1,0 +1,91 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      Struct: S
+        Decl: a, ['volatile'], [], []
+          TypeDecl: a, ['volatile']
+            IdentifierType: ['int']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+        Decl: d, [], [], []
+          TypeDecl: d, []
+            IdentifierType: ['int']
+        Decl: e, [], [], []
+          TypeDecl: e, []
+            IdentifierType: ['int']
+  Decl: g, [], ['static'], []
+    TypeDecl: g, []
+      Struct: S
+  Decl: h, [], ['static'], []
+    TypeDecl: h, []
+      Struct: S
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['char']
+    Compound: 
+      Return: 
+        ID: i
+  FuncDef: 
+    Decl: bar, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          Struct: S
+    Compound: 
+      If: 
+        FuncCall: 
+          ID: foo
+        Return: 
+          ID: f
+      Return: 
+        ID: g
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: h
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        StructRef: .
+          ID: f
+          ID: b
+        Constant: int, 1
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            ID: h
+            ID: b
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

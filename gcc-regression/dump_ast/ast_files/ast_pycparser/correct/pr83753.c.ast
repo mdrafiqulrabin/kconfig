@@ -1,0 +1,77 @@
+FileAST: 
+  Typedef: blah, [], ['typedef']
+    TypeDecl: blah, []
+      Struct: None
+        Decl: m1, [], [], []
+          ArrayDecl: []
+            TypeDecl: m1, []
+              IdentifierType: ['int']
+            Constant: int, 10
+        Decl: m2, [], [], []
+          ArrayDecl: []
+            ArrayDecl: []
+              TypeDecl: m2, []
+                IdentifierType: ['double']
+              Constant: int, 8
+            Constant: int, 10
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: info, [], [], []
+            PtrDecl: []
+              TypeDecl: info, []
+                IdentifierType: ['blah']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: d
+          Constant: int, 0
+        BinaryOp: <
+          ID: d
+          Constant: int, 10
+        UnaryOp: p++
+          ID: d
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              StructRef: ->
+                ID: info
+                ID: m1
+              ID: d
+            Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                StructRef: ->
+                  ID: info
+                  ID: m2
+                ID: d
+              Constant: int, 0
+            Constant: int, 1
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 1
+            BinaryOp: <
+              ID: i
+              Constant: int, 8
+            UnaryOp: p++
+              ID: i
+            Assignment: =
+              ArrayRef: 
+                ArrayRef: 
+                  StructRef: ->
+                    ID: info
+                    ID: m2
+                  ID: d
+                ID: i
+              Constant: int, 2

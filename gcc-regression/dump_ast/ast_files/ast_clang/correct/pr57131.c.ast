@@ -1,0 +1,78 @@
+TranslationUnitDecl 0x7fbf770124d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbf77012a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbf77012740 '__int128'
+|-TypedefDecl 0x7fbf77012a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbf77012760 'unsigned __int128'
+|-TypedefDecl 0x7fbf77012d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbf77012b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbf77012ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbf77012e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbf77012dc0 'char *'
+|   `-BuiltinType 0x7fbf77012560 'char'
+|-TypedefDecl 0x7fbf770130c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbf77013070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbf77012ee0 'struct __va_list_tag'
+|     `-Record 0x7fbf77012e58 '__va_list_tag'
+|-FunctionDecl 0x7fbf76839a30 <c_files/pr57131.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbf76839ac8 prev 0x7fbf76839a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fbf76839bb0 <line:5:1, line:19:1> line:6:1 main 'int ()'
+  `-CompoundStmt 0x7fbf7683a608 <line:7:1, line:19:1>
+    |-DeclStmt 0x7fbf76839d20 <line:8:3, col:22>
+    | `-VarDecl 0x7fbf76839ca0 <col:3, col:21> col:16 used x1 'volatile int' cinit
+    |   `-IntegerLiteral 0x7fbf76839d00 <col:21> 'int' 0
+    |-DeclStmt 0x7fbf76839de8 <line:9:3, col:28>
+    | `-VarDecl 0x7fbf76839d50 <col:3, col:27> col:22 used x2 'volatile long long' cinit
+    |   `-ImplicitCastExpr 0x7fbf76839dd0 <col:27> 'long long' <IntegralCast>
+    |     `-IntegerLiteral 0x7fbf76839db0 <col:27> 'int' 0
+    |-DeclStmt 0x7fbf76839e98 <line:10:3, col:22>
+    | `-VarDecl 0x7fbf76839e18 <col:3, col:21> col:16 used x3 'volatile int' cinit
+    |   `-IntegerLiteral 0x7fbf76839e78 <col:21> 'int' 0
+    |-DeclStmt 0x7fbf76839f48 <line:11:3, col:22>
+    | `-VarDecl 0x7fbf76839ec8 <col:3, col:21> col:16 used x4 'volatile int' cinit
+    |   `-IntegerLiteral 0x7fbf76839f28 <col:21> 'int' 1
+    |-DeclStmt 0x7fbf76839ff8 <line:12:3, col:22>
+    | `-VarDecl 0x7fbf76839f78 <col:3, col:21> col:16 used x5 'volatile int' cinit
+    |   `-IntegerLiteral 0x7fbf76839fd8 <col:21> 'int' 1
+    |-DeclStmt 0x7fbf7683a0c0 <line:13:3, col:28>
+    | `-VarDecl 0x7fbf7683a028 <col:3, col:27> col:22 used x6 'volatile long long' cinit
+    |   `-ImplicitCastExpr 0x7fbf7683a0a8 <col:27> 'long long' <IntegralCast>
+    |     `-IntegerLiteral 0x7fbf7683a088 <col:27> 'int' 1
+    |-DeclStmt 0x7fbf7683a448 <line:14:3, col:53>
+    | `-VarDecl 0x7fbf7683a0f0 <col:3, col:51> col:13 used t 'long long' cinit
+    |   `-BinaryOperator 0x7fbf7683a420 <col:17, col:51> 'long long' '+'
+    |     |-ParenExpr 0x7fbf7683a3c0 <col:17, col:47> 'long long'
+    |     | `-BinaryOperator 0x7fbf7683a398 <col:18, col:46> 'long long' '/'
+    |     |   |-ParenExpr 0x7fbf7683a298 <col:18, col:34> 'long long'
+    |     |   | `-BinaryOperator 0x7fbf7683a270 <col:19, col:33> 'long long' '*'
+    |     |   |   |-ImplicitCastExpr 0x7fbf7683a258 <col:19> 'long long' <IntegralCast>
+    |     |   |   | `-ImplicitCastExpr 0x7fbf7683a240 <col:19> 'int' <LValueToRValue>
+    |     |   |   |   `-DeclRefExpr 0x7fbf7683a150 <col:19> 'volatile int' lvalue Var 0x7fbf76839ca0 'x1' 'volatile int'
+    |     |   |   `-ParenExpr 0x7fbf7683a220 <col:24, col:33> 'long long'
+    |     |   |     `-BinaryOperator 0x7fbf7683a1f8 <col:25, col:31> 'long long' '<<'
+    |     |   |       |-ImplicitCastExpr 0x7fbf7683a1c8 <col:25> 'long long' <LValueToRValue>
+    |     |   |       | `-DeclRefExpr 0x7fbf7683a178 <col:25> 'volatile long long' lvalue Var 0x7fbf76839d50 'x2' 'volatile long long'
+    |     |   |       `-ImplicitCastExpr 0x7fbf7683a1e0 <col:31> 'int' <LValueToRValue>
+    |     |   |         `-DeclRefExpr 0x7fbf7683a1a0 <col:31> 'volatile int' lvalue Var 0x7fbf76839e18 'x3' 'volatile int'
+    |     |   `-ImplicitCastExpr 0x7fbf7683a380 <col:38, col:46> 'long long' <IntegralCast>
+    |     |     `-ParenExpr 0x7fbf7683a360 <col:38, col:46> 'int'
+    |     |       `-BinaryOperator 0x7fbf7683a338 <col:39, col:44> 'int' '*'
+    |     |         |-ImplicitCastExpr 0x7fbf7683a308 <col:39> 'int' <LValueToRValue>
+    |     |         | `-DeclRefExpr 0x7fbf7683a2b8 <col:39> 'volatile int' lvalue Var 0x7fbf76839ec8 'x4' 'volatile int'
+    |     |         `-ImplicitCastExpr 0x7fbf7683a320 <col:44> 'int' <LValueToRValue>
+    |     |           `-DeclRefExpr 0x7fbf7683a2e0 <col:44> 'volatile int' lvalue Var 0x7fbf76839f78 'x5' 'volatile int'
+    |     `-ImplicitCastExpr 0x7fbf7683a408 <col:51> 'long long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fbf7683a3e0 <col:51> 'volatile long long' lvalue Var 0x7fbf7683a028 'x6' 'volatile long long'
+    |-IfStmt 0x7fbf7683a598 <line:16:3, line:17:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbf7683a4d8 <line:16:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fbf7683a4a8 <col:7> 'long long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fbf7683a460 <col:7> 'long long' lvalue Var 0x7fbf7683a0f0 't' 'long long'
+    | | `-ImplicitCastExpr 0x7fbf7683a4c0 <col:12> 'long long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fbf7683a488 <col:12> 'int' 1
+    | |-CallExpr 0x7fbf7683a570 <line:17:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fbf7683a558 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbf7683a500 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbf76839ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fbf7683a5f0 <line:18:3, col:10>
+      `-IntegerLiteral 0x7fbf7683a5d0 <col:10> 'int' 0

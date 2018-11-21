@@ -1,0 +1,113 @@
+c_files/pr70300.c:5:9: warning: plain '_Complex' requires a type specifier; assuming '_Complex double'
+typedef _Complex A __attribute__ ((mode (SC)));
+        ^
+                 double
+c_files/pr70300.c:6:9: warning: plain '_Complex' requires a type specifier; assuming '_Complex double'
+typedef _Complex B __attribute__ ((mode (DC)));
+        ^
+                 double
+c_files/pr70300.c:7:9: warning: plain '_Complex' requires a type specifier; assuming '_Complex double'
+typedef _Complex C __attribute__ ((mode (TC)));
+        ^
+                 double
+c_files/pr70300.c:7:36: error: unsupported machine mode 'TC'
+typedef _Complex C __attribute__ ((mode (TC)));
+                                   ^
+3 warnings and 1 error generated.
+TranslationUnitDecl 0x7fc8860166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc886016c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc886016940 '__int128'
+|-TypedefDecl 0x7fc886016c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc886016960 'unsigned __int128'
+|-TypedefDecl 0x7fc886016f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc886016d70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc886016ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc886017000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc886016fc0 'char *'
+|   `-BuiltinType 0x7fc886016760 'char'
+|-TypedefDecl 0x7fc8860172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc886017270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc8860170e0 'struct __va_list_tag'
+|     `-Record 0x7fc886017058 '__va_list_tag'
+|-TypedefDecl 0x7fc886017340 <c_files/pr70300.c:5:1, col:18> col:18 referenced A '_Complex float'
+| |-ComplexType 0x7fc886016a80 '_Complex float'
+| | `-BuiltinType 0x7fc8860168c0 'float'
+| `-ModeAttr 0x7fc8860173a8 <col:36, col:44> SC
+|-TypedefDecl 0x7fc886826a20 <line:6:1, col:18> col:18 referenced B '_Complex double'
+| |-ComplexType 0x7fc886016ab0 '_Complex double'
+| | `-BuiltinType 0x7fc8860168e0 'double'
+| `-ModeAttr 0x7fc886826a88 <col:36, col:44> DC
+|-TypedefDecl 0x7fc886826af8 <line:7:1, col:18> col:18 referenced C '_Complex double'
+| `-ComplexType 0x7fc886016ab0 '_Complex double'
+|   `-BuiltinType 0x7fc8860168e0 'double'
+|-FunctionDecl 0x7fc886826f60 <line:9:1, line:16:1> line:10:1 foo 'C (A, B, C, A, B, C)'
+| |-ParmVarDecl 0x7fc886826ba0 <col:6, col:8> col:8 used a 'A':'_Complex float'
+| |-ParmVarDecl 0x7fc886826c30 <col:11, col:13> col:13 used b 'B':'_Complex double'
+| |-ParmVarDecl 0x7fc886826ca0 <col:16, col:18> col:18 c 'C':'_Complex double'
+| |-ParmVarDecl 0x7fc886826d10 <col:21, col:23> col:23 used d 'A':'_Complex float'
+| |-ParmVarDecl 0x7fc886826d80 <col:26, col:28> col:28 used e 'B':'_Complex double'
+| |-ParmVarDecl 0x7fc886826df0 <col:31, col:33> col:33 used f 'C':'_Complex double'
+| `-CompoundStmt 0x7fc886827420 <line:11:1, line:16:1>
+|   |-CompoundAssignOperator 0x7fc8868270e8 <line:12:3, col:8> 'B':'_Complex double' '-=' ComputeLHSTy='_Complex double' ComputeResultTy='_Complex double'
+|   | |-DeclRefExpr 0x7fc886827068 <col:3> 'B':'_Complex double' lvalue ParmVar 0x7fc886826c30 'b' 'B':'_Complex double'
+|   | `-ImplicitCastExpr 0x7fc8868270d0 <col:8> '_Complex double' <FloatingComplexCast>
+|   |   `-ImplicitCastExpr 0x7fc8868270b8 <col:8> 'A':'_Complex float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fc886827090 <col:8> 'A':'_Complex float' lvalue ParmVar 0x7fc886826ba0 'a' 'A':'_Complex float'
+|   |-CompoundAssignOperator 0x7fc886827188 <line:13:3, col:8> 'A':'_Complex float' '+=' ComputeLHSTy='_Complex float' ComputeResultTy='_Complex float'
+|   | |-DeclRefExpr 0x7fc886827120 <col:3> 'A':'_Complex float' lvalue ParmVar 0x7fc886826d10 'd' 'A':'_Complex float'
+|   | `-ImplicitCastExpr 0x7fc886827170 <col:8> 'A':'_Complex float' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc886827148 <col:8> 'A':'_Complex float' lvalue ParmVar 0x7fc886826ba0 'a' 'A':'_Complex float'
+|   |-CompoundAssignOperator 0x7fc886827228 <line:14:3, col:8> 'A':'_Complex float' '+=' ComputeLHSTy='_Complex double' ComputeResultTy='_Complex double'
+|   | |-DeclRefExpr 0x7fc8868271c0 <col:3> 'A':'_Complex float' lvalue ParmVar 0x7fc886826ba0 'a' 'A':'_Complex float'
+|   | `-ImplicitCastExpr 0x7fc886827210 <col:8> 'C':'_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc8868271e8 <col:8> 'C':'_Complex double' lvalue ParmVar 0x7fc886826df0 'f' 'C':'_Complex double'
+|   `-ReturnStmt 0x7fc886827408 <line:15:3, col:22>
+|     `-BinaryOperator 0x7fc8868273e0 <col:10, col:22> '_Complex double' '+'
+|       |-BinaryOperator 0x7fc886827378 <col:10, col:18> '_Complex double' '+'
+|       | |-BinaryOperator 0x7fc8868272f8 <col:10, col:14> '_Complex double' '+'
+|       | | |-ImplicitCastExpr 0x7fc8868272e0 <col:10> '_Complex double' <FloatingComplexCast>
+|       | | | `-ImplicitCastExpr 0x7fc8868272b0 <col:10> 'A':'_Complex float' <LValueToRValue>
+|       | | |   `-DeclRefExpr 0x7fc886827260 <col:10> 'A':'_Complex float' lvalue ParmVar 0x7fc886826ba0 'a' 'A':'_Complex float'
+|       | | `-ImplicitCastExpr 0x7fc8868272c8 <col:14> 'B':'_Complex double' <LValueToRValue>
+|       | |   `-DeclRefExpr 0x7fc886827288 <col:14> 'B':'_Complex double' lvalue ParmVar 0x7fc886826c30 'b' 'B':'_Complex double'
+|       | `-ImplicitCastExpr 0x7fc886827360 <col:18> '_Complex double' <FloatingComplexCast>
+|       |   `-ImplicitCastExpr 0x7fc886827348 <col:18> 'A':'_Complex float' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fc886827320 <col:18> 'A':'_Complex float' lvalue ParmVar 0x7fc886826d10 'd' 'A':'_Complex float'
+|       `-ImplicitCastExpr 0x7fc8868273c8 <col:22> 'B':'_Complex double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fc8868273a0 <col:22> 'B':'_Complex double' lvalue ParmVar 0x7fc886826d80 'e' 'B':'_Complex double'
+`-FunctionDecl 0x7fc8868277b8 <line:18:1, line:25:1> line:19:1 bar 'C (A, B, C, A, B, C)'
+  |-ParmVarDecl 0x7fc8868274d8 <col:6, col:8> col:8 used a 'A':'_Complex float'
+  |-ParmVarDecl 0x7fc886827548 <col:11, col:13> col:13 used b 'B':'_Complex double'
+  |-ParmVarDecl 0x7fc8868275b8 <col:16, col:18> col:18 c 'C':'_Complex double'
+  |-ParmVarDecl 0x7fc886827628 <col:21, col:23> col:23 used d 'A':'_Complex float'
+  |-ParmVarDecl 0x7fc886827698 <col:26, col:28> col:28 used e 'B':'_Complex double'
+  |-ParmVarDecl 0x7fc886827708 <col:31, col:33> col:33 used f 'C':'_Complex double'
+  |-CompoundStmt 0x7fc886827c98 <line:20:1, line:25:1>
+  | |-CompoundAssignOperator 0x7fc886827958 <line:21:3, col:8> 'B':'_Complex double' '-=' ComputeLHSTy='_Complex double' ComputeResultTy='_Complex double'
+  | | |-DeclRefExpr 0x7fc8868278d8 <col:3> 'B':'_Complex double' lvalue ParmVar 0x7fc886827548 'b' 'B':'_Complex double'
+  | | `-ImplicitCastExpr 0x7fc886827940 <col:8> '_Complex double' <FloatingComplexCast>
+  | |   `-ImplicitCastExpr 0x7fc886827928 <col:8> 'A':'_Complex float' <LValueToRValue>
+  | |     `-DeclRefExpr 0x7fc886827900 <col:8> 'A':'_Complex float' lvalue ParmVar 0x7fc8868274d8 'a' 'A':'_Complex float'
+  | |-CompoundAssignOperator 0x7fc886827a00 <line:22:3, col:8> 'A':'_Complex float' '+=' ComputeLHSTy='_Complex float' ComputeResultTy='_Complex float'
+  | | |-DeclRefExpr 0x7fc886827990 <col:3> 'A':'_Complex float' lvalue ParmVar 0x7fc886827628 'd' 'A':'_Complex float'
+  | | `-ImplicitCastExpr 0x7fc8868279e0 <col:8> 'A':'_Complex float' <LValueToRValue>
+  | |   `-DeclRefExpr 0x7fc8868279b8 <col:8> 'A':'_Complex float' lvalue ParmVar 0x7fc8868274d8 'a' 'A':'_Complex float'
+  | |-CompoundAssignOperator 0x7fc886827aa0 <line:23:3, col:8> 'A':'_Complex float' '+=' ComputeLHSTy='_Complex double' ComputeResultTy='_Complex double'
+  | | |-DeclRefExpr 0x7fc886827a38 <col:3> 'A':'_Complex float' lvalue ParmVar 0x7fc8868274d8 'a' 'A':'_Complex float'
+  | | `-ImplicitCastExpr 0x7fc886827a88 <col:8> 'C':'_Complex double' <LValueToRValue>
+  | |   `-DeclRefExpr 0x7fc886827a60 <col:8> 'C':'_Complex double' lvalue ParmVar 0x7fc886827708 'f' 'C':'_Complex double'
+  | `-ReturnStmt 0x7fc886827c80 <line:24:3, col:22>
+  |   `-BinaryOperator 0x7fc886827c58 <col:10, col:22> '_Complex double' '+'
+  |     |-BinaryOperator 0x7fc886827bf0 <col:10, col:18> '_Complex double' '+'
+  |     | |-BinaryOperator 0x7fc886827b70 <col:10, col:14> '_Complex double' '+'
+  |     | | |-ImplicitCastExpr 0x7fc886827b58 <col:10> '_Complex double' <FloatingComplexCast>
+  |     | | | `-ImplicitCastExpr 0x7fc886827b28 <col:10> 'A':'_Complex float' <LValueToRValue>
+  |     | | |   `-DeclRefExpr 0x7fc886827ad8 <col:10> 'A':'_Complex float' lvalue ParmVar 0x7fc8868274d8 'a' 'A':'_Complex float'
+  |     | | `-ImplicitCastExpr 0x7fc886827b40 <col:14> 'B':'_Complex double' <LValueToRValue>
+  |     | |   `-DeclRefExpr 0x7fc886827b00 <col:14> 'B':'_Complex double' lvalue ParmVar 0x7fc886827548 'b' 'B':'_Complex double'
+  |     | `-ImplicitCastExpr 0x7fc886827bd8 <col:18> '_Complex double' <FloatingComplexCast>
+  |     |   `-ImplicitCastExpr 0x7fc886827bc0 <col:18> 'A':'_Complex float' <LValueToRValue>
+  |     |     `-DeclRefExpr 0x7fc886827b98 <col:18> 'A':'_Complex float' lvalue ParmVar 0x7fc886827628 'd' 'A':'_Complex float'
+  |     `-ImplicitCastExpr 0x7fc886827c40 <col:22> 'B':'_Complex double' <LValueToRValue>
+  |       `-DeclRefExpr 0x7fc886827c18 <col:22> 'B':'_Complex double' lvalue ParmVar 0x7fc886827698 'e' 'B':'_Complex double'
+  `-TargetAttr 0x7fc886827880 <line:18:16, col:34> "avx512vl"

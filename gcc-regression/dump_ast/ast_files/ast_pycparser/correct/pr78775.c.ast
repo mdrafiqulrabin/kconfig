@@ -1,0 +1,43 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    PtrDecl: []
+      TypeDecl: c, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['unsigned', 'long']
+        Constant: int, 0
+      While: 
+        Constant: int, 1
+        Compound: 
+          Switch: 
+            ID: b
+            Case: 
+              Constant: char, 'S'
+              Assignment: =
+                ID: d
+                ID: a
+          Assignment: =
+            ID: c
+            FuncCall: 
+              ID: __builtin_malloc
+              ExprList: 
+                ID: d
+      Return: 
+        Constant: int, 0

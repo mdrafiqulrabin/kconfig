@@ -1,0 +1,85 @@
+FileAST: 
+  Typedef: gfc_actual_arglist, [], ['typedef']
+    TypeDecl: gfc_actual_arglist, []
+      Struct: gfc_formal_arglist
+        Decl: next, [], [], []
+          TypeDecl: next, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: update_arglist_pass, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: lst, [], [], []
+            PtrDecl: []
+              TypeDecl: lst, []
+                IdentifierType: ['gfc_actual_arglist']
+          Decl: po, [], [], []
+            TypeDecl: po, []
+              IdentifierType: ['int']
+          Decl: argpos, [], [], []
+            TypeDecl: argpos, []
+              IdentifierType: ['unsigned']
+          Decl: name, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: name, ['const']
+                IdentifierType: ['char']
+        TypeDecl: update_arglist_pass, []
+          IdentifierType: ['int']
+    Compound: 
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        TernaryOp: 
+          FuncCall: 
+            ID: __builtin_expect
+            ExprList: 
+              UnaryOp: !
+                BinaryOp: >
+                  ID: argpos
+                  Constant: int, 0
+              Constant: int, 0
+          ExprList: 
+            FuncCall: 
+              ID: __builtin_unreachable
+            Constant: int, 0
+          Constant: int, 0
+      If: 
+        BinaryOp: ==
+          ID: argpos
+          Constant: int, 1
+        Return: 
+          Constant: int, 0
+      If: 
+        ID: lst
+        Assignment: =
+          StructRef: ->
+            ID: lst
+            ID: next
+          FuncCall: 
+            ID: update_arglist_pass
+            ExprList: 
+              StructRef: ->
+                ID: lst
+                ID: next
+              ID: po
+              BinaryOp: -
+                ID: argpos
+                Constant: int, 1
+              ID: name
+        Assignment: =
+          ID: lst
+          FuncCall: 
+            ID: update_arglist_pass
+            ExprList: 
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+                Constant: int, 0
+              ID: po
+              BinaryOp: -
+                ID: argpos
+                Constant: int, 1
+              ID: name

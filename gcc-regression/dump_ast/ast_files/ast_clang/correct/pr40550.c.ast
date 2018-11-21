@@ -1,0 +1,50 @@
+TranslationUnitDecl 0x7fb4088264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb408826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb408826740 '__int128'
+|-TypedefDecl 0x7fb408826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb408826760 'unsigned __int128'
+|-TypedefDecl 0x7fb408826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb408826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb408826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb408826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb408826dc0 'char *'
+|   `-BuiltinType 0x7fb408826560 'char'
+|-TypedefDecl 0x7fb4088270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb408827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb408826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb408826e58 '__va_list_tag'
+|-TypedefDecl 0x7fb409027a00 <c_files/pr40550.c:6:1, col:15> col:15 referenced v2sf '__attribute__((__vector_size__(2 * sizeof(float)))) float'
+| `-VectorType 0x7fb4088271c0 '__attribute__((__vector_size__(2 * sizeof(float)))) float' 2
+|   `-BuiltinType 0x7fb4088266c0 'float'
+|-FunctionDecl 0x7fb409027b20 <line:8:1, line:14:1> line:8:13 used test 'void (void)' static
+| `-CompoundStmt 0x7fb4090280d0 <line:9:1, line:14:1>
+|   |-DeclStmt 0x7fb409027da0 <line:10:3, col:22>
+|   | `-VarDecl 0x7fb409027c30 <col:3, col:21> col:8 used a 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' cinit
+|   |   `-InitListExpr 0x7fb409027d20 <col:12, col:21> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|   |     |-ImplicitCastExpr 0x7fb409027d70 <col:13> 'float' <FloatingCast>
+|   |     | `-FloatingLiteral 0x7fb409027c90 <col:13> 'double' 1.000000e+00
+|   |     `-ImplicitCastExpr 0x7fb409027d88 <col:18> 'float' <FloatingCast>
+|   |       `-FloatingLiteral 0x7fb409027cb0 <col:18> 'double' 0.000000e+00
+|   |-DeclStmt 0x7fb409027f38 <line:11:3, col:22>
+|   | `-VarDecl 0x7fb409027dc8 <col:3, col:21> col:8 used b 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' cinit
+|   |   `-InitListExpr 0x7fb409027eb8 <col:12, col:21> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|   |     |-ImplicitCastExpr 0x7fb409027f08 <col:13> 'float' <FloatingCast>
+|   |     | `-FloatingLiteral 0x7fb409027e28 <col:13> 'double' 0.000000e+00
+|   |     `-ImplicitCastExpr 0x7fb409027f20 <col:18> 'float' <FloatingCast>
+|   |       `-FloatingLiteral 0x7fb409027e48 <col:18> 'double' 1.000000e+00
+|   |-DeclStmt 0x7fb409027fc0 <line:12:3, col:9>
+|   | `-VarDecl 0x7fb409027f60 <col:3, col:8> col:8 used d 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|   `-BinaryOperator 0x7fb4090280a8 <line:13:3, col:11> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' '='
+|     |-DeclRefExpr 0x7fb409027fd8 <col:3> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue Var 0x7fb409027f60 'd' 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|     `-BinaryOperator 0x7fb409028080 <col:7, col:11> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' '+'
+|       |-ImplicitCastExpr 0x7fb409028050 <col:7> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fb409028000 <col:7> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue Var 0x7fb409027c30 'a' 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|       `-ImplicitCastExpr 0x7fb409028068 <col:11> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' <LValueToRValue>
+|         `-DeclRefExpr 0x7fb409028028 <col:11> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue Var 0x7fb409027dc8 'b' 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+`-FunctionDecl 0x7fb409028160 <line:16:1, line:20:1> line:16:5 main 'int ()'
+  `-CompoundStmt 0x7fb4090282c0 <line:17:1, line:20:1>
+    |-CallExpr 0x7fb409028260 <line:18:3, col:9> 'void'
+    | `-ImplicitCastExpr 0x7fb409028248 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fb4090281f8 <col:3> 'void (void)' Function 0x7fb409027b20 'test' 'void (void)'
+    `-ReturnStmt 0x7fb4090282a8 <line:19:3, col:10>
+      `-IntegerLiteral 0x7fb409028288 <col:10> 'int' 0

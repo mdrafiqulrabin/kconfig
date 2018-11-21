@@ -1,0 +1,73 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S0
+      Decl: f2, [], [], []
+        TypeDecl: f2, []
+          IdentifierType: ['int']
+      Decl: f3, [], [], []
+        TypeDecl: f3, []
+          IdentifierType: ['int']
+        Constant: int, 16
+      Decl: f4, [], [], []
+        TypeDecl: f4, []
+          IdentifierType: ['int']
+        Constant: int, 18
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+    Constant: int, 5
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Struct: S0
+    InitList: 
+      Constant: int, 3
+      Constant: int, 0
+      Constant: int, 0
+  Decl: global, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: global, []
+        Struct: S0
+      Constant: int, 2
+    InitList: 
+      InitList: 
+        Constant: int, 77
+        Constant: int, 0
+        Constant: int, 78
+      InitList: 
+        Constant: int, 77
+        Constant: int, 0
+        Constant: int, 78
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: j, ['volatile'], [], []
+        PtrDecl: []
+          TypeDecl: j, ['volatile']
+            Struct: S0
+      For: 
+        ID: a
+        Compound: 
+          FuncCall: 
+            ID: __builtin_printf
+            ExprList: 
+              Constant: string, ""
+              StructRef: .
+                ID: b
+                ID: f2
+          Assignment: =
+            ID: j
+            UnaryOp: &
+              ID: b
+          Assignment: =
+            UnaryOp: *
+              ID: j
+            ArrayRef: 
+              ID: global
+              Constant: int, 1
+          UnaryOp: p--
+            ID: a
+      Return: 
+        Constant: int, 0

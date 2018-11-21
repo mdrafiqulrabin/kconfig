@@ -1,0 +1,71 @@
+FileAST: 
+  FuncDef: 
+    Decl: cmp, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['char']
+          Decl: q, [], [], []
+            PtrDecl: []
+              TypeDecl: q, []
+                IdentifierType: ['char']
+        TypeDecl: cmp, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: pa, [], [], []
+        PtrDecl: []
+          TypeDecl: pa, []
+            IdentifierType: ['char']
+        FuncCall: 
+          ID: __builtin_assume_aligned
+          ExprList: 
+            ID: p
+            Constant: int, 4
+      Decl: qa, [], [], []
+        PtrDecl: []
+          TypeDecl: qa, []
+            IdentifierType: ['char']
+        FuncCall: 
+          ID: __builtin_assume_aligned
+          ExprList: 
+            ID: q
+            Constant: int, 4
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: __builtin_memcmp
+            ExprList: 
+              ID: pa
+              ID: qa
+              Constant: int, 16
+          Constant: int, 0
+        Return: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: cmp2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['char']
+        TypeDecl: cmp2, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: __builtin_memcmp
+            ExprList: 
+              ID: p
+              Constant: string, "fish"
+              Constant: int, 4
+          Constant: int, 0
+        Return: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0

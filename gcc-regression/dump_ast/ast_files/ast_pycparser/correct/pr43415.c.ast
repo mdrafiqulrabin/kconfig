@@ -1,0 +1,165 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: table, [], [], []
+        ArrayDecl: []
+          TypeDecl: table, []
+            IdentifierType: ['unsigned', 'long', 'long']
+          Constant: int, 256
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 256
+        UnaryOp: ++
+          ID: i
+        Compound: 
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['unsigned', 'long', 'long']
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'char']
+            ID: i
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              Constant: int, 5
+            UnaryOp: ++
+              ID: j
+            Compound: 
+              Assignment: +=
+                ID: x
+                BinaryOp: <<
+                  ID: x
+                  Constant: int, 1
+              Assignment: ^=
+                ID: x
+                BinaryOp: >>
+                  ID: x
+                  Constant: int, 1
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              Constant: int, 5
+            UnaryOp: ++
+              ID: j
+            Compound: 
+              Assignment: +=
+                ID: x
+                BinaryOp: <<
+                  ID: x
+                  Constant: int, 1
+              Assignment: ^=
+                ID: x
+                BinaryOp: >>
+                  ID: x
+                  Constant: int, 1
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              Constant: int, 5
+            UnaryOp: ++
+              ID: j
+            Compound: 
+              Assignment: +=
+                ID: x
+                BinaryOp: <<
+                  ID: x
+                  Constant: int, 1
+              Assignment: ^=
+                ID: x
+                BinaryOp: >>
+                  ID: x
+                  Constant: int, 1
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              Constant: int, 5
+            UnaryOp: ++
+              ID: j
+            Compound: 
+              Assignment: +=
+                ID: x
+                BinaryOp: <<
+                  ID: x
+                  Constant: int, 1
+              Assignment: ^=
+                ID: x
+                BinaryOp: >>
+                  ID: x
+                  Constant: int, 1
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              Constant: int, 5
+            UnaryOp: ++
+              ID: j
+            Compound: 
+              Assignment: +=
+                ID: x
+                BinaryOp: <<
+                  ID: x
+                  Constant: int, 1
+              Assignment: ^=
+                ID: x
+                BinaryOp: >>
+                  ID: x
+                  Constant: int, 1
+          Assignment: ^=
+            ArrayRef: 
+              ID: table
+              ID: i
+            BinaryOp: <<
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'long', 'long']
+                ID: x
+              Constant: int, 16
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 256
+        UnaryOp: ++
+          ID: i
+        Compound: 
+          If: 
+            BinaryOp: ==
+              BinaryOp: &
+                ArrayRef: 
+                  ID: table
+                  ID: i
+                Constant: int, 0xff
+              ID: i
+            Return: 
+              Constant: int, 1
+      Return: 
+        Constant: int, 0

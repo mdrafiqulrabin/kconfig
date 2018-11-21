@@ -1,0 +1,34 @@
+FileAST: 
+  Typedef: uint8_t, [], ['typedef']
+    TypeDecl: uint8_t, []
+      IdentifierType: ['unsigned', 'char']
+  Decl: foo, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: foo, []
+          IdentifierType: ['uint8_t']
+        Constant: int, 0
+      Constant: int, 1
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          UnaryOp: sizeof
+            ID: foo
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

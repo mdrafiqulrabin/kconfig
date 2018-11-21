@@ -1,0 +1,21 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              Enum: E
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Constant: int, 0

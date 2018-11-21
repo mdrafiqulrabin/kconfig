@@ -1,0 +1,58 @@
+c_files/pr21021.c:14:12: warning: cast to 'const void *' from smaller integer type 'unsigned int' [-Wint-to-void-pointer-cast]
+  if (r >= (const void *) *p
+           ^
+c_files/pr21021.c:15:14: warning: cast to 'const void *' from smaller integer type 'unsigned int' [-Wint-to-void-pointer-cast]
+      && r < (const void *) *q)
+             ^
+2 warnings generated.
+TranslationUnitDecl 0x7fd8380264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd838026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd838026740 '__int128'
+|-TypedefDecl 0x7fd838026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd838026760 'unsigned __int128'
+|-TypedefDecl 0x7fd838026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd838026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd838026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd838026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd838026dc0 'char *'
+|   `-BuiltinType 0x7fd838026560 'char'
+|-TypedefDecl 0x7fd8380270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd838027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd838026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd838026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd838077400 <c_files/pr21021.c:7:1, col:23> col:14 used bar 'void *(void)' extern
+`-FunctionDecl 0x7fd838077678 <line:9:1, line:19:1> line:10:1 foo 'int (unsigned int *, unsigned int *)'
+  |-ParmVarDecl 0x7fd838077520 <col:6, col:20> col:20 used p 'unsigned int *'
+  |-ParmVarDecl 0x7fd838077598 <col:23, col:37> col:37 used q 'unsigned int *'
+  `-CompoundStmt 0x7fd838077f48 <line:11:1, line:19:1>
+    |-DeclStmt 0x7fd838077870 <line:12:3, col:25>
+    | `-VarDecl 0x7fd838077760 <col:3, col:24> col:15 used r 'const void *' cinit
+    |   `-ImplicitCastExpr 0x7fd838077858 <col:19, col:24> 'const void *' <BitCast>
+    |     `-CallExpr 0x7fd838077830 <col:19, col:24> 'void *'
+    |       `-ImplicitCastExpr 0x7fd838077818 <col:19> 'void *(*)(void)' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x7fd8380777c0 <col:19> 'void *(void)' Function 0x7fd838077400 'bar' 'void *(void)'
+    |-IfStmt 0x7fd838077ed8 <line:14:3, line:16:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd838077e78 <line:14:7, line:15:30> 'int' '&&'
+    | | |-BinaryOperator 0x7fd838077d30 <line:14:7, col:28> 'int' '>='
+    | | | |-ImplicitCastExpr 0x7fd838077d18 <col:7> 'const void *' <LValueToRValue>
+    | | | | `-DeclRefExpr 0x7fd838077888 <col:7> 'const void *' lvalue Var 0x7fd838077760 'r' 'const void *'
+    | | | `-CStyleCastExpr 0x7fd838077cf0 <col:12, col:28> 'const void *' <IntegralToPointer>
+    | | |   `-ImplicitCastExpr 0x7fd838077928 <col:27, col:28> 'unsigned int' <LValueToRValue>
+    | | |     `-UnaryOperator 0x7fd8380778f0 <col:27, col:28> 'unsigned int' lvalue prefix '*'
+    | | |       `-ImplicitCastExpr 0x7fd8380778d8 <col:28> 'unsigned int *' <LValueToRValue>
+    | | |         `-DeclRefExpr 0x7fd8380778b0 <col:28> 'unsigned int *' lvalue ParmVar 0x7fd838077520 'p' 'unsigned int *'
+    | | `-BinaryOperator 0x7fd838077e50 <line:15:10, col:30> 'int' '<'
+    | |   |-ImplicitCastExpr 0x7fd838077e38 <col:10> 'const void *' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7fd838077d58 <col:10> 'const void *' lvalue Var 0x7fd838077760 'r' 'const void *'
+    | |   `-CStyleCastExpr 0x7fd838077e10 <col:14, col:30> 'const void *' <IntegralToPointer>
+    | |     `-ImplicitCastExpr 0x7fd838077df8 <col:29, col:30> 'unsigned int' <LValueToRValue>
+    | |       `-UnaryOperator 0x7fd838077dc0 <col:29, col:30> 'unsigned int' lvalue prefix '*'
+    | |         `-ImplicitCastExpr 0x7fd838077da8 <col:30> 'unsigned int *' <LValueToRValue>
+    | |           `-DeclRefExpr 0x7fd838077d80 <col:30> 'unsigned int *' lvalue ParmVar 0x7fd838077598 'q' 'unsigned int *'
+    | |-ReturnStmt 0x7fd838077ec0 <line:16:5, col:12>
+    | | `-IntegerLiteral 0x7fd838077ea0 <col:12> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fd838077f30 <line:18:3, col:10>
+      `-IntegerLiteral 0x7fd838077f10 <col:10> 'int' 0

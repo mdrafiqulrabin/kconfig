@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7fe27c0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe27c026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe27c026740 '__int128'
+|-TypedefDecl 0x7fe27c026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe27c026760 'unsigned __int128'
+|-TypedefDecl 0x7fe27c026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe27c026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe27c026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe27c026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe27c026dc0 'char *'
+|   `-BuiltinType 0x7fe27c026560 'char'
+|-TypedefDecl 0x7fe27c0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe27c027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe27c026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe27c026e58 '__va_list_tag'
+|-VarDecl 0x7fe27c027138 <c_files/pr57385.c:5:1, col:5> col:5 used c 'int'
+`-FunctionDecl 0x7fe27c825ac0 <line:7:1, line:11:1> line:7:6 foo 'void (int)'
+  |-ParmVarDecl 0x7fe27c825a00 <col:10, col:14> col:14 used f 'int'
+  `-CompoundStmt 0x7fe27c825f50 <line:8:1, line:11:1>
+    |-DeclStmt 0x7fe27c825c18 <line:9:3, col:21>
+    | `-VarDecl 0x7fe27c825b78 <col:3, col:12> col:7 used wbi 'int' cinit
+    |   `-UnaryOperator 0x7fe27c825bf8 <col:11, col:12> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7fe27c825bd8 <col:12> 'int' 100000000
+    `-BinaryOperator 0x7fe27c825f28 <line:10:3, col:58> 'int' '='
+      |-DeclRefExpr 0x7fe27c825c30 <col:3> 'int' lvalue Var 0x7fe27c027138 'c' 'int'
+      `-ImplicitCastExpr 0x7fe27c825f10 <col:7, col:58> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fe27c825ef8 <col:7, col:58> 'char' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fe27c825ed0 <col:7, col:58> 'char' lvalue
+            |-ParenExpr 0x7fe27c825e70 <col:7, col:53> 'char *'
+            | `-ConditionalOperator 0x7fe27c825e40 <col:8, col:33> 'char *'
+            |   |-ImplicitCastExpr 0x7fe27c825d38 <col:8> 'int' <LValueToRValue>
+            |   | `-DeclRefExpr 0x7fe27c825c58 <col:8> 'int' lvalue ParmVar 0x7fe27c825a00 'f' 'int'
+            |   |-ImplicitCastExpr 0x7fe27c825d50 <col:12> 'char *' <ArrayToPointerDecay>
+            |   | `-StringLiteral 0x7fe27c825cb8 <col:12> 'char [19]' lvalue "012346000000000000"
+            |   `-ImplicitCastExpr 0x7fe27c825d68 <col:33> 'char *' <ArrayToPointerDecay>
+            |     `-StringLiteral 0x7fe27c825cf8 <col:33> 'char [19]' lvalue "01345:000000006008"
+            `-ImplicitCastExpr 0x7fe27c825eb8 <col:55> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7fe27c825e90 <col:55> 'int' lvalue Var 0x7fe27c825b78 'wbi' 'int'

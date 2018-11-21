@@ -1,0 +1,48 @@
+c_files/pr56727-2.c:5:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone))
+                         ^
+c_files/pr56727-2.c:12:39: error: aliases are not supported on darwin
+static void g (short) __attribute__ ((alias ("f")));
+                                      ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fbe550264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbe55026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbe55026740 '__int128'
+|-TypedefDecl 0x7fbe55026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbe55026760 'unsigned __int128'
+|-TypedefDecl 0x7fbe55026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbe55026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbe55026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbe55026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbe55026dc0 'char *'
+|   `-BuiltinType 0x7fbe55026560 'char'
+|-TypedefDecl 0x7fbe550270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbe55027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbe55026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbe55026e58 '__va_list_tag'
+|-FunctionDecl 0x7fbe55049800 <c_files/pr56727-2.c:5:1, line:10:1> line:6:6 referenced f 'void (short)'
+| |-ParmVarDecl 0x7fbe55027138 <col:9, col:15> col:15 b 'short'
+| |-CompoundStmt 0x7fbe55049c88 <line:7:1, line:10:1>
+| | |-CallExpr 0x7fbe55049b70 <line:8:3, col:22> 'int'
+| | | |-ImplicitCastExpr 0x7fbe55049b58 <col:3> 'int (*)(void **)' <BuiltinFnToFnPtr>
+| | | | `-DeclRefExpr 0x7fbe55049ae0 <col:3> '<builtin fn type>' Function 0x7fbe55049998 '__builtin_setjmp' 'int (void **)'
+| | | `-ImplicitCastExpr 0x7fbe55049ba0 <col:21> 'void **' <NullToPointer>
+| | |   `-IntegerLiteral 0x7fbe55049b08 <col:21> 'int' 0
+| | `-CallExpr 0x7fbe55049c40 <line:9:3, col:7> 'void'
+| |   |-ImplicitCastExpr 0x7fbe55049c28 <col:3> 'void (*)(short)' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7fbe55049bb8 <col:3> 'void (short)' Function 0x7fbe55049800 'f' 'void (short)'
+| |   `-ImplicitCastExpr 0x7fbe55049c70 <col:6> 'short' <IntegralCast>
+| |     `-IntegerLiteral 0x7fbe55049be0 <col:6> 'int' 0
+| `-NoInlineAttr 0x7fbe550498a0 <line:5:16>
+|-FunctionDecl 0x7fbe55049998 <line:8:3> col:3 implicit used __builtin_setjmp 'int (void **)' extern
+| |-ParmVarDecl 0x7fbe55049a30 <<invalid sloc>> <invalid sloc> 'void **'
+| `-ReturnsTwiceAttr 0x7fbe55049a98 <col:3> Implicit
+|-FunctionDecl 0x7fbe55049dc0 <line:12:1, col:51> col:13 used g 'void (short)' static
+| `-ParmVarDecl 0x7fbe55049cc8 <col:16> col:21 'short'
+`-FunctionDecl 0x7fbe55049ea8 <line:14:1, line:17:1> line:14:6 h 'void ()'
+  `-CompoundStmt 0x7fbe55049fe8 <line:15:1, line:17:1>
+    `-CallExpr 0x7fbe55049fa0 <line:16:3, col:7> 'void'
+      |-ImplicitCastExpr 0x7fbe55049f88 <col:3> 'void (*)(short)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fbe55049f40 <col:3> 'void (short)' Function 0x7fbe55049dc0 'g' 'void (short)'
+      `-ImplicitCastExpr 0x7fbe55049fd0 <col:6> 'short' <IntegralCast>
+        `-IntegerLiteral 0x7fbe55049f68 <col:6> 'int' 0

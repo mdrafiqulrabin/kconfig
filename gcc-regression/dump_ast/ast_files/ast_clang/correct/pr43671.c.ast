@@ -1,0 +1,77 @@
+TranslationUnitDecl 0x7feca40264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feca4026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feca4026740 '__int128'
+|-TypedefDecl 0x7feca4026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feca4026760 'unsigned __int128'
+|-TypedefDecl 0x7feca4026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feca4026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7feca4026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feca4026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feca4026dc0 'char *'
+|   `-BuiltinType 0x7feca4026560 'char'
+|-TypedefDecl 0x7feca40270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feca4027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feca4026ee0 'struct __va_list_tag'
+|     `-Record 0x7feca4026e58 '__va_list_tag'
+|-FunctionDecl 0x7feca4825a00 <c_files/pr43671.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7feca4825a98 prev 0x7feca4825a00 <col:1, col:20> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7feca4825bb0 <line:7:1, line:27:1> line:7:5 main 'int ()'
+  `-CompoundStmt 0x7feca4826670 <line:8:1, line:27:1>
+    |-DeclStmt 0x7feca4825eb8 <line:9:3, line:11:6>
+    | |-RecordDecl 0x7feca4825c88 <line:9:3, line:11:3> line:9:3 struct definition
+    | | `-FieldDecl 0x7feca4825da8 <line:10:5, col:15> col:10 referenced ca 'char [16]'
+    | `-VarDecl 0x7feca4825e40 <line:9:3, line:11:5> col:5 used s 'struct (anonymous struct at c_files/pr43671.c:9:3)':'struct (anonymous at c_files/pr43671.c:9:3)'
+    |-DeclStmt 0x7feca4825f48 <line:12:3, col:8>
+    | `-VarDecl 0x7feca4825ee8 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7feca4826248 <line:14:3, line:17:5>
+    | |-BinaryOperator 0x7feca4825fa8 <line:14:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7feca4825f60 <col:8> 'int' lvalue Var 0x7feca4825ee8 'i' 'int'
+    | | `-IntegerLiteral 0x7feca4825f88 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7feca4826030 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7feca4826018 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7feca4825fd0 <col:15> 'int' lvalue Var 0x7feca4825ee8 'i' 'int'
+    | | `-IntegerLiteral 0x7feca4825ff8 <col:19> 'int' 16
+    | |-UnaryOperator 0x7feca4826080 <col:23, col:24> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7feca4826058 <col:23> 'int' lvalue Var 0x7feca4825ee8 'i' 'int'
+    | `-CompoundStmt 0x7feca4826228 <line:15:5, line:17:5>
+    |   `-BinaryOperator 0x7feca48261b8 <line:16:7, col:17> 'char' '='
+    |     |-ArraySubscriptExpr 0x7feca4826158 <col:7, col:13> 'char' lvalue
+    |     | |-ImplicitCastExpr 0x7feca4826128 <col:7, col:9> 'char *' <ArrayToPointerDecay>
+    |     | | `-MemberExpr 0x7feca48260c8 <col:7, col:9> 'char [16]' lvalue .ca 0x7feca4825da8
+    |     | |   `-DeclRefExpr 0x7feca48260a0 <col:7> 'struct (anonymous struct at c_files/pr43671.c:9:3)':'struct (anonymous at c_files/pr43671.c:9:3)' lvalue Var 0x7feca4825e40 's' 'struct (anonymous struct at c_files/pr43671.c:9:3)':'struct (anonymous at c_files/pr43671.c:9:3)'
+    |     | `-ImplicitCastExpr 0x7feca4826140 <col:12> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7feca4826100 <col:12> 'int' lvalue Var 0x7feca4825ee8 'i' 'int'
+    |     `-ImplicitCastExpr 0x7feca48261a0 <col:17> 'char' <IntegralCast>
+    |       `-IntegerLiteral 0x7feca4826180 <col:17> 'int' 5
+    |-ForStmt 0x7feca4826600 <line:20:3, line:24:5>
+    | |-BinaryOperator 0x7feca48262c8 <line:20:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7feca4826280 <col:8> 'int' lvalue Var 0x7feca4825ee8 'i' 'int'
+    | | `-IntegerLiteral 0x7feca48262a8 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7feca4826350 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7feca4826338 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7feca48262f0 <col:15> 'int' lvalue Var 0x7feca4825ee8 'i' 'int'
+    | | `-IntegerLiteral 0x7feca4826318 <col:19> 'int' 16
+    | |-UnaryOperator 0x7feca48263a0 <col:23, col:24> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7feca4826378 <col:23> 'int' lvalue Var 0x7feca4825ee8 'i' 'int'
+    | `-CompoundStmt 0x7feca48265e0 <line:21:5, line:24:5>
+    |   `-IfStmt 0x7feca48265a8 <line:22:7, line:23:16>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7feca48264f0 <line:22:11, col:22> 'int' '!='
+    |     | |-ImplicitCastExpr 0x7feca48264d8 <col:11, col:17> 'int' <IntegralCast>
+    |     | | `-ImplicitCastExpr 0x7feca48264c0 <col:11, col:17> 'char' <LValueToRValue>
+    |     | |   `-ArraySubscriptExpr 0x7feca4826478 <col:11, col:17> 'char' lvalue
+    |     | |     |-ImplicitCastExpr 0x7feca4826448 <col:11, col:13> 'char *' <ArrayToPointerDecay>
+    |     | |     | `-MemberExpr 0x7feca48263e8 <col:11, col:13> 'char [16]' lvalue .ca 0x7feca4825da8
+    |     | |     |   `-DeclRefExpr 0x7feca48263c0 <col:11> 'struct (anonymous struct at c_files/pr43671.c:9:3)':'struct (anonymous at c_files/pr43671.c:9:3)' lvalue Var 0x7feca4825e40 's' 'struct (anonymous struct at c_files/pr43671.c:9:3)':'struct (anonymous at c_files/pr43671.c:9:3)'
+    |     | |     `-ImplicitCastExpr 0x7feca4826460 <col:16> 'int' <LValueToRValue>
+    |     | |       `-DeclRefExpr 0x7feca4826420 <col:16> 'int' lvalue Var 0x7feca4825ee8 'i' 'int'
+    |     | `-IntegerLiteral 0x7feca48264a0 <col:22> 'int' 5
+    |     |-CallExpr 0x7feca4826580 <line:23:9, col:16> 'void'
+    |     | `-ImplicitCastExpr 0x7feca4826568 <col:9> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |     |   `-DeclRefExpr 0x7feca4826518 <col:9> 'void (void) __attribute__((noreturn))' Function 0x7feca4825a98 'abort' 'void (void) __attribute__((noreturn))'
+    |     `-<<<NULL>>>
+    `-ReturnStmt 0x7feca4826658 <line:26:3, col:10>
+      `-IntegerLiteral 0x7feca4826638 <col:10> 'int' 0

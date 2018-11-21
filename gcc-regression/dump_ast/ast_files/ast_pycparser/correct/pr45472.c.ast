@@ -1,0 +1,53 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: vl, ['volatile'], [], []
+        TypeDecl: vl, ['volatile']
+          IdentifierType: ['long']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+  Decl: s1, [], [], []
+    TypeDecl: s1, []
+      Struct: S
+  Decl: s2, [], [], []
+    TypeDecl: s2, []
+      Struct: S
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <=
+          ID: i
+          ID: j
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          If: 
+            ID: c
+            Assignment: +=
+              StructRef: .
+                ID: s2
+                ID: vl
+              StructRef: .
+                ID: s1
+                ID: vl
+          Assignment: =
+            ID: s1
+            ID: s2

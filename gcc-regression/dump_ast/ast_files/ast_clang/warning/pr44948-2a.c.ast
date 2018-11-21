@@ -1,0 +1,45 @@
+c_files/pr44948-2a.c:19:3: warning: implicit declaration of function 'foo' is invalid in C99 [-Wimplicit-function-declaration]
+  foo (8.0L, a, 8.0L);
+  ^
+1 warning generated.
+TranslationUnitDecl 0x7f9c348264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9c34826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9c34826740 '__int128'
+|-TypedefDecl 0x7f9c34826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9c34826760 'unsigned __int128'
+|-TypedefDecl 0x7f9c34826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9c34826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9c34826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9c34826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9c34826dc0 'char *'
+|   `-BuiltinType 0x7f9c34826560 'char'
+|-TypedefDecl 0x7f9c348270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9c34827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9c34826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9c34826e58 '__va_list_tag'
+|-RecordDecl 0x7f9c34827120 <c_files/pr44948-2a.c:10:1, line:13:1> line:10:8 struct A definition
+| `-FieldDecl 0x7f9c35026a38 <line:12:3, col:9> col:9 V4SF '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-FunctionDecl 0x7f9c35026b48 <line:15:1, line:21:1> line:16:1 main 'int (void)'
+| `-CompoundStmt 0x7f9c350271c0 <line:17:1, line:21:1>
+|   |-DeclStmt 0x7f9c35026f30 <line:18:3, col:34>
+|   | `-VarDecl 0x7f9c35026ca0 <col:3, col:33> col:12 used a 'struct A':'struct A' cinit
+|   |   `-InitListExpr 0x7f9c35026e28 <col:16, col:33> 'struct A':'struct A'
+|   |     `-InitListExpr 0x7f9c35026e70 <col:18, col:31> '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|   |       |-ImplicitCastExpr 0x7f9c35026ed0 <col:20> 'float' <IntegralToFloating>
+|   |       | `-IntegerLiteral 0x7f9c35026d00 <col:20> 'int' 0
+|   |       |-ImplicitCastExpr 0x7f9c35026ee8 <col:23> 'float' <IntegralToFloating>
+|   |       | `-IntegerLiteral 0x7f9c35026d20 <col:23> 'int' 1
+|   |       |-ImplicitCastExpr 0x7f9c35026f00 <col:26> 'float' <IntegralToFloating>
+|   |       | `-IntegerLiteral 0x7f9c35026d40 <col:26> 'int' 2
+|   |       `-ImplicitCastExpr 0x7f9c35026f18 <col:29> 'float' <IntegralToFloating>
+|   |         `-IntegerLiteral 0x7f9c35026d60 <col:29> 'int' 3
+|   |-CallExpr 0x7f9c35027130 <line:19:3, col:21> 'int'
+|   | |-ImplicitCastExpr 0x7f9c35027118 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f9c35027038 <col:3> 'int ()' Function 0x7f9c35026fa0 'foo' 'int ()'
+|   | |-FloatingLiteral 0x7f9c35027060 <col:8> 'long double' 8.000000e+00
+|   | |-ImplicitCastExpr 0x7f9c35027170 <col:14> 'struct A':'struct A' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f9c35027090 <col:14> 'struct A':'struct A' lvalue Var 0x7f9c35026ca0 'a' 'struct A':'struct A'
+|   | `-FloatingLiteral 0x7f9c350270b8 <col:17> 'long double' 8.000000e+00
+|   `-ReturnStmt 0x7f9c350271a8 <line:20:3, col:10>
+|     `-IntegerLiteral 0x7f9c35027188 <col:10> 'int' 0
+`-FunctionDecl 0x7f9c35026fa0 <<invalid sloc>> line:19:3 implicit used foo 'int ()'

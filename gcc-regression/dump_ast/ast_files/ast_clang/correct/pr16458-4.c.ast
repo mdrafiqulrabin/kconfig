@@ -1,0 +1,81 @@
+TranslationUnitDecl 0x7fa72e8222d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa72e822820 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa72e822540 '__int128'
+|-TypedefDecl 0x7fa72e822890 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa72e822560 'unsigned __int128'
+|-TypedefDecl 0x7fa72e822b68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa72e822970 'struct __NSConstantString_tag'
+|   `-Record 0x7fa72e8228e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa72e822c00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa72e822bc0 'char *'
+|   `-BuiltinType 0x7fa72e822360 'char'
+|-TypedefDecl 0x7fa72e822ec8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa72e822e70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa72e822ce0 'struct __va_list_tag'
+|     `-Record 0x7fa72e822c58 '__va_list_tag'
+|-FunctionDecl 0x7fa72f03d800 <c_files/pr16458-4.c:11:1, col:23> col:12 used case0 'int (void)' extern
+|-FunctionDecl 0x7fa72f03d970 <line:12:1, col:23> col:12 used case1 'int (void)' extern
+|-FunctionDecl 0x7fa72f03daa0 <line:13:1, col:23> col:12 used case2 'int (void)' extern
+|-FunctionDecl 0x7fa72f03dbd0 <line:14:1, col:23> col:12 used case3 'int (void)' extern
+|-FunctionDecl 0x7fa72f03dd00 <line:15:1, col:23> col:12 used case4 'int (void)' extern
+|-EnumDecl 0x7fa72f03dd98 <line:17:1, line:24:1> line:17:6 CASE_VALUES
+| |-EnumConstantDecl 0x7fa72f03de70 <line:19:3, col:11> col:3 referenced CASE0 'int'
+| | `-IntegerLiteral 0x7fa72f03de50 <col:11> 'int' 1
+| |-EnumConstantDecl 0x7fa72f03deb8 <line:20:3> col:3 referenced CASE1 'int'
+| |-EnumConstantDecl 0x7fa72f03df00 <line:21:3> col:3 referenced CASE2 'int'
+| |-EnumConstantDecl 0x7fa72f03df48 <line:22:3> col:3 referenced CASE3 'int'
+| `-EnumConstantDecl 0x7fa72f03df90 <line:23:3> col:3 referenced CASE4 'int'
+`-FunctionDecl 0x7fa72f03e198 <line:26:1, line:44:1> line:27:1 foo 'int (enum CASE_VALUES *)'
+  |-ParmVarDecl 0x7fa72f03e090 <col:6, col:24> col:24 used index 'enum CASE_VALUES *'
+  `-CompoundStmt 0x7fa72e816a80 <line:28:1, line:44:1>
+    |-SwitchStmt 0x7fa72f03e2c8 <line:29:3, line:41:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fa72f03e2b0 <line:29:11, col:12> 'unsigned int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7fa72f03e298 <col:11, col:12> 'enum CASE_VALUES':'enum CASE_VALUES' <LValueToRValue>
+    | |   `-UnaryOperator 0x7fa72f03e278 <col:11, col:12> 'enum CASE_VALUES':'enum CASE_VALUES' lvalue prefix '*'
+    | |     `-ImplicitCastExpr 0x7fa72f03e260 <col:12> 'enum CASE_VALUES *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fa72f03e238 <col:12> 'enum CASE_VALUES *' lvalue ParmVar 0x7fa72f03e090 'index' 'enum CASE_VALUES *'
+    | `-CompoundStmt 0x7fa72f03e780 <line:30:5, line:41:5>
+    |   |-CaseStmt 0x7fa72f03e320 <line:31:5, line:32:21>
+    |   | |-ImplicitCastExpr 0x7fa72e816a30 <line:31:10> 'unsigned int' <IntegralCast>
+    |   | | `-DeclRefExpr 0x7fa72f03e2f8 <col:10> 'int' EnumConstant 0x7fa72f03de70 'CASE0' 'int'
+    |   | |-<<<NULL>>>
+    |   | `-ReturnStmt 0x7fa72f03e3e8 <line:32:7, col:21>
+    |   |   `-CallExpr 0x7fa72f03e3c0 <col:14, col:21> 'int'
+    |   |     `-ImplicitCastExpr 0x7fa72f03e3a8 <col:14> 'int (*)(void)' <FunctionToPointerDecay>
+    |   |       `-DeclRefExpr 0x7fa72f03e358 <col:14> 'int (void)' Function 0x7fa72f03d800 'case0' 'int (void)'
+    |   |-CaseStmt 0x7fa72f03e428 <line:33:5, line:34:21>
+    |   | |-ImplicitCastExpr 0x7fa72e816a18 <line:33:10> 'unsigned int' <IntegralCast>
+    |   | | `-DeclRefExpr 0x7fa72f03e400 <col:10> 'int' EnumConstant 0x7fa72f03deb8 'CASE1' 'int'
+    |   | |-<<<NULL>>>
+    |   | `-ReturnStmt 0x7fa72f03e4c8 <line:34:7, col:21>
+    |   |   `-CallExpr 0x7fa72f03e4a0 <col:14, col:21> 'int'
+    |   |     `-ImplicitCastExpr 0x7fa72f03e488 <col:14> 'int (*)(void)' <FunctionToPointerDecay>
+    |   |       `-DeclRefExpr 0x7fa72f03e460 <col:14> 'int (void)' Function 0x7fa72f03d970 'case1' 'int (void)'
+    |   |-CaseStmt 0x7fa72f03e508 <line:35:5, line:36:21>
+    |   | |-ImplicitCastExpr 0x7fa72e816a00 <line:35:10> 'unsigned int' <IntegralCast>
+    |   | | `-DeclRefExpr 0x7fa72f03e4e0 <col:10> 'int' EnumConstant 0x7fa72f03df00 'CASE2' 'int'
+    |   | |-<<<NULL>>>
+    |   | `-ReturnStmt 0x7fa72f03e5a8 <line:36:7, col:21>
+    |   |   `-CallExpr 0x7fa72f03e580 <col:14, col:21> 'int'
+    |   |     `-ImplicitCastExpr 0x7fa72f03e568 <col:14> 'int (*)(void)' <FunctionToPointerDecay>
+    |   |       `-DeclRefExpr 0x7fa72f03e540 <col:14> 'int (void)' Function 0x7fa72f03daa0 'case2' 'int (void)'
+    |   |-CaseStmt 0x7fa72f03e5e8 <line:37:5, line:38:21>
+    |   | |-ImplicitCastExpr 0x7fa72f03e7d8 <line:37:10> 'unsigned int' <IntegralCast>
+    |   | | `-DeclRefExpr 0x7fa72f03e5c0 <col:10> 'int' EnumConstant 0x7fa72f03df48 'CASE3' 'int'
+    |   | |-<<<NULL>>>
+    |   | `-ReturnStmt 0x7fa72f03e688 <line:38:7, col:21>
+    |   |   `-CallExpr 0x7fa72f03e660 <col:14, col:21> 'int'
+    |   |     `-ImplicitCastExpr 0x7fa72f03e648 <col:14> 'int (*)(void)' <FunctionToPointerDecay>
+    |   |       `-DeclRefExpr 0x7fa72f03e620 <col:14> 'int (void)' Function 0x7fa72f03dbd0 'case3' 'int (void)'
+    |   `-CaseStmt 0x7fa72f03e6c8 <line:39:5, line:40:21>
+    |     |-ImplicitCastExpr 0x7fa72f03e7c0 <line:39:10> 'unsigned int' <IntegralCast>
+    |     | `-DeclRefExpr 0x7fa72f03e6a0 <col:10> 'int' EnumConstant 0x7fa72f03df90 'CASE4' 'int'
+    |     |-<<<NULL>>>
+    |     `-ReturnStmt 0x7fa72f03e768 <line:40:7, col:21>
+    |       `-CallExpr 0x7fa72f03e740 <col:14, col:21> 'int'
+    |         `-ImplicitCastExpr 0x7fa72f03e728 <col:14> 'int (*)(void)' <FunctionToPointerDecay>
+    |           `-DeclRefExpr 0x7fa72f03e700 <col:14> 'int (void)' Function 0x7fa72f03dd00 'case4' 'int (void)'
+    `-ReturnStmt 0x7fa72e816a68 <line:43:3, col:10>
+      `-IntegerLiteral 0x7fa72e816a48 <col:10> 'int' 0

@@ -1,0 +1,167 @@
+FileAST: 
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+          Decl: t, [], [], []
+            TypeDecl: t, []
+              IdentifierType: ['int']
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['double']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['double']
+          Decl: z, [], [], []
+            PtrDecl: []
+              TypeDecl: z, []
+                IdentifierType: ['double']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+          Decl: fnp, [], [], []
+            PtrDecl: []
+              FuncDecl: 
+                ParamList: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['double']
+                TypeDecl: fnp, []
+                  IdentifierType: ['double', '_Complex']
+        TypeDecl: test, []
+          IdentifierType: ['double', '_Complex']
+    Compound: 
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          IdentifierType: ['int']
+        BinaryOp: /
+          ID: n
+          Constant: int, 2
+      Decl: min, [], [], []
+        TypeDecl: min, []
+          IdentifierType: ['double']
+        ArrayRef: 
+          ID: y
+          ID: t
+      Decl: max, [], [], []
+        TypeDecl: max, []
+          IdentifierType: ['double']
+        ArrayRef: 
+          ID: z
+          ID: t
+      Decl: med, [], [], []
+        TypeDecl: med, []
+          IdentifierType: ['double']
+        ArrayRef: 
+          ID: x
+          BinaryOp: +
+            BinaryOp: *
+              ID: m
+              ID: d
+            ID: t
+      Decl: result, [], [], []
+        TypeDecl: result, []
+          IdentifierType: ['double', '_Complex']
+        Constant: float, 0.0
+      If: 
+        BinaryOp: ==
+          ID: n
+          Constant: int, 0
+        Return: 
+          Constant: float, 0.0
+      If: 
+        BinaryOp: >
+          ID: min
+          ID: med
+        Assignment: +=
+          ID: result
+          FuncCall: 
+            ID: test
+            ExprList: 
+              ID: d
+              BinaryOp: %
+                BinaryOp: +
+                  ID: t
+                  Constant: int, 1
+                ID: d
+              BinaryOp: +
+                ID: x
+                BinaryOp: *
+                  BinaryOp: +
+                    ID: m
+                    Constant: int, 1
+                  ID: d
+              ID: y
+              ID: z
+              BinaryOp: -
+                BinaryOp: -
+                  ID: n
+                  ID: m
+                Constant: int, 1
+              ID: fnp
+        If: 
+          BinaryOp: <
+            ID: max
+            ID: med
+          Assignment: +=
+            ID: result
+            FuncCall: 
+              ID: test
+              ExprList: 
+                ID: d
+                BinaryOp: %
+                  BinaryOp: +
+                    ID: t
+                    Constant: int, 1
+                  ID: d
+                ID: x
+                ID: y
+                ID: z
+                ID: m
+                ID: fnp
+          Compound: 
+            Assignment: +=
+              ID: result
+              FuncCall: 
+                ID: fnp
+                ExprList: 
+                  BinaryOp: +
+                    ArrayRef: 
+                      ID: y
+                      Constant: int, 0
+                    ArrayRef: 
+                      ID: x
+                      ID: m
+            Assignment: +=
+              ID: result
+              FuncCall: 
+                ID: test
+                ExprList: 
+                  ID: d
+                  BinaryOp: %
+                    BinaryOp: +
+                      ID: t
+                      Constant: int, 1
+                    ID: d
+                  BinaryOp: +
+                    ID: x
+                    BinaryOp: *
+                      BinaryOp: +
+                        ID: m
+                        Constant: int, 1
+                      ID: d
+                  ID: y
+                  ID: z
+                  BinaryOp: -
+                    BinaryOp: -
+                      ID: n
+                      ID: m
+                    Constant: int, 1
+                  ID: fnp
+      Return: 
+        ID: result

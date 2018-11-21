@@ -1,0 +1,62 @@
+c_files/pr70052.c:6:3: error: GNU decimal type extension not supported
+  _Decimal128 td0;
+  ^
+c_files/pr70052.c:7:3: error: GNU decimal type extension not supported
+  _Decimal128 td1;
+  ^
+c_files/pr70052.c:14:3: error: GNU decimal type extension not supported
+  _Decimal128 z, zz;
+  ^
+c_files/pr70052.c:15:22: error: invalid suffix 'DL' on floating constant
+  TDx2_t result = {0.DL, 0.DL};
+                     ^
+c_files/pr70052.c:15:28: error: invalid suffix 'DL' on floating constant
+  TDx2_t result = {0.DL, 0.DL};
+                           ^
+c_files/pr70052.c:17:15: error: invalid suffix 'DL' on floating constant
+  if (zz == 0.DL)
+              ^
+c_files/pr70052.c:17:7: error: use of undeclared identifier 'zz'
+  if (zz == 0.DL)
+      ^
+7 errors generated.
+TranslationUnitDecl 0x7f8f0d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8f0d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8f0d026740 '__int128'
+|-TypedefDecl 0x7f8f0d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8f0d026760 'unsigned __int128'
+|-TypedefDecl 0x7f8f0d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8f0d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8f0d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8f0d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8f0d026dc0 'char *'
+|   `-BuiltinType 0x7f8f0d026560 'char'
+|-TypedefDecl 0x7f8f0d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8f0d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8f0d026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8f0d026e58 '__va_list_tag'
+|-RecordDecl 0x7f8f0d027120 <c_files/pr70052.c:4:9, line:8:1> line:4:9 invalid struct definition
+| |-FieldDecl 0x7f8f0d825a00 <line:6:3, col:15> col:15 invalid td0 'int'
+| `-FieldDecl 0x7f8f0d825a60 <line:7:3, col:15> col:15 invalid td1 'int'
+|-TypedefDecl 0x7f8f0d825b00 <line:4:1, line:8:3> col:3 referenced TDx2_t 'struct (anonymous struct at c_files/pr70052.c:4:9)':'struct (anonymous at c_files/pr70052.c:4:9)'
+| `-ElaboratedType 0x7f8f0d825ab0 'struct (anonymous struct at c_files/pr70052.c:4:9)' sugar
+|   `-RecordType 0x7f8f0d0271b0 'struct (anonymous at c_files/pr70052.c:4:9)'
+|     `-Record 0x7f8f0d027120 ''
+`-FunctionDecl 0x7f8f0d825c80 <line:11:1, line:24:1> line:12:1 D256_add_finite 'TDx2_t (void)'
+  `-CompoundStmt 0x7f8f0d825fe8 <line:13:1, line:24:1>
+    |-DeclStmt 0x7f8f0d825dd0 <line:14:3, col:20>
+    | `-VarDecl 0x7f8f0d825d70 <col:3, col:15> col:15 invalid z 'int'
+    |-DeclStmt 0x7f8f0d825e58 <line:15:3, col:31>
+    | `-VarDecl 0x7f8f0d825df8 <col:3, col:10> col:10 used result 'TDx2_t':'struct (anonymous at c_files/pr70052.c:4:9)'
+    |-IfStmt 0x7f8f0d825f58 <line:17:3, line:21:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7f8f0d825f38 <<invalid sloc>> '_Bool'
+    | |-CompoundStmt 0x7f8f0d825f18 <line:18:3, line:21:3>
+    | | `-ReturnStmt 0x7f8f0d825f00 <line:20:5, col:12>
+    | |   `-ImplicitCastExpr 0x7f8f0d825ee8 <col:12> 'TDx2_t':'struct (anonymous at c_files/pr70052.c:4:9)' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f8f0d825ec0 <col:12> 'TDx2_t':'struct (anonymous at c_files/pr70052.c:4:9)' lvalue Var 0x7f8f0d825df8 'result' 'TDx2_t':'struct (anonymous at c_files/pr70052.c:4:9)'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f8f0d825fd0 <line:23:3, col:10>
+      `-ImplicitCastExpr 0x7f8f0d825fb8 <col:10> 'TDx2_t':'struct (anonymous at c_files/pr70052.c:4:9)' <LValueToRValue>
+        `-DeclRefExpr 0x7f8f0d825f90 <col:10> 'TDx2_t':'struct (anonymous at c_files/pr70052.c:4:9)' lvalue Var 0x7f8f0d825df8 'result' 'TDx2_t':'struct (anonymous at c_files/pr70052.c:4:9)'

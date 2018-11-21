@@ -1,0 +1,95 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: o, [], [], []
+    TypeDecl: o, []
+      IdentifierType: ['int']
+  Decl: u, [], [], []
+    TypeDecl: u, []
+      IdentifierType: ['int']
+  Decl: w, [], [], []
+    TypeDecl: w, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  Decl: z, [], [], []
+    TypeDecl: z, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['short']
+  Decl: q, [], [], []
+    TypeDecl: q, []
+      IdentifierType: ['short']
+  Decl: t, [], [], []
+    TypeDecl: t, []
+      IdentifierType: ['short']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['char']
+      For: 
+        ID: d
+        UnaryOp: p--
+          ID: d
+        Compound: 
+          While: 
+            ID: o
+            For: 
+              ID: e
+              Compound: 
+                Assignment: =
+                  ID: c
+                  ID: b
+                Decl: h, [], [], []
+                  TypeDecl: h, []
+                    IdentifierType: ['int']
+                  Assignment: =
+                    ID: o
+                    ID: z
+                For: 
+                  ID: u
+                  For: 
+                    ID: a
+                    EmptyStatement: 
+          If: 
+            BinaryOp: <
+              ID: t
+              Constant: int, 1
+            Assignment: =
+              ID: g
+              ID: w
+          Assignment: =
+            ID: f
+            ID: g
+          BinaryOp: &&
+            ID: g
+            Assignment: =
+              ID: q
+              Constant: int, 1
+      If: 
+        BinaryOp: !=
+          ID: q
+          Constant: int, 1
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

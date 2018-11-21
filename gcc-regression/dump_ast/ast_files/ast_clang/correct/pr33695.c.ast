@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fbb6e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbb6e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbb6e026740 '__int128'
+|-TypedefDecl 0x7fbb6e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbb6e026760 'unsigned __int128'
+|-TypedefDecl 0x7fbb6e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbb6e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbb6e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbb6e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbb6e026dc0 'char *'
+|   `-BuiltinType 0x7fbb6e026560 'char'
+|-TypedefDecl 0x7fbb6e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbb6e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbb6e026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbb6e026e58 '__va_list_tag'
+`-FunctionDecl 0x7fbb6e825b68 <c_files/pr33695.c:5:1, line:8:1> line:5:14 bfstages 'unsigned int (int, float *, int)'
+  |-ParmVarDecl 0x7fbb6e027138 <col:23, col:27> col:27 used M 'int'
+  |-ParmVarDecl 0x7fbb6e825a00 <col:30, col:37> col:37 Utbl 'float *'
+  |-ParmVarDecl 0x7fbb6e825a78 <col:43, col:47> col:47 used Ustride 'int'
+  `-CompoundStmt 0x7fbb6e825dd8 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7fbb6e825dc0 <line:7:4, col:37>
+      `-BinaryOperator 0x7fbb6e825d98 <col:11, col:37> 'unsigned int' '*'
+        |-ParenExpr 0x7fbb6e825d20 <col:11, col:33> 'unsigned int'
+        | `-BinaryOperator 0x7fbb6e825cf8 <col:12, col:32> 'unsigned int' '<<'
+        |   |-CStyleCastExpr 0x7fbb6e825c90 <col:12, col:27> 'unsigned int' <IntegralCast>
+        |   | `-IntegerLiteral 0x7fbb6e825c58 <col:27> 'int' 1
+        |   `-ImplicitCastExpr 0x7fbb6e825ce0 <col:32> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fbb6e825cb8 <col:32> 'int' lvalue ParmVar 0x7fbb6e027138 'M' 'int'
+        `-ImplicitCastExpr 0x7fbb6e825d80 <col:37> 'unsigned int' <IntegralCast>
+          `-ImplicitCastExpr 0x7fbb6e825d68 <col:37> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fbb6e825d40 <col:37> 'int' lvalue ParmVar 0x7fbb6e825a78 'Ustride' 'int'

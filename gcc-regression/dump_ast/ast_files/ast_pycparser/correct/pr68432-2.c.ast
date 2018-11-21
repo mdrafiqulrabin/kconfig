@@ -1,0 +1,31 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['float']
+        TypeDecl: f1, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_rintf
+          ExprList: 
+            ID: f
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['double']
+        TypeDecl: f2, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_rint
+          ExprList: 
+            ID: f

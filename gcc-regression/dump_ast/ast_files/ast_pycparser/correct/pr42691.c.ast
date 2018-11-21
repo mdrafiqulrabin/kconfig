@@ -1,0 +1,145 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: None, [], [], []
+    Union: _D_rep
+      Decl: rep, [], [], []
+        ArrayDecl: []
+          TypeDecl: rep, []
+            IdentifierType: ['unsigned', 'short']
+          Constant: int, 4
+      Decl: val, [], [], []
+        TypeDecl: val, []
+          IdentifierType: ['double']
+  FuncDef: 
+    Decl: add, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: key, [], [], []
+            PtrDecl: []
+              TypeDecl: key, []
+                IdentifierType: ['double']
+          Decl: table, [], [], []
+            PtrDecl: []
+              TypeDecl: table, []
+                IdentifierType: ['double']
+        TypeDecl: add, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned']
+        Constant: int, 0
+      Decl: deletedEntry, [], [], []
+        PtrDecl: []
+          TypeDecl: deletedEntry, []
+            IdentifierType: ['double']
+        Constant: int, 0
+      While: 
+        Constant: int, 1
+        Compound: 
+          Decl: entry, [], [], []
+            PtrDecl: []
+              TypeDecl: entry, []
+                IdentifierType: ['double']
+            BinaryOp: +
+              ID: table
+              ID: i
+          If: 
+            BinaryOp: ==
+              UnaryOp: *
+                ID: entry
+              UnaryOp: *
+                ID: key
+            Break: 
+          Decl: _D_inf, [], [], []
+            TypeDecl: _D_inf, []
+              Union: _D_rep
+            InitList: 
+              InitList: 
+                Constant: int, 0
+                Constant: int, 0
+                Constant: int, 0
+                Constant: int, 0x7ff0
+          If: 
+            BinaryOp: !=
+              UnaryOp: *
+                ID: entry
+              StructRef: .
+                ID: _D_inf
+                ID: val
+            FuncCall: 
+              ID: abort
+          Decl: _D_inf2, [], [], []
+            TypeDecl: _D_inf2, []
+              Union: _D_rep
+            InitList: 
+              InitList: 
+                Constant: int, 0
+                Constant: int, 0
+                Constant: int, 0
+                Constant: int, 0x7ff0
+          If: 
+            UnaryOp: !
+              StructRef: .
+                ID: _D_inf2
+                ID: val
+            Assignment: =
+              ID: deletedEntry
+              ID: entry
+          UnaryOp: p++
+            ID: i
+      If: 
+        ID: deletedEntry
+        Assignment: =
+          UnaryOp: *
+            ID: deletedEntry
+          Constant: float, 0.0
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: infinit, [], [], []
+        TypeDecl: infinit, []
+          Union: _D_rep
+        InitList: 
+          InitList: 
+            Constant: int, 0
+            Constant: int, 0
+            Constant: int, 0
+            Constant: int, 0x7ff0
+      Decl: table, [], [], []
+        ArrayDecl: []
+          TypeDecl: table, []
+            IdentifierType: ['double']
+          Constant: int, 2
+        InitList: 
+          StructRef: .
+            ID: infinit
+            ID: val
+          Constant: int, 23
+      Decl: key, [], [], []
+        TypeDecl: key, []
+          IdentifierType: ['double']
+        Constant: int, 23
+      Decl: ret, [], [], []
+        TypeDecl: ret, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: add
+          ExprList: 
+            UnaryOp: &
+              ID: key
+            ID: table
+      Return: 
+        ID: ret

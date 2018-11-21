@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7f8f448264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8f44826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8f44826740 '__int128'
+|-TypedefDecl 0x7f8f44826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8f44826760 'unsigned __int128'
+|-TypedefDecl 0x7f8f44826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8f44826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8f44826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8f44826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8f44826dc0 'char *'
+|   `-BuiltinType 0x7f8f44826560 'char'
+|-TypedefDecl 0x7f8f448270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8f44827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8f44826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8f44826e58 '__va_list_tag'
+`-FunctionDecl 0x7f8f45025ad8 <c_files/pr42113.c:4:1, line:12:1> line:4:5 foo 'int (int, int)'
+  |-ParmVarDecl 0x7f8f44827138 <col:10, col:14> col:14 used a 'int'
+  |-ParmVarDecl 0x7f8f45025a00 <col:17, col:21> col:21 used b 'int'
+  `-CompoundStmt 0x7f8f45025e88 <line:5:1, line:12:1>
+    |-DeclStmt 0x7f8f45025d08 <line:6:3, col:29>
+    | `-VarDecl 0x7f8f45025bd8 <col:3, col:28> col:7 used bar 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8f45025cf0 <col:13, col:28> 'int' <IntegralCast>
+    |     `-BinaryOperator 0x7f8f45025cc8 <col:13, col:28> 'unsigned long' '*'
+    |       |-ImplicitCastExpr 0x7f8f45025cb0 <col:13> 'unsigned long' <IntegralCast>
+    |       | `-ImplicitCastExpr 0x7f8f45025c98 <col:13> 'int' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7f8f45025c38 <col:13> 'int' lvalue ParmVar 0x7f8f44827138 'a' 'int'
+    |       `-UnaryExprOrTypeTraitExpr 0x7f8f45025c78 <col:17, col:28> 'unsigned long' sizeof 'int'
+    |-IfStmt 0x7f8f45025df8 <line:8:3, line:9:23>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f8f45025d48 <line:8:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f8f45025d20 <col:7> 'int' lvalue ParmVar 0x7f8f45025a00 'b' 'int'
+    | |-CompoundAssignOperator 0x7f8f45025dc0 <line:9:5, col:23> 'int' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    | | |-DeclRefExpr 0x7f8f45025d60 <col:5> 'int' lvalue Var 0x7f8f45025bd8 'bar' 'int'
+    | | `-UnaryExprOrTypeTraitExpr 0x7f8f45025da0 <col:12, col:23> 'unsigned long' sizeof 'int'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f8f45025e70 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7f8f45025e58 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f8f45025e30 <col:10> 'int' lvalue Var 0x7f8f45025bd8 'bar' 'int'

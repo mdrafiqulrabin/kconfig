@@ -1,0 +1,72 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: p, []
+                  IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: posix_memalign
+      FuncCall: 
+        ID: posix_memalign
+        ExprList: 
+          ID: p
+      FuncCall: 
+        ID: posix_memalign
+        ExprList: 
+          Constant: int, 0
+      FuncCall: 
+        ID: posix_memalign
+        ExprList: 
+          ID: p
+          Constant: int, 1
+      FuncCall: 
+        ID: posix_memalign
+        ExprList: 
+          ID: p
+          Constant: string, "foo"
+      FuncCall: 
+        ID: posix_memalign
+        ExprList: 
+          Constant: string, "gnu"
+          Constant: string, "gcc"
+      FuncCall: 
+        ID: posix_memalign
+        ExprList: 
+          Constant: int, 1
+          ID: p
+      FuncCall: 
+        ID: posix_memalign
+        ExprList: 
+          Constant: int, 1
+          Constant: int, 2
+      FuncCall: 
+        ID: posix_memalign
+        ExprList: 
+          Constant: int, 1
+          Constant: int, 2
+          Constant: int, 3
+      FuncCall: 
+        ID: posix_memalign
+        ExprList: 
+          ID: p
+          ID: p
+          ID: p
+      FuncCall: 
+        ID: posix_memalign
+        ExprList: 
+          ID: p
+          Constant: string, "qui"
+          Constant: int, 3
+      FuncCall: 
+        ID: posix_memalign
+        ExprList: 
+          ID: p
+          Constant: int, 1
+          Constant: int, 2

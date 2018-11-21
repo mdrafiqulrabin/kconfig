@@ -1,0 +1,51 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: frame_info
+  Decl: tui_registers_changed_hook, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: tui_registers_changed_hook, []
+        IdentifierType: ['void']
+  Decl: deprecated_selected_frame, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: deprecated_selected_frame, []
+        Struct: frame_info
+  Decl: tui_refreshing_registers, [], [], []
+    TypeDecl: tui_refreshing_registers, []
+      IdentifierType: ['int']
+    Constant: int, 0
+  FuncDef: 
+    Decl: tui_registers_changed_hook, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: tui_registers_changed_hook, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: fi, [], [], []
+        PtrDecl: []
+          TypeDecl: fi, []
+            Struct: frame_info
+      Assignment: =
+        ID: fi
+        ID: deprecated_selected_frame
+      If: 
+        ID: fi
+        Compound: 
+          If: 
+            BinaryOp: ==
+              ID: tui_refreshing_registers
+              Constant: int, 0
+            Compound: 
+              Assignment: =
+                ID: tui_refreshing_registers
+                Constant: int, 1
+              Assignment: =
+                ID: tui_refreshing_registers
+                Constant: int, 0
+      Return: 

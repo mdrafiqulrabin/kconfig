@@ -1,0 +1,59 @@
+c_files/pr18921-1.c:10:17: warning: equality comparison result unused [-Wunused-comparison]
+  (k ? 0 : j++) == -1;
+  ~~~~~~~~~~~~~~^~~~~
+1 warning generated.
+TranslationUnitDecl 0x7fd3308264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd330826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd330826740 '__int128'
+|-TypedefDecl 0x7fd330826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd330826760 'unsigned __int128'
+|-TypedefDecl 0x7fd330826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd330826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd330826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd330826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd330826dc0 'char *'
+|   `-BuiltinType 0x7fd330826560 'char'
+|-TypedefDecl 0x7fd3308270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd330827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd330826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd330826e58 '__va_list_tag'
+|-FunctionDecl 0x7fd331025a30 <c_files/pr18921-1.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd331025ac8 prev 0x7fd331025a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd331025c48 <line:7:1, line:12:1> line:7:5 used foo 'int (int)'
+| |-ParmVarDecl 0x7fd331025b78 <col:10, col:14> col:14 used k 'int'
+| `-CompoundStmt 0x7fd331025fd8 <line:8:1, line:12:1>
+|   |-DeclStmt 0x7fd331025dd8 <line:9:3, col:22>
+|   | `-VarDecl 0x7fd331025d40 <col:3, col:21> col:17 used j 'unsigned char' cinit
+|   |   `-ImplicitCastExpr 0x7fd331025dc0 <col:21> 'unsigned char' <IntegralCast>
+|   |     `-IntegerLiteral 0x7fd331025da0 <col:21> 'int' 0
+|   |-BinaryOperator 0x7fd331025f40 <line:10:3, col:21> 'int' '=='
+|   | |-ParenExpr 0x7fd331025ee0 <col:3, col:15> 'int'
+|   | | `-ConditionalOperator 0x7fd331025eb0 <col:4, col:13> 'int'
+|   | |   |-ImplicitCastExpr 0x7fd331025e80 <col:4> 'int' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7fd331025df0 <col:4> 'int' lvalue ParmVar 0x7fd331025b78 'k' 'int'
+|   | |   |-IntegerLiteral 0x7fd331025e18 <col:8> 'int' 0
+|   | |   `-ImplicitCastExpr 0x7fd331025e98 <col:12, col:13> 'int' <IntegralCast>
+|   | |     `-UnaryOperator 0x7fd331025e60 <col:12, col:13> 'unsigned char' postfix '++'
+|   | |       `-DeclRefExpr 0x7fd331025e38 <col:12> 'unsigned char' lvalue Var 0x7fd331025d40 'j' 'unsigned char'
+|   | `-UnaryOperator 0x7fd331025f20 <col:20, col:21> 'int' prefix '-'
+|   |   `-IntegerLiteral 0x7fd331025f00 <col:21> 'int' 1
+|   `-ReturnStmt 0x7fd331025fc0 <line:11:3, col:10>
+|     `-ImplicitCastExpr 0x7fd331025fa8 <col:10> 'int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7fd331025f90 <col:10> 'unsigned char' <LValueToRValue>
+|         `-DeclRefExpr 0x7fd331025f68 <col:10> 'unsigned char' lvalue Var 0x7fd331025d40 'j' 'unsigned char'
+`-FunctionDecl 0x7fd331026060 <line:14:1, line:19:1> line:14:5 main 'int ()'
+  `-CompoundStmt 0x7fd3310262d8 <line:15:1, line:19:1>
+    |-IfStmt 0x7fd331026268 <line:16:3, line:17:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fd3310261b0 <line:16:7, col:14> 'int' prefix '!'
+    | | `-CallExpr 0x7fd331026180 <col:8, col:14> 'int'
+    | |   |-ImplicitCastExpr 0x7fd331026168 <col:8> 'int (*)(int)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7fd3310260f8 <col:8> 'int (int)' Function 0x7fd331025c48 'foo' 'int (int)'
+    | |   `-IntegerLiteral 0x7fd331026120 <col:13> 'int' 0
+    | |-CallExpr 0x7fd331026240 <line:17:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fd331026228 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd3310261d0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fd331025ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fd3310262c0 <line:18:3, col:10>
+      `-IntegerLiteral 0x7fd3310262a0 <col:10> 'int' 0

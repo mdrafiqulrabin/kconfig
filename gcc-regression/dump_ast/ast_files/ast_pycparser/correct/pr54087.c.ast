@@ -1,0 +1,46 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: f1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: ==
+          FuncCall: 
+            ID: __atomic_sub_fetch
+            ExprList: 
+              UnaryOp: &
+                ID: a
+              ID: p
+              ID: __ATOMIC_SEQ_CST
+          Constant: int, 0
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: f2, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: ==
+          BinaryOp: -
+            FuncCall: 
+              ID: __atomic_fetch_sub
+              ExprList: 
+                UnaryOp: &
+                  ID: a
+                ID: p
+                ID: __ATOMIC_SEQ_CST
+            ID: p
+          Constant: int, 0

@@ -1,0 +1,60 @@
+c_files/pr51694.c:6:11: warning: implicit declaration of function 'baz' is invalid in C99 [-Wimplicit-function-declaration]
+  int a = baz ((void *) 0, x);
+          ^
+c_files/pr51694.c:14:9: warning: too few arguments in call to 'foo'
+  foo (x);
+  ~~~   ^
+c_files/pr51694.c:14:8: warning: incompatible pointer to integer conversion passing 'void *' to parameter of type 'int' [-Wint-conversion]
+  foo (x);
+       ^
+3 warnings generated.
+TranslationUnitDecl 0x7f8d508264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8d50826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8d50826740 '__int128'
+|-TypedefDecl 0x7f8d50826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8d50826760 'unsigned __int128'
+|-TypedefDecl 0x7f8d50826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8d50826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8d50826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8d50826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8d50826dc0 'char *'
+|   `-BuiltinType 0x7f8d50826560 'char'
+|-TypedefDecl 0x7f8d508270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8d50827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8d50826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8d50826e58 '__va_list_tag'
+|-FunctionDecl 0x7f8d5086ddc0 <c_files/pr51694.c:2:1, line:8:1> line:3:1 used foo 'void (int, void (*)())'
+| |-ParmVarDecl 0x7f8d5086dca8 <col:6> col:6 used x 'int'
+| |-ParmVarDecl 0x7f8d5086dc30 <line:4:3, col:15> col:10 used fn 'void (*)()'
+| `-CompoundStmt 0x7f8d5086e298 <line:5:1, line:8:1>
+|   |-DeclStmt 0x7f8d5086e150 <line:6:3, col:30>
+|   | `-VarDecl 0x7f8d5086dec0 <col:3, col:29> col:7 a 'int' cinit
+|   |   `-CallExpr 0x7f8d5086e100 <col:11, col:29> 'int'
+|   |     |-ImplicitCastExpr 0x7f8d5086e0e8 <col:11> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f8d5086e008 <col:11> 'int ()' Function 0x7f8d5086df70 'baz' 'int ()'
+|   |     |-CStyleCastExpr 0x7f8d5086e068 <col:16, col:25> 'void *' <NullToPointer>
+|   |     | `-IntegerLiteral 0x7f8d5086e030 <col:25> 'int' 0
+|   |     `-ImplicitCastExpr 0x7f8d5086e138 <col:28> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f8d5086e090 <col:28> 'int' lvalue ParmVar 0x7f8d5086dca8 'x' 'int'
+|   `-CallExpr 0x7f8d5086e248 <line:7:3, col:14> 'void'
+|     |-ImplicitCastExpr 0x7f8d5086e230 <col:3, col:7> 'void (*)()' <FunctionToPointerDecay>
+|     | `-ParenExpr 0x7f8d5086e1c8 <col:3, col:7> 'void ()':'void ()'
+|     |   `-UnaryOperator 0x7f8d5086e1a8 <col:4, col:5> 'void ()':'void ()' prefix '*'
+|     |     `-ImplicitCastExpr 0x7f8d5086e190 <col:5> 'void (*)()' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7f8d5086e168 <col:5> 'void (*)()' lvalue ParmVar 0x7f8d5086dc30 'fn' 'void (*)()'
+|     |-ImplicitCastExpr 0x7f8d5086e280 <col:10> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f8d5086e1e8 <col:10> 'int' lvalue ParmVar 0x7f8d5086dca8 'x' 'int'
+|     `-IntegerLiteral 0x7f8d5086e210 <col:13> 'int' 0
+|-FunctionDecl 0x7f8d5086df70 <<invalid sloc>> line:6:11 implicit used baz 'int ()'
+`-FunctionDecl 0x7f8d5086e380 <line:10:1, line:15:1> line:11:1 bar 'void (void)'
+  `-CompoundStmt 0x7f8d5086e960 <line:12:1, line:15:1>
+    |-DeclStmt 0x7f8d5086e4c8 <line:13:3, col:14>
+    | `-VarDecl 0x7f8d5086e430 <col:3, col:13> col:9 used x 'void *' cinit
+    |   `-ImplicitCastExpr 0x7f8d5086e4b0 <col:13> 'void *' <NullToPointer>
+    |     `-IntegerLiteral 0x7f8d5086e490 <col:13> 'int' 0
+    `-CallExpr 0x7f8d5086e548 <line:14:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7f8d5086e530 <col:3> 'void (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8d5086e4e0 <col:3> 'void ()' Function 0x7f8d5086ddc0 'foo' 'void (int, void (*)())'
+      `-ImplicitCastExpr 0x7f8d5086e590 <col:8> 'int' <PointerToIntegral>
+        `-ImplicitCastExpr 0x7f8d5086e578 <col:8> 'void *' <LValueToRValue>
+          `-DeclRefExpr 0x7f8d5086e508 <col:8> 'void *' lvalue Var 0x7f8d5086e430 'x' 'void *'

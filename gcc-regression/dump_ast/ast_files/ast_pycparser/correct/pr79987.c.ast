@@ -1,0 +1,10 @@
+FileAST: 
+  Decl: foo, [], ['extern'], []
+    TypeDecl: foo, []
+      IdentifierType: ['void']
+  Decl: bar, [], [], []
+    PtrDecl: []
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+    UnaryOp: &
+      ID: foo

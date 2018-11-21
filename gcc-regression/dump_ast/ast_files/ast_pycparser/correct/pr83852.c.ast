@@ -1,0 +1,115 @@
+FileAST: 
+  Decl: uo, [], [], []
+    TypeDecl: uo, []
+      IdentifierType: ['long', 'long', 'int']
+  Decl: vt, [], [], []
+    TypeDecl: vt, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: r5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: h8, [], [], []
+            TypeDecl: h8, []
+              IdentifierType: ['long', 'long', 'int']
+          Decl: pu, [], [], []
+            TypeDecl: pu, []
+              IdentifierType: ['long', 'long', 'int']
+        TypeDecl: r5, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: wj, [], [], []
+        TypeDecl: wj, []
+          IdentifierType: ['short', 'int']
+      Decl: mh, [], [], []
+        PtrDecl: []
+          TypeDecl: mh, []
+            IdentifierType: ['long', 'long', 'int']
+        ID: h8
+      For: 
+        Assignment: =
+          ID: wj
+          Constant: int, 0
+        BinaryOp: <
+          ID: wj
+          Constant: int, 3
+        UnaryOp: ++
+          ID: wj
+        Compound: 
+          Decl: oq, [], [], []
+            TypeDecl: oq, []
+              IdentifierType: ['int']
+          Decl: ns, [], [], []
+            TypeDecl: ns, []
+              IdentifierType: ['long', 'long', 'int']
+          Decl: xf, [], [], []
+            TypeDecl: xf, []
+              IdentifierType: ['long', 'long', 'int']
+          Assignment: +=
+            ID: h8
+            Constant: int, 2
+          Assignment: =
+            ID: oq
+            BinaryOp: &&
+              UnaryOp: !
+                UnaryOp: !
+                  ID: h8
+              UnaryOp: !
+                UnaryOp: !
+                  ID: wj
+          UnaryOp: ++
+            ID: uo
+          Assignment: ^=
+            ID: vt
+            BinaryOp: +
+              ID: oq
+              ID: uo
+          Assignment: =
+            ID: ns
+            BinaryOp: &&
+              UnaryOp: !
+                UnaryOp: !
+                  ID: uo
+              UnaryOp: !
+                UnaryOp: !
+                  ID: vt
+          Assignment: =
+            ID: xf
+            TernaryOp: 
+              BinaryOp: !=
+                ID: h8
+                Constant: int, 0
+              ID: mh
+              Constant: int, 1
+          Assignment: +=
+            ID: pu
+            BinaryOp: <
+              ID: ns
+              ID: xf
+      For: 
+        Assignment: =
+          ID: pu
+          Constant: int, 0
+        BinaryOp: <
+          ID: pu
+          Constant: int, 1
+        UnaryOp: ++
+          ID: pu
+        Compound: 
+          Decl: sc, [], [], []
+            PtrDecl: []
+              TypeDecl: sc, []
+                IdentifierType: ['int']
+          Assignment: =
+            ID: sc
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+              UnaryOp: &
+                ID: pu
+          Assignment: =
+            UnaryOp: *
+              ID: sc
+            Constant: int, 0

@@ -1,0 +1,41 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: q, [], [], []
+        ArrayDecl: []
+          TypeDecl: q, []
+            IdentifierType: ['char']
+          Constant: int, 10
+      Pragma: omp atomic
+      Assignment: +=
+        ID: i
+        ID: q
+      Pragma: omp atomic
+      Assignment: +=
+        ID: i
+        ID: foo
+      Pragma: omp atomic
+      Assignment: +=
+        ID: i
+        ID: p

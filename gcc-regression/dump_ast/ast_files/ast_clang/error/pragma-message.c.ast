@@ -1,0 +1,96 @@
+c_files/pragma-message.c:3:9: error: pragma message requires parenthesized string
+#pragma message                  /* { dg-warning "expected a string" } */
+        ^
+c_files/pragma-message.c:4:9: error: pragma message requires parenthesized string
+#pragma message 0                /* { dg-warning "expected a string" } */
+        ^
+c_files/pragma-message.c:5:9: error: pragma message requires parenthesized string
+#pragma message id               /* { dg-warning "expected a string" } */
+        ^
+c_files/pragma-message.c:6:74: error: expected string literal in pragma message
+#pragma message (                /* { dg-warning "expected a string" } */
+                                                                         ^
+c_files/pragma-message.c:7:18: error: expected string literal in pragma message
+#pragma message (0               /* { dg-warning "expected a string" } */
+                 ^
+c_files/pragma-message.c:8:18: error: expected string literal in pragma message
+#pragma message (id              /* { dg-warning "expected a string" } */
+                 ^
+c_files/pragma-message.c:9:18: error: expected string literal in pragma message
+#pragma message ()               /* { dg-warning "expected a string" } */
+                 ^
+c_files/pragma-message.c:10:18: error: expected string literal in pragma message
+#pragma message (0)              /* { dg-warning "expected a string" } */
+                 ^
+c_files/pragma-message.c:11:18: error: expected string literal in pragma message
+#pragma message (id)             /* { dg-warning "expected a string" } */
+                 ^
+c_files/pragma-message.c:18:17: warning: missing terminating '"' character [-Winvalid-pp-token]
+#pragma message "
+                ^
+c_files/pragma-message.c:18:9: error: pragma message requires parenthesized string
+#pragma message "
+        ^
+c_files/pragma-message.c:21:17: warning: missing terminating '"' character [-Winvalid-pp-token]
+#pragma message "Bad 1
+                ^
+c_files/pragma-message.c:21:9: error: pragma message requires parenthesized string
+#pragma message "Bad 1
+        ^
+c_files/pragma-message.c:24:18: warning: missing terminating '"' character [-Winvalid-pp-token]
+#pragma message ("Bad 2
+                 ^
+c_files/pragma-message.c:24:18: error: expected string literal in pragma message
+c_files/pragma-message.c:27:25: error: pragma message requires parenthesized string
+#pragma message ("Bad 3"
+                        ^
+c_files/pragma-message.c:30:20: error: pragma message requires parenthesized string
+#pragma message "" junk
+                   ^
+c_files/pragma-message.c:33:22: error: pragma message requires parenthesized string
+#pragma message ("") junk
+                     ^
+c_files/pragma-message.c:36:9: warning:  [-W#pragma-messages]
+#pragma message ""               /* No output expected for empty messages.  */
+        ^
+c_files/pragma-message.c:37:9: warning:  [-W#pragma-messages]
+#pragma message ("")
+        ^
+c_files/pragma-message.c:39:9: warning: Okay 1 [-W#pragma-messages]
+#pragma message "Okay 1"         /* { dg-message "Okay 1" } */
+        ^
+c_files/pragma-message.c:40:9: warning: Okay 2 [-W#pragma-messages]
+#pragma message ("Okay 2")       /* { dg-message "Okay 2" } */
+        ^
+c_files/pragma-message.c:42:9: warning: Okay 3 [-W#pragma-messages]
+#pragma message ("Okay " THREE)  /* { dg-message "Okay 3" } */
+        ^
+c_files/pragma-message.c:47:1: warning: TODO - Okay 4 [-W#pragma-messages]
+TODO(Okay 4)                     /* { dg-message "TODO - Okay 4" } */
+^
+c_files/pragma-message.c:46:17: note: expanded from macro 'TODO'
+#define TODO(x) DO_PRAGMA(message ("TODO - " #x))
+                ^
+c_files/pragma-message.c:45:22: note: expanded from macro 'DO_PRAGMA'
+#define DO_PRAGMA(x) _Pragma (#x)
+                     ^
+<scratch space>:4:2: note: expanded from here
+ message ("TODO - " "Okay 4")
+ ^
+9 warnings and 15 errors generated.
+TranslationUnitDecl 0x7ffc70819ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffc7081a020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffc70819d40 '__int128'
+|-TypedefDecl 0x7ffc7081a090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffc70819d60 'unsigned __int128'
+|-TypedefDecl 0x7ffc7081a368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffc7081a170 'struct __NSConstantString_tag'
+|   `-Record 0x7ffc7081a0e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffc7081a400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffc7081a3c0 'char *'
+|   `-BuiltinType 0x7ffc70819b60 'char'
+|-TypedefDecl 0x7ffc7081a6c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffc7081a670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffc7081a4e0 'struct __va_list_tag'
+|     `-Record 0x7ffc7081a458 '__va_list_tag'
+`-VarDecl 0x7ffc7081a738 <c_files/pragma-message.c:53:1, col:5> col:5 unused 'int'

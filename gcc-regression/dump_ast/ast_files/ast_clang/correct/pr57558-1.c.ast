@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7fdeb28264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdeb2826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdeb2826740 '__int128'
+|-TypedefDecl 0x7fdeb2826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdeb2826760 'unsigned __int128'
+|-TypedefDecl 0x7fdeb2826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdeb2826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdeb2826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdeb2826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdeb2826dc0 'char *'
+|   `-BuiltinType 0x7fdeb2826560 'char'
+|-TypedefDecl 0x7fdeb28270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdeb2827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdeb2826ee0 'struct __va_list_tag'
+|     `-Record 0x7fdeb2826e58 '__va_list_tag'
+|-TypedefDecl 0x7fdeb2827138 <c_files/pr57558-1.c:4:1, col:22> col:22 referenced u_int 'unsigned int'
+| `-BuiltinType 0x7fdeb2826660 'unsigned int'
+`-FunctionDecl 0x7fdeb3025c50 <line:5:1, line:10:1> line:5:6 foo 'void (u_int *__restrict, u_int *__restrict, u_int)'
+  |-ParmVarDecl 0x7fdeb3025a38 <col:11, col:29> col:29 used x 'u_int *__restrict'
+  |-ParmVarDecl 0x7fdeb3025aa8 <col:32, col:50> col:50 used y 'u_int *__restrict'
+  |-ParmVarDecl 0x7fdeb3025b18 <col:53, col:59> col:59 used n 'u_int':'unsigned int'
+  `-CompoundStmt 0x7fdeb3026168 <line:6:1, line:10:1>
+    |-DeclStmt 0x7fdeb3025db0 <line:7:3, col:10>
+    | `-VarDecl 0x7fdeb3025d50 <col:3, col:9> col:9 used i 'u_int':'unsigned int'
+    `-ForStmt 0x7fdeb3026130 <line:8:3, line:9:12>
+      |-BinaryOperator 0x7fdeb3025e28 <line:8:8, col:10> 'u_int':'unsigned int' '='
+      | |-DeclRefExpr 0x7fdeb3025dc8 <col:8> 'u_int':'unsigned int' lvalue Var 0x7fdeb3025d50 'i' 'u_int':'unsigned int'
+      | `-ImplicitCastExpr 0x7fdeb3025e10 <col:10> 'u_int':'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7fdeb3025df0 <col:10> 'int' 1
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fdeb3025ed0 <col:13, col:16> 'int' '<='
+      | |-ImplicitCastExpr 0x7fdeb3025ea0 <col:13> 'u_int':'unsigned int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fdeb3025e50 <col:13> 'u_int':'unsigned int' lvalue Var 0x7fdeb3025d50 'i' 'u_int':'unsigned int'
+      | `-ImplicitCastExpr 0x7fdeb3025eb8 <col:16> 'u_int':'unsigned int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fdeb3025e78 <col:16> 'u_int':'unsigned int' lvalue ParmVar 0x7fdeb3025b18 'n' 'u_int':'unsigned int'
+      |-BinaryOperator 0x7fdeb3025ff8 <col:19, col:30> 'u_int *' ','
+      | |-BinaryOperator 0x7fdeb3025f88 <col:19, col:25> 'u_int *' ','
+      | | |-UnaryOperator 0x7fdeb3025f20 <col:19, col:20> 'u_int':'unsigned int' postfix '++'
+      | | | `-DeclRefExpr 0x7fdeb3025ef8 <col:19> 'u_int':'unsigned int' lvalue Var 0x7fdeb3025d50 'i' 'u_int':'unsigned int'
+      | | `-UnaryOperator 0x7fdeb3025f68 <col:24, col:25> 'u_int *' postfix '++'
+      | |   `-DeclRefExpr 0x7fdeb3025f40 <col:24> 'u_int *__restrict' lvalue ParmVar 0x7fdeb3025a38 'x' 'u_int *__restrict'
+      | `-UnaryOperator 0x7fdeb3025fd8 <col:29, col:30> 'u_int *' postfix '++'
+      |   `-DeclRefExpr 0x7fdeb3025fb0 <col:29> 'u_int *__restrict' lvalue ParmVar 0x7fdeb3025aa8 'y' 'u_int *__restrict'
+      `-CompoundAssignOperator 0x7fdeb30260f8 <line:9:5, col:12> 'u_int':'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+        |-UnaryOperator 0x7fdeb3026060 <col:5, col:6> 'u_int':'unsigned int' lvalue prefix '*'
+        | `-ImplicitCastExpr 0x7fdeb3026048 <col:6> 'u_int *' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fdeb3026020 <col:6> 'u_int *__restrict' lvalue ParmVar 0x7fdeb3025a38 'x' 'u_int *__restrict'
+        `-ImplicitCastExpr 0x7fdeb30260e0 <col:11, col:12> 'u_int':'unsigned int' <LValueToRValue>
+          `-UnaryOperator 0x7fdeb30260c0 <col:11, col:12> 'u_int':'unsigned int' lvalue prefix '*'
+            `-ImplicitCastExpr 0x7fdeb30260a8 <col:12> 'u_int *' <LValueToRValue>
+              `-DeclRefExpr 0x7fdeb3026080 <col:12> 'u_int *__restrict' lvalue ParmVar 0x7fdeb3025aa8 'y' 'u_int *__restrict'

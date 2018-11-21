@@ -1,0 +1,182 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Switch: 
+        ID: n
+        Compound: 
+          Case: 
+            Constant: int, 100
+          Case: 
+            Constant: int, 110
+          Case: 
+            Constant: int, 120
+          Case: 
+            Constant: int, 130
+          Case: 
+            Constant: int, 140
+          Case: 
+            Constant: int, 150
+          Case: 
+            Constant: int, 160
+          Case: 
+            Constant: int, 200
+          Case: 
+            Constant: int, 210
+          Case: 
+            Constant: int, 220
+          Case: 
+            Constant: int, 230
+          Case: 
+            Constant: int, 240
+          Case: 
+            Constant: int, 250
+          Case: 
+            Constant: int, 260
+          Case: 
+            Constant: int, 300
+          Case: 
+            Constant: int, 310
+          Case: 
+            Constant: int, 320
+          Case: 
+            Constant: int, 330
+          Case: 
+            Constant: int, 340
+          Case: 
+            Constant: int, 350
+          Case: 
+            Constant: int, 360
+          Case: 
+            Constant: int, 400
+          Case: 
+            Constant: int, 410
+          Case: 
+            Constant: int, 420
+          Case: 
+            Constant: int, 430
+          Case: 
+            Constant: int, 440
+          Case: 
+            Constant: int, 450
+          Case: 
+            Constant: int, 460
+          Case: 
+            Constant: int, 500
+          Case: 
+            Constant: int, 510
+          Case: 
+            Constant: int, 520
+          Case: 
+            Constant: int, 530
+          Case: 
+            Constant: int, 540
+          Case: 
+            Constant: int, 550
+          Case: 
+            Constant: int, 560
+          Case: 
+            Constant: int, 600
+          Case: 
+            Constant: int, 610
+          Case: 
+            Constant: int, 620
+          Case: 
+            Constant: int, 630
+          Case: 
+            Constant: int, 640
+          Case: 
+            Constant: int, 650
+          Case: 
+            Constant: int, 660
+          Case: 
+            Constant: int, 700
+          Case: 
+            Constant: int, 710
+          Case: 
+            Constant: int, 720
+          Case: 
+            Constant: int, 730
+          Case: 
+            Constant: int, 740
+          Case: 
+            Constant: int, 750
+          Case: 
+            Constant: int, 760
+          Case: 
+            Constant: int, 800
+          Case: 
+            Constant: int, 810
+          Case: 
+            Constant: int, 820
+          Case: 
+            Constant: int, 830
+          Case: 
+            Constant: int, 840
+          Case: 
+            Constant: int, 850
+          Case: 
+            Constant: int, 860
+          Case: 
+            Constant: int, 900
+          Case: 
+            Constant: int, 910
+          Case: 
+            Constant: int, 920
+          Case: 
+            Constant: int, 930
+          Case: 
+            Constant: int, 940
+          Case: 
+            Constant: int, 950
+          Case: 
+            Constant: int, 960
+            Break: 
+          Default: 
+            Assignment: =
+              UnaryOp: *
+                ID: p
+              ID: n
+            Break: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argc, [], [], []
+            TypeDecl: argc, []
+              IdentifierType: ['int']
+          Decl: argv, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: argv, []
+                  IdentifierType: ['char']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: p, [], [], []
+        TypeDecl: p, []
+          IdentifierType: ['int']
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        ID: argv
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: argc
+          UnaryOp: &
+            ID: p
+      Return: 
+        ID: p

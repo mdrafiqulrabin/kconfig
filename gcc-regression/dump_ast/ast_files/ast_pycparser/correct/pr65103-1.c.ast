@@ -1,0 +1,43 @@
+FileAST: 
+  Typedef: S, [], ['typedef']
+    TypeDecl: S, []
+      Struct: S
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['int']
+        Decl: sum, [], [], []
+          TypeDecl: sum, []
+            IdentifierType: ['int']
+        Decl: delta, [], [], []
+          TypeDecl: delta, []
+            IdentifierType: ['int']
+  Decl: gs, [], [], []
+    TypeDecl: gs, []
+      IdentifierType: ['S']
+  FuncDef: 
+    Decl: global_opt, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: max, [], [], []
+            TypeDecl: max, []
+              IdentifierType: ['int']
+        TypeDecl: global_opt, []
+          IdentifierType: ['int']
+    Compound: 
+      While: 
+        BinaryOp: <
+          StructRef: .
+            ID: gs
+            ID: sum
+          ID: max
+        Assignment: +=
+          StructRef: .
+            ID: gs
+            ID: sum
+          StructRef: .
+            ID: gs
+            ID: delta
+      Return: 
+        StructRef: .
+          ID: gs
+          ID: a

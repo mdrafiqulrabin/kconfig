@@ -1,0 +1,99 @@
+TranslationUnitDecl 0x7ff31d8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff31d826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff31d826740 '__int128'
+|-TypedefDecl 0x7ff31d826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff31d826760 'unsigned __int128'
+|-TypedefDecl 0x7ff31d826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff31d826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff31d826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff31d826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff31d826dc0 'char *'
+|   `-BuiltinType 0x7ff31d826560 'char'
+|-TypedefDecl 0x7ff31d8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff31d827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff31d826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff31d826e58 '__va_list_tag'
+|-RecordDecl 0x7ff31d827120 <c_files/pr42475.c:5:9, col:30> col:9 struct definition
+| |-FieldDecl 0x7ff31e025a00 <col:18, col:24> col:24 referenced x 'float'
+| `-FieldDecl 0x7ff31e025a60 <col:18, col:27> col:27 referenced y 'float'
+|-TypedefDecl 0x7ff31e025b00 <col:1, col:32> col:32 referenced B 'struct B':'B'
+| `-ElaboratedType 0x7ff31e025ab0 'struct B' sugar
+|   `-RecordType 0x7ff31d8271b0 'B'
+|     `-Record 0x7ff31d827120 ''
+|-RecordDecl 0x7ff31e025b70 <line:6:9, col:27> col:9 struct definition
+| `-FieldDecl 0x7ff31e025c38 <col:18, col:24> col:24 referenced z 'float'
+|-TypedefDecl 0x7ff31e025cd0 <col:1, col:29> col:29 referenced C 'struct C':'C'
+| `-ElaboratedType 0x7ff31e025c80 'struct C' sugar
+|   `-RecordType 0x7ff31e025c00 'C'
+|     `-Record 0x7ff31e025b70 ''
+|-RecordDecl 0x7ff31e025d40 <line:7:9, col:28> col:9 struct definition
+| |-FieldDecl 0x7ff31e025e20 <col:18, col:20> col:20 referenced b 'B':'B'
+| `-FieldDecl 0x7ff31e025ea0 <col:23, col:25> col:25 referenced c 'C':'C'
+|-TypedefDecl 0x7ff31e025f90 <col:1, col:30> col:30 referenced D 'struct D':'D'
+| `-ElaboratedType 0x7ff31e025f40 'struct D' sugar
+|   `-RecordType 0x7ff31e025dd0 'D'
+|     `-Record 0x7ff31e025d40 ''
+|-FunctionDecl 0x7ff31e0261a0 <line:9:1, line:14:1> line:10:1 used foo 'B (float, float)'
+| |-ParmVarDecl 0x7ff31e026018 <col:6, col:12> col:12 used x 'float'
+| |-ParmVarDecl 0x7ff31e026090 <col:15, col:21> col:21 used y 'float'
+| `-CompoundStmt 0x7ff31e026508 <line:11:1, line:14:1>
+|   |-DeclStmt 0x7ff31e026498 <line:12:3, col:27>
+|   | `-VarDecl 0x7ff31e026298 <col:3, col:26> col:5 used b 'B':'B' cinit
+|   |   `-InitListExpr 0x7ff31e026418 <col:9, col:26> 'B':'B'
+|   |     |-ImplicitCastExpr 0x7ff31e026468 <col:16> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7ff31e0262f8 <col:16> 'float' lvalue ParmVar 0x7ff31e026018 'x' 'float'
+|   |     `-ImplicitCastExpr 0x7ff31e026480 <col:24> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff31e026360 <col:24> 'float' lvalue ParmVar 0x7ff31e026090 'y' 'float'
+|   `-ReturnStmt 0x7ff31e0264f0 <line:13:3, col:10>
+|     `-ImplicitCastExpr 0x7ff31e0264d8 <col:10> 'B':'B' <LValueToRValue>
+|       `-DeclRefExpr 0x7ff31e0264b0 <col:10> 'B':'B' lvalue Var 0x7ff31e026298 'b' 'B':'B'
+|-FunctionDecl 0x7ff31e0266c0 <line:16:1, line:20:1> line:17:1 used bar 'B (B, B)'
+| |-ParmVarDecl 0x7ff31e026540 <col:6, col:8> col:8 used b 'B':'B'
+| |-ParmVarDecl 0x7ff31e0265b0 <col:11, col:13> col:13 used y 'B':'B'
+| `-CompoundStmt 0x7ff31e0269e8 <line:18:1, line:20:1>
+|   `-ReturnStmt 0x7ff31e0269d0 <line:19:3, col:29>
+|     `-CallExpr 0x7ff31e026980 <col:10, col:29> 'B':'B'
+|       |-ImplicitCastExpr 0x7ff31e026968 <col:10> 'B (*)(float, float)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7ff31e026768 <col:10> 'B (float, float)' Function 0x7ff31e0261a0 'foo' 'B (float, float)'
+|       |-BinaryOperator 0x7ff31e026880 <col:15, col:23> 'float' '+'
+|       | |-ImplicitCastExpr 0x7ff31e026850 <col:15, col:17> 'float' <LValueToRValue>
+|       | | `-MemberExpr 0x7ff31e0267b8 <col:15, col:17> 'float' lvalue .x 0x7ff31e025a00
+|       | |   `-DeclRefExpr 0x7ff31e026790 <col:15> 'B':'B' lvalue ParmVar 0x7ff31e0265b0 'y' 'B':'B'
+|       | `-ImplicitCastExpr 0x7ff31e026868 <col:21, col:23> 'float' <LValueToRValue>
+|       |   `-MemberExpr 0x7ff31e026818 <col:21, col:23> 'float' lvalue .x 0x7ff31e025a00
+|       |     `-DeclRefExpr 0x7ff31e0267f0 <col:21> 'B':'B' lvalue ParmVar 0x7ff31e026540 'b' 'B':'B'
+|       `-ImplicitCastExpr 0x7ff31e0269b8 <col:26, col:28> 'float' <LValueToRValue>
+|         `-MemberExpr 0x7ff31e0268d0 <col:26, col:28> 'float' lvalue .y 0x7ff31e025a60
+|           `-DeclRefExpr 0x7ff31e0268a8 <col:26> 'B':'B' lvalue ParmVar 0x7ff31e026540 'b' 'B':'B'
+`-FunctionDecl 0x7ff31e026b40 <line:22:1, line:28:1> line:23:1 baz 'B (D)'
+  |-ParmVarDecl 0x7ff31e026a40 <col:6, col:8> col:8 used p 'D':'D'
+  `-CompoundStmt 0x7ff31e027120 <line:24:1, line:28:1>
+    |-DeclStmt 0x7ff31e026d00 <line:25:3, col:12>
+    | `-VarDecl 0x7ff31e026bf0 <col:3, col:11> col:5 used d 'D':'D' cinit
+    |   `-InitListExpr 0x7ff31e026c90 <col:9, col:11> 'D':'D'
+    |     |-ImplicitValueInitExpr 0x7ff31e026ce0 <<invalid sloc>> 'B':'B'
+    |     `-ImplicitValueInitExpr 0x7ff31e026cf0 <<invalid sloc>> 'C':'C'
+    |-DeclStmt 0x7ff31e0270b0 <line:26:3, col:40>
+    | `-VarDecl 0x7ff31e026d28 <col:3, col:39> col:5 used y 'B':'B' cinit
+    |   `-CallExpr 0x7ff31e027060 <col:9, col:39> 'B':'B'
+    |     |-ImplicitCastExpr 0x7ff31e027048 <col:9> 'B (*)(B, B)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7ff31e026d88 <col:9> 'B (B, B)' Function 0x7ff31e0266c0 'bar' 'B (B, B)'
+    |     |-CallExpr 0x7ff31e026f40 <col:14, col:33> 'B':'B'
+    |     | |-ImplicitCastExpr 0x7ff31e026f28 <col:14> 'B (*)(float, float)' <FunctionToPointerDecay>
+    |     | | `-DeclRefExpr 0x7ff31e026db0 <col:14> 'B (float, float)' Function 0x7ff31e0261a0 'foo' 'B (float, float)'
+    |     | |-ImplicitCastExpr 0x7ff31e026f78 <col:19> 'float' <IntegralToFloating>
+    |     | | `-IntegerLiteral 0x7ff31e026dd8 <col:19> 'int' 0
+    |     | `-BinaryOperator 0x7ff31e026f00 <col:22, col:32> 'float' '/'
+    |     |   |-ImplicitCastExpr 0x7ff31e026ed0 <col:22, col:28> 'float' <LValueToRValue>
+    |     |   | `-ParenExpr 0x7ff31e026e90 <col:22, col:28> 'float' lvalue
+    |     |   |   `-MemberExpr 0x7ff31e026e58 <col:23, col:27> 'float' lvalue .z 0x7ff31e025c38
+    |     |   |     `-MemberExpr 0x7ff31e026e20 <col:23, col:25> 'C':'C' lvalue .c 0x7ff31e025ea0
+    |     |   |       `-DeclRefExpr 0x7ff31e026df8 <col:23> 'D':'D' lvalue ParmVar 0x7ff31e026a40 'p' 'D':'D'
+    |     |   `-ImplicitCastExpr 0x7ff31e026ee8 <col:32> 'float' <IntegralToFloating>
+    |     |     `-IntegerLiteral 0x7ff31e026eb0 <col:32> 'int' 2
+    |     `-ImplicitCastExpr 0x7ff31e027098 <col:36, col:38> 'B':'B' <LValueToRValue>
+    |       `-MemberExpr 0x7ff31e026fb8 <col:36, col:38> 'B':'B' lvalue .b 0x7ff31e025e20
+    |         `-DeclRefExpr 0x7ff31e026f90 <col:36> 'D':'D' lvalue Var 0x7ff31e026bf0 'd' 'D':'D'
+    `-ReturnStmt 0x7ff31e027108 <line:27:3, col:10>
+      `-ImplicitCastExpr 0x7ff31e0270f0 <col:10> 'B':'B' <LValueToRValue>
+        `-DeclRefExpr 0x7ff31e0270c8 <col:10> 'B':'B' lvalue Var 0x7ff31e026d28 'y' 'B':'B'

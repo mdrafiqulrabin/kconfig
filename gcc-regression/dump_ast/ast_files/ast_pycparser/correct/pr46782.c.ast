@@ -1,0 +1,18 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: i
+        UnaryOp: p++
+          ID: i
+      While: 
+        ID: i
+        EmptyStatement: 

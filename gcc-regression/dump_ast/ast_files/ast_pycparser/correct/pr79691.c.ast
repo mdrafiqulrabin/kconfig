@@ -1,0 +1,92 @@
+FileAST: 
+  Decl: d, [], [], []
+    ArrayDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['char']
+      Constant: int, 2
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f1, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_sprintf
+        ExprList: 
+          ID: d
+          Constant: string, "%i"
+          Constant: int, 123
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f2, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_snprintf
+        ExprList: 
+          ID: d
+          UnaryOp: sizeof
+            ID: d
+          Constant: string, "%i"
+          Constant: int, 1234
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f3, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_snprintf
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 0
+            Constant: string, "%i"
+            Constant: int, 12345
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: f4, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: n1, [], [], []
+        TypeDecl: n1, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: __builtin_snprintf
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 0
+            Constant: string, "%i"
+            Constant: int, 1234
+      Decl: n2, [], [], []
+        TypeDecl: n2, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: __builtin_snprintf
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 0
+            Constant: string, "%i"
+            Constant: int, 12345
+      Return: 
+        BinaryOp: +
+          ID: n1
+          ID: n2

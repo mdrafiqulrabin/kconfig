@@ -1,0 +1,36 @@
+FileAST: 
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: sec, [], [], []
+            TypeDecl: sec, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: nsecs, [], [], []
+            TypeDecl: nsecs, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: test, []
+          IdentifierType: ['long', 'long']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: *
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['long', 'long']
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['long']
+                ID: sec
+            Constant: int, 1000000000L
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['long', 'long']
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'long']
+              ID: nsecs

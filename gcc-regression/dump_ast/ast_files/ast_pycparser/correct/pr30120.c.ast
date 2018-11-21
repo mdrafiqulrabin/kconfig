@@ -1,0 +1,98 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['double']
+          Decl: weight, [], [], []
+            TypeDecl: weight, []
+              IdentifierType: ['double']
+          Decl: ring, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: ring, ['const']
+                IdentifierType: ['double']
+          Decl: phase, [], [], []
+            PtrDecl: []
+              TypeDecl: phase, []
+                IdentifierType: ['double']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: phase
+        BinaryOp: *
+          UnaryOp: *
+            ID: ring
+          ID: weight
+  FuncDef: 
+    Decl: foo2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo2, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Constant: int, 0
+          Constant: int, 1
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['double']
+            Constant: int, 0
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['double']
+            Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: t1, [], [], []
+        TypeDecl: t1, []
+          IdentifierType: ['double']
+        Constant: int, 1
+      Decl: c1, [], [], []
+        TypeDecl: c1, []
+          IdentifierType: ['double']
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Constant: int, 0
+          Constant: int, 1
+          UnaryOp: &
+            ID: t1
+          UnaryOp: &
+            ID: c1
+      If: 
+        BinaryOp: <
+          ID: c1
+          Constant: float, 0.5
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,23 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['long', 'int']
+        TypeDecl: foo, []
+          IdentifierType: ['long', 'int']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          Constant: int, 2L
+          BinaryOp: >>
+            BinaryOp: -
+              ID: x
+              Constant: int, 1L
+            BinaryOp: -
+              BinaryOp: *
+                ID: __SIZEOF_LONG__
+                ID: __CHAR_BIT__
+              Constant: int, 1

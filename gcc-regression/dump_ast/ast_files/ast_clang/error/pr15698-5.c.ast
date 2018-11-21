@@ -1,0 +1,29 @@
+c_files/pr15698-5.c:10:5: error: conflicting types for 'isnan'
+int isnan(a) int a; {} /* { dg-error "number of arguments doesn't match prototype" } */
+    ^
+c_files/pr15698-5.c:9:20: note: previous declaration is here
+void f(void) { int isnan(void); } /* { dg-error "prototype declaration" } */
+                   ^
+1 error generated.
+TranslationUnitDecl 0x7fd66e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd66e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd66e026740 '__int128'
+|-TypedefDecl 0x7fd66e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd66e026760 'unsigned __int128'
+|-TypedefDecl 0x7fd66e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd66e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd66e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd66e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd66e026dc0 'char *'
+|   `-BuiltinType 0x7fd66e026560 'char'
+|-TypedefDecl 0x7fd66e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd66e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd66e026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd66e026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd66e825a00 <c_files/pr15698-5.c:9:1, col:33> col:6 f 'void (void)'
+| `-CompoundStmt 0x7fd66e825c68 <col:14, col:33>
+|   `-DeclStmt 0x7fd66e825c50 <col:16, col:31>
+|     `-FunctionDecl 0x7fd66e825ba8 parent 0x7fd66e0264d0 <col:16, col:30> col:20 isnan 'int (void)'
+`-FunctionDecl 0x7fd66e825d68 <line:10:1, col:22> col:5 invalid isnan 'int (int)'
+  |-ParmVarDecl 0x7fd66e825ca0 <col:14, col:18> col:18 a 'int'
+  `-CompoundStmt 0x7fd66e825e08 <col:21, col:22>

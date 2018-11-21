@@ -1,0 +1,36 @@
+FileAST: 
+  FuncDef: 
+    Decl: test_sort, [], [], []
+      FuncDecl: 
+        TypeDecl: test_sort, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: base, [], [], []
+        PtrDecl: []
+          TypeDecl: base, []
+            IdentifierType: ['char']
+      Decl: c, [], ['register'], []
+        TypeDecl: c, []
+          IdentifierType: ['char']
+      Decl: i, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: i, []
+            IdentifierType: ['char']
+      Decl: hi, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: hi, []
+            IdentifierType: ['char']
+      For: 
+        Assignment: =
+          ID: i
+          ID: base
+        BinaryOp: <
+          ID: i
+          ID: hi
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          UnaryOp: *
+            UnaryOp: p++
+              ID: i
+          ID: c

@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fa73180e4d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa73180ea20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa73180e740 '__int128'
+|-TypedefDecl 0x7fa73180ea90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa73180e760 'unsigned __int128'
+|-TypedefDecl 0x7fa73180ed68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa73180eb70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa73180eae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa73180ee00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa73180edc0 'char *'
+|   `-BuiltinType 0x7fa73180e560 'char'
+|-TypedefDecl 0x7fa73180f0c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa73180f070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa73180eee0 'struct __va_list_tag'
+|     `-Record 0x7fa73180ee58 '__va_list_tag'
+|-RecordDecl 0x7fa73180f120 <c_files/pr51879-16.c:4:1, line:6:1> line:4:8 struct S definition
+| `-FieldDecl 0x7fa731842c00 <line:5:3, col:7> col:7 i 'int'
+|-FunctionDecl 0x7fa731842d80 <line:8:1, col:26> col:17 used foo 'struct S (void)' extern
+|-FunctionDecl 0x7fa731842f28 <line:9:1, col:22> col:12 used foo2 'int (void)' extern
+|-VarDecl 0x7fa731842fe0 <line:11:1, col:10> col:10 used s 'struct S':'struct S'
+`-FunctionDecl 0x7fa731843128 <line:13:1, line:28:1> line:13:5 bar 'int (int)'
+  |-ParmVarDecl 0x7fa731843058 <col:10, col:14> col:14 used c 'int'
+  `-CompoundStmt 0x7fa7318436e0 <col:17, line:28:1>
+    |-DeclStmt 0x7fa731843240 <line:14:3, col:8>
+    | `-VarDecl 0x7fa7318431e0 <col:3, col:7> col:7 used r 'int'
+    |-IfStmt 0x7fa731843650 <line:16:3, line:25:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fa731843280 <line:16:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fa731843258 <col:7> 'int' lvalue ParmVar 0x7fa731843058 'c' 'int'
+    | |-CompoundStmt 0x7fa731843490 <line:17:5, line:20:5>
+    | | |-BinaryOperator 0x7fa731843388 <line:18:7, col:16> 'struct S':'struct S' '='
+    | | | |-DeclRefExpr 0x7fa731843298 <col:7> 'struct S':'struct S' lvalue Var 0x7fa731842fe0 's' 'struct S':'struct S'
+    | | | `-CallExpr 0x7fa731843360 <col:11, col:16> 'struct S':'struct S'
+    | | |   `-ImplicitCastExpr 0x7fa731843348 <col:11> 'struct S (*)(void)' <FunctionToPointerDecay>
+    | | |     `-DeclRefExpr 0x7fa7318432c0 <col:11> 'struct S (void)' Function 0x7fa731842d80 'foo' 'struct S (void)'
+    | | `-BinaryOperator 0x7fa731843468 <line:19:7, col:17> 'int' '='
+    | |   |-DeclRefExpr 0x7fa7318433b0 <col:7> 'int' lvalue Var 0x7fa7318431e0 'r' 'int'
+    | |   `-CallExpr 0x7fa731843440 <col:11, col:17> 'int'
+    | |     `-ImplicitCastExpr 0x7fa731843428 <col:11> 'int (*)(void)' <FunctionToPointerDecay>
+    | |       `-DeclRefExpr 0x7fa7318433d8 <col:11> 'int (void)' Function 0x7fa731842f28 'foo2' 'int (void)'
+    | `-CompoundStmt 0x7fa731843628 <line:22:5, line:25:5>
+    |   |-BinaryOperator 0x7fa731843548 <line:23:7, col:16> 'struct S':'struct S' '='
+    |   | |-DeclRefExpr 0x7fa7318434b8 <col:7> 'struct S':'struct S' lvalue Var 0x7fa731842fe0 's' 'struct S':'struct S'
+    |   | `-CallExpr 0x7fa731843520 <col:11, col:16> 'struct S':'struct S'
+    |   |   `-ImplicitCastExpr 0x7fa731843508 <col:11> 'struct S (*)(void)' <FunctionToPointerDecay>
+    |   |     `-DeclRefExpr 0x7fa7318434e0 <col:11> 'struct S (void)' Function 0x7fa731842d80 'foo' 'struct S (void)'
+    |   `-BinaryOperator 0x7fa731843600 <line:24:7, col:17> 'int' '='
+    |     |-DeclRefExpr 0x7fa731843570 <col:7> 'int' lvalue Var 0x7fa7318431e0 'r' 'int'
+    |     `-CallExpr 0x7fa7318435d8 <col:11, col:17> 'int'
+    |       `-ImplicitCastExpr 0x7fa7318435c0 <col:11> 'int (*)(void)' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x7fa731843598 <col:11> 'int (void)' Function 0x7fa731842f28 'foo2' 'int (void)'
+    `-ReturnStmt 0x7fa7318436c8 <line:27:3, col:10>
+      `-ImplicitCastExpr 0x7fa7318436b0 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fa731843688 <col:10> 'int' lvalue Var 0x7fa7318431e0 'r' 'int'

@@ -1,0 +1,101 @@
+FileAST: 
+  Decl: FIR_Tab_16, [], ['static'], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: FIR_Tab_16, []
+          IdentifierType: ['int']
+        Constant: int, 16
+      Constant: int, 16
+  FuncDef: 
+    Decl: V_Pass_Avrg_16_C_ref, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: Dst, [], [], []
+            PtrDecl: []
+              TypeDecl: Dst, []
+                IdentifierType: ['int']
+          Decl: Src, [], [], []
+            PtrDecl: []
+              TypeDecl: Src, []
+                IdentifierType: ['int']
+          Decl: W, [], [], []
+            TypeDecl: W, []
+              IdentifierType: ['int']
+          Decl: BpS, [], [], []
+            TypeDecl: BpS, []
+              IdentifierType: ['int']
+          Decl: Rnd, [], [], []
+            TypeDecl: Rnd, []
+              IdentifierType: ['int']
+        TypeDecl: V_Pass_Avrg_16_C_ref, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        BinaryOp: >
+          UnaryOp: p--
+            ID: W
+          Constant: int, 0
+        Compound: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['int']
+          Decl: Sums, [], [], []
+            ArrayDecl: []
+              TypeDecl: Sums, []
+                IdentifierType: ['int']
+              Constant: int, 16
+            InitList: 
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 0
+            BinaryOp: <
+              ID: i
+              Constant: int, 16
+            UnaryOp: ++
+              ID: i
+            For: 
+              Assignment: =
+                ID: k
+                Constant: int, 0
+              BinaryOp: <
+                ID: k
+                Constant: int, 16
+              UnaryOp: ++
+                ID: k
+              Assignment: +=
+                ArrayRef: 
+                  ID: Sums
+                  ID: k
+                BinaryOp: *
+                  ArrayRef: 
+                    ArrayRef: 
+                      ID: FIR_Tab_16
+                      ID: i
+                    ID: k
+                  ArrayRef: 
+                    ID: Src
+                    ID: i
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 0
+            BinaryOp: <
+              ID: i
+              Constant: int, 16
+            UnaryOp: ++
+              ID: i
+            Assignment: =
+              ArrayRef: 
+                ID: Dst
+                ID: i
+              BinaryOp: +
+                ArrayRef: 
+                  ID: Sums
+                  ID: i
+                ArrayRef: 
+                  ID: Src
+                  ID: i

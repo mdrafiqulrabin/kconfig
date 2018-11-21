@@ -1,0 +1,179 @@
+TranslationUnitDecl 0x7fac9301ded0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fac9301e420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fac9301e140 '__int128'
+|-TypedefDecl 0x7fac9301e490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fac9301e160 'unsigned __int128'
+|-TypedefDecl 0x7fac9301e768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fac9301e570 'struct __NSConstantString_tag'
+|   `-Record 0x7fac9301e4e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fac9301e800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fac9301e7c0 'char *'
+|   `-BuiltinType 0x7fac9301df60 'char'
+|-TypedefDecl 0x7fac9301eac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fac9301ea70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fac9301e8e0 'struct __va_list_tag'
+|     `-Record 0x7fac9301e858 '__va_list_tag'
+|-TypedefDecl 0x7fac928a52d0 </usr/include/setjmp.h:37:1, col:27> col:13 referenced jmp_buf 'int [37]'
+| `-ConstantArrayType 0x7fac928a5270 'int [37]' 37 
+|   `-BuiltinType 0x7fac9301dfc0 'int'
+|-TypedefDecl 0x7fac928a5510 <line:38:1, col:34> col:13 referenced sigjmp_buf 'int [38]'
+| `-ConstantArrayType 0x7fac928a54b0 'int [38]' 38 
+|   `-BuiltinType 0x7fac9301dfc0 'int'
+|-FunctionDecl 0x7fac928a5708 <line:87:12> col:12 implicit used setjmp 'int (int *)' extern
+| |-ParmVarDecl 0x7fac928a57a0 <<invalid sloc>> <invalid sloc> 'int *'
+| `-ReturnsTwiceAttr 0x7fac928a5808 <col:12> Implicit
+|-FunctionDecl 0x7fac928a5850 prev 0x7fac928a5708 <col:1, col:26> col:12 used setjmp 'int (int *)' extern
+| |-ParmVarDecl 0x7fac928a5600 <col:19> col:26 'int *':'int *'
+| `-ReturnsTwiceAttr 0x7fac928a5928 <col:12> Inherited Implicit
+|-FunctionDecl 0x7fac928a5b50 <line:88:13> col:13 implicit longjmp 'void (int *, int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7fac928a5be8 <<invalid sloc>> <invalid sloc> 'int *'
+| `-ParmVarDecl 0x7fac928a5c48 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fac928a5cb8 prev 0x7fac928a5b50 <col:1, /usr/include/sys/cdefs.h:155:42> /usr/include/setjmp.h:88:13 longjmp 'void (int *, int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7fac928a5948 <col:21> col:28 'int *':'int *'
+| `-ParmVarDecl 0x7fac928a59c0 <col:30> col:33 'int'
+|-FunctionDecl 0x7fac928a5e00 <line:91:5> col:5 implicit _setjmp 'int (int *)' extern
+| |-ParmVarDecl 0x7fac928a5e98 <<invalid sloc>> <invalid sloc> 'int *'
+| `-ReturnsTwiceAttr 0x7fac928a5f00 <col:5> Implicit
+|-FunctionDecl 0x7fac928a5f48 prev 0x7fac928a5e00 <col:1, col:20> col:5 _setjmp 'int (int *)'
+| |-ParmVarDecl 0x7fac928a5d70 <col:13> col:20 'int *':'int *'
+| `-ReturnsTwiceAttr 0x7fac928a6020 <col:5> Inherited Implicit
+|-FunctionDecl 0x7fac928a6148 <line:92:6> col:6 implicit _longjmp 'void (int *, int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7fac928a7200 <<invalid sloc>> <invalid sloc> 'int *'
+| `-ParmVarDecl 0x7fac928a7260 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fac928a72d0 prev 0x7fac928a6148 <col:1, /usr/include/sys/cdefs.h:155:42> /usr/include/setjmp.h:92:6 _longjmp 'void (int *, int) __attribute__((noreturn))'
+| |-ParmVarDecl 0x7fac928a6040 <col:15> col:22 'int *':'int *'
+| `-ParmVarDecl 0x7fac928a60b8 <col:24> col:27 'int'
+|-FunctionDecl 0x7fac928a7578 <line:93:5> col:5 implicit sigsetjmp 'int (int *, int)' extern
+| |-ParmVarDecl 0x7fac928a7610 <<invalid sloc>> <invalid sloc> 'int *'
+| |-ParmVarDecl 0x7fac928a7670 <<invalid sloc>> <invalid sloc> 'int'
+| `-ReturnsTwiceAttr 0x7fac928a76e0 <col:5> Implicit
+|-FunctionDecl 0x7fac928a7728 prev 0x7fac928a7578 <col:1, col:30> col:5 sigsetjmp 'int (int *, int)'
+| |-ParmVarDecl 0x7fac928a73e0 <col:15> col:25 'int *':'int *'
+| |-ParmVarDecl 0x7fac928a7458 <col:27> col:30 'int'
+| `-ReturnsTwiceAttr 0x7fac928a7808 <col:5> Inherited Implicit
+|-FunctionDecl 0x7fac928a79b0 <line:94:6> col:6 implicit siglongjmp 'void (int *, int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7fac928a7a48 <<invalid sloc>> <invalid sloc> 'int *'
+| `-ParmVarDecl 0x7fac928a7aa8 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fac928a7b18 prev 0x7fac928a79b0 <col:1, /usr/include/sys/cdefs.h:155:42> /usr/include/setjmp.h:94:6 siglongjmp 'void (int *, int) __attribute__((noreturn))'
+| |-ParmVarDecl 0x7fac928a7828 <col:17> col:27 'int *':'int *'
+| `-ParmVarDecl 0x7fac928a78a0 <col:29> col:32 'int'
+|-FunctionDecl 0x7fac928a7c80 <line:98:1, col:23> col:6 longjmperror 'void (void)'
+|-RecordDecl 0x7fac928a7d58 <c_files/pr60979.c:6:1, col:8> col:8 struct x
+|-TypedefDecl 0x7fac928a80c8 <line:8:1, col:35> col:22 referenced a 'struct x **(*)(struct x *)'
+| `-PointerType 0x7fac928a8050 'struct x **(*)(struct x *)'
+|   `-ParenType 0x7fac928a7ff0 'struct x **(struct x *)' sugar
+|     `-FunctionProtoType 0x7fac928a7fb0 'struct x **(struct x *)' cdecl
+|       |-PointerType 0x7fac928a7f40 'struct x **'
+|       | `-PointerType 0x7fac928a7e60 'struct x *'
+|       |   `-ElaboratedType 0x7fac928a7e00 'struct x' sugar
+|       |     `-RecordType 0x7fac928a7de0 'struct x'
+|       |       `-Record 0x7fac928a82a0 'x'
+|       `-PointerType 0x7fac928a7e60 'struct x *'
+|         `-ElaboratedType 0x7fac928a7e00 'struct x' sugar
+|           `-RecordType 0x7fac928a7de0 'struct x'
+|             `-Record 0x7fac928a82a0 'x'
+|-FunctionDecl 0x7fac928a8200 <line:9:1, col:21> col:6 used d 'void (const char *)'
+| `-ParmVarDecl 0x7fac928a8138 <col:9, col:20> col:21 'const char *'
+|-RecordDecl 0x7fac928a82a0 prev 0x7fac928a7d58 <line:11:1, line:20:1> line:11:8 struct x definition
+| |-RecordDecl 0x7fac928a8328 <line:12:5, line:19:5> line:12:5 union definition
+| | |-RecordDecl 0x7fac928a83d0 <line:13:2, line:18:2> line:13:2 struct definition
+| | | |-RecordDecl 0x7fac928a8480 <line:14:6, line:16:6> line:14:6 union definition
+| | | | `-FieldDecl 0x7fac928a85b8 <line:15:3, col:6> col:6 referenced i 'a *'
+| | | |-FieldDecl 0x7fac928a8650 <line:14:6, line:16:8> col:8 referenced l 'union (anonymous union at c_files/pr60979.c:14:6)':'union x::(anonymous at c_files/pr60979.c:14:6)'
+| | | `-FieldDecl 0x7fac928a86b0 <line:17:6, col:10> col:10 referenced s 'int'
+| | `-FieldDecl 0x7fac928a8790 <line:13:2, line:18:4> col:4 referenced y 'struct (anonymous struct at c_files/pr60979.c:13:2)':'struct x::(anonymous at c_files/pr60979.c:13:2)'
+| `-FieldDecl 0x7fac928a8880 <line:12:5, line:19:7> col:7 referenced e 'union (anonymous union at c_files/pr60979.c:12:5)':'union x::(anonymous at c_files/pr60979.c:12:5)'
+|-VarDecl 0x7fac928a8920 <line:22:1, col:9> col:9 used c 'jmp_buf':'int [37]'
+|-FunctionDecl 0x7fac928a8ab0 <line:24:1, line:39:1> line:25:1 b 'void (struct x *)'
+| |-ParmVarDecl 0x7fac928a89a8 <col:3, col:13> col:13 used r 'struct x *'
+| `-CompoundStmt 0x7fac928abc20 <line:26:1, line:39:1>
+|   |-DeclStmt 0x7fac928a8bc8 <line:27:3, col:8>
+|   | `-VarDecl 0x7fac928a8b68 <col:3, col:7> col:7 used f 'int'
+|   |-DeclStmt 0x7fac928a8c78 <line:28:3, col:19>
+|   | `-VarDecl 0x7fac928a8bf8 <col:3, col:18> col:14 used w 'int' static cinit
+|   |   `-IntegerLiteral 0x7fac928a8c58 <col:18> 'int' 0
+|   |-DeclStmt 0x7fac928a8d00 <line:29:3, col:21>
+|   | `-VarDecl 0x7fac928a8ca0 <col:3, col:20> col:20 used m 'volatile jmp_buf':'int volatile[37]'
+|   |-BinaryOperator 0x7fac928a9140 <line:30:3, col:60> 'int' '='
+|   | |-DeclRefExpr 0x7fac928a8d18 <col:3> 'int' lvalue Var 0x7fac928a8b68 'f' 'int'
+|   | `-ImplicitCastExpr 0x7fac928a9128 <col:7, col:60> 'int' <LValueToRValue>
+|   |   `-MemberExpr 0x7fac928a90f0 <col:7, col:60> 'int' lvalue .s 0x7fac928a86b0
+|   |     `-MemberExpr 0x7fac928a90b8 <col:7, col:58> 'struct (anonymous struct at c_files/pr60979.c:13:2)':'struct x::(anonymous at c_files/pr60979.c:13:2)' lvalue .y 0x7fac928a8790
+|   |       `-MemberExpr 0x7fac928a9080 <col:7, col:56> 'union (anonymous union at c_files/pr60979.c:12:5)':'union x::(anonymous at c_files/pr60979.c:12:5)' lvalue ->e 0x7fac928a8880
+|   |         `-ImplicitCastExpr 0x7fac928a9068 <col:7, col:53> 'struct x *' <LValueToRValue>
+|   |           `-ParenExpr 0x7fac928a9048 <col:7, col:53> 'struct x *' lvalue
+|   |             `-UnaryOperator 0x7fac928a9028 <col:8, col:52> 'struct x *' lvalue prefix '*'
+|   |               `-ParenExpr 0x7fac928a9008 <col:9, col:52> 'struct x **'
+|   |                 `-CallExpr 0x7fac928a8fd8 <col:10, col:51> 'struct x **'
+|   |                   |-ImplicitCastExpr 0x7fac928a8fc0 <col:10, col:36> 'a':'struct x **(*)(struct x *)' <LValueToRValue>
+|   |                   | `-ArraySubscriptExpr 0x7fac928a8f08 <col:10, col:36> 'a':'struct x **(*)(struct x *)' lvalue
+|   |                   |   |-ImplicitCastExpr 0x7fac928a8ef0 <col:10, col:33> 'a *' <LValueToRValue>
+|   |                   |   | `-MemberExpr 0x7fac928a8e98 <col:10, col:33> 'a *' lvalue .i 0x7fac928a85b8
+|   |                   |   |   `-MemberExpr 0x7fac928a8e60 <col:10, col:31> 'union (anonymous union at c_files/pr60979.c:14:6)':'union x::(anonymous at c_files/pr60979.c:14:6)' lvalue .l 0x7fac928a8650
+|   |                   |   |     `-MemberExpr 0x7fac928a8e28 <col:10, col:29> 'struct (anonymous struct at c_files/pr60979.c:13:2)':'struct x::(anonymous at c_files/pr60979.c:13:2)' lvalue .y 0x7fac928a8790
+|   |                   |   |       `-MemberExpr 0x7fac928a8df0 <col:10, col:27> 'union (anonymous union at c_files/pr60979.c:12:5)':'union x::(anonymous at c_files/pr60979.c:12:5)' lvalue ->e 0x7fac928a8880
+|   |                   |   |         `-ParenExpr 0x7fac928a8dd0 <col:10, col:24> 'struct x *'
+|   |                   |   |           `-CStyleCastExpr 0x7fac928a8da8 <col:11, col:23> 'struct x *' <NoOp>
+|   |                   |   |             `-ImplicitCastExpr 0x7fac928a8d90 <col:23> 'struct x *' <LValueToRValue>
+|   |                   |   |               `-DeclRefExpr 0x7fac928a8d40 <col:23> 'struct x *' lvalue ParmVar 0x7fac928a89a8 'r' 'struct x *'
+|   |                   |   `-IntegerLiteral 0x7fac928a8ed0 <col:35> 'int' 2
+|   |                   `-CStyleCastExpr 0x7fac928a8f98 <col:38, col:50> 'struct x *' <NoOp>
+|   |                     `-ImplicitCastExpr 0x7fac928a8f80 <col:50> 'struct x *' <LValueToRValue>
+|   |                       `-DeclRefExpr 0x7fac928a8f30 <col:50> 'struct x *' lvalue ParmVar 0x7fac928a89a8 'r' 'struct x *'
+|   |-IfStmt 0x7fac928ab730 <line:31:3, line:32:65>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fac928a91d0 <line:31:7, col:14> 'int' '!='
+|   | | |-UnaryOperator 0x7fac928a9190 <col:7, col:8> 'int' postfix '++'
+|   | | | `-DeclRefExpr 0x7fac928a9168 <col:7> 'int' lvalue Var 0x7fac928a8bf8 'w' 'int'
+|   | | `-IntegerLiteral 0x7fac928a91b0 <col:14> 'int' 0
+|   | |-CallExpr 0x7fac928ab6c0 <line:32:5, col:65> 'void *'
+|   | | |-ImplicitCastExpr 0x7fac928ab6a8 <col:5> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7fac928ab490 <col:5> '<builtin fn type>' Function 0x7fac928ab278 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | | |-ImplicitCastExpr 0x7fac928ab700 <col:22, col:30> 'void *' <BitCast>
+|   | | | `-CStyleCastExpr 0x7fac928ab5a8 <col:22, col:30> 'char *' <BitCast>
+|   | | |   `-ImplicitCastExpr 0x7fac928ab568 <col:30> 'volatile int *' <ArrayToPointerDecay>
+|   | | |     `-DeclRefExpr 0x7fac928ab4b8 <col:30> 'volatile jmp_buf':'int volatile[37]' lvalue Var 0x7fac928a8ca0 'm' 'volatile jmp_buf':'int volatile[37]'
+|   | | |-ImplicitCastExpr 0x7fac928ab718 <col:33, col:47> 'const void *' <BitCast>
+|   | | | `-CStyleCastExpr 0x7fac928ab628 <col:33, col:47> 'const char *' <BitCast>
+|   | | |   `-ImplicitCastExpr 0x7fac928ab610 <col:47> 'int *' <ArrayToPointerDecay>
+|   | | |     `-DeclRefExpr 0x7fac928ab5d0 <col:47> 'jmp_buf':'int [37]' lvalue Var 0x7fac928a8920 'c' 'jmp_buf':'int [37]'
+|   | | `-UnaryExprOrTypeTraitExpr 0x7fac928ab660 <col:50, col:64> 'unsigned long' sizeof 'jmp_buf':'int [37]'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fac928abad0 <line:33:3, line:37:3>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fac928ab868 <line:33:7, col:21> 'int' '=='
+|   | | |-CallExpr 0x7fac928ab800 <col:7, col:16> 'int'
+|   | | | |-ImplicitCastExpr 0x7fac928ab7e8 <col:7> 'int (*)(int *)' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7fac928ab768 <col:7> 'int (int *)' Function 0x7fac928a5850 'setjmp' 'int (int *)'
+|   | | | `-ImplicitCastExpr 0x7fac928ab830 <col:15> 'int *' <ArrayToPointerDecay>
+|   | | |   `-DeclRefExpr 0x7fac928ab790 <col:15> 'jmp_buf':'int [37]' lvalue Var 0x7fac928a8920 'c' 'jmp_buf':'int [37]'
+|   | | `-IntegerLiteral 0x7fac928ab848 <col:21> 'int' 0
+|   | |-CompoundStmt 0x7fac928abaa8 <col:24, line:37:3>
+|   | | |-DeclStmt 0x7fac928ab908 <line:34:7, col:12>
+|   | | | `-VarDecl 0x7fac928ab8a8 <col:7, col:11> col:11 used z 'int'
+|   | | `-ForStmt 0x7fac928aba70 <line:35:7, line:36:2>
+|   | |   |-BinaryOperator 0x7fac928ab968 <line:35:12, col:16> 'int' '='
+|   | |   | |-DeclRefExpr 0x7fac928ab920 <col:12> 'int' lvalue Var 0x7fac928ab8a8 'z' 'int'
+|   | |   | `-IntegerLiteral 0x7fac928ab948 <col:16> 'int' 0
+|   | |   |-<<<NULL>>>
+|   | |   |-BinaryOperator 0x7fac928ab9f0 <col:19, col:23> 'int' '<'
+|   | |   | |-ImplicitCastExpr 0x7fac928ab9d8 <col:19> 'int' <LValueToRValue>
+|   | |   | | `-DeclRefExpr 0x7fac928ab990 <col:19> 'int' lvalue Var 0x7fac928ab8a8 'z' 'int'
+|   | |   | `-IntegerLiteral 0x7fac928ab9b8 <col:23> 'int' 0
+|   | |   |-UnaryOperator 0x7fac928aba40 <col:26, col:28> 'int' prefix '++'
+|   | |   | `-DeclRefExpr 0x7fac928aba18 <col:28> 'int' lvalue Var 0x7fac928ab8a8 'z' 'int'
+|   | |   `-NullStmt 0x7fac928aba60 <line:36:2>
+|   | `-<<<NULL>>>
+|   `-CallExpr 0x7fac928abbf0 <line:38:3, col:20> 'void'
+|     |-ImplicitCastExpr 0x7fac928abbd8 <col:3> 'void (*)(const char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fac928abb08 <col:3> 'void (const char *)' Function 0x7fac928a8200 'd' 'void (const char *)'
+|     `-CStyleCastExpr 0x7fac928abb88 <col:5, col:19> 'const char *' <BitCast>
+|       `-ImplicitCastExpr 0x7fac928abb70 <col:19> 'volatile int *' <ArrayToPointerDecay>
+|         `-DeclRefExpr 0x7fac928abb30 <col:19> 'volatile jmp_buf':'int volatile[37]' lvalue Var 0x7fac928a8ca0 'm' 'volatile jmp_buf':'int volatile[37]'
+`-FunctionDecl 0x7fac928ab278 <line:32:5> col:5 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7fac928ab310 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fac928ab370 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fac928ab3d0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fac928ab448 <col:5> Implicit

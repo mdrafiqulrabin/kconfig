@@ -1,0 +1,35 @@
+c_files/pr78561.c:5:14: error: parameters cannot have __fp16 type; did you forget * ?
+main (__fp16 x)
+             ^
+1 error generated.
+TranslationUnitDecl 0x7fd86c0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd86c026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd86c026740 '__int128'
+|-TypedefDecl 0x7fd86c026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd86c026760 'unsigned __int128'
+|-TypedefDecl 0x7fd86c026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd86c026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd86c026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd86c026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd86c026dc0 'char *'
+|   `-BuiltinType 0x7fd86c026560 'char'
+|-TypedefDecl 0x7fd86c0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd86c027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd86c026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd86c026e58 '__va_list_tag'
+`-FunctionDecl 0x7fd86c825a30 <c_files/pr78561.c:4:1, line:9:1> line:5:1 invalid main 'int (__fp16)'
+  |-ParmVarDecl 0x7fd86c027138 <col:7, col:14> col:14 used x '__fp16'
+  `-CompoundStmt 0x7fd86c825ca8 <line:6:1, line:9:1>
+    |-DeclStmt 0x7fd86c825b80 <line:7:3, col:22>
+    | `-VarDecl 0x7fd86c825ae8 <col:3, col:14> col:10 used a '__fp16' cinit
+    |   `-ImplicitCastExpr 0x7fd86c825b68 <col:14> '__fp16' <FloatingCast>
+    |     `-FloatingLiteral 0x7fd86c825b48 <col:14> 'double' 6.550400e+04
+    `-ReturnStmt 0x7fd86c825c90 <line:8:3, col:17>
+      `-ParenExpr 0x7fd86c825c70 <col:10, col:17> 'int'
+        `-BinaryOperator 0x7fd86c825c48 <col:11, col:16> 'int' '<='
+          |-ImplicitCastExpr 0x7fd86c825c00 <col:11> 'float' <FloatingCast>
+          | `-ImplicitCastExpr 0x7fd86c825be8 <col:11> '__fp16' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fd86c825b98 <col:11> '__fp16' lvalue ParmVar 0x7fd86c027138 'x' '__fp16'
+          `-ImplicitCastExpr 0x7fd86c825c30 <col:16> 'float' <FloatingCast>
+            `-ImplicitCastExpr 0x7fd86c825c18 <col:16> '__fp16' <LValueToRValue>
+              `-DeclRefExpr 0x7fd86c825bc0 <col:16> '__fp16' lvalue Var 0x7fd86c825ae8 'a' '__fp16'

@@ -1,0 +1,34 @@
+FileAST: 
+  Decl: x, ['volatile'], [], []
+    TypeDecl: x, ['volatile']
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: vip, ['volatile'], [], []
+        PtrDecl: []
+          TypeDecl: vip, ['volatile']
+            IdentifierType: ['int']
+      Assignment: =
+        ID: vip
+        UnaryOp: &
+          ID: x
+      Decl: cvip, ['volatile'], [], []
+        PtrDecl: []
+          TypeDecl: cvip, ['volatile']
+            IdentifierType: ['int']
+      Assignment: =
+        ID: cvip
+        ID: vip
+      If: 
+        BinaryOp: !=
+          ID: vip
+          ID: cvip
+        Return: 
+          UnaryOp: -
+            Constant: int, 1
+      Return: 
+        Constant: int, 0

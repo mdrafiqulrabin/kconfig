@@ -1,0 +1,27 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: foo, []
+        Struct: S
+  Pragma: GCC diagnostic push
+  Pragma: GCC diagnostic ignored "-Waggregate-return"
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo
+      Return: 
+        Constant: int, 0
+  Pragma: GCC diagnostic pop

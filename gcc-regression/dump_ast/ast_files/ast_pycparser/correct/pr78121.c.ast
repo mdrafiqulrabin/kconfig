@@ -1,0 +1,43 @@
+FileAST: 
+  Decl: fn2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['unsigned', 'char']
+      TypeDecl: fn2, []
+        IdentifierType: ['void']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          ID: c
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: a
+        FuncCall: 
+          ID: fn2
+          ExprList: 
+            ID: c
+      FuncCall: 
+        ID: fn1
+        ExprList: 
+          Constant: char, '#'
+    Decl: c, [], [], []
+      TypeDecl: c, []
+        IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: fn3, [], [], []
+      FuncDecl: 
+        TypeDecl: fn3, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: fn1
+        ExprList: 
+          Constant: int, 267

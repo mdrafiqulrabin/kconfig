@@ -1,0 +1,69 @@
+FileAST: 
+  Decl: yf, [], [], []
+    TypeDecl: yf, []
+      IdentifierType: ['int']
+    Constant: int, 0
+  FuncDef: 
+    Decl: pl, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: q5, [], [], []
+            TypeDecl: q5, []
+              IdentifierType: ['int']
+          Decl: nd, [], [], []
+            TypeDecl: nd, []
+              IdentifierType: ['int']
+        TypeDecl: pl, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: hp, [], [], []
+        TypeDecl: hp, []
+          IdentifierType: ['unsigned', 'int']
+        ID: q5
+      Decl: zx, [], [], []
+        TypeDecl: zx, []
+          IdentifierType: ['int']
+        TernaryOp: 
+          BinaryOp: ==
+            ID: q5
+            Constant: int, 0
+          ID: hp
+          BinaryOp: /
+            ID: hp
+            ID: q5
+      Assignment: =
+        ID: yf
+        TernaryOp: 
+          BinaryOp: !=
+            BinaryOp: *
+              BinaryOp: <
+                ID: nd
+                Constant: int, 2
+              ID: zx
+            Constant: int, 0
+          ID: nd
+          Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: pl
+        ExprList: 
+          Constant: int, 1
+          UnaryOp: !
+            ID: yf
+      If: 
+        BinaryOp: !=
+          ID: yf
+          Constant: int, 1
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

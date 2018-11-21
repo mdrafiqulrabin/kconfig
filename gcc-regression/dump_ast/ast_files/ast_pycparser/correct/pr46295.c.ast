@@ -1,0 +1,50 @@
+FileAST: 
+  Typedef: EXPRESS, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: EXPRESS, []
+        IdentifierType: ['double']
+      Constant: int, 5
+  Decl: Parse_Rel_Factor, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: Express, [], [], []
+          TypeDecl: Express, []
+            IdentifierType: ['EXPRESS']
+        Decl: Terms, [], [], []
+          PtrDecl: []
+            TypeDecl: Terms, []
+              IdentifierType: ['int']
+      TypeDecl: Parse_Rel_Factor, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: Parse_Vector, [], [], []
+      FuncDecl: 
+        TypeDecl: Parse_Vector, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: Express, [], [], []
+        TypeDecl: Express, []
+          IdentifierType: ['EXPRESS']
+      Decl: Terms, [], [], []
+        TypeDecl: Terms, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: Terms
+          Constant: int, 0
+        BinaryOp: <
+          ID: Terms
+          Constant: int, 5
+        UnaryOp: p++
+          ID: Terms
+        Assignment: =
+          ArrayRef: 
+            ID: Express
+            ID: Terms
+          Constant: float, 1.0
+      FuncCall: 
+        ID: Parse_Rel_Factor
+        ExprList: 
+          ID: Express
+          UnaryOp: &
+            ID: Terms

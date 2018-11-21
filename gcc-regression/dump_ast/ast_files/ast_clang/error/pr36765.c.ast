@@ -1,0 +1,73 @@
+c_files/pr36765.c:4:12: error: use of unknown builtin '__builtin_malloc' [-Wimplicit-function-declaration]
+  int *p = __builtin_malloc (4 * sizeof(int));
+           ^
+c_files/pr36765.c:4:8: warning: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int' [-Wint-conversion]
+  int *p = __builtin_malloc (4 * sizeof(int));
+       ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fbfcd0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbfcd026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbfcd026740 '__int128'
+|-TypedefDecl 0x7fbfcd026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbfcd026760 'unsigned __int128'
+|-TypedefDecl 0x7fbfcd026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbfcd026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbfcd026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbfcd026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbfcd026dc0 'char *'
+|   `-BuiltinType 0x7fbfcd026560 'char'
+|-TypedefDecl 0x7fbfcd0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbfcd027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbfcd026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbfcd026e58 '__va_list_tag'
+|-FunctionDecl 0x7fbfcd078430 <c_files/pr36765.c:1:1, line:8:1> line:2:1 used foo 'int (int)'
+| |-ParmVarDecl 0x7fbfcd027138 <col:5, col:9> col:9 used i 'int'
+| |-CompoundStmt 0x7fbfcd078e50 <line:3:1, line:8:1>
+| | |-DeclStmt 0x7fbfcd078c10 <line:4:3, col:46>
+| | | `-VarDecl 0x7fbfcd0785a0 <col:3, col:45> col:8 used p 'int *' cinit
+| | |   `-ImplicitCastExpr 0x7fbfcd078840 <col:12, col:45> 'int *' <IntegralToPointer>
+| | |     `-CallExpr 0x7fbfcd078810 <col:12, col:45> 'int'
+| | |       |-ImplicitCastExpr 0x7fbfcd0787f8 <col:12> 'int (*)()' <FunctionToPointerDecay>
+| | |       | `-DeclRefExpr 0x7fbfcd078708 <col:12> 'int ()' Function 0x7fbfcd078670 '__builtin_malloc' 'int ()'
+| | |       `-BinaryOperator 0x7fbfcd0787a0 <col:30, col:44> 'unsigned long' '*'
+| | |         |-ImplicitCastExpr 0x7fbfcd078788 <col:30> 'unsigned long' <IntegralCast>
+| | |         | `-IntegerLiteral 0x7fbfcd078730 <col:30> 'int' 4
+| | |         `-UnaryExprOrTypeTraitExpr 0x7fbfcd078768 <col:34, col:44> 'unsigned long' sizeof 'int'
+| | |-BinaryOperator 0x7fbfcd078ca8 <line:5:3, col:8> 'int' '='
+| | | |-UnaryOperator 0x7fbfcd078c68 <col:3, col:4> 'int' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7fbfcd078c50 <col:4> 'int *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fbfcd078c28 <col:4> 'int *' lvalue Var 0x7fbfcd0785a0 'p' 'int *'
+| | | `-IntegerLiteral 0x7fbfcd078c88 <col:8> 'int' 0
+| | |-BinaryOperator 0x7fbfcd078d98 <line:6:3, col:10> 'int' '='
+| | | |-ArraySubscriptExpr 0x7fbfcd078d50 <col:3, col:6> 'int' lvalue
+| | | | |-ImplicitCastExpr 0x7fbfcd078d20 <col:3> 'int *' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fbfcd078cd0 <col:3> 'int *' lvalue Var 0x7fbfcd0785a0 'p' 'int *'
+| | | | `-ImplicitCastExpr 0x7fbfcd078d38 <col:5> 'int' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fbfcd078cf8 <col:5> 'int' lvalue ParmVar 0x7fbfcd027138 'i' 'int'
+| | | `-IntegerLiteral 0x7fbfcd078d78 <col:10> 'int' 1
+| | `-ReturnStmt 0x7fbfcd078e38 <line:7:3, col:11>
+| |   `-ImplicitCastExpr 0x7fbfcd078e20 <col:10, col:11> 'int' <LValueToRValue>
+| |     `-UnaryOperator 0x7fbfcd078e00 <col:10, col:11> 'int' lvalue prefix '*'
+| |       `-ImplicitCastExpr 0x7fbfcd078de8 <col:11> 'int *' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fbfcd078dc0 <col:11> 'int *' lvalue Var 0x7fbfcd0785a0 'p' 'int *'
+| `-NoInlineAttr 0x7fbfcd0784d0 <line:1:20>
+|-FunctionDecl 0x7fbfcd078670 <<invalid sloc>> line:4:12 implicit used __builtin_malloc 'int ()'
+|-FunctionDecl 0x7fbfcd078f80 <line:9:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbfcd079018 prev 0x7fbfcd078f80 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fbfcd0790d8 <line:10:1, line:15:1> line:10:5 main 'int ()'
+  `-CompoundStmt 0x7fbfcd079378 <line:11:1, line:15:1>
+    |-IfStmt 0x7fbfcd079308 <line:12:3, line:13:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbfcd079250 <line:12:7, col:17> 'int' '!='
+    | | |-CallExpr 0x7fbfcd079200 <col:7, col:12> 'int'
+    | | | |-ImplicitCastExpr 0x7fbfcd0791e8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fbfcd079170 <col:7> 'int (int)' Function 0x7fbfcd078430 'foo' 'int (int)'
+    | | | `-IntegerLiteral 0x7fbfcd079198 <col:11> 'int' 0
+    | | `-IntegerLiteral 0x7fbfcd079230 <col:17> 'int' 1
+    | |-CallExpr 0x7fbfcd0792e0 <line:13:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fbfcd0792c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbfcd079278 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbfcd079018 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fbfcd079360 <line:14:3, col:10>
+      `-IntegerLiteral 0x7fbfcd079340 <col:10> 'int' 0

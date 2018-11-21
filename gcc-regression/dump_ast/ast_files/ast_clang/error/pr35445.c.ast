@@ -1,0 +1,25 @@
+c_files/pr35445.c:6:5: error: redefinition of 'i' with a different type: 'int []' vs 'int'
+int i[] = { 0 }; /* { dg-error "conflicting types" } */
+    ^
+c_files/pr35445.c:5:12: note: previous declaration is here
+extern int i; /* { dg-message "was here" } */
+           ^
+1 error generated.
+TranslationUnitDecl 0x7fb3e28264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb3e2826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb3e2826740 '__int128'
+|-TypedefDecl 0x7fb3e2826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb3e2826760 'unsigned __int128'
+|-TypedefDecl 0x7fb3e2826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb3e2826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb3e2826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb3e2826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb3e2826dc0 'char *'
+|   `-BuiltinType 0x7fb3e2826560 'char'
+|-TypedefDecl 0x7fb3e28270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb3e2827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb3e2826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb3e2826e58 '__va_list_tag'
+|-VarDecl 0x7fb3e2827138 <c_files/pr35445.c:4:1, col:12> col:12 i 'int' extern
+|-VarDecl 0x7fb3e3025a00 prev 0x7fb3e2827138 <line:5:1, col:12> col:12 i 'int' extern
+`-VarDecl 0x7fb3e3025ab0 <line:6:1, col:7> col:5 invalid i 'int []'

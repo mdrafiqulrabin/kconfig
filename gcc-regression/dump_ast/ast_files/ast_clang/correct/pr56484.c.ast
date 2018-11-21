@@ -1,0 +1,61 @@
+TranslationUnitDecl 0x7feb178264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feb17826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feb17826740 '__int128'
+|-TypedefDecl 0x7feb17826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feb17826760 'unsigned __int128'
+|-TypedefDecl 0x7feb17826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feb17826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7feb17826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feb17826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feb17826dc0 'char *'
+|   `-BuiltinType 0x7feb17826560 'char'
+|-TypedefDecl 0x7feb178270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feb17827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feb17826ee0 'struct __va_list_tag'
+|     `-Record 0x7feb17826e58 '__va_list_tag'
+|-VarDecl 0x7feb178271a0 <c_files/pr56484.c:3:1, col:21> col:15 used b 'unsigned char [4096]'
+|-FunctionDecl 0x7feb18025b08 <line:4:1, col:14> col:5 used bar 'int (void)'
+|-FunctionDecl 0x7feb18025c38 <line:6:1, line:17:1> line:7:1 foo 'int (void)'
+| `-CompoundStmt 0x7feb18026558 <line:8:1, line:17:1>
+|   |-DeclStmt 0x7feb18025d68 <line:9:3, col:12>
+|   | `-VarDecl 0x7feb18025ce8 <col:3, col:11> col:7 used a 'int' cinit
+|   |   `-IntegerLiteral 0x7feb18025d48 <col:11> 'int' 0
+|   |-WhileStmt 0x7feb180264e0 <line:10:3, line:15:5>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7feb18025df0 <line:10:10, col:15> 'int'
+|   | | `-ImplicitCastExpr 0x7feb18025dd8 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7feb18025d80 <col:10> 'int (void)' Function 0x7feb18025b08 'bar' 'int (void)'
+|   | `-CompoundStmt 0x7feb180264b0 <line:11:5, line:15:5>
+|   |   |-DeclStmt 0x7feb18025ef8 <line:12:7, col:21>
+|   |   | `-VarDecl 0x7feb18025e30 <col:7, col:20> col:11 used c 'int' cinit
+|   |   |   `-CallExpr 0x7feb18025ed0 <col:15, col:20> 'int'
+|   |   |     `-ImplicitCastExpr 0x7feb18025eb8 <col:15> 'int (*)(void)' <FunctionToPointerDecay>
+|   |   |       `-DeclRefExpr 0x7feb18025e90 <col:15> 'int (void)' Function 0x7feb18025b08 'bar' 'int (void)'
+|   |   |-BinaryOperator 0x7feb18026070 <line:13:7, col:23> 'int' '='
+|   |   | |-DeclRefExpr 0x7feb18025f10 <col:7> 'int' lvalue Var 0x7feb18025ce8 'a' 'int'
+|   |   | `-ConditionalOperator 0x7feb18026040 <col:11, col:23> 'int'
+|   |   |   |-BinaryOperator 0x7feb18025f98 <col:11, col:15> 'int' '<'
+|   |   |   | |-ImplicitCastExpr 0x7feb18025f80 <col:11> 'int' <LValueToRValue>
+|   |   |   | | `-DeclRefExpr 0x7feb18025f38 <col:11> 'int' lvalue Var 0x7feb18025ce8 'a' 'int'
+|   |   |   | `-IntegerLiteral 0x7feb18025f60 <col:15> 'int' 0
+|   |   |   |-ImplicitCastExpr 0x7feb18026010 <col:19> 'int' <LValueToRValue>
+|   |   |   | `-DeclRefExpr 0x7feb18025fc0 <col:19> 'int' lvalue Var 0x7feb18025ce8 'a' 'int'
+|   |   |   `-ImplicitCastExpr 0x7feb18026028 <col:23> 'int' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7feb18025fe8 <col:23> 'int' lvalue Var 0x7feb18025e30 'c' 'int'
+|   |   `-CallExpr 0x7feb18026440 <line:14:7, col:39> 'void *'
+|   |     |-ImplicitCastExpr 0x7feb18026428 <col:7> 'void *(*)(void *, int, unsigned long)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7feb18026300 <col:7> '<builtin fn type>' Function 0x7feb180260e8 '__builtin_memset' 'void *(void *, int, unsigned long)'
+|   |     |-ImplicitCastExpr 0x7feb18026498 <col:25> 'void *' <BitCast>
+|   |     | `-ImplicitCastExpr 0x7feb18026480 <col:25> 'unsigned char *' <ArrayToPointerDecay>
+|   |     |   `-DeclRefExpr 0x7feb18026328 <col:25> 'unsigned char [4096]' lvalue Var 0x7feb178271a0 'b' 'unsigned char [4096]'
+|   |     |-IntegerLiteral 0x7feb18026350 <col:28> 'int' 0
+|   |     `-UnaryExprOrTypeTraitExpr 0x7feb18026398 <col:31, col:38> 'unsigned long' sizeof
+|   |       `-DeclRefExpr 0x7feb18026370 <col:38> 'unsigned char [4096]' lvalue Var 0x7feb178271a0 'b' 'unsigned char [4096]'
+|   `-ReturnStmt 0x7feb18026540 <line:16:3, col:10>
+|     `-ImplicitCastExpr 0x7feb18026528 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7feb18026500 <col:10> 'int' lvalue Var 0x7feb18025ce8 'a' 'int'
+`-FunctionDecl 0x7feb180260e8 <line:14:7> col:7 implicit used __builtin_memset 'void *(void *, int, unsigned long)' extern
+  |-ParmVarDecl 0x7feb18026180 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7feb180261e0 <<invalid sloc>> <invalid sloc> 'int'
+  |-ParmVarDecl 0x7feb18026240 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7feb180262b8 <col:7> Implicit

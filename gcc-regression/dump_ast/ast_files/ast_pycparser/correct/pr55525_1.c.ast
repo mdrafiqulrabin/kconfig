@@ -1,0 +1,11 @@
+FileAST: 
+  Decl: s, [], [], []
+    PtrDecl: []
+      TypeDecl: s, []
+        IdentifierType: ['char']
+    Cast: 
+      Typename: None, []
+        PtrDecl: []
+          TypeDecl: None, []
+            IdentifierType: ['char']
+      Constant: int, 0

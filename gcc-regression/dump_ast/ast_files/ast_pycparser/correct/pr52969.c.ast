@@ -1,0 +1,56 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: xsum, [], [], []
+    ArrayDecl: []
+      TypeDecl: xsum, []
+        IdentifierType: ['float']
+      Constant: int, 100
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: cluster, [], [], []
+            PtrDecl: []
+              TypeDecl: cluster, []
+                IdentifierType: ['float']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      For: 
+        ID: a
+        UnaryOp: ++
+          ID: j
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: xsum
+              ID: j
+            ArrayRef: 
+              ID: cluster
+              ID: j
+          If: 
+            BinaryOp: >
+              ArrayRef: 
+                ID: xsum
+                ID: j
+              Constant: int, 0
+            Assignment: =
+              ArrayRef: 
+                ID: xsum
+                ID: j
+              Constant: int, 0
+      If: 
+        ArrayRef: 
+          ID: xsum
+          Constant: int, 0
+        Assignment: =
+          ID: b
+          Constant: int, 0

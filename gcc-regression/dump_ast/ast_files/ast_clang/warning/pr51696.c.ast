@@ -1,0 +1,33 @@
+c_files/pr51696.c:10:16: warning: unknown attribute 'transaction_safe' ignored [-Wunknown-attributes]
+__attribute__((transaction_safe))
+               ^
+1 warning generated.
+TranslationUnitDecl 0x7fd5670264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd567026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd567026740 '__int128'
+|-TypedefDecl 0x7fd567026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd567026760 'unsigned __int128'
+|-TypedefDecl 0x7fd567026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd567026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd567026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd567026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd567026dc0 'char *'
+|   `-BuiltinType 0x7fd567026560 'char'
+|-TypedefDecl 0x7fd5670270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd567027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd567026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd567026e58 '__va_list_tag'
+|-RecordDecl 0x7fd567027120 <c_files/pr51696.c:4:1, line:6:1> line:4:8 struct list definition
+| `-FieldDecl 0x7fd567825ab8 <line:5:3, col:19> col:10 referenced compare 'void (*)()'
+|-VarDecl 0x7fd567825bb0 <line:4:1, line:6:4> col:4 used listPtr 'struct list *'
+|-VarDecl 0x7fd567825c98 <line:8:1, col:24> col:15 used compare 'void (*)()' static
+`-FunctionDecl 0x7fd567825d18 <line:10:1, line:14:1> line:11:13 func 'void ()' static
+  `-CompoundStmt 0x7fd567825ed0 <col:21, line:14:1>
+    |-CallExpr 0x7fd567825e40 <line:12:3, col:20> 'void'
+    | `-ImplicitCastExpr 0x7fd567825e28 <col:3, col:12> 'void (*)()' <LValueToRValue>
+    |   `-MemberExpr 0x7fd567825df0 <col:3, col:12> 'void (*)()' lvalue ->compare 0x7fd567825ab8
+    |     `-ImplicitCastExpr 0x7fd567825dd8 <col:3> 'struct list *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd567825db0 <col:3> 'struct list *' lvalue Var 0x7fd567825bb0 'listPtr' 'struct list *'
+    `-CallExpr 0x7fd567825ea8 <line:13:3, col:11> 'void'
+      `-ImplicitCastExpr 0x7fd567825e90 <col:3> 'void (*)()' <LValueToRValue>
+        `-DeclRefExpr 0x7fd567825e68 <col:3> 'void (*)()' lvalue Var 0x7fd567825c98 'compare' 'void (*)()'

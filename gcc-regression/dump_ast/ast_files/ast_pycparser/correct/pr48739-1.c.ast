@@ -1,0 +1,86 @@
+FileAST: 
+  Decl: g, [], ['extern'], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Decl: c, [], [], []
+        PtrDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+          Constant: int, 0
+      For: 
+        Assignment: =
+          ID: a
+          Constant: int, 0
+        BinaryOp: <
+          ID: a
+          Constant: int, 10
+        UnaryOp: ++
+          ID: a
+        Compound: 
+          FuncCall: 
+            ID: bar
+          For: 
+            Assignment: =
+              ID: b
+              Constant: int, 0
+            BinaryOp: <
+              ID: b
+              Constant: int, 5
+            UnaryOp: ++
+              ID: b
+            Compound: 
+              Assignment: =
+                ID: x
+                Constant: int, 0
+              Assignment: =
+                ID: c
+                UnaryOp: &
+                  ID: x
+              Assignment: =
+                ID: g
+                Constant: int, 1
+      Assignment: =
+        UnaryOp: *
+          ID: c
+        ID: x
+      For: 
+        Assignment: =
+          ID: x
+          Constant: int, 0
+        BinaryOp: !=
+          ID: x
+          Constant: int, 10
+        UnaryOp: p++
+          ID: x
+        EmptyStatement: 
+      Return: 
+        ID: g

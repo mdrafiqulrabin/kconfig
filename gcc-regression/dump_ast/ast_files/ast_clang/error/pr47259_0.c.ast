@@ -1,0 +1,33 @@
+c_files/pr47259_0.c:5:20: error: register 'esi' unsuitable for global register variables on this target
+register int r asm("esi");
+                   ^
+1 error generated.
+TranslationUnitDecl 0x7fd132825ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd132826420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd132826140 '__int128'
+|-TypedefDecl 0x7fd132826490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd132826160 'unsigned __int128'
+|-TypedefDecl 0x7fd132826768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd132826570 'struct __NSConstantString_tag'
+|   `-Record 0x7fd1328264e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd132826800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd1328267c0 'char *'
+|   `-BuiltinType 0x7fd132825f60 'char'
+|-TypedefDecl 0x7fd132826ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd132826a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd1328268e0 'struct __va_list_tag'
+|     `-Record 0x7fd132826858 '__va_list_tag'
+|-VarDecl 0x7fd132826ba0 <c_files/pr47259_0.c:5:1, col:14> col:14 used r 'int' register
+| `-AsmLabelAttr 0x7fd133026000 <col:20> "esi"
+`-FunctionDecl 0x7fd133026160 <line:7:1, line:12:1> line:7:6 foo 'void (void)'
+  `-CompoundStmt 0x7fd1330264c0 <line:8:1, line:12:1>
+    |-IfStmt 0x7fd1330263a0 <line:9:3, line:10:33>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fd133026220 <line:9:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fd1330261f8 <col:7> 'int' lvalue Var 0x7fd132826ba0 'r' 'int'
+    | |-GCCAsmStmt 0x7fd133026340 <line:10:5, col:33>
+    | | `-DeclRefExpr 0x7fd133026318 <col:31> 'int' lvalue Var 0x7fd132826ba0 'r' 'int'
+    | `-<<<NULL>>>
+    `-GCCAsmStmt 0x7fd133026460 <line:11:3, col:31>
+      `-DeclRefExpr 0x7fd133026438 <col:29> 'int' lvalue Var 0x7fd132826ba0 'r' 'int'

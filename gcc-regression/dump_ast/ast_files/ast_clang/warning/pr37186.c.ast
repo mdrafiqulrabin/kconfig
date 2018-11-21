@@ -1,0 +1,34 @@
+c_files/pr37186.c:8:14: warning: passing 'unsigned char *' to parameter of type 'signed char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+  return foo(p); /* { dg-warning "pointer targets in passing argument 1 of 'foo' differ in signedness" } */
+             ^
+c_files/pr37186.c:5:22: note: passing argument to parameter here
+int foo(signed char *); /* { dg-message "note: expected 'signed char \\*' but argument is of type 'unsigned char \\*'" } */
+                     ^
+1 warning generated.
+TranslationUnitDecl 0x7fcc3b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcc3b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcc3b826740 '__int128'
+|-TypedefDecl 0x7fcc3b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcc3b826760 'unsigned __int128'
+|-TypedefDecl 0x7fcc3b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcc3b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcc3b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcc3b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcc3b826dc0 'char *'
+|   `-BuiltinType 0x7fcc3b826560 'char'
+|-TypedefDecl 0x7fcc3b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcc3b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcc3b826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcc3b826e58 '__va_list_tag'
+|-FunctionDecl 0x7fcc3c025a30 <c_files/pr37186.c:5:1, col:22> col:5 used foo 'int (signed char *)'
+| `-ParmVarDecl 0x7fcc3b827160 <col:9, col:21> col:22 'signed char *'
+`-FunctionDecl 0x7fcc3c025c18 <line:6:1, line:9:1> line:6:5 bar 'int (unsigned char *)'
+  |-ParmVarDecl 0x7fcc3c025b50 <col:9, col:24> col:24 used p 'unsigned char *'
+  `-CompoundStmt 0x7fcc3c026178 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fcc3c026160 <line:8:3, col:15>
+      `-CallExpr 0x7fcc3c025d50 <col:10, col:15> 'int'
+        |-ImplicitCastExpr 0x7fcc3c025d38 <col:10> 'int (*)(signed char *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fcc3c025cb8 <col:10> 'int (signed char *)' Function 0x7fcc3c025a30 'foo' 'int (signed char *)'
+        `-ImplicitCastExpr 0x7fcc3c025d98 <col:14> 'signed char *' <BitCast>
+          `-ImplicitCastExpr 0x7fcc3c025d80 <col:14> 'unsigned char *' <LValueToRValue>
+            `-DeclRefExpr 0x7fcc3c025ce0 <col:14> 'unsigned char *' lvalue ParmVar 0x7fcc3c025b50 'p' 'unsigned char *'

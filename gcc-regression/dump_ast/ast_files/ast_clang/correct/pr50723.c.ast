@@ -1,0 +1,110 @@
+TranslationUnitDecl 0x7fd7660264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd766026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd766026740 '__int128'
+|-TypedefDecl 0x7fd766026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd766026760 'unsigned __int128'
+|-TypedefDecl 0x7fd766026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd766026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd766026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd766026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd766026dc0 'char *'
+|   `-BuiltinType 0x7fd766026560 'char'
+|-TypedefDecl 0x7fd7660270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd766027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd766026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd766026e58 '__va_list_tag'
+|-TypedefDecl 0x7fd766027138 <c_files/pr50723.c:3:1, col:28> col:28 referenced wchar_t 'unsigned short'
+| `-BuiltinType 0x7fd766026640 'unsigned short'
+|-TypedefDecl 0x7fd7660271a8 <line:4:1, col:22> col:22 size_t 'unsigned int'
+| `-BuiltinType 0x7fd766026660 'unsigned int'
+|-FunctionDecl 0x7fd7660774f8 <line:5:1, col:17> col:6 used _errno 'int *(void)'
+|-FunctionDecl 0x7fd766077768 <line:6:1, col:35> col:5 used WideCharToMultiByte 'int (wchar_t *)'
+| `-ParmVarDecl 0x7fd766077658 <col:26, col:34> col:35 'wchar_t *'
+|-FunctionDecl 0x7fd766077ae8 <line:7:1, line:18:1> line:8:1 used __wcrtomb_cp 'int (char *, wchar_t, const unsigned int, const unsigned int)'
+| |-ParmVarDecl 0x7fd766077840 <col:15, col:21> col:21 dst 'char *'
+| |-ParmVarDecl 0x7fd7660778b0 <col:26, col:34> col:34 used wc 'wchar_t':'unsigned short'
+| |-ParmVarDecl 0x7fd766077928 <col:38, col:57> col:57 used cp 'const unsigned int'
+| |-ParmVarDecl 0x7fd7660779a0 <line:9:8, col:27> col:27 mb_max 'const unsigned int'
+| |-CompoundStmt 0x7fd766078060 <line:10:1, line:18:1>
+| | `-IfStmt 0x7fd766078028 <line:11:3, line:17:36>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fd766077c78 <line:11:7, col:13> 'int' '=='
+| |   | |-ImplicitCastExpr 0x7fd766077c48 <col:7> 'unsigned int' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fd766077c00 <col:7> 'const unsigned int' lvalue ParmVar 0x7fd766077928 'cp' 'const unsigned int'
+| |   | `-ImplicitCastExpr 0x7fd766077c60 <col:13> 'unsigned int' <IntegralCast>
+| |   |   `-IntegerLiteral 0x7fd766077c28 <col:13> 'int' 0
+| |   |-CompoundStmt 0x7fd766077ed0 <col:20, line:15:3>
+| |   | |-IfStmt 0x7fd766077e60 <line:12:7, line:13:16>
+| |   | | |-<<<NULL>>>
+| |   | | |-<<<NULL>>>
+| |   | | |-BinaryOperator 0x7fd766077d18 <line:12:11, col:16> 'int' '>'
+| |   | | | |-ImplicitCastExpr 0x7fd766077d00 <col:11> 'int' <IntegralCast>
+| |   | | | | `-ImplicitCastExpr 0x7fd766077ce8 <col:11> 'wchar_t':'unsigned short' <LValueToRValue>
+| |   | | | |   `-DeclRefExpr 0x7fd766077ca0 <col:11> 'wchar_t':'unsigned short' lvalue ParmVar 0x7fd7660778b0 'wc' 'wchar_t':'unsigned short'
+| |   | | | `-IntegerLiteral 0x7fd766077cc8 <col:16> 'int' 255
+| |   | | |-BinaryOperator 0x7fd766077e38 <line:13:2, col:16> 'int' '='
+| |   | | | |-ParenExpr 0x7fd766077df8 <col:2, col:12> 'int' lvalue
+| |   | | | | `-UnaryOperator 0x7fd766077dd8 <col:3, col:11> 'int' lvalue prefix '*'
+| |   | | | |   `-CallExpr 0x7fd766077db0 <col:4, col:11> 'int *'
+| |   | | | |     `-ImplicitCastExpr 0x7fd766077d98 <col:4> 'int *(*)(void)' <FunctionToPointerDecay>
+| |   | | | |       `-DeclRefExpr 0x7fd766077d40 <col:4> 'int *(void)' Function 0x7fd7660774f8 '_errno' 'int *(void)'
+| |   | | | `-IntegerLiteral 0x7fd766077e18 <col:16> 'int' 42
+| |   | | `-<<<NULL>>>
+| |   | `-ReturnStmt 0x7fd766077eb8 <line:14:7, col:14>
+| |   |   `-IntegerLiteral 0x7fd766077e98 <col:14> 'int' 1
+| |   `-ReturnStmt 0x7fd766078010 <line:17:5, col:36>
+| |     `-CallExpr 0x7fd766077fe0 <col:12, col:36> 'int'
+| |       |-ImplicitCastExpr 0x7fd766077fc8 <col:12> 'int (*)(wchar_t *)' <FunctionToPointerDecay>
+| |       | `-DeclRefExpr 0x7fd766077ef8 <col:12> 'int (wchar_t *)' Function 0x7fd766077768 'WideCharToMultiByte' 'int (wchar_t *)'
+| |       `-UnaryOperator 0x7fd766077f48 <col:33, col:34> 'wchar_t *' prefix '&'
+| |         `-DeclRefExpr 0x7fd766077f20 <col:34> 'wchar_t':'unsigned short' lvalue ParmVar 0x7fd7660778b0 'wc' 'wchar_t':'unsigned short'
+| `-NonNullAttr 0x7fd766077ba0 <line:7:21, col:35> 0
+`-FunctionDecl 0x7fd766079400 <line:19:1, line:26:1> line:19:6 wcsrtombs 'void (char *, const wchar_t *, unsigned int, unsigned int)'
+  |-ParmVarDecl 0x7fd766078098 <col:17, col:23> col:23 used dst 'char *'
+  |-ParmVarDecl 0x7fd766078168 <col:28, col:43> col:43 used pwc 'const wchar_t *'
+  |-ParmVarDecl 0x7fd7660781e0 <col:48, col:61> col:61 used cp 'unsigned int'
+  |-ParmVarDecl 0x7fd766078258 <line:20:3, col:16> col:16 used mb_max 'unsigned int'
+  `-CompoundStmt 0x7fd766079a08 <line:21:1, line:26:1>
+    |-IfStmt 0x7fd766079758 <line:22:3, line:23:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd766079718 <line:22:7, col:49> 'int' '<='
+    | | |-ParenExpr 0x7fd7660796d8 <col:7, col:44> 'int'
+    | | | `-CallExpr 0x7fd766079630 <col:8, col:43> 'int'
+    | | |   |-ImplicitCastExpr 0x7fd766079618 <col:8> 'int (*)(char *, wchar_t, const unsigned int, const unsigned int)' <FunctionToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7fd7660794b8 <col:8> 'int (char *, wchar_t, const unsigned int, const unsigned int)' Function 0x7fd766077ae8 '__wcrtomb_cp' 'int (char *, wchar_t, const unsigned int, const unsigned int)'
+    | | |   |-ImplicitCastExpr 0x7fd766079678 <col:22> 'char *' <LValueToRValue>
+    | | |   | `-DeclRefExpr 0x7fd7660794e0 <col:22> 'char *' lvalue ParmVar 0x7fd766078098 'dst' 'char *'
+    | | |   |-ImplicitCastExpr 0x7fd766079690 <col:27, col:28> 'wchar_t':'unsigned short' <LValueToRValue>
+    | | |   | `-UnaryOperator 0x7fd766079548 <col:27, col:28> 'const wchar_t':'const unsigned short' lvalue prefix '*'
+    | | |   |   `-ImplicitCastExpr 0x7fd766079530 <col:28> 'const wchar_t *' <LValueToRValue>
+    | | |   |     `-DeclRefExpr 0x7fd766079508 <col:28> 'const wchar_t *' lvalue ParmVar 0x7fd766078168 'pwc' 'const wchar_t *'
+    | | |   |-ImplicitCastExpr 0x7fd7660796a8 <col:33> 'unsigned int' <LValueToRValue>
+    | | |   | `-DeclRefExpr 0x7fd766079568 <col:33> 'unsigned int' lvalue ParmVar 0x7fd7660781e0 'cp' 'unsigned int'
+    | | |   `-ImplicitCastExpr 0x7fd7660796c0 <col:37> 'unsigned int' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fd766079590 <col:37> 'unsigned int' lvalue ParmVar 0x7fd766078258 'mb_max' 'unsigned int'
+    | | `-IntegerLiteral 0x7fd7660796f8 <col:49> 'int' 0
+    | |-ReturnStmt 0x7fd766079740 <line:23:5>
+    | `-<<<NULL>>>
+    `-IfStmt 0x7fd7660799d0 <line:24:3, line:25:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd766079990 <line:24:7, col:49> 'int' '<='
+      | |-ParenExpr 0x7fd766079950 <col:7, col:44> 'int'
+      | | `-CallExpr 0x7fd7660798a8 <col:8, col:43> 'int'
+      | |   |-ImplicitCastExpr 0x7fd766079890 <col:8> 'int (*)(char *, wchar_t, const unsigned int, const unsigned int)' <FunctionToPointerDecay>
+      | |   | `-DeclRefExpr 0x7fd766079790 <col:8> 'int (char *, wchar_t, const unsigned int, const unsigned int)' Function 0x7fd766077ae8 '__wcrtomb_cp' 'int (char *, wchar_t, const unsigned int, const unsigned int)'
+      | |   |-ImplicitCastExpr 0x7fd7660798f0 <col:22> 'char *' <LValueToRValue>
+      | |   | `-DeclRefExpr 0x7fd7660797b8 <col:22> 'char *' lvalue ParmVar 0x7fd766078098 'dst' 'char *'
+      | |   |-ImplicitCastExpr 0x7fd766079908 <col:27, col:28> 'wchar_t':'unsigned short' <LValueToRValue>
+      | |   | `-UnaryOperator 0x7fd766079820 <col:27, col:28> 'const wchar_t':'const unsigned short' lvalue prefix '*'
+      | |   |   `-ImplicitCastExpr 0x7fd766079808 <col:28> 'const wchar_t *' <LValueToRValue>
+      | |   |     `-DeclRefExpr 0x7fd7660797e0 <col:28> 'const wchar_t *' lvalue ParmVar 0x7fd766078168 'pwc' 'const wchar_t *'
+      | |   |-ImplicitCastExpr 0x7fd766079920 <col:33> 'unsigned int' <LValueToRValue>
+      | |   | `-DeclRefExpr 0x7fd766079840 <col:33> 'unsigned int' lvalue ParmVar 0x7fd7660781e0 'cp' 'unsigned int'
+      | |   `-ImplicitCastExpr 0x7fd766079938 <col:37> 'unsigned int' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7fd766079868 <col:37> 'unsigned int' lvalue ParmVar 0x7fd766078258 'mb_max' 'unsigned int'
+      | `-IntegerLiteral 0x7fd766079970 <col:49> 'int' 0
+      |-ReturnStmt 0x7fd7660799b8 <line:25:5>
+      `-<<<NULL>>>

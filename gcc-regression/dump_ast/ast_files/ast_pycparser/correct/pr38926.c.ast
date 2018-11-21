@@ -1,0 +1,128 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: _si1, [], [], []
+            TypeDecl: _si1, []
+              IdentifierType: ['unsigned']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: _si1
+          Constant: int, 0
+        If: 
+          BinaryOp: >
+            ID: _si1
+            Constant: int, 2147483647
+          Return: 
+            Constant: int, 1
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: bar, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: _left, [], [], []
+            TypeDecl: _left, []
+              IdentifierType: ['unsigned']
+          Decl: _right, [], [], []
+            TypeDecl: _right, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: >=
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned']
+              ID: _right
+            Constant: int, 8
+          Constant: int, 1
+          BinaryOp: >>
+            ID: _left
+            ID: _right
+  Decl: g_2, [], [], []
+    TypeDecl: g_2, []
+      IdentifierType: ['unsigned']
+  Decl: g_67, [], [], []
+    TypeDecl: g_67, []
+      IdentifierType: ['unsigned']
+  Decl: g_162, ['volatile'], [], []
+    TypeDecl: g_162, ['volatile']
+      IdentifierType: ['unsigned']
+  FuncDef: 
+    Decl: func_62, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: p_63, [], [], []
+            TypeDecl: p_63, []
+              IdentifierType: ['unsigned']
+        TypeDecl: func_62, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: p_63
+        BinaryOp: &
+          ID: g_2
+          ID: g_67
+      If: 
+        ID: g_2
+        EmptyStatement: 
+        If: 
+          ID: p_63
+          Return: 
+            Constant: int, 1
+      Assignment: =
+        ID: g_67
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: p_63
+            ID: g_2
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: baz, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      If: 
+        ID: g_2
+        For: 
+          BinaryOp: <=
+            ID: g_2
+            UnaryOp: -
+              Constant: int, 16
+          Assignment: =
+            ID: g_2
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                ID: g_2
+          Compound: 
+            For: 
+              ID: g_162
+              ID: g_162
+              FuncCall: 
+                ID: func_62
+                ExprList: 
+                  FuncCall: 
+                    ID: func_62
+                    ExprList: 
+                      Constant: int, 0
+            If: 
+              ID: g_67
+              Break: 
+      Return: 
+        ID: g_2

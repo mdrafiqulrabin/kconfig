@@ -1,0 +1,85 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          IdentifierType: ['int']
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+      Decl: o, [], [], []
+        TypeDecl: o, []
+          IdentifierType: ['int']
+      Decl: p, [], [], []
+        TypeDecl: p, []
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: m
+        Constant: int, 6
+      Assignment: =
+        ID: n
+        Constant: int, 1
+      Assignment: =
+        ID: o
+        Constant: int, 5
+      Assignment: =
+        ID: p
+        Constant: int, 1
+      Assignment: =
+        ID: a
+        Constant: int, 6
+      Assignment: =
+        ID: b
+        Constant: int, 1
+      Assignment: =
+        ID: c
+        Constant: int, 5
+      Assignment: =
+        ID: d
+        Constant: int, 1
+      Pragma: omp parallel for num_threads (m) if (n) schedule (static, o)
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        UnaryOp: p++
+          ID: i
+        EmptyStatement: 
+      Pragma: omp parallel for num_threads (a) if (b) schedule (static, c)
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        UnaryOp: p++
+          ID: i
+        EmptyStatement: 
+      Pragma: omp task final (p)
+      EmptyStatement: 
+      Pragma: omp task final (d)
+      EmptyStatement: 

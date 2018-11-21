@@ -1,0 +1,40 @@
+FileAST: 
+  Decl: dsdblm_GetBlockAddress, [], [], []
+    FuncDecl: 
+      TypeDecl: dsdblm_GetBlockAddress, []
+        IdentifierType: ['unsigned', 'int']
+  Decl: error_LocalAssert, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: error_LocalAssert, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: dsdblm_CreateBlock, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: address, [], [], []
+            TypeDecl: address, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: dsdblm_CreateBlock, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: address
+        FuncCall: 
+          ID: dsdblm_GetBlockAddress
+      If: 
+        BinaryOp: >=
+          ID: address
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0x00020000
+        FuncCall: 
+          ID: error_LocalAssert
+      Return: 
+        ID: address

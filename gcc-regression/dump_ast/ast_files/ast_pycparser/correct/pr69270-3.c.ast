@@ -1,0 +1,50 @@
+FileAST: 
+  Typedef: size_t, [], ['typedef']
+    TypeDecl: size_t, []
+      IdentifierType: ['long', 'unsigned', 'int']
+  Typedef: gimple, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: gimple, []
+        Union: gimple_statement_d
+  FuncDef: 
+    Decl: propagate_with_phi, [], [], []
+      FuncDecl: 
+        TypeDecl: propagate_with_phi, []
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Decl: use_stmt, [], [], []
+        TypeDecl: use_stmt, []
+          IdentifierType: ['gimple']
+      Decl: phi_inserted, [], [], []
+        TypeDecl: phi_inserted, []
+          IdentifierType: ['unsigned', 'char']
+      Assignment: =
+        ID: phi_inserted
+        Constant: int, 0
+      For: 
+        UnaryOp: !
+          FuncCall: 
+            ID: end_imm_use_stmt_p
+        FuncCall: 
+          ID: next_imm_use_stmt
+        Compound: 
+          If: 
+            UnaryOp: !
+              BinaryOp: &&
+                BinaryOp: ==
+                  FuncCall: 
+                    ID: arf
+                  Constant: int, 10
+                BinaryOp: ==
+                  FuncCall: 
+                    ID: boo
+                  Constant: int, 20
+            Continue: 
+          If: 
+            UnaryOp: !
+              ID: phi_inserted
+            Assignment: =
+              ID: phi_inserted
+              Constant: int, 1
+            FuncCall: 
+              ID: update_stmt

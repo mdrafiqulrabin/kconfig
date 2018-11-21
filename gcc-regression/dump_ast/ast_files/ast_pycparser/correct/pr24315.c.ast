@@ -1,0 +1,35 @@
+FileAST: 
+  FuncDef: 
+    Decl: s48_double_to_bignum, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: exponent, [], [], []
+            TypeDecl: exponent, []
+              IdentifierType: ['int']
+        TypeDecl: s48_double_to_bignum, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: length, [], [], []
+        TypeDecl: length, []
+          IdentifierType: ['long']
+        BinaryOp: /
+          BinaryOp: +
+            ID: exponent
+            BinaryOp: -
+              BinaryOp: -
+                BinaryOp: *
+                  UnaryOp: sizeof
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['long']
+                  Constant: int, 8
+                Constant: int, 2
+              Constant: int, 1
+          BinaryOp: -
+            BinaryOp: *
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['long']
+              Constant: int, 8
+            Constant: int, 2

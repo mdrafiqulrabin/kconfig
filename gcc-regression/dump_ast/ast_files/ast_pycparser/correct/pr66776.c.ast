@@ -1,0 +1,22 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'long', 'long']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          ID: a
+          ID: b
+          ID: c

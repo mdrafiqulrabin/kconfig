@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fb7590264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb759026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb759026740 '__int128'
+|-TypedefDecl 0x7fb759026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb759026760 'unsigned __int128'
+|-TypedefDecl 0x7fb759026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb759026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb759026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb759026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb759026dc0 'char *'
+|   `-BuiltinType 0x7fb759026560 'char'
+|-TypedefDecl 0x7fb7590270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb759027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb759026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb759026e58 '__va_list_tag'
+|-VarDecl 0x7fb759027160 <c_files/pr56098-1.c:5:1, col:15> col:15 used p 'volatile int *'
+`-FunctionDecl 0x7fb759825ae0 <line:7:1, line:13:1> line:8:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fb759825a18 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fb759825d48 <line:9:1, line:13:1>
+    |-BinaryOperator 0x7fb759825c00 <line:10:3, col:8> 'int' '='
+    | |-UnaryOperator 0x7fb759825bc0 <col:3, col:4> 'volatile int' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fb759825ba8 <col:4> 'volatile int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fb759825b80 <col:4> 'volatile int *' lvalue Var 0x7fb759027160 'p' 'volatile int *'
+    | `-IntegerLiteral 0x7fb759825be0 <col:8> 'int' 1
+    `-IfStmt 0x7fb759825d10 <line:11:3, line:12:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fb759825c50 <line:11:7> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fb759825c28 <col:7> 'int' lvalue ParmVar 0x7fb759825a18 'x' 'int'
+      |-BinaryOperator 0x7fb759825ce8 <line:12:5, col:10> 'int' '='
+      | |-UnaryOperator 0x7fb759825ca8 <col:5, col:6> 'volatile int' lvalue prefix '*'
+      | | `-ImplicitCastExpr 0x7fb759825c90 <col:6> 'volatile int *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fb759825c68 <col:6> 'volatile int *' lvalue Var 0x7fb759027160 'p' 'volatile int *'
+      | `-IntegerLiteral 0x7fb759825cc8 <col:10> 'int' 2
+      `-<<<NULL>>>

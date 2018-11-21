@@ -1,0 +1,96 @@
+c_files/pr42224.c:4:45: error: mode attribute only supported for integer and floating-point types
+typedef char* __char_ptr32 __attribute__ (( mode (SI) ));
+                                            ^
+c_files/pr42224.c:5:61: error: mode attribute only supported for integer and floating-point types
+typedef __char_ptr32 *__char_ptr_char_ptr32 __attribute__ ((mode (SI)));
+                                                            ^
+c_files/pr42224.c:25:40: warning: implicit declaration of function 'malloc32' is invalid in C99 [-Wimplicit-function-declaration]
+  short_argv = (__char_ptr_char_ptr32) malloc32
+                                       ^
+c_files/pr42224.c:29:15: error: subscripted value is not an array, pointer, or vector
+    short_argv[argc] = (__char_ptr32) strdup32 (ptr64[argc]);
+    ~~~~~~~~~~^~~~~
+c_files/pr42224.c:29:39: warning: implicit declaration of function 'strdup32' is invalid in C99 [-Wimplicit-function-declaration]
+    short_argv[argc] = (__char_ptr32) strdup32 (ptr64[argc]);
+                                      ^
+c_files/pr42224.c:31:13: error: subscripted value is not an array, pointer, or vector
+  short_argv[argc] = (__char_ptr32) 0;
+  ~~~~~~~~~~^~~~~
+2 warnings and 4 errors generated.
+TranslationUnitDecl 0x7f91ff0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f91ff026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f91ff026740 '__int128'
+|-TypedefDecl 0x7f91ff026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f91ff026760 'unsigned __int128'
+|-TypedefDecl 0x7f91ff026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f91ff026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f91ff026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f91ff026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f91ff026dc0 'char *'
+|   `-BuiltinType 0x7f91ff026560 'char'
+|-TypedefDecl 0x7f91ff0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f91ff027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f91ff026ee0 'struct __va_list_tag'
+|     `-Record 0x7f91ff026e58 '__va_list_tag'
+|-TypedefDecl 0x7f91ff027148 <c_files/pr42224.c:4:1, col:15> col:15 referenced __char_ptr32 'unsigned int'
+| |-BuiltinType 0x7f91ff026660 'unsigned int'
+| `-ModeAttr 0x7f91ff0271b0 <col:45, col:53> SI
+|-TypedefDecl 0x7f91ff826a98 <line:5:1, col:23> col:23 referenced __char_ptr_char_ptr32 'unsigned int'
+| |-BuiltinType 0x7f91ff026660 'unsigned int'
+| `-ModeAttr 0x7f91ff826b00 <col:61, col:69> SI
+|-FunctionDecl 0x7f91ff826c30 <line:7:1, line:10:1> line:7:6 to_ptr32 'void (int)'
+| |-ParmVarDecl 0x7f91ff826b68 <col:16, col:20> col:20 used x 'int'
+| `-CompoundStmt 0x7f91ff826e10 <line:8:1, line:10:1>
+|   `-DeclStmt 0x7f91ff826df8 <line:9:3, col:38>
+|     `-VarDecl 0x7f91ff826d20 <col:3, col:37> col:16 ptr '__char_ptr32':'unsigned int' cinit
+|       `-CStyleCastExpr 0x7f91ff826dd0 <col:22, col:37> '__char_ptr32':'unsigned int' <IntegralCast>
+|         `-ImplicitCastExpr 0x7f91ff826db8 <col:37> 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x7f91ff826d80 <col:37> 'int' lvalue ParmVar 0x7f91ff826b68 'x' 'int'
+|-FunctionDecl 0x7f91ff826f40 <line:12:1, line:15:1> line:12:6 to_int 'void (__char_ptr32)'
+| |-ParmVarDecl 0x7f91ff826e40 <col:14, col:27> col:27 used ptr '__char_ptr32':'unsigned int'
+| `-CompoundStmt 0x7f91ff8270f0 <line:13:1, line:15:1>
+|   `-DeclStmt 0x7f91ff8270d8 <line:14:3, col:20>
+|     `-VarDecl 0x7f91ff826ff8 <col:3, col:17> col:7 x 'int' cinit
+|       `-CStyleCastExpr 0x7f91ff8270b0 <col:11, col:17> 'int' <IntegralCast>
+|         `-ImplicitCastExpr 0x7f91ff827098 <col:17> '__char_ptr32':'unsigned int' <LValueToRValue>
+|           `-DeclRefExpr 0x7f91ff827058 <col:17> '__char_ptr32':'unsigned int' lvalue ParmVar 0x7f91ff826e40 'ptr' '__char_ptr32':'unsigned int'
+|-FunctionDecl 0x7f91ff827270 <line:17:1, line:34:1> line:18:1 to_ptr32_ptr32 '__char_ptr_char_ptr32 (char **)'
+| |-ParmVarDecl 0x7f91ff827170 <col:17, col:24> col:24 used ptr64 'char **'
+| `-CompoundStmt 0x7f91ff828e60 <line:19:1, line:34:1>
+|   |-DeclStmt 0x7f91ff827388 <line:20:3, col:11>
+|   | `-VarDecl 0x7f91ff827328 <col:3, col:7> col:7 used argc 'int'
+|   |-DeclStmt 0x7f91ff827410 <line:21:3, col:35>
+|   | `-VarDecl 0x7f91ff8273b0 <col:3, col:25> col:25 used short_argv '__char_ptr_char_ptr32':'unsigned int'
+|   |-ForStmt 0x7f91ff8275b0 <line:23:3, col:36>
+|   | |-BinaryOperator 0x7f91ff827470 <col:8, col:13> 'int' '='
+|   | | |-DeclRefExpr 0x7f91ff827428 <col:8> 'int' lvalue Var 0x7f91ff827328 'argc' 'int'
+|   | | `-IntegerLiteral 0x7f91ff827450 <col:13> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f91ff827540 <col:16, col:26> 'char *' <LValueToRValue>
+|   | | `-ArraySubscriptExpr 0x7f91ff827518 <col:16, col:26> 'char *' lvalue
+|   | |   |-ImplicitCastExpr 0x7f91ff8274e8 <col:16> 'char **' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7f91ff827498 <col:16> 'char **' lvalue ParmVar 0x7f91ff827170 'ptr64' 'char **'
+|   | |   `-ImplicitCastExpr 0x7f91ff827500 <col:22> 'int' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f91ff8274c0 <col:22> 'int' lvalue Var 0x7f91ff827328 'argc' 'int'
+|   | |-UnaryOperator 0x7f91ff827580 <col:29, col:33> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f91ff827558 <col:29> 'int' lvalue Var 0x7f91ff827328 'argc' 'int'
+|   | `-NullStmt 0x7f91ff8275a0 <col:36>
+|   |-BinaryOperator 0x7f91ff8278e8 <line:25:3, line:26:40> '__char_ptr_char_ptr32':'unsigned int' '='
+|   | |-DeclRefExpr 0x7f91ff8275e8 <line:25:3> '__char_ptr_char_ptr32':'unsigned int' lvalue Var 0x7f91ff8273b0 'short_argv' '__char_ptr_char_ptr32':'unsigned int'
+|   | `-CStyleCastExpr 0x7f91ff8278c0 <col:16, line:26:40> '__char_ptr_char_ptr32':'unsigned int' <IntegralCast>
+|   |   `-CallExpr 0x7f91ff827880 <line:25:40, line:26:40> 'int'
+|   |     |-ImplicitCastExpr 0x7f91ff827868 <line:25:40> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f91ff8276f8 <col:40> 'int ()' Function 0x7f91ff827660 'malloc32' 'int ()'
+|   |     `-BinaryOperator 0x7f91ff827810 <line:26:6, col:39> 'unsigned long' '*'
+|   |       |-UnaryExprOrTypeTraitExpr 0x7f91ff827730 <col:6, col:26> 'unsigned long' sizeof '__char_ptr32':'unsigned int'
+|   |       `-ImplicitCastExpr 0x7f91ff8277f8 <col:30, col:39> 'unsigned long' <IntegralCast>
+|   |         `-ParenExpr 0x7f91ff8277d8 <col:30, col:39> 'int'
+|   |           `-BinaryOperator 0x7f91ff8277b0 <col:31, col:38> 'int' '+'
+|   |             |-ImplicitCastExpr 0x7f91ff827798 <col:31> 'int' <LValueToRValue>
+|   |             | `-DeclRefExpr 0x7f91ff827750 <col:31> 'int' lvalue Var 0x7f91ff827328 'argc' 'int'
+|   |             `-IntegerLiteral 0x7f91ff827778 <col:38> 'int' 1
+|   `-ReturnStmt 0x7f91ff828e48 <line:32:3, col:10>
+|     `-ImplicitCastExpr 0x7f91ff828e30 <col:10> '__char_ptr_char_ptr32':'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f91ff828e08 <col:10> '__char_ptr_char_ptr32':'unsigned int' lvalue Var 0x7f91ff8273b0 'short_argv' '__char_ptr_char_ptr32':'unsigned int'
+|-FunctionDecl 0x7f91ff827660 <<invalid sloc>> line:25:40 implicit used malloc32 'int ()'
+`-FunctionDecl 0x7f91ff828b30 <<invalid sloc>> line:29:39 implicit used strdup32 'int ()'

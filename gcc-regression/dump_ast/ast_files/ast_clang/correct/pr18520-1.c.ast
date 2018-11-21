@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7ff2cf8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff2cf826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff2cf826740 '__int128'
+|-TypedefDecl 0x7ff2cf826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff2cf826760 'unsigned __int128'
+|-TypedefDecl 0x7ff2cf826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff2cf826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff2cf826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff2cf826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff2cf826dc0 'char *'
+|   `-BuiltinType 0x7ff2cf826560 'char'
+|-TypedefDecl 0x7ff2cf8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff2cf827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff2cf826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff2cf826e58 '__va_list_tag'
+|-FunctionDecl 0x7ff2cf878430 <c_files/pr18520-1.c:5:1, col:61> col:12 used isnan 'int (double)' extern
+| |-ParmVarDecl 0x7ff2cf827138 <col:19, col:26> col:26 __value 'double'
+| `-ConstAttr 0x7ff2cf8784d0 <col:51>
+`-FunctionDecl 0x7ff2cf878638 <line:7:1, line:10:1> line:7:5 gsl_isnan 'int (const double)'
+  |-ParmVarDecl 0x7ff2cf878570 <col:16, col:29> col:29 used x 'const double'
+  `-CompoundStmt 0x7ff2cf8787d0 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7ff2cf8787b8 <line:9:3, col:17>
+      `-CallExpr 0x7ff2cf878770 <col:10, col:17> 'int'
+        |-ImplicitCastExpr 0x7ff2cf878758 <col:10> 'int (*)(double)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7ff2cf8786d8 <col:10> 'int (double)' Function 0x7ff2cf878430 'isnan' 'int (double)'
+        `-ImplicitCastExpr 0x7ff2cf8787a0 <col:16> 'double' <LValueToRValue>
+          `-DeclRefExpr 0x7ff2cf878700 <col:16> 'const double' lvalue ParmVar 0x7ff2cf878570 'x' 'const double'

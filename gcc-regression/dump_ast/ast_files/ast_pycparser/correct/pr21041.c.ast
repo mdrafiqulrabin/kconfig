@@ -1,0 +1,178 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: args
+      Decl: matrix, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: matrix, []
+              IdentifierType: ['short', 'int']
+            Constant: int, 8
+          Constant: int, 8
+      Decl: current, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: current, []
+              IdentifierType: ['char']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: args, [], [], []
+            PtrDecl: []
+              TypeDecl: args, []
+                Struct: args
+          Decl: init, [], [], []
+            PtrDecl: []
+              TypeDecl: init, []
+                IdentifierType: ['char']
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: test, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            UnaryOp: !
+              ID: args
+            BinaryOp: >
+              ID: a
+              ID: b
+          BinaryOp: <
+            ID: a
+            Constant: int, 0
+        Return: 
+          UnaryOp: -
+            Constant: int, 1
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 2
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: dest, [], [], []
+            PtrDecl: []
+              TypeDecl: dest, []
+                IdentifierType: ['char']
+            UnaryOp: *
+              StructRef: ->
+                ID: args
+                ID: current
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['char']
+            ID: dest
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              Constant: int, 8
+            UnaryOp: p++
+              ID: j
+            Assignment: =
+              UnaryOp: *
+                UnaryOp: p++
+                  ID: p
+              UnaryOp: *
+                UnaryOp: p++
+                  ID: init
+          For: 
+            Assignment: =
+              ID: k
+              Constant: int, 0
+            BinaryOp: <
+              ID: k
+              Constant: int, 8
+            UnaryOp: p++
+              ID: k
+            Compound: 
+              Decl: blockvals, [], [], []
+                PtrDecl: []
+                  TypeDecl: blockvals, []
+                    IdentifierType: ['short', 'int']
+                UnaryOp: &
+                  ArrayRef: 
+                    ArrayRef: 
+                      StructRef: ->
+                        ID: args
+                        ID: matrix
+                      ID: k
+                    Constant: int, 0
+              Assignment: +=
+                ArrayRef: 
+                  ID: dest
+                  Constant: int, 0
+                ArrayRef: 
+                  ID: blockvals
+                  Constant: int, 0
+              Assignment: +=
+                ArrayRef: 
+                  ID: dest
+                  Constant: int, 1
+                ArrayRef: 
+                  ID: blockvals
+                  Constant: int, 1
+              Assignment: +=
+                ArrayRef: 
+                  ID: dest
+                  Constant: int, 2
+                ArrayRef: 
+                  ID: blockvals
+                  Constant: int, 2
+              Assignment: +=
+                ArrayRef: 
+                  ID: dest
+                  Constant: int, 3
+                ArrayRef: 
+                  ID: blockvals
+                  Constant: int, 3
+              Assignment: +=
+                ArrayRef: 
+                  ID: dest
+                  Constant: int, 4
+                ArrayRef: 
+                  ID: blockvals
+                  Constant: int, 4
+              Assignment: +=
+                ArrayRef: 
+                  ID: dest
+                  Constant: int, 5
+                ArrayRef: 
+                  ID: blockvals
+                  Constant: int, 5
+              Assignment: +=
+                ArrayRef: 
+                  ID: dest
+                  Constant: int, 6
+                ArrayRef: 
+                  ID: blockvals
+                  Constant: int, 6
+              Assignment: +=
+                ArrayRef: 
+                  ID: dest
+                  Constant: int, 7
+                ArrayRef: 
+                  ID: blockvals
+                  Constant: int, 7
+      Return: 
+        Constant: int, 1

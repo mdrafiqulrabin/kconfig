@@ -1,0 +1,89 @@
+FileAST: 
+  Decl: qc, [], [], []
+    TypeDecl: qc, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: ec, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: lh, [], [], []
+            ArrayDecl: []
+              ArrayDecl: []
+                TypeDecl: lh, []
+                  IdentifierType: ['int']
+                Constant: int, 2
+        TypeDecl: ec, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: jv, ['const'], [], []
+        TypeDecl: jv, ['const']
+          IdentifierType: ['int']
+        Constant: int, 3
+      Decl: zf, [], [], []
+        TypeDecl: zf, []
+          IdentifierType: ['int']
+      Decl: hp, [], [], []
+        TypeDecl: hp, []
+          IdentifierType: ['int']
+      Decl: c5, [], [], []
+        TypeDecl: c5, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: m3, [], [], []
+        TypeDecl: m3, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      For: 
+        Assignment: =
+          ID: zf
+          Constant: int, 0
+        BinaryOp: <
+          ID: zf
+          ID: jv
+        UnaryOp: ++
+          ID: zf
+        For: 
+          Assignment: =
+            ID: hp
+            Constant: int, 0
+          BinaryOp: <
+            ID: hp
+            ID: jv
+          UnaryOp: ++
+            ID: hp
+          Compound: 
+            Decl: bm, [], [], []
+              TypeDecl: bm, []
+                IdentifierType: ['short', 'int']
+              Constant: int, 0
+            For: 
+              Assignment: =
+                ID: qc
+                Constant: int, 0
+              BinaryOp: <
+                ID: qc
+                ID: jv
+              UnaryOp: ++
+                ID: qc
+              UnaryOp: --
+                ID: bm
+            If: 
+              BinaryOp: !=
+                ID: bm
+                Constant: int, 0
+              UnaryOp: --
+                ID: c5
+            Assignment: =
+              ArrayRef: 
+                ArrayRef: 
+                  ID: lh
+                  Constant: int, 0
+                Constant: int, 0
+              Constant: int, 0
+            Assignment: *=
+              ID: m3
+              ID: jv
+      Return: 
+        BinaryOp: +
+          ID: c5
+          ID: m3

@@ -1,0 +1,30 @@
+FileAST: 
+  Decl: f1, [], [], []
+    FuncDecl: 
+      TypeDecl: f1, []
+        IdentifierType: ['unsigned', 'long', 'long']
+  Decl: f2, [], [], []
+    FuncDecl: 
+      TypeDecl: f2, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: store_aff_word, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: store_aff_word, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+          TernaryOp: 
+            ID: x
+            FuncCall: 
+              ID: f1
+            FuncCall: 
+              ID: f2

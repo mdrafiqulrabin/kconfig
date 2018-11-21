@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7fde7b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fde7b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fde7b826740 '__int128'
+|-TypedefDecl 0x7fde7b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fde7b826760 'unsigned __int128'
+|-TypedefDecl 0x7fde7b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fde7b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fde7b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fde7b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fde7b826dc0 'char *'
+|   `-BuiltinType 0x7fde7b826560 'char'
+|-TypedefDecl 0x7fde7b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fde7b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fde7b826ee0 'struct __va_list_tag'
+|     `-Record 0x7fde7b826e58 '__va_list_tag'
+|-RecordDecl 0x7fde7b827120 <c_files/pr30762-1.c:7:9, col:25> col:9 struct definition
+| `-FieldDecl 0x7fde7b877400 <col:18, col:22> col:22 referenced i 'int'
+|-TypedefDecl 0x7fde7b8774a0 <col:1, col:27> col:27 referenced D 'struct D':'D'
+| `-ElaboratedType 0x7fde7b877450 'struct D' sugar
+|   `-RecordType 0x7fde7b8271b0 'D'
+|     `-Record 0x7fde7b827120 ''
+|-FunctionDecl 0x7fde7b877640 <line:8:1, col:19> col:13 used foo 'void (D)' extern
+| `-ParmVarDecl 0x7fde7b877540 <col:18> col:19 'D':'D'
+|-FunctionDecl 0x7fde7b8777e0 <line:10:1, line:16:1> line:11:1 bar 'void (void)'
+| `-CompoundStmt 0x7fde7b877af8 <line:12:1, line:16:1>
+|   |-DeclStmt 0x7fde7b8778e8 <line:13:3, col:6>
+|   | `-VarDecl 0x7fde7b877888 <col:3, col:5> col:5 used d 'D':'D'
+|   |-BinaryOperator 0x7fde7b877980 <line:14:3, col:9> 'int' '='
+|   | |-MemberExpr 0x7fde7b877928 <col:3, col:5> 'int' lvalue .i 0x7fde7b877400
+|   | | `-DeclRefExpr 0x7fde7b877900 <col:3> 'D':'D' lvalue Var 0x7fde7b877888 'd' 'D':'D'
+|   | `-IntegerLiteral 0x7fde7b877960 <col:9> 'int' 1
+|   `-CallExpr 0x7fde7b877ab0 <line:15:3, col:9> 'void'
+|     |-ImplicitCastExpr 0x7fde7b877a98 <col:3> 'void (*)(D)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fde7b8779f0 <col:3> 'void (D)' Function 0x7fde7b877640 'foo' 'void (D)'
+|     `-ImplicitCastExpr 0x7fde7b877ae0 <col:8> 'D':'D' <LValueToRValue>
+|       `-DeclRefExpr 0x7fde7b877a18 <col:8> 'D':'D' lvalue Var 0x7fde7b877888 'd' 'D':'D'
+`-FunctionDecl 0x7fde7b877b80 <line:18:1, col:24> col:5 main 'int ()'
+  `-CompoundStmt 0x7fde7b877c50 <col:12, col:24>
+    `-ReturnStmt 0x7fde7b877c38 <col:14, col:21>
+      `-IntegerLiteral 0x7fde7b877c18 <col:21> 'int' 0

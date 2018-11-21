@@ -1,0 +1,129 @@
+TranslationUnitDecl 0x7f8b630264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8b63026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8b63026740 '__int128'
+|-TypedefDecl 0x7f8b63026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8b63026760 'unsigned __int128'
+|-TypedefDecl 0x7f8b63026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8b63026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8b63026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8b63026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8b63026dc0 'char *'
+|   `-BuiltinType 0x7f8b63026560 'char'
+|-TypedefDecl 0x7f8b630270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8b63027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8b63026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8b63026e58 '__va_list_tag'
+|-FunctionDecl 0x7f8b63825a30 <c_files/pr52592.c:13:12> col:12 implicit used round 'double (double)' extern
+| |-ParmVarDecl 0x7f8b63825ac8 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f8b63825b30 <col:12> Implicit
+| `-ConstAttr 0x7f8b63825b78 <col:12> Implicit
+|-FunctionDecl 0x7f8b63825b88 prev 0x7f8b63825a30 <col:4, line:6:16> line:13:12 used round 'double (double)'
+| |-ParmVarDecl 0x7f8b63027138 <col:4> line:6:16 'double'
+| |-NoThrowAttr 0x7f8b63825c60 <line:13:12> Inherited Implicit
+| `-ConstAttr 0x7f8b63825c70 <col:12> Inherited Implicit
+|-FunctionDecl 0x7f8b63825d68 <line:6:20, line:10:26> <scratch space>:2:1 fround 'int (double)'
+| |-ParmVarDecl 0x7f8b63825c98 <c_files/pr52592.c:13:4, line:8:19> col:19 used x 'double'
+| |-CompoundStmt 0x7f8b63825fc0 <col:23, line:10:26>
+| | `-ReturnStmt 0x7f8b63825fa8 <col:3, col:23>
+| |   `-CStyleCastExpr 0x7f8b63825f80 <col:10, col:23> 'int' <FloatingToIntegral>
+| |     `-CallExpr 0x7f8b63825f20 <line:13:12, line:10:23> 'double'
+| |       |-ImplicitCastExpr 0x7f8b63825f08 <line:13:12> 'double (*)(double)' <FunctionToPointerDecay>
+| |       | `-DeclRefExpr 0x7f8b63825e90 <col:12> 'double (double)' Function 0x7f8b63825b88 'round' 'double (double)'
+| |       `-ImplicitCastExpr 0x7f8b63825f50 <line:10:22> 'double' <LValueToRValue>
+| |         `-DeclRefExpr 0x7f8b63825eb8 <col:22> 'double' lvalue ParmVar 0x7f8b63825c98 'x' 'double'
+| `-ColdAttr 0x7f8b63825e08 <line:7:16>
+|-FunctionDecl 0x7f8b638260c8 <line:14:11> col:11 implicit used roundf 'float (float)' extern
+| |-ParmVarDecl 0x7f8b63826160 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7f8b638261c8 <col:11> Implicit
+| `-ConstAttr 0x7f8b63826210 <col:11> Implicit
+|-FunctionDecl 0x7f8b63826220 prev 0x7f8b638260c8 <col:4, line:6:16> line:14:11 used roundf 'float (float)'
+| |-ParmVarDecl 0x7f8b63825ff8 <col:4> line:6:16 'float'
+| |-NoThrowAttr 0x7f8b638262f8 <line:14:11> Inherited Implicit
+| `-ConstAttr 0x7f8b63826308 <col:11> Inherited Implicit
+|-FunctionDecl 0x7f8b638263f8 <line:6:20, line:10:26> <scratch space>:3:1 froundf 'int (float)'
+| |-ParmVarDecl 0x7f8b63826330 <c_files/pr52592.c:14:4, line:8:19> col:19 used x 'float'
+| |-CompoundStmt 0x7f8b63826610 <col:23, line:10:26>
+| | `-ReturnStmt 0x7f8b638265f8 <col:3, col:23>
+| |   `-CStyleCastExpr 0x7f8b638265d0 <col:10, col:23> 'int' <FloatingToIntegral>
+| |     `-CallExpr 0x7f8b63826570 <line:14:11, line:10:23> 'float'
+| |       |-ImplicitCastExpr 0x7f8b63826558 <line:14:11> 'float (*)(float)' <FunctionToPointerDecay>
+| |       | `-DeclRefExpr 0x7f8b638264e0 <col:11> 'float (float)' Function 0x7f8b63826220 'roundf' 'float (float)'
+| |       `-ImplicitCastExpr 0x7f8b638265a0 <line:10:22> 'float' <LValueToRValue>
+| |         `-DeclRefExpr 0x7f8b63826508 <col:22> 'float' lvalue ParmVar 0x7f8b63826330 'x' 'float'
+| `-ColdAttr 0x7f8b63826498 <line:7:16>
+|-FunctionDecl 0x7f8b63826718 <line:15:17> col:17 implicit used roundl 'long double (long double)' extern
+| |-ParmVarDecl 0x7f8b638267b0 <<invalid sloc>> <invalid sloc> 'long double'
+| |-NoThrowAttr 0x7f8b63826818 <col:17> Implicit
+| `-ConstAttr 0x7f8b63826860 <col:17> Implicit
+|-FunctionDecl 0x7f8b63826870 prev 0x7f8b63826718 <col:4, line:6:16> line:15:17 used roundl 'long double (long double)'
+| |-ParmVarDecl 0x7f8b63826648 <col:4, col:9> line:6:16 'long double'
+| |-NoThrowAttr 0x7f8b63826948 <line:15:17> Inherited Implicit
+| `-ConstAttr 0x7f8b63826958 <col:17> Inherited Implicit
+|-FunctionDecl 0x7f8b63829c68 <line:6:20, line:10:26> <scratch space>:4:1 froundl 'int (long double)'
+| |-ParmVarDecl 0x7f8b63826980 <c_files/pr52592.c:15:4, line:8:19> col:19 used x 'long double'
+| |-CompoundStmt 0x7f8b63829e80 <col:23, line:10:26>
+| | `-ReturnStmt 0x7f8b63829e68 <col:3, col:23>
+| |   `-CStyleCastExpr 0x7f8b63829e40 <col:10, col:23> 'int' <FloatingToIntegral>
+| |     `-CallExpr 0x7f8b63829de0 <line:15:17, line:10:23> 'long double'
+| |       |-ImplicitCastExpr 0x7f8b63829dc8 <line:15:17> 'long double (*)(long double)' <FunctionToPointerDecay>
+| |       | `-DeclRefExpr 0x7f8b63829d50 <col:17> 'long double (long double)' Function 0x7f8b63826870 'roundl' 'long double (long double)'
+| |       `-ImplicitCastExpr 0x7f8b63829e10 <line:10:22> 'long double' <LValueToRValue>
+| |         `-DeclRefExpr 0x7f8b63829d78 <col:22> 'long double' lvalue ParmVar 0x7f8b63826980 'x' 'long double'
+| `-ColdAttr 0x7f8b63829d08 <line:7:16>
+|-FunctionDecl 0x7f8b63829f48 <line:16:12> col:12 implicit used rint 'double (double)' extern
+| |-ParmVarDecl 0x7f8b63829fe0 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f8b6382a048 <col:12> Implicit
+| `-ConstAttr 0x7f8b6382a090 <col:12> Implicit
+|-FunctionDecl 0x7f8b6382a0a0 prev 0x7f8b63829f48 <col:4, line:6:16> line:16:12 used rint 'double (double)'
+| |-ParmVarDecl 0x7f8b63829eb8 <col:4> line:6:16 'double'
+| |-NoThrowAttr 0x7f8b6382a178 <line:16:12> Inherited Implicit
+| `-ConstAttr 0x7f8b6382a188 <col:12> Inherited Implicit
+|-FunctionDecl 0x7f8b6382a240 <line:6:20, line:10:26> <scratch space>:5:1 frint 'int (double)'
+| |-ParmVarDecl 0x7f8b6382a1b0 <c_files/pr52592.c:16:4, line:8:19> col:19 used x 'double'
+| |-CompoundStmt 0x7f8b6382a430 <col:23, line:10:26>
+| | `-ReturnStmt 0x7f8b6382a418 <col:3, col:23>
+| |   `-CStyleCastExpr 0x7f8b6382a3f0 <col:10, col:23> 'int' <FloatingToIntegral>
+| |     `-CallExpr 0x7f8b6382a390 <line:16:12, line:10:23> 'double'
+| |       |-ImplicitCastExpr 0x7f8b6382a378 <line:16:12> 'double (*)(double)' <FunctionToPointerDecay>
+| |       | `-DeclRefExpr 0x7f8b6382a328 <col:12> 'double (double)' Function 0x7f8b6382a0a0 'rint' 'double (double)'
+| |       `-ImplicitCastExpr 0x7f8b6382a3c0 <line:10:22> 'double' <LValueToRValue>
+| |         `-DeclRefExpr 0x7f8b6382a350 <col:22> 'double' lvalue ParmVar 0x7f8b6382a1b0 'x' 'double'
+| `-ColdAttr 0x7f8b6382a2e0 <line:7:16>
+|-FunctionDecl 0x7f8b6382a4f8 <line:17:11> col:11 implicit used rintf 'float (float)' extern
+| |-ParmVarDecl 0x7f8b6382a590 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7f8b6382a5f8 <col:11> Implicit
+| `-ConstAttr 0x7f8b6382a640 <col:11> Implicit
+|-FunctionDecl 0x7f8b6382a650 prev 0x7f8b6382a4f8 <col:4, line:6:16> line:17:11 used rintf 'float (float)'
+| |-ParmVarDecl 0x7f8b6382a468 <col:4> line:6:16 'float'
+| |-NoThrowAttr 0x7f8b6382a728 <line:17:11> Inherited Implicit
+| `-ConstAttr 0x7f8b6382a738 <col:11> Inherited Implicit
+|-FunctionDecl 0x7f8b6382a7f0 <line:6:20, line:10:26> <scratch space>:6:1 frintf 'int (float)'
+| |-ParmVarDecl 0x7f8b6382a760 <c_files/pr52592.c:17:4, line:8:19> col:19 used x 'float'
+| |-CompoundStmt 0x7f8b6382a9e0 <col:23, line:10:26>
+| | `-ReturnStmt 0x7f8b6382a9c8 <col:3, col:23>
+| |   `-CStyleCastExpr 0x7f8b6382a9a0 <col:10, col:23> 'int' <FloatingToIntegral>
+| |     `-CallExpr 0x7f8b6382a940 <line:17:11, line:10:23> 'float'
+| |       |-ImplicitCastExpr 0x7f8b6382a928 <line:17:11> 'float (*)(float)' <FunctionToPointerDecay>
+| |       | `-DeclRefExpr 0x7f8b6382a8d8 <col:11> 'float (float)' Function 0x7f8b6382a650 'rintf' 'float (float)'
+| |       `-ImplicitCastExpr 0x7f8b6382a970 <line:10:22> 'float' <LValueToRValue>
+| |         `-DeclRefExpr 0x7f8b6382a900 <col:22> 'float' lvalue ParmVar 0x7f8b6382a760 'x' 'float'
+| `-ColdAttr 0x7f8b6382a890 <line:7:16>
+|-FunctionDecl 0x7f8b6382aaa8 <line:18:17> col:17 implicit used rintl 'long double (long double)' extern
+| |-ParmVarDecl 0x7f8b6382ab40 <<invalid sloc>> <invalid sloc> 'long double'
+| |-NoThrowAttr 0x7f8b6382aba8 <col:17> Implicit
+| `-ConstAttr 0x7f8b6382abf0 <col:17> Implicit
+|-FunctionDecl 0x7f8b6382ac00 prev 0x7f8b6382aaa8 <col:4, line:6:16> line:18:17 used rintl 'long double (long double)'
+| |-ParmVarDecl 0x7f8b6382aa18 <col:4, col:9> line:6:16 'long double'
+| |-NoThrowAttr 0x7f8b6382acd8 <line:18:17> Inherited Implicit
+| `-ConstAttr 0x7f8b6382ace8 <col:17> Inherited Implicit
+`-FunctionDecl 0x7f8b6382ada0 <line:6:20, line:10:26> <scratch space>:7:1 frintl 'int (long double)'
+  |-ParmVarDecl 0x7f8b6382ad10 <c_files/pr52592.c:18:4, line:8:19> col:19 used x 'long double'
+  |-CompoundStmt 0x7f8b6382af90 <col:23, line:10:26>
+  | `-ReturnStmt 0x7f8b6382af78 <col:3, col:23>
+  |   `-CStyleCastExpr 0x7f8b6382af50 <col:10, col:23> 'int' <FloatingToIntegral>
+  |     `-CallExpr 0x7f8b6382aef0 <line:18:17, line:10:23> 'long double'
+  |       |-ImplicitCastExpr 0x7f8b6382aed8 <line:18:17> 'long double (*)(long double)' <FunctionToPointerDecay>
+  |       | `-DeclRefExpr 0x7f8b6382ae88 <col:17> 'long double (long double)' Function 0x7f8b6382ac00 'rintl' 'long double (long double)'
+  |       `-ImplicitCastExpr 0x7f8b6382af20 <line:10:22> 'long double' <LValueToRValue>
+  |         `-DeclRefExpr 0x7f8b6382aeb0 <col:22> 'long double' lvalue ParmVar 0x7f8b6382ad10 'x' 'long double'
+  `-ColdAttr 0x7f8b6382ae40 <line:7:16>

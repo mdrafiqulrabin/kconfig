@@ -1,0 +1,68 @@
+FileAST: 
+  Decl: value_compare, [], [], []
+    FuncDecl: 
+      TypeDecl: value_compare, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: list_compare, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: list1, [], [], []
+            PtrDecl: []
+              TypeDecl: list1, []
+                IdentifierType: ['int']
+        TypeDecl: list_compare, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        ID: list1
+        FuncCall: 
+          ID: value_compare
+  FuncDef: 
+    Decl: func1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            PtrDecl: []
+              TypeDecl: f, []
+                IdentifierType: ['int']
+        TypeDecl: func1, []
+          IdentifierType: ['int']
+    Compound: 
+  FuncDef: 
+    Decl: value_compare, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+        TypeDecl: value_compare, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        ID: a
+        FuncCall: 
+          ID: list_compare
+          ExprList: 
+            ID: a
+  FuncDef: 
+    Decl: func2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fb, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: fb, ['const']
+                IdentifierType: ['int']
+        TypeDecl: func2, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: func1
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+            ID: fb

@@ -1,0 +1,42 @@
+c_files/pr67563.c:9:7: warning: implicit declaration of function '__fprintf_chk' is invalid in C99 [-Wimplicit-function-declaration]
+  a = __fprintf_chk (0, 0, "");
+      ^
+1 warning generated.
+TranslationUnitDecl 0x7feaeb0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feaeb026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feaeb026740 '__int128'
+|-TypedefDecl 0x7feaeb026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feaeb026760 'unsigned __int128'
+|-TypedefDecl 0x7feaeb026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feaeb026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7feaeb026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feaeb026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feaeb026dc0 'char *'
+|   `-BuiltinType 0x7feaeb026560 'char'
+|-TypedefDecl 0x7feaeb0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feaeb027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feaeb026ee0 'struct __va_list_tag'
+|     `-Record 0x7feaeb026e58 '__va_list_tag'
+|-FunctionDecl 0x7feaeb825a00 <c_files/pr67563.c:4:1, line:10:1> line:5:1 used emit_package 'void (int)' static
+| |-ParmVarDecl 0x7feaeb027138 <col:15, col:19> col:19 p1 'int'
+| `-CompoundStmt 0x7feaeb825f00 <line:6:1, line:10:1>
+|   |-DeclStmt 0x7feaeb825b58 <line:7:3, col:8>
+|   | `-VarDecl 0x7feaeb825af8 <col:3, col:7> col:7 used a 'int'
+|   |-DeclStmt 0x7feaeb825c50 <line:8:3, col:11>
+|   | `-VarDecl 0x7feaeb825bf0 <col:3, col:10> col:7 b 'int [0]'
+|   `-BinaryOperator 0x7feaeb825ed8 <line:9:3, col:30> 'int' '='
+|     |-DeclRefExpr 0x7feaeb825c68 <col:3> 'int' lvalue Var 0x7feaeb825af8 'a' 'int'
+|     `-CallExpr 0x7feaeb825e80 <col:7, col:30> 'int'
+|       |-ImplicitCastExpr 0x7feaeb825e68 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7feaeb825d78 <col:7> 'int ()' Function 0x7feaeb825ce0 '__fprintf_chk' 'int ()'
+|       |-IntegerLiteral 0x7feaeb825da0 <col:22> 'int' 0
+|       |-IntegerLiteral 0x7feaeb825dc0 <col:25> 'int' 0
+|       `-ImplicitCastExpr 0x7feaeb825ec0 <col:28> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7feaeb825e18 <col:28> 'char [1]' lvalue ""
+|-FunctionDecl 0x7feaeb825ce0 <<invalid sloc>> col:7 implicit used __fprintf_chk 'int ()'
+`-FunctionDecl 0x7feaeb825f78 <line:11:1, col:38> col:6 emit_lua 'void ()'
+  `-CompoundStmt 0x7feaeb8260d0 <col:18, col:38>
+    `-CallExpr 0x7feaeb8260a0 <col:20, col:35> 'void'
+      |-ImplicitCastExpr 0x7feaeb826088 <col:20> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7feaeb826010 <col:20> 'void (int)' Function 0x7feaeb825a00 'emit_package' 'void (int)'
+      `-IntegerLiteral 0x7feaeb826038 <col:34> 'int' 0

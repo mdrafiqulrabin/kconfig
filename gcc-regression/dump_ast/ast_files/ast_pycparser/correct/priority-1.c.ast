@@ -1,0 +1,90 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Pragma: omp task
+      FuncCall: 
+        ID: bar
+      Pragma: omp taskloop
+      For: 
+        DeclList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+            Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: bar
+      Pragma: omp task
+      FuncCall: 
+        ID: bar
+      Pragma: omp taskloop
+      For: 
+        DeclList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['unsigned', 'long', 'long', 'int']
+            Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: y
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: bar
+      Pragma: omp task priority (1)
+      FuncCall: 
+        ID: bar
+      Pragma: omp taskloop priority (1)
+      For: 
+        DeclList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+            Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: bar
+      Pragma: omp task priority (x + 1)
+      FuncCall: 
+        ID: bar
+      Pragma: omp taskloop priority (x + 1)
+      For: 
+        DeclList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['unsigned', 'long', 'long', 'int']
+            Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: y
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: bar

@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fb44b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb44b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb44b826740 '__int128'
+|-TypedefDecl 0x7fb44b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb44b826760 'unsigned __int128'
+|-TypedefDecl 0x7fb44b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb44b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb44b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb44b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb44b826dc0 'char *'
+|   `-BuiltinType 0x7fb44b826560 'char'
+|-TypedefDecl 0x7fb44b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb44b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb44b826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb44b826e58 '__va_list_tag'
+`-FunctionDecl 0x7fb44c025b68 <c_files/pr84844.c:5:1, line:10:1> line:6:1 foo 'double (int *, int, int)'
+  |-ParmVarDecl 0x7fb44b827160 <col:6, col:11> col:11 used x 'int *'
+  |-ParmVarDecl 0x7fb44c025a00 <col:14, col:18> col:18 used y 'int'
+  |-ParmVarDecl 0x7fb44c025a78 <col:21, col:25> col:25 used z 'int'
+  `-CompoundStmt 0x7fb44c025d90 <line:7:1, line:10:1>
+    |-BinaryOperator 0x7fb44c025cf8 <line:8:3, col:8> 'int' '='
+    | |-UnaryOperator 0x7fb44c025c98 <col:3, col:4> 'int' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fb44c025c80 <col:4> 'int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fb44c025c58 <col:4> 'int *' lvalue ParmVar 0x7fb44b827160 'x' 'int *'
+    | `-ImplicitCastExpr 0x7fb44c025ce0 <col:8> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb44c025cb8 <col:8> 'int' lvalue ParmVar 0x7fb44c025a00 'y' 'int'
+    `-ReturnStmt 0x7fb44c025d78 <line:9:3, col:10>
+      `-ImplicitCastExpr 0x7fb44c025d60 <col:10> 'double' <IntegralToFloating>
+        `-ImplicitCastExpr 0x7fb44c025d48 <col:10> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fb44c025d20 <col:10> 'int' lvalue ParmVar 0x7fb44c025a78 'z' 'int'

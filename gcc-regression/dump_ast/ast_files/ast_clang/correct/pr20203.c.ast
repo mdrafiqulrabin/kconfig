@@ -1,0 +1,61 @@
+TranslationUnitDecl 0x7f882a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f882a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f882a826740 '__int128'
+|-TypedefDecl 0x7f882a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f882a826760 'unsigned __int128'
+|-TypedefDecl 0x7f882a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f882a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f882a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f882a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f882a826dc0 'char *'
+|   `-BuiltinType 0x7f882a826560 'char'
+|-TypedefDecl 0x7f882a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f882a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f882a826ee0 'struct __va_list_tag'
+|     `-Record 0x7f882a826e58 '__va_list_tag'
+|-FunctionDecl 0x7f882b025b68 <c_files/pr20203.c:1:7> col:7 implicit used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7f882b025c00 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f882b025c60 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7f882b025cc0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f882b025d38 prev 0x7f882b025b68 <col:1, col:41> col:7 used memset 'void *(void *, int, unsigned long)'
+| |-ParmVarDecl 0x7f882a827138 <col:15, col:20> col:21 'void *'
+| |-ParmVarDecl 0x7f882b025a00 <col:23> col:26 'int'
+| `-ParmVarDecl 0x7f882b025a78 <col:28, col:37> col:41 'unsigned long'
+|-RecordDecl 0x7f882b025de8 <line:3:9, line:7:1> line:3:16 struct bfd_section definition
+| |-FieldDecl 0x7f882b025ea8 <line:5:3, col:17> col:17 referenced size 'unsigned long'
+| `-FieldDecl 0x7f882b025f30 <line:6:3, col:18> col:18 referenced contents 'unsigned char *'
+|-TypedefDecl 0x7f882b025fd0 <line:3:1, line:7:3> col:3 referenced asection 'struct bfd_section':'struct bfd_section'
+| `-ElaboratedType 0x7f882b025f80 'struct bfd_section' sugar
+|   `-RecordType 0x7f882b025e70 'struct bfd_section'
+|     `-Record 0x7f882b025de8 'bfd_section'
+`-FunctionDecl 0x7f882b0261d8 <line:9:1, line:16:1> line:10:1 _bfd_mips_elf_finish_dynamic_sections 'int (asection *)'
+  |-ParmVarDecl 0x7f882b0260c8 <col:40, col:50> col:50 used s 'asection *'
+  `-CompoundStmt 0x7f882b0266e8 <line:11:1, line:16:1>
+    |-DeclStmt 0x7f882b026330 <line:12:3, col:25>
+    | `-VarDecl 0x7f882b0262d0 <col:3, col:13> col:13 used dummy_offset 'long long'
+    |-BinaryOperator 0x7f882b026478 <line:13:3, col:28> 'long long' '='
+    | |-DeclRefExpr 0x7f882b026348 <col:3> 'long long' lvalue Var 0x7f882b0262d0 'dummy_offset' 'long long'
+    | `-ImplicitCastExpr 0x7f882b026460 <col:18, col:28> 'long long' <IntegralCast>
+    |   `-BinaryOperator 0x7f882b026438 <col:18, col:28> 'unsigned long' '-'
+    |     |-ImplicitCastExpr 0x7f882b026408 <col:18, col:21> 'unsigned long' <LValueToRValue>
+    |     | `-MemberExpr 0x7f882b0263b0 <col:18, col:21> 'unsigned long' lvalue ->size 0x7f882b025ea8
+    |     |   `-ImplicitCastExpr 0x7f882b026398 <col:18> 'asection *' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7f882b026370 <col:18> 'asection *' lvalue ParmVar 0x7f882b0260c8 's' 'asection *'
+    |     `-ImplicitCastExpr 0x7f882b026420 <col:28> 'unsigned long' <IntegralCast>
+    |       `-IntegerLiteral 0x7f882b0263e8 <col:28> 'int' 16
+    |-CallExpr 0x7f882b026640 <line:14:3, col:44> 'void *'
+    | |-ImplicitCastExpr 0x7f882b026628 <col:3> 'void *(*)(void *, int, unsigned long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f882b0264a0 <col:3> 'void *(void *, int, unsigned long)' Function 0x7f882b025d38 'memset' 'void *(void *, int, unsigned long)'
+    | |-ImplicitCastExpr 0x7f882b026680 <col:11, col:25> 'void *' <BitCast>
+    | | `-BinaryOperator 0x7f882b026598 <col:11, col:25> 'unsigned char *' '+'
+    | |   |-ImplicitCastExpr 0x7f882b026568 <col:11, col:14> 'unsigned char *' <LValueToRValue>
+    | |   | `-MemberExpr 0x7f882b026508 <col:11, col:14> 'unsigned char *' lvalue ->contents 0x7f882b025f30
+    | |   |   `-ImplicitCastExpr 0x7f882b0264f0 <col:11> 'asection *' <LValueToRValue>
+    | |   |     `-DeclRefExpr 0x7f882b0264c8 <col:11> 'asection *' lvalue ParmVar 0x7f882b0260c8 's' 'asection *'
+    | |   `-ImplicitCastExpr 0x7f882b026580 <col:25> 'long long' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f882b026540 <col:25> 'long long' lvalue Var 0x7f882b0262d0 'dummy_offset' 'long long'
+    | |-IntegerLiteral 0x7f882b0265c0 <col:39> 'int' 0
+    | `-ImplicitCastExpr 0x7f882b026698 <col:42> 'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f882b0265e0 <col:42> 'int' 16
+    `-ReturnStmt 0x7f882b0266d0 <line:15:3, col:10>
+      `-IntegerLiteral 0x7f882b0266b0 <col:10> 'int' 1

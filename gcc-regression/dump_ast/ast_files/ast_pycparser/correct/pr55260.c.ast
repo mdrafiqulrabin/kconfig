@@ -1,0 +1,151 @@
+FileAST: 
+  Typedef: string, [], ['typedef']
+    TypeDecl: string, []
+      Struct: None
+        Decl: ptr, [], [], []
+          PtrDecl: []
+            TypeDecl: ptr, []
+              IdentifierType: ['int']
+        Decl: len, [], [], []
+          TypeDecl: len, []
+            IdentifierType: ['int']
+  Typedef: malv, [], ['typedef']
+    TypeDecl: malv, []
+      Struct: None
+        Decl: nantstr, [], [], []
+          TypeDecl: nantstr, []
+            IdentifierType: ['string']
+        Decl: nant, [], [], []
+          PtrDecl: []
+            TypeDecl: nant, []
+              IdentifierType: ['int']
+  Typedef: list_heads, [], ['typedef']
+    TypeDecl: list_heads, []
+      Struct: None
+        Decl: nor, [], [], []
+          PtrDecl: []
+            TypeDecl: nor, []
+              IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: fn1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['string']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned']
+      PtrDecl: []
+        TypeDecl: fn1, []
+          IdentifierType: ['list_heads']
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            PtrDecl: []
+              TypeDecl: p1, []
+                IdentifierType: ['malv']
+          Decl: p2, [], [], []
+            PtrDecl: []
+              TypeDecl: p2, []
+                IdentifierType: ['list_heads']
+          Decl: p3, [], [], []
+            TypeDecl: p3, []
+              IdentifierType: ['unsigned']
+        TypeDecl: fn2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['string']
+        StructRef: ->
+          ID: p1
+          ID: nantstr
+      FuncCall: 
+        ID: fn1
+        ExprList: 
+          ID: a
+          StructRef: ->
+            ID: p1
+            ID: nant
+          ID: p3
+  FuncDef: 
+    Decl: fn3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['unsigned']
+        TypeDecl: fn3, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: fn2
+        ExprList: 
+          Constant: int, 0
+          Constant: int, 0
+          ID: p1
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['string']
+          Decl: p2, [], [], []
+            PtrDecl: []
+              TypeDecl: p2, []
+                IdentifierType: ['int']
+          Decl: p3, [], [], []
+            TypeDecl: p3, []
+              IdentifierType: ['unsigned']
+        PtrDecl: []
+          TypeDecl: fn1, []
+            IdentifierType: ['list_heads']
+    Compound: 
+      While: 
+        Constant: int, 1
+        Compound: 
+          If: 
+            ID: p3
+            FuncCall: 
+              ID: fn3
+              ExprList: 
+                Constant: int, 1
+          If: 
+            ID: b
+            Return: 
+              Constant: int, 0
+          FuncCall: 
+            ID: fn3
+            ExprList: 
+              Constant: int, 1
+  FuncDef: 
+    Decl: fn5, [], [], []
+      FuncDecl: 
+        TypeDecl: fn5, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['list_heads']
+      Assignment: =
+        StructRef: .
+          ID: c
+          ID: nor
+        Constant: int, 0
+      FuncCall: 
+        ID: fn2
+        ExprList: 
+          Constant: int, 0
+          UnaryOp: &
+            ID: c
+          Constant: int, 1

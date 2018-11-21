@@ -1,0 +1,25 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            ArrayDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+              Constant: int, 3
+            Constant: int, 3
+          Constant: int, 3
+      FuncCall: 
+        ID: __builtin_memset
+        ExprList: 
+          ID: a
+          Constant: int, 0
+          UnaryOp: sizeof
+            ID: a
+      Return: 
+        Constant: int, 0

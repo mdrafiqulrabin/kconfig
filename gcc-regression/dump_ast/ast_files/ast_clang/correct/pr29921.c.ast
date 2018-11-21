@@ -1,0 +1,58 @@
+TranslationUnitDecl 0x7fa3718264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa371826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa371826740 '__int128'
+|-TypedefDecl 0x7fa371826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa371826760 'unsigned __int128'
+|-TypedefDecl 0x7fa371826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa371826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa371826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa371826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa371826dc0 'char *'
+|   `-BuiltinType 0x7fa371826560 'char'
+|-TypedefDecl 0x7fa3718270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa371827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa371826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa371826e58 '__va_list_tag'
+`-FunctionDecl 0x7fa371877430 <c_files/pr29921.c:7:1, line:20:1> line:7:8 test 'double (int)'
+  |-ParmVarDecl 0x7fa371827138 <col:14, col:18> col:18 used param 'int'
+  `-CompoundStmt 0x7fa371877b78 <line:8:1, line:20:1>
+    |-DeclStmt 0x7fa3718776f8 <line:9:3, col:30>
+    | |-VarDecl 0x7fa371877528 <col:3, col:14> col:10 used a 'double' cinit
+    | | `-FloatingLiteral 0x7fa371877588 <col:14> 'double' 0.000000e+00
+    | |-VarDecl 0x7fa3718775c0 <col:3, col:24> col:19 used b 'double' cinit
+    | | `-UnaryOperator 0x7fa371877640 <col:23, col:24> 'double' prefix '-'
+    | |   `-FloatingLiteral 0x7fa371877620 <col:24> 'double' 1.000000e+00
+    | `-VarDecl 0x7fa371877678 <col:3, col:29> col:29 used t 'double'
+    |-DeclStmt 0x7fa371877788 <line:10:3, col:8>
+    | `-VarDecl 0x7fa371877728 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7fa371877ae8 <line:12:3, line:17:5>
+    | |-BinaryOperator 0x7fa3718777e8 <line:12:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fa3718777a0 <col:8> 'int' lvalue Var 0x7fa371877728 'i' 'int'
+    | | `-IntegerLiteral 0x7fa3718777c8 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa371877870 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fa371877858 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa371877810 <col:15> 'int' lvalue Var 0x7fa371877728 'i' 'int'
+    | | `-IntegerLiteral 0x7fa371877838 <col:19> 'int' 100
+    | |-UnaryOperator 0x7fa3718778c0 <col:24, col:25> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fa371877898 <col:24> 'int' lvalue Var 0x7fa371877728 'i' 'int'
+    | `-CompoundStmt 0x7fa371877ac0 <line:13:5, line:17:5>
+    |   |-BinaryOperator 0x7fa3718779b0 <line:14:7, col:15> 'double' '='
+    |   | |-DeclRefExpr 0x7fa3718778e0 <col:7> 'double' lvalue Var 0x7fa371877678 't' 'double'
+    |   | `-BinaryOperator 0x7fa371877988 <col:11, col:15> 'double' '*'
+    |   |   |-ImplicitCastExpr 0x7fa371877958 <col:11> 'double' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x7fa371877908 <col:11> 'double' lvalue Var 0x7fa371877528 'a' 'double'
+    |   |   `-ImplicitCastExpr 0x7fa371877970 <col:15> 'double' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7fa371877930 <col:15> 'double' lvalue Var 0x7fa3718775c0 'b' 'double'
+    |   `-IfStmt 0x7fa371877a88 <line:15:7, line:16:6>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-ImplicitCastExpr 0x7fa371877a00 <line:15:11> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fa3718779d8 <col:11> 'int' lvalue ParmVar 0x7fa371827138 'param' 'int'
+    |     |-BinaryOperator 0x7fa371877a60 <line:16:2, col:6> 'double' '='
+    |     | |-DeclRefExpr 0x7fa371877a18 <col:2> 'double' lvalue Var 0x7fa3718775c0 'b' 'double'
+    |     | `-FloatingLiteral 0x7fa371877a40 <col:6> 'double' 2.000000e+00
+    |     `-<<<NULL>>>
+    `-ReturnStmt 0x7fa371877b60 <line:19:3, col:10>
+      `-ImplicitCastExpr 0x7fa371877b48 <col:10> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7fa371877b20 <col:10> 'double' lvalue Var 0x7fa371877678 't' 'double'

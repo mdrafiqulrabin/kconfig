@@ -1,0 +1,147 @@
+TranslationUnitDecl 0x7fb3d80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb3d8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb3d8026740 '__int128'
+|-TypedefDecl 0x7fb3d8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb3d8026760 'unsigned __int128'
+|-TypedefDecl 0x7fb3d8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb3d8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb3d8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb3d8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb3d8026dc0 'char *'
+|   `-BuiltinType 0x7fb3d8026560 'char'
+|-TypedefDecl 0x7fb3d80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb3d8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb3d8026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb3d8026e58 '__va_list_tag'
+|-TypedefDecl 0x7fb3d8027138 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stddef.h:51:1, col:26> col:26 ptrdiff_t 'long'
+| `-BuiltinType 0x7fb3d80265e0 'long'
+|-TypedefDecl 0x7fb3d80271a8 <line:62:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fb3d8026680 'unsigned long'
+|-TypedefDecl 0x7fb3d807c018 <line:90:1, col:24> col:24 wchar_t 'int'
+| `-BuiltinType 0x7fb3d80265c0 'int'
+|-TypedefDecl 0x7fb3d807c088 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/__stddef_max_align_t.h:32:1, col:21> col:21 max_align_t 'long double'
+| `-BuiltinType 0x7fb3d8026700 'long double'
+|-VarDecl 0x7fb3d807c180 <c_files/pr48258-2.c:16:1, col:19> col:8 used values 'double [1024]'
+| `-AlignedAttr 0x7fb3d807c1e0 <col:36, col:50> aligned
+|   `-IntegerLiteral 0x7fb3d807c100 <col:48> 'int' 32
+|-FunctionDecl 0x7fb3d807c338 <line:18:1, line:28:1> line:19:1 vector_sum 'double (void)'
+| `-CompoundStmt 0x7fb3d807c870 <line:20:1, line:28:1>
+|   |-DeclStmt 0x7fb3d807c460 <line:21:3, col:11>
+|   | `-VarDecl 0x7fb3d807c400 <col:3, col:10> col:10 used i 'size_t':'unsigned long'
+|   |-DeclStmt 0x7fb3d807c510 <line:22:3, col:19>
+|   | `-VarDecl 0x7fb3d807c490 <col:3, col:16> col:10 used sum 'double' cinit
+|   |   `-FloatingLiteral 0x7fb3d807c4f0 <col:16> 'double' 0.000000e+00
+|   |-ForStmt 0x7fb3d807c7e0 <line:24:3, line:25:20>
+|   | |-BinaryOperator 0x7fb3d807c588 <line:24:8, col:12> 'size_t':'unsigned long' '='
+|   | | |-DeclRefExpr 0x7fb3d807c528 <col:8> 'size_t':'unsigned long' lvalue Var 0x7fb3d807c400 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fb3d807c570 <col:12> 'size_t':'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fb3d807c550 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fb3d807c628 <col:15, line:13:14> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fb3d807c5f8 <line:24:15> 'size_t':'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fb3d807c5b0 <col:15> 'size_t':'unsigned long' lvalue Var 0x7fb3d807c400 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fb3d807c610 <line:13:14> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fb3d807c5d8 <col:14> 'int' 1024
+|   | |-UnaryOperator 0x7fb3d807c678 <line:24:25, col:26> 'size_t':'unsigned long' postfix '++'
+|   | | `-DeclRefExpr 0x7fb3d807c650 <col:25> 'size_t':'unsigned long' lvalue Var 0x7fb3d807c400 'i' 'size_t':'unsigned long'
+|   | `-CompoundAssignOperator 0x7fb3d807c7a8 <line:25:5, col:20> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   |   |-DeclRefExpr 0x7fb3d807c698 <col:5> 'double' lvalue Var 0x7fb3d807c490 'sum' 'double'
+|   |   `-ImplicitCastExpr 0x7fb3d807c790 <col:12, col:20> 'double' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fb3d807c768 <col:12, col:20> 'double' lvalue
+|   |       |-ImplicitCastExpr 0x7fb3d807c738 <col:12> 'double *' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7fb3d807c6c0 <col:12> 'double [1024]' lvalue Var 0x7fb3d807c180 'values' 'double [1024]'
+|   |       `-ImplicitCastExpr 0x7fb3d807c750 <col:19> 'size_t':'unsigned long' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fb3d807c6e8 <col:19> 'size_t':'unsigned long' lvalue Var 0x7fb3d807c400 'i' 'size_t':'unsigned long'
+|   `-ReturnStmt 0x7fb3d807c858 <line:27:3, col:10>
+|     `-ImplicitCastExpr 0x7fb3d807c840 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb3d807c818 <col:10> 'double' lvalue Var 0x7fb3d807c490 'sum' 'double'
+|-FunctionDecl 0x7fb3d807c940 <line:30:1, line:40:1> line:31:1 vector_min 'double (void)'
+| `-CompoundStmt 0x7fb3d807e190 <line:32:1, line:40:1>
+|   |-DeclStmt 0x7fb3d807ca48 <line:33:3, col:11>
+|   | `-VarDecl 0x7fb3d807c9e8 <col:3, col:10> col:10 used i 'size_t':'unsigned long'
+|   |-DeclStmt 0x7fb3d807cb78 <line:34:3, col:25>
+|   | `-VarDecl 0x7fb3d807ca78 <col:3, col:24> col:10 used min 'double' cinit
+|   |   `-ImplicitCastExpr 0x7fb3d807cb60 <col:16, col:24> 'double' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fb3d807cb38 <col:16, col:24> 'double' lvalue
+|   |       |-ImplicitCastExpr 0x7fb3d807cb20 <col:16> 'double *' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7fb3d807cad8 <col:16> 'double [1024]' lvalue Var 0x7fb3d807c180 'values' 'double [1024]'
+|   |       `-IntegerLiteral 0x7fb3d807cb00 <col:23> 'int' 0
+|   |-ForStmt 0x7fb3d807e100 <line:36:3, line:37:41>
+|   | |-BinaryOperator 0x7fb3d807cbf0 <line:36:8, col:12> 'size_t':'unsigned long' '='
+|   | | |-DeclRefExpr 0x7fb3d807cb90 <col:8> 'size_t':'unsigned long' lvalue Var 0x7fb3d807c9e8 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fb3d807cbd8 <col:12> 'size_t':'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fb3d807cbb8 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fb3d807cc90 <col:15, line:13:14> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fb3d807cc60 <line:36:15> 'size_t':'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fb3d807cc18 <col:15> 'size_t':'unsigned long' lvalue Var 0x7fb3d807c9e8 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fb3d807cc78 <line:13:14> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fb3d807cc40 <col:14> 'int' 1024
+|   | |-UnaryOperator 0x7fb3d807cce0 <line:36:25, col:26> 'size_t':'unsigned long' postfix '++'
+|   | | `-DeclRefExpr 0x7fb3d807ccb8 <col:25> 'size_t':'unsigned long' lvalue Var 0x7fb3d807c9e8 'i' 'size_t':'unsigned long'
+|   | `-BinaryOperator 0x7fb3d807e0d8 <line:37:5, col:41> 'double' '='
+|   |   |-DeclRefExpr 0x7fb3d807cd00 <col:5> 'double' lvalue Var 0x7fb3d807ca78 'min' 'double'
+|   |   `-CallExpr 0x7fb3d807e070 <col:11, col:41> 'double'
+|   |     |-ImplicitCastExpr 0x7fb3d807e058 <col:11> 'double (*)(double, double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fb3d807cf30 <col:11> '<builtin fn type>' Function 0x7fb3d807cd70 '__builtin_fmin' 'double (double, double)'
+|   |     |-ImplicitCastExpr 0x7fb3d807e0a8 <col:27> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fb3d807cf58 <col:27> 'double' lvalue Var 0x7fb3d807ca78 'min' 'double'
+|   |     `-ImplicitCastExpr 0x7fb3d807e0c0 <col:32, col:40> 'double' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7fb3d807e000 <col:32, col:40> 'double' lvalue
+|   |         |-ImplicitCastExpr 0x7fb3d807cfd0 <col:32> 'double *' <ArrayToPointerDecay>
+|   |         | `-DeclRefExpr 0x7fb3d807cf80 <col:32> 'double [1024]' lvalue Var 0x7fb3d807c180 'values' 'double [1024]'
+|   |         `-ImplicitCastExpr 0x7fb3d807cfe8 <col:39> 'size_t':'unsigned long' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fb3d807cfa8 <col:39> 'size_t':'unsigned long' lvalue Var 0x7fb3d807c9e8 'i' 'size_t':'unsigned long'
+|   `-ReturnStmt 0x7fb3d807e178 <line:39:3, col:10>
+|     `-ImplicitCastExpr 0x7fb3d807e160 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb3d807e138 <col:10> 'double' lvalue Var 0x7fb3d807ca78 'min' 'double'
+|-FunctionDecl 0x7fb3d807cd70 <line:37:11> col:11 implicit used __builtin_fmin 'double (double, double)' extern
+| |-ParmVarDecl 0x7fb3d807ce08 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7fb3d807ce68 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7fb3d807ced8 <col:11> Implicit
+| `-ConstAttr 0x7fb3d807cf20 <col:11> Implicit
+|-FunctionDecl 0x7fb3d807e260 <line:42:1, line:52:1> line:43:1 vector_max 'double (void)'
+| `-CompoundStmt 0x7fb3d807ea38 <line:44:1, line:52:1>
+|   |-DeclStmt 0x7fb3d807e368 <line:45:3, col:11>
+|   | `-VarDecl 0x7fb3d807e308 <col:3, col:10> col:10 used i 'size_t':'unsigned long'
+|   |-DeclStmt 0x7fb3d807e498 <line:46:3, col:25>
+|   | `-VarDecl 0x7fb3d807e398 <col:3, col:24> col:10 used max 'double' cinit
+|   |   `-ImplicitCastExpr 0x7fb3d807e480 <col:16, col:24> 'double' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fb3d807e458 <col:16, col:24> 'double' lvalue
+|   |       |-ImplicitCastExpr 0x7fb3d807e440 <col:16> 'double *' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7fb3d807e3f8 <col:16> 'double [1024]' lvalue Var 0x7fb3d807c180 'values' 'double [1024]'
+|   |       `-IntegerLiteral 0x7fb3d807e420 <col:23> 'int' 0
+|   |-ForStmt 0x7fb3d807e9a8 <line:48:3, line:49:41>
+|   | |-BinaryOperator 0x7fb3d807e510 <line:48:8, col:12> 'size_t':'unsigned long' '='
+|   | | |-DeclRefExpr 0x7fb3d807e4b0 <col:8> 'size_t':'unsigned long' lvalue Var 0x7fb3d807e308 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fb3d807e4f8 <col:12> 'size_t':'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fb3d807e4d8 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fb3d807e5b0 <col:15, line:13:14> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fb3d807e580 <line:48:15> 'size_t':'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fb3d807e538 <col:15> 'size_t':'unsigned long' lvalue Var 0x7fb3d807e308 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fb3d807e598 <line:13:14> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fb3d807e560 <col:14> 'int' 1024
+|   | |-UnaryOperator 0x7fb3d807e600 <line:48:25, col:26> 'size_t':'unsigned long' postfix '++'
+|   | | `-DeclRefExpr 0x7fb3d807e5d8 <col:25> 'size_t':'unsigned long' lvalue Var 0x7fb3d807e308 'i' 'size_t':'unsigned long'
+|   | `-BinaryOperator 0x7fb3d807e980 <line:49:5, col:41> 'double' '='
+|   |   |-DeclRefExpr 0x7fb3d807e620 <col:5> 'double' lvalue Var 0x7fb3d807e398 'max' 'double'
+|   |   `-CallExpr 0x7fb3d807e918 <col:11, col:41> 'double'
+|   |     |-ImplicitCastExpr 0x7fb3d807e900 <col:11> 'double (*)(double, double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fb3d807e808 <col:11> '<builtin fn type>' Function 0x7fb3d807e648 '__builtin_fmax' 'double (double, double)'
+|   |     |-ImplicitCastExpr 0x7fb3d807e950 <col:27> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fb3d807e830 <col:27> 'double' lvalue Var 0x7fb3d807e398 'max' 'double'
+|   |     `-ImplicitCastExpr 0x7fb3d807e968 <col:32, col:40> 'double' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7fb3d807e8d8 <col:32, col:40> 'double' lvalue
+|   |         |-ImplicitCastExpr 0x7fb3d807e8a8 <col:32> 'double *' <ArrayToPointerDecay>
+|   |         | `-DeclRefExpr 0x7fb3d807e858 <col:32> 'double [1024]' lvalue Var 0x7fb3d807c180 'values' 'double [1024]'
+|   |         `-ImplicitCastExpr 0x7fb3d807e8c0 <col:39> 'size_t':'unsigned long' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fb3d807e880 <col:39> 'size_t':'unsigned long' lvalue Var 0x7fb3d807e308 'i' 'size_t':'unsigned long'
+|   `-ReturnStmt 0x7fb3d807ea20 <line:51:3, col:10>
+|     `-ImplicitCastExpr 0x7fb3d807ea08 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb3d807e9e0 <col:10> 'double' lvalue Var 0x7fb3d807e398 'max' 'double'
+`-FunctionDecl 0x7fb3d807e648 <line:49:11> col:11 implicit used __builtin_fmax 'double (double, double)' extern
+  |-ParmVarDecl 0x7fb3d807e6e0 <<invalid sloc>> <invalid sloc> 'double'
+  |-ParmVarDecl 0x7fb3d807e740 <<invalid sloc>> <invalid sloc> 'double'
+  |-NoThrowAttr 0x7fb3d807e7b0 <col:11> Implicit
+  `-ConstAttr 0x7fb3d807e7f8 <col:11> Implicit

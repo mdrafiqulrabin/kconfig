@@ -1,0 +1,77 @@
+FileAST: 
+  Decl: g_324, ['volatile'], [], []
+    ArrayDecl: []
+      TypeDecl: g_324, ['volatile']
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 4
+    InitList: 
+      Constant: int, 0
+      Constant: int, 1
+      Constant: int, 0
+      Constant: int, 1
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      IdentifierType: ['int']
+  Decl: y, [], [], []
+    TypeDecl: y, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: func_81, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: func_81, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: l_466, [], [], []
+        TypeDecl: l_466, []
+          IdentifierType: ['int']
+      Decl: l_439, [], [], []
+        ArrayDecl: []
+          TypeDecl: l_439, []
+            IdentifierType: ['int']
+          Constant: int, 7
+        InitList: 
+          Constant: int, 0
+      Decl: g_97, [], [], []
+        TypeDecl: g_97, []
+          IdentifierType: ['int']
+      Label: lbl_473
+        If: 
+          ID: x
+          Compound: 
+            For: 
+              Assignment: =
+                ID: g_97
+                Constant: int, 0
+              BinaryOp: <
+                ID: g_97
+                Constant: int, 4
+              UnaryOp: ++
+                ID: g_97
+              Compound: 
+                If: 
+                  ID: y
+                  Goto: lbl_473
+                ArrayRef: 
+                  ID: g_324
+                  ID: g_97
+                Assignment: =
+                  ID: l_466
+                  ArrayRef: 
+                    ID: l_439
+                    ID: g_97
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                ID: l_466

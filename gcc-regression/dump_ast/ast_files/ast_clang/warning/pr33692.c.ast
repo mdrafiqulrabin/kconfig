@@ -1,0 +1,44 @@
+c_files/pr33692.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7fa7dd0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa7dd026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa7dd026740 '__int128'
+|-TypedefDecl 0x7fa7dd026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa7dd026760 'unsigned __int128'
+|-TypedefDecl 0x7fa7dd026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa7dd026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa7dd026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa7dd026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa7dd026dc0 'char *'
+|   `-BuiltinType 0x7fa7dd026560 'char'
+|-TypedefDecl 0x7fa7dd0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa7dd027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa7dd026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa7dd026e58 '__va_list_tag'
+|-RecordDecl 0x7fa7dd027120 <c_files/pr33692.c:5:9, col:25> col:9 struct definition
+| `-FieldDecl 0x7fa7dd825a00 <col:18, col:22> col:22 i 'int'
+|-TypedefDecl 0x7fa7dd825aa0 <col:1, col:27> col:27 referenced snd_pcm_info_t 'struct snd_pcm_info_t':'snd_pcm_info_t'
+| `-ElaboratedType 0x7fa7dd825a50 'struct snd_pcm_info_t' sugar
+|   `-RecordType 0x7fa7dd0271b0 'snd_pcm_info_t'
+|     `-Record 0x7fa7dd027120 ''
+|-RecordDecl 0x7fa7dd825b10 <line:6:9, col:39> col:9 struct definition
+| `-FieldDecl 0x7fa7dd825bf0 <col:18, col:33> col:33 referenced info 'snd_pcm_info_t':'snd_pcm_info_t'
+|-TypedefDecl 0x7fa7dd825cd0 <col:1, col:41> col:41 referenced snd_pcm_shm_ctrl_t 'struct snd_pcm_shm_ctrl_t':'snd_pcm_shm_ctrl_t'
+| `-ElaboratedType 0x7fa7dd825c80 'struct snd_pcm_shm_ctrl_t' sugar
+|   `-RecordType 0x7fa7dd825ba0 'snd_pcm_shm_ctrl_t'
+|     `-Record 0x7fa7dd825b10 ''
+|-FunctionDecl 0x7fa7dd825eb0 <line:7:1, col:35> col:6 used snd_pcm_info 'void (snd_pcm_info_t *)'
+| `-ParmVarDecl 0x7fa7dd825da8 <col:19, col:34> col:35 'snd_pcm_info_t *'
+`-FunctionDecl 0x7fa7dd826128 <line:8:1, line:11:1> line:8:5 pcm_shm_cmd 'int (volatile snd_pcm_shm_ctrl_t *)'
+  |-ParmVarDecl 0x7fa7dd826018 <col:17, col:46> col:46 used ctrl 'volatile snd_pcm_shm_ctrl_t *'
+  `-CompoundStmt 0x7fa7dd8263f0 <line:9:1, line:11:1>
+    `-CallExpr 0x7fa7dd8263c0 <line:10:3, col:46> 'void'
+      |-ImplicitCastExpr 0x7fa7dd8263a8 <col:3> 'void (*)(snd_pcm_info_t *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa7dd8261c8 <col:3> 'void (snd_pcm_info_t *)' Function 0x7fa7dd825eb0 'snd_pcm_info' 'void (snd_pcm_info_t *)'
+      `-CStyleCastExpr 0x7fa7dd826328 <col:16, col:42> 'snd_pcm_info_t *' <BitCast>
+        `-UnaryOperator 0x7fa7dd8262c8 <col:35, col:42> 'volatile snd_pcm_info_t *' prefix '&'
+          `-MemberExpr 0x7fa7dd826230 <col:36, col:42> 'volatile snd_pcm_info_t':'volatile snd_pcm_info_t' lvalue ->info 0x7fa7dd825bf0
+            `-ImplicitCastExpr 0x7fa7dd826218 <col:36> 'volatile snd_pcm_shm_ctrl_t *' <LValueToRValue>
+              `-DeclRefExpr 0x7fa7dd8261f0 <col:36> 'volatile snd_pcm_shm_ctrl_t *' lvalue ParmVar 0x7fa7dd826018 'ctrl' 'volatile snd_pcm_shm_ctrl_t *'

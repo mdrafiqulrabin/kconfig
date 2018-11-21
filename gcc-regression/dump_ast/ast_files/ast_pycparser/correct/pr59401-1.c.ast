@@ -1,0 +1,54 @@
+FileAST: 
+  Typedef: tcb_t, [], ['typedef']
+    TypeDecl: tcb_t, []
+      Struct: None
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['int']
+        Decl: y, [], [], []
+          TypeDecl: y, []
+            IdentifierType: ['int']
+        Decl: z, [], [], []
+          TypeDecl: z, []
+            IdentifierType: ['int']
+        Decl: w, [], [], []
+          TypeDecl: w, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: test_00, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['tcb_t']
+        TypeDecl: test_00, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: tcb, [], [], []
+        PtrDecl: []
+          TypeDecl: tcb, []
+            IdentifierType: ['tcb_t']
+        TernaryOp: 
+          BinaryOp: &
+            ID: a
+            Constant: int, 5
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['tcb_t']
+            FuncCall: 
+              ID: __builtin_thread_pointer
+          ID: b
+      Return: 
+        BinaryOp: +
+          StructRef: ->
+            ID: tcb
+            ID: w
+          StructRef: ->
+            ID: tcb
+            ID: x

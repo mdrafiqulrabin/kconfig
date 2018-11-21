@@ -1,0 +1,34 @@
+c_files/pr43635.c:6:12: warning: incompatible pointer types initializing 'void (*(*)(void))(float)' with an expression of type 'void (void)' [-Wincompatible-pointer-types]
+  void (*(*x) (void)) (float) = d;
+           ^                    ~
+1 warning generated.
+TranslationUnitDecl 0x7fc8a98264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc8a9826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc8a9826740 '__int128'
+|-TypedefDecl 0x7fc8a9826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc8a9826760 'unsigned __int128'
+|-TypedefDecl 0x7fc8a9826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc8a9826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc8a9826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc8a9826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc8a9826dc0 'char *'
+|   `-BuiltinType 0x7fc8a9826560 'char'
+|-TypedefDecl 0x7fc8a98270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc8a9827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc8a9826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc8a9826e58 '__va_list_tag'
+|-FunctionDecl 0x7fc8aa025a00 <c_files/pr43635.c:2:1, col:20> col:13 used d 'void (void)' extern
+`-FunctionDecl 0x7fc8aa025d38 <line:4:1, line:8:1> line:4:8 foo 'void (*(void))(float)'
+  `-CompoundStmt 0x7fc8aa026558 <line:5:1, line:8:1>
+    |-DeclStmt 0x7fc8aa026468 <line:6:3, col:34>
+    | `-VarDecl 0x7fc8aa025fa0 <col:3, col:33> col:12 used x 'void (*(*)(void))(float)' cinit
+    |   `-ImplicitCastExpr 0x7fc8aa026070 <col:33> 'void (*(*)(void))(float)' <BitCast>
+    |     `-ImplicitCastExpr 0x7fc8aa026058 <col:33> 'void (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fc8aa026000 <col:33> 'void (void)' Function 0x7fc8aa025a00 'd' 'void (void)'
+    `-ReturnStmt 0x7fc8aa026540 <line:7:3, col:16>
+      `-CallExpr 0x7fc8aa026518 <col:10, col:16> 'void (*)(float)'
+        `-ImplicitCastExpr 0x7fc8aa026500 <col:10, col:13> 'void (*(*)(void))(float)' <FunctionToPointerDecay>
+          `-ParenExpr 0x7fc8aa0264e0 <col:10, col:13> 'void (*(void))(float)':'void (*(void))(float)'
+            `-UnaryOperator 0x7fc8aa0264c0 <col:11, col:12> 'void (*(void))(float)':'void (*(void))(float)' prefix '*'
+              `-ImplicitCastExpr 0x7fc8aa0264a8 <col:12> 'void (*(*)(void))(float)' <LValueToRValue>
+                `-DeclRefExpr 0x7fc8aa026480 <col:12> 'void (*(*)(void))(float)' lvalue Var 0x7fc8aa025fa0 'x' 'void (*(*)(void))(float)'

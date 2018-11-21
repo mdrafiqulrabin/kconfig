@@ -1,0 +1,84 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: array, [], [], []
+            PtrDecl: []
+              TypeDecl: array, []
+                IdentifierType: ['float']
+          Decl: end, [], [], []
+            TypeDecl: end, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: sum1, [], [], []
+        TypeDecl: sum1, []
+          IdentifierType: ['float']
+      Decl: sum2, [], [], []
+        TypeDecl: sum2, []
+          IdentifierType: ['float']
+      Assignment: =
+        ID: sum2
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: end
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ID: sum2
+          BinaryOp: +
+            ID: sum2
+            ArrayRef: 
+              ID: array
+              ID: i
+      Assignment: =
+        ID: sum2
+        BinaryOp: /
+          Constant: float, 1.
+          ID: sum2
+      Assignment: =
+        ID: sum1
+        Constant: float, 0.
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: end
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ID: sum1
+          BinaryOp: +
+            ID: sum1
+            ArrayRef: 
+              ID: array
+              ID: i
+      Assignment: =
+        ID: sum1
+        BinaryOp: *
+          ID: sum1
+          ID: sum2
+      If: 
+        BinaryOp: <
+          BinaryOp: /
+            UnaryOp: -
+              Constant: float, 10.0
+            ID: sum1
+          Constant: float, 5.E-5
+        Assignment: =
+          ID: end
+          Constant: int, 0
+      Return: 
+        ID: end

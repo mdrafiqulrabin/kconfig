@@ -1,0 +1,74 @@
+TranslationUnitDecl 0x7ffe6b0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffe6b026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffe6b026740 '__int128'
+|-TypedefDecl 0x7ffe6b026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffe6b026760 'unsigned __int128'
+|-TypedefDecl 0x7ffe6b026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffe6b026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffe6b026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffe6b026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffe6b026dc0 'char *'
+|   `-BuiltinType 0x7ffe6b026560 'char'
+|-TypedefDecl 0x7ffe6b0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffe6b027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffe6b026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffe6b026e58 '__va_list_tag'
+|-RecordDecl 0x7ffe6b027120 <c_files/pr28952.c:6:1, line:9:1> line:6:8 struct player_spaceship definition
+| `-FieldDecl 0x7ffe6b077458 <line:8:3, col:21> col:9 referenced structure '_Bool [32]'
+|-RecordDecl 0x7ffe6b0774a0 <line:10:1, line:13:1> line:10:8 struct player definition
+| `-FieldDecl 0x7ffe6b0775a0 <line:12:3, col:27> col:27 referenced spaceship 'struct player_spaceship':'struct player_spaceship'
+|-RecordDecl 0x7ffe6b077630 <line:14:1, line:17:1> line:14:8 struct packet_spaceship_info definition
+| `-FieldDecl 0x7ffe6b0777a8 <line:16:3, col:24> col:8 referenced structure 'char [33]'
+|-FunctionDecl 0x7ffe6b0779a0 <line:18:1, col:65> col:6 used lsend_packet_spaceship_info 'void (struct packet_spaceship_info *)'
+| `-ParmVarDecl 0x7ffe6b0778a0 <col:35, col:64> col:65 'struct packet_spaceship_info *'
+`-FunctionDecl 0x7ffe6b077b40 <line:19:1, line:31:1> line:20:1 send_spaceship_info 'void (void)'
+  `-CompoundStmt 0x7ffe6b0785b0 <line:21:1, line:31:1>
+    |-DeclStmt 0x7ffe6b077c50 <line:22:3, col:8>
+    | `-VarDecl 0x7ffe6b077bf0 <col:3, col:7> col:7 used j 'int'
+    |-DeclStmt 0x7ffe6b077d80 <line:23:3, col:25>
+    | `-VarDecl 0x7ffe6b077d20 <col:3, col:18> col:18 used pplayer 'struct player *'
+    |-DeclStmt 0x7ffe6b077e18 <line:24:3, col:36>
+    | `-VarDecl 0x7ffe6b077db8 <col:3, col:32> col:32 used info 'struct packet_spaceship_info':'struct packet_spaceship_info'
+    |-DeclStmt 0x7ffe6b077fa8 <line:25:3, col:54>
+    | `-VarDecl 0x7ffe6b077eb0 <col:3, col:45> col:28 used ship 'struct player_spaceship *' cinit
+    |   `-UnaryOperator 0x7ffe6b077f88 <col:35, col:45> 'struct player_spaceship *' prefix '&'
+    |     `-MemberExpr 0x7ffe6b077f50 <col:36, col:45> 'struct player_spaceship':'struct player_spaceship' lvalue ->spaceship 0x7ffe6b0775a0
+    |       `-ImplicitCastExpr 0x7ffe6b077f38 <col:36> 'struct player *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7ffe6b077f10 <col:36> 'struct player *' lvalue Var 0x7ffe6b077d20 'pplayer' 'struct player *'
+    |-ForStmt 0x7ffe6b078468 <line:26:3, line:29:3>
+    | |-BinaryOperator 0x7ffe6b078008 <line:26:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7ffe6b077fc0 <col:8> 'int' lvalue Var 0x7ffe6b077bf0 'j' 'int'
+    | | `-IntegerLiteral 0x7ffe6b077fe8 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ffe6b078090 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ffe6b078078 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ffe6b078030 <col:15> 'int' lvalue Var 0x7ffe6b077bf0 'j' 'int'
+    | | `-IntegerLiteral 0x7ffe6b078058 <col:19> 'int' 32
+    | |-UnaryOperator 0x7ffe6b0780e0 <col:23, col:24> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7ffe6b0780b8 <col:23> 'int' lvalue Var 0x7ffe6b077bf0 'j' 'int'
+    | `-CompoundStmt 0x7ffe6b078448 <line:27:3, line:29:3>
+    |   `-BinaryOperator 0x7ffe6b0783a8 <line:28:5, col:52> 'char' '='
+    |     |-ArraySubscriptExpr 0x7ffe6b0781b8 <col:5, col:21> 'char' lvalue
+    |     | |-ImplicitCastExpr 0x7ffe6b078188 <col:5, col:10> 'char *' <ArrayToPointerDecay>
+    |     | | `-MemberExpr 0x7ffe6b078128 <col:5, col:10> 'char [33]' lvalue .structure 0x7ffe6b0777a8
+    |     | |   `-DeclRefExpr 0x7ffe6b078100 <col:5> 'struct packet_spaceship_info':'struct packet_spaceship_info' lvalue Var 0x7ffe6b077db8 'info' 'struct packet_spaceship_info':'struct packet_spaceship_info'
+    |     | `-ImplicitCastExpr 0x7ffe6b0781a0 <col:20> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7ffe6b078160 <col:20> 'int' lvalue Var 0x7ffe6b077bf0 'j' 'int'
+    |     `-ImplicitCastExpr 0x7ffe6b078390 <col:25, col:52> 'char' <IntegralCast>
+    |       `-ConditionalOperator 0x7ffe6b078360 <col:25, col:52> 'int'
+    |         |-ImplicitCastExpr 0x7ffe6b078348 <col:25, col:42> 'int' <IntegralCast>
+    |         | `-ImplicitCastExpr 0x7ffe6b078330 <col:25, col:42> '_Bool' <LValueToRValue>
+    |         |   `-ArraySubscriptExpr 0x7ffe6b0782d8 <col:25, col:42> '_Bool' lvalue
+    |         |     |-ImplicitCastExpr 0x7ffe6b0782a8 <col:25, col:31> '_Bool *' <ArrayToPointerDecay>
+    |         |     | `-MemberExpr 0x7ffe6b078220 <col:25, col:31> '_Bool [32]' lvalue ->structure 0x7ffe6b077458
+    |         |     |   `-ImplicitCastExpr 0x7ffe6b078208 <col:25> 'struct player_spaceship *' <LValueToRValue>
+    |         |     |     `-DeclRefExpr 0x7ffe6b0781e0 <col:25> 'struct player_spaceship *' lvalue Var 0x7ffe6b077eb0 'ship' 'struct player_spaceship *'
+    |         |     `-ImplicitCastExpr 0x7ffe6b0782c0 <col:41> 'int' <LValueToRValue>
+    |         |       `-DeclRefExpr 0x7ffe6b078258 <col:41> 'int' lvalue Var 0x7ffe6b077bf0 'j' 'int'
+    |         |-CharacterLiteral 0x7ffe6b078300 <col:46> 'int' 49
+    |         `-CharacterLiteral 0x7ffe6b078318 <col:52> 'int' 48
+    `-CallExpr 0x7ffe6b078580 <line:30:3, col:37> 'void'
+      |-ImplicitCastExpr 0x7ffe6b078568 <col:3> 'void (*)(struct packet_spaceship_info *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ffe6b0784a0 <col:3> 'void (struct packet_spaceship_info *)' Function 0x7ffe6b0779a0 'lsend_packet_spaceship_info' 'void (struct packet_spaceship_info *)'
+      `-UnaryOperator 0x7ffe6b0784f0 <col:32, col:33> 'struct packet_spaceship_info *' prefix '&'
+        `-DeclRefExpr 0x7ffe6b0784c8 <col:33> 'struct packet_spaceship_info':'struct packet_spaceship_info' lvalue Var 0x7ffe6b077db8 'info' 'struct packet_spaceship_info':'struct packet_spaceship_info'

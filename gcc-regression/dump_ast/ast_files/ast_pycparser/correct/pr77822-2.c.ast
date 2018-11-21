@@ -1,0 +1,954 @@
+FileAST: 
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: pos_ll_129, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: pos_ll_129, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 129
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_ll_134, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: sizepos_ll_134, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 134
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_ll_65, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: pos_ll_65, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 65
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_ll_70, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: sizepos_ll_70, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 70
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_ll_33, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: pos_ll_33, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 33
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_ll_38, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: sizepos_ll_38, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 38
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_ll_17, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: pos_ll_17, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 17
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_ll_22, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: sizepos_ll_22, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 22
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_ll_8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: pos_ll_8, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 8
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_ll_13, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: sizepos_ll_13, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 13
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_l_129, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long']
+        TypeDecl: pos_l_129, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 129
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_l_134, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long']
+        TypeDecl: sizepos_l_134, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 134
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_l_65, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long']
+        TypeDecl: pos_l_65, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 65
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_l_70, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long']
+        TypeDecl: sizepos_l_70, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 70
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_l_33, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long']
+        TypeDecl: pos_l_33, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 33
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_l_38, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long']
+        TypeDecl: sizepos_l_38, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 38
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_l_17, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long']
+        TypeDecl: pos_l_17, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 17
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_l_22, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long']
+        TypeDecl: sizepos_l_22, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 22
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_l_8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long']
+        TypeDecl: pos_l_8, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 8
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_l_13, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long']
+        TypeDecl: sizepos_l_13, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 13
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_i_129, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: pos_i_129, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 129
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_i_134, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: sizepos_i_134, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 134
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_i_65, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: pos_i_65, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 65
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_i_70, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: sizepos_i_70, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 70
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_i_33, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: pos_i_33, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 33
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_i_38, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: sizepos_i_38, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 38
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_i_17, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: pos_i_17, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 17
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_i_22, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: sizepos_i_22, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 22
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_i_8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: pos_i_8, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 8
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_i_13, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: sizepos_i_13, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 13
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_s_129, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['short']
+        TypeDecl: pos_s_129, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 129
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_s_134, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['short']
+        TypeDecl: sizepos_s_134, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 134
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_s_65, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['short']
+        TypeDecl: pos_s_65, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 65
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_s_70, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['short']
+        TypeDecl: sizepos_s_70, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 70
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_s_33, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['short']
+        TypeDecl: pos_s_33, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 33
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_s_38, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['short']
+        TypeDecl: sizepos_s_38, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 38
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_s_17, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['short']
+        TypeDecl: pos_s_17, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 17
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_s_22, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['short']
+        TypeDecl: sizepos_s_22, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 22
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_s_8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['short']
+        TypeDecl: pos_s_8, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 8
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_s_13, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['short']
+        TypeDecl: sizepos_s_13, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 13
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_c_129, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: pos_c_129, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 129
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_c_134, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: sizepos_c_134, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 134
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_c_65, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: pos_c_65, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 65
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_c_70, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: sizepos_c_70, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 70
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_c_33, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: pos_c_33, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 33
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_c_38, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: sizepos_c_38, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 38
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_c_17, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: pos_c_17, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 17
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_c_22, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: sizepos_c_22, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 22
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: pos_c_8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: pos_c_8, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 8
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b
+  FuncDef: 
+    Decl: sizepos_c_13, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: sizepos_c_13, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: b
+            Constant: int, 13
+          Constant: int, 1
+        Assignment: =
+          ID: g
+          ID: b

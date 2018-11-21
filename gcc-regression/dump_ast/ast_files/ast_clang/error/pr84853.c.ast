@@ -1,0 +1,46 @@
+c_files/pr84853.c:10:11: error: used type 'V' (vector of 4 'float' values) where integer is required
+  *y = *y << x;         /* { dg-error "invalid operands to binary <<" } */
+       ~~ ^
+c_files/pr84853.c:11:11: error: used type 'V' (vector of 4 'float' values) where integer is required
+  *z = *z << *w;        /* { dg-error "invalid operands to binary <<" } */
+       ~~ ^
+c_files/pr84853.c:17:11: error: used type 'V' (vector of 4 'float' values) where integer is required
+  *y = *y >> x;         /* { dg-error "invalid operands to binary >>" } */
+       ~~ ^
+c_files/pr84853.c:18:11: error: used type 'V' (vector of 4 'float' values) where integer is required
+  *z = *z >> *w;        /* { dg-error "invalid operands to binary >>" } */
+       ~~ ^
+4 errors generated.
+TranslationUnitDecl 0x7ff4d60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff4d6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff4d6026740 '__int128'
+|-TypedefDecl 0x7ff4d6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff4d6026760 'unsigned __int128'
+|-TypedefDecl 0x7ff4d6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff4d6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff4d6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff4d6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff4d6026dc0 'char *'
+|   `-BuiltinType 0x7ff4d6026560 'char'
+|-TypedefDecl 0x7ff4d60270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff4d6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff4d6026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff4d6026e58 '__va_list_tag'
+|-TypedefDecl 0x7ff4d6027178 <c_files/pr84853.c:4:1, col:15> col:15 referenced V '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7ff4d6027140 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7ff4d60266c0 'float'
+|-TypedefDecl 0x7ff4d6826a38 <line:5:1, col:13> col:13 referenced W '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7ff4d6826a00 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7ff4d60265c0 'int'
+|-FunctionDecl 0x7ff4d6826e40 <line:7:1, line:12:1> line:8:1 foo 'void (int, V *, V *, W *)'
+| |-ParmVarDecl 0x7ff4d6826aa8 <col:6, col:10> col:10 used x 'int'
+| |-ParmVarDecl 0x7ff4d6826b98 <col:13, col:16> col:16 used y 'V *'
+| |-ParmVarDecl 0x7ff4d6826c08 <col:19, col:22> col:22 used z 'V *'
+| |-ParmVarDecl 0x7ff4d6826cf8 <col:25, col:28> col:28 used w 'W *'
+| `-CompoundStmt 0x7ff4d6827550 <line:9:1, line:12:1>
+`-FunctionDecl 0x7ff4d6827770 <line:14:1, line:19:1> line:15:1 bar 'void (int, V *, V *, W *)'
+  |-ParmVarDecl 0x7ff4d6827580 <col:6, col:10> col:10 used x 'int'
+  |-ParmVarDecl 0x7ff4d68275f0 <col:13, col:16> col:16 used y 'V *'
+  |-ParmVarDecl 0x7ff4d6827660 <col:19, col:22> col:22 used z 'V *'
+  |-ParmVarDecl 0x7ff4d68276d0 <col:25, col:28> col:28 used w 'W *'
+  `-CompoundStmt 0x7ff4d6827a90 <line:16:1, line:19:1>

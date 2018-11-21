@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fd2228264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd222826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd222826740 '__int128'
+|-TypedefDecl 0x7fd222826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd222826760 'unsigned __int128'
+|-TypedefDecl 0x7fd222826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd222826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd222826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd222826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd222826dc0 'char *'
+|   `-BuiltinType 0x7fd222826560 'char'
+|-TypedefDecl 0x7fd2228270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd222827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd222826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd222826e58 '__va_list_tag'
+|-VarDecl 0x7fd222827170 <c_files/pr35818.c:5:1, col:14> col:12 used a 'int []' extern
+`-FunctionDecl 0x7fd222877500 <line:7:1, line:16:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7fd222877760 <line:9:1, line:16:1>
+    |-BinaryOperator 0x7fd222877668 <line:12:3, col:10> 'int' '='
+    | |-ArraySubscriptExpr 0x7fd222877620 <col:3, col:6> 'int' lvalue
+    | | |-ImplicitCastExpr 0x7fd222877608 <col:3> 'int *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fd222877598 <col:3> 'int []' lvalue Var 0x7fd222827170 'a' 'int []'
+    | | `-IntegerLiteral 0x7fd2228775c0 <col:5> 'int' 3
+    | `-IntegerLiteral 0x7fd222877648 <col:10> 'int' 1
+    `-BinaryOperator 0x7fd222877738 <line:15:3, col:10> 'int' '='
+      |-ArraySubscriptExpr 0x7fd2228776f0 <col:3, col:6> 'int' lvalue
+      | |-ImplicitCastExpr 0x7fd2228776d8 <col:3> 'int *' <ArrayToPointerDecay>
+      | | `-DeclRefExpr 0x7fd222877690 <col:3> 'int []' lvalue Var 0x7fd222827170 'a' 'int []'
+      | `-IntegerLiteral 0x7fd2228776b8 <col:5> 'int' 3
+      `-IntegerLiteral 0x7fd222877718 <col:10> 'int' 1

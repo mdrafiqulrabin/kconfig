@@ -1,0 +1,83 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: ==
+            Constant: int, 0
+            Constant: int, 0
+          ID: p
+          Constant: int, 0
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        TypeDecl: fn2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      Decl: d, [], [], []
+        ArrayDecl: []
+          TypeDecl: d, []
+            IdentifierType: ['int']
+          Constant: int, 1
+        InitList: 
+          Constant: int, 1
+      Label: lbl
+        For: 
+          Compound: 
+            Decl: e, [], [], []
+              TypeDecl: e, []
+                IdentifierType: ['int']
+            TernaryOp: 
+              ID: c
+              Constant: int, 0
+              BinaryOp: /
+                Constant: int, 0
+                ID: c
+            Assignment: =
+              ID: c
+              Constant: int, 0
+            If: 
+              FuncCall: 
+                ID: fn1
+                ExprList: 
+                  ArrayRef: 
+                    ID: d
+                    Constant: int, 0
+              Break: 
+            For: 
+              Assignment: =
+                ID: e
+                Constant: int, 0
+              BinaryOp: <
+                ID: e
+                Constant: int, 1
+              UnaryOp: p++
+                ID: e
+              For: 
+                Assignment: =
+                  ID: c
+                  Constant: int, 1
+                ID: b
+                Compound: 
+                  If: 
+                    ID: a
+                    Break: 
+                  Goto: lbl

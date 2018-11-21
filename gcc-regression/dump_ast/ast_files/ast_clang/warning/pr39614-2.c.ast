@@ -1,0 +1,33 @@
+c_files/pr39614-2.c:5:10: warning: division by zero is undefined [-Wdivision-by-zero]
+  i = (1 / 0) / 0;
+         ^ ~
+c_files/pr39614-2.c:5:15: warning: division by zero is undefined [-Wdivision-by-zero]
+  i = (1 / 0) / 0;
+              ^ ~
+2 warnings generated.
+TranslationUnitDecl 0x7fb2630264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb263026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb263026740 '__int128'
+|-TypedefDecl 0x7fb263026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb263026760 'unsigned __int128'
+|-TypedefDecl 0x7fb263026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb263026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb263026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb263026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb263026dc0 'char *'
+|   `-BuiltinType 0x7fb263026560 'char'
+|-TypedefDecl 0x7fb2630270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb263027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb263026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb263026e58 '__va_list_tag'
+|-VarDecl 0x7fb263027138 <c_files/pr39614-2.c:1:1, col:5> col:5 used i 'int'
+`-FunctionDecl 0x7fb263825ab0 <line:2:1, line:6:1> line:3:1 f 'void (void)'
+  `-CompoundStmt 0x7fb263825c68 <line:4:1, line:6:1>
+    `-BinaryOperator 0x7fb263825c40 <line:5:3, col:17> 'int' '='
+      |-DeclRefExpr 0x7fb263825b48 <col:3> 'int' lvalue Var 0x7fb263027138 'i' 'int'
+      `-BinaryOperator 0x7fb263825c18 <col:7, col:17> 'int' '/'
+        |-ParenExpr 0x7fb263825bd8 <col:7, col:13> 'int'
+        | `-BinaryOperator 0x7fb263825bb0 <col:8, col:12> 'int' '/'
+        |   |-IntegerLiteral 0x7fb263825b70 <col:8> 'int' 1
+        |   `-IntegerLiteral 0x7fb263825b90 <col:12> 'int' 0
+        `-IntegerLiteral 0x7fb263825bf8 <col:17> 'int' 0

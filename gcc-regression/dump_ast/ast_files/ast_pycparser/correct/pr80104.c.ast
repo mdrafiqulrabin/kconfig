@@ -1,0 +1,30 @@
+FileAST: 
+  FuncDef: 
+    Decl: a, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['_Complex', 'float']
+        TypeDecl: a, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        UnaryOp: *
+          UnaryOp: &
+            ID: b
+  FuncDef: 
+    Decl: c, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['_Complex', 'float']
+        TypeDecl: c, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          UnaryOp: &
+            ID: b
+          Constant: int, 0

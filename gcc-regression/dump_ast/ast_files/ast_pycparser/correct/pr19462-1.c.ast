@@ -1,0 +1,54 @@
+FileAST: 
+  FuncDef: 
+    Decl: wcscspn, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: s, ['const']
+                IdentifierType: ['long']
+          Decl: set, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: set, ['const']
+                IdentifierType: ['long']
+        TypeDecl: wcscspn, []
+          IdentifierType: ['unsigned', 'long']
+    Compound: 
+      Decl: p, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: p, ['const']
+            IdentifierType: ['long']
+      Decl: q, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: q, ['const']
+            IdentifierType: ['long']
+      Assignment: =
+        ID: p
+        ID: s
+      While: 
+        UnaryOp: *
+          ID: p
+        Compound: 
+          Assignment: =
+            ID: q
+            ID: set
+          While: 
+            UnaryOp: *
+              ID: q
+            Compound: 
+              If: 
+                BinaryOp: ==
+                  UnaryOp: *
+                    ID: p
+                  UnaryOp: *
+                    ID: q
+                Goto: done
+              UnaryOp: p++
+                ID: q
+          UnaryOp: p++
+            ID: p
+      Label: done
+        Return: 
+          BinaryOp: -
+            ID: p
+            ID: s

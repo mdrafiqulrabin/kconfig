@@ -1,0 +1,26 @@
+FileAST: 
+  Decl: ReadyFlag_NotProperlyInitialized, ['volatile'], ['extern'], []
+    TypeDecl: ReadyFlag_NotProperlyInitialized, ['volatile']
+      IdentifierType: ['int']
+  Decl: ReadyFlag_NotProperlyInitialized, ['volatile'], [], []
+    TypeDecl: ReadyFlag_NotProperlyInitialized, ['volatile']
+      IdentifierType: ['int']
+    Constant: int, 1
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: ReadyFlag_NotProperlyInitialized
+          Constant: int, 1
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

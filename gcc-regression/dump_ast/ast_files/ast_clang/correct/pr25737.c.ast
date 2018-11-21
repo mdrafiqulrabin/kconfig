@@ -1,0 +1,64 @@
+TranslationUnitDecl 0x7fcdd70264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcdd7026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcdd7026740 '__int128'
+|-TypedefDecl 0x7fcdd7026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcdd7026760 'unsigned __int128'
+|-TypedefDecl 0x7fcdd7026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcdd7026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcdd7026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcdd7026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcdd7026dc0 'char *'
+|   `-BuiltinType 0x7fcdd7026560 'char'
+|-TypedefDecl 0x7fcdd70270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcdd7027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcdd7026ee0 'struct __va_list_tag'
+|     `-Record 0x7fcdd7026e58 '__va_list_tag'
+|-FunctionDecl 0x7fcdd7077430 <c_files/pr25737.c:1:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fcdd70774c8 prev 0x7fcdd7077430 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fcdd7077560 <line:3:1, line:5:1> line:3:8 struct delay_block definition
+| `-FieldDecl 0x7fcdd70776c0 <line:4:3, col:23> col:23 referenced succ 'struct delay_block *'
+|-VarDecl 0x7fcdd7077728 <line:7:1, col:27> col:27 used Timer_Queue 'struct delay_block':'struct delay_block' static
+|-FunctionDecl 0x7fcdd7077908 <line:9:1, line:14:1> line:9:21 used time_enqueue 'struct delay_block *(struct delay_block *)'
+| |-ParmVarDecl 0x7fcdd70777f0 <col:35, col:55> col:55 used d 'struct delay_block *'
+| `-CompoundStmt 0x7fcdd7077c68 <line:10:1, line:14:1>
+|   |-DeclStmt 0x7fcdd7077aa8 <line:11:3, col:43>
+|   | `-VarDecl 0x7fcdd70779d0 <col:3, col:39> col:23 q 'struct delay_block *' cinit
+|   |   `-ImplicitCastExpr 0x7fcdd7077a90 <col:27, col:39> 'struct delay_block *' <LValueToRValue>
+|   |     `-MemberExpr 0x7fcdd7077a58 <col:27, col:39> 'struct delay_block *' lvalue .succ 0x7fcdd70776c0
+|   |       `-DeclRefExpr 0x7fcdd7077a30 <col:27> 'struct delay_block':'struct delay_block' lvalue Var 0x7fcdd7077728 'Timer_Queue' 'struct delay_block':'struct delay_block'
+|   |-BinaryOperator 0x7fcdd7077bb0 <line:12:3, col:22> 'struct delay_block *' '='
+|   | |-MemberExpr 0x7fcdd7077b00 <col:3, col:6> 'struct delay_block *' lvalue ->succ 0x7fcdd70776c0
+|   | | `-ImplicitCastExpr 0x7fcdd7077ae8 <col:3> 'struct delay_block *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fcdd7077ac0 <col:3> 'struct delay_block *' lvalue ParmVar 0x7fcdd70777f0 'd' 'struct delay_block *'
+|   | `-ImplicitCastExpr 0x7fcdd7077b98 <col:14, col:22> 'struct delay_block *' <NullToPointer>
+|   |   `-CStyleCastExpr 0x7fcdd7077b70 <col:14, col:22> 'void *' <NullToPointer>
+|   |     `-IntegerLiteral 0x7fcdd7077b38 <col:22> 'int' 0
+|   `-ReturnStmt 0x7fcdd7077c50 <line:13:3, col:22>
+|     `-ImplicitCastExpr 0x7fcdd7077c38 <col:10, col:22> 'struct delay_block *' <LValueToRValue>
+|       `-MemberExpr 0x7fcdd7077c00 <col:10, col:22> 'struct delay_block *' lvalue .succ 0x7fcdd70776c0
+|         `-DeclRefExpr 0x7fcdd7077bd8 <col:10> 'struct delay_block':'struct delay_block' lvalue Var 0x7fcdd7077728 'Timer_Queue' 'struct delay_block':'struct delay_block'
+`-FunctionDecl 0x7fcdd7077d68 <line:16:1, line:22:1> line:16:5 main 'int (void)'
+  `-CompoundStmt 0x7fcdd70781b8 <line:17:1, line:22:1>
+    |-BinaryOperator 0x7fcdd7077ed0 <line:18:3, col:23> 'struct delay_block *' '='
+    | |-MemberExpr 0x7fcdd7077e50 <col:3, col:15> 'struct delay_block *' lvalue .succ 0x7fcdd70776c0
+    | | `-DeclRefExpr 0x7fcdd7077e28 <col:3> 'struct delay_block':'struct delay_block' lvalue Var 0x7fcdd7077728 'Timer_Queue' 'struct delay_block':'struct delay_block'
+    | `-UnaryOperator 0x7fcdd7077eb0 <col:22, col:23> 'struct delay_block *' prefix '&'
+    |   `-DeclRefExpr 0x7fcdd7077e88 <col:23> 'struct delay_block':'struct delay_block' lvalue Var 0x7fcdd7077728 'Timer_Queue' 'struct delay_block':'struct delay_block'
+    |-IfStmt 0x7fcdd7078148 <line:19:3, line:20:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcdd7078088 <line:19:7, col:45> 'int' '!='
+    | | |-CallExpr 0x7fcdd7077fe0 <col:7, col:33> 'struct delay_block *'
+    | | | |-ImplicitCastExpr 0x7fcdd7077fc8 <col:7> 'struct delay_block *(*)(struct delay_block *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fcdd7077ef8 <col:7> 'struct delay_block *(struct delay_block *)' Function 0x7fcdd7077908 'time_enqueue' 'struct delay_block *(struct delay_block *)'
+    | | | `-UnaryOperator 0x7fcdd7077f48 <col:21, col:22> 'struct delay_block *' prefix '&'
+    | | |   `-DeclRefExpr 0x7fcdd7077f20 <col:22> 'struct delay_block':'struct delay_block' lvalue Var 0x7fcdd7077728 'Timer_Queue' 'struct delay_block':'struct delay_block'
+    | | `-ImplicitCastExpr 0x7fcdd7078070 <col:38, col:45> 'struct delay_block *' <BitCast>
+    | |   `-CStyleCastExpr 0x7fcdd7078048 <col:38, col:45> 'void *' <NullToPointer>
+    | |     `-IntegerLiteral 0x7fcdd7078010 <col:45> 'int' 0
+    | |-CallExpr 0x7fcdd7078120 <line:20:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fcdd7078108 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fcdd70780b0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fcdd70774c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fcdd70781a0 <line:21:3, col:10>
+      `-IntegerLiteral 0x7fcdd7078180 <col:10> 'int' 0

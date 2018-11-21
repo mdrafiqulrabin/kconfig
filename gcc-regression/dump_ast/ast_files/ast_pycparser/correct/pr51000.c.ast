@@ -1,0 +1,79 @@
+FileAST: 
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['_Bool']
+      Constant: int, 2048
+  Decl: b, [], [], []
+    ArrayDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['int']
+      Constant: int, 2048
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 2048
+        Assignment: +=
+          ID: i
+          Constant: int, 4
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: a
+              ID: i
+            BinaryOp: <=
+              ArrayRef: 
+                ID: b
+                ID: i
+              Constant: int, 10
+          Assignment: =
+            ArrayRef: 
+              ID: a
+              BinaryOp: +
+                ID: i
+                Constant: int, 3
+            BinaryOp: <=
+              ArrayRef: 
+                ID: b
+                BinaryOp: +
+                  ID: i
+                  Constant: int, 1
+              Constant: int, 10
+          Assignment: =
+            ArrayRef: 
+              ID: a
+              BinaryOp: +
+                ID: i
+                Constant: int, 2
+            BinaryOp: <=
+              ArrayRef: 
+                ID: b
+                BinaryOp: +
+                  ID: i
+                  Constant: int, 2
+              Constant: int, 10
+          Assignment: =
+            ArrayRef: 
+              ID: a
+              BinaryOp: +
+                ID: i
+                Constant: int, 1
+            BinaryOp: <=
+              ArrayRef: 
+                ID: b
+                BinaryOp: +
+                  ID: i
+                  Constant: int, 3
+              Constant: int, 10

@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fb0670264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb067026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb067026740 '__int128'
+|-TypedefDecl 0x7fb067026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb067026760 'unsigned __int128'
+|-TypedefDecl 0x7fb067026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb067026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb067026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb067026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb067026dc0 'char *'
+|   `-BuiltinType 0x7fb067026560 'char'
+|-TypedefDecl 0x7fb0670270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb067027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb067026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb067026e58 '__va_list_tag'
+|-FunctionDecl 0x7fb067077430 <c_files/pr59034-2.c:5:1, col:24> col:12 used foo 'int (int, ...)' extern
+| `-ParmVarDecl 0x7fb067027138 <col:16> col:19 'int'
+`-FunctionDecl 0x7fb0670775d8 <line:6:1, line:10:1> line:6:5 bar 'int (void)'
+  `-CompoundStmt 0x7fb067077878 <col:15, line:10:1>
+    |-DeclStmt 0x7fb067077720 <line:7:3, col:27>
+    | `-VarDecl 0x7fb067077688 <col:3, col:19> col:15 used l 'long double' cinit
+    |   `-ImplicitCastExpr 0x7fb067077708 <col:19> 'long double' <FloatingCast>
+    |     `-FloatingLiteral 0x7fb0670776e8 <col:19> 'double' 1.234500e+06
+    |-CallExpr 0x7fb0670777f0 <line:8:3, col:11> 'int'
+    | |-ImplicitCastExpr 0x7fb0670777d8 <col:3> 'int (*)(int, ...)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fb067077738 <col:3> 'int (int, ...)' Function 0x7fb067077430 'foo' 'int (int, ...)'
+    | |-IntegerLiteral 0x7fb067077760 <col:7> 'int' 0
+    | `-ImplicitCastExpr 0x7fb067077828 <col:10> 'long double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb067077780 <col:10> 'long double' lvalue Var 0x7fb067077688 'l' 'long double'
+    `-ReturnStmt 0x7fb067077860 <line:9:3, col:10>
+      `-IntegerLiteral 0x7fb067077840 <col:10> 'int' 0

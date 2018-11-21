@@ -1,0 +1,93 @@
+FileAST: 
+  FuncDef: 
+    Decl: dfoo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ldb1, [], [], []
+            PtrDecl: []
+              TypeDecl: ldb1, []
+                IdentifierType: ['long', 'double']
+          Decl: db1, [], [], []
+            PtrDecl: []
+              TypeDecl: db1, []
+                IdentifierType: ['double']
+        TypeDecl: dfoo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: ldb1
+        UnaryOp: *
+          ID: db1
+  FuncDef: 
+    Decl: dfoo2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: db1, [], [], []
+            PtrDecl: []
+              TypeDecl: db1, []
+                IdentifierType: ['double']
+        TypeDecl: dfoo2, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Return: 
+        UnaryOp: *
+          ID: db1
+  FuncDef: 
+    Decl: dfoo3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+        TypeDecl: dfoo3, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: ffoo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ldb1, [], [], []
+            PtrDecl: []
+              TypeDecl: ldb1, []
+                IdentifierType: ['long', 'double']
+          Decl: db1, [], [], []
+            PtrDecl: []
+              TypeDecl: db1, []
+                IdentifierType: ['float']
+        TypeDecl: ffoo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: ldb1
+        UnaryOp: *
+          ID: db1
+  FuncDef: 
+    Decl: ffoo2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: db1, [], [], []
+            PtrDecl: []
+              TypeDecl: db1, []
+                IdentifierType: ['float']
+        TypeDecl: ffoo2, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Return: 
+        UnaryOp: *
+          ID: db1
+  FuncDef: 
+    Decl: ffoo3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+        TypeDecl: ffoo3, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Return: 
+        ID: x

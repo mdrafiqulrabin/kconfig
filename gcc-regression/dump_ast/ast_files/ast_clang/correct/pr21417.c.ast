@@ -1,0 +1,107 @@
+TranslationUnitDecl 0x7fa2298264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa229826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa229826740 '__int128'
+|-TypedefDecl 0x7fa229826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa229826760 'unsigned __int128'
+|-TypedefDecl 0x7fa229826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa229826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa229826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa229826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa229826dc0 'char *'
+|   `-BuiltinType 0x7fa229826560 'char'
+|-TypedefDecl 0x7fa2298270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa229827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa229826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa229826e58 '__va_list_tag'
+|-RecordDecl 0x7fa229827120 <c_files/pr21417.c:4:1, line:7:1> line:4:8 struct tree_common definition
+| `-FieldDecl 0x7fa22a025a00 <line:6:3, col:7> col:7 referenced code 'int'
+|-RecordDecl 0x7fa22a025a48 <line:8:1, line:11:1> line:8:7 union tree_node definition
+| `-FieldDecl 0x7fa22a025b40 <line:10:3, col:22> col:22 referenced common 'struct tree_common':'struct tree_common'
+|-TypedefDecl 0x7fa22a025c80 <line:12:1, col:26> col:26 referenced tree 'union tree_node *'
+| `-PointerType 0x7fa22a025c30 'union tree_node *'
+|   `-ElaboratedType 0x7fa22a025bd0 'union tree_node' sugar
+|     `-RecordType 0x7fa22a025ad0 'union tree_node'
+|       `-Record 0x7fa22a025a48 'tree_node'
+|-FunctionDecl 0x7fa22a025f30 <line:14:1, col:33> col:13 test 'tree (tree, int, int)' extern
+| |-ParmVarDecl 0x7fa22a025d10 <col:19> col:23 'tree':'union tree_node *'
+| |-ParmVarDecl 0x7fa22a025d88 <col:25> col:28 'int'
+| `-ParmVarDecl 0x7fa22a025e00 <col:30> col:33 'int'
+|-FunctionDecl 0x7fa22a026110 <line:15:1, col:22> col:13 used foo 'tree (void)' extern
+|-FunctionDecl 0x7fa22a0262a0 <line:16:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fa22a026338 prev 0x7fa22a0262a0 <col:1, col:55> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fa22a026568 prev 0x7fa22a025f30 <line:18:1, line:46:1> line:19:1 test 'tree (tree, int, int)'
+  |-ParmVarDecl 0x7fa22a0263e0 <col:7, col:12> col:12 used expr 'tree':'union tree_node *'
+  |-ParmVarDecl 0x7fa22a026458 <col:18, col:22> col:22 used t 'int'
+  |-ParmVarDecl 0x7fa22a0264d0 <col:25, col:29> col:29 used D17630 'int'
+  `-CompoundStmt 0x7fa22a028160 <line:20:1, line:46:1>
+    |-DeclStmt 0x7fa22a026690 <line:21:3, col:10>
+    | `-VarDecl 0x7fa22a026630 <col:3, col:7> col:7 used __i 'int'
+    |-LabelStmt 0x7fa22a0268f8 <line:23:1, line:24:53> 'L0'
+    | `-IfStmt 0x7fa22a026878 <col:3, col:53>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7fa22a026790 <col:7, col:28> 'int' '!='
+    |   | |-ImplicitCastExpr 0x7fa22a026778 <col:7, col:20> 'int' <LValueToRValue>
+    |   | | `-MemberExpr 0x7fa22a026720 <col:7, col:20> 'int' lvalue .code 0x7fa22a025a00
+    |   | |   `-MemberExpr 0x7fa22a0266e8 <col:7, col:13> 'struct tree_common':'struct tree_common' lvalue ->common 0x7fa22a025b40
+    |   | |     `-ImplicitCastExpr 0x7fa22a0266d0 <col:7> 'tree':'union tree_node *' <LValueToRValue>
+    |   | |       `-DeclRefExpr 0x7fa22a0266a8 <col:7> 'tree':'union tree_node *' lvalue ParmVar 0x7fa22a0263e0 'expr' 'tree':'union tree_node *'
+    |   | `-IntegerLiteral 0x7fa22a026758 <col:28> 'int' 142
+    |   |-GotoStmt 0x7fa22a026800 <col:33, col:38> 'L23' 0x7fa22a0267b8
+    |   `-GotoStmt 0x7fa22a026860 <col:48, col:53> 'L2' 0x7fa22a026818
+    |-LabelStmt 0x7fa22a026980 <line:26:1, line:27:9> 'L2'
+    | `-BinaryOperator 0x7fa22a026958 <col:3, col:9> 'int' '='
+    |   |-DeclRefExpr 0x7fa22a026910 <col:3> 'int' lvalue Var 0x7fa22a026630 '__i' 'int'
+    |   `-IntegerLiteral 0x7fa22a026938 <col:9> 'int' 0
+    |-GotoStmt 0x7fa22a0269e0 <line:28:3, col:8> 'L10' 0x7fa22a026998
+    |-LabelStmt 0x7fa22a027ad8 <line:30:1, line:31:15> 'L10'
+    | `-BinaryOperator 0x7fa22a027ab0 <col:3, col:15> 'int' '='
+    |   |-DeclRefExpr 0x7fa22a027a00 <col:3> 'int' lvalue Var 0x7fa22a026630 '__i' 'int'
+    |   `-BinaryOperator 0x7fa22a027a88 <col:9, col:15> 'int' '+'
+    |     |-ImplicitCastExpr 0x7fa22a027a70 <col:9> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fa22a027a28 <col:9> 'int' lvalue Var 0x7fa22a026630 '__i' 'int'
+    |     `-IntegerLiteral 0x7fa22a027a50 <col:15> 'int' 1
+    |-IfStmt 0x7fa22a027c58 <line:32:3, col:41>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa22a027b70 <col:7, col:17> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fa22a027b40 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa22a027af0 <col:7> 'int' lvalue ParmVar 0x7fa22a0264d0 'D17630' 'int'
+    | | `-ImplicitCastExpr 0x7fa22a027b58 <col:17> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fa22a027b18 <col:17> 'int' lvalue Var 0x7fa22a026630 '__i' 'int'
+    | |-GotoStmt 0x7fa22a027be0 <col:22, col:27> 'L8' 0x7fa22a027b98
+    | `-GotoStmt 0x7fa22a027c40 <col:36, col:41> 'L19' 0x7fa22a027bf8
+    |-LabelStmt 0x7fa22a027d80 <line:34:1, line:35:30> 'L8'
+    | `-IfStmt 0x7fa22a027d48 <col:3, col:30>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-ImplicitCastExpr 0x7fa22a027cb8 <col:7> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fa22a027c90 <col:7> 'int' lvalue ParmVar 0x7fa22a026458 't' 'int'
+    |   |-GotoStmt 0x7fa22a027d18 <col:10, col:15> 'L15' 0x7fa22a027cd0
+    |   `-GotoStmt 0x7fa22a027d30 <col:25, col:30> 'L10' 0x7fa22a026998
+    |-LabelStmt 0x7fa22a027eb0 <line:37:1, line:38:15> 'L15'
+    | `-BinaryOperator 0x7fa22a027e88 <col:3, col:15> 'tree':'union tree_node *' '='
+    |   |-DeclRefExpr 0x7fa22a027d98 <col:3> 'tree':'union tree_node *' lvalue ParmVar 0x7fa22a0263e0 'expr' 'tree':'union tree_node *'
+    |   `-CallExpr 0x7fa22a027e60 <col:10, col:15> 'tree':'union tree_node *'
+    |     `-ImplicitCastExpr 0x7fa22a027e48 <col:10> 'tree (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fa22a027dc0 <col:10> 'tree (void)' Function 0x7fa22a026110 'foo' 'tree (void)'
+    |-IfStmt 0x7fa22a028008 <line:39:3, col:53>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa22a027fb0 <col:7, col:28> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fa22a027f98 <col:7, col:20> 'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7fa22a027f40 <col:7, col:20> 'int' lvalue .code 0x7fa22a025a00
+    | | |   `-MemberExpr 0x7fa22a027f08 <col:7, col:13> 'struct tree_common':'struct tree_common' lvalue ->common 0x7fa22a025b40
+    | | |     `-ImplicitCastExpr 0x7fa22a027ef0 <col:7> 'tree':'union tree_node *' <LValueToRValue>
+    | | |       `-DeclRefExpr 0x7fa22a027ec8 <col:7> 'tree':'union tree_node *' lvalue ParmVar 0x7fa22a0263e0 'expr' 'tree':'union tree_node *'
+    | | `-IntegerLiteral 0x7fa22a027f78 <col:28> 'int' 142
+    | |-GotoStmt 0x7fa22a027fd8 <col:33, col:38> 'L23' 0x7fa22a0267b8
+    | `-GotoStmt 0x7fa22a027ff0 <col:48, col:53> 'L0' 0x7fa22a0268b0
+    |-LabelStmt 0x7fa22a0280d8 <line:41:1, line:42:10> 'L19'
+    | `-CallExpr 0x7fa22a0280b0 <col:3, col:10> 'void'
+    |   `-ImplicitCastExpr 0x7fa22a028098 <col:3> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7fa22a028040 <col:3> 'void (void) __attribute__((noreturn))' Function 0x7fa22a026338 'abort' 'void (void) __attribute__((noreturn))'
+    `-LabelStmt 0x7fa22a028148 <line:44:1, line:45:10> 'L23'
+      `-ReturnStmt 0x7fa22a028130 <col:3, col:10>
+        `-ImplicitCastExpr 0x7fa22a028118 <col:10> 'tree':'union tree_node *' <LValueToRValue>
+          `-DeclRefExpr 0x7fa22a0280f0 <col:10> 'tree':'union tree_node *' lvalue ParmVar 0x7fa22a0263e0 'expr' 'tree':'union tree_node *'

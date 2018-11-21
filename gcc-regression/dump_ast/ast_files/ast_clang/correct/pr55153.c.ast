@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7ffa89825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffa89826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffa89825d40 '__int128'
+|-TypedefDecl 0x7ffa89826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffa89825d60 'unsigned __int128'
+|-TypedefDecl 0x7ffa89826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffa89826170 'struct __NSConstantString_tag'
+|   `-Record 0x7ffa898260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffa89826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffa898263c0 'char *'
+|   `-BuiltinType 0x7ffa89825b60 'char'
+|-TypedefDecl 0x7ffa898266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffa89826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffa898264e0 'struct __va_list_tag'
+|     `-Record 0x7ffa89826458 '__va_list_tag'
+|-VarDecl 0x7ffa89826770 <c_files/pr55153.c:6:1, col:14> col:12 used a 'int []' extern
+|-FunctionDecl 0x7ffa89026500 <line:8:1, line:12:1> line:9:1 foo 'void (void)'
+| `-CompoundStmt 0x7ffa890268c8 <line:10:1, line:12:1>
+|   `-CallExpr 0x7ffa89026830 <line:11:3, col:30> 'void'
+|     |-ImplicitCastExpr 0x7ffa89026818 <col:3> 'void (*)(const void *, ...)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7ffa89026760 <col:3> '<builtin fn type>' Function 0x7ffa89026608 '__builtin_prefetch' 'void (const void *, ...)'
+|     |-ImplicitCastExpr 0x7ffa890268b0 <col:23> 'const void *' <BitCast>
+|     | `-ImplicitCastExpr 0x7ffa89026898 <col:23> 'int *' <ArrayToPointerDecay>
+|     |   `-DeclRefExpr 0x7ffa89026788 <col:23> 'int []' lvalue Var 0x7ffa89826770 'a' 'int []'
+|     |-IntegerLiteral 0x7ffa890267b0 <col:26> 'int' 0
+|     `-IntegerLiteral 0x7ffa890267d0 <col:29> 'int' 0
+`-FunctionDecl 0x7ffa89026608 <col:3> col:3 implicit used __builtin_prefetch 'void (const void *, ...)' extern
+  |-ParmVarDecl 0x7ffa890266a0 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-NoThrowAttr 0x7ffa89026708 <col:3> Implicit
+  `-ConstAttr 0x7ffa89026750 <col:3> Implicit

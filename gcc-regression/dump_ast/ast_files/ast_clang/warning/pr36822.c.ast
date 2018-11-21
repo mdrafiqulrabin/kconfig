@@ -1,0 +1,38 @@
+c_files/pr36822.c:16:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7f9bc08264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9bc0826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9bc0826740 '__int128'
+|-TypedefDecl 0x7f9bc0826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9bc0826760 'unsigned __int128'
+|-TypedefDecl 0x7f9bc0826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9bc0826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9bc0826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9bc0826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9bc0826dc0 'char *'
+|   `-BuiltinType 0x7f9bc0826560 'char'
+|-TypedefDecl 0x7f9bc08270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9bc0827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9bc0826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9bc0826e58 '__va_list_tag'
+`-FunctionDecl 0x7f9bc0877400 <c_files/pr36822.c:8:1, line:16:1> line:8:5 boo 'int ()'
+  `-CompoundStmt 0x7f9bc0877bc0 <line:9:1, line:16:1>
+    |-DeclStmt 0x7f9bc08777d8 <line:10:3, line:13:9>
+    | |-RecordDecl 0x7f9bc08774d8 <line:10:3, line:13:3> line:10:3 struct definition
+    | | |-FieldDecl 0x7f9bc0877600 <line:11:5, col:27> col:19 pad 'unsigned char [4096]'
+    | | `-FieldDecl 0x7f9bc0877660 <line:12:5, col:19> col:19 referenced bar 'unsigned long'
+    | `-VarDecl 0x7f9bc0877760 <line:10:3, line:13:6> col:6 used foo 'struct (anonymous struct at c_files/pr36822.c:10:3) *'
+    `-GCCAsmStmt 0x7f9bc0877b48 <line:14:3, line:15:20>
+      |-UnaryOperator 0x7f9bc0877a00 <line:14:28, col:59> 'unsigned long long' lvalue prefix '*'
+      | `-CStyleCastExpr 0x7f9bc08779d8 <col:29, col:59> 'unsigned long long *' <IntegralToPointer>
+      |   `-ImplicitCastExpr 0x7f9bc08779c0 <col:50, col:59> 'unsigned long' <LValueToRValue>
+      |     `-ParenExpr 0x7f9bc08779a0 <col:50, col:59> 'unsigned long' lvalue
+      |       `-MemberExpr 0x7f9bc08778f8 <col:51, col:56> 'unsigned long' lvalue ->bar 0x7f9bc0877660
+      |         `-ImplicitCastExpr 0x7f9bc08778e0 <col:51> 'struct (anonymous struct at c_files/pr36822.c:10:3) *' <LValueToRValue>
+      |           `-DeclRefExpr 0x7f9bc08778b8 <col:51> 'struct (anonymous struct at c_files/pr36822.c:10:3) *' lvalue Var 0x7f9bc0877760 'foo' 'struct (anonymous struct at c_files/pr36822.c:10:3) *'
+      `-UnaryOperator 0x7f9bc0877b28 <line:15:10, col:16> 'unsigned long *' prefix '&'
+        `-MemberExpr 0x7f9bc0877ac8 <col:11, col:16> 'unsigned long' lvalue ->bar 0x7f9bc0877660
+          `-ImplicitCastExpr 0x7f9bc0877ab0 <col:11> 'struct (anonymous struct at c_files/pr36822.c:10:3) *' <LValueToRValue>
+            `-DeclRefExpr 0x7f9bc0877a88 <col:11> 'struct (anonymous struct at c_files/pr36822.c:10:3) *' lvalue Var 0x7f9bc0877760 'foo' 'struct (anonymous struct at c_files/pr36822.c:10:3) *'

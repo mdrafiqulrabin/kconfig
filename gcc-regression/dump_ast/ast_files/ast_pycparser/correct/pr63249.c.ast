@@ -1,0 +1,44 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: v, [], [], []
+            PtrDecl: []
+              TypeDecl: v, []
+                IdentifierType: ['int']
+          Decl: A, [], [], []
+            TypeDecl: A, []
+              IdentifierType: ['int']
+          Decl: B, [], [], []
+            TypeDecl: B, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+        Constant: int, 2
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+        Constant: int, 4
+      Pragma: omp target map(to: v[a:b])
+      Assignment: |=
+        ID: r
+        ArrayRef: 
+          ID: v
+          Constant: int, 3
+      Pragma: omp target map(to: v[A:B])
+      Assignment: |=
+        ID: r
+        ArrayRef: 
+          ID: v
+          Constant: int, 3
+      Return: 
+        ID: r

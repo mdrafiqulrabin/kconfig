@@ -1,0 +1,39 @@
+FileAST: 
+  Decl: sqrtf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+      TypeDecl: sqrtf, []
+        IdentifierType: ['float']
+  FuncDef: 
+    Decl: a, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+        TypeDecl: a, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: sqrtf
+          ExprList: 
+            ID: x
+  FuncDef: 
+    Decl: b, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+        TypeDecl: b, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: sqrtf
+          ExprList: 
+            ID: x

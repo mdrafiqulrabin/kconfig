@@ -1,0 +1,53 @@
+c_files/pr58346-3.c:11:10: warning: subtraction of pointers to type 'int [0]' of zero size has undefined behavior [-Wpointer-arith]
+  d = a1 - a2; /* { dg-error "arithmetic on pointer to an empty aggregate" } */
+      ~~ ^ ~~
+c_files/pr58346-3.c:14:10: warning: subtraction of pointers to type 'int [0]' of zero size has undefined behavior [-Wpointer-arith]
+  d = b1 - b2; /* { dg-error "arithmetic on pointer to an empty aggregate" "" { target c++ } } */
+      ~~ ^ ~~
+2 warnings generated.
+TranslationUnitDecl 0x7fd7e20166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd7e2016c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd7e2016940 '__int128'
+|-TypedefDecl 0x7fd7e2016c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd7e2016960 'unsigned __int128'
+|-TypedefDecl 0x7fd7e2016f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd7e2016d70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd7e2016ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd7e2017000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd7e2016fc0 'char *'
+|   `-BuiltinType 0x7fd7e2016760 'char'
+|-TypedefDecl 0x7fd7e20172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd7e2017270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd7e20170e0 'struct __va_list_tag'
+|     `-Record 0x7fd7e2017058 '__va_list_tag'
+`-FunctionDecl 0x7fd7e1836400 <c_files/pr58346-3.c:4:1, line:16:1> line:5:1 foo 'void (void)'
+  `-CompoundStmt 0x7fd7e1837368 <line:6:1, line:16:1>
+    |-DeclStmt 0x7fd7e1836550 <<built-in>:67:26, c_files/pr58346-3.c:7:21>
+    | `-VarDecl 0x7fd7e18364f0 <<built-in>:67:26, c_files/pr58346-3.c:7:20> col:20 used d 'long'
+    |-DeclStmt 0x7fd7e1836600 <line:8:3, col:18>
+    | `-VarDecl 0x7fd7e1836580 <col:3, col:17> col:13 used i 'const int' cinit
+    |   `-IntegerLiteral 0x7fd7e18365e0 <col:17> 'int' 0
+    |-DeclStmt 0x7fd7e1836860 <line:9:3, col:25>
+    | |-VarDecl 0x7fd7e1836710 <col:3, col:14> col:7 used a1 'int [2][0]'
+    | `-VarDecl 0x7fd7e18367e8 <col:3, col:24> col:17 used a2 'int [2][0]'
+    |-DeclStmt 0x7fd7e1836b48 <line:10:3, col:25>
+    | |-VarDecl 0x7fd7e18369a0 <col:3, col:14> col:7 used b1 'int [3][0]'
+    | `-VarDecl 0x7fd7e1836ad0 <col:3, col:24> col:17 used b2 'int [4][0]'
+    |-BinaryOperator 0x7fd7e1837018 <line:11:3, col:12> 'long' '='
+    | |-DeclRefExpr 0x7fd7e1836b60 <col:3> 'long' lvalue Var 0x7fd7e18364f0 'd' 'long'
+    | `-BinaryOperator 0x7fd7e1836ff0 <col:7, col:12> 'long' '-'
+    |   |-ImplicitCastExpr 0x7fd7e1836c08 <col:7> 'int (*)[0]' <ArrayToPointerDecay>
+    |   | `-DeclRefExpr 0x7fd7e1836b88 <col:7> 'int [2][0]' lvalue Var 0x7fd7e1836710 'a1' 'int [2][0]'
+    |   `-ImplicitCastExpr 0x7fd7e1836c20 <col:12> 'int (*)[0]' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7fd7e1836bb0 <col:12> 'int [2][0]' lvalue Var 0x7fd7e18367e8 'a2' 'int [2][0]'
+    |-GCCAsmStmt 0x7fd7e1837130 <line:12:3, col:32>
+    | `-DeclRefExpr 0x7fd7e1837108 <col:30> 'long' lvalue Var 0x7fd7e18364f0 'd' 'long'
+    |-BinaryOperator 0x7fd7e1837260 <line:14:3, col:12> 'long' '='
+    | |-DeclRefExpr 0x7fd7e1837190 <col:3> 'long' lvalue Var 0x7fd7e18364f0 'd' 'long'
+    | `-BinaryOperator 0x7fd7e1837238 <col:7, col:12> 'long' '-'
+    |   |-ImplicitCastExpr 0x7fd7e1837208 <col:7> 'int (*)[0]' <ArrayToPointerDecay>
+    |   | `-DeclRefExpr 0x7fd7e18371b8 <col:7> 'int [3][0]' lvalue Var 0x7fd7e18369a0 'b1' 'int [3][0]'
+    |   `-ImplicitCastExpr 0x7fd7e1837220 <col:12> 'int (*)[0]' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7fd7e18371e0 <col:12> 'int [4][0]' lvalue Var 0x7fd7e1836ad0 'b2' 'int [4][0]'
+    `-GCCAsmStmt 0x7fd7e1837308 <line:15:3, col:32>
+      `-DeclRefExpr 0x7fd7e18372e0 <col:30> 'long' lvalue Var 0x7fd7e18364f0 'd' 'long'

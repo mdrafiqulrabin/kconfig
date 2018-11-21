@@ -1,0 +1,51 @@
+FileAST: 
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: foo, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: wait_reading_process_output, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: wait_reading_process_output, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: nfds, [], [], []
+        TypeDecl: nfds, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: channel, [], [], []
+        TypeDecl: channel, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: channel
+          Constant: int, 0
+        BinaryOp: <
+          ID: channel
+          Constant: int, 1024
+        UnaryOp: ++
+          ID: channel
+        Compound: 
+          If: 
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                ID: channel
+            UnaryOp: p++
+              ID: nfds
+      If: 
+        BinaryOp: <
+          ID: nfds
+          Constant: int, 0
+        Return: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0

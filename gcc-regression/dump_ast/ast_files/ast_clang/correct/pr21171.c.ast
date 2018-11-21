@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7fcb520264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcb52026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcb52026740 '__int128'
+|-TypedefDecl 0x7fcb52026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcb52026760 'unsigned __int128'
+|-TypedefDecl 0x7fcb52026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcb52026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcb52026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcb52026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcb52026dc0 'char *'
+|   `-BuiltinType 0x7fcb52026560 'char'
+|-TypedefDecl 0x7fcb520270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcb52027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcb52026ee0 'struct __va_list_tag'
+|     `-Record 0x7fcb52026e58 '__va_list_tag'
+|-TypedefDecl 0x7fcb52027138 <c_files/pr21171.c:5:1, col:22> col:22 referenced u_int32_t 'unsigned int'
+| `-BuiltinType 0x7fcb52026660 'unsigned int'
+|-TypedefDecl 0x7fcb520271a8 <line:6:1, col:23> col:23 u_int8_t 'unsigned char'
+| `-BuiltinType 0x7fcb52026620 'unsigned char'
+|-RecordDecl 0x7fcb52825a00 <line:10:18, line:12:1> line:10:25 struct AT91RM9200_regs definition
+| `-FieldDecl 0x7fcb52825b88 <line:11:3, col:28> col:13 referenced SVR 'u_int32_t [32]'
+|-TypedefDecl 0x7fcb52825c20 <line:10:1, line:12:3> col:3 referenced AT91RM9200_regs_t 'volatile struct AT91RM9200_regs':'volatile struct AT91RM9200_regs'
+| `-QualType 0x7fcb52825bd4 'volatile struct AT91RM9200_regs' volatile
+|   `-ElaboratedType 0x7fcb52825bd0 'struct AT91RM9200_regs' sugar
+|     `-RecordType 0x7fcb52825a90 'struct AT91RM9200_regs'
+|       `-Record 0x7fcb52825a00 'AT91RM9200_regs'
+|-VarDecl 0x7fcb52825d08 <line:16:1, col:46> col:24 used __IntTable 'const u_int32_t [32]' extern
+`-FunctionDecl 0x7fcb52825e00 <line:18:1, line:26:1> line:18:5 main 'int ()'
+  `-CompoundStmt 0x7fcb528264a8 <line:19:1, line:26:1>
+    |-DeclStmt 0x7fcb52825f10 <line:20:3, col:8>
+    | `-VarDecl 0x7fcb52825eb0 <col:3, col:7> col:7 used c 'int'
+    |-ForStmt 0x7fcb52826438 <line:22:3, line:23:34>
+    | |-BinaryOperator 0x7fcb52825f70 <line:22:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fcb52825f28 <col:8> 'int' lvalue Var 0x7fcb52825eb0 'c' 'int'
+    | | `-IntegerLiteral 0x7fcb52825f50 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcb52825ff8 <col:15, line:8:21> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fcb52825fe0 <line:22:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fcb52825f98 <col:15> 'int' lvalue Var 0x7fcb52825eb0 'c' 'int'
+    | | `-IntegerLiteral 0x7fcb52825fc0 <line:8:21> 'int' 32
+    | |-UnaryOperator 0x7fcb52826048 <line:22:32, col:33> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fcb52826020 <col:32> 'int' lvalue Var 0x7fcb52825eb0 'c' 'int'
+    | `-BinaryOperator 0x7fcb528263c8 <line:14:17, line:23:34> 'u_int32_t':'unsigned int' '='
+    |   |-ArraySubscriptExpr 0x7fcb52826288 <line:14:17, line:23:18> 'volatile u_int32_t':'volatile unsigned int' lvalue
+    |   | |-ImplicitCastExpr 0x7fcb52826258 <line:14:17, line:23:13> 'volatile u_int32_t *' <ArrayToPointerDecay>
+    |   | | `-MemberExpr 0x7fcb52826160 <line:14:17, line:23:13> 'u_int32_t volatile[32]' lvalue ->SVR 0x7fcb52825b88
+    |   | |   `-ParenExpr 0x7fcb52826140 <line:14:17, col:48> 'AT91RM9200_regs_t *'
+    |   | |     `-CStyleCastExpr 0x7fcb52826118 <col:18, col:38> 'AT91RM9200_regs_t *' <IntegralToPointer>
+    |   | |       `-IntegerLiteral 0x7fcb52826090 <col:38> 'unsigned int' 4293918720
+    |   | `-ImplicitCastExpr 0x7fcb52826270 <line:23:17> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fcb52826198 <col:17> 'int' lvalue Var 0x7fcb52825eb0 'c' 'int'
+    |   `-ImplicitCastExpr 0x7fcb528263b0 <col:22, col:34> 'u_int32_t':'unsigned int' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7fcb52826388 <col:22, col:34> 'const u_int32_t':'const unsigned int' lvalue
+    |       |-ImplicitCastExpr 0x7fcb52826358 <col:22> 'const u_int32_t *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7fcb528262b0 <col:22> 'const u_int32_t [32]' lvalue Var 0x7fcb52825d08 '__IntTable' 'const u_int32_t [32]'
+    |       `-ImplicitCastExpr 0x7fcb52826370 <col:33> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fcb528262d8 <col:33> 'int' lvalue Var 0x7fcb52825eb0 'c' 'int'
+    `-ReturnStmt 0x7fcb52826490 <line:25:3, col:10>
+      `-IntegerLiteral 0x7fcb52826470 <col:10> 'int' 0

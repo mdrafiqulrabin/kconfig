@@ -1,0 +1,81 @@
+FileAST: 
+  Decl: a, ['volatile'], [], []
+    TypeDecl: a, ['volatile']
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  Decl: h, [], [], []
+    TypeDecl: h, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        ID: d
+        Compound: 
+          If: 
+            ID: e
+            Break: 
+          Assignment: =
+            ID: g
+            Constant: int, 0
+          Decl: j, [], [], []
+            ArrayDecl: []
+              TypeDecl: j, []
+                IdentifierType: ['int']
+              Constant: int, 4
+          For: 
+            Assignment: =
+              ID: h
+              Constant: int, 0
+            BinaryOp: <
+              ID: h
+              Constant: int, 4
+            UnaryOp: p++
+              ID: h
+            UnaryOp: p++
+              ID: g
+          For: 
+            BinaryOp: <
+              ID: c
+              Constant: int, 2
+            UnaryOp: p++
+              ID: c
+            Compound: 
+              Assignment: =
+                ID: e
+                ArrayRef: 
+                  ID: j
+                  ID: g
+              Assignment: =
+                ID: i
+                ArrayRef: 
+                  ID: j
+                  Constant: int, 0
+              Assignment: =
+                ID: f
+                Constant: int, 4
+          Assignment: |=
+            ID: f
+            ID: d
+      Return: 
+        ID: a

@@ -1,0 +1,108 @@
+FileAST: 
+  Typedef: int64_t, [], ['typedef']
+    TypeDecl: int64_t, []
+      IdentifierType: ['long', 'int']
+  FuncDef: 
+    Decl: swap64, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int64_t']
+        TypeDecl: swap64, []
+          IdentifierType: ['int64_t']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: |
+            BinaryOp: |
+              BinaryOp: |
+                BinaryOp: |
+                  BinaryOp: |
+                    BinaryOp: |
+                      BinaryOp: <<
+                        BinaryOp: &
+                          ID: n
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['int64_t']
+                            Constant: int, 0xff
+                        Constant: int, 56
+                      BinaryOp: <<
+                        BinaryOp: &
+                          ID: n
+                          BinaryOp: <<
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['int64_t']
+                              Constant: int, 0xff
+                            Constant: int, 8
+                        Constant: int, 40
+                    BinaryOp: <<
+                      BinaryOp: &
+                        ID: n
+                        BinaryOp: <<
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['int64_t']
+                            Constant: int, 0xff
+                          Constant: int, 16
+                      Constant: int, 24
+                  BinaryOp: <<
+                    BinaryOp: &
+                      ID: n
+                      BinaryOp: <<
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['int64_t']
+                          Constant: int, 0xff
+                        Constant: int, 24
+                    Constant: int, 8
+                BinaryOp: >>
+                  BinaryOp: &
+                    ID: n
+                    BinaryOp: <<
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['int64_t']
+                        Constant: int, 0xff
+                      Constant: int, 32
+                  Constant: int, 8
+              BinaryOp: >>
+                BinaryOp: &
+                  ID: n
+                  BinaryOp: <<
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['int64_t']
+                      Constant: int, 0xff
+                    Constant: int, 40
+                Constant: int, 24
+            BinaryOp: >>
+              BinaryOp: &
+                ID: n
+                BinaryOp: <<
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['int64_t']
+                    Constant: int, 0xff
+                  Constant: int, 48
+              Constant: int, 40
+          BinaryOp: >>
+            BinaryOp: &
+              ID: n
+              BinaryOp: <<
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['int64_t']
+                  Constant: int, 0xff
+                Constant: int, 56
+            Constant: int, 56

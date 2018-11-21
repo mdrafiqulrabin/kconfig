@@ -1,0 +1,63 @@
+c_files/pr63909.c:9:5: error: use of unknown builtin '__builtin_exit' [-Wimplicit-function-declaration]
+    __builtin_exit (0);
+    ^
+1 error generated.
+TranslationUnitDecl 0x7f85f700a4d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f85f700aa20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f85f700a740 '__int128'
+|-TypedefDecl 0x7f85f700aa90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f85f700a760 'unsigned __int128'
+|-TypedefDecl 0x7f85f700ad68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f85f700ab70 'struct __NSConstantString_tag'
+|   `-Record 0x7f85f700aae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f85f700ae00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f85f700adc0 'char *'
+|   `-BuiltinType 0x7f85f700a560 'char'
+|-TypedefDecl 0x7f85f700b0c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f85f700b070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f85f700aee0 'struct __va_list_tag'
+|     `-Record 0x7f85f700ae58 '__va_list_tag'
+|-VarDecl 0x7f85f700b138 <c_files/pr63909.c:3:1, col:5> col:5 used z 'int'
+|-FunctionDecl 0x7f85f7826a48 <line:5:1, line:11:1> line:6:6 used g 'void ()'
+| |-CompoundStmt 0x7f85f7826df8 <line:7:1, line:11:1>
+| | |-IfStmt 0x7f85f7826d30 <line:8:3, line:9:22>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-UnaryOperator 0x7f85f7826b50 <line:8:7, col:9> 'int' prefix '++'
+| | | | `-DeclRefExpr 0x7f85f7826b28 <col:9> 'int' lvalue Var 0x7f85f700b138 'z' 'int'
+| | | |-CallExpr 0x7f85f7826d00 <line:9:5, col:22> 'int'
+| | | | |-ImplicitCastExpr 0x7f85f7826ce8 <col:5> 'int (*)()' <FunctionToPointerDecay>
+| | | | | `-DeclRefExpr 0x7f85f7826c78 <col:5> 'int ()' Function 0x7f85f7826be0 '__builtin_exit' 'int ()'
+| | | | `-IntegerLiteral 0x7f85f7826ca0 <col:21> 'int' 0
+| | | `-<<<NULL>>>
+| | `-CallExpr 0x7f85f7826dd0 <line:10:3, col:6> 'void'
+| |   `-ImplicitCastExpr 0x7f85f7826db8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7f85f7826d68 <col:3> 'void ()' Function 0x7f85f7826a48 'g' 'void ()'
+| `-NoInlineAttr 0x7f85f7826ae0 <line:5:16>
+|-FunctionDecl 0x7f85f7826be0 <<invalid sloc>> line:9:5 implicit used __builtin_exit 'int ()'
+|-FunctionDecl 0x7f85f7826e40 <line:13:1, line:19:1> line:14:6 used f 'void ()'
+| |-CompoundStmt 0x7f85f7827098 <line:15:1, line:19:1>
+| | |-IfStmt 0x7f85f7826ff8 <line:16:3, line:17:22>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-UnaryOperator 0x7f85f7826f48 <line:16:7, col:9> 'int' prefix '++'
+| | | | `-DeclRefExpr 0x7f85f7826f20 <col:9> 'int' lvalue Var 0x7f85f700b138 'z' 'int'
+| | | |-CallExpr 0x7f85f7826fc8 <line:17:5, col:22> 'int'
+| | | | |-ImplicitCastExpr 0x7f85f7826fb0 <col:5> 'int (*)()' <FunctionToPointerDecay>
+| | | | | `-DeclRefExpr 0x7f85f7826f68 <col:5> 'int ()' Function 0x7f85f7826be0 '__builtin_exit' 'int ()'
+| | | | `-IntegerLiteral 0x7f85f7826f90 <col:21> 'int' 0
+| | | `-<<<NULL>>>
+| | `-CallExpr 0x7f85f7827070 <line:18:3, col:6> 'void'
+| |   `-ImplicitCastExpr 0x7f85f7827058 <col:3> 'void (*)()' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7f85f7827030 <col:3> 'void ()' Function 0x7f85f7826e40 'f' 'void ()'
+| `-NoInlineAttr 0x7f85f7826ed8 <line:13:16>
+`-FunctionDecl 0x7f85f78270e8 <line:21:1, line:27:1> line:21:5 main 'int ()'
+  `-CompoundStmt 0x7f85f7827288 <line:22:1, line:27:1>
+    |-CallExpr 0x7f85f78271c0 <line:23:3, col:6> 'void'
+    | `-ImplicitCastExpr 0x7f85f78271a8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f85f7827180 <col:3> 'void ()' Function 0x7f85f7826e40 'f' 'void ()'
+    |-CallExpr 0x7f85f7827228 <line:24:3, col:6> 'void'
+    | `-ImplicitCastExpr 0x7f85f7827210 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f85f78271e8 <col:3> 'void ()' Function 0x7f85f7826a48 'g' 'void ()'
+    `-ReturnStmt 0x7f85f7827270 <line:26:3, col:10>
+      `-IntegerLiteral 0x7f85f7827250 <col:10> 'int' 0

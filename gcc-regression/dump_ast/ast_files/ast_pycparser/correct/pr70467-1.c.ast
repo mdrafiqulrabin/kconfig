@@ -1,0 +1,172 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'long', 'long']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned', 'long', 'long']
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: &=
+        ID: a
+        Constant: int, 0x7fffffffffffffffULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: &=
+        ID: a
+        Constant: int, 0xffffffff7fffffffULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: &=
+        ID: a
+        Constant: int, 0x7fffffff00000000ULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: &=
+        ID: a
+        Constant: int, 0x000000007fffffffULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: &=
+        ID: a
+        Constant: int, 0x00000000ffffffffULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: &=
+        ID: a
+        Constant: int, 0xffffffff00000000ULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: |=
+        ID: a
+        Constant: int, 0x7fffffffffffffffULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: |=
+        ID: a
+        Constant: int, 0xffffffff7fffffffULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: |=
+        ID: a
+        Constant: int, 0x7fffffff00000000ULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: |=
+        ID: a
+        Constant: int, 0x000000007fffffffULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: |=
+        ID: a
+        Constant: int, 0x00000000ffffffffULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: |=
+        ID: a
+        Constant: int, 0xffffffff00000000ULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: ^=
+        ID: a
+        Constant: int, 0x7fffffffffffffffULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: ^=
+        ID: a
+        Constant: int, 0xffffffff7fffffffULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: ^=
+        ID: a
+        Constant: int, 0x7fffffff00000000ULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: ^=
+        ID: a
+        Constant: int, 0x000000007fffffffULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: ^=
+        ID: a
+        Constant: int, 0x00000000ffffffffULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Assignment: ^=
+        ID: a
+        Constant: int, 0xffffffff00000000ULL
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: a

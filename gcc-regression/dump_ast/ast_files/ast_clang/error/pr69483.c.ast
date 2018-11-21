@@ -1,0 +1,30 @@
+c_files/pr69483.c:5:10: error: tentative definition has type 'struct S' that is never completed
+struct S b; /* { dg-error "storage size of 'b' isn't known" } */
+         ^
+c_files/pr69483.c:4:19: note: forward declaration of 'struct S'
+struct T { struct S *a; };
+                  ^
+1 error generated.
+TranslationUnitDecl 0x7f87248264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8724826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8724826740 '__int128'
+|-TypedefDecl 0x7f8724826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8724826760 'unsigned __int128'
+|-TypedefDecl 0x7f8724826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8724826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8724826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8724826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8724826dc0 'char *'
+|   `-BuiltinType 0x7f8724826560 'char'
+|-TypedefDecl 0x7f87248270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8724827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8724826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8724826e58 '__va_list_tag'
+|-RecordDecl 0x7f8724827120 <c_files/pr69483.c:4:1, col:25> col:8 struct T definition
+| |-RecordDecl 0x7f8724877400 parent 0x7f87248264d0 <col:12, col:19> col:19 struct S
+| `-FieldDecl 0x7f8724877570 <col:12, col:22> col:22 a 'struct S *'
+|-VarDecl 0x7f87248775d8 <line:5:1, col:10> col:10 used invalid b 'struct S':'struct S'
+`-VarDecl 0x7f87248776d0 <line:6:1, col:19> col:10 c 'struct T':'struct T' cinit
+  `-InitListExpr 0x7f87248777c0 <col:14, col:19> 'struct T':'struct T'
+    `-UnaryOperator 0x7f8724877758 <col:16, col:17> 'struct S *' prefix '&'
+      `-DeclRefExpr 0x7f8724877730 <col:17> 'struct S':'struct S' lvalue Var 0x7f87248775d8 'b' 'struct S':'struct S'

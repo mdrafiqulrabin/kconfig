@@ -1,0 +1,31 @@
+c_files/pr68657-3.c:5:30: warning: unknown warning group '-Wlarger-than=65536', ignored [-Wunknown-warning-option]
+#pragma GCC diagnostic error "-Wlarger-than=65536"
+                             ^
+c_files/pr68657-3.c:8:32: warning: unknown warning group '-Wlarger-than=65536', ignored [-Wunknown-warning-option]
+#pragma GCC diagnostic ignored "-Wlarger-than=65536"
+                               ^
+c_files/pr68657-3.c:11:32: warning: unknown warning group '-Wlarger-than=65536', ignored [-Wunknown-warning-option]
+#pragma GCC diagnostic warning "-Wlarger-than=65536"
+                               ^
+3 warnings generated.
+TranslationUnitDecl 0x7ff9490264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff949026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff949026740 '__int128'
+|-TypedefDecl 0x7ff949026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff949026760 'unsigned __int128'
+|-TypedefDecl 0x7ff949026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff949026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff949026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff949026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff949026dc0 'char *'
+|   `-BuiltinType 0x7ff949026560 'char'
+|-TypedefDecl 0x7ff9490270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff949027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff949026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff949026e58 '__va_list_tag'
+|-VarDecl 0x7ff9490271a0 <c_files/pr68657-3.c:6:1, col:13> col:5 a 'int [131072]'
+|-VarDecl 0x7ff949825ac0 <line:7:1, col:11> col:5 b 'int [1024]'
+|-VarDecl 0x7ff949825b68 <line:9:1, col:13> col:5 c 'int [131072]'
+|-VarDecl 0x7ff949825c10 <line:10:1, col:11> col:5 d 'int [1024]'
+|-VarDecl 0x7ff949825cb8 <line:12:1, col:13> col:5 e 'int [131072]'
+`-VarDecl 0x7ff949825d60 <line:13:1, col:11> col:5 f 'int [1024]'

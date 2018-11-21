@@ -1,0 +1,226 @@
+TranslationUnitDecl 0x7fe8dc0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe8dc026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe8dc026740 '__int128'
+|-TypedefDecl 0x7fe8dc026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe8dc026760 'unsigned __int128'
+|-TypedefDecl 0x7fe8dc026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe8dc026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe8dc026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe8dc026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe8dc026dc0 'char *'
+|   `-BuiltinType 0x7fe8dc026560 'char'
+|-TypedefDecl 0x7fe8dc0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe8dc027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe8dc026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe8dc026e58 '__va_list_tag'
+|-RecordDecl 0x7fe8dc027120 <c_files/pr33723.c:5:9, line:15:1> line:5:9 union definition
+| |-RecordDecl 0x7fe8dc825a00 <line:7:3, line:12:3> line:7:3 struct definition
+| | |-FieldDecl 0x7fe8dc825ac8 <line:9:5, col:9> col:9 f1 'int'
+| | |-FieldDecl 0x7fe8dc825b28 <col:5, col:13> col:13 f2 'int'
+| | |-FieldDecl 0x7fe8dc825b88 <col:5, col:17> col:17 f3 'int'
+| | |-FieldDecl 0x7fe8dc825be8 <col:5, col:21> col:21 f4 'int'
+| | |-FieldDecl 0x7fe8dc825c48 <col:5, col:25> col:25 f5 'int'
+| | |-FieldDecl 0x7fe8dc825ca8 <col:5, col:29> col:29 f6 'int'
+| | |-FieldDecl 0x7fe8dc825d08 <col:5, col:33> col:33 f7 'int'
+| | |-FieldDecl 0x7fe8dc825d68 <col:5, col:37> col:37 f8 'int'
+| | |-FieldDecl 0x7fe8dc825dc8 <line:10:5, col:14> col:14 f9 'long'
+| | |-FieldDecl 0x7fe8dc825e28 <col:5, col:18> col:18 f10 'long'
+| | `-FieldDecl 0x7fe8dc825e88 <line:11:5, col:9> col:9 f11 'int'
+| |-FieldDecl 0x7fe8dc825f20 <line:7:3, line:12:5> col:5 f 'struct (anonymous struct at c_files/pr33723.c:7:3)':'struct T::(anonymous at c_files/pr33723.c:7:3)'
+| |-FieldDecl 0x7fe8dc825fe8 <line:13:3, col:11> col:8 s 'char [4]'
+| `-FieldDecl 0x7fe8dc826048 <line:14:3, col:12> col:12 a 'long'
+|-TypedefDecl 0x7fe8dc826180 <line:5:1, line:15:3> col:3 referenced T 'union T':'T'
+| `-ElaboratedType 0x7fe8dc826130 'union T' sugar
+|   `-RecordType 0x7fe8dc0271b0 'T'
+|     `-Record 0x7fe8dc027120 ''
+|-FunctionDecl 0x7fe8dc826380 <line:17:1, col:15> col:6 used test 'void (T *)'
+| `-ParmVarDecl 0x7fe8dc826278 <col:12, col:14> col:15 'T *'
+|-FunctionDecl 0x7fe8dc826520 <line:19:1, line:25:1> line:20:1 foo1 'void (void)'
+| `-CompoundStmt 0x7fe8dc827b50 <line:21:1, line:25:1>
+|   |-DeclStmt 0x7fe8dc826628 <line:22:3, col:6>
+|   | `-VarDecl 0x7fe8dc8265c8 <col:3, col:5> col:5 used t 'T':'T'
+|   |-BinaryOperator 0x7fe8dc827a18 <line:23:3, col:49> 'T':'T' '='
+|   | |-DeclRefExpr 0x7fe8dc826640 <col:3> 'T':'T' lvalue Var 0x7fe8dc8265c8 't' 'T':'T'
+|   | `-ImplicitCastExpr 0x7fe8dc827a00 <col:7, col:49> 'T':'T' <LValueToRValue>
+|   |   `-CompoundLiteralExpr 0x7fe8dc8269c8 <col:7, col:49> 'T':'T' lvalue
+|   |     `-InitListExpr 0x7fe8dc8268b8 <col:11, col:49> 'T':'T' field Field 0x7fe8dc825f20 'f' 'struct (anonymous struct at c_files/pr33723.c:7:3)':'struct T::(anonymous at c_files/pr33723.c:7:3)'
+|   |       `-InitListExpr 0x7fe8dc826900 <col:13, col:47> 'struct (anonymous struct at c_files/pr33723.c:7:3)':'struct T::(anonymous at c_files/pr33723.c:7:3)'
+|   |         |-IntegerLiteral 0x7fe8dc826678 <col:15> 'int' 0
+|   |         |-IntegerLiteral 0x7fe8dc826698 <col:18> 'int' 0
+|   |         |-IntegerLiteral 0x7fe8dc8266b8 <col:21> 'int' 0
+|   |         |-IntegerLiteral 0x7fe8dc8266d8 <col:24> 'int' 0
+|   |         |-IntegerLiteral 0x7fe8dc8266f8 <col:27> 'int' 0
+|   |         |-IntegerLiteral 0x7fe8dc826718 <col:30> 'int' 0
+|   |         |-IntegerLiteral 0x7fe8dc826738 <col:33> 'int' 0
+|   |         |-IntegerLiteral 0x7fe8dc826758 <col:36> 'int' 0
+|   |         |-ImplicitCastExpr 0x7fe8dc826998 <col:39> 'long' <IntegralCast>
+|   |         | `-IntegerLiteral 0x7fe8dc826778 <col:39> 'int' 0
+|   |         |-ImplicitCastExpr 0x7fe8dc8269b0 <col:42> 'long' <IntegralCast>
+|   |         | `-IntegerLiteral 0x7fe8dc826798 <col:42> 'int' 0
+|   |         `-IntegerLiteral 0x7fe8dc8267b8 <col:45> 'int' 0
+|   `-CallExpr 0x7fe8dc827b20 <line:24:3, col:11> 'void'
+|     |-ImplicitCastExpr 0x7fe8dc827b08 <col:3> 'void (*)(T *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe8dc827a40 <col:3> 'void (T *)' Function 0x7fe8dc826380 'test' 'void (T *)'
+|     `-UnaryOperator 0x7fe8dc827a90 <col:9, col:10> 'T *' prefix '&'
+|       `-DeclRefExpr 0x7fe8dc827a68 <col:10> 'T':'T' lvalue Var 0x7fe8dc8265c8 't' 'T':'T'
+|-FunctionDecl 0x7fe8dc827c10 <line:27:1, line:32:1> line:28:1 bar1 'void (void)'
+| `-CompoundStmt 0x7fe8dc828138 <line:29:1, line:32:1>
+|   |-DeclStmt 0x7fe8dc828068 <line:30:3, col:48>
+|   | `-VarDecl 0x7fe8dc827cb8 <col:3, col:47> col:5 used t 'T':'T' cinit
+|   |   `-InitListExpr 0x7fe8dc827f58 <col:9, col:47> 'T':'T' field Field 0x7fe8dc825f20 'f' 'struct (anonymous struct at c_files/pr33723.c:7:3)':'struct T::(anonymous at c_files/pr33723.c:7:3)'
+|   |     `-InitListExpr 0x7fe8dc827fa0 <col:11, col:45> 'struct (anonymous struct at c_files/pr33723.c:7:3)':'struct T::(anonymous at c_files/pr33723.c:7:3)'
+|   |       |-IntegerLiteral 0x7fe8dc827d18 <col:13> 'int' 0
+|   |       |-IntegerLiteral 0x7fe8dc827d38 <col:16> 'int' 0
+|   |       |-IntegerLiteral 0x7fe8dc827d58 <col:19> 'int' 0
+|   |       |-IntegerLiteral 0x7fe8dc827d78 <col:22> 'int' 0
+|   |       |-IntegerLiteral 0x7fe8dc827d98 <col:25> 'int' 0
+|   |       |-IntegerLiteral 0x7fe8dc827db8 <col:28> 'int' 0
+|   |       |-IntegerLiteral 0x7fe8dc827dd8 <col:31> 'int' 0
+|   |       |-IntegerLiteral 0x7fe8dc827df8 <col:34> 'int' 0
+|   |       |-ImplicitCastExpr 0x7fe8dc828038 <col:37> 'long' <IntegralCast>
+|   |       | `-IntegerLiteral 0x7fe8dc827e18 <col:37> 'int' 0
+|   |       |-ImplicitCastExpr 0x7fe8dc828050 <col:40> 'long' <IntegralCast>
+|   |       | `-IntegerLiteral 0x7fe8dc827e38 <col:40> 'int' 0
+|   |       `-IntegerLiteral 0x7fe8dc827e58 <col:43> 'int' 0
+|   `-CallExpr 0x7fe8dc828108 <line:31:3, col:11> 'void'
+|     |-ImplicitCastExpr 0x7fe8dc8280f0 <col:3> 'void (*)(T *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe8dc828080 <col:3> 'void (T *)' Function 0x7fe8dc826380 'test' 'void (T *)'
+|     `-UnaryOperator 0x7fe8dc8280d0 <col:9, col:10> 'T *' prefix '&'
+|       `-DeclRefExpr 0x7fe8dc8280a8 <col:10> 'T':'T' lvalue Var 0x7fe8dc827cb8 't' 'T':'T'
+|-FunctionDecl 0x7fe8dc8281f0 <line:34:1, line:40:1> line:35:1 baz1 'void (void)'
+| `-CompoundStmt 0x7fe8dc8287b8 <line:36:1, line:40:1>
+|   |-DeclStmt 0x7fe8dc8282f8 <line:37:3, col:6>
+|   | `-VarDecl 0x7fe8dc828298 <col:3, col:5> col:5 used t 'T':'T'
+|   |-BinaryOperator 0x7fe8dc8286d8 <line:38:3, col:55> 'T':'T' '='
+|   | |-DeclRefExpr 0x7fe8dc828310 <col:3> 'T':'T' lvalue Var 0x7fe8dc828298 't' 'T':'T'
+|   | `-ImplicitCastExpr 0x7fe8dc8286c0 <col:7, col:55> 'T':'T' <LValueToRValue>
+|   |   `-CompoundLiteralExpr 0x7fe8dc828698 <col:7, col:55> 'const T':'const T' lvalue
+|   |     `-InitListExpr 0x7fe8dc828588 <col:17, col:55> 'T':'T' field Field 0x7fe8dc825f20 'f' 'struct (anonymous struct at c_files/pr33723.c:7:3)':'struct T::(anonymous at c_files/pr33723.c:7:3)'
+|   |       `-InitListExpr 0x7fe8dc8285d0 <col:19, col:53> 'struct (anonymous struct at c_files/pr33723.c:7:3)':'struct T::(anonymous at c_files/pr33723.c:7:3)'
+|   |         |-IntegerLiteral 0x7fe8dc828348 <col:21> 'int' 0
+|   |         |-IntegerLiteral 0x7fe8dc828368 <col:24> 'int' 0
+|   |         |-IntegerLiteral 0x7fe8dc828388 <col:27> 'int' 0
+|   |         |-IntegerLiteral 0x7fe8dc8283a8 <col:30> 'int' 0
+|   |         |-IntegerLiteral 0x7fe8dc8283c8 <col:33> 'int' 0
+|   |         |-IntegerLiteral 0x7fe8dc8283e8 <col:36> 'int' 0
+|   |         |-IntegerLiteral 0x7fe8dc828408 <col:39> 'int' 0
+|   |         |-IntegerLiteral 0x7fe8dc828428 <col:42> 'int' 0
+|   |         |-ImplicitCastExpr 0x7fe8dc828668 <col:45> 'long' <IntegralCast>
+|   |         | `-IntegerLiteral 0x7fe8dc828448 <col:45> 'int' 0
+|   |         |-ImplicitCastExpr 0x7fe8dc828680 <col:48> 'long' <IntegralCast>
+|   |         | `-IntegerLiteral 0x7fe8dc828468 <col:48> 'int' 0
+|   |         `-IntegerLiteral 0x7fe8dc828488 <col:51> 'int' 0
+|   `-CallExpr 0x7fe8dc828788 <line:39:3, col:11> 'void'
+|     |-ImplicitCastExpr 0x7fe8dc828770 <col:3> 'void (*)(T *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe8dc828700 <col:3> 'void (T *)' Function 0x7fe8dc826380 'test' 'void (T *)'
+|     `-UnaryOperator 0x7fe8dc828750 <col:9, col:10> 'T *' prefix '&'
+|       `-DeclRefExpr 0x7fe8dc828728 <col:10> 'T':'T' lvalue Var 0x7fe8dc828298 't' 'T':'T'
+|-FunctionDecl 0x7fe8dc828878 <line:42:1, line:48:1> line:43:1 foo2 'void (void)'
+| `-CompoundStmt 0x7fe8dc828e50 <line:44:1, line:48:1>
+|   |-DeclStmt 0x7fe8dc828980 <line:45:3, col:6>
+|   | `-VarDecl 0x7fe8dc828920 <col:3, col:5> col:5 used t 'T':'T'
+|   |-BinaryOperator 0x7fe8dc828d70 <line:46:3, col:51> 'T':'T' '='
+|   | |-DeclRefExpr 0x7fe8dc828998 <col:3> 'T':'T' lvalue Var 0x7fe8dc828920 't' 'T':'T'
+|   | `-ImplicitCastExpr 0x7fe8dc828d58 <col:7, col:51> 'T':'T' <LValueToRValue>
+|   |   `-CompoundLiteralExpr 0x7fe8dc828d30 <col:7, col:51> 'T':'T' lvalue
+|   |     `-InitListExpr 0x7fe8dc828c20 <col:11, col:51> 'T':'T' field Field 0x7fe8dc825f20 'f' 'struct (anonymous struct at c_files/pr33723.c:7:3)':'struct T::(anonymous at c_files/pr33723.c:7:3)'
+|   |       `-InitListExpr 0x7fe8dc828c68 <col:13, col:49> 'struct (anonymous struct at c_files/pr33723.c:7:3)':'struct T::(anonymous at c_files/pr33723.c:7:3)'
+|   |         |-IntegerLiteral 0x7fe8dc8289d0 <col:15> 'int' 1
+|   |         |-IntegerLiteral 0x7fe8dc828a00 <col:18> 'int' 2
+|   |         |-IntegerLiteral 0x7fe8dc828a20 <col:21> 'int' 3
+|   |         |-IntegerLiteral 0x7fe8dc828a40 <col:24> 'int' 4
+|   |         |-IntegerLiteral 0x7fe8dc828a60 <col:27> 'int' 5
+|   |         |-IntegerLiteral 0x7fe8dc828a80 <col:30> 'int' 6
+|   |         |-IntegerLiteral 0x7fe8dc828aa0 <col:33> 'int' 7
+|   |         |-IntegerLiteral 0x7fe8dc828ac0 <col:36> 'int' 8
+|   |         |-ImplicitCastExpr 0x7fe8dc828d00 <col:39> 'long' <IntegralCast>
+|   |         | `-IntegerLiteral 0x7fe8dc828ae0 <col:39> 'int' 9
+|   |         |-ImplicitCastExpr 0x7fe8dc828d18 <col:42> 'long' <IntegralCast>
+|   |         | `-IntegerLiteral 0x7fe8dc828b00 <col:42> 'int' 10
+|   |         `-IntegerLiteral 0x7fe8dc828b20 <col:46> 'int' 11
+|   `-CallExpr 0x7fe8dc828e20 <line:47:3, col:11> 'void'
+|     |-ImplicitCastExpr 0x7fe8dc828e08 <col:3> 'void (*)(T *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe8dc828d98 <col:3> 'void (T *)' Function 0x7fe8dc826380 'test' 'void (T *)'
+|     `-UnaryOperator 0x7fe8dc828de8 <col:9, col:10> 'T *' prefix '&'
+|       `-DeclRefExpr 0x7fe8dc828dc0 <col:10> 'T':'T' lvalue Var 0x7fe8dc828920 't' 'T':'T'
+|-FunctionDecl 0x7fe8dc828f10 <line:50:1, line:55:1> line:51:1 bar2 'void (void)'
+| `-CompoundStmt 0x7fe8dc829438 <line:52:1, line:55:1>
+|   |-DeclStmt 0x7fe8dc829368 <line:53:3, col:50>
+|   | `-VarDecl 0x7fe8dc828fb8 <col:3, col:49> col:5 used t 'T':'T' cinit
+|   |   `-InitListExpr 0x7fe8dc829258 <col:9, col:49> 'T':'T' field Field 0x7fe8dc825f20 'f' 'struct (anonymous struct at c_files/pr33723.c:7:3)':'struct T::(anonymous at c_files/pr33723.c:7:3)'
+|   |     `-InitListExpr 0x7fe8dc8292a0 <col:11, col:47> 'struct (anonymous struct at c_files/pr33723.c:7:3)':'struct T::(anonymous at c_files/pr33723.c:7:3)'
+|   |       |-IntegerLiteral 0x7fe8dc829018 <col:13> 'int' 1
+|   |       |-IntegerLiteral 0x7fe8dc829038 <col:16> 'int' 2
+|   |       |-IntegerLiteral 0x7fe8dc829058 <col:19> 'int' 3
+|   |       |-IntegerLiteral 0x7fe8dc829078 <col:22> 'int' 4
+|   |       |-IntegerLiteral 0x7fe8dc829098 <col:25> 'int' 5
+|   |       |-IntegerLiteral 0x7fe8dc8290b8 <col:28> 'int' 6
+|   |       |-IntegerLiteral 0x7fe8dc8290d8 <col:31> 'int' 7
+|   |       |-IntegerLiteral 0x7fe8dc8290f8 <col:34> 'int' 8
+|   |       |-ImplicitCastExpr 0x7fe8dc829338 <col:37> 'long' <IntegralCast>
+|   |       | `-IntegerLiteral 0x7fe8dc829118 <col:37> 'int' 9
+|   |       |-ImplicitCastExpr 0x7fe8dc829350 <col:40> 'long' <IntegralCast>
+|   |       | `-IntegerLiteral 0x7fe8dc829138 <col:40> 'int' 10
+|   |       `-IntegerLiteral 0x7fe8dc829158 <col:44> 'int' 11
+|   `-CallExpr 0x7fe8dc829408 <line:54:3, col:11> 'void'
+|     |-ImplicitCastExpr 0x7fe8dc8293f0 <col:3> 'void (*)(T *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe8dc829380 <col:3> 'void (T *)' Function 0x7fe8dc826380 'test' 'void (T *)'
+|     `-UnaryOperator 0x7fe8dc8293d0 <col:9, col:10> 'T *' prefix '&'
+|       `-DeclRefExpr 0x7fe8dc8293a8 <col:10> 'T':'T' lvalue Var 0x7fe8dc828fb8 't' 'T':'T'
+|-FunctionDecl 0x7fe8dc8294f0 <line:57:1, line:63:1> line:58:1 baz2 'void (void)'
+| `-CompoundStmt 0x7fe8dc829ab8 <line:59:1, line:63:1>
+|   |-DeclStmt 0x7fe8dc8295f8 <line:60:3, col:6>
+|   | `-VarDecl 0x7fe8dc829598 <col:3, col:5> col:5 used t 'T':'T'
+|   |-BinaryOperator 0x7fe8dc8299d8 <line:61:3, col:57> 'T':'T' '='
+|   | |-DeclRefExpr 0x7fe8dc829610 <col:3> 'T':'T' lvalue Var 0x7fe8dc829598 't' 'T':'T'
+|   | `-ImplicitCastExpr 0x7fe8dc8299c0 <col:7, col:57> 'T':'T' <LValueToRValue>
+|   |   `-CompoundLiteralExpr 0x7fe8dc829998 <col:7, col:57> 'const T':'const T' lvalue
+|   |     `-InitListExpr 0x7fe8dc829888 <col:17, col:57> 'T':'T' field Field 0x7fe8dc825f20 'f' 'struct (anonymous struct at c_files/pr33723.c:7:3)':'struct T::(anonymous at c_files/pr33723.c:7:3)'
+|   |       `-InitListExpr 0x7fe8dc8298d0 <col:19, col:55> 'struct (anonymous struct at c_files/pr33723.c:7:3)':'struct T::(anonymous at c_files/pr33723.c:7:3)'
+|   |         |-IntegerLiteral 0x7fe8dc829648 <col:21> 'int' 1
+|   |         |-IntegerLiteral 0x7fe8dc829668 <col:24> 'int' 2
+|   |         |-IntegerLiteral 0x7fe8dc829688 <col:27> 'int' 3
+|   |         |-IntegerLiteral 0x7fe8dc8296a8 <col:30> 'int' 4
+|   |         |-IntegerLiteral 0x7fe8dc8296c8 <col:33> 'int' 5
+|   |         |-IntegerLiteral 0x7fe8dc8296e8 <col:36> 'int' 6
+|   |         |-IntegerLiteral 0x7fe8dc829708 <col:39> 'int' 7
+|   |         |-IntegerLiteral 0x7fe8dc829728 <col:42> 'int' 8
+|   |         |-ImplicitCastExpr 0x7fe8dc829968 <col:45> 'long' <IntegralCast>
+|   |         | `-IntegerLiteral 0x7fe8dc829748 <col:45> 'int' 9
+|   |         |-ImplicitCastExpr 0x7fe8dc829980 <col:48> 'long' <IntegralCast>
+|   |         | `-IntegerLiteral 0x7fe8dc829768 <col:48> 'int' 10
+|   |         `-IntegerLiteral 0x7fe8dc829788 <col:52> 'int' 11
+|   `-CallExpr 0x7fe8dc829a88 <line:62:3, col:11> 'void'
+|     |-ImplicitCastExpr 0x7fe8dc829a70 <col:3> 'void (*)(T *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe8dc829a00 <col:3> 'void (T *)' Function 0x7fe8dc826380 'test' 'void (T *)'
+|     `-UnaryOperator 0x7fe8dc829a50 <col:9, col:10> 'T *' prefix '&'
+|       `-DeclRefExpr 0x7fe8dc829a28 <col:10> 'T':'T' lvalue Var 0x7fe8dc829598 't' 'T':'T'
+`-FunctionDecl 0x7fe8dc829b78 <line:65:1, line:71:1> line:66:1 baz3 'void (void)'
+  `-CompoundStmt 0x7fe8dc82a178 <line:67:1, line:71:1>
+    |-DeclStmt 0x7fe8dc829c80 <line:68:3, col:6>
+    | `-VarDecl 0x7fe8dc829c20 <col:3, col:5> col:5 used t 'T':'T'
+    |-BinaryOperator 0x7fe8dc82a098 <line:69:3, col:61> 'T':'T' '='
+    | |-DeclRefExpr 0x7fe8dc829c98 <col:3> 'T':'T' lvalue Var 0x7fe8dc829c20 't' 'T':'T'
+    | `-CStyleCastExpr 0x7fe8dc82a070 <col:7, col:61> 'T':'T' <NoOp>
+    |   `-ImplicitCastExpr 0x7fe8dc82a058 <col:17, col:61> 'T':'T' <LValueToRValue>
+    |     `-CompoundLiteralExpr 0x7fe8dc82a020 <col:17, col:61> 'T':'T' lvalue
+    |       `-InitListExpr 0x7fe8dc829f10 <col:21, col:61> 'T':'T' field Field 0x7fe8dc825f20 'f' 'struct (anonymous struct at c_files/pr33723.c:7:3)':'struct T::(anonymous at c_files/pr33723.c:7:3)'
+    |         `-InitListExpr 0x7fe8dc829f58 <col:23, col:59> 'struct (anonymous struct at c_files/pr33723.c:7:3)':'struct T::(anonymous at c_files/pr33723.c:7:3)'
+    |           |-IntegerLiteral 0x7fe8dc829cd0 <col:25> 'int' 1
+    |           |-IntegerLiteral 0x7fe8dc829cf0 <col:28> 'int' 2
+    |           |-IntegerLiteral 0x7fe8dc829d10 <col:31> 'int' 3
+    |           |-IntegerLiteral 0x7fe8dc829d30 <col:34> 'int' 4
+    |           |-IntegerLiteral 0x7fe8dc829d50 <col:37> 'int' 5
+    |           |-IntegerLiteral 0x7fe8dc829d70 <col:40> 'int' 6
+    |           |-IntegerLiteral 0x7fe8dc829d90 <col:43> 'int' 7
+    |           |-IntegerLiteral 0x7fe8dc829db0 <col:46> 'int' 8
+    |           |-ImplicitCastExpr 0x7fe8dc829ff0 <col:49> 'long' <IntegralCast>
+    |           | `-IntegerLiteral 0x7fe8dc829dd0 <col:49> 'int' 9
+    |           |-ImplicitCastExpr 0x7fe8dc82a008 <col:52> 'long' <IntegralCast>
+    |           | `-IntegerLiteral 0x7fe8dc829df0 <col:52> 'int' 10
+    |           `-IntegerLiteral 0x7fe8dc829e10 <col:56> 'int' 11
+    `-CallExpr 0x7fe8dc82a148 <line:70:3, col:11> 'void'
+      |-ImplicitCastExpr 0x7fe8dc82a130 <col:3> 'void (*)(T *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe8dc82a0c0 <col:3> 'void (T *)' Function 0x7fe8dc826380 'test' 'void (T *)'
+      `-UnaryOperator 0x7fe8dc82a110 <col:9, col:10> 'T *' prefix '&'
+        `-DeclRefExpr 0x7fe8dc82a0e8 <col:10> 'T':'T' lvalue Var 0x7fe8dc829c20 't' 'T':'T'

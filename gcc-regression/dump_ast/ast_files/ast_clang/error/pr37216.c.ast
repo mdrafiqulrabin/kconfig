@@ -1,0 +1,45 @@
+c_files/pr37216.c:6:10: fatal error: 'sse2-check.h' file not found
+#include "sse2-check.h"
+         ^~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fd88c0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd88c026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd88c026740 '__int128'
+|-TypedefDecl 0x7fd88c026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd88c026760 'unsigned __int128'
+|-TypedefDecl 0x7fd88c026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd88c026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd88c026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd88c026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd88c026dc0 'char *'
+|   `-BuiltinType 0x7fd88c026560 'char'
+|-TypedefDecl 0x7fd88c0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd88c027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd88c026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd88c026e58 '__va_list_tag'
+|-VarDecl 0x7fd88c0271a0 <c_files/pr37216.c:8:1, col:12> col:5 used iarr 'int [64]'
+|-VarDecl 0x7fd88c078458 <line:9:1, col:12> col:5 iint 'int' cinit
+| `-IntegerLiteral 0x7fd88c0784b8 <col:12> 'int' 0
+`-FunctionDecl 0x7fd88c0785a0 <line:11:1, line:18:1> line:12:1 sse2_test 'void (void)'
+  `-CompoundStmt 0x7fd88c078980 <line:13:1, line:18:1>
+    |-DeclStmt 0x7fd88c0786b0 <line:14:3, col:8>
+    | `-VarDecl 0x7fd88c078650 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fd88c078948 <line:16:3, line:17:16>
+      |-BinaryOperator 0x7fd88c078710 <line:16:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fd88c0786c8 <col:8> 'int' lvalue Var 0x7fd88c078650 'i' 'int'
+      | `-IntegerLiteral 0x7fd88c0786f0 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd88c078798 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fd88c078780 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd88c078738 <col:15> 'int' lvalue Var 0x7fd88c078650 'i' 'int'
+      | `-IntegerLiteral 0x7fd88c078760 <col:19> 'int' 64
+      |-UnaryOperator 0x7fd88c0787e8 <col:23, col:24> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fd88c0787c0 <col:23> 'int' lvalue Var 0x7fd88c078650 'i' 'int'
+      `-BinaryOperator 0x7fd88c078920 <line:17:5, col:16> 'int' '='
+        |-ArraySubscriptExpr 0x7fd88c0788b8 <col:5, col:11> 'int' lvalue
+        | |-ImplicitCastExpr 0x7fd88c078888 <col:5> 'int *' <ArrayToPointerDecay>
+        | | `-DeclRefExpr 0x7fd88c078808 <col:5> 'int [64]' lvalue Var 0x7fd88c0271a0 'iarr' 'int [64]'
+        | `-ImplicitCastExpr 0x7fd88c0788a0 <col:10> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fd88c078830 <col:10> 'int' lvalue Var 0x7fd88c078650 'i' 'int'
+        `-UnaryOperator 0x7fd88c078900 <col:15, col:16> 'int' prefix '-'
+          `-IntegerLiteral 0x7fd88c0788e0 <col:16> 'int' 2

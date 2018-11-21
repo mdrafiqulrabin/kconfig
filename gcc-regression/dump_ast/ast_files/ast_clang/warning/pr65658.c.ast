@@ -1,0 +1,386 @@
+c_files/pr65658.c:35:7: warning: implicit declaration of function 'external_function5' is invalid in C99 [-Wimplicit-function-declaration]
+      external_function5 (((void *) 0), 0, (void *) &foo);
+      ^
+c_files/pr65658.c:37:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr65658.c:45:7: warning: implicit declaration of function 'fn10' is invalid in C99 [-Wimplicit-function-declaration]
+  if (fn10 ())
+      ^
+c_files/pr65658.c:49:13: warning: implicit declaration of function 'external_function1' is invalid in C99 [-Wimplicit-function-declaration]
+      ret = external_function1 (3 + u * 10, 10);
+            ^
+c_files/pr65658.c:52:7: warning: implicit declaration of function 'external_function6' is invalid in C99 [-Wimplicit-function-declaration]
+      external_function6 (0, 0, 0, problemp + problem);
+      ^
+c_files/pr65658.c:55:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr65658.c:61:7: warning: implicit declaration of function 'external_function3' is invalid in C99 [-Wimplicit-function-declaration]
+  if (external_function3 (((void *) 0), ((void *) 0), &amt, 0, 0))
+      ^
+c_files/pr65658.c:75:7: warning: implicit declaration of function 'fn2' is invalid in C99 [-Wimplicit-function-declaration]
+  if (fn2 ())
+      ^
+c_files/pr65658.c:77:7: warning: implicit declaration of function 'fn4' is invalid in C99 [-Wimplicit-function-declaration]
+  if (fn4 (101))
+      ^
+c_files/pr65658.c:81:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr65658.c:87:7: warning: implicit declaration of function 'external_function' is invalid in C99 [-Wimplicit-function-declaration]
+  if (external_function (1))
+      ^
+c_files/pr65658.c:94:4: warning: implicit declaration of function 'getopt_long' is invalid in C99 [-Wimplicit-function-declaration]
+          getopt_long (argc, argv, ((void *) 0), ((void *) 0),
+          ^
+12 warnings generated.
+TranslationUnitDecl 0x7f82030264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8203026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8203026740 '__int128'
+|-TypedefDecl 0x7f8203026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8203026760 'unsigned __int128'
+|-TypedefDecl 0x7f8203026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8203026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8203026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8203026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8203026dc0 'char *'
+|   `-BuiltinType 0x7f8203026560 'char'
+|-TypedefDecl 0x7f82030270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8203027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8203026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8203026e58 '__va_list_tag'
+|-VarDecl 0x7f8203027138 <c_files/pr65658.c:5:1, col:12> col:12 used optind 'int' extern
+|-RecordDecl 0x7f8203077e00 <line:6:1, line:10:1> line:6:8 struct undefinfo definition
+| |-FieldDecl 0x7f8203077ec8 <line:8:3, col:17> col:17 referenced l1 'unsigned long'
+| `-FieldDecl 0x7f8203077f28 <line:9:3, col:17> col:17 referenced l2 'unsigned long'
+|-RecordDecl 0x7f8203077f70 <line:11:1, line:16:1> line:11:8 struct undeffoo definition
+| |-FieldDecl 0x7f8203078098 <line:13:3, col:12> col:8 a 'char [64]'
+| |-FieldDecl 0x7f8203078160 <line:14:3, col:11> col:8 b 'long [4]'
+| `-FieldDecl 0x7f8203078230 <line:15:3, col:11> col:7 c 'int [33]'
+|-RecordDecl 0x7f8203078278 <line:17:1, line:23:1> line:17:8 struct problem definition
+| |-FieldDecl 0x7f8203078338 <line:19:3, col:17> col:17 referenced l1 'unsigned long'
+| |-FieldDecl 0x7f8203078398 <line:20:3, col:17> col:17 l2 'unsigned long'
+| |-FieldDecl 0x7f82030783f8 <line:21:3, col:17> col:17 referenced l3 'unsigned long'
+| `-FieldDecl 0x7f8203078458 <line:22:3, col:17> col:17 referenced l4 'unsigned long'
+|-VarDecl 0x7f82030784b8 <line:24:1, col:21> col:21 undef1 'unsigned int' static
+|-VarDecl 0x7f8203078530 <col:1, col:29> col:29 undef2 'unsigned int' static
+|-VarDecl 0x7f82030785a8 <col:1, col:37> col:37 undef3 'unsigned int' static
+|-VarDecl 0x7f8203078620 <col:1, col:45> col:45 undef4 'unsigned int' static
+|-VarDecl 0x7f8203078698 <col:1, col:53> col:53 undef5 'unsigned int' static
+|-VarDecl 0x7f8203078710 <col:1, col:61> col:61 used undef6 'unsigned int' static
+|-VarDecl 0x7f82030787c0 <line:25:1, col:14> col:14 used undefvp1 'void *' static
+|-VarDecl 0x7f8203078870 <line:26:1, col:25> col:25 used undefinfo 'struct undefinfo':'struct undefinfo' extern
+|-FunctionDecl 0x7f8203078998 <line:27:1, line:37:1> line:28:1 used undefinit1 'int (void)' static
+| `-CompoundStmt 0x7f820307e290 <line:29:1, line:37:1>
+|   |-DeclStmt 0x7f8203078ae0 <line:30:3, col:22>
+|   | `-VarDecl 0x7f8203078a80 <col:3, col:19> col:19 used foo 'struct undeffoo':'struct undeffoo'
+|   |-DeclStmt 0x7f8203078b70 <line:31:3, col:8>
+|   | `-VarDecl 0x7f8203078b10 <col:3, col:7> col:7 used i 'int'
+|   `-ForStmt 0x7f820307e258 <line:32:3, line:36:5>
+|     |-BinaryOperator 0x7f8203078bd0 <line:32:8, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7f8203078b88 <col:8> 'int' lvalue Var 0x7f8203078b10 'i' 'int'
+|     | `-IntegerLiteral 0x7f8203078bb0 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f8203078c58 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f8203078c40 <col:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f8203078bf8 <col:15> 'int' lvalue Var 0x7f8203078b10 'i' 'int'
+|     | `-IntegerLiteral 0x7f8203078c20 <col:19> 'int' 2000
+|     |-UnaryOperator 0x7f8203078ca8 <col:25, col:26> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7f8203078c80 <col:25> 'int' lvalue Var 0x7f8203078b10 'i' 'int'
+|     `-CompoundStmt 0x7f820307e230 <line:33:5, line:36:5>
+|       |-UnaryOperator 0x7f8203078cf0 <line:34:7, col:13> 'unsigned int' postfix '++'
+|       | `-DeclRefExpr 0x7f8203078cc8 <col:7> 'unsigned int' lvalue Var 0x7f8203078710 'undef6' 'unsigned int'
+|       `-CallExpr 0x7f820307e1f0 <line:35:7, col:57> 'int'
+|         |-ImplicitCastExpr 0x7f820307e1d8 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7f820307e000 <col:7> 'int ()' Function 0x7f8203078d60 'external_function5' 'int ()'
+|         |-ParenExpr 0x7f820307e088 <col:27, col:38> 'void *'
+|         | `-CStyleCastExpr 0x7f820307e060 <col:28, col:37> 'void *' <NullToPointer>
+|         |   `-IntegerLiteral 0x7f820307e028 <col:37> 'int' 0
+|         |-IntegerLiteral 0x7f820307e0a8 <col:41> 'int' 0
+|         `-CStyleCastExpr 0x7f820307e180 <col:44, col:54> 'void *' <BitCast>
+|           `-UnaryOperator 0x7f820307e148 <col:53, col:54> 'struct undeffoo *' prefix '&'
+|             `-DeclRefExpr 0x7f820307e0c8 <col:54> 'struct undeffoo':'struct undeffoo' lvalue Var 0x7f8203078a80 'foo' 'struct undeffoo':'struct undeffoo'
+|-FunctionDecl 0x7f8203078d60 <<invalid sloc>> col:7 implicit used external_function5 'int ()'
+|-FunctionDecl 0x7f820307e428 <line:39:1, line:55:1> line:40:1 used undefinit2 'int (void *, unsigned long)' static
+| |-ParmVarDecl 0x7f820307e2d8 <col:13, col:19> col:19 used problemp 'void *'
+| |-ParmVarDecl 0x7f820307e350 <col:29, col:43> col:43 used problem 'unsigned long'
+| `-CompoundStmt 0x7f8203080058 <line:41:1, line:55:1>
+|   |-DeclStmt 0x7f820307e5d8 <line:42:3, col:13>
+|   | |-VarDecl 0x7f820307e4e8 <col:3, col:7> col:7 used ret 'int'
+|   | `-VarDecl 0x7f820307e560 <col:3, col:12> col:12 used u 'int'
+|   |-IfStmt 0x7f820307e6c0 <line:43:3, line:44:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f820307e660 <line:43:7, col:19> 'int'
+|   | | `-ImplicitCastExpr 0x7f820307e648 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f820307e5f0 <col:7> 'int (void)' Function 0x7f8203078998 'undefinit1' 'int (void)'
+|   | |-ReturnStmt 0x7f820307e6a8 <line:44:5, col:12>
+|   | | `-IntegerLiteral 0x7f820307e688 <col:12> 'int' 1
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f820307e858 <line:45:3, line:46:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f820307e7f8 <line:45:7, col:13> 'int'
+|   | | `-ImplicitCastExpr 0x7f820307e7e0 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f820307e7b8 <col:7> 'int ()' Function 0x7f820307e720 'fn10' 'int ()'
+|   | |-ReturnStmt 0x7f820307e840 <line:46:5, col:12>
+|   | | `-IntegerLiteral 0x7f820307e820 <col:12> 'int' 1
+|   | `-<<<NULL>>>
+|   `-ForStmt 0x7f8203080020 <line:47:3, line:54:5>
+|     |-BinaryOperator 0x7f820307e8d8 <line:47:8, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7f820307e890 <col:8> 'int' lvalue Var 0x7f820307e560 'u' 'int'
+|     | `-IntegerLiteral 0x7f820307e8b8 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f820307e998 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f820307e980 <col:15> 'unsigned int' <IntegralCast>
+|     | | `-ImplicitCastExpr 0x7f820307e950 <col:15> 'int' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7f820307e900 <col:15> 'int' lvalue Var 0x7f820307e560 'u' 'int'
+|     | `-ImplicitCastExpr 0x7f820307e968 <col:19> 'unsigned int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f820307e928 <col:19> 'unsigned int' lvalue Var 0x7f8203078710 'undef6' 'unsigned int'
+|     |-UnaryOperator 0x7f820307e9e8 <col:27, col:28> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7f820307e9c0 <col:27> 'int' lvalue Var 0x7f820307e560 'u' 'int'
+|     `-CompoundStmt 0x7f820307efd8 <line:48:5, line:54:5>
+|       |-BinaryOperator 0x7f820307ec58 <line:49:7, col:47> 'int' '='
+|       | |-DeclRefExpr 0x7f820307ea08 <col:7> 'int' lvalue Var 0x7f820307e4e8 'ret' 'int'
+|       | `-CallExpr 0x7f820307ec20 <col:13, col:47> 'int'
+|       |   |-ImplicitCastExpr 0x7f820307ec08 <col:13> 'int (*)()' <FunctionToPointerDecay>
+|       |   | `-DeclRefExpr 0x7f820307eaf0 <col:13> 'int ()' Function 0x7f820307ea58 'external_function1' 'int ()'
+|       |   |-BinaryOperator 0x7f820307ebc0 <col:33, col:41> 'int' '+'
+|       |   | |-IntegerLiteral 0x7f820307eb18 <col:33> 'int' 3
+|       |   | `-BinaryOperator 0x7f820307eb98 <col:37, col:41> 'int' '*'
+|       |   |   |-ImplicitCastExpr 0x7f820307eb80 <col:37> 'int' <LValueToRValue>
+|       |   |   | `-DeclRefExpr 0x7f820307eb38 <col:37> 'int' lvalue Var 0x7f820307e560 'u' 'int'
+|       |   |   `-IntegerLiteral 0x7f820307eb60 <col:41> 'int' 10
+|       |   `-IntegerLiteral 0x7f820307ebe8 <col:45> 'int' 10
+|       |-IfStmt 0x7f820307ed18 <line:50:7, line:51:9>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-ImplicitCastExpr 0x7f820307eca8 <line:50:11> 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7f820307ec80 <col:11> 'int' lvalue Var 0x7f820307e4e8 'ret' 'int'
+|       | |-ReturnStmt 0x7f820307ed00 <line:51:2, col:9>
+|       | | `-ImplicitCastExpr 0x7f820307ece8 <col:9> 'int' <LValueToRValue>
+|       | |   `-DeclRefExpr 0x7f820307ecc0 <col:9> 'int' lvalue Var 0x7f820307e4e8 'ret' 'int'
+|       | `-<<<NULL>>>
+|       |-CallExpr 0x7f820307ef58 <line:52:7, col:54> 'int'
+|       | |-ImplicitCastExpr 0x7f820307ef40 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|       | | `-DeclRefExpr 0x7f820307ee10 <col:7> 'int ()' Function 0x7f820307ed78 'external_function6' 'int ()'
+|       | |-IntegerLiteral 0x7f820307ee38 <col:27> 'int' 0
+|       | |-IntegerLiteral 0x7f820307ee58 <col:30> 'int' 0
+|       | |-IntegerLiteral 0x7f820307ee78 <col:33> 'int' 0
+|       | `-BinaryOperator 0x7f820307ef18 <col:36, col:47> 'void *' '+'
+|       |   |-ImplicitCastExpr 0x7f820307eee8 <col:36> 'void *' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7f820307ee98 <col:36> 'void *' lvalue ParmVar 0x7f820307e2d8 'problemp' 'void *'
+|       |   `-ImplicitCastExpr 0x7f820307ef00 <col:47> 'unsigned long' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7f820307eec0 <col:47> 'unsigned long' lvalue ParmVar 0x7f820307e350 'problem' 'unsigned long'
+|       `-ReturnStmt 0x7f820307efc0 <line:53:7, col:14>
+|         `-IntegerLiteral 0x7f820307efa0 <col:14> 'int' 1
+|-FunctionDecl 0x7f820307e720 <<invalid sloc>> line:45:7 implicit used fn10 'int ()'
+|-FunctionDecl 0x7f820307ea58 <<invalid sloc>> line:49:13 implicit used external_function1 'int ()'
+|-FunctionDecl 0x7f820307ed78 <<invalid sloc>> line:52:7 implicit used external_function6 'int ()'
+|-FunctionDecl 0x7f8203080338 <line:57:1, line:67:1> line:58:1 used fn6 'int (struct undefinfo *, struct problem *)' static
+| |-ParmVarDecl 0x7f8203080110 <col:6, col:24> col:24 used uip 'struct undefinfo *'
+| |-ParmVarDecl 0x7f8203080220 <col:29, col:45> col:45 used problem 'struct problem *'
+| `-CompoundStmt 0x7f8203080b98 <line:59:1, line:67:1>
+|   |-DeclStmt 0x7f8203080458 <line:60:3, col:20>
+|   | `-VarDecl 0x7f82030803f8 <col:3, col:17> col:17 used amt 'unsigned long'
+|   |-IfStmt 0x7f82030807a8 <line:61:3, line:62:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8203080720 <line:61:7, col:65> 'int'
+|   | | |-ImplicitCastExpr 0x7f8203080708 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8203080530 <col:7> 'int ()' Function 0x7f8203080498 'external_function3' 'int ()'
+|   | | |-ParenExpr 0x7f82030805b8 <col:27, col:38> 'void *'
+|   | | | `-CStyleCastExpr 0x7f8203080590 <col:28, col:37> 'void *' <NullToPointer>
+|   | | |   `-IntegerLiteral 0x7f8203080558 <col:37> 'int' 0
+|   | | |-ParenExpr 0x7f8203080638 <col:41, col:52> 'void *'
+|   | | | `-CStyleCastExpr 0x7f8203080610 <col:42, col:51> 'void *' <NullToPointer>
+|   | | |   `-IntegerLiteral 0x7f82030805d8 <col:51> 'int' 0
+|   | | |-UnaryOperator 0x7f82030806a8 <col:55, col:56> 'unsigned long *' prefix '&'
+|   | | | `-DeclRefExpr 0x7f8203080658 <col:56> 'unsigned long' lvalue Var 0x7f82030803f8 'amt' 'unsigned long'
+|   | | |-IntegerLiteral 0x7f82030806c8 <col:61> 'int' 0
+|   | | `-IntegerLiteral 0x7f82030806e8 <col:64> 'int' 0
+|   | |-ReturnStmt 0x7f8203080790 <line:62:5, col:12>
+|   | | `-IntegerLiteral 0x7f8203080770 <col:12> 'int' 1
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f82030808d8 <line:63:3, col:33> 'unsigned long' '='
+|   | |-MemberExpr 0x7f8203080820 <col:3, col:12> 'unsigned long' lvalue ->l1 0x7f8203078338
+|   | | `-ImplicitCastExpr 0x7f8203080808 <col:3> 'struct problem *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f82030807e0 <col:3> 'struct problem *' lvalue ParmVar 0x7f8203080220 'problem' 'struct problem *'
+|   | `-CStyleCastExpr 0x7f82030808b0 <col:17, col:33> 'unsigned long' <PointerToIntegral>
+|   |   `-ImplicitCastExpr 0x7f8203080898 <col:33> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8203080858 <col:33> 'void *' lvalue Var 0x7f82030787c0 'undefvp1' 'void *'
+|   |-BinaryOperator 0x7f8203080a08 <line:64:3, col:22> 'unsigned long' '='
+|   | |-MemberExpr 0x7f8203080940 <col:3, col:12> 'unsigned long' lvalue ->l4 0x7f8203078458
+|   | | `-ImplicitCastExpr 0x7f8203080928 <col:3> 'struct problem *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8203080900 <col:3> 'struct problem *' lvalue ParmVar 0x7f8203080220 'problem' 'struct problem *'
+|   | `-ImplicitCastExpr 0x7f82030809f0 <col:17, col:22> 'unsigned long' <LValueToRValue>
+|   |   `-MemberExpr 0x7f82030809b8 <col:17, col:22> 'unsigned long' lvalue ->l1 0x7f8203077ec8
+|   |     `-ImplicitCastExpr 0x7f82030809a0 <col:17> 'struct undefinfo *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f8203080978 <col:17> 'struct undefinfo *' lvalue ParmVar 0x7f8203080110 'uip' 'struct undefinfo *'
+|   |-BinaryOperator 0x7f8203080b38 <line:65:3, col:22> 'unsigned long' '='
+|   | |-MemberExpr 0x7f8203080a70 <col:3, col:12> 'unsigned long' lvalue ->l3 0x7f82030783f8
+|   | | `-ImplicitCastExpr 0x7f8203080a58 <col:3> 'struct problem *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8203080a30 <col:3> 'struct problem *' lvalue ParmVar 0x7f8203080220 'problem' 'struct problem *'
+|   | `-ImplicitCastExpr 0x7f8203080b20 <col:17, col:22> 'unsigned long' <LValueToRValue>
+|   |   `-MemberExpr 0x7f8203080ae8 <col:17, col:22> 'unsigned long' lvalue ->l2 0x7f8203077f28
+|   |     `-ImplicitCastExpr 0x7f8203080ad0 <col:17> 'struct undefinfo *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f8203080aa8 <col:17> 'struct undefinfo *' lvalue ParmVar 0x7f8203080110 'uip' 'struct undefinfo *'
+|   `-ReturnStmt 0x7f8203080b80 <line:66:3, col:10>
+|     `-IntegerLiteral 0x7f8203080b60 <col:10> 'int' 0
+|-FunctionDecl 0x7f8203080498 <<invalid sloc>> line:61:7 implicit used external_function3 'int ()'
+|-FunctionDecl 0x7f8203080c78 <line:69:1, line:81:1> line:70:1 used setup 'int (void)' static
+| `-CompoundStmt 0x7f82030825d8 <line:71:1, line:81:1>
+|   |-DeclStmt 0x7f8203080d90 <line:72:3, col:25>
+|   | `-VarDecl 0x7f8203080d30 <col:3, col:18> col:18 used problem 'struct problem':'struct problem'
+|   |-IfStmt 0x7f8203080f40 <line:73:3, line:74:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8203080ed0 <line:73:7, col:32> 'int'
+|   | | |-ImplicitCastExpr 0x7f8203080eb8 <col:7> 'int (*)(struct undefinfo *, struct problem *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8203080da8 <col:7> 'int (struct undefinfo *, struct problem *)' Function 0x7f8203080338 'fn6' 'int (struct undefinfo *, struct problem *)'
+|   | | |-UnaryOperator 0x7f8203080df8 <col:12, col:13> 'struct undefinfo *' prefix '&'
+|   | | | `-DeclRefExpr 0x7f8203080dd0 <col:13> 'struct undefinfo':'struct undefinfo' lvalue Var 0x7f8203078870 'undefinfo' 'struct undefinfo':'struct undefinfo'
+|   | | `-UnaryOperator 0x7f8203080e40 <col:24, col:25> 'struct problem *' prefix '&'
+|   | |   `-DeclRefExpr 0x7f8203080e18 <col:25> 'struct problem':'struct problem' lvalue Var 0x7f8203080d30 'problem' 'struct problem':'struct problem'
+|   | |-ReturnStmt 0x7f8203080f28 <line:74:5, col:12>
+|   | | `-IntegerLiteral 0x7f8203080f08 <col:12> 'int' 1
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f8203082138 <line:75:3, line:76:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f82030820d8 <line:75:7, col:12> 'int'
+|   | | `-ImplicitCastExpr 0x7f82030820c0 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f8203082098 <col:7> 'int ()' Function 0x7f8203082000 'fn2' 'int ()'
+|   | |-ReturnStmt 0x7f8203082120 <line:76:5, col:12>
+|   | | `-IntegerLiteral 0x7f8203082100 <col:12> 'int' 1
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f82030822f8 <line:77:3, line:78:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8203082290 <line:77:7, col:15> 'int'
+|   | | |-ImplicitCastExpr 0x7f8203082278 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8203082230 <col:7> 'int ()' Function 0x7f8203082198 'fn4' 'int ()'
+|   | | `-IntegerLiteral 0x7f8203082258 <col:12> 'int' 101
+|   | |-ReturnStmt 0x7f82030822e0 <line:78:5, col:12>
+|   | | `-IntegerLiteral 0x7f82030822c0 <col:12> 'int' 1
+|   | `-<<<NULL>>>
+|   `-IfStmt 0x7f82030825a0 <line:79:3, line:80:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-CallExpr 0x7f8203082530 <line:79:7, col:54> 'int'
+|     | |-ImplicitCastExpr 0x7f8203082518 <col:7> 'int (*)(void *, unsigned long)' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7f8203082330 <col:7> 'int (void *, unsigned long)' Function 0x7f820307e428 'undefinit2' 'int (void *, unsigned long)'
+|     | |-CStyleCastExpr 0x7f82030823e8 <col:19, col:36> 'void *' <IntegralToPointer>
+|     | | `-ImplicitCastExpr 0x7f82030823d0 <col:28, col:36> 'unsigned long' <LValueToRValue>
+|     | |   `-MemberExpr 0x7f8203082380 <col:28, col:36> 'unsigned long' lvalue .l1 0x7f8203078338
+|     | |     `-DeclRefExpr 0x7f8203082358 <col:28> 'struct problem':'struct problem' lvalue Var 0x7f8203080d30 'problem' 'struct problem':'struct problem'
+|     | `-BinaryOperator 0x7f82030824c0 <col:40, col:53> 'unsigned long' '*'
+|     |   |-ImplicitCastExpr 0x7f8203082490 <col:40, col:48> 'unsigned long' <LValueToRValue>
+|     |   | `-MemberExpr 0x7f8203082438 <col:40, col:48> 'unsigned long' lvalue .l3 0x7f82030783f8
+|     |   |   `-DeclRefExpr 0x7f8203082410 <col:40> 'struct problem':'struct problem' lvalue Var 0x7f8203080d30 'problem' 'struct problem':'struct problem'
+|     |   `-ImplicitCastExpr 0x7f82030824a8 <col:53> 'unsigned long' <IntegralCast>
+|     |     `-IntegerLiteral 0x7f8203082470 <col:53> 'int' 4
+|     |-ReturnStmt 0x7f8203082588 <line:80:5, col:12>
+|     | `-IntegerLiteral 0x7f8203082568 <col:12> 'int' 1
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f8203082000 <<invalid sloc>> line:75:7 implicit used fn2 'int ()'
+|-FunctionDecl 0x7f8203082198 <<invalid sloc>> line:77:7 implicit used fn4 'int ()'
+|-FunctionDecl 0x7f82030827a8 <line:83:1, line:112:1> line:84:1 main 'int (int, char **)'
+| |-ParmVarDecl 0x7f8203082630 <col:7, col:11> col:11 used argc 'int'
+| |-ParmVarDecl 0x7f82030826d0 <col:17, col:24> col:24 used argv 'char **'
+| `-CompoundStmt 0x7f82030814e0 <line:85:1, line:112:1>
+|   |-DeclStmt 0x7f82030828c8 <line:86:3, col:11>
+|   | `-VarDecl 0x7f8203082868 <col:3, col:7> col:7 used optc 'int'
+|   |-IfStmt 0x7f8203082a68 <line:87:3, line:88:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8203082a00 <line:87:7, col:27> 'int'
+|   | | |-ImplicitCastExpr 0x7f82030829e8 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f82030829a0 <col:7> 'int ()' Function 0x7f8203082908 'external_function' 'int ()'
+|   | | `-IntegerLiteral 0x7f82030829c8 <col:26> 'int' 1
+|   | |-ReturnStmt 0x7f8203082a50 <line:88:5, col:12>
+|   | | `-IntegerLiteral 0x7f8203082a30 <col:12> 'int' 1
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f8203082b68 <line:89:3, line:90:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8203082b00 <line:89:7, col:27> 'int'
+|   | | |-ImplicitCastExpr 0x7f8203082ae8 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8203082aa0 <col:7> 'int ()' Function 0x7f8203082908 'external_function' 'int ()'
+|   | | `-IntegerLiteral 0x7f8203082ac8 <col:26> 'int' 1
+|   | |-ReturnStmt 0x7f8203082b50 <line:90:5, col:12>
+|   | | `-IntegerLiteral 0x7f8203082b30 <col:12> 'int' 1
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f8203082c68 <line:91:3, line:92:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8203082c00 <line:91:7, col:27> 'int'
+|   | | |-ImplicitCastExpr 0x7f8203082be8 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8203082ba0 <col:7> 'int ()' Function 0x7f8203082908 'external_function' 'int ()'
+|   | | `-IntegerLiteral 0x7f8203082bc8 <col:26> 'int' 1
+|   | |-ReturnStmt 0x7f8203082c50 <line:92:5, col:12>
+|   | | `-IntegerLiteral 0x7f8203082c30 <col:12> 'int' 1
+|   | `-<<<NULL>>>
+|   |-WhileStmt 0x7f8203081320 <line:93:3, line:106:5>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f82030810a0 <line:93:10, line:95:29> 'int' '!='
+|   | | |-ParenExpr 0x7f8203081040 <line:93:10, line:95:23> 'int'
+|   | | | `-BinaryOperator 0x7f8203081018 <line:93:11, line:95:22> 'int' '='
+|   | | |   |-DeclRefExpr 0x7f8203082ca0 <line:93:11> 'int' lvalue Var 0x7f8203082868 'optc' 'int'
+|   | | |   `-CallExpr 0x7f8203082f98 <line:94:4, line:95:22> 'int'
+|   | | |     |-ImplicitCastExpr 0x7f8203082f80 <line:94:4> 'int (*)()' <FunctionToPointerDecay>
+|   | | |     | `-DeclRefExpr 0x7f8203082d88 <col:4> 'int ()' Function 0x7f8203082cf0 'getopt_long' 'int ()'
+|   | | |     |-ImplicitCastExpr 0x7f8203082fe8 <col:17> 'int' <LValueToRValue>
+|   | | |     | `-DeclRefExpr 0x7f8203082db0 <col:17> 'int' lvalue ParmVar 0x7f8203082630 'argc' 'int'
+|   | | |     |-ImplicitCastExpr 0x7f8203081000 <col:23> 'char **' <LValueToRValue>
+|   | | |     | `-DeclRefExpr 0x7f8203082dd8 <col:23> 'char **' lvalue ParmVar 0x7f82030826d0 'argv' 'char **'
+|   | | |     |-ParenExpr 0x7f8203082e60 <col:29, col:40> 'void *'
+|   | | |     | `-CStyleCastExpr 0x7f8203082e38 <col:30, col:39> 'void *' <NullToPointer>
+|   | | |     |   `-IntegerLiteral 0x7f8203082e00 <col:39> 'int' 0
+|   | | |     |-ParenExpr 0x7f8203082ee0 <col:43, col:54> 'void *'
+|   | | |     | `-CStyleCastExpr 0x7f8203082eb8 <col:44, col:53> 'void *' <NullToPointer>
+|   | | |     |   `-IntegerLiteral 0x7f8203082e80 <col:53> 'int' 0
+|   | | |     `-ParenExpr 0x7f8203082f60 <line:95:10, col:21> 'void *'
+|   | | |       `-CStyleCastExpr 0x7f8203082f38 <col:11, col:20> 'void *' <NullToPointer>
+|   | | |         `-IntegerLiteral 0x7f8203082f00 <col:20> 'int' 0
+|   | | `-UnaryOperator 0x7f8203081080 <col:28, col:29> 'int' prefix '-'
+|   | |   `-IntegerLiteral 0x7f8203081060 <col:29> 'int' 1
+|   | `-CompoundStmt 0x7f8203081300 <line:96:5, line:106:5>
+|   |   `-SwitchStmt 0x7f8203081108 <line:97:7, line:105:2>
+|   |     |-<<<NULL>>>
+|   |     |-<<<NULL>>>
+|   |     |-ImplicitCastExpr 0x7f82030810f0 <line:97:15> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f82030810c8 <col:15> 'int' lvalue Var 0x7f8203082868 'optc' 'int'
+|   |     `-CompoundStmt 0x7f82030812d0 <line:98:2, line:105:2>
+|   |       |-CaseStmt 0x7f8203081158 <line:99:2, line:100:4>
+|   |       | |-IntegerLiteral 0x7f8203081138 <line:99:7> 'int' 0
+|   |       | |-<<<NULL>>>
+|   |       | `-BreakStmt 0x7f8203081190 <line:100:4>
+|   |       |-CaseStmt 0x7f82030811b0 <line:101:2, line:102:24>
+|   |       | |-CharacterLiteral 0x7f8203081198 <line:101:7> 'int' 70
+|   |       | |-<<<NULL>>>
+|   |       | `-CallExpr 0x7f8203081248 <line:102:4, col:24> 'int'
+|   |       |   |-ImplicitCastExpr 0x7f8203081230 <col:4> 'int (*)()' <FunctionToPointerDecay>
+|   |       |   | `-DeclRefExpr 0x7f82030811e8 <col:4> 'int ()' Function 0x7f8203082908 'external_function' 'int ()'
+|   |       |   `-IntegerLiteral 0x7f8203081210 <col:23> 'int' 1
+|   |       `-DefaultStmt 0x7f82030812b0 <line:103:2, line:104:11>
+|   |         `-ReturnStmt 0x7f8203081298 <col:4, col:11>
+|   |           `-IntegerLiteral 0x7f8203081278 <col:11> 'int' 1
+|   |-IfStmt 0x7f8203081440 <line:107:3, line:110:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ParenExpr 0x7f82030813c8 <line:107:7, col:20> 'int'
+|   | | `-BinaryOperator 0x7f82030813a0 <col:8, col:18> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7f8203081388 <col:8> 'int' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7f8203081340 <col:8> 'int' lvalue Var 0x7f8203027138 'optind' 'int'
+|   | |   `-IntegerLiteral 0x7f8203081368 <col:18> 'int' 99
+|   | |-CompoundStmt 0x7f8203081420 <line:108:5, line:110:5>
+|   | | `-ReturnStmt 0x7f8203081408 <line:109:7, col:14>
+|   | |   `-IntegerLiteral 0x7f82030813e8 <col:14> 'int' 1
+|   | `-<<<NULL>>>
+|   `-CallExpr 0x7f82030814b8 <line:111:3, col:10> 'int'
+|     `-ImplicitCastExpr 0x7f82030814a0 <col:3> 'int (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f8203081478 <col:3> 'int (void)' Function 0x7f8203080c78 'setup' 'int (void)'
+|-FunctionDecl 0x7f8203082908 <<invalid sloc>> line:87:7 implicit used external_function 'int ()'
+`-FunctionDecl 0x7f8203082cf0 <<invalid sloc>> line:94:4 implicit used getopt_long 'int ()'

@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fc1b7025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc1b7026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc1b7025d40 '__int128'
+|-TypedefDecl 0x7fc1b7026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc1b7025d60 'unsigned __int128'
+|-TypedefDecl 0x7fc1b7026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc1b7026170 'struct __NSConstantString_tag'
+|   `-Record 0x7fc1b70260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc1b7026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc1b70263c0 'char *'
+|   `-BuiltinType 0x7fc1b7025b60 'char'
+|-TypedefDecl 0x7fc1b70266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc1b7026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc1b70264e0 'struct __va_list_tag'
+|     `-Record 0x7fc1b7026458 '__va_list_tag'
+|-VarDecl 0x7fc1b7026738 <c_files/pr78362.c:3:1, col:6> col:6 used a 'long'
+`-FunctionDecl 0x7fc1b7825ab0 <line:5:1, line:11:1> line:6:1 foo 'void (void)'
+  `-CompoundStmt 0x7fc1b7825c88 <line:7:1, line:11:1>
+    `-ForStmt 0x7fc1b7825c50 <line:8:3, line:10:7>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7fc1b7825b70 <line:8:11, col:12> 'long' postfix '--'
+      | `-DeclRefExpr 0x7fc1b7825b48 <col:11> 'long' lvalue Var 0x7fc1b7026738 'a' 'long'
+      `-IfStmt 0x7fc1b7825c18 <line:9:5, line:10:7>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-CStyleCastExpr 0x7fc1b7825be8 <line:9:9, col:15> 'int' <IntegralCast>
+        | `-ImplicitCastExpr 0x7fc1b7825bd0 <col:15> 'long' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fc1b7825b90 <col:15> 'long' lvalue Var 0x7fc1b7026738 'a' 'long'
+        |-BreakStmt 0x7fc1b7825c10 <line:10:7>
+        `-<<<NULL>>>

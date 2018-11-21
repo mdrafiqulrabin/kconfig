@@ -1,0 +1,117 @@
+TranslationUnitDecl 0x7f9d640264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9d64026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9d64026740 '__int128'
+|-TypedefDecl 0x7f9d64026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9d64026760 'unsigned __int128'
+|-TypedefDecl 0x7f9d64026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9d64026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9d64026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9d64026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9d64026dc0 'char *'
+|   `-BuiltinType 0x7f9d64026560 'char'
+|-TypedefDecl 0x7f9d640270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9d64027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9d64026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9d64026e58 '__va_list_tag'
+|-RecordDecl 0x7f9d64027120 <c_files/pr47365.c:3:1, line:6:1> line:3:8 struct A definition
+| `-FieldDecl 0x7f9d64077400 <line:5:3, col:7> col:7 referenced i 'int'
+|-RecordDecl 0x7f9d64077448 <line:8:1, line:11:1> line:8:8 struct B definition
+| `-FieldDecl 0x7f9d64077638 <line:10:3, col:15> col:12 referenced a 'struct A [2]'
+|-VarDecl 0x7f9d64077698 <line:13:1, col:9> col:5 used i 'int' cinit
+| `-IntegerLiteral 0x7f9d64077738 <col:9> 'int' 1
+|-VarDecl 0x7f9d640777b0 <line:14:1, col:21> col:10 used b 'struct B':'struct B' cinit
+| `-InitListExpr 0x7f9d640778a0 <col:14, col:21> 'struct B':'struct B'
+|   `-InitListExpr 0x7f9d640778e8 <col:16, col:19> 'struct A [2]'
+|     |-InitListExpr 0x7f9d64077938 <col:16> 'struct A':'struct A'
+|     | `-IntegerLiteral 0x7f9d64077810 <col:16> 'int' 0
+|     `-InitListExpr 0x7f9d64077980 <col:19> 'struct A':'struct A'
+|       `-IntegerLiteral 0x7f9d64077830 <col:19> 'int' 3
+|-FunctionDecl 0x7f9d64077a18 <line:16:1, line:31:1> line:17:1 used test 'void ()' static
+| `-CompoundStmt 0x7f9d640787a8 <line:18:1, line:31:1>
+|   |-IfStmt 0x7f9d640781b8 <line:19:3, line:24:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9d64077c58 <line:19:7, col:19> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7f9d64077c28 <col:7, col:14> 'int' <LValueToRValue>
+|   | | | `-MemberExpr 0x7f9d64077bc8 <col:7, col:14> 'int' lvalue .i 0x7f9d64077400
+|   | | |   `-ArraySubscriptExpr 0x7f9d64077ba0 <col:7, col:12> 'struct A':'struct A' lvalue
+|   | | |     |-ImplicitCastExpr 0x7f9d64077b88 <col:7, col:9> 'struct A *' <ArrayToPointerDecay>
+|   | | |     | `-MemberExpr 0x7f9d64077ad8 <col:7, col:9> 'struct A [2]' lvalue .a 0x7f9d64077638
+|   | | |     |   `-DeclRefExpr 0x7f9d64077ab0 <col:7> 'struct B':'struct B' lvalue Var 0x7f9d640777b0 'b' 'struct B':'struct B'
+|   | | |     `-IntegerLiteral 0x7f9d64077b10 <col:11> 'int' 0
+|   | | `-ImplicitCastExpr 0x7f9d64077c40 <col:19> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f9d64077c00 <col:19> 'int' lvalue Var 0x7f9d64077698 'i' 'int'
+|   | |-CompoundStmt 0x7f9d64078188 <line:20:5, line:24:5>
+|   | | |-DeclStmt 0x7f9d64077e50 <line:21:7, col:23>
+|   | | | `-VarDecl 0x7f9d64077ce0 <col:7, col:22> col:11 used t 'int' cinit
+|   | | |   `-ImplicitCastExpr 0x7f9d64077e38 <col:15, col:22> 'int' <LValueToRValue>
+|   | | |     `-MemberExpr 0x7f9d64077e00 <col:15, col:22> 'int' lvalue .i 0x7f9d64077400
+|   | | |       `-ArraySubscriptExpr 0x7f9d64077dd8 <col:15, col:20> 'struct A':'struct A' lvalue
+|   | | |         |-ImplicitCastExpr 0x7f9d64077dc0 <col:15, col:17> 'struct A *' <ArrayToPointerDecay>
+|   | | |         | `-MemberExpr 0x7f9d64077d68 <col:15, col:17> 'struct A [2]' lvalue .a 0x7f9d64077638
+|   | | |         |   `-DeclRefExpr 0x7f9d64077d40 <col:15> 'struct B':'struct B' lvalue Var 0x7f9d640777b0 'b' 'struct B':'struct B'
+|   | | |         `-IntegerLiteral 0x7f9d64077da0 <col:19> 'int' 0
+|   | | |-BinaryOperator 0x7f9d64078000 <line:22:7, col:21> 'struct A':'struct A' '='
+|   | | | |-ArraySubscriptExpr 0x7f9d64077f00 <col:7, col:12> 'struct A':'struct A' lvalue
+|   | | | | |-ImplicitCastExpr 0x7f9d64077ee8 <col:7, col:9> 'struct A *' <ArrayToPointerDecay>
+|   | | | | | `-MemberExpr 0x7f9d64077e90 <col:7, col:9> 'struct A [2]' lvalue .a 0x7f9d64077638
+|   | | | | |   `-DeclRefExpr 0x7f9d64077e68 <col:7> 'struct B':'struct B' lvalue Var 0x7f9d640777b0 'b' 'struct B':'struct B'
+|   | | | | `-IntegerLiteral 0x7f9d64077ec8 <col:11> 'int' 0
+|   | | | `-ImplicitCastExpr 0x7f9d64077fe8 <col:16, col:21> 'struct A':'struct A' <LValueToRValue>
+|   | | |   `-ArraySubscriptExpr 0x7f9d64077fc0 <col:16, col:21> 'struct A':'struct A' lvalue
+|   | | |     |-ImplicitCastExpr 0x7f9d64077fa8 <col:16, col:18> 'struct A *' <ArrayToPointerDecay>
+|   | | |     | `-MemberExpr 0x7f9d64077f50 <col:16, col:18> 'struct A [2]' lvalue .a 0x7f9d64077638
+|   | | |     |   `-DeclRefExpr 0x7f9d64077f28 <col:16> 'struct B':'struct B' lvalue Var 0x7f9d640777b0 'b' 'struct B':'struct B'
+|   | | |     `-IntegerLiteral 0x7f9d64077f88 <col:20> 'int' 1
+|   | | `-BinaryOperator 0x7f9d64078160 <line:23:7, col:18> 'int' '='
+|   | |   |-MemberExpr 0x7f9d640780e8 <col:7, col:14> 'int' lvalue .i 0x7f9d64077400
+|   | |   | `-ArraySubscriptExpr 0x7f9d640780c0 <col:7, col:12> 'struct A':'struct A' lvalue
+|   | |   |   |-ImplicitCastExpr 0x7f9d640780a8 <col:7, col:9> 'struct A *' <ArrayToPointerDecay>
+|   | |   |   | `-MemberExpr 0x7f9d64078050 <col:7, col:9> 'struct A [2]' lvalue .a 0x7f9d64077638
+|   | |   |   |   `-DeclRefExpr 0x7f9d64078028 <col:7> 'struct B':'struct B' lvalue Var 0x7f9d640777b0 'b' 'struct B':'struct B'
+|   | |   |   `-IntegerLiteral 0x7f9d64078088 <col:11> 'int' 1
+|   | |   `-ImplicitCastExpr 0x7f9d64078148 <col:18> 'int' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f9d64078120 <col:18> 'int' lvalue Var 0x7f9d64077ce0 't' 'int'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9d64078578 <line:26:3, line:27:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9d64078340 <line:26:7, col:19> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7f9d64078310 <col:7, col:14> 'int' <LValueToRValue>
+|   | | | `-MemberExpr 0x7f9d640782b0 <col:7, col:14> 'int' lvalue .i 0x7f9d64077400
+|   | | |   `-ArraySubscriptExpr 0x7f9d64078288 <col:7, col:12> 'struct A':'struct A' lvalue
+|   | | |     |-ImplicitCastExpr 0x7f9d64078270 <col:7, col:9> 'struct A *' <ArrayToPointerDecay>
+|   | | |     | `-MemberExpr 0x7f9d64078218 <col:7, col:9> 'struct A [2]' lvalue .a 0x7f9d64077638
+|   | | |     |   `-DeclRefExpr 0x7f9d640781f0 <col:7> 'struct B':'struct B' lvalue Var 0x7f9d640777b0 'b' 'struct B':'struct B'
+|   | | |     `-IntegerLiteral 0x7f9d64078250 <col:11> 'int' 1
+|   | | `-ImplicitCastExpr 0x7f9d64078328 <col:19> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f9d640782e8 <col:19> 'int' lvalue Var 0x7f9d64077698 'i' 'int'
+|   | |-CallExpr 0x7f9d64078550 <line:27:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f9d64078538 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f9d640784e0 <col:5> '<builtin fn type>' Function 0x7f9d64078400 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-IfStmt 0x7f9d64078770 <line:29:3, line:30:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9d640786e0 <line:29:7, col:19> 'int' '=='
+|     | |-ImplicitCastExpr 0x7f9d640786c8 <col:7, col:14> 'int' <LValueToRValue>
+|     | | `-MemberExpr 0x7f9d64078670 <col:7, col:14> 'int' lvalue .i 0x7f9d64077400
+|     | |   `-ArraySubscriptExpr 0x7f9d64078648 <col:7, col:12> 'struct A':'struct A' lvalue
+|     | |     |-ImplicitCastExpr 0x7f9d64078630 <col:7, col:9> 'struct A *' <ArrayToPointerDecay>
+|     | |     | `-MemberExpr 0x7f9d640785d8 <col:7, col:9> 'struct A [2]' lvalue .a 0x7f9d64077638
+|     | |     |   `-DeclRefExpr 0x7f9d640785b0 <col:7> 'struct B':'struct B' lvalue Var 0x7f9d640777b0 'b' 'struct B':'struct B'
+|     | |     `-IntegerLiteral 0x7f9d64078610 <col:11> 'int' 0
+|     | `-IntegerLiteral 0x7f9d640786a8 <col:19> 'int' 0
+|     |-CallExpr 0x7f9d64078748 <line:30:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7f9d64078730 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7f9d64078708 <col:5> '<builtin fn type>' Function 0x7f9d64078400 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9d64078400 <line:27:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7f9d64078498 <col:5> Implicit
+`-FunctionDecl 0x7f9d64078830 <line:33:1, line:38:1> line:34:1 main 'int ()'
+  `-CompoundStmt 0x7f9d64078990 <line:35:1, line:38:1>
+    |-CallExpr 0x7f9d64078930 <line:36:3, col:9> 'void'
+    | `-ImplicitCastExpr 0x7f9d64078918 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f9d640788c8 <col:3> 'void ()' Function 0x7f9d64077a18 'test' 'void ()'
+    `-ReturnStmt 0x7f9d64078978 <line:37:3, col:10>
+      `-IntegerLiteral 0x7f9d64078958 <col:10> 'int' 0

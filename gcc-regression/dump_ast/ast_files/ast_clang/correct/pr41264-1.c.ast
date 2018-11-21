@@ -1,0 +1,268 @@
+TranslationUnitDecl 0x7fa7350264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa735026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa735026740 '__int128'
+|-TypedefDecl 0x7fa735026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa735026760 'unsigned __int128'
+|-TypedefDecl 0x7fa735026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa735026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa735026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa735026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa735026dc0 'char *'
+|   `-BuiltinType 0x7fa735026560 'char'
+|-TypedefDecl 0x7fa7350270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa735027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa735026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa735026e58 '__va_list_tag'
+|-TypedefDecl 0x7fa735027138 <c_files/pr41264-1.c:7:1, col:22> col:22 referenced hashval_t 'unsigned int'
+| `-BuiltinType 0x7fa735026660 'unsigned int'
+|-FunctionDecl 0x7fa735826b80 <line:9:1, line:26:1> line:10:1 used iterative_hash_host_wide_int 'hashval_t (long, hashval_t)' static
+| |-ParmVarDecl 0x7fa735826a00 <col:31, col:36> col:36 used val 'long'
+| |-ParmVarDecl 0x7fa735826a70 <col:41, col:51> col:51 used val2 'hashval_t':'unsigned int'
+| |-CompoundStmt 0x7fa735829a80 <line:11:1, line:26:1>
+| | |-DeclStmt 0x7fa735826d98 <line:12:3, col:32>
+| | | `-VarDecl 0x7fa735826cc0 <col:3, col:29> col:13 used a 'hashval_t':'unsigned int' cinit
+| | |   `-CStyleCastExpr 0x7fa735826d70 <col:17, col:29> 'hashval_t':'unsigned int' <IntegralCast>
+| | |     `-ImplicitCastExpr 0x7fa735826d58 <col:29> 'long' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7fa735826d20 <col:29> 'long' lvalue ParmVar 0x7fa735826a00 'val' 'long'
+| | |-DeclStmt 0x7fa735826e48 <line:13:3, col:15>
+| | | `-VarDecl 0x7fa735826dc8 <col:3, col:14> col:7 used zero 'int' cinit
+| | |   `-IntegerLiteral 0x7fa735826e28 <col:14> 'int' 0
+| | |-DeclStmt 0x7fa7358270f0 <line:14:3, col:69>
+| | | `-VarDecl 0x7fa735826e70 <col:3, col:68> col:13 used b 'hashval_t':'unsigned int' cinit
+| | |   `-CStyleCastExpr 0x7fa7358270c8 <col:17, col:68> 'hashval_t':'unsigned int' <IntegralCast>
+| | |     `-ParenExpr 0x7fa7358270a8 <col:29, col:68> 'long'
+| | |       `-BinaryOperator 0x7fa735827040 <col:30, col:67> 'long' '>>'
+| | |         |-ImplicitCastExpr 0x7fa735827028 <col:30> 'long' <LValueToRValue>
+| | |         | `-DeclRefExpr 0x7fa735826ed0 <col:30> 'long' lvalue ParmVar 0x7fa735826a00 'val' 'long'
+| | |         `-ParenExpr 0x7fa735827008 <col:37, col:67> 'unsigned long'
+| | |           `-BinaryOperator 0x7fa735826fe0 <col:38, col:63> 'unsigned long' '+'
+| | |             |-BinaryOperator 0x7fa735826f60 <col:38, col:59> 'unsigned long' '*'
+| | |             | |-UnaryExprOrTypeTraitExpr 0x7fa735826f08 <col:38, col:55> 'unsigned long' sizeof 'hashval_t':'unsigned int'
+| | |             | `-ImplicitCastExpr 0x7fa735826f48 <col:59> 'unsigned long' <IntegralCast>
+| | |             |   `-IntegerLiteral 0x7fa735826f28 <col:59> 'int' 8
+| | |             `-ImplicitCastExpr 0x7fa735826fc8 <col:63> 'unsigned long' <IntegralCast>
+| | |               `-ImplicitCastExpr 0x7fa735826fb0 <col:63> 'int' <LValueToRValue>
+| | |                 `-DeclRefExpr 0x7fa735826f88 <col:63> 'int' lvalue Var 0x7fa735826dc8 'zero' 'int'
+| | |-CompoundAssignOperator 0x7fa735827170 <line:16:3, col:8> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa735827108 <col:3> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa735827158 <col:8> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa735827130 <col:8> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | |-CompoundAssignOperator 0x7fa735827210 <col:11, col:16> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa7358271a8 <col:11> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa7358271f8 <col:16> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa7358271d0 <col:16> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | |-CompoundAssignOperator 0x7fa735827318 <col:22, col:36> 'hashval_t':'unsigned int' '^=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa735827248 <col:22> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | | `-ParenExpr 0x7fa7358272f8 <col:27, col:36> 'hashval_t':'unsigned int'
+| | |   `-BinaryOperator 0x7fa7358272d0 <col:28, col:34> 'hashval_t':'unsigned int' '>>'
+| | |     |-ImplicitCastExpr 0x7fa7358272b8 <col:28> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |     | `-DeclRefExpr 0x7fa735827270 <col:28> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | |     `-IntegerLiteral 0x7fa735827298 <col:34> 'int' 13
+| | |-CompoundAssignOperator 0x7fa7358273b8 <line:17:3, col:8> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa735827350 <col:3> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa7358273a0 <col:8> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa735827378 <col:8> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | |-CompoundAssignOperator 0x7fa735827458 <col:14, col:19> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa7358273f0 <col:14> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa735827440 <col:19> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa735827418 <col:19> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | |-CompoundAssignOperator 0x7fa735827560 <col:22, col:33> 'hashval_t':'unsigned int' '^=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa735827490 <col:22> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | | `-ParenExpr 0x7fa735827540 <col:27, col:33> 'hashval_t':'unsigned int'
+| | |   `-BinaryOperator 0x7fa735827518 <col:28, col:32> 'hashval_t':'unsigned int' '<<'
+| | |     |-ImplicitCastExpr 0x7fa735827500 <col:28> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |     | `-DeclRefExpr 0x7fa7358274b8 <col:28> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | |     `-IntegerLiteral 0x7fa7358274e0 <col:32> 'int' 8
+| | |-CompoundAssignOperator 0x7fa735827600 <line:18:3, col:11> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa735827598 <col:3> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa7358275e8 <col:11> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa7358275c0 <col:11> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | |-CompoundAssignOperator 0x7fa7358276a0 <col:14, col:22> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa735827638 <col:14> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa735827688 <col:22> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa735827660 <col:22> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | |-CompoundAssignOperator 0x7fa735827810 <col:25, col:52> 'hashval_t':'unsigned int' '^=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa7358276d8 <col:25> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | | `-ParenExpr 0x7fa7358277f0 <col:33, col:52> 'unsigned int'
+| | |   `-BinaryOperator 0x7fa7358277c8 <col:34, col:50> 'unsigned int' '>>'
+| | |     |-ParenExpr 0x7fa735827788 <col:34, col:47> 'unsigned int'
+| | |     | `-BinaryOperator 0x7fa735827760 <col:35, col:37> 'unsigned int' '&'
+| | |     |   |-ImplicitCastExpr 0x7fa735827748 <col:35> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |     |   | `-DeclRefExpr 0x7fa735827700 <col:35> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | |     |   `-IntegerLiteral 0x7fa735827728 <col:37> 'unsigned int' 4294967295
+| | |     `-IntegerLiteral 0x7fa7358277a8 <col:50> 'int' 13
+| | |-CompoundAssignOperator 0x7fa7358278b0 <line:19:3, col:8> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa735827848 <col:3> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa735827898 <col:8> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa735827870 <col:8> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | |-CompoundAssignOperator 0x7fa735827950 <col:11, col:16> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa7358278e8 <col:11> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa735827938 <col:16> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa735827910 <col:16> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | |-CompoundAssignOperator 0x7fa735828ac8 <col:22, col:49> 'hashval_t':'unsigned int' '^=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa735827988 <col:22> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | | `-ParenExpr 0x7fa735828aa8 <col:27, col:49> 'unsigned int'
+| | |   `-BinaryOperator 0x7fa735828a80 <col:28, col:47> 'unsigned int' '>>'
+| | |     |-ParenExpr 0x7fa735828a40 <col:28, col:44> 'unsigned int'
+| | |     | `-BinaryOperator 0x7fa735828a18 <col:29, col:34> 'unsigned int' '&'
+| | |     |   |-ImplicitCastExpr 0x7fa735828a00 <col:29> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |     |   | `-DeclRefExpr 0x7fa7358279b0 <col:29> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | |     |   `-IntegerLiteral 0x7fa7358279d8 <col:34> 'unsigned int' 4294967295
+| | |     `-IntegerLiteral 0x7fa735828a60 <col:47> 'int' 12
+| | |-CompoundAssignOperator 0x7fa735828b68 <line:20:3, col:8> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa735828b00 <col:3> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa735828b50 <col:8> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa735828b28 <col:8> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | |-CompoundAssignOperator 0x7fa735828c08 <col:14, col:19> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa735828ba0 <col:14> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa735828bf0 <col:19> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa735828bc8 <col:19> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | |-BinaryOperator 0x7fa735828de0 <col:22, col:42> 'hashval_t':'unsigned int' '='
+| | | |-DeclRefExpr 0x7fa735828c40 <col:22> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | | `-BinaryOperator 0x7fa735828db8 <col:26, col:42> 'unsigned int' '&'
+| | |   |-ParenExpr 0x7fa735828d78 <col:26, col:38> 'unsigned int'
+| | |   | `-BinaryOperator 0x7fa735828d50 <col:27, col:37> 'unsigned int' '^'
+| | |   |   |-ImplicitCastExpr 0x7fa735828d38 <col:27> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   |   | `-DeclRefExpr 0x7fa735828c68 <col:27> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | |   |   `-ParenExpr 0x7fa735828d18 <col:31, col:37> 'hashval_t':'unsigned int'
+| | |   |     `-BinaryOperator 0x7fa735828cf0 <col:32, col:35> 'hashval_t':'unsigned int' '<<'
+| | |   |       |-ImplicitCastExpr 0x7fa735828cd8 <col:32> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   |       | `-DeclRefExpr 0x7fa735828c90 <col:32> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | |   |       `-IntegerLiteral 0x7fa735828cb8 <col:35> 'int' 16
+| | |   `-IntegerLiteral 0x7fa735828d98 <col:42> 'unsigned int' 4294967295
+| | |-CompoundAssignOperator 0x7fa735828e70 <line:21:3, col:11> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa735828e08 <col:3> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa735828e58 <col:11> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa735828e30 <col:11> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | |-CompoundAssignOperator 0x7fa735828f10 <col:14, col:22> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa735828ea8 <col:14> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa735828ef8 <col:22> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa735828ed0 <col:22> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | |-BinaryOperator 0x7fa7358290e8 <col:25, col:51> 'hashval_t':'unsigned int' '='
+| | | |-DeclRefExpr 0x7fa735828f48 <col:25> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | | `-BinaryOperator 0x7fa7358290c0 <col:32, col:51> 'unsigned int' '&'
+| | |   |-ParenExpr 0x7fa735829080 <col:32, col:47> 'unsigned int'
+| | |   | `-BinaryOperator 0x7fa735829058 <col:33, col:46> 'unsigned int' '^'
+| | |   |   |-ImplicitCastExpr 0x7fa735829040 <col:33> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   |   | `-DeclRefExpr 0x7fa735828f70 <col:33> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | |   |   `-ParenExpr 0x7fa735829020 <col:40, col:46> 'hashval_t':'unsigned int'
+| | |   |     `-BinaryOperator 0x7fa735828ff8 <col:41, col:45> 'hashval_t':'unsigned int' '>>'
+| | |   |       |-ImplicitCastExpr 0x7fa735828fe0 <col:41> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   |       | `-DeclRefExpr 0x7fa735828f98 <col:41> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | |   |       `-IntegerLiteral 0x7fa735828fc0 <col:45> 'int' 5
+| | |   `-IntegerLiteral 0x7fa7358290a0 <col:51> 'unsigned int' 4294967295
+| | |-CompoundAssignOperator 0x7fa735829178 <line:22:3, col:8> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa735829110 <col:3> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa735829160 <col:8> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa735829138 <col:8> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | |-CompoundAssignOperator 0x7fa735829218 <col:11, col:16> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa7358291b0 <col:11> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa735829200 <col:16> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa7358291d8 <col:16> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | |-BinaryOperator 0x7fa7358293f0 <col:22, col:45> 'hashval_t':'unsigned int' '='
+| | | |-DeclRefExpr 0x7fa735829250 <col:22> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | | `-BinaryOperator 0x7fa7358293c8 <col:26, col:45> 'unsigned int' '&'
+| | |   |-ParenExpr 0x7fa735829388 <col:26, col:41> 'unsigned int'
+| | |   | `-BinaryOperator 0x7fa735829360 <col:27, col:40> 'unsigned int' '^'
+| | |   |   |-ImplicitCastExpr 0x7fa735829348 <col:27> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   |   | `-DeclRefExpr 0x7fa735829278 <col:27> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | |   |   `-ParenExpr 0x7fa735829328 <col:31, col:40> 'hashval_t':'unsigned int'
+| | |   |     `-BinaryOperator 0x7fa735829300 <col:32, col:39> 'hashval_t':'unsigned int' '>>'
+| | |   |       |-ImplicitCastExpr 0x7fa7358292e8 <col:32> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   |       | `-DeclRefExpr 0x7fa7358292a0 <col:32> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | |   |       `-IntegerLiteral 0x7fa7358292c8 <col:39> 'int' 3
+| | |   `-IntegerLiteral 0x7fa7358293a8 <col:45> 'unsigned int' 4294967295
+| | |-CompoundAssignOperator 0x7fa735829480 <line:23:3, col:8> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa735829418 <col:3> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa735829468 <col:8> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa735829440 <col:8> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | |-CompoundAssignOperator 0x7fa735829520 <col:14, col:19> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa7358294b8 <col:14> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa735829508 <col:19> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa7358294e0 <col:19> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | |-BinaryOperator 0x7fa7358296f8 <col:22, col:42> 'hashval_t':'unsigned int' '='
+| | | |-DeclRefExpr 0x7fa735829558 <col:22> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | | `-BinaryOperator 0x7fa7358296d0 <col:26, col:42> 'unsigned int' '&'
+| | |   |-ParenExpr 0x7fa735829690 <col:26, col:38> 'unsigned int'
+| | |   | `-BinaryOperator 0x7fa735829668 <col:27, col:37> 'unsigned int' '^'
+| | |   |   |-ImplicitCastExpr 0x7fa735829650 <col:27> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   |   | `-DeclRefExpr 0x7fa735829580 <col:27> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | |   |   `-ParenExpr 0x7fa735829630 <col:31, col:37> 'hashval_t':'unsigned int'
+| | |   |     `-BinaryOperator 0x7fa735829608 <col:32, col:35> 'hashval_t':'unsigned int' '<<'
+| | |   |       |-ImplicitCastExpr 0x7fa7358295f0 <col:32> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   |       | `-DeclRefExpr 0x7fa7358295a8 <col:32> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | |   |       `-IntegerLiteral 0x7fa7358295d0 <col:35> 'int' 10
+| | |   `-IntegerLiteral 0x7fa7358296b0 <col:42> 'unsigned int' 4294967295
+| | |-CompoundAssignOperator 0x7fa735829788 <line:24:3, col:11> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa735829720 <col:3> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa735829770 <col:11> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa735829748 <col:11> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826cc0 'a' 'hashval_t':'unsigned int'
+| | |-CompoundAssignOperator 0x7fa735829828 <col:14, col:22> 'hashval_t':'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fa7358297c0 <col:14> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa735829810 <col:22> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa7358297e8 <col:22> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | |-BinaryOperator 0x7fa735829a00 <col:25, col:51> 'hashval_t':'unsigned int' '='
+| | | |-DeclRefExpr 0x7fa735829860 <col:25> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | | `-BinaryOperator 0x7fa7358299d8 <col:32, col:51> 'unsigned int' '&'
+| | |   |-ParenExpr 0x7fa735829998 <col:32, col:47> 'unsigned int'
+| | |   | `-BinaryOperator 0x7fa735829970 <col:33, col:46> 'unsigned int' '^'
+| | |   |   |-ImplicitCastExpr 0x7fa735829958 <col:33> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   |   | `-DeclRefExpr 0x7fa735829888 <col:33> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| | |   |   `-ParenExpr 0x7fa735829938 <col:40, col:46> 'hashval_t':'unsigned int'
+| | |   |     `-BinaryOperator 0x7fa735829910 <col:41, col:44> 'hashval_t':'unsigned int' '>>'
+| | |   |       |-ImplicitCastExpr 0x7fa7358298f8 <col:41> 'hashval_t':'unsigned int' <LValueToRValue>
+| | |   |       | `-DeclRefExpr 0x7fa7358298b0 <col:41> 'hashval_t':'unsigned int' lvalue Var 0x7fa735826e70 'b' 'hashval_t':'unsigned int'
+| | |   |       `-IntegerLiteral 0x7fa7358298d8 <col:44> 'int' 15
+| | |   `-IntegerLiteral 0x7fa7358299b8 <col:51> 'unsigned int' 4294967295
+| | `-ReturnStmt 0x7fa735829a68 <line:25:3, col:10>
+| |   `-ImplicitCastExpr 0x7fa735829a50 <col:10> 'hashval_t':'unsigned int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fa735829a28 <col:10> 'hashval_t':'unsigned int' lvalue ParmVar 0x7fa735826a70 'val2' 'hashval_t':'unsigned int'
+| `-AlwaysInlineAttr 0x7fa735826c28 <line:9:33> always_inline
+`-FunctionDecl 0x7fa735829d30 <line:28:1, line:41:1> line:29:1 bla 'hashval_t (int, int)'
+  |-ParmVarDecl 0x7fa735829ba8 <col:6, col:10> col:10 used nunits 'int'
+  |-ParmVarDecl 0x7fa735829c20 <col:18, col:22> col:22 used mode 'int'
+  `-CompoundStmt 0x7fa73582a410 <line:30:1, line:41:1>
+    |-DeclStmt 0x7fa735829e80 <line:31:3, col:25>
+    | `-VarDecl 0x7fa735829de8 <col:3, col:24> col:13 used hashcode 'hashval_t':'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7fa735829e68 <col:24> 'hashval_t':'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7fa735829e48 <col:24> 'int' 0
+    |-BinaryOperator 0x7fa73582a008 <line:34:3, col:56> 'hashval_t':'unsigned int' '='
+    | |-DeclRefExpr 0x7fa735829e98 <col:3> 'hashval_t':'unsigned int' lvalue Var 0x7fa735829de8 'hashcode' 'hashval_t':'unsigned int'
+    | `-CallExpr 0x7fa735829fa0 <col:14, col:56> 'hashval_t':'unsigned int'
+    |   |-ImplicitCastExpr 0x7fa735829f88 <col:14> 'hashval_t (*)(long, hashval_t)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fa735829ec0 <col:14> 'hashval_t (long, hashval_t)' Function 0x7fa735826b80 'iterative_hash_host_wide_int' 'hashval_t (long, hashval_t)'
+    |   |-ImplicitCastExpr 0x7fa735829fd8 <col:44> 'long' <IntegralCast>
+    |   | `-IntegerLiteral 0x7fa735829ee8 <col:44> 'int' 14
+    |   `-ImplicitCastExpr 0x7fa735829ff0 <col:48> 'hashval_t':'unsigned int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fa735829f08 <col:48> 'hashval_t':'unsigned int' lvalue Var 0x7fa735829de8 'hashcode' 'hashval_t':'unsigned int'
+    |-BinaryOperator 0x7fa73582a168 <line:35:3, col:60> 'hashval_t':'unsigned int' '='
+    | |-DeclRefExpr 0x7fa73582a030 <col:3> 'hashval_t':'unsigned int' lvalue Var 0x7fa735829de8 'hashcode' 'hashval_t':'unsigned int'
+    | `-CallExpr 0x7fa73582a0e8 <col:14, col:60> 'hashval_t':'unsigned int'
+    |   |-ImplicitCastExpr 0x7fa73582a0d0 <col:14> 'hashval_t (*)(long, hashval_t)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fa73582a058 <col:14> 'hashval_t (long, hashval_t)' Function 0x7fa735826b80 'iterative_hash_host_wide_int' 'hashval_t (long, hashval_t)'
+    |   |-ImplicitCastExpr 0x7fa73582a138 <col:44> 'long' <IntegralCast>
+    |   | `-ImplicitCastExpr 0x7fa73582a120 <col:44> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fa73582a080 <col:44> 'int' lvalue ParmVar 0x7fa735829ba8 'nunits' 'int'
+    |   `-ImplicitCastExpr 0x7fa73582a150 <col:52> 'hashval_t':'unsigned int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fa73582a0a8 <col:52> 'hashval_t':'unsigned int' lvalue Var 0x7fa735829de8 'hashcode' 'hashval_t':'unsigned int'
+    |-BinaryOperator 0x7fa73582a2c8 <line:36:3, col:58> 'hashval_t':'unsigned int' '='
+    | |-DeclRefExpr 0x7fa73582a190 <col:3> 'hashval_t':'unsigned int' lvalue Var 0x7fa735829de8 'hashcode' 'hashval_t':'unsigned int'
+    | `-CallExpr 0x7fa73582a248 <col:14, col:58> 'hashval_t':'unsigned int'
+    |   |-ImplicitCastExpr 0x7fa73582a230 <col:14> 'hashval_t (*)(long, hashval_t)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fa73582a1b8 <col:14> 'hashval_t (long, hashval_t)' Function 0x7fa735826b80 'iterative_hash_host_wide_int' 'hashval_t (long, hashval_t)'
+    |   |-ImplicitCastExpr 0x7fa73582a298 <col:44> 'long' <IntegralCast>
+    |   | `-ImplicitCastExpr 0x7fa73582a280 <col:44> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fa73582a1e0 <col:44> 'int' lvalue ParmVar 0x7fa735829c20 'mode' 'int'
+    |   `-ImplicitCastExpr 0x7fa73582a2b0 <col:50> 'hashval_t':'unsigned int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fa73582a208 <col:50> 'hashval_t':'unsigned int' lvalue Var 0x7fa735829de8 'hashcode' 'hashval_t':'unsigned int'
+    `-IfStmt 0x7fa73582a3d8 <line:37:3, line:40:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fa73582a318 <line:37:7> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa73582a2f0 <col:7> 'int' lvalue ParmVar 0x7fa735829ba8 'nunits' 'int'
+      |-ReturnStmt 0x7fa73582a368 <line:38:5, col:12>
+      | `-ImplicitCastExpr 0x7fa73582a350 <col:12> 'hashval_t':'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7fa73582a330 <col:12> 'int' 0
+      `-ReturnStmt 0x7fa73582a3c0 <line:40:5, col:12>
+        `-ImplicitCastExpr 0x7fa73582a3a8 <col:12> 'hashval_t':'unsigned int' <LValueToRValue>
+          `-DeclRefExpr 0x7fa73582a380 <col:12> 'hashval_t':'unsigned int' lvalue Var 0x7fa735829de8 'hashcode' 'hashval_t':'unsigned int'

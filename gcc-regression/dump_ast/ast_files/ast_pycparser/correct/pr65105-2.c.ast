@@ -1,0 +1,21 @@
+FileAST: 
+  Decl: i1, [], [], []
+    TypeDecl: i1, []
+      IdentifierType: ['long', 'long']
+  Decl: i2, [], [], []
+    TypeDecl: i2, []
+      IdentifierType: ['long', 'long']
+  Decl: res, [], [], []
+    TypeDecl: res, []
+      IdentifierType: ['long', 'long']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: res
+        BinaryOp: |
+          ID: i1
+          ID: i2

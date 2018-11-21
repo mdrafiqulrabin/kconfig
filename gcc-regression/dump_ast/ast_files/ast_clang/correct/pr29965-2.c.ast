@@ -1,0 +1,86 @@
+TranslationUnitDecl 0x7fc8920264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc892026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc892026740 '__int128'
+|-TypedefDecl 0x7fc892026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc892026760 'unsigned __int128'
+|-TypedefDecl 0x7fc892026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc892026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc892026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc892026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc892026dc0 'char *'
+|   `-BuiltinType 0x7fc892026560 'char'
+|-TypedefDecl 0x7fc8920270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc892027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc892026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc892026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc892826a20 <c_files/pr29965-2.c:6:1, col:49> col:13 used baz 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc892826b88 <line:8:1, line:16:1> line:9:1 foo1 'void (void)'
+| `-CompoundStmt 0x7fc892826c88 <line:10:1, line:16:1>
+|   `-CompoundStmt 0x7fc892826c68 <line:12:3, line:15:3>
+|     `-ForStmt 0x7fc892826c30 <line:13:5, line:14:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       `-NullStmt 0x7fc892826c20 <col:7>
+|-FunctionDecl 0x7fc892826d38 <line:18:1, line:28:1> line:19:1 bar1 'void (void)'
+| `-CompoundStmt 0x7fc892826ef8 <line:20:1, line:28:1>
+|   `-CompoundStmt 0x7fc892826ed0 <line:22:3, line:27:3>
+|     |-CallExpr 0x7fc892826e40 <line:24:5, col:10> 'void'
+|     | `-ImplicitCastExpr 0x7fc892826e28 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fc892826dd0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc892826a20 'baz' 'void (void) __attribute__((noreturn))'
+|     `-CallExpr 0x7fc892826ea8 <line:26:5, col:10> 'void'
+|       `-ImplicitCastExpr 0x7fc892826e90 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7fc892826e68 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc892826a20 'baz' 'void (void) __attribute__((noreturn))'
+|-FunctionDecl 0x7fc892826fa8 <line:30:1, line:40:1> line:31:1 foo2 'void (void)'
+| `-CompoundStmt 0x7fc8928270c0 <line:32:1, line:40:1>
+|   `-CompoundStmt 0x7fc892827098 <line:34:3, line:39:3>
+|     |-NullStmt 0x7fc892827040 <line:35:5>
+|     `-ForStmt 0x7fc892827060 <line:37:5, line:38:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       `-NullStmt 0x7fc892827050 <col:7>
+|-FunctionDecl 0x7fc892827170 <line:42:1, line:52:1> line:43:1 bar2 'void (void)'
+| `-CompoundStmt 0x7fc8928272a8 <line:44:1, line:52:1>
+|   `-CompoundStmt 0x7fc892827280 <line:46:3, line:51:3>
+|     |-CallExpr 0x7fc892827248 <line:48:5, col:10> 'void'
+|     | `-ImplicitCastExpr 0x7fc892827230 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fc892827208 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc892826a20 'baz' 'void (void) __attribute__((noreturn))'
+|     `-NullStmt 0x7fc892827270 <line:50:5>
+|-FunctionDecl 0x7fc892827358 <line:54:1, line:62:1> line:55:1 foo3 'void (void)'
+| `-CompoundStmt 0x7fc892827458 <line:56:1, line:62:1>
+|   `-CompoundStmt 0x7fc892827438 <line:58:3, line:61:3>
+|     `-ForStmt 0x7fc892827400 <line:59:5, line:60:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       `-NullStmt 0x7fc8928273f0 <col:7>
+|-FunctionDecl 0x7fc892827508 <line:64:1, line:74:1> line:65:1 bar3 'void (void)'
+| `-CompoundStmt 0x7fc892827698 <line:66:1, line:74:1>
+|   `-CompoundStmt 0x7fc892827670 <line:68:3, line:73:3>
+|     |-CallExpr 0x7fc8928275e0 <line:70:5, col:10> 'void'
+|     | `-ImplicitCastExpr 0x7fc8928275c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fc8928275a0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc892826a20 'baz' 'void (void) __attribute__((noreturn))'
+|     `-CallExpr 0x7fc892827648 <line:72:5, col:10> 'void'
+|       `-ImplicitCastExpr 0x7fc892827630 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7fc892827608 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc892826a20 'baz' 'void (void) __attribute__((noreturn))'
+|-FunctionDecl 0x7fc892827748 <line:76:1, line:86:1> line:77:1 foo4 'void (void)'
+| `-CompoundStmt 0x7fc892827860 <line:78:1, line:86:1>
+|   `-CompoundStmt 0x7fc892827838 <line:80:3, line:85:3>
+|     |-NullStmt 0x7fc8928277e0 <line:81:5>
+|     `-ForStmt 0x7fc892827800 <line:83:5, line:84:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       `-NullStmt 0x7fc8928277f0 <col:7>
+`-FunctionDecl 0x7fc892827910 <line:88:1, line:98:1> line:89:1 bar4 'void (void)'
+  `-CompoundStmt 0x7fc892827a60 <line:90:1, line:98:1>
+    `-CompoundStmt 0x7fc892827a38 <line:92:3, line:97:3>
+      |-CallExpr 0x7fc892827a00 <line:94:5, col:10> 'void'
+      | `-ImplicitCastExpr 0x7fc8928279d0 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fc8928279a8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc892826a20 'baz' 'void (void) __attribute__((noreturn))'
+      `-NullStmt 0x7fc892827a28 <line:96:5>

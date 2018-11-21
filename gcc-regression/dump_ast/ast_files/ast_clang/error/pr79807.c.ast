@@ -1,0 +1,32 @@
+c_files/pr79807.c:11:10: error: use of unknown builtin '__builtin_ia32_pd_pd256' [-Wimplicit-function-declaration]
+  return __builtin_ia32_pd_pd256 (x);
+         ^
+c_files/pr79807.c:11:10: error: returning 'int' from a function with incompatible result type '__v2df' (vector of 2 'double' values)
+  return __builtin_ia32_pd_pd256 (x);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7fd78301f4d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd78301fa20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd78301f740 '__int128'
+|-TypedefDecl 0x7fd78301fa90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd78301f760 'unsigned __int128'
+|-TypedefDecl 0x7fd78301fd68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd78301fb70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd78301fae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd78301fe00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd78301fdc0 'char *'
+|   `-BuiltinType 0x7fd78301f560 'char'
+|-TypedefDecl 0x7fd7830200c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd783020070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd78301fee0 'struct __va_list_tag'
+|     `-Record 0x7fd78301fe58 '__va_list_tag'
+|-TypedefDecl 0x7fd783020178 <c_files/pr79807.c:5:1, col:16> col:16 referenced __v2df '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7fd783020140 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7fd78301f6e0 'double'
+|-TypedefDecl 0x7fd78382de38 <line:6:1, col:16> col:16 referenced __v4df '__attribute__((__vector_size__(4 * sizeof(double)))) double'
+| `-VectorType 0x7fd78382de00 '__attribute__((__vector_size__(4 * sizeof(double)))) double' 4
+|   `-BuiltinType 0x7fd78301f6e0 'double'
+|-FunctionDecl 0x7fd78382dfe0 <line:8:1, line:12:1> line:9:1 foo '__v2df (__v4df)'
+| |-ParmVarDecl 0x7fd78382dee0 <col:6, col:13> col:13 used x '__v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+| `-CompoundStmt 0x7fd78382e660 <line:10:1, line:12:1>
+`-FunctionDecl 0x7fd78382e130 <<invalid sloc>> line:11:10 implicit used __builtin_ia32_pd_pd256 'int ()'

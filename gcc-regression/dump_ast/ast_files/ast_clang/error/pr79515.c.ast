@@ -1,0 +1,30 @@
+c_files/pr79515.c:5:8: error: GNU decimal type extension not supported
+extern _Decimal64 x;
+       ^
+1 error generated.
+TranslationUnitDecl 0x7fd0918264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd091826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd091826740 '__int128'
+|-TypedefDecl 0x7fd091826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd091826760 'unsigned __int128'
+|-TypedefDecl 0x7fd091826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd091826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd091826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd091826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd091826dc0 'char *'
+|   `-BuiltinType 0x7fd091826560 'char'
+|-TypedefDecl 0x7fd0918270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd091827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd091826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd091826e58 '__va_list_tag'
+|-VarDecl 0x7fd091827138 <c_files/pr79515.c:5:1, col:19> col:19 invalid x 'int' extern
+|-VarDecl 0x7fd092025a00 <line:6:1, col:12> col:12 used i 'int' extern
+`-FunctionDecl 0x7fd092025b60 <line:8:1, line:13:1> line:9:1 foo 'void (void)'
+  `-CompoundStmt 0x7fd092025cb8 <line:10:1, line:13:1>
+    `-IfStmt 0x7fd092025c80 <line:11:3, line:12:6>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-OpaqueValueExpr 0x7fd092025c60 <<invalid sloc>> '_Bool'
+      |-UnaryOperator 0x7fd092025c40 <col:5, col:6> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fd092025c18 <col:5> 'int' lvalue Var 0x7fd092025a00 'i' 'int'
+      `-<<<NULL>>>

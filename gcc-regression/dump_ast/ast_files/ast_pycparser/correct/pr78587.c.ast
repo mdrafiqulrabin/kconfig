@@ -1,0 +1,69 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: ^=
+        ID: x
+        Constant: int, 9223372036854775808ULL
+      FuncCall: 
+        ID: bar
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        Struct: S
+          Decl: w, [], [], []
+            ArrayDecl: []
+              TypeDecl: w, []
+                IdentifierType: ['int']
+              Constant: int, 4
+      Constant: int, 1
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Struct: S
+        Decl: w, [], [], []
+          ArrayDecl: []
+            TypeDecl: w, []
+              IdentifierType: ['int']
+            Constant: int, 4
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+          ID: baz
+      If: 
+        BinaryOp: <=
+          ID: e
+          UnaryOp: -
+            Constant: int, 80
+        Assignment: =
+          ID: e
+          Constant: int, 0
+      Assignment: =
+        ID: b
+        ArrayRef: 
+          ID: a
+          ID: e

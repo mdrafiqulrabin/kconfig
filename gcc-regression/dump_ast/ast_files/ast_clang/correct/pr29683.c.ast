@@ -1,0 +1,102 @@
+TranslationUnitDecl 0x7ff3fd8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff3fd826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff3fd826740 '__int128'
+|-TypedefDecl 0x7ff3fd826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff3fd826760 'unsigned __int128'
+|-TypedefDecl 0x7ff3fd826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff3fd826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff3fd826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff3fd826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff3fd826dc0 'char *'
+|   `-BuiltinType 0x7ff3fd826560 'char'
+|-TypedefDecl 0x7ff3fd8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff3fd827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff3fd826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff3fd826e58 '__va_list_tag'
+|-FunctionDecl 0x7ff3fe025a30 <c_files/pr29683.c:4:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff3fe025ac8 prev 0x7ff3fe025a30 <col:1, col:17> col:6 used abort 'void (void) __attribute__((noreturn))'
+|-RecordDecl 0x7ff3fe025b60 <line:6:9, line:8:1> line:6:9 struct definition
+| `-FieldDecl 0x7ff3fe025c90 <line:7:3, col:10> col:7 x 'int [7]'
+|-TypedefDecl 0x7ff3fe025d30 <line:6:1, line:8:3> col:3 referenced agg7 'struct agg7':'agg7'
+| `-ElaboratedType 0x7ff3fe025ce0 'struct agg7' sugar
+|   `-RecordType 0x7ff3fe025bf0 'agg7'
+|     `-Record 0x7ff3fe025b60 ''
+|-RecordDecl 0x7ff3fe025da0 <line:10:9, line:13:1> line:10:9 struct definition
+| |-FieldDecl 0x7ff3fe025e68 <line:11:3, col:7> col:7 referenced mbr1 'int'
+| `-FieldDecl 0x7ff3fe025ec8 <line:12:3, col:7> col:7 mbr2 'int'
+|-TypedefDecl 0x7ff3fe025f60 <line:10:1, line:13:3> col:3 referenced agg2 'struct agg2':'agg2'
+| `-ElaboratedType 0x7ff3fe025f10 'struct agg2' sugar
+|   `-RecordType 0x7ff3fe025e30 'agg2'
+|     `-Record 0x7ff3fe025da0 ''
+|-VarDecl 0x7ff3fe025fe8 <line:15:1, col:16> col:5 used expected 'int' cinit
+| `-IntegerLiteral 0x7ff3fe026088 <col:16> 'int' 31415
+|-VarDecl 0x7ff3fe0260e0 <line:16:1, col:6> col:6 used filler 'agg7':'agg7'
+|-FunctionDecl 0x7ff3fe0262f8 <line:18:1, line:21:1> line:18:5 used GetConst 'int (agg7, agg2)'
+| |-ParmVarDecl 0x7ff3fe026150 <col:15, col:20> col:20 filler 'agg7':'agg7'
+| |-ParmVarDecl 0x7ff3fe0261e0 <col:28, col:33> col:33 split 'agg2':'agg2'
+| `-CompoundStmt 0x7ff3fe0263f8 <line:19:1, line:21:1>
+|   `-ReturnStmt 0x7ff3fe0263e0 <line:20:3, col:10>
+|     `-ImplicitCastExpr 0x7ff3fe0263c8 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7ff3fe0263a0 <col:10> 'int' lvalue Var 0x7ff3fe025fe8 'expected' 'int'
+|-FunctionDecl 0x7ff3fe0266d0 <line:23:1, line:27:1> line:23:6 used VerifyValues 'void (agg7, int, int, int)'
+| |-ParmVarDecl 0x7ff3fe026428 <col:20, col:25> col:25 filler 'agg7':'agg7'
+| |-ParmVarDecl 0x7ff3fe0264a0 <col:33, col:37> col:37 last_reg 'int'
+| |-ParmVarDecl 0x7ff3fe026518 <col:47, col:51> col:51 used first_stack 'int'
+| |-ParmVarDecl 0x7ff3fe026590 <col:64, col:68> col:68 used second_stack 'int'
+| `-CompoundStmt 0x7ff3fe0269b0 <line:24:1, line:27:1>
+|   `-IfStmt 0x7ff3fe026978 <line:25:3, line:26:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ff3fe0268b8 <line:25:7, col:45> 'int' '||'
+|     | |-BinaryOperator 0x7ff3fe0267e8 <col:7, col:22> 'int' '!='
+|     | | |-ImplicitCastExpr 0x7ff3fe0267d0 <col:7> 'int' <LValueToRValue>
+|     | | | `-DeclRefExpr 0x7ff3fe026788 <col:7> 'int' lvalue ParmVar 0x7ff3fe026518 'first_stack' 'int'
+|     | | `-IntegerLiteral 0x7ff3fe0267b0 <col:22> 'int' 123
+|     | `-BinaryOperator 0x7ff3fe026890 <col:29, col:45> 'int' '!='
+|     |   |-ImplicitCastExpr 0x7ff3fe026860 <col:29> 'int' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7ff3fe026810 <col:29> 'int' lvalue ParmVar 0x7ff3fe026590 'second_stack' 'int'
+|     |   `-ImplicitCastExpr 0x7ff3fe026878 <col:45> 'int' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7ff3fe026838 <col:45> 'int' lvalue Var 0x7ff3fe025fe8 'expected' 'int'
+|     |-CallExpr 0x7ff3fe026950 <line:26:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7ff3fe026938 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7ff3fe0268e0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff3fe025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7ff3fe02bd00 <line:29:1, line:35:1> line:29:6 used RunTest 'void (agg2)'
+| |-ParmVarDecl 0x7ff3fe02bc00 <col:15, col:20> col:20 used a 'agg2':'agg2'
+| `-CompoundStmt 0x7ff3fe02c1d0 <line:30:1, line:35:1>
+|   |-DeclStmt 0x7ff3fe02be18 <line:31:3, col:13>
+|   | `-VarDecl 0x7ff3fe02bdb8 <col:3, col:7> col:7 used result 'int'
+|   |-BinaryOperator 0x7ff3fe02bfa8 <line:33:3, col:31> 'int' '='
+|   | |-DeclRefExpr 0x7ff3fe02be30 <col:3> 'int' lvalue Var 0x7ff3fe02bdb8 'result' 'int'
+|   | `-CallExpr 0x7ff3fe02bf40 <col:12, col:31> 'int'
+|   |   |-ImplicitCastExpr 0x7ff3fe02bf28 <col:12> 'int (*)(agg7, agg2)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7ff3fe02be58 <col:12> 'int (agg7, agg2)' Function 0x7ff3fe0262f8 'GetConst' 'int (agg7, agg2)'
+|   |   |-ImplicitCastExpr 0x7ff3fe02bf78 <col:22> 'agg7':'agg7' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7ff3fe02be80 <col:22> 'agg7':'agg7' lvalue Var 0x7ff3fe0260e0 'filler' 'agg7':'agg7'
+|   |   `-ImplicitCastExpr 0x7ff3fe02bf90 <col:30> 'agg2':'agg2' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7ff3fe02bea8 <col:30> 'agg2':'agg2' lvalue ParmVar 0x7ff3fe02bc00 'a' 'agg2':'agg2'
+|   `-CallExpr 0x7ff3fe02c140 <line:34:3, col:42> 'void'
+|     |-ImplicitCastExpr 0x7ff3fe02c128 <col:3> 'void (*)(agg7, int, int, int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7ff3fe02bfd0 <col:3> 'void (agg7, int, int, int)' Function 0x7ff3fe0266d0 'VerifyValues' 'void (agg7, int, int, int)'
+|     |-ImplicitCastExpr 0x7ff3fe02c188 <col:17> 'agg7':'agg7' <LValueToRValue>
+|     | `-DeclRefExpr 0x7ff3fe02bff8 <col:17> 'agg7':'agg7' lvalue Var 0x7ff3fe0260e0 'filler' 'agg7':'agg7'
+|     |-IntegerLiteral 0x7ff3fe02c020 <col:25> 'int' 0
+|     |-ImplicitCastExpr 0x7ff3fe02c1a0 <col:28, col:30> 'int' <LValueToRValue>
+|     | `-MemberExpr 0x7ff3fe02c068 <col:28, col:30> 'int' lvalue .mbr1 0x7ff3fe025e68
+|     |   `-DeclRefExpr 0x7ff3fe02c040 <col:28> 'agg2':'agg2' lvalue ParmVar 0x7ff3fe02bc00 'a' 'agg2':'agg2'
+|     `-ImplicitCastExpr 0x7ff3fe02c1b8 <col:36> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7ff3fe02c0a0 <col:36> 'int' lvalue Var 0x7ff3fe02bdb8 'result' 'int'
+`-FunctionDecl 0x7ff3fe02c2c8 <line:37:1, line:42:1> line:37:5 main 'int (void)'
+  `-CompoundStmt 0x7ff3fe02c630 <line:38:1, line:42:1>
+    |-DeclStmt 0x7ff3fe02c4d8 <line:39:3, col:27>
+    | `-VarDecl 0x7ff3fe02c398 <col:3, col:26> col:8 used result 'agg2':'agg2' cinit
+    |   `-InitListExpr 0x7ff3fe02c488 <col:17, col:26> 'agg2':'agg2'
+    |     |-IntegerLiteral 0x7ff3fe02c3f8 <col:18> 'int' 123
+    |     `-IntegerLiteral 0x7ff3fe02c418 <col:23> 'int' 456
+    |-CallExpr 0x7ff3fe02c5b0 <line:40:3, col:18> 'void'
+    | |-ImplicitCastExpr 0x7ff3fe02c598 <col:3> 'void (*)(agg2)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff3fe02c4f0 <col:3> 'void (agg2)' Function 0x7ff3fe02bd00 'RunTest' 'void (agg2)'
+    | `-ImplicitCastExpr 0x7ff3fe02c5e0 <col:12> 'agg2':'agg2' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff3fe02c518 <col:12> 'agg2':'agg2' lvalue Var 0x7ff3fe02c398 'result' 'agg2':'agg2'
+    `-ReturnStmt 0x7ff3fe02c618 <line:41:3, col:10>
+      `-IntegerLiteral 0x7ff3fe02c5f8 <col:10> 'int' 0

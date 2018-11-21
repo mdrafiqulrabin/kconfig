@@ -1,0 +1,73 @@
+FileAST: 
+  Decl: rl, [], [], []
+    TypeDecl: rl, []
+      IdentifierType: ['int']
+  Decl: s8, [], [], []
+    TypeDecl: s8, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: it, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: zy, [], [], []
+            TypeDecl: zy, []
+              IdentifierType: ['int']
+          Decl: el, [], [], []
+            TypeDecl: el, []
+              IdentifierType: ['short', 'int']
+        TypeDecl: it, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: hb, [], [], []
+        TypeDecl: hb, []
+          IdentifierType: ['int']
+      While: 
+        BinaryOp: !=
+          ID: el
+          Constant: int, 0
+        Compound: 
+          Assignment: =
+            ID: hb
+            ID: el
+          For: 
+            Assignment: =
+              ID: rl
+              Constant: int, 0
+            BinaryOp: <
+              ID: rl
+              Constant: int, 200
+            UnaryOp: ++
+              ID: rl
+            Compound: 
+              For: 
+                Assignment: =
+                  ID: s8
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: s8
+                  Constant: int, 2
+                UnaryOp: ++
+                  ID: s8
+                Compound: 
+              If: 
+                BinaryOp: <
+                  ID: s8
+                  Constant: int, 3
+                Assignment: =
+                  ID: zy
+                  ID: hb
+              If: 
+                BinaryOp: ==
+                  ID: hb
+                  Constant: int, 0
+                UnaryOp: ++
+                  ID: s8
+              Assignment: +=
+                ID: zy
+                BinaryOp: !=
+                  ID: s8
+                  UnaryOp: -
+                    Constant: int, 1
+          Assignment: =
+            ID: el
+            ID: zy

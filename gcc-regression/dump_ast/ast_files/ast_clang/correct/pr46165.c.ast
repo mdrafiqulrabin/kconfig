@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fe3a30264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe3a3026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe3a3026740 '__int128'
+|-TypedefDecl 0x7fe3a3026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe3a3026760 'unsigned __int128'
+|-TypedefDecl 0x7fe3a3026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe3a3026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe3a3026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe3a3026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe3a3026dc0 'char *'
+|   `-BuiltinType 0x7fe3a3026560 'char'
+|-TypedefDecl 0x7fe3a30270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe3a3027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe3a3026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe3a3026e58 '__va_list_tag'
+|-FunctionDecl 0x7fe3a3826a20 <c_files/pr46165.c:5:1, col:48> col:13 used foo 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fe3a3826b88 <line:6:1, line:11:1> line:7:1 g 'void (void)'
+  `-CompoundStmt 0x7fe3a3826ea8 <line:8:1, line:11:1>
+    |-DeclStmt 0x7fe3a3826e28 <line:9:3, col:25>
+    | `-VarDecl 0x7fe3a3826d48 <col:3, col:22> col:10 used f 'void (*)(void)' cinit
+    |   `-ImplicitCastExpr 0x7fe3a3826e10 <col:22> 'void (*)(void)' <BitCast>
+    |     `-ImplicitCastExpr 0x7fe3a3826df8 <col:22> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fe3a3826da8 <col:22> 'void (void) __attribute__((noreturn))' Function 0x7fe3a3826a20 'foo' 'void (void) __attribute__((noreturn))'
+    `-CallExpr 0x7fe3a3826e80 <line:10:3, col:6> 'void'
+      `-ImplicitCastExpr 0x7fe3a3826e68 <col:3> 'void (*)(void)' <LValueToRValue>
+        `-DeclRefExpr 0x7fe3a3826e40 <col:3> 'void (*)(void)' lvalue Var 0x7fe3a3826d48 'f' 'void (*)(void)'

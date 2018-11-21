@@ -1,0 +1,75 @@
+TranslationUnitDecl 0x7fc2158264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc215826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc215826740 '__int128'
+|-TypedefDecl 0x7fc215826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc215826760 'unsigned __int128'
+|-TypedefDecl 0x7fc215826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc215826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc215826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc215826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc215826dc0 'char *'
+|   `-BuiltinType 0x7fc215826560 'char'
+|-TypedefDecl 0x7fc2158270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc215827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc215826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc215826e58 '__va_list_tag'
+|-TypedefDecl 0x7fc215827178 <c_files/pr45678-2.c:4:1, col:15> col:15 referenced V '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7fc215827140 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7fc2158266c0 'float'
+|-VarDecl 0x7fc215878400 <line:5:1, col:3> col:3 used g 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-FunctionDecl 0x7fc2158784f0 <line:7:1, line:17:1> line:8:1 main 'int ()'
+| `-CompoundStmt 0x7fc215879178 <line:9:1, line:17:1>
+|   |-DeclStmt 0x7fc215878810 <line:10:3, col:30>
+|   | `-VarDecl 0x7fc215878610 <col:3, col:29> col:9 used d 'float [4]' cinit
+|   |   `-InitListExpr 0x7fc215878750 <col:16, col:29> 'float [4]'
+|   |     |-ImplicitCastExpr 0x7fc2158787b0 <col:18> 'float' <IntegralToFloating>
+|   |     | `-IntegerLiteral 0x7fc215878670 <col:18> 'int' 4
+|   |     |-ImplicitCastExpr 0x7fc2158787c8 <col:21> 'float' <IntegralToFloating>
+|   |     | `-IntegerLiteral 0x7fc215878690 <col:21> 'int' 3
+|   |     |-ImplicitCastExpr 0x7fc2158787e0 <col:24> 'float' <IntegralToFloating>
+|   |     | `-IntegerLiteral 0x7fc2158786b0 <col:24> 'int' 2
+|   |     `-ImplicitCastExpr 0x7fc2158787f8 <col:27> 'float' <IntegralToFloating>
+|   |       `-IntegerLiteral 0x7fc2158786d0 <col:27> 'int' 1
+|   |-DeclStmt 0x7fc215878898 <line:11:3, col:6>
+|   | `-VarDecl 0x7fc215878838 <col:3, col:5> col:5 used e 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|   |-CallExpr 0x7fc215878d20 <line:12:3, col:39> 'void *'
+|   | |-ImplicitCastExpr 0x7fc215878d08 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fc215878b40 <col:3> '<builtin fn type>' Function 0x7fc215878928 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7fc215878d60 <col:21, col:22> 'void *' <BitCast>
+|   | | `-UnaryOperator 0x7fc215878be8 <col:21, col:22> 'V *' prefix '&'
+|   | |   `-DeclRefExpr 0x7fc215878b68 <col:22> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fc215878838 'e' 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|   | |-ImplicitCastExpr 0x7fc215878d78 <col:25, col:26> 'const void *' <BitCast>
+|   | | `-UnaryOperator 0x7fc215878c58 <col:25, col:26> 'float (*)[4]' prefix '&'
+|   | |   `-DeclRefExpr 0x7fc215878c08 <col:26> 'float [4]' lvalue Var 0x7fc215878610 'd' 'float [4]'
+|   | `-UnaryExprOrTypeTraitExpr 0x7fc215878cc0 <col:29, col:38> 'unsigned long' sizeof
+|   |   `-ParenExpr 0x7fc215878ca0 <col:36, col:38> 'float [4]' lvalue
+|   |     `-DeclRefExpr 0x7fc215878c78 <col:37> 'float [4]' lvalue Var 0x7fc215878610 'd' 'float [4]'
+|   |-DeclStmt 0x7fc215878fa0 <line:13:3, col:26>
+|   | `-VarDecl 0x7fc215878da0 <col:3, col:25> col:5 used f 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+|   |   `-InitListExpr 0x7fc215878ee0 <col:9, col:25> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|   |     |-ImplicitCastExpr 0x7fc215878f40 <col:11> 'float' <IntegralToFloating>
+|   |     | `-IntegerLiteral 0x7fc215878e00 <col:11> 'int' 5
+|   |     |-ImplicitCastExpr 0x7fc215878f58 <col:14> 'float' <IntegralToFloating>
+|   |     | `-IntegerLiteral 0x7fc215878e20 <col:14> 'int' 15
+|   |     |-ImplicitCastExpr 0x7fc215878f70 <col:18> 'float' <IntegralToFloating>
+|   |     | `-IntegerLiteral 0x7fc215878e40 <col:18> 'int' 25
+|   |     `-ImplicitCastExpr 0x7fc215878f88 <col:22> 'float' <IntegralToFloating>
+|   |       `-IntegerLiteral 0x7fc215878e60 <col:22> 'int' 35
+|   |-BinaryOperator 0x7fc215879088 <line:14:3, col:11> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+|   | |-DeclRefExpr 0x7fc215878fb8 <col:3> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fc215878838 'e' 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|   | `-BinaryOperator 0x7fc215879060 <col:7, col:11> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '*'
+|   |   |-ImplicitCastExpr 0x7fc215879030 <col:7> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fc215878fe0 <col:7> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fc215878838 'e' 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|   |   `-ImplicitCastExpr 0x7fc215879048 <col:11> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fc215879008 <col:11> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fc215878da0 'f' 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|   |-BinaryOperator 0x7fc215879118 <line:15:3, col:7> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+|   | |-DeclRefExpr 0x7fc2158790b0 <col:3> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fc215878400 'g' 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|   | `-ImplicitCastExpr 0x7fc215879100 <col:7> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc2158790d8 <col:7> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fc215878838 'e' 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|   `-ReturnStmt 0x7fc215879160 <line:16:3, col:10>
+|     `-IntegerLiteral 0x7fc215879140 <col:10> 'int' 0
+`-FunctionDecl 0x7fc215878928 <line:12:3> col:3 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7fc2158789c0 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fc215878a20 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fc215878a80 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fc215878af8 <col:3> Implicit

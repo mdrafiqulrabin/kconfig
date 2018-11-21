@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7f8f010264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8f01026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8f01026740 '__int128'
+|-TypedefDecl 0x7f8f01026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8f01026760 'unsigned __int128'
+|-TypedefDecl 0x7f8f01026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8f01026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8f01026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8f01026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8f01026dc0 'char *'
+|   `-BuiltinType 0x7f8f01026560 'char'
+|-TypedefDecl 0x7f8f010270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8f01027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8f01026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8f01026e58 '__va_list_tag'
+|-VarDecl 0x7f8f01027160 <c_files/pr83463.c:5:1, col:6> col:6 used a 'int *'
+|-FunctionDecl 0x7f8f010774c8 <line:6:7> col:7 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f8f01077560 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f8f010775c0 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7f8f01077620 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f8f01077698 prev 0x7f8f010774c8 <col:1, col:15> col:7 used memcpy 'void *(void *, const void *, unsigned long)'
+| |-ParmVarDecl 0x7f8f01077730 <<invalid sloc>> <invalid sloc> implicit 'void *'
+| |-ParmVarDecl 0x7f8f01077790 <<invalid sloc>> <invalid sloc> implicit 'const void *'
+| `-ParmVarDecl 0x7f8f010777f0 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
+|-FunctionDecl 0x7f8f01077940 <line:7:1, line:11:1> line:8:1 used m 'void (void *)'
+| |-ParmVarDecl 0x7f8f01077880 <col:4, col:10> col:10 used p1 'void *'
+| `-CompoundStmt 0x7f8f01077b70 <line:9:1, line:11:1>
+|   `-CallExpr 0x7f8f01077ad0 <line:10:3, col:19> 'void *'
+|     |-ImplicitCastExpr 0x7f8f01077ab8 <col:3> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f8f010779e0 <col:3> 'void *(void *, const void *, unsigned long)' Function 0x7f8f01077698 'memcpy' 'void *(void *, const void *, unsigned long)'
+|     |-ImplicitCastExpr 0x7f8f01077b10 <col:11> 'void *' <NullToPointer>
+|     | `-IntegerLiteral 0x7f8f01077a08 <col:11> 'int' 0
+|     |-ImplicitCastExpr 0x7f8f01077b40 <col:14> 'const void *' <BitCast>
+|     | `-ImplicitCastExpr 0x7f8f01077b28 <col:14> 'void *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f8f01077a28 <col:14> 'void *' lvalue ParmVar 0x7f8f01077880 'p1' 'void *'
+|     `-ImplicitCastExpr 0x7f8f01077b58 <col:18> 'unsigned long' <IntegralCast>
+|       `-IntegerLiteral 0x7f8f01077a50 <col:18> 'int' 0
+`-FunctionDecl 0x7f8f01077bd8 <line:13:1, line:17:1> line:14:1 referenced p 'void ()'
+  `-CompoundStmt 0x7f8f01077e38 <line:15:1, line:17:1>
+    `-CallExpr 0x7f8f01077df0 <line:16:3, col:18> 'void'
+      |-ImplicitCastExpr 0x7f8f01077dd8 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8f01077c70 <col:3> 'void (void *)' Function 0x7f8f01077940 'm' 'void (void *)'
+      `-ImplicitCastExpr 0x7f8f01077e20 <col:6, col:17> 'void *' <BitCast>
+        `-BinaryOperator 0x7f8f01077d80 <col:6, col:17> 'void (*)()' '+'
+          |-ImplicitCastExpr 0x7f8f01077d68 <col:6> 'void (*)()' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7f8f01077c98 <col:6> 'void ()' Function 0x7f8f01077bd8 'p' 'void ()'
+          `-CStyleCastExpr 0x7f8f01077d18 <col:10, col:17> 'long' <PointerToIntegral>
+            `-ImplicitCastExpr 0x7f8f01077d00 <col:17> 'int *' <LValueToRValue>
+              `-DeclRefExpr 0x7f8f01077cc0 <col:17> 'int *' lvalue Var 0x7f8f01027160 'a' 'int *'

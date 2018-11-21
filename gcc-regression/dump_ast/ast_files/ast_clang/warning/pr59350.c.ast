@@ -1,0 +1,272 @@
+c_files/pr59350.c:73:37: warning: implicit conversion from 'int' to 'char' changes value from 128 to -128 [-Wconstant-conversion]
+  char StdR = kDNSFlag0_QR_Response | kDNSFlag0_OP_StdQuery;
+       ~~~~   ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+TranslationUnitDecl 0x7fcd9e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcd9e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcd9e826740 '__int128'
+|-TypedefDecl 0x7fcd9e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcd9e826760 'unsigned __int128'
+|-TypedefDecl 0x7fcd9e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcd9e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcd9e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcd9e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcd9e826dc0 'char *'
+|   `-BuiltinType 0x7fcd9e826560 'char'
+|-TypedefDecl 0x7fcd9e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcd9e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcd9e826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcd9e826e58 '__va_list_tag'
+|-RecordDecl 0x7fcd9e827120 <c_files/pr59350.c:7:9, line:11:1> line:7:9 union definition
+| |-FieldDecl 0x7fcd9f025a58 <line:9:3, col:11> col:8 referenced b 'char [2]'
+| `-FieldDecl 0x7fcd9f025ab8 <line:10:3, col:9> col:9 referenced NotAnInteger 'short'
+|-TypedefDecl 0x7fcd9f025b50 <line:7:1, line:12:1> col:1 referenced mDNSOpaque16 'union mDNSOpaque16':'mDNSOpaque16'
+| `-ElaboratedType 0x7fcd9f025b00 'union mDNSOpaque16' sugar
+|   `-RecordType 0x7fcd9e8271b0 'mDNSOpaque16'
+|     `-Record 0x7fcd9e827120 ''
+|-TypedefDecl 0x7fcd9f025bf0 <line:13:1, col:22> col:22 referenced mDNSIPPort 'mDNSOpaque16':'mDNSOpaque16'
+| `-TypedefType 0x7fcd9f025bc0 'mDNSOpaque16' sugar
+|   |-Typedef 0x7fcd9f025b50 'mDNSOpaque16'
+|   `-ElaboratedType 0x7fcd9f025b00 'union mDNSOpaque16' sugar
+|     `-RecordType 0x7fcd9e8271b0 'mDNSOpaque16'
+|       `-Record 0x7fcd9e827120 ''
+|-RecordDecl 0x7fcd9f025c48 <line:14:9, line:16:1> line:14:9 struct definition
+|-TypedefDecl 0x7fcd9f025d40 <col:1, line:17:1> col:1 referenced mDNSAddr 'struct mDNSAddr':'mDNSAddr'
+| `-ElaboratedType 0x7fcd9f025cf0 'struct mDNSAddr' sugar
+|   `-RecordType 0x7fcd9f025cd0 'mDNSAddr'
+|     `-Record 0x7fcd9f025c48 ''
+|-RecordDecl 0x7fcd9f025db0 <line:18:9, col:16> col:16 struct DNSQuestion_struct
+|-TypedefDecl 0x7fcd9f025eb0 <col:1, col:35> col:35 referenced DNSQuestion 'struct DNSQuestion_struct':'struct DNSQuestion_struct'
+| `-ElaboratedType 0x7fcd9f025e60 'struct DNSQuestion_struct' sugar
+|   `-RecordType 0x7fcd9f025e40 'struct DNSQuestion_struct'
+|     `-Record 0x7fcd9f0265e0 'DNSQuestion_struct'
+|-RecordDecl 0x7fcd9f025f20 <line:19:9, col:16> col:16 struct mDNS_struct
+|-TypedefDecl 0x7fcd9f026020 <col:1, col:28> col:28 referenced mDNS 'struct mDNS_struct':'struct mDNS_struct'
+| `-ElaboratedType 0x7fcd9f025fd0 'struct mDNS_struct' sugar
+|   `-RecordType 0x7fcd9f025fb0 'struct mDNS_struct'
+|     `-Record 0x7fcd9f0267f8 'mDNS_struct'
+|-RecordDecl 0x7fcd9f026090 <line:20:9, line:24:1> line:20:9 struct definition
+| |-PackedAttr 0x7fcd9f026140 <col:32>
+| |-FieldDecl 0x7fcd9f026198 <line:22:3, col:16> col:16 referenced id 'mDNSOpaque16':'mDNSOpaque16'
+| `-FieldDecl 0x7fcd9f0261f0 <line:23:3, col:16> col:16 referenced flags 'mDNSOpaque16':'mDNSOpaque16'
+|-TypedefDecl 0x7fcd9f0262e0 <line:20:1, line:26:1> col:1 referenced DNSMessageHeader 'struct DNSMessageHeader':'DNSMessageHeader'
+| `-ElaboratedType 0x7fcd9f026290 'struct DNSMessageHeader' sugar
+|   `-RecordType 0x7fcd9f026120 'DNSMessageHeader'
+|     `-Record 0x7fcd9f026090 ''
+|-RecordDecl 0x7fcd9f026350 <line:27:9, line:30:1> line:27:9 struct definition
+| |-PackedAttr 0x7fcd9f026400 <col:32>
+| `-FieldDecl 0x7fcd9f026480 <line:29:3, col:20> col:20 referenced h 'DNSMessageHeader':'DNSMessageHeader'
+|-TypedefDecl 0x7fcd9f026570 <line:27:1, line:32:1> col:1 referenced DNSMessage 'struct DNSMessage':'DNSMessage'
+| `-ElaboratedType 0x7fcd9f026520 'struct DNSMessage' sugar
+|   `-RecordType 0x7fcd9f0263e0 'DNSMessage'
+|     `-Record 0x7fcd9f026350 ''
+|-RecordDecl 0x7fcd9f0265e0 prev 0x7fcd9f025db0 <line:33:1, line:38:1> line:33:8 struct DNSQuestion_struct definition
+| |-FieldDecl 0x7fcd9f0266f8 <line:35:3, col:16> col:16 referenced next 'DNSQuestion *'
+| |-FieldDecl 0x7fcd9f026758 <line:36:3, col:8> col:8 referenced LastQTime 'long'
+| `-FieldDecl 0x7fcd9f0267b0 <line:37:3, col:16> col:16 referenced TargetQID 'mDNSOpaque16':'mDNSOpaque16'
+|-RecordDecl 0x7fcd9f0267f8 prev 0x7fcd9f025f20 <line:39:1, line:43:1> line:39:8 struct mDNS_struct definition
+| |-FieldDecl 0x7fcd9f026898 <line:41:3, col:8> col:8 referenced timenow 'long'
+| `-FieldDecl 0x7fcd9f0268f0 <line:42:3, col:16> col:16 referenced Questions 'DNSQuestion *'
+|-VarDecl 0x7fcd9f026950 <line:44:1, col:13> col:13 used mDNSPlatformOneSecond 'long' extern
+|-EnumDecl 0x7fcd9f800000 <line:45:9, line:61:1> line:45:9
+| |-EnumConstantDecl 0x7fcd9f8000e0 <line:47:3, col:23> col:3 referenced kDNSFlag0_QR_Mask 'int'
+| | `-IntegerLiteral 0x7fcd9f8000c0 <col:23> 'int' 128
+| |-EnumConstantDecl 0x7fcd9f800148 <col:29, col:50> col:29 kDNSFlag0_QR_Query 'int'
+| | `-IntegerLiteral 0x7fcd9f800128 <col:50> 'int' 0
+| |-EnumConstantDecl 0x7fcd9f8001b0 <col:56, line:48:5> line:47:56 referenced kDNSFlag0_QR_Response 'int'
+| | `-IntegerLiteral 0x7fcd9f800190 <line:48:5> 'int' 128
+| |-EnumConstantDecl 0x7fcd9f800218 <col:11, col:31> col:11 referenced kDNSFlag0_OP_Mask 'int'
+| | `-IntegerLiteral 0x7fcd9f8001f8 <col:31> 'int' 120
+| |-EnumConstantDecl 0x7fcd9f800280 <col:37, line:49:5> line:48:37 referenced kDNSFlag0_OP_StdQuery 'int'
+| | `-IntegerLiteral 0x7fcd9f800260 <line:49:5> 'int' 0
+| |-EnumConstantDecl 0x7fcd9f8002e8 <col:11, col:33> col:11 kDNSFlag0_OP_Iquery 'int'
+| | `-IntegerLiteral 0x7fcd9f8002c8 <col:33> 'int' 8
+| |-EnumConstantDecl 0x7fcd9f800350 <col:39, line:50:5> line:49:39 kDNSFlag0_OP_Status 'int'
+| | `-IntegerLiteral 0x7fcd9f800330 <line:50:5> 'int' 16
+| |-EnumConstantDecl 0x7fcd9f8003b8 <col:11, col:34> col:11 kDNSFlag0_OP_Unused3 'int'
+| | `-IntegerLiteral 0x7fcd9f800398 <col:34> 'int' 24
+| |-EnumConstantDecl 0x7fcd9f800420 <col:40, line:51:5> line:50:40 kDNSFlag0_OP_Notify 'int'
+| | `-IntegerLiteral 0x7fcd9f800400 <line:51:5> 'int' 32
+| |-EnumConstantDecl 0x7fcd9f800488 <col:11, col:33> col:11 kDNSFlag0_OP_Update 'int'
+| | `-IntegerLiteral 0x7fcd9f800468 <col:33> 'int' 40
+| |-EnumConstantDecl 0x7fcd9f800548 <col:39, line:52:25> line:51:39 referenced kDNSFlag0_QROP_Mask 'int'
+| | `-BinaryOperator 0x7fcd9f800520 <line:52:5, col:25> 'int' '|'
+| |   |-DeclRefExpr 0x7fcd9f8004d0 <col:5> 'int' EnumConstant 0x7fcd9f8000e0 'kDNSFlag0_QR_Mask' 'int'
+| |   `-DeclRefExpr 0x7fcd9f8004f8 <col:25> 'int' EnumConstant 0x7fcd9f800218 'kDNSFlag0_OP_Mask' 'int'
+| |-EnumConstantDecl 0x7fcd9f8005b0 <col:44, col:59> col:44 kDNSFlag0_AA 'int'
+| | `-IntegerLiteral 0x7fcd9f800590 <col:59> 'int' 4
+| |-EnumConstantDecl 0x7fcd9f800618 <col:65, line:53:5> line:52:65 referenced kDNSFlag0_TC 'int'
+| | `-IntegerLiteral 0x7fcd9f8005f8 <line:53:5> 'int' 2
+| |-EnumConstantDecl 0x7fcd9f800680 <col:11, col:26> col:11 kDNSFlag0_RD 'int'
+| | `-IntegerLiteral 0x7fcd9f800660 <col:26> 'int' 1
+| |-EnumConstantDecl 0x7fcd9f8006e8 <col:32, col:47> col:32 kDNSFlag1_RA 'int'
+| | `-IntegerLiteral 0x7fcd9f8006c8 <col:47> 'int' 128
+| |-EnumConstantDecl 0x7fcd9f800750 <col:53, line:54:5> line:53:53 kDNSFlag1_Zero 'int'
+| | `-IntegerLiteral 0x7fcd9f800730 <line:54:5> 'int' 64
+| |-EnumConstantDecl 0x7fcd9f8007b8 <col:11, col:26> col:11 kDNSFlag1_AD 'int'
+| | `-IntegerLiteral 0x7fcd9f800798 <col:26> 'int' 32
+| |-EnumConstantDecl 0x7fcd9f800820 <col:32, col:47> col:32 kDNSFlag1_CD 'int'
+| | `-IntegerLiteral 0x7fcd9f800800 <col:47> 'int' 16
+| |-EnumConstantDecl 0x7fcd9f800888 <col:53, line:55:5> line:54:53 kDNSFlag1_RC_Mask 'int'
+| | `-IntegerLiteral 0x7fcd9f800868 <line:55:5> 'int' 15
+| |-EnumConstantDecl 0x7fcd9f8008f0 <col:11, col:32> col:11 kDNSFlag1_RC_NoErr 'int'
+| | `-IntegerLiteral 0x7fcd9f8008d0 <col:32> 'int' 0
+| |-EnumConstantDecl 0x7fcd9f800958 <col:38, line:56:5> line:55:38 kDNSFlag1_RC_FormErr 'int'
+| | `-IntegerLiteral 0x7fcd9f800938 <line:56:5> 'int' 1
+| |-EnumConstantDecl 0x7fcd9f8009c0 <col:11, col:35> col:11 kDNSFlag1_RC_ServFail 'int'
+| | `-IntegerLiteral 0x7fcd9f8009a0 <col:35> 'int' 2
+| |-EnumConstantDecl 0x7fcd9f800a28 <col:41, line:57:5> line:56:41 kDNSFlag1_RC_NXDomain 'int'
+| | `-IntegerLiteral 0x7fcd9f800a08 <line:57:5> 'int' 3
+| |-EnumConstantDecl 0x7fcd9f800a90 <col:11, col:34> col:11 kDNSFlag1_RC_NotImpl 'int'
+| | `-IntegerLiteral 0x7fcd9f800a70 <col:34> 'int' 4
+| |-EnumConstantDecl 0x7fcd9f800af8 <col:40, line:58:5> line:57:40 kDNSFlag1_RC_Refused 'int'
+| | `-IntegerLiteral 0x7fcd9f800ad8 <line:58:5> 'int' 5
+| |-EnumConstantDecl 0x7fcd9f800b60 <col:11, col:35> col:11 kDNSFlag1_RC_YXDomain 'int'
+| | `-IntegerLiteral 0x7fcd9f800b40 <col:35> 'int' 6
+| |-EnumConstantDecl 0x7fcd9f800bc8 <col:41, line:59:5> line:58:41 kDNSFlag1_RC_YXRRSet 'int'
+| | `-IntegerLiteral 0x7fcd9f800ba8 <line:59:5> 'int' 7
+| |-EnumConstantDecl 0x7fcd9f800c30 <col:11, col:34> col:11 kDNSFlag1_RC_NXRRSet 'int'
+| | `-IntegerLiteral 0x7fcd9f800c10 <col:34> 'int' 8
+| |-EnumConstantDecl 0x7fcd9f800c98 <col:40, line:60:5> line:59:40 kDNSFlag1_RC_NotAuth 'int'
+| | `-IntegerLiteral 0x7fcd9f800c78 <line:60:5> 'int' 9
+| `-EnumConstantDecl 0x7fcd9f800d00 <col:11, col:34> col:11 kDNSFlag1_RC_NotZone 'int'
+|   `-IntegerLiteral 0x7fcd9f800ce0 <col:34> 'int' 10
+|-TypedefDecl 0x7fcd9f800da0 <line:45:1, line:62:1> col:1 TSIG_ErrorCode 'enum TSIG_ErrorCode':'TSIG_ErrorCode'
+| `-ElaboratedType 0x7fcd9f800d50 'enum TSIG_ErrorCode' sugar
+|   `-EnumType 0x7fcd9f8000a0 'TSIG_ErrorCode'
+|     `-Enum 0x7fcd9f800000 ''
+|-FunctionDecl 0x7fcd9e81b8e8 <line:63:1, line:66:27> line:63:5 used uDNS_ReceiveTestQuestionResponse 'int (mDNS *const, DNSMessage *const, const char *const, const mDNSAddr *const, const mDNSIPPort)'
+| |-ParmVarDecl 0x7fcd9f800e98 <col:39, col:44> col:51 'mDNS *const'
+| |-ParmVarDecl 0x7fcd9f800f88 <col:53, col:64> col:71 'DNSMessage *const'
+| |-ParmVarDecl 0x7fcd9e81b600 <line:64:11, col:22> col:29 'const char *const'
+| |-ParmVarDecl 0x7fcd9e81b6e8 <line:65:11, col:26> col:33 'const mDNSAddr *const'
+| `-ParmVarDecl 0x7fcd9e81b780 <line:66:11, col:17> col:27 'const mDNSIPPort':'const mDNSOpaque16'
+`-FunctionDecl 0x7fcd9e81bce0 <line:67:1, line:86:1> line:68:1 uDNS_ReceiveMsg 'void (mDNS *const, DNSMessage *const, const char *const, const mDNSAddr *const, const mDNSIPPort)'
+  |-ParmVarDecl 0x7fcd9e81b9b8 <col:18, col:31> col:31 used m 'mDNS *const'
+  |-ParmVarDecl 0x7fcd9e81ba28 <col:34, col:53> col:53 used msg 'DNSMessage *const'
+  |-ParmVarDecl 0x7fcd9e81baa0 <line:69:4, col:23> col:23 used end 'const char *const'
+  |-ParmVarDecl 0x7fcd9e81bb10 <col:28, col:51> col:51 used srcaddr 'const mDNSAddr *const'
+  |-ParmVarDecl 0x7fcd9e81bb80 <line:70:4, col:21> col:21 used srcport 'const mDNSIPPort':'const mDNSOpaque16'
+  `-CompoundStmt 0x7fcd9e856d48 <line:71:1, line:86:1>
+    |-DeclStmt 0x7fcd9e81be10 <line:72:3, col:20>
+    | `-VarDecl 0x7fcd9e81bdb0 <col:3, col:16> col:16 used qptr 'DNSQuestion *'
+    |-DeclStmt 0x7fcd9e81bf28 <line:73:3, col:60>
+    | `-VarDecl 0x7fcd9e81be38 <col:3, col:39> col:8 used StdR 'char' cinit
+    |   `-ImplicitCastExpr 0x7fcd9e81bf10 <col:15, col:39> 'char' <IntegralCast>
+    |     `-BinaryOperator 0x7fcd9e81bee8 <col:15, col:39> 'int' '|'
+    |       |-DeclRefExpr 0x7fcd9e81be98 <col:15> 'int' EnumConstant 0x7fcd9f8001b0 'kDNSFlag0_QR_Response' 'int'
+    |       `-DeclRefExpr 0x7fcd9e81bec0 <col:39> 'int' EnumConstant 0x7fcd9f800280 'kDNSFlag0_OP_StdQuery' 'int'
+    |-DeclStmt 0x7fcd9e81c200 <line:74:3, col:64>
+    | `-VarDecl 0x7fcd9e81bf50 <col:3, col:63> col:8 used QR_OP 'char' cinit
+    |   `-CStyleCastExpr 0x7fcd9e81c1d8 <col:16, col:63> 'char' <IntegralCast>
+    |     `-ParenExpr 0x7fcd9e81c1b8 <col:23, col:63> 'int'
+    |       `-BinaryOperator 0x7fcd9e81c150 <col:24, col:44> 'int' '&'
+    |         |-ImplicitCastExpr 0x7fcd9e81c138 <col:24, col:40> 'int' <IntegralCast>
+    |         | `-ImplicitCastExpr 0x7fcd9e81c120 <col:24, col:40> 'char' <LValueToRValue>
+    |         |   `-ArraySubscriptExpr 0x7fcd9e81c0d0 <col:24, col:40> 'char' lvalue
+    |         |     |-ImplicitCastExpr 0x7fcd9e81c0b8 <col:24, col:37> 'char *' <ArrayToPointerDecay>
+    |         |     | `-MemberExpr 0x7fcd9e81c060 <col:24, col:37> 'char [2]' lvalue .b 0x7fcd9f025a58
+    |         |     |   `-MemberExpr 0x7fcd9e81c028 <col:24, col:31> 'mDNSOpaque16':'mDNSOpaque16' lvalue .flags 0x7fcd9f0261f0
+    |         |     |     `-MemberExpr 0x7fcd9e81bff0 <col:24, col:29> 'DNSMessageHeader':'DNSMessageHeader' lvalue ->h 0x7fcd9f026480
+    |         |     |       `-ImplicitCastExpr 0x7fcd9e81bfd8 <col:24> 'DNSMessage *' <LValueToRValue>
+    |         |     |         `-DeclRefExpr 0x7fcd9e81bfb0 <col:24> 'DNSMessage *const' lvalue ParmVar 0x7fcd9e81ba28 'msg' 'DNSMessage *const'
+    |         |     `-IntegerLiteral 0x7fcd9e81c098 <col:39> 'int' 0
+    |         `-DeclRefExpr 0x7fcd9e81c0f8 <col:44> 'int' EnumConstant 0x7fcd9f800548 'kDNSFlag0_QROP_Mask' 'int'
+    `-IfStmt 0x7fcd9e856d10 <line:75:3, line:85:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fcd9e81c2c8 <line:75:7, col:16> 'int' '=='
+      | |-ImplicitCastExpr 0x7fcd9e81c280 <col:7> 'int' <IntegralCast>
+      | | `-ImplicitCastExpr 0x7fcd9e81c268 <col:7> 'char' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fcd9e81c218 <col:7> 'char' lvalue Var 0x7fcd9e81bf50 'QR_OP' 'char'
+      | `-ImplicitCastExpr 0x7fcd9e81c2b0 <col:16> 'int' <IntegralCast>
+      |   `-ImplicitCastExpr 0x7fcd9e81c298 <col:16> 'char' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fcd9e81c240 <col:16> 'char' lvalue Var 0x7fcd9e81be38 'StdR' 'char'
+      |-CompoundStmt 0x7fcd9e856ce8 <line:76:5, line:85:5>
+      | |-IfStmt 0x7fcd9e81c530 <line:77:6, line:78:2>
+      | | |-<<<NULL>>>
+      | | |-<<<NULL>>>
+      | | |-CallExpr 0x7fcd9e81c450 <line:77:10, col:73> 'int'
+      | | | |-ImplicitCastExpr 0x7fcd9e81c438 <col:10> 'int (*)(mDNS *const, DNSMessage *const, const char *const, const mDNSAddr *const, const mDNSIPPort)' <FunctionToPointerDecay>
+      | | | | `-DeclRefExpr 0x7fcd9e81c2f0 <col:10> 'int (mDNS *const, DNSMessage *const, const char *const, const mDNSAddr *const, const mDNSIPPort)' Function 0x7fcd9e81b8e8 'uDNS_ReceiveTestQuestionResponse' 'int (mDNS *const, DNSMessage *const, const char *const, const mDNSAddr *const, const mDNSIPPort)'
+      | | | |-ImplicitCastExpr 0x7fcd9e81c4a0 <col:44> 'mDNS *' <LValueToRValue>
+      | | | | `-DeclRefExpr 0x7fcd9e81c318 <col:44> 'mDNS *const' lvalue ParmVar 0x7fcd9e81b9b8 'm' 'mDNS *const'
+      | | | |-ImplicitCastExpr 0x7fcd9e81c4b8 <col:47> 'DNSMessage *' <LValueToRValue>
+      | | | | `-DeclRefExpr 0x7fcd9e81c340 <col:47> 'DNSMessage *const' lvalue ParmVar 0x7fcd9e81ba28 'msg' 'DNSMessage *const'
+      | | | |-ImplicitCastExpr 0x7fcd9e81c4d0 <col:52> 'const char *' <LValueToRValue>
+      | | | | `-DeclRefExpr 0x7fcd9e81c368 <col:52> 'const char *const' lvalue ParmVar 0x7fcd9e81baa0 'end' 'const char *const'
+      | | | |-ImplicitCastExpr 0x7fcd9e81c4e8 <col:57> 'const mDNSAddr *' <LValueToRValue>
+      | | | | `-DeclRefExpr 0x7fcd9e81c390 <col:57> 'const mDNSAddr *const' lvalue ParmVar 0x7fcd9e81bb10 'srcaddr' 'const mDNSAddr *const'
+      | | | `-ImplicitCastExpr 0x7fcd9e81c500 <col:66> 'mDNSIPPort':'mDNSOpaque16' <LValueToRValue>
+      | | |   `-DeclRefExpr 0x7fcd9e81c3b8 <col:66> 'const mDNSIPPort':'const mDNSOpaque16' lvalue ParmVar 0x7fcd9e81bb80 'srcport' 'const mDNSIPPort':'const mDNSOpaque16'
+      | | |-ReturnStmt 0x7fcd9e81c518 <line:78:2>
+      | | `-<<<NULL>>>
+      | `-ForStmt 0x7fcd9e856cb0 <line:79:7, line:84:4>
+      |   |-BinaryOperator 0x7fcd9e856450 <line:79:12, col:22> 'DNSQuestion *' '='
+      |   | |-DeclRefExpr 0x7fcd9e81c568 <col:12> 'DNSQuestion *' lvalue Var 0x7fcd9e81bdb0 'qptr' 'DNSQuestion *'
+      |   | `-ImplicitCastExpr 0x7fcd9e856438 <col:19, col:22> 'DNSQuestion *' <LValueToRValue>
+      |   |   `-MemberExpr 0x7fcd9e856400 <col:19, col:22> 'DNSQuestion *' lvalue ->Questions 0x7fcd9f0268f0
+      |   |     `-ImplicitCastExpr 0x7fcd9e81c5b8 <col:19> 'mDNS *' <LValueToRValue>
+      |   |       `-DeclRefExpr 0x7fcd9e81c590 <col:19> 'mDNS *const' lvalue ParmVar 0x7fcd9e81b9b8 'm' 'mDNS *const'
+      |   |-<<<NULL>>>
+      |   |-ImplicitCastExpr 0x7fcd9e8564a0 <col:33> 'DNSQuestion *' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fcd9e856478 <col:33> 'DNSQuestion *' lvalue Var 0x7fcd9e81bdb0 'qptr' 'DNSQuestion *'
+      |   |-BinaryOperator 0x7fcd9e856570 <col:39, col:52> 'DNSQuestion *' '='
+      |   | |-DeclRefExpr 0x7fcd9e8564b8 <col:39> 'DNSQuestion *' lvalue Var 0x7fcd9e81bdb0 'qptr' 'DNSQuestion *'
+      |   | `-ImplicitCastExpr 0x7fcd9e856558 <col:46, col:52> 'DNSQuestion *' <LValueToRValue>
+      |   |   `-MemberExpr 0x7fcd9e856520 <col:46, col:52> 'DNSQuestion *' lvalue ->next 0x7fcd9f0266f8
+      |   |     `-ImplicitCastExpr 0x7fcd9e856508 <col:46> 'DNSQuestion *' <LValueToRValue>
+      |   |       `-DeclRefExpr 0x7fcd9e8564e0 <col:46> 'DNSQuestion *' lvalue Var 0x7fcd9e81bdb0 'qptr' 'DNSQuestion *'
+      |   `-IfStmt 0x7fcd9e856c78 <line:80:2, line:84:4>
+      |     |-<<<NULL>>>
+      |     |-<<<NULL>>>
+      |     |-BinaryOperator 0x7fcd9e856c38 <line:80:6, line:82:67> 'int' '&&'
+      |     | |-BinaryOperator 0x7fcd9e8569e0 <line:80:6, line:81:68> 'int' '&&'
+      |     | | |-BinaryOperator 0x7fcd9e856738 <line:80:6, col:26> 'int' '&'
+      |     | | | |-ImplicitCastExpr 0x7fcd9e856720 <col:6, col:22> 'int' <IntegralCast>
+      |     | | | | `-ImplicitCastExpr 0x7fcd9e856708 <col:6, col:22> 'char' <LValueToRValue>
+      |     | | | |   `-ArraySubscriptExpr 0x7fcd9e8566b8 <col:6, col:22> 'char' lvalue
+      |     | | | |     |-ImplicitCastExpr 0x7fcd9e8566a0 <col:6, col:19> 'char *' <ArrayToPointerDecay>
+      |     | | | |     | `-MemberExpr 0x7fcd9e856648 <col:6, col:19> 'char [2]' lvalue .b 0x7fcd9f025a58
+      |     | | | |     |   `-MemberExpr 0x7fcd9e856610 <col:6, col:13> 'mDNSOpaque16':'mDNSOpaque16' lvalue .flags 0x7fcd9f0261f0
+      |     | | | |     |     `-MemberExpr 0x7fcd9e8565d8 <col:6, col:11> 'DNSMessageHeader':'DNSMessageHeader' lvalue ->h 0x7fcd9f026480
+      |     | | | |     |       `-ImplicitCastExpr 0x7fcd9e8565c0 <col:6> 'DNSMessage *' <LValueToRValue>
+      |     | | | |     |         `-DeclRefExpr 0x7fcd9e856598 <col:6> 'DNSMessage *const' lvalue ParmVar 0x7fcd9e81ba28 'msg' 'DNSMessage *const'
+      |     | | | |     `-IntegerLiteral 0x7fcd9e856680 <col:21> 'int' 0
+      |     | | | `-DeclRefExpr 0x7fcd9e8566e0 <col:26> 'int' EnumConstant 0x7fcd9f800618 'kDNSFlag0_TC' 'int'
+      |     | | `-ParenExpr 0x7fcd9e8569c0 <line:81:9, col:68> 'int'
+      |     | |   `-BinaryOperator 0x7fcd9e856998 <col:10, col:56> 'int' '=='
+      |     | |     |-ImplicitCastExpr 0x7fcd9e856950 <col:10, col:28> 'int' <IntegralCast>
+      |     | |     | `-ImplicitCastExpr 0x7fcd9e856938 <col:10, col:28> 'short' <LValueToRValue>
+      |     | |     |   `-MemberExpr 0x7fcd9e8567f8 <col:10, col:28> 'short' lvalue .NotAnInteger 0x7fcd9f025ab8
+      |     | |     |     `-ParenExpr 0x7fcd9e8567d8 <col:10, col:26> 'mDNSOpaque16':'mDNSOpaque16' lvalue
+      |     | |     |       `-MemberExpr 0x7fcd9e8567a0 <col:11, col:17> 'mDNSOpaque16':'mDNSOpaque16' lvalue ->TargetQID 0x7fcd9f0267b0
+      |     | |     |         `-ImplicitCastExpr 0x7fcd9e856788 <col:11> 'DNSQuestion *' <LValueToRValue>
+      |     | |     |           `-DeclRefExpr 0x7fcd9e856760 <col:11> 'DNSQuestion *' lvalue Var 0x7fcd9e81bdb0 'qptr' 'DNSQuestion *'
+      |     | |     `-ImplicitCastExpr 0x7fcd9e856980 <col:44, col:56> 'int' <IntegralCast>
+      |     | |       `-ImplicitCastExpr 0x7fcd9e856968 <col:44, col:56> 'short' <LValueToRValue>
+      |     | |         `-MemberExpr 0x7fcd9e856900 <col:44, col:56> 'short' lvalue .NotAnInteger 0x7fcd9f025ab8
+      |     | |           `-ParenExpr 0x7fcd9e8568e0 <col:44, col:54> 'mDNSOpaque16':'mDNSOpaque16' lvalue
+      |     | |             `-MemberExpr 0x7fcd9e8568a8 <col:45, col:52> 'mDNSOpaque16':'mDNSOpaque16' lvalue .id 0x7fcd9f026198
+      |     | |               `-MemberExpr 0x7fcd9e856870 <col:45, col:50> 'DNSMessageHeader':'DNSMessageHeader' lvalue ->h 0x7fcd9f026480
+      |     | |                 `-ImplicitCastExpr 0x7fcd9e856858 <col:45> 'DNSMessage *' <LValueToRValue>
+      |     | |                   `-DeclRefExpr 0x7fcd9e856830 <col:45> 'DNSMessage *const' lvalue ParmVar 0x7fcd9e81ba28 'msg' 'DNSMessage *const'
+      |     | `-BinaryOperator 0x7fcd9e856c10 <line:82:9, col:67> 'int' '<'
+      |     |   |-BinaryOperator 0x7fcd9e856b28 <col:9, col:28> 'long' '-'
+      |     |   | |-ImplicitCastExpr 0x7fcd9e856af8 <col:9, col:12> 'long' <LValueToRValue>
+      |     |   | | `-MemberExpr 0x7fcd9e856a48 <col:9, col:12> 'long' lvalue ->timenow 0x7fcd9f026898
+      |     |   | |   `-ImplicitCastExpr 0x7fcd9e856a30 <col:9> 'mDNS *' <LValueToRValue>
+      |     |   | |     `-DeclRefExpr 0x7fcd9e856a08 <col:9> 'mDNS *const' lvalue ParmVar 0x7fcd9e81b9b8 'm' 'mDNS *const'
+      |     |   | `-ImplicitCastExpr 0x7fcd9e856b10 <col:22, col:28> 'long' <LValueToRValue>
+      |     |   |   `-MemberExpr 0x7fcd9e856ac0 <col:22, col:28> 'long' lvalue ->LastQTime 0x7fcd9f026758
+      |     |   |     `-ImplicitCastExpr 0x7fcd9e856aa8 <col:22> 'DNSQuestion *' <LValueToRValue>
+      |     |   |       `-DeclRefExpr 0x7fcd9e856a80 <col:22> 'DNSQuestion *' lvalue Var 0x7fcd9e81bdb0 'qptr' 'DNSQuestion *'
+      |     |   `-ParenExpr 0x7fcd9e856bf0 <col:40, col:67> 'long'
+      |     |     `-BinaryOperator 0x7fcd9e856bc8 <col:41, col:46> 'long' '*'
+      |     |       |-ImplicitCastExpr 0x7fcd9e856bb0 <col:41> 'long' <IntegralCast>
+      |     |       | `-IntegerLiteral 0x7fcd9e856b50 <col:41> 'int' 60
+      |     |       `-ImplicitCastExpr 0x7fcd9e856b98 <col:46> 'long' <LValueToRValue>
+      |     |         `-DeclRefExpr 0x7fcd9e856b70 <col:46> 'long' lvalue Var 0x7fcd9f026950 'mDNSPlatformOneSecond' 'long'
+      |     |-CompoundStmt 0x7fcd9e856c60 <line:83:4, line:84:4>
+      |     `-<<<NULL>>>
+      `-<<<NULL>>>

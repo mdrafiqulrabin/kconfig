@@ -1,0 +1,101 @@
+FileAST: 
+  Decl: fn2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fn2, []
+        IdentifierType: ['void']
+  Decl: fn3, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long']
+      TypeDecl: fn3, []
+        IdentifierType: ['void']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['signed', 'char']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    PtrDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['float']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['unsigned', 'short']
+        Constant: int, 0
+      Label: lbl_986
+        For: 
+          Compound: 
+            Assignment: =
+              ID: c
+              Constant: int, 0
+            For: 
+              BinaryOp: <=
+                ID: c
+                Constant: int, 2
+              Compound: 
+                Assignment: =
+                  UnaryOp: *
+                    ID: d
+                  ID: g
+                FuncCall: 
+                  ID: fn2
+                If: 
+                  ID: e
+                  Goto: lbl_986
+            Assignment: =
+              ID: g
+              Constant: int, 2
+            For: 
+              BinaryOp: >=
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['short']
+                  ID: g
+                Constant: int, 0
+              UnaryOp: p--
+                ID: g
+              Compound: 
+                For: 
+                  ID: b
+                  Compound: 
+                    FuncCall: 
+                      ID: fn3
+                      ExprList: 
+                        Constant: int, 45360
+                    Assignment: =
+                      ID: f
+                      Constant: int, 0
+                    For: 
+                      BinaryOp: >=
+                        ID: a
+                        Constant: int, 0
+                      UnaryOp: p--
+                        ID: a
+                      EmptyStatement: 

@@ -1,0 +1,76 @@
+TranslationUnitDecl 0x7fac480264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fac48026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fac48026740 '__int128'
+|-TypedefDecl 0x7fac48026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fac48026760 'unsigned __int128'
+|-TypedefDecl 0x7fac48026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fac48026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fac48026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fac48026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fac48026dc0 'char *'
+|   `-BuiltinType 0x7fac48026560 'char'
+|-TypedefDecl 0x7fac480270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fac48027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fac48026ee0 'struct __va_list_tag'
+|     `-Record 0x7fac48026e58 '__va_list_tag'
+|-FunctionDecl 0x7fac48825a30 <c_files/pr53663-1.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fac48825ac8 prev 0x7fac48825a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fac48825b60 <line:5:1, line:9:1> line:5:7 union u definition
+| |-FieldDecl 0x7fac48825c28 <line:7:3, col:7> col:7 referenced i 'int'
+| `-FieldDecl 0x7fac48825c80 <line:8:3, col:9> col:9 referenced b '_Bool'
+|-FunctionDecl 0x7fac48825f10 <line:11:1, line:14:1> line:11:6 used f 'void (union u *, union u)'
+| |-ParmVarDecl 0x7fac48825d80 <col:8, col:18> col:18 used vp 'union u *'
+| |-ParmVarDecl 0x7fac48825e00 <col:22, col:30> col:30 used v 'union u':'union u'
+| `-CompoundStmt 0x7fac488260c0 <line:12:1, line:14:1>
+|   `-BinaryOperator 0x7fac48826098 <line:13:3, col:9> 'union u':'union u' '='
+|     |-UnaryOperator 0x7fac48826038 <col:3, col:4> 'union u':'union u' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fac48826020 <col:4> 'union u *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fac48825ff8 <col:4> 'union u *' lvalue ParmVar 0x7fac48825d80 'vp' 'union u *'
+|     `-ImplicitCastExpr 0x7fac48826080 <col:9> 'union u':'union u' <LValueToRValue>
+|       `-DeclRefExpr 0x7fac48826058 <col:9> 'union u':'union u' lvalue ParmVar 0x7fac48825e00 'v' 'union u':'union u'
+`-FunctionDecl 0x7fac48826130 <line:16:1, line:30:1> line:16:5 main 'int ()'
+  `-CompoundStmt 0x7fac48826978 <line:17:1, line:30:1>
+    |-DeclStmt 0x7fac48826248 <line:18:3, col:12>
+    | `-VarDecl 0x7fac488261e8 <col:3, col:11> col:11 used v 'union u':'union u'
+    |-DeclStmt 0x7fac488262e0 <line:19:3, col:13>
+    | `-VarDecl 0x7fac48826280 <col:3, col:11> col:11 used v1 'union u':'union u'
+    |-DeclStmt 0x7fac48826378 <line:20:3, col:13>
+    | `-VarDecl 0x7fac48826318 <col:3, col:11> col:11 used v2 'union u':'union u'
+    |-BinaryOperator 0x7fac48826410 <line:22:3, col:9> 'int' '='
+    | |-MemberExpr 0x7fac488263b8 <col:3, col:5> 'int' lvalue .i 0x7fac48825c28
+    | | `-DeclRefExpr 0x7fac48826390 <col:3> 'union u':'union u' lvalue Var 0x7fac488261e8 'v' 'union u':'union u'
+    | `-IntegerLiteral 0x7fac488263f0 <col:9> 'int' 10
+    |-CallExpr 0x7fac48826590 <line:23:3, col:11> 'void'
+    | |-ImplicitCastExpr 0x7fac48826578 <col:3> 'void (*)(union u *, union u)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fac48826488 <col:3> 'void (union u *, union u)' Function 0x7fac48825f10 'f' 'void (union u *, union u)'
+    | |-UnaryOperator 0x7fac488264d8 <col:5, col:6> 'union u *' prefix '&'
+    | | `-DeclRefExpr 0x7fac488264b0 <col:6> 'union u':'union u' lvalue Var 0x7fac48826280 'v1' 'union u':'union u'
+    | `-ImplicitCastExpr 0x7fac488265c8 <col:10> 'union u':'union u' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fac488264f8 <col:10> 'union u':'union u' lvalue Var 0x7fac488261e8 'v' 'union u':'union u'
+    |-BinaryOperator 0x7fac48826678 <line:25:3, col:9> '_Bool' '='
+    | |-MemberExpr 0x7fac48826608 <col:3, col:5> '_Bool' lvalue .b 0x7fac48825c80
+    | | `-DeclRefExpr 0x7fac488265e0 <col:3> 'union u':'union u' lvalue Var 0x7fac488261e8 'v' 'union u':'union u'
+    | `-ImplicitCastExpr 0x7fac48826660 <col:9> '_Bool' <IntegralToBoolean>
+    |   `-IntegerLiteral 0x7fac48826640 <col:9> 'int' 0
+    |-CallExpr 0x7fac48826750 <line:26:3, col:11> 'void'
+    | |-ImplicitCastExpr 0x7fac48826738 <col:3> 'void (*)(union u *, union u)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fac488266a0 <col:3> 'void (union u *, union u)' Function 0x7fac48825f10 'f' 'void (union u *, union u)'
+    | |-UnaryOperator 0x7fac488266f0 <col:5, col:6> 'union u *' prefix '&'
+    | | `-DeclRefExpr 0x7fac488266c8 <col:6> 'union u':'union u' lvalue Var 0x7fac48826318 'v2' 'union u':'union u'
+    | `-ImplicitCastExpr 0x7fac48826788 <col:10> 'union u':'union u' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fac48826710 <col:10> 'union u':'union u' lvalue Var 0x7fac488261e8 'v' 'union u':'union u'
+    |-IfStmt 0x7fac48826908 <line:27:3, line:28:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fac48826850 <line:27:7, col:15> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fac48826838 <col:7, col:10> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fac48826820 <col:7, col:10> '_Bool' <LValueToRValue>
+    | | |   `-MemberExpr 0x7fac488267c8 <col:7, col:10> '_Bool' lvalue .b 0x7fac48825c80
+    | | |     `-DeclRefExpr 0x7fac488267a0 <col:7> 'union u':'union u' lvalue Var 0x7fac48826318 'v2' 'union u':'union u'
+    | | `-IntegerLiteral 0x7fac48826800 <col:15> 'int' 0
+    | |-CallExpr 0x7fac488268e0 <line:28:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fac488268c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fac48826878 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fac48825ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fac48826960 <line:29:3, col:10>
+      `-IntegerLiteral 0x7fac48826940 <col:10> 'int' 0

@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fb3088234d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb308823a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb308823740 '__int128'
+|-TypedefDecl 0x7fb308823a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb308823760 'unsigned __int128'
+|-TypedefDecl 0x7fb308823d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb308823b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb308823ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb308823e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb308823dc0 'char *'
+|   `-BuiltinType 0x7fb308823560 'char'
+|-TypedefDecl 0x7fb3088240c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb308824070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb308823ee0 'struct __va_list_tag'
+|     `-Record 0x7fb308823e58 '__va_list_tag'
+|-RecordDecl 0x7fb308824120 <c_files/pr27898_0.c:4:1, col:30> col:7 union u definition
+| |-RecordDecl 0x7fb308028c00 <col:11, col:27> col:11 struct definition
+| | `-FieldDecl 0x7fb308028cc8 <col:20, col:24> col:24 i 'int'
+| |-FieldDecl 0x7fb308028d60 <col:11> col:11 implicit 'struct u::(anonymous at c_files/pr27898_0.c:4:11)'
+| `-IndirectFieldDecl 0x7fb308028db8 <col:24> col:24 implicit i 'int'
+|   |-Field 0x7fb308028d60 '' 'struct u::(anonymous at c_files/pr27898_0.c:4:11)'
+|   `-Field 0x7fb308028cc8 'i' 'int'
+|-FunctionDecl 0x7fb308028ff8 <line:6:1, col:26> col:12 foo 'int (union u *)' extern
+| `-ParmVarDecl 0x7fb308028ef0 <col:17, col:25> col:26 'union u *'
+`-FunctionDecl 0x7fb308029130 <line:8:1, col:24> col:5 main 'int ()'
+  `-CompoundStmt 0x7fb308029200 <col:12, col:24>
+    `-ReturnStmt 0x7fb3080291e8 <col:14, col:21>
+      `-IntegerLiteral 0x7fb3080291c8 <col:21> 'int' 0

@@ -1,0 +1,55 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: f0, [], [], []
+        TypeDecl: f0, []
+          IdentifierType: ['signed']
+        Constant: int, 16
+      Decl: f1, [], [], []
+        TypeDecl: f1, []
+          IdentifierType: ['unsigned']
+        Constant: int, 1
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: c, []
+        Struct: S
+    InitList: 
+      InitList: 
+        UnaryOp: -
+          Constant: int, 1
+        Constant: int, 0
+      InitList: 
+        UnaryOp: -
+          Constant: int, 1
+        Constant: int, 0
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      Struct: S
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          Struct: S
+        ArrayRef: 
+          ID: c
+          Constant: int, 0
+      Assignment: =
+        ID: d
+        ID: e
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            ID: d
+            ID: f1
+          Constant: int, 0
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

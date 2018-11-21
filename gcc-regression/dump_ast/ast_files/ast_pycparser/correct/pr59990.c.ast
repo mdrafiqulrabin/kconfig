@@ -1,0 +1,71 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: value, [], [], []
+    ArrayDecl: []
+      TypeDecl: value, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 4
+    InitList: 
+      Constant: int, 66
+      Constant: int, 9
+      Constant: int, 160
+      Constant: int, 255
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: f, ['volatile'], [], []
+        TypeDecl: f, ['volatile']
+          IdentifierType: ['float']
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 4
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            UnaryOp: &
+              ID: f
+          ID: value
+          Constant: int, 4
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          ID: a
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            UnaryOp: &
+              ID: f
+          Constant: int, 4
+      If: 
+        BinaryOp: !=
+          ArrayRef: 
+            ID: a
+            Constant: int, 2
+          Constant: int, 160
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

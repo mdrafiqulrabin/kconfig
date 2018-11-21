@@ -1,0 +1,41 @@
+FileAST: 
+  Decl: t, [], [], []
+    TypeDecl: t, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: cvmx_atomic_get32, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: ptr, [], [], []
+            PtrDecl: []
+              TypeDecl: ptr, []
+                IdentifierType: ['int']
+        TypeDecl: cvmx_atomic_get32, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        UnaryOp: *
+          Cast: 
+            Typename: None, ['volatile']
+              PtrDecl: []
+                TypeDecl: None, ['volatile']
+                  IdentifierType: ['int']
+            ID: ptr
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        UnaryOp: !
+          FuncCall: 
+            ID: cvmx_atomic_get32
+            ExprList: 
+              UnaryOp: &
+                ID: t
+        EmptyStatement: 

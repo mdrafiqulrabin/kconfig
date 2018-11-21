@@ -1,0 +1,33 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Pragma: acc parallel
+      Compound: 
+        Decl: j, [], [], []
+          TypeDecl: j, []
+            IdentifierType: ['int']
+          Constant: int, 0
+        Pragma: acc loop private (j)
+        For: 
+          DeclList: 
+            Decl: i, [], [], []
+              TypeDecl: i, []
+                IdentifierType: ['int']
+              Constant: int, 0
+          BinaryOp: <
+            ID: i
+            Constant: int, 10
+          UnaryOp: p++
+            ID: i
+          UnaryOp: p++
+            ID: j
+      Return: 
+        Constant: int, 0

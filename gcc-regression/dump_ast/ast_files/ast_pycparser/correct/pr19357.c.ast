@@ -1,0 +1,23 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: f
+      Decl: f, [], [], []
+        ArrayDecl: []
+          TypeDecl: f, []
+            IdentifierType: ['float']
+          Constant: int, 8
+  FuncDef: 
+    Decl: ftest, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arg1, [], [], []
+            TypeDecl: arg1, []
+              Struct: f
+          Decl: arg2, [], [], []
+            TypeDecl: arg2, []
+              IdentifierType: ['long', 'double']
+        TypeDecl: ftest, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Return: 
+        ID: arg2

@@ -1,0 +1,145 @@
+TranslationUnitDecl 0x7fe7530264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe753026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe753026740 '__int128'
+|-TypedefDecl 0x7fe753026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe753026760 'unsigned __int128'
+|-TypedefDecl 0x7fe753026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe753026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe753026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe753026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe753026dc0 'char *'
+|   `-BuiltinType 0x7fe753026560 'char'
+|-TypedefDecl 0x7fe7530270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe753027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe753026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe753026e58 '__va_list_tag'
+|-VarDecl 0x7fe753027138 <c_files/pr68349.c:5:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fe753077400 <col:1, col:8> col:8 used b 'int'
+|-FunctionDecl 0x7fe7530774d0 <line:6:1, col:25> col:15 used my_strlen 'unsigned long ()'
+|-RecordDecl 0x7fe753077568 <line:7:9, line:10:1> line:7:16 struct sHyphenNode definition
+| |-FieldDecl 0x7fe753077688 <line:8:3, col:17> col:8 referenced sepcnts 'char [0]'
+| `-FieldDecl 0x7fe7530777f0 <line:9:3, col:33> col:23 referenced Daughters 'struct sHyphenNode *[]'
+|-TypedefDecl 0x7fe753077860 <line:7:1, line:10:5> col:5 referenced PHyphenNode 'struct sHyphenNode *'
+| `-PointerType 0x7fe753077730 'struct sHyphenNode *'
+|   `-ElaboratedType 0x7fe7530776d0 'struct sHyphenNode' sugar
+|     `-RecordType 0x7fe7530775f0 'struct sHyphenNode'
+|       `-Record 0x7fe753077568 'sHyphenNode'
+|-FunctionDecl 0x7fe753077920 <line:11:1, col:14> col:5 used GetIndex 'int ()'
+|-VarDecl 0x7fe7530779f0 <line:12:1, col:13> col:13 used c 'PHyphenNode':'struct sHyphenNode *'
+`-FunctionDecl 0x7fe753077a98 <line:13:1, line:30:1> line:13:6 DoHyphens_Field_1 'void ()'
+  `-CompoundStmt 0x7fe753078c18 <col:26, line:30:1>
+    |-DeclStmt 0x7fe753077cc0 <line:14:3, col:22>
+    | |-VarDecl 0x7fe753077ba8 <col:3, col:13> col:8 used d 'char [300]'
+    | `-VarDecl 0x7fe753077c48 <col:3, col:21> col:16 used e 'char [300]'
+    |-DeclStmt 0x7fe753077f10 <line:15:3, col:28>
+    | |-VarDecl 0x7fe753077cf0 <col:3, col:7> col:7 used z 'int'
+    | |-VarDecl 0x7fe753077d68 <col:3, col:10> col:10 used f 'int'
+    | `-VarDecl 0x7fe753077de0 <col:3, col:27> col:13 used l 'int' cinit
+    |   `-ImplicitCastExpr 0x7fe753077ed8 <col:17, col:27> 'int' <IntegralCast>
+    |     `-CallExpr 0x7fe753077eb0 <col:17, col:27> 'unsigned long'
+    |       `-ImplicitCastExpr 0x7fe753077e98 <col:17> 'unsigned long (*)()' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x7fe753077e40 <col:17> 'unsigned long ()' Function 0x7fe7530774d0 'my_strlen' 'unsigned long ()'
+    |-ForStmt 0x7fe753077f78 <line:16:3, line:17:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fe753077f50 <line:16:10> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe753077f28 <col:10> 'int' lvalue Var 0x7fe753077cf0 'z' 'int'
+    | |-<<<NULL>>>
+    | `-NullStmt 0x7fe753077f68 <line:17:5>
+    |-ForStmt 0x7fe753078a78 <line:18:3, line:27:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fe753077fd8 <line:18:10> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe753077fb0 <col:10> 'int' lvalue Var 0x7fe753077de0 'l' 'int'
+    | |-UnaryOperator 0x7fe753078018 <col:13, col:14> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fe753077ff0 <col:13> 'int' lvalue Var 0x7fe753077cf0 'z' 'int'
+    | `-CompoundStmt 0x7fe753078a50 <col:18, line:27:3>
+    |   |-BinaryOperator 0x7fe7530780a0 <line:19:5, col:9> 'int' '='
+    |   | |-DeclRefExpr 0x7fe753078038 <col:5> 'int' lvalue Var 0x7fe753077d68 'f' 'int'
+    |   | `-ImplicitCastExpr 0x7fe753078088 <col:9> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fe753078060 <col:9> 'int' lvalue Var 0x7fe753077cf0 'z' 'int'
+    |   `-ForStmt 0x7fe753078a18 <line:20:5, line:26:5>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7fe753078148 <line:20:12, col:16> 'int' '<'
+    |     | |-ImplicitCastExpr 0x7fe753078118 <col:12> 'int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fe7530780c8 <col:12> 'int' lvalue Var 0x7fe753077d68 'f' 'int'
+    |     | `-ImplicitCastExpr 0x7fe753078130 <col:16> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fe7530780f0 <col:16> 'int' lvalue Var 0x7fe753077de0 'l' 'int'
+    |     |-UnaryOperator 0x7fe753078198 <col:19, col:20> 'int' postfix '++'
+    |     | `-DeclRefExpr 0x7fe753078170 <col:19> 'int' lvalue Var 0x7fe753077d68 'f' 'int'
+    |     `-CompoundStmt 0x7fe7530789e8 <col:24, line:26:5>
+    |       |-BinaryOperator 0x7fe753078480 <line:21:7, col:38> 'PHyphenNode':'struct sHyphenNode *' '='
+    |       | |-DeclRefExpr 0x7fe7530781b8 <col:7> 'PHyphenNode':'struct sHyphenNode *' lvalue Var 0x7fe7530779f0 'c' 'PHyphenNode':'struct sHyphenNode *'
+    |       | `-ImplicitCastExpr 0x7fe753078468 <col:11, col:38> 'struct sHyphenNode *' <LValueToRValue>
+    |       |   `-ArraySubscriptExpr 0x7fe753078440 <col:11, col:38> 'struct sHyphenNode *' lvalue
+    |       |     |-ImplicitCastExpr 0x7fe753078428 <col:11, col:14> 'struct sHyphenNode **' <ArrayToPointerDecay>
+    |       |     | `-MemberExpr 0x7fe753078220 <col:11, col:14> 'struct sHyphenNode *[]' lvalue ->Daughters 0x7fe7530777f0
+    |       |     |   `-ImplicitCastExpr 0x7fe753078208 <col:11> 'PHyphenNode':'struct sHyphenNode *' <LValueToRValue>
+    |       |     |     `-DeclRefExpr 0x7fe7530781e0 <col:11> 'PHyphenNode':'struct sHyphenNode *' lvalue Var 0x7fe7530779f0 'c' 'PHyphenNode':'struct sHyphenNode *'
+    |       |     `-CallExpr 0x7fe753078370 <col:24, col:37> 'int'
+    |       |       |-ImplicitCastExpr 0x7fe753078358 <col:24> 'int (*)()' <FunctionToPointerDecay>
+    |       |       | `-DeclRefExpr 0x7fe753078258 <col:24> 'int ()' Function 0x7fe753077920 'GetIndex' 'int ()'
+    |       |       `-ImplicitCastExpr 0x7fe7530783b8 <col:33, col:36> 'int' <IntegralCast>
+    |       |         `-ImplicitCastExpr 0x7fe7530783a0 <col:33, col:36> 'char' <LValueToRValue>
+    |       |           `-ArraySubscriptExpr 0x7fe753078300 <col:33, col:36> 'char' lvalue
+    |       |             |-ImplicitCastExpr 0x7fe7530782d0 <col:33> 'char *' <ArrayToPointerDecay>
+    |       |             | `-DeclRefExpr 0x7fe753078280 <col:33> 'char [300]' lvalue Var 0x7fe753077ba8 'd' 'char [300]'
+    |       |             `-ImplicitCastExpr 0x7fe7530782e8 <col:35> 'int' <LValueToRValue>
+    |       |               `-DeclRefExpr 0x7fe7530782a8 <col:35> 'int' lvalue Var 0x7fe753077d68 'f' 'int'
+    |       |-BinaryOperator 0x7fe7530784f0 <line:22:7, col:11> 'int' '='
+    |       | |-DeclRefExpr 0x7fe7530784a8 <col:7> 'int' lvalue Var 0x7fe753027138 'a' 'int'
+    |       | `-IntegerLiteral 0x7fe7530784d0 <col:11> 'int' 0
+    |       `-ForStmt 0x7fe7530789b0 <line:23:7, line:25:23>
+    |         |-<<<NULL>>>
+    |         |-<<<NULL>>>
+    |         |-BinaryOperator 0x7fe753078600 <line:23:14, col:23> 'int' '<='
+    |         | |-ImplicitCastExpr 0x7fe7530785e8 <col:14> 'int' <LValueToRValue>
+    |         | | `-DeclRefExpr 0x7fe753078518 <col:14> 'int' lvalue Var 0x7fe753027138 'a' 'int'
+    |         | `-BinaryOperator 0x7fe7530785c0 <col:19, col:23> 'int' '-'
+    |         |   |-ImplicitCastExpr 0x7fe753078590 <col:19> 'int' <LValueToRValue>
+    |         |   | `-DeclRefExpr 0x7fe753078540 <col:19> 'int' lvalue Var 0x7fe753077d68 'f' 'int'
+    |         |   `-ImplicitCastExpr 0x7fe7530785a8 <col:23> 'int' <LValueToRValue>
+    |         |     `-DeclRefExpr 0x7fe753078568 <col:23> 'int' lvalue Var 0x7fe753077cf0 'z' 'int'
+    |         |-UnaryOperator 0x7fe753078650 <col:26, col:27> 'int' postfix '++'
+    |         | `-DeclRefExpr 0x7fe753078628 <col:26> 'int' lvalue Var 0x7fe753027138 'a' 'int'
+    |         `-IfStmt 0x7fe753078978 <line:24:2, line:25:23>
+    |           |-<<<NULL>>>
+    |           |-<<<NULL>>>
+    |           |-ImplicitCastExpr 0x7fe753078780 <line:24:6, col:13> 'char' <LValueToRValue>
+    |           | `-ArraySubscriptExpr 0x7fe753078758 <col:6, col:13> 'char' lvalue
+    |           |   |-ImplicitCastExpr 0x7fe753078740 <col:6> 'char *' <ArrayToPointerDecay>
+    |           |   | `-DeclRefExpr 0x7fe753078670 <col:6> 'char [300]' lvalue Var 0x7fe753077c48 'e' 'char [300]'
+    |           |   `-BinaryOperator 0x7fe753078718 <col:8, col:12> 'int' '+'
+    |           |     |-ImplicitCastExpr 0x7fe7530786e8 <col:8> 'int' <LValueToRValue>
+    |           |     | `-DeclRefExpr 0x7fe753078698 <col:8> 'int' lvalue Var 0x7fe753077cf0 'z' 'int'
+    |           |     `-ImplicitCastExpr 0x7fe753078700 <col:12> 'int' <LValueToRValue>
+    |           |       `-DeclRefExpr 0x7fe7530786c0 <col:12> 'int' lvalue Var 0x7fe753027138 'a' 'int'
+    |           |-BinaryOperator 0x7fe753078950 <line:25:4, col:23> 'char' '='
+    |           | |-ArraySubscriptExpr 0x7fe753078818 <col:4, col:7> 'char' lvalue
+    |           | | |-ImplicitCastExpr 0x7fe7530787e8 <col:4> 'char *' <ArrayToPointerDecay>
+    |           | | | `-DeclRefExpr 0x7fe753078798 <col:4> 'char [300]' lvalue Var 0x7fe753077c48 'e' 'char [300]'
+    |           | | `-ImplicitCastExpr 0x7fe753078800 <col:6> 'int' <LValueToRValue>
+    |           | |   `-DeclRefExpr 0x7fe7530787c0 <col:6> 'int' lvalue Var 0x7fe753077cf0 'z' 'int'
+    |           | `-ImplicitCastExpr 0x7fe753078938 <col:11, col:23> 'char' <LValueToRValue>
+    |           |   `-ArraySubscriptExpr 0x7fe753078910 <col:11, col:23> 'char' lvalue
+    |           |     |-ImplicitCastExpr 0x7fe7530788e0 <col:11, col:14> 'char *' <ArrayToPointerDecay>
+    |           |     | `-MemberExpr 0x7fe753078880 <col:11, col:14> 'char [0]' lvalue ->sepcnts 0x7fe753077688
+    |           |     |   `-ImplicitCastExpr 0x7fe753078868 <col:11> 'PHyphenNode':'struct sHyphenNode *' <LValueToRValue>
+    |           |     |     `-DeclRefExpr 0x7fe753078840 <col:11> 'PHyphenNode':'struct sHyphenNode *' lvalue Var 0x7fe7530779f0 'c' 'PHyphenNode':'struct sHyphenNode *'
+    |           |     `-ImplicitCastExpr 0x7fe7530788f8 <col:22> 'int' <LValueToRValue>
+    |           |       `-DeclRefExpr 0x7fe7530788b8 <col:22> 'int' lvalue Var 0x7fe753027138 'a' 'int'
+    |           `-<<<NULL>>>
+    `-IfStmt 0x7fe753078be0 <line:28:3, line:29:9>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fe753078b58 <line:28:7, col:10> 'char' <LValueToRValue>
+      | `-ArraySubscriptExpr 0x7fe753078b30 <col:7, col:10> 'char' lvalue
+      |   |-ImplicitCastExpr 0x7fe753078b00 <col:7> 'char *' <ArrayToPointerDecay>
+      |   | `-DeclRefExpr 0x7fe753078ab0 <col:7> 'char [300]' lvalue Var 0x7fe753077c48 'e' 'char [300]'
+      |   `-ImplicitCastExpr 0x7fe753078b18 <col:9> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fe753078ad8 <col:9> 'int' lvalue Var 0x7fe753077cf0 'z' 'int'
+      |-BinaryOperator 0x7fe753078bb8 <line:29:5, col:9> 'int' '='
+      | |-DeclRefExpr 0x7fe753078b70 <col:5> 'int' lvalue Var 0x7fe753077400 'b' 'int'
+      | `-IntegerLiteral 0x7fe753078b98 <col:9> 'int' 1
+      `-<<<NULL>>>

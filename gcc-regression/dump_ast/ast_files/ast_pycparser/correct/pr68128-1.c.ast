@@ -1,0 +1,152 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u, [], [], []
+            PtrDecl: []
+              TypeDecl: u, []
+                IdentifierType: ['float']
+          Decl: v, [], [], []
+            TypeDecl: v, []
+              IdentifierType: ['float']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['float']
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['float']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['float']
+          Decl: t, [], [], []
+            TypeDecl: t, []
+              IdentifierType: ['float']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['int']
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['float']
+      Decl: b, [], [], []
+        PtrDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['float']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['float']
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['float']
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['float']
+      Pragma: omp parallel for private (i, j, k, l, a, b, c, s, e)
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: <
+          ID: j
+          Constant: int, 1024
+        UnaryOp: p++
+          ID: j
+        Compound: 
+          Assignment: =
+            ID: k
+            BinaryOp: *
+              ID: j
+              Constant: int, 64
+          Assignment: =
+            ID: l
+            BinaryOp: +
+              BinaryOp: *
+                ID: j
+                Constant: int, 64
+              Constant: int, 63
+          Assignment: =
+            ID: a
+            BinaryOp: +
+              ID: v
+              BinaryOp: *
+                ID: j
+                ID: w
+          Assignment: =
+            ID: b
+            BinaryOp: +
+              ID: u
+              BinaryOp: *
+                ID: j
+                Constant: int, 64
+          For: 
+            Assignment: =
+              ID: i
+              ID: k
+            BinaryOp: <=
+              ID: i
+              ID: l
+            ExprList: 
+              UnaryOp: p++
+                ID: i
+              UnaryOp: p++
+                ID: b
+              Assignment: +=
+                ID: a
+                ID: w
+            Compound: 
+              Assignment: =
+                ID: c
+                BinaryOp: +
+                  BinaryOp: *
+                    ID: a
+                    ID: a
+                  ID: y
+              Assignment: =
+                ID: s
+                BinaryOp: *
+                  BinaryOp: -
+                    Constant: float, 1.f
+                    BinaryOp: *
+                      ID: c
+                      ID: x
+                  BinaryOp: -
+                    Constant: float, 1.f
+                    BinaryOp: *
+                      ID: c
+                      ID: x
+              Assignment: =
+                ID: e
+                BinaryOp: *
+                  BinaryOp: *
+                    ID: t
+                    BinaryOp: /
+                      Constant: int, 1
+                      FuncCall: 
+                        ID: __builtin_sqrtf
+                        ExprList: 
+                          ID: c
+                  ID: s
+              Assignment: +=
+                UnaryOp: *
+                  ID: b
+                TernaryOp: 
+                  BinaryOp: <
+                    ID: c
+                    ID: z
+                  ID: e
+                  Constant: int, 0

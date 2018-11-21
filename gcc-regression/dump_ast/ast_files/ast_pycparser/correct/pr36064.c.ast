@@ -1,0 +1,178 @@
+FileAST: 
+  Typedef: ogg_int64_t, [], ['typedef']
+    TypeDecl: ogg_int64_t, []
+      IdentifierType: ['long', 'long']
+  Typedef: vorbis_info, [], ['typedef']
+    TypeDecl: vorbis_info, []
+      Struct: vorbis_info
+        Decl: rate, [], [], []
+          TypeDecl: rate, []
+            IdentifierType: ['long']
+  Typedef: OggVorbis_File, [], ['typedef']
+    TypeDecl: OggVorbis_File, []
+      Struct: OggVorbis_File
+        Decl: seekable, [], [], []
+          TypeDecl: seekable, []
+            IdentifierType: ['int']
+        Decl: links, [], [], []
+          TypeDecl: links, []
+            IdentifierType: ['int']
+        Decl: pcmlengths, [], [], []
+          PtrDecl: []
+            TypeDecl: pcmlengths, []
+              IdentifierType: ['ogg_int64_t']
+        Decl: vi, [], [], []
+          PtrDecl: []
+            TypeDecl: vi, []
+              IdentifierType: ['vorbis_info']
+        Decl: ready_state, [], [], []
+          TypeDecl: ready_state, []
+            IdentifierType: ['int']
+  Decl: ov_time_total, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: vf, [], [], []
+          PtrDecl: []
+            TypeDecl: vf, []
+              IdentifierType: ['OggVorbis_File']
+        Decl: i, [], [], []
+          TypeDecl: i, []
+            IdentifierType: ['int']
+      TypeDecl: ov_time_total, []
+        IdentifierType: ['double']
+  Decl: ov_pcm_seek_page, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: vf, [], [], []
+          PtrDecl: []
+            TypeDecl: vf, []
+              IdentifierType: ['OggVorbis_File']
+        Decl: pos, [], [], []
+          TypeDecl: pos, []
+            IdentifierType: ['ogg_int64_t']
+      TypeDecl: ov_pcm_seek_page, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: ov_time_seek_page, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: vf, [], [], []
+            PtrDecl: []
+              TypeDecl: vf, []
+                IdentifierType: ['OggVorbis_File']
+          Decl: seconds, [], [], []
+            TypeDecl: seconds, []
+              IdentifierType: ['double']
+        TypeDecl: ov_time_seek_page, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: link, [], [], []
+        TypeDecl: link, []
+          IdentifierType: ['int']
+        UnaryOp: -
+          Constant: int, 1
+      Decl: pcm_total, [], [], []
+        TypeDecl: pcm_total, []
+          IdentifierType: ['ogg_int64_t']
+        Constant: int, 0
+      Decl: time_total, [], [], []
+        TypeDecl: time_total, []
+          IdentifierType: ['double']
+        Constant: float, 0.
+      If: 
+        BinaryOp: <
+          StructRef: ->
+            ID: vf
+            ID: ready_state
+          Constant: int, 2
+        Return: 
+          UnaryOp: -
+            Constant: int, 131
+      If: 
+        UnaryOp: !
+          StructRef: ->
+            ID: vf
+            ID: seekable
+        Return: 
+          UnaryOp: -
+            Constant: int, 138
+      If: 
+        BinaryOp: <
+          ID: seconds
+          Constant: int, 0
+        Return: 
+          UnaryOp: -
+            Constant: int, 131
+      For: 
+        Assignment: =
+          ID: link
+          Constant: int, 0
+        BinaryOp: <
+          ID: link
+          StructRef: ->
+            ID: vf
+            ID: links
+        UnaryOp: p++
+          ID: link
+        Compound: 
+          Decl: addsec, [], [], []
+            TypeDecl: addsec, []
+              IdentifierType: ['double']
+            FuncCall: 
+              ID: ov_time_total
+              ExprList: 
+                ID: vf
+                ID: link
+          If: 
+            BinaryOp: <
+              ID: seconds
+              BinaryOp: +
+                ID: time_total
+                ID: addsec
+            Break: 
+          Assignment: +=
+            ID: time_total
+            ID: addsec
+          Assignment: +=
+            ID: pcm_total
+            ArrayRef: 
+              StructRef: ->
+                ID: vf
+                ID: pcmlengths
+              BinaryOp: +
+                BinaryOp: *
+                  ID: link
+                  Constant: int, 2
+                Constant: int, 1
+      If: 
+        BinaryOp: ==
+          ID: link
+          StructRef: ->
+            ID: vf
+            ID: links
+        Return: 
+          UnaryOp: -
+            Constant: int, 131
+      Compound: 
+        Decl: target, [], [], []
+          TypeDecl: target, []
+            IdentifierType: ['ogg_int64_t']
+          BinaryOp: +
+            ID: pcm_total
+            BinaryOp: *
+              BinaryOp: -
+                ID: seconds
+                ID: time_total
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: vf
+                    ID: vi
+                  ID: link
+                ID: rate
+        Return: 
+          FuncCall: 
+            ID: ov_pcm_seek_page
+            ExprList: 
+              ID: vf
+              ID: target

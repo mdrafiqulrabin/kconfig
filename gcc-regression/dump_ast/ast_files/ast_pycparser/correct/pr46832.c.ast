@@ -1,0 +1,51 @@
+FileAST: 
+  Decl: pow, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['double']
+        Decl: y, [], [], []
+          TypeDecl: y, []
+            IdentifierType: ['double']
+      TypeDecl: pow, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+          TernaryOp: 
+            BinaryOp: <
+              FuncCall: 
+                ID: pow
+                ExprList: 
+                  ID: x
+                  Constant: int, 2
+              Constant: float, 0.0
+            BinaryOp: -
+              FuncCall: 
+                ID: pow
+                ExprList: 
+                  ID: x
+                  Constant: int, 2
+              Constant: float, 0.5
+            BinaryOp: +
+              FuncCall: 
+                ID: pow
+                ExprList: 
+                  ID: x
+                  Constant: int, 2
+              Constant: float, 0.5

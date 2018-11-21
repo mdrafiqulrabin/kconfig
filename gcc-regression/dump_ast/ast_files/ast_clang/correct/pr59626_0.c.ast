@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7fde568264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fde56826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fde56826740 '__int128'
+|-TypedefDecl 0x7fde56826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fde56826760 'unsigned __int128'
+|-TypedefDecl 0x7fde56826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fde56826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fde56826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fde56826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fde56826dc0 'char *'
+|   `-BuiltinType 0x7fde56826560 'char'
+|-TypedefDecl 0x7fde568270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fde56827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fde56826ee0 'struct __va_list_tag'
+|     `-Record 0x7fde56826e58 '__va_list_tag'
+|-FunctionDecl 0x7fde568796a8 <c_files/pr59626_0.c:7:1, col:52> col:5 used __atoi 'int (const char *)'
+| |-ParmVarDecl 0x7fde56827138 <col:14, col:25> col:26 'const char *'
+| `-AsmLabelAttr 0x7fde56879740 <<scratch space>:2:1> "_atoi"
+|-FunctionDecl 0x7fde56879888 <c_files/pr59626_0.c:8:1, line:12:1> line:9:5 used atoi 'int (const char *)' extern inline
+| |-ParmVarDecl 0x7fde568797f8 <col:11, col:23> col:23 used x 'const char *'
+| |-CompoundStmt 0x7fde56879a70 <line:10:1, line:12:1>
+| | `-ReturnStmt 0x7fde56879a58 <line:11:3, col:19>
+| |   `-CallExpr 0x7fde56879a10 <col:10, col:19> 'int'
+| |     |-ImplicitCastExpr 0x7fde568799f8 <col:10> 'int (*)(const char *)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fde56879980 <col:10> 'int (const char *)' Function 0x7fde568796a8 '__atoi' 'int (const char *)'
+| |     `-ImplicitCastExpr 0x7fde56879a40 <col:18> 'const char *' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fde568799a8 <col:18> 'const char *' lvalue ParmVar 0x7fde568797f8 'x' 'const char *'
+| |-GNUInlineAttr 0x7fde56879928 <line:8:44>
+| `-AlwaysInlineAttr 0x7fde56879970 <col:30> always_inline
+|-FunctionDecl 0x7fde56879cb8 <line:14:1, col:31> col:5 used bar 'int (int (*)(const char *))'
+| `-ParmVarDecl 0x7fde56879ba8 <col:10, col:30> col:16 'int (*)(const char *)'
+`-FunctionDecl 0x7fde56879db0 <line:16:1, line:19:1> line:16:5 main 'int ()'
+  `-CompoundStmt 0x7fde56879f70 <line:17:1, line:19:1>
+    `-ReturnStmt 0x7fde56879f58 <line:18:3, col:19>
+      `-CallExpr 0x7fde56879f10 <col:10, col:19> 'int'
+        |-ImplicitCastExpr 0x7fde56879ef8 <col:10> 'int (*)(int (*)(const char *))' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fde56879e48 <col:10> 'int (int (*)(const char *))' Function 0x7fde56879cb8 'bar' 'int (int (*)(const char *))'
+        `-ImplicitCastExpr 0x7fde56879f40 <col:15> 'int (*)(const char *)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fde56879e70 <col:15> 'int (const char *)' Function 0x7fde56879888 'atoi' 'int (const char *)'

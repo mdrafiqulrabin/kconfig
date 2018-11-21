@@ -1,0 +1,242 @@
+TranslationUnitDecl 0x7f92a38264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f92a3826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f92a3826740 '__int128'
+|-TypedefDecl 0x7f92a3826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f92a3826760 'unsigned __int128'
+|-TypedefDecl 0x7f92a3826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f92a3826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f92a3826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f92a3826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f92a3826dc0 'char *'
+|   `-BuiltinType 0x7f92a3826560 'char'
+|-TypedefDecl 0x7f92a38270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f92a3827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f92a3826ee0 'struct __va_list_tag'
+|     `-Record 0x7f92a3826e58 '__va_list_tag'
+|-FunctionDecl 0x7f92a4025ad0 <c_files/pr9365-1.c:13:1, line:30:1> line:13:6 used foo 'void (int, int *)'
+| |-ParmVarDecl 0x7f92a3827138 <col:10, col:14> col:14 used n 'int'
+| |-ParmVarDecl 0x7f92a4025a00 <col:17, col:22> col:22 used p 'int *'
+| `-CompoundStmt 0x7f92a4027310 <line:14:1, line:30:1>
+|   `-SwitchStmt 0x7f92a4025bf8 <line:15:2, line:29:2>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7f92a4025be0 <line:15:9> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f92a4025bb8 <col:9> 'int' lvalue ParmVar 0x7f92a3827138 'n' 'int'
+|     `-CompoundStmt 0x7f92a40272e0 <col:12, line:29:2>
+|       |-CaseStmt 0x7f92a4025c48 <line:16:2, line:25:3>
+|       | |-IntegerLiteral 0x7f92a4025c28 <line:16:7> 'int' 100
+|       | |-<<<NULL>>>
+|       | `-CaseStmt 0x7f92a4025ca0 <col:12, line:25:3>
+|       |   |-IntegerLiteral 0x7f92a4025c80 <line:16:17> 'int' 110
+|       |   |-<<<NULL>>>
+|       |   `-CaseStmt 0x7f92a4025cf8 <col:22, line:25:3>
+|       |     |-IntegerLiteral 0x7f92a4025cd8 <line:16:27> 'int' 120
+|       |     |-<<<NULL>>>
+|       |     `-CaseStmt 0x7f92a4025d50 <col:32, line:25:3>
+|       |       |-IntegerLiteral 0x7f92a4025d30 <line:16:37> 'int' 130
+|       |       |-<<<NULL>>>
+|       |       `-CaseStmt 0x7f92a4025da8 <col:42, line:25:3>
+|       |         |-IntegerLiteral 0x7f92a4025d88 <line:16:47> 'int' 140
+|       |         |-<<<NULL>>>
+|       |         `-CaseStmt 0x7f92a4025e00 <col:52, line:25:3>
+|       |           |-IntegerLiteral 0x7f92a4025de0 <line:16:57> 'int' 150
+|       |           |-<<<NULL>>>
+|       |           `-CaseStmt 0x7f92a4025e58 <col:62, line:25:3>
+|       |             |-IntegerLiteral 0x7f92a4025e38 <line:16:67> 'int' 160
+|       |             |-<<<NULL>>>
+|       |             `-CaseStmt 0x7f92a4025eb0 <line:17:2, line:25:3>
+|       |               |-IntegerLiteral 0x7f92a4025e90 <line:17:7> 'int' 200
+|       |               |-<<<NULL>>>
+|       |               `-CaseStmt 0x7f92a4025f08 <col:12, line:25:3>
+|       |                 |-IntegerLiteral 0x7f92a4025ee8 <line:17:17> 'int' 210
+|       |                 |-<<<NULL>>>
+|       |                 `-CaseStmt 0x7f92a4025f60 <col:22, line:25:3>
+|       |                   |-IntegerLiteral 0x7f92a4025f40 <line:17:27> 'int' 220
+|       |                   |-<<<NULL>>>
+|       |                   `-CaseStmt 0x7f92a4025fb8 <col:32, line:25:3>
+|       |                     |-IntegerLiteral 0x7f92a4025f98 <line:17:37> 'int' 230
+|       |                     |-<<<NULL>>>
+|       |                     `-CaseStmt 0x7f92a4026010 <col:42, line:25:3>
+|       |                       |-IntegerLiteral 0x7f92a4025ff0 <line:17:47> 'int' 240
+|       |                       |-<<<NULL>>>
+|       |                       `-CaseStmt 0x7f92a4026068 <col:52, line:25:3>
+|       |                         |-IntegerLiteral 0x7f92a4026048 <line:17:57> 'int' 250
+|       |                         |-<<<NULL>>>
+|       |                         `-CaseStmt 0x7f92a40260c0 <col:62, line:25:3>
+|       |                           |-IntegerLiteral 0x7f92a40260a0 <line:17:67> 'int' 260
+|       |                           |-<<<NULL>>>
+|       |                           `-CaseStmt 0x7f92a4026118 <line:18:2, line:25:3>
+|       |                             |-IntegerLiteral 0x7f92a40260f8 <line:18:7> 'int' 300
+|       |                             |-<<<NULL>>>
+|       |                             `-CaseStmt 0x7f92a4026170 <col:12, line:25:3>
+|       |                               |-IntegerLiteral 0x7f92a4026150 <line:18:17> 'int' 310
+|       |                               |-<<<NULL>>>
+|       |                               `-CaseStmt 0x7f92a40261c8 <col:22, line:25:3>
+|       |                                 |-IntegerLiteral 0x7f92a40261a8 <line:18:27> 'int' 320
+|       |                                 |-<<<NULL>>>
+|       |                                 `-CaseStmt 0x7f92a4026220 <col:32, line:25:3>
+|       |                                   |-IntegerLiteral 0x7f92a4026200 <line:18:37> 'int' 330
+|       |                                   |-<<<NULL>>>
+|       |                                   `-CaseStmt 0x7f92a4026278 <col:42, line:25:3>
+|       |                                     |-IntegerLiteral 0x7f92a4026258 <line:18:47> 'int' 340
+|       |                                     |-<<<NULL>>>
+|       |                                     `-CaseStmt 0x7f92a40262d0 <col:52, line:25:3>
+|       |                                       |-IntegerLiteral 0x7f92a40262b0 <line:18:57> 'int' 350
+|       |                                       |-<<<NULL>>>
+|       |                                       `-CaseStmt 0x7f92a4026328 <col:62, line:25:3>
+|       |                                         |-IntegerLiteral 0x7f92a4026308 <line:18:67> 'int' 360
+|       |                                         |-<<<NULL>>>
+|       |                                         `-CaseStmt 0x7f92a4026380 <line:19:2, line:25:3>
+|       |                                           |-IntegerLiteral 0x7f92a4026360 <line:19:7> 'int' 400
+|       |                                           |-<<<NULL>>>
+|       |                                           `-CaseStmt 0x7f92a40263d8 <col:12, line:25:3>
+|       |                                             |-IntegerLiteral 0x7f92a40263b8 <line:19:17> 'int' 410
+|       |                                             |-<<<NULL>>>
+|       |                                             `-CaseStmt 0x7f92a4026430 <col:22, line:25:3>
+|       |                                               |-IntegerLiteral 0x7f92a4026410 <line:19:27> 'int' 420
+|       |                                               |-<<<NULL>>>
+|       |                                               `-CaseStmt 0x7f92a4026488 <col:32, line:25:3>
+|       |                                                 |-IntegerLiteral 0x7f92a4026468 <line:19:37> 'int' 430
+|       |                                                 |-<<<NULL>>>
+|       |                                                 `-CaseStmt 0x7f92a40264e0 <col:42, line:25:3>
+|       |                                                   |-IntegerLiteral 0x7f92a40264c0 <line:19:47> 'int' 440
+|       |                                                   |-<<<NULL>>>
+|       |                                                   `-CaseStmt 0x7f92a4026538 <col:52, line:25:3>
+|       |                                                     |-IntegerLiteral 0x7f92a4026518 <line:19:57> 'int' 450
+|       |                                                     |-<<<NULL>>>
+|       |                                                     `-CaseStmt 0x7f92a4026590 <col:62, line:25:3>
+|       |                                                       |-IntegerLiteral 0x7f92a4026570 <line:19:67> 'int' 460
+|       |                                                       |-<<<NULL>>>
+|       |                                                       `-CaseStmt 0x7f92a40265e8 <line:20:2, line:25:3>
+|       |                                                         |-IntegerLiteral 0x7f92a40265c8 <line:20:7> 'int' 500
+|       |                                                         |-<<<NULL>>>
+|       |                                                         `-CaseStmt 0x7f92a4026640 <col:12, line:25:3>
+|       |                                                           |-IntegerLiteral 0x7f92a4026620 <line:20:17> 'int' 510
+|       |                                                           |-<<<NULL>>>
+|       |                                                           `-CaseStmt 0x7f92a4026698 <col:22, line:25:3>
+|       |                                                             |-IntegerLiteral 0x7f92a4026678 <line:20:27> 'int' 520
+|       |                                                             |-<<<NULL>>>
+|       |                                                             `-CaseStmt 0x7f92a40266f0 <col:32, line:25:3>
+|       |                                                               |-IntegerLiteral 0x7f92a40266d0 <line:20:37> 'int' 530
+|       |                                                               |-<<<NULL>>>
+|       |                                                               `-CaseStmt 0x7f92a4026748 <col:42, line:25:3>
+|       |                                                                 |-IntegerLiteral 0x7f92a4026728 <line:20:47> 'int' 540
+|       |                                                                 |-<<<NULL>>>
+|       |                                                                 `-CaseStmt 0x7f92a40267a0 <col:52, line:25:3>
+|       |                                                                   |-IntegerLiteral 0x7f92a4026780 <line:20:57> 'int' 550
+|       |                                                                   |-<<<NULL>>>
+|       |                                                                   `-CaseStmt 0x7f92a40267f8 <col:62, line:25:3>
+|       |                                                                     |-IntegerLiteral 0x7f92a40267d8 <line:20:67> 'int' 560
+|       |                                                                     |-<<<NULL>>>
+|       |                                                                     `-CaseStmt 0x7f92a4026850 <line:21:2, line:25:3>
+|       |                                                                       |-IntegerLiteral 0x7f92a4026830 <line:21:7> 'int' 600
+|       |                                                                       |-<<<NULL>>>
+|       |                                                                       `-CaseStmt 0x7f92a40268a8 <col:12, line:25:3>
+|       |                                                                         |-IntegerLiteral 0x7f92a4026888 <line:21:17> 'int' 610
+|       |                                                                         |-<<<NULL>>>
+|       |                                                                         `-CaseStmt 0x7f92a4026900 <col:22, line:25:3>
+|       |                                                                           |-IntegerLiteral 0x7f92a40268e0 <line:21:27> 'int' 620
+|       |                                                                           |-<<<NULL>>>
+|       |                                                                           `-CaseStmt 0x7f92a4026958 <col:32, line:25:3>
+|       |                                                                             |-IntegerLiteral 0x7f92a4026938 <line:21:37> 'int' 630
+|       |                                                                             |-<<<NULL>>>
+|       |                                                                             `-CaseStmt 0x7f92a40269b0 <col:42, line:25:3>
+|       |                                                                               |-IntegerLiteral 0x7f92a4026990 <line:21:47> 'int' 640
+|       |                                                                               |-<<<NULL>>>
+|       |                                                                               `-CaseStmt 0x7f92a4026a20 <col:52, line:25:3>
+|       |                                                                                 |-IntegerLiteral 0x7f92a4026a00 <line:21:57> 'int' 650
+|       |                                                                                 |-<<<NULL>>>
+|       |                                                                                 `-CaseStmt 0x7f92a4026a78 <col:62, line:25:3>
+|       |                                                                                   |-IntegerLiteral 0x7f92a4026a58 <line:21:67> 'int' 660
+|       |                                                                                   |-<<<NULL>>>
+|       |                                                                                   `-CaseStmt 0x7f92a4026ad0 <line:22:2, line:25:3>
+|       |                                                                                     |-IntegerLiteral 0x7f92a4026ab0 <line:22:7> 'int' 700
+|       |                                                                                     |-<<<NULL>>>
+|       |                                                                                     `-CaseStmt 0x7f92a4026b28 <col:12, line:25:3>
+|       |                                                                                       |-IntegerLiteral 0x7f92a4026b08 <line:22:17> 'int' 710
+|       |                                                                                       |-<<<NULL>>>
+|       |                                                                                       `-CaseStmt 0x7f92a4026b80 <col:22, line:25:3>
+|       |                                                                                         |-IntegerLiteral 0x7f92a4026b60 <line:22:27> 'int' 720
+|       |                                                                                         |-<<<NULL>>>
+|       |                                                                                         `-CaseStmt 0x7f92a4026bd8 <col:32, line:25:3>
+|       |                                                                                           |-IntegerLiteral 0x7f92a4026bb8 <line:22:37> 'int' 730
+|       |                                                                                           |-<<<NULL>>>
+|       |                                                                                           `-CaseStmt 0x7f92a4026c30 <col:42, line:25:3>
+|       |                                                                                             |-IntegerLiteral 0x7f92a4026c10 <line:22:47> 'int' 740
+|       |                                                                                             |-<<<NULL>>>
+|       |                                                                                             `-CaseStmt 0x7f92a4026c88 <col:52, line:25:3>
+|       |                                                                                               |-IntegerLiteral 0x7f92a4026c68 <line:22:57> 'int' 750
+|       |                                                                                               |-<<<NULL>>>
+|       |                                                                                               `-CaseStmt 0x7f92a4026ce0 <col:62, line:25:3>
+|       |                                                                                                 |-IntegerLiteral 0x7f92a4026cc0 <line:22:67> 'int' 760
+|       |                                                                                                 |-<<<NULL>>>
+|       |                                                                                                 `-CaseStmt 0x7f92a4026d38 <line:23:2, line:25:3>
+|       |                                                                                                   |-IntegerLiteral 0x7f92a4026d18 <line:23:7> 'int' 800
+|       |                                                                                                   |-<<<NULL>>>
+|       |                                                                                                   `-CaseStmt 0x7f92a4026d90 <col:12, line:25:3>
+|       |                                                                                                     |-IntegerLiteral 0x7f92a4026d70 <line:23:17> 'int' 810
+|       |                                                                                                     |-<<<NULL>>>
+|       |                                                                                                     `-CaseStmt 0x7f92a4026de8 <col:22, line:25:3>
+|       |                                                                                                       |-IntegerLiteral 0x7f92a4026dc8 <line:23:27> 'int' 820
+|       |                                                                                                       |-<<<NULL>>>
+|       |                                                                                                       `-CaseStmt 0x7f92a4026e40 <col:32, line:25:3>
+|       |                                                                                                         |-IntegerLiteral 0x7f92a4026e20 <line:23:37> 'int' 830
+|       |                                                                                                         |-<<<NULL>>>
+|       |                                                                                                         `-CaseStmt 0x7f92a4026e98 <col:42, line:25:3>
+|       |                                                                                                           |-IntegerLiteral 0x7f92a4026e78 <line:23:47> 'int' 840
+|       |                                                                                                           |-<<<NULL>>>
+|       |                                                                                                           `-CaseStmt 0x7f92a4026ef0 <col:52, line:25:3>
+|       |                                                                                                             |-IntegerLiteral 0x7f92a4026ed0 <line:23:57> 'int' 850
+|       |                                                                                                             |-<<<NULL>>>
+|       |                                                                                                             `-CaseStmt 0x7f92a4026f48 <col:62, line:25:3>
+|       |                                                                                                               |-IntegerLiteral 0x7f92a4026f28 <line:23:67> 'int' 860
+|       |                                                                                                               |-<<<NULL>>>
+|       |                                                                                                               `-CaseStmt 0x7f92a4026fa0 <line:24:2, line:25:3>
+|       |                                                                                                                 |-IntegerLiteral 0x7f92a4026f80 <line:24:7> 'int' 900
+|       |                                                                                                                 |-<<<NULL>>>
+|       |                                                                                                                 `-CaseStmt 0x7f92a4026ff8 <col:12, line:25:3>
+|       |                                                                                                                   |-IntegerLiteral 0x7f92a4026fd8 <line:24:17> 'int' 910
+|       |                                                                                                                   |-<<<NULL>>>
+|       |                                                                                                                   `-CaseStmt 0x7f92a4027050 <col:22, line:25:3>
+|       |                                                                                                                     |-IntegerLiteral 0x7f92a4027030 <line:24:27> 'int' 920
+|       |                                                                                                                     |-<<<NULL>>>
+|       |                                                                                                                     `-CaseStmt 0x7f92a40270a8 <col:32, line:25:3>
+|       |                                                                                                                       |-IntegerLiteral 0x7f92a4027088 <line:24:37> 'int' 930
+|       |                                                                                                                       |-<<<NULL>>>
+|       |                                                                                                                       `-CaseStmt 0x7f92a4027100 <col:42, line:25:3>
+|       |                                                                                                                         |-IntegerLiteral 0x7f92a40270e0 <line:24:47> 'int' 940
+|       |                                                                                                                         |-<<<NULL>>>
+|       |                                                                                                                         `-CaseStmt 0x7f92a4027158 <col:52, line:25:3>
+|       |                                                                                                                           |-IntegerLiteral 0x7f92a4027138 <line:24:57> 'int' 950
+|       |                                                                                                                           |-<<<NULL>>>
+|       |                                                                                                                           `-CaseStmt 0x7f92a40271b0 <col:62, line:25:3>
+|       |                                                                                                                             |-IntegerLiteral 0x7f92a4027190 <line:24:67> 'int' 960
+|       |                                                                                                                             |-<<<NULL>>>
+|       |                                                                                                                             `-BreakStmt 0x7f92a40271e8 <line:25:3>
+|       |-DefaultStmt 0x7f92a40272b8 <line:26:2, line:27:8>
+|       | `-BinaryOperator 0x7f92a4027290 <col:3, col:8> 'int' '='
+|       |   |-UnaryOperator 0x7f92a4027230 <col:3, col:4> 'int' lvalue prefix '*'
+|       |   | `-ImplicitCastExpr 0x7f92a4027218 <col:4> 'int *' <LValueToRValue>
+|       |   |   `-DeclRefExpr 0x7f92a40271f0 <col:4> 'int *' lvalue ParmVar 0x7f92a4025a00 'p' 'int *'
+|       |   `-ImplicitCastExpr 0x7f92a4027278 <col:8> 'int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7f92a4027250 <col:8> 'int' lvalue ParmVar 0x7f92a3827138 'n' 'int'
+|       `-BreakStmt 0x7f92a40272d8 <line:28:3>
+`-FunctionDecl 0x7f92a40274c8 <line:32:1, line:41:1> line:32:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7f92a4027348 <col:10, col:14> col:14 used argc 'int'
+  |-ParmVarDecl 0x7f92a40273f0 <col:20, col:27> col:27 used argv 'char **'
+  `-CompoundStmt 0x7f92a40277f8 <line:33:1, line:41:1>
+    |-DeclStmt 0x7f92a40275e8 <line:34:2, col:7>
+    | `-VarDecl 0x7f92a4027588 <col:2, col:6> col:6 used p 'int'
+    |-CStyleCastExpr 0x7f92a4027650 <line:36:2, col:9> 'void' <ToVoid>
+    | `-ImplicitCastExpr 0x7f92a4027638 <col:9> 'char **' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f92a4027600 <col:9> 'char **' lvalue ParmVar 0x7f92a40273f0 'argv' 'char **'
+    |-CallExpr 0x7f92a4027750 <line:38:2, col:14> 'void'
+    | |-ImplicitCastExpr 0x7f92a4027738 <col:2> 'void (*)(int, int *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f92a4027678 <col:2> 'void (int, int *)' Function 0x7f92a4025ad0 'foo' 'void (int, int *)'
+    | |-ImplicitCastExpr 0x7f92a4027788 <col:6> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f92a40276a0 <col:6> 'int' lvalue ParmVar 0x7f92a4027348 'argc' 'int'
+    | `-UnaryOperator 0x7f92a40276f0 <col:12, col:13> 'int *' prefix '&'
+    |   `-DeclRefExpr 0x7f92a40276c8 <col:13> 'int' lvalue Var 0x7f92a4027588 'p' 'int'
+    `-ReturnStmt 0x7f92a40277e0 <line:40:2, col:9>
+      `-ImplicitCastExpr 0x7f92a40277c8 <col:9> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f92a40277a0 <col:9> 'int' lvalue Var 0x7f92a4027588 'p' 'int'

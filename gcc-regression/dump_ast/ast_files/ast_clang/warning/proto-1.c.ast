@@ -1,0 +1,32 @@
+c_files/proto-1.c:12:11: warning: implicit declaration of function 'foo' is invalid in C99 [-Wimplicit-function-declaration]
+  return !foo(&dev);
+          ^
+1 warning generated.
+TranslationUnitDecl 0x7fd3590264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd359026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd359026740 '__int128'
+|-TypedefDecl 0x7fd359026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd359026760 'unsigned __int128'
+|-TypedefDecl 0x7fd359026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd359026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd359026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd359026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd359026dc0 'char *'
+|   `-BuiltinType 0x7fd359026560 'char'
+|-TypedefDecl 0x7fd3590270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd359027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd359026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd359026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd359825a00 <c_files/proto-1.c:3:1, line:13:1> line:3:5 f 'int (void)'
+| `-CompoundStmt 0x7fd359825d98 <line:4:1, line:13:1>
+|   |-DeclStmt 0x7fd359825b70 <line:5:3, col:20>
+|   | `-VarDecl 0x7fd359825af0 <col:3, col:19> col:13 used dev 'const int' cinit
+|   |   `-IntegerLiteral 0x7fd359825b50 <col:19> 'int' 4
+|   `-ReturnStmt 0x7fd359825d80 <line:12:3, col:19>
+|     `-UnaryOperator 0x7fd359825d60 <col:10, col:19> 'int' prefix '!'
+|       `-CallExpr 0x7fd359825d30 <col:11, col:19> 'int'
+|         |-ImplicitCastExpr 0x7fd359825d18 <col:11> 'int (*)()' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fd359825c78 <col:11> 'int ()' Function 0x7fd359825be0 'foo' 'int ()'
+|         `-UnaryOperator 0x7fd359825cc8 <col:15, col:16> 'const int *' prefix '&'
+|           `-DeclRefExpr 0x7fd359825ca0 <col:16> 'const int' lvalue Var 0x7fd359825af0 'dev' 'const int'
+`-FunctionDecl 0x7fd359825be0 <<invalid sloc>> col:11 implicit used foo 'int ()'

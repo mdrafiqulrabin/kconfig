@@ -1,0 +1,16 @@
+FileAST: 
+  Decl: memmove, [], [], []
+    FuncDecl: 
+      PtrDecl: []
+        TypeDecl: memmove, []
+          IdentifierType: ['void']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        PtrDecl: []
+          TypeDecl: bar, []
+            IdentifierType: ['void']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: memmove

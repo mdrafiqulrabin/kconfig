@@ -1,0 +1,121 @@
+FileAST: 
+  FuncDef: 
+    Decl: fooctz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: fooctz, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: ==
+            ID: i
+            Constant: int, 0
+          Constant: int, 32
+          FuncCall: 
+            ID: __builtin_ctz
+            ExprList: 
+              ID: i
+  FuncDef: 
+    Decl: fooctz2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: fooctz2, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: !=
+            ID: i
+            Constant: int, 0
+          FuncCall: 
+            ID: __builtin_ctz
+            ExprList: 
+              ID: i
+          Constant: int, 32
+  FuncDef: 
+    Decl: fooctz3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: fooctz3, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: >
+            ID: i
+            Constant: int, 0
+          FuncCall: 
+            ID: __builtin_ctz
+            ExprList: 
+              ID: i
+          Constant: int, 32
+  FuncDef: 
+    Decl: fooclz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: fooclz, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: ==
+            ID: i
+            Constant: int, 0
+          Constant: int, 32
+          FuncCall: 
+            ID: __builtin_clz
+            ExprList: 
+              ID: i
+  FuncDef: 
+    Decl: fooclz2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: fooclz2, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: !=
+            ID: i
+            Constant: int, 0
+          FuncCall: 
+            ID: __builtin_clz
+            ExprList: 
+              ID: i
+          Constant: int, 32
+  FuncDef: 
+    Decl: fooclz3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: fooclz3, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: >
+            ID: i
+            Constant: int, 0
+          FuncCall: 
+            ID: __builtin_clz
+            ExprList: 
+              ID: i
+          Constant: int, 32

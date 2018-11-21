@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fa01d8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa01d826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa01d826740 '__int128'
+|-TypedefDecl 0x7fa01d826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa01d826760 'unsigned __int128'
+|-TypedefDecl 0x7fa01d826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa01d826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa01d826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa01d826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa01d826dc0 'char *'
+|   `-BuiltinType 0x7fa01d826560 'char'
+|-TypedefDecl 0x7fa01d8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa01d827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa01d826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa01d826e58 '__va_list_tag'
+|-RecordDecl 0x7fa01d827120 <c_files/pr40351.c:3:1, line:9:1> line:3:8 struct IO_APIC_route_entry definition
+| |-PackedAttr 0x7fa01d877660 <line:9:19>
+| |-FieldDecl 0x7fa01d877418 <line:4:5, col:27> col:18 vector 'unsigned int'
+| | `-IntegerLiteral 0x7fa01d8271d0 <col:27> 'int' 8
+| |-FieldDecl 0x7fa01d877498 <line:5:5, col:34> col:18 delivery_mode 'unsigned int'
+| | `-IntegerLiteral 0x7fa01d877460 <col:34> 'int' 1
+| |-FieldDecl 0x7fa01d877518 <line:6:5, col:25> col:18 mask 'unsigned int'
+| | `-IntegerLiteral 0x7fa01d8774e0 <col:25> 'int' 1
+| |-FieldDecl 0x7fa01d877598 <line:7:5, col:33> col:18 __reserved_2 'unsigned int'
+| | `-IntegerLiteral 0x7fa01d877560 <col:33> 'int' 15
+| `-FieldDecl 0x7fa01d877618 <line:8:5, col:33> col:18 __reserved_3 'unsigned int'
+|   `-IntegerLiteral 0x7fa01d8775e0 <col:33> 'int' 8
+|-RecordDecl 0x7fa01d8776a8 <line:10:1, line:15:1> line:10:7 union entry_union definition
+| |-RecordDecl 0x7fa01d877750 <line:11:5, line:13:5> line:11:5 struct definition
+| | |-FieldDecl 0x7fa01d877818 <line:12:9, col:22> col:22 referenced w1 'unsigned int'
+| | `-FieldDecl 0x7fa01d877878 <col:9, col:26> col:26 w2 'unsigned int'
+| |-FieldDecl 0x7fa01d877910 <line:11:5> col:5 implicit referenced 'struct entry_union::(anonymous at c_files/pr40351.c:11:5)'
+| |-IndirectFieldDecl 0x7fa01d877968 <line:12:22> col:22 implicit w1 'unsigned int'
+| | |-Field 0x7fa01d877910 '' 'struct entry_union::(anonymous at c_files/pr40351.c:11:5)'
+| | `-Field 0x7fa01d877818 'w1' 'unsigned int'
+| |-IndirectFieldDecl 0x7fa01d8779b8 <col:26> col:26 implicit w2 'unsigned int'
+| | |-Field 0x7fa01d877910 '' 'struct entry_union::(anonymous at c_files/pr40351.c:11:5)'
+| | `-Field 0x7fa01d877878 'w2' 'unsigned int'
+| `-FieldDecl 0x7fa01d877a50 <line:14:5, col:32> col:32 referenced entry 'struct IO_APIC_route_entry':'struct IO_APIC_route_entry'
+|-FunctionDecl 0x7fa01d877bb8 <line:16:1, col:31> col:14 used io_apic_read 'unsigned int (void)'
+`-FunctionDecl 0x7fa01d877d90 <line:17:1, line:22:1> line:17:28 ioapic_read_entry 'struct IO_APIC_route_entry (void)'
+  `-CompoundStmt 0x7fa01d8781a8 <line:18:1, line:22:1>
+    |-DeclStmt 0x7fa01d877ee0 <line:19:3, col:23>
+    | `-VarDecl 0x7fa01d877e80 <col:3, col:21> col:21 used eu 'union entry_union':'union entry_union'
+    |-BinaryOperator 0x7fa01d878038 <line:20:3, col:24> 'unsigned int' '='
+    | |-MemberExpr 0x7fa01d877f70 <col:3, col:6> 'unsigned int' lvalue .w1 0x7fa01d877818
+    | | `-MemberExpr 0x7fa01d877f20 <col:3, col:6> 'struct entry_union::(anonymous at c_files/pr40351.c:11:5)' lvalue . 0x7fa01d877910
+    | |   `-DeclRefExpr 0x7fa01d877ef8 <col:3> 'union entry_union':'union entry_union' lvalue Var 0x7fa01d877e80 'eu' 'union entry_union':'union entry_union'
+    | `-CallExpr 0x7fa01d878010 <col:11, col:24> 'unsigned int'
+    |   `-ImplicitCastExpr 0x7fa01d877ff8 <col:11> 'unsigned int (*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7fa01d877fa8 <col:11> 'unsigned int (void)' Function 0x7fa01d877bb8 'io_apic_read' 'unsigned int (void)'
+    `-ReturnStmt 0x7fa01d878190 <line:21:3, col:13>
+      `-ImplicitCastExpr 0x7fa01d878178 <col:10, col:13> 'struct IO_APIC_route_entry':'struct IO_APIC_route_entry' <LValueToRValue>
+        `-MemberExpr 0x7fa01d878140 <col:10, col:13> 'struct IO_APIC_route_entry':'struct IO_APIC_route_entry' lvalue .entry 0x7fa01d877a50
+          `-DeclRefExpr 0x7fa01d878118 <col:10> 'union entry_union':'union entry_union' lvalue Var 0x7fa01d877e80 'eu' 'union entry_union':'union entry_union'

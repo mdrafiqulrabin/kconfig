@@ -1,0 +1,247 @@
+FileAST: 
+  Decl: f, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        EllipsisParam: 
+      TypeDecl: f, []
+        IdentifierType: ['void']
+  Decl: g, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['long']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['long']
+      TypeDecl: g, []
+        IdentifierType: ['void']
+  Decl: nnn, [], [], []
+    TypeDecl: nnn, []
+      IdentifierType: ['int']
+    Constant: int, 0
+  Decl: test, [], [], []
+    TypeDecl: test, []
+      IdentifierType: ['long']
+    Constant: int, 0
+  Typedef: __mpz_struct, [], ['typedef']
+    TypeDecl: __mpz_struct, []
+      Struct: None
+        Decl: _mp_size, [], [], []
+          TypeDecl: _mp_size, []
+            IdentifierType: ['int']
+        Decl: _mp_d, [], [], []
+          PtrDecl: []
+            TypeDecl: _mp_d, []
+              IdentifierType: ['unsigned', 'long']
+  Typedef: mpz_t, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: mpz_t, []
+        IdentifierType: ['__mpz_struct']
+      Constant: int, 1
+  Decl: h, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['mpz_t']
+      TypeDecl: h, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['mpz_t']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['mpz_t']
+      Decl: nn, [], [], []
+        TypeDecl: nn, []
+          IdentifierType: ['long']
+      Decl: dn, [], [], []
+        TypeDecl: dn, []
+          IdentifierType: ['long']
+      Decl: np, [], [], []
+        PtrDecl: []
+          TypeDecl: np, []
+            IdentifierType: ['unsigned', 'long']
+      Decl: dup, [], [], []
+        PtrDecl: []
+          TypeDecl: dup, []
+            IdentifierType: ['unsigned', 'long']
+      Decl: dnp, [], [], []
+        PtrDecl: []
+          TypeDecl: dnp, []
+            IdentifierType: ['unsigned', 'long']
+      Decl: qp, [], [], []
+        PtrDecl: []
+          TypeDecl: qp, []
+            IdentifierType: ['unsigned', 'long']
+      Decl: alloc, [], [], []
+        TypeDecl: alloc, []
+          IdentifierType: ['long']
+      Decl: itch, [], [], []
+        TypeDecl: itch, []
+          IdentifierType: ['long']
+      FuncCall: 
+        ID: f
+        ExprList: 
+          ID: n
+      FuncCall: 
+        ID: h
+        ExprList: 
+          ID: d
+      Assignment: =
+        ID: qp
+        BinaryOp: +
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'long']
+            FuncCall: 
+              ID: __builtin_alloca
+              ExprList: 
+                BinaryOp: *
+                  Constant: int, 4099
+                  Constant: int, 8
+          Constant: int, 1
+      Assignment: =
+        ID: dnp
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'long']
+          FuncCall: 
+            ID: __builtin_alloca
+            ExprList: 
+              BinaryOp: *
+                Constant: int, 2049
+                Constant: int, 8
+      Assignment: =
+        ID: alloc
+        Constant: int, 1
+      For: 
+        Assignment: =
+          ID: test
+          Constant: int, 0
+        BinaryOp: <
+          ID: test
+          Constant: int, 1
+        UnaryOp: p++
+          ID: test
+        Compound: 
+          Assignment: =
+            ID: dn
+            StructRef: ->
+              ID: d
+              ID: _mp_size
+          Assignment: =
+            ID: dup
+            StructRef: ->
+              ID: d
+              ID: _mp_d
+          FuncCall: 
+            ID: f
+            ExprList: 
+              ID: dnp
+              ID: dup
+              ID: dn
+          Assignment: |=
+            ArrayRef: 
+              ID: dnp
+              BinaryOp: -
+                ID: dn
+                Constant: int, 1
+            BinaryOp: <<
+              Constant: int, 1UL
+              Constant: int, 63
+          FuncCall: 
+            ID: f
+            ExprList: 
+              Constant: int, 0
+          Assignment: =
+            ID: nn
+            ID: nnn
+          Assignment: =
+            ID: np
+            StructRef: ->
+              ID: n
+              ID: _mp_d
+          Assignment: =
+            ArrayRef: 
+              ID: qp
+              UnaryOp: -
+                Constant: int, 1
+            UnaryOp: -
+              Constant: int, 757136820
+          Assignment: =
+            ArrayRef: 
+              ID: qp
+              BinaryOp: +
+                BinaryOp: -
+                  ID: nn
+                  ID: dn
+                Constant: int, 1
+            Constant: int, 14883681
+          FuncCall: 
+            ID: f
+            ExprList: 
+              Constant: int, 0
+          If: 
+            BinaryOp: >=
+              ID: dn
+              Constant: int, 6
+            FuncCall: 
+              ID: f
+              ExprList: 
+                Constant: int, 0
+          Assignment: =
+            ID: itch
+            BinaryOp: +
+              ID: nn
+              Constant: int, 1
+          If: 
+            BinaryOp: >
+              BinaryOp: +
+                ID: itch
+                Constant: int, 1
+              ID: alloc
+            Compound: 
+              FuncCall: 
+                ID: g
+                ExprList: 
+                  Constant: int, 0
+                  BinaryOp: *
+                    ID: alloc
+                    Constant: int, 8
+                  BinaryOp: *
+                    BinaryOp: +
+                      ID: itch
+                      Constant: int, 1
+                    Constant: int, 8
+              Assignment: =
+                ID: alloc
+                BinaryOp: +
+                  ID: itch
+                  Constant: int, 1
+          FuncCall: 
+            ID: f
+            ExprList: 
+              ID: np
+              ID: nn
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,81 @@
+FileAST: 
+  Pragma: omp declare simd simdlen(4) notinbranch
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c1, ['const'], [], []
+            TypeDecl: c1, ['const']
+              IdentifierType: ['double']
+          Decl: c2, ['const'], [], []
+            TypeDecl: c2, ['const']
+              IdentifierType: ['double']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: z1, [], [], []
+        TypeDecl: z1, []
+          IdentifierType: ['double']
+        ID: c1
+      Decl: z2, [], [], []
+        TypeDecl: z2, []
+          IdentifierType: ['double']
+        ID: c2
+      Decl: res, [], [], []
+        TypeDecl: res, []
+          IdentifierType: ['int']
+        Constant: int, 100
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 100
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: res
+            TernaryOp: 
+              BinaryOp: >
+                BinaryOp: +
+                  BinaryOp: *
+                    ID: z1
+                    ID: z1
+                  BinaryOp: *
+                    ID: z2
+                    ID: z2
+                Constant: float, 4.0
+              TernaryOp: 
+                BinaryOp: <
+                  ID: i
+                  ID: res
+                ID: i
+                ID: res
+              ID: res
+          Assignment: =
+            ID: z1
+            BinaryOp: -
+              BinaryOp: +
+                ID: c1
+                BinaryOp: *
+                  ID: z1
+                  ID: z1
+              BinaryOp: *
+                ID: z2
+                ID: z2
+          Assignment: =
+            ID: z2
+            BinaryOp: +
+              ID: c2
+              BinaryOp: *
+                BinaryOp: *
+                  Constant: float, 2.0
+                  ID: z1
+                ID: z2
+      Return: 
+        ID: res

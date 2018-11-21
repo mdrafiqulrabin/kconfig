@@ -1,0 +1,60 @@
+FileAST: 
+  Decl: strdup, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      PtrDecl: []
+        TypeDecl: strdup, []
+          IdentifierType: ['char']
+  FuncDef: 
+    Decl: func, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['char']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['char']
+          Decl: c, [], [], []
+            PtrDecl: []
+              TypeDecl: c, []
+                IdentifierType: ['char']
+        TypeDecl: func, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: strdup
+        ExprList: 
+          ID: a
+      FuncCall: 
+        ID: strdup
+        ExprList: 
+          ID: b
+      FuncCall: 
+        ID: strdup
+        ExprList: 
+          ID: c
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: func
+        ExprList: 
+          Constant: string, "a"
+          Constant: string, "b"
+          Constant: string, "c"
+      Return: 
+        Constant: int, 0

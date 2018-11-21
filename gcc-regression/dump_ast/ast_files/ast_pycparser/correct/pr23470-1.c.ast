@@ -1,0 +1,34 @@
+FileAST: 
+  Decl: link_error, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: link_error, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['double']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['double']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: <
+          BinaryOp: +
+            BinaryOp: *
+              ID: a
+              ID: a
+            BinaryOp: *
+              ID: b
+              ID: b
+          Constant: int, 0
+        FuncCall: 
+          ID: link_error

@@ -1,0 +1,70 @@
+FileAST: 
+  Decl: None, [], [], []
+    Union: U
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['int']
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['float']
+  Decl: None, [], [], []
+    Struct: A
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            Union: U
+          Constant: int, 64
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: foo, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: z, [], [], []
+            PtrDecl: []
+              TypeDecl: z, []
+                Struct: A
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          Union: U
+      Assignment: =
+        StructRef: .
+          ID: y
+          ID: f
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            StructRef: .
+              ArrayRef: 
+                StructRef: ->
+                  ID: z
+                  ID: b
+                ID: x
+              ID: f
+      Assignment: =
+        StructRef: ->
+          ID: z
+          ID: a
+        TernaryOp: 
+          StructRef: .
+            ID: y
+            ID: r
+          Constant: int, 4
+          StructRef: .
+            ID: y
+            ID: r

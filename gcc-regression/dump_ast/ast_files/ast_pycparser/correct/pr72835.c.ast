@@ -1,0 +1,97 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: struct_1
+      Decl: m1, [], [], []
+        TypeDecl: m1, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 6
+      Decl: m2, [], [], []
+        TypeDecl: m2, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 24
+      Decl: m3, [], [], []
+        TypeDecl: m3, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 6
+  Decl: var_32, [], [], []
+    TypeDecl: var_32, []
+      IdentifierType: ['unsigned', 'short']
+    Constant: int, 0x2d10
+  Decl: s1, [], [], []
+    TypeDecl: s1, []
+      Struct: struct_1
+  FuncDef: 
+    Decl: init, [], [], []
+      FuncDecl: 
+        TypeDecl: init, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: s1
+          ID: m1
+        Constant: int, 4
+      Assignment: =
+        StructRef: .
+          ID: s1
+          ID: m2
+        Constant: int, 0x7ca4b8
+      Assignment: =
+        StructRef: .
+          ID: s1
+          ID: m3
+        Constant: int, 24
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['unsigned', 'int']
+        BinaryOp: +
+          BinaryOp: *
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'int']
+              StructRef: .
+                ID: s1
+                ID: m2
+            UnaryOp: -
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'int']
+                StructRef: .
+                  ID: s1
+                  ID: m3
+          BinaryOp: *
+            ID: var_32
+            UnaryOp: -
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'int']
+                StructRef: .
+                  ID: s1
+                  ID: m1
+      If: 
+        BinaryOp: !=
+          ID: c
+          Constant: int, 4098873984
+        FuncCall: 
+          ID: __builtin_abort
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: init
+      FuncCall: 
+        ID: foo
+      Return: 
+        Constant: int, 0

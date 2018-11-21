@@ -1,0 +1,30 @@
+c_files/pr82673.c:4:23: error: size of register 'ebp' does not match variable size
+register long *B asm ("ebp");
+                      ^
+1 error generated.
+TranslationUnitDecl 0x7ff8b58264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff8b5826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff8b5826740 '__int128'
+|-TypedefDecl 0x7ff8b5826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff8b5826760 'unsigned __int128'
+|-TypedefDecl 0x7ff8b5826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff8b5826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff8b5826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff8b5826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff8b5826dc0 'char *'
+|   `-BuiltinType 0x7ff8b5826560 'char'
+|-TypedefDecl 0x7ff8b58270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff8b5827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff8b5826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff8b5826e58 '__va_list_tag'
+|-VarDecl 0x7ff8b6025a00 <c_files/pr82673.c:4:1, col:16> col:16 used B 'long *' register
+| `-AsmLabelAttr 0x7ff8b6025a60 <col:23> "ebp"
+|-VarDecl 0x7ff8b6025b10 <line:6:1, col:10> col:6 used y 'long' cinit
+| `-ImplicitCastExpr 0x7ff8b6025b90 <col:10> 'long' <IntegralCast>
+|   `-IntegerLiteral 0x7ff8b6025b70 <col:10> 'int' 20
+`-FunctionDecl 0x7ff8b6025c70 <line:8:1, line:12:1> line:9:1 bar 'void (void)'
+  `-CompoundStmt 0x7ff8b6025da0 <line:10:1, line:12:1>
+    `-BinaryOperator 0x7ff8b6025d78 <line:11:3, col:8> 'long *' '='
+      |-DeclRefExpr 0x7ff8b6025d08 <col:3> 'long *' lvalue Var 0x7ff8b6025a00 'B' 'long *'
+      `-UnaryOperator 0x7ff8b6025d58 <col:7, col:8> 'long *' prefix '&'
+        `-DeclRefExpr 0x7ff8b6025d30 <col:8> 'long' lvalue Var 0x7ff8b6025b10 'y' 'long'

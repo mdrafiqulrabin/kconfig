@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7fd5e20264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd5e2026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd5e2026740 '__int128'
+|-TypedefDecl 0x7fd5e2026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd5e2026760 'unsigned __int128'
+|-TypedefDecl 0x7fd5e2026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd5e2026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd5e2026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd5e2026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd5e2026dc0 'char *'
+|   `-BuiltinType 0x7fd5e2026560 'char'
+|-TypedefDecl 0x7fd5e20270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd5e2027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd5e2026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd5e2026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd5e2825a30 <c_files/pr33483.c:4:1, line:7:1> line:4:13 f1 'long double (long double)'
+| |-ParmVarDecl 0x7fd5e2027138 <col:17, col:29> col:29 used x 'long double'
+| `-CompoundStmt 0x7fd5e2825e50 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7fd5e2825e38 <line:6:3, col:31>
+|     `-CallExpr 0x7fd5e2825dd0 <col:10, col:31> 'long double'
+|       |-ImplicitCastExpr 0x7fd5e2825db8 <col:10> 'long double (*)(long double, long double)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fd5e2825d10 <col:10> '<builtin fn type>' Function 0x7fd5e2825b50 '__builtin_fmodl' 'long double (long double, long double)'
+|       |-ImplicitCastExpr 0x7fd5e2825e08 <col:27> 'long double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fd5e2825d38 <col:27> 'long double' lvalue ParmVar 0x7fd5e2027138 'x' 'long double'
+|       `-ImplicitCastExpr 0x7fd5e2825e20 <col:30> 'long double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fd5e2825d60 <col:30> 'long double' lvalue ParmVar 0x7fd5e2027138 'x' 'long double'
+|-FunctionDecl 0x7fd5e2825b50 <col:10> col:10 implicit used __builtin_fmodl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7fd5e2825be8 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7fd5e2825c48 <<invalid sloc>> <invalid sloc> 'long double'
+| |-NoThrowAttr 0x7fd5e2825cb8 <col:10> Implicit
+| `-ConstAttr 0x7fd5e2825d00 <col:10> Implicit
+|-FunctionDecl 0x7fd5e2825f18 <line:9:1, line:12:1> line:9:13 f2 'long double (long double)'
+| |-ParmVarDecl 0x7fd5e2825e88 <col:17, col:29> col:29 used x 'long double'
+| `-CompoundStmt 0x7fd5e2826288 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7fd5e2826270 <line:11:3, col:36>
+|     `-CallExpr 0x7fd5e2826208 <col:10, col:36> 'long double'
+|       |-ImplicitCastExpr 0x7fd5e28261f0 <col:10> 'long double (*)(long double, long double)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fd5e2826178 <col:10> '<builtin fn type>' Function 0x7fd5e2825fb8 '__builtin_remainderl' 'long double (long double, long double)'
+|       |-ImplicitCastExpr 0x7fd5e2826240 <col:32> 'long double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fd5e28261a0 <col:32> 'long double' lvalue ParmVar 0x7fd5e2825e88 'x' 'long double'
+|       `-ImplicitCastExpr 0x7fd5e2826258 <col:35> 'long double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fd5e28261c8 <col:35> 'long double' lvalue ParmVar 0x7fd5e2825e88 'x' 'long double'
+`-FunctionDecl 0x7fd5e2825fb8 <col:10> col:10 implicit used __builtin_remainderl 'long double (long double, long double)' extern
+  |-ParmVarDecl 0x7fd5e2826050 <<invalid sloc>> <invalid sloc> 'long double'
+  |-ParmVarDecl 0x7fd5e28260b0 <<invalid sloc>> <invalid sloc> 'long double'
+  |-NoThrowAttr 0x7fd5e2826120 <col:10> Implicit
+  `-ConstAttr 0x7fd5e2826168 <col:10> Implicit

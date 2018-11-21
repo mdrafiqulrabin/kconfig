@@ -1,0 +1,39 @@
+FileAST: 
+  FuncDef: 
+    Decl: binarize, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: npixels, [], [], []
+            TypeDecl: npixels, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['unsigned', 'char']
+        TypeDecl: binarize, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: npixels
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: b
+            ID: i
+          TernaryOp: 
+            BinaryOp: >
+              ArrayRef: 
+                ID: b
+                ID: i
+              Constant: int, 225
+            Constant: int, 0xff
+            Constant: int, 0

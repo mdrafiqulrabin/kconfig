@@ -1,0 +1,69 @@
+TranslationUnitDecl 0x7feb45822ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feb45823420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feb45823140 '__int128'
+|-TypedefDecl 0x7feb45823490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feb45823160 'unsigned __int128'
+|-TypedefDecl 0x7feb45823768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feb45823570 'struct __NSConstantString_tag'
+|   `-Record 0x7feb458234e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feb45823800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feb458237c0 'char *'
+|   `-BuiltinType 0x7feb45822f60 'char'
+|-TypedefDecl 0x7feb45823ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feb45823a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feb458238e0 'struct __va_list_tag'
+|     `-Record 0x7feb45823858 '__va_list_tag'
+|-RecordDecl 0x7feb45823b20 <c_files/pr54760-5.c:8:9, line:11:1> line:8:9 struct definition
+| |-FieldDecl 0x7feb45873e00 <line:10:3, col:7> col:7 referenced x 'int'
+| |-FieldDecl 0x7feb45873e60 <col:3, col:10> col:10 y 'int'
+| |-FieldDecl 0x7feb45873ec0 <col:3, col:13> col:13 z 'int'
+| `-FieldDecl 0x7feb45873f20 <col:3, col:16> col:16 referenced w 'int'
+|-TypedefDecl 0x7feb45873fc0 <line:8:1, line:11:3> col:3 referenced tcb_t 'struct tcb_t':'tcb_t'
+| `-ElaboratedType 0x7feb45873f70 'struct tcb_t' sugar
+|   `-RecordType 0x7feb45823bb0 'tcb_t'
+|     `-Record 0x7feb45823b20 ''
+|-FunctionDecl 0x7feb458740f0 <line:13:1, col:26> col:13 used test_00 'void (void)' extern
+|-FunctionDecl 0x7feb458743e8 <line:15:1, line:25:1> line:16:1 test_01 'int (int, volatile int *, int)'
+| |-ParmVarDecl 0x7feb458741e0 <col:10, col:14> col:14 x 'int'
+| |-ParmVarDecl 0x7feb45874280 <col:17, col:31> col:31 used y 'volatile int *'
+| |-ParmVarDecl 0x7feb458742f8 <col:34, col:38> col:38 used a 'int'
+| `-CompoundStmt 0x7feb45874b78 <line:17:1, line:25:1>
+|   |-IfStmt 0x7feb45874568 <line:18:3, line:19:14>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7feb458744c0 <line:18:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7feb45874498 <col:7> 'int' lvalue ParmVar 0x7feb458742f8 'a' 'int'
+|   | |-CallExpr 0x7feb45874540 <line:19:5, col:14> 'void'
+|   | | `-ImplicitCastExpr 0x7feb45874528 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7feb458744d8 <col:5> 'void (void)' Function 0x7feb458740f0 'test_00' 'void (void)'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7feb45874648 <line:21:3, col:10> 'int' '='
+|   | |-ArraySubscriptExpr 0x7feb45874600 <col:3, col:6> 'volatile int' lvalue
+|   | | |-ImplicitCastExpr 0x7feb458745e8 <col:3> 'volatile int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7feb458745a0 <col:3> 'volatile int *' lvalue ParmVar 0x7feb45874280 'y' 'volatile int *'
+|   | | `-IntegerLiteral 0x7feb458745c8 <col:5> 'int' 0
+|   | `-IntegerLiteral 0x7feb45874628 <col:10> 'int' 1
+|   |-DeclStmt 0x7feb45874950 <line:23:3, col:51>
+|   | `-VarDecl 0x7feb458746f8 <col:3, col:50> col:10 used tcb 'tcb_t *' cinit
+|   |   `-CStyleCastExpr 0x7feb45874928 <col:16, col:50> 'tcb_t *' <BitCast>
+|   |     `-CallExpr 0x7feb458748f0 <col:24, col:50> 'void *'
+|   |       `-ImplicitCastExpr 0x7feb458748d8 <col:24> 'void *(*)(void)' <BuiltinFnToFnPtr>
+|   |         `-DeclRefExpr 0x7feb45874880 <col:24> '<builtin fn type>' Function 0x7feb45874790 '__builtin_thread_pointer' 'void *(void)'
+|   `-ReturnStmt 0x7feb45874b60 <line:24:3, col:34>
+|     `-ConditionalOperator 0x7feb45874b30 <col:10, col:34> 'int'
+|       |-ParenExpr 0x7feb458749f0 <col:10, col:16> 'int'
+|       | `-BinaryOperator 0x7feb458749c8 <col:11, col:15> 'int' '&'
+|       |   |-ImplicitCastExpr 0x7feb458749b0 <col:11> 'int' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7feb45874968 <col:11> 'int' lvalue ParmVar 0x7feb458742f8 'a' 'int'
+|       |   `-IntegerLiteral 0x7feb45874990 <col:15> 'int' 5
+|       |-ImplicitCastExpr 0x7feb45874b00 <col:20, col:25> 'int' <LValueToRValue>
+|       | `-MemberExpr 0x7feb45874a50 <col:20, col:25> 'int' lvalue ->x 0x7feb45873e00
+|       |   `-ImplicitCastExpr 0x7feb45874a38 <col:20> 'tcb_t *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7feb45874a10 <col:20> 'tcb_t *' lvalue Var 0x7feb458746f8 'tcb' 'tcb_t *'
+|       `-ImplicitCastExpr 0x7feb45874b18 <col:29, col:34> 'int' <LValueToRValue>
+|         `-MemberExpr 0x7feb45874ac8 <col:29, col:34> 'int' lvalue ->w 0x7feb45873f20
+|           `-ImplicitCastExpr 0x7feb45874ab0 <col:29> 'tcb_t *' <LValueToRValue>
+|             `-DeclRefExpr 0x7feb45874a88 <col:29> 'tcb_t *' lvalue Var 0x7feb458746f8 'tcb' 'tcb_t *'
+`-FunctionDecl 0x7feb45874790 <line:23:24> col:24 implicit used __builtin_thread_pointer 'void *(void)' extern
+  |-NoThrowAttr 0x7feb45874828 <col:24> Implicit
+  `-ConstAttr 0x7feb45874870 <col:24> Implicit

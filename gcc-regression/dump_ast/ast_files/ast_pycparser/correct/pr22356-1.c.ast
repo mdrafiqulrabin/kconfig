@@ -1,0 +1,49 @@
+FileAST: 
+  Typedef: GFC_COMPLEX_4, [], ['typedef']
+    TypeDecl: GFC_COMPLEX_4, []
+      IdentifierType: ['_Complex', 'float']
+  FuncDef: 
+    Decl: product_c4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: src, [], [], []
+            PtrDecl: []
+              TypeDecl: src, []
+                IdentifierType: ['GFC_COMPLEX_4']
+          Decl: dest, [], [], []
+            PtrDecl: []
+              TypeDecl: dest, []
+                IdentifierType: ['GFC_COMPLEX_4']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['int']
+        TypeDecl: product_c4, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+      Decl: result, [], [], []
+        TypeDecl: result, []
+          IdentifierType: ['GFC_COMPLEX_4']
+      For: 
+        Assignment: =
+          ID: n
+          Constant: int, 0
+        BinaryOp: <
+          ID: n
+          ID: len
+        ExprList: 
+          UnaryOp: p++
+            ID: n
+          Assignment: +=
+            ID: src
+            Constant: int, 1
+        Assignment: *=
+          ID: result
+          UnaryOp: *
+            ID: src
+      Assignment: =
+        UnaryOp: *
+          ID: dest
+        ID: result

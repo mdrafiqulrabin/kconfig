@@ -1,0 +1,56 @@
+FileAST: 
+  Decl: strcpy, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['char']
+        Decl: src, ['const'], [], []
+          PtrDecl: []
+            TypeDecl: src, ['const']
+              IdentifierType: ['char']
+      PtrDecl: []
+        TypeDecl: strcpy, []
+          IdentifierType: ['char']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: Line, [], [], []
+            PtrDecl: []
+              TypeDecl: Line, []
+                IdentifierType: ['char']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['int']
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: z
+          Constant: int, 1
+        BinaryOp: <=
+          ID: z
+          ID: len
+        UnaryOp: p++
+          ID: z
+        If: 
+          ArrayRef: 
+            ID: Line
+            BinaryOp: -
+              ID: z
+              Constant: int, 1
+          FuncCall: 
+            ID: strcpy
+            ExprList: 
+              BinaryOp: +
+                BinaryOp: +
+                  ID: Line
+                  ID: z
+                Constant: int, 1
+              ID: Line

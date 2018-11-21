@@ -1,0 +1,24 @@
+FileAST: 
+  Decl: cfliteValueCallBacks, [], ['extern'], []
+    TypeDecl: cfliteValueCallBacks, []
+      IdentifierType: ['int']
+  Decl: baz, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: baz, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          UnaryOp: &
+            ID: cfliteValueCallBacks

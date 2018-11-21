@@ -1,0 +1,175 @@
+c_files/pr68435.c:41:17: warning: incompatible integer to pointer conversion passing 'int' to parameter of type 'cpp_reader *' (aka 'struct cpp_reader *') [-Wint-conversion]
+      op = lex (pfile, skip_evaluation);
+                ^~~~~
+c_files/pr68435.c:23:35: note: passing argument to parameter here
+static struct op lex (cpp_reader *, int);
+                                  ^
+c_files/pr68435.c:42:15: warning: 67 enumeration values not handled in switch: 'CPP_EQ', 'CPP_NOT', 'CPP_GREATER'... [-Wswitch]
+      switch (op.op)
+              ^
+c_files/pr68435.c:42:15: note: add missing switch cases
+      switch (op.op)
+              ^
+c_files/pr68435.c:23:18: warning: function 'lex' has internal linkage but is not defined [-Wundefined-internal]
+static struct op lex (cpp_reader *, int);
+                 ^
+c_files/pr68435.c:41:12: note: used here
+      op = lex (pfile, skip_evaluation);
+           ^
+3 warnings generated.
+TranslationUnitDecl 0x7fb9de8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb9de826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb9de826740 '__int128'
+|-TypedefDecl 0x7fb9de826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb9de826760 'unsigned __int128'
+|-TypedefDecl 0x7fb9de826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb9de826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb9de826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb9de826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb9de826dc0 'char *'
+|   `-BuiltinType 0x7fb9de826560 'char'
+|-TypedefDecl 0x7fb9de8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb9de827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb9de826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb9de826e58 '__va_list_tag'
+|-RecordDecl 0x7fb9de827120 <c_files/pr68435.c:5:9, col:16> col:16 struct cpp_reader
+|-TypedefDecl 0x7fb9df025a20 <col:1, col:27> col:27 referenced cpp_reader 'struct cpp_reader':'struct cpp_reader'
+| `-ElaboratedType 0x7fb9de8271d0 'struct cpp_reader' sugar
+|   `-RecordType 0x7fb9de8271b0 'struct cpp_reader'
+|     `-Record 0x7fb9de827120 'cpp_reader'
+|-EnumDecl 0x7fb9df025a90 <line:6:1, line:21:1> line:6:6 cpp_ttype
+| |-EnumConstantDecl 0x7fb9df025b70 <line:8:3, line:9:5> line:8:3 CPP_EQ 'int'
+| | `-IntegerLiteral 0x7fb9df025b50 <line:9:5> 'int' 0
+| |-EnumConstantDecl 0x7fb9df025bb8 <col:8> col:8 CPP_NOT 'int'
+| |-EnumConstantDecl 0x7fb9df025c00 <col:17> col:17 CPP_GREATER 'int'
+| |-EnumConstantDecl 0x7fb9df025c48 <col:30> col:30 CPP_LESS 'int'
+| |-EnumConstantDecl 0x7fb9df025c90 <col:40> col:40 CPP_PLUS 'int'
+| |-EnumConstantDecl 0x7fb9df025cd8 <col:50> col:50 CPP_MINUS 'int'
+| |-EnumConstantDecl 0x7fb9df025d20 <col:61> col:61 CPP_MULT 'int'
+| |-EnumConstantDecl 0x7fb9df025d68 <col:71> col:71 CPP_DIV 'int'
+| |-EnumConstantDecl 0x7fb9df025db0 <line:10:3> col:3 CPP_MOD 'int'
+| |-EnumConstantDecl 0x7fb9df025df8 <col:12> col:12 CPP_AND 'int'
+| |-EnumConstantDecl 0x7fb9df025e40 <col:21> col:21 CPP_OR 'int'
+| |-EnumConstantDecl 0x7fb9df025e88 <col:29> col:29 CPP_XOR 'int'
+| |-EnumConstantDecl 0x7fb9df025ed0 <col:38> col:38 CPP_RSHIFT 'int'
+| |-EnumConstantDecl 0x7fb9df025f18 <col:50> col:50 CPP_LSHIFT 'int'
+| |-EnumConstantDecl 0x7fb9df025f60 <col:62> col:62 CPP_MIN 'int'
+| |-EnumConstantDecl 0x7fb9df025fa8 <line:11:3> col:3 CPP_MAX 'int'
+| |-EnumConstantDecl 0x7fb9df025ff0 <col:12> col:12 CPP_COMPL 'int'
+| |-EnumConstantDecl 0x7fb9df026038 <col:23> col:23 CPP_AND_AND 'int'
+| |-EnumConstantDecl 0x7fb9df026080 <col:36> col:36 referenced CPP_OR_OR 'int'
+| |-EnumConstantDecl 0x7fb9df0260c8 <col:47> col:47 CPP_QUERY 'int'
+| |-EnumConstantDecl 0x7fb9df026110 <col:58> col:58 CPP_COLON 'int'
+| |-EnumConstantDecl 0x7fb9df026158 <line:12:3> col:3 CPP_COMMA 'int'
+| |-EnumConstantDecl 0x7fb9df0261a0 <col:14> col:14 CPP_OPEN_PAREN 'int'
+| |-EnumConstantDecl 0x7fb9df0261e8 <col:30> col:30 CPP_CLOSE_PAREN 'int'
+| |-EnumConstantDecl 0x7fb9df026230 <col:47> col:47 CPP_EQ_EQ 'int'
+| |-EnumConstantDecl 0x7fb9df026278 <col:58> col:58 CPP_NOT_EQ 'int'
+| |-EnumConstantDecl 0x7fb9df0262c0 <line:13:3> col:3 CPP_GREATER_EQ 'int'
+| |-EnumConstantDecl 0x7fb9df026308 <col:19> col:19 CPP_LESS_EQ 'int'
+| |-EnumConstantDecl 0x7fb9df026350 <col:32> col:32 CPP_PLUS_EQ 'int'
+| |-EnumConstantDecl 0x7fb9df026398 <col:45> col:45 CPP_MINUS_EQ 'int'
+| |-EnumConstantDecl 0x7fb9df0263e0 <col:59> col:59 CPP_MULT_EQ 'int'
+| |-EnumConstantDecl 0x7fb9df026428 <line:14:3> col:3 CPP_DIV_EQ 'int'
+| |-EnumConstantDecl 0x7fb9df026470 <col:15> col:15 CPP_MOD_EQ 'int'
+| |-EnumConstantDecl 0x7fb9df0264b8 <col:27> col:27 CPP_AND_EQ 'int'
+| |-EnumConstantDecl 0x7fb9df026500 <col:39> col:39 CPP_OR_EQ 'int'
+| |-EnumConstantDecl 0x7fb9df026548 <col:50> col:50 CPP_XOR_EQ 'int'
+| |-EnumConstantDecl 0x7fb9df026590 <col:62> col:62 CPP_RSHIFT_EQ 'int'
+| |-EnumConstantDecl 0x7fb9df0265d8 <line:15:3> col:3 CPP_LSHIFT_EQ 'int'
+| |-EnumConstantDecl 0x7fb9df026620 <col:18> col:18 CPP_MIN_EQ 'int'
+| |-EnumConstantDecl 0x7fb9df026668 <col:30> col:30 CPP_MAX_EQ 'int'
+| |-EnumConstantDecl 0x7fb9df0266b0 <col:42> col:42 CPP_HASH 'int'
+| |-EnumConstantDecl 0x7fb9df0266f8 <col:52> col:52 CPP_PASTE 'int'
+| |-EnumConstantDecl 0x7fb9df026740 <line:16:3> col:3 CPP_OPEN_SQUARE 'int'
+| |-EnumConstantDecl 0x7fb9df026788 <col:20> col:20 CPP_CLOSE_SQUARE 'int'
+| |-EnumConstantDecl 0x7fb9df0267d0 <col:38> col:38 CPP_OPEN_BRACE 'int'
+| |-EnumConstantDecl 0x7fb9df026818 <col:54> col:54 CPP_CLOSE_BRACE 'int'
+| |-EnumConstantDecl 0x7fb9df026860 <line:17:3> col:3 CPP_SEMICOLON 'int'
+| |-EnumConstantDecl 0x7fb9df0268a8 <col:18> col:18 CPP_ELLIPSIS 'int'
+| |-EnumConstantDecl 0x7fb9df0268f0 <col:32> col:32 CPP_PLUS_PLUS 'int'
+| |-EnumConstantDecl 0x7fb9df026938 <col:47> col:47 CPP_MINUS_MINUS 'int'
+| |-EnumConstantDecl 0x7fb9df026980 <col:64> col:64 CPP_DEREF 'int'
+| |-EnumConstantDecl 0x7fb9df030a00 <line:18:3> col:3 CPP_DOT 'int'
+| |-EnumConstantDecl 0x7fb9df030a48 <col:12> col:12 CPP_SCOPE 'int'
+| |-EnumConstantDecl 0x7fb9df030a90 <col:23> col:23 CPP_DEREF_STAR 'int'
+| |-EnumConstantDecl 0x7fb9df030ad8 <col:39> col:39 CPP_DOT_STAR 'int'
+| |-EnumConstantDecl 0x7fb9df030b20 <col:53> col:53 CPP_ATSIGN 'int'
+| |-EnumConstantDecl 0x7fb9df030b68 <col:65> col:65 CPP_NAME 'int'
+| |-EnumConstantDecl 0x7fb9df030bb0 <line:19:3> col:3 CPP_NUMBER 'int'
+| |-EnumConstantDecl 0x7fb9df030bf8 <col:15> col:15 CPP_CHAR 'int'
+| |-EnumConstantDecl 0x7fb9df030c40 <col:25> col:25 CPP_WCHAR 'int'
+| |-EnumConstantDecl 0x7fb9df030c88 <col:36> col:36 CPP_OTHER 'int'
+| |-EnumConstantDecl 0x7fb9df030cd0 <col:47> col:47 CPP_STRING 'int'
+| |-EnumConstantDecl 0x7fb9df030d18 <col:59> col:59 CPP_WSTRING 'int'
+| |-EnumConstantDecl 0x7fb9df030d60 <line:20:3> col:3 CPP_HEADER_NAME 'int'
+| |-EnumConstantDecl 0x7fb9df030da8 <col:20> col:20 CPP_COMMENT 'int'
+| |-EnumConstantDecl 0x7fb9df030df0 <col:33> col:33 CPP_MACRO_ARG 'int'
+| |-EnumConstantDecl 0x7fb9df030e38 <col:48> col:48 CPP_PADDING 'int'
+| `-EnumConstantDecl 0x7fb9df030e80 <col:61> col:61 CPP_EOF 'int'
+|-RecordDecl 0x7fb9df030ec8 <line:23:8, col:15> col:15 struct op
+|-FunctionDecl 0x7fb9df0311c0 <col:1, col:40> col:18 used lex 'struct op (cpp_reader *, int)' static
+| |-ParmVarDecl 0x7fb9df030ff8 <col:23, col:34> col:35 'cpp_reader *'
+| `-ParmVarDecl 0x7fb9df031070 <col:37> col:40 'int'
+|-RecordDecl 0x7fb9df0312c0 prev 0x7fb9df030ec8 <line:25:1, line:29:1> line:25:8 struct op definition
+| |-FieldDecl 0x7fb9df0313a0 <line:27:3, col:18> col:18 referenced op 'enum cpp_ttype':'enum cpp_ttype'
+| `-FieldDecl 0x7fb9df031400 <line:28:3, col:8> col:8 referenced value 'long'
+`-FunctionDecl 0x7fb9df031528 <line:31:1, line:51:1> line:32:1 _cpp_parse_expr 'int (int)'
+  |-ParmVarDecl 0x7fb9df031460 <col:18> col:18 used pfile 'int'
+  `-CompoundStmt 0x7fb9df02c5e8 <line:33:1, line:51:1>
+    |-DeclStmt 0x7fb9df031748 <line:34:3, col:27>
+    | `-VarDecl 0x7fb9df0316e8 <col:3, col:26> col:13 used init_stack 'struct op [20]'
+    |-DeclStmt 0x7fb9df031880 <line:35:3, col:32>
+    | `-VarDecl 0x7fb9df0317e0 <col:3, col:22> col:14 used stack 'struct op *' cinit
+    |   `-ImplicitCastExpr 0x7fb9df031868 <col:22> 'struct op *' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7fb9df031840 <col:22> 'struct op [20]' lvalue Var 0x7fb9df0316e8 'init_stack' 'struct op [20]'
+    |-DeclStmt 0x7fb9df0319a8 <line:36:3, col:29>
+    | `-VarDecl 0x7fb9df0318c0 <col:3, col:28> col:14 used top 'struct op *' cinit
+    |   `-BinaryOperator 0x7fb9df031980 <col:20, col:28> 'struct op *' '+'
+    |     |-ImplicitCastExpr 0x7fb9df031968 <col:20> 'struct op *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fb9df031920 <col:20> 'struct op *' lvalue Var 0x7fb9df0317e0 'stack' 'struct op *'
+    |     `-IntegerLiteral 0x7fb9df031948 <col:28> 'int' 1
+    |-DeclStmt 0x7fb9df02bc80 <line:37:3, col:26>
+    | `-VarDecl 0x7fb9df02bc00 <col:3, col:25> col:7 used skip_evaluation 'int' cinit
+    |   `-IntegerLiteral 0x7fb9df02bc60 <col:25> 'int' 0
+    `-ForStmt 0x7fb9df02c5b0 <line:38:3, line:50:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7fb9df02c580 <line:39:5, line:50:5>
+        |-DeclStmt 0x7fb9df02bd18 <line:40:7, col:19>
+        | `-VarDecl 0x7fb9df02bcb8 <col:7, col:17> col:17 used op 'struct op':'struct op'
+        |-BinaryOperator 0x7fb9df02c2a8 <line:41:7, col:39> 'struct op':'struct op' '='
+        | |-DeclRefExpr 0x7fb9df02bd30 <col:7> 'struct op':'struct op' lvalue Var 0x7fb9df02bcb8 'op' 'struct op':'struct op'
+        | `-CallExpr 0x7fb9df02be40 <col:12, col:39> 'struct op':'struct op'
+        |   |-ImplicitCastExpr 0x7fb9df02be28 <col:12> 'struct op (*)(cpp_reader *, int)' <FunctionToPointerDecay>
+        |   | `-DeclRefExpr 0x7fb9df02bd58 <col:12> 'struct op (cpp_reader *, int)' Function 0x7fb9df0311c0 'lex' 'struct op (cpp_reader *, int)'
+        |   |-ImplicitCastExpr 0x7fb9df02be90 <col:17> 'cpp_reader *' <IntegralToPointer>
+        |   | `-ImplicitCastExpr 0x7fb9df02be78 <col:17> 'int' <LValueToRValue>
+        |   |   `-DeclRefExpr 0x7fb9df02bd80 <col:17> 'int' lvalue ParmVar 0x7fb9df031460 'pfile' 'int'
+        |   `-ImplicitCastExpr 0x7fb9df02c290 <col:24> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fb9df02bda8 <col:24> 'int' lvalue Var 0x7fb9df02bc00 'skip_evaluation' 'int'
+        `-SwitchStmt 0x7fb9df02c360 <line:42:7, line:49:2>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7fb9df02c348 <line:42:15, col:18> 'unsigned int' <IntegralCast>
+          | `-ImplicitCastExpr 0x7fb9df02c330 <col:15, col:18> 'enum cpp_ttype':'enum cpp_ttype' <LValueToRValue>
+          |   `-MemberExpr 0x7fb9df02c2f8 <col:15, col:18> 'enum cpp_ttype':'enum cpp_ttype' lvalue .op 0x7fb9df0313a0
+          |     `-DeclRefExpr 0x7fb9df02c2d0 <col:15> 'struct op':'struct op' lvalue Var 0x7fb9df02bcb8 'op' 'struct op':'struct op'
+          `-CompoundStmt 0x7fb9df02c548 <line:43:2, line:49:2>
+            `-CaseStmt 0x7fb9df02c3b8 <line:44:2, line:48:21>
+              |-ImplicitCastExpr 0x7fb9df02c568 <line:44:7> 'unsigned int' <IntegralCast>
+              | `-DeclRefExpr 0x7fb9df02c390 <col:7> 'int' EnumConstant 0x7fb9df026080 'CPP_OR_OR' 'int'
+              |-<<<NULL>>>
+              `-IfStmt 0x7fb9df02c510 <line:45:4, line:48:21>
+                |-<<<NULL>>>
+                |-<<<NULL>>>
+                |-ImplicitCastExpr 0x7fb9df02c468 <line:45:8, col:13> 'long' <LValueToRValue>
+                | `-MemberExpr 0x7fb9df02c430 <col:8, col:13> 'long' lvalue ->value 0x7fb9df031400
+                |   `-ImplicitCastExpr 0x7fb9df02c418 <col:8> 'struct op *' <LValueToRValue>
+                |     `-DeclRefExpr 0x7fb9df02c3f0 <col:8> 'struct op *' lvalue Var 0x7fb9df0318c0 'top' 'struct op *'
+                |-UnaryOperator 0x7fb9df02c4a8 <line:46:6, col:21> 'int' postfix '++'
+                | `-DeclRefExpr 0x7fb9df02c480 <col:6> 'int' lvalue Var 0x7fb9df02bc00 'skip_evaluation' 'int'
+                `-UnaryOperator 0x7fb9df02c4f0 <line:48:6, col:21> 'int' postfix '--'
+                  `-DeclRefExpr 0x7fb9df02c4c8 <col:6> 'int' lvalue Var 0x7fb9df02bc00 'skip_evaluation' 'int'

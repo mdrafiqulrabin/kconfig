@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7f92ec8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f92ec826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f92ec826740 '__int128'
+|-TypedefDecl 0x7f92ec826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f92ec826760 'unsigned __int128'
+|-TypedefDecl 0x7f92ec826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f92ec826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f92ec826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f92ec826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f92ec826dc0 'char *'
+|   `-BuiltinType 0x7f92ec826560 'char'
+|-TypedefDecl 0x7f92ec8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f92ec827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f92ec826ee0 'struct __va_list_tag'
+|     `-Record 0x7f92ec826e58 '__va_list_tag'
+|-VarDecl 0x7f92ec827130 <c_files/pr23200.c:5:1, col:13> col:13 used var 'char' static
+|-FunctionDecl 0x7f92ed025ab0 <line:7:1, line:11:1> line:8:1 foo 'void (void)'
+| `-CompoundStmt 0x7f92ed025d08 <line:9:1, line:11:1>
+|   `-GCCAsmStmt 0x7f92ed025ca8 <line:10:3, col:37>
+|     `-BinaryOperator 0x7f92ed025c80 <col:28, col:35> 'char *' '+'
+|       |-UnaryOperator 0x7f92ed025c40 <col:28, col:29> 'char *' prefix '&'
+|       | `-DeclRefExpr 0x7f92ed025c18 <col:29> 'char' lvalue Var 0x7f92ec827130 'var' 'char'
+|       `-IntegerLiteral 0x7f92ed025c60 <col:35> 'int' 1
+|-TypedefDecl 0x7f92ed025d80 <line:13:1, col:15> col:13 referenced T 'int []'
+| `-IncompleteArrayType 0x7f92ed025d30 'int []' 
+|   `-BuiltinType 0x7f92ec8265c0 'int'
+|-TypedefDecl 0x7f92ed025e68 <line:14:1, col:12> col:12 referenced P 'T *'
+| `-PointerType 0x7f92ed025e30 'T *'
+|   `-TypedefType 0x7f92ed025de0 'T' sugar
+|     |-Typedef 0x7f92ed025d80 'T'
+|     `-IncompleteArrayType 0x7f92ed025d30 'int []' 
+|       `-BuiltinType 0x7f92ec8265c0 'int'
+|-VarDecl 0x7f92ed025ed8 <line:16:1, col:5> col:5 used var2 'int'
+`-FunctionDecl 0x7f92ed025fc8 <line:18:1, line:22:1> line:19:1 bar 'void (void)'
+  `-CompoundStmt 0x7f92ed0262b0 <line:20:1, line:22:1>
+    `-GCCAsmStmt 0x7f92ed026250 <line:21:3, col:43>
+      `-UnaryOperator 0x7f92ed026230 <col:27, col:41> 'int *' prefix '&'
+        `-ArraySubscriptExpr 0x7f92ed026208 <col:28, col:41> 'int' lvalue
+          |-ImplicitCastExpr 0x7f92ed0261f0 <col:28, col:38> 'int *' <ArrayToPointerDecay>
+          | `-ParenExpr 0x7f92ed0261b0 <col:28, col:38> 'T':'int []' lvalue
+          |   `-UnaryOperator 0x7f92ed026190 <col:29, col:34> 'T':'int []' lvalue prefix '*'
+          |     `-CStyleCastExpr 0x7f92ed026168 <col:30, col:34> 'P':'T *' <BitCast>
+          |       `-UnaryOperator 0x7f92ed026138 <col:33, col:34> 'int *' prefix '&'
+          |         `-DeclRefExpr 0x7f92ed0260e0 <col:34> 'int' lvalue Var 0x7f92ed025ed8 'var2' 'int'
+          `-IntegerLiteral 0x7f92ed0261d0 <col:40> 'int' 1

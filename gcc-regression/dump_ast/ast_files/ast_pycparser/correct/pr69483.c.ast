@@ -1,0 +1,16 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: T
+      Decl: a, [], [], []
+        PtrDecl: []
+          TypeDecl: a, []
+            Struct: S
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Struct: S
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      Struct: T
+    InitList: 
+      UnaryOp: &
+        ID: b

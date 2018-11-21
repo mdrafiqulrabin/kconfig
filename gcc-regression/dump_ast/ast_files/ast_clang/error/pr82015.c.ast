@@ -1,0 +1,53 @@
+c_files/pr82015.c:6:22: error: unknown type name '__vector'
+unsigned long foo_11(__vector __int128_t *p)
+                     ^
+c_files/pr82015.c:6:42: error: expected ')'
+unsigned long foo_11(__vector __int128_t *p)
+                                         ^
+c_files/pr82015.c:6:21: note: to match this '('
+unsigned long foo_11(__vector __int128_t *p)
+                    ^
+c_files/pr82015.c:8:10: error: use of unknown builtin '__builtin_unpack_vector_int128' [-Wimplicit-function-declaration]
+  return __builtin_unpack_vector_int128(*p, 11); /* { dg-error "argument 2 must be a 1-bit unsigned literal" } */
+         ^
+c_files/pr82015.c:8:42: error: use of undeclared identifier 'p'
+  return __builtin_unpack_vector_int128(*p, 11); /* { dg-error "argument 2 must be a 1-bit unsigned literal" } */
+                                         ^
+c_files/pr82015.c:11:21: error: unknown type name '__vector'
+unsigned long foo_n(__vector __int128_t *p, unsigned long n)
+                    ^
+c_files/pr82015.c:11:41: error: expected ')'
+unsigned long foo_n(__vector __int128_t *p, unsigned long n)
+                                        ^
+c_files/pr82015.c:11:20: note: to match this '('
+unsigned long foo_n(__vector __int128_t *p, unsigned long n)
+                   ^
+c_files/pr82015.c:13:42: error: use of undeclared identifier 'p'
+  return __builtin_unpack_vector_int128(*p, n); /* { dg-error "argument 2 must be a 1-bit unsigned literal" } */
+                                         ^
+c_files/pr82015.c:13:45: error: use of undeclared identifier 'n'
+  return __builtin_unpack_vector_int128(*p, n); /* { dg-error "argument 2 must be a 1-bit unsigned literal" } */
+                                            ^
+8 errors generated.
+TranslationUnitDecl 0x7fdea28264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdea2826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdea2826740 '__int128'
+|-TypedefDecl 0x7fdea2826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdea2826760 'unsigned __int128'
+|-TypedefDecl 0x7fdea2826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdea2826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdea2826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdea2826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdea2826dc0 'char *'
+|   `-BuiltinType 0x7fdea2826560 'char'
+|-TypedefDecl 0x7fdea28270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdea2827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdea2826ee0 'struct __va_list_tag'
+|     `-Record 0x7fdea2826e58 '__va_list_tag'
+|-FunctionDecl 0x7fdea285da30 <c_files/pr82015.c:6:1, line:9:1> line:6:15 invalid foo_11 'unsigned long (int)'
+| |-ParmVarDecl 0x7fdea2827150 <col:22, col:31> col:31 invalid __int128_t 'int'
+| `-CompoundStmt 0x7fdea285dd08 <line:7:1, line:9:1>
+|-FunctionDecl 0x7fdea285db60 <<invalid sloc>> line:8:10 implicit used __builtin_unpack_vector_int128 'int ()'
+`-FunctionDecl 0x7fdea285ddc8 <line:11:1, line:14:1> line:11:15 invalid foo_n 'unsigned long (int)'
+  |-ParmVarDecl 0x7fdea285dd38 <col:21, col:30> col:30 invalid __int128_t 'int'
+  `-CompoundStmt 0x7fdea285df38 <line:12:1, line:14:1>

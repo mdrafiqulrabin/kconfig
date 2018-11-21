@@ -1,0 +1,595 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: a, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+      Constant: int, 1
+  Decl: b, [], ['static'], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], ['static'], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: e, [], ['static'], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: i, [], ['static'], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  Decl: j, [], ['static'], []
+    TypeDecl: j, []
+      IdentifierType: ['int']
+  Decl: k, [], ['static'], []
+    TypeDecl: k, []
+      IdentifierType: ['int']
+  Decl: m, [], ['static'], []
+    TypeDecl: m, []
+      IdentifierType: ['int']
+  Decl: q, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: q, []
+        IdentifierType: ['int']
+    InitList: 
+      Constant: int, 1
+      Constant: int, 1
+  Decl: t, [], ['static'], []
+    TypeDecl: t, []
+      IdentifierType: ['int']
+  Decl: d, ['volatile'], [], []
+    TypeDecl: d, ['volatile']
+      IdentifierType: ['int']
+  Decl: r, [], [], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: r, []
+          IdentifierType: ['int']
+  Decl: s, [], ['static'], []
+    PtrDecl: ['volatile']
+      PtrDecl: []
+        PtrDecl: []
+          TypeDecl: s, []
+            IdentifierType: ['int']
+    UnaryOp: &
+      ID: r
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  Decl: o, [], [], []
+    TypeDecl: o, []
+      IdentifierType: ['int']
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      IdentifierType: ['int']
+  Decl: h, [], ['static'], []
+    PtrDecl: ['volatile']
+      TypeDecl: h, []
+        IdentifierType: ['int']
+    UnaryOp: &
+      ID: f
+  Decl: p, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: p, []
+        IdentifierType: ['int']
+  Decl: n, [], [], []
+    TypeDecl: n, []
+      IdentifierType: ['char']
+  FuncDef: 
+    Decl: fn1, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: b
+        ArrayRef: 
+          ID: a
+          ArrayRef: 
+            ID: a
+            ArrayRef: 
+              ID: a
+              ArrayRef: 
+                ID: a
+                ArrayRef: 
+                  ID: a
+                  ArrayRef: 
+                    ID: a
+                    ArrayRef: 
+                      ID: a
+                      ArrayRef: 
+                        ID: a
+                        ID: b
+      Assignment: =
+        ID: b
+        ArrayRef: 
+          ID: a
+          ArrayRef: 
+            ID: a
+            ArrayRef: 
+              ID: a
+              ArrayRef: 
+                ID: a
+                ArrayRef: 
+                  ID: a
+                  ArrayRef: 
+                    ID: a
+                    ArrayRef: 
+                      ID: a
+                      ArrayRef: 
+                        ID: a
+                        ID: b
+      Assignment: =
+        ID: b
+        ArrayRef: 
+          ID: a
+          ArrayRef: 
+            ID: a
+            ID: b
+      Assignment: =
+        ID: b
+        ArrayRef: 
+          ID: a
+          ArrayRef: 
+            ID: a
+            ArrayRef: 
+              ID: a
+              ArrayRef: 
+                ID: a
+                ArrayRef: 
+                  ID: a
+                  ArrayRef: 
+                    ID: a
+                    ArrayRef: 
+                      ID: a
+                      ArrayRef: 
+                        ID: a
+                        ID: b
+      Assignment: =
+        ID: b
+        ArrayRef: 
+          ID: a
+          ArrayRef: 
+            ID: a
+            ArrayRef: 
+              ID: a
+              ArrayRef: 
+                ID: a
+                ArrayRef: 
+                  ID: a
+                  ArrayRef: 
+                    ID: a
+                    ArrayRef: 
+                      ID: a
+                      ArrayRef: 
+                        ID: a
+                        ID: b
+  FuncDef: 
+    Decl: fn2, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: fn2, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: n
+        Constant: int, 0
+      For: 
+        ID: g
+        UnaryOp: p++
+          ID: t
+        Compound: 
+          For: 
+            UnaryOp: p++
+              ID: m
+            Compound: 
+              ID: d
+              Decl: u, [], [], []
+                PtrDecl: []
+                  TypeDecl: u, []
+                    IdentifierType: ['int']
+              Decl: v, [], [], []
+                ArrayDecl: []
+                  PtrDecl: []
+                    PtrDecl: []
+                      TypeDecl: v, []
+                        IdentifierType: ['int']
+                InitList: 
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  UnaryOp: &
+                    ID: u
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  Constant: int, 0
+                  UnaryOp: &
+                    ID: u
+                  Constant: int, 0
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  Constant: int, 0
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  Constant: int, 0
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  Constant: int, 0
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  Constant: int, 0
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  Constant: int, 0
+                  UnaryOp: &
+                    ID: u
+                  Constant: int, 0
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  Constant: int, 0
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  Constant: int, 0
+                  UnaryOp: &
+                    ID: u
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  Constant: int, 0
+                  Constant: int, 0
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+                  Constant: int, 0
+                  UnaryOp: &
+                    ID: u
+                  Constant: int, 0
+                  UnaryOp: &
+                    ID: u
+                  UnaryOp: &
+                    ID: u
+              Decl: w, [], [], []
+                ArrayDecl: []
+                  PtrDecl: []
+                    PtrDecl: []
+                      PtrDecl: []
+                        TypeDecl: w, []
+                          IdentifierType: ['int']
+                InitList: 
+                  UnaryOp: &
+                    ArrayRef: 
+                      ID: v
+                      Constant: int, 0
+              If: 
+                UnaryOp: *
+                  ID: p
+                Break: 
+              Return: 
+                Constant: int, 0
+          Assignment: =
+            UnaryOp: *
+              ID: h
+            Constant: int, 0
+      Return: 
+        Constant: int, 1
+  FuncDef: 
+    Decl: fn3, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: fn3, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: y, [], [], []
+        ArrayDecl: []
+          PtrDecl: []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        InitList: 
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+      For: 
+        ID: i
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ID: x
+          Constant: int, 0
+      If: 
+        FuncCall: 
+          ID: fn2
+        Compound: 
+          Decl: z, [], [], []
+            ArrayDecl: []
+              PtrDecl: []
+                TypeDecl: z, []
+                  IdentifierType: ['int']
+              Constant: int, 6
+            InitList: 
+          For: 
+            BinaryOp: <
+              ID: n
+              Constant: int, 1
+            UnaryOp: p++
+              ID: n
+            Assignment: =
+              UnaryOp: *
+                ID: h
+              Constant: int, 0
+          Decl: t1, [], [], []
+            ArrayDecl: []
+              TypeDecl: t1, []
+                IdentifierType: ['int']
+              Constant: int, 7
+          For: 
+            ID: c
+            UnaryOp: p++
+              ID: c
+            Assignment: =
+              ID: o
+              ArrayRef: 
+                ID: t1
+                Constant: int, 0
+          For: 
+            ID: e
+            UnaryOp: p--
+              ID: e
+            Compound: 
+              Decl: t2, [], [], []
+                PtrDecl: []
+                  PtrDecl: []
+                    TypeDecl: t2, []
+                      IdentifierType: ['int']
+                UnaryOp: &
+                  ArrayRef: 
+                    ID: y
+                    Constant: int, 0
+              Decl: t3, [], [], []
+                PtrDecl: []
+                  PtrDecl: []
+                    PtrDecl: []
+                      TypeDecl: t3, []
+                        IdentifierType: ['int']
+                UnaryOp: &
+                  ID: t2
+              Assignment: =
+                UnaryOp: *
+                  ID: t3
+                UnaryOp: &
+                  ArrayRef: 
+                    ID: z
+                    Constant: int, 0
+      Assignment: =
+        UnaryOp: *
+          ID: s
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: n
+          Constant: int, 0
+        Assignment: =
+          ID: n
+          Constant: int, 0
+        Compound: 
+          Decl: t4, [], [], []
+            TypeDecl: t4, []
+              IdentifierType: ['int']
+            Constant: int, 0
+          If: 
+            ArrayRef: 
+              ID: q
+              ID: n
+            Break: 
+          Assignment: =
+            UnaryOp: *
+              ID: r
+            UnaryOp: &
+              ID: t4
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      For: 
+        ID: j
+        UnaryOp: p--
+          ID: j
+        Assignment: =
+          ArrayRef: 
+            ID: a
+            Constant: int, 0
+          Constant: int, 0
+      FuncCall: 
+        ID: fn3
+      For: 
+        ID: k
+        UnaryOp: p++
+          ID: k
+        FuncCall: 
+          ID: fn1
+      FuncCall: 
+        ID: fn1
+      If: 
+        ID: n
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

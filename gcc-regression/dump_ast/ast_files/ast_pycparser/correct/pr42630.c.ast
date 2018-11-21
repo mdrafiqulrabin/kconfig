@@ -1,0 +1,31 @@
+FileAST: 
+  FuncDef: 
+    Decl: sum, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: buf, [], [], []
+            PtrDecl: []
+              TypeDecl: buf, []
+                IdentifierType: ['int']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['int']
+        TypeDecl: sum, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      While: 
+        BinaryOp: >
+          UnaryOp: --
+            ID: len
+          Constant: int, 0
+        Assignment: +=
+          ID: s
+          UnaryOp: *
+            UnaryOp: p++
+              ID: buf
+      Return: 
+        ID: s

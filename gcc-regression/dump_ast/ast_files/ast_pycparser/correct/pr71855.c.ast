@@ -1,0 +1,13 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: format, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: format, ['const']
+                IdentifierType: ['char']
+          EllipsisParam: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 

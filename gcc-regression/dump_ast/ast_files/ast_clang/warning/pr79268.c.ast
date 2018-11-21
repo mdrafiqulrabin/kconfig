@@ -1,0 +1,483 @@
+In file included from c_files/pr79268.c:10:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:27:2: error: "AltiVec support not enabled"
+#error "AltiVec support not enabled"
+ ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:62:19: error: unknown type name 'vector'
+static __inline__ vector signed char __ATTRS_o_ai vec_perm(
+                  ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:62:26: error: expected identifier or '('
+static __inline__ vector signed char __ATTRS_o_ai vec_perm(
+                         ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:65:19: error: unknown type name 'vector'
+static __inline__ vector unsigned char __ATTRS_o_ai
+                  ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:65:26: error: expected identifier or '('
+static __inline__ vector unsigned char __ATTRS_o_ai
+                         ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:69:19: error: unknown type name 'vector'
+static __inline__ vector bool char __ATTRS_o_ai
+                  ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:69:8: error: 'inline' can only appear on functions
+static __inline__ vector bool char __ATTRS_o_ai
+       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:69:30: error: expected ';' after top level declarator
+static __inline__ vector bool char __ATTRS_o_ai
+                             ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:70:10: error: unknown type name 'vector'
+vec_perm(vector bool char __a, vector bool char __b, vector unsigned char __c);
+         ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:70:22: error: expected ')'
+vec_perm(vector bool char __a, vector bool char __b, vector unsigned char __c);
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:70:9: note: to match this '('
+vec_perm(vector bool char __a, vector bool char __b, vector unsigned char __c);
+        ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:72:19: error: unknown type name 'vector'
+static __inline__ vector short __ATTRS_o_ai vec_perm(vector signed short __a,
+                  ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:72:26: error: expected identifier or '('
+static __inline__ vector short __ATTRS_o_ai vec_perm(vector signed short __a,
+                         ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:76:19: error: unknown type name 'vector'
+static __inline__ vector unsigned short __ATTRS_o_ai
+                  ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:76:26: error: expected identifier or '('
+static __inline__ vector unsigned short __ATTRS_o_ai
+                         ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:80:19: error: unknown type name 'vector'
+static __inline__ vector bool short __ATTRS_o_ai vec_perm(
+                  ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:80:8: error: 'inline' can only appear on functions
+static __inline__ vector bool short __ATTRS_o_ai vec_perm(
+       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:80:30: error: expected ';' after top level declarator
+static __inline__ vector bool short __ATTRS_o_ai vec_perm(
+                             ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:81:5: error: unknown type name 'vector'
+    vector bool short __a, vector bool short __b, vector unsigned char __c);
+    ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:81:17: error: expected ')'
+    vector bool short __a, vector bool short __b, vector unsigned char __c);
+                ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:80:58: note: to match this '('
+static __inline__ vector bool short __ATTRS_o_ai vec_perm(
+                                                         ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+TranslationUnitDecl 0x7ff9788264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff978826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff978826740 '__int128'
+|-TypedefDecl 0x7ff978826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff978826760 'unsigned __int128'
+|-TypedefDecl 0x7ff978826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff978826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff978826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff978826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff978826dc0 'char *'
+|   `-BuiltinType 0x7ff978826560 'char'
+|-TypedefDecl 0x7ff9788270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff978827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff978826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff978826e58 '__va_list_tag'
+|-VarDecl 0x7ff978827150 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/altivec.h:69:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff9788784c0 <col:31, line:70:78> col:1 invalid vec_perm 'char (int)'
+| |-ParmVarDecl 0x7ff978878400 <col:10, col:17> col:17 invalid bool 'int'
+| |-AlwaysInlineAttr 0x7ff978878560 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff9788785a8 <col:37>
+|-VarDecl 0x7ff9788785d0 <line:80:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff978878718 <col:31, line:81:75> line:80:50 invalid vec_perm 'short (int)'
+| |-ParmVarDecl 0x7ff978878648 <line:81:5, col:12> col:12 invalid bool 'int'
+| |-AlwaysInlineAttr 0x7ff9788787b8 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff978878800 <col:37>
+|-VarDecl 0x7ff978878828 <line:83:1, col:26> col:26 invalid pixel 'int' static
+|-VarDecl 0x7ff9788788a0 <line:94:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff9788789e8 <col:31, line:95:76> col:1 invalid vec_perm 'int (int)'
+| |-ParmVarDecl 0x7ff978878918 <col:10, col:17> col:17 invalid bool 'int'
+| |-AlwaysInlineAttr 0x7ff978878a88 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff978878ad0 <col:37>
+|-VarDecl 0x7ff978878af8 <line:853:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff978878bf8 <col:31, line:856:1> line:853:49 invalid vec_and 'char (int)'
+| |-ParmVarDecl 0x7ff978878b70 <col:57, col:64> col:64 invalid bool 'int'
+| |-CompoundStmt 0x7ff978878cf0 <line:854:79, line:856:1>
+| |-AlwaysInlineAttr 0x7ff978878c98 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff978878ce0 <col:37>
+|-VarDecl 0x7ff978878d20 <line:888:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff978878e28 <col:31, line:891:1> line:889:1 invalid vec_and 'short (int)'
+| |-ParmVarDecl 0x7ff978878d98 <col:9, col:16> col:16 invalid bool 'int'
+| |-CompoundStmt 0x7ff978878f20 <col:55, line:891:1>
+| |-AlwaysInlineAttr 0x7ff978878ec8 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff978878f10 <col:37>
+|-VarDecl 0x7ff978878f50 <line:923:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff978879058 <col:31, line:926:1> line:923:48 invalid vec_and 'int (int)'
+| |-ParmVarDecl 0x7ff978878fc8 <col:56, col:63> col:63 invalid bool 'int'
+| |-CompoundStmt 0x7ff978879150 <line:924:77, line:926:1>
+| |-AlwaysInlineAttr 0x7ff9788790f8 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff978879140 <col:37>
+|-VarDecl 0x7ff978879180 <line:1039:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff978879280 <col:31, line:1042:1> line:1039:49 invalid vec_vand 'char (int)'
+| |-ParmVarDecl 0x7ff9788791f8 <col:58, col:65> col:65 invalid bool 'int'
+| |-CompoundStmt 0x7ff978879378 <line:1040:80, line:1042:1>
+| |-AlwaysInlineAttr 0x7ff978879320 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff978879368 <col:37>
+|-VarDecl 0x7ff979807e00 <line:1074:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979807f08 <col:31, line:1077:1> line:1075:1 invalid vec_vand 'short (int)'
+| |-ParmVarDecl 0x7ff979807e78 <col:10, col:17> col:17 invalid bool 'int'
+| |-CompoundStmt 0x7ff979808000 <col:56, line:1077:1>
+| |-AlwaysInlineAttr 0x7ff979807fa8 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979807ff0 <col:37>
+|-VarDecl 0x7ff979808030 <line:1109:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979808138 <col:31, line:1112:1> line:1109:48 invalid vec_vand 'int (int)'
+| |-ParmVarDecl 0x7ff9798080a8 <col:57, col:64> col:64 invalid bool 'int'
+| |-CompoundStmt 0x7ff979808230 <line:1110:78, line:1112:1>
+| |-AlwaysInlineAttr 0x7ff9798081d8 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979808220 <col:37>
+|-VarDecl 0x7ff979808260 <line:1206:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979808360 <col:31, line:1209:1> line:1206:49 invalid vec_andc 'char (int)'
+| |-ParmVarDecl 0x7ff9798082d8 <col:58, col:65> col:65 invalid bool 'int'
+| |-CompoundStmt 0x7ff979808458 <line:1207:80, line:1209:1>
+| |-AlwaysInlineAttr 0x7ff979808400 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979808448 <col:37>
+|-VarDecl 0x7ff979808488 <line:1241:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979808590 <col:31, line:1244:1> line:1242:1 invalid vec_andc 'short (int)'
+| |-ParmVarDecl 0x7ff979808500 <col:10, col:17> col:17 invalid bool 'int'
+| |-CompoundStmt 0x7ff979808688 <col:56, line:1244:1>
+| |-AlwaysInlineAttr 0x7ff979808630 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979808678 <col:37>
+|-VarDecl 0x7ff9798086b8 <line:1276:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff9798087c0 <col:31, line:1279:1> line:1276:48 invalid vec_andc 'int (int)'
+| |-ParmVarDecl 0x7ff979808730 <col:57, col:64> col:64 invalid bool 'int'
+| |-CompoundStmt 0x7ff9798088b8 <line:1277:78, line:1279:1>
+| |-AlwaysInlineAttr 0x7ff979808860 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff9798088a8 <col:37>
+|-VarDecl 0x7ff9798088e8 <line:1392:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff9798089e8 <col:31, line:1395:1> line:1393:1 invalid vec_vandc 'char (int)'
+| |-ParmVarDecl 0x7ff979808960 <col:11, col:18> col:18 invalid bool 'int'
+| |-CompoundStmt 0x7ff979808ae0 <col:55, line:1395:1>
+| |-AlwaysInlineAttr 0x7ff979808a88 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979808ad0 <col:37>
+|-VarDecl 0x7ff979808b10 <line:1427:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979808c18 <col:31, line:1430:1> line:1428:1 invalid vec_vandc 'short (int)'
+| |-ParmVarDecl 0x7ff979808b88 <col:11, col:18> col:18 invalid bool 'int'
+| |-CompoundStmt 0x7ff979808d10 <col:57, line:1430:1>
+| |-AlwaysInlineAttr 0x7ff979808cb8 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979808d00 <col:37>
+|-VarDecl 0x7ff979808d40 <line:1462:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979808e90 <col:31, line:1465:1> line:1462:48 invalid vec_vandc 'int (int)'
+| |-ParmVarDecl 0x7ff979808e00 <col:58, col:65> col:65 invalid bool 'int'
+| |-CompoundStmt 0x7ff979808f88 <line:1463:79, line:1465:1>
+| |-AlwaysInlineAttr 0x7ff979808f30 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979808f78 <col:37>
+|-VarDecl 0x7ff979808fb8 <line:1638:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff9798090b8 <col:31, line:1642:1> line:1639:1 invalid vec_cmpeq 'char (int)'
+| |-ParmVarDecl 0x7ff979809030 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff9798091b0 <col:59, line:1642:1>
+| |-AlwaysInlineAttr 0x7ff979809158 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff9798091a0 <col:37>
+|-VarDecl 0x7ff9798091e0 <line:1644:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff9798092e0 <col:31, line:1648:1> line:1645:1 invalid vec_cmpeq 'char (int)'
+| |-ParmVarDecl 0x7ff979809258 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff9798093d8 <col:63, line:1648:1>
+| |-AlwaysInlineAttr 0x7ff979809380 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff9798093c8 <col:37>
+|-VarDecl 0x7ff979809408 <line:1650:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979809508 <col:31, line:1654:1> line:1651:1 invalid vec_cmpeq 'char (int)'
+| |-ParmVarDecl 0x7ff979809480 <col:11, col:18> col:18 invalid bool 'int'
+| |-CompoundStmt 0x7ff979809600 <col:55, line:1654:1>
+| |-AlwaysInlineAttr 0x7ff9798095a8 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff9798095f0 <col:37>
+|-VarDecl 0x7ff979809630 <line:1656:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979809738 <col:31, line:1659:1> line:1656:50 invalid vec_cmpeq 'short (int)'
+| |-ParmVarDecl 0x7ff9798096a8 <col:60, <invalid sloc>> col:67 invalid 'int'
+| |-CompoundStmt 0x7ff979809830 <line:1657:78, line:1659:1>
+| |-AlwaysInlineAttr 0x7ff9798097d8 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979809820 <col:37>
+|-VarDecl 0x7ff979809860 <line:1661:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979809968 <col:31, line:1665:1> line:1662:1 invalid vec_cmpeq 'short (int)'
+| |-ParmVarDecl 0x7ff9798098d8 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff979809a60 <col:65, line:1665:1>
+| |-AlwaysInlineAttr 0x7ff979809a08 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979809a50 <col:37>
+|-VarDecl 0x7ff979809a90 <line:1667:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979809b98 <col:31, line:1671:1> line:1668:1 invalid vec_cmpeq 'short (int)'
+| |-ParmVarDecl 0x7ff979809b08 <col:11, col:18> col:18 invalid bool 'int'
+| |-CompoundStmt 0x7ff979809c90 <col:57, line:1671:1>
+| |-AlwaysInlineAttr 0x7ff979809c38 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979809c80 <col:37>
+|-VarDecl 0x7ff979809cc0 <line:1673:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979809e00 <col:31, line:1676:1> line:1673:48 invalid vec_cmpeq 'int (int)'
+| |-ParmVarDecl 0x7ff979809d38 <col:58, <invalid sloc>> col:65 invalid 'int'
+| |-CompoundStmt 0x7ff979809ef8 <line:1674:74, line:1676:1>
+| |-AlwaysInlineAttr 0x7ff979809ea0 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979809ee8 <col:37>
+|-VarDecl 0x7ff979809f28 <line:1678:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980a030 <col:31, line:1682:1> line:1679:1 invalid vec_cmpeq 'int (int)'
+| |-ParmVarDecl 0x7ff979809fa0 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980a128 <col:61, line:1682:1>
+| |-AlwaysInlineAttr 0x7ff97980a0d0 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980a118 <col:37>
+|-VarDecl 0x7ff97980a158 <line:1684:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980a260 <col:31, line:1688:1> line:1684:48 invalid vec_cmpeq 'int (int)'
+| |-ParmVarDecl 0x7ff97980a1d0 <col:58, col:65> col:65 invalid bool 'int'
+| |-CompoundStmt 0x7ff97980a358 <line:1685:79, line:1688:1>
+| |-AlwaysInlineAttr 0x7ff97980a300 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980a348 <col:37>
+|-VarDecl 0x7ff97980a388 <line:1710:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980a490 <col:31, line:1717:1> line:1710:48 invalid vec_cmpeq 'int (int)'
+| |-ParmVarDecl 0x7ff97980a400 <col:58, <invalid sloc>> col:65 invalid 'int'
+| |-CompoundStmt 0x7ff97980a588 <line:1711:76, line:1717:1>
+| |-AlwaysInlineAttr 0x7ff97980a530 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980a578 <col:37>
+|-VarDecl 0x7ff97980a5b8 <line:1921:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980a6b8 <col:31, line:1924:1> line:1922:1 invalid vec_cmpgt 'char (int)'
+| |-ParmVarDecl 0x7ff97980a630 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980a7b0 <col:59, line:1924:1>
+| |-AlwaysInlineAttr 0x7ff97980a758 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980a7a0 <col:37>
+|-VarDecl 0x7ff97980a7e0 <line:1926:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980a8e0 <col:31, line:1929:1> line:1927:1 invalid vec_cmpgt 'char (int)'
+| |-ParmVarDecl 0x7ff97980a858 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980a9d8 <col:63, line:1929:1>
+| |-AlwaysInlineAttr 0x7ff97980a980 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980a9c8 <col:37>
+|-VarDecl 0x7ff97980aa08 <line:1931:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980ab10 <col:31, line:1934:1> line:1931:50 invalid vec_cmpgt 'short (int)'
+| |-ParmVarDecl 0x7ff97980aa80 <col:60, <invalid sloc>> col:67 invalid 'int'
+| |-CompoundStmt 0x7ff97980ac08 <line:1932:78, line:1934:1>
+| |-AlwaysInlineAttr 0x7ff97980abb0 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980abf8 <col:37>
+|-VarDecl 0x7ff97980ac38 <line:1936:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980ad40 <col:31, line:1939:1> line:1937:1 invalid vec_cmpgt 'short (int)'
+| |-ParmVarDecl 0x7ff97980acb0 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980ae48 <col:65, line:1939:1>
+| |-AlwaysInlineAttr 0x7ff97980ade0 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980ae38 <col:37>
+|-VarDecl 0x7ff97980ae78 <line:1941:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980af80 <col:31, line:1944:1> line:1941:48 invalid vec_cmpgt 'int (int)'
+| |-ParmVarDecl 0x7ff97980aef0 <col:58, <invalid sloc>> col:65 invalid 'int'
+| |-CompoundStmt 0x7ff97980b078 <line:1942:74, line:1944:1>
+| |-AlwaysInlineAttr 0x7ff97980b020 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980b068 <col:37>
+|-VarDecl 0x7ff97980b0a8 <line:1946:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980b1b0 <col:31, line:1949:1> line:1947:1 invalid vec_cmpgt 'int (int)'
+| |-ParmVarDecl 0x7ff97980b120 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980b2a8 <col:61, line:1949:1>
+| |-AlwaysInlineAttr 0x7ff97980b250 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980b298 <col:37>
+|-VarDecl 0x7ff97980b2d8 <line:1963:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980b3e0 <col:31, line:1970:1> line:1963:48 invalid vec_cmpgt 'int (int)'
+| |-ParmVarDecl 0x7ff97980b350 <col:58, <invalid sloc>> col:65 invalid 'int'
+| |-CompoundStmt 0x7ff97980b4d8 <line:1964:76, line:1970:1>
+| |-AlwaysInlineAttr 0x7ff97980b480 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980b4c8 <col:37>
+|-VarDecl 0x7ff97980b508 <line:1981:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980b608 <col:31, line:1984:1> line:1982:1 invalid vec_cmpge 'char (int)'
+| |-ParmVarDecl 0x7ff97980b580 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980b700 <col:59, line:1984:1>
+| |-AlwaysInlineAttr 0x7ff97980b6a8 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980b6f0 <col:37>
+|-VarDecl 0x7ff97980b730 <line:1986:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980b830 <col:31, line:1989:1> line:1987:1 invalid vec_cmpge 'char (int)'
+| |-ParmVarDecl 0x7ff97980b7a8 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980b928 <col:63, line:1989:1>
+| |-AlwaysInlineAttr 0x7ff97980b8d0 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980b918 <col:37>
+|-VarDecl 0x7ff97980b958 <line:1991:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980ba60 <col:31, line:1994:1> line:1992:1 invalid vec_cmpge 'short (int)'
+| |-ParmVarDecl 0x7ff97980b9d0 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980bb58 <col:61, line:1994:1>
+| |-AlwaysInlineAttr 0x7ff97980bb00 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980bb48 <col:37>
+|-VarDecl 0x7ff97980bb88 <line:1996:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980bc90 <col:31, line:1999:1> line:1997:1 invalid vec_cmpge 'short (int)'
+| |-ParmVarDecl 0x7ff97980bc00 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980bd88 <col:65, line:1999:1>
+| |-AlwaysInlineAttr 0x7ff97980bd30 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980bd78 <col:37>
+|-VarDecl 0x7ff97980be00 <line:2001:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980bf08 <col:31, line:2004:1> line:2002:1 invalid vec_cmpge 'int (int)'
+| |-ParmVarDecl 0x7ff97980be78 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980c000 <col:57, line:2004:1>
+| |-AlwaysInlineAttr 0x7ff97980bfa8 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980bff0 <col:37>
+|-VarDecl 0x7ff97980c030 <line:2006:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980c138 <col:31, line:2009:1> line:2007:1 invalid vec_cmpge 'int (int)'
+| |-ParmVarDecl 0x7ff97980c0a8 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980c230 <col:61, line:2009:1>
+| |-AlwaysInlineAttr 0x7ff97980c1d8 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980c220 <col:37>
+|-VarDecl 0x7ff97980c260 <line:2011:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980c368 <col:31, line:2018:1> line:2011:48 invalid vec_cmpge 'int (int)'
+| |-ParmVarDecl 0x7ff97980c2d8 <col:58, <invalid sloc>> col:65 invalid 'int'
+| |-CompoundStmt 0x7ff97980c460 <line:2012:76, line:2018:1>
+| |-AlwaysInlineAttr 0x7ff97980c408 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980c450 <col:37>
+|-VarDecl 0x7ff97980c490 <line:2041:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980c598 <col:31, line:2044:1> line:2042:1 invalid vec_vcmpgefp 'int (int)'
+| |-ParmVarDecl 0x7ff97980c508 <col:14, <invalid sloc>> col:21 invalid 'int'
+| |-CompoundStmt 0x7ff97980c680 <col:50, line:2044:1>
+| `-AlwaysInlineAttr 0x7ff97980c638 <line:2041:50> always_inline
+|-VarDecl 0x7ff97980c6b0 <line:2048:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980c7b0 <col:31, line:2051:1> line:2049:1 invalid vec_vcmpgtsb 'char (int)'
+| |-ParmVarDecl 0x7ff97980c728 <col:14, <invalid sloc>> col:21 invalid 'int'
+| |-CompoundStmt 0x7ff97980c898 <col:62, line:2051:1>
+| `-AlwaysInlineAttr 0x7ff97980c850 <line:2048:51> always_inline
+|-VarDecl 0x7ff97980c8c8 <line:2055:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980c9c8 <col:31, line:2058:1> line:2056:1 invalid vec_vcmpgtub 'char (int)'
+| |-ParmVarDecl 0x7ff97980c940 <col:14, <invalid sloc>> col:21 invalid 'int'
+| |-CompoundStmt 0x7ff97980cab0 <col:66, line:2058:1>
+| `-AlwaysInlineAttr 0x7ff97980ca68 <line:2055:51> always_inline
+|-VarDecl 0x7ff97980cae0 <line:2062:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980cbe8 <col:31, line:2065:1> line:2063:1 invalid vec_vcmpgtsh 'short (int)'
+| |-ParmVarDecl 0x7ff97980cb58 <col:14, <invalid sloc>> col:21 invalid 'int'
+| |-CompoundStmt 0x7ff97980ccd0 <col:50, line:2065:1>
+| `-AlwaysInlineAttr 0x7ff97980cc88 <line:2062:52> always_inline
+|-VarDecl 0x7ff97980cd00 <line:2069:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980de30 <col:31, line:2072:1> line:2070:1 invalid vec_vcmpgtuh 'short (int)'
+| |-ParmVarDecl 0x7ff97980cd78 <col:14, <invalid sloc>> col:21 invalid 'int'
+| |-CompoundStmt 0x7ff97980df18 <col:68, line:2072:1>
+| `-AlwaysInlineAttr 0x7ff97980ded0 <line:2069:52> always_inline
+|-VarDecl 0x7ff97980df48 <line:2076:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980e050 <col:31, line:2079:1> line:2077:1 invalid vec_vcmpgtsw 'int (int)'
+| |-ParmVarDecl 0x7ff97980dfc0 <col:14, <invalid sloc>> col:21 invalid 'int'
+| |-CompoundStmt 0x7ff97980e138 <col:46, line:2079:1>
+| `-AlwaysInlineAttr 0x7ff97980e0f0 <line:2076:50> always_inline
+|-VarDecl 0x7ff97980e168 <line:2083:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980e270 <col:31, line:2086:1> line:2084:1 invalid vec_vcmpgtuw 'int (int)'
+| |-ParmVarDecl 0x7ff97980e1e0 <col:14, <invalid sloc>> col:21 invalid 'int'
+| |-CompoundStmt 0x7ff97980e358 <col:64, line:2086:1>
+| `-AlwaysInlineAttr 0x7ff97980e310 <line:2083:50> always_inline
+|-VarDecl 0x7ff97980e388 <line:2090:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980e490 <col:31, line:2093:1> line:2091:1 invalid vec_vcmpgtfp 'int (int)'
+| |-ParmVarDecl 0x7ff97980e400 <col:14, <invalid sloc>> col:21 invalid 'int'
+| |-CompoundStmt 0x7ff97980e578 <col:50, line:2093:1>
+| `-AlwaysInlineAttr 0x7ff97980e530 <line:2090:50> always_inline
+|-VarDecl 0x7ff97980e5a8 <line:2097:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980e6a8 <col:31, line:2100:1> line:2098:1 invalid vec_cmple 'char (int)'
+| |-ParmVarDecl 0x7ff97980e620 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980e7a0 <col:59, line:2100:1>
+| |-AlwaysInlineAttr 0x7ff97980e748 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980e790 <col:37>
+|-VarDecl 0x7ff97980e7d0 <line:2102:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980e8d0 <col:31, line:2105:1> line:2103:1 invalid vec_cmple 'char (int)'
+| |-ParmVarDecl 0x7ff97980e848 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980e9c8 <col:63, line:2105:1>
+| |-AlwaysInlineAttr 0x7ff97980e970 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980e9b8 <col:37>
+|-VarDecl 0x7ff97980e9f8 <line:2107:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980eb00 <col:31, line:2110:1> line:2108:1 invalid vec_cmple 'short (int)'
+| |-ParmVarDecl 0x7ff97980ea70 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980ebf8 <col:61, line:2110:1>
+| |-AlwaysInlineAttr 0x7ff97980eba0 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980ebe8 <col:37>
+|-VarDecl 0x7ff97980ec28 <line:2112:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980ed30 <col:31, line:2115:1> line:2113:1 invalid vec_cmple 'short (int)'
+| |-ParmVarDecl 0x7ff97980eca0 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980f648 <col:65, line:2115:1>
+| |-AlwaysInlineAttr 0x7ff97980edd0 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980f638 <col:37>
+|-VarDecl 0x7ff97980f678 <line:2117:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980f780 <col:31, line:2120:1> line:2118:1 invalid vec_cmple 'int (int)'
+| |-ParmVarDecl 0x7ff97980f6f0 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980f878 <col:57, line:2120:1>
+| |-AlwaysInlineAttr 0x7ff97980f820 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980f868 <col:37>
+|-VarDecl 0x7ff97980f8a8 <line:2122:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980f9b0 <col:31, line:2125:1> line:2123:1 invalid vec_cmple 'int (int)'
+| |-ParmVarDecl 0x7ff97980f920 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980faa8 <col:61, line:2125:1>
+| |-AlwaysInlineAttr 0x7ff97980fa50 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980fa98 <col:37>
+|-VarDecl 0x7ff97980fad8 <line:2127:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980fbe0 <col:31, line:2130:1> line:2127:48 invalid vec_cmple 'int (int)'
+| |-ParmVarDecl 0x7ff97980fb50 <col:58, <invalid sloc>> col:65 invalid 'int'
+| |-CompoundStmt 0x7ff97980fcd8 <line:2128:76, line:2130:1>
+| |-AlwaysInlineAttr 0x7ff97980fc80 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980fcc8 <col:37>
+|-VarDecl 0x7ff97980fd08 <line:2153:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff97980fe08 <col:31, line:2156:1> line:2154:1 invalid vec_cmplt 'char (int)'
+| |-ParmVarDecl 0x7ff97980fd80 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff97980ff00 <col:59, line:2156:1>
+| |-AlwaysInlineAttr 0x7ff97980fea8 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff97980fef0 <col:37>
+|-VarDecl 0x7ff97980ff30 <line:2158:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979810030 <col:31, line:2161:1> line:2159:1 invalid vec_cmplt 'char (int)'
+| |-ParmVarDecl 0x7ff97980ffa8 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff979810128 <col:63, line:2161:1>
+| |-AlwaysInlineAttr 0x7ff9798100d0 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979810118 <col:37>
+|-VarDecl 0x7ff979810158 <line:2163:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979810260 <col:31, line:2166:1> line:2163:50 invalid vec_cmplt 'short (int)'
+| |-ParmVarDecl 0x7ff9798101d0 <col:60, <invalid sloc>> col:67 invalid 'int'
+| |-CompoundStmt 0x7ff979810358 <line:2164:78, line:2166:1>
+| |-AlwaysInlineAttr 0x7ff979810300 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979810348 <col:37>
+|-VarDecl 0x7ff979810388 <line:2168:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979810490 <col:31, line:2171:1> line:2169:1 invalid vec_cmplt 'short (int)'
+| |-ParmVarDecl 0x7ff979810400 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff979810588 <col:65, line:2171:1>
+| |-AlwaysInlineAttr 0x7ff979810530 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979810578 <col:37>
+|-VarDecl 0x7ff979810600 <line:2173:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979810708 <col:31, line:2176:1> line:2173:48 invalid vec_cmplt 'int (int)'
+| |-ParmVarDecl 0x7ff979810678 <col:58, <invalid sloc>> col:65 invalid 'int'
+| |-CompoundStmt 0x7ff979810800 <line:2174:74, line:2176:1>
+| |-AlwaysInlineAttr 0x7ff9798107a8 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff9798107f0 <col:37>
+|-VarDecl 0x7ff979810830 <line:2178:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979810938 <col:31, line:2181:1> line:2179:1 invalid vec_cmplt 'int (int)'
+| |-ParmVarDecl 0x7ff9798108a8 <col:11, <invalid sloc>> col:18 invalid 'int'
+| |-CompoundStmt 0x7ff979810a30 <col:61, line:2181:1>
+| |-AlwaysInlineAttr 0x7ff9798109d8 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979810a20 <col:37>
+|-VarDecl 0x7ff979810a60 <line:2183:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979810b68 <col:31, line:2186:1> line:2183:48 invalid vec_cmplt 'int (int)'
+| |-ParmVarDecl 0x7ff979810ad8 <col:58, <invalid sloc>> col:65 invalid 'int'
+| |-CompoundStmt 0x7ff979810c60 <line:2184:76, line:2186:1>
+| |-AlwaysInlineAttr 0x7ff979810c08 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979810c50 <col:37>
+|-FunctionDecl 0x7ff979810d50 <line:3303:1, line:3305:1> line:3303:59 vec_dss 'void (int)' static inline
+| |-ParmVarDecl 0x7ff979810c90 <col:67, col:71> col:71 used __a 'int'
+| |-CompoundStmt 0x7ff979811048 <col:76, line:3305:1>
+| | `-CallExpr 0x7ff979811000 <line:3304:3, col:28> 'int'
+| |   |-ImplicitCastExpr 0x7ff979810fe8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7ff979810f68 <col:3> 'int ()' Function 0x7ff979810ed0 '__builtin_altivec_dss' 'int ()'
+| |   `-ImplicitCastExpr 0x7ff979811030 <col:25> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7ff979810f90 <col:25> 'int' lvalue ParmVar 0x7ff979810c90 '__a' 'int'
+| `-AlwaysInlineAttr 0x7ff979810df0 <line:3303:39> always_inline
+|-FunctionDecl 0x7ff979810ed0 <<invalid sloc>> line:3304:3 implicit used __builtin_altivec_dss 'int ()'
+|-FunctionDecl 0x7ff979811130 <line:3309:1, line:3311:1> line:3309:59 vec_dssall 'void (void)' static inline
+| |-CompoundStmt 0x7ff979811338 <col:76, line:3311:1>
+| | `-CallExpr 0x7ff979811310 <line:3310:3, col:28> 'int'
+| |   `-ImplicitCastExpr 0x7ff9798112f8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7ff9798112d0 <col:3> 'int ()' Function 0x7ff979811238 '__builtin_altivec_dssall' 'int ()'
+| `-AlwaysInlineAttr 0x7ff9798111c8 <line:3309:39> always_inline
+|-FunctionDecl 0x7ff979811238 <<invalid sloc>> line:3310:3 implicit used __builtin_altivec_dssall 'int ()'
+|-VarDecl 0x7ff979811370 <line:3479:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979815e00 <col:31, line:3482:1> line:3480:1 invalid vec_ld 'char (int, const int)'
+| |-ParmVarDecl 0x7ff9798113e8 <col:8, col:12> col:12 __a 'int'
+| |-ParmVarDecl 0x7ff979811460 <col:17, col:30> col:30 invalid bool 'const int'
+| |-CompoundStmt 0x7ff979815f00 <col:46, line:3482:1>
+| |-AlwaysInlineAttr 0x7ff979815ea8 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979815ef0 <col:37>
+|-VarDecl 0x7ff979815f30 <line:3503:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979816138 <col:31, line:3506:1> line:3504:1 invalid vec_ld 'short (int, const int)'
+| |-ParmVarDecl 0x7ff979815fa8 <col:8, col:12> col:12 __a 'int'
+| |-ParmVarDecl 0x7ff979816020 <col:17, col:30> col:30 invalid bool 'const int'
+| |-CompoundStmt 0x7ff979816238 <col:47, line:3506:1>
+| |-AlwaysInlineAttr 0x7ff9798161e0 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff979816228 <col:37>
+|-VarDecl 0x7ff979816268 <line:3508:1, col:26> col:26 invalid pixel 'int' static
+|-VarDecl 0x7ff9798162e0 <line:4505:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff9798163e0 <col:31, line:4511:1> line:4506:1 invalid vec_mergeh 'char (int)'
+| |-ParmVarDecl 0x7ff979816358 <col:12, col:19> col:19 invalid bool 'int'
+| |-CompoundStmt 0x7ff9798166d8 <col:56, line:4511:1>
+| |-AlwaysInlineAttr 0x7ff979816480 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff9798164c8 <col:37>
+|-VarDecl 0x7ff979816708 <line:4529:1, col:26> col:26 invalid bool 'int' static
+|-FunctionDecl 0x7ff979816810 <col:31, line:4535:1> line:4530:1 invalid vec_mergeh 'short (int)'
+| |-ParmVarDecl 0x7ff979816780 <col:12, col:19> col:19 invalid bool 'int'
+| |-CompoundStmt 0x7ff979816b08 <col:58, line:4535:1>
+| |-AlwaysInlineAttr 0x7ff9798168b0 <line:56:55> always_inline
+| `-OverloadableAttr 0x7ff9798168f8 <col:37>
+|-VarDecl 0x7ff979816b38 <line:4537:1, col:26> col:26 invalid pixel 'int' static
+`-VarDecl 0x7ff979816bb0 <c_files/pr79268.c:14:1, col:8> col:8 invalid pixel 'int'

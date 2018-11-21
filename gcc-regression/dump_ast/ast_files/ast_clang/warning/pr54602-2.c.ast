@@ -1,0 +1,39 @@
+c_files/pr54602-2.c:10:21: warning: unknown attribute 'interrupt_handler' ignored [-Wunknown-attributes]
+int __attribute__ ((interrupt_handler))
+                    ^
+1 warning generated.
+TranslationUnitDecl 0x7fdf628264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdf62826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdf62826740 '__int128'
+|-TypedefDecl 0x7fdf62826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdf62826760 'unsigned __int128'
+|-TypedefDecl 0x7fdf62826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdf62826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdf62826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdf62826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdf62826dc0 'char *'
+|   `-BuiltinType 0x7fdf62826560 'char'
+|-TypedefDecl 0x7fdf628270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdf62827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdf62826ee0 'struct __va_list_tag'
+|     `-Record 0x7fdf62826e58 '__va_list_tag'
+|-FunctionDecl 0x7fdf628774d8 <c_files/pr54602-2.c:8:1, col:25> col:5 used test00 'int (int, int)'
+| |-ParmVarDecl 0x7fdf62827138 <col:13, col:17> col:17 a 'int'
+| `-ParmVarDecl 0x7fdf62877400 <col:20, col:24> col:24 b 'int'
+`-FunctionDecl 0x7fdf62877838 <line:10:1, line:14:1> line:11:1 test01 'int (int, int, int, int)'
+  |-ParmVarDecl 0x7fdf628775d8 <col:9, col:13> col:13 used a 'int'
+  |-ParmVarDecl 0x7fdf62877650 <col:16, col:20> col:20 used b 'int'
+  |-ParmVarDecl 0x7fdf628776c8 <col:23, col:27> col:27 used c 'int'
+  |-ParmVarDecl 0x7fdf62877740 <col:30, col:34> col:34 d 'int'
+  `-CompoundStmt 0x7fdf62877a98 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7fdf62877a80 <line:13:3, col:26>
+      `-BinaryOperator 0x7fdf62877a58 <col:10, col:26> 'int' '+'
+        |-CallExpr 0x7fdf628779b0 <col:10, col:22> 'int'
+        | |-ImplicitCastExpr 0x7fdf62877998 <col:10> 'int (*)(int, int)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fdf628778f0 <col:10> 'int (int, int)' Function 0x7fdf628774d8 'test00' 'int (int, int)'
+        | |-ImplicitCastExpr 0x7fdf628779e8 <col:18> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fdf62877918 <col:18> 'int' lvalue ParmVar 0x7fdf628775d8 'a' 'int'
+        | `-ImplicitCastExpr 0x7fdf62877a00 <col:21> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fdf62877940 <col:21> 'int' lvalue ParmVar 0x7fdf62877650 'b' 'int'
+        `-ImplicitCastExpr 0x7fdf62877a40 <col:26> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fdf62877a18 <col:26> 'int' lvalue ParmVar 0x7fdf628776c8 'c' 'int'

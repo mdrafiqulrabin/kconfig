@@ -1,0 +1,159 @@
+FileAST: 
+  Decl: Link, [], [], []
+    ArrayDecl: []
+      TypeDecl: Link, []
+        IdentifierType: ['int']
+    InitList: 
+      UnaryOp: -
+        Constant: int, 1
+  Decl: W, [], [], []
+    ArrayDecl: []
+      TypeDecl: W, []
+        IdentifierType: ['int']
+    InitList: 
+      Constant: int, 2
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['int']
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: pdest, [], [], []
+        TypeDecl: pdest, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: D1361, [], [], []
+        TypeDecl: D1361, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: j
+        Constant: int, 0
+      Assignment: =
+        ID: pdest
+        Constant: int, 0
+      For: 
+        Compound: 
+          If: 
+            BinaryOp: >
+              ID: pdest
+              Constant: int, 2
+            DoWhile: 
+              BinaryOp: >
+                ID: j
+                Constant: int, 2
+              ExprList: 
+                UnaryOp: p--
+                  ID: j
+                UnaryOp: p++
+                  ID: pdest
+          If: 
+            BinaryOp: ==
+              ID: j
+              Constant: int, 1
+            Break: 
+          While: 
+            BinaryOp: >
+              ID: pdest
+              ID: p
+            If: 
+              BinaryOp: ==
+                ID: j
+                ID: p
+              UnaryOp: p++
+                ID: pdest
+          DoWhile: 
+            BinaryOp: >
+              ID: k
+              Constant: int, 0
+            Compound: 
+              Assignment: =
+                ID: D1361
+                ArrayRef: 
+                  ID: W
+                  ID: k
+              DoWhile: 
+                BinaryOp: <
+                  ID: p
+                  Constant: int, 1
+                If: 
+                  BinaryOp: !=
+                    ID: D1361
+                    Constant: int, 0
+                  ExprList: 
+                    Assignment: =
+                      ID: pdest
+                      Constant: int, 1
+                    Assignment: =
+                      ArrayRef: 
+                        ID: W
+                        ID: k
+                      Assignment: =
+                        ID: D1361
+                        Constant: int, 0
+          DoWhile: 
+            BinaryOp: !=
+              ID: k
+              UnaryOp: -
+                Constant: int, 1
+            Compound: 
+              Assignment: =
+                ID: p
+                Constant: int, 0
+              Assignment: =
+                ID: k
+                ArrayRef: 
+                  ID: Link
+                  ID: k
+              While: 
+                BinaryOp: <
+                  ID: p
+                  ID: j
+                If: 
+                  BinaryOp: !=
+                    ID: k
+                    UnaryOp: -
+                      Constant: int, 1
+                  ExprList: 
+                    UnaryOp: p++
+                      ID: pdest
+                    UnaryOp: p++
+                      ID: p
+          Assignment: =
+            ID: j
+            Constant: int, 1
+      Return: 
+        ID: pdest
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        UnaryOp: !
+          FuncCall: 
+            ID: f
+            ExprList: 
+              Constant: int, 0
+              Constant: int, 2
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

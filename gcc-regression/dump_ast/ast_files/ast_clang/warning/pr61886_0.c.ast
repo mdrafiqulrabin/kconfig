@@ -1,0 +1,191 @@
+c_files/pr61886_0.c:11:232: warning: unknown attribute '__warning__' ignored [-Wunknown-attributes]
+extern size_t fread_warn (void *__restrict __ptr, size_t __ptrlen, size_t __size, size_t __n, FILE *__restrict __stream) __asm__ (STRING2(__USER_LABEL_PREFIX__) "fread")      __attribute__ ((__warn_unused_result__)) __attribute__((__warning__ ("fread called with bigger size * nmemb than length " "of destination buffer")));
+                                                                                                                                                                                                                                       ^
+c_files/pr61886_0.c:13:102: warning: unknown attribute '__artificial__' ignored [-Wunknown-attributes]
+extern __inline __attribute__ ((__always_inline__)) __attribute__ ((__gnu_inline__)) __attribute__ ((__artificial__)) __attribute__ ((__warn_unused_result__))
+                                                                                                     ^
+c_files/pr61886_0.c:27:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+3 warnings generated.
+TranslationUnitDecl 0x7ff4298264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff429826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff429826740 '__int128'
+|-TypedefDecl 0x7ff429826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff429826760 'unsigned __int128'
+|-TypedefDecl 0x7ff429826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff429826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff429826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff429826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff429826dc0 'char *'
+|   `-BuiltinType 0x7ff429826560 'char'
+|-TypedefDecl 0x7ff4298270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff429827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff429826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff429826e58 '__va_list_tag'
+|-TypedefDecl 0x7ff429827138 <c_files/pr61886_0.c:4:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7ff429826680 'unsigned long'
+|-RecordDecl 0x7ff429877c00 <line:5:9, col:16> col:16 struct _IO_FILE
+|-TypedefDecl 0x7ff429877d00 <col:1, col:25> col:25 referenced FILE 'struct _IO_FILE':'struct _IO_FILE'
+| `-ElaboratedType 0x7ff429877cb0 'struct _IO_FILE' sugar
+|   `-RecordType 0x7ff429877c90 'struct _IO_FILE'
+|     `-Record 0x7ff429877c00 '_IO_FILE'
+|-FunctionDecl 0x7ff4298781c0 <line:10:1, col:210> col:15 used fread 'size_t (void *__restrict, size_t, size_t, size_t, FILE *__restrict)' extern
+| |-ParmVarDecl 0x7ff429877da8 <col:22, col:39> col:39 __ptr 'void *__restrict'
+| |-ParmVarDecl 0x7ff429877e18 <col:46, col:53> col:53 __ptrlen 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff429877e88 <col:63, col:70> col:70 __size 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff429877ef8 <col:78, col:85> col:85 __n 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff429877fe8 <col:90, col:107> col:107 __stream 'FILE *__restrict'
+| |-AsmLabelAttr 0x7ff429878258 <<scratch space>:2:1> "_fread"
+| `-WarnUnusedResultAttr 0x7ff4298782d8 <c_files/pr61886_0.c:10:187> warn_unused_result
+|-FunctionDecl 0x7ff429878698 <line:11:1, col:323> col:15 used fread_warn 'size_t (void *__restrict, size_t, size_t, size_t, FILE *__restrict)' extern
+| |-ParmVarDecl 0x7ff429878340 <col:27, col:44> col:44 __ptr 'void *__restrict'
+| |-ParmVarDecl 0x7ff4298783b0 <col:51, col:58> col:58 __ptrlen 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff429878420 <col:68, col:75> col:75 __size 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff429878490 <col:83, col:90> col:90 __n 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff429878500 <col:95, col:112> col:112 __stream 'FILE *__restrict'
+| |-AsmLabelAttr 0x7ff429878730 <<scratch space>:3:1> "_fread"
+| `-WarnUnusedResultAttr 0x7ff4298787b0 <c_files/pr61886_0.c:11:192> warn_unused_result
+|-FunctionDecl 0x7ff429878a70 <line:13:1, line:27:1> line:15:1 used local_fread 'size_t (void *__restrict, size_t, size_t, FILE *__restrict)' extern inline
+| |-ParmVarDecl 0x7ff4298787d8 <col:14, col:31> col:31 used __ptr 'void *__restrict'
+| |-ParmVarDecl 0x7ff429878848 <col:38, col:45> col:45 used __size 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff4298788b8 <col:53, col:60> col:60 used __n 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff429878928 <line:16:8, col:25> col:25 used __stream 'FILE *__restrict'
+| |-CompoundStmt 0x7ff42987e7c8 <line:17:1, line:27:1>
+| | `-IfStmt 0x7ff42987e790 <line:18:3, line:26:5>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7ff42987c960 <line:18:7, col:53> 'int' '!='
+| |   | |-CallExpr 0x7ff42987c880 <col:7, col:38> 'unsigned long'
+| |   | | |-ImplicitCastExpr 0x7ff42987c868 <col:7> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+| |   | | | `-DeclRefExpr 0x7ff42987c7b0 <col:7> '<builtin fn type>' Function 0x7ff42987c600 '__builtin_object_size' 'unsigned long (const void *, int)'
+| |   | | |-ImplicitCastExpr 0x7ff42987c8d0 <col:30> 'const void *' <BitCast>
+| |   | | | `-ImplicitCastExpr 0x7ff42987c8b8 <col:30> 'void *' <LValueToRValue>
+| |   | | |   `-DeclRefExpr 0x7ff42987c7d8 <col:30> 'void *__restrict' lvalue ParmVar 0x7ff4298787d8 '__ptr' 'void *__restrict'
+| |   | | `-IntegerLiteral 0x7ff42987c800 <col:37> 'int' 0
+| |   | `-CStyleCastExpr 0x7ff42987c938 <col:43, col:53> 'size_t':'unsigned long' <IntegralCast>
+| |   |   `-UnaryOperator 0x7ff42987c908 <col:52, col:53> 'int' prefix '-'
+| |   |     `-IntegerLiteral 0x7ff42987c8e8 <col:53> 'int' 1
+| |   |-CompoundStmt 0x7ff42987e768 <line:19:5, line:26:5>
+| |   | |-IfStmt 0x7ff42987d268 <line:20:7, line:23:85>
+| |   | | |-<<<NULL>>>
+| |   | | |-<<<NULL>>>
+| |   | | |-BinaryOperator 0x7ff42987cf30 <line:20:11, line:22:74> 'int' '||'
+| |   | | | |-BinaryOperator 0x7ff42987cc48 <line:20:11, line:21:40> 'int' '||'
+| |   | | | | |-UnaryOperator 0x7ff42987cb70 <line:20:11, col:40> 'int' prefix '!'
+| |   | | | | | `-CallExpr 0x7ff42987cb40 <col:12, col:40> 'int'
+| |   | | | | |   |-ImplicitCastExpr 0x7ff42987cb28 <col:12> 'int (*)()' <BuiltinFnToFnPtr>
+| |   | | | | |   | `-DeclRefExpr 0x7ff42987caa8 <col:12> '<builtin fn type>' Function 0x7ff42987c9b8 '__builtin_constant_p' 'int ()'
+| |   | | | | |   `-DeclRefExpr 0x7ff42987cad0 <col:34> 'size_t':'unsigned long' lvalue ParmVar 0x7ff429878848 '__size' 'size_t':'unsigned long'
+| |   | | | | `-UnaryOperator 0x7ff42987cc28 <line:21:14, col:40> 'int' prefix '!'
+| |   | | | |   `-CallExpr 0x7ff42987cbf8 <col:15, col:40> 'int'
+| |   | | | |     |-ImplicitCastExpr 0x7ff42987cbe0 <col:15> 'int (*)()' <BuiltinFnToFnPtr>
+| |   | | | |     | `-DeclRefExpr 0x7ff42987cb90 <col:15> '<builtin fn type>' Function 0x7ff42987c9b8 '__builtin_constant_p' 'int ()'
+| |   | | | |     `-DeclRefExpr 0x7ff42987cbb8 <col:37> 'size_t':'unsigned long' lvalue ParmVar 0x7ff4298788b8 '__n' 'size_t':'unsigned long'
+| |   | | | `-BinaryOperator 0x7ff42987cf08 <line:22:14, col:74> 'int' '>='
+| |   | | |   |-ParenExpr 0x7ff42987cd18 <col:14, col:27> 'unsigned long'
+| |   | | |   | `-BinaryOperator 0x7ff42987ccf0 <col:15, col:24> 'unsigned long' '|'
+| |   | | |   |   |-ImplicitCastExpr 0x7ff42987ccc0 <col:15> 'size_t':'unsigned long' <LValueToRValue>
+| |   | | |   |   | `-DeclRefExpr 0x7ff42987cc70 <col:15> 'size_t':'unsigned long' lvalue ParmVar 0x7ff429878848 '__size' 'size_t':'unsigned long'
+| |   | | |   |   `-ImplicitCastExpr 0x7ff42987ccd8 <col:24> 'size_t':'unsigned long' <LValueToRValue>
+| |   | | |   |     `-DeclRefExpr 0x7ff42987cc98 <col:24> 'size_t':'unsigned long' lvalue ParmVar 0x7ff4298788b8 '__n' 'size_t':'unsigned long'
+| |   | | |   `-ParenExpr 0x7ff42987cee8 <col:32, col:74> 'size_t':'unsigned long'
+| |   | | |     `-BinaryOperator 0x7ff42987cec0 <col:33, col:73> 'size_t':'unsigned long' '<<'
+| |   | | |       |-ParenExpr 0x7ff42987cd90 <col:33, col:44> 'size_t':'unsigned long'
+| |   | | |       | `-CStyleCastExpr 0x7ff42987cd68 <col:34, col:43> 'size_t':'unsigned long' <IntegralCast>
+| |   | | |       |   `-IntegerLiteral 0x7ff42987cd38 <col:43> 'int' 1
+| |   | | |       `-ParenExpr 0x7ff42987cea0 <col:49, col:73> 'unsigned long'
+| |   | | |         `-BinaryOperator 0x7ff42987ce78 <col:50, col:72> 'unsigned long' '/'
+| |   | | |           |-BinaryOperator 0x7ff42987ce18 <col:50, col:68> 'unsigned long' '*'
+| |   | | |           | |-ImplicitCastExpr 0x7ff42987ce00 <col:50> 'unsigned long' <IntegralCast>
+| |   | | |           | | `-IntegerLiteral 0x7ff42987cdb0 <col:50> 'int' 8
+| |   | | |           | `-UnaryExprOrTypeTraitExpr 0x7ff42987cde0 <col:54, col:68> 'unsigned long' sizeof 'size_t':'unsigned long'
+| |   | | |           `-ImplicitCastExpr 0x7ff42987ce60 <col:72> 'unsigned long' <IntegralCast>
+| |   | | |             `-IntegerLiteral 0x7ff42987ce40 <col:72> 'int' 2
+| |   | | |-ReturnStmt 0x7ff42987d250 <line:23:9, col:85>
+| |   | | | `-CallExpr 0x7ff42987d1a0 <col:16, col:85> 'size_t':'unsigned long'
+| |   | | |   |-ImplicitCastExpr 0x7ff42987d188 <col:16> 'size_t (*)(void *__restrict, size_t, size_t, size_t, FILE *__restrict)' <FunctionToPointerDecay>
+| |   | | |   | `-DeclRefExpr 0x7ff42987cf58 <col:16> 'size_t (void *__restrict, size_t, size_t, size_t, FILE *__restrict)' Function 0x7ff4298781c0 'fread' 'size_t (void *__restrict, size_t, size_t, size_t, FILE *__restrict)'
+| |   | | |   |-ImplicitCastExpr 0x7ff42987d1f0 <col:23> 'void *' <LValueToRValue>
+| |   | | |   | `-DeclRefExpr 0x7ff42987cf80 <col:23> 'void *__restrict' lvalue ParmVar 0x7ff4298787d8 '__ptr' 'void *__restrict'
+| |   | | |   |-CallExpr 0x7ff42987d048 <col:30, col:61> 'unsigned long'
+| |   | | |   | |-ImplicitCastExpr 0x7ff42987d030 <col:30> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+| |   | | |   | | `-DeclRefExpr 0x7ff42987cfa8 <col:30> '<builtin fn type>' Function 0x7ff42987c600 '__builtin_object_size' 'unsigned long (const void *, int)'
+| |   | | |   | |-ImplicitCastExpr 0x7ff42987d098 <col:53> 'const void *' <BitCast>
+| |   | | |   | | `-ImplicitCastExpr 0x7ff42987d080 <col:53> 'void *' <LValueToRValue>
+| |   | | |   | |   `-DeclRefExpr 0x7ff42987cfd0 <col:53> 'void *__restrict' lvalue ParmVar 0x7ff4298787d8 '__ptr' 'void *__restrict'
+| |   | | |   | `-IntegerLiteral 0x7ff42987cff8 <col:60> 'int' 0
+| |   | | |   |-ImplicitCastExpr 0x7ff42987d208 <col:64> 'size_t':'unsigned long' <LValueToRValue>
+| |   | | |   | `-DeclRefExpr 0x7ff42987d0b0 <col:64> 'size_t':'unsigned long' lvalue ParmVar 0x7ff429878848 '__size' 'size_t':'unsigned long'
+| |   | | |   |-ImplicitCastExpr 0x7ff42987d220 <col:72> 'size_t':'unsigned long' <LValueToRValue>
+| |   | | |   | `-DeclRefExpr 0x7ff42987d0d8 <col:72> 'size_t':'unsigned long' lvalue ParmVar 0x7ff4298788b8 '__n' 'size_t':'unsigned long'
+| |   | | |   `-ImplicitCastExpr 0x7ff42987d238 <col:77> 'FILE *' <LValueToRValue>
+| |   | | |     `-DeclRefExpr 0x7ff42987d100 <col:77> 'FILE *__restrict' lvalue ParmVar 0x7ff429878928 '__stream' 'FILE *__restrict'
+| |   | | `-<<<NULL>>>
+| |   | `-IfStmt 0x7ff42987e730 <line:24:7, line:25:90>
+| |   |   |-<<<NULL>>>
+| |   |   |-<<<NULL>>>
+| |   |   |-BinaryOperator 0x7ff42987d450 <line:24:11, col:57> 'int' '>'
+| |   |   | |-BinaryOperator 0x7ff42987d320 <col:11, col:20> 'unsigned long' '*'
+| |   |   | | |-ImplicitCastExpr 0x7ff42987d2f0 <col:11> 'size_t':'unsigned long' <LValueToRValue>
+| |   |   | | | `-DeclRefExpr 0x7ff42987d2a0 <col:11> 'size_t':'unsigned long' lvalue ParmVar 0x7ff429878848 '__size' 'size_t':'unsigned long'
+| |   |   | | `-ImplicitCastExpr 0x7ff42987d308 <col:20> 'size_t':'unsigned long' <LValueToRValue>
+| |   |   | |   `-DeclRefExpr 0x7ff42987d2c8 <col:20> 'size_t':'unsigned long' lvalue ParmVar 0x7ff4298788b8 '__n' 'size_t':'unsigned long'
+| |   |   | `-CallExpr 0x7ff42987d3e8 <col:26, col:57> 'unsigned long'
+| |   |   |   |-ImplicitCastExpr 0x7ff42987d3d0 <col:26> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+| |   |   |   | `-DeclRefExpr 0x7ff42987d348 <col:26> '<builtin fn type>' Function 0x7ff42987c600 '__builtin_object_size' 'unsigned long (const void *, int)'
+| |   |   |   |-ImplicitCastExpr 0x7ff42987d438 <col:49> 'const void *' <BitCast>
+| |   |   |   | `-ImplicitCastExpr 0x7ff42987d420 <col:49> 'void *' <LValueToRValue>
+| |   |   |   |   `-DeclRefExpr 0x7ff42987d370 <col:49> 'void *__restrict' lvalue ParmVar 0x7ff4298787d8 '__ptr' 'void *__restrict'
+| |   |   |   `-IntegerLiteral 0x7ff42987d398 <col:56> 'int' 0
+| |   |   |-ReturnStmt 0x7ff42987e718 <line:25:9, col:90>
+| |   |   | `-CallExpr 0x7ff42987e668 <col:16, col:90> 'size_t':'unsigned long'
+| |   |   |   |-ImplicitCastExpr 0x7ff42987e650 <col:16> 'size_t (*)(void *__restrict, size_t, size_t, size_t, FILE *__restrict)' <FunctionToPointerDecay>
+| |   |   |   | `-DeclRefExpr 0x7ff42987d478 <col:16> 'size_t (void *__restrict, size_t, size_t, size_t, FILE *__restrict)' Function 0x7ff429878698 'fread_warn' 'size_t (void *__restrict, size_t, size_t, size_t, FILE *__restrict)'
+| |   |   |   |-ImplicitCastExpr 0x7ff42987e6b8 <col:28> 'void *' <LValueToRValue>
+| |   |   |   | `-DeclRefExpr 0x7ff42987d4a0 <col:28> 'void *__restrict' lvalue ParmVar 0x7ff4298787d8 '__ptr' 'void *__restrict'
+| |   |   |   |-CallExpr 0x7ff42987d568 <col:35, col:66> 'unsigned long'
+| |   |   |   | |-ImplicitCastExpr 0x7ff42987d550 <col:35> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+| |   |   |   | | `-DeclRefExpr 0x7ff42987d4c8 <col:35> '<builtin fn type>' Function 0x7ff42987c600 '__builtin_object_size' 'unsigned long (const void *, int)'
+| |   |   |   | |-ImplicitCastExpr 0x7ff42987d5b8 <col:58> 'const void *' <BitCast>
+| |   |   |   | | `-ImplicitCastExpr 0x7ff42987d5a0 <col:58> 'void *' <LValueToRValue>
+| |   |   |   | |   `-DeclRefExpr 0x7ff42987d4f0 <col:58> 'void *__restrict' lvalue ParmVar 0x7ff4298787d8 '__ptr' 'void *__restrict'
+| |   |   |   | `-IntegerLiteral 0x7ff42987d518 <col:65> 'int' 0
+| |   |   |   |-ImplicitCastExpr 0x7ff42987e6d0 <col:69> 'size_t':'unsigned long' <LValueToRValue>
+| |   |   |   | `-DeclRefExpr 0x7ff42987d5d0 <col:69> 'size_t':'unsigned long' lvalue ParmVar 0x7ff429878848 '__size' 'size_t':'unsigned long'
+| |   |   |   |-ImplicitCastExpr 0x7ff42987e6e8 <col:77> 'size_t':'unsigned long' <LValueToRValue>
+| |   |   |   | `-DeclRefExpr 0x7ff42987e600 <col:77> 'size_t':'unsigned long' lvalue ParmVar 0x7ff4298788b8 '__n' 'size_t':'unsigned long'
+| |   |   |   `-ImplicitCastExpr 0x7ff42987e700 <col:82> 'FILE *' <LValueToRValue>
+| |   |   |     `-DeclRefExpr 0x7ff42987e628 <col:82> 'FILE *__restrict' lvalue ParmVar 0x7ff429878928 '__stream' 'FILE *__restrict'
+| |   |   `-<<<NULL>>>
+| |   `-<<<NULL>>>
+| |-WarnUnusedResultAttr 0x7ff429878b28 <line:13:135> warn_unused_result
+| |-GNUInlineAttr 0x7ff429878b70 <col:69>
+| `-AlwaysInlineAttr 0x7ff429878b80 <col:33> always_inline
+|-FunctionDecl 0x7ff42987c600 <line:18:7> col:7 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+| |-ParmVarDecl 0x7ff42987c698 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7ff42987c6f8 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7ff42987c768 <col:7> Implicit
+|-FunctionDecl 0x7ff42987c9b8 <line:20:12> col:12 implicit used __builtin_constant_p 'int ()' extern
+| |-NoThrowAttr 0x7ff42987ca50 <col:12> Implicit
+| `-ConstAttr 0x7ff42987ca98 <col:12> Implicit
+|-VarDecl 0x7ff42987e7f8 <line:29:1, col:17> col:17 used nmemb 'volatile size_t':'volatile unsigned long'
+|-VarDecl 0x7ff42987e868 <line:30:1, col:7> col:7 used fp 'FILE *'
+`-FunctionDecl 0x7ff42987e8f0 <line:31:1, line:36:1> line:31:5 main 'int ()'
+  `-CompoundStmt 0x7ff42987eca0 <line:32:1, line:36:1>
+    |-DeclStmt 0x7ff42987ea68 <line:33:3, col:27>
+    | `-VarDecl 0x7ff42987ea08 <col:3, col:26> col:8 used file_contents 'char [4096]'
+    `-ReturnStmt 0x7ff42987ec88 <line:35:3, col:50>
+      `-ImplicitCastExpr 0x7ff42987ec70 <col:10, col:50> 'int' <IntegralCast>
+        `-CallExpr 0x7ff42987ebb0 <col:10, col:50> 'size_t':'unsigned long'
+          |-ImplicitCastExpr 0x7ff42987eb98 <col:10> 'size_t (*)(void *__restrict, size_t, size_t, FILE *__restrict)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7ff42987ea80 <col:10> 'size_t (void *__restrict, size_t, size_t, FILE *__restrict)' Function 0x7ff429878a70 'local_fread' 'size_t (void *__restrict, size_t, size_t, FILE *__restrict)'
+          |-ImplicitCastExpr 0x7ff42987ec10 <col:23> 'void *' <BitCast>
+          | `-ImplicitCastExpr 0x7ff42987ebf8 <col:23> 'char *' <ArrayToPointerDecay>
+          |   `-DeclRefExpr 0x7ff42987eaa8 <col:23> 'char [4096]' lvalue Var 0x7ff42987ea08 'file_contents' 'char [4096]'
+          |-ImplicitCastExpr 0x7ff42987ec28 <col:38> 'size_t':'unsigned long' <IntegralCast>
+          | `-IntegerLiteral 0x7ff42987ead0 <col:38> 'int' 1
+          |-ImplicitCastExpr 0x7ff42987ec40 <col:41> 'size_t':'unsigned long' <LValueToRValue>
+          | `-DeclRefExpr 0x7ff42987eaf0 <col:41> 'volatile size_t':'volatile unsigned long' lvalue Var 0x7ff42987e7f8 'nmemb' 'volatile size_t':'volatile unsigned long'
+          `-ImplicitCastExpr 0x7ff42987ec58 <col:48> 'FILE *' <LValueToRValue>
+            `-DeclRefExpr 0x7ff42987eb18 <col:48> 'FILE *' lvalue Var 0x7ff42987e868 'fp' 'FILE *'

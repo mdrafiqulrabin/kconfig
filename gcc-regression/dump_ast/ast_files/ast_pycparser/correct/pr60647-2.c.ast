@@ -1,0 +1,141 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: _wincore
+      Decl: width, [], [], []
+        TypeDecl: width, []
+          IdentifierType: ['int']
+      Decl: height, [], [], []
+        TypeDecl: height, []
+          IdentifierType: ['int']
+  Decl: fn1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: fn1, []
+        IdentifierType: ['void']
+  Decl: fn2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: fn2, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dpy, [], [], []
+            PtrDecl: []
+              TypeDecl: dpy, []
+                IdentifierType: ['void']
+          Decl: winInfo, [], [], []
+            PtrDecl: []
+              TypeDecl: winInfo, []
+                Struct: _wincore
+          Decl: offset, [], [], []
+            TypeDecl: offset, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: fn1
+        ExprList: 
+          StructRef: ->
+            ID: winInfo
+            ID: height
+  FuncDef: 
+    Decl: bar, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dpy, [], [], []
+            PtrDecl: []
+              TypeDecl: dpy, []
+                IdentifierType: ['void']
+          Decl: winInfo, [], [], []
+            TypeDecl: winInfo, []
+              IdentifierType: ['int']
+          Decl: visrgn, [], [], []
+            PtrDecl: []
+              TypeDecl: visrgn, []
+                IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              FuncDecl: 
+                ParamList: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['void']
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+          ID: foo
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+          ID: winInfo
+          Constant: int, 0
+      FuncCall: 
+        ID: fn2
+        ExprList: 
+          Constant: int, 0
+          Constant: int, 0
+          ID: visrgn
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dpy, [], [], []
+            PtrDecl: []
+              TypeDecl: dpy, []
+                IdentifierType: ['void']
+          Decl: win, [], [], []
+            TypeDecl: win, []
+              IdentifierType: ['int']
+          Decl: prop, [], [], []
+            TypeDecl: prop, []
+              IdentifierType: ['int']
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+          Constant: int, 0
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+            Constant: int, 0

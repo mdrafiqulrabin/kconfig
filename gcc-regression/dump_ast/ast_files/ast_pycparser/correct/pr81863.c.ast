@@ -1,0 +1,161 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['long']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      Struct: ww_class
+        Decl: stamp, [], [], []
+          TypeDecl: stamp, []
+            IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: stress
+      Decl: locks, [], [], []
+        TypeDecl: locks, []
+          IdentifierType: ['int']
+      Decl: nlocks, [], [], []
+        TypeDecl: nlocks, []
+          IdentifierType: ['int']
+  Decl: e, [], [], []
+    PtrDecl: []
+      TypeDecl: e, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: atomic_add_return_relaxed, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            PtrDecl: []
+              TypeDecl: p1, []
+                IdentifierType: ['int']
+        TypeDecl: atomic_add_return_relaxed, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_prefetch
+        ExprList: 
+          ID: p1
+      Return: 
+        ID: a
+  FuncDef: 
+    Decl: atomic_long_inc_return_relaxed, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            PtrDecl: []
+              TypeDecl: p1, []
+                IdentifierType: ['int']
+        TypeDecl: atomic_long_inc_return_relaxed, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: v, [], [], []
+        PtrDecl: []
+          TypeDecl: v, []
+            IdentifierType: ['int']
+        ID: p1
+      FuncCall: 
+        ID: atomic_add_return_relaxed
+        ExprList: 
+          ID: v
+  FuncDef: 
+    Decl: ww_acquire_init, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            PtrDecl: []
+              TypeDecl: p1, []
+                Struct: ww_class
+        TypeDecl: ww_acquire_init, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: atomic_long_inc_return_relaxed
+        ExprList: 
+          UnaryOp: &
+            StructRef: ->
+              ID: p1
+              ID: stamp
+  Decl: ww_mutex_lock, [], [], []
+    FuncDecl: 
+      TypeDecl: ww_mutex_lock, []
+        IdentifierType: ['void']
+  Decl: get_random_order, [], [], []
+    FuncDecl: 
+      PtrDecl: []
+        TypeDecl: get_random_order, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: stress_inorder_work, [], [], []
+      FuncDecl: 
+        TypeDecl: stress_inorder_work, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: g, [], [], []
+        PtrDecl: []
+          TypeDecl: g, []
+            Struct: stress
+        ID: e
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['int']
+        StructRef: ->
+          ID: g
+          ID: nlocks
+      Decl: i, [], [], []
+        PtrDecl: []
+          TypeDecl: i, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          StructRef: ->
+            ID: g
+            ID: locks
+      Decl: j, [], [], []
+        PtrDecl: []
+          TypeDecl: j, []
+            IdentifierType: ['int']
+        FuncCall: 
+          ID: get_random_order
+      DoWhile: 
+        ID: b
+        Compound: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+          FuncCall: 
+            ID: ww_acquire_init
+            ExprList: 
+              UnaryOp: &
+                ID: c
+          Label: retry
+            For: 
+              Assignment: =
+                ID: n
+                Constant: int, 0
+              BinaryOp: <
+                ID: n
+                ID: h
+              UnaryOp: p++
+                ID: n
+              FuncCall: 
+                ID: ww_mutex_lock
+                ExprList: 
+                  ArrayRef: 
+                    ID: i
+                    ArrayRef: 
+                      ID: j
+                      ID: n
+          Assignment: =
+            ID: f
+            ID: n
+          If: 
+            ID: d
+            Goto: retry

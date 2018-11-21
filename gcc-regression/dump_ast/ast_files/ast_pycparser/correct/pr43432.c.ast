@@ -1,0 +1,52 @@
+FileAST: 
+  FuncDef: 
+    Decl: vector_fmul_reverse_c, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dst, [], [], []
+            PtrDecl: []
+              TypeDecl: dst, []
+                IdentifierType: ['float']
+          Decl: src0, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: src0, ['const']
+                IdentifierType: ['float']
+          Decl: src1, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: src1, ['const']
+                IdentifierType: ['float']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['int']
+        TypeDecl: vector_fmul_reverse_c, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Assignment: +=
+        ID: src1
+        BinaryOp: -
+          ID: len
+          Constant: int, 1
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: len
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: dst
+            ID: i
+          BinaryOp: *
+            ArrayRef: 
+              ID: src0
+              ID: i
+            ArrayRef: 
+              ID: src1
+              UnaryOp: -
+                ID: i

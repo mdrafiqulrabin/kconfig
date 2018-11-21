@@ -1,0 +1,110 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: _wincore
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+      Decl: width, [], [], []
+        TypeDecl: width, []
+          IdentifierType: ['int']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: fn2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fn2, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: fn1, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          ID: dpy
+          ID: winInfo
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: a
+        StructRef: ->
+          ID: winInfo
+          ID: width
+      FuncCall: 
+        ID: fn2
+    Decl: dpy, [], [], []
+      PtrDecl: []
+        TypeDecl: dpy, []
+          Struct: _XDisplay
+    Decl: winInfo, [], [], []
+      PtrDecl: []
+        TypeDecl: winInfo, []
+          Struct: _wincore
+  Decl: fn4, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: fn4, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: fn3, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          ID: dpy
+          ID: winInfo
+          ID: visrgn
+        TypeDecl: fn3, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: fn1
+          ExprList: 
+            Constant: int, 0
+            ID: winInfo
+      FuncCall: 
+        ID: fn4
+        ExprList: 
+          Constant: int, 0
+          Constant: int, 0
+          ID: visrgn
+    Decl: dpy, [], [], []
+      PtrDecl: []
+        TypeDecl: dpy, []
+          Struct: _XDisplay
+    Decl: winInfo, [], [], []
+      TypeDecl: winInfo, []
+        IdentifierType: ['int']
+    Decl: visrgn, [], [], []
+      TypeDecl: visrgn, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: event
+        TypeDecl: fn5, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: fn3
+        ExprList: 
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+    Decl: event, [], [], []
+      PtrDecl: []
+        TypeDecl: event, []
+          Struct: _XEvent

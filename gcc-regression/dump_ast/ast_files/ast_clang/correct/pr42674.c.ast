@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7ff19f8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff19f826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff19f826740 '__int128'
+|-TypedefDecl 0x7ff19f826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff19f826760 'unsigned __int128'
+|-TypedefDecl 0x7ff19f826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff19f826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff19f826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff19f826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff19f826dc0 'char *'
+|   `-BuiltinType 0x7ff19f826560 'char'
+|-TypedefDecl 0x7ff19f8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff19f827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff19f826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff19f826e58 '__va_list_tag'
+|-FunctionDecl 0x7ff19f877400 <c_files/pr42674.c:5:1, col:22> col:13 used bar 'void (void)' extern
+|-FunctionDecl 0x7ff19f8775d8 <line:6:1, col:62> col:12 used foo 'int (void) __attribute__((noreturn))' static
+| `-UsedAttr 0x7ff19f877670 <col:53>
+`-FunctionDecl 0x7ff19f877750 prev 0x7ff19f8775d8 <line:8:1, line:13:1> line:9:1 used foo 'int (void) __attribute__((noreturn))' static
+  |-CompoundStmt 0x7ff19f877908 <line:10:1, line:13:1>
+  | `-WhileStmt 0x7ff19f8778e8 <line:11:3, line:12:10>
+  |   |-<<<NULL>>>
+  |   |-IntegerLiteral 0x7ff19f877830 <line:11:10> 'int' 1
+  |   `-CallExpr 0x7ff19f8778c0 <line:12:5, col:10> 'void'
+  |     `-ImplicitCastExpr 0x7ff19f8778a8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+  |       `-DeclRefExpr 0x7ff19f877850 <col:5> 'void (void)' Function 0x7ff19f877400 'bar' 'void (void)'
+  `-UsedAttr 0x7ff19f8777e8 <line:6:53> Inherited

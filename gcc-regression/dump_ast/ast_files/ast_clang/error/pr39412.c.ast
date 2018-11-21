@@ -1,0 +1,43 @@
+c_files/pr39412.c:9:26: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+  const union { struct S a[y]; } *u = x;
+                         ^
+1 error generated.
+TranslationUnitDecl 0x7febfe8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7febfe826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7febfe826740 '__int128'
+|-TypedefDecl 0x7febfe826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7febfe826760 'unsigned __int128'
+|-TypedefDecl 0x7febfe826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7febfe826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7febfe826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7febfe826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7febfe826dc0 'char *'
+|   `-BuiltinType 0x7febfe826560 'char'
+|-TypedefDecl 0x7febfe8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7febfe827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7febfe826ee0 'struct __va_list_tag'
+|     `-Record 0x7febfe826e58 '__va_list_tag'
+|-RecordDecl 0x7febfe827120 <c_files/pr39412.c:4:1, col:19> col:8 struct S definition
+| `-FieldDecl 0x7febff025a00 <col:12, col:16> col:16 i 'int'
+|-FunctionDecl 0x7febff025be0 <line:6:1, line:10:1> line:7:1 used bar 'void (const void *, unsigned long)' inline
+| |-ParmVarDecl 0x7febff025a90 <col:6, col:18> col:18 used x 'const void *'
+| |-ParmVarDecl 0x7febff025b08 <col:21, col:35> col:35 used y 'unsigned long'
+| `-CompoundStmt 0x7febff0260c8 <line:8:1, line:10:1>
+|   `-DeclStmt 0x7febff0260b0 <line:9:3, col:40>
+|     |-RecordDecl 0x7febff025cc8 <col:9, col:32> col:9 invalid union definition
+|     | `-FieldDecl 0x7febff025e98 <col:17, col:29> col:26 invalid a 'struct S [y]'
+|     `-VarDecl 0x7febff025fe0 <col:3, col:39> col:35 u 'const union (anonymous union at c_files/pr39412.c:9:9) *' cinit
+|       `-ImplicitCastExpr 0x7febff026080 <col:39> 'const union (anonymous union at c_files/pr39412.c:9:9) *' <BitCast>
+|         `-ImplicitCastExpr 0x7febff026068 <col:39> 'const void *' <LValueToRValue>
+|           `-DeclRefExpr 0x7febff026040 <col:39> 'const void *' lvalue ParmVar 0x7febff025a90 'x' 'const void *'
+`-FunctionDecl 0x7febff026208 <line:12:1, line:16:1> line:13:1 foo 'void (const void *, unsigned long)'
+  |-ParmVarDecl 0x7febff026100 <col:6, col:18> col:18 used x 'const void *'
+  |-ParmVarDecl 0x7febff026178 <col:21, col:35> col:35 used y 'unsigned long'
+  `-CompoundStmt 0x7febff0263d8 <line:14:1, line:16:1>
+    `-CallExpr 0x7febff026370 <line:15:3, col:12> 'void'
+      |-ImplicitCastExpr 0x7febff026358 <col:3> 'void (*)(const void *, unsigned long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7febff0262b0 <col:3> 'void (const void *, unsigned long)' Function 0x7febff025be0 'bar' 'void (const void *, unsigned long)'
+      |-ImplicitCastExpr 0x7febff0263a8 <col:8> 'const void *' <LValueToRValue>
+      | `-DeclRefExpr 0x7febff0262d8 <col:8> 'const void *' lvalue ParmVar 0x7febff026100 'x' 'const void *'
+      `-ImplicitCastExpr 0x7febff0263c0 <col:11> 'unsigned long' <LValueToRValue>
+        `-DeclRefExpr 0x7febff026300 <col:11> 'unsigned long' lvalue ParmVar 0x7febff026178 'y' 'unsigned long'

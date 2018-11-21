@@ -1,0 +1,603 @@
+TranslationUnitDecl 0x7fe54d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe54d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe54d026740 '__int128'
+|-TypedefDecl 0x7fe54d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe54d026760 'unsigned __int128'
+|-TypedefDecl 0x7fe54d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe54d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe54d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe54d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe54d026dc0 'char *'
+|   `-BuiltinType 0x7fe54d026560 'char'
+|-TypedefDecl 0x7fe54d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe54d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe54d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe54d026e58 '__va_list_tag'
+|-FunctionDecl 0x7fe54d06c000 </usr/include/complex.h:78:22> col:22 implicit cacosf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d06c098 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d06c100 <col:22> Implicit
+| `-ConstAttr 0x7fe54d06c148 <col:22> Implicit
+|-FunctionDecl 0x7fe54d06c158 prev 0x7fe54d06c000 <col:1, col:42> col:22 cacosf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d027130 <col:29> col:42 '_Complex float'
+| |-NoThrowAttr 0x7fe54d06c230 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d06c240 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d06c320 <line:79:23> col:23 implicit cacos '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d06c3b8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d06c420 <col:23> Implicit
+| `-ConstAttr 0x7fe54d06c468 <col:23> Implicit
+|-FunctionDecl 0x7fe54d06c478 prev 0x7fe54d06c320 <col:1, col:43> col:23 cacos '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d06c260 <col:29> col:43 '_Complex double'
+| |-NoThrowAttr 0x7fe54d06c550 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d06c560 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d06c640 <line:80:28> col:28 implicit cacosl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d06c6d8 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d06c740 <col:28> Implicit
+| `-ConstAttr 0x7fe54d06c788 <col:28> Implicit
+|-FunctionDecl 0x7fe54d06c798 prev 0x7fe54d06c640 <col:1, col:54> col:28 cacosl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d06c580 <col:35, col:40> col:54 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d06c870 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d06c880 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d06c928 <line:82:22> col:22 implicit casinf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d06c9c0 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d06ca28 <col:22> Implicit
+| `-ConstAttr 0x7fe54d06ca70 <col:22> Implicit
+|-FunctionDecl 0x7fe54d06ca80 prev 0x7fe54d06c928 <col:1, col:42> col:22 casinf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d06c8a0 <col:29> col:42 '_Complex float'
+| |-NoThrowAttr 0x7fe54d06cb58 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d06cb68 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d06cc10 <line:83:23> col:23 implicit casin '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d06cca8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d06cd10 <col:23> Implicit
+| `-ConstAttr 0x7fe54d06cd58 <col:23> Implicit
+|-FunctionDecl 0x7fe54d06cd68 prev 0x7fe54d06cc10 <col:1, col:43> col:23 casin '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d06cb88 <col:29> col:43 '_Complex double'
+| |-NoThrowAttr 0x7fe54d06ce40 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d06ce50 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d06cef8 <line:84:28> col:28 implicit casinl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d06cf90 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d06d000 <col:28> Implicit
+| `-ConstAttr 0x7fe54d06d048 <col:28> Implicit
+|-FunctionDecl 0x7fe54d06d058 prev 0x7fe54d06cef8 <col:1, col:54> col:28 casinl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d06ce70 <col:35, col:40> col:54 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d06d130 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d06d140 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d06d1e8 <line:86:22> col:22 implicit catanf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d06d280 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d06d2e8 <col:22> Implicit
+| `-ConstAttr 0x7fe54d06d330 <col:22> Implicit
+|-FunctionDecl 0x7fe54d06d340 prev 0x7fe54d06d1e8 <col:1, col:42> col:22 catanf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d06d160 <col:29> col:42 '_Complex float'
+| |-NoThrowAttr 0x7fe54d06d418 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d06d428 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d06d4d0 <line:87:23> col:23 implicit catan '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d06d568 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d06d5d0 <col:23> Implicit
+| `-ConstAttr 0x7fe54d06d618 <col:23> Implicit
+|-FunctionDecl 0x7fe54d06d628 prev 0x7fe54d06d4d0 <col:1, col:43> col:23 catan '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d06d448 <col:29> col:43 '_Complex double'
+| |-NoThrowAttr 0x7fe54d06d700 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d06d710 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d06d7b8 <line:88:28> col:28 implicit catanl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d06d850 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d06d8b8 <col:28> Implicit
+| `-ConstAttr 0x7fe54d06d900 <col:28> Implicit
+|-FunctionDecl 0x7fe54d06d910 prev 0x7fe54d06d7b8 <col:1, col:54> col:28 catanl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d06d730 <col:35, col:40> col:54 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d06d9e8 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d06d9f8 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d06daa0 <line:90:22> col:22 implicit ccosf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d06db38 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d06dba0 <col:22> Implicit
+| `-ConstAttr 0x7fe54d06dbe8 <col:22> Implicit
+|-FunctionDecl 0x7fe54d06dbf8 prev 0x7fe54d06daa0 <col:1, col:41> col:22 ccosf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d06da18 <col:28> col:41 '_Complex float'
+| |-NoThrowAttr 0x7fe54d06dcd0 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d06dce0 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d06dd88 <line:91:23> col:23 implicit ccos '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d06de20 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d06de88 <col:23> Implicit
+| `-ConstAttr 0x7fe54d06ded0 <col:23> Implicit
+|-FunctionDecl 0x7fe54d06dee0 prev 0x7fe54d06dd88 <col:1, col:42> col:23 ccos '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d06dd00 <col:28> col:42 '_Complex double'
+| |-NoThrowAttr 0x7fe54d06dfb8 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d06dfc8 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d06e088 <line:92:28> col:28 implicit ccosl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d06e120 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d06e188 <col:28> Implicit
+| `-ConstAttr 0x7fe54d06e1d0 <col:28> Implicit
+|-FunctionDecl 0x7fe54d06e1e0 prev 0x7fe54d06e088 <col:1, col:53> col:28 ccosl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d06e000 <col:34, col:39> col:53 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d06e2b8 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d06e2c8 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d06e370 <line:94:22> col:22 implicit csinf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d06e408 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d06e470 <col:22> Implicit
+| `-ConstAttr 0x7fe54d06e4b8 <col:22> Implicit
+|-FunctionDecl 0x7fe54d06e4c8 prev 0x7fe54d06e370 <col:1, col:41> col:22 csinf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d06e2e8 <col:28> col:41 '_Complex float'
+| |-NoThrowAttr 0x7fe54d06e5a0 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d06e5b0 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d06e658 <line:95:23> col:23 implicit csin '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d06e6f0 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d06e758 <col:23> Implicit
+| `-ConstAttr 0x7fe54d06e7a0 <col:23> Implicit
+|-FunctionDecl 0x7fe54d06e7b0 prev 0x7fe54d06e658 <col:1, col:42> col:23 csin '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d06e5d0 <col:28> col:42 '_Complex double'
+| |-NoThrowAttr 0x7fe54d06e888 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d06e898 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d06e940 <line:96:28> col:28 implicit csinl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d06e9d8 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d06ea40 <col:28> Implicit
+| `-ConstAttr 0x7fe54d06ea88 <col:28> Implicit
+|-FunctionDecl 0x7fe54d06ea98 prev 0x7fe54d06e940 <col:1, col:53> col:28 csinl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d06e8b8 <col:34, col:39> col:53 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d06eb70 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d06eb80 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d06ec28 <line:98:22> col:22 implicit ctanf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d06ecc0 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d06ed28 <col:22> Implicit
+| `-ConstAttr 0x7fe54d06ed70 <col:22> Implicit
+|-FunctionDecl 0x7fe54d06ed80 prev 0x7fe54d06ec28 <col:1, col:41> col:22 ctanf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d06eba0 <col:28> col:41 '_Complex float'
+| |-NoThrowAttr 0x7fe54d06ee58 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d06ee68 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d06ef10 <line:99:23> col:23 implicit ctan '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d06f000 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d06f068 <col:23> Implicit
+| `-ConstAttr 0x7fe54d06f0b0 <col:23> Implicit
+|-FunctionDecl 0x7fe54d06f0c0 prev 0x7fe54d06ef10 <col:1, col:42> col:23 ctan '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d06ee88 <col:28> col:42 '_Complex double'
+| |-NoThrowAttr 0x7fe54d06f198 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d06f1a8 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d06f250 <line:100:28> col:28 implicit ctanl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d06f2e8 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d06f350 <col:28> Implicit
+| `-ConstAttr 0x7fe54d06f398 <col:28> Implicit
+|-FunctionDecl 0x7fe54d06f3a8 prev 0x7fe54d06f250 <col:1, col:53> col:28 ctanl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d06f1c8 <col:34, col:39> col:53 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d06f480 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d06f490 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d06f538 <line:102:22> col:22 implicit cacoshf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d06f5d0 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d06f638 <col:22> Implicit
+| `-ConstAttr 0x7fe54d06f680 <col:22> Implicit
+|-FunctionDecl 0x7fe54d06f690 prev 0x7fe54d06f538 <col:1, col:43> col:22 cacoshf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d06f4b0 <col:30> col:43 '_Complex float'
+| |-NoThrowAttr 0x7fe54d06f768 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d06f778 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d06f820 <line:103:23> col:23 implicit cacosh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d06f8b8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d06f920 <col:23> Implicit
+| `-ConstAttr 0x7fe54d06f968 <col:23> Implicit
+|-FunctionDecl 0x7fe54d06f978 prev 0x7fe54d06f820 <col:1, col:44> col:23 cacosh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d06f798 <col:30> col:44 '_Complex double'
+| |-NoThrowAttr 0x7fe54d06fa50 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d06fa60 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d06fb08 <line:104:28> col:28 implicit cacoshl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d06fba0 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d06fc08 <col:28> Implicit
+| `-ConstAttr 0x7fe54d06fc50 <col:28> Implicit
+|-FunctionDecl 0x7fe54d06fc60 prev 0x7fe54d06fb08 <col:1, col:55> col:28 cacoshl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d06fa80 <col:36, col:41> col:55 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d06fd38 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d06fd48 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d06fdf0 <line:106:22> col:22 implicit casinhf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d06fe88 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d06fef0 <col:22> Implicit
+| `-ConstAttr 0x7fe54d06ff38 <col:22> Implicit
+|-FunctionDecl 0x7fe54d06ff48 prev 0x7fe54d06fdf0 <col:1, col:43> col:22 casinhf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d06fd68 <col:30> col:43 '_Complex float'
+| |-NoThrowAttr 0x7fe54d070038 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d070048 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d0700f0 <line:107:23> col:23 implicit casinh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d070188 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d0701f0 <col:23> Implicit
+| `-ConstAttr 0x7fe54d070238 <col:23> Implicit
+|-FunctionDecl 0x7fe54d070248 prev 0x7fe54d0700f0 <col:1, col:44> col:23 casinh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d070068 <col:30> col:44 '_Complex double'
+| |-NoThrowAttr 0x7fe54d070320 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d070330 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d0703d8 <line:108:28> col:28 implicit casinhl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d070470 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d0704d8 <col:28> Implicit
+| `-ConstAttr 0x7fe54d070520 <col:28> Implicit
+|-FunctionDecl 0x7fe54d070530 prev 0x7fe54d0703d8 <col:1, col:55> col:28 casinhl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d070350 <col:36, col:41> col:55 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d070608 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d070618 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d0706c0 <line:110:22> col:22 implicit catanhf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d070758 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d0707c0 <col:22> Implicit
+| `-ConstAttr 0x7fe54d070808 <col:22> Implicit
+|-FunctionDecl 0x7fe54d070818 prev 0x7fe54d0706c0 <col:1, col:43> col:22 catanhf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d070638 <col:30> col:43 '_Complex float'
+| |-NoThrowAttr 0x7fe54d0708f0 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d070900 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d0709a8 <line:111:23> col:23 implicit catanh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d070a40 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d070aa8 <col:23> Implicit
+| `-ConstAttr 0x7fe54d070af0 <col:23> Implicit
+|-FunctionDecl 0x7fe54d070b00 prev 0x7fe54d0709a8 <col:1, col:44> col:23 catanh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d070920 <col:30> col:44 '_Complex double'
+| |-NoThrowAttr 0x7fe54d070bd8 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d070be8 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d070c90 <line:112:28> col:28 implicit catanhl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d070d28 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d070d90 <col:28> Implicit
+| `-ConstAttr 0x7fe54d070dd8 <col:28> Implicit
+|-FunctionDecl 0x7fe54d070de8 prev 0x7fe54d070c90 <col:1, col:55> col:28 catanhl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d070c08 <col:36, col:41> col:55 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d070ec0 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d070ed0 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d073000 <line:114:22> col:22 implicit ccoshf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d073098 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d073100 <col:22> Implicit
+| `-ConstAttr 0x7fe54d073148 <col:22> Implicit
+|-FunctionDecl 0x7fe54d073158 prev 0x7fe54d073000 <col:1, col:42> col:22 ccoshf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d070ef0 <col:29> col:42 '_Complex float'
+| |-NoThrowAttr 0x7fe54d073230 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d073240 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d0732e8 <line:115:23> col:23 implicit ccosh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d073380 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d0733e8 <col:23> Implicit
+| `-ConstAttr 0x7fe54d073430 <col:23> Implicit
+|-FunctionDecl 0x7fe54d073440 prev 0x7fe54d0732e8 <col:1, col:43> col:23 ccosh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d073260 <col:29> col:43 '_Complex double'
+| |-NoThrowAttr 0x7fe54d073518 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d073528 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d0735d0 <line:116:28> col:28 implicit ccoshl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d073668 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d0736d0 <col:28> Implicit
+| `-ConstAttr 0x7fe54d073718 <col:28> Implicit
+|-FunctionDecl 0x7fe54d073728 prev 0x7fe54d0735d0 <col:1, col:54> col:28 ccoshl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d073548 <col:35, col:40> col:54 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d073800 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d073810 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d0738b8 <line:118:22> col:22 implicit csinhf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d073950 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d0739b8 <col:22> Implicit
+| `-ConstAttr 0x7fe54d073a00 <col:22> Implicit
+|-FunctionDecl 0x7fe54d073a10 prev 0x7fe54d0738b8 <col:1, col:42> col:22 csinhf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d073830 <col:29> col:42 '_Complex float'
+| |-NoThrowAttr 0x7fe54d073ae8 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d073af8 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d073ba0 <line:119:23> col:23 implicit csinh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d073c38 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d073ca0 <col:23> Implicit
+| `-ConstAttr 0x7fe54d073ce8 <col:23> Implicit
+|-FunctionDecl 0x7fe54d073cf8 prev 0x7fe54d073ba0 <col:1, col:43> col:23 csinh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d073b18 <col:29> col:43 '_Complex double'
+| |-NoThrowAttr 0x7fe54d073dd0 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d073de0 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d073e88 <line:120:28> col:28 implicit csinhl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d073f20 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d073f88 <col:28> Implicit
+| `-ConstAttr 0x7fe54d073fd0 <col:28> Implicit
+|-FunctionDecl 0x7fe54d074000 prev 0x7fe54d073e88 <col:1, col:54> col:28 csinhl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d073e00 <col:35, col:40> col:54 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d0740d8 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d0740e8 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d074190 <line:122:22> col:22 implicit ctanhf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d074228 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d074290 <col:22> Implicit
+| `-ConstAttr 0x7fe54d0742d8 <col:22> Implicit
+|-FunctionDecl 0x7fe54d0742e8 prev 0x7fe54d074190 <col:1, col:42> col:22 ctanhf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d074108 <col:29> col:42 '_Complex float'
+| |-NoThrowAttr 0x7fe54d0743c0 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d0743d0 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d074478 <line:123:23> col:23 implicit ctanh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d074510 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d074578 <col:23> Implicit
+| `-ConstAttr 0x7fe54d0745c0 <col:23> Implicit
+|-FunctionDecl 0x7fe54d0745d0 prev 0x7fe54d074478 <col:1, col:43> col:23 ctanh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d0743f0 <col:29> col:43 '_Complex double'
+| |-NoThrowAttr 0x7fe54d0746a8 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d0746b8 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d074760 <line:124:28> col:28 implicit ctanhl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d0747f8 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d074860 <col:28> Implicit
+| `-ConstAttr 0x7fe54d0748a8 <col:28> Implicit
+|-FunctionDecl 0x7fe54d0748b8 prev 0x7fe54d074760 <col:1, col:54> col:28 ctanhl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d0746d8 <col:35, col:40> col:54 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d074990 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d0749a0 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d074a48 <line:126:22> col:22 implicit cexpf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d074ae0 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d074b48 <col:22> Implicit
+| `-ConstAttr 0x7fe54d074b90 <col:22> Implicit
+|-FunctionDecl 0x7fe54d074ba0 prev 0x7fe54d074a48 <col:1, col:41> col:22 cexpf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d0749c0 <col:28> col:41 '_Complex float'
+| |-NoThrowAttr 0x7fe54d074c78 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d074c88 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d074d30 <line:127:23> col:23 implicit cexp '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d074dc8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d074e30 <col:23> Implicit
+| `-ConstAttr 0x7fe54d074e78 <col:23> Implicit
+|-FunctionDecl 0x7fe54d074e88 prev 0x7fe54d074d30 <col:1, col:42> col:23 cexp '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d074ca8 <col:28> col:42 '_Complex double'
+| |-NoThrowAttr 0x7fe54d074f60 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d074f70 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d075028 <line:128:28> col:28 implicit cexpl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d0750c0 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d075128 <col:28> Implicit
+| `-ConstAttr 0x7fe54d075170 <col:28> Implicit
+|-FunctionDecl 0x7fe54d075180 prev 0x7fe54d075028 <col:1, col:53> col:28 cexpl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d074f90 <col:34, col:39> col:53 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d075258 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d075268 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d075310 <line:130:22> col:22 implicit clogf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d0753a8 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d075410 <col:22> Implicit
+| `-ConstAttr 0x7fe54d075458 <col:22> Implicit
+|-FunctionDecl 0x7fe54d075468 prev 0x7fe54d075310 <col:1, col:41> col:22 clogf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d075288 <col:28> col:41 '_Complex float'
+| |-NoThrowAttr 0x7fe54d075540 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d075550 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d0755f8 <line:131:23> col:23 implicit clog '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d075690 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d0756f8 <col:23> Implicit
+| `-ConstAttr 0x7fe54d075740 <col:23> Implicit
+|-FunctionDecl 0x7fe54d075750 prev 0x7fe54d0755f8 <col:1, col:42> col:23 clog '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d075570 <col:28> col:42 '_Complex double'
+| |-NoThrowAttr 0x7fe54d075828 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d075838 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d0758e0 <line:132:28> col:28 implicit clogl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d075978 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d0759e0 <col:28> Implicit
+| `-ConstAttr 0x7fe54d075a28 <col:28> Implicit
+|-FunctionDecl 0x7fe54d075a38 prev 0x7fe54d0758e0 <col:1, col:53> col:28 clogl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d075858 <col:34, col:39> col:53 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d075b10 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d075b20 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d075c08 <line:134:14> col:14 implicit cabsf 'float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d075ca0 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d075d08 <col:14> Implicit
+| `-ConstAttr 0x7fe54d075d50 <col:14> Implicit
+|-FunctionDecl 0x7fe54d075d60 prev 0x7fe54d075c08 <col:1, col:33> col:14 cabsf 'float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d075b40 <col:20> col:33 '_Complex float'
+| |-NoThrowAttr 0x7fe54d075e38 <col:14> Inherited Implicit
+| `-ConstAttr 0x7fe54d075e48 <col:14> Inherited Implicit
+|-FunctionDecl 0x7fe54d075f38 <line:135:15> col:15 implicit cabs 'double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d076000 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d076068 <col:15> Implicit
+| `-ConstAttr 0x7fe54d0760b0 <col:15> Implicit
+|-FunctionDecl 0x7fe54d0760c0 prev 0x7fe54d075f38 <col:1, col:34> col:15 cabs 'double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d075e68 <col:20> col:34 '_Complex double'
+| |-NoThrowAttr 0x7fe54d076198 <col:15> Inherited Implicit
+| `-ConstAttr 0x7fe54d0761a8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7fe54d076298 <line:136:20> col:20 implicit cabsl 'long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d076330 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d076398 <col:20> Implicit
+| `-ConstAttr 0x7fe54d0763e0 <col:20> Implicit
+|-FunctionDecl 0x7fe54d0763f0 prev 0x7fe54d076298 <col:1, col:45> col:20 cabsl 'long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d0761c8 <col:26, col:31> col:45 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d0764c8 <col:20> Inherited Implicit
+| `-ConstAttr 0x7fe54d0764d8 <col:20> Inherited Implicit
+|-FunctionDecl 0x7fe54d076640 <line:138:22> col:22 implicit cpowf '_Complex float (_Complex float, _Complex float)' extern
+| |-ParmVarDecl 0x7fe54d0766d8 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-ParmVarDecl 0x7fe54d076738 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d0767a8 <col:22> Implicit
+| `-ConstAttr 0x7fe54d0767f0 <col:22> Implicit
+|-FunctionDecl 0x7fe54d076800 prev 0x7fe54d076640 <col:1, col:56> col:22 cpowf '_Complex float (_Complex float, _Complex float)' extern
+| |-ParmVarDecl 0x7fe54d0764f8 <col:28> col:41 '_Complex float'
+| |-ParmVarDecl 0x7fe54d076568 <col:43> col:56 '_Complex float'
+| |-NoThrowAttr 0x7fe54d0768e0 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d0768f0 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d076a50 <line:139:23> col:23 implicit cpow '_Complex double (_Complex double, _Complex double)' extern
+| |-ParmVarDecl 0x7fe54d076ae8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ParmVarDecl 0x7fe54d076b48 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d076bb8 <col:23> Implicit
+| `-ConstAttr 0x7fe54d076c00 <col:23> Implicit
+|-FunctionDecl 0x7fe54d076c10 prev 0x7fe54d076a50 <col:1, col:58> col:23 cpow '_Complex double (_Complex double, _Complex double)' extern
+| |-ParmVarDecl 0x7fe54d076910 <col:28> col:42 '_Complex double'
+| |-ParmVarDecl 0x7fe54d076980 <col:44> col:58 '_Complex double'
+| |-NoThrowAttr 0x7fe54d076cf0 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d076d00 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d076e60 <line:140:28> col:28 implicit cpowl '_Complex long double (_Complex long double, _Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d076ef8 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-ParmVarDecl 0x7fe54d076f58 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d076fc8 <col:28> Implicit
+| `-ConstAttr 0x7fe54d078038 <col:28> Implicit
+|-FunctionDecl 0x7fe54d078048 prev 0x7fe54d076e60 <col:1, col:74> col:28 cpowl '_Complex long double (_Complex long double, _Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d076d20 <col:34, col:39> col:53 '_Complex long double'
+| |-ParmVarDecl 0x7fe54d076d90 <col:55, col:60> col:74 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d078128 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d078138 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d0781e0 <line:142:22> col:22 implicit csqrtf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d078278 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d0782e0 <col:22> Implicit
+| `-ConstAttr 0x7fe54d078328 <col:22> Implicit
+|-FunctionDecl 0x7fe54d078338 prev 0x7fe54d0781e0 <col:1, col:42> col:22 csqrtf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d078158 <col:29> col:42 '_Complex float'
+| |-NoThrowAttr 0x7fe54d078410 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d078420 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d0784c8 <line:143:23> col:23 implicit csqrt '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d078560 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d0785c8 <col:23> Implicit
+| `-ConstAttr 0x7fe54d078610 <col:23> Implicit
+|-FunctionDecl 0x7fe54d078620 prev 0x7fe54d0784c8 <col:1, col:43> col:23 csqrt '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d078440 <col:29> col:43 '_Complex double'
+| |-NoThrowAttr 0x7fe54d0786f8 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d078708 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d0787b0 <line:144:28> col:28 implicit csqrtl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d078848 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d0788b0 <col:28> Implicit
+| `-ConstAttr 0x7fe54d0788f8 <col:28> Implicit
+|-FunctionDecl 0x7fe54d078908 prev 0x7fe54d0787b0 <col:1, col:54> col:28 csqrtl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d078728 <col:35, col:40> col:54 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d0789e0 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d0789f0 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d078aa0 <line:146:14> col:14 implicit cargf 'float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d078b38 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d078ba0 <col:14> Implicit
+| `-ConstAttr 0x7fe54d078be8 <col:14> Implicit
+|-FunctionDecl 0x7fe54d078bf8 prev 0x7fe54d078aa0 <col:1, col:33> col:14 cargf 'float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d078a10 <col:20> col:33 '_Complex float'
+| |-NoThrowAttr 0x7fe54d078cd0 <col:14> Inherited Implicit
+| `-ConstAttr 0x7fe54d078ce0 <col:14> Inherited Implicit
+|-FunctionDecl 0x7fe54d078d90 <line:147:15> col:15 implicit carg 'double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d078e28 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d078e90 <col:15> Implicit
+| `-ConstAttr 0x7fe54d078ed8 <col:15> Implicit
+|-FunctionDecl 0x7fe54d078ee8 prev 0x7fe54d078d90 <col:1, col:34> col:15 carg 'double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d078d00 <col:20> col:34 '_Complex double'
+| |-NoThrowAttr 0x7fe54d078fc0 <col:15> Inherited Implicit
+| `-ConstAttr 0x7fe54d078fd0 <col:15> Inherited Implicit
+|-FunctionDecl 0x7fe54d079090 <line:148:20> col:20 implicit cargl 'long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d079128 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d079190 <col:20> Implicit
+| `-ConstAttr 0x7fe54d0791d8 <col:20> Implicit
+|-FunctionDecl 0x7fe54d0791e8 prev 0x7fe54d079090 <col:1, col:45> col:20 cargl 'long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d079000 <col:26, col:31> col:45 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d0792c0 <col:20> Inherited Implicit
+| `-ConstAttr 0x7fe54d0792d0 <col:20> Inherited Implicit
+|-FunctionDecl 0x7fe54d079380 <line:150:14> col:14 implicit cimagf 'float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d079418 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d079480 <col:14> Implicit
+| `-ConstAttr 0x7fe54d0794c8 <col:14> Implicit
+|-FunctionDecl 0x7fe54d0794d8 prev 0x7fe54d079380 <col:1, col:34> col:14 cimagf 'float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d0792f0 <col:21> col:34 '_Complex float'
+| |-NoThrowAttr 0x7fe54d0795b0 <col:14> Inherited Implicit
+| `-ConstAttr 0x7fe54d0795c0 <col:14> Inherited Implicit
+|-FunctionDecl 0x7fe54d079670 <line:151:15> col:15 implicit cimag 'double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d079708 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d079770 <col:15> Implicit
+| `-ConstAttr 0x7fe54d0797b8 <col:15> Implicit
+|-FunctionDecl 0x7fe54d0797c8 prev 0x7fe54d079670 <col:1, col:35> col:15 cimag 'double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d0795e0 <col:21> col:35 '_Complex double'
+| |-NoThrowAttr 0x7fe54d0798a0 <col:15> Inherited Implicit
+| `-ConstAttr 0x7fe54d0798b0 <col:15> Inherited Implicit
+|-FunctionDecl 0x7fe54d079960 <line:152:20> col:20 implicit cimagl 'long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d0799f8 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d079a60 <col:20> Implicit
+| `-ConstAttr 0x7fe54d079aa8 <col:20> Implicit
+|-FunctionDecl 0x7fe54d079ab8 prev 0x7fe54d079960 <col:1, col:46> col:20 cimagl 'long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d0798d0 <col:27, col:32> col:46 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d079b90 <col:20> Inherited Implicit
+| `-ConstAttr 0x7fe54d079ba0 <col:20> Inherited Implicit
+|-FunctionDecl 0x7fe54d079c48 <line:154:22> col:22 implicit conjf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d079ce0 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d079d48 <col:22> Implicit
+| `-ConstAttr 0x7fe54d079d90 <col:22> Implicit
+|-FunctionDecl 0x7fe54d079da0 prev 0x7fe54d079c48 <col:1, col:41> col:22 conjf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d079bc0 <col:28> col:41 '_Complex float'
+| |-NoThrowAttr 0x7fe54d079e78 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d079e88 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d079f30 <line:155:23> col:23 implicit conj '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d07a000 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d07a068 <col:23> Implicit
+| `-ConstAttr 0x7fe54d07a0b0 <col:23> Implicit
+|-FunctionDecl 0x7fe54d07a0c0 prev 0x7fe54d079f30 <col:1, col:42> col:23 conj '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d079ea8 <col:28> col:42 '_Complex double'
+| |-NoThrowAttr 0x7fe54d07a198 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d07a1a8 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d07a250 <line:156:28> col:28 implicit conjl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d07a2e8 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d07a350 <col:28> Implicit
+| `-ConstAttr 0x7fe54d07a398 <col:28> Implicit
+|-FunctionDecl 0x7fe54d07a3a8 prev 0x7fe54d07a250 <col:1, col:53> col:28 conjl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d07a1c8 <col:34, col:39> col:53 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d07a480 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d07a490 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d07a538 <line:158:22> col:22 implicit cprojf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d07a5d0 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d07a638 <col:22> Implicit
+| `-ConstAttr 0x7fe54d07a680 <col:22> Implicit
+|-FunctionDecl 0x7fe54d07a690 prev 0x7fe54d07a538 <col:1, col:42> col:22 cprojf '_Complex float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d07a4b0 <col:29> col:42 '_Complex float'
+| |-NoThrowAttr 0x7fe54d07a768 <col:22> Inherited Implicit
+| `-ConstAttr 0x7fe54d07a778 <col:22> Inherited Implicit
+|-FunctionDecl 0x7fe54d07a820 <line:159:23> col:23 implicit cproj '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d07a8b8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d07a920 <col:23> Implicit
+| `-ConstAttr 0x7fe54d07a968 <col:23> Implicit
+|-FunctionDecl 0x7fe54d07a978 prev 0x7fe54d07a820 <col:1, col:43> col:23 cproj '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d07a798 <col:29> col:43 '_Complex double'
+| |-NoThrowAttr 0x7fe54d07aa50 <col:23> Inherited Implicit
+| `-ConstAttr 0x7fe54d07aa60 <col:23> Inherited Implicit
+|-FunctionDecl 0x7fe54d07ab08 <line:160:28> col:28 implicit cprojl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d07aba0 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d07ac08 <col:28> Implicit
+| `-ConstAttr 0x7fe54d07ac50 <col:28> Implicit
+|-FunctionDecl 0x7fe54d07ac60 prev 0x7fe54d07ab08 <col:1, col:54> col:28 cprojl '_Complex long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d07aa80 <col:35, col:40> col:54 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d07ad38 <col:28> Inherited Implicit
+| `-ConstAttr 0x7fe54d07ad48 <col:28> Inherited Implicit
+|-FunctionDecl 0x7fe54d07adf8 <line:162:14> col:14 implicit crealf 'float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d07ae90 <<invalid sloc>> <invalid sloc> '_Complex float'
+| |-NoThrowAttr 0x7fe54d07aef8 <col:14> Implicit
+| `-ConstAttr 0x7fe54d07af40 <col:14> Implicit
+|-FunctionDecl 0x7fe54d07af50 prev 0x7fe54d07adf8 <col:1, col:34> col:14 crealf 'float (_Complex float)' extern
+| |-ParmVarDecl 0x7fe54d07ad68 <col:21> col:34 '_Complex float'
+| |-NoThrowAttr 0x7fe54d07b038 <col:14> Inherited Implicit
+| `-ConstAttr 0x7fe54d07b048 <col:14> Inherited Implicit
+|-FunctionDecl 0x7fe54d07b0f8 <line:163:15> col:15 implicit creal 'double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d07b190 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7fe54d07b1f8 <col:15> Implicit
+| `-ConstAttr 0x7fe54d07b240 <col:15> Implicit
+|-FunctionDecl 0x7fe54d07b250 prev 0x7fe54d07b0f8 <col:1, col:35> col:15 creal 'double (_Complex double)' extern
+| |-ParmVarDecl 0x7fe54d07b068 <col:21> col:35 '_Complex double'
+| |-NoThrowAttr 0x7fe54d07b328 <col:15> Inherited Implicit
+| `-ConstAttr 0x7fe54d07b338 <col:15> Inherited Implicit
+|-FunctionDecl 0x7fe54d07b3e8 <line:164:20> col:20 implicit creall 'long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d07b480 <<invalid sloc>> <invalid sloc> '_Complex long double'
+| |-NoThrowAttr 0x7fe54d07b4e8 <col:20> Implicit
+| `-ConstAttr 0x7fe54d07b530 <col:20> Implicit
+|-FunctionDecl 0x7fe54d07b540 prev 0x7fe54d07b3e8 <col:1, col:46> col:20 creall 'long double (_Complex long double)' extern
+| |-ParmVarDecl 0x7fe54d07b358 <col:27, col:32> col:46 '_Complex long double'
+| |-NoThrowAttr 0x7fe54d07b618 <col:20> Inherited Implicit
+| `-ConstAttr 0x7fe54d07b628 <col:20> Inherited Implicit
+|-FunctionDecl 0x7fe54d07b6d8 <c_files/pr42427.c:8:1, col:36> col:15 used myabs 'double (_Complex double)' extern
+| `-ParmVarDecl 0x7fe54d07b648 </usr/include/complex.h:37:17, c_files/pr42427.c:8:30> col:36 '_Complex double'
+`-FunctionDecl 0x7fe54d07b9f0 <line:10:1, line:22:1> line:11:1 test 'void (double *, _Complex double *, long)'
+  |-ParmVarDecl 0x7fe54d07b800 <col:7, col:15> col:15 used help 'double *'
+  |-ParmVarDecl 0x7fe54d07b898 </usr/include/complex.h:37:17, c_files/pr42427.c:11:37> col:37 used wm '_Complex double *'
+  |-ParmVarDecl 0x7fe54d07b910 <col:41, col:46> col:46 used nz 'long'
+  `-CompoundStmt 0x7fe54d07c1f8 <line:12:1, line:22:1>
+    |-DeclStmt 0x7fe54d07bb18 <line:13:3, col:9>
+    | `-VarDecl 0x7fe54d07bab8 <col:3, col:8> col:8 used k 'long'
+    |-DeclStmt 0x7fe54d07bba8 <line:14:3, col:14>
+    | `-VarDecl 0x7fe54d07bb48 <col:3, col:10> col:10 used znew 'double'
+    |-DeclStmt 0x7fe54d07bc38 <line:15:3, col:14>
+    | `-VarDecl 0x7fe54d07bbd8 <col:3, col:10> col:10 used zold 'double'
+    `-ForStmt 0x7fe54d07c1c0 <line:16:3, line:21:5>
+      |-BinaryOperator 0x7fe54d07bcb0 <line:16:8, col:12> 'long' '='
+      | |-DeclRefExpr 0x7fe54d07bc50 <col:8> 'long' lvalue Var 0x7fe54d07bab8 'k' 'long'
+      | `-ImplicitCastExpr 0x7fe54d07bc98 <col:12> 'long' <IntegralCast>
+      |   `-IntegerLiteral 0x7fe54d07bc78 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe54d07bd58 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fe54d07bd28 <col:15> 'long' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe54d07bcd8 <col:15> 'long' lvalue Var 0x7fe54d07bab8 'k' 'long'
+      | `-ImplicitCastExpr 0x7fe54d07bd40 <col:19> 'long' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe54d07bd00 <col:19> 'long' lvalue ParmVar 0x7fe54d07b910 'nz' 'long'
+      |-UnaryOperator 0x7fe54d07bda8 <col:23, col:24> 'long' postfix '++'
+      | `-DeclRefExpr 0x7fe54d07bd80 <col:23> 'long' lvalue Var 0x7fe54d07bab8 'k' 'long'
+      `-CompoundStmt 0x7fe54d07c190 <line:17:5, line:21:5>
+        |-BinaryOperator 0x7fe54d07bf48 <line:18:7, col:26> 'double' '='
+        | |-DeclRefExpr 0x7fe54d07bdc8 <col:7> 'double' lvalue Var 0x7fe54d07bb48 'znew' 'double'
+        | `-CallExpr 0x7fe54d07bf00 <col:14, col:26> 'double'
+        |   |-ImplicitCastExpr 0x7fe54d07bee8 <col:14> 'double (*)(_Complex double)' <FunctionToPointerDecay>
+        |   | `-DeclRefExpr 0x7fe54d07bdf0 <col:14> 'double (_Complex double)' Function 0x7fe54d07b6d8 'myabs' 'double (_Complex double)'
+        |   `-ImplicitCastExpr 0x7fe54d07bf30 <col:21, col:25> '_Complex double' <LValueToRValue>
+        |     `-ArraySubscriptExpr 0x7fe54d07be98 <col:21, col:25> '_Complex double' lvalue
+        |       |-ImplicitCastExpr 0x7fe54d07be68 <col:21> '_Complex double *' <LValueToRValue>
+        |       | `-DeclRefExpr 0x7fe54d07be18 <col:21> '_Complex double *' lvalue ParmVar 0x7fe54d07b898 'wm' '_Complex double *'
+        |       `-ImplicitCastExpr 0x7fe54d07be80 <col:24> 'long' <LValueToRValue>
+        |         `-DeclRefExpr 0x7fe54d07be40 <col:24> 'long' lvalue Var 0x7fe54d07bab8 'k' 'long'
+        |-BinaryOperator 0x7fe54d07c058 <line:19:7, col:20> 'double' '='
+        | |-DeclRefExpr 0x7fe54d07bf70 <col:7> 'double' lvalue Var 0x7fe54d07bbd8 'zold' 'double'
+        | `-ImplicitCastExpr 0x7fe54d07c040 <col:14, col:20> 'double' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7fe54d07c018 <col:14, col:20> 'double' lvalue
+        |     |-ImplicitCastExpr 0x7fe54d07bfe8 <col:14> 'double *' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7fe54d07bf98 <col:14> 'double *' lvalue ParmVar 0x7fe54d07b800 'help' 'double *'
+        |     `-ImplicitCastExpr 0x7fe54d07c000 <col:19> 'long' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fe54d07bfc0 <col:19> 'long' lvalue Var 0x7fe54d07bab8 'k' 'long'
+        `-BinaryOperator 0x7fe54d07c168 <line:20:7, col:17> 'double' '='
+          |-ArraySubscriptExpr 0x7fe54d07c100 <col:7, col:13> 'double' lvalue
+          | |-ImplicitCastExpr 0x7fe54d07c0d0 <col:7> 'double *' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fe54d07c080 <col:7> 'double *' lvalue ParmVar 0x7fe54d07b800 'help' 'double *'
+          | `-ImplicitCastExpr 0x7fe54d07c0e8 <col:12> 'long' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fe54d07c0a8 <col:12> 'long' lvalue Var 0x7fe54d07bab8 'k' 'long'
+          `-ImplicitCastExpr 0x7fe54d07c150 <col:17> 'double' <LValueToRValue>
+            `-DeclRefExpr 0x7fe54d07c128 <col:17> 'double' lvalue Var 0x7fe54d07bb48 'znew' 'double'

@@ -1,0 +1,71 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['double']
+        Constant: int, 0
+      FuncCall: 
+        ID: __atomic_is_lock_free
+        ExprList: 
+          Constant: int, 2
+          ID: a
+          Constant: int, 2
+      FuncCall: 
+        ID: __atomic_is_lock_free
+        ExprList: 
+          Constant: int, 2
+      FuncCall: 
+        ID: __atomic_is_lock_free
+        ExprList: 
+          Constant: int, 2
+          ID: b
+      FuncCall: 
+        ID: __atomic_is_lock_free
+        ExprList: 
+          Constant: int, 2
+          Constant: int, 0
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['double']
+        Constant: int, 0
+      FuncCall: 
+        ID: __atomic_always_lock_free
+        ExprList: 
+          Constant: int, 2
+          ID: a
+          Constant: int, 2
+      FuncCall: 
+        ID: __atomic_always_lock_free
+        ExprList: 
+          Constant: int, 2
+      FuncCall: 
+        ID: __atomic_always_lock_free
+        ExprList: 
+          Constant: int, 2
+          ID: b
+      FuncCall: 
+        ID: __atomic_always_lock_free
+        ExprList: 
+          Constant: int, 2
+          Constant: int, 0

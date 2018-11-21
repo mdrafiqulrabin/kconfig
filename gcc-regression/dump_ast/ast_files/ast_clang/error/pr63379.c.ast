@@ -1,0 +1,173 @@
+c_files/pr63379.c:3:10: fatal error: 'tree-vect.h' file not found
+#include "tree-vect.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fdc0f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdc0f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdc0f026740 '__int128'
+|-TypedefDecl 0x7fdc0f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdc0f026760 'unsigned __int128'
+|-TypedefDecl 0x7fdc0f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdc0f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdc0f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdc0f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdc0f026dc0 'char *'
+|   `-BuiltinType 0x7fdc0f026560 'char'
+|-TypedefDecl 0x7fdc0f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdc0f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdc0f026ee0 'struct __va_list_tag'
+|     `-Record 0x7fdc0f026e58 '__va_list_tag'
+|-FunctionDecl 0x7fdc0f826a30 <c_files/pr63379.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fdc0f826ac8 prev 0x7fdc0f826a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fdc0f826b60 <line:7:9, line:10:1> line:7:9 struct definition
+| |-FieldDecl 0x7fdc0f826c28 <line:8:5, col:9> col:9 referenced x 'int'
+| `-FieldDecl 0x7fdc0f826c88 <line:9:5, col:9> col:9 referenced y 'int'
+|-TypedefDecl 0x7fdc0f826d20 <line:7:1, line:10:3> col:3 referenced Point 'struct Point':'Point'
+| `-ElaboratedType 0x7fdc0f826cd0 'struct Point' sugar
+|   `-RecordType 0x7fdc0f826bf0 'Point'
+|     `-Record 0x7fdc0f826b60 ''
+|-VarDecl 0x7fdc0f826eb8 <line:12:1, col:18> col:7 used pt_array 'Point [25]'
+|-FunctionDecl 0x7fdc0f826fe8 <line:14:1, line:23:1> line:15:1 used generate_array 'void (void)'
+| |-CompoundStmt 0x7fdc0f8276a8 <line:16:1, line:23:1>
+| | |-DeclStmt 0x7fdc0f827140 <line:17:3, col:17>
+| | | `-VarDecl 0x7fdc0f8270e0 <col:3, col:16> col:16 used i 'unsigned int'
+| | `-ForStmt 0x7fdc0f827670 <line:18:3, line:22:5>
+| |   |-BinaryOperator 0x7fdc0f8271b8 <line:18:8, col:12> 'unsigned int' '='
+| |   | |-DeclRefExpr 0x7fdc0f827158 <col:8> 'unsigned int' lvalue Var 0x7fdc0f8270e0 'i' 'unsigned int'
+| |   | `-ImplicitCastExpr 0x7fdc0f8271a0 <col:12> 'unsigned int' <IntegralCast>
+| |   |   `-IntegerLiteral 0x7fdc0f827180 <col:12> 'int' 0
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fdc0f827258 <col:15, col:17> 'int' '<'
+| |   | |-ImplicitCastExpr 0x7fdc0f827228 <col:15> 'unsigned int' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fdc0f8271e0 <col:15> 'unsigned int' lvalue Var 0x7fdc0f8270e0 'i' 'unsigned int'
+| |   | `-ImplicitCastExpr 0x7fdc0f827240 <col:17> 'unsigned int' <IntegralCast>
+| |   |   `-IntegerLiteral 0x7fdc0f827208 <col:17> 'int' 25
+| |   |-UnaryOperator 0x7fdc0f8272a8 <col:21, col:22> 'unsigned int' postfix '++'
+| |   | `-DeclRefExpr 0x7fdc0f827280 <col:21> 'unsigned int' lvalue Var 0x7fdc0f8270e0 'i' 'unsigned int'
+| |   `-CompoundStmt 0x7fdc0f827648 <line:19:5, line:22:5>
+| |     |-BinaryOperator 0x7fdc0f827460 <line:20:7, col:23> 'int' '='
+| |     | |-MemberExpr 0x7fdc0f8273d0 <col:7, col:19> 'int' lvalue .x 0x7fdc0f826c28
+| |     | | `-ArraySubscriptExpr 0x7fdc0f8273a8 <col:7, col:17> 'Point':'Point' lvalue
+| |     | |   |-ImplicitCastExpr 0x7fdc0f827378 <col:7> 'Point *' <ArrayToPointerDecay>
+| |     | |   | `-DeclRefExpr 0x7fdc0f8272c8 <col:7> 'Point [25]' lvalue Var 0x7fdc0f826eb8 'pt_array' 'Point [25]'
+| |     | |   `-ImplicitCastExpr 0x7fdc0f827390 <col:16> 'unsigned int' <LValueToRValue>
+| |     | |     `-DeclRefExpr 0x7fdc0f8272f0 <col:16> 'unsigned int' lvalue Var 0x7fdc0f8270e0 'i' 'unsigned int'
+| |     | `-ImplicitCastExpr 0x7fdc0f827448 <col:23> 'int' <IntegralCast>
+| |     |   `-ImplicitCastExpr 0x7fdc0f827430 <col:23> 'unsigned int' <LValueToRValue>
+| |     |     `-DeclRefExpr 0x7fdc0f827408 <col:23> 'unsigned int' lvalue Var 0x7fdc0f8270e0 'i' 'unsigned int'
+| |     `-BinaryOperator 0x7fdc0f827620 <line:21:7, col:28> 'int' '='
+| |       |-MemberExpr 0x7fdc0f827530 <col:7, col:19> 'int' lvalue .y 0x7fdc0f826c88
+| |       | `-ArraySubscriptExpr 0x7fdc0f827508 <col:7, col:17> 'Point':'Point' lvalue
+| |       |   |-ImplicitCastExpr 0x7fdc0f8274d8 <col:7> 'Point *' <ArrayToPointerDecay>
+| |       |   | `-DeclRefExpr 0x7fdc0f827488 <col:7> 'Point [25]' lvalue Var 0x7fdc0f826eb8 'pt_array' 'Point [25]'
+| |       |   `-ImplicitCastExpr 0x7fdc0f8274f0 <col:16> 'unsigned int' <LValueToRValue>
+| |       |     `-DeclRefExpr 0x7fdc0f8274b0 <col:16> 'unsigned int' lvalue Var 0x7fdc0f8270e0 'i' 'unsigned int'
+| |       `-ImplicitCastExpr 0x7fdc0f827608 <col:23, col:28> 'int' <IntegralCast>
+| |         `-BinaryOperator 0x7fdc0f8275e0 <col:23, col:28> 'unsigned int' '+'
+| |           |-ImplicitCastExpr 0x7fdc0f8275c8 <col:23> 'unsigned int' <IntegralCast>
+| |           | `-IntegerLiteral 0x7fdc0f827568 <col:23> 'int' 1000
+| |           `-ImplicitCastExpr 0x7fdc0f8275b0 <col:28> 'unsigned int' <LValueToRValue>
+| |             `-DeclRefExpr 0x7fdc0f827588 <col:28> 'unsigned int' lvalue Var 0x7fdc0f8270e0 'i' 'unsigned int'
+| `-NoInlineAttr 0x7fdc0f827080 <line:14:21>
+|-FunctionDecl 0x7fdc0f827720 <line:25:1, line:40:1> line:25:5 main 'int ()'
+| `-CompoundStmt 0x7fdc0f829818 <line:26:1, line:40:1>
+|   |-CallExpr 0x7fdc0f8278e0 <line:27:3, col:15> 'int'
+|   | `-ImplicitCastExpr 0x7fdc0f8278c8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fdc0f827878 <col:3> 'int ()' Function 0x7fdc0f8277e0 'check_vect' 'int ()'
+|   |-CallExpr 0x7fdc0f827970 <line:28:3, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fdc0f827958 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fdc0f827908 <col:3> 'void (void)' Function 0x7fdc0f826fe8 'generate_array' 'void (void)'
+|   |-DeclStmt 0x7fdc0f828b00 <line:29:3, col:29>
+|   | `-VarDecl 0x7fdc0f828a00 <col:3, col:28> col:9 used min_pt 'Point':'Point' cinit
+|   |   `-ImplicitCastExpr 0x7fdc0f828ae8 <col:18, col:28> 'Point':'Point' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fdc0f828ac0 <col:18, col:28> 'Point':'Point' lvalue
+|   |       |-ImplicitCastExpr 0x7fdc0f828aa8 <col:18> 'Point *' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7fdc0f828a60 <col:18> 'Point [25]' lvalue Var 0x7fdc0f826eb8 'pt_array' 'Point [25]'
+|   |       `-IntegerLiteral 0x7fdc0f828a88 <col:27> 'int' 0
+|   |-DeclStmt 0x7fdc0f828c10 <line:30:3, col:23>
+|   | |-VarDecl 0x7fdc0f828b28 <col:3, col:10> col:10 used ptr 'Point *'
+|   | `-VarDecl 0x7fdc0f828b98 <col:3, col:16> col:16 used ptr_end 'Point *'
+|   |-ForStmt 0x7fdc0f829538 <line:31:3, line:35:5>
+|   | |-BinaryOperator 0x7fdc0f828dd8 <line:31:8, col:45> 'Point *' ','
+|   | | |-BinaryOperator 0x7fdc0f828cd8 <col:8, col:23> 'Point *' '='
+|   | | | |-DeclRefExpr 0x7fdc0f828c28 <col:8> 'Point *' lvalue Var 0x7fdc0f828b28 'ptr' 'Point *'
+|   | | | `-BinaryOperator 0x7fdc0f828cb0 <col:14, col:23> 'Point *' '+'
+|   | | |   |-ImplicitCastExpr 0x7fdc0f828c98 <col:14> 'Point *' <ArrayToPointerDecay>
+|   | | |   | `-DeclRefExpr 0x7fdc0f828c50 <col:14> 'Point [25]' lvalue Var 0x7fdc0f826eb8 'pt_array' 'Point [25]'
+|   | | |   `-IntegerLiteral 0x7fdc0f828c78 <col:23> 'int' 1
+|   | | `-BinaryOperator 0x7fdc0f828db0 <col:26, col:45> 'Point *' '='
+|   | |   |-DeclRefExpr 0x7fdc0f828d00 <col:26> 'Point *' lvalue Var 0x7fdc0f828b98 'ptr_end' 'Point *'
+|   | |   `-BinaryOperator 0x7fdc0f828d88 <col:36, col:45> 'Point *' '+'
+|   | |     |-ImplicitCastExpr 0x7fdc0f828d70 <col:36> 'Point *' <ArrayToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7fdc0f828d28 <col:36> 'Point [25]' lvalue Var 0x7fdc0f826eb8 'pt_array' 'Point [25]'
+|   | |     `-IntegerLiteral 0x7fdc0f828d50 <col:45> 'int' 25
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fdc0f828e80 <col:49, col:56> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fdc0f828e50 <col:49> 'Point *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fdc0f828e00 <col:49> 'Point *' lvalue Var 0x7fdc0f828b28 'ptr' 'Point *'
+|   | | `-ImplicitCastExpr 0x7fdc0f828e68 <col:56> 'Point *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fdc0f828e28 <col:56> 'Point *' lvalue Var 0x7fdc0f828b98 'ptr_end' 'Point *'
+|   | |-UnaryOperator 0x7fdc0f828ed0 <col:65, col:67> 'Point *' prefix '++'
+|   | | `-DeclRefExpr 0x7fdc0f828ea8 <col:67> 'Point *' lvalue Var 0x7fdc0f828b28 'ptr' 'Point *'
+|   | `-CompoundStmt 0x7fdc0f829510 <line:32:5, line:35:5>
+|   |   |-BinaryOperator 0x7fdc0f8291d8 <line:33:7, col:56> 'int' '='
+|   |   | |-MemberExpr 0x7fdc0f828f18 <col:7, col:14> 'int' lvalue .x 0x7fdc0f826c28
+|   |   | | `-DeclRefExpr 0x7fdc0f828ef0 <col:7> 'Point':'Point' lvalue Var 0x7fdc0f828a00 'min_pt' 'Point':'Point'
+|   |   | `-ConditionalOperator 0x7fdc0f8291a8 <col:18, col:56> 'int'
+|   |   |   |-ParenExpr 0x7fdc0f829080 <col:18, col:36> 'int'
+|   |   |   | `-BinaryOperator 0x7fdc0f829058 <col:19, col:35> 'int' '<'
+|   |   |   |   |-ImplicitCastExpr 0x7fdc0f829028 <col:19, col:26> 'int' <LValueToRValue>
+|   |   |   |   | `-MemberExpr 0x7fdc0f828f78 <col:19, col:26> 'int' lvalue .x 0x7fdc0f826c28
+|   |   |   |   |   `-DeclRefExpr 0x7fdc0f828f50 <col:19> 'Point':'Point' lvalue Var 0x7fdc0f828a00 'min_pt' 'Point':'Point'
+|   |   |   |   `-ImplicitCastExpr 0x7fdc0f829040 <col:30, col:35> 'int' <LValueToRValue>
+|   |   |   |     `-MemberExpr 0x7fdc0f828ff0 <col:30, col:35> 'int' lvalue ->x 0x7fdc0f826c28
+|   |   |   |       `-ImplicitCastExpr 0x7fdc0f828fd8 <col:30> 'Point *' <LValueToRValue>
+|   |   |   |         `-DeclRefExpr 0x7fdc0f828fb0 <col:30> 'Point *' lvalue Var 0x7fdc0f828b28 'ptr' 'Point *'
+|   |   |   |-ImplicitCastExpr 0x7fdc0f829178 <col:40, col:47> 'int' <LValueToRValue>
+|   |   |   | `-MemberExpr 0x7fdc0f8290c8 <col:40, col:47> 'int' lvalue .x 0x7fdc0f826c28
+|   |   |   |   `-DeclRefExpr 0x7fdc0f8290a0 <col:40> 'Point':'Point' lvalue Var 0x7fdc0f828a00 'min_pt' 'Point':'Point'
+|   |   |   `-ImplicitCastExpr 0x7fdc0f829190 <col:51, col:56> 'int' <LValueToRValue>
+|   |   |     `-MemberExpr 0x7fdc0f829140 <col:51, col:56> 'int' lvalue ->x 0x7fdc0f826c28
+|   |   |       `-ImplicitCastExpr 0x7fdc0f829128 <col:51> 'Point *' <LValueToRValue>
+|   |   |         `-DeclRefExpr 0x7fdc0f829100 <col:51> 'Point *' lvalue Var 0x7fdc0f828b28 'ptr' 'Point *'
+|   |   `-BinaryOperator 0x7fdc0f8294e8 <line:34:7, col:56> 'int' '='
+|   |     |-MemberExpr 0x7fdc0f829228 <col:7, col:14> 'int' lvalue .y 0x7fdc0f826c88
+|   |     | `-DeclRefExpr 0x7fdc0f829200 <col:7> 'Point':'Point' lvalue Var 0x7fdc0f828a00 'min_pt' 'Point':'Point'
+|   |     `-ConditionalOperator 0x7fdc0f8294b8 <col:18, col:56> 'int'
+|   |       |-ParenExpr 0x7fdc0f829390 <col:18, col:36> 'int'
+|   |       | `-BinaryOperator 0x7fdc0f829368 <col:19, col:35> 'int' '<'
+|   |       |   |-ImplicitCastExpr 0x7fdc0f829338 <col:19, col:26> 'int' <LValueToRValue>
+|   |       |   | `-MemberExpr 0x7fdc0f829288 <col:19, col:26> 'int' lvalue .y 0x7fdc0f826c88
+|   |       |   |   `-DeclRefExpr 0x7fdc0f829260 <col:19> 'Point':'Point' lvalue Var 0x7fdc0f828a00 'min_pt' 'Point':'Point'
+|   |       |   `-ImplicitCastExpr 0x7fdc0f829350 <col:30, col:35> 'int' <LValueToRValue>
+|   |       |     `-MemberExpr 0x7fdc0f829300 <col:30, col:35> 'int' lvalue ->y 0x7fdc0f826c88
+|   |       |       `-ImplicitCastExpr 0x7fdc0f8292e8 <col:30> 'Point *' <LValueToRValue>
+|   |       |         `-DeclRefExpr 0x7fdc0f8292c0 <col:30> 'Point *' lvalue Var 0x7fdc0f828b28 'ptr' 'Point *'
+|   |       |-ImplicitCastExpr 0x7fdc0f829488 <col:40, col:47> 'int' <LValueToRValue>
+|   |       | `-MemberExpr 0x7fdc0f8293d8 <col:40, col:47> 'int' lvalue .y 0x7fdc0f826c88
+|   |       |   `-DeclRefExpr 0x7fdc0f8293b0 <col:40> 'Point':'Point' lvalue Var 0x7fdc0f828a00 'min_pt' 'Point':'Point'
+|   |       `-ImplicitCastExpr 0x7fdc0f8294a0 <col:51, col:56> 'int' <LValueToRValue>
+|   |         `-MemberExpr 0x7fdc0f829450 <col:51, col:56> 'int' lvalue ->y 0x7fdc0f826c88
+|   |           `-ImplicitCastExpr 0x7fdc0f829438 <col:51> 'Point *' <LValueToRValue>
+|   |             `-DeclRefExpr 0x7fdc0f829410 <col:51> 'Point *' lvalue Var 0x7fdc0f828b28 'ptr' 'Point *'
+|   |-IfStmt 0x7fdc0f8297a8 <line:37:3, line:38:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fdc0f8296f0 <line:37:7, col:36> 'int' '||'
+|   | | |-BinaryOperator 0x7fdc0f829608 <col:7, col:19> 'int' '!='
+|   | | | |-ImplicitCastExpr 0x7fdc0f8295f0 <col:7, col:14> 'int' <LValueToRValue>
+|   | | | | `-MemberExpr 0x7fdc0f829598 <col:7, col:14> 'int' lvalue .x 0x7fdc0f826c28
+|   | | | |   `-DeclRefExpr 0x7fdc0f829570 <col:7> 'Point':'Point' lvalue Var 0x7fdc0f828a00 'min_pt' 'Point':'Point'
+|   | | | `-IntegerLiteral 0x7fdc0f8295d0 <col:19> 'int' 0
+|   | | `-BinaryOperator 0x7fdc0f8296c8 <col:24, col:36> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7fdc0f8296b0 <col:24, col:31> 'int' <LValueToRValue>
+|   | |   | `-MemberExpr 0x7fdc0f829658 <col:24, col:31> 'int' lvalue .y 0x7fdc0f826c88
+|   | |   |   `-DeclRefExpr 0x7fdc0f829630 <col:24> 'Point':'Point' lvalue Var 0x7fdc0f828a00 'min_pt' 'Point':'Point'
+|   | |   `-IntegerLiteral 0x7fdc0f829690 <col:36> 'int' 1000
+|   | |-CallExpr 0x7fdc0f829780 <line:38:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7fdc0f829768 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fdc0f829718 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fdc0f826ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fdc0f829800 <line:39:3, col:10>
+|     `-IntegerLiteral 0x7fdc0f8297e0 <col:10> 'int' 0
+`-FunctionDecl 0x7fdc0f8277e0 <<invalid sloc>> line:27:3 implicit used check_vect 'int ()'

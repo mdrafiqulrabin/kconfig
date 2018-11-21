@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7f82aa0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f82aa026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f82aa026740 '__int128'
+|-TypedefDecl 0x7f82aa026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f82aa026760 'unsigned __int128'
+|-TypedefDecl 0x7f82aa026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f82aa026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f82aa026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f82aa026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f82aa026dc0 'char *'
+|   `-BuiltinType 0x7f82aa026560 'char'
+|-TypedefDecl 0x7f82aa0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f82aa027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f82aa026ee0 'struct __va_list_tag'
+|     `-Record 0x7f82aa026e58 '__va_list_tag'
+|-VarDecl 0x7f82aa027138 <c_files/pr65105-3.c:8:1, col:11> col:11 used i1 'long long'
+|-VarDecl 0x7f82aa825a00 <col:1, col:15> col:15 used i2 'long long'
+|-VarDecl 0x7f82aa825a78 <col:1, col:19> col:19 used i3 'long long'
+|-VarDecl 0x7f82aa825af0 <col:1, col:23> col:23 used res 'long long'
+`-FunctionDecl 0x7f82aa825bc8 <line:10:1, line:16:1> line:11:1 test 'void ()'
+  `-CompoundStmt 0x7f82aa825e70 <line:12:1, line:16:1>
+    |-BinaryOperator 0x7f82aa825d30 <line:13:3, col:14> 'long long' '='
+    | |-DeclRefExpr 0x7f82aa825c60 <col:3> 'long long' lvalue Var 0x7f82aa825af0 'res' 'long long'
+    | `-BinaryOperator 0x7f82aa825d08 <col:9, col:14> 'long long' '|'
+    |   |-ImplicitCastExpr 0x7f82aa825cd8 <col:9> 'long long' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f82aa825c88 <col:9> 'long long' lvalue Var 0x7f82aa027138 'i1' 'long long'
+    |   `-ImplicitCastExpr 0x7f82aa825cf0 <col:14> 'long long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f82aa825cb0 <col:14> 'long long' lvalue Var 0x7f82aa825a00 'i2' 'long long'
+    `-IfStmt 0x7f82aa825e38 <line:14:3, line:15:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f82aa825d80 <line:14:7> 'long long' <LValueToRValue>
+      | `-DeclRefExpr 0x7f82aa825d58 <col:7> 'long long' lvalue Var 0x7f82aa825af0 'res' 'long long'
+      |-CompoundAssignOperator 0x7f82aa825e00 <line:15:5, col:12> 'long long' '&=' ComputeLHSTy='long long' ComputeResultTy='long long'
+      | |-DeclRefExpr 0x7f82aa825d98 <col:5> 'long long' lvalue Var 0x7f82aa825af0 'res' 'long long'
+      | `-ImplicitCastExpr 0x7f82aa825de8 <col:12> 'long long' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f82aa825dc0 <col:12> 'long long' lvalue Var 0x7f82aa825a78 'i3' 'long long'
+      `-<<<NULL>>>

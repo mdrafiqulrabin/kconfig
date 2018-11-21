@@ -1,0 +1,76 @@
+FileAST: 
+  Decl: fn1, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fn1, []
+        IdentifierType: ['void']
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+      Constant: int, 2
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: ^
+          Constant: int, 1
+          ArrayRef: 
+            ID: a
+            BinaryOp: &
+              BinaryOp: ^
+                ID: b
+                Constant: int, 1
+              Constant: int, 1
+      Assignment: =
+        ID: b
+        BinaryOp: ^
+          Constant: int, 1
+          ArrayRef: 
+            ID: a
+            BinaryOp: &
+              ID: b
+              Constant: int, 1
+      If: 
+        ID: p
+        FuncCall: 
+          ID: __builtin_abort
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Constant: int, 0
+      Assignment: =
+        ID: b
+        Constant: int, 0
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Constant: int, 0
+      If: 
+        BinaryOp: !=
+          ID: b
+          Constant: int, 1
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

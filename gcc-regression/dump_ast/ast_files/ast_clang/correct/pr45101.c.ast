@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fa98f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa98f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa98f026740 '__int128'
+|-TypedefDecl 0x7fa98f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa98f026760 'unsigned __int128'
+|-TypedefDecl 0x7fa98f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa98f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa98f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa98f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa98f026dc0 'char *'
+|   `-BuiltinType 0x7fa98f026560 'char'
+|-TypedefDecl 0x7fa98f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa98f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa98f026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa98f026e58 '__va_list_tag'
+|-RecordDecl 0x7fa98f027120 <c_files/pr45101.c:5:1, line:8:1> line:5:1 struct definition
+| `-FieldDecl 0x7fa98f077400 <line:7:3, col:7> col:7 referenced i 'int'
+|-VarDecl 0x7fa98f077500 <line:5:1, line:8:4> col:4 used s 'struct (anonymous struct at c_files/pr45101.c:5:1) *'
+|-FunctionDecl 0x7fa98f077680 <line:10:1, col:22> col:13 used bar 'void (void)' extern
+`-FunctionDecl 0x7fa98f077768 <line:12:1, line:15:1> line:12:6 foo 'void ()'
+  `-CompoundStmt 0x7fa98f0779d0 <line:13:1, line:15:1>
+    `-ConditionalOperator 0x7fa98f0779a0 <line:14:3, col:22> 'void'
+      |-UnaryOperator 0x7fa98f077840 <col:3, col:4> 'int' prefix '!'
+      | `-ImplicitCastExpr 0x7fa98f077828 <col:4> 'struct (anonymous struct at c_files/pr45101.c:5:1) *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fa98f077800 <col:4> 'struct (anonymous struct at c_files/pr45101.c:5:1) *' lvalue Var 0x7fa98f077500 's' 'struct (anonymous struct at c_files/pr45101.c:5:1) *'
+      |-ImplicitCastExpr 0x7fa98f077988 <col:8, col:12> 'void' <ToVoid>
+      | `-UnaryOperator 0x7fa98f0778d8 <col:8, col:12> 'int' postfix '++'
+      |   `-MemberExpr 0x7fa98f0778a0 <col:8, col:11> 'int' lvalue ->i 0x7fa98f077400
+      |     `-ImplicitCastExpr 0x7fa98f077888 <col:8> 'struct (anonymous struct at c_files/pr45101.c:5:1) *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fa98f077860 <col:8> 'struct (anonymous struct at c_files/pr45101.c:5:1) *' lvalue Var 0x7fa98f077500 's' 'struct (anonymous struct at c_files/pr45101.c:5:1) *'
+      `-CallExpr 0x7fa98f077960 <col:17, col:22> 'void'
+        `-ImplicitCastExpr 0x7fa98f077948 <col:17> 'void (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fa98f0778f8 <col:17> 'void (void)' Function 0x7fa98f077680 'bar' 'void (void)'

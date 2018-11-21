@@ -1,0 +1,105 @@
+FileAST: 
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      Struct: None
+        Decl: uuid, [], [], []
+          ArrayDecl: []
+            TypeDecl: uuid, []
+              IdentifierType: ['char']
+            Constant: int, 16
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Struct: None
+        Decl: s_uuid, [], [], []
+          ArrayDecl: []
+            TypeDecl: s_uuid, []
+              IdentifierType: ['int']
+            Constant: int, 6
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Struct: None
+        Decl: s_uuid, [], [], []
+          ArrayDecl: []
+            TypeDecl: s_uuid, []
+              IdentifierType: ['int']
+            Constant: int, 6
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: get_label_uuid, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            PtrDecl: []
+              TypeDecl: p1, []
+                IdentifierType: ['char']
+        TypeDecl: get_label_uuid, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          ID: p1
+          StructRef: .
+            ID: a
+            ID: s_uuid
+          UnaryOp: sizeof
+            ID: a
+      If: 
+        FuncCall: 
+          ID: bar
+        FuncCall: 
+          ID: __builtin_memcpy
+          ExprList: 
+            ID: p1
+            StructRef: .
+              ID: b
+              ID: s_uuid
+            UnaryOp: sizeof
+              ID: b
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: uuidcache_addentry, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            PtrDecl: []
+              TypeDecl: p1, []
+                IdentifierType: ['char']
+        TypeDecl: uuidcache_addentry, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          UnaryOp: &
+            ID: c
+          ID: p1
+          UnaryOp: sizeof
+            ID: c
+  FuncDef: 
+    Decl: uuidcache_init, [], [], []
+      FuncDecl: 
+        TypeDecl: uuidcache_init, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        ArrayDecl: []
+          TypeDecl: d, []
+            IdentifierType: ['char']
+          Constant: int, 1
+      FuncCall: 
+        ID: get_label_uuid
+        ExprList: 
+          ID: d
+      FuncCall: 
+        ID: uuidcache_addentry
+        ExprList: 
+          ID: d

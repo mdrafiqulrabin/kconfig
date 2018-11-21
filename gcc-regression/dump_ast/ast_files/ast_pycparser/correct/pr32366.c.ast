@@ -1,0 +1,35 @@
+FileAST: 
+  FuncDef: 
+    Decl: stream_test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: stream_test, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: input, [], ['static'], []
+        ArrayDecl: []
+          TypeDecl: input, []
+            IdentifierType: ['float']
+          Constant: int, 20
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: k
+          Constant: int, 0
+        BinaryOp: <
+          ID: k
+          Constant: int, 20
+        UnaryOp: p++
+          ID: k
+        Assignment: =
+          ArrayRef: 
+            ID: input
+            ID: k
+          BinaryOp: *
+            ID: k
+            Constant: float, 1.0

@@ -1,0 +1,44 @@
+FileAST: 
+  FuncDef: 
+    Decl: parity, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+        TypeDecl: parity, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned']
+          FuncCall: 
+            ID: __builtin_parity
+            ExprList: 
+              ID: x
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: rpoly, [], [], []
+            TypeDecl: rpoly, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: ^
+          FuncCall: 
+            ID: parity
+            ExprList: 
+              BinaryOp: &
+                ID: rpoly
+                Constant: int, 1
+          FuncCall: 
+            ID: parity
+            ExprList: 
+              BinaryOp: &
+                ID: rpoly
+                Constant: int, 6

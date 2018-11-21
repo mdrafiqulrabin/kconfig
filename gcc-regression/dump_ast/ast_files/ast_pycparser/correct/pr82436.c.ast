@@ -1,0 +1,123 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: reflection_type
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['int']
+      Decl: f_exp, [], [], []
+        TypeDecl: f_exp, []
+          IdentifierType: ['double']
+      Decl: f_sigma, [], [], []
+        TypeDecl: f_sigma, []
+          IdentifierType: ['double']
+      Decl: f_calc, [], [], []
+        TypeDecl: f_calc, []
+          IdentifierType: ['_Complex', 'double']
+      Decl: f_pred, [], [], []
+        TypeDecl: f_pred, []
+          IdentifierType: ['double']
+      Decl: i_exp, [], [], []
+        TypeDecl: i_exp, []
+          IdentifierType: ['double']
+      Decl: i_sigma, [], [], []
+        TypeDecl: i_sigma, []
+          IdentifierType: ['double']
+      Decl: i_pred, [], [], []
+        TypeDecl: i_pred, []
+          IdentifierType: ['double']
+  Decl: y, [], [], []
+    TypeDecl: y, []
+      IdentifierType: ['double']
+  Decl: w, [], [], []
+    TypeDecl: w, []
+      IdentifierType: ['double']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: r, [], [], []
+            PtrDecl: []
+              TypeDecl: r, []
+                Struct: reflection_type
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+          Decl: s, [], [], []
+            TypeDecl: s, []
+              IdentifierType: ['unsigned']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: y
+        Constant: int, 0
+      Assignment: =
+        ID: w
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 1
+        BinaryOp: <
+          ID: i
+          ID: n
+        UnaryOp: ++
+          ID: i
+        Compound: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: reflection_type
+            UnaryOp: &
+              ArrayRef: 
+                ID: r
+                BinaryOp: *
+                  ID: i
+                  ID: s
+          Decl: fpred, [], [], []
+            TypeDecl: fpred, []
+              IdentifierType: ['double']
+            StructRef: ->
+              ID: x
+              ID: f_pred
+          Decl: fexp, [], [], []
+            TypeDecl: fexp, []
+              IdentifierType: ['double']
+            StructRef: ->
+              ID: x
+              ID: f_exp
+          Decl: tem, [], [], []
+            TypeDecl: tem, []
+              IdentifierType: ['double']
+            BinaryOp: -
+              ID: fpred
+              ID: fexp
+          Assignment: +=
+            ID: y
+            FuncCall: 
+              ID: __builtin_fabs
+              ExprList: 
+                BinaryOp: /
+                  ID: tem
+                  StructRef: ->
+                    ID: x
+                    ID: f_sigma
+          Assignment: +=
+            ID: w
+            FuncCall: 
+              ID: __builtin_fabs
+              ExprList: 
+                BinaryOp: /
+                  ID: tem
+                  ID: fexp
+      Return: 
+        ID: i

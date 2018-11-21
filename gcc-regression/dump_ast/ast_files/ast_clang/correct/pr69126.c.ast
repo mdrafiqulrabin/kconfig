@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7fd31e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd31e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd31e026740 '__int128'
+|-TypedefDecl 0x7fd31e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd31e026760 'unsigned __int128'
+|-TypedefDecl 0x7fd31e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd31e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd31e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd31e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd31e026dc0 'char *'
+|   `-BuiltinType 0x7fd31e026560 'char'
+|-TypedefDecl 0x7fd31e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd31e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd31e026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd31e026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd31e077c00 <c_files/pr69126.c:13:1, line:18:1> line:13:5 test_1 'int ()'
+| `-CompoundStmt 0x7fd31e077da0 <line:14:1, line:18:1>
+|   |-DeclStmt 0x7fd31e077d50 <line:16:5, col:10>
+|   | `-VarDecl 0x7fd31e077cf0 <col:5, col:9> col:9 x 'int'
+|   `-ReturnStmt 0x7fd31e077d88 <line:17:5, col:12>
+|     `-IntegerLiteral 0x7fd31e077d68 <col:12> 'int' 0
+|-FunctionDecl 0x7fd31e077df0 <line:25:1, line:30:1> line:25:5 test_2 'int ()'
+| `-CompoundStmt 0x7fd31e077f50 <line:26:1, line:30:1>
+|   |-DeclStmt 0x7fd31e077f00 <line:28:5, col:10>
+|   | `-VarDecl 0x7fd31e077ea0 <col:5, col:9> col:9 x 'int'
+|   `-ReturnStmt 0x7fd31e077f38 <line:29:5, col:12>
+|     `-IntegerLiteral 0x7fd31e077f18 <col:12> 'int' 0
+|-FunctionDecl 0x7fd31e077fa0 <line:40:1, line:45:1> line:40:5 test_3 'int ()'
+| `-CompoundStmt 0x7fd31e078100 <line:41:1, line:45:1>
+|   |-DeclStmt 0x7fd31e0780b0 <line:37:5, col:10>
+|   | `-VarDecl 0x7fd31e078050 <col:5, col:9> col:9 x 'int'
+|   `-ReturnStmt 0x7fd31e0780e8 <line:44:5, col:12>
+|     `-IntegerLiteral 0x7fd31e0780c8 <col:12> 'int' 0
+|-FunctionDecl 0x7fd31e078150 <line:58:1, line:63:1> line:58:5 test_4 'int ()'
+| `-CompoundStmt 0x7fd31e0782c0 <line:59:1, line:63:1>
+|   |-NullStmt 0x7fd31e0781e8 <line:60:13>
+|   |-DeclStmt 0x7fd31e078270 <line:56:5, col:10>
+|   | `-VarDecl 0x7fd31e078210 <col:5, col:9> col:9 x 'int'
+|   `-ReturnStmt 0x7fd31e0782a8 <line:62:5, col:12>
+|     `-IntegerLiteral 0x7fd31e078288 <col:12> 'int' 0
+`-FunctionDecl 0x7fd31e078318 <line:74:1, line:78:1> line:74:5 test_5 'int ()'
+  `-CompoundStmt 0x7fd31e078488 <line:75:1, line:78:1>
+    |-DeclStmt 0x7fd31e078428 <line:72:5, col:10>
+    | `-VarDecl 0x7fd31e0783c8 <col:5, col:9> col:9 x 'int'
+    |-NullStmt 0x7fd31e078440 <line:76:12>
+    `-ReturnStmt 0x7fd31e078470 <line:77:5, col:12>
+      `-IntegerLiteral 0x7fd31e078450 <col:12> 'int' 0

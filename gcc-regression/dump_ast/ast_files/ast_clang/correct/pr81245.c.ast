@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7feadf8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feadf826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feadf826740 '__int128'
+|-TypedefDecl 0x7feadf826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feadf826760 'unsigned __int128'
+|-TypedefDecl 0x7feadf826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feadf826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7feadf826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feadf826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feadf826dc0 'char *'
+|   `-BuiltinType 0x7feadf826560 'char'
+|-TypedefDecl 0x7feadf8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feadf827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feadf826ee0 'struct __va_list_tag'
+|     `-Record 0x7feadf826e58 '__va_list_tag'
+|-VarDecl 0x7feadf8271a0 <c_files/pr81245.c:6:1, col:13> col:8 used sg 'double [18]'
+`-FunctionDecl 0x7feae0825b00 <line:7:1, line:16:1> line:7:6 f 'void (void)'
+  `-CompoundStmt 0x7feae08260e0 <line:8:1, line:16:1>
+    `-ForStmt 0x7feae08260a8 <line:9:3, line:15:3>
+      |-DeclStmt 0x7feae0825c30 <line:9:8, col:18>
+      | `-VarDecl 0x7feae0825bb0 <col:8, col:16> col:12 used i 'int' cinit
+      |   `-IntegerLiteral 0x7feae0825c10 <col:16> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7feae0825ca8 <col:19, col:23> 'int' '<'
+      | |-ImplicitCastExpr 0x7feae0825c90 <col:19> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7feae0825c48 <col:19> 'int' lvalue Var 0x7feae0825bb0 'i' 'int'
+      | `-IntegerLiteral 0x7feae0825c70 <col:23> 'int' 18
+      |-UnaryOperator 0x7feae0825cf8 <col:26, col:27> 'int' postfix '++'
+      | `-DeclRefExpr 0x7feae0825cd0 <col:26> 'int' lvalue Var 0x7feae0825bb0 'i' 'int'
+      `-CompoundStmt 0x7feae0826088 <line:10:3, line:15:3>
+        `-IfStmt 0x7feae0826050 <line:11:5, line:14:15>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7feae0825e28 <line:11:9, col:17> 'int' '<'
+          | |-ImplicitCastExpr 0x7feae0825e10 <col:9, col:13> 'double' <LValueToRValue>
+          | | `-ArraySubscriptExpr 0x7feae0825dc8 <col:9, col:13> 'double' lvalue
+          | |   |-ImplicitCastExpr 0x7feae0825d98 <col:9> 'double *' <ArrayToPointerDecay>
+          | |   | `-DeclRefExpr 0x7feae0825d18 <col:9> 'double [18]' lvalue Var 0x7feadf8271a0 'sg' 'double [18]'
+          | |   `-ImplicitCastExpr 0x7feae0825db0 <col:12> 'int' <LValueToRValue>
+          | |     `-DeclRefExpr 0x7feae0825d40 <col:12> 'int' lvalue Var 0x7feae0825bb0 'i' 'int'
+          | `-FloatingLiteral 0x7feae0825df0 <col:17> 'double' 0.000000e+00
+          |-BinaryOperator 0x7feae0825f38 <line:12:7, col:16> 'double' '='
+          | |-ArraySubscriptExpr 0x7feae0825ed0 <col:7, col:11> 'double' lvalue
+          | | |-ImplicitCastExpr 0x7feae0825ea0 <col:7> 'double *' <ArrayToPointerDecay>
+          | | | `-DeclRefExpr 0x7feae0825e50 <col:7> 'double [18]' lvalue Var 0x7feadf8271a0 'sg' 'double [18]'
+          | | `-ImplicitCastExpr 0x7feae0825eb8 <col:10> 'int' <LValueToRValue>
+          | |   `-DeclRefExpr 0x7feae0825e78 <col:10> 'int' lvalue Var 0x7feae0825bb0 'i' 'int'
+          | `-UnaryOperator 0x7feae0825f18 <col:15, col:16> 'double' prefix '-'
+          |   `-FloatingLiteral 0x7feae0825ef8 <col:16> 'double' 1.000000e+00
+          `-BinaryOperator 0x7feae0826028 <line:14:7, col:15> 'double' '='
+            |-ArraySubscriptExpr 0x7feae0825fe0 <col:7, col:11> 'double' lvalue
+            | |-ImplicitCastExpr 0x7feae0825fb0 <col:7> 'double *' <ArrayToPointerDecay>
+            | | `-DeclRefExpr 0x7feae0825f60 <col:7> 'double [18]' lvalue Var 0x7feadf8271a0 'sg' 'double [18]'
+            | `-ImplicitCastExpr 0x7feae0825fc8 <col:10> 'int' <LValueToRValue>
+            |   `-DeclRefExpr 0x7feae0825f88 <col:10> 'int' lvalue Var 0x7feae0825bb0 'i' 'int'
+            `-FloatingLiteral 0x7feae0826008 <col:15> 'double' 1.000000e+00

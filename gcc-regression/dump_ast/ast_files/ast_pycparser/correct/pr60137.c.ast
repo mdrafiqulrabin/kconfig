@@ -1,0 +1,56 @@
+FileAST: 
+  Decl: target_flags, [], ['extern'], []
+    TypeDecl: target_flags, []
+      IdentifierType: ['int']
+  Decl: fixed_regs, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: fixed_regs, []
+        IdentifierType: ['char']
+      Constant: int, 53
+  Decl: call_used_regs, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: call_used_regs, []
+        IdentifierType: ['char']
+      Constant: int, 53
+  FuncDef: 
+    Decl: init_reg_sets_1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: init_reg_sets_1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 53
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: fixed_regs
+            ID: i
+          Assignment: =
+            ArrayRef: 
+              ID: call_used_regs
+              ID: i
+            BinaryOp: !=
+              BinaryOp: &
+                ArrayRef: 
+                  ID: call_used_regs
+                  ID: i
+                TernaryOp: 
+                  BinaryOp: &
+                    ID: target_flags
+                    Constant: int, 0x02000000
+                  Constant: int, 2
+                  Constant: int, 1
+              Constant: int, 0

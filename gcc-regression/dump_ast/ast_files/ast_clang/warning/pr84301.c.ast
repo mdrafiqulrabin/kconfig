@@ -1,0 +1,39 @@
+c_files/pr84301.c:15:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7f84c30264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f84c3026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f84c3026740 '__int128'
+|-TypedefDecl 0x7f84c3026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f84c3026760 'unsigned __int128'
+|-TypedefDecl 0x7f84c3026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f84c3026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f84c3026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f84c3026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f84c3026dc0 'char *'
+|   `-BuiltinType 0x7f84c3026560 'char'
+|-TypedefDecl 0x7f84c30270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f84c3027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f84c3026ee0 'struct __va_list_tag'
+|     `-Record 0x7f84c3026e58 '__va_list_tag'
+|-VarDecl 0x7f84c3027138 <c_files/pr84301.c:5:1, col:5> col:5 used lr 'int'
+|-VarDecl 0x7f84c3077400 <line:6:1, col:10> col:10 used xl 'long'
+`-FunctionDecl 0x7f84c3077528 <line:8:1, line:15:1> line:9:1 v4 'int (void)'
+  `-CompoundStmt 0x7f84c3077828 <line:10:1, line:15:1>
+    |-DeclStmt 0x7f84c3077638 <line:11:3, col:9>
+    | `-VarDecl 0x7f84c30775d8 <col:3, col:7> col:7 used mp 'int'
+    |-UnaryOperator 0x7f84c3077678 <line:13:3, col:5> 'long' prefix '++'
+    | `-DeclRefExpr 0x7f84c3077650 <col:5> 'long' lvalue Var 0x7f84c3077400 'xl' 'long'
+    `-BinaryOperator 0x7f84c3077800 <line:14:3, col:20> 'int' '='
+      |-DeclRefExpr 0x7f84c3077698 <col:3> 'int' lvalue Var 0x7f84c30775d8 'mp' 'int'
+      `-BinaryOperator 0x7f84c30777d8 <col:8, col:20> 'int' '>'
+        |-ParenExpr 0x7f84c3077780 <col:8, col:16> 'long'
+        | `-BinaryOperator 0x7f84c3077758 <col:9, col:14> 'long' '-'
+        |   |-ImplicitCastExpr 0x7f84c3077740 <col:9> 'long' <IntegralCast>
+        |   | `-ImplicitCastExpr 0x7f84c3077710 <col:9> 'int' <LValueToRValue>
+        |   |   `-DeclRefExpr 0x7f84c30776c0 <col:9> 'int' lvalue Var 0x7f84c3027138 'lr' 'int'
+        |   `-ImplicitCastExpr 0x7f84c3077728 <col:14> 'long' <LValueToRValue>
+        |     `-DeclRefExpr 0x7f84c30776e8 <col:14> 'long' lvalue Var 0x7f84c3077400 'xl' 'long'
+        `-ImplicitCastExpr 0x7f84c30777c0 <col:20> 'long' <IntegralCast>
+          `-IntegerLiteral 0x7f84c30777a0 <col:20> 'int' 1

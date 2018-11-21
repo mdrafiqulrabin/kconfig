@@ -1,0 +1,32 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+        BinaryOp: /
+          Constant: int, 1
+          ID: x
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      While: 
+        BinaryOp: <
+          BinaryOp: +
+            BinaryOp: +
+              ID: a
+              ID: b
+            Constant: int, 1
+          ID: x
+        Assignment: =
+          ID: b
+          ID: __INT_MAX__

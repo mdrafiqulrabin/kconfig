@@ -1,0 +1,49 @@
+c_files/pr56956.c:4:38: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+unsigned int __attribute__((noinline,noclone))
+                                     ^
+1 warning generated.
+TranslationUnitDecl 0x7f9c3a825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9c3a826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9c3a825d40 '__int128'
+|-TypedefDecl 0x7f9c3a826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9c3a825d60 'unsigned __int128'
+|-TypedefDecl 0x7f9c3a826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9c3a826170 'struct __NSConstantString_tag'
+|   `-Record 0x7f9c3a8260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9c3a826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9c3a8263c0 'char *'
+|   `-BuiltinType 0x7f9c3a825b60 'char'
+|-TypedefDecl 0x7f9c3a8266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9c3a826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9c3a8264e0 'struct __va_list_tag'
+|     `-Record 0x7f9c3a826458 '__va_list_tag'
+|-FunctionDecl 0x7f9c3a877a30 <c_files/pr56956.c:4:1, line:8:1> line:5:1 used foo 'unsigned int (unsigned int)'
+| |-ParmVarDecl 0x7f9c3a826738 <col:6, col:19> col:19 used x 'unsigned int'
+| |-CompoundStmt 0x7f9c3a877ce0 <line:6:1, line:8:1>
+| | `-ReturnStmt 0x7f9c3a877cc8 <line:7:3, col:34>
+| |   `-ConditionalOperator 0x7f9c3a877c98 <col:10, col:34> 'unsigned int'
+| |     |-BinaryOperator 0x7f9c3a877bd0 <col:10, <built-in>:33:21> 'int' '<='
+| |     | |-ImplicitCastExpr 0x7f9c3a877ba0 <c_files/pr56956.c:7:10> 'unsigned int' <LValueToRValue>
+| |     | | `-DeclRefExpr 0x7f9c3a877b58 <col:10> 'unsigned int' lvalue ParmVar 0x7f9c3a826738 'x' 'unsigned int'
+| |     | `-ImplicitCastExpr 0x7f9c3a877bb8 <<built-in>:33:21> 'unsigned int' <IntegralCast>
+| |     |   `-IntegerLiteral 0x7f9c3a877b80 <col:21> 'int' 2147483647
+| |     |-ImplicitCastExpr 0x7f9c3a877c80 <c_files/pr56956.c:7:29> 'unsigned int' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7f9c3a877bf8 <col:29> 'unsigned int' lvalue ParmVar 0x7f9c3a826738 'x' 'unsigned int'
+| |     `-UnaryOperator 0x7f9c3a877c60 <col:33, col:34> 'unsigned int' prefix '-'
+| |       `-ImplicitCastExpr 0x7f9c3a877c48 <col:34> 'unsigned int' <LValueToRValue>
+| |         `-DeclRefExpr 0x7f9c3a877c20 <col:34> 'unsigned int' lvalue ParmVar 0x7f9c3a826738 'x' 'unsigned int'
+| `-NoInlineAttr 0x7f9c3a877ad0 <line:4:29>
+`-FunctionDecl 0x7f9c3a877d50 <line:10:1, line:15:1> line:11:1 main 'int ()'
+  `-CompoundStmt 0x7f9c3a877fe8 <line:12:1, line:15:1>
+    |-DeclStmt 0x7f9c3a877f98 <line:13:3, col:53>
+    | `-VarDecl 0x7f9c3a877e00 <col:3, col:52> col:25 tem 'volatile unsigned int' cinit
+    |   `-CallExpr 0x7f9c3a877f50 <col:31, col:52> 'unsigned int'
+    |     |-ImplicitCastExpr 0x7f9c3a877f38 <col:31> 'unsigned int (*)(unsigned int)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f9c3a877e60 <col:31> 'unsigned int (unsigned int)' Function 0x7f9c3a877a30 'foo' 'unsigned int (unsigned int)'
+    |     `-ImplicitCastExpr 0x7f9c3a877f80 <col:36, col:51> 'unsigned int' <IntegralCast>
+    |       `-BinaryOperator 0x7f9c3a877ee8 <col:36, col:51> 'int' '-'
+    |         |-UnaryOperator 0x7f9c3a877ea8 <col:36, <built-in>:33:21> 'int' prefix '-'
+    |         | `-IntegerLiteral 0x7f9c3a877e88 <col:21> 'int' 2147483647
+    |         `-IntegerLiteral 0x7f9c3a877ec8 <c_files/pr56956.c:13:51> 'int' 1
+    `-ReturnStmt 0x7f9c3a877fd0 <line:14:3, col:10>
+      `-IntegerLiteral 0x7f9c3a877fb0 <col:10> 'int' 0

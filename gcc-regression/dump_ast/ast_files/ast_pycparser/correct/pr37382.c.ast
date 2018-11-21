@@ -1,0 +1,75 @@
+FileAST: 
+  Decl: baz, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: baz, []
+        IdentifierType: ['void']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+          Constant: int, 2
+      Decl: ip, [], [], []
+        PtrDecl: []
+          TypeDecl: ip, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: c
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+        ID: a
+      Decl: q, [], [], []
+        PtrDecl: []
+          TypeDecl: q, []
+            IdentifierType: ['char']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['char']
+          UnaryOp: &
+            ID: ip
+      Decl: r, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: r, ['const']
+            IdentifierType: ['char']
+        BinaryOp: +
+          ID: q
+          Constant: int, 2
+      For: 
+        BinaryOp: !=
+          ID: q
+          ID: r
+        ExprList: 
+          UnaryOp: p++
+            ID: p
+          UnaryOp: p++
+            ID: q
+        Assignment: =
+          UnaryOp: *
+            ID: p
+          UnaryOp: *
+            ID: q
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a

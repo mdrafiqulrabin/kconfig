@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7f8de60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8de6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8de6026740 '__int128'
+|-TypedefDecl 0x7f8de6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8de6026760 'unsigned __int128'
+|-TypedefDecl 0x7f8de6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8de6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8de6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8de6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8de6026dc0 'char *'
+|   `-BuiltinType 0x7f8de6026560 'char'
+|-TypedefDecl 0x7f8de60270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8de6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8de6026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8de6026e58 '__va_list_tag'
+|-FunctionDecl 0x7f8de6825a30 <c_files/pr37078.c:1:1, line:6:1> line:1:5 foo 'int (int)'
+| |-ParmVarDecl 0x7f8de6027138 <col:10, col:14> col:14 used b 'int'
+| `-CompoundStmt 0x7f8de6825e90 <line:2:1, line:6:1>
+|   |-IfStmt 0x7f8de6825e20 <line:3:3, line:4:28>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8de6825bb0 <line:3:7, col:17> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7f8de6825b98 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f8de6825b10 <col:7> 'int' lvalue ParmVar 0x7f8de6027138 'b' 'int'
+|   | | `-CStyleCastExpr 0x7f8de6825b70 <col:12, col:17> 'int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f8de6825b38 <col:17> 'unsigned int' 2147483648
+|   | |-ReturnStmt 0x7f8de6825e08 <line:4:5, col:28>
+|   | | `-CallExpr 0x7f8de6825dc0 <col:12, col:28> 'int'
+|   | |   |-ImplicitCastExpr 0x7f8de6825da8 <col:12> 'int (*)(int)' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7f8de6825d30 <col:12> '<builtin fn type>' Function 0x7f8de6825bd8 '__builtin_abs' 'int (int)'
+|   | |   `-ImplicitCastExpr 0x7f8de6825df0 <col:27> 'int' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8de6825d58 <col:27> 'int' lvalue ParmVar 0x7f8de6027138 'b' 'int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8de6825e78 <line:5:3, col:10>
+|     `-IntegerLiteral 0x7f8de6825e58 <col:10> 'int' 0
+`-FunctionDecl 0x7f8de6825bd8 <line:4:12> col:12 implicit used __builtin_abs 'int (int)' extern
+  |-ParmVarDecl 0x7f8de6825c70 <<invalid sloc>> <invalid sloc> 'int'
+  |-NoThrowAttr 0x7f8de6825cd8 <col:12> Implicit
+  `-ConstAttr 0x7f8de6825d20 <col:12> Implicit

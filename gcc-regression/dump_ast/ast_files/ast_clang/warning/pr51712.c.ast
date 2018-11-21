@@ -1,0 +1,54 @@
+c_files/pr51712.c:13:14: warning: comparison of unsigned enum expression >= 0 is always true [-Wtautological-compare]
+  return arg >= 0 && arg <= BAR;
+         ~~~ ^  ~
+1 warning generated.
+TranslationUnitDecl 0x7ff25f818ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff25f819420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff25f819140 '__int128'
+|-TypedefDecl 0x7ff25f819490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff25f819160 'unsigned __int128'
+|-TypedefDecl 0x7ff25f819768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff25f819570 'struct __NSConstantString_tag'
+|   `-Record 0x7ff25f8194e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff25f819800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff25f8197c0 'char *'
+|   `-BuiltinType 0x7ff25f818f60 'char'
+|-TypedefDecl 0x7ff25f819ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff25f819a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff25f8198e0 'struct __va_list_tag'
+|     `-Record 0x7ff25f819858 '__va_list_tag'
+|-EnumDecl 0x7ff25f819b20 <c_files/pr51712.c:6:1, line:9:1> line:6:6 test_enum
+| |-EnumConstantDecl 0x7ff25e832600 <line:7:3> col:3 referenced FOO 'int'
+| `-EnumConstantDecl 0x7ff25e832648 <line:8:3> col:3 referenced BAR 'int'
+|-FunctionDecl 0x7ff25e8327e8 <line:11:1, line:14:1> line:11:5 valid 'int (enum test_enum)'
+| |-ParmVarDecl 0x7ff25e8326e0 <col:11, col:26> col:26 used arg 'enum test_enum':'enum test_enum'
+| `-CompoundStmt 0x7ff25e832a80 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7ff25e832a68 <line:13:3, col:29>
+|     `-BinaryOperator 0x7ff25e832a40 <col:10, col:29> 'int' '&&'
+|       |-BinaryOperator 0x7ff25e832958 <col:10, col:17> 'int' '>='
+|       | |-ImplicitCastExpr 0x7ff25e832928 <col:10> 'unsigned int' <IntegralCast>
+|       | | `-ImplicitCastExpr 0x7ff25e832910 <col:10> 'enum test_enum':'enum test_enum' <LValueToRValue>
+|       | |   `-DeclRefExpr 0x7ff25e8328c8 <col:10> 'enum test_enum':'enum test_enum' lvalue ParmVar 0x7ff25e8326e0 'arg' 'enum test_enum':'enum test_enum'
+|       | `-ImplicitCastExpr 0x7ff25e832940 <col:17> 'unsigned int' <IntegralCast>
+|       |   `-IntegerLiteral 0x7ff25e8328f0 <col:17> 'int' 0
+|       `-BinaryOperator 0x7ff25e832a18 <col:22, col:29> 'int' '<='
+|         |-ImplicitCastExpr 0x7ff25e8329e8 <col:22> 'unsigned int' <IntegralCast>
+|         | `-ImplicitCastExpr 0x7ff25e8329d0 <col:22> 'enum test_enum':'enum test_enum' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7ff25e832980 <col:22> 'enum test_enum':'enum test_enum' lvalue ParmVar 0x7ff25e8326e0 'arg' 'enum test_enum':'enum test_enum'
+|         `-ImplicitCastExpr 0x7ff25e832a00 <col:29> 'unsigned int' <IntegralCast>
+|           `-DeclRefExpr 0x7ff25e8329a8 <col:29> 'int' EnumConstant 0x7ff25e832648 'BAR' 'int'
+`-FunctionDecl 0x7ff25e832b88 <line:16:1, line:19:1> line:16:5 valid2 'int (unsigned int)'
+  |-ParmVarDecl 0x7ff25e832ab8 <col:12, col:25> col:25 used arg2 'unsigned int'
+  `-CompoundStmt 0x7ff25e832db8 <line:17:1, line:19:1>
+    `-ReturnStmt 0x7ff25e832da0 <line:18:3, col:33>
+      `-BinaryOperator 0x7ff25e832d78 <col:10, col:33> 'int' '&&'
+        |-BinaryOperator 0x7ff25e832ca8 <col:10, col:18> 'int' '>='
+        | |-ImplicitCastExpr 0x7ff25e832c78 <col:10> 'unsigned int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7ff25e832c28 <col:10> 'unsigned int' lvalue ParmVar 0x7ff25e832ab8 'arg2' 'unsigned int'
+        | `-ImplicitCastExpr 0x7ff25e832c90 <col:18> 'unsigned int' <IntegralCast>
+        |   `-DeclRefExpr 0x7ff25e832c50 <col:18> 'int' EnumConstant 0x7ff25e832600 'FOO' 'int'
+        `-BinaryOperator 0x7ff25e832d50 <col:25, col:33> 'int' '<='
+          |-ImplicitCastExpr 0x7ff25e832d20 <col:25> 'unsigned int' <LValueToRValue>
+          | `-DeclRefExpr 0x7ff25e832cd0 <col:25> 'unsigned int' lvalue ParmVar 0x7ff25e832ab8 'arg2' 'unsigned int'
+          `-ImplicitCastExpr 0x7ff25e832d38 <col:33> 'unsigned int' <IntegralCast>
+            `-DeclRefExpr 0x7ff25e832cf8 <col:33> 'int' EnumConstant 0x7ff25e832648 'BAR' 'int'

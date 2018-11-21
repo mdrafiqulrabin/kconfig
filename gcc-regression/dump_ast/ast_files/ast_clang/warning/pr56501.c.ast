@@ -1,0 +1,63 @@
+c_files/pr56501.c:8:1: warning: function declared 'noreturn' should not return [-Winvalid-noreturn]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7ff1d10166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff1d1016c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff1d1016940 '__int128'
+|-TypedefDecl 0x7ff1d1016c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff1d1016960 'unsigned __int128'
+|-TypedefDecl 0x7ff1d1016f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff1d1016d70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff1d1016ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff1d1017000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff1d1016fc0 'char *'
+|   `-BuiltinType 0x7ff1d1016760 'char'
+|-TypedefDecl 0x7ff1d10172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff1d1017270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff1d10170e0 'struct __va_list_tag'
+|     `-Record 0x7ff1d1017058 '__va_list_tag'
+|-VarDecl 0x7ff1d1017338 <c_files/pr56501.c:4:1, col:5> col:5 used a 'int'
+|-FunctionDecl 0x7ff1d0837478 <line:5:1, col:47> col:6 used try_help 'void () __attribute__((noreturn))'
+|-FunctionDecl 0x7ff1d0837530 prev 0x7ff1d0837478 <line:6:1, line:8:1> line:6:6 used try_help 'void () __attribute__((noreturn))'
+| `-CompoundStmt 0x7ff1d08375c8 <line:7:1, line:8:1>
+`-FunctionDecl 0x7ff1d0837630 <line:10:1, line:27:1> line:10:5 main 'int ()'
+  `-CompoundStmt 0x7ff1d0837af0 <line:11:1, line:27:1>
+    `-SwitchStmt 0x7ff1d0837708 <line:12:3, line:26:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7ff1d08376f0 <line:12:11> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7ff1d08376c8 <col:11> 'int' lvalue Var 0x7ff1d1017338 'a' 'int'
+      `-CompoundStmt 0x7ff1d0837ac8 <line:13:5, line:26:5>
+        |-CaseStmt 0x7ff1d0837750 <line:14:7, line:23:4>
+        | |-CharacterLiteral 0x7ff1d0837738 <line:14:12> 'int' 49
+        | |-<<<NULL>>>
+        | `-CaseStmt 0x7ff1d08377a0 <line:15:7, line:23:4>
+        |   |-CharacterLiteral 0x7ff1d0837788 <line:15:12> 'int' 50
+        |   |-<<<NULL>>>
+        |   `-CaseStmt 0x7ff1d08377f0 <line:16:7, line:23:4>
+        |     |-CharacterLiteral 0x7ff1d08377d8 <line:16:12> 'int' 51
+        |     |-<<<NULL>>>
+        |     `-CaseStmt 0x7ff1d0837840 <line:17:7, line:23:4>
+        |       |-CharacterLiteral 0x7ff1d0837828 <line:17:12> 'int' 52
+        |       |-<<<NULL>>>
+        |       `-CaseStmt 0x7ff1d0837890 <line:18:7, line:23:4>
+        |         |-CharacterLiteral 0x7ff1d0837878 <line:18:12> 'int' 53
+        |         |-<<<NULL>>>
+        |         `-CaseStmt 0x7ff1d08378e0 <line:19:7, line:23:4>
+        |           |-CharacterLiteral 0x7ff1d08378c8 <line:19:12> 'int' 54
+        |           |-<<<NULL>>>
+        |           `-CaseStmt 0x7ff1d0837930 <line:20:7, line:23:4>
+        |             |-CharacterLiteral 0x7ff1d0837918 <line:20:12> 'int' 55
+        |             |-<<<NULL>>>
+        |             `-CaseStmt 0x7ff1d0837980 <line:21:7, line:23:4>
+        |               |-CharacterLiteral 0x7ff1d0837968 <line:21:12> 'int' 56
+        |               |-<<<NULL>>>
+        |               `-CaseStmt 0x7ff1d08379d0 <line:22:7, line:23:4>
+        |                 |-CharacterLiteral 0x7ff1d08379b8 <line:22:12> 'int' 57
+        |                 |-<<<NULL>>>
+        |                 `-BreakStmt 0x7ff1d0837a08 <line:23:4>
+        `-DefaultStmt 0x7ff1d0837aa8 <line:24:7, line:25:14>
+          `-CallExpr 0x7ff1d0837a80 <col:4, col:14> 'void'
+            `-ImplicitCastExpr 0x7ff1d0837a68 <col:4> 'void (*)() __attribute__((noreturn))' <FunctionToPointerDecay>
+              `-DeclRefExpr 0x7ff1d0837a10 <col:4> 'void () __attribute__((noreturn))' Function 0x7ff1d0837530 'try_help' 'void () __attribute__((noreturn))'

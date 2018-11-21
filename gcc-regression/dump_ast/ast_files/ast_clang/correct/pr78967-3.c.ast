@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7feafc0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feafc026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feafc026740 '__int128'
+|-TypedefDecl 0x7feafc026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feafc026760 'unsigned __int128'
+|-TypedefDecl 0x7feafc026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feafc026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7feafc026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feafc026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feafc026dc0 'char *'
+|   `-BuiltinType 0x7feafc026560 'char'
+|-TypedefDecl 0x7feafc0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feafc027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feafc026ee0 'struct __va_list_tag'
+|     `-Record 0x7feafc026e58 '__va_list_tag'
+|-TypedefDecl 0x7feafc027138 <c_files/pr78967-3.c:5:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7feafc026680 'unsigned long'
+|-RecordDecl 0x7feafc825a00 <line:7:1, line:12:1> line:7:8 struct S1 definition
+| |-FieldDecl 0x7feafc825ac8 <line:9:3, col:17> col:17 pad1 'unsigned char'
+| |-FieldDecl 0x7feafc825b28 <line:10:3, col:17> col:17 referenced val 'unsigned char'
+| `-FieldDecl 0x7feafc825b88 <line:11:3, col:18> col:18 pad2 'unsigned short'
+|-VarDecl 0x7feafc825c50 <line:14:1, col:27> col:22 used t 'unsigned char [256]' extern
+`-FunctionDecl 0x7feafc825ef0 <line:16:1, line:24:1> line:16:11 foo 'struct S1 (struct S1, size_t)'
+  |-ParmVarDecl 0x7feafc825d40 <col:16, col:26> col:26 used a 'struct S1':'struct S1'
+  |-ParmVarDecl 0x7feafc825dd0 <col:29, col:36> col:36 used i 'size_t':'unsigned long'
+  `-CompoundStmt 0x7feafc8264a0 <line:17:1, line:24:1>
+    |-DeclStmt 0x7feafc826110 <line:18:3, col:39>
+    | `-VarDecl 0x7feafc826018 <col:3, col:38> col:19 used _i 'size_t':'unsigned long' register cinit
+    |   |-ImplicitCastExpr 0x7feafc8260f8 <col:38> 'size_t':'unsigned long' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7feafc8260d0 <col:38> 'size_t':'unsigned long' lvalue ParmVar 0x7feafc825dd0 'i' 'size_t':'unsigned long'
+    |   `-AsmLabelAttr 0x7feafc826078 <col:29> "r10"
+    |-GCCAsmStmt 0x7feafc826220 <line:20:3, col:31>
+    | `-DeclRefExpr 0x7feafc8261f8 <col:28> 'size_t':'unsigned long' lvalue Var 0x7feafc826018 '_i' 'size_t':'unsigned long'
+    |-BinaryOperator 0x7feafc8263c8 <line:21:3, col:15> 'unsigned char' '='
+    | |-MemberExpr 0x7feafc8262a8 <col:3, col:5> 'unsigned char' lvalue .val 0x7feafc825b28
+    | | `-DeclRefExpr 0x7feafc826280 <col:3> 'struct S1':'struct S1' lvalue ParmVar 0x7feafc825d40 'a' 'struct S1':'struct S1'
+    | `-ImplicitCastExpr 0x7feafc8263b0 <col:11, col:15> 'unsigned char' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7feafc826388 <col:11, col:15> 'unsigned char' lvalue
+    |     |-ImplicitCastExpr 0x7feafc826358 <col:11> 'unsigned char *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7feafc8262e0 <col:11> 'unsigned char [256]' lvalue Var 0x7feafc825c50 't' 'unsigned char [256]'
+    |     `-ImplicitCastExpr 0x7feafc826370 <col:13> 'size_t':'unsigned long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7feafc826308 <col:13> 'size_t':'unsigned long' lvalue Var 0x7feafc826018 '_i' 'size_t':'unsigned long'
+    `-ReturnStmt 0x7feafc826488 <line:23:3, col:10>
+      `-ImplicitCastExpr 0x7feafc826470 <col:10> 'struct S1':'struct S1' <LValueToRValue>
+        `-DeclRefExpr 0x7feafc826448 <col:10> 'struct S1':'struct S1' lvalue ParmVar 0x7feafc825d40 'a' 'struct S1':'struct S1'

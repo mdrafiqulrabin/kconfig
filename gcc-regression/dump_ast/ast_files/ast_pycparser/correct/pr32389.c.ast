@@ -1,0 +1,16 @@
+FileAST: 
+  Decl: f1, [], [], []
+    FuncDecl: 
+      TypeDecl: f1, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        TypeDecl: f2, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_ia32_stmxcsr
+      Return: 
+        FuncCall: 
+          ID: f1

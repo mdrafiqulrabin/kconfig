@@ -1,0 +1,49 @@
+FileAST: 
+  Decl: s, [], [], []
+    TypeDecl: s, []
+      IdentifierType: ['short']
+  Decl: i1, [], [], []
+    TypeDecl: i1, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  Decl: i2, [], [], []
+    TypeDecl: i2, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  Decl: uc, [], [], []
+    TypeDecl: uc, []
+      IdentifierType: ['unsigned', 'char']
+    Constant: int, 147
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: s
+        BinaryOp: <<
+          BinaryOp: +
+            UnaryOp: -
+              ID: uc
+            Constant: int, 2147483647
+          Constant: int, 0
+      If: 
+        BinaryOp: >=
+          Constant: int, 9031239389974324562ULL
+          BinaryOp: ^
+            UnaryOp: -
+              BinaryOp: +
+                BinaryOp: &&
+                  ID: i1
+                  ID: i2
+                ID: uc
+            UnaryOp: -
+              Constant: int, 21096
+        Compound: 
+          Return: 
+            Constant: int, 0
+        Compound: 
+          Return: 
+            UnaryOp: -
+              Constant: int, 1

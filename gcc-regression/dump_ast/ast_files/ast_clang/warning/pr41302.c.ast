@@ -1,0 +1,37 @@
+c_files/pr41302.c:13:10: warning: cast to 'struct pts *' from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+  return (struct pts *) bar (a, b);
+         ^
+1 warning generated.
+TranslationUnitDecl 0x7fa80f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa80f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa80f026740 '__int128'
+|-TypedefDecl 0x7fa80f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa80f026760 'unsigned __int128'
+|-TypedefDecl 0x7fa80f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa80f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa80f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa80f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa80f026dc0 'char *'
+|   `-BuiltinType 0x7fa80f026560 'char'
+|-TypedefDecl 0x7fa80f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa80f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa80f026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa80f026e58 '__va_list_tag'
+|-RecordDecl 0x7fa80f027120 <c_files/pr41302.c:5:1, line:7:1> line:5:8 struct pts definition
+| `-FieldDecl 0x7fa80f825a00 <line:6:3, col:7> col:7 c 'int'
+|-FunctionDecl 0x7fa80f825c98 <line:9:1, col:39> col:14 used bar 'unsigned int (struct pts *, int)'
+| |-ParmVarDecl 0x7fa80f825b00 <col:19, col:31> col:31 a 'struct pts *'
+| `-ParmVarDecl 0x7fa80f825b78 <col:34, col:38> col:38 b 'int'
+`-FunctionDecl 0x7fa80f825f48 <line:11:1, line:14:1> line:11:14 foo 'struct pts *(struct pts *, int)'
+  |-ParmVarDecl 0x7fa80f825da8 <col:19, col:31> col:31 used a 'struct pts *'
+  |-ParmVarDecl 0x7fa80f825e20 <col:34, col:38> col:38 used b 'int'
+  `-CompoundStmt 0x7fa80f826560 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7fa80f826548 <line:13:3, col:34>
+      `-CStyleCastExpr 0x7fa80f826520 <col:10, col:34> 'struct pts *' <IntegralToPointer>
+        `-CallExpr 0x7fa80f8260e0 <col:25, col:34> 'unsigned int'
+          |-ImplicitCastExpr 0x7fa80f8260c8 <col:25> 'unsigned int (*)(struct pts *, int)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fa80f825ff0 <col:25> 'unsigned int (struct pts *, int)' Function 0x7fa80f825c98 'bar' 'unsigned int (struct pts *, int)'
+          |-ImplicitCastExpr 0x7fa80f826118 <col:30> 'struct pts *' <LValueToRValue>
+          | `-DeclRefExpr 0x7fa80f826018 <col:30> 'struct pts *' lvalue ParmVar 0x7fa80f825da8 'a' 'struct pts *'
+          `-ImplicitCastExpr 0x7fa80f826130 <col:33> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fa80f826040 <col:33> 'int' lvalue ParmVar 0x7fa80f825e20 'b' 'int'

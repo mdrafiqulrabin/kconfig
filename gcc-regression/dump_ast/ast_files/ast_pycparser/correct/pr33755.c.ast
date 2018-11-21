@@ -1,0 +1,77 @@
+FileAST: 
+  Decl: gv, ['volatile'], [], []
+    TypeDecl: gv, ['volatile']
+      IdentifierType: ['int']
+  Decl: ptrs, ['const'], [], []
+    ArrayDecl: []
+      PtrDecl: []
+        TypeDecl: ptrs, ['const']
+          IdentifierType: ['char']
+      Constant: int, 2
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: v, ['volatile'], [], []
+            PtrDecl: []
+              TypeDecl: v, ['volatile']
+                IdentifierType: ['int']
+          Decl: ptrs, ['const'], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: ptrs, ['const']
+                  IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Switch: 
+        BinaryOp: &
+          UnaryOp: *
+            ID: v
+          Constant: int, 1
+        Compound: 
+          Case: 
+            Constant: int, 0
+            Assignment: =
+              ArrayRef: 
+                ID: ptrs
+                Constant: int, 0
+              Constant: int, 0
+            Break: 
+          Case: 
+            Constant: int, 1
+            Break: 
+          Default: 
+            Assignment: =
+              ArrayRef: 
+                ID: ptrs
+                Constant: int, 1
+              Constant: string, "Some text"
+            Break: 
+      While: 
+        BinaryOp: >
+          UnaryOp: *
+            ID: v
+          Constant: int, 0
+        Assignment: -=
+          UnaryOp: *
+            ID: v
+          Constant: int, 1
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: gv
+          ID: ptrs
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,66 @@
+c_files/pr82210.c:9:57: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+    __attribute__((aligned (16))) struct T { short c; } a[size];
+                                                        ^
+c_files/pr82210.c:10:9: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+    int b[size];
+        ^
+2 errors generated.
+TranslationUnitDecl 0x7fe3548264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe354826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe354826740 '__int128'
+|-TypedefDecl 0x7fe354826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe354826760 'unsigned __int128'
+|-TypedefDecl 0x7fe354826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe354826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe354826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe354826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe354826dc0 'char *'
+|   `-BuiltinType 0x7fe354826560 'char'
+|-TypedefDecl 0x7fe3548270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe354827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe354826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe354826e58 '__va_list_tag'
+|-FunctionDecl 0x7fe355025a00 <c_files/pr82210.c:4:1, line:20:1> line:5:1 used foo 'void (int)'
+| |-ParmVarDecl 0x7fe354827138 <col:6, col:10> col:10 used size 'int'
+| `-CompoundStmt 0x7fe355026948 <line:6:1, line:20:1>
+|   |-DeclStmt 0x7fe355025b58 <line:7:3, col:8>
+|   | `-VarDecl 0x7fe355025af8 <col:3, col:7> col:7 used i 'int'
+|   |-DeclStmt 0x7fe355026118 <line:8:3, line:11:6>
+|   | |-RecordDecl 0x7fe355025b70 <line:8:3, line:11:3> line:8:10 invalid struct S definition
+|   | | |-RecordDecl 0x7fe355025c40 parent 0x7fe355025a00 <line:9:35, col:55> col:42 struct T definition
+|   | | | `-FieldDecl 0x7fe355025d18 <col:46, col:52> col:52 c 'short'
+|   | | |-FieldDecl 0x7fe355025e88 <col:5, col:63> col:57 invalid a 'struct T [size]'
+|   | | | `-AlignedAttr 0x7fe355025ed0 <col:20, col:31> aligned
+|   | | |   `-IntegerLiteral 0x7fe355025c20 <col:29> 'int' 16
+|   | | `-FieldDecl 0x7fe355025fc0 <line:10:5, col:15> col:9 invalid b 'int [size]'
+|   | `-VarDecl 0x7fe3550260a0 <line:8:3, line:11:5> col:5 used s 'struct S':'struct S'
+|   `-ForStmt 0x7fe355026910 <line:17:3, line:19:24>
+|     |-BinaryOperator 0x7fe355026518 <line:17:8, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7fe3550264d0 <col:8> 'int' lvalue Var 0x7fe355025af8 'i' 'int'
+|     | `-IntegerLiteral 0x7fe3550264f8 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fe3550265c0 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7fe355026590 <col:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fe355026540 <col:15> 'int' lvalue Var 0x7fe355025af8 'i' 'int'
+|     | `-ImplicitCastExpr 0x7fe3550265a8 <col:19> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fe355026568 <col:19> 'int' lvalue ParmVar 0x7fe354827138 'size' 'int'
+|     |-UnaryOperator 0x7fe355026610 <col:25, col:26> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7fe3550265e8 <col:25> 'int' lvalue Var 0x7fe355025af8 'i' 'int'
+|     `-IfStmt 0x7fe3550268d8 <line:18:5, line:19:24>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-OpaqueValueExpr 0x7fe3550268b8 <<invalid sloc>> '_Bool'
+|       |-CallExpr 0x7fe355026890 <col:7, col:24> 'void'
+|       | `-ImplicitCastExpr 0x7fe355026878 <col:7> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|       |   `-DeclRefExpr 0x7fe355026820 <col:7> '<builtin fn type>' Function 0x7fe355026740 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|       `-<<<NULL>>>
+|-FunctionDecl 0x7fe355026740 <col:7> col:7 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fe3550267d8 <col:7> Implicit
+`-FunctionDecl 0x7fe355027a00 <line:22:1, line:27:1> line:23:1 main 'int ()'
+  `-CompoundStmt 0x7fe355027b88 <line:24:1, line:27:1>
+    |-CallExpr 0x7fe355027b20 <line:25:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fe355027b08 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe355027a98 <col:3> 'void (int)' Function 0x7fe355025a00 'foo' 'void (int)'
+    | `-IntegerLiteral 0x7fe355027ac0 <col:8> 'int' 15
+    `-ReturnStmt 0x7fe355027b70 <line:26:3, col:10>
+      `-IntegerLiteral 0x7fe355027b50 <col:10> 'int' 0

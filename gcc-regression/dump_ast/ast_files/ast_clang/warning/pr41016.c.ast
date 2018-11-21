@@ -1,0 +1,100 @@
+c_files/pr41016.c:16:5: warning: implicit declaration of function 'Die' is invalid in C99 [-Wimplicit-function-declaration]
+    Die ("Error in CompareRNAStrutures(); odd number of paired nucleotides\n");
+    ^
+1 warning generated.
+TranslationUnitDecl 0x7fc4430264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc443026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc443026740 '__int128'
+|-TypedefDecl 0x7fc443026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc443026760 'unsigned __int128'
+|-TypedefDecl 0x7fc443026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc443026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc443026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc443026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc443026dc0 'char *'
+|   `-BuiltinType 0x7fc443026560 'char'
+|-TypedefDecl 0x7fc4430270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc443027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc443026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc443026e58 '__va_list_tag'
+|-RecordDecl 0x7fc443027120 <c_files/pr41016.c:1:9, col:16> col:16 struct _IO_FILE
+|-TypedefDecl 0x7fc443825a20 <col:1, col:25> col:25 referenced FILE 'struct _IO_FILE':'struct _IO_FILE'
+| `-ElaboratedType 0x7fc4430271d0 'struct _IO_FILE' sugar
+|   `-RecordType 0x7fc4430271b0 'struct _IO_FILE'
+|     `-Record 0x7fc443027120 '_IO_FILE'
+|-FunctionDecl 0x7fc443825e60 <line:2:1, line:17:1> line:3:1 CompareRNAStructures 'void (FILE *, int, int, char *, char *)'
+| |-ParmVarDecl 0x7fc443825b18 <col:23, col:30> col:30 ofp 'FILE *'
+| |-ParmVarDecl 0x7fc443825b90 <col:35, col:39> col:39 start 'int'
+| |-ParmVarDecl 0x7fc443825c08 <col:46, col:50> col:50 used L 'int'
+| |-ParmVarDecl 0x7fc443825c80 <col:53, col:59> col:59 ss_true 'char *'
+| |-ParmVarDecl 0x7fc443825cf8 <col:68, col:74> col:74 ss 'char *'
+| `-CompoundStmt 0x7fc443827b70 <line:4:1, line:17:1>
+|   |-DeclStmt 0x7fc443825fd8 <line:5:3, col:8>
+|   | `-VarDecl 0x7fc443825f78 <col:3, col:7> col:7 used i 'int'
+|   |-DeclStmt 0x7fc4438260a0 <line:6:3, col:19>
+|   | `-VarDecl 0x7fc443826008 <col:3, col:17> col:9 used agree 'float' cinit
+|   |   `-ImplicitCastExpr 0x7fc443826088 <col:17> 'float' <FloatingCast>
+|   |     `-FloatingLiteral 0x7fc443826068 <col:17> 'double' 0.000000e+00
+|   |-DeclStmt 0x7fc443826168 <line:7:3, col:19>
+|   | `-VarDecl 0x7fc4438260d0 <col:3, col:17> col:9 used pairs 'float' cinit
+|   |   `-ImplicitCastExpr 0x7fc443826150 <col:17> 'float' <FloatingCast>
+|   |     `-FloatingLiteral 0x7fc443826130 <col:17> 'double' 0.000000e+00
+|   |-DeclStmt 0x7fc443826230 <line:8:3, col:24>
+|   | `-VarDecl 0x7fc443826198 <col:3, col:22> col:9 used pairs_true 'float' cinit
+|   |   `-ImplicitCastExpr 0x7fc443826218 <col:22> 'float' <FloatingCast>
+|   |     `-FloatingLiteral 0x7fc4438261f8 <col:22> 'double' 0.000000e+00
+|   |-ForStmt 0x7fc4438264d0 <line:9:3, line:13:5>
+|   | |-BinaryOperator 0x7fc443826290 <line:9:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7fc443826248 <col:8> 'int' lvalue Var 0x7fc443825f78 'i' 'int'
+|   | | `-IntegerLiteral 0x7fc443826270 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc443826338 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fc443826308 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc4438262b8 <col:15> 'int' lvalue Var 0x7fc443825f78 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7fc443826320 <col:19> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fc4438262e0 <col:19> 'int' lvalue ParmVar 0x7fc443825c08 'L' 'int'
+|   | |-UnaryOperator 0x7fc443826388 <col:22, col:23> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fc443826360 <col:22> 'int' lvalue Var 0x7fc443825f78 'i' 'int'
+|   | `-CompoundStmt 0x7fc4438264a8 <line:10:5, line:13:5>
+|   |   |-CompoundAssignOperator 0x7fc4438263f0 <line:11:7, col:21> 'float' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   |   | |-DeclRefExpr 0x7fc4438263a8 <col:7> 'float' lvalue Var 0x7fc443826198 'pairs_true' 'float'
+|   |   | `-FloatingLiteral 0x7fc4438263d0 <col:21> 'double' 1.000000e+00
+|   |   `-CompoundAssignOperator 0x7fc443826470 <line:12:7, col:16> 'float' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   |     |-DeclRefExpr 0x7fc443826428 <col:7> 'float' lvalue Var 0x7fc443826008 'agree' 'float'
+|   |     `-FloatingLiteral 0x7fc443826450 <col:16> 'double' 1.000000e+00
+|   `-IfStmt 0x7fc443827b38 <line:14:3, line:16:78>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fc4438268c0 <line:14:7, line:15:31> 'int' '||'
+|     | |-BinaryOperator 0x7fc443826768 <line:14:7, col:59> 'int' '||'
+|     | | |-ParenExpr 0x7fc443826618 <col:7, col:28> 'int'
+|     | | | `-BinaryOperator 0x7fc4438265f0 <col:8, col:27> 'int' '!='
+|     | | |   |-BinaryOperator 0x7fc4438265a8 <col:8, col:22> 'int' '%'
+|     | | |   | |-CStyleCastExpr 0x7fc443826560 <col:8, col:14> 'int' <FloatingToIntegral>
+|     | | |   | | `-ImplicitCastExpr 0x7fc443826548 <col:14> 'float' <LValueToRValue>
+|     | | |   | |   `-DeclRefExpr 0x7fc443826508 <col:14> 'float' lvalue Var 0x7fc4438260d0 'pairs' 'float'
+|     | | |   | `-IntegerLiteral 0x7fc443826588 <col:22> 'int' 2
+|     | | |   `-IntegerLiteral 0x7fc4438265d0 <col:27> 'int' 0
+|     | | `-ParenExpr 0x7fc443826748 <col:33, col:59> 'int'
+|     | |   `-BinaryOperator 0x7fc443826720 <col:34, col:58> 'int' '!='
+|     | |     |-BinaryOperator 0x7fc4438266d8 <col:34, col:53> 'int' '%'
+|     | |     | |-CStyleCastExpr 0x7fc443826690 <col:34, col:40> 'int' <FloatingToIntegral>
+|     | |     | | `-ImplicitCastExpr 0x7fc443826678 <col:40> 'float' <LValueToRValue>
+|     | |     | |   `-DeclRefExpr 0x7fc443826638 <col:40> 'float' lvalue Var 0x7fc443826198 'pairs_true' 'float'
+|     | |     | `-IntegerLiteral 0x7fc4438266b8 <col:53> 'int' 2
+|     | |     `-IntegerLiteral 0x7fc443826700 <col:58> 'int' 0
+|     | `-ParenExpr 0x7fc4438268a0 <line:15:10, col:31> 'int'
+|     |   `-BinaryOperator 0x7fc443826878 <col:11, col:30> 'int' '!='
+|     |     |-BinaryOperator 0x7fc443826830 <col:11, col:25> 'int' '%'
+|     |     | |-CStyleCastExpr 0x7fc4438267e8 <col:11, col:17> 'int' <FloatingToIntegral>
+|     |     | | `-ImplicitCastExpr 0x7fc4438267d0 <col:17> 'float' <LValueToRValue>
+|     |     | |   `-DeclRefExpr 0x7fc443826790 <col:17> 'float' lvalue Var 0x7fc443826008 'agree' 'float'
+|     |     | `-IntegerLiteral 0x7fc443826810 <col:25> 'int' 2
+|     |     `-IntegerLiteral 0x7fc443826858 <col:30> 'int' 0
+|     |-CallExpr 0x7fc443827af0 <line:16:5, col:78> 'int'
+|     | |-ImplicitCastExpr 0x7fc443827ad8 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7fc4438269d8 <col:5> 'int ()' Function 0x7fc443826940 'Die' 'int ()'
+|     | `-ImplicitCastExpr 0x7fc443827b20 <col:10> 'char *' <ArrayToPointerDecay>
+|     |   `-StringLiteral 0x7fc443827a38 <col:10> 'char [66]' lvalue "Error in CompareRNAStrutures(); odd number of paired nucleotides\n"
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fc443826940 <<invalid sloc>> col:5 implicit used Die 'int ()'

@@ -1,0 +1,64 @@
+c_files/pr14649-1.c:7:20: error: initializer element is not a compile-time constant
+const double pi = 4*atan(1.0);  /* { dg-warning "not a constant expression" } */
+                  ~^~~~~~~~~~
+c_files/pr14649-1.c:9:20: error: initializer element is not a compile-time constant
+const double ok = 4*__builtin_atan(1.0);
+                  ~^~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7f85050264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8505026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8505026740 '__int128'
+|-TypedefDecl 0x7f8505026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8505026760 'unsigned __int128'
+|-TypedefDecl 0x7f8505026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8505026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8505026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8505026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8505026dc0 'char *'
+|   `-BuiltinType 0x7f8505026560 'char'
+|-TypedefDecl 0x7f85050270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8505027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8505026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8505026e58 '__va_list_tag'
+|-FunctionDecl 0x7f8505825a30 <c_files/pr14649-1.c:5:8> col:8 implicit used atan 'double (double)' extern
+| |-ParmVarDecl 0x7f8505825ac8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f8505825b30 <col:8> Implicit
+| `-NoThrowAttr 0x7f8505825b78 <col:8> Implicit
+|-FunctionDecl 0x7f8505825b88 prev 0x7f8505825a30 <col:1, col:19> col:8 used atan 'double (double)'
+| |-ParmVarDecl 0x7f8505027138 <col:13> col:19 'double'
+| |-ConstAttr 0x7f8505825c60 <col:8> Inherited Implicit
+| `-NoThrowAttr 0x7f8505825c70 <col:8> Inherited Implicit
+|-VarDecl 0x7f8505825c98 <line:7:1, col:29> col:14 pi 'const double' cinit
+| `-BinaryOperator 0x7f8505825e28 <col:19, col:29> 'double' '*'
+|   |-ImplicitCastExpr 0x7f8505825e10 <col:19> 'double' <IntegralToFloating>
+|   | `-IntegerLiteral 0x7f8505825d38 <col:19> 'int' 4
+|   `-CallExpr 0x7f8505825de0 <col:21, col:29> 'double'
+|     |-ImplicitCastExpr 0x7f8505825dc8 <col:21> 'double (*)(double)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f8505825d58 <col:21> 'double (double)' Function 0x7f8505825b88 'atan' 'double (double)'
+|     `-FloatingLiteral 0x7f8505825d80 <col:26> 'double' 1.000000e+00
+|-VarDecl 0x7f8505825e68 <line:9:1, col:39> col:14 ok 'const double' cinit
+| `-BinaryOperator 0x7f85058260e8 <col:19, col:39> 'double' '*'
+|   |-ImplicitCastExpr 0x7f85058260d0 <col:19> 'double' <IntegralToFloating>
+|   | `-IntegerLiteral 0x7f8505825ec8 <col:19> 'int' 4
+|   `-CallExpr 0x7f85058260a0 <col:21, col:39> 'double'
+|     |-ImplicitCastExpr 0x7f8505826088 <col:21> 'double (*)(double)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7f8505826040 <col:21> '<builtin fn type>' Function 0x7f8505825ee8 '__builtin_atan' 'double (double)'
+|     `-FloatingLiteral 0x7f8505826068 <col:36> 'double' 1.000000e+00
+|-FunctionDecl 0x7f8505825ee8 <col:21> col:21 implicit used __builtin_atan 'double (double)' extern
+| |-ParmVarDecl 0x7f8505825f80 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f8505825fe8 <col:21> Implicit
+| `-ConstAttr 0x7f8505826030 <col:21> Implicit
+`-FunctionDecl 0x7f8505826160 <line:11:1, line:15:1> line:11:8 foo 'double ()'
+  `-CompoundStmt 0x7f85058263d0 <line:12:1, line:15:1>
+    |-DeclStmt 0x7f8505826360 <line:13:3, col:27>
+    | `-VarDecl 0x7f8505826210 <col:3, col:26> col:10 used ok2 'double' cinit
+    |   `-BinaryOperator 0x7f8505826338 <col:16, col:26> 'double' '*'
+    |     |-ImplicitCastExpr 0x7f8505826320 <col:16> 'double' <IntegralToFloating>
+    |     | `-IntegerLiteral 0x7f8505826270 <col:16> 'int' 4
+    |     `-CallExpr 0x7f85058262f0 <col:18, col:26> 'double'
+    |       |-ImplicitCastExpr 0x7f85058262d8 <col:18> 'double (*)(double)' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7f8505826290 <col:18> 'double (double)' Function 0x7f8505825b88 'atan' 'double (double)'
+    |       `-FloatingLiteral 0x7f85058262b8 <col:23> 'double' 1.000000e+00
+    `-ReturnStmt 0x7f85058263b8 <line:14:3, col:10>
+      `-ImplicitCastExpr 0x7f85058263a0 <col:10> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7f8505826378 <col:10> 'double' lvalue Var 0x7f8505826210 'ok2' 'double'

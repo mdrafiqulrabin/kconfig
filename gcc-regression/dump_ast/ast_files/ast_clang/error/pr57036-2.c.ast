@@ -1,0 +1,62 @@
+c_files/pr57036-2.c:12:5: error: function definition is not allowed here
+    {
+    ^
+c_files/pr57036-2.c:17:5: error: function definition is not allowed here
+    {
+    ^
+c_files/pr57036-2.c:22:5: warning: implicit declaration of function 'f' is invalid in C99 [-Wimplicit-function-declaration]
+    f ();
+    ^
+c_files/pr57036-2.c:24:3: warning: implicit declaration of function 'read_buf_open' is invalid in C99 [-Wimplicit-function-declaration]
+  read_buf_open ();
+  ^
+2 warnings and 2 errors generated.
+TranslationUnitDecl 0x7f9e8a818ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9e8a819420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9e8a819140 '__int128'
+|-TypedefDecl 0x7f9e8a819490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9e8a819160 'unsigned __int128'
+|-TypedefDecl 0x7f9e8a819768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9e8a819570 'struct __NSConstantString_tag'
+|   `-Record 0x7f9e8a8194e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9e8a819800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9e8a8197c0 'char *'
+|   `-BuiltinType 0x7f9e8a818f60 'char'
+|-TypedefDecl 0x7f9e8a819ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9e8a819a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9e8a8198e0 'struct __va_list_tag'
+|     `-Record 0x7f9e8a819858 '__va_list_tag'
+|-VarDecl 0x7f9e8a819b38 <c_files/pr57036-2.c:4:1, col:5> col:5 used j_ 'int'
+|-FunctionDecl 0x7f9e8a0332b0 <line:5:1, col:13> col:6 g 'void (void)'
+|-FunctionDecl 0x7f9e8a033428 <line:6:1, line:27:1> line:6:5 jpgDecode_convert 'int (unsigned int)'
+| |-ParmVarDecl 0x7f9e8a033360 <col:24, col:33> col:33 used i 'unsigned int'
+| `-CompoundStmt 0x7f9e8a033b18 <line:7:1, line:27:1>
+|   |-DeclStmt 0x7f9e8a033510 <line:8:3, col:18>
+|   | `-LabelDecl 0x7f9e8a0334c8 <col:3, col:13> col:13 label
+|   |-DeclStmt 0x7f9e8a0335a0 <line:9:3, col:8>
+|   | `-VarDecl 0x7f9e8a033540 <col:3, col:7> col:7 used j 'int'
+|   |-IfStmt 0x7f9e8a0338b8 <line:21:3, line:22:8>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9e8a033710 <line:21:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7f9e8a0336e0 <col:7> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9e8a033698 <col:7> 'unsigned int' lvalue ParmVar 0x7f9e8a033360 'i' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7f9e8a0336f8 <col:12> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f9e8a0336c0 <col:12> 'int' 0
+|   | |-CallExpr 0x7f9e8a033890 <line:22:5, col:8> 'int'
+|   | | `-ImplicitCastExpr 0x7f9e8a033878 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9e8a033828 <col:5> 'int ()' Function 0x7f9e8a033790 'f' 'int ()'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f9e8a033958 <line:23:3, col:7> 'int' '='
+|   | |-DeclRefExpr 0x7f9e8a0338f0 <col:3> 'int' lvalue Var 0x7f9e8a033540 'j' 'int'
+|   | `-ImplicitCastExpr 0x7f9e8a033940 <col:7> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f9e8a033918 <col:7> 'int' lvalue Var 0x7f9e8a819b38 'j_' 'int'
+|   |-CallExpr 0x7f9e8a033a80 <line:24:3, col:18> 'int'
+|   | `-ImplicitCastExpr 0x7f9e8a033a68 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7f9e8a033a40 <col:3> 'int ()' Function 0x7f9e8a0339a8 'read_buf_open' 'int ()'
+|   `-LabelStmt 0x7f9e8a033b00 <line:25:1, line:26:10> 'label'
+|     `-ReturnStmt 0x7f9e8a033ae8 <col:3, col:10>
+|       `-ImplicitCastExpr 0x7f9e8a033ad0 <col:10> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f9e8a033aa8 <col:10> 'int' lvalue Var 0x7f9e8a033540 'j' 'int'
+|-FunctionDecl 0x7f9e8a033790 <<invalid sloc>> line:22:5 implicit used f 'int ()'
+`-FunctionDecl 0x7f9e8a0339a8 <<invalid sloc>> line:24:3 implicit used read_buf_open 'int ()'

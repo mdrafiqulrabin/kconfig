@@ -1,0 +1,108 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Typedef: tree, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: tree, []
+        Union: tree_node
+  Decl: bitmap_head, [], [], []
+    TypeDecl: bitmap_head, []
+      Union: tree_node
+        Decl: code, [], [], []
+          TypeDecl: code, []
+            IdentifierType: ['int']
+        Decl: chain, [], [], []
+          TypeDecl: chain, []
+            IdentifierType: ['tree']
+        Decl: omp_code, [], [], []
+          TypeDecl: omp_code, []
+            IdentifierType: ['int']
+  Decl: c_omp_predetermined_sharing, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['tree']
+      TypeDecl: c_omp_predetermined_sharing, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: c_finish_omp_clauses, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: clauses, [], [], []
+            TypeDecl: clauses, []
+              IdentifierType: ['tree']
+        TypeDecl: c_finish_omp_clauses, []
+          IdentifierType: ['tree']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['tree']
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['tree']
+      Decl: pc, [], [], []
+        PtrDecl: []
+          TypeDecl: pc, []
+            IdentifierType: ['tree']
+        UnaryOp: &
+          ID: clauses
+      For: 
+        ExprList: 
+          Assignment: =
+            ID: pc
+            UnaryOp: &
+              ID: clauses
+          Assignment: =
+            ID: c
+            ID: clauses
+        ID: c
+        Assignment: =
+          ID: c
+          UnaryOp: *
+            ID: pc
+        Compound: 
+          Decl: remove, [], [], []
+            TypeDecl: remove, []
+              IdentifierType: ['unsigned', 'char']
+            Constant: int, 0
+          Switch: 
+            StructRef: ->
+              ID: c
+              ID: omp_code
+            Compound: 
+              Case: 
+                Constant: int, 1
+                If: 
+                  BinaryOp: !=
+                    StructRef: ->
+                      ID: t
+                      ID: code
+                    Constant: int, 42
+                  Assignment: =
+                    ID: remove
+                    Constant: int, 1
+                Switch: 
+                  FuncCall: 
+                    ID: c_omp_predetermined_sharing
+                    ExprList: 
+                      ID: t
+                  Compound: 
+                    Case: 
+                      Constant: int, 2
+                      FuncCall: 
+                        ID: abort
+          If: 
+            ID: remove
+            Assignment: =
+              UnaryOp: *
+                ID: pc
+              StructRef: ->
+                ID: c
+                ID: chain

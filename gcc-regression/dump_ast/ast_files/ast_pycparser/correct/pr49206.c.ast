@@ -1,0 +1,81 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S1
+      Decl: f0, [], [], []
+        TypeDecl: f0, []
+          IdentifierType: ['short']
+  Decl: g_5, ['volatile'], ['extern'], []
+    TypeDecl: g_5, ['volatile']
+      Struct: S1
+  Decl: g_120, [], ['extern'], []
+    TypeDecl: g_120, []
+      IdentifierType: ['int']
+  Decl: i, [], ['extern'], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  Decl: g_339, [], ['extern'], []
+    TypeDecl: g_339, []
+      IdentifierType: ['short']
+  FuncDef: 
+    Decl: func_72, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              Struct: S1
+        TypeDecl: func_72, []
+          IdentifierType: ['int']
+    Compound: 
+      For: 
+        Assignment: =
+          StructRef: .
+            ID: z
+            ID: f0
+          UnaryOp: -
+            Constant: int, 3
+        BinaryOp: >
+          StructRef: .
+            ID: z
+            ID: f0
+          Constant: int, 16
+        Assignment: +=
+          StructRef: .
+            ID: z
+            ID: f0
+          Constant: int, 1
+        FuncCall: 
+          ID: foo
+      Return: 
+        ID: g_120
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      While: 
+        BinaryOp: %
+          ID: g_339
+          Constant: int, 0x200003
+        Continue: 
+      If: 
+        ID: i
+        FuncCall: 
+          ID: func_72
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 0
+            ID: g_5
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: g_339
+      Return: 
+        Constant: int, 0

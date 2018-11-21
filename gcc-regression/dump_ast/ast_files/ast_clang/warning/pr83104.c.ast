@@ -1,0 +1,39 @@
+c_files/pr83104.c:5:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7f9cd58264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9cd5826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9cd5826740 '__int128'
+|-TypedefDecl 0x7f9cd5826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9cd5826760 'unsigned __int128'
+|-TypedefDecl 0x7f9cd5826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9cd5826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9cd5826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9cd5826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9cd5826dc0 'char *'
+|   `-BuiltinType 0x7f9cd5826560 'char'
+|-TypedefDecl 0x7f9cd58270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9cd5827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9cd5826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9cd5826e58 '__va_list_tag'
+|-VarDecl 0x7f9cd5827160 <c_files/pr83104.c:1:1, col:6> col:6 used a 'int *'
+`-FunctionDecl 0x7f9cd6025a50 <line:2:1, line:5:1> line:2:5 foo 'int ()'
+  `-CompoundStmt 0x7f9cd6025ce8 <col:11, line:5:1>
+    `-IfStmt 0x7f9cd6025cb0 <line:3:3, line:4:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9cd6025c50 <line:3:7, col:27> 'int' '&&'
+      | |-ImplicitCastExpr 0x7f9cd6025c38 <col:7> 'int *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f9cd6025ae8 <col:7> 'int *' lvalue Var 0x7f9cd5827160 'a' 'int *'
+      | `-BinaryOperator 0x7f9cd6025c10 <col:12, col:27> 'int' '>'
+      |   |-BinaryOperator 0x7f9cd6025bb0 <col:12, col:23> 'long' '-'
+      |   | |-ImplicitCastExpr 0x7f9cd6025b98 <col:12> 'int *' <LValueToRValue>
+      |   | | `-DeclRefExpr 0x7f9cd6025b10 <col:12> 'int *' lvalue Var 0x7f9cd5827160 'a' 'int *'
+      |   | `-CStyleCastExpr 0x7f9cd6025b70 <col:16, col:23> 'int *' <NullToPointer>
+      |   |   `-IntegerLiteral 0x7f9cd6025b38 <col:23> 'int' 0
+      |   `-ImplicitCastExpr 0x7f9cd6025bf8 <col:27> 'long' <IntegralCast>
+      |     `-IntegerLiteral 0x7f9cd6025bd8 <col:27> 'int' 0
+      |-ReturnStmt 0x7f9cd6025c98 <line:4:5, col:12>
+      | `-IntegerLiteral 0x7f9cd6025c78 <col:12> 'int' 0
+      `-<<<NULL>>>

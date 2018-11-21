@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fdb158264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdb15826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdb15826740 '__int128'
+|-TypedefDecl 0x7fdb15826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdb15826760 'unsigned __int128'
+|-TypedefDecl 0x7fdb15826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdb15826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdb15826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdb15826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdb15826dc0 'char *'
+|   `-BuiltinType 0x7fdb15826560 'char'
+|-TypedefDecl 0x7fdb158270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdb15827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdb15826ee0 'struct __va_list_tag'
+|     `-Record 0x7fdb15826e58 '__va_list_tag'
+|-FunctionDecl 0x7fdb15877430 <c_files/pr68647.c:5:1, line:9:1> line:6:1 f1 'int (unsigned long long)'
+| |-ParmVarDecl 0x7fdb15827138 <col:5, col:24> col:24 used a 'unsigned long long'
+| `-CompoundStmt 0x7fdb15877760 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fdb15877748 <line:8:3, col:33>
+|     `-CallExpr 0x7fdb15877700 <col:10, col:33> 'int'
+|       |-ImplicitCastExpr 0x7fdb158776e8 <col:10> 'int (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fdb15877668 <col:10> '<builtin fn type>' Function 0x7fdb15877510 '__builtin_popcountll' 'int (unsigned long long)'
+|       `-ImplicitCastExpr 0x7fdb15877730 <col:32> 'unsigned long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fdb15877690 <col:32> 'unsigned long long' lvalue ParmVar 0x7fdb15827138 'a' 'unsigned long long'
+|-FunctionDecl 0x7fdb15877510 <col:10> col:10 implicit used __builtin_popcountll 'int (unsigned long long)' extern
+| |-ParmVarDecl 0x7fdb158775a8 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| |-NoThrowAttr 0x7fdb15877610 <col:10> Implicit
+| `-ConstAttr 0x7fdb15877658 <col:10> Implicit
+|-FunctionDecl 0x7fdb15877828 <line:11:1, line:15:1> line:12:1 f2 'int (unsigned long long)'
+| |-ParmVarDecl 0x7fdb15877798 <col:5, col:24> col:24 used a 'unsigned long long'
+| `-CompoundStmt 0x7fdb15877ae8 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7fdb15877ad0 <line:14:3, col:31>
+|     `-CallExpr 0x7fdb15877a88 <col:10, col:31> 'int'
+|       |-ImplicitCastExpr 0x7fdb15877a70 <col:10> 'int (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fdb15877a20 <col:10> '<builtin fn type>' Function 0x7fdb158778c8 '__builtin_parityll' 'int (unsigned long long)'
+|       `-ImplicitCastExpr 0x7fdb15877ab8 <col:30> 'unsigned long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fdb15877a48 <col:30> 'unsigned long long' lvalue ParmVar 0x7fdb15877798 'a' 'unsigned long long'
+`-FunctionDecl 0x7fdb158778c8 <col:10> col:10 implicit used __builtin_parityll 'int (unsigned long long)' extern
+  |-ParmVarDecl 0x7fdb15877960 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+  |-NoThrowAttr 0x7fdb158779c8 <col:10> Implicit
+  `-ConstAttr 0x7fdb15877a10 <col:10> Implicit

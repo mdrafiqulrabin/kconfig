@@ -1,0 +1,60 @@
+FileAST: 
+  Decl: ffi_closure_unix, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: ffi_closure_unix, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: ffi_prep_closure_loc, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: ffi_prep_closure_loc, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: None, [], [], []
+        Struct: ia64_fd
+          Decl: code_pointer, [], [], []
+            TypeDecl: code_pointer, []
+              IdentifierType: ['unsigned', 'long', 'long']
+          Decl: gp, [], [], []
+            TypeDecl: gp, []
+              IdentifierType: ['unsigned', 'long', 'long']
+      Decl: None, [], [], []
+        Struct: ffi_ia64_trampoline_struct
+          Decl: code_pointer, [], [], []
+            TypeDecl: code_pointer, []
+              IdentifierType: ['unsigned', 'long', 'long']
+      Decl: tramp, [], [], []
+        PtrDecl: []
+          TypeDecl: tramp, []
+            Struct: ffi_ia64_trampoline_struct
+      Decl: fd, [], [], []
+        PtrDecl: []
+          TypeDecl: fd, []
+            Struct: ia64_fd
+      Assignment: =
+        ID: fd
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                Struct: ia64_fd
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            ID: ffi_closure_unix
+      Assignment: =
+        StructRef: ->
+          ID: tramp
+          ID: code_pointer
+        StructRef: ->
+          ID: fd
+          ID: code_pointer

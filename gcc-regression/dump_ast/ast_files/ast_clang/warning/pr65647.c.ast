@@ -1,0 +1,431 @@
+c_files/pr65647.c:6:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+^
+c_files/pr65647.c:6:4: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+   ^
+c_files/pr65647.c:6:7: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+      ^
+c_files/pr65647.c:6:10: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+         ^
+c_files/pr65647.c:6:13: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+            ^
+c_files/pr65647.c:6:13: warning: incompatible pointer to integer conversion initializing 'int' with an expression of type 'int *'; remove & [-Wint-conversion]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+            ^   ~~
+c_files/pr65647.c:6:17: error: initializer element is not a compile-time constant
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                ^~
+c_files/pr65647.c:6:21: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                    ^
+c_files/pr65647.c:6:24: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                       ^
+c_files/pr65647.c:6:31: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                              ^
+c_files/pr65647.c:6:38: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                                     ^
+c_files/pr65647.c:6:41: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                                        ^
+c_files/pr65647.c:6:44: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                                           ^
+c_files/pr65647.c:6:47: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                                              ^
+c_files/pr65647.c:6:47: warning: incompatible pointer to integer conversion initializing 'int' with an expression of type 'int *'; remove & [-Wint-conversion]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                                              ^   ~~
+c_files/pr65647.c:6:51: error: initializer element is not a compile-time constant
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                                                  ^~
+c_files/pr65647.c:6:55: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                                                      ^
+c_files/pr65647.c:6:58: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                                                         ^
+c_files/pr65647.c:6:58: warning: incompatible pointer to integer conversion initializing 'int' with an expression of type 'int *'; remove & [-Wint-conversion]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                                                         ^   ~~
+c_files/pr65647.c:6:62: error: initializer element is not a compile-time constant
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                                                             ^~
+c_files/pr65647.c:6:66: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                                                                 ^
+c_files/pr65647.c:6:69: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                                                                    ^
+c_files/pr65647.c:6:76: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+a, b, c, e, g = &e, h, i = 7, l = 1, m, n, o, q = &m, r, s = &r, u, w = 9, x,
+                                                                           ^
+c_files/pr65647.c:7:3: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+  y = 6, z, t6 = 7, t8, t9 = 1, t11 = 5, t12 = &t8, t13 = 3, t15,
+  ^
+c_files/pr65647.c:7:10: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+  y = 6, z, t6 = 7, t8, t9 = 1, t11 = 5, t12 = &t8, t13 = 3, t15,
+         ^
+c_files/pr65647.c:7:13: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+  y = 6, z, t6 = 7, t8, t9 = 1, t11 = 5, t12 = &t8, t13 = 3, t15,
+            ^
+c_files/pr65647.c:7:21: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+  y = 6, z, t6 = 7, t8, t9 = 1, t11 = 5, t12 = &t8, t13 = 3, t15,
+                    ^
+c_files/pr65647.c:7:25: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+  y = 6, z, t6 = 7, t8, t9 = 1, t11 = 5, t12 = &t8, t13 = 3, t15,
+                        ^
+c_files/pr65647.c:7:33: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+  y = 6, z, t6 = 7, t8, t9 = 1, t11 = 5, t12 = &t8, t13 = 3, t15,
+                                ^
+c_files/pr65647.c:7:42: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+  y = 6, z, t6 = 7, t8, t9 = 1, t11 = 5, t12 = &t8, t13 = 3, t15,
+                                         ^
+c_files/pr65647.c:7:42: warning: incompatible pointer to integer conversion initializing 'int' with an expression of type 'int *'; remove & [-Wint-conversion]
+  y = 6, z, t6 = 7, t8, t9 = 1, t11 = 5, t12 = &t8, t13 = 3, t15,
+                                         ^     ~~~
+c_files/pr65647.c:7:48: error: initializer element is not a compile-time constant
+  y = 6, z, t6 = 7, t8, t9 = 1, t11 = 5, t12 = &t8, t13 = 3, t15,
+                                               ^~~
+c_files/pr65647.c:7:53: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+  y = 6, z, t6 = 7, t8, t9 = 1, t11 = 5, t12 = &t8, t13 = 3, t15,
+                                                    ^
+c_files/pr65647.c:7:62: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+  y = 6, z, t6 = 7, t8, t9 = 1, t11 = 5, t12 = &t8, t13 = 3, t15,
+                                                             ^
+c_files/pr65647.c:8:3: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+  t16 = &t15;
+  ^
+c_files/pr65647.c:8:3: warning: incompatible pointer to integer conversion initializing 'int' with an expression of type 'int *'; remove & [-Wint-conversion]
+  t16 = &t15;
+  ^     ~~~~
+c_files/pr65647.c:8:9: error: initializer element is not a compile-time constant
+  t16 = &t15;
+        ^~~~
+c_files/pr65647.c:11:12: warning: expected ';' at end of declaration list
+    char f4
+           ^
+           ;
+c_files/pr65647.c:20:17: warning: expected ';' at end of declaration list
+    long long f2
+                ^
+                ;
+c_files/pr65647.c:23:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+j[];
+^
+c_files/pr65647.c:24:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+k = j;
+^
+c_files/pr65647.c:24:1: warning: incompatible pointer to integer conversion initializing 'int' with an expression of type 'int []' [-Wint-conversion]
+k = j;
+^   ~
+c_files/pr65647.c:24:5: error: initializer element is not a compile-time constant
+k = j;
+    ^
+c_files/pr65647.c:25:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+v = &d;
+^
+c_files/pr65647.c:25:1: warning: incompatible pointer to integer conversion initializing 'int' with an expression of type 'struct S1 *' [-Wint-conversion]
+v = &d;
+^   ~~
+c_files/pr65647.c:25:5: error: initializer element is not a compile-time constant
+v = &d;
+    ^~
+c_files/pr65647.c:26:2: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+*t10 = j;
+ ^
+c_files/pr65647.c:33:10: warning: incompatible pointer types initializing 'short *' with an expression of type 'int *' [-Wincompatible-pointer-types]
+  short *t5 = &l;
+         ^    ~~
+c_files/pr65647.c:41:3: warning: implicit declaration of function 'fn3' is invalid in C99 [-Wimplicit-function-declaration]
+  fn3(y);
+  ^
+c_files/pr65647.c:44:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+fn4() {
+^
+c_files/pr65647.c:46:3: warning: implicit declaration of function 'fn5' is invalid in C99 [-Wimplicit-function-declaration]
+  fn5(k, t7);
+  ^
+c_files/pr65647.c:57:16: warning: implicit declaration of function 'fn6' is invalid in C99 [-Wimplicit-function-declaration]
+    s = t16 <= fn6();
+               ^
+c_files/pr65647.c:23:1: warning: tentative array definition assumed to have one element
+j[];
+^
+46 warnings and 7 errors generated.
+TranslationUnitDecl 0x7fb46a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb46a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb46a026740 '__int128'
+|-TypedefDecl 0x7fb46a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb46a026760 'unsigned __int128'
+|-TypedefDecl 0x7fb46a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb46a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb46a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb46a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb46a026dc0 'char *'
+|   `-BuiltinType 0x7fb46a026560 'char'
+|-TypedefDecl 0x7fb46a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb46a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb46a026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb46a026e58 '__va_list_tag'
+|-VarDecl 0x7fb46a027138 <c_files/pr65647.c:6:1> col:1 used a 'int'
+|-VarDecl 0x7fb46a825a00 <col:1, col:4> col:4 used b 'int'
+|-VarDecl 0x7fb46a825a78 <col:1, col:7> col:7 used c 'int'
+|-VarDecl 0x7fb46a825af0 <col:1, col:10> col:10 used e 'int'
+|-VarDecl 0x7fb46a825b68 <col:1, col:18> col:13 used g 'int' cinit
+| `-ImplicitCastExpr 0x7fb46a825c38 <col:17, col:18> 'int' <PointerToIntegral>
+|   `-UnaryOperator 0x7fb46a825c18 <col:17, col:18> 'int *' prefix '&'
+|     `-DeclRefExpr 0x7fb46a825bc8 <col:18> 'int' lvalue Var 0x7fb46a825af0 'e' 'int'
+|-VarDecl 0x7fb46a826018 <col:1, col:21> col:21 used h 'int'
+|-VarDecl 0x7fb46a826090 <col:1, col:28> col:24 used i 'int' cinit
+| `-IntegerLiteral 0x7fb46a8260f0 <col:28> 'int' 7
+|-VarDecl 0x7fb46a826128 <col:1, col:35> col:31 used l 'int' cinit
+| `-IntegerLiteral 0x7fb46a826188 <col:35> 'int' 1
+|-VarDecl 0x7fb46a8261c0 <col:1, col:38> col:38 used m 'int'
+|-VarDecl 0x7fb46a826238 <col:1, col:41> col:41 used n 'int'
+|-VarDecl 0x7fb46a8262b0 <col:1, col:44> col:44 used o 'int'
+|-VarDecl 0x7fb46a826328 <col:1, col:52> col:47 used q 'int' cinit
+| `-ImplicitCastExpr 0x7fb46a8263d0 <col:51, col:52> 'int' <PointerToIntegral>
+|   `-UnaryOperator 0x7fb46a8263b0 <col:51, col:52> 'int *' prefix '&'
+|     `-DeclRefExpr 0x7fb46a826388 <col:52> 'int' lvalue Var 0x7fb46a8261c0 'm' 'int'
+|-VarDecl 0x7fb46a826400 <col:1, col:55> col:55 used r 'int'
+|-VarDecl 0x7fb46a826478 <col:1, col:63> col:58 used s 'int' cinit
+| `-ImplicitCastExpr 0x7fb46a826520 <col:62, col:63> 'int' <PointerToIntegral>
+|   `-UnaryOperator 0x7fb46a826500 <col:62, col:63> 'int *' prefix '&'
+|     `-DeclRefExpr 0x7fb46a8264d8 <col:63> 'int' lvalue Var 0x7fb46a826400 'r' 'int'
+|-VarDecl 0x7fb46a826550 <col:1, col:66> col:66 used u 'int'
+|-VarDecl 0x7fb46a8265c8 <col:1, col:73> col:69 used w 'int' cinit
+| `-IntegerLiteral 0x7fb46a826628 <col:73> 'int' 9
+|-VarDecl 0x7fb46a826660 <col:1, col:76> col:76 used x 'int'
+|-VarDecl 0x7fb46a8266d8 <col:1, line:7:7> col:3 used y 'int' cinit
+| `-IntegerLiteral 0x7fb46a826738 <col:7> 'int' 6
+|-VarDecl 0x7fb46a826770 <line:6:1, line:7:10> col:10 used z 'int'
+|-VarDecl 0x7fb46a8267e8 <line:6:1, line:7:18> col:13 used t6 'int' cinit
+| `-IntegerLiteral 0x7fb46a826848 <col:18> 'int' 7
+|-VarDecl 0x7fb46a826880 <line:6:1, line:7:21> col:21 used t8 'int'
+|-VarDecl 0x7fb46a8268f8 <line:6:1, line:7:30> col:25 used t9 'int' cinit
+| `-IntegerLiteral 0x7fb46a826958 <col:30> 'int' 1
+|-VarDecl 0x7fb46a826990 <line:6:1, line:7:39> col:33 used t11 'int' cinit
+| `-IntegerLiteral 0x7fb46a827a00 <col:39> 'int' 5
+|-VarDecl 0x7fb46a827a38 <line:6:1, line:7:49> col:42 used t12 'int' cinit
+| `-ImplicitCastExpr 0x7fb46a827ae0 <col:48, col:49> 'int' <PointerToIntegral>
+|   `-UnaryOperator 0x7fb46a827ac0 <col:48, col:49> 'int *' prefix '&'
+|     `-DeclRefExpr 0x7fb46a827a98 <col:49> 'int' lvalue Var 0x7fb46a826880 't8' 'int'
+|-VarDecl 0x7fb46a827b10 <line:6:1, line:7:59> col:53 used t13 'int' cinit
+| `-IntegerLiteral 0x7fb46a827b70 <col:59> 'int' 3
+|-VarDecl 0x7fb46a827ba8 <line:6:1, line:7:62> col:62 used t15 'int'
+|-VarDecl 0x7fb46a827c20 <line:6:1, line:8:10> col:3 used t16 'int' cinit
+| `-ImplicitCastExpr 0x7fb46a827cc8 <col:9, col:10> 'int' <PointerToIntegral>
+|   `-UnaryOperator 0x7fb46a827ca8 <col:9, col:10> 'int *' prefix '&'
+|     `-DeclRefExpr 0x7fb46a827c80 <col:10> 'int' lvalue Var 0x7fb46a827ba8 't15' 'int'
+|-RecordDecl 0x7fb46a827dc0 <line:9:1, line:12:1> line:9:1 struct definition
+| |-FieldDecl 0x7fb46a827e88 <line:10:3, col:13> col:13 referenced f3 'long long'
+| `-FieldDecl 0x7fb46a827ee0 <line:11:5, col:10> col:10 referenced f4 'char'
+|-VarDecl 0x7fb46a827f80 <line:9:1, line:12:9> col:3 used p 'struct (anonymous struct at c_files/pr65647.c:9:1)':'struct (anonymous at c_files/pr65647.c:9:1)' cinit
+| `-InitListExpr 0x7fb46a828048 <col:7, col:9> 'struct (anonymous struct at c_files/pr65647.c:9:1)':'struct (anonymous at c_files/pr65647.c:9:1)'
+|   |-ImplicitCastExpr 0x7fb46a828098 <col:8> 'long long' <IntegralCast>
+|   | `-IntegerLiteral 0x7fb46a827fe0 <col:8> 'int' 3
+|   `-ImplicitValueInitExpr 0x7fb46a8280b0 <<invalid sloc>> 'char'
+|-VarDecl 0x7fb46a8280e0 <line:9:1, line:15:9> col:3 used t 'struct (anonymous struct at c_files/pr65647.c:9:1)':'struct (anonymous at c_files/pr65647.c:9:1)' cinit
+| `-InitListExpr 0x7fb46a8281a8 <col:7, col:9> 'struct (anonymous struct at c_files/pr65647.c:9:1)':'struct (anonymous at c_files/pr65647.c:9:1)'
+|   |-ImplicitCastExpr 0x7fb46a8281f8 <col:8> 'long long' <IntegralCast>
+|   | `-IntegerLiteral 0x7fb46a828140 <col:8> 'int' 4
+|   `-ImplicitValueInitExpr 0x7fb46a828210 <<invalid sloc>> 'char'
+|-RecordDecl 0x7fb46a828240 <line:17:1, line:21:1> line:17:8 struct S1 definition
+| |-FieldDecl 0x7fb46a828308 <line:18:3, col:13> col:13 f0 'long long'
+| |-FieldDecl 0x7fb46a828368 <line:19:3, col:9> col:9 f1 'short'
+| `-FieldDecl 0x7fb46a8283c8 <line:20:5, col:15> col:15 f2 'long long'
+|-VarDecl 0x7fb46a828460 <line:17:1, line:21:3> col:3 used d 'struct S1':'struct S1'
+|-VarDecl 0x7fb46a8284f0 <line:22:1, col:15> col:11 used f 'long long' cinit
+| `-ImplicitCastExpr 0x7fb46a828570 <col:15> 'long long' <IntegralCast>
+|   `-IntegerLiteral 0x7fb46a828550 <col:15> 'long' 4073709551613
+|-VarDecl 0x7fb46a8285a0 <col:1, col:35> col:30 used t7 'long long' cinit
+| `-ImplicitCastExpr 0x7fb46a828620 <col:35> 'long long' <IntegralCast>
+|   `-IntegerLiteral 0x7fb46a828600 <col:35> 'int' 8
+|-VarDecl 0x7fb46a828650 <col:1, col:44> col:38 used t14 'long long' cinit
+| `-ImplicitCastExpr 0x7fb46a8286d0 <col:44> 'long long' <IntegralCast>
+|   `-IntegerLiteral 0x7fb46a8286b0 <col:44> 'long' 4073709551610
+|-VarDecl 0x7fb46a828760 <line:23:1, col:3> col:1 used j 'int [1]'
+|-VarDecl 0x7fb46a8287d8 <line:24:1, col:5> col:1 used k 'int' cinit
+| `-ImplicitCastExpr 0x7fb46a828878 <col:5> 'int' <PointerToIntegral>
+|   `-ImplicitCastExpr 0x7fb46a828860 <col:5> 'int *' <ArrayToPointerDecay>
+|     `-DeclRefExpr 0x7fb46a828838 <col:5> 'int []' lvalue Var 0x7fb46a828760 'j' 'int [1]'
+|-VarDecl 0x7fb46a8288a8 <line:25:1, col:6> col:1 used v 'int' cinit
+| `-ImplicitCastExpr 0x7fb46a8289a8 <col:5, col:6> 'int' <PointerToIntegral>
+|   `-UnaryOperator 0x7fb46a828988 <col:5, col:6> 'struct S1 *' prefix '&'
+|     `-DeclRefExpr 0x7fb46a828908 <col:6> 'struct S1':'struct S1' lvalue Var 0x7fb46a828460 'd' 'struct S1':'struct S1'
+|-VarDecl 0x7fb46a826a00 <line:26:1, col:8> col:2 used t10 'int *' cinit
+| `-ImplicitCastExpr 0x7fb46a826a88 <col:8> 'int *' <ArrayToPointerDecay>
+|   `-DeclRefExpr 0x7fb46a826a60 <col:8> 'int []' lvalue Var 0x7fb46a828760 'j' 'int [1]'
+|-FunctionDecl 0x7fb46a826b28 <line:27:1, col:15> col:11 used fn1 'struct S1 ()'
+|-FunctionDecl 0x7fb46a826bf0 <line:28:1, line:42:1> line:28:11 fn2 'struct S1 ()'
+| `-CompoundStmt 0x7fb46a828a00 <col:17, line:42:1>
+|   |-DeclStmt 0x7fb46a826d00 <line:29:3, col:17>
+|   | `-VarDecl 0x7fb46a826ca0 <col:3, col:15> col:15 used t1 'signed char'
+|   |-DeclStmt 0x7fb46a826d98 <line:30:3, col:15>
+|   | `-VarDecl 0x7fb46a826d38 <col:3, col:13> col:13 used t2 'struct S1':'struct S1'
+|   |-DeclStmt 0x7fb46a826e80 <line:31:3, col:14>
+|   | `-VarDecl 0x7fb46a826dc8 <col:3, col:13> col:8 used t3 'long' cinit
+|   |   `-ImplicitCastExpr 0x7fb46a826e68 <col:13> 'long' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fb46a826e50 <col:13> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fb46a826e28 <col:13> 'int' lvalue Var 0x7fb46a826660 'x' 'int'
+|   |-DeclStmt 0x7fb46a826f68 <line:32:3, col:15>
+|   | `-VarDecl 0x7fb46a826eb0 <col:3, col:14> col:9 used t4 'short' cinit
+|   |   `-ImplicitCastExpr 0x7fb46a826f50 <col:14> 'short' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fb46a826f38 <col:14> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fb46a826f10 <col:14> 'int' lvalue Var 0x7fb46a826018 'h' 'int'
+|   |-DeclStmt 0x7fb46a827080 <line:33:3, col:17>
+|   | `-VarDecl 0x7fb46a826fc0 <col:3, col:16> col:10 used t5 'short *' cinit
+|   |   `-ImplicitCastExpr 0x7fb46a827068 <col:15, col:16> 'short *' <BitCast>
+|   |     `-UnaryOperator 0x7fb46a827048 <col:15, col:16> 'int *' prefix '&'
+|   |       `-DeclRefExpr 0x7fb46a827020 <col:16> 'int' lvalue Var 0x7fb46a826128 'l' 'int'
+|   |-CallExpr 0x7fb46a8271d0 <line:34:3, col:18> 'struct S1':'struct S1'
+|   | |-ImplicitCastExpr 0x7fb46a8271b8 <col:3> 'struct S1 (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fb46a827098 <col:3> 'struct S1 ()' Function 0x7fb46a826b28 'fn1' 'struct S1 ()'
+|   | |-ImplicitCastExpr 0x7fb46a827218 <col:7> 'struct S1':'struct S1' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fb46a8270c0 <col:7> 'struct S1':'struct S1' lvalue Var 0x7fb46a826d38 't2' 'struct S1':'struct S1'
+|   | |-ImplicitCastExpr 0x7fb46a827230 <col:11> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fb46a8270e8 <col:11> 'int' lvalue Var 0x7fb46a8265c8 'w' 'int'
+|   | |-IntegerLiteral 0x7fb46a827110 <col:14> 'int' 1
+|   | `-ImplicitCastExpr 0x7fb46a827248 <col:17> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fb46a827130 <col:17> 'int' lvalue Var 0x7fb46a8262b0 'o' 'int'
+|   |-IfStmt 0x7fb46a8276d0 <line:35:3, line:39:3>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fb46a827288 <line:35:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fb46a827260 <col:7> 'int' lvalue Var 0x7fb46a826550 'u' 'int'
+|   | |-CompoundStmt 0x7fb46a8276a0 <col:10, line:39:3>
+|   | | |-BinaryOperator 0x7fb46a827308 <line:36:5, col:9> 'int' '='
+|   | | | |-DeclRefExpr 0x7fb46a8272a0 <col:5> 'int' lvalue Var 0x7fb46a826128 'l' 'int'
+|   | | | `-ImplicitCastExpr 0x7fb46a8272f0 <col:9> 'int' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7fb46a8272c8 <col:9> 'int' lvalue Var 0x7fb46a826328 'q' 'int'
+|   | | |-BinaryOperator 0x7fb46a8274b8 <line:37:5, col:19> 'signed char' '='
+|   | | | |-DeclRefExpr 0x7fb46a827330 <col:5> 'signed char' lvalue Var 0x7fb46a826ca0 't1' 'signed char'
+|   | | | `-ImplicitCastExpr 0x7fb46a8274a0 <col:10, col:19> 'signed char' <IntegralCast>
+|   | | |   `-BinaryConditionalOperator 0x7fb46a827460 <col:10, col:19> 'int'
+|   | | |     |-BinaryOperator 0x7fb46a8273d8 <col:10, col:14> 'int' '<'
+|   | | |     | |-ImplicitCastExpr 0x7fb46a8273a8 <col:10> 'int' <LValueToRValue>
+|   | | |     | | `-DeclRefExpr 0x7fb46a827358 <col:10> 'int' lvalue Var 0x7fb46a027138 'a' 'int'
+|   | | |     | `-ImplicitCastExpr 0x7fb46a8273c0 <col:14> 'int' <LValueToRValue>
+|   | | |     |   `-DeclRefExpr 0x7fb46a827380 <col:14> 'int' lvalue Var 0x7fb46a825a00 'b' 'int'
+|   | | |     |-OpaqueValueExpr 0x7fb46a827428 <col:10, col:14> 'int'
+|   | | |     | `-BinaryOperator 0x7fb46a8273d8 <col:10, col:14> 'int' '<'
+|   | | |     |   |-ImplicitCastExpr 0x7fb46a8273a8 <col:10> 'int' <LValueToRValue>
+|   | | |     |   | `-DeclRefExpr 0x7fb46a827358 <col:10> 'int' lvalue Var 0x7fb46a027138 'a' 'int'
+|   | | |     |   `-ImplicitCastExpr 0x7fb46a8273c0 <col:14> 'int' <LValueToRValue>
+|   | | |     |     `-DeclRefExpr 0x7fb46a827380 <col:14> 'int' lvalue Var 0x7fb46a825a00 'b' 'int'
+|   | | |     |-OpaqueValueExpr 0x7fb46a827428 <col:10, col:14> 'int'
+|   | | |     | `-BinaryOperator 0x7fb46a8273d8 <col:10, col:14> 'int' '<'
+|   | | |     |   |-ImplicitCastExpr 0x7fb46a8273a8 <col:10> 'int' <LValueToRValue>
+|   | | |     |   | `-DeclRefExpr 0x7fb46a827358 <col:10> 'int' lvalue Var 0x7fb46a027138 'a' 'int'
+|   | | |     |   `-ImplicitCastExpr 0x7fb46a8273c0 <col:14> 'int' <LValueToRValue>
+|   | | |     |     `-DeclRefExpr 0x7fb46a827380 <col:14> 'int' lvalue Var 0x7fb46a825a00 'b' 'int'
+|   | | |     `-ImplicitCastExpr 0x7fb46a827448 <col:19> 'int' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7fb46a827400 <col:19> 'int' lvalue Var 0x7fb46a825a00 'b' 'int'
+|   | | `-BinaryOperator 0x7fb46a827678 <line:38:5, col:25> 'int' '='
+|   | |   |-DeclRefExpr 0x7fb46a8274e0 <col:5> 'int' lvalue Var 0x7fb46a826770 'z' 'int'
+|   | |   `-BinaryOperator 0x7fb46a827650 <col:9, col:25> 'int' '||'
+|   | |     |-BinaryOperator 0x7fb46a827568 <col:9, col:14> 'int' '>='
+|   | |     | |-ImplicitCastExpr 0x7fb46a827550 <col:9> 'int' <LValueToRValue>
+|   | |     | | `-DeclRefExpr 0x7fb46a827508 <col:9> 'int' lvalue Var 0x7fb46a825a78 'c' 'int'
+|   | |     | `-IntegerLiteral 0x7fb46a827530 <col:14> 'int' 2
+|   | |     `-BinaryOperator 0x7fb46a827628 <col:19, col:25> 'int' '<<'
+|   | |       |-ImplicitCastExpr 0x7fb46a8275f8 <col:19> 'int' <IntegralCast>
+|   | |       | `-ImplicitCastExpr 0x7fb46a8275e0 <col:19> 'signed char' <LValueToRValue>
+|   | |       |   `-DeclRefExpr 0x7fb46a827590 <col:19> 'signed char' lvalue Var 0x7fb46a826ca0 't1' 'signed char'
+|   | |       `-ImplicitCastExpr 0x7fb46a827610 <col:25> 'int' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x7fb46a8275b8 <col:25> 'int' lvalue Var 0x7fb46a825a78 'c' 'int'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fb46a827808 <line:40:3, col:15> 'short' '='
+|   | |-UnaryOperator 0x7fb46a827748 <col:3, col:4> 'short' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7fb46a827730 <col:4> 'short *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fb46a827708 <col:4> 'short *' lvalue Var 0x7fb46a826fc0 't5' 'short *'
+|   | `-CompoundAssignOperator 0x7fb46a8277d0 <col:9, col:15> 'short' '&=' ComputeLHSTy='long' ComputeResultTy='long'
+|   |   |-DeclRefExpr 0x7fb46a827768 <col:9> 'short' lvalue Var 0x7fb46a826eb0 't4' 'short'
+|   |   `-ImplicitCastExpr 0x7fb46a8277b8 <col:15> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fb46a827790 <col:15> 'long' lvalue Var 0x7fb46a826dc8 't3' 'long'
+|   `-CallExpr 0x7fb46a8279b0 <line:41:3, col:8> 'int'
+|     |-ImplicitCastExpr 0x7fb46a827998 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fb46a827918 <col:3> 'int ()' Function 0x7fb46a827880 'fn3' 'int ()'
+|     `-ImplicitCastExpr 0x7fb46a8279e0 <col:7> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb46a827940 <col:7> 'int' lvalue Var 0x7fb46a8266d8 'y' 'int'
+|-FunctionDecl 0x7fb46a827880 <<invalid sloc>> col:3 implicit used fn3 'int ()'
+|-FunctionDecl 0x7fb46a828a88 <line:44:1, line:47:1> line:44:1 fn4 'int ()'
+| `-CompoundStmt 0x7fb46a828e08 <col:7, line:47:1>
+|   |-BinaryOperator 0x7fb46a828bd8 <line:45:3, col:10> 'int' '='
+|   | |-DeclRefExpr 0x7fb46a828b20 <col:3> 'int' lvalue Var 0x7fb46a8267e8 't6' 'int'
+|   | `-ImplicitCastExpr 0x7fb46a828bc0 <col:8, col:10> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7fb46a828ba8 <col:8, col:10> 'long long' <LValueToRValue>
+|   |     `-MemberExpr 0x7fb46a828b70 <col:8, col:10> 'long long' lvalue .f3 0x7fb46a827e88
+|   |       `-DeclRefExpr 0x7fb46a828b48 <col:8> 'struct (anonymous struct at c_files/pr65647.c:9:1)':'struct (anonymous at c_files/pr65647.c:9:1)' lvalue Var 0x7fb46a8280e0 't' 'struct (anonymous struct at c_files/pr65647.c:9:1)':'struct (anonymous at c_files/pr65647.c:9:1)'
+|   `-CallExpr 0x7fb46a828da0 <line:46:3, col:12> 'int'
+|     |-ImplicitCastExpr 0x7fb46a828d88 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fb46a828d10 <col:3> 'int ()' Function 0x7fb46a828c78 'fn5' 'int ()'
+|     |-ImplicitCastExpr 0x7fb46a828dd8 <col:7> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fb46a828d38 <col:7> 'int' lvalue Var 0x7fb46a8287d8 'k' 'int'
+|     `-ImplicitCastExpr 0x7fb46a828df0 <col:10> 'long long' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb46a828d60 <col:10> 'long long' lvalue Var 0x7fb46a8285a0 't7' 'long long'
+|-FunctionDecl 0x7fb46a828c78 <<invalid sloc>> col:3 implicit used fn5 'int ()'
+|-FunctionDecl 0x7fb46a828e60 prev 0x7fb46a826b28 <line:49:1, line:60:1> line:49:11 used fn1 'struct S1 ()'
+| `-CompoundStmt 0x7fb46a829600 <col:17, line:60:1>
+|   |-BinaryOperator 0x7fb46a828f58 <line:50:3, col:7> 'long long' '='
+|   | |-DeclRefExpr 0x7fb46a828ef8 <col:3> 'long long' lvalue Var 0x7fb46a8284f0 'f' 'long long'
+|   | `-ImplicitCastExpr 0x7fb46a828f40 <col:7> 'long long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fb46a828f20 <col:7> 'int' 0
+|   |-ForStmt 0x7fb46a828fd0 <line:51:3, line:52:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fb46a828fa8 <line:51:10> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fb46a828f80 <col:10> 'int' lvalue Var 0x7fb46a826090 'i' 'int'
+|   | |-<<<NULL>>>
+|   | `-NullStmt 0x7fb46a828fc0 <line:52:5>
+|   |-BinaryOperator 0x7fb46a829050 <line:53:3, col:9> 'int' '='
+|   | |-DeclRefExpr 0x7fb46a829008 <col:3> 'int' lvalue Var 0x7fb46a826990 't11' 'int'
+|   | `-IntegerLiteral 0x7fb46a829030 <col:9> 'int' 0
+|   |-BinaryOperator 0x7fb46a8291d0 <line:54:3, col:23> 'int' '='
+|   | |-DeclRefExpr 0x7fb46a829078 <col:3> 'int' lvalue Var 0x7fb46a827b10 't13' 'int'
+|   | `-BinaryOperator 0x7fb46a8291a8 <col:9, col:23> 'int' '='
+|   |   |-UnaryOperator 0x7fb46a8290e0 <col:9, col:10> 'int' lvalue prefix '*'
+|   |   | `-ImplicitCastExpr 0x7fb46a8290c8 <col:10> 'int *' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fb46a8290a0 <col:10> 'int *' lvalue Var 0x7fb46a826a00 't10' 'int *'
+|   |   `-BinaryOperator 0x7fb46a829180 <col:16, col:23> 'int' '||'
+|   |     |-ImplicitCastExpr 0x7fb46a829150 <col:16> 'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fb46a829100 <col:16> 'long long' lvalue Var 0x7fb46a828650 't14' 'long long'
+|   |     `-ImplicitCastExpr 0x7fb46a829168 <col:23> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fb46a829128 <col:23> 'int' lvalue Var 0x7fb46a826238 'n' 'int'
+|   |-BinaryOperator 0x7fb46a829260 <line:55:3, col:8> 'int' '='
+|   | |-DeclRefExpr 0x7fb46a8291f8 <col:3> 'int' lvalue Var 0x7fb46a8268f8 't9' 'int'
+|   | `-ImplicitCastExpr 0x7fb46a829248 <col:8> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fb46a829220 <col:8> 'int' lvalue Var 0x7fb46a827a38 't12' 'int'
+|   |-ForStmt 0x7fb46a8294e0 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fb46a8292e8 <line:56:10, col:12> 'char' <LValueToRValue>
+|   | | `-MemberExpr 0x7fb46a8292b0 <col:10, col:12> 'char' lvalue .f4 0x7fb46a827ee0
+|   | |   `-DeclRefExpr 0x7fb46a829288 <col:10> 'struct (anonymous struct at c_files/pr65647.c:9:1)':'struct (anonymous at c_files/pr65647.c:9:1)' lvalue Var 0x7fb46a827f80 'p' 'struct (anonymous struct at c_files/pr65647.c:9:1)':'struct (anonymous at c_files/pr65647.c:9:1)'
+|   | |-<<<NULL>>>
+|   | `-BinaryOperator 0x7fb46a8294b8 <line:57:5, col:20> 'int' '='
+|   |   |-DeclRefExpr 0x7fb46a829300 <col:5> 'int' lvalue Var 0x7fb46a826478 's' 'int'
+|   |   `-BinaryOperator 0x7fb46a829490 <col:9, col:20> 'int' '<='
+|   |     |-ImplicitCastExpr 0x7fb46a829478 <col:9> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fb46a829328 <col:9> 'int' lvalue Var 0x7fb46a827c20 't16' 'int'
+|   |     `-CallExpr 0x7fb46a829450 <col:16, col:20> 'int'
+|   |       `-ImplicitCastExpr 0x7fb46a829438 <col:16> 'int (*)()' <FunctionToPointerDecay>
+|   |         `-DeclRefExpr 0x7fb46a829410 <col:16> 'int ()' Function 0x7fb46a829378 'fn6' 'int ()'
+|   `-IfStmt 0x7fb46a8295c8 <line:58:3, line:59:9>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fb46a829540 <line:58:7> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fb46a829518 <col:7> 'int' lvalue Var 0x7fb46a825b68 'g' 'int'
+|     |-BinaryOperator 0x7fb46a8295a0 <line:59:5, col:9> 'int' '='
+|     | |-DeclRefExpr 0x7fb46a829558 <col:5> 'int' lvalue Var 0x7fb46a8288a8 'v' 'int'
+|     | `-IntegerLiteral 0x7fb46a829580 <col:9> 'int' 0
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fb46a829378 <<invalid sloc>> line:57:16 implicit used fn6 'int ()'

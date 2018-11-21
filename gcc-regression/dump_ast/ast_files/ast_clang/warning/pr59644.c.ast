@@ -1,0 +1,201 @@
+c_files/pr59644.c:11:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone))
+                         ^
+c_files/pr59644.c:25:35: warning: unknown attribute 'optimize' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone, optimize ("Os")))
+                                  ^
+c_files/pr59644.c:25:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone, optimize ("Os")))
+                         ^
+3 warnings generated.
+TranslationUnitDecl 0x7fa63a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa63a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa63a826740 '__int128'
+|-TypedefDecl 0x7fa63a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa63a826760 'unsigned __int128'
+|-TypedefDecl 0x7fa63a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa63a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa63a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa63a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa63a826dc0 'char *'
+|   `-BuiltinType 0x7fa63a826560 'char'
+|-TypedefDecl 0x7fa63a8270c8 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa63a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa63a826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa63a826e58 '__va_list_tag'
+|-TypedefDecl 0x7fa63a827150 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:30:1, col:27> col:27 referenced va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7fa63a827120 '__builtin_va_list' sugar
+|   |-Typedef 0x7fa63a8270c8 '__builtin_va_list'
+|   `-ConstantArrayType 0x7fa63a827070 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7fa63a826ee0 'struct __va_list_tag'
+|       `-Record 0x7fa63a826e58 '__va_list_tag'
+|-TypedefDecl 0x7fa63b027a00 <line:48:1, col:27> col:27 __gnuc_va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7fa63a827120 '__builtin_va_list' sugar
+|   |-Typedef 0x7fa63a8270c8 '__builtin_va_list'
+|   `-ConstantArrayType 0x7fa63a827070 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7fa63a826ee0 'struct __va_list_tag'
+|       `-Record 0x7fa63a826e58 '__va_list_tag'
+|-FunctionDecl 0x7fa63b027eb8 <c_files/pr59644.c:11:1, line:23:1> line:13:1 used bar 'int (int, int, int, int, const char *, struct __va_list_tag *)'
+| |-ParmVarDecl 0x7fa63b027a70 <col:6, col:10> col:10 used x 'int'
+| |-ParmVarDecl 0x7fa63b027ae8 <col:13, col:17> col:17 used y 'int'
+| |-ParmVarDecl 0x7fa63b027b60 <col:20, col:24> col:24 used z 'int'
+| |-ParmVarDecl 0x7fa63b027bd8 <col:27, col:31> col:31 used w 'int'
+| |-ParmVarDecl 0x7fa63b027c50 <col:34, col:46> col:46 used fmt 'const char *'
+| |-ParmVarDecl 0x7fa63b027d40 <col:51, col:59> col:59 used ap 'struct __va_list_tag *':'struct __va_list_tag *'
+| |-CompoundStmt 0x7fa63b02ace0 <line:14:1, line:23:1>
+| | |-IfStmt 0x7fa63b028448 <line:15:3, line:16:21>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fa63b028278 <line:15:7, col:42> 'int' '||'
+| | | | |-BinaryOperator 0x7fa63b0281c8 <col:7, col:32> 'int' '||'
+| | | | | |-BinaryOperator 0x7fa63b028118 <col:7, col:22> 'int' '||'
+| | | | | | |-BinaryOperator 0x7fa63b028068 <col:7, col:12> 'int' '!='
+| | | | | | | |-ImplicitCastExpr 0x7fa63b028050 <col:7> 'int' <LValueToRValue>
+| | | | | | | | `-DeclRefExpr 0x7fa63b028008 <col:7> 'int' lvalue ParmVar 0x7fa63b027a70 'x' 'int'
+| | | | | | | `-IntegerLiteral 0x7fa63b028030 <col:12> 'int' 1
+| | | | | | `-BinaryOperator 0x7fa63b0280f0 <col:17, col:22> 'int' '!='
+| | | | | |   |-ImplicitCastExpr 0x7fa63b0280d8 <col:17> 'int' <LValueToRValue>
+| | | | | |   | `-DeclRefExpr 0x7fa63b028090 <col:17> 'int' lvalue ParmVar 0x7fa63b027ae8 'y' 'int'
+| | | | | |   `-IntegerLiteral 0x7fa63b0280b8 <col:22> 'int' 2
+| | | | | `-BinaryOperator 0x7fa63b0281a0 <col:27, col:32> 'int' '!='
+| | | | |   |-ImplicitCastExpr 0x7fa63b028188 <col:27> 'int' <LValueToRValue>
+| | | | |   | `-DeclRefExpr 0x7fa63b028140 <col:27> 'int' lvalue ParmVar 0x7fa63b027b60 'z' 'int'
+| | | | |   `-IntegerLiteral 0x7fa63b028168 <col:32> 'int' 3
+| | | | `-BinaryOperator 0x7fa63b028250 <col:37, col:42> 'int' '!='
+| | | |   |-ImplicitCastExpr 0x7fa63b028238 <col:37> 'int' <LValueToRValue>
+| | | |   | `-DeclRefExpr 0x7fa63b0281f0 <col:37> 'int' lvalue ParmVar 0x7fa63b027bd8 'w' 'int'
+| | | |   `-IntegerLiteral 0x7fa63b028218 <col:42> 'int' 4
+| | | |-CallExpr 0x7fa63b028420 <line:16:5, col:21> 'void'
+| | | | `-ImplicitCastExpr 0x7fa63b028408 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | | |   `-DeclRefExpr 0x7fa63b0283b0 <col:5> '<builtin fn type>' Function 0x7fa63b0282d0 '__builtin_trap' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | |-IfStmt 0x7fa63b028900 <line:17:3, line:18:21>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fa63b028870 <line:17:7, col:63> 'int' '||'
+| | | | |-BinaryOperator 0x7fa63b028790 <col:7, col:51> 'int' '||'
+| | | | | |-BinaryOperator 0x7fa63b028670 <col:7, col:34> 'int' '||'
+| | | | | | |-BinaryOperator 0x7fa63b028550 <col:7, col:17> 'int' '!='
+| | | | | | | |-ImplicitCastExpr 0x7fa63b028538 <col:7, col:12> 'int' <IntegralCast>
+| | | | | | | | `-ImplicitCastExpr 0x7fa63b028520 <col:7, col:12> 'char' <LValueToRValue>
+| | | | | | | |   `-ArraySubscriptExpr 0x7fa63b0284e0 <col:7, col:12> 'const char' lvalue
+| | | | | | | |     |-ImplicitCastExpr 0x7fa63b0284c8 <col:7> 'const char *' <LValueToRValue>
+| | | | | | | |     | `-DeclRefExpr 0x7fa63b028480 <col:7> 'const char *' lvalue ParmVar 0x7fa63b027c50 'fmt' 'const char *'
+| | | | | | | |     `-IntegerLiteral 0x7fa63b0284a8 <col:11> 'int' 0
+| | | | | | | `-CharacterLiteral 0x7fa63b028508 <col:17> 'int' 102
+| | | | | | `-BinaryOperator 0x7fa63b028648 <col:24, col:34> 'int' '!='
+| | | | | |   |-ImplicitCastExpr 0x7fa63b028630 <col:24, col:29> 'int' <IntegralCast>
+| | | | | |   | `-ImplicitCastExpr 0x7fa63b028618 <col:24, col:29> 'char' <LValueToRValue>
+| | | | | |   |   `-ArraySubscriptExpr 0x7fa63b0285d8 <col:24, col:29> 'const char' lvalue
+| | | | | |   |     |-ImplicitCastExpr 0x7fa63b0285c0 <col:24> 'const char *' <LValueToRValue>
+| | | | | |   |     | `-DeclRefExpr 0x7fa63b028578 <col:24> 'const char *' lvalue ParmVar 0x7fa63b027c50 'fmt' 'const char *'
+| | | | | |   |     `-IntegerLiteral 0x7fa63b0285a0 <col:28> 'int' 1
+| | | | | |   `-CharacterLiteral 0x7fa63b028600 <col:34> 'int' 111
+| | | | | `-BinaryOperator 0x7fa63b028768 <col:41, col:51> 'int' '!='
+| | | | |   |-ImplicitCastExpr 0x7fa63b028750 <col:41, col:46> 'int' <IntegralCast>
+| | | | |   | `-ImplicitCastExpr 0x7fa63b028738 <col:41, col:46> 'char' <LValueToRValue>
+| | | | |   |   `-ArraySubscriptExpr 0x7fa63b0286f8 <col:41, col:46> 'const char' lvalue
+| | | | |   |     |-ImplicitCastExpr 0x7fa63b0286e0 <col:41> 'const char *' <LValueToRValue>
+| | | | |   |     | `-DeclRefExpr 0x7fa63b028698 <col:41> 'const char *' lvalue ParmVar 0x7fa63b027c50 'fmt' 'const char *'
+| | | | |   |     `-IntegerLiteral 0x7fa63b0286c0 <col:45> 'int' 2
+| | | | |   `-CharacterLiteral 0x7fa63b028720 <col:51> 'int' 111
+| | | | `-ImplicitCastExpr 0x7fa63b028858 <col:58, col:63> 'int' <IntegralCast>
+| | | |   `-ImplicitCastExpr 0x7fa63b028840 <col:58, col:63> 'char' <LValueToRValue>
+| | | |     `-ArraySubscriptExpr 0x7fa63b028818 <col:58, col:63> 'const char' lvalue
+| | | |       |-ImplicitCastExpr 0x7fa63b028800 <col:58> 'const char *' <LValueToRValue>
+| | | |       | `-DeclRefExpr 0x7fa63b0287b8 <col:58> 'const char *' lvalue ParmVar 0x7fa63b027c50 'fmt' 'const char *'
+| | | |       `-IntegerLiteral 0x7fa63b0287e0 <col:62> 'int' 3
+| | | |-CallExpr 0x7fa63b0288d8 <line:18:5, col:21> 'void'
+| | | | `-ImplicitCastExpr 0x7fa63b0288c0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | | |   `-DeclRefExpr 0x7fa63b028898 <col:5> '<builtin fn type>' Function 0x7fa63b0282d0 '__builtin_trap' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | |-IfStmt 0x7fa63b02ac70 <line:19:3, line:21:21>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fa63b02abe0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:35:29, c_files/pr59644.c:20:36> 'int' '||'
+| | | | |-BinaryOperator 0x7fa63b02aaf0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:35:29, c_files/pr59644.c:19:52> 'int' '||'
+| | | | | |-BinaryOperator 0x7fa63b02aa00 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:35:29, c_files/pr59644.c:19:27> 'int' '!='
+| | | | | | |-VAArgExpr 0x7fa63b0289b8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:35:29, col:54> 'int'
+| | | | | | | `-ImplicitCastExpr 0x7fa63b0289a0 <c_files/pr59644.c:19:15> 'struct __va_list_tag *':'struct __va_list_tag *' <LValueToRValue>
+| | | | | | |   `-DeclRefExpr 0x7fa63b028938 <col:15> 'struct __va_list_tag *':'struct __va_list_tag *' lvalue ParmVar 0x7fa63b027d40 'ap' 'struct __va_list_tag *':'struct __va_list_tag *'
+| | | | | | `-IntegerLiteral 0x7fa63b0289e0 <col:27> 'int' 5
+| | | | | `-BinaryOperator 0x7fa63b02aac8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:35:29, c_files/pr59644.c:19:52> 'int' '!='
+| | | | |   |-VAArgExpr 0x7fa63b02aa80 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:35:29, col:54> 'int'
+| | | | |   | `-ImplicitCastExpr 0x7fa63b02aa68 <c_files/pr59644.c:19:40> 'struct __va_list_tag *':'struct __va_list_tag *' <LValueToRValue>
+| | | | |   |   `-DeclRefExpr 0x7fa63b02aa28 <col:40> 'struct __va_list_tag *':'struct __va_list_tag *' lvalue ParmVar 0x7fa63b027d40 'ap' 'struct __va_list_tag *':'struct __va_list_tag *'
+| | | | |   `-IntegerLiteral 0x7fa63b02aaa8 <col:52> 'int' 6
+| | | | `-BinaryOperator 0x7fa63b02abb8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:35:29, c_files/pr59644.c:20:36> 'int' '!='
+| | | |   |-VAArgExpr 0x7fa63b02ab70 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:35:29, col:54> 'long long'
+| | | |   | `-ImplicitCastExpr 0x7fa63b02ab58 <c_files/pr59644.c:20:18> 'struct __va_list_tag *':'struct __va_list_tag *' <LValueToRValue>
+| | | |   |   `-DeclRefExpr 0x7fa63b02ab18 <col:18> 'struct __va_list_tag *':'struct __va_list_tag *' lvalue ParmVar 0x7fa63b027d40 'ap' 'struct __va_list_tag *':'struct __va_list_tag *'
+| | | |   `-IntegerLiteral 0x7fa63b02ab98 <col:36> 'long long' 7
+| | | |-CallExpr 0x7fa63b02ac48 <line:21:5, col:21> 'void'
+| | | | `-ImplicitCastExpr 0x7fa63b02ac30 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | | |   `-DeclRefExpr 0x7fa63b02ac08 <col:5> '<builtin fn type>' Function 0x7fa63b0282d0 '__builtin_trap' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7fa63b02acc8 <line:22:3, col:10>
+| |   `-IntegerLiteral 0x7fa63b02aca8 <col:10> 'int' 9
+| `-NoInlineAttr 0x7fa63b027f80 <line:11:16>
+|-FunctionDecl 0x7fa63b0282d0 <line:16:5> col:5 implicit used __builtin_trap 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fa63b028368 <col:5> Implicit
+|-FunctionDecl 0x7fa63b02ae68 <line:25:1, line:34:1> line:27:1 used foo 'int (const char *, ...)'
+| |-ParmVarDecl 0x7fa63b02ada0 <col:6, col:18> col:18 used fmt 'const char *'
+| |-CompoundStmt 0x7fa63b02b7a0 <line:28:1, line:34:1>
+| | |-DeclStmt 0x7fa63b02afc0 <line:29:3, col:13>
+| | | `-VarDecl 0x7fa63b02af60 <col:3, col:11> col:11 used ap 'va_list':'struct __va_list_tag [1]'
+| | |-CallExpr 0x7fa63b02b220 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:33:29, col:57> 'void'
+| | | |-ImplicitCastExpr 0x7fa63b02b208 <col:29> 'void (*)(struct __va_list_tag *, ...)' <BuiltinFnToFnPtr>
+| | | | `-DeclRefExpr 0x7fa63b02b160 <col:29> '<builtin fn type>' Function 0x7fa63b02b018 '__builtin_va_start' 'void (struct __va_list_tag *, ...)'
+| | | |-ImplicitCastExpr 0x7fa63b02b258 <c_files/pr59644.c:30:13> 'struct __va_list_tag *' <ArrayToPointerDecay>
+| | | | `-DeclRefExpr 0x7fa63b02b188 <col:13> 'va_list':'struct __va_list_tag [1]' lvalue Var 0x7fa63b02af60 'ap' 'va_list':'struct __va_list_tag [1]'
+| | | `-DeclRefExpr 0x7fa63b02b1b0 <col:17> 'const char *' lvalue ParmVar 0x7fa63b02ada0 'fmt' 'const char *'
+| | |-DeclStmt 0x7fa63b02b4d8 <line:31:3, col:36>
+| | | `-VarDecl 0x7fa63b02b288 <col:3, col:35> col:7 used r 'int' cinit
+| | |   `-CallExpr 0x7fa63b02b450 <col:11, col:35> 'int'
+| | |     |-ImplicitCastExpr 0x7fa63b02b438 <col:11> 'int (*)(int, int, int, int, const char *, struct __va_list_tag *)' <FunctionToPointerDecay>
+| | |     | `-DeclRefExpr 0x7fa63b02b2e8 <col:11> 'int (int, int, int, int, const char *, struct __va_list_tag *)' Function 0x7fa63b027eb8 'bar' 'int (int, int, int, int, const char *, struct __va_list_tag *)'
+| | |     |-IntegerLiteral 0x7fa63b02b310 <col:16> 'int' 1
+| | |     |-IntegerLiteral 0x7fa63b02b330 <col:19> 'int' 2
+| | |     |-IntegerLiteral 0x7fa63b02b350 <col:22> 'int' 3
+| | |     |-IntegerLiteral 0x7fa63b02b370 <col:25> 'int' 4
+| | |     |-ImplicitCastExpr 0x7fa63b02b4a8 <col:28> 'const char *' <LValueToRValue>
+| | |     | `-DeclRefExpr 0x7fa63b02b390 <col:28> 'const char *' lvalue ParmVar 0x7fa63b02ada0 'fmt' 'const char *'
+| | |     `-ImplicitCastExpr 0x7fa63b02b4c0 <col:33> 'struct __va_list_tag *' <ArrayToPointerDecay>
+| | |       `-DeclRefExpr 0x7fa63b02b3b8 <col:33> 'va_list':'struct __va_list_tag [1]' lvalue Var 0x7fa63b02af60 'ap' 'va_list':'struct __va_list_tag [1]'
+| | |-CallExpr 0x7fa63b02b700 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:34:29, col:48> 'void'
+| | | |-ImplicitCastExpr 0x7fa63b02b6e8 <col:29> 'void (*)(struct __va_list_tag *)' <BuiltinFnToFnPtr>
+| | | | `-DeclRefExpr 0x7fa63b02b670 <col:29> '<builtin fn type>' Function 0x7fa63b02b528 '__builtin_va_end' 'void (struct __va_list_tag *)'
+| | | `-ImplicitCastExpr 0x7fa63b02b730 <c_files/pr59644.c:32:11> 'struct __va_list_tag *' <ArrayToPointerDecay>
+| | |   `-DeclRefExpr 0x7fa63b02b698 <col:11> 'va_list':'struct __va_list_tag [1]' lvalue Var 0x7fa63b02af60 'ap' 'va_list':'struct __va_list_tag [1]'
+| | `-ReturnStmt 0x7fa63b02b788 <line:33:3, col:10>
+| |   `-ImplicitCastExpr 0x7fa63b02b770 <col:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fa63b02b748 <col:10> 'int' lvalue Var 0x7fa63b02b288 'r' 'int'
+| `-NoInlineAttr 0x7fa63b02af08 <line:25:16>
+|-FunctionDecl 0x7fa63b02b018 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:33:29> col:29 implicit used __builtin_va_start 'void (struct __va_list_tag *, ...)' extern
+| |-ParmVarDecl 0x7fa63b02b0b0 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+| `-NoThrowAttr 0x7fa63b02b118 <col:29> Implicit
+|-FunctionDecl 0x7fa63b02b528 <line:34:29> col:29 implicit used __builtin_va_end 'void (struct __va_list_tag *)' extern
+| |-ParmVarDecl 0x7fa63b02b5c0 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+| `-NoThrowAttr 0x7fa63b02b628 <col:29> Implicit
+`-FunctionDecl 0x7fa63b02b830 <c_files/pr59644.c:36:1, line:42:1> line:37:1 main 'int ()'
+  `-CompoundStmt 0x7fa63b02cb98 <line:38:1, line:42:1>
+    |-IfStmt 0x7fa63b02cb28 <line:39:3, line:40:21>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa63b02ca98 <line:39:7, col:33> 'int' '!='
+    | | |-CallExpr 0x7fa63b02ca00 <col:7, col:28> 'int'
+    | | | |-ImplicitCastExpr 0x7fa63b02b9e8 <col:7> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fa63b02b8c8 <col:7> 'int (const char *, ...)' Function 0x7fa63b02ae68 'foo' 'int (const char *, ...)'
+    | | | |-ImplicitCastExpr 0x7fa63b02ca60 <col:12> 'const char *' <BitCast>
+    | | | | `-ImplicitCastExpr 0x7fa63b02ca48 <col:12> 'char *' <ArrayToPointerDecay>
+    | | | |   `-StringLiteral 0x7fa63b02b928 <col:12> 'char [4]' lvalue "foo"
+    | | | |-IntegerLiteral 0x7fa63b02b958 <col:19> 'int' 5
+    | | | |-IntegerLiteral 0x7fa63b02b978 <col:22> 'int' 6
+    | | | `-IntegerLiteral 0x7fa63b02b998 <col:25> 'long long' 7
+    | | `-IntegerLiteral 0x7fa63b02ca78 <col:33> 'int' 9
+    | |-CallExpr 0x7fa63b02cb00 <line:40:5, col:21> 'void'
+    | | `-ImplicitCastExpr 0x7fa63b02cae8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+    | |   `-DeclRefExpr 0x7fa63b02cac0 <col:5> '<builtin fn type>' Function 0x7fa63b0282d0 '__builtin_trap' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fa63b02cb80 <line:41:3, col:10>
+      `-IntegerLiteral 0x7fa63b02cb60 <col:10> 'int' 0

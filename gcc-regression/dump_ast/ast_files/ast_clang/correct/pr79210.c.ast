@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7f851d8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f851d826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f851d826740 '__int128'
+|-TypedefDecl 0x7f851d826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f851d826760 'unsigned __int128'
+|-TypedefDecl 0x7f851d826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f851d826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f851d826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f851d826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f851d826dc0 'char *'
+|   `-BuiltinType 0x7f851d826560 'char'
+|-TypedefDecl 0x7f851d8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f851d827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f851d826ee0 'struct __va_list_tag'
+|     `-Record 0x7f851d826e58 '__va_list_tag'
+|-FunctionDecl 0x7f851e80cb60 <c_files/pr79210.c:4:1, line:5:67> col:6 used dev_printk 'void (const char *, void *, const char *, ...)'
+| |-ParmVarDecl 0x7f851d827188 <col:17, col:29> col:29 level 'const char *'
+| |-ParmVarDecl 0x7f851e80ca00 <col:36, col:42> col:42 dev 'void *'
+| |-ParmVarDecl 0x7f851e80ca78 <col:47, col:59> col:59 fmt 'const char *'
+| `-FormatAttr 0x7f851e80cc10 <line:4:16, col:35> printf 3 4
+|-VarDecl 0x7f851e80ccc0 <line:15:39, <scratch space>:2:1> col:1 lpfc_peer_port_login 'unsigned int'
+|-FunctionDecl 0x7f851e80ce80 <c_files/pr79210.c:7:37, line:12:41> <scratch space>:5:1 lpfc_peer_port_login_init 'void (void *, unsigned int)'
+| |-ParmVarDecl 0x7f851e80cd38 <c_files/pr79210.c:8:25, col:31> col:31 vport 'void *'
+| |-ParmVarDecl 0x7f851e80cdb0 <col:38, col:51> col:51 used val 'unsigned int'
+| `-CompoundStmt 0x7f851e80d210 <col:56, line:12:41>
+|   `-CallExpr 0x7f851e80d150 <line:10:2, line:12:38> 'void'
+|     |-ImplicitCastExpr 0x7f851e80d138 <line:10:2> 'void (*)(const char *, void *, const char *, ...)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f851e80cf28 <col:2> 'void (const char *, void *, const char *, ...)' Function 0x7f851e80cb60 'dev_printk' 'void (const char *, void *, const char *, ...)'
+|     |-ImplicitCastExpr 0x7f851e80d1b0 <col:13> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7f851e80d198 <col:13> 'char *' <ArrayToPointerDecay>
+|     |   `-StringLiteral 0x7f851e80cf88 <col:13> 'char [2]' lvalue "3"
+|     |-CStyleCastExpr 0x7f851e80cff0 <col:18, col:26> 'void *' <NullToPointer>
+|     | `-IntegerLiteral 0x7f851e80cfb8 <col:26> 'int' 0
+|     |-ImplicitCastExpr 0x7f851e80d1e0 <line:11:6, line:12:6> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7f851e80d1c8 <line:11:6, line:12:6> 'char *' <ArrayToPointerDecay>
+|     |   `-StringLiteral 0x7f851e80d058 <line:11:6, line:12:6> 'char [82]' lvalue "0423 lpfc_peer_port_login attribute cannot be set to %d, allowed range is [0, 1]\n"
+|     `-ImplicitCastExpr 0x7f851e80d1f8 <col:35> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f851e80d0e8 <col:35> 'unsigned int' lvalue ParmVar 0x7f851e80cdb0 'val' 'unsigned int'
+`-EmptyDecl 0x7f851e80d230 <line:21:14> col:14

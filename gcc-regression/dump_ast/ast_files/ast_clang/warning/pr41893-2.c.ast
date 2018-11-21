@@ -1,0 +1,25 @@
+c_files/pr41893-2.c:9:3: warning: expression result unused [-Wunused-value]
+  &s;
+  ^~
+1 warning generated.
+TranslationUnitDecl 0x7fbb930264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbb93026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbb93026740 '__int128'
+|-TypedefDecl 0x7fbb93026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbb93026760 'unsigned __int128'
+|-TypedefDecl 0x7fbb93026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbb93026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbb93026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbb93026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbb93026dc0 'char *'
+|   `-BuiltinType 0x7fbb93026560 'char'
+|-TypedefDecl 0x7fbb930270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbb93027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbb93026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbb93026e58 '__va_list_tag'
+|-RecordDecl 0x7fbb93027120 <c_files/pr41893-2.c:4:8, col:15> col:15 struct S
+|-VarDecl 0x7fbb93077420 <col:1, col:17> col:17 used s 'struct S':'struct S' extern
+`-FunctionDecl 0x7fbb930775a0 <line:6:1, line:10:1> line:7:1 func2 'void (void)'
+  `-CompoundStmt 0x7fbb930776d8 <line:8:1, line:10:1>
+    `-UnaryOperator 0x7fbb930776b8 <line:9:3, col:4> 'struct S *' prefix '&'
+      `-DeclRefExpr 0x7fbb93077638 <col:4> 'struct S':'struct S' lvalue Var 0x7fbb93077420 's' 'struct S':'struct S'

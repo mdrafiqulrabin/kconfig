@@ -1,0 +1,46 @@
+FileAST: 
+  Decl: _setjmp, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: _setjmp, []
+        IdentifierType: ['void']
+  Typedef: Py_complex, [], ['typedef']
+    TypeDecl: Py_complex, []
+      Struct: None
+        Decl: real, [], [], []
+          TypeDecl: real, []
+            IdentifierType: ['double']
+        Decl: imag, [], [], []
+          TypeDecl: imag, []
+            IdentifierType: ['double']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['Py_complex']
+  Decl: fn1, [], [], []
+    FuncDecl: 
+      TypeDecl: fn1, []
+        IdentifierType: ['Py_complex']
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        TypeDecl: fn2, []
+          IdentifierType: ['Py_complex']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: fn1
+  FuncDef: 
+    Decl: fn3, [], [], []
+      FuncDecl: 
+        TypeDecl: fn3, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: _setjmp
+      Assignment: =
+        ID: a
+        FuncCall: 
+          ID: fn2

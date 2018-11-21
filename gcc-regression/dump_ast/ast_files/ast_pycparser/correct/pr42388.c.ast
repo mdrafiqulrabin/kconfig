@@ -1,0 +1,232 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: rtx_code
+      EnumeratorList: 
+        Enumerator: INSN
+        Enumerator: ADDR_VEC
+        Enumerator: ADDR_DIFF_VEC
+        Enumerator: CALL_INSN
+        Enumerator: CODE_LABEL
+        Enumerator: BARRIER
+        Enumerator: NOTE
+  Typedef: rtunion, [], ['typedef']
+    TypeDecl: rtunion, []
+      Union: rtunion_def
+        Decl: rtint, [], [], []
+          TypeDecl: rtint, []
+            IdentifierType: ['int']
+        Decl: rtstr, [], [], []
+          PtrDecl: []
+            TypeDecl: rtstr, []
+              IdentifierType: ['char']
+        Decl: rtx, [], [], []
+          PtrDecl: []
+            TypeDecl: rtx, []
+              Struct: rtx_def
+        Decl: rtvec, [], [], []
+          PtrDecl: []
+            TypeDecl: rtvec, []
+              Struct: rtvec_def
+  Typedef: rtx, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: rtx, []
+        Struct: rtx_def
+          Decl: code, [], [], []
+            TypeDecl: code, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: fld, [], [], []
+            ArrayDecl: []
+              TypeDecl: fld, []
+                IdentifierType: ['rtunion']
+              Constant: int, 1
+  Typedef: rtvec, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: rtvec, []
+        Struct: rtvec_def
+          Decl: num_elem, [], [], []
+            TypeDecl: num_elem, []
+              IdentifierType: ['unsigned']
+          Decl: elem, [], [], []
+            ArrayDecl: []
+              TypeDecl: elem, []
+                IdentifierType: ['rtunion']
+              Constant: int, 1
+  Decl: emit_barrier, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: emit_barrier, []
+        IdentifierType: ['rtx']
+  Decl: emit_note, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: emit_note, []
+        IdentifierType: ['rtx']
+  FuncDef: 
+    Decl: copy_loop_body, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: map, [], [], []
+            PtrDecl: []
+              TypeDecl: map, []
+                IdentifierType: ['rtx']
+        TypeDecl: copy_loop_body, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: insn, [], [], []
+        TypeDecl: insn, []
+          IdentifierType: ['rtx']
+      Decl: copy, [], [], []
+        TypeDecl: copy, []
+          IdentifierType: ['rtx']
+      Decl: pat, [], [], []
+        TypeDecl: pat, []
+          IdentifierType: ['rtx']
+        StructRef: .
+          ArrayRef: 
+            StructRef: ->
+              ID: copy
+              ID: fld
+            Constant: int, 3
+          ID: rtx
+      Switch: 
+        StructRef: ->
+          ID: insn
+          ID: code
+        Compound: 
+          Case: 
+            ID: INSN
+            If: 
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: insn
+                    ID: fld
+                  Constant: int, 7
+                ID: rtx
+              Compound: 
+              If: 
+                BinaryOp: ||
+                  BinaryOp: ==
+                    StructRef: ->
+                      ID: pat
+                      ID: code
+                    ID: ADDR_VEC
+                  BinaryOp: ==
+                    StructRef: ->
+                      ID: pat
+                      ID: code
+                    ID: ADDR_DIFF_VEC
+                Compound: 
+                  Decl: diff_vec_p, [], [], []
+                    TypeDecl: diff_vec_p, []
+                      IdentifierType: ['int']
+                    BinaryOp: ==
+                      StructRef: ->
+                        ID: pat
+                        ID: code
+                      ID: ADDR_DIFF_VEC
+                  Decl: len, [], [], []
+                    TypeDecl: len, []
+                      IdentifierType: ['int']
+                    StructRef: ->
+                      StructRef: .
+                        ArrayRef: 
+                          StructRef: ->
+                            ID: pat
+                            ID: fld
+                          ID: diff_vec_p
+                        ID: rtvec
+                      ID: num_elem
+                  For: 
+                    Assignment: =
+                      ID: i
+                      Constant: int, 0
+                    BinaryOp: <
+                      ID: i
+                      ID: len
+                    UnaryOp: p++
+                      ID: i
+                    UnaryOp: p++
+                      StructRef: .
+                        ArrayRef: 
+                          StructRef: ->
+                            StructRef: .
+                              ArrayRef: 
+                                StructRef: ->
+                                  StructRef: .
+                                    ArrayRef: 
+                                      StructRef: ->
+                                        ID: pat
+                                        ID: fld
+                                      ID: diff_vec_p
+                                    ID: rtvec
+                                  ID: elem
+                                ID: i
+                              ID: rtx
+                            ID: fld
+                          Constant: int, 5
+                        ID: rtint
+          Case: 
+            ID: CALL_INSN
+            For: 
+              Assignment: =
+                ID: i
+                Constant: int, 0
+              BinaryOp: <
+                ID: i
+                Constant: int, 64
+              UnaryOp: p++
+                ID: i
+              Assignment: =
+                ArrayRef: 
+                  ID: map
+                  ID: i
+                Constant: int, 0
+          Case: 
+            ID: CODE_LABEL
+          Case: 
+            ID: BARRIER
+            Assignment: =
+              ID: copy
+              FuncCall: 
+                ID: emit_barrier
+          Case: 
+            ID: NOTE
+            Assignment: =
+              ID: copy
+              FuncCall: 
+                ID: emit_note
+                ExprList: 
+                  Constant: string, "x"
+  FuncDef: 
+    Decl: unroll_loop, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: insn_count, [], [], []
+            TypeDecl: insn_count, []
+              IdentifierType: ['int']
+          Decl: map, [], [], []
+            PtrDecl: []
+              TypeDecl: map, []
+                IdentifierType: ['rtx']
+        TypeDecl: unroll_loop, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: >
+          ID: insn_count
+          Constant: int, 50
+        FuncCall: 
+          ID: copy_loop_body
+          ExprList: 
+            ID: map

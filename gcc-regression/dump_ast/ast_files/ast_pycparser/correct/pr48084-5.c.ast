@@ -1,0 +1,17 @@
+FileAST: 
+  FuncDef: 
+    Decl: _rdrand16_step, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: __P, [], [], []
+            PtrDecl: []
+              TypeDecl: __P, []
+                IdentifierType: ['unsigned', 'short']
+        TypeDecl: _rdrand16_step, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_ia32_rdrand16_step
+          ExprList: 
+            ID: __P

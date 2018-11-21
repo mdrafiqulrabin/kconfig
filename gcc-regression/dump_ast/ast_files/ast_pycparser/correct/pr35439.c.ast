@@ -1,0 +1,7 @@
+FileAST: 
+  Decl: x, [], [], []
+    ArrayDecl: []
+      TypeDecl: x, []
+        IdentifierType: ['void']
+      Constant: int, 1
+  Pragma: omp threadprivate(x)

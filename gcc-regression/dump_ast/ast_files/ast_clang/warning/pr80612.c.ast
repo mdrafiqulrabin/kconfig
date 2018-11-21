@@ -1,0 +1,58 @@
+c_files/pr80612.c:13:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr80612.c:14:30: warning: '__alloc_size__' attribute only applies to return values that are pointers [-Wignored-attributes]
+void fn2(int) __attribute__((__alloc_size__(1)));
+                             ^
+2 warnings generated.
+TranslationUnitDecl 0x7fbc900264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbc90026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbc90026740 '__int128'
+|-TypedefDecl 0x7fbc90026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbc90026760 'unsigned __int128'
+|-TypedefDecl 0x7fbc90026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbc90026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbc90026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbc90026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbc90026dc0 'char *'
+|   `-BuiltinType 0x7fbc90026560 'char'
+|-TypedefDecl 0x7fbc900270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbc90027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbc90026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbc90026e58 '__va_list_tag'
+|-RecordDecl 0x7fbc90027120 <c_files/pr80612.c:4:1, col:8> col:8 struct obstack
+|-VarDecl 0x7fbc90825a80 <col:1, col:17> col:17 used a 'struct obstack *'
+|-RecordDecl 0x7fbc90825b38 prev 0x7fbc90027120 <line:5:1, line:10:1> line:5:8 struct obstack definition
+| |-RecordDecl 0x7fbc90825bc0 <line:6:3, line:9:3> line:6:3 union definition
+| | |-FieldDecl 0x7fbc90825c88 <line:7:5, col:11> col:11 referenced plain 'void *'
+| | `-FieldDecl 0x7fbc90825db8 <line:8:5, col:19> col:12 referenced extra 'void (*)()'
+| `-FieldDecl 0x7fbc90825e50 <line:6:3, line:9:5> col:5 referenced chunkfun 'union (anonymous union at c_files/pr80612.c:6:3)':'union obstack::(anonymous at c_files/pr80612.c:6:3)'
+|-FunctionDecl 0x7fbc90826050 <line:5:1, line:13:1> line:10:3 used fn1 'struct obstack (void (*)())'
+| |-ParmVarDecl 0x7fbc90825f40 <col:7, col:15> col:12 used p4 'void (*)()':'void (*)()'
+| `-CompoundStmt 0x7fbc90826358 <col:18, line:13:1>
+|   |-BinaryOperator 0x7fbc908261f8 <line:11:3, col:23> 'void *' '='
+|   | |-MemberExpr 0x7fbc90826168 <col:3, col:15> 'void *' lvalue .plain 0x7fbc90825c88
+|   | | `-MemberExpr 0x7fbc90826130 <col:3, col:6> 'union (anonymous union at c_files/pr80612.c:6:3)':'union obstack::(anonymous at c_files/pr80612.c:6:3)' lvalue ->chunkfun 0x7fbc90825e50
+|   | |   `-ImplicitCastExpr 0x7fbc90826118 <col:3> 'struct obstack *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fbc908260f0 <col:3> 'struct obstack *' lvalue Var 0x7fbc90825a80 'a' 'struct obstack *'
+|   | `-ImplicitCastExpr 0x7fbc908261e0 <col:23> 'void *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fbc908261c8 <col:23> 'void (*)()':'void (*)()' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fbc908261a0 <col:23> 'void (*)()':'void (*)()' lvalue ParmVar 0x7fbc90825f40 'p4' 'void (*)()':'void (*)()'
+|   `-CallExpr 0x7fbc90826310 <line:12:3, col:22> 'void'
+|     |-ImplicitCastExpr 0x7fbc908262f8 <col:3, col:15> 'void (*)()' <LValueToRValue>
+|     | `-MemberExpr 0x7fbc90826298 <col:3, col:15> 'void (*)()' lvalue .extra 0x7fbc90825db8
+|     |   `-MemberExpr 0x7fbc90826260 <col:3, col:6> 'union (anonymous union at c_files/pr80612.c:6:3)':'union obstack::(anonymous at c_files/pr80612.c:6:3)' lvalue ->chunkfun 0x7fbc90825e50
+|     |     `-ImplicitCastExpr 0x7fbc90826248 <col:3> 'struct obstack *' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7fbc90826220 <col:3> 'struct obstack *' lvalue Var 0x7fbc90825a80 'a' 'struct obstack *'
+|     `-ImplicitCastExpr 0x7fbc90826340 <col:21> 'struct obstack *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fbc908262d0 <col:21> 'struct obstack *' lvalue Var 0x7fbc90825a80 'a' 'struct obstack *'
+|-FunctionDecl 0x7fbc90826480 <line:14:1, col:48> col:6 used fn2 'void (int)'
+| `-ParmVarDecl 0x7fbc90826398 <col:10> col:13 'int'
+`-FunctionDecl 0x7fbc90826540 <line:15:1, col:24> col:6 fn3 'void ()'
+  `-CompoundStmt 0x7fbc90826728 <col:12, col:24>
+    `-CallExpr 0x7fbc908266a0 <col:14, col:21> 'struct obstack':'struct obstack'
+      |-ImplicitCastExpr 0x7fbc90826688 <col:14> 'struct obstack (*)(void (*)())' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fbc908265d8 <col:14> 'struct obstack (void (*)())' Function 0x7fbc90826050 'fn1' 'struct obstack (void (*)())'
+      `-ImplicitCastExpr 0x7fbc90826710 <col:18> 'void (*)()':'void (*)()' <BitCast>
+        `-ImplicitCastExpr 0x7fbc908266f8 <col:18> 'void (*)(int)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fbc90826600 <col:18> 'void (int)' Function 0x7fbc90826480 'fn2' 'void (int)'

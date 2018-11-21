@@ -1,0 +1,65 @@
+c_files/pr32000-1.c:6:10: fatal error: 'sse2-check.h' file not found
+#include "sse2-check.h"
+         ^~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fd91e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd91e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd91e026740 '__int128'
+|-TypedefDecl 0x7fd91e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd91e026760 'unsigned __int128'
+|-TypedefDecl 0x7fd91e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd91e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd91e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd91e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd91e026dc0 'char *'
+|   `-BuiltinType 0x7fd91e026560 'char'
+|-TypedefDecl 0x7fd91e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd91e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd91e026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd91e026e58 '__va_list_tag'
+|-RecordDecl 0x7fd91e027120 <c_files/pr32000-1.c:8:9, col:57> col:9 invalid struct definition
+| `-FieldDecl 0x7fd91f002a00 <col:18, col:30> col:30 invalid f 'int'
+|   `-PackedAttr 0x7fd91f002a48 <col:47>
+|-TypedefDecl 0x7fd91f002ae0 <col:1, col:59> col:59 referenced packed 'struct (anonymous struct at c_files/pr32000-1.c:8:9)':'struct (anonymous at c_files/pr32000-1.c:8:9)'
+| `-ElaboratedType 0x7fd91f002a90 'struct (anonymous struct at c_files/pr32000-1.c:8:9)' sugar
+|   `-RecordType 0x7fd91e0271b0 'struct (anonymous at c_files/pr32000-1.c:8:9)'
+|     `-Record 0x7fd91e027120 ''
+|-FunctionDecl 0x7fd91f0034f8 <line:10:1, line:16:1> line:11:1 invalid foo 'int (int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, packed)'
+| |-ParmVarDecl 0x7fd91f002b68 <col:6, col:18> col:18 invalid a1 'int'
+| |-ParmVarDecl 0x7fd91f002be0 <col:22, col:34> col:34 invalid a2 'int'
+| |-ParmVarDecl 0x7fd91f002c58 <col:38, col:50> col:50 invalid a3 'int'
+| |-ParmVarDecl 0x7fd91f002cd0 <col:54, col:66> col:66 invalid a4 'int'
+| |-ParmVarDecl 0x7fd91f002d48 <line:12:6, col:18> col:18 invalid a5 'int'
+| |-ParmVarDecl 0x7fd91f002dc0 <col:22, col:34> col:34 invalid a6 'int'
+| |-ParmVarDecl 0x7fd91f002e38 <col:38, col:50> col:50 invalid a7 'int'
+| |-ParmVarDecl 0x7fd91f002eb0 <col:54, col:66> col:66 invalid a8 'int'
+| |-ParmVarDecl 0x7fd91f002f28 <line:13:6, col:10> col:10 b1 'int'
+| |-ParmVarDecl 0x7fd91f002fa0 <col:14, col:18> col:18 b2 'int'
+| |-ParmVarDecl 0x7fd91f003018 <col:22, col:26> col:26 b3 'int'
+| |-ParmVarDecl 0x7fd91f003090 <col:30, col:34> col:34 b4 'int'
+| |-ParmVarDecl 0x7fd91f003108 <col:38, col:42> col:42 b5 'int'
+| |-ParmVarDecl 0x7fd91f003180 <col:46, col:50> col:50 b6 'int'
+| |-ParmVarDecl 0x7fd91f0031f8 <col:54, col:58> col:58 b7 'int'
+| |-ParmVarDecl 0x7fd91f003290 <col:62, col:69> col:69 used y 'packed':'struct (anonymous at c_files/pr32000-1.c:8:9)'
+| |-CompoundStmt 0x7fd91f003680 <line:14:1, line:16:1>
+| `-NoInlineAttr 0x7fd91f003610 <line:10:28>
+|-FunctionDecl 0x7fd91f003760 <line:18:1, line:27:1> line:19:1 sse2_test 'void (void)'
+| `-CompoundStmt 0x7fd91f004080 <line:20:1, line:27:1>
+|   |-DeclStmt 0x7fd91f0038a8 <line:21:3, col:11>
+|   | `-VarDecl 0x7fd91f003848 <col:3, col:10> col:10 used x 'packed':'struct (anonymous at c_files/pr32000-1.c:8:9)'
+|   |-DeclStmt 0x7fd91f003978 <line:22:3, col:21>
+|   | `-VarDecl 0x7fd91f0038d8 <col:3, col:15> col:15 invalid y 'int'
+|   `-IfStmt 0x7fd91f004048 <line:25:3, line:26:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-OpaqueValueExpr 0x7fd91f004028 <<invalid sloc>> '_Bool'
+|     |-CallExpr 0x7fd91f004000 <col:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7fd91f003fe8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fd91f003f98 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fd91f003f00 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fd91f003c68 <line:25:7> col:7 implicit used __builtin_memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fd91f003d00 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fd91f003d60 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fd91f003dc0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fd91f003e38 <col:7> Implicit
+`-FunctionDecl 0x7fd91f003f00 <line:26:5> col:5 implicit used abort 'void (void) __attribute__((noreturn))' extern

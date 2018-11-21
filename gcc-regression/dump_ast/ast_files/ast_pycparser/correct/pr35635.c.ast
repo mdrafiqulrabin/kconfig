@@ -1,0 +1,343 @@
+FileAST: 
+  Decl: unsigned_bit, [], [], []
+    TypeDecl: unsigned_bit, []
+      Struct: unsigned_bit
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 1
+  Decl: signed_bit, [], [], []
+    TypeDecl: signed_bit, []
+      Struct: signed_bit
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['int']
+          Constant: int, 1
+  Decl: bar, [], [], []
+    TypeDecl: bar, []
+      IdentifierType: ['int']
+  Decl: bar2, [], [], []
+    TypeDecl: bar2, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: func1, [], [], []
+      FuncDecl: 
+        TypeDecl: func1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: unsigned_bit
+          ID: x
+        BinaryOp: !=
+          ID: bar
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: unsigned_bit
+          ID: x
+        BinaryOp: ==
+          ID: bar
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: unsigned_bit
+          ID: x
+        BinaryOp: <=
+          ID: bar
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: unsigned_bit
+          ID: x
+        BinaryOp: >=
+          ID: bar
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: unsigned_bit
+          ID: x
+        BinaryOp: <
+          ID: bar
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: unsigned_bit
+          ID: x
+        BinaryOp: >
+          ID: bar
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: unsigned_bit
+          ID: x
+        UnaryOp: !
+          ID: bar
+      Assignment: =
+        StructRef: .
+          ID: unsigned_bit
+          ID: x
+        BinaryOp: ||
+          ID: bar
+          ID: bar2
+      Assignment: =
+        StructRef: .
+          ID: unsigned_bit
+          ID: x
+        BinaryOp: &&
+          ID: bar
+          ID: bar2
+      Assignment: =
+        StructRef: .
+          ID: unsigned_bit
+          ID: x
+        TernaryOp: 
+          BinaryOp: !=
+            ID: bar
+            Constant: int, 0
+          Constant: int, 1
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: unsigned_bit
+          ID: x
+        TernaryOp: 
+          BinaryOp: !=
+            ID: bar
+            Constant: int, 0
+          Constant: float, 1.0
+          Constant: float, 0.0
+      Assignment: =
+        StructRef: .
+          ID: unsigned_bit
+          ID: x
+        TernaryOp: 
+          BinaryOp: !=
+            ID: bar
+            Constant: int, 0
+          Constant: int, 2
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: unsigned_bit
+          ID: x
+        TernaryOp: 
+          BinaryOp: !=
+            ID: bar
+            Constant: int, 0
+          Constant: int, 0
+          UnaryOp: -
+            Constant: int, 1
+  FuncDef: 
+    Decl: func2, [], [], []
+      FuncDecl: 
+        TypeDecl: func2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: schar_x, [], [], []
+        TypeDecl: schar_x, []
+          IdentifierType: ['signed', 'char']
+      Assignment: =
+        ID: schar_x
+        TernaryOp: 
+          BinaryOp: !=
+            ID: bar
+            Constant: int, 0
+          Constant: int, 1
+          Constant: int, 0
+      Assignment: =
+        ID: schar_x
+        TernaryOp: 
+          BinaryOp: !=
+            ID: bar
+            Constant: int, 0
+          Constant: float, 2.0
+          Constant: int, 10
+      Assignment: =
+        ID: schar_x
+        TernaryOp: 
+          BinaryOp: !=
+            ID: bar
+            Constant: int, 0
+          Constant: float, 2.1
+          Constant: int, 10
+      Assignment: =
+        ID: schar_x
+        TernaryOp: 
+          BinaryOp: !=
+            ID: bar
+            Constant: int, 0
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['signed', 'char']
+            Constant: int, 1024
+          UnaryOp: -
+            Constant: int, 1024
+  FuncDef: 
+    Decl: func3, [], [], []
+      FuncDecl: 
+        TypeDecl: func3, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: uchar_x, [], [], []
+        TypeDecl: uchar_x, []
+          IdentifierType: ['unsigned', 'char']
+      Assignment: =
+        ID: uchar_x
+        TernaryOp: 
+          BinaryOp: !=
+            ID: bar
+            Constant: int, 0
+          Constant: int, 1
+          Constant: int, 0
+      Assignment: =
+        ID: uchar_x
+        TernaryOp: 
+          BinaryOp: !=
+            ID: bar
+            Constant: int, 0
+          Constant: float, 2.0
+          Constant: int, 10
+      Assignment: =
+        ID: uchar_x
+        TernaryOp: 
+          BinaryOp: !=
+            ID: bar
+            Constant: int, 0
+          Constant: float, 2.1
+          Constant: int, 10
+      Assignment: =
+        ID: uchar_x
+        TernaryOp: 
+          BinaryOp: !=
+            ID: bar
+            Constant: int, 0
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'char']
+            Constant: int, 1024
+          UnaryOp: -
+            Constant: int, 1
+  FuncDef: 
+    Decl: func4, [], [], []
+      FuncDecl: 
+        TypeDecl: func4, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: signed_bit
+          ID: x
+        UnaryOp: -
+          Constant: int, 1
+      Assignment: =
+        StructRef: .
+          ID: signed_bit
+          ID: x
+        TernaryOp: 
+          BinaryOp: !=
+            ID: bar
+            Constant: int, 0
+          UnaryOp: -
+            Constant: float, 1.0
+          Constant: float, 0.0
+      Assignment: =
+        StructRef: .
+          ID: signed_bit
+          ID: x
+        TernaryOp: 
+          BinaryOp: !=
+            ID: bar
+            Constant: int, 0
+          UnaryOp: -
+            Constant: int, 1
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: signed_bit
+          ID: x
+        Constant: int, 1
+      Assignment: =
+        StructRef: .
+          ID: signed_bit
+          ID: x
+        BinaryOp: !=
+          ID: bar
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: signed_bit
+          ID: x
+        BinaryOp: ==
+          ID: bar
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: signed_bit
+          ID: x
+        BinaryOp: <=
+          ID: bar
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: signed_bit
+          ID: x
+        BinaryOp: >=
+          ID: bar
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: signed_bit
+          ID: x
+        BinaryOp: <
+          ID: bar
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: signed_bit
+          ID: x
+        BinaryOp: >
+          ID: bar
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: signed_bit
+          ID: x
+        UnaryOp: !
+          ID: bar
+      Assignment: =
+        StructRef: .
+          ID: signed_bit
+          ID: x
+        BinaryOp: ||
+          ID: bar
+          ID: bar2
+      Assignment: =
+        StructRef: .
+          ID: signed_bit
+          ID: x
+        BinaryOp: &&
+          ID: bar
+          ID: bar2
+      Assignment: =
+        StructRef: .
+          ID: signed_bit
+          ID: x
+        TernaryOp: 
+          BinaryOp: !=
+            ID: bar
+            Constant: int, 0
+          Constant: int, 1
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: signed_bit
+          ID: x
+        TernaryOp: 
+          BinaryOp: !=
+            ID: bar
+            Constant: int, 0
+          Constant: int, 2
+          Constant: int, 0

@@ -1,0 +1,47 @@
+FileAST: 
+  Decl: setjmp, [], [], []
+    FuncDecl: 
+      TypeDecl: setjmp, []
+        IdentifierType: ['void']
+  Decl: func, [], [], []
+    FuncDecl: 
+      TypeDecl: func, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: a, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arg, [], [], []
+            TypeDecl: arg, []
+              IdentifierType: ['int']
+        TypeDecl: a, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: obj, [], ['extern'], []
+        TypeDecl: obj, []
+          Struct: None
+            Decl: x, [], [], []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+      FuncCall: 
+        ID: setjmp
+      Assignment: =
+        StructRef: .
+          ID: obj
+          ID: x
+        ID: arg
+      Assignment: =
+        ID: arg
+        ID: arg
+      If: 
+        StructRef: .
+          ID: obj
+          ID: x
+        FuncCall: 
+          ID: func
+      If: 
+        StructRef: .
+          ID: obj
+          ID: x
+        FuncCall: 
+          ID: func

@@ -1,0 +1,82 @@
+c_files/pr42703.c:11:29: warning: array index 4 is past the end of the array (which contains 4 elements) [-Warray-bounds]
+    (t = dd.c[3], dd.c[3] = dd.c[4], dd.c[4] = t);
+                            ^    ~
+c_files/pr42703.c:7:9: note: array 'c' declared here
+        unsigned char c[4];
+        ^
+c_files/pr42703.c:11:38: warning: array index 4 is past the end of the array (which contains 4 elements) [-Warray-bounds]
+    (t = dd.c[3], dd.c[3] = dd.c[4], dd.c[4] = t);
+                                     ^    ~
+c_files/pr42703.c:7:9: note: array 'c' declared here
+        unsigned char c[4];
+        ^
+2 warnings generated.
+TranslationUnitDecl 0x7f9e2e00fcd0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9e2e010220 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9e2e00ff40 '__int128'
+|-TypedefDecl 0x7f9e2e010290 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9e2e00ff60 'unsigned __int128'
+|-TypedefDecl 0x7f9e2e010568 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9e2e010370 'struct __NSConstantString_tag'
+|   `-Record 0x7f9e2e0102e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9e2e010600 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9e2e0105c0 'char *'
+|   `-BuiltinType 0x7f9e2e00fd60 'char'
+|-TypedefDecl 0x7f9e2e0108c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9e2e010870 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9e2e0106e0 'struct __va_list_tag'
+|     `-Record 0x7f9e2e010658 '__va_list_tag'
+|-TypedefDecl 0x7f9e2e010938 <c_files/pr42703.c:1:15, col:46> col:46 referenced uint64_t 'unsigned long long'
+| `-BuiltinType 0x7f9e2e00fea0 'unsigned long long'
+|-TypedefDecl 0x7f9e2d83c200 <line:2:1, col:18> col:18 referenced ScmUInt64 'uint64_t':'unsigned long long'
+| `-TypedefType 0x7f9e2e010990 'uint64_t' sugar
+|   |-Typedef 0x7f9e2e010938 'uint64_t'
+|   `-BuiltinType 0x7f9e2e00fea0 'unsigned long long'
+`-FunctionDecl 0x7f9e2d83c3f0 <line:3:1, line:12:1> line:3:6 swapb64 'void (ScmUInt64 *)'
+  |-ParmVarDecl 0x7f9e2d83c2e8 <col:14, col:25> col:25 used loc 'ScmUInt64 *'
+  `-CompoundStmt 0x7f9e2d83ce20 <line:4:1, line:12:1>
+    |-DeclStmt 0x7f9e2d83c778 <line:5:5, line:8:9>
+    | |-RecordDecl 0x7f9e2d83c4d0 <line:5:5, line:8:5> line:5:5 union definition
+    | | |-FieldDecl 0x7f9e2d83c590 <line:6:9, col:19> col:19 referenced l 'ScmUInt64':'unsigned long long'
+    | | `-FieldDecl 0x7f9e2d83c660 <line:7:9, col:26> col:23 referenced c 'unsigned char [4]'
+    | `-VarDecl 0x7f9e2d83c700 <line:5:5, line:8:7> col:7 used dd 'union (anonymous union at c_files/pr42703.c:5:5)':'union (anonymous at c_files/pr42703.c:5:5)'
+    |-DeclStmt 0x7f9e2d83c808 <line:9:5, col:20>
+    | `-VarDecl 0x7f9e2d83c7a8 <col:5, col:19> col:19 used t 'unsigned char'
+    |-BinaryOperator 0x7f9e2d83c8f8 <line:10:5, col:13> 'ScmUInt64':'unsigned long long' '='
+    | |-MemberExpr 0x7f9e2d83c848 <col:5, col:8> 'ScmUInt64':'unsigned long long' lvalue .l 0x7f9e2d83c590
+    | | `-DeclRefExpr 0x7f9e2d83c820 <col:5> 'union (anonymous union at c_files/pr42703.c:5:5)':'union (anonymous at c_files/pr42703.c:5:5)' lvalue Var 0x7f9e2d83c700 'dd' 'union (anonymous union at c_files/pr42703.c:5:5)':'union (anonymous at c_files/pr42703.c:5:5)'
+    | `-ImplicitCastExpr 0x7f9e2d83c8e0 <col:12, col:13> 'ScmUInt64':'unsigned long long' <LValueToRValue>
+    |   `-UnaryOperator 0x7f9e2d83c8c0 <col:12, col:13> 'ScmUInt64':'unsigned long long' lvalue prefix '*'
+    |     `-ImplicitCastExpr 0x7f9e2d83c8a8 <col:13> 'ScmUInt64 *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9e2d83c880 <col:13> 'ScmUInt64 *' lvalue ParmVar 0x7f9e2d83c2e8 'loc' 'ScmUInt64 *'
+    `-ParenExpr 0x7f9e2d83ce00 <line:11:5, col:49> 'unsigned char'
+      `-BinaryOperator 0x7f9e2d83cdd8 <col:6, col:48> 'unsigned char' ','
+        |-BinaryOperator 0x7f9e2d83cc88 <col:6, col:35> 'unsigned char' ','
+        | |-BinaryOperator 0x7f9e2d83caa0 <col:6, col:16> 'unsigned char' '='
+        | | |-DeclRefExpr 0x7f9e2d83c970 <col:6> 'unsigned char' lvalue Var 0x7f9e2d83c7a8 't' 'unsigned char'
+        | | `-ImplicitCastExpr 0x7f9e2d83ca88 <col:10, col:16> 'unsigned char' <LValueToRValue>
+        | |   `-ArraySubscriptExpr 0x7f9e2d83ca60 <col:10, col:16> 'unsigned char' lvalue
+        | |     |-ImplicitCastExpr 0x7f9e2d83ca48 <col:10, col:13> 'unsigned char *' <ArrayToPointerDecay>
+        | |     | `-MemberExpr 0x7f9e2d83c9c0 <col:10, col:13> 'unsigned char [4]' lvalue .c 0x7f9e2d83c660
+        | |     |   `-DeclRefExpr 0x7f9e2d83c998 <col:10> 'union (anonymous union at c_files/pr42703.c:5:5)':'union (anonymous at c_files/pr42703.c:5:5)' lvalue Var 0x7f9e2d83c700 'dd' 'union (anonymous union at c_files/pr42703.c:5:5)':'union (anonymous at c_files/pr42703.c:5:5)'
+        | |     `-IntegerLiteral 0x7f9e2d83c9f8 <col:15> 'int' 3
+        | `-BinaryOperator 0x7f9e2d83cc60 <col:19, col:35> 'unsigned char' '='
+        |   |-ArraySubscriptExpr 0x7f9e2d83cb60 <col:19, col:25> 'unsigned char' lvalue
+        |   | |-ImplicitCastExpr 0x7f9e2d83cb48 <col:19, col:22> 'unsigned char *' <ArrayToPointerDecay>
+        |   | | `-MemberExpr 0x7f9e2d83caf0 <col:19, col:22> 'unsigned char [4]' lvalue .c 0x7f9e2d83c660
+        |   | |   `-DeclRefExpr 0x7f9e2d83cac8 <col:19> 'union (anonymous union at c_files/pr42703.c:5:5)':'union (anonymous at c_files/pr42703.c:5:5)' lvalue Var 0x7f9e2d83c700 'dd' 'union (anonymous union at c_files/pr42703.c:5:5)':'union (anonymous at c_files/pr42703.c:5:5)'
+        |   | `-IntegerLiteral 0x7f9e2d83cb28 <col:24> 'int' 3
+        |   `-ImplicitCastExpr 0x7f9e2d83cc48 <col:29, col:35> 'unsigned char' <LValueToRValue>
+        |     `-ArraySubscriptExpr 0x7f9e2d83cc20 <col:29, col:35> 'unsigned char' lvalue
+        |       |-ImplicitCastExpr 0x7f9e2d83cc08 <col:29, col:32> 'unsigned char *' <ArrayToPointerDecay>
+        |       | `-MemberExpr 0x7f9e2d83cbb0 <col:29, col:32> 'unsigned char [4]' lvalue .c 0x7f9e2d83c660
+        |       |   `-DeclRefExpr 0x7f9e2d83cb88 <col:29> 'union (anonymous union at c_files/pr42703.c:5:5)':'union (anonymous at c_files/pr42703.c:5:5)' lvalue Var 0x7f9e2d83c700 'dd' 'union (anonymous union at c_files/pr42703.c:5:5)':'union (anonymous at c_files/pr42703.c:5:5)'
+        |       `-IntegerLiteral 0x7f9e2d83cbe8 <col:34> 'int' 4
+        `-BinaryOperator 0x7f9e2d83cdb0 <col:38, col:48> 'unsigned char' '='
+          |-ArraySubscriptExpr 0x7f9e2d83cd48 <col:38, col:44> 'unsigned char' lvalue
+          | |-ImplicitCastExpr 0x7f9e2d83cd30 <col:38, col:41> 'unsigned char *' <ArrayToPointerDecay>
+          | | `-MemberExpr 0x7f9e2d83ccd8 <col:38, col:41> 'unsigned char [4]' lvalue .c 0x7f9e2d83c660
+          | |   `-DeclRefExpr 0x7f9e2d83ccb0 <col:38> 'union (anonymous union at c_files/pr42703.c:5:5)':'union (anonymous at c_files/pr42703.c:5:5)' lvalue Var 0x7f9e2d83c700 'dd' 'union (anonymous union at c_files/pr42703.c:5:5)':'union (anonymous at c_files/pr42703.c:5:5)'
+          | `-IntegerLiteral 0x7f9e2d83cd10 <col:43> 'int' 4
+          `-ImplicitCastExpr 0x7f9e2d83cd98 <col:48> 'unsigned char' <LValueToRValue>
+            `-DeclRefExpr 0x7f9e2d83cd70 <col:48> 'unsigned char' lvalue Var 0x7f9e2d83c7a8 't' 'unsigned char'

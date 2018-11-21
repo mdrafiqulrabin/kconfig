@@ -1,0 +1,46 @@
+c_files/pr69461.c:4:13: warning: declaration of built-in function '_setjmp' requires inclusion of the header <setjmp.h> [-Wbuiltin-requires-header]
+extern void _setjmp (void);
+            ^
+c_files/pr69461.c:13:11: error: too few arguments to function call, expected 1, have 0
+  _setjmp();
+  ~~~~~~~~^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fdea08264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdea0826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdea0826740 '__int128'
+|-TypedefDecl 0x7fdea0826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdea0826760 'unsigned __int128'
+|-TypedefDecl 0x7fdea0826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdea0826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdea0826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdea0826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdea0826dc0 'char *'
+|   `-BuiltinType 0x7fdea0826560 'char'
+|-TypedefDecl 0x7fdea08270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdea0827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdea0826ee0 'struct __va_list_tag'
+|     `-Record 0x7fdea0826e58 '__va_list_tag'
+|-FunctionDecl 0x7fdea1025a00 <c_files/pr69461.c:4:1, col:26> col:13 used _setjmp 'void (void)' extern
+| `-ReturnsTwiceAttr 0x7fdea1025ad8 <col:13> Implicit
+|-RecordDecl 0x7fdea1025b20 <line:5:9, line:8:1> line:5:9 struct definition
+| |-FieldDecl 0x7fdea1025be8 <line:6:3, col:10> col:10 real 'double'
+| `-FieldDecl 0x7fdea1025c48 <line:7:3, col:10> col:10 imag 'double'
+|-TypedefDecl 0x7fdea1025ce0 <line:5:1, line:8:3> col:3 referenced Py_complex 'struct Py_complex':'Py_complex'
+| `-ElaboratedType 0x7fdea1025c90 'struct Py_complex' sugar
+|   `-RecordType 0x7fdea1025bb0 'Py_complex'
+|     `-Record 0x7fdea1025b20 ''
+|-VarDecl 0x7fdea1025d80 <line:9:1, col:12> col:12 used a 'Py_complex':'Py_complex'
+|-FunctionDecl 0x7fdea1025e58 <line:10:1, col:16> col:12 used fn1 'Py_complex ()'
+|-FunctionDecl 0x7fdea1025f10 <line:11:1, col:34> col:12 used fn2 'Py_complex ()'
+| `-CompoundStmt 0x7fdea1026080 <col:18, col:34>
+|   `-ReturnStmt 0x7fdea1026068 <col:20, col:31>
+|     `-CallExpr 0x7fdea1026040 <col:27, col:31> 'Py_complex':'Py_complex'
+|       `-ImplicitCastExpr 0x7fdea1026028 <col:27> 'Py_complex (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7fdea1025fa8 <col:27> 'Py_complex ()' Function 0x7fdea1025e58 'fn1' 'Py_complex ()'
+`-FunctionDecl 0x7fdea10260e8 <line:12:1, line:15:1> line:12:6 fn3 'void ()'
+  `-CompoundStmt 0x7fdea10262d0 <col:12, line:15:1>
+    `-BinaryOperator 0x7fdea10262a8 <line:14:3, col:11> 'Py_complex':'Py_complex' '='
+      |-DeclRefExpr 0x7fdea1026218 <col:3> 'Py_complex':'Py_complex' lvalue Var 0x7fdea1025d80 'a' 'Py_complex':'Py_complex'
+      `-CallExpr 0x7fdea1026280 <col:7, col:11> 'Py_complex':'Py_complex'
+        `-ImplicitCastExpr 0x7fdea1026268 <col:7> 'Py_complex (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fdea1026240 <col:7> 'Py_complex ()' Function 0x7fdea1025f10 'fn2' 'Py_complex ()'

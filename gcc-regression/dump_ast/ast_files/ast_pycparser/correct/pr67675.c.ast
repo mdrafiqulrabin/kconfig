@@ -1,0 +1,183 @@
+FileAST: 
+  FuncDef: 
+    Decl: test_00, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['char']
+          Decl: y, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: y, ['const']
+                IdentifierType: ['char']
+        TypeDecl: test_00, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_strcmp
+          ExprList: 
+            ID: x
+            ID: y
+  FuncDef: 
+    Decl: test_01, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['char']
+          Decl: y, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: y, ['const']
+                IdentifierType: ['char']
+        TypeDecl: test_01, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_strcmp
+          ExprList: 
+            FuncCall: 
+              ID: __builtin_assume_aligned
+              ExprList: 
+                ID: x
+                Constant: int, 4
+            ID: y
+  FuncDef: 
+    Decl: test_02, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['char']
+          Decl: y, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: y, ['const']
+                IdentifierType: ['char']
+        TypeDecl: test_02, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_strcmp
+          ExprList: 
+            ID: x
+            FuncCall: 
+              ID: __builtin_assume_aligned
+              ExprList: 
+                ID: y
+                Constant: int, 4
+  FuncDef: 
+    Decl: test_03, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['char']
+          Decl: y, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: y, ['const']
+                IdentifierType: ['char']
+        TypeDecl: test_03, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_strcmp
+          ExprList: 
+            FuncCall: 
+              ID: __builtin_assume_aligned
+              ExprList: 
+                ID: x
+                Constant: int, 4
+            FuncCall: 
+              ID: __builtin_assume_aligned
+              ExprList: 
+                ID: y
+                Constant: int, 4
+  FuncDef: 
+    Decl: test_04, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['char']
+          Decl: y, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: y, ['const']
+                IdentifierType: ['char']
+        TypeDecl: test_04, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_strcmp
+          ExprList: 
+            ID: x
+            Constant: string, "1234567"
+  FuncDef: 
+    Decl: test_05, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['char']
+          Decl: y, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: y, ['const']
+                IdentifierType: ['char']
+        TypeDecl: test_05, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_strcmp
+          ExprList: 
+            Constant: string, "1234567"
+            ID: y
+  FuncDef: 
+    Decl: test_06, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s1, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: s1, ['const']
+                IdentifierType: ['char']
+        TypeDecl: test_06, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_strncmp
+          ExprList: 
+            ID: s1
+            Constant: string, "abcdabcd"
+            Constant: int, 8
+  FuncDef: 
+    Decl: test_07, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s1, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: s1, ['const']
+                IdentifierType: ['char']
+        TypeDecl: test_07, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_strncmp
+          ExprList: 
+            FuncCall: 
+              ID: __builtin_assume_aligned
+              ExprList: 
+                ID: s1
+                Constant: int, 4
+            Constant: string, "abcdabcd"
+            Constant: int, 8

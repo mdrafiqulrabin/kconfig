@@ -1,0 +1,45 @@
+c_files/pr32135.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7f94a88264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f94a8826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f94a8826740 '__int128'
+|-TypedefDecl 0x7f94a8826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f94a8826760 'unsigned __int128'
+|-TypedefDecl 0x7f94a8826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f94a8826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f94a8826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f94a8826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f94a8826dc0 'char *'
+|   `-BuiltinType 0x7f94a8826560 'char'
+|-TypedefDecl 0x7f94a88270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f94a8827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f94a8826ee0 'struct __va_list_tag'
+|     `-Record 0x7f94a8826e58 '__va_list_tag'
+|-RecordDecl 0x7f94a8827120 <c_files/pr32135.c:3:1, line:6:1> line:3:8 struct PhaseEntryType definition
+| `-FieldDecl 0x7f94a9025aa8 <line:5:3, col:24> col:8 referenced raw_field 'char [51]'
+|-FunctionDecl 0x7f94a9025e68 <line:7:1, line:11:1> line:8:1 ParsePhase 'int (char (*)[250], struct PhaseEntryType *)'
+| |-ParmVarDecl 0x7f94a9025c40 <col:13, col:33> col:18 used in_cols 'char (*)[250]':'char (*)[250]'
+| |-ParmVarDecl 0x7f94a9025d50 <col:36, col:59> col:59 used P 'struct PhaseEntryType *'
+| `-CompoundStmt 0x7f94a9026410 <line:9:1, line:11:1>
+|   `-CallExpr 0x7f94a9026370 <line:10:3, col:50> 'char *'
+|     |-ImplicitCastExpr 0x7f94a9026358 <col:3> 'char *(*)(char *, const char *, unsigned long)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7f94a90261b0 <col:3> '<builtin fn type>' Function 0x7f94a9025f98 '__builtin_strncpy' 'char *(char *, const char *, unsigned long)'
+|     |-ImplicitCastExpr 0x7f94a90263b0 <col:22, col:25> 'char *' <ArrayToPointerDecay>
+|     | `-MemberExpr 0x7f94a9026218 <col:22, col:25> 'char [51]' lvalue ->raw_field 0x7f94a9025aa8
+|     |   `-ImplicitCastExpr 0x7f94a9026200 <col:22> 'struct PhaseEntryType *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f94a90261d8 <col:22> 'struct PhaseEntryType *' lvalue ParmVar 0x7f94a9025d50 'P' 'struct PhaseEntryType *'
+|     |-ImplicitCastExpr 0x7f94a90263e0 <col:36, col:45> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7f94a90263c8 <col:36, col:45> 'char *' <ArrayToPointerDecay>
+|     |   `-ArraySubscriptExpr 0x7f94a90262b0 <col:36, col:45> 'char [250]' lvalue
+|     |     |-ImplicitCastExpr 0x7f94a9026298 <col:36> 'char (*)[250]':'char (*)[250]' <LValueToRValue>
+|     |     | `-DeclRefExpr 0x7f94a9026250 <col:36> 'char (*)[250]':'char (*)[250]' lvalue ParmVar 0x7f94a9025c40 'in_cols' 'char (*)[250]':'char (*)[250]'
+|     |     `-IntegerLiteral 0x7f94a9026278 <col:44> 'int' 2
+|     `-ImplicitCastExpr 0x7f94a90263f8 <col:48> 'unsigned long' <IntegralCast>
+|       `-IntegerLiteral 0x7f94a90262d8 <col:48> 'int' 50
+`-FunctionDecl 0x7f94a9025f98 <col:3> col:3 implicit used __builtin_strncpy 'char *(char *, const char *, unsigned long)' extern
+  |-ParmVarDecl 0x7f94a9026030 <<invalid sloc>> <invalid sloc> 'char *'
+  |-ParmVarDecl 0x7f94a9026090 <<invalid sloc>> <invalid sloc> 'const char *'
+  |-ParmVarDecl 0x7f94a90260f0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7f94a9026168 <col:3> Implicit

@@ -1,0 +1,48 @@
+FileAST: 
+  Typedef: MAILBOX_t, [], ['typedef']
+    TypeDecl: MAILBOX_t, []
+      Struct: None
+        Decl: mbxCommand, [], [], []
+          TypeDecl: mbxCommand, []
+            IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: lpfc_sli_brdrestart, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: lpfc_sli_brdrestart, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: word0, ['volatile'], [], []
+        TypeDecl: word0, ['volatile']
+          IdentifierType: ['unsigned', 'int']
+      Decl: mb, [], [], []
+        PtrDecl: []
+          TypeDecl: mb, []
+            IdentifierType: ['MAILBOX_t']
+      Assignment: =
+        ID: mb
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['MAILBOX_t']
+          UnaryOp: &
+            ID: word0
+      Assignment: =
+        StructRef: ->
+          ID: mb
+          ID: mbxCommand
+        Constant: int, 0x1A
+      FuncCall: 
+        ID: __writel
+        ExprList: 
+          UnaryOp: *
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'int']
+              ID: mb

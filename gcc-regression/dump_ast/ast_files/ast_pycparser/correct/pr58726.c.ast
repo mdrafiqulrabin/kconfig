@@ -1,0 +1,102 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Union: None
+        Decl: f1, [], [], []
+          TypeDecl: f1, []
+            IdentifierType: ['int']
+        Decl: f2, [], [], []
+          TypeDecl: f2, []
+            IdentifierType: ['int']
+          Constant: int, 1
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['short']
+        TypeDecl: foo, []
+          IdentifierType: ['short']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: <
+            ID: p
+            Constant: int, 0
+          ID: p
+          ID: a
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: !=
+            BinaryOp: *
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['short']
+              ID: __CHAR_BIT__
+            Constant: int, 16
+          BinaryOp: !=
+            BinaryOp: *
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+              ID: __CHAR_BIT__
+            Constant: int, 32
+        Return: 
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: b
+          ID: f1
+        Constant: int, 56374
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['unsigned', 'short']
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+        StructRef: .
+          ID: b
+          ID: f2
+      Assignment: =
+        ID: d
+        TernaryOp: 
+          BinaryOp: ==
+            ID: e
+            Constant: int, 0
+          StructRef: .
+            ID: b
+            ID: f1
+          Constant: int, 0
+      Assignment: =
+        ID: c
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            ID: d
+      If: 
+        BinaryOp: !=
+          ID: c
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['short']
+            Constant: int, 56374
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

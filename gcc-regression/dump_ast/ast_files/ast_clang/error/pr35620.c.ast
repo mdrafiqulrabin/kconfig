@@ -1,0 +1,47 @@
+c_files/pr35620.c:8:18: error: GNU decimal type extension not supported
+extern void foo (_Decimal32);
+                 ^
+c_files/pr35620.c:9:1: error: GNU decimal type extension not supported
+_Decimal32 *p;
+^
+c_files/pr35620.c:12:11: error: GNU decimal type extension not supported
+union U { _Decimal32 a; int b; } u;
+          ^
+c_files/pr35620.c:17:3: error: GNU decimal type extension not supported
+  _Decimal32 d;
+  ^
+4 errors generated.
+TranslationUnitDecl 0x7fc5538264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc553826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc553826740 '__int128'
+|-TypedefDecl 0x7fc553826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc553826760 'unsigned __int128'
+|-TypedefDecl 0x7fc553826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc553826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc553826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc553826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc553826dc0 'char *'
+|   `-BuiltinType 0x7fc553826560 'char'
+|-TypedefDecl 0x7fc5538270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc553827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc553826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc553826e58 '__va_list_tag'
+|-FunctionDecl 0x7fc554025a00 <c_files/pr35620.c:8:1, col:28> col:13 invalid foo 'void (int)' extern
+| `-ParmVarDecl 0x7fc553827138 <col:18, <invalid sloc>> col:28 invalid 'int'
+|-VarDecl 0x7fc554025ae0 <line:9:1, col:13> col:13 invalid p 'int *'
+|-VarDecl 0x7fc554025b58 <line:11:1, col:12> col:12 used i 'int' extern
+|-RecordDecl 0x7fc554025bf8 <line:12:1, col:32> col:7 invalid union U definition
+| |-FieldDecl 0x7fc554025cb8 <col:11, col:22> col:22 invalid a 'int'
+| `-FieldDecl 0x7fc554025d18 <col:25, col:29> col:29 referenced b 'int'
+|-VarDecl 0x7fc554025db0 <col:1, col:34> col:34 used u 'union U':'union U'
+|-FunctionDecl 0x7fc554025ef0 <line:14:1, line:21:1> line:15:1 blatz 'void (void)'
+| `-CompoundStmt 0x7fc554026108 <line:16:1, line:21:1>
+|   |-DeclStmt 0x7fc554026000 <line:17:3, col:15>
+|   | `-VarDecl 0x7fc554025fa0 <col:3, col:14> col:14 invalid d 'int'
+|   `-BinaryOperator 0x7fc5540260b8 <line:18:3, col:9> 'int' '='
+|     |-MemberExpr 0x7fc554026040 <col:3, col:5> 'int' lvalue .b 0x7fc554025d18
+|     | `-DeclRefExpr 0x7fc554026018 <col:3> 'union U':'union U' lvalue Var 0x7fc554025db0 'u' 'union U':'union U'
+|     `-ImplicitCastExpr 0x7fc5540260a0 <col:9> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc554026078 <col:9> 'int' lvalue Var 0x7fc554025b58 'i' 'int'
+`-FunctionDecl 0x7fc5540261c0 <line:23:1, line:27:1> line:24:1 bar 'void (void)'
+  `-CompoundStmt 0x7fc554026258 <line:25:1, line:27:1>

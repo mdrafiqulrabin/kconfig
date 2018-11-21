@@ -1,0 +1,35 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['_Bool']
+      Assignment: =
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['char']
+            UnaryOp: &
+              ID: b
+        Constant: int, 123
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+              UnaryOp: &
+                ID: b
+          Constant: int, 123
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,36 @@
+FileAST: 
+  FuncDef: 
+    Decl: test5, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: test5, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        Constant: int, 0x80000000
+      Return: 
+        BinaryOp: +
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: test5
+            ExprList: 
+              Constant: int, 0x80000000
+          Constant: int, 0
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

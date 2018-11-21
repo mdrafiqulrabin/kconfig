@@ -1,0 +1,60 @@
+FileAST: 
+  Decl: f, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+      TypeDecl: f, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: f
+        ExprList: 
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          UnaryOp: -
+            Constant: int, 1
+          Constant: int, 1

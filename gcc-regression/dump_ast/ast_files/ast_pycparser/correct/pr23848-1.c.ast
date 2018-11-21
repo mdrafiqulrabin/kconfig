@@ -1,0 +1,112 @@
+FileAST: 
+  Decl: bar1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar1, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: size, [], [], []
+            TypeDecl: size, []
+              IdentifierType: ['int']
+        TypeDecl: foo1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: temp, [], [], []
+        ArrayDecl: []
+          TypeDecl: temp, []
+            IdentifierType: ['char']
+          ID: size
+      Assignment: =
+        ArrayRef: 
+          ID: temp
+          BinaryOp: -
+            ID: size
+            Constant: int, 1
+        Constant: char, '\0'
+      FuncCall: 
+        ID: bar1
+        ExprList: 
+          ID: temp
+          ID: size
+  Decl: bar2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar2, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: size, [], [], []
+            TypeDecl: size, []
+              IdentifierType: ['int']
+        TypeDecl: foo2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: temp, [], [], []
+        ArrayDecl: []
+          TypeDecl: temp, []
+            IdentifierType: ['char']
+          ID: size
+      Assignment: =
+        ArrayRef: 
+          ID: temp
+          BinaryOp: -
+            ID: size
+            Constant: int, 1
+        Constant: char, '\0'
+      Compound: 
+        Decl: temp2, [], [], []
+          ArrayDecl: []
+            TypeDecl: temp2, []
+              IdentifierType: ['char']
+            ID: size
+        Compound: 
+          Decl: temp3, [], [], []
+            ArrayDecl: []
+              TypeDecl: temp3, []
+                IdentifierType: ['char']
+              ID: size
+          Compound: 
+            Decl: temp4, [], [], []
+              ArrayDecl: []
+                TypeDecl: temp4, []
+                  IdentifierType: ['char']
+                ID: size
+            FuncCall: 
+              ID: bar2
+              ExprList: 
+                ID: temp
+                ID: temp2
+                ID: temp3
+                ID: temp4
+                ID: size

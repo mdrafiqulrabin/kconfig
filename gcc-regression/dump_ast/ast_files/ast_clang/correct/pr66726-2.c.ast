@@ -1,0 +1,61 @@
+TranslationUnitDecl 0x7f9e290124d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9e29012a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9e29012740 '__int128'
+|-TypedefDecl 0x7f9e29012a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9e29012760 'unsigned __int128'
+|-TypedefDecl 0x7f9e29012d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9e29012b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9e29012ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9e29012e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9e29012dc0 'char *'
+|   `-BuiltinType 0x7f9e29012560 'char'
+|-TypedefDecl 0x7f9e290130c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9e29013070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9e29012ee0 'struct __va_list_tag'
+|     `-Record 0x7f9e29012e58 '__va_list_tag'
+|-FunctionDecl 0x7f9e29063470 <c_files/pr66726-2.c:5:1, col:28> col:13 used bar 'void (char, char)' extern
+| |-ParmVarDecl 0x7f9e29013130 <col:18> col:22 'char'
+| `-ParmVarDecl 0x7f9e290131a0 <col:24> col:28 'char'
+`-FunctionDecl 0x7f9e29063638 <line:6:1, line:17:1> line:7:1 foo 'int (char)'
+  |-ParmVarDecl 0x7f9e29063568 <col:6, col:11> col:11 used b 'char'
+  `-CompoundStmt 0x7f9e29063c38 <line:8:1, line:17:1>
+    |-DeclStmt 0x7f9e29063748 <line:9:3, col:9>
+    | `-VarDecl 0x7f9e290636e8 <col:3, col:8> col:8 used a 'char'
+    |-BinaryOperator 0x7f9e290637c8 <line:10:3, col:7> 'char' '='
+    | |-DeclRefExpr 0x7f9e29063760 <col:3> 'char' lvalue Var 0x7f9e290636e8 'a' 'char'
+    | `-ImplicitCastExpr 0x7f9e290637b0 <col:7> 'char' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f9e29063788 <col:7> 'char' lvalue ParmVar 0x7f9e29063568 'b' 'char'
+    |-BinaryOperator 0x7f9e29063848 <line:11:3, col:7> 'char' '='
+    | |-DeclRefExpr 0x7f9e290637f0 <col:3> 'char' lvalue ParmVar 0x7f9e29063568 'b' 'char'
+    | `-ImplicitCastExpr 0x7f9e29063830 <col:7> 'char' <IntegralCast>
+    |   `-CharacterLiteral 0x7f9e29063818 <col:7> 'int' 98
+    |-CallExpr 0x7f9e29063930 <line:12:3, col:12> 'void'
+    | |-ImplicitCastExpr 0x7f9e29063918 <col:3> 'void (*)(char, char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f9e29063870 <col:3> 'void (char, char)' Function 0x7f9e29063470 'bar' 'void (char, char)'
+    | |-ImplicitCastExpr 0x7f9e29063968 <col:8> 'char' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f9e29063898 <col:8> 'char' lvalue Var 0x7f9e290636e8 'a' 'char'
+    | `-ImplicitCastExpr 0x7f9e29063980 <col:11> 'char' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f9e290638c0 <col:11> 'char' lvalue ParmVar 0x7f9e29063568 'b' 'char'
+    |-BinaryOperator 0x7f9e29063a00 <line:13:3, col:7> 'char' '='
+    | |-DeclRefExpr 0x7f9e29063998 <col:3> 'char' lvalue ParmVar 0x7f9e29063568 'b' 'char'
+    | `-ImplicitCastExpr 0x7f9e290639e8 <col:7> 'char' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f9e290639c0 <col:7> 'char' lvalue Var 0x7f9e290636e8 'a' 'char'
+    |-IfStmt 0x7f9e29063b10 <line:14:3, line:15:6>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9e29063aa0 <line:14:7, col:12> 'int' '=='
+    | | |-ImplicitCastExpr 0x7f9e29063a88 <col:7> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7f9e29063a70 <col:7> 'char' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7f9e29063a28 <col:7> 'char' lvalue ParmVar 0x7f9e29063568 'b' 'char'
+    | | `-IntegerLiteral 0x7f9e29063a50 <col:12> 'int' 0
+    | |-UnaryOperator 0x7f9e29063af0 <line:15:5, col:6> 'char' postfix '++'
+    | | `-DeclRefExpr 0x7f9e29063ac8 <col:5> 'char' lvalue Var 0x7f9e290636e8 'a' 'char'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f9e29063c20 <line:16:3, col:14>
+      `-BinaryOperator 0x7f9e29063bf8 <col:10, col:14> 'int' '+'
+        |-ImplicitCastExpr 0x7f9e29063bb0 <col:10> 'int' <IntegralCast>
+        | `-ImplicitCastExpr 0x7f9e29063b98 <col:10> 'char' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f9e29063b48 <col:10> 'char' lvalue Var 0x7f9e290636e8 'a' 'char'
+        `-ImplicitCastExpr 0x7f9e29063be0 <col:14> 'int' <IntegralCast>
+          `-ImplicitCastExpr 0x7f9e29063bc8 <col:14> 'char' <LValueToRValue>
+            `-DeclRefExpr 0x7f9e29063b70 <col:14> 'char' lvalue ParmVar 0x7f9e29063568 'b' 'char'

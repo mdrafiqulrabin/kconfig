@@ -1,0 +1,35 @@
+c_files/pr3074-1.c:7:16: warning: expression result unused [-Wunused-value]
+  5 * (a == 1) | (a == 2);  /* { dg-warning "no effect" "no effect" } */
+  ~~~~~~~~~~~~ ^ ~~~~~~~~
+1 warning generated.
+TranslationUnitDecl 0x7fd2f38264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd2f3826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd2f3826740 '__int128'
+|-TypedefDecl 0x7fd2f3826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd2f3826760 'unsigned __int128'
+|-TypedefDecl 0x7fd2f3826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd2f3826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd2f3826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd2f3826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd2f3826dc0 'char *'
+|   `-BuiltinType 0x7fd2f3826560 'char'
+|-TypedefDecl 0x7fd2f38270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd2f3827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd2f3826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd2f3826e58 '__va_list_tag'
+`-FunctionDecl 0x7fd2f4025a00 <c_files/pr3074-1.c:5:1, line:8:1> line:5:6 foo 'void (int)'
+  |-ParmVarDecl 0x7fd2f3827138 <col:10, col:14> col:14 used a 'int'
+  `-CompoundStmt 0x7fd2f4025ca0 <line:6:1, line:8:1>
+    `-BinaryOperator 0x7fd2f4025c78 <line:7:3, col:25> 'int' '|'
+      |-BinaryOperator 0x7fd2f4025ba8 <col:3, col:14> 'int' '*'
+      | |-IntegerLiteral 0x7fd2f4025ae0 <col:3> 'int' 5
+      | `-ParenExpr 0x7fd2f4025b88 <col:7, col:14> 'int'
+      |   `-BinaryOperator 0x7fd2f4025b60 <col:8, col:13> 'int' '=='
+      |     |-ImplicitCastExpr 0x7fd2f4025b48 <col:8> 'int' <LValueToRValue>
+      |     | `-DeclRefExpr 0x7fd2f4025b00 <col:8> 'int' lvalue ParmVar 0x7fd2f3827138 'a' 'int'
+      |     `-IntegerLiteral 0x7fd2f4025b28 <col:13> 'int' 1
+      `-ParenExpr 0x7fd2f4025c58 <col:18, col:25> 'int'
+        `-BinaryOperator 0x7fd2f4025c30 <col:19, col:24> 'int' '=='
+          |-ImplicitCastExpr 0x7fd2f4025c18 <col:19> 'int' <LValueToRValue>
+          | `-DeclRefExpr 0x7fd2f4025bd0 <col:19> 'int' lvalue ParmVar 0x7fd2f3827138 'a' 'int'
+          `-IntegerLiteral 0x7fd2f4025bf8 <col:24> 'int' 2

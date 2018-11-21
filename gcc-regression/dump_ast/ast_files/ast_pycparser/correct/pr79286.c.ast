@@ -1,0 +1,57 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+    Constant: int, 0
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+    Constant: int, 0
+  Decl: d, [], ['static'], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+        Constant: int, 8
+    InitList: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+      For: 
+        DeclList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+            Constant: int, 0
+        BinaryOp: <
+          ID: b
+          Constant: int, 4
+        UnaryOp: p++
+          ID: b
+        Compound: 
+          FuncCall: 
+            ID: __builtin_printf
+            ExprList: 
+              Constant: string, "%d\n"
+              ID: b
+              ID: e
+          While: 
+            BinaryOp: &&
+              ID: a
+              UnaryOp: p++
+                ID: c
+            Assignment: =
+              ID: e
+              ArrayRef: 
+                ArrayRef: 
+                  ID: d
+                  Constant: int, 300000000000000000
+                Constant: int, 0
+      Return: 
+        Constant: int, 0

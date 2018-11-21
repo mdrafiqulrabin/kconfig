@@ -1,0 +1,30 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: isnan, [], [], []
+        FuncDecl: 
+          ParamList: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          TypeDecl: isnan, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: isnan, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: isnan, []
+          IdentifierType: ['int']
+    Compound: 
+    Decl: a, [], [], []
+      TypeDecl: a, []
+        IdentifierType: ['int']

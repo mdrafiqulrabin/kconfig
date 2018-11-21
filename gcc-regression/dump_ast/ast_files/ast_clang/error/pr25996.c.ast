@@ -1,0 +1,69 @@
+c_files/pr25996.c:7:8: error: use of undeclared identifier 'i'
+  for (i = 0; i < 1; ++i); /* { dg-error "undeclared|for each function" } */
+       ^
+c_files/pr25996.c:7:15: error: use of undeclared identifier 'i'
+  for (i = 0; i < 1; ++i); /* { dg-error "undeclared|for each function" } */
+              ^
+c_files/pr25996.c:7:24: error: use of undeclared identifier 'i'
+  for (i = 0; i < 1; ++i); /* { dg-error "undeclared|for each function" } */
+                       ^
+c_files/pr25996.c:15:12: error: use of undeclared identifier 'j'
+  for (i = j; i < 1; ++i); /* { dg-error "undeclared" } */
+           ^
+c_files/pr25996.c:23:19: error: use of undeclared identifier 'j'
+  for (i = 0; i < j; ++i); /* { dg-error "undeclared|invalid controlling predicate" } */
+                  ^
+c_files/pr25996.c:31:28: error: use of undeclared identifier 'j'
+  for (i = 0; i < 10; i += j); /* { dg-error "undeclared|invalid increment expression" } */
+                           ^
+6 errors generated.
+TranslationUnitDecl 0x7fa2dc8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa2dc826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa2dc826740 '__int128'
+|-TypedefDecl 0x7fa2dc826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa2dc826760 'unsigned __int128'
+|-TypedefDecl 0x7fa2dc826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa2dc826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa2dc826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa2dc826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa2dc826dc0 'char *'
+|   `-BuiltinType 0x7fa2dc826560 'char'
+|-TypedefDecl 0x7fa2dc8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa2dc827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa2dc826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa2dc826e58 '__va_list_tag'
+|-FunctionDecl 0x7fa2dd025a00 <c_files/pr25996.c:3:1, line:8:1> line:4:1 test1 'void (void)'
+| `-CompoundStmt 0x7fa2dd025b90 <line:5:1, line:8:1>
+|-FunctionDecl 0x7fa2dd025c38 <line:10:1, line:16:1> line:11:1 test2 'void (void)'
+| `-CompoundStmt 0x7fa2dd025eb0 <line:12:1, line:16:1>
+|   |-DeclStmt 0x7fa2dd025d48 <line:13:3, col:8>
+|   | `-VarDecl 0x7fa2dd025ce8 <col:3, col:7> col:7 used i 'int'
+|   `-ForStmt 0x7fa2dd025e78 <line:15:3, col:26>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fa2dd025df8 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7fa2dd025de0 <col:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fa2dd025d98 <col:15> 'int' lvalue Var 0x7fa2dd025ce8 'i' 'int'
+|     | `-IntegerLiteral 0x7fa2dd025dc0 <col:19> 'int' 1
+|     |-UnaryOperator 0x7fa2dd025e48 <col:22, col:24> 'int' prefix '++'
+|     | `-DeclRefExpr 0x7fa2dd025e20 <col:24> 'int' lvalue Var 0x7fa2dd025ce8 'i' 'int'
+|     `-NullStmt 0x7fa2dd025e68 <col:26>
+|-FunctionDecl 0x7fa2dd025f68 <line:18:1, line:24:1> line:19:1 test3 'void (void)'
+| `-CompoundStmt 0x7fa2dd026190 <line:20:1, line:24:1>
+|   `-DeclStmt 0x7fa2dd026078 <line:21:3, col:8>
+|     `-VarDecl 0x7fa2dd026018 <col:3, col:7> col:7 used i 'int'
+`-FunctionDecl 0x7fa2dd026240 <line:26:1, line:32:1> line:27:1 test4 'void (void)'
+  `-CompoundStmt 0x7fa2dd0264e0 <line:28:1, line:32:1>
+    |-DeclStmt 0x7fa2dd026350 <line:29:3, col:8>
+    | `-VarDecl 0x7fa2dd0262f0 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fa2dd0264a8 <line:31:3, col:30>
+      |-BinaryOperator 0x7fa2dd0263b0 <col:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fa2dd026368 <col:8> 'int' lvalue Var 0x7fa2dd0262f0 'i' 'int'
+      | `-IntegerLiteral 0x7fa2dd026390 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa2dd026438 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fa2dd026420 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fa2dd0263d8 <col:15> 'int' lvalue Var 0x7fa2dd0262f0 'i' 'int'
+      | `-IntegerLiteral 0x7fa2dd026400 <col:19> 'int' 10
+      |-<<<NULL>>>
+      `-NullStmt 0x7fa2dd026498 <col:30>

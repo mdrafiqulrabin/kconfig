@@ -1,0 +1,21 @@
+FileAST: 
+  FuncDef: 
+    Decl: test_00, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: tab, [], [], []
+            ArrayDecl: []
+              TypeDecl: tab, []
+                IdentifierType: ['unsigned', 'short']
+          Decl: index, [], [], []
+            TypeDecl: index, []
+              IdentifierType: ['int']
+        TypeDecl: test_00, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ID: tab
+          BinaryOp: +
+            ID: index
+            Constant: int, 1

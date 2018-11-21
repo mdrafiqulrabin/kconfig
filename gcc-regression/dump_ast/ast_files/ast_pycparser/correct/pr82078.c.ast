@@ -1,0 +1,100 @@
+FileAST: 
+  Decl: a, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: a, []
+          Struct: S0
+            Decl: f4, [], [], []
+              TypeDecl: f4, []
+                IdentifierType: ['signed']
+            Decl: f9, [], [], []
+              TypeDecl: f9, []
+                IdentifierType: ['signed']
+              Constant: int, 5
+        Constant: int, 5
+      Constant: int, 6
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Struct: S0
+        Decl: f4, [], [], []
+          TypeDecl: f4, []
+            IdentifierType: ['signed']
+        Decl: f9, [], [], []
+          TypeDecl: f9, []
+            IdentifierType: ['signed']
+          Constant: int, 5
+    InitList: 
+      Constant: int, 2
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: e, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: e, []
+              Struct: S0
+            Constant: int, 6
+          Constant: int, 5
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          Struct: S0
+      Assignment: =
+        ID: b
+        Assignment: =
+          ID: f
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                ID: e
+                Constant: int, 2
+              Constant: int, 5
+            ArrayRef: 
+              ArrayRef: 
+                ID: a
+                Constant: int, 5
+              Constant: int, 0
+      If: 
+        ID: d
+        EmptyStatement: 
+        Return: 
+          StructRef: .
+            ID: f
+            ID: f9
+      Assignment: =
+        ArrayRef: 
+          ArrayRef: 
+            ID: e
+            ID: c
+          Constant: int, 45
+        ArrayRef: 
+          ArrayRef: 
+            ID: a
+            Constant: int, 4
+          Constant: int, 4
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: fn1
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            ID: b
+            ID: f4
+          Constant: int, 0
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

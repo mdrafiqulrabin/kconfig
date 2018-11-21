@@ -1,0 +1,85 @@
+c_files/pr49206.c:14:5: warning: implicit declaration of function 'foo' is invalid in C99 [-Wimplicit-function-declaration]
+    foo ();
+    ^
+1 warning generated.
+TranslationUnitDecl 0x7fef4c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fef4c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fef4c826740 '__int128'
+|-TypedefDecl 0x7fef4c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fef4c826760 'unsigned __int128'
+|-TypedefDecl 0x7fef4c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fef4c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fef4c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fef4c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fef4c826dc0 'char *'
+|   `-BuiltinType 0x7fef4c826560 'char'
+|-TypedefDecl 0x7fef4c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fef4c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fef4c826ee0 'struct __va_list_tag'
+|     `-Record 0x7fef4c826e58 '__va_list_tag'
+|-RecordDecl 0x7fef4c827120 <c_files/pr49206.c:2:1, line:5:1> line:2:8 struct S1 definition
+| `-FieldDecl 0x7fef4d025a00 <line:4:3, col:9> col:9 referenced f0 'short'
+|-VarDecl 0x7fef4d025aa0 <line:6:1, col:27> col:27 used g_5 'volatile struct S1':'volatile struct S1' extern
+|-VarDecl 0x7fef4d025b58 <line:7:1, col:12> col:12 used g_120 'int' extern
+|-VarDecl 0x7fef4d025bd0 <col:1, col:19> col:19 used i 'int' extern
+|-VarDecl 0x7fef4d025c60 <line:8:1, col:14> col:14 used g_339 'short' extern
+|-FunctionDecl 0x7fef4d025f08 <line:10:1, line:16:1> line:11:1 used func_72 'int (int, int, struct S1)'
+| |-ParmVarDecl 0x7fef4d025cd8 <col:10, col:14> col:14 x 'int'
+| |-ParmVarDecl 0x7fef4d025d50 <col:17, col:21> col:21 y 'int'
+| |-ParmVarDecl 0x7fef4d025dd0 <col:24, col:34> col:34 used z 'struct S1':'struct S1'
+| `-CompoundStmt 0x7fef4d026478 <line:12:1, line:16:1>
+|   |-ForStmt 0x7fef4d0263e8 <line:13:3, line:14:10>
+|   | |-BinaryOperator 0x7fef4d026070 <line:13:8, col:16> 'short' '='
+|   | | |-MemberExpr 0x7fef4d025fe0 <col:8, col:10> 'short' lvalue .f0 0x7fef4d025a00
+|   | | | `-DeclRefExpr 0x7fef4d025fb8 <col:8> 'struct S1':'struct S1' lvalue ParmVar 0x7fef4d025dd0 'z' 'struct S1':'struct S1'
+|   | | `-ImplicitCastExpr 0x7fef4d026058 <col:15, col:16> 'short' <IntegralCast>
+|   | |   `-UnaryOperator 0x7fef4d026038 <col:15, col:16> 'int' prefix '-'
+|   | |     `-IntegerLiteral 0x7fef4d026018 <col:16> 'int' 3
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fef4d026190 <col:19, col:26> 'int' '>'
+|   | | |-ImplicitCastExpr 0x7fef4d026178 <col:19, col:21> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7fef4d026160 <col:19, col:21> 'short' <LValueToRValue>
+|   | | |   `-MemberExpr 0x7fef4d026108 <col:19, col:21> 'short' lvalue .f0 0x7fef4d025a00
+|   | | |     `-DeclRefExpr 0x7fef4d0260e0 <col:19> 'struct S1':'struct S1' lvalue ParmVar 0x7fef4d025dd0 'z' 'struct S1':'struct S1'
+|   | | `-IntegerLiteral 0x7fef4d026140 <col:26> 'int' 16
+|   | |-CompoundAssignOperator 0x7fef4d026238 <col:30, col:38> 'short' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | | |-MemberExpr 0x7fef4d0261e0 <col:30, col:32> 'short' lvalue .f0 0x7fef4d025a00
+|   | | | `-DeclRefExpr 0x7fef4d0261b8 <col:30> 'struct S1':'struct S1' lvalue ParmVar 0x7fef4d025dd0 'z' 'struct S1':'struct S1'
+|   | | `-IntegerLiteral 0x7fef4d026218 <col:38> 'int' 1
+|   | `-CallExpr 0x7fef4d0263c0 <line:14:5, col:10> 'int'
+|   |   `-ImplicitCastExpr 0x7fef4d0263a8 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|   |     `-DeclRefExpr 0x7fef4d026358 <col:5> 'int ()' Function 0x7fef4d0262c0 'foo' 'int ()'
+|   `-ReturnStmt 0x7fef4d026460 <line:15:3, col:10>
+|     `-ImplicitCastExpr 0x7fef4d026448 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fef4d026420 <col:10> 'int' lvalue Var 0x7fef4d025b58 'g_120' 'int'
+|-FunctionDecl 0x7fef4d0262c0 <<invalid sloc>> line:14:5 implicit used foo 'int ()'
+`-FunctionDecl 0x7fef4d0264c8 <line:18:1, line:27:1> line:19:1 main 'int ()'
+  `-CompoundStmt 0x7fef4d026918 <line:20:1, line:27:1>
+    |-WhileStmt 0x7fef4d026608 <line:21:3, line:22:5>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fef4d0265d8 <line:21:10, col:18> 'int' '%'
+    | | |-ImplicitCastExpr 0x7fef4d0265c0 <col:10> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fef4d0265a8 <col:10> 'short' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fef4d026560 <col:10> 'short' lvalue Var 0x7fef4d025c60 'g_339' 'short'
+    | | `-IntegerLiteral 0x7fef4d026588 <col:18> 'int' 2097155
+    | `-ContinueStmt 0x7fef4d026600 <line:22:5>
+    |-IfStmt 0x7fef4d0267c8 <line:23:3, line:24:23>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fef4d026650 <line:23:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fef4d026628 <col:7> 'int' lvalue Var 0x7fef4d025bd0 'i' 'int'
+    | |-CallExpr 0x7fef4d026770 <line:24:5, col:23> 'int'
+    | | |-ImplicitCastExpr 0x7fef4d026758 <col:5> 'int (*)(int, int, struct S1)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fef4d026668 <col:5> 'int (int, int, struct S1)' Function 0x7fef4d025f08 'func_72' 'int (int, int, struct S1)'
+    | | |-IntegerLiteral 0x7fef4d026690 <col:14> 'int' 0
+    | | |-IntegerLiteral 0x7fef4d0266b0 <col:17> 'int' 0
+    | | `-ImplicitCastExpr 0x7fef4d0267b0 <col:20> 'struct S1':'struct S1' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fef4d0266d0 <col:20> 'volatile struct S1':'volatile struct S1' lvalue Var 0x7fef4d025aa0 'g_5' 'volatile struct S1':'volatile struct S1'
+    | `-<<<NULL>>>
+    |-CallExpr 0x7fef4d0268b0 <line:25:3, col:14> 'int'
+    | |-ImplicitCastExpr 0x7fef4d026898 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fef4d026800 <col:3> 'int ()' Function 0x7fef4d0262c0 'foo' 'int ()'
+    | `-UnaryOperator 0x7fef4d026878 <col:8, col:9> 'short *' prefix '&'
+    |   `-DeclRefExpr 0x7fef4d026828 <col:9> 'short' lvalue Var 0x7fef4d025c60 'g_339' 'short'
+    `-ReturnStmt 0x7fef4d026900 <line:26:3, col:10>
+      `-IntegerLiteral 0x7fef4d0268e0 <col:10> 'int' 0

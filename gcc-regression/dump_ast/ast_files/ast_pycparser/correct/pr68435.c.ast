@@ -1,0 +1,152 @@
+FileAST: 
+  Typedef: cpp_reader, [], ['typedef']
+    TypeDecl: cpp_reader, []
+      Struct: cpp_reader
+  Decl: None, [], [], []
+    Enum: cpp_ttype
+      EnumeratorList: 
+        Enumerator: CPP_EQ
+          Constant: int, 0
+        Enumerator: CPP_NOT
+        Enumerator: CPP_GREATER
+        Enumerator: CPP_LESS
+        Enumerator: CPP_PLUS
+        Enumerator: CPP_MINUS
+        Enumerator: CPP_MULT
+        Enumerator: CPP_DIV
+        Enumerator: CPP_MOD
+        Enumerator: CPP_AND
+        Enumerator: CPP_OR
+        Enumerator: CPP_XOR
+        Enumerator: CPP_RSHIFT
+        Enumerator: CPP_LSHIFT
+        Enumerator: CPP_MIN
+        Enumerator: CPP_MAX
+        Enumerator: CPP_COMPL
+        Enumerator: CPP_AND_AND
+        Enumerator: CPP_OR_OR
+        Enumerator: CPP_QUERY
+        Enumerator: CPP_COLON
+        Enumerator: CPP_COMMA
+        Enumerator: CPP_OPEN_PAREN
+        Enumerator: CPP_CLOSE_PAREN
+        Enumerator: CPP_EQ_EQ
+        Enumerator: CPP_NOT_EQ
+        Enumerator: CPP_GREATER_EQ
+        Enumerator: CPP_LESS_EQ
+        Enumerator: CPP_PLUS_EQ
+        Enumerator: CPP_MINUS_EQ
+        Enumerator: CPP_MULT_EQ
+        Enumerator: CPP_DIV_EQ
+        Enumerator: CPP_MOD_EQ
+        Enumerator: CPP_AND_EQ
+        Enumerator: CPP_OR_EQ
+        Enumerator: CPP_XOR_EQ
+        Enumerator: CPP_RSHIFT_EQ
+        Enumerator: CPP_LSHIFT_EQ
+        Enumerator: CPP_MIN_EQ
+        Enumerator: CPP_MAX_EQ
+        Enumerator: CPP_HASH
+        Enumerator: CPP_PASTE
+        Enumerator: CPP_OPEN_SQUARE
+        Enumerator: CPP_CLOSE_SQUARE
+        Enumerator: CPP_OPEN_BRACE
+        Enumerator: CPP_CLOSE_BRACE
+        Enumerator: CPP_SEMICOLON
+        Enumerator: CPP_ELLIPSIS
+        Enumerator: CPP_PLUS_PLUS
+        Enumerator: CPP_MINUS_MINUS
+        Enumerator: CPP_DEREF
+        Enumerator: CPP_DOT
+        Enumerator: CPP_SCOPE
+        Enumerator: CPP_DEREF_STAR
+        Enumerator: CPP_DOT_STAR
+        Enumerator: CPP_ATSIGN
+        Enumerator: CPP_NAME
+        Enumerator: CPP_NUMBER
+        Enumerator: CPP_CHAR
+        Enumerator: CPP_WCHAR
+        Enumerator: CPP_OTHER
+        Enumerator: CPP_STRING
+        Enumerator: CPP_WSTRING
+        Enumerator: CPP_HEADER_NAME
+        Enumerator: CPP_COMMENT
+        Enumerator: CPP_MACRO_ARG
+        Enumerator: CPP_PADDING
+        Enumerator: CPP_EOF
+  Decl: lex, [], ['static'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['cpp_reader']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: lex, []
+        Struct: op
+  Decl: None, [], [], []
+    Struct: op
+      Decl: op, [], [], []
+        TypeDecl: op, []
+          Enum: cpp_ttype
+      Decl: value, [], [], []
+        TypeDecl: value, []
+          IdentifierType: ['long']
+  FuncDef: 
+    Decl: _cpp_parse_expr, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: pfile
+        TypeDecl: _cpp_parse_expr, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: init_stack, [], [], []
+        ArrayDecl: []
+          TypeDecl: init_stack, []
+            Struct: op
+          Constant: int, 20
+      Decl: stack, [], [], []
+        PtrDecl: []
+          TypeDecl: stack, []
+            Struct: op
+        ID: init_stack
+      Decl: top, [], [], []
+        PtrDecl: []
+          TypeDecl: top, []
+            Struct: op
+        BinaryOp: +
+          ID: stack
+          Constant: int, 1
+      Decl: skip_evaluation, [], [], []
+        TypeDecl: skip_evaluation, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        Compound: 
+          Decl: op, [], [], []
+            TypeDecl: op, []
+              Struct: op
+          Assignment: =
+            ID: op
+            FuncCall: 
+              ID: lex
+              ExprList: 
+                ID: pfile
+                ID: skip_evaluation
+          Switch: 
+            StructRef: .
+              ID: op
+              ID: op
+            Compound: 
+              Case: 
+                ID: CPP_OR_OR
+                If: 
+                  StructRef: ->
+                    ID: top
+                    ID: value
+                  UnaryOp: p++
+                    ID: skip_evaluation
+                  UnaryOp: p--
+                    ID: skip_evaluation

@@ -1,0 +1,233 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['short']
+    UnaryOp: -
+      Constant: int, 15726
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+    Cast: 
+      Typename: None, []
+        TypeDecl: None, []
+          IdentifierType: ['int']
+      UnaryOp: -
+        Constant: int, 7003557328690506537LL
+  Decl: c, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['short']
+            Constant: int, 6
+          Constant: int, 3
+        Constant: int, 5
+      Constant: int, 5
+  Decl: d, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        ArrayDecl: []
+          ArrayDecl: []
+            ArrayDecl: []
+              TypeDecl: d, []
+                IdentifierType: ['char']
+              Constant: int, 4
+            Constant: int, 2
+          Constant: int, 3
+        Constant: int, 5
+      Constant: int, 2
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        DeclList: 
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+            Constant: int, 0
+        BinaryOp: <
+          ID: e
+          Constant: int, 3
+        Assignment: =
+          ID: e
+          BinaryOp: +
+            ID: e
+            Constant: int, 1
+        For: 
+          DeclList: 
+            Decl: f, [], [], []
+              TypeDecl: f, []
+                IdentifierType: ['int']
+              Constant: int, 0
+          BinaryOp: <
+            ID: f
+            Constant: int, 2
+          Assignment: =
+            ID: f
+            BinaryOp: +
+              ID: f
+              Constant: int, 1
+          For: 
+            DeclList: 
+              Decl: g, [], [], []
+                TypeDecl: g, []
+                  IdentifierType: ['int']
+                Constant: int, 0
+            BinaryOp: <
+              ID: g
+              Constant: int, 4
+            Assignment: =
+              ID: g
+              BinaryOp: +
+                ID: g
+                Constant: int, 1
+            For: 
+              DeclList: 
+                Decl: h, [], [], []
+                  TypeDecl: h, []
+                    IdentifierType: ['int']
+                  Constant: int, 0
+              BinaryOp: <
+                ID: h
+                Constant: int, 3
+              Assignment: =
+                ID: h
+                BinaryOp: +
+                  ID: h
+                  Constant: int, 1
+              For: 
+                DeclList: 
+                  Decl: i, [], [], []
+                    TypeDecl: i, []
+                      IdentifierType: ['int']
+                    Constant: int, 0
+                BinaryOp: <
+                  ID: i
+                  Constant: int, 2
+                Assignment: =
+                  ID: i
+                  BinaryOp: +
+                    ID: i
+                    Constant: int, 1
+                For: 
+                  DeclList: 
+                    Decl: j, [], [], []
+                      TypeDecl: j, []
+                        IdentifierType: ['int']
+                      Constant: int, 0
+                  BinaryOp: <
+                    ID: j
+                    Constant: int, 4
+                  Assignment: =
+                    ID: j
+                    BinaryOp: +
+                      ID: j
+                      Constant: int, 1
+                  Assignment: =
+                    ArrayRef: 
+                      ArrayRef: 
+                        ArrayRef: 
+                          ArrayRef: 
+                            ArrayRef: 
+                              ID: d
+                              ID: f
+                            ID: g
+                          ID: h
+                        ID: i
+                      ID: j
+                    BinaryOp: >>
+                      BinaryOp: <<
+                        Constant: int, 7
+                        BinaryOp: -
+                          BinaryOp: >>
+                            Constant: int, 1236110361944357083
+                            BinaryOp: +
+                              ID: a
+                              Constant: int, 15728
+                          Constant: int, 309027590486089270
+                      BinaryOp: -
+                        BinaryOp: <<
+                          BinaryOp: +
+                            ArrayRef: 
+                              ArrayRef: 
+                                ArrayRef: 
+                                  ArrayRef: 
+                                    ID: c
+                                    ID: e
+                                  ID: f
+                                ID: h
+                              ID: j
+                            Constant: int, 2147483647
+                          BinaryOp: -
+                            UnaryOp: ~
+                              ID: b
+                            Constant: int, 7003557328690506536
+                        Constant: int, 2147480981
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      For: 
+        DeclList: 
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['int']
+            Constant: int, 0
+        BinaryOp: <
+          ID: k
+          Constant: int, 5
+        UnaryOp: ++
+          ID: k
+        For: 
+          DeclList: 
+            Decl: l, [], [], []
+              TypeDecl: l, []
+                IdentifierType: ['int']
+              Constant: int, 0
+          BinaryOp: <
+            ID: l
+            Constant: int, 5
+          UnaryOp: ++
+            ID: l
+          For: 
+            DeclList: 
+              Decl: m, [], [], []
+                TypeDecl: m, []
+                  IdentifierType: ['int']
+                Constant: int, 0
+            BinaryOp: <
+              ID: m
+              Constant: int, 3
+            UnaryOp: ++
+              ID: m
+            For: 
+              DeclList: 
+                Decl: n, [], [], []
+                  TypeDecl: n, []
+                    IdentifierType: ['int']
+                  Constant: int, 0
+              BinaryOp: <
+                ID: n
+                Constant: int, 4
+              UnaryOp: ++
+                ID: n
+              Assignment: =
+                ArrayRef: 
+                  ArrayRef: 
+                    ArrayRef: 
+                      ArrayRef: 
+                        ID: c
+                        ID: k
+                      ID: l
+                    ID: m
+                  ID: n
+                UnaryOp: -
+                  Constant: int, 2639
+      FuncCall: 
+        ID: fn1

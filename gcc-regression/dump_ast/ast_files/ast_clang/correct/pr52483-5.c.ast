@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7fceda0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fceda026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fceda026740 '__int128'
+|-TypedefDecl 0x7fceda026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fceda026760 'unsigned __int128'
+|-TypedefDecl 0x7fceda026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fceda026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fceda026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fceda026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fceda026dc0 'char *'
+|   `-BuiltinType 0x7fceda026560 'char'
+|-TypedefDecl 0x7fceda0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fceda027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fceda026ee0 'struct __va_list_tag'
+|     `-Record 0x7fceda026e58 '__va_list_tag'
+|-FunctionDecl 0x7fceda825a30 <c_files/pr52483-5.c:8:1, line:13:1> line:9:1 test_00 'volatile char *(volatile char *)'
+| |-ParmVarDecl 0x7fceda027160 <col:10, col:25> col:25 used x 'volatile char *'
+| `-CompoundStmt 0x7fceda825c90 <line:10:1, line:13:1>
+|   |-DeclStmt 0x7fceda825c20 <line:11:3, col:16>
+|   | `-VarDecl 0x7fceda825b28 <col:3, col:14> col:7 xx 'int' cinit
+|   |   `-ImplicitCastExpr 0x7fceda825c08 <col:12, col:14> 'int' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fceda825bf0 <col:12, col:14> 'char' <LValueToRValue>
+|   |       `-UnaryOperator 0x7fceda825bd0 <col:12, col:14> 'volatile char' lvalue prefix '*'
+|   |         `-UnaryOperator 0x7fceda825bb0 <col:13, col:14> 'volatile char *' postfix '++'
+|   |           `-DeclRefExpr 0x7fceda825b88 <col:13> 'volatile char *' lvalue ParmVar 0x7fceda027160 'x' 'volatile char *'
+|   `-ReturnStmt 0x7fceda825c78 <line:12:3, col:10>
+|     `-ImplicitCastExpr 0x7fceda825c60 <col:10> 'volatile char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fceda825c38 <col:10> 'volatile char *' lvalue ParmVar 0x7fceda027160 'x' 'volatile char *'
+|-FunctionDecl 0x7fceda825dc8 <line:15:1, line:20:1> line:16:1 test_01 'volatile short *(volatile short *)'
+| |-ParmVarDecl 0x7fceda825d00 <col:10, col:26> col:26 used x 'volatile short *'
+| `-CompoundStmt 0x7fceda825fe8 <line:17:1, line:20:1>
+|   |-DeclStmt 0x7fceda825f78 <line:18:3, col:16>
+|   | `-VarDecl 0x7fceda825e80 <col:3, col:14> col:7 xx 'int' cinit
+|   |   `-ImplicitCastExpr 0x7fceda825f60 <col:12, col:14> 'int' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fceda825f48 <col:12, col:14> 'short' <LValueToRValue>
+|   |       `-UnaryOperator 0x7fceda825f28 <col:12, col:14> 'volatile short' lvalue prefix '*'
+|   |         `-UnaryOperator 0x7fceda825f08 <col:13, col:14> 'volatile short *' postfix '++'
+|   |           `-DeclRefExpr 0x7fceda825ee0 <col:13> 'volatile short *' lvalue ParmVar 0x7fceda825d00 'x' 'volatile short *'
+|   `-ReturnStmt 0x7fceda825fd0 <line:19:3, col:10>
+|     `-ImplicitCastExpr 0x7fceda825fb8 <col:10> 'volatile short *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fceda825f90 <col:10> 'volatile short *' lvalue ParmVar 0x7fceda825d00 'x' 'volatile short *'
+`-FunctionDecl 0x7fceda826118 <line:22:1, line:27:1> line:23:1 test_02 'volatile int *(volatile int *)'
+  |-ParmVarDecl 0x7fceda826050 <col:10, col:24> col:24 used x 'volatile int *'
+  `-CompoundStmt 0x7fceda826320 <line:24:1, line:27:1>
+    |-DeclStmt 0x7fceda8262b0 <line:25:3, col:16>
+    | `-VarDecl 0x7fceda8261d0 <col:3, col:14> col:7 xx 'int' cinit
+    |   `-ImplicitCastExpr 0x7fceda826298 <col:12, col:14> 'int' <LValueToRValue>
+    |     `-UnaryOperator 0x7fceda826278 <col:12, col:14> 'volatile int' lvalue prefix '*'
+    |       `-UnaryOperator 0x7fceda826258 <col:13, col:14> 'volatile int *' postfix '++'
+    |         `-DeclRefExpr 0x7fceda826230 <col:13> 'volatile int *' lvalue ParmVar 0x7fceda826050 'x' 'volatile int *'
+    `-ReturnStmt 0x7fceda826308 <line:26:3, col:10>
+      `-ImplicitCastExpr 0x7fceda8262f0 <col:10> 'volatile int *' <LValueToRValue>
+        `-DeclRefExpr 0x7fceda8262c8 <col:10> 'volatile int *' lvalue ParmVar 0x7fceda826050 'x' 'volatile int *'

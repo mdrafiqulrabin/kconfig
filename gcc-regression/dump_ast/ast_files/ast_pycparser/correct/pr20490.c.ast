@@ -1,0 +1,46 @@
+FileAST: 
+  Decl: a, [], ['static'], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], ['static'], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Typedef: gint, [], ['typedef']
+    TypeDecl: gint, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: blah, [], [], []
+      FuncDecl: 
+        TypeDecl: blah, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['gint']
+        ID: a
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['gint']
+        ID: b
+      Assignment: *=
+        ID: x
+        TernaryOp: 
+          BinaryOp: <
+            ID: x
+            Constant: int, 0
+          UnaryOp: -
+            Constant: int, 1
+          Constant: int, 0
+      Assignment: *=
+        ID: y
+        TernaryOp: 
+          BinaryOp: <
+            ID: y
+            Constant: int, 0
+          UnaryOp: -
+            Constant: int, 1
+          Constant: int, 0
+      Return: 
+        BinaryOp: *
+          ID: y
+          ID: x

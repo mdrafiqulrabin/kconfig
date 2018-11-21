@@ -1,0 +1,82 @@
+FileAST: 
+  Typedef: uint64_t, [], ['typedef']
+    TypeDecl: uint64_t, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  FuncDef: 
+    Decl: f_shr_imm, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['uint64_t']
+        TypeDecl: f_shr_imm, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: +=
+        UnaryOp: *
+          ID: a
+        BinaryOp: >>
+          UnaryOp: *
+            ID: a
+          Constant: int, 32
+  FuncDef: 
+    Decl: f_shr_reg, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['uint64_t']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['uint64_t']
+        TypeDecl: f_shr_reg, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: +=
+        UnaryOp: *
+          ID: a
+        BinaryOp: >>
+          UnaryOp: *
+            ID: a
+          ID: b
+  FuncDef: 
+    Decl: f_shl_imm, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['uint64_t']
+        TypeDecl: f_shl_imm, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: +=
+        UnaryOp: *
+          ID: a
+        BinaryOp: <<
+          UnaryOp: *
+            ID: a
+          Constant: int, 32
+  FuncDef: 
+    Decl: f_shl_reg, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['uint64_t']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['uint64_t']
+        TypeDecl: f_shl_reg, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: +=
+        UnaryOp: *
+          ID: a
+        BinaryOp: <<
+          UnaryOp: *
+            ID: a
+          ID: b

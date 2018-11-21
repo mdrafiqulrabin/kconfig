@@ -1,0 +1,216 @@
+FileAST: 
+  Typedef: UChar, [], ['typedef']
+    TypeDecl: UChar, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: UShort, [], ['typedef']
+    TypeDecl: UShort, []
+      IdentifierType: ['unsigned', 'short']
+  Typedef: UWord, [], ['typedef']
+    TypeDecl: UWord, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: SizeT, [], ['typedef']
+    TypeDecl: SizeT, []
+      IdentifierType: ['unsigned', 'long']
+  Typedef: Addr, [], ['typedef']
+    TypeDecl: Addr, []
+      IdentifierType: ['unsigned', 'long']
+  FuncDef: 
+    Decl: memmove, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dst, [], [], []
+            PtrDecl: []
+              TypeDecl: dst, []
+                IdentifierType: ['void']
+          Decl: src, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: src, ['const']
+                IdentifierType: ['void']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['SizeT']
+        PtrDecl: []
+          TypeDecl: memmove, []
+            IdentifierType: ['void']
+    Compound: 
+      Decl: WS, ['const'], [], []
+        TypeDecl: WS, ['const']
+          IdentifierType: ['Addr']
+        UnaryOp: sizeof
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['UWord']
+      Decl: WM, ['const'], [], []
+        TypeDecl: WM, ['const']
+          IdentifierType: ['Addr']
+        BinaryOp: -
+          ID: WS
+          Constant: int, 1
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['SizeT']
+        ID: len
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['Addr']
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['Addr']
+          ID: dst
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['Addr']
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['Addr']
+          ID: src
+      If: 
+        BinaryOp: ==
+          BinaryOp: &
+            BinaryOp: ^
+              ID: s
+              ID: d
+            ID: WM
+          Constant: int, 0
+        Compound: 
+          While: 
+            BinaryOp: &&
+              BinaryOp: !=
+                BinaryOp: &
+                  ID: s
+                  ID: WM
+                Constant: int, 0
+              BinaryOp: >=
+                ID: n
+                Constant: int, 1
+            Compound: 
+              Assignment: =
+                UnaryOp: *
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['UChar']
+                    ID: d
+                UnaryOp: *
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['UChar']
+                    ID: s
+              Assignment: +=
+                ID: s
+                Constant: int, 1
+              Assignment: +=
+                ID: d
+                Constant: int, 1
+              Assignment: -=
+                ID: n
+                Constant: int, 1
+          While: 
+            BinaryOp: >=
+              ID: n
+              ID: WS
+            Compound: 
+              Assignment: =
+                UnaryOp: *
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['UWord']
+                    ID: d
+                UnaryOp: *
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['UWord']
+                    ID: s
+              Assignment: +=
+                ID: s
+                ID: WS
+              Assignment: +=
+                ID: d
+                ID: WS
+              Assignment: -=
+                ID: n
+                ID: WS
+          If: 
+            BinaryOp: ==
+              ID: n
+              Constant: int, 0
+            Return: 
+              ID: dst
+      If: 
+        BinaryOp: ==
+          BinaryOp: &
+            BinaryOp: |
+              ID: s
+              ID: d
+            Constant: int, 1
+          Constant: int, 0
+        Compound: 
+          While: 
+            BinaryOp: >=
+              ID: n
+              Constant: int, 2
+            Compound: 
+              Assignment: =
+                UnaryOp: *
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['UShort']
+                    ID: d
+                UnaryOp: *
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['UShort']
+                    ID: s
+              Assignment: +=
+                ID: s
+                Constant: int, 2
+              Assignment: +=
+                ID: d
+                Constant: int, 2
+              Assignment: -=
+                ID: n
+                Constant: int, 2
+      While: 
+        BinaryOp: >=
+          ID: n
+          Constant: int, 1
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['UChar']
+                ID: d
+            UnaryOp: *
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['UChar']
+                ID: s
+          Assignment: +=
+            ID: s
+            Constant: int, 1
+          Assignment: +=
+            ID: d
+            Constant: int, 1
+          Assignment: -=
+            ID: n
+            Constant: int, 1
+      Return: 
+        ID: dst

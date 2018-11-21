@@ -1,0 +1,27 @@
+FileAST: 
+  FuncDef: 
+    Decl: pr60102, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+          Decl: m, [], [], []
+            TypeDecl: m, []
+              IdentifierType: ['int']
+        TypeDecl: pr60102, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['double']
+      Assignment: =
+        ID: y
+        TernaryOp: 
+          BinaryOp: %
+            ID: m
+            Constant: int, 2
+          ID: x
+          Constant: int, 1
+      Return: 
+        ID: y

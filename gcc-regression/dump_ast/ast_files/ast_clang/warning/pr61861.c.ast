@@ -1,0 +1,260 @@
+c_files/pr61861.c:20:8: warning: incompatible pointer to integer conversion passing 'char [18]' to parameter of type 'int' [-Wint-conversion]
+  foo (__FILE__); /* { dg-error "8:passing argument" } */
+       ^~~~~~~~
+<scratch space>:2:1: note: expanded from here
+"c_files/pr61861.c"
+^~~~~~~~~~~~~~~~~~~
+c_files/pr61861.c:4:21: note: passing argument to parameter here
+extern void foo (int);
+                    ^
+c_files/pr61861.c:21:8: warning: incompatible pointer to integer conversion passing 'char [18]' to parameter of type 'int' [-Wint-conversion]
+  foo (__BASE_FILE__); /* { dg-error "8:passing argument" } */
+       ^~~~~~~~~~~~~
+<scratch space>:3:1: note: expanded from here
+"c_files/pr61861.c"
+^~~~~~~~~~~~~~~~~~~
+c_files/pr61861.c:4:21: note: passing argument to parameter here
+extern void foo (int);
+                    ^
+c_files/pr61861.c:22:8: warning: incompatible pointer to integer conversion passing 'char [9]' to parameter of type 'int' [-Wint-conversion]
+  foo (__TIME__); /* { dg-error "8:passing argument" } */
+       ^~~~~~~~
+<scratch space>:5:1: note: expanded from here
+"16:36:15"
+^~~~~~~~~~
+c_files/pr61861.c:4:21: note: passing argument to parameter here
+extern void foo (int);
+                    ^
+c_files/pr61861.c:23:8: warning: incompatible pointer to integer conversion passing 'char [12]' to parameter of type 'int' [-Wint-conversion]
+  foo (__DATE__); /* { dg-error "8:passing argument" } */
+       ^~~~~~~~
+<scratch space>:4:1: note: expanded from here
+"Aug 30 2018"
+^~~~~~~~~~~~~
+c_files/pr61861.c:4:21: note: passing argument to parameter here
+extern void foo (int);
+                    ^
+c_files/pr61861.c:24:8: warning: incompatible pointer to integer conversion passing 'char [25]' to parameter of type 'int' [-Wint-conversion]
+  foo (__TIMESTAMP__); /* { dg-error "8:passing argument" } */
+       ^~~~~~~~~~~~~
+<scratch space>:6:1: note: expanded from here
+"Mon May  7 12:29:18 2018"
+^~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr61861.c:4:21: note: passing argument to parameter here
+extern void foo (int);
+                    ^
+c_files/pr61861.c:25:11: warning: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Wint-conversion]
+  bar (1, __LINE__); /* { dg-error "11:passing argument" } */
+          ^~~~~~~~
+<scratch space>:7:1: note: expanded from here
+25
+^~
+c_files/pr61861.c:5:29: note: passing argument to parameter here
+extern void bar (int, char *);
+                            ^
+c_files/pr61861.c:26:21: warning: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Wint-conversion]
+  bar (__COUNTER__, __COUNTER__); /* { dg-error "21:passing argument" } */
+                    ^~~~~~~~~~~
+<scratch space>:9:1: note: expanded from here
+1
+^
+c_files/pr61861.c:5:29: note: passing argument to parameter here
+extern void bar (int, char *);
+                            ^
+c_files/pr61861.c:28:8: warning: incompatible pointer to integer conversion passing 'char [18]' to parameter of type 'int' [-Wint-conversion]
+  foo (F); /* { dg-message "8:in expansion of" } */
+       ^
+c_files/pr61861.c:7:11: note: expanded from macro 'F'
+#define F __FILE__ /* { dg-error "11:passing argument" } */
+          ^~~~~~~~
+<scratch space>:10:1: note: expanded from here
+"c_files/pr61861.c"
+^~~~~~~~~~~~~~~~~~~
+c_files/pr61861.c:4:21: note: passing argument to parameter here
+extern void foo (int);
+                    ^
+c_files/pr61861.c:29:8: warning: incompatible pointer to integer conversion passing 'char [9]' to parameter of type 'int' [-Wint-conversion]
+  foo (T); /* { dg-message "8:in expansion of" } */
+       ^
+c_files/pr61861.c:8:11: note: expanded from macro 'T'
+#define T __TIME__ /* { dg-error "11:passing argument" } */
+          ^~~~~~~~
+<scratch space>:5:1: note: expanded from here
+"16:36:15"
+^~~~~~~~~~
+c_files/pr61861.c:4:21: note: passing argument to parameter here
+extern void foo (int);
+                    ^
+c_files/pr61861.c:30:8: warning: incompatible pointer to integer conversion passing 'char [12]' to parameter of type 'int' [-Wint-conversion]
+  foo (D); /* { dg-message "8:in expansion of" } */
+       ^
+c_files/pr61861.c:9:11: note: expanded from macro 'D'
+#define D __DATE__ /* { dg-error "11:passing argument" } */
+          ^~~~~~~~
+<scratch space>:4:1: note: expanded from here
+"Aug 30 2018"
+^~~~~~~~~~~~~
+c_files/pr61861.c:4:21: note: passing argument to parameter here
+extern void foo (int);
+                    ^
+c_files/pr61861.c:31:11: warning: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Wint-conversion]
+  bar (1, L); /* { dg-message "11:in expansion of" } */
+          ^
+c_files/pr61861.c:10:11: note: expanded from macro 'L'
+#define L __LINE__ /* { dg-error "11:passing argument" } */
+          ^~~~~~~~
+<scratch space>:11:1: note: expanded from here
+31
+^~
+c_files/pr61861.c:5:29: note: passing argument to parameter here
+extern void bar (int, char *);
+                            ^
+c_files/pr61861.c:33:8: warning: incompatible pointer to integer conversion passing 'char [4]' to parameter of type 'int' [-Wint-conversion]
+  foo (F2); /* { dg-message "8:in expansion of" } */
+       ^~
+c_files/pr61861.c:12:12: note: expanded from macro 'F2'
+#define F2 "foo" /* { dg-error "12:passing argument" } */
+           ^~~~~
+c_files/pr61861.c:4:21: note: passing argument to parameter here
+extern void foo (int);
+                    ^
+c_files/pr61861.c:34:8: warning: incompatible pointer to integer conversion passing 'char [4]' to parameter of type 'int' [-Wint-conversion]
+  foo (T2); /* { dg-message "8:in expansion of" } */
+       ^~
+c_files/pr61861.c:13:12: note: expanded from macro 'T2'
+#define T2 "foo" /* { dg-error "12:passing argument" } */
+           ^~~~~
+c_files/pr61861.c:4:21: note: passing argument to parameter here
+extern void foo (int);
+                    ^
+c_files/pr61861.c:35:8: warning: incompatible pointer to integer conversion passing 'char [4]' to parameter of type 'int' [-Wint-conversion]
+  foo (D2); /* { dg-message "8:in expansion of" } */
+       ^~
+c_files/pr61861.c:14:12: note: expanded from macro 'D2'
+#define D2 "foo" /* { dg-error "12:passing argument" } */
+           ^~~~~
+c_files/pr61861.c:4:21: note: passing argument to parameter here
+extern void foo (int);
+                    ^
+c_files/pr61861.c:36:11: warning: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Wint-conversion]
+  bar (1, L2); /* { dg-message "11:in expansion of" } */
+          ^~
+c_files/pr61861.c:15:12: note: expanded from macro 'L2'
+#define L2 42 /* { dg-error "12:passing argument" } */
+           ^~
+c_files/pr61861.c:5:29: note: passing argument to parameter here
+extern void bar (int, char *);
+                            ^
+15 warnings generated.
+TranslationUnitDecl 0x7fd4760264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd476026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd476026740 '__int128'
+|-TypedefDecl 0x7fd476026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd476026760 'unsigned __int128'
+|-TypedefDecl 0x7fd476026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd476026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd476026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd476026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd476026dc0 'char *'
+|   `-BuiltinType 0x7fd476026560 'char'
+|-TypedefDecl 0x7fd4760270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd476027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd476026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd476026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd476825a00 <c_files/pr61861.c:4:1, col:21> col:13 used foo 'void (int)' extern
+| `-ParmVarDecl 0x7fd476027138 <col:18> col:21 'int'
+|-FunctionDecl 0x7fd476825c40 <line:5:1, col:29> col:13 used bar 'void (int, char *)' extern
+| |-ParmVarDecl 0x7fd476825af8 <col:18> col:21 'int'
+| `-ParmVarDecl 0x7fd476825b70 <col:23, col:28> col:29 'char *'
+`-FunctionDecl 0x7fd476825db0 <line:17:1, line:37:1> line:18:1 f 'void (void)'
+  `-CompoundStmt 0x7fd47601b810 <line:19:1, line:37:1>
+    |-CallExpr 0x7fd476825f30 <line:20:3, col:16> 'void'
+    | |-ImplicitCastExpr 0x7fd476825f18 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd476825e48 <col:3> 'void (int)' Function 0x7fd476825a00 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fd476825f78 <<scratch space>:2:1> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fd476825f60 <col:1> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fd476825ea8 <col:1> 'char [18]' lvalue "c_files/pr61861.c"
+    |-CallExpr 0x7fd4768263c0 <c_files/pr61861.c:21:3, col:21> 'void'
+    | |-ImplicitCastExpr 0x7fd4768263a8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd476826340 <col:3> 'void (int)' Function 0x7fd476825a00 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fd476826408 <<scratch space>:3:1> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fd4768263f0 <col:1> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fd476826368 <col:1> 'char [18]' lvalue "c_files/pr61861.c"
+    |-CallExpr 0x7fd4768264d0 <c_files/pr61861.c:22:3, col:16> 'void'
+    | |-ImplicitCastExpr 0x7fd4768264b8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd476826420 <col:3> 'void (int)' Function 0x7fd476825a00 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fd476826518 <<scratch space>:5:1> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fd476826500 <col:1> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fd476826488 <col:1> 'char [9]' lvalue "16:36:15"
+    |-CallExpr 0x7fd4768265e8 <c_files/pr61861.c:23:3, col:16> 'void'
+    | |-ImplicitCastExpr 0x7fd4768265d0 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd476826530 <col:3> 'void (int)' Function 0x7fd476825a00 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fd476826630 <<scratch space>:4:1> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fd476826618 <col:1> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fd476826598 <col:1> 'char [12]' lvalue "Aug 30 2018"
+    |-CallExpr 0x7fd476826700 <c_files/pr61861.c:24:3, col:21> 'void'
+    | |-ImplicitCastExpr 0x7fd4768266e8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd476826648 <col:3> 'void (int)' Function 0x7fd476825a00 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fd476826748 <<scratch space>:6:1> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fd476826730 <col:1> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fd4768266a8 <col:1> 'char [25]' lvalue "Mon May  7 12:29:18 2018"
+    |-CallExpr 0x7fd476826810 <c_files/pr61861.c:25:3, col:19> 'void'
+    | |-ImplicitCastExpr 0x7fd4768267f8 <col:3> 'void (*)(int, char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd476826760 <col:3> 'void (int, char *)' Function 0x7fd476825c40 'bar' 'void (int, char *)'
+    | |-IntegerLiteral 0x7fd476826788 <col:8> 'int' 1
+    | `-ImplicitCastExpr 0x7fd476826848 <<scratch space>:7:1> 'char *' <IntegralToPointer>
+    |   `-IntegerLiteral 0x7fd4768267a8 <col:1> 'int' 25
+    |-CallExpr 0x7fd4768268e0 <c_files/pr61861.c:26:3, col:32> 'void'
+    | |-ImplicitCastExpr 0x7fd4768268c8 <col:3> 'void (*)(int, char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd476826860 <col:3> 'void (int, char *)' Function 0x7fd476825c40 'bar' 'void (int, char *)'
+    | |-IntegerLiteral 0x7fd476826888 <<scratch space>:8:1> 'int' 0
+    | `-ImplicitCastExpr 0x7fd476826918 <line:9:1> 'char *' <IntegralToPointer>
+    |   `-IntegerLiteral 0x7fd4768268a8 <col:1> 'int' 1
+    |-CallExpr 0x7fd4768269b0 <c_files/pr61861.c:28:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7fd476826998 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd476826930 <col:3> 'void (int)' Function 0x7fd476825a00 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fd47601b200 <<scratch space>:10:1> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fd4768269e0 <col:1> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fd476826958 <col:1> 'char [18]' lvalue "c_files/pr61861.c"
+    |-CallExpr 0x7fd47601b288 <c_files/pr61861.c:29:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7fd47601b270 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd47601b218 <col:3> 'void (int)' Function 0x7fd476825a00 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fd47601b2d0 <<scratch space>:5:1> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fd47601b2b8 <col:1> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fd47601b240 <col:1> 'char [9]' lvalue "16:36:15"
+    |-CallExpr 0x7fd47601b360 <c_files/pr61861.c:30:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7fd47601b348 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd47601b2e8 <col:3> 'void (int)' Function 0x7fd476825a00 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fd47601b3a8 <<scratch space>:4:1> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fd47601b390 <col:1> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fd47601b310 <col:1> 'char [12]' lvalue "Aug 30 2018"
+    |-CallExpr 0x7fd47601b440 <c_files/pr61861.c:31:3, col:12> 'void'
+    | |-ImplicitCastExpr 0x7fd47601b428 <col:3> 'void (*)(int, char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd47601b3c0 <col:3> 'void (int, char *)' Function 0x7fd476825c40 'bar' 'void (int, char *)'
+    | |-IntegerLiteral 0x7fd47601b3e8 <col:8> 'int' 1
+    | `-ImplicitCastExpr 0x7fd47601b478 <<scratch space>:11:1> 'char *' <IntegralToPointer>
+    |   `-IntegerLiteral 0x7fd47601b408 <col:1> 'int' 31
+    |-CallExpr 0x7fd47601b540 <c_files/pr61861.c:33:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fd47601b528 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd47601b490 <col:3> 'void (int)' Function 0x7fd476825a00 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fd47601b588 <line:12:12> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fd47601b570 <col:12> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fd47601b4f8 <col:12> 'char [4]' lvalue "foo"
+    |-CallExpr 0x7fd47601b610 <line:34:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fd47601b5f8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd47601b5a0 <col:3> 'void (int)' Function 0x7fd476825a00 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fd47601b658 <line:13:12> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fd47601b640 <col:12> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fd47601b5c8 <col:12> 'char [4]' lvalue "foo"
+    |-CallExpr 0x7fd47601b6e0 <line:35:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fd47601b6c8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd47601b670 <col:3> 'void (int)' Function 0x7fd476825a00 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fd47601b728 <line:14:12> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fd47601b710 <col:12> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fd47601b698 <col:12> 'char [4]' lvalue "foo"
+    `-CallExpr 0x7fd47601b7c0 <line:36:3, col:13> 'void'
+      |-ImplicitCastExpr 0x7fd47601b7a8 <col:3> 'void (*)(int, char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd47601b740 <col:3> 'void (int, char *)' Function 0x7fd476825c40 'bar' 'void (int, char *)'
+      |-IntegerLiteral 0x7fd47601b768 <col:8> 'int' 1
+      `-ImplicitCastExpr 0x7fd47601b7f8 <line:15:12> 'char *' <IntegralToPointer>
+        `-IntegerLiteral 0x7fd47601b788 <col:12> 'int' 42

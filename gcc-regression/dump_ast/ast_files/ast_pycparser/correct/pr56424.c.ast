@@ -1,0 +1,129 @@
+FileAST: 
+  Decl: cosl, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['long', 'double']
+      TypeDecl: cosl, []
+        IdentifierType: ['long', 'double']
+  Decl: sinl, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['long', 'double']
+      TypeDecl: sinl, []
+        IdentifierType: ['long', 'double']
+  Decl: reml, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['long', 'double']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['long', 'double']
+      TypeDecl: reml, []
+        IdentifierType: ['long', 'double']
+  FuncDef: 
+    Decl: my_cos, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arg, [], [], []
+            TypeDecl: arg, []
+              IdentifierType: ['long', 'double']
+        TypeDecl: my_cos, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: cosl
+          ExprList: 
+            ID: arg
+  FuncDef: 
+    Decl: my_sin, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arg, [], [], []
+            TypeDecl: arg, []
+              IdentifierType: ['long', 'double']
+        TypeDecl: my_sin, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      If: 
+        BinaryOp: <
+          FuncCall: 
+            ID: __builtin_fabs
+            ExprList: 
+              ID: arg
+          Constant: float, 1.0
+        Return: 
+          ID: arg
+      Return: 
+        FuncCall: 
+          ID: sinl
+          ExprList: 
+            ID: arg
+  FuncDef: 
+    Decl: my_cot, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arg, [], [], []
+            TypeDecl: arg, []
+              IdentifierType: ['long', 'double']
+          Decl: cycle, [], [], []
+            TypeDecl: cycle, []
+              IdentifierType: ['long', 'double']
+        TypeDecl: my_cot, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['long', 'double']
+        FuncCall: 
+          ID: reml
+          ExprList: 
+            ID: arg
+            ID: cycle
+      Return: 
+        BinaryOp: /
+          FuncCall: 
+            ID: my_cos
+            ExprList: 
+              ID: t
+          FuncCall: 
+            ID: my_sin
+            ExprList: 
+              ID: t
+  FuncDef: 
+    Decl: my_tan, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arg, [], [], []
+            TypeDecl: arg, []
+              IdentifierType: ['long', 'double']
+          Decl: cycle, [], [], []
+            TypeDecl: cycle, []
+              IdentifierType: ['long', 'double']
+        TypeDecl: my_tan, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['long', 'double']
+        FuncCall: 
+          ID: reml
+          ExprList: 
+            ID: arg
+            ID: cycle
+      Return: 
+        BinaryOp: /
+          FuncCall: 
+            ID: my_sin
+            ExprList: 
+              ID: t
+          FuncCall: 
+            ID: my_cos
+            ExprList: 
+              ID: t

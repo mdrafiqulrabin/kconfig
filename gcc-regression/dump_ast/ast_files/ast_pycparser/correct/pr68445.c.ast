@@ -1,0 +1,91 @@
+FileAST: 
+  FuncDef: 
+    Decl: IMB_double_fast_x, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: destf, [], [], []
+            PtrDecl: []
+              TypeDecl: destf, []
+                IdentifierType: ['int']
+          Decl: dest, [], [], []
+            PtrDecl: []
+              TypeDecl: dest, []
+                IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+          Decl: p1f, [], [], []
+            PtrDecl: []
+              TypeDecl: p1f, []
+                IdentifierType: ['int']
+        TypeDecl: IMB_double_fast_x, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          ID: y
+        BinaryOp: >
+          ID: i
+          Constant: int, 0
+        UnaryOp: p--
+          ID: i
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: dest
+            Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ID: destf
+              Constant: int, 0
+            Assignment: =
+              ArrayRef: 
+                ID: destf
+                Constant: int, 4
+              ArrayRef: 
+                ID: p1f
+                Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ID: destf
+              Constant: int, 1
+            Assignment: =
+              ArrayRef: 
+                ID: destf
+                Constant: int, 5
+              ArrayRef: 
+                ID: p1f
+                Constant: int, 1
+          Assignment: =
+            ArrayRef: 
+              ID: destf
+              Constant: int, 2
+            Assignment: =
+              ArrayRef: 
+                ID: destf
+                Constant: int, 6
+              ArrayRef: 
+                ID: p1f
+                Constant: int, 2
+          Assignment: =
+            ArrayRef: 
+              ID: destf
+              Constant: int, 3
+            Assignment: =
+              ArrayRef: 
+                ID: destf
+                Constant: int, 7
+              ArrayRef: 
+                ID: p1f
+                Constant: int, 3
+          Assignment: +=
+            ID: destf
+            Constant: int, 8
+          Assignment: +=
+            ID: p1f
+            Constant: int, 4

@@ -1,0 +1,17 @@
+FileAST: 
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+      Constant: int, 10
+    InitList: 
+      Constant: int, 1
+      Constant: int, 2
+      Constant: int, 3
+      Constant: int, 4
+      Constant: int, 5
+      Constant: int, 6
+      Constant: int, 7
+      Constant: int, 8
+      Constant: int, 9
+      Constant: int, 10

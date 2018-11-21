@@ -1,0 +1,120 @@
+FileAST: 
+  Decl: a, ['const'], [], []
+    TypeDecl: a, ['const']
+      IdentifierType: ['char']
+    Constant: int, 0x42
+  Decl: b, ['const'], [], []
+    TypeDecl: b, ['const']
+      IdentifierType: ['double']
+    Cast: 
+      Typename: None, []
+        TypeDecl: None, []
+          IdentifierType: ['double']
+      ID: a
+  Decl: c, ['const'], [], []
+    TypeDecl: c, ['const']
+      IdentifierType: ['double']
+    ID: a
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['double']
+    Cast: 
+      Typename: None, []
+        TypeDecl: None, []
+          IdentifierType: ['double']
+      ID: a
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['double']
+    ID: a
+  Decl: f, ['const'], [], []
+    TypeDecl: f, ['const']
+      IdentifierType: ['double']
+    BinaryOp: +
+      Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+        ID: a
+  Decl: g, ['const'], [], []
+    TypeDecl: g, ['const']
+      IdentifierType: ['double']
+    BinaryOp: +
+      Constant: int, 1
+      ID: a
+  Decl: h, [], [], []
+    TypeDecl: h, []
+      IdentifierType: ['double']
+    BinaryOp: +
+      Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+        ID: a
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['double']
+    BinaryOp: +
+      Constant: int, 1
+      ID: a
+  Decl: j, [], [], []
+    ArrayDecl: []
+      TypeDecl: j, []
+        IdentifierType: ['double']
+    InitList: 
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+        ID: a
+      ID: a
+      BinaryOp: +
+        Constant: int, 1
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['double']
+          ID: a
+      BinaryOp: +
+        Constant: int, 1
+        ID: a
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: k, ['const'], ['static'], []
+        TypeDecl: k, ['const']
+          IdentifierType: ['double']
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['double']
+          ID: a
+      Decl: l, ['const'], ['static'], []
+        TypeDecl: l, ['const']
+          IdentifierType: ['double']
+        ID: a
+      Decl: m, ['const'], ['static'], []
+        TypeDecl: m, ['const']
+          IdentifierType: ['double']
+        BinaryOp: +
+          Constant: int, 1
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['double']
+            ID: a
+      Decl: n, ['const'], ['static'], []
+        TypeDecl: n, ['const']
+          IdentifierType: ['double']
+        BinaryOp: +
+          Constant: int, 1
+          ID: a

@@ -1,0 +1,21 @@
+c_files/pr17424-1.c:5:22: error: use of undeclared identifier 'tni'
+;int foezis = sizeof tni; /* { dg-error "'tni' undeclared" } */
+                     ^
+1 error generated.
+TranslationUnitDecl 0x7fefeb0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fefeb026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fefeb026740 '__int128'
+|-TypedefDecl 0x7fefeb026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fefeb026760 'unsigned __int128'
+|-TypedefDecl 0x7fefeb026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fefeb026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fefeb026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fefeb026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fefeb026dc0 'char *'
+|   `-BuiltinType 0x7fefeb026560 'char'
+|-TypedefDecl 0x7fefeb0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fefeb027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fefeb026ee0 'struct __va_list_tag'
+|     `-Record 0x7fefeb026e58 '__va_list_tag'
+|-EmptyDecl 0x7fefeb027120 <c_files/pr17424-1.c:5:1> col:1
+`-VarDecl 0x7fefeb027158 <col:2, col:6> col:6 foezis 'int'

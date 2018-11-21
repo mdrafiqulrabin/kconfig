@@ -1,0 +1,81 @@
+c_files/pr62171.c:13:33: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+double __attribute__((noinline, noclone))
+                                ^
+1 warning generated.
+TranslationUnitDecl 0x7f93bb8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f93bb826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f93bb826740 '__int128'
+|-TypedefDecl 0x7f93bb826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f93bb826760 'unsigned __int128'
+|-TypedefDecl 0x7f93bb826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f93bb826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f93bb826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f93bb826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f93bb826dc0 'char *'
+|   `-BuiltinType 0x7f93bb826560 'char'
+|-TypedefDecl 0x7f93bb8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f93bb827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f93bb826ee0 'struct __va_list_tag'
+|     `-Record 0x7f93bb826e58 '__va_list_tag'
+|-RecordDecl 0x7f93bb827120 <c_files/pr62171.c:4:1, line:9:1> line:4:8 struct omp_data_i definition
+| |-FieldDecl 0x7f93bc025a18 <line:6:3, col:24> col:24 referenced results 'double *__restrict'
+| |-FieldDecl 0x7f93bc025a78 <line:7:3, col:24> col:24 referenced pData 'double *__restrict'
+| `-FieldDecl 0x7f93bc025ad8 <line:8:3, col:24> col:24 referenced coeff 'double *__restrict'
+`-FunctionDecl 0x7f93bc025d68 <line:13:1, line:23:1> line:14:1 f 'double (struct omp_data_i *__restrict, int)'
+  |-ParmVarDecl 0x7f93bc025bd0 <col:4, col:36> col:36 used p 'struct omp_data_i *__restrict'
+  |-ParmVarDecl 0x7f93bc025c48 <col:39, col:43> col:43 used argc 'int'
+  |-CompoundStmt 0x7f93bc0265e8 <line:15:1, line:23:1>
+  | |-DeclStmt 0x7f93bc025f10 <line:17:3, col:10>
+  | | `-VarDecl 0x7f93bc025eb0 <col:3, col:7> col:7 used idx 'int'
+  | |-ForStmt 0x7f93bc026448 <line:19:3, line:20:59>
+  | | |-BinaryOperator 0x7f93bc025f70 <line:19:8, col:14> 'int' '='
+  | | | |-DeclRefExpr 0x7f93bc025f28 <col:8> 'int' lvalue Var 0x7f93bc025eb0 'idx' 'int'
+  | | | `-IntegerLiteral 0x7f93bc025f50 <col:14> 'int' 0
+  | | |-<<<NULL>>>
+  | | |-BinaryOperator 0x7f93bc025ff8 <col:17, line:11:17> 'int' '<'
+  | | | |-ImplicitCastExpr 0x7f93bc025fe0 <line:19:17> 'int' <LValueToRValue>
+  | | | | `-DeclRefExpr 0x7f93bc025f98 <col:17> 'int' lvalue Var 0x7f93bc025eb0 'idx' 'int'
+  | | | `-IntegerLiteral 0x7f93bc025fc0 <line:11:17> 'int' 1000000
+  | | |-UnaryOperator 0x7f93bc026048 <line:19:32, col:35> 'int' postfix '++'
+  | | | `-DeclRefExpr 0x7f93bc026020 <col:32> 'int' lvalue Var 0x7f93bc025eb0 'idx' 'int'
+  | | `-BinaryOperator 0x7f93bc026420 <line:20:5, col:59> 'double' '='
+  | |   |-ArraySubscriptExpr 0x7f93bc026178 <col:5, col:23> 'double' lvalue
+  | |   | |-ImplicitCastExpr 0x7f93bc026148 <col:5, col:18> 'double *' <LValueToRValue>
+  | |   | | `-ParenExpr 0x7f93bc026100 <col:5, col:18> 'double *__restrict' lvalue
+  | |   | |   `-ParenExpr 0x7f93bc0260e0 <col:6, col:17> 'double *__restrict' lvalue
+  | |   | |     `-MemberExpr 0x7f93bc0260a8 <col:7, col:10> 'double *__restrict' lvalue ->results 0x7f93bc025a18
+  | |   | |       `-ImplicitCastExpr 0x7f93bc026090 <col:7> 'struct omp_data_i *' <LValueToRValue>
+  | |   | |         `-DeclRefExpr 0x7f93bc026068 <col:7> 'struct omp_data_i *__restrict' lvalue ParmVar 0x7f93bc025bd0 'p' 'struct omp_data_i *__restrict'
+  | |   | `-ImplicitCastExpr 0x7f93bc026160 <col:20> 'int' <LValueToRValue>
+  | |   |   `-DeclRefExpr 0x7f93bc026120 <col:20> 'int' lvalue Var 0x7f93bc025eb0 'idx' 'int'
+  | |   `-BinaryOperator 0x7f93bc0263f8 <col:27, col:59> 'double' '*'
+  | |     |-ImplicitCastExpr 0x7f93bc0263c8 <col:27, col:39> 'double' <LValueToRValue>
+  | |     | `-ParenExpr 0x7f93bc026270 <col:27, col:39> 'double' lvalue
+  | |     |   `-UnaryOperator 0x7f93bc026250 <col:28, col:38> 'double' lvalue prefix '*'
+  | |     |     `-ImplicitCastExpr 0x7f93bc026238 <col:29, col:38> 'double *' <LValueToRValue>
+  | |     |       `-ParenExpr 0x7f93bc026218 <col:29, col:38> 'double *__restrict' lvalue
+  | |     |         `-MemberExpr 0x7f93bc0261e0 <col:30, col:33> 'double *__restrict' lvalue ->coeff 0x7f93bc025ad8
+  | |     |           `-ImplicitCastExpr 0x7f93bc0261c8 <col:30> 'struct omp_data_i *' <LValueToRValue>
+  | |     |             `-DeclRefExpr 0x7f93bc0261a0 <col:30> 'struct omp_data_i *__restrict' lvalue ParmVar 0x7f93bc025bd0 'p' 'struct omp_data_i *__restrict'
+  | |     `-ImplicitCastExpr 0x7f93bc0263e0 <col:43, col:59> 'double' <LValueToRValue>
+  | |       `-ArraySubscriptExpr 0x7f93bc0263a0 <col:43, col:59> 'double' lvalue
+  | |         |-ImplicitCastExpr 0x7f93bc026370 <col:43, col:54> 'double *' <LValueToRValue>
+  | |         | `-ParenExpr 0x7f93bc026328 <col:43, col:54> 'double *__restrict' lvalue
+  | |         |   `-ParenExpr 0x7f93bc026308 <col:44, col:53> 'double *__restrict' lvalue
+  | |         |     `-MemberExpr 0x7f93bc0262d0 <col:45, col:48> 'double *__restrict' lvalue ->pData 0x7f93bc025a78
+  | |         |       `-ImplicitCastExpr 0x7f93bc0262b8 <col:45> 'struct omp_data_i *' <LValueToRValue>
+  | |         |         `-DeclRefExpr 0x7f93bc026290 <col:45> 'struct omp_data_i *__restrict' lvalue ParmVar 0x7f93bc025bd0 'p' 'struct omp_data_i *__restrict'
+  | |         `-ImplicitCastExpr 0x7f93bc026388 <col:56> 'int' <LValueToRValue>
+  | |           `-DeclRefExpr 0x7f93bc026348 <col:56> 'int' lvalue Var 0x7f93bc025eb0 'idx' 'int'
+  | `-ReturnStmt 0x7f93bc0265d0 <line:22:3, col:29>
+  |   `-ImplicitCastExpr 0x7f93bc0265b8 <col:10, col:29> 'double' <LValueToRValue>
+  |     `-ArraySubscriptExpr 0x7f93bc026590 <col:10, col:29> 'double' lvalue
+  |       |-ImplicitCastExpr 0x7f93bc026560 <col:10, col:23> 'double *' <LValueToRValue>
+  |       | `-ParenExpr 0x7f93bc026518 <col:10, col:23> 'double *__restrict' lvalue
+  |       |   `-ParenExpr 0x7f93bc0264f8 <col:11, col:22> 'double *__restrict' lvalue
+  |       |     `-MemberExpr 0x7f93bc0264c0 <col:12, col:15> 'double *__restrict' lvalue ->results 0x7f93bc025a18
+  |       |       `-ImplicitCastExpr 0x7f93bc0264a8 <col:12> 'struct omp_data_i *' <LValueToRValue>
+  |       |         `-DeclRefExpr 0x7f93bc026480 <col:12> 'struct omp_data_i *__restrict' lvalue ParmVar 0x7f93bc025bd0 'p' 'struct omp_data_i *__restrict'
+  |       `-ImplicitCastExpr 0x7f93bc026578 <col:25> 'int' <LValueToRValue>
+  |         `-DeclRefExpr 0x7f93bc026538 <col:25> 'int' lvalue ParmVar 0x7f93bc025c48 'argc' 'int'
+  `-NoInlineAttr 0x7f93bc025e10 <line:13:23>

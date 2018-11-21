@@ -1,0 +1,19 @@
+c_files/pr84226.c:6:10: fatal error: 'builtins-revb-runnable.c' file not found
+#include "builtins-revb-runnable.c"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fbbda01fad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbbda020020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbbda01fd40 '__int128'
+|-TypedefDecl 0x7fbbda020090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbbda01fd60 'unsigned __int128'
+|-TypedefDecl 0x7fbbda020368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbbda020170 'struct __NSConstantString_tag'
+|   `-Record 0x7fbbda0200e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbbda020400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbbda0203c0 'char *'
+|   `-BuiltinType 0x7fbbda01fb60 'char'
+`-TypedefDecl 0x7fbbda0206c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fbbda020670 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fbbda0204e0 'struct __va_list_tag'
+      `-Record 0x7fbbda020458 '__va_list_tag'

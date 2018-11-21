@@ -1,0 +1,39 @@
+FileAST: 
+  Decl: d, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['int']
+      Pragma: omp simd reduction(+: c)
+      For: 
+        Assignment: =
+          ID: l
+          Constant: int, 0
+        BinaryOp: <
+          ID: l
+          ID: a
+        UnaryOp: ++
+          ID: l
+        Assignment: +=
+          ID: c
+          ArrayRef: 
+            ID: d
+            ID: l
+      Return: 
+        ID: c

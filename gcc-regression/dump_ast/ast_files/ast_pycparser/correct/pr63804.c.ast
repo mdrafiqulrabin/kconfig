@@ -1,0 +1,187 @@
+FileAST: 
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      Struct: A
+        Decl: gen, [], [], []
+          TypeDecl: gen, []
+            IdentifierType: ['int']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['long']
+  Decl: None, [], [], []
+    Enum: B
+      EnumeratorList: 
+        Enumerator: C
+  Decl: None, [], [], []
+    Struct: D
+      Decl: type, [], [], []
+        TypeDecl: type, []
+          Enum: B
+        Constant: int, 1
+      Decl: nr, [], [], []
+        TypeDecl: nr, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      Decl: dw1, [], [], []
+        TypeDecl: dw1, []
+          Struct: None
+            Decl: ud, [], [], []
+              TypeDecl: ud, []
+                IdentifierType: ['unsigned']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      Enum: B
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['int']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: &
+          ID: p1
+          ID: a
+  Decl: fn2, [], [], []
+    FuncDecl: 
+      TypeDecl: fn2, []
+        IdentifierType: ['int']
+  Decl: fn3, [], [], []
+    FuncDecl: 
+      TypeDecl: fn3, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: fn4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              Struct: D
+          Decl: p2, [], [], []
+            TypeDecl: p2, []
+              IdentifierType: ['unsigned']
+          Decl: p3, [], [], []
+            TypeDecl: p3, []
+              IdentifierType: ['int']
+        TypeDecl: fn4, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          Struct: D
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          Struct: D
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          Struct: D
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          Struct: D
+        ID: p1
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          Struct: D
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          Struct: D
+        ID: l
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          Struct: A
+        ID: e
+      If: 
+        StructRef: .
+          ID: i
+          ID: gen
+        Assignment: =
+          ID: p2
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: j
+          ID: type
+        ID: c
+      Assignment: =
+        ID: g
+        ID: j
+      Assignment: =
+        ID: p1
+        ID: g
+      FuncCall: 
+        ID: fn3
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+        ID: p2
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['int']
+        StructRef: .
+          ID: p1
+          ID: nr
+      Decl: p, [], [], []
+        TypeDecl: p, []
+          IdentifierType: ['int']
+        ID: v
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: m
+            ID: dw1
+          ID: ud
+        ID: k
+      Assignment: =
+        ID: f
+        ID: m
+      Assignment: =
+        ID: h
+        ID: f
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          Struct: D
+        ID: h
+      FuncCall: 
+        ID: fn3
+        ExprList: 
+          ID: n
+      Compound: 
+        Assignment: =
+          ID: d
+          FuncCall: 
+            ID: fn2
+        Decl: o, [], [], []
+          TypeDecl: o, []
+            IdentifierType: ['int']
+          ID: d
+        FuncCall: 
+          ID: fn1
+          ExprList: 
+            ID: o
+      If: 
+        StructRef: .
+          ID: i
+          ID: gen
+        FuncCall: 
+          ID: fn3
+          ExprList: 
+            ID: p1
+      Assignment: =
+        ID: b
+        BinaryOp: &
+          ID: p
+          ID: a
+      FuncCall: 
+        ID: fn3
+        ExprList: 
+          ID: p3

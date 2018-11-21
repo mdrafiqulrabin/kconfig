@@ -1,0 +1,81 @@
+TranslationUnitDecl 0x7f89388264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8938826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8938826740 '__int128'
+|-TypedefDecl 0x7f8938826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8938826760 'unsigned __int128'
+|-TypedefDecl 0x7f8938826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8938826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8938826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8938826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8938826dc0 'char *'
+|   `-BuiltinType 0x7f8938826560 'char'
+|-TypedefDecl 0x7f89388270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8938827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8938826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8938826e58 '__va_list_tag'
+|-TypedefDecl 0x7f8938827138 <c_files/pr58137.c:4:1, col:22> col:22 referenced U32 'unsigned int'
+| `-BuiltinType 0x7f8938826660 'unsigned int'
+|-RecordDecl 0x7f8939025a00 <line:6:1, line:10:1> line:6:8 struct sv definition
+| |-FieldDecl 0x7f8939025ac8 <line:7:3, col:9> col:9 sv_any 'void *'
+| |-FieldDecl 0x7f8939025b40 <line:8:3, col:7> col:7 sv_refcnt 'U32':'unsigned int'
+| `-FieldDecl 0x7f8939025b98 <line:9:3, col:7> col:7 sv_flags 'U32':'unsigned int'
+|-TypedefDecl 0x7f8939025c30 <line:11:1, col:19> col:19 referenced SV 'struct sv':'struct sv'
+| `-ElaboratedType 0x7f8939025be0 'struct sv' sugar
+|   `-RecordType 0x7f8939025a90 'struct sv'
+|     `-Record 0x7f8939025a00 'sv'
+|-RecordDecl 0x7f8939025c88 <line:13:1, line:15:1> line:13:8 struct xrv definition
+| `-FieldDecl 0x7f8939025db8 <line:14:3, col:8> col:8 referenced xrv_rv 'SV *'
+|-TypedefDecl 0x7f8939025e50 <line:16:1, col:20> col:20 referenced XRV 'struct xrv':'struct xrv'
+| `-ElaboratedType 0x7f8939025e00 'struct xrv' sugar
+|   `-RecordType 0x7f8939025d10 'struct xrv'
+|     `-Record 0x7f8939025c88 'xrv'
+|-VarDecl 0x7f8939025f38 <line:18:1, col:14> col:14 used PL_xrv_root 'XRV *' extern
+`-FunctionDecl 0x7f89390260a0 <line:20:1, line:33:1> line:21:1 more_xrv 'void (void)'
+  `-CompoundStmt 0x7f89390268a8 <line:22:1, line:33:1>
+    |-DeclStmt 0x7f89390261a8 <line:23:3, col:20>
+    | `-VarDecl 0x7f8939026148 <col:3, col:17> col:17 used xrv 'XRV *' register
+    |-DeclStmt 0x7f8939026230 <line:24:3, col:23>
+    | `-VarDecl 0x7f89390261d0 <col:3, col:17> col:17 used xrvend 'XRV *' register
+    |-BinaryOperator 0x7f89390262b0 <line:25:3, col:9> 'XRV *' '='
+    | |-DeclRefExpr 0x7f8939026248 <col:3> 'XRV *' lvalue Var 0x7f8939026148 'xrv' 'XRV *'
+    | `-ImplicitCastExpr 0x7f8939026298 <col:9> 'XRV *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8939026270 <col:9> 'XRV *' lvalue Var 0x7f8939025f38 'PL_xrv_root' 'XRV *'
+    |-BinaryOperator 0x7f89390264c0 <line:26:3, col:39> 'XRV *' '='
+    | |-DeclRefExpr 0x7f89390262d8 <col:3> 'XRV *' lvalue Var 0x7f89390261d0 'xrvend' 'XRV *'
+    | `-UnaryOperator 0x7f89390264a0 <col:12, col:39> 'XRV *' prefix '&'
+    |   `-ArraySubscriptExpr 0x7f8939026478 <col:13, col:39> 'XRV':'struct xrv' lvalue
+    |     |-ImplicitCastExpr 0x7f8939026460 <col:13> 'XRV *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f8939026300 <col:13> 'XRV *' lvalue Var 0x7f8939026148 'xrv' 'XRV *'
+    |     `-BinaryOperator 0x7f8939026438 <col:17, col:38> 'unsigned long' '-'
+    |       |-BinaryOperator 0x7f89390263d8 <col:17, col:34> 'unsigned long' '/'
+    |       | |-ImplicitCastExpr 0x7f8939026378 <col:17> 'unsigned long' <IntegralCast>
+    |       | | `-IntegerLiteral 0x7f8939026328 <col:17> 'int' 200
+    |       | `-UnaryExprOrTypeTraitExpr 0x7f8939026358 <col:23, col:34> 'unsigned long' sizeof 'XRV':'struct xrv'
+    |       `-ImplicitCastExpr 0x7f8939026420 <col:38> 'unsigned long' <IntegralCast>
+    |         `-IntegerLiteral 0x7f8939026400 <col:38> 'int' 1
+    |-WhileStmt 0x7f89390267b0 <line:27:3, line:31:3>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8939026568 <line:27:10, col:16> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f8939026538 <col:10> 'XRV *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f89390264e8 <col:10> 'XRV *' lvalue Var 0x7f8939026148 'xrv' 'XRV *'
+    | | `-ImplicitCastExpr 0x7f8939026550 <col:16> 'XRV *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f8939026510 <col:16> 'XRV *' lvalue Var 0x7f89390261d0 'xrvend' 'XRV *'
+    | `-CompoundStmt 0x7f8939026788 <line:28:3, line:31:3>
+    |   |-BinaryOperator 0x7f8939026718 <line:29:5, col:32> 'SV *' '='
+    |   | |-MemberExpr 0x7f89390265d0 <col:5, col:10> 'SV *' lvalue ->xrv_rv 0x7f8939025db8
+    |   | | `-ImplicitCastExpr 0x7f89390265b8 <col:5> 'XRV *' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7f8939026590 <col:5> 'XRV *' lvalue Var 0x7f8939026148 'xrv' 'XRV *'
+    |   | `-CStyleCastExpr 0x7f89390266f0 <col:19, col:32> 'SV *' <BitCast>
+    |   |   `-ParenExpr 0x7f89390266d0 <col:24, col:32> 'XRV *'
+    |   |     `-BinaryOperator 0x7f8939026668 <col:25, col:31> 'XRV *' '+'
+    |   |       |-ImplicitCastExpr 0x7f8939026650 <col:25> 'XRV *' <LValueToRValue>
+    |   |       | `-DeclRefExpr 0x7f8939026608 <col:25> 'XRV *' lvalue Var 0x7f8939026148 'xrv' 'XRV *'
+    |   |       `-IntegerLiteral 0x7f8939026630 <col:31> 'int' 1
+    |   `-UnaryOperator 0x7f8939026768 <line:30:5, col:8> 'XRV *' postfix '++'
+    |     `-DeclRefExpr 0x7f8939026740 <col:5> 'XRV *' lvalue Var 0x7f8939026148 'xrv' 'XRV *'
+    `-BinaryOperator 0x7f8939026880 <line:32:3, col:17> 'SV *' '='
+      |-MemberExpr 0x7f8939026810 <col:3, col:8> 'SV *' lvalue ->xrv_rv 0x7f8939025db8
+      | `-ImplicitCastExpr 0x7f89390267f8 <col:3> 'XRV *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f89390267d0 <col:3> 'XRV *' lvalue Var 0x7f8939026148 'xrv' 'XRV *'
+      `-ImplicitCastExpr 0x7f8939026868 <col:17> 'SV *' <NullToPointer>
+        `-IntegerLiteral 0x7f8939026848 <col:17> 'int' 0

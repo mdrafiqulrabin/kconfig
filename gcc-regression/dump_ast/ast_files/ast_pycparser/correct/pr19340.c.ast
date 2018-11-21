@@ -1,0 +1,88 @@
+FileAST: 
+  Decl: f, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['double']
+      TypeDecl: f, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: g, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['double']
+      For: 
+        Assignment: =
+          ID: d
+          Constant: int, 0
+        BinaryOp: <
+          ID: d
+          ID: a
+        UnaryOp: p++
+          ID: d
+        For: 
+          Assignment: =
+            ID: c
+            Constant: int, 0
+          BinaryOp: <
+            ID: c
+            ID: a
+          UnaryOp: p++
+            ID: c
+          Assignment: =
+            ID: b
+            Constant: int, 1
+      Assignment: =
+        ID: h
+        BinaryOp: /
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['double']
+            ID: e
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['double']
+            ID: a
+      If: 
+        ID: h
+        Compound: 
+          Assignment: =
+            ID: h
+            BinaryOp: /
+              Constant: float, 1.0
+              ID: h
+          Assignment: =
+            ID: h
+            FuncCall: 
+              ID: f
+              ExprList: 
+                ID: h
+        Assignment: =
+          ID: h
+          Constant: float, 1.0
+      Return: 
+        ID: h

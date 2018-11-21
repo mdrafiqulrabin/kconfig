@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fc6a50264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc6a5026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc6a5026740 '__int128'
+|-TypedefDecl 0x7fc6a5026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc6a5026760 'unsigned __int128'
+|-TypedefDecl 0x7fc6a5026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc6a5026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc6a5026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc6a5026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc6a5026dc0 'char *'
+|   `-BuiltinType 0x7fc6a5026560 'char'
+|-TypedefDecl 0x7fc6a50270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc6a5027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc6a5026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc6a5026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc6a5825a00 <c_files/pr45567.c:5:1, line:9:1> line:6:1 foo 'unsigned int (char)'
+| |-ParmVarDecl 0x7fc6a5027130 <col:6, col:11> col:11 used c 'char'
+| `-CompoundStmt 0x7fc6a5825dc0 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fc6a5825da8 <line:8:3, col:48>
+|     `-ImplicitCastExpr 0x7fc6a5825d90 <col:10, col:48> 'unsigned int' <IntegralCast>
+|       `-CallExpr 0x7fc6a5825d60 <col:10, col:48> 'int'
+|         |-ImplicitCastExpr 0x7fc6a5825d48 <col:10> 'int (*)(unsigned long)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fc6a5825c70 <col:10> '<builtin fn type>' Function 0x7fc6a5825b18 '__builtin_popcountl' 'int (unsigned long)'
+|         `-CStyleCastExpr 0x7fc6a5825cf0 <col:31, col:47> 'unsigned long' <IntegralCast>
+|           `-ImplicitCastExpr 0x7fc6a5825cd8 <col:47> 'char' <LValueToRValue>
+|             `-DeclRefExpr 0x7fc6a5825c98 <col:47> 'char' lvalue ParmVar 0x7fc6a5027130 'c' 'char'
+`-FunctionDecl 0x7fc6a5825b18 <col:10> col:10 implicit used __builtin_popcountl 'int (unsigned long)' extern
+  |-ParmVarDecl 0x7fc6a5825bb0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  |-NoThrowAttr 0x7fc6a5825c18 <col:10> Implicit
+  `-ConstAttr 0x7fc6a5825c60 <col:10> Implicit

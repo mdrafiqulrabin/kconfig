@@ -1,0 +1,38 @@
+FileAST: 
+  Decl: a, [], [], []
+    PtrDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: a
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['char']
+          UnaryOp: &
+            ID: a
+      UnaryOp: p++
+        ArrayRef: 
+          ID: a
+          Constant: int, 0
+      If: 
+        BinaryOp: ==
+          ID: a
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['char']
+            UnaryOp: &
+              ID: a
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

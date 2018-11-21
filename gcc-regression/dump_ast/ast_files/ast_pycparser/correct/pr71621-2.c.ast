@@ -1,0 +1,91 @@
+FileAST: 
+  Decl: hf, [], [], []
+    TypeDecl: hf, []
+      IdentifierType: ['int']
+  Decl: sv, [], [], []
+    TypeDecl: sv, []
+      IdentifierType: ['int']
+  Decl: zz, [], [], []
+    TypeDecl: zz, []
+      IdentifierType: ['int']
+  Decl: aj, [], [], []
+    TypeDecl: aj, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: dn, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: xb, [], [], []
+            TypeDecl: xb, []
+              IdentifierType: ['int']
+          Decl: bl, [], [], []
+            TypeDecl: bl, []
+              IdentifierType: ['int']
+        TypeDecl: dn, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        BinaryOp: <
+          ID: zz
+          Constant: int, 1
+        Compound: 
+          If: 
+            BinaryOp: ==
+              ID: xb
+              Constant: int, 0
+            Goto: mr
+          While: 
+            BinaryOp: <
+              ID: bl
+              Constant: int, 3
+            Compound: 
+              Decl: d3, [], [], []
+                TypeDecl: d3, []
+                  IdentifierType: ['int']
+              Decl: vh, [], [], []
+                TypeDecl: vh, []
+                  IdentifierType: ['unsigned', 'char']
+              Decl: fj, [], [], []
+                PtrDecl: []
+                  TypeDecl: fj, []
+                    IdentifierType: ['unsigned', 'char']
+                UnaryOp: &
+                  ID: vh
+              Label: mr
+                While: 
+                  BinaryOp: <
+                    ID: bl
+                    Constant: int, 1
+                  Compound: 
+                    Assignment: +=
+                      ID: hf
+                      ID: vh
+                    UnaryOp: ++
+                      ID: bl
+              If: 
+                BinaryOp: ==
+                  ID: xb
+                  Constant: int, 0
+                Assignment: =
+                  ID: zz
+                  ID: bl
+              If: 
+                BinaryOp: ==
+                  ID: d3
+                  Constant: int, 0
+                Return: 
+              While: 
+                BinaryOp: <
+                  ID: sv
+                  Constant: int, 1
+                Compound: 
+                  UnaryOp: --
+                    ID: vh
+                  Assignment: +=
+                    ID: aj
+                    ID: vh
+                  UnaryOp: ++
+                    ID: sv
+          Assignment: =
+            ID: sv
+            Constant: int, 0

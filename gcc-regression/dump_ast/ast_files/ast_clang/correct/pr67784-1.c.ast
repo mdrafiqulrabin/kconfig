@@ -1,0 +1,100 @@
+TranslationUnitDecl 0x7fa1300264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa130026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa130026740 '__int128'
+|-TypedefDecl 0x7fa130026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa130026760 'unsigned __int128'
+|-TypedefDecl 0x7fa130026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa130026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa130026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa130026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa130026dc0 'char *'
+|   `-BuiltinType 0x7fa130026560 'char'
+|-TypedefDecl 0x7fa1300270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa130027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa130026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa130026e58 '__va_list_tag'
+|-TypedefDecl 0x7fa130027138 <c_files/pr67784-1.c:5:1, col:13> col:13 referenced T 'int'
+| `-BuiltinType 0x7fa1300265c0 'int'
+|-FunctionDecl 0x7fa130825a50 <line:7:1, line:14:1> line:8:1 fn1 'void (void)'
+| `-CompoundStmt 0x7fa130825d60 <line:9:1, line:14:1>
+|   |-ForStmt 0x7fa130825c20 <line:10:3, line:12:7>
+|   | |-DeclStmt 0x7fa130825ba0 <line:10:8, col:13>
+|   | | `-VarDecl 0x7fa130825b40 <col:8, col:12> col:12 T 'int'
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | `-IfStmt 0x7fa130825be8 <line:11:5, line:12:7>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-IntegerLiteral 0x7fa130825bb8 <line:11:9> 'int' 1
+|   |   |-NullStmt 0x7fa130825bd8 <line:12:7>
+|   |   `-<<<NULL>>>
+|   `-DeclStmt 0x7fa130825d48 <line:13:3, col:7>
+|     `-VarDecl 0x7fa130825ce8 <col:3, col:6> col:6 x 'T *'
+|-FunctionDecl 0x7fa130825e18 <line:16:1, line:23:1> line:17:1 fn2 'void (void)'
+| `-CompoundStmt 0x7fa1308260c8 <line:18:1, line:23:1>
+|   |-ForStmt 0x7fa130826008 <line:19:3, line:21:11>
+|   | |-DeclStmt 0x7fa130825f28 <line:19:8, col:13>
+|   | | `-VarDecl 0x7fa130825ec8 <col:8, col:12> col:12 used T 'int'
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | `-IfStmt 0x7fa130825fd0 <line:20:5, line:21:11>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-IntegerLiteral 0x7fa130825f40 <line:20:9> 'int' 1
+|   |   |-BinaryOperator 0x7fa130825fa8 <line:21:7, col:11> 'int' '='
+|   |   | |-DeclRefExpr 0x7fa130825f60 <col:7> 'int' lvalue Var 0x7fa130825ec8 'T' 'int'
+|   |   | `-IntegerLiteral 0x7fa130825f88 <col:11> 'int' 1
+|   |   `-<<<NULL>>>
+|   `-DeclStmt 0x7fa1308260b0 <line:22:3, col:7>
+|     `-VarDecl 0x7fa130826050 <col:3, col:6> col:6 x 'T *'
+|-FunctionDecl 0x7fa130826180 <line:25:1, line:33:1> line:26:1 fn3 'void (void)'
+| `-CompoundStmt 0x7fa1308263d8 <line:27:1, line:33:1>
+|   |-ForStmt 0x7fa130826318 <line:28:3, line:31:7>
+|   | |-DeclStmt 0x7fa130826290 <line:28:8, col:13>
+|   | | `-VarDecl 0x7fa130826230 <col:8, col:12> col:12 T 'int'
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | `-IfStmt 0x7fa1308262e0 <line:29:5, line:31:7>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-IntegerLiteral 0x7fa1308262a8 <line:29:9> 'int' 1
+|   |   |-CompoundStmt 0x7fa1308262c8 <line:30:7, line:31:7>
+|   |   `-<<<NULL>>>
+|   `-DeclStmt 0x7fa1308263c0 <line:32:3, col:7>
+|     `-VarDecl 0x7fa130826360 <col:3, col:6> col:6 x 'T *'
+|-FunctionDecl 0x7fa130826490 <line:35:1, line:43:1> line:36:1 fn4 'void (void)'
+| `-CompoundStmt 0x7fa130826740 <line:37:1, line:43:1>
+|   |-ForStmt 0x7fa130826680 <line:38:3, line:41:7>
+|   | |-DeclStmt 0x7fa1308265a0 <line:38:8, col:13>
+|   | | `-VarDecl 0x7fa130826540 <col:8, col:12> col:12 T 'int'
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | `-IfStmt 0x7fa130826648 <line:39:5, line:41:7>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-IntegerLiteral 0x7fa1308265b8 <line:39:9> 'int' 1
+|   |   |-LabelStmt 0x7fa130826630 <line:40:1, line:41:7> 'L'
+|   |   | `-NullStmt 0x7fa1308265d8 <col:7>
+|   |   `-<<<NULL>>>
+|   `-DeclStmt 0x7fa130826728 <line:42:3, col:7>
+|     `-VarDecl 0x7fa1308266c8 <col:3, col:6> col:6 x 'T *'
+`-FunctionDecl 0x7fa1308267f8 <line:45:1, line:54:1> line:46:1 fn5 'void (void)'
+  `-CompoundStmt 0x7fa13082bc78 <line:47:1, line:54:1>
+    |-ForStmt 0x7fa130826998 <line:48:3, line:52:7>
+    | |-DeclStmt 0x7fa130826908 <line:48:8, col:13>
+    | | `-VarDecl 0x7fa1308268a8 <col:8, col:12> col:12 T 'int'
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | `-IfStmt 0x7fa130826960 <line:49:5, line:52:7>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-IntegerLiteral 0x7fa130826920 <line:49:9> 'int' 1
+    |   |-NullStmt 0x7fa130826940 <line:50:7>
+    |   `-NullStmt 0x7fa130826950 <line:52:7>
+    `-DeclStmt 0x7fa13082bc60 <line:53:3, col:7>
+      `-VarDecl 0x7fa13082bc00 <col:3, col:6> col:6 x 'T *'

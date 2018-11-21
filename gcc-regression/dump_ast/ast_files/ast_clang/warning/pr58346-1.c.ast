@@ -1,0 +1,61 @@
+c_files/pr58346-1.c:16:12: warning: subtraction of pointers to type 'struct U' of zero size has undefined behavior [-Wpointer-arith]
+  return q - p; /* { dg-error "arithmetic on pointer to an empty aggregate" } */
+         ~ ^ ~
+c_files/pr58346-1.c:22:27: warning: subtraction of pointers to type 'struct U' of zero size has undefined behavior [-Wpointer-arith]
+  __PTRDIFF_TYPE__ d = u1 - u2; /* { dg-error "arithmetic on pointer to an empty aggregate" } */
+                       ~~ ^ ~~
+2 warnings generated.
+TranslationUnitDecl 0x7f995c0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f995c026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f995c026740 '__int128'
+|-TypedefDecl 0x7f995c026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f995c026760 'unsigned __int128'
+|-TypedefDecl 0x7f995c026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f995c026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f995c026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f995c026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f995c026dc0 'char *'
+|   `-BuiltinType 0x7f995c026560 'char'
+|-TypedefDecl 0x7f995c0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f995c027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f995c026ee0 'struct __va_list_tag'
+|     `-Record 0x7f995c026e58 '__va_list_tag'
+|-RecordDecl 0x7f995c027120 <c_files/pr58346-1.c:5:1, line:9:1> line:5:8 struct U definition
+|-VarDecl 0x7f995c825b18 <line:10:1, col:20> col:17 used b 'struct U [6]' static
+|-VarDecl 0x7f995c825c40 <line:11:1, col:18> col:18 used u1 'struct U *' static
+|-VarDecl 0x7f995c825cc8 <col:1, col:23> col:23 used u2 'struct U *' static
+|-FunctionDecl 0x7f995c825f08 <line:13:1, line:17:1> line:14:1 used foo 'int (struct U *, struct U *)'
+| |-ParmVarDecl 0x7f995c825d68 <col:6, col:16> col:16 used p 'struct U *'
+| |-ParmVarDecl 0x7f995c825df0 <col:19, col:29> col:29 used q 'struct U *'
+| `-CompoundStmt 0x7f995c826438 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7f995c826420 <line:16:3, col:14>
+|     `-ImplicitCastExpr 0x7f995c826408 <col:10, col:14> 'int' <IntegralCast>
+|       `-BinaryOperator 0x7f995c8263e0 <col:10, col:14> 'long' '-'
+|         |-ImplicitCastExpr 0x7f995c826000 <col:10> 'struct U *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f995c825fb0 <col:10> 'struct U *' lvalue ParmVar 0x7f995c825df0 'q' 'struct U *'
+|         `-ImplicitCastExpr 0x7f995c826018 <col:14> 'struct U *' <LValueToRValue>
+|           `-DeclRefExpr 0x7f995c825fd8 <col:14> 'struct U *' lvalue ParmVar 0x7f995c825d68 'p' 'struct U *'
+`-FunctionDecl 0x7f995c826520 <line:19:1, line:25:1> line:20:1 bar 'void (void)'
+  `-CompoundStmt 0x7f995c826a78 <line:21:1, line:25:1>
+    |-DeclStmt 0x7f995c8266d8 <<built-in>:67:26, c_files/pr58346-1.c:22:31>
+    | `-VarDecl 0x7f995c8265d0 <<built-in>:67:26, c_files/pr58346-1.c:22:29> col:20 used d 'long' cinit
+    |   `-BinaryOperator 0x7f995c8266b0 <col:24, col:29> 'long' '-'
+    |     |-ImplicitCastExpr 0x7f995c826680 <col:24> 'struct U *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f995c826630 <col:24> 'struct U *' lvalue Var 0x7f995c825c40 'u1' 'struct U *'
+    |     `-ImplicitCastExpr 0x7f995c826698 <col:29> 'struct U *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f995c826658 <col:29> 'struct U *' lvalue Var 0x7f995c825cc8 'u2' 'struct U *'
+    |-GCCAsmStmt 0x7f995c8267e0 <line:23:3, col:32>
+    | `-DeclRefExpr 0x7f995c8267b8 <col:30> 'long' lvalue Var 0x7f995c8265d0 'd' 'long'
+    `-CallExpr 0x7f995c826a40 <line:24:3, col:20> 'int'
+      |-ImplicitCastExpr 0x7f995c826a28 <col:3> 'int (*)(struct U *, struct U *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f995c826840 <col:3> 'int (struct U *, struct U *)' Function 0x7f995c825f08 'foo' 'int (struct U *, struct U *)'
+      |-UnaryOperator 0x7f995c8268f0 <col:8, col:12> 'struct U *' prefix '&'
+      | `-ArraySubscriptExpr 0x7f995c8268c8 <col:9, col:12> 'struct U':'struct U' lvalue
+      |   |-ImplicitCastExpr 0x7f995c8268b0 <col:9> 'struct U *' <ArrayToPointerDecay>
+      |   | `-DeclRefExpr 0x7f995c826868 <col:9> 'struct U [6]' lvalue Var 0x7f995c825b18 'b' 'struct U [6]'
+      |   `-IntegerLiteral 0x7f995c826890 <col:11> 'int' 0
+      `-UnaryOperator 0x7f995c826998 <col:15, col:19> 'struct U *' prefix '&'
+        `-ArraySubscriptExpr 0x7f995c826970 <col:16, col:19> 'struct U':'struct U' lvalue
+          |-ImplicitCastExpr 0x7f995c826958 <col:16> 'struct U *' <ArrayToPointerDecay>
+          | `-DeclRefExpr 0x7f995c826910 <col:16> 'struct U [6]' lvalue Var 0x7f995c825b18 'b' 'struct U [6]'
+          `-IntegerLiteral 0x7f995c826938 <col:18> 'int' 4

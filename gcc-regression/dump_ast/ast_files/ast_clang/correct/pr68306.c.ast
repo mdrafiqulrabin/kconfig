@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f8e230264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8e23026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8e23026740 '__int128'
+|-TypedefDecl 0x7f8e23026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8e23026760 'unsigned __int128'
+|-TypedefDecl 0x7f8e23026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8e23026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8e23026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8e23026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8e23026dc0 'char *'
+|   `-BuiltinType 0x7f8e23026560 'char'
+|-TypedefDecl 0x7f8e230270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8e23027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8e23026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8e23026e58 '__va_list_tag'
+|-EnumDecl 0x7f8e23027120 <c_files/pr68306.c:5:1, col:37> col:6 powerpc_pmc_type
+| `-EnumConstantDecl 0x7f8e23825a00 <col:25> col:25 PPC_PMC_IBM 'int'
+|-RecordDecl 0x7f8e23825a48 <line:6:1, line:9:1> line:6:1 struct definition
+| |-FieldDecl 0x7f8e23825b08 <line:7:5, col:14> col:14 referenced num_pmcs 'unsigned int'
+| `-FieldDecl 0x7f8e23825ba0 <line:8:5, col:27> col:27 referenced pmc_type 'enum powerpc_pmc_type':'enum powerpc_pmc_type'
+|-VarDecl 0x7f8e23825c40 <line:6:1, line:9:3> col:3 used a 'struct (anonymous struct at c_files/pr68306.c:6:1)':'struct (anonymous at c_files/pr68306.c:6:1)'
+|-VarDecl 0x7f8e23825d18 <line:10:1, col:23> col:23 used b 'enum powerpc_pmc_type':'enum powerpc_pmc_type'
+`-FunctionDecl 0x7f8e23825dc8 <line:11:1, col:43> col:6 fn1 'void ()'
+  `-CompoundStmt 0x7f8e23826018 <col:12, col:43>
+    `-BinaryOperator 0x7f8e23825fa0 <col:14, col:40> 'unsigned int' '='
+      |-MemberExpr 0x7f8e23825e88 <col:14, col:16> 'unsigned int' lvalue .num_pmcs 0x7f8e23825b08
+      | `-DeclRefExpr 0x7f8e23825e60 <col:14> 'struct (anonymous struct at c_files/pr68306.c:6:1)':'struct (anonymous at c_files/pr68306.c:6:1)' lvalue Var 0x7f8e23825c40 'a' 'struct (anonymous struct at c_files/pr68306.c:6:1)':'struct (anonymous at c_files/pr68306.c:6:1)'
+      `-ImplicitCastExpr 0x7f8e23825f88 <col:27, col:40> 'unsigned int' <IntegralCast>
+        `-BinaryOperator 0x7f8e23825f60 <col:27, col:40> 'enum powerpc_pmc_type':'enum powerpc_pmc_type' '='
+          |-MemberExpr 0x7f8e23825ee8 <col:27, col:29> 'enum powerpc_pmc_type':'enum powerpc_pmc_type' lvalue .pmc_type 0x7f8e23825ba0
+          | `-DeclRefExpr 0x7f8e23825ec0 <col:27> 'struct (anonymous struct at c_files/pr68306.c:6:1)':'struct (anonymous at c_files/pr68306.c:6:1)' lvalue Var 0x7f8e23825c40 'a' 'struct (anonymous struct at c_files/pr68306.c:6:1)':'struct (anonymous at c_files/pr68306.c:6:1)'
+          `-ImplicitCastExpr 0x7f8e23825f48 <col:40> 'enum powerpc_pmc_type':'enum powerpc_pmc_type' <LValueToRValue>
+            `-DeclRefExpr 0x7f8e23825f20 <col:40> 'enum powerpc_pmc_type':'enum powerpc_pmc_type' lvalue Var 0x7f8e23825d18 'b' 'enum powerpc_pmc_type':'enum powerpc_pmc_type'

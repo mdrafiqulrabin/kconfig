@@ -1,0 +1,89 @@
+FileAST: 
+  Decl: a, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+        Constant: int, 2
+      Constant: int, 16
+  Decl: None, [], [], []
+    Struct: A
+      Decl: b, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+            Constant: int, 2
+          Constant: int, 16
+      Decl: c, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+            Constant: int, 1
+          Constant: int, 16
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: A
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: ++
+          ID: i
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                StructRef: ->
+                  ID: x
+                  ID: b
+                ID: i
+              Constant: int, 0
+            ArrayRef: 
+              ArrayRef: 
+                ID: a
+                ID: i
+              Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                StructRef: ->
+                  ID: x
+                  ID: c
+                ID: i
+              Constant: int, 0
+            BinaryOp: !=
+              Constant: int, 0
+              ArrayRef: 
+                ArrayRef: 
+                  ID: a
+                  ID: i
+                Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                StructRef: ->
+                  ID: x
+                  ID: b
+                ID: i
+              Constant: int, 1
+            ArrayRef: 
+              ArrayRef: 
+                ID: a
+                ID: i
+              Constant: int, 1

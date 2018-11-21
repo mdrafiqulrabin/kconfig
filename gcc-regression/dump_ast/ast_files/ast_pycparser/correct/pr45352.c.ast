@@ -1,0 +1,97 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: p, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: p, []
+              Struct: None
+                Decl: i, [], [], []
+                  TypeDecl: i, []
+                    IdentifierType: ['int']
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+  Decl: baz, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: baz, []
+        IdentifierType: ['int']
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                Struct: S
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          StructRef: ->
+            ID: s
+            ID: x
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ArrayRef: 
+              StructRef: ->
+                ID: s
+                ID: p
+              ID: i
+            FuncCall: 
+              ID: baz
+            StructRef: ->
+              ID: s
+              ID: y
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          StructRef: ->
+            ID: s
+            ID: x
+        UnaryOp: p++
+          ID: i
+        UnaryOp: p++
+          StructRef: ->
+            ArrayRef: 
+              StructRef: ->
+                ID: s
+                ID: p
+              ID: i
+            ID: i

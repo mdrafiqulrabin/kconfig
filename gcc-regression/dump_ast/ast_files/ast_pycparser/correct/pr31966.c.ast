@@ -1,0 +1,144 @@
+FileAST: 
+  Typedef: word, [], ['typedef']
+    TypeDecl: word, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  Decl: MP_WORD_BITS, ['const'], [], []
+    TypeDecl: MP_WORD_BITS, ['const']
+      IdentifierType: ['unsigned', 'int']
+    Constant: int, 64
+  Decl: MP_WORD_MASK, ['const'], [], []
+    TypeDecl: MP_WORD_MASK, ['const']
+      IdentifierType: ['word']
+    UnaryOp: ~
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['word']
+        Constant: int, 0
+  Decl: MP_WORD_TOP_BIT, ['const'], [], []
+    TypeDecl: MP_WORD_TOP_BIT, ['const']
+      IdentifierType: ['word']
+    BinaryOp: <<
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['word']
+        Constant: int, 1
+      BinaryOp: -
+        BinaryOp: *
+          Constant: int, 8
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['word']
+        Constant: int, 1
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: do_div, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n1, [], [], []
+            TypeDecl: n1, []
+              IdentifierType: ['word']
+          Decl: n0, [], [], []
+            TypeDecl: n0, []
+              IdentifierType: ['word']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['word']
+        TypeDecl: do_div, []
+          IdentifierType: ['word']
+    Compound: 
+      Decl: high, [], [], []
+        TypeDecl: high, []
+          IdentifierType: ['word']
+        BinaryOp: %
+          ID: n1
+          ID: d
+      Decl: quotient, [], [], []
+        TypeDecl: quotient, []
+          IdentifierType: ['word']
+        Constant: int, 0
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['unsigned', 'int']
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: !=
+          ID: j
+          ID: MP_WORD_BITS
+        UnaryOp: ++
+          ID: j
+        Compound: 
+          Decl: high_top_bit, [], [], []
+            TypeDecl: high_top_bit, []
+              IdentifierType: ['word']
+            BinaryOp: &
+              ID: high
+              ID: MP_WORD_TOP_BIT
+          Assignment: <<=
+            ID: high
+            Constant: int, 1
+          Assignment: |=
+            ID: high
+            BinaryOp: &
+              BinaryOp: >>
+                ID: n0
+                BinaryOp: -
+                  BinaryOp: -
+                    ID: MP_WORD_BITS
+                    Constant: int, 1
+                  ID: j
+              Constant: int, 1
+          Assignment: <<=
+            ID: quotient
+            Constant: int, 1
+          If: 
+            BinaryOp: ||
+              ID: high_top_bit
+              BinaryOp: >=
+                ID: high
+                ID: d
+            Compound: 
+              Assignment: -=
+                ID: high
+                ID: d
+              Assignment: |=
+                ID: quotient
+                Constant: int, 1
+      Return: 
+        ID: quotient
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: result, [], [], []
+        TypeDecl: result, []
+          IdentifierType: ['word']
+      Assignment: =
+        ID: result
+        FuncCall: 
+          ID: do_div
+          ExprList: 
+            Constant: int, 0x0000000000200000ll
+            Constant: int, 0x0000000000000000ll
+            Constant: int, 0x86E53497CE000000ll
+      If: 
+        BinaryOp: !=
+          ID: result
+          Constant: int, 0x3CBA83
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,193 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                PtrDecl: []
+                  TypeDecl: x, []
+                    IdentifierType: ['int']
+        TypeDecl: f1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Pragma: omp parallel for
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        UnaryOp: ++
+          ID: i
+        Compound: 
+          Pragma: omp parallel shared(j)
+          Pragma: omp for
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              Constant: int, 10
+            UnaryOp: ++
+              ID: j
+            Compound: 
+              Pragma: omp parallel for
+              For: 
+                Assignment: =
+                  ID: k
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: k
+                  Constant: int, 10
+                UnaryOp: ++
+                  ID: k
+                Assignment: =
+                  ArrayRef: 
+                    ArrayRef: 
+                      ArrayRef: 
+                        ID: x
+                        ID: i
+                      ID: j
+                    ID: k
+                  ID: k
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                PtrDecl: []
+                  TypeDecl: x, []
+                    IdentifierType: ['int']
+        TypeDecl: f2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Pragma: omp parallel for schedule(static,1)
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        UnaryOp: ++
+          ID: i
+        Compound: 
+          Pragma: omp parallel shared(j)
+          Pragma: omp for schedule(static,1)
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              Constant: int, 10
+            UnaryOp: ++
+              ID: j
+            Compound: 
+              Pragma: omp parallel for schedule(static,1)
+              For: 
+                Assignment: =
+                  ID: k
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: k
+                  Constant: int, 10
+                UnaryOp: ++
+                  ID: k
+                Assignment: =
+                  ArrayRef: 
+                    ArrayRef: 
+                      ArrayRef: 
+                        ID: x
+                        ID: i
+                      ID: j
+                    ID: k
+                  ID: k
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                PtrDecl: []
+                  TypeDecl: x, []
+                    IdentifierType: ['int']
+        TypeDecl: f3, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Pragma: omp parallel for schedule(runtime)
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        UnaryOp: ++
+          ID: i
+        Compound: 
+          Pragma: omp parallel shared(j)
+          Pragma: omp for schedule(runtime)
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              Constant: int, 10
+            UnaryOp: ++
+              ID: j
+            Compound: 
+              Pragma: omp parallel for schedule(runtime)
+              For: 
+                Assignment: =
+                  ID: k
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: k
+                  Constant: int, 10
+                UnaryOp: ++
+                  ID: k
+                Assignment: =
+                  ArrayRef: 
+                    ArrayRef: 
+                      ArrayRef: 
+                        ID: x
+                        ID: i
+                      ID: j
+                    ID: k
+                  ID: k

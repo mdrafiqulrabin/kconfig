@@ -1,0 +1,76 @@
+TranslationUnitDecl 0x7fe9eb8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe9eb826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe9eb826740 '__int128'
+|-TypedefDecl 0x7fe9eb826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe9eb826760 'unsigned __int128'
+|-TypedefDecl 0x7fe9eb826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe9eb826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe9eb826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe9eb826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe9eb826dc0 'char *'
+|   `-BuiltinType 0x7fe9eb826560 'char'
+|-TypedefDecl 0x7fe9eb8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe9eb827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe9eb826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe9eb826e58 '__va_list_tag'
+|-TypedefDecl 0x7fe9eb827130 <c_files/pr51583.c:4:1, col:28> col:28 referenced Value '_Complex double'
+| `-ComplexType 0x7fe9eb8268b0 '_Complex double'
+|   `-BuiltinType 0x7fe9eb8266e0 'double'
+|-RecordDecl 0x7fe9eb877400 <line:6:1, line:10:1> line:6:7 union U definition
+| |-FieldDecl 0x7fe9eb8774e0 <line:8:3, col:9> col:9 referenced v 'Value':'_Complex double'
+| `-FieldDecl 0x7fe9eb8775b8 <line:9:3, col:23> col:8 referenced c 'char [16]'
+|-RecordDecl 0x7fe9eb877600 <line:12:1, line:16:1> line:12:8 struct S definition
+| |-FieldDecl 0x7fe9eb877700 <line:14:3, col:11> col:11 referenced u 'union U':'union U'
+| |-FieldDecl 0x7fe9eb877760 <line:15:3, col:7> col:7 referenced i 'int'
+| `-FieldDecl 0x7fe9eb8777c0 <col:3, col:9> col:9 referenced j 'int'
+|-VarDecl 0x7fe9eb877868 <line:18:1, col:7> col:7 used gv 'Value':'_Complex double'
+|-VarDecl 0x7fe9eb877920 <line:19:1, col:5> col:5 used gi 'int'
+|-VarDecl 0x7fe9eb877998 <col:1, col:9> col:9 used gj 'int'
+`-FunctionDecl 0x7fe9eb877b00 <line:21:1, line:34:1> line:21:7 foo 'Value (void)'
+  `-CompoundStmt 0x7fe9eb879418 <line:22:1, line:34:1>
+    |-DeclStmt 0x7fe9eb877ce8 <line:23:3, col:15>
+    | |-VarDecl 0x7fe9eb877bf0 <col:3, col:12> col:12 used s 'struct S':'struct S'
+    | `-VarDecl 0x7fe9eb877c70 <col:3, col:14> col:14 used t 'struct S':'struct S'
+    |-BinaryOperator 0x7fe9eb877da0 <line:25:3, col:9> 'int' '='
+    | |-MemberExpr 0x7fe9eb877d28 <col:3, col:5> 'int' lvalue .i 0x7fe9eb877760
+    | | `-DeclRefExpr 0x7fe9eb877d00 <col:3> 'struct S':'struct S' lvalue Var 0x7fe9eb877c70 't' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7fe9eb877d88 <col:9> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe9eb877d60 <col:9> 'int' lvalue Var 0x7fe9eb877920 'gi' 'int'
+    |-BinaryOperator 0x7fe9eb877ec0 <line:26:3, col:9> 'int' '='
+    | |-MemberExpr 0x7fe9eb877e48 <col:3, col:5> 'int' lvalue .j 0x7fe9eb8777c0
+    | | `-DeclRefExpr 0x7fe9eb877e20 <col:3> 'struct S':'struct S' lvalue Var 0x7fe9eb877c70 't' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7fe9eb877ea8 <col:9> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe9eb877e80 <col:9> 'int' lvalue Var 0x7fe9eb877998 'gj' 'int'
+    |-BinaryOperator 0x7fe9eb877fc0 <line:27:3, col:11> 'Value':'_Complex double' '='
+    | |-MemberExpr 0x7fe9eb877f48 <col:3, col:7> 'Value':'_Complex double' lvalue .v 0x7fe9eb8774e0
+    | | `-MemberExpr 0x7fe9eb877f10 <col:3, col:5> 'union U':'union U' lvalue .u 0x7fe9eb877700
+    | |   `-DeclRefExpr 0x7fe9eb877ee8 <col:3> 'struct S':'struct S' lvalue Var 0x7fe9eb877c70 't' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7fe9eb877fa8 <col:11> 'Value':'_Complex double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe9eb877f80 <col:11> 'Value':'_Complex double' lvalue Var 0x7fe9eb877868 'gv' 'Value':'_Complex double'
+    |-BinaryOperator 0x7fe9eb878118 <line:28:3, col:14> 'char' '='
+    | |-ArraySubscriptExpr 0x7fe9eb8780b8 <col:3, col:10> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fe9eb8780a0 <col:3, col:7> 'char *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7fe9eb878048 <col:3, col:7> 'char [16]' lvalue .c 0x7fe9eb8775b8
+    | | |   `-MemberExpr 0x7fe9eb878010 <col:3, col:5> 'union U':'union U' lvalue .u 0x7fe9eb877700
+    | | |     `-DeclRefExpr 0x7fe9eb877fe8 <col:3> 'struct S':'struct S' lvalue Var 0x7fe9eb877c70 't' 'struct S':'struct S'
+    | | `-IntegerLiteral 0x7fe9eb878080 <col:9> 'int' 0
+    | `-ImplicitCastExpr 0x7fe9eb878100 <col:14> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe9eb8780e0 <col:14> 'int' 0
+    |-BinaryOperator 0x7fe9eb8781a8 <line:30:3, col:7> 'struct S':'struct S' '='
+    | |-DeclRefExpr 0x7fe9eb878140 <col:3> 'struct S':'struct S' lvalue Var 0x7fe9eb877bf0 's' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7fe9eb878190 <col:7> 'struct S':'struct S' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe9eb878168 <col:7> 'struct S':'struct S' lvalue Var 0x7fe9eb877c70 't' 'struct S':'struct S'
+    |-CompoundAssignOperator 0x7fe9eb878318 <line:31:3, col:23> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    | |-UnaryOperator 0x7fe9eb878268 <col:3, col:16> 'double' lvalue prefix '__imag'
+    | | `-MemberExpr 0x7fe9eb878230 <col:12, col:16> 'Value':'_Complex double' lvalue .v 0x7fe9eb8774e0
+    | |   `-MemberExpr 0x7fe9eb8781f8 <col:12, col:14> 'union U':'union U' lvalue .u 0x7fe9eb877700
+    | |     `-DeclRefExpr 0x7fe9eb8781d0 <col:12> 'struct S':'struct S' lvalue Var 0x7fe9eb877bf0 's' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7fe9eb878300 <col:21, col:23> 'double' <IntegralToFloating>
+    |   `-ImplicitCastExpr 0x7fe9eb8782e8 <col:21, col:23> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7fe9eb8782b0 <col:21, col:23> 'int' lvalue .i 0x7fe9eb877760
+    |       `-DeclRefExpr 0x7fe9eb878288 <col:21> 'struct S':'struct S' lvalue Var 0x7fe9eb877bf0 's' 'struct S':'struct S'
+    `-ReturnStmt 0x7fe9eb879400 <line:33:3, col:14>
+      `-ImplicitCastExpr 0x7fe9eb8783e8 <col:10, col:14> 'Value':'_Complex double' <LValueToRValue>
+        `-MemberExpr 0x7fe9eb8783b0 <col:10, col:14> 'Value':'_Complex double' lvalue .v 0x7fe9eb8774e0
+          `-MemberExpr 0x7fe9eb878378 <col:10, col:12> 'union U':'union U' lvalue .u 0x7fe9eb877700
+            `-DeclRefExpr 0x7fe9eb878350 <col:10> 'struct S':'struct S' lvalue Var 0x7fe9eb877bf0 's' 'struct S':'struct S'

@@ -1,0 +1,107 @@
+FileAST: 
+  Typedef: ull, [], ['typedef']
+    TypeDecl: ull, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  Decl: None, [], [], []
+    Struct: S1
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['float']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['ull']
+  Decl: None, [], [], []
+    Struct: S2
+      Decl: a1, [], [], []
+        TypeDecl: a1, []
+          IdentifierType: ['int']
+      Decl: node, [], [], []
+        PtrDecl: []
+          TypeDecl: node, []
+            Struct: S1
+      Decl: a2, [], [], []
+        PtrDecl: []
+          TypeDecl: a2, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c1, [], [], []
+            TypeDecl: c1, []
+              IdentifierType: ['int']
+          Decl: c2, [], [], []
+            TypeDecl: c2, []
+              IdentifierType: ['int']
+          Decl: c3, [], [], []
+            TypeDecl: c3, []
+              IdentifierType: ['int']
+          Decl: reg, [], [], []
+            PtrDecl: []
+              TypeDecl: reg, []
+                Struct: S2
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          StructRef: ->
+            ID: reg
+            ID: a1
+        UnaryOp: p++
+          ID: i
+        If: 
+          BinaryOp: &
+            StructRef: .
+              ArrayRef: 
+                StructRef: ->
+                  ID: reg
+                  ID: node
+                ID: i
+              ID: y
+            BinaryOp: <<
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['ull']
+                Constant: int, 1
+              ID: c1
+          Compound: 
+            If: 
+              BinaryOp: &
+                StructRef: .
+                  ArrayRef: 
+                    StructRef: ->
+                      ID: reg
+                      ID: node
+                    ID: i
+                  ID: y
+                BinaryOp: <<
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['ull']
+                    Constant: int, 1
+                  ID: c2
+              Assignment: ^=
+                StructRef: .
+                  ArrayRef: 
+                    StructRef: ->
+                      ID: reg
+                      ID: node
+                    ID: i
+                  ID: y
+                BinaryOp: <<
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['ull']
+                    Constant: int, 1
+                  ID: c3

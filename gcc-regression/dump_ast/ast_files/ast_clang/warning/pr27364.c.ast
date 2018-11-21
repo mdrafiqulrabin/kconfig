@@ -1,0 +1,75 @@
+c_files/pr27364.c:12:3: warning: implicitly declaring library function 'exit' with type 'void (int) __attribute__((noreturn))' [-Wimplicit-function-declaration]
+  exit (0);
+  ^
+c_files/pr27364.c:12:3: note: include the header <stdlib.h> or explicitly provide a declaration for 'exit'
+1 warning generated.
+TranslationUnitDecl 0x7fc8b08264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc8b0826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc8b0826740 '__int128'
+|-TypedefDecl 0x7fc8b0826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc8b0826760 'unsigned __int128'
+|-TypedefDecl 0x7fc8b0826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc8b0826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc8b0826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc8b0826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc8b0826dc0 'char *'
+|   `-BuiltinType 0x7fc8b0826560 'char'
+|-TypedefDecl 0x7fc8b08270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc8b0827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc8b0826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc8b0826e58 '__va_list_tag'
+|-FunctionDecl 0x7fc8b1025a30 <c_files/pr27364.c:1:1, line:6:1> line:1:5 used f 'int (unsigned int)'
+| |-ParmVarDecl 0x7fc8b0827138 <col:7, col:16> col:16 used number_of_digits_to_use 'unsigned int'
+| `-CompoundStmt 0x7fc8b1025e30 <line:2:1, line:6:1>
+|   |-IfStmt 0x7fc8b1025be8 <line:3:3, line:4:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc8b1025b88 <line:3:7, col:32> 'int' '>'
+|   | | |-ImplicitCastExpr 0x7fc8b1025b58 <col:7> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc8b1025b10 <col:7> 'unsigned int' lvalue ParmVar 0x7fc8b0827138 'number_of_digits_to_use' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7fc8b1025b70 <col:32> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fc8b1025b38 <col:32> 'int' 1294
+|   | |-ReturnStmt 0x7fc8b1025bd0 <line:4:5, col:12>
+|   | | `-IntegerLiteral 0x7fc8b1025bb0 <col:12> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fc8b1025e18 <line:5:3, col:61>
+|     `-ImplicitCastExpr 0x7fc8b1025e00 <col:10, col:61> 'int' <IntegralCast>
+|       `-BinaryOperator 0x7fc8b1025dd8 <col:10, col:61> 'unsigned int' '/'
+|         |-ParenExpr 0x7fc8b1025d80 <col:10, col:58> 'unsigned int'
+|         | `-BinaryOperator 0x7fc8b1025d58 <col:11, col:57> 'unsigned int' '+'
+|         |   |-BinaryOperator 0x7fc8b1025cf8 <col:11, col:47> 'unsigned int' '/'
+|         |   | |-BinaryOperator 0x7fc8b1025c98 <col:11, col:37> 'unsigned int' '*'
+|         |   | | |-ImplicitCastExpr 0x7fc8b1025c68 <col:11> 'unsigned int' <LValueToRValue>
+|         |   | | | `-DeclRefExpr 0x7fc8b1025c20 <col:11> 'unsigned int' lvalue ParmVar 0x7fc8b0827138 'number_of_digits_to_use' 'unsigned int'
+|         |   | | `-ImplicitCastExpr 0x7fc8b1025c80 <col:37> 'unsigned int' <IntegralCast>
+|         |   | |   `-IntegerLiteral 0x7fc8b1025c48 <col:37> 'int' 3321928
+|         |   | `-ImplicitCastExpr 0x7fc8b1025ce0 <col:47> 'unsigned int' <IntegralCast>
+|         |   |   `-IntegerLiteral 0x7fc8b1025cc0 <col:47> 'int' 1000000
+|         |   `-ImplicitCastExpr 0x7fc8b1025d40 <col:57> 'unsigned int' <IntegralCast>
+|         |     `-IntegerLiteral 0x7fc8b1025d20 <col:57> 'int' 1
+|         `-ImplicitCastExpr 0x7fc8b1025dc0 <col:61> 'unsigned int' <IntegralCast>
+|           `-IntegerLiteral 0x7fc8b1025da0 <col:61> 'int' 16
+|-FunctionDecl 0x7fc8b1025f28 <line:8:1, line:13:1> line:8:5 main 'int (void)'
+| `-CompoundStmt 0x7fc8b1026890 <line:9:1, line:13:1>
+|   |-IfStmt 0x7fc8b10262a8 <line:10:3, line:11:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc8b10260d8 <line:10:7, col:16> 'int' '!='
+|   | | |-CallExpr 0x7fc8b1026070 <col:7, col:11> 'int'
+|   | | | |-ImplicitCastExpr 0x7fc8b1026058 <col:7> 'int (*)(unsigned int)' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7fc8b1025fe8 <col:7> 'int (unsigned int)' Function 0x7fc8b1025a30 'f' 'int (unsigned int)'
+|   | | | `-ImplicitCastExpr 0x7fc8b10260a0 <col:9> 'unsigned int' <IntegralCast>
+|   | | |   `-IntegerLiteral 0x7fc8b1026010 <col:9> 'int' 11
+|   | | `-IntegerLiteral 0x7fc8b10260b8 <col:16> 'int' 2
+|   | |-CallExpr 0x7fc8b1026280 <line:11:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fc8b1026268 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fc8b1026210 <col:5> '<builtin fn type>' Function 0x7fc8b1026130 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-CallExpr 0x7fc8b1026860 <line:12:3, col:10> 'void'
+|     |-ImplicitCastExpr 0x7fc8b1026848 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fc8b10267d0 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fc8b10266d0 'exit' 'void (int) __attribute__((noreturn))'
+|     `-IntegerLiteral 0x7fc8b10267f8 <col:9> 'int' 0
+|-FunctionDecl 0x7fc8b1026130 <line:11:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fc8b10261c8 <col:5> Implicit
+`-FunctionDecl 0x7fc8b10266d0 <line:12:3> col:3 implicit used exit 'void (int) __attribute__((noreturn))' extern
+  `-ParmVarDecl 0x7fc8b1026768 <<invalid sloc>> <invalid sloc> 'int'

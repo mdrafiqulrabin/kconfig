@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7fe6978264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe697826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe697826740 '__int128'
+|-TypedefDecl 0x7fe697826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe697826760 'unsigned __int128'
+|-TypedefDecl 0x7fe697826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe697826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe697826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe697826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe697826dc0 'char *'
+|   `-BuiltinType 0x7fe697826560 'char'
+|-TypedefDecl 0x7fe6978270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe697827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe697826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe697826e58 '__va_list_tag'
+|-RecordDecl 0x7fe697827120 <c_files/pr33631.c:1:9, line:4:1> line:1:9 union definition
+| `-FieldDecl 0x7fe698025a00 <line:3:3, col:7> col:7 __lock 'int'
+|-TypedefDecl 0x7fe698025aa0 <line:1:1, line:4:3> col:3 referenced pthread_mutex_t 'union pthread_mutex_t':'pthread_mutex_t'
+| `-ElaboratedType 0x7fe698025a50 'union pthread_mutex_t' sugar
+|   `-RecordType 0x7fe6978271b0 'pthread_mutex_t'
+|     `-Record 0x7fe697827120 ''
+|-FunctionDecl 0x7fe698025c00 <line:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe698025c98 prev 0x7fe698025c00 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fe698025d80 <line:8:1, line:14:1> line:8:5 main 'int ()'
+  `-CompoundStmt 0x7fe698026468 <line:9:1, line:14:1>
+    |-DeclStmt 0x7fe6980261f8 <line:10:5, col:56>
+    | |-RecordDecl 0x7fe698025e58 <col:5, col:40> col:5 struct definition
+    | | |-FieldDecl 0x7fe698025f18 <col:14, col:18> col:18 referenced c 'int'
+    | | `-FieldDecl 0x7fe698025f90 <col:21, col:37> col:37 m 'pthread_mutex_t':'pthread_mutex_t'
+    | `-VarDecl 0x7fe698026030 <col:5, col:55> col:42 used r 'struct (anonymous struct at c_files/pr33631.c:10:5)':'struct (anonymous at c_files/pr33631.c:10:5)' cinit
+    |   `-InitListExpr 0x7fe698026138 <col:46, col:55> 'struct (anonymous struct at c_files/pr33631.c:10:5)':'struct (anonymous at c_files/pr33631.c:10:5)'
+    |     |-ImplicitValueInitExpr 0x7fe6980261d0 <<invalid sloc>> 'int'
+    |     `-InitListExpr 0x7fe698026188 <col:53> 'pthread_mutex_t':'pthread_mutex_t' field Field 0x7fe698025a00 '__lock' 'int'
+    |       `-IntegerLiteral 0x7fe698026090 <col:53> 'int' 0
+    |-IfStmt 0x7fe6980263f8 <line:11:5, line:12:14>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe6980262a8 <line:11:9, col:16> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fe698026290 <col:9, col:11> 'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7fe698026238 <col:9, col:11> 'int' lvalue .c 0x7fe698025f18
+    | | |   `-DeclRefExpr 0x7fe698026210 <col:9> 'struct (anonymous struct at c_files/pr33631.c:10:5)':'struct (anonymous at c_files/pr33631.c:10:5)' lvalue Var 0x7fe698026030 'r' 'struct (anonymous struct at c_files/pr33631.c:10:5)':'struct (anonymous at c_files/pr33631.c:10:5)'
+    | | `-IntegerLiteral 0x7fe698026270 <col:16> 'int' 0
+    | |-CallExpr 0x7fe6980263d0 <line:12:7, col:14> 'void'
+    | | `-ImplicitCastExpr 0x7fe6980263b8 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe698026368 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7fe698025c98 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe698026450 <line:13:5, col:12>
+      `-IntegerLiteral 0x7fe698026430 <col:12> 'int' 0

@@ -1,0 +1,154 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['int']
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          IdentifierType: ['int']
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+      Decl: o, [], [], []
+        TypeDecl: o, []
+          IdentifierType: ['int']
+      Decl: p, [], [], []
+        TypeDecl: p, []
+          IdentifierType: ['int']
+      Decl: q, [], [], []
+        TypeDecl: q, []
+          IdentifierType: ['int']
+      Pragma: omp task				 
+      Compound: 
+        Assignment: =
+          ID: i
+          Constant: int, 2
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: i
+      Pragma: omp taskloop				 
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: <
+          ID: j
+          Constant: int, 10
+        UnaryOp: p++
+          ID: j
+        Compound: 
+          Assignment: =
+            ID: k
+            Constant: int, 7
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              ID: k
+      Pragma: omp task firstprivate (l)		 
+      Compound: 
+        Assignment: =
+          ID: l
+          Constant: int, 2
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: l
+      Pragma: omp taskloop firstprivate (m)		 
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: <
+          ID: j
+          Constant: int, 10
+        UnaryOp: p++
+          ID: j
+        Compound: 
+          Assignment: =
+            ID: m
+            Constant: int, 7
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              ID: m
+      Pragma: omp task shared (n)			 
+      Compound: 
+        Assignment: =
+          ID: n
+          Constant: int, 2
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: n
+      Pragma: omp taskloop shared (o)		 
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: <
+          ID: j
+          Constant: int, 10
+        UnaryOp: p++
+          ID: j
+        Compound: 
+          Assignment: =
+            ID: o
+            Constant: int, 7
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              ID: o
+      Pragma: omp task private (p)			 
+      Compound: 
+        Assignment: =
+          ID: p
+          Constant: int, 2
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: p
+      Pragma: omp taskloop shared (q)		 
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: <
+          ID: j
+          Constant: int, 10
+        UnaryOp: p++
+          ID: j
+        Compound: 
+          Assignment: =
+            ID: q
+            Constant: int, 7
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              ID: q

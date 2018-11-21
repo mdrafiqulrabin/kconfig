@@ -1,0 +1,99 @@
+FileAST: 
+  FuncDef: 
+    Decl: sd, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: yn, [], [], []
+            TypeDecl: yn, []
+              IdentifierType: ['int']
+        TypeDecl: sd, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        BinaryOp: <
+          ID: yn
+          Constant: int, 1
+        Compound: 
+          Decl: hy, [], [], []
+            TypeDecl: hy, []
+              IdentifierType: ['int']
+          Decl: n6, [], [], []
+            PtrDecl: []
+              TypeDecl: n6, []
+                IdentifierType: ['int']
+            UnaryOp: &
+              ID: hy
+          Decl: ot, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: ot, []
+                  IdentifierType: ['int']
+            UnaryOp: &
+              ID: n6
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+            ID: ot
+          For: 
+            Assignment: =
+              ID: yn
+              Constant: int, 0
+            BinaryOp: <
+              ID: yn
+              Constant: int, 1
+            UnaryOp: ++
+              ID: yn
+            Compound: 
+              Decl: tc, [], [], []
+                TypeDecl: tc, []
+                  IdentifierType: ['int']
+              Decl: wo, [], [], []
+                TypeDecl: wo, []
+                  IdentifierType: ['int']
+                Constant: int, 0
+              Decl: ez, [], [], []
+                TypeDecl: ez, []
+                  IdentifierType: ['int']
+                Constant: int, 0
+              Decl: b8, [], [], []
+                TypeDecl: b8, []
+                  IdentifierType: ['int']
+                Constant: int, 0
+              Decl: ls, [], [], []
+                PtrDecl: []
+                  TypeDecl: ls, []
+                    IdentifierType: ['int']
+                UnaryOp: &
+                  ID: wo
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+                ID: ls
+              Assignment: =
+                ID: hy
+                Constant: int, 0
+              For: 
+                Assignment: =
+                  ID: tc
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: tc
+                  Constant: int, 1
+                UnaryOp: ++
+                  ID: tc
+                Compound: 
+                  Assignment: ^=
+                    ID: ez
+                    ID: hy
+                  Assignment: ^=
+                    ID: wo
+                    ID: ez
+                  UnaryOp: ++
+                    ID: b8
+              Assignment: +=
+                ID: hy
+                BinaryOp: <
+                  ID: b8
+                  ID: wo

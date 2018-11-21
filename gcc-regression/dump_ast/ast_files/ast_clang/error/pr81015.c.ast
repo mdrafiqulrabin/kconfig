@@ -1,0 +1,55 @@
+c_files/pr81015.c:5:10: fatal error: 'lzcnt-check.h' file not found
+#include "lzcnt-check.h"
+         ^~~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7f9e378264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9e37826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9e37826740 '__int128'
+|-TypedefDecl 0x7f9e37826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9e37826760 'unsigned __int128'
+|-TypedefDecl 0x7f9e37826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9e37826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9e37826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9e37826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9e37826dc0 'char *'
+|   `-BuiltinType 0x7f9e37826560 'char'
+|-TypedefDecl 0x7f9e378270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9e37827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9e37826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9e37826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9e38027a30 <c_files/pr81015.c:7:1, line:12:1> line:9:1 used foo 'int (unsigned short)'
+| |-ParmVarDecl 0x7f9e37827138 <col:6, col:21> col:21 used a 'unsigned short'
+| |-CompoundStmt 0x7f9e38027df8 <line:10:1, line:12:1>
+| | `-ReturnStmt 0x7f9e38027de0 <line:11:3, col:26>
+| |   `-CallExpr 0x7f9e38027d80 <col:10, col:26> 'int'
+| |     |-ImplicitCastExpr 0x7f9e38027d68 <col:10> 'int (*)(unsigned int)' <BuiltinFnToFnPtr>
+| |     | `-DeclRefExpr 0x7f9e38027cf0 <col:10> '<builtin fn type>' Function 0x7f9e38027b98 '__builtin_clz' 'int (unsigned int)'
+| |     `-ImplicitCastExpr 0x7f9e38027dc8 <col:25> 'unsigned int' <IntegralCast>
+| |       `-ImplicitCastExpr 0x7f9e38027db0 <col:25> 'unsigned short' <LValueToRValue>
+| |         `-DeclRefExpr 0x7f9e38027d18 <col:25> 'unsigned short' lvalue ParmVar 0x7f9e37827138 'a' 'unsigned short'
+| `-NoInlineAttr 0x7f9e38027ad0 <line:8:17>
+|-FunctionDecl 0x7f9e38027b98 <line:11:10> col:10 implicit used __builtin_clz 'int (unsigned int)' extern
+| |-ParmVarDecl 0x7f9e38027c30 <<invalid sloc>> <invalid sloc> 'unsigned int'
+| |-NoThrowAttr 0x7f9e38027c98 <col:10> Implicit
+| `-ConstAttr 0x7f9e38027ce0 <col:10> Implicit
+|-FunctionDecl 0x7f9e38027e68 <line:14:1, line:21:1> line:15:1 lzcnt_test 'void ()' static
+| `-CompoundStmt 0x7f9e38028280 <line:16:1, line:21:1>
+|   |-DeclStmt 0x7f9e38028048 <line:17:3, col:20>
+|   | `-VarDecl 0x7f9e38027f18 <col:3, col:19> col:7 used res 'int' cinit
+|   |   `-CallExpr 0x7f9e38028000 <col:13, col:19> 'int'
+|   |     |-ImplicitCastExpr 0x7f9e38027fe8 <col:13> 'int (*)(unsigned short)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f9e38027f78 <col:13> 'int (unsigned short)' Function 0x7f9e38027a30 'foo' 'int (unsigned short)'
+|   |     `-ImplicitCastExpr 0x7f9e38028030 <col:18> 'unsigned short' <IntegralCast>
+|   |       `-IntegerLiteral 0x7f9e38027fa0 <col:18> 'int' 1
+|   `-IfStmt 0x7f9e38028248 <line:19:3, line:20:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9e380280c0 <line:19:7, col:14> 'int' '!='
+|     | |-ImplicitCastExpr 0x7f9e380280a8 <col:7> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f9e38028060 <col:7> 'int' lvalue Var 0x7f9e38027f18 'res' 'int'
+|     | `-IntegerLiteral 0x7f9e38028088 <col:14> 'int' 31
+|     |-CallExpr 0x7f9e38028220 <line:20:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7f9e38028208 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f9e380281b8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9e38028120 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f9e38028120 <col:5> col:5 implicit used abort 'void (void) __attribute__((noreturn))' extern

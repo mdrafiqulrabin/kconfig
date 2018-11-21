@@ -1,0 +1,133 @@
+c_files/pr33855.c:21:11: warning: implicitly declaring library function 'cabsl' with type 'long double (_Complex long double)' [-Wimplicit-function-declaration]
+      if (cabsl(vsorc.vqd[indx]) < 1.e-20)
+          ^
+c_files/pr33855.c:21:11: note: include the header <complex.h> or explicitly provide a declaration for 'cabsl'
+1 warning generated.
+TranslationUnitDecl 0x7fab6d8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fab6d826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fab6d826740 '__int128'
+|-TypedefDecl 0x7fab6d826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fab6d826760 'unsigned __int128'
+|-TypedefDecl 0x7fab6d826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fab6d826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fab6d826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fab6d826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fab6d826dc0 'char *'
+|   `-BuiltinType 0x7fab6d826560 'char'
+|-TypedefDecl 0x7fab6d8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fab6d827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fab6d826ee0 'struct __va_list_tag'
+|     `-Record 0x7fab6d826e58 '__va_list_tag'
+|-RecordDecl 0x7fab6d827120 <c_files/pr33855.c:5:9, line:8:1> line:5:9 struct definition
+| |-FieldDecl 0x7fab6e025a00 <line:6:3, col:7> col:7 referenced nsant 'int'
+| |-FieldDecl 0x7fab6e025a60 <col:3, col:14> col:14 referenced nvqd 'int'
+| `-FieldDecl 0x7fab6e025ae8 <line:7:3, col:25> col:25 referenced vqd '_Complex long double *'
+|-TypedefDecl 0x7fab6e025b80 <line:5:1, line:8:3> col:3 referenced vsorc_t 'struct vsorc_t':'vsorc_t'
+| `-ElaboratedType 0x7fab6e025b30 'struct vsorc_t' sugar
+|   `-RecordType 0x7fab6d8271b0 'vsorc_t'
+|     `-Record 0x7fab6d827120 ''
+|-VarDecl 0x7fab6e025c20 <line:9:1, col:9> col:9 used vsorc 'vsorc_t':'vsorc_t'
+|-FunctionDecl 0x7fab6e025f30 <line:11:1, line:27:1> line:11:6 foo 'void (int, int, int, long)'
+| |-ParmVarDecl 0x7fab6e025cd8 <col:10, col:14> col:14 used next_job 'int'
+| |-ParmVarDecl 0x7fab6e025d50 <col:24, col:28> col:28 used ain_num 'int'
+| |-ParmVarDecl 0x7fab6e025dc8 <col:37, col:41> col:41 used iped 'int'
+| |-ParmVarDecl 0x7fab6e025e40 <col:47, col:52> col:52 used t 'long'
+| `-CompoundStmt 0x7fab6e0271c0 <col:55, line:27:1>
+|   |-DeclStmt 0x7fab6e026060 <line:12:3, col:21>
+|   | `-VarDecl 0x7fab6e026000 <col:3, col:15> col:15 used zpnorm 'long double'
+|   `-WhileStmt 0x7fab6e0271a0 <line:14:3, line:26:5>
+|     |-<<<NULL>>>
+|     |-UnaryOperator 0x7fab6e0260b8 <line:14:10, col:11> 'int' prefix '!'
+|     | `-ImplicitCastExpr 0x7fab6e0260a0 <col:11> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fab6e026078 <col:11> 'int' lvalue ParmVar 0x7fab6e025cd8 'next_job' 'int'
+|     `-IfStmt 0x7fab6e027168 <line:15:5, line:26:5>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-ImplicitCastExpr 0x7fab6e026100 <line:15:9> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fab6e0260d8 <col:9> 'int' lvalue ParmVar 0x7fab6e025d50 'ain_num' 'int'
+|       |-CompoundStmt 0x7fab6e027120 <line:16:5, line:26:5>
+|       | |-IfStmt 0x7fab6e026228 <line:17:7, line:18:18>
+|       | | |-<<<NULL>>>
+|       | | |-<<<NULL>>>
+|       | | |-BinaryOperator 0x7fab6e026178 <line:17:11, col:19> 'int' '=='
+|       | | | |-ImplicitCastExpr 0x7fab6e026160 <col:11> 'int' <LValueToRValue>
+|       | | | | `-DeclRefExpr 0x7fab6e026118 <col:11> 'int' lvalue ParmVar 0x7fab6e025dc8 'iped' 'int'
+|       | | | `-IntegerLiteral 0x7fab6e026140 <col:19> 'int' 1
+|       | | |-BinaryOperator 0x7fab6e026200 <line:18:9, col:18> 'long double' '='
+|       | | | |-DeclRefExpr 0x7fab6e0261a0 <col:9> 'long double' lvalue Var 0x7fab6e026000 'zpnorm' 'long double'
+|       | | | `-ImplicitCastExpr 0x7fab6e0261e8 <col:18> 'long double' <FloatingCast>
+|       | | |   `-FloatingLiteral 0x7fab6e0261c8 <col:18> 'double' 0.000000e+00
+|       | | `-<<<NULL>>>
+|       | |-DeclStmt 0x7fab6e0263f0 <line:19:7, col:30>
+|       | | `-VarDecl 0x7fab6e026278 <col:7, col:29> col:11 used indx 'int' cinit
+|       | |   `-BinaryOperator 0x7fab6e026370 <col:18, col:29> 'int' '-'
+|       | |     |-ImplicitCastExpr 0x7fab6e026358 <col:18, col:24> 'int' <LValueToRValue>
+|       | |     | `-MemberExpr 0x7fab6e026300 <col:18, col:24> 'int' lvalue .nvqd 0x7fab6e025a60
+|       | |     |   `-DeclRefExpr 0x7fab6e0262d8 <col:18> 'vsorc_t':'vsorc_t' lvalue Var 0x7fab6e025c20 'vsorc' 'vsorc_t':'vsorc_t'
+|       | |     `-IntegerLiteral 0x7fab6e026338 <col:29> 'int' 1
+|       | |-BinaryOperator 0x7fab6e0265d0 <line:20:7, col:27> '_Complex long double' '='
+|       | | |-ArraySubscriptExpr 0x7fab6e0264c0 <col:7, col:21> '_Complex long double' lvalue
+|       | | | |-ImplicitCastExpr 0x7fab6e026490 <col:7, col:13> '_Complex long double *' <LValueToRValue>
+|       | | | | `-MemberExpr 0x7fab6e026430 <col:7, col:13> '_Complex long double *' lvalue .vqd 0x7fab6e025ae8
+|       | | | |   `-DeclRefExpr 0x7fab6e026408 <col:7> 'vsorc_t':'vsorc_t' lvalue Var 0x7fab6e025c20 'vsorc' 'vsorc_t':'vsorc_t'
+|       | | | `-ImplicitCastExpr 0x7fab6e0264a8 <col:17> 'int' <LValueToRValue>
+|       | | |   `-DeclRefExpr 0x7fab6e026468 <col:17> 'int' lvalue Var 0x7fab6e026278 'indx' 'int'
+|       | | `-ImplicitCastExpr 0x7fab6e0265b8 <col:25, col:27> '_Complex long double' <FloatingComplexCast>
+|       | |   `-BinaryOperator 0x7fab6e026590 <col:25, col:27> '_Complex float' '*'
+|       | |     |-ImplicitCastExpr 0x7fab6e026578 <col:25> '_Complex float' <FloatingRealToComplex>
+|       | |     | `-ImplicitCastExpr 0x7fab6e026560 <col:25> 'float' <IntegralToFloating>
+|       | |     |   `-ImplicitCastExpr 0x7fab6e026548 <col:25> 'long' <LValueToRValue>
+|       | |     |     `-DeclRefExpr 0x7fab6e0264e8 <col:25> 'long' lvalue ParmVar 0x7fab6e025e40 't' 'long'
+|       | |     `-ImaginaryLiteral 0x7fab6e026530 <col:27> '_Complex float'
+|       | |       `-FloatingLiteral 0x7fab6e026510 <col:27> 'float' 1.000000e+00
+|       | |-IfStmt 0x7fab6e026ea0 <line:21:7, line:22:27>
+|       | | |-<<<NULL>>>
+|       | | |-<<<NULL>>>
+|       | | |-BinaryOperator 0x7fab6e026d20 <line:21:11, col:36> 'int' '<'
+|       | | | |-CallExpr 0x7fab6e026ca0 <col:11, col:32> 'long double'
+|       | | | | |-ImplicitCastExpr 0x7fab6e026c88 <col:11> 'long double (*)(_Complex long double)' <FunctionToPointerDecay>
+|       | | | | | `-DeclRefExpr 0x7fab6e026b58 <col:11> 'long double (_Complex long double)' Function 0x7fab6e026a00 'cabsl' 'long double (_Complex long double)'
+|       | | | | `-ImplicitCastExpr 0x7fab6e026cd0 <col:17, col:31> '_Complex long double' <LValueToRValue>
+|       | | | |   `-ArraySubscriptExpr 0x7fab6e026c38 <col:17, col:31> '_Complex long double' lvalue
+|       | | | |     |-ImplicitCastExpr 0x7fab6e026c08 <col:17, col:23> '_Complex long double *' <LValueToRValue>
+|       | | | |     | `-MemberExpr 0x7fab6e026ba8 <col:17, col:23> '_Complex long double *' lvalue .vqd 0x7fab6e025ae8
+|       | | | |     |   `-DeclRefExpr 0x7fab6e026b80 <col:17> 'vsorc_t':'vsorc_t' lvalue Var 0x7fab6e025c20 'vsorc' 'vsorc_t':'vsorc_t'
+|       | | | |     `-ImplicitCastExpr 0x7fab6e026c20 <col:27> 'int' <LValueToRValue>
+|       | | | |       `-DeclRefExpr 0x7fab6e026be0 <col:27> 'int' lvalue Var 0x7fab6e026278 'indx' 'int'
+|       | | | `-ImplicitCastExpr 0x7fab6e026d08 <col:36> 'long double' <FloatingCast>
+|       | | |   `-FloatingLiteral 0x7fab6e026ce8 <col:36> 'double' 1.000000e-20
+|       | | |-BinaryOperator 0x7fab6e026e78 <line:22:9, col:27> '_Complex long double' '='
+|       | | | |-ArraySubscriptExpr 0x7fab6e026e00 <col:9, col:23> '_Complex long double' lvalue
+|       | | | | |-ImplicitCastExpr 0x7fab6e026dd0 <col:9, col:15> '_Complex long double *' <LValueToRValue>
+|       | | | | | `-MemberExpr 0x7fab6e026d70 <col:9, col:15> '_Complex long double *' lvalue .vqd 0x7fab6e025ae8
+|       | | | | |   `-DeclRefExpr 0x7fab6e026d48 <col:9> 'vsorc_t':'vsorc_t' lvalue Var 0x7fab6e025c20 'vsorc' 'vsorc_t':'vsorc_t'
+|       | | | | `-ImplicitCastExpr 0x7fab6e026de8 <col:19> 'int' <LValueToRValue>
+|       | | | |   `-DeclRefExpr 0x7fab6e026da8 <col:19> 'int' lvalue Var 0x7fab6e026278 'indx' 'int'
+|       | | | `-ImplicitCastExpr 0x7fab6e026e60 <col:27> '_Complex long double' <FloatingComplexCast>
+|       | | |   `-ImaginaryLiteral 0x7fab6e026e48 <col:27> '_Complex float'
+|       | | |     `-FloatingLiteral 0x7fab6e026e28 <col:27> 'float' 0.000000e+00
+|       | | `-<<<NULL>>>
+|       | |-BinaryOperator 0x7fab6e026f58 <line:23:7, col:16> 'long double' '='
+|       | | |-DeclRefExpr 0x7fab6e026ed8 <col:7> 'long double' lvalue Var 0x7fab6e026000 'zpnorm' 'long double'
+|       | | `-ImplicitCastExpr 0x7fab6e026f40 <col:16> 'long double' <IntegralToFloating>
+|       | |   `-ImplicitCastExpr 0x7fab6e026f28 <col:16> 'long' <LValueToRValue>
+|       | |     `-DeclRefExpr 0x7fab6e026f00 <col:16> 'long' lvalue ParmVar 0x7fab6e025e40 't' 'long'
+|       | `-IfStmt 0x7fab6e0270e8 <line:24:7, line:25:22>
+|       |   |-<<<NULL>>>
+|       |   |-<<<NULL>>>
+|       |   |-BinaryOperator 0x7fab6e026ff8 <line:24:11, col:20> 'int' '>'
+|       |   | |-ImplicitCastExpr 0x7fab6e026fc8 <col:11> 'long double' <LValueToRValue>
+|       |   | | `-DeclRefExpr 0x7fab6e026f80 <col:11> 'long double' lvalue Var 0x7fab6e026000 'zpnorm' 'long double'
+|       |   | `-ImplicitCastExpr 0x7fab6e026fe0 <col:20> 'long double' <FloatingCast>
+|       |   |   `-FloatingLiteral 0x7fab6e026fa8 <col:20> 'double' 0.000000e+00
+|       |   |-BinaryOperator 0x7fab6e0270c0 <line:25:9, col:22> 'int' '='
+|       |   | |-DeclRefExpr 0x7fab6e027020 <col:9> 'int' lvalue ParmVar 0x7fab6e025dc8 'iped' 'int'
+|       |   | `-ImplicitCastExpr 0x7fab6e0270a8 <col:16, col:22> 'int' <LValueToRValue>
+|       |   |   `-MemberExpr 0x7fab6e027070 <col:16, col:22> 'int' lvalue .nsant 0x7fab6e025a00
+|       |   |     `-DeclRefExpr 0x7fab6e027048 <col:16> 'vsorc_t':'vsorc_t' lvalue Var 0x7fab6e025c20 'vsorc' 'vsorc_t':'vsorc_t'
+|       |   `-<<<NULL>>>
+|       `-<<<NULL>>>
+`-FunctionDecl 0x7fab6e026a00 <line:21:11> col:11 implicit used cabsl 'long double (_Complex long double)' extern
+  |-ParmVarDecl 0x7fab6e026a98 <<invalid sloc>> <invalid sloc> '_Complex long double'
+  |-NoThrowAttr 0x7fab6e026b00 <col:11> Implicit
+  `-ConstAttr 0x7fab6e026b48 <col:11> Implicit

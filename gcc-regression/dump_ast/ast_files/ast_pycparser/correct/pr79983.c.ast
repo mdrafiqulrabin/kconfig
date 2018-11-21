@@ -1,0 +1,44 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+  Decl: None, [], [], []
+    Struct: S
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: S
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Enum: E
+  Decl: None, [], [], []
+    Enum: E
+      EnumeratorList: 
+        Enumerator: A
+        Enumerator: B
+        Enumerator: C
+  Decl: None, [], [], []
+    Enum: E
+      EnumeratorList: 
+        Enumerator: D
+        Enumerator: F
+  Decl: None, [], [], []
+    Union: U
+  Decl: None, [], [], []
+    Union: U
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Union: U
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']

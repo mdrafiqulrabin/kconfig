@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fd1cc824cd0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd1cc825220 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd1cc824f40 '__int128'
+|-TypedefDecl 0x7fd1cc825290 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd1cc824f60 'unsigned __int128'
+|-TypedefDecl 0x7fd1cc825568 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd1cc825370 'struct __NSConstantString_tag'
+|   `-Record 0x7fd1cc8252e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd1cc825600 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd1cc8255c0 'char *'
+|   `-BuiltinType 0x7fd1cc824d60 'char'
+|-TypedefDecl 0x7fd1cc8258c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd1cc825870 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd1cc8256e0 'struct __va_list_tag'
+|     `-Record 0x7fd1cc825658 '__va_list_tag'
+|-TypedefDecl 0x7fd1cc825930 <c_files/pr54559.c:3:1, col:25> col:25 referenced T '_Complex double'
+| `-ComplexType 0x7fd1cc8250b0 '_Complex double'
+|   `-BuiltinType 0x7fd1cc824ee0 'double'
+`-FunctionDecl 0x7fd1cc027190 <line:5:1, line:9:1> line:6:1 foo 'T (double, double)'
+  |-ParmVarDecl 0x7fd1cc027000 <col:6, col:13> col:13 used x 'double'
+  |-ParmVarDecl 0x7fd1cc027078 <col:16, col:23> col:23 used y 'double'
+  `-CompoundStmt 0x7fd1cc027440 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fd1cc027428 <line:8:3, col:42>
+      `-BinaryOperator 0x7fd1cc027400 <col:10, col:42> '_Complex double' '+'
+        |-ImplicitCastExpr 0x7fd1cc0273e8 <col:10> 'double' <LValueToRValue>
+        | `-DeclRefExpr 0x7fd1cc027278 <col:10> 'double' lvalue ParmVar 0x7fd1cc027000 'x' 'double'
+        `-BinaryOperator 0x7fd1cc0273c0 <col:14, col:42> '_Complex double' '*'
+          |-ImplicitCastExpr 0x7fd1cc0273a8 <col:14> 'double' <LValueToRValue>
+          | `-DeclRefExpr 0x7fd1cc0272a0 <col:14> 'double' lvalue ParmVar 0x7fd1cc027078 'y' 'double'
+          `-CStyleCastExpr 0x7fd1cc027380 <col:18, col:42> 'T':'_Complex double' <FloatingComplexCast>
+            `-ParenExpr 0x7fd1cc027360 <col:22, col:42> '_Complex float'
+              `-UnaryOperator 0x7fd1cc027300 <col:23, col:37> '_Complex float' prefix '__extension__'
+                `-ImaginaryLiteral 0x7fd1cc0272e8 <col:37> '_Complex float'
+                  `-FloatingLiteral 0x7fd1cc0272c8 <col:37> 'float' 1.000000e+00

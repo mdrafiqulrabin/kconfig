@@ -1,0 +1,34 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: st
+      Decl: ptr, [], [], []
+        TypeDecl: ptr, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: st, [], [], []
+            PtrDecl: []
+              TypeDecl: st, []
+                Struct: st
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['int']
+        UnaryOp: *
+          Cast: 
+            Typename: None, ['volatile']
+              PtrDecl: []
+                TypeDecl: None, ['volatile']
+                  IdentifierType: ['int']
+            UnaryOp: &
+              StructRef: ->
+                ID: st
+                ID: ptr
+      Return: 
+        BinaryOp: &
+          ID: v
+          Constant: int, 0xff

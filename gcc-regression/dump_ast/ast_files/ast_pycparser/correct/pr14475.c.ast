@@ -1,0 +1,7 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: tree_common
+      Decl: code, [], [], []
+        TypeDecl: code, []
+          Enum: tree_code
+        Constant: int, 8

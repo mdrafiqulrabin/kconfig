@@ -1,0 +1,49 @@
+FileAST: 
+  Decl: buf, [], [], []
+    ArrayDecl: []
+      TypeDecl: buf, []
+        IdentifierType: ['long']
+      Constant: int, 5
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: __builtin_setjmp
+          ExprList: 
+            ID: buf
+      While: 
+        BinaryOp: &&
+          BinaryOp: &&
+            BinaryOp: &&
+              BinaryOp: !=
+                ID: x
+                Constant: int, 3
+              ID: x
+            ID: x
+          BinaryOp: !=
+            ID: x
+            Constant: int, 2
+        Assignment: =
+          ID: x
+          FuncCall: 
+            ID: bar
+      Return: 
+        ID: y

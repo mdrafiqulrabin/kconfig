@@ -1,0 +1,137 @@
+FileAST: 
+  FuncDef: 
+    Decl: opt, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: opt, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['int']
+      Decl: wk, [], [], []
+        TypeDecl: wk, []
+          IdentifierType: ['int']
+      Decl: data, [], [], []
+        ArrayDecl: []
+          TypeDecl: data, []
+            IdentifierType: ['int']
+          Constant: int, 100
+      FuncCall: 
+        ID: __builtin_prefetch
+        ExprList: 
+          UnaryOp: &
+            ArrayRef: 
+              ID: data
+              Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+      FuncCall: 
+        ID: __builtin_prefetch
+        ExprList: 
+          UnaryOp: &
+            ArrayRef: 
+              ID: data
+              Constant: int, 0
+          Constant: int, 0
+          Constant: int, 1
+      FuncCall: 
+        ID: __builtin_prefetch
+        ExprList: 
+          UnaryOp: &
+            ArrayRef: 
+              ID: data
+              Constant: int, 0
+          Constant: int, 0
+          Constant: int, 2
+      FuncCall: 
+        ID: __builtin_prefetch
+        ExprList: 
+          UnaryOp: &
+            ArrayRef: 
+              ID: data
+              Constant: int, 0
+          Constant: int, 0
+          Constant: int, 3
+      FuncCall: 
+        ID: __builtin_prefetch
+        ExprList: 
+          UnaryOp: &
+            ArrayRef: 
+              ID: data
+              Constant: int, 0
+          Constant: int, 1
+          Constant: int, 0
+      FuncCall: 
+        ID: __builtin_prefetch
+        ExprList: 
+          UnaryOp: &
+            ArrayRef: 
+              ID: data
+              Constant: int, 0
+          Constant: int, 1
+          Constant: int, 1
+      FuncCall: 
+        ID: __builtin_prefetch
+        ExprList: 
+          UnaryOp: &
+            ArrayRef: 
+              ID: data
+              Constant: int, 0
+          Constant: int, 1
+          Constant: int, 2
+      FuncCall: 
+        ID: __builtin_prefetch
+        ExprList: 
+          UnaryOp: &
+            ArrayRef: 
+              ID: data
+              Constant: int, 0
+          Constant: int, 1
+          Constant: int, 3
+      For: 
+        Assignment: =
+          ID: p
+          UnaryOp: &
+            ArrayRef: 
+              ID: data
+              Constant: int, 0
+        BinaryOp: <
+          ID: p
+          UnaryOp: &
+            ArrayRef: 
+              ID: data
+              Constant: int, 9
+        UnaryOp: p++
+          ID: p
+        Compound: 
+          If: 
+            BinaryOp: >
+              UnaryOp: *
+                ID: p
+              UnaryOp: *
+                BinaryOp: +
+                  ID: p
+                  Constant: int, 1
+            Compound: 
+              Assignment: =
+                ID: wk
+                UnaryOp: *
+                  ID: p
+              Assignment: =
+                UnaryOp: *
+                  ID: p
+                UnaryOp: *
+                  BinaryOp: +
+                    ID: p
+                    Constant: int, 1
+              Assignment: =
+                UnaryOp: *
+                  BinaryOp: +
+                    ID: p
+                    Constant: int, 1
+                ID: wk

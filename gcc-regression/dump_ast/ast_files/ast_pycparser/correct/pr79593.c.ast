@@ -1,0 +1,72 @@
+FileAST: 
+  Decl: global_data, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: global_data, []
+        IdentifierType: ['float']
+      Constant: int, 1024
+  FuncDef: 
+    Decl: MIN, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['long', 'double']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long', 'double']
+        TypeDecl: MIN, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: <
+            ID: a
+            ID: b
+          ID: a
+          ID: b
+  FuncDef: 
+    Decl: MAX, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['long', 'double']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long', 'double']
+        TypeDecl: MAX, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: >
+            ID: a
+            ID: b
+          ID: a
+          ID: b
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: delta, [], [], []
+        TypeDecl: delta, []
+          IdentifierType: ['long', 'double']
+        ArrayRef: 
+          ID: global_data
+          Constant: int, 0
+      Return: 
+        FuncCall: 
+          ID: MIN
+          ExprList: 
+            FuncCall: 
+              ID: MAX
+              ExprList: 
+                ID: delta
+                Constant: float, 0.0l
+            Constant: float, 1.0l

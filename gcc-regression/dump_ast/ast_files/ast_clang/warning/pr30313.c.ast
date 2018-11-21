@@ -1,0 +1,39 @@
+c_files/pr30313.c:21:3: warning: expression result unused [-Wunused-value]
+  sizeof(x.i+0);
+  ^~~~~~~~~~~~~
+1 warning generated.
+TranslationUnitDecl 0x7f835d8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f835d826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f835d826740 '__int128'
+|-TypedefDecl 0x7f835d826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f835d826760 'unsigned __int128'
+|-TypedefDecl 0x7f835d826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f835d826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f835d826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f835d826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f835d826dc0 'char *'
+|   `-BuiltinType 0x7f835d826560 'char'
+|-TypedefDecl 0x7f835d8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f835d827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f835d826ee0 'struct __va_list_tag'
+|     `-Record 0x7f835d826e58 '__va_list_tag'
+|-FunctionDecl 0x7f835d827168 <c_files/pr30313.c:3:1, col:26> col:20 bar 'void ()' static inline
+| `-CompoundStmt 0x7f835e025a40 <col:25, col:26>
+|-RecordDecl 0x7f835e025a58 <line:5:1, line:16:1> line:5:8 struct S definition
+| `-FieldDecl 0x7f835e025b38 <line:10:3, col:17> col:14 referenced i 'int'
+|   `-IntegerLiteral 0x7f835e025b00 <col:17> 'int' 32
+`-FunctionDecl 0x7f835e025bd0 <line:18:1, line:23:1> line:18:5 main 'int ()'
+  `-CompoundStmt 0x7f835e025f20 <line:19:1, line:23:1>
+    |-DeclStmt 0x7f835e025dd0 <line:20:3, col:20>
+    | `-VarDecl 0x7f835e025cc0 <col:3, col:19> col:12 referenced x 'struct S':'struct S' cinit
+    |   `-InitListExpr 0x7f835e025d88 <col:16, col:19> 'struct S':'struct S'
+    |     `-IntegerLiteral 0x7f835e025d20 <col:17> 'int' 32
+    |-UnaryExprOrTypeTraitExpr 0x7f835e025ec8 <line:21:3, col:15> 'unsigned long' sizeof
+    | `-ParenExpr 0x7f835e025ea8 <col:9, col:15> 'int'
+    |   `-BinaryOperator 0x7f835e025e80 <col:10, col:14> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f835e025e68 <col:10, col:12> 'int' <LValueToRValue>
+    |     | `-MemberExpr 0x7f835e025e10 <col:10, col:12> 'int' lvalue bitfield .i 0x7f835e025b38
+    |     |   `-DeclRefExpr 0x7f835e025de8 <col:10> 'struct S':'struct S' lvalue Var 0x7f835e025cc0 'x' 'struct S':'struct S'
+    |     `-IntegerLiteral 0x7f835e025e48 <col:14> 'int' 0
+    `-ReturnStmt 0x7f835e025f08 <line:22:3, col:10>
+      `-IntegerLiteral 0x7f835e025ee8 <col:10> 'int' 0

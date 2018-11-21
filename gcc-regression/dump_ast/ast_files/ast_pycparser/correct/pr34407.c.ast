@@ -1,0 +1,58 @@
+FileAST: 
+  Decl: ReadBlobByte, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: ReadBlobByte, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: ReadRLEImage, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['unsigned', 'char']
+        TypeDecl: ReadRLEImage, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: background_color, [], [], []
+        ArrayDecl: []
+          TypeDecl: background_color, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 4
+        InitList: 
+          Constant: int, 0
+          Constant: int, 1
+          Constant: int, 2
+          Constant: int, 3
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['long']
+      Decl: number_planes, [], [], []
+        TypeDecl: number_planes, []
+          IdentifierType: ['unsigned', 'long']
+        FuncCall: 
+          ID: ReadBlobByte
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: <
+          ID: j
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['long']
+            ID: number_planes
+        UnaryOp: p++
+          ID: j
+        Assignment: =
+          UnaryOp: *
+            UnaryOp: p++
+              ID: p
+          ArrayRef: 
+            ID: background_color
+            ID: j

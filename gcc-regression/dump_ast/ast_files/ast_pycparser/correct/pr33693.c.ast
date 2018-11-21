@@ -1,0 +1,20 @@
+FileAST: 
+  FuncDef: 
+    Decl: modify_field, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: mask, [], [], []
+            TypeDecl: mask, []
+              IdentifierType: ['unsigned', 'long']
+          Decl: fieldval, [], [], []
+            TypeDecl: fieldval, []
+              IdentifierType: ['long']
+        TypeDecl: modify_field, []
+          IdentifierType: ['unsigned', 'long']
+    Compound: 
+      Return: 
+        BinaryOp: &
+          UnaryOp: ~
+            ID: fieldval
+          UnaryOp: ~
+            ID: mask

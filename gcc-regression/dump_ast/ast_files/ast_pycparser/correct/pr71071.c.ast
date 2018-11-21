@@ -1,0 +1,19 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Struct: S
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['unsigned']
+          Constant: int, 1
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        StructRef: .
+          ID: a
+          ID: b
+        EmptyStatement: 

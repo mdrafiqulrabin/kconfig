@@ -1,0 +1,97 @@
+FileAST: 
+  Decl: stepsizeTable, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: stepsizeTable, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: adpcm_coder, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: outdata, [], [], []
+            PtrDecl: []
+              TypeDecl: outdata, []
+                IdentifierType: ['signed', 'char']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['int']
+        TypeDecl: adpcm_coder, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: outp, [], [], []
+        PtrDecl: []
+          TypeDecl: outp, []
+            IdentifierType: ['signed', 'char']
+      Decl: delta, [], [], []
+        TypeDecl: delta, []
+          IdentifierType: ['int']
+      Decl: outputbuffer, [], [], []
+        TypeDecl: outputbuffer, []
+          IdentifierType: ['int']
+      Decl: bufferstep, [], [], []
+        TypeDecl: bufferstep, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Assignment: =
+        ID: outp
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['signed', 'char']
+          ID: outdata
+      Decl: step, [], [], []
+        TypeDecl: step, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: index, [], [], []
+        TypeDecl: index, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: diff, [], [], []
+        TypeDecl: diff, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        BinaryOp: >
+          ID: len
+          Constant: int, 0
+        UnaryOp: p--
+          ID: len
+        Compound: 
+          Assignment: =
+            ID: delta
+            Constant: int, 0
+          If: 
+            BinaryOp: >=
+              ID: diff
+              ID: step
+            Assignment: =
+              ID: delta
+              Constant: int, 4
+          Assignment: =
+            ID: step
+            ArrayRef: 
+              ID: stepsizeTable
+              ID: index
+          If: 
+            ID: bufferstep
+            Assignment: =
+              ID: outputbuffer
+              BinaryOp: &
+                BinaryOp: <<
+                  ID: delta
+                  Constant: int, 4
+                Constant: int, 0xf0
+            Assignment: =
+              UnaryOp: *
+                UnaryOp: p++
+                  ID: outp
+              BinaryOp: |
+                BinaryOp: &
+                  ID: delta
+                  Constant: int, 0x0f
+                ID: outputbuffer
+          Assignment: =
+            ID: bufferstep
+            UnaryOp: !
+              ID: bufferstep

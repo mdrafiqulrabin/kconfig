@@ -1,0 +1,104 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['long', 'long']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['long', 'long']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['long', 'long']
+  FuncDef: 
+    Decl: test1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['long', 'long']
+      If: 
+        ID: a
+        Assignment: =
+          ID: t
+          Constant: int, 0LL
+        Assignment: =
+          ID: t
+          ID: b
+      Assignment: =
+        ID: a
+        BinaryOp: &
+          ID: c
+          ID: t
+      Assignment: =
+        ID: b
+        BinaryOp: |
+          ID: c
+          ID: t
+  FuncDef: 
+    Decl: test2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['long', 'long']
+      If: 
+        ID: a
+        Assignment: =
+          ID: t
+          UnaryOp: -
+            Constant: int, 1LL
+        Assignment: =
+          ID: t
+          ID: b
+      Assignment: =
+        ID: a
+        BinaryOp: &
+          ID: c
+          ID: t
+      Assignment: =
+        ID: b
+        BinaryOp: |
+          ID: c
+          ID: t
+  FuncDef: 
+    Decl: test3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test3, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['long', 'long']
+      If: 
+        ID: a
+        Assignment: =
+          ID: t
+          Constant: int, 0xf0f0f0f0f0f0f0f0LL
+        Assignment: =
+          ID: t
+          ID: b
+      Assignment: =
+        ID: a
+        BinaryOp: &
+          ID: c
+          ID: t
+      Assignment: =
+        ID: b
+        BinaryOp: |
+          ID: c
+          ID: t

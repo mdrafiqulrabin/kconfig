@@ -1,0 +1,33 @@
+c_files/pr52141.c:10:16: warning: unknown attribute 'transaction_safe' ignored [-Wunknown-attributes]
+__attribute__((transaction_safe))
+               ^
+c_files/pr52141.c:18:3: error: use of undeclared identifier '__transaction_atomic'
+  __transaction_atomic {
+  ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fb8640124d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb864012a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb864012740 '__int128'
+|-TypedefDecl 0x7fb864012a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb864012760 'unsigned __int128'
+|-TypedefDecl 0x7fb864012d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb864012b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb864012ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb864012e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb864012dc0 'char *'
+|   `-BuiltinType 0x7fb864012560 'char'
+|-TypedefDecl 0x7fb8640130c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb864013070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb864012ee0 'struct __va_list_tag'
+|     `-Record 0x7fb864012e58 '__va_list_tag'
+|-FunctionDecl 0x7fb864064400 <c_files/pr52141.c:4:1, line:8:1> line:5:13 used asmfunc 'void (void)' static
+| |-CompoundStmt 0x7fb8640645c8 <line:6:1, line:8:1>
+| | `-GCCAsmStmt 0x7fb864064580 <line:7:3, col:14>
+| `-AlwaysInlineAttr 0x7fb864064498 <line:4:16> always_inline
+|-FunctionDecl 0x7fb864064678 <line:10:1, line:14:1> line:11:13 f 'void (void)' static
+| `-CompoundStmt 0x7fb8640647a8 <line:12:1, line:14:1>
+|   `-CallExpr 0x7fb864064780 <line:13:3, col:11> 'void'
+|     `-ImplicitCastExpr 0x7fb864064768 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fb864064710 <col:3> 'void (void)' Function 0x7fb864064400 'asmfunc' 'void (void)'
+`-FunctionDecl 0x7fb864064820 <line:16:1, line:22:1> line:16:5 main 'int ()'
+  `-CompoundStmt 0x7fb8640648d0 <line:17:1, line:22:1>

@@ -1,0 +1,69 @@
+c_files/pr66178.c:8:27: error: initializer element is not a compile-time constant
+    static uintptr_t a =  ((char *)&&l1-(char *)&&l2)-1;
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr66178.c:16:27: error: initializer element is not a compile-time constant
+    static uintptr_t a =  ((char *)&&l2-(char *)&&l3)+((char *)&&l1-(char *)&&l2);
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7fbe660264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbe66026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbe66026740 '__int128'
+|-TypedefDecl 0x7fbe66026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbe66026760 'unsigned __int128'
+|-TypedefDecl 0x7fbe66026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbe66026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbe66026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbe66026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbe66026dc0 'char *'
+|   `-BuiltinType 0x7fbe66026560 'char'
+|-TypedefDecl 0x7fbe660270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbe66027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbe66026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbe66026e58 '__va_list_tag'
+|-TypedefDecl 0x7fbe66027138 <c_files/pr66178.c:4:1, col:26> col:26 referenced uintptr_t 'unsigned long'
+| `-BuiltinType 0x7fbe66026680 'unsigned long'
+|-FunctionDecl 0x7fbe66825a58 <line:6:1, line:12:1> line:6:5 test 'int (void)'
+| `-CompoundStmt 0x7fbe66825e88 <line:7:1, line:12:1>
+|   |-DeclStmt 0x7fbe66825dd0 <line:8:5, col:56>
+|   | `-VarDecl 0x7fbe66825b60 <col:5, col:55> col:22 used a 'uintptr_t':'unsigned long' static cinit
+|   |   `-ImplicitCastExpr 0x7fbe66825db8 <col:27, col:55> 'uintptr_t':'unsigned long' <IntegralCast>
+|   |     `-BinaryOperator 0x7fbe66825d90 <col:27, col:55> 'long' '-'
+|   |       |-ParenExpr 0x7fbe66825d38 <col:27, col:53> 'long'
+|   |       | `-BinaryOperator 0x7fbe66825d10 <col:28, col:51> 'long' '-'
+|   |       |   |-CStyleCastExpr 0x7fbe66825c40 <col:28, col:38> 'char *' <BitCast>
+|   |       |   | `-AddrLabelExpr 0x7fbe66825c08 <col:36, col:38> 'void *' l1 0x7fbe66825bc0
+|   |       |   `-CStyleCastExpr 0x7fbe66825ce8 <col:41, col:51> 'char *' <BitCast>
+|   |       |     `-AddrLabelExpr 0x7fbe66825cb0 <col:49, col:51> 'void *' l2 0x7fbe66825c68
+|   |       `-ImplicitCastExpr 0x7fbe66825d78 <col:55> 'long' <IntegralCast>
+|   |         `-IntegerLiteral 0x7fbe66825d58 <col:55> 'int' 1
+|   `-LabelStmt 0x7fbe66825e70 <line:9:1, line:11:12> 'l1'
+|     `-LabelStmt 0x7fbe66825e58 <line:10:1, line:11:12> 'l2'
+|       `-ReturnStmt 0x7fbe66825e40 <col:5, col:12>
+|         `-ImplicitCastExpr 0x7fbe66825e28 <col:12> 'int' <IntegralCast>
+|           `-ImplicitCastExpr 0x7fbe66825e10 <col:12> 'uintptr_t':'unsigned long' <LValueToRValue>
+|             `-DeclRefExpr 0x7fbe66825de8 <col:12> 'uintptr_t':'unsigned long' lvalue Var 0x7fbe66825b60 'a' 'uintptr_t':'unsigned long'
+`-FunctionDecl 0x7fbe66825f48 <line:14:1, line:21:1> line:14:5 test2 'int (void)'
+  `-CompoundStmt 0x7fbe66826448 <line:15:1, line:21:1>
+    |-DeclStmt 0x7fbe66826378 <line:16:5, col:82>
+    | `-VarDecl 0x7fbe66825ff0 <col:5, col:81> col:22 used a 'uintptr_t':'unsigned long' static cinit
+    |   `-ImplicitCastExpr 0x7fbe66826360 <col:27, col:81> 'uintptr_t':'unsigned long' <IntegralCast>
+    |     `-BinaryOperator 0x7fbe66826338 <col:27, col:81> 'long' '+'
+    |       |-ParenExpr 0x7fbe668261c8 <col:27, col:53> 'long'
+    |       | `-BinaryOperator 0x7fbe668261a0 <col:28, col:51> 'long' '-'
+    |       |   |-CStyleCastExpr 0x7fbe668260d0 <col:28, col:38> 'char *' <BitCast>
+    |       |   | `-AddrLabelExpr 0x7fbe66826098 <col:36, col:38> 'void *' l2 0x7fbe66826050
+    |       |   `-CStyleCastExpr 0x7fbe66826178 <col:41, col:51> 'char *' <BitCast>
+    |       |     `-AddrLabelExpr 0x7fbe66826140 <col:49, col:51> 'void *' l3 0x7fbe668260f8
+    |       `-ParenExpr 0x7fbe66826318 <col:55, col:81> 'long'
+    |         `-BinaryOperator 0x7fbe668262f0 <col:56, col:79> 'long' '-'
+    |           |-CStyleCastExpr 0x7fbe66826268 <col:56, col:66> 'char *' <BitCast>
+    |           | `-AddrLabelExpr 0x7fbe66826230 <col:64, col:66> 'void *' l1 0x7fbe668261e8
+    |           `-CStyleCastExpr 0x7fbe668262c8 <col:69, col:79> 'char *' <BitCast>
+    |             `-AddrLabelExpr 0x7fbe66826290 <col:77, col:79> 'void *' l2 0x7fbe66826050
+    `-LabelStmt 0x7fbe66826430 <line:17:1, line:20:12> 'l1'
+      `-LabelStmt 0x7fbe66826418 <line:18:1, line:20:12> 'l2'
+        `-LabelStmt 0x7fbe66826400 <line:19:1, line:20:12> 'l3'
+          `-ReturnStmt 0x7fbe668263e8 <col:5, col:12>
+            `-ImplicitCastExpr 0x7fbe668263d0 <col:12> 'int' <IntegralCast>
+              `-ImplicitCastExpr 0x7fbe668263b8 <col:12> 'uintptr_t':'unsigned long' <LValueToRValue>
+                `-DeclRefExpr 0x7fbe66826390 <col:12> 'uintptr_t':'unsigned long' lvalue Var 0x7fbe66825ff0 'a' 'uintptr_t':'unsigned long'

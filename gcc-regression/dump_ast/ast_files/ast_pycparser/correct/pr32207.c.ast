@@ -1,0 +1,44 @@
+FileAST: 
+  Decl: z, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: z, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: z
+        FuncCall: 
+          ID: z
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: z
+          Constant: int, 0
+        FuncCall: 
+          ID: z
+  FuncDef: 
+    Decl: h, [], [], []
+      FuncDecl: 
+        TypeDecl: h, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: z
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+        FuncCall: 
+          ID: z

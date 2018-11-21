@@ -1,0 +1,57 @@
+c_files/pr11001-memcpy-3.c:7:25: error: register '%ecx' unsuitable for global register variables on this target
+register int regvar asm("%ecx");
+                        ^
+1 error generated.
+TranslationUnitDecl 0x7fc2b58264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc2b5826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc2b5826740 '__int128'
+|-TypedefDecl 0x7fc2b5826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc2b5826760 'unsigned __int128'
+|-TypedefDecl 0x7fc2b5826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc2b5826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc2b5826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc2b5826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc2b5826dc0 'char *'
+|   `-BuiltinType 0x7fc2b5826560 'char'
+|-TypedefDecl 0x7fc2b58270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc2b5827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc2b5826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc2b5826e58 '__va_list_tag'
+|-FunctionDecl 0x7fc2b6025b68 <c_files/pr11001-memcpy-3.c:5:14> col:14 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fc2b6025c00 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fc2b6025c60 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fc2b6025cc0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fc2b6025d38 prev 0x7fc2b6025b68 <col:1, col:57> col:14 used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fc2b5827138 <col:22, col:27> col:28 'void *'
+| |-ParmVarDecl 0x7fc2b6025a00 <col:30, col:41> col:42 'const void *'
+| `-ParmVarDecl 0x7fc2b6025a78 <<built-in>:75:23, col:37> c_files/pr11001-memcpy-3.c:5:57 'unsigned long'
+|-VarDecl 0x7fc2b6025e70 <line:7:1, col:14> col:14 regvar 'int' register
+| `-AsmLabelAttr 0x7fc2b6025ed0 <col:25> "%ecx"
+|-VarDecl 0x7fc2b6025ff0 <line:9:1, col:11> col:5 used foo 'int [10]'
+|-VarDecl 0x7fc2b6026098 <line:10:1, col:11> col:5 used bar 'int [10]'
+|-VarDecl 0x7fc2b6026178 <line:12:1, col:12> col:6 used baz 'char [15]'
+|-VarDecl 0x7fc2b6026218 <line:13:1, col:13> col:6 used quux 'char [15]'
+`-FunctionDecl 0x7fc2b60262c8 <line:15:1, line:20:1> line:16:1 do_copy 'void ()'
+  `-CompoundStmt 0x7fc2b6026708 <line:17:1, line:20:1>
+    |-CallExpr 0x7fc2b60264c0 <line:18:3, col:31> 'void *'
+    | |-ImplicitCastExpr 0x7fc2b60264a8 <col:3> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc2b6026360 <col:3> 'void *(void *, const void *, unsigned long)' Function 0x7fc2b6025d38 'memcpy' 'void *(void *, const void *, unsigned long)'
+    | |-ImplicitCastExpr 0x7fc2b6026518 <col:11> 'void *' <BitCast>
+    | | `-ImplicitCastExpr 0x7fc2b6026500 <col:11> 'int *' <ArrayToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc2b6026388 <col:11> 'int [10]' lvalue Var 0x7fc2b6025ff0 'foo' 'int [10]'
+    | |-ImplicitCastExpr 0x7fc2b6026548 <col:16> 'const void *' <BitCast>
+    | | `-ImplicitCastExpr 0x7fc2b6026530 <col:16> 'int *' <ArrayToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc2b60263b0 <col:16> 'int [10]' lvalue Var 0x7fc2b6026098 'bar' 'int [10]'
+    | `-UnaryExprOrTypeTraitExpr 0x7fc2b6026400 <col:21, col:28> 'unsigned long' sizeof
+    |   `-DeclRefExpr 0x7fc2b60263d8 <col:28> 'int [10]' lvalue Var 0x7fc2b6025ff0 'foo' 'int [10]'
+    `-CallExpr 0x7fc2b6026668 <line:19:3, col:32> 'void *'
+      |-ImplicitCastExpr 0x7fc2b6026650 <col:3> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc2b6026560 <col:3> 'void *(void *, const void *, unsigned long)' Function 0x7fc2b6025d38 'memcpy' 'void *(void *, const void *, unsigned long)'
+      |-ImplicitCastExpr 0x7fc2b60266c0 <col:11> 'void *' <BitCast>
+      | `-ImplicitCastExpr 0x7fc2b60266a8 <col:11> 'char *' <ArrayToPointerDecay>
+      |   `-DeclRefExpr 0x7fc2b6026588 <col:11> 'char [15]' lvalue Var 0x7fc2b6026178 'baz' 'char [15]'
+      |-ImplicitCastExpr 0x7fc2b60266f0 <col:16> 'const void *' <BitCast>
+      | `-ImplicitCastExpr 0x7fc2b60266d8 <col:16> 'char *' <ArrayToPointerDecay>
+      |   `-DeclRefExpr 0x7fc2b60265b0 <col:16> 'char [15]' lvalue Var 0x7fc2b6026218 'quux' 'char [15]'
+      `-UnaryExprOrTypeTraitExpr 0x7fc2b6026600 <col:22, col:29> 'unsigned long' sizeof
+        `-DeclRefExpr 0x7fc2b60265d8 <col:29> 'char [15]' lvalue Var 0x7fc2b6026178 'baz' 'char [15]'

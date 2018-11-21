@@ -1,0 +1,30 @@
+FileAST: 
+  Decl: var_4, [], [], []
+    TypeDecl: var_4, []
+      IdentifierType: ['int']
+    UnaryOp: -
+      Constant: int, 1716607962
+  Decl: var_14, [], [], []
+    TypeDecl: var_14, []
+      IdentifierType: ['int']
+    Constant: int, 943738830
+  Decl: a, ['volatile'], [], []
+    TypeDecl: a, ['volatile']
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: a
+        BinaryOp: -
+          BinaryOp: -
+            UnaryOp: -
+              ID: var_4
+            Constant: int, 516151698
+          UnaryOp: -
+            ID: var_14
+      Return: 
+        Constant: int, 0

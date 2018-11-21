@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7f87448264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8744826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8744826740 '__int128'
+|-TypedefDecl 0x7f8744826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8744826760 'unsigned __int128'
+|-TypedefDecl 0x7f8744826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8744826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8744826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8744826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8744826dc0 'char *'
+|   `-BuiltinType 0x7f8744826560 'char'
+|-TypedefDecl 0x7f87448270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8744827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8744826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8744826e58 '__va_list_tag'
+|-RecordDecl 0x7f8744827120 <c_files/pr34885.c:1:9, line:3:1> line:1:9 union definition
+| |-TransparentUnionAttr 0x7f8745025c68 <line:3:40>
+| |-RecordDecl 0x7f8745025a00 parent 0x7f87448264d0 <line:2:11, col:18> col:18 struct sockaddr
+| `-FieldDecl 0x7f8745025b70 <col:3, col:39> col:39 __sockaddr__ 'const struct sockaddr *__restrict'
+|-TypedefDecl 0x7f8745025c10 <line:1:1, line:3:3> col:3 referenced __CONST_SOCKADDR_ARG 'union __CONST_SOCKADDR_ARG':'__CONST_SOCKADDR_ARG'
+| `-ElaboratedType 0x7f8745025bc0 'union __CONST_SOCKADDR_ARG' sugar
+|   `-RecordType 0x7f87448271b0 '__CONST_SOCKADDR_ARG'
+|     `-Record 0x7f8744827120 ''
+|-FunctionDecl 0x7f8745025df8 <line:4:1, col:53> col:12 used _pure_socketcall 'int (const struct sockaddr *)' extern
+| `-ParmVarDecl 0x7f8745025cf0 <col:30, col:52> col:53 'const struct sockaddr *'
+|-FunctionDecl 0x7f8745026018 <line:5:1, col:47> col:12 used sendto 'int (__CONST_SOCKADDR_ARG)' extern
+| `-ParmVarDecl 0x7f8745025f10 <col:20, col:41> col:41 __addr '__CONST_SOCKADDR_ARG':'__CONST_SOCKADDR_ARG'
+|-FunctionDecl 0x7f8745026188 <line:6:1, line:9:1> line:6:5 send 'int (void)'
+| `-CompoundStmt 0x7f8745026400 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7f87450263e8 <line:8:3, col:26>
+|     `-CallExpr 0x7f8745026320 <col:10, col:26> 'int'
+|       |-ImplicitCastExpr 0x7f8745026308 <col:10> 'int (*)(__CONST_SOCKADDR_ARG)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f8745026220 <col:10> 'int (__CONST_SOCKADDR_ARG)' Function 0x7f8745026018 'sendto' 'int (__CONST_SOCKADDR_ARG)'
+|       `-CompoundLiteralExpr 0x7f87450263c0 <col:17, col:25> '__CONST_SOCKADDR_ARG':'__CONST_SOCKADDR_ARG'
+|         `-InitListExpr 0x7f8745026368 <col:17, col:25> '__CONST_SOCKADDR_ARG':'__CONST_SOCKADDR_ARG' field Field 0x7f8745025b70 '__sockaddr__' 'const struct sockaddr *__restrict'
+|           `-ImplicitCastExpr 0x7f8745026350 <col:17, col:25> 'const struct sockaddr *__restrict' <BitCast>
+|             `-CStyleCastExpr 0x7f8745026280 <col:17, col:25> 'void *' <NullToPointer>
+|               `-IntegerLiteral 0x7f8745026248 <col:25> 'int' 0
+`-FunctionDecl 0x7f87450264d8 prev 0x7f8745026018 <line:10:1, line:13:1> line:10:5 used sendto 'int (const struct sockaddr *)'
+  |-ParmVarDecl 0x7f8745026448 <col:12, col:35> col:35 used to 'const struct sockaddr *'
+  `-CompoundStmt 0x7f87450266a0 <line:11:1, line:13:1>
+    `-ReturnStmt 0x7f8745026688 <line:12:4, col:30>
+      `-CallExpr 0x7f8745026640 <col:11, col:30> 'int'
+        |-ImplicitCastExpr 0x7f8745026628 <col:11> 'int (*)(const struct sockaddr *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f8745026578 <col:11> 'int (const struct sockaddr *)' Function 0x7f8745025df8 '_pure_socketcall' 'int (const struct sockaddr *)'
+        `-ImplicitCastExpr 0x7f8745026670 <col:28> 'const struct sockaddr *' <LValueToRValue>
+          `-DeclRefExpr 0x7f87450265a0 <col:28> 'const struct sockaddr *' lvalue ParmVar 0x7f8745026448 'to' 'const struct sockaddr *'

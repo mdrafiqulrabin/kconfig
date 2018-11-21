@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fe1090264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe109026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe109026740 '__int128'
+|-TypedefDecl 0x7fe109026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe109026760 'unsigned __int128'
+|-TypedefDecl 0x7fe109026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe109026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe109026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe109026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe109026dc0 'char *'
+|   `-BuiltinType 0x7fe109026560 'char'
+|-TypedefDecl 0x7fe1090270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe109027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe109026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe109026e58 '__va_list_tag'
+|-TypedefDecl 0x7fe109027198 <c_files/pr70738-4.c:4:1, col:13> col:13 referenced int32x4_t '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fe109027160 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fe1090265c0 'int'
+`-FunctionDecl 0x7fe109826bb0 <line:6:1, line:10:1> line:7:1 test 'int32x4_t (int32x4_t, int32x4_t)'
+  |-ParmVarDecl 0x7fe109826a30 <col:7, col:17> col:17 used a 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7fe109826aa0 <col:20, col:30> col:30 used b 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  `-CompoundStmt 0x7fe109826d58 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7fe109826d40 <line:9:3, col:14>
+      `-BinaryOperator 0x7fe109826d18 <col:10, col:14> 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int' '+'
+        |-ImplicitCastExpr 0x7fe109826ce8 <col:10> 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fe109826c98 <col:10> 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7fe109826a30 'a' 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+        `-ImplicitCastExpr 0x7fe109826d00 <col:14> 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+          `-DeclRefExpr 0x7fe109826cc0 <col:14> 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7fe109826aa0 'b' 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int'

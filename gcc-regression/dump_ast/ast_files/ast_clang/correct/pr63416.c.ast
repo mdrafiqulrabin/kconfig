@@ -1,0 +1,113 @@
+TranslationUnitDecl 0x7fcfd70264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcfd7026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcfd7026740 '__int128'
+|-TypedefDecl 0x7fcfd7026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcfd7026760 'unsigned __int128'
+|-TypedefDecl 0x7fcfd7026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcfd7026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcfd7026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcfd7026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcfd7026dc0 'char *'
+|   `-BuiltinType 0x7fcfd7026560 'char'
+|-TypedefDecl 0x7fcfd70270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcfd7027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcfd7026ee0 'struct __va_list_tag'
+|     `-Record 0x7fcfd7026e58 '__va_list_tag'
+|-TypedefDecl 0x7fcfd7825a30 <c_files/pr63416.c:5:1, col:29> col:13 referenced TEST_F30 'int (int *)'
+| `-FunctionProtoType 0x7fcfd70271c0 'int (int *)' cdecl
+|   |-BuiltinType 0x7fcfd70265c0 'int'
+|   `-PointerType 0x7fcfd7027120 'int *'
+|     `-BuiltinType 0x7fcfd70265c0 'int'
+|-TypedefDecl 0x7fcfd7825b60 <line:6:1, col:30> col:14 referenced TEST_F31 'void (int *)'
+| `-FunctionProtoType 0x7fcfd7825b00 'void (int *)' cdecl
+|   |-BuiltinType 0x7fcfd7026520 'void'
+|   `-PointerType 0x7fcfd7027120 'int *'
+|     `-BuiltinType 0x7fcfd70265c0 'int'
+|-TypedefDecl 0x7fcfd7825d20 <line:7:1, col:37> col:14 referenced TEST_F32 'void (int *, int)'
+| `-FunctionProtoType 0x7fcfd7825cb0 'void (int *, int)' cdecl
+|   |-BuiltinType 0x7fcfd7026520 'void'
+|   |-PointerType 0x7fcfd7027120 'int *'
+|   | `-BuiltinType 0x7fcfd70265c0 'int'
+|   `-BuiltinType 0x7fcfd70265c0 'int'
+|-RecordDecl 0x7fcfd7825d78 <line:9:9, line:13:1> line:9:16 struct TEST_T30_ definition
+| |-FieldDecl 0x7fcfd7825ea8 <line:10:4, col:15> col:15 referenced pf30 'TEST_F30 *'
+| |-FieldDecl 0x7fcfd7825f78 <line:11:4, col:15> col:15 referenced pf31 'TEST_F31 *'
+| `-FieldDecl 0x7fcfd7826048 <line:12:4, col:15> col:15 referenced pf32 'TEST_F32 *'
+|-TypedefDecl 0x7fcfd78260e0 <line:9:1, line:13:3> col:3 referenced TEST_T30 'struct TEST_T30_':'struct TEST_T30_'
+| `-ElaboratedType 0x7fcfd7826090 'struct TEST_T30_' sugar
+|   `-RecordType 0x7fcfd7825e00 'struct TEST_T30_'
+|     `-Record 0x7fcfd7825d78 'TEST_T30_'
+|-FunctionDecl 0x7fcfd78261f8 <line:15:1, line:20:1> line:16:5 used test_f30 'int (int *)' static inline
+| |-ParmVarDecl 0x7fcfd7826168 <col:15, col:20> col:20 used v 'int *'
+| `-CompoundStmt 0x7fcfd78263b8 <line:17:1, line:20:1>
+|   |-BinaryOperator 0x7fcfd7826358 <line:18:4, col:9> 'int' '='
+|   | |-UnaryOperator 0x7fcfd7826318 <col:4, col:5> 'int' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7fcfd7826300 <col:5> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fcfd78262d8 <col:5> 'int *' lvalue ParmVar 0x7fcfd7826168 'v' 'int *'
+|   | `-IntegerLiteral 0x7fcfd7826338 <col:9> 'int' 1
+|   `-ReturnStmt 0x7fcfd78263a0 <line:19:4, col:11>
+|     `-IntegerLiteral 0x7fcfd7826380 <col:11> 'int' 0
+|-FunctionDecl 0x7fcfd78264c8 <line:22:1, line:25:1> line:23:6 used test_f31 'void (int *)' static inline
+| |-ParmVarDecl 0x7fcfd78263f8 <col:16, col:21> col:21 v 'int *'
+| | `-UnusedAttr 0x7fcfd7826458 <line:3:33> unused
+| `-CompoundStmt 0x7fcfd7826568 <line:24:1, line:25:1>
+|-FunctionDecl 0x7fcfd78266e8 <line:27:1, line:31:1> line:28:6 used test_f32 'void (int *, int)' static inline
+| |-ParmVarDecl 0x7fcfd7826598 <col:16, col:21> col:21 used v 'int *'
+| |-ParmVarDecl 0x7fcfd7826610 <col:24, col:28> col:28 r 'int'
+| | `-UnusedAttr 0x7fcfd7826670 <line:3:33> unused
+| `-CompoundStmt 0x7fcfd7826838 <line:29:1, line:31:1>
+|   `-BinaryOperator 0x7fcfd7826810 <line:30:4, col:9> 'int' '='
+|     |-UnaryOperator 0x7fcfd78267d0 <col:4, col:5> 'int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fcfd78267b8 <col:5> 'int *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fcfd7826790 <col:5> 'int *' lvalue ParmVar 0x7fcfd7826598 'v' 'int *'
+|     `-IntegerLiteral 0x7fcfd78267f0 <col:9> 'int' 0
+|-VarDecl 0x7fcfd7826890 <line:33:1, line:38:1> line:34:10 used test_t30 'const TEST_T30':'const struct TEST_T30_' static cinit
+| `-InitListExpr 0x7fcfd7827a98 <col:21, line:38:1> 'TEST_T30':'struct TEST_T30_'
+|   |-ImplicitCastExpr 0x7fcfd7827af0 <line:35:12> 'int (*)(int *)' <FunctionToPointerDecay>
+|   | `-DeclRefExpr 0x7fcfd78268f0 <col:12> 'int (int *)' Function 0x7fcfd78261f8 'test_f30' 'int (int *)'
+|   |-ImplicitCastExpr 0x7fcfd7827b08 <line:36:12> 'void (*)(int *)' <FunctionToPointerDecay>
+|   | `-DeclRefExpr 0x7fcfd7826958 <col:12> 'void (int *)' Function 0x7fcfd78264c8 'test_f31' 'void (int *)'
+|   `-ImplicitCastExpr 0x7fcfd7827b20 <line:37:12> 'void (*)(int *, int)' <FunctionToPointerDecay>
+|     `-DeclRefExpr 0x7fcfd78269c0 <col:12> 'void (int *, int)' Function 0x7fcfd78266e8 'test_f32' 'void (int *, int)'
+|-FunctionDecl 0x7fcfd7827d38 <line:40:1, line:47:1> line:41:5 used test_f10 'int (const TEST_T30 *, int *)' static inline
+| |-ParmVarDecl 0x7fcfd7827ba8 <col:15, col:31> col:31 used pt30 'const TEST_T30 *'
+| |-ParmVarDecl 0x7fcfd7827c20 <col:37, col:42> col:42 used v 'int *'
+| `-CompoundStmt 0x7fcfd78281f0 <line:42:1, line:47:1>
+|   |-DeclStmt 0x7fcfd7827f58 <line:43:4, col:25>
+|   | `-VarDecl 0x7fcfd7827df8 <col:4, col:24> col:8 used r 'int' cinit
+|   |   `-CallExpr 0x7fcfd7827f10 <col:12, col:24> 'int'
+|   |     |-ImplicitCastExpr 0x7fcfd7827ef8 <col:12, col:18> 'TEST_F30 *' <LValueToRValue>
+|   |     | `-MemberExpr 0x7fcfd7827e98 <col:12, col:18> 'TEST_F30 *const' lvalue ->pf30 0x7fcfd7825ea8
+|   |     |   `-ImplicitCastExpr 0x7fcfd7827e80 <col:12> 'const TEST_T30 *' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7fcfd7827e58 <col:12> 'const TEST_T30 *' lvalue ParmVar 0x7fcfd7827ba8 'pt30' 'const TEST_T30 *'
+|   |     `-ImplicitCastExpr 0x7fcfd7827f40 <col:23> 'int *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fcfd7827ed0 <col:23> 'int *' lvalue ParmVar 0x7fcfd7827c20 'v' 'int *'
+|   |-CallExpr 0x7fcfd7828028 <line:44:4, col:16> 'void'
+|   | |-ImplicitCastExpr 0x7fcfd7828010 <col:4, col:10> 'TEST_F31 *' <LValueToRValue>
+|   | | `-MemberExpr 0x7fcfd7827fb0 <col:4, col:10> 'TEST_F31 *const' lvalue ->pf31 0x7fcfd7825f78
+|   | |   `-ImplicitCastExpr 0x7fcfd7827f98 <col:4> 'const TEST_T30 *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fcfd7827f70 <col:4> 'const TEST_T30 *' lvalue ParmVar 0x7fcfd7827ba8 'pt30' 'const TEST_T30 *'
+|   | `-ImplicitCastExpr 0x7fcfd7828058 <col:15> 'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fcfd7827fe8 <col:15> 'int *' lvalue ParmVar 0x7fcfd7827c20 'v' 'int *'
+|   |-CallExpr 0x7fcfd7828150 <line:45:4, col:19> 'void'
+|   | |-ImplicitCastExpr 0x7fcfd7828138 <col:4, col:10> 'TEST_F32 *' <LValueToRValue>
+|   | | `-MemberExpr 0x7fcfd78280b0 <col:4, col:10> 'TEST_F32 *const' lvalue ->pf32 0x7fcfd7826048
+|   | |   `-ImplicitCastExpr 0x7fcfd7828098 <col:4> 'const TEST_T30 *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fcfd7828070 <col:4> 'const TEST_T30 *' lvalue ParmVar 0x7fcfd7827ba8 'pt30' 'const TEST_T30 *'
+|   | |-ImplicitCastExpr 0x7fcfd7828188 <col:15> 'int *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fcfd78280e8 <col:15> 'int *' lvalue ParmVar 0x7fcfd7827c20 'v' 'int *'
+|   | `-ImplicitCastExpr 0x7fcfd78281a0 <col:18> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fcfd7828110 <col:18> 'int' lvalue Var 0x7fcfd7827df8 'r' 'int'
+|   `-ReturnStmt 0x7fcfd78281d8 <line:46:4, col:11>
+|     `-IntegerLiteral 0x7fcfd78281b8 <col:11> 'int' 0
+`-FunctionDecl 0x7fcfd78282d0 <line:49:1, line:52:1> line:49:5 test_f00 'int (int *)'
+  |-ParmVarDecl 0x7fcfd7828240 <col:15, col:20> col:20 used v 'int *'
+  `-CompoundStmt 0x7fcfd78284e8 <line:50:1, line:52:1>
+    `-ReturnStmt 0x7fcfd78284d0 <line:51:4, col:32>
+      `-CallExpr 0x7fcfd7828480 <col:11, col:32> 'int'
+        |-ImplicitCastExpr 0x7fcfd7828468 <col:11> 'int (*)(const TEST_T30 *, int *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fcfd7828370 <col:11> 'int (const TEST_T30 *, int *)' Function 0x7fcfd7827d38 'test_f10' 'int (const TEST_T30 *, int *)'
+        |-UnaryOperator 0x7fcfd78283c0 <col:20, col:21> 'const TEST_T30 *' prefix '&'
+        | `-DeclRefExpr 0x7fcfd7828398 <col:21> 'const TEST_T30':'const struct TEST_T30_' lvalue Var 0x7fcfd7826890 'test_t30' 'const TEST_T30':'const struct TEST_T30_'
+        `-ImplicitCastExpr 0x7fcfd78284b8 <col:31> 'int *' <LValueToRValue>
+          `-DeclRefExpr 0x7fcfd78283e0 <col:31> 'int *' lvalue ParmVar 0x7fcfd7828240 'v' 'int *'

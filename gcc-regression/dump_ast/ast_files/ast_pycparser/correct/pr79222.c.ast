@@ -1,0 +1,47 @@
+FileAST: 
+  Decl: stpcpy, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      PtrDecl: []
+        TypeDecl: stpcpy, []
+          IdentifierType: ['char']
+  Decl: d, [], [], []
+    ArrayDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['char']
+      Constant: int, 3
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: f, []
+            IdentifierType: ['char']
+    Compound: 
+      Decl: s, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: s, ['const']
+            IdentifierType: ['char']
+        TernaryOp: 
+          BinaryOp: <
+            ID: i
+            Constant: int, 0
+          Constant: string, "01234567"
+          Constant: string, "9876543210"
+      Return: 
+        FuncCall: 
+          ID: stpcpy
+          ExprList: 
+            ID: d
+            ID: s

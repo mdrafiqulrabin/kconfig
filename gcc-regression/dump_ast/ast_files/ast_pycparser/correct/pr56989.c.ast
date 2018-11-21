@@ -1,0 +1,53 @@
+FileAST: 
+  Decl: voidf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: voidf, []
+        IdentifierType: ['void']
+  Decl: intf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: intf, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: <
+            FuncCall: 
+              ID: intf
+            Constant: int, 0
+          BinaryOp: <
+            FuncCall: 
+              ID: voidf
+            Constant: int, 0
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: ||
+          BinaryOp: <
+            FuncCall: 
+              ID: voidf
+            Constant: int, 0
+          BinaryOp: <
+            FuncCall: 
+              ID: intf
+            Constant: int, 0
+        Return: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0

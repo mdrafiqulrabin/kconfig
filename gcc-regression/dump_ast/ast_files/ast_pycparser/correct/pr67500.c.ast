@@ -1,0 +1,139 @@
+FileAST: 
+  Pragma: omp declare simd simdlen(d)	 
+  Decl: f1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: f1, []
+        IdentifierType: ['void']
+  Pragma: omp declare simd simdlen(0.5)	 
+  Decl: f2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: f2, []
+        IdentifierType: ['void']
+  Pragma: omp declare simd simdlen(-2)	 
+  Decl: f3, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: f3, []
+        IdentifierType: ['void']
+  Pragma: omp declare simd simdlen(0)	 
+  Decl: f4, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: f4, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Pragma: omp simd safelen(d)		 
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: ++
+          ID: i
+        EmptyStatement: 
+      Pragma: omp simd safelen(0.5)		 
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: ++
+          ID: i
+        EmptyStatement: 
+      Pragma: omp simd safelen(-2)		 
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: ++
+          ID: i
+        EmptyStatement: 
+      Pragma: omp simd safelen(0)		 
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: ++
+          ID: i
+        EmptyStatement: 
+      Pragma: omp simd aligned(p:d)		 
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: ++
+          ID: i
+        EmptyStatement: 
+      Pragma: omp simd aligned(p:0.5)	 
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: ++
+          ID: i
+        EmptyStatement: 
+      Pragma: omp simd aligned(p:-2)	 
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: ++
+          ID: i
+        EmptyStatement: 
+      Pragma: omp simd aligned(p:0)		 
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: ++
+          ID: i
+        EmptyStatement: 

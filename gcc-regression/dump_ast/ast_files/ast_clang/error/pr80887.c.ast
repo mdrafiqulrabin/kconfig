@@ -1,0 +1,30 @@
+c_files/pr80887.c:5:26: error: expected parameter declarator
+void __GIMPLE (startwith("fre"))
+                         ^
+c_files/pr80887.c:5:26: error: expected ')'
+c_files/pr80887.c:5:25: note: to match this '('
+void __GIMPLE (startwith("fre"))
+                        ^
+c_files/pr80887.c:5:16: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+void __GIMPLE (startwith("fre"))
+               ^
+c_files/pr80887.c:6:1: error: expected function body after function declarator
+f()
+^
+1 warning and 3 errors generated.
+TranslationUnitDecl 0x7f8e1d0068d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8e1d006e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8e1d006b40 '__int128'
+|-TypedefDecl 0x7f8e1d006e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8e1d006b60 'unsigned __int128'
+|-TypedefDecl 0x7f8e1d007168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8e1d006f70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8e1d006ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8e1d007200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8e1d0071c0 'char *'
+|   `-BuiltinType 0x7f8e1d006960 'char'
+|-TypedefDecl 0x7f8e1d0074c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8e1d007470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8e1d0072e0 'struct __va_list_tag'
+|     `-Record 0x7f8e1d007258 '__va_list_tag'
+`-VarDecl 0x7f8e1d007538 <c_files/pr80887.c:4:1, col:5> col:5 pos 'int'

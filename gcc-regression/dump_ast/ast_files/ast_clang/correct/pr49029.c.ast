@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7f90f50264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f90f5026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f90f5026740 '__int128'
+|-TypedefDecl 0x7f90f5026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f90f5026760 'unsigned __int128'
+|-TypedefDecl 0x7f90f5026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f90f5026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f90f5026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f90f5026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f90f5026dc0 'char *'
+|   `-BuiltinType 0x7f90f5026560 'char'
+|-TypedefDecl 0x7f90f50270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f90f5027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f90f5026ee0 'struct __va_list_tag'
+|     `-Record 0x7f90f5026e58 '__va_list_tag'
+|-RecordDecl 0x7f90f5027120 <c_files/pr49029.c:3:1, col:53> col:8 struct S definition
+| |-PackedAttr 0x7f90f5825ae0 <col:70>
+| |-FieldDecl 0x7f90f5825a18 <col:12, col:34> col:30 f 'volatile unsigned int'
+| | `-IntegerLiteral 0x7f90f50271d0 <col:34> 'int' 11
+| `-FieldDecl 0x7f90f5825a98 <col:38, col:49> col:45 referenced g 'int'
+|   `-IntegerLiteral 0x7f90f5825a60 <col:49> 'int' 30
+|-RecordDecl 0x7f90f5825b28 <line:4:1, col:33> col:8 struct T definition
+| |-PackedAttr 0x7f90f5825cb8 <col:50>
+| `-FieldDecl 0x7f90f5825c20 <col:12, col:30> col:30 referenced h 'volatile struct S':'volatile struct S'
+|-VarDecl 0x7f90f5825d50 <col:1, col:59> col:59 used a 'struct T':'struct T'
+|-FunctionDecl 0x7f90f5825ee0 <line:5:1, col:14> col:6 used foo 'void (int)'
+| `-ParmVarDecl 0x7f90f5825e20 <col:11> col:14 'int'
+`-FunctionDecl 0x7f90f5825fc8 <line:7:1, line:11:1> line:8:1 bar 'void ()'
+  `-CompoundStmt 0x7f90f58261a8 <line:9:1, line:11:1>
+    `-CallExpr 0x7f90f5826160 <line:10:3, col:13> 'void'
+      |-ImplicitCastExpr 0x7f90f5826148 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f90f5826060 <col:3> 'void (int)' Function 0x7f90f5825ee0 'foo' 'void (int)'
+      `-ImplicitCastExpr 0x7f90f5826190 <col:8, col:12> 'int' <LValueToRValue>
+        `-MemberExpr 0x7f90f58260e8 <col:8, col:12> 'volatile int' lvalue bitfield .g 0x7f90f5825a98
+          `-MemberExpr 0x7f90f58260b0 <col:8, col:10> 'volatile struct S':'volatile struct S' lvalue .h 0x7f90f5825c20
+            `-DeclRefExpr 0x7f90f5826088 <col:8> 'struct T':'struct T' lvalue Var 0x7f90f5825d50 'a' 'struct T':'struct T'

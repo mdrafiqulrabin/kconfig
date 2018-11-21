@@ -1,0 +1,331 @@
+c_files/pr66251.c:9:10: fatal error: 'tree-vect.h' file not found
+#include "tree-vect.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fb1098252d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb109825820 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb109825540 '__int128'
+|-TypedefDecl 0x7fb109825890 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb109825560 'unsigned __int128'
+|-TypedefDecl 0x7fb109825b68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb109825970 'struct __NSConstantString_tag'
+|   `-Record 0x7fb1098258e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb109825c00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb109825bc0 'char *'
+|   `-BuiltinType 0x7fb109825360 'char'
+|-TypedefDecl 0x7fb109825ec8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb109825e70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb109825ce0 'struct __va_list_tag'
+|     `-Record 0x7fb109825c58 '__va_list_tag'
+|-FunctionDecl 0x7fb10a027c20 <c_files/pr66251.c:11:1, line:19:1> line:12:1 used test1 'void (_Complex double *, _Complex int *, int, int)'
+| |-ParmVarDecl 0x7fb109825f58 <col:7, col:24> col:24 used a '_Complex double *'
+| |-ParmVarDecl 0x7fb10a027a38 <col:27, col:41> col:41 used b '_Complex int *'
+| |-ParmVarDecl 0x7fb10a027ab0 <col:44, col:48> col:48 used stride 'int'
+| |-ParmVarDecl 0x7fb10a027b28 <col:56, col:60> col:60 used n 'int'
+| |-CompoundStmt 0x7fb10a028220 <line:13:1, line:19:1>
+| | |-DeclStmt 0x7fb10a027dd8 <line:14:3, col:8>
+| | | `-VarDecl 0x7fb10a027d78 <col:3, col:7> col:7 used i 'int'
+| | `-ForStmt 0x7fb10a0281e8 <line:15:3, line:18:5>
+| |   |-BinaryOperator 0x7fb10a027e38 <line:15:8, col:12> 'int' '='
+| |   | |-DeclRefExpr 0x7fb10a027df0 <col:8> 'int' lvalue Var 0x7fb10a027d78 'i' 'int'
+| |   | `-IntegerLiteral 0x7fb10a027e18 <col:12> 'int' 0
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fb10a027ee0 <col:15, col:19> 'int' '<'
+| |   | |-ImplicitCastExpr 0x7fb10a027eb0 <col:15> 'int' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fb10a027e60 <col:15> 'int' lvalue Var 0x7fb10a027d78 'i' 'int'
+| |   | `-ImplicitCastExpr 0x7fb10a027ec8 <col:19> 'int' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7fb10a027e88 <col:19> 'int' lvalue ParmVar 0x7fb10a027b28 'n' 'int'
+| |   |-UnaryOperator 0x7fb10a027f30 <col:22, col:23> 'int' postfix '++'
+| |   | `-DeclRefExpr 0x7fb10a027f08 <col:22> 'int' lvalue Var 0x7fb10a027d78 'i' 'int'
+| |   `-CompoundStmt 0x7fb10a0281c8 <line:16:5, line:18:5>
+| |     `-BinaryOperator 0x7fb10a0281a0 <line:17:7, col:31> '_Complex double' '='
+| |       |-ArraySubscriptExpr 0x7fb10a028038 <col:7, col:17> '_Complex double' lvalue
+| |       | |-ImplicitCastExpr 0x7fb10a028020 <col:7> '_Complex double *' <LValueToRValue>
+| |       | | `-DeclRefExpr 0x7fb10a027f50 <col:7> '_Complex double *' lvalue ParmVar 0x7fb109825f58 'a' '_Complex double *'
+| |       | `-BinaryOperator 0x7fb10a027ff8 <col:9, col:11> 'int' '*'
+| |       |   |-ImplicitCastExpr 0x7fb10a027fc8 <col:9> 'int' <LValueToRValue>
+| |       |   | `-DeclRefExpr 0x7fb10a027f78 <col:9> 'int' lvalue Var 0x7fb10a027d78 'i' 'int'
+| |       |   `-ImplicitCastExpr 0x7fb10a027fe0 <col:11> 'int' <LValueToRValue>
+| |       |     `-DeclRefExpr 0x7fb10a027fa0 <col:11> 'int' lvalue ParmVar 0x7fb10a027ab0 'stride' 'int'
+| |       `-ImplicitCastExpr 0x7fb10a028188 <col:21, col:31> '_Complex double' <IntegralComplexToFloatingComplex>
+| |         `-ImplicitCastExpr 0x7fb10a028170 <col:21, col:31> '_Complex int' <LValueToRValue>
+| |           `-ArraySubscriptExpr 0x7fb10a028148 <col:21, col:31> '_Complex int' lvalue
+| |             |-ImplicitCastExpr 0x7fb10a028130 <col:21> '_Complex int *' <LValueToRValue>
+| |             | `-DeclRefExpr 0x7fb10a028060 <col:21> '_Complex int *' lvalue ParmVar 0x7fb10a027a38 'b' '_Complex int *'
+| |             `-BinaryOperator 0x7fb10a028108 <col:23, col:25> 'int' '*'
+| |               |-ImplicitCastExpr 0x7fb10a0280d8 <col:23> 'int' <LValueToRValue>
+| |               | `-DeclRefExpr 0x7fb10a028088 <col:23> 'int' lvalue Var 0x7fb10a027d78 'i' 'int'
+| |               `-ImplicitCastExpr 0x7fb10a0280f0 <col:25> 'int' <LValueToRValue>
+| |                 `-DeclRefExpr 0x7fb10a0280b0 <col:25> 'int' lvalue ParmVar 0x7fb10a027ab0 'stride' 'int'
+| `-NoInlineAttr 0x7fb10a027cd8 <line:11:21>
+|-FunctionDecl 0x7fb10a0284b0 <line:21:1, line:29:1> line:22:1 used test2 'void (_Complex int *, _Complex double *, int, int)'
+| |-ParmVarDecl 0x7fb10a028258 <col:7, col:21> col:21 used a '_Complex int *'
+| |-ParmVarDecl 0x7fb10a0282c8 <col:24, col:41> col:41 used b '_Complex double *'
+| |-ParmVarDecl 0x7fb10a028340 <col:44, col:48> col:48 used stride 'int'
+| |-ParmVarDecl 0x7fb10a0283b8 <col:56, col:60> col:60 used n 'int'
+| |-CompoundStmt 0x7fb10a028a80 <line:23:1, line:29:1>
+| | |-DeclStmt 0x7fb10a028628 <line:24:3, col:8>
+| | | `-VarDecl 0x7fb10a0285c8 <col:3, col:7> col:7 used i 'int'
+| | `-ForStmt 0x7fb10a028a48 <line:25:3, line:28:5>
+| |   |-BinaryOperator 0x7fb10a028688 <line:25:8, col:12> 'int' '='
+| |   | |-DeclRefExpr 0x7fb10a028640 <col:8> 'int' lvalue Var 0x7fb10a0285c8 'i' 'int'
+| |   | `-IntegerLiteral 0x7fb10a028668 <col:12> 'int' 0
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fb10a028730 <col:15, col:19> 'int' '<'
+| |   | |-ImplicitCastExpr 0x7fb10a028700 <col:15> 'int' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fb10a0286b0 <col:15> 'int' lvalue Var 0x7fb10a0285c8 'i' 'int'
+| |   | `-ImplicitCastExpr 0x7fb10a028718 <col:19> 'int' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7fb10a0286d8 <col:19> 'int' lvalue ParmVar 0x7fb10a0283b8 'n' 'int'
+| |   |-UnaryOperator 0x7fb10a028780 <col:22, col:23> 'int' postfix '++'
+| |   | `-DeclRefExpr 0x7fb10a028758 <col:22> 'int' lvalue Var 0x7fb10a0285c8 'i' 'int'
+| |   `-CompoundStmt 0x7fb10a028a28 <line:26:5, line:28:5>
+| |     `-BinaryOperator 0x7fb10a028a00 <line:27:7, col:31> '_Complex int' '='
+| |       |-ArraySubscriptExpr 0x7fb10a028888 <col:7, col:17> '_Complex int' lvalue
+| |       | |-ImplicitCastExpr 0x7fb10a028870 <col:7> '_Complex int *' <LValueToRValue>
+| |       | | `-DeclRefExpr 0x7fb10a0287a0 <col:7> '_Complex int *' lvalue ParmVar 0x7fb10a028258 'a' '_Complex int *'
+| |       | `-BinaryOperator 0x7fb10a028848 <col:9, col:11> 'int' '*'
+| |       |   |-ImplicitCastExpr 0x7fb10a028818 <col:9> 'int' <LValueToRValue>
+| |       |   | `-DeclRefExpr 0x7fb10a0287c8 <col:9> 'int' lvalue Var 0x7fb10a0285c8 'i' 'int'
+| |       |   `-ImplicitCastExpr 0x7fb10a028830 <col:11> 'int' <LValueToRValue>
+| |       |     `-DeclRefExpr 0x7fb10a0287f0 <col:11> 'int' lvalue ParmVar 0x7fb10a028340 'stride' 'int'
+| |       `-ImplicitCastExpr 0x7fb10a0289d8 <col:21, col:31> '_Complex int' <FloatingComplexToIntegralComplex>
+| |         `-ImplicitCastExpr 0x7fb10a0289c0 <col:21, col:31> '_Complex double' <LValueToRValue>
+| |           `-ArraySubscriptExpr 0x7fb10a028998 <col:21, col:31> '_Complex double' lvalue
+| |             |-ImplicitCastExpr 0x7fb10a028980 <col:21> '_Complex double *' <LValueToRValue>
+| |             | `-DeclRefExpr 0x7fb10a0288b0 <col:21> '_Complex double *' lvalue ParmVar 0x7fb10a0282c8 'b' '_Complex double *'
+| |             `-BinaryOperator 0x7fb10a028958 <col:23, col:25> 'int' '*'
+| |               |-ImplicitCastExpr 0x7fb10a028928 <col:23> 'int' <LValueToRValue>
+| |               | `-DeclRefExpr 0x7fb10a0288d8 <col:23> 'int' lvalue Var 0x7fb10a0285c8 'i' 'int'
+| |               `-ImplicitCastExpr 0x7fb10a028940 <col:25> 'int' <LValueToRValue>
+| |                 `-DeclRefExpr 0x7fb10a028900 <col:25> 'int' lvalue ParmVar 0x7fb10a028340 'stride' 'int'
+| `-NoInlineAttr 0x7fb10a028568 <line:21:21>
+|-VarDecl 0x7fb10a028b28 <line:31:1, col:20> col:14 used ia '_Complex int [256]'
+|-VarDecl 0x7fb10a028c08 <line:32:1, col:23> col:17 used da '_Complex double [256]'
+|-FunctionDecl 0x7fb10a028d60 <line:34:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fb10a028df8 prev 0x7fb10a028d60 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fb10a028ee0 <line:36:1, line:76:1> line:36:5 main 'int ()'
+| `-CompoundStmt 0x7fb10a02afa0 <line:37:1, line:76:1>
+|   |-DeclStmt 0x7fb10a028ff0 <line:38:3, col:8>
+|   | `-VarDecl 0x7fb10a028f90 <col:3, col:7> col:7 used i 'int'
+|   |-DeclStmt 0x7fb10a029080 <line:39:3, col:13>
+|   | `-VarDecl 0x7fb10a029020 <col:3, col:7> col:7 used stride 'int'
+|   |-CallExpr 0x7fb10a0291c0 <line:41:3, col:15> 'int'
+|   | `-ImplicitCastExpr 0x7fb10a0291a8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fb10a029158 <col:3> 'int ()' Function 0x7fb10a0290c0 'check_vect' 'int ()'
+|   |-ForStmt 0x7fb10a02af30 <line:43:3, line:74:5>
+|   | |-BinaryOperator 0x7fb10a029230 <line:43:8, col:17> 'int' '='
+|   | | |-DeclRefExpr 0x7fb10a0291e8 <col:8> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   | | `-IntegerLiteral 0x7fb10a029210 <col:17> 'int' 1
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fb10a0292b8 <col:20, col:29> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fb10a0292a0 <col:20> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fb10a029258 <col:20> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   | | `-IntegerLiteral 0x7fb10a029280 <col:29> 'int' 15
+|   | |-UnaryOperator 0x7fb10a029308 <col:33, col:39> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fb10a0292e0 <col:33> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   | `-CompoundStmt 0x7fb10a02aee8 <line:44:5, line:74:5>
+|   |   |-ForStmt 0x7fb10a029948 <line:45:7, line:50:2>
+|   |   | |-BinaryOperator 0x7fb10a029370 <line:45:12, col:16> 'int' '='
+|   |   | | |-DeclRefExpr 0x7fb10a029328 <col:12> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   | | `-IntegerLiteral 0x7fb10a029350 <col:16> 'int' 0
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7fb10a0293f8 <col:19, col:23> 'int' '<'
+|   |   | | |-ImplicitCastExpr 0x7fb10a0293e0 <col:19> 'int' <LValueToRValue>
+|   |   | | | `-DeclRefExpr 0x7fb10a029398 <col:19> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   | | `-IntegerLiteral 0x7fb10a0293c0 <col:23> 'int' 256
+|   |   | |-UnaryOperator 0x7fb10a029448 <col:28, col:29> 'int' postfix '++'
+|   |   | | `-DeclRefExpr 0x7fb10a029420 <col:28> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   | `-CompoundStmt 0x7fb10a029918 <line:46:2, line:50:2>
+|   |   |   |-BinaryOperator 0x7fb10a029640 <line:47:4, col:36> 'int' '='
+|   |   |   | |-UnaryOperator 0x7fb10a029510 <col:4, col:17> 'int' lvalue prefix '__real'
+|   |   |   | | `-ArraySubscriptExpr 0x7fb10a0294e8 <col:13, col:17> '_Complex int' lvalue
+|   |   |   | |   |-ImplicitCastExpr 0x7fb10a0294b8 <col:13> '_Complex int *' <ArrayToPointerDecay>
+|   |   |   | |   | `-DeclRefExpr 0x7fb10a029468 <col:13> '_Complex int [256]' lvalue Var 0x7fb10a028b28 'ia' '_Complex int [256]'
+|   |   |   | |   `-ImplicitCastExpr 0x7fb10a0294d0 <col:16> 'int' <LValueToRValue>
+|   |   |   | |     `-DeclRefExpr 0x7fb10a029490 <col:16> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   |   | `-BinaryOperator 0x7fb10a029618 <col:21, col:36> 'int' '%'
+|   |   |   |   |-ParenExpr 0x7fb10a0295d8 <col:21, col:32> 'int'
+|   |   |   |   | `-BinaryOperator 0x7fb10a0295b0 <col:22, col:26> 'int' '+'
+|   |   |   |   |   |-ImplicitCastExpr 0x7fb10a029580 <col:22> 'int' <LValueToRValue>
+|   |   |   |   |   | `-DeclRefExpr 0x7fb10a029530 <col:22> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   |   |   |   `-ImplicitCastExpr 0x7fb10a029598 <col:26> 'int' <LValueToRValue>
+|   |   |   |   |     `-DeclRefExpr 0x7fb10a029558 <col:26> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   |   |   |   `-IntegerLiteral 0x7fb10a0295f8 <col:36> 'int' 19
+|   |   |   |-BinaryOperator 0x7fb10a029840 <line:48:4, col:36> 'int' '='
+|   |   |   | |-UnaryOperator 0x7fb10a029710 <col:4, col:17> 'int' lvalue prefix '__imag'
+|   |   |   | | `-ArraySubscriptExpr 0x7fb10a0296e8 <col:13, col:17> '_Complex int' lvalue
+|   |   |   | |   |-ImplicitCastExpr 0x7fb10a0296b8 <col:13> '_Complex int *' <ArrayToPointerDecay>
+|   |   |   | |   | `-DeclRefExpr 0x7fb10a029668 <col:13> '_Complex int [256]' lvalue Var 0x7fb10a028b28 'ia' '_Complex int [256]'
+|   |   |   | |   `-ImplicitCastExpr 0x7fb10a0296d0 <col:16> 'int' <LValueToRValue>
+|   |   |   | |     `-DeclRefExpr 0x7fb10a029690 <col:16> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   |   | `-BinaryOperator 0x7fb10a029818 <col:21, col:36> 'int' '%'
+|   |   |   |   |-ParenExpr 0x7fb10a0297d8 <col:21, col:32> 'int'
+|   |   |   |   | `-BinaryOperator 0x7fb10a0297b0 <col:22, col:26> 'int' '+'
+|   |   |   |   |   |-ImplicitCastExpr 0x7fb10a029780 <col:22> 'int' <LValueToRValue>
+|   |   |   |   |   | `-DeclRefExpr 0x7fb10a029730 <col:22> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   |   |   |   `-ImplicitCastExpr 0x7fb10a029798 <col:26> 'int' <LValueToRValue>
+|   |   |   |   |     `-DeclRefExpr 0x7fb10a029758 <col:26> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   |   |   |   `-IntegerLiteral 0x7fb10a0297f8 <col:36> 'int' 23
+|   |   |   `-GCCAsmStmt 0x7fb10a0298d0 <line:49:4, col:24>
+|   |   |-CallExpr 0x7fb10a029af0 <line:52:7, col:39> 'void'
+|   |   | |-ImplicitCastExpr 0x7fb10a029ad8 <col:7> 'void (*)(_Complex double *, _Complex int *, int, int)' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fb10a029980 <col:7> 'void (_Complex double *, _Complex int *, int, int)' Function 0x7fb10a027c20 'test1' 'void (_Complex double *, _Complex int *, int, int)'
+|   |   | |-ImplicitCastExpr 0x7fb10a029b38 <col:13> '_Complex double *' <ArrayToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fb10a0299a8 <col:13> '_Complex double [256]' lvalue Var 0x7fb10a028c08 'da' '_Complex double [256]'
+|   |   | |-ImplicitCastExpr 0x7fb10a029b50 <col:17> '_Complex int *' <ArrayToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fb10a0299d0 <col:17> '_Complex int [256]' lvalue Var 0x7fb10a028b28 'ia' '_Complex int [256]'
+|   |   | |-ImplicitCastExpr 0x7fb10a029b68 <col:21> 'int' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fb10a029a00 <col:21> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   |   | `-BinaryOperator 0x7fb10a029a88 <col:29, col:33> 'int' '/'
+|   |   |   |-IntegerLiteral 0x7fb10a029a28 <col:29> 'int' 256
+|   |   |   `-ImplicitCastExpr 0x7fb10a029a70 <col:33> 'int' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7fb10a029a48 <col:33> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   |   |-ForStmt 0x7fb10a02a0a0 <line:54:7, line:58:2>
+|   |   | |-BinaryOperator 0x7fb10a029bc8 <line:54:12, col:16> 'int' '='
+|   |   | | |-DeclRefExpr 0x7fb10a029b80 <col:12> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   | | `-IntegerLiteral 0x7fb10a029ba8 <col:16> 'int' 0
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7fb10a029cb8 <col:19, col:27> 'int' '<'
+|   |   | | |-ImplicitCastExpr 0x7fb10a029ca0 <col:19> 'int' <LValueToRValue>
+|   |   | | | `-DeclRefExpr 0x7fb10a029bf0 <col:19> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   | | `-BinaryOperator 0x7fb10a029c78 <col:23, col:27> 'int' '/'
+|   |   | |   |-IntegerLiteral 0x7fb10a029c18 <col:23> 'int' 256
+|   |   | |   `-ImplicitCastExpr 0x7fb10a029c60 <col:27> 'int' <LValueToRValue>
+|   |   | |     `-DeclRefExpr 0x7fb10a029c38 <col:27> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   |   | |-UnaryOperator 0x7fb10a029d08 <col:35, col:36> 'int' postfix '++'
+|   |   | | `-DeclRefExpr 0x7fb10a029ce0 <col:35> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   | `-CompoundStmt 0x7fb10a02a080 <line:55:2, line:58:2>
+|   |   |   `-IfStmt 0x7fb10a02a048 <line:56:4, line:57:13>
+|   |   |     |-<<<NULL>>>
+|   |   |     |-<<<NULL>>>
+|   |   |     |-BinaryOperator 0x7fb10a029f90 <line:56:8, col:35> 'int' '!='
+|   |   |     | |-ImplicitCastExpr 0x7fb10a029f48 <col:8, col:19> '_Complex double' <LValueToRValue>
+|   |   |     | | `-ArraySubscriptExpr 0x7fb10a029e10 <col:8, col:19> '_Complex double' lvalue
+|   |   |     | |   |-ImplicitCastExpr 0x7fb10a029df8 <col:8> '_Complex double *' <ArrayToPointerDecay>
+|   |   |     | |   | `-DeclRefExpr 0x7fb10a029d28 <col:8> '_Complex double [256]' lvalue Var 0x7fb10a028c08 'da' '_Complex double [256]'
+|   |   |     | |   `-BinaryOperator 0x7fb10a029dd0 <col:11, col:13> 'int' '*'
+|   |   |     | |     |-ImplicitCastExpr 0x7fb10a029da0 <col:11> 'int' <LValueToRValue>
+|   |   |     | |     | `-DeclRefExpr 0x7fb10a029d50 <col:11> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   |     | |     `-ImplicitCastExpr 0x7fb10a029db8 <col:13> 'int' <LValueToRValue>
+|   |   |     | |       `-DeclRefExpr 0x7fb10a029d78 <col:13> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   |   |     | `-ImplicitCastExpr 0x7fb10a029f78 <col:24, col:35> '_Complex double' <IntegralComplexToFloatingComplex>
+|   |   |     |   `-ImplicitCastExpr 0x7fb10a029f60 <col:24, col:35> '_Complex int' <LValueToRValue>
+|   |   |     |     `-ArraySubscriptExpr 0x7fb10a029f20 <col:24, col:35> '_Complex int' lvalue
+|   |   |     |       |-ImplicitCastExpr 0x7fb10a029f08 <col:24> '_Complex int *' <ArrayToPointerDecay>
+|   |   |     |       | `-DeclRefExpr 0x7fb10a029e38 <col:24> '_Complex int [256]' lvalue Var 0x7fb10a028b28 'ia' '_Complex int [256]'
+|   |   |     |       `-BinaryOperator 0x7fb10a029ee0 <col:27, col:29> 'int' '*'
+|   |   |     |         |-ImplicitCastExpr 0x7fb10a029eb0 <col:27> 'int' <LValueToRValue>
+|   |   |     |         | `-DeclRefExpr 0x7fb10a029e60 <col:27> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   |     |         `-ImplicitCastExpr 0x7fb10a029ec8 <col:29> 'int' <LValueToRValue>
+|   |   |     |           `-DeclRefExpr 0x7fb10a029e88 <col:29> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   |   |     |-CallExpr 0x7fb10a02a020 <line:57:6, col:13> 'void'
+|   |   |     | `-ImplicitCastExpr 0x7fb10a02a008 <col:6> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   |     |   `-DeclRefExpr 0x7fb10a029fb8 <col:6> 'void (void) __attribute__((noreturn))' Function 0x7fb10a028df8 'abort' 'void (void) __attribute__((noreturn))'
+|   |   |     `-<<<NULL>>>
+|   |   |-ForStmt 0x7fb10a02a778 <line:60:7, line:65:2>
+|   |   | |-BinaryOperator 0x7fb10a02a120 <line:60:12, col:16> 'int' '='
+|   |   | | |-DeclRefExpr 0x7fb10a02a0d8 <col:12> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   | | `-IntegerLiteral 0x7fb10a02a100 <col:16> 'int' 0
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7fb10a02a1a8 <col:19, col:23> 'int' '<'
+|   |   | | |-ImplicitCastExpr 0x7fb10a02a190 <col:19> 'int' <LValueToRValue>
+|   |   | | | `-DeclRefExpr 0x7fb10a02a148 <col:19> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   | | `-IntegerLiteral 0x7fb10a02a170 <col:23> 'int' 256
+|   |   | |-UnaryOperator 0x7fb10a02a1f8 <col:28, col:29> 'int' postfix '++'
+|   |   | | `-DeclRefExpr 0x7fb10a02a1d0 <col:28> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   | `-CompoundStmt 0x7fb10a02a748 <line:61:2, line:65:2>
+|   |   |   |-BinaryOperator 0x7fb10a02a450 <line:62:4, col:40> 'double' '='
+|   |   |   | |-UnaryOperator 0x7fb10a02a2c0 <col:4, col:17> 'double' lvalue prefix '__real'
+|   |   |   | | `-ArraySubscriptExpr 0x7fb10a02a298 <col:13, col:17> '_Complex double' lvalue
+|   |   |   | |   |-ImplicitCastExpr 0x7fb10a02a268 <col:13> '_Complex double *' <ArrayToPointerDecay>
+|   |   |   | |   | `-DeclRefExpr 0x7fb10a02a218 <col:13> '_Complex double [256]' lvalue Var 0x7fb10a028c08 'da' '_Complex double [256]'
+|   |   |   | |   `-ImplicitCastExpr 0x7fb10a02a280 <col:16> 'int' <LValueToRValue>
+|   |   |   | |     `-DeclRefExpr 0x7fb10a02a240 <col:16> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   |   | `-ImplicitCastExpr 0x7fb10a02a438 <col:21, col:40> 'double' <IntegralToFloating>
+|   |   |   |   `-BinaryOperator 0x7fb10a02a410 <col:21, col:40> 'int' '%'
+|   |   |   |     |-ParenExpr 0x7fb10a02a3d0 <col:21, col:36> 'int'
+|   |   |   |     | `-BinaryOperator 0x7fb10a02a3a8 <col:22, col:35> 'int' '+'
+|   |   |   |     |   |-BinaryOperator 0x7fb10a02a360 <col:22, col:26> 'int' '+'
+|   |   |   |     |   | |-ImplicitCastExpr 0x7fb10a02a330 <col:22> 'int' <LValueToRValue>
+|   |   |   |     |   | | `-DeclRefExpr 0x7fb10a02a2e0 <col:22> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   |   |     |   | `-ImplicitCastExpr 0x7fb10a02a348 <col:26> 'int' <LValueToRValue>
+|   |   |   |     |   |   `-DeclRefExpr 0x7fb10a02a308 <col:26> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   |   |   |     |   `-IntegerLiteral 0x7fb10a02a388 <col:35> 'int' 1
+|   |   |   |     `-IntegerLiteral 0x7fb10a02a3f0 <col:40> 'int' 29
+|   |   |   |-BinaryOperator 0x7fb10a02a6b0 <line:63:4, col:40> 'double' '='
+|   |   |   | |-UnaryOperator 0x7fb10a02a520 <col:4, col:17> 'double' lvalue prefix '__imag'
+|   |   |   | | `-ArraySubscriptExpr 0x7fb10a02a4f8 <col:13, col:17> '_Complex double' lvalue
+|   |   |   | |   |-ImplicitCastExpr 0x7fb10a02a4c8 <col:13> '_Complex double *' <ArrayToPointerDecay>
+|   |   |   | |   | `-DeclRefExpr 0x7fb10a02a478 <col:13> '_Complex double [256]' lvalue Var 0x7fb10a028c08 'da' '_Complex double [256]'
+|   |   |   | |   `-ImplicitCastExpr 0x7fb10a02a4e0 <col:16> 'int' <LValueToRValue>
+|   |   |   | |     `-DeclRefExpr 0x7fb10a02a4a0 <col:16> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   |   | `-ImplicitCastExpr 0x7fb10a02a698 <col:21, col:40> 'double' <IntegralToFloating>
+|   |   |   |   `-BinaryOperator 0x7fb10a02a670 <col:21, col:40> 'int' '%'
+|   |   |   |     |-ParenExpr 0x7fb10a02a630 <col:21, col:36> 'int'
+|   |   |   |     | `-BinaryOperator 0x7fb10a02a608 <col:22, col:35> 'int' '+'
+|   |   |   |     |   |-BinaryOperator 0x7fb10a02a5c0 <col:22, col:26> 'int' '+'
+|   |   |   |     |   | |-ImplicitCastExpr 0x7fb10a02a590 <col:22> 'int' <LValueToRValue>
+|   |   |   |     |   | | `-DeclRefExpr 0x7fb10a02a540 <col:22> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |   |   |     |   | `-ImplicitCastExpr 0x7fb10a02a5a8 <col:26> 'int' <LValueToRValue>
+|   |   |   |     |   |   `-DeclRefExpr 0x7fb10a02a568 <col:26> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   |   |   |     |   `-IntegerLiteral 0x7fb10a02a5e8 <col:35> 'int' 1
+|   |   |   |     `-IntegerLiteral 0x7fb10a02a650 <col:40> 'int' 31
+|   |   |   `-GCCAsmStmt 0x7fb10a02a700 <line:64:4, col:24>
+|   |   |-CallExpr 0x7fb10a02a920 <line:67:7, col:39> 'void'
+|   |   | |-ImplicitCastExpr 0x7fb10a02a908 <col:7> 'void (*)(_Complex int *, _Complex double *, int, int)' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fb10a02a7b0 <col:7> 'void (_Complex int *, _Complex double *, int, int)' Function 0x7fb10a0284b0 'test2' 'void (_Complex int *, _Complex double *, int, int)'
+|   |   | |-ImplicitCastExpr 0x7fb10a02a968 <col:13> '_Complex int *' <ArrayToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fb10a02a7d8 <col:13> '_Complex int [256]' lvalue Var 0x7fb10a028b28 'ia' '_Complex int [256]'
+|   |   | |-ImplicitCastExpr 0x7fb10a02a980 <col:17> '_Complex double *' <ArrayToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fb10a02a800 <col:17> '_Complex double [256]' lvalue Var 0x7fb10a028c08 'da' '_Complex double [256]'
+|   |   | |-ImplicitCastExpr 0x7fb10a02a998 <col:21> 'int' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fb10a02a828 <col:21> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   |   | `-BinaryOperator 0x7fb10a02a8b0 <col:29, col:33> 'int' '/'
+|   |   |   |-IntegerLiteral 0x7fb10a02a850 <col:29> 'int' 256
+|   |   |   `-ImplicitCastExpr 0x7fb10a02a898 <col:33> 'int' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7fb10a02a870 <col:33> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   |   `-ForStmt 0x7fb10a02aeb0 <line:69:7, line:73:2>
+|   |     |-BinaryOperator 0x7fb10a02aa00 <line:69:12, col:16> 'int' '='
+|   |     | |-DeclRefExpr 0x7fb10a02a9b0 <col:12> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |     | `-IntegerLiteral 0x7fb10a02a9d8 <col:16> 'int' 0
+|   |     |-<<<NULL>>>
+|   |     |-BinaryOperator 0x7fb10a02aaf0 <col:19, col:27> 'int' '<'
+|   |     | |-ImplicitCastExpr 0x7fb10a02aad8 <col:19> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fb10a02aa28 <col:19> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |     | `-BinaryOperator 0x7fb10a02aab0 <col:23, col:27> 'int' '/'
+|   |     |   |-IntegerLiteral 0x7fb10a02aa50 <col:23> 'int' 256
+|   |     |   `-ImplicitCastExpr 0x7fb10a02aa98 <col:27> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7fb10a02aa70 <col:27> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   |     |-UnaryOperator 0x7fb10a02ab40 <col:35, col:36> 'int' postfix '++'
+|   |     | `-DeclRefExpr 0x7fb10a02ab18 <col:35> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |     `-CompoundStmt 0x7fb10a02ae90 <line:70:2, line:73:2>
+|   |       `-IfStmt 0x7fb10a02ae58 <line:71:4, line:72:13>
+|   |         |-<<<NULL>>>
+|   |         |-<<<NULL>>>
+|   |         |-BinaryOperator 0x7fb10a02adc8 <line:71:8, col:35> 'int' '!='
+|   |         | |-ImplicitCastExpr 0x7fb10a02ad80 <col:8, col:19> '_Complex double' <LValueToRValue>
+|   |         | | `-ArraySubscriptExpr 0x7fb10a02ac48 <col:8, col:19> '_Complex double' lvalue
+|   |         | |   |-ImplicitCastExpr 0x7fb10a02ac30 <col:8> '_Complex double *' <ArrayToPointerDecay>
+|   |         | |   | `-DeclRefExpr 0x7fb10a02ab60 <col:8> '_Complex double [256]' lvalue Var 0x7fb10a028c08 'da' '_Complex double [256]'
+|   |         | |   `-BinaryOperator 0x7fb10a02ac08 <col:11, col:13> 'int' '*'
+|   |         | |     |-ImplicitCastExpr 0x7fb10a02abd8 <col:11> 'int' <LValueToRValue>
+|   |         | |     | `-DeclRefExpr 0x7fb10a02ab88 <col:11> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |         | |     `-ImplicitCastExpr 0x7fb10a02abf0 <col:13> 'int' <LValueToRValue>
+|   |         | |       `-DeclRefExpr 0x7fb10a02abb0 <col:13> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   |         | `-ImplicitCastExpr 0x7fb10a02adb0 <col:24, col:35> '_Complex double' <IntegralComplexToFloatingComplex>
+|   |         |   `-ImplicitCastExpr 0x7fb10a02ad98 <col:24, col:35> '_Complex int' <LValueToRValue>
+|   |         |     `-ArraySubscriptExpr 0x7fb10a02ad58 <col:24, col:35> '_Complex int' lvalue
+|   |         |       |-ImplicitCastExpr 0x7fb10a02ad40 <col:24> '_Complex int *' <ArrayToPointerDecay>
+|   |         |       | `-DeclRefExpr 0x7fb10a02ac70 <col:24> '_Complex int [256]' lvalue Var 0x7fb10a028b28 'ia' '_Complex int [256]'
+|   |         |       `-BinaryOperator 0x7fb10a02ad18 <col:27, col:29> 'int' '*'
+|   |         |         |-ImplicitCastExpr 0x7fb10a02ace8 <col:27> 'int' <LValueToRValue>
+|   |         |         | `-DeclRefExpr 0x7fb10a02ac98 <col:27> 'int' lvalue Var 0x7fb10a028f90 'i' 'int'
+|   |         |         `-ImplicitCastExpr 0x7fb10a02ad00 <col:29> 'int' <LValueToRValue>
+|   |         |           `-DeclRefExpr 0x7fb10a02acc0 <col:29> 'int' lvalue Var 0x7fb10a029020 'stride' 'int'
+|   |         |-CallExpr 0x7fb10a02ae30 <line:72:6, col:13> 'void'
+|   |         | `-ImplicitCastExpr 0x7fb10a02ae18 <col:6> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |         |   `-DeclRefExpr 0x7fb10a02adf0 <col:6> 'void (void) __attribute__((noreturn))' Function 0x7fb10a028df8 'abort' 'void (void) __attribute__((noreturn))'
+|   |         `-<<<NULL>>>
+|   `-ReturnStmt 0x7fb10a02af88 <line:75:3, col:10>
+|     `-IntegerLiteral 0x7fb10a02af68 <col:10> 'int' 0
+`-FunctionDecl 0x7fb10a0290c0 <<invalid sloc>> line:41:3 implicit used check_vect 'int ()'

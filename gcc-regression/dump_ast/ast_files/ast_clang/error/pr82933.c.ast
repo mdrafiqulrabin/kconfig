@@ -1,0 +1,19 @@
+c_files/pr82933.c:4:10: fatal error: 'into-cfglayout.c' file not found
+#include "into-cfglayout.c"
+         ^~~~~~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7f810f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f810f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f810f026740 '__int128'
+|-TypedefDecl 0x7f810f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f810f026760 'unsigned __int128'
+|-TypedefDecl 0x7f810f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f810f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f810f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f810f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f810f026dc0 'char *'
+|   `-BuiltinType 0x7f810f026560 'char'
+`-TypedefDecl 0x7f810f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7f810f027070 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7f810f026ee0 'struct __va_list_tag'
+      `-Record 0x7f810f026e58 '__va_list_tag'

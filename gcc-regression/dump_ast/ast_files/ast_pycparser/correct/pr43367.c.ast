@@ -1,0 +1,122 @@
+FileAST: 
+  Decl: g_17, [], [], []
+    TypeDecl: g_17, []
+      IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: func_39, ['const'], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p_40, [], [], []
+            TypeDecl: p_40, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: p_41, [], [], []
+            PtrDecl: []
+              TypeDecl: p_41, []
+                IdentifierType: ['unsigned', 'char']
+        TypeDecl: func_39, ['const']
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: int327, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p_48, ['const'], [], []
+            TypeDecl: p_48, ['const']
+              IdentifierType: ['unsigned', 'char']
+          Decl: p_49, [], [], []
+            TypeDecl: p_49, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: int327, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: l_52, [], [], []
+        TypeDecl: l_52, []
+          IdentifierType: ['unsigned']
+      Decl: l_58, [], [], []
+        ArrayDecl: []
+          TypeDecl: l_58, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 2
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      If: 
+        ExprList: 
+          FuncCall: 
+            ID: func_39
+            ExprList: 
+              ID: l_52
+              UnaryOp: &
+                ID: p_49
+          ID: p_48
+        Compound: 
+          Decl: l_60, [], [], []
+            PtrDecl: []
+              TypeDecl: l_60, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: l, [], [], []
+            PtrDecl: []
+              TypeDecl: l, []
+                IdentifierType: ['unsigned', 'char']
+            UnaryOp: &
+              ArrayRef: 
+                ID: l_58
+                Constant: int, 1
+          For: 
+            ID: j
+            ID: j
+            UnaryOp: p++
+              ID: j
+            Compound: 
+              Label: lbl_59
+                Break: 
+          For: 
+            Assignment: =
+              ID: l
+              Constant: int, 0
+            Constant: int, 1
+            Assignment: +=
+              ID: l
+              Constant: int, 1
+            Compound: 
+              For: 
+                Assignment: =
+                  ID: p_49
+                  Constant: int, 1
+                ID: p_49
+                Assignment: +=
+                  ID: p_49
+                  Constant: int, 0
+                Compound: 
+                  Decl: l_61, [], [], []
+                    ArrayDecl: []
+                      ArrayDecl: []
+                        PtrDecl: []
+                          PtrDecl: []
+                            TypeDecl: l_61, []
+                              IdentifierType: ['unsigned', 'char']
+                        Constant: int, 6
+                      Constant: int, 1
+                  For: 
+                    Assignment: =
+                      ID: j
+                      Constant: int, 0
+                    BinaryOp: <
+                      ID: j
+                      Constant: int, 1
+                    UnaryOp: p++
+                      ID: j
+                    Assignment: =
+                      ArrayRef: 
+                        ArrayRef: 
+                          ID: l_61
+                          ID: i
+                        ID: j
+                      UnaryOp: &
+                        ID: l_60
+                  Goto: lbl_59

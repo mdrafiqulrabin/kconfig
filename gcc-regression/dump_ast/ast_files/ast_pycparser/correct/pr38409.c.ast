@@ -1,0 +1,85 @@
+FileAST: 
+  Typedef: input, [], ['typedef']
+    TypeDecl: input, []
+      Struct: test
+  Decl: None, [], [], []
+    Struct: test
+      Decl: type, [], [], []
+        TypeDecl: type, []
+          IdentifierType: ['int']
+      Decl: symflag, [], [], []
+        TypeDecl: symflag, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: Chv_copyEntriesToVector, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: chv, [], [], []
+            PtrDecl: []
+              TypeDecl: chv, []
+                IdentifierType: ['input']
+          Decl: dvec, [], [], []
+            PtrDecl: []
+              TypeDecl: dvec, []
+                IdentifierType: ['double']
+        TypeDecl: Chv_copyEntriesToVector, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: entries, [], [], []
+        PtrDecl: []
+          TypeDecl: entries, []
+            IdentifierType: ['double']
+      Decl: mm, [], [], []
+        TypeDecl: mm, []
+          IdentifierType: ['int']
+      Decl: nent, [], [], []
+        TypeDecl: nent, []
+          IdentifierType: ['int']
+      Decl: first, [], [], []
+        TypeDecl: first, []
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Decl: stride, [], [], []
+        TypeDecl: stride, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: ==
+          StructRef: ->
+            ID: chv
+            ID: type
+          Constant: int, 1
+        Compound: 
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 0
+            BinaryOp: <
+              ID: i
+              Constant: int, 10
+            UnaryOp: p++
+              ID: i
+            Compound: 
+              Assignment: =
+                ArrayRef: 
+                  ID: dvec
+                  BinaryOp: *
+                    Constant: int, 2
+                    ID: mm
+                ArrayRef: 
+                  ID: entries
+                  BinaryOp: *
+                    Constant: int, 2
+                    ID: k
+              Assignment: +=
+                ID: k
+                ID: stride
+              Assignment: -=
+                ID: stride
+                Constant: int, 2
+      Return: 
+        ID: mm

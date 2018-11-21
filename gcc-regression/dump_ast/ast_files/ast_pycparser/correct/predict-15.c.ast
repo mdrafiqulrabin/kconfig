@@ -1,0 +1,27 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argc, [], [], []
+            TypeDecl: argc, []
+              IdentifierType: ['int']
+          Decl: argv, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: argv, []
+                  IdentifierType: ['char']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          ID: argc
+          Constant: int, 123
+        Goto: exit
+        Compound: 
+          Return: 
+            Constant: int, 0
+      Label: exit
+        Return: 
+          Constant: int, 1

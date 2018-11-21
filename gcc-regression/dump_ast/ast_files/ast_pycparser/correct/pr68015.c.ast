@@ -1,0 +1,78 @@
+FileAST: 
+  Decl: useme, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['long']
+        EllipsisParam: 
+      TypeDecl: useme, []
+        IdentifierType: ['long']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: secs, [], [], []
+        TypeDecl: secs, []
+          IdentifierType: ['long']
+        FuncCall: 
+          ID: useme
+          ExprList: 
+            Constant: int, 41
+      Decl: utc_secs, [], [], []
+        TypeDecl: utc_secs, []
+          IdentifierType: ['long']
+        FuncCall: 
+          ID: useme
+          ExprList: 
+            Constant: int, 42
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['long']
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          IdentifierType: ['long']
+      Assignment: =
+        ID: utc_secs
+        FuncCall: 
+          ID: useme
+          ExprList: 
+            Constant: int, 42
+      Assignment: =
+        ID: h
+        BinaryOp: /
+          ID: secs
+          Constant: int, 3600
+      Assignment: =
+        ID: m
+        BinaryOp: /
+          ID: secs
+          Constant: int, 60
+      If: 
+        BinaryOp: >=
+          ID: utc_secs
+          Constant: int, 86400
+        Compound: 
+          Assignment: =
+            ID: m
+            Constant: int, 59
+          UnaryOp: p--
+            ID: h
+          If: 
+            BinaryOp: <
+              ID: h
+              Constant: int, 0
+            Assignment: =
+              ID: h
+              Constant: int, 23
+      FuncCall: 
+        ID: useme
+        ExprList: 
+          ID: h
+          ID: m

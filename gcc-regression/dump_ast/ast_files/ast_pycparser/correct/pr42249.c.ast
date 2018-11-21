@@ -1,0 +1,175 @@
+FileAST: 
+  Typedef: TypHandle, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: TypHandle, []
+        Struct: TypHeader
+          Decl: size, [], [], []
+            TypeDecl: size, []
+              IdentifierType: ['unsigned', 'long']
+          Decl: ptr, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: ptr, []
+                  Struct: TypHeader
+  Decl: NewBag, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: type, [], [], []
+          TypeDecl: type, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: size, [], [], []
+          TypeDecl: size, []
+            IdentifierType: ['unsigned', 'long']
+      TypeDecl: NewBag, []
+        IdentifierType: ['TypHandle']
+  Typedef: TypPoint32, [], ['typedef']
+    TypeDecl: TypPoint32, []
+      IdentifierType: ['unsigned', 'long']
+  FuncDef: 
+    Decl: QuoPP, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: hdL, [], [], []
+            TypeDecl: hdL, []
+              IdentifierType: ['TypHandle']
+          Decl: hdR, [], [], []
+            TypeDecl: hdR, []
+              IdentifierType: ['TypHandle']
+        TypeDecl: QuoPP, []
+          IdentifierType: ['TypHandle']
+    Compound: 
+      Decl: hdC, [], [], []
+        TypeDecl: hdC, []
+          IdentifierType: ['TypHandle']
+      Decl: degC, [], [], []
+        TypeDecl: degC, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: ptC, [], [], []
+        PtrDecl: []
+          TypeDecl: ptC, []
+            IdentifierType: ['TypPoint32']
+      Decl: degL, [], [], []
+        TypeDecl: degL, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: ptL, [], [], []
+        PtrDecl: []
+          TypeDecl: ptL, []
+            IdentifierType: ['TypPoint32']
+      Decl: degR, [], [], []
+        TypeDecl: degR, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: ptR, [], [], []
+        PtrDecl: []
+          TypeDecl: ptR, []
+            IdentifierType: ['TypPoint32']
+      Decl: p, [], [], []
+        TypeDecl: p, []
+          IdentifierType: ['unsigned', 'long']
+      Assignment: =
+        ID: degL
+        BinaryOp: /
+          StructRef: ->
+            ID: hdL
+            ID: size
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['TypPoint32']
+      Assignment: =
+        ID: degR
+        BinaryOp: /
+          StructRef: ->
+            ID: hdR
+            ID: size
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['TypPoint32']
+      Assignment: =
+        ID: degC
+        TernaryOp: 
+          BinaryOp: <
+            ID: degL
+            ID: degR
+          ID: degR
+          ID: degL
+      Assignment: =
+        ID: hdC
+        FuncCall: 
+          ID: NewBag
+          ExprList: 
+            Constant: int, 9
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'long']
+              BinaryOp: *
+                ID: degC
+                UnaryOp: sizeof
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['TypPoint32']
+      Assignment: =
+        ID: ptC
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['TypPoint32']
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['TypHandle']
+            StructRef: ->
+              ID: hdC
+              ID: ptr
+      For: 
+        Assignment: =
+          ID: p
+          Constant: int, 0
+        BinaryOp: <
+          ID: p
+          ID: degC
+        UnaryOp: p++
+          ID: p
+        Assignment: =
+          ArrayRef: 
+            ID: ptC
+            TernaryOp: 
+              BinaryOp: <
+                ID: p
+                ID: degR
+              ArrayRef: 
+                ID: ptR
+                ID: p
+              ID: p
+          TernaryOp: 
+            BinaryOp: <
+              TernaryOp: 
+                BinaryOp: <
+                  ID: p
+                  ID: degL
+                ArrayRef: 
+                  ID: ptL
+                  ID: p
+                ID: p
+              ID: degR
+            ArrayRef: 
+              ID: ptR
+              TernaryOp: 
+                BinaryOp: <
+                  ID: p
+                  ID: degL
+                ArrayRef: 
+                  ID: ptL
+                  ID: p
+                ID: p
+            TernaryOp: 
+              BinaryOp: <
+                ID: p
+                ID: degL
+              ArrayRef: 
+                ID: ptL
+                ID: p
+              ID: p

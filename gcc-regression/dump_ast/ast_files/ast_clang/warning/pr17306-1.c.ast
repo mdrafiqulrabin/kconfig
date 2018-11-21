@@ -1,0 +1,28 @@
+c_files/pr17306-1.c:6:33: warning: unknown attribute 'function_vector' ignored [-Wunknown-attributes]
+void foo (void) __attribute__ ((function_vector));
+                                ^
+1 warning generated.
+TranslationUnitDecl 0x7f92a30058d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f92a3005e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f92a3005b40 '__int128'
+|-TypedefDecl 0x7f92a3005e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f92a3005b60 'unsigned __int128'
+|-TypedefDecl 0x7f92a3006168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f92a3005f70 'struct __NSConstantString_tag'
+|   `-Record 0x7f92a3005ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f92a3006200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f92a30061c0 'char *'
+|   `-BuiltinType 0x7f92a3005960 'char'
+|-TypedefDecl 0x7f92a30064c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f92a3006470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f92a30062e0 'struct __va_list_tag'
+|     `-Record 0x7f92a3006258 '__va_list_tag'
+|-FunctionDecl 0x7f92a2843000 <c_files/pr17306-1.c:6:1, col:49> col:6 used foo 'void (void)'
+|-FunctionDecl 0x7f92a2843168 prev 0x7f92a2843000 <line:7:1, line:9:1> line:7:32 used foo 'void (void)'
+| |-CompoundStmt 0x7f92a2843248 <line:8:1, line:9:1>
+| `-NoInlineAttr 0x7f92a2843200 <line:7:16>
+`-FunctionDecl 0x7f92a28432f0 <line:11:1, line:14:1> line:11:6 bar 'void (void)'
+  `-CompoundStmt 0x7f92a2843418 <line:12:1, line:14:1>
+    `-CallExpr 0x7f92a28433f0 <line:13:5, col:9> 'void'
+      `-ImplicitCastExpr 0x7f92a28433d8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7f92a2843388 <col:5> 'void (void)' Function 0x7f92a2843168 'foo' 'void (void)'

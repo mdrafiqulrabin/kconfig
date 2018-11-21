@@ -1,0 +1,73 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Pragma: omp parallel for simd
+      For: 
+        Assignment: =
+          ID: i
+          BinaryOp: &
+            ID: i
+            ID: x
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        Assignment: =
+          ID: i
+          BinaryOp: +
+            ID: i
+            Constant: int, 2
+        EmptyStatement: 
+      Assignment: =
+        ID: i
+        Constant: int, 0
+      Pragma: omp parallel for simd
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          BinaryOp: +
+            BinaryOp: &
+              ID: i
+              ID: x
+            Constant: int, 10
+        Assignment: =
+          ID: i
+          BinaryOp: +
+            ID: i
+            Constant: int, 2
+        EmptyStatement: 
+      Assignment: =
+        ID: i
+        Constant: int, 0
+      Pragma: omp parallel for simd
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        Assignment: =
+          ID: i
+          BinaryOp: +
+            ID: i
+            BinaryOp: +
+              BinaryOp: &
+                ID: i
+                ID: x
+              Constant: int, 2
+        EmptyStatement: 

@@ -1,0 +1,80 @@
+FileAST: 
+  Decl: rl_line_buffer, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: rl_line_buffer, []
+        IdentifierType: ['char']
+  Decl: rl_point, [], ['extern'], []
+    TypeDecl: rl_point, []
+      IdentifierType: ['int']
+  Decl: rl_end, [], ['extern'], []
+    TypeDecl: rl_end, []
+      IdentifierType: ['int']
+  Decl: vi_motion, ['const'], ['static'], []
+    PtrDecl: []
+      TypeDecl: vi_motion, ['const']
+        IdentifierType: ['char']
+    Constant: string, " hl^$0ftFT;,%wbeWBE|"
+  Decl: rl_vi_end_word, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: rl_vi_end_word, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: rl_vi_complete, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ignore, [], [], []
+            TypeDecl: ignore, []
+              IdentifierType: ['int']
+          Decl: key, [], [], []
+            TypeDecl: key, []
+              IdentifierType: ['int']
+        TypeDecl: rl_vi_complete, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: <
+            ID: rl_point
+            ID: rl_end
+          UnaryOp: !
+            BinaryOp: ||
+              BinaryOp: ==
+                ArrayRef: 
+                  ID: rl_line_buffer
+                  ID: rl_point
+                Constant: char, ' '
+              BinaryOp: ==
+                ArrayRef: 
+                  ID: rl_line_buffer
+                  ID: rl_point
+                Constant: char, '\t'
+        Compound: 
+          If: 
+            UnaryOp: !
+              BinaryOp: ||
+                BinaryOp: ==
+                  ArrayRef: 
+                    ID: rl_line_buffer
+                    BinaryOp: +
+                      ID: rl_point
+                      Constant: int, 1
+                  Constant: char, ' '
+                BinaryOp: ==
+                  ArrayRef: 
+                    ID: rl_line_buffer
+                    BinaryOp: +
+                      ID: rl_point
+                      Constant: int, 1
+                  Constant: char, '\t'
+            FuncCall: 
+              ID: rl_vi_end_word
+              ExprList: 
+                Constant: int, 1
+                Constant: char, 'E'

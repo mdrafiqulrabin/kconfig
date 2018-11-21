@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7f96b10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f96b1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f96b1026740 '__int128'
+|-TypedefDecl 0x7f96b1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f96b1026760 'unsigned __int128'
+|-TypedefDecl 0x7f96b1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f96b1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f96b1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f96b1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f96b1026dc0 'char *'
+|   `-BuiltinType 0x7f96b1026560 'char'
+|-TypedefDecl 0x7f96b10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f96b1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f96b1026ee0 'struct __va_list_tag'
+|     `-Record 0x7f96b1026e58 '__va_list_tag'
+|-FunctionDecl 0x7f96b101b230 <c_files/pr15784-2.c:5:15> col:15 implicit used fabs 'double (double)' extern
+| |-ParmVarDecl 0x7f96b101b2c8 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f96b101b330 <col:15> Implicit
+| `-ConstAttr 0x7f96b101b378 <col:15> Implicit
+|-FunctionDecl 0x7f96b101b388 prev 0x7f96b101b230 <col:1, col:27> col:15 used fabs 'double (double)' extern
+| |-ParmVarDecl 0x7f96b1027138 <col:21> col:27 'double'
+| |-NoThrowAttr 0x7f96b101b460 <col:15> Inherited Implicit
+| `-ConstAttr 0x7f96b101b470 <col:15> Inherited Implicit
+`-FunctionDecl 0x7f96b101b568 <line:7:1, line:9:1> line:7:5 a 'int (float)'
+  |-ParmVarDecl 0x7f96b101b498 <col:8, col:14> col:14 used x 'float'
+  `-CompoundStmt 0x7f96b101b7a0 <col:17, line:9:1>
+    `-ReturnStmt 0x7f96b101b788 <line:8:2, col:20>
+      `-BinaryOperator 0x7f96b101b760 <col:9, col:20> 'int' '>='
+        |-CallExpr 0x7f96b101b6e0 <col:9, col:15> 'double'
+        | |-ImplicitCastExpr 0x7f96b101b6c8 <col:9> 'double (*)(double)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7f96b101b648 <col:9> 'double (double)' Function 0x7f96b101b388 'fabs' 'double (double)'
+        | `-ImplicitCastExpr 0x7f96b101b728 <col:14> 'double' <FloatingCast>
+        |   `-ImplicitCastExpr 0x7f96b101b710 <col:14> 'float' <LValueToRValue>
+        |     `-DeclRefExpr 0x7f96b101b670 <col:14> 'float' lvalue ParmVar 0x7f96b101b498 'x' 'float'
+        `-FloatingLiteral 0x7f96b101b740 <col:20> 'double' 0.000000e+00

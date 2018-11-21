@@ -1,0 +1,66 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: a
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      Decl: e, [], [], []
+        PtrDecl: []
+          TypeDecl: e, []
+            IdentifierType: ['int']
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['char']
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      Struct: None
+        Decl: g, [], [], []
+          TypeDecl: g, []
+            IdentifierType: ['int']
+        Decl: h, [], [], []
+          ArrayDecl: []
+            TypeDecl: h, []
+              Struct: a
+  Decl: j, [], [], []
+    TypeDecl: j, []
+      IdentifierType: ['int']
+  Decl: k, [], [], []
+    TypeDecl: k, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: l, [], [], []
+      FuncDecl: 
+        TypeDecl: l, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        ID: k
+        UnaryOp: p++
+          ID: k
+        Assignment: +=
+          ID: j
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            BinaryOp: -
+              StructRef: .
+                ArrayRef: 
+                  StructRef: .
+                    ID: i
+                    ID: h
+                  ID: k
+                ID: c
+              StructRef: .
+                ArrayRef: 
+                  StructRef: .
+                    ID: i
+                    ID: h
+                  ID: k
+                ID: b

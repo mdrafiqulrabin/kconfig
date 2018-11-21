@@ -1,0 +1,193 @@
+c_files/pr13519-1.c:15:25: error: cannot assign to variable 'a2' with const-qualified type 'typeof (c)' (aka 'const int')
+  { __typeof__(c) a2; a2=0; } /* { dg-error "read-only" "correct error" } */
+                      ~~^
+c_files/pr13519-1.c:15:19: note: variable 'a2' declared const here
+  { __typeof__(c) a2; a2=0; } /* { dg-error "read-only" "correct error" } */
+    ~~~~~~~~~~~~~~^~
+1 error generated.
+TranslationUnitDecl 0x7fcc4b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcc4b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcc4b826740 '__int128'
+|-TypedefDecl 0x7fcc4b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcc4b826760 'unsigned __int128'
+|-TypedefDecl 0x7fcc4b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcc4b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcc4b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcc4b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcc4b826dc0 'char *'
+|   `-BuiltinType 0x7fcc4b826560 'char'
+|-TypedefDecl 0x7fcc4b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcc4b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcc4b826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcc4b826e58 '__va_list_tag'
+`-FunctionDecl 0x7fcc4b877c00 <c_files/pr13519-1.c:9:1, line:47:1> line:9:6 fn 'void (void)'
+  `-CompoundStmt 0x7fcc4c004608 <line:10:1, line:47:1>
+    |-DeclStmt 0x7fcc4b877d50 <line:11:3, col:8>
+    | `-VarDecl 0x7fcc4b877cf0 <col:3, col:7> col:7 referenced n 'int'
+    |-DeclStmt 0x7fcc4b877de0 <line:12:3, col:14>
+    | `-VarDecl 0x7fcc4b877d80 <col:3, col:13> col:13 referenced c 'const int'
+    |-CompoundStmt 0x7fcc4b877f60 <line:14:3, col:29>
+    | |-DeclStmt 0x7fcc4b877ed8 <col:5, col:21>
+    | | `-VarDecl 0x7fcc4b877e78 <col:5, col:19> col:19 used a1 'typeof (n)':'int'
+    | `-BinaryOperator 0x7fcc4b877f38 <col:23, col:26> 'typeof (n)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4b877ef0 <col:23> 'typeof (n)':'int' lvalue Var 0x7fcc4b877e78 'a1' 'typeof (n)':'int'
+    |   `-IntegerLiteral 0x7fcc4b877f18 <col:26> 'int' 0
+    |-CompoundStmt 0x7fcc4b878480 <line:15:3, col:29>
+    | `-DeclStmt 0x7fcc4b878068 <col:5, col:21>
+    |   `-VarDecl 0x7fcc4b878008 <col:5, col:19> col:19 used a2 'typeof (c)':'const int'
+    |-CompoundStmt 0x7fcc4b878660 <line:16:3, col:34>
+    | |-DeclStmt 0x7fcc4b8785d8 <col:5, col:26>
+    | | `-VarDecl 0x7fcc4b878578 <col:5, col:24> col:24 used a3 'typeof ((int)n)':'int'
+    | `-BinaryOperator 0x7fcc4b878638 <col:28, col:31> 'typeof ((int)n)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4b8785f0 <col:28> 'typeof ((int)n)':'int' lvalue Var 0x7fcc4b878578 'a3' 'typeof ((int)n)':'int'
+    |   `-IntegerLiteral 0x7fcc4b878618 <col:31> 'int' 0
+    |-CompoundStmt 0x7fcc4b878850 <line:17:3, col:34>
+    | |-DeclStmt 0x7fcc4b8787c8 <col:5, col:26>
+    | | `-VarDecl 0x7fcc4b878768 <col:5, col:24> col:24 used a4 'typeof ((int)c)':'int'
+    | `-BinaryOperator 0x7fcc4b878828 <col:28, col:31> 'typeof ((int)c)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4b8787e0 <col:28> 'typeof ((int)c)':'int' lvalue Var 0x7fcc4b878768 'a4' 'typeof ((int)c)':'int'
+    |   `-IntegerLiteral 0x7fcc4b878808 <col:31> 'int' 0
+    |-CompoundStmt 0x7fcc4b878a40 <line:18:3, col:40>
+    | |-DeclStmt 0x7fcc4b8789b8 <col:5, col:32>
+    | | `-VarDecl 0x7fcc4b878958 <col:5, col:30> col:30 used a5 'typeof ((const int)n)':'int'
+    | `-BinaryOperator 0x7fcc4b878a18 <col:34, col:37> 'typeof ((const int)n)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4b8789d0 <col:34> 'typeof ((const int)n)':'int' lvalue Var 0x7fcc4b878958 'a5' 'typeof ((const int)n)':'int'
+    |   `-IntegerLiteral 0x7fcc4b8789f8 <col:37> 'int' 0
+    |-CompoundStmt 0x7fcc4c001048 <line:19:3, col:40>
+    | |-DeclStmt 0x7fcc4b878ba8 <col:5, col:32>
+    | | `-VarDecl 0x7fcc4b878b48 <col:5, col:30> col:30 used a6 'typeof ((const int)c)':'int'
+    | `-BinaryOperator 0x7fcc4c001020 <col:34, col:37> 'typeof ((const int)c)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4b878bc0 <col:34> 'typeof ((const int)c)':'int' lvalue Var 0x7fcc4b878b48 'a6' 'typeof ((const int)c)':'int'
+    |   `-IntegerLiteral 0x7fcc4c001000 <col:37> 'int' 0
+    |-CompoundStmt 0x7fcc4c0011d0 <line:20:3, col:29>
+    | |-DeclStmt 0x7fcc4c001148 <col:5, col:21>
+    | | `-VarDecl 0x7fcc4c0010e8 <col:5, col:19> col:19 used a7 'typeof (0)':'int'
+    | `-BinaryOperator 0x7fcc4c0011a8 <col:23, col:26> 'typeof (0)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c001160 <col:23> 'typeof (0)':'int' lvalue Var 0x7fcc4c0010e8 'a7' 'typeof (0)':'int'
+    |   `-IntegerLiteral 0x7fcc4c001188 <col:26> 'int' 0
+    |-CompoundStmt 0x7fcc4c001360 <line:21:3, col:29>
+    | |-DeclStmt 0x7fcc4c0012d8 <col:5, col:21>
+    | | `-VarDecl 0x7fcc4c001278 <col:5, col:19> col:19 used a8 'typeof (1)':'int'
+    | `-BinaryOperator 0x7fcc4c001338 <col:23, col:26> 'typeof (1)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c0012f0 <col:23> 'typeof (1)':'int' lvalue Var 0x7fcc4c001278 'a8' 'typeof (1)':'int'
+    |   `-IntegerLiteral 0x7fcc4c001318 <col:26> 'int' 0
+    |-CompoundStmt 0x7fcc4c001570 <line:23:3, col:31>
+    | |-DeclStmt 0x7fcc4c0014e8 <col:5, col:23>
+    | | `-VarDecl 0x7fcc4c001488 <col:5, col:21> col:21 used b0 'typeof (n + n)':'int'
+    | `-BinaryOperator 0x7fcc4c001548 <col:25, col:28> 'typeof (n + n)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c001500 <col:25> 'typeof (n + n)':'int' lvalue Var 0x7fcc4c001488 'b0' 'typeof (n + n)':'int'
+    |   `-IntegerLiteral 0x7fcc4c001528 <col:28> 'int' 0
+    |-CompoundStmt 0x7fcc4c001780 <line:24:3, col:31>
+    | |-DeclStmt 0x7fcc4c0016f8 <col:5, col:23>
+    | | `-VarDecl 0x7fcc4c001698 <col:5, col:21> col:21 used b1 'typeof (n + c)':'int'
+    | `-BinaryOperator 0x7fcc4c001758 <col:25, col:28> 'typeof (n + c)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c001710 <col:25> 'typeof (n + c)':'int' lvalue Var 0x7fcc4c001698 'b1' 'typeof (n + c)':'int'
+    |   `-IntegerLiteral 0x7fcc4c001738 <col:28> 'int' 0
+    |-CompoundStmt 0x7fcc4c001990 <line:25:3, col:31>
+    | |-DeclStmt 0x7fcc4c001908 <col:5, col:23>
+    | | `-VarDecl 0x7fcc4c0018a8 <col:5, col:21> col:21 used b2 'typeof (c + n)':'int'
+    | `-BinaryOperator 0x7fcc4c001968 <col:25, col:28> 'typeof (c + n)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c001920 <col:25> 'typeof (c + n)':'int' lvalue Var 0x7fcc4c0018a8 'b2' 'typeof (c + n)':'int'
+    |   `-IntegerLiteral 0x7fcc4c001948 <col:28> 'int' 0
+    |-CompoundStmt 0x7fcc4c001ba0 <line:26:3, col:31>
+    | |-DeclStmt 0x7fcc4c001b18 <col:5, col:23>
+    | | `-VarDecl 0x7fcc4c001ab8 <col:5, col:21> col:21 used b3 'typeof (c + c)':'int'
+    | `-BinaryOperator 0x7fcc4c001b78 <col:25, col:28> 'typeof (c + c)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c001b30 <col:25> 'typeof (c + c)':'int' lvalue Var 0x7fcc4c001ab8 'b3' 'typeof (c + c)':'int'
+    |   `-IntegerLiteral 0x7fcc4c001b58 <col:28> 'int' 0
+    |-CompoundStmt 0x7fcc4c001d90 <line:28:3, col:31>
+    | |-DeclStmt 0x7fcc4c001d08 <col:5, col:23>
+    | | `-VarDecl 0x7fcc4c001ca8 <col:5, col:21> col:21 used c0 'typeof (0 + n)':'int'
+    | `-BinaryOperator 0x7fcc4c001d68 <col:25, col:28> 'typeof (0 + n)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c001d20 <col:25> 'typeof (0 + n)':'int' lvalue Var 0x7fcc4c001ca8 'c0' 'typeof (0 + n)':'int'
+    |   `-IntegerLiteral 0x7fcc4c001d48 <col:28> 'int' 0
+    |-CompoundStmt 0x7fcc4c001f80 <line:29:3, col:31>
+    | |-DeclStmt 0x7fcc4c001ef8 <col:5, col:23>
+    | | `-VarDecl 0x7fcc4c001e98 <col:5, col:21> col:21 used c1 'typeof (0 + c)':'int'
+    | `-BinaryOperator 0x7fcc4c001f58 <col:25, col:28> 'typeof (0 + c)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c001f10 <col:25> 'typeof (0 + c)':'int' lvalue Var 0x7fcc4c001e98 'c1' 'typeof (0 + c)':'int'
+    |   `-IntegerLiteral 0x7fcc4c001f38 <col:28> 'int' 0
+    |-CompoundStmt 0x7fcc4c002580 <line:30:3, col:31>
+    | |-DeclStmt 0x7fcc4c0024f8 <col:5, col:23>
+    | | `-VarDecl 0x7fcc4c002498 <col:5, col:21> col:21 used c2 'typeof (n + 0)':'int'
+    | `-BinaryOperator 0x7fcc4c002558 <col:25, col:28> 'typeof (n + 0)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c002510 <col:25> 'typeof (n + 0)':'int' lvalue Var 0x7fcc4c002498 'c2' 'typeof (n + 0)':'int'
+    |   `-IntegerLiteral 0x7fcc4c002538 <col:28> 'int' 0
+    |-CompoundStmt 0x7fcc4c002770 <line:31:3, col:31>
+    | |-DeclStmt 0x7fcc4c0026e8 <col:5, col:23>
+    | | `-VarDecl 0x7fcc4c002688 <col:5, col:21> col:21 used c3 'typeof (c + 0)':'int'
+    | `-BinaryOperator 0x7fcc4c002748 <col:25, col:28> 'typeof (c + 0)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c002700 <col:25> 'typeof (c + 0)':'int' lvalue Var 0x7fcc4c002688 'c3' 'typeof (c + 0)':'int'
+    |   `-IntegerLiteral 0x7fcc4c002728 <col:28> 'int' 0
+    |-CompoundStmt 0x7fcc4c002960 <line:33:3, col:31>
+    | |-DeclStmt 0x7fcc4c0028d8 <col:5, col:23>
+    | | `-VarDecl 0x7fcc4c002878 <col:5, col:21> col:21 used d0 'typeof (1 + n)':'int'
+    | `-BinaryOperator 0x7fcc4c002938 <col:25, col:28> 'typeof (1 + n)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c0028f0 <col:25> 'typeof (1 + n)':'int' lvalue Var 0x7fcc4c002878 'd0' 'typeof (1 + n)':'int'
+    |   `-IntegerLiteral 0x7fcc4c002918 <col:28> 'int' 0
+    |-CompoundStmt 0x7fcc4c002b50 <line:34:3, col:31>
+    | |-DeclStmt 0x7fcc4c002ac8 <col:5, col:23>
+    | | `-VarDecl 0x7fcc4c002a68 <col:5, col:21> col:21 used d1 'typeof (1 + c)':'int'
+    | `-BinaryOperator 0x7fcc4c002b28 <col:25, col:28> 'typeof (1 + c)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c002ae0 <col:25> 'typeof (1 + c)':'int' lvalue Var 0x7fcc4c002a68 'd1' 'typeof (1 + c)':'int'
+    |   `-IntegerLiteral 0x7fcc4c002b08 <col:28> 'int' 0
+    |-CompoundStmt 0x7fcc4c002d40 <line:35:3, col:31>
+    | |-DeclStmt 0x7fcc4c002cb8 <col:5, col:23>
+    | | `-VarDecl 0x7fcc4c002c58 <col:5, col:21> col:21 used d2 'typeof (n + 1)':'int'
+    | `-BinaryOperator 0x7fcc4c002d18 <col:25, col:28> 'typeof (n + 1)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c002cd0 <col:25> 'typeof (n + 1)':'int' lvalue Var 0x7fcc4c002c58 'd2' 'typeof (n + 1)':'int'
+    |   `-IntegerLiteral 0x7fcc4c002cf8 <col:28> 'int' 0
+    |-CompoundStmt 0x7fcc4c002f30 <line:36:3, col:31>
+    | |-DeclStmt 0x7fcc4c002ea8 <col:5, col:23>
+    | | `-VarDecl 0x7fcc4c002e48 <col:5, col:21> col:21 used d3 'typeof (c + 1)':'int'
+    | `-BinaryOperator 0x7fcc4c002f08 <col:25, col:28> 'typeof (c + 1)':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c002ec0 <col:25> 'typeof (c + 1)':'int' lvalue Var 0x7fcc4c002e48 'd3' 'typeof (c + 1)':'int'
+    |   `-IntegerLiteral 0x7fcc4c002ee8 <col:28> 'int' 0
+    |-CompoundStmt 0x7fcc4c003200 <line:38:3, col:45>
+    | |-DeclStmt 0x7fcc4c003178 <col:5, col:37>
+    | | `-VarDecl 0x7fcc4c003118 <col:5, col:35> col:35 used e0 'typeof (((int)n) + ((int)n))':'int'
+    | `-BinaryOperator 0x7fcc4c0031d8 <col:39, col:42> 'typeof (((int)n) + ((int)n))':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c003190 <col:39> 'typeof (((int)n) + ((int)n))':'int' lvalue Var 0x7fcc4c003118 'e0' 'typeof (((int)n) + ((int)n))':'int'
+    |   `-IntegerLiteral 0x7fcc4c0031b8 <col:42> 'int' 0
+    |-CompoundStmt 0x7fcc4c0034e8 <line:39:3, col:45>
+    | |-DeclStmt 0x7fcc4c003460 <col:5, col:37>
+    | | `-VarDecl 0x7fcc4c003400 <col:5, col:35> col:35 used e1 'typeof (((int)n) + ((int)c))':'int'
+    | `-BinaryOperator 0x7fcc4c0034c0 <col:39, col:42> 'typeof (((int)n) + ((int)c))':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c003478 <col:39> 'typeof (((int)n) + ((int)c))':'int' lvalue Var 0x7fcc4c003400 'e1' 'typeof (((int)n) + ((int)c))':'int'
+    |   `-IntegerLiteral 0x7fcc4c0034a0 <col:42> 'int' 0
+    |-CompoundStmt 0x7fcc4c0037c0 <line:40:3, col:45>
+    | |-DeclStmt 0x7fcc4c003738 <col:5, col:37>
+    | | `-VarDecl 0x7fcc4c0036d8 <col:5, col:35> col:35 used e2 'typeof (((int)c) + ((int)n))':'int'
+    | `-BinaryOperator 0x7fcc4c003798 <col:39, col:42> 'typeof (((int)c) + ((int)n))':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c003750 <col:39> 'typeof (((int)c) + ((int)n))':'int' lvalue Var 0x7fcc4c0036d8 'e2' 'typeof (((int)c) + ((int)n))':'int'
+    |   `-IntegerLiteral 0x7fcc4c003778 <col:42> 'int' 0
+    |-CompoundStmt 0x7fcc4c003a90 <line:41:3, col:45>
+    | |-DeclStmt 0x7fcc4c003a08 <col:5, col:37>
+    | | `-VarDecl 0x7fcc4c0039a8 <col:5, col:35> col:35 used e3 'typeof (((int)c) + ((int)c))':'int'
+    | `-BinaryOperator 0x7fcc4c003a68 <col:39, col:42> 'typeof (((int)c) + ((int)c))':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c003a20 <col:39> 'typeof (((int)c) + ((int)c))':'int' lvalue Var 0x7fcc4c0039a8 'e3' 'typeof (((int)c) + ((int)c))':'int'
+    |   `-IntegerLiteral 0x7fcc4c003a48 <col:42> 'int' 0
+    |-CompoundStmt 0x7fcc4c003d60 <line:43:3, col:57>
+    | |-DeclStmt 0x7fcc4c003cd8 <col:5, col:49>
+    | | `-VarDecl 0x7fcc4c003c78 <col:5, col:47> col:47 used f0 'typeof (((const int)n) + ((const int)n))':'int'
+    | `-BinaryOperator 0x7fcc4c003d38 <col:51, col:54> 'typeof (((const int)n) + ((const int)n))':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c003cf0 <col:51> 'typeof (((const int)n) + ((const int)n))':'int' lvalue Var 0x7fcc4c003c78 'f0' 'typeof (((const int)n) + ((const int)n))':'int'
+    |   `-IntegerLiteral 0x7fcc4c003d18 <col:54> 'int' 0
+    |-CompoundStmt 0x7fcc4c004030 <line:44:3, col:57>
+    | |-DeclStmt 0x7fcc4c003fa8 <col:5, col:49>
+    | | `-VarDecl 0x7fcc4c003f48 <col:5, col:47> col:47 used f1 'typeof (((const int)n) + ((const int)c))':'int'
+    | `-BinaryOperator 0x7fcc4c004008 <col:51, col:54> 'typeof (((const int)n) + ((const int)c))':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c003fc0 <col:51> 'typeof (((const int)n) + ((const int)c))':'int' lvalue Var 0x7fcc4c003f48 'f1' 'typeof (((const int)n) + ((const int)c))':'int'
+    |   `-IntegerLiteral 0x7fcc4c003fe8 <col:54> 'int' 0
+    |-CompoundStmt 0x7fcc4c004300 <line:45:3, col:57>
+    | |-DeclStmt 0x7fcc4c004278 <col:5, col:49>
+    | | `-VarDecl 0x7fcc4c004218 <col:5, col:47> col:47 used f2 'typeof (((const int)c) + ((const int)n))':'int'
+    | `-BinaryOperator 0x7fcc4c0042d8 <col:51, col:54> 'typeof (((const int)c) + ((const int)n))':'int' '='
+    |   |-DeclRefExpr 0x7fcc4c004290 <col:51> 'typeof (((const int)c) + ((const int)n))':'int' lvalue Var 0x7fcc4c004218 'f2' 'typeof (((const int)c) + ((const int)n))':'int'
+    |   `-IntegerLiteral 0x7fcc4c0042b8 <col:54> 'int' 0
+    `-CompoundStmt 0x7fcc4c0045e0 <line:46:3, col:57>
+      |-DeclStmt 0x7fcc4c004558 <col:5, col:49>
+      | `-VarDecl 0x7fcc4c0044f8 <col:5, col:47> col:47 used f3 'typeof (((const int)c) + ((const int)c))':'int'
+      `-BinaryOperator 0x7fcc4c0045b8 <col:51, col:54> 'typeof (((const int)c) + ((const int)c))':'int' '='
+        |-DeclRefExpr 0x7fcc4c004570 <col:51> 'typeof (((const int)c) + ((const int)c))':'int' lvalue Var 0x7fcc4c0044f8 'f3' 'typeof (((const int)c) + ((const int)c))':'int'
+        `-IntegerLiteral 0x7fcc4c004598 <col:54> 'int' 0

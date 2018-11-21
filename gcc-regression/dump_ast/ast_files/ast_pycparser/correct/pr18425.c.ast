@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: _M_allocate, [], [], []
+    FuncDecl: 
+      PtrDecl: []
+        PtrDecl: []
+          TypeDecl: _M_allocate, []
+            IdentifierType: ['char']
+  FuncDef: 
+    Decl: _M_fill_insert, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: __n, [], [], []
+            TypeDecl: __n, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: _M_fill_insert, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: __new_start, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: __new_start, []
+              IdentifierType: ['char']
+        FuncCall: 
+          ID: _M_allocate
+      Decl: __tmp, [], [], []
+        PtrDecl: []
+          TypeDecl: __tmp, []
+            IdentifierType: ['char']
+        Constant: int, 0
+      For: 
+        BinaryOp: >
+          ID: __n
+          Constant: int, 0
+        ExprList: 
+          UnaryOp: --
+            ID: __n
+          UnaryOp: ++
+            ID: __new_start
+        Assignment: =
+          UnaryOp: *
+            ID: __new_start
+          ID: __tmp

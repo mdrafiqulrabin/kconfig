@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7fba6f8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fba6f826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fba6f826740 '__int128'
+|-TypedefDecl 0x7fba6f826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fba6f826760 'unsigned __int128'
+|-TypedefDecl 0x7fba6f826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fba6f826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fba6f826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fba6f826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fba6f826dc0 'char *'
+|   `-BuiltinType 0x7fba6f826560 'char'
+|-TypedefDecl 0x7fba6f8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fba6f827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fba6f826ee0 'struct __va_list_tag'
+|     `-Record 0x7fba6f826e58 '__va_list_tag'
+|-VarDecl 0x7fba6f827138 <c_files/pr64511.c:5:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fba6f877400 <col:1, col:8> col:8 used c 'int'
+|-VarDecl 0x7fba6f8774c0 <line:6:1, col:15> col:15 used b 'int *volatile'
+|-FunctionDecl 0x7fba6f877600 <line:8:1, line:17:1> line:9:1 used foo 'void (int)'
+| |-ParmVarDecl 0x7fba6f877538 <col:6, col:10> col:10 used p 'int'
+| `-CompoundStmt 0x7fba6f877b20 <line:10:1, line:17:1>
+|   |-DeclStmt 0x7fba6f877718 <line:11:3, col:8>
+|   | `-VarDecl 0x7fba6f8776b8 <col:3, col:7> col:7 used d 'int'
+|   |-DeclStmt 0x7fba6f8777f0 <line:12:3, col:14>
+|   | `-VarDecl 0x7fba6f877748 <col:3, col:13> col:8 used e 'int *' cinit
+|   |   `-UnaryOperator 0x7fba6f8777d0 <col:12, col:13> 'int *' prefix '&'
+|   |     `-DeclRefExpr 0x7fba6f8777a8 <col:13> 'int' lvalue Var 0x7fba6f827138 'a' 'int'
+|   |-BinaryOperator 0x7fba6f8779e0 <line:13:3, col:26> 'int' '='
+|   | |-DeclRefExpr 0x7fba6f877808 <col:3> 'int' lvalue Var 0x7fba6f8776b8 'd' 'int'
+|   | `-BinaryOperator 0x7fba6f8779b8 <col:7, col:26> 'int' '!='
+|   |   |-ParenExpr 0x7fba6f877978 <col:7, col:21> 'int'
+|   |   | `-BinaryOperator 0x7fba6f877950 <col:8, col:20> 'int' '&'
+|   |   |   |-ParenExpr 0x7fba6f8778b8 <col:8, col:15> 'int'
+|   |   |   | `-BinaryOperator 0x7fba6f877890 <col:9, col:14> 'int' '=='
+|   |   |   |   |-ImplicitCastExpr 0x7fba6f877878 <col:9> 'int' <LValueToRValue>
+|   |   |   |   | `-DeclRefExpr 0x7fba6f877830 <col:9> 'int' lvalue ParmVar 0x7fba6f877538 'p' 'int'
+|   |   |   |   `-IntegerLiteral 0x7fba6f877858 <col:14> 'int' 0
+|   |   |   `-ImplicitCastExpr 0x7fba6f877938 <col:19, col:20> 'int' <LValueToRValue>
+|   |   |     `-UnaryOperator 0x7fba6f877918 <col:19, col:20> 'int' lvalue prefix '*'
+|   |   |       `-ImplicitCastExpr 0x7fba6f877900 <col:20> 'int *' <LValueToRValue>
+|   |   |         `-DeclRefExpr 0x7fba6f8778d8 <col:20> 'int *' lvalue Var 0x7fba6f877748 'e' 'int *'
+|   |   `-IntegerLiteral 0x7fba6f877998 <col:26> 'int' 0
+|   |-BinaryOperator 0x7fba6f877a70 <line:14:3, col:7> 'int *' '='
+|   | |-DeclRefExpr 0x7fba6f877a08 <col:3> 'int *volatile' lvalue Var 0x7fba6f8774c0 'b' 'int *volatile'
+|   | `-ImplicitCastExpr 0x7fba6f877a58 <col:7> 'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fba6f877a30 <col:7> 'int *' lvalue Var 0x7fba6f877748 'e' 'int *'
+|   `-ForStmt 0x7fba6f877ae8 <line:15:3, line:16:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fba6f877ac0 <line:15:10> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fba6f877a98 <col:10> 'int' lvalue Var 0x7fba6f877400 'c' 'int'
+|     |-<<<NULL>>>
+|     `-NullStmt 0x7fba6f877ad8 <line:16:5>
+`-FunctionDecl 0x7fba6f877c20 <line:19:1, line:23:1> line:20:1 bar 'void (void)'
+  `-CompoundStmt 0x7fba6f877d70 <line:21:1, line:23:1>
+    `-CallExpr 0x7fba6f877d40 <line:22:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fba6f877d28 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fba6f877cb8 <col:3> 'void (int)' Function 0x7fba6f877600 'foo' 'void (int)'
+      `-IntegerLiteral 0x7fba6f877ce0 <col:8> 'int' 1

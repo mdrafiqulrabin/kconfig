@@ -1,0 +1,71 @@
+c_files/pr67580.c:11:3: error: must use 'struct' tag to refer to type 'S'
+  S s; /* { dg-error "unknown type name .S.; use .struct. keyword to refer to the type" } */
+  ^
+  struct 
+c_files/pr67580.c:12:3: error: must use 'union' tag to refer to type 'U'
+  U u; /* { dg-error "unknown type name .U.; use .union. keyword to refer to the type" } */
+  ^
+  union 
+c_files/pr67580.c:13:3: error: must use 'enum' tag to refer to type 'E'
+  E e; /* { dg-error "unknown type name .E.; use .enum. keyword to refer to the type" } */
+  ^
+  enum 
+c_files/pr67580.c:22:3: error: must use 'struct' tag to refer to type 'T'
+  T t; /* { dg-error "unknown type name .T.; use .struct. keyword to refer to the type" } */
+  ^
+  struct 
+c_files/pr67580.c:23:3: error: must use 'union' tag to refer to type 'V'
+  V v; /* { dg-error "unknown type name .V.; use .union. keyword to refer to the type" } */
+  ^
+  union 
+c_files/pr67580.c:24:3: error: must use 'enum' tag to refer to type 'F'
+  F f; /* { dg-error "unknown type name .F.; use .enum. keyword to refer to the type" } */
+  ^
+  enum 
+6 errors generated.
+TranslationUnitDecl 0x7fcc3d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcc3d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcc3d026740 '__int128'
+|-TypedefDecl 0x7fcc3d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcc3d026760 'unsigned __int128'
+|-TypedefDecl 0x7fcc3d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcc3d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcc3d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcc3d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcc3d026dc0 'char *'
+|   `-BuiltinType 0x7fcc3d026560 'char'
+|-TypedefDecl 0x7fcc3d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcc3d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcc3d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fcc3d026e58 '__va_list_tag'
+|-RecordDecl 0x7fcc3d027120 <c_files/pr67580.c:4:1, col:19> col:8 referenced struct S definition
+| `-FieldDecl 0x7fcc3d825a00 <col:12, col:16> col:16 s 'int'
+|-RecordDecl 0x7fcc3d825a48 <line:5:1, col:18> col:7 referenced union U definition
+| `-FieldDecl 0x7fcc3d825b08 <col:11, col:15> col:15 s 'int'
+|-EnumDecl 0x7fcc3d825b50 <line:6:1, col:12> col:6 referenced E
+| `-EnumConstantDecl 0x7fcc3d825c10 <col:10> col:10 A 'int'
+|-FunctionDecl 0x7fcc3d825d20 <line:8:1, line:14:1> line:9:1 f 'void (void)'
+| `-CompoundStmt 0x7fcc3d825f90 <line:10:1, line:14:1>
+|   |-DeclStmt 0x7fcc3d825e68 <line:11:3, col:6>
+|   | `-VarDecl 0x7fcc3d825e08 <col:3, col:5> col:5 s 'struct S'
+|   |-DeclStmt 0x7fcc3d825ef0 <line:12:3, col:6>
+|   | `-VarDecl 0x7fcc3d825e90 <col:3, col:5> col:5 u 'union U'
+|   `-DeclStmt 0x7fcc3d825f78 <line:13:3, col:6>
+|     `-VarDecl 0x7fcc3d825f18 <col:3, col:5> col:5 e 'enum E'
+`-FunctionDecl 0x7fcc3d826050 <line:16:1, line:25:1> line:17:1 g 'void (void)'
+  `-CompoundStmt 0x7fcc3d8265d8 <line:18:1, line:25:1>
+    |-DeclStmt 0x7fcc3d8261f0 <line:19:3, col:22>
+    | `-RecordDecl 0x7fcc3d8260e8 <col:3, col:21> col:10 referenced struct T definition
+    |   `-FieldDecl 0x7fcc3d8261a8 <col:14, col:18> col:18 i 'int'
+    |-DeclStmt 0x7fcc3d826310 <line:20:3, col:21>
+    | `-RecordDecl 0x7fcc3d826208 <col:3, col:20> col:9 referenced union V definition
+    |   `-FieldDecl 0x7fcc3d8262c8 <col:13, col:17> col:17 i 'int'
+    |-DeclStmt 0x7fcc3d826428 <line:21:3, col:15>
+    | `-EnumDecl 0x7fcc3d826328 <col:3, col:14> col:8 referenced F
+    |   `-EnumConstantDecl 0x7fcc3d8263e0 <col:12> col:12 J 'int'
+    |-DeclStmt 0x7fcc3d8264b0 <line:22:3, col:6>
+    | `-VarDecl 0x7fcc3d826450 <col:3, col:5> col:5 t 'struct T'
+    |-DeclStmt 0x7fcc3d826538 <line:23:3, col:6>
+    | `-VarDecl 0x7fcc3d8264d8 <col:3, col:5> col:5 v 'union V'
+    `-DeclStmt 0x7fcc3d8265c0 <line:24:3, col:6>
+      `-VarDecl 0x7fcc3d826560 <col:3, col:5> col:5 f 'enum F'

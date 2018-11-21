@@ -1,0 +1,33 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: a
+        FuncCall: 
+          ID: __builtin_log
+          ExprList: 
+            Constant: float, 2.f
+      Assignment: =
+        ID: b
+        FuncCall: 
+          ID: __builtin_lrint
+          ExprList: 
+            ID: x
+      Return: 
+        BinaryOp: +
+          ID: a
+          ID: b

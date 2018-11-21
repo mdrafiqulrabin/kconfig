@@ -1,0 +1,65 @@
+c_files/pr79538.c:12:3: error: use of unknown builtin '__builtin_sprintf' [-Wimplicit-function-declaration]
+  __builtin_sprintf (d, "%s", s);      /* { dg-warning ".__builtin_sprintf. may write a terminating nul past the end of the destination" } */
+  ^
+1 error generated.
+TranslationUnitDecl 0x7f9ae38264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9ae3826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9ae3826740 '__int128'
+|-TypedefDecl 0x7f9ae3826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9ae3826760 'unsigned __int128'
+|-TypedefDecl 0x7f9ae3826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9ae3826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9ae3826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9ae3826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9ae3826dc0 'char *'
+|   `-BuiltinType 0x7f9ae3826560 'char'
+|-TypedefDecl 0x7f9ae38270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9ae3827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9ae3826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9ae3826e58 '__va_list_tag'
+|-VarDecl 0x7f9ae3827198 <c_files/pr79538.c:5:1, col:10> col:6 used a3 'char [3]'
+|-VarDecl 0x7f9ae4025ab8 <line:6:1, col:10> col:6 used a4 'char [4]'
+|-VarDecl 0x7f9ae4025b58 <line:7:1, col:9> col:6 used d 'char [3]'
+|-FunctionDecl 0x7f9ae4025c90 <line:9:1, line:14:1> line:9:6 g 'void (int)'
+| |-ParmVarDecl 0x7f9ae4025bd0 <col:9, col:13> col:13 used i 'int'
+| `-CompoundStmt 0x7f9ae4026260 <line:10:1, line:14:1>
+|   |-DeclStmt 0x7f9ae4025fb8 <line:11:3, col:34>
+|   | `-VarDecl 0x7f9ae4025d48 <col:3, col:32> col:15 used s 'const char *' cinit
+|   |   `-ImplicitCastExpr 0x7f9ae4025fa0 <col:19, col:32> 'const char *' <BitCast>
+|   |     `-ConditionalOperator 0x7f9ae4025f70 <col:19, col:32> 'char *'
+|   |       |-BinaryOperator 0x7f9ae4025e08 <col:19, col:23> 'int' '<'
+|   |       | |-ImplicitCastExpr 0x7f9ae4025df0 <col:19> 'int' <LValueToRValue>
+|   |       | | `-DeclRefExpr 0x7f9ae4025da8 <col:19> 'int' lvalue ParmVar 0x7f9ae4025bd0 'i' 'int'
+|   |       | `-IntegerLiteral 0x7f9ae4025dd0 <col:23> 'int' 0
+|   |       |-ImplicitCastExpr 0x7f9ae4025e80 <col:27> 'char *' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7f9ae4025e30 <col:27> 'char [3]' lvalue Var 0x7f9ae3827198 'a3' 'char [3]'
+|   |       `-ImplicitCastExpr 0x7f9ae4025e98 <col:32> 'char *' <ArrayToPointerDecay>
+|   |         `-DeclRefExpr 0x7f9ae4025e58 <col:32> 'char [4]' lvalue Var 0x7f9ae4025ab8 'a4' 'char [4]'
+|   |-CallExpr 0x7f9ae40261c0 <line:12:3, col:32> 'int'
+|   | |-ImplicitCastExpr 0x7f9ae40261a8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f9ae40260d8 <col:3> 'int ()' Function 0x7f9ae4026040 '__builtin_sprintf' 'int ()'
+|   | |-ImplicitCastExpr 0x7f9ae4026200 <col:22> 'char *' <ArrayToPointerDecay>
+|   | | `-DeclRefExpr 0x7f9ae4026100 <col:22> 'char [3]' lvalue Var 0x7f9ae4025b58 'd' 'char [3]'
+|   | |-ImplicitCastExpr 0x7f9ae4026218 <col:25> 'char *' <ArrayToPointerDecay>
+|   | | `-StringLiteral 0x7f9ae4026128 <col:25> 'char [3]' lvalue "%s"
+|   | `-ImplicitCastExpr 0x7f9ae4026230 <col:31> 'const char *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f9ae4026158 <col:31> 'const char *' lvalue Var 0x7f9ae4025d48 's' 'const char *'
+|   `-ReturnStmt 0x7f9ae4026248 <line:13:3>
+|-FunctionDecl 0x7f9ae4026040 <<invalid sloc>> line:12:3 implicit used __builtin_sprintf 'int ()'
+`-FunctionDecl 0x7f9ae40262d8 <line:16:1, line:22:1> line:16:6 f 'void ()'
+  `-CompoundStmt 0x7f9ae40266c0 <line:17:1, line:22:1>
+    |-DeclStmt 0x7f9ae4026410 <line:18:3, col:14>
+    | `-VarDecl 0x7f9ae40263b0 <col:3, col:13> col:8 used des 'char [3]'
+    |-DeclStmt 0x7f9ae4026548 <line:19:3, col:22>
+    | `-VarDecl 0x7f9ae4026478 <col:3, col:16> col:8 used src 'char [5]' cinit
+    |   `-StringLiteral 0x7f9ae4026518 <col:16> 'char [5]' lvalue "abcd"
+    |-CallExpr 0x7f9ae4026620 <line:20:3, col:36> 'int'
+    | |-ImplicitCastExpr 0x7f9ae4026608 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f9ae4026560 <col:3> 'int ()' Function 0x7f9ae4026040 '__builtin_sprintf' 'int ()'
+    | |-ImplicitCastExpr 0x7f9ae4026660 <col:22> 'char *' <ArrayToPointerDecay>
+    | | `-DeclRefExpr 0x7f9ae4026588 <col:22> 'char [3]' lvalue Var 0x7f9ae40263b0 'des' 'char [3]'
+    | |-ImplicitCastExpr 0x7f9ae4026678 <col:27> 'char *' <ArrayToPointerDecay>
+    | | `-StringLiteral 0x7f9ae40265b0 <col:27> 'char [3]' lvalue "%s"
+    | `-ImplicitCastExpr 0x7f9ae4026690 <col:33> 'char *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7f9ae40265e0 <col:33> 'char [5]' lvalue Var 0x7f9ae4026478 'src' 'char [5]'
+    `-ReturnStmt 0x7f9ae40266a8 <line:21:3>

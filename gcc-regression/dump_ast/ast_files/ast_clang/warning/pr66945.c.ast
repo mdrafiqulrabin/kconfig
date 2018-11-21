@@ -1,0 +1,89 @@
+c_files/pr66945.c:9:14: warning: remainder by zero is undefined [-Wdivision-by-zero]
+    else if(b%0<b?:b) /* { dg-warning "division by zero" } */
+             ^~
+1 warning generated.
+TranslationUnitDecl 0x7f8b048264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8b04826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8b04826740 '__int128'
+|-TypedefDecl 0x7f8b04826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8b04826760 'unsigned __int128'
+|-TypedefDecl 0x7f8b04826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8b04826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8b04826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8b04826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8b04826dc0 'char *'
+|   `-BuiltinType 0x7f8b04826560 'char'
+|-TypedefDecl 0x7f8b048270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8b04827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8b04826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8b04826e58 '__va_list_tag'
+|-VarDecl 0x7f8b04827138 <c_files/pr66945.c:3:1, col:10> col:10 used b 'unsigned int'
+`-FunctionDecl 0x7f8b04877448 <line:4:1, line:12:1> line:4:6 f 'void ()'
+  `-CompoundStmt 0x7f8b04877920 <line:5:1, line:12:1>
+    `-ForStmt 0x7f8b048778e8 <line:6:3, line:11:2>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-IfStmt 0x7f8b048778b0 <line:7:5, line:11:2>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-BinaryConditionalOperator 0x7f8b04877620 <line:7:8, col:16> 'unsigned int'
+        | |-UnaryOperator 0x7f8b04877520 <col:8, col:9> 'int' prefix '!'
+        | | `-ImplicitCastExpr 0x7f8b04877508 <col:9> 'unsigned int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7f8b048774e0 <col:9> 'unsigned int' lvalue Var 0x7f8b04827138 'b' 'unsigned int'
+        | |-OpaqueValueExpr 0x7f8b048775e8 <col:8, col:9> 'int'
+        | | `-UnaryOperator 0x7f8b04877520 <col:8, col:9> 'int' prefix '!'
+        | |   `-ImplicitCastExpr 0x7f8b04877508 <col:9> 'unsigned int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7f8b048774e0 <col:9> 'unsigned int' lvalue Var 0x7f8b04827138 'b' 'unsigned int'
+        | |-ImplicitCastExpr 0x7f8b04877608 <col:8, col:9> 'unsigned int' <IntegralCast>
+        | | `-OpaqueValueExpr 0x7f8b048775e8 <col:8, col:9> 'int'
+        | |   `-UnaryOperator 0x7f8b04877520 <col:8, col:9> 'int' prefix '!'
+        | |     `-ImplicitCastExpr 0x7f8b04877508 <col:9> 'unsigned int' <LValueToRValue>
+        | |       `-DeclRefExpr 0x7f8b048774e0 <col:9> 'unsigned int' lvalue Var 0x7f8b04827138 'b' 'unsigned int'
+        | `-ParenExpr 0x7f8b048775c8 <col:12, col:16> 'unsigned int'
+        |   `-BinaryOperator 0x7f8b048775a0 <col:13, col:15> 'unsigned int' '='
+        |     |-DeclRefExpr 0x7f8b04877540 <col:13> 'unsigned int' lvalue Var 0x7f8b04827138 'b' 'unsigned int'
+        |     `-ImplicitCastExpr 0x7f8b04877588 <col:15> 'unsigned int' <IntegralCast>
+        |       `-IntegerLiteral 0x7f8b04877568 <col:15> 'int' 0
+        |-NullStmt 0x7f8b04877660 <line:8:7>
+        `-IfStmt 0x7f8b04877878 <line:9:10, line:11:2>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-BinaryConditionalOperator 0x7f8b048777f0 <line:9:13, col:20> 'unsigned int'
+          | |-BinaryOperator 0x7f8b04877750 <col:13, col:17> 'int' '<'
+          | | |-BinaryOperator 0x7f8b048776e8 <col:13, col:15> 'unsigned int' '%'
+          | | | |-ImplicitCastExpr 0x7f8b048776b8 <col:13> 'unsigned int' <LValueToRValue>
+          | | | | `-DeclRefExpr 0x7f8b04877670 <col:13> 'unsigned int' lvalue Var 0x7f8b04827138 'b' 'unsigned int'
+          | | | `-ImplicitCastExpr 0x7f8b048776d0 <col:15> 'unsigned int' <IntegralCast>
+          | | |   `-IntegerLiteral 0x7f8b04877698 <col:15> 'int' 0
+          | | `-ImplicitCastExpr 0x7f8b04877738 <col:17> 'unsigned int' <LValueToRValue>
+          | |   `-DeclRefExpr 0x7f8b04877710 <col:17> 'unsigned int' lvalue Var 0x7f8b04827138 'b' 'unsigned int'
+          | |-OpaqueValueExpr 0x7f8b048777a0 <col:13, col:17> 'int'
+          | | `-BinaryOperator 0x7f8b04877750 <col:13, col:17> 'int' '<'
+          | |   |-BinaryOperator 0x7f8b048776e8 <col:13, col:15> 'unsigned int' '%'
+          | |   | |-ImplicitCastExpr 0x7f8b048776b8 <col:13> 'unsigned int' <LValueToRValue>
+          | |   | | `-DeclRefExpr 0x7f8b04877670 <col:13> 'unsigned int' lvalue Var 0x7f8b04827138 'b' 'unsigned int'
+          | |   | `-ImplicitCastExpr 0x7f8b048776d0 <col:15> 'unsigned int' <IntegralCast>
+          | |   |   `-IntegerLiteral 0x7f8b04877698 <col:15> 'int' 0
+          | |   `-ImplicitCastExpr 0x7f8b04877738 <col:17> 'unsigned int' <LValueToRValue>
+          | |     `-DeclRefExpr 0x7f8b04877710 <col:17> 'unsigned int' lvalue Var 0x7f8b04827138 'b' 'unsigned int'
+          | |-ImplicitCastExpr 0x7f8b048777d8 <col:13, col:17> 'unsigned int' <IntegralCast>
+          | | `-OpaqueValueExpr 0x7f8b048777a0 <col:13, col:17> 'int'
+          | |   `-BinaryOperator 0x7f8b04877750 <col:13, col:17> 'int' '<'
+          | |     |-BinaryOperator 0x7f8b048776e8 <col:13, col:15> 'unsigned int' '%'
+          | |     | |-ImplicitCastExpr 0x7f8b048776b8 <col:13> 'unsigned int' <LValueToRValue>
+          | |     | | `-DeclRefExpr 0x7f8b04877670 <col:13> 'unsigned int' lvalue Var 0x7f8b04827138 'b' 'unsigned int'
+          | |     | `-ImplicitCastExpr 0x7f8b048776d0 <col:15> 'unsigned int' <IntegralCast>
+          | |     |   `-IntegerLiteral 0x7f8b04877698 <col:15> 'int' 0
+          | |     `-ImplicitCastExpr 0x7f8b04877738 <col:17> 'unsigned int' <LValueToRValue>
+          | |       `-DeclRefExpr 0x7f8b04877710 <col:17> 'unsigned int' lvalue Var 0x7f8b04827138 'b' 'unsigned int'
+          | `-ImplicitCastExpr 0x7f8b048777c0 <col:20> 'unsigned int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7f8b04877778 <col:20> 'unsigned int' lvalue Var 0x7f8b04827138 'b' 'unsigned int'
+          |-ForStmt 0x7f8b04877840 <line:10:7, line:11:2>
+          | |-<<<NULL>>>
+          | |-<<<NULL>>>
+          | |-<<<NULL>>>
+          | |-<<<NULL>>>
+          | `-NullStmt 0x7f8b04877830 <col:2>
+          `-<<<NULL>>>

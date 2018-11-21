@@ -1,0 +1,543 @@
+TranslationUnitDecl 0x7fd5ba0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd5ba026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd5ba026740 '__int128'
+|-TypedefDecl 0x7fd5ba026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd5ba026760 'unsigned __int128'
+|-TypedefDecl 0x7fd5ba026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd5ba026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd5ba026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd5ba026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd5ba026dc0 'char *'
+|   `-BuiltinType 0x7fd5ba026560 'char'
+|-TypedefDecl 0x7fd5ba0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd5ba027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd5ba026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd5ba026e58 '__va_list_tag'
+|-TypedefDecl 0x7fd5ba027178 <c_files/pr66806.c:5:1, col:23> col:23 referenced V64QImode '__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char'
+| `-VectorType 0x7fd5ba027140 '__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char' 64
+|   `-BuiltinType 0x7fd5ba026620 'unsigned char'
+|-TypedefDecl 0x7fd5ba826a38 <line:6:1, col:24> col:24 referenced V32HImode '__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short'
+| `-VectorType 0x7fd5ba826a00 '__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short' 32
+|   `-BuiltinType 0x7fd5ba026640 'unsigned short'
+|-TypedefDecl 0x7fd5ba826ae8 <line:7:1, col:22> col:22 referenced V16SImode '__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7fd5ba826ab0 '__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int' 16
+|   `-BuiltinType 0x7fd5ba026660 'unsigned int'
+|-TypedefDecl 0x7fd5ba826b98 <line:8:1, col:28> col:28 referenced V8DImode '__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long'
+| `-VectorType 0x7fd5ba826b60 '__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long' 8
+|   `-BuiltinType 0x7fd5ba0266a0 'unsigned long long'
+|-TypedefDecl 0x7fd5ba826c48 <line:9:1, col:15> col:15 referenced V16SFmode '__attribute__((__vector_size__(16 * sizeof(float)))) float'
+| `-VectorType 0x7fd5ba826c10 '__attribute__((__vector_size__(16 * sizeof(float)))) float' 16
+|   `-BuiltinType 0x7fd5ba0266c0 'float'
+|-TypedefDecl 0x7fd5ba826cf8 <line:10:1, col:16> col:16 referenced V8DFmode '__attribute__((__vector_size__(8 * sizeof(double)))) double'
+| `-VectorType 0x7fd5ba826cc0 '__attribute__((__vector_size__(8 * sizeof(double)))) double' 8
+|   `-BuiltinType 0x7fd5ba0266e0 'double'
+|-TypedefDecl 0x7fd5ba826da8 <line:13:1, col:23> col:23 referenced V32QImode '__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char'
+| `-VectorType 0x7fd5ba826d70 '__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char' 32
+|   `-BuiltinType 0x7fd5ba026620 'unsigned char'
+|-TypedefDecl 0x7fd5ba826e58 <line:14:1, col:24> col:24 referenced V16HImode '__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short'
+| `-VectorType 0x7fd5ba826e20 '__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short' 16
+|   `-BuiltinType 0x7fd5ba026640 'unsigned short'
+|-TypedefDecl 0x7fd5ba826f08 <line:15:1, col:22> col:22 referenced V8SImode '__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7fd5ba826ed0 '__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' 8
+|   `-BuiltinType 0x7fd5ba026660 'unsigned int'
+|-TypedefDecl 0x7fd5ba826fb8 <line:16:1, col:28> col:28 referenced V4DImode '__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long'
+| `-VectorType 0x7fd5ba826f80 '__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long' 4
+|   `-BuiltinType 0x7fd5ba0266a0 'unsigned long long'
+|-TypedefDecl 0x7fd5ba827068 <line:17:1, col:15> col:15 referenced V8SFmode '__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| `-VectorType 0x7fd5ba827030 '__attribute__((__vector_size__(8 * sizeof(float)))) float' 8
+|   `-BuiltinType 0x7fd5ba0266c0 'float'
+|-TypedefDecl 0x7fd5ba827118 <line:18:1, col:16> col:16 referenced V4DFmode '__attribute__((__vector_size__(4 * sizeof(double)))) double'
+| `-VectorType 0x7fd5ba8270e0 '__attribute__((__vector_size__(4 * sizeof(double)))) double' 4
+|   `-BuiltinType 0x7fd5ba0266e0 'double'
+|-TypedefDecl 0x7fd5ba8271c8 <line:21:1, col:23> col:23 referenced V16QImode '__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char'
+| `-VectorType 0x7fd5ba827190 '__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char' 16
+|   `-BuiltinType 0x7fd5ba026620 'unsigned char'
+|-TypedefDecl 0x7fd5ba827278 <line:22:1, col:24> col:24 referenced V8HImode '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+| `-VectorType 0x7fd5ba827240 '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' 8
+|   `-BuiltinType 0x7fd5ba026640 'unsigned short'
+|-TypedefDecl 0x7fd5ba827328 <line:23:1, col:22> col:22 referenced V4SImode '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7fd5ba8272f0 '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' 4
+|   `-BuiltinType 0x7fd5ba026660 'unsigned int'
+|-TypedefDecl 0x7fd5ba8273d8 <line:24:1, col:28> col:28 referenced V2DImode '__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long'
+| `-VectorType 0x7fd5ba8273a0 '__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long' 2
+|   `-BuiltinType 0x7fd5ba0266a0 'unsigned long long'
+|-TypedefDecl 0x7fd5ba827488 <line:25:1, col:15> col:15 referenced V4SFmode '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7fd5ba827450 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7fd5ba0266c0 'float'
+|-TypedefDecl 0x7fd5ba827538 <line:26:1, col:16> col:16 referenced V2DFmode '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7fd5ba827500 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7fd5ba0266e0 'double'
+|-TypedefDecl 0x7fd5ba8275e8 <line:29:1, col:23> col:23 referenced V8QImode '__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char'
+| `-VectorType 0x7fd5ba8275b0 '__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char' 8
+|   `-BuiltinType 0x7fd5ba026620 'unsigned char'
+|-TypedefDecl 0x7fd5ba827698 <line:30:1, col:24> col:24 referenced V4HImode '__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short'
+| `-VectorType 0x7fd5ba827660 '__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short' 4
+|   `-BuiltinType 0x7fd5ba026640 'unsigned short'
+|-TypedefDecl 0x7fd5ba827748 <line:31:1, col:22> col:22 referenced V2SImode '__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7fd5ba827710 '__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' 2
+|   `-BuiltinType 0x7fd5ba026660 'unsigned int'
+|-TypedefDecl 0x7fd5ba8277f8 <line:32:1, col:15> col:15 referenced V2SFmode '__attribute__((__vector_size__(2 * sizeof(float)))) float'
+| `-VectorType 0x7fd5ba8277c0 '__attribute__((__vector_size__(2 * sizeof(float)))) float' 2
+|   `-BuiltinType 0x7fd5ba0266c0 'float'
+|-VarDecl 0x7fd5ba827880 <line:35:24, <scratch space>:2:1> col:1 used data_V64QImode 'V64QImode':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char' extern
+|-FunctionDecl 0x7fd5ba829a60 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:3:1 used p_V64QImode 'void (V64QImode)'
+| |-ParmVarDecl 0x7fd5ba827930 <c_files/pr66806.c:41:6, line:37:21> col:21 used x 'V64QImode':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char'
+| `-CompoundStmt 0x7fd5ba829b90 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba829b68 <<scratch space>:4:1, c_files/pr66806.c:37:40> 'V64QImode':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char' '='
+|     |-DeclRefExpr 0x7fd5ba829b00 <<scratch space>:4:1> 'V64QImode':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fd5ba827880 'data_V64QImode' 'V64QImode':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char'
+|     `-ImplicitCastExpr 0x7fd5ba829b50 <c_files/pr66806.c:37:40> 'V64QImode':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba829b28 <col:40> 'V64QImode':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char' lvalue ParmVar 0x7fd5ba827930 'x' 'V64QImode':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char'
+|-FunctionDecl 0x7fd5ba829cc0 <line:41:6, line:38:36> <scratch space>:5:1 r_V64QImode 'V64QImode (V64QImode)'
+| |-ParmVarDecl 0x7fd5ba829bc0 <c_files/pr66806.c:41:6, line:38:21> col:21 used x 'V64QImode':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char'
+| `-CompoundStmt 0x7fd5ba829db8 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba829da0 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba829d88 <col:33> 'V64QImode':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba829d60 <col:33> 'V64QImode':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char' lvalue ParmVar 0x7fd5ba829bc0 'x' 'V64QImode':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char'
+|-FunctionDecl 0x7fd5ba829ea0 <col:40, line:39:48> <scratch space>:6:1 s_V64QImode 'void (void)'
+| `-CompoundStmt 0x7fd5ba82a048 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba82a000 <<scratch space>:7:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba829fe8 <<scratch space>:7:1> 'void (*)(V64QImode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba829f38 <col:1> 'void (V64QImode)' Function 0x7fd5ba829a60 'p_V64QImode' 'void (V64QImode)'
+|     `-ImplicitCastExpr 0x7fd5ba82a030 <line:8:1> 'V64QImode':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba829f60 <col:1> 'V64QImode':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fd5ba827880 'data_V64QImode' 'V64QImode':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char'
+|-VarDecl 0x7fd5ba82a0a0 <c_files/pr66806.c:35:24, <scratch space>:9:1> col:1 used data_V32HImode 'V32HImode':'__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short' extern
+|-FunctionDecl 0x7fd5ba82a210 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:10:1 used p_V32HImode 'void (V32HImode)'
+| |-ParmVarDecl 0x7fd5ba82a110 <c_files/pr66806.c:42:6, line:37:21> col:21 used x 'V32HImode':'__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short'
+| `-CompoundStmt 0x7fd5ba82a340 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba82a318 <<scratch space>:11:1, c_files/pr66806.c:37:40> 'V32HImode':'__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short' '='
+|     |-DeclRefExpr 0x7fd5ba82a2b0 <<scratch space>:11:1> 'V32HImode':'__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short' lvalue Var 0x7fd5ba82a0a0 'data_V32HImode' 'V32HImode':'__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short'
+|     `-ImplicitCastExpr 0x7fd5ba82a300 <c_files/pr66806.c:37:40> 'V32HImode':'__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82a2d8 <col:40> 'V32HImode':'__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short' lvalue ParmVar 0x7fd5ba82a110 'x' 'V32HImode':'__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short'
+|-FunctionDecl 0x7fd5ba82a470 <line:42:6, line:38:36> <scratch space>:12:1 r_V32HImode 'V32HImode (V32HImode)'
+| |-ParmVarDecl 0x7fd5ba82a370 <c_files/pr66806.c:42:6, line:38:21> col:21 used x 'V32HImode':'__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short'
+| `-CompoundStmt 0x7fd5ba82a568 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba82a550 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba82a538 <col:33> 'V32HImode':'__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82a510 <col:33> 'V32HImode':'__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short' lvalue ParmVar 0x7fd5ba82a370 'x' 'V32HImode':'__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short'
+|-FunctionDecl 0x7fd5ba82a618 <col:40, line:39:48> <scratch space>:13:1 s_V32HImode 'void (void)'
+| `-CompoundStmt 0x7fd5ba82a7b8 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba82a770 <<scratch space>:14:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba82a758 <<scratch space>:14:1> 'void (*)(V32HImode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba82a6b0 <col:1> 'void (V32HImode)' Function 0x7fd5ba82a210 'p_V32HImode' 'void (V32HImode)'
+|     `-ImplicitCastExpr 0x7fd5ba82a7a0 <line:15:1> 'V32HImode':'__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82a6d8 <col:1> 'V32HImode':'__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short' lvalue Var 0x7fd5ba82a0a0 'data_V32HImode' 'V32HImode':'__attribute__((__vector_size__(32 * sizeof(unsigned short)))) unsigned short'
+|-VarDecl 0x7fd5ba82a810 <c_files/pr66806.c:35:24, <scratch space>:16:1> col:1 used data_V16SImode 'V16SImode':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int' extern
+|-FunctionDecl 0x7fd5ba82aa00 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:17:1 used p_V16SImode 'void (V16SImode)'
+| |-ParmVarDecl 0x7fd5ba82a880 <c_files/pr66806.c:43:6, line:37:21> col:21 used x 'V16SImode':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int'
+| `-CompoundStmt 0x7fd5ba82ab30 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba82ab08 <<scratch space>:18:1, c_files/pr66806.c:37:40> 'V16SImode':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int' '='
+|     |-DeclRefExpr 0x7fd5ba82aaa0 <<scratch space>:18:1> 'V16SImode':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fd5ba82a810 'data_V16SImode' 'V16SImode':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int'
+|     `-ImplicitCastExpr 0x7fd5ba82aaf0 <c_files/pr66806.c:37:40> 'V16SImode':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82aac8 <col:40> 'V16SImode':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7fd5ba82a880 'x' 'V16SImode':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int'
+|-FunctionDecl 0x7fd5ba82ac60 <line:43:6, line:38:36> <scratch space>:19:1 r_V16SImode 'V16SImode (V16SImode)'
+| |-ParmVarDecl 0x7fd5ba82ab60 <c_files/pr66806.c:43:6, line:38:21> col:21 used x 'V16SImode':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int'
+| `-CompoundStmt 0x7fd5ba82ad58 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba82ad40 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba82ad28 <col:33> 'V16SImode':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82ad00 <col:33> 'V16SImode':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7fd5ba82ab60 'x' 'V16SImode':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int'
+|-FunctionDecl 0x7fd5ba82ae08 <col:40, line:39:48> <scratch space>:20:1 s_V16SImode 'void (void)'
+| `-CompoundStmt 0x7fd5ba82afa8 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba82af60 <<scratch space>:21:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba82af48 <<scratch space>:21:1> 'void (*)(V16SImode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba82aea0 <col:1> 'void (V16SImode)' Function 0x7fd5ba82aa00 'p_V16SImode' 'void (V16SImode)'
+|     `-ImplicitCastExpr 0x7fd5ba82af90 <line:22:1> 'V16SImode':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82aec8 <col:1> 'V16SImode':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fd5ba82a810 'data_V16SImode' 'V16SImode':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int'
+|-VarDecl 0x7fd5ba82b000 <c_files/pr66806.c:35:24, <scratch space>:23:1> col:1 used data_V8DImode 'V8DImode':'__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long' extern
+|-FunctionDecl 0x7fd5ba82b170 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:24:1 used p_V8DImode 'void (V8DImode)'
+| |-ParmVarDecl 0x7fd5ba82b070 <c_files/pr66806.c:44:6, line:37:21> col:21 used x 'V8DImode':'__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long'
+| `-CompoundStmt 0x7fd5ba82b2a0 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba82b278 <<scratch space>:25:1, c_files/pr66806.c:37:40> 'V8DImode':'__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long' '='
+|     |-DeclRefExpr 0x7fd5ba82b210 <<scratch space>:25:1> 'V8DImode':'__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long' lvalue Var 0x7fd5ba82b000 'data_V8DImode' 'V8DImode':'__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long'
+|     `-ImplicitCastExpr 0x7fd5ba82b260 <c_files/pr66806.c:37:40> 'V8DImode':'__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82b238 <col:40> 'V8DImode':'__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long' lvalue ParmVar 0x7fd5ba82b070 'x' 'V8DImode':'__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long'
+|-FunctionDecl 0x7fd5ba82b3d0 <line:44:6, line:38:36> <scratch space>:26:1 r_V8DImode 'V8DImode (V8DImode)'
+| |-ParmVarDecl 0x7fd5ba82b2d0 <c_files/pr66806.c:44:6, line:38:21> col:21 used x 'V8DImode':'__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long'
+| `-CompoundStmt 0x7fd5ba82b4c8 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba82b4b0 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba82b498 <col:33> 'V8DImode':'__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82b470 <col:33> 'V8DImode':'__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long' lvalue ParmVar 0x7fd5ba82b2d0 'x' 'V8DImode':'__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long'
+|-FunctionDecl 0x7fd5ba82b578 <col:40, line:39:48> <scratch space>:27:1 s_V8DImode 'void (void)'
+| `-CompoundStmt 0x7fd5ba82b718 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba82b6d0 <<scratch space>:28:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba82b6b8 <<scratch space>:28:1> 'void (*)(V8DImode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba82b610 <col:1> 'void (V8DImode)' Function 0x7fd5ba82b170 'p_V8DImode' 'void (V8DImode)'
+|     `-ImplicitCastExpr 0x7fd5ba82b700 <line:29:1> 'V8DImode':'__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82b638 <col:1> 'V8DImode':'__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long' lvalue Var 0x7fd5ba82b000 'data_V8DImode' 'V8DImode':'__attribute__((__vector_size__(8 * sizeof(unsigned long long)))) unsigned long long'
+|-VarDecl 0x7fd5ba82b770 <c_files/pr66806.c:35:24, <scratch space>:30:1> col:1 used data_V16SFmode 'V16SFmode':'__attribute__((__vector_size__(16 * sizeof(float)))) float' extern
+|-FunctionDecl 0x7fd5ba82b8e0 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:31:1 used p_V16SFmode 'void (V16SFmode)'
+| |-ParmVarDecl 0x7fd5ba82b7e0 <c_files/pr66806.c:45:6, line:37:21> col:21 used x 'V16SFmode':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+| `-CompoundStmt 0x7fd5ba82ba28 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba82ba00 <<scratch space>:32:1, c_files/pr66806.c:37:40> 'V16SFmode':'__attribute__((__vector_size__(16 * sizeof(float)))) float' '='
+|     |-DeclRefExpr 0x7fd5ba82b980 <<scratch space>:32:1> 'V16SFmode':'__attribute__((__vector_size__(16 * sizeof(float)))) float' lvalue Var 0x7fd5ba82b770 'data_V16SFmode' 'V16SFmode':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+|     `-ImplicitCastExpr 0x7fd5ba82b9d0 <c_files/pr66806.c:37:40> 'V16SFmode':'__attribute__((__vector_size__(16 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82b9a8 <col:40> 'V16SFmode':'__attribute__((__vector_size__(16 * sizeof(float)))) float' lvalue ParmVar 0x7fd5ba82b7e0 'x' 'V16SFmode':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+|-FunctionDecl 0x7fd5ba82bb60 <line:45:6, line:38:36> <scratch space>:33:1 r_V16SFmode 'V16SFmode (V16SFmode)'
+| |-ParmVarDecl 0x7fd5ba82ba58 <c_files/pr66806.c:45:6, line:38:21> col:21 used x 'V16SFmode':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+| `-CompoundStmt 0x7fd5ba82bc58 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba82bc40 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba82bc28 <col:33> 'V16SFmode':'__attribute__((__vector_size__(16 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82bc00 <col:33> 'V16SFmode':'__attribute__((__vector_size__(16 * sizeof(float)))) float' lvalue ParmVar 0x7fd5ba82ba58 'x' 'V16SFmode':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+|-FunctionDecl 0x7fd5ba82bd08 <col:40, line:39:48> <scratch space>:34:1 s_V16SFmode 'void (void)'
+| `-CompoundStmt 0x7fd5ba82bea8 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba82be60 <<scratch space>:35:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba82be48 <<scratch space>:35:1> 'void (*)(V16SFmode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba82bda0 <col:1> 'void (V16SFmode)' Function 0x7fd5ba82b8e0 'p_V16SFmode' 'void (V16SFmode)'
+|     `-ImplicitCastExpr 0x7fd5ba82be90 <line:36:1> 'V16SFmode':'__attribute__((__vector_size__(16 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82bdc8 <col:1> 'V16SFmode':'__attribute__((__vector_size__(16 * sizeof(float)))) float' lvalue Var 0x7fd5ba82b770 'data_V16SFmode' 'V16SFmode':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+|-VarDecl 0x7fd5ba82bf00 <c_files/pr66806.c:35:24, <scratch space>:37:1> col:1 used data_V8DFmode 'V8DFmode':'__attribute__((__vector_size__(8 * sizeof(double)))) double' extern
+|-FunctionDecl 0x7fd5ba82c070 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:38:1 used p_V8DFmode 'void (V8DFmode)'
+| |-ParmVarDecl 0x7fd5ba82bf70 <c_files/pr66806.c:46:6, line:37:21> col:21 used x 'V8DFmode':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+| `-CompoundStmt 0x7fd5ba82c1a0 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba82c178 <<scratch space>:39:1, c_files/pr66806.c:37:40> 'V8DFmode':'__attribute__((__vector_size__(8 * sizeof(double)))) double' '='
+|     |-DeclRefExpr 0x7fd5ba82c110 <<scratch space>:39:1> 'V8DFmode':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7fd5ba82bf00 'data_V8DFmode' 'V8DFmode':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+|     `-ImplicitCastExpr 0x7fd5ba82c160 <c_files/pr66806.c:37:40> 'V8DFmode':'__attribute__((__vector_size__(8 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82c138 <col:40> 'V8DFmode':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue ParmVar 0x7fd5ba82bf70 'x' 'V8DFmode':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+|-FunctionDecl 0x7fd5ba82c2d0 <line:46:6, line:38:36> <scratch space>:40:1 r_V8DFmode 'V8DFmode (V8DFmode)'
+| |-ParmVarDecl 0x7fd5ba82c1d0 <c_files/pr66806.c:46:6, line:38:21> col:21 used x 'V8DFmode':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+| `-CompoundStmt 0x7fd5ba82c3c8 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba82c3b0 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba82c398 <col:33> 'V8DFmode':'__attribute__((__vector_size__(8 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82c370 <col:33> 'V8DFmode':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue ParmVar 0x7fd5ba82c1d0 'x' 'V8DFmode':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+|-FunctionDecl 0x7fd5ba82c478 <col:40, line:39:48> <scratch space>:41:1 s_V8DFmode 'void (void)'
+| `-CompoundStmt 0x7fd5ba82c618 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba82c5d0 <<scratch space>:42:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba82c5b8 <<scratch space>:42:1> 'void (*)(V8DFmode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba82c510 <col:1> 'void (V8DFmode)' Function 0x7fd5ba82c070 'p_V8DFmode' 'void (V8DFmode)'
+|     `-ImplicitCastExpr 0x7fd5ba82c600 <line:43:1> 'V8DFmode':'__attribute__((__vector_size__(8 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82c538 <col:1> 'V8DFmode':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7fd5ba82bf00 'data_V8DFmode' 'V8DFmode':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+|-VarDecl 0x7fd5ba82c670 <c_files/pr66806.c:35:24, <scratch space>:44:1> col:1 used data_V32QImode 'V32QImode':'__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char' extern
+|-FunctionDecl 0x7fd5ba82c7e0 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:45:1 used p_V32QImode 'void (V32QImode)'
+| |-ParmVarDecl 0x7fd5ba82c6e0 <c_files/pr66806.c:48:6, line:37:21> col:21 used x 'V32QImode':'__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char'
+| `-CompoundStmt 0x7fd5ba82c910 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba82c8e8 <<scratch space>:46:1, c_files/pr66806.c:37:40> 'V32QImode':'__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char' '='
+|     |-DeclRefExpr 0x7fd5ba82c880 <<scratch space>:46:1> 'V32QImode':'__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fd5ba82c670 'data_V32QImode' 'V32QImode':'__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char'
+|     `-ImplicitCastExpr 0x7fd5ba82c8d0 <c_files/pr66806.c:37:40> 'V32QImode':'__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82c8a8 <col:40> 'V32QImode':'__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char' lvalue ParmVar 0x7fd5ba82c6e0 'x' 'V32QImode':'__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char'
+|-FunctionDecl 0x7fd5ba82d660 <line:48:6, line:38:36> <scratch space>:47:1 r_V32QImode 'V32QImode (V32QImode)'
+| |-ParmVarDecl 0x7fd5ba82c940 <c_files/pr66806.c:48:6, line:38:21> col:21 used x 'V32QImode':'__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char'
+| `-CompoundStmt 0x7fd5ba82d758 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba82d740 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba82d728 <col:33> 'V32QImode':'__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82d700 <col:33> 'V32QImode':'__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char' lvalue ParmVar 0x7fd5ba82c940 'x' 'V32QImode':'__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char'
+|-FunctionDecl 0x7fd5ba82d808 <col:40, line:39:48> <scratch space>:48:1 s_V32QImode 'void (void)'
+| `-CompoundStmt 0x7fd5ba82d9a8 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba82d960 <<scratch space>:49:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba82d948 <<scratch space>:49:1> 'void (*)(V32QImode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba82d8a0 <col:1> 'void (V32QImode)' Function 0x7fd5ba82c7e0 'p_V32QImode' 'void (V32QImode)'
+|     `-ImplicitCastExpr 0x7fd5ba82d990 <line:50:1> 'V32QImode':'__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82d8c8 <col:1> 'V32QImode':'__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fd5ba82c670 'data_V32QImode' 'V32QImode':'__attribute__((__vector_size__(32 * sizeof(unsigned char)))) unsigned char'
+|-VarDecl 0x7fd5ba82da00 <c_files/pr66806.c:35:24, <scratch space>:51:1> col:1 used data_V16HImode 'V16HImode':'__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short' extern
+|-FunctionDecl 0x7fd5ba82db70 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:52:1 used p_V16HImode 'void (V16HImode)'
+| |-ParmVarDecl 0x7fd5ba82da70 <c_files/pr66806.c:49:6, line:37:21> col:21 used x 'V16HImode':'__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short'
+| `-CompoundStmt 0x7fd5ba82dca0 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba82dc78 <<scratch space>:53:1, c_files/pr66806.c:37:40> 'V16HImode':'__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short' '='
+|     |-DeclRefExpr 0x7fd5ba82dc10 <<scratch space>:53:1> 'V16HImode':'__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short' lvalue Var 0x7fd5ba82da00 'data_V16HImode' 'V16HImode':'__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short'
+|     `-ImplicitCastExpr 0x7fd5ba82dc60 <c_files/pr66806.c:37:40> 'V16HImode':'__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82dc38 <col:40> 'V16HImode':'__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short' lvalue ParmVar 0x7fd5ba82da70 'x' 'V16HImode':'__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short'
+|-FunctionDecl 0x7fd5ba82ddd0 <line:49:6, line:38:36> <scratch space>:54:1 r_V16HImode 'V16HImode (V16HImode)'
+| |-ParmVarDecl 0x7fd5ba82dcd0 <c_files/pr66806.c:49:6, line:38:21> col:21 used x 'V16HImode':'__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short'
+| `-CompoundStmt 0x7fd5ba82dec8 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba82deb0 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba82de98 <col:33> 'V16HImode':'__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82de70 <col:33> 'V16HImode':'__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short' lvalue ParmVar 0x7fd5ba82dcd0 'x' 'V16HImode':'__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short'
+|-FunctionDecl 0x7fd5ba82df78 <col:40, line:39:48> <scratch space>:55:1 s_V16HImode 'void (void)'
+| `-CompoundStmt 0x7fd5ba82e118 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba82e0d0 <<scratch space>:56:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba82e0b8 <<scratch space>:56:1> 'void (*)(V16HImode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba82e010 <col:1> 'void (V16HImode)' Function 0x7fd5ba82db70 'p_V16HImode' 'void (V16HImode)'
+|     `-ImplicitCastExpr 0x7fd5ba82e100 <line:57:1> 'V16HImode':'__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82e038 <col:1> 'V16HImode':'__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short' lvalue Var 0x7fd5ba82da00 'data_V16HImode' 'V16HImode':'__attribute__((__vector_size__(16 * sizeof(unsigned short)))) unsigned short'
+|-VarDecl 0x7fd5ba82e170 <c_files/pr66806.c:35:24, <scratch space>:58:1> col:1 used data_V8SImode 'V8SImode':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' extern
+|-FunctionDecl 0x7fd5ba82e2e0 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:59:1 used p_V8SImode 'void (V8SImode)'
+| |-ParmVarDecl 0x7fd5ba82e1e0 <c_files/pr66806.c:50:6, line:37:21> col:21 used x 'V8SImode':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+| `-CompoundStmt 0x7fd5ba82e410 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba82e3e8 <<scratch space>:60:1, c_files/pr66806.c:37:40> 'V8SImode':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' '='
+|     |-DeclRefExpr 0x7fd5ba82e380 <<scratch space>:60:1> 'V8SImode':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fd5ba82e170 'data_V8SImode' 'V8SImode':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+|     `-ImplicitCastExpr 0x7fd5ba82e3d0 <c_files/pr66806.c:37:40> 'V8SImode':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82e3a8 <col:40> 'V8SImode':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7fd5ba82e1e0 'x' 'V8SImode':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+|-FunctionDecl 0x7fd5ba82e540 <line:50:6, line:38:36> <scratch space>:61:1 r_V8SImode 'V8SImode (V8SImode)'
+| |-ParmVarDecl 0x7fd5ba82e440 <c_files/pr66806.c:50:6, line:38:21> col:21 used x 'V8SImode':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+| `-CompoundStmt 0x7fd5ba830e58 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba830e40 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba830e28 <col:33> 'V8SImode':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba830e00 <col:33> 'V8SImode':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7fd5ba82e440 'x' 'V8SImode':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+|-FunctionDecl 0x7fd5ba830f08 <col:40, line:39:48> <scratch space>:62:1 s_V8SImode 'void (void)'
+| `-CompoundStmt 0x7fd5ba8310a8 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba831060 <<scratch space>:63:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba831048 <<scratch space>:63:1> 'void (*)(V8SImode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba830fa0 <col:1> 'void (V8SImode)' Function 0x7fd5ba82e2e0 'p_V8SImode' 'void (V8SImode)'
+|     `-ImplicitCastExpr 0x7fd5ba831090 <line:64:1> 'V8SImode':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba830fc8 <col:1> 'V8SImode':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fd5ba82e170 'data_V8SImode' 'V8SImode':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+|-VarDecl 0x7fd5ba831100 <c_files/pr66806.c:35:24, <scratch space>:65:1> col:1 used data_V4DImode 'V4DImode':'__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long' extern
+|-FunctionDecl 0x7fd5ba831270 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:66:1 used p_V4DImode 'void (V4DImode)'
+| |-ParmVarDecl 0x7fd5ba831170 <c_files/pr66806.c:51:6, line:37:21> col:21 used x 'V4DImode':'__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long'
+| `-CompoundStmt 0x7fd5ba8313a0 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba831378 <<scratch space>:67:1, c_files/pr66806.c:37:40> 'V4DImode':'__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long' '='
+|     |-DeclRefExpr 0x7fd5ba831310 <<scratch space>:67:1> 'V4DImode':'__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long' lvalue Var 0x7fd5ba831100 'data_V4DImode' 'V4DImode':'__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long'
+|     `-ImplicitCastExpr 0x7fd5ba831360 <c_files/pr66806.c:37:40> 'V4DImode':'__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba831338 <col:40> 'V4DImode':'__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long' lvalue ParmVar 0x7fd5ba831170 'x' 'V4DImode':'__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long'
+|-FunctionDecl 0x7fd5ba8314d0 <line:51:6, line:38:36> <scratch space>:68:1 r_V4DImode 'V4DImode (V4DImode)'
+| |-ParmVarDecl 0x7fd5ba8313d0 <c_files/pr66806.c:51:6, line:38:21> col:21 used x 'V4DImode':'__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long'
+| `-CompoundStmt 0x7fd5ba8315c8 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba8315b0 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba831598 <col:33> 'V4DImode':'__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba831570 <col:33> 'V4DImode':'__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long' lvalue ParmVar 0x7fd5ba8313d0 'x' 'V4DImode':'__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long'
+|-FunctionDecl 0x7fd5ba831678 <col:40, line:39:48> <scratch space>:69:1 s_V4DImode 'void (void)'
+| `-CompoundStmt 0x7fd5ba831818 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba8317d0 <<scratch space>:70:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba8317b8 <<scratch space>:70:1> 'void (*)(V4DImode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba831710 <col:1> 'void (V4DImode)' Function 0x7fd5ba831270 'p_V4DImode' 'void (V4DImode)'
+|     `-ImplicitCastExpr 0x7fd5ba831800 <line:71:1> 'V4DImode':'__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba831738 <col:1> 'V4DImode':'__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long' lvalue Var 0x7fd5ba831100 'data_V4DImode' 'V4DImode':'__attribute__((__vector_size__(4 * sizeof(unsigned long long)))) unsigned long long'
+|-VarDecl 0x7fd5ba831870 <c_files/pr66806.c:35:24, <scratch space>:72:1> col:1 used data_V8SFmode 'V8SFmode':'__attribute__((__vector_size__(8 * sizeof(float)))) float' extern
+|-FunctionDecl 0x7fd5ba8319e0 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:73:1 used p_V8SFmode 'void (V8SFmode)'
+| |-ParmVarDecl 0x7fd5ba8318e0 <c_files/pr66806.c:52:6, line:37:21> col:21 used x 'V8SFmode':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| `-CompoundStmt 0x7fd5ba831b10 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba831ae8 <<scratch space>:74:1, c_files/pr66806.c:37:40> 'V8SFmode':'__attribute__((__vector_size__(8 * sizeof(float)))) float' '='
+|     |-DeclRefExpr 0x7fd5ba831a80 <<scratch space>:74:1> 'V8SFmode':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue Var 0x7fd5ba831870 'data_V8SFmode' 'V8SFmode':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|     `-ImplicitCastExpr 0x7fd5ba831ad0 <c_files/pr66806.c:37:40> 'V8SFmode':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba831aa8 <col:40> 'V8SFmode':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue ParmVar 0x7fd5ba8318e0 'x' 'V8SFmode':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|-FunctionDecl 0x7fd5ba831c40 <line:52:6, line:38:36> <scratch space>:75:1 r_V8SFmode 'V8SFmode (V8SFmode)'
+| |-ParmVarDecl 0x7fd5ba831b40 <c_files/pr66806.c:52:6, line:38:21> col:21 used x 'V8SFmode':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| `-CompoundStmt 0x7fd5ba831d38 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba831d20 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba831d08 <col:33> 'V8SFmode':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba831ce0 <col:33> 'V8SFmode':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue ParmVar 0x7fd5ba831b40 'x' 'V8SFmode':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|-FunctionDecl 0x7fd5ba831e00 <col:40, line:39:48> <scratch space>:76:1 s_V8SFmode 'void (void)'
+| `-CompoundStmt 0x7fd5ba831fa8 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba831f60 <<scratch space>:77:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba831f48 <<scratch space>:77:1> 'void (*)(V8SFmode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba831e98 <col:1> 'void (V8SFmode)' Function 0x7fd5ba8319e0 'p_V8SFmode' 'void (V8SFmode)'
+|     `-ImplicitCastExpr 0x7fd5ba831f90 <line:78:1> 'V8SFmode':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba831ec0 <col:1> 'V8SFmode':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue Var 0x7fd5ba831870 'data_V8SFmode' 'V8SFmode':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|-VarDecl 0x7fd5ba832000 <c_files/pr66806.c:35:24, <scratch space>:79:1> col:1 used data_V4DFmode 'V4DFmode':'__attribute__((__vector_size__(4 * sizeof(double)))) double' extern
+|-FunctionDecl 0x7fd5ba832170 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:80:1 used p_V4DFmode 'void (V4DFmode)'
+| |-ParmVarDecl 0x7fd5ba832070 <c_files/pr66806.c:53:6, line:37:21> col:21 used x 'V4DFmode':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+| `-CompoundStmt 0x7fd5ba8322a0 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba832278 <<scratch space>:81:1, c_files/pr66806.c:37:40> 'V4DFmode':'__attribute__((__vector_size__(4 * sizeof(double)))) double' '='
+|     |-DeclRefExpr 0x7fd5ba832210 <<scratch space>:81:1> 'V4DFmode':'__attribute__((__vector_size__(4 * sizeof(double)))) double' lvalue Var 0x7fd5ba832000 'data_V4DFmode' 'V4DFmode':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+|     `-ImplicitCastExpr 0x7fd5ba832260 <c_files/pr66806.c:37:40> 'V4DFmode':'__attribute__((__vector_size__(4 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba832238 <col:40> 'V4DFmode':'__attribute__((__vector_size__(4 * sizeof(double)))) double' lvalue ParmVar 0x7fd5ba832070 'x' 'V4DFmode':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+|-FunctionDecl 0x7fd5ba8323d0 <line:53:6, line:38:36> <scratch space>:82:1 r_V4DFmode 'V4DFmode (V4DFmode)'
+| |-ParmVarDecl 0x7fd5ba8322d0 <c_files/pr66806.c:53:6, line:38:21> col:21 used x 'V4DFmode':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+| `-CompoundStmt 0x7fd5ba8324c8 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba8324b0 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba832498 <col:33> 'V4DFmode':'__attribute__((__vector_size__(4 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba832470 <col:33> 'V4DFmode':'__attribute__((__vector_size__(4 * sizeof(double)))) double' lvalue ParmVar 0x7fd5ba8322d0 'x' 'V4DFmode':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+|-FunctionDecl 0x7fd5ba832578 <col:40, line:39:48> <scratch space>:83:1 s_V4DFmode 'void (void)'
+| `-CompoundStmt 0x7fd5ba832718 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba8326d0 <<scratch space>:84:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba8326b8 <<scratch space>:84:1> 'void (*)(V4DFmode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba832610 <col:1> 'void (V4DFmode)' Function 0x7fd5ba832170 'p_V4DFmode' 'void (V4DFmode)'
+|     `-ImplicitCastExpr 0x7fd5ba832700 <line:85:1> 'V4DFmode':'__attribute__((__vector_size__(4 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba832638 <col:1> 'V4DFmode':'__attribute__((__vector_size__(4 * sizeof(double)))) double' lvalue Var 0x7fd5ba832000 'data_V4DFmode' 'V4DFmode':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+|-VarDecl 0x7fd5ba832770 <c_files/pr66806.c:35:24, <scratch space>:86:1> col:1 used data_V16QImode 'V16QImode':'__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char' extern
+|-FunctionDecl 0x7fd5ba8328e0 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:87:1 used p_V16QImode 'void (V16QImode)'
+| |-ParmVarDecl 0x7fd5ba8327e0 <c_files/pr66806.c:55:6, line:37:21> col:21 used x 'V16QImode':'__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char'
+| `-CompoundStmt 0x7fd5ba832a10 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba8329e8 <<scratch space>:88:1, c_files/pr66806.c:37:40> 'V16QImode':'__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char' '='
+|     |-DeclRefExpr 0x7fd5ba832980 <<scratch space>:88:1> 'V16QImode':'__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fd5ba832770 'data_V16QImode' 'V16QImode':'__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char'
+|     `-ImplicitCastExpr 0x7fd5ba8329d0 <c_files/pr66806.c:37:40> 'V16QImode':'__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba8329a8 <col:40> 'V16QImode':'__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char' lvalue ParmVar 0x7fd5ba8327e0 'x' 'V16QImode':'__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char'
+|-FunctionDecl 0x7fd5ba832b40 <line:55:6, line:38:36> <scratch space>:89:1 r_V16QImode 'V16QImode (V16QImode)'
+| |-ParmVarDecl 0x7fd5ba832a40 <c_files/pr66806.c:55:6, line:38:21> col:21 used x 'V16QImode':'__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char'
+| `-CompoundStmt 0x7fd5ba832c38 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba832c20 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba832c08 <col:33> 'V16QImode':'__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba832be0 <col:33> 'V16QImode':'__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char' lvalue ParmVar 0x7fd5ba832a40 'x' 'V16QImode':'__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char'
+|-FunctionDecl 0x7fd5ba832ce8 <col:40, line:39:48> <scratch space>:90:1 s_V16QImode 'void (void)'
+| `-CompoundStmt 0x7fd5ba832e88 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba832e40 <<scratch space>:91:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba832e28 <<scratch space>:91:1> 'void (*)(V16QImode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba832d80 <col:1> 'void (V16QImode)' Function 0x7fd5ba8328e0 'p_V16QImode' 'void (V16QImode)'
+|     `-ImplicitCastExpr 0x7fd5ba832e70 <line:92:1> 'V16QImode':'__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba832da8 <col:1> 'V16QImode':'__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fd5ba832770 'data_V16QImode' 'V16QImode':'__attribute__((__vector_size__(16 * sizeof(unsigned char)))) unsigned char'
+|-VarDecl 0x7fd5ba832ee0 <c_files/pr66806.c:35:24, <scratch space>:93:1> col:1 used data_V8HImode 'V8HImode':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' extern
+|-FunctionDecl 0x7fd5ba833050 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:94:1 used p_V8HImode 'void (V8HImode)'
+| |-ParmVarDecl 0x7fd5ba832f50 <c_files/pr66806.c:56:6, line:37:21> col:21 used x 'V8HImode':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+| `-CompoundStmt 0x7fd5ba833180 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba833158 <<scratch space>:95:1, c_files/pr66806.c:37:40> 'V8HImode':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' '='
+|     |-DeclRefExpr 0x7fd5ba8330f0 <<scratch space>:95:1> 'V8HImode':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue Var 0x7fd5ba832ee0 'data_V8HImode' 'V8HImode':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+|     `-ImplicitCastExpr 0x7fd5ba833140 <c_files/pr66806.c:37:40> 'V8HImode':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba833118 <col:40> 'V8HImode':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue ParmVar 0x7fd5ba832f50 'x' 'V8HImode':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+|-FunctionDecl 0x7fd5ba8332b0 <line:56:6, line:38:36> <scratch space>:96:1 r_V8HImode 'V8HImode (V8HImode)'
+| |-ParmVarDecl 0x7fd5ba8331b0 <c_files/pr66806.c:56:6, line:38:21> col:21 used x 'V8HImode':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+| `-CompoundStmt 0x7fd5ba8333a8 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba833390 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba833378 <col:33> 'V8HImode':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba833350 <col:33> 'V8HImode':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue ParmVar 0x7fd5ba8331b0 'x' 'V8HImode':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+|-FunctionDecl 0x7fd5ba833458 <col:40, line:39:48> <scratch space>:97:1 s_V8HImode 'void (void)'
+| `-CompoundStmt 0x7fd5ba8335f8 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba8335b0 <<scratch space>:98:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba833598 <<scratch space>:98:1> 'void (*)(V8HImode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba8334f0 <col:1> 'void (V8HImode)' Function 0x7fd5ba833050 'p_V8HImode' 'void (V8HImode)'
+|     `-ImplicitCastExpr 0x7fd5ba8335e0 <line:99:1> 'V8HImode':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba833518 <col:1> 'V8HImode':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue Var 0x7fd5ba832ee0 'data_V8HImode' 'V8HImode':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+|-VarDecl 0x7fd5ba833650 <c_files/pr66806.c:35:24, <scratch space>:100:1> col:1 used data_V4SImode 'V4SImode':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' extern
+|-FunctionDecl 0x7fd5ba8337c0 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:101:1 used p_V4SImode 'void (V4SImode)'
+| |-ParmVarDecl 0x7fd5ba8336c0 <c_files/pr66806.c:57:6, line:37:21> col:21 used x 'V4SImode':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+| `-CompoundStmt 0x7fd5ba8338f0 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba8338c8 <<scratch space>:102:1, c_files/pr66806.c:37:40> 'V4SImode':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' '='
+|     |-DeclRefExpr 0x7fd5ba833860 <<scratch space>:102:1> 'V4SImode':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fd5ba833650 'data_V4SImode' 'V4SImode':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|     `-ImplicitCastExpr 0x7fd5ba8338b0 <c_files/pr66806.c:37:40> 'V4SImode':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba833888 <col:40> 'V4SImode':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7fd5ba8336c0 'x' 'V4SImode':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|-FunctionDecl 0x7fd5ba833a20 <line:57:6, line:38:36> <scratch space>:103:1 r_V4SImode 'V4SImode (V4SImode)'
+| |-ParmVarDecl 0x7fd5ba833920 <c_files/pr66806.c:57:6, line:38:21> col:21 used x 'V4SImode':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+| `-CompoundStmt 0x7fd5ba833b18 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba833b00 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba833ae8 <col:33> 'V4SImode':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba833ac0 <col:33> 'V4SImode':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7fd5ba833920 'x' 'V4SImode':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|-FunctionDecl 0x7fd5ba833bc8 <col:40, line:39:48> <scratch space>:104:1 s_V4SImode 'void (void)'
+| `-CompoundStmt 0x7fd5ba833d68 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba833d20 <<scratch space>:105:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba833d08 <<scratch space>:105:1> 'void (*)(V4SImode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba833c60 <col:1> 'void (V4SImode)' Function 0x7fd5ba8337c0 'p_V4SImode' 'void (V4SImode)'
+|     `-ImplicitCastExpr 0x7fd5ba833d50 <line:106:1> 'V4SImode':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba833c88 <col:1> 'V4SImode':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fd5ba833650 'data_V4SImode' 'V4SImode':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|-VarDecl 0x7fd5ba836e00 <c_files/pr66806.c:35:24, <scratch space>:107:1> col:1 used data_V2DImode 'V2DImode':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long' extern
+|-FunctionDecl 0x7fd5ba836f70 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:108:1 used p_V2DImode 'void (V2DImode)'
+| |-ParmVarDecl 0x7fd5ba836e70 <c_files/pr66806.c:58:6, line:37:21> col:21 used x 'V2DImode':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long'
+| `-CompoundStmt 0x7fd5ba8370a0 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba837078 <<scratch space>:109:1, c_files/pr66806.c:37:40> 'V2DImode':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long' '='
+|     |-DeclRefExpr 0x7fd5ba837010 <<scratch space>:109:1> 'V2DImode':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long' lvalue Var 0x7fd5ba836e00 'data_V2DImode' 'V2DImode':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long'
+|     `-ImplicitCastExpr 0x7fd5ba837060 <c_files/pr66806.c:37:40> 'V2DImode':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba837038 <col:40> 'V2DImode':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long' lvalue ParmVar 0x7fd5ba836e70 'x' 'V2DImode':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long'
+|-FunctionDecl 0x7fd5ba8371d0 <line:58:6, line:38:36> <scratch space>:110:1 r_V2DImode 'V2DImode (V2DImode)'
+| |-ParmVarDecl 0x7fd5ba8370d0 <c_files/pr66806.c:58:6, line:38:21> col:21 used x 'V2DImode':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long'
+| `-CompoundStmt 0x7fd5ba8372c8 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba8372b0 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba837298 <col:33> 'V2DImode':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba837270 <col:33> 'V2DImode':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long' lvalue ParmVar 0x7fd5ba8370d0 'x' 'V2DImode':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long'
+|-FunctionDecl 0x7fd5ba837378 <col:40, line:39:48> <scratch space>:111:1 s_V2DImode 'void (void)'
+| `-CompoundStmt 0x7fd5ba837518 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba8374d0 <<scratch space>:112:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba8374b8 <<scratch space>:112:1> 'void (*)(V2DImode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba837410 <col:1> 'void (V2DImode)' Function 0x7fd5ba836f70 'p_V2DImode' 'void (V2DImode)'
+|     `-ImplicitCastExpr 0x7fd5ba837500 <line:113:1> 'V2DImode':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba837438 <col:1> 'V2DImode':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long' lvalue Var 0x7fd5ba836e00 'data_V2DImode' 'V2DImode':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long'
+|-VarDecl 0x7fd5ba837570 <c_files/pr66806.c:35:24, <scratch space>:114:1> col:1 used data_V4SFmode 'V4SFmode':'__attribute__((__vector_size__(4 * sizeof(float)))) float' extern
+|-FunctionDecl 0x7fd5ba8376e0 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:115:1 used p_V4SFmode 'void (V4SFmode)'
+| |-ParmVarDecl 0x7fd5ba8375e0 <c_files/pr66806.c:59:6, line:37:21> col:21 used x 'V4SFmode':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-CompoundStmt 0x7fd5ba837810 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba8377e8 <<scratch space>:116:1, c_files/pr66806.c:37:40> 'V4SFmode':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+|     |-DeclRefExpr 0x7fd5ba837780 <<scratch space>:116:1> 'V4SFmode':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fd5ba837570 'data_V4SFmode' 'V4SFmode':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|     `-ImplicitCastExpr 0x7fd5ba8377d0 <c_files/pr66806.c:37:40> 'V4SFmode':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba8377a8 <col:40> 'V4SFmode':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue ParmVar 0x7fd5ba8375e0 'x' 'V4SFmode':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-FunctionDecl 0x7fd5ba837940 <line:59:6, line:38:36> <scratch space>:117:1 r_V4SFmode 'V4SFmode (V4SFmode)'
+| |-ParmVarDecl 0x7fd5ba837840 <c_files/pr66806.c:59:6, line:38:21> col:21 used x 'V4SFmode':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-CompoundStmt 0x7fd5ba837a38 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba837a20 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba837a08 <col:33> 'V4SFmode':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba8379e0 <col:33> 'V4SFmode':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue ParmVar 0x7fd5ba837840 'x' 'V4SFmode':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-FunctionDecl 0x7fd5ba837ae8 <col:40, line:39:48> <scratch space>:118:1 s_V4SFmode 'void (void)'
+| `-CompoundStmt 0x7fd5ba837c88 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba837c40 <<scratch space>:119:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba837c28 <<scratch space>:119:1> 'void (*)(V4SFmode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba837b80 <col:1> 'void (V4SFmode)' Function 0x7fd5ba8376e0 'p_V4SFmode' 'void (V4SFmode)'
+|     `-ImplicitCastExpr 0x7fd5ba837c70 <line:120:1> 'V4SFmode':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba837ba8 <col:1> 'V4SFmode':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fd5ba837570 'data_V4SFmode' 'V4SFmode':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-VarDecl 0x7fd5ba837ce0 <c_files/pr66806.c:35:24, <scratch space>:121:1> col:1 used data_V2DFmode 'V2DFmode':'__attribute__((__vector_size__(2 * sizeof(double)))) double' extern
+|-FunctionDecl 0x7fd5ba82e660 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:122:1 used p_V2DFmode 'void (V2DFmode)'
+| |-ParmVarDecl 0x7fd5ba837d50 <c_files/pr66806.c:60:6, line:37:21> col:21 used x 'V2DFmode':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-CompoundStmt 0x7fd5ba82e790 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba82e768 <<scratch space>:123:1, c_files/pr66806.c:37:40> 'V2DFmode':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '='
+|     |-DeclRefExpr 0x7fd5ba82e700 <<scratch space>:123:1> 'V2DFmode':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7fd5ba837ce0 'data_V2DFmode' 'V2DFmode':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|     `-ImplicitCastExpr 0x7fd5ba82e750 <c_files/pr66806.c:37:40> 'V2DFmode':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82e728 <col:40> 'V2DFmode':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7fd5ba837d50 'x' 'V2DFmode':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-FunctionDecl 0x7fd5ba82e8c0 <line:60:6, line:38:36> <scratch space>:124:1 r_V2DFmode 'V2DFmode (V2DFmode)'
+| |-ParmVarDecl 0x7fd5ba82e7c0 <c_files/pr66806.c:60:6, line:38:21> col:21 used x 'V2DFmode':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-CompoundStmt 0x7fd5ba82e9b8 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba82e9a0 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba82e988 <col:33> 'V2DFmode':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82e960 <col:33> 'V2DFmode':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7fd5ba82e7c0 'x' 'V2DFmode':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-FunctionDecl 0x7fd5ba82ea68 <col:40, line:39:48> <scratch space>:125:1 s_V2DFmode 'void (void)'
+| `-CompoundStmt 0x7fd5ba82ec08 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba82ebc0 <<scratch space>:126:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba82eba8 <<scratch space>:126:1> 'void (*)(V2DFmode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba82eb00 <col:1> 'void (V2DFmode)' Function 0x7fd5ba82e660 'p_V2DFmode' 'void (V2DFmode)'
+|     `-ImplicitCastExpr 0x7fd5ba82ebf0 <line:127:1> 'V2DFmode':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82eb28 <col:1> 'V2DFmode':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7fd5ba837ce0 'data_V2DFmode' 'V2DFmode':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-VarDecl 0x7fd5ba82ec60 <c_files/pr66806.c:35:24, <scratch space>:128:1> col:1 used data_V8QImode 'V8QImode':'__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char' extern
+|-FunctionDecl 0x7fd5ba82edd0 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:129:1 used p_V8QImode 'void (V8QImode)'
+| |-ParmVarDecl 0x7fd5ba82ecd0 <c_files/pr66806.c:62:6, line:37:21> col:21 used x 'V8QImode':'__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char'
+| `-CompoundStmt 0x7fd5ba82ef00 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba82eed8 <<scratch space>:130:1, c_files/pr66806.c:37:40> 'V8QImode':'__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char' '='
+|     |-DeclRefExpr 0x7fd5ba82ee70 <<scratch space>:130:1> 'V8QImode':'__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fd5ba82ec60 'data_V8QImode' 'V8QImode':'__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char'
+|     `-ImplicitCastExpr 0x7fd5ba82eec0 <c_files/pr66806.c:37:40> 'V8QImode':'__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82ee98 <col:40> 'V8QImode':'__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char' lvalue ParmVar 0x7fd5ba82ecd0 'x' 'V8QImode':'__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char'
+|-FunctionDecl 0x7fd5ba82f030 <line:62:6, line:38:36> <scratch space>:131:1 r_V8QImode 'V8QImode (V8QImode)'
+| |-ParmVarDecl 0x7fd5ba82ef30 <c_files/pr66806.c:62:6, line:38:21> col:21 used x 'V8QImode':'__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char'
+| `-CompoundStmt 0x7fd5ba82f128 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba82f110 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba82f0f8 <col:33> 'V8QImode':'__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82f0d0 <col:33> 'V8QImode':'__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char' lvalue ParmVar 0x7fd5ba82ef30 'x' 'V8QImode':'__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char'
+|-FunctionDecl 0x7fd5ba82f1d8 <col:40, line:39:48> <scratch space>:132:1 s_V8QImode 'void (void)'
+| `-CompoundStmt 0x7fd5ba82f378 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba82f330 <<scratch space>:133:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba82f318 <<scratch space>:133:1> 'void (*)(V8QImode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba82f270 <col:1> 'void (V8QImode)' Function 0x7fd5ba82edd0 'p_V8QImode' 'void (V8QImode)'
+|     `-ImplicitCastExpr 0x7fd5ba82f360 <line:134:1> 'V8QImode':'__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba82f298 <col:1> 'V8QImode':'__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fd5ba82ec60 'data_V8QImode' 'V8QImode':'__attribute__((__vector_size__(8 * sizeof(unsigned char)))) unsigned char'
+|-VarDecl 0x7fd5ba82f3d0 <c_files/pr66806.c:35:24, <scratch space>:135:1> col:1 used data_V4HImode 'V4HImode':'__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short' extern
+|-FunctionDecl 0x7fd5ba82f540 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:136:1 used p_V4HImode 'void (V4HImode)'
+| |-ParmVarDecl 0x7fd5ba82f440 <c_files/pr66806.c:63:6, line:37:21> col:21 used x 'V4HImode':'__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short'
+| `-CompoundStmt 0x7fd5ba837e90 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba837e68 <<scratch space>:137:1, c_files/pr66806.c:37:40> 'V4HImode':'__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short' '='
+|     |-DeclRefExpr 0x7fd5ba837e00 <<scratch space>:137:1> 'V4HImode':'__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short' lvalue Var 0x7fd5ba82f3d0 'data_V4HImode' 'V4HImode':'__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short'
+|     `-ImplicitCastExpr 0x7fd5ba837e50 <c_files/pr66806.c:37:40> 'V4HImode':'__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba837e28 <col:40> 'V4HImode':'__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short' lvalue ParmVar 0x7fd5ba82f440 'x' 'V4HImode':'__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short'
+|-FunctionDecl 0x7fd5ba837fc0 <line:63:6, line:38:36> <scratch space>:138:1 r_V4HImode 'V4HImode (V4HImode)'
+| |-ParmVarDecl 0x7fd5ba837ec0 <c_files/pr66806.c:63:6, line:38:21> col:21 used x 'V4HImode':'__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short'
+| `-CompoundStmt 0x7fd5ba8380b8 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba8380a0 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba838088 <col:33> 'V4HImode':'__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba838060 <col:33> 'V4HImode':'__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short' lvalue ParmVar 0x7fd5ba837ec0 'x' 'V4HImode':'__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short'
+|-FunctionDecl 0x7fd5ba838168 <col:40, line:39:48> <scratch space>:139:1 s_V4HImode 'void (void)'
+| `-CompoundStmt 0x7fd5ba838308 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba8382c0 <<scratch space>:140:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba8382a8 <<scratch space>:140:1> 'void (*)(V4HImode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba838200 <col:1> 'void (V4HImode)' Function 0x7fd5ba82f540 'p_V4HImode' 'void (V4HImode)'
+|     `-ImplicitCastExpr 0x7fd5ba8382f0 <line:141:1> 'V4HImode':'__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba838228 <col:1> 'V4HImode':'__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short' lvalue Var 0x7fd5ba82f3d0 'data_V4HImode' 'V4HImode':'__attribute__((__vector_size__(4 * sizeof(unsigned short)))) unsigned short'
+|-VarDecl 0x7fd5ba838360 <c_files/pr66806.c:35:24, <scratch space>:142:1> col:1 used data_V2SImode 'V2SImode':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' extern
+|-FunctionDecl 0x7fd5ba8384d0 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:143:1 used p_V2SImode 'void (V2SImode)'
+| |-ParmVarDecl 0x7fd5ba8383d0 <c_files/pr66806.c:64:6, line:37:21> col:21 used x 'V2SImode':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+| `-CompoundStmt 0x7fd5ba838600 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba8385d8 <<scratch space>:144:1, c_files/pr66806.c:37:40> 'V2SImode':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' '='
+|     |-DeclRefExpr 0x7fd5ba838570 <<scratch space>:144:1> 'V2SImode':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fd5ba838360 'data_V2SImode' 'V2SImode':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+|     `-ImplicitCastExpr 0x7fd5ba8385c0 <c_files/pr66806.c:37:40> 'V2SImode':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba838598 <col:40> 'V2SImode':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7fd5ba8383d0 'x' 'V2SImode':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+|-FunctionDecl 0x7fd5ba838730 <line:64:6, line:38:36> <scratch space>:145:1 r_V2SImode 'V2SImode (V2SImode)'
+| |-ParmVarDecl 0x7fd5ba838630 <c_files/pr66806.c:64:6, line:38:21> col:21 used x 'V2SImode':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+| `-CompoundStmt 0x7fd5ba838828 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba838810 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba8387f8 <col:33> 'V2SImode':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba8387d0 <col:33> 'V2SImode':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7fd5ba838630 'x' 'V2SImode':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+|-FunctionDecl 0x7fd5ba8388d8 <col:40, line:39:48> <scratch space>:146:1 s_V2SImode 'void (void)'
+| `-CompoundStmt 0x7fd5ba838a78 <c_files/pr66806.c:39:22, col:48>
+|   `-CallExpr 0x7fd5ba838a30 <<scratch space>:147:1, c_files/pr66806.c:39:45> 'void'
+|     |-ImplicitCastExpr 0x7fd5ba838a18 <<scratch space>:147:1> 'void (*)(V2SImode)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5ba838970 <col:1> 'void (V2SImode)' Function 0x7fd5ba8384d0 'p_V2SImode' 'void (V2SImode)'
+|     `-ImplicitCastExpr 0x7fd5ba838a60 <line:148:1> 'V2SImode':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba838998 <col:1> 'V2SImode':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fd5ba838360 'data_V2SImode' 'V2SImode':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+|-VarDecl 0x7fd5ba838ad0 <c_files/pr66806.c:35:24, <scratch space>:149:1> col:1 used data_V2SFmode 'V2SFmode':'__attribute__((__vector_size__(2 * sizeof(float)))) float' extern
+|-FunctionDecl 0x7fd5ba838c40 <c_files/pr66806.c:36:29, line:37:43> <scratch space>:150:1 used p_V2SFmode 'void (V2SFmode)'
+| |-ParmVarDecl 0x7fd5ba838b40 <c_files/pr66806.c:65:6, line:37:21> col:21 used x 'V2SFmode':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+| `-CompoundStmt 0x7fd5ba838d70 <col:24, col:43>
+|   `-BinaryOperator 0x7fd5ba838d48 <<scratch space>:151:1, c_files/pr66806.c:37:40> 'V2SFmode':'__attribute__((__vector_size__(2 * sizeof(float)))) float' '='
+|     |-DeclRefExpr 0x7fd5ba838ce0 <<scratch space>:151:1> 'V2SFmode':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue Var 0x7fd5ba838ad0 'data_V2SFmode' 'V2SFmode':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|     `-ImplicitCastExpr 0x7fd5ba838d30 <c_files/pr66806.c:37:40> 'V2SFmode':'__attribute__((__vector_size__(2 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba838d08 <col:40> 'V2SFmode':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue ParmVar 0x7fd5ba838b40 'x' 'V2SFmode':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|-FunctionDecl 0x7fd5ba838ea0 <line:65:6, line:38:36> <scratch space>:152:1 r_V2SFmode 'V2SFmode (V2SFmode)'
+| |-ParmVarDecl 0x7fd5ba838da0 <c_files/pr66806.c:65:6, line:38:21> col:21 used x 'V2SFmode':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+| `-CompoundStmt 0x7fd5ba838f98 <col:24, col:36>
+|   `-ReturnStmt 0x7fd5ba838f80 <col:26, col:33>
+|     `-ImplicitCastExpr 0x7fd5ba838f68 <col:33> 'V2SFmode':'__attribute__((__vector_size__(2 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5ba838f40 <col:33> 'V2SFmode':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue ParmVar 0x7fd5ba838da0 'x' 'V2SFmode':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+`-FunctionDecl 0x7fd5ba839048 <col:40, line:39:48> <scratch space>:153:1 s_V2SFmode 'void (void)'
+  `-CompoundStmt 0x7fd5ba8391e8 <c_files/pr66806.c:39:22, col:48>
+    `-CallExpr 0x7fd5ba8391a0 <<scratch space>:154:1, c_files/pr66806.c:39:45> 'void'
+      |-ImplicitCastExpr 0x7fd5ba839188 <<scratch space>:154:1> 'void (*)(V2SFmode)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd5ba8390e0 <col:1> 'void (V2SFmode)' Function 0x7fd5ba838c40 'p_V2SFmode' 'void (V2SFmode)'
+      `-ImplicitCastExpr 0x7fd5ba8391d0 <line:155:1> 'V2SFmode':'__attribute__((__vector_size__(2 * sizeof(float)))) float' <LValueToRValue>
+        `-DeclRefExpr 0x7fd5ba839108 <col:1> 'V2SFmode':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue Var 0x7fd5ba838ad0 'data_V2SFmode' 'V2SFmode':'__attribute__((__vector_size__(2 * sizeof(float)))) float'

@@ -1,0 +1,82 @@
+In file included from c_files/pr63831-2.c:5:
+c_files/pr63831-1.c:13:35: error: 'T5' declared as an array with a negative size
+typedef char T5[__has_attribute (d) ? 1 : -1];
+                                  ^~~~~~~~~~
+<scratch space>:6:1: note: expanded from here
+0
+^
+In file included from c_files/pr63831-2.c:5:
+c_files/pr63831-1.c:39:5: error: function-like macro '__has_cpp_attribute' is not defined
+#if __has_cpp_attribute (noreturn)
+    ^
+c_files/pr63831-1.c:43:18: warning: implicit declaration of function '__has_cpp_attribute' is invalid in C99 [-Wimplicit-function-declaration]
+typedef char T15[__has_cpp_attribute (d) ? 1 : -1];
+                 ^
+c_files/pr63831-1.c:43:39: error: use of undeclared identifier 'deprecated'
+typedef char T15[__has_cpp_attribute (d) ? 1 : -1];
+                                      ^
+c_files/pr63831-1.c:42:11: note: expanded from macro 'd'
+#define d deprecated
+          ^
+c_files/pr63831-1.c:44:1: error: unknown type name 'T11'; did you mean 'T1'?
+T11 t11;
+^~~
+T1
+c_files/pr63831-1.c:5:14: note: 'T1' declared here
+typedef char T1[__has_attribute (__noreturn__) ? 1 : -1];
+             ^
+c_files/pr63831-1.c:45:1: error: unknown type name 'T12'
+T12 t12;
+^
+c_files/pr63831-1.c:46:1: error: unknown type name 'T13'
+T13 t13;
+^
+c_files/pr63831-1.c:47:1: error: unknown type name 'T14'
+T14 t14;
+^
+c_files/pr63831-1.c:64:61: error: use of undeclared identifier '__malloc__'
+int t21 = __has_attribute (noreturn) + __has_cpp_attribute (__malloc__);
+                                                            ^
+1 warning and 8 errors generated.
+TranslationUnitDecl 0x7fb05e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb05e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb05e826740 '__int128'
+|-TypedefDecl 0x7fb05e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb05e826760 'unsigned __int128'
+|-TypedefDecl 0x7fb05e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb05e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb05e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb05e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb05e826dc0 'char *'
+|   `-BuiltinType 0x7fb05e826560 'char'
+|-TypedefDecl 0x7fb05e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb05e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb05e826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb05e826e58 '__va_list_tag'
+|-TypedefDecl 0x7fb05f026c58 <c_files/pr63831-1.c:5:1, col:56> col:14 referenced T1 'char [1]'
+| `-ConstantArrayType 0x7fb05f026c00 'char [1]' 1 
+|   `-BuiltinType 0x7fb05e826560 'char'
+|-TypedefDecl 0x7fb05f026dc8 <line:6:1, col:59> col:14 referenced T2 'char [1]'
+| `-ConstantArrayType 0x7fb05f026c00 'char [1]' 1 
+|   `-BuiltinType 0x7fb05e826560 'char'
+|-TypedefDecl 0x7fb05f026f38 <line:7:1, col:74> col:14 referenced T3 'char [1]'
+| `-ConstantArrayType 0x7fb05f026c00 'char [1]' 1 
+|   `-BuiltinType 0x7fb05e826560 'char'
+|-TypedefDecl 0x7fb05f026fa0 <line:10:1, col:14> col:14 referenced T4 'char'
+| `-BuiltinType 0x7fb05e826560 'char'
+|-TypedefDecl 0x7fb05f0270c0 <line:13:1, col:14> col:14 referenced invalid T5 'int'
+| `-BuiltinType 0x7fb05e8265c0 'int'
+|-VarDecl 0x7fb05f027150 <line:14:1, col:4> col:4 t1 'T1':'char [1]'
+|-VarDecl 0x7fb05f027220 <line:15:1, col:4> col:4 t2 'T2':'char [1]'
+|-VarDecl 0x7fb05f0272b0 <line:16:1, col:4> col:4 t3 'T3':'char [1]'
+|-VarDecl 0x7fb05f027340 <line:17:1, col:4> col:4 t4 'T4':'char'
+|-VarDecl 0x7fb05f0273d0 <line:18:1, col:4> col:4 t5 'T5':'int'
+|-FunctionDecl 0x7fb05f027480 <<invalid sloc>> line:43:18 implicit used __has_cpp_attribute 'int ()'
+|-TypedefDecl 0x7fb05f027650 <col:1, col:14> col:14 referenced invalid T15 'char'
+| `-BuiltinType 0x7fb05e826560 'char'
+|-VarDecl 0x7fb05f0276b8 <line:44:1, col:5> col:5 t11 'T1':'char [1]'
+|-VarDecl 0x7fb05f027730 <line:45:1, col:5> col:5 invalid t12 'int'
+|-VarDecl 0x7fb05f0277a8 <line:46:1, col:5> col:5 invalid t13 'int'
+|-VarDecl 0x7fb05f027820 <line:47:1, col:5> col:5 invalid t14 'int'
+|-VarDecl 0x7fb05f0278b0 <line:48:1, col:5> col:5 t15 'T15':'char'
+`-VarDecl 0x7fb05f027928 <line:64:1, col:5> col:5 t21 'int'

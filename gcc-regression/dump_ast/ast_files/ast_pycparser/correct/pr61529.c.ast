@@ -1,0 +1,75 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['unsigned', 'int']
+    Constant: int, 0
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['unsigned', 'int']
+    Constant: int, 0
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 0
+      Decl: e, [], [], []
+        ArrayDecl: []
+          TypeDecl: e, []
+            IdentifierType: ['int']
+          Constant: int, 5
+      For: 
+        BinaryOp: <
+          ID: b
+          Constant: int, 1
+        UnaryOp: p++
+          ID: b
+        Assignment: =
+          ID: d
+          Constant: int, 0
+      For: 
+        BinaryOp: <
+          ID: d
+          Constant: int, 1
+        UnaryOp: p++
+          ID: d
+        Assignment: =
+          ID: a
+          Constant: int, 0
+      For: 
+        BinaryOp: <
+          ID: a
+          Constant: int, 1
+        UnaryOp: p++
+          ID: a
+        EmptyStatement: 
+      For: 
+        Assignment: =
+          ID: c
+          Constant: int, 0
+        BinaryOp: <
+          ID: c
+          Constant: int, 5
+        UnaryOp: p++
+          ID: c
+        Assignment: =
+          ArrayRef: 
+            ID: e
+            ID: c
+          Constant: int, 1
+      If: 
+        ArrayRef: 
+          ID: e
+          Constant: int, 0
+        Assignment: =
+          ID: c
+          Constant: int, 0
+      Return: 
+        Constant: int, 0

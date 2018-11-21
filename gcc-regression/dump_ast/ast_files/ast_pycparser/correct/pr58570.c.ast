@@ -1,0 +1,63 @@
+FileAST: 
+  Pragma: pack(1)
+  Decl: None, [], [], []
+    Struct: S
+      Decl: f0, [], [], []
+        TypeDecl: f0, []
+          IdentifierType: ['int']
+        Constant: int, 15
+      Decl: f1, [], [], []
+        TypeDecl: f1, []
+          IdentifierType: ['int']
+        Constant: int, 29
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  Decl: d, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: d, []
+        Struct: S
+      Constant: int, 6
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        ID: e
+        Compound: 
+          Assignment: =
+            StructRef: .
+              ArrayRef: 
+                ID: d
+                ID: i
+              ID: f0
+            Constant: int, 1
+          Assignment: =
+            StructRef: .
+              ArrayRef: 
+                ID: d
+                ID: i
+              ID: f1
+            Constant: int, 1
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            ArrayRef: 
+              ID: d
+              Constant: int, 0
+            ID: f1
+          Constant: int, 1
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

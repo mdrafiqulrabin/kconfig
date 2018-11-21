@@ -1,0 +1,30 @@
+FileAST: 
+  Decl: ca, [], [], []
+    TypeDecl: ca, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: v6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: as, [], [], []
+            TypeDecl: as, []
+              IdentifierType: ['long', 'long', 'unsigned', 'int']
+          Decl: p9, [], [], []
+            TypeDecl: p9, []
+              IdentifierType: ['int']
+        TypeDecl: v6, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        BinaryOp: <
+          ID: p9
+          Constant: int, 1
+        Assignment: =
+          ID: as
+          BinaryOp: ||
+            BinaryOp: !=
+              ID: as
+              ID: ca
+            BinaryOp: >
+              ID: as
+              Constant: int, 1

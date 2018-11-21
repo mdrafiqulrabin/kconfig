@@ -1,0 +1,71 @@
+FileAST: 
+  Typedef: expbap_t, [], ['typedef']
+    TypeDecl: expbap_t, []
+      Struct: None
+        Decl: exp, [], [], []
+          ArrayDecl: []
+            TypeDecl: exp, []
+              IdentifierType: ['unsigned']
+            Constant: int, 256
+  FuncDef: 
+    Decl: a52_bit_allocate, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: expbap, [], [], []
+            PtrDecl: []
+              TypeDecl: expbap, []
+                IdentifierType: ['expbap_t']
+        TypeDecl: a52_bit_allocate, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: exp, [], [], []
+        PtrDecl: []
+          TypeDecl: exp, []
+            IdentifierType: ['unsigned']
+        StructRef: ->
+          ID: expbap
+          ID: exp
+      Decl: bap, [], [], []
+        PtrDecl: []
+          TypeDecl: bap, []
+            IdentifierType: ['char']
+      While: 
+        BinaryOp: ||
+          BinaryOp: <
+            ID: i
+            Constant: int, 3
+          BinaryOp: >
+            ArrayRef: 
+              ID: exp
+              ID: i
+            ArrayRef: 
+              ID: exp
+              BinaryOp: -
+                ID: i
+                Constant: int, 1
+        EmptyStatement: 
+      DoWhile: 
+        BinaryOp: <
+          ID: i
+          Constant: int, 20
+        Compound: 
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                ID: exp
+                BinaryOp: +
+                  ID: i
+                  Constant: int, 1
+              ArrayRef: 
+                ID: exp
+                ID: i
+            Assignment: =
+              ArrayRef: 
+                ID: bap
+                ID: i
+              Constant: int, 0
+          UnaryOp: p++
+            ID: i

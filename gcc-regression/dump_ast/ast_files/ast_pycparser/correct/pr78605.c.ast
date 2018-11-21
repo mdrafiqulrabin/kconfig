@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: d, [], [], []
+    ArrayDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['char']
+      Constant: int, 10
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_sprintf
+          ExprList: 
+            ID: d
+            Constant: string, "%i %i"
+            ID: i
+            ID: i
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['float']
+        TypeDecl: g, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_sprintf
+          ExprList: 
+            ID: d
+            Constant: string, "%.2f %.2f"
+            ID: f
+            ID: f

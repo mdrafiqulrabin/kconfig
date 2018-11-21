@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7f97c58264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f97c5826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f97c5826740 '__int128'
+|-TypedefDecl 0x7f97c5826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f97c5826760 'unsigned __int128'
+|-TypedefDecl 0x7f97c5826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f97c5826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f97c5826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f97c5826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f97c5826dc0 'char *'
+|   `-BuiltinType 0x7f97c5826560 'char'
+|-TypedefDecl 0x7f97c58270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f97c5827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f97c5826ee0 'struct __va_list_tag'
+|     `-Record 0x7f97c5826e58 '__va_list_tag'
+|-FunctionDecl 0x7f97c6026a30 <c_files/pr54988.c:10:1, line:14:1> line:11:1 used foo 'int (int)' static inline
+| |-ParmVarDecl 0x7f97c5827138 <col:6, col:10> col:10 used x 'int'
+| |-CompoundStmt 0x7f97c6026bb0 <line:12:1, line:14:1>
+| | `-ReturnStmt 0x7f97c6026b98 <line:13:3, col:10>
+| |   `-ImplicitCastExpr 0x7f97c6026b80 <col:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f97c6026b58 <col:10> 'int' lvalue ParmVar 0x7f97c5827138 'x' 'int'
+| `-AlwaysInlineAttr 0x7f97c6026ad0 <line:10:31> always_inline
+`-FunctionDecl 0x7f97c6026c78 <line:16:1, line:20:1> line:17:1 bar 'int (int)'
+  |-ParmVarDecl 0x7f97c6026be8 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7f97c6026e10 <line:18:1, line:20:1>
+    `-ReturnStmt 0x7f97c6026df8 <line:19:3, col:16>
+      `-CallExpr 0x7f97c6026db0 <col:10, col:16> 'int'
+        |-ImplicitCastExpr 0x7f97c6026d98 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f97c6026d18 <col:10> 'int (int)' Function 0x7f97c6026a30 'foo' 'int (int)'
+        `-ImplicitCastExpr 0x7f97c6026de0 <col:15> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f97c6026d40 <col:15> 'int' lvalue ParmVar 0x7f97c6026be8 'x' 'int'

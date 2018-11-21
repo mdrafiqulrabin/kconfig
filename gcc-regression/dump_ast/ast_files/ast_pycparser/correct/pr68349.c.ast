@@ -1,0 +1,122 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: my_strlen, [], [], []
+    FuncDecl: 
+      TypeDecl: my_strlen, []
+        IdentifierType: ['unsigned', 'long']
+  Typedef: PHyphenNode, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: PHyphenNode, []
+        Struct: sHyphenNode
+          Decl: sepcnts, [], [], []
+            ArrayDecl: []
+              TypeDecl: sepcnts, []
+                IdentifierType: ['char']
+              Constant: int, 0
+          Decl: Daughters, [], [], []
+            ArrayDecl: []
+              PtrDecl: []
+                TypeDecl: Daughters, []
+                  Struct: sHyphenNode
+  Decl: GetIndex, [], [], []
+    FuncDecl: 
+      TypeDecl: GetIndex, []
+        IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['PHyphenNode']
+  FuncDef: 
+    Decl: DoHyphens_Field_1, [], [], []
+      FuncDecl: 
+        TypeDecl: DoHyphens_Field_1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        ArrayDecl: []
+          TypeDecl: d, []
+            IdentifierType: ['char']
+          Constant: int, 300
+      Decl: e, [], [], []
+        ArrayDecl: []
+          TypeDecl: e, []
+            IdentifierType: ['char']
+          Constant: int, 300
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: my_strlen
+      For: 
+        ID: z
+        EmptyStatement: 
+      For: 
+        ID: l
+        UnaryOp: p++
+          ID: z
+        Compound: 
+          Assignment: =
+            ID: f
+            ID: z
+          For: 
+            BinaryOp: <
+              ID: f
+              ID: l
+            UnaryOp: p++
+              ID: f
+            Compound: 
+              Assignment: =
+                ID: c
+                ArrayRef: 
+                  StructRef: ->
+                    ID: c
+                    ID: Daughters
+                  FuncCall: 
+                    ID: GetIndex
+                    ExprList: 
+                      ArrayRef: 
+                        ID: d
+                        ID: f
+              Assignment: =
+                ID: a
+                Constant: int, 0
+              For: 
+                BinaryOp: <=
+                  ID: a
+                  BinaryOp: -
+                    ID: f
+                    ID: z
+                UnaryOp: p++
+                  ID: a
+                If: 
+                  ArrayRef: 
+                    ID: e
+                    BinaryOp: +
+                      ID: z
+                      ID: a
+                  Assignment: =
+                    ArrayRef: 
+                      ID: e
+                      ID: z
+                    ArrayRef: 
+                      StructRef: ->
+                        ID: c
+                        ID: sepcnts
+                      ID: a
+      If: 
+        ArrayRef: 
+          ID: e
+          ID: z
+        Assignment: =
+          ID: b
+          Constant: int, 1

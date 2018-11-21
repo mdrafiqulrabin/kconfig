@@ -1,0 +1,187 @@
+c_files/pr48235.c:49:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr48235.c:58:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+TranslationUnitDecl 0x7ff5ab8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff5ab826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff5ab826740 '__int128'
+|-TypedefDecl 0x7ff5ab826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff5ab826760 'unsigned __int128'
+|-TypedefDecl 0x7ff5ab826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff5ab826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff5ab826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff5ab826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff5ab826dc0 'char *'
+|   `-BuiltinType 0x7ff5ab826560 'char'
+|-TypedefDecl 0x7ff5ab8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff5ab827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff5ab826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff5ab826e58 '__va_list_tag'
+|-RecordDecl 0x7ff5ab827120 <c_files/pr48235.c:4:1, line:8:1> line:4:8 struct intC definition
+| |-FieldDecl 0x7ff5ab877a00 <line:6:3, col:9> col:9 referenced x 'short'
+| `-FieldDecl 0x7ff5ab877a60 <line:7:3, col:9> col:9 referenced y 'short'
+|-VarDecl 0x7ff5ab877ac0 <line:10:1, col:5> col:5 used size_x 'int'
+|-FunctionDecl 0x7ff5ab877cc8 <line:12:1, line:16:1> line:13:1 used TileDiffXY 'int (int, int)' static inline
+| |-ParmVarDecl 0x7ff5ab877b78 <col:13, col:17> col:17 used x 'int'
+| |-ParmVarDecl 0x7ff5ab877bf0 <col:20, col:24> col:24 used y 'int'
+| `-CompoundStmt 0x7ff5ab877eb8 <line:14:1, line:16:1>
+|   `-ReturnStmt 0x7ff5ab877ea0 <line:15:3, col:25>
+|     `-BinaryOperator 0x7ff5ab877e78 <col:10, col:25> 'int' '+'
+|       |-ParenExpr 0x7ff5ab877e18 <col:10, col:21> 'int'
+|       | `-BinaryOperator 0x7ff5ab877df0 <col:11, col:15> 'int' '*'
+|       |   |-ImplicitCastExpr 0x7ff5ab877dc0 <col:11> 'int' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7ff5ab877d70 <col:11> 'int' lvalue ParmVar 0x7ff5ab877bf0 'y' 'int'
+|       |   `-ImplicitCastExpr 0x7ff5ab877dd8 <col:15> 'int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7ff5ab877d98 <col:15> 'int' lvalue Var 0x7ff5ab877ac0 'size_x' 'int'
+|       `-ImplicitCastExpr 0x7ff5ab877e60 <col:25> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7ff5ab877e38 <col:25> 'int' lvalue ParmVar 0x7ff5ab877b78 'x' 'int'
+|-RecordDecl 0x7ff5ab877ed8 <line:18:1, line:22:1> line:18:8 struct HangarTileTable definition
+| |-FieldDecl 0x7ff5ab877fd0 <line:20:3, col:15> col:15 referenced ti 'struct intC':'struct intC'
+| `-FieldDecl 0x7ff5ab878030 <line:21:3, col:7> col:7 referenced hangar_num 'int'
+|-RecordDecl 0x7ff5ab8780c8 <line:24:1, line:28:1> line:24:8 struct AirportSpec definition
+| |-FieldDecl 0x7ff5ab878220 <line:26:3, col:27> col:27 referenced depot_table 'struct HangarTileTable *'
+| `-FieldDecl 0x7ff5ab878280 <line:27:3, col:7> col:7 referenced size 'int'
+|-FunctionDecl 0x7ff5ab878318 <line:30:1, col:11> col:6 used Get 'void ()'
+|-VarDecl 0x7ff5ab878400 <line:31:1, col:20> col:20 used dummy 'struct AirportSpec':'struct AirportSpec'
+|-FunctionDecl 0x7ff5ab878638 <line:33:1, line:49:1> line:34:1 used GetRotatedTileFromOffset 'int (int *, struct intC)' static inline
+| |-ParmVarDecl 0x7ff5ab8784a0 <col:27, col:32> col:32 used a 'int *'
+| |-ParmVarDecl 0x7ff5ab878520 <col:35, col:47> col:47 used tidc 'struct intC':'struct intC'
+| `-CompoundStmt 0x7ff5ab879318 <line:35:1, line:49:1>
+|   |-IfStmt 0x7ff5ab878808 <line:36:3, line:37:10>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7ff5ab878758 <line:36:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7ff5ab878740 <col:8, col:9> 'int' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7ff5ab878720 <col:8, col:9> 'int' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7ff5ab878708 <col:9> 'int *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7ff5ab8786e0 <col:9> 'int *' lvalue ParmVar 0x7ff5ab8784a0 'a' 'int *'
+|   | |-CallExpr 0x7ff5ab8787e0 <line:37:5, col:10> 'void'
+|   | | `-ImplicitCastExpr 0x7ff5ab8787c8 <col:5> 'void (*)()' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7ff5ab878778 <col:5> 'void ()' Function 0x7ff5ab878318 'Get' 'void ()'
+|   | `-<<<NULL>>>
+|   `-SwitchStmt 0x7ff5ab8788b8 <line:38:3, line:48:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7ff5ab8788a0 <line:38:11, col:12> 'int' <LValueToRValue>
+|     | `-UnaryOperator 0x7ff5ab878880 <col:11, col:12> 'int' lvalue prefix '*'
+|     |   `-ImplicitCastExpr 0x7ff5ab878868 <col:12> 'int *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7ff5ab878840 <col:12> 'int *' lvalue ParmVar 0x7ff5ab8784a0 'a' 'int *'
+|     `-CompoundStmt 0x7ff5ab8792e0 <line:39:5, line:48:5>
+|       |-CaseStmt 0x7ff5ab878908 <line:40:5, line:41:40>
+|       | |-IntegerLiteral 0x7ff5ab8788e8 <line:40:10> 'int' 0
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7ff5ab878b18 <line:41:7, col:40>
+|       |   `-BinaryOperator 0x7ff5ab878af0 <col:14, col:40> 'int' '+'
+|       |     |-ParenExpr 0x7ff5ab878a40 <col:14, col:31> 'int'
+|       |     | `-BinaryOperator 0x7ff5ab878a18 <col:15, col:25> 'int' '<<'
+|       |     |   |-ImplicitCastExpr 0x7ff5ab8789e0 <col:15, col:20> 'int' <IntegralCast>
+|       |     |   | `-ImplicitCastExpr 0x7ff5ab8789c8 <col:15, col:20> 'short' <LValueToRValue>
+|       |     |   |   `-MemberExpr 0x7ff5ab878968 <col:15, col:20> 'short' lvalue .y 0x7ff5ab877a60
+|       |     |   |     `-DeclRefExpr 0x7ff5ab878940 <col:15> 'struct intC':'struct intC' lvalue ParmVar 0x7ff5ab878520 'tidc' 'struct intC':'struct intC'
+|       |     |   `-ImplicitCastExpr 0x7ff5ab878a00 <col:25> 'int' <LValueToRValue>
+|       |     |     `-DeclRefExpr 0x7ff5ab8789a0 <col:25> 'int' lvalue Var 0x7ff5ab877ac0 'size_x' 'int'
+|       |     `-ImplicitCastExpr 0x7ff5ab878ad8 <col:35, col:40> 'int' <IntegralCast>
+|       |       `-ImplicitCastExpr 0x7ff5ab878ac0 <col:35, col:40> 'short' <LValueToRValue>
+|       |         `-MemberExpr 0x7ff5ab878a88 <col:35, col:40> 'short' lvalue .x 0x7ff5ab877a00
+|       |           `-DeclRefExpr 0x7ff5ab878a60 <col:35> 'struct intC':'struct intC' lvalue ParmVar 0x7ff5ab878520 'tidc' 'struct intC':'struct intC'
+|       |-CaseStmt 0x7ff5ab878b50 <line:42:5, line:43:53>
+|       | |-IntegerLiteral 0x7ff5ab878b30 <line:42:10> 'int' 1
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7ff5ab878de8 <line:43:7, col:53>
+|       |   `-CallExpr 0x7ff5ab878d80 <col:14, col:53> 'int'
+|       |     |-ImplicitCastExpr 0x7ff5ab878d68 <col:14> 'int (*)(int, int)' <FunctionToPointerDecay>
+|       |     | `-DeclRefExpr 0x7ff5ab878b88 <col:14> 'int (int, int)' Function 0x7ff5ab877cc8 'TileDiffXY' 'int (int, int)'
+|       |     |-ImplicitCastExpr 0x7ff5ab878dd0 <col:26, col:31> 'int' <IntegralCast>
+|       |     | `-ImplicitCastExpr 0x7ff5ab878db8 <col:26, col:31> 'short' <LValueToRValue>
+|       |     |   `-MemberExpr 0x7ff5ab878bd8 <col:26, col:31> 'short' lvalue .y 0x7ff5ab877a60
+|       |     |     `-DeclRefExpr 0x7ff5ab878bb0 <col:26> 'struct intC':'struct intC' lvalue ParmVar 0x7ff5ab878520 'tidc' 'struct intC':'struct intC'
+|       |     `-BinaryOperator 0x7ff5ab878d18 <col:34, col:52> 'int' '-'
+|       |       |-ImplicitCastExpr 0x7ff5ab878cd0 <col:34, col:40> 'int' <LValueToRValue>
+|       |       | `-MemberExpr 0x7ff5ab878c38 <col:34, col:40> 'int' lvalue .size 0x7ff5ab878280
+|       |       |   `-DeclRefExpr 0x7ff5ab878c10 <col:34> 'struct AirportSpec':'struct AirportSpec' lvalue Var 0x7ff5ab878400 'dummy' 'struct AirportSpec':'struct AirportSpec'
+|       |       `-ImplicitCastExpr 0x7ff5ab878d00 <col:47, col:52> 'int' <IntegralCast>
+|       |         `-ImplicitCastExpr 0x7ff5ab878ce8 <col:47, col:52> 'short' <LValueToRValue>
+|       |           `-MemberExpr 0x7ff5ab878c98 <col:47, col:52> 'short' lvalue .x 0x7ff5ab877a00
+|       |             `-DeclRefExpr 0x7ff5ab878c70 <col:47> 'struct intC':'struct intC' lvalue ParmVar 0x7ff5ab878520 'tidc' 'struct intC':'struct intC'
+|       |-CaseStmt 0x7ff5ab878e20 <line:44:5, line:45:53>
+|       | |-IntegerLiteral 0x7ff5ab878e00 <line:44:10> 'int' 2
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7ff5ab879090 <line:45:7, col:53>
+|       |   `-CallExpr 0x7ff5ab879028 <col:14, col:53> 'int'
+|       |     |-ImplicitCastExpr 0x7ff5ab879010 <col:14> 'int (*)(int, int)' <FunctionToPointerDecay>
+|       |     | `-DeclRefExpr 0x7ff5ab878e58 <col:14> 'int (int, int)' Function 0x7ff5ab877cc8 'TileDiffXY' 'int (int, int)'
+|       |     |-ImplicitCastExpr 0x7ff5ab879078 <col:26, col:31> 'int' <IntegralCast>
+|       |     | `-ImplicitCastExpr 0x7ff5ab879060 <col:26, col:31> 'short' <LValueToRValue>
+|       |     |   `-MemberExpr 0x7ff5ab878ea8 <col:26, col:31> 'short' lvalue .x 0x7ff5ab877a00
+|       |     |     `-DeclRefExpr 0x7ff5ab878e80 <col:26> 'struct intC':'struct intC' lvalue ParmVar 0x7ff5ab878520 'tidc' 'struct intC':'struct intC'
+|       |     `-BinaryOperator 0x7ff5ab878fe8 <col:34, col:52> 'int' '-'
+|       |       |-ImplicitCastExpr 0x7ff5ab878fa0 <col:34, col:40> 'int' <LValueToRValue>
+|       |       | `-MemberExpr 0x7ff5ab878f08 <col:34, col:40> 'int' lvalue .size 0x7ff5ab878280
+|       |       |   `-DeclRefExpr 0x7ff5ab878ee0 <col:34> 'struct AirportSpec':'struct AirportSpec' lvalue Var 0x7ff5ab878400 'dummy' 'struct AirportSpec':'struct AirportSpec'
+|       |       `-ImplicitCastExpr 0x7ff5ab878fd0 <col:47, col:52> 'int' <IntegralCast>
+|       |         `-ImplicitCastExpr 0x7ff5ab878fb8 <col:47, col:52> 'short' <LValueToRValue>
+|       |           `-MemberExpr 0x7ff5ab878f68 <col:47, col:52> 'short' lvalue .y 0x7ff5ab877a60
+|       |             `-DeclRefExpr 0x7ff5ab878f40 <col:47> 'struct intC':'struct intC' lvalue ParmVar 0x7ff5ab878520 'tidc' 'struct intC':'struct intC'
+|       `-CaseStmt 0x7ff5ab8790c8 <line:46:5, line:47:48>
+|         |-IntegerLiteral 0x7ff5ab8790a8 <line:46:10> 'int' 3
+|         |-<<<NULL>>>
+|         `-ReturnStmt 0x7ff5ab8792c8 <line:47:7, col:48>
+|           `-CallExpr 0x7ff5ab879260 <col:14, col:48> 'int'
+|             |-ImplicitCastExpr 0x7ff5ab879248 <col:14> 'int (*)(int, int)' <FunctionToPointerDecay>
+|             | `-DeclRefExpr 0x7ff5ab879100 <col:14> 'int (int, int)' Function 0x7ff5ab877cc8 'TileDiffXY' 'int (int, int)'
+|             |-BinaryOperator 0x7ff5ab8791c0 <col:26, col:39> 'int' '-'
+|             | |-ImplicitCastExpr 0x7ff5ab8791a8 <col:26, col:32> 'int' <LValueToRValue>
+|             | | `-MemberExpr 0x7ff5ab879150 <col:26, col:32> 'int' lvalue .size 0x7ff5ab878280
+|             | |   `-DeclRefExpr 0x7ff5ab879128 <col:26> 'struct AirportSpec':'struct AirportSpec' lvalue Var 0x7ff5ab878400 'dummy' 'struct AirportSpec':'struct AirportSpec'
+|             | `-IntegerLiteral 0x7ff5ab879188 <col:39> 'int' 1
+|             `-ImplicitCastExpr 0x7ff5ab8792b0 <col:42, col:47> 'int' <IntegralCast>
+|               `-ImplicitCastExpr 0x7ff5ab879298 <col:42, col:47> 'short' <LValueToRValue>
+|                 `-MemberExpr 0x7ff5ab879210 <col:42, col:47> 'short' lvalue .x 0x7ff5ab877a00
+|                   `-DeclRefExpr 0x7ff5ab8791e8 <col:42> 'struct intC':'struct intC' lvalue ParmVar 0x7ff5ab878520 'tidc' 'struct intC':'struct intC'
+`-FunctionDecl 0x7ff5ab879428 <line:51:1, line:58:1> line:52:1 GetHangarNum 'int (int *)'
+  |-ParmVarDecl 0x7ff5ab879358 <col:15, col:20> col:20 used a 'int *'
+  `-CompoundStmt 0x7ff5ab87ab58 <line:53:1, line:58:1>
+    |-DeclStmt 0x7ff5ab879540 <line:54:2, col:7>
+    | `-VarDecl 0x7ff5ab8794e0 <col:2, col:6> col:6 used i 'int'
+    `-ForStmt 0x7ff5ab87ab20 <line:55:3, line:57:35>
+      |-BinaryOperator 0x7ff5ab8795a0 <line:55:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7ff5ab879558 <col:8> 'int' lvalue Var 0x7ff5ab8794e0 'i' 'int'
+      | `-IntegerLiteral 0x7ff5ab879580 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff5ab879680 <col:15, col:25> 'int' '<'
+      | |-ImplicitCastExpr 0x7ff5ab879650 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff5ab8795c8 <col:15> 'int' lvalue Var 0x7ff5ab8794e0 'i' 'int'
+      | `-ImplicitCastExpr 0x7ff5ab879668 <col:19, col:25> 'int' <LValueToRValue>
+      |   `-MemberExpr 0x7ff5ab879618 <col:19, col:25> 'int' lvalue .size 0x7ff5ab878280
+      |     `-DeclRefExpr 0x7ff5ab8795f0 <col:19> 'struct AirportSpec':'struct AirportSpec' lvalue Var 0x7ff5ab878400 'dummy' 'struct AirportSpec':'struct AirportSpec'
+      |-UnaryOperator 0x7ff5ab879720 <col:31, col:32> 'int' postfix '++'
+      | `-DeclRefExpr 0x7ff5ab8796f8 <col:31> 'int' lvalue Var 0x7ff5ab8794e0 'i' 'int'
+      `-IfStmt 0x7ff5ab87aae8 <line:56:5, line:57:35>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-CallExpr 0x7ff5ab879920 <line:56:9, col:61> 'int'
+        | |-ImplicitCastExpr 0x7ff5ab879908 <col:9> 'int (*)(int *, struct intC)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7ff5ab879740 <col:9> 'int (int *, struct intC)' Function 0x7ff5ab878638 'GetRotatedTileFromOffset' 'int (int *, struct intC)'
+        | |-ImplicitCastExpr 0x7ff5ab879958 <col:35> 'int *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7ff5ab879768 <col:35> 'int *' lvalue ParmVar 0x7ff5ab879358 'a' 'int *'
+        | `-ImplicitCastExpr 0x7ff5ab879970 <col:38, col:59> 'struct intC':'struct intC' <LValueToRValue>
+        |   `-MemberExpr 0x7ff5ab879870 <col:38, col:59> 'struct intC':'struct intC' lvalue .ti 0x7ff5ab877fd0
+        |     `-ArraySubscriptExpr 0x7ff5ab879848 <col:38, col:57> 'struct HangarTileTable':'struct HangarTileTable' lvalue
+        |       |-ImplicitCastExpr 0x7ff5ab879818 <col:38, col:44> 'struct HangarTileTable *' <LValueToRValue>
+        |       | `-MemberExpr 0x7ff5ab8797b8 <col:38, col:44> 'struct HangarTileTable *' lvalue .depot_table 0x7ff5ab878220
+        |       |   `-DeclRefExpr 0x7ff5ab879790 <col:38> 'struct AirportSpec':'struct AirportSpec' lvalue Var 0x7ff5ab878400 'dummy' 'struct AirportSpec':'struct AirportSpec'
+        |       `-ImplicitCastExpr 0x7ff5ab879830 <col:56> 'int' <LValueToRValue>
+        |         `-DeclRefExpr 0x7ff5ab8797f0 <col:56> 'int' lvalue Var 0x7ff5ab8794e0 'i' 'int'
+        |-ReturnStmt 0x7ff5ab87aad0 <line:57:7, col:35>
+        | `-ImplicitCastExpr 0x7ff5ab87aab8 <col:14, col:35> 'int' <LValueToRValue>
+        |   `-MemberExpr 0x7ff5ab87aa80 <col:14, col:35> 'int' lvalue .hangar_num 0x7ff5ab878030
+        |     `-ArraySubscriptExpr 0x7ff5ab87aa58 <col:14, col:33> 'struct HangarTileTable':'struct HangarTileTable' lvalue
+        |       |-ImplicitCastExpr 0x7ff5ab87aa28 <col:14, col:20> 'struct HangarTileTable *' <LValueToRValue>
+        |       | `-MemberExpr 0x7ff5ab8799b0 <col:14, col:20> 'struct HangarTileTable *' lvalue .depot_table 0x7ff5ab878220
+        |       |   `-DeclRefExpr 0x7ff5ab879988 <col:14> 'struct AirportSpec':'struct AirportSpec' lvalue Var 0x7ff5ab878400 'dummy' 'struct AirportSpec':'struct AirportSpec'
+        |       `-ImplicitCastExpr 0x7ff5ab87aa40 <col:32> 'int' <LValueToRValue>
+        |         `-DeclRefExpr 0x7ff5ab87aa00 <col:32> 'int' lvalue Var 0x7ff5ab8794e0 'i' 'int'
+        `-<<<NULL>>>

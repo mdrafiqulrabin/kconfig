@@ -1,0 +1,122 @@
+FileAST: 
+  FuncDef: 
+    Decl: get_state, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: size, [], [], []
+            TypeDecl: size, []
+              IdentifierType: ['int']
+          Decl: node, [], [], []
+            PtrDecl: []
+              TypeDecl: node, []
+                IdentifierType: ['int']
+          Decl: hash, [], [], []
+            PtrDecl: []
+              TypeDecl: hash, []
+                IdentifierType: ['int']
+        TypeDecl: get_state, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      While: 
+        ArrayRef: 
+          ID: hash
+          ID: i
+        Compound: 
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                ID: node
+                ArrayRef: 
+                  ID: hash
+                  ID: i
+              Constant: int, 0
+            Return: 
+              BinaryOp: -
+                ArrayRef: 
+                  ID: hash
+                  ID: i
+                Constant: int, 1
+          UnaryOp: p++
+            ID: i
+          If: 
+            BinaryOp: ==
+              ID: i
+              Constant: int, 5
+            Assignment: =
+              ID: i
+              Constant: int, 0
+      Return: 
+        UnaryOp: -
+          Constant: int, 1
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: gate1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: size, [], [], []
+            TypeDecl: size, []
+              IdentifierType: ['int']
+          Decl: node, [], [], []
+            PtrDecl: []
+              TypeDecl: node, []
+                IdentifierType: ['int']
+          Decl: hash, [], [], []
+            PtrDecl: []
+              TypeDecl: hash, []
+                IdentifierType: ['int']
+        TypeDecl: gate1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: add_size, [], [], []
+        TypeDecl: add_size, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: size
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: j
+            FuncCall: 
+              ID: get_state
+              ExprList: 
+                ID: size
+                ID: node
+                ID: hash
+          If: 
+            BinaryOp: ==
+              ID: j
+              UnaryOp: -
+                Constant: int, 1
+            Compound: 
+              UnaryOp: p++
+                ID: add_size
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          BinaryOp: +
+            ID: size
+            ID: add_size

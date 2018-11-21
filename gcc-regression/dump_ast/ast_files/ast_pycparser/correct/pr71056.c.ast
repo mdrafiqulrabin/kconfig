@@ -1,0 +1,127 @@
+FileAST: 
+  Decl: buff, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: buff, []
+        IdentifierType: ['char']
+  Decl: f2, [], [], []
+    FuncDecl: 
+      TypeDecl: f2, []
+        IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: T1
+      Decl: reserved, [], [], []
+        ArrayDecl: []
+          TypeDecl: reserved, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      Decl: ip, [], [], []
+        TypeDecl: ip, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: cs, [], [], []
+        TypeDecl: cs, []
+          IdentifierType: ['unsigned', 'short']
+      Decl: rsrv2, [], [], []
+        TypeDecl: rsrv2, []
+          IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: p, ['const']
+                IdentifierType: ['char']
+        TypeDecl: f3, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          Struct: T1
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          UnaryOp: &
+            ID: x
+          ID: p
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                Struct: T1
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: x
+            ID: reserved
+          Constant: int, 0
+        FuncCall: 
+          ID: __builtin_bswap32
+          ExprList: 
+            ArrayRef: 
+              StructRef: .
+                ID: x
+                ID: reserved
+              Constant: int, 0
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: x
+            ID: reserved
+          Constant: int, 1
+        FuncCall: 
+          ID: __builtin_bswap32
+          ExprList: 
+            ArrayRef: 
+              StructRef: .
+                ID: x
+                ID: reserved
+              Constant: int, 1
+      Assignment: =
+        StructRef: .
+          ID: x
+          ID: ip
+        FuncCall: 
+          ID: __builtin_bswap32
+          ExprList: 
+            StructRef: .
+              ID: x
+              ID: ip
+      Assignment: =
+        StructRef: .
+          ID: x
+          ID: cs
+        BinaryOp: |
+          BinaryOp: <<
+            StructRef: .
+              ID: x
+              ID: cs
+            Constant: int, 8
+          BinaryOp: >>
+            StructRef: .
+              ID: x
+              ID: cs
+            Constant: int, 8
+      Assignment: =
+        StructRef: .
+          ID: x
+          ID: rsrv2
+        BinaryOp: |
+          BinaryOp: <<
+            StructRef: .
+              ID: x
+              ID: rsrv2
+            Constant: int, 8
+          BinaryOp: >>
+            StructRef: .
+              ID: x
+              ID: rsrv2
+            Constant: int, 8
+      If: 
+        FuncCall: 
+          ID: f2
+        Compound: 
+          FuncCall: 
+            ID: __builtin_memcpy
+            ExprList: 
+              ID: buff
+              Constant: string, "\n"
+              Constant: int, 1

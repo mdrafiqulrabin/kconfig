@@ -1,0 +1,23 @@
+c_files/pr20368-1.c:6:18: error: use of undeclared identifier 'f'
+extern __typeof (f) g; /* { dg-error "'f' undeclared here \\(not in a function\\)" } */
+                 ^
+1 error generated.
+TranslationUnitDecl 0x7fa598825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa598826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa598825d40 '__int128'
+|-TypedefDecl 0x7fa598826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa598825d60 'unsigned __int128'
+|-TypedefDecl 0x7fa598826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa598826170 'struct __NSConstantString_tag'
+|   `-Record 0x7fa5988260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa598826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa5988263c0 'char *'
+|   `-BuiltinType 0x7fa598825b60 'char'
+|-TypedefDecl 0x7fa5988266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa598826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa5988264e0 'struct __va_list_tag'
+|     `-Record 0x7fa598826458 '__va_list_tag'
+|-VarDecl 0x7fa598826760 <c_files/pr20368-1.c:6:1, col:21> col:21 invalid g 'int' extern
+`-FunctionDecl 0x7fa5990000c8 <line:8:1, line:12:1> line:9:1 f 'int (double)'
+  |-ParmVarDecl 0x7fa599000000 <line:10:6, col:12> col:12 x 'float'
+  `-CompoundStmt 0x7fa5990001a8 <line:11:1, line:12:1>

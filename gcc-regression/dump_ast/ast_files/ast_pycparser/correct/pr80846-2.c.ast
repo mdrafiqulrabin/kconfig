@@ -1,0 +1,41 @@
+FileAST: 
+  FuncDef: 
+    Decl: sumint, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arr, ['const'], [], []
+            ArrayDecl: []
+              TypeDecl: arr, ['const']
+                IdentifierType: ['int']
+        TypeDecl: sumint, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: arr
+        FuncCall: 
+          ID: __builtin_assume_aligned
+          ExprList: 
+            ID: arr
+            Constant: int, 64
+      Decl: sum, [], [], []
+        TypeDecl: sum, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        DeclList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+            Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 1024
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: sum
+          ArrayRef: 
+            ID: arr
+            ID: i
+      Return: 
+        ID: sum

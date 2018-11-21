@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7fac440166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fac44016c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fac44016940 '__int128'
+|-TypedefDecl 0x7fac44016c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fac44016960 'unsigned __int128'
+|-TypedefDecl 0x7fac44016f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fac44016d70 'struct __NSConstantString_tag'
+|   `-Record 0x7fac44016ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fac44017000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fac44016fc0 'char *'
+|   `-BuiltinType 0x7fac44016760 'char'
+|-TypedefDecl 0x7fac440172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fac44017270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fac440170e0 'struct __va_list_tag'
+|     `-Record 0x7fac44017058 '__va_list_tag'
+|-TypedefDecl 0x7fac44017378 <c_files/pr78227-1.c:5:1, col:13> col:13 referenced V '__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| `-VectorType 0x7fac44017340 '__attribute__((__vector_size__(16 * sizeof(int)))) int' 16
+|   `-BuiltinType 0x7fac440167c0 'int'
+|-TypedefDecl 0x7fac43837438 <line:6:1, col:23> col:23 referenced W '__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+| `-VectorType 0x7fac43837400 '__attribute__((__vector_size__(8 * sizeof(long long)))) long long' 8
+|   `-BuiltinType 0x7fac44016800 'long long'
+|-FunctionDecl 0x7fac438375c0 <line:8:1, line:12:1> line:9:1 foo1 'V (V)'
+| |-ParmVarDecl 0x7fac438374c0 <col:7, col:9> col:9 used v 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| `-CompoundStmt 0x7fac43837758 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7fac43837740 <line:11:3, col:14>
+|     `-BinaryOperator 0x7fac43837718 <col:10, col:14> '__attribute__((__vector_size__(16 * sizeof(int)))) int' '>'
+|       |-ImplicitCastExpr 0x7fac438376e8 <col:10> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fac438376a0 <col:10> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue ParmVar 0x7fac438374c0 'v' 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+|       `-ImplicitCastExpr 0x7fac43837700 <col:14> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <VectorSplat>
+|         `-IntegerLiteral 0x7fac438376c8 <col:14> 'int' 0
+|-FunctionDecl 0x7fac43837810 <line:14:1, line:18:1> line:15:1 bar1 'V (V)'
+| |-ParmVarDecl 0x7fac43837788 <col:7, col:9> col:9 used v 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| `-CompoundStmt 0x7fac43837968 <line:16:1, line:18:1>
+|   `-ReturnStmt 0x7fac43837950 <line:17:3, col:15>
+|     `-BinaryOperator 0x7fac43837928 <col:10, col:15> '__attribute__((__vector_size__(16 * sizeof(int)))) int' '!='
+|       |-ImplicitCastExpr 0x7fac438378f8 <col:10> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fac438378b0 <col:10> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue ParmVar 0x7fac43837788 'v' 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+|       `-ImplicitCastExpr 0x7fac43837910 <col:15> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <VectorSplat>
+|         `-IntegerLiteral 0x7fac438378d8 <col:15> 'int' 0
+|-FunctionDecl 0x7fac43837ac0 <line:20:1, line:24:1> line:21:1 foo2 'W (W)'
+| |-ParmVarDecl 0x7fac438379c0 <col:7, col:9> col:9 used w 'W':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fac43837c30 <line:22:1, line:24:1>
+|   `-ReturnStmt 0x7fac43837c18 <line:23:3, col:14>
+|     `-BinaryOperator 0x7fac43837bf0 <col:10, col:14> '__attribute__((__vector_size__(8 * sizeof(long long)))) long long' '>'
+|       |-ImplicitCastExpr 0x7fac43837ba8 <col:10> 'W':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fac43837b60 <col:10> 'W':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue ParmVar 0x7fac438379c0 'w' 'W':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fac43837bd8 <col:14> 'W':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <VectorSplat>
+|         `-ImplicitCastExpr 0x7fac43837bc0 <col:14> 'long long' <IntegralCast>
+|           `-IntegerLiteral 0x7fac43837b88 <col:14> 'int' 0
+`-FunctionDecl 0x7fac43837ce8 <line:26:1, line:30:1> line:27:1 bar2 'W (W)'
+  |-ParmVarDecl 0x7fac43837c60 <col:7, col:9> col:9 used w 'W':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+  `-CompoundStmt 0x7fac43837e58 <line:28:1, line:30:1>
+    `-ReturnStmt 0x7fac43837e40 <line:29:3, col:15>
+      `-BinaryOperator 0x7fac43837e18 <col:10, col:15> '__attribute__((__vector_size__(8 * sizeof(long long)))) long long' '!='
+        |-ImplicitCastExpr 0x7fac43837dd0 <col:10> 'W':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7fac43837d88 <col:10> 'W':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue ParmVar 0x7fac43837c60 'w' 'W':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+        `-ImplicitCastExpr 0x7fac43837e00 <col:15> 'W':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <VectorSplat>
+          `-ImplicitCastExpr 0x7fac43837de8 <col:15> 'long long' <IntegralCast>
+            `-IntegerLiteral 0x7fac43837db0 <col:15> 'int' 0

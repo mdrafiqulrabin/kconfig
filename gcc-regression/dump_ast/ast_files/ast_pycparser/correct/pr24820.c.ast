@@ -1,0 +1,43 @@
+FileAST: 
+  Decl: floor, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: floor, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: sum, [], [], []
+            TypeDecl: sum, []
+              IdentifierType: ['double']
+        TypeDecl: bar, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 256
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: sum
+          FuncCall: 
+            ID: floor
+            ExprList: 
+              BinaryOp: +
+                Constant: float, 0.5
+                BinaryOp: -
+                  ID: i
+                  Constant: int, 128
+      Return: 
+        ID: sum

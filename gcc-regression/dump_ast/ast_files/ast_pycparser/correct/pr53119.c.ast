@@ -1,0 +1,63 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: a
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: b
+      Decl: w, [], [], []
+        TypeDecl: w, []
+          Struct: a
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          Struct: a
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: az, [], [], []
+        TypeDecl: az, []
+          Struct: a
+        InitList: 
+          Constant: int, 0
+      Decl: anz, [], [], []
+        TypeDecl: anz, []
+          Struct: a
+        InitList: 
+          Constant: int, 1
+      Decl: aez, [], [], []
+        TypeDecl: aez, []
+          Struct: a
+        InitList: 
+          Constant: int, 0
+          Constant: int, 0
+      Decl: bz, [], [], []
+        TypeDecl: bz, []
+          Struct: b
+        InitList: 
+          Constant: int, 0
+      Decl: bnz, [], [], []
+        TypeDecl: bnz, []
+          Struct: b
+        InitList: 
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+      Return: 
+        Constant: int, 0

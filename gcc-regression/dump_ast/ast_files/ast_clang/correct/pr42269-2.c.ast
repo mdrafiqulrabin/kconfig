@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fdfe20264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdfe2026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdfe2026740 '__int128'
+|-TypedefDecl 0x7fdfe2026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdfe2026760 'unsigned __int128'
+|-TypedefDecl 0x7fdfe2026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdfe2026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdfe2026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdfe2026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdfe2026dc0 'char *'
+|   `-BuiltinType 0x7fdfe2026560 'char'
+|-TypedefDecl 0x7fdfe20270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdfe2027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdfe2026ee0 'struct __va_list_tag'
+|     `-Record 0x7fdfe2026e58 '__va_list_tag'
+|-FunctionDecl 0x7fdfe2826a30 <c_files/pr42269-2.c:3:1, line:7:1> line:4:1 used foo 'long long (unsigned short)' static
+| |-ParmVarDecl 0x7fdfe2027138 <col:6, col:21> col:21 used s 'unsigned short'
+| |-CompoundStmt 0x7fdfe2826c08 <line:5:1, line:7:1>
+| | `-ReturnStmt 0x7fdfe2826bf0 <line:6:3, col:18>
+| |   `-ImplicitCastExpr 0x7fdfe2826bd8 <col:10, col:18> 'long long' <IntegralCast>
+| |     `-CStyleCastExpr 0x7fdfe2826bb0 <col:10, col:18> 'short' <IntegralCast>
+| |       `-ImplicitCastExpr 0x7fdfe2826b98 <col:18> 'unsigned short' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fdfe2826b58 <col:18> 'unsigned short' lvalue ParmVar 0x7fdfe2027138 's' 'unsigned short'
+| `-NoInlineAttr 0x7fdfe2826ad0 <line:3:33>
+|-VarDecl 0x7fdfe2826c40 <line:9:1, col:20> col:16 used s 'unsigned short' cinit
+| `-ImplicitCastExpr 0x7fdfe2826cc0 <col:20> 'unsigned short' <IntegralCast>
+|   `-IntegerLiteral 0x7fdfe2826ca0 <col:20> 'int' 65535
+`-FunctionDecl 0x7fdfe2826da8 <line:11:1, line:15:1> line:12:1 main 'int (void)'
+  `-CompoundStmt 0x7fdfe2827020 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7fdfe2827008 <line:14:3, col:25>
+      `-BinaryOperator 0x7fdfe2826fe0 <col:10, col:25> 'int' '!='
+        |-BinaryOperator 0x7fdfe2826f80 <col:10, col:20> 'long long' '+'
+        | |-CallExpr 0x7fdfe2826f00 <col:10, col:16> 'long long'
+        | | |-ImplicitCastExpr 0x7fdfe2826ee8 <col:10> 'long long (*)(unsigned short)' <FunctionToPointerDecay>
+        | | | `-DeclRefExpr 0x7fdfe2826e68 <col:10> 'long long (unsigned short)' Function 0x7fdfe2826a30 'foo' 'long long (unsigned short)'
+        | | `-ImplicitCastExpr 0x7fdfe2826f30 <col:15> 'unsigned short' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fdfe2826e90 <col:15> 'unsigned short' lvalue Var 0x7fdfe2826c40 's' 'unsigned short'
+        | `-ImplicitCastExpr 0x7fdfe2826f68 <col:20> 'long long' <IntegralCast>
+        |   `-IntegerLiteral 0x7fdfe2826f48 <col:20> 'int' 1
+        `-ImplicitCastExpr 0x7fdfe2826fc8 <col:25> 'long long' <IntegralCast>
+          `-IntegerLiteral 0x7fdfe2826fa8 <col:25> 'int' 0

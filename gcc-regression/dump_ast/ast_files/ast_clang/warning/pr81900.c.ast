@@ -1,0 +1,51 @@
+c_files/pr81900.c:8:37: warning: declaration of built-in function '__sigsetjmp' requires inclusion of the header <setjmp.h> [-Wbuiltin-requires-header]
+void __attribute__((returns_twice)) __sigsetjmp ();
+                                    ^
+c_files/pr81900.c:15:22: error: invalid input constraint '' in asm
+      __asm__("" : : ""("badbad"));
+                     ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7f85b80124d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f85b8012a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f85b8012740 '__int128'
+|-TypedefDecl 0x7f85b8012a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f85b8012760 'unsigned __int128'
+|-TypedefDecl 0x7f85b8012d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f85b8012b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f85b8012ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f85b8012e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f85b8012dc0 'char *'
+|   `-BuiltinType 0x7f85b8012560 'char'
+|-TypedefDecl 0x7f85b80130c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f85b8013070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f85b8012ee0 'struct __va_list_tag'
+|     `-Record 0x7f85b8012e58 '__va_list_tag'
+|-FunctionDecl 0x7f85b783aa00 <c_files/pr81900.c:6:1, col:43> col:6 used Perl_croak 'void () __attribute__((noreturn))'
+|-FunctionDecl 0x7f85b783ab30 <line:7:1, col:20> col:7 used Perl_sv_gets 'char *()'
+|-FunctionDecl 0x7f85b783abe8 <line:8:1, col:50> col:37 used __sigsetjmp 'void ()'
+| `-ReturnsTwiceAttr 0x7f85b783ac80 <col:21>
+`-FunctionDecl 0x7f85b783ace8 <line:9:1, line:16:1> line:9:6 a 'void ()'
+  `-CompoundStmt 0x7f85b783b348 <col:10, line:16:1>
+    |-CallExpr 0x7f85b783adf0 <line:10:5, col:17> 'void'
+    | `-ImplicitCastExpr 0x7f85b783add8 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f85b783ad80 <col:5> 'void ()' Function 0x7f85b783abe8 '__sigsetjmp' 'void ()'
+    |-DeclStmt 0x7f85b783ae90 <line:11:5, col:12>
+    | `-VarDecl 0x7f85b783ae30 <col:5, col:11> col:11 used b 'char *'
+    `-IfStmt 0x7f85b783b148 <line:12:5, line:13:51>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f85b783afe8 <line:12:9, col:33> 'int' '=='
+      | |-ParenExpr 0x7f85b783af90 <col:9, col:28> 'char *'
+      | | `-BinaryOperator 0x7f85b783af68 <col:10, col:27> 'char *' '='
+      | |   |-DeclRefExpr 0x7f85b783aea8 <col:10> 'char *' lvalue Var 0x7f85b783ae30 'b' 'char *'
+      | |   `-CallExpr 0x7f85b783af40 <col:14, col:27> 'char *'
+      | |     `-ImplicitCastExpr 0x7f85b783af28 <col:14> 'char *(*)()' <FunctionToPointerDecay>
+      | |       `-DeclRefExpr 0x7f85b783aed0 <col:14> 'char *()' Function 0x7f85b783ab30 'Perl_sv_gets' 'char *()'
+      | `-ImplicitCastExpr 0x7f85b783afd0 <col:33> 'char *' <NullToPointer>
+      |   `-IntegerLiteral 0x7f85b783afb0 <col:33> 'int' 0
+      |-CallExpr 0x7f85b783b100 <line:13:7, col:51> 'void'
+      | |-ImplicitCastExpr 0x7f85b783b0e8 <col:7> 'void (*)() __attribute__((noreturn))' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7f85b783b010 <col:7> 'void () __attribute__((noreturn))' Function 0x7f85b783aa00 'Perl_croak' 'void () __attribute__((noreturn))'
+      | `-ImplicitCastExpr 0x7f85b783b130 <col:18> 'char *' <ArrayToPointerDecay>
+      |   `-StringLiteral 0x7f85b783b078 <col:18> 'char [31]' lvalue "No Perl script found in input\n"
+      `-<<<NULL>>>

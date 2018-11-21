@@ -1,0 +1,56 @@
+c_files/pr44555.c:6:11: warning: address of 'a->b' will always evaluate to 'true' [-Wpointer-bool-conversion]
+  if (&a->b)
+  ~~   ~~~^
+1 warning generated.
+TranslationUnitDecl 0x7fdc890264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdc89026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdc89026740 '__int128'
+|-TypedefDecl 0x7fdc89026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdc89026760 'unsigned __int128'
+|-TypedefDecl 0x7fdc89026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdc89026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdc89026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdc89026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdc89026dc0 'char *'
+|   `-BuiltinType 0x7fdc89026560 'char'
+|-TypedefDecl 0x7fdc890270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdc89027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdc89026ee0 'struct __va_list_tag'
+|     `-Record 0x7fdc89026e58 '__va_list_tag'
+|-RecordDecl 0x7fdc89027120 <c_files/pr44555.c:1:1, line:3:1> line:1:8 struct a definition
+| `-FieldDecl 0x7fdc89825a58 <line:2:5, col:15> col:10 referenced b 'char [100]'
+|-FunctionDecl 0x7fdc89825c58 <line:4:1, line:9:1> line:4:5 used foo 'int (struct a *)'
+| |-ParmVarDecl 0x7fdc89825b50 <col:9, col:19> col:19 used a 'struct a *'
+| `-CompoundStmt 0x7fdc89825ea0 <line:5:1, line:9:1>
+|   |-IfStmt 0x7fdc89825e30 <line:6:3, line:7:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fdc89825dd8 <line:6:7, col:11> 'char (*)[100]' prefix '&'
+|   | | `-MemberExpr 0x7fdc89825d78 <col:8, col:11> 'char [100]' lvalue ->b 0x7fdc89825a58
+|   | |   `-ImplicitCastExpr 0x7fdc89825d60 <col:8> 'struct a *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fdc89825d38 <col:8> 'struct a *' lvalue ParmVar 0x7fdc89825b50 'a' 'struct a *'
+|   | |-ReturnStmt 0x7fdc89825e18 <line:7:5, col:12>
+|   | | `-IntegerLiteral 0x7fdc89825df8 <col:12> 'int' 1
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fdc89825e88 <line:8:3, col:10>
+|     `-IntegerLiteral 0x7fdc89825e68 <col:10> 'int' 0
+|-FunctionDecl 0x7fdc89825fc0 <line:10:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fdc89826058 prev 0x7fdc89825fc0 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fdc89826140 <line:11:1, line:16:1> line:11:5 main 'int ()'
+  `-CompoundStmt 0x7fdc89826458 <line:12:1, line:16:1>
+    |-IfStmt 0x7fdc898263e8 <line:13:3, line:14:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fdc89826330 <line:13:7, col:29> 'int' '!='
+    | | |-CallExpr 0x7fdc898262e0 <col:7, col:24> 'int'
+    | | | |-ImplicitCastExpr 0x7fdc898262c8 <col:7> 'int (*)(struct a *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fdc898261d8 <col:7> 'int (struct a *)' Function 0x7fdc89825c58 'foo' 'int (struct a *)'
+    | | | `-CStyleCastExpr 0x7fdc89826248 <col:11, col:23> 'struct a *' <NullToPointer>
+    | | |   `-IntegerLiteral 0x7fdc89826200 <col:23> 'int' 0
+    | | `-IntegerLiteral 0x7fdc89826310 <col:29> 'int' 0
+    | |-CallExpr 0x7fdc898263c0 <line:14:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fdc898263a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fdc89826358 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fdc89826058 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fdc89826440 <line:15:3, col:10>
+      `-IntegerLiteral 0x7fdc89826420 <col:10> 'int' 0

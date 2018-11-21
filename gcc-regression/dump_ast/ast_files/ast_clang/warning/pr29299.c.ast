@@ -1,0 +1,27 @@
+c_files/pr29299.c:8:1: warning: control reaches end of non-void function [-Wreturn-type]
+};
+^
+1 warning generated.
+TranslationUnitDecl 0x7fd6f58264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd6f5826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd6f5826740 '__int128'
+|-TypedefDecl 0x7fd6f5826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd6f5826760 'unsigned __int128'
+|-TypedefDecl 0x7fd6f5826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd6f5826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd6f5826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd6f5826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd6f5826dc0 'char *'
+|   `-BuiltinType 0x7fd6f5826560 'char'
+|-TypedefDecl 0x7fd6f58270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd6f5827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd6f5826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd6f5826e58 '__va_list_tag'
+|-VarDecl 0x7fd6f5827138 <c_files/pr29299.c:4:1, col:12> col:12 used bof 'int' static
+| `-UsedAttr 0x7fd6f5827198 <col:31>
+|-FunctionDecl 0x7fd6f6026a90 <line:5:1, line:8:1> line:5:5 foo 'int ()'
+| `-CompoundStmt 0x7fd6f6026c00 <line:6:1, line:8:1>
+|   `-DeclStmt 0x7fd6f6026be8 <line:7:2, col:47>
+|     `-VarDecl 0x7fd6f6026b40 <col:2, col:13> col:13 used barbarbarbar 'int' static
+|       `-UsedAttr 0x7fd6f6026ba0 <col:41>
+`-EmptyDecl 0x7fd6f6026c20 <line:8:2> col:2

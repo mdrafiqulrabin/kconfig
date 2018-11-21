@@ -1,0 +1,79 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        Assignment: =
+          ID: c
+          Constant: int, 0
+        BinaryOp: <
+          ID: c
+          Constant: int, 2
+        UnaryOp: p++
+          ID: c
+        Compound: 
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+            Constant: int, 1
+          For: 
+            Assignment: =
+              ID: e
+              Constant: int, 0
+            BinaryOp: <
+              ID: e
+              Constant: int, 2
+            UnaryOp: p++
+              ID: e
+            Compound: 
+              If: 
+                UnaryOp: !
+                  ID: f
+                Return: 
+              For: 
+                Assignment: =
+                  ID: d
+                  Constant: int, 0
+                ID: d
+                UnaryOp: p++
+                  ID: d
+                Assignment: =
+                  ID: f
+                  ID: b
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      For: 
+        BinaryOp: <
+          ID: a
+          Constant: int, 1
+        UnaryOp: p++
+          ID: a
+        Compound: 
+          FuncCall: 
+            ID: fn1
+      FuncCall: 
+        ID: __builtin_exit
+        ExprList: 
+          Constant: int, 0

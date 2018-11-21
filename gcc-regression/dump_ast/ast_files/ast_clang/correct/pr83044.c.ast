@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f94fb0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f94fb026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f94fb026740 '__int128'
+|-TypedefDecl 0x7f94fb026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f94fb026760 'unsigned __int128'
+|-TypedefDecl 0x7f94fb026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f94fb026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f94fb026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f94fb026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f94fb026dc0 'char *'
+|   `-BuiltinType 0x7f94fb026560 'char'
+|-TypedefDecl 0x7f94fb0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f94fb027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f94fb026ee0 'struct __va_list_tag'
+|     `-Record 0x7f94fb026e58 '__va_list_tag'
+|-RecordDecl 0x7f94fb027120 <c_files/pr83044.c:5:1, col:22> col:8 struct A definition
+| `-FieldDecl 0x7f94fb825a60 <col:12, col:19> col:16 referenced b 'int [0]'
+|-RecordDecl 0x7f94fb825aa8 <line:6:1, col:27> col:8 struct B definition
+| `-FieldDecl 0x7f94fb825c48 <col:12, col:24> col:21 referenced c 'struct A [0]'
+|-FunctionDecl 0x7f94fb825de0 <line:7:1, col:16> col:6 used bar 'void (int *)'
+| `-ParmVarDecl 0x7f94fb825d20 <col:11, col:15> col:16 'int *'
+`-FunctionDecl 0x7f94fb825f80 <line:9:1, line:14:1> line:10:1 foo 'void (void)'
+  `-CompoundStmt 0x7f94fb8262a8 <line:11:1, line:14:1>
+    |-DeclStmt 0x7f94fb8260d0 <line:12:3, col:13>
+    | `-VarDecl 0x7f94fb826070 <col:3, col:12> col:12 used d 'struct B':'struct B'
+    `-CallExpr 0x7f94fb826260 <line:13:3, col:14> 'void'
+      |-ImplicitCastExpr 0x7f94fb826248 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f94fb8260e8 <col:3> 'void (int *)' Function 0x7f94fb825de0 'bar' 'void (int *)'
+      `-ImplicitCastExpr 0x7f94fb826290 <col:8, col:13> 'int *' <ArrayToPointerDecay>
+        `-MemberExpr 0x7f94fb8261e0 <col:8, col:13> 'int [0]' lvalue ->b 0x7f94fb825a60
+          `-ImplicitCastExpr 0x7f94fb8261c8 <col:8, col:10> 'struct A *' <ArrayToPointerDecay>
+            `-MemberExpr 0x7f94fb826138 <col:8, col:10> 'struct A [0]' lvalue .c 0x7f94fb825c48
+              `-DeclRefExpr 0x7f94fb826110 <col:8> 'struct B':'struct B' lvalue Var 0x7f94fb826070 'd' 'struct B':'struct B'

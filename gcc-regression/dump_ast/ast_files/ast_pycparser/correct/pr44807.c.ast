@@ -1,0 +1,168 @@
+FileAST: 
+  Decl: sigemptyset, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: sigemptyset, []
+        IdentifierType: ['int']
+  Decl: sigaddset, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: sigaddset, []
+        IdentifierType: ['int']
+  Decl: sigprocmask, [], [], []
+    FuncDecl: 
+      TypeDecl: sigprocmask, []
+        IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: jobstats
+      Decl: j_jobslots, [], [], []
+        TypeDecl: j_jobslots, []
+          IdentifierType: ['int']
+  Decl: js, [], [], []
+    TypeDecl: js, []
+      Struct: jobstats
+  Decl: jobs, [], [], []
+    PtrDecl: []
+      TypeDecl: jobs, []
+        IdentifierType: ['int']
+  Typedef: sh_job_map_func_t, [], ['typedef']
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: sh_job_map_func_t, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: map_over_jobs, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: func, [], [], []
+            TypeDecl: func, []
+              IdentifierType: ['sh_job_map_func_t']
+        TypeDecl: map_over_jobs, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: set, [], [], []
+        TypeDecl: set, []
+          IdentifierType: ['int']
+      Decl: oset, [], [], []
+        TypeDecl: oset, []
+          IdentifierType: ['int']
+      If: 
+        StructRef: .
+          ID: js
+          ID: j_jobslots
+        Return: 
+      FuncCall: 
+        ID: sigemptyset
+        ExprList: 
+          UnaryOp: &
+            ID: set
+      FuncCall: 
+        ID: sigaddset
+        ExprList: 
+          ID: set
+          Constant: int, 17
+      FuncCall: 
+        ID: sigemptyset
+        ExprList: 
+          UnaryOp: &
+            ID: oset
+      FuncCall: 
+        ID: sigprocmask
+        ExprList: 
+          Constant: int, 0
+          ID: set
+          ID: oset
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        StructRef: .
+          ID: js
+          ID: j_jobslots
+        UnaryOp: p++
+          ID: i
+        If: 
+          ArrayRef: 
+            ID: jobs
+            ID: i
+          FuncCall: 
+            ID: func
+            ExprList: 
+              ID: jobs
+              Constant: int, 0
+              Constant: int, 0
+              Constant: int, 0
+      FuncCall: 
+        ID: sigprocmask
+        ExprList: 
+          ID: oset
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+  FuncDef: 
+    Decl: print_job, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: job, [], [], []
+            PtrDecl: []
+              TypeDecl: job, []
+                IdentifierType: ['int']
+          Decl: format, [], [], []
+            TypeDecl: format, []
+              IdentifierType: ['int']
+          Decl: state, [], [], []
+            TypeDecl: state, []
+              IdentifierType: ['int']
+          Decl: job_index, [], [], []
+            TypeDecl: job_index, []
+              IdentifierType: ['int']
+        TypeDecl: print_job, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: map_over_jobs
+        ExprList: 
+          ID: print_job
+  FuncDef: 
+    Decl: list_running_jobs, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: list_running_jobs, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: map_over_jobs
+        ExprList: 
+          ID: print_job

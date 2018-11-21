@@ -1,0 +1,56 @@
+c_files/pr77587a.c:11:57: error: aliases are not supported on darwin
+void bar (long x, long y, long z) __attribute__ ((weak, alias ("foo")));
+                                                        ^
+1 error generated.
+TranslationUnitDecl 0x7fc5350264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc535026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc535026740 '__int128'
+|-TypedefDecl 0x7fc535026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc535026760 'unsigned __int128'
+|-TypedefDecl 0x7fc535026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc535026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc535026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc535026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc535026dc0 'char *'
+|   `-BuiltinType 0x7fc535026560 'char'
+|-TypedefDecl 0x7fc5350270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc535027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc535026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc535026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc535825b60 <c_files/pr77587a.c:6:1, line:9:1> line:7:1 foo 'void (long, long, long)'
+| |-ParmVarDecl 0x7fc535027138 <col:6, col:11> col:11 x 'long'
+| |-ParmVarDecl 0x7fc535825a00 <col:14, col:19> col:19 y 'long'
+| |-ParmVarDecl 0x7fc535825a78 <col:22, col:27> col:27 z 'long'
+| `-CompoundStmt 0x7fc535825c50 <line:8:1, line:9:1>
+|-FunctionDecl 0x7fc535825e70 <line:11:1, col:71> col:6 used bar 'void (long, long, long)'
+| |-ParmVarDecl 0x7fc535825c80 <col:11, col:16> col:16 x 'long'
+| |-ParmVarDecl 0x7fc535825cf8 <col:19, col:24> col:24 y 'long'
+| |-ParmVarDecl 0x7fc535825d70 <col:27, col:32> col:32 z 'long'
+| `-WeakAttr 0x7fc535825f20 <col:51>
+|-FunctionDecl 0x7fc535826108 <line:13:1, line:17:1> line:14:1 used baz 'void (long, long, long)'
+| |-ParmVarDecl 0x7fc535825f80 <col:6, col:11> col:11 x 'long'
+| |-ParmVarDecl 0x7fc535825ff8 <col:14, col:19> col:19 y 'long'
+| |-ParmVarDecl 0x7fc535826070 <col:22, col:27> col:27 z 'long'
+| `-CompoundStmt 0x7fc535826308 <line:15:1, line:17:1>
+|   `-CallExpr 0x7fc535826280 <line:16:3, col:15> 'void'
+|     |-ImplicitCastExpr 0x7fc535826268 <col:3> 'void (*)(long, long, long)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fc5358261b8 <col:3> 'void (long, long, long)' Function 0x7fc535825e70 'bar' 'void (long, long, long)'
+|     |-ImplicitCastExpr 0x7fc5358262c0 <col:8> 'long' <IntegralCast>
+|     | `-IntegerLiteral 0x7fc5358261e0 <col:8> 'int' 0
+|     |-ImplicitCastExpr 0x7fc5358262d8 <col:11> 'long' <IntegralCast>
+|     | `-IntegerLiteral 0x7fc535826200 <col:11> 'int' 0
+|     `-ImplicitCastExpr 0x7fc5358262f0 <col:14> 'long' <IntegralCast>
+|       `-IntegerLiteral 0x7fc535826220 <col:14> 'int' 0
+`-FunctionDecl 0x7fc535826380 <line:19:1, line:24:1> line:20:1 main 'int ()'
+  `-CompoundStmt 0x7fc535826578 <line:21:1, line:24:1>
+    |-CallExpr 0x7fc5358264b8 <line:22:3, col:15> 'void'
+    | |-ImplicitCastExpr 0x7fc5358264a0 <col:3> 'void (*)(long, long, long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc535826418 <col:3> 'void (long, long, long)' Function 0x7fc535826108 'baz' 'void (long, long, long)'
+    | |-ImplicitCastExpr 0x7fc5358264f8 <col:8> 'long' <IntegralCast>
+    | | `-IntegerLiteral 0x7fc535826440 <col:8> 'int' 0
+    | |-ImplicitCastExpr 0x7fc535826510 <col:11> 'long' <IntegralCast>
+    | | `-IntegerLiteral 0x7fc535826460 <col:11> 'int' 0
+    | `-ImplicitCastExpr 0x7fc535826528 <col:14> 'long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fc535826480 <col:14> 'int' 0
+    `-ReturnStmt 0x7fc535826560 <line:23:3, col:10>
+      `-IntegerLiteral 0x7fc535826540 <col:10> 'int' 0

@@ -1,0 +1,473 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c2, [], [], []
+            TypeDecl: c2, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: foo, []
+          IdentifierType: ['signed', 'char']
+    Compound: 
+      Decl: c2_22, [], [], []
+        TypeDecl: c2_22, []
+          IdentifierType: ['signed', 'char']
+      If: 
+        BinaryOp: ||
+          BinaryOp: <=
+            ID: c2
+            Constant: int, 63
+          BinaryOp: ==
+            ID: c2
+            Constant: int, 127
+        Goto: bb43
+        Goto: bb20
+      Label: bb20
+        If: 
+          BinaryOp: >
+            ID: c2
+            Constant: int, 252
+          Goto: bb43
+          Goto: bb21
+      Label: bb21
+        EmptyStatement: 
+      Label: bb24
+        Assignment: =
+          ID: c2_22
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['signed', 'char']
+            ID: c2
+      If: 
+        BinaryOp: >=
+          ID: c2_22
+          Constant: int, 0
+        Goto: bb25
+        Goto: bb26
+      Label: bb25
+        Assignment: =
+          ID: c2
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'char']
+            BinaryOp: -
+              ID: c2_22
+              Constant: int, 64
+      Goto: bb27
+      Label: bb26
+        Assignment: =
+          ID: c2
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'char']
+            BinaryOp: -
+              ID: c2_22
+              Constant: int, 65
+      Label: bb27
+        If: 
+          BinaryOp: <=
+            ID: c2
+            Constant: int, 93
+          Goto: bb28
+          Goto: bb29
+      Label: bb28
+        Assignment: =
+          ID: c2
+          BinaryOp: +
+            ID: c2
+            Constant: int, 33
+      Goto: bb30
+      Label: bb29
+        Assignment: =
+          ID: c2
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'char']
+            BinaryOp: -
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['signed', 'char']
+                ID: c2
+              Constant: int, 61
+      Label: bb30
+        Return: 
+          ID: c2
+      Label: bb43
+        Return: 
+          UnaryOp: -
+            Constant: int, 1
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: res, [], [], []
+        ArrayDecl: []
+          TypeDecl: res, []
+            IdentifierType: ['signed', 'char']
+          Constant: int, 256
+        InitList: 
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          Constant: int, 33
+          Constant: int, 34
+          Constant: int, 35
+          Constant: int, 36
+          Constant: int, 37
+          Constant: int, 38
+          Constant: int, 39
+          Constant: int, 40
+          Constant: int, 41
+          Constant: int, 42
+          Constant: int, 43
+          Constant: int, 44
+          Constant: int, 45
+          Constant: int, 46
+          Constant: int, 47
+          Constant: int, 48
+          Constant: int, 49
+          Constant: int, 50
+          Constant: int, 51
+          Constant: int, 52
+          Constant: int, 53
+          Constant: int, 54
+          Constant: int, 55
+          Constant: int, 56
+          Constant: int, 57
+          Constant: int, 58
+          Constant: int, 59
+          Constant: int, 60
+          Constant: int, 61
+          Constant: int, 62
+          Constant: int, 63
+          Constant: int, 64
+          Constant: int, 65
+          Constant: int, 66
+          Constant: int, 67
+          Constant: int, 68
+          Constant: int, 69
+          Constant: int, 70
+          Constant: int, 71
+          Constant: int, 72
+          Constant: int, 73
+          Constant: int, 74
+          Constant: int, 75
+          Constant: int, 76
+          Constant: int, 77
+          Constant: int, 78
+          Constant: int, 79
+          Constant: int, 80
+          Constant: int, 81
+          Constant: int, 82
+          Constant: int, 83
+          Constant: int, 84
+          Constant: int, 85
+          Constant: int, 86
+          Constant: int, 87
+          Constant: int, 88
+          Constant: int, 89
+          Constant: int, 90
+          Constant: int, 91
+          Constant: int, 92
+          Constant: int, 93
+          Constant: int, 94
+          Constant: int, 95
+          UnaryOp: -
+            Constant: int, 1
+          Constant: int, 96
+          Constant: int, 97
+          Constant: int, 98
+          Constant: int, 99
+          Constant: int, 100
+          Constant: int, 101
+          Constant: int, 102
+          Constant: int, 103
+          Constant: int, 104
+          Constant: int, 105
+          Constant: int, 106
+          Constant: int, 107
+          Constant: int, 108
+          Constant: int, 109
+          Constant: int, 110
+          Constant: int, 111
+          Constant: int, 112
+          Constant: int, 113
+          Constant: int, 114
+          Constant: int, 115
+          Constant: int, 116
+          Constant: int, 117
+          Constant: int, 118
+          Constant: int, 119
+          Constant: int, 120
+          Constant: int, 121
+          Constant: int, 122
+          Constant: int, 123
+          Constant: int, 124
+          Constant: int, 125
+          Constant: int, 126
+          Constant: int, 33
+          Constant: int, 34
+          Constant: int, 35
+          Constant: int, 36
+          Constant: int, 37
+          Constant: int, 38
+          Constant: int, 39
+          Constant: int, 40
+          Constant: int, 41
+          Constant: int, 42
+          Constant: int, 43
+          Constant: int, 44
+          Constant: int, 45
+          Constant: int, 46
+          Constant: int, 47
+          Constant: int, 48
+          Constant: int, 49
+          Constant: int, 50
+          Constant: int, 51
+          Constant: int, 52
+          Constant: int, 53
+          Constant: int, 54
+          Constant: int, 55
+          Constant: int, 56
+          Constant: int, 57
+          Constant: int, 58
+          Constant: int, 59
+          Constant: int, 60
+          Constant: int, 61
+          Constant: int, 62
+          Constant: int, 63
+          Constant: int, 64
+          Constant: int, 65
+          Constant: int, 66
+          Constant: int, 67
+          Constant: int, 68
+          Constant: int, 69
+          Constant: int, 70
+          Constant: int, 71
+          Constant: int, 72
+          Constant: int, 73
+          Constant: int, 74
+          Constant: int, 75
+          Constant: int, 76
+          Constant: int, 77
+          Constant: int, 78
+          Constant: int, 79
+          Constant: int, 80
+          Constant: int, 81
+          Constant: int, 82
+          Constant: int, 83
+          Constant: int, 84
+          Constant: int, 85
+          Constant: int, 86
+          Constant: int, 87
+          Constant: int, 88
+          Constant: int, 89
+          Constant: int, 90
+          Constant: int, 91
+          Constant: int, 92
+          Constant: int, 93
+          Constant: int, 94
+          Constant: int, 95
+          Constant: int, 96
+          Constant: int, 97
+          Constant: int, 98
+          Constant: int, 99
+          Constant: int, 100
+          Constant: int, 101
+          Constant: int, 102
+          Constant: int, 103
+          Constant: int, 104
+          Constant: int, 105
+          Constant: int, 106
+          Constant: int, 107
+          Constant: int, 108
+          Constant: int, 109
+          Constant: int, 110
+          Constant: int, 111
+          Constant: int, 112
+          Constant: int, 113
+          Constant: int, 114
+          Constant: int, 115
+          Constant: int, 116
+          Constant: int, 117
+          Constant: int, 118
+          Constant: int, 119
+          Constant: int, 120
+          Constant: int, 121
+          Constant: int, 122
+          Constant: int, 123
+          Constant: int, 124
+          Constant: int, 125
+          Constant: int, 126
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['unsigned', 'int']
+      For: 
+        Assignment: =
+          ID: c
+          Constant: int, 0
+        BinaryOp: <=
+          ID: c
+          Constant: int, 255
+        UnaryOp: ++
+          ID: c
+        Compound: 
+          If: 
+            BinaryOp: !=
+              FuncCall: 
+                ID: foo
+                ExprList: 
+                  ID: c
+              ArrayRef: 
+                ID: res
+                ID: c
+            FuncCall: 
+              ID: abort
+      Return: 
+        Constant: int, 0

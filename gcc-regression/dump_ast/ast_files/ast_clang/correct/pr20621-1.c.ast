@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7fb2328264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb232826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb232826740 '__int128'
+|-TypedefDecl 0x7fb232826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb232826760 'unsigned __int128'
+|-TypedefDecl 0x7fb232826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb232826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb232826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb232826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb232826dc0 'char *'
+|   `-BuiltinType 0x7fb232826560 'char'
+|-TypedefDecl 0x7fb2328270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb232827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb232826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb232826e58 '__va_list_tag'
+|-RecordDecl 0x7fb232827120 <c_files/pr20621-1.c:5:1, col:77> col:8 struct big definition
+| `-FieldDecl 0x7fb233001210 <col:14, col:74> col:18 referenced i 'int [16384]'
+|-VarDecl 0x7fb2330012b0 <line:6:1, col:12> col:12 used gb 'struct big':'struct big'
+|-FunctionDecl 0x7fb233001508 <line:7:1, col:48> col:5 used foo 'int (struct big, int)'
+| |-ParmVarDecl 0x7fb233001370 <col:10, col:21> col:21 used b 'struct big':'struct big'
+| |-ParmVarDecl 0x7fb2330013e8 <col:24, col:28> col:28 used x 'int'
+| `-CompoundStmt 0x7fb2330016f0 <col:31, col:48>
+|   `-ReturnStmt 0x7fb2330016d8 <col:33, col:45>
+|     `-ImplicitCastExpr 0x7fb2330016c0 <col:40, col:45> 'int' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fb233001698 <col:40, col:45> 'int' lvalue
+|         |-ImplicitCastExpr 0x7fb233001668 <col:40, col:42> 'int *' <ArrayToPointerDecay>
+|         | `-MemberExpr 0x7fb2330015d8 <col:40, col:42> 'int [16384]' lvalue .i 0x7fb233001210
+|         |   `-DeclRefExpr 0x7fb2330015b0 <col:40> 'struct big':'struct big' lvalue ParmVar 0x7fb233001370 'b' 'struct big':'struct big'
+|         `-ImplicitCastExpr 0x7fb233001680 <col:44> 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x7fb233001610 <col:44> 'int' lvalue ParmVar 0x7fb2330013e8 'x' 'int'
+`-FunctionDecl 0x7fb2330017d8 <line:8:1, col:53> col:5 main 'int (void)'
+  `-CompoundStmt 0x7fb233001ae8 <col:17, col:53>
+    `-ReturnStmt 0x7fb233001ad0 <col:19, col:50>
+      `-BinaryOperator 0x7fb233001aa8 <col:26, col:50> 'int' '+'
+        |-CallExpr 0x7fb233001980 <col:26, col:36> 'int'
+        | |-ImplicitCastExpr 0x7fb233001968 <col:26> 'int (*)(struct big, int)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fb233001898 <col:26> 'int (struct big, int)' Function 0x7fb233001508 'foo' 'int (struct big, int)'
+        | |-ImplicitCastExpr 0x7fb2330019b8 <col:31> 'struct big':'struct big' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fb2330018c0 <col:31> 'struct big':'struct big' lvalue Var 0x7fb2330012b0 'gb' 'struct big':'struct big'
+        | `-IntegerLiteral 0x7fb2330018e8 <col:35> 'int' 0
+        `-CallExpr 0x7fb233001a58 <col:40, col:50> 'int'
+          |-ImplicitCastExpr 0x7fb233001a40 <col:40> 'int (*)(struct big, int)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fb2330019d0 <col:40> 'int (struct big, int)' Function 0x7fb233001508 'foo' 'int (struct big, int)'
+          |-ImplicitCastExpr 0x7fb233001a90 <col:45> 'struct big':'struct big' <LValueToRValue>
+          | `-DeclRefExpr 0x7fb2330019f8 <col:45> 'struct big':'struct big' lvalue Var 0x7fb2330012b0 'gb' 'struct big':'struct big'
+          `-IntegerLiteral 0x7fb233001a20 <col:49> 'int' 1

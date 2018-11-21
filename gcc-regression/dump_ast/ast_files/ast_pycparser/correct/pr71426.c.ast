@@ -1,0 +1,14 @@
+FileAST: 
+  Decl: f, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: x, [], [], []
+          ArrayDecl: []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+            BinaryOp: -
+              ID: x
+              FuncCall: 
+                ID: x
+      TypeDecl: f, []
+        IdentifierType: ['int']

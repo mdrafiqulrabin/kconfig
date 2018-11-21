@@ -1,0 +1,24 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Pragma: omp parallel
+      Compound: 
+        Decl: j, [], [], []
+          TypeDecl: j, []
+            Struct: A
+              Decl: i, [], [], []
+                TypeDecl: i, []
+                  IdentifierType: ['int']
+        Assignment: =
+          StructRef: .
+            ID: j
+            ID: i
+          Constant: int, 6
+        UnaryOp: p++
+          StructRef: .
+            ID: j
+            ID: i

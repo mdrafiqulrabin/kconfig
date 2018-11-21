@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fa2328264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa232826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa232826740 '__int128'
+|-TypedefDecl 0x7fa232826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa232826760 'unsigned __int128'
+|-TypedefDecl 0x7fa232826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa232826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa232826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa232826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa232826dc0 'char *'
+|   `-BuiltinType 0x7fa232826560 'char'
+|-TypedefDecl 0x7fa2328270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa232827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa232826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa232826e58 '__va_list_tag'
+|-FunctionDecl 0x7fa2328774d8 <c_files/pr69548.c:7:1, line:11:1> line:8:1 quad_exchange '__int128 (__int128 *, __int128)'
+| |-ParmVarDecl 0x7fa232827160 <col:16, col:26> col:26 used ptr '__int128 *'
+| |-ParmVarDecl 0x7fa232877400 <col:31, col:40> col:40 used newval '__int128'
+| `-CompoundStmt 0x7fa232877838 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fa232877820 <line:10:3, col:60>
+|     `-AtomicExpr 0x7fa2328777d0 <col:10, col:60> '__int128'
+|       |-ImplicitCastExpr 0x7fa2328777a0 <col:31> '__int128 *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fa2328776a8 <col:31> '__int128 *' lvalue ParmVar 0x7fa232827160 'ptr' '__int128 *'
+|       |-IntegerLiteral 0x7fa2328776f8 <<built-in>:11:26> 'int' 0
+|       `-ImplicitCastExpr 0x7fa2328777b8 <c_files/pr69548.c:10:36> '__int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7fa2328776d0 <col:36> '__int128' lvalue ParmVar 0x7fa232877400 'newval' '__int128'
+`-FunctionDecl 0x7fa2328775e8 <col:10> col:10 implicit used __atomic_exchange_n 'void ()' extern

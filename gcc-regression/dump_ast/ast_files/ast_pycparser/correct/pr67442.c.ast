@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: foo, [], [], []
+    ArrayDecl: []
+      TypeDecl: foo, []
+        IdentifierType: ['short']
+      Constant: int, 100
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: bar, [], [], []
+        PtrDecl: []
+          TypeDecl: bar, []
+            IdentifierType: ['short']
+        UnaryOp: &
+          ArrayRef: 
+            ID: foo
+            Constant: int, 50
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['short']
+        Constant: int, 1
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['short']
+        Constant: int, 1
+      Decl: value, [], [], []
+        TypeDecl: value, []
+          IdentifierType: ['short']
+        ArrayRef: 
+          ID: bar
+          BinaryOp: -
+            Constant: int, 8
+            BinaryOp: *
+              BinaryOp: *
+                ID: i
+                Constant: int, 2
+              ID: j
+      Return: 
+        ID: value

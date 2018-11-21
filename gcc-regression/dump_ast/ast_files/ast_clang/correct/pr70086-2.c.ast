@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7fe0a60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe0a6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe0a6026740 '__int128'
+|-TypedefDecl 0x7fe0a6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe0a6026760 'unsigned __int128'
+|-TypedefDecl 0x7fe0a6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe0a6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe0a6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe0a6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe0a6026dc0 'char *'
+|   `-BuiltinType 0x7fe0a6026560 'char'
+|-TypedefDecl 0x7fe0a60270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe0a6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe0a6026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe0a6026e58 '__va_list_tag'
+|-FunctionDecl 0x7fe0a6825a30 <c_files/pr70086-2.c:5:1, line:12:1> line:6:1 foo 'float (double *)'
+| |-ParmVarDecl 0x7fe0a6027160 <col:6, col:14> col:14 used p 'double *'
+| `-CompoundStmt 0x7fe0a6825ee8 <line:7:1, line:12:1>
+|   |-DeclStmt 0x7fe0a6825c48 <line:8:3, col:39>
+|   | `-VarDecl 0x7fe0a6825b90 <col:3, col:18> col:18 used xmm16 'float' register
+|   |   `-AsmLabelAttr 0x7fe0a6825bf0 <col:31> "xmm16"
+|   |-BinaryOperator 0x7fe0a6825d18 <line:9:3, col:12> 'float' '='
+|   | |-DeclRefExpr 0x7fe0a6825c60 <col:3> 'float' lvalue Var 0x7fe0a6825b90 'xmm16' 'float'
+|   | `-ImplicitCastExpr 0x7fe0a6825d00 <col:11, col:12> 'float' <FloatingCast>
+|   |   `-ImplicitCastExpr 0x7fe0a6825ce8 <col:11, col:12> 'double' <LValueToRValue>
+|   |     `-UnaryOperator 0x7fe0a6825cc8 <col:11, col:12> 'double' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7fe0a6825cb0 <col:12> 'double *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fe0a6825c88 <col:12> 'double *' lvalue ParmVar 0x7fe0a6027160 'p' 'double *'
+|   |-GCCAsmStmt 0x7fe0a6825e30 <line:10:3, col:34>
+|   | `-DeclRefExpr 0x7fe0a6825e08 <col:28> 'float' lvalue Var 0x7fe0a6825b90 'xmm16' 'float'
+|   `-ReturnStmt 0x7fe0a6825ed0 <line:11:3, col:10>
+|     `-ImplicitCastExpr 0x7fe0a6825eb8 <col:10> 'float' <LValueToRValue>
+|       `-DeclRefExpr 0x7fe0a6825e90 <col:10> 'float' lvalue Var 0x7fe0a6825b90 'xmm16' 'float'
+`-FunctionDecl 0x7fe0a6826008 <line:14:1, line:21:1> line:15:1 bar 'float (double)'
+  |-ParmVarDecl 0x7fe0a6825f38 <col:6, col:13> col:13 used x 'double'
+  `-CompoundStmt 0x7fe0a68263a0 <line:16:1, line:21:1>
+    |-DeclStmt 0x7fe0a68261a8 <line:17:3, col:39>
+    | `-VarDecl 0x7fe0a68260f0 <col:3, col:18> col:18 used xmm16 'float' register
+    |   `-AsmLabelAttr 0x7fe0a6826150 <col:31> "xmm16"
+    |-BinaryOperator 0x7fe0a6826240 <line:18:3, col:11> 'float' '='
+    | |-DeclRefExpr 0x7fe0a68261c0 <col:3> 'float' lvalue Var 0x7fe0a68260f0 'xmm16' 'float'
+    | `-ImplicitCastExpr 0x7fe0a6826228 <col:11> 'float' <FloatingCast>
+    |   `-ImplicitCastExpr 0x7fe0a6826210 <col:11> 'double' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fe0a68261e8 <col:11> 'double' lvalue ParmVar 0x7fe0a6825f38 'x' 'double'
+    |-GCCAsmStmt 0x7fe0a68262e8 <line:19:3, col:34>
+    | `-DeclRefExpr 0x7fe0a68262c0 <col:28> 'float' lvalue Var 0x7fe0a68260f0 'xmm16' 'float'
+    `-ReturnStmt 0x7fe0a6826388 <line:20:3, col:10>
+      `-ImplicitCastExpr 0x7fe0a6826370 <col:10> 'float' <LValueToRValue>
+        `-DeclRefExpr 0x7fe0a6826348 <col:10> 'float' lvalue Var 0x7fe0a68260f0 'xmm16' 'float'

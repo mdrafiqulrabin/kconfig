@@ -1,0 +1,62 @@
+FileAST: 
+  Typedef: mstruct_t, [], ['typedef']
+    TypeDecl: mstruct_t, []
+      Struct: None
+        Decl: baddr, [], [], []
+          TypeDecl: baddr, []
+            IdentifierType: ['int']
+  Decl: mtab, [], ['static'], []
+    TypeDecl: mtab, []
+      Struct: None
+        Decl: mapnum, [], [], []
+          TypeDecl: mapnum, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: unused, [], [], []
+          TypeDecl: unused, []
+            IdentifierType: ['mstruct_t']
+  Decl: mactab, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: mactab, []
+        IdentifierType: ['mstruct_t']
+    UnaryOp: &
+      StructRef: .
+        ID: mtab
+        ID: unused
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: addr, [], [], []
+        TypeDecl: addr, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 1
+        BinaryOp: <=
+          ID: i
+          StructRef: .
+            ID: mtab
+            ID: mapnum
+        UnaryOp: p++
+          ID: i
+        If: 
+          BinaryOp: <
+            ID: addr
+            StructRef: .
+              ArrayRef: 
+                ID: mactab
+                ID: i
+              ID: baddr
+          Break: 
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,61 @@
+c_files/pr43245.c:14:9: warning: initializing 'char *' with an expression of type 'const char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  char *s1 = s;
+        ^    ~
+c_files/pr43245.c:15:6: warning: assigning to 'char *' from 'const char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  s1 = s;
+     ^ ~
+c_files/pr43245.c:16:8: warning: passing 'const char *' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  foo (s);
+       ^
+c_files/pr43245.c:6:12: note: passing argument to parameter 'p' here
+foo (char *p)
+           ^
+c_files/pr43245.c:17:10: warning: returning 'const char *' from a function with result type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  return s;
+         ^
+4 warnings generated.
+TranslationUnitDecl 0x7fd37b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd37b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd37b826740 '__int128'
+|-TypedefDecl 0x7fd37b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd37b826760 'unsigned __int128'
+|-TypedefDecl 0x7fd37b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd37b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd37b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd37b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd37b826dc0 'char *'
+|   `-BuiltinType 0x7fd37b826560 'char'
+|-TypedefDecl 0x7fd37b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd37b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd37b826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd37b826e58 '__va_list_tag'
+|-FunctionDecl 0x7fd37c025a00 <c_files/pr43245.c:5:1, line:8:1> line:6:1 used foo 'void (char *)'
+| |-ParmVarDecl 0x7fd37b827138 <col:6, col:12> col:12 p 'char *'
+| `-CompoundStmt 0x7fd37c025ae0 <line:7:1, line:8:1>
+`-FunctionDecl 0x7fd37c025bc8 <line:10:1, line:18:1> line:11:1 bar 'char *(void)'
+  `-CompoundStmt 0x7fd37c026430 <line:12:1, line:18:1>
+    |-DeclStmt 0x7fd37c025d78 <line:13:3, col:24>
+    | `-VarDecl 0x7fd37c025c78 <col:3, col:19> col:15 used s 'const char *' cinit
+    |   `-ImplicitCastExpr 0x7fd37c025d60 <col:19> 'const char *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fd37c025d48 <col:19> 'char *' <ArrayToPointerDecay>
+    |       `-StringLiteral 0x7fd37c025d18 <col:19> 'char [4]' lvalue "foo"
+    |-DeclStmt 0x7fd37c026210 <line:14:3, col:15>
+    | `-VarDecl 0x7fd37c025da8 <col:3, col:14> col:9 used s1 'char *' cinit
+    |   `-ImplicitCastExpr 0x7fd37c025e48 <col:14> 'char *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fd37c025e30 <col:14> 'const char *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd37c025e08 <col:14> 'const char *' lvalue Var 0x7fd37c025c78 's' 'const char *'
+    |-BinaryOperator 0x7fd37c0262a8 <line:15:3, col:8> 'char *' '='
+    | |-DeclRefExpr 0x7fd37c026228 <col:3> 'char *' lvalue Var 0x7fd37c025da8 's1' 'char *'
+    | `-ImplicitCastExpr 0x7fd37c026290 <col:8> 'char *' <BitCast>
+    |   `-ImplicitCastExpr 0x7fd37c026278 <col:8> 'const char *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fd37c026250 <col:8> 'const char *' lvalue Var 0x7fd37c025c78 's' 'const char *'
+    |-CallExpr 0x7fd37c026360 <line:16:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7fd37c026348 <col:3> 'void (*)(char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd37c0262d0 <col:3> 'void (char *)' Function 0x7fd37c025a00 'foo' 'void (char *)'
+    | `-ImplicitCastExpr 0x7fd37c0263a8 <col:8> 'char *' <BitCast>
+    |   `-ImplicitCastExpr 0x7fd37c026390 <col:8> 'const char *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fd37c0262f8 <col:8> 'const char *' lvalue Var 0x7fd37c025c78 's' 'const char *'
+    `-ReturnStmt 0x7fd37c026418 <line:17:3, col:10>
+      `-ImplicitCastExpr 0x7fd37c026400 <col:10> 'char *' <BitCast>
+        `-ImplicitCastExpr 0x7fd37c0263e8 <col:10> 'const char *' <LValueToRValue>
+          `-DeclRefExpr 0x7fd37c0263c0 <col:10> 'const char *' lvalue Var 0x7fd37c025c78 's' 'const char *'

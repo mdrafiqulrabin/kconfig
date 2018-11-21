@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fb18c0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb18c026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb18c026740 '__int128'
+|-TypedefDecl 0x7fb18c026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb18c026760 'unsigned __int128'
+|-TypedefDecl 0x7fb18c026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb18c026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb18c026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb18c026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb18c026dc0 'char *'
+|   `-BuiltinType 0x7fb18c026560 'char'
+|-TypedefDecl 0x7fb18c0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb18c027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb18c026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb18c026e58 '__va_list_tag'
+`-FunctionDecl 0x7fb18c825ad0 <c_files/pr44214-2.c:4:1, line:7:1> line:4:6 do_div 'void (_Complex double *, _Complex double *)'
+  |-ParmVarDecl 0x7fb18c027158 <col:14, col:31> col:31 used a '_Complex double *'
+  |-ParmVarDecl 0x7fb18c825a00 <col:34, col:51> col:51 used b '_Complex double *'
+  `-CompoundStmt 0x7fb18c825d98 <line:5:1, line:7:1>
+    `-BinaryOperator 0x7fb18c825d70 <line:6:3, col:25> '_Complex double' '='
+      |-UnaryOperator 0x7fb18c825bf8 <col:3, col:4> '_Complex double' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fb18c825be0 <col:4> '_Complex double *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb18c825bb8 <col:4> '_Complex double *' lvalue ParmVar 0x7fb18c027158 'a' '_Complex double *'
+      `-BinaryOperator 0x7fb18c825d48 <col:8, col:25> '_Complex double' '/'
+        |-ImplicitCastExpr 0x7fb18c825d30 <col:8, col:9> '_Complex double' <LValueToRValue>
+        | `-UnaryOperator 0x7fb18c825c58 <col:8, col:9> '_Complex double' lvalue prefix '*'
+        |   `-ImplicitCastExpr 0x7fb18c825c40 <col:9> '_Complex double *' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fb18c825c18 <col:9> '_Complex double *' lvalue ParmVar 0x7fb18c825a00 'b' '_Complex double *'
+        `-ParenExpr 0x7fb18c825d10 <col:13, col:25> '_Complex double'
+          `-BinaryOperator 0x7fb18c825ce8 <col:14, col:20> '_Complex double' '-'
+            |-FloatingLiteral 0x7fb18c825c78 <col:14> 'double' 4.000000e+00
+            `-ImplicitCastExpr 0x7fb18c825cd0 <col:20> '_Complex double' <FloatingComplexCast>
+              `-ImaginaryLiteral 0x7fb18c825cb8 <col:20> '_Complex float'
+                `-FloatingLiteral 0x7fb18c825c98 <col:20> 'float' 5.000000e+00

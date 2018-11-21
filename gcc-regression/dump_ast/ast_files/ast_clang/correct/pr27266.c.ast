@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fa8400264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa840026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa840026740 '__int128'
+|-TypedefDecl 0x7fa840026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa840026760 'unsigned __int128'
+|-TypedefDecl 0x7fa840026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa840026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa840026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa840026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa840026dc0 'char *'
+|   `-BuiltinType 0x7fa840026560 'char'
+|-TypedefDecl 0x7fa8400270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa840027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa840026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa840026e58 '__va_list_tag'
+|-VarDecl 0x7fa840027138 <c_files/pr27266.c:8:1, col:18> col:18 used sll 'long long'
+|-FunctionDecl 0x7fa840825ab0 <line:10:1, line:14:1> line:11:1 foo 'void (void)'
+| `-CompoundStmt 0x7fa840825ff0 <line:12:1, line:14:1>
+|   `-CallExpr 0x7fa840825d10 <line:13:3, col:32> 'long long'
+|     |-ImplicitCastExpr 0x7fa840825fd8 <col:3> 'long long (*)(volatile long long *, long long, ...)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fa840825f88 <col:3> '<builtin fn type>' Function 0x7fa840825dc0 '__sync_fetch_and_add_8' 'long long (volatile long long *, long long, ...)'
+|     |-UnaryOperator 0x7fa840825c88 <col:25, col:26> 'long long *' prefix '&'
+|     | `-DeclRefExpr 0x7fa840825c38 <col:26> 'long long' lvalue Var 0x7fa840027138 'sll' 'long long'
+|     `-ImplicitCastExpr 0x7fa840825f70 <col:31> 'long long' <IntegralCast>
+|       `-IntegerLiteral 0x7fa840825ca8 <col:31> 'int' 1
+|-FunctionDecl 0x7fa840825b78 <col:3> col:3 implicit used __sync_fetch_and_add 'void ()' extern
+`-FunctionDecl 0x7fa840825dc0 <col:3> col:3 implicit __sync_fetch_and_add_8 'long long (volatile long long *, long long, ...)' extern
+  |-ParmVarDecl 0x7fa840825e58 <<invalid sloc>> <invalid sloc> 'volatile long long *'
+  |-ParmVarDecl 0x7fa840825eb8 <<invalid sloc>> <invalid sloc> 'long long'
+  `-NoThrowAttr 0x7fa840825f28 <col:3> Implicit

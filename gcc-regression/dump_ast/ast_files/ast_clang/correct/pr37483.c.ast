@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7faadf8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faadf826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faadf826740 '__int128'
+|-TypedefDecl 0x7faadf826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faadf826760 'unsigned __int128'
+|-TypedefDecl 0x7faadf826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faadf826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faadf826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faadf826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faadf826dc0 'char *'
+|   `-BuiltinType 0x7faadf826560 'char'
+|-TypedefDecl 0x7faadf8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faadf827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faadf826ee0 'struct __va_list_tag'
+|     `-Record 0x7faadf826e58 '__va_list_tag'
+`-FunctionDecl 0x7faae0025ad8 <c_files/pr37483.c:3:1, line:10:1> line:4:1 foo 'unsigned long long (unsigned int, int)'
+  |-ParmVarDecl 0x7faadf827138 <col:6, col:15> col:15 used count 'unsigned int'
+  |-ParmVarDecl 0x7faae0025a00 <col:22, col:26> col:26 used i 'int'
+  `-CompoundStmt 0x7faae0025ee0 <line:5:1, line:10:1>
+    |-DeclStmt 0x7faae0025c38 <line:6:3, col:27>
+    | `-VarDecl 0x7faae0025bd8 <col:3, col:22> col:22 used value 'unsigned long long'
+    |-IfStmt 0x7faae0025e50 <line:7:3, line:8:37>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7faae0025cb0 <line:7:7, col:12> 'int' '=='
+    | | |-ImplicitCastExpr 0x7faae0025c98 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7faae0025c50 <col:7> 'int' lvalue ParmVar 0x7faae0025a00 'i' 'int'
+    | | `-IntegerLiteral 0x7faae0025c78 <col:12> 'int' 0
+    | |-BinaryOperator 0x7faae0025e28 <line:8:5, col:37> 'unsigned long long' '='
+    | | |-DeclRefExpr 0x7faae0025cd8 <col:5> 'unsigned long long' lvalue Var 0x7faae0025bd8 'value' 'unsigned long long'
+    | | `-BinaryOperator 0x7faae0025e00 <col:13, col:37> 'unsigned long long' '>>'
+    | |   |-ParenExpr 0x7faae0025da0 <col:13, col:32> 'unsigned long long'
+    | |   | `-BinaryOperator 0x7faae0025d78 <col:14, col:22> 'unsigned long long' '&'
+    | |   |   |-ImplicitCastExpr 0x7faae0025d48 <col:14> 'unsigned long long' <LValueToRValue>
+    | |   |   | `-DeclRefExpr 0x7faae0025d00 <col:14> 'unsigned long long' lvalue Var 0x7faae0025bd8 'value' 'unsigned long long'
+    | |   |   `-ImplicitCastExpr 0x7faae0025d60 <col:22> 'unsigned long long' <IntegralCast>
+    | |   |     `-IntegerLiteral 0x7faae0025d28 <col:22> 'unsigned int' 4294967295
+    | |   `-ImplicitCastExpr 0x7faae0025de8 <col:37> 'unsigned int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7faae0025dc0 <col:37> 'unsigned int' lvalue ParmVar 0x7faadf827138 'count' 'unsigned int'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7faae0025ec8 <line:9:3, col:10>
+      `-ImplicitCastExpr 0x7faae0025eb0 <col:10> 'unsigned long long' <LValueToRValue>
+        `-DeclRefExpr 0x7faae0025e88 <col:10> 'unsigned long long' lvalue Var 0x7faae0025bd8 'value' 'unsigned long long'

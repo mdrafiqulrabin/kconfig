@@ -1,0 +1,81 @@
+c_files/pr59625.c:8:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:9:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:10:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:11:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:12:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:13:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:14:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:15:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:16:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:17:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:18:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:19:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:20:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:21:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:22:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:23:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:24:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:25:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+c_files/pr59625.c:26:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab);
+      ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+TranslationUnitDecl 0x7fa24f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa24f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa24f026740 '__int128'
+|-TypedefDecl 0x7fa24f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa24f026760 'unsigned __int128'
+|-TypedefDecl 0x7fa24f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa24f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa24f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa24f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa24f026dc0 'char *'
+|   `-BuiltinType 0x7fa24f026560 'char'
+|-TypedefDecl 0x7fa24f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa24f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa24f026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa24f026e58 '__va_list_tag'
+`-FunctionDecl 0x7fa24f825a00 <c_files/pr59625.c:5:1, line:31:1> line:6:1 foo 'int (void)'
+  `-CompoundStmt 0x7fa24f825ba8 <line:7:1, line:31:1>
+    |-ReturnStmt 0x7fa24f825af8 <line:28:3, col:10>
+    | `-IntegerLiteral 0x7fa24f825ad8 <col:10> 'int' 0
+    `-LabelStmt 0x7fa24f825b90 <line:29:1, line:30:10> 'lab'
+      `-ReturnStmt 0x7fa24f825b30 <col:3, col:10>
+        `-IntegerLiteral 0x7fa24f825b10 <col:10> 'int' 1

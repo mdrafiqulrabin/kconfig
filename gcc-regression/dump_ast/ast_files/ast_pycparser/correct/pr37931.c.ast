@@ -1,0 +1,82 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: &
+          BinaryOp: |
+            ID: a
+            Constant: int, 1
+          BinaryOp: |
+            ID: b
+            Constant: int, 1
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              Constant: int, 6
+              Constant: int, 0xc6
+          Constant: int, 7
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              Constant: int, 0x80
+              Constant: int, 0xc1
+          Constant: int, 0x81
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              Constant: int, 4
+              Constant: int, 4
+          Constant: int, 5
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              Constant: int, 5
+              Constant: int, 4
+          Constant: int, 5
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7fb90301c0d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb90301c620 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb90301c340 '__int128'
+|-TypedefDecl 0x7fb90301c690 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb90301c360 'unsigned __int128'
+|-TypedefDecl 0x7fb90301c968 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb90301c770 'struct __NSConstantString_tag'
+|   `-Record 0x7fb90301c6e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb90301ca00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb90301c9c0 'char *'
+|   `-BuiltinType 0x7fb90301c160 'char'
+|-TypedefDecl 0x7fb90301ccc8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb90301cc70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb90301cae0 'struct __va_list_tag'
+|     `-Record 0x7fb90301ca58 '__va_list_tag'
+|-TypedefDecl 0x7fb90301cd78 <c_files/pr70405.c:7:1, col:15> col:15 referenced V '__attribute__((__vector_size__(16 * sizeof(short)))) short'
+| `-VectorType 0x7fb90301cd40 '__attribute__((__vector_size__(16 * sizeof(short)))) short' 16
+|   `-BuiltinType 0x7fb90301c1a0 'short'
+`-FunctionDecl 0x7fb90306e178 <line:9:1, line:16:1> line:10:1 foo 'int (V *)'
+  |-ParmVarDecl 0x7fb90306e068 <col:6, col:9> col:9 used p 'V *'
+  `-CompoundStmt 0x7fb90306e5b0 <line:11:1, line:16:1>
+    |-DeclStmt 0x7fb90306e340 <line:12:3, col:11>
+    | `-VarDecl 0x7fb90306e268 <col:3, col:10> col:5 used v 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short' cinit
+    |   `-ImplicitCastExpr 0x7fb90306e328 <col:9, col:10> 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short' <LValueToRValue>
+    |     `-UnaryOperator 0x7fb90306e308 <col:9, col:10> 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7fb90306e2f0 <col:10> 'V *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fb90306e2c8 <col:10> 'V *' lvalue ParmVar 0x7fb90306e068 'p' 'V *'
+    |-CompoundAssignOperator 0x7fb90306e3c0 <line:13:3, col:9> 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short' '>>=' ComputeLHSTy='V':'__attribute__((__vector_size__(16 * sizeof(short)))) short' ComputeResultTy='V':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+    | |-DeclRefExpr 0x7fb90306e358 <col:3> 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue Var 0x7fb90306e268 'v' 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+    | `-ImplicitCastExpr 0x7fb90306e3a8 <col:9> 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb90306e380 <col:9> 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue Var 0x7fb90306e268 'v' 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+    |-CompoundAssignOperator 0x7fb90306e4c0 <line:14:3, col:11> 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short' '-=' ComputeLHSTy='V':'__attribute__((__vector_size__(16 * sizeof(short)))) short' ComputeResultTy='V':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+    | |-DeclRefExpr 0x7fb90306e3f8 <col:3> 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue Var 0x7fb90306e268 'v' 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+    | `-ImplicitCastExpr 0x7fb90306e4a8 <col:8, col:11> 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short' <VectorSplat>
+    |   `-ImplicitCastExpr 0x7fb90306e490 <col:8, col:11> 'short' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7fb90306e468 <col:8, col:11> 'short' lvalue vectorcomponent
+    |       |-DeclRefExpr 0x7fb90306e420 <col:8> 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue Var 0x7fb90306e268 'v' 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+    |       `-IntegerLiteral 0x7fb90306e448 <col:10> 'int' 0
+    `-ReturnStmt 0x7fb90306e598 <line:15:3, col:13>
+      `-ImplicitCastExpr 0x7fb90306e580 <col:10, col:13> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fb90306e568 <col:10, col:13> 'short' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fb90306e540 <col:10, col:13> 'short' lvalue vectorcomponent
+            |-DeclRefExpr 0x7fb90306e4f8 <col:10> 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue Var 0x7fb90306e268 'v' 'V':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+            `-IntegerLiteral 0x7fb90306e520 <col:12> 'int' 3

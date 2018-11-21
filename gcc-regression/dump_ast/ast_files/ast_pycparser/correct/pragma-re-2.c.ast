@@ -1,0 +1,8 @@
+FileAST: 
+  Pragma: redefine_extname		 
+  Pragma: redefine_extname foo		 
+  Pragma: redefine_extname foo 1		 
+  Pragma: redefine_extname foo bar 2	 
+  Decl: bar, [], [], []
+    TypeDecl: bar, []
+      IdentifierType: ['int']

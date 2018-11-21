@@ -1,0 +1,60 @@
+c_files/pr18712.c:6:5: warning: implicit declaration of function 'foo' is invalid in C99 [-Wimplicit-function-declaration]
+    foo ();
+    ^
+c_files/pr18712.c:13:7: warning: implicit declaration of function 'foo1' is invalid in C99 [-Wimplicit-function-declaration]
+      foo1 (&ts);
+      ^
+2 warnings generated.
+TranslationUnitDecl 0x7fd00d8234d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd00d823a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd00d823740 '__int128'
+|-TypedefDecl 0x7fd00d823a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd00d823760 'unsigned __int128'
+|-TypedefDecl 0x7fd00d823d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd00d823b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd00d823ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd00d823e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd00d823dc0 'char *'
+|   `-BuiltinType 0x7fd00d823560 'char'
+|-TypedefDecl 0x7fd00d8240c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd00d824070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd00d823ee0 'struct __va_list_tag'
+|     `-Record 0x7fd00d823e58 '__va_list_tag'
+|-FunctionDecl 0x7fd00e025a30 <c_files/pr18712.c:1:1, line:17:1> line:1:7 eintr_source 'void *(void *)'
+| |-ParmVarDecl 0x7fd00d824138 <col:21, col:27> col:27 used arg 'void *'
+| `-CompoundStmt 0x7fd00e0260e8 <line:2:1, line:17:1>
+|   |-DeclStmt 0x7fd00e025ba8 <line:3:3, col:13>
+|   | `-VarDecl 0x7fd00e025b28 <col:3, col:12> col:7 used ts 'int' cinit
+|   |   `-IntegerLiteral 0x7fd00e025b88 <col:12> 'int' 0
+|   |-IfStmt 0x7fd00e025d78 <line:5:3, line:6:10>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fd00e025be8 <line:5:7> 'void *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fd00e025bc0 <col:7> 'void *' lvalue ParmVar 0x7fd00d824138 'arg' 'void *'
+|   | |-CallExpr 0x7fd00e025d50 <line:6:5, col:10> 'int'
+|   | | `-ImplicitCastExpr 0x7fd00e025d38 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fd00e025ce8 <col:5> 'int ()' Function 0x7fd00e025c50 'foo' 'int ()'
+|   | `-<<<NULL>>>
+|   |-WhileStmt 0x7fd00e026078 <line:8:3, line:14:5>
+|   | |-<<<NULL>>>
+|   | |-IntegerLiteral 0x7fd00e025db0 <line:8:10> 'int' 1
+|   | `-CompoundStmt 0x7fd00e026050 <line:9:5, line:14:5>
+|   |   |-IfStmt 0x7fd00e025e78 <line:10:7, line:11:7>
+|   |   | |-<<<NULL>>>
+|   |   | |-<<<NULL>>>
+|   |   | |-ImplicitCastExpr 0x7fd00e025df8 <line:10:11> 'void *' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fd00e025dd0 <col:11> 'void *' lvalue ParmVar 0x7fd00d824138 'arg' 'void *'
+|   |   | |-CallExpr 0x7fd00e025e50 <line:11:2, col:7> 'int'
+|   |   | | `-ImplicitCastExpr 0x7fd00e025e38 <col:2> 'int (*)()' <FunctionToPointerDecay>
+|   |   | |   `-DeclRefExpr 0x7fd00e025e10 <col:2> 'int ()' Function 0x7fd00e025c50 'foo' 'int ()'
+|   |   | `-<<<NULL>>>
+|   |   `-CallExpr 0x7fd00e026020 <line:13:7, col:16> 'int'
+|   |     |-ImplicitCastExpr 0x7fd00e026008 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fd00e025f70 <col:7> 'int ()' Function 0x7fd00e025ed8 'foo1' 'int ()'
+|   |     `-UnaryOperator 0x7fd00e025fe8 <col:13, col:14> 'int *' prefix '&'
+|   |       `-DeclRefExpr 0x7fd00e025f98 <col:14> 'int' lvalue Var 0x7fd00e025b28 'ts' 'int'
+|   `-ReturnStmt 0x7fd00e0260d0 <line:16:3, col:10>
+|     `-ImplicitCastExpr 0x7fd00e0260b8 <col:10> 'void *' <NullToPointer>
+|       `-IntegerLiteral 0x7fd00e026098 <col:10> 'int' 0
+|-FunctionDecl 0x7fd00e025c50 <<invalid sloc>> line:6:5 implicit used foo 'int ()'
+`-FunctionDecl 0x7fd00e025ed8 <<invalid sloc>> line:13:7 implicit used foo1 'int ()'

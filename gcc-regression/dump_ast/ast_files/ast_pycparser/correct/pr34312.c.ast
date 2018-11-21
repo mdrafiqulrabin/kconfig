@@ -1,0 +1,128 @@
+FileAST: 
+  Typedef: JamoNormMap, [], ['typedef']
+    TypeDecl: JamoNormMap, []
+      Struct: None
+        Decl: seq, [], [], []
+          ArrayDecl: []
+            TypeDecl: seq, []
+              IdentifierType: ['unsigned', 'char']
+            Constant: int, 3
+  FuncDef: 
+    Decl: JamoClusterSearch, ['const'], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: aKey, [], [], []
+            TypeDecl: aKey, []
+              IdentifierType: ['JamoNormMap']
+          Decl: aClusters, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: aClusters, ['const']
+                IdentifierType: ['JamoNormMap']
+          Decl: aClustersSize, [], [], []
+            TypeDecl: aClustersSize, []
+              IdentifierType: ['short']
+        PtrDecl: []
+          TypeDecl: JamoClusterSearch, ['const']
+            IdentifierType: ['JamoNormMap']
+    Compound: 
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['unsigned', 'short']
+        Constant: int, 0
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          IdentifierType: ['unsigned', 'short']
+        BinaryOp: -
+          ID: aClustersSize
+          Constant: int, 1
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['unsigned', 'short']
+        BinaryOp: /
+          BinaryOp: +
+            ID: l
+            ID: u
+          Constant: int, 2
+      If: 
+        BinaryOp: <
+          BinaryOp: -
+            ArrayRef: 
+              StructRef: .
+                ID: aKey
+                ID: seq
+              Constant: int, 1
+            ArrayRef: 
+              StructRef: .
+                ArrayRef: 
+                  ID: aClusters
+                  ID: h
+                ID: seq
+              Constant: int, 1
+          Constant: int, 0
+        Return: 
+          FuncCall: 
+            ID: JamoClusterSearch
+            ExprList: 
+              ID: aKey
+              UnaryOp: &
+                ArrayRef: 
+                  ID: aClusters
+                  ID: l
+              BinaryOp: -
+                ID: h
+                ID: l
+  FuncDef: 
+    Decl: JamoSrchReplace, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: aClusters, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: aClusters, ['const']
+                IdentifierType: ['JamoNormMap']
+          Decl: aClustersSize, [], [], []
+            TypeDecl: aClustersSize, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: aIn, [], [], []
+            PtrDecl: []
+              TypeDecl: aIn, []
+                IdentifierType: ['unsigned', 'short']
+          Decl: aLength, [], [], []
+            PtrDecl: []
+              TypeDecl: aLength, []
+                IdentifierType: ['unsigned', 'int']
+          Decl: aOffset, [], [], []
+            TypeDecl: aOffset, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: JamoSrchReplace, []
+          IdentifierType: ['short']
+    Compound: 
+      Decl: key, [], [], []
+        TypeDecl: key, []
+          IdentifierType: ['JamoNormMap']
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: key
+            ID: seq
+          Constant: int, 0
+        Constant: int, 0
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: key
+            ID: seq
+          Constant: int, 1
+        Constant: int, 1
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: key
+            ID: seq
+          Constant: int, 2
+        Constant: int, 2
+      FuncCall: 
+        ID: JamoClusterSearch
+        ExprList: 
+          ID: key
+          ID: aClusters
+          ID: aClustersSize

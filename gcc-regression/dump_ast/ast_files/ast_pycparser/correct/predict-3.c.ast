@@ -1,0 +1,83 @@
+FileAST: 
+  Decl: global, [], ['extern'], []
+    TypeDecl: global, []
+      IdentifierType: ['int']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: bound, [], [], []
+            TypeDecl: bound, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: ret, [], [], []
+        TypeDecl: ret, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <=
+          ID: i
+          ID: bound
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          If: 
+            BinaryOp: <
+              ID: i
+              BinaryOp: -
+                ID: bound
+                Constant: int, 2
+            Assignment: +=
+              ID: global
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  ID: i
+          If: 
+            BinaryOp: <=
+              ID: i
+              ID: bound
+            Assignment: +=
+              ID: global
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  ID: i
+          If: 
+            BinaryOp: <
+              BinaryOp: +
+                ID: i
+                Constant: int, 1
+              ID: bound
+            Assignment: +=
+              ID: global
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  ID: i
+          If: 
+            BinaryOp: !=
+              ID: i
+              ID: bound
+            Assignment: +=
+              ID: global
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  ID: i

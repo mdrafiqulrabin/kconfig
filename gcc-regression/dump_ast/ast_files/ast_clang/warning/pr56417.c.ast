@@ -1,0 +1,32 @@
+c_files/pr56417.c:8:28: warning: incompatible pointer types passing 'int (*)(void)' to parameter of type 'const char *' [-Wincompatible-pointer-types]
+  return __builtin_strlen (&foo);
+                           ^~~~
+1 warning generated.
+TranslationUnitDecl 0x7fc5de8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc5de826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc5de826740 '__int128'
+|-TypedefDecl 0x7fc5de826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc5de826760 'unsigned __int128'
+|-TypedefDecl 0x7fc5de826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc5de826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc5de826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc5de826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc5de826dc0 'char *'
+|   `-BuiltinType 0x7fc5de826560 'char'
+|-TypedefDecl 0x7fc5de8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc5de827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc5de826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc5de826e58 '__va_list_tag'
+|-FunctionDecl 0x7fc5df025a00 <c_files/pr56417.c:5:1, line:9:1> line:6:1 referenced foo 'int (void)'
+| `-CompoundStmt 0x7fc5df026170 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fc5df026158 <line:8:3, col:32>
+|     `-ImplicitCastExpr 0x7fc5df026140 <col:10, col:32> 'int' <IntegralCast>
+|       `-CallExpr 0x7fc5df025d40 <col:10, col:32> 'unsigned long'
+|         |-ImplicitCastExpr 0x7fc5df025d28 <col:10> 'unsigned long (*)(const char *)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fc5df025c60 <col:10> '<builtin fn type>' Function 0x7fc5df025b18 '__builtin_strlen' 'unsigned long (const char *)'
+|         `-ImplicitCastExpr 0x7fc5df025d70 <col:28, col:29> 'const char *' <BitCast>
+|           `-UnaryOperator 0x7fc5df025cd8 <col:28, col:29> 'int (*)(void)' prefix '&'
+|             `-DeclRefExpr 0x7fc5df025c88 <col:29> 'int (void)' Function 0x7fc5df025a00 'foo' 'int (void)'
+`-FunctionDecl 0x7fc5df025b18 <col:10> col:10 implicit used __builtin_strlen 'unsigned long (const char *)' extern
+  |-ParmVarDecl 0x7fc5df025bb0 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-NoThrowAttr 0x7fc5df025c18 <col:10> Implicit

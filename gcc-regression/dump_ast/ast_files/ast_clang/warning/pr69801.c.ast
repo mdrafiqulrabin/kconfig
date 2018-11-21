@@ -1,0 +1,50 @@
+c_files/pr69801.c:9:30: warning: expression result unused [-Wunused-value]
+void fn1() { e ? (d ? b : c).c : (d ? b : c).c; }
+                 ~~~~~~~~~~~ ^
+1 warning generated.
+TranslationUnitDecl 0x7fd6a20264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd6a2026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd6a2026740 '__int128'
+|-TypedefDecl 0x7fd6a2026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd6a2026760 'unsigned __int128'
+|-TypedefDecl 0x7fd6a2026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd6a2026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd6a2026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd6a2026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd6a2026dc0 'char *'
+|   `-BuiltinType 0x7fd6a2026560 'char'
+|-TypedefDecl 0x7fd6a20270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd6a2027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd6a2026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd6a2026e58 '__va_list_tag'
+|-RecordDecl 0x7fd6a2027120 <c_files/pr69801.c:5:1, line:7:1> line:5:1 struct definition
+| `-FieldDecl 0x7fd6a2825a58 <line:6:5, col:13> col:10 referenced c 'char [1]'
+|-VarDecl 0x7fd6a2825af0 <line:5:1, line:7:3> col:3 used b 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)'
+|-VarDecl 0x7fd6a2825bb0 <line:5:1, line:7:6> col:6 used c 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)'
+|-VarDecl 0x7fd6a2825c48 <line:8:1, col:5> col:5 used d 'int'
+|-VarDecl 0x7fd6a2825cc0 <col:1, col:8> col:8 used e 'int'
+`-FunctionDecl 0x7fd6a2825d88 <line:9:1, col:49> col:6 fn1 'void ()'
+  `-CompoundStmt 0x7fd6a2826210 <col:12, col:49>
+    `-ConditionalOperator 0x7fd6a28261e0 <col:14, col:46> 'char *'
+      |-ImplicitCastExpr 0x7fd6a28260d8 <col:14> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fd6a2825e20 <col:14> 'int' lvalue Var 0x7fd6a2825cc0 'e' 'int'
+      |-ImplicitCastExpr 0x7fd6a28260f0 <col:18, col:30> 'char *' <ArrayToPointerDecay>
+      | `-MemberExpr 0x7fd6a2825f58 <col:18, col:30> 'char [1]' .c 0x7fd6a2825a58
+      |   `-ParenExpr 0x7fd6a2825f38 <col:18, col:28> 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)'
+      |     `-ConditionalOperator 0x7fd6a2825f08 <col:19, col:27> 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)'
+      |       |-ImplicitCastExpr 0x7fd6a2825ec0 <col:19> 'int' <LValueToRValue>
+      |       | `-DeclRefExpr 0x7fd6a2825e48 <col:19> 'int' lvalue Var 0x7fd6a2825c48 'd' 'int'
+      |       |-ImplicitCastExpr 0x7fd6a2825ed8 <col:23> 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)' <LValueToRValue>
+      |       | `-DeclRefExpr 0x7fd6a2825e70 <col:23> 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)' lvalue Var 0x7fd6a2825af0 'b' 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)'
+      |       `-ImplicitCastExpr 0x7fd6a2825ef0 <col:27> 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)' <LValueToRValue>
+      |         `-DeclRefExpr 0x7fd6a2825e98 <col:27> 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)' lvalue Var 0x7fd6a2825bb0 'c' 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)'
+      `-ImplicitCastExpr 0x7fd6a2826108 <col:34, col:46> 'char *' <ArrayToPointerDecay>
+        `-MemberExpr 0x7fd6a28260a0 <col:34, col:46> 'char [1]' .c 0x7fd6a2825a58
+          `-ParenExpr 0x7fd6a2826080 <col:34, col:44> 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)'
+            `-ConditionalOperator 0x7fd6a2826050 <col:35, col:43> 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)'
+              |-ImplicitCastExpr 0x7fd6a2826008 <col:35> 'int' <LValueToRValue>
+              | `-DeclRefExpr 0x7fd6a2825f90 <col:35> 'int' lvalue Var 0x7fd6a2825c48 'd' 'int'
+              |-ImplicitCastExpr 0x7fd6a2826020 <col:39> 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)' <LValueToRValue>
+              | `-DeclRefExpr 0x7fd6a2825fb8 <col:39> 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)' lvalue Var 0x7fd6a2825af0 'b' 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)'
+              `-ImplicitCastExpr 0x7fd6a2826038 <col:43> 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)' <LValueToRValue>
+                `-DeclRefExpr 0x7fd6a2825fe0 <col:43> 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)' lvalue Var 0x7fd6a2825bb0 'c' 'struct (anonymous struct at c_files/pr69801.c:5:1)':'struct (anonymous at c_files/pr69801.c:5:1)'

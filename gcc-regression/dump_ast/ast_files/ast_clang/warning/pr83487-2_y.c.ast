@@ -1,0 +1,88 @@
+In file included from c_files/pr83487-2_y.c:2:
+c_files/pr83487-1_y.c:1:10: fatal error: 'pr83487-1.h' file not found
+#include "pr83487-1.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fe90e01c0d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe90e01c620 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe90e01c340 '__int128'
+|-TypedefDecl 0x7fe90e01c690 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe90e01c360 'unsigned __int128'
+|-TypedefDecl 0x7fe90e01c968 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe90e01c770 'struct __NSConstantString_tag'
+|   `-Record 0x7fe90e01c6e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe90e01ca00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe90e01c9c0 'char *'
+|   `-BuiltinType 0x7fe90e01c160 'char'
+|-TypedefDecl 0x7fe90e01ccc8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe90e01cc70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe90e01cae0 'struct __va_list_tag'
+|     `-Record 0x7fe90e01ca58 '__va_list_tag'
+|-RecordDecl 0x7fe90e01cd20 <c_files/pr83487-1_y.c:3:1, col:8> col:8 struct A
+|-VarDecl 0x7fe90d831020 <col:1, col:10> col:10 used invalid a 'struct A':'struct A'
+|-RecordDecl 0x7fe90d8310d8 <line:4:1, col:8> col:8 struct B
+|-VarDecl 0x7fe90d8311d0 <col:1, col:10> col:10 used invalid b 'struct B':'struct B'
+|-RecordDecl 0x7fe90d831248 <line:5:1, col:8> col:8 struct C
+|-VarDecl 0x7fe90d831340 <col:1, col:10> col:10 used invalid c 'struct C':'struct C'
+|-FunctionDecl 0x7fe90d8318c0 <line:7:1, col:74> col:13 used f1 'void (int, int, int, int, int, int, int, struct A)' extern
+| |-ParmVarDecl 0x7fe90d8313d0 <col:17, col:21> col:21 i 'int'
+| |-ParmVarDecl 0x7fe90d831448 <col:24, col:28> col:28 j 'int'
+| |-ParmVarDecl 0x7fe90d8314c0 <col:31, col:35> col:35 k 'int'
+| |-ParmVarDecl 0x7fe90d831538 <col:38, col:42> col:42 l 'int'
+| |-ParmVarDecl 0x7fe90d8315b0 <col:45, col:49> col:49 m 'int'
+| |-ParmVarDecl 0x7fe90d831628 <col:52, col:56> col:56 n 'int'
+| |-ParmVarDecl 0x7fe90d8316a0 <col:59, col:63> col:63 o 'int'
+| `-ParmVarDecl 0x7fe90d831720 <col:66, col:73> col:74 'struct A':'struct A'
+|-FunctionDecl 0x7fe90d832000 <line:8:1, col:88> col:13 used f2 'void (int, int, int, int, int, int, int, struct A, int, int)' extern
+| |-ParmVarDecl 0x7fe90d8319b0 <col:17, col:21> col:21 i 'int'
+| |-ParmVarDecl 0x7fe90d831a28 <col:24, col:28> col:28 j 'int'
+| |-ParmVarDecl 0x7fe90d831aa0 <col:31, col:35> col:35 k 'int'
+| |-ParmVarDecl 0x7fe90d831b18 <col:38, col:42> col:42 l 'int'
+| |-ParmVarDecl 0x7fe90d831b90 <col:45, col:49> col:49 m 'int'
+| |-ParmVarDecl 0x7fe90d831c08 <col:52, col:56> col:56 n 'int'
+| |-ParmVarDecl 0x7fe90d831c80 <col:59, col:63> col:63 o 'int'
+| |-ParmVarDecl 0x7fe90d831d00 <col:66, col:73> col:74 'struct A':'struct A'
+| |-ParmVarDecl 0x7fe90d831d78 <col:76, col:80> col:80 p 'int'
+| `-ParmVarDecl 0x7fe90d831df0 <col:83, col:87> col:87 q 'int'
+|-FunctionDecl 0x7fe90d832710 <line:9:1, col:88> col:13 used f3 'void (int, int, int, int, int, int, int, struct B, int, int)' extern
+| |-ParmVarDecl 0x7fe90d832100 <col:17, col:21> col:21 i 'int'
+| |-ParmVarDecl 0x7fe90d832178 <col:24, col:28> col:28 j 'int'
+| |-ParmVarDecl 0x7fe90d8321f0 <col:31, col:35> col:35 k 'int'
+| |-ParmVarDecl 0x7fe90d832268 <col:38, col:42> col:42 l 'int'
+| |-ParmVarDecl 0x7fe90d8322e0 <col:45, col:49> col:49 m 'int'
+| |-ParmVarDecl 0x7fe90d832358 <col:52, col:56> col:56 n 'int'
+| |-ParmVarDecl 0x7fe90d8323d0 <col:59, col:63> col:63 o 'int'
+| |-ParmVarDecl 0x7fe90d832450 <col:66, col:73> col:74 'struct B':'struct B'
+| |-ParmVarDecl 0x7fe90d8324c8 <col:76, col:80> col:80 p 'int'
+| `-ParmVarDecl 0x7fe90d832540 <col:83, col:87> col:87 q 'int'
+|-FunctionDecl 0x7fe90d832e20 <line:10:1, col:88> col:13 used f4 'void (int, int, int, int, int, int, int, struct C, int, int)' extern
+| |-ParmVarDecl 0x7fe90d832810 <col:17, col:21> col:21 i 'int'
+| |-ParmVarDecl 0x7fe90d832888 <col:24, col:28> col:28 j 'int'
+| |-ParmVarDecl 0x7fe90d832900 <col:31, col:35> col:35 k 'int'
+| |-ParmVarDecl 0x7fe90d832978 <col:38, col:42> col:42 l 'int'
+| |-ParmVarDecl 0x7fe90d8329f0 <col:45, col:49> col:49 m 'int'
+| |-ParmVarDecl 0x7fe90d832a68 <col:52, col:56> col:56 n 'int'
+| |-ParmVarDecl 0x7fe90d832ae0 <col:59, col:63> col:63 o 'int'
+| |-ParmVarDecl 0x7fe90d832b60 <col:66, col:73> col:74 'struct C':'struct C'
+| |-ParmVarDecl 0x7fe90d832bd8 <col:76, col:80> col:80 p 'int'
+| `-ParmVarDecl 0x7fe90d832c50 <col:83, col:87> col:87 q 'int'
+|-FunctionDecl 0x7fe90d8330b0 <line:11:1, col:32> col:13 used f5 'void (int, struct A)' extern
+| |-ParmVarDecl 0x7fe90d832f20 <col:17, col:21> col:21 o 'int'
+| `-ParmVarDecl 0x7fe90d832fa0 <col:24, col:31> col:32 'struct A':'struct A'
+|-FunctionDecl 0x7fe90d833420 <line:12:1, col:46> col:13 used f6 'void (int, struct A, int, int)' extern
+| |-ParmVarDecl 0x7fe90d833170 <col:17, col:21> col:21 o 'int'
+| |-ParmVarDecl 0x7fe90d8331f0 <col:24, col:31> col:32 'struct A':'struct A'
+| |-ParmVarDecl 0x7fe90d833268 <col:34, col:38> col:38 p 'int'
+| `-ParmVarDecl 0x7fe90d8332e0 <col:41, col:45> col:45 q 'int'
+|-FunctionDecl 0x7fe90d8337a0 <line:13:1, col:46> col:13 used f7 'void (int, struct B, int, int)' extern
+| |-ParmVarDecl 0x7fe90d8334f0 <col:17, col:21> col:21 o 'int'
+| |-ParmVarDecl 0x7fe90d833570 <col:24, col:31> col:32 'struct B':'struct B'
+| |-ParmVarDecl 0x7fe90d8335e8 <col:34, col:38> col:38 p 'int'
+| `-ParmVarDecl 0x7fe90d833660 <col:41, col:45> col:45 q 'int'
+|-FunctionDecl 0x7fe90d833b20 <line:14:1, col:46> col:13 used f8 'void (int, struct C, int, int)' extern
+| |-ParmVarDecl 0x7fe90d833870 <col:17, col:21> col:21 o 'int'
+| |-ParmVarDecl 0x7fe90d8338f0 <col:24, col:31> col:32 'struct C':'struct C'
+| |-ParmVarDecl 0x7fe90d833968 <col:34, col:38> col:38 p 'int'
+| `-ParmVarDecl 0x7fe90d8339e0 <col:41, col:45> col:45 q 'int'
+`-FunctionDecl 0x7fe90d833c28 <line:16:1, line:27:1> line:17:1 do_test 'void ()'
+  `-CompoundStmt 0x7fe90d834b58 <line:18:1, line:27:1>

@@ -1,0 +1,192 @@
+FileAST: 
+  Decl: in, [], [], []
+    ArrayDecl: []
+      TypeDecl: in, []
+        IdentifierType: ['unsigned']
+      Constant: int, 72
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: out, [], [], []
+          ArrayDecl: []
+            TypeDecl: out, []
+              IdentifierType: ['unsigned']
+        Decl: ia, [], [], []
+          ArrayDecl: []
+            TypeDecl: ia, []
+              IdentifierType: ['unsigned']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: out, [], [], []
+        ArrayDecl: []
+          TypeDecl: out, []
+            IdentifierType: ['unsigned']
+          Constant: int, 72
+      Decl: ia, [], [], []
+        ArrayDecl: []
+          TypeDecl: ia, []
+            IdentifierType: ['unsigned']
+          Constant: int, 8
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 8
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: out
+              BinaryOp: *
+                ID: i
+                Constant: int, 8
+            BinaryOp: +
+              ArrayRef: 
+                ID: in
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 8
+              Constant: int, 5
+          Assignment: =
+            ArrayRef: 
+              ID: out
+              BinaryOp: +
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 8
+                Constant: int, 1
+            BinaryOp: +
+              ArrayRef: 
+                ID: in
+                BinaryOp: +
+                  BinaryOp: *
+                    ID: i
+                    Constant: int, 8
+                  Constant: int, 1
+              Constant: int, 6
+          Assignment: =
+            ArrayRef: 
+              ID: out
+              BinaryOp: +
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 8
+                Constant: int, 2
+            BinaryOp: +
+              ArrayRef: 
+                ID: in
+                BinaryOp: +
+                  BinaryOp: *
+                    ID: i
+                    Constant: int, 8
+                  Constant: int, 2
+              Constant: int, 7
+          Assignment: =
+            ArrayRef: 
+              ID: out
+              BinaryOp: +
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 8
+                Constant: int, 3
+            BinaryOp: +
+              ArrayRef: 
+                ID: in
+                BinaryOp: +
+                  BinaryOp: *
+                    ID: i
+                    Constant: int, 8
+                  Constant: int, 3
+              Constant: int, 8
+          Assignment: =
+            ArrayRef: 
+              ID: out
+              BinaryOp: +
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 8
+                Constant: int, 4
+            BinaryOp: +
+              ArrayRef: 
+                ID: in
+                BinaryOp: +
+                  BinaryOp: *
+                    ID: i
+                    Constant: int, 8
+                  Constant: int, 4
+              Constant: int, 9
+          Assignment: =
+            ArrayRef: 
+              ID: out
+              BinaryOp: +
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 8
+                Constant: int, 5
+            BinaryOp: +
+              ArrayRef: 
+                ID: in
+                BinaryOp: +
+                  BinaryOp: *
+                    ID: i
+                    Constant: int, 8
+                  Constant: int, 5
+              Constant: int, 10
+          Assignment: =
+            ArrayRef: 
+              ID: out
+              BinaryOp: +
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 8
+                Constant: int, 6
+            BinaryOp: +
+              ArrayRef: 
+                ID: in
+                BinaryOp: +
+                  BinaryOp: *
+                    ID: i
+                    Constant: int, 8
+                  Constant: int, 6
+              Constant: int, 11
+          Assignment: =
+            ArrayRef: 
+              ID: out
+              BinaryOp: +
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 8
+                Constant: int, 7
+            BinaryOp: +
+              ArrayRef: 
+                ID: in
+                BinaryOp: +
+                  BinaryOp: *
+                    ID: i
+                    Constant: int, 8
+                  Constant: int, 7
+              Constant: int, 12
+          Assignment: =
+            ArrayRef: 
+              ID: ia
+              ID: i
+            ArrayRef: 
+              ID: in
+              ID: i
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: out
+          ID: ia

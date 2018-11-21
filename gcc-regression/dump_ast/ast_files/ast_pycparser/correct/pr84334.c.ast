@@ -1,0 +1,29 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['float']
+        Constant: float, 9.999999974752427078783512115478515625e-7f
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['float']
+        Constant: float, 1.999999994950485415756702423095703125e-6f
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['float']
+        Constant: float, 4.999999873689375817775726318359375e-6f
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            ID: a
+            ID: b
+          ID: c

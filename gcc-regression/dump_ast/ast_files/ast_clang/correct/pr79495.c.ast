@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7faec50264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faec5026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faec5026740 '__int128'
+|-TypedefDecl 0x7faec5026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faec5026760 'unsigned __int128'
+|-TypedefDecl 0x7faec5026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faec5026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faec5026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faec5026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faec5026dc0 'char *'
+|   `-BuiltinType 0x7faec5026560 'char'
+|-TypedefDecl 0x7faec50270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faec5027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faec5026ee0 'struct __va_list_tag'
+|     `-Record 0x7faec5026e58 '__va_list_tag'
+|-VarDecl 0x7faec5027138 <c_files/pr79495.c:5:1, col:37> col:13 used dnan 'long double' cinit
+| `-BinaryOperator 0x7faec50774f0 <col:20, col:37> 'long double' '-'
+|   |-BinaryOperator 0x7faec5077440 <col:20, col:25> 'long double' '/'
+|   | |-FloatingLiteral 0x7faec50271d8 <col:20> 'long double' 1.000000e+00
+|   | `-FloatingLiteral 0x7faec5077410 <col:25> 'long double' 0.000000e+00
+|   `-BinaryOperator 0x7faec50774c8 <col:32, col:37> 'long double' '/'
+|     |-FloatingLiteral 0x7faec5077468 <col:32> 'long double' 1.000000e+00
+|     `-FloatingLiteral 0x7faec5077498 <col:37> 'long double' 0.000000e+00
+|-VarDecl 0x7faec5077530 <line:6:1, col:17> col:13 used x 'long double' cinit
+| `-FloatingLiteral 0x7faec5077590 <col:17> 'long double' 1.000000e+00
+`-FunctionDecl 0x7faec5077680 <line:7:1, line:11:1> line:7:6 fn1 'void (void)'
+  `-CompoundStmt 0x7faec5077880 <line:8:1, line:11:1>
+    `-IfStmt 0x7faec5077848 <line:9:3, line:10:9>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7faec5077798 <line:9:7, col:15> 'int' '!='
+      | |-ImplicitCastExpr 0x7faec5077768 <col:7> 'long double' <LValueToRValue>
+      | | `-DeclRefExpr 0x7faec5077718 <col:7> 'long double' lvalue Var 0x7faec5027138 'dnan' 'long double'
+      | `-ImplicitCastExpr 0x7faec5077780 <col:15> 'long double' <LValueToRValue>
+      |   `-DeclRefExpr 0x7faec5077740 <col:15> 'long double' lvalue Var 0x7faec5077530 'x' 'long double'
+      |-BinaryOperator 0x7faec5077820 <line:10:5, col:9> 'long double' '='
+      | |-DeclRefExpr 0x7faec50777c0 <col:5> 'long double' lvalue Var 0x7faec5077530 'x' 'long double'
+      | `-ImplicitCastExpr 0x7faec5077808 <col:9> 'long double' <FloatingCast>
+      |   `-FloatingLiteral 0x7faec50777e8 <col:9> 'double' 1.000000e+00
+      `-<<<NULL>>>

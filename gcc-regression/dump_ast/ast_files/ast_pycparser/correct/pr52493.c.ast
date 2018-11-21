@@ -1,0 +1,158 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: Time
+      Decl: sec, [], [], []
+        TypeDecl: sec, []
+          IdentifierType: ['long', 'int']
+      Decl: usec, [], [], []
+        TypeDecl: usec, []
+          IdentifierType: ['long']
+  Decl: None, [], [], []
+    Struct: Flow
+      Decl: iif, [], [], []
+        TypeDecl: iif, []
+          IdentifierType: ['unsigned', 'short']
+      Decl: mtime, [], [], []
+        TypeDecl: mtime, []
+          Struct: Time
+  Decl: None, [], [], []
+    Struct: NetFlow
+      Decl: MaxFlows, [], [], []
+        TypeDecl: MaxFlows, []
+          IdentifierType: ['unsigned']
+      Decl: HeaderFields, [], [], []
+        TypeDecl: HeaderFields, []
+          IdentifierType: ['unsigned']
+      Decl: HeaderFormat, [], [], []
+        PtrDecl: []
+          TypeDecl: HeaderFormat, []
+            IdentifierType: ['unsigned', 'short']
+  Decl: netflow, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: netflow, []
+        Struct: NetFlow
+  Decl: start_time, [], ['static'], []
+    TypeDecl: start_time, []
+      Struct: Time
+  Decl: emit_packet, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: emit_packet, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 1500
+  FuncDef: 
+    Decl: cmpmtime, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: t1, [], [], []
+            PtrDecl: []
+              TypeDecl: t1, []
+                Struct: Time
+          Decl: t2, [], [], []
+            PtrDecl: []
+              TypeDecl: t2, []
+                Struct: Time
+        TypeDecl: cmpmtime, []
+          IdentifierType: ['long', 'int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: *
+            BinaryOp: -
+              StructRef: ->
+                ID: t1
+                ID: sec
+              StructRef: ->
+                ID: t2
+                ID: sec
+            Constant: int, 1000
+          BinaryOp: /
+            BinaryOp: -
+              StructRef: ->
+                ID: t1
+                ID: usec
+              StructRef: ->
+                ID: t2
+                ID: usec
+            Constant: int, 1000
+  FuncDef: 
+    Decl: fill, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fields, [], [], []
+            TypeDecl: fields, []
+              IdentifierType: ['int']
+          Decl: format, [], [], []
+            PtrDecl: []
+              TypeDecl: format, []
+                IdentifierType: ['unsigned', 'short']
+          Decl: flow, [], [], []
+            PtrDecl: []
+              TypeDecl: flow, []
+                Struct: Flow
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['void']
+        TypeDecl: fill, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: fields
+        UnaryOp: p++
+          ID: i
+        If: 
+          BinaryOp: ==
+            ArrayRef: 
+              ID: format
+              ID: i
+            Constant: int, 21
+          Compound: 
+            Decl: __v, [], [], []
+              TypeDecl: __v, []
+                IdentifierType: ['unsigned', 'int']
+            Assignment: =
+              ID: __v
+              FuncCall: 
+                ID: cmpmtime
+                ExprList: 
+                  UnaryOp: &
+                    StructRef: ->
+                      ID: flow
+                      ID: mtime
+                  UnaryOp: &
+                    ID: start_time
+            Assignment: =
+              UnaryOp: *
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned', 'int']
+                  ID: p
+              ID: __v
+  FuncDef: 
+    Decl: emit_thread, [], [], []
+      FuncDecl: 
+        TypeDecl: emit_thread, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: fill
+        ExprList: 
+          StructRef: ->
+            ID: netflow
+            ID: HeaderFields
+          StructRef: ->
+            ID: netflow
+            ID: HeaderFormat
+          Constant: int, 0
+          UnaryOp: &
+            ID: emit_packet

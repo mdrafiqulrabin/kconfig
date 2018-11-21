@@ -1,0 +1,36 @@
+FileAST: 
+  Decl: v, [], [], []
+    TypeDecl: v, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+        Constant: int, 0x8899A862
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+        BinaryOp: *
+          Constant: int, 0x8E
+          ID: a
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        BinaryOp: %
+          ID: b
+          ID: b
+      If: 
+        BinaryOp: >
+          ID: v
+          BinaryOp: >>
+            Constant: int, 4294967295U
+            ID: c
+        Return: 
+          ID: v
+      Return: 
+        Constant: int, 0

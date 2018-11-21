@@ -1,0 +1,147 @@
+TranslationUnitDecl 0x7fbaaf8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbaaf826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbaaf826740 '__int128'
+|-TypedefDecl 0x7fbaaf826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbaaf826760 'unsigned __int128'
+|-TypedefDecl 0x7fbaaf826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbaaf826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbaaf826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbaaf826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbaaf826dc0 'char *'
+|   `-BuiltinType 0x7fbaaf826560 'char'
+|-TypedefDecl 0x7fbaaf8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbaaf827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbaaf826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbaaf826e58 '__va_list_tag'
+|-FunctionDecl 0x7fbaaf878420 <c_files/pr22335-2.c:3:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbaaf8784b8 prev 0x7fbaaf878420 <col:1, col:46> col:6 used abort 'void (void) __attribute__((noreturn))'
+|-RecordDecl 0x7fbaaf878550 <line:4:9, line:6:1> line:4:9 struct definition
+| `-FieldDecl 0x7fbaaf878618 <line:5:3, col:7> col:7 referenced container 'int'
+|-TypedefDecl 0x7fbaaf8786b0 <line:4:1, line:6:3> col:3 referenced edge_iterator 'struct edge_iterator':'edge_iterator'
+| `-ElaboratedType 0x7fbaaf878660 'struct edge_iterator' sugar
+|   `-RecordType 0x7fbaaf8785e0 'edge_iterator'
+|     `-Record 0x7fbaaf878550 ''
+|-RecordDecl 0x7fbaaf878720 <line:7:1, line:12:1> line:7:8 struct ls_expr definition
+| |-FieldDecl 0x7fbaaf8787e8 <line:9:3, col:7> col:7 index 'int'
+| |-FieldDecl 0x7fbaaf878848 <line:10:3, col:7> col:7 referenced stores 'int'
+| `-FieldDecl 0x7fbaaf878940 <line:11:3, col:20> col:20 referenced next 'struct ls_expr *'
+|-VarDecl 0x7fbaaf8789b0 <line:13:1, col:18> col:18 used pre_ldst_mems 'struct ls_expr *'
+|-VarDecl 0x7fbaaf878a80 <line:14:1, col:15> col:15 used ei 'edge_iterator':'edge_iterator'
+`-FunctionDecl 0x7fbaaf878b70 <line:15:1, line:39:1> line:16:1 store_motion 'void (void)'
+  `-CompoundStmt 0x7fbaaf87ad68 <line:17:1, line:39:1>
+    |-DeclStmt 0x7fbaaf878d88 <line:18:3, col:44>
+    | |-VarDecl 0x7fbaaf878c30 <col:3, col:20> col:20 used ptr 'struct ls_expr *'
+    | `-VarDecl 0x7fbaaf878d10 <col:3, col:27> col:27 used prev_next_ptr_ptr 'struct ls_expr **'
+    |-DeclStmt 0x7fbaaf878e10 <line:19:3, col:20>
+    | `-VarDecl 0x7fbaaf878db0 <col:3, col:17> col:17 used ei1 'edge_iterator':'edge_iterator'
+    |-DeclStmt 0x7fbaaf878e98 <line:20:3, col:20>
+    | `-VarDecl 0x7fbaaf878e38 <col:3, col:17> col:17 used ei2 'edge_iterator':'edge_iterator'
+    |-DeclStmt 0x7fbaaf879028 <line:21:3, col:29>
+    | `-VarDecl 0x7fbaaf878ec8 <col:3, col:28> col:7 a 'int' cinit
+    |   `-BinaryOperator 0x7fbaaf879000 <col:11, col:28> 'int' '!='
+    |     |-ImplicitCastExpr 0x7fbaaf878fd0 <col:11> 'struct ls_expr *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fbaaf878f28 <col:11> 'struct ls_expr *' lvalue Var 0x7fbaaf878c30 'ptr' 'struct ls_expr *'
+    |     `-ImplicitCastExpr 0x7fbaaf878fe8 <col:18, col:28> 'struct ls_expr *' <BitCast>
+    |       `-ParenExpr 0x7fbaaf878fb0 <col:18, col:28> 'void *'
+    |         `-CStyleCastExpr 0x7fbaaf878f88 <col:19, col:27> 'void *' <NullToPointer>
+    |           `-IntegerLiteral 0x7fbaaf878f50 <col:27> 'int' 0
+    |-ForStmt 0x7fbaaf87a690 <line:22:3, line:28:33>
+    | |-BinaryOperator 0x7fbaaf879168 <line:22:8, col:50> 'struct ls_expr **' ','
+    | | |-BinaryOperator 0x7fbaaf8790a8 <col:8, col:14> 'struct ls_expr *' '='
+    | | | |-DeclRefExpr 0x7fbaaf879040 <col:8> 'struct ls_expr *' lvalue Var 0x7fbaaf878c30 'ptr' 'struct ls_expr *'
+    | | | `-ImplicitCastExpr 0x7fbaaf879090 <col:14> 'struct ls_expr *' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fbaaf879068 <col:14> 'struct ls_expr *' lvalue Var 0x7fbaaf8789b0 'pre_ldst_mems' 'struct ls_expr *'
+    | | `-BinaryOperator 0x7fbaaf879140 <col:29, col:50> 'struct ls_expr **' '='
+    | |   |-DeclRefExpr 0x7fbaaf8790d0 <col:29> 'struct ls_expr **' lvalue Var 0x7fbaaf878d10 'prev_next_ptr_ptr' 'struct ls_expr **'
+    | |   `-UnaryOperator 0x7fbaaf879120 <col:49, col:50> 'struct ls_expr **' prefix '&'
+    | |     `-DeclRefExpr 0x7fbaaf8790f8 <col:50> 'struct ls_expr *' lvalue Var 0x7fbaaf8789b0 'pre_ldst_mems' 'struct ls_expr *'
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbaaf879268 <line:23:8, col:25> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fbaaf879238 <col:8> 'struct ls_expr *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fbaaf879190 <col:8> 'struct ls_expr *' lvalue Var 0x7fbaaf878c30 'ptr' 'struct ls_expr *'
+    | | `-ImplicitCastExpr 0x7fbaaf879250 <col:15, col:25> 'struct ls_expr *' <BitCast>
+    | |   `-ParenExpr 0x7fbaaf879218 <col:15, col:25> 'void *'
+    | |     `-CStyleCastExpr 0x7fbaaf8791f0 <col:16, col:24> 'void *' <NullToPointer>
+    | |       `-IntegerLiteral 0x7fbaaf8791b8 <col:24> 'int' 0
+    | |-BinaryOperator 0x7fbaaf879330 <line:24:8, col:15> 'struct ls_expr *' '='
+    | | |-DeclRefExpr 0x7fbaaf879290 <col:8> 'struct ls_expr *' lvalue Var 0x7fbaaf878c30 'ptr' 'struct ls_expr *'
+    | | `-ImplicitCastExpr 0x7fbaaf879318 <col:14, col:15> 'struct ls_expr *' <LValueToRValue>
+    | |   `-UnaryOperator 0x7fbaaf8792f8 <col:14, col:15> 'struct ls_expr *' lvalue prefix '*'
+    | |     `-ImplicitCastExpr 0x7fbaaf8792e0 <col:15> 'struct ls_expr **' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fbaaf8792b8 <col:15> 'struct ls_expr **' lvalue Var 0x7fbaaf878d10 'prev_next_ptr_ptr' 'struct ls_expr **'
+    | `-IfStmt 0x7fbaaf87a658 <line:25:5, line:28:33>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-UnaryOperator 0x7fbaaf87a438 <line:25:9, col:24> 'int' prefix '!'
+    |   | `-ImplicitCastExpr 0x7fbaaf87a420 <col:10, col:24> 'int' <LValueToRValue>
+    |   |   `-ParenExpr 0x7fbaaf87a400 <col:10, col:24> 'int' lvalue
+    |   |     `-MemberExpr 0x7fbaaf8793b8 <col:11, col:18> 'int' lvalue ->stores 0x7fbaaf878848
+    |   |       `-ImplicitCastExpr 0x7fbaaf8793a0 <col:11, col:15> 'struct ls_expr *' <LValueToRValue>
+    |   |         `-ParenExpr 0x7fbaaf879380 <col:11, col:15> 'struct ls_expr *' lvalue
+    |   |           `-DeclRefExpr 0x7fbaaf879358 <col:12> 'struct ls_expr *' lvalue Var 0x7fbaaf878c30 'ptr' 'struct ls_expr *'
+    |   |-BinaryOperator 0x7fbaaf87a548 <line:26:6, col:32> 'struct ls_expr *' '='
+    |   | |-UnaryOperator 0x7fbaaf87a498 <col:6, col:7> 'struct ls_expr *' lvalue prefix '*'
+    |   | | `-ImplicitCastExpr 0x7fbaaf87a480 <col:7> 'struct ls_expr **' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fbaaf87a458 <col:7> 'struct ls_expr **' lvalue Var 0x7fbaaf878d10 'prev_next_ptr_ptr' 'struct ls_expr **'
+    |   | `-ImplicitCastExpr 0x7fbaaf87a530 <col:27, col:32> 'struct ls_expr *' <LValueToRValue>
+    |   |   `-MemberExpr 0x7fbaaf87a4f8 <col:27, col:32> 'struct ls_expr *' lvalue ->next 0x7fbaaf878940
+    |   |     `-ImplicitCastExpr 0x7fbaaf87a4e0 <col:27> 'struct ls_expr *' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7fbaaf87a4b8 <col:27> 'struct ls_expr *' lvalue Var 0x7fbaaf878c30 'ptr' 'struct ls_expr *'
+    |   `-BinaryOperator 0x7fbaaf87a630 <line:28:7, col:33> 'struct ls_expr **' '='
+    |     |-DeclRefExpr 0x7fbaaf87a570 <col:7> 'struct ls_expr **' lvalue Var 0x7fbaaf878d10 'prev_next_ptr_ptr' 'struct ls_expr **'
+    |     `-UnaryOperator 0x7fbaaf87a610 <col:27, col:33> 'struct ls_expr **' prefix '&'
+    |       `-MemberExpr 0x7fbaaf87a5d8 <col:28, col:33> 'struct ls_expr *' lvalue ->next 0x7fbaaf878940
+    |         `-ImplicitCastExpr 0x7fbaaf87a5c0 <col:28> 'struct ls_expr *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fbaaf87a598 <col:28> 'struct ls_expr *' lvalue Var 0x7fbaaf878c30 'ptr' 'struct ls_expr *'
+    |-ForStmt 0x7fbaaf87a8e8 <line:30:3, line:31:5>
+    | |-BinaryOperator 0x7fbaaf87a730 <line:30:8, col:14> 'struct ls_expr *' '='
+    | | |-DeclRefExpr 0x7fbaaf87a6c8 <col:8> 'struct ls_expr *' lvalue Var 0x7fbaaf878c30 'ptr' 'struct ls_expr *'
+    | | `-ImplicitCastExpr 0x7fbaaf87a718 <col:14> 'struct ls_expr *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fbaaf87a6f0 <col:14> 'struct ls_expr *' lvalue Var 0x7fbaaf8789b0 'pre_ldst_mems' 'struct ls_expr *'
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbaaf87a7d0 <col:29, col:36> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fbaaf87a7a0 <col:29> 'struct ls_expr *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fbaaf87a758 <col:29> 'struct ls_expr *' lvalue Var 0x7fbaaf878c30 'ptr' 'struct ls_expr *'
+    | | `-ImplicitCastExpr 0x7fbaaf87a7b8 <col:36> 'struct ls_expr *' <NullToPointer>
+    | |   `-IntegerLiteral 0x7fbaaf87a780 <col:36> 'int' 0
+    | |-BinaryOperator 0x7fbaaf87a8b0 <col:39, col:50> 'struct ls_expr *' '='
+    | | |-DeclRefExpr 0x7fbaaf87a7f8 <col:39> 'struct ls_expr *' lvalue Var 0x7fbaaf878c30 'ptr' 'struct ls_expr *'
+    | | `-ImplicitCastExpr 0x7fbaaf87a898 <col:45, col:50> 'struct ls_expr *' <LValueToRValue>
+    | |   `-MemberExpr 0x7fbaaf87a860 <col:45, col:50> 'struct ls_expr *' lvalue ->next 0x7fbaaf878940
+    | |     `-ImplicitCastExpr 0x7fbaaf87a848 <col:45> 'struct ls_expr *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fbaaf87a820 <col:45> 'struct ls_expr *' lvalue Var 0x7fbaaf878c30 'ptr' 'struct ls_expr *'
+    | `-NullStmt 0x7fbaaf87a8d8 <line:31:5>
+    |-BinaryOperator 0x7fbaaf87a988 <line:32:3, col:9> 'edge_iterator':'edge_iterator' '='
+    | |-DeclRefExpr 0x7fbaaf87a920 <col:3> 'edge_iterator':'edge_iterator' lvalue Var 0x7fbaaf878db0 'ei1' 'edge_iterator':'edge_iterator'
+    | `-ImplicitCastExpr 0x7fbaaf87a970 <col:9> 'edge_iterator':'edge_iterator' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fbaaf87a948 <col:9> 'edge_iterator':'edge_iterator' lvalue Var 0x7fbaaf878a80 'ei' 'edge_iterator':'edge_iterator'
+    |-BinaryOperator 0x7fbaaf87aa18 <line:33:3, col:9> 'edge_iterator':'edge_iterator' '='
+    | |-DeclRefExpr 0x7fbaaf87a9b0 <col:3> 'edge_iterator':'edge_iterator' lvalue Var 0x7fbaaf878e38 'ei2' 'edge_iterator':'edge_iterator'
+    | `-ImplicitCastExpr 0x7fbaaf87aa00 <col:9> 'edge_iterator':'edge_iterator' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fbaaf87a9d8 <col:9> 'edge_iterator':'edge_iterator' lvalue Var 0x7fbaaf878db0 'ei1' 'edge_iterator':'edge_iterator'
+    |-IfStmt 0x7fbaaf87ab68 <line:34:3, line:35:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fbaaf87aab8 <line:34:7, col:12> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7fbaaf87aaa0 <col:8, col:12> 'int' <LValueToRValue>
+    | |   `-MemberExpr 0x7fbaaf87aa68 <col:8, col:12> 'int' lvalue .container 0x7fbaaf878618
+    | |     `-DeclRefExpr 0x7fbaaf87aa40 <col:8> 'edge_iterator':'edge_iterator' lvalue Var 0x7fbaaf878e38 'ei2' 'edge_iterator':'edge_iterator'
+    | |-CallExpr 0x7fbaaf87ab40 <line:35:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fbaaf87ab28 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbaaf87aad8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbaaf8784b8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fbaaf87ac08 <line:36:3, col:9> 'edge_iterator':'edge_iterator' '='
+    | |-DeclRefExpr 0x7fbaaf87aba0 <col:3> 'edge_iterator':'edge_iterator' lvalue Var 0x7fbaaf878e38 'ei2' 'edge_iterator':'edge_iterator'
+    | `-ImplicitCastExpr 0x7fbaaf87abf0 <col:9> 'edge_iterator':'edge_iterator' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fbaaf87abc8 <col:9> 'edge_iterator':'edge_iterator' lvalue Var 0x7fbaaf878db0 'ei1' 'edge_iterator':'edge_iterator'
+    `-IfStmt 0x7fbaaf87ad30 <line:37:3, line:38:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7fbaaf87aca8 <line:37:7, col:12> 'int' prefix '!'
+      | `-ImplicitCastExpr 0x7fbaaf87ac90 <col:8, col:12> 'int' <LValueToRValue>
+      |   `-MemberExpr 0x7fbaaf87ac58 <col:8, col:12> 'int' lvalue .container 0x7fbaaf878618
+      |     `-DeclRefExpr 0x7fbaaf87ac30 <col:8> 'edge_iterator':'edge_iterator' lvalue Var 0x7fbaaf878e38 'ei2' 'edge_iterator':'edge_iterator'
+      |-CallExpr 0x7fbaaf87ad08 <line:38:5, col:12> 'void'
+      | `-ImplicitCastExpr 0x7fbaaf87acf0 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fbaaf87acc8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbaaf8784b8 'abort' 'void (void) __attribute__((noreturn))'
+      `-<<<NULL>>>

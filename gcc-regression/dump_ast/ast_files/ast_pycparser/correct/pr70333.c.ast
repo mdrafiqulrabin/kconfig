@@ -1,0 +1,63 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['signed', 'char']
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'long', 'int']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          BinaryOp: *
+            BinaryOp: *
+              Constant: int, 2ULL
+              ID: b
+            BinaryOp: *
+              ID: e
+              Constant: int, 13
+          BinaryOp: <<
+            Constant: int, 32
+            Constant: int, 24
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: &&
+            BinaryOp: &&
+              BinaryOp: ==
+                ID: __CHAR_BIT__
+                Constant: int, 8
+              BinaryOp: ==
+                UnaryOp: sizeof
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+                Constant: int, 4
+            BinaryOp: ==
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['long', 'long']
+              Constant: int, 8
+          BinaryOp: !=
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                UnaryOp: -
+                  Constant: int, 60
+                Constant: int, 1
+            Constant: int, 0xffffff3d00000000ULL
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

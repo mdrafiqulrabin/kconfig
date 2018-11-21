@@ -1,0 +1,7 @@
+FileAST: 
+  Decl: p, [], [], []
+    PtrDecl: []
+      TypeDecl: p, []
+        IdentifierType: ['char']
+    UnaryOp: &
+      Constant: char, 'C'

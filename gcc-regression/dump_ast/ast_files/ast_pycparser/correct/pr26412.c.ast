@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: a, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['double']
+  Decl: b, [], ['extern'], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['double']
+        Constant: int, 0
+      Pragma: omp parallel for private(i) reduction(+:c)
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10000
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: c
+          ArrayRef: 
+            ID: a
+            ID: b
+      Return: 
+        ID: c

@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fb8698264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb869826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb869826740 '__int128'
+|-TypedefDecl 0x7fb869826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb869826760 'unsigned __int128'
+|-TypedefDecl 0x7fb869826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb869826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb869826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb869826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb869826dc0 'char *'
+|   `-BuiltinType 0x7fb869826560 'char'
+|-TypedefDecl 0x7fb8698270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb869827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb869826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb869826e58 '__va_list_tag'
+|-FunctionDecl 0x7fb86a025a30 <c_files/pr26672.c:3:5> col:5 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fb86a025ac8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fb86a025b30 <col:5> Implicit printf 1 2
+|-FunctionDecl 0x7fb86a025b88 prev 0x7fb86a025a30 <col:1, col:35> col:5 used printf 'int (const char *, ...)'
+| |-ParmVarDecl 0x7fb869827138 <col:12, col:24> col:24 format 'const char *'
+| `-FormatAttr 0x7fb86a025c60 <col:5> Inherited printf 1 2
+|-VarDecl 0x7fb86a025cf8 <line:4:1, col:31> col:19 used help_string 'const char []' extern
+|-FunctionDecl 0x7fb86a025e60 <line:5:1, line:7:1> line:5:6 app_opts 'void (void)'
+| `-CompoundStmt 0x7fb86a026070 <col:21, line:7:1>
+|   `-CallExpr 0x7fb86a025ff0 <line:6:5, col:29> 'int'
+|     |-ImplicitCastExpr 0x7fb86a025fd8 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fb86a025ef8 <col:5> 'int (const char *, ...)' Function 0x7fb86a025b88 'printf' 'int (const char *, ...)'
+|     |-ImplicitCastExpr 0x7fb86a026040 <col:12> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7fb86a026028 <col:12> 'char *' <ArrayToPointerDecay>
+|     |   `-StringLiteral 0x7fb86a025f58 <col:12> 'char [3]' lvalue "%s"
+|     `-ImplicitCastExpr 0x7fb86a026058 <col:18> 'const char *' <ArrayToPointerDecay>
+|       `-DeclRefExpr 0x7fb86a025f88 <col:18> 'const char []' lvalue Var 0x7fb86a025cf8 'help_string' 'const char []'
+`-VarDecl 0x7fb86a0260b0 prev 0x7fb86a025cf8 <line:8:1, col:28> col:12 used help_string 'const char [5]' cinit
+  `-StringLiteral 0x7fb86a026148 <col:28> 'const char [5]' lvalue "foo\n"

@@ -1,0 +1,59 @@
+c_files/pr60026.c:6:16: warning: unknown attribute 'optimize' ignored [-Wunknown-attributes]
+__attribute__((optimize (0)))
+               ^
+1 warning generated.
+TranslationUnitDecl 0x7feb738264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feb73826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feb73826740 '__int128'
+|-TypedefDecl 0x7feb73826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feb73826760 'unsigned __int128'
+|-TypedefDecl 0x7feb73826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feb73826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7feb73826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feb73826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feb73826dc0 'char *'
+|   `-BuiltinType 0x7feb73826560 'char'
+|-TypedefDecl 0x7feb738270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feb73827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feb73826ee0 'struct __va_list_tag'
+|     `-Record 0x7feb73826e58 '__va_list_tag'
+|-RecordDecl 0x7feb73827120 <c_files/pr60026.c:4:1, col:19> col:8 struct S definition
+| `-FieldDecl 0x7feb73877400 <col:12, col:16> col:16 referenced f 'int'
+|-VarDecl 0x7feb738774a0 <col:1, col:21> col:21 used a 'struct S':'struct S'
+|-FunctionDecl 0x7feb73877730 <line:6:1, line:11:1> line:7:10 used foo 'struct S (int, struct S)'
+| |-ParmVarDecl 0x7feb73877590 <col:15, col:19> col:19 x 'int'
+| |-ParmVarDecl 0x7feb73877610 <col:22, col:31> col:31 used y 'struct S':'struct S'
+| `-CompoundStmt 0x7feb73877938 <line:8:1, line:11:1>
+|   |-DeclStmt 0x7feb738778c8 <line:9:3, col:14>
+|   | `-VarDecl 0x7feb738777f0 <col:3, col:13> col:7 b 'int' cinit
+|   |   `-ImplicitCastExpr 0x7feb738778b0 <col:11, col:13> 'int' <LValueToRValue>
+|   |     `-MemberExpr 0x7feb73877878 <col:11, col:13> 'int' lvalue .f 0x7feb73877400
+|   |       `-DeclRefExpr 0x7feb73877850 <col:11> 'struct S':'struct S' lvalue ParmVar 0x7feb73877610 'y' 'struct S':'struct S'
+|   `-ReturnStmt 0x7feb73877920 <line:10:3, col:10>
+|     `-ImplicitCastExpr 0x7feb73877908 <col:10> 'struct S':'struct S' <LValueToRValue>
+|       `-DeclRefExpr 0x7feb738778e0 <col:10> 'struct S':'struct S' lvalue Var 0x7feb738774a0 'a' 'struct S':'struct S'
+|-FunctionDecl 0x7feb738779a8 <line:13:1, line:21:1> line:14:1 used bar 'void ()'
+| `-CompoundStmt 0x7feb73877d78 <line:15:1, line:21:1>
+|   `-WhileStmt 0x7feb73877d58 <line:16:3, line:20:5>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7feb73877aa0 <line:16:10, col:12> 'int' <LValueToRValue>
+|     | `-MemberExpr 0x7feb73877a68 <col:10, col:12> 'int' lvalue .f 0x7feb73877400
+|     |   `-DeclRefExpr 0x7feb73877a40 <col:10> 'struct S':'struct S' lvalue Var 0x7feb738774a0 'a' 'struct S':'struct S'
+|     `-CompoundStmt 0x7feb73877d30 <line:17:5, line:20:5>
+|       |-DeclStmt 0x7feb73877be8 <line:18:7, col:23>
+|       | `-VarDecl 0x7feb73877ad8 <col:7, col:22> col:16 used c 'struct S':'struct S' cinit
+|       |   `-InitListExpr 0x7feb73877ba0 <col:20, col:22> 'struct S':'struct S'
+|       |     `-IntegerLiteral 0x7feb73877b38 <col:21> 'int' 0
+|       `-CallExpr 0x7feb73877ce0 <line:19:7, col:16> 'struct S':'struct S'
+|         |-ImplicitCastExpr 0x7feb73877cc8 <col:7> 'struct S (*)(int, struct S)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7feb73877c00 <col:7> 'struct S (int, struct S)' Function 0x7feb73877730 'foo' 'struct S (int, struct S)'
+|         |-IntegerLiteral 0x7feb73877c28 <col:12> 'int' 0
+|         `-ImplicitCastExpr 0x7feb73877d18 <col:15> 'struct S':'struct S' <LValueToRValue>
+|           `-DeclRefExpr 0x7feb73877c48 <col:15> 'struct S':'struct S' lvalue Var 0x7feb73877ad8 'c' 'struct S':'struct S'
+`-FunctionDecl 0x7feb73877df0 <line:23:1, line:28:1> line:24:1 main 'int ()'
+  `-CompoundStmt 0x7feb73877f50 <line:25:1, line:28:1>
+    |-CallExpr 0x7feb73877ef0 <line:26:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7feb73877ed8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7feb73877e88 <col:3> 'void ()' Function 0x7feb738779a8 'bar' 'void ()'
+    `-ReturnStmt 0x7feb73877f38 <line:27:3, col:10>
+      `-IntegerLiteral 0x7feb73877f18 <col:10> 'int' 0

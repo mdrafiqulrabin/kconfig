@@ -1,0 +1,191 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: Yf, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: Yf, []
+        IdentifierType: ['float']
+    InitList: 
+      Constant: float, 2.0
+      UnaryOp: -
+        Constant: float, 2.0
+      UnaryOp: -
+        Constant: float, 2.0
+      UnaryOp: -
+        Constant: float, 2.0
+      UnaryOp: -
+        Constant: float, 2.0
+      Constant: float, 2.0
+      UnaryOp: -
+        Constant: float, 0.0
+      FuncCall: 
+        ID: __builtin_inff
+  Decl: Zf, ['const'], ['static'], []
+    ArrayDecl: []
+      TypeDecl: Zf, ['const']
+        IdentifierType: ['float']
+    InitList: 
+      Constant: float, 1.0
+      UnaryOp: -
+        Constant: float, 1.0
+      UnaryOp: -
+        Constant: float, 1.0
+      UnaryOp: -
+        Constant: float, 0.0
+      UnaryOp: -
+        Constant: float, 0.0
+      Constant: float, 0.0
+      UnaryOp: -
+        FuncCall: 
+          ID: __builtin_inff
+      FuncCall: 
+        ID: __builtin_nanf
+        ExprList: 
+          Constant: string, ""
+  FuncDef: 
+    Decl: testf, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: testf, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: xxxxx, [], [], []
+        ArrayDecl: []
+          TypeDecl: xxxxx, []
+            IdentifierType: ['float']
+          Constant: int, 8
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Assignment: =
+        ArrayRef: 
+          ID: xxxxx
+          Constant: int, 0
+        FuncCall: 
+          ID: __builtin_copysignf
+          ExprList: 
+            Constant: float, 1.0
+            ArrayRef: 
+              ID: Yf
+              Constant: int, 0
+      Assignment: =
+        ArrayRef: 
+          ID: xxxxx
+          Constant: int, 1
+        FuncCall: 
+          ID: __builtin_copysignf
+          ExprList: 
+            Constant: float, 1.0
+            ArrayRef: 
+              ID: Yf
+              Constant: int, 1
+      Assignment: =
+        ArrayRef: 
+          ID: xxxxx
+          Constant: int, 2
+        FuncCall: 
+          ID: __builtin_copysignf
+          ExprList: 
+            UnaryOp: -
+              Constant: float, 1.0
+            ArrayRef: 
+              ID: Yf
+              Constant: int, 2
+      Assignment: =
+        ArrayRef: 
+          ID: xxxxx
+          Constant: int, 3
+        FuncCall: 
+          ID: __builtin_copysignf
+          ExprList: 
+            Constant: float, 0.0
+            ArrayRef: 
+              ID: Yf
+              Constant: int, 3
+      Assignment: =
+        ArrayRef: 
+          ID: xxxxx
+          Constant: int, 4
+        FuncCall: 
+          ID: __builtin_copysignf
+          ExprList: 
+            UnaryOp: -
+              Constant: float, 0.0
+            ArrayRef: 
+              ID: Yf
+              Constant: int, 4
+      Assignment: =
+        ArrayRef: 
+          ID: xxxxx
+          Constant: int, 5
+        FuncCall: 
+          ID: __builtin_copysignf
+          ExprList: 
+            UnaryOp: -
+              Constant: float, 0.0
+            ArrayRef: 
+              ID: Yf
+              Constant: int, 5
+      Assignment: =
+        ArrayRef: 
+          ID: xxxxx
+          Constant: int, 6
+        FuncCall: 
+          ID: __builtin_copysignf
+          ExprList: 
+            FuncCall: 
+              ID: __builtin_inff
+            ArrayRef: 
+              ID: Yf
+              Constant: int, 6
+      Assignment: =
+        ArrayRef: 
+          ID: xxxxx
+          Constant: int, 7
+        FuncCall: 
+          ID: __builtin_copysignf
+          ExprList: 
+            UnaryOp: -
+              FuncCall: 
+                ID: __builtin_nanf
+                ExprList: 
+                  Constant: string, ""
+            ArrayRef: 
+              ID: Yf
+              Constant: int, 7
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 8
+        UnaryOp: ++
+          ID: i
+        If: 
+          BinaryOp: !=
+            FuncCall: 
+              ID: __builtin_memcmp
+              ExprList: 
+                BinaryOp: +
+                  ID: xxxxx
+                  ID: i
+                BinaryOp: +
+                  ID: Zf
+                  ID: i
+                UnaryOp: sizeof
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['float']
+            Constant: int, 0
+          FuncCall: 
+            ID: abort

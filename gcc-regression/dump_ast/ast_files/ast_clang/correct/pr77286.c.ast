@@ -1,0 +1,226 @@
+TranslationUnitDecl 0x7fef208264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fef20826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fef20826740 '__int128'
+|-TypedefDecl 0x7fef20826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fef20826760 'unsigned __int128'
+|-TypedefDecl 0x7fef20826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fef20826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fef20826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fef20826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fef20826dc0 'char *'
+|   `-BuiltinType 0x7fef20826560 'char'
+|-TypedefDecl 0x7fef208270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fef20827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fef20826ee0 'struct __va_list_tag'
+|     `-Record 0x7fef20826e58 '__va_list_tag'
+|-TypedefDecl 0x7fef20827138 <c_files/pr77286.c:4:1, col:15> col:15 referenced real 'float'
+| `-BuiltinType 0x7fef208266c0 'float'
+|-RecordDecl 0x7fef21025a00 <line:5:9, line:10:1> line:5:9 struct definition
+| |-FieldDecl 0x7fef21025ac8 <line:7:3, col:7> col:7 referenced ngtc 'int'
+| |-FieldDecl 0x7fef21025b98 <line:8:3, col:9> col:9 referenced ref_t 'real *'
+| `-FieldDecl 0x7fef21025bf0 <line:9:3, col:9> col:9 referenced tau_t 'real *'
+|-TypedefDecl 0x7fef21025c90 <line:5:1, line:10:3> col:3 referenced t_grpopts 'struct t_grpopts':'t_grpopts'
+| `-ElaboratedType 0x7fef21025c40 'struct t_grpopts' sugar
+|   `-RecordType 0x7fef21025a90 't_grpopts'
+|     `-Record 0x7fef21025a00 ''
+|-RecordDecl 0x7fef21025d00 <line:11:9, line:15:1> line:11:9 struct definition
+| |-FieldDecl 0x7fef21025dc0 <line:13:3, col:8> col:8 referenced T 'real':'float'
+| `-FieldDecl 0x7fef21025e18 <line:14:3, col:8> col:8 referenced xi 'real':'float'
+|-TypedefDecl 0x7fef21025eb0 <line:11:1, line:15:3> col:3 referenced t_grp_tcstat 'struct t_grp_tcstat':'t_grp_tcstat'
+| `-ElaboratedType 0x7fef21025e60 'struct t_grp_tcstat' sugar
+|   `-RecordType 0x7fef21025d90 't_grp_tcstat'
+|     `-Record 0x7fef21025d00 ''
+|-RecordDecl 0x7fef21025f20 <line:16:9, line:19:1> line:16:9 struct definition
+| `-FieldDecl 0x7fef21026058 <line:18:3, col:17> col:17 referenced tcstat 't_grp_tcstat *'
+|-TypedefDecl 0x7fef210260f0 <line:16:1, line:19:3> col:3 referenced t_groups 'struct t_groups':'t_groups'
+| `-ElaboratedType 0x7fef210260a0 'struct t_groups' sugar
+|   `-RecordType 0x7fef21025fb0 't_groups'
+|     `-Record 0x7fef21025f20 ''
+|-FunctionDecl 0x7fef210261d8 <line:20:1, col:27> col:14 used save_calloc 'real *()' extern
+`-FunctionDecl 0x7fef21026650 <line:21:1, line:43:1> line:22:1 nosehoover_tcoupl 'void (t_grpopts *, t_groups *, real, real)'
+  |-ParmVarDecl 0x7fef21026338 <col:20, col:32> col:32 used opts 't_grpopts *'
+  |-ParmVarDecl 0x7fef21026428 <col:38, col:49> col:49 used grps 't_groups *'
+  |-ParmVarDecl 0x7fef21026498 <col:55, col:60> col:60 used dt 'real':'float'
+  |-ParmVarDecl 0x7fef21026508 <col:64, col:69> col:69 used SAfactor 'real':'float'
+  `-CompoundStmt 0x7fef210291b0 <line:23:1, line:43:1>
+    |-DeclStmt 0x7fef21026810 <line:24:3, col:35>
+    | `-VarDecl 0x7fef21026718 <col:3, col:34> col:16 used Qinv 'real *' static cinit
+    |   `-ImplicitCastExpr 0x7fef210267f8 <col:23, col:34> 'real *' <NullToPointer>
+    |     `-ParenExpr 0x7fef210267d8 <col:23, col:34> 'void *'
+    |       `-CStyleCastExpr 0x7fef210267b0 <col:24, col:33> 'void *' <NullToPointer>
+    |         `-IntegerLiteral 0x7fef21026778 <col:33> 'int' 0
+    |-DeclStmt 0x7fef210268a0 <line:25:3, col:8>
+    | `-VarDecl 0x7fef21026840 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7fef21027a80 <line:26:3, col:28>
+    | |-VarDecl 0x7fef210268c8 <col:3, col:15> col:8 used reft 'real':'float' cinit
+    | | `-ImplicitCastExpr 0x7fef21026948 <col:15> 'real':'float' <IntegralToFloating>
+    | |   `-IntegerLiteral 0x7fef21026928 <col:15> 'int' 0
+    | |-VarDecl 0x7fef21026970 <col:3, col:18> col:18 xit 'real':'float'
+    | `-VarDecl 0x7fef21027a00 <col:3, col:23> col:23 oldxi 'real':'float'
+    |-IfStmt 0x7fef210285d0 <line:27:3, line:35:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fef21027b70 <line:27:7, col:26> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fef21027b40 <col:7> 'real *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fef21027a98 <col:7> 'real *' lvalue Var 0x7fef21026718 'Qinv' 'real *'
+    | | `-ImplicitCastExpr 0x7fef21027b58 <col:15, col:26> 'real *' <BitCast>
+    | |   `-ParenExpr 0x7fef21027b20 <col:15, col:26> 'void *'
+    | |     `-CStyleCastExpr 0x7fef21027af8 <col:16, col:25> 'void *' <NullToPointer>
+    | |       `-IntegerLiteral 0x7fef21027ac0 <col:25> 'int' 0
+    | |-CompoundStmt 0x7fef210285a8 <line:28:5, line:35:5>
+    | | |-BinaryOperator 0x7fef21027f78 <line:29:7, line:31:24> 'real *' '='
+    | | | |-ParenExpr 0x7fef21027bc0 <line:29:7, col:12> 'real *' lvalue
+    | | | | `-DeclRefExpr 0x7fef21027b98 <col:8> 'real *' lvalue Var 0x7fef21026718 'Qinv' 'real *'
+    | | | `-CallExpr 0x7fef21027ee0 <line:30:2, line:31:24> 'real *'
+    | | |   |-ImplicitCastExpr 0x7fef21027ec8 <line:30:2> 'real *(*)()' <FunctionToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7fef21027be0 <col:2> 'real *()' Function 0x7fef210261d8 'save_calloc' 'real *()'
+    | | |   |-ImplicitCastExpr 0x7fef21027f30 <col:15> 'char *' <ArrayToPointerDecay>
+    | | |   | `-StringLiteral 0x7fef21027c48 <col:15> 'char [5]' lvalue "Qinv"
+    | | |   |-ImplicitCastExpr 0x7fef21027f48 <col:23> 'char *' <ArrayToPointerDecay>
+    | | |   | `-StringLiteral 0x7fef21027cb8 <col:23> 'char [11]' lvalue "coupling.c"
+    | | |   |-IntegerLiteral 0x7fef21027cf0 <col:37> 'int' 372
+    | | |   |-ImplicitCastExpr 0x7fef21027f60 <col:42, col:53> 'int' <LValueToRValue>
+    | | |   | `-ParenExpr 0x7fef21027d88 <col:42, col:53> 'int' lvalue
+    | | |   |   `-MemberExpr 0x7fef21027d50 <col:43, col:49> 'int' lvalue ->ngtc 0x7fef21025ac8
+    | | |   |     `-ImplicitCastExpr 0x7fef21027d38 <col:43> 't_grpopts *' <LValueToRValue>
+    | | |   |       `-DeclRefExpr 0x7fef21027d10 <col:43> 't_grpopts *' lvalue ParmVar 0x7fef21026338 'opts' 't_grpopts *'
+    | | |   `-UnaryExprOrTypeTraitExpr 0x7fef21027e48 <line:31:8, col:23> 'unsigned long' sizeof
+    | | |     `-ParenExpr 0x7fef21027e28 <col:15, col:23> 'real':'float' lvalue
+    | | |       `-UnaryOperator 0x7fef21027e08 <col:16, col:22> 'real':'float' lvalue prefix '*'
+    | | |         `-ImplicitCastExpr 0x7fef21027df0 <col:17, col:22> 'real *' <LValueToRValue>
+    | | |           `-ParenExpr 0x7fef21027dd0 <col:17, col:22> 'real *' lvalue
+    | | |             `-DeclRefExpr 0x7fef21027da8 <col:18> 'real *' lvalue Var 0x7fef21026718 'Qinv' 'real *'
+    | | `-ForStmt 0x7fef21028570 <line:32:7, line:34:33>
+    | |   |-BinaryOperator 0x7fef21027fe8 <line:32:12, col:16> 'int' '='
+    | |   | |-DeclRefExpr 0x7fef21027fa0 <col:12> 'int' lvalue Var 0x7fef21026840 'i' 'int'
+    | |   | `-IntegerLiteral 0x7fef21027fc8 <col:16> 'int' 0
+    | |   |-<<<NULL>>>
+    | |   |-BinaryOperator 0x7fef210280e0 <col:19, col:29> 'int' '<'
+    | |   | |-ImplicitCastExpr 0x7fef210280b0 <col:19> 'int' <LValueToRValue>
+    | |   | | `-DeclRefExpr 0x7fef21028010 <col:19> 'int' lvalue Var 0x7fef21026840 'i' 'int'
+    | |   | `-ImplicitCastExpr 0x7fef210280c8 <col:23, col:29> 'int' <LValueToRValue>
+    | |   |   `-MemberExpr 0x7fef21028078 <col:23, col:29> 'int' lvalue ->ngtc 0x7fef21025ac8
+    | |   |     `-ImplicitCastExpr 0x7fef21028060 <col:23> 't_grpopts *' <LValueToRValue>
+    | |   |       `-DeclRefExpr 0x7fef21028038 <col:23> 't_grpopts *' lvalue ParmVar 0x7fef21026338 'opts' 't_grpopts *'
+    | |   |-UnaryOperator 0x7fef21028130 <col:35, col:36> 'int' postfix '++'
+    | |   | `-DeclRefExpr 0x7fef21028108 <col:35> 'int' lvalue Var 0x7fef21026840 'i' 'int'
+    | |   `-IfStmt 0x7fef21028538 <line:33:2, line:34:33>
+    | |     |-<<<NULL>>>
+    | |     |-<<<NULL>>>
+    | |     |-ParenExpr 0x7fef210282c0 <line:33:6, col:25> 'int'
+    | |     | `-BinaryOperator 0x7fef21028298 <col:7, col:24> 'int' '>'
+    | |     |   |-ImplicitCastExpr 0x7fef21028268 <col:7, col:20> 'real':'float' <LValueToRValue>
+    | |     |   | `-ArraySubscriptExpr 0x7fef21028220 <col:7, col:20> 'real':'float' lvalue
+    | |     |   |   |-ImplicitCastExpr 0x7fef210281f0 <col:7, col:13> 'real *' <LValueToRValue>
+    | |     |   |   | `-MemberExpr 0x7fef21028190 <col:7, col:13> 'real *' lvalue ->tau_t 0x7fef21025bf0
+    | |     |   |   |   `-ImplicitCastExpr 0x7fef21028178 <col:7> 't_grpopts *' <LValueToRValue>
+    | |     |   |   |     `-DeclRefExpr 0x7fef21028150 <col:7> 't_grpopts *' lvalue ParmVar 0x7fef21026338 'opts' 't_grpopts *'
+    | |     |   |   `-ImplicitCastExpr 0x7fef21028208 <col:19> 'int' <LValueToRValue>
+    | |     |   |     `-DeclRefExpr 0x7fef210281c8 <col:19> 'int' lvalue Var 0x7fef21026840 'i' 'int'
+    | |     |   `-ImplicitCastExpr 0x7fef21028280 <col:24> 'float' <IntegralToFloating>
+    | |     |     `-IntegerLiteral 0x7fef21028248 <col:24> 'int' 0
+    | |     |-BinaryOperator 0x7fef21028510 <line:34:4, col:33> 'real':'float' '='
+    | |     | |-ArraySubscriptExpr 0x7fef21028360 <col:4, col:10> 'real':'float' lvalue
+    | |     | | |-ImplicitCastExpr 0x7fef21028330 <col:4> 'real *' <LValueToRValue>
+    | |     | | | `-DeclRefExpr 0x7fef210282e0 <col:4> 'real *' lvalue Var 0x7fef21026718 'Qinv' 'real *'
+    | |     | | `-ImplicitCastExpr 0x7fef21028348 <col:9> 'int' <LValueToRValue>
+    | |     | |   `-DeclRefExpr 0x7fef21028308 <col:9> 'int' lvalue Var 0x7fef21026840 'i' 'int'
+    | |     | `-ImplicitCastExpr 0x7fef210284f8 <col:14, col:33> 'real':'float' <FloatingCast>
+    | |     |   `-BinaryOperator 0x7fef210284d0 <col:14, col:33> 'double' '/'
+    | |     |     |-FloatingLiteral 0x7fef21028388 <col:14> 'double' 1.000000e+00
+    | |     |     `-ImplicitCastExpr 0x7fef210284b8 <col:20, col:33> 'double' <FloatingCast>
+    | |     |       `-ImplicitCastExpr 0x7fef210284a0 <col:20, col:33> 'real':'float' <LValueToRValue>
+    | |     |         `-ArraySubscriptExpr 0x7fef21028478 <col:20, col:33> 'real':'float' lvalue
+    | |     |           |-ImplicitCastExpr 0x7fef21028448 <col:20, col:26> 'real *' <LValueToRValue>
+    | |     |           | `-MemberExpr 0x7fef210283e8 <col:20, col:26> 'real *' lvalue ->tau_t 0x7fef21025bf0
+    | |     |           |   `-ImplicitCastExpr 0x7fef210283d0 <col:20> 't_grpopts *' <LValueToRValue>
+    | |     |           |     `-DeclRefExpr 0x7fef210283a8 <col:20> 't_grpopts *' lvalue ParmVar 0x7fef21026338 'opts' 't_grpopts *'
+    | |     |           `-ImplicitCastExpr 0x7fef21028460 <col:32> 'int' <LValueToRValue>
+    | |     |             `-DeclRefExpr 0x7fef21028420 <col:32> 'int' lvalue Var 0x7fef21026840 'i' 'int'
+    | |     `-<<<NULL>>>
+    | `-<<<NULL>>>
+    `-ForStmt 0x7fef21029178 <line:36:3, line:42:5>
+      |-BinaryOperator 0x7fef21028650 <line:36:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fef21028608 <col:8> 'int' lvalue Var 0x7fef21026840 'i' 'int'
+      | `-IntegerLiteral 0x7fef21028630 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-ParenExpr 0x7fef21028770 <col:15, col:30> 'int'
+      | `-BinaryOperator 0x7fef21028748 <col:16, col:26> 'int' '<'
+      |   |-ImplicitCastExpr 0x7fef21028718 <col:16> 'int' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fef21028678 <col:16> 'int' lvalue Var 0x7fef21026840 'i' 'int'
+      |   `-ImplicitCastExpr 0x7fef21028730 <col:20, col:26> 'int' <LValueToRValue>
+      |     `-MemberExpr 0x7fef210286e0 <col:20, col:26> 'int' lvalue ->ngtc 0x7fef21025ac8
+      |       `-ImplicitCastExpr 0x7fef210286c8 <col:20> 't_grpopts *' <LValueToRValue>
+      |         `-DeclRefExpr 0x7fef210286a0 <col:20> 't_grpopts *' lvalue ParmVar 0x7fef21026338 'opts' 't_grpopts *'
+      |-UnaryOperator 0x7fef210287b8 <col:33, col:34> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fef21028790 <col:33> 'int' lvalue Var 0x7fef21026840 'i' 'int'
+      `-CompoundStmt 0x7fef21029150 <line:37:5, line:42:5>
+        |-BinaryOperator 0x7fef21028ca0 <line:38:7, line:40:70> 'real':'float' '='
+        | |-DeclRefExpr 0x7fef210287d8 <line:38:7> 'real':'float' lvalue Var 0x7fef210268c8 'reft' 'real':'float'
+        | `-ImplicitCastExpr 0x7fef21028c88 <line:39:2, line:40:70> 'real':'float' <FloatingCast>
+        |   `-ParenExpr 0x7fef21028c68 <line:39:2, line:40:70> 'double'
+        |     `-ConditionalOperator 0x7fef21028c38 <line:39:3, line:40:69> 'double'
+        |       |-ParenExpr 0x7fef21028a28 <line:39:3, line:40:31> 'int'
+        |       | `-BinaryOperator 0x7fef21028a00 <line:39:4, line:40:30> 'int' '>'
+        |       |   |-ParenExpr 0x7fef21028820 <line:39:4, col:8> 'double'
+        |       |   | `-FloatingLiteral 0x7fef21028800 <col:5> 'double' 0.000000e+00
+        |       |   `-ImplicitCastExpr 0x7fef210289d8 <line:40:4, col:30> 'double' <FloatingCast>
+        |       |     `-ParenExpr 0x7fef210289b8 <col:4, col:30> 'float'
+        |       |       `-BinaryOperator 0x7fef21028990 <col:5, col:22> 'float' '*'
+        |       |         |-ImplicitCastExpr 0x7fef21028960 <col:5, col:18> 'real':'float' <LValueToRValue>
+        |       |         | `-ArraySubscriptExpr 0x7fef21028910 <col:5, col:18> 'real':'float' lvalue
+        |       |         |   |-ImplicitCastExpr 0x7fef210288e0 <col:5, col:11> 'real *' <LValueToRValue>
+        |       |         |   | `-MemberExpr 0x7fef21028880 <col:5, col:11> 'real *' lvalue ->ref_t 0x7fef21025b98
+        |       |         |   |   `-ImplicitCastExpr 0x7fef21028868 <col:5> 't_grpopts *' <LValueToRValue>
+        |       |         |   |     `-DeclRefExpr 0x7fef21028840 <col:5> 't_grpopts *' lvalue ParmVar 0x7fef21026338 'opts' 't_grpopts *'
+        |       |         |   `-ImplicitCastExpr 0x7fef210288f8 <col:17> 'int' <LValueToRValue>
+        |       |         |     `-DeclRefExpr 0x7fef210288b8 <col:17> 'int' lvalue Var 0x7fef21026840 'i' 'int'
+        |       |         `-ImplicitCastExpr 0x7fef21028978 <col:22> 'real':'float' <LValueToRValue>
+        |       |           `-DeclRefExpr 0x7fef21028938 <col:22> 'real':'float' lvalue ParmVar 0x7fef21026508 'SAfactor' 'real':'float'
+        |       |-ParenExpr 0x7fef21028a68 <col:35, col:39> 'double'
+        |       | `-FloatingLiteral 0x7fef21028a48 <col:36> 'double' 0.000000e+00
+        |       `-ImplicitCastExpr 0x7fef21028c20 <col:43, col:69> 'double' <FloatingCast>
+        |         `-ParenExpr 0x7fef21028c00 <col:43, col:69> 'float'
+        |           `-BinaryOperator 0x7fef21028bd8 <col:44, col:61> 'float' '*'
+        |             |-ImplicitCastExpr 0x7fef21028ba8 <col:44, col:57> 'real':'float' <LValueToRValue>
+        |             | `-ArraySubscriptExpr 0x7fef21028b58 <col:44, col:57> 'real':'float' lvalue
+        |             |   |-ImplicitCastExpr 0x7fef21028b28 <col:44, col:50> 'real *' <LValueToRValue>
+        |             |   | `-MemberExpr 0x7fef21028ac8 <col:44, col:50> 'real *' lvalue ->ref_t 0x7fef21025b98
+        |             |   |   `-ImplicitCastExpr 0x7fef21028ab0 <col:44> 't_grpopts *' <LValueToRValue>
+        |             |   |     `-DeclRefExpr 0x7fef21028a88 <col:44> 't_grpopts *' lvalue ParmVar 0x7fef21026338 'opts' 't_grpopts *'
+        |             |   `-ImplicitCastExpr 0x7fef21028b40 <col:56> 'int' <LValueToRValue>
+        |             |     `-DeclRefExpr 0x7fef21028b00 <col:56> 'int' lvalue Var 0x7fef21026840 'i' 'int'
+        |             `-ImplicitCastExpr 0x7fef21028bc0 <col:61> 'real':'float' <LValueToRValue>
+        |               `-DeclRefExpr 0x7fef21028b80 <col:61> 'real':'float' lvalue ParmVar 0x7fef21026508 'SAfactor' 'real':'float'
+        `-CompoundAssignOperator 0x7fef21029118 <line:41:7, col:69> 'real':'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+          |-MemberExpr 0x7fef21028dc0 <col:7, col:23> 'real':'float' lvalue .xi 0x7fef21025e18
+          | `-ArraySubscriptExpr 0x7fef21028d98 <col:7, col:21> 't_grp_tcstat':'t_grp_tcstat' lvalue
+          |   |-ImplicitCastExpr 0x7fef21028d68 <col:7, col:13> 't_grp_tcstat *' <LValueToRValue>
+          |   | `-MemberExpr 0x7fef21028d08 <col:7, col:13> 't_grp_tcstat *' lvalue ->tcstat 0x7fef21026058
+          |   |   `-ImplicitCastExpr 0x7fef21028cf0 <col:7> 't_groups *' <LValueToRValue>
+          |   |     `-DeclRefExpr 0x7fef21028cc8 <col:7> 't_groups *' lvalue ParmVar 0x7fef21026428 'grps' 't_groups *'
+          |   `-ImplicitCastExpr 0x7fef21028d80 <col:20> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fef21028d40 <col:20> 'int' lvalue Var 0x7fef21026840 'i' 'int'
+          `-BinaryOperator 0x7fef210290f0 <col:29, col:69> 'float' '*'
+            |-BinaryOperator 0x7fef21028ef8 <col:29, col:40> 'float' '*'
+            | |-ImplicitCastExpr 0x7fef21028ec8 <col:29> 'real':'float' <LValueToRValue>
+            | | `-DeclRefExpr 0x7fef21028df8 <col:29> 'real':'float' lvalue ParmVar 0x7fef21026498 'dt' 'real':'float'
+            | `-ImplicitCastExpr 0x7fef21028ee0 <col:34, col:40> 'real':'float' <LValueToRValue>
+            |   `-ArraySubscriptExpr 0x7fef21028ea0 <col:34, col:40> 'real':'float' lvalue
+            |     |-ImplicitCastExpr 0x7fef21028e70 <col:34> 'real *' <LValueToRValue>
+            |     | `-DeclRefExpr 0x7fef21028e20 <col:34> 'real *' lvalue Var 0x7fef21026718 'Qinv' 'real *'
+            |     `-ImplicitCastExpr 0x7fef21028e88 <col:39> 'int' <LValueToRValue>
+            |       `-DeclRefExpr 0x7fef21028e48 <col:39> 'int' lvalue Var 0x7fef21026840 'i' 'int'
+            `-ParenExpr 0x7fef210290d0 <col:44, col:69> 'float'
+              `-BinaryOperator 0x7fef210290a8 <col:45, col:65> 'float' '-'
+                |-ImplicitCastExpr 0x7fef21029078 <col:45, col:61> 'real':'float' <LValueToRValue>
+                | `-MemberExpr 0x7fef21029018 <col:45, col:61> 'real':'float' lvalue .T 0x7fef21025dc0
+                |   `-ArraySubscriptExpr 0x7fef21028ff0 <col:45, col:59> 't_grp_tcstat':'t_grp_tcstat' lvalue
+                |     |-ImplicitCastExpr 0x7fef21028fc0 <col:45, col:51> 't_grp_tcstat *' <LValueToRValue>
+                |     | `-MemberExpr 0x7fef21028f60 <col:45, col:51> 't_grp_tcstat *' lvalue ->tcstat 0x7fef21026058
+                |     |   `-ImplicitCastExpr 0x7fef21028f48 <col:45> 't_groups *' <LValueToRValue>
+                |     |     `-DeclRefExpr 0x7fef21028f20 <col:45> 't_groups *' lvalue ParmVar 0x7fef21026428 'grps' 't_groups *'
+                |     `-ImplicitCastExpr 0x7fef21028fd8 <col:58> 'int' <LValueToRValue>
+                |       `-DeclRefExpr 0x7fef21028f98 <col:58> 'int' lvalue Var 0x7fef21026840 'i' 'int'
+                `-ImplicitCastExpr 0x7fef21029090 <col:65> 'real':'float' <LValueToRValue>
+                  `-DeclRefExpr 0x7fef21029050 <col:65> 'real':'float' lvalue Var 0x7fef210268c8 'reft' 'real':'float'

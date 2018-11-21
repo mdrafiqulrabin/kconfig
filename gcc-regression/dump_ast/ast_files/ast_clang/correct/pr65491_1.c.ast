@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fd21c0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd21c026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd21c026740 '__int128'
+|-TypedefDecl 0x7fd21c026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd21c026760 'unsigned __int128'
+|-TypedefDecl 0x7fd21c026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd21c026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd21c026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd21c026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd21c026dc0 'char *'
+|   `-BuiltinType 0x7fd21c026560 'char'
+|-TypedefDecl 0x7fd21c0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd21c027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd21c026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd21c026e58 '__va_list_tag'
+|-TypedefDecl 0x7fd21c027178 <c_files/pr65491_1.c:4:1, col:21> col:21 referenced a '__attribute__((__vector_size__(1 * sizeof(long double)))) long double'
+| `-VectorType 0x7fd21c027140 '__attribute__((__vector_size__(1 * sizeof(long double)))) long double' 1
+|   `-BuiltinType 0x7fd21c026700 'long double'
+`-FunctionDecl 0x7fd21c826b80 <line:6:1, line:10:1> line:7:1 sum 'a (a, a)'
+  |-ParmVarDecl 0x7fd21c826a00 <col:6, col:8> col:8 used first 'a':'__attribute__((__vector_size__(1 * sizeof(long double)))) long double'
+  |-ParmVarDecl 0x7fd21c826a70 <col:15, col:17> col:17 used second 'a':'__attribute__((__vector_size__(1 * sizeof(long double)))) long double'
+  `-CompoundStmt 0x7fd21c826d28 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7fd21c826d10 <line:9:3, col:18>
+      `-BinaryOperator 0x7fd21c826ce8 <col:10, col:18> 'a':'__attribute__((__vector_size__(1 * sizeof(long double)))) long double' '+'
+        |-ImplicitCastExpr 0x7fd21c826cb8 <col:10> 'a':'__attribute__((__vector_size__(1 * sizeof(long double)))) long double' <LValueToRValue>
+        | `-DeclRefExpr 0x7fd21c826c68 <col:10> 'a':'__attribute__((__vector_size__(1 * sizeof(long double)))) long double' lvalue ParmVar 0x7fd21c826a00 'first' 'a':'__attribute__((__vector_size__(1 * sizeof(long double)))) long double'
+        `-ImplicitCastExpr 0x7fd21c826cd0 <col:18> 'a':'__attribute__((__vector_size__(1 * sizeof(long double)))) long double' <LValueToRValue>
+          `-DeclRefExpr 0x7fd21c826c90 <col:18> 'a':'__attribute__((__vector_size__(1 * sizeof(long double)))) long double' lvalue ParmVar 0x7fd21c826a70 'second' 'a':'__attribute__((__vector_size__(1 * sizeof(long double)))) long double'

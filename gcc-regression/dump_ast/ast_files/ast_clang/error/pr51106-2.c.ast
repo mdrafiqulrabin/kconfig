@@ -1,0 +1,30 @@
+c_files/pr51106-2.c:9:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : "i" (x) : : lab); /* { dg-error "impossible constraint" } */
+      ^
+1 error generated.
+TranslationUnitDecl 0x7f91fa8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f91fa826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f91fa826740 '__int128'
+|-TypedefDecl 0x7f91fa826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f91fa826760 'unsigned __int128'
+|-TypedefDecl 0x7f91fa826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f91fa826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f91fa826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f91fa826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f91fa826dc0 'char *'
+|   `-BuiltinType 0x7f91fa826560 'char'
+|-TypedefDecl 0x7f91fa8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f91fa827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f91fa826ee0 'struct __va_list_tag'
+|     `-Record 0x7f91fa826e58 '__va_list_tag'
+|-FunctionDecl 0x7f91fa877430 <c_files/pr51106-2.c:6:1, line:14:1> line:7:1 bar 'int (int)'
+| |-ParmVarDecl 0x7f91fa827138 <col:6, col:10> col:10 x 'int'
+| `-CompoundStmt 0x7f91fa877750 <line:8:1, line:14:1>
+|   |-CallExpr 0x7f91fa877690 <line:11:3, col:26> 'void'
+|   | `-ImplicitCastExpr 0x7f91fa877678 <col:3> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   |   `-DeclRefExpr 0x7f91fa877620 <col:3> '<builtin fn type>' Function 0x7f91fa877540 '__builtin_unreachable' 'void (void) __attribute__((noreturn))'
+|   `-LabelStmt 0x7f91fa877738 <line:12:1, line:13:10> 'lab'
+|     `-ReturnStmt 0x7f91fa8776d8 <col:3, col:10>
+|       `-IntegerLiteral 0x7f91fa8776b8 <col:10> 'int' 0
+`-FunctionDecl 0x7f91fa877540 <line:11:3> col:3 implicit used __builtin_unreachable 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f91fa8775d8 <col:3> Implicit

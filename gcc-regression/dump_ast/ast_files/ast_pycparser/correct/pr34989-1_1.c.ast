@@ -1,0 +1,5 @@
+FileAST: 
+  Decl: ptr_to_globals, [], [], []
+    PtrDecl: ['const']
+      TypeDecl: ptr_to_globals, []
+        Struct: globals

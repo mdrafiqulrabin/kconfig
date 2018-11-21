@@ -1,0 +1,70 @@
+TranslationUnitDecl 0x7f998681a0d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f998681a620 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f998681a340 '__int128'
+|-TypedefDecl 0x7f998681a690 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f998681a360 'unsigned __int128'
+|-TypedefDecl 0x7f998681a968 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f998681a770 'struct __NSConstantString_tag'
+|   `-Record 0x7f998681a6e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f998681aa00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f998681a9c0 'char *'
+|   `-BuiltinType 0x7f998681a160 'char'
+|-TypedefDecl 0x7f998681acc8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f998681ac70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f998681aae0 'struct __va_list_tag'
+|     `-Record 0x7f998681aa58 '__va_list_tag'
+|-FunctionDecl 0x7f9985025168 <c_files/pr65595.c:1:14> col:14 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f9985025200 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f9985025260 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7f99850252c0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f9985025338 prev 0x7f9985025168 <col:1, col:56> col:14 used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f998681ad38 <col:21, col:26> col:27 'void *'
+| |-ParmVarDecl 0x7f9985025000 <col:29, col:40> col:41 'const void *'
+| `-ParmVarDecl 0x7f9985025078 <col:43, col:52> col:56 'unsigned long'
+|-RecordDecl 0x7f99850253e8 <line:2:1, line:6:1> line:2:8 struct in6_addr definition
+| |-RecordDecl 0x7f9985025490 <line:3:3, line:5:3> line:3:3 struct definition
+| | `-FieldDecl 0x7f99850255c0 <line:4:5, col:20> col:9 u6_addr32 'int [4]'
+| |-FieldDecl 0x7f9985025660 <line:3:3> col:3 implicit 'struct in6_addr::(anonymous at c_files/pr65595.c:3:3)'
+| `-IndirectFieldDecl 0x7f99850256b8 <line:4:9> col:9 implicit u6_addr32 'int [4]'
+|   |-Field 0x7f9985025660 '' 'struct in6_addr::(anonymous at c_files/pr65595.c:3:3)'
+|   `-Field 0x7f99850255c0 'u6_addr32' 'int [4]'
+|-RecordDecl 0x7f9985025740 <line:7:1, line:10:1> line:7:8 struct foo definition
+| |-FieldDecl 0x7f9985025840 <line:8:3, col:19> col:19 daddr 'struct in6_addr':'struct in6_addr'
+| `-FieldDecl 0x7f99850258a8 <line:9:3, col:19> col:19 saddr 'struct in6_addr':'struct in6_addr'
+|-VarDecl 0x7f9985025990 <line:7:1, line:10:3> col:3 used a 'struct foo':'struct foo'
+|-FunctionDecl 0x7f9985025bf0 <line:11:1, col:45> col:13 used ip6_route_output 'void (struct foo, int)' extern
+| |-ParmVarDecl 0x7f9985025a68 <col:30, col:37> col:40 'struct foo':'struct foo'
+| `-ParmVarDecl 0x7f9985025ae0 <col:42> col:45 'int'
+|-VarDecl 0x7f9985025cb0 <line:12:1, col:5> col:5 used b 'int'
+|-FunctionDecl 0x7f9985025e90 <line:13:1, line:17:1> line:13:13 used find_route_ipv6 'void (struct in6_addr *)' static
+| |-ParmVarDecl 0x7f9985025d90 <col:29, col:46> col:46 used p1 'struct in6_addr *'
+| `-CompoundStmt 0x7f9985027298 <col:50, line:17:1>
+|   |-IfStmt 0x7f9985027108 <line:14:3, line:15:42>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f9985025f58 <line:14:7> 'struct in6_addr *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f9985025f30 <col:7> 'struct in6_addr *' lvalue ParmVar 0x7f9985025d90 'p1' 'struct in6_addr *'
+|   | |-CallExpr 0x7f9985027080 <line:15:5, col:42> 'void *'
+|   | | |-ImplicitCastExpr 0x7f9985027068 <col:5> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f9985025f70 <col:5> 'void *(void *, const void *, unsigned long)' Function 0x7f9985025338 'memcpy' 'void *(void *, const void *, unsigned long)'
+|   | | |-ImplicitCastExpr 0x7f99850270c0 <col:12> 'void *' <NullToPointer>
+|   | | | `-IntegerLiteral 0x7f9985025f98 <col:12> 'int' 0
+|   | | |-ImplicitCastExpr 0x7f99850270f0 <col:15> 'const void *' <BitCast>
+|   | | | `-ImplicitCastExpr 0x7f99850270d8 <col:15> 'struct in6_addr *' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f9985025fb8 <col:15> 'struct in6_addr *' lvalue ParmVar 0x7f9985025d90 'p1' 'struct in6_addr *'
+|   | | `-UnaryExprOrTypeTraitExpr 0x7f9985027000 <col:19, col:41> 'unsigned long' sizeof 'struct in6_addr':'struct in6_addr'
+|   | `-<<<NULL>>>
+|   `-CallExpr 0x7f9985027230 <line:16:3, col:24> 'void'
+|     |-ImplicitCastExpr 0x7f9985027218 <col:3> 'void (*)(struct foo, int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f9985027140 <col:3> 'void (struct foo, int)' Function 0x7f9985025bf0 'ip6_route_output' 'void (struct foo, int)'
+|     |-ImplicitCastExpr 0x7f9985027268 <col:20> 'struct foo':'struct foo' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f9985027168 <col:20> 'struct foo':'struct foo' lvalue Var 0x7f9985025990 'a' 'struct foo':'struct foo'
+|     `-ImplicitCastExpr 0x7f9985027280 <col:23> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9985027190 <col:23> 'int' lvalue Var 0x7f9985025cb0 'b' 'int'
+`-FunctionDecl 0x7f9985027308 <line:18:1, col:47> col:6 cxgbi_ep_connect 'void ()'
+  `-CompoundStmt 0x7f99850274a8 <col:25, col:47>
+    `-CallExpr 0x7f9985027460 <col:27, col:44> 'void'
+      |-ImplicitCastExpr 0x7f9985027448 <col:27> 'void (*)(struct in6_addr *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f99850273a0 <col:27> 'void (struct in6_addr *)' Function 0x7f9985025e90 'find_route_ipv6' 'void (struct in6_addr *)'
+      `-ImplicitCastExpr 0x7f9985027490 <col:43> 'struct in6_addr *' <NullToPointer>
+        `-IntegerLiteral 0x7f99850273c8 <col:43> 'int' 0

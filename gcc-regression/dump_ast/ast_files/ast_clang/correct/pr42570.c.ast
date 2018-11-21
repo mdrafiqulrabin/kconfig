@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fc75d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc75d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc75d026740 '__int128'
+|-TypedefDecl 0x7fc75d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc75d026760 'unsigned __int128'
+|-TypedefDecl 0x7fc75d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc75d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc75d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc75d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc75d026dc0 'char *'
+|   `-BuiltinType 0x7fc75d026560 'char'
+|-TypedefDecl 0x7fc75d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc75d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc75d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc75d026e58 '__va_list_tag'
+|-TypedefDecl 0x7fc75d027138 <c_files/pr42570.c:1:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7fc75d026620 'unsigned char'
+|-VarDecl 0x7fc75d825b28 <line:2:1, col:17> col:9 referenced foo 'uint8_t [1][0]'
+|-FunctionDecl 0x7fc75d825cc0 <line:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc75d825d58 prev 0x7fc75d825cc0 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fc75d825e40 <line:4:1, line:9:1> line:4:5 main 'int ()'
+  `-CompoundStmt 0x7fc75d8260a8 <line:5:1, line:9:1>
+    |-IfStmt 0x7fc75d826038 <line:6:3, line:7:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc75d825f78 <line:6:7, col:23> 'int' '!='
+    | | |-UnaryExprOrTypeTraitExpr 0x7fc75d825f20 <col:7, col:18> 'unsigned long' sizeof
+    | | | `-ParenExpr 0x7fc75d825f00 <col:14, col:18> 'uint8_t [1][0]' lvalue
+    | | |   `-DeclRefExpr 0x7fc75d825ed8 <col:15> 'uint8_t [1][0]' lvalue Var 0x7fc75d825b28 'foo' 'uint8_t [1][0]'
+    | | `-ImplicitCastExpr 0x7fc75d825f60 <col:23> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fc75d825f40 <col:23> 'int' 0
+    | |-CallExpr 0x7fc75d826010 <line:7:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc75d825ff8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc75d825fa0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc75d825d58 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc75d826090 <line:8:3, col:10>
+      `-IntegerLiteral 0x7fc75d826070 <col:10> 'int' 0

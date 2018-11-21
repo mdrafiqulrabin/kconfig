@@ -1,0 +1,26 @@
+c_files/pr28796-2.c:6:10: fatal error: 'tg-tests.h' file not found
+#include "tg-tests.h"
+         ^~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fc2d40264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc2d4026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc2d4026740 '__int128'
+|-TypedefDecl 0x7fc2d4026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc2d4026760 'unsigned __int128'
+|-TypedefDecl 0x7fc2d4026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc2d4026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc2d4026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc2d4026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc2d4026dc0 'char *'
+|   `-BuiltinType 0x7fc2d4026560 'char'
+|-TypedefDecl 0x7fc2d40270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc2d4027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc2d4026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc2d4026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc2d4826a00 <c_files/pr28796-2.c:8:1, line:11:1> line:8:5 main 'int (void)'
+| `-CompoundStmt 0x7fc2d4826ca0 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fc2d4826c88 <line:10:3, col:22>
+|     `-CallExpr 0x7fc2d4826c60 <col:10, col:22> 'int'
+|       `-ImplicitCastExpr 0x7fc2d4826c48 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7fc2d4826bf8 <col:10> 'int ()' Function 0x7fc2d4826b60 'main_tests' 'int ()'
+`-FunctionDecl 0x7fc2d4826b60 <<invalid sloc>> col:10 implicit used main_tests 'int ()'

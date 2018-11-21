@@ -1,0 +1,18 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Pragma: omp atomic
+      Assignment: =
+        ID: i
+        BinaryOp: +
+          UnaryOp: &
+            ID: i
+          Constant: int, 1

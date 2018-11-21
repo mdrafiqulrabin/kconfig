@@ -1,0 +1,42 @@
+c_files/pr18614-1.c:12:8: error: use of unknown builtin '__builtin_ia32_cvtps2pd' [-Wimplicit-function-declaration]
+  xd = __builtin_ia32_cvtps2pd (__builtin_ia32_rsqrtps
+       ^
+c_files/pr18614-1.c:12:6: error: assigning to 'v2df' (vector of 2 'double' values) from incompatible type 'int'
+  xd = __builtin_ia32_cvtps2pd (__builtin_ia32_rsqrtps
+     ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7fadb90264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fadb9026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fadb9026740 '__int128'
+|-TypedefDecl 0x7fadb9026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fadb9026760 'unsigned __int128'
+|-TypedefDecl 0x7fadb9026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fadb9026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fadb9026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fadb9026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fadb9026dc0 'char *'
+|   `-BuiltinType 0x7fadb9026560 'char'
+|-TypedefDecl 0x7fadb90270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fadb9027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fadb9026ee0 'struct __va_list_tag'
+|     `-Record 0x7fadb9026e58 '__va_list_tag'
+|-TypedefDecl 0x7fadb9027178 <c_files/pr18614-1.c:5:1, col:16> col:16 referenced v2df '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7fadb9027140 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7fadb90266e0 'double'
+|-FunctionDecl 0x7fadb90784e0 <line:7:1, line:15:1> line:7:6 foo 'v2df (void)'
+| `-CompoundStmt 0x7fadb9079198 <line:8:1, line:15:1>
+|   |-DeclStmt 0x7fadb9078708 <line:9:3, col:25>
+|   | `-VarDecl 0x7fadb90785c8 <col:3, col:24> col:8 used yd 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|   |   `-InitListExpr 0x7fadb90786b8 <col:13, col:24> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     |-FloatingLiteral 0x7fadb9078628 <col:15> 'double' 1.000000e+00
+|   |     `-FloatingLiteral 0x7fadb9078648 <col:20> 'double' 4.000000e+00
+|   |-DeclStmt 0x7fadb9078790 <line:10:3, col:10>
+|   | `-VarDecl 0x7fadb9078730 <col:3, col:8> col:8 used xd 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   `-ReturnStmt 0x7fadb9079180 <line:14:3, col:10>
+|     `-ImplicitCastExpr 0x7fadb9079168 <col:10> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fadb9079140 <col:10> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7fadb9078730 'xd' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-FunctionDecl 0x7fadb9078840 <<invalid sloc>> line:12:8 implicit used __builtin_ia32_cvtps2pd 'int ()'
+|-FunctionDecl 0x7fadb9078968 <col:33> col:33 implicit used __builtin_ia32_rsqrtps '__attribute__((__vector_size__(4 * sizeof(float)))) float (__attribute__((__vector_size__(4 * sizeof(float)))) float)' extern
+| `-ParmVarDecl 0x7fadb9078a00 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+`-FunctionDecl 0x7fadb9078ac8 <line:13:6> col:6 implicit used __builtin_ia32_cvtpd2ps '__attribute__((__vector_size__(4 * sizeof(float)))) float (__attribute__((__vector_size__(2 * sizeof(double)))) double)' extern
+  `-ParmVarDecl 0x7fadb9078b60 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(2 * sizeof(double)))) double'

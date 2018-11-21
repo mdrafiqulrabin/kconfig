@@ -1,0 +1,204 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['float']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['float']
+  Decl: None, [], [], []
+    Struct: B
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          Struct: A
+      Decl: w, [], [], []
+        TypeDecl: w, []
+          Struct: A
+  FuncDef: 
+    Decl: bar, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                Struct: B
+        TypeDecl: bar, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          Struct: A
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['float']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['float']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['float']
+      Assignment: =
+        StructRef: .
+          ID: r
+          ID: x
+        StructRef: .
+          StructRef: ->
+            ID: x
+            ID: t
+          ID: x
+      Assignment: =
+        StructRef: .
+          ID: r
+          ID: y
+        StructRef: .
+          StructRef: ->
+            ID: x
+            ID: t
+          ID: y
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          BinaryOp: *
+            StructRef: .
+              ID: r
+              ID: x
+            StructRef: .
+              StructRef: ->
+                ID: x
+                ID: w
+              ID: x
+          BinaryOp: *
+            StructRef: .
+              ID: r
+              ID: y
+            StructRef: .
+              StructRef: ->
+                ID: x
+                ID: w
+              ID: y
+      Assignment: =
+        ID: c
+        BinaryOp: +
+          BinaryOp: +
+            ID: b
+            BinaryOp: *
+              StructRef: .
+                ID: r
+                ID: x
+              StructRef: .
+                ID: r
+                ID: x
+          BinaryOp: *
+            StructRef: .
+              ID: r
+              ID: y
+            StructRef: .
+              ID: r
+              ID: y
+      If: 
+        BinaryOp: >
+          ID: c
+          Constant: float, 0.0f
+        Return: 
+          BinaryOp: +
+            ID: c
+            Constant: float, 3.0f
+      Return: 
+        Constant: float, 0.0f
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['float']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['float']
+          Decl: c, [], [], []
+            PtrDecl: []
+              TypeDecl: c, []
+                IdentifierType: ['float']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['float']
+        Constant: float, 0.0f
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          IdentifierType: ['float']
+        UnaryOp: *
+          ID: a
+      Pragma: omp simd
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 32
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+            ArrayRef: 
+              ID: b
+              ID: i
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['float']
+            ArrayRef: 
+              ID: c
+              ID: i
+          Decl: r, [], [], []
+            TypeDecl: r, []
+              Struct: B
+          Assignment: =
+            StructRef: .
+              StructRef: .
+                ID: r
+                ID: t
+              ID: x
+            Constant: float, 1.0f
+          Assignment: =
+            StructRef: .
+              StructRef: .
+                ID: r
+                ID: t
+              ID: y
+            ID: u
+          Assignment: =
+            StructRef: .
+              StructRef: .
+                ID: r
+                ID: w
+              ID: x
+            ID: x
+          Assignment: =
+            StructRef: .
+              StructRef: .
+                ID: r
+                ID: w
+              ID: y
+            ID: y
+          Assignment: +=
+            ID: z
+            FuncCall: 
+              ID: bar
+              ExprList: 
+                UnaryOp: &
+                  ID: r
+      Assignment: =
+        UnaryOp: *
+          ID: a
+        ID: z

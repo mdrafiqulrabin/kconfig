@@ -1,0 +1,312 @@
+FileAST: 
+  Decl: log10, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: __x, [], [], []
+          TypeDecl: __x, []
+            IdentifierType: ['double']
+      TypeDecl: log10, []
+        IdentifierType: ['double']
+  Decl: ceil, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: __x, [], [], []
+          TypeDecl: __x, []
+            IdentifierType: ['double']
+      TypeDecl: ceil, []
+        IdentifierType: ['double']
+  Decl: floor, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: __x, [], [], []
+          TypeDecl: __x, []
+            IdentifierType: ['double']
+      TypeDecl: floor, []
+        IdentifierType: ['double']
+  Decl: free, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: __ptr, [], [], []
+          PtrDecl: []
+            TypeDecl: __ptr, []
+              IdentifierType: ['void']
+      TypeDecl: free, []
+        IdentifierType: ['void']
+  Decl: my_malloc, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'int']
+      PtrDecl: []
+        TypeDecl: my_malloc, []
+          IdentifierType: ['void']
+  Decl: num_rr_nodes, [], ['extern'], []
+    TypeDecl: num_rr_nodes, []
+      IdentifierType: ['int']
+  Decl: get_cblock_trans, [], ['static'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: num_inputs_to_cblock, [], [], []
+          PtrDecl: []
+            TypeDecl: num_inputs_to_cblock, []
+              IdentifierType: ['int']
+        Decl: max_inputs_to_cblock, [], [], []
+          TypeDecl: max_inputs_to_cblock, []
+            IdentifierType: ['int']
+        Decl: trans_cblock_to_lblock_buf, [], [], []
+          TypeDecl: trans_cblock_to_lblock_buf, []
+            IdentifierType: ['float']
+        Decl: trans_sram_bit, [], [], []
+          TypeDecl: trans_sram_bit, []
+            IdentifierType: ['float']
+      TypeDecl: get_cblock_trans, []
+        IdentifierType: ['float']
+  Decl: trans_per_mux, [], ['static'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: num_inputs, [], [], []
+          TypeDecl: num_inputs, []
+            IdentifierType: ['int']
+        Decl: trans_sram_bit, [], [], []
+          TypeDecl: trans_sram_bit, []
+            IdentifierType: ['float']
+      TypeDecl: trans_per_mux, []
+        IdentifierType: ['float']
+  FuncDef: 
+    Decl: count_routing_transistors, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: num_switch, [], [], []
+            TypeDecl: num_switch, []
+              IdentifierType: ['int']
+          Decl: R_minW_nmos, [], [], []
+            TypeDecl: R_minW_nmos, []
+              IdentifierType: ['float']
+          Decl: R_minW_pmos, [], [], []
+            TypeDecl: R_minW_pmos, []
+              IdentifierType: ['float']
+        TypeDecl: count_routing_transistors, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: num_inputs_to_cblock, [], [], []
+        PtrDecl: []
+          TypeDecl: num_inputs_to_cblock, []
+            IdentifierType: ['int']
+      Decl: iswitch, [], [], []
+        TypeDecl: iswitch, []
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: iseg, [], [], []
+        TypeDecl: iseg, []
+          IdentifierType: ['int']
+      Decl: max_inputs_to_cblock, [], [], []
+        TypeDecl: max_inputs_to_cblock, []
+          IdentifierType: ['int']
+      Decl: input_cblock_trans, [], [], []
+        TypeDecl: input_cblock_trans, []
+          IdentifierType: ['float']
+      Decl: trans_sram_bit, ['const'], [], []
+        TypeDecl: trans_sram_bit, ['const']
+          IdentifierType: ['float']
+        Constant: float, 6.
+      Decl: trans_cblock_to_lblock_buf, [], [], []
+        TypeDecl: trans_cblock_to_lblock_buf, []
+          IdentifierType: ['float']
+      Assignment: =
+        ID: input_cblock_trans
+        FuncCall: 
+          ID: get_cblock_trans
+          ExprList: 
+            ID: num_inputs_to_cblock
+            ID: max_inputs_to_cblock
+            ID: trans_cblock_to_lblock_buf
+            ID: trans_sram_bit
+  FuncDef: 
+    Decl: get_cblock_trans, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: num_inputs_to_cblock, [], [], []
+            PtrDecl: []
+              TypeDecl: num_inputs_to_cblock, []
+                IdentifierType: ['int']
+          Decl: max_inputs_to_cblock, [], [], []
+            TypeDecl: max_inputs_to_cblock, []
+              IdentifierType: ['int']
+          Decl: trans_cblock_to_lblock_buf, [], [], []
+            TypeDecl: trans_cblock_to_lblock_buf, []
+              IdentifierType: ['float']
+          Decl: trans_sram_bit, [], [], []
+            TypeDecl: trans_sram_bit, []
+              IdentifierType: ['float']
+        TypeDecl: get_cblock_trans, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: trans_per_cblock, [], [], []
+        PtrDecl: []
+          TypeDecl: trans_per_cblock, []
+            IdentifierType: ['float']
+      Decl: trans_count, [], [], []
+        TypeDecl: trans_count, []
+          IdentifierType: ['float']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: num_inputs, [], [], []
+        TypeDecl: num_inputs, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: trans_per_cblock
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['float']
+          FuncCall: 
+            ID: my_malloc
+            ExprList: 
+              BinaryOp: *
+                BinaryOp: +
+                  ID: max_inputs_to_cblock
+                  Constant: int, 1
+                UnaryOp: sizeof
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['float']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 1
+        BinaryOp: <=
+          ID: i
+          ID: max_inputs_to_cblock
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: trans_per_cblock
+            ID: i
+          BinaryOp: +
+            FuncCall: 
+              ID: trans_per_mux
+              ExprList: 
+                ID: i
+                ID: trans_sram_bit
+            ID: trans_cblock_to_lblock_buf
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: num_rr_nodes
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: num_inputs
+            ArrayRef: 
+              ID: num_inputs_to_cblock
+              ID: i
+          Assignment: +=
+            ID: trans_count
+            ArrayRef: 
+              ID: trans_per_cblock
+              ID: num_inputs
+      FuncCall: 
+        ID: free
+        ExprList: 
+          ID: trans_per_cblock
+      Return: 
+        ID: trans_count
+  FuncDef: 
+    Decl: trans_per_mux, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: num_inputs, [], [], []
+            TypeDecl: num_inputs, []
+              IdentifierType: ['int']
+          Decl: trans_sram_bit, [], [], []
+            TypeDecl: trans_sram_bit, []
+              IdentifierType: ['float']
+        TypeDecl: trans_per_mux, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: nlevels, [], [], []
+        TypeDecl: nlevels, []
+          IdentifierType: ['int']
+      Decl: ilevel, [], [], []
+        TypeDecl: ilevel, []
+          IdentifierType: ['int']
+      Decl: current_inps, [], [], []
+        TypeDecl: current_inps, []
+          IdentifierType: ['int']
+      Decl: ntrans, [], [], []
+        TypeDecl: ntrans, []
+          IdentifierType: ['float']
+        Constant: int, 0
+      If: 
+        BinaryOp: <=
+          ID: num_inputs
+          Constant: int, 1
+        Return: 
+          Constant: int, 0
+      Assignment: =
+        ID: nlevels
+        FuncCall: 
+          ID: ceil
+          ExprList: 
+            BinaryOp: -
+              BinaryOp: /
+                FuncCall: 
+                  ID: log10
+                  ExprList: 
+                    ID: num_inputs
+                FuncCall: 
+                  ID: log10
+                  ExprList: 
+                    Constant: float, 2.
+              Constant: float, 0.00001
+      Assignment: =
+        ID: current_inps
+        ID: num_inputs
+      For: 
+        Assignment: =
+          ID: ilevel
+          Constant: int, 1
+        BinaryOp: <=
+          ID: ilevel
+          ID: nlevels
+        UnaryOp: p++
+          ID: ilevel
+        Compound: 
+          Assignment: +=
+            ID: ntrans
+            BinaryOp: *
+              Constant: int, 2
+              FuncCall: 
+                ID: floor
+                ExprList: 
+                  BinaryOp: /
+                    ID: current_inps
+                    Constant: float, 2.
+          Assignment: =
+            ID: current_inps
+            FuncCall: 
+              ID: ceil
+              ExprList: 
+                BinaryOp: /
+                  ID: current_inps
+                  Constant: float, 2.
+      Assignment: +=
+        ID: ntrans
+        BinaryOp: *
+          ID: trans_sram_bit
+          ID: nlevels
+      Return: 
+        ID: ntrans

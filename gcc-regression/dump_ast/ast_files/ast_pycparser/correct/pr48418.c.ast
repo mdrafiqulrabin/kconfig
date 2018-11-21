@@ -1,0 +1,83 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, ['const'], [], []
+        TypeDecl: a, ['const']
+          IdentifierType: ['int']
+        BinaryOp: *
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+          ID: __CHAR_BIT__
+      Decl: b, ['const'], [], []
+        TypeDecl: b, ['const']
+          IdentifierType: ['int']
+        UnaryOp: -
+          Constant: int, 7
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Assignment: +=
+        ID: c
+        BinaryOp: <<
+          ID: x
+          ID: a
+      Assignment: +=
+        ID: c
+        BinaryOp: <<
+          ID: x
+          ID: b
+      Assignment: +=
+        ID: c
+        BinaryOp: <<
+          ID: x
+          BinaryOp: *
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+            ID: __CHAR_BIT__
+      Assignment: +=
+        ID: c
+        BinaryOp: <<
+          ID: x
+          UnaryOp: -
+            Constant: int, 7
+      Assignment: +=
+        ID: c
+        BinaryOp: >>
+          ID: x
+          ID: a
+      Assignment: +=
+        ID: c
+        BinaryOp: >>
+          ID: x
+          ID: b
+      Assignment: +=
+        ID: c
+        BinaryOp: >>
+          ID: x
+          BinaryOp: *
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+            ID: __CHAR_BIT__
+      Assignment: +=
+        ID: c
+        BinaryOp: >>
+          ID: x
+          UnaryOp: -
+            Constant: int, 7
+      Return: 
+        ID: c

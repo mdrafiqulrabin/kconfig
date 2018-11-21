@@ -1,0 +1,47 @@
+FileAST: 
+  Decl: q4, [], [], []
+    TypeDecl: q4, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: yg, [], [], []
+    TypeDecl: yg, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: w6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: z5, [], [], []
+            TypeDecl: z5, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: jv, [], [], []
+            TypeDecl: jv, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: w6, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: f2, [], [], []
+        PtrDecl: []
+          TypeDecl: f2, []
+            IdentifierType: ['unsigned', 'int']
+        UnaryOp: &
+          ID: jv
+      While: 
+        BinaryOp: <
+          UnaryOp: *
+            ID: f2
+          Constant: int, 21
+        Compound: 
+          Assignment: -=
+            ID: q4
+            ID: jv
+          Assignment: -=
+            ID: z5
+            ID: jv
+          Assignment: =
+            ID: f2
+            UnaryOp: &
+              ID: yg
+          UnaryOp: ++
+            UnaryOp: *
+              ID: f2
+      Return: 
+        ID: z5

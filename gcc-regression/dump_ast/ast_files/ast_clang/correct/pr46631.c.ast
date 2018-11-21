@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fb0b90166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb0b9016c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb0b9016940 '__int128'
+|-TypedefDecl 0x7fb0b9016c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb0b9016960 'unsigned __int128'
+|-TypedefDecl 0x7fb0b9016f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb0b9016d70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb0b9016ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb0b9017000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb0b9016fc0 'char *'
+|   `-BuiltinType 0x7fb0b9016760 'char'
+|-TypedefDecl 0x7fb0b90172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb0b9017270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb0b90170e0 'struct __va_list_tag'
+|     `-Record 0x7fb0b9017058 '__va_list_tag'
+|-RecordDecl 0x7fb0b9017320 <c_files/pr46631.c:5:1, line:8:1> line:5:8 struct S definition
+| |-FieldDecl 0x7fb0b9067600 <line:6:7, col:11> col:11 referenced bi_buf 'int'
+| `-FieldDecl 0x7fb0b9067660 <line:7:7, col:11> col:11 referenced bi_valid 'int'
+`-FunctionDecl 0x7fb0b9067988 <line:10:1, line:16:1> line:10:5 tz 'int (struct S *, int, int)'
+  |-ParmVarDecl 0x7fb0b9067760 <col:9, col:19> col:19 used p 'struct S *'
+  |-ParmVarDecl 0x7fb0b90677d8 <col:22, col:26> col:26 used bits 'int'
+  |-ParmVarDecl 0x7fb0b9067850 <col:32, col:36> col:36 used value 'int'
+  `-CompoundStmt 0x7fb0b9067eb8 <line:11:1, line:16:1>
+    |-IfStmt 0x7fb0b9067b50 <line:12:6, col:25>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb0b9067af0 <col:10, col:15> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fb0b9067ac0 <col:10> 'struct S *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fb0b9067a78 <col:10> 'struct S *' lvalue ParmVar 0x7fb0b9067760 'p' 'struct S *'
+    | | `-ImplicitCastExpr 0x7fb0b9067ad8 <col:15> 'struct S *' <NullToPointer>
+    | |   `-IntegerLiteral 0x7fb0b9067aa0 <col:15> 'int' 0
+    | |-ReturnStmt 0x7fb0b9067b38 <col:18, col:25>
+    | | `-IntegerLiteral 0x7fb0b9067b18 <col:25> 'int' 1
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fb0b9067c40 <line:13:7, col:21> 'int' '='
+    | |-MemberExpr 0x7fb0b9067bc8 <col:7, col:10> 'int' lvalue ->bi_valid 0x7fb0b9067660
+    | | `-ImplicitCastExpr 0x7fb0b9067bb0 <col:7> 'struct S *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fb0b9067b88 <col:7> 'struct S *' lvalue ParmVar 0x7fb0b9067760 'p' 'struct S *'
+    | `-ImplicitCastExpr 0x7fb0b9067c28 <col:21> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb0b9067c00 <col:21> 'int' lvalue ParmVar 0x7fb0b90677d8 'bits' 'int'
+    |-BinaryOperator 0x7fb0b9067e58 <line:14:7, col:43> 'int' '='
+    | |-MemberExpr 0x7fb0b9067ca8 <col:7, col:10> 'int' lvalue ->bi_buf 0x7fb0b9067600
+    | | `-ImplicitCastExpr 0x7fb0b9067c90 <col:7> 'struct S *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fb0b9067c68 <col:7> 'struct S *' lvalue ParmVar 0x7fb0b9067760 'p' 'struct S *'
+    | `-BinaryOperator 0x7fb0b9067e30 <col:19, col:43> 'int' '&'
+    |   |-ImplicitCastExpr 0x7fb0b9067e18 <col:19> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fb0b9067ce0 <col:19> 'int' lvalue ParmVar 0x7fb0b9067850 'value' 'int'
+    |   `-ParenExpr 0x7fb0b9067df8 <col:27, col:43> 'int'
+    |     `-BinaryOperator 0x7fb0b9067dd0 <col:28, col:42> 'int' '-'
+    |       |-ParenExpr 0x7fb0b9067d90 <col:28, col:38> 'int'
+    |       | `-BinaryOperator 0x7fb0b9067d68 <col:29, col:34> 'int' '<<'
+    |       |   |-IntegerLiteral 0x7fb0b9067d08 <col:29> 'int' 1
+    |       |   `-ImplicitCastExpr 0x7fb0b9067d50 <col:34> 'int' <LValueToRValue>
+    |       |     `-DeclRefExpr 0x7fb0b9067d28 <col:34> 'int' lvalue ParmVar 0x7fb0b90677d8 'bits' 'int'
+    |       `-IntegerLiteral 0x7fb0b9067db0 <col:42> 'int' 1
+    `-ReturnStmt 0x7fb0b9067ea0 <line:15:7, col:14>
+      `-IntegerLiteral 0x7fb0b9067e80 <col:14> 'int' 0

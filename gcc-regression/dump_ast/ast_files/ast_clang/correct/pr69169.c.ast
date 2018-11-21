@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fda070264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fda07026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fda07026740 '__int128'
+|-TypedefDecl 0x7fda07026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fda07026760 'unsigned __int128'
+|-TypedefDecl 0x7fda07026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fda07026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fda07026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fda07026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fda07026dc0 'char *'
+|   `-BuiltinType 0x7fda07026560 'char'
+|-TypedefDecl 0x7fda070270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fda07027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fda07026ee0 'struct __va_list_tag'
+|     `-Record 0x7fda07026e58 '__va_list_tag'
+|-RecordDecl 0x7fda07027120 <c_files/pr69169.c:4:1, line:7:1> line:4:8 struct pgm_slist_t definition
+| `-FieldDecl 0x7fda07077480 <line:6:3, col:34> col:34 next 'struct pgm_slist_t *__restrict'
+`-FunctionDecl 0x7fda070775f0 <line:9:1, line:13:1> line:10:1 fn1 'void (struct pgm_slist_t)'
+  |-ParmVarDecl 0x7fda070774e8 <col:6, col:25> col:25 p1 'struct pgm_slist_t':'struct pgm_slist_t'
+  `-CompoundStmt 0x7fda070776d0 <line:11:1, line:13:1>

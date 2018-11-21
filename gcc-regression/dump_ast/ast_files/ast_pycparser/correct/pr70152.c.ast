@@ -1,0 +1,67 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: foo, []
+        IdentifierType: ['int']
+  Decl: setjmp, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: setjmp, []
+        IdentifierType: ['int']
+  Decl: buf, [], [], []
+    ArrayDecl: []
+      TypeDecl: buf, []
+        IdentifierType: ['char']
+      Constant: int, 64
+  FuncDef: 
+    Decl: bar, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: x
+        Constant: int, 0
+      FuncCall: 
+        ID: setjmp
+        ExprList: 
+          ID: buf
+      For: 
+        Compound: 
+          Switch: 
+            ID: x
+            Case: 
+              Constant: int, 5
+              Assignment: =
+                ID: x
+                FuncCall: 
+                  ID: foo
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: a

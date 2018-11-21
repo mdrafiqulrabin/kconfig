@@ -1,0 +1,216 @@
+FileAST: 
+  Decl: out2, [], [], []
+    ArrayDecl: []
+      TypeDecl: out2, []
+        IdentifierType: ['unsigned', 'short']
+      BinaryOp: *
+        Constant: int, 128
+        Constant: int, 8
+  Decl: b0, [], [], []
+    TypeDecl: b0, []
+      IdentifierType: ['unsigned', 'short']
+  Decl: b1, [], [], []
+    TypeDecl: b1, []
+      IdentifierType: ['unsigned', 'short']
+  Decl: b2, [], [], []
+    TypeDecl: b2, []
+      IdentifierType: ['unsigned', 'short']
+  Decl: b3, [], [], []
+    TypeDecl: b3, []
+      IdentifierType: ['unsigned', 'short']
+  Decl: b4, [], [], []
+    TypeDecl: b4, []
+      IdentifierType: ['unsigned', 'short']
+  Decl: b5, [], [], []
+    TypeDecl: b5, []
+      IdentifierType: ['unsigned', 'short']
+  Decl: b6, [], [], []
+    TypeDecl: b6, []
+      IdentifierType: ['unsigned', 'short']
+  Decl: b7, [], [], []
+    TypeDecl: b7, []
+      IdentifierType: ['unsigned', 'short']
+  Decl: b8, [], [], []
+    TypeDecl: b8, []
+      IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a0, [], [], []
+            TypeDecl: a0, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: a1, [], [], []
+            TypeDecl: a1, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: a2, [], [], []
+            TypeDecl: a2, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: a3, [], [], []
+            TypeDecl: a3, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: a4, [], [], []
+            TypeDecl: a4, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: a5, [], [], []
+            TypeDecl: a5, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: a6, [], [], []
+            TypeDecl: a6, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: a7, [], [], []
+            TypeDecl: a7, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: a8, [], [], []
+            TypeDecl: a8, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 128
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: out2
+              BinaryOp: *
+                ID: i
+                Constant: int, 4
+            BinaryOp: +
+              ID: a0
+              Constant: int, 8
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 128
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: b0
+            BinaryOp: +
+              ID: a0
+              Constant: int, 8
+          Assignment: =
+            ID: b1
+            BinaryOp: +
+              ID: a1
+              Constant: int, 7
+          Assignment: =
+            ID: b2
+            BinaryOp: +
+              ID: a2
+              Constant: int, 6
+          Assignment: =
+            ID: b3
+            BinaryOp: +
+              ID: a3
+              Constant: int, 5
+          Assignment: =
+            ID: b4
+            BinaryOp: +
+              ID: a4
+              Constant: int, 4
+          Assignment: =
+            ID: b5
+            BinaryOp: +
+              ID: a5
+              Constant: int, 3
+          Assignment: =
+            ID: b6
+            BinaryOp: +
+              ID: a6
+              Constant: int, 2
+          Assignment: =
+            ID: b7
+            BinaryOp: +
+              ID: a7
+              Constant: int, 1
+          Assignment: =
+            ID: b8
+            BinaryOp: +
+              ID: a8
+              Constant: int, 9
+          Assignment: =
+            ArrayRef: 
+              ID: out2
+              BinaryOp: *
+                ID: i
+                Constant: int, 8
+            ID: b0
+          Assignment: =
+            ArrayRef: 
+              ID: out2
+              BinaryOp: +
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 8
+                Constant: int, 1
+            ID: b1
+          Assignment: =
+            ArrayRef: 
+              ID: out2
+              BinaryOp: +
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 8
+                Constant: int, 2
+            ID: b4
+          Assignment: =
+            ArrayRef: 
+              ID: out2
+              BinaryOp: +
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 8
+                Constant: int, 3
+            ID: b5
+          Assignment: =
+            ArrayRef: 
+              ID: out2
+              BinaryOp: +
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 8
+                Constant: int, 4
+            ID: b6
+          Assignment: =
+            ArrayRef: 
+              ID: out2
+              BinaryOp: +
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 8
+                Constant: int, 5
+            ID: b2
+          Assignment: =
+            ArrayRef: 
+              ID: out2
+              BinaryOp: +
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 8
+                Constant: int, 6
+            ID: b7
+          Assignment: =
+            ArrayRef: 
+              ID: out2
+              BinaryOp: +
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 8
+                Constant: int, 7
+            ID: b8

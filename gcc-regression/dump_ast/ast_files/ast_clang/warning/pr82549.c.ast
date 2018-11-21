@@ -1,0 +1,50 @@
+c_files/pr82549.c:8:16: warning: array index -2 is before the beginning of the array [-Warray-bounds]
+  return !a || b[-2] || b[-2];
+               ^ ~~
+c_files/pr82549.c:3:1: note: array 'b' declared here
+int a, b[1];
+^
+c_files/pr82549.c:8:25: warning: array index -2 is before the beginning of the array [-Warray-bounds]
+  return !a || b[-2] || b[-2];
+                        ^ ~~
+c_files/pr82549.c:3:1: note: array 'b' declared here
+int a, b[1];
+^
+2 warnings generated.
+TranslationUnitDecl 0x7ff66a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff66a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff66a826740 '__int128'
+|-TypedefDecl 0x7ff66a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff66a826760 'unsigned __int128'
+|-TypedefDecl 0x7ff66a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff66a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff66a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff66a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff66a826dc0 'char *'
+|   `-BuiltinType 0x7ff66a826560 'char'
+|-TypedefDecl 0x7ff66a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff66a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff66a826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff66a826e58 '__va_list_tag'
+|-VarDecl 0x7ff66a827138 <c_files/pr82549.c:3:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7ff66b025a60 <col:1, col:11> col:8 used b 'int [1]'
+`-FunctionDecl 0x7ff66b025b30 <line:5:1, line:9:1> line:6:1 main 'int ()'
+  `-CompoundStmt 0x7ff66b025e38 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7ff66b025e20 <line:8:3, col:29>
+      `-BinaryOperator 0x7ff66b025df8 <col:10, col:29> 'int' '||'
+        |-BinaryOperator 0x7ff66b025d10 <col:10, col:20> 'int' '||'
+        | |-UnaryOperator 0x7ff66b025c08 <col:10, col:11> 'int' prefix '!'
+        | | `-ImplicitCastExpr 0x7ff66b025bf0 <col:11> 'int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7ff66b025bc8 <col:11> 'int' lvalue Var 0x7ff66a827138 'a' 'int'
+        | `-ImplicitCastExpr 0x7ff66b025cf8 <col:16, col:20> 'int' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7ff66b025cd0 <col:16, col:20> 'int' lvalue
+        |     |-ImplicitCastExpr 0x7ff66b025cb8 <col:16> 'int *' <ArrayToPointerDecay>
+        |     | `-DeclRefExpr 0x7ff66b025c28 <col:16> 'int [1]' lvalue Var 0x7ff66b025a60 'b' 'int [1]'
+        |     `-UnaryOperator 0x7ff66b025c70 <col:18, col:19> 'int' prefix '-'
+        |       `-IntegerLiteral 0x7ff66b025c50 <col:19> 'int' 2
+        `-ImplicitCastExpr 0x7ff66b025de0 <col:25, col:29> 'int' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7ff66b025db8 <col:25, col:29> 'int' lvalue
+            |-ImplicitCastExpr 0x7ff66b025da0 <col:25> 'int *' <ArrayToPointerDecay>
+            | `-DeclRefExpr 0x7ff66b025d38 <col:25> 'int [1]' lvalue Var 0x7ff66b025a60 'b' 'int [1]'
+            `-UnaryOperator 0x7ff66b025d80 <col:27, col:28> 'int' prefix '-'
+              `-IntegerLiteral 0x7ff66b025d60 <col:28> 'int' 2

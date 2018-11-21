@@ -1,0 +1,42 @@
+c_files/pr55890-1.c:3:14: warning: incompatible redeclaration of library function 'memmove' [-Wincompatible-library-redeclaration]
+extern void *memmove(void *, void *, __SIZE_TYPE__);
+             ^
+c_files/pr55890-1.c:3:14: note: 'memmove' is a builtin with type 'void *(void *, const void *, unsigned long)'
+1 warning generated.
+TranslationUnitDecl 0x7fb3958264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb395826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb395826740 '__int128'
+|-TypedefDecl 0x7fb395826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb395826760 'unsigned __int128'
+|-TypedefDecl 0x7fb395826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb395826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb395826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb395826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb395826dc0 'char *'
+|   `-BuiltinType 0x7fb395826560 'char'
+|-TypedefDecl 0x7fb3958270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb395827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb395826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb395826e58 '__va_list_tag'
+|-FunctionDecl 0x7fb396025be8 <c_files/pr55890-1.c:3:14> col:14 implicit used memmove 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fb396025c80 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fb396025ce0 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fb396025d40 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fb396025db8 prev 0x7fb396025be8 <col:1, col:51> col:14 used memmove 'void *(void *, void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fb395827138 <col:22, col:27> col:28 'void *'
+| |-ParmVarDecl 0x7fb396025a00 <col:30, col:35> col:36 'void *'
+| `-ParmVarDecl 0x7fb396025a78 <<built-in>:75:23, col:37> c_files/pr55890-1.c:3:51 'unsigned long'
+|-TypedefDecl 0x7fb396026310 <line:4:1, col:28> col:15 referenced _TEST_fun_ 'int (*)()'
+| `-PointerType 0x7fb3960262b0 'int (*)()'
+|   `-ParenType 0x7fb396026250 'int ()' sugar
+|     `-FunctionNoProtoType 0x7fb396026220 'int ()' cdecl
+|       `-BuiltinType 0x7fb3958265c0 'int'
+|-VarDecl 0x7fb3960263a0 <line:5:1, col:36> col:19 used i '_TEST_fun_':'int (*)()' static cinit
+| `-CStyleCastExpr 0x7fb3960264c0 <col:23, col:36> '_TEST_fun_':'int (*)()' <BitCast>
+|   `-ImplicitCastExpr 0x7fb3960264a8 <col:36> 'void *(*)(void *, void *, unsigned long)' <FunctionToPointerDecay>
+|     `-DeclRefExpr 0x7fb396026440 <col:36> 'void *(void *, void *, unsigned long)' Function 0x7fb396025db8 'memmove' 'void *(void *, void *, unsigned long)'
+`-FunctionDecl 0x7fb396026510 <line:6:1, col:19> col:5 main 'int ()'
+  `-CompoundStmt 0x7fb396026610 <col:12, col:19>
+    `-CallExpr 0x7fb3960265e8 <col:14, col:16> 'int'
+      `-ImplicitCastExpr 0x7fb3960265d0 <col:14> '_TEST_fun_':'int (*)()' <LValueToRValue>
+        `-DeclRefExpr 0x7fb3960265a8 <col:14> '_TEST_fun_':'int (*)()' lvalue Var 0x7fb3960263a0 'i' '_TEST_fun_':'int (*)()'

@@ -1,0 +1,85 @@
+c_files/pr81360.c:1:9: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+typedef a;
+~~~~~~~ ^
+c_files/pr81360.c:2:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+b(void *c, a d) {
+^
+c_files/pr81360.c:4:5: warning: implicit declaration of function 'e' is invalid in C99 [-Wimplicit-function-declaration]
+    e(0, __PRETTY_FUNCTION__);
+    ^
+c_files/pr81360.c:5:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr81360.c:6:9: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+typedef f, g;
+~~~~~~~ ^
+c_files/pr81360.c:6:12: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+typedef f, g;
+~~~~~~~    ^
+c_files/pr81360.c:7:30: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+__attribute__((optimize(0))) h() {
+                             ^
+c_files/pr81360.c:7:16: warning: unknown attribute 'optimize' ignored [-Wunknown-attributes]
+__attribute__((optimize(0))) h() {
+               ^
+c_files/pr81360.c:9:5: warning: incompatible integer to pointer conversion passing 'g' (aka 'int') to parameter of type 'void *' [-Wint-conversion]
+  b(i, sizeof(f));
+    ^
+c_files/pr81360.c:2:9: note: passing argument to parameter 'c' here
+b(void *c, a d) {
+        ^
+c_files/pr81360.c:10:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+10 warnings generated.
+TranslationUnitDecl 0x7fb6a50058d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb6a5005e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb6a5005b40 '__int128'
+|-TypedefDecl 0x7fb6a5005e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb6a5005b60 'unsigned __int128'
+|-TypedefDecl 0x7fb6a5006168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb6a5005f70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb6a5005ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb6a5006200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb6a50061c0 'char *'
+|   `-BuiltinType 0x7fb6a5005960 'char'
+|-TypedefDecl 0x7fb6a50064c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb6a5006470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb6a50062e0 'struct __va_list_tag'
+|     `-Record 0x7fb6a5006258 '__va_list_tag'
+|-TypedefDecl 0x7fb6a5006538 <c_files/pr81360.c:1:1, col:9> col:9 referenced a 'int'
+| `-BuiltinType 0x7fb6a50059c0 'int'
+|-FunctionDecl 0x7fb6a505afa8 <line:2:1, line:5:1> line:2:1 used b 'int (void *, a)'
+| |-ParmVarDecl 0x7fb6a505ae00 <col:3, col:9> col:9 used c 'void *'
+| |-ParmVarDecl 0x7fb6a505ae90 <col:12, col:14> col:14 d 'a':'int'
+| `-CompoundStmt 0x7fb6a505b398 <col:17, line:5:1>
+|   `-IfStmt 0x7fb6a505b360 <line:3:3, line:4:29>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fb6a505b0b8 <line:3:7> 'void *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fb6a505b090 <col:7> 'void *' lvalue ParmVar 0x7fb6a505ae00 'c' 'void *'
+|     |-CallExpr 0x7fb6a505b310 <line:4:5, col:29> 'int'
+|     | |-ImplicitCastExpr 0x7fb6a505b2f8 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7fb6a505b1b8 <col:5> 'int ()' Function 0x7fb6a505b120 'e' 'int ()'
+|     | |-IntegerLiteral 0x7fb6a505b1e0 <col:7> 'int' 0
+|     | `-ImplicitCastExpr 0x7fb6a505b348 <col:10> 'const char *' <ArrayToPointerDecay>
+|     |   `-PredefinedExpr 0x7fb6a505b2b0 <col:10> 'const char [17]' lvalue __PRETTY_FUNCTION__
+|     |     `-StringLiteral 0x7fb6a505b278 <col:10> 'const char [17]' lvalue "int b(void *, a)"
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fb6a505b120 <<invalid sloc>> col:5 implicit used e 'int ()'
+|-TypedefDecl 0x7fb6a505b3d0 <line:6:1, col:9> col:9 referenced f 'int'
+| `-BuiltinType 0x7fb6a50059c0 'int'
+|-TypedefDecl 0x7fb6a505b440 <col:1, col:12> col:12 referenced g 'int'
+| `-BuiltinType 0x7fb6a50059c0 'int'
+`-FunctionDecl 0x7fb6a505b4f8 <line:7:1, line:10:1> line:7:30 h 'int ()'
+  `-CompoundStmt 0x7fb6a505bbb8 <col:34, line:10:1>
+    |-DeclStmt 0x7fb6a505b620 <line:8:3, col:6>
+    | `-VarDecl 0x7fb6a505b5c0 <col:3, col:5> col:5 used i 'g':'int'
+    `-CallExpr 0x7fb6a505b750 <line:9:3, col:17> 'int'
+      |-ImplicitCastExpr 0x7fb6a505b738 <col:3> 'int (*)(void *, a)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb6a505b638 <col:3> 'int (void *, a)' Function 0x7fb6a505afa8 'b' 'int (void *, a)'
+      |-ImplicitCastExpr 0x7fb6a505b7a0 <col:5> 'void *' <IntegralToPointer>
+      | `-ImplicitCastExpr 0x7fb6a505b788 <col:5> 'g':'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb6a505b660 <col:5> 'g':'int' lvalue Var 0x7fb6a505b5c0 'i' 'g':'int'
+      `-ImplicitCastExpr 0x7fb6a505bba0 <col:8, col:16> 'a':'int' <IntegralCast>
+        `-UnaryExprOrTypeTraitExpr 0x7fb6a505b6c0 <col:8, col:16> 'unsigned long' sizeof 'f':'int'

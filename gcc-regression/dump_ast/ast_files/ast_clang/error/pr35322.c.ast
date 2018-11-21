@@ -1,0 +1,22 @@
+c_files/pr35322.c:4:1: error: expected "FILENAME" or <FILENAME>
+_Pragma("GCC dependency") /* { dg-error "#pragma dependency expects" } */
+^
+<scratch space>:2:16: note: expanded from here
+ GCC dependency
+               ^
+1 error generated.
+TranslationUnitDecl 0x7fbbc50264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbbc5026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbbc5026740 '__int128'
+|-TypedefDecl 0x7fbbc5026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbbc5026760 'unsigned __int128'
+|-TypedefDecl 0x7fbbc5026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbbc5026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbbc5026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbbc5026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbbc5026dc0 'char *'
+|   `-BuiltinType 0x7fbbc5026560 'char'
+`-TypedefDecl 0x7fbbc50270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fbbc5027070 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fbbc5026ee0 'struct __va_list_tag'
+      `-Record 0x7fbbc5026e58 '__va_list_tag'

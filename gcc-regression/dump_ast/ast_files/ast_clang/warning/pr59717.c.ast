@@ -1,0 +1,1926 @@
+c_files/pr59717.c:8:3: warning: implicitly declaring library function 'acos' with type 'double (double)' [-Wimplicit-function-declaration]
+  acos (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:8:3: note: include the header <math.h> or explicitly provide a declaration for 'acos'
+c_files/pr59717.c:10:3: warning: implicitly declaring library function 'acosh' with type 'double (double)' [-Wimplicit-function-declaration]
+  acosh (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:10:3: note: include the header <math.h> or explicitly provide a declaration for 'acosh'
+c_files/pr59717.c:12:3: warning: implicitly declaring library function 'asin' with type 'double (double)' [-Wimplicit-function-declaration]
+  asin (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:12:3: note: include the header <math.h> or explicitly provide a declaration for 'asin'
+c_files/pr59717.c:14:3: warning: implicitly declaring library function 'asinh' with type 'double (double)' [-Wimplicit-function-declaration]
+  asinh (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:14:3: note: include the header <math.h> or explicitly provide a declaration for 'asinh'
+c_files/pr59717.c:16:3: warning: implicitly declaring library function 'atan' with type 'double (double)' [-Wimplicit-function-declaration]
+  atan (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:16:3: note: include the header <math.h> or explicitly provide a declaration for 'atan'
+c_files/pr59717.c:18:3: warning: implicitly declaring library function 'atanh' with type 'double (double)' [-Wimplicit-function-declaration]
+  atanh (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:18:3: note: include the header <math.h> or explicitly provide a declaration for 'atanh'
+c_files/pr59717.c:20:3: warning: implicitly declaring library function 'atan2' with type 'double (double, double)' [-Wimplicit-function-declaration]
+  atan2 (d, d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:20:3: note: include the header <math.h> or explicitly provide a declaration for 'atan2'
+c_files/pr59717.c:22:3: warning: implicitly declaring library function 'cbrt' with type 'double (double)' [-Wimplicit-function-declaration]
+  cbrt (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:22:3: note: include the header <math.h> or explicitly provide a declaration for 'cbrt'
+c_files/pr59717.c:24:3: warning: implicitly declaring library function 'ceil' with type 'double (double)' [-Wimplicit-function-declaration]
+  ceil (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:24:3: note: include the header <math.h> or explicitly provide a declaration for 'ceil'
+c_files/pr59717.c:26:3: warning: implicitly declaring library function 'copysign' with type 'double (double, double)' [-Wimplicit-function-declaration]
+  copysign (d, d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:26:3: note: include the header <math.h> or explicitly provide a declaration for 'copysign'
+c_files/pr59717.c:28:3: warning: implicitly declaring library function 'cos' with type 'double (double)' [-Wimplicit-function-declaration]
+  cos (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:28:3: note: include the header <math.h> or explicitly provide a declaration for 'cos'
+c_files/pr59717.c:30:3: warning: implicitly declaring library function 'cosh' with type 'double (double)' [-Wimplicit-function-declaration]
+  cosh (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:30:3: note: include the header <math.h> or explicitly provide a declaration for 'cosh'
+c_files/pr59717.c:32:3: warning: implicitly declaring library function 'erf' with type 'double (double)' [-Wimplicit-function-declaration]
+  erf (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:32:3: note: include the header <math.h> or explicitly provide a declaration for 'erf'
+c_files/pr59717.c:34:3: warning: implicitly declaring library function 'erfc' with type 'double (double)' [-Wimplicit-function-declaration]
+  erfc (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:34:3: note: include the header <math.h> or explicitly provide a declaration for 'erfc'
+c_files/pr59717.c:36:3: warning: implicitly declaring library function 'exp' with type 'double (double)' [-Wimplicit-function-declaration]
+  exp (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:36:3: note: include the header <math.h> or explicitly provide a declaration for 'exp'
+c_files/pr59717.c:38:3: warning: implicitly declaring library function 'exp2' with type 'double (double)' [-Wimplicit-function-declaration]
+  exp2 (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:38:3: note: include the header <math.h> or explicitly provide a declaration for 'exp2'
+c_files/pr59717.c:40:3: warning: implicitly declaring library function 'expm1' with type 'double (double)' [-Wimplicit-function-declaration]
+  expm1 (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:40:3: note: include the header <math.h> or explicitly provide a declaration for 'expm1'
+c_files/pr59717.c:42:3: warning: implicitly declaring library function 'fabs' with type 'double (double)' [-Wimplicit-function-declaration]
+  fabs (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:42:3: note: include the header <math.h> or explicitly provide a declaration for 'fabs'
+c_files/pr59717.c:44:3: warning: implicitly declaring library function 'fdim' with type 'double (double, double)' [-Wimplicit-function-declaration]
+  fdim (d, d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:44:3: note: include the header <math.h> or explicitly provide a declaration for 'fdim'
+c_files/pr59717.c:46:3: warning: implicitly declaring library function 'floor' with type 'double (double)' [-Wimplicit-function-declaration]
+  floor (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:46:3: note: include the header <math.h> or explicitly provide a declaration for 'floor'
+c_files/pr59717.c:48:3: warning: implicitly declaring library function 'fma' with type 'double (double, double, double)' [-Wimplicit-function-declaration]
+  fma (d, d, d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:48:3: note: include the header <math.h> or explicitly provide a declaration for 'fma'
+c_files/pr59717.c:50:3: warning: implicitly declaring library function 'fmax' with type 'double (double, double)' [-Wimplicit-function-declaration]
+  fmax (d, d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:50:3: note: include the header <math.h> or explicitly provide a declaration for 'fmax'
+c_files/pr59717.c:52:3: warning: implicitly declaring library function 'fmin' with type 'double (double, double)' [-Wimplicit-function-declaration]
+  fmin (d, d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:52:3: note: include the header <math.h> or explicitly provide a declaration for 'fmin'
+c_files/pr59717.c:54:3: warning: implicitly declaring library function 'fmod' with type 'double (double, double)' [-Wimplicit-function-declaration]
+  fmod (d, d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:54:3: note: include the header <math.h> or explicitly provide a declaration for 'fmod'
+c_files/pr59717.c:56:3: warning: implicitly declaring library function 'frexp' with type 'double (double, int *)' [-Wimplicit-function-declaration]
+  frexp (d, ex); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:56:3: note: include the header <math.h> or explicitly provide a declaration for 'frexp'
+c_files/pr59717.c:58:3: warning: implicitly declaring library function 'hypot' with type 'double (double, double)' [-Wimplicit-function-declaration]
+  hypot (d, d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:58:3: note: include the header <math.h> or explicitly provide a declaration for 'hypot'
+c_files/pr59717.c:61:3: warning: implicitly declaring library function 'ilogb' with type 'int (double)' [-Wimplicit-function-declaration]
+  ilogb (d);
+  ^
+c_files/pr59717.c:61:3: note: include the header <math.h> or explicitly provide a declaration for 'ilogb'
+c_files/pr59717.c:62:3: warning: implicitly declaring library function 'ldexp' with type 'double (double, int)' [-Wimplicit-function-declaration]
+  ldexp (d, *ex); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:62:3: note: include the header <math.h> or explicitly provide a declaration for 'ldexp'
+c_files/pr59717.c:64:3: warning: implicitly declaring library function 'lgamma' with type 'double (double)' [-Wimplicit-function-declaration]
+  lgamma (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:64:3: note: include the header <math.h> or explicitly provide a declaration for 'lgamma'
+c_files/pr59717.c:66:3: warning: implicitly declaring library function 'llrint' with type 'long long (double)' [-Wimplicit-function-declaration]
+  llrint (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:66:3: note: include the header <math.h> or explicitly provide a declaration for 'llrint'
+c_files/pr59717.c:68:3: warning: implicitly declaring library function 'llround' with type 'long long (double)' [-Wimplicit-function-declaration]
+  llround (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:68:3: note: include the header <math.h> or explicitly provide a declaration for 'llround'
+c_files/pr59717.c:70:3: warning: implicitly declaring library function 'log' with type 'double (double)' [-Wimplicit-function-declaration]
+  log (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:70:3: note: include the header <math.h> or explicitly provide a declaration for 'log'
+c_files/pr59717.c:72:3: warning: implicitly declaring library function 'log10' with type 'double (double)' [-Wimplicit-function-declaration]
+  log10 (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:72:3: note: include the header <math.h> or explicitly provide a declaration for 'log10'
+c_files/pr59717.c:74:3: warning: implicitly declaring library function 'log1p' with type 'double (double)' [-Wimplicit-function-declaration]
+  log1p (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:74:3: note: include the header <math.h> or explicitly provide a declaration for 'log1p'
+c_files/pr59717.c:76:3: warning: implicitly declaring library function 'log2' with type 'double (double)' [-Wimplicit-function-declaration]
+  log2 (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:76:3: note: include the header <math.h> or explicitly provide a declaration for 'log2'
+c_files/pr59717.c:78:3: warning: implicitly declaring library function 'logb' with type 'double (double)' [-Wimplicit-function-declaration]
+  logb (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:78:3: note: include the header <math.h> or explicitly provide a declaration for 'logb'
+c_files/pr59717.c:80:3: warning: implicitly declaring library function 'lrint' with type 'long (double)' [-Wimplicit-function-declaration]
+  lrint (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:80:3: note: include the header <math.h> or explicitly provide a declaration for 'lrint'
+c_files/pr59717.c:82:3: warning: implicitly declaring library function 'lround' with type 'long (double)' [-Wimplicit-function-declaration]
+  lround (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:82:3: note: include the header <math.h> or explicitly provide a declaration for 'lround'
+c_files/pr59717.c:84:3: warning: implicitly declaring library function 'modf' with type 'double (double, double *)' [-Wimplicit-function-declaration]
+  modf (d, dp); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:84:3: note: include the header <math.h> or explicitly provide a declaration for 'modf'
+c_files/pr59717.c:86:3: warning: implicitly declaring library function 'nan' with type 'double (const char *)' [-Wimplicit-function-declaration]
+  nan (""); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:86:3: note: include the header <math.h> or explicitly provide a declaration for 'nan'
+c_files/pr59717.c:88:3: warning: implicitly declaring library function 'nearbyint' with type 'double (double)' [-Wimplicit-function-declaration]
+  nearbyint (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:88:3: note: include the header <math.h> or explicitly provide a declaration for 'nearbyint'
+c_files/pr59717.c:90:3: warning: implicitly declaring library function 'nextafter' with type 'double (double, double)' [-Wimplicit-function-declaration]
+  nextafter (d, d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:90:3: note: include the header <math.h> or explicitly provide a declaration for 'nextafter'
+c_files/pr59717.c:92:3: warning: implicitly declaring library function 'nexttoward' with type 'double (double, long double)' [-Wimplicit-function-declaration]
+  nexttoward (d, 20.0L); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:92:3: note: include the header <math.h> or explicitly provide a declaration for 'nexttoward'
+c_files/pr59717.c:94:3: warning: implicitly declaring library function 'pow' with type 'double (double, double)' [-Wimplicit-function-declaration]
+  pow (d, d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:94:3: note: include the header <math.h> or explicitly provide a declaration for 'pow'
+c_files/pr59717.c:96:3: warning: implicitly declaring library function 'remainder' with type 'double (double, double)' [-Wimplicit-function-declaration]
+  remainder (d, d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:96:3: note: include the header <math.h> or explicitly provide a declaration for 'remainder'
+c_files/pr59717.c:98:3: warning: implicit declaration of function 'remquo' is invalid in C99 [-Wimplicit-function-declaration]
+  remquo (d, d, ex); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:100:3: warning: implicitly declaring library function 'rint' with type 'double (double)' [-Wimplicit-function-declaration]
+  rint (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:100:3: note: include the header <math.h> or explicitly provide a declaration for 'rint'
+c_files/pr59717.c:102:3: warning: implicitly declaring library function 'round' with type 'double (double)' [-Wimplicit-function-declaration]
+  round (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:102:3: note: include the header <math.h> or explicitly provide a declaration for 'round'
+c_files/pr59717.c:104:3: warning: implicitly declaring library function 'scalbln' with type 'double (double, long)' [-Wimplicit-function-declaration]
+  scalbln (d, 100L); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:104:3: note: include the header <math.h> or explicitly provide a declaration for 'scalbln'
+c_files/pr59717.c:106:3: warning: implicitly declaring library function 'scalbn' with type 'double (double, int)' [-Wimplicit-function-declaration]
+  scalbn (d, 100); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:106:3: note: include the header <math.h> or explicitly provide a declaration for 'scalbn'
+c_files/pr59717.c:108:3: warning: implicitly declaring library function 'sin' with type 'double (double)' [-Wimplicit-function-declaration]
+  sin (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:108:3: note: include the header <math.h> or explicitly provide a declaration for 'sin'
+c_files/pr59717.c:110:3: warning: implicitly declaring library function 'sinh' with type 'double (double)' [-Wimplicit-function-declaration]
+  sinh (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:110:3: note: include the header <math.h> or explicitly provide a declaration for 'sinh'
+c_files/pr59717.c:112:3: warning: implicit declaration of function 'sincos' is invalid in C99 [-Wimplicit-function-declaration]
+  sincos (d, dp, dp); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:114:3: warning: implicitly declaring library function 'sqrt' with type 'double (double)' [-Wimplicit-function-declaration]
+  sqrt (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:114:3: note: include the header <math.h> or explicitly provide a declaration for 'sqrt'
+c_files/pr59717.c:116:3: warning: implicitly declaring library function 'tan' with type 'double (double)' [-Wimplicit-function-declaration]
+  tan (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:116:3: note: include the header <math.h> or explicitly provide a declaration for 'tan'
+c_files/pr59717.c:118:3: warning: implicitly declaring library function 'tanh' with type 'double (double)' [-Wimplicit-function-declaration]
+  tanh (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:118:3: note: include the header <math.h> or explicitly provide a declaration for 'tanh'
+c_files/pr59717.c:120:3: warning: implicitly declaring library function 'tgamma' with type 'double (double)' [-Wimplicit-function-declaration]
+  tgamma (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:120:3: note: include the header <math.h> or explicitly provide a declaration for 'tgamma'
+c_files/pr59717.c:122:3: warning: implicitly declaring library function 'trunc' with type 'double (double)' [-Wimplicit-function-declaration]
+  trunc (d); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:122:3: note: include the header <math.h> or explicitly provide a declaration for 'trunc'
+c_files/pr59717.c:8:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  acos (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:10:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  acosh (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:12:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  asin (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:14:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  asinh (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:16:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  atan (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:18:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  atanh (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:20:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  atan2 (d, d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~~~~
+c_files/pr59717.c:22:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  cbrt (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:24:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  ceil (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:26:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  copysign (d, d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~~~~  ~~~~
+c_files/pr59717.c:28:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  cos (d); /* { dg-warning "incompatible implicit" } */
+  ^~~  ~
+c_files/pr59717.c:30:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  cosh (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:32:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  erf (d); /* { dg-warning "incompatible implicit" } */
+  ^~~  ~
+c_files/pr59717.c:34:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  erfc (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:36:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  exp (d); /* { dg-warning "incompatible implicit" } */
+  ^~~  ~
+c_files/pr59717.c:38:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  exp2 (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:40:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  expm1 (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:42:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  fabs (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:44:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  fdim (d, d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~~~~
+c_files/pr59717.c:46:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  floor (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:48:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  fma (d, d, d); /* { dg-warning "incompatible implicit" } */
+  ^~~  ~~~~~~~
+c_files/pr59717.c:50:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  fmax (d, d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~~~~
+c_files/pr59717.c:52:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  fmin (d, d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~~~~
+c_files/pr59717.c:54:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  fmod (d, d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~~~~
+c_files/pr59717.c:58:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  hypot (d, d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~~~~
+c_files/pr59717.c:61:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  ilogb (d);
+  ^~~~~  ~
+c_files/pr59717.c:62:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  ldexp (d, *ex); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~~~~~~
+c_files/pr59717.c:66:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  llrint (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~~  ~
+c_files/pr59717.c:68:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  llround (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~~~  ~
+c_files/pr59717.c:70:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  log (d); /* { dg-warning "incompatible implicit" } */
+  ^~~  ~
+c_files/pr59717.c:72:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  log10 (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:74:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  log1p (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:76:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  log2 (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:78:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  logb (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:80:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  lrint (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:82:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  lround (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~~  ~
+c_files/pr59717.c:86:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  nan (""); /* { dg-warning "incompatible implicit" } */
+  ^~~  ~~
+c_files/pr59717.c:88:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  nearbyint (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~~~~~  ~
+c_files/pr59717.c:90:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  nextafter (d, d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~~~~~  ~~~~
+c_files/pr59717.c:92:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  nexttoward (d, 20.0L); /* { dg-warning "incompatible implicit" } */
+  ^~~~~~~~~~  ~~~~~~~~
+c_files/pr59717.c:94:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  pow (d, d); /* { dg-warning "incompatible implicit" } */
+  ^~~  ~~~~
+c_files/pr59717.c:96:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  remainder (d, d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~~~~~  ~~~~
+c_files/pr59717.c:100:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  rint (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:102:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  round (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:104:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  scalbln (d, 100L); /* { dg-warning "incompatible implicit" } */
+  ^~~~~~~  ~~~~~~~
+c_files/pr59717.c:106:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  scalbn (d, 100); /* { dg-warning "incompatible implicit" } */
+  ^~~~~~  ~~~~~~
+c_files/pr59717.c:108:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  sin (d); /* { dg-warning "incompatible implicit" } */
+  ^~~  ~
+c_files/pr59717.c:110:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  sinh (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:114:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  sqrt (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:116:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  tan (d); /* { dg-warning "incompatible implicit" } */
+  ^~~  ~
+c_files/pr59717.c:118:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  tanh (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:120:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  tgamma (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~~  ~
+c_files/pr59717.c:122:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  trunc (d); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:129:3: warning: implicitly declaring library function 'cabs' with type 'double (_Complex double)' [-Wimplicit-function-declaration]
+  cabs (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:129:3: note: include the header <complex.h> or explicitly provide a declaration for 'cabs'
+c_files/pr59717.c:131:3: warning: implicitly declaring library function 'cacos' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  cacos (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:131:3: note: include the header <complex.h> or explicitly provide a declaration for 'cacos'
+c_files/pr59717.c:133:3: warning: implicitly declaring library function 'cacosh' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  cacosh (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:133:3: note: include the header <complex.h> or explicitly provide a declaration for 'cacosh'
+c_files/pr59717.c:135:3: warning: implicitly declaring library function 'carg' with type 'double (_Complex double)' [-Wimplicit-function-declaration]
+  carg (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:135:3: note: include the header <complex.h> or explicitly provide a declaration for 'carg'
+c_files/pr59717.c:137:3: warning: implicitly declaring library function 'casin' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  casin (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:137:3: note: include the header <complex.h> or explicitly provide a declaration for 'casin'
+c_files/pr59717.c:139:3: warning: implicitly declaring library function 'casinh' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  casinh (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:139:3: note: include the header <complex.h> or explicitly provide a declaration for 'casinh'
+c_files/pr59717.c:141:3: warning: implicitly declaring library function 'catan' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  catan (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:141:3: note: include the header <complex.h> or explicitly provide a declaration for 'catan'
+c_files/pr59717.c:143:3: warning: implicitly declaring library function 'catanh' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  catanh (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:143:3: note: include the header <complex.h> or explicitly provide a declaration for 'catanh'
+c_files/pr59717.c:145:3: warning: implicitly declaring library function 'ccos' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  ccos (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:145:3: note: include the header <complex.h> or explicitly provide a declaration for 'ccos'
+c_files/pr59717.c:147:3: warning: implicitly declaring library function 'ccosh' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  ccosh (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:147:3: note: include the header <complex.h> or explicitly provide a declaration for 'ccosh'
+c_files/pr59717.c:149:3: warning: implicitly declaring library function 'cexp' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  cexp (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:149:3: note: include the header <complex.h> or explicitly provide a declaration for 'cexp'
+c_files/pr59717.c:151:3: warning: implicitly declaring library function 'cimag' with type 'double (_Complex double)' [-Wimplicit-function-declaration]
+  cimag (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:151:3: note: include the header <complex.h> or explicitly provide a declaration for 'cimag'
+c_files/pr59717.c:153:3: warning: implicitly declaring library function 'clog' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  clog (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:153:3: note: include the header <complex.h> or explicitly provide a declaration for 'clog'
+c_files/pr59717.c:155:3: warning: implicitly declaring library function 'conj' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  conj (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:155:3: note: include the header <complex.h> or explicitly provide a declaration for 'conj'
+c_files/pr59717.c:157:3: warning: implicitly declaring library function 'cpow' with type '_Complex double (_Complex double, _Complex double)' [-Wimplicit-function-declaration]
+  cpow (z, z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:157:3: note: include the header <complex.h> or explicitly provide a declaration for 'cpow'
+c_files/pr59717.c:159:3: warning: implicitly declaring library function 'cproj' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  cproj (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:159:3: note: include the header <complex.h> or explicitly provide a declaration for 'cproj'
+c_files/pr59717.c:161:3: warning: implicitly declaring library function 'creal' with type 'double (_Complex double)' [-Wimplicit-function-declaration]
+  creal (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:161:3: note: include the header <complex.h> or explicitly provide a declaration for 'creal'
+c_files/pr59717.c:163:3: warning: implicitly declaring library function 'csin' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  csin (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:163:3: note: include the header <complex.h> or explicitly provide a declaration for 'csin'
+c_files/pr59717.c:165:3: warning: implicitly declaring library function 'csinh' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  csinh (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:165:3: note: include the header <complex.h> or explicitly provide a declaration for 'csinh'
+c_files/pr59717.c:167:3: warning: implicitly declaring library function 'csqrt' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  csqrt (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:167:3: note: include the header <complex.h> or explicitly provide a declaration for 'csqrt'
+c_files/pr59717.c:169:3: warning: implicitly declaring library function 'ctan' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  ctan (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:169:3: note: include the header <complex.h> or explicitly provide a declaration for 'ctan'
+c_files/pr59717.c:171:3: warning: implicitly declaring library function 'ctanh' with type '_Complex double (_Complex double)' [-Wimplicit-function-declaration]
+  ctanh (z); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:171:3: note: include the header <complex.h> or explicitly provide a declaration for 'ctanh'
+c_files/pr59717.c:129:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  cabs (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:131:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  cacos (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:133:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  cacosh (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~~~  ~
+c_files/pr59717.c:135:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  carg (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:137:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  casin (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:139:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  casinh (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~~~  ~
+c_files/pr59717.c:141:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  catan (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:143:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  catanh (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~~~  ~
+c_files/pr59717.c:145:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  ccos (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:147:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  ccosh (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:149:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  cexp (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:151:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  cimag (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:153:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  clog (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:155:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  conj (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:157:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  cpow (z, z); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~~~~
+c_files/pr59717.c:159:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  cproj (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:161:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  creal (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:163:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  csin (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:165:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  csinh (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:167:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  csqrt (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:169:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  ctan (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~
+c_files/pr59717.c:171:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  ctanh (z); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~
+c_files/pr59717.c:178:3: warning: implicitly declaring library function 'memchr' with type 'void *(const void *, int, unsigned long)' [-Wimplicit-function-declaration]
+  memchr (p, 2, sz); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:178:3: note: include the header <string.h> or explicitly provide a declaration for 'memchr'
+c_files/pr59717.c:181:3: warning: implicitly declaring library function 'memcmp' with type 'int (const void *, const void *, unsigned long)' [-Wimplicit-function-declaration]
+  memcmp (p, q, sz);
+  ^
+c_files/pr59717.c:181:3: note: include the header <string.h> or explicitly provide a declaration for 'memcmp'
+c_files/pr59717.c:182:3: warning: implicitly declaring library function 'memcpy' with type 'void *(void *, const void *, unsigned long)' [-Wimplicit-function-declaration]
+  memcpy (p, q, sz); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:182:3: note: include the header <string.h> or explicitly provide a declaration for 'memcpy'
+c_files/pr59717.c:184:3: warning: implicitly declaring library function 'memmove' with type 'void *(void *, const void *, unsigned long)' [-Wimplicit-function-declaration]
+  memmove (p, q, sz); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:184:3: note: include the header <string.h> or explicitly provide a declaration for 'memmove'
+c_files/pr59717.c:186:3: warning: implicitly declaring library function 'memset' with type 'void *(void *, int, unsigned long)' [-Wimplicit-function-declaration]
+  memset (p, 0, sz); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:186:3: note: include the header <string.h> or explicitly provide a declaration for 'memset'
+c_files/pr59717.c:188:3: warning: implicitly declaring library function 'strcat' with type 'char *(char *, const char *)' [-Wimplicit-function-declaration]
+  strcat (p, q); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:188:3: note: include the header <string.h> or explicitly provide a declaration for 'strcat'
+c_files/pr59717.c:190:3: warning: implicitly declaring library function 'strchr' with type 'char *(const char *, int)' [-Wimplicit-function-declaration]
+  strchr (p, 'a'); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:190:3: note: include the header <string.h> or explicitly provide a declaration for 'strchr'
+c_files/pr59717.c:193:3: warning: implicitly declaring library function 'strcmp' with type 'int (const char *, const char *)' [-Wimplicit-function-declaration]
+  strcmp (p, q);
+  ^
+c_files/pr59717.c:193:3: note: include the header <string.h> or explicitly provide a declaration for 'strcmp'
+c_files/pr59717.c:194:3: warning: implicitly declaring library function 'strcpy' with type 'char *(char *, const char *)' [-Wimplicit-function-declaration]
+  strcpy (p, q); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:194:3: note: include the header <string.h> or explicitly provide a declaration for 'strcpy'
+c_files/pr59717.c:196:3: warning: implicitly declaring library function 'strcspn' with type 'unsigned long (const char *, const char *)' [-Wimplicit-function-declaration]
+  strcspn (p, q); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:196:3: note: include the header <string.h> or explicitly provide a declaration for 'strcspn'
+c_files/pr59717.c:198:3: warning: implicitly declaring library function 'strlen' with type 'unsigned long (const char *)' [-Wimplicit-function-declaration]
+  strlen (p); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:198:3: note: include the header <string.h> or explicitly provide a declaration for 'strlen'
+c_files/pr59717.c:200:3: warning: implicitly declaring library function 'strncat' with type 'char *(char *, const char *, unsigned long)' [-Wimplicit-function-declaration]
+  strncat (p, q, sz); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:200:3: note: include the header <string.h> or explicitly provide a declaration for 'strncat'
+c_files/pr59717.c:203:3: warning: implicitly declaring library function 'strncmp' with type 'int (const char *, const char *, unsigned long)' [-Wimplicit-function-declaration]
+  strncmp (p, q, sz);
+  ^
+c_files/pr59717.c:203:3: note: include the header <string.h> or explicitly provide a declaration for 'strncmp'
+c_files/pr59717.c:204:3: warning: implicitly declaring library function 'strncpy' with type 'char *(char *, const char *, unsigned long)' [-Wimplicit-function-declaration]
+  strncpy (p, q, sz); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:204:3: note: include the header <string.h> or explicitly provide a declaration for 'strncpy'
+c_files/pr59717.c:206:3: warning: implicitly declaring library function 'strpbrk' with type 'char *(const char *, const char *)' [-Wimplicit-function-declaration]
+  strpbrk (p, q); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:206:3: note: include the header <string.h> or explicitly provide a declaration for 'strpbrk'
+c_files/pr59717.c:208:3: warning: implicitly declaring library function 'strrchr' with type 'char *(const char *, int)' [-Wimplicit-function-declaration]
+  strrchr (p, 'q'); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:208:3: note: include the header <string.h> or explicitly provide a declaration for 'strrchr'
+c_files/pr59717.c:210:3: warning: implicitly declaring library function 'strspn' with type 'unsigned long (const char *, const char *)' [-Wimplicit-function-declaration]
+  strspn (p, q); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:210:3: note: include the header <string.h> or explicitly provide a declaration for 'strspn'
+c_files/pr59717.c:212:3: warning: implicitly declaring library function 'strstr' with type 'char *(const char *, const char *)' [-Wimplicit-function-declaration]
+  strstr (p, q); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:212:3: note: include the header <string.h> or explicitly provide a declaration for 'strstr'
+c_files/pr59717.c:222:3: warning: implicitly declaring library function 'fprintf' with type 'int (FILE *, const char *, ...)' [-Wimplicit-function-declaration]
+  fprintf (fp, ""); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:222:3: note: include the header <stdio.h> or explicitly provide a declaration for 'fprintf'
+c_files/pr59717.c:224:3: warning: implicitly declaring library function 'fscanf' with type 'int (FILE *restrict, const char *restrict, ...)' [-Wimplicit-function-declaration]
+  fscanf (fp, ""); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:224:3: note: include the header <stdio.h> or explicitly provide a declaration for 'fscanf'
+c_files/pr59717.c:226:3: warning: implicit declaration of function 'fwrite' is invalid in C99 [-Wimplicit-function-declaration]
+  fwrite (p, sz, sz, fp); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:228:3: warning: implicitly declaring library function 'printf' with type 'int (const char *, ...)' [-Wimplicit-function-declaration]
+  printf (""); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:228:3: note: include the header <stdio.h> or explicitly provide a declaration for 'printf'
+c_files/pr59717.c:230:3: warning: implicitly declaring library function 'scanf' with type 'int (const char *restrict, ...)' [-Wimplicit-function-declaration]
+  scanf (""); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:230:3: note: include the header <stdio.h> or explicitly provide a declaration for 'scanf'
+c_files/pr59717.c:232:3: warning: implicitly declaring library function 'snprintf' with type 'int (char *, unsigned long, const char *, ...)' [-Wimplicit-function-declaration]
+  snprintf ("", sz, ""); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:232:3: note: include the header <stdio.h> or explicitly provide a declaration for 'snprintf'
+c_files/pr59717.c:234:3: warning: implicitly declaring library function 'sprintf' with type 'int (char *, const char *, ...)' [-Wimplicit-function-declaration]
+  sprintf ("", ""); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:234:3: note: include the header <stdio.h> or explicitly provide a declaration for 'sprintf'
+c_files/pr59717.c:236:3: warning: implicitly declaring library function 'sscanf' with type 'int (const char *restrict, const char *restrict, ...)' [-Wimplicit-function-declaration]
+  sscanf ("", ""); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:236:3: note: include the header <stdio.h> or explicitly provide a declaration for 'sscanf'
+c_files/pr59717.c:243:3: warning: implicitly declaring library function 'abort' with type 'void (void) __attribute__((noreturn))' [-Wimplicit-function-declaration]
+  abort (); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:243:3: note: include the header <stdlib.h> or explicitly provide a declaration for 'abort'
+c_files/pr59717.c:245:3: warning: implicitly declaring library function 'calloc' with type 'void *(unsigned long, unsigned long)' [-Wimplicit-function-declaration]
+  calloc (sz, 1); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:245:3: note: include the header <stdlib.h> or explicitly provide a declaration for 'calloc'
+c_files/pr59717.c:247:3: warning: implicitly declaring library function 'exit' with type 'void (int) __attribute__((noreturn))' [-Wimplicit-function-declaration]
+  exit (1); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:247:3: note: include the header <stdlib.h> or explicitly provide a declaration for 'exit'
+c_files/pr59717.c:249:3: warning: implicit declaration of function 'free' is invalid in C99 [-Wimplicit-function-declaration]
+  free (p); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:251:3: warning: implicitly declaring library function 'labs' with type 'long (long)' [-Wimplicit-function-declaration]
+  labs (1L); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:251:3: note: include the header <stdlib.h> or explicitly provide a declaration for 'labs'
+c_files/pr59717.c:253:3: warning: implicitly declaring library function 'llabs' with type 'long long (long long)' [-Wimplicit-function-declaration]
+  llabs (1LL); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:253:3: note: include the header <stdlib.h> or explicitly provide a declaration for 'llabs'
+c_files/pr59717.c:255:3: warning: implicitly declaring library function 'malloc' with type 'void *(unsigned long)' [-Wimplicit-function-declaration]
+  malloc (sz); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:255:3: note: include the header <stdlib.h> or explicitly provide a declaration for 'malloc'
+c_files/pr59717.c:257:3: warning: implicitly declaring library function 'realloc' with type 'void *(void *, unsigned long)' [-Wimplicit-function-declaration]
+  realloc (p, sz); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:257:3: note: include the header <stdlib.h> or explicitly provide a declaration for 'realloc'
+c_files/pr59717.c:259:3: warning: implicit declaration of function 'aligned_alloc' is invalid in C99 [-Wimplicit-function-declaration]
+  aligned_alloc (sz, sz); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:251:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  labs (1L); /* { dg-warning "incompatible implicit" } */
+  ^~~~  ~~
+c_files/pr59717.c:253:3: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+  llabs (1LL); /* { dg-warning "incompatible implicit" } */
+  ^~~~~  ~~~
+c_files/pr59717.c:266:3: warning: implicit declaration of function 'imaxabs' is invalid in C99 [-Wimplicit-function-declaration]
+  imaxabs (j); /* { dg-warning "incompatible implicit" } */
+  ^
+c_files/pr59717.c:275:3: warning: implicit declaration of function 'strftime' is invalid in C99 [-Wimplicit-function-declaration]
+  strftime (s, sz, "", tm); /* { dg-warning "incompatible implicit" } */
+  ^
+194 warnings generated.
+TranslationUnitDecl 0x7f98a88252d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f98a8825820 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f98a8825540 '__int128'
+|-TypedefDecl 0x7f98a8825890 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f98a8825560 'unsigned __int128'
+|-TypedefDecl 0x7f98a8825b68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f98a8825970 'struct __NSConstantString_tag'
+|   `-Record 0x7f98a88258e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f98a8825c00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f98a8825bc0 'char *'
+|   `-BuiltinType 0x7f98a8825360 'char'
+|-TypedefDecl 0x7f98a8825ec8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f98a8825e70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f98a8825ce0 'struct __va_list_tag'
+|     `-Record 0x7f98a8825c58 '__va_list_tag'
+|-FunctionDecl 0x7f98a887a180 <c_files/pr59717.c:5:1, line:124:1> line:6:1 math 'void (double, int *, double *)'
+| |-ParmVarDecl 0x7f98a8825f38 <col:7, col:14> col:14 used d 'double'
+| |-ParmVarDecl 0x7f98a887a000 <col:17, col:22> col:22 used ex 'int *'
+| |-ParmVarDecl 0x7f98a887a0a0 <col:26, col:34> col:34 used dp 'double *'
+| `-CompoundStmt 0x7f98a8003728 <line:7:1, line:124:1>
+|   |-CallExpr 0x7f98a887a850 <line:8:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887a838 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887a7b8 <col:3> 'double (double)' Function 0x7f98a887a660 'acos' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887a880 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887a7e0 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887aa58 <line:10:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887aa40 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887a9f0 <col:3> 'double (double)' Function 0x7f98a887a898 'acosh' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887aa88 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887aa18 <col:10> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887ac60 <line:12:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887ac48 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887abf8 <col:3> 'double (double)' Function 0x7f98a887aaa0 'asin' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887ac90 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887ac20 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887ae68 <line:14:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887ae50 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887ae00 <col:3> 'double (double)' Function 0x7f98a887aca8 'asinh' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887ae98 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887ae28 <col:10> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887b078 <line:16:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887b060 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887b010 <col:3> 'double (double)' Function 0x7f98a887aeb0 'atan' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887b0a8 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887b038 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887b280 <line:18:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887b268 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887b218 <col:3> 'double (double)' Function 0x7f98a887b0c0 'atanh' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887b2b0 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887b240 <col:10> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887b590 <line:20:3, col:14> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887b578 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887b4d0 <col:3> 'double (double, double)' Function 0x7f98a887b310 'atan2' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f98a887b5c8 <col:10> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a887b4f8 <col:10> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f98a887b5e0 <col:13> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887b520 <col:13> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887b7b8 <line:22:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887b7a0 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887b750 <col:3> 'double (double)' Function 0x7f98a887b5f8 'cbrt' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887b7e8 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887b778 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887b9c0 <line:24:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887b9a8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887b958 <col:3> 'double (double)' Function 0x7f98a887b800 'ceil' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887b9f0 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887b980 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887bc58 <line:26:3, col:17> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887bc40 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887bbc8 <col:3> 'double (double, double)' Function 0x7f98a887ba08 'copysign' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f98a887bc90 <col:13> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a887bbf0 <col:13> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f98a887bca8 <col:16> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887bc18 <col:16> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887be80 <line:28:3, col:9> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887be68 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887be18 <col:3> 'double (double)' Function 0x7f98a887bcc0 'cos' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887beb0 <col:8> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887be40 <col:8> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887c0b0 <line:30:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887c098 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887c048 <col:3> 'double (double)' Function 0x7f98a887bec8 'cosh' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887c0e0 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887c070 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887c2b8 <line:32:3, col:9> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887c2a0 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887c250 <col:3> 'double (double)' Function 0x7f98a887c0f8 'erf' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887c2e8 <col:8> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887c278 <col:8> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887c4c0 <line:34:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887c4a8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887c458 <col:3> 'double (double)' Function 0x7f98a887c300 'erfc' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887c4f0 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887c480 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887c6c8 <line:36:3, col:9> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887c6b0 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887c660 <col:3> 'double (double)' Function 0x7f98a887c508 'exp' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887c6f8 <col:8> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887c688 <col:8> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887c8d0 <line:38:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887c8b8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887c868 <col:3> 'double (double)' Function 0x7f98a887c710 'exp2' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887c900 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887c890 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887cad8 <line:40:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887cac0 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887ca70 <col:3> 'double (double)' Function 0x7f98a887c918 'expm1' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887cb08 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887ca98 <col:10> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887cce0 <line:42:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887ccc8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887cc78 <col:3> 'double (double)' Function 0x7f98a887cb20 'fabs' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887cd10 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887cca0 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887cf78 <line:44:3, col:13> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887cf60 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887cee8 <col:3> 'double (double, double)' Function 0x7f98a887cd28 'fdim' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f98a887cfb0 <col:9> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a887cf10 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f98a887cfc8 <col:12> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887cf38 <col:12> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887d1c0 <line:46:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887d1a8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887d158 <col:3> 'double (double)' Function 0x7f98a887d000 'floor' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887d1f0 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887d180 <col:10> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887d560 <line:48:3, col:15> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887d548 <col:3> 'double (*)(double, double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887d480 <col:3> 'double (double, double, double)' Function 0x7f98a887d258 'fma' 'double (double, double, double)'
+|   | |-ImplicitCastExpr 0x7f98a887d5a0 <col:8> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a887d4a8 <col:8> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | |-ImplicitCastExpr 0x7f98a887d5b8 <col:11> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a887d4d0 <col:11> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f98a887d5d0 <col:14> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887d4f8 <col:14> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887d838 <line:50:3, col:13> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887d820 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887d7a8 <col:3> 'double (double, double)' Function 0x7f98a887d5e8 'fmax' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f98a887d870 <col:9> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a887d7d0 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f98a887d888 <col:12> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887d7f8 <col:12> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887daf0 <line:52:3, col:13> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887dad8 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887da60 <col:3> 'double (double, double)' Function 0x7f98a887d8a0 'fmin' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f98a887db28 <col:9> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a887da88 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f98a887db40 <col:12> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887dab0 <col:12> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887dda8 <line:54:3, col:13> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887dd90 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887dd18 <col:3> 'double (double, double)' Function 0x7f98a887db58 'fmod' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f98a887dde0 <col:9> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a887dd40 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f98a887ddf8 <col:12> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887dd68 <col:12> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887e0f0 <line:56:3, col:15> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887e0d8 <col:3> 'double (*)(double, int *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887e000 <col:3> 'double (double, int *)' Function 0x7f98a887de50 'frexp' 'double (double, int *)'
+|   | |-ImplicitCastExpr 0x7f98a887e128 <col:10> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a887e028 <col:10> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f98a887e140 <col:13> 'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887e050 <col:13> 'int *' lvalue ParmVar 0x7f98a887a000 'ex' 'int *'
+|   |-CallExpr 0x7f98a887e3a8 <line:58:3, col:14> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887e390 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887e318 <col:3> 'double (double, double)' Function 0x7f98a887e158 'hypot' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f98a887e3e0 <col:10> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a887e340 <col:10> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f98a887e3f8 <col:13> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887e368 <col:13> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887e630 <line:61:3, col:11> 'int'
+|   | |-ImplicitCastExpr 0x7f98a887e618 <col:3> 'int (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887e5a0 <col:3> 'int (double)' Function 0x7f98a887e448 'ilogb' 'int (double)'
+|   | `-ImplicitCastExpr 0x7f98a887e660 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887e5c8 <col:10> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887e970 <line:62:3, col:16> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887e958 <col:3> 'double (*)(double, int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887e880 <col:3> 'double (double, int)' Function 0x7f98a887e6c0 'ldexp' 'double (double, int)'
+|   | |-ImplicitCastExpr 0x7f98a887e9a8 <col:10> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a887e8a8 <col:10> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f98a887e9c0 <col:13, col:14> 'int' <LValueToRValue>
+|   |   `-UnaryOperator 0x7f98a887e910 <col:13, col:14> 'int' lvalue prefix '*'
+|   |     `-ImplicitCastExpr 0x7f98a887e8f8 <col:14> 'int *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f98a887e8d0 <col:14> 'int *' lvalue ParmVar 0x7f98a887a000 'ex' 'int *'
+|   |-CallExpr 0x7f98a887eb88 <line:64:3, col:12> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887eb70 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887eb20 <col:3> 'double (double)' Function 0x7f98a887e9d8 'lgamma' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a887ebb8 <col:11> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887eb48 <col:11> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a887edf0 <line:66:3, col:12> 'long long'
+|   | |-ImplicitCastExpr 0x7f98a887edd8 <col:3> 'long long (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887ed60 <col:3> 'long long (double)' Function 0x7f98a887ec08 'llrint' 'long long (double)'
+|   | `-ImplicitCastExpr 0x7f98a887ee20 <col:11> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887ed88 <col:11> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a7801000 <line:68:3, col:13> 'long long'
+|   | |-ImplicitCastExpr 0x7f98a887efe0 <col:3> 'long long (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887ef90 <col:3> 'long long (double)' Function 0x7f98a887ee38 'llround' 'long long (double)'
+|   | `-ImplicitCastExpr 0x7f98a7801030 <col:12> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887efb8 <col:12> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a7801208 <line:70:3, col:9> 'double'
+|   | |-ImplicitCastExpr 0x7f98a78011f0 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a78011a0 <col:3> 'double (double)' Function 0x7f98a7801048 'log' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a7801238 <col:8> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a78011c8 <col:8> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a7801410 <line:72:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f98a78013f8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a78013a8 <col:3> 'double (double)' Function 0x7f98a7801250 'log10' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a7801440 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a78013d0 <col:10> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a7801618 <line:74:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f98a7801600 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a78015b0 <col:3> 'double (double)' Function 0x7f98a7801458 'log1p' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a7801648 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a78015d8 <col:10> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a7801820 <line:76:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a7801808 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a78017b8 <col:3> 'double (double)' Function 0x7f98a7801660 'log2' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a7801850 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a78017e0 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a7801a28 <line:78:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a7801a10 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a78019c0 <col:3> 'double (double)' Function 0x7f98a7801868 'logb' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a7801a58 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a78019e8 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a7801c90 <line:80:3, col:11> 'long'
+|   | |-ImplicitCastExpr 0x7f98a7801c78 <col:3> 'long (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a7801c00 <col:3> 'long (double)' Function 0x7f98a7801aa8 'lrint' 'long (double)'
+|   | `-ImplicitCastExpr 0x7f98a7801cc0 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a7801c28 <col:10> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a7801e98 <line:82:3, col:12> 'long'
+|   | |-ImplicitCastExpr 0x7f98a7801e80 <col:3> 'long (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a7801e30 <col:3> 'long (double)' Function 0x7f98a7801cd8 'lround' 'long (double)'
+|   | `-ImplicitCastExpr 0x7f98a7801ec8 <col:11> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a7801e58 <col:11> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a8000a00 <line:84:3, col:14> 'double'
+|   | |-ImplicitCastExpr 0x7f98a80009e8 <col:3> 'double (*)(double, double *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8000918 <col:3> 'double (double, double *)' Function 0x7f98a7801f20 'modf' 'double (double, double *)'
+|   | |-ImplicitCastExpr 0x7f98a8000a38 <col:9> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8000940 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f98a8000a50 <col:12> 'double *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8000968 <col:12> 'double *' lvalue ParmVar 0x7f98a887a0a0 'dp' 'double *'
+|   |-CallExpr 0x7f98a8000cf0 <line:86:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a8000cd8 <col:3> 'double (*)(const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8000c00 <col:3> 'double (const char *)' Function 0x7f98a8000aa8 'nan' 'double (const char *)'
+|   | `-ImplicitCastExpr 0x7f98a8000d38 <col:8> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f98a8000d20 <col:8> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x7f98a8000c68 <col:8> 'char [1]' lvalue ""
+|   |-CallExpr 0x7f98a8000f10 <line:88:3, col:15> 'double'
+|   | |-ImplicitCastExpr 0x7f98a8000ef8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8000ea8 <col:3> 'double (double)' Function 0x7f98a8000d50 'nearbyint' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a8000f40 <col:14> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8000ed0 <col:14> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a80011a8 <line:90:3, col:18> 'double'
+|   | |-ImplicitCastExpr 0x7f98a8001190 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8001118 <col:3> 'double (double, double)' Function 0x7f98a8000f58 'nextafter' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f98a80011e0 <col:14> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8001140 <col:14> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f98a80011f8 <col:17> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8001168 <col:17> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a80014d0 <line:92:3, col:23> 'double'
+|   | |-ImplicitCastExpr 0x7f98a80014b8 <col:3> 'double (*)(double, long double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8001410 <col:3> 'double (double, long double)' Function 0x7f98a8001250 'nexttoward' 'double (double, long double)'
+|   | |-ImplicitCastExpr 0x7f98a8001508 <col:15> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8001438 <col:15> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-FloatingLiteral 0x7f98a8001460 <col:18> 'long double' 2.000000e+01
+|   |-CallExpr 0x7f98a8001770 <line:94:3, col:12> 'double'
+|   | |-ImplicitCastExpr 0x7f98a8001758 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a80016e0 <col:3> 'double (double, double)' Function 0x7f98a8001520 'pow' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f98a80017a8 <col:8> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8001708 <col:8> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f98a80017c0 <col:11> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8001730 <col:11> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a8001a50 <line:96:3, col:18> 'double'
+|   | |-ImplicitCastExpr 0x7f98a8001a38 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a80019c0 <col:3> 'double (double, double)' Function 0x7f98a8001800 'remainder' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f98a8001a88 <col:14> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a80019e8 <col:14> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f98a8001aa0 <col:17> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8001a10 <col:17> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a8001c90 <line:98:3, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7f98a8001c78 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8001ba8 <col:3> 'int ()' Function 0x7f98a8001b10 'remquo' 'int ()'
+|   | |-ImplicitCastExpr 0x7f98a8001cd0 <col:11> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8001bd0 <col:11> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | |-ImplicitCastExpr 0x7f98a8001ce8 <col:14> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8001bf8 <col:14> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f98a8001d00 <col:17> 'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8001c20 <col:17> 'int *' lvalue ParmVar 0x7f98a887a000 'ex' 'int *'
+|   |-CallExpr 0x7f98a8001ed8 <line:100:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a8001ec0 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8001e70 <col:3> 'double (double)' Function 0x7f98a8001d18 'rint' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a8001f08 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8001e98 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a80020e0 <line:102:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f98a80020c8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8002078 <col:3> 'double (double)' Function 0x7f98a8001f20 'round' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a8002110 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a80020a0 <col:10> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a80023e0 <line:104:3, col:19> 'double'
+|   | |-ImplicitCastExpr 0x7f98a80023c8 <col:3> 'double (*)(double, long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8002330 <col:3> 'double (double, long)' Function 0x7f98a8002170 'scalbln' 'double (double, long)'
+|   | |-ImplicitCastExpr 0x7f98a8002418 <col:12> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8002358 <col:12> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-IntegerLiteral 0x7f98a8002380 <col:15> 'long' 100
+|   |-CallExpr 0x7f98a8002678 <line:106:3, col:17> 'double'
+|   | |-ImplicitCastExpr 0x7f98a8002660 <col:3> 'double (*)(double, int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a80025f0 <col:3> 'double (double, int)' Function 0x7f98a8002430 'scalbn' 'double (double, int)'
+|   | |-ImplicitCastExpr 0x7f98a80026b0 <col:11> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8002618 <col:11> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | `-IntegerLiteral 0x7f98a8002640 <col:14> 'int' 100
+|   |-CallExpr 0x7f98a80028b0 <line:108:3, col:9> 'double'
+|   | |-ImplicitCastExpr 0x7f98a8002898 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8002848 <col:3> 'double (double)' Function 0x7f98a80026c8 'sin' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a80028e0 <col:8> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8002870 <col:8> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a8002ab8 <line:110:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a8002aa0 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8002a50 <col:3> 'double (double)' Function 0x7f98a80028f8 'sinh' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a8002ae8 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8002a78 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a8002c78 <line:112:3, col:20> 'int'
+|   | |-ImplicitCastExpr 0x7f98a8002c60 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8002bc0 <col:3> 'int ()' Function 0x7f98a8002b28 'sincos' 'int ()'
+|   | |-ImplicitCastExpr 0x7f98a8002cb8 <col:11> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8002be8 <col:11> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   | |-ImplicitCastExpr 0x7f98a8002cd0 <col:14> 'double *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8002c10 <col:14> 'double *' lvalue ParmVar 0x7f98a887a0a0 'dp' 'double *'
+|   | `-ImplicitCastExpr 0x7f98a8002ce8 <col:18> 'double *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8002c38 <col:18> 'double *' lvalue ParmVar 0x7f98a887a0a0 'dp' 'double *'
+|   |-CallExpr 0x7f98a8002ec0 <line:114:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a8002ea8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8002e58 <col:3> 'double (double)' Function 0x7f98a8002d00 'sqrt' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a8002ef0 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8002e80 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a80030c8 <line:116:3, col:9> 'double'
+|   | |-ImplicitCastExpr 0x7f98a80030b0 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8003060 <col:3> 'double (double)' Function 0x7f98a8002f08 'tan' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a80030f8 <col:8> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8003088 <col:8> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a80032d0 <line:118:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a80032b8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8003268 <col:3> 'double (double)' Function 0x7f98a8003110 'tanh' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a8003300 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8003290 <col:9> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   |-CallExpr 0x7f98a80034d8 <line:120:3, col:12> 'double'
+|   | |-ImplicitCastExpr 0x7f98a80034c0 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8003470 <col:3> 'double (double)' Function 0x7f98a8003318 'tgamma' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f98a8003508 <col:11> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8003498 <col:11> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|   `-CallExpr 0x7f98a80036e0 <line:122:3, col:11> 'double'
+|     |-ImplicitCastExpr 0x7f98a80036c8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f98a8003678 <col:3> 'double (double)' Function 0x7f98a8003520 'trunc' 'double (double)'
+|     `-ImplicitCastExpr 0x7f98a8003710 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7f98a80036a0 <col:10> 'double' lvalue ParmVar 0x7f98a8825f38 'd' 'double'
+|-FunctionDecl 0x7f98a887a660 <line:8:3> col:3 implicit used acos 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887a6f8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887a760 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887a7a8 <col:3> Implicit
+|-FunctionDecl 0x7f98a887a898 <line:10:3> col:3 implicit used acosh 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887a930 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887a998 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887a9e0 <col:3> Implicit
+|-FunctionDecl 0x7f98a887aaa0 <line:12:3> col:3 implicit used asin 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887ab38 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887aba0 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887abe8 <col:3> Implicit
+|-FunctionDecl 0x7f98a887aca8 <line:14:3> col:3 implicit used asinh 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887ad40 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887ada8 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887adf0 <col:3> Implicit
+|-FunctionDecl 0x7f98a887aeb0 <line:16:3> col:3 implicit used atan 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887af48 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887afb0 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887b000 <col:3> Implicit
+|-FunctionDecl 0x7f98a887b0c0 <line:18:3> col:3 implicit used atanh 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887b158 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887b1c0 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887b208 <col:3> Implicit
+|-FunctionDecl 0x7f98a887b310 <line:20:3> col:3 implicit used atan2 'double (double, double)' extern
+| |-ParmVarDecl 0x7f98a887b3a8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a887b408 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887b478 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887b4c0 <col:3> Implicit
+|-FunctionDecl 0x7f98a887b5f8 <line:22:3> col:3 implicit used cbrt 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887b690 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887b6f8 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887b740 <col:3> Implicit
+|-FunctionDecl 0x7f98a887b800 <line:24:3> col:3 implicit used ceil 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887b898 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f98a887b900 <col:3> Implicit
+| `-ConstAttr 0x7f98a887b948 <col:3> Implicit
+|-FunctionDecl 0x7f98a887ba08 <line:26:3> col:3 implicit used copysign 'double (double, double)' extern
+| |-ParmVarDecl 0x7f98a887baa0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a887bb00 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f98a887bb70 <col:3> Implicit
+| `-ConstAttr 0x7f98a887bbb8 <col:3> Implicit
+|-FunctionDecl 0x7f98a887bcc0 <line:28:3> col:3 implicit used cos 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887bd58 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887bdc0 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887be08 <col:3> Implicit
+|-FunctionDecl 0x7f98a887bec8 <line:30:3> col:3 implicit used cosh 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887bf60 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887bfc8 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887c038 <col:3> Implicit
+|-FunctionDecl 0x7f98a887c0f8 <line:32:3> col:3 implicit used erf 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887c190 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887c1f8 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887c240 <col:3> Implicit
+|-FunctionDecl 0x7f98a887c300 <line:34:3> col:3 implicit used erfc 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887c398 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887c400 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887c448 <col:3> Implicit
+|-FunctionDecl 0x7f98a887c508 <line:36:3> col:3 implicit used exp 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887c5a0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887c608 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887c650 <col:3> Implicit
+|-FunctionDecl 0x7f98a887c710 <line:38:3> col:3 implicit used exp2 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887c7a8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887c810 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887c858 <col:3> Implicit
+|-FunctionDecl 0x7f98a887c918 <line:40:3> col:3 implicit used expm1 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887c9b0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887ca18 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887ca60 <col:3> Implicit
+|-FunctionDecl 0x7f98a887cb20 <line:42:3> col:3 implicit used fabs 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887cbb8 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f98a887cc20 <col:3> Implicit
+| `-ConstAttr 0x7f98a887cc68 <col:3> Implicit
+|-FunctionDecl 0x7f98a887cd28 <line:44:3> col:3 implicit used fdim 'double (double, double)' extern
+| |-ParmVarDecl 0x7f98a887cdc0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a887ce20 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887ce90 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887ced8 <col:3> Implicit
+|-FunctionDecl 0x7f98a887d000 <line:46:3> col:3 implicit used floor 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887d098 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f98a887d100 <col:3> Implicit
+| `-ConstAttr 0x7f98a887d148 <col:3> Implicit
+|-FunctionDecl 0x7f98a887d258 <line:48:3> col:3 implicit used fma 'double (double, double, double)' extern
+| |-ParmVarDecl 0x7f98a887d2f0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a887d350 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a887d3b0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887d428 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887d470 <col:3> Implicit
+|-FunctionDecl 0x7f98a887d5e8 <line:50:3> col:3 implicit used fmax 'double (double, double)' extern
+| |-ParmVarDecl 0x7f98a887d680 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a887d6e0 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f98a887d750 <col:3> Implicit
+| `-ConstAttr 0x7f98a887d798 <col:3> Implicit
+|-FunctionDecl 0x7f98a887d8a0 <line:52:3> col:3 implicit used fmin 'double (double, double)' extern
+| |-ParmVarDecl 0x7f98a887d938 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a887d998 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f98a887da08 <col:3> Implicit
+| `-ConstAttr 0x7f98a887da50 <col:3> Implicit
+|-FunctionDecl 0x7f98a887db58 <line:54:3> col:3 implicit used fmod 'double (double, double)' extern
+| |-ParmVarDecl 0x7f98a887dbf0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a887dc50 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887dcc0 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887dd08 <col:3> Implicit
+|-FunctionDecl 0x7f98a887de50 <line:56:3> col:3 implicit used frexp 'double (double, int *)' extern
+| |-ParmVarDecl 0x7f98a887dee8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a887df48 <<invalid sloc>> <invalid sloc> 'int *'
+| `-NoThrowAttr 0x7f98a887dfb8 <col:3> Implicit
+|-FunctionDecl 0x7f98a887e158 <line:58:3> col:3 implicit used hypot 'double (double, double)' extern
+| |-ParmVarDecl 0x7f98a887e1f0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a887e250 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887e2c0 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887e308 <col:3> Implicit
+|-FunctionDecl 0x7f98a887e448 <line:61:3> col:3 implicit used ilogb 'int (double)' extern
+| |-ParmVarDecl 0x7f98a887e4e0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887e548 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887e590 <col:3> Implicit
+|-FunctionDecl 0x7f98a887e6c0 <line:62:3> col:3 implicit used ldexp 'double (double, int)' extern
+| |-ParmVarDecl 0x7f98a887e758 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a887e7b8 <<invalid sloc>> <invalid sloc> 'int'
+| |-ConstAttr 0x7f98a887e828 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887e870 <col:3> Implicit
+|-FunctionDecl 0x7f98a887e9d8 <line:64:3> col:3 implicit used lgamma 'double (double)' extern
+| |-ParmVarDecl 0x7f98a887ea70 <<invalid sloc>> <invalid sloc> 'double'
+| `-NoThrowAttr 0x7f98a887ead8 <col:3> Implicit
+|-FunctionDecl 0x7f98a887ec08 <line:66:3> col:3 implicit used llrint 'long long (double)' extern
+| |-ParmVarDecl 0x7f98a887eca0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887ed08 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887ed50 <col:3> Implicit
+|-FunctionDecl 0x7f98a887ee38 <line:68:3> col:3 implicit used llround 'long long (double)' extern
+| |-ParmVarDecl 0x7f98a887eed0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a887ef38 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a887ef80 <col:3> Implicit
+|-FunctionDecl 0x7f98a7801048 <line:70:3> col:3 implicit used log 'double (double)' extern
+| |-ParmVarDecl 0x7f98a78010e0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a7801148 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a7801190 <col:3> Implicit
+|-FunctionDecl 0x7f98a7801250 <line:72:3> col:3 implicit used log10 'double (double)' extern
+| |-ParmVarDecl 0x7f98a78012e8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a7801350 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a7801398 <col:3> Implicit
+|-FunctionDecl 0x7f98a7801458 <line:74:3> col:3 implicit used log1p 'double (double)' extern
+| |-ParmVarDecl 0x7f98a78014f0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a7801558 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a78015a0 <col:3> Implicit
+|-FunctionDecl 0x7f98a7801660 <line:76:3> col:3 implicit used log2 'double (double)' extern
+| |-ParmVarDecl 0x7f98a78016f8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a7801760 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a78017a8 <col:3> Implicit
+|-FunctionDecl 0x7f98a7801868 <line:78:3> col:3 implicit used logb 'double (double)' extern
+| |-ParmVarDecl 0x7f98a7801900 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a7801968 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a78019b0 <col:3> Implicit
+|-FunctionDecl 0x7f98a7801aa8 <line:80:3> col:3 implicit used lrint 'long (double)' extern
+| |-ParmVarDecl 0x7f98a7801b40 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a7801ba8 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a7801bf0 <col:3> Implicit
+|-FunctionDecl 0x7f98a7801cd8 <line:82:3> col:3 implicit used lround 'long (double)' extern
+| |-ParmVarDecl 0x7f98a7801d70 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a7801dd8 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a7801e20 <col:3> Implicit
+|-FunctionDecl 0x7f98a7801f20 <line:84:3> col:3 implicit used modf 'double (double, double *)' extern
+| |-ParmVarDecl 0x7f98a8000800 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a8000860 <<invalid sloc>> <invalid sloc> 'double *'
+| `-NoThrowAttr 0x7f98a80008d0 <col:3> Implicit
+|-FunctionDecl 0x7f98a8000aa8 <line:86:3> col:3 implicit used nan 'double (const char *)' extern
+| |-ParmVarDecl 0x7f98a8000b40 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-NoThrowAttr 0x7f98a8000ba8 <col:3> Implicit
+| `-ConstAttr 0x7f98a8000bf0 <col:3> Implicit
+|-FunctionDecl 0x7f98a8000d50 <line:88:3> col:3 implicit used nearbyint 'double (double)' extern
+| |-ParmVarDecl 0x7f98a8000de8 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f98a8000e50 <col:3> Implicit
+| `-ConstAttr 0x7f98a8000e98 <col:3> Implicit
+|-FunctionDecl 0x7f98a8000f58 <line:90:3> col:3 implicit used nextafter 'double (double, double)' extern
+| |-ParmVarDecl 0x7f98a8000ff0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a8001050 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a80010c0 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a8001108 <col:3> Implicit
+|-FunctionDecl 0x7f98a8001250 <line:92:3> col:3 implicit used nexttoward 'double (double, long double)' extern
+| |-ParmVarDecl 0x7f98a80012e8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a8001348 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7f98a80013b8 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a8001400 <col:3> Implicit
+|-FunctionDecl 0x7f98a8001520 <line:94:3> col:3 implicit used pow 'double (double, double)' extern
+| |-ParmVarDecl 0x7f98a80015b8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a8001618 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a8001688 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a80016d0 <col:3> Implicit
+|-FunctionDecl 0x7f98a8001800 <line:96:3> col:3 implicit used remainder 'double (double, double)' extern
+| |-ParmVarDecl 0x7f98a8001898 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a80018f8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a8001968 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a80019b0 <col:3> Implicit
+|-FunctionDecl 0x7f98a8001b10 <<invalid sloc>> line:98:3 implicit used remquo 'int ()'
+|-FunctionDecl 0x7f98a8001d18 <line:100:3> col:3 implicit used rint 'double (double)' extern
+| |-ParmVarDecl 0x7f98a8001db0 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f98a8001e18 <col:3> Implicit
+| `-ConstAttr 0x7f98a8001e60 <col:3> Implicit
+|-FunctionDecl 0x7f98a8001f20 <line:102:3> col:3 implicit used round 'double (double)' extern
+| |-ParmVarDecl 0x7f98a8001fb8 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f98a8002020 <col:3> Implicit
+| `-ConstAttr 0x7f98a8002068 <col:3> Implicit
+|-FunctionDecl 0x7f98a8002170 <line:104:3> col:3 implicit used scalbln 'double (double, long)' extern
+| |-ParmVarDecl 0x7f98a8002208 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a8002268 <<invalid sloc>> <invalid sloc> 'long'
+| |-ConstAttr 0x7f98a80022d8 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a8002320 <col:3> Implicit
+|-FunctionDecl 0x7f98a8002430 <line:106:3> col:3 implicit used scalbn 'double (double, int)' extern
+| |-ParmVarDecl 0x7f98a80024c8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f98a8002528 <<invalid sloc>> <invalid sloc> 'int'
+| |-ConstAttr 0x7f98a8002598 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a80025e0 <col:3> Implicit
+|-FunctionDecl 0x7f98a80026c8 <line:108:3> col:3 implicit used sin 'double (double)' extern
+| |-ParmVarDecl 0x7f98a8002760 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a80027c8 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a8002838 <col:3> Implicit
+|-FunctionDecl 0x7f98a80028f8 <line:110:3> col:3 implicit used sinh 'double (double)' extern
+| |-ParmVarDecl 0x7f98a8002990 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a80029f8 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a8002a40 <col:3> Implicit
+|-FunctionDecl 0x7f98a8002b28 <<invalid sloc>> line:112:3 implicit used sincos 'int ()'
+|-FunctionDecl 0x7f98a8002d00 <line:114:3> col:3 implicit used sqrt 'double (double)' extern
+| |-ParmVarDecl 0x7f98a8002d98 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a8002e00 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a8002e48 <col:3> Implicit
+|-FunctionDecl 0x7f98a8002f08 <line:116:3> col:3 implicit used tan 'double (double)' extern
+| |-ParmVarDecl 0x7f98a8002fa0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a8003008 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a8003050 <col:3> Implicit
+|-FunctionDecl 0x7f98a8003110 <line:118:3> col:3 implicit used tanh 'double (double)' extern
+| |-ParmVarDecl 0x7f98a80031a8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a8003210 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a8003258 <col:3> Implicit
+|-FunctionDecl 0x7f98a8003318 <line:120:3> col:3 implicit used tgamma 'double (double)' extern
+| |-ParmVarDecl 0x7f98a80033b0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f98a8003418 <col:3> Implicit
+| `-NoThrowAttr 0x7f98a8003460 <col:3> Implicit
+|-FunctionDecl 0x7f98a8003520 <line:122:3> col:3 implicit used trunc 'double (double)' extern
+| |-ParmVarDecl 0x7f98a80035b8 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f98a8003620 <col:3> Implicit
+| `-ConstAttr 0x7f98a8003668 <col:3> Implicit
+|-FunctionDecl 0x7f98a887f2a0 <line:126:1, line:173:1> line:127:1 cmplx 'void (_Complex double)'
+| |-ParmVarDecl 0x7f98a887f1e0 <col:8, col:24> col:24 used z '_Complex double'
+| `-CompoundStmt 0x7f98a8882208 <line:128:1, line:173:1>
+|   |-CallExpr 0x7f98a887f560 <line:129:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887f548 <col:3> 'double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887f4d0 <col:3> 'double (_Complex double)' Function 0x7f98a887f378 'cabs' 'double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a887f590 <col:9> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887f4f8 <col:9> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a887f7d0 <line:131:3, col:11> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a887f7b8 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887f740 <col:3> '_Complex double (_Complex double)' Function 0x7f98a887f5e8 'cacos' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a887f800 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887f768 <col:10> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a887f9d8 <line:133:3, col:12> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a887f9c0 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887f970 <col:3> '_Complex double (_Complex double)' Function 0x7f98a887f818 'cacosh' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a887fa08 <col:11> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887f998 <col:11> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a887fbe0 <line:135:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f98a887fbc8 <col:3> 'double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887fb78 <col:3> 'double (_Complex double)' Function 0x7f98a887fa20 'carg' 'double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a887fc10 <col:9> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887fba0 <col:9> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a887fde8 <line:137:3, col:11> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a887fdd0 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887fd80 <col:3> '_Complex double (_Complex double)' Function 0x7f98a887fc28 'casin' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a887fe18 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887fda8 <col:10> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a8880000 <line:139:3, col:12> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a887ffd8 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a887ff88 <col:3> '_Complex double (_Complex double)' Function 0x7f98a887fe30 'casinh' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a8880030 <col:11> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a887ffb0 <col:11> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a8880208 <line:141:3, col:11> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a88801f0 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a88801a0 <col:3> '_Complex double (_Complex double)' Function 0x7f98a8880048 'catan' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a8880238 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a88801c8 <col:10> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a8880410 <line:143:3, col:12> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a88803f8 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a88803a8 <col:3> '_Complex double (_Complex double)' Function 0x7f98a8880250 'catanh' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a8880440 <col:11> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a88803d0 <col:11> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a8880618 <line:145:3, col:10> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a8880600 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a88805b0 <col:3> '_Complex double (_Complex double)' Function 0x7f98a8880458 'ccos' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a8880648 <col:9> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a88805d8 <col:9> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a8880820 <line:147:3, col:11> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a8880808 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a88807b8 <col:3> '_Complex double (_Complex double)' Function 0x7f98a8880660 'ccosh' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a8880850 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a88807e0 <col:10> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a8880a28 <line:149:3, col:10> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a8880a10 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a88809c0 <col:3> '_Complex double (_Complex double)' Function 0x7f98a8880868 'cexp' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a8880a58 <col:9> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a88809e8 <col:9> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a8880c30 <line:151:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f98a8880c18 <col:3> 'double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8880bc8 <col:3> 'double (_Complex double)' Function 0x7f98a8880a70 'cimag' 'double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a8880c60 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8880bf0 <col:10> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a8880e38 <line:153:3, col:10> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a8880e20 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8880dd0 <col:3> '_Complex double (_Complex double)' Function 0x7f98a8880c78 'clog' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a8880e68 <col:9> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8880df8 <col:9> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a8881040 <line:155:3, col:10> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a8881028 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8880fd8 <col:3> '_Complex double (_Complex double)' Function 0x7f98a8880e80 'conj' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a8881070 <col:9> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8881000 <col:9> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a8881350 <line:157:3, col:13> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a8881338 <col:3> '_Complex double (*)(_Complex double, _Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8881290 <col:3> '_Complex double (_Complex double, _Complex double)' Function 0x7f98a88810d0 'cpow' '_Complex double (_Complex double, _Complex double)'
+|   | |-ImplicitCastExpr 0x7f98a8881388 <col:9> '_Complex double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a88812b8 <col:9> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   | `-ImplicitCastExpr 0x7f98a88813a0 <col:12> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a88812e0 <col:12> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a8881578 <line:159:3, col:11> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a8881560 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8881510 <col:3> '_Complex double (_Complex double)' Function 0x7f98a88813b8 'cproj' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a88815a8 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8881538 <col:10> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a8881780 <line:161:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f98a8881768 <col:3> 'double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8881718 <col:3> 'double (_Complex double)' Function 0x7f98a88815c0 'creal' 'double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a88817b0 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8881740 <col:10> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a8881988 <line:163:3, col:10> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a8881970 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8881920 <col:3> '_Complex double (_Complex double)' Function 0x7f98a88817c8 'csin' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a88819b8 <col:9> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8881948 <col:9> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a8881b90 <line:165:3, col:11> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a8881b78 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8881b28 <col:3> '_Complex double (_Complex double)' Function 0x7f98a88819d0 'csinh' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a8881bc0 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8881b50 <col:10> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a8881d98 <line:167:3, col:11> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a8881d80 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8881d30 <col:3> '_Complex double (_Complex double)' Function 0x7f98a8881bd8 'csqrt' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a8881dc8 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8881d58 <col:10> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   |-CallExpr 0x7f98a8881fa0 <line:169:3, col:10> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f98a8881f88 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8881f38 <col:3> '_Complex double (_Complex double)' Function 0x7f98a8881de0 'ctan' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f98a8881fd0 <col:9> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8881f60 <col:9> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|   `-CallExpr 0x7f98a88821c0 <line:171:3, col:11> '_Complex double'
+|     |-ImplicitCastExpr 0x7f98a88821a8 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f98a8882158 <col:3> '_Complex double (_Complex double)' Function 0x7f98a8882000 'ctanh' '_Complex double (_Complex double)'
+|     `-ImplicitCastExpr 0x7f98a88821f0 <col:10> '_Complex double' <LValueToRValue>
+|       `-DeclRefExpr 0x7f98a8882180 <col:10> '_Complex double' lvalue ParmVar 0x7f98a887f1e0 'z' '_Complex double'
+|-FunctionDecl 0x7f98a887f378 <line:129:3> col:3 implicit used cabs 'double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a887f410 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a887f478 <col:3> Implicit
+| `-ConstAttr 0x7f98a887f4c0 <col:3> Implicit
+|-FunctionDecl 0x7f98a887f5e8 <line:131:3> col:3 implicit used cacos '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a887f680 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a887f6e8 <col:3> Implicit
+| `-ConstAttr 0x7f98a887f730 <col:3> Implicit
+|-FunctionDecl 0x7f98a887f818 <line:133:3> col:3 implicit used cacosh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a887f8b0 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a887f918 <col:3> Implicit
+| `-ConstAttr 0x7f98a887f960 <col:3> Implicit
+|-FunctionDecl 0x7f98a887fa20 <line:135:3> col:3 implicit used carg 'double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a887fab8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a887fb20 <col:3> Implicit
+| `-ConstAttr 0x7f98a887fb68 <col:3> Implicit
+|-FunctionDecl 0x7f98a887fc28 <line:137:3> col:3 implicit used casin '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a887fcc0 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a887fd28 <col:3> Implicit
+| `-ConstAttr 0x7f98a887fd70 <col:3> Implicit
+|-FunctionDecl 0x7f98a887fe30 <line:139:3> col:3 implicit used casinh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a887fec8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a887ff30 <col:3> Implicit
+| `-ConstAttr 0x7f98a887ff78 <col:3> Implicit
+|-FunctionDecl 0x7f98a8880048 <line:141:3> col:3 implicit used catan '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a88800e0 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a8880148 <col:3> Implicit
+| `-ConstAttr 0x7f98a8880190 <col:3> Implicit
+|-FunctionDecl 0x7f98a8880250 <line:143:3> col:3 implicit used catanh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a88802e8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a8880350 <col:3> Implicit
+| `-ConstAttr 0x7f98a8880398 <col:3> Implicit
+|-FunctionDecl 0x7f98a8880458 <line:145:3> col:3 implicit used ccos '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a88804f0 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a8880558 <col:3> Implicit
+| `-ConstAttr 0x7f98a88805a0 <col:3> Implicit
+|-FunctionDecl 0x7f98a8880660 <line:147:3> col:3 implicit used ccosh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a88806f8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a8880760 <col:3> Implicit
+| `-ConstAttr 0x7f98a88807a8 <col:3> Implicit
+|-FunctionDecl 0x7f98a8880868 <line:149:3> col:3 implicit used cexp '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a8880900 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a8880968 <col:3> Implicit
+| `-ConstAttr 0x7f98a88809b0 <col:3> Implicit
+|-FunctionDecl 0x7f98a8880a70 <line:151:3> col:3 implicit used cimag 'double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a8880b08 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a8880b70 <col:3> Implicit
+| `-ConstAttr 0x7f98a8880bb8 <col:3> Implicit
+|-FunctionDecl 0x7f98a8880c78 <line:153:3> col:3 implicit used clog '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a8880d10 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a8880d78 <col:3> Implicit
+| `-ConstAttr 0x7f98a8880dc0 <col:3> Implicit
+|-FunctionDecl 0x7f98a8880e80 <line:155:3> col:3 implicit used conj '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a8880f18 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a8880f80 <col:3> Implicit
+| `-ConstAttr 0x7f98a8880fc8 <col:3> Implicit
+|-FunctionDecl 0x7f98a88810d0 <line:157:3> col:3 implicit used cpow '_Complex double (_Complex double, _Complex double)' extern
+| |-ParmVarDecl 0x7f98a8881168 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ParmVarDecl 0x7f98a88811c8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a8881238 <col:3> Implicit
+| `-ConstAttr 0x7f98a8881280 <col:3> Implicit
+|-FunctionDecl 0x7f98a88813b8 <line:159:3> col:3 implicit used cproj '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a8881450 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a88814b8 <col:3> Implicit
+| `-ConstAttr 0x7f98a8881500 <col:3> Implicit
+|-FunctionDecl 0x7f98a88815c0 <line:161:3> col:3 implicit used creal 'double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a8881658 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a88816c0 <col:3> Implicit
+| `-ConstAttr 0x7f98a8881708 <col:3> Implicit
+|-FunctionDecl 0x7f98a88817c8 <line:163:3> col:3 implicit used csin '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a8881860 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a88818c8 <col:3> Implicit
+| `-ConstAttr 0x7f98a8881910 <col:3> Implicit
+|-FunctionDecl 0x7f98a88819d0 <line:165:3> col:3 implicit used csinh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a8881a68 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a8881ad0 <col:3> Implicit
+| `-ConstAttr 0x7f98a8881b18 <col:3> Implicit
+|-FunctionDecl 0x7f98a8881bd8 <line:167:3> col:3 implicit used csqrt '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a8881c70 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a8881cd8 <col:3> Implicit
+| `-ConstAttr 0x7f98a8881d20 <col:3> Implicit
+|-FunctionDecl 0x7f98a8881de0 <line:169:3> col:3 implicit used ctan '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a8881e78 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a8881ee0 <col:3> Implicit
+| `-ConstAttr 0x7f98a8881f28 <col:3> Implicit
+|-FunctionDecl 0x7f98a8882000 <line:171:3> col:3 implicit used ctanh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f98a8882098 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f98a8882100 <col:3> Implicit
+| `-ConstAttr 0x7f98a8882148 <col:3> Implicit
+|-FunctionDecl 0x7f98a88824c0 <line:175:1, line:214:1> line:176:1 string 'void (void *, void *, unsigned long)'
+| |-ParmVarDecl 0x7f98a88822e8 <col:9, col:15> col:15 used p 'void *'
+| |-ParmVarDecl 0x7f98a8882360 <col:18, col:24> col:24 used q 'void *'
+| |-ParmVarDecl 0x7f98a88823d8 <<built-in>:75:23, c_files/pr59717.c:176:41> col:41 used sz 'unsigned long'
+| `-CompoundStmt 0x7f98a8886098 <line:177:1, line:214:1>
+|   |-CallExpr 0x7f98a88828c0 <line:178:3, col:19> 'void *'
+|   | |-ImplicitCastExpr 0x7f98a88828a8 <col:3> 'void *(*)(const void *, int, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a88827b8 <col:3> 'void *(const void *, int, unsigned long)' Function 0x7f98a88825e8 'memchr' 'void *(const void *, int, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f98a8882918 <col:11> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a8882900 <col:11> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a88827e0 <col:11> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   | |-IntegerLiteral 0x7f98a8882808 <col:14> 'int' 2
+|   | `-ImplicitCastExpr 0x7f98a8882930 <col:17> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8882828 <col:17> 'unsigned long' lvalue ParmVar 0x7f98a88823d8 'sz' 'unsigned long'
+|   |-CallExpr 0x7f98a8882c90 <line:181:3, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7f98a8882c78 <col:3> 'int (*)(const void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8882b68 <col:3> 'int (const void *, const void *, unsigned long)' Function 0x7f98a8882998 'memcmp' 'int (const void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f98a8882ce8 <col:11> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a8882cd0 <col:11> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8882b90 <col:11> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   | |-ImplicitCastExpr 0x7f98a8882d18 <col:14> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a8882d00 <col:14> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8882bb8 <col:14> 'void *' lvalue ParmVar 0x7f98a8882360 'q' 'void *'
+|   | `-ImplicitCastExpr 0x7f98a8882d30 <col:17> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8882be0 <col:17> 'unsigned long' lvalue ParmVar 0x7f98a88823d8 'sz' 'unsigned long'
+|   |-CallExpr 0x7f98a88830b0 <line:182:3, col:19> 'void *'
+|   | |-ImplicitCastExpr 0x7f98a8883098 <col:3> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8882f68 <col:3> 'void *(void *, const void *, unsigned long)' Function 0x7f98a8882d98 'memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f98a88830f0 <col:11> 'void *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8882f90 <col:11> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   | |-ImplicitCastExpr 0x7f98a8883120 <col:14> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a8883108 <col:14> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8882fb8 <col:14> 'void *' lvalue ParmVar 0x7f98a8882360 'q' 'void *'
+|   | `-ImplicitCastExpr 0x7f98a8883138 <col:17> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8883000 <col:17> 'unsigned long' lvalue ParmVar 0x7f98a88823d8 'sz' 'unsigned long'
+|   |-CallExpr 0x7f98a8883420 <line:184:3, col:20> 'void *'
+|   | |-ImplicitCastExpr 0x7f98a8883408 <col:3> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8883320 <col:3> 'void *(void *, const void *, unsigned long)' Function 0x7f98a8883150 'memmove' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f98a8883460 <col:12> 'void *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8883348 <col:12> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   | |-ImplicitCastExpr 0x7f98a8883490 <col:15> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a8883478 <col:15> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8883370 <col:15> 'void *' lvalue ParmVar 0x7f98a8882360 'q' 'void *'
+|   | `-ImplicitCastExpr 0x7f98a88834a8 <col:18> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8883398 <col:18> 'unsigned long' lvalue ParmVar 0x7f98a88823d8 'sz' 'unsigned long'
+|   |-CallExpr 0x7f98a88837e0 <line:186:3, col:19> 'void *'
+|   | |-ImplicitCastExpr 0x7f98a88837c8 <col:3> 'void *(*)(void *, int, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a88836d8 <col:3> 'void *(void *, int, unsigned long)' Function 0x7f98a8883508 'memset' 'void *(void *, int, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f98a8883820 <col:11> 'void *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8883700 <col:11> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   | |-IntegerLiteral 0x7f98a8883728 <col:14> 'int' 0
+|   | `-ImplicitCastExpr 0x7f98a8883838 <col:17> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8883748 <col:17> 'unsigned long' lvalue ParmVar 0x7f98a88823d8 'sz' 'unsigned long'
+|   |-CallExpr 0x7f98a8883ae0 <line:188:3, col:15> 'char *'
+|   | |-ImplicitCastExpr 0x7f98a8883ac8 <col:3> 'char *(*)(char *, const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a88839f8 <col:3> 'char *(char *, const char *)' Function 0x7f98a8883890 'strcat' 'char *(char *, const char *)'
+|   | |-ImplicitCastExpr 0x7f98a8883b30 <col:11> 'char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a8883b18 <col:11> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8883a20 <col:11> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   | `-ImplicitCastExpr 0x7f98a8883b60 <col:14> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f98a8883b48 <col:14> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f98a8883a48 <col:14> 'void *' lvalue ParmVar 0x7f98a8882360 'q' 'void *'
+|   |-CallExpr 0x7f98a8883df0 <line:190:3, col:17> 'char *'
+|   | |-ImplicitCastExpr 0x7f98a8883dd8 <col:3> 'char *(*)(const char *, int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8883d28 <col:3> 'char *(const char *, int)' Function 0x7f98a8883bc0 'strchr' 'char *(const char *, int)'
+|   | |-ImplicitCastExpr 0x7f98a8883e40 <col:11> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a8883e28 <col:11> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8883d50 <col:11> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   | `-CharacterLiteral 0x7f98a8883d78 <col:14> 'int' 97
+|   |-CallExpr 0x7f98a8884100 <line:193:3, col:15> 'int'
+|   | |-ImplicitCastExpr 0x7f98a88840e8 <col:3> 'int (*)(const char *, const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8884010 <col:3> 'int (const char *, const char *)' Function 0x7f98a8883ea0 'strcmp' 'int (const char *, const char *)'
+|   | |-ImplicitCastExpr 0x7f98a8884150 <col:11> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a8884138 <col:11> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8884038 <col:11> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   | `-ImplicitCastExpr 0x7f98a8884180 <col:14> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f98a8884168 <col:14> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f98a8884060 <col:14> 'void *' lvalue ParmVar 0x7f98a8882360 'q' 'void *'
+|   |-CallExpr 0x7f98a88843c0 <line:194:3, col:15> 'char *'
+|   | |-ImplicitCastExpr 0x7f98a88843a8 <col:3> 'char *(*)(char *, const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8884300 <col:3> 'char *(char *, const char *)' Function 0x7f98a8884198 'strcpy' 'char *(char *, const char *)'
+|   | |-ImplicitCastExpr 0x7f98a8884410 <col:11> 'char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a88843f8 <col:11> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8884328 <col:11> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   | `-ImplicitCastExpr 0x7f98a8884440 <col:14> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f98a8884428 <col:14> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f98a8884350 <col:14> 'void *' lvalue ParmVar 0x7f98a8882360 'q' 'void *'
+|   |-CallExpr 0x7f98a88846f0 <line:196:3, col:16> 'unsigned long'
+|   | |-ImplicitCastExpr 0x7f98a88846d8 <col:3> 'unsigned long (*)(const char *, const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8884608 <col:3> 'unsigned long (const char *, const char *)' Function 0x7f98a88844a0 'strcspn' 'unsigned long (const char *, const char *)'
+|   | |-ImplicitCastExpr 0x7f98a8884740 <col:12> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a8884728 <col:12> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8884630 <col:12> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   | `-ImplicitCastExpr 0x7f98a8884770 <col:15> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f98a8884758 <col:15> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f98a8884658 <col:15> 'void *' lvalue ParmVar 0x7f98a8882360 'q' 'void *'
+|   |-CallExpr 0x7f98a8884970 <line:198:3, col:12> 'unsigned long'
+|   | |-ImplicitCastExpr 0x7f98a8884958 <col:3> 'unsigned long (*)(const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a88848c8 <col:3> 'unsigned long (const char *)' Function 0x7f98a88847c8 'strlen' 'unsigned long (const char *)'
+|   | `-ImplicitCastExpr 0x7f98a88849b8 <col:11> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f98a88849a0 <col:11> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f98a88848f0 <col:11> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   |-CallExpr 0x7f98a8884d10 <line:200:3, col:20> 'char *'
+|   | |-ImplicitCastExpr 0x7f98a8884cf8 <col:3> 'char *(*)(char *, const char *, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8884be8 <col:3> 'char *(char *, const char *, unsigned long)' Function 0x7f98a8884a18 'strncat' 'char *(char *, const char *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f98a8884d68 <col:12> 'char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a8884d50 <col:12> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8884c10 <col:12> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   | |-ImplicitCastExpr 0x7f98a8884d98 <col:15> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a8884d80 <col:15> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8884c38 <col:15> 'void *' lvalue ParmVar 0x7f98a8882360 'q' 'void *'
+|   | `-ImplicitCastExpr 0x7f98a8884db0 <col:18> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8884c60 <col:18> 'unsigned long' lvalue ParmVar 0x7f98a88823d8 'sz' 'unsigned long'
+|   |-CallExpr 0x7f98a8885130 <line:203:3, col:20> 'int'
+|   | |-ImplicitCastExpr 0x7f98a8885118 <col:3> 'int (*)(const char *, const char *, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8885000 <col:3> 'int (const char *, const char *, unsigned long)' Function 0x7f98a8884e18 'strncmp' 'int (const char *, const char *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f98a8885188 <col:12> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a8885170 <col:12> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8885028 <col:12> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   | |-ImplicitCastExpr 0x7f98a88851b8 <col:15> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a88851a0 <col:15> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8885050 <col:15> 'void *' lvalue ParmVar 0x7f98a8882360 'q' 'void *'
+|   | `-ImplicitCastExpr 0x7f98a88851d0 <col:18> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8885078 <col:18> 'unsigned long' lvalue ParmVar 0x7f98a88823d8 'sz' 'unsigned long'
+|   |-CallExpr 0x7f98a88854b8 <line:204:3, col:20> 'char *'
+|   | |-ImplicitCastExpr 0x7f98a88854a0 <col:3> 'char *(*)(char *, const char *, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a88853b8 <col:3> 'char *(char *, const char *, unsigned long)' Function 0x7f98a88851e8 'strncpy' 'char *(char *, const char *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f98a8885510 <col:12> 'char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a88854f8 <col:12> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a88853e0 <col:12> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   | |-ImplicitCastExpr 0x7f98a8885540 <col:15> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a8885528 <col:15> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8885408 <col:15> 'void *' lvalue ParmVar 0x7f98a8882360 'q' 'void *'
+|   | `-ImplicitCastExpr 0x7f98a8885558 <col:18> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8885430 <col:18> 'unsigned long' lvalue ParmVar 0x7f98a88823d8 'sz' 'unsigned long'
+|   |-CallExpr 0x7f98a8885800 <line:206:3, col:16> 'char *'
+|   | |-ImplicitCastExpr 0x7f98a88857e8 <col:3> 'char *(*)(const char *, const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8885718 <col:3> 'char *(const char *, const char *)' Function 0x7f98a88855b0 'strpbrk' 'char *(const char *, const char *)'
+|   | |-ImplicitCastExpr 0x7f98a8885850 <col:12> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a8885838 <col:12> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8885740 <col:12> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   | `-ImplicitCastExpr 0x7f98a8885880 <col:15> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f98a8885868 <col:15> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f98a8885768 <col:15> 'void *' lvalue ParmVar 0x7f98a8882360 'q' 'void *'
+|   |-CallExpr 0x7f98a8885a98 <line:208:3, col:18> 'char *'
+|   | |-ImplicitCastExpr 0x7f98a8885a80 <col:3> 'char *(*)(const char *, int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8885a00 <col:3> 'char *(const char *, int)' Function 0x7f98a8885898 'strrchr' 'char *(const char *, int)'
+|   | |-ImplicitCastExpr 0x7f98a8885ae8 <col:12> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a8885ad0 <col:12> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8885a28 <col:12> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   | `-CharacterLiteral 0x7f98a8885a50 <col:15> 'int' 113
+|   |-CallExpr 0x7f98a8885d28 <line:210:3, col:15> 'unsigned long'
+|   | |-ImplicitCastExpr 0x7f98a8885d10 <col:3> 'unsigned long (*)(const char *, const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8885c68 <col:3> 'unsigned long (const char *, const char *)' Function 0x7f98a8885b00 'strspn' 'unsigned long (const char *, const char *)'
+|   | |-ImplicitCastExpr 0x7f98a8885d78 <col:11> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f98a8885d60 <col:11> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98a8885c90 <col:11> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|   | `-ImplicitCastExpr 0x7f98a8885da8 <col:14> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f98a8885d90 <col:14> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f98a8885cb8 <col:14> 'void *' lvalue ParmVar 0x7f98a8882360 'q' 'void *'
+|   `-CallExpr 0x7f98a8886000 <line:212:3, col:15> 'char *'
+|     |-ImplicitCastExpr 0x7f98a8885fd0 <col:3> 'char *(*)(const char *, const char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f98a8885f28 <col:3> 'char *(const char *, const char *)' Function 0x7f98a8885dc0 'strstr' 'char *(const char *, const char *)'
+|     |-ImplicitCastExpr 0x7f98a8886050 <col:11> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7f98a8886038 <col:11> 'void *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f98a8885f50 <col:11> 'void *' lvalue ParmVar 0x7f98a88822e8 'p' 'void *'
+|     `-ImplicitCastExpr 0x7f98a8886080 <col:14> 'const char *' <BitCast>
+|       `-ImplicitCastExpr 0x7f98a8886068 <col:14> 'void *' <LValueToRValue>
+|         `-DeclRefExpr 0x7f98a8885f78 <col:14> 'void *' lvalue ParmVar 0x7f98a8882360 'q' 'void *'
+|-FunctionDecl 0x7f98a88825e8 <line:178:3> col:3 implicit used memchr 'void *(const void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7f98a8882680 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7f98a88826e0 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7f98a8882740 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f98a8882998 <line:181:3> col:3 implicit used memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f98a8882a30 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7f98a8882a90 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7f98a8882af0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f98a8882d98 <line:182:3> col:3 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f98a8882e30 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f98a8882e90 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7f98a8882ef0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f98a8883150 <line:184:3> col:3 implicit used memmove 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f98a88831e8 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f98a8883248 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7f98a88832a8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f98a8883508 <line:186:3> col:3 implicit used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7f98a88835a0 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f98a8883600 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7f98a8883660 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f98a8883890 <line:188:3> col:3 implicit used strcat 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x7f98a8883928 <<invalid sloc>> <invalid sloc> 'char *'
+| `-ParmVarDecl 0x7f98a8883988 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f98a8883bc0 <line:190:3> col:3 implicit used strchr 'char *(const char *, int)' extern
+| |-ParmVarDecl 0x7f98a8883c58 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f98a8883cb8 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7f98a8883ea0 <line:193:3> col:3 implicit used strcmp 'int (const char *, const char *)' extern
+| |-ParmVarDecl 0x7f98a8883f38 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f98a8883f98 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f98a8884198 <line:194:3> col:3 implicit used strcpy 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x7f98a8884230 <<invalid sloc>> <invalid sloc> 'char *'
+| `-ParmVarDecl 0x7f98a8884290 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f98a88844a0 <line:196:3> col:3 implicit used strcspn 'unsigned long (const char *, const char *)' extern
+| |-ParmVarDecl 0x7f98a8884538 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f98a8884598 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f98a88847c8 <line:198:3> col:3 implicit used strlen 'unsigned long (const char *)' extern
+| `-ParmVarDecl 0x7f98a8884860 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f98a8884a18 <line:200:3> col:3 implicit used strncat 'char *(char *, const char *, unsigned long)' extern
+| |-ParmVarDecl 0x7f98a8884ab0 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7f98a8884b10 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f98a8884b70 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f98a8884e18 <line:203:3> col:3 implicit used strncmp 'int (const char *, const char *, unsigned long)' extern
+| |-ParmVarDecl 0x7f98a8884eb0 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x7f98a8884f10 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f98a8884f70 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f98a88851e8 <line:204:3> col:3 implicit used strncpy 'char *(char *, const char *, unsigned long)' extern
+| |-ParmVarDecl 0x7f98a8885280 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7f98a88852e0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f98a8885340 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f98a88855b0 <line:206:3> col:3 implicit used strpbrk 'char *(const char *, const char *)' extern
+| |-ParmVarDecl 0x7f98a8885648 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f98a88856a8 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f98a8885898 <line:208:3> col:3 implicit used strrchr 'char *(const char *, int)' extern
+| |-ParmVarDecl 0x7f98a8885930 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f98a8885990 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7f98a8885b00 <line:210:3> col:3 implicit used strspn 'unsigned long (const char *, const char *)' extern
+| |-ParmVarDecl 0x7f98a8885b98 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f98a8885bf8 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f98a8885dc0 <line:212:3> col:3 implicit used strstr 'char *(const char *, const char *)' extern
+| |-ParmVarDecl 0x7f98a8885e58 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f98a8885eb8 <<invalid sloc>> <invalid sloc> 'const char *'
+|-RecordDecl 0x7f98a8886140 <line:217:9, col:25> col:9 struct definition
+| `-FieldDecl 0x7f98a8886208 <col:18, col:22> col:22 i 'int'
+|-TypedefDecl 0x7f98a88862a0 <col:1, col:27> col:27 referenced FILE 'struct FILE':'FILE'
+| `-ElaboratedType 0x7f98a8886250 'struct FILE' sugar
+|   `-RecordType 0x7f98a88861d0 'FILE'
+|     `-Record 0x7f98a8886140 ''
+|-FunctionDecl 0x7f98a88865c0 <line:219:1, line:238:1> line:220:1 stdio 'void (FILE *, void *, unsigned long)'
+| |-ParmVarDecl 0x7f98a8886398 <col:8, col:14> col:14 used fp 'FILE *'
+| |-ParmVarDecl 0x7f98a8886410 <col:18, col:24> col:24 used p 'void *'
+| |-ParmVarDecl 0x7f98a8886488 <<built-in>:75:23, c_files/pr59717.c:220:41> col:41 used sz 'unsigned long'
+| `-CompoundStmt 0x7f98a88887c8 <line:221:1, line:238:1>
+|   |-CallExpr 0x7f98a88869a0 <line:222:3, col:18> 'int'
+|   | |-ImplicitCastExpr 0x7f98a8886988 <col:3> 'int (*)(FILE *, const char *, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a88868b0 <col:3> 'int (FILE *, const char *, ...)' Function 0x7f98a88866f0 'fprintf' 'int (FILE *, const char *, ...)'
+|   | |-ImplicitCastExpr 0x7f98a88869d8 <col:12> 'FILE *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a88868d8 <col:12> 'FILE *' lvalue ParmVar 0x7f98a8886398 'fp' 'FILE *'
+|   | `-ImplicitCastExpr 0x7f98a8886a08 <col:16> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f98a88869f0 <col:16> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x7f98a8886900 <col:16> 'char [1]' lvalue ""
+|   |-CallExpr 0x7f98a8886ce0 <line:224:3, col:17> 'int'
+|   | |-ImplicitCastExpr 0x7f98a8886cc8 <col:3> 'int (*)(FILE *__restrict, const char *__restrict, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8886c20 <col:3> 'int (FILE *__restrict, const char *__restrict, ...)' Function 0x7f98a8886a60 'fscanf' 'int (FILE *__restrict, const char *__restrict, ...)'
+|   | |-ImplicitCastExpr 0x7f98a8886d18 <col:11> 'FILE *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8886c48 <col:11> 'FILE *' lvalue ParmVar 0x7f98a8886398 'fp' 'FILE *'
+|   | `-ImplicitCastExpr 0x7f98a8886d48 <col:15> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f98a8886d30 <col:15> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x7f98a8886c70 <col:15> 'char [1]' lvalue ""
+|   |-CallExpr 0x7f98a8886f00 <line:226:3, col:24> 'int'
+|   | |-ImplicitCastExpr 0x7f98a8886ee8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8886e20 <col:3> 'int ()' Function 0x7f98a8886d88 'fwrite' 'int ()'
+|   | |-ImplicitCastExpr 0x7f98a8886f48 <col:11> 'void *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8886e48 <col:11> 'void *' lvalue ParmVar 0x7f98a8886410 'p' 'void *'
+|   | |-ImplicitCastExpr 0x7f98a8886f60 <col:14> 'unsigned long' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8886e70 <col:14> 'unsigned long' lvalue ParmVar 0x7f98a8886488 'sz' 'unsigned long'
+|   | |-ImplicitCastExpr 0x7f98a8886f78 <col:18> 'unsigned long' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8886e98 <col:18> 'unsigned long' lvalue ParmVar 0x7f98a8886488 'sz' 'unsigned long'
+|   | `-ImplicitCastExpr 0x7f98a8886f90 <col:22> 'FILE *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a8886ec0 <col:22> 'FILE *' lvalue ParmVar 0x7f98a8886398 'fp' 'FILE *'
+|   |-CallExpr 0x7f98a88879f0 <line:228:3, col:13> 'int'
+|   | |-ImplicitCastExpr 0x7f98a88879d8 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8887958 <col:3> 'int (const char *, ...)' Function 0x7f98a8887800 'printf' 'int (const char *, ...)'
+|   | `-ImplicitCastExpr 0x7f98a8887a38 <col:11> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f98a8887a20 <col:11> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x7f98a8887980 <col:11> 'char [1]' lvalue ""
+|   |-CallExpr 0x7f98a8887c70 <line:230:3, col:12> 'int'
+|   | |-ImplicitCastExpr 0x7f98a8887c58 <col:3> 'int (*)(const char *__restrict, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8887be0 <col:3> 'int (const char *__restrict, ...)' Function 0x7f98a8887a88 'scanf' 'int (const char *__restrict, ...)'
+|   | `-ImplicitCastExpr 0x7f98a8887cb8 <col:10> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f98a8887ca0 <col:10> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x7f98a8887c08 <col:10> 'char [1]' lvalue ""
+|   |-CallExpr 0x7f98a8888020 <line:232:3, col:23> 'int'
+|   | |-ImplicitCastExpr 0x7f98a8888008 <col:3> 'int (*)(char *, unsigned long, const char *, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8887f40 <col:3> 'int (char *, unsigned long, const char *, ...)' Function 0x7f98a8887d18 'snprintf' 'int (char *, unsigned long, const char *, ...)'
+|   | |-ImplicitCastExpr 0x7f98a8888060 <col:13> 'char *' <ArrayToPointerDecay>
+|   | | `-StringLiteral 0x7f98a8887f68 <col:13> 'char [1]' lvalue ""
+|   | |-ImplicitCastExpr 0x7f98a8888078 <col:17> 'unsigned long' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8887f90 <col:17> 'unsigned long' lvalue ParmVar 0x7f98a8886488 'sz' 'unsigned long'
+|   | `-ImplicitCastExpr 0x7f98a88880a8 <col:21> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f98a8888090 <col:21> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x7f98a8887fb8 <col:21> 'char [1]' lvalue ""
+|   |-CallExpr 0x7f98a8888380 <line:234:3, col:18> 'int'
+|   | |-ImplicitCastExpr 0x7f98a8888368 <col:3> 'int (*)(char *, const char *, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a88882c0 <col:3> 'int (char *, const char *, ...)' Function 0x7f98a8888100 'sprintf' 'int (char *, const char *, ...)'
+|   | |-ImplicitCastExpr 0x7f98a88883b8 <col:12> 'char *' <ArrayToPointerDecay>
+|   | | `-StringLiteral 0x7f98a88882e8 <col:12> 'char [1]' lvalue ""
+|   | `-ImplicitCastExpr 0x7f98a88883e8 <col:16> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f98a88883d0 <col:16> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x7f98a8888310 <col:16> 'char [1]' lvalue ""
+|   `-CallExpr 0x7f98a8888730 <line:236:3, col:17> 'int'
+|     |-ImplicitCastExpr 0x7f98a8888718 <col:3> 'int (*)(const char *__restrict, const char *__restrict, ...)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f98a8888640 <col:3> 'int (const char *__restrict, const char *__restrict, ...)' Function 0x7f98a8888480 'sscanf' 'int (const char *__restrict, const char *__restrict, ...)'
+|     |-ImplicitCastExpr 0x7f98a8888780 <col:11> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7f98a8888768 <col:11> 'char *' <ArrayToPointerDecay>
+|     |   `-StringLiteral 0x7f98a8888668 <col:11> 'char [1]' lvalue ""
+|     `-ImplicitCastExpr 0x7f98a88887b0 <col:15> 'const char *' <BitCast>
+|       `-ImplicitCastExpr 0x7f98a8888798 <col:15> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7f98a8888690 <col:15> 'char [1]' lvalue ""
+|-FunctionDecl 0x7f98a88866f0 <line:222:3> col:3 implicit used fprintf 'int (FILE *, const char *, ...)' extern
+| |-ParmVarDecl 0x7f98a8886788 <<invalid sloc>> <invalid sloc> 'FILE *'
+| |-ParmVarDecl 0x7f98a88867e8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f98a8886858 <col:3> Implicit printf 2 3
+|-FunctionDecl 0x7f98a8886a60 <line:224:3> col:3 implicit used fscanf 'int (FILE *__restrict, const char *__restrict, ...)' extern
+| |-ParmVarDecl 0x7f98a8886af8 <<invalid sloc>> <invalid sloc> 'FILE *__restrict'
+| |-ParmVarDecl 0x7f98a8886b58 <<invalid sloc>> <invalid sloc> 'const char *__restrict'
+| `-FormatAttr 0x7f98a8886bc8 <col:3> Implicit scanf 2 3
+|-FunctionDecl 0x7f98a8886d88 <<invalid sloc>> line:226:3 implicit used fwrite 'int ()'
+|-FunctionDecl 0x7f98a8887800 <line:228:3> col:3 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7f98a8887898 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f98a8887900 <col:3> Implicit printf 1 2
+|-FunctionDecl 0x7f98a8887a88 <line:230:3> col:3 implicit used scanf 'int (const char *__restrict, ...)' extern
+| |-ParmVarDecl 0x7f98a8887b20 <<invalid sloc>> <invalid sloc> 'const char *__restrict'
+| `-FormatAttr 0x7f98a8887b88 <col:3> Implicit scanf 1 2
+|-FunctionDecl 0x7f98a8887d18 <line:232:3> col:3 implicit used snprintf 'int (char *, unsigned long, const char *, ...)' extern
+| |-ParmVarDecl 0x7f98a8887db0 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7f98a8887e10 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7f98a8887e70 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f98a8887ee8 <col:3> Implicit printf 3 4
+|-FunctionDecl 0x7f98a8888100 <line:234:3> col:3 implicit used sprintf 'int (char *, const char *, ...)' extern
+| |-ParmVarDecl 0x7f98a8888198 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7f98a88881f8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f98a8888268 <col:3> Implicit printf 2 3
+|-FunctionDecl 0x7f98a8888480 <line:236:3> col:3 implicit used sscanf 'int (const char *__restrict, const char *__restrict, ...)' extern
+| |-ParmVarDecl 0x7f98a8888518 <<invalid sloc>> <invalid sloc> 'const char *__restrict'
+| |-ParmVarDecl 0x7f98a8888578 <<invalid sloc>> <invalid sloc> 'const char *__restrict'
+| `-FormatAttr 0x7f98a88885e8 <col:3> Implicit scanf 2 3
+|-FunctionDecl 0x7f98a88889e0 <line:240:1, line:261:1> line:241:1 stdlib 'void (void *, void *, unsigned long)'
+| |-ParmVarDecl 0x7f98a8888858 <col:9, col:15> col:15 used p 'void *'
+| |-ParmVarDecl 0x7f98a88888d0 <col:18, col:24> col:24 q 'void *'
+| |-ParmVarDecl 0x7f98a8888948 <<built-in>:75:23, c_files/pr59717.c:241:41> col:41 used sz 'unsigned long'
+| `-CompoundStmt 0x7f98a78025b0 <line:242:1, line:261:1>
+|   |-CallExpr 0x7f98a8888bc0 <line:243:3, col:10> 'void'
+|   | `-ImplicitCastExpr 0x7f98a8888ba8 <col:3> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7f98a8888b58 <col:3> 'void (void) __attribute__((noreturn))' Function 0x7f98a8888ac0 'abort' 'void (void) __attribute__((noreturn))'
+|   |-CallExpr 0x7f98a8888e60 <line:245:3, col:16> 'void *'
+|   | |-ImplicitCastExpr 0x7f98a8888e48 <col:3> 'void *(*)(unsigned long, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8888d98 <col:3> 'void *(unsigned long, unsigned long)' Function 0x7f98a8888c30 'calloc' 'void *(unsigned long, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f98a8888e98 <col:11> 'unsigned long' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a8888dc0 <col:11> 'unsigned long' lvalue ParmVar 0x7f98a8888948 'sz' 'unsigned long'
+|   | `-ImplicitCastExpr 0x7f98a8888eb0 <col:15> 'unsigned long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f98a8888de8 <col:15> 'int' 1
+|   |-CallExpr 0x7f98a8889090 <line:247:3, col:10> 'void'
+|   | |-ImplicitCastExpr 0x7f98a8889078 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8889008 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7f98a8888f08 'exit' 'void (int) __attribute__((noreturn))'
+|   | `-IntegerLiteral 0x7f98a8889030 <col:9> 'int' 1
+|   |-CallExpr 0x7f98a88891e8 <line:249:3, col:10> 'int'
+|   | |-ImplicitCastExpr 0x7f98a88891d0 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8889180 <col:3> 'int ()' Function 0x7f98a88890e8 'free' 'int ()'
+|   | `-ImplicitCastExpr 0x7f98a8889218 <col:9> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a88891a8 <col:9> 'void *' lvalue ParmVar 0x7f98a8888858 'p' 'void *'
+|   |-CallExpr 0x7f98a8889450 <line:251:3, col:11> 'long'
+|   | |-ImplicitCastExpr 0x7f98a8889438 <col:3> 'long (*)(long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a88893c0 <col:3> 'long (long)' Function 0x7f98a8889268 'labs' 'long (long)'
+|   | `-IntegerLiteral 0x7f98a88893e8 <col:9> 'long' 1
+|   |-CallExpr 0x7f98a88896a0 <line:253:3, col:13> 'long long'
+|   | |-ImplicitCastExpr 0x7f98a8889688 <col:3> 'long long (*)(long long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a8889610 <col:3> 'long long (long long)' Function 0x7f98a88894b8 'llabs' 'long long (long long)'
+|   | `-IntegerLiteral 0x7f98a8889638 <col:10> 'long long' 1
+|   |-CallExpr 0x7f98a78020b0 <line:255:3, col:13> 'void *'
+|   | |-ImplicitCastExpr 0x7f98a7802098 <col:3> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a7802008 <col:3> 'void *(unsigned long)' Function 0x7f98a8889708 'malloc' 'void *(unsigned long)'
+|   | `-ImplicitCastExpr 0x7f98a78020e0 <col:11> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a7802030 <col:11> 'unsigned long' lvalue ParmVar 0x7f98a8888948 'sz' 'unsigned long'
+|   |-CallExpr 0x7f98a7802390 <line:257:3, col:17> 'void *'
+|   | |-ImplicitCastExpr 0x7f98a7802378 <col:3> 'void *(*)(void *, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f98a78022a8 <col:3> 'void *(void *, unsigned long)' Function 0x7f98a7802140 'realloc' 'void *(void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f98a78023c8 <col:12> 'void *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f98a78022d0 <col:12> 'void *' lvalue ParmVar 0x7f98a8888858 'p' 'void *'
+|   | `-ImplicitCastExpr 0x7f98a78023e0 <col:15> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f98a78022f8 <col:15> 'unsigned long' lvalue ParmVar 0x7f98a8888948 'sz' 'unsigned long'
+|   `-CallExpr 0x7f98a7802548 <line:259:3, col:24> 'int'
+|     |-ImplicitCastExpr 0x7f98a7802530 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f98a78024b8 <col:3> 'int ()' Function 0x7f98a7802420 'aligned_alloc' 'int ()'
+|     |-ImplicitCastExpr 0x7f98a7802580 <col:18> 'unsigned long' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f98a78024e0 <col:18> 'unsigned long' lvalue ParmVar 0x7f98a8888948 'sz' 'unsigned long'
+|     `-ImplicitCastExpr 0x7f98a7802598 <col:22> 'unsigned long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f98a7802508 <col:22> 'unsigned long' lvalue ParmVar 0x7f98a8888948 'sz' 'unsigned long'
+|-FunctionDecl 0x7f98a8888ac0 <line:243:3> col:3 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f98a8888c30 <line:245:3> col:3 implicit used calloc 'void *(unsigned long, unsigned long)' extern
+| |-ParmVarDecl 0x7f98a8888cc8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-ParmVarDecl 0x7f98a8888d28 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f98a8888f08 <line:247:3> col:3 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7f98a8888fa0 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7f98a88890e8 <<invalid sloc>> line:249:3 implicit used free 'int ()'
+|-FunctionDecl 0x7f98a8889268 <line:251:3> col:3 implicit used labs 'long (long)' extern
+| |-ParmVarDecl 0x7f98a8889300 <<invalid sloc>> <invalid sloc> 'long'
+| |-NoThrowAttr 0x7f98a8889368 <col:3> Implicit
+| `-ConstAttr 0x7f98a88893b0 <col:3> Implicit
+|-FunctionDecl 0x7f98a88894b8 <line:253:3> col:3 implicit used llabs 'long long (long long)' extern
+| |-ParmVarDecl 0x7f98a8889550 <<invalid sloc>> <invalid sloc> 'long long'
+| |-NoThrowAttr 0x7f98a88895b8 <col:3> Implicit
+| `-ConstAttr 0x7f98a8889600 <col:3> Implicit
+|-FunctionDecl 0x7f98a8889708 <line:255:3> col:3 implicit used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7f98a88897a0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f98a7802140 <line:257:3> col:3 implicit used realloc 'void *(void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f98a78021d8 <<invalid sloc>> <invalid sloc> 'void *'
+| `-ParmVarDecl 0x7f98a7802238 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f98a7802420 <<invalid sloc>> line:259:3 implicit used aligned_alloc 'int ()'
+|-FunctionDecl 0x7f98a78026f0 <line:263:1, line:268:1> line:264:1 inttypes 'void (long)'
+| |-ParmVarDecl 0x7f98a7802628 <<built-in>:56:25, c_files/pr59717.c:264:27> col:27 used j 'long'
+| `-CompoundStmt 0x7f98a7802900 <line:265:1, line:268:1>
+|   `-CallExpr 0x7f98a78028b8 <line:266:3, col:13> 'int'
+|     |-ImplicitCastExpr 0x7f98a78028a0 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f98a7802850 <col:3> 'int ()' Function 0x7f98a78027b8 'imaxabs' 'int ()'
+|     `-ImplicitCastExpr 0x7f98a78028e8 <col:12> 'long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f98a7802878 <col:12> 'long' lvalue ParmVar 0x7f98a7802628 'j' 'long'
+|-FunctionDecl 0x7f98a78027b8 <<invalid sloc>> col:3 implicit used imaxabs 'int ()'
+|-RecordDecl 0x7f98a7802920 <line:270:1, col:8> col:8 struct tm
+|-FunctionDecl 0x7f98a7802ca0 <line:272:1, line:277:1> line:273:1 timeh 'void (char *, unsigned long, struct tm *)'
+| |-ParmVarDecl 0x7f98a78029e8 <col:8, col:14> col:14 used s 'char *'
+| |-ParmVarDecl 0x7f98a7802a60 <<built-in>:75:23, c_files/pr59717.c:273:31> col:31 used sz 'unsigned long'
+| |-ParmVarDecl 0x7f98a7802b70 <col:35, col:46> col:46 used tm 'struct tm *'
+| `-CompoundStmt 0x7f98a7802f98 <line:274:1, line:277:1>
+|   `-CallExpr 0x7f98a7802ef0 <line:275:3, col:26> 'int'
+|     |-ImplicitCastExpr 0x7f98a7802ed8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f98a7802e10 <col:3> 'int ()' Function 0x7f98a7802d78 'strftime' 'int ()'
+|     |-ImplicitCastExpr 0x7f98a7802f38 <col:13> 'char *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f98a7802e38 <col:13> 'char *' lvalue ParmVar 0x7f98a78029e8 's' 'char *'
+|     |-ImplicitCastExpr 0x7f98a7802f50 <col:16> 'unsigned long' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f98a7802e60 <col:16> 'unsigned long' lvalue ParmVar 0x7f98a7802a60 'sz' 'unsigned long'
+|     |-ImplicitCastExpr 0x7f98a7802f68 <col:20> 'char *' <ArrayToPointerDecay>
+|     | `-StringLiteral 0x7f98a7802e88 <col:20> 'char [1]' lvalue ""
+|     `-ImplicitCastExpr 0x7f98a7802f80 <col:24> 'struct tm *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f98a7802eb0 <col:24> 'struct tm *' lvalue ParmVar 0x7f98a7802b70 'tm' 'struct tm *'
+`-FunctionDecl 0x7f98a7802d78 <<invalid sloc>> col:3 implicit used strftime 'int ()'

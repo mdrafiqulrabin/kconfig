@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7f88f18264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f88f1826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f88f1826740 '__int128'
+|-TypedefDecl 0x7f88f1826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f88f1826760 'unsigned __int128'
+|-TypedefDecl 0x7f88f1826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f88f1826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f88f1826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f88f1826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f88f1826dc0 'char *'
+|   `-BuiltinType 0x7f88f1826560 'char'
+|-TypedefDecl 0x7f88f18270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f88f1827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f88f1826ee0 'struct __va_list_tag'
+|     `-Record 0x7f88f1826e58 '__va_list_tag'
+|-RecordDecl 0x7f88f1827120 <c_files/pr45819.c:4:1, line:7:1> line:4:8 struct ehci_regs definition
+| |-PackedAttr 0x7f88f2022d18 <line:7:19>
+| |-FieldDecl 0x7f88f2022c00 <line:5:5, col:10> col:10 x 'char'
+| `-FieldDecl 0x7f88f2022cd0 <line:6:5, col:31> col:18 referenced port_status 'unsigned int [0]'
+|-RecordDecl 0x7f88f2022d60 <line:9:1, line:11:1> line:9:8 struct ehci_hcd definition
+| `-FieldDecl 0x7f88f2022ec0 <line:10:5, col:23> col:23 referenced regs 'struct ehci_regs *'
+`-FunctionDecl 0x7f88f2023158 <line:13:1, line:17:1> line:13:5 ehci_hub_control 'int (struct ehci_hcd *, int)'
+  |-ParmVarDecl 0x7f88f2022fc0 <col:23, col:40> col:40 used ehci 'struct ehci_hcd *'
+  |-ParmVarDecl 0x7f88f2023038 <col:46, col:50> col:50 used wIndex 'int'
+  `-CompoundStmt 0x7f88f20235a8 <line:14:1, line:17:1>
+    |-DeclStmt 0x7f88f2023448 <line:15:3, col:62>
+    | `-VarDecl 0x7f88f2023280 <col:3, col:61> col:17 used status_reg 'unsigned int *' cinit
+    |   `-UnaryOperator 0x7f88f2023428 <col:30, col:61> 'unsigned int *' prefix '&'
+    |     `-ArraySubscriptExpr 0x7f88f2023400 <col:31, col:61> 'unsigned int' lvalue
+    |       |-ImplicitCastExpr 0x7f88f20233d0 <col:31, col:43> 'unsigned int *' <ArrayToPointerDecay>
+    |       | `-MemberExpr 0x7f88f2023370 <col:31, col:43> 'unsigned int [0]' lvalue ->port_status 0x7f88f2022cd0
+    |       |   `-ImplicitCastExpr 0x7f88f2023358 <col:31, col:37> 'struct ehci_regs *' <LValueToRValue>
+    |       |     `-MemberExpr 0x7f88f2023320 <col:31, col:37> 'struct ehci_regs *' lvalue ->regs 0x7f88f2022ec0
+    |       |       `-ImplicitCastExpr 0x7f88f2023308 <col:31> 'struct ehci_hcd *' <LValueToRValue>
+    |       |         `-DeclRefExpr 0x7f88f20232e0 <col:31> 'struct ehci_hcd *' lvalue ParmVar 0x7f88f2022fc0 'ehci' 'struct ehci_hcd *'
+    |       `-ImplicitCastExpr 0x7f88f20233e8 <col:55> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f88f20233a8 <col:55> 'int' lvalue ParmVar 0x7f88f2023038 'wIndex' 'int'
+    `-ReturnStmt 0x7f88f2023590 <line:16:3, col:36>
+      `-ImplicitCastExpr 0x7f88f2023578 <col:10, col:36> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7f88f2023560 <col:10, col:36> 'unsigned int' <LValueToRValue>
+          `-UnaryOperator 0x7f88f2023540 <col:10, col:36> 'volatile unsigned int' lvalue prefix '*'
+            `-CStyleCastExpr 0x7f88f2023518 <col:11, col:36> 'volatile unsigned int *' <BitCast>
+              `-ImplicitCastExpr 0x7f88f20234d0 <col:36> 'unsigned int *' <LValueToRValue>
+                `-DeclRefExpr 0x7f88f2023460 <col:36> 'unsigned int *' lvalue Var 0x7f88f2023280 'status_reg' 'unsigned int *'

@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7feb210216d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feb21021c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feb21021940 '__int128'
+|-TypedefDecl 0x7feb21021c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feb21021960 'unsigned __int128'
+|-TypedefDecl 0x7feb21021f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feb21021d70 'struct __NSConstantString_tag'
+|   `-Record 0x7feb21021ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feb21022000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feb21021fc0 'char *'
+|   `-BuiltinType 0x7feb21021760 'char'
+|-TypedefDecl 0x7feb210222c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feb21022270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feb210220e0 'struct __va_list_tag'
+|     `-Record 0x7feb21022058 '__va_list_tag'
+|-VarDecl 0x7feb21022338 <c_files/pr81224.c:5:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7feb21825a50 <line:6:1, line:11:1> line:7:1 b 'int ()'
+  `-CompoundStmt 0x7feb21825db8 <line:8:1, line:11:1>
+    |-DeclStmt 0x7feb21825ce0 <line:9:3, col:82>
+    | `-VarDecl 0x7feb21825c28 <col:3, col:69> col:69 used c '__attribute__((__vector_size__(4 * sizeof(int)))) int' register
+    |   `-AsmLabelAttr 0x7feb21825c88 <col:75> "xmm0"
+    `-ReturnStmt 0x7feb21825da0 <line:10:3, col:13>
+      `-ImplicitCastExpr 0x7feb21825d88 <col:10, col:13> 'int' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7feb21825d60 <col:10, col:13> 'int' lvalue vectorcomponent
+          |-DeclRefExpr 0x7feb21825cf8 <col:10> '__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7feb21825c28 'c' '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+          `-ImplicitCastExpr 0x7feb21825d48 <col:12> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7feb21825d20 <col:12> 'int' lvalue Var 0x7feb21022338 'a' 'int'

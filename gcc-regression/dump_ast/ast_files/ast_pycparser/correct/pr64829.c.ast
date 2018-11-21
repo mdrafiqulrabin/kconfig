@@ -1,0 +1,186 @@
+FileAST: 
+  Typedef: Uint8, [], ['typedef']
+    TypeDecl: Uint8, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: Sint32, [], ['typedef']
+    TypeDecl: Sint32, []
+      IdentifierType: ['int']
+  Typedef: Uint32, [], ['typedef']
+    TypeDecl: Uint32, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: RMColorDataRef, [], ['typedef']
+    TypeDecl: RMColorDataRef, []
+      Union: RMColorDataRef
+        Decl: data8, [], [], []
+          PtrDecl: []
+            TypeDecl: data8, []
+              IdentifierType: ['Uint8']
+  Typedef: RMColorData, [], ['typedef']
+    TypeDecl: RMColorData, []
+      Struct: RMColorData
+        Decl: dataCount, [], [], []
+          TypeDecl: dataCount, []
+            IdentifierType: ['Uint32']
+        Decl: dataRef, [], [], []
+          TypeDecl: dataRef, []
+            IdentifierType: ['RMColorDataRef']
+  Typedef: RMColorTable, [], ['typedef']
+    TypeDecl: RMColorTable, []
+      Struct: RMColorTable
+        Decl: dataCompsOut, [], [], []
+          TypeDecl: dataCompsOut, []
+            IdentifierType: ['Uint8']
+        Decl: dataRef, [], [], []
+          TypeDecl: dataRef, []
+            IdentifierType: ['RMColorDataRef']
+  FuncDef: 
+    Decl: fail, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: pInColor, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: pInColor, ['const']
+                IdentifierType: ['RMColorData']
+          Decl: pOutColor, [], [], []
+            PtrDecl: []
+              TypeDecl: pOutColor, []
+                IdentifierType: ['RMColorData']
+          Decl: pColorTable, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: pColorTable, ['const']
+                IdentifierType: ['RMColorTable']
+        TypeDecl: fail, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: comp, [], [], []
+        TypeDecl: comp, []
+          IdentifierType: ['Uint32']
+      Decl: nCompOut, [], [], []
+        TypeDecl: nCompOut, []
+          IdentifierType: ['Uint8']
+      Decl: result, [], [], []
+        TypeDecl: result, []
+          IdentifierType: ['Sint32']
+      Decl: interpFrac1, [], [], []
+        TypeDecl: interpFrac1, []
+          IdentifierType: ['Uint32']
+      Decl: interpFrac2, [], [], []
+        TypeDecl: interpFrac2, []
+          IdentifierType: ['Uint32']
+      Decl: interpFrac3, [], [], []
+        TypeDecl: interpFrac3, []
+          IdentifierType: ['Uint32']
+      Decl: val0, [], [], []
+        TypeDecl: val0, []
+          IdentifierType: ['Sint32']
+      Decl: val1, [], [], []
+        TypeDecl: val1, []
+          IdentifierType: ['Sint32']
+      Decl: val2, [], [], []
+        TypeDecl: val2, []
+          IdentifierType: ['Sint32']
+      Decl: val3, [], [], []
+        TypeDecl: val3, []
+          IdentifierType: ['Sint32']
+      Decl: pOut, [], [], []
+        PtrDecl: []
+          TypeDecl: pOut, []
+            IdentifierType: ['Uint8']
+      Decl: pClutData, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: pClutData, ['const']
+            IdentifierType: ['Uint8']
+      Decl: pCornerPoint0, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: pCornerPoint0, ['const']
+            IdentifierType: ['Uint8']
+      Decl: lastOut, [], [], []
+        ArrayDecl: []
+          TypeDecl: lastOut, []
+            IdentifierType: ['Uint8']
+          TernaryOp: 
+            BinaryOp: >
+              Constant: int, 8
+              Constant: int, 4
+            Constant: int, 8
+            Constant: int, 4
+      Assignment: =
+        ID: pOut
+        StructRef: .
+          StructRef: ->
+            ID: pOutColor
+            ID: dataRef
+          ID: data8
+      Assignment: =
+        ID: pClutData
+        StructRef: .
+          StructRef: ->
+            ID: pColorTable
+            ID: dataRef
+          ID: data8
+      Assignment: =
+        ID: nCompOut
+        StructRef: ->
+          ID: pColorTable
+          ID: dataCompsOut
+      Assignment: =
+        ID: pCornerPoint0
+        ID: pClutData
+      For: 
+        Assignment: =
+          ID: comp
+          Constant: int, 0
+        BinaryOp: <
+          ID: comp
+          ID: nCompOut
+        UnaryOp: p++
+          ID: comp
+        Compound: 
+          Assignment: =
+            ID: val0
+            UnaryOp: *
+              UnaryOp: p++
+                ID: pCornerPoint0
+          Assignment: =
+            ID: result
+            BinaryOp: <<
+              ID: val0
+              Constant: int, 4
+          Assignment: +=
+            ID: result
+            BinaryOp: *
+              BinaryOp: -
+                ID: val1
+                ID: val0
+              ID: interpFrac1
+          Assignment: +=
+            ID: result
+            BinaryOp: *
+              BinaryOp: -
+                ID: val2
+                ID: val1
+              ID: interpFrac2
+          Assignment: +=
+            ID: result
+            BinaryOp: *
+              BinaryOp: -
+                ID: val3
+                ID: val2
+              ID: interpFrac3
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: pOut
+            Assignment: =
+              ArrayRef: 
+                ID: lastOut
+                ID: comp
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['Uint8']
+                BinaryOp: >>
+                  ID: result
+                  Constant: int, 4
+      Return: 
+        Constant: int, 0

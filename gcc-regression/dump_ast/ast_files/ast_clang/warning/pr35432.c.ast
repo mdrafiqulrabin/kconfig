@@ -1,0 +1,30 @@
+c_files/pr35432.c:10:11: warning: expression result unused [-Wunused-value]
+  (a = a).c;
+  ~~~~~~~ ^
+1 warning generated.
+TranslationUnitDecl 0x7feec08264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feec0826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feec0826740 '__int128'
+|-TypedefDecl 0x7feec0826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feec0826760 'unsigned __int128'
+|-TypedefDecl 0x7feec0826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feec0826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7feec0826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feec0826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feec0826dc0 'char *'
+|   `-BuiltinType 0x7feec0826560 'char'
+|-TypedefDecl 0x7feec08270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feec0827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feec0826ee0 'struct __va_list_tag'
+|     `-Record 0x7feec0826e58 '__va_list_tag'
+|-RecordDecl 0x7feec0827120 <c_files/pr35432.c:3:1, line:6:1> line:3:8 struct A definition
+| `-FieldDecl 0x7feec0877458 <line:5:3, col:11> col:8 referenced c 'char [0]'
+`-FunctionDecl 0x7feec08775f0 <line:8:1, line:11:1> line:8:6 foo 'void (struct A)'
+  |-ParmVarDecl 0x7feec08774f0 <col:10, col:19> col:19 used a 'struct A':'struct A'
+  `-CompoundStmt 0x7feec08777b8 <line:9:1, line:11:1>
+    `-MemberExpr 0x7feec0877780 <line:10:3, col:11> 'char [0]' .c 0x7feec0877458
+      `-ParenExpr 0x7feec0877760 <col:3, col:9> 'struct A':'struct A'
+        `-BinaryOperator 0x7feec0877738 <col:4, col:8> 'struct A':'struct A' '='
+          |-DeclRefExpr 0x7feec08776d0 <col:4> 'struct A':'struct A' lvalue ParmVar 0x7feec08774f0 'a' 'struct A':'struct A'
+          `-ImplicitCastExpr 0x7feec0877720 <col:8> 'struct A':'struct A' <LValueToRValue>
+            `-DeclRefExpr 0x7feec08776f8 <col:8> 'struct A':'struct A' lvalue ParmVar 0x7feec08774f0 'a' 'struct A':'struct A'

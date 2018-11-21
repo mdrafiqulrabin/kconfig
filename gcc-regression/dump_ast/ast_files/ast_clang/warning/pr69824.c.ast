@@ -1,0 +1,30 @@
+c_files/pr69824.c:3:20: warning: implicit declaration of function 'foo' is invalid in C99 [-Wimplicit-function-declaration]
+int bar() { return foo(); }
+                   ^
+1 warning generated.
+TranslationUnitDecl 0x7fe5670264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe567026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe567026740 '__int128'
+|-TypedefDecl 0x7fe567026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe567026760 'unsigned __int128'
+|-TypedefDecl 0x7fe567026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe567026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe567026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe567026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe567026dc0 'char *'
+|   `-BuiltinType 0x7fe567026560 'char'
+|-TypedefDecl 0x7fe5670270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe567027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe567026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe567026e58 '__va_list_tag'
+|-FunctionDecl 0x7fe567825a00 <c_files/pr69824.c:3:1, col:27> col:5 bar 'int ()'
+| `-CompoundStmt 0x7fe567825c40 <col:11, col:27>
+|   `-ReturnStmt 0x7fe567825c28 <col:13, col:24>
+|     `-CallExpr 0x7fe567825c00 <col:20, col:24> 'int'
+|       `-ImplicitCastExpr 0x7fe567825be8 <col:20> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7fe567825b98 <col:20> 'int ()' Function 0x7fe567825b00 'foo' 'int ()'
+|-FunctionDecl 0x7fe567825b00 <<invalid sloc>> col:20 implicit used foo 'int ()'
+`-FunctionDecl 0x7fe567825e90 <line:4:1, col:34> col:6 baz 'void (int *)'
+  |-ParmVarDecl 0x7fe567825d90 <col:10, col:21> col:14 c 'int *':'int *'
+  `-CompoundStmt 0x7fe567825f48 <col:24, col:34>
+    `-ReturnStmt 0x7fe567825f30 <col:26>

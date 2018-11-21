@@ -1,0 +1,86 @@
+FileAST: 
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['unsigned']
+        Constant: int, 0
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      Assignment: +=
+        ID: x
+        TernaryOp: 
+          BinaryOp: <
+            ID: x
+            ID: y
+          Constant: int, 1
+          Constant: int, 0
+      Pragma: GCC diagnostic push
+      Pragma: GCC diagnostic ignored "-Wsign-compare"
+      Assignment: +=
+        ID: x
+        TernaryOp: 
+          BinaryOp: <
+            ID: x
+            ID: y
+          Constant: int, 1
+          Constant: int, 0
+      Pragma: GCC diagnostic pop
+      Assignment: +=
+        ID: x
+        TernaryOp: 
+          BinaryOp: <
+            ID: x
+            ID: y
+          Constant: int, 1
+          Constant: int, 0
+      Return: 
+        ID: x
+  Decl: None, [], [], []
+    Enum: EE
+      EnumeratorList: 
+        Enumerator: ONE
+        Enumerator: TWO
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              Enum: EE
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Pragma: GCC diagnostic push
+      Pragma: GCC diagnostic ignored "-Wswitch-enum"
+      Switch: 
+        ID: e
+        Compound: 
+          Case: 
+            ID: ONE
+            Assignment: =
+              ID: r
+              Constant: int, 1
+            Break: 
+      Pragma: GCC diagnostic pop
+      Switch: 
+        ID: e
+        Compound: 
+          Case: 
+            ID: ONE
+            Assignment: =
+              ID: r
+              Constant: int, 1
+            Break: 
+      Return: 
+        ID: r

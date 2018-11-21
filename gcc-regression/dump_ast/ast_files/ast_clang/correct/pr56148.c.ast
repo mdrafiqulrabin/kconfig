@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7f9bf9825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9bf9826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9bf9825d40 '__int128'
+|-TypedefDecl 0x7f9bf9826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9bf9825d60 'unsigned __int128'
+|-TypedefDecl 0x7f9bf9826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9bf9826170 'struct __NSConstantString_tag'
+|   `-Record 0x7f9bf98260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9bf9826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9bf98263c0 'char *'
+|   `-BuiltinType 0x7f9bf9825b60 'char'
+|-TypedefDecl 0x7f9bf98266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9bf9826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9bf98264e0 'struct __va_list_tag'
+|     `-Record 0x7f9bf9826458 '__va_list_tag'
+`-FunctionDecl 0x7f9bf9876a00 <c_files/pr56148.c:5:1, line:12:1> line:6:1 foo 'void (void)'
+  `-CompoundStmt 0x7f9bf9877408 <line:7:1, line:12:1>
+    |-DeclStmt 0x7f9bf9876bc0 <line:8:3, col:22>
+    | `-VarDecl 0x7f9bf9876b60 <col:3, col:21> col:17 used e 'unsigned char [16]'
+    |-DeclStmt 0x7f9bf9876de0 <line:9:3, col:27>
+    | |-VarDecl 0x7f9bf9876bf0 <col:3, col:17> col:17 used a 'unsigned long'
+    | |-VarDecl 0x7f9bf9876c68 <col:3, col:20> col:20 used b 'unsigned long'
+    | |-VarDecl 0x7f9bf9876ce0 <col:3, col:23> col:23 used c 'unsigned long'
+    | `-VarDecl 0x7f9bf9876d58 <col:3, col:26> col:26 used d 'unsigned long'
+    `-GCCAsmStmt 0x7f9bf98772e8 <line:10:3, line:11:73>
+      |-DeclRefExpr 0x7f9bf9876ec8 <line:10:36> 'unsigned long' lvalue Var 0x7f9bf9876bf0 'a' 'unsigned long'
+      |-DeclRefExpr 0x7f9bf9876f58 <col:47> 'unsigned long' lvalue Var 0x7f9bf9876ce0 'c' 'unsigned long'
+      |-DeclRefExpr 0x7f9bf9876fb0 <col:58> 'unsigned long' lvalue Var 0x7f9bf9876d58 'd' 'unsigned long'
+      |-DeclRefExpr 0x7f9bf9877008 <col:69> 'unsigned long' lvalue Var 0x7f9bf9876c68 'b' 'unsigned long'
+      |-UnaryOperator 0x7f9bf98770b8 <line:11:23, col:24> 'unsigned int' prefix '-'
+      | `-IntegerLiteral 0x7f9bf9877098 <col:24> 'unsigned int' 1
+      |-ImplicitCastExpr 0x7f9bf98772b8 <col:35> 'unsigned char *' <ArrayToPointerDecay>
+      | `-DeclRefExpr 0x7f9bf9877108 <col:35> 'unsigned char [16]' lvalue Var 0x7f9bf9876b60 'e' 'unsigned char [16]'
+      |-BinaryOperator 0x7f9bf98771a0 <col:44, col:51> 'int' '>>'
+      | |-IntegerLiteral 0x7f9bf9877160 <col:44> 'int' 128
+      | `-IntegerLiteral 0x7f9bf9877180 <col:51> 'int' 5
+      |-ImplicitCastExpr 0x7f9bf98772d0 <col:60> 'unsigned char *' <ArrayToPointerDecay>
+      | `-DeclRefExpr 0x7f9bf98771f8 <col:60> 'unsigned char [16]' lvalue Var 0x7f9bf9876b60 'e' 'unsigned char [16]'
+      `-UnaryOperator 0x7f9bf9877270 <col:69, col:70> 'unsigned int' prefix '-'
+        `-IntegerLiteral 0x7f9bf9877250 <col:70> 'unsigned int' 1

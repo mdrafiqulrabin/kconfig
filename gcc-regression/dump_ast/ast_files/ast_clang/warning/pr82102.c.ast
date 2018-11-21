@@ -1,0 +1,80 @@
+c_files/pr82102.c:7:7: warning: incompatible redeclaration of library function 'memcpy' [-Wincompatible-library-redeclaration]
+void *memcpy(void *, void *, __SIZE_TYPE__);
+      ^
+c_files/pr82102.c:7:7: note: 'memcpy' is a builtin with type 'void *(void *, const void *, unsigned long)'
+1 warning generated.
+TranslationUnitDecl 0x7fad2e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fad2e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fad2e026740 '__int128'
+|-TypedefDecl 0x7fad2e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fad2e026760 'unsigned __int128'
+|-TypedefDecl 0x7fad2e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fad2e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fad2e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fad2e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fad2e026dc0 'char *'
+|   `-BuiltinType 0x7fad2e026560 'char'
+|-TypedefDecl 0x7fad2e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fad2e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fad2e026ee0 'struct __va_list_tag'
+|     `-Record 0x7fad2e026e58 '__va_list_tag'
+|-VarDecl 0x7fad2e027138 <c_files/pr82102.c:3:1, col:7> col:7 used a 'void *'
+|-VarDecl 0x7fad2e825a00 <col:1, col:11> col:11 used b 'void *'
+|-RecordDecl 0x7fad2e825a78 <line:4:1, line:6:1> line:4:8 struct pt3_i2cbuf definition
+| `-FieldDecl 0x7fad2e825b38 <line:5:5, col:9> col:9 referenced num_cmds 'int'
+|-VarDecl 0x7fad2e825bd0 <line:4:1, line:6:3> col:3 used c 'struct pt3_i2cbuf':'struct pt3_i2cbuf'
+|-FunctionDecl 0x7fad2e825eb8 <line:7:7> col:7 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fad2e825f50 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fad2e825fb0 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fad2e826010 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fad2e826088 prev 0x7fad2e825eb8 <col:1, col:43> col:7 used memcpy 'void *(void *, void *, unsigned long)'
+| |-ParmVarDecl 0x7fad2e825c60 <col:14, col:19> col:20 'void *'
+| |-ParmVarDecl 0x7fad2e825cd8 <col:22, col:27> col:28 'void *'
+| `-ParmVarDecl 0x7fad2e825d50 <<built-in>:75:23, col:37> c_files/pr82102.c:7:43 'unsigned long'
+|-FunctionDecl 0x7fad2e826538 <line:8:1, col:15> col:6 used put_stop 'void ()'
+|-FunctionDecl 0x7fad2e8267e0 <line:9:1, line:14:1> line:9:6 used translate 'void (struct pt3_i2cbuf *, int)'
+| |-ParmVarDecl 0x7fad2e826650 <col:16, col:35> col:35 used p1 'struct pt3_i2cbuf *'
+| |-ParmVarDecl 0x7fad2e8266c8 <col:39, col:43> col:43 used p2 'int'
+| `-CompoundStmt 0x7fad2e826a60 <line:10:1, line:14:1>
+|   |-BinaryOperator 0x7fad2e826920 <line:11:3, col:18> 'int' '='
+|   | |-MemberExpr 0x7fad2e8268c8 <col:3, col:7> 'int' lvalue ->num_cmds 0x7fad2e825b38
+|   | | `-ImplicitCastExpr 0x7fad2e8268b0 <col:3> 'struct pt3_i2cbuf *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fad2e826888 <col:3> 'struct pt3_i2cbuf *' lvalue ParmVar 0x7fad2e826650 'p1' 'struct pt3_i2cbuf *'
+|   | `-IntegerLiteral 0x7fad2e826900 <col:18> 'int' 0
+|   `-IfStmt 0x7fad2e826a28 <line:12:3, line:13:14>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fad2e826970 <line:12:7> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fad2e826948 <col:7> 'int' lvalue ParmVar 0x7fad2e8266c8 'p2' 'int'
+|     |-CallExpr 0x7fad2e826a00 <line:13:5, col:14> 'void'
+|     | `-ImplicitCastExpr 0x7fad2e8269d8 <col:5> 'void (*)()' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fad2e826988 <col:5> 'void ()' Function 0x7fad2e826538 'put_stop' 'void ()'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fad2e826b60 <line:15:1, line:21:1> line:15:6 pt3_i2c_master_xfer 'void (int)'
+  |-ParmVarDecl 0x7fad2e826aa0 <col:26, col:30> col:30 used p1 'int'
+  `-CompoundStmt 0x7fad2e826ff0 <line:16:1, line:21:1>
+    |-CallExpr 0x7fad2e826d10 <line:17:3, col:19> 'void'
+    | |-ImplicitCastExpr 0x7fad2e826cf8 <col:3> 'void (*)(struct pt3_i2cbuf *, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fad2e826c00 <col:3> 'void (struct pt3_i2cbuf *, int)' Function 0x7fad2e8267e0 'translate' 'void (struct pt3_i2cbuf *, int)'
+    | |-UnaryOperator 0x7fad2e826c50 <col:13, col:14> 'struct pt3_i2cbuf *' prefix '&'
+    | | `-DeclRefExpr 0x7fad2e826c28 <col:14> 'struct pt3_i2cbuf':'struct pt3_i2cbuf' lvalue Var 0x7fad2e825bd0 'c' 'struct pt3_i2cbuf':'struct pt3_i2cbuf'
+    | `-ImplicitCastExpr 0x7fad2e826d48 <col:17> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fad2e826c70 <col:17> 'int' lvalue ParmVar 0x7fad2e826aa0 'p1' 'int'
+    |-CallExpr 0x7fad2e826e80 <line:18:3, col:26> 'void *'
+    | |-ImplicitCastExpr 0x7fad2e826e68 <col:3> 'void *(*)(void *, void *, unsigned long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fad2e826d60 <col:3> 'void *(void *, void *, unsigned long)' Function 0x7fad2e826088 'memcpy' 'void *(void *, void *, unsigned long)'
+    | |-ImplicitCastExpr 0x7fad2e826ec0 <col:10> 'void *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fad2e826d88 <col:10> 'void *' lvalue Var 0x7fad2e027138 'a' 'void *'
+    | |-ImplicitCastExpr 0x7fad2e826ed8 <col:13> 'void *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fad2e826db0 <col:13> 'void *' lvalue Var 0x7fad2e825a00 'b' 'void *'
+    | `-ImplicitCastExpr 0x7fad2e826f08 <col:16, col:18> 'unsigned long' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7fad2e826ef0 <col:16, col:18> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7fad2e826e00 <col:16, col:18> 'int' lvalue .num_cmds 0x7fad2e825b38
+    |       `-DeclRefExpr 0x7fad2e826dd8 <col:16> 'struct pt3_i2cbuf':'struct pt3_i2cbuf' lvalue Var 0x7fad2e825bd0 'c' 'struct pt3_i2cbuf':'struct pt3_i2cbuf'
+    `-ForStmt 0x7fad2e826fb8 <line:19:3, line:20:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fad2e826f90 <line:19:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fad2e826f68 <col:10> 'int' lvalue ParmVar 0x7fad2e826aa0 'p1' 'int'
+      |-<<<NULL>>>
+      `-NullStmt 0x7fad2e826fa8 <line:20:5>

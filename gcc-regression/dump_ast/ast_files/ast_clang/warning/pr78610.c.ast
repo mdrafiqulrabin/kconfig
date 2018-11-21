@@ -1,0 +1,46 @@
+c_files/pr78610.c:11:12: warning: division by zero is undefined [-Wdivision-by-zero]
+        ao /= 0;
+           ^  ~
+1 warning generated.
+TranslationUnitDecl 0x7fb8cd0166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb8cd016c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb8cd016940 '__int128'
+|-TypedefDecl 0x7fb8cd016c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb8cd016960 'unsigned __int128'
+|-TypedefDecl 0x7fb8cd016f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb8cd016d70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb8cd016ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb8cd017000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb8cd016fc0 'char *'
+|   `-BuiltinType 0x7fb8cd016760 'char'
+|-TypedefDecl 0x7fb8cd0172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb8cd017270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb8cd0170e0 'struct __va_list_tag'
+|     `-Record 0x7fb8cd017058 '__va_list_tag'
+|-VarDecl 0x7fb8cd017338 <c_files/pr78610.c:3:1, col:14> col:14 used ao 'unsigned int'
+|-VarDecl 0x7fb8cd825a00 <col:1, col:18> col:18 used gl 'unsigned int'
+`-FunctionDecl 0x7fb8cd825b40 <line:5:1, line:14:1> line:6:1 ri 'void (void)'
+  `-CompoundStmt 0x7fb8cd825e30 <line:7:1, line:14:1>
+    `-ForStmt 0x7fb8cd825df8 <line:8:3, line:13:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7fb8cd825dd0 <line:9:5, line:13:5>
+        |-IfStmt 0x7fb8cd825d10 <line:10:7, line:11:15>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7fb8cd825c50 <line:10:11, col:17> 'int' '!='
+        | | |-ImplicitCastExpr 0x7fb8cd825c20 <col:11> 'unsigned int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fb8cd825bd8 <col:11> 'unsigned int' lvalue Var 0x7fb8cd017338 'ao' 'unsigned int'
+        | | `-ImplicitCastExpr 0x7fb8cd825c38 <col:17> 'unsigned int' <IntegralCast>
+        | |   `-IntegerLiteral 0x7fb8cd825c00 <col:17> 'int' 1
+        | |-CompoundAssignOperator 0x7fb8cd825cd8 <line:11:9, col:15> 'unsigned int' '/=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+        | | |-DeclRefExpr 0x7fb8cd825c78 <col:9> 'unsigned int' lvalue Var 0x7fb8cd017338 'ao' 'unsigned int'
+        | | `-ImplicitCastExpr 0x7fb8cd825cc0 <col:15> 'unsigned int' <IntegralCast>
+        | |   `-IntegerLiteral 0x7fb8cd825ca0 <col:15> 'int' 0
+        | `-<<<NULL>>>
+        `-BinaryOperator 0x7fb8cd825da8 <line:12:7, col:12> 'unsigned int' '='
+          |-DeclRefExpr 0x7fb8cd825d48 <col:7> 'unsigned int' lvalue Var 0x7fb8cd825a00 'gl' 'unsigned int'
+          `-ImplicitCastExpr 0x7fb8cd825d90 <col:12> 'unsigned int' <IntegralCast>
+            `-IntegerLiteral 0x7fb8cd825d70 <col:12> 'int' 0

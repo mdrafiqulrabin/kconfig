@@ -1,0 +1,56 @@
+c_files/pr63856.c:7:31: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+int __attribute__ ((noinline, noclone)) f (v2si A, int N)
+                              ^
+c_files/pr63856.c:12:31: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+int __attribute__ ((noinline, noclone)) g (v2si A, int N)
+                              ^
+2 warnings generated.
+TranslationUnitDecl 0x7fc7980264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc798026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc798026740 '__int128'
+|-TypedefDecl 0x7fc798026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc798026760 'unsigned __int128'
+|-TypedefDecl 0x7fc798026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc798026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc798026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc798026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc798026dc0 'char *'
+|   `-BuiltinType 0x7fc798026560 'char'
+|-TypedefDecl 0x7fc7980270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc798027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc798026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc798026e58 '__va_list_tag'
+|-TypedefDecl 0x7fc798027178 <c_files/pr63856.c:4:1, col:13> col:13 referenced v2si '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7fc798027140 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7fc7980265c0 'int'
+|-TypedefDecl 0x7fc798078438 <line:5:1, col:15> col:15 referenced v4hi '__attribute__((__vector_size__(4 * sizeof(short)))) short'
+| `-VectorType 0x7fc798078400 '__attribute__((__vector_size__(4 * sizeof(short)))) short' 4
+|   `-BuiltinType 0x7fc7980265a0 'short'
+|-FunctionDecl 0x7fc798078658 <line:7:1, line:10:1> line:7:41 f 'int (v2si, int)'
+| |-ParmVarDecl 0x7fc7980784c0 <col:44, col:49> col:49 used A 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| |-ParmVarDecl 0x7fc798078538 <col:52, col:56> col:56 used N 'int'
+| |-CompoundStmt 0x7fc7980788e0 <line:8:1, line:10:1>
+| | `-ReturnStmt 0x7fc7980788c8 <line:9:3, col:22>
+| |   `-ImplicitCastExpr 0x7fc7980788b0 <col:10, col:22> 'int' <IntegralCast>
+| |     `-ArraySubscriptExpr 0x7fc798078888 <col:10, col:22> 'short'
+| |       |-ParenExpr 0x7fc798078828 <col:10, col:19> 'v4hi':'__attribute__((__vector_size__(4 * sizeof(short)))) short'
+| |       | `-CStyleCastExpr 0x7fc798078800 <col:11, col:18> 'v4hi':'__attribute__((__vector_size__(4 * sizeof(short)))) short' <BitCast>
+| |       |   `-ImplicitCastExpr 0x7fc7980787e8 <col:18> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+| |       |     `-DeclRefExpr 0x7fc7980787b0 <col:18> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue ParmVar 0x7fc7980784c0 'A' 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| |       `-ImplicitCastExpr 0x7fc798078870 <col:21> 'int' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fc798078848 <col:21> 'int' lvalue ParmVar 0x7fc798078538 'N' 'int'
+| `-NoInlineAttr 0x7fc798078700 <line:7:21>
+`-FunctionDecl 0x7fc798078a20 <line:12:1, line:15:1> line:12:41 g 'int (v2si, int)'
+  |-ParmVarDecl 0x7fc798078910 <col:44, col:49> col:49 used A 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7fc798078988 <col:52, col:56> col:56 used N 'int'
+  |-CompoundStmt 0x7fc798078c40 <line:13:1, line:15:1>
+  | `-ReturnStmt 0x7fc798078c28 <line:14:3, col:22>
+  |   `-ImplicitCastExpr 0x7fc798078c10 <col:10, col:22> 'int' <IntegralCast>
+  |     `-ArraySubscriptExpr 0x7fc798078be8 <col:10, col:22> 'short'
+  |       |-ParenExpr 0x7fc798078b88 <col:10, col:19> 'v4hi':'__attribute__((__vector_size__(4 * sizeof(short)))) short'
+  |       | `-CStyleCastExpr 0x7fc798078b60 <col:11, col:18> 'v4hi':'__attribute__((__vector_size__(4 * sizeof(short)))) short' <BitCast>
+  |       |   `-ImplicitCastExpr 0x7fc798078b48 <col:18> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+  |       |     `-DeclRefExpr 0x7fc798078b10 <col:18> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue ParmVar 0x7fc798078910 'A' 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+  |       `-ImplicitCastExpr 0x7fc798078bd0 <col:21> 'int' <LValueToRValue>
+  |         `-DeclRefExpr 0x7fc798078ba8 <col:21> 'int' lvalue ParmVar 0x7fc798078988 'N' 'int'
+  `-NoInlineAttr 0x7fc798078ac8 <line:12:21>

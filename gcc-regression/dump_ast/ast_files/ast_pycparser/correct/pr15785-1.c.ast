@@ -1,0 +1,159 @@
+FileAST: 
+  Decl: link_error, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: link_error, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: a, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: a, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: -
+          UnaryOp: ~
+            UnaryOp: ~
+              ID: x
+          ID: x
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: b, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: b, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: -
+          UnaryOp: -
+            UnaryOp: -
+              ID: x
+          ID: x
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: c, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: c, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        UnaryOp: !
+          BinaryOp: -
+            UnaryOp: -
+              UnaryOp: ~
+                ID: x
+            ID: x
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: d, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: d, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        UnaryOp: !
+          BinaryOp: -
+            UnaryOp: ~
+              UnaryOp: -
+                ID: x
+            ID: x
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: e, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: e, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: +
+          ID: x
+          UnaryOp: ~
+            BinaryOp: -
+              ID: x
+              Constant: int, 1
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: +
+          ID: x
+          UnaryOp: ~
+            BinaryOp: +
+              ID: x
+              UnaryOp: -
+                Constant: int, 1
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argc, [], [], []
+            TypeDecl: argc, []
+              IdentifierType: ['int']
+          Decl: argv, [], [], []
+            ArrayDecl: []
+              PtrDecl: []
+                TypeDecl: argv, []
+                  IdentifierType: ['char']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: a
+        ExprList: 
+          ID: argc
+      FuncCall: 
+        ID: b
+        ExprList: 
+          ID: argc
+      FuncCall: 
+        ID: c
+        ExprList: 
+          ID: argc
+      FuncCall: 
+        ID: d
+        ExprList: 
+          ID: argc
+      FuncCall: 
+        ID: e
+        ExprList: 
+          ID: argc
+      FuncCall: 
+        ID: f
+        ExprList: 
+          ID: argc
+      Return: 
+        Constant: int, 0

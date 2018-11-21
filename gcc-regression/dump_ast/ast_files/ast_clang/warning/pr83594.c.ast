@@ -1,0 +1,24 @@
+c_files/pr83594.c:1:16: warning: unknown attribute 'noipa' ignored [-Wunknown-attributes]
+__attribute__((noipa))
+               ^
+1 warning generated.
+TranslationUnitDecl 0x7ff3608264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff360826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff360826740 '__int128'
+|-TypedefDecl 0x7ff360826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff360826760 'unsigned __int128'
+|-TypedefDecl 0x7ff360826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff360826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff360826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff360826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff360826dc0 'char *'
+|   `-BuiltinType 0x7ff360826560 'char'
+|-TypedefDecl 0x7ff3608270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff360827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff360826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff360826e58 '__va_list_tag'
+`-FunctionDecl 0x7ff360827168 <c_files/pr83594.c:1:1, line:5:1> line:2:6 referenced foo 'void ()'
+  `-CompoundStmt 0x7ff3608784d8 <line:3:1, line:5:1>
+    `-CallExpr 0x7ff3608784b0 <line:4:3, col:8> 'void'
+      `-ImplicitCastExpr 0x7ff360878498 <col:3> 'void (*)()' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7ff360878440 <col:3> 'void ()' Function 0x7ff360827168 'foo' 'void ()'

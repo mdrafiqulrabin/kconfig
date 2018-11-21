@@ -1,0 +1,107 @@
+c_files/pr82244.c:10:12: warning: declaration of built-in function '_setjmp' requires inclusion of the header <setjmp.h> [-Wbuiltin-requires-header]
+extern int _setjmp(void *);
+           ^
+c_files/pr82244.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+TranslationUnitDecl 0x7ffd8a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffd8a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffd8a826740 '__int128'
+|-TypedefDecl 0x7ffd8a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffd8a826760 'unsigned __int128'
+|-TypedefDecl 0x7ffd8a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffd8a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffd8a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffd8a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffd8a826dc0 'char *'
+|   `-BuiltinType 0x7ffd8a826560 'char'
+|-TypedefDecl 0x7ffd8a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffd8a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffd8a826ee0 'struct __va_list_tag'
+|     `-Record 0x7ffd8a826e58 '__va_list_tag'
+|-RecordDecl 0x7ffd8a827120 <c_files/pr82244.c:3:9, line:5:1> line:3:16 struct a definition
+| `-FieldDecl 0x7ffd8b025a80 <line:4:3, col:13> col:13 referenced b 'struct a *'
+|-TypedefDecl 0x7ffd8b025ae8 <line:3:1, line:5:3> col:3 referenced a 'struct a':'struct a'
+| `-ElaboratedType 0x7ffd8a8271d0 'struct a' sugar
+|   `-RecordType 0x7ffd8a8271b0 'struct a'
+|     `-Record 0x7ffd8a827120 'a'
+|-FunctionDecl 0x7ffd8b025c28 <line:7:1, col:18> col:12 used d 'int (void)' extern
+|-FunctionDecl 0x7ffd8b025d98 <line:8:1, col:18> col:12 used g 'int (void)' extern
+|-FunctionDecl 0x7ffd8b025ec8 <line:9:1, col:18> col:12 used h 'int (void)' extern
+|-FunctionDecl 0x7ffd8b026048 <line:10:1, col:26> col:12 used _setjmp 'int (void *)' extern
+| |-ParmVarDecl 0x7ffd8b025f78 <col:20, col:25> col:26 'void *'
+| `-ReturnsTwiceAttr 0x7ffd8b0260e8 <col:12> Implicit
+`-FunctionDecl 0x7ffd8b0261c8 <line:12:1, line:31:1> line:12:5 referenced c 'int (void)'
+  `-CompoundStmt 0x7ffd8b02ce28 <line:13:1, line:31:1>
+    |-ConditionalOperator 0x7ffd8b026338 <line:14:3, col:13> 'int'
+    | |-IntegerLiteral 0x7ffd8b026260 <col:3> 'int' 1
+    | |-CallExpr 0x7ffd8b0262f0 <col:7, col:9> 'int'
+    | | `-ImplicitCastExpr 0x7ffd8b0262d8 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ffd8b026280 <col:7> 'int (void)' Function 0x7ffd8b025c28 'd' 'int (void)'
+    | `-IntegerLiteral 0x7ffd8b026318 <col:13> 'int' 0
+    |-DeclStmt 0x7ffd8b026428 <line:16:3, col:7>
+    | `-VarDecl 0x7ffd8b0263c8 <col:3, col:6> col:6 used e 'a *'
+    `-WhileStmt 0x7ffd8b02ce08 <line:17:3, line:30:3>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7ffd8b026468 <line:17:10> 'a *' <LValueToRValue>
+      | `-DeclRefExpr 0x7ffd8b026440 <col:10> 'a *' lvalue Var 0x7ffd8b0263c8 'e' 'a *'
+      `-CompoundStmt 0x7ffd8b02cde0 <col:13, line:30:3>
+        |-BinaryOperator 0x7ffd8b0266a0 <line:18:7, col:35> 'a *' '='
+        | |-DeclRefExpr 0x7ffd8b026480 <col:7> 'a *' lvalue Var 0x7ffd8b0263c8 'e' 'a *'
+        | `-ConditionalOperator 0x7ffd8b026670 <col:11, col:35> 'struct a *'
+        |   |-ParenExpr 0x7ffd8b026588 <col:11, col:24> 'int'
+        |   | `-BinaryOperator 0x7ffd8b026560 <col:12, col:23> 'int' '=='
+        |   |   |-ImplicitCastExpr 0x7ffd8b026548 <col:12> 'a *' <LValueToRValue>
+        |   |   | `-DeclRefExpr 0x7ffd8b0264a8 <col:12> 'a *' lvalue Var 0x7ffd8b0263c8 'e' 'a *'
+        |   |   `-CStyleCastExpr 0x7ffd8b026520 <col:17, col:23> 'a *' <BitCast>
+        |   |     `-ImplicitCastExpr 0x7ffd8b026508 <col:23> 'int (*)(void)' <FunctionToPointerDecay>
+        |   |       `-DeclRefExpr 0x7ffd8b0264d0 <col:23> 'int (void)' Function 0x7ffd8b0261c8 'c' 'int (void)'
+        |   |-ImplicitCastExpr 0x7ffd8b026658 <col:28> 'struct a *' <NullToPointer>
+        |   | `-IntegerLiteral 0x7ffd8b0265a8 <col:28> 'int' 0
+        |   `-ImplicitCastExpr 0x7ffd8b026640 <col:32, col:35> 'struct a *' <LValueToRValue>
+        |     `-MemberExpr 0x7ffd8b026608 <col:32, col:35> 'struct a *' lvalue ->b 0x7ffd8b025a80
+        |       `-ImplicitCastExpr 0x7ffd8b0265f0 <col:32> 'a *' <LValueToRValue>
+        |         `-DeclRefExpr 0x7ffd8b0265c8 <col:32> 'a *' lvalue Var 0x7ffd8b0263c8 'e' 'a *'
+        `-WhileStmt 0x7ffd8b02cdc0 <line:19:7, line:29:7>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7ffd8b0266f0 <line:19:14> 'a *' <LValueToRValue>
+          | `-DeclRefExpr 0x7ffd8b0266c8 <col:14> 'a *' lvalue Var 0x7ffd8b0263c8 'e' 'a *'
+          `-CompoundStmt 0x7ffd8b02cd90 <col:17, line:29:7>
+            |-DeclStmt 0x7ffd8b0267a0 <line:20:4, col:13>
+            | `-VarDecl 0x7ffd8b026720 <col:4, col:12> col:8 used f 'int' cinit
+            |   `-IntegerLiteral 0x7ffd8b026780 <col:12> 'int' 0
+            |-CallExpr 0x7ffd8b0267f8 <line:21:4, col:6> 'int'
+            | `-ImplicitCastExpr 0x7ffd8b0267e0 <col:4> 'int (*)(void)' <FunctionToPointerDecay>
+            |   `-DeclRefExpr 0x7ffd8b0267b8 <col:4> 'int (void)' Function 0x7ffd8b025d98 'g' 'int (void)'
+            `-IfStmt 0x7ffd8b02cd58 <line:22:4, line:28:4>
+              |-<<<NULL>>>
+              |-<<<NULL>>>
+              |-CallExpr 0x7ffd8b0268b0 <line:22:8, col:17> 'int'
+              | |-ImplicitCastExpr 0x7ffd8b026898 <col:8> 'int (*)(void *)' <FunctionToPointerDecay>
+              | | `-DeclRefExpr 0x7ffd8b026820 <col:8> 'int (void *)' Function 0x7ffd8b026048 '_setjmp' 'int (void *)'
+              | `-ImplicitCastExpr 0x7ffd8b0268e0 <col:16> 'void *' <NullToPointer>
+              |   `-IntegerLiteral 0x7ffd8b026848 <col:16> 'int' 0
+              |-CompoundStmt 0x7ffd8b02cd38 <col:20, line:28:4>
+              | `-IfStmt 0x7ffd8b02cd00 <line:23:8, line:27:8>
+              |   |-<<<NULL>>>
+              |   |-<<<NULL>>>
+              |   |-BinaryOperator 0x7ffd8b026958 <line:23:12, col:16> 'int' '&'
+              |   | |-ImplicitCastExpr 0x7ffd8b026940 <col:12> 'int' <LValueToRValue>
+              |   | | `-DeclRefExpr 0x7ffd8b0268f8 <col:12> 'int' lvalue Var 0x7ffd8b026720 'f' 'int'
+              |   | `-IntegerLiteral 0x7ffd8b026920 <col:16> 'int' 6
+              |   |-CompoundStmt 0x7ffd8b026990 <col:19, line:25:8>
+              |   | `-NullStmt 0x7ffd8b026980 <line:24:5>
+              |   `-IfStmt 0x7ffd8b02ccc8 <line:25:15, line:27:8>
+              |     |-<<<NULL>>>
+              |     |-<<<NULL>>>
+              |     |-BinaryOperator 0x7ffd8b02cc18 <line:25:19, col:23> 'int' '&'
+              |     | |-ImplicitCastExpr 0x7ffd8b02cc00 <col:19> 'int' <LValueToRValue>
+              |     | | `-DeclRefExpr 0x7ffd8b0269b0 <col:19> 'int' lvalue Var 0x7ffd8b026720 'f' 'int'
+              |     | `-IntegerLiteral 0x7ffd8b0269d8 <col:23> 'int' 2
+              |     |-CompoundStmt 0x7ffd8b02cca8 <col:26, line:27:8>
+              |     | `-CallExpr 0x7ffd8b02cc80 <line:26:5, col:7> 'int'
+              |     |   `-ImplicitCastExpr 0x7ffd8b02cc68 <col:5> 'int (*)(void)' <FunctionToPointerDecay>
+              |     |     `-DeclRefExpr 0x7ffd8b02cc40 <col:5> 'int (void)' Function 0x7ffd8b025ec8 'h' 'int (void)'
+              |     `-<<<NULL>>>
+              `-<<<NULL>>>

@@ -1,0 +1,60 @@
+FileAST: 
+  FuncDef: 
+    Decl: Lag_max_wght, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: corr, [], [], []
+            ArrayDecl: []
+              TypeDecl: corr, []
+                IdentifierType: ['float']
+          Decl: wght_flg, [], [], []
+            TypeDecl: wght_flg, []
+              IdentifierType: ['long']
+        TypeDecl: Lag_max_wght, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t0, [], [], []
+        TypeDecl: t0, []
+          IdentifierType: ['float']
+      Decl: max, [], [], []
+        TypeDecl: max, []
+          IdentifierType: ['float']
+      Decl: ww, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: ww, ['const']
+            IdentifierType: ['float']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['long']
+      If: 
+        BinaryOp: >
+          ID: wght_flg
+          Constant: int, 0
+        Compound: 
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 143
+            BinaryOp: >=
+              ID: i
+              Constant: int, 20
+            UnaryOp: p--
+              ID: i
+            Compound: 
+              Assignment: =
+                ID: t0
+                BinaryOp: *
+                  ArrayRef: 
+                    ID: corr
+                    UnaryOp: -
+                      ID: i
+                  UnaryOp: *
+                    UnaryOp: p--
+                      ID: ww
+              If: 
+                BinaryOp: >=
+                  ID: t0
+                  ID: max
+                Assignment: =
+                  ID: max
+                  ID: t0

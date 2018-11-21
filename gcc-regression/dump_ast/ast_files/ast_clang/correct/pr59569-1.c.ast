@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fced00234d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fced0023a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fced0023740 '__int128'
+|-TypedefDecl 0x7fced0023a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fced0023760 'unsigned __int128'
+|-TypedefDecl 0x7fced0023d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fced0023b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fced0023ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fced0023e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fced0023dc0 'char *'
+|   `-BuiltinType 0x7fced0023560 'char'
+|-TypedefDecl 0x7fced00240c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fced0024070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fced0023ee0 'struct __va_list_tag'
+|     `-Record 0x7fced0023e58 '__va_list_tag'
+|-VarDecl 0x7fced0024130 <c_files/pr59569-1.c:2:1, col:13> col:13 used c 'char' extern
+`-FunctionDecl 0x7fced1025b70 <line:4:1, line:9:1> line:5:1 foo 'void (int, char **)'
+  |-ParmVarDecl 0x7fced1025a00 <col:6, col:10> col:10 used i 'int'
+  |-ParmVarDecl 0x7fced1025aa0 <col:13, col:20> col:20 used j 'char **'
+  `-CompoundStmt 0x7fced1025d98 <line:6:1, line:9:1>
+    `-WhileStmt 0x7fced1025d78 <line:7:3, line:8:15>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fced1025c40 <line:7:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fced1025c18 <col:10> 'int' lvalue ParmVar 0x7fced1025a00 'i' 'int'
+      `-BinaryOperator 0x7fced1025d50 <line:8:5, col:15> 'char *' '='
+        |-ArraySubscriptExpr 0x7fced1025ce0 <col:5, col:10> 'char *' lvalue
+        | |-ImplicitCastExpr 0x7fced1025cc8 <col:5> 'char **' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fced1025c58 <col:5> 'char **' lvalue ParmVar 0x7fced1025aa0 'j' 'char **'
+        | `-UnaryOperator 0x7fced1025ca8 <col:7, col:9> 'int' prefix '--'
+        |   `-DeclRefExpr 0x7fced1025c80 <col:9> 'int' lvalue ParmVar 0x7fced1025a00 'i' 'int'
+        `-UnaryOperator 0x7fced1025d30 <col:14, col:15> 'char *' prefix '&'
+          `-DeclRefExpr 0x7fced1025d08 <col:15> 'char' lvalue Var 0x7fced0024130 'c' 'char'

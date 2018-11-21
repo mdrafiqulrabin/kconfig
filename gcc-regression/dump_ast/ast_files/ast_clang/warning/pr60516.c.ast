@@ -1,0 +1,42 @@
+c_files/pr60516.c:7:24: warning: calling convention 'thiscall' ignored for this target [-Wignored-attributes]
+__attribute__((ms_abi, thiscall)) void
+                       ^
+c_files/pr60516.c:7:24: error: cdecl and ms_abi attributes are not compatible
+c_files/pr60516.c:12:24: warning: calling convention 'fastcall' ignored for this target [-Wignored-attributes]
+__attribute__((ms_abi, fastcall)) void
+                       ^
+c_files/pr60516.c:12:24: error: cdecl and ms_abi attributes are not compatible
+c_files/pr60516.c:17:24: warning: calling convention 'stdcall' ignored for this target [-Wignored-attributes]
+__attribute__((ms_abi, stdcall)) void
+                       ^
+c_files/pr60516.c:17:24: error: cdecl and ms_abi attributes are not compatible
+3 warnings and 3 errors generated.
+TranslationUnitDecl 0x7fe6cb0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe6cb026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe6cb026740 '__int128'
+|-TypedefDecl 0x7fe6cb026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe6cb026760 'unsigned __int128'
+|-TypedefDecl 0x7fe6cb026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe6cb026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe6cb026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe6cb026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe6cb026dc0 'char *'
+|   `-BuiltinType 0x7fe6cb026560 'char'
+|-TypedefDecl 0x7fe6cb0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe6cb027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe6cb026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe6cb026e58 '__va_list_tag'
+|-RecordDecl 0x7fe6cb027120 <c_files/pr60516.c:5:1, col:27> col:8 struct S definition
+| `-FieldDecl 0x7fe6cb077458 <col:12, col:24> col:17 c 'char [65536]'
+|-FunctionDecl 0x7fe6cb0776c8 <line:7:1, line:10:1> line:8:1 foo 'void (void *, struct S) __attribute__((ms_abi))':'void (void *, struct S) __attribute__((ms_abi))'
+| |-ParmVarDecl 0x7fe6cb0774b8 <col:6, col:12> col:12 x 'void *'
+| |-ParmVarDecl 0x7fe6cb077570 <col:15, col:24> col:24 y 'struct S':'struct S'
+| `-CompoundStmt 0x7fe6cb0777b0 <line:9:1, line:10:1>
+|-FunctionDecl 0x7fe6cb077a60 <line:12:1, line:15:1> line:13:1 bar 'void (void *, void *, struct S) __attribute__((ms_abi))':'void (void *, void *, struct S) __attribute__((ms_abi))'
+| |-ParmVarDecl 0x7fe6cb0777e0 <col:6, col:12> col:12 x 'void *'
+| |-ParmVarDecl 0x7fe6cb077858 <col:15, col:21> col:21 y 'void *'
+| |-ParmVarDecl 0x7fe6cb0778d8 <col:24, col:33> col:33 z 'struct S':'struct S'
+| `-CompoundStmt 0x7fe6cb077b10 <line:14:1, line:15:1>
+`-FunctionDecl 0x7fe6cb077ca0 <line:17:1, line:20:1> line:18:1 baz 'void (struct S) __attribute__((ms_abi))':'void (struct S) __attribute__((ms_abi))'
+  |-ParmVarDecl 0x7fe6cb077b48 <col:6, col:15> col:15 x 'struct S':'struct S'
+  `-CompoundStmt 0x7fe6cb077d40 <line:19:1, line:20:1>

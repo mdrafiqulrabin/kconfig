@@ -1,0 +1,48 @@
+FileAST: 
+  Decl: qp, [], [], []
+    TypeDecl: qp, []
+      Struct: wv
+        Decl: qi, [], [], []
+          TypeDecl: qi, []
+            IdentifierType: ['int']
+  Decl: ft, [], [], []
+    PtrDecl: []
+      TypeDecl: ft, []
+        Struct: wv
+          Decl: qi, [], [], []
+            TypeDecl: qi, []
+              IdentifierType: ['int']
+  Decl: pb, [], [], []
+    PtrDecl: []
+      TypeDecl: pb, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: wz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: wz, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: vf, [], [], []
+        PtrDecl: []
+          TypeDecl: vf, []
+            Struct: wv
+        TernaryOp: 
+          ID: pb
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  Struct: wv
+            UnaryOp: &
+              ID: pb
+          UnaryOp: &
+            ID: qp
+      Assignment: =
+        UnaryOp: *
+          ID: ft
+        UnaryOp: *
+          ID: vf

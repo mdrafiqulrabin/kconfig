@@ -1,0 +1,53 @@
+FileAST: 
+  Typedef: cchar_t, [], ['typedef']
+    TypeDecl: cchar_t, []
+      Struct: None
+        Decl: attr, [], [], []
+          TypeDecl: attr, []
+            IdentifierType: ['unsigned', 'long']
+        Decl: chars, [], [], []
+          ArrayDecl: []
+            TypeDecl: chars, []
+              IdentifierType: ['int']
+            Constant: int, 2
+  Typedef: WINDOW, [], ['typedef']
+    TypeDecl: WINDOW, []
+      Struct: _win_st
+        Decl: _bkgrnd, [], [], []
+          TypeDecl: _bkgrnd, []
+            IdentifierType: ['cchar_t']
+  FuncDef: 
+    Decl: render_char, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: win, [], [], []
+            PtrDecl: []
+              TypeDecl: win, []
+                IdentifierType: ['WINDOW']
+          Decl: ch, [], [], []
+            TypeDecl: ch, []
+              IdentifierType: ['cchar_t']
+        TypeDecl: render_char, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            ArrayRef: 
+              StructRef: .
+                ID: ch
+                ID: chars
+              Constant: int, 0
+            Constant: char, L' '
+          BinaryOp: ==
+            ArrayRef: 
+              StructRef: .
+                ID: ch
+                ID: chars
+              Constant: int, 1
+            Constant: char, L'\0'
+        Assignment: =
+          StructRef: ->
+            ID: win
+            ID: _bkgrnd
+          ID: ch

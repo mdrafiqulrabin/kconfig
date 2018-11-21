@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7f9c9b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9c9b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9c9b826740 '__int128'
+|-TypedefDecl 0x7f9c9b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9c9b826760 'unsigned __int128'
+|-TypedefDecl 0x7f9c9b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9c9b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9c9b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9c9b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9c9b826dc0 'char *'
+|   `-BuiltinType 0x7f9c9b826560 'char'
+|-TypedefDecl 0x7f9c9b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9c9b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9c9b826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9c9b826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9c9c025a30 <c_files/pr57371-2.c:9:1, line:12:1> line:9:5 foo1 'int (int)'
+| |-ParmVarDecl 0x7f9c9b827138 <col:10, col:14> col:14 used x 'int'
+| `-CompoundStmt 0x7f9c9c025c08 <col:17, line:12:1>
+|   `-ReturnStmt 0x7f9c9c025bf0 <line:10:3, col:23>
+|     `-BinaryOperator 0x7f9c9c025bc8 <col:10, col:23> 'int' '!='
+|       |-CStyleCastExpr 0x7f9c9c025b68 <col:10, col:18> 'float' <IntegralToFloating>
+|       | `-ImplicitCastExpr 0x7f9c9c025b50 <col:18> 'int' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7f9c9c025b10 <col:18> 'int' lvalue ParmVar 0x7f9c9b827138 'x' 'int'
+|       `-ImplicitCastExpr 0x7f9c9c025bb0 <col:23> 'float' <IntegralToFloating>
+|         `-IntegerLiteral 0x7f9c9c025b90 <col:23> 'int' 0
+`-FunctionDecl 0x7f9c9c025d08 <line:14:1, line:17:1> line:14:5 foo2 'int (long long)'
+  |-ParmVarDecl 0x7f9c9c025c40 <col:10, col:20> col:20 used x 'long long'
+  `-CompoundStmt 0x7f9c9c025ea0 <col:23, line:17:1>
+    `-ReturnStmt 0x7f9c9c025e88 <line:16:3, col:24>
+      `-BinaryOperator 0x7f9c9c025e60 <col:10, col:24> 'int' '!='
+        |-CStyleCastExpr 0x7f9c9c025e00 <col:10, col:19> 'double' <IntegralToFloating>
+        | `-ImplicitCastExpr 0x7f9c9c025de8 <col:19> 'long long' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f9c9c025da8 <col:19> 'long long' lvalue ParmVar 0x7f9c9c025c40 'x' 'long long'
+        `-ImplicitCastExpr 0x7f9c9c025e48 <col:24> 'double' <IntegralToFloating>
+          `-IntegerLiteral 0x7f9c9c025e28 <col:24> 'int' 0

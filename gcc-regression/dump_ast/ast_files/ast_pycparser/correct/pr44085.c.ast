@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: thr1, [], [], []
+    TypeDecl: thr1, []
+      IdentifierType: ['int']
+  Decl: thr2, [], [], []
+    TypeDecl: thr2, []
+      IdentifierType: ['int']
+  Pragma: omp threadprivate (thr1, thr2)
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Pragma: omp task untied	 
+      Compound: 
+        UnaryOp: p++
+          ID: thr1
+        Assignment: |=
+          ID: thr2
+          Constant: int, 4
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Pragma: omp task
+      Compound: 
+        UnaryOp: p++
+          ID: thr1
+        Assignment: |=
+          ID: thr2
+          Constant: int, 4

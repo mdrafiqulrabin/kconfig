@@ -1,0 +1,102 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: &&
+            BinaryOp: <
+              ID: i
+              Constant: int, 4
+            BinaryOp: >=
+              ID: i
+              Constant: int, 0
+          ID: i
+          Constant: int, 4
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              UnaryOp: -
+                Constant: int, 1
+          Constant: int, 4
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              Constant: int, 0
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              Constant: int, 1
+          Constant: int, 1
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              Constant: int, 2
+          Constant: int, 2
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              Constant: int, 3
+          Constant: int, 3
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              Constant: int, 4
+          Constant: int, 4
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              Constant: int, 5
+          Constant: int, 4
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

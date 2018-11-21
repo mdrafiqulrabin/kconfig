@@ -1,0 +1,41 @@
+c_files/pr82659-3.c:8:27: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__ ((noinline, noclone))
+                          ^
+c_files/pr82659-3.c:14:44: error: aliases are not supported on darwin
+extern __typeof (test) foo __attribute__ ((alias ("test")));
+                                           ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fb5a1825ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb5a1826420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb5a1826140 '__int128'
+|-TypedefDecl 0x7fb5a1826490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb5a1826160 'unsigned __int128'
+|-TypedefDecl 0x7fb5a1826768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb5a1826570 'struct __NSConstantString_tag'
+|   `-Record 0x7fb5a18264e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb5a1826800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb5a18267c0 'char *'
+|   `-BuiltinType 0x7fb5a1825f60 'char'
+|-TypedefDecl 0x7fb5a1826ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb5a1826a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb5a18268e0 'struct __va_list_tag'
+|     `-Record 0x7fb5a1826858 '__va_list_tag'
+|-VarDecl 0x7fb5a1826b38 <c_files/pr82659-3.c:5:1, col:12> col:12 used x 'int' extern
+|-FunctionDecl 0x7fb5a20270c0 <line:7:1, line:12:1> line:9:1 used test 'void (int)' static
+| |-ParmVarDecl 0x7fb5a2027000 <col:7, col:11> col:11 used i 'int'
+| |-CompoundStmt 0x7fb5a2027238 <line:10:1, line:12:1>
+| | `-BinaryOperator 0x7fb5a2027210 <line:11:3, col:7> 'int' '='
+| |   |-DeclRefExpr 0x7fb5a20271a8 <col:3> 'int' lvalue Var 0x7fb5a1826b38 'x' 'int'
+| |   `-ImplicitCastExpr 0x7fb5a20271f8 <col:7> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fb5a20271d0 <col:7> 'int' lvalue ParmVar 0x7fb5a2027000 'i' 'int'
+| `-NoInlineAttr 0x7fb5a2027160 <line:8:17>
+|-FunctionDecl 0x7fb5a2027348 <line:14:1, col:59> col:24 foo 'typeof (test)':'void (int)' extern
+| `-ParmVarDecl 0x7fb5a20273f8 <col:24> col:24 implicit 'int'
+`-FunctionDecl 0x7fb5a2027500 <line:16:1, line:20:1> line:17:1 bar 'void (int)'
+  |-ParmVarDecl 0x7fb5a2027478 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7fb5a2027678 <line:18:1, line:20:1>
+    `-CallExpr 0x7fb5a2027630 <line:19:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fb5a2027618 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb5a20275a0 <col:3> 'void (int)' Function 0x7fb5a20270c0 'test' 'void (int)'
+      `-ImplicitCastExpr 0x7fb5a2027660 <col:9> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fb5a20275c8 <col:9> 'int' lvalue ParmVar 0x7fb5a2027478 'i' 'int'

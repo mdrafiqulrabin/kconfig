@@ -1,0 +1,330 @@
+FileAST: 
+  Typedef: transaction_t, [], ['typedef']
+    TypeDecl: transaction_t, []
+      Struct: transaction_s
+  Decl: None, [], [], []
+    Struct: journal_head
+      Decl: b_transaction, [], [], []
+        PtrDecl: []
+          TypeDecl: b_transaction, []
+            IdentifierType: ['transaction_t']
+      Decl: b_cpnext, [], [], []
+        PtrDecl: []
+          TypeDecl: b_cpnext, []
+            Struct: journal_head
+      Decl: b_cpprev, [], [], []
+        PtrDecl: []
+          TypeDecl: b_cpprev, []
+            Struct: journal_head
+  Decl: None, [], [], []
+    Struct: transaction_s
+      Decl: t_checkpoint_list, [], [], []
+        PtrDecl: []
+          TypeDecl: t_checkpoint_list, []
+            Struct: journal_head
+      Decl: t_cpnext, [], [], []
+        PtrDecl: []
+          TypeDecl: t_cpnext, []
+            IdentifierType: ['transaction_t']
+      Decl: t_cpprev, [], [], []
+        PtrDecl: []
+          TypeDecl: t_cpprev, []
+            IdentifierType: ['transaction_t']
+  Decl: None, [], [], []
+    Struct: journal_s
+      Decl: j_checkpoint_transactions, [], [], []
+        PtrDecl: []
+          TypeDecl: j_checkpoint_transactions, []
+            IdentifierType: ['transaction_t']
+      Decl: j_first, [], [], []
+        TypeDecl: j_first, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: j_last, [], [], []
+        TypeDecl: j_last, []
+          IdentifierType: ['unsigned', 'long']
+  Typedef: journal_t, [], ['typedef']
+    TypeDecl: journal_t, []
+      Struct: journal_s
+  Decl: __try_to_free_cp_buf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: jh, [], [], []
+          PtrDecl: []
+            TypeDecl: jh, []
+              Struct: journal_head
+      TypeDecl: __try_to_free_cp_buf, []
+        IdentifierType: ['int']
+  Decl: __cleanup_transaction, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: journal, [], [], []
+          PtrDecl: []
+            TypeDecl: journal, []
+              IdentifierType: ['journal_t']
+        Decl: transaction, [], [], []
+          PtrDecl: []
+            TypeDecl: transaction, []
+              IdentifierType: ['transaction_t']
+      TypeDecl: __cleanup_transaction, []
+        IdentifierType: ['int']
+  Decl: __flush_batch, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: bhs, [], [], []
+          PtrDecl: []
+            PtrDecl: []
+              TypeDecl: bhs, []
+                IdentifierType: ['void']
+        Decl: batch_count, [], [], []
+          PtrDecl: []
+            TypeDecl: batch_count, []
+              IdentifierType: ['int']
+      TypeDecl: __flush_batch, []
+        IdentifierType: ['void']
+  Decl: jh2bh, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: jh2bh, []
+          IdentifierType: ['void']
+  FuncDef: 
+    Decl: __flush_buffer, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: journal, [], [], []
+            PtrDecl: []
+              TypeDecl: journal, []
+                IdentifierType: ['journal_t']
+          Decl: jh, [], [], []
+            PtrDecl: []
+              TypeDecl: jh, []
+                Struct: journal_head
+          Decl: bhs, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: bhs, []
+                  IdentifierType: ['void']
+          Decl: batch_count, [], [], []
+            PtrDecl: []
+              TypeDecl: batch_count, []
+                IdentifierType: ['int']
+          Decl: drop_count, [], [], []
+            PtrDecl: []
+              TypeDecl: drop_count, []
+                IdentifierType: ['int']
+        TypeDecl: __flush_buffer, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: bh, [], [], []
+        PtrDecl: []
+          TypeDecl: bh, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: jh2bh
+          ExprList: 
+            ID: jh
+      Decl: ret, [], [], []
+        TypeDecl: ret, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      If: 
+        ID: bh
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: bhs
+              UnaryOp: *
+                ID: batch_count
+            ID: bh
+          UnaryOp: p++
+            UnaryOp: *
+              ID: batch_count
+          If: 
+            BinaryOp: ==
+              UnaryOp: *
+                ID: batch_count
+              Constant: int, 64
+            Assignment: =
+              ID: ret
+              Constant: int, 1
+        Compound: 
+          Decl: last_buffer, [], [], []
+            TypeDecl: last_buffer, []
+              IdentifierType: ['int']
+            Constant: int, 0
+          If: 
+            BinaryOp: ==
+              StructRef: ->
+                ID: jh
+                ID: b_cpnext
+              ID: jh
+            Assignment: =
+              ID: last_buffer
+              Constant: int, 1
+          If: 
+            FuncCall: 
+              ID: __try_to_free_cp_buf
+              ExprList: 
+                ID: jh
+            Compound: 
+              UnaryOp: p++
+                UnaryOp: *
+                  ID: drop_count
+              Assignment: =
+                ID: ret
+                ID: last_buffer
+      Return: 
+        ID: ret
+  FuncDef: 
+    Decl: log_do_checkpoint, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: journal, [], [], []
+            PtrDecl: []
+              TypeDecl: journal, []
+                IdentifierType: ['journal_t']
+          Decl: nblocks, [], [], []
+            TypeDecl: nblocks, []
+              IdentifierType: ['int']
+        TypeDecl: log_do_checkpoint, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: transaction, [], [], []
+        PtrDecl: []
+          TypeDecl: transaction, []
+            IdentifierType: ['transaction_t']
+      Decl: last_transaction, [], [], []
+        PtrDecl: []
+          TypeDecl: last_transaction, []
+            IdentifierType: ['transaction_t']
+      Decl: next_transaction, [], [], []
+        PtrDecl: []
+          TypeDecl: next_transaction, []
+            IdentifierType: ['transaction_t']
+      Decl: batch_count, [], [], []
+        TypeDecl: batch_count, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: bhs, [], [], []
+        ArrayDecl: []
+          PtrDecl: []
+            TypeDecl: bhs, []
+              IdentifierType: ['void']
+          Constant: int, 64
+      Label: repeat
+        Assignment: =
+          ID: transaction
+          StructRef: ->
+            ID: journal
+            ID: j_checkpoint_transactions
+      If: 
+        BinaryOp: ==
+          ID: transaction
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+        Return: 
+          Constant: int, 0
+      Assignment: =
+        ID: last_transaction
+        StructRef: ->
+          ID: transaction
+          ID: t_cpprev
+      Assignment: =
+        ID: next_transaction
+        ID: transaction
+      DoWhile: 
+        BinaryOp: !=
+          ID: transaction
+          ID: last_transaction
+        Compound: 
+          Decl: jh, [], [], []
+            PtrDecl: []
+              TypeDecl: jh, []
+                Struct: journal_head
+          Decl: last_jh, [], [], []
+            PtrDecl: []
+              TypeDecl: last_jh, []
+                Struct: journal_head
+          Decl: next_jh, [], [], []
+            PtrDecl: []
+              TypeDecl: next_jh, []
+                Struct: journal_head
+          Decl: drop_count, [], [], []
+            TypeDecl: drop_count, []
+              IdentifierType: ['int']
+            Constant: int, 0
+          Decl: cleanup_ret, [], [], []
+            TypeDecl: cleanup_ret, []
+              IdentifierType: ['int']
+          Decl: retry, [], [], []
+            TypeDecl: retry, []
+              IdentifierType: ['int']
+            Constant: int, 0
+          Assignment: =
+            ID: transaction
+            ID: next_transaction
+          Assignment: =
+            ID: next_transaction
+            StructRef: ->
+              ID: transaction
+              ID: t_cpnext
+          Assignment: =
+            ID: jh
+            StructRef: ->
+              ID: transaction
+              ID: t_checkpoint_list
+          Assignment: =
+            ID: last_jh
+            StructRef: ->
+              ID: jh
+              ID: b_cpprev
+          Assignment: =
+            ID: next_jh
+            ID: jh
+          DoWhile: 
+            BinaryOp: &&
+              BinaryOp: !=
+                ID: jh
+                ID: last_jh
+              UnaryOp: !
+                ID: retry
+            Compound: 
+              Assignment: =
+                ID: jh
+                ID: next_jh
+              Assignment: =
+                ID: next_jh
+                StructRef: ->
+                  ID: jh
+                  ID: b_cpnext
+              Assignment: =
+                ID: retry
+                FuncCall: 
+                  ID: __flush_buffer
+                  ExprList: 
+                    ID: journal
+                    ID: jh
+                    ID: bhs
+                    UnaryOp: &
+                      ID: batch_count
+                    UnaryOp: &
+                      ID: drop_count
+          If: 
+            ID: retry
+            Goto: repeat
+          Assignment: =
+            ID: cleanup_ret
+            FuncCall: 
+              ID: __cleanup_transaction
+              ExprList: 
+                ID: journal
+                ID: transaction
+          Goto: repeat

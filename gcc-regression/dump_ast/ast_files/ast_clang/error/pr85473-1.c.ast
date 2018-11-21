@@ -1,0 +1,45 @@
+c_files/pr85473-1.c:13:4: error: use of unknown builtin '__builtin_ia32_movdir64b' [-Wimplicit-function-declaration]
+   __builtin_ia32_movdir64b(w, array);
+   ^
+1 error generated.
+TranslationUnitDecl 0x7ffc710166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffc71016c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffc71016940 '__int128'
+|-TypedefDecl 0x7ffc71016c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffc71016960 'unsigned __int128'
+|-TypedefDecl 0x7ffc71016f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffc71016d70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffc71016ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffc71017000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffc71016fc0 'char *'
+|   `-BuiltinType 0x7ffc71016760 'char'
+|-TypedefDecl 0x7ffc710172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffc71017270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffc710170e0 'struct __va_list_tag'
+|     `-Record 0x7ffc71017058 '__va_list_tag'
+|-VarDecl 0x7ffc71068600 <c_files/pr85473-1.c:6:1, col:17> col:14 used w 'unsigned int [5]'
+| `-AlignedAttr 0x7ffc71068660 <col:34, col:44> aligned
+|   `-IntegerLiteral 0x7ffc71017340 <col:42> 'int' 64
+|-FunctionDecl 0x7ffc71068738 <line:8:1, line:14:1> line:9:1 foo 'void ()'
+| `-CompoundStmt 0x7ffc71068d28 <line:10:1, line:14:1>
+|   |-DeclStmt 0x7ffc71068ab8 <line:12:4, col:42>
+|   | `-VarDecl 0x7ffc71068820 <col:4, col:41> col:17 used array 'unsigned int [5]' cinit
+|   |   `-InitListExpr 0x7ffc71068988 <col:27, col:41> 'unsigned int [5]'
+|   |     |-ImplicitCastExpr 0x7ffc710689c8 <col:28> 'unsigned int' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7ffc71068880 <col:28> 'int' 1
+|   |     |-ImplicitCastExpr 0x7ffc710689e8 <col:31> 'unsigned int' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7ffc710688a0 <col:31> 'int' 2
+|   |     |-ImplicitCastExpr 0x7ffc71068a10 <col:34> 'unsigned int' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7ffc710688c0 <col:34> 'int' 3
+|   |     |-ImplicitCastExpr 0x7ffc71068a48 <col:37> 'unsigned int' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7ffc710688e0 <col:37> 'int' 4
+|   |     `-ImplicitCastExpr 0x7ffc71068a60 <col:40> 'unsigned int' <IntegralCast>
+|   |       `-IntegerLiteral 0x7ffc71068900 <col:40> 'int' 5
+|   `-CallExpr 0x7ffc71068c90 <line:13:4, col:37> 'int'
+|     |-ImplicitCastExpr 0x7ffc71068c78 <col:4> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7ffc71068bd8 <col:4> 'int ()' Function 0x7ffc71068b40 '__builtin_ia32_movdir64b' 'int ()'
+|     |-ImplicitCastExpr 0x7ffc71068cf8 <col:29> 'unsigned int *' <ArrayToPointerDecay>
+|     | `-DeclRefExpr 0x7ffc71068c00 <col:29> 'unsigned int [5]' lvalue Var 0x7ffc71068600 'w' 'unsigned int [5]'
+|     `-ImplicitCastExpr 0x7ffc71068d10 <col:32> 'unsigned int *' <ArrayToPointerDecay>
+|       `-DeclRefExpr 0x7ffc71068c28 <col:32> 'unsigned int [5]' lvalue Var 0x7ffc71068820 'array' 'unsigned int [5]'
+`-FunctionDecl 0x7ffc71068b40 <<invalid sloc>> col:4 implicit used __builtin_ia32_movdir64b 'int ()'

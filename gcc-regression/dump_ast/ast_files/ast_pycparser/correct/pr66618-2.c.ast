@@ -1,0 +1,41 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+    ArrayRef: 
+      Constant: string, "foo"
+      Constant: int, 2
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+    ArrayRef: 
+      Constant: int, 1
+      Constant: string, "bar"
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+    ArrayRef: 
+      Constant: string, "baz"
+      BinaryOp: *
+        ID: __INT_MAX__
+        UnaryOp: -
+          Constant: int, 2
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+    ArrayRef: 
+      Constant: string, "str"
+      Constant: int, 3
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+    ArrayRef: 
+      Constant: string, "str"
+      Constant: int, 4
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+    ArrayRef: 
+      Constant: string, "str"
+      UnaryOp: -
+        Constant: int, 1

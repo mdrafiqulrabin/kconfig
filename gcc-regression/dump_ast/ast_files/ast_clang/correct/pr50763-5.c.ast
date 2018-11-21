@@ -1,0 +1,85 @@
+TranslationUnitDecl 0x7f802c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f802c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f802c826740 '__int128'
+|-TypedefDecl 0x7f802c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f802c826760 'unsigned __int128'
+|-TypedefDecl 0x7f802c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f802c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f802c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f802c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f802c826dc0 'char *'
+|   `-BuiltinType 0x7f802c826560 'char'
+|-TypedefDecl 0x7f802c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f802c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f802c826ee0 'struct __va_list_tag'
+|     `-Record 0x7f802c826e58 '__va_list_tag'
+|-RecordDecl 0x7f802c827120 <c_files/pr50763-5.c:4:1, line:8:1> line:4:8 struct inode definition
+| |-FieldDecl 0x7f802c877400 <line:6:3, col:18> col:18 referenced i_mode 'unsigned short'
+| `-FieldDecl 0x7f802c877460 <line:7:3, col:16> col:16 referenced i_flags 'unsigned int'
+|-FunctionDecl 0x7f802c877588 <line:10:1, line:14:1> line:11:1 used is_sxid 'int (unsigned int)' static inline
+| |-ParmVarDecl 0x7f802c8774c0 <col:10, col:23> col:23 used mode 'unsigned int'
+| `-CompoundStmt 0x7f802c877930 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7f802c877918 <line:13:3, col:65>
+|     `-BinaryOperator 0x7f802c8778f0 <col:10, col:65> 'int' '||'
+|       |-ParenExpr 0x7f802c877708 <col:10, col:25> 'unsigned int'
+|       | `-BinaryOperator 0x7f802c8776e0 <col:11, col:18> 'unsigned int' '&'
+|       |   |-ImplicitCastExpr 0x7f802c8776b0 <col:11> 'unsigned int' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7f802c877668 <col:11> 'unsigned int' lvalue ParmVar 0x7f802c8774c0 'mode' 'unsigned int'
+|       |   `-ImplicitCastExpr 0x7f802c8776c8 <col:18> 'unsigned int' <IntegralCast>
+|       |     `-IntegerLiteral 0x7f802c877690 <col:18> 'int' 2048
+|       `-ParenExpr 0x7f802c8778d0 <col:30, col:65> 'int'
+|         `-BinaryOperator 0x7f802c8778a8 <col:31, col:64> 'int' '&&'
+|           |-ParenExpr 0x7f802c8777c8 <col:31, col:46> 'unsigned int'
+|           | `-BinaryOperator 0x7f802c8777a0 <col:32, col:39> 'unsigned int' '&'
+|           |   |-ImplicitCastExpr 0x7f802c877770 <col:32> 'unsigned int' <LValueToRValue>
+|           |   | `-DeclRefExpr 0x7f802c877728 <col:32> 'unsigned int' lvalue ParmVar 0x7f802c8774c0 'mode' 'unsigned int'
+|           |   `-ImplicitCastExpr 0x7f802c877788 <col:39> 'unsigned int' <IntegralCast>
+|           |     `-IntegerLiteral 0x7f802c877750 <col:39> 'int' 1024
+|           `-ParenExpr 0x7f802c877888 <col:51, col:64> 'unsigned int'
+|             `-BinaryOperator 0x7f802c877860 <col:52, col:59> 'unsigned int' '&'
+|               |-ImplicitCastExpr 0x7f802c877830 <col:52> 'unsigned int' <LValueToRValue>
+|               | `-DeclRefExpr 0x7f802c8777e8 <col:52> 'unsigned int' lvalue ParmVar 0x7f802c8774c0 'mode' 'unsigned int'
+|               `-ImplicitCastExpr 0x7f802c877848 <col:59> 'unsigned int' <IntegralCast>
+|                 `-IntegerLiteral 0x7f802c877810 <col:59> 'int' 8
+|-EmptyDecl 0x7f802c877950 <line:14:2> col:2
+`-FunctionDecl 0x7f802c877bb0 <line:16:1, line:23:1> line:17:1 gfs2_set_inode_flags 'void (int, struct inode *)'
+  |-ParmVarDecl 0x7f802c877988 <col:23, col:27> col:27 used ip 'int'
+  |-ParmVarDecl 0x7f802c877aa0 <col:31, col:45> col:45 used inode 'struct inode *'
+  `-CompoundStmt 0x7f802c8781a8 <line:18:1, line:23:1>
+    |-DeclStmt 0x7f802c877d60 <line:19:3, col:38>
+    | `-VarDecl 0x7f802c877c70 <col:3, col:31> col:16 used flags 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7f802c877d48 <col:24, col:31> 'unsigned int' <LValueToRValue>
+    |     `-MemberExpr 0x7f802c877d10 <col:24, col:31> 'unsigned int' lvalue ->i_flags 0x7f802c877460
+    |       `-ImplicitCastExpr 0x7f802c877cf8 <col:24> 'struct inode *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f802c877cd0 <col:24> 'struct inode *' lvalue ParmVar 0x7f802c877aa0 'inode' 'struct inode *'
+    |-IfStmt 0x7f802c878090 <line:20:3, line:21:23>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f802c877f80 <line:20:7, col:43> 'int' '&&'
+    | | |-ParenExpr 0x7f802c877e00 <col:7, col:15> 'int'
+    | | | `-BinaryOperator 0x7f802c877dd8 <col:8, col:14> 'int' '=='
+    | | |   |-ImplicitCastExpr 0x7f802c877dc0 <col:8> 'int' <LValueToRValue>
+    | | |   | `-DeclRefExpr 0x7f802c877d78 <col:8> 'int' lvalue ParmVar 0x7f802c877988 'ip' 'int'
+    | | |   `-IntegerLiteral 0x7f802c877da0 <col:14> 'int' 0
+    | | `-UnaryOperator 0x7f802c877f60 <col:20, col:43> 'int' prefix '!'
+    | |   `-CallExpr 0x7f802c877f00 <col:21, col:43> 'int'
+    | |     |-ImplicitCastExpr 0x7f802c877ee8 <col:21> 'int (*)(unsigned int)' <FunctionToPointerDecay>
+    | |     | `-DeclRefExpr 0x7f802c877e20 <col:21> 'int (unsigned int)' Function 0x7f802c877588 'is_sxid' 'int (unsigned int)'
+    | |     `-ImplicitCastExpr 0x7f802c877f48 <col:30, col:37> 'unsigned int' <IntegralCast>
+    | |       `-ImplicitCastExpr 0x7f802c877f30 <col:30, col:37> 'unsigned short' <LValueToRValue>
+    | |         `-MemberExpr 0x7f802c877e88 <col:30, col:37> 'unsigned short' lvalue ->i_mode 0x7f802c877400
+    | |           `-ImplicitCastExpr 0x7f802c877e70 <col:30> 'struct inode *' <LValueToRValue>
+    | |             `-DeclRefExpr 0x7f802c877e48 <col:30> 'struct inode *' lvalue ParmVar 0x7f802c877aa0 'inode' 'struct inode *'
+    | |-CompoundAssignOperator 0x7f802c878058 <line:21:5, col:23> 'unsigned int' '|=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | | |-MemberExpr 0x7f802c877fe8 <col:5, col:12> 'unsigned int' lvalue ->i_flags 0x7f802c877460
+    | | | `-ImplicitCastExpr 0x7f802c877fd0 <col:5> 'struct inode *' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7f802c877fa8 <col:5> 'struct inode *' lvalue ParmVar 0x7f802c877aa0 'inode' 'struct inode *'
+    | | `-ImplicitCastExpr 0x7f802c878040 <col:23> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f802c878020 <col:23> 'int' 4096
+    | `-<<<NULL>>>
+    `-BinaryOperator 0x7f802c878180 <line:22:3, col:20> 'unsigned int' '='
+      |-MemberExpr 0x7f802c878108 <col:3, col:10> 'unsigned int' lvalue ->i_flags 0x7f802c877460
+      | `-ImplicitCastExpr 0x7f802c8780f0 <col:3> 'struct inode *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f802c8780c8 <col:3> 'struct inode *' lvalue ParmVar 0x7f802c877aa0 'inode' 'struct inode *'
+      `-ImplicitCastExpr 0x7f802c878168 <col:20> 'unsigned int' <LValueToRValue>
+        `-DeclRefExpr 0x7f802c878140 <col:20> 'unsigned int' lvalue Var 0x7f802c877c70 'flags' 'unsigned int'

@@ -1,0 +1,113 @@
+FileAST: 
+  FuncDef: 
+    Decl: testfunc_00, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ap, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: ap, ['const']
+                IdentifierType: ['short']
+          Decl: bp, [], [], []
+            PtrDecl: []
+              TypeDecl: bp, []
+                IdentifierType: ['short']
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['short']
+        TypeDecl: testfunc_00, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: bp
+          Constant: int, 0
+        ArrayRef: 
+          ID: ap
+          Constant: int, 15
+      Assignment: =
+        ArrayRef: 
+          ID: bp
+          Constant: int, 2
+        ArrayRef: 
+          ID: ap
+          Constant: int, 5
+      Assignment: =
+        ArrayRef: 
+          ID: bp
+          Constant: int, 9
+        ArrayRef: 
+          ID: ap
+          Constant: int, 7
+      Assignment: =
+        ArrayRef: 
+          ID: bp
+          Constant: int, 0
+        ArrayRef: 
+          ID: ap
+          Constant: int, 15
+      Assignment: =
+        ArrayRef: 
+          ID: bp
+          Constant: int, 4
+        ID: val
+      Assignment: =
+        ArrayRef: 
+          ID: bp
+          Constant: int, 14
+        ID: val
+  FuncDef: 
+    Decl: testfunc_01, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ap, ['volatile', 'const'], [], []
+            PtrDecl: []
+              TypeDecl: ap, ['volatile', 'const']
+                IdentifierType: ['short']
+          Decl: bp, ['volatile'], [], []
+            PtrDecl: []
+              TypeDecl: bp, ['volatile']
+                IdentifierType: ['short']
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['short']
+        TypeDecl: testfunc_01, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: bp
+          Constant: int, 0
+        ArrayRef: 
+          ID: ap
+          Constant: int, 15
+      Assignment: =
+        ArrayRef: 
+          ID: bp
+          Constant: int, 2
+        ArrayRef: 
+          ID: ap
+          Constant: int, 5
+      Assignment: =
+        ArrayRef: 
+          ID: bp
+          Constant: int, 9
+        ArrayRef: 
+          ID: ap
+          Constant: int, 7
+      Assignment: =
+        ArrayRef: 
+          ID: bp
+          Constant: int, 0
+        ArrayRef: 
+          ID: ap
+          Constant: int, 15
+      Assignment: =
+        ArrayRef: 
+          ID: bp
+          Constant: int, 4
+        ID: val
+      Assignment: =
+        ArrayRef: 
+          ID: bp
+          Constant: int, 14
+        ID: val

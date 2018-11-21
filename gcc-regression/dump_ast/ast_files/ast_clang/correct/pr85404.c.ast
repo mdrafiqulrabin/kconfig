@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fedef0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fedef026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fedef026740 '__int128'
+|-TypedefDecl 0x7fedef026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fedef026760 'unsigned __int128'
+|-TypedefDecl 0x7fedef026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fedef026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fedef026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fedef026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fedef026dc0 'char *'
+|   `-BuiltinType 0x7fedef026560 'char'
+|-TypedefDecl 0x7fedef0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fedef027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fedef026ee0 'struct __va_list_tag'
+|     `-Record 0x7fedef026e58 '__va_list_tag'
+|-FunctionDecl 0x7fedef825a50 <c_files/pr85404.c:4:1, col:30> col:6 func 'void (void)'
+| `-AsmLabelAttr 0x7fedef825ae8 <col:23> "_func"
+|-FunctionDecl 0x7fedef825c60 <line:5:1, col:20> col:6 _func 'void (int)'
+| |-ParmVarDecl 0x7fedef825b98 <col:12, col:16> col:16 x 'int'
+| `-CompoundStmt 0x7fedef825d00 <col:19, col:20>
+`-FunctionDecl 0x7fedef825da8 prev 0x7fedef825a50 <line:6:1, col:18> col:6 func 'void (void)'
+  |-CompoundStmt 0x7fedef825e98 <col:17, col:18>
+  `-AsmLabelAttr 0x7fedef825e78 <line:4:23> Inherited "_func"

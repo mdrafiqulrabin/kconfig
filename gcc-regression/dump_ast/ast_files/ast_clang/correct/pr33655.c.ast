@@ -1,0 +1,61 @@
+TranslationUnitDecl 0x7fcdd08264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcdd0826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcdd0826740 '__int128'
+|-TypedefDecl 0x7fcdd0826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcdd0826760 'unsigned __int128'
+|-TypedefDecl 0x7fcdd0826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcdd0826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcdd0826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcdd0826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcdd0826dc0 'char *'
+|   `-BuiltinType 0x7fcdd0826560 'char'
+|-TypedefDecl 0x7fcdd08270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcdd0827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcdd0826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcdd0826e58 '__va_list_tag'
+|-RecordDecl 0x7fcdd0827120 <c_files/pr33655.c:2:9, line:5:1> line:2:9 struct definition
+| |-FieldDecl 0x7fcdd0877400 <line:3:5, col:19> col:19 attr 'unsigned long'
+| `-FieldDecl 0x7fcdd08774d0 <line:4:5, col:16> col:9 referenced chars 'int [2]'
+|-TypedefDecl 0x7fcdd0877570 <line:2:1, line:5:3> col:3 referenced cchar_t 'struct cchar_t':'cchar_t'
+| `-ElaboratedType 0x7fcdd0877520 'struct cchar_t' sugar
+|   `-RecordType 0x7fcdd08271b0 'cchar_t'
+|     `-Record 0x7fcdd0827120 ''
+|-RecordDecl 0x7fcdd08775e0 <line:6:9, line:8:1> line:6:16 struct _win_st definition
+| `-FieldDecl 0x7fcdd08776c0 <line:7:5, col:13> col:13 referenced _bkgrnd 'cchar_t':'cchar_t'
+|-TypedefDecl 0x7fcdd08777b0 <line:6:1, line:8:3> col:3 referenced WINDOW 'struct _win_st':'struct _win_st'
+| `-ElaboratedType 0x7fcdd0877760 'struct _win_st' sugar
+|   `-RecordType 0x7fcdd0877670 'struct _win_st'
+|     `-Record 0x7fcdd08775e0 '_win_st'
+`-FunctionDecl 0x7fcdd0877a30 <line:9:1, line:14:1> line:9:6 render_char 'void (WINDOW *, cchar_t)'
+  |-ParmVarDecl 0x7fcdd08778a8 <col:18, col:26> col:26 used win 'WINDOW *'
+  |-ParmVarDecl 0x7fcdd0877918 <col:31, col:39> col:39 used ch 'cchar_t':'cchar_t'
+  `-CompoundStmt 0x7fcdd0877ef8 <line:10:1, line:14:1>
+    `-IfStmt 0x7fcdd0877ec0 <line:11:5, line:13:24>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fcdd0877db8 <line:11:9, line:12:29> 'int' '&&'
+      | |-BinaryOperator 0x7fcdd0877c58 <line:11:9, col:26> 'int' '=='
+      | | |-ImplicitCastExpr 0x7fcdd0877c40 <col:9, col:21> 'int' <LValueToRValue>
+      | | | `-ArraySubscriptExpr 0x7fcdd0877c00 <col:9, col:21> 'int' lvalue
+      | | |   |-ImplicitCastExpr 0x7fcdd0877be8 <col:9, col:14> 'int *' <ArrayToPointerDecay>
+      | | |   | `-MemberExpr 0x7fcdd0877b60 <col:9, col:14> 'int [2]' lvalue .chars 0x7fcdd08774d0
+      | | |   |   `-ParenExpr 0x7fcdd0877b40 <col:9, col:12> 'cchar_t':'cchar_t' lvalue
+      | | |   |     `-DeclRefExpr 0x7fcdd0877b18 <col:10> 'cchar_t':'cchar_t' lvalue ParmVar 0x7fcdd0877918 'ch' 'cchar_t':'cchar_t'
+      | | |   `-IntegerLiteral 0x7fcdd0877b98 <col:20> 'int' 0
+      | | `-CharacterLiteral 0x7fcdd0877c28 <col:26> 'int' 32
+      | `-BinaryOperator 0x7fcdd0877d90 <line:12:12, col:29> 'int' '=='
+      |   |-ImplicitCastExpr 0x7fcdd0877d78 <col:12, col:24> 'int' <LValueToRValue>
+      |   | `-ArraySubscriptExpr 0x7fcdd0877d38 <col:12, col:24> 'int' lvalue
+      |   |   |-ImplicitCastExpr 0x7fcdd0877d20 <col:12, col:17> 'int *' <ArrayToPointerDecay>
+      |   |   | `-MemberExpr 0x7fcdd0877cc8 <col:12, col:17> 'int [2]' lvalue .chars 0x7fcdd08774d0
+      |   |   |   `-ParenExpr 0x7fcdd0877ca8 <col:12, col:15> 'cchar_t':'cchar_t' lvalue
+      |   |   |     `-DeclRefExpr 0x7fcdd0877c80 <col:13> 'cchar_t':'cchar_t' lvalue ParmVar 0x7fcdd0877918 'ch' 'cchar_t':'cchar_t'
+      |   |   `-IntegerLiteral 0x7fcdd0877d00 <col:23> 'int' 1
+      |   `-CharacterLiteral 0x7fcdd0877d60 <col:29> 'int' 0
+      |-BinaryOperator 0x7fcdd0877e98 <line:13:9, col:24> 'cchar_t':'cchar_t' '='
+      | |-MemberExpr 0x7fcdd0877e20 <col:9, col:14> 'cchar_t':'cchar_t' lvalue ->_bkgrnd 0x7fcdd08776c0
+      | | `-ImplicitCastExpr 0x7fcdd0877e08 <col:9> 'WINDOW *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fcdd0877de0 <col:9> 'WINDOW *' lvalue ParmVar 0x7fcdd08778a8 'win' 'WINDOW *'
+      | `-ImplicitCastExpr 0x7fcdd0877e80 <col:24> 'cchar_t':'cchar_t' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fcdd0877e58 <col:24> 'cchar_t':'cchar_t' lvalue ParmVar 0x7fcdd0877918 'ch' 'cchar_t':'cchar_t'
+      `-<<<NULL>>>

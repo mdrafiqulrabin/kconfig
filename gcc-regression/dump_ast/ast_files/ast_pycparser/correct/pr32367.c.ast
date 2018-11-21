@@ -1,0 +1,63 @@
+FileAST: 
+  Decl: BinomialCoefficientsInited, [], [], []
+    TypeDecl: BinomialCoefficientsInited, []
+      IdentifierType: ['int']
+    Constant: int, 0
+  Decl: BinomialCoefficients, [], [], []
+    ArrayDecl: []
+      TypeDecl: BinomialCoefficients, []
+        IdentifierType: ['int']
+      BinaryOp: *
+        Constant: int, 17
+        Constant: int, 35
+  FuncDef: 
+    Decl: Evaluate_TPat, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: Evaluate_TPat, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['unsigned', 'short']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['unsigned', 'short']
+      If: 
+        BinaryOp: ==
+          ID: BinomialCoefficientsInited
+          Constant: int, 0
+        Compound: 
+          Decl: ptr, [], [], []
+            PtrDecl: []
+              TypeDecl: ptr, []
+                IdentifierType: ['int']
+            ID: BinomialCoefficients
+          For: 
+            Assignment: =
+              ID: n
+              Constant: int, 1
+            BinaryOp: <=
+              ID: n
+              Constant: int, 33
+            UnaryOp: ++
+              ID: n
+            Compound: 
+              For: 
+                Assignment: =
+                  ID: k
+                  Constant: int, 1
+                BinaryOp: <
+                  ID: k
+                  ID: n
+                UnaryOp: ++
+                  ID: k
+                UnaryOp: ++
+                  ID: ptr
+              Assignment: =
+                UnaryOp: *
+                  ID: ptr
+                Constant: int, 1

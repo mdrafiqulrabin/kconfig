@@ -1,0 +1,38 @@
+c_files/pr36800.c:4:10: fatal error: 'dfp-dbg.h' file not found
+#include "dfp-dbg.h"
+         ^~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fe9c60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe9c6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe9c6026740 '__int128'
+|-TypedefDecl 0x7fe9c6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe9c6026760 'unsigned __int128'
+|-TypedefDecl 0x7fe9c6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe9c6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe9c6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe9c6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe9c6026dc0 'char *'
+|   `-BuiltinType 0x7fe9c6026560 'char'
+|-TypedefDecl 0x7fe9c60270c8 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe9c6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe9c6026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe9c6026e58 '__va_list_tag'
+|-TypedefDecl 0x7fe9c6027150 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:30:1, col:27> col:27 referenced va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7fe9c6027120 '__builtin_va_list' sugar
+|   |-Typedef 0x7fe9c60270c8 '__builtin_va_list'
+|   `-ConstantArrayType 0x7fe9c6027070 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7fe9c6026ee0 'struct __va_list_tag'
+|       `-Record 0x7fe9c6026e58 '__va_list_tag'
+|-TypedefDecl 0x7fe9c6827a00 <line:48:1, col:27> col:27 __gnuc_va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7fe9c6027120 '__builtin_va_list' sugar
+|   |-Typedef 0x7fe9c60270c8 '__builtin_va_list'
+|   `-ConstantArrayType 0x7fe9c6027070 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7fe9c6026ee0 'struct __va_list_tag'
+|       `-Record 0x7fe9c6026e58 '__va_list_tag'
+|-FunctionDecl 0x7fe9c6827b30 <c_files/pr36800.c:6:1, line:24:1> line:7:1 used f 'void (int, ...)'
+| |-ParmVarDecl 0x7fe9c6827a70 <col:4, col:8> col:8 used a 'int'
+| `-CompoundStmt 0x7fe9c6827d98 <line:8:1, line:24:1>
+|   `-DeclStmt 0x7fe9c6827ca0 <line:9:3, col:13>
+|     `-VarDecl 0x7fe9c6827c40 <col:3, col:11> col:11 used ap 'va_list':'struct __va_list_tag [1]'
+`-FunctionDecl 0x7fe9c6827e88 <line:26:1, line:32:1> line:27:1 main 'int (void)'
+  `-CompoundStmt 0x7fe9c6827fb0 <line:28:1, line:32:1>

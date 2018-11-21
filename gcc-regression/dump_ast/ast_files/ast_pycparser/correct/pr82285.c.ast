@@ -1,0 +1,50 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: tst
+      EnumeratorList: 
+        Enumerator: first
+          Constant: int, 0
+        Enumerator: second
+          Constant: int, 1
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: data, [], [], []
+        ArrayDecl: []
+          TypeDecl: data, []
+            Enum: tst
+          Constant: int, 16
+      For: 
+        DeclList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['unsigned']
+            Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: data
+            ID: i
+          TernaryOp: 
+            BinaryOp: <
+              ID: i
+              Constant: int, 5
+            ID: second
+            ID: first
+      If: 
+        BinaryOp: !=
+          ArrayRef: 
+            ID: data
+            Constant: int, 2
+          ID: second
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

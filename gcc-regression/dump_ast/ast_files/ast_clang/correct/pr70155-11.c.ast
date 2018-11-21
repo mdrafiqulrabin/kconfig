@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fb2de00e4d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb2de00ea20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb2de00e740 '__int128'
+|-TypedefDecl 0x7fb2de00ea90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb2de00e760 'unsigned __int128'
+|-TypedefDecl 0x7fb2de00ed68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb2de00eb70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb2de00eae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb2de00ee00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb2de00edc0 'char *'
+|   `-BuiltinType 0x7fb2de00e560 'char'
+|-TypedefDecl 0x7fb2de00f0c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb2de00f070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb2de00eee0 'struct __va_list_tag'
+|     `-Record 0x7fb2de00ee58 '__va_list_tag'
+|-VarDecl 0x7fb2de00f138 <c_files/pr70155-11.c:4:1, col:17> col:17 used a '__int128' extern
+|-RecordDecl 0x7fb2df000000 <line:6:1, line:9:1> line:6:8 struct foo definition
+| |-PackedAttr 0x7fb2df000110 <line:9:18>
+| `-FieldDecl 0x7fb2df0000c8 <line:8:3, col:12> col:12 referenced i '__int128'
+|-VarDecl 0x7fb2df0001b0 <line:11:1, col:19> col:19 used x 'struct foo':'struct foo' extern
+`-FunctionDecl 0x7fb2df0002d0 <line:13:1, line:17:1> line:14:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb2df000478 <line:15:1, line:17:1>
+    `-BinaryOperator 0x7fb2df000408 <line:16:3, col:9> '__int128' '='
+      |-MemberExpr 0x7fb2df000390 <col:3, col:5> '__int128' lvalue .i 0x7fb2df0000c8
+      | `-DeclRefExpr 0x7fb2df000368 <col:3> 'struct foo':'struct foo' lvalue Var 0x7fb2df0001b0 'x' 'struct foo':'struct foo'
+      `-ImplicitCastExpr 0x7fb2df0003f0 <col:9> '__int128' <LValueToRValue>
+        `-DeclRefExpr 0x7fb2df0003c8 <col:9> '__int128' lvalue Var 0x7fb2de00f138 'a' '__int128'

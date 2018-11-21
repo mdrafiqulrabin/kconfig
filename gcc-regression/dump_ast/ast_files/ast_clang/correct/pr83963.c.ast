@@ -1,0 +1,66 @@
+TranslationUnitDecl 0x7ff97a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff97a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff97a826740 '__int128'
+|-TypedefDecl 0x7ff97a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff97a826760 'unsigned __int128'
+|-TypedefDecl 0x7ff97a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff97a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff97a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff97a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff97a826dc0 'char *'
+|   `-BuiltinType 0x7ff97a826560 'char'
+|-TypedefDecl 0x7ff97a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff97a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff97a826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff97a826e58 '__va_list_tag'
+|-VarDecl 0x7ff97a827138 <c_files/pr83963.c:4:1, col:5> col:5 used mg 'int'
+|-VarDecl 0x7ff97b025a00 <col:1, col:9> col:9 used et 'int'
+`-FunctionDecl 0x7ff97b025b50 <line:6:1, line:30:1> line:7:1 s5 'void (int)'
+  |-ParmVarDecl 0x7ff97b025a90 <col:5, col:9> col:9 used is 'int'
+  `-CompoundStmt 0x7ff97b026140 <line:8:1, line:30:1>
+    |-IfStmt 0x7ff97b025d40 <line:9:3, line:13:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff97b025c50 <line:9:7, col:13> 'int' '=='
+    | | |-ImplicitCastExpr 0x7ff97b025c38 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff97b025bf0 <col:7> 'int' lvalue ParmVar 0x7ff97b025a90 'is' 'int'
+    | | `-IntegerLiteral 0x7ff97b025c18 <col:13> 'int' 0
+    | |-CompoundStmt 0x7ff97b025d20 <line:10:5, line:13:5>
+    | | `-LabelStmt 0x7ff97b025d08 <line:11:1, line:12:9> 'g6'
+    | |   `-UnaryOperator 0x7ff97b025ca0 <col:7, col:9> 'int' prefix '++'
+    | |     `-DeclRefExpr 0x7ff97b025c78 <col:9> 'int' lvalue ParmVar 0x7ff97b025a90 'is' 'int'
+    | `-<<<NULL>>>
+    |-WhileStmt 0x7ff97b026108 <line:15:3, line:27:5>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff97b025dd8 <line:15:10, col:15> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff97b025dc0 <col:10> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff97b025d78 <col:10> 'int' lvalue Var 0x7ff97a827138 'mg' 'int'
+    | | `-IntegerLiteral 0x7ff97b025da0 <col:15> 'int' 1
+    | `-CompoundStmt 0x7ff97b0260e0 <line:16:5, line:27:5>
+    |   |-WhileStmt 0x7ff97b025fd0 <line:17:7, line:23:2>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7ff97b025e60 <line:17:14, col:19> 'int' '<'
+    |   | | |-ImplicitCastExpr 0x7ff97b025e48 <col:14> 'int' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x7ff97b025e00 <col:14> 'int' lvalue Var 0x7ff97b025a00 'et' 'int'
+    |   | | `-IntegerLiteral 0x7ff97b025e28 <col:19> 'int' 1
+    |   | `-CompoundStmt 0x7ff97b025fa8 <line:18:2, line:23:2>
+    |   |   |-IfStmt 0x7ff97b025f28 <line:19:4, line:20:6>
+    |   |   | |-<<<NULL>>>
+    |   |   | |-<<<NULL>>>
+    |   |   | |-BinaryOperator 0x7ff97b025ee8 <line:19:8, col:14> 'int' '=='
+    |   |   | | |-ImplicitCastExpr 0x7ff97b025ed0 <col:8> 'int' <LValueToRValue>
+    |   |   | | | `-DeclRefExpr 0x7ff97b025e88 <col:8> 'int' lvalue ParmVar 0x7ff97b025a90 'is' 'int'
+    |   |   | | `-IntegerLiteral 0x7ff97b025eb0 <col:14> 'int' 0
+    |   |   | |-ReturnStmt 0x7ff97b025f10 <line:20:6>
+    |   |   | `-<<<NULL>>>
+    |   |   `-UnaryOperator 0x7ff97b025f88 <line:22:4, col:6> 'int' prefix '++'
+    |   |     `-DeclRefExpr 0x7ff97b025f60 <col:6> 'int' lvalue Var 0x7ff97b025a00 'et' 'int'
+    |   `-WhileStmt 0x7ff97b0260c0 <line:25:7, line:26:4>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7ff97b026050 <line:25:14, col:19> 'int' '<'
+    |     | |-ImplicitCastExpr 0x7ff97b026038 <col:14> 'int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7ff97b025ff0 <col:14> 'int' lvalue Var 0x7ff97a827138 'mg' 'int'
+    |     | `-IntegerLiteral 0x7ff97b026018 <col:19> 'int' 1
+    |     `-UnaryOperator 0x7ff97b0260a0 <line:26:2, col:4> 'int' prefix '++'
+    |       `-DeclRefExpr 0x7ff97b026078 <col:4> 'int' lvalue Var 0x7ff97a827138 'mg' 'int'
+    `-GotoStmt 0x7ff97b026128 <line:29:3, col:8> 'g6' 0x7ff97b025cc0

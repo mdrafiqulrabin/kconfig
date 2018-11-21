@@ -1,0 +1,30 @@
+c_files/pr15698-3.c:11:6: error: conflicting types for 'f'
+void f(a) long a; {} /* { dg-error "argument 'a' doesn't match prototype" } */
+     ^
+c_files/pr15698-3.c:10:6: note: previous declaration is here
+void f();
+     ^
+1 error generated.
+TranslationUnitDecl 0x7fd1798264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd179826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd179826740 '__int128'
+|-TypedefDecl 0x7fd179826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd179826760 'unsigned __int128'
+|-TypedefDecl 0x7fd179826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd179826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd179826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd179826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd179826dc0 'char *'
+|   `-BuiltinType 0x7fd179826560 'char'
+|-TypedefDecl 0x7fd1798270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd179827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd179826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd179826e58 '__va_list_tag'
+|-FunctionDecl 0x7fd179827168 <c_files/pr15698-3.c:8:1, col:8> col:6 f 'void ()'
+|-FunctionDecl 0x7fd179877520 prev 0x7fd179827168 <line:9:1, col:11> col:6 f 'void (int)'
+| `-ParmVarDecl 0x7fd179877458 <col:8> col:11 'int'
+|-FunctionDecl 0x7fd1798775e0 prev 0x7fd179877520 <line:10:1, col:8> col:6 f 'void (int)'
+| `-ParmVarDecl 0x7fd179877678 <<invalid sloc>> <invalid sloc> implicit 'int'
+`-FunctionDecl 0x7fd1798777c0 <line:11:1, col:20> col:6 invalid f 'void (long)'
+  |-ParmVarDecl 0x7fd1798776f8 <col:11, col:16> col:16 a 'long'
+  `-CompoundStmt 0x7fd179877860 <col:19, col:20>

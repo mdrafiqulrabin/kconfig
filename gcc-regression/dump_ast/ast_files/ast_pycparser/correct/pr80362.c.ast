@@ -1,0 +1,31 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: var_0, [], [], []
+        TypeDecl: var_0, []
+          IdentifierType: ['signed', 'char']
+      Decl: var_1, [], [], []
+        TypeDecl: var_1, []
+          IdentifierType: ['signed', 'char']
+        UnaryOp: -
+          Constant: int, 128
+      Assignment: =
+        ID: var_0
+        BinaryOp: /
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['signed', 'char']
+            UnaryOp: -
+              ID: var_1
+          Constant: int, 3
+      If: 
+        BinaryOp: >
+          ID: var_0
+          Constant: int, 0
+        FuncCall: 
+          ID: __builtin_abort

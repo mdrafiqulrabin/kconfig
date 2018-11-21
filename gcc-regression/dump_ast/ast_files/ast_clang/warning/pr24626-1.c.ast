@@ -1,0 +1,96 @@
+c_files/pr24626-1.c:14:18: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ if (call_result = after_node_func(node))
+     ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr24626-1.c:14:18: note: place parentheses around the assignment to silence this warning
+ if (call_result = after_node_func(node))
+                 ^
+     (                                  )
+c_files/pr24626-1.c:14:18: note: use '==' to turn this assignment into an equality comparison
+ if (call_result = after_node_func(node))
+                 ^
+                 ==
+1 warning generated.
+TranslationUnitDecl 0x7f8edb8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8edb826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8edb826740 '__int128'
+|-TypedefDecl 0x7f8edb826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8edb826760 'unsigned __int128'
+|-TypedefDecl 0x7f8edb826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8edb826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8edb826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8edb826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8edb826dc0 'char *'
+|   `-BuiltinType 0x7f8edb826560 'char'
+|-TypedefDecl 0x7f8edb8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8edb827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8edb826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8edb826e58 '__va_list_tag'
+|-TypedefDecl 0x7f8edb8774c8 <c_files/pr24626-1.c:3:1, line:4:17> col:3 referenced bla 'long (*)(int *)'
+| `-PointerType 0x7f8edb877460 'long (*)(int *)'
+|   `-ParenType 0x7f8edb877400 'long (int *)' sugar
+|     `-FunctionProtoType 0x7f8edb8271c0 'long (int *)' cdecl
+|       |-BuiltinType 0x7f8edb8265e0 'long'
+|       `-PointerType 0x7f8edb827120 'int *'
+|         `-BuiltinType 0x7f8edb8265c0 'int'
+|-FunctionDecl 0x7f8edb877600 <line:5:1, col:13> col:6 used T 'void (int *)'
+| `-ParmVarDecl 0x7f8edb877538 <col:8, col:12> col:13 'int *'
+|-FunctionDecl 0x7f8edb8777c8 <line:6:1, col:15> col:6 used F3 'long (void *)'
+| `-ParmVarDecl 0x7f8edb8776f8 <col:9, col:14> col:15 'void *'
+|-FunctionDecl 0x7f8edb877ac8 <line:8:1, line:24:1> line:8:13 used F2 'long (void *, long, bla)' static
+| |-ParmVarDecl 0x7f8edb877880 <col:16, col:22> col:22 tree 'void *'
+| |-ParmVarDecl 0x7f8edb8778f8 <col:28, col:33> col:33 blk 'long'
+| |-ParmVarDecl 0x7f8edb877990 <col:38, col:42> col:42 used after_node_func 'bla':'long (*)(int *)'
+| `-CompoundStmt 0x7f8edb878118 <line:9:1, line:24:1>
+|   |-DeclStmt 0x7f8edb877c28 <line:10:2, col:22>
+|   | `-VarDecl 0x7f8edb877b90 <col:2, col:21> col:7 used call_result 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f8edb877c10 <col:21> 'long' <IntegralCast>
+|   |     `-IntegerLiteral 0x7f8edb877bf0 <col:21> 'int' 0
+|   |-DeclStmt 0x7f8edb877cb8 <line:11:2, col:11>
+|   | `-VarDecl 0x7f8edb877c58 <col:2, col:7> col:7 used node 'int *'
+|   |-IfStmt 0x7f8edb877e30 <line:14:2, line:15:8>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8edb877da8 <line:14:6, col:40> 'long' '='
+|   | | |-DeclRefExpr 0x7f8edb877cd0 <col:6> 'long' lvalue Var 0x7f8edb877b90 'call_result' 'long'
+|   | | `-CallExpr 0x7f8edb877d60 <col:20, col:40> 'long'
+|   | |   |-ImplicitCastExpr 0x7f8edb877d48 <col:20> 'bla':'long (*)(int *)' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7f8edb877cf8 <col:20> 'bla':'long (*)(int *)' lvalue ParmVar 0x7f8edb877990 'after_node_func' 'bla':'long (*)(int *)'
+|   | |   `-ImplicitCastExpr 0x7f8edb877d90 <col:36> 'int *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8edb877d20 <col:36> 'int *' lvalue Var 0x7f8edb877c58 'node' 'int *'
+|   | |-GotoStmt 0x7f8edb877e18 <line:15:3, col:8> 'error_free_node' 0x7f8edb877dd0
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7f8edb877f00 <line:17:2, col:8> 'void'
+|   | |-ImplicitCastExpr 0x7f8edb877ee8 <col:2> 'void (*)(int *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f8edb877e68 <col:2> 'void (int *)' Function 0x7f8edb877600 'T' 'void (int *)'
+|   | `-ImplicitCastExpr 0x7f8edb877f30 <col:4> 'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8edb877e90 <col:4> 'int *' lvalue Var 0x7f8edb877c58 'node' 'int *'
+|   |-ReturnStmt 0x7f8edb877f80 <line:18:2, col:9>
+|   | `-ImplicitCastExpr 0x7f8edb877f68 <col:9> 'long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f8edb877f48 <col:9> 'int' 0
+|   |-LabelStmt 0x7f8edb878048 <line:20:1, line:21:8> 'error_free_node'
+|   | `-CallExpr 0x7f8edb878000 <col:2, col:8> 'void'
+|   |   |-ImplicitCastExpr 0x7f8edb877fe8 <col:2> 'void (*)(int *)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7f8edb877f98 <col:2> 'void (int *)' Function 0x7f8edb877600 'T' 'void (int *)'
+|   |   `-ImplicitCastExpr 0x7f8edb878030 <col:4> 'int *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8edb877fc0 <col:4> 'int *' lvalue Var 0x7f8edb877c58 'node' 'int *'
+|   `-LabelStmt 0x7f8edb878100 <line:22:1, line:23:9> 'error'
+|     `-ReturnStmt 0x7f8edb8780a0 <col:2, col:9>
+|       `-ImplicitCastExpr 0x7f8edb878088 <col:9> 'long' <LValueToRValue>
+|         `-DeclRefExpr 0x7f8edb878060 <col:9> 'long' lvalue Var 0x7f8edb877b90 'call_result' 'long'
+`-FunctionDecl 0x7f8edb878210 <line:26:1, line:29:1> line:26:6 F1 'long (void *)'
+  |-ParmVarDecl 0x7f8edb878180 <col:9, col:15> col:15 used tree 'void *'
+  `-CompoundStmt 0x7f8edb878538 <line:27:1, line:29:1>
+    `-ReturnStmt 0x7f8edb878520 <line:28:2, col:37>
+      `-CallExpr 0x7f8edb8784b0 <col:9, col:37> 'long'
+        |-ImplicitCastExpr 0x7f8edb878498 <col:9> 'long (*)(void *, long, bla)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f8edb8782b0 <col:9> 'long (void *, long, bla)' Function 0x7f8edb877ac8 'F2' 'long (void *, long, bla)'
+        |-ImplicitCastExpr 0x7f8edb8784f0 <col:12> 'void *' <LValueToRValue>
+        | `-DeclRefExpr 0x7f8edb8782d8 <col:12> 'void *' lvalue ParmVar 0x7f8edb878180 'tree' 'void *'
+        |-CallExpr 0x7f8edb878390 <col:18, col:25> 'long'
+        | |-ImplicitCastExpr 0x7f8edb878378 <col:18> 'long (*)(void *)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7f8edb878300 <col:18> 'long (void *)' Function 0x7f8edb8777c8 'F3' 'long (void *)'
+        | `-ImplicitCastExpr 0x7f8edb8783c0 <col:21> 'void *' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f8edb878328 <col:21> 'void *' lvalue ParmVar 0x7f8edb878180 'tree' 'void *'
+        `-ImplicitCastExpr 0x7f8edb878508 <col:28, col:36> 'bla':'long (*)(int *)' <NullToPointer>
+          `-CStyleCastExpr 0x7f8edb878418 <col:28, col:36> 'void *' <NullToPointer>
+            `-IntegerLiteral 0x7f8edb8783d8 <col:36> 'int' 0

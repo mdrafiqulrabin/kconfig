@@ -1,0 +1,66 @@
+FileAST: 
+  Typedef: db_number, [], ['typedef']
+    TypeDecl: db_number, []
+      Union: None
+        Decl: l, [], [], []
+          TypeDecl: l, []
+            IdentifierType: ['long', 'long']
+        Decl: d, [], [], []
+          TypeDecl: d, []
+            IdentifierType: ['double']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            ArrayDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['double']
+              Constant: int, 3
+        TypeDecl: test, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: th, [], [], []
+        TypeDecl: th, []
+          IdentifierType: ['double']
+        BinaryOp: +
+          ArrayRef: 
+            ID: x
+            Constant: int, 1
+          ArrayRef: 
+            ID: x
+            Constant: int, 2
+      If: 
+        BinaryOp: !=
+          ArrayRef: 
+            ID: x
+            Constant: int, 2
+          BinaryOp: -
+            ID: th
+            ArrayRef: 
+              ID: x
+              Constant: int, 1
+        Compound: 
+          Decl: thdb, [], [], []
+            TypeDecl: thdb, []
+              IdentifierType: ['db_number']
+          Assignment: =
+            StructRef: .
+              ID: thdb
+              ID: d
+            ID: th
+          UnaryOp: p++
+            StructRef: .
+              ID: thdb
+              ID: l
+          Assignment: =
+            ID: th
+            StructRef: .
+              ID: thdb
+              ID: d
+      Return: 
+        BinaryOp: +
+          ArrayRef: 
+            ID: x
+            Constant: int, 0
+          ID: th

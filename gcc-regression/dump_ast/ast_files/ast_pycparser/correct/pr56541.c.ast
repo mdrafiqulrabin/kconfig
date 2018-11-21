@@ -1,0 +1,107 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['float']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['float']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['float']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['float']
+  Decl: z, [], [], []
+    ArrayDecl: []
+      TypeDecl: z, []
+        IdentifierType: ['float']
+      Constant: int, 1024
+  Decl: ok, [], [], []
+    ArrayDecl: []
+      TypeDecl: ok, []
+        IdentifierType: ['int']
+      Constant: int, 1024
+  Decl: rBig, ['const'], [], []
+    TypeDecl: rBig, ['const']
+      IdentifierType: ['float']
+    Constant: float, 150.
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: !=
+          ID: i
+          Constant: int, 1024
+        UnaryOp: ++
+          ID: i
+        Compound: 
+          Decl: rR, [], [], []
+            TypeDecl: rR, []
+              IdentifierType: ['float']
+            BinaryOp: *
+              ID: a
+              ArrayRef: 
+                ID: z
+                ID: i
+          Decl: rL, [], [], []
+            TypeDecl: rL, []
+              IdentifierType: ['float']
+            BinaryOp: *
+              ID: b
+              ArrayRef: 
+                ID: z
+                ID: i
+          Decl: rMin, [], [], []
+            TypeDecl: rMin, []
+              IdentifierType: ['float']
+            TernaryOp: 
+              BinaryOp: <
+                ID: rR
+                ID: rL
+              ID: rR
+              ID: rL
+          Decl: rMax, [], [], []
+            TypeDecl: rMax, []
+              IdentifierType: ['float']
+            TernaryOp: 
+              BinaryOp: <
+                ID: rR
+                ID: rL
+              ID: rL
+              ID: rR
+          Assignment: =
+            ID: rMin
+            TernaryOp: 
+              BinaryOp: >
+                ID: rMax
+                Constant: int, 0
+              ID: rMin
+              ID: rBig
+          Assignment: =
+            ID: rMin
+            TernaryOp: 
+              BinaryOp: >
+                ID: rMin
+                Constant: int, 0
+              ID: rMin
+              ID: rMax
+          Assignment: =
+            ArrayRef: 
+              ID: ok
+              ID: i
+            BinaryOp: <
+              BinaryOp: -
+                ID: rMin
+                ID: c
+              BinaryOp: +
+                ID: rMax
+                ID: d

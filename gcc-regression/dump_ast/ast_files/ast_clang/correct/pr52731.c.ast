@@ -1,0 +1,80 @@
+TranslationUnitDecl 0x7fbbb68264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbbb6826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbbb6826740 '__int128'
+|-TypedefDecl 0x7fbbb6826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbbb6826760 'unsigned __int128'
+|-TypedefDecl 0x7fbbb6826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbbb6826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbbb6826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbbb6826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbbb6826dc0 'char *'
+|   `-BuiltinType 0x7fbbb6826560 'char'
+|-TypedefDecl 0x7fbbb68270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbbb6827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbbb6826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbbb6826e58 '__va_list_tag'
+|-VarDecl 0x7fbbb6827138 <c_files/pr52731.c:4:1, col:7> col:7 used area 'char *'
+|-VarDecl 0x7fbbb6877400 <line:5:1, col:10> col:10 used area_size 'long'
+|-VarDecl 0x7fbbb6877478 <line:6:1, col:7> col:7 used base 'char *'
+`-FunctionDecl 0x7fbbb68775b0 <line:8:1, line:19:1> line:8:6 fun 'void (unsigned long)'
+  |-ParmVarDecl 0x7fbbb68774f0 <col:10, col:28> col:28 used addr 'unsigned long'
+  `-CompoundStmt 0x7fbbb6877e60 <line:9:1, line:19:1>
+    |-DeclStmt 0x7fbbb68778d0 <line:10:3, col:61>
+    | `-VarDecl 0x7fbbb6877668 <col:3, col:60> col:21 used size32 'unsigned long' cinit
+    |   `-BinaryOperator 0x7fbbb68778a8 <col:30, col:60> 'unsigned long' '&'
+    |     |-ParenExpr 0x7fbbb68777c8 <col:30, col:46> 'unsigned long'
+    |     | `-BinaryOperator 0x7fbbb68777a0 <col:31, col:45> 'unsigned long' '-'
+    |     |   |-BinaryOperator 0x7fbbb6877740 <col:31, col:38> 'unsigned long' '+'
+    |     |   | |-ImplicitCastExpr 0x7fbbb6877710 <col:31> 'unsigned long' <LValueToRValue>
+    |     |   | | `-DeclRefExpr 0x7fbbb68776c8 <col:31> 'unsigned long' lvalue ParmVar 0x7fbbb68774f0 'addr' 'unsigned long'
+    |     |   | `-ImplicitCastExpr 0x7fbbb6877728 <col:38> 'unsigned long' <IntegralCast>
+    |     |   |   `-IntegerLiteral 0x7fbbb68776f0 <col:38> 'int' 4096
+    |     |   `-ImplicitCastExpr 0x7fbbb6877788 <col:45> 'unsigned long' <IntegralCast>
+    |     |     `-IntegerLiteral 0x7fbbb6877768 <col:45> 'int' 1
+    |     `-ImplicitCastExpr 0x7fbbb6877890 <col:50, col:60> 'unsigned long' <IntegralCast>
+    |       `-UnaryOperator 0x7fbbb6877870 <col:50, col:60> 'int' prefix '~'
+    |         `-ParenExpr 0x7fbbb6877850 <col:51, col:60> 'int'
+    |           `-BinaryOperator 0x7fbbb6877828 <col:52, col:59> 'int' '-'
+    |             |-IntegerLiteral 0x7fbbb68777e8 <col:52> 'int' 4096
+    |             `-IntegerLiteral 0x7fbbb6877808 <col:59> 'int' 1
+    |-DeclStmt 0x7fbbb6877a00 <line:11:3, col:57>
+    | `-VarDecl 0x7fbbb6877900 <col:3, col:56> col:21 used size 'unsigned long' cinit
+    |   `-BinaryOperator 0x7fbbb68779d8 <col:28, col:56> 'unsigned long' '*'
+    |     |-ImplicitCastExpr 0x7fbbb68779c0 <col:28> 'unsigned long' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fbbb6877960 <col:28> 'unsigned long' lvalue Var 0x7fbbb6877668 'size32' 'unsigned long'
+    |     `-UnaryExprOrTypeTraitExpr 0x7fbbb68779a0 <col:37, col:56> 'unsigned long' sizeof 'unsigned int'
+    |-IfStmt 0x7fbbb6877c88 <line:13:3, line:15:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbbb6877a90 <line:13:7, col:14> 'int' '>'
+    | | |-ImplicitCastExpr 0x7fbbb6877a60 <col:7> 'unsigned long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fbbb6877a18 <col:7> 'unsigned long' lvalue Var 0x7fbbb6877900 'size' 'unsigned long'
+    | | `-ImplicitCastExpr 0x7fbbb6877a78 <col:14> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fbbb6877a40 <col:14> 'int' 0
+    | |-CompoundStmt 0x7fbbb6877c68 <col:17, line:15:3>
+    | | `-BinaryOperator 0x7fbbb6877c40 <line:14:5, col:28> 'unsigned long' '='
+    | |   |-DeclRefExpr 0x7fbbb6877ab8 <col:5> 'unsigned long' lvalue Var 0x7fbbb6877900 'size' 'unsigned long'
+    | |   `-BinaryOperator 0x7fbbb6877c18 <col:12, col:28> 'unsigned long' '&'
+    | |     |-ParenExpr 0x7fbbb6877b80 <col:12, col:21> 'unsigned long'
+    | |     | `-BinaryOperator 0x7fbbb6877b58 <col:13, col:20> 'unsigned long' '+'
+    | |     |   |-ImplicitCastExpr 0x7fbbb6877b28 <col:13> 'unsigned long' <LValueToRValue>
+    | |     |   | `-DeclRefExpr 0x7fbbb6877ae0 <col:13> 'unsigned long' lvalue Var 0x7fbbb6877900 'size' 'unsigned long'
+    | |     |   `-ImplicitCastExpr 0x7fbbb6877b40 <col:20> 'unsigned long' <IntegralCast>
+    | |     |     `-IntegerLiteral 0x7fbbb6877b08 <col:20> 'int' 1
+    | |     `-ImplicitCastExpr 0x7fbbb6877c00 <col:25, col:28> 'unsigned long' <IntegralCast>
+    | |       `-UnaryOperator 0x7fbbb6877be0 <col:25, col:28> 'int' prefix '~'
+    | |         `-ParenExpr 0x7fbbb6877bc0 <col:26, col:28> 'int'
+    | |           `-IntegerLiteral 0x7fbbb6877ba0 <col:27> 'int' 1
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fbbb6877d40 <line:17:3, col:15> 'long' '='
+    | |-DeclRefExpr 0x7fbbb6877cc0 <col:3> 'long' lvalue Var 0x7fbbb6877400 'area_size' 'long'
+    | `-ImplicitCastExpr 0x7fbbb6877d28 <col:15> 'long' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7fbbb6877d10 <col:15> 'unsigned long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fbbb6877ce8 <col:15> 'unsigned long' lvalue Var 0x7fbbb6877900 'size' 'unsigned long'
+    `-BinaryOperator 0x7fbbb6877e38 <line:18:3, col:17> 'char *' '='
+      |-DeclRefExpr 0x7fbbb6877d68 <col:3> 'char *' lvalue Var 0x7fbbb6827138 'area' 'char *'
+      `-BinaryOperator 0x7fbbb6877e10 <col:10, col:17> 'char *' '+'
+        |-ImplicitCastExpr 0x7fbbb6877de0 <col:10> 'char *' <LValueToRValue>
+        | `-DeclRefExpr 0x7fbbb6877d90 <col:10> 'char *' lvalue Var 0x7fbbb6877478 'base' 'char *'
+        `-ImplicitCastExpr 0x7fbbb6877df8 <col:17> 'unsigned long' <LValueToRValue>
+          `-DeclRefExpr 0x7fbbb6877db8 <col:17> 'unsigned long' lvalue Var 0x7fbbb6877900 'size' 'unsigned long'

@@ -1,0 +1,129 @@
+FileAST: 
+  Typedef: uint32_t, [], ['typedef']
+    TypeDecl: uint32_t, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: Elf32_Word, [], ['typedef']
+    TypeDecl: Elf32_Word, []
+      IdentifierType: ['uint32_t']
+  Typedef: Elf32_Addr, [], ['typedef']
+    TypeDecl: Elf32_Addr, []
+      IdentifierType: ['uint32_t']
+  Typedef: Elf32_Sym, [], ['typedef']
+    TypeDecl: Elf32_Sym, []
+      Struct: None
+        Decl: st_name, [], [], []
+          TypeDecl: st_name, []
+            IdentifierType: ['Elf32_Word']
+        Decl: st_value, [], [], []
+          TypeDecl: st_value, []
+            IdentifierType: ['Elf32_Addr']
+        Decl: st_size, [], [], []
+          TypeDecl: st_size, []
+            IdentifierType: ['Elf32_Word']
+        Decl: st_other, [], [], []
+          TypeDecl: st_other, []
+            IdentifierType: ['unsigned', 'char']
+  Typedef: Elf32_Rela, [], ['typedef']
+    TypeDecl: Elf32_Rela, []
+      Struct: None
+        Decl: r_info, [], [], []
+          TypeDecl: r_info, []
+            IdentifierType: ['Elf32_Word']
+  Typedef: Elf32_Dyn, [], ['typedef']
+    TypeDecl: Elf32_Dyn, []
+      Struct: None
+        Decl: d_un, [], [], []
+          TypeDecl: d_un, []
+            Union: None
+              Decl: d_ptr, [], [], []
+                TypeDecl: d_ptr, []
+                  IdentifierType: ['Elf32_Addr']
+  Decl: None, [], [], []
+    Struct: link_map
+      Decl: l_info, [], [], []
+        ArrayDecl: []
+          PtrDecl: []
+            TypeDecl: l_info, []
+              IdentifierType: ['Elf32_Dyn']
+          Constant: int, 34
+  Decl: symbind32, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['Elf32_Sym']
+      TypeDecl: symbind32, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: _dl_profile_fixup, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: l, [], [], []
+            PtrDecl: []
+              TypeDecl: l, []
+                Struct: link_map
+          Decl: reloc_arg, [], [], []
+            TypeDecl: reloc_arg, []
+              IdentifierType: ['Elf32_Word']
+        TypeDecl: _dl_profile_fixup, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: symtab, ['const'], [], []
+        PtrDecl: ['const']
+          TypeDecl: symtab, ['const']
+            IdentifierType: ['Elf32_Sym']
+        Cast: 
+          Typename: None, ['const']
+            PtrDecl: []
+              TypeDecl: None, ['const']
+                IdentifierType: ['void']
+          StructRef: .
+            StructRef: ->
+              ArrayRef: 
+                StructRef: ->
+                  ID: l
+                  ID: l_info
+                Constant: int, 6
+              ID: d_un
+            ID: d_ptr
+      Decl: reloc, ['const'], [], []
+        PtrDecl: ['const']
+          TypeDecl: reloc, ['const']
+            IdentifierType: ['Elf32_Rela']
+        Cast: 
+          Typename: None, ['const']
+            PtrDecl: []
+              TypeDecl: None, ['const']
+                IdentifierType: ['void']
+          BinaryOp: +
+            StructRef: .
+              StructRef: ->
+                ArrayRef: 
+                  StructRef: ->
+                    ID: l
+                    ID: l_info
+                  Constant: int, 23
+                ID: d_un
+              ID: d_ptr
+            BinaryOp: *
+              ID: reloc_arg
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['Elf32_Rela']
+      Decl: sym, [], [], []
+        TypeDecl: sym, []
+          IdentifierType: ['Elf32_Sym']
+        ArrayRef: 
+          ID: symtab
+          BinaryOp: >>
+            StructRef: ->
+              ID: reloc
+              ID: r_info
+            Constant: int, 8
+      FuncCall: 
+        ID: symbind32
+        ExprList: 
+          UnaryOp: &
+            ID: sym

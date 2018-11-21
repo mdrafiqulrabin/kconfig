@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fe7d80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe7d8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe7d8026740 '__int128'
+|-TypedefDecl 0x7fe7d8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe7d8026760 'unsigned __int128'
+|-TypedefDecl 0x7fe7d8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe7d8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe7d8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe7d8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe7d8026dc0 'char *'
+|   `-BuiltinType 0x7fe7d8026560 'char'
+|-TypedefDecl 0x7fe7d80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe7d8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe7d8026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe7d8026e58 '__va_list_tag'
+|-FunctionDecl 0x7fe7d8825a30 <c_files/pr24851.c:7:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe7d8825ac8 prev 0x7fe7d8825a30 <col:1, col:16> col:6 used abort 'void (void) __attribute__((noreturn))'
+`-FunctionDecl 0x7fe7d8825bb0 <line:8:1, line:16:1> line:8:5 main 'int ()'
+  `-CompoundStmt 0x7fe7d88262e8 <line:9:1, line:16:1>
+    |-DeclStmt 0x7fe7d8825ea8 <line:10:3, col:20>
+    | |-VarDecl 0x7fe7d8825d10 <col:3, col:11> col:7 used a 'int [10]'
+    | |-VarDecl 0x7fe7d8825db0 <col:3, col:15> col:15 used p 'int *'
+    | `-VarDecl 0x7fe7d8825e28 <col:3, col:19> col:19 used q 'int *'
+    |-BinaryOperator 0x7fe7d8825f90 <line:11:3, col:11> 'int *' '='
+    | |-DeclRefExpr 0x7fe7d8825ec0 <col:3> 'int *' lvalue Var 0x7fe7d8825e28 'q' 'int *'
+    | `-UnaryOperator 0x7fe7d8825f70 <col:7, col:11> 'int *' prefix '&'
+    |   `-ArraySubscriptExpr 0x7fe7d8825f48 <col:8, col:11> 'int' lvalue
+    |     |-ImplicitCastExpr 0x7fe7d8825f30 <col:8> 'int *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7fe7d8825ee8 <col:8> 'int [10]' lvalue Var 0x7fe7d8825d10 'a' 'int [10]'
+    |     `-IntegerLiteral 0x7fe7d8825f10 <col:10> 'int' 1
+    |-BinaryOperator 0x7fe7d88260a8 <line:12:3, col:12> 'int *' '='
+    | |-DeclRefExpr 0x7fe7d8825fb8 <col:3> 'int *' lvalue Var 0x7fe7d8825db0 'p' 'int *'
+    | `-UnaryOperator 0x7fe7d8826088 <col:7, col:12> 'int *' prefix '&'
+    |   `-ArraySubscriptExpr 0x7fe7d8826060 <col:8, col:12> 'int' lvalue
+    |     |-ImplicitCastExpr 0x7fe7d8826048 <col:8> 'int *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fe7d8825fe0 <col:8> 'int *' lvalue Var 0x7fe7d8825e28 'q' 'int *'
+    |     `-UnaryOperator 0x7fe7d8826028 <col:10, col:11> 'int' prefix '-'
+    |       `-IntegerLiteral 0x7fe7d8826008 <col:11> 'int' 1
+    |-IfStmt 0x7fe7d8826278 <line:13:3, line:14:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe7d88261b8 <line:13:7, col:16> 'int' '>='
+    | | |-ImplicitCastExpr 0x7fe7d88261a0 <col:7> 'int *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fe7d88260d0 <col:7> 'int *' lvalue Var 0x7fe7d8825db0 'p' 'int *'
+    | | `-UnaryOperator 0x7fe7d8826180 <col:12, col:16> 'int *' prefix '&'
+    | |   `-ArraySubscriptExpr 0x7fe7d8826158 <col:13, col:16> 'int' lvalue
+    | |     |-ImplicitCastExpr 0x7fe7d8826140 <col:13> 'int *' <ArrayToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fe7d88260f8 <col:13> 'int [10]' lvalue Var 0x7fe7d8825d10 'a' 'int [10]'
+    | |     `-IntegerLiteral 0x7fe7d8826120 <col:15> 'int' 9
+    | |-CallExpr 0x7fe7d8826250 <line:14:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fe7d8826238 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe7d88261e0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fe7d8825ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe7d88262d0 <line:15:3, col:10>
+      `-IntegerLiteral 0x7fe7d88262b0 <col:10> 'int' 0

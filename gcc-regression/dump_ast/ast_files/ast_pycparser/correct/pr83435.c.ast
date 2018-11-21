@@ -1,0 +1,59 @@
+FileAST: 
+  Decl: yj, [], [], []
+    TypeDecl: yj, []
+      IdentifierType: ['int']
+  Decl: ax, [], [], []
+    TypeDecl: ax, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: gf, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: mp, [], [], []
+            TypeDecl: mp, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: gf, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: dh, [], [], []
+        PtrDecl: []
+          TypeDecl: dh, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: yj
+      For: 
+        Compound: 
+          Decl: sb, [], [], []
+            TypeDecl: sb, []
+              IdentifierType: ['signed', 'char']
+          For: 
+            Assignment: =
+              ID: sb
+              Constant: int, 0
+            BinaryOp: <
+              ID: sb
+              Constant: int, 1
+            Assignment: -=
+              ID: sb
+              Constant: int, 8
+            Compound: 
+          Assignment: &=
+            ID: mp
+            BinaryOp: <=
+              ID: mp
+              ID: sb
+          If: 
+            BinaryOp: ==
+              ID: mp
+              Constant: int, 0
+            Assignment: =
+              ID: dh
+              UnaryOp: &
+                ID: ax
+          Assignment: =
+            ID: mp
+            Constant: int, 0
+          Assignment: =
+            UnaryOp: *
+              ID: dh
+            Constant: int, 0

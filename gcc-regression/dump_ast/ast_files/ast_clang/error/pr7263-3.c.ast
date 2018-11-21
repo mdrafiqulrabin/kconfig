@@ -1,0 +1,25 @@
+c_files/pr7263-3.c:4:10: fatal error: 'pr7263-3.h' file not found
+#include "pr7263-3.h"
+         ^~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fc9740264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc974026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc974026740 '__int128'
+|-TypedefDecl 0x7fc974026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc974026760 'unsigned __int128'
+|-TypedefDecl 0x7fc974026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc974026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc974026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc974026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc974026dc0 'char *'
+|   `-BuiltinType 0x7fc974026560 'char'
+|-TypedefDecl 0x7fc9740270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc974027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc974026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc974026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc974027168 <c_files/pr7263-3.c:5:1, line:8:1> line:5:14 bar '_Complex double ()'
+| `-CompoundStmt 0x7fc974826a40 <line:6:1, line:8:1>
+|-FunctionDecl 0x7fc974826a78 <line:10:15, line:14:1> line:11:1 bar2 '_Complex double ()'
+| `-CompoundStmt 0x7fc974826b10 <line:12:1, line:14:1>
+`-FunctionDecl 0x7fc974826b48 <line:16:1, line:19:1> line:16:13 bar3 '_Complex double ()'
+  `-CompoundStmt 0x7fc974826be0 <line:17:1, line:19:1>

@@ -1,0 +1,7 @@
+FileAST: 
+  Decl: foo, [], [], []
+    TypeDecl: foo, []
+      IdentifierType: ['int']
+  Decl: static_foo, [], ['static'], []
+    TypeDecl: static_foo, []
+      IdentifierType: ['int']

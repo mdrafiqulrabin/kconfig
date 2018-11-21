@@ -1,0 +1,85 @@
+c_files/pr79731.c:17:36: warning: if statement has empty body [-Wempty-body]
+  if (x[0] || x[1] || x[2] || x[3]);
+                                   ^
+c_files/pr79731.c:17:36: note: put the semicolon on a separate line to silence this warning
+1 warning generated.
+TranslationUnitDecl 0x7fa6fc8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa6fc826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa6fc826740 '__int128'
+|-TypedefDecl 0x7fa6fc826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa6fc826760 'unsigned __int128'
+|-TypedefDecl 0x7fa6fc826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa6fc826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa6fc826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa6fc826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa6fc826dc0 'char *'
+|   `-BuiltinType 0x7fa6fc826560 'char'
+|-TypedefDecl 0x7fa6fc8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa6fc827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa6fc826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa6fc826e58 '__va_list_tag'
+|-TypedefDecl 0x7fa6fc827178 <c_files/pr79731.c:4:1, col:18> col:18 referenced V '__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7fa6fc827140 '__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' 2
+|   `-BuiltinType 0x7fa6fc826660 'unsigned int'
+|-FunctionDecl 0x7fa6fd026ba0 <line:5:1, line:13:1> line:6:1 used foo 'V (unsigned int, V)'
+| |-ParmVarDecl 0x7fa6fd026a18 <col:6, col:15> col:15 used x 'unsigned int'
+| |-ParmVarDecl 0x7fa6fd026a88 <col:18, col:20> col:20 used v 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+| `-CompoundStmt 0x7fa6fd026ef0 <line:7:1, line:13:1>
+|   |-DoStmt 0x7fa6fd026e78 <line:8:3, line:11:16>
+|   | |-CompoundStmt 0x7fa6fd026dc8 <line:8:6, line:11:3>
+|   | | |-CompoundAssignOperator 0x7fa6fd026d08 <line:9:7, col:12> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' '%=' ComputeLHSTy='V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' ComputeResultTy='V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+|   | | | |-DeclRefExpr 0x7fa6fd026c88 <col:7> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7fa6fd026a88 'v' 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+|   | | | `-ImplicitCastExpr 0x7fa6fd026cf0 <col:12> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' <VectorSplat>
+|   | | |   `-ImplicitCastExpr 0x7fa6fd026cd8 <col:12> 'unsigned int' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fa6fd026cb0 <col:12> 'unsigned int' lvalue ParmVar 0x7fa6fd026a18 'x' 'unsigned int'
+|   | | `-BinaryOperator 0x7fa6fd026da0 <line:10:7, col:11> 'unsigned int' '='
+|   | |   |-DeclRefExpr 0x7fa6fd026d40 <col:7> 'unsigned int' lvalue ParmVar 0x7fa6fd026a18 'x' 'unsigned int'
+|   | |   `-ImplicitCastExpr 0x7fa6fd026d88 <col:11> 'unsigned int' <IntegralCast>
+|   | |     `-IntegerLiteral 0x7fa6fd026d68 <col:11> 'int' 1
+|   | `-ImplicitCastExpr 0x7fa6fd026e60 <line:11:12, col:15> 'unsigned int' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7fa6fd026e38 <col:12, col:15> 'unsigned int' lvalue vectorcomponent
+|   |     |-DeclRefExpr 0x7fa6fd026df0 <col:12> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7fa6fd026a88 'v' 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+|   |     `-IntegerLiteral 0x7fa6fd026e18 <col:14> 'int' 1
+|   `-ReturnStmt 0x7fa6fd026ed8 <line:12:3, col:10>
+|     `-ImplicitCastExpr 0x7fa6fd026ec0 <col:10> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa6fd026e98 <col:10> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7fa6fd026a88 'v' 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+`-FunctionDecl 0x7fa6fd026f68 <line:14:1, line:18:1> line:14:6 fn2 'void ()'
+  `-CompoundStmt 0x7fa6fd0275d0 <line:15:1, line:18:1>
+    |-DeclStmt 0x7fa6fd0272d8 <line:16:3, col:30>
+    | `-VarDecl 0x7fa6fd027010 <col:3, col:29> col:5 used x 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' cinit
+    |   `-CallExpr 0x7fa6fd027270 <col:9, col:29> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+    |     |-ImplicitCastExpr 0x7fa6fd027258 <col:9> 'V (*)(unsigned int, V)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fa6fd027070 <col:9> 'V (unsigned int, V)' Function 0x7fa6fd026ba0 'foo' 'V (unsigned int, V)'
+    |     |-ImplicitCastExpr 0x7fa6fd0272a8 <col:14> 'unsigned int' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fa6fd027098 <col:14> 'int' 5
+    |     `-ImplicitCastExpr 0x7fa6fd0272c0 <col:17, col:28> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+    |       `-CompoundLiteralExpr 0x7fa6fd0271d8 <col:17, col:28> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue
+    |         `-InitListExpr 0x7fa6fd027158 <col:21, col:28> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+    |           |-ImplicitCastExpr 0x7fa6fd0271a8 <col:23> 'unsigned int' <IntegralCast>
+    |           | `-IntegerLiteral 0x7fa6fd0270c8 <col:23> 'int' 0
+    |           `-ImplicitCastExpr 0x7fa6fd0271c0 <col:26> 'unsigned int' <IntegralCast>
+    |             `-IntegerLiteral 0x7fa6fd0270e8 <col:26> 'int' 1
+    `-IfStmt 0x7fa6fd027598 <line:17:3, col:36>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa6fd027560 <col:7, col:34> 'int' '||'
+      | |-BinaryOperator 0x7fa6fd0274b0 <col:7, col:26> 'int' '||'
+      | | |-BinaryOperator 0x7fa6fd027400 <col:7, col:18> 'int' '||'
+      | | | |-ImplicitCastExpr 0x7fa6fd0273d0 <col:7, col:10> 'unsigned int' <LValueToRValue>
+      | | | | `-ArraySubscriptExpr 0x7fa6fd027338 <col:7, col:10> 'unsigned int' lvalue vectorcomponent
+      | | | |   |-DeclRefExpr 0x7fa6fd0272f0 <col:7> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fa6fd027010 'x' 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+      | | | |   `-IntegerLiteral 0x7fa6fd027318 <col:9> 'int' 0
+      | | | `-ImplicitCastExpr 0x7fa6fd0273e8 <col:15, col:18> 'unsigned int' <LValueToRValue>
+      | | |   `-ArraySubscriptExpr 0x7fa6fd0273a8 <col:15, col:18> 'unsigned int' lvalue vectorcomponent
+      | | |     |-DeclRefExpr 0x7fa6fd027360 <col:15> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fa6fd027010 'x' 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+      | | |     `-IntegerLiteral 0x7fa6fd027388 <col:17> 'int' 1
+      | | `-ImplicitCastExpr 0x7fa6fd027498 <col:23, col:26> 'unsigned int' <LValueToRValue>
+      | |   `-ArraySubscriptExpr 0x7fa6fd027470 <col:23, col:26> 'unsigned int' lvalue vectorcomponent
+      | |     |-DeclRefExpr 0x7fa6fd027428 <col:23> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fa6fd027010 'x' 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+      | |     `-IntegerLiteral 0x7fa6fd027450 <col:25> 'int' 2
+      | `-ImplicitCastExpr 0x7fa6fd027548 <col:31, col:34> 'unsigned int' <LValueToRValue>
+      |   `-ArraySubscriptExpr 0x7fa6fd027520 <col:31, col:34> 'unsigned int' lvalue vectorcomponent
+      |     |-DeclRefExpr 0x7fa6fd0274d8 <col:31> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fa6fd027010 'x' 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned int)))) unsigned int'
+      |     `-IntegerLiteral 0x7fa6fd027500 <col:33> 'int' 3
+      |-NullStmt 0x7fa6fd027588 <col:36>
+      `-<<<NULL>>>

@@ -1,0 +1,86 @@
+FileAST: 
+  Decl: tab, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: tab, []
+          IdentifierType: ['int']
+        Constant: int, 2
+      Constant: int, 2
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 2
+        UnaryOp: ++
+          ID: i
+        For: 
+          Assignment: =
+            ID: j
+            Constant: int, 0
+          BinaryOp: <
+            ID: j
+            Constant: int, 2
+          UnaryOp: ++
+            ID: j
+          For: 
+            Assignment: =
+              ID: k
+              Constant: int, 0
+            BinaryOp: <
+              ID: k
+              Constant: int, 2
+            UnaryOp: ++
+              ID: k
+            Compound: 
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 2
+        UnaryOp: ++
+          ID: i
+        For: 
+          Assignment: =
+            ID: j
+            Constant: int, 0
+          BinaryOp: <
+            ID: j
+            Constant: int, 2
+          UnaryOp: ++
+            ID: j
+          If: 
+            BinaryOp: ==
+              ID: i
+              Constant: int, 0
+            Assignment: =
+              ArrayRef: 
+                ArrayRef: 
+                  ID: tab
+                  ID: i
+                ID: j
+              Constant: int, 0
+      Return: 
+        ArrayRef: 
+          ArrayRef: 
+            ID: tab
+            Constant: int, 0
+          Constant: int, 1

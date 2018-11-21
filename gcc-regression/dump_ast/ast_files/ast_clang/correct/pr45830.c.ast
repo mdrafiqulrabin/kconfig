@@ -1,0 +1,70 @@
+TranslationUnitDecl 0x7fe8890264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe889026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe889026740 '__int128'
+|-TypedefDecl 0x7fe889026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe889026760 'unsigned __int128'
+|-TypedefDecl 0x7fe889026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe889026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe889026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe889026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe889026dc0 'char *'
+|   `-BuiltinType 0x7fe889026560 'char'
+|-TypedefDecl 0x7fe8890270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe889027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe889026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe889026e58 '__va_list_tag'
+`-FunctionDecl 0x7fe889077430 <c_files/pr45830.c:5:1, line:27:1> line:6:1 foo 'int (int *)'
+  |-ParmVarDecl 0x7fe889027160 <col:6, col:11> col:11 used a 'int *'
+  `-CompoundStmt 0x7fe889077ae8 <line:7:1, line:27:1>
+    `-SwitchStmt 0x7fe889077588 <line:8:3, line:26:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fe889077570 <line:8:11, col:12> 'int' <LValueToRValue>
+      | `-UnaryOperator 0x7fe889077550 <col:11, col:12> 'int' lvalue prefix '*'
+      |   `-ImplicitCastExpr 0x7fe889077538 <col:12> 'int *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fe889077510 <col:12> 'int *' lvalue ParmVar 0x7fe889027160 'a' 'int *'
+      `-CompoundStmt 0x7fe889077ac0 <line:9:5, line:26:5>
+        |-CaseStmt 0x7fe8890775d8 <line:10:5, line:23:14>
+        | |-IntegerLiteral 0x7fe8890775b8 <line:10:10> 'int' 0
+        | |-<<<NULL>>>
+        | `-CaseStmt 0x7fe889077630 <line:11:5, line:23:14>
+        |   |-IntegerLiteral 0x7fe889077610 <line:11:10> 'int' 3
+        |   |-<<<NULL>>>
+        |   `-CaseStmt 0x7fe889077688 <line:12:5, line:23:14>
+        |     |-IntegerLiteral 0x7fe889077668 <line:12:10> 'int' 1
+        |     |-<<<NULL>>>
+        |     `-CaseStmt 0x7fe8890776e0 <line:13:5, line:23:14>
+        |       |-IntegerLiteral 0x7fe8890776c0 <line:13:10> 'int' 2
+        |       |-<<<NULL>>>
+        |       `-CaseStmt 0x7fe889077738 <line:14:5, line:23:14>
+        |         |-IntegerLiteral 0x7fe889077718 <line:14:10> 'int' 4
+        |         |-<<<NULL>>>
+        |         `-CaseStmt 0x7fe889077790 <line:15:5, line:23:14>
+        |           |-IntegerLiteral 0x7fe889077770 <line:15:10> 'int' 23
+        |           |-<<<NULL>>>
+        |           `-CaseStmt 0x7fe8890777e8 <line:16:5, line:23:14>
+        |             |-IntegerLiteral 0x7fe8890777c8 <line:16:10> 'int' 26
+        |             |-<<<NULL>>>
+        |             `-CaseStmt 0x7fe889077840 <line:17:5, line:23:14>
+        |               |-IntegerLiteral 0x7fe889077820 <line:17:10> 'int' 19
+        |               |-<<<NULL>>>
+        |               `-CaseStmt 0x7fe889077898 <line:18:5, line:23:14>
+        |                 |-IntegerLiteral 0x7fe889077878 <line:18:10> 'int' 5
+        |                 |-<<<NULL>>>
+        |                 `-CaseStmt 0x7fe8890778f0 <line:19:5, line:23:14>
+        |                   |-IntegerLiteral 0x7fe8890778d0 <line:19:10> 'int' 21
+        |                   |-<<<NULL>>>
+        |                   `-CaseStmt 0x7fe889077948 <line:20:5, line:23:14>
+        |                     |-IntegerLiteral 0x7fe889077928 <line:20:10> 'int' 20
+        |                     |-<<<NULL>>>
+        |                     `-CaseStmt 0x7fe8890779a0 <line:21:5, line:23:14>
+        |                       |-IntegerLiteral 0x7fe889077980 <line:21:10> 'int' 22
+        |                       |-<<<NULL>>>
+        |                       `-CaseStmt 0x7fe8890779f8 <line:22:5, line:23:14>
+        |                         |-IntegerLiteral 0x7fe8890779d8 <line:22:10> 'int' 27
+        |                         |-<<<NULL>>>
+        |                         `-ReturnStmt 0x7fe889077a50 <line:23:7, col:14>
+        |                           `-IntegerLiteral 0x7fe889077a30 <col:14> 'int' 1
+        `-DefaultStmt 0x7fe889077aa0 <line:24:5, line:25:14>
+          `-ReturnStmt 0x7fe889077a88 <col:7, col:14>
+            `-IntegerLiteral 0x7fe889077a68 <col:14> 'int' 0

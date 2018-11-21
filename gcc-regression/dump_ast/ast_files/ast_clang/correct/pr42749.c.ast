@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f7f1d8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f7f1d826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f7f1d826740 '__int128'
+|-TypedefDecl 0x7f7f1d826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f7f1d826760 'unsigned __int128'
+|-TypedefDecl 0x7f7f1d826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f7f1d826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f7f1d826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f7f1d826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f7f1d826dc0 'char *'
+|   `-BuiltinType 0x7f7f1d826560 'char'
+|-TypedefDecl 0x7f7f1d8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f7f1d827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f7f1d826ee0 'struct __va_list_tag'
+|     `-Record 0x7f7f1d826e58 '__va_list_tag'
+|-RecordDecl 0x7f7f1d827120 <c_files/pr42749.c:1:1, col:30> col:8 struct pdf_object definition
+| `-FieldDecl 0x7f7f1e025a00 <col:21, col:25> col:25 val 'int'
+`-FunctionDecl 0x7f7f1e025c08 <line:2:1, line:5:1> line:2:5 referenced pdf_count_size_object 'int (struct pdf_object *)'
+  |-ParmVarDecl 0x7f7f1e025b00 <col:28, col:48> col:48 used p_obj 'struct pdf_object *'
+  `-CompoundStmt 0x7f7f1e025f50 <line:3:1, line:5:1>
+    `-ReturnStmt 0x7f7f1e025f38 <line:4:5, col:71>
+      `-ImplicitCastExpr 0x7f7f1e025ed8 <col:12, col:71> 'int' <IntegralCast>
+        `-BinaryOperator 0x7f7f1e025eb0 <col:12, col:71> 'unsigned long' '+'
+          |-ImplicitCastExpr 0x7f7f1e025e98 <col:12, col:39> 'unsigned long' <IntegralCast>
+          | `-CallExpr 0x7f7f1e025db0 <col:12, col:39> 'int'
+          |   |-ImplicitCastExpr 0x7f7f1e025d98 <col:12> 'int (*)(struct pdf_object *)' <FunctionToPointerDecay>
+          |   | `-DeclRefExpr 0x7f7f1e025ce8 <col:12> 'int (struct pdf_object *)' Function 0x7f7f1e025c08 'pdf_count_size_object' 'int (struct pdf_object *)'
+          |   `-ImplicitCastExpr 0x7f7f1e025de0 <col:34> 'struct pdf_object *' <LValueToRValue>
+          |     `-DeclRefExpr 0x7f7f1e025d10 <col:34> 'struct pdf_object *' lvalue ParmVar 0x7f7f1e025b00 'p_obj' 'struct pdf_object *'
+          `-BinaryOperator 0x7f7f1e025e70 <col:43, col:71> 'unsigned long' '*'
+            |-ImplicitCastExpr 0x7f7f1e025e58 <col:43> 'unsigned long' <IntegralCast>
+            | `-IntegerLiteral 0x7f7f1e025df8 <col:43> 'int' 2
+            `-UnaryExprOrTypeTraitExpr 0x7f7f1e025e38 <col:47, col:71> 'unsigned long' sizeof 'struct pdf_object':'struct pdf_object'

@@ -1,0 +1,265 @@
+FileAST: 
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: m, [], [], []
+            TypeDecl: m, []
+              IdentifierType: ['int']
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: tem1, [], [], []
+        TypeDecl: tem1, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          ID: a
+          UnaryOp: ~
+            ID: m
+      Decl: tem2, [], [], []
+        TypeDecl: tem2, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          ID: b
+          ID: m
+      Return: 
+        BinaryOp: |
+          ID: tem1
+          ID: tem2
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: m, [], [], []
+            TypeDecl: m, []
+              IdentifierType: ['int']
+        TypeDecl: fn2, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: tem1, [], [], []
+        TypeDecl: tem1, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          ID: a
+          UnaryOp: ~
+            ID: m
+      Decl: tem2, [], [], []
+        TypeDecl: tem2, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          ID: m
+          ID: b
+      Return: 
+        BinaryOp: |
+          ID: tem1
+          ID: tem2
+  FuncDef: 
+    Decl: fn3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: m, [], [], []
+            TypeDecl: m, []
+              IdentifierType: ['int']
+        TypeDecl: fn3, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: tem1, [], [], []
+        TypeDecl: tem1, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          UnaryOp: ~
+            ID: m
+          ID: a
+      Decl: tem2, [], [], []
+        TypeDecl: tem2, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          ID: m
+          ID: b
+      Return: 
+        BinaryOp: |
+          ID: tem1
+          ID: tem2
+  FuncDef: 
+    Decl: fn4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: m, [], [], []
+            TypeDecl: m, []
+              IdentifierType: ['int']
+        TypeDecl: fn4, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: tem1, [], [], []
+        TypeDecl: tem1, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          UnaryOp: ~
+            ID: m
+          ID: a
+      Decl: tem2, [], [], []
+        TypeDecl: tem2, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          ID: b
+          ID: m
+      Return: 
+        BinaryOp: |
+          ID: tem1
+          ID: tem2
+  FuncDef: 
+    Decl: fn5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: m, [], [], []
+            TypeDecl: m, []
+              IdentifierType: ['int']
+        TypeDecl: fn5, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: tem1, [], [], []
+        TypeDecl: tem1, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          ID: b
+          ID: m
+      Decl: tem2, [], [], []
+        TypeDecl: tem2, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          ID: a
+          UnaryOp: ~
+            ID: m
+      Return: 
+        BinaryOp: |
+          ID: tem1
+          ID: tem2
+  FuncDef: 
+    Decl: fn6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: m, [], [], []
+            TypeDecl: m, []
+              IdentifierType: ['int']
+        TypeDecl: fn6, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: tem1, [], [], []
+        TypeDecl: tem1, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          ID: m
+          ID: b
+      Decl: tem2, [], [], []
+        TypeDecl: tem2, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          ID: a
+          UnaryOp: ~
+            ID: m
+      Return: 
+        BinaryOp: |
+          ID: tem1
+          ID: tem2
+  FuncDef: 
+    Decl: fn7, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: m, [], [], []
+            TypeDecl: m, []
+              IdentifierType: ['int']
+        TypeDecl: fn7, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: tem1, [], [], []
+        TypeDecl: tem1, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          ID: m
+          ID: b
+      Decl: tem2, [], [], []
+        TypeDecl: tem2, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          UnaryOp: ~
+            ID: m
+          ID: a
+      Return: 
+        BinaryOp: |
+          ID: tem1
+          ID: tem2
+  FuncDef: 
+    Decl: fn8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: m, [], [], []
+            TypeDecl: m, []
+              IdentifierType: ['int']
+        TypeDecl: fn8, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: tem1, [], [], []
+        TypeDecl: tem1, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          ID: b
+          ID: m
+      Decl: tem2, [], [], []
+        TypeDecl: tem2, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          UnaryOp: ~
+            ID: m
+          ID: a
+      Return: 
+        BinaryOp: |
+          ID: tem1
+          ID: tem2

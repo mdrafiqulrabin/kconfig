@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fa7f20264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa7f2026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa7f2026740 '__int128'
+|-TypedefDecl 0x7fa7f2026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa7f2026760 'unsigned __int128'
+|-TypedefDecl 0x7fa7f2026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa7f2026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa7f2026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa7f2026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa7f2026dc0 'char *'
+|   `-BuiltinType 0x7fa7f2026560 'char'
+|-TypedefDecl 0x7fa7f20270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa7f2027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa7f2026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa7f2026e58 '__va_list_tag'
+|-FunctionDecl 0x7fa7f2825a28 <c_files/pr40657-1.c:7:1, col:21> col:13 used bar 'void (int *)' extern
+| `-ParmVarDecl 0x7fa7f2027160 <col:17, col:20> col:21 'int *'
+`-FunctionDecl 0x7fa7f2825b60 <line:8:1, line:13:1> line:8:5 foo 'int ()'
+  `-CompoundStmt 0x7fa7f2825dc8 <line:9:1, line:13:1>
+    |-DeclStmt 0x7fa7f2825c70 <line:10:3, col:8>
+    | `-VarDecl 0x7fa7f2825c10 <col:3, col:7> col:7 used x 'int'
+    |-CallExpr 0x7fa7f2825d40 <line:11:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7fa7f2825d28 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa7f2825c88 <col:3> 'void (int *)' Function 0x7fa7f2825a28 'bar' 'void (int *)'
+    | `-UnaryOperator 0x7fa7f2825cd8 <col:7, col:8> 'int *' prefix '&'
+    |   `-DeclRefExpr 0x7fa7f2825cb0 <col:8> 'int' lvalue Var 0x7fa7f2825c10 'x' 'int'
+    `-ReturnStmt 0x7fa7f2825db0 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7fa7f2825d98 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fa7f2825d70 <col:10> 'int' lvalue Var 0x7fa7f2825c10 'x' 'int'

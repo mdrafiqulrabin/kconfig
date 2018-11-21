@@ -1,0 +1,217 @@
+TranslationUnitDecl 0x7fd65b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd65b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd65b826740 '__int128'
+|-TypedefDecl 0x7fd65b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd65b826760 'unsigned __int128'
+|-TypedefDecl 0x7fd65b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd65b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd65b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd65b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd65b826dc0 'char *'
+|   `-BuiltinType 0x7fd65b826560 'char'
+|-TypedefDecl 0x7fd65b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd65b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd65b826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd65b826e58 '__va_list_tag'
+|-EnumDecl 0x7fd65b827120 <c_files/pr28574.c:8:9, line:14:1> line:8:14 yasm_module_type
+| |-EnumConstantDecl 0x7fd65b877c00 <line:9:5, col:24> col:5 referenced YASM_MODULE_ARCH 'int'
+| | `-IntegerLiteral 0x7fd65b8271e0 <col:24> 'int' 0
+| |-EnumConstantDecl 0x7fd65b877c48 <line:10:5> col:5 referenced YASM_MODULE_DBGFMT 'int'
+| |-EnumConstantDecl 0x7fd65b877c90 <line:11:5> col:5 referenced YASM_MODULE_OBJFMT 'int'
+| |-EnumConstantDecl 0x7fd65b877cd8 <line:12:5> col:5 referenced YASM_MODULE_LISTFMT 'int'
+| `-EnumConstantDecl 0x7fd65b877d20 <line:13:5> col:5 referenced YASM_MODULE_OPTIMIZER 'int'
+|-TypedefDecl 0x7fd65b877dc0 <line:8:1, line:14:3> col:3 referenced yasm_module_type 'enum yasm_module_type':'enum yasm_module_type'
+| `-ElaboratedType 0x7fd65b877d70 'enum yasm_module_type' sugar
+|   `-EnumType 0x7fd65b8271c0 'enum yasm_module_type'
+|     `-Enum 0x7fd65b827120 'yasm_module_type'
+|-RecordDecl 0x7fd65b877e30 <line:16:1, line:18:1> line:16:8 struct yasm_module definition
+| `-FieldDecl 0x7fd65b877ef8 <line:17:5, col:17> col:17 referenced name 'const char *'
+|-TypedefDecl 0x7fd65b877f90 <line:20:1, col:28> col:28 referenced yasm_arch_module 'struct yasm_module':'struct yasm_module'
+| `-ElaboratedType 0x7fd65b877f40 'struct yasm_module' sugar
+|   `-RecordType 0x7fd65b877ec0 'struct yasm_module'
+|     `-Record 0x7fd65b877e30 'yasm_module'
+|-TypedefDecl 0x7fd65b878008 <line:21:1, col:28> col:28 referenced yasm_dbgfmt_module 'struct yasm_module':'struct yasm_module'
+| `-ElaboratedType 0x7fd65b877f40 'struct yasm_module' sugar
+|   `-RecordType 0x7fd65b877ec0 'struct yasm_module'
+|     `-Record 0x7fd65b877e30 'yasm_module'
+|-TypedefDecl 0x7fd65b878080 <line:22:1, col:28> col:28 referenced yasm_objfmt_module 'struct yasm_module':'struct yasm_module'
+| `-ElaboratedType 0x7fd65b877f40 'struct yasm_module' sugar
+|   `-RecordType 0x7fd65b877ec0 'struct yasm_module'
+|     `-Record 0x7fd65b877e30 'yasm_module'
+|-TypedefDecl 0x7fd65b8780f8 <line:23:1, col:28> col:28 referenced yasm_listfmt_module 'struct yasm_module':'struct yasm_module'
+| `-ElaboratedType 0x7fd65b877f40 'struct yasm_module' sugar
+|   `-RecordType 0x7fd65b877ec0 'struct yasm_module'
+|     `-Record 0x7fd65b877e30 'yasm_module'
+|-TypedefDecl 0x7fd65b878170 <line:24:1, col:28> col:28 referenced yasm_optimizer_module 'struct yasm_module':'struct yasm_module'
+| `-ElaboratedType 0x7fd65b877f40 'struct yasm_module' sugar
+|   `-RecordType 0x7fd65b877ec0 'struct yasm_module'
+|     `-Record 0x7fd65b877e30 'yasm_module'
+|-RecordDecl 0x7fd65b8781c8 <line:26:9, line:28:1> line:26:16 struct module definition
+| `-FieldDecl 0x7fd65b878288 <line:27:5, col:11> col:11 referenced data 'void *'
+|-TypedefDecl 0x7fd65b878320 <line:26:1, line:28:3> col:3 referenced module 'struct module':'struct module'
+| `-ElaboratedType 0x7fd65b8782d0 'struct module' sugar
+|   `-RecordType 0x7fd65b878250 'struct module'
+|     `-Record 0x7fd65b8781c8 'module'
+|-RecordDecl 0x7fd65b878390 <line:30:8, line:33:1> line:30:8 struct definition
+| |-FieldDecl 0x7fd65b8784c8 <line:31:5, col:13> col:13 referenced m 'module *'
+| `-FieldDecl 0x7fd65b878528 <line:32:5, col:9> col:9 n 'int'
+|-VarDecl 0x7fd65b878628 <line:30:1, line:35:1> line:33:3 used module_types 'struct (anonymous struct at c_files/pr28574.c:30:8) [1]' static cinit
+| `-InitListExpr 0x7fd65b878750 <col:20, line:35:1> 'struct (anonymous struct at c_files/pr28574.c:30:8) [1]'
+|   `-InitListExpr 0x7fd65b878790 <line:34:2, col:3> 'struct (anonymous struct at c_files/pr28574.c:30:8)':'struct (anonymous at c_files/pr28574.c:30:8)'
+|     |-ImplicitValueInitExpr 0x7fd65b8787e8 <<invalid sloc>> 'module *'
+|     `-ImplicitValueInitExpr 0x7fd65b8787f8 <<invalid sloc>> 'int'
+|-FunctionDecl 0x7fd65b87de00 <line:37:1, line:72:1> line:38:1 yasm_list_modules 'void (yasm_module_type, void (*)(const char *))'
+| |-ParmVarDecl 0x7fd65b8788d0 <col:19, col:36> col:36 used type 'yasm_module_type':'enum yasm_module_type'
+| |-ParmVarDecl 0x7fd65b878ab0 <line:39:19, col:54> col:26 used printfunc 'void (*)(const char *)'
+| `-CompoundStmt 0x7fd65b87f678 <line:40:1, line:72:1>
+|   |-DeclStmt 0x7fd65b87df20 <line:41:5, col:10>
+|   | `-VarDecl 0x7fd65b87dec0 <col:5, col:9> col:9 used i 'int'
+|   |-DeclStmt 0x7fd65b87e100 <line:42:5, col:43>
+|   | `-VarDecl 0x7fd65b87df48 <col:5, col:42> col:13 used modules 'module *' cinit
+|   |   `-ImplicitCastExpr 0x7fd65b87e0e8 <col:23, col:42> 'module *' <LValueToRValue>
+|   |     `-MemberExpr 0x7fd65b87e0b0 <col:23, col:42> 'module *' lvalue .m 0x7fd65b8784c8
+|   |       `-ArraySubscriptExpr 0x7fd65b87e088 <col:23, col:40> 'struct (anonymous struct at c_files/pr28574.c:30:8)':'struct (anonymous at c_files/pr28574.c:30:8)' lvalue
+|   |         |-ImplicitCastExpr 0x7fd65b87e058 <col:23> 'struct (anonymous struct at c_files/pr28574.c:30:8) *' <ArrayToPointerDecay>
+|   |         | `-DeclRefExpr 0x7fd65b87dfa8 <col:23> 'struct (anonymous struct at c_files/pr28574.c:30:8) [1]' lvalue Var 0x7fd65b878628 'module_types' 'struct (anonymous struct at c_files/pr28574.c:30:8) [1]'
+|   |         `-ImplicitCastExpr 0x7fd65b87e070 <col:36> 'yasm_module_type':'enum yasm_module_type' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fd65b87dfd0 <col:36> 'yasm_module_type':'enum yasm_module_type' lvalue ParmVar 0x7fd65b8788d0 'type' 'yasm_module_type':'enum yasm_module_type'
+|   |-DeclStmt 0x7fd65b87e208 <line:43:5, col:27>
+|   | `-VarDecl 0x7fd65b87e1a8 <col:5, col:23> col:23 used arch 'yasm_arch_module *'
+|   |-DeclStmt 0x7fd65b87e2d8 <line:44:5, col:31>
+|   | `-VarDecl 0x7fd65b87e278 <col:5, col:25> col:25 used dbgfmt 'yasm_dbgfmt_module *'
+|   |-DeclStmt 0x7fd65b87e3a8 <line:45:5, col:31>
+|   | `-VarDecl 0x7fd65b87e348 <col:5, col:25> col:25 used objfmt 'yasm_objfmt_module *'
+|   |-DeclStmt 0x7fd65b87e478 <line:46:5, col:33>
+|   | `-VarDecl 0x7fd65b87e418 <col:5, col:26> col:26 used listfmt 'yasm_listfmt_module *'
+|   |-DeclStmt 0x7fd65b87e548 <line:47:5, col:37>
+|   | `-VarDecl 0x7fd65b87e4e8 <col:5, col:28> col:28 used optimizer 'yasm_optimizer_module *'
+|   `-ForStmt 0x7fd65b87f640 <line:49:5, line:71:5>
+|     |-BinaryOperator 0x7fd65b87e5a8 <line:49:10, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7fd65b87e560 <col:10> 'int' lvalue Var 0x7fd65b87dec0 'i' 'int'
+|     | `-IntegerLiteral 0x7fd65b87e588 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fd65b87e630 <col:15, col:17> 'int' '<'
+|     | |-ImplicitCastExpr 0x7fd65b87e618 <col:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fd65b87e5d0 <col:15> 'int' lvalue Var 0x7fd65b87dec0 'i' 'int'
+|     | `-IntegerLiteral 0x7fd65b87e5f8 <col:17> 'int' 2
+|     |-UnaryOperator 0x7fd65b87e680 <col:20, col:21> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7fd65b87e658 <col:20> 'int' lvalue Var 0x7fd65b87dec0 'i' 'int'
+|     `-CompoundStmt 0x7fd65b87f620 <col:25, line:71:5>
+|       `-SwitchStmt 0x7fd65b87e6f8 <line:50:9, line:70:9>
+|         |-<<<NULL>>>
+|         |-<<<NULL>>>
+|         |-ImplicitCastExpr 0x7fd65b87e6e0 <line:50:17> 'unsigned int' <IntegralCast>
+|         | `-ImplicitCastExpr 0x7fd65b87e6c8 <col:17> 'yasm_module_type':'enum yasm_module_type' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fd65b87e6a0 <col:17> 'yasm_module_type':'enum yasm_module_type' lvalue ParmVar 0x7fd65b8788d0 'type' 'yasm_module_type':'enum yasm_module_type'
+|         `-CompoundStmt 0x7fd65b87f520 <col:23, line:70:9>
+|           |-CaseStmt 0x7fd65b87e750 <line:51:13, line:52:35>
+|           | |-ImplicitCastExpr 0x7fd65b87f608 <line:51:18> 'unsigned int' <IntegralCast>
+|           | | `-DeclRefExpr 0x7fd65b87e728 <col:18> 'int' EnumConstant 0x7fd65b877c00 'YASM_MODULE_ARCH' 'int'
+|           | |-<<<NULL>>>
+|           | `-BinaryOperator 0x7fd65b87e8c0 <line:52:17, col:35> 'yasm_arch_module *' '='
+|           |   |-DeclRefExpr 0x7fd65b87e788 <col:17> 'yasm_arch_module *' lvalue Var 0x7fd65b87e1a8 'arch' 'yasm_arch_module *'
+|           |   `-ImplicitCastExpr 0x7fd65b87e8a8 <col:24, col:35> 'yasm_arch_module *' <BitCast>
+|           |     `-ImplicitCastExpr 0x7fd65b87e890 <col:24, col:35> 'void *' <LValueToRValue>
+|           |       `-MemberExpr 0x7fd65b87e858 <col:24, col:35> 'void *' lvalue .data 0x7fd65b878288
+|           |         `-ArraySubscriptExpr 0x7fd65b87e830 <col:24, col:33> 'module':'struct module' lvalue
+|           |           |-ImplicitCastExpr 0x7fd65b87e800 <col:24> 'module *' <LValueToRValue>
+|           |           | `-DeclRefExpr 0x7fd65b87e7b0 <col:24> 'module *' lvalue Var 0x7fd65b87df48 'modules' 'module *'
+|           |           `-ImplicitCastExpr 0x7fd65b87e818 <col:32> 'int' <LValueToRValue>
+|           |             `-DeclRefExpr 0x7fd65b87e7d8 <col:32> 'int' lvalue Var 0x7fd65b87dec0 'i' 'int'
+|           |-CallExpr 0x7fd65b87e9a0 <line:53:17, col:37> 'void'
+|           | |-ImplicitCastExpr 0x7fd65b87e988 <col:17> 'void (*)(const char *)' <LValueToRValue>
+|           | | `-DeclRefExpr 0x7fd65b87e8e8 <col:17> 'void (*)(const char *)' lvalue ParmVar 0x7fd65b878ab0 'printfunc' 'void (*)(const char *)'
+|           | `-ImplicitCastExpr 0x7fd65b87e9d0 <col:27, col:33> 'const char *' <LValueToRValue>
+|           |   `-MemberExpr 0x7fd65b87e950 <col:27, col:33> 'const char *' lvalue ->name 0x7fd65b877ef8
+|           |     `-ImplicitCastExpr 0x7fd65b87e938 <col:27> 'yasm_arch_module *' <LValueToRValue>
+|           |       `-DeclRefExpr 0x7fd65b87e910 <col:27> 'yasm_arch_module *' lvalue Var 0x7fd65b87e1a8 'arch' 'yasm_arch_module *'
+|           |-BreakStmt 0x7fd65b87e9e8 <line:54:17>
+|           |-CaseStmt 0x7fd65b87ea18 <line:55:13, line:56:37>
+|           | |-ImplicitCastExpr 0x7fd65b87f5f0 <line:55:18> 'unsigned int' <IntegralCast>
+|           | | `-DeclRefExpr 0x7fd65b87e9f0 <col:18> 'int' EnumConstant 0x7fd65b877c48 'YASM_MODULE_DBGFMT' 'int'
+|           | |-<<<NULL>>>
+|           | `-BinaryOperator 0x7fd65b87eb88 <line:56:17, col:37> 'yasm_dbgfmt_module *' '='
+|           |   |-DeclRefExpr 0x7fd65b87ea50 <col:17> 'yasm_dbgfmt_module *' lvalue Var 0x7fd65b87e278 'dbgfmt' 'yasm_dbgfmt_module *'
+|           |   `-ImplicitCastExpr 0x7fd65b87eb70 <col:26, col:37> 'yasm_dbgfmt_module *' <BitCast>
+|           |     `-ImplicitCastExpr 0x7fd65b87eb58 <col:26, col:37> 'void *' <LValueToRValue>
+|           |       `-MemberExpr 0x7fd65b87eb20 <col:26, col:37> 'void *' lvalue .data 0x7fd65b878288
+|           |         `-ArraySubscriptExpr 0x7fd65b87eaf8 <col:26, col:35> 'module':'struct module' lvalue
+|           |           |-ImplicitCastExpr 0x7fd65b87eac8 <col:26> 'module *' <LValueToRValue>
+|           |           | `-DeclRefExpr 0x7fd65b87ea78 <col:26> 'module *' lvalue Var 0x7fd65b87df48 'modules' 'module *'
+|           |           `-ImplicitCastExpr 0x7fd65b87eae0 <col:34> 'int' <LValueToRValue>
+|           |             `-DeclRefExpr 0x7fd65b87eaa0 <col:34> 'int' lvalue Var 0x7fd65b87dec0 'i' 'int'
+|           |-CallExpr 0x7fd65b87ec68 <line:57:17, col:39> 'void'
+|           | |-ImplicitCastExpr 0x7fd65b87ec50 <col:17> 'void (*)(const char *)' <LValueToRValue>
+|           | | `-DeclRefExpr 0x7fd65b87ebb0 <col:17> 'void (*)(const char *)' lvalue ParmVar 0x7fd65b878ab0 'printfunc' 'void (*)(const char *)'
+|           | `-ImplicitCastExpr 0x7fd65b87ec98 <col:27, col:35> 'const char *' <LValueToRValue>
+|           |   `-MemberExpr 0x7fd65b87ec18 <col:27, col:35> 'const char *' lvalue ->name 0x7fd65b877ef8
+|           |     `-ImplicitCastExpr 0x7fd65b87ec00 <col:27> 'yasm_dbgfmt_module *' <LValueToRValue>
+|           |       `-DeclRefExpr 0x7fd65b87ebd8 <col:27> 'yasm_dbgfmt_module *' lvalue Var 0x7fd65b87e278 'dbgfmt' 'yasm_dbgfmt_module *'
+|           |-BreakStmt 0x7fd65b87ecb0 <line:58:17>
+|           |-CaseStmt 0x7fd65b87ece0 <line:59:13, line:60:37>
+|           | |-ImplicitCastExpr 0x7fd65b87f5d8 <line:59:18> 'unsigned int' <IntegralCast>
+|           | | `-DeclRefExpr 0x7fd65b87ecb8 <col:18> 'int' EnumConstant 0x7fd65b877c90 'YASM_MODULE_OBJFMT' 'int'
+|           | |-<<<NULL>>>
+|           | `-BinaryOperator 0x7fd65b87ee68 <line:60:17, col:37> 'yasm_objfmt_module *' '='
+|           |   |-DeclRefExpr 0x7fd65b87ed18 <col:17> 'yasm_objfmt_module *' lvalue Var 0x7fd65b87e348 'objfmt' 'yasm_objfmt_module *'
+|           |   `-ImplicitCastExpr 0x7fd65b87ee50 <col:26, col:37> 'yasm_objfmt_module *' <BitCast>
+|           |     `-ImplicitCastExpr 0x7fd65b87ee38 <col:26, col:37> 'void *' <LValueToRValue>
+|           |       `-MemberExpr 0x7fd65b87ee00 <col:26, col:37> 'void *' lvalue .data 0x7fd65b878288
+|           |         `-ArraySubscriptExpr 0x7fd65b87edc0 <col:26, col:35> 'module':'struct module' lvalue
+|           |           |-ImplicitCastExpr 0x7fd65b87ed90 <col:26> 'module *' <LValueToRValue>
+|           |           | `-DeclRefExpr 0x7fd65b87ed40 <col:26> 'module *' lvalue Var 0x7fd65b87df48 'modules' 'module *'
+|           |           `-ImplicitCastExpr 0x7fd65b87eda8 <col:34> 'int' <LValueToRValue>
+|           |             `-DeclRefExpr 0x7fd65b87ed68 <col:34> 'int' lvalue Var 0x7fd65b87dec0 'i' 'int'
+|           |-CallExpr 0x7fd65b87ef48 <line:61:17, col:39> 'void'
+|           | |-ImplicitCastExpr 0x7fd65b87ef30 <col:17> 'void (*)(const char *)' <LValueToRValue>
+|           | | `-DeclRefExpr 0x7fd65b87ee90 <col:17> 'void (*)(const char *)' lvalue ParmVar 0x7fd65b878ab0 'printfunc' 'void (*)(const char *)'
+|           | `-ImplicitCastExpr 0x7fd65b87ef78 <col:27, col:35> 'const char *' <LValueToRValue>
+|           |   `-MemberExpr 0x7fd65b87eef8 <col:27, col:35> 'const char *' lvalue ->name 0x7fd65b877ef8
+|           |     `-ImplicitCastExpr 0x7fd65b87eee0 <col:27> 'yasm_objfmt_module *' <LValueToRValue>
+|           |       `-DeclRefExpr 0x7fd65b87eeb8 <col:27> 'yasm_objfmt_module *' lvalue Var 0x7fd65b87e348 'objfmt' 'yasm_objfmt_module *'
+|           |-BreakStmt 0x7fd65b87ef90 <line:62:17>
+|           |-CaseStmt 0x7fd65b87efc0 <line:63:13, line:64:38>
+|           | |-ImplicitCastExpr 0x7fd65b87f5c0 <line:63:18> 'unsigned int' <IntegralCast>
+|           | | `-DeclRefExpr 0x7fd65b87ef98 <col:18> 'int' EnumConstant 0x7fd65b877cd8 'YASM_MODULE_LISTFMT' 'int'
+|           | |-<<<NULL>>>
+|           | `-BinaryOperator 0x7fd65b87f130 <line:64:17, col:38> 'yasm_listfmt_module *' '='
+|           |   |-DeclRefExpr 0x7fd65b87eff8 <col:17> 'yasm_listfmt_module *' lvalue Var 0x7fd65b87e418 'listfmt' 'yasm_listfmt_module *'
+|           |   `-ImplicitCastExpr 0x7fd65b87f118 <col:27, col:38> 'yasm_listfmt_module *' <BitCast>
+|           |     `-ImplicitCastExpr 0x7fd65b87f100 <col:27, col:38> 'void *' <LValueToRValue>
+|           |       `-MemberExpr 0x7fd65b87f0c8 <col:27, col:38> 'void *' lvalue .data 0x7fd65b878288
+|           |         `-ArraySubscriptExpr 0x7fd65b87f0a0 <col:27, col:36> 'module':'struct module' lvalue
+|           |           |-ImplicitCastExpr 0x7fd65b87f070 <col:27> 'module *' <LValueToRValue>
+|           |           | `-DeclRefExpr 0x7fd65b87f020 <col:27> 'module *' lvalue Var 0x7fd65b87df48 'modules' 'module *'
+|           |           `-ImplicitCastExpr 0x7fd65b87f088 <col:35> 'int' <LValueToRValue>
+|           |             `-DeclRefExpr 0x7fd65b87f048 <col:35> 'int' lvalue Var 0x7fd65b87dec0 'i' 'int'
+|           |-CallExpr 0x7fd65b87f210 <line:65:17, col:40> 'void'
+|           | |-ImplicitCastExpr 0x7fd65b87f1f8 <col:17> 'void (*)(const char *)' <LValueToRValue>
+|           | | `-DeclRefExpr 0x7fd65b87f158 <col:17> 'void (*)(const char *)' lvalue ParmVar 0x7fd65b878ab0 'printfunc' 'void (*)(const char *)'
+|           | `-ImplicitCastExpr 0x7fd65b87f240 <col:27, col:36> 'const char *' <LValueToRValue>
+|           |   `-MemberExpr 0x7fd65b87f1c0 <col:27, col:36> 'const char *' lvalue ->name 0x7fd65b877ef8
+|           |     `-ImplicitCastExpr 0x7fd65b87f1a8 <col:27> 'yasm_listfmt_module *' <LValueToRValue>
+|           |       `-DeclRefExpr 0x7fd65b87f180 <col:27> 'yasm_listfmt_module *' lvalue Var 0x7fd65b87e418 'listfmt' 'yasm_listfmt_module *'
+|           |-BreakStmt 0x7fd65b87f258 <line:66:17>
+|           |-CaseStmt 0x7fd65b87f288 <line:67:13, line:68:40>
+|           | |-ImplicitCastExpr 0x7fd65b87f5a8 <line:67:18> 'unsigned int' <IntegralCast>
+|           | | `-DeclRefExpr 0x7fd65b87f260 <col:18> 'int' EnumConstant 0x7fd65b877d20 'YASM_MODULE_OPTIMIZER' 'int'
+|           | |-<<<NULL>>>
+|           | `-BinaryOperator 0x7fd65b87f3f8 <line:68:17, col:40> 'yasm_optimizer_module *' '='
+|           |   |-DeclRefExpr 0x7fd65b87f2c0 <col:17> 'yasm_optimizer_module *' lvalue Var 0x7fd65b87e4e8 'optimizer' 'yasm_optimizer_module *'
+|           |   `-ImplicitCastExpr 0x7fd65b87f3e0 <col:29, col:40> 'yasm_optimizer_module *' <BitCast>
+|           |     `-ImplicitCastExpr 0x7fd65b87f3c8 <col:29, col:40> 'void *' <LValueToRValue>
+|           |       `-MemberExpr 0x7fd65b87f390 <col:29, col:40> 'void *' lvalue .data 0x7fd65b878288
+|           |         `-ArraySubscriptExpr 0x7fd65b87f368 <col:29, col:38> 'module':'struct module' lvalue
+|           |           |-ImplicitCastExpr 0x7fd65b87f338 <col:29> 'module *' <LValueToRValue>
+|           |           | `-DeclRefExpr 0x7fd65b87f2e8 <col:29> 'module *' lvalue Var 0x7fd65b87df48 'modules' 'module *'
+|           |           `-ImplicitCastExpr 0x7fd65b87f350 <col:37> 'int' <LValueToRValue>
+|           |             `-DeclRefExpr 0x7fd65b87f310 <col:37> 'int' lvalue Var 0x7fd65b87dec0 'i' 'int'
+|           `-CallExpr 0x7fd65b87f4d8 <line:69:17, col:42> 'void'
+|             |-ImplicitCastExpr 0x7fd65b87f4c0 <col:17> 'void (*)(const char *)' <LValueToRValue>
+|             | `-DeclRefExpr 0x7fd65b87f420 <col:17> 'void (*)(const char *)' lvalue ParmVar 0x7fd65b878ab0 'printfunc' 'void (*)(const char *)'
+|             `-ImplicitCastExpr 0x7fd65b87f508 <col:27, col:38> 'const char *' <LValueToRValue>
+|               `-MemberExpr 0x7fd65b87f488 <col:27, col:38> 'const char *' lvalue ->name 0x7fd65b877ef8
+|                 `-ImplicitCastExpr 0x7fd65b87f470 <col:27> 'yasm_optimizer_module *' <LValueToRValue>
+|                   `-DeclRefExpr 0x7fd65b87f448 <col:27> 'yasm_optimizer_module *' lvalue Var 0x7fd65b87e4e8 'optimizer' 'yasm_optimizer_module *'
+`-FunctionDecl 0x7fd65b87f720 <line:74:1, line:75:9> col:1 main 'int ()'
+  `-CompoundStmt 0x7fd65b87f7b8 <col:8, col:9>

@@ -1,0 +1,39 @@
+FileAST: 
+  Decl: nan, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      TypeDecl: nan, []
+        IdentifierType: ['double']
+  Decl: nok, ['const'], [], []
+    TypeDecl: nok, ['const']
+      IdentifierType: ['double']
+    FuncCall: 
+      ID: nan
+      ExprList: 
+        Constant: string, ""
+  Decl: ok, ['const'], [], []
+    TypeDecl: ok, ['const']
+      IdentifierType: ['double']
+    FuncCall: 
+      ID: __builtin_nan
+      ExprList: 
+        Constant: string, ""
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: ok2, [], [], []
+        TypeDecl: ok2, []
+          IdentifierType: ['double']
+        FuncCall: 
+          ID: nan
+          ExprList: 
+            Constant: string, ""
+      Return: 
+        ID: ok2

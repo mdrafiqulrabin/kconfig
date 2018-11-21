@@ -1,0 +1,92 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: bb, [], [], []
+          TypeDecl: bb, []
+            IdentifierType: ['unsigned', 'long', 'long']
+        Decl: tn, [], [], []
+          TypeDecl: tn, []
+            IdentifierType: ['unsigned', 'short']
+        Decl: e, [], [], []
+          TypeDecl: e, []
+            IdentifierType: ['unsigned']
+        Decl: w, [], [], []
+          PtrDecl: []
+            TypeDecl: w, []
+              IdentifierType: ['unsigned']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: bb, [], [], []
+            TypeDecl: bb, []
+              IdentifierType: ['unsigned', 'long', 'long']
+          Decl: tn, [], [], []
+            TypeDecl: tn, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['unsigned']
+          Decl: w, [], [], []
+            PtrDecl: []
+              TypeDecl: w, []
+                IdentifierType: ['unsigned']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['unsigned']
+        BinaryOp: +
+          ID: tn
+          ID: bb
+      DoWhile: 
+        ID: n
+        Compound: 
+          Assignment: =
+            ID: e
+            TernaryOp: 
+              BinaryOp: >
+                ID: e
+                ID: n
+              ID: e
+              UnaryOp: *
+                ID: w
+          Assignment: -=
+            ID: n
+            TernaryOp: 
+              BinaryOp: >
+                ID: e
+                ID: n
+              ID: n
+              ID: e
+          If: 
+            UnaryOp: *
+              ID: w
+            Assignment: =
+              UnaryOp: *
+                ID: w
+              Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: w, [], [], []
+        TypeDecl: w, []
+          IdentifierType: ['unsigned']
+        Constant: int, 0
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          UnaryOp: &
+            ID: w
+      Return: 
+        Constant: int, 0

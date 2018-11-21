@@ -1,0 +1,61 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: s
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['long']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Decl: tab, [], [], []
+        ArrayDecl: []
+          TypeDecl: tab, []
+            IdentifierType: ['int']
+  Decl: val, ['const'], ['extern'], []
+    TypeDecl: val, ['const']
+      Struct: s
+  Decl: idx, [], ['extern'], []
+    TypeDecl: idx, []
+      IdentifierType: ['int']
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: !=
+              ArrayRef: 
+                StructRef: .
+                  ID: val
+                  ID: tab
+                Constant: int, 0
+              Constant: int, 42
+            BinaryOp: !=
+              ArrayRef: 
+                StructRef: .
+                  ID: val
+                  ID: tab
+                Constant: int, 1
+              Constant: int, 1337
+          BinaryOp: !=
+            ArrayRef: 
+              StructRef: .
+                ID: val
+                ID: tab
+              ID: idx
+            Constant: int, 1337
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

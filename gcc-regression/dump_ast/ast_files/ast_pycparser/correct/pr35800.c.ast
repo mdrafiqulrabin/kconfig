@@ -1,0 +1,295 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: stab_xcoff_builtin_type, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: typenum, [], [], []
+            TypeDecl: typenum, []
+              IdentifierType: ['int']
+        TypeDecl: stab_xcoff_builtin_type, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: name, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: name, ['const']
+            IdentifierType: ['char']
+      If: 
+        BinaryOp: ||
+          BinaryOp: >=
+            ID: typenum
+            Constant: int, 0
+          BinaryOp: <
+            ID: typenum
+            UnaryOp: -
+              Constant: int, 34
+        Compound: 
+          Return: 
+            Constant: int, 0
+      Switch: 
+        UnaryOp: -
+          ID: typenum
+        Compound: 
+          Case: 
+            Constant: int, 1
+            Assignment: =
+              ID: name
+              Constant: string, "int"
+            Break: 
+          Case: 
+            Constant: int, 2
+            Assignment: =
+              ID: name
+              Constant: string, "char"
+          Case: 
+            Constant: int, 3
+            Assignment: =
+              ID: name
+              Constant: string, "short"
+            Break: 
+          Case: 
+            Constant: int, 4
+            Assignment: =
+              ID: name
+              Constant: string, "long"
+          Case: 
+            Constant: int, 5
+            Assignment: =
+              ID: name
+              Constant: string, "unsigned char"
+          Case: 
+            Constant: int, 6
+            Assignment: =
+              ID: name
+              Constant: string, "signed char"
+          Case: 
+            Constant: int, 7
+            Assignment: =
+              ID: name
+              Constant: string, "unsigned short"
+          Case: 
+            Constant: int, 8
+            Assignment: =
+              ID: name
+              Constant: string, "unsigned int"
+          Case: 
+            Constant: int, 9
+            Assignment: =
+              ID: name
+              Constant: string, "unsigned"
+          Case: 
+            Constant: int, 10
+            Assignment: =
+              ID: name
+              Constant: string, "unsigned long"
+          Case: 
+            Constant: int, 11
+            Assignment: =
+              ID: name
+              Constant: string, "void"
+          Case: 
+            Constant: int, 12
+            Assignment: =
+              ID: name
+              Constant: string, "float"
+          Case: 
+            Constant: int, 13
+            Assignment: =
+              ID: name
+              Constant: string, "double"
+          Case: 
+            Constant: int, 14
+            Assignment: =
+              ID: name
+              Constant: string, "long double"
+          Case: 
+            Constant: int, 15
+            Assignment: =
+              ID: name
+              Constant: string, "integer"
+          Case: 
+            Constant: int, 16
+            Assignment: =
+              ID: name
+              Constant: string, "boolean"
+          Case: 
+            Constant: int, 17
+            Assignment: =
+              ID: name
+              Constant: string, "short real"
+          Case: 
+            Constant: int, 18
+            Assignment: =
+              ID: name
+              Constant: string, "real"
+          Case: 
+            Constant: int, 19
+            Assignment: =
+              ID: name
+              Constant: string, "stringptr"
+          Case: 
+            Constant: int, 20
+            Assignment: =
+              ID: name
+              Constant: string, "character"
+          Case: 
+            Constant: int, 21
+            Assignment: =
+              ID: name
+              Constant: string, "logical*1"
+          Case: 
+            Constant: int, 22
+            Assignment: =
+              ID: name
+              Constant: string, "logical*2"
+          Case: 
+            Constant: int, 23
+            Assignment: =
+              ID: name
+              Constant: string, "logical*4"
+          Case: 
+            Constant: int, 24
+            Assignment: =
+              ID: name
+              Constant: string, "logical"
+          Case: 
+            Constant: int, 25
+            Assignment: =
+              ID: name
+              Constant: string, "complex"
+          Case: 
+            Constant: int, 26
+            Assignment: =
+              ID: name
+              Constant: string, "double complex"
+          Case: 
+            Constant: int, 27
+            Assignment: =
+              ID: name
+              Constant: string, "integer*1"
+          Case: 
+            Constant: int, 28
+            Assignment: =
+              ID: name
+              Constant: string, "integer*2"
+          Case: 
+            Constant: int, 29
+            Assignment: =
+              ID: name
+              Constant: string, "integer*4"
+          Case: 
+            Constant: int, 30
+            Assignment: =
+              ID: name
+              Constant: string, "wchar"
+          Case: 
+            Constant: int, 31
+            Assignment: =
+              ID: name
+              Constant: string, "long long"
+          Case: 
+            Constant: int, 32
+            Assignment: =
+              ID: name
+              Constant: string, "unsigned long long"
+          Case: 
+            Constant: int, 33
+            Assignment: =
+              ID: name
+              Constant: string, "logical*8"
+          Case: 
+            Constant: int, 34
+            Assignment: =
+              ID: name
+              Constant: string, "integer*8"
+      Return: 
+        ArrayRef: 
+          ID: name
+          Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: stab_xcoff_builtin_type
+            ExprList: 
+              Constant: int, 0
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: stab_xcoff_builtin_type
+            ExprList: 
+              UnaryOp: -
+                Constant: int, 1
+          Constant: char, 'i'
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: stab_xcoff_builtin_type
+            ExprList: 
+              UnaryOp: -
+                Constant: int, 2
+          Constant: char, 's'
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: stab_xcoff_builtin_type
+            ExprList: 
+              UnaryOp: -
+                Constant: int, 3
+          Constant: char, 's'
+        FuncCall: 
+          ID: abort
+      For: 
+        Assignment: =
+          ID: i
+          UnaryOp: -
+            Constant: int, 4
+        BinaryOp: >=
+          ID: i
+          UnaryOp: -
+            Constant: int, 34
+        UnaryOp: --
+          ID: i
+        If: 
+          BinaryOp: !=
+            FuncCall: 
+              ID: stab_xcoff_builtin_type
+              ExprList: 
+                ID: i
+            Constant: char, 'i'
+          FuncCall: 
+            ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: stab_xcoff_builtin_type
+            ExprList: 
+              UnaryOp: -
+                Constant: int, 35
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

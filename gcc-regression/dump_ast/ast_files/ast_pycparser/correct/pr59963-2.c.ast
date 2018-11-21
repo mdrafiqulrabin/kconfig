@@ -1,0 +1,138 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'char']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  Decl: bar8, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'char']
+      TypeDecl: bar8, []
+        IdentifierType: ['void']
+  Decl: bazu, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'int']
+        EllipsisParam: 
+      TypeDecl: bazu, []
+        IdentifierType: ['void']
+  Decl: bazi, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bazi, []
+        IdentifierType: ['void']
+  Decl: f, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['short']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['short']
+      TypeDecl: f, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: g, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: &&
+          FuncCall: 
+            ID: f
+            ExprList: 
+              Constant: int, 0xffffffffL
+              Constant: int, 0xffffffffL
+          FuncCall: 
+            ID: f
+            ExprList: 
+              Constant: int, 0xffffffffL
+              Constant: int, 0xffffffffL
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          Constant: int, 256
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          Constant: float, 6.66f
+      FuncCall: 
+        ID: bar8
+        ExprList: 
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 2
+          UnaryOp: -
+            Constant: int, 3
+          UnaryOp: -
+            Constant: int, 4
+          UnaryOp: -
+            Constant: int, 5
+          UnaryOp: -
+            Constant: int, 6
+          UnaryOp: -
+            Constant: int, 7
+          UnaryOp: -
+            Constant: int, 8
+      FuncCall: 
+        ID: bazu
+        ExprList: 
+          ID: i
+          ID: i
+      FuncCall: 
+        ID: bazi
+        ExprList: 
+          Constant: int, 0x8
+          Constant: int, 0x80000000

@@ -1,0 +1,114 @@
+c_files/pr62090-2.c:11:15: error: use of unknown builtin '__builtin_va_arg_pack' [-Wimplicit-function-declaration]
+                                   __fmt, __builtin_va_arg_pack ());
+                                          ^
+1 error generated.
+TranslationUnitDecl 0x7f8ccb0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8ccb026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8ccb026740 '__int128'
+|-TypedefDecl 0x7f8ccb026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8ccb026760 'unsigned __int128'
+|-TypedefDecl 0x7f8ccb026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8ccb026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8ccb026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8ccb026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8ccb026dc0 'char *'
+|   `-BuiltinType 0x7f8ccb026560 'char'
+|-TypedefDecl 0x7f8ccb0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8ccb027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8ccb026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8ccb026e58 '__va_list_tag'
+|-TypedefDecl 0x7f8ccb027138 <c_files/pr62090-2.c:4:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7f8ccb026680 'unsigned long'
+|-FunctionDecl 0x7f8ccb078648 <line:7:1> col:1 implicit used snprintf 'int (char *, unsigned long, const char *, ...)' extern
+| |-ParmVarDecl 0x7f8ccb0786e0 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7f8ccb078740 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7f8ccb0787a0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f8ccb078818 <col:1> Implicit printf 3 4
+|-FunctionDecl 0x7f8ccb078870 prev 0x7f8ccb078648 <line:5:1, line:12:1> line:7:1 used snprintf 'int (char *, unsigned long, const char *, ...)' extern inline
+| |-ParmVarDecl 0x7f8ccb078400 <col:11, col:28> col:28 used __s 'char *__restrict'
+| |-ParmVarDecl 0x7f8ccb078490 <col:33, col:40> col:40 used __n 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7f8ccb078508 <col:45, col:68> col:68 used __fmt 'const char *__restrict'
+| |-CompoundStmt 0x7f8ccb07a498 <line:8:1, line:12:1>
+| | `-ReturnStmt 0x7f8ccb07a480 <line:9:3, line:11:39>
+| |   `-CallExpr 0x7f8ccb0793b0 <line:9:10, line:11:39> 'int'
+| |     |-ImplicitCastExpr 0x7f8ccb079398 <line:9:10> 'int (*)(char *, unsigned long, int, unsigned long, const char *, ...)' <BuiltinFnToFnPtr>
+| |     | `-DeclRefExpr 0x7f8ccb078cf0 <col:10> '<builtin fn type>' Function 0x7f8ccb0789f8 '__builtin___snprintf_chk' 'int (char *, unsigned long, int, unsigned long, const char *, ...)'
+| |     |-ImplicitCastExpr 0x7f8ccb07a438 <col:36> 'char *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7f8ccb078d18 <col:36> 'char *__restrict' lvalue ParmVar 0x7f8ccb078400 '__s' 'char *__restrict'
+| |     |-ImplicitCastExpr 0x7f8ccb07a450 <col:41> 'size_t':'unsigned long' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7f8ccb078d40 <col:41> 'size_t':'unsigned long' lvalue ParmVar 0x7f8ccb078490 '__n' 'size_t':'unsigned long'
+| |     |-BinaryOperator 0x7f8ccb078da8 <col:46, col:50> 'int' '-'
+| |     | |-IntegerLiteral 0x7f8ccb078d68 <col:46> 'int' 2
+| |     | `-IntegerLiteral 0x7f8ccb078d88 <col:50> 'int' 1
+| |     |-CallExpr 0x7f8ccb079100 <line:10:8, col:41> 'unsigned long'
+| |     | |-ImplicitCastExpr 0x7f8ccb0790e8 <col:8> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+| |     | | `-DeclRefExpr 0x7f8ccb078ff0 <col:8> '<builtin fn type>' Function 0x7f8ccb078e40 '__builtin_object_size' 'unsigned long (const void *, int)'
+| |     | |-ImplicitCastExpr 0x7f8ccb079150 <col:31> 'const void *' <BitCast>
+| |     | | `-ImplicitCastExpr 0x7f8ccb079138 <col:31> 'char *' <LValueToRValue>
+| |     | |   `-DeclRefExpr 0x7f8ccb079018 <col:31> 'char *__restrict' lvalue ParmVar 0x7f8ccb078400 '__s' 'char *__restrict'
+| |     | `-BinaryOperator 0x7f8ccb079080 <col:36, col:40> 'int' '>'
+| |     |   |-IntegerLiteral 0x7f8ccb079040 <col:36> 'int' 2
+| |     |   `-IntegerLiteral 0x7f8ccb079060 <col:40> 'int' 1
+| |     |-ImplicitCastExpr 0x7f8ccb07a468 <line:11:8> 'const char *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7f8ccb079168 <col:8> 'const char *__restrict' lvalue ParmVar 0x7f8ccb078508 '__fmt' 'const char *__restrict'
+| |     `-CallExpr 0x7f8ccb079340 <col:15, col:38> 'int'
+| |       `-ImplicitCastExpr 0x7f8ccb079328 <col:15> 'int (*)()' <FunctionToPointerDecay>
+| |         `-DeclRefExpr 0x7f8ccb0792d8 <col:15> 'int ()' Function 0x7f8ccb079240 '__builtin_va_arg_pack' 'int ()'
+| |-GNUInlineAttr 0x7f8ccb078920 <line:6:17>
+| |-AlwaysInlineAttr 0x7f8ccb078968 <line:5:33> always_inline
+| `-FormatAttr 0x7f8ccb078978 <line:7:1> Inherited printf 3 4
+|-FunctionDecl 0x7f8ccb0789f8 <line:9:10> col:10 implicit used __builtin___snprintf_chk 'int (char *, unsigned long, int, unsigned long, const char *, ...)' extern
+| |-ParmVarDecl 0x7f8ccb078a90 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7f8ccb078af0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7f8ccb078b50 <<invalid sloc>> <invalid sloc> 'int'
+| |-ParmVarDecl 0x7f8ccb078bb0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7f8ccb078c10 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f8ccb078c98 <col:10> Implicit printf 5 6
+|-FunctionDecl 0x7f8ccb078e40 <line:10:8> col:8 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+| |-ParmVarDecl 0x7f8ccb078ed8 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7f8ccb078f38 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7f8ccb078fa8 <col:8> Implicit
+|-FunctionDecl 0x7f8ccb079240 <<invalid sloc>> line:11:15 implicit used __builtin_va_arg_pack 'int ()'
+|-RecordDecl 0x7f8ccb07a4b8 <line:13:9, col:16> col:16 struct apacket
+|-TypedefDecl 0x7f8ccb07a5b0 <col:1, col:24> col:24 referenced apacket 'struct apacket':'struct apacket'
+| `-ElaboratedType 0x7f8ccb07a560 'struct apacket' sugar
+|   `-RecordType 0x7f8ccb07a540 'struct apacket'
+|     `-Record 0x7f8ccb07a620 'apacket'
+|-RecordDecl 0x7f8ccb07a620 prev 0x7f8ccb07a4b8 <line:14:1, line:16:1> line:14:8 struct apacket definition
+| `-FieldDecl 0x7f8ccb07a730 <line:15:5, col:28> col:19 referenced data 'unsigned char [4096]'
+|-FunctionDecl 0x7f8ccb07a910 <line:17:1, line:20:1> line:17:15 used fill_connect_data 'size_t (char *, size_t)' static
+| |-ParmVarDecl 0x7f8ccb07a790 <col:33, col:39> col:39 used buf 'char *'
+| |-ParmVarDecl 0x7f8ccb07a800 <col:44, col:51> col:51 used bufsize 'size_t':'unsigned long'
+| `-CompoundStmt 0x7f8ccb07abf8 <line:18:1, line:20:1>
+|   `-ReturnStmt 0x7f8ccb07abe0 <line:19:3, col:45>
+|     `-ImplicitCastExpr 0x7f8ccb07abc8 <col:10, col:45> 'size_t':'unsigned long' <IntegralCast>
+|       `-BinaryOperator 0x7f8ccb07aba0 <col:10, col:45> 'int' '+'
+|         |-CallExpr 0x7f8ccb07aae0 <col:10, col:41> 'int'
+|         | |-ImplicitCastExpr 0x7f8ccb07aac8 <col:10> 'int (*)(char *, unsigned long, const char *, ...)' <FunctionToPointerDecay>
+|         | | `-DeclRefExpr 0x7f8ccb07a9b8 <col:10> 'int (char *, unsigned long, const char *, ...)' Function 0x7f8ccb078870 'snprintf' 'int (char *, unsigned long, const char *, ...)'
+|         | |-ImplicitCastExpr 0x7f8ccb07ab20 <col:19> 'char *' <LValueToRValue>
+|         | | `-DeclRefExpr 0x7f8ccb07a9e0 <col:19> 'char *' lvalue ParmVar 0x7f8ccb07a790 'buf' 'char *'
+|         | |-ImplicitCastExpr 0x7f8ccb07ab38 <col:24> 'size_t':'unsigned long' <LValueToRValue>
+|         | | `-DeclRefExpr 0x7f8ccb07aa08 <col:24> 'size_t':'unsigned long' lvalue ParmVar 0x7f8ccb07a800 'bufsize' 'size_t':'unsigned long'
+|         | `-ImplicitCastExpr 0x7f8ccb07ab68 <col:33> 'const char *' <BitCast>
+|         |   `-ImplicitCastExpr 0x7f8ccb07ab50 <col:33> 'char *' <ArrayToPointerDecay>
+|         |     `-StringLiteral 0x7f8ccb07aa68 <col:33> 'char [7]' lvalue "host::"
+|         `-IntegerLiteral 0x7f8ccb07ab80 <col:45> 'int' 1
+`-FunctionDecl 0x7f8ccb07adb8 <line:21:1, line:24:1> line:21:10 send_connect 'unsigned int (apacket *)'
+  |-ParmVarDecl 0x7f8ccb07aca8 <col:23, col:32> col:32 used cp 'apacket *'
+  `-CompoundStmt 0x7f8ccb07b108 <line:22:1, line:24:1>
+    `-ReturnStmt 0x7f8ccb07b0f0 <line:23:3, col:62>
+      `-ImplicitCastExpr 0x7f8ccb07b0d8 <col:10, col:62> 'unsigned int' <IntegralCast>
+        `-CallExpr 0x7f8ccb07b0a0 <col:10, col:62> 'size_t':'unsigned long'
+          |-ImplicitCastExpr 0x7f8ccb07b088 <col:10> 'size_t (*)(char *, size_t)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7f8ccb07ae58 <col:10> 'size_t (char *, size_t)' Function 0x7f8ccb07a910 'fill_connect_data' 'size_t (char *, size_t)'
+          |-CStyleCastExpr 0x7f8ccb07af50 <col:28, col:40> 'char *' <BitCast>
+          | `-ImplicitCastExpr 0x7f8ccb07af38 <col:36, col:40> 'unsigned char *' <ArrayToPointerDecay>
+          |   `-MemberExpr 0x7f8ccb07aec0 <col:36, col:40> 'unsigned char [4096]' lvalue ->data 0x7f8ccb07a730
+          |     `-ImplicitCastExpr 0x7f8ccb07aea8 <col:36> 'apacket *' <LValueToRValue>
+          |       `-DeclRefExpr 0x7f8ccb07ae80 <col:36> 'apacket *' lvalue ParmVar 0x7f8ccb07aca8 'cp' 'apacket *'
+          `-UnaryExprOrTypeTraitExpr 0x7f8ccb07b010 <col:46, col:61> 'unsigned long' sizeof
+            `-ParenExpr 0x7f8ccb07aff0 <col:52, col:61> 'unsigned char [4096]' lvalue
+              `-MemberExpr 0x7f8ccb07afb8 <col:53, col:57> 'unsigned char [4096]' lvalue ->data 0x7f8ccb07a730
+                `-ImplicitCastExpr 0x7f8ccb07afa0 <col:53> 'apacket *' <LValueToRValue>
+                  `-DeclRefExpr 0x7f8ccb07af78 <col:53> 'apacket *' lvalue ParmVar 0x7f8ccb07aca8 'cp' 'apacket *'

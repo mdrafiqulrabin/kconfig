@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7ff4fb8254d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff4fb825a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff4fb825740 '__int128'
+|-TypedefDecl 0x7ff4fb825a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff4fb825760 'unsigned __int128'
+|-TypedefDecl 0x7ff4fb825d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff4fb825b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff4fb825ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff4fb825e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff4fb825dc0 'char *'
+|   `-BuiltinType 0x7ff4fb825560 'char'
+|-TypedefDecl 0x7ff4fb8260c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff4fb826070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff4fb825ee0 'struct __va_list_tag'
+|     `-Record 0x7ff4fb825e58 '__va_list_tag'
+|-VarDecl 0x7ff4fb826138 <c_files/pr70799-5.c:7:1, col:11> col:11 used a 'long long'
+|-VarDecl 0x7ff4fc025a00 <col:1, col:14> col:14 used b 'long long'
+|-FunctionDecl 0x7ff4fc025b50 <line:9:1, line:12:1> line:9:6 test1 'void (int)'
+| |-ParmVarDecl 0x7ff4fc025a90 <col:13, col:17> col:17 used c 'int'
+| `-CompoundStmt 0x7ff4fc025ce8 <line:10:1, line:12:1>
+|   `-BinaryOperator 0x7ff4fc025cc0 <line:11:3, col:12> 'long long' '='
+|     |-DeclRefExpr 0x7ff4fc025bf0 <col:3> 'long long' lvalue Var 0x7ff4fb826138 'a' 'long long'
+|     `-BinaryOperator 0x7ff4fc025c98 <col:7, col:12> 'long long' '<<'
+|       |-ImplicitCastExpr 0x7ff4fc025c68 <col:7> 'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff4fc025c18 <col:7> 'long long' lvalue Var 0x7ff4fc025a00 'b' 'long long'
+|       `-ImplicitCastExpr 0x7ff4fc025c80 <col:12> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7ff4fc025c40 <col:12> 'int' lvalue ParmVar 0x7ff4fc025a90 'c' 'int'
+`-FunctionDecl 0x7ff4fc025da8 <line:14:1, line:17:1> line:14:6 test2 'void (int)'
+  |-ParmVarDecl 0x7ff4fc025d20 <col:13, col:17> col:17 used c 'int'
+  `-CompoundStmt 0x7ff4fc025f40 <line:15:1, line:17:1>
+    `-BinaryOperator 0x7ff4fc025f18 <line:16:3, col:12> 'long long' '='
+      |-DeclRefExpr 0x7ff4fc025e48 <col:3> 'long long' lvalue Var 0x7ff4fb826138 'a' 'long long'
+      `-BinaryOperator 0x7ff4fc025ef0 <col:7, col:12> 'long long' '>>'
+        |-ImplicitCastExpr 0x7ff4fc025ec0 <col:7> 'long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7ff4fc025e70 <col:7> 'long long' lvalue Var 0x7ff4fc025a00 'b' 'long long'
+        `-ImplicitCastExpr 0x7ff4fc025ed8 <col:12> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7ff4fc025e98 <col:12> 'int' lvalue ParmVar 0x7ff4fc025d20 'c' 'int'

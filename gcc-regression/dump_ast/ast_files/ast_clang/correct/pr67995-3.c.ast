@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7f88a10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f88a1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f88a1026740 '__int128'
+|-TypedefDecl 0x7f88a1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f88a1026760 'unsigned __int128'
+|-TypedefDecl 0x7f88a1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f88a1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f88a1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f88a1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f88a1026dc0 'char *'
+|   `-BuiltinType 0x7f88a1026560 'char'
+|-TypedefDecl 0x7f88a10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f88a1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f88a1026ee0 'struct __va_list_tag'
+|     `-Record 0x7f88a1026e58 '__va_list_tag'
+|-FunctionDecl 0x7f88a1826a58 <c_files/pr67995-3.c:4:1, line:16:1> line:6:1 __x86_rdrand 'unsigned int (void)'
+| |-CompoundStmt 0x7f88a1827138 <line:7:1, line:16:1>
+| | |-DeclStmt 0x7f88a1826c38 <line:8:3, col:29>
+| | | `-VarDecl 0x7f88a1826ba0 <col:3, col:26> col:16 used retries 'unsigned int' cinit
+| | |   `-ImplicitCastExpr 0x7f88a1826c20 <col:26> 'unsigned int' <IntegralCast>
+| | |     `-IntegerLiteral 0x7f88a1826c00 <col:26> 'int' 100
+| | |-DeclStmt 0x7f88a1826cc8 <line:9:3, col:19>
+| | | `-VarDecl 0x7f88a1826c68 <col:3, col:16> col:16 used val 'unsigned int'
+| | |-WhileStmt 0x7f88a18270c0 <line:11:3, line:13:14>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7f88a1826f68 <line:11:10, col:48> 'int' '=='
+| | | | |-CallExpr 0x7f88a1826f00 <col:10, col:43> 'unsigned int'
+| | | | | |-ImplicitCastExpr 0x7f88a1826ee8 <col:10> 'unsigned int (*)(unsigned int *)' <BuiltinFnToFnPtr>
+| | | | | | `-DeclRefExpr 0x7f88a1826e48 <col:10> '<builtin fn type>' Function 0x7f88a1826d48 '__builtin_ia32_rdrand32_step' 'unsigned int (unsigned int *)'
+| | | | | `-UnaryOperator 0x7f88a1826e98 <col:39, col:40> 'unsigned int *' prefix '&'
+| | | | |   `-DeclRefExpr 0x7f88a1826e70 <col:40> 'unsigned int' lvalue Var 0x7f88a1826c68 'val' 'unsigned int'
+| | | | `-ImplicitCastExpr 0x7f88a1826f50 <col:48> 'unsigned int' <IntegralCast>
+| | | |   `-IntegerLiteral 0x7f88a1826f30 <col:48> 'int' 0
+| | | `-IfStmt 0x7f88a1827088 <line:12:5, line:13:14>
+| | |   |-<<<NULL>>>
+| | |   |-<<<NULL>>>
+| | |   |-BinaryOperator 0x7f88a1827010 <line:12:9, col:22> 'int' '=='
+| | |   | |-UnaryOperator 0x7f88a1826fb8 <col:9, col:11> 'unsigned int' prefix '--'
+| | |   | | `-DeclRefExpr 0x7f88a1826f90 <col:11> 'unsigned int' lvalue Var 0x7f88a1826ba0 'retries' 'unsigned int'
+| | |   | `-ImplicitCastExpr 0x7f88a1826ff8 <col:22> 'unsigned int' <IntegralCast>
+| | |   |   `-IntegerLiteral 0x7f88a1826fd8 <col:22> 'int' 0
+| | |   |-ReturnStmt 0x7f88a1827070 <line:13:7, col:14>
+| | |   | `-ImplicitCastExpr 0x7f88a1827058 <col:14> 'unsigned int' <IntegralCast>
+| | |   |   `-IntegerLiteral 0x7f88a1827038 <col:14> 'int' 0
+| | |   `-<<<NULL>>>
+| | `-ReturnStmt 0x7f88a1827120 <line:15:3, col:10>
+| |   `-ImplicitCastExpr 0x7f88a1827108 <col:10> 'unsigned int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f88a18270e0 <col:10> 'unsigned int' lvalue Var 0x7f88a1826c68 'val' 'unsigned int'
+| `-TargetAttr 0x7f88a1826af0 <line:5:17, col:31> "rdrnd"
+`-FunctionDecl 0x7f88a1826d48 <line:11:10> col:10 implicit used __builtin_ia32_rdrand32_step 'unsigned int (unsigned int *)' extern
+  `-ParmVarDecl 0x7f88a1826de0 <<invalid sloc>> <invalid sloc> 'unsigned int *'

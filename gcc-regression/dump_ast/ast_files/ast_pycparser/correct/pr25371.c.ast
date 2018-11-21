@@ -1,0 +1,52 @@
+FileAST: 
+  FuncDef: 
+    Decl: slow_close, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: slow_close, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: mm, [], [], []
+        PtrDecl: []
+          TypeDecl: mm, []
+            IdentifierType: ['double']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          BinaryOp: *
+            Constant: int, 2
+            ID: n
+        UnaryOp: p++
+          ID: i
+        For: 
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          BinaryOp: <
+            ID: i
+            BinaryOp: *
+              Constant: int, 2
+              ID: n
+          UnaryOp: p++
+            ID: i
+          Assignment: =
+            UnaryOp: *
+              BinaryOp: +
+                BinaryOp: +
+                  ID: mm
+                  BinaryOp: *
+                    BinaryOp: *
+                      ID: i
+                      Constant: int, 2
+                    ID: n
+                ID: i
+            Constant: int, 0

@@ -1,0 +1,1837 @@
+FileAST: 
+  Typedef: u8, [], ['typedef']
+    TypeDecl: u8, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: u16, [], ['typedef']
+    TypeDecl: u16, []
+      IdentifierType: ['unsigned', 'short']
+  Typedef: u32, [], ['typedef']
+    TypeDecl: u32, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: u64, [], ['typedef']
+    TypeDecl: u64, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  Decl: bar0, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: u8_0, [], [], []
+          TypeDecl: u8_0, []
+            IdentifierType: ['u8']
+        Decl: u16_0, [], [], []
+          TypeDecl: u16_0, []
+            IdentifierType: ['u16']
+        Decl: u32_0, [], [], []
+          TypeDecl: u32_0, []
+            IdentifierType: ['u32']
+        Decl: u64_0, [], [], []
+          TypeDecl: u64_0, []
+            IdentifierType: ['u64']
+        Decl: u8_1, [], [], []
+          TypeDecl: u8_1, []
+            IdentifierType: ['u8']
+        Decl: u16_1, [], [], []
+          TypeDecl: u16_1, []
+            IdentifierType: ['u16']
+        Decl: u32_1, [], [], []
+          TypeDecl: u32_1, []
+            IdentifierType: ['u32']
+        Decl: u64_1, [], [], []
+          TypeDecl: u64_1, []
+            IdentifierType: ['u64']
+        Decl: u8_2, [], [], []
+          TypeDecl: u8_2, []
+            IdentifierType: ['u8']
+        Decl: u16_2, [], [], []
+          TypeDecl: u16_2, []
+            IdentifierType: ['u16']
+        Decl: u32_2, [], [], []
+          TypeDecl: u32_2, []
+            IdentifierType: ['u32']
+        Decl: u64_2, [], [], []
+          TypeDecl: u64_2, []
+            IdentifierType: ['u64']
+        Decl: u8_3, [], [], []
+          TypeDecl: u8_3, []
+            IdentifierType: ['u8']
+        Decl: u16_3, [], [], []
+          TypeDecl: u16_3, []
+            IdentifierType: ['u16']
+        Decl: u32_3, [], [], []
+          TypeDecl: u32_3, []
+            IdentifierType: ['u32']
+        Decl: u64_3, [], [], []
+          TypeDecl: u64_3, []
+            IdentifierType: ['u64']
+      TypeDecl: bar0, []
+        IdentifierType: ['u64']
+  Decl: bar1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: u8_0, [], [], []
+          TypeDecl: u8_0, []
+            IdentifierType: ['u8']
+        Decl: u16_0, [], [], []
+          TypeDecl: u16_0, []
+            IdentifierType: ['u16']
+        Decl: u32_0, [], [], []
+          TypeDecl: u32_0, []
+            IdentifierType: ['u32']
+        Decl: u64_0, [], [], []
+          TypeDecl: u64_0, []
+            IdentifierType: ['u64']
+        Decl: u8_1, [], [], []
+          TypeDecl: u8_1, []
+            IdentifierType: ['u8']
+        Decl: u16_1, [], [], []
+          TypeDecl: u16_1, []
+            IdentifierType: ['u16']
+        Decl: u32_1, [], [], []
+          TypeDecl: u32_1, []
+            IdentifierType: ['u32']
+        Decl: u64_1, [], [], []
+          TypeDecl: u64_1, []
+            IdentifierType: ['u64']
+        Decl: u8_2, [], [], []
+          TypeDecl: u8_2, []
+            IdentifierType: ['u8']
+        Decl: u16_2, [], [], []
+          TypeDecl: u16_2, []
+            IdentifierType: ['u16']
+        Decl: u32_2, [], [], []
+          TypeDecl: u32_2, []
+            IdentifierType: ['u32']
+        Decl: u64_2, [], [], []
+          TypeDecl: u64_2, []
+            IdentifierType: ['u64']
+        Decl: u8_3, [], [], []
+          TypeDecl: u8_3, []
+            IdentifierType: ['u8']
+        Decl: u16_3, [], [], []
+          TypeDecl: u16_3, []
+            IdentifierType: ['u16']
+        Decl: u32_3, [], [], []
+          TypeDecl: u32_3, []
+            IdentifierType: ['u32']
+        Decl: u64_3, [], [], []
+          TypeDecl: u64_3, []
+            IdentifierType: ['u64']
+      TypeDecl: bar1, []
+        IdentifierType: ['u64']
+  Decl: bar2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: u8_0, [], [], []
+          TypeDecl: u8_0, []
+            IdentifierType: ['u8']
+        Decl: u16_0, [], [], []
+          TypeDecl: u16_0, []
+            IdentifierType: ['u16']
+        Decl: u32_0, [], [], []
+          TypeDecl: u32_0, []
+            IdentifierType: ['u32']
+        Decl: u64_0, [], [], []
+          TypeDecl: u64_0, []
+            IdentifierType: ['u64']
+        Decl: u8_1, [], [], []
+          TypeDecl: u8_1, []
+            IdentifierType: ['u8']
+        Decl: u16_1, [], [], []
+          TypeDecl: u16_1, []
+            IdentifierType: ['u16']
+        Decl: u32_1, [], [], []
+          TypeDecl: u32_1, []
+            IdentifierType: ['u32']
+        Decl: u64_1, [], [], []
+          TypeDecl: u64_1, []
+            IdentifierType: ['u64']
+        Decl: u8_2, [], [], []
+          TypeDecl: u8_2, []
+            IdentifierType: ['u8']
+        Decl: u16_2, [], [], []
+          TypeDecl: u16_2, []
+            IdentifierType: ['u16']
+        Decl: u32_2, [], [], []
+          TypeDecl: u32_2, []
+            IdentifierType: ['u32']
+        Decl: u64_2, [], [], []
+          TypeDecl: u64_2, []
+            IdentifierType: ['u64']
+        Decl: u8_3, [], [], []
+          TypeDecl: u8_3, []
+            IdentifierType: ['u8']
+        Decl: u16_3, [], [], []
+          TypeDecl: u16_3, []
+            IdentifierType: ['u16']
+        Decl: u32_3, [], [], []
+          TypeDecl: u32_3, []
+            IdentifierType: ['u32']
+        Decl: u64_3, [], [], []
+          TypeDecl: u64_3, []
+            IdentifierType: ['u64']
+      TypeDecl: bar2, []
+        IdentifierType: ['u64']
+  FuncDef: 
+    Decl: bar0, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u8_0, [], [], []
+            TypeDecl: u8_0, []
+              IdentifierType: ['u8']
+          Decl: u16_0, [], [], []
+            TypeDecl: u16_0, []
+              IdentifierType: ['u16']
+          Decl: u32_0, [], [], []
+            TypeDecl: u32_0, []
+              IdentifierType: ['u32']
+          Decl: u64_0, [], [], []
+            TypeDecl: u64_0, []
+              IdentifierType: ['u64']
+          Decl: u8_1, [], [], []
+            TypeDecl: u8_1, []
+              IdentifierType: ['u8']
+          Decl: u16_1, [], [], []
+            TypeDecl: u16_1, []
+              IdentifierType: ['u16']
+          Decl: u32_1, [], [], []
+            TypeDecl: u32_1, []
+              IdentifierType: ['u32']
+          Decl: u64_1, [], [], []
+            TypeDecl: u64_1, []
+              IdentifierType: ['u64']
+          Decl: u8_2, [], [], []
+            TypeDecl: u8_2, []
+              IdentifierType: ['u8']
+          Decl: u16_2, [], [], []
+            TypeDecl: u16_2, []
+              IdentifierType: ['u16']
+          Decl: u32_2, [], [], []
+            TypeDecl: u32_2, []
+              IdentifierType: ['u32']
+          Decl: u64_2, [], [], []
+            TypeDecl: u64_2, []
+              IdentifierType: ['u64']
+          Decl: u8_3, [], [], []
+            TypeDecl: u8_3, []
+              IdentifierType: ['u8']
+          Decl: u16_3, [], [], []
+            TypeDecl: u16_3, []
+              IdentifierType: ['u16']
+          Decl: u32_3, [], [], []
+            TypeDecl: u32_3, []
+              IdentifierType: ['u32']
+          Decl: u64_3, [], [], []
+            TypeDecl: u64_3, []
+              IdentifierType: ['u64']
+        TypeDecl: bar0, []
+          IdentifierType: ['u64']
+    Compound: 
+      Label: l0
+        Assignment: +=
+          ID: u32_2
+          FuncCall: 
+            ID: __builtin_add_overflow_p
+            ExprList: 
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u32']
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['u64']
+                  ID: u32_0
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u16']
+                UnaryOp: -
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['u32']
+                    ID: u64_2
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u64']
+                UnaryOp: -
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['u64']
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['unsigned']
+                      FuncCall: 
+                        ID: __builtin_parityll
+                        ExprList: 
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['u16']
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['u16']
+                              BinaryOp: <<
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u64']
+                                  Constant: int, 0x1a6cb5b10
+                                Constant: int, 0
+      Assignment: <<=
+        ID: u8_3
+        FuncCall: 
+          ID: __builtin_add_overflow
+          ExprList: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u16']
+              UnaryOp: ~
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['u32']
+                  ID: u64_2
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u16']
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u8']
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned']
+                  FuncCall: 
+                    ID: __builtin_popcountll
+                    ExprList: 
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u16']
+                        UnaryOp: -
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['u8']
+                            BinaryOp: <<
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u64']
+                                Constant: int, 0x725582
+                              Constant: int, 0
+            UnaryOp: &
+              ID: u32_1
+      Assignment: -=
+        ID: u64_1
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['u8']
+          UnaryOp: ~
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u8']
+              Constant: int, 0
+      Assignment: =
+        ID: u16_3
+        BinaryOp: |
+          BinaryOp: >>
+            ID: u16_3
+            BinaryOp: &
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u32']
+                UnaryOp: ~
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['u8']
+                    Constant: int, 1
+              Constant: int, 15
+          BinaryOp: <<
+            ID: u16_3
+            BinaryOp: &
+              BinaryOp: -
+                Constant: int, 16
+                BinaryOp: &
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['u32']
+                    UnaryOp: ~
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u8']
+                        Constant: int, 1
+                  Constant: int, 15
+              Constant: int, 15
+      Assignment: =
+        ID: u8_2
+        TernaryOp: 
+          FuncCall: 
+            ID: __builtin_mul_overflow
+            ExprList: 
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u64']
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['u8']
+                  FuncCall: 
+                    ID: __builtin_bswap32
+                    ExprList: 
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u32']
+                        UnaryOp: -
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['u32']
+                            ID: u16_0
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u64']
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['u16']
+                  ID: u16_2
+              UnaryOp: &
+                ID: u8_3
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['u64']
+            UnaryOp: ~
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u8']
+                ID: u8_3
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['u16']
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u16']
+              BinaryOp: <<
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['u64']
+                  Constant: int, 0x7ffffff
+                Constant: int, 0
+      Assignment: *=
+        ID: u32_0
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['u8']
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['u8']
+            BinaryOp: <<
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u64']
+                Constant: int, 0x1ffffffffffffff
+              Constant: int, 0
+      Assignment: >>=
+        ID: u32_1
+        BinaryOp: >=
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['u64']
+            UnaryOp: ~
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u64']
+                BinaryOp: <<
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['u64']
+                    Constant: int, 0x61bf860d09fb3a
+                  Constant: int, 0
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['u8']
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u16']
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned']
+                FuncCall: 
+                  ID: __builtin_parityll
+                  ExprList: 
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u16']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u8']
+                        BinaryOp: <<
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['u64']
+                            Constant: int, 0x6
+                          Constant: int, 0
+      Assignment: >>=
+        ID: u16_0
+        FuncCall: 
+          ID: __builtin_add_overflow_p
+          ExprList: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u64']
+              UnaryOp: -
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['u8']
+                  BinaryOp: <<
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u64']
+                      Constant: int, 0x68b4dda55e3
+                    Constant: int, 0
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u16']
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u64']
+                FuncCall: 
+                  ID: __builtin_bswap64
+                  ExprList: 
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u16']
+                      UnaryOp: ~
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['u32']
+                          FuncCall: 
+                            ID: __builtin_bswap32
+                            ExprList: 
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u32']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u32']
+                                  ID: u8_3
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u64']
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u16']
+                ID: u16_1
+      Assignment: +=
+        ID: u64_0
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['u8']
+          UnaryOp: -
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u64']
+              BinaryOp: <<
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['u64']
+                  Constant: int, 0xcc88a5c0292b6ba0
+                Constant: int, 0
+      Assignment: +=
+        ID: u32_0
+        FuncCall: 
+          ID: __builtin_mul_overflow
+          ExprList: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u8']
+              UnaryOp: -
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['u64']
+                  BinaryOp: <<
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u64']
+                      Constant: int, 0xc89172ea72a
+                    Constant: int, 0
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u64']
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u64']
+                ID: u8_2
+            UnaryOp: &
+              ID: u8_3
+      Assignment: >>=
+        ID: u64_0
+        FuncCall: 
+          ID: __builtin_add_overflow
+          ExprList: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u32']
+              UnaryOp: -
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['u64']
+                  Constant: int, 0
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u32']
+              UnaryOp: -
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['u16']
+                  ID: u8_1
+            UnaryOp: &
+              ID: u8_2
+      Assignment: >>=
+        ID: u16_1
+        BinaryOp: &
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['u32']
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u64']
+              ID: u16_1
+          Constant: int, 15
+      Assignment: ^=
+        ID: u16_3
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['u16']
+          UnaryOp: ~
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u16']
+              Constant: int, 1
+      Assignment: &=
+        ID: u32_2
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['u16']
+          UnaryOp: -
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u32']
+              Constant: int, 0
+      Label: l1
+        Assignment: =
+          ID: u32_3
+          BinaryOp: |
+            BinaryOp: >>
+              ID: u32_3
+              BinaryOp: &
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['u64']
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['u32']
+                    ID: u32_1
+                Constant: int, 31
+            BinaryOp: <<
+              ID: u32_3
+              BinaryOp: &
+                BinaryOp: -
+                  Constant: int, 32
+                  BinaryOp: &
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u64']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u32']
+                        ID: u32_1
+                    Constant: int, 31
+                Constant: int, 31
+      Assignment: |=
+        ID: u64_1
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['u64']
+          UnaryOp: ~
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u64']
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned']
+                FuncCall: 
+                  ID: __builtin_parityll
+                  ExprList: 
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u8']
+                      UnaryOp: -
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['u32']
+                          ID: u32_1
+      Assignment: *=
+        ID: u8_3
+        FuncCall: 
+          ID: __builtin_add_overflow
+          ExprList: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u64']
+              UnaryOp: -
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['u32']
+                  BinaryOp: <<
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u64']
+                      Constant: int, 0xffff
+                    Constant: int, 0
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u32']
+              UnaryOp: ~
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['u64']
+                  BinaryOp: <<
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u64']
+                      Constant: int, 0x117e3e
+                    Constant: int, 0
+            UnaryOp: &
+              ID: u32_2
+      Assignment: =
+        ID: u16_3
+        BinaryOp: |
+          BinaryOp: <<
+            ID: u16_3
+            BinaryOp: &
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u64']
+                UnaryOp: ~
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['u8']
+                    BinaryOp: <<
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u64']
+                        Constant: int, 0xf78e81
+                      Constant: int, 0
+              Constant: int, 15
+          BinaryOp: >>
+            ID: u16_3
+            BinaryOp: &
+              BinaryOp: -
+                Constant: int, 16
+                BinaryOp: &
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['u64']
+                    UnaryOp: ~
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u8']
+                        BinaryOp: <<
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['u64']
+                            Constant: int, 0xf78e81
+                          Constant: int, 0
+                  Constant: int, 15
+              Constant: int, 15
+      Assignment: =
+        ID: u64_1
+        TernaryOp: 
+          BinaryOp: >
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u64']
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u16']
+                FuncCall: 
+                  ID: bar1
+                  ExprList: 
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u8']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u32']
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['u64']
+                          BinaryOp: <<
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['u64']
+                              Constant: int, 0x3ffffff
+                            Constant: int, 0
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u16']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u8']
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['u16']
+                          BinaryOp: <<
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['u64']
+                              Constant: int, 0x5b
+                            Constant: int, 0
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u32']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u32']
+                        UnaryOp: ~
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['u8']
+                            Constant: int, 1
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u64']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u8']
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['u16']
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['unsigned']
+                            FuncCall: 
+                              ID: __builtin_clrsb
+                              ExprList: 
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u32']
+                                  UnaryOp: ~
+                                    Cast: 
+                                      Typename: None, []
+                                        TypeDecl: None, []
+                                          IdentifierType: ['u32']
+                                      Cast: 
+                                        Typename: None, []
+                                          TypeDecl: None, []
+                                            IdentifierType: ['unsigned']
+                                        FuncCall: 
+                                          ID: __builtin_clrsbll
+                                          ExprList: 
+                                            Cast: 
+                                              Typename: None, []
+                                                TypeDecl: None, []
+                                                  IdentifierType: ['u8']
+                                              Cast: 
+                                                Typename: None, []
+                                                  TypeDecl: None, []
+                                                    IdentifierType: ['u16']
+                                                BinaryOp: <<
+                                                  Cast: 
+                                                    Typename: None, []
+                                                      TypeDecl: None, []
+                                                        IdentifierType: ['u64']
+                                                    Constant: int, 0xffffffff
+                                                  Constant: int, 0
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u8']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u8']
+                        UnaryOp: -
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['u64']
+                            BinaryOp: <<
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u64']
+                                Constant: int, 0x3e43180756484
+                              Constant: int, 0
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u16']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u8']
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['u16']
+                          BinaryOp: <<
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['u64']
+                              Constant: int, 0x7
+                            Constant: int, 0
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u32']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u64']
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['u32']
+                          BinaryOp: <<
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['u64']
+                              Constant: int, 0x285fa35c89
+                            Constant: int, 0
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u64']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u32']
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['u8']
+                          BinaryOp: <<
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['u64']
+                              Constant: int, 0x3ffff
+                            Constant: int, 0
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u8']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u16']
+                        UnaryOp: -
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['u32']
+                            BinaryOp: <<
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u64']
+                                Constant: int, 0x73d01
+                              Constant: int, 0
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u16']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u16']
+                        UnaryOp: -
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['u16']
+                            BinaryOp: <<
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u64']
+                                Constant: int, 0x1fffffffffffff
+                              Constant: int, 0
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u32']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u16']
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['u64']
+                          Constant: int, 0
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u64']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u16']
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['u32']
+                          BinaryOp: <<
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['u64']
+                              Constant: int, 0x4c
+                            Constant: int, 0
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u8']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u64']
+                        UnaryOp: -
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['u64']
+                            BinaryOp: <<
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u64']
+                                Constant: int, 0x3fffffffffffff
+                              Constant: int, 0
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u16']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u16']
+                        UnaryOp: ~
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['u16']
+                            BinaryOp: <<
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u64']
+                                Constant: int, 0xfffffffff
+                              Constant: int, 0
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u32']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u64']
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['u16']
+                          BinaryOp: <<
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['u64']
+                              Constant: int, 0x7edb0cc1c
+                            Constant: int, 0
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u64']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u32']
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['u64']
+                          BinaryOp: <<
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['u64']
+                              Constant: int, 0x1ffffffffff
+                            Constant: int, 0
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u16']
+              UnaryOp: -
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['u64']
+                  BinaryOp: <<
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u64']
+                      Constant: int, 0x7
+                    Constant: int, 0
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['u16']
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u8']
+              ID: u64_2
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['u64']
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u16']
+              ID: u32_2
+      Assignment: >>=
+        ID: u32_0
+        BinaryOp: !=
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['u8']
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u16']
+              BinaryOp: <<
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['u64']
+                  Constant: int, 0x32
+                Constant: int, 0
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['u16']
+            UnaryOp: -
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u64']
+                ID: u16_3
+      Assignment: *=
+        ID: u16_1
+        FuncCall: 
+          ID: __builtin_mul_overflow_p
+          ExprList: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u64']
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u32']
+                ID: u32_1
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u16']
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u8']
+                BinaryOp: <<
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['u64']
+                    Constant: int, 0x4ad149d89bf0be6
+                  Constant: int, 0
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u64']
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u32']
+                BinaryOp: <<
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['u64']
+                    Constant: int, 0x1bd7589
+                  Constant: int, 0
+      Assignment: &=
+        ID: u8_1
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['u64']
+          UnaryOp: -
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u64']
+              ID: u8_0
+      Assignment: %=
+        ID: u16_3
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['u16']
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['u16']
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned']
+              FuncCall: 
+                ID: __builtin_clrsbll
+                ExprList: 
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['u32']
+                    UnaryOp: ~
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u32']
+                        BinaryOp: <<
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['u64']
+                            Constant: int, 0x3db8721fd79
+                          Constant: int, 0
+      Assignment: >>=
+        ID: u8_3
+        BinaryOp: &
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['u32']
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u8']
+              ID: u8_1
+          Constant: int, 7
+      Assignment: |=
+        ID: u64_1
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['u8']
+          UnaryOp: -
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['u64']
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned']
+                FuncCall: 
+                  ID: __builtin_ffsll
+                  ExprList: 
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u32']
+                      UnaryOp: -
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['u64']
+                          FuncCall: 
+                            ID: bar2
+                            ExprList: 
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u8']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u16']
+                                  Cast: 
+                                    Typename: None, []
+                                      TypeDecl: None, []
+                                        IdentifierType: ['u16']
+                                    BinaryOp: <<
+                                      Cast: 
+                                        Typename: None, []
+                                          TypeDecl: None, []
+                                            IdentifierType: ['u64']
+                                        Constant: int, 0x3
+                                      Constant: int, 0
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u16']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u32']
+                                  UnaryOp: -
+                                    Cast: 
+                                      Typename: None, []
+                                        TypeDecl: None, []
+                                          IdentifierType: ['u8']
+                                      BinaryOp: <<
+                                        Cast: 
+                                          Typename: None, []
+                                            TypeDecl: None, []
+                                              IdentifierType: ['u64']
+                                          Constant: int, 0x86af5
+                                        Constant: int, 0
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u32']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u16']
+                                  UnaryOp: -
+                                    Cast: 
+                                      Typename: None, []
+                                        TypeDecl: None, []
+                                          IdentifierType: ['u64']
+                                      FuncCall: 
+                                        ID: __builtin_bswap64
+                                        ExprList: 
+                                          Cast: 
+                                            Typename: None, []
+                                              TypeDecl: None, []
+                                                IdentifierType: ['u64']
+                                            UnaryOp: -
+                                              Cast: 
+                                                Typename: None, []
+                                                  TypeDecl: None, []
+                                                    IdentifierType: ['u64']
+                                                Constant: int, 0
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u64']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u16']
+                                  Cast: 
+                                    Typename: None, []
+                                      TypeDecl: None, []
+                                        IdentifierType: ['u16']
+                                    BinaryOp: <<
+                                      Cast: 
+                                        Typename: None, []
+                                          TypeDecl: None, []
+                                            IdentifierType: ['u64']
+                                        Constant: int, 0x75138426ec84c6
+                                      Constant: int, 0
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u8']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u64']
+                                  Cast: 
+                                    Typename: None, []
+                                      TypeDecl: None, []
+                                        IdentifierType: ['u32']
+                                    BinaryOp: <<
+                                      Cast: 
+                                        Typename: None, []
+                                          TypeDecl: None, []
+                                            IdentifierType: ['u64']
+                                        Constant: int, 0x7fffffffff
+                                      Constant: int, 0
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u16']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u32']
+                                  UnaryOp: ~
+                                    Cast: 
+                                      Typename: None, []
+                                        TypeDecl: None, []
+                                          IdentifierType: ['u8']
+                                      BinaryOp: <<
+                                        Cast: 
+                                          Typename: None, []
+                                            TypeDecl: None, []
+                                              IdentifierType: ['u64']
+                                          Constant: int, 0x71aa939dbdf3
+                                        Constant: int, 0
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u32']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u16']
+                                  Cast: 
+                                    Typename: None, []
+                                      TypeDecl: None, []
+                                        IdentifierType: ['u32']
+                                    BinaryOp: <<
+                                      Cast: 
+                                        Typename: None, []
+                                          TypeDecl: None, []
+                                            IdentifierType: ['u64']
+                                        Constant: int, 0x8776ee7dbb651a2d
+                                      Constant: int, 0
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u64']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u8']
+                                  Cast: 
+                                    Typename: None, []
+                                      TypeDecl: None, []
+                                        IdentifierType: ['u64']
+                                    Constant: int, 0
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u8']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u16']
+                                  Cast: 
+                                    Typename: None, []
+                                      TypeDecl: None, []
+                                        IdentifierType: ['u8']
+                                    Cast: 
+                                      Typename: None, []
+                                        TypeDecl: None, []
+                                          IdentifierType: ['unsigned']
+                                      FuncCall: 
+                                        ID: __builtin_clrsbll
+                                        ExprList: 
+                                          Cast: 
+                                            Typename: None, []
+                                              TypeDecl: None, []
+                                                IdentifierType: ['u16']
+                                            UnaryOp: ~
+                                              Cast: 
+                                                Typename: None, []
+                                                  TypeDecl: None, []
+                                                    IdentifierType: ['u32']
+                                                BinaryOp: <<
+                                                  Cast: 
+                                                    Typename: None, []
+                                                      TypeDecl: None, []
+                                                        IdentifierType: ['u64']
+                                                    Constant: int, 0x8df94655ec8430
+                                                  Constant: int, 0
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u16']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u16']
+                                  UnaryOp: -
+                                    Cast: 
+                                      Typename: None, []
+                                        TypeDecl: None, []
+                                          IdentifierType: ['u64']
+                                      Cast: 
+                                        Typename: None, []
+                                          TypeDecl: None, []
+                                            IdentifierType: ['unsigned']
+                                        FuncCall: 
+                                          ID: __builtin_clrsbll
+                                          ExprList: 
+                                            Cast: 
+                                              Typename: None, []
+                                                TypeDecl: None, []
+                                                  IdentifierType: ['u32']
+                                              Cast: 
+                                                Typename: None, []
+                                                  TypeDecl: None, []
+                                                    IdentifierType: ['u64']
+                                                BinaryOp: <<
+                                                  Cast: 
+                                                    Typename: None, []
+                                                      TypeDecl: None, []
+                                                        IdentifierType: ['u64']
+                                                    Constant: int, 0x3090a532
+                                                  Constant: int, 0
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u32']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u16']
+                                  UnaryOp: ~
+                                    Cast: 
+                                      Typename: None, []
+                                        TypeDecl: None, []
+                                          IdentifierType: ['u16']
+                                      Constant: int, 1
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u64']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u8']
+                                  Cast: 
+                                    Typename: None, []
+                                      TypeDecl: None, []
+                                        IdentifierType: ['u32']
+                                    BinaryOp: <<
+                                      Cast: 
+                                        Typename: None, []
+                                          TypeDecl: None, []
+                                            IdentifierType: ['u64']
+                                        Constant: int, 0x7fffffffffff
+                                      Constant: int, 0
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u8']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u32']
+                                  UnaryOp: ~
+                                    Cast: 
+                                      Typename: None, []
+                                        TypeDecl: None, []
+                                          IdentifierType: ['u64']
+                                      Constant: int, 0
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u16']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u8']
+                                  UnaryOp: ~
+                                    Cast: 
+                                      Typename: None, []
+                                        TypeDecl: None, []
+                                          IdentifierType: ['u8']
+                                      Cast: 
+                                        Typename: None, []
+                                          TypeDecl: None, []
+                                            IdentifierType: ['unsigned']
+                                        FuncCall: 
+                                          ID: __builtin_ffs
+                                          ExprList: 
+                                            Cast: 
+                                              Typename: None, []
+                                                TypeDecl: None, []
+                                                  IdentifierType: ['u64']
+                                              Cast: 
+                                                Typename: None, []
+                                                  TypeDecl: None, []
+                                                    IdentifierType: ['u64']
+                                                Constant: int, 0
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u32']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u16']
+                                  UnaryOp: -
+                                    Cast: 
+                                      Typename: None, []
+                                        TypeDecl: None, []
+                                          IdentifierType: ['u8']
+                                      BinaryOp: <<
+                                        Cast: 
+                                          Typename: None, []
+                                            TypeDecl: None, []
+                                              IdentifierType: ['u64']
+                                          Constant: int, 0x5dfe702
+                                        Constant: int, 0
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['u64']
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['u8']
+                                  Cast: 
+                                    Typename: None, []
+                                      TypeDecl: None, []
+                                        IdentifierType: ['u64']
+                                    BinaryOp: <<
+                                      Cast: 
+                                        Typename: None, []
+                                          TypeDecl: None, []
+                                            IdentifierType: ['u64']
+                                        Constant: int, 0x68f2a584e0
+                                      Constant: int, 0
+      Assignment: >>=
+        ID: u32_3
+        BinaryOp: &
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['u32']
+            UnaryOp: -
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u32']
+                ID: u32_2
+          Constant: int, 31
+      Assignment: =
+        ID: u8_3
+        BinaryOp: |
+          BinaryOp: >>
+            ID: u8_3
+            BinaryOp: &
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u32']
+                UnaryOp: -
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['u8']
+                    ID: u8_1
+              Constant: int, 7
+          BinaryOp: <<
+            ID: u8_3
+            BinaryOp: &
+              BinaryOp: -
+                Constant: int, 8
+                BinaryOp: &
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['u32']
+                    UnaryOp: -
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['u8']
+                        ID: u8_1
+                  Constant: int, 7
+              Constant: int, 7
+      Assignment: >>=
+        ID: u8_2
+        BinaryOp: &
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['u16']
+            UnaryOp: -
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u64']
+                ID: u64_3
+          Constant: int, 7
+      Assignment: =
+        ID: u32_1
+        BinaryOp: |
+          BinaryOp: >>
+            ID: u32_1
+            BinaryOp: &
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['u16']
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['u16']
+                  Constant: int, 1
+              Constant: int, 31
+          BinaryOp: <<
+            ID: u32_1
+            BinaryOp: &
+              BinaryOp: -
+                Constant: int, 32
+                BinaryOp: &
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['u16']
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['u16']
+                      Constant: int, 1
+                  Constant: int, 31
+              Constant: int, 31
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            BinaryOp: +
+              BinaryOp: +
+                BinaryOp: +
+                  BinaryOp: +
+                    BinaryOp: +
+                      BinaryOp: +
+                        BinaryOp: +
+                          BinaryOp: +
+                            BinaryOp: +
+                              BinaryOp: +
+                                BinaryOp: +
+                                  BinaryOp: +
+                                    BinaryOp: +
+                                      ID: u8_0
+                                      ID: u16_0
+                                    ID: u32_0
+                                  ID: u64_0
+                                ID: u8_1
+                              ID: u16_1
+                            ID: u32_1
+                          ID: u64_1
+                        ID: u8_2
+                      ID: u16_2
+                    ID: u32_2
+                  ID: u64_2
+                ID: u8_3
+              ID: u16_3
+            ID: u32_3
+          ID: u64_3

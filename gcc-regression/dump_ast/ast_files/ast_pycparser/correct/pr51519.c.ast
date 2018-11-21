@@ -1,0 +1,93 @@
+FileAST: 
+  Decl: fe, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fe, []
+        IdentifierType: ['void']
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: FX, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            PtrDecl: []
+              FuncDecl: 
+                ParamList: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+                TypeDecl: f, []
+                  IdentifierType: ['void']
+        TypeDecl: FX, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: fe
+      FuncCall: 
+        UnaryOp: *
+          ID: f
+  FuncDef: 
+    Decl: f4, [], ['static'], ['inline']
+      FuncDecl: 
+        TypeDecl: f4, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: i
+        FuncCall: 
+          ID: FX
+          ExprList: 
+            ID: fe
+  FuncDef: 
+    Decl: f3, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f3, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: f4
+      If: 
+        ID: i
+        FuncCall: 
+          ID: FX
+          ExprList: 
+            ID: f4
+  FuncDef: 
+    Decl: f2, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f2, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: FX
+        ExprList: 
+          UnaryOp: &
+            ID: f3
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f1, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: FX
+        ExprList: 
+          UnaryOp: &
+            ID: f2

@@ -1,0 +1,62 @@
+c_files/pr66912.c:4:16: warning: target does not support 'protected' visibility; using 'default' [-Wunsupported-visibility]
+__attribute__((visibility("protected")))
+               ^
+c_files/pr66912.c:7:22: warning: target does not support 'protected' visibility; using 'default' [-Wunsupported-visibility]
+__attribute__((weak, visibility("protected")))
+                     ^
+c_files/pr66912.c:10:16: warning: target does not support 'protected' visibility; using 'default' [-Wunsupported-visibility]
+__attribute__((visibility("protected")))
+               ^
+c_files/pr66912.c:13:22: warning: target does not support 'protected' visibility; using 'default' [-Wunsupported-visibility]
+__attribute__((weak, visibility("protected")))
+                     ^
+4 warnings generated.
+TranslationUnitDecl 0x7fb46e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb46e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb46e826740 '__int128'
+|-TypedefDecl 0x7fb46e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb46e826760 'unsigned __int128'
+|-TypedefDecl 0x7fb46e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb46e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb46e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb46e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb46e826dc0 'char *'
+|   `-BuiltinType 0x7fb46e826560 'char'
+|-TypedefDecl 0x7fb46e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb46e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb46e826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb46e826e58 '__va_list_tag'
+|-VarDecl 0x7fb46e878400 <c_files/pr66912.c:4:1, line:5:5> col:5 used n_common 'int'
+| `-VisibilityAttr 0x7fb46e878460 <line:4:16, col:38> Default
+|-VarDecl 0x7fb46e878538 <line:7:1, line:8:5> col:5 used n_weak_common 'int'
+| |-VisibilityAttr 0x7fb46e878598 <line:7:22, col:44> Default
+| `-WeakAttr 0x7fb46e8785e0 <col:16>
+|-VarDecl 0x7fb46e878640 <line:10:1, line:11:15> col:5 used n_init 'int' cinit
+| |-UnaryOperator 0x7fb46e878708 <col:14, col:15> 'int' prefix '-'
+| | `-IntegerLiteral 0x7fb46e8786e8 <col:15> 'int' 1
+| `-VisibilityAttr 0x7fb46e8786a0 <line:10:16, col:38> Default
+|-VarDecl 0x7fb46e878778 <line:13:1, line:14:20> col:5 used n_weak_init 'int' cinit
+| |-UnaryOperator 0x7fb46e878850 <col:19, col:20> 'int' prefix '-'
+| | `-IntegerLiteral 0x7fb46e878830 <col:20> 'int' 1
+| |-VisibilityAttr 0x7fb46e8787d8 <line:13:22, col:44> Default
+| `-WeakAttr 0x7fb46e878820 <col:16>
+|-FunctionDecl 0x7fb46e8788c0 <line:16:1, line:21:1> line:17:1 f1 'int ()'
+| `-CompoundStmt 0x7fb46e8789b0 <line:18:1, line:21:1>
+|   `-ReturnStmt 0x7fb46e878998 <line:20:3, col:10>
+|     `-ImplicitCastExpr 0x7fb46e878980 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb46e878958 <col:10> 'int' lvalue Var 0x7fb46e878400 'n_common' 'int'
+|-FunctionDecl 0x7fb46e8789f8 <line:23:1, line:28:1> line:24:1 f2 'int ()'
+| `-CompoundStmt 0x7fb46e878ae8 <line:25:1, line:28:1>
+|   `-ReturnStmt 0x7fb46e878ad0 <line:27:3, col:10>
+|     `-ImplicitCastExpr 0x7fb46e878ab8 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb46e878a90 <col:10> 'int' lvalue Var 0x7fb46e878538 'n_weak_common' 'int'
+|-FunctionDecl 0x7fb46e878b30 <line:30:1, line:35:1> line:31:1 f3 'int ()'
+| `-CompoundStmt 0x7fb46e878c20 <line:32:1, line:35:1>
+|   `-ReturnStmt 0x7fb46e878c08 <line:34:3, col:10>
+|     `-ImplicitCastExpr 0x7fb46e878bf0 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb46e878bc8 <col:10> 'int' lvalue Var 0x7fb46e878640 'n_init' 'int'
+`-FunctionDecl 0x7fb46e878c68 <line:37:1, line:42:1> line:38:1 f4 'int ()'
+  `-CompoundStmt 0x7fb46e878d58 <line:39:1, line:42:1>
+    `-ReturnStmt 0x7fb46e878d40 <line:41:3, col:10>
+      `-ImplicitCastExpr 0x7fb46e878d28 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fb46e878d00 <col:10> 'int' lvalue Var 0x7fb46e878778 'n_weak_init' 'int'

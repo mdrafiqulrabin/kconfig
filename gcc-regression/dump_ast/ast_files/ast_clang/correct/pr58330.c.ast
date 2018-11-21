@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7faa598216d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faa59821c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faa59821940 '__int128'
+|-TypedefDecl 0x7faa59821c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faa59821960 'unsigned __int128'
+|-TypedefDecl 0x7faa59821f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faa59821d70 'struct __NSConstantString_tag'
+|   `-Record 0x7faa59821ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faa59822000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faa59821fc0 'char *'
+|   `-BuiltinType 0x7faa59821760 'char'
+|-TypedefDecl 0x7faa598222c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faa59822270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faa598220e0 'struct __va_list_tag'
+|     `-Record 0x7faa59822058 '__va_list_tag'
+|-FunctionDecl 0x7faa5902acd0 <c_files/pr58330.c:6:1, line:11:1> line:7:1 write_reverse 'void (unsigned long *, unsigned long)'
+| |-ParmVarDecl 0x7faa59822360 <col:16, col:31> col:31 used addr 'unsigned long *'
+| |-ParmVarDecl 0x7faa5902ac00 <col:37, col:51> col:51 used val 'unsigned long'
+| `-CompoundStmt 0x7faa5902b340 <line:8:1, line:11:1>
+|   |-DeclStmt 0x7faa5902b0c8 <line:9:3, col:50>
+|   | `-VarDecl 0x7faa5902add0 <col:3, col:49> col:17 used reverse 'unsigned long' cinit
+|   |   `-ImplicitCastExpr 0x7faa5902b0b0 <col:27, col:49> 'unsigned long' <IntegralCast>
+|   |     `-CallExpr 0x7faa5902b050 <col:27, col:49> 'unsigned long long'
+|   |       |-ImplicitCastExpr 0x7faa5902b038 <col:27> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7faa5902afc0 <col:27> '<builtin fn type>' Function 0x7faa5902ae68 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+|   |       `-ImplicitCastExpr 0x7faa5902b098 <col:46> 'unsigned long long' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7faa5902b080 <col:46> 'unsigned long' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7faa5902afe8 <col:46> 'unsigned long' lvalue ParmVar 0x7faa5902ac00 'val' 'unsigned long'
+|   `-AtomicExpr 0x7faa5902b2f0 <line:10:3, col:52> 'void'
+|     |-ImplicitCastExpr 0x7faa5902b2c0 <col:21> 'unsigned long *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7faa5902b1c8 <col:21> 'unsigned long *' lvalue ParmVar 0x7faa59822360 'addr' 'unsigned long *'
+|     |-IntegerLiteral 0x7faa5902b218 <<built-in>:11:26> 'int' 0
+|     `-ImplicitCastExpr 0x7faa5902b2d8 <c_files/pr58330.c:10:27> 'unsigned long' <LValueToRValue>
+|       `-DeclRefExpr 0x7faa5902b1f0 <col:27> 'unsigned long' lvalue Var 0x7faa5902add0 'reverse' 'unsigned long'
+|-FunctionDecl 0x7faa5902ae68 <line:9:27> col:27 implicit used __builtin_bswap64 'unsigned long long (unsigned long long)' extern
+| |-ParmVarDecl 0x7faa5902af00 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| |-NoThrowAttr 0x7faa5902af68 <col:27> Implicit
+| `-ConstAttr 0x7faa5902afb0 <col:27> Implicit
+`-FunctionDecl 0x7faa5902b108 <line:10:3> col:3 implicit used __atomic_store_n 'void ()' extern

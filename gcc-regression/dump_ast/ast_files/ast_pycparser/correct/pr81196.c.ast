@@ -1,0 +1,55 @@
+FileAST: 
+  FuncDef: 
+    Decl: b, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['short']
+        TypeDecl: b, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: p
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['short']
+          FuncCall: 
+            ID: __builtin_assume_aligned
+            ExprList: 
+              ID: p
+              Constant: int, 64
+      Decl: q, [], [], []
+        PtrDecl: []
+          TypeDecl: q, []
+            IdentifierType: ['short']
+        BinaryOp: +
+          ID: p
+          Constant: int, 255
+      For: 
+        BinaryOp: <
+          ID: p
+          ID: q
+        ExprList: 
+          UnaryOp: ++
+            ID: p
+          UnaryOp: --
+            ID: q
+        Compound: 
+          Decl: t, [], [], []
+            TypeDecl: t, []
+              IdentifierType: ['short']
+            UnaryOp: *
+              ID: p
+          Assignment: =
+            UnaryOp: *
+              ID: p
+            UnaryOp: *
+              ID: q
+          Assignment: =
+            UnaryOp: *
+              ID: q
+            ID: t

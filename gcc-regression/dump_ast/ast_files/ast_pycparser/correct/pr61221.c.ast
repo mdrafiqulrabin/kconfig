@@ -1,0 +1,103 @@
+FileAST: 
+  Decl: __assert_fail, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: __assert_fail, []
+        IdentifierType: ['void']
+  Decl: a, [], [], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: j, [], [], []
+    PtrDecl: []
+      TypeDecl: j, []
+        IdentifierType: ['int']
+  Decl: d, [], [], []
+    PtrDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['short']
+  Decl: f, [], [], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: f, []
+          IdentifierType: ['short']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        PtrDecl: []
+          TypeDecl: foo, []
+            IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: a
+        ID: j
+      If: 
+        UnaryOp: !
+          BinaryOp: &
+            Constant: int, 1
+            ID: e
+        FuncCall: 
+          ID: __assert_fail
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: g, [], [], []
+        PtrDecl: []
+          TypeDecl: g, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: b
+      Decl: h, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: h, []
+              IdentifierType: ['short']
+        UnaryOp: &
+          ID: d
+      If: 
+        BinaryOp: !=
+          Assignment: =
+            ID: f
+            UnaryOp: &
+              ID: d
+          ID: h
+        For: 
+          ID: b
+          Compound: 
+            Decl: i, [], [], []
+              TypeDecl: i, []
+                IdentifierType: ['int']
+              Constant: int, 1
+            If: 
+              ID: i
+              Assignment: =
+                ID: g
+                FuncCall: 
+                  ID: foo
+            Assignment: =
+              ID: c
+              Constant: int, 0
+      If: 
+        UnaryOp: !
+          ID: g
+        FuncCall: 
+          ID: __assert_fail

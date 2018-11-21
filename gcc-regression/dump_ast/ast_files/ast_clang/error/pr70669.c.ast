@@ -1,0 +1,55 @@
+c_files/pr70669.c:10:11: error: __float128 is not supported on this target
+void foo (TYPE *p, TYPE *q)
+          ^
+c_files/pr70669.c:7:14: note: expanded from macro 'TYPE'
+#define TYPE __float128
+             ^
+c_files/pr70669.c:10:20: error: __float128 is not supported on this target
+void foo (TYPE *p, TYPE *q)
+                   ^
+c_files/pr70669.c:7:14: note: expanded from macro 'TYPE'
+#define TYPE __float128
+             ^
+c_files/pr70669.c:12:3: error: __float128 is not supported on this target
+  TYPE r = *q;
+  ^
+c_files/pr70669.c:7:14: note: expanded from macro 'TYPE'
+#define TYPE __float128
+             ^
+3 errors generated.
+TranslationUnitDecl 0x7fb0208264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb020826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb020826740 '__int128'
+|-TypedefDecl 0x7fb020826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb020826760 'unsigned __int128'
+|-TypedefDecl 0x7fb020826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb020826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb020826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb020826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb020826dc0 'char *'
+|   `-BuiltinType 0x7fb020826560 'char'
+|-TypedefDecl 0x7fb0208270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb020827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb020826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb020826e58 '__va_list_tag'
+`-FunctionDecl 0x7fb021025ad0 <c_files/pr70669.c:10:1, line:17:1> line:10:6 foo 'void (__float128 *, __float128 *)'
+  |-ParmVarDecl 0x7fb020827160 <line:7:14, line:10:17> col:17 used p '__float128 *'
+  |-ParmVarDecl 0x7fb021025a00 <line:7:14, line:10:26> col:26 used q '__float128 *'
+  `-CompoundStmt 0x7fb021025f50 <line:11:1, line:17:1>
+    |-DeclStmt 0x7fb021025ca8 <line:7:14, line:12:14>
+    | `-VarDecl 0x7fb021025bd0 <line:7:14, line:12:13> col:8 used r '__float128' cinit
+    |   `-ImplicitCastExpr 0x7fb021025c90 <col:12, col:13> '__float128' <LValueToRValue>
+    |     `-UnaryOperator 0x7fb021025c70 <col:12, col:13> '__float128' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7fb021025c58 <col:13> '__float128 *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fb021025c30 <col:13> '__float128 *' lvalue ParmVar 0x7fb021025a00 'q' '__float128 *'
+    |-GCCAsmStmt 0x7fb021025dc0 <line:14:3, col:30>
+    | `-DeclRefExpr 0x7fb021025d98 <col:28> '__float128' lvalue Var 0x7fb021025bd0 'r' '__float128'
+    `-BinaryOperator 0x7fb021025f28 <line:16:3, col:12> '__float128' '='
+      |-UnaryOperator 0x7fb021025e60 <col:3, col:4> '__float128' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fb021025e48 <col:4> '__float128 *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb021025e20 <col:4> '__float128 *' lvalue ParmVar 0x7fb020827160 'p' '__float128 *'
+      `-BinaryOperator 0x7fb021025f00 <col:8, col:12> '__float128' '+'
+        |-ImplicitCastExpr 0x7fb021025ed0 <col:8> '__float128' <LValueToRValue>
+        | `-DeclRefExpr 0x7fb021025e80 <col:8> '__float128' lvalue Var 0x7fb021025bd0 'r' '__float128'
+        `-ImplicitCastExpr 0x7fb021025ee8 <col:12> '__float128' <LValueToRValue>
+          `-DeclRefExpr 0x7fb021025ea8 <col:12> '__float128' lvalue Var 0x7fb021025bd0 'r' '__float128'

@@ -1,0 +1,263 @@
+c_files/pr65120.c:15:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  r = !a == 0;
+      ^  ~~
+c_files/pr65120.c:15:7: note: add parentheses after the '!' to evaluate the comparison first
+  r = !a == 0;
+      ^
+       (     )
+c_files/pr65120.c:15:7: note: add parentheses around left hand side expression to silence this warning
+  r = !a == 0;
+      ^
+      ( )
+c_files/pr65120.c:16:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  r = !a != 0;
+      ^  ~~
+c_files/pr65120.c:16:7: note: add parentheses after the '!' to evaluate the comparison first
+  r = !a != 0;
+      ^
+       (     )
+c_files/pr65120.c:16:7: note: add parentheses around left hand side expression to silence this warning
+  r = !a != 0;
+      ^
+      ( )
+c_files/pr65120.c:17:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  r = !a == 1;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^  ~~
+c_files/pr65120.c:17:7: note: add parentheses after the '!' to evaluate the comparison first
+  r = !a == 1;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (     )
+c_files/pr65120.c:17:7: note: add parentheses around left hand side expression to silence this warning
+  r = !a == 1;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      ( )
+c_files/pr65120.c:18:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  r = !a != 1;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^  ~~
+c_files/pr65120.c:18:7: note: add parentheses after the '!' to evaluate the comparison first
+  r = !a != 1;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (     )
+c_files/pr65120.c:18:7: note: add parentheses around left hand side expression to silence this warning
+  r = !a != 1;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      ( )
+c_files/pr65120.c:24:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  r = !a > 0;   /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^  ~
+c_files/pr65120.c:24:7: note: add parentheses after the '!' to evaluate the comparison first
+  r = !a > 0;   /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (    )
+c_files/pr65120.c:24:7: note: add parentheses around left hand side expression to silence this warning
+  r = !a > 0;   /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      ( )
+c_files/pr65120.c:25:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  r = !a >= 0;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^  ~~
+c_files/pr65120.c:25:7: note: add parentheses after the '!' to evaluate the comparison first
+  r = !a >= 0;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (     )
+c_files/pr65120.c:25:7: note: add parentheses around left hand side expression to silence this warning
+  r = !a >= 0;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      ( )
+c_files/pr65120.c:26:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  r = !a < 0;   /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^  ~
+c_files/pr65120.c:26:7: note: add parentheses after the '!' to evaluate the comparison first
+  r = !a < 0;   /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (    )
+c_files/pr65120.c:26:7: note: add parentheses around left hand side expression to silence this warning
+  r = !a < 0;   /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      ( )
+c_files/pr65120.c:27:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  r = !a <= 0;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^  ~~
+c_files/pr65120.c:27:7: note: add parentheses after the '!' to evaluate the comparison first
+  r = !a <= 0;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (     )
+c_files/pr65120.c:27:7: note: add parentheses around left hand side expression to silence this warning
+  r = !a <= 0;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      ( )
+c_files/pr65120.c:28:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  r = !a > 1;   /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^  ~
+c_files/pr65120.c:28:7: note: add parentheses after the '!' to evaluate the comparison first
+  r = !a > 1;   /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (    )
+c_files/pr65120.c:28:7: note: add parentheses around left hand side expression to silence this warning
+  r = !a > 1;   /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      ( )
+c_files/pr65120.c:29:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  r = !a >= 1;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^  ~~
+c_files/pr65120.c:29:7: note: add parentheses after the '!' to evaluate the comparison first
+  r = !a >= 1;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (     )
+c_files/pr65120.c:29:7: note: add parentheses around left hand side expression to silence this warning
+  r = !a >= 1;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      ( )
+c_files/pr65120.c:30:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  r = !a < 1;   /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^  ~
+c_files/pr65120.c:30:7: note: add parentheses after the '!' to evaluate the comparison first
+  r = !a < 1;   /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (    )
+c_files/pr65120.c:30:7: note: add parentheses around left hand side expression to silence this warning
+  r = !a < 1;   /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      ( )
+c_files/pr65120.c:31:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  r = !a <= 1;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^  ~~
+c_files/pr65120.c:31:7: note: add parentheses after the '!' to evaluate the comparison first
+  r = !a <= 1;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (     )
+c_files/pr65120.c:31:7: note: add parentheses around left hand side expression to silence this warning
+  r = !a <= 1;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      ( )
+c_files/pr65120.c:25:10: warning: comparison of constant 0 with boolean expression is always true [-Wtautological-constant-out-of-range-compare]
+  r = !a >= 0;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ~~ ^  ~
+c_files/pr65120.c:26:10: warning: comparison of constant 0 with boolean expression is always false [-Wtautological-constant-out-of-range-compare]
+  r = !a < 0;   /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ~~ ^ ~
+c_files/pr65120.c:28:10: warning: comparison of constant 1 with boolean expression is always false [-Wtautological-constant-out-of-range-compare]
+  r = !a > 1;   /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ~~ ^ ~
+c_files/pr65120.c:31:10: warning: comparison of constant 1 with boolean expression is always true [-Wtautological-constant-out-of-range-compare]
+  r = !a <= 1;  /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ~~ ^  ~
+16 warnings generated.
+TranslationUnitDecl 0x7fe1de0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe1de026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe1de026740 '__int128'
+|-TypedefDecl 0x7fe1de026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe1de026760 'unsigned __int128'
+|-TypedefDecl 0x7fe1de026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe1de026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe1de026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe1de026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe1de026dc0 'char *'
+|   `-BuiltinType 0x7fe1de026560 'char'
+|-TypedefDecl 0x7fe1de0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe1de027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe1de026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe1de026e58 '__va_list_tag'
+|-VarDecl 0x7fe1de027130 <c_files/pr65120.c:7:14, line:10:6> col:6 used r '_Bool'
+|-FunctionDecl 0x7fe1de825ac0 <line:12:1, line:19:1> line:13:1 f1 'void (int)'
+| |-ParmVarDecl 0x7fe1de825a00 <col:5, col:9> col:9 used a 'int'
+| `-CompoundStmt 0x7fe1de825fa0 <line:14:1, line:19:1>
+|   |-BinaryOperator 0x7fe1de825c48 <line:15:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7fe1de825b60 <col:3> '_Bool' lvalue Var 0x7fe1de027130 'r' '_Bool'
+|   | `-ImplicitCastExpr 0x7fe1de825c30 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7fe1de825c08 <col:7, col:13> 'int' '=='
+|   |     |-UnaryOperator 0x7fe1de825bc8 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7fe1de825bb0 <col:8> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fe1de825b88 <col:8> 'int' lvalue ParmVar 0x7fe1de825a00 'a' 'int'
+|   |     `-IntegerLiteral 0x7fe1de825be8 <col:13> 'int' 0
+|   |-BinaryOperator 0x7fe1de825d58 <line:16:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7fe1de825c70 <col:3> '_Bool' lvalue Var 0x7fe1de027130 'r' '_Bool'
+|   | `-ImplicitCastExpr 0x7fe1de825d40 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7fe1de825d18 <col:7, col:13> 'int' '!='
+|   |     |-UnaryOperator 0x7fe1de825cd8 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7fe1de825cc0 <col:8> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fe1de825c98 <col:8> 'int' lvalue ParmVar 0x7fe1de825a00 'a' 'int'
+|   |     `-IntegerLiteral 0x7fe1de825cf8 <col:13> 'int' 0
+|   |-BinaryOperator 0x7fe1de825e68 <line:17:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7fe1de825d80 <col:3> '_Bool' lvalue Var 0x7fe1de027130 'r' '_Bool'
+|   | `-ImplicitCastExpr 0x7fe1de825e50 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7fe1de825e28 <col:7, col:13> 'int' '=='
+|   |     |-UnaryOperator 0x7fe1de825de8 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7fe1de825dd0 <col:8> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fe1de825da8 <col:8> 'int' lvalue ParmVar 0x7fe1de825a00 'a' 'int'
+|   |     `-IntegerLiteral 0x7fe1de825e08 <col:13> 'int' 1
+|   `-BinaryOperator 0x7fe1de825f78 <line:18:3, col:13> '_Bool' '='
+|     |-DeclRefExpr 0x7fe1de825e90 <col:3> '_Bool' lvalue Var 0x7fe1de027130 'r' '_Bool'
+|     `-ImplicitCastExpr 0x7fe1de825f60 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|       `-BinaryOperator 0x7fe1de825f38 <col:7, col:13> 'int' '!='
+|         |-UnaryOperator 0x7fe1de825ef8 <col:7, col:8> 'int' prefix '!'
+|         | `-ImplicitCastExpr 0x7fe1de825ee0 <col:8> 'int' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fe1de825eb8 <col:8> 'int' lvalue ParmVar 0x7fe1de825a00 'a' 'int'
+|         `-IntegerLiteral 0x7fe1de825f18 <col:13> 'int' 1
+`-FunctionDecl 0x7fe1de826078 <line:21:1, line:32:1> line:22:1 f2 'void (int)'
+  |-ParmVarDecl 0x7fe1de825ff0 <col:5, col:9> col:9 used a 'int'
+  `-CompoundStmt 0x7fe1de826998 <line:23:1, line:32:1>
+    |-BinaryOperator 0x7fe1de826200 <line:24:3, col:12> '_Bool' '='
+    | |-DeclRefExpr 0x7fe1de826118 <col:3> '_Bool' lvalue Var 0x7fe1de027130 'r' '_Bool'
+    | `-ImplicitCastExpr 0x7fe1de8261e8 <col:7, col:12> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fe1de8261c0 <col:7, col:12> 'int' '>'
+    |     |-UnaryOperator 0x7fe1de826180 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7fe1de826168 <col:8> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fe1de826140 <col:8> 'int' lvalue ParmVar 0x7fe1de825ff0 'a' 'int'
+    |     `-IntegerLiteral 0x7fe1de8261a0 <col:12> 'int' 0
+    |-BinaryOperator 0x7fe1de826310 <line:25:3, col:13> '_Bool' '='
+    | |-DeclRefExpr 0x7fe1de826228 <col:3> '_Bool' lvalue Var 0x7fe1de027130 'r' '_Bool'
+    | `-ImplicitCastExpr 0x7fe1de8262f8 <col:7, col:13> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fe1de8262d0 <col:7, col:13> 'int' '>='
+    |     |-UnaryOperator 0x7fe1de826290 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7fe1de826278 <col:8> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fe1de826250 <col:8> 'int' lvalue ParmVar 0x7fe1de825ff0 'a' 'int'
+    |     `-IntegerLiteral 0x7fe1de8262b0 <col:13> 'int' 0
+    |-BinaryOperator 0x7fe1de826420 <line:26:3, col:12> '_Bool' '='
+    | |-DeclRefExpr 0x7fe1de826338 <col:3> '_Bool' lvalue Var 0x7fe1de027130 'r' '_Bool'
+    | `-ImplicitCastExpr 0x7fe1de826408 <col:7, col:12> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fe1de8263e0 <col:7, col:12> 'int' '<'
+    |     |-UnaryOperator 0x7fe1de8263a0 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7fe1de826388 <col:8> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fe1de826360 <col:8> 'int' lvalue ParmVar 0x7fe1de825ff0 'a' 'int'
+    |     `-IntegerLiteral 0x7fe1de8263c0 <col:12> 'int' 0
+    |-BinaryOperator 0x7fe1de826530 <line:27:3, col:13> '_Bool' '='
+    | |-DeclRefExpr 0x7fe1de826448 <col:3> '_Bool' lvalue Var 0x7fe1de027130 'r' '_Bool'
+    | `-ImplicitCastExpr 0x7fe1de826518 <col:7, col:13> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fe1de8264f0 <col:7, col:13> 'int' '<='
+    |     |-UnaryOperator 0x7fe1de8264b0 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7fe1de826498 <col:8> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fe1de826470 <col:8> 'int' lvalue ParmVar 0x7fe1de825ff0 'a' 'int'
+    |     `-IntegerLiteral 0x7fe1de8264d0 <col:13> 'int' 0
+    |-BinaryOperator 0x7fe1de826640 <line:28:3, col:12> '_Bool' '='
+    | |-DeclRefExpr 0x7fe1de826558 <col:3> '_Bool' lvalue Var 0x7fe1de027130 'r' '_Bool'
+    | `-ImplicitCastExpr 0x7fe1de826628 <col:7, col:12> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fe1de826600 <col:7, col:12> 'int' '>'
+    |     |-UnaryOperator 0x7fe1de8265c0 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7fe1de8265a8 <col:8> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fe1de826580 <col:8> 'int' lvalue ParmVar 0x7fe1de825ff0 'a' 'int'
+    |     `-IntegerLiteral 0x7fe1de8265e0 <col:12> 'int' 1
+    |-BinaryOperator 0x7fe1de826750 <line:29:3, col:13> '_Bool' '='
+    | |-DeclRefExpr 0x7fe1de826668 <col:3> '_Bool' lvalue Var 0x7fe1de027130 'r' '_Bool'
+    | `-ImplicitCastExpr 0x7fe1de826738 <col:7, col:13> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fe1de826710 <col:7, col:13> 'int' '>='
+    |     |-UnaryOperator 0x7fe1de8266d0 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7fe1de8266b8 <col:8> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fe1de826690 <col:8> 'int' lvalue ParmVar 0x7fe1de825ff0 'a' 'int'
+    |     `-IntegerLiteral 0x7fe1de8266f0 <col:13> 'int' 1
+    |-BinaryOperator 0x7fe1de826860 <line:30:3, col:12> '_Bool' '='
+    | |-DeclRefExpr 0x7fe1de826778 <col:3> '_Bool' lvalue Var 0x7fe1de027130 'r' '_Bool'
+    | `-ImplicitCastExpr 0x7fe1de826848 <col:7, col:12> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fe1de826820 <col:7, col:12> 'int' '<'
+    |     |-UnaryOperator 0x7fe1de8267e0 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7fe1de8267c8 <col:8> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fe1de8267a0 <col:8> 'int' lvalue ParmVar 0x7fe1de825ff0 'a' 'int'
+    |     `-IntegerLiteral 0x7fe1de826800 <col:12> 'int' 1
+    `-BinaryOperator 0x7fe1de826970 <line:31:3, col:13> '_Bool' '='
+      |-DeclRefExpr 0x7fe1de826888 <col:3> '_Bool' lvalue Var 0x7fe1de027130 'r' '_Bool'
+      `-ImplicitCastExpr 0x7fe1de826958 <col:7, col:13> '_Bool' <IntegralToBoolean>
+        `-BinaryOperator 0x7fe1de826930 <col:7, col:13> 'int' '<='
+          |-UnaryOperator 0x7fe1de8268f0 <col:7, col:8> 'int' prefix '!'
+          | `-ImplicitCastExpr 0x7fe1de8268d8 <col:8> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fe1de8268b0 <col:8> 'int' lvalue ParmVar 0x7fe1de825ff0 'a' 'int'
+          `-IntegerLiteral 0x7fe1de826910 <col:13> 'int' 1

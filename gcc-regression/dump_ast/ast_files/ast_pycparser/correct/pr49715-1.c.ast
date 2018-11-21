@@ -1,0 +1,17 @@
+FileAST: 
+  FuncDef: 
+    Decl: func, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+        TypeDecl: func, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          BinaryOp: &
+            ID: x
+            Constant: int, 0xfffff
+          Constant: float, 0.01f

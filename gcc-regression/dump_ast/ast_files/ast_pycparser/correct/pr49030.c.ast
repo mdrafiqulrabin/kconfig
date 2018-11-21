@@ -1,0 +1,94 @@
+FileAST: 
+  FuncDef: 
+    Decl: sample_move_d32u24_sS, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dst, [], [], []
+            PtrDecl: []
+              TypeDecl: dst, []
+                IdentifierType: ['char']
+          Decl: src, [], [], []
+            PtrDecl: []
+              TypeDecl: src, []
+                IdentifierType: ['float']
+          Decl: nsamples, [], [], []
+            TypeDecl: nsamples, []
+              IdentifierType: ['unsigned', 'long']
+          Decl: dst_skip, [], [], []
+            TypeDecl: dst_skip, []
+              IdentifierType: ['unsigned', 'long']
+        TypeDecl: sample_move_d32u24_sS, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['long', 'long']
+      While: 
+        UnaryOp: p--
+          ID: nsamples
+        Compound: 
+          Assignment: =
+            ID: y
+            BinaryOp: <<
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['long', 'long']
+                BinaryOp: *
+                  UnaryOp: *
+                    ID: src
+                  Constant: float, 8388608.0f
+              Constant: int, 8
+          If: 
+            BinaryOp: >
+              ID: y
+              Constant: int, 2147483647
+            Compound: 
+              Assignment: =
+                UnaryOp: *
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['int']
+                    ID: dst
+                Constant: int, 2147483647
+            If: 
+              BinaryOp: <
+                ID: y
+                BinaryOp: -
+                  UnaryOp: -
+                    Constant: int, 2147483647
+                  Constant: int, 1
+              Compound: 
+                Assignment: =
+                  UnaryOp: *
+                    Cast: 
+                      Typename: None, []
+                        PtrDecl: []
+                          TypeDecl: None, []
+                            IdentifierType: ['int']
+                      ID: dst
+                  BinaryOp: -
+                    UnaryOp: -
+                      Constant: int, 2147483647
+                    Constant: int, 1
+              Compound: 
+                Assignment: =
+                  UnaryOp: *
+                    Cast: 
+                      Typename: None, []
+                        PtrDecl: []
+                          TypeDecl: None, []
+                            IdentifierType: ['int']
+                      ID: dst
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['int']
+                    ID: y
+          Assignment: +=
+            ID: dst
+            ID: dst_skip
+          UnaryOp: p++
+            ID: src

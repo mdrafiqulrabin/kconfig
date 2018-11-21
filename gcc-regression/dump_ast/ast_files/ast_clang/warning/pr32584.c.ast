@@ -1,0 +1,269 @@
+c_files/pr32584.c:16:42: warning: declaration of 'struct __gconv_step' will not be visible outside of this function [-Wvisibility]
+typedef int (*__gconv_trans_fct) (struct __gconv_step *,
+                                         ^
+c_files/pr32584.c:54:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+sortpin()
+^
+c_files/pr32584.c:73:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+3 warnings generated.
+TranslationUnitDecl 0x7fd8790264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd879026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd879026740 '__int128'
+|-TypedefDecl 0x7fd879026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd879026760 'unsigned __int128'
+|-TypedefDecl 0x7fd879026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd879026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd879026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd879026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd879026dc0 'char *'
+|   `-BuiltinType 0x7fd879026560 'char'
+|-TypedefDecl 0x7fd8790270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd879027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd879026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd879026e58 '__va_list_tag'
+|-TypedefDecl 0x7fd879027138 <c_files/pr32584.c:1:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fd879026680 'unsigned long'
+|-TypedefDecl 0x7fd8790271a8 <line:4:1, col:23> col:23 referenced __ssize_t 'long'
+| `-BuiltinType 0x7fd8790265e0 'long'
+|-RecordDecl 0x7fd879077a00 <line:6:9, line:8:1> line:6:9 struct definition
+|-TypedefDecl 0x7fd879077b00 <col:1, line:8:3> col:3 __mbstate_t 'struct __mbstate_t':'__mbstate_t'
+| `-ElaboratedType 0x7fd879077ab0 'struct __mbstate_t' sugar
+|   `-RecordType 0x7fd879077a90 '__mbstate_t'
+|     `-Record 0x7fd879077a00 ''
+|-RecordDecl 0x7fd879077b70 <line:9:9, line:11:1> line:9:9 struct definition
+|-TypedefDecl 0x7fd879077c70 <col:1, line:11:3> col:3 _G_fpos64_t 'struct _G_fpos64_t':'_G_fpos64_t'
+| `-ElaboratedType 0x7fd879077c20 'struct _G_fpos64_t' sugar
+|   `-RecordType 0x7fd879077c00 '_G_fpos64_t'
+|     `-Record 0x7fd879077b70 ''
+|-EnumDecl 0x7fd879077ce0 <line:12:1, line:15:1> line:12:1
+| `-EnumConstantDecl 0x7fd879077da0 <line:14:3> col:3 __GCONV_INTERNAL_ERROR 'int'
+|-RecordDecl 0x7fd879077de8 <line:16:35, col:42> col:42 struct __gconv_step
+|-TypedefDecl 0x7fd879078590 <col:1, line:17:15> line:16:15 __gconv_trans_fct 'int (*)(struct __gconv_step *, size_t *)'
+| `-PointerType 0x7fd879078520 'int (*)(struct __gconv_step *, size_t *)'
+|   `-ParenType 0x7fd8790784c0 'int (struct __gconv_step *, size_t *)' sugar
+|     `-FunctionProtoType 0x7fd879078480 'int (struct __gconv_step *, size_t *)' cdecl
+|       |-BuiltinType 0x7fd8790265c0 'int'
+|       |-PointerType 0x7fd8790782a0 'struct __gconv_step *'
+|       | `-ElaboratedType 0x7fd879078240 'struct __gconv_step' sugar
+|       |   `-RecordType 0x7fd879077e70 'struct __gconv_step'
+|       |     `-Record 0x7fd879077de8 '__gconv_step'
+|       `-PointerType 0x7fd8790783a0 'size_t *'
+|         `-TypedefType 0x7fd879078350 'size_t' sugar
+|           |-Typedef 0x7fd879027138 'size_t'
+|           `-BuiltinType 0x7fd879026680 'unsigned long'
+|-TypedefDecl 0x7fd879078950 <line:18:1, line:19:40> line:18:15 __gconv_trans_context_fct 'int (*)(void *, const unsigned char *, unsigned char *, unsigned char *)'
+| `-PointerType 0x7fd8790788d0 'int (*)(void *, const unsigned char *, unsigned char *, unsigned char *)'
+|   `-ParenType 0x7fd879078870 'int (void *, const unsigned char *, unsigned char *, unsigned char *)' sugar
+|     `-FunctionProtoType 0x7fd879078820 'int (void *, const unsigned char *, unsigned char *, unsigned char *)' cdecl
+|       |-BuiltinType 0x7fd8790265c0 'int'
+|       |-PointerType 0x7fd8790269a0 'void *'
+|       | `-BuiltinType 0x7fd879026520 'void'
+|       |-PointerType 0x7fd879078660 'const unsigned char *'
+|       | `-QualType 0x7fd879026621 'const unsigned char' const
+|       |   `-BuiltinType 0x7fd879026620 'unsigned char'
+|       |-PointerType 0x7fd879078700 'unsigned char *'
+|       | `-BuiltinType 0x7fd879026620 'unsigned char'
+|       `-PointerType 0x7fd879078700 'unsigned char *'
+|         `-BuiltinType 0x7fd879026620 'unsigned char'
+|-RecordDecl 0x7fd879078a00 <line:20:1, line:22:1> line:20:8 struct __gconv_trans_data definition
+|-RecordDecl 0x7fd879078ab0 <line:23:1, line:24:1> line:23:8 struct _IO_marker definition
+|-TypedefDecl 0x7fd879078db0 <line:25:1, line:26:16> line:25:19 __io_write_fn '__ssize_t (void *, const char *, size_t)'
+| `-FunctionProtoType 0x7fd879078d30 '__ssize_t (void *, const char *, size_t)' cdecl
+|   |-TypedefType 0x7fd879078b60 '__ssize_t' sugar
+|   | |-Typedef 0x7fd8790271a8 '__ssize_t'
+|   | `-BuiltinType 0x7fd8790265e0 'long'
+|   |-PointerType 0x7fd8790269a0 'void *'
+|   | `-BuiltinType 0x7fd879026520 'void'
+|   |-PointerType 0x7fd879026c10 'const char *'
+|   | `-QualType 0x7fd879026561 'const char' const
+|   |   `-BuiltinType 0x7fd879026560 'char'
+|   `-TypedefType 0x7fd879078350 'size_t' sugar
+|     |-Typedef 0x7fd879027138 'size_t'
+|     `-BuiltinType 0x7fd879026680 'unsigned long'
+|-RecordDecl 0x7fd879078e08 <line:27:9, line:28:1> line:27:16 struct blockbox definition
+|-TypedefDecl 0x7fd879078f60 <col:1, line:28:4> col:4 BBOXPTR 'struct blockbox *'
+| `-PointerType 0x7fd879078f10 'struct blockbox *'
+|   `-ElaboratedType 0x7fd879078eb0 'struct blockbox' sugar
+|     `-RecordType 0x7fd879078e90 'struct blockbox'
+|       `-Record 0x7fd879078e08 'blockbox'
+|-TypedefDecl 0x7fd879078fd8 <line:27:1, line:28:13> col:13 BBOX 'struct blockbox':'struct blockbox'
+| `-ElaboratedType 0x7fd879078eb0 'struct blockbox' sugar
+|   `-RecordType 0x7fd879078e90 'struct blockbox'
+|     `-Record 0x7fd879078e08 'blockbox'
+|-RecordDecl 0x7fd879079050 <line:29:9, line:30:1> line:29:16 struct netbox definition
+|-TypedefDecl 0x7fd8790791b0 <col:1, line:30:4> col:4 NBOXPTR 'struct netbox *'
+| `-PointerType 0x7fd879079160 'struct netbox *'
+|   `-ElaboratedType 0x7fd879079100 'struct netbox' sugar
+|     `-RecordType 0x7fd8790790e0 'struct netbox'
+|       `-Record 0x7fd879079050 'netbox'
+|-TypedefDecl 0x7fd879079228 <line:29:1, line:30:13> col:13 NBOX 'struct netbox':'struct netbox'
+| `-ElaboratedType 0x7fd879079100 'struct netbox' sugar
+|   `-RecordType 0x7fd8790790e0 'struct netbox'
+|     `-Record 0x7fd879079050 'netbox'
+|-RecordDecl 0x7fd8790792a0 <line:31:9, line:33:1> line:31:16 struct termbox definition
+| `-FieldDecl 0x7fd879079400 <line:32:5, col:21> col:21 referenced nextterm 'struct termbox *'
+|-TypedefDecl 0x7fd879079470 <line:31:1, line:33:4> col:4 referenced TEBOXPTR 'struct termbox *'
+| `-PointerType 0x7fd8790793b0 'struct termbox *'
+|   `-ElaboratedType 0x7fd879079350 'struct termbox' sugar
+|     `-RecordType 0x7fd879079330 'struct termbox'
+|       `-Record 0x7fd8790792a0 'termbox'
+|-TypedefDecl 0x7fd8790794e8 <line:31:1, line:33:14> col:14 TEBOX 'struct termbox':'struct termbox'
+| `-ElaboratedType 0x7fd879079350 'struct termbox' sugar
+|   `-RecordType 0x7fd879079330 'struct termbox'
+|     `-Record 0x7fd8790792a0 'termbox'
+|-RecordDecl 0x7fd879079560 <line:34:9, line:36:1> line:34:16 struct tilebox definition
+| `-FieldDecl 0x7fd879079640 <line:35:5, col:14> col:14 referenced termsptr 'TEBOXPTR':'struct termbox *'
+|-TypedefDecl 0x7fd879079740 <line:34:1, line:37:2> col:2 referenced TIBOXPTR 'struct tilebox *'
+| `-PointerType 0x7fd8790796f0 'struct tilebox *'
+|   `-ElaboratedType 0x7fd879079690 'struct tilebox' sugar
+|     `-RecordType 0x7fd8790795f0 'struct tilebox'
+|       `-Record 0x7fd879079560 'tilebox'
+|-TypedefDecl 0x7fd8790797b8 <line:34:1, line:38:1> col:1 TIBOX 'struct tilebox':'struct tilebox'
+| `-ElaboratedType 0x7fd879079690 'struct tilebox' sugar
+|   `-RecordType 0x7fd8790795f0 'struct tilebox'
+|     `-Record 0x7fd879079560 'tilebox'
+|-RecordDecl 0x7fd879079830 <line:39:9, line:41:1> line:39:16 struct cellbox definition
+| `-FieldDecl 0x7fd879079910 <line:40:5, col:14> col:14 referenced tileptr 'TIBOXPTR':'struct tilebox *'
+|-TypedefDecl 0x7fd879800028 <line:39:1, line:42:2> col:2 referenced CBOXPTR 'struct cellbox *'
+| `-PointerType 0x7fd8790799c0 'struct cellbox *'
+|   `-ElaboratedType 0x7fd879079960 'struct cellbox' sugar
+|     `-RecordType 0x7fd8790798c0 'struct cellbox'
+|       `-Record 0x7fd879079830 'cellbox'
+|-TypedefDecl 0x7fd8798000a0 <line:39:1, line:43:1> col:1 CBOX 'struct cellbox':'struct cellbox'
+| `-ElaboratedType 0x7fd879079960 'struct cellbox' sugar
+|   `-RecordType 0x7fd8790798c0 'struct cellbox'
+|     `-Record 0x7fd879079830 'cellbox'
+|-RecordDecl 0x7fd879800118 <line:44:9, line:45:1> line:44:16 struct dimbox definition
+|-TypedefDecl 0x7fd879800210 <col:1, line:46:1> col:1 DBOX 'struct dimbox':'struct dimbox'
+| `-ElaboratedType 0x7fd8798001c0 'struct dimbox' sugar
+|   `-RecordType 0x7fd8798001a0 'struct dimbox'
+|     `-Record 0x7fd879800118 'dimbox'
+|-RecordDecl 0x7fd879800280 <line:47:9, line:48:1> line:47:16 struct rowbox definition
+|-TypedefDecl 0x7fd879800380 <col:1, line:48:3> col:3 ROWBOX 'struct rowbox':'struct rowbox'
+| `-ElaboratedType 0x7fd879800330 'struct rowbox' sugar
+|   `-RecordType 0x7fd879800310 'struct rowbox'
+|     `-Record 0x7fd879800280 'rowbox'
+|-RecordDecl 0x7fd8798003f0 <line:49:9, line:50:1> line:49:16 struct binbox definition
+|-TypedefDecl 0x7fd8798004f0 <col:1, line:51:1> col:1 CHANGRDBOX 'struct binbox':'struct binbox'
+| `-ElaboratedType 0x7fd8798004a0 'struct binbox' sugar
+|   `-RecordType 0x7fd879800480 'struct binbox'
+|     `-Record 0x7fd8798003f0 'binbox'
+|-VarDecl 0x7fd879800578 <line:52:1, col:12> col:12 used numcells 'int' extern
+|-VarDecl 0x7fd879800630 <line:53:1, col:12> col:12 used numterms 'int' extern
+`-FunctionDecl 0x7fd8798006e0 <line:54:1, line:73:1> line:54:1 sortpin 'int ()'
+  `-CompoundStmt 0x7fd879802eb0 <line:55:1, line:73:1>
+    |-DeclStmt 0x7fd879800900 <line:56:1, col:18>
+    | |-VarDecl 0x7fd879800790 <col:1, col:5> col:5 used j 'int'
+    | |-VarDecl 0x7fd879800808 <col:1, col:9> col:9 used n 'int'
+    | `-VarDecl 0x7fd879800880 <col:1, col:13> col:13 used cell 'int'
+    |-DeclStmt 0x7fd8798009b0 <line:57:1, col:13>
+    | `-VarDecl 0x7fd879800950 <col:1, col:9> col:9 used ptr 'CBOXPTR':'struct cellbox *'
+    |-DeclStmt 0x7fd879800a38 <line:58:1, col:15>
+    | `-VarDecl 0x7fd8798009d8 <col:1, col:10> col:10 used tile 'TIBOXPTR':'struct tilebox *'
+    |-DeclStmt 0x7fd879800ba0 <line:59:1, col:24>
+    | |-VarDecl 0x7fd879800a60 <col:1, col:10> col:10 used term 'TEBOXPTR':'struct termbox *'
+    | `-VarDecl 0x7fd879800b28 <col:1, col:18> col:18 used xpptr 'TEBOXPTR *'
+    `-ForStmt 0x7fd879802e78 <line:60:1, line:72:1>
+      |-BinaryOperator 0x7fd879800c00 <line:60:6, col:13> 'int' '='
+      | |-DeclRefExpr 0x7fd879800bb8 <col:6> 'int' lvalue Var 0x7fd879800880 'cell' 'int'
+      | `-IntegerLiteral 0x7fd879800be0 <col:13> 'int' 1
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd879800d10 <col:17, col:36> 'int' '<='
+      | |-ImplicitCastExpr 0x7fd879800cf8 <col:17> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd879800c28 <col:17> 'int' lvalue Var 0x7fd879800880 'cell' 'int'
+      | `-BinaryOperator 0x7fd879800cd0 <col:25, col:36> 'int' '+'
+      |   |-ImplicitCastExpr 0x7fd879800ca0 <col:25> 'int' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fd879800c50 <col:25> 'int' lvalue Var 0x7fd879800578 'numcells' 'int'
+      |   `-ImplicitCastExpr 0x7fd879800cb8 <col:36> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fd879800c78 <col:36> 'int' lvalue Var 0x7fd879800630 'numterms' 'int'
+      |-UnaryOperator 0x7fd879800d60 <col:47, col:51> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fd879800d38 <col:47> 'int' lvalue Var 0x7fd879800880 'cell' 'int'
+      `-CompoundStmt 0x7fd879802e30 <col:56, line:72:1>
+        |-IfStmt 0x7fd879800fa8 <line:61:5, line:62:5>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7fd879800f68 <line:61:9, col:57> 'int' '=='
+        | | |-ParenExpr 0x7fd879800e60 <col:9, col:31> 'TIBOXPTR':'struct tilebox *'
+        | | | `-BinaryOperator 0x7fd879800e38 <col:11, col:23> 'TIBOXPTR':'struct tilebox *' '='
+        | | |   |-DeclRefExpr 0x7fd879800d80 <col:11> 'TIBOXPTR':'struct tilebox *' lvalue Var 0x7fd8798009d8 'tile' 'TIBOXPTR':'struct tilebox *'
+        | | |   `-ImplicitCastExpr 0x7fd879800e20 <col:18, col:23> 'TIBOXPTR':'struct tilebox *' <LValueToRValue>
+        | | |     `-MemberExpr 0x7fd879800de8 <col:18, col:23> 'TIBOXPTR':'struct tilebox *' lvalue ->tileptr 0x7fd879079910
+        | | |       `-ImplicitCastExpr 0x7fd879800dd0 <col:18> 'CBOXPTR':'struct cellbox *' <LValueToRValue>
+        | | |         `-DeclRefExpr 0x7fd879800da8 <col:18> 'CBOXPTR':'struct cellbox *' lvalue Var 0x7fd879800950 'ptr' 'CBOXPTR':'struct cellbox *'
+        | | `-CStyleCastExpr 0x7fd879800f40 <col:36, col:57> 'TIBOXPTR':'struct tilebox *' <BitCast>
+        | |   `-ParenExpr 0x7fd879800f20 <col:47, col:57> 'void *'
+        | |     `-CStyleCastExpr 0x7fd879800eb8 <col:48, col:56> 'void *' <NullToPointer>
+        | |       `-IntegerLiteral 0x7fd879800e80 <col:56> 'int' 0
+        | |-CompoundStmt 0x7fd879800f90 <col:61, line:62:5>
+        | `-<<<NULL>>>
+        |-BinaryOperator 0x7fd879802448 <line:63:5, col:9> 'int' '='
+        | |-DeclRefExpr 0x7fd879802400 <col:5> 'int' lvalue Var 0x7fd879800808 'n' 'int'
+        | `-IntegerLiteral 0x7fd879802428 <col:9> 'int' 0
+        |-ForStmt 0x7fd8798028b8 <line:64:5, line:67:5>
+        | |-BinaryOperator 0x7fd879802528 <line:64:10, col:23> 'TEBOXPTR':'struct termbox *' '='
+        | | |-DeclRefExpr 0x7fd879802470 <col:10> 'TEBOXPTR':'struct termbox *' lvalue Var 0x7fd879800a60 'term' 'TEBOXPTR':'struct termbox *'
+        | | `-ImplicitCastExpr 0x7fd879802510 <col:17, col:23> 'TEBOXPTR':'struct termbox *' <LValueToRValue>
+        | |   `-MemberExpr 0x7fd8798024d8 <col:17, col:23> 'TEBOXPTR':'struct termbox *' lvalue ->termsptr 0x7fd879079640
+        | |     `-ImplicitCastExpr 0x7fd8798024c0 <col:17> 'TIBOXPTR':'struct tilebox *' <LValueToRValue>
+        | |       `-DeclRefExpr 0x7fd879802498 <col:17> 'TIBOXPTR':'struct tilebox *' lvalue Var 0x7fd8798009d8 'tile' 'TIBOXPTR':'struct tilebox *'
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7fd879802678 <col:34, col:63> 'int' '!='
+        | | |-ImplicitCastExpr 0x7fd879802660 <col:34> 'TEBOXPTR':'struct termbox *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fd879802550 <col:34> 'TEBOXPTR':'struct termbox *' lvalue Var 0x7fd879800a60 'term' 'TEBOXPTR':'struct termbox *'
+        | | `-CStyleCastExpr 0x7fd879802638 <col:42, col:63> 'TEBOXPTR':'struct termbox *' <BitCast>
+        | |   `-ParenExpr 0x7fd879802618 <col:53, col:63> 'void *'
+        | |     `-CStyleCastExpr 0x7fd8798025b0 <col:54, col:62> 'void *' <NullToPointer>
+        | |       `-IntegerLiteral 0x7fd879802578 <col:62> 'int' 0
+        | |-BinaryOperator 0x7fd879802758 <line:65:7, col:20> 'TEBOXPTR':'struct termbox *' '='
+        | | |-DeclRefExpr 0x7fd8798026a0 <col:7> 'TEBOXPTR':'struct termbox *' lvalue Var 0x7fd879800a60 'term' 'TEBOXPTR':'struct termbox *'
+        | | `-ImplicitCastExpr 0x7fd879802740 <col:14, col:20> 'struct termbox *' <LValueToRValue>
+        | |   `-MemberExpr 0x7fd879802708 <col:14, col:20> 'struct termbox *' lvalue ->nextterm 0x7fd879079400
+        | |     `-ImplicitCastExpr 0x7fd8798026f0 <col:14> 'TEBOXPTR':'struct termbox *' <LValueToRValue>
+        | |       `-DeclRefExpr 0x7fd8798026c8 <col:14> 'TEBOXPTR':'struct termbox *' lvalue Var 0x7fd879800a60 'term' 'TEBOXPTR':'struct termbox *'
+        | `-CompoundStmt 0x7fd879802898 <col:31, line:67:5>
+        |   `-BinaryOperator 0x7fd879802870 <line:66:2, col:17> 'TEBOXPTR':'struct termbox *' '='
+        |     |-ArraySubscriptExpr 0x7fd879802808 <col:2, col:13> 'TEBOXPTR':'struct termbox *' lvalue
+        |     | |-ImplicitCastExpr 0x7fd8798027f0 <col:2> 'TEBOXPTR *' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fd879802780 <col:2> 'TEBOXPTR *' lvalue Var 0x7fd879800b28 'xpptr' 'TEBOXPTR *'
+        |     | `-UnaryOperator 0x7fd8798027d0 <col:9, col:11> 'int' prefix '++'
+        |     |   `-DeclRefExpr 0x7fd8798027a8 <col:11> 'int' lvalue Var 0x7fd879800808 'n' 'int'
+        |     `-ImplicitCastExpr 0x7fd879802858 <col:17> 'TEBOXPTR':'struct termbox *' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fd879802830 <col:17> 'TEBOXPTR':'struct termbox *' lvalue Var 0x7fd879800a60 'term' 'TEBOXPTR':'struct termbox *'
+        |-BinaryOperator 0x7fd879802ac8 <line:68:5, col:43> 'TEBOXPTR':'struct termbox *' '='
+        | |-ArraySubscriptExpr 0x7fd8798029b8 <col:5, col:18> 'TEBOXPTR':'struct termbox *' lvalue
+        | | |-ImplicitCastExpr 0x7fd8798029a0 <col:5> 'TEBOXPTR *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fd8798028f0 <col:5> 'TEBOXPTR *' lvalue Var 0x7fd879800b28 'xpptr' 'TEBOXPTR *'
+        | | `-BinaryOperator 0x7fd879802978 <col:12, col:16> 'int' '+'
+        | |   |-ImplicitCastExpr 0x7fd879802960 <col:12> 'int' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7fd879802918 <col:12> 'int' lvalue Var 0x7fd879800808 'n' 'int'
+        | |   `-IntegerLiteral 0x7fd879802940 <col:16> 'int' 1
+        | `-CStyleCastExpr 0x7fd879802aa0 <col:22, col:43> 'TEBOXPTR':'struct termbox *' <BitCast>
+        |   `-ParenExpr 0x7fd879802a80 <col:33, col:43> 'void *'
+        |     `-CStyleCastExpr 0x7fd879802a18 <col:34, col:42> 'void *' <NullToPointer>
+        |       `-IntegerLiteral 0x7fd8798029e0 <col:42> 'int' 0
+        |-BinaryOperator 0x7fd879802c58 <line:69:5, col:39> 'TEBOXPTR':'struct termbox *' '='
+        | |-MemberExpr 0x7fd879802b80 <col:5, col:19> 'TEBOXPTR':'struct termbox *' lvalue ->termsptr 0x7fd879079640
+        | | `-ImplicitCastExpr 0x7fd879802b68 <col:5, col:10> 'TIBOXPTR':'struct tilebox *' <LValueToRValue>
+        | |   `-MemberExpr 0x7fd879802b30 <col:5, col:10> 'TIBOXPTR':'struct tilebox *' lvalue ->tileptr 0x7fd879079910
+        | |     `-ImplicitCastExpr 0x7fd879802b18 <col:5> 'CBOXPTR':'struct cellbox *' <LValueToRValue>
+        | |       `-DeclRefExpr 0x7fd879802af0 <col:5> 'CBOXPTR':'struct cellbox *' lvalue Var 0x7fd879800950 'ptr' 'CBOXPTR':'struct cellbox *'
+        | `-ImplicitCastExpr 0x7fd879802c40 <col:30, col:39> 'TEBOXPTR':'struct termbox *' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7fd879802c18 <col:30, col:39> 'TEBOXPTR':'struct termbox *' lvalue
+        |     |-ImplicitCastExpr 0x7fd879802c00 <col:30> 'TEBOXPTR *' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7fd879802bb8 <col:30> 'TEBOXPTR *' lvalue Var 0x7fd879800b28 'xpptr' 'TEBOXPTR *'
+        |     `-IntegerLiteral 0x7fd879802be0 <col:37> 'int' 1
+        `-ForStmt 0x7fd879802df8 <line:70:5, line:71:5>
+          |-BinaryOperator 0x7fd879802cc8 <line:70:10, col:14> 'int' '='
+          | |-DeclRefExpr 0x7fd879802c80 <col:10> 'int' lvalue Var 0x7fd879800790 'j' 'int'
+          | `-IntegerLiteral 0x7fd879802ca8 <col:14> 'int' 1
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7fd879802d70 <col:18, col:23> 'int' '<='
+          | |-ImplicitCastExpr 0x7fd879802d40 <col:18> 'int' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fd879802cf0 <col:18> 'int' lvalue Var 0x7fd879800790 'j' 'int'
+          | `-ImplicitCastExpr 0x7fd879802d58 <col:23> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fd879802d18 <col:23> 'int' lvalue Var 0x7fd879800808 'n' 'int'
+          |-UnaryOperator 0x7fd879802dc0 <col:27, col:28> 'int' postfix '++'
+          | `-DeclRefExpr 0x7fd879802d98 <col:27> 'int' lvalue Var 0x7fd879800790 'j' 'int'
+          `-CompoundStmt 0x7fd879802de0 <col:33, line:71:5>

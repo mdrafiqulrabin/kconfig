@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7f8fee025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8fee026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8fee025d40 '__int128'
+|-TypedefDecl 0x7f8fee026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8fee025d60 'unsigned __int128'
+|-TypedefDecl 0x7f8fee026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8fee026170 'struct __NSConstantString_tag'
+|   `-Record 0x7f8fee0260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8fee026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8fee0263c0 'char *'
+|   `-BuiltinType 0x7f8fee025b60 'char'
+|-TypedefDecl 0x7f8fee0266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8fee026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8fee0264e0 'struct __va_list_tag'
+|     `-Record 0x7f8fee026458 '__va_list_tag'
+|-RecordDecl 0x7f8fee026720 <c_files/pr78472_0.c:3:8, line:7:1> line:3:15 struct S definition
+| |-FieldDecl 0x7f8fed826418 <line:5:3, col:14> col:12 i 'unsigned int'
+| | `-IntegerLiteral 0x7f8fee0267d0 <col:14> 'int' 4
+| `-FieldDecl 0x7f8fed826498 <line:6:3, col:13> col:3 'unsigned int'
+|   `-IntegerLiteral 0x7f8fed826460 <col:13> 'int' 0
+|-VarDecl 0x7f8fed826530 <line:3:1, line:7:3> col:3 used s 'struct S':'struct S' extern
+|-FunctionDecl 0x7f8fed8266b8 <line:8:1, line:11:1> line:8:14 f 'void *(void)' static
+| `-CompoundStmt 0x7f8fed826828 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7f8fed826810 <line:10:3, col:11>
+|     `-ImplicitCastExpr 0x7f8fed8267f8 <col:10, col:11> 'void *' <BitCast>
+|       `-UnaryOperator 0x7f8fed8267d8 <col:10, col:11> 'struct S *' prefix '&'
+|         `-DeclRefExpr 0x7f8fed826750 <col:11> 'struct S':'struct S' lvalue Var 0x7f8fed826530 's' 'struct S':'struct S'
+`-FunctionDecl 0x7f8fed8268a0 <line:12:1, col:13> col:5 main 'int ()'
+  `-CompoundStmt 0x7f8fed826938 <col:12, col:13>

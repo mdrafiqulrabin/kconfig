@@ -1,0 +1,50 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: data, [], [], []
+        TypeDecl: data, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      Decl: ptr, [], [], []
+        PtrDecl: []
+          TypeDecl: ptr, []
+            Struct: ptr
+              Decl: val, [], [], []
+                TypeDecl: val, []
+                  IdentifierType: ['int']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                Struct: ptr
+          UnaryOp: &
+            ID: data
+      Assignment: =
+        StructRef: ->
+          ID: ptr
+          ID: val
+        Constant: int, 0
+      If: 
+        BinaryOp: !=
+          ID: data
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

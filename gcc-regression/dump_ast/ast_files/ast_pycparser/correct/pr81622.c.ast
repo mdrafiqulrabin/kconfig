@@ -1,0 +1,27 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_vec_ld
+        ExprList: 
+          Constant: int, 1
+          Constant: int, 2
+      FuncCall: 
+        ID: __builtin_vec_cmpne
+        ExprList: 
+          Constant: int, 1
+          Constant: int, 2
+      FuncCall: 
+        ID: __builtin_vec_st
+        ExprList: 
+          Constant: int, 1
+          Constant: int, 0
+          Constant: int, 5

@@ -1,0 +1,58 @@
+FileAST: 
+  Typedef: S, [], ['typedef']
+    TypeDecl: S, []
+      Struct: s
+        Decl: v, [], [], []
+          TypeDecl: v, []
+            IdentifierType: ['int']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+        Decl: l, [], [], []
+          PtrDecl: []
+            TypeDecl: l, []
+              Struct: s
+        Decl: r, [], [], []
+          PtrDecl: []
+            TypeDecl: r, []
+              Struct: s
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['S']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: this, [], [], []
+        PtrDecl: []
+          TypeDecl: this, []
+            IdentifierType: ['S']
+      Decl: next, [], [], []
+        PtrDecl: []
+          TypeDecl: next, []
+            IdentifierType: ['S']
+      Assignment: =
+        ID: this
+        ID: s
+      If: 
+        StructRef: ->
+          ID: this
+          ID: b
+        Assignment: =
+          ID: next
+          StructRef: ->
+            ID: this
+            ID: l
+        Assignment: =
+          ID: next
+          StructRef: ->
+            ID: this
+            ID: r
+      Return: 
+        StructRef: ->
+          ID: next
+          ID: v

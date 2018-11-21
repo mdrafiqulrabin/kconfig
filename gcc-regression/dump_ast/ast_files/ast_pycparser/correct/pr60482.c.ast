@@ -1,0 +1,51 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['double']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: p, [], [], []
+        TypeDecl: p, []
+          IdentifierType: ['double']
+        Constant: float, 0.0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: x
+        FuncCall: 
+          ID: __builtin_assume_aligned
+          ExprList: 
+            ID: x
+            Constant: int, 128
+      If: 
+        BinaryOp: %
+          ID: n
+          Constant: int, 128
+        FuncCall: 
+          ID: __builtin_unreachable
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: n
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: p
+          ArrayRef: 
+            ID: x
+            ID: i
+      Return: 
+        ID: p

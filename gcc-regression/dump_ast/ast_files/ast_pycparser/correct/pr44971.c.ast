@@ -1,0 +1,87 @@
+FileAST: 
+  Typedef: _XPrivint, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: _XPrivint, []
+        Struct: None
+          Decl: default_screen, [], [], []
+            TypeDecl: default_screen, []
+              IdentifierType: ['int']
+  Typedef: FcBool, [], ['typedef']
+    TypeDecl: FcBool, []
+      IdentifierType: ['int']
+  Typedef: XftintInfo, [], ['typedef']
+    TypeDecl: XftintInfo, []
+      Struct: None
+        Decl: next, [], [], []
+          PtrDecl: []
+            TypeDecl: next, []
+              Struct: _XftintInfo
+  Decl: _XftintInfo, [], [], []
+    TypeDecl: _XftintInfo, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: _XftintInfoGet, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dpy, [], [], []
+            PtrDecl: []
+              TypeDecl: dpy, []
+                IdentifierType: ['int']
+          Decl: createIfNecessary, [], [], []
+            TypeDecl: createIfNecessary, []
+              IdentifierType: ['FcBool']
+        TypeDecl: _XftintInfoGet, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: event_base, [], [], []
+        TypeDecl: event_base, []
+          IdentifierType: ['int']
+      BinaryOp: &&
+        UnaryOp: &
+          ID: event_base
+        BinaryOp: !=
+          ArrayRef: 
+            ID: dpy
+            ID: createIfNecessary
+          Constant: int, 0
+  FuncDef: 
+    Decl: _XftCloseint, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dpy, [], [], []
+            TypeDecl: dpy, []
+              IdentifierType: ['int']
+          Decl: info, [], [], []
+            PtrDecl: []
+              TypeDecl: info, []
+                IdentifierType: ['XftintInfo']
+          Decl: prev, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: prev, []
+                  IdentifierType: ['XftintInfo']
+        TypeDecl: _XftCloseint, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: _XftintInfoGet
+        ExprList: 
+          ID: dpy
+          Constant: int, 0
+      For: 
+        Assignment: =
+          ID: prev
+          UnaryOp: &
+            ID: _XftintInfo
+        Assignment: =
+          ID: info
+          UnaryOp: *
+            ID: prev
+        Assignment: =
+          ID: prev
+          UnaryOp: &
+            StructRef: ->
+              UnaryOp: *
+                ID: prev
+              ID: next
+        EmptyStatement: 

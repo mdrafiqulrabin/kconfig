@@ -1,0 +1,552 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['unsigned']
+          Decl: v, [], [], []
+            TypeDecl: v, []
+              IdentifierType: ['long']
+          Decl: w, [], [], []
+            PtrDecl: []
+              TypeDecl: w, []
+                IdentifierType: ['unsigned']
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['unsigned']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['unsigned']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['unsigned']
+        BinaryOp: /
+          ID: v
+          Constant: int, 4
+      Decl: x, [], [], []
+        ArrayDecl: []
+          TypeDecl: x, []
+            IdentifierType: ['unsigned']
+          Constant: int, 16
+      While: 
+        BinaryOp: <
+          ID: f
+          ID: h
+        Compound: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['unsigned']
+          UnaryOp: p++
+            ID: f
+          Assignment: |=
+            ID: a
+            BinaryOp: >>
+              ID: a
+              Constant: int, 30
+          Assignment: =
+            ID: d
+            BinaryOp: |
+              BinaryOp: <<
+                ID: d
+                Constant: int, 30
+              BinaryOp: >>
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned']
+                  ID: d
+                Constant: int, 30
+          Assignment: =
+            ID: c
+            BinaryOp: |
+              BinaryOp: <<
+                ID: c
+                Constant: int, 30
+              BinaryOp: >>
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned']
+                  ID: c
+                Constant: int, 30
+          Assignment: =
+            ID: b
+            BinaryOp: |
+              Constant: int, 30
+              BinaryOp: >>
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned']
+                  ID: b
+                Constant: int, 30
+          Assignment: +=
+            ID: d
+            Assignment: =
+              ID: a
+              BinaryOp: |
+                BinaryOp: <<
+                  ID: a
+                  Constant: int, 30
+                BinaryOp: >>
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned']
+                    ID: a
+                  Constant: int, 2
+          Assignment: +=
+            ID: c
+            BinaryOp: +
+              BinaryOp: +
+                BinaryOp: +
+                  BinaryOp: |
+                    BinaryOp: <<
+                      ID: d
+                      Constant: int, 5
+                    BinaryOp: >>
+                      ID: d
+                      Constant: int, 27
+                  BinaryOp: &
+                    ID: e
+                    BinaryOp: ^
+                      ID: a
+                      ID: b
+                Constant: int, 0x5a827999
+              ArrayRef: 
+                ID: x
+                Constant: int, 12
+          Assignment: +=
+            ID: a
+            BinaryOp: &
+              ID: c
+              ID: e
+          Assignment: =
+            ID: c
+            BinaryOp: |
+              Constant: int, 30
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned']
+                ID: c
+          Assignment: =
+            ID: i
+            BinaryOp: ^
+              BinaryOp: ^
+                BinaryOp: ^
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 5
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 7
+                ArrayRef: 
+                  ID: x
+                  Constant: int, 8
+              ArrayRef: 
+                ID: x
+                Constant: int, 3
+          Assignment: =
+            ArrayRef: 
+              ID: x
+              Constant: int, 5
+            BinaryOp: |
+              BinaryOp: <<
+                ID: i
+                Constant: int, 1
+              BinaryOp: >>
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned']
+                  ID: i
+                Constant: int, 31
+          Assignment: =
+            ID: i
+            BinaryOp: ^
+              BinaryOp: ^
+                BinaryOp: ^
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 6
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 2
+                ArrayRef: 
+                  ID: x
+                  Constant: int, 14
+              ArrayRef: 
+                ID: x
+                Constant: int, 13
+          Assignment: =
+            ArrayRef: 
+              ID: x
+              Constant: int, 6
+            BinaryOp: |
+              BinaryOp: <<
+                ID: i
+                Constant: int, 1
+              BinaryOp: >>
+                ID: i
+                Constant: int, 31
+          Assignment: +=
+            ID: b
+            BinaryOp: +
+              BinaryOp: +
+                BinaryOp: +
+                  BinaryOp: |
+                    ID: c
+                    BinaryOp: >>
+                      ID: c
+                      Constant: int, 5
+                  BinaryOp: ^
+                    ID: d
+                    ID: e
+                Constant: int, 0x6ed9eba1
+              Assignment: =
+                ArrayRef: 
+                  ID: x
+                  Constant: int, 7
+                BinaryOp: |
+                  BinaryOp: <<
+                    ID: i
+                    Constant: int, 1
+                  BinaryOp: >>
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['unsigned']
+                      ID: i
+                    Constant: int, 31
+          Assignment: =
+            ArrayRef: 
+              ID: x
+              Constant: int, 8
+            BinaryOp: |
+              ID: i
+              Constant: int, 1
+          Assignment: +=
+            ID: e
+            BinaryOp: +
+              BinaryOp: +
+                BinaryOp: |
+                  ID: a
+                  Constant: int, 5
+                ID: b
+              ExprList: 
+                Assignment: =
+                  ID: i
+                  BinaryOp: ^
+                    ArrayRef: 
+                      ID: x
+                      Constant: int, 9
+                    ArrayRef: 
+                      ID: x
+                      Constant: int, 6
+                Assignment: =
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 10
+                  BinaryOp: <<
+                    ID: i
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['unsigned']
+                      ID: i
+          Assignment: =
+            ID: e
+            BinaryOp: |
+              Constant: int, 30
+              BinaryOp: >>
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned']
+                  ID: e
+                Constant: int, 30
+          ExprList: 
+            Assignment: =
+              ID: i
+              BinaryOp: ^
+                BinaryOp: ^
+                  BinaryOp: ^
+                    ArrayRef: 
+                      ID: x
+                      Constant: int, 12
+                    ArrayRef: 
+                      ID: x
+                      Constant: int, 14
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 12
+                ArrayRef: 
+                  ID: x
+                  Constant: int, 12
+            Assignment: =
+              ArrayRef: 
+                ID: x
+                Constant: int, 12
+              BinaryOp: |
+                Constant: int, 1
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned']
+                  ID: i
+          ExprList: 
+            Assignment: =
+              ID: i
+              BinaryOp: ^
+                BinaryOp: ^
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 13
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 5
+                ArrayRef: 
+                  ID: x
+                  Constant: int, 10
+            Assignment: =
+              ArrayRef: 
+                ID: x
+                Constant: int, 13
+              BinaryOp: <<
+                ID: i
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned']
+                  Constant: int, 1
+          ExprList: 
+            Assignment: =
+              ID: i
+              BinaryOp: ^
+                BinaryOp: ^
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 2
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 7
+                ArrayRef: 
+                  ID: x
+                  Constant: int, 12
+            Assignment: =
+              ArrayRef: 
+                ID: x
+                Constant: int, 15
+              BinaryOp: |
+                ID: i
+                BinaryOp: >>
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned']
+                    ID: i
+                  Constant: int, 1
+          ExprList: 
+            Assignment: =
+              ID: i
+              BinaryOp: ^
+                BinaryOp: ^
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 2
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 0
+                ArrayRef: 
+                  ID: x
+                  Constant: int, 13
+            Assignment: =
+              ArrayRef: 
+                ID: x
+                Constant: int, 0
+              BinaryOp: |
+                BinaryOp: <<
+                  ID: i
+                  Constant: int, 1
+                Constant: int, 31
+          Assignment: =
+            ID: e
+            BinaryOp: |
+              BinaryOp: <<
+                ID: e
+                Constant: int, 30
+              Constant: int, 2
+          ExprList: 
+            Assignment: =
+              ID: i
+              BinaryOp: ^
+                BinaryOp: ^
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 14
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 2
+                ArrayRef: 
+                  ID: x
+                  Constant: int, 15
+            Assignment: =
+              ArrayRef: 
+                ID: x
+                Constant: int, 2
+              BinaryOp: |
+                ID: i
+                Constant: int, 1
+          Assignment: =
+            ArrayRef: 
+              ID: x
+              Constant: int, 3
+            BinaryOp: |
+              ID: i
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned']
+                ID: i
+          ExprList: 
+            Assignment: =
+              ID: i
+              BinaryOp: ^
+                BinaryOp: ^
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 14
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 12
+                ArrayRef: 
+                  ID: x
+                  Constant: int, 4
+            Assignment: =
+              ArrayRef: 
+                ID: x
+                Constant: int, 4
+              BinaryOp: |
+                Constant: int, 1
+                BinaryOp: >>
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned']
+                    ID: i
+                  Constant: int, 1
+          Assignment: =
+            ArrayRef: 
+              ID: x
+              Constant: int, 5
+            BinaryOp: |
+              ID: i
+              Constant: int, 1
+          Assignment: =
+            ID: e
+            BinaryOp: |
+              BinaryOp: <<
+                ID: e
+                Constant: int, 30
+              Constant: int, 30
+          Assignment: +=
+            ID: b
+            BinaryOp: +
+              BinaryOp: +
+                BinaryOp: |
+                  Constant: int, 5
+                  BinaryOp: >>
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['unsigned']
+                      ID: e
+                    Constant: int, 5
+                Constant: int, 0x8f1bbcdc
+              Assignment: =
+                ArrayRef: 
+                  ID: x
+                  Constant: int, 9
+                BinaryOp: |
+                  ID: i
+                  BinaryOp: >>
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['unsigned']
+                      ID: i
+                    Constant: int, 1
+          Assignment: =
+            ID: i
+            BinaryOp: ^
+              ArrayRef: 
+                ID: x
+                Constant: int, 2
+              Assignment: =
+                ArrayRef: 
+                  ID: x
+                  Constant: int, 10
+                BinaryOp: |
+                  BinaryOp: <<
+                    ID: i
+                    Constant: int, 1
+                  BinaryOp: >>
+                    ID: i
+                    Constant: int, 1
+          Assignment: =
+            ArrayRef: 
+              ID: x
+              Constant: int, 13
+            BinaryOp: |
+              ID: i
+              BinaryOp: >>
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned']
+                  ID: i
+                Constant: int, 1
+          ExprList: 
+            Assignment: =
+              ID: i
+              BinaryOp: ^
+                BinaryOp: ^
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 14
+                  ArrayRef: 
+                    ID: x
+                    Constant: int, 0
+                ArrayRef: 
+                  ID: x
+                  Constant: int, 14
+            Assignment: =
+              ArrayRef: 
+                ID: x
+                Constant: int, 14
+              BinaryOp: |
+                BinaryOp: <<
+                  ID: i
+                  Constant: int, 1
+                Constant: int, 31
+          Assignment: =
+            ID: a
+            Assignment: +=
+              UnaryOp: *
+                ID: w
+              ID: a

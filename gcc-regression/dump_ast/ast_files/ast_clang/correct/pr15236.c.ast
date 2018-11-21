@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fa1928264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa192826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa192826740 '__int128'
+|-TypedefDecl 0x7fa192826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa192826760 'unsigned __int128'
+|-TypedefDecl 0x7fa192826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa192826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa192826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa192826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa192826dc0 'char *'
+|   `-BuiltinType 0x7fa192826560 'char'
+|-TypedefDecl 0x7fa1928270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa192827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa192826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa192826e58 '__va_list_tag'
+|-EnumDecl 0x7fa192827120 <c_files/pr15236.c:5:9, line:9:1> line:5:14 OMX_ERRORTYPE
+| |-EnumConstantDecl 0x7fa192877400 <line:7:3, col:19> col:3 OMX_ErrorNone 'int'
+| | `-IntegerLiteral 0x7fa1928271e0 <col:19> 'int' 0
+| `-EnumConstantDecl 0x7fa192877468 <line:8:3, col:36> col:3 OMX_ErrorInsufficientResources 'unsigned int'
+|   `-IntegerLiteral 0x7fa192877448 <col:36> 'unsigned int' 2147487744
+`-TypedefDecl 0x7fa192877500 <line:5:1, line:9:3> col:3 OMX_ERRORTYPE 'enum OMX_ERRORTYPE':'enum OMX_ERRORTYPE'
+  `-ElaboratedType 0x7fa1928774b0 'enum OMX_ERRORTYPE' sugar
+    `-EnumType 0x7fa1928271c0 'enum OMX_ERRORTYPE'
+      `-Enum 0x7fa192827120 'OMX_ERRORTYPE'

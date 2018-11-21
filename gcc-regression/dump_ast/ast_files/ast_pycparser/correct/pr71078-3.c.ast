@@ -1,0 +1,34 @@
+FileAST: 
+  Decl: fabs, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: fabs, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['float']
+        TypeDecl: f, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: t1, [], [], []
+        TypeDecl: t1, []
+          IdentifierType: ['double']
+        FuncCall: 
+          ID: fabs
+          ExprList: 
+            ID: f
+      Decl: t2, [], [], []
+        TypeDecl: t2, []
+          IdentifierType: ['double']
+        BinaryOp: /
+          ID: f
+          ID: t1
+      Return: 
+        ID: t2

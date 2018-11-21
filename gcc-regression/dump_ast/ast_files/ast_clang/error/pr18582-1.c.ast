@@ -1,0 +1,75 @@
+c_files/pr18582-1.c:18:12: error: use of unknown builtin '__builtin_ia32_loaddqu' [-Wimplicit-function-declaration]
+  cva[0] = __builtin_ia32_loaddqu (ca);
+           ^
+c_files/pr18582-1.c:18:10: error: assigning to 'v16qi' (vector of 16 'char' values) from incompatible type 'int'
+  cva[0] = __builtin_ia32_loaddqu (ca);
+         ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr18582-1.c:21:12: error: use of unknown builtin '__builtin_ia32_loadups' [-Wimplicit-function-declaration]
+  fva[0] = __builtin_ia32_loadups (fa);
+           ^
+c_files/pr18582-1.c:21:12: note: did you mean '__builtin_ia32_loaddqu'?
+c_files/pr18582-1.c:18:12: note: '__builtin_ia32_loaddqu' declared here
+  cva[0] = __builtin_ia32_loaddqu (ca);
+           ^
+c_files/pr18582-1.c:21:10: error: assigning to 'v4sf' (vector of 4 'float' values) from incompatible type 'int'
+  fva[0] = __builtin_ia32_loadups (fa);
+         ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr18582-1.c:23:12: error: use of unknown builtin '__builtin_ia32_loadupd' [-Wimplicit-function-declaration]
+  dva[0] = __builtin_ia32_loadupd (da);
+           ^
+c_files/pr18582-1.c:23:12: note: did you mean '__builtin_ia32_loadups'?
+c_files/pr18582-1.c:21:12: note: '__builtin_ia32_loadups' declared here
+  fva[0] = __builtin_ia32_loadups (fa);
+           ^
+c_files/pr18582-1.c:23:10: error: assigning to 'v2df' (vector of 2 'double' values) from incompatible type 'int'
+  dva[0] = __builtin_ia32_loadupd (da);
+         ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+6 errors generated.
+TranslationUnitDecl 0x7fe3ac0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe3ac026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe3ac026740 '__int128'
+|-TypedefDecl 0x7fe3ac026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe3ac026760 'unsigned __int128'
+|-TypedefDecl 0x7fe3ac026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe3ac026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe3ac026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe3ac026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe3ac026dc0 'char *'
+|   `-BuiltinType 0x7fe3ac026560 'char'
+|-TypedefDecl 0x7fe3ac0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe3ac027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe3ac026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe3ac026e58 '__va_list_tag'
+|-TypedefDecl 0x7fe3ac027178 <c_files/pr18582-1.c:3:1, col:14> col:14 referenced v16qi '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+| `-VectorType 0x7fe3ac027140 '__attribute__((__vector_size__(16 * sizeof(char)))) char' 16
+|   `-BuiltinType 0x7fe3ac026560 'char'
+|-TypedefDecl 0x7fe3ac078438 <line:4:1, col:15> col:15 referenced v4sf '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7fe3ac078400 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7fe3ac0266c0 'float'
+|-TypedefDecl 0x7fe3ac0784e8 <line:5:1, col:16> col:16 referenced v2df '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7fe3ac0784b0 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7fe3ac0266e0 'double'
+|-VarDecl 0x7fe3ac078588 <line:7:1, col:16> col:13 used ca 'char []' extern
+|-VarDecl 0x7fe3ac078680 <line:8:1, col:17> col:14 used fa 'float []' extern
+|-VarDecl 0x7fe3ac078730 <line:9:1, col:18> col:15 used da 'double []' extern
+|-VarDecl 0x7fe3ac078828 <line:11:1, col:18> col:14 used cva 'v16qi []' extern
+|-VarDecl 0x7fe3ac078928 <line:12:1, col:17> col:13 used fva 'v4sf []' extern
+|-VarDecl 0x7fe3ac078a28 <line:13:1, col:17> col:13 used dva 'v2df []' extern
+|-FunctionDecl 0x7fe3ac078b50 <line:15:1, line:24:1> line:16:1 foo 'void (void)'
+| `-CompoundStmt 0x7fe3ac07b290 <line:17:1, line:24:1>
+|   `-BinaryOperator 0x7fe3ac07ad70 <line:19:3, col:36> 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' '='
+|     |-ArraySubscriptExpr 0x7fe3ac0792c0 <col:3, col:8> 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' lvalue
+|     | |-ImplicitCastExpr 0x7fe3ac0792a8 <col:3> 'v16qi *' <ArrayToPointerDecay>
+|     | | `-DeclRefExpr 0x7fe3ac079260 <col:3> 'v16qi []' lvalue Var 0x7fe3ac078828 'cva' 'v16qi []'
+|     | `-IntegerLiteral 0x7fe3ac079288 <col:7> 'int' 0
+|     `-CallExpr 0x7fe3ac07ad10 <col:12, col:36> '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+|       |-ImplicitCastExpr 0x7fe3ac07acf8 <col:12> '__attribute__((__vector_size__(16 * sizeof(char)))) char (*)(const char *)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fe3ac07ac68 <col:12> '<builtin fn type>' Function 0x7fe3ac079328 '__builtin_ia32_lddqu' '__attribute__((__vector_size__(16 * sizeof(char)))) char (const char *)'
+|       `-ImplicitCastExpr 0x7fe3ac07ad58 <col:34> 'const char *' <BitCast>
+|         `-ImplicitCastExpr 0x7fe3ac07ad40 <col:34> 'char *' <ArrayToPointerDecay>
+|           `-DeclRefExpr 0x7fe3ac07ac90 <col:34> 'char []' lvalue Var 0x7fe3ac078588 'ca' 'char []'
+|-FunctionDecl 0x7fe3ac078d30 <<invalid sloc>> line:18:12 implicit used __builtin_ia32_loaddqu 'int ()'
+|-FunctionDecl 0x7fe3ac079328 <line:19:12> col:12 implicit used __builtin_ia32_lddqu '__attribute__((__vector_size__(16 * sizeof(char)))) char (const char *)' extern
+| `-ParmVarDecl 0x7fe3ac07ac00 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7fe3ac07aea0 <<invalid sloc>> line:21:12 implicit used __builtin_ia32_loadups 'int ()'
+`-FunctionDecl 0x7fe3ac07b120 <<invalid sloc>> line:23:12 implicit used __builtin_ia32_loadupd 'int ()'

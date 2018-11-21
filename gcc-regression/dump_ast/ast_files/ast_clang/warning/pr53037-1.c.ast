@@ -1,0 +1,92 @@
+c_files/pr53037-1.c:7:29: warning: unknown attribute 'warn_if_not_aligned' ignored [-Wunknown-attributes]
+  __attribute__((aligned(4),warn_if_not_aligned(8)));
+                            ^
+c_files/pr53037-1.c:42:24: warning: unknown attribute 'warn_if_not_aligned' ignored [-Wunknown-attributes]
+  int x __attribute__((warn_if_not_aligned(16))); /* { dg-warning "'x' offset 4 in 'struct foo5' isn't aligned to 16" } */
+                       ^
+c_files/pr53037-1.c:48:24: warning: unknown attribute 'warn_if_not_aligned' ignored [-Wunknown-attributes]
+  int x __attribute__((warn_if_not_aligned(16))); /* { dg-warning "'x' offset 4 in 'struct foo6' isn't aligned to 16" } */
+                       ^
+c_files/pr53037-1.c:57:24: warning: unknown attribute 'warn_if_not_aligned' ignored [-Wunknown-attributes]
+  int x __attribute__((warn_if_not_aligned(16)));
+                       ^
+c_files/pr53037-1.c:75:24: warning: unknown attribute 'warn_if_not_aligned' ignored [-Wunknown-attributes]
+  int x __attribute__((warn_if_not_aligned(16))); 
+                       ^
+c_files/pr53037-1.c:81:24: warning: unknown attribute 'warn_if_not_aligned' ignored [-Wunknown-attributes]
+  int x __attribute__((warn_if_not_aligned(16)));
+                       ^
+6 warnings generated.
+TranslationUnitDecl 0x7fe0508264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe050826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe050826740 '__int128'
+|-TypedefDecl 0x7fe050826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe050826760 'unsigned __int128'
+|-TypedefDecl 0x7fe050826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe050826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe050826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe050826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe050826dc0 'char *'
+|   `-BuiltinType 0x7fe050826560 'char'
+|-TypedefDecl 0x7fe0508270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe050827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe050826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe050826e58 '__va_list_tag'
+|-TypedefDecl 0x7fe050827178 <c_files/pr53037-1.c:6:1, col:28> col:28 referenced __u64 'unsigned long long'
+| |-BuiltinType 0x7fe0508266a0 'unsigned long long'
+| `-AlignedAttr 0x7fe0508271d0 <line:7:18, col:27> aligned
+|   `-IntegerLiteral 0x7fe050827120 <col:26> 'int' 4
+|-RecordDecl 0x7fe051026a38 <line:9:1, line:15:1> line:9:8 struct foo1 definition
+| |-FieldDecl 0x7fe051026af8 <line:11:3, col:7> col:7 i1 'int'
+| |-FieldDecl 0x7fe051026b58 <line:12:3, col:7> col:7 i2 'int'
+| |-FieldDecl 0x7fe051026bb8 <line:13:3, col:7> col:7 i3 'int'
+| `-FieldDecl 0x7fe051026c30 <line:14:3, col:9> col:9 x '__u64':'unsigned long long'
+|-RecordDecl 0x7fe051026c78 <line:17:1, line:23:1> line:17:8 struct foo2 definition
+| |-AlignedAttr 0x7fe051026eb8 <line:23:18, col:27> aligned
+| | `-IntegerLiteral 0x7fe051026e98 <col:26> 'int' 8
+| |-FieldDecl 0x7fe051026d38 <line:19:3, col:7> col:7 i1 'int'
+| |-FieldDecl 0x7fe051026d98 <line:20:3, col:7> col:7 i2 'int'
+| |-FieldDecl 0x7fe051026df8 <line:21:3, col:7> col:7 i3 'int'
+| `-FieldDecl 0x7fe051026e50 <line:22:3, col:9> col:9 x '__u64':'unsigned long long'
+|-RecordDecl 0x7fe051026f08 <line:25:1, line:30:1> line:25:8 struct foo3 definition
+| |-FieldDecl 0x7fe051026fc8 <line:27:3, col:7> col:7 i1 'int'
+| |-FieldDecl 0x7fe051027028 <line:28:3, col:7> col:7 i3 'int'
+| `-FieldDecl 0x7fe051027080 <line:29:3, col:9> col:9 x '__u64':'unsigned long long'
+|-RecordDecl 0x7fe0510270c8 <line:32:1, line:37:1> line:32:8 struct foo4 definition
+| |-AlignedAttr 0x7fe0510272a8 <line:37:18, col:27> aligned
+| | `-IntegerLiteral 0x7fe051027288 <col:26> 'int' 8
+| |-FieldDecl 0x7fe051027188 <line:34:3, col:7> col:7 i1 'int'
+| |-FieldDecl 0x7fe0510271e8 <line:35:3, col:7> col:7 i2 'int'
+| `-FieldDecl 0x7fe051027240 <line:36:3, col:9> col:9 x '__u64':'unsigned long long'
+|-RecordDecl 0x7fe0510272f8 <line:39:1, line:43:1> line:39:8 struct foo5 definition
+| |-FieldDecl 0x7fe0510273b8 <line:41:3, col:7> col:7 i1 'int'
+| `-FieldDecl 0x7fe051027438 <line:42:3, col:7> col:7 x 'int'
+|-RecordDecl 0x7fe051027480 <line:45:1, line:49:1> line:45:8 struct foo6 definition
+| |-AlignedAttr 0x7fe051027630 <line:49:18, col:28> aligned
+| | `-IntegerLiteral 0x7fe051027610 <col:26> 'int' 16
+| |-FieldDecl 0x7fe051027548 <line:47:3, col:7> col:7 i1 'int'
+| `-FieldDecl 0x7fe0510275c8 <line:48:3, col:7> col:7 x 'int'
+|-RecordDecl 0x7fe051027680 <line:51:1, line:58:1> line:51:8 struct foo7 definition
+| |-AlignedAttr 0x7fe051027950 <line:58:18, col:28> aligned
+| | `-IntegerLiteral 0x7fe051027930 <col:26> 'int' 16
+| |-FieldDecl 0x7fe051027748 <line:53:3, col:7> col:7 i1 'int'
+| |-FieldDecl 0x7fe0510277a8 <line:54:3, col:7> col:7 i2 'int'
+| |-FieldDecl 0x7fe051027808 <line:55:3, col:7> col:7 i3 'int'
+| |-FieldDecl 0x7fe051027868 <line:56:3, col:7> col:7 i4 'int'
+| `-FieldDecl 0x7fe0510278e8 <line:57:3, col:7> col:7 x 'int'
+|-RecordDecl 0x7fe051027a00 <line:60:1, line:64:1> line:60:7 union bar1 definition
+| |-FieldDecl 0x7fe051027ac8 <line:62:3, col:7> col:7 i1 'int'
+| `-FieldDecl 0x7fe051027b20 <line:63:3, col:9> col:9 x '__u64':'unsigned long long'
+|-RecordDecl 0x7fe051027b68 <line:66:1, line:70:1> line:66:7 union bar2 definition
+| |-AlignedAttr 0x7fe051027ce8 <line:70:18, col:27> aligned
+| | `-IntegerLiteral 0x7fe051027cc8 <col:26> 'int' 8
+| |-FieldDecl 0x7fe051027c28 <line:68:3, col:7> col:7 i1 'int'
+| `-FieldDecl 0x7fe051027c80 <line:69:3, col:9> col:9 x '__u64':'unsigned long long'
+|-RecordDecl 0x7fe051027d38 <line:72:1, line:76:1> line:72:7 union bar3 definition
+| |-FieldDecl 0x7fe051027df8 <line:74:3, col:7> col:7 i1 'int'
+| `-FieldDecl 0x7fe051027e78 <line:75:3, col:7> col:7 x 'int'
+`-RecordDecl 0x7fe051027ec0 <line:78:1, line:82:1> line:78:7 union bar4 definition
+  |-AlignedAttr 0x7fe051028070 <line:82:18, col:28> aligned
+  | `-IntegerLiteral 0x7fe051028050 <col:26> 'int' 16
+  |-FieldDecl 0x7fe051027f88 <line:80:3, col:7> col:7 i1 'int'
+  `-FieldDecl 0x7fe051028008 <line:81:3, col:7> col:7 x 'int'

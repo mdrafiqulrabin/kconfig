@@ -1,0 +1,86 @@
+TranslationUnitDecl 0x7fe3878264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe387826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe387826740 '__int128'
+|-TypedefDecl 0x7fe387826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe387826760 'unsigned __int128'
+|-TypedefDecl 0x7fe387826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe387826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe387826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe387826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe387826dc0 'char *'
+|   `-BuiltinType 0x7fe387826560 'char'
+|-TypedefDecl 0x7fe3878270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe387827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe387826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe387826e58 '__va_list_tag'
+|-TypedefDecl 0x7fe387827178 <c_files/pr60077-2.c:7:1, col:15> col:15 referenced v8sf '__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| `-VectorType 0x7fe387827140 '__attribute__((__vector_size__(8 * sizeof(float)))) float' 8
+|   `-BuiltinType 0x7fe3878266c0 'float'
+|-FunctionDecl 0x7fe387878d40 <line:9:1, col:105> col:13 used foo 'void (int, int, int, int, int, int, int, v8sf, v8sf, v8sf, v8sf, v8sf, v8sf, v8sf, v8sf, v8sf)' extern
+| |-ParmVarDecl 0x7fe387878400 <col:18> col:21 'int'
+| |-ParmVarDecl 0x7fe387878478 <col:23> col:26 'int'
+| |-ParmVarDecl 0x7fe3878784f0 <col:28> col:31 'int'
+| |-ParmVarDecl 0x7fe387878568 <col:33> col:36 'int'
+| |-ParmVarDecl 0x7fe3878785e0 <col:38> col:41 'int'
+| |-ParmVarDecl 0x7fe387878658 <col:43> col:46 'int'
+| |-ParmVarDecl 0x7fe3878786d0 <col:48> col:51 'int'
+| |-ParmVarDecl 0x7fe387878760 <col:53> col:57 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| |-ParmVarDecl 0x7fe3878787d0 <col:59> col:63 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| |-ParmVarDecl 0x7fe387878840 <col:65> col:69 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| |-ParmVarDecl 0x7fe3878788b0 <col:71> col:75 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| |-ParmVarDecl 0x7fe387878920 <col:77> col:81 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| |-ParmVarDecl 0x7fe387878990 <col:83> col:87 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| |-ParmVarDecl 0x7fe387878a00 <col:89> col:93 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| |-ParmVarDecl 0x7fe387878a70 <col:95> col:99 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| `-ParmVarDecl 0x7fe387878ae0 <col:101> col:105 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+`-FunctionDecl 0x7fe387878f68 <line:11:1, line:18:1> line:12:1 test 'int (void)'
+  `-CompoundStmt 0x7fe3878797f8 <line:13:1, line:18:1>
+    |-DeclStmt 0x7fe387879330 <line:14:3, col:54>
+    | `-VarDecl 0x7fe387879010 <col:3, col:53> col:8 used x 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' cinit
+    |   `-InitListExpr 0x7fe3878791f0 <col:12, col:53> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+    |     |-ImplicitCastExpr 0x7fe387879270 <col:14> 'float' <FloatingCast>
+    |     | `-FloatingLiteral 0x7fe387879070 <col:14> 'double' 0.000000e+00
+    |     |-ImplicitCastExpr 0x7fe387879288 <col:19> 'float' <FloatingCast>
+    |     | `-FloatingLiteral 0x7fe387879090 <col:19> 'double' 1.000000e+00
+    |     |-ImplicitCastExpr 0x7fe3878792a0 <col:24> 'float' <FloatingCast>
+    |     | `-FloatingLiteral 0x7fe3878790b0 <col:24> 'double' 2.000000e+00
+    |     |-ImplicitCastExpr 0x7fe3878792b8 <col:29> 'float' <FloatingCast>
+    |     | `-FloatingLiteral 0x7fe3878790d0 <col:29> 'double' 3.000000e+00
+    |     |-ImplicitCastExpr 0x7fe3878792d0 <col:34> 'float' <FloatingCast>
+    |     | `-FloatingLiteral 0x7fe3878790f0 <col:34> 'double' 4.000000e+00
+    |     |-ImplicitCastExpr 0x7fe3878792e8 <col:39> 'float' <FloatingCast>
+    |     | `-FloatingLiteral 0x7fe387879110 <col:39> 'double' 5.000000e+00
+    |     |-ImplicitCastExpr 0x7fe387879300 <col:44> 'float' <FloatingCast>
+    |     | `-FloatingLiteral 0x7fe387879130 <col:44> 'double' 6.000000e+00
+    |     `-ImplicitCastExpr 0x7fe387879318 <col:49> 'float' <FloatingCast>
+    |       `-FloatingLiteral 0x7fe387879150 <col:49> 'double' 7.000000e+00
+    |-CallExpr 0x7fe387879640 <line:16:3, col:54> 'void'
+    | |-ImplicitCastExpr 0x7fe387879628 <col:3> 'void (*)(int, int, int, int, int, int, int, v8sf, v8sf, v8sf, v8sf, v8sf, v8sf, v8sf, v8sf, v8sf)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe387879348 <col:3> 'void (int, int, int, int, int, int, int, v8sf, v8sf, v8sf, v8sf, v8sf, v8sf, v8sf, v8sf, v8sf)' Function 0x7fe387878d40 'foo' 'void (int, int, int, int, int, int, int, v8sf, v8sf, v8sf, v8sf, v8sf, v8sf, v8sf, v8sf, v8sf)'
+    | |-IntegerLiteral 0x7fe387879370 <col:8> 'int' 1
+    | |-IntegerLiteral 0x7fe387879390 <col:11> 'int' 2
+    | |-IntegerLiteral 0x7fe3878793b0 <col:14> 'int' 3
+    | |-IntegerLiteral 0x7fe3878793d0 <col:17> 'int' 4
+    | |-IntegerLiteral 0x7fe387879400 <col:20> 'int' 5
+    | |-IntegerLiteral 0x7fe387879420 <col:23> 'int' 6
+    | |-IntegerLiteral 0x7fe387879440 <col:26> 'int' 7
+    | |-ImplicitCastExpr 0x7fe3878796e8 <col:29> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe387879460 <col:29> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue Var 0x7fe387879010 'x' 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+    | |-ImplicitCastExpr 0x7fe387879700 <col:32> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe387879488 <col:32> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue Var 0x7fe387879010 'x' 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+    | |-ImplicitCastExpr 0x7fe387879718 <col:35> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe3878794b0 <col:35> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue Var 0x7fe387879010 'x' 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+    | |-ImplicitCastExpr 0x7fe387879730 <col:38> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe3878794d8 <col:38> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue Var 0x7fe387879010 'x' 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+    | |-ImplicitCastExpr 0x7fe387879748 <col:41> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe387879500 <col:41> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue Var 0x7fe387879010 'x' 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+    | |-ImplicitCastExpr 0x7fe387879760 <col:44> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe387879528 <col:44> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue Var 0x7fe387879010 'x' 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+    | |-ImplicitCastExpr 0x7fe387879778 <col:47> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe387879550 <col:47> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue Var 0x7fe387879010 'x' 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+    | |-ImplicitCastExpr 0x7fe387879790 <col:50> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe387879578 <col:50> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue Var 0x7fe387879010 'x' 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+    | `-ImplicitCastExpr 0x7fe3878797a8 <col:53> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe3878795a0 <col:53> 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue Var 0x7fe387879010 'x' 'v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+    `-ReturnStmt 0x7fe3878797e0 <line:17:3, col:10>
+      `-IntegerLiteral 0x7fe3878797c0 <col:10> 'int' 0

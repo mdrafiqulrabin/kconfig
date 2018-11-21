@@ -1,0 +1,59 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: f1, [], [], []
+        TypeDecl: f1, []
+          IdentifierType: ['int']
+      Decl: f2, [], [], []
+        TypeDecl: f2, []
+          IdentifierType: ['int']
+  Decl: func, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+      TypeDecl: func, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: src, [], [], []
+            PtrDecl: []
+              TypeDecl: src, []
+                Struct: A
+          Decl: dst, [], [], []
+            PtrDecl: []
+              TypeDecl: dst, []
+                Struct: A
+          Decl: count, [], [], []
+            TypeDecl: count, []
+              IdentifierType: ['int']
+        TypeDecl: test, []
+          IdentifierType: ['int']
+    Compound: 
+      While: 
+        UnaryOp: p--
+          ID: count
+        Compound: 
+          If: 
+            UnaryOp: !
+              FuncCall: 
+                ID: func
+                ExprList: 
+                  StructRef: ->
+                    ID: src
+                    ID: f2
+            Compound: 
+              Return: 
+                Constant: int, 0
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: dst
+            UnaryOp: *
+              UnaryOp: p++
+                ID: src
+      Return: 
+        Constant: int, 1

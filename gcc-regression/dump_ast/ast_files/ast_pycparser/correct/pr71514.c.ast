@@ -1,0 +1,58 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __atomic_exchange
+        ExprList: 
+          UnaryOp: &
+            ID: a
+          UnaryOp: &
+            ID: foo
+          UnaryOp: &
+            ID: b
+          ID: __ATOMIC_RELAXED
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: fn2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: arr, [], [], []
+        ArrayDecl: []
+          TypeDecl: arr, []
+            IdentifierType: ['int']
+          ID: n
+      FuncCall: 
+        ID: __atomic_exchange
+        ExprList: 
+          UnaryOp: &
+            ID: a
+          UnaryOp: &
+            ID: arr
+          UnaryOp: &
+            ID: b
+          ID: __ATOMIC_RELAXED

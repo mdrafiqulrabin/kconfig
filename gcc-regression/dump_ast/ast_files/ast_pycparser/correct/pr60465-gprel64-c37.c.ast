@@ -1,0 +1,23 @@
+FileAST: 
+  Decl: s90, ['const'], ['static'], []
+    PtrDecl: []
+      TypeDecl: s90, ['const']
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: s90
+        Constant: string, "string 90"
+  FuncDef: 
+    Decl: g, ['const'], [], []
+      FuncDecl: 
+        PtrDecl: []
+          TypeDecl: g, ['const']
+            IdentifierType: ['char']
+    Compound: 
+      Return: 
+        ID: s90

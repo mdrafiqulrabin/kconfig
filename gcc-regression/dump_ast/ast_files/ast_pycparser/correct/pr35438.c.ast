@@ -1,0 +1,6 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  Pragma: omp threadprivate(foo)	 

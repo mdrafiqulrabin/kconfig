@@ -1,0 +1,108 @@
+FileAST: 
+  Decl: x1, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: x1, []
+        IdentifierType: ['long']
+  Decl: x2, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: x2, []
+        IdentifierType: ['long']
+  Decl: x3, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: x3, []
+        IdentifierType: ['long']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: p1, [], [], []
+        PtrDecl: []
+          TypeDecl: p1, []
+            IdentifierType: ['long']
+      Decl: p2, [], [], []
+        PtrDecl: []
+          TypeDecl: p2, []
+            IdentifierType: ['long']
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          IdentifierType: ['long']
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['long']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['long']
+      Assignment: =
+        ID: p1
+        ID: x1
+      Assignment: =
+        ID: p2
+        ID: x2
+      Assignment: =
+        ID: n
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          UnaryOp: *
+            ID: x3
+        BinaryOp: <
+          Constant: int, 0
+          ID: i
+        UnaryOp: p--
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: m
+            BinaryOp: ^
+              UnaryOp: *
+                UnaryOp: p++
+                  ID: p1
+              UnaryOp: *
+                UnaryOp: p++
+                  ID: p2
+          Assignment: =
+            ID: m
+            BinaryOp: +
+              BinaryOp: &
+                ID: m
+                Constant: int, 0x55555555
+              BinaryOp: &
+                BinaryOp: >>
+                  ID: m
+                  Constant: int, 1
+                Constant: int, 0x55555555
+          Assignment: =
+            ID: m
+            BinaryOp: +
+              BinaryOp: &
+                ID: m
+                Constant: int, 0x33333333
+              BinaryOp: &
+                BinaryOp: >>
+                  ID: m
+                  Constant: int, 2
+                Constant: int, 0x33333333
+          Assignment: =
+            ID: m
+            BinaryOp: &
+              BinaryOp: +
+                ID: m
+                BinaryOp: >>
+                  ID: m
+                  Constant: int, 4
+              Constant: int, 0x0f0f0f0f
+          Assignment: =
+            ID: m
+            BinaryOp: +
+              ID: m
+              BinaryOp: >>
+                ID: m
+                Constant: int, 8
+          Assignment: +=
+            ID: n
+            ID: m
+      Return: 
+        ID: n

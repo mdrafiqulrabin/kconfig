@@ -1,0 +1,118 @@
+c_files/pr25801.c:13:4: error: arithmetic on a pointer to an incomplete type 'int []'
+  a++; /* { dg-error "increment of pointer to an incomplete type" } */
+  ~^
+c_files/pr25801.c:14:3: error: arithmetic on a pointer to an incomplete type 'int []'
+  ++a; /* { dg-error "increment of pointer to an incomplete type" } */
+  ^ ~
+c_files/pr25801.c:15:4: error: arithmetic on a pointer to an incomplete type 'int []'
+  a--; /* { dg-error "decrement of pointer to an incomplete type" } */
+  ~^
+c_files/pr25801.c:16:3: error: arithmetic on a pointer to an incomplete type 'int []'
+  --a; /* { dg-error "decrement of pointer to an incomplete type" } */
+  ^ ~
+c_files/pr25801.c:17:5: error: arithmetic on a pointer to an incomplete type 'int []'
+  a += 1; /* { dg-error "invalid use of array with unspecified bounds" } */
+  ~ ^
+c_files/pr25801.c:18:5: error: arithmetic on a pointer to an incomplete type 'int []'
+  a -= 1; /* { dg-error "invalid use of array with unspecified bounds" } */
+  ~ ^
+c_files/pr25801.c:19:5: error: arithmetic on a pointer to an incomplete type 'int []'
+  a - a; /* { dg-error "arithmetic on pointer to an incomplete type" } */
+  ~ ^
+c_files/pr25801.c:21:4: error: arithmetic on a pointer to an incomplete type 'struct S'
+  s++; /* { dg-error "increment of pointer to an incomplete type" } */
+  ~^
+c_files/pr25801.c:6:8: note: forward declaration of 'struct S'
+struct S *s;
+       ^
+c_files/pr25801.c:22:3: error: arithmetic on a pointer to an incomplete type 'struct S'
+  ++s; /* { dg-error "increment of pointer to an incomplete type" } */
+  ^ ~
+c_files/pr25801.c:6:8: note: forward declaration of 'struct S'
+struct S *s;
+       ^
+c_files/pr25801.c:23:4: error: arithmetic on a pointer to an incomplete type 'struct S'
+  s--; /* { dg-error "decrement of pointer to an incomplete type" } */
+  ~^
+c_files/pr25801.c:6:8: note: forward declaration of 'struct S'
+struct S *s;
+       ^
+c_files/pr25801.c:24:3: error: arithmetic on a pointer to an incomplete type 'struct S'
+  --s; /* { dg-error "decrement of pointer to an incomplete type" } */
+  ^ ~
+c_files/pr25801.c:6:8: note: forward declaration of 'struct S'
+struct S *s;
+       ^
+c_files/pr25801.c:25:5: error: arithmetic on a pointer to an incomplete type 'struct S'
+  s += 1; /* { dg-error "invalid use of undefined type" } */
+  ~ ^
+c_files/pr25801.c:6:8: note: forward declaration of 'struct S'
+struct S *s;
+       ^
+c_files/pr25801.c:26:5: error: arithmetic on a pointer to an incomplete type 'struct S'
+  s -= 1; /* { dg-error "invalid use of undefined type" } */
+  ~ ^
+c_files/pr25801.c:6:8: note: forward declaration of 'struct S'
+struct S *s;
+       ^
+c_files/pr25801.c:27:5: error: arithmetic on a pointer to an incomplete type 'struct S'
+  s - s; /* { dg-error "arithmetic on pointer to an incomplete type" } */
+  ~ ^
+c_files/pr25801.c:6:8: note: forward declaration of 'struct S'
+struct S *s;
+       ^
+c_files/pr25801.c:29:4: error: arithmetic on a pointer to an incomplete type 'union U'
+  u++; /* { dg-error "increment of pointer to an incomplete type" } */
+  ~^
+c_files/pr25801.c:7:7: note: forward declaration of 'union U'
+union U *u;
+      ^
+c_files/pr25801.c:30:3: error: arithmetic on a pointer to an incomplete type 'union U'
+  ++u; /* { dg-error "increment of pointer to an incomplete type" } */
+  ^ ~
+c_files/pr25801.c:7:7: note: forward declaration of 'union U'
+union U *u;
+      ^
+c_files/pr25801.c:31:4: error: arithmetic on a pointer to an incomplete type 'union U'
+  u--; /* { dg-error "decrement of pointer to an incomplete type" } */
+  ~^
+c_files/pr25801.c:7:7: note: forward declaration of 'union U'
+union U *u;
+      ^
+c_files/pr25801.c:32:3: error: arithmetic on a pointer to an incomplete type 'union U'
+  --u; /* { dg-error "decrement of pointer to an incomplete type" } */
+  ^ ~
+c_files/pr25801.c:7:7: note: forward declaration of 'union U'
+union U *u;
+      ^
+c_files/pr25801.c:33:5: error: arithmetic on a pointer to an incomplete type 'union U'
+  u += 1; /* { dg-error "invalid use of undefined type" } */
+  ~ ^
+c_files/pr25801.c:7:7: note: forward declaration of 'union U'
+union U *u;
+      ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+TranslationUnitDecl 0x7fb6ce0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb6ce026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb6ce026740 '__int128'
+|-TypedefDecl 0x7fb6ce026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb6ce026760 'unsigned __int128'
+|-TypedefDecl 0x7fb6ce026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb6ce026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb6ce026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb6ce026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb6ce026dc0 'char *'
+|   `-BuiltinType 0x7fb6ce026560 'char'
+|-TypedefDecl 0x7fb6ce0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb6ce027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb6ce026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb6ce026e58 '__va_list_tag'
+|-VarDecl 0x7fb6ce825a38 <c_files/pr25801.c:5:1, col:10> col:7 used a 'int (*)[]'
+|-RecordDecl 0x7fb6ce825ad8 <line:6:1, col:8> col:8 struct S
+|-VarDecl 0x7fb6ce825c30 <col:1, col:11> col:11 used s 'struct S *'
+|-RecordDecl 0x7fb6ce825ca8 <line:7:1, col:7> col:7 union U
+|-VarDecl 0x7fb6ce825e00 <col:1, col:10> col:10 used u 'union U *'
+|-VarDecl 0x7fb6ce825fe0 <line:8:1, col:9> col:9 used e 'enum E *'
+`-FunctionDecl 0x7fb6ce826120 <line:10:1, line:44:1> line:11:1 f 'void (void)'
+  `-CompoundStmt 0x7fb6ce826c30 <line:12:1, line:44:1>

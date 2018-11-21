@@ -1,0 +1,35 @@
+c_files/pr71991.c:4:79: warning: control reaches end of non-void function [-Wreturn-type]
+static __attribute__ ((target ("inline-all-stringops"))) int fn2 () { fn1 (); }
+                                                                              ^
+1 warning generated.
+TranslationUnitDecl 0x7feacb8130d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feacb813620 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feacb813340 '__int128'
+|-TypedefDecl 0x7feacb813690 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feacb813360 'unsigned __int128'
+|-TypedefDecl 0x7feacb813968 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feacb813770 'struct __NSConstantString_tag'
+|   `-Record 0x7feacb8136e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feacb813a00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feacb8139c0 'char *'
+|   `-BuiltinType 0x7feacb813160 'char'
+|-TypedefDecl 0x7feacb813cc8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feacb813c70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feacb813ae0 'struct __va_list_tag'
+|     `-Record 0x7feacb813a58 '__va_list_tag'
+|-FunctionDecl 0x7feacc826a00 <c_files/pr71991.c:3:1, col:74> col:55 used fn1 'int ()' static inline
+| |-CompoundStmt 0x7feacc826b58 <col:62, col:74>
+| | `-ReturnStmt 0x7feacc826b40 <col:64, col:71>
+| |   `-IntegerLiteral 0x7feacc826b20 <col:71> 'int' 0
+| `-AlwaysInlineAttr 0x7feacc826a98 <col:31> always_inline
+|-FunctionDecl 0x7feacc826c20 <line:4:1, col:79> col:62 used fn2 'int ()' static
+| |-CompoundStmt 0x7feacc826db8 <col:69, col:79>
+| | `-CallExpr 0x7feacc826d90 <col:71, col:76> 'int'
+| |   `-ImplicitCastExpr 0x7feacc826d78 <col:71> 'int (*)()' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7feacc826d20 <col:71> 'int ()' Function 0x7feacc826a00 'fn1' 'int ()'
+| `-TargetAttr 0x7feacc826cb8 <col:24, col:54> "inline-all-stringops"
+`-FunctionDecl 0x7feacc826e00 <line:6:1, line:9:1> line:6:5 main 'int ()'
+  `-CompoundStmt 0x7feacc826f00 <line:7:1, line:9:1>
+    `-CallExpr 0x7feacc826ed8 <line:8:3, col:7> 'int'
+      `-ImplicitCastExpr 0x7feacc826ec0 <col:3> 'int (*)()' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7feacc826e98 <col:3> 'int ()' Function 0x7feacc826c20 'fn2' 'int ()'

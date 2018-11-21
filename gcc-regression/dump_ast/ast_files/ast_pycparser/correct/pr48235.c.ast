@@ -1,0 +1,182 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: intC
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['short']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['short']
+  Decl: size_x, [], [], []
+    TypeDecl: size_x, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: TileDiffXY, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: TileDiffXY, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: *
+            ID: y
+            ID: size_x
+          ID: x
+  Decl: None, [], [], []
+    Struct: HangarTileTable
+      Decl: ti, [], [], []
+        TypeDecl: ti, []
+          Struct: intC
+      Decl: hangar_num, [], [], []
+        TypeDecl: hangar_num, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: AirportSpec
+      Decl: depot_table, [], [], []
+        PtrDecl: []
+          TypeDecl: depot_table, []
+            Struct: HangarTileTable
+      Decl: size, [], [], []
+        TypeDecl: size, []
+          IdentifierType: ['int']
+  Decl: Get, [], [], []
+    FuncDecl: 
+      TypeDecl: Get, []
+        IdentifierType: ['void']
+  Decl: dummy, [], [], []
+    TypeDecl: dummy, []
+      Struct: AirportSpec
+  FuncDef: 
+    Decl: GetRotatedTileFromOffset, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: tidc, [], [], []
+            TypeDecl: tidc, []
+              Struct: intC
+        TypeDecl: GetRotatedTileFromOffset, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        UnaryOp: !
+          UnaryOp: *
+            ID: a
+        FuncCall: 
+          ID: Get
+      Switch: 
+        UnaryOp: *
+          ID: a
+        Compound: 
+          Case: 
+            Constant: int, 0
+            Return: 
+              BinaryOp: +
+                BinaryOp: <<
+                  StructRef: .
+                    ID: tidc
+                    ID: y
+                  ID: size_x
+                StructRef: .
+                  ID: tidc
+                  ID: x
+          Case: 
+            Constant: int, 1
+            Return: 
+              FuncCall: 
+                ID: TileDiffXY
+                ExprList: 
+                  StructRef: .
+                    ID: tidc
+                    ID: y
+                  BinaryOp: -
+                    StructRef: .
+                      ID: dummy
+                      ID: size
+                    StructRef: .
+                      ID: tidc
+                      ID: x
+          Case: 
+            Constant: int, 2
+            Return: 
+              FuncCall: 
+                ID: TileDiffXY
+                ExprList: 
+                  StructRef: .
+                    ID: tidc
+                    ID: x
+                  BinaryOp: -
+                    StructRef: .
+                      ID: dummy
+                      ID: size
+                    StructRef: .
+                      ID: tidc
+                      ID: y
+          Case: 
+            Constant: int, 3
+            Return: 
+              FuncCall: 
+                ID: TileDiffXY
+                ExprList: 
+                  BinaryOp: -
+                    StructRef: .
+                      ID: dummy
+                      ID: size
+                    Constant: int, 1
+                  StructRef: .
+                    ID: tidc
+                    ID: x
+  FuncDef: 
+    Decl: GetHangarNum, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+        TypeDecl: GetHangarNum, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          StructRef: .
+            ID: dummy
+            ID: size
+        UnaryOp: p++
+          ID: i
+        If: 
+          FuncCall: 
+            ID: GetRotatedTileFromOffset
+            ExprList: 
+              ID: a
+              StructRef: .
+                ArrayRef: 
+                  StructRef: .
+                    ID: dummy
+                    ID: depot_table
+                  ID: i
+                ID: ti
+          Return: 
+            StructRef: .
+              ArrayRef: 
+                StructRef: .
+                  ID: dummy
+                  ID: depot_table
+                ID: i
+              ID: hangar_num

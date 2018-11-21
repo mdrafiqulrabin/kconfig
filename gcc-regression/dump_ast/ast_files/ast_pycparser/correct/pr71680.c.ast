@@ -1,0 +1,37 @@
+FileAST: 
+  Pragma: pack(1)
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Struct: None
+        Decl: f0, [], [], []
+          TypeDecl: f0, []
+            IdentifierType: ['float']
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      For: 
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+              StructRef: .
+                ID: a
+                ID: f0

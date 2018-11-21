@@ -1,0 +1,53 @@
+FileAST: 
+  Decl: s7, [], [], []
+    TypeDecl: s7, []
+      IdentifierType: ['int']
+  Decl: p0, [], [], []
+    TypeDecl: p0, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: i0, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ke, [], [], []
+            TypeDecl: ke, []
+              IdentifierType: ['int']
+        TypeDecl: i0, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        BinaryOp: <
+          ID: ke
+          Constant: int, 1
+        Compound: 
+          If: 
+            BinaryOp: ==
+              ID: s7
+              Constant: int, 0
+            Assignment: =
+              ID: p0
+              Constant: int, 0
+            Compound: 
+              If: 
+                BinaryOp: ==
+                  ID: p0
+                  Constant: int, 0
+                Assignment: =
+                  ID: s7
+                  Constant: int, 0
+              If: 
+                BinaryOp: ||
+                  UnaryOp: !
+                    UnaryOp: !
+                      ID: s7
+                  UnaryOp: !
+                    UnaryOp: !
+                      ID: p0
+                Assignment: =
+                  ID: s7
+                  Constant: int, 0
+                Assignment: =
+                  ID: p0
+                  Constant: int, 0
+          UnaryOp: ++
+            ID: ke

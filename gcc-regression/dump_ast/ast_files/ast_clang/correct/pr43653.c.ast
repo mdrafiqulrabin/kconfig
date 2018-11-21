@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7f960e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f960e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f960e026740 '__int128'
+|-TypedefDecl 0x7f960e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f960e026760 'unsigned __int128'
+|-TypedefDecl 0x7f960e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f960e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f960e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f960e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f960e026dc0 'char *'
+|   `-BuiltinType 0x7f960e026560 'char'
+|-TypedefDecl 0x7f960e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f960e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f960e026ee0 'struct __va_list_tag'
+|     `-Record 0x7f960e026e58 '__va_list_tag'
+|-RecordDecl 0x7f960e027120 <c_files/pr43653.c:4:9, col:17> col:9 struct definition
+|-TypedefDecl 0x7f960e825a20 <col:1, col:19> col:19 referenced S 'struct S':'S'
+| `-ElaboratedType 0x7f960e0271d0 'struct S' sugar
+|   `-RecordType 0x7f960e0271b0 'S'
+|     `-Record 0x7f960e027120 ''
+`-FunctionDecl 0x7f960e825ae0 <line:6:1, line:14:1> line:6:7 foo 'void *()'
+  `-CompoundStmt 0x7f960e8263b8 <line:7:1, line:14:1>
+    |-DeclStmt 0x7f960e825ed0 <line:8:3, col:18>
+    | |-VarDecl 0x7f960e825cd8 <col:3, col:9> col:5 used a 'S [64]'
+    | `-VarDecl 0x7f960e825e58 <col:3, col:17> col:13 used p 'S *[64]'
+    |-DeclStmt 0x7f960e825f60 <line:9:3, col:8>
+    | `-VarDecl 0x7f960e825f00 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7f960e8262b0 <line:11:3, line:12:16>
+    | |-BinaryOperator 0x7f960e825fc0 <line:11:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7f960e825f78 <col:8> 'int' lvalue Var 0x7f960e825f00 'i' 'int'
+    | | `-IntegerLiteral 0x7f960e825fa0 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f960e826048 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f960e826030 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f960e825fe8 <col:15> 'int' lvalue Var 0x7f960e825f00 'i' 'int'
+    | | `-IntegerLiteral 0x7f960e826010 <col:19> 'int' 64
+    | |-UnaryOperator 0x7f960e826098 <col:23, col:24> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7f960e826070 <col:23> 'int' lvalue Var 0x7f960e825f00 'i' 'int'
+    | `-BinaryOperator 0x7f960e826288 <line:12:5, col:16> 'S *' '='
+    |   |-ArraySubscriptExpr 0x7f960e826198 <col:5, col:8> 'S *' lvalue
+    |   | |-ImplicitCastExpr 0x7f960e826168 <col:5> 'S **' <ArrayToPointerDecay>
+    |   | | `-DeclRefExpr 0x7f960e8260b8 <col:5> 'S *[64]' lvalue Var 0x7f960e825e58 'p' 'S *[64]'
+    |   | `-ImplicitCastExpr 0x7f960e826180 <col:7> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7f960e8260e0 <col:7> 'int' lvalue Var 0x7f960e825f00 'i' 'int'
+    |   `-UnaryOperator 0x7f960e826268 <col:12, col:16> 'S *' prefix '&'
+    |     `-ArraySubscriptExpr 0x7f960e826240 <col:13, col:16> 'S':'S' lvalue
+    |       |-ImplicitCastExpr 0x7f960e826210 <col:13> 'S *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7f960e8261c0 <col:13> 'S [64]' lvalue Var 0x7f960e825cd8 'a' 'S [64]'
+    |       `-ImplicitCastExpr 0x7f960e826228 <col:15> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f960e8261e8 <col:15> 'int' lvalue Var 0x7f960e825f00 'i' 'int'
+    `-ReturnStmt 0x7f960e8263a0 <line:13:3, col:13>
+      `-ImplicitCastExpr 0x7f960e826388 <col:10, col:13> 'void *' <BitCast>
+        `-ImplicitCastExpr 0x7f960e826370 <col:10, col:13> 'S *' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7f960e826348 <col:10, col:13> 'S *' lvalue
+            |-ImplicitCastExpr 0x7f960e826330 <col:10> 'S **' <ArrayToPointerDecay>
+            | `-DeclRefExpr 0x7f960e8262e8 <col:10> 'S *[64]' lvalue Var 0x7f960e825e58 'p' 'S *[64]'
+            `-IntegerLiteral 0x7f960e826310 <col:12> 'int' 0

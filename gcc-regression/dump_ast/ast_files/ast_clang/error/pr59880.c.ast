@@ -1,0 +1,27 @@
+c_files/pr59880.c:5:34: error: register 'r13' unsuitable for global register variables on this target
+register unsigned int r13 __asm ("r13");
+                                 ^
+1 error generated.
+TranslationUnitDecl 0x7fd5c38264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd5c3826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd5c3826740 '__int128'
+|-TypedefDecl 0x7fd5c3826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd5c3826760 'unsigned __int128'
+|-TypedefDecl 0x7fd5c3826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd5c3826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd5c3826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd5c3826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd5c3826dc0 'char *'
+|   `-BuiltinType 0x7fd5c3826560 'char'
+|-TypedefDecl 0x7fd5c38270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd5c3827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd5c3826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd5c3826e58 '__va_list_tag'
+|-VarDecl 0x7fd5c38271a0 <c_files/pr59880.c:5:1, col:23> col:23 used r13 'unsigned int' register
+| `-AsmLabelAttr 0x7fd5c3877400 <col:34> "r13"
+`-FunctionDecl 0x7fd5c3877568 <line:6:1, line:10:1> line:7:1 foo 'unsigned long long (void)'
+  `-CompoundStmt 0x7fd5c3877670 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7fd5c3877658 <line:9:3, col:10>
+      `-ImplicitCastExpr 0x7fd5c3877640 <col:10> 'unsigned long long' <IntegralCast>
+        `-ImplicitCastExpr 0x7fd5c3877628 <col:10> 'unsigned int' <LValueToRValue>
+          `-DeclRefExpr 0x7fd5c3877600 <col:10> 'unsigned int' lvalue Var 0x7fd5c38271a0 'r13' 'unsigned int'

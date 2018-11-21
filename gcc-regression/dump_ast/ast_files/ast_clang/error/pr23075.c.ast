@@ -1,0 +1,24 @@
+c_files/pr23075.c:8:3: error: non-void function 'foo' should return a value [-Wreturn-type]
+  return;       /* { dg-warning "with no value" } */
+  ^
+1 error generated.
+TranslationUnitDecl 0x7fcae50264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcae5026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcae5026740 '__int128'
+|-TypedefDecl 0x7fcae5026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcae5026760 'unsigned __int128'
+|-TypedefDecl 0x7fcae5026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcae5026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcae5026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcae5026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcae5026dc0 'char *'
+|   `-BuiltinType 0x7fcae5026560 'char'
+|-TypedefDecl 0x7fcae50270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcae5027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcae5026ee0 'struct __va_list_tag'
+|     `-Record 0x7fcae5026e58 '__va_list_tag'
+|-FunctionDecl 0x7fcae5825a00 <c_files/pr23075.c:5:1, line:9:1> line:6:1 foo 'int (void)'
+| `-CompoundStmt 0x7fcae5825af0 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fcae5825ad8 <line:8:3>
+`-FunctionDecl 0x7fcae5825ba8 <line:11:1, line:14:1> line:12:1 bar 'int (void)'
+  `-CompoundStmt 0x7fcae5825c40 <line:13:1, line:14:1>

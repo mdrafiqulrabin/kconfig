@@ -1,0 +1,55 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: pred_data
+      Decl: codes, [], [], []
+        ArrayDecl: []
+          TypeDecl: codes, []
+            IdentifierType: ['unsigned', 'char']
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            Constant: int, 100
+  FuncDef: 
+    Decl: compute_predicate_codes, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: codes, [], [], []
+            PtrDecl: []
+              TypeDecl: codes, []
+                IdentifierType: ['char']
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                Struct: pred_data
+        TypeDecl: compute_predicate_codes, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            Constant: int, 100
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: codes
+            ID: i
+          TernaryOp: 
+            ArrayRef: 
+              StructRef: ->
+                ID: p
+                ID: codes
+              ID: i
+            Constant: int, 2
+            Constant: int, 0

@@ -1,0 +1,38 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dimensions, [], [], []
+            PtrDecl: []
+              TypeDecl: dimensions, []
+                IdentifierType: ['int']
+          Decl: params, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: params, []
+                  IdentifierType: ['double']
+          Decl: hh, [], [], []
+            TypeDecl: hh, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ArrayRef: 
+          ID: params
+          ID: hh
+        EmptyStatement: 
+        If: 
+          BinaryOp: >
+            ArrayRef: 
+              ID: dimensions
+              ID: hh
+            Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                ID: params
+                ID: hh
+              Constant: int, 0
+            Constant: float, 1.0f

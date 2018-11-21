@@ -1,0 +1,82 @@
+c_files/pr33919.c:5:10: fatal error: 'pr33919-1.h' file not found
+#include "pr33919-1.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7ff1960264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff196026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff196026740 '__int128'
+|-TypedefDecl 0x7ff196026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff196026760 'unsigned __int128'
+|-TypedefDecl 0x7ff196026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff196026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff196026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff196026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff196026dc0 'char *'
+|   `-BuiltinType 0x7ff196026560 'char'
+|-TypedefDecl 0x7ff1960270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff196027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff196026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff196026e58 '__va_list_tag'
+|-VarDecl 0x7ff196027138 <c_files/pr33919.c:7:1, <scratch space>:2:1> c_files/pr33919.c:7:13 used base_file 'const char *' cinit
+| `-ImplicitCastExpr 0x7ff196079690 <<scratch space>:2:1> 'const char *' <BitCast>
+|   `-ImplicitCastExpr 0x7ff196079678 <col:1> 'char *' <ArrayToPointerDecay>
+|     `-StringLiteral 0x7ff196079638 <col:1> 'char [18]' lvalue "c_files/pr33919.c"
+|-FunctionDecl 0x7ff196079818 <c_files/pr33919.c:9:12> col:12 implicit used strcmp 'int (const char *, const char *)' extern
+| |-ParmVarDecl 0x7ff1960798b0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7ff196079910 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7ff196079980 prev 0x7ff196079818 <col:1, col:46> col:12 used strcmp 'int (const char *, const char *)' extern
+| |-ParmVarDecl 0x7ff1960796c0 <col:20, col:31> col:32 'const char *'
+| `-ParmVarDecl 0x7ff196079738 <col:34, col:45> col:46 'const char *'
+|-FunctionDecl 0x7ff196079b20 <line:10:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff196079bb8 prev 0x7ff196079b20 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7ff196079ca0 <line:12:1, line:26:1> line:13:1 main 'int ()'
+  `-CompoundStmt 0x7ff19607a538 <line:14:1, line:26:1>
+    |-IfStmt 0x7ff196079f58 <line:15:3, line:16:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7ff196079f38 <<invalid sloc>> '_Bool'
+    | |-CallExpr 0x7ff196079f10 <col:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7ff196079ef8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff196079ea8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff196079bb8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7ff19607a080 <line:17:3, line:18:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7ff19607a060 <<invalid sloc>> '_Bool'
+    | |-CallExpr 0x7ff19607a038 <col:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7ff19607a020 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff196079ff8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff196079bb8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7ff19607a278 <line:19:3, line:20:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7ff19607a190 <line:19:7, col:34> 'int'
+    | | |-ImplicitCastExpr 0x7ff19607a178 <col:7> 'int (*)(const char *, const char *)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7ff19607a0b8 <col:7> 'int (const char *, const char *)' Function 0x7ff196079980 'strcmp' 'int (const char *, const char *)'
+    | | |-ImplicitCastExpr 0x7ff19607a1c8 <col:15> 'const char *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff19607a0e0 <col:15> 'const char *' lvalue Var 0x7ff196027138 'base_file' 'const char *'
+    | | `-ImplicitCastExpr 0x7ff19607a1f8 <<scratch space>:4:1> 'const char *' <BitCast>
+    | |   `-ImplicitCastExpr 0x7ff19607a1e0 <col:1> 'char *' <ArrayToPointerDecay>
+    | |     `-StringLiteral 0x7ff19607a108 <col:1> 'char [18]' lvalue "c_files/pr33919.c"
+    | |-CallExpr 0x7ff19607a250 <c_files/pr33919.c:20:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7ff19607a238 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff19607a210 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff196079bb8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7ff19607a3a0 <line:21:3, line:22:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7ff19607a380 <<invalid sloc>> '_Bool'
+    | |-CallExpr 0x7ff19607a358 <col:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7ff19607a340 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff19607a318 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff196079bb8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7ff19607a4c8 <line:23:3, line:24:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7ff19607a4a8 <<invalid sloc>> '_Bool'
+    | |-CallExpr 0x7ff19607a480 <col:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7ff19607a468 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff19607a440 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff196079bb8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ff19607a520 <line:25:3, col:10>
+      `-IntegerLiteral 0x7ff19607a500 <col:10> 'int' 0

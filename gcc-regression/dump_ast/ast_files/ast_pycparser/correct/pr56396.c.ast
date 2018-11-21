@@ -1,0 +1,122 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: s, [], [], []
+        PtrDecl: []
+          TypeDecl: s, []
+            IdentifierType: ['char']
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+  Decl: c, [], [], []
+    PtrDecl: []
+      TypeDecl: c, []
+        Struct: T
+          Decl: t, [], [], []
+            TypeDecl: t, []
+              IdentifierType: ['int']
+  Decl: u, [], [], []
+    TypeDecl: u, []
+      Struct: T
+        Decl: t, [], [], []
+          TypeDecl: t, []
+            IdentifierType: ['int']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['void']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['char']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: foo, []
+            IdentifierType: ['void']
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          Struct: S
+      Decl: b, [], [], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['char']
+          Constant: int, 256
+      Assignment: =
+        StructRef: .
+          ID: s
+          ID: s
+        ID: b
+      Assignment: =
+        StructRef: .
+          ID: s
+          ID: z
+        FuncCall: 
+          ID: __builtin___sprintf_chk
+          ExprList: 
+            StructRef: .
+              ID: s
+              ID: s
+            Constant: int, 1
+            FuncCall: 
+              ID: __builtin_object_size
+              ExprList: 
+                StructRef: .
+                  ID: s
+                  ID: s
+                Constant: int, 2
+            Constant: string, "Require"
+      If: 
+        BinaryOp: <
+          StructRef: .
+            ID: s
+            ID: z
+          Constant: int, 0
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            BinaryOp: |
+              StructRef: .
+                ID: u
+                ID: t
+              StructRef: ->
+                ID: c
+                ID: t
+            Constant: string, "rls"
+      If: 
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            ID: x
+            StructRef: .
+              ID: s
+              ID: s
+            StructRef: .
+              ID: s
+              ID: z
+        Compound: 
+      Return: 
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          Constant: int, 0

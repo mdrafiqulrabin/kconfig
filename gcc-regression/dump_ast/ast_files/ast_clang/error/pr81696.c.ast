@@ -1,0 +1,77 @@
+c_files/pr81696.c:9:19: error: function definition is not allowed here
+  void foo (void) { goto lab4; }
+                  ^
+c_files/pr81696.c:10:20: error: function definition is not allowed here
+  void foo2 (void) { goto lab4; }
+                   ^
+c_files/pr81696.c:11:19: error: function definition is not allowed here
+  void bar (void) { goto lab5; }
+                  ^
+c_files/pr81696.c:12:19: error: function definition is not allowed here
+  void baz (void) { goto lab6; }
+                  ^
+c_files/pr81696.c:15:5: warning: implicit declaration of function 'foo' is invalid in C99 [-Wimplicit-function-declaration]
+    foo ();
+    ^
+c_files/pr81696.c:17:5: warning: implicit declaration of function 'foo2' is invalid in C99 [-Wimplicit-function-declaration]
+    foo2 ();
+    ^
+c_files/pr81696.c:20:3: warning: implicit declaration of function 'bar' is invalid in C99 [-Wimplicit-function-declaration]
+  bar ();
+  ^
+c_files/pr81696.c:22:3: warning: implicit declaration of function 'baz' is invalid in C99 [-Wimplicit-function-declaration]
+  baz ();
+  ^
+4 warnings and 4 errors generated.
+TranslationUnitDecl 0x7f8093815ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8093816420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8093816140 '__int128'
+|-TypedefDecl 0x7f8093816490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8093816160 'unsigned __int128'
+|-TypedefDecl 0x7f8093816768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8093816570 'struct __NSConstantString_tag'
+|   `-Record 0x7f80938164e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8093816800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f80938167c0 'char *'
+|   `-BuiltinType 0x7f8093815f60 'char'
+|-TypedefDecl 0x7f8093816ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8093816a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f80938168e0 'struct __va_list_tag'
+|     `-Record 0x7f8093816858 '__va_list_tag'
+|-FunctionDecl 0x7f80930362d8 <c_files/pr81696.c:4:1, line:25:1> line:5:1 main 'int (int, char **)'
+| |-ParmVarDecl 0x7f8093816b38 <col:7, col:11> col:11 used argc 'int'
+| |-ParmVarDecl 0x7f8093036200 <col:17, col:24> col:24 argv 'char **'
+| `-CompoundStmt 0x7f8093036ca8 <line:6:1, line:25:1>
+|   |-DeclStmt 0x7f80930364b8 <line:7:3, col:29>
+|   | |-LabelDecl 0x7f80930363c0 <col:3, col:13> col:13 lab4
+|   | |-LabelDecl 0x7f8093036408 <col:3, col:19> col:19 lab5
+|   | `-LabelDecl 0x7f8093036450 <col:3, col:25> col:25 lab6
+|   |-IfStmt 0x7f8093036970 <line:14:3, line:17:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f80930366b8 <line:14:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f8093036690 <col:7> 'int' lvalue ParmVar 0x7f8093816b38 'argc' 'int'
+|   | |-CallExpr 0x7f8093036820 <line:15:5, col:10> 'int'
+|   | | `-ImplicitCastExpr 0x7f8093036808 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f80930367b8 <col:5> 'int ()' Function 0x7f8093036720 'foo' 'int ()'
+|   | `-CallExpr 0x7f8093036948 <line:17:5, col:11> 'int'
+|   |   `-ImplicitCastExpr 0x7f8093036930 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|   |     `-DeclRefExpr 0x7f8093036908 <col:5> 'int ()' Function 0x7f8093036870 'foo2' 'int ()'
+|   |-LabelStmt 0x7f80930369b8 <line:19:2, col:7> 'lab4'
+|   | `-NullStmt 0x7f80930369a8 <col:7>
+|   |-CallExpr 0x7f8093036ad0 <line:20:3, col:8> 'int'
+|   | `-ImplicitCastExpr 0x7f8093036ab8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7f8093036a90 <col:3> 'int ()' Function 0x7f80930369f8 'bar' 'int ()'
+|   |-LabelStmt 0x7f8093036b08 <line:21:2, col:7> 'lab5'
+|   | `-NullStmt 0x7f8093036af8 <col:7>
+|   |-CallExpr 0x7f8093036c20 <line:22:3, col:8> 'int'
+|   | `-ImplicitCastExpr 0x7f8093036c08 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7f8093036be0 <col:3> 'int ()' Function 0x7f8093036b48 'baz' 'int ()'
+|   |-LabelStmt 0x7f8093036c58 <line:23:2, col:7> 'lab6'
+|   | `-NullStmt 0x7f8093036c48 <col:7>
+|   `-ReturnStmt 0x7f8093036c90 <line:24:3, col:10>
+|     `-IntegerLiteral 0x7f8093036c70 <col:10> 'int' 0
+|-FunctionDecl 0x7f8093036720 <<invalid sloc>> line:15:5 implicit used foo 'int ()'
+|-FunctionDecl 0x7f8093036870 <<invalid sloc>> line:17:5 implicit used foo2 'int ()'
+|-FunctionDecl 0x7f80930369f8 <<invalid sloc>> line:20:3 implicit used bar 'int ()'
+`-FunctionDecl 0x7f8093036b48 <<invalid sloc>> line:22:3 implicit used baz 'int ()'

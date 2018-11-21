@@ -1,0 +1,28 @@
+FileAST: 
+  Decl: a, [], ['static'], []
+    TypeDecl: a, []
+      IdentifierType: ['short']
+    Constant: int, 0
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['short']
+    UnaryOp: -
+      Constant: int, 1
+  Decl: c, [], ['static'], []
+    TypeDecl: c, []
+      IdentifierType: ['unsigned', 'short']
+    Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: <=
+          ID: a
+          ID: b
+        Return: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0

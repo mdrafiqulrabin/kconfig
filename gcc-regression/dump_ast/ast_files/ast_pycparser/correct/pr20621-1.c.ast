@@ -1,0 +1,68 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: big
+      Decl: i, [], [], []
+        ArrayDecl: []
+          TypeDecl: i, []
+            IdentifierType: ['int']
+          TernaryOp: 
+            BinaryOp: &&
+              BinaryOp: >=
+                UnaryOp: sizeof
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+                Constant: int, 4
+              BinaryOp: >=
+                UnaryOp: sizeof
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['void']
+                Constant: int, 4
+            Constant: int, 0x4000
+            Constant: int, 4
+  Decl: gb, [], [], []
+    TypeDecl: gb, []
+      Struct: big
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              Struct: big
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          StructRef: .
+            ID: b
+            ID: i
+          ID: x
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              ID: gb
+              Constant: int, 0
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              ID: gb
+              Constant: int, 1

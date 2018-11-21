@@ -1,0 +1,153 @@
+FileAST: 
+  FuncDef: 
+    Decl: test1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+        TypeDecl: test1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['char']
+      If: 
+        ID: b
+        Return: 
+          BinaryOp: /
+            ID: x
+            ID: c
+        Return: 
+          Constant: int, 1
+  FuncDef: 
+    Decl: test2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+        TypeDecl: test2, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      If: 
+        ID: b
+        Return: 
+          BinaryOp: *
+            ID: x
+            ID: c
+        Return: 
+          Constant: int, 1
+  FuncDef: 
+    Decl: test3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+        TypeDecl: test3, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      If: 
+        ID: b
+        Return: 
+          BinaryOp: %
+            ID: x
+            ID: c
+        Return: 
+          Constant: int, 1
+  FuncDef: 
+    Decl: test4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+        TypeDecl: test4, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['char']
+      If: 
+        ID: b
+        Return: 
+          BinaryOp: ==
+            ID: x
+            ID: c
+        Return: 
+          Constant: int, 1
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: test1
+            ExprList: 
+              Constant: int, 1
+              Constant: int, 1000
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: test2
+            ExprList: 
+              Constant: int, 1
+              Constant: int, 0
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: test3
+            ExprList: 
+              Constant: int, 1
+              Constant: int, 1
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: test4
+            ExprList: 
+              Constant: int, 1
+              Constant: int, 1000
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,119 @@
+FileAST: 
+  Decl: iw, [], [], []
+    TypeDecl: iw, []
+      IdentifierType: ['int']
+  Decl: vr, [], [], []
+    TypeDecl: vr, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: d9, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: j3, [], [], []
+            TypeDecl: j3, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: f5, [], [], []
+            TypeDecl: f5, []
+              IdentifierType: ['long', 'long', 'int']
+          Decl: kp, [], [], []
+            TypeDecl: kp, []
+              IdentifierType: ['int']
+        TypeDecl: d9, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: qb, [], [], []
+        PtrDecl: []
+          TypeDecl: qb, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: kp
+      If: 
+        BinaryOp: !=
+          ID: kp
+          Constant: int, 0
+        Compound: 
+          Decl: oq, [], [], []
+            TypeDecl: oq, []
+              IdentifierType: ['long', 'long', 'int']
+          Decl: tl, [], [], []
+            TypeDecl: tl, []
+              IdentifierType: ['unsigned', 'int']
+            Constant: int, 0
+          For: 
+            Assignment: =
+              ID: j3
+              Constant: int, 0
+            BinaryOp: <
+              ID: j3
+              Constant: int, 1
+            UnaryOp: ++
+              ID: j3
+            Assignment: =
+              ID: qb
+              UnaryOp: &
+                ID: tl
+          Goto: ed
+          Label: l7
+            Assignment: =
+              ID: oq
+              Constant: int, 1
+          While: 
+            BinaryOp: <
+              ID: oq
+              Constant: int, 2
+            Assignment: *=
+              ID: oq
+              ID: j3
+          Label: ed
+            DoWhile: 
+              BinaryOp: !=
+                ID: tl
+                Constant: int, 0
+              Compound: 
+                Assignment: -=
+                  ID: oq
+                  UnaryOp: *
+                    ID: qb
+                If: 
+                  BinaryOp: !=
+                    ID: oq
+                    Constant: int, 0
+                  Compound: 
+                    Decl: ie, [], [], []
+                      TypeDecl: ie, []
+                        IdentifierType: ['long', 'long', 'int']
+                      BinaryOp: &
+                        ID: j3
+                        ID: f5
+                    Decl: ws, [], [], []
+                      TypeDecl: ws, []
+                        IdentifierType: ['int']
+                      BinaryOp: &&
+                        BinaryOp: !=
+                          ID: j3
+                          Constant: int, 0
+                        BinaryOp: !=
+                          ID: kp
+                          Constant: int, 0
+                    Assignment: =
+                      ID: tl
+                      BinaryOp: >
+                        ID: ie
+                        ID: ws
+                    Assignment: =
+                      ID: iw
+                      Assignment: =
+                        ID: vr
+                        ID: tl
+                  Assignment: =
+                    ID: tl
+                    BinaryOp: &&
+                      BinaryOp: !=
+                        ID: kp
+                        Constant: int, 0
+                      BinaryOp: !=
+                        BinaryOp: %
+                          Constant: int, 0
+                          Constant: int, 0
+                        Constant: int, 0
+      Goto: l7

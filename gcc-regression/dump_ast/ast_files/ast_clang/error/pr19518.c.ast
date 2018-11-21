@@ -1,0 +1,264 @@
+c_files/pr19518.c:18:19: error: use of unknown builtin '__builtin_alpha_minsb8' [-Wimplicit-function-declaration]
+    return __m1 + __builtin_alpha_minsb8(__m2, ~__m1);
+                  ^
+c_files/pr19518.c:22:12: error: use of unknown builtin '__builtin_alpha_minuw4' [-Wimplicit-function-declaration]
+    __m1 = __builtin_alpha_minuw4(__m1, 0x00ff00ff00ff00ff);
+           ^
+c_files/pr19518.c:22:12: note: did you mean '__builtin_alpha_minsb8'?
+c_files/pr19518.c:18:19: note: '__builtin_alpha_minsb8' declared here
+    return __m1 + __builtin_alpha_minsb8(__m2, ~__m1);
+                  ^
+2 errors generated.
+TranslationUnitDecl 0x7ffb300264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffb30026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffb30026740 '__int128'
+|-TypedefDecl 0x7ffb30026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffb30026760 'unsigned __int128'
+|-TypedefDecl 0x7ffb30026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffb30026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffb30026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffb30026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffb30026dc0 'char *'
+|   `-BuiltinType 0x7ffb30026560 'char'
+|-TypedefDecl 0x7ffb300270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffb30027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffb30026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffb30026e58 '__va_list_tag'
+|-TypedefDecl 0x7ffb30027138 <c_files/pr19518.c:4:1, col:15> col:15 referenced INT16 'short'
+| `-BuiltinType 0x7ffb300265a0 'short'
+|-TypedefDecl 0x7ffb300271a8 <line:5:1, col:22> col:22 referenced CARD32 'unsigned int'
+| `-BuiltinType 0x7ffb30026660 'unsigned int'
+|-TypedefDecl 0x7ffb30825a18 <line:6:1, col:24> col:24 referenced CARD16 'unsigned short'
+| `-BuiltinType 0x7ffb30026640 'unsigned short'
+|-TypedefDecl 0x7ffb30825a88 <line:7:1, col:23> col:23 referenced CARD8 'unsigned char'
+| `-BuiltinType 0x7ffb30026620 'unsigned char'
+|-RecordDecl 0x7ffb30825ae0 <line:8:9, col:16> col:16 struct _Picture
+|-TypedefDecl 0x7ffb30825c40 <col:1, col:26> col:26 referenced PicturePtr 'struct _Picture *'
+| `-PointerType 0x7ffb30825bf0 'struct _Picture *'
+|   `-ElaboratedType 0x7ffb30825b90 'struct _Picture' sugar
+|     `-RecordType 0x7ffb30825b70 'struct _Picture'
+|       `-Record 0x7ffb30825ae0 '_Picture'
+|-TypedefDecl 0x7ffb30825cc8 <line:9:1, col:13> col:13 referenced FbStride 'int'
+| `-BuiltinType 0x7ffb300265c0 'int'
+|-TypedefDecl 0x7ffb30825d38 <line:10:1, col:23> col:23 referenced __m64 'unsigned long'
+| `-BuiltinType 0x7ffb30026680 'unsigned long'
+|-FunctionDecl 0x7ffb30825ec0 <line:11:1, col:29> col:14 used load8888 '__m64 (__m64)' extern
+| `-ParmVarDecl 0x7ffb30825dc0 <col:24> col:29 '__m64':'unsigned long'
+|-FunctionDecl 0x7ffb30826090 <line:12:1, line:15:1> line:12:23 used _mm_setzero_si64 '__m64 (void)' static inline
+| `-CompoundStmt 0x7ffb30826198 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7ffb30826180 <line:14:3, col:17>
+|     `-CStyleCastExpr 0x7ffb30826158 <col:10, col:17> '__m64':'unsigned long' <IntegralCast>
+|       `-IntegerLiteral 0x7ffb30826128 <col:17> 'long' 0
+|-FunctionDecl 0x7ffb30826350 <line:16:1, line:19:1> line:16:23 used _mm_adds_pu8 '__m64 (__m64, __m64)' static inline
+| |-ParmVarDecl 0x7ffb308261c8 <col:36, col:42> col:42 used __m1 '__m64':'unsigned long'
+| |-ParmVarDecl 0x7ffb30826238 <col:48, col:54> col:54 used __m2 '__m64':'unsigned long'
+| `-CompoundStmt 0x7ffb308266e0 <line:17:1, line:19:1>
+|   `-ReturnStmt 0x7ffb308266c8 <line:18:5, col:53>
+|     `-BinaryOperator 0x7ffb308266a0 <col:12, col:53> 'unsigned long' '+'
+|       |-ImplicitCastExpr 0x7ffb30826670 <col:12> '__m64':'unsigned long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffb308263f8 <col:12> '__m64':'unsigned long' lvalue ParmVar 0x7ffb308261c8 '__m1' '__m64':'unsigned long'
+|       `-ImplicitCastExpr 0x7ffb30826688 <col:19, col:53> 'unsigned long' <IntegralCast>
+|         `-CallExpr 0x7ffb30826620 <col:19, col:53> 'int'
+|           |-ImplicitCastExpr 0x7ffb30826608 <col:19> 'int (*)()' <FunctionToPointerDecay>
+|           | `-DeclRefExpr 0x7ffb30826528 <col:19> 'int ()' Function 0x7ffb30826490 '__builtin_alpha_minsb8' 'int ()'
+|           |-ImplicitCastExpr 0x7ffb30826658 <col:42> '__m64':'unsigned long' <LValueToRValue>
+|           | `-DeclRefExpr 0x7ffb30826550 <col:42> '__m64':'unsigned long' lvalue ParmVar 0x7ffb30826238 '__m2' '__m64':'unsigned long'
+|           `-UnaryOperator 0x7ffb308265b8 <col:48, col:49> '__m64':'unsigned long' prefix '~'
+|             `-ImplicitCastExpr 0x7ffb308265a0 <col:49> '__m64':'unsigned long' <LValueToRValue>
+|               `-DeclRefExpr 0x7ffb30826578 <col:49> '__m64':'unsigned long' lvalue ParmVar 0x7ffb308261c8 '__m1' '__m64':'unsigned long'
+|-FunctionDecl 0x7ffb30826490 <<invalid sloc>> col:19 implicit used __builtin_alpha_minsb8 'int ()'
+|-FunctionDecl 0x7ffb30826810 <line:20:1, line:25:1> line:20:23 used _mm_packs_pu16 '__m64 (__m64, __m64)' static inline
+| |-ParmVarDecl 0x7ffb30826710 <col:38, col:44> col:44 used __m1 '__m64':'unsigned long'
+| |-ParmVarDecl 0x7ffb30826780 <col:50, col:56> col:56 used __m2 '__m64':'unsigned long'
+| `-CompoundStmt 0x7ffb30828d30 <line:21:1, line:25:1>
+|   |-BinaryOperator 0x7ffb30828aa0 <line:22:5, col:59> '__m64':'unsigned long' '='
+|   | |-DeclRefExpr 0x7ffb308268b8 <col:5> '__m64':'unsigned long' lvalue ParmVar 0x7ffb30826710 '__m1' '__m64':'unsigned long'
+|   | `-ImplicitCastExpr 0x7ffb30828a88 <col:12, col:59> '__m64':'unsigned long' <IntegralCast>
+|   |   `-CallExpr 0x7ffb30828a38 <col:12, col:59> 'int'
+|   |     |-ImplicitCastExpr 0x7ffb30828a20 <col:12> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7ffb308269a0 <col:12> 'int ()' Function 0x7ffb30826908 '__builtin_alpha_minuw4' 'int ()'
+|   |     |-ImplicitCastExpr 0x7ffb30828a70 <col:35> '__m64':'unsigned long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7ffb308269c8 <col:35> '__m64':'unsigned long' lvalue ParmVar 0x7ffb30826710 '__m1' '__m64':'unsigned long'
+|   |     `-IntegerLiteral 0x7ffb30828a00 <col:41> 'long' 71777214294589695
+|   |-BinaryOperator 0x7ffb30828be0 <line:23:5, col:59> '__m64':'unsigned long' '='
+|   | |-DeclRefExpr 0x7ffb30828ac8 <col:5> '__m64':'unsigned long' lvalue ParmVar 0x7ffb30826780 '__m2' '__m64':'unsigned long'
+|   | `-ImplicitCastExpr 0x7ffb30828bc8 <col:12, col:59> '__m64':'unsigned long' <IntegralCast>
+|   |   `-CallExpr 0x7ffb30828b78 <col:12, col:59> 'int'
+|   |     |-ImplicitCastExpr 0x7ffb30828b60 <col:12> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7ffb30828af0 <col:12> 'int ()' Function 0x7ffb30826908 '__builtin_alpha_minuw4' 'int ()'
+|   |     |-ImplicitCastExpr 0x7ffb30828bb0 <col:35> '__m64':'unsigned long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7ffb30828b18 <col:35> '__m64':'unsigned long' lvalue ParmVar 0x7ffb30826780 '__m2' '__m64':'unsigned long'
+|   |     `-IntegerLiteral 0x7ffb30828b40 <col:41> 'long' 71777214294589695
+|   `-ReturnStmt 0x7ffb30828d18 <line:24:5, col:30>
+|     `-BinaryOperator 0x7ffb30828cf0 <col:12, col:30> 'unsigned long' '|'
+|       |-ImplicitCastExpr 0x7ffb30828cd8 <col:12> '__m64':'unsigned long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffb30828c08 <col:12> '__m64':'unsigned long' lvalue ParmVar 0x7ffb30826710 '__m1' '__m64':'unsigned long'
+|       `-ParenExpr 0x7ffb30828cb8 <col:19, col:30> '__m64':'unsigned long'
+|         `-BinaryOperator 0x7ffb30828c90 <col:20, col:28> '__m64':'unsigned long' '<<'
+|           |-ImplicitCastExpr 0x7ffb30828c78 <col:20> '__m64':'unsigned long' <LValueToRValue>
+|           | `-DeclRefExpr 0x7ffb30828c30 <col:20> '__m64':'unsigned long' lvalue ParmVar 0x7ffb30826780 '__m2' '__m64':'unsigned long'
+|           `-IntegerLiteral 0x7ffb30828c58 <col:28> 'int' 32
+|-FunctionDecl 0x7ffb30826908 <<invalid sloc>> line:22:12 implicit used __builtin_alpha_minuw4 'int ()'
+|-TypedefDecl 0x7ffb30828d78 <line:26:1, col:28> col:28 ullong 'unsigned long long'
+| `-BuiltinType 0x7ffb300266a0 'unsigned long long'
+|-FunctionDecl 0x7ffb30828e68 <line:27:1, line:31:1> line:27:25 used pix_multiply '__m64 (__m64)' static inline
+| |-ParmVarDecl 0x7ffb30828de0 <col:38, col:44> col:44 used a '__m64':'unsigned long'
+| `-CompoundStmt 0x7ffb30828fd8 <line:28:1, line:31:1>
+|   `-IfStmt 0x7ffb30828fa0 <line:29:5, line:30:9>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7ffb30828f30 <line:29:9> '__m64':'unsigned long' <LValueToRValue>
+|     | `-DeclRefExpr 0x7ffb30828f08 <col:9> '__m64':'unsigned long' lvalue ParmVar 0x7ffb30828de0 'a' '__m64':'unsigned long'
+|     |-ReturnStmt 0x7ffb30828f88 <line:30:2, col:9>
+|     | `-ImplicitCastExpr 0x7ffb30828f70 <col:9> '__m64':'unsigned long' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7ffb30828f48 <col:9> '__m64':'unsigned long' lvalue ParmVar 0x7ffb30828de0 'a' '__m64':'unsigned long'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7ffb30829220 <line:32:1, line:35:1> line:32:25 over '__m64 (__m64, __m64, __m64)' static inline
+| |-ParmVarDecl 0x7ffb30829008 <col:30, col:36> col:36 used src '__m64':'unsigned long'
+| |-ParmVarDecl 0x7ffb30829078 <col:41, col:47> col:47 srca '__m64':'unsigned long'
+| |-ParmVarDecl 0x7ffb308290e8 <col:53, col:59> col:59 used dest '__m64':'unsigned long'
+| `-CompoundStmt 0x7ffb30829508 <line:33:1, line:35:1>
+|   `-ReturnStmt 0x7ffb308294f0 <line:34:5, col:48>
+|     `-CallExpr 0x7ffb308294a0 <col:12, col:48> '__m64':'unsigned long'
+|       |-ImplicitCastExpr 0x7ffb30829488 <col:12> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7ffb308292d0 <col:12> '__m64 (__m64, __m64)' Function 0x7ffb30826350 '_mm_adds_pu8' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7ffb308294d8 <col:25> '__m64':'unsigned long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffb308292f8 <col:25> '__m64':'unsigned long' lvalue ParmVar 0x7ffb30829008 'src' '__m64':'unsigned long'
+|       `-CallExpr 0x7ffb308293e0 <col:30, col:47> '__m64':'unsigned long'
+|         |-ImplicitCastExpr 0x7ffb308293c8 <col:30> '__m64 (*)(__m64)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7ffb30829320 <col:30> '__m64 (__m64)' Function 0x7ffb30828e68 'pix_multiply' '__m64 (__m64)'
+|         `-ImplicitCastExpr 0x7ffb30829410 <col:43> '__m64':'unsigned long' <LValueToRValue>
+|           `-DeclRefExpr 0x7ffb30829348 <col:43> '__m64':'unsigned long' lvalue ParmVar 0x7ffb308290e8 'dest' '__m64':'unsigned long'
+`-FunctionDecl 0x7ffb30829960 <line:37:1, line:64:1> line:37:6 fbCompositeSolid_nx8888mmx 'void (CARD8, PicturePtr, PicturePtr, INT16, CARD16, CARD16)'
+  |-ParmVarDecl 0x7ffb30829560 <col:33, col:39> col:39 op 'CARD8':'unsigned char'
+  |-ParmVarDecl 0x7ffb308295f0 <col:43, col:54> col:54 pSrc 'PicturePtr':'struct _Picture *'
+  |-ParmVarDecl 0x7ffb30829660 <col:60, col:71> col:71 pMask 'PicturePtr':'struct _Picture *'
+  |-ParmVarDecl 0x7ffb308296f0 <line:38:5, col:11> col:11 yDst 'INT16':'short'
+  |-ParmVarDecl 0x7ffb30829780 <col:17, col:24> col:24 width 'CARD16':'unsigned short'
+  |-ParmVarDecl 0x7ffb308297f0 <col:31, col:38> col:38 used height 'CARD16':'unsigned short'
+  `-CompoundStmt 0x7ffb3082af08 <line:39:1, line:64:1>
+    |-DeclStmt 0x7ffb30829ac0 <line:40:5, col:15>
+    | `-VarDecl 0x7ffb30829a60 <col:5, col:12> col:12 used src 'CARD32':'unsigned int'
+    |-DeclStmt 0x7ffb30829c30 <line:41:5, col:26>
+    | |-VarDecl 0x7ffb30829b48 <col:5, col:13> col:13 used dstLine 'CARD32 *'
+    | `-VarDecl 0x7ffb30829bb8 <col:5, col:23> col:23 used dst 'CARD32 *'
+    |-DeclStmt 0x7ffb30829cb8 <line:42:5, col:13>
+    | `-VarDecl 0x7ffb30829c58 <col:5, col:12> col:12 used w 'CARD16':'unsigned short'
+    |-DeclStmt 0x7ffb30829d60 <line:43:5, col:23>
+    | `-VarDecl 0x7ffb30829d00 <col:5, col:14> col:14 used dstStride 'FbStride':'int'
+    |-DeclStmt 0x7ffb30829e70 <line:44:5, col:22>
+    | |-VarDecl 0x7ffb30829d88 <col:5, col:11> col:11 used vsrc '__m64':'unsigned long'
+    | `-VarDecl 0x7ffb30829df8 <col:5, col:17> col:17 vsrca '__m64':'unsigned long'
+    |-BinaryOperator 0x7ffb30829f78 <line:45:5, col:24> '__m64':'unsigned long' '='
+    | |-DeclRefExpr 0x7ffb30829e88 <col:5> '__m64':'unsigned long' lvalue Var 0x7ffb30829d88 'vsrc' '__m64':'unsigned long'
+    | `-CallExpr 0x7ffb30829f18 <col:12, col:24> '__m64':'unsigned long'
+    |   |-ImplicitCastExpr 0x7ffb30829f00 <col:12> '__m64 (*)(__m64)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7ffb30829eb0 <col:12> '__m64 (__m64)' Function 0x7ffb30825ec0 'load8888' '__m64 (__m64)'
+    |   `-ImplicitCastExpr 0x7ffb30829f60 <col:21> '__m64':'unsigned long' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7ffb30829f48 <col:21> 'CARD32':'unsigned int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ffb30829ed8 <col:21> 'CARD32':'unsigned int' lvalue Var 0x7ffb30829a60 'src' 'CARD32':'unsigned int'
+    `-WhileStmt 0x7ffb3082aee8 <line:46:5, line:63:5>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7ffb30829fc8 <line:46:12, col:18> 'CARD16':'unsigned short' postfix '--'
+      | `-DeclRefExpr 0x7ffb30829fa0 <col:12> 'CARD16':'unsigned short' lvalue ParmVar 0x7ffb308297f0 'height' 'CARD16':'unsigned short'
+      `-CompoundStmt 0x7ffb3082aea8 <col:22, line:63:5>
+        |-BinaryOperator 0x7ffb3082a050 <line:47:2, col:8> 'CARD32 *' '='
+        | |-DeclRefExpr 0x7ffb30829fe8 <col:2> 'CARD32 *' lvalue Var 0x7ffb30829bb8 'dst' 'CARD32 *'
+        | `-ImplicitCastExpr 0x7ffb3082a038 <col:8> 'CARD32 *' <LValueToRValue>
+        |   `-DeclRefExpr 0x7ffb3082a010 <col:8> 'CARD32 *' lvalue Var 0x7ffb30829b48 'dstLine' 'CARD32 *'
+        |-CompoundAssignOperator 0x7ffb3082a0e0 <line:48:2, col:13> 'CARD32 *' '+=' ComputeLHSTy='CARD32 *' ComputeResultTy='CARD32 *'
+        | |-DeclRefExpr 0x7ffb3082a078 <col:2> 'CARD32 *' lvalue Var 0x7ffb30829b48 'dstLine' 'CARD32 *'
+        | `-ImplicitCastExpr 0x7ffb3082a0c8 <col:13> 'FbStride':'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7ffb3082a0a0 <col:13> 'FbStride':'int' lvalue Var 0x7ffb30829d00 'dstStride' 'FbStride':'int'
+        |-WhileStmt 0x7ffb3082a678 <line:49:2, line:53:2>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7ffb3082a250 <line:49:9, col:36> 'int' '&&'
+        | | |-ImplicitCastExpr 0x7ffb3082a238 <col:9> 'int' <IntegralCast>
+        | | | `-ImplicitCastExpr 0x7ffb3082a220 <col:9> 'CARD16':'unsigned short' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7ffb3082a118 <col:9> 'CARD16':'unsigned short' lvalue Var 0x7ffb30829c58 'w' 'CARD16':'unsigned short'
+        | | `-BinaryOperator 0x7ffb3082a1f8 <col:14, col:36> 'unsigned long' '&'
+        | |   |-CStyleCastExpr 0x7ffb3082a198 <col:14, col:30> 'unsigned long' <PointerToIntegral>
+        | |   | `-ImplicitCastExpr 0x7ffb3082a180 <col:30> 'CARD32 *' <LValueToRValue>
+        | |   |   `-DeclRefExpr 0x7ffb3082a140 <col:30> 'CARD32 *' lvalue Var 0x7ffb30829bb8 'dst' 'CARD32 *'
+        | |   `-ImplicitCastExpr 0x7ffb3082a1e0 <col:36> 'unsigned long' <IntegralCast>
+        | |     `-IntegerLiteral 0x7ffb3082a1c0 <col:36> 'int' 7
+        | `-CompoundStmt 0x7ffb3082a650 <col:39, line:53:2>
+        |   |-BinaryOperator 0x7ffb3082a5e0 <line:50:6, line:51:25> 'CARD32':'unsigned int' '='
+        |   | |-UnaryOperator 0x7ffb3082a2b8 <line:50:6, col:7> 'CARD32':'unsigned int' lvalue prefix '*'
+        |   | | `-ImplicitCastExpr 0x7ffb3082a2a0 <col:7> 'CARD32 *' <LValueToRValue>
+        |   | |   `-DeclRefExpr 0x7ffb3082a278 <col:7> 'CARD32 *' lvalue Var 0x7ffb30829bb8 'dst' 'CARD32 *'
+        |   | `-ImplicitCastExpr 0x7ffb3082a5c8 <col:13, line:51:25> 'CARD32':'unsigned int' <IntegralCast>
+        |   |   `-CallExpr 0x7ffb3082a590 <line:50:13, line:51:25> '__m64':'unsigned long'
+        |   |     |-ImplicitCastExpr 0x7ffb3082a578 <line:50:13> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+        |   |     | `-DeclRefExpr 0x7ffb3082a2d8 <col:13> '__m64 (__m64, __m64)' Function 0x7ffb30826810 '_mm_packs_pu16' '__m64 (__m64, __m64)'
+        |   |     |-CallExpr 0x7ffb3082a468 <col:28, col:61> '__m64':'unsigned long'
+        |   |     | |-ImplicitCastExpr 0x7ffb3082a450 <col:28> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+        |   |     | | `-DeclRefExpr 0x7ffb3082a300 <col:28> '__m64 (__m64, __m64)' Function 0x7ffb30826350 '_mm_adds_pu8' '__m64 (__m64, __m64)'
+        |   |     | |-ImplicitCastExpr 0x7ffb3082a4a0 <col:41> '__m64':'unsigned long' <LValueToRValue>
+        |   |     | | `-DeclRefExpr 0x7ffb3082a328 <col:41> '__m64':'unsigned long' lvalue Var 0x7ffb30829d88 'vsrc' '__m64':'unsigned long'
+        |   |     | `-CallExpr 0x7ffb3082a3f0 <col:47, col:60> '__m64':'unsigned long'
+        |   |     |   |-ImplicitCastExpr 0x7ffb3082a3d8 <col:47> '__m64 (*)(__m64)' <FunctionToPointerDecay>
+        |   |     |   | `-DeclRefExpr 0x7ffb3082a350 <col:47> '__m64 (__m64)' Function 0x7ffb30825ec0 'load8888' '__m64 (__m64)'
+        |   |     |   `-ImplicitCastExpr 0x7ffb3082a438 <col:56, col:57> '__m64':'unsigned long' <IntegralCast>
+        |   |     |     `-ImplicitCastExpr 0x7ffb3082a420 <col:56, col:57> 'CARD32':'unsigned int' <LValueToRValue>
+        |   |     |       `-UnaryOperator 0x7ffb3082a3b8 <col:56, col:57> 'CARD32':'unsigned int' lvalue prefix '*'
+        |   |     |         `-ImplicitCastExpr 0x7ffb3082a3a0 <col:57> 'CARD32 *' <LValueToRValue>
+        |   |     |           `-DeclRefExpr 0x7ffb3082a378 <col:57> 'CARD32 *' lvalue Var 0x7ffb30829bb8 'dst' 'CARD32 *'
+        |   |     `-CallExpr 0x7ffb3082a550 <line:51:7, col:24> '__m64':'unsigned long'
+        |   |       `-ImplicitCastExpr 0x7ffb3082a538 <col:7> '__m64 (*)(void)' <FunctionToPointerDecay>
+        |   |         `-DeclRefExpr 0x7ffb3082a4b8 <col:7> '__m64 (void)' Function 0x7ffb30826090 '_mm_setzero_si64' '__m64 (void)'
+        |   `-UnaryOperator 0x7ffb3082a630 <line:52:6, col:9> 'CARD32 *' postfix '++'
+        |     `-DeclRefExpr 0x7ffb3082a608 <col:6> 'CARD32 *' lvalue Var 0x7ffb30829bb8 'dst' 'CARD32 *'
+        |-WhileStmt 0x7ffb3082ab08 <line:54:2, line:58:2>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7ffb3082a710 <line:54:9, col:14> 'int' '>='
+        | | |-ImplicitCastExpr 0x7ffb3082a6f8 <col:9> 'int' <IntegralCast>
+        | | | `-ImplicitCastExpr 0x7ffb3082a6e0 <col:9> 'CARD16':'unsigned short' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7ffb3082a698 <col:9> 'CARD16':'unsigned short' lvalue Var 0x7ffb30829c58 'w' 'CARD16':'unsigned short'
+        | | `-IntegerLiteral 0x7ffb3082a6c0 <col:14> 'int' 2
+        | `-CompoundStmt 0x7ffb3082aad8 <col:17, line:58:2>
+        |   |-DeclStmt 0x7ffb3082a830 <line:55:6, col:24>
+        |   | |-VarDecl 0x7ffb3082a748 <col:6, col:12> col:12 used dest0 '__m64':'unsigned long'
+        |   | `-VarDecl 0x7ffb3082a7b8 <col:6, col:19> col:19 used dest1 '__m64':'unsigned long'
+        |   |-BinaryOperator 0x7ffb3082aa30 <line:56:6, col:50> '__m64':'unsigned long' '='
+        |   | |-UnaryOperator 0x7ffb3082a918 <col:6, col:17> '__m64':'unsigned long' lvalue prefix '*'
+        |   | | `-CStyleCastExpr 0x7ffb3082a8f0 <col:7, col:17> '__m64 *' <BitCast>
+        |   | |   `-ImplicitCastExpr 0x7ffb3082a8d8 <col:17> 'CARD32 *' <LValueToRValue>
+        |   | |     `-DeclRefExpr 0x7ffb3082a848 <col:17> 'CARD32 *' lvalue Var 0x7ffb30829bb8 'dst' 'CARD32 *'
+        |   | `-CallExpr 0x7ffb3082a9c8 <col:23, col:50> '__m64':'unsigned long'
+        |   |   |-ImplicitCastExpr 0x7ffb3082a9b0 <col:23> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+        |   |   | `-DeclRefExpr 0x7ffb3082a938 <col:23> '__m64 (__m64, __m64)' Function 0x7ffb30826810 '_mm_packs_pu16' '__m64 (__m64, __m64)'
+        |   |   |-ImplicitCastExpr 0x7ffb3082aa00 <col:38> '__m64':'unsigned long' <LValueToRValue>
+        |   |   | `-DeclRefExpr 0x7ffb3082a960 <col:38> '__m64':'unsigned long' lvalue Var 0x7ffb3082a748 'dest0' '__m64':'unsigned long'
+        |   |   `-ImplicitCastExpr 0x7ffb3082aa18 <col:45> '__m64':'unsigned long' <LValueToRValue>
+        |   |     `-DeclRefExpr 0x7ffb3082a988 <col:45> '__m64':'unsigned long' lvalue Var 0x7ffb3082a7b8 'dest1' '__m64':'unsigned long'
+        |   `-CompoundAssignOperator 0x7ffb3082aaa0 <line:57:6, col:11> 'CARD16':'unsigned short' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+        |     |-DeclRefExpr 0x7ffb3082aa58 <col:6> 'CARD16':'unsigned short' lvalue Var 0x7ffb30829c58 'w' 'CARD16':'unsigned short'
+        |     `-IntegerLiteral 0x7ffb3082aa80 <col:11> 'int' 2
+        `-WhileStmt 0x7ffb3082ae88 <line:59:2, line:62:2>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7ffb3082ab50 <line:59:9> 'CARD16':'unsigned short' <LValueToRValue>
+          | `-DeclRefExpr 0x7ffb3082ab28 <col:9> 'CARD16':'unsigned short' lvalue Var 0x7ffb30829c58 'w' 'CARD16':'unsigned short'
+          `-CompoundStmt 0x7ffb3082ae60 <col:12, line:62:2>
+            |-BinaryOperator 0x7ffb3082adf0 <line:60:6, col:66> 'CARD32':'unsigned int' '='
+            | |-UnaryOperator 0x7ffb3082aba8 <col:6, col:7> 'CARD32':'unsigned int' lvalue prefix '*'
+            | | `-ImplicitCastExpr 0x7ffb3082ab90 <col:7> 'CARD32 *' <LValueToRValue>
+            | |   `-DeclRefExpr 0x7ffb3082ab68 <col:7> 'CARD32 *' lvalue Var 0x7ffb30829bb8 'dst' 'CARD32 *'
+            | `-ImplicitCastExpr 0x7ffb3082add8 <col:13, col:66> 'CARD32':'unsigned int' <IntegralCast>
+            |   `-CallExpr 0x7ffb3082ad88 <col:13, col:66> '__m64':'unsigned long'
+            |     |-ImplicitCastExpr 0x7ffb3082ad70 <col:13> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+            |     | `-DeclRefExpr 0x7ffb3082abc8 <col:13> '__m64 (__m64, __m64)' Function 0x7ffb30826810 '_mm_packs_pu16' '__m64 (__m64, __m64)'
+            |     |-CallExpr 0x7ffb3082ad00 <col:28, col:62> '__m64':'unsigned long'
+            |     | |-ImplicitCastExpr 0x7ffb3082ace8 <col:28> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+            |     | | `-DeclRefExpr 0x7ffb3082abf0 <col:28> '__m64 (__m64, __m64)' Function 0x7ffb30826350 '_mm_adds_pu8' '__m64 (__m64, __m64)'
+            |     | |-ImplicitCastExpr 0x7ffb3082ad38 <col:41> '__m64':'unsigned long' <LValueToRValue>
+            |     | | `-DeclRefExpr 0x7ffb3082ac18 <col:41> '__m64':'unsigned long' lvalue Var 0x7ffb30829d88 'vsrc' '__m64':'unsigned long'
+            |     | `-CallExpr 0x7ffb3082aca0 <col:47, col:61> '__m64':'unsigned long'
+            |     |   |-ImplicitCastExpr 0x7ffb3082ac88 <col:47> '__m64 (*)(__m64)' <FunctionToPointerDecay>
+            |     |   | `-DeclRefExpr 0x7ffb3082ac40 <col:47> '__m64 (__m64)' Function 0x7ffb30828e68 'pix_multiply' '__m64 (__m64)'
+            |     |   `-ImplicitCastExpr 0x7ffb3082acd0 <col:60> '__m64':'unsigned long' <IntegralCast>
+            |     |     `-IntegerLiteral 0x7ffb3082ac68 <col:60> 'int' 0
+            |     `-ImplicitCastExpr 0x7ffb3082adc0 <col:65> '__m64':'unsigned long' <IntegralCast>
+            |       `-IntegerLiteral 0x7ffb3082ad50 <col:65> 'int' 0
+            `-UnaryOperator 0x7ffb3082ae40 <line:61:6, col:7> 'CARD16':'unsigned short' postfix '--'
+              `-DeclRefExpr 0x7ffb3082ae18 <col:6> 'CARD16':'unsigned short' lvalue Var 0x7ffb30829c58 'w' 'CARD16':'unsigned short'

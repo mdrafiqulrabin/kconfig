@@ -1,0 +1,58 @@
+TranslationUnitDecl 0x7fc6c30264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc6c3026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc6c3026740 '__int128'
+|-TypedefDecl 0x7fc6c3026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc6c3026760 'unsigned __int128'
+|-TypedefDecl 0x7fc6c3026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc6c3026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc6c3026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc6c3026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc6c3026dc0 'char *'
+|   `-BuiltinType 0x7fc6c3026560 'char'
+|-TypedefDecl 0x7fc6c30270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc6c3027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc6c3026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc6c3026e58 '__va_list_tag'
+|-VarDecl 0x7fc6c30271a0 <c_files/pr57103.c:4:1, col:11> col:5 used d 'int [1024]'
+|-FunctionDecl 0x7fc6c3825b08 <line:6:1, line:13:1> line:6:19 used foo 'int (void)' static inline
+| `-CompoundStmt 0x7fc6c3825fb0 <line:7:1, line:13:1>
+|   |-DeclStmt 0x7fc6c3825c38 <line:8:3, col:12>
+|   | `-VarDecl 0x7fc6c3825bb8 <col:3, col:11> col:7 used s 'int' cinit
+|   |   `-IntegerLiteral 0x7fc6c3825c18 <col:11> 'int' 0
+|   |-DeclStmt 0x7fc6c3825ce8 <line:9:3, col:12>
+|   | `-VarDecl 0x7fc6c3825c68 <col:3, col:11> col:7 used i 'int' cinit
+|   |   `-IntegerLiteral 0x7fc6c3825cc8 <col:11> 'int' 0
+|   |-ForStmt 0x7fc6c3825f20 <line:10:3, line:11:13>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc6c3825d60 <line:10:10, col:14> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fc6c3825d48 <col:10> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc6c3825d00 <col:10> 'int' lvalue Var 0x7fc6c3825c68 'i' 'int'
+|   | | `-IntegerLiteral 0x7fc6c3825d28 <col:14> 'int' 1024
+|   | |-UnaryOperator 0x7fc6c3825db0 <col:20, col:21> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fc6c3825d88 <col:20> 'int' lvalue Var 0x7fc6c3825c68 'i' 'int'
+|   | `-CompoundAssignOperator 0x7fc6c3825ee8 <line:11:5, col:13> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   |   |-DeclRefExpr 0x7fc6c3825dd0 <col:5> 'int' lvalue Var 0x7fc6c3825bb8 's' 'int'
+|   |   `-ImplicitCastExpr 0x7fc6c3825ed0 <col:10, col:13> 'int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc6c3825ea8 <col:10, col:13> 'int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc6c3825e78 <col:10> 'int *' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7fc6c3825df8 <col:10> 'int [1024]' lvalue Var 0x7fc6c30271a0 'd' 'int [1024]'
+|   |       `-ImplicitCastExpr 0x7fc6c3825e90 <col:12> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fc6c3825e20 <col:12> 'int' lvalue Var 0x7fc6c3825c68 'i' 'int'
+|   `-ReturnStmt 0x7fc6c3825f98 <line:12:3, col:10>
+|     `-ImplicitCastExpr 0x7fc6c3825f80 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc6c3825f58 <col:10> 'int' lvalue Var 0x7fc6c3825bb8 's' 'int'
+|-FunctionDecl 0x7fc6c38260b0 <line:15:1, line:19:1> line:15:6 bar 'void (void)'
+| `-CompoundStmt 0x7fc6c38263c0 <line:16:1, line:19:1>
+|   `-IfStmt 0x7fc6c3826388 <line:17:3, line:18:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-CallExpr 0x7fc6c38261b0 <line:17:7, col:12> 'int'
+|     | `-ImplicitCastExpr 0x7fc6c3826198 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fc6c3826148 <col:7> 'int (void)' Function 0x7fc6c3825b08 'foo' 'int (void)'
+|     |-CallExpr 0x7fc6c3826360 <line:18:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7fc6c3826348 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7fc6c38262f0 <col:5> '<builtin fn type>' Function 0x7fc6c3826210 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fc6c3826210 <col:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fc6c38262a8 <col:5> Implicit

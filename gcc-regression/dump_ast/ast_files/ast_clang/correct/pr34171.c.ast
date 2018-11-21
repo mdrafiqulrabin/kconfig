@@ -1,0 +1,108 @@
+TranslationUnitDecl 0x7f8e488264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8e48826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8e48826740 '__int128'
+|-TypedefDecl 0x7f8e48826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8e48826760 'unsigned __int128'
+|-TypedefDecl 0x7f8e48826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8e48826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8e48826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8e48826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8e48826dc0 'char *'
+|   `-BuiltinType 0x7f8e48826560 'char'
+|-TypedefDecl 0x7f8e488270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8e48827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8e48826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8e48826e58 '__va_list_tag'
+|-VarDecl 0x7f8e48827130 <c_files/pr34171.c:6:1, col:13> col:13 used coredump 'char' extern
+|-FunctionDecl 0x7f8e49025ac0 <line:7:1, col:32> col:13 used sigemptyset 'void (char *)' extern
+| `-ParmVarDecl 0x7f8e49025a00 <col:26, col:31> col:32 'char *'
+|-RecordDecl 0x7f8e49025b60 <line:8:1, line:11:1> line:8:8 struct sigaction definition
+| `-FieldDecl 0x7f8e49025c20 <line:10:3, col:8> col:8 referenced sa_mask 'char'
+`-FunctionDecl 0x7f8e49025d30 <line:12:1, line:27:1> line:12:6 doSignalsSetup 'void (void)'
+  `-CompoundStmt 0x7f8e49027d28 <line:13:1, line:27:1>
+    |-DeclStmt 0x7f8e49026288 <line:14:3, line:16:4>
+    | `-VarDecl 0x7f8e49025e50 <line:14:3, line:16:3> line:14:20 used signals 'const int [12]' static cinit
+    |   `-InitListExpr 0x7f8e490260d0 <col:32, line:16:3> 'const int [12]'
+    |     |-IntegerLiteral 0x7f8e49025eb0 <line:15:5> 'int' 1
+    |     |-IntegerLiteral 0x7f8e49025ed0 <col:8> 'int' 2
+    |     |-IntegerLiteral 0x7f8e49025ef0 <col:11> 'int' 3
+    |     |-IntegerLiteral 0x7f8e49025f10 <col:14> 'int' 4
+    |     |-IntegerLiteral 0x7f8e49025f30 <col:17> 'int' 6
+    |     |-IntegerLiteral 0x7f8e49025f50 <col:20> 'int' 8
+    |     |-IntegerLiteral 0x7f8e49025f70 <col:23> 'int' 11
+    |     |-IntegerLiteral 0x7f8e49025f90 <col:27> 'int' 13
+    |     |-IntegerLiteral 0x7f8e49025fb0 <col:31> 'int' 14
+    |     |-IntegerLiteral 0x7f8e49025fd0 <col:35> 'int' 15
+    |     |-IntegerLiteral 0x7f8e49025ff0 <col:39> 'int' 30
+    |     `-IntegerLiteral 0x7f8e49026010 <col:44> 'int' 31
+    |-DeclStmt 0x7f8e490263a8 <line:17:3, col:22>
+    | |-VarDecl 0x7f8e490262b8 <col:3, col:16> col:16 used i 'unsigned int'
+    | `-VarDecl 0x7f8e49026330 <col:3, col:19> col:19 used sig 'unsigned int'
+    |-DeclStmt 0x7f8e49026470 <line:18:3, col:22>
+    | `-VarDecl 0x7f8e49026410 <col:3, col:20> col:20 used sa 'struct sigaction':'struct sigaction'
+    `-ForStmt 0x7f8e49027cf0 <line:19:3, line:26:5>
+      |-BinaryOperator 0x7f8e490264e8 <line:19:8, col:12> 'unsigned int' '='
+      | |-DeclRefExpr 0x7f8e49026488 <col:8> 'unsigned int' lvalue Var 0x7f8e490262b8 'i' 'unsigned int'
+      | `-ImplicitCastExpr 0x7f8e490264d0 <col:12> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7f8e490264b0 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8e49026630 <col:15, col:49> 'int' '<'
+      | |-ImplicitCastExpr 0x7f8e49026618 <col:15> 'unsigned long' <IntegralCast>
+      | | `-ImplicitCastExpr 0x7f8e49026600 <col:15> 'unsigned int' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7f8e49026510 <col:15> 'unsigned int' lvalue Var 0x7f8e490262b8 'i' 'unsigned int'
+      | `-BinaryOperator 0x7f8e490265d8 <col:19, col:49> 'unsigned long' '/'
+      |   |-UnaryExprOrTypeTraitExpr 0x7f8e49026580 <col:19, col:34> 'unsigned long' sizeof
+      |   | `-ParenExpr 0x7f8e49026560 <col:26, col:34> 'const int [12]' lvalue
+      |   |   `-DeclRefExpr 0x7f8e49026538 <col:27> 'const int [12]' lvalue Var 0x7f8e49025e50 'signals' 'const int [12]'
+      |   `-UnaryExprOrTypeTraitExpr 0x7f8e490265b8 <col:38, col:49> 'unsigned long' sizeof 'int'
+      |-UnaryOperator 0x7f8e49026680 <col:52, col:53> 'unsigned int' postfix '++'
+      | `-DeclRefExpr 0x7f8e49026658 <col:52> 'unsigned int' lvalue Var 0x7f8e490262b8 'i' 'unsigned int'
+      `-CompoundStmt 0x7f8e49027cc0 <line:20:5, line:26:5>
+        |-BinaryOperator 0x7f8e490267a0 <line:21:7, col:22> 'unsigned int' '='
+        | |-DeclRefExpr 0x7f8e490266a0 <col:7> 'unsigned int' lvalue Var 0x7f8e49026330 'sig' 'unsigned int'
+        | `-ImplicitCastExpr 0x7f8e49026788 <col:13, col:22> 'unsigned int' <IntegralCast>
+        |   `-ImplicitCastExpr 0x7f8e49026770 <col:13, col:22> 'int' <LValueToRValue>
+        |     `-ArraySubscriptExpr 0x7f8e49026748 <col:13, col:22> 'const int' lvalue
+        |       |-ImplicitCastExpr 0x7f8e49026718 <col:13> 'const int *' <ArrayToPointerDecay>
+        |       | `-DeclRefExpr 0x7f8e490266c8 <col:13> 'const int [12]' lvalue Var 0x7f8e49025e50 'signals' 'const int [12]'
+        |       `-ImplicitCastExpr 0x7f8e49026730 <col:21> 'unsigned int' <LValueToRValue>
+        |         `-DeclRefExpr 0x7f8e490266f0 <col:21> 'unsigned int' lvalue Var 0x7f8e490262b8 'i' 'unsigned int'
+        |-IfStmt 0x7f8e49027b70 <line:22:7, line:24:9>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7f8e49027b40 <line:22:11, line:23:58> 'int' '&&'
+        | | |-ImplicitCastExpr 0x7f8e49027b28 <line:22:11> 'int' <IntegralCast>
+        | | | `-ImplicitCastExpr 0x7f8e49027b10 <col:11> 'char' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7f8e490267c8 <col:11> 'char' lvalue Var 0x7f8e48827130 'coredump' 'char'
+        | | `-ParenExpr 0x7f8e49027af0 <line:23:11, col:58> 'int'
+        | |   `-BinaryOperator 0x7f8e49027ac8 <col:12, col:56> 'int' '||'
+        | |     |-BinaryOperator 0x7f8e49027a00 <col:12, col:43> 'int' '||'
+        | |     | |-BinaryOperator 0x7f8e49026930 <col:12, col:31> 'int' '||'
+        | |     | | |-BinaryOperator 0x7f8e49026868 <col:12, col:19> 'int' '=='
+        | |     | | | |-ImplicitCastExpr 0x7f8e49026838 <col:12> 'unsigned int' <LValueToRValue>
+        | |     | | | | `-DeclRefExpr 0x7f8e490267f0 <col:12> 'unsigned int' lvalue Var 0x7f8e49026330 'sig' 'unsigned int'
+        | |     | | | `-ImplicitCastExpr 0x7f8e49026850 <col:19> 'unsigned int' <IntegralCast>
+        | |     | | |   `-IntegerLiteral 0x7f8e49026818 <col:19> 'int' 4
+        | |     | | `-BinaryOperator 0x7f8e49026908 <col:24, col:31> 'int' '=='
+        | |     | |   |-ImplicitCastExpr 0x7f8e490268d8 <col:24> 'unsigned int' <LValueToRValue>
+        | |     | |   | `-DeclRefExpr 0x7f8e49026890 <col:24> 'unsigned int' lvalue Var 0x7f8e49026330 'sig' 'unsigned int'
+        | |     | |   `-ImplicitCastExpr 0x7f8e490268f0 <col:31> 'unsigned int' <IntegralCast>
+        | |     | |     `-IntegerLiteral 0x7f8e490268b8 <col:31> 'int' 8
+        | |     | `-BinaryOperator 0x7f8e490269d0 <col:36, col:43> 'int' '=='
+        | |     |   |-ImplicitCastExpr 0x7f8e490269a0 <col:36> 'unsigned int' <LValueToRValue>
+        | |     |   | `-DeclRefExpr 0x7f8e49026958 <col:36> 'unsigned int' lvalue Var 0x7f8e49026330 'sig' 'unsigned int'
+        | |     |   `-ImplicitCastExpr 0x7f8e490269b8 <col:43> 'unsigned int' <IntegralCast>
+        | |     |     `-IntegerLiteral 0x7f8e49026980 <col:43> 'int' 11
+        | |     `-BinaryOperator 0x7f8e49027aa0 <col:49, col:56> 'int' '=='
+        | |       |-ImplicitCastExpr 0x7f8e49027a70 <col:49> 'unsigned int' <LValueToRValue>
+        | |       | `-DeclRefExpr 0x7f8e49027a28 <col:49> 'unsigned int' lvalue Var 0x7f8e49026330 'sig' 'unsigned int'
+        | |       `-ImplicitCastExpr 0x7f8e49027a88 <col:56> 'unsigned int' <IntegralCast>
+        | |         `-IntegerLiteral 0x7f8e49027a50 <col:56> 'int' 10
+        | |-ContinueStmt 0x7f8e49027b68 <line:24:9>
+        | `-<<<NULL>>>
+        `-CallExpr 0x7f8e49027c90 <line:25:7, col:31> 'void'
+          |-ImplicitCastExpr 0x7f8e49027c78 <col:7> 'void (*)(char *)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7f8e49027ba8 <col:7> 'void (char *)' Function 0x7f8e49025ac0 'sigemptyset' 'void (char *)'
+          `-UnaryOperator 0x7f8e49027c30 <col:20, col:24> 'char *' prefix '&'
+            `-MemberExpr 0x7f8e49027bf8 <col:21, col:24> 'char' lvalue .sa_mask 0x7f8e49025c20
+              `-DeclRefExpr 0x7f8e49027bd0 <col:21> 'struct sigaction':'struct sigaction' lvalue Var 0x7f8e49026410 'sa' 'struct sigaction':'struct sigaction'

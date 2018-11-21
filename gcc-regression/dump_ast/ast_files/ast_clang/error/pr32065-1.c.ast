@@ -1,0 +1,24 @@
+c_files/pr32065-1.c:5:1: error: GNU decimal type extension not supported
+_Decimal128 test (void)
+^
+c_files/pr32065-1.c:7:39: error: invalid suffix 'dl' on floating constant
+  return 1234123412341234.123412341234dl;
+                                      ^
+2 errors generated.
+TranslationUnitDecl 0x7ff3ea825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff3ea826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff3ea825d40 '__int128'
+|-TypedefDecl 0x7ff3ea826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff3ea825d60 'unsigned __int128'
+|-TypedefDecl 0x7ff3ea826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff3ea826170 'struct __NSConstantString_tag'
+|   `-Record 0x7ff3ea8260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff3ea826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff3ea8263c0 'char *'
+|   `-BuiltinType 0x7ff3ea825b60 'char'
+|-TypedefDecl 0x7ff3ea8266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff3ea826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff3ea8264e0 'struct __va_list_tag'
+|     `-Record 0x7ff3ea826458 '__va_list_tag'
+`-FunctionDecl 0x7ff3eb025a00 <c_files/pr32065-1.c:5:1, line:8:1> line:5:13 invalid test 'int (void)'
+  `-CompoundStmt 0x7ff3eb025a98 <line:6:1, line:8:1>

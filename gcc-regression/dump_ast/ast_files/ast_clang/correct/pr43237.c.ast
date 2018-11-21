@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fc9768264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc976826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc976826740 '__int128'
+|-TypedefDecl 0x7fc976826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc976826760 'unsigned __int128'
+|-TypedefDecl 0x7fc976826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc976826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc976826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc976826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc976826dc0 'char *'
+|   `-BuiltinType 0x7fc976826560 'char'
+|-TypedefDecl 0x7fc9768270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc976827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc976826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc976826e58 '__va_list_tag'
+|-RecordDecl 0x7fc976827120 <c_files/pr43237.c:5:1, line:11:1> line:5:8 struct S definition
+| |-FieldDecl 0x7fc977025a18 <line:7:3, col:8> col:8 referenced a 'int *'
+| |-FieldDecl 0x7fc977025a78 <line:8:3, col:7> col:7 referenced b 'int'
+| |-FieldDecl 0x7fc977025b08 <line:9:3, col:9> col:9 referenced c 'int **'
+| `-FieldDecl 0x7fc977025b68 <line:10:3, col:7> col:7 referenced d 'int'
+|-FunctionDecl 0x7fc977025d60 <line:13:1, col:21> col:6 used foo 'void (struct S *)'
+| `-ParmVarDecl 0x7fc977025c60 <col:11, col:20> col:21 'struct S *'
+|-FunctionDecl 0x7fc977025ef0 <line:14:1, col:21> col:6 used bar 'void (struct S *)'
+| `-ParmVarDecl 0x7fc977025e68 <col:11, col:20> col:21 'struct S *'
+`-FunctionDecl 0x7fc977026058 <line:16:1, line:29:1> line:17:1 baz 'int (void)'
+  `-CompoundStmt 0x7fc977026868 <line:18:1, line:29:1>
+    |-DeclStmt 0x7fc977026170 <line:19:3, col:13>
+    | `-VarDecl 0x7fc977026110 <col:3, col:12> col:12 used s 'struct S':'struct S'
+    |-CallExpr 0x7fc977026270 <line:20:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fc977026258 <col:3> 'void (*)(struct S *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc977026188 <col:3> 'void (struct S *)' Function 0x7fc977025d60 'foo' 'void (struct S *)'
+    | `-UnaryOperator 0x7fc9770261d8 <col:8, col:9> 'struct S *' prefix '&'
+    |   `-DeclRefExpr 0x7fc9770261b0 <col:9> 'struct S':'struct S' lvalue Var 0x7fc977026110 's' 'struct S':'struct S'
+    |-CompoundStmt 0x7fc9770267f0 <line:21:3, line:27:3>
+    | |-DeclStmt 0x7fc977026440 <line:22:5, col:15>
+    | | `-VarDecl 0x7fc9770263e0 <col:5, col:14> col:9 used a 'int [s.b]'
+    | |-DeclStmt 0x7fc977026590 <line:23:5, col:16>
+    | | `-VarDecl 0x7fc977026530 <col:5, col:15> col:10 used c 'int *[s.d]'
+    | |-BinaryOperator 0x7fc977026648 <line:24:5, col:11> 'int *' '='
+    | | |-MemberExpr 0x7fc9770265d0 <col:5, col:7> 'int *' lvalue .a 0x7fc977025a18
+    | | | `-DeclRefExpr 0x7fc9770265a8 <col:5> 'struct S':'struct S' lvalue Var 0x7fc977026110 's' 'struct S':'struct S'
+    | | `-ImplicitCastExpr 0x7fc977026630 <col:11> 'int *' <ArrayToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc977026608 <col:11> 'int [s.b]' lvalue Var 0x7fc9770263e0 'a' 'int [s.b]'
+    | |-BinaryOperator 0x7fc977026710 <line:25:5, col:11> 'int **' '='
+    | | |-MemberExpr 0x7fc977026698 <col:5, col:7> 'int **' lvalue .c 0x7fc977025b08
+    | | | `-DeclRefExpr 0x7fc977026670 <col:5> 'struct S':'struct S' lvalue Var 0x7fc977026110 's' 'struct S':'struct S'
+    | | `-ImplicitCastExpr 0x7fc9770266f8 <col:11> 'int **' <ArrayToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc9770266d0 <col:11> 'int *[s.d]' lvalue Var 0x7fc977026530 'c' 'int *[s.d]'
+    | `-CallExpr 0x7fc9770267c0 <line:26:5, col:12> 'void'
+    |   |-ImplicitCastExpr 0x7fc9770267a8 <col:5> 'void (*)(struct S *)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fc977026738 <col:5> 'void (struct S *)' Function 0x7fc977025ef0 'bar' 'void (struct S *)'
+    |   `-UnaryOperator 0x7fc977026788 <col:10, col:11> 'struct S *' prefix '&'
+    |     `-DeclRefExpr 0x7fc977026760 <col:11> 'struct S':'struct S' lvalue Var 0x7fc977026110 's' 'struct S':'struct S'
+    `-ReturnStmt 0x7fc977026850 <line:28:3, col:10>
+      `-IntegerLiteral 0x7fc977026830 <col:10> 'int' 0

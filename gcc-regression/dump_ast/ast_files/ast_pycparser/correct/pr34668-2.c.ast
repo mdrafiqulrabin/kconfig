@@ -1,0 +1,11 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: optab
+      Decl: code, [], [], []
+        TypeDecl: code, []
+          IdentifierType: ['unsigned']
+  Decl: optab_table, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: optab_table, []
+        Struct: optab
+      Constant: int, 1

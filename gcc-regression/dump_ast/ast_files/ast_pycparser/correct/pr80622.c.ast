@@ -1,0 +1,126 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Struct: S
+        Decl: d, [], [], []
+          TypeDecl: d, []
+            IdentifierType: ['int']
+        Decl: e, [], [], []
+          TypeDecl: e, []
+            IdentifierType: ['char']
+        Decl: f, [], [], []
+          TypeDecl: f, []
+            IdentifierType: ['int']
+        Decl: g, [], [], []
+          TypeDecl: g, []
+            IdentifierType: ['char']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['char']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: b, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: b, []
+              Struct: S
+            Constant: int, 1
+        InitList: 
+          Constant: int, 3
+          Constant: int, 0
+          Constant: int, 3
+          Constant: int, 4
+          Constant: int, 3
+          Constant: int, 0
+          Constant: int, 3
+          Constant: int, 4
+          Constant: int, 3
+          Constant: int, 0
+          Constant: int, 3
+          Constant: int, 4
+          Constant: int, 3
+          Constant: int, 0
+          Constant: int, 3
+          Constant: int, 4
+          Constant: int, 3
+          Constant: int, 0
+          Constant: int, 3
+          Constant: int, 4
+          Constant: int, 3
+          Constant: int, 0
+          Constant: int, 3
+          Constant: int, 4
+          Constant: int, 3
+          Constant: int, 0
+          Constant: int, 3
+          Constant: int, 4
+          Constant: int, 3
+          Constant: int, 0
+          Constant: int, 3
+          Constant: int, 4
+          Constant: int, 3
+          Constant: int, 0
+          Constant: int, 3
+          Constant: int, 4
+          Constant: int, 3
+          Constant: int, 4
+          Constant: int, 7
+          Constant: int, 7
+          Constant: int, 3
+          Constant: int, 5
+          Constant: int, 0
+          Constant: int, 3
+          Constant: int, 4
+          Constant: int, 7
+          Constant: int, 7
+          Constant: int, 3
+          Constant: int, 5
+          Constant: int, 0
+          Constant: int, 3
+          Constant: int, 4
+          Constant: int, 3
+          Constant: int, 4
+          Constant: int, 7
+          Constant: int, 7
+          Constant: int, 3
+          Constant: int, 5
+          Constant: int, 0
+          Constant: int, 3
+          Constant: int, 4
+          Constant: int, 7
+          Constant: int, 7
+          Constant: int, 3
+          Constant: int, 5
+          Constant: int, 0
+          Constant: int, 3
+          Constant: int, 4
+      Assignment: =
+        ID: a
+        ArrayRef: 
+          ArrayRef: 
+            ID: b
+            Constant: int, 4
+          Constant: int, 0
+      Assignment: =
+        ID: c
+        StructRef: .
+          ArrayRef: 
+            ArrayRef: 
+              ID: b
+              Constant: int, 4
+            Constant: int, 0
+          ID: e
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            ID: a
+            ID: g
+          Constant: int, 4
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

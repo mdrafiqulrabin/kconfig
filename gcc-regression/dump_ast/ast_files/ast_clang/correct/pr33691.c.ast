@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fc7168264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc716826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc716826740 '__int128'
+|-TypedefDecl 0x7fc716826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc716826760 'unsigned __int128'
+|-TypedefDecl 0x7fc716826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc716826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc716826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc716826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc716826dc0 'char *'
+|   `-BuiltinType 0x7fc716826560 'char'
+|-TypedefDecl 0x7fc7168270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc716827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc716826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc716826e58 '__va_list_tag'
+`-FunctionDecl 0x7fc717025a30 <c_files/pr33691.c:5:1, line:8:1> line:5:14 mgaSetTexImages 'unsigned int (int)'
+  |-ParmVarDecl 0x7fc716827138 <col:30, col:34> col:34 used i 'int'
+  `-CompoundStmt 0x7fc717025c50 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7fc717025c38 <line:7:5, col:36>
+      `-ParenExpr 0x7fc717025c18 <col:12, col:36> 'unsigned int'
+        `-BinaryOperator 0x7fc717025bf0 <col:13, col:26> 'unsigned int' '&'
+          |-ImplicitCastExpr 0x7fc717025bd8 <col:13, col:22> 'unsigned int' <IntegralCast>
+          | `-ParenExpr 0x7fc717025b98 <col:13, col:22> 'int'
+          |   `-BinaryOperator 0x7fc717025b70 <col:14, col:18> 'int' '|'
+          |     |-ImplicitCastExpr 0x7fc717025b58 <col:14> 'int' <LValueToRValue>
+          |     | `-DeclRefExpr 0x7fc717025b10 <col:14> 'int' lvalue ParmVar 0x7fc716827138 'i' 'int'
+          |     `-IntegerLiteral 0x7fc717025b38 <col:18> 'int' 64
+          `-IntegerLiteral 0x7fc717025bb8 <col:26> 'unsigned int' 4294967232

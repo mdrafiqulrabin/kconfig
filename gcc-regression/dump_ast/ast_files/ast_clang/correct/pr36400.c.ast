@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7fcd788264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcd78826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcd78826740 '__int128'
+|-TypedefDecl 0x7fcd78826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcd78826760 'unsigned __int128'
+|-TypedefDecl 0x7fcd78826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcd78826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcd78826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcd78826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcd78826dc0 'char *'
+|   `-BuiltinType 0x7fcd78826560 'char'
+|-TypedefDecl 0x7fcd788270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcd78827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcd78826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcd78826e58 '__va_list_tag'
+|-RecordDecl 0x7fcd78827120 <c_files/pr36400.c:4:1, col:45> col:8 struct barstruct definition
+| `-FieldDecl 0x7fcd79025a00 <col:20, col:32> col:32 referenced some_string 'const char *'
+|-FunctionDecl 0x7fcd79025cd0 <line:6:1, col:42> col:6 used changethepointer 'void (struct barstruct ***)'
+| `-ParmVarDecl 0x7fcd79025bc8 <col:23, col:41> col:42 'struct barstruct ***'
+`-FunctionDecl 0x7fcd79025df8 <line:8:1, line:15:1> line:8:6 baz 'void ()'
+  `-CompoundStmt 0x7fcd79026358 <line:9:1, line:15:1>
+    |-DeclStmt 0x7fcd79025f10 <line:10:3, col:24>
+    | `-VarDecl 0x7fcd79025eb0 <col:3, col:20> col:20 used bar1 'struct barstruct':'struct barstruct'
+    |-DeclStmt 0x7fcd79025ff8 <line:11:3, col:35>
+    | `-VarDecl 0x7fcd79025f50 <col:3, col:31> col:21 used barptr 'struct barstruct *' cinit
+    |   `-UnaryOperator 0x7fcd79025fd8 <col:30, col:31> 'struct barstruct *' prefix '&'
+    |     `-DeclRefExpr 0x7fcd79025fb0 <col:31> 'struct barstruct':'struct barstruct' lvalue Var 0x7fcd79025eb0 'bar1' 'struct barstruct':'struct barstruct'
+    |-DeclStmt 0x7fcd790260e0 <line:12:3, col:39>
+    | `-VarDecl 0x7fcd79026038 <col:3, col:33> col:22 used barptr2 'struct barstruct **' cinit
+    |   `-UnaryOperator 0x7fcd790260c0 <col:32, col:33> 'struct barstruct **' prefix '&'
+    |     `-DeclRefExpr 0x7fcd79026098 <col:33> 'struct barstruct *' lvalue Var 0x7fcd79025f50 'barptr' 'struct barstruct *'
+    |-CallExpr 0x7fcd790261e0 <line:13:3, col:28> 'void'
+    | |-ImplicitCastExpr 0x7fcd790261c8 <col:3> 'void (*)(struct barstruct ***)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fcd790260f8 <col:3> 'void (struct barstruct ***)' Function 0x7fcd79025cd0 'changethepointer' 'void (struct barstruct ***)'
+    | `-UnaryOperator 0x7fcd79026148 <col:20, col:21> 'struct barstruct ***' prefix '&'
+    |   `-DeclRefExpr 0x7fcd79026120 <col:21> 'struct barstruct **' lvalue Var 0x7fcd79026038 'barptr2' 'struct barstruct **'
+    `-BinaryOperator 0x7fcd79026330 <line:14:3, col:25> 'const char *' '='
+      |-MemberExpr 0x7fcd79026250 <col:3, col:11> 'const char *' lvalue ->some_string 0x7fcd79025a00
+      | `-ImplicitCastExpr 0x7fcd79026238 <col:3> 'struct barstruct *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fcd79026210 <col:3> 'struct barstruct *' lvalue Var 0x7fcd79025f50 'barptr' 'struct barstruct *'
+      `-ImplicitCastExpr 0x7fcd79026318 <col:25> 'const char *' <BitCast>
+        `-ImplicitCastExpr 0x7fcd79026300 <col:25> 'char *' <ArrayToPointerDecay>
+          `-StringLiteral 0x7fcd790262c8 <col:25> 'char [14]' lvalue "Everything OK"

@@ -1,0 +1,25 @@
+FileAST: 
+  FuncDef: 
+    Decl: my_memcpy, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dest, [], [], []
+            PtrDecl: []
+              TypeDecl: dest, []
+                IdentifierType: ['char']
+          Decl: src, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: src, ['const']
+                IdentifierType: ['char']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: my_memcpy, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          ID: dest
+          ID: src
+          ID: n

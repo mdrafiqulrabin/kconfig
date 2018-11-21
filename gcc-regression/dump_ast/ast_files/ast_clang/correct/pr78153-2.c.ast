@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7f95260264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9526026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9526026740 '__int128'
+|-TypedefDecl 0x7f9526026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9526026760 'unsigned __int128'
+|-TypedefDecl 0x7f9526026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9526026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9526026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9526026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9526026dc0 'char *'
+|   `-BuiltinType 0x7f9526026560 'char'
+|-TypedefDecl 0x7f95260270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9526027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9526026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9526026e58 '__va_list_tag'
+|-FunctionDecl 0x7f9527022800 <c_files/pr78153-2.c:4:1, line:9:1> line:4:6 f 'void (const char *)'
+| |-ParmVarDecl 0x7f9526027138 <col:8, col:20> col:20 used s 'const char *'
+| `-CompoundStmt 0x7f9527022e90 <line:5:1, line:9:1>
+|   |-DeclStmt 0x7f9527022bf0 <<built-in>:67:26, c_files/pr78153-2.c:6:44>
+|   | `-VarDecl 0x7f95270228f8 <<built-in>:67:26, c_files/pr78153-2.c:6:43> col:20 used n 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f9527022bd8 <col:24, col:43> 'long' <IntegralCast>
+|   |     `-CallExpr 0x7f9527022b90 <col:24, col:43> 'unsigned long'
+|   |       |-ImplicitCastExpr 0x7f9527022b78 <col:24> 'unsigned long (*)(const char *)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7f9527022ae0 <col:24> '<builtin fn type>' Function 0x7f9527022998 '__builtin_strlen' 'unsigned long (const char *)'
+|   |       `-ImplicitCastExpr 0x7f9527022bc0 <col:42> 'const char *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7f9527022b08 <col:42> 'const char *' lvalue ParmVar 0x7f9526027138 's' 'const char *'
+|   `-IfStmt 0x7f9527022e58 <line:7:3, line:8:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9527022c80 <line:7:7, col:11> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f9527022c50 <col:7> 'long' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f9527022c08 <col:7> 'long' lvalue Var 0x7f95270228f8 'n' 'long'
+|     | `-ImplicitCastExpr 0x7f9527022c68 <col:11> 'long' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f9527022c30 <col:11> 'int' 0
+|     |-CallExpr 0x7f9527022e30 <line:8:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7f9527022e18 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7f9527022dc0 <col:5> '<builtin fn type>' Function 0x7f9527022ce0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9527022998 <line:6:24> col:24 implicit used __builtin_strlen 'unsigned long (const char *)' extern
+| |-ParmVarDecl 0x7f9527022a30 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-NoThrowAttr 0x7f9527022a98 <col:24> Implicit
+`-FunctionDecl 0x7f9527022ce0 <line:8:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f9527022d78 <col:5> Implicit

@@ -1,0 +1,29 @@
+FileAST: 
+  Decl: a, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Pragma: omp parallel
+      Pragma: omp master
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 3
+        Constant: int, 1
+      Pragma: omp parallel shared(a)
+      Pragma: omp master
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 3
+        Constant: int, 1

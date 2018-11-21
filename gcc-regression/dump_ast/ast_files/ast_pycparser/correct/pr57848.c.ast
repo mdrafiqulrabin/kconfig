@@ -1,0 +1,13 @@
+FileAST: 
+  Decl: __builtin_ia32_crc32si, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'int']
+      TypeDecl: __builtin_ia32_crc32si, []
+        IdentifierType: ['unsigned', 'int']
+  Pragma: GCC target("sse4.2")

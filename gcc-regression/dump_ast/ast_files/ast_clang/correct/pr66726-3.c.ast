@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7fca8a0166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fca8a016c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fca8a016940 '__int128'
+|-TypedefDecl 0x7fca8a016c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fca8a016960 'unsigned __int128'
+|-TypedefDecl 0x7fca8a016f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fca8a016d70 'struct __NSConstantString_tag'
+|   `-Record 0x7fca8a016ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fca8a017000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fca8a016fc0 'char *'
+|   `-BuiltinType 0x7fca8a016760 'char'
+|-TypedefDecl 0x7fca8a0172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fca8a017270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fca8a0170e0 'struct __va_list_tag'
+|     `-Record 0x7fca8a017058 '__va_list_tag'
+|-VarDecl 0x7fca8a017370 <c_files/pr66726-3.c:5:1, col:33> col:23 used mode_size 'unsigned short []' extern
+`-FunctionDecl 0x7fca8a825b28 <line:7:1, line:16:1> line:8:1 oof 'int (int)'
+  |-ParmVarDecl 0x7fca8a825a58 <col:6, col:10> col:10 used mode 'int'
+  `-CompoundStmt 0x7fca8a825fd0 <line:9:1, line:16:1>
+    |-DeclStmt 0x7fca8a825c40 <line:10:3, col:10>
+    | `-VarDecl 0x7fca8a825be0 <col:3, col:7> col:7 used tem 'int'
+    |-IfStmt 0x7fca8a825f40 <line:11:3, line:14:25>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fca8a825d80 <line:11:7, col:26> 'int' '<'
+    | | |-IntegerLiteral 0x7fca8a825c58 <col:7> 'int' 64
+    | | `-ImplicitCastExpr 0x7fca8a825d68 <col:12, col:26> 'int' <IntegralCast>
+    | |   `-ImplicitCastExpr 0x7fca8a825d50 <col:12, col:26> 'unsigned short' <LValueToRValue>
+    | |     `-ArraySubscriptExpr 0x7fca8a825d28 <col:12, col:26> 'unsigned short' lvalue
+    | |       |-ImplicitCastExpr 0x7fca8a825cf8 <col:12> 'unsigned short *' <ArrayToPointerDecay>
+    | |       | `-DeclRefExpr 0x7fca8a825c78 <col:12> 'unsigned short []' lvalue Var 0x7fca8a017370 'mode_size' 'unsigned short []'
+    | |       `-ImplicitCastExpr 0x7fca8a825d10 <col:22> 'int' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fca8a825ca0 <col:22> 'int' lvalue ParmVar 0x7fca8a825a58 'mode' 'int'
+    | |-BinaryOperator 0x7fca8a825df0 <line:12:5, col:11> 'int' '='
+    | | |-DeclRefExpr 0x7fca8a825da8 <col:5> 'int' lvalue Var 0x7fca8a825be0 'tem' 'int'
+    | | `-IntegerLiteral 0x7fca8a825dd0 <col:11> 'int' 64
+    | `-BinaryOperator 0x7fca8a825f18 <line:14:5, col:25> 'int' '='
+    |   |-DeclRefExpr 0x7fca8a825e18 <col:5> 'int' lvalue Var 0x7fca8a825be0 'tem' 'int'
+    |   `-ImplicitCastExpr 0x7fca8a825f00 <col:11, col:25> 'int' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7fca8a825ee8 <col:11, col:25> 'unsigned short' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7fca8a825ec0 <col:11, col:25> 'unsigned short' lvalue
+    |         |-ImplicitCastExpr 0x7fca8a825e90 <col:11> 'unsigned short *' <ArrayToPointerDecay>
+    |         | `-DeclRefExpr 0x7fca8a825e40 <col:11> 'unsigned short []' lvalue Var 0x7fca8a017370 'mode_size' 'unsigned short []'
+    |         `-ImplicitCastExpr 0x7fca8a825ea8 <col:21> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fca8a825e68 <col:21> 'int' lvalue ParmVar 0x7fca8a825a58 'mode' 'int'
+    `-ReturnStmt 0x7fca8a825fb8 <line:15:3, col:10>
+      `-ImplicitCastExpr 0x7fca8a825fa0 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fca8a825f78 <col:10> 'int' lvalue Var 0x7fca8a825be0 'tem' 'int'

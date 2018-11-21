@@ -1,0 +1,35 @@
+FileAST: 
+  Typedef: C, [], ['typedef']
+    TypeDecl: C, []
+      IdentifierType: ['double', '_Complex']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['C']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['C']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['double']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['C']
+        TypeDecl: foo, []
+          IdentifierType: ['C']
+    Compound: 
+      Return: 
+        BinaryOp: -
+          ID: y
+          BinaryOp: *
+            BinaryOp: *
+              ID: z
+              FuncCall: 
+                ID: __builtin_cpow
+                ExprList: 
+                  ID: x
+                  Constant: int, 75
+            ID: w

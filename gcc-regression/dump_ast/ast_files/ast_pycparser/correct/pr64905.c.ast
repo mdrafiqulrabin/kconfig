@@ -1,0 +1,24 @@
+FileAST: 
+  Typedef: uint16_t, [], ['typedef']
+    TypeDecl: uint16_t, []
+      IdentifierType: ['unsigned', 'short']
+  Decl: a_global, [], [], []
+    TypeDecl: a_global, []
+      IdentifierType: ['uint16_t']
+  FuncDef: 
+    Decl: function, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a_p, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: a_p, []
+                  IdentifierType: ['uint16_t']
+        TypeDecl: function, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: a_global
+        UnaryOp: *
+          UnaryOp: *
+            ID: a_p

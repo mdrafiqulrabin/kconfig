@@ -1,0 +1,44 @@
+FileAST: 
+  Typedef: FILE, [], ['typedef']
+    TypeDecl: FILE, []
+      Struct: FILE
+  Decl: _fwalk, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            FuncDecl: 
+              ParamList: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['FILE']
+              TypeDecl: None, []
+                IdentifierType: ['int']
+      TypeDecl: _fwalk, []
+        IdentifierType: ['int']
+  Decl: __sflush, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['FILE']
+      TypeDecl: __sflush, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: fflush, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fp, [], [], []
+            PtrDecl: []
+              TypeDecl: fp, []
+                IdentifierType: ['FILE']
+        TypeDecl: fflush, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: _fwalk
+          ExprList: 
+            ID: __sflush

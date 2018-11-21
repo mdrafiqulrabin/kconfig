@@ -1,0 +1,192 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned', 'long']
+  Decl: None, [], [], []
+    Struct: B
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned', 'short']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['unsigned', 'short']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['unsigned', 'short']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long']
+      TypeDecl: bar, []
+        Struct: B
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['char']
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: A
+        PtrDecl: []
+          TypeDecl: foo, []
+            IdentifierType: ['char']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          Struct: B
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            StructRef: ->
+              ID: x
+              ID: a
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['unsigned', 'char']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['unsigned', 'short']
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 3
+        BinaryOp: +
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'char']
+            BinaryOp: %
+              StructRef: .
+                ID: b
+                ID: b
+              Constant: int, 10
+          Constant: int, 48
+      Assignment: =
+        ID: d
+        BinaryOp: /
+          StructRef: .
+            ID: b
+            ID: b
+          Constant: int, 10
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 2
+        BinaryOp: +
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'char']
+            BinaryOp: %
+              ID: d
+              Constant: int, 10
+          Constant: int, 48
+      Assignment: =
+        ID: d
+        BinaryOp: /
+          ID: d
+          Constant: int, 10
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 1
+        BinaryOp: +
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'char']
+            BinaryOp: %
+              ID: d
+              Constant: int, 10
+          Constant: int, 48
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 0
+        BinaryOp: +
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'char']
+            BinaryOp: %
+              BinaryOp: /
+                ID: d
+                Constant: int, 10
+              Constant: int, 10
+          Constant: int, 48
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 4
+        Constant: int, 46
+      Assignment: =
+        ID: c
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+          StructRef: .
+            ID: b
+            ID: c
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 6
+        BinaryOp: +
+          BinaryOp: %
+            ID: c
+            Constant: int, 10
+          Constant: int, 48
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 5
+        BinaryOp: +
+          BinaryOp: %
+            BinaryOp: /
+              ID: c
+              Constant: int, 10
+            Constant: int, 10
+          Constant: int, 48
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 7
+        Constant: int, 46
+      Assignment: =
+        ID: c
+        StructRef: .
+          ID: b
+          ID: d
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 9
+        BinaryOp: +
+          BinaryOp: %
+            ID: c
+            Constant: int, 10
+          Constant: int, 48
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 8
+        BinaryOp: +
+          BinaryOp: %
+            BinaryOp: /
+              ID: c
+              Constant: int, 10
+            Constant: int, 10
+          Constant: int, 48
+      Return: 
+        BinaryOp: +
+          ID: a
+          Constant: int, 10

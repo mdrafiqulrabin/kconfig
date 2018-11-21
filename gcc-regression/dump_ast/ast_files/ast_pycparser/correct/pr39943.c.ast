@@ -1,0 +1,49 @@
+FileAST: 
+  FuncDef: 
+    Decl: gl_fog_index_pixels, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['float']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: index, [], [], []
+            ArrayDecl: []
+              TypeDecl: index, []
+                IdentifierType: ['unsigned', 'int']
+        TypeDecl: gl_fog_index_pixels, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: n
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: index
+            ID: i
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'int']
+            BinaryOp: +
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['float']
+                ArrayRef: 
+                  ID: index
+                  ID: i
+              BinaryOp: -
+                Constant: float, 1.0F
+                ID: f

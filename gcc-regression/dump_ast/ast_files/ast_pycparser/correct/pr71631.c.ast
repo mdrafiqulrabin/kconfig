@@ -1,0 +1,129 @@
+FileAST: 
+  Decl: v, ['volatile'], [], []
+    TypeDecl: v, ['volatile']
+      IdentifierType: ['char']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: s, ['const']
+                IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        UnaryOp: *
+          UnaryOp: p++
+            ID: s
+        Assignment: =
+          ID: v
+          UnaryOp: *
+            ID: s
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: d, ['volatile'], [], []
+        TypeDecl: d, ['volatile']
+          IdentifierType: ['int']
+        Constant: int, 1
+      Decl: e, ['volatile'], [], []
+        TypeDecl: e, ['volatile']
+          IdentifierType: ['int']
+        Constant: int, 1
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+        BinaryOp: /
+          Constant: int, 1
+          ID: a
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['int']
+        BinaryOp: <
+          Constant: int, 1U
+          ID: f
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['int']
+        BinaryOp: +
+          Constant: int, 2
+          ID: g
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        BinaryOp: %
+          Constant: int, 3
+          ID: h
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+        BinaryOp: &&
+          ID: e
+          ID: b
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          Constant: int, 1
+          ID: c
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: d
+          Constant: int, 0
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          IdentifierType: ['short']
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['short']
+          BinaryOp: *
+            BinaryOp: *
+              UnaryOp: -
+                Constant: int, 1
+              ID: i
+            ID: l
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['short']
+        BinaryOp: *
+          ID: j
+          BinaryOp: *
+            ID: k
+            ID: m
+      If: 
+        BinaryOp: ==
+          ID: i
+          Constant: int, 1
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            Constant: string, "AB"
+      If: 
+        BinaryOp: !=
+          ID: x
+          UnaryOp: -
+            Constant: int, 1
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

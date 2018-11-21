@@ -1,0 +1,1223 @@
+FileAST: 
+  Decl: arf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['unsigned']
+        Decl: y, [], [], []
+          TypeDecl: y, []
+            IdentifierType: ['unsigned']
+      TypeDecl: arf, []
+        IdentifierType: ['void']
+  Decl: baz, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['unsigned']
+        Decl: y, [], [], []
+          TypeDecl: y, []
+            IdentifierType: ['unsigned']
+      TypeDecl: baz, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f1, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+      If: 
+        BinaryOp: <
+          ID: b
+          ID: a
+        Compound: 
+          FuncCall: 
+            ID: arf
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f1r, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f1r, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+      If: 
+        BinaryOp: <
+          ID: a
+          ID: b
+        Compound: 
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: arf
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f1n, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f1n, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: <
+            ID: b
+            ID: a
+        Compound: 
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: arf
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f1nr, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f1nr, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: <
+            ID: a
+            ID: b
+        Compound: 
+          FuncCall: 
+            ID: arf
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f1o, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f1o, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+      If: 
+        BinaryOp: <
+          ID: a
+          ID: b
+        Compound: 
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: arf
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f1ro, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f1ro, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+      If: 
+        BinaryOp: <
+          ID: b
+          ID: a
+        Compound: 
+          FuncCall: 
+            ID: arf
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f1no, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f1no, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: <
+            ID: a
+            ID: b
+        Compound: 
+          FuncCall: 
+            ID: arf
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f1nro, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f1nro, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: <
+            ID: b
+            ID: a
+        Compound: 
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: arf
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f2, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+      If: 
+        BinaryOp: <=
+          ID: b
+          ID: a
+        Compound: 
+          FuncCall: 
+            ID: arf
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f2r, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f2r, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+      If: 
+        BinaryOp: <=
+          ID: a
+          ID: b
+        Compound: 
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: arf
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f2n, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f2n, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: <=
+            ID: b
+            ID: a
+        Compound: 
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: arf
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f2nr, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f2nr, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: <=
+            ID: a
+            ID: b
+        Compound: 
+          FuncCall: 
+            ID: arf
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f2o, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f2o, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+      If: 
+        BinaryOp: <=
+          ID: a
+          ID: b
+        Compound: 
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: arf
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f2ro, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f2ro, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+      If: 
+        BinaryOp: <=
+          ID: b
+          ID: a
+        Compound: 
+          FuncCall: 
+            ID: arf
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f2no, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f2no, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: <=
+            ID: a
+            ID: b
+        Compound: 
+          FuncCall: 
+            ID: arf
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f2nro, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f2nro, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: a
+          Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: <=
+            ID: b
+            ID: a
+        Compound: 
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: arf
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f3, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          ID: a
+          Constant: int, 1
+      If: 
+        BinaryOp: <
+          ID: b
+          ID: a
+        Compound: 
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: arf
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f3r, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f3r, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          ID: a
+          Constant: int, 1
+      If: 
+        BinaryOp: <
+          ID: a
+          ID: b
+        Compound: 
+          FuncCall: 
+            ID: arf
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f3n, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f3n, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          ID: a
+          Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: <
+            ID: b
+            ID: a
+        Compound: 
+          FuncCall: 
+            ID: arf
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f3nr, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f3nr, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          ID: a
+          Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: <
+            ID: a
+            ID: b
+        Compound: 
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: arf
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f3o, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f3o, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          ID: a
+          Constant: int, 1
+      If: 
+        BinaryOp: <
+          ID: a
+          ID: b
+        Compound: 
+          FuncCall: 
+            ID: arf
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f3ro, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f3ro, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          ID: a
+          Constant: int, 1
+      If: 
+        BinaryOp: <
+          ID: b
+          ID: a
+        Compound: 
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: arf
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f3no, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f3no, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          ID: a
+          Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: <
+            ID: a
+            ID: b
+        Compound: 
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: arf
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f3nro, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f3nro, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          ID: a
+          Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: <
+            ID: b
+            ID: a
+        Compound: 
+          FuncCall: 
+            ID: arf
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f4, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          ID: a
+          Constant: int, 1
+      If: 
+        BinaryOp: <=
+          ID: b
+          ID: a
+        Compound: 
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: arf
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f4r, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f4r, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          ID: a
+          Constant: int, 1
+      If: 
+        BinaryOp: <=
+          ID: a
+          ID: b
+        Compound: 
+          FuncCall: 
+            ID: arf
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f4n, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f4n, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          ID: a
+          Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: <=
+            ID: b
+            ID: a
+        Compound: 
+          FuncCall: 
+            ID: arf
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f4nr, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f4nr, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          ID: a
+          Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: <=
+            ID: a
+            ID: b
+        Compound: 
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: arf
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f4o, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f4o, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          ID: a
+          Constant: int, 1
+      If: 
+        BinaryOp: <=
+          ID: a
+          ID: b
+        Compound: 
+          FuncCall: 
+            ID: arf
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f4ro, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f4ro, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          ID: a
+          Constant: int, 1
+      If: 
+        BinaryOp: <=
+          ID: b
+          ID: a
+        Compound: 
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: arf
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f4no, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f4no, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          ID: a
+          Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: <=
+            ID: a
+            ID: b
+        Compound: 
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: arf
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: f4nro, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f4nro, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          ID: a
+          Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: <=
+            ID: b
+            ID: a
+        Compound: 
+          FuncCall: 
+            ID: arf
+            ExprList: 
+              ID: a
+              ID: b
+          Return: 
+            Constant: int, 42
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: a
+          ID: b
+      Return: 
+        ID: b

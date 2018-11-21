@@ -1,0 +1,89 @@
+c_files/pr61095.c:6:31: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+int __attribute__ ((noinline, noclone))
+                              ^
+1 warning generated.
+TranslationUnitDecl 0x7fc2878264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc287826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc287826740 '__int128'
+|-TypedefDecl 0x7fc287826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc287826760 'unsigned __int128'
+|-TypedefDecl 0x7fc287826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc287826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc287826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc287826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc287826dc0 'char *'
+|   `-BuiltinType 0x7fc287826560 'char'
+|-TypedefDecl 0x7fc2878270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc287827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc287826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc287826e58 '__va_list_tag'
+|-FunctionDecl 0x7fc288026a20 <c_files/pr61095.c:4:40> col:40 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc288026ab8 prev 0x7fc288026a20 <col:1, col:51> col:40 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc288026c38 <line:6:1, line:11:1> line:7:1 used foo 'int (unsigned long)'
+| |-ParmVarDecl 0x7fc288026b68 <col:6, col:20> col:20 used addr 'unsigned long'
+| |-CompoundStmt 0x7fc2880271f8 <col:26, line:11:1>
+| | |-DeclStmt 0x7fc288026f98 <line:8:5, col:75>
+| | | `-VarDecl 0x7fc288026da0 <col:5, col:74> col:20 used p 'unsigned long *' cinit
+| | |   `-CStyleCastExpr 0x7fc288026f70 <col:24, col:74> 'unsigned long *' <IntegralToPointer>
+| | |     `-ParenExpr 0x7fc288026f50 <col:40, col:74> 'unsigned long'
+| | |       `-BinaryOperator 0x7fc288026ee0 <col:41, col:73> 'unsigned long' '*'
+| | |         |-ParenExpr 0x7fc288026e88 <col:41, col:69> 'unsigned long'
+| | |         | `-BinaryOperator 0x7fc288026e60 <col:42, col:49> 'unsigned long' '&'
+| | |         |   |-ImplicitCastExpr 0x7fc288026e48 <col:42> 'unsigned long' <LValueToRValue>
+| | |         |   | `-DeclRefExpr 0x7fc288026e00 <col:42> 'unsigned long' lvalue ParmVar 0x7fc288026b68 'addr' 'unsigned long'
+| | |         |   `-IntegerLiteral 0x7fc288026e28 <col:49> 'unsigned long' 18446607734267707384
+| | |         `-ImplicitCastExpr 0x7fc288026ec8 <col:73> 'unsigned long' <IntegralCast>
+| | |           `-IntegerLiteral 0x7fc288026ea8 <col:73> 'int' 4
+| | |-DeclStmt 0x7fc288027140 <line:9:5, col:47>
+| | | `-VarDecl 0x7fc288026fc8 <col:5, col:46> col:19 used xxx 'unsigned long' cinit
+| | |   `-CStyleCastExpr 0x7fc288027118 <col:25, col:46> 'unsigned long' <PointerToIntegral>
+| | |     `-ParenExpr 0x7fc2880270f8 <col:40, col:46> 'unsigned long *'
+| | |       `-BinaryOperator 0x7fc288027088 <col:41, col:45> 'unsigned long *' '+'
+| | |         |-ImplicitCastExpr 0x7fc288027070 <col:41> 'unsigned long *' <LValueToRValue>
+| | |         | `-DeclRefExpr 0x7fc288027028 <col:41> 'unsigned long *' lvalue Var 0x7fc288026da0 'p' 'unsigned long *'
+| | |         `-IntegerLiteral 0x7fc288027050 <col:45> 'int' 1
+| | `-ReturnStmt 0x7fc2880271e0 <line:10:5, col:19>
+| |   `-BinaryOperator 0x7fc2880271b8 <col:12, col:19> 'int' '>='
+| |     |-ImplicitCastExpr 0x7fc2880271a0 <col:12> 'unsigned long' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fc288027158 <col:12> 'unsigned long' lvalue Var 0x7fc288026fc8 'xxx' 'unsigned long'
+| |     `-IntegerLiteral 0x7fc288027180 <col:19> 'unsigned long' 4123168604160
+| `-NoInlineAttr 0x7fc288026cd8 <line:6:21>
+`-FunctionDecl 0x7fc2880272f8 <line:13:1, line:23:1> line:14:1 main 'int (void)'
+  `-CompoundStmt 0x7fc288027808 <line:15:1, line:23:1>
+    |-IfStmt 0x7fc288027518 <line:16:3, line:17:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7fc288027440 <line:16:7, col:13> 'int'
+    | | |-ImplicitCastExpr 0x7fc288027428 <col:7> 'int (*)(unsigned long)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fc2880273b8 <col:7> 'int (unsigned long)' Function 0x7fc288026c38 'foo' 'int (unsigned long)'
+    | | `-ImplicitCastExpr 0x7fc288027470 <col:12> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fc2880273e0 <col:12> 'int' 0
+    | |-CallExpr 0x7fc2880274f0 <line:17:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc2880274d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc288027488 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc288026ab8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc288027648 <line:18:3, line:19:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7fc2880275b0 <line:18:7, col:28> 'int'
+    | | |-ImplicitCastExpr 0x7fc288027598 <col:7> 'int (*)(unsigned long)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fc288027550 <col:7> 'int (unsigned long)' Function 0x7fc288026c38 'foo' 'int (unsigned long)'
+    | | `-IntegerLiteral 0x7fc288027578 <col:12> 'unsigned long' 136339441844224
+    | |-CallExpr 0x7fc288027620 <line:19:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc288027608 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc2880275e0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc288026ab8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc288027798 <line:20:3, line:21:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fc288027710 <line:20:7, col:29> 'int' prefix '!'
+    | | `-CallExpr 0x7fc2880276e0 <col:8, col:29> 'int'
+    | |   |-ImplicitCastExpr 0x7fc2880276c8 <col:8> 'int (*)(unsigned long)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7fc288027680 <col:8> 'int (unsigned long)' Function 0x7fc288026c38 'foo' 'int (unsigned long)'
+    | |   `-IntegerLiteral 0x7fc2880276a8 <col:13> 'unsigned long' 277076930199552
+    | |-CallExpr 0x7fc288027770 <line:21:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc288027758 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc288027730 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc288026ab8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc2880277f0 <line:22:3, col:10>
+      `-IntegerLiteral 0x7fc2880277d0 <col:10> 'int' 0

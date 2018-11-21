@@ -1,0 +1,87 @@
+FileAST: 
+  FuncDef: 
+    Decl: bar, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: t, [], [], []
+            ArrayDecl: []
+              TypeDecl: t, []
+                IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: b
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: t
+            ID: i
+          BinaryOp: +
+            ID: i
+            TernaryOp: 
+              BinaryOp: >
+                ID: i
+                Constant: int, 0
+              ArrayRef: 
+                ID: t
+                BinaryOp: -
+                  ID: i
+                  Constant: int, 1
+              Constant: int, 0
+      Return: 
+        ArrayRef: 
+          ID: t
+          BinaryOp: -
+            ID: b
+            Constant: int, 1
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        ArrayDecl: []
+          TypeDecl: x, []
+            IdentifierType: ['int']
+          ID: b
+      Return: 
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: x
+            ID: b
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              Constant: int, 6
+          Constant: int, 15
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

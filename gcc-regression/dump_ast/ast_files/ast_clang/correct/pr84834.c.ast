@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7f99b2018ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f99b2019020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f99b2018d40 '__int128'
+|-TypedefDecl 0x7f99b2019090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f99b2018d60 'unsigned __int128'
+|-TypedefDecl 0x7f99b2019368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f99b2019170 'struct __NSConstantString_tag'
+|   `-Record 0x7f99b20190e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f99b2019400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f99b20193c0 'char *'
+|   `-BuiltinType 0x7f99b2018b60 'char'
+|-TypedefDecl 0x7f99b20196c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f99b2019670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f99b20194e0 'struct __va_list_tag'
+|     `-Record 0x7f99b2019458 '__va_list_tag'
+|-FunctionDecl 0x7f99b1833460 <c_files/pr84834.c:5:1, line:9:1> line:6:1 foo '_Complex int (int)'
+| |-ParmVarDecl 0x7f99b2019738 <col:6, col:10> col:10 used a 'int'
+| `-CompoundStmt 0x7f99b18335f8 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7f99b18335e0 <line:8:3, col:14>
+|     `-ImplicitCastExpr 0x7f99b18335c8 <col:10, col:14> '_Complex int' <IntegralRealToComplex>
+|       `-BinaryOperator 0x7f99b18335a0 <col:10, col:14> 'int' '<'
+|         |-ImplicitCastExpr 0x7f99b1833588 <col:10> 'int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f99b1833540 <col:10> 'int' lvalue ParmVar 0x7f99b2019738 'a' 'int'
+|         `-IntegerLiteral 0x7f99b1833568 <col:14> 'int' 0
+`-FunctionDecl 0x7f99b18336b8 <line:11:1, line:15:1> line:12:1 bar '_Complex int (int)'
+  |-ParmVarDecl 0x7f99b1833630 <col:6, col:10> col:10 used a 'int'
+  `-CompoundStmt 0x7f99b18338f8 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7f99b18338e0 <line:14:3, col:55>
+      `-ConditionalOperator 0x7f99b18338b0 <col:10, col:55> '_Complex int'
+        |-ParenExpr 0x7f99b18337e0 <col:10, col:16> 'int'
+        | `-BinaryOperator 0x7f99b18337b8 <col:11, col:15> 'int' '&'
+        |   |-ImplicitCastExpr 0x7f99b18337a0 <col:11> 'int' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7f99b1833758 <col:11> 'int' lvalue ParmVar 0x7f99b1833630 'a' 'int'
+        |   `-IntegerLiteral 0x7f99b1833780 <col:15> 'int' 8
+        |-CStyleCastExpr 0x7f99b1833830 <col:20, col:35> '_Complex int' <IntegralRealToComplex>
+        | `-IntegerLiteral 0x7f99b1833800 <col:35> 'int' 16
+        `-CStyleCastExpr 0x7f99b1833888 <col:40, col:55> '_Complex int' <IntegralRealToComplex>
+          `-IntegerLiteral 0x7f99b1833858 <col:55> 'int' 0

@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fea8e025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fea8e026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fea8e025d40 '__int128'
+|-TypedefDecl 0x7fea8e026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fea8e025d60 'unsigned __int128'
+|-TypedefDecl 0x7fea8e026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fea8e026170 'struct __NSConstantString_tag'
+|   `-Record 0x7fea8e0260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fea8e026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fea8e0263c0 'char *'
+|   `-BuiltinType 0x7fea8e025b60 'char'
+|-TypedefDecl 0x7fea8e0266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fea8e026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fea8e0264e0 'struct __va_list_tag'
+|     `-Record 0x7fea8e026458 '__va_list_tag'
+|-FunctionDecl 0x7fea8e076b68 <c_files/pr70852.c:5:14> col:14 implicit used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fea8e076c00 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fea8e076c60 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7fea8e076cc0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fea8e076d38 prev 0x7fea8e076b68 <col:1, col:48> col:14 used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fea8e026738 <col:22, col:27> col:28 'void *'
+| |-ParmVarDecl 0x7fea8e076a00 <col:30> col:33 'int'
+| `-ParmVarDecl 0x7fea8e076a78 <<built-in>:75:23, col:37> c_files/pr70852.c:5:48 'unsigned long'
+|-VarDecl 0x7fea8e076e40 <line:6:1, col:14> col:12 used A 'int []' extern
+`-FunctionDecl 0x7fea8e076fa0 <line:7:1, line:11:1> line:8:1 fn1 'void (void)'
+  `-CompoundStmt 0x7fea8e0771d8 <line:9:1, line:11:1>
+    `-CallExpr 0x7fea8e077150 <line:10:3, col:18> 'void *'
+      |-ImplicitCastExpr 0x7fea8e077138 <col:3> 'void *(*)(void *, int, unsigned long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fea8e077038 <col:3> 'void *(void *, int, unsigned long)' Function 0x7fea8e076d38 'memset' 'void *(void *, int, unsigned long)'
+      |-ImplicitCastExpr 0x7fea8e0771a8 <col:11> 'void *' <BitCast>
+      | `-ImplicitCastExpr 0x7fea8e077190 <col:11> 'int *' <ArrayToPointerDecay>
+      |   `-DeclRefExpr 0x7fea8e077060 <col:11> 'int []' lvalue Var 0x7fea8e076e40 'A' 'int []'
+      |-IntegerLiteral 0x7fea8e077088 <col:14> 'int' 0
+      `-ImplicitCastExpr 0x7fea8e0771c0 <col:17> 'unsigned long' <IntegralCast>
+        `-IntegerLiteral 0x7fea8e0770a8 <col:17> 'int' 1

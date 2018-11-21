@@ -1,0 +1,25 @@
+c_files/pragma-diag-5.c:2:64: warning: pragma diagnostic expected 'error', 'warning', 'ignored', 'fatal', 'push', or 'pop' [-Wunknown-pragmas]
+#pragma GCC diagnostic /* { dg-warning "missing" "missing" } */
+                                                               ^
+c_files/pragma-diag-5.c:5:24: warning: pragma diagnostic expected 'error', 'warning', 'ignored', 'fatal', 'push', or 'pop' [-Wunknown-pragmas]
+#pragma GCC diagnostic warn /* { dg-warning "24:expected" } */
+                       ^
+c_files/pragma-diag-5.c:7:32: warning: unknown warning group '-Wfoo', ignored [-Wunknown-warning-option]
+#pragma GCC diagnostic ignored "-Wfoo" /* { dg-warning "32:unknown" } */
+                               ^
+3 warnings generated.
+TranslationUnitDecl 0x7faa7c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faa7c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faa7c826740 '__int128'
+|-TypedefDecl 0x7faa7c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faa7c826760 'unsigned __int128'
+|-TypedefDecl 0x7faa7c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faa7c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faa7c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faa7c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faa7c826dc0 'char *'
+|   `-BuiltinType 0x7faa7c826560 'char'
+`-TypedefDecl 0x7faa7c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7faa7c827070 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7faa7c826ee0 'struct __va_list_tag'
+      `-Record 0x7faa7c826e58 '__va_list_tag'

@@ -1,0 +1,77 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    PtrDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['int']
+    UnaryOp: &
+      ID: a
+  Decl: c, [], [], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+      Compound: 
+        Decl: f, [], [], []
+          ArrayDecl: []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+            Constant: int, 4
+        For: 
+          Assignment: =
+            ID: d
+            Constant: int, 0
+          BinaryOp: <
+            ID: d
+            Constant: int, 4
+          UnaryOp: p++
+            ID: d
+          Assignment: =
+            ArrayRef: 
+              ID: f
+              ID: d
+            Constant: int, 1
+        Assignment: =
+          ID: e
+          ArrayRef: 
+            ID: f
+            Constant: int, 1
+      Decl: g, [], [], []
+        ArrayDecl: []
+          PtrDecl: []
+            TypeDecl: g, []
+              IdentifierType: ['int']
+          Constant: int, 28
+        InitList: 
+      Assignment: =
+        UnaryOp: *
+          ID: b
+        ID: e
+      Assignment: =
+        ID: c
+        UnaryOp: &
+          ArrayRef: 
+            ID: g
+            Constant: int, 0
+      If: 
+        BinaryOp: !=
+          ID: a
+          Constant: int, 1
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

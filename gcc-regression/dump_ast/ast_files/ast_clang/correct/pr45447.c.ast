@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7f9604025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9604026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9604025d40 '__int128'
+|-TypedefDecl 0x7f9604026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9604025d60 'unsigned __int128'
+|-TypedefDecl 0x7f9604026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9604026170 'struct __NSConstantString_tag'
+|   `-Record 0x7f96040260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9604026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f96040263c0 'char *'
+|   `-BuiltinType 0x7f9604025b60 'char'
+|-TypedefDecl 0x7f96040266c8 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9604026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f96040264e0 'struct __va_list_tag'
+|     `-Record 0x7f9604026458 '__va_list_tag'
+`-TypedefDecl 0x7f9604026750 <c_files/pr45447.c:3:1, col:27> col:27 x '__builtin_va_list':'struct __va_list_tag [1]'
+  `-TypedefType 0x7f9604026720 '__builtin_va_list' sugar
+    |-Typedef 0x7f96040266c8 '__builtin_va_list'
+    `-ConstantArrayType 0x7f9604026670 'struct __va_list_tag [1]' 1 
+      `-RecordType 0x7f96040264e0 'struct __va_list_tag'
+        `-Record 0x7f9604026458 '__va_list_tag'

@@ -1,0 +1,76 @@
+c_files/pr37713.c:9:5: warning: implicit declaration of function 'sdp_seq_alloc' is invalid in C99 [-Wimplicit-function-declaration]
+    sdp_seq_alloc(dtds);
+    ^
+1 warning generated.
+TranslationUnitDecl 0x7f98888264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9888826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9888826740 '__int128'
+|-TypedefDecl 0x7f9888826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9888826760 'unsigned __int128'
+|-TypedefDecl 0x7f9888826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9888826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9888826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9888826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9888826dc0 'char *'
+|   `-BuiltinType 0x7f9888826560 'char'
+|-TypedefDecl 0x7f98888270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9888827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9888826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9888826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9889025a00 <c_files/pr37713.c:1:1, line:10:1> line:1:6 add_opush 'void (void)'
+| `-CompoundStmt 0x7f9889026688 <line:2:1, line:10:1>
+|   |-DeclStmt 0x7f9889025e88 <line:3:5, col:75>
+|   | `-VarDecl 0x7f9889025b30 <col:5, col:74> col:19 referenced formats 'unsigned char [7]' cinit
+|   |   `-InitListExpr 0x7f9889025ce8 <col:31, col:74> 'unsigned char [7]'
+|   |     |-ImplicitCastExpr 0x7f9889025d28 <col:33> 'unsigned char' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7f9889025b90 <col:33> 'int' 1
+|   |     |-ImplicitCastExpr 0x7f9889025d48 <col:39> 'unsigned char' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7f9889025bb0 <col:39> 'int' 2
+|   |     |-ImplicitCastExpr 0x7f9889025d70 <col:45> 'unsigned char' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7f9889025bd0 <col:45> 'int' 3
+|   |     |-ImplicitCastExpr 0x7f9889025da8 <col:51> 'unsigned char' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7f9889025bf0 <col:51> 'int' 4
+|   |     |-ImplicitCastExpr 0x7f9889025dc0 <col:57> 'unsigned char' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7f9889025c10 <col:57> 'int' 5
+|   |     |-ImplicitCastExpr 0x7f9889025e18 <col:63> 'unsigned char' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7f9889025c30 <col:63> 'int' 6
+|   |     `-ImplicitCastExpr 0x7f9889025e30 <col:69> 'unsigned char' <IntegralCast>
+|   |       `-IntegerLiteral 0x7f9889025c50 <col:69> 'int' 255
+|   |-DeclStmt 0x7f9889025fd0 <line:4:5, col:32>
+|   | `-VarDecl 0x7f9889025f70 <col:5, col:31> col:11 used dtds 'void *[7]'
+|   |-DeclStmt 0x7f9889026060 <line:5:5, col:19>
+|   | `-VarDecl 0x7f9889026000 <col:5, col:18> col:18 used i 'unsigned int'
+|   |-DeclStmt 0x7f9889026128 <line:6:5, col:29>
+|   | `-VarDecl 0x7f9889026090 <col:5, col:25> col:19 used dtd 'unsigned char' cinit
+|   |   `-ImplicitCastExpr 0x7f9889026110 <col:25> 'unsigned char' <IntegralCast>
+|   |     `-IntegerLiteral 0x7f98890260f0 <col:25> 'int' 8
+|   |-ForStmt 0x7f9889026488 <line:7:5, line:8:13>
+|   | |-BinaryOperator 0x7f98890261a0 <line:7:10, col:14> 'unsigned int' '='
+|   | | |-DeclRefExpr 0x7f9889026140 <col:10> 'unsigned int' lvalue Var 0x7f9889026000 'i' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7f9889026188 <col:14> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f9889026168 <col:14> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9889026288 <col:17, col:35> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9889026270 <col:17> 'unsigned long' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f9889026258 <col:17> 'unsigned int' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f98890261c8 <col:17> 'unsigned int' lvalue Var 0x7f9889026000 'i' 'unsigned int'
+|   | | `-UnaryExprOrTypeTraitExpr 0x7f9889026238 <col:21, col:35> 'unsigned long' sizeof
+|   | |   `-ParenExpr 0x7f9889026218 <col:27, col:35> 'unsigned char [7]' lvalue
+|   | |     `-DeclRefExpr 0x7f98890261f0 <col:28> 'unsigned char [7]' lvalue Var 0x7f9889025b30 'formats' 'unsigned char [7]'
+|   | |-UnaryOperator 0x7f98890262d8 <col:38, col:39> 'unsigned int' postfix '++'
+|   | | `-DeclRefExpr 0x7f98890262b0 <col:38> 'unsigned int' lvalue Var 0x7f9889026000 'i' 'unsigned int'
+|   | `-BinaryOperator 0x7f9889026460 <line:8:2, col:13> 'void *' '='
+|   |   |-ArraySubscriptExpr 0x7f98890263a8 <col:2, col:8> 'void *' lvalue
+|   |   | |-ImplicitCastExpr 0x7f9889026378 <col:2> 'void **' <ArrayToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7f98890262f8 <col:2> 'void *[7]' lvalue Var 0x7f9889025f70 'dtds' 'void *[7]'
+|   |   | `-ImplicitCastExpr 0x7f9889026390 <col:7> 'unsigned int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7f9889026320 <col:7> 'unsigned int' lvalue Var 0x7f9889026000 'i' 'unsigned int'
+|   |   `-ImplicitCastExpr 0x7f9889026448 <col:12, col:13> 'void *' <BitCast>
+|   |     `-UnaryOperator 0x7f9889026428 <col:12, col:13> 'unsigned char *' prefix '&'
+|   |       `-DeclRefExpr 0x7f98890263d0 <col:13> 'unsigned char' lvalue Var 0x7f9889026090 'dtd' 'unsigned char'
+|   `-CallExpr 0x7f9889026640 <line:9:5, col:23> 'int'
+|     |-ImplicitCastExpr 0x7f9889026628 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f98890265a8 <col:5> 'int ()' Function 0x7f9889026510 'sdp_seq_alloc' 'int ()'
+|     `-ImplicitCastExpr 0x7f9889026670 <col:19> 'void **' <ArrayToPointerDecay>
+|       `-DeclRefExpr 0x7f98890265d0 <col:19> 'void *[7]' lvalue Var 0x7f9889025f70 'dtds' 'void *[7]'
+`-FunctionDecl 0x7f9889026510 <<invalid sloc>> col:5 implicit used sdp_seq_alloc 'int ()'

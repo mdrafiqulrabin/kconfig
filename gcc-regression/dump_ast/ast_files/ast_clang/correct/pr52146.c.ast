@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fe1200264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe120026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe120026740 '__int128'
+|-TypedefDecl 0x7fe120026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe120026760 'unsigned __int128'
+|-TypedefDecl 0x7fe120026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe120026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe120026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe120026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe120026dc0 'char *'
+|   `-BuiltinType 0x7fe120026560 'char'
+|-TypedefDecl 0x7fe1200270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe120027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe120026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe120026e58 '__va_list_tag'
+|-FunctionDecl 0x7fe120077400 <c_files/pr52146.c:4:1, line:9:1> line:5:1 test1 'void (void)'
+| `-CompoundStmt 0x7fe1200776b0 <line:6:1, line:9:1>
+|   |-DeclStmt 0x7fe1200775e0 <line:7:3, col:42>
+|   | `-VarDecl 0x7fe120077520 <col:3, col:32> col:8 used apic_tpr_addr 'int *' cinit
+|   |   `-CStyleCastExpr 0x7fe1200775b8 <col:24, col:32> 'int *' <IntegralToPointer>
+|   |     `-IntegerLiteral 0x7fe120077580 <col:32> 'unsigned int' 4276093056
+|   `-CompoundAssignOperator 0x7fe120077678 <line:8:3, col:21> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|     |-UnaryOperator 0x7fe120077638 <col:3, col:4> 'int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fe120077620 <col:4> 'int *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fe1200775f8 <col:4> 'int *' lvalue Var 0x7fe120077520 'apic_tpr_addr' 'int *'
+|     `-IntegerLiteral 0x7fe120077658 <col:21> 'int' 4
+`-FunctionDecl 0x7fe120077768 <line:11:1, line:16:1> line:12:1 test2 'void (void)'
+  `-CompoundStmt 0x7fe120077998 <line:13:1, line:16:1>
+    |-DeclStmt 0x7fe1200778d8 <line:14:3, col:42>
+    | `-VarDecl 0x7fe120077818 <col:3, col:32> col:8 used apic_tpr_addr 'int *' cinit
+    |   `-CStyleCastExpr 0x7fe1200778b0 <col:24, col:32> 'int *' <IntegralToPointer>
+    |     `-IntegerLiteral 0x7fe120077878 <col:32> 'unsigned int' 4276093056
+    `-BinaryOperator 0x7fe120077970 <line:15:3, col:20> 'int' '='
+      |-UnaryOperator 0x7fe120077930 <col:3, col:4> 'int' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fe120077918 <col:4> 'int *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe1200778f0 <col:4> 'int *' lvalue Var 0x7fe120077818 'apic_tpr_addr' 'int *'
+      `-IntegerLiteral 0x7fe120077950 <col:20> 'int' 0

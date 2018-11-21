@@ -1,0 +1,91 @@
+TranslationUnitDecl 0x7ff5450264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff545026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff545026740 '__int128'
+|-TypedefDecl 0x7ff545026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff545026760 'unsigned __int128'
+|-TypedefDecl 0x7ff545026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff545026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff545026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff545026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff545026dc0 'char *'
+|   `-BuiltinType 0x7ff545026560 'char'
+|-TypedefDecl 0x7ff5450270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff545027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff545026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff545026e58 '__va_list_tag'
+|-RecordDecl 0x7ff545027120 <c_files/pr56566.c:5:1, col:48> col:8 struct S1 definition
+| |-EnumDecl 0x7ff545077400 parent 0x7ff5450264d0 <col:13, col:39> col:18 E1
+| | |-EnumConstantDecl 0x7ff545077510 <col:23, col:29> col:23 N1 'int'
+| | | `-UnaryOperator 0x7ff5450774f0 <col:28, col:29> 'int' prefix '-'
+| | |   `-IntegerLiteral 0x7ff5450774d0 <col:29> 'int' 1
+| | `-EnumConstantDecl 0x7ff545077578 <col:32, col:37> col:32 Z1 'int'
+| |   `-IntegerLiteral 0x7ff545077558 <col:37> 'int' 0
+| `-FieldDecl 0x7ff545077630 <col:13, col:45> col:41 e 'enum E1':'enum E1'
+|   `-IntegerLiteral 0x7ff5450775c0 <col:45> 'int' 1
+|-RecordDecl 0x7ff545077678 <line:6:1, col:40> col:8 struct S2 definition
+| |-EnumDecl 0x7ff545077720 parent 0x7ff5450264d0 <col:13, col:31> col:18 E2
+| | `-EnumConstantDecl 0x7ff545077830 <col:23, col:29> col:23 N2 'int'
+| |   `-UnaryOperator 0x7ff545077810 <col:28, col:29> 'int' prefix '-'
+| |     `-IntegerLiteral 0x7ff5450777f0 <col:29> 'int' 1
+| `-FieldDecl 0x7ff5450778f0 <col:13, col:37> col:33 e 'enum E2':'enum E2'
+|   `-IntegerLiteral 0x7ff545077878 <col:37> 'int' 1
+|-RecordDecl 0x7ff545077938 <line:7:1, col:39> col:8 struct S3 definition
+| |-EnumDecl 0x7ff5450779e0 parent 0x7ff5450264d0 <col:13, col:30> col:18 E3
+| | `-EnumConstantDecl 0x7ff545077ad0 <col:23, col:28> col:23 Z3 'int'
+| |   `-IntegerLiteral 0x7ff545077ab0 <col:28> 'int' 0
+| `-FieldDecl 0x7ff545077b90 <col:13, col:36> col:32 e 'enum E3':'enum E3'
+|   `-IntegerLiteral 0x7ff545077b18 <col:36> 'int' 1
+|-RecordDecl 0x7ff545077bd8 <line:8:1, col:48> col:8 struct S4 definition
+| |-EnumDecl 0x7ff545077c80 parent 0x7ff5450264d0 <col:13, col:39> col:18 E4
+| | |-EnumConstantDecl 0x7ff545077d90 <col:23, col:29> col:23 N4 'int'
+| | | `-UnaryOperator 0x7ff545077d70 <col:28, col:29> 'int' prefix '-'
+| | |   `-IntegerLiteral 0x7ff545077d50 <col:29> 'int' 2
+| | `-EnumConstantDecl 0x7ff545077df8 <col:32, col:37> col:32 Z4 'int'
+| |   `-IntegerLiteral 0x7ff545077dd8 <col:37> 'int' 1
+| `-FieldDecl 0x7ff545077eb0 <col:13, col:45> col:41 e 'enum E4':'enum E4'
+|   `-IntegerLiteral 0x7ff545077e40 <col:45> 'int' 2
+|-RecordDecl 0x7ff545077ef8 <line:9:1, col:48> col:8 struct S5 definition
+| |-EnumDecl 0x7ff545077fa0 parent 0x7ff5450264d0 <col:13, col:39> col:18 E5
+| | |-EnumConstantDecl 0x7ff5450780b0 <col:23, col:29> col:23 N5 'int'
+| | | `-UnaryOperator 0x7ff545078090 <col:28, col:29> 'int' prefix '-'
+| | |   `-IntegerLiteral 0x7ff545078070 <col:29> 'int' 3
+| | `-EnumConstantDecl 0x7ff545078118 <col:32, col:37> col:32 Z5 'int'
+| |   `-IntegerLiteral 0x7ff5450780f8 <col:37> 'int' 1
+| `-FieldDecl 0x7ff5450781d0 <col:13, col:45> col:41 e 'enum E5':'enum E5'
+|   `-IntegerLiteral 0x7ff545078160 <col:45> 'int' 3
+|-RecordDecl 0x7ff545078218 <line:10:1, col:48> col:8 struct S6 definition
+| |-EnumDecl 0x7ff5450782c0 parent 0x7ff5450264d0 <col:13, col:39> col:18 E6
+| | |-EnumConstantDecl 0x7ff545078400 <col:23, col:29> col:23 N6 'int'
+| | | `-UnaryOperator 0x7ff5450783b0 <col:28, col:29> 'int' prefix '-'
+| | |   `-IntegerLiteral 0x7ff545078390 <col:29> 'int' 2
+| | `-EnumConstantDecl 0x7ff545078468 <col:32, col:37> col:32 Z6 'int'
+| |   `-IntegerLiteral 0x7ff545078448 <col:37> 'int' 1
+| `-FieldDecl 0x7ff545078520 <col:13, col:45> col:41 e 'enum E6':'enum E6'
+|   `-IntegerLiteral 0x7ff5450784b0 <col:45> 'int' 1
+|-RecordDecl 0x7ff545078568 <line:11:1, col:48> col:8 struct S7 definition
+| |-EnumDecl 0x7ff545078610 parent 0x7ff5450264d0 <col:13, col:39> col:18 E7
+| | |-EnumConstantDecl 0x7ff545078720 <col:23, col:29> col:23 N7 'int'
+| | | `-UnaryOperator 0x7ff545078700 <col:28, col:29> 'int' prefix '-'
+| | |   `-IntegerLiteral 0x7ff5450786e0 <col:29> 'int' 3
+| | `-EnumConstantDecl 0x7ff545078788 <col:32, col:37> col:32 Z7 'int'
+| |   `-IntegerLiteral 0x7ff545078768 <col:37> 'int' 1
+| `-FieldDecl 0x7ff545078840 <col:13, col:45> col:41 e 'enum E7':'enum E7'
+|   `-IntegerLiteral 0x7ff5450787d0 <col:45> 'int' 2
+|-RecordDecl 0x7ff545078888 <line:12:1, col:39> col:8 struct S8 definition
+| |-EnumDecl 0x7ff545078930 parent 0x7ff5450264d0 <col:13, col:30> col:18 E8
+| | `-EnumConstantDecl 0x7ff545078a20 <col:23, col:28> col:23 Z8 'int'
+| |   `-IntegerLiteral 0x7ff545078a00 <col:28> 'int' 1
+| `-FieldDecl 0x7ff545078ae0 <col:13, col:36> col:32 e 'enum E8':'enum E8'
+|   `-IntegerLiteral 0x7ff545078a68 <col:36> 'int' 1
+|-RecordDecl 0x7ff545078b28 <line:13:1, col:39> col:8 struct S9 definition
+| |-EnumDecl 0x7ff545078bd0 parent 0x7ff5450264d0 <col:13, col:30> col:18 E9
+| | `-EnumConstantDecl 0x7ff545078cc0 <col:23, col:28> col:23 Z9 'int'
+| |   `-IntegerLiteral 0x7ff545078ca0 <col:28> 'int' 2
+| `-FieldDecl 0x7ff545078d80 <col:13, col:36> col:32 e 'enum E9':'enum E9'
+|   `-IntegerLiteral 0x7ff545078d08 <col:36> 'int' 2
+`-RecordDecl 0x7ff545078dc8 <line:14:1, col:39> col:8 struct S0 definition
+  |-EnumDecl 0x7ff545078e70 parent 0x7ff5450264d0 <col:13, col:30> col:18 E0
+  | `-EnumConstantDecl 0x7ff545078f60 <col:23, col:28> col:23 Z0 'int'
+  |   `-IntegerLiteral 0x7ff545078f40 <col:28> 'int' 2
+  `-FieldDecl 0x7ff545079020 <col:13, col:36> col:32 e 'enum E0':'enum E0'
+    `-IntegerLiteral 0x7ff545078fa8 <col:36> 'int' 1

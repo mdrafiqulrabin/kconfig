@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7faddd0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faddd026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faddd026740 '__int128'
+|-TypedefDecl 0x7faddd026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faddd026760 'unsigned __int128'
+|-TypedefDecl 0x7faddd026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faddd026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faddd026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faddd026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faddd026dc0 'char *'
+|   `-BuiltinType 0x7faddd026560 'char'
+|-TypedefDecl 0x7faddd0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faddd027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faddd026ee0 'struct __va_list_tag'
+|     `-Record 0x7faddd026e58 '__va_list_tag'
+|-RecordDecl 0x7faddd027120 <c_files/pr71423.c:3:1, line:6:1> line:3:8 struct S1 definition
+| `-FieldDecl 0x7faddd077418 <line:5:3, col:10> col:7 referenced f1 'int'
+|   `-IntegerLiteral 0x7faddd0271d0 <col:10> 'int' 1
+|-VarDecl 0x7faddd0774b0 <line:8:1, col:28> col:20 used b 'volatile struct S1':'volatile struct S1' cinit
+| `-InitListExpr 0x7faddd0775b8 <col:24, col:28> 'struct S1':'struct S1'
+|   `-IntegerLiteral 0x7faddd077550 <col:26> 'int' 0
+|-FunctionDecl 0x7faddd077650 <line:10:1, line:20:1> line:11:1 main 'int ()'
+| `-CompoundStmt 0x7faddd077c68 <line:12:1, line:20:1>
+|   |-DeclStmt 0x7faddd077830 <line:13:3, col:16>
+|   | `-VarDecl 0x7faddd0776f8 <col:3, col:14> col:8 used c 'char' cinit
+|   |   `-ImplicitCastExpr 0x7faddd0777d0 <col:12, col:14> 'char' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7faddd0777b8 <col:12, col:14> 'int' <LValueToRValue>
+|   |       `-MemberExpr 0x7faddd077780 <col:12, col:14> 'volatile int' lvalue bitfield .f1 0x7faddd077418
+|   |         `-DeclRefExpr 0x7faddd077758 <col:12> 'volatile struct S1':'volatile struct S1' lvalue Var 0x7faddd0774b0 'b' 'volatile struct S1':'volatile struct S1'
+|   |-BinaryOperator 0x7faddd0778c8 <line:14:3, col:10> 'int' '='
+|   | |-MemberExpr 0x7faddd077870 <col:3, col:5> 'volatile int' lvalue bitfield .f1 0x7faddd077418
+|   | | `-DeclRefExpr 0x7faddd077848 <col:3> 'volatile struct S1':'volatile struct S1' lvalue Var 0x7faddd0774b0 'b' 'volatile struct S1':'volatile struct S1'
+|   | `-IntegerLiteral 0x7faddd0778a8 <col:10> 'int' 1
+|   |-IfStmt 0x7faddd077bf8 <line:16:3, line:17:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7faddd077a28 <line:16:7, col:20> 'int' '||'
+|   | | |-BinaryOperator 0x7faddd0779a8 <col:7, col:15> 'int' '>'
+|   | | | |-ImplicitCastExpr 0x7faddd077990 <col:7, col:9> 'int' <LValueToRValue>
+|   | | | | `-MemberExpr 0x7faddd077918 <col:7, col:9> 'volatile int' lvalue bitfield .f1 0x7faddd077418
+|   | | | |   `-DeclRefExpr 0x7faddd0778f0 <col:7> 'volatile struct S1':'volatile struct S1' lvalue Var 0x7faddd0774b0 'b' 'volatile struct S1':'volatile struct S1'
+|   | | | `-UnaryOperator 0x7faddd077970 <col:14, col:15> 'int' prefix '-'
+|   | | |   `-IntegerLiteral 0x7faddd077950 <col:15> 'int' 1
+|   | | `-ImplicitCastExpr 0x7faddd077a10 <col:20> 'int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7faddd0779f8 <col:20> 'char' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7faddd0779d0 <col:20> 'char' lvalue Var 0x7faddd0776f8 'c' 'char'
+|   | |-CallExpr 0x7faddd077bd0 <line:17:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7faddd077bb8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7faddd077b60 <col:5> '<builtin fn type>' Function 0x7faddd077a80 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7faddd077c50 <line:19:3, col:10>
+|     `-IntegerLiteral 0x7faddd077c30 <col:10> 'int' 0
+`-FunctionDecl 0x7faddd077a80 <line:17:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7faddd077b18 <col:5> Implicit

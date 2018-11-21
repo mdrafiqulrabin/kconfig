@@ -1,0 +1,25 @@
+FileAST: 
+  Decl: uw_init_context_1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: uw_init_context_1, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: _Unwind_ForcedUnwind, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: _Unwind_ForcedUnwind, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: uw_init_context_1
+        ExprList: 
+          FuncCall: 
+            ID: __builtin_dwarf_cfa

@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fe0970264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe097026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe097026740 '__int128'
+|-TypedefDecl 0x7fe097026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe097026760 'unsigned __int128'
+|-TypedefDecl 0x7fe097026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe097026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe097026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe097026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe097026dc0 'char *'
+|   `-BuiltinType 0x7fe097026560 'char'
+|-TypedefDecl 0x7fe0970270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe097027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe097026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe097026e58 '__va_list_tag'
+|-VarDecl 0x7fe097027178 <c_files/pr46329.c:4:1, col:40> col:40 used x '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+`-FunctionDecl 0x7fe097826b00 <line:5:1, line:9:1> line:6:1 foo 'void (void)'
+  `-CompoundStmt 0x7fe097826c38 <line:7:1, line:9:1>
+    `-CompoundAssignOperator 0x7fe097826c00 <line:8:3, col:9> '__attribute__((__vector_size__(8 * sizeof(int)))) int' '<<=' ComputeLHSTy='__attribute__((__vector_size__(8 * sizeof(int)))) int' ComputeResultTy='__attribute__((__vector_size__(8 * sizeof(int)))) int'
+      |-DeclRefExpr 0x7fe097826b98 <col:3> '__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fe097027178 'x' '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+      `-ImplicitCastExpr 0x7fe097826be8 <col:9> '__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+        `-DeclRefExpr 0x7fe097826bc0 <col:9> '__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fe097027178 'x' '__attribute__((__vector_size__(8 * sizeof(int)))) int'

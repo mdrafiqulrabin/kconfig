@@ -1,0 +1,31 @@
+FileAST: 
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      Struct: shared_ptr_struct
+        Decl: phase, [], [], []
+          TypeDecl: phase, []
+            IdentifierType: ['unsigned', 'long']
+          Constant: int, 48
+        Decl: thread, [], [], []
+          TypeDecl: thread, []
+            IdentifierType: ['unsigned']
+          Constant: int, 16
+        Decl: addr, [], [], []
+          PtrDecl: []
+            TypeDecl: addr, []
+              IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: x
+          ID: thread
+        Constant: int, 2

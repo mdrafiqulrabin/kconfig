@@ -1,0 +1,108 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: T
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['int']
+      Decl: s, [], [], []
+        PtrDecl: []
+          TypeDecl: s, []
+            Struct: None
+              Decl: s1, [], [], []
+                TypeDecl: s1, []
+                  IdentifierType: ['short']
+              Decl: s2, [], [], []
+                TypeDecl: s2, []
+                  IdentifierType: ['short']
+              Decl: s3, [], [], []
+                TypeDecl: s3, []
+                  IdentifierType: ['short']
+              Decl: s4, [], [], []
+                TypeDecl: s4, []
+                  IdentifierType: ['short']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['int']
+          Decl: c, [], [], []
+            PtrDecl: []
+              TypeDecl: c, []
+                IdentifierType: ['int']
+          Decl: d, [], [], []
+            PtrDecl: []
+              TypeDecl: d, []
+                IdentifierType: ['int']
+          Decl: e, [], [], []
+            PtrDecl: []
+              TypeDecl: e, []
+                Struct: T
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          StructRef: ->
+            ID: e
+            ID: t
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            StructRef: .
+              ArrayRef: 
+                StructRef: ->
+                  ID: e
+                  ID: s
+                ID: i
+              ID: s1
+            ArrayRef: 
+              ID: a
+              ID: i
+          Assignment: =
+            StructRef: .
+              ArrayRef: 
+                StructRef: ->
+                  ID: e
+                  ID: s
+                ID: i
+              ID: s2
+            ArrayRef: 
+              ID: b
+              ID: i
+          Assignment: =
+            StructRef: .
+              ArrayRef: 
+                StructRef: ->
+                  ID: e
+                  ID: s
+                ID: i
+              ID: s3
+            ArrayRef: 
+              ID: c
+              ID: i
+          Assignment: =
+            StructRef: .
+              ArrayRef: 
+                StructRef: ->
+                  ID: e
+                  ID: s
+                ID: i
+              ID: s4
+            ArrayRef: 
+              ID: d
+              ID: i

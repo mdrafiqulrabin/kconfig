@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7fd7768264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd776826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd776826740 '__int128'
+|-TypedefDecl 0x7fd776826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd776826760 'unsigned __int128'
+|-TypedefDecl 0x7fd776826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd776826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd776826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd776826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd776826dc0 'char *'
+|   `-BuiltinType 0x7fd776826560 'char'
+|-TypedefDecl 0x7fd7768270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd776827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd776826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd776826e58 '__va_list_tag'
+|-RecordDecl 0x7fd776827120 <c_files/pr42730.c:1:1, line:5:1> line:1:7 union bzz definition
+| |-FieldDecl 0x7fd776877418 <line:3:3, col:13> col:13 pa 'unsigned int *'
+| `-FieldDecl 0x7fd776877478 <line:4:3, col:9> col:9 referenced pv 'void *'
+`-FunctionDecl 0x7fd776877580 <line:7:1, line:14:1> line:7:6 foo 'void (void)'
+  `-CompoundStmt 0x7fd776877a48 <line:8:1, line:14:1>
+    |-DeclStmt 0x7fd776877710 <line:9:3, col:14>
+    | `-VarDecl 0x7fd7768776b0 <col:3, col:13> col:13 used u 'union bzz':'union bzz'
+    |-DeclStmt 0x7fd7768777d0 <line:10:3, col:11>
+    | `-VarDecl 0x7fd776877770 <col:3, col:10> col:10 used x 'void **'
+    |-DeclStmt 0x7fd776877898 <line:11:3, col:14>
+    | `-VarDecl 0x7fd776877800 <col:3, col:13> col:9 used y 'void *' cinit
+    |   `-ImplicitCastExpr 0x7fd776877880 <col:13> 'void *' <NullToPointer>
+    |     `-IntegerLiteral 0x7fd776877860 <col:13> 'int' 0
+    |-BinaryOperator 0x7fd776877958 <line:12:3, col:10> 'void **' '='
+    | |-DeclRefExpr 0x7fd7768778b0 <col:3> 'void **' lvalue Var 0x7fd776877770 'x' 'void **'
+    | `-UnaryOperator 0x7fd776877938 <col:7, col:10> 'void **' prefix '&'
+    |   `-MemberExpr 0x7fd776877900 <col:8, col:10> 'void *' lvalue .pv 0x7fd776877478
+    |     `-DeclRefExpr 0x7fd7768778d8 <col:8> 'union bzz':'union bzz' lvalue Var 0x7fd7768776b0 'u' 'union bzz':'union bzz'
+    `-BinaryOperator 0x7fd776877a20 <line:13:3, col:8> 'void *' '='
+      |-UnaryOperator 0x7fd7768779c0 <col:3, col:4> 'void *' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fd7768779a8 <col:4> 'void **' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fd776877980 <col:4> 'void **' lvalue Var 0x7fd776877770 'x' 'void **'
+      `-ImplicitCastExpr 0x7fd776877a08 <col:8> 'void *' <LValueToRValue>
+        `-DeclRefExpr 0x7fd7768779e0 <col:8> 'void *' lvalue Var 0x7fd776877800 'y' 'void *'

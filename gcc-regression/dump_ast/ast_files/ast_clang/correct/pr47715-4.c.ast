@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fa6168166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa616816c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa616816940 '__int128'
+|-TypedefDecl 0x7fa616816c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa616816960 'unsigned __int128'
+|-TypedefDecl 0x7fa616816f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa616816d70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa616816ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa616817000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa616816fc0 'char *'
+|   `-BuiltinType 0x7fa616816760 'char'
+|-TypedefDecl 0x7fa6168172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa616817270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa6168170e0 'struct __va_list_tag'
+|     `-Record 0x7fa616817058 '__va_list_tag'
+|-RecordDecl 0x7fa616817320 <c_files/pr47715-4.c:5:1, line:10:1> line:5:8 struct gomp_team_state definition
+| |-FieldDecl 0x7fa616036480 <line:7:3, col:27> col:27 prev_ts 'struct gomp_team_state *'
+| |-FieldDecl 0x7fa6160364e0 <line:8:3, col:12> col:12 referenced team_id 'unsigned int'
+| `-FieldDecl 0x7fa616036540 <line:9:3, col:12> col:12 referenced level 'unsigned int'
+|-RecordDecl 0x7fa616036588 <line:11:1, line:15:1> line:11:8 struct gomp_thread definition
+| |-FieldDecl 0x7fa616036648 <line:13:3, col:9> col:9 data 'void *'
+| `-FieldDecl 0x7fa6160366b0 <line:14:3, col:26> col:26 referenced ts 'struct gomp_team_state':'struct gomp_team_state'
+|-VarDecl 0x7fa616036750 <line:16:1, col:36> col:36 used gomp_tls_data 'struct gomp_thread':'struct gomp_thread' extern tls
+`-FunctionDecl 0x7fa6160368d8 <line:17:1, line:24:1> line:18:1 foo 'int (int)'
+  |-ParmVarDecl 0x7fa616036808 <col:6, col:10> col:10 used level 'int'
+  `-CompoundStmt 0x7fa616036da8 <line:19:1, line:24:1>
+    |-DeclStmt 0x7fa616036a80 <line:20:3, col:49>
+    | `-VarDecl 0x7fa6160369a0 <col:3, col:47> col:27 used ts 'struct gomp_team_state *' cinit
+    |   `-UnaryOperator 0x7fa616036a60 <col:32, col:47> 'struct gomp_team_state *' prefix '&'
+    |     `-MemberExpr 0x7fa616036a28 <col:33, col:47> 'struct gomp_team_state':'struct gomp_team_state' lvalue .ts 0x7fa6160366b0
+    |       `-DeclRefExpr 0x7fa616036a00 <col:33> 'struct gomp_thread':'struct gomp_thread' lvalue Var 0x7fa616036750 'gomp_tls_data' 'struct gomp_thread':'struct gomp_thread'
+    |-IfStmt 0x7fa616036cb0 <line:21:3, line:22:13>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa616036c30 <line:21:7, col:32> 'int' '||'
+    | | |-BinaryOperator 0x7fa616036af8 <col:7, col:15> 'int' '<'
+    | | | |-ImplicitCastExpr 0x7fa616036ae0 <col:7> 'int' <LValueToRValue>
+    | | | | `-DeclRefExpr 0x7fa616036a98 <col:7> 'int' lvalue ParmVar 0x7fa616036808 'level' 'int'
+    | | | `-IntegerLiteral 0x7fa616036ac0 <col:15> 'int' 0
+    | | `-BinaryOperator 0x7fa616036c08 <col:20, col:32> 'int' '>'
+    | |   |-ImplicitCastExpr 0x7fa616036bf0 <col:20> 'unsigned int' <IntegralCast>
+    | |   | `-ImplicitCastExpr 0x7fa616036bc0 <col:20> 'int' <LValueToRValue>
+    | |   |   `-DeclRefExpr 0x7fa616036b20 <col:20> 'int' lvalue ParmVar 0x7fa616036808 'level' 'int'
+    | |   `-ImplicitCastExpr 0x7fa616036bd8 <col:28, col:32> 'unsigned int' <LValueToRValue>
+    | |     `-MemberExpr 0x7fa616036b88 <col:28, col:32> 'unsigned int' lvalue ->level 0x7fa616036540
+    | |       `-ImplicitCastExpr 0x7fa616036b70 <col:28> 'struct gomp_team_state *' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fa616036b48 <col:28> 'struct gomp_team_state *' lvalue Var 0x7fa6160369a0 'ts' 'struct gomp_team_state *'
+    | |-ReturnStmt 0x7fa616036c98 <line:22:5, col:13>
+    | | `-UnaryOperator 0x7fa616036c78 <col:12, col:13> 'int' prefix '-'
+    | |   `-IntegerLiteral 0x7fa616036c58 <col:13> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fa616036d90 <line:23:3, col:14>
+      `-ImplicitCastExpr 0x7fa616036d78 <col:10, col:14> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fa616036d60 <col:10, col:14> 'unsigned int' <LValueToRValue>
+          `-MemberExpr 0x7fa616036d28 <col:10, col:14> 'unsigned int' lvalue ->team_id 0x7fa6160364e0
+            `-ImplicitCastExpr 0x7fa616036d10 <col:10> 'struct gomp_team_state *' <LValueToRValue>
+              `-DeclRefExpr 0x7fa616036ce8 <col:10> 'struct gomp_team_state *' lvalue Var 0x7fa6160369a0 'ts' 'struct gomp_team_state *'

@@ -1,0 +1,102 @@
+FileAST: 
+  Typedef: foo, [], ['typedef']
+    TypeDecl: foo, []
+      Struct: foo
+        Decl: Node, [], [], []
+          PtrDecl: []
+            PtrDecl: []
+              TypeDecl: Node, []
+                Struct: foo
+  FuncDef: 
+    Decl: sort_and_split, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: Root, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: Root, []
+                  IdentifierType: ['foo']
+          Decl: Finite, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: Finite, []
+                  IdentifierType: ['foo']
+          Decl: first, [], [], []
+            TypeDecl: first, []
+              IdentifierType: ['long']
+        TypeDecl: sort_and_split, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: cd, [], [], []
+        PtrDecl: []
+          TypeDecl: cd, []
+            IdentifierType: ['foo']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['long']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: first
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            StructRef: ->
+              ID: cd
+              ID: Node
+            ID: i
+          ArrayRef: 
+            ID: Finite
+            BinaryOp: +
+              ID: first
+              ID: i
+      FuncCall: 
+        ID: sort_and_split
+        ExprList: 
+          ID: Root
+          ID: Finite
+          ID: first
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: Build_foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: Root, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: Root, []
+                  IdentifierType: ['foo']
+          Decl: Finite, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: Finite, []
+                  IdentifierType: ['foo']
+          Decl: Infinite, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: Infinite, []
+                  IdentifierType: ['foo']
+        TypeDecl: Build_foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: low, [], [], []
+        TypeDecl: low, []
+          IdentifierType: ['long']
+      Decl: high, [], [], []
+        TypeDecl: high, []
+          IdentifierType: ['long']
+      While: 
+        BinaryOp: ==
+          FuncCall: 
+            ID: sort_and_split
+            ExprList: 
+              ID: Root
+              ID: Finite
+              ID: low
+          Constant: int, 0
+        EmptyStatement: 

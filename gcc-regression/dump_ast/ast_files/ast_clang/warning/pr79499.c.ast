@@ -1,0 +1,48 @@
+c_files/pr79499.c:12:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  while (x = x->a);
+         ~~^~~~~~
+c_files/pr79499.c:12:12: note: place parentheses around the assignment to silence this warning
+  while (x = x->a);
+           ^
+         (       )
+c_files/pr79499.c:12:12: note: use '==' to turn this assignment into an equality comparison
+  while (x = x->a);
+           ^
+           ==
+1 warning generated.
+TranslationUnitDecl 0x7fe6780264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe678026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe678026740 '__int128'
+|-TypedefDecl 0x7fe678026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe678026760 'unsigned __int128'
+|-TypedefDecl 0x7fe678026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe678026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe678026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe678026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe678026dc0 'char *'
+|   `-BuiltinType 0x7fe678026560 'char'
+|-TypedefDecl 0x7fe6780270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe678027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe678026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe678026e58 '__va_list_tag'
+|-RecordDecl 0x7fe678027120 <c_files/pr79499.c:5:1, col:29> col:8 struct S definition
+| |-FieldDecl 0x7fe678077480 <col:12, col:22> col:22 referenced a 'struct S *'
+| `-FieldDecl 0x7fe6780774f0 <col:12, col:26> col:26 referenced b 'struct S *'
+`-FunctionDecl 0x7fe678077660 <line:7:1, line:13:1> line:8:1 foo 'void (struct S *)'
+  |-ParmVarDecl 0x7fe678077560 <col:6, col:16> col:16 used x 'struct S *'
+  `-CompoundStmt 0x7fe678077970 <line:9:1, line:13:1>
+    `-DoStmt 0x7fe678077950 <line:10:3, line:12:18>
+      |-BinaryOperator 0x7fe678077848 <line:11:5, col:15> 'struct S *' '='
+      | |-MemberExpr 0x7fe678077780 <col:5, col:8> 'struct S *' lvalue ->b 0x7fe6780774f0
+      | | `-ImplicitCastExpr 0x7fe678077768 <col:5> 'struct S *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fe678077740 <col:5> 'struct S *' lvalue ParmVar 0x7fe678077560 'x' 'struct S *'
+      | `-ImplicitCastExpr 0x7fe678077830 <col:12, col:15> 'struct S *' <LValueToRValue>
+      |   `-MemberExpr 0x7fe6780777f8 <col:12, col:15> 'struct S *' lvalue ->a 0x7fe678077480
+      |     `-ImplicitCastExpr 0x7fe6780777e0 <col:12> 'struct S *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fe6780777b8 <col:12> 'struct S *' lvalue ParmVar 0x7fe678077560 'x' 'struct S *'
+      `-BinaryOperator 0x7fe678077928 <line:12:10, col:17> 'struct S *' '='
+        |-DeclRefExpr 0x7fe678077870 <col:10> 'struct S *' lvalue ParmVar 0x7fe678077560 'x' 'struct S *'
+        `-ImplicitCastExpr 0x7fe678077910 <col:14, col:17> 'struct S *' <LValueToRValue>
+          `-MemberExpr 0x7fe6780778d8 <col:14, col:17> 'struct S *' lvalue ->a 0x7fe678077480
+            `-ImplicitCastExpr 0x7fe6780778c0 <col:14> 'struct S *' <LValueToRValue>
+              `-DeclRefExpr 0x7fe678077898 <col:14> 'struct S *' lvalue ParmVar 0x7fe678077560 'x' 'struct S *'

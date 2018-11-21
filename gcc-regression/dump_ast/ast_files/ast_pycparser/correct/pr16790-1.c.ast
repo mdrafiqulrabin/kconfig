@@ -1,0 +1,137 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: test1, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u1, [], [], []
+            TypeDecl: u1, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: test1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: y_final_1, [], [], []
+        TypeDecl: y_final_1, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: y_middle, [], [], []
+        TypeDecl: y_middle, []
+          IdentifierType: ['signed', 'short']
+      Decl: y_final_2, [], [], []
+        TypeDecl: y_final_2, []
+          IdentifierType: ['unsigned', 'int']
+      Assignment: =
+        ID: y_final_1
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'int']
+          BinaryOp: *
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['signed', 'short']
+              BinaryOp: *
+                ID: u1
+                Constant: int, 2
+            Constant: int, 3
+      Assignment: =
+        ID: y_middle
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['signed', 'short']
+          BinaryOp: *
+            ID: u1
+            Constant: int, 2
+      Assignment: =
+        ID: y_final_2
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'int']
+          BinaryOp: *
+            ID: y_middle
+            Constant: int, 3
+      If: 
+        BinaryOp: !=
+          ID: y_final_1
+          ID: y_final_2
+        FuncCall: 
+          ID: abort
+  FuncDef: 
+    Decl: test2, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u1, [], [], []
+            TypeDecl: u1, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: test2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: y_final_1, [], [], []
+        TypeDecl: y_final_1, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: y_middle, [], [], []
+        TypeDecl: y_middle, []
+          IdentifierType: ['signed', 'short']
+      Decl: y_final_2, [], [], []
+        TypeDecl: y_final_2, []
+          IdentifierType: ['unsigned', 'int']
+      Assignment: =
+        ID: y_final_1
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'int']
+          BinaryOp: *
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['signed', 'short']
+              BinaryOp: <<
+                ID: u1
+                Constant: int, 1
+            Constant: int, 3
+      Assignment: =
+        ID: y_middle
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['signed', 'short']
+          BinaryOp: <<
+            ID: u1
+            Constant: int, 1
+      Assignment: =
+        ID: y_final_2
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'int']
+          BinaryOp: *
+            ID: y_middle
+            Constant: int, 3
+      If: 
+        BinaryOp: !=
+          ID: y_final_1
+          ID: y_final_2
+        FuncCall: 
+          ID: abort
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: test1
+        ExprList: 
+          Constant: int, 0x4000U
+      FuncCall: 
+        ID: test2
+        ExprList: 
+          Constant: int, 0x4000U
+      Return: 
+        Constant: int, 0

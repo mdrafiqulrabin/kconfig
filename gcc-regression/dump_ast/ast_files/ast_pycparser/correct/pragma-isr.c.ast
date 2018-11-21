@@ -1,0 +1,35 @@
+FileAST: 
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  Pragma: interrupt
+  FuncDef: 
+    Decl: isr1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: isr1, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: foo
+  Pragma: interrupt
+  FuncDef: 
+    Decl: isr2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: isr2, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: foo

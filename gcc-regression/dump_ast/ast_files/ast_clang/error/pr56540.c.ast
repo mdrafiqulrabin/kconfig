@@ -1,0 +1,37 @@
+c_files/pr56540.c:4:42: error: use of undeclared identifier '__fpreg'
+extern int a[__SIZEOF_FPREG__ != sizeof (__fpreg) ? -1 : 1];
+                                         ^
+c_files/pr56540.c:4:14: error: use of undeclared identifier '__SIZEOF_FPREG__'
+extern int a[__SIZEOF_FPREG__ != sizeof (__fpreg) ? -1 : 1];
+             ^
+c_files/pr56540.c:5:44: error: use of undeclared identifier '__float80'
+extern int b[__SIZEOF_FLOAT80__ != sizeof (__float80) ? -1 : 1];
+                                           ^
+c_files/pr56540.c:5:14: error: use of undeclared identifier '__SIZEOF_FLOAT80__'
+extern int b[__SIZEOF_FLOAT80__ != sizeof (__float80) ? -1 : 1];
+             ^
+c_files/pr56540.c:6:45: error: __float128 is not supported on this target
+extern int c[__SIZEOF_FLOAT128__ != sizeof (__float128) ? -1 : 1];
+                                            ^
+c_files/pr56540.c:6:14: error: use of undeclared identifier '__SIZEOF_FLOAT128__'
+extern int c[__SIZEOF_FLOAT128__ != sizeof (__float128) ? -1 : 1];
+             ^
+6 errors generated.
+TranslationUnitDecl 0x7fe25400ecd0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe25400f220 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe25400ef40 '__int128'
+|-TypedefDecl 0x7fe25400f290 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe25400ef60 'unsigned __int128'
+|-TypedefDecl 0x7fe25400f568 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe25400f370 'struct __NSConstantString_tag'
+|   `-Record 0x7fe25400f2e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe25400f600 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe25400f5c0 'char *'
+|   `-BuiltinType 0x7fe25400ed60 'char'
+|-TypedefDecl 0x7fe25400f8c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe25400f870 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe25400f6e0 'struct __va_list_tag'
+|     `-Record 0x7fe25400f658 '__va_list_tag'
+|-VarDecl 0x7fe254826800 <c_files/pr56540.c:4:1, col:12> col:12 invalid a 'int' extern
+|-VarDecl 0x7fe2548268f8 <line:5:1, col:12> col:12 invalid b 'int' extern
+`-VarDecl 0x7fe254826a18 <line:6:1, col:12> col:12 invalid c 'int' extern

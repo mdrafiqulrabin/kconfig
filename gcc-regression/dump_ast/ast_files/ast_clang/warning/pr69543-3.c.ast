@@ -1,0 +1,33 @@
+c_files/pr69543-3.c:17:3: warning: unknown warning group '-Wmaybe-uninitialized', ignored [-Wunknown-warning-option]
+  _Pragma ("GCC diagnostic ignored \"-Wmaybe-uninitialized\"")
+  ^
+<scratch space>:6:25: note: expanded from here
+ GCC diagnostic ignored "-Wmaybe-uninitialized"
+                        ^
+1 warning generated.
+TranslationUnitDecl 0x7fd85d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd85d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd85d026740 '__int128'
+|-TypedefDecl 0x7fd85d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd85d026760 'unsigned __int128'
+|-TypedefDecl 0x7fd85d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd85d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd85d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd85d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd85d026dc0 'char *'
+|   `-BuiltinType 0x7fd85d026560 'char'
+|-TypedefDecl 0x7fd85d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd85d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd85d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd85d026e58 '__va_list_tag'
+`-FunctionDecl 0x7fd85d825a00 <c_files/pr69543-3.c:12:1, line:20:1> line:12:6 test 'void (char)'
+  |-ParmVarDecl 0x7fd85d027130 <col:12, col:17> col:17 used yylval 'char'
+  `-CompoundStmt 0x7fd85d825c40 <line:13:1, line:20:1>
+    |-DeclStmt 0x7fd85d825b58 <line:14:3, col:14>
+    | `-VarDecl 0x7fd85d825af8 <col:3, col:9> col:9 used yyvsp 'char *'
+    `-BinaryOperator 0x7fd85d825c18 <line:10:23, col:34> 'char' '='
+      |-UnaryOperator 0x7fd85d825bb8 <col:23, col:26> 'char' lvalue prefix '*'
+      | `-UnaryOperator 0x7fd85d825b98 <col:24, col:26> 'char *' prefix '++'
+      |   `-DeclRefExpr 0x7fd85d825b70 <col:26> 'char *' lvalue Var 0x7fd85d825af8 'yyvsp' 'char *'
+      `-ImplicitCastExpr 0x7fd85d825c00 <col:34> 'char' <LValueToRValue>
+        `-DeclRefExpr 0x7fd85d825bd8 <col:34> 'char' lvalue ParmVar 0x7fd85d027130 'yylval' 'char'

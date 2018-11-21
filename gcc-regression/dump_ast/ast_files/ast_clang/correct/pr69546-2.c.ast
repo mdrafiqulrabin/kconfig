@@ -1,0 +1,50 @@
+TranslationUnitDecl 0x7f8c4c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8c4c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8c4c826740 '__int128'
+|-TypedefDecl 0x7f8c4c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8c4c826760 'unsigned __int128'
+|-TypedefDecl 0x7f8c4c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8c4c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8c4c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8c4c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8c4c826dc0 'char *'
+|   `-BuiltinType 0x7f8c4c826560 'char'
+|-TypedefDecl 0x7f8c4c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8c4c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8c4c826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8c4c826e58 '__va_list_tag'
+|-FunctionDecl 0x7f8c4d025a00 <c_files/pr69546-2.c:4:1, line:10:1> line:5:1 used foo 'unsigned __int128 (void)'
+| `-CompoundStmt 0x7f8c4d025d28 <line:6:1, line:10:1>
+|   |-DeclStmt 0x7f8c4d025b88 <line:7:3, col:46>
+|   | `-VarDecl 0x7f8c4d025af0 <col:3, col:25> col:21 used a 'unsigned __int128' cinit
+|   |   `-ImplicitCastExpr 0x7f8c4d025b70 <col:25> 'unsigned __int128' <IntegralCast>
+|   |     `-IntegerLiteral 0x7f8c4d025b50 <col:25> 'unsigned long long' 18446744073709551614
+|   |-DeclStmt 0x7f8c4d025c50 <line:8:3, col:46>
+|   | `-VarDecl 0x7f8c4d025bb8 <col:3, col:25> col:21 used b 'unsigned __int128' cinit
+|   |   `-ImplicitCastExpr 0x7f8c4d025c38 <col:25> 'unsigned __int128' <IntegralCast>
+|   |     `-IntegerLiteral 0x7f8c4d025c18 <col:25> 'unsigned long long' 18446744073709551615
+|   `-ReturnStmt 0x7f8c4d025d10 <line:9:3, col:14>
+|     `-BinaryOperator 0x7f8c4d025ce8 <col:10, col:14> 'unsigned __int128' '%'
+|       |-ImplicitCastExpr 0x7f8c4d025cb8 <col:10> 'unsigned __int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f8c4d025c68 <col:10> 'unsigned __int128' lvalue Var 0x7f8c4d025af0 'a' 'unsigned __int128'
+|       `-ImplicitCastExpr 0x7f8c4d025cd0 <col:14> 'unsigned __int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7f8c4d025c90 <col:14> 'unsigned __int128' lvalue Var 0x7f8c4d025bb8 'b' 'unsigned __int128'
+|-FunctionDecl 0x7f8c4d025db0 <line:12:1, line:18:1> line:13:1 main 'int ()'
+| `-CompoundStmt 0x7f8c4d026158 <line:14:1, line:18:1>
+|   |-IfStmt 0x7f8c4d0260e8 <line:15:3, line:16:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8c4d025f10 <line:15:7, col:17> 'int' '!='
+|   | | |-CallExpr 0x7f8c4d025eb0 <col:7, col:12> 'unsigned __int128'
+|   | | | `-ImplicitCastExpr 0x7f8c4d025e98 <col:7> 'unsigned __int128 (*)(void)' <FunctionToPointerDecay>
+|   | | |   `-DeclRefExpr 0x7f8c4d025e48 <col:7> 'unsigned __int128 (void)' Function 0x7f8c4d025a00 'foo' 'unsigned __int128 (void)'
+|   | | `-ImplicitCastExpr 0x7f8c4d025ef8 <col:17> 'unsigned __int128' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f8c4d025ed8 <col:17> 'unsigned long long' 18446744073709551614
+|   | |-CallExpr 0x7f8c4d0260c0 <line:16:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8c4d0260a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8c4d026050 <col:5> '<builtin fn type>' Function 0x7f8c4d025f70 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8c4d026140 <line:17:3, col:10>
+|     `-IntegerLiteral 0x7f8c4d026120 <col:10> 'int' 0
+`-FunctionDecl 0x7f8c4d025f70 <line:16:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f8c4d026008 <col:5> Implicit

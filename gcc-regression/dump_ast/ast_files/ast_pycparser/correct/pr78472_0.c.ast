@@ -1,0 +1,32 @@
+FileAST: 
+  Decl: s, [], ['extern'], []
+    TypeDecl: s, []
+      Struct: S
+        Decl: i, [], [], []
+          TypeDecl: i, []
+            IdentifierType: ['unsigned']
+          Constant: int, 4
+        Decl: None, [], [], []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned']
+          Constant: int, 0
+  FuncDef: 
+    Decl: f, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: f, []
+            IdentifierType: ['void']
+    Compound: 
+      Return: 
+        UnaryOp: &
+          ID: s
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 

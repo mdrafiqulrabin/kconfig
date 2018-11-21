@@ -1,0 +1,44 @@
+c_files/pr50202.c:12:42: warning: implicit conversion from 'int' to 'char' changes value from 255 to -1 [-Wconstant-conversion]
+  i = __builtin_ia32_pcmpistri128 (v, v, 255);
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~        ^~~
+1 warning generated.
+TranslationUnitDecl 0x7f8a970264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8a97026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8a97026740 '__int128'
+|-TypedefDecl 0x7f8a97026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8a97026760 'unsigned __int128'
+|-TypedefDecl 0x7f8a97026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8a97026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8a97026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8a97026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8a97026dc0 'char *'
+|   `-BuiltinType 0x7f8a97026560 'char'
+|-TypedefDecl 0x7f8a970270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8a97027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8a97026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8a97026e58 '__va_list_tag'
+|-TypedefDecl 0x7f8a97027178 <c_files/pr50202.c:4:1, col:14> col:14 referenced __v16qi '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+| `-VectorType 0x7f8a97027140 '__attribute__((__vector_size__(16 * sizeof(char)))) char' 16
+|   `-BuiltinType 0x7f8a97026560 'char'
+|-VarDecl 0x7f8a97078400 <line:6:1, col:9> col:9 used v '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+|-VarDecl 0x7f8a970784b8 <line:7:1, col:5> col:5 used i 'int'
+|-FunctionDecl 0x7f8a970785e0 <line:9:1, line:14:1> line:10:1 foo 'void (void)'
+| `-CompoundStmt 0x7f8a97078ab0 <line:11:1, line:14:1>
+|   |-BinaryOperator 0x7f8a97078a18 <line:12:3, col:45> 'int' '='
+|   | |-DeclRefExpr 0x7f8a97078678 <col:3> 'int' lvalue Var 0x7f8a970784b8 'i' 'int'
+|   | `-CallExpr 0x7f8a97078990 <col:7, col:45> 'int'
+|   |   |-ImplicitCastExpr 0x7f8a97078978 <col:7> 'int (*)(__attribute__((__vector_size__(16 * sizeof(char)))) char, __attribute__((__vector_size__(16 * sizeof(char)))) char, char)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7f8a970788b8 <col:7> '<builtin fn type>' Function 0x7f8a970786e8 '__builtin_ia32_pcmpistri128' 'int (__attribute__((__vector_size__(16 * sizeof(char)))) char, __attribute__((__vector_size__(16 * sizeof(char)))) char, char)'
+|   |   |-ImplicitCastExpr 0x7f8a970789d0 <col:36> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f8a970788e0 <col:36> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' lvalue Var 0x7f8a97078400 'v' '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+|   |   |-ImplicitCastExpr 0x7f8a970789e8 <col:39> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f8a97078908 <col:39> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' lvalue Var 0x7f8a97078400 'v' '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+|   |   `-ImplicitCastExpr 0x7f8a97078a00 <col:42> 'char' <IntegralCast>
+|   |     `-IntegerLiteral 0x7f8a97078930 <col:42> 'int' 255
+|   `-BinaryOperator 0x7f8a97078a88 <line:13:3, col:7> 'int' '='
+|     |-DeclRefExpr 0x7f8a97078a40 <col:3> 'int' lvalue Var 0x7f8a970784b8 'i' 'int'
+|     `-IntegerLiteral 0x7f8a97078a68 <col:7> 'int' 255
+`-FunctionDecl 0x7f8a970786e8 <line:12:7> col:7 implicit used __builtin_ia32_pcmpistri128 'int (__attribute__((__vector_size__(16 * sizeof(char)))) char, __attribute__((__vector_size__(16 * sizeof(char)))) char, char)' extern
+  |-ParmVarDecl 0x7f8a97078780 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+  |-ParmVarDecl 0x7f8a970787e0 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+  `-ParmVarDecl 0x7f8a97078840 <<invalid sloc>> <invalid sloc> 'char'

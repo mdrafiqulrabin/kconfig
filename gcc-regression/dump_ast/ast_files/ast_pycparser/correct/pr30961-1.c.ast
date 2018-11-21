@@ -1,0 +1,25 @@
+FileAST: 
+  FuncDef: 
+    Decl: convert, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: in, [], [], []
+            TypeDecl: in, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: convert, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['double']
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          UnaryOp: &
+            ID: f
+          UnaryOp: &
+            ID: in
+          UnaryOp: sizeof
+            ID: in
+      Return: 
+        ID: f

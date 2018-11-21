@@ -1,0 +1,4 @@
+FileAST: 
+  Pragma: GCC diagnostic  
+  Pragma: GCC diagnostic warn  
+  Pragma: GCC diagnostic ignored "-Wfoo"  

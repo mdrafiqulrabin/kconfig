@@ -1,0 +1,444 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: typecode
+      EnumeratorList: 
+        Enumerator: QIcode
+        Enumerator: QUcode
+        Enumerator: HIcode
+        Enumerator: HUcode
+        Enumerator: SIcode
+        Enumerator: SUcode
+        Enumerator: DIcode
+        Enumerator: DUcode
+        Enumerator: SFcode
+        Enumerator: DFcode
+        Enumerator: XFcode
+        Enumerator: Pcode
+        Enumerator: Tcode
+        Enumerator: LAST_AND_UNUSED_TYPECODE
+  Decl: None, [], [], []
+    Enum: bytecode_opcode
+      EnumeratorList: 
+        Enumerator: neverneverland
+        Enumerator: drop
+        Enumerator: duplicate
+        Enumerator: over
+        Enumerator: setstackSI
+        Enumerator: adjstackSI
+        Enumerator: constQI
+        Enumerator: constHI
+        Enumerator: constSI
+        Enumerator: constDI
+        Enumerator: constSF
+        Enumerator: constDF
+        Enumerator: constXF
+        Enumerator: constP
+        Enumerator: loadQI
+        Enumerator: loadHI
+        Enumerator: loadSI
+        Enumerator: loadDI
+        Enumerator: loadSF
+        Enumerator: loadDF
+        Enumerator: loadXF
+        Enumerator: loadP
+        Enumerator: storeQI
+        Enumerator: storeHI
+        Enumerator: storeSI
+        Enumerator: storeDI
+        Enumerator: storeSF
+        Enumerator: storeDF
+        Enumerator: storeXF
+        Enumerator: storeP
+        Enumerator: storeBLK
+        Enumerator: clearBLK
+        Enumerator: addconstPSI
+        Enumerator: newlocalSI
+        Enumerator: localP
+        Enumerator: argP
+        Enumerator: convertQIHI
+        Enumerator: convertHISI
+        Enumerator: convertSIDI
+        Enumerator: convertQISI
+        Enumerator: convertQUHU
+        Enumerator: convertHUSU
+        Enumerator: convertSUDU
+        Enumerator: convertQUSU
+        Enumerator: convertSFDF
+        Enumerator: convertDFXF
+        Enumerator: convertHIQI
+        Enumerator: convertSIHI
+        Enumerator: convertDISI
+        Enumerator: convertSIQI
+        Enumerator: convertSUQU
+        Enumerator: convertDFSF
+        Enumerator: convertXFDF
+        Enumerator: convertSISF
+        Enumerator: convertSIDF
+        Enumerator: convertSIXF
+        Enumerator: convertSUSF
+        Enumerator: convertSUDF
+        Enumerator: convertSUXF
+        Enumerator: convertDISF
+        Enumerator: convertDIDF
+        Enumerator: convertDIXF
+        Enumerator: convertDUSF
+        Enumerator: convertDUDF
+        Enumerator: convertDUXF
+        Enumerator: convertSFSI
+        Enumerator: convertDFSI
+        Enumerator: convertXFSI
+        Enumerator: convertSFSU
+        Enumerator: convertDFSU
+        Enumerator: convertXFSU
+        Enumerator: convertSFDI
+        Enumerator: convertDFDI
+        Enumerator: convertXFDI
+        Enumerator: convertSFDU
+        Enumerator: convertDFDU
+        Enumerator: convertXFDU
+        Enumerator: convertPSI
+        Enumerator: convertSIP
+        Enumerator: convertSIT
+        Enumerator: convertDIT
+        Enumerator: convertSFT
+        Enumerator: convertDFT
+        Enumerator: convertXFT
+        Enumerator: convertPT
+        Enumerator: zxloadBI
+        Enumerator: sxloadBI
+        Enumerator: sstoreBI
+        Enumerator: addSI
+        Enumerator: addDI
+        Enumerator: addSF
+        Enumerator: addDF
+        Enumerator: addXF
+        Enumerator: addPSI
+        Enumerator: subSI
+        Enumerator: subDI
+        Enumerator: subSF
+        Enumerator: subDF
+        Enumerator: subXF
+        Enumerator: subPP
+        Enumerator: mulSI
+        Enumerator: mulDI
+        Enumerator: mulSU
+        Enumerator: mulDU
+        Enumerator: mulSF
+        Enumerator: mulDF
+        Enumerator: mulXF
+        Enumerator: divSI
+        Enumerator: divDI
+        Enumerator: divSU
+        Enumerator: divDU
+        Enumerator: divSF
+        Enumerator: divDF
+        Enumerator: divXF
+        Enumerator: modSI
+        Enumerator: modDI
+        Enumerator: modSU
+        Enumerator: modDU
+        Enumerator: andSI
+        Enumerator: andDI
+        Enumerator: iorSI
+        Enumerator: iorDI
+        Enumerator: xorSI
+        Enumerator: xorDI
+        Enumerator: lshiftSI
+        Enumerator: lshiftSU
+        Enumerator: lshiftDI
+        Enumerator: lshiftDU
+        Enumerator: rshiftSI
+        Enumerator: rshiftSU
+        Enumerator: rshiftDI
+        Enumerator: rshiftDU
+        Enumerator: ltSI
+        Enumerator: ltSU
+        Enumerator: ltDI
+        Enumerator: ltDU
+        Enumerator: ltSF
+        Enumerator: ltDF
+        Enumerator: ltXF
+        Enumerator: ltP
+        Enumerator: leSI
+        Enumerator: leSU
+        Enumerator: leDI
+        Enumerator: leDU
+        Enumerator: leSF
+        Enumerator: leDF
+        Enumerator: leXF
+        Enumerator: leP
+        Enumerator: geSI
+        Enumerator: geSU
+        Enumerator: geDI
+        Enumerator: geDU
+        Enumerator: geSF
+        Enumerator: geDF
+        Enumerator: geXF
+        Enumerator: geP
+        Enumerator: gtSI
+        Enumerator: gtSU
+        Enumerator: gtDI
+        Enumerator: gtDU
+        Enumerator: gtSF
+        Enumerator: gtDF
+        Enumerator: gtXF
+        Enumerator: gtP
+        Enumerator: eqSI
+        Enumerator: eqDI
+        Enumerator: eqSF
+        Enumerator: eqDF
+        Enumerator: eqXF
+        Enumerator: eqP
+        Enumerator: neSI
+        Enumerator: neDI
+        Enumerator: neSF
+        Enumerator: neDF
+        Enumerator: neXF
+        Enumerator: neP
+        Enumerator: negSI
+        Enumerator: negDI
+        Enumerator: negSF
+        Enumerator: negDF
+        Enumerator: negXF
+        Enumerator: notSI
+        Enumerator: notDI
+        Enumerator: notT
+        Enumerator: predecQI
+        Enumerator: predecHI
+        Enumerator: predecSI
+        Enumerator: predecDI
+        Enumerator: predecP
+        Enumerator: predecSF
+        Enumerator: predecDF
+        Enumerator: predecXF
+        Enumerator: predecBI
+        Enumerator: preincQI
+        Enumerator: preincHI
+        Enumerator: preincSI
+        Enumerator: preincDI
+        Enumerator: preincP
+        Enumerator: preincSF
+        Enumerator: preincDF
+        Enumerator: preincXF
+        Enumerator: preincBI
+        Enumerator: postdecQI
+        Enumerator: postdecHI
+        Enumerator: postdecSI
+        Enumerator: postdecDI
+        Enumerator: postdecP
+        Enumerator: postdecSF
+        Enumerator: postdecDF
+        Enumerator: postdecXF
+        Enumerator: postdecBI
+        Enumerator: postincQI
+        Enumerator: postincHI
+        Enumerator: postincSI
+        Enumerator: postincDI
+        Enumerator: postincP
+        Enumerator: postincSF
+        Enumerator: postincDF
+        Enumerator: postincXF
+        Enumerator: postincBI
+        Enumerator: xjumpif
+        Enumerator: xjumpifnot
+        Enumerator: jump
+        Enumerator: jumpP
+        Enumerator: caseSI
+        Enumerator: caseSU
+        Enumerator: caseDI
+        Enumerator: caseDU
+        Enumerator: call
+        Enumerator: returnP
+        Enumerator: ret
+        Enumerator: linenote
+        Enumerator: LAST_AND_UNUSED_OPCODE
+  Decl: None, [], [], []
+    Struct: binary_operator
+      Decl: opcode, [], [], []
+        TypeDecl: opcode, []
+          Enum: bytecode_opcode
+      Decl: arg0, [], [], []
+        TypeDecl: arg0, []
+          Enum: typecode
+  Decl: conversion_recipe, [], ['static'], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: conversion_recipe, []
+          Struct: conversion_recipe
+            Decl: opcodes, [], [], []
+              PtrDecl: []
+                TypeDecl: opcodes, []
+                  IdentifierType: ['unsigned', 'char']
+            Decl: cost, [], [], []
+              TypeDecl: cost, []
+                IdentifierType: ['int']
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+          ID: LAST_AND_UNUSED_TYPECODE
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        ID: LAST_AND_UNUSED_TYPECODE
+  FuncDef: 
+    Decl: deduce_conversion, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          ID: from
+          ID: to
+        TypeDecl: deduce_conversion, []
+          Struct: conversion_recipe
+    Compound: 
+      TernaryOp: 
+        StructRef: .
+          ArrayRef: 
+            ArrayRef: 
+              ID: conversion_recipe
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                ID: from
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+              ID: to
+          ID: opcodes
+        Constant: int, 0
+        ExprList: 
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                ID: conversion_recipe
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+                  ID: from
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                ID: to
+            FuncCall: 
+              ID: deduce_conversion
+              ExprList: 
+                ID: from
+                ID: to
+          Constant: int, 0
+    Decl: from, [], [], []
+      TypeDecl: from, []
+        Enum: typecode
+    Decl: to, [], [], []
+      TypeDecl: to, []
+        Enum: typecode
+  FuncDef: 
+    Decl: bc_expand_binary_operation, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: optab
+          ID: resulttype
+          ID: arg0
+          ID: arg1
+        TypeDecl: bc_expand_binary_operation, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: besti, [], [], []
+        TypeDecl: besti, []
+          IdentifierType: ['int']
+      Decl: cost, [], [], []
+        TypeDecl: cost, []
+          IdentifierType: ['int']
+      Decl: bestcost, [], [], []
+        TypeDecl: bestcost, []
+          IdentifierType: ['int']
+      Decl: resultcode, [], [], []
+        TypeDecl: resultcode, []
+          Enum: typecode
+      Decl: arg0code, [], [], []
+        TypeDecl: arg0code, []
+          Enum: typecode
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: !=
+          StructRef: .
+            ArrayRef: 
+              ID: optab
+              ID: i
+            ID: opcode
+          UnaryOp: -
+            Constant: int, 1
+        UnaryOp: ++
+          ID: i
+        Compound: 
+          TernaryOp: 
+            StructRef: .
+              ArrayRef: 
+                ArrayRef: 
+                  ID: conversion_recipe
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['int']
+                    ID: arg0code
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+                  StructRef: .
+                    ArrayRef: 
+                      ID: optab
+                      ID: i
+                    ID: arg0
+              ID: opcodes
+            Constant: int, 0
+            ExprList: 
+              Assignment: =
+                ArrayRef: 
+                  ArrayRef: 
+                    ID: conversion_recipe
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['int']
+                      ID: arg0code
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['int']
+                    StructRef: .
+                      ArrayRef: 
+                        ID: optab
+                        ID: i
+                      ID: arg0
+                FuncCall: 
+                  ID: deduce_conversion
+                  ExprList: 
+                    ID: arg0code
+                    StructRef: .
+                      ArrayRef: 
+                        ID: optab
+                        ID: i
+                      ID: arg0
+              Constant: int, 0
+    Decl: resulttype, [], [], []
+      TypeDecl: resulttype, []
+        IdentifierType: ['int']
+    Decl: arg0, [], [], []
+      TypeDecl: arg0, []
+        IdentifierType: ['int']
+    Decl: arg1, [], [], []
+      TypeDecl: arg1, []
+        IdentifierType: ['int']
+    Decl: optab, [], [], []
+      ArrayDecl: []
+        TypeDecl: optab, []
+          Struct: binary_operator

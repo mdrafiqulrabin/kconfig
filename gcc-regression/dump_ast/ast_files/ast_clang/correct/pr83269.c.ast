@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7f909d8166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f909d816c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f909d816940 '__int128'
+|-TypedefDecl 0x7f909d816c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f909d816960 'unsigned __int128'
+|-TypedefDecl 0x7f909d816f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f909d816d70 'struct __NSConstantString_tag'
+|   `-Record 0x7f909d816ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f909d817000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f909d816fc0 'char *'
+|   `-BuiltinType 0x7f909d816760 'char'
+|-TypedefDecl 0x7f909d8172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f909d817270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f909d8170e0 'struct __va_list_tag'
+|     `-Record 0x7f909d817058 '__va_list_tag'
+|-FunctionDecl 0x7f909d036400 <c_files/pr83269.c:3:1, line:14:1> line:4:1 main 'int ()'
+| `-CompoundStmt 0x7f909d036bd8 <line:5:1, line:14:1>
+|   |-DeclStmt 0x7f909d036588 <line:7:3, col:31>
+|   | `-VarDecl 0x7f909d0364f0 <col:3, col:30> col:26 used a 'volatile unsigned char' cinit
+|   |   `-ImplicitCastExpr 0x7f909d036570 <col:30> 'unsigned char' <IntegralCast>
+|   |     `-IntegerLiteral 0x7f909d036550 <col:30> 'int' 1
+|   |-DeclStmt 0x7f909d036650 <line:8:3, col:28>
+|   | `-VarDecl 0x7f909d0365b8 <col:3, col:17> col:13 used b 'long long' cinit
+|   |   `-ImplicitCastExpr 0x7f909d036638 <col:17> 'long long' <IntegralCast>
+|   |     `-IntegerLiteral 0x7f909d036618 <col:17> 'long' 2147483648
+|   |-DeclStmt 0x7f909d036918 <line:9:3, col:43>
+|   | `-VarDecl 0x7f909d036680 <col:3, col:42> col:7 used c 'int' cinit
+|   |   `-UnaryOperator 0x7f909d0368f8 <col:11, col:42> 'int' prefix '-'
+|   |     `-ParenExpr 0x7f909d0368d8 <col:12, col:42> 'int'
+|   |       `-BinaryOperator 0x7f909d0368b0 <col:13, col:41> 'int' '-'
+|   |         |-CStyleCastExpr 0x7f909d0367a8 <col:13, col:21> 'int' <IntegralCast>
+|   |         | `-ParenExpr 0x7f909d036788 <col:18, col:21> 'long long'
+|   |         |   `-UnaryOperator 0x7f909d036720 <col:19, col:20> 'long long' prefix '-'
+|   |         |     `-ImplicitCastExpr 0x7f909d036708 <col:20> 'long long' <LValueToRValue>
+|   |         |       `-DeclRefExpr 0x7f909d0366e0 <col:20> 'long long' lvalue Var 0x7f909d0365b8 'b' 'long long'
+|   |         `-ParenExpr 0x7f909d036890 <col:25, col:41> 'int'
+|   |           `-BinaryOperator 0x7f909d036868 <col:26, col:40> 'int' '*'
+|   |             |-UnaryOperator 0x7f909d0367f0 <col:26, col:27> 'int' prefix '-'
+|   |             | `-IntegerLiteral 0x7f909d0367d0 <col:27> 'int' 2147483647
+|   |             `-ImplicitCastExpr 0x7f909d036850 <col:40> 'int' <IntegralCast>
+|   |               `-ImplicitCastExpr 0x7f909d036838 <col:40> 'unsigned char' <LValueToRValue>
+|   |                 `-DeclRefExpr 0x7f909d036810 <col:40> 'volatile unsigned char' lvalue Var 0x7f909d0364f0 'a' 'volatile unsigned char'
+|   |-IfStmt 0x7f909d036b68 <line:10:3, line:11:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f909d036990 <line:10:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7f909d036978 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f909d036930 <col:7> 'int' lvalue Var 0x7f909d036680 'c' 'int'
+|   | | `-IntegerLiteral 0x7f909d036958 <col:12> 'int' 1
+|   | |-CallExpr 0x7f909d036b40 <line:11:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f909d036b28 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f909d036ad0 <col:5> '<builtin fn type>' Function 0x7f909d0369f0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f909d036bc0 <line:13:3, col:10>
+|     `-IntegerLiteral 0x7f909d036ba0 <col:10> 'int' 0
+`-FunctionDecl 0x7f909d0369f0 <line:11:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f909d036a88 <col:5> Implicit

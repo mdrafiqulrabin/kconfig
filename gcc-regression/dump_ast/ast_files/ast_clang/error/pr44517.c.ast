@@ -1,0 +1,95 @@
+c_files/pr44517.c:2:15: error: unknown type name 'pid_t'
+int f1(int x, pid_t y, long z, in t) {
+              ^
+c_files/pr44517.c:2:32: error: unknown type name 'in'
+int f1(int x, pid_t y, long z, in t) {
+                               ^
+c_files/pr44517.c:8:15: error: unknown type name 'lon'; did you mean 'long'?
+int f2(int x, lon y, long z, ...){ /* { dg-error "unknown type name 'lon'" } */
+              ^~~
+              long
+c_files/pr44517.c:9:3: error: non-void function 'f2' should return a value [-Wreturn-type]
+  return;
+  ^
+c_files/pr44517.c:12:26: error: unknown type name 'pid_t'
+void f3(int n, int a[n], pid_t x); /* { dg-error "unknown type name 'pid_t'" } */
+                         ^
+c_files/pr44517.c:14:17: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+void f5(int a, *b); /* { dg-error "expected declaration specifiers or" } */
+                ^
+c_files/pr44517.c:15:16: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+void f6(int a, b);  /* { dg-error "unknown type name 'b'" } */
+               ^
+c_files/pr44517.c:16:16: error: expected parameter declarator
+void f7(int a, goto b); /* { dg-error "expected declaration specifiers or" } */
+               ^
+c_files/pr44517.c:16:16: error: expected ')'
+c_files/pr44517.c:16:8: note: to match this '('
+void f7(int a, goto b); /* { dg-error "expected declaration specifiers or" } */
+       ^
+c_files/pr44517.c:17:16: error: unknown type name 'in'
+void f8(int a, in goto); /* { dg-error "unknown type name 'in'" } */
+               ^
+c_files/pr44517.c:17:19: error: expected ')'
+void f8(int a, in goto); /* { dg-error "unknown type name 'in'" } */
+                  ^
+c_files/pr44517.c:17:8: note: to match this '('
+void f8(int a, in goto); /* { dg-error "unknown type name 'in'" } */
+       ^
+c_files/pr44517.c:18:16: error: unknown type name 'in'
+void f9(int a, in 1); /* { dg-error "unknown type name 'in'" } */
+               ^
+c_files/pr44517.c:18:19: error: expected ')'
+void f9(int a, in 1); /* { dg-error "unknown type name 'in'" } */
+                  ^
+c_files/pr44517.c:18:8: note: to match this '('
+void f9(int a, in 1); /* { dg-error "unknown type name 'in'" } */
+       ^
+2 warnings and 11 errors generated.
+TranslationUnitDecl 0x7faa988264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faa98826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faa98826740 '__int128'
+|-TypedefDecl 0x7faa98826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faa98826760 'unsigned __int128'
+|-TypedefDecl 0x7faa98826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faa98826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faa98826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faa98826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faa98826dc0 'char *'
+|   `-BuiltinType 0x7faa98826560 'char'
+|-TypedefDecl 0x7faa988270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faa98827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faa98826ee0 'struct __va_list_tag'
+|     `-Record 0x7faa98826e58 '__va_list_tag'
+|-FunctionDecl 0x7faa99026be8 <c_files/pr44517.c:2:1, line:6:1> line:2:5 invalid f1 'int (int, int, long, int)'
+| |-ParmVarDecl 0x7faa98827138 <col:8, col:12> col:12 used x 'int'
+| |-ParmVarDecl 0x7faa99026a00 <col:15, col:21> col:21 invalid y 'int'
+| |-ParmVarDecl 0x7faa99026a78 <col:24, col:29> col:29 used z 'long'
+| |-ParmVarDecl 0x7faa99026af0 <col:32, col:35> col:35 invalid t 'int'
+| `-CompoundStmt 0x7faa99026cf0 <col:38, line:6:1>
+|-FunctionDecl 0x7faa99026ef8 <line:8:1, line:10:1> line:8:5 f2 'int (int, long, long, ...)'
+| |-ParmVarDecl 0x7faa99026d20 <col:8, col:12> col:12 x 'int'
+| |-ParmVarDecl 0x7faa99026d98 <col:15, col:19> col:19 y 'long'
+| |-ParmVarDecl 0x7faa99026e10 <col:22, col:27> col:27 z 'long'
+| `-CompoundStmt 0x7faa99027000 <col:34, line:10:1>
+|   `-ReturnStmt 0x7faa99026fe8 <line:9:3>
+|-FunctionDecl 0x7faa99027350 <line:12:1, col:33> col:6 invalid f3 'void (int, int *, int)'
+| |-ParmVarDecl 0x7faa99027038 <col:9, col:13> col:13 used n 'int'
+| |-ParmVarDecl 0x7faa990271a0 <col:16, col:23> col:20 a 'int *':'int *'
+| `-ParmVarDecl 0x7faa99027218 <col:26, col:32> col:32 invalid x 'int'
+|-FunctionDecl 0x7faa99027448 <line:13:1, col:12> col:6 f4 'void ()'
+| `-CompoundStmt 0x7faa990274e0 <col:11, col:12>
+|-FunctionDecl 0x7faa99027660 <line:14:1, col:18> col:6 f5 'void (int, int *)'
+| |-ParmVarDecl 0x7faa99027510 <col:9, col:13> col:13 a 'int'
+| `-ParmVarDecl 0x7faa99027588 <col:16, col:17> col:17 b 'int *'
+|-FunctionDecl 0x7faa99027870 <line:15:1, col:17> col:6 f6 'void (int, int)'
+| |-ParmVarDecl 0x7faa99027720 <col:9, col:13> col:13 a 'int'
+| `-ParmVarDecl 0x7faa99027798 <col:16> col:16 b 'int'
+|-FunctionDecl 0x7faa99027a00 <line:16:1, col:22> col:6 f7 'void (int)'
+| `-ParmVarDecl 0x7faa99027930 <col:9, col:13> col:13 a 'int'
+|-FunctionDecl 0x7faa99027bc0 <line:17:1, col:23> col:6 invalid f8 'void (int, int)'
+| |-ParmVarDecl 0x7faa99027ab8 <col:9, col:13> col:13 a 'int'
+| `-ParmVarDecl 0x7faa99027b30 <col:16, <invalid sloc>> col:19 invalid 'int'
+`-FunctionDecl 0x7faa99027d88 <line:18:1, col:20> col:6 invalid f9 'void (int, int)'
+  |-ParmVarDecl 0x7faa99027c80 <col:9, col:13> col:13 a 'int'
+  `-ParmVarDecl 0x7faa99027cf8 <col:16, <invalid sloc>> col:19 invalid 'int'

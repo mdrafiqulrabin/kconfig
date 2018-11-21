@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7f91fa8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f91fa826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f91fa826740 '__int128'
+|-TypedefDecl 0x7f91fa826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f91fa826760 'unsigned __int128'
+|-TypedefDecl 0x7f91fa826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f91fa826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f91fa826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f91fa826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f91fa826dc0 'char *'
+|   `-BuiltinType 0x7f91fa826560 'char'
+|-TypedefDecl 0x7f91fa8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f91fa827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f91fa826ee0 'struct __va_list_tag'
+|     `-Record 0x7f91fa826e58 '__va_list_tag'
+|-TypedefDecl 0x7f91fb025a00 <c_files/pr37418-1.c:1:1, col:20> col:14 referenced ft 'void (int)'
+| `-FunctionProtoType 0x7f91fa8271a0 'void (int)' cdecl
+|   |-BuiltinType 0x7f91fa826520 'void'
+|   `-BuiltinType 0x7f91fa8265c0 'int'
+|-FunctionDecl 0x7f91fb025b30 <line:2:1, col:41> col:6 used f 'void (int) __attribute__((noreturn))'
+| `-ParmVarDecl 0x7f91fb025a70 <col:8, col:12> col:12 args 'int'
+`-FunctionDecl 0x7f91fb025d50 <line:3:1, line:6:1> line:3:6 f2 'void (void (*)(int) __attribute__((noreturn)))'
+  |-ParmVarDecl 0x7f91fb025c88 <col:9> col:13 used p 'void (*)(int) __attribute__((noreturn))'
+  `-CompoundStmt 0x7f91fb025e80 <line:4:1, line:6:1>
+    `-BinaryOperator 0x7f91fb025e58 <line:5:3, col:7> 'void (*)(int) __attribute__((noreturn))' '='
+      |-DeclRefExpr 0x7f91fb025df0 <col:3> 'void (*)(int) __attribute__((noreturn))' lvalue ParmVar 0x7f91fb025c88 'p' 'void (*)(int) __attribute__((noreturn))'
+      `-ImplicitCastExpr 0x7f91fb025e40 <col:7> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7f91fb025e18 <col:7> 'void (int) __attribute__((noreturn))' Function 0x7f91fb025b30 'f' 'void (int) __attribute__((noreturn))'

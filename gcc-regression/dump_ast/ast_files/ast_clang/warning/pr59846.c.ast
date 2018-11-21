@@ -1,0 +1,90 @@
+c_files/pr59846.c:8:15: warning: comparison of 0 > unsigned expression is always false [-Wtautological-compare]
+  return 0ULL > p; /* { dg-warning "15:comparison is always false due to limited range of data type" } */
+         ~~~~ ^ ~
+c_files/pr59846.c:14:15: warning: comparison of 0 <= unsigned expression is always true [-Wtautological-compare]
+  return 0ULL <= p; /* { dg-warning "15:comparison is always true due to limited range of data type" } */
+         ~~~~ ^  ~
+c_files/pr59846.c:20:12: warning: comparison of unsigned expression >= 0 is always true [-Wtautological-compare]
+  return p >= 0U; /* { dg-warning "12:comparison of unsigned expression >= 0 is always true" } */
+         ~ ^  ~~
+c_files/pr59846.c:26:12: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
+  return p < 0U; /* { dg-warning "12:comparison of unsigned expression < 0 is always false" } */
+         ~ ^ ~~
+4 warnings generated.
+TranslationUnitDecl 0x7fe93f8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe93f826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe93f826740 '__int128'
+|-TypedefDecl 0x7fe93f826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe93f826760 'unsigned __int128'
+|-TypedefDecl 0x7fe93f826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe93f826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe93f826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe93f826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe93f826dc0 'char *'
+|   `-BuiltinType 0x7fe93f826560 'char'
+|-TypedefDecl 0x7fe93f8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe93f827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe93f826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe93f826e58 '__va_list_tag'
+|-FunctionDecl 0x7fe940025a00 <c_files/pr59846.c:5:1, line:9:1> line:6:1 fn1 '_Bool (unsigned int)'
+| |-ParmVarDecl 0x7fe93f827138 <col:6, col:19> col:19 used p 'unsigned int'
+| `-CompoundStmt 0x7fe940025bb0 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fe940025b98 <line:8:3, col:17>
+|     `-ImplicitCastExpr 0x7fe940025b80 <col:10, col:17> '_Bool' <IntegralToBoolean>
+|       `-BinaryOperator 0x7fe940025b58 <col:10, col:17> 'int' '>'
+|         |-IntegerLiteral 0x7fe940025ae0 <col:10> 'unsigned long long' 0
+|         `-ImplicitCastExpr 0x7fe940025b40 <col:17> 'unsigned long long' <IntegralCast>
+|           `-ImplicitCastExpr 0x7fe940025b28 <col:17> 'unsigned int' <LValueToRValue>
+|             `-DeclRefExpr 0x7fe940025b00 <col:17> 'unsigned int' lvalue ParmVar 0x7fe93f827138 'p' 'unsigned int'
+|-FunctionDecl 0x7fe940025c70 <line:11:1, line:15:1> line:12:1 fn2 '_Bool (unsigned int)'
+| |-ParmVarDecl 0x7fe940025be8 <col:6, col:19> col:19 used p 'unsigned int'
+| `-CompoundStmt 0x7fe940025de0 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7fe940025dc8 <line:14:3, col:18>
+|     `-ImplicitCastExpr 0x7fe940025db0 <col:10, col:18> '_Bool' <IntegralToBoolean>
+|       `-BinaryOperator 0x7fe940025d88 <col:10, col:18> 'int' '<='
+|         |-IntegerLiteral 0x7fe940025d10 <col:10> 'unsigned long long' 0
+|         `-ImplicitCastExpr 0x7fe940025d70 <col:18> 'unsigned long long' <IntegralCast>
+|           `-ImplicitCastExpr 0x7fe940025d58 <col:18> 'unsigned int' <LValueToRValue>
+|             `-DeclRefExpr 0x7fe940025d30 <col:18> 'unsigned int' lvalue ParmVar 0x7fe940025be8 'p' 'unsigned int'
+|-FunctionDecl 0x7fe940025ea0 <line:17:1, line:21:1> line:18:1 fn3 '_Bool (unsigned int)'
+| |-ParmVarDecl 0x7fe940025e18 <col:6, col:19> col:19 used p 'unsigned int'
+| `-CompoundStmt 0x7fe940025ff8 <line:19:1, line:21:1>
+|   `-ReturnStmt 0x7fe940025fe0 <line:20:3, col:15>
+|     `-ImplicitCastExpr 0x7fe940025fc8 <col:10, col:15> '_Bool' <IntegralToBoolean>
+|       `-BinaryOperator 0x7fe940025fa0 <col:10, col:15> 'int' '>='
+|         |-ImplicitCastExpr 0x7fe940025f88 <col:10> 'unsigned int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fe940025f40 <col:10> 'unsigned int' lvalue ParmVar 0x7fe940025e18 'p' 'unsigned int'
+|         `-IntegerLiteral 0x7fe940025f68 <col:15> 'unsigned int' 0
+|-FunctionDecl 0x7fe9400260b8 <line:23:1, line:27:1> line:24:1 fn4 '_Bool (unsigned int)'
+| |-ParmVarDecl 0x7fe940026030 <col:6, col:19> col:19 used p 'unsigned int'
+| `-CompoundStmt 0x7fe940026210 <line:25:1, line:27:1>
+|   `-ReturnStmt 0x7fe9400261f8 <line:26:3, col:14>
+|     `-ImplicitCastExpr 0x7fe9400261e0 <col:10, col:14> '_Bool' <IntegralToBoolean>
+|       `-BinaryOperator 0x7fe9400261b8 <col:10, col:14> 'int' '<'
+|         |-ImplicitCastExpr 0x7fe9400261a0 <col:10> 'unsigned int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fe940026158 <col:10> 'unsigned int' lvalue ParmVar 0x7fe940026030 'p' 'unsigned int'
+|         `-IntegerLiteral 0x7fe940026180 <col:14> 'unsigned int' 0
+|-FunctionDecl 0x7fe940026300 <line:29:1, line:33:1> line:30:1 fn5 '_Bool (_Bool)'
+| |-ParmVarDecl 0x7fe940026240 <col:6, col:12> col:12 used p '_Bool'
+| `-CompoundStmt 0x7fe9400264b0 <line:31:1, line:33:1>
+|   `-ReturnStmt 0x7fe940026498 <line:32:3, col:16>
+|     `-ImplicitCastExpr 0x7fe940026480 <col:10, col:16> '_Bool' <IntegralToBoolean>
+|       `-BinaryOperator 0x7fe940026458 <col:10, col:16> 'int' '||'
+|         |-ImplicitCastExpr 0x7fe940026440 <col:10> 'int' <IntegralCast>
+|         | `-ImplicitCastExpr 0x7fe940026428 <col:10> '_Bool' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fe9400263a0 <col:10> '_Bool' lvalue ParmVar 0x7fe940026240 'p' '_Bool'
+|         `-UnaryOperator 0x7fe940026408 <col:15, col:16> 'int' prefix '!'
+|           `-ImplicitCastExpr 0x7fe9400263f0 <col:16> '_Bool' <LValueToRValue>
+|             `-DeclRefExpr 0x7fe9400263c8 <col:16> '_Bool' lvalue ParmVar 0x7fe940026240 'p' '_Bool'
+`-FunctionDecl 0x7fe940026568 <line:35:1, line:39:1> line:36:1 fn6 '_Bool (_Bool)'
+  |-ParmVarDecl 0x7fe9400264e0 <col:6, col:12> col:12 used p '_Bool'
+  `-CompoundStmt 0x7fe940026718 <line:37:1, line:39:1>
+    `-ReturnStmt 0x7fe940026700 <line:38:3, col:16>
+      `-ImplicitCastExpr 0x7fe9400266e8 <col:10, col:16> '_Bool' <IntegralToBoolean>
+        `-BinaryOperator 0x7fe9400266c0 <col:10, col:16> 'int' '&&'
+          |-ImplicitCastExpr 0x7fe9400266a8 <col:10> 'int' <IntegralCast>
+          | `-ImplicitCastExpr 0x7fe940026690 <col:10> '_Bool' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fe940026608 <col:10> '_Bool' lvalue ParmVar 0x7fe9400264e0 'p' '_Bool'
+          `-UnaryOperator 0x7fe940026670 <col:15, col:16> 'int' prefix '!'
+            `-ImplicitCastExpr 0x7fe940026658 <col:16> '_Bool' <LValueToRValue>
+              `-DeclRefExpr 0x7fe940026630 <col:16> '_Bool' lvalue ParmVar 0x7fe9400264e0 'p' '_Bool'

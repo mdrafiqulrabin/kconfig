@@ -1,0 +1,88 @@
+c_files/pr30843.c:5:10: fatal error: 'tree-vect.h' file not found
+#include "tree-vect.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7f88140264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8814026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8814026740 '__int128'
+|-TypedefDecl 0x7f8814026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8814026760 'unsigned __int128'
+|-TypedefDecl 0x7f8814026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8814026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8814026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8814026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8814026dc0 'char *'
+|   `-BuiltinType 0x7f8814026560 'char'
+|-TypedefDecl 0x7f88140270c8 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8814027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8814026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8814026e58 '__va_list_tag'
+|-TypedefDecl 0x7f8814027150 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:30:1, col:27> col:27 va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7f8814027120 '__builtin_va_list' sugar
+|   |-Typedef 0x7f88140270c8 '__builtin_va_list'
+|   `-ConstantArrayType 0x7f8814027070 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7f8814026ee0 'struct __va_list_tag'
+|       `-Record 0x7f8814026e58 '__va_list_tag'
+|-TypedefDecl 0x7f8814079400 <line:48:1, col:27> col:27 __gnuc_va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7f8814027120 '__builtin_va_list' sugar
+|   |-Typedef 0x7f88140270c8 '__builtin_va_list'
+|   `-ConstantArrayType 0x7f8814027070 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7f8814026ee0 'struct __va_list_tag'
+|       `-Record 0x7f8814026e58 '__va_list_tag'
+`-FunctionDecl 0x7f8814079560 <c_files/pr30843.c:9:1, line:21:1> line:9:6 dacP98FillRGBMap 'void (unsigned char *)'
+  |-ParmVarDecl 0x7f88140794a0 <col:24, col:39> col:39 used pBuffer 'unsigned char *'
+  `-CompoundStmt 0x7f8814079f18 <line:10:1, line:21:1>
+    |-DeclStmt 0x7f8814079748 <line:11:5, col:26>
+    | |-VarDecl 0x7f8814079658 <col:5, col:19> col:19 used dw 'unsigned long'
+    | `-VarDecl 0x7f88140796d0 <col:5, col:23> col:23 used dw1 'unsigned long'
+    |-DeclStmt 0x7f88140798d0 <line:12:5, col:52>
+    | `-VarDecl 0x7f88140797a0 <col:5, col:51> col:20 used pdw 'unsigned long *' cinit
+    |   `-CStyleCastExpr 0x7f88140798a8 <col:26, col:51> 'unsigned long *' <BitCast>
+    |     `-ImplicitCastExpr 0x7f8814079890 <col:43, col:51> 'unsigned char *' <LValueToRValue>
+    |       `-ParenExpr 0x7f8814079870 <col:43, col:51> 'unsigned char *' lvalue
+    |         `-DeclRefExpr 0x7f8814079800 <col:44> 'unsigned char *' lvalue ParmVar 0x7f88140794a0 'pBuffer' 'unsigned char *'
+    `-ForStmt 0x7f8814079ee0 <line:14:5, line:20:5>
+      |-BinaryOperator 0x7f88140799f8 <line:14:10, col:26> 'unsigned long' ','
+      | |-BinaryOperator 0x7f8814079948 <col:10, col:15> 'unsigned long' '='
+      | | |-DeclRefExpr 0x7f88140798e8 <col:10> 'unsigned long' lvalue Var 0x7f8814079658 'dw' 'unsigned long'
+      | | `-ImplicitCastExpr 0x7f8814079930 <col:15> 'unsigned long' <IntegralCast>
+      | |   `-IntegerLiteral 0x7f8814079910 <col:15> 'int' 256
+      | `-BinaryOperator 0x7f88140799d0 <col:20, col:26> 'unsigned long' '='
+      |   |-DeclRefExpr 0x7f8814079970 <col:20> 'unsigned long' lvalue Var 0x7f88140796d0 'dw1' 'unsigned long'
+      |   `-ImplicitCastExpr 0x7f88140799b8 <col:26> 'unsigned long' <IntegralCast>
+      |     `-IntegerLiteral 0x7f8814079998 <col:26> 'int' 0
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f8814079a48 <col:29> 'unsigned long' <LValueToRValue>
+      | `-DeclRefExpr 0x7f8814079a20 <col:29> 'unsigned long' lvalue Var 0x7f8814079658 'dw' 'unsigned long'
+      |-BinaryOperator 0x7f8814079b40 <col:33, col:46> 'unsigned long' ','
+      | |-UnaryOperator 0x7f8814079a88 <col:33, col:35> 'unsigned long' postfix '--'
+      | | `-DeclRefExpr 0x7f8814079a60 <col:33> 'unsigned long' lvalue Var 0x7f8814079658 'dw' 'unsigned long'
+      | `-CompoundAssignOperator 0x7f8814079b08 <col:39, col:46> 'unsigned long' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+      |   |-DeclRefExpr 0x7f8814079aa8 <col:39> 'unsigned long' lvalue Var 0x7f88140796d0 'dw1' 'unsigned long'
+      |   `-ImplicitCastExpr 0x7f8814079af0 <col:46> 'unsigned long' <IntegralCast>
+      |     `-IntegerLiteral 0x7f8814079ad0 <col:46> 'int' 16843009
+      `-CompoundStmt 0x7f8814079ea8 <line:15:5, line:20:5>
+        |-BinaryOperator 0x7f8814079c10 <line:16:8, col:17> 'unsigned long' '='
+        | |-UnaryOperator 0x7f8814079bb0 <col:8, col:12> 'unsigned long' lvalue prefix '*'
+        | | `-UnaryOperator 0x7f8814079b90 <col:9, col:12> 'unsigned long *' postfix '++'
+        | |   `-DeclRefExpr 0x7f8814079b68 <col:9> 'unsigned long *' lvalue Var 0x7f88140797a0 'pdw' 'unsigned long *'
+        | `-ImplicitCastExpr 0x7f8814079bf8 <col:17> 'unsigned long' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f8814079bd0 <col:17> 'unsigned long' lvalue Var 0x7f88140796d0 'dw1' 'unsigned long'
+        |-BinaryOperator 0x7f8814079ce0 <line:17:8, col:17> 'unsigned long' '='
+        | |-UnaryOperator 0x7f8814079c80 <col:8, col:12> 'unsigned long' lvalue prefix '*'
+        | | `-UnaryOperator 0x7f8814079c60 <col:9, col:12> 'unsigned long *' postfix '++'
+        | |   `-DeclRefExpr 0x7f8814079c38 <col:9> 'unsigned long *' lvalue Var 0x7f88140797a0 'pdw' 'unsigned long *'
+        | `-ImplicitCastExpr 0x7f8814079cc8 <col:17> 'unsigned long' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f8814079ca0 <col:17> 'unsigned long' lvalue Var 0x7f88140796d0 'dw1' 'unsigned long'
+        |-BinaryOperator 0x7f8814079db0 <line:18:8, col:17> 'unsigned long' '='
+        | |-UnaryOperator 0x7f8814079d50 <col:8, col:12> 'unsigned long' lvalue prefix '*'
+        | | `-UnaryOperator 0x7f8814079d30 <col:9, col:12> 'unsigned long *' postfix '++'
+        | |   `-DeclRefExpr 0x7f8814079d08 <col:9> 'unsigned long *' lvalue Var 0x7f88140797a0 'pdw' 'unsigned long *'
+        | `-ImplicitCastExpr 0x7f8814079d98 <col:17> 'unsigned long' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f8814079d70 <col:17> 'unsigned long' lvalue Var 0x7f88140796d0 'dw1' 'unsigned long'
+        `-BinaryOperator 0x7f8814079e80 <line:19:8, col:17> 'unsigned long' '='
+          |-UnaryOperator 0x7f8814079e20 <col:8, col:12> 'unsigned long' lvalue prefix '*'
+          | `-UnaryOperator 0x7f8814079e00 <col:9, col:12> 'unsigned long *' postfix '++'
+          |   `-DeclRefExpr 0x7f8814079dd8 <col:9> 'unsigned long *' lvalue Var 0x7f88140797a0 'pdw' 'unsigned long *'
+          `-ImplicitCastExpr 0x7f8814079e68 <col:17> 'unsigned long' <LValueToRValue>
+            `-DeclRefExpr 0x7f8814079e40 <col:17> 'unsigned long' lvalue Var 0x7f88140796d0 'dw1' 'unsigned long'

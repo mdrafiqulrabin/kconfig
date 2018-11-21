@@ -1,0 +1,97 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['char']
+  Decl: fn1, [], ['static'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: fn1, []
+        IdentifierType: ['void']
+  Decl: fn2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: fn2, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: cc
+          ID: yh
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['char']
+      Assignment: =
+        ID: a
+        FuncCall: 
+          ID: fn2
+          ExprList: 
+            BinaryOp: +
+              BinaryOp: -
+                ID: c
+                ID: b
+              Constant: int, 1
+      For: 
+        BinaryOp: <=
+          ID: y
+          ID: yh
+        UnaryOp: p++
+          ID: y
+        EmptyStatement: 
+    Decl: cc, [], [], []
+      PtrDecl: []
+        TypeDecl: cc, []
+          IdentifierType: ['void']
+    Decl: yh, [], [], []
+      TypeDecl: yh, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: fn3, [], [], []
+      FuncDecl: 
+        TypeDecl: fn3, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: fn1
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            ID: fn3
+          Constant: int, 1
+      FuncCall: 
+        ID: fn1
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            ID: fn3
+          BinaryOp: -
+            ID: d
+            Constant: int, 1

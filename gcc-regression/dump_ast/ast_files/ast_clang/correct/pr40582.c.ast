@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7feabd0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feabd026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feabd026740 '__int128'
+|-TypedefDecl 0x7feabd026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feabd026760 'unsigned __int128'
+|-TypedefDecl 0x7feabd026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feabd026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7feabd026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feabd026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feabd026dc0 'char *'
+|   `-BuiltinType 0x7feabd026560 'char'
+|-TypedefDecl 0x7feabd0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feabd027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feabd026ee0 'struct __va_list_tag'
+|     `-Record 0x7feabd026e58 '__va_list_tag'
+|-RecordDecl 0x7feabd027120 <c_files/pr40582.c:1:1, line:5:1> line:1:8 struct A definition
+| |-FieldDecl 0x7feabd825a00 <line:3:3, col:9> col:9 q 'void *'
+| `-FieldDecl 0x7feabd825a60 <line:4:3, col:9> col:9 i 'short'
+|-RecordDecl 0x7feabd825aa8 <line:7:1, line:11:1> line:7:7 union U definition
+| |-FieldDecl 0x7feabd825b68 <line:9:3, col:9> col:9 p 'char *'
+| `-FieldDecl 0x7feabd825c00 <line:10:3, col:12> col:12 referenced a 'struct A':'struct A'
+`-FunctionDecl 0x7feabd825db0 <line:13:1, line:18:1> line:13:10 foo 'struct A (union U)'
+  |-ParmVarDecl 0x7feabd825ca0 <col:14, col:22> col:22 used u 'union U':'union U'
+  `-CompoundStmt 0x7feabd826158 <line:14:1, line:18:1>
+    |-DeclStmt 0x7feabd826020 <line:15:3, col:24>
+    | `-VarDecl 0x7feabd825eb0 <col:3, col:23> col:12 used a 'struct A':'struct A' cinit
+    |   `-InitListExpr 0x7feabd825fa0 <col:16, col:23> 'struct A':'struct A'
+    |     |-ImplicitCastExpr 0x7feabd825ff0 <col:18> 'void *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7feabd825f10 <col:18> 'int' 0
+    |     `-ImplicitCastExpr 0x7feabd826008 <col:21> 'short' <IntegralCast>
+    |       `-IntegerLiteral 0x7feabd825f30 <col:21> 'int' 0
+    |-BinaryOperator 0x7feabd8260d8 <line:16:3, col:9> 'struct A':'struct A' '='
+    | |-DeclRefExpr 0x7feabd826038 <col:3> 'struct A':'struct A' lvalue Var 0x7feabd825eb0 'a' 'struct A':'struct A'
+    | `-ImplicitCastExpr 0x7feabd8260c0 <col:7, col:9> 'struct A':'struct A' <LValueToRValue>
+    |   `-MemberExpr 0x7feabd826088 <col:7, col:9> 'struct A':'struct A' lvalue .a 0x7feabd825c00
+    |     `-DeclRefExpr 0x7feabd826060 <col:7> 'union U':'union U' lvalue ParmVar 0x7feabd825ca0 'u' 'union U':'union U'
+    `-ReturnStmt 0x7feabd826140 <line:17:3, col:10>
+      `-ImplicitCastExpr 0x7feabd826128 <col:10> 'struct A':'struct A' <LValueToRValue>
+        `-DeclRefExpr 0x7feabd826100 <col:10> 'struct A':'struct A' lvalue Var 0x7feabd825eb0 'a' 'struct A':'struct A'

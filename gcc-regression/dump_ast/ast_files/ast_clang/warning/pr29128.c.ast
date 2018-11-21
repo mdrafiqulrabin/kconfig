@@ -1,0 +1,113 @@
+c_files/pr29128.c:5:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+process_main (void)
+^
+1 warning generated.
+TranslationUnitDecl 0x7f9fb101d0d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9fb101d620 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9fb101d340 '__int128'
+|-TypedefDecl 0x7f9fb101d690 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9fb101d360 'unsigned __int128'
+|-TypedefDecl 0x7f9fb101d968 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9fb101d770 'struct __NSConstantString_tag'
+|   `-Record 0x7f9fb101d6e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9fb101da00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9fb101d9c0 'char *'
+|   `-BuiltinType 0x7f9fb101d160 'char'
+|-TypedefDecl 0x7f9fb101dcc8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9fb101dc70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9fb101dae0 'struct __va_list_tag'
+|     `-Record 0x7f9fb101da58 '__va_list_tag'
+|-TypedefDecl 0x7f9fb101dd38 <c_files/pr29128.c:4:1, col:23> col:23 referenced Eterm 'unsigned long'
+| `-BuiltinType 0x7f9fb101d280 'unsigned long'
+`-FunctionDecl 0x7f9fb106e058 <line:5:1, line:31:1> line:5:1 process_main 'int (void)'
+  `-CompoundStmt 0x7f9fb1070278 <line:6:1, line:31:1>
+    |-DeclStmt 0x7f9fb106e1c0 <line:7:3, col:20>
+    | `-VarDecl 0x7f9fb106e160 <col:3, col:18> col:18 used x0 'Eterm':'unsigned long' register
+    |-DeclStmt 0x7f9fb106e340 <line:8:3, col:37>
+    | `-VarDecl 0x7f9fb106e248 <col:3, col:36> col:19 used reg 'Eterm *' register cinit
+    |   `-ImplicitCastExpr 0x7f9fb106e328 <col:25, col:36> 'Eterm *' <NullToPointer>
+    |     `-ParenExpr 0x7f9fb106e308 <col:25, col:36> 'void *'
+    |       `-CStyleCastExpr 0x7f9fb106e2e0 <col:26, col:35> 'void *' <NullToPointer>
+    |         `-IntegerLiteral 0x7f9fb106e2a8 <col:35> 'int' 0
+    |-DeclStmt 0x7f9fb106e460 <line:9:3, col:35>
+    | `-VarDecl 0x7f9fb106e368 <col:3, col:34> col:19 used I 'Eterm *' register cinit
+    |   `-ImplicitCastExpr 0x7f9fb106e448 <col:23, col:34> 'Eterm *' <NullToPointer>
+    |     `-ParenExpr 0x7f9fb106e428 <col:23, col:34> 'void *'
+    |       `-CStyleCastExpr 0x7f9fb106e400 <col:24, col:33> 'void *' <NullToPointer>
+    |         `-IntegerLiteral 0x7f9fb106e3c8 <col:33> 'int' 0
+    |-DeclStmt 0x7f9fb106e778 <line:10:3, line:13:4>
+    | `-VarDecl 0x7f9fb106e4d0 <line:10:3, line:13:3> line:10:16 opcodes 'void *[3]' static cinit
+    |   `-InitListExpr 0x7f9fb106e6c0 <col:28, line:13:3> 'void *[3]'
+    |     |-AddrLabelExpr 0x7f9fb106e578 <line:11:7, col:9> 'void *' lb_allocate_heap_zero_III 0x7f9fb106e530
+    |     |-AddrLabelExpr 0x7f9fb106e5e0 <line:12:7, col:9> 'void *' lb_allocate_init_tIy 0x7f9fb106e598
+    |     `-AddrLabelExpr 0x7f9fb106e648 <col:31, col:33> 'void *' lb_allocate_zero_tt 0x7f9fb106e600
+    |-LabelStmt 0x7f9fb106e940 <line:14:1, line:17:3> 'lb_allocate_heap_III'
+    | `-CompoundStmt 0x7f9fb106e8d0 <line:14:22, line:17:3>
+    |   |-DeclStmt 0x7f9fb106e800 <line:15:5, col:16>
+    |   | `-VarDecl 0x7f9fb106e7a0 <col:5, col:12> col:12 used next 'Eterm *'
+    |   `-IndirectGotoStmt 0x7f9fb106e8b8 <line:16:5, col:16>
+    |     `-ImplicitCastExpr 0x7f9fb106e8a0 <col:11, col:16> 'const void *' <BitCast>
+    |       `-ImplicitCastExpr 0x7f9fb106e888 <col:11, col:16> 'Eterm *' <LValueToRValue>
+    |         `-ParenExpr 0x7f9fb106e840 <col:11, col:16> 'Eterm *' lvalue
+    |           `-DeclRefExpr 0x7f9fb106e818 <col:12> 'Eterm *' lvalue Var 0x7f9fb106e7a0 'next' 'Eterm *'
+    |-LabelStmt 0x7f9fb106e970 <line:18:1, line:19:3> 'lb_allocate_heap_zero_III'
+    | `-CompoundStmt 0x7f9fb106e958 <line:18:27, line:19:3>
+    |-LabelStmt 0x7f9fb106e9a0 <line:20:1, line:21:3> 'lb_allocate_init_tIy'
+    | `-CompoundStmt 0x7f9fb106e988 <line:20:22, line:21:3>
+    `-LabelStmt 0x7f9fb1070260 <line:22:1, line:30:3> 'lb_allocate_zero_tt'
+      `-CompoundStmt 0x7f9fb1070230 <line:22:21, line:30:3>
+        |-DeclStmt 0x7f9fb106ea28 <line:23:5, col:16>
+        | `-VarDecl 0x7f9fb106e9c8 <col:5, col:12> col:12 used next 'Eterm *'
+        |-CompoundStmt 0x7f9fb1070170 <line:24:5, line:28:5>
+        | |-DeclStmt 0x7f9fb106ec38 <line:25:7, col:50>
+        | | `-VarDecl 0x7f9fb106ea50 <col:7, col:49> col:14 used tmp_ptr 'Eterm *' cinit
+        | |   `-ParenExpr 0x7f9fb106ec18 <col:24, col:49> 'Eterm *'
+        | |     `-CStyleCastExpr 0x7f9fb106ebf0 <col:25, col:48> 'Eterm *' <IntegralToPointer>
+        | |       `-ParenExpr 0x7f9fb106ebd0 <col:35, col:48> 'unsigned long'
+        | |         `-BinaryOperator 0x7f9fb106eb68 <col:36, col:45> 'unsigned long' '-'
+        | |           |-ImplicitCastExpr 0x7f9fb106eb38 <col:36, col:41> 'Eterm':'unsigned long' <LValueToRValue>
+        | |           | `-ParenExpr 0x7f9fb106eaf8 <col:36, col:41> 'Eterm':'unsigned long' lvalue
+        | |           |   `-ParenExpr 0x7f9fb106ead8 <col:37, col:40> 'Eterm':'unsigned long' lvalue
+        | |           |     `-DeclRefExpr 0x7f9fb106eab0 <col:38> 'Eterm':'unsigned long' lvalue Var 0x7f9fb106e160 'x0' 'Eterm':'unsigned long'
+        | |           `-ImplicitCastExpr 0x7f9fb106eb50 <col:45> 'unsigned long' <IntegralCast>
+        | |             `-IntegerLiteral 0x7f9fb106eb18 <col:45> 'int' 1
+        | |-BinaryOperator 0x7f9fb1070018 <line:26:7, col:76> 'Eterm':'unsigned long' '='
+        | | |-ParenExpr 0x7f9fb106ef18 <col:7, col:59> 'Eterm':'unsigned long' lvalue
+        | | | `-UnaryOperator 0x7f9fb106eef8 <col:8, col:58> 'Eterm':'unsigned long' lvalue prefix '*'
+        | | |   `-CStyleCastExpr 0x7f9fb106eed0 <col:9, col:58> 'Eterm *' <BitCast>
+        | | |     `-ParenExpr 0x7f9fb106eeb0 <col:19, col:58> 'unsigned char *'
+        | | |       `-BinaryOperator 0x7f9fb106ee48 <col:20, col:57> 'unsigned char *' '+'
+        | | |         |-ParenExpr 0x7f9fb106ed00 <col:20, col:42> 'unsigned char *'
+        | | |         | `-CStyleCastExpr 0x7f9fb106ecd8 <col:21, col:39> 'unsigned char *' <BitCast>
+        | | |         |   `-ImplicitCastExpr 0x7f9fb106ecc0 <col:39> 'Eterm *' <LValueToRValue>
+        | | |         |     `-DeclRefExpr 0x7f9fb106ec50 <col:39> 'Eterm *' lvalue Var 0x7f9fb106e248 'reg' 'Eterm *'
+        | | |         `-ImplicitCastExpr 0x7f9fb106ee30 <col:46, col:57> 'Eterm':'unsigned long' <LValueToRValue>
+        | | |           `-ParenExpr 0x7f9fb106ee10 <col:46, col:57> 'Eterm':'unsigned long' lvalue
+        | | |             `-ArraySubscriptExpr 0x7f9fb106ede8 <col:47, col:56> 'Eterm':'unsigned long' lvalue
+        | | |               |-ImplicitCastExpr 0x7f9fb106edd0 <col:47> 'Eterm *' <LValueToRValue>
+        | | |               | `-DeclRefExpr 0x7f9fb106ed20 <col:47> 'Eterm *' lvalue Var 0x7f9fb106e368 'I' 'Eterm *'
+        | | |               `-BinaryOperator 0x7f9fb106eda8 <col:49, col:55> 'int' '+'
+        | | |                 |-ParenExpr 0x7f9fb106ed68 <col:49, col:51> 'int'
+        | | |                 | `-IntegerLiteral 0x7f9fb106ed48 <col:50> 'int' 0
+        | | |                 `-IntegerLiteral 0x7f9fb106ed88 <col:55> 'int' 1
+        | | `-ImplicitCastExpr 0x7f9fb1070000 <col:63, col:76> 'Eterm':'unsigned long' <LValueToRValue>
+        | |   `-ParenExpr 0x7f9fb106efe0 <col:63, col:76> 'Eterm':'unsigned long' lvalue
+        | |     `-ArraySubscriptExpr 0x7f9fb106efb8 <col:64, col:75> 'Eterm':'unsigned long' lvalue
+        | |       |-ImplicitCastExpr 0x7f9fb106efa0 <col:64, col:72> 'Eterm *' <LValueToRValue>
+        | |       | `-ParenExpr 0x7f9fb106ef60 <col:64, col:72> 'Eterm *' lvalue
+        | |       |   `-DeclRefExpr 0x7f9fb106ef38 <col:65> 'Eterm *' lvalue Var 0x7f9fb106ea50 'tmp_ptr' 'Eterm *'
+        | |       `-IntegerLiteral 0x7f9fb106ef80 <col:74> 'int' 0
+        | `-BinaryOperator 0x7f9fb1070148 <line:27:7, col:25> 'Eterm':'unsigned long' '='
+        |   |-DeclRefExpr 0x7f9fb1070040 <col:7> 'Eterm':'unsigned long' lvalue Var 0x7f9fb106e160 'x0' 'Eterm':'unsigned long'
+        |   `-ImplicitCastExpr 0x7f9fb1070130 <col:12, col:25> 'Eterm':'unsigned long' <LValueToRValue>
+        |     `-ParenExpr 0x7f9fb1070110 <col:12, col:25> 'Eterm':'unsigned long' lvalue
+        |       `-ArraySubscriptExpr 0x7f9fb10700e8 <col:13, col:24> 'Eterm':'unsigned long' lvalue
+        |         |-ImplicitCastExpr 0x7f9fb10700d0 <col:13, col:21> 'Eterm *' <LValueToRValue>
+        |         | `-ParenExpr 0x7f9fb1070090 <col:13, col:21> 'Eterm *' lvalue
+        |         |   `-DeclRefExpr 0x7f9fb1070068 <col:14> 'Eterm *' lvalue Var 0x7f9fb106ea50 'tmp_ptr' 'Eterm *'
+        |         `-IntegerLiteral 0x7f9fb10700b0 <col:23> 'int' 1
+        `-IndirectGotoStmt 0x7f9fb1070218 <line:29:5, col:16>
+          `-ImplicitCastExpr 0x7f9fb1070200 <col:11, col:16> 'const void *' <BitCast>
+            `-ImplicitCastExpr 0x7f9fb10701e8 <col:11, col:16> 'Eterm *' <LValueToRValue>
+              `-ParenExpr 0x7f9fb10701c8 <col:11, col:16> 'Eterm *' lvalue
+                `-DeclRefExpr 0x7f9fb10701a0 <col:12> 'Eterm *' lvalue Var 0x7f9fb106e9c8 'next' 'Eterm *'

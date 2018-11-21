@@ -1,0 +1,355 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: reg_class
+      EnumeratorList: 
+        Enumerator: NO_REGS
+        Enumerator: AP_REG
+        Enumerator: XRF_REGS
+        Enumerator: GENERAL_REGS
+        Enumerator: AGRF_REGS
+        Enumerator: XGRF_REGS
+        Enumerator: ALL_REGS
+        Enumerator: LIM_REG_CLASSES
+  Decl: None, [], [], []
+    Enum: machine_mode
+      EnumeratorList: 
+        Enumerator: VOIDmode
+        Enumerator: QImode
+        Enumerator: HImode
+        Enumerator: PSImode
+        Enumerator: SImode
+        Enumerator: PDImode
+        Enumerator: DImode
+        Enumerator: TImode
+        Enumerator: OImode
+        Enumerator: QFmode
+        Enumerator: HFmode
+        Enumerator: TQFmode
+        Enumerator: SFmode
+        Enumerator: DFmode
+        Enumerator: XFmode
+        Enumerator: TFmode
+        Enumerator: SCmode
+        Enumerator: DCmode
+        Enumerator: XCmode
+        Enumerator: TCmode
+        Enumerator: CQImode
+        Enumerator: CHImode
+        Enumerator: CSImode
+        Enumerator: CDImode
+        Enumerator: CTImode
+        Enumerator: COImode
+        Enumerator: BLKmode
+        Enumerator: CCmode
+        Enumerator: CCEVENmode
+        Enumerator: MAX_MACHINE_MODE
+  Typedef: rtx, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: rtx, []
+        Struct: rtx_def
+          Decl: mode, [], [], []
+            TypeDecl: mode, []
+              IdentifierType: ['int']
+            Constant: int, 8
+  Decl: regno_reg_rtx, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: regno_reg_rtx, []
+        IdentifierType: ['rtx']
+  Typedef: HARD_REG_ELT_TYPE, [], ['typedef']
+    TypeDecl: HARD_REG_ELT_TYPE, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: HARD_REG_SET, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: HARD_REG_SET, []
+        IdentifierType: ['HARD_REG_ELT_TYPE']
+      BinaryOp: /
+        BinaryOp: -
+          BinaryOp: +
+            Constant: int, 64
+            Constant: int, 32
+          Constant: int, 1
+        Constant: int, 32
+  Decl: reg_alloc_order, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: reg_alloc_order, []
+        IdentifierType: ['int']
+      Constant: int, 64
+  Decl: max_regno, [], ['extern'], []
+    TypeDecl: max_regno, []
+      IdentifierType: ['int']
+  Decl: reg_n_calls_crossed, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: reg_n_calls_crossed, []
+        IdentifierType: ['int']
+  Decl: reg_renumber, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: reg_renumber, []
+        IdentifierType: ['short']
+  Decl: reg_where_dead, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: reg_where_dead, []
+        IdentifierType: ['int']
+  Decl: reg_where_born, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: reg_where_born, []
+        IdentifierType: ['int']
+  Decl: reg_order, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: reg_order, []
+        IdentifierType: ['int']
+  Decl: regs_change_size, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: regs_change_size, []
+        IdentifierType: ['char']
+  Decl: after_insn_hard_regs, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: after_insn_hard_regs, []
+        IdentifierType: ['HARD_REG_SET']
+  Decl: stupid_find_reg, [], ['static'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            Enum: reg_class
+        Typename: None, []
+          TypeDecl: None, []
+            Enum: machine_mode
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: stupid_find_reg, []
+        IdentifierType: ['int']
+  Decl: reg_preferred_class, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: reg_preferred_class, []
+        Enum: reg_class
+  FuncDef: 
+    Decl: stupid_life_analysis, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: f
+          ID: nregs
+          ID: file
+        TypeDecl: stupid_life_analysis, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], ['register'], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          BinaryOp: +
+            BinaryOp: +
+              Constant: int, 64
+              Constant: int, 3
+            Constant: int, 1
+        BinaryOp: <
+          ID: i
+          ID: max_regno
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: r, [], ['register'], []
+            TypeDecl: r, []
+              IdentifierType: ['int']
+            ArrayRef: 
+              ID: reg_order
+              ID: i
+          If: 
+            BinaryOp: >
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                ID: LIM_REG_CLASSES
+              Constant: int, 1
+            Assignment: =
+              ArrayRef: 
+                ID: reg_renumber
+                ID: r
+              FuncCall: 
+                ID: stupid_find_reg
+                ExprList: 
+                  ArrayRef: 
+                    ID: reg_n_calls_crossed
+                    ID: r
+                  FuncCall: 
+                    ID: reg_preferred_class
+                    ExprList: 
+                      ID: r
+                  StructRef: ->
+                    ArrayRef: 
+                      ID: regno_reg_rtx
+                      ID: r
+                    ID: mode
+                  ArrayRef: 
+                    ID: reg_where_born
+                    ID: r
+                  ArrayRef: 
+                    ID: reg_where_dead
+                    ID: r
+                  ArrayRef: 
+                    ID: regs_change_size
+                    ID: r
+    Decl: nregs, [], [], []
+      TypeDecl: nregs, []
+        IdentifierType: ['int']
+    Decl: file, [], [], []
+      TypeDecl: file, []
+        IdentifierType: ['int']
+    Decl: f, [], [], []
+      TypeDecl: f, []
+        IdentifierType: ['rtx']
+  FuncDef: 
+    Decl: stupid_find_reg, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          ID: call_preserved
+          ID: class
+          ID: mode
+          ID: born_insn
+          ID: dead_insn
+          ID: changes_size
+        TypeDecl: stupid_find_reg, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], ['register'], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: ins, [], ['register'], []
+        TypeDecl: ins, []
+          IdentifierType: ['int']
+      Decl: used, [], [], []
+        TypeDecl: used, []
+          IdentifierType: ['HARD_REG_SET']
+      Decl: this_reg, [], [], []
+        TypeDecl: this_reg, []
+          IdentifierType: ['HARD_REG_SET']
+      For: 
+        Assignment: =
+          ID: ins
+          ID: born_insn
+        BinaryOp: <
+          ID: ins
+          ID: dead_insn
+        UnaryOp: p++
+          ID: ins
+        DoWhile: 
+          Constant: int, 0
+          Compound: 
+            Decl: scan_tp_, [], ['register'], []
+              PtrDecl: []
+                TypeDecl: scan_tp_, []
+                  IdentifierType: ['HARD_REG_ELT_TYPE']
+              ID: used
+            Decl: scan_fp_, [], ['register'], []
+              PtrDecl: []
+                TypeDecl: scan_fp_, []
+                  IdentifierType: ['HARD_REG_ELT_TYPE']
+              ArrayRef: 
+                ID: after_insn_hard_regs
+                ID: ins
+            For: 
+              Assignment: =
+                ID: i
+                Constant: int, 0
+              BinaryOp: <
+                ID: i
+                BinaryOp: /
+                  BinaryOp: -
+                    BinaryOp: +
+                      Constant: int, 64
+                      Constant: int, 32
+                    Constant: int, 1
+                  Constant: int, 32
+              UnaryOp: p++
+                ID: i
+              Assignment: |=
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: scan_tp_
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: scan_fp_
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 64
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: regno, [], [], []
+            TypeDecl: regno, []
+              IdentifierType: ['int']
+            ArrayRef: 
+              ID: reg_alloc_order
+              ID: i
+          If: 
+            BinaryOp: &
+              ArrayRef: 
+                ID: used
+                BinaryOp: /
+                  ID: regno
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned']
+                    Constant: int, 32
+              BinaryOp: <<
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['HARD_REG_ELT_TYPE']
+                  Constant: int, 1
+                BinaryOp: %
+                  ID: regno
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned']
+                    Constant: int, 32
+            Compound: 
+              Decl: j, [], ['register'], []
+                TypeDecl: j, []
+                  IdentifierType: ['int']
+              If: 
+                BinaryOp: ==
+                  ID: j
+                  ID: regno
+                Return: 
+                  ID: regno
+    Decl: call_preserved, [], [], []
+      TypeDecl: call_preserved, []
+        IdentifierType: ['int']
+    Decl: born_insn, [], [], []
+      TypeDecl: born_insn, []
+        IdentifierType: ['int']
+    Decl: dead_insn, [], [], []
+      TypeDecl: dead_insn, []
+        IdentifierType: ['int']
+    Decl: changes_size, [], [], []
+      TypeDecl: changes_size, []
+        IdentifierType: ['int']
+    Decl: class, [], [], []
+      TypeDecl: class, []
+        Enum: reg_class
+    Decl: mode, [], [], []
+      TypeDecl: mode, []
+        Enum: machine_mode

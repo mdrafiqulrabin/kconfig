@@ -1,0 +1,48 @@
+c_files/pr23470-1.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7f8e810264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8e81026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8e81026740 '__int128'
+|-TypedefDecl 0x7f8e81026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8e81026760 'unsigned __int128'
+|-TypedefDecl 0x7f8e81026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8e81026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8e81026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8e81026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8e81026dc0 'char *'
+|   `-BuiltinType 0x7f8e81026560 'char'
+|-TypedefDecl 0x7f8e810270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8e81027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8e81026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8e81026e58 '__va_list_tag'
+|-FunctionDecl 0x7f8e81825a00 <c_files/pr23470-1.c:5:1, col:22> col:6 used link_error 'void (void)'
+`-FunctionDecl 0x7f8e81825c48 <line:7:1, line:11:1> line:7:5 f 'int (double, double)'
+  |-ParmVarDecl 0x7f8e81825af0 <col:7, col:14> col:14 used a 'double'
+  |-ParmVarDecl 0x7f8e81825b68 <col:17, col:24> col:24 used b 'double'
+  `-CompoundStmt 0x7f8e81825ff0 <line:8:1, line:11:1>
+    `-IfStmt 0x7f8e81825fb8 <line:9:3, line:10:16>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8e81825f00 <line:9:7, col:23> 'int' '<'
+      | |-ParenExpr 0x7f8e81825ea8 <col:7, col:21> 'double'
+      | | `-BinaryOperator 0x7f8e81825e80 <col:8, col:20> 'double' '+'
+      | |   |-ParenExpr 0x7f8e81825d98 <col:8, col:12> 'double'
+      | |   | `-BinaryOperator 0x7f8e81825d70 <col:9, col:11> 'double' '*'
+      | |   |   |-ImplicitCastExpr 0x7f8e81825d40 <col:9> 'double' <LValueToRValue>
+      | |   |   | `-DeclRefExpr 0x7f8e81825cf0 <col:9> 'double' lvalue ParmVar 0x7f8e81825af0 'a' 'double'
+      | |   |   `-ImplicitCastExpr 0x7f8e81825d58 <col:11> 'double' <LValueToRValue>
+      | |   |     `-DeclRefExpr 0x7f8e81825d18 <col:11> 'double' lvalue ParmVar 0x7f8e81825af0 'a' 'double'
+      | |   `-ParenExpr 0x7f8e81825e60 <col:16, col:20> 'double'
+      | |     `-BinaryOperator 0x7f8e81825e38 <col:17, col:19> 'double' '*'
+      | |       |-ImplicitCastExpr 0x7f8e81825e08 <col:17> 'double' <LValueToRValue>
+      | |       | `-DeclRefExpr 0x7f8e81825db8 <col:17> 'double' lvalue ParmVar 0x7f8e81825b68 'b' 'double'
+      | |       `-ImplicitCastExpr 0x7f8e81825e20 <col:19> 'double' <LValueToRValue>
+      | |         `-DeclRefExpr 0x7f8e81825de0 <col:19> 'double' lvalue ParmVar 0x7f8e81825b68 'b' 'double'
+      | `-ImplicitCastExpr 0x7f8e81825ee8 <col:23> 'double' <IntegralToFloating>
+      |   `-IntegerLiteral 0x7f8e81825ec8 <col:23> 'int' 0
+      |-CallExpr 0x7f8e81825f90 <line:10:5, col:16> 'void'
+      | `-ImplicitCastExpr 0x7f8e81825f78 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7f8e81825f28 <col:5> 'void (void)' Function 0x7f8e81825a00 'link_error' 'void (void)'
+      `-<<<NULL>>>

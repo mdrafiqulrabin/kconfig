@@ -1,0 +1,52 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: cls, [], [], []
+            TypeDecl: cls, []
+              IdentifierType: ['int']
+          Decl: sign, [], [], []
+            TypeDecl: sign, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        FuncCall: 
+          ID: __builtin_expect
+          ExprList: 
+            BinaryOp: ==
+              ID: cls
+              Constant: int, 4
+            Constant: int, 0
+        Return: 
+          TernaryOp: 
+            ID: sign
+            BinaryOp: -
+              UnaryOp: -
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+                  BinaryOp: >>
+                    UnaryOp: ~
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['unsigned']
+                        Constant: int, 0
+                    Constant: int, 1
+              Constant: int, 1
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+              BinaryOp: >>
+                UnaryOp: ~
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned']
+                    Constant: int, 0
+                Constant: int, 1

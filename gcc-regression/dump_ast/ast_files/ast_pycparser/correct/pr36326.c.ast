@@ -1,0 +1,29 @@
+FileAST: 
+  Decl: None, [], [], []
+    Union: X
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['double']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                Union: X
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          Union: X
+        UnaryOp: *
+          ID: p
+      Return: 
+        StructRef: .
+          ID: x
+          ID: x

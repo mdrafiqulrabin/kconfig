@@ -1,0 +1,18 @@
+FileAST: 
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['long', 'long']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: test, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          ID: a
+          ID: b

@@ -1,0 +1,32 @@
+FileAST: 
+  Decl: a, [], [], []
+    PtrDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: nssutil_ReadSecmodDB, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: nssutil_ReadSecmodDB, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['long']
+        FuncCall: 
+          ID: __builtin_object_size
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 0
+      Assignment: =
+        ID: a
+        FuncCall: 
+          ID: __builtin___strncat_chk
+          ExprList: 
+            ID: a
+            Constant: string, " "
+            Constant: int, 1
+            ID: b

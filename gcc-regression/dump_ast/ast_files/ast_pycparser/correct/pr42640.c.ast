@@ -1,0 +1,246 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: S
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: get_rr_node_index, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: get_rr_node_index, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ID: i
+  Decl: nodes, [], [], []
+    ArrayDecl: []
+      TypeDecl: nodes, []
+        Struct: S
+      Constant: int, 8
+  Decl: rr_node, [], [], []
+    PtrDecl: []
+      TypeDecl: rr_node, []
+        Struct: S
+    ID: nodes
+  Decl: io_rat, ['volatile'], [], []
+    TypeDecl: io_rat, ['volatile']
+      IdentifierType: ['int']
+    Constant: int, 2
+  FuncDef: 
+    Decl: doit, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+        TypeDecl: doit, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: s_node, [], [], []
+        TypeDecl: s_node, []
+          IdentifierType: ['int']
+      Decl: p_node, [], [], []
+        TypeDecl: p_node, []
+          IdentifierType: ['int']
+      Decl: inode, [], [], []
+        TypeDecl: inode, []
+          IdentifierType: ['int']
+      Decl: ipad, [], [], []
+        TypeDecl: ipad, []
+          IdentifierType: ['int']
+      Decl: iloop, [], [], []
+        TypeDecl: iloop, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: ipad
+          Constant: int, 0
+        BinaryOp: <
+          ID: ipad
+          ID: io_rat
+        UnaryOp: p++
+          ID: ipad
+        Compound: 
+          Assignment: =
+            ID: p_node
+            FuncCall: 
+              ID: get_rr_node_index
+              ExprList: 
+                BinaryOp: +
+                  ID: ipad
+                  Constant: int, 2
+          Assignment: =
+            ID: inode
+            FuncCall: 
+              ID: get_rr_node_index
+              ExprList: 
+                ID: ipad
+          For: 
+            Assignment: =
+              ID: iloop
+              Constant: int, 1
+            BinaryOp: <=
+              ID: iloop
+              Constant: int, 2
+            UnaryOp: p++
+              ID: iloop
+            Compound: 
+              Assignment: =
+                StructRef: .
+                  ArrayRef: 
+                    ID: rr_node
+                    ID: inode
+                  ID: a
+                ID: i
+              Assignment: =
+                StructRef: .
+                  ArrayRef: 
+                    ID: rr_node
+                    ID: inode
+                  ID: b
+                ID: j
+              Assignment: =
+                StructRef: .
+                  ArrayRef: 
+                    ID: rr_node
+                    ID: inode
+                  ID: c
+                ID: ipad
+              Assignment: =
+                ID: inode
+                ID: p_node
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      FuncCall: 
+        ID: doit
+        ExprList: 
+          Constant: int, 1
+          Constant: int, 2
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: ||
+              BinaryOp: ||
+                BinaryOp: ||
+                  BinaryOp: ||
+                    BinaryOp: ||
+                      BinaryOp: ||
+                        BinaryOp: ||
+                          BinaryOp: !=
+                            StructRef: .
+                              ArrayRef: 
+                                ID: rr_node
+                                Constant: int, 0
+                              ID: a
+                            StructRef: .
+                              ArrayRef: 
+                                ID: rr_node
+                                Constant: int, 1
+                              ID: a
+                          BinaryOp: !=
+                            StructRef: .
+                              ArrayRef: 
+                                ID: rr_node
+                                Constant: int, 2
+                              ID: a
+                            StructRef: .
+                              ArrayRef: 
+                                ID: rr_node
+                                Constant: int, 3
+                              ID: a
+                        BinaryOp: !=
+                          StructRef: .
+                            ArrayRef: 
+                              ID: rr_node
+                              Constant: int, 1
+                            ID: a
+                          Constant: int, 1
+                      BinaryOp: !=
+                        StructRef: .
+                          ArrayRef: 
+                            ID: rr_node
+                            Constant: int, 0
+                          ID: b
+                        StructRef: .
+                          ArrayRef: 
+                            ID: rr_node
+                            Constant: int, 1
+                          ID: b
+                    BinaryOp: !=
+                      StructRef: .
+                        ArrayRef: 
+                          ID: rr_node
+                          Constant: int, 2
+                        ID: b
+                      StructRef: .
+                        ArrayRef: 
+                          ID: rr_node
+                          Constant: int, 3
+                        ID: b
+                  BinaryOp: !=
+                    StructRef: .
+                      ArrayRef: 
+                        ID: rr_node
+                        Constant: int, 1
+                      ID: b
+                    Constant: int, 2
+                BinaryOp: !=
+                  StructRef: .
+                    ArrayRef: 
+                      ID: rr_node
+                      Constant: int, 0
+                    ID: c
+                  Constant: int, 0
+              BinaryOp: !=
+                StructRef: .
+                  ArrayRef: 
+                    ID: rr_node
+                    Constant: int, 1
+                  ID: c
+                Constant: int, 1
+            BinaryOp: !=
+              StructRef: .
+                ArrayRef: 
+                  ID: rr_node
+                  Constant: int, 2
+                ID: c
+              Constant: int, 0
+          BinaryOp: !=
+            StructRef: .
+              ArrayRef: 
+                ID: rr_node
+                Constant: int, 3
+              ID: c
+            Constant: int, 1
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

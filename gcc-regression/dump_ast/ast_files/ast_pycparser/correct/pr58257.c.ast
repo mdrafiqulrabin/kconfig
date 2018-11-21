@@ -1,0 +1,60 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+            Constant: int, 10
+          Constant: int, 10
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+      Pragma: omp parallel for collapse(2)	 
+      For: 
+        Assignment: =
+          ID: x
+          Constant: int, 0
+        BinaryOp: <
+          ID: x
+          ID: n
+        UnaryOp: p++
+          ID: x
+        For: 
+          Assignment: =
+            ID: y
+            Constant: int, 0
+          BinaryOp: <
+            ID: y
+            ID: n
+          UnaryOp: p++
+            ID: y
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                ID: a
+                ID: x
+              ID: y
+            BinaryOp: +
+              ID: x
+              BinaryOp: *
+                ID: y
+                ID: y
+      Return: 
+        ArrayRef: 
+          ArrayRef: 
+            ID: a
+            Constant: int, 0
+          Constant: int, 0

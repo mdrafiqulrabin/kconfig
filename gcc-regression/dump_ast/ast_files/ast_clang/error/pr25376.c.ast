@@ -1,0 +1,22 @@
+c_files/pr25376.c:4:43: error: argument to 'section' attribute is not valid for this target: mach-o section specifier requires a segment and section separated by a comma
+void simple (void) __attribute__((section("my_named_section")));
+                                          ^
+1 error generated.
+TranslationUnitDecl 0x7f991c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f991c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f991c826740 '__int128'
+|-TypedefDecl 0x7f991c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f991c826760 'unsigned __int128'
+|-TypedefDecl 0x7f991c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f991c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f991c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f991c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f991c826dc0 'char *'
+|   `-BuiltinType 0x7f991c826560 'char'
+|-TypedefDecl 0x7f991c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f991c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f991c826ee0 'struct __va_list_tag'
+|     `-Record 0x7f991c826e58 '__va_list_tag'
+|-FunctionDecl 0x7f991d026a50 <c_files/pr25376.c:4:1, col:63> col:6 simple 'void (void)'
+`-FunctionDecl 0x7f991d026bb8 prev 0x7f991d026a50 <line:5:1, line:7:1> line:5:6 simple 'void (void)'
+  `-CompoundStmt 0x7f991d026c50 <line:6:1, line:7:1>

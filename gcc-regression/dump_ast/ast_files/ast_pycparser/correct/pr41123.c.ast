@@ -1,0 +1,155 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['char']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['char']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['char']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['char']
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['char']
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['char']
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['char']
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['char']
+  Decl: None, [], [], []
+    Struct: T
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float', '_Complex']
+        TypeDecl: f1, []
+          Struct: S
+    Compound: 
+      Return: 
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  Struct: S
+            UnaryOp: &
+              ID: x
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float', '_Complex']
+        TypeDecl: f2, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          Struct: S
+        FuncCall: 
+          ID: f1
+          ExprList: 
+            ID: x
+      Return: 
+        StructRef: .
+          ID: f
+          ID: b
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float', '_Complex']
+        TypeDecl: f3, []
+          Struct: T
+    Compound: 
+      Return: 
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  Struct: T
+            UnaryOp: &
+              ID: x
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float', '_Complex']
+        TypeDecl: f4, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          Struct: T
+        FuncCall: 
+          ID: f3
+          ExprList: 
+            ID: x
+      Return: 
+        StructRef: .
+          ID: f
+          ID: a
+  FuncDef: 
+    Decl: f5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float', '_Complex']
+        TypeDecl: f5, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          Struct: T
+        FuncCall: 
+          ID: f3
+          ExprList: 
+            ID: x
+      Return: 
+        StructRef: .
+          ID: f
+          ID: b
+  FuncDef: 
+    Decl: f6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float', '_Complex']
+        TypeDecl: f6, []
+          Struct: T
+    Compound: 
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          Struct: T
+        FuncCall: 
+          ID: f3
+          ExprList: 
+            ID: x
+      Return: 
+        ID: f

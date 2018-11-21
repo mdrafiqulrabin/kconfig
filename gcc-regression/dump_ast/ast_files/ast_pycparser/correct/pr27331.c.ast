@@ -1,0 +1,156 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: funny_match
+      Decl: this, [], [], []
+        TypeDecl: this, []
+          IdentifierType: ['int']
+      Decl: other, [], [], []
+        TypeDecl: other, []
+          IdentifierType: ['int']
+  Typedef: rtx, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: rtx, []
+        Struct: rtx
+          Decl: code, [], [], []
+            TypeDecl: code, []
+              IdentifierType: ['int']
+  Decl: recog_operand, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: recog_operand, []
+        IdentifierType: ['rtx']
+  Decl: which_alternative, [], ['extern'], []
+    TypeDecl: which_alternative, []
+      IdentifierType: ['int']
+  Decl: nalternatives, [], ['extern'], []
+    TypeDecl: nalternatives, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: constrain_operands, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: insn_code_num
+          ID: strict
+        TypeDecl: constrain_operands, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: constraints, [], [], []
+        ArrayDecl: []
+          PtrDecl: []
+            TypeDecl: constraints, []
+              IdentifierType: ['char']
+          Constant: int, 10
+      Decl: funny_match, [], [], []
+        ArrayDecl: []
+          TypeDecl: funny_match, []
+            Struct: funny_match
+          Constant: int, 10
+      Decl: c, [], ['register'], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      Decl: funny_match_index, [], [], []
+        TypeDecl: funny_match_index, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: which_alternative
+        Constant: int, 0
+      While: 
+        BinaryOp: <
+          ID: which_alternative
+          ID: nalternatives
+        Compound: 
+          Decl: opno, [], ['register'], []
+            TypeDecl: opno, []
+              IdentifierType: ['int']
+          Decl: p, [], ['register'], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['char']
+            ArrayRef: 
+              ID: constraints
+              ID: opno
+          Decl: lose, [], [], []
+            TypeDecl: lose, []
+              IdentifierType: ['int']
+            Constant: int, 0
+          Assignment: =
+            ID: funny_match_index
+            Constant: int, 0
+          While: 
+            BinaryOp: &&
+              UnaryOp: *
+                ID: p
+              BinaryOp: !=
+                Assignment: =
+                  ID: c
+                  UnaryOp: *
+                    UnaryOp: p++
+                      ID: p
+                Constant: char, ','
+            Assignment: =
+              StructRef: .
+                ArrayRef: 
+                  ID: funny_match
+                  UnaryOp: p++
+                    ID: funny_match_index
+                ID: other
+              BinaryOp: -
+                ID: c
+                Constant: char, '0'
+          If: 
+            BinaryOp: ==
+              StructRef: ->
+                ArrayRef: 
+                  ID: recog_operand
+                  ID: opno
+                ID: code
+              Constant: int, 12
+            Assignment: =
+              ID: lose
+              Constant: int, 1
+          If: 
+            UnaryOp: !
+              ID: lose
+            Compound: 
+              While: 
+                BinaryOp: >=
+                  UnaryOp: --
+                    ID: funny_match_index
+                  Constant: int, 0
+                Assignment: =
+                  ArrayRef: 
+                    ID: recog_operand
+                    StructRef: .
+                      ArrayRef: 
+                        ID: funny_match
+                        ID: funny_match_index
+                      ID: other
+                  ArrayRef: 
+                    ID: recog_operand
+                    StructRef: .
+                      ArrayRef: 
+                        ID: funny_match
+                        ID: funny_match_index
+                      ID: this
+              Return: 
+                Constant: int, 1
+          UnaryOp: p++
+            ID: which_alternative
+      If: 
+        BinaryOp: ==
+          ID: strict
+          Constant: int, 0
+        Return: 
+          FuncCall: 
+            ID: constrain_operands
+            ExprList: 
+              ID: insn_code_num
+              UnaryOp: -
+                Constant: int, 1
+      Return: 
+        Constant: int, 0
+    Decl: insn_code_num, [], [], []
+      TypeDecl: insn_code_num, []
+        IdentifierType: ['int']
+    Decl: strict, [], [], []
+      TypeDecl: strict, []
+        IdentifierType: ['int']

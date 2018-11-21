@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fcd4f81a6d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcd4f81ac20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcd4f81a940 '__int128'
+|-TypedefDecl 0x7fcd4f81ac90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcd4f81a960 'unsigned __int128'
+|-TypedefDecl 0x7fcd4f81af68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcd4f81ad70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcd4f81ace8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcd4f81b000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcd4f81afc0 'char *'
+|   `-BuiltinType 0x7fcd4f81a760 'char'
+|-TypedefDecl 0x7fcd4f81b2c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcd4f81b270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcd4f81b0e0 'struct __va_list_tag'
+|     `-Record 0x7fcd4f81b058 '__va_list_tag'
+|-TypedefDecl 0x7fcd4f81b338 <c_files/pr64600_1.c:4:1, col:22> col:22 referenced speed_t 'unsigned int'
+| `-BuiltinType 0x7fcd4f81a860 'unsigned int'
+|-TypedefDecl 0x7fcd4f81b3a8 <line:5:1, col:22> col:22 referenced tcflag_t 'unsigned int'
+| `-BuiltinType 0x7fcd4f81a860 'unsigned int'
+|-RecordDecl 0x7fcd50025a00 <line:7:1, line:9:1> line:7:8 struct termios definition
+| `-FieldDecl 0x7fcd50025ae0 <line:8:2, col:11> col:11 referenced c_cflag 'tcflag_t':'unsigned int'
+`-FunctionDecl 0x7fcd50025d00 <line:11:1, line:15:1> line:12:1 cfgetospeed 'speed_t (const struct termios *)'
+  |-ParmVarDecl 0x7fcd50025c00 <col:14, col:36> col:36 used tp 'const struct termios *'
+  `-CompoundStmt 0x7fcd50025ee8 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7fcd50025ed0 <line:14:3, col:24>
+      `-BinaryOperator 0x7fcd50025ea8 <col:10, col:24> 'unsigned int' '&'
+        |-ImplicitCastExpr 0x7fcd50025e78 <col:10, col:14> 'tcflag_t':'unsigned int' <LValueToRValue>
+        | `-MemberExpr 0x7fcd50025e20 <col:10, col:14> 'const tcflag_t':'const unsigned int' lvalue ->c_cflag 0x7fcd50025ae0
+        |   `-ImplicitCastExpr 0x7fcd50025e08 <col:10> 'const struct termios *' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fcd50025de0 <col:10> 'const struct termios *' lvalue ParmVar 0x7fcd50025c00 'tp' 'const struct termios *'
+        `-ImplicitCastExpr 0x7fcd50025e90 <col:24> 'unsigned int' <IntegralCast>
+          `-IntegerLiteral 0x7fcd50025e58 <col:24> 'int' 4111

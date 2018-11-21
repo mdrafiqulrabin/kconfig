@@ -1,0 +1,48 @@
+c_files/pragma-diagnostic-1.c:27:3: error: variable 'a' is uninitialized when used here [-Werror,-Wuninitialized]
+  CODE_WITH_WARNING;            /* { dg-error "uninitialized" } */
+  ^~~~~~~~~~~~~~~~~
+c_files/pragma-diagnostic-1.c:10:6: note: expanded from macro 'CODE_WITH_WARNING'
+  f (a)
+     ^
+c_files/pragma-diagnostic-1.c:27:3: note: variable 'a' is declared here
+c_files/pragma-diagnostic-1.c:9:3: note: expanded from macro 'CODE_WITH_WARNING'
+  int a;                  \
+  ^
+1 error generated.
+TranslationUnitDecl 0x7f83800264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8380026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8380026740 '__int128'
+|-TypedefDecl 0x7f8380026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8380026760 'unsigned __int128'
+|-TypedefDecl 0x7f8380026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8380026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8380026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8380026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8380026dc0 'char *'
+|   `-BuiltinType 0x7f8380026560 'char'
+|-TypedefDecl 0x7f83800270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8380027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8380026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8380026e58 '__va_list_tag'
+|-FunctionDecl 0x7f8380825a00 <c_files/pragma-diagnostic-1.c:6:1, col:17> col:6 used f 'void (unsigned int)'
+| `-ParmVarDecl 0x7f8380027138 <col:9> col:17 'unsigned int'
+|-FunctionDecl 0x7f8380825ba0 <line:14:1, line:18:1> line:15:1 g 'void (void)'
+| `-CompoundStmt 0x7f8380825dc0 <line:16:1, line:18:1>
+|   |-DeclStmt 0x7f8380825cb0 <line:9:3, col:8>
+|   | `-VarDecl 0x7f8380825c50 <col:3, col:7> col:7 used a 'int'
+|   `-CallExpr 0x7f8380825d60 <line:10:3, col:7> 'void'
+|     |-ImplicitCastExpr 0x7f8380825d48 <col:3> 'void (*)(unsigned int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f8380825cc8 <col:3> 'void (unsigned int)' Function 0x7f8380825a00 'f' 'void (unsigned int)'
+|     `-ImplicitCastExpr 0x7f8380825da8 <col:6> 'unsigned int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7f8380825d90 <col:6> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f8380825cf0 <col:6> 'int' lvalue Var 0x7f8380825c50 'a' 'int'
+`-FunctionDecl 0x7f8380825e78 <line:24:1, line:28:1> line:25:1 h 'void (void)'
+  `-CompoundStmt 0x7f8380826068 <line:26:1, line:28:1>
+    |-DeclStmt 0x7f8380825f88 <line:9:3, col:8>
+    | `-VarDecl 0x7f8380825f28 <col:3, col:7> col:7 used a 'int'
+    `-CallExpr 0x7f8380826008 <line:10:3, col:7> 'void'
+      |-ImplicitCastExpr 0x7f8380825ff0 <col:3> 'void (*)(unsigned int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8380825fa0 <col:3> 'void (unsigned int)' Function 0x7f8380825a00 'f' 'void (unsigned int)'
+      `-ImplicitCastExpr 0x7f8380826050 <col:6> 'unsigned int' <IntegralCast>
+        `-ImplicitCastExpr 0x7f8380826038 <col:6> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f8380825fc8 <col:6> 'int' lvalue Var 0x7f8380825f28 'a' 'int'

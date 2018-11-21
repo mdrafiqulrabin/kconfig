@@ -1,0 +1,27 @@
+FileAST: 
+  Decl: src, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: src, []
+        IdentifierType: ['char']
+  Decl: dst, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: dst, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: foo1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: foo1, []
+            IdentifierType: ['char']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_memcpy
+          ExprList: 
+            ID: dst
+            ID: src
+            Constant: int, 16

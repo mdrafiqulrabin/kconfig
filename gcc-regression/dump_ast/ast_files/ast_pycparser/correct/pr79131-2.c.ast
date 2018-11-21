@@ -1,0 +1,69 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Struct: nilfs_segment_usage
+        Decl: su_flags, [], [], []
+          TypeDecl: su_flags, []
+            IdentifierType: ['int']
+  Decl: fn1, [], [], []
+    FuncDecl: 
+      TypeDecl: fn1, []
+        Enum: None
+          EnumeratorList: 
+            Enumerator: NILFS_SEGMENT_USAGE_ACTIVE
+            Enumerator: NILFS_SEGMENT_USAGE_DIRTY
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: fn2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['long', 'long']
+      TypeDecl: fn2, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: fn3, [], [], []
+      FuncDecl: 
+        TypeDecl: fn3, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          Struct: nilfs_segment_usage
+        ID: a
+      FuncCall: 
+        ID: fn1
+      Assignment: =
+        ID: c
+        BinaryOp: &
+          StructRef: .
+            ID: e
+            ID: su_flags
+          BinaryOp: <<
+            Constant: int, 1
+            ID: NILFS_SEGMENT_USAGE_DIRTY
+      Assignment: =
+        ID: d
+        ID: c
+      FuncCall: 
+        ID: fn2
+        ExprList: 
+          UnaryOp: &
+            ID: b
+          TernaryOp: 
+            ID: d
+            UnaryOp: -
+              Constant: int, 1
+            Constant: int, 0

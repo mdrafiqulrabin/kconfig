@@ -1,0 +1,163 @@
+TranslationUnitDecl 0x7f8b380264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8b38026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8b38026740 '__int128'
+|-TypedefDecl 0x7f8b38026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8b38026760 'unsigned __int128'
+|-TypedefDecl 0x7f8b38026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8b38026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8b38026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8b38026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8b38026dc0 'char *'
+|   `-BuiltinType 0x7f8b38026560 'char'
+|-TypedefDecl 0x7f8b380270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8b38027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8b38026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8b38026e58 '__va_list_tag'
+|-TypedefDecl 0x7f8b38027138 <c_files/pr71866.c:4:15, col:40> col:40 referenced uintptr_t 'unsigned long'
+| `-BuiltinType 0x7f8b38026680 'unsigned long'
+|-TypedefDecl 0x7f8b380271a8 <line:6:1, col:23> col:23 referenced u8 'unsigned char'
+| `-BuiltinType 0x7f8b38026620 'unsigned char'
+|-VarDecl 0x7f8b38048818 <line:7:1, col:22> col:22 used pci_io_base 'unsigned long' extern
+|-FunctionDecl 0x7f8b38048a20 <line:8:1, col:31> col:4 used in_8 'u8 (const volatile void *)'
+| `-ParmVarDecl 0x7f8b38048920 <col:10, col:30> col:31 'const volatile void *'
+|-FunctionDecl 0x7f8b38048b10 <line:9:1, col:18> col:5 used eeh_enabled 'int ()'
+|-FunctionDecl 0x7f8b38048bf8 <line:10:1, col:25> col:6 used eeh_check_failure 'void ()'
+|-FunctionDecl 0x7f8b38048d30 <line:11:1, line:17:1> line:12:4 used eeh_readb 'u8 (const volatile void *)' static inline
+| |-ParmVarDecl 0x7f8b38048ca8 <col:14, col:35> col:35 used addr 'const volatile void *'
+| `-CompoundStmt 0x7f8b38049298 <line:13:1, line:17:1>
+|   |-DeclStmt 0x7f8b38048f48 <line:14:3, col:22>
+|   | `-VarDecl 0x7f8b38048de0 <col:3, col:21> col:6 used val 'u8':'unsigned char' cinit
+|   |   `-CallExpr 0x7f8b38048f00 <col:12, col:21> 'u8':'unsigned char'
+|   |     |-ImplicitCastExpr 0x7f8b38048ee8 <col:12> 'u8 (*)(const volatile void *)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f8b38048e40 <col:12> 'u8 (const volatile void *)' Function 0x7f8b38048a20 'in_8' 'u8 (const volatile void *)'
+|   |     `-ImplicitCastExpr 0x7f8b38048f30 <col:17> 'const volatile void *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f8b38048e68 <col:17> 'const volatile void *' lvalue ParmVar 0x7f8b38048ca8 'addr' 'const volatile void *'
+|   |-IfStmt 0x7f8b38049208 <line:15:3, col:63>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ParenExpr 0x7f8b38049150 <col:7, col:40> 'int'
+|   | | `-BinaryOperator 0x7f8b38049128 <col:8, col:39> 'int' '&&'
+|   | |   |-BinaryOperator 0x7f8b38049068 <col:8, col:22> 'int' '=='
+|   | |   | |-ImplicitCastExpr 0x7f8b38049038 <col:8, col:12> 'int' <IntegralCast>
+|   | |   | | `-ImplicitCastExpr 0x7f8b38049020 <col:8, col:12> 'u8':'unsigned char' <LValueToRValue>
+|   | |   | |   `-ParenExpr 0x7f8b38048f88 <col:8, col:12> 'u8':'unsigned char' lvalue
+|   | |   | |     `-DeclRefExpr 0x7f8b38048f60 <col:9> 'u8':'unsigned char' lvalue Var 0x7f8b38048de0 'val' 'u8':'unsigned char'
+|   | |   | `-ImplicitCastExpr 0x7f8b38049050 <col:17, col:22> 'int' <IntegralCast>
+|   | |   |   `-CStyleCastExpr 0x7f8b38048ff8 <col:17, col:22> 'u8':'unsigned char' <IntegralCast>
+|   | |   |     `-UnaryOperator 0x7f8b38048fc8 <col:21, col:22> 'int' prefix '~'
+|   | |   |       `-IntegerLiteral 0x7f8b38048fa8 <col:22> 'int' 0
+|   | |   `-CallExpr 0x7f8b38049100 <col:27, col:39> 'int'
+|   | |     `-ImplicitCastExpr 0x7f8b380490e8 <col:27> 'int (*)()' <FunctionToPointerDecay>
+|   | |       `-DeclRefExpr 0x7f8b38049090 <col:27> 'int ()' Function 0x7f8b38048b10 'eeh_enabled' 'int ()'
+|   | |-CallExpr 0x7f8b380491e0 <col:45, col:63> 'void'
+|   | | `-ImplicitCastExpr 0x7f8b380491c8 <col:45> 'void (*)()' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f8b38049170 <col:45> 'void ()' Function 0x7f8b38048bf8 'eeh_check_failure' 'void ()'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8b38049280 <line:16:3, col:10>
+|     `-ImplicitCastExpr 0x7f8b38049268 <col:10> 'u8':'unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8b38049240 <col:10> 'u8':'unsigned char' lvalue Var 0x7f8b38048de0 'val' 'u8':'unsigned char'
+|-RecordDecl 0x7f8b380492c8 <line:18:8, line:20:1> line:18:15 struct ppc_pci_io definition
+| `-FieldDecl 0x7f8b380495a8 <line:19:5, col:45> col:12 referenced outb 'void (*)(u8, unsigned long)'
+|-VarDecl 0x7f8b38049640 <line:18:1, line:21:1> col:1 used ppc_pci_io 'struct ppc_pci_io':'struct ppc_pci_io' extern
+|-FunctionDecl 0x7f8b38049758 <line:22:1, line:26:1> line:23:4 used readb 'u8 (const volatile void *)' static inline
+| |-ParmVarDecl 0x7f8b380496d0 <col:11, col:33> col:33 used addr 'const volatile void *'
+| `-CompoundStmt 0x7f8b3804a8e8 <line:24:1, line:26:1>
+|   `-ReturnStmt 0x7f8b3804a8d0 <line:25:3, col:26>
+|     `-CallExpr 0x7f8b3804a888 <col:10, col:26> 'u8':'unsigned char'
+|       |-ImplicitCastExpr 0x7f8b3804a870 <col:10> 'u8 (*)(const volatile void *)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f8b3804a800 <col:10> 'u8 (const volatile void *)' Function 0x7f8b38048d30 'eeh_readb' 'u8 (const volatile void *)'
+|       `-ImplicitCastExpr 0x7f8b3804a8b8 <col:20, col:25> 'const volatile void *' <LValueToRValue>
+|         `-ParenExpr 0x7f8b3804a850 <col:20, col:25> 'const volatile void *' lvalue
+|           `-DeclRefExpr 0x7f8b3804a828 <col:21> 'const volatile void *' lvalue ParmVar 0x7f8b380496d0 'addr' 'const volatile void *'
+|-FunctionDecl 0x7f8b3804aa20 <line:27:1, line:31:1> line:28:4 used inb 'u8 (unsigned long)' static inline
+| |-ParmVarDecl 0x7f8b3804a920 <col:9, col:23> col:23 used port 'unsigned long'
+| `-CompoundStmt 0x7f8b3804acd8 <line:29:1, line:31:1>
+|   `-ReturnStmt 0x7f8b3804acc0 <line:30:3, col:62>
+|     `-CallExpr 0x7f8b3804ac78 <col:10, col:62> 'u8':'unsigned char'
+|       |-ImplicitCastExpr 0x7f8b3804ac60 <col:10> 'u8 (*)(const volatile void *)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f8b3804aac0 <col:10> 'u8 (const volatile void *)' Function 0x7f8b38049758 'readb' 'u8 (const volatile void *)'
+|       `-ImplicitCastExpr 0x7f8b3804aca8 <col:16, col:58> 'const volatile void *' <BitCast>
+|         `-BinaryOperator 0x7f8b3804ac38 <col:16, col:58> 'volatile void *' '+'
+|           |-CStyleCastExpr 0x7f8b3804abd0 <col:16, col:44> 'volatile void *' <IntegralToPointer>
+|           | `-CStyleCastExpr 0x7f8b3804ab60 <col:33, col:44> 'uintptr_t':'unsigned long' <NoOp>
+|           |   `-ImplicitCastExpr 0x7f8b3804ab48 <col:44> 'unsigned long' <LValueToRValue>
+|           |     `-DeclRefExpr 0x7f8b3804ab10 <col:44> 'unsigned long' lvalue Var 0x7f8b38048818 'pci_io_base' 'unsigned long'
+|           `-ImplicitCastExpr 0x7f8b3804ac20 <col:58> 'unsigned long' <LValueToRValue>
+|             `-DeclRefExpr 0x7f8b3804abf8 <col:58> 'unsigned long' lvalue ParmVar 0x7f8b3804a920 'port' 'unsigned long'
+|-FunctionDecl 0x7f8b3804ae10 <line:32:1, line:36:1> line:33:6 used outb 'void (u8, unsigned long)' static inline
+| |-ParmVarDecl 0x7f8b3804ad08 <col:12, col:15> col:15 used val 'u8':'unsigned char'
+| |-ParmVarDecl 0x7f8b3804ad80 <col:20, col:34> col:34 used port 'unsigned long'
+| `-CompoundStmt 0x7f8b3804b1a0 <line:34:1, line:36:1>
+|   `-IfStmt 0x7f8b3804b168 <line:35:3, col:65>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f8b3804afc8 <col:7, col:36> 'int' '!='
+|     | |-ImplicitCastExpr 0x7f8b3804af98 <col:7, col:18> 'void (*)(u8, unsigned long)' <LValueToRValue>
+|     | | `-MemberExpr 0x7f8b3804aee0 <col:7, col:18> 'void (*)(u8, unsigned long)' lvalue .outb 0x7f8b380495a8
+|     | |   `-DeclRefExpr 0x7f8b3804aeb8 <col:7> 'struct ppc_pci_io':'struct ppc_pci_io' lvalue Var 0x7f8b38049640 'ppc_pci_io' 'struct ppc_pci_io':'struct ppc_pci_io'
+|     | `-ImplicitCastExpr 0x7f8b3804afb0 <col:26, col:36> 'void (*)(u8, unsigned long)' <BitCast>
+|     |   `-ParenExpr 0x7f8b3804af78 <col:26, col:36> 'void *'
+|     |     `-CStyleCastExpr 0x7f8b3804af50 <col:27, col:35> 'void *' <NullToPointer>
+|     |       `-IntegerLiteral 0x7f8b3804af18 <col:35> 'int' 0
+|     |-CallExpr 0x7f8b3804b100 <col:39, col:65> 'void'
+|     | |-ImplicitCastExpr 0x7f8b3804b0e8 <col:39, col:50> 'void (*)(u8, unsigned long)' <LValueToRValue>
+|     | | `-MemberExpr 0x7f8b3804b060 <col:39, col:50> 'void (*)(u8, unsigned long)' lvalue .outb 0x7f8b380495a8
+|     | |   `-DeclRefExpr 0x7f8b3804b038 <col:39> 'struct ppc_pci_io':'struct ppc_pci_io' lvalue Var 0x7f8b38049640 'ppc_pci_io' 'struct ppc_pci_io':'struct ppc_pci_io'
+|     | |-ImplicitCastExpr 0x7f8b3804b138 <col:56> 'u8':'unsigned char' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f8b3804b098 <col:56> 'u8':'unsigned char' lvalue ParmVar 0x7f8b3804ad08 'val' 'u8':'unsigned char'
+|     | `-ImplicitCastExpr 0x7f8b3804b150 <col:61> 'unsigned long' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f8b3804b0c0 <col:61> 'unsigned long' lvalue ParmVar 0x7f8b3804ad80 'port' 'unsigned long'
+|     `-<<<NULL>>>
+|-EmptyDecl 0x7f8b3804b1c0 <line:36:2> col:2
+`-FunctionDecl 0x7f8b3804b3d0 <line:37:1, line:42:1> line:37:6 frob_econtrol 'void (unsigned long, unsigned char, unsigned char)'
+  |-ParmVarDecl 0x7f8b3804b1f8 <col:20, col:34> col:34 used base_hi 'unsigned long'
+  |-ParmVarDecl 0x7f8b3804b270 <col:43, col:57> col:57 used m 'unsigned char'
+  |-ParmVarDecl 0x7f8b3804b2e8 <col:60, col:74> col:74 used v 'unsigned char'
+  `-CompoundStmt 0x7f8b38050d10 <line:38:1, line:42:1>
+    |-DeclStmt 0x7f8b3804b530 <line:39:3, col:25>
+    | `-VarDecl 0x7f8b3804b498 <col:3, col:24> col:17 used ectr 'unsigned char' cinit
+    |   `-ImplicitCastExpr 0x7f8b3804b518 <col:24> 'unsigned char' <IntegralCast>
+    |     `-IntegerLiteral 0x7f8b3804b4f8 <col:24> 'int' 0
+    |-IfStmt 0x7f8b3804b7c8 <line:40:3, col:46>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8b3804b5c0 <col:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f8b3804b5a8 <col:7> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7f8b3804b590 <col:7> 'unsigned char' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7f8b3804b548 <col:7> 'unsigned char' lvalue ParmVar 0x7f8b3804b270 'm' 'unsigned char'
+    | | `-IntegerLiteral 0x7f8b3804b570 <col:12> 'int' 255
+    | |-BinaryOperator 0x7f8b3804b7a0 <col:20, col:46> 'unsigned char' '='
+    | | |-DeclRefExpr 0x7f8b3804b5e8 <col:20> 'unsigned char' lvalue Var 0x7f8b3804b498 'ectr' 'unsigned char'
+    | | `-CallExpr 0x7f8b3804b770 <col:27, col:46> 'u8':'unsigned char'
+    | |   |-ImplicitCastExpr 0x7f8b3804b758 <col:27> 'u8 (*)(unsigned long)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7f8b3804b610 <col:27> 'u8 (unsigned long)' Function 0x7f8b3804aa20 'inb' 'u8 (unsigned long)'
+    | |   `-ParenExpr 0x7f8b3804b6d8 <col:31, col:45> 'unsigned long'
+    | |     `-BinaryOperator 0x7f8b3804b6b0 <col:32, col:42> 'unsigned long' '+'
+    | |       |-ImplicitCastExpr 0x7f8b3804b680 <col:32> 'unsigned long' <LValueToRValue>
+    | |       | `-DeclRefExpr 0x7f8b3804b638 <col:32> 'unsigned long' lvalue ParmVar 0x7f8b3804b1f8 'base_hi' 'unsigned long'
+    | |       `-ImplicitCastExpr 0x7f8b3804b698 <col:42> 'unsigned long' <IntegralCast>
+    | |         `-IntegerLiteral 0x7f8b3804b660 <col:42> 'int' 2
+    | `-<<<NULL>>>
+    `-CallExpr 0x7f8b38050cc0 <line:41:3, col:40> 'void'
+      |-ImplicitCastExpr 0x7f8b38050ca8 <col:3> 'void (*)(u8, unsigned long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8b38050a00 <col:3> 'void (u8, unsigned long)' Function 0x7f8b3804ae10 'outb' 'void (u8, unsigned long)'
+      |-ImplicitCastExpr 0x7f8b38050cf8 <col:8, col:22> 'u8':'unsigned char' <IntegralCast>
+      | `-BinaryOperator 0x7f8b38050b98 <col:8, col:22> 'int' '^'
+      |   |-ParenExpr 0x7f8b38050b20 <col:8, col:18> 'int'
+      |   | `-BinaryOperator 0x7f8b38050af8 <col:9, col:17> 'int' '&'
+      |   |   |-ImplicitCastExpr 0x7f8b38050ae0 <col:9> 'int' <IntegralCast>
+      |   |   | `-ImplicitCastExpr 0x7f8b38050ac8 <col:9> 'unsigned char' <LValueToRValue>
+      |   |   |   `-DeclRefExpr 0x7f8b38050a28 <col:9> 'unsigned char' lvalue Var 0x7f8b3804b498 'ectr' 'unsigned char'
+      |   |   `-UnaryOperator 0x7f8b38050aa8 <col:16, col:17> 'int' prefix '~'
+      |   |     `-ImplicitCastExpr 0x7f8b38050a90 <col:17> 'int' <IntegralCast>
+      |   |       `-ImplicitCastExpr 0x7f8b38050a78 <col:17> 'unsigned char' <LValueToRValue>
+      |   |         `-DeclRefExpr 0x7f8b38050a50 <col:17> 'unsigned char' lvalue ParmVar 0x7f8b3804b270 'm' 'unsigned char'
+      |   `-ImplicitCastExpr 0x7f8b38050b80 <col:22> 'int' <IntegralCast>
+      |     `-ImplicitCastExpr 0x7f8b38050b68 <col:22> 'unsigned char' <LValueToRValue>
+      |       `-DeclRefExpr 0x7f8b38050b40 <col:22> 'unsigned char' lvalue ParmVar 0x7f8b3804b2e8 'v' 'unsigned char'
+      `-ParenExpr 0x7f8b38050c60 <col:25, col:39> 'unsigned long'
+        `-BinaryOperator 0x7f8b38050c38 <col:26, col:36> 'unsigned long' '+'
+          |-ImplicitCastExpr 0x7f8b38050c08 <col:26> 'unsigned long' <LValueToRValue>
+          | `-DeclRefExpr 0x7f8b38050bc0 <col:26> 'unsigned long' lvalue ParmVar 0x7f8b3804b1f8 'base_hi' 'unsigned long'
+          `-ImplicitCastExpr 0x7f8b38050c20 <col:36> 'unsigned long' <IntegralCast>
+            `-IntegerLiteral 0x7f8b38050be8 <col:36> 'int' 2

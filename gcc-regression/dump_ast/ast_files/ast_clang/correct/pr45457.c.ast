@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fd8ad0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd8ad026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd8ad026740 '__int128'
+|-TypedefDecl 0x7fd8ad026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd8ad026760 'unsigned __int128'
+|-TypedefDecl 0x7fd8ad026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd8ad026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd8ad026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd8ad026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd8ad026dc0 'char *'
+|   `-BuiltinType 0x7fd8ad026560 'char'
+|-TypedefDecl 0x7fd8ad0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd8ad027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd8ad026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd8ad026e58 '__va_list_tag'
+|-VarDecl 0x7fd8ad027138 <c_files/pr45457.c:4:1, line:9:1> line:4:13 a 'const char *' cinit
+| `-ImplicitCastExpr 0x7fd8ad825a88 <line:6:1, line:9:1> 'const char *' <BitCast>
+|   `-ImplicitCastExpr 0x7fd8ad825a70 <line:6:1, line:9:1> 'char *' <ArrayToPointerDecay>
+|     `-StringLiteral 0x7fd8ad825a38 <line:6:1, line:9:1> 'char [3]' lvalue "ab"
+`-VarDecl 0x7fd8ad825ab8 <line:18:1, <built-in>:123:21> c_files/pr45457.c:18:8 b 'double' cinit
+  `-BinaryOperator 0x7fd8ad825be8 <<built-in>:110:28, line:123:21> 'double' '+'
+    |-BinaryOperator 0x7fd8ad825ba0 <line:110:28, line:120:21> 'double' '+'
+    | |-BinaryOperator 0x7fd8ad825b58 <line:110:28, line:114:25> 'double' '+'
+    | | |-FloatingLiteral 0x7fd8ad825b18 <line:110:28> 'double' 4.940656e-324
+    | | `-FloatingLiteral 0x7fd8ad825b38 <line:114:25> 'double' 2.220446e-16
+    | `-FloatingLiteral 0x7fd8ad825b80 <line:120:21> 'double' 1.797693e+308
+    `-FloatingLiteral 0x7fd8ad825bc8 <line:123:21> 'double' 2.225074e-308

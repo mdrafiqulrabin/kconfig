@@ -1,0 +1,60 @@
+c_files/pr23445.c:8:23: warning: implicit declaration of function '__brelse' is invalid in C99 [-Wimplicit-function-declaration]
+     if (bhsec)       __brelse(bhsec);
+                      ^
+1 warning generated.
+TranslationUnitDecl 0x7fb6ee0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb6ee026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb6ee026740 '__int128'
+|-TypedefDecl 0x7fb6ee026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb6ee026760 'unsigned __int128'
+|-TypedefDecl 0x7fb6ee026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb6ee026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb6ee026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb6ee026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb6ee026dc0 'char *'
+|   `-BuiltinType 0x7fb6ee026560 'char'
+|-TypedefDecl 0x7fb6ee0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb6ee027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb6ee026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb6ee026e58 '__va_list_tag'
+|-RecordDecl 0x7fb6ee027120 <c_files/pr23445.c:1:2, line:3:2> line:1:9 struct buffer_head definition
+| `-FieldDecl 0x7fb6ee825a00 <line:2:4, col:10> col:10 referenced b_data 'char *'
+|-FunctionDecl 0x7fb6ee825c00 <line:4:4, line:10:2> line:4:9 asfs_deletebnode 'void (struct buffer_head *)'
+| |-ParmVarDecl 0x7fb6ee825b00 <col:27, col:47> col:47 used bhsec 'struct buffer_head *'
+| `-CompoundStmt 0x7fb6ee826218 <col:55, line:10:2>
+|   `-IfStmt 0x7fb6ee8261e0 <line:5:6, line:9:4>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fb6ee825d58 <line:5:10, col:19> 'int' '=='
+|     | |-ImplicitCastExpr 0x7fb6ee825d28 <col:10> 'struct buffer_head *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fb6ee825ce0 <col:10> 'struct buffer_head *' lvalue ParmVar 0x7fb6ee825b00 'bhsec' 'struct buffer_head *'
+|     | `-ImplicitCastExpr 0x7fb6ee825d40 <col:19> 'struct buffer_head *' <NullToPointer>
+|     |   `-IntegerLiteral 0x7fb6ee825d08 <col:19> 'int' 0
+|     |-CompoundStmt 0x7fb6ee8261b0 <col:24, line:9:4>
+|     | |-DeclStmt 0x7fb6ee825ec8 <line:6:6, col:41>
+|     | | `-VarDecl 0x7fb6ee825d98 <col:6, col:35> col:12 used bnc2 'void *' cinit
+|     | |   `-CStyleCastExpr 0x7fb6ee825ea0 <col:19, col:35> 'void *' <BitCast>
+|     | |     `-ImplicitCastExpr 0x7fb6ee825e88 <col:28, col:35> 'char *' <LValueToRValue>
+|     | |       `-MemberExpr 0x7fb6ee825e38 <col:28, col:35> 'char *' lvalue ->b_data 0x7fb6ee825a00
+|     | |         `-ImplicitCastExpr 0x7fb6ee825e20 <col:28> 'struct buffer_head *' <LValueToRValue>
+|     | |           `-DeclRefExpr 0x7fb6ee825df8 <col:28> 'struct buffer_head *' lvalue ParmVar 0x7fb6ee825b00 'bhsec' 'struct buffer_head *'
+|     | |-IfStmt 0x7fb6ee825f38 <line:7:6, col:22>
+|     | | |-<<<NULL>>>
+|     | | |-<<<NULL>>>
+|     | | |-ImplicitCastExpr 0x7fb6ee825f08 <col:10> 'void *' <LValueToRValue>
+|     | | | `-DeclRefExpr 0x7fb6ee825ee0 <col:10> 'void *' lvalue Var 0x7fb6ee825d98 'bnc2' 'void *'
+|     | | |-ReturnStmt 0x7fb6ee825f20 <col:22>
+|     | | `-<<<NULL>>>
+|     | `-IfStmt 0x7fb6ee826178 <line:8:6, col:37>
+|     |   |-<<<NULL>>>
+|     |   |-<<<NULL>>>
+|     |   |-ImplicitCastExpr 0x7fb6ee825f98 <col:10> 'struct buffer_head *' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7fb6ee825f70 <col:10> 'struct buffer_head *' lvalue ParmVar 0x7fb6ee825b00 'bhsec' 'struct buffer_head *'
+|     |   |-CallExpr 0x7fb6ee826130 <col:23, col:37> 'int'
+|     |   | |-ImplicitCastExpr 0x7fb6ee826118 <col:23> 'int (*)()' <FunctionToPointerDecay>
+|     |   | | `-DeclRefExpr 0x7fb6ee826098 <col:23> 'int ()' Function 0x7fb6ee826000 '__brelse' 'int ()'
+|     |   | `-ImplicitCastExpr 0x7fb6ee826160 <col:32> 'struct buffer_head *' <LValueToRValue>
+|     |   |   `-DeclRefExpr 0x7fb6ee8260c0 <col:32> 'struct buffer_head *' lvalue ParmVar 0x7fb6ee825b00 'bhsec' 'struct buffer_head *'
+|     |   `-<<<NULL>>>
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fb6ee826000 <<invalid sloc>> col:23 implicit used __brelse 'int ()'

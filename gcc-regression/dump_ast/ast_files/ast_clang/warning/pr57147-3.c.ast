@@ -1,0 +1,73 @@
+c_files/pr57147-3.c:22:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7f96f50264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f96f5026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f96f5026740 '__int128'
+|-TypedefDecl 0x7f96f5026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f96f5026760 'unsigned __int128'
+|-TypedefDecl 0x7f96f5026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f96f5026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f96f5026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f96f5026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f96f5026dc0 'char *'
+|   `-BuiltinType 0x7f96f5026560 'char'
+|-TypedefDecl 0x7f96f50270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f96f5027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f96f5026ee0 'struct __va_list_tag'
+|     `-Record 0x7f96f5026e58 '__va_list_tag'
+|-TypedefDecl 0x7f96f5027138 <c_files/pr57147-3.c:3:1, col:16> col:16 referenced ptr_t 'char *'
+| `-PointerType 0x7f96f5026dc0 'char *'
+|   `-BuiltinType 0x7f96f5026560 'char'
+|-RecordDecl 0x7f96f5825a00 <line:4:1, line:5:1> line:4:8 struct __jmp_buf_tag definition
+|-TypedefDecl 0x7f96f5825be8 <line:6:1, col:42> col:30 referenced sigjmp_buf 'struct __jmp_buf_tag [1]'
+| `-ConstantArrayType 0x7f96f5825b80 'struct __jmp_buf_tag [1]' 1 
+|   `-ElaboratedType 0x7f96f5825ad0 'struct __jmp_buf_tag' sugar
+|     `-RecordType 0x7f96f5825a90 'struct __jmp_buf_tag'
+|       `-Record 0x7f96f5825a00 '__jmp_buf_tag'
+|-VarDecl 0x7f96f5825c70 <line:7:1, col:12> col:12 used GC_jmp_buf 'sigjmp_buf':'struct __jmp_buf_tag [1]'
+|-FunctionDecl 0x7f96f5825f90 <line:8:5> col:5 implicit used __sigsetjmp 'int (struct __jmp_buf_tag *, int)' extern
+| |-ParmVarDecl 0x7f96f5826028 <<invalid sloc>> <invalid sloc> 'struct __jmp_buf_tag *'
+| |-ParmVarDecl 0x7f96f5826088 <<invalid sloc>> <invalid sloc> 'int'
+| `-ReturnsTwiceAttr 0x7f96f58260f8 <col:5> Implicit
+|-FunctionDecl 0x7f96f5826140 prev 0x7f96f5825f90 <col:1, col:33> col:5 used __sigsetjmp 'int (struct __jmp_buf_tag *, int)'
+| |-ParmVarDecl 0x7f96f5825db0 <col:18> col:28 'struct __jmp_buf_tag *':'struct __jmp_buf_tag *'
+| |-ParmVarDecl 0x7f96f5825e28 <col:30> col:33 'int'
+| `-ReturnsTwiceAttr 0x7f96f5826220 <col:5> Inherited Implicit
+|-FunctionDecl 0x7f96f58264b0 <line:9:1, col:50> col:6 used GC_set_and_save_fault_handler 'void (void (*)(int))'
+| `-ParmVarDecl 0x7f96f58263b0 <col:37, col:49> col:44 'void (*)(int)'
+|-FunctionDecl 0x7f96f58265f0 <line:10:1, line:12:1> line:10:6 used GC_fault_handler 'void (int)'
+| |-ParmVarDecl 0x7f96f5826568 <col:23, col:27> col:27 sig 'int'
+| `-CompoundStmt 0x7f96f5826690 <line:11:1, line:12:1>
+|-FunctionDecl 0x7f96f58266f8 <line:13:1, line:15:1> line:13:6 used GC_setup_temporary_fault_handler 'void ()'
+| `-CompoundStmt 0x7f96f5826898 <col:45, line:15:1>
+|   `-CallExpr 0x7f96f5826850 <line:14:5, col:51> 'void'
+|     |-ImplicitCastExpr 0x7f96f5826838 <col:5> 'void (*)(void (*)(int))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f96f5826790 <col:5> 'void (void (*)(int))' Function 0x7f96f58264b0 'GC_set_and_save_fault_handler' 'void (void (*)(int))'
+|     `-ImplicitCastExpr 0x7f96f5826880 <col:35> 'void (*)(int)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f96f58267b8 <col:35> 'void (int)' Function 0x7f96f58265f0 'GC_fault_handler' 'void (int)'
+`-FunctionDecl 0x7f96f5826a00 <line:16:1, line:22:1> line:16:7 GC_find_limit 'ptr_t (ptr_t)'
+  |-ParmVarDecl 0x7f96f58268f0 <col:21, col:27> col:27 p 'ptr_t':'char *'
+  `-CompoundStmt 0x7f96f5826d38 <line:17:1, line:22:1>
+    |-CallExpr 0x7f96f5826b10 <line:18:3, col:36> 'void'
+    | `-ImplicitCastExpr 0x7f96f5826af8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f96f5826aa0 <col:3> 'void ()' Function 0x7f96f58266f8 'GC_setup_temporary_fault_handler' 'void ()'
+    `-IfStmt 0x7f96f5826d00 <line:19:3, line:21:7>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f96f5826c90 <line:19:7, col:38> 'int' '=='
+      | |-CallExpr 0x7f96f5826c20 <col:7, col:33> 'int'
+      | | |-ImplicitCastExpr 0x7f96f5826c08 <col:7> 'int (*)(struct __jmp_buf_tag *, int)' <FunctionToPointerDecay>
+      | | | `-DeclRefExpr 0x7f96f5826b38 <col:7> 'int (struct __jmp_buf_tag *, int)' Function 0x7f96f5826140 '__sigsetjmp' 'int (struct __jmp_buf_tag *, int)'
+      | | |-ImplicitCastExpr 0x7f96f5826c58 <col:20> 'struct __jmp_buf_tag *' <ArrayToPointerDecay>
+      | | | `-DeclRefExpr 0x7f96f5826b60 <col:20> 'sigjmp_buf':'struct __jmp_buf_tag [1]' lvalue Var 0x7f96f5825c70 'GC_jmp_buf' 'sigjmp_buf':'struct __jmp_buf_tag [1]'
+      | | `-IntegerLiteral 0x7f96f5826b88 <col:32> 'int' 1
+      | `-IntegerLiteral 0x7f96f5826c70 <col:38> 'int' 0
+      |-ForStmt 0x7f96f5826cc8 <line:20:5, line:21:7>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | `-NullStmt 0x7f96f5826cb8 <col:7>
+      `-<<<NULL>>>

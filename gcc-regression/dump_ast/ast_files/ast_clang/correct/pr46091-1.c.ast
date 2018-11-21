@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fa2f10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa2f1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa2f1026740 '__int128'
+|-TypedefDecl 0x7fa2f1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa2f1026760 'unsigned __int128'
+|-TypedefDecl 0x7fa2f1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa2f1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa2f1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa2f1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa2f1026dc0 'char *'
+|   `-BuiltinType 0x7fa2f1026560 'char'
+|-TypedefDecl 0x7fa2f10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa2f1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa2f1026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa2f1026e58 '__va_list_tag'
+|-FunctionDecl 0x7fa2f1077430 <c_files/pr46091-1.c:4:1, line:7:1> line:4:20 test 'unsigned long long (unsigned long long)'
+| |-ParmVarDecl 0x7fa2f1027138 <col:26, col:45> col:45 used a 'unsigned long long'
+| `-CompoundStmt 0x7fa2f1077638 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7fa2f1077620 <line:6:3, col:26>
+|     `-BinaryOperator 0x7fa2f10775f8 <col:10, col:26> 'unsigned long long' '&'
+|       |-ImplicitCastExpr 0x7fa2f10775e0 <col:10> 'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fa2f1077510 <col:10> 'unsigned long long' lvalue ParmVar 0x7fa2f1027138 'a' 'unsigned long long'
+|       `-UnaryOperator 0x7fa2f10775c0 <col:14, col:26> 'unsigned long long' prefix '~'
+|         `-ParenExpr 0x7fa2f10775a0 <col:15, col:26> 'unsigned long long'
+|           `-BinaryOperator 0x7fa2f1077578 <col:16, col:24> 'unsigned long long' '<<'
+|             |-IntegerLiteral 0x7fa2f1077538 <col:16> 'unsigned long long' 1
+|             `-IntegerLiteral 0x7fa2f1077558 <col:24> 'int' 55
+|-VarDecl 0x7fa2f1077670 <line:9:1, col:27> col:27 used m 'unsigned long long' extern
+`-FunctionDecl 0x7fa2f1077790 <line:11:1, line:14:1> line:11:6 testm 'void (void)'
+  `-CompoundStmt 0x7fa2f1077930 <line:12:1, line:14:1>
+    `-CompoundAssignOperator 0x7fa2f10778f8 <line:13:3, col:20> 'unsigned long long' '&=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+      |-DeclRefExpr 0x7fa2f1077828 <col:3> 'unsigned long long' lvalue Var 0x7fa2f1077670 'm' 'unsigned long long'
+      `-UnaryOperator 0x7fa2f10778d8 <col:8, col:20> 'unsigned long long' prefix '~'
+        `-ParenExpr 0x7fa2f10778b8 <col:9, col:20> 'unsigned long long'
+          `-BinaryOperator 0x7fa2f1077890 <col:10, col:18> 'unsigned long long' '<<'
+            |-IntegerLiteral 0x7fa2f1077850 <col:10> 'unsigned long long' 1
+            `-IntegerLiteral 0x7fa2f1077870 <col:18> 'int' 45

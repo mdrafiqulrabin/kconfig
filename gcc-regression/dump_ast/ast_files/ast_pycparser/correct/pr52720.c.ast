@@ -1,0 +1,133 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: alu_bank_swizzle
+      Decl: hw_gpr, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: hw_gpr, []
+              IdentifierType: ['int']
+            Constant: int, 4
+          Constant: int, 3
+      Decl: hw_cfile_addr, [], [], []
+        ArrayDecl: []
+          TypeDecl: hw_cfile_addr, []
+            IdentifierType: ['int']
+          Constant: int, 4
+  Decl: check_vector, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: alu_bank_swizzle
+      TypeDecl: check_vector, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: init_bank_swizzle, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: bs, [], [], []
+            PtrDecl: []
+              TypeDecl: bs, []
+                Struct: alu_bank_swizzle
+        TypeDecl: init_bank_swizzle, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: cycle, [], [], []
+        TypeDecl: cycle, []
+          IdentifierType: ['int']
+      Decl: component, [], [], []
+        TypeDecl: component, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: cycle
+          Constant: int, 0
+        BinaryOp: <
+          ID: cycle
+          Constant: int, 3
+        UnaryOp: p++
+          ID: cycle
+        For: 
+          Assignment: =
+            ID: component
+            Constant: int, 0
+          BinaryOp: <
+            ID: component
+            Constant: int, 4
+          UnaryOp: p++
+            ID: component
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                StructRef: ->
+                  ID: bs
+                  ID: hw_gpr
+                ID: cycle
+              ID: component
+            UnaryOp: -
+              Constant: int, 1
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 4
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            StructRef: ->
+              ID: bs
+              ID: hw_cfile_addr
+            ID: i
+          UnaryOp: -
+            Constant: int, 1
+  FuncDef: 
+    Decl: check_and_set_bank_swizzle, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: max_slots, [], [], []
+            TypeDecl: max_slots, []
+              IdentifierType: ['int']
+          Decl: slots, [], [], []
+            PtrDecl: []
+              TypeDecl: slots, []
+                IdentifierType: ['int']
+        TypeDecl: check_and_set_bank_swizzle, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: bs, [], [], []
+        TypeDecl: bs, []
+          Struct: alu_bank_swizzle
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: max_slots
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          FuncCall: 
+            ID: init_bank_swizzle
+            ExprList: 
+              UnaryOp: &
+                ID: bs
+          If: 
+            ArrayRef: 
+              ID: slots
+              ID: i
+            FuncCall: 
+              ID: check_vector
+              ExprList: 
+                UnaryOp: &
+                  ID: bs

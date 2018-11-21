@@ -1,0 +1,152 @@
+FileAST: 
+  Typedef: FunctionCallInfo, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: FunctionCallInfo, []
+        Struct: None
+          Decl: arg, [], [], []
+            ArrayDecl: []
+              TypeDecl: arg, []
+                IdentifierType: ['unsigned', 'int']
+              Constant: int, 100
+  Typedef: Interval, [], ['typedef']
+    TypeDecl: Interval, []
+      Struct: None
+        Decl: day, [], [], []
+          TypeDecl: day, []
+            IdentifierType: ['int']
+        Decl: month, [], [], []
+          TypeDecl: month, []
+            IdentifierType: ['int']
+  Decl: palloc, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'int']
+      PtrDecl: []
+        TypeDecl: palloc, []
+          IdentifierType: ['void']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  Decl: baz, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: baz, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: interval_pl, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fcinfo, [], [], []
+            TypeDecl: fcinfo, []
+              IdentifierType: ['FunctionCallInfo']
+        TypeDecl: interval_pl, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: span1, [], [], []
+        PtrDecl: []
+          TypeDecl: span1, []
+            IdentifierType: ['Interval']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['Interval']
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['char']
+            ArrayRef: 
+              StructRef: ->
+                ID: fcinfo
+                ID: arg
+              Constant: int, 0
+      Decl: span2, [], [], []
+        PtrDecl: []
+          TypeDecl: span2, []
+            IdentifierType: ['Interval']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['Interval']
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['char']
+            ArrayRef: 
+              StructRef: ->
+                ID: fcinfo
+                ID: arg
+              Constant: int, 1
+      Decl: result, [], [], []
+        PtrDecl: []
+          TypeDecl: result, []
+            IdentifierType: ['Interval']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['Interval']
+          FuncCall: 
+            ID: palloc
+            ExprList: 
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['Interval']
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            BinaryOp: <
+              StructRef: ->
+                ID: span1
+                ID: month
+              Constant: int, 0
+            BinaryOp: <
+              StructRef: ->
+                ID: span2
+                ID: month
+              Constant: int, 0
+          UnaryOp: !
+            BinaryOp: ==
+              BinaryOp: <
+                StructRef: ->
+                  ID: result
+                  ID: month
+                Constant: int, 0
+              BinaryOp: <
+                StructRef: ->
+                  ID: span1
+                  ID: month
+                Constant: int, 0
+        DoWhile: 
+          Constant: int, 0
+          Compound: 
+            If: 
+              FuncCall: 
+                ID: bar
+              FuncCall: 
+                ID: baz
+      Assignment: =
+        StructRef: ->
+          ID: result
+          ID: day
+        BinaryOp: +
+          StructRef: ->
+            ID: span1
+            ID: day
+          StructRef: ->
+            ID: span2
+            ID: day

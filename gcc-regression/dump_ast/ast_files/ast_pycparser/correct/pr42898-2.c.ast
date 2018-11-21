@@ -1,0 +1,54 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: hardware
+      Decl: parm1, [], [], []
+        TypeDecl: parm1, []
+          IdentifierType: ['int']
+        Constant: int, 8
+      Decl: None, [], [], []
+        TypeDecl: None, []
+          IdentifierType: ['int']
+        Constant: int, 4
+      Decl: parm2, [], [], []
+        TypeDecl: parm2, []
+          IdentifierType: ['int']
+        Constant: int, 4
+      Decl: parm3, [], [], []
+        TypeDecl: parm3, []
+          IdentifierType: ['int']
+        Constant: int, 15
+      Decl: parm4, [], [], []
+        TypeDecl: parm4, []
+          IdentifierType: ['int']
+        Constant: int, 1
+  Decl: h, ['const'], [], []
+    TypeDecl: h, ['const']
+      Struct: hardware
+    InitList: 
+      NamedInitializer: 
+        Constant: int, 42
+        ID: parm1
+      NamedInitializer: 
+        Constant: int, 13
+        ID: parm2
+      NamedInitializer: 
+        Constant: int, 11850
+        ID: parm3
+      NamedInitializer: 
+        Constant: int, 1
+        ID: parm4
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ptr, ['volatile'], [], []
+            PtrDecl: []
+              TypeDecl: ptr, ['volatile']
+                Struct: hardware
+        TypeDecl: f1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: ptr
+        ID: h

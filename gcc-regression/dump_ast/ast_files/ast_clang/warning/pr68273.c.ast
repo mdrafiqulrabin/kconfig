@@ -1,0 +1,194 @@
+c_files/pr68273.c:60:6: warning: implicitly declaring library function 'sprintf' with type 'int (char *, const char *, ...)' [-Wimplicit-function-declaration]
+            sprintf (errbuf, "invalid typedef qualifier for '%s'",
+            ^
+c_files/pr68273.c:60:6: note: include the header <stdio.h> or explicitly provide a declaration for 'sprintf'
+c_files/pr68273.c:62:8: warning: implicit declaration of function 'enter' is invalid in C99 [-Wimplicit-function-declaration]
+          p = enter (sp->table, (yyvsp[0].sym));
+              ^
+c_files/pr68273.c:62:6: warning: incompatible integer to pointer conversion assigning to 'Entry *' (aka 'struct Entry *') from 'int' [-Wint-conversion]
+          p = enter (sp->table, (yyvsp[0].sym));
+            ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr68273.c:73:3: warning: implicit declaration of function 'integer' is invalid in C99 [-Wimplicit-function-declaration]
+  integer (q.typ);
+  ^
+c_files/pr68273.c:74:3: warning: implicit declaration of function 'mgtype' is invalid in C99 [-Wimplicit-function-declaration]
+  mgtype (q.typ);
+  ^
+c_files/pr68273.c:75:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+6 warnings generated.
+TranslationUnitDecl 0x7fcf618264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcf61826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcf61826740 '__int128'
+|-TypedefDecl 0x7fcf61826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcf61826760 'unsigned __int128'
+|-TypedefDecl 0x7fcf61826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcf61826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcf61826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcf61826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcf61826dc0 'char *'
+|   `-BuiltinType 0x7fcf61826560 'char'
+|-TypedefDecl 0x7fcf618270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcf61827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcf61826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcf61826e58 '__va_list_tag'
+|-VarDecl 0x7fcf61827168 <c_files/pr68273.c:5:1, col:20> col:13 used errbuf 'char []' extern
+|-RecordDecl 0x7fcf62025a40 <line:6:9, line:9:1> line:6:16 struct Symbol definition
+| `-FieldDecl 0x7fcf62025b08 <line:8:3, col:9> col:9 referenced name 'char *'
+|-TypedefDecl 0x7fcf62025ba0 <line:6:1, line:10:1> col:1 referenced Symbol 'struct Symbol':'struct Symbol'
+| `-ElaboratedType 0x7fcf62025b50 'struct Symbol' sugar
+|   `-RecordType 0x7fcf62025ad0 'struct Symbol'
+|     `-Record 0x7fcf62025a40 'Symbol'
+|-RecordDecl 0x7fcf62025c10 <line:11:9, line:13:1> line:11:16 struct Tnode definition
+|-TypedefDecl 0x7fcf62025d10 <col:1, line:14:1> col:1 referenced Tnode 'struct Tnode':'struct Tnode'
+| `-ElaboratedType 0x7fcf62025cc0 'struct Tnode' sugar
+|   `-RecordType 0x7fcf62025ca0 'struct Tnode'
+|     `-Record 0x7fcf62025c10 'Tnode'
+|-RecordDecl 0x7fcf62025d80 <line:15:9, line:18:1> line:15:15 union Value definition
+| `-FieldDecl 0x7fcf62025e48 <line:17:3, col:13> col:13 i 'long long'
+|-TypedefDecl 0x7fcf62025ee0 <line:15:1, line:19:1> col:1 referenced Value 'union Value':'union Value'
+| `-ElaboratedType 0x7fcf62025e90 'union Value' sugar
+|   `-RecordType 0x7fcf62025e10 'union Value'
+|     `-Record 0x7fcf62025d80 'Value'
+|-RecordDecl 0x7fcf62025f50 <line:20:9, line:22:1> line:20:16 struct Entry definition
+|-TypedefDecl 0x7fcf62026050 <col:1, line:23:1> col:1 referenced Entry 'struct Entry':'struct Entry'
+| `-ElaboratedType 0x7fcf62026000 'struct Entry' sugar
+|   `-RecordType 0x7fcf62025fe0 'struct Entry'
+|     `-Record 0x7fcf62025f50 'Entry'
+|-RecordDecl 0x7fcf620260c0 <line:24:9, line:26:1> line:24:16 struct Table definition
+|-TypedefDecl 0x7fcf620261c0 <col:1, line:27:1> col:1 referenced Table 'struct Table':'struct Table'
+| `-ElaboratedType 0x7fcf62026170 'struct Table' sugar
+|   `-RecordType 0x7fcf62026150 'struct Table'
+|     `-Record 0x7fcf620260c0 'Table'
+|-RecordDecl 0x7fcf62026230 <line:28:9, line:33:1> line:28:16 struct Node definition
+| |-FieldDecl 0x7fcf62026368 <line:30:3, col:10> col:10 referenced typ 'Tnode *'
+| |-FieldDecl 0x7fcf620263c8 <line:31:3, col:7> col:7 referenced sto 'int'
+| `-FieldDecl 0x7fcf62026440 <line:32:3, col:9> col:9 val 'Value':'union Value'
+|-TypedefDecl 0x7fcf620264e0 <line:28:1, line:34:1> col:1 referenced Node 'struct Node':'struct Node'
+| `-ElaboratedType 0x7fcf62026490 'struct Node' sugar
+|   `-RecordType 0x7fcf620262c0 'struct Node'
+|     `-Record 0x7fcf62026230 'Node'
+|-RecordDecl 0x7fcf62026550 <line:35:1, line:38:1> line:35:8 struct Scope definition
+| `-FieldDecl 0x7fcf62026688 <line:37:3, col:10> col:10 referenced table 'Table *'
+|-VarDecl 0x7fcf62026780 <line:35:1, line:38:4> col:4 used sp 'struct Scope *'
+|-FunctionDecl 0x7fcf62026930 <line:39:1, col:21> col:13 used op 'Node (Node)' static
+| `-ParmVarDecl 0x7fcf62026830 <col:17> col:21 'Node':'struct Node'
+|-VarDecl 0x7fcf6202bc68 <line:40:1, col:8> col:8 used p 'Entry *'
+|-VarDecl 0x7fcf6202bcd8 <col:1, col:12> col:12 q 'Entry *'
+|-RecordDecl 0x7fcf6202bd50 <line:41:1, line:45:1> line:41:7 union YYSTYPE definition
+| |-FieldDecl 0x7fcf6202be88 <line:43:3, col:11> col:11 referenced sym 'Symbol *'
+| `-FieldDecl 0x7fcf6202bee0 <line:44:3, col:8> col:8 referenced rec 'Node':'struct Node'
+|-TypedefDecl 0x7fcf6202bf80 <line:46:1, col:23> col:23 referenced YYSTYPE 'union YYSTYPE':'union YYSTYPE'
+| `-ElaboratedType 0x7fcf6202bf30 'union YYSTYPE' sugar
+|   `-RecordType 0x7fcf6202bde0 'union YYSTYPE'
+|     `-Record 0x7fcf6202bd50 'YYSTYPE'
+|-TypedefDecl 0x7fcf6202bff0 <line:47:1, col:19> col:19 yytype_int16 'short'
+| `-BuiltinType 0x7fcf618265a0 'short'
+|-FunctionDecl 0x7fcf6202c118 <line:49:1, line:68:1> line:50:1 yyparse 'int (void)'
+| `-CompoundStmt 0x7fcf6202d5c8 <line:51:1, line:68:1>
+|   |-DeclStmt 0x7fcf6202c240 <line:52:3, col:16>
+|   | `-VarDecl 0x7fcf6202c1e0 <col:3, col:11> col:11 used yyval 'YYSTYPE':'union YYSTYPE'
+|   |-DeclStmt 0x7fcf6202c2d0 <line:53:3, col:10>
+|   | `-VarDecl 0x7fcf6202c270 <col:3, col:7> col:7 used yyn 'int'
+|   |-DeclStmt 0x7fcf6202c3b8 <line:54:3, col:17>
+|   | `-VarDecl 0x7fcf6202c358 <col:3, col:12> col:12 used yyvsp 'YYSTYPE *'
+|   `-WhileStmt 0x7fcf6202d5a8 <line:55:3, line:67:5>
+|     |-<<<NULL>>>
+|     |-IntegerLiteral 0x7fcf6202c3d0 <line:55:10> 'int' 1
+|     `-CompoundStmt 0x7fcf6202d580 <line:56:5, line:67:5>
+|       |-IfStmt 0x7fcf6202d478 <line:57:7, line:65:20>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7fcf6202c450 <line:57:11, col:18> 'int' '=='
+|       | | |-ImplicitCastExpr 0x7fcf6202c438 <col:11> 'int' <LValueToRValue>
+|       | | | `-DeclRefExpr 0x7fcf6202c3f0 <col:11> 'int' lvalue Var 0x7fcf6202c270 'yyn' 'int'
+|       | | `-IntegerLiteral 0x7fcf6202c418 <col:18> 'int' 34
+|       | |-CompoundStmt 0x7fcf6202d288 <line:58:2, line:63:2>
+|       | | |-IfStmt 0x7fcf6202ced0 <line:59:4, line:61:28>
+|       | | | |-<<<NULL>>>
+|       | | | |-<<<NULL>>>
+|       | | | |-BinaryOperator 0x7fcf6202c5e8 <line:59:8, col:30> 'int' '&'
+|       | | | | |-ImplicitCastExpr 0x7fcf6202c5d0 <col:8, col:24> 'int' <LValueToRValue>
+|       | | | | | `-MemberExpr 0x7fcf6202c578 <col:8, col:24> 'int' lvalue .sto 0x7fcf620263c8
+|       | | | | |   `-ParenExpr 0x7fcf6202c558 <col:8, col:22> 'Node':'struct Node' lvalue
+|       | | | | |     `-MemberExpr 0x7fcf6202c520 <col:9, col:19> 'Node':'struct Node' lvalue .rec 0x7fcf6202bee0
+|       | | | | |       `-ArraySubscriptExpr 0x7fcf6202c4f8 <col:9, col:17> 'YYSTYPE':'union YYSTYPE' lvalue
+|       | | | | |         |-ImplicitCastExpr 0x7fcf6202c4e0 <col:9> 'YYSTYPE *' <LValueToRValue>
+|       | | | | |         | `-DeclRefExpr 0x7fcf6202c478 <col:9> 'YYSTYPE *' lvalue Var 0x7fcf6202c358 'yyvsp' 'YYSTYPE *'
+|       | | | | |         `-UnaryOperator 0x7fcf6202c4c0 <col:15, col:16> 'int' prefix '-'
+|       | | | | |           `-IntegerLiteral 0x7fcf6202c4a0 <col:16> 'int' 1
+|       | | | | `-IntegerLiteral 0x7fcf6202c5b0 <col:30> 'int' 16
+|       | | | |-CallExpr 0x7fcf6202ce30 <line:60:6, line:61:28> 'int'
+|       | | | | |-ImplicitCastExpr 0x7fcf6202ce18 <line:60:6> 'int (*)(char *, const char *, ...)' <FunctionToPointerDecay>
+|       | | | | | `-DeclRefExpr 0x7fcf6202cbc0 <col:6> 'int (char *, const char *, ...)' Function 0x7fcf6202ca00 'sprintf' 'int (char *, const char *, ...)'
+|       | | | | |-ImplicitCastExpr 0x7fcf6202ce70 <col:15> 'char *' <ArrayToPointerDecay>
+|       | | | | | `-DeclRefExpr 0x7fcf6202cc00 <col:15> 'char []' lvalue Var 0x7fcf61827168 'errbuf' 'char []'
+|       | | | | |-ImplicitCastExpr 0x7fcf6202cea0 <col:23> 'const char *' <BitCast>
+|       | | | | | `-ImplicitCastExpr 0x7fcf6202ce88 <col:23> 'char *' <ArrayToPointerDecay>
+|       | | | | |   `-StringLiteral 0x7fcf6202cc68 <col:23> 'char [35]' lvalue "invalid typedef qualifier for '%s'"
+|       | | | | `-ImplicitCastExpr 0x7fcf6202ceb8 <line:61:8, col:24> 'char *' <LValueToRValue>
+|       | | | |   `-MemberExpr 0x7fcf6202cdb0 <col:8, col:24> 'char *' lvalue ->name 0x7fcf62025b08
+|       | | | |     `-ImplicitCastExpr 0x7fcf6202cd98 <col:8, col:21> 'Symbol *' <LValueToRValue>
+|       | | | |       `-ParenExpr 0x7fcf6202cd78 <col:8, col:21> 'Symbol *' lvalue
+|       | | | |         `-MemberExpr 0x7fcf6202cd40 <col:9, col:18> 'Symbol *' lvalue .sym 0x7fcf6202be88
+|       | | | |           `-ArraySubscriptExpr 0x7fcf6202cd18 <col:9, col:16> 'YYSTYPE':'union YYSTYPE' lvalue
+|       | | | |             |-ImplicitCastExpr 0x7fcf6202cd00 <col:9> 'YYSTYPE *' <LValueToRValue>
+|       | | | |             | `-DeclRefExpr 0x7fcf6202ccb8 <col:9> 'YYSTYPE *' lvalue Var 0x7fcf6202c358 'yyvsp' 'YYSTYPE *'
+|       | | | |             `-IntegerLiteral 0x7fcf6202cce0 <col:15> 'int' 0
+|       | | | `-<<<NULL>>>
+|       | | `-BinaryOperator 0x7fcf6202d260 <line:62:4, col:40> 'Entry *' '='
+|       | |   |-DeclRefExpr 0x7fcf6202cf08 <col:4> 'Entry *' lvalue Var 0x7fcf6202bc68 'p' 'Entry *'
+|       | |   `-ImplicitCastExpr 0x7fcf6202d248 <col:8, col:40> 'Entry *' <IntegralToPointer>
+|       | |     `-CallExpr 0x7fcf6202d1e0 <col:8, col:40> 'int'
+|       | |       |-ImplicitCastExpr 0x7fcf6202d1c8 <col:8> 'int (*)()' <FunctionToPointerDecay>
+|       | |       | `-DeclRefExpr 0x7fcf6202d018 <col:8> 'int ()' Function 0x7fcf6202cf80 'enter' 'int ()'
+|       | |       |-ImplicitCastExpr 0x7fcf6202d218 <col:15, col:19> 'Table *' <LValueToRValue>
+|       | |       | `-MemberExpr 0x7fcf6202d080 <col:15, col:19> 'Table *' lvalue ->table 0x7fcf62026688
+|       | |       |   `-ImplicitCastExpr 0x7fcf6202d068 <col:15> 'struct Scope *' <LValueToRValue>
+|       | |       |     `-DeclRefExpr 0x7fcf6202d040 <col:15> 'struct Scope *' lvalue Var 0x7fcf62026780 'sp' 'struct Scope *'
+|       | |       `-ImplicitCastExpr 0x7fcf6202d230 <col:26, col:39> 'Symbol *' <LValueToRValue>
+|       | |         `-ParenExpr 0x7fcf6202d178 <col:26, col:39> 'Symbol *' lvalue
+|       | |           `-MemberExpr 0x7fcf6202d140 <col:27, col:36> 'Symbol *' lvalue .sym 0x7fcf6202be88
+|       | |             `-ArraySubscriptExpr 0x7fcf6202d118 <col:27, col:34> 'YYSTYPE':'union YYSTYPE' lvalue
+|       | |               |-ImplicitCastExpr 0x7fcf6202d100 <col:27> 'YYSTYPE *' <LValueToRValue>
+|       | |               | `-DeclRefExpr 0x7fcf6202d0b8 <col:27> 'YYSTYPE *' lvalue Var 0x7fcf6202c358 'yyvsp' 'YYSTYPE *'
+|       | |               `-IntegerLiteral 0x7fcf6202d0e0 <col:33> 'int' 0
+|       | `-CallExpr 0x7fcf6202d430 <line:65:2, col:20> 'Node':'struct Node'
+|       |   |-ImplicitCastExpr 0x7fcf6202d418 <col:2> 'Node (*)(Node)' <FunctionToPointerDecay>
+|       |   | `-DeclRefExpr 0x7fcf6202d2b0 <col:2> 'Node (Node)' Function 0x7fcf62026930 'op' 'Node (Node)'
+|       |   `-ImplicitCastExpr 0x7fcf6202d460 <col:6, col:19> 'Node':'struct Node' <LValueToRValue>
+|       |     `-ParenExpr 0x7fcf6202d398 <col:6, col:19> 'Node':'struct Node' lvalue
+|       |       `-MemberExpr 0x7fcf6202d360 <col:7, col:16> 'Node':'struct Node' lvalue .rec 0x7fcf6202bee0
+|       |         `-ArraySubscriptExpr 0x7fcf6202d338 <col:7, col:14> 'YYSTYPE':'union YYSTYPE' lvalue
+|       |           |-ImplicitCastExpr 0x7fcf6202d320 <col:7> 'YYSTYPE *' <LValueToRValue>
+|       |           | `-DeclRefExpr 0x7fcf6202d2d8 <col:7> 'YYSTYPE *' lvalue Var 0x7fcf6202c358 'yyvsp' 'YYSTYPE *'
+|       |           `-IntegerLiteral 0x7fcf6202d300 <col:13> 'int' 0
+|       `-BinaryOperator 0x7fcf6202d558 <line:66:7, col:18> 'YYSTYPE':'union YYSTYPE' '='
+|         |-UnaryOperator 0x7fcf6202d4f8 <col:7, col:10> 'YYSTYPE':'union YYSTYPE' lvalue prefix '*'
+|         | `-UnaryOperator 0x7fcf6202d4d8 <col:8, col:10> 'YYSTYPE *' prefix '++'
+|         |   `-DeclRefExpr 0x7fcf6202d4b0 <col:10> 'YYSTYPE *' lvalue Var 0x7fcf6202c358 'yyvsp' 'YYSTYPE *'
+|         `-ImplicitCastExpr 0x7fcf6202d540 <col:18> 'YYSTYPE':'union YYSTYPE' <LValueToRValue>
+|           `-DeclRefExpr 0x7fcf6202d518 <col:18> 'YYSTYPE':'union YYSTYPE' lvalue Var 0x7fcf6202c1e0 'yyval' 'YYSTYPE':'union YYSTYPE'
+|-FunctionDecl 0x7fcf6202ca00 <line:60:6> col:6 implicit used sprintf 'int (char *, const char *, ...)' extern
+| |-ParmVarDecl 0x7fcf6202ca98 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7fcf6202caf8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fcf6202cb68 <col:6> Implicit printf 2 3
+|-FunctionDecl 0x7fcf6202cf80 <<invalid sloc>> line:62:8 implicit used enter 'int ()'
+|-FunctionDecl 0x7fcf6202d698 prev 0x7fcf62026930 <line:70:1, line:75:1> line:71:1 used op 'Node (Node)' static
+| |-ParmVarDecl 0x7fcf6202d610 <col:5, col:10> col:10 used q 'Node':'struct Node'
+| `-CompoundStmt 0x7fcf6202da88 <line:72:1, line:75:1>
+|   |-CallExpr 0x7fcf6202d898 <line:73:3, col:17> 'int'
+|   | |-ImplicitCastExpr 0x7fcf6202d880 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fcf6202d7f8 <col:3> 'int ()' Function 0x7fcf6202d760 'integer' 'int ()'
+|   | `-ImplicitCastExpr 0x7fcf6202d8c8 <col:12, col:14> 'Tnode *' <LValueToRValue>
+|   |   `-MemberExpr 0x7fcf6202d848 <col:12, col:14> 'Tnode *' lvalue .typ 0x7fcf62026368
+|   |     `-DeclRefExpr 0x7fcf6202d820 <col:12> 'Node':'struct Node' lvalue ParmVar 0x7fcf6202d610 'q' 'Node':'struct Node'
+|   `-CallExpr 0x7fcf6202da40 <line:74:3, col:16> 'int'
+|     |-ImplicitCastExpr 0x7fcf6202da28 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fcf6202d9a0 <col:3> 'int ()' Function 0x7fcf6202d908 'mgtype' 'int ()'
+|     `-ImplicitCastExpr 0x7fcf6202da70 <col:11, col:13> 'Tnode *' <LValueToRValue>
+|       `-MemberExpr 0x7fcf6202d9f0 <col:11, col:13> 'Tnode *' lvalue .typ 0x7fcf62026368
+|         `-DeclRefExpr 0x7fcf6202d9c8 <col:11> 'Node':'struct Node' lvalue ParmVar 0x7fcf6202d610 'q' 'Node':'struct Node'
+|-FunctionDecl 0x7fcf6202d760 <<invalid sloc>> line:73:3 implicit used integer 'int ()'
+`-FunctionDecl 0x7fcf6202d908 <<invalid sloc>> line:74:3 implicit used mgtype 'int ()'

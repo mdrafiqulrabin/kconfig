@@ -1,0 +1,88 @@
+FileAST: 
+  Decl: global, [], ['extern'], []
+    TypeDecl: global, []
+      IdentifierType: ['int']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: base, [], [], []
+            TypeDecl: base, []
+              IdentifierType: ['int']
+          Decl: bound, [], [], []
+            TypeDecl: bound, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: ret, [], [], []
+        TypeDecl: ret, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          ID: base
+        BinaryOp: <=
+          ID: i
+          ID: bound
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          If: 
+            BinaryOp: <
+              ID: i
+              ID: base
+            Assignment: +=
+              ID: global
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  ID: i
+          If: 
+            BinaryOp: <
+              ID: i
+              BinaryOp: +
+                ID: base
+                Constant: int, 1
+            Assignment: +=
+              ID: global
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  ID: i
+          If: 
+            BinaryOp: <=
+              ID: i
+              BinaryOp: +
+                ID: base
+                Constant: int, 3
+            Assignment: +=
+              ID: global
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  ID: i
+          If: 
+            BinaryOp: <
+              BinaryOp: -
+                ID: i
+                Constant: int, 1
+              ID: base
+            Assignment: +=
+              ID: global
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  ID: i

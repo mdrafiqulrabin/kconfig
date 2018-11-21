@@ -1,0 +1,55 @@
+c_files/pr31344.c:16:32: error: GNU decimal type extension not supported
+extern void __host_to_ieee_32 (_Decimal32, decimal32 *);
+                               ^
+c_files/pr31344.c:19:6: error: GNU decimal type extension not supported
+foo (_Decimal32 arg)
+     ^
+2 errors generated.
+TranslationUnitDecl 0x7f82340264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8234026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8234026740 '__int128'
+|-TypedefDecl 0x7f8234026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8234026760 'unsigned __int128'
+|-TypedefDecl 0x7f8234026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8234026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8234026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8234026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8234026dc0 'char *'
+|   `-BuiltinType 0x7f8234026560 'char'
+|-TypedefDecl 0x7f82340270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8234027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8234026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8234026e58 '__va_list_tag'
+|-RecordDecl 0x7f8234027120 <c_files/pr31344.c:5:9, line:8:1> line:5:9 struct definition
+| `-FieldDecl 0x7f8234825a00 <line:7:3, col:17> col:17 bits 'unsigned char'
+|-TypedefDecl 0x7f8234825aa0 <line:5:1, line:8:3> col:3 referenced decNumber 'struct decNumber':'decNumber'
+| `-ElaboratedType 0x7f8234825a50 'struct decNumber' sugar
+|   `-RecordType 0x7f82340271b0 'decNumber'
+|     `-Record 0x7f8234027120 ''
+|-RecordDecl 0x7f8234825b10 <line:10:9, line:13:1> line:10:9 struct definition
+| `-FieldDecl 0x7f8234825c40 <line:12:3, col:24> col:17 bytes 'unsigned char [1]'
+|-TypedefDecl 0x7f8234825ce0 <line:10:1, line:13:3> col:3 referenced decimal32 'struct decimal32':'decimal32'
+| `-ElaboratedType 0x7f8234825c90 'struct decimal32' sugar
+|   `-RecordType 0x7f8234825ba0 'decimal32'
+|     `-Record 0x7f8234825b10 ''
+|-FunctionDecl 0x7f8234825fe0 <line:15:1, col:70> col:19 used __decimal32ToNumber 'decNumber *(const decimal32 *, decNumber *)' extern
+| |-ParmVarDecl 0x7f8234825df8 <col:40, col:56> col:57 'const decimal32 *'
+| `-ParmVarDecl 0x7f8234825ec8 <col:59, col:69> col:70 'decNumber *'
+|-FunctionDecl 0x7f82348262c0 <line:16:1, col:55> col:13 invalid __host_to_ieee_32 'void (int, decimal32 *)' extern
+| |-ParmVarDecl 0x7f82348260e0 <col:32, <invalid sloc>> col:42 invalid 'int'
+| `-ParmVarDecl 0x7f82348261a8 <col:44, col:54> col:55 'decimal32 *'
+`-FunctionDecl 0x7f8234826440 <line:18:1, line:25:1> line:19:1 invalid foo 'void (int)'
+  |-ParmVarDecl 0x7f8234826380 <col:6, col:17> col:17 invalid arg 'int'
+  `-CompoundStmt 0x7f82348267b0 <line:20:1, line:25:1>
+    |-DeclStmt 0x7f8234826550 <line:21:3, col:15>
+    | `-VarDecl 0x7f82348264f0 <col:3, col:13> col:13 used dn 'decNumber':'decNumber'
+    |-DeclStmt 0x7f82348265d8 <line:22:3, col:16>
+    | `-VarDecl 0x7f8234826578 <col:3, col:13> col:13 used d32 'decimal32':'decimal32'
+    `-CallExpr 0x7f8234826760 <line:24:3, col:33> 'decNumber *'
+      |-ImplicitCastExpr 0x7f8234826748 <col:3> 'decNumber *(*)(const decimal32 *, decNumber *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8234826638 <col:3> 'decNumber *(const decimal32 *, decNumber *)' Function 0x7f8234825fe0 '__decimal32ToNumber' 'decNumber *(const decimal32 *, decNumber *)'
+      |-ImplicitCastExpr 0x7f8234826798 <col:24, col:25> 'const decimal32 *' <BitCast>
+      | `-UnaryOperator 0x7f8234826688 <col:24, col:25> 'decimal32 *' prefix '&'
+      |   `-DeclRefExpr 0x7f8234826660 <col:25> 'decimal32':'decimal32' lvalue Var 0x7f8234826578 'd32' 'decimal32':'decimal32'
+      `-UnaryOperator 0x7f82348266d0 <col:30, col:31> 'decNumber *' prefix '&'
+        `-DeclRefExpr 0x7f82348266a8 <col:31> 'decNumber':'decNumber' lvalue Var 0x7f82348264f0 'dn' 'decNumber':'decNumber'

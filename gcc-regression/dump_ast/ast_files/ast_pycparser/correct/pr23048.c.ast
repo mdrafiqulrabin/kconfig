@@ -1,0 +1,32 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: mem, [], [], []
+            PtrDecl: []
+              TypeDecl: mem, []
+                IdentifierType: ['unsigned', 'char']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 4
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          While: 
+            BinaryOp: ==
+              ArrayRef: 
+                ID: mem
+                ID: i
+              Constant: int, 0
+            EmptyStatement: 

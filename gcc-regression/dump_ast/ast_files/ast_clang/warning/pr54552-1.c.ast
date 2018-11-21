@@ -1,0 +1,38 @@
+c_files/pr54552-1.c:7:3: warning: expression result unused [-Wunused-value]
+  (double (*)[n])((unsigned char (*)[sizeof (T)]){ 0 });
+  ^              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+TranslationUnitDecl 0x7fb0d80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb0d8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb0d8026740 '__int128'
+|-TypedefDecl 0x7fb0d8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb0d8026760 'unsigned __int128'
+|-TypedefDecl 0x7fb0d8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb0d8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb0d8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb0d8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb0d8026dc0 'char *'
+|   `-BuiltinType 0x7fb0d8026560 'char'
+|-TypedefDecl 0x7fb0d80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb0d8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb0d8026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb0d8026e58 '__va_list_tag'
+`-FunctionDecl 0x7fb0d8825a00 <c_files/pr54552-1.c:1:1, line:8:1> line:2:1 f 'void (void)'
+  `-CompoundStmt 0x7fb0d88260d0 <line:3:1, line:8:1>
+    |-DeclStmt 0x7fb0d8825b88 <line:4:3, col:18>
+    | `-VarDecl 0x7fb0d8825af0 <col:3, col:16> col:12 used n 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7fb0d8825b70 <col:16> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7fb0d8825b50 <col:16> 'int' 10
+    |-DeclStmt 0x7fb0d8825c98 <line:6:3, col:22>
+    | `-TypedefDecl 0x7fb0d8825c40 <col:3, col:21> col:18 referenced T 'double [n]'
+    |   `-VariableArrayType 0x7fb0d8825be0 'double [n]' variably_modified  <col:19, col:21> 
+    |     |-BuiltinType 0x7fb0d80266e0 'double'
+    |     `-ImplicitCastExpr 0x7fb0d8825bc8 <col:20> 'unsigned int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fb0d8825ba0 <col:20> 'unsigned int' lvalue Var 0x7fb0d8825af0 'n' 'unsigned int'
+    `-CStyleCastExpr 0x7fb0d88260a8 <line:7:3, col:55> 'double (*)[n]' <BitCast>
+      `-ImplicitCastExpr 0x7fb0d8826090 <col:18, col:55> 'unsigned char (*)[sizeof(T)]' <LValueToRValue>
+        `-ParenExpr 0x7fb0d8826070 <col:18, col:55> 'unsigned char (*)[sizeof(T)]' lvalue
+          `-CompoundLiteralExpr 0x7fb0d8825ef8 <col:19, col:54> 'unsigned char (*)[sizeof(T)]' lvalue
+            `-InitListExpr 0x7fb0d8825e98 <col:50, col:54> 'unsigned char (*)[sizeof(T)]'
+              `-ImplicitCastExpr 0x7fb0d8825ed8 <col:52> 'unsigned char (*)[sizeof(T)]' <NullToPointer>
+                `-IntegerLiteral 0x7fb0d8825e30 <col:52> 'int' 0

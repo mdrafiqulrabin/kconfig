@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: s, [], [], []
+    PtrDecl: []
+      TypeDecl: s, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], ['static'], ['inline']
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        UnaryOp: sizeof
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __atomic_always_lock_free
+          ExprList: 
+            FuncCall: 
+              ID: foo
+            ID: s
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        TypeDecl: baz, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __atomic_is_lock_free
+          ExprList: 
+            FuncCall: 
+              ID: foo
+            ID: s

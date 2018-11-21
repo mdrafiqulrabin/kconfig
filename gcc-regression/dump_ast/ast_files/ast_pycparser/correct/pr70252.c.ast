@@ -1,0 +1,72 @@
+FileAST: 
+  Decl: a, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 150
+  Decl: b, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 150
+  Decl: c, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: c, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 150
+  Decl: d, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 150
+  Decl: e, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: e, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 150
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        DeclList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+            Constant: int, 92
+        BinaryOp: <=
+          ID: i
+          Constant: int, 141
+        Assignment: +=
+          ID: i
+          Constant: int, 2
+        Compound: 
+          Decl: tmp, [], [], []
+            TypeDecl: tmp, []
+              IdentifierType: ['int']
+            BinaryOp: <=
+              BinaryOp: &&
+                ArrayRef: 
+                  ID: d
+                  ID: i
+                ArrayRef: 
+                  ID: b
+                  ID: i
+              BinaryOp: >
+                ArrayRef: 
+                  ID: a
+                  ID: i
+                ArrayRef: 
+                  ID: c
+                  ID: i
+          Assignment: =
+            ArrayRef: 
+              ID: e
+              ID: i
+            BinaryOp: >>
+              ID: tmp
+              ArrayRef: 
+                ID: b
+                ID: i

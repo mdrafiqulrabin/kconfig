@@ -1,0 +1,95 @@
+TranslationUnitDecl 0x7f8d188264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8d18826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8d18826740 '__int128'
+|-TypedefDecl 0x7f8d18826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8d18826760 'unsigned __int128'
+|-TypedefDecl 0x7f8d18826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8d18826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8d18826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8d18826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8d18826dc0 'char *'
+|   `-BuiltinType 0x7f8d18826560 'char'
+|-TypedefDecl 0x7f8d188270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8d18827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8d18826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8d18826e58 '__va_list_tag'
+|-RecordDecl 0x7f8d18827120 <c_files/pr68417.c:7:9, line:10:1> line:7:9 struct definition
+| |-FieldDecl 0x7f8d19025a00 <line:8:3, col:7> col:7 referenced x 'int'
+| `-FieldDecl 0x7f8d19025a60 <line:9:3, col:7> col:7 referenced y 'int'
+|-TypedefDecl 0x7f8d19025b00 <line:7:1, line:10:3> col:3 referenced Point 'struct Point':'Point'
+| `-ElaboratedType 0x7f8d19025ab0 'struct Point' sugar
+|   `-RecordType 0x7f8d188271b0 'Point'
+|     `-Record 0x7f8d18827120 ''
+`-FunctionDecl 0x7f8d19025ec0 <line:12:1, line:30:1> line:13:1 foo 'void (Point *, Point *, Point *, int *)'
+  |-ParmVarDecl 0x7f8d19025bf8 <col:5, col:12> col:12 used p1 'Point *'
+  |-ParmVarDecl 0x7f8d19025c68 <col:16, col:23> col:23 used p2 'Point *'
+  |-ParmVarDecl 0x7f8d19025cd8 <col:27, col:34> col:34 used p3 'Point *'
+  |-ParmVarDecl 0x7f8d19025d80 <col:38, col:43> col:43 used data 'int *'
+  `-CompoundStmt 0x7f8d19026aa8 <line:14:1, line:30:1>
+    |-DeclStmt 0x7f8d19026140 <line:15:3, col:16>
+    | |-VarDecl 0x7f8d19025fd0 <col:3, col:7> col:7 used m 'int'
+    | |-VarDecl 0x7f8d19026048 <col:3, col:10> col:10 used m1 'int'
+    | `-VarDecl 0x7f8d190260c0 <col:3, col:14> col:14 used m2 'int'
+    |-DeclStmt 0x7f8d190261d0 <line:16:3, col:8>
+    | `-VarDecl 0x7f8d19026170 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7f8d19026a70 <line:18:3, line:29:3>
+      |-BinaryOperator 0x7f8d19026230 <line:18:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f8d190261e8 <col:8> 'int' lvalue Var 0x7f8d19026170 'i' 'int'
+      | `-IntegerLiteral 0x7f8d19026210 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8d190262b8 <col:15, line:5:11> 'int' '<'
+      | |-ImplicitCastExpr 0x7f8d190262a0 <line:18:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f8d19026258 <col:15> 'int' lvalue Var 0x7f8d19026170 'i' 'int'
+      | `-IntegerLiteral 0x7f8d19026280 <line:5:11> 'int' 16
+      |-UnaryOperator 0x7f8d19026308 <line:18:22, col:23> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f8d190262e0 <col:22> 'int' lvalue Var 0x7f8d19026170 'i' 'int'
+      `-CompoundStmt 0x7f8d19026a20 <col:27, line:29:3>
+        |-BinaryOperator 0x7f8d190263d0 <line:19:5, col:14> 'int' '='
+        | |-DeclRefExpr 0x7f8d19026328 <col:5> 'int' lvalue Var 0x7f8d19025fd0 'm' 'int'
+        | `-ImplicitCastExpr 0x7f8d190263b8 <col:9, col:14> 'int' <LValueToRValue>
+        |   `-UnaryOperator 0x7f8d19026398 <col:9, col:14> 'int' lvalue prefix '*'
+        |     `-UnaryOperator 0x7f8d19026378 <col:10, col:14> 'int *' postfix '++'
+        |       `-DeclRefExpr 0x7f8d19026350 <col:10> 'int *' lvalue ParmVar 0x7f8d19025d80 'data' 'int *'
+        |-BinaryOperator 0x7f8d19026518 <line:21:5, col:18> 'int' '='
+        | |-DeclRefExpr 0x7f8d190263f8 <col:5> 'int' lvalue Var 0x7f8d19026048 'm1' 'int'
+        | `-BinaryOperator 0x7f8d190264f0 <col:10, col:18> 'int' '-'
+        |   |-ImplicitCastExpr 0x7f8d190264c0 <col:10, col:14> 'int' <LValueToRValue>
+        |   | `-MemberExpr 0x7f8d19026460 <col:10, col:14> 'int' lvalue ->x 0x7f8d19025a00
+        |   |   `-ImplicitCastExpr 0x7f8d19026448 <col:10> 'Point *' <LValueToRValue>
+        |   |     `-DeclRefExpr 0x7f8d19026420 <col:10> 'Point *' lvalue ParmVar 0x7f8d19025bf8 'p1' 'Point *'
+        |   `-ImplicitCastExpr 0x7f8d190264d8 <col:18> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7f8d19026498 <col:18> 'int' lvalue Var 0x7f8d19025fd0 'm' 'int'
+        |-BinaryOperator 0x7f8d19026660 <line:22:5, col:18> 'int' '='
+        | |-DeclRefExpr 0x7f8d19026540 <col:5> 'int' lvalue Var 0x7f8d190260c0 'm2' 'int'
+        | `-BinaryOperator 0x7f8d19026638 <col:10, col:18> 'int' '+'
+        |   |-ImplicitCastExpr 0x7f8d19026608 <col:10, col:14> 'int' <LValueToRValue>
+        |   | `-MemberExpr 0x7f8d190265a8 <col:10, col:14> 'int' lvalue ->x 0x7f8d19025a00
+        |   |   `-ImplicitCastExpr 0x7f8d19026590 <col:10> 'Point *' <LValueToRValue>
+        |   |     `-DeclRefExpr 0x7f8d19026568 <col:10> 'Point *' lvalue ParmVar 0x7f8d19025c68 'p2' 'Point *'
+        |   `-ImplicitCastExpr 0x7f8d19026620 <col:18> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7f8d190265e0 <col:18> 'int' lvalue Var 0x7f8d19025fd0 'm' 'int'
+        |-BinaryOperator 0x7f8d19026918 <line:24:5, col:38> 'int' '='
+        | |-MemberExpr 0x7f8d190266c8 <col:5, col:9> 'int' lvalue ->y 0x7f8d19025a60
+        | | `-ImplicitCastExpr 0x7f8d190266b0 <col:5> 'Point *' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7f8d19026688 <col:5> 'Point *' lvalue ParmVar 0x7f8d19025cd8 'p3' 'Point *'
+        | `-ConditionalOperator 0x7f8d190268e8 <col:13, col:38> 'int'
+        |   |-ParenExpr 0x7f8d190267a8 <col:13, col:22> 'int'
+        |   | `-BinaryOperator 0x7f8d19026780 <col:14, col:20> 'int' '>='
+        |   |   |-ImplicitCastExpr 0x7f8d19026750 <col:14> 'int' <LValueToRValue>
+        |   |   | `-DeclRefExpr 0x7f8d19026700 <col:14> 'int' lvalue Var 0x7f8d19026048 'm1' 'int'
+        |   |   `-ImplicitCastExpr 0x7f8d19026768 <col:20> 'int' <LValueToRValue>
+        |   |     `-DeclRefExpr 0x7f8d19026728 <col:20> 'int' lvalue Var 0x7f8d190260c0 'm2' 'int'
+        |   |-ImplicitCastExpr 0x7f8d190268b8 <col:26, col:30> 'int' <LValueToRValue>
+        |   | `-MemberExpr 0x7f8d19026808 <col:26, col:30> 'int' lvalue ->y 0x7f8d19025a60
+        |   |   `-ImplicitCastExpr 0x7f8d190267f0 <col:26> 'Point *' <LValueToRValue>
+        |   |     `-DeclRefExpr 0x7f8d190267c8 <col:26> 'Point *' lvalue ParmVar 0x7f8d19025bf8 'p1' 'Point *'
+        |   `-ImplicitCastExpr 0x7f8d190268d0 <col:34, col:38> 'int' <LValueToRValue>
+        |     `-MemberExpr 0x7f8d19026880 <col:34, col:38> 'int' lvalue ->y 0x7f8d19025a60
+        |       `-ImplicitCastExpr 0x7f8d19026868 <col:34> 'Point *' <LValueToRValue>
+        |         `-DeclRefExpr 0x7f8d19026840 <col:34> 'Point *' lvalue ParmVar 0x7f8d19025c68 'p2' 'Point *'
+        |-UnaryOperator 0x7f8d19026968 <line:26:5, col:7> 'Point *' postfix '++'
+        | `-DeclRefExpr 0x7f8d19026940 <col:5> 'Point *' lvalue ParmVar 0x7f8d19025bf8 'p1' 'Point *'
+        |-UnaryOperator 0x7f8d190269b0 <line:27:5, col:7> 'Point *' postfix '++'
+        | `-DeclRefExpr 0x7f8d19026988 <col:5> 'Point *' lvalue ParmVar 0x7f8d19025c68 'p2' 'Point *'
+        `-UnaryOperator 0x7f8d19026a00 <line:28:5, col:7> 'Point *' postfix '++'
+          `-DeclRefExpr 0x7f8d190269d0 <col:5> 'Point *' lvalue ParmVar 0x7f8d19025cd8 'p3' 'Point *'

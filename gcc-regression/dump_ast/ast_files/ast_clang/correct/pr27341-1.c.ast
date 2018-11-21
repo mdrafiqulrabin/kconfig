@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7fe0580264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe058026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe058026740 '__int128'
+|-TypedefDecl 0x7fe058026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe058026760 'unsigned __int128'
+|-TypedefDecl 0x7fe058026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe058026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe058026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe058026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe058026dc0 'char *'
+|   `-BuiltinType 0x7fe058026560 'char'
+|-TypedefDecl 0x7fe0580270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe058027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe058026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe058026e58 '__va_list_tag'
+|-VarDecl 0x7fe058027138 <c_files/pr27341-1.c:1:1, col:15> col:15 used R_NaReal 'double' extern
+`-FunctionDecl 0x7fe058825b80 <line:2:1, line:6:1> line:2:6 z_atan2 'void (_Complex double *, _Complex double *)'
+  |-ParmVarDecl 0x7fe058825a38 <col:15, col:33> col:33 used r '_Complex double *'
+  |-ParmVarDecl 0x7fe058825aa8 <col:36, col:54> col:54 used ccs '_Complex double *'
+  `-CompoundStmt 0x7fe058825e38 <line:3:1, line:6:1>
+    `-IfStmt 0x7fe058825e00 <line:4:5, line:5:23>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe058825cf0 <line:4:9, col:17> 'int' '=='
+      | |-ImplicitCastExpr 0x7fe058825ca8 <col:9, col:10> '_Complex double' <LValueToRValue>
+      | | `-UnaryOperator 0x7fe058825c68 <col:9, col:10> '_Complex double' lvalue prefix '*'
+      | |   `-ImplicitCastExpr 0x7fe058825c50 <col:10> '_Complex double *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7fe058825c28 <col:10> '_Complex double *' lvalue ParmVar 0x7fe058825aa8 'ccs' '_Complex double *'
+      | `-ImplicitCastExpr 0x7fe058825cd8 <col:17> '_Complex double' <FloatingRealToComplex>
+      |   `-ImplicitCastExpr 0x7fe058825cc0 <col:17> 'double' <IntegralToFloating>
+      |     `-IntegerLiteral 0x7fe058825c88 <col:17> 'int' 0
+      |-BinaryOperator 0x7fe058825dd8 <line:5:9, col:23> 'double' '='
+      | |-UnaryOperator 0x7fe058825d78 <col:9, col:19> 'double' lvalue prefix '__imag'
+      | | `-UnaryOperator 0x7fe058825d58 <col:18, col:19> '_Complex double' lvalue prefix '*'
+      | |   `-ImplicitCastExpr 0x7fe058825d40 <col:19> '_Complex double *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7fe058825d18 <col:19> '_Complex double *' lvalue ParmVar 0x7fe058825a38 'r' '_Complex double *'
+      | `-ImplicitCastExpr 0x7fe058825dc0 <col:23> 'double' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe058825d98 <col:23> 'double' lvalue Var 0x7fe058027138 'R_NaReal' 'double'
+      `-<<<NULL>>>

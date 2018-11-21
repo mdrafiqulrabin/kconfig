@@ -1,0 +1,45 @@
+c_files/pr43564.c:9:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr43564.c:10:17: warning: unknown attribute 'optimize' ignored [-Wunknown-attributes]
+__attribute__ ((optimize ("O2")))
+                ^
+2 warnings generated.
+TranslationUnitDecl 0x7fe3340264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe334026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe334026740 '__int128'
+|-TypedefDecl 0x7fe334026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe334026760 'unsigned __int128'
+|-TypedefDecl 0x7fe334026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe334026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe334026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe334026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe334026dc0 'char *'
+|   `-BuiltinType 0x7fe334026560 'char'
+|-TypedefDecl 0x7fe3340270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe334027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe334026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe334026e58 '__va_list_tag'
+|-FunctionDecl 0x7fe334826a30 <c_files/pr43564.c:4:1, line:9:1> line:5:10 used __clz 'unsigned int (unsigned int)' static inline
+| |-ParmVarDecl 0x7fe334027138 <col:17, col:26> col:26 used input 'unsigned int'
+| |-CompoundStmt 0x7fe334826e10 <line:6:1, line:9:1>
+| | |-DeclStmt 0x7fe334826bd0 <line:7:3, col:18>
+| | | `-VarDecl 0x7fe334826b70 <col:3, col:12> col:12 used output 'unsigned int'
+| | `-GCCAsmStmt 0x7fe334826d98 <line:8:3, col:63>
+| |   |-DeclRefExpr 0x7fe334826cc8 <col:44> 'unsigned int' lvalue Var 0x7fe334826b70 'output' 'unsigned int'
+| |   `-ImplicitCastExpr 0x7fe334826d80 <col:57> 'unsigned int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fe334826d58 <col:57> 'unsigned int' lvalue ParmVar 0x7fe334027138 'input' 'unsigned int'
+| `-AlwaysInlineAttr 0x7fe334826ad0 <line:4:31> always_inline
+`-FunctionDecl 0x7fe334826eb8 <line:10:1, line:16:1> line:11:6 foo 'void ()'
+  `-CompoundStmt 0x7fe3348271a0 <line:12:1, line:16:1>
+    |-DeclStmt 0x7fe334826fc8 <line:13:3, col:13>
+    | `-VarDecl 0x7fe334826f68 <col:3, col:12> col:12 used a 'unsigned int'
+    |-DeclStmt 0x7fe334827058 <line:14:3, col:13>
+    | `-VarDecl 0x7fe334826ff8 <col:3, col:12> col:12 used b 'unsigned int'
+    `-BinaryOperator 0x7fe334827178 <line:15:3, col:15> 'unsigned int' '='
+      |-DeclRefExpr 0x7fe334827070 <col:3> 'unsigned int' lvalue Var 0x7fe334826f68 'a' 'unsigned int'
+      `-CallExpr 0x7fe334827130 <col:7, col:15> 'unsigned int'
+        |-ImplicitCastExpr 0x7fe334827118 <col:7> 'unsigned int (*)(unsigned int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fe334827098 <col:7> 'unsigned int (unsigned int)' Function 0x7fe334826a30 '__clz' 'unsigned int (unsigned int)'
+        `-ImplicitCastExpr 0x7fe334827160 <col:14> 'unsigned int' <LValueToRValue>
+          `-DeclRefExpr 0x7fe3348270c0 <col:14> 'unsigned int' lvalue Var 0x7fe334826ff8 'b' 'unsigned int'

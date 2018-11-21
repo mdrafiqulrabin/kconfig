@@ -1,0 +1,65 @@
+c_files/pr80764.c:14:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7fbaf68264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbaf6826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbaf6826740 '__int128'
+|-TypedefDecl 0x7fbaf6826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbaf6826760 'unsigned __int128'
+|-TypedefDecl 0x7fbaf6826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbaf6826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbaf6826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbaf6826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbaf6826dc0 'char *'
+|   `-BuiltinType 0x7fbaf6826560 'char'
+|-TypedefDecl 0x7fbaf68270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbaf6827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbaf6826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbaf6826e58 '__va_list_tag'
+|-VarDecl 0x7fbaf6827138 <c_files/pr80764.c:3:1, col:5> col:5 used b 'int'
+|-VarDecl 0x7fbaf7025a00 <col:1, col:8> col:8 used d 'int'
+|-VarDecl 0x7fbaf7025a78 <col:1, col:11> col:11 used f 'int'
+|-VarDecl 0x7fbaf7025af0 <col:1, col:14> col:14 used h 'int'
+|-VarDecl 0x7fbaf7025b88 <line:4:1, col:6> col:6 used e 'char'
+|-FunctionDecl 0x7fbaf7025c40 <line:5:1, col:9> col:5 used fn1 'int ()'
+|-FunctionDecl 0x7fbaf7025d00 <line:6:1, col:28> col:5 main 'int ()'
+| `-CompoundStmt 0x7fbaf7025e40 <col:12, col:28>
+|   `-ReturnStmt 0x7fbaf7025e28 <col:14, col:25>
+|     `-CallExpr 0x7fbaf7025e00 <col:21, col:25> 'int'
+|       `-ImplicitCastExpr 0x7fbaf7025de8 <col:21> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7fbaf7025d98 <col:21> 'int ()' Function 0x7fbaf7025c40 'fn1' 'int ()'
+`-FunctionDecl 0x7fbaf7025f48 prev 0x7fbaf7025c40 <line:7:1, line:14:1> line:7:5 used fn1 'int (int)'
+  |-ParmVarDecl 0x7fbaf7025e78 <col:9, col:13> col:13 p1 'int'
+  `-CompoundStmt 0x7fbaf7026340 <col:17, line:14:1>
+    `-ForStmt 0x7fbaf7026308 <line:8:5, line:13:7>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fbaf7026010 <line:8:12> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fbaf7025fe8 <col:12> 'int' lvalue Var 0x7fbaf7025a00 'd' 'int'
+      |-<<<NULL>>>
+      `-ForStmt 0x7fbaf70262d0 <line:9:7, line:13:7>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-BinaryOperator 0x7fbaf70260a0 <line:9:14, col:18> 'int' '<'
+        | |-ImplicitCastExpr 0x7fbaf7026088 <col:14> 'int' <IntegralCast>
+        | | `-ImplicitCastExpr 0x7fbaf7026070 <col:14> 'char' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fbaf7026028 <col:14> 'char' lvalue Var 0x7fbaf7025b88 'e' 'char'
+        | `-IntegerLiteral 0x7fbaf7026050 <col:18> 'int' 3
+        |-<<<NULL>>>
+        `-CompoundStmt 0x7fbaf70262a8 <col:22, line:13:7>
+          |-ForStmt 0x7fbaf7026218 <line:10:4, line:11:15>
+          | |-<<<NULL>>>
+          | |-<<<NULL>>>
+          | |-ImplicitCastExpr 0x7fbaf70260f0 <line:10:11> 'int' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fbaf70260c8 <col:11> 'int' lvalue Var 0x7fbaf7025af0 'h' 'int'
+          | |-<<<NULL>>>
+          | `-BinaryOperator 0x7fbaf70261f0 <line:11:6, col:15> 'int' '='
+          |   |-DeclRefExpr 0x7fbaf7026108 <col:6> 'int' lvalue Var 0x7fbaf6827138 'b' 'int'
+          |   `-CallExpr 0x7fbaf70261c0 <col:10, col:15> 'int'
+          |     |-ImplicitCastExpr 0x7fbaf70261a8 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+          |     | `-DeclRefExpr 0x7fbaf7026130 <col:10> 'int (int)' Function 0x7fbaf7025f48 'fn1' 'int (int)'
+          |     `-IntegerLiteral 0x7fbaf7026158 <col:14> 'int' 0
+          `-ReturnStmt 0x7fbaf7026290 <line:12:4, col:11>
+            `-ImplicitCastExpr 0x7fbaf7026278 <col:11> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7fbaf7026250 <col:11> 'int' lvalue Var 0x7fbaf7025a78 'f' 'int'

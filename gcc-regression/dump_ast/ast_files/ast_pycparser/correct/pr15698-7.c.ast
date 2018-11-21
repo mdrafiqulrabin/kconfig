@@ -1,0 +1,29 @@
+FileAST: 
+  Decl: strchr, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      PtrDecl: []
+        TypeDecl: strchr, []
+          IdentifierType: ['char']
+  FuncDef: 
+    Decl: strchr, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        PtrDecl: []
+          TypeDecl: strchr, []
+            IdentifierType: ['char']
+    Compound: 
+      Return: 
+        Constant: int, 0
+    Decl: a, ['const'], [], []
+      PtrDecl: []
+        TypeDecl: a, ['const']
+          IdentifierType: ['char']

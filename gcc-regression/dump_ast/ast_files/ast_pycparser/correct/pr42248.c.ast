@@ -1,0 +1,80 @@
+FileAST: 
+  Typedef: Scf10, [], ['typedef']
+    TypeDecl: Scf10, []
+      Struct: None
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['_Complex', 'double']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['_Complex', 'double']
+  Decl: g1s, [], [], []
+    TypeDecl: g1s, []
+      IdentifierType: ['Scf10']
+  FuncDef: 
+    Decl: check, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['Scf10']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['_Complex', 'double']
+        TypeDecl: check, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            ID: x
+            ID: a
+          ID: y
+        FuncCall: 
+          ID: __builtin_abort
+  FuncDef: 
+    Decl: init, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['Scf10']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['_Complex', 'double']
+        TypeDecl: init, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: p
+          ID: a
+        ID: y
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: init
+        ExprList: 
+          UnaryOp: &
+            ID: g1s
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['_Complex', 'double']
+            Constant: int, 1
+      FuncCall: 
+        ID: check
+        ExprList: 
+          ID: g1s
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['_Complex', 'double']
+            Constant: int, 1
+      Return: 
+        Constant: int, 0

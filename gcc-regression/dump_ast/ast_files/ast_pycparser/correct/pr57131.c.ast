@@ -1,0 +1,61 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x1, ['volatile'], [], []
+        TypeDecl: x1, ['volatile']
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: x2, ['volatile'], [], []
+        TypeDecl: x2, ['volatile']
+          IdentifierType: ['long', 'long']
+        Constant: int, 0
+      Decl: x3, ['volatile'], [], []
+        TypeDecl: x3, ['volatile']
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: x4, ['volatile'], [], []
+        TypeDecl: x4, ['volatile']
+          IdentifierType: ['int']
+        Constant: int, 1
+      Decl: x5, ['volatile'], [], []
+        TypeDecl: x5, ['volatile']
+          IdentifierType: ['int']
+        Constant: int, 1
+      Decl: x6, ['volatile'], [], []
+        TypeDecl: x6, ['volatile']
+          IdentifierType: ['long', 'long']
+        Constant: int, 1
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['long', 'long']
+        BinaryOp: +
+          BinaryOp: /
+            BinaryOp: *
+              ID: x1
+              BinaryOp: <<
+                ID: x2
+                ID: x3
+            BinaryOp: *
+              ID: x4
+              ID: x5
+          ID: x6
+      If: 
+        BinaryOp: !=
+          ID: t
+          Constant: int, 1
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

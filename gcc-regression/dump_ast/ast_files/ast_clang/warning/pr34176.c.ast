@@ -1,0 +1,144 @@
+c_files/pr34176.c:33:10: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+  static count = 0;
+  ~~~~~~ ^
+1 warning generated.
+TranslationUnitDecl 0x7fd25e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd25e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd25e826740 '__int128'
+|-TypedefDecl 0x7fd25e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd25e826760 'unsigned __int128'
+|-TypedefDecl 0x7fd25e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd25e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd25e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd25e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd25e826dc0 'char *'
+|   `-BuiltinType 0x7fd25e826560 'char'
+|-TypedefDecl 0x7fd25e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd25e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd25e826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd25e826e58 '__va_list_tag'
+|-TypedefDecl 0x7fd25e827138 <c_files/pr34176.c:2:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fd25e826680 'unsigned long'
+|-TypedefDecl 0x7fd25e8271a8 <line:3:1, col:22> col:22 referenced index_ty 'unsigned int'
+| `-BuiltinType 0x7fd25e826660 'unsigned int'
+|-TypedefDecl 0x7fd25f025a88 <line:4:1, col:19> col:19 index_list_ty 'index_ty *'
+| `-PointerType 0x7fd25f025a50 'index_ty *'
+|   `-TypedefType 0x7fd25f025a00 'index_ty' sugar
+|     |-Typedef 0x7fd25e8271a8 'index_ty'
+|     `-BuiltinType 0x7fd25e826660 'unsigned int'
+|-RecordDecl 0x7fd25f025ae0 <line:6:1, line:10:1> line:6:8 struct mult_index definition
+| |-FieldDecl 0x7fd25f025ba0 <line:8:3, col:12> col:12 index 'index_ty':'unsigned int'
+| `-FieldDecl 0x7fd25f025c00 <line:9:3, col:16> col:16 count 'unsigned int'
+|-RecordDecl 0x7fd25f025c48 <line:12:1, line:20:1> line:12:8 struct mult_index_list definition
+| |-FieldDecl 0x7fd25f025da0 <line:14:3, col:22> col:22 item 'struct mult_index *'
+| |-FieldDecl 0x7fd25f025e20 <line:15:3, col:10> col:10 nitems 'size_t':'unsigned long'
+| |-FieldDecl 0x7fd25f025e78 <line:16:3, col:10> col:10 nitems_max 'size_t':'unsigned long'
+| |-FieldDecl 0x7fd25f025ee8 <line:18:3, col:22> col:22 item2 'struct mult_index *'
+| `-FieldDecl 0x7fd25f025f40 <line:19:3, col:10> col:10 nitems2_max 'size_t':'unsigned long'
+|-FunctionDecl 0x7fd25f026108 <line:22:1, line:27:1> line:23:1 used hash_find_entry 'int (size_t *)'
+| |-ParmVarDecl 0x7fd25f025ff8 <col:18, col:26> col:26 used result 'size_t *'
+| |-CompoundStmt 0x7fd25f026328 <line:24:1, line:27:1>
+| | |-BinaryOperator 0x7fd25f0262c8 <line:25:5, col:15> 'size_t':'unsigned long' '='
+| | | |-UnaryOperator 0x7fd25f026270 <col:5, col:6> 'size_t':'unsigned long' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7fd25f026258 <col:6> 'size_t *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fd25f026230 <col:6> 'size_t *' lvalue ParmVar 0x7fd25f025ff8 'result' 'size_t *'
+| | | `-ImplicitCastExpr 0x7fd25f0262b0 <col:15> 'size_t':'unsigned long' <IntegralCast>
+| | |   `-IntegerLiteral 0x7fd25f026290 <col:15> 'int' 2
+| | `-ReturnStmt 0x7fd25f026310 <line:26:5, col:12>
+| |   `-IntegerLiteral 0x7fd25f0262f0 <col:12> 'int' 0
+| `-NoInlineAttr 0x7fd25f0261a8 <line:22:20>
+|-FunctionDecl 0x7fd25f026440 <line:29:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd25f0264d8 prev 0x7fd25f026440 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd25f026698 <line:30:1, line:37:1> line:31:1 used foo 'struct mult_index *(size_t)'
+| |-ParmVarDecl 0x7fd25f026580 <col:6, col:13> col:13 n 'size_t':'unsigned long'
+| |-CompoundStmt 0x7fd25f0269e0 <line:32:1, line:37:1>
+| | |-DeclStmt 0x7fd25f026818 <line:33:3, col:19>
+| | | `-VarDecl 0x7fd25f026798 <col:3, col:18> col:10 used count 'int' static cinit
+| | |   `-IntegerLiteral 0x7fd25f0267f8 <col:18> 'int' 0
+| | |-IfStmt 0x7fd25f026958 <line:34:3, line:35:12>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fd25f026898 <line:34:7, col:17> 'int' '>'
+| | | | |-UnaryOperator 0x7fd25f026858 <col:7, col:12> 'int' postfix '++'
+| | | | | `-DeclRefExpr 0x7fd25f026830 <col:7> 'int' lvalue Var 0x7fd25f026798 'count' 'int'
+| | | | `-IntegerLiteral 0x7fd25f026878 <col:17> 'int' 0
+| | | |-CallExpr 0x7fd25f026930 <line:35:5, col:12> 'void'
+| | | | `-ImplicitCastExpr 0x7fd25f026918 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| | | |   `-DeclRefExpr 0x7fd25f0268c0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fd25f0264d8 'abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7fd25f0269c8 <line:36:3, col:10>
+| |   `-ImplicitCastExpr 0x7fd25f0269b0 <col:10> 'struct mult_index *' <NullToPointer>
+| |     `-IntegerLiteral 0x7fd25f026990 <col:10> 'int' 0
+| `-NoInlineAttr 0x7fd25f026738 <line:30:36>
+`-FunctionDecl 0x7fd25f027ae8 <line:39:1, line:68:1> line:40:1 main 'int (void)'
+  `-CompoundStmt 0x7fd25f028720 <line:41:1, line:68:1>
+    |-DeclStmt 0x7fd25f027c50 <line:42:5, col:22>
+    | `-VarDecl 0x7fd25f027bb8 <col:5, col:21> col:12 used nitems 'size_t':'unsigned long' cinit
+    |   `-ImplicitCastExpr 0x7fd25f027c38 <col:21> 'size_t':'unsigned long' <IntegralCast>
+    |     `-IntegerLiteral 0x7fd25f027c18 <col:21> 'int' 0
+    |-ForStmt 0x7fd25f0286b0 <line:44:5, line:65:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | `-CompoundStmt 0x7fd25f028680 <line:45:5, line:65:5>
+    |   |-DeclStmt 0x7fd25f027cd8 <line:46:9, col:20>
+    |   | `-VarDecl 0x7fd25f027c78 <col:9, col:16> col:16 used list 'size_t':'unsigned long'
+    |   |-CallExpr 0x7fd25f027dd0 <line:48:9, col:31> 'int'
+    |   | |-ImplicitCastExpr 0x7fd25f027db8 <col:9> 'int (*)(size_t *)' <FunctionToPointerDecay>
+    |   | | `-DeclRefExpr 0x7fd25f027cf0 <col:9> 'int (size_t *)' Function 0x7fd25f026108 'hash_find_entry' 'int (size_t *)'
+    |   | `-UnaryOperator 0x7fd25f027d40 <col:26, col:27> 'size_t *' prefix '&'
+    |   |   `-DeclRefExpr 0x7fd25f027d18 <col:27> 'size_t':'unsigned long' lvalue Var 0x7fd25f027c78 'list' 'size_t':'unsigned long'
+    |   `-CompoundStmt 0x7fd25f028620 <line:49:9, line:64:9>
+    |     |-DeclStmt 0x7fd25f027eb0 <line:50:13, col:31>
+    |     | `-VarDecl 0x7fd25f027e10 <col:13, col:27> col:20 used len2 'size_t':'unsigned long' cinit
+    |     |   `-ImplicitCastExpr 0x7fd25f027e98 <col:27> 'size_t':'unsigned long' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7fd25f027e70 <col:27> 'size_t':'unsigned long' lvalue Var 0x7fd25f027c78 'list' 'size_t':'unsigned long'
+    |     |-DeclStmt 0x7fd25f027f50 <line:51:13, col:39>
+    |     | `-VarDecl 0x7fd25f027ef0 <col:13, col:32> col:32 used destptr 'struct mult_index *'
+    |     |-DeclStmt 0x7fd25f027ff0 <line:52:13, col:36>
+    |     | `-VarDecl 0x7fd25f027f90 <col:13, col:32> col:32 used dest 'struct mult_index *'
+    |     |-DeclStmt 0x7fd25f028120 <line:53:13, col:44>
+    |     | `-VarDecl 0x7fd25f028018 <col:13, col:40> col:20 used new_max 'size_t':'unsigned long' cinit
+    |     |   `-BinaryOperator 0x7fd25f0280f8 <col:31, col:40> 'unsigned long' '+'
+    |     |     |-ImplicitCastExpr 0x7fd25f0280c8 <col:31> 'size_t':'unsigned long' <LValueToRValue>
+    |     |     | `-DeclRefExpr 0x7fd25f028078 <col:31> 'size_t':'unsigned long' lvalue Var 0x7fd25f027bb8 'nitems' 'size_t':'unsigned long'
+    |     |     `-ImplicitCastExpr 0x7fd25f0280e0 <col:40> 'size_t':'unsigned long' <LValueToRValue>
+    |     |       `-DeclRefExpr 0x7fd25f0280a0 <col:40> 'size_t':'unsigned long' lvalue Var 0x7fd25f027e10 'len2' 'size_t':'unsigned long'
+    |     |-IfStmt 0x7fd25f0281e8 <line:55:13, line:56:17>
+    |     | |-<<<NULL>>>
+    |     | |-<<<NULL>>>
+    |     | |-BinaryOperator 0x7fd25f0281b8 <line:55:17, col:28> 'int' '!='
+    |     | | |-ImplicitCastExpr 0x7fd25f028188 <col:17> 'size_t':'unsigned long' <LValueToRValue>
+    |     | | | `-DeclRefExpr 0x7fd25f028138 <col:17> 'size_t':'unsigned long' lvalue Var 0x7fd25f028018 'new_max' 'size_t':'unsigned long'
+    |     | | `-ImplicitCastExpr 0x7fd25f0281a0 <col:28> 'size_t':'unsigned long' <LValueToRValue>
+    |     | |   `-DeclRefExpr 0x7fd25f028160 <col:28> 'size_t':'unsigned long' lvalue Var 0x7fd25f027e10 'len2' 'size_t':'unsigned long'
+    |     | |-BreakStmt 0x7fd25f0281e0 <line:56:17>
+    |     | `-<<<NULL>>>
+    |     |-BinaryOperator 0x7fd25f028358 <line:57:13, col:32> 'struct mult_index *' '='
+    |     | |-DeclRefExpr 0x7fd25f028220 <col:13> 'struct mult_index *' lvalue Var 0x7fd25f027f90 'dest' 'struct mult_index *'
+    |     | `-CallExpr 0x7fd25f028310 <col:20, col:32> 'struct mult_index *'
+    |     |   |-ImplicitCastExpr 0x7fd25f0282f8 <col:20> 'struct mult_index *(*)(size_t)' <FunctionToPointerDecay>
+    |     |   | `-DeclRefExpr 0x7fd25f028248 <col:20> 'struct mult_index *(size_t)' Function 0x7fd25f026698 'foo' 'struct mult_index *(size_t)'
+    |     |   `-ImplicitCastExpr 0x7fd25f028340 <col:25> 'size_t':'unsigned long' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7fd25f028270 <col:25> 'size_t':'unsigned long' lvalue Var 0x7fd25f028018 'new_max' 'size_t':'unsigned long'
+    |     |-BinaryOperator 0x7fd25f0283e8 <line:59:13, col:23> 'struct mult_index *' '='
+    |     | |-DeclRefExpr 0x7fd25f028380 <col:13> 'struct mult_index *' lvalue Var 0x7fd25f027ef0 'destptr' 'struct mult_index *'
+    |     | `-ImplicitCastExpr 0x7fd25f0283d0 <col:23> 'struct mult_index *' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fd25f0283a8 <col:23> 'struct mult_index *' lvalue Var 0x7fd25f027f90 'dest' 'struct mult_index *'
+    |     |-WhileStmt 0x7fd25f0284a0 <line:60:13, line:61:24>
+    |     | |-<<<NULL>>>
+    |     | |-UnaryOperator 0x7fd25f028438 <line:60:20, col:24> 'size_t':'unsigned long' postfix '--'
+    |     | | `-DeclRefExpr 0x7fd25f028410 <col:20> 'size_t':'unsigned long' lvalue Var 0x7fd25f027e10 'len2' 'size_t':'unsigned long'
+    |     | `-UnaryOperator 0x7fd25f028480 <line:61:17, col:24> 'struct mult_index *' postfix '++'
+    |     |   `-DeclRefExpr 0x7fd25f028458 <col:17> 'struct mult_index *' lvalue Var 0x7fd25f027ef0 'destptr' 'struct mult_index *'
+    |     `-BinaryOperator 0x7fd25f0285f8 <line:63:13, col:32> 'size_t':'unsigned long' '='
+    |       |-DeclRefExpr 0x7fd25f0284c0 <col:13> 'size_t':'unsigned long' lvalue Var 0x7fd25f027bb8 'nitems' 'size_t':'unsigned long'
+    |       `-ImplicitCastExpr 0x7fd25f0285e0 <col:22, col:32> 'size_t':'unsigned long' <IntegralCast>
+    |         `-BinaryOperator 0x7fd25f0285b8 <col:22, col:32> 'long' '-'
+    |           |-ImplicitCastExpr 0x7fd25f028538 <col:22> 'struct mult_index *' <LValueToRValue>
+    |           | `-DeclRefExpr 0x7fd25f0284e8 <col:22> 'struct mult_index *' lvalue Var 0x7fd25f027ef0 'destptr' 'struct mult_index *'
+    |           `-ImplicitCastExpr 0x7fd25f028550 <col:32> 'struct mult_index *' <LValueToRValue>
+    |             `-DeclRefExpr 0x7fd25f028510 <col:32> 'struct mult_index *' lvalue Var 0x7fd25f027f90 'dest' 'struct mult_index *'
+    `-ReturnStmt 0x7fd25f028708 <line:67:5, col:12>
+      `-IntegerLiteral 0x7fd25f0286e8 <col:12> 'int' 0

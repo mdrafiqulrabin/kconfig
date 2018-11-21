@@ -1,0 +1,87 @@
+FileAST: 
+  Decl: F, [], [], []
+    ArrayDecl: []
+      TypeDecl: F, []
+        IdentifierType: ['double']
+      Constant: int, 2
+    InitList: 
+      Constant: float, 0.
+      Constant: float, 0.
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['double']
+    Constant: float, 0.
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: E, [], [], []
+        TypeDecl: E, []
+          IdentifierType: ['double']
+      Decl: W, [], [], []
+        TypeDecl: W, []
+          IdentifierType: ['double']
+      Decl: P, [], [], []
+        TypeDecl: P, []
+          IdentifierType: ['double']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']
+      Decl: Mask, [], [], []
+        TypeDecl: Mask, []
+          IdentifierType: ['unsigned', 'short', 'int']
+      Assignment: =
+        ID: W
+        Constant: float, 1.
+      Assignment: =
+        ID: d
+        BinaryOp: *
+          Constant: float, 2.
+          ID: e
+      Assignment: =
+        ID: E
+        BinaryOp: -
+          Constant: float, 1.
+          ID: d
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 2
+        UnaryOp: p++
+          ID: i
+        If: 
+          BinaryOp: >
+            ID: d
+            Constant: float, 0.01
+          Compound: 
+            Assignment: =
+              ID: P
+              TernaryOp: 
+                BinaryOp: <
+                  ID: W
+                  ID: E
+                BinaryOp: /
+                  BinaryOp: -
+                    ID: W
+                    ID: E
+                  ID: d
+                BinaryOp: /
+                  BinaryOp: -
+                    ID: E
+                    ID: W
+                  ID: d
+            Assignment: +=
+              ArrayRef: 
+                ID: F
+                ID: i
+              ID: P
+      Return: 
+        Constant: int, 0

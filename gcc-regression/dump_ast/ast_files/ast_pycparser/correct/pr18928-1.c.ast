@@ -1,0 +1,61 @@
+FileAST: 
+  FuncDef: 
+    Decl: toHex, ['const'], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              IdentifierType: ['unsigned', 'short']
+        PtrDecl: []
+          TypeDecl: toHex, ['const']
+            IdentifierType: ['char']
+    Compound: 
+      Decl: hexVal, [], ['static'], []
+        ArrayDecl: []
+          TypeDecl: hexVal, []
+            IdentifierType: ['char']
+          Constant: int, 5
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        Constant: int, 3
+      While: 
+        BinaryOp: >=
+          ID: i
+          Constant: int, 0
+        Compound: 
+          Decl: hex, [], [], []
+            TypeDecl: hex, []
+              IdentifierType: ['unsigned', 'short']
+            BinaryOp: &
+              ID: u
+              Constant: int, 0x000f
+          If: 
+            BinaryOp: <
+              ID: hex
+              Constant: int, 0x0a
+            Assignment: =
+              ArrayRef: 
+                ID: hexVal
+                ID: i
+              BinaryOp: +
+                Constant: char, '0'
+                ID: hex
+            Assignment: =
+              ArrayRef: 
+                ID: hexVal
+                ID: i
+              BinaryOp: +
+                Constant: char, 'A'
+                BinaryOp: -
+                  ID: hex
+                  Constant: int, 0x0a
+          UnaryOp: p--
+            ID: i
+      Assignment: =
+        ArrayRef: 
+          ID: hexVal
+          Constant: int, 4
+        Constant: char, '\0'
+      Return: 
+        ID: hexVal

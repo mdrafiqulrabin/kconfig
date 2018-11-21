@@ -1,0 +1,202 @@
+FileAST: 
+  Typedef: int32_t, [], ['typedef']
+    TypeDecl: int32_t, []
+      IdentifierType: ['int']
+  Decl: init_jk, ['const'], ['static'], []
+    ArrayDecl: []
+      TypeDecl: init_jk, ['const']
+        IdentifierType: ['int']
+    InitList: 
+      Constant: int, 2
+      Constant: int, 3
+      Constant: int, 4
+      Constant: int, 6
+  FuncDef: 
+    Decl: __kernel_rem_pio2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['double']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['double']
+          Decl: e0, [], [], []
+            TypeDecl: e0, []
+              IdentifierType: ['int']
+          Decl: nx, [], [], []
+            TypeDecl: nx, []
+              IdentifierType: ['int']
+          Decl: prec, [], [], []
+            TypeDecl: prec, []
+              IdentifierType: ['int']
+          Decl: ipio2, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: ipio2, ['const']
+                IdentifierType: ['int32_t']
+        TypeDecl: __kernel_rem_pio2, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: jz, [], [], []
+        TypeDecl: jz, []
+          IdentifierType: ['int32_t']
+      Decl: jx, [], [], []
+        TypeDecl: jx, []
+          IdentifierType: ['int32_t']
+      Decl: jv, [], [], []
+        TypeDecl: jv, []
+          IdentifierType: ['int32_t']
+      Decl: jp, [], [], []
+        TypeDecl: jp, []
+          IdentifierType: ['int32_t']
+      Decl: jk, [], [], []
+        TypeDecl: jk, []
+          IdentifierType: ['int32_t']
+      Decl: carry, [], [], []
+        TypeDecl: carry, []
+          IdentifierType: ['int32_t']
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int32_t']
+      Decl: iq, [], [], []
+        ArrayDecl: []
+          TypeDecl: iq, []
+            IdentifierType: ['int32_t']
+          Constant: int, 20
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int32_t']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int32_t']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int32_t']
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          IdentifierType: ['int32_t']
+      Decl: q0, [], [], []
+        TypeDecl: q0, []
+          IdentifierType: ['int32_t']
+      Decl: ih, [], [], []
+        TypeDecl: ih, []
+          IdentifierType: ['int32_t']
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['double']
+      Decl: fw, [], [], []
+        TypeDecl: fw, []
+          IdentifierType: ['double']
+      Decl: f, [], [], []
+        ArrayDecl: []
+          TypeDecl: f, []
+            IdentifierType: ['double']
+          Constant: int, 20
+      Decl: fq, [], [], []
+        ArrayDecl: []
+          TypeDecl: fq, []
+            IdentifierType: ['double']
+          Constant: int, 20
+      Decl: q, [], [], []
+        ArrayDecl: []
+          TypeDecl: q, []
+            IdentifierType: ['double']
+          Constant: int, 20
+      Assignment: =
+        ID: jk
+        ArrayRef: 
+          ID: init_jk
+          ID: prec
+      Assignment: =
+        ID: jp
+        ID: jk
+      Assignment: =
+        ID: jx
+        BinaryOp: -
+          ID: nx
+          Constant: int, 1
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <=
+          ID: i
+          ID: jk
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          For: 
+            ExprList: 
+              Assignment: =
+                ID: j
+                Constant: int, 0
+              Assignment: =
+                ID: fw
+                Constant: float, 0.0
+            BinaryOp: <=
+              ID: j
+              ID: jx
+            UnaryOp: p++
+              ID: j
+            Assignment: +=
+              ID: fw
+              BinaryOp: *
+                ArrayRef: 
+                  ID: x
+                  ID: j
+                ArrayRef: 
+                  ID: f
+                  BinaryOp: -
+                    BinaryOp: +
+                      ID: jx
+                      ID: i
+                    ID: j
+          Assignment: =
+            ArrayRef: 
+              ID: q
+              ID: i
+            ID: fw
+      For: 
+        ExprList: 
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          Assignment: =
+            ID: j
+            ID: jz
+          Assignment: =
+            ID: z
+            ArrayRef: 
+              ID: q
+              ID: jz
+        BinaryOp: >
+          ID: j
+          Constant: int, 0
+        ExprList: 
+          UnaryOp: p++
+            ID: i
+          UnaryOp: p--
+            ID: j
+        Compound: 
+          Assignment: =
+            ID: z
+            BinaryOp: +
+              ArrayRef: 
+                ID: q
+                BinaryOp: -
+                  ID: j
+                  Constant: int, 1
+              ID: fw
+      Assignment: =
+        ID: n
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int32_t']
+          ID: z
+      Return: 
+        BinaryOp: &
+          ID: n
+          Constant: int, 7

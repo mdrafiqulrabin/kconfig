@@ -1,0 +1,184 @@
+TranslationUnitDecl 0x7faf298264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faf29826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faf29826740 '__int128'
+|-TypedefDecl 0x7faf29826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faf29826760 'unsigned __int128'
+|-TypedefDecl 0x7faf29826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faf29826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faf29826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faf29826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faf29826dc0 'char *'
+|   `-BuiltinType 0x7faf29826560 'char'
+|-TypedefDecl 0x7faf298270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faf29827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faf29826ee0 'struct __va_list_tag'
+|     `-Record 0x7faf29826e58 '__va_list_tag'
+|-RecordDecl 0x7faf29827120 <c_files/pr36244.c:5:1, line:9:1> line:5:8 struct p7prior_s definition
+| |-FieldDecl 0x7faf2a025a00 <line:6:3, col:9> col:9 referenced mnum 'int'
+| |-FieldDecl 0x7faf2a025ad0 <line:7:3, col:15> col:9 referenced mq 'float [200]'
+| `-FieldDecl 0x7faf2a025c10 <line:8:3, col:18> col:9 referenced m 'float [200][20]'
+|-FunctionDecl 0x7faf2a025df8 <line:11:1, col:43> col:19 default_amino_prior 'struct p7prior_s *(void)'
+|-FunctionDecl 0x7faf2a025f78 <line:12:1, col:36> col:19 used P7AllocPrior 'struct p7prior_s *(void)'
+`-FunctionDecl 0x7faf2a0260b8 prev 0x7faf2a025df8 <line:14:1, line:39:1> line:15:1 default_amino_prior 'struct p7prior_s *(void)'
+  `-CompoundStmt 0x7faf2a027e20 <line:16:1, line:39:1>
+    |-DeclStmt 0x7faf2a0261d8 <line:17:3, col:24>
+    | `-VarDecl 0x7faf2a026178 <col:3, col:21> col:21 used pri 'struct p7prior_s *'
+    |-DeclStmt 0x7faf2a0262f8 <line:18:3, col:11>
+    | |-VarDecl 0x7faf2a026208 <col:3, col:7> col:7 used x 'int'
+    | `-VarDecl 0x7faf2a026280 <col:3, col:10> col:10 used q 'int'
+    |-DeclStmt 0x7faf2a0265d8 <line:20:3, line:21:58>
+    | `-VarDecl 0x7faf2a026390 <line:20:3, line:21:57> line:20:16 used defmq 'float [5]' static cinit
+    |   `-InitListExpr 0x7faf2a0264f8 <col:27, line:21:57> 'float [5]'
+    |     |-ImplicitCastExpr 0x7faf2a026560 <col:5> 'float' <FloatingCast>
+    |     | `-FloatingLiteral 0x7faf2a0263f0 <col:5> 'double' 1.780910e-01
+    |     |-ImplicitCastExpr 0x7faf2a026578 <col:15> 'float' <FloatingCast>
+    |     | `-FloatingLiteral 0x7faf2a026410 <col:15> 'double' 5.659100e-02
+    |     |-ImplicitCastExpr 0x7faf2a026590 <col:25> 'float' <FloatingCast>
+    |     | `-FloatingLiteral 0x7faf2a026430 <col:25> 'double' 9.601910e-02
+    |     |-ImplicitCastExpr 0x7faf2a0265a8 <col:36> 'float' <FloatingCast>
+    |     | `-FloatingLiteral 0x7faf2a026450 <col:36> 'double' 7.812330e-02
+    |     `-ImplicitCastExpr 0x7faf2a0265c0 <col:47> 'float' <FloatingCast>
+    |       `-FloatingLiteral 0x7faf2a026470 <col:47> 'double' 8.349770e-02
+    |-DeclStmt 0x7faf2a027300 <line:22:2, line:28:4>
+    | `-VarDecl 0x7faf2a0266e0 <line:22:2, line:28:3> line:22:15 used defm 'float [5][6]' static cinit
+    |   `-InitListExpr 0x7faf2a026d98 <col:28, line:28:3> 'float [5][6]'
+    |     |-InitListExpr 0x7faf2a026e00 <line:23:5, col:66> 'float [6]'
+    |     | |-ImplicitCastExpr 0x7faf2a026e70 <col:7> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a026740 <col:7> 'double' 2.706710e-01
+    |     | |-ImplicitCastExpr 0x7faf2a026e88 <col:17> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a026760 <col:17> 'double' 3.984800e-02
+    |     | |-ImplicitCastExpr 0x7faf2a026ea0 <col:27> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a026780 <col:27> 'double' 1.757600e-02
+    |     | |-ImplicitCastExpr 0x7faf2a026eb8 <col:37> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a0267a0 <col:37> 'double' 1.641500e-02
+    |     | |-ImplicitCastExpr 0x7faf2a026ed0 <col:47> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a0267c0 <col:47> 'double' 1.426800e-02
+    |     | `-ImplicitCastExpr 0x7faf2a026ee8 <col:57> 'float' <FloatingCast>
+    |     |   `-FloatingLiteral 0x7faf2a0267e0 <col:57> 'double' 2.161470e-01
+    |     |-InitListExpr 0x7faf2a026f00 <line:24:5, col:66> 'float [6]'
+    |     | |-ImplicitCastExpr 0x7faf2a026f70 <col:7> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a026870 <col:7> 'double' 2.146500e-02
+    |     | |-ImplicitCastExpr 0x7faf2a026f88 <col:17> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a026890 <col:17> 'double' 1.030000e-02
+    |     | |-ImplicitCastExpr 0x7faf2a026fa0 <col:27> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a0268b0 <col:27> 'double' 1.174100e-02
+    |     | |-ImplicitCastExpr 0x7faf2a026fb8 <col:37> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a0268d0 <col:37> 'double' 1.088300e-02
+    |     | |-ImplicitCastExpr 0x7faf2a026fd0 <col:47> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a0268f0 <col:47> 'double' 3.856510e-01
+    |     | `-ImplicitCastExpr 0x7faf2a026fe8 <col:57> 'float' <FloatingCast>
+    |     |   `-FloatingLiteral 0x7faf2a026910 <col:57> 'double' 2.915600e-02
+    |     |-InitListExpr 0x7faf2a027000 <line:25:5, col:66> 'float [6]'
+    |     | |-ImplicitCastExpr 0x7faf2a027070 <col:7> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a0269a0 <col:7> 'double' 5.614590e-01
+    |     | |-ImplicitCastExpr 0x7faf2a027088 <col:17> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a0269c0 <col:17> 'double' 4.544800e-02
+    |     | |-ImplicitCastExpr 0x7faf2a0270a0 <col:27> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a0269e0 <col:27> 'double' 4.383660e-01
+    |     | |-ImplicitCastExpr 0x7faf2a0270b8 <col:37> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a026a00 <col:37> 'double' 7.641670e-01
+    |     | |-ImplicitCastExpr 0x7faf2a0270d0 <col:47> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a026a20 <col:47> 'double' 8.736400e-02
+    |     | `-ImplicitCastExpr 0x7faf2a0270e8 <col:57> 'float' <FloatingCast>
+    |     |   `-FloatingLiteral 0x7faf2a026a40 <col:57> 'double' 5.834020e-01
+    |     |-InitListExpr 0x7faf2a027100 <line:26:5, col:66> 'float [6]'
+    |     | |-ImplicitCastExpr 0x7faf2a027170 <col:7> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a026ad0 <col:7> 'double' 7.014300e-02
+    |     | |-ImplicitCastExpr 0x7faf2a027188 <col:17> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a026af0 <col:17> 'double' 1.114000e-02
+    |     | |-ImplicitCastExpr 0x7faf2a0271a0 <col:27> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a026b10 <col:27> 'double' 1.947900e-02
+    |     | |-ImplicitCastExpr 0x7faf2a0271b8 <col:37> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a026b30 <col:37> 'double' 9.465700e-02
+    |     | |-ImplicitCastExpr 0x7faf2a0271d0 <col:47> 'float' <FloatingCast>
+    |     | | `-FloatingLiteral 0x7faf2a026b50 <col:47> 'double' 1.316200e-02
+    |     | `-ImplicitCastExpr 0x7faf2a0271e8 <col:57> 'float' <FloatingCast>
+    |     |   `-FloatingLiteral 0x7faf2a026b70 <col:57> 'double' 7.373200e-02
+    |     `-InitListExpr 0x7faf2a027200 <line:27:5, col:66> 'float [6]'
+    |       |-ImplicitCastExpr 0x7faf2a027270 <col:7> 'float' <FloatingCast>
+    |       | `-FloatingLiteral 0x7faf2a026c00 <col:7> 'double' 4.110300e-02
+    |       |-ImplicitCastExpr 0x7faf2a027288 <col:17> 'float' <FloatingCast>
+    |       | `-FloatingLiteral 0x7faf2a026c20 <col:17> 'double' 1.479400e-02
+    |       |-ImplicitCastExpr 0x7faf2a0272a0 <col:27> 'float' <FloatingCast>
+    |       | `-FloatingLiteral 0x7faf2a026c40 <col:27> 'double' 5.610000e-03
+    |       |-ImplicitCastExpr 0x7faf2a0272b8 <col:37> 'float' <FloatingCast>
+    |       | `-FloatingLiteral 0x7faf2a026c60 <col:37> 'double' 1.021600e-02
+    |       |-ImplicitCastExpr 0x7faf2a0272d0 <col:47> 'float' <FloatingCast>
+    |       | `-FloatingLiteral 0x7faf2a026c80 <col:47> 'double' 1.536020e-01
+    |       `-ImplicitCastExpr 0x7faf2a0272e8 <col:57> 'float' <FloatingCast>
+    |         `-FloatingLiteral 0x7faf2a026ca0 <col:57> 'double' 1.204900e-02
+    |-BinaryOperator 0x7faf2a027408 <line:30:3, col:22> 'struct p7prior_s *' '='
+    | |-DeclRefExpr 0x7faf2a027318 <col:3> 'struct p7prior_s *' lvalue Var 0x7faf2a026178 'pri' 'struct p7prior_s *'
+    | `-CallExpr 0x7faf2a0273e0 <col:9, col:22> 'struct p7prior_s *'
+    |   `-ImplicitCastExpr 0x7faf2a0273c8 <col:9> 'struct p7prior_s *(*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7faf2a027340 <col:9> 'struct p7prior_s *(void)' Function 0x7faf2a025f78 'P7AllocPrior' 'struct p7prior_s *(void)'
+    |-BinaryOperator 0x7faf2a0274c8 <line:31:3, col:16> 'int' '='
+    | |-MemberExpr 0x7faf2a027470 <col:3, col:8> 'int' lvalue ->mnum 0x7faf2a025a00
+    | | `-ImplicitCastExpr 0x7faf2a027458 <col:3> 'struct p7prior_s *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7faf2a027430 <col:3> 'struct p7prior_s *' lvalue Var 0x7faf2a026178 'pri' 'struct p7prior_s *'
+    | `-IntegerLiteral 0x7faf2a0274a8 <col:16> 'int' 5
+    |-ForStmt 0x7faf2a027d90 <line:32:3, line:37:5>
+    | |-BinaryOperator 0x7faf2a027538 <line:32:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7faf2a0274f0 <col:8> 'int' lvalue Var 0x7faf2a026280 'q' 'int'
+    | | `-IntegerLiteral 0x7faf2a027518 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7faf2a027630 <col:15, col:24> 'int' '<'
+    | | |-ImplicitCastExpr 0x7faf2a027600 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7faf2a027560 <col:15> 'int' lvalue Var 0x7faf2a026280 'q' 'int'
+    | | `-ImplicitCastExpr 0x7faf2a027618 <col:19, col:24> 'int' <LValueToRValue>
+    | |   `-MemberExpr 0x7faf2a0275c8 <col:19, col:24> 'int' lvalue ->mnum 0x7faf2a025a00
+    | |     `-ImplicitCastExpr 0x7faf2a0275b0 <col:19> 'struct p7prior_s *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7faf2a027588 <col:19> 'struct p7prior_s *' lvalue Var 0x7faf2a026178 'pri' 'struct p7prior_s *'
+    | |-UnaryOperator 0x7faf2a027680 <col:30, col:31> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7faf2a027658 <col:30> 'int' lvalue Var 0x7faf2a026280 'q' 'int'
+    | `-CompoundStmt 0x7faf2a027d68 <line:33:5, line:37:5>
+    |   |-BinaryOperator 0x7faf2a027880 <line:34:7, col:27> 'float' '='
+    |   | |-ArraySubscriptExpr 0x7faf2a027798 <col:7, col:16> 'float' lvalue
+    |   | | |-ImplicitCastExpr 0x7faf2a027768 <col:7, col:12> 'float *' <ArrayToPointerDecay>
+    |   | | | `-MemberExpr 0x7faf2a0276e0 <col:7, col:12> 'float [200]' lvalue ->mq 0x7faf2a025ad0
+    |   | | |   `-ImplicitCastExpr 0x7faf2a0276c8 <col:7> 'struct p7prior_s *' <LValueToRValue>
+    |   | | |     `-DeclRefExpr 0x7faf2a0276a0 <col:7> 'struct p7prior_s *' lvalue Var 0x7faf2a026178 'pri' 'struct p7prior_s *'
+    |   | | `-ImplicitCastExpr 0x7faf2a027780 <col:15> 'int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7faf2a027718 <col:15> 'int' lvalue Var 0x7faf2a026280 'q' 'int'
+    |   | `-ImplicitCastExpr 0x7faf2a027868 <col:20, col:27> 'float' <LValueToRValue>
+    |   |   `-ArraySubscriptExpr 0x7faf2a027840 <col:20, col:27> 'float' lvalue
+    |   |     |-ImplicitCastExpr 0x7faf2a027810 <col:20> 'float *' <ArrayToPointerDecay>
+    |   |     | `-DeclRefExpr 0x7faf2a0277c0 <col:20> 'float [5]' lvalue Var 0x7faf2a026390 'defmq' 'float [5]'
+    |   |     `-ImplicitCastExpr 0x7faf2a027828 <col:26> 'int' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7faf2a0277e8 <col:26> 'int' lvalue Var 0x7faf2a026280 'q' 'int'
+    |   `-ForStmt 0x7faf2a027d30 <line:35:7, line:36:33>
+    |     |-BinaryOperator 0x7faf2a0278f0 <line:35:12, col:16> 'int' '='
+    |     | |-DeclRefExpr 0x7faf2a0278a8 <col:12> 'int' lvalue Var 0x7faf2a026208 'x' 'int'
+    |     | `-IntegerLiteral 0x7faf2a0278d0 <col:16> 'int' 0
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7faf2a027978 <col:19, col:23> 'int' '<'
+    |     | |-ImplicitCastExpr 0x7faf2a027960 <col:19> 'int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7faf2a027918 <col:19> 'int' lvalue Var 0x7faf2a026208 'x' 'int'
+    |     | `-IntegerLiteral 0x7faf2a027940 <col:23> 'int' 6
+    |     |-UnaryOperator 0x7faf2a0279c8 <col:26, col:27> 'int' postfix '++'
+    |     | `-DeclRefExpr 0x7faf2a0279a0 <col:26> 'int' lvalue Var 0x7faf2a026208 'x' 'int'
+    |     `-BinaryOperator 0x7faf2a027d08 <line:36:9, col:33> 'float' '='
+    |       |-ArraySubscriptExpr 0x7faf2a027b78 <col:9, col:20> 'float' lvalue
+    |       | |-ImplicitCastExpr 0x7faf2a027b48 <col:9, col:17> 'float *' <ArrayToPointerDecay>
+    |       | | `-ArraySubscriptExpr 0x7faf2a027af8 <col:9, col:17> 'float [20]' lvalue
+    |       | |   |-ImplicitCastExpr 0x7faf2a027ac8 <col:9, col:14> 'float (*)[20]' <ArrayToPointerDecay>
+    |       | |   | `-MemberExpr 0x7faf2a027a40 <col:9, col:14> 'float [200][20]' lvalue ->m 0x7faf2a025c10
+    |       | |   |   `-ImplicitCastExpr 0x7faf2a027a28 <col:9> 'struct p7prior_s *' <LValueToRValue>
+    |       | |   |     `-DeclRefExpr 0x7faf2a027a00 <col:9> 'struct p7prior_s *' lvalue Var 0x7faf2a026178 'pri' 'struct p7prior_s *'
+    |       | |   `-ImplicitCastExpr 0x7faf2a027ae0 <col:16> 'int' <LValueToRValue>
+    |       | |     `-DeclRefExpr 0x7faf2a027a78 <col:16> 'int' lvalue Var 0x7faf2a026280 'q' 'int'
+    |       | `-ImplicitCastExpr 0x7faf2a027b60 <col:19> 'int' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7faf2a027b20 <col:19> 'int' lvalue Var 0x7faf2a026208 'x' 'int'
+    |       `-ImplicitCastExpr 0x7faf2a027cf0 <col:24, col:33> 'float' <LValueToRValue>
+    |         `-ArraySubscriptExpr 0x7faf2a027cc8 <col:24, col:33> 'float' lvalue
+    |           |-ImplicitCastExpr 0x7faf2a027c98 <col:24, col:30> 'float *' <ArrayToPointerDecay>
+    |           | `-ArraySubscriptExpr 0x7faf2a027c48 <col:24, col:30> 'float [6]' lvalue
+    |           |   |-ImplicitCastExpr 0x7faf2a027c18 <col:24> 'float (*)[6]' <ArrayToPointerDecay>
+    |           |   | `-DeclRefExpr 0x7faf2a027ba0 <col:24> 'float [5][6]' lvalue Var 0x7faf2a0266e0 'defm' 'float [5][6]'
+    |           |   `-ImplicitCastExpr 0x7faf2a027c30 <col:29> 'int' <LValueToRValue>
+    |           |     `-DeclRefExpr 0x7faf2a027bc8 <col:29> 'int' lvalue Var 0x7faf2a026280 'q' 'int'
+    |           `-ImplicitCastExpr 0x7faf2a027cb0 <col:32> 'int' <LValueToRValue>
+    |             `-DeclRefExpr 0x7faf2a027c70 <col:32> 'int' lvalue Var 0x7faf2a026208 'x' 'int'
+    `-ReturnStmt 0x7faf2a027e08 <line:38:3, col:10>
+      `-ImplicitCastExpr 0x7faf2a027df0 <col:10> 'struct p7prior_s *' <LValueToRValue>
+        `-DeclRefExpr 0x7faf2a027dc8 <col:10> 'struct p7prior_s *' lvalue Var 0x7faf2a026178 'pri' 'struct p7prior_s *'

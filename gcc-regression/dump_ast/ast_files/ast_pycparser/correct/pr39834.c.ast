@@ -1,0 +1,35 @@
+FileAST: 
+  Decl: quit_mined, [], [], []
+    FuncDecl: 
+      TypeDecl: quit_mined, []
+        IdentifierType: ['void']
+  Decl: bottom_line, [], [], []
+    FuncDecl: 
+      TypeDecl: bottom_line, []
+        IdentifierType: ['void']
+  Typedef: FLAG, [], ['typedef']
+    TypeDecl: FLAG, []
+      Enum: None
+        EnumeratorList: 
+          Enumerator: False
+          Enumerator: True
+  FuncDef: 
+    Decl: nextfile, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: exitiflast, [], [], []
+            TypeDecl: exitiflast, []
+              IdentifierType: ['FLAG']
+        TypeDecl: nextfile, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: exitiflast
+        FuncCall: 
+          ID: quit_mined
+        FuncCall: 
+          ID: bottom_line
+      FuncCall: 
+        ID: nextfile
+        ExprList: 
+          ID: True

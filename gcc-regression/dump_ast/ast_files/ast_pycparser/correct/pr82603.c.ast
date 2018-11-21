@@ -1,0 +1,77 @@
+FileAST: 
+  FuncDef: 
+    Decl: mr, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: lf, [], [], []
+            TypeDecl: lf, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: ms, [], [], []
+            TypeDecl: ms, []
+              IdentifierType: ['int']
+        TypeDecl: mr, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: sw, [], [], []
+        TypeDecl: sw, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 0
+      Decl: cu, [], [], []
+        PtrDecl: []
+          TypeDecl: cu, []
+            IdentifierType: ['char']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['char']
+          UnaryOp: &
+            ID: ms
+      While: 
+        BinaryOp: <
+          ID: ms
+          Constant: int, 1
+        Compound: 
+          If: 
+            BinaryOp: ==
+              ID: lf
+              Constant: int, 0
+            Assignment: =
+              ID: ms
+              Constant: int, 0
+            Assignment: =
+              ID: ms
+              Constant: int, 0
+          Assignment: +=
+            ID: ms
+            BinaryOp: &&
+              BinaryOp: >
+                ID: lf
+                Constant: int, 0
+              TernaryOp: 
+                BinaryOp: >
+                  ID: lf
+                  ID: sw
+                Constant: int, 1
+                UnaryOp: ++
+                  UnaryOp: *
+                    ID: cu
+      If: 
+        BinaryOp: !=
+          ID: lf
+          Constant: int, 0
+        Assignment: =
+          ID: cu
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['char']
+            UnaryOp: &
+              ID: sw
+      Assignment: =
+        UnaryOp: *
+          ID: cu
+        ID: lf
+      Return: 
+        ID: ms

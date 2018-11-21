@@ -1,0 +1,22 @@
+FileAST: 
+  FuncDef: 
+    Decl: testit, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: t, [], [], []
+            PtrDecl: []
+              TypeDecl: t, []
+                IdentifierType: ['double', '_Complex']
+        TypeDecl: testit, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: ==
+            UnaryOp: *
+              ID: t
+            Constant: float, 0.0
+          Constant: float, 0.0
+          UnaryOp: -
+            UnaryOp: *
+              ID: t

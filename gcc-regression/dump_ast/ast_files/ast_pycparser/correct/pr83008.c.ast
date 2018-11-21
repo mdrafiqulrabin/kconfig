@@ -1,0 +1,309 @@
+FileAST: 
+  FuncDef: 
+    Decl: pr83008, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: pix1, [], [], []
+            PtrDecl: []
+              TypeDecl: pix1, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: i_pix1, [], [], []
+            TypeDecl: i_pix1, []
+              IdentifierType: ['int']
+          Decl: pix2, [], [], []
+            PtrDecl: []
+              TypeDecl: pix2, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: i_pix2, [], [], []
+            TypeDecl: i_pix2, []
+              IdentifierType: ['int']
+        TypeDecl: pr83008, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: tmp, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: tmp, []
+              IdentifierType: ['unsigned', 'int']
+            Constant: int, 4
+          Constant: int, 4
+      Decl: a0, [], [], []
+        TypeDecl: a0, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: a1, [], [], []
+        TypeDecl: a1, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: a2, [], [], []
+        TypeDecl: a2, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: a3, [], [], []
+        TypeDecl: a3, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: sum, [], [], []
+        TypeDecl: sum, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        DeclList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+            Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 4
+        ExprList: 
+          UnaryOp: p++
+            ID: i
+          Assignment: +=
+            ID: pix1
+            ID: i_pix1
+          Assignment: +=
+            ID: pix2
+            ID: i_pix2
+        Compound: 
+          Assignment: =
+            ID: a0
+            BinaryOp: +
+              BinaryOp: -
+                ArrayRef: 
+                  ID: pix1
+                  Constant: int, 0
+                ArrayRef: 
+                  ID: pix2
+                  Constant: int, 0
+              BinaryOp: <<
+                BinaryOp: -
+                  ArrayRef: 
+                    ID: pix1
+                    Constant: int, 4
+                  ArrayRef: 
+                    ID: pix2
+                    Constant: int, 4
+                Constant: int, 16
+          Assignment: =
+            ID: a1
+            BinaryOp: +
+              BinaryOp: -
+                ArrayRef: 
+                  ID: pix1
+                  Constant: int, 1
+                ArrayRef: 
+                  ID: pix2
+                  Constant: int, 1
+              BinaryOp: <<
+                BinaryOp: -
+                  ArrayRef: 
+                    ID: pix1
+                    Constant: int, 5
+                  ArrayRef: 
+                    ID: pix2
+                    Constant: int, 5
+                Constant: int, 16
+          Assignment: =
+            ID: a2
+            BinaryOp: +
+              BinaryOp: -
+                ArrayRef: 
+                  ID: pix1
+                  Constant: int, 2
+                ArrayRef: 
+                  ID: pix2
+                  Constant: int, 2
+              BinaryOp: <<
+                BinaryOp: -
+                  ArrayRef: 
+                    ID: pix1
+                    Constant: int, 6
+                  ArrayRef: 
+                    ID: pix2
+                    Constant: int, 6
+                Constant: int, 16
+          Assignment: =
+            ID: a3
+            BinaryOp: +
+              BinaryOp: -
+                ArrayRef: 
+                  ID: pix1
+                  Constant: int, 3
+                ArrayRef: 
+                  ID: pix2
+                  Constant: int, 3
+              BinaryOp: <<
+                BinaryOp: -
+                  ArrayRef: 
+                    ID: pix1
+                    Constant: int, 7
+                  ArrayRef: 
+                    ID: pix2
+                    Constant: int, 7
+                Constant: int, 16
+          Decl: t0, [], [], []
+            TypeDecl: t0, []
+              IdentifierType: ['int']
+            BinaryOp: +
+              ID: a0
+              ID: a1
+          Decl: t1, [], [], []
+            TypeDecl: t1, []
+              IdentifierType: ['int']
+            BinaryOp: -
+              ID: a0
+              ID: a1
+          Decl: t2, [], [], []
+            TypeDecl: t2, []
+              IdentifierType: ['int']
+            BinaryOp: +
+              ID: a2
+              ID: a3
+          Decl: t3, [], [], []
+            TypeDecl: t3, []
+              IdentifierType: ['int']
+            BinaryOp: -
+              ID: a2
+              ID: a3
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                ID: tmp
+                ID: i
+              Constant: int, 0
+            BinaryOp: +
+              ID: t0
+              ID: t2
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                ID: tmp
+                ID: i
+              Constant: int, 2
+            BinaryOp: -
+              ID: t0
+              ID: t2
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                ID: tmp
+                ID: i
+              Constant: int, 1
+            BinaryOp: +
+              ID: t1
+              ID: t3
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                ID: tmp
+                ID: i
+              Constant: int, 3
+            BinaryOp: -
+              ID: t1
+              ID: t3
+      For: 
+        DeclList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+            Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 4
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: t0, [], [], []
+            TypeDecl: t0, []
+              IdentifierType: ['int']
+            BinaryOp: +
+              ArrayRef: 
+                ArrayRef: 
+                  ID: tmp
+                  Constant: int, 0
+                ID: i
+              ArrayRef: 
+                ArrayRef: 
+                  ID: tmp
+                  Constant: int, 1
+                ID: i
+          Decl: t1, [], [], []
+            TypeDecl: t1, []
+              IdentifierType: ['int']
+            BinaryOp: -
+              ArrayRef: 
+                ArrayRef: 
+                  ID: tmp
+                  Constant: int, 0
+                ID: i
+              ArrayRef: 
+                ArrayRef: 
+                  ID: tmp
+                  Constant: int, 1
+                ID: i
+          Decl: t2, [], [], []
+            TypeDecl: t2, []
+              IdentifierType: ['int']
+            BinaryOp: +
+              ArrayRef: 
+                ArrayRef: 
+                  ID: tmp
+                  Constant: int, 2
+                ID: i
+              ArrayRef: 
+                ArrayRef: 
+                  ID: tmp
+                  Constant: int, 3
+                ID: i
+          Decl: t3, [], [], []
+            TypeDecl: t3, []
+              IdentifierType: ['int']
+            BinaryOp: -
+              ArrayRef: 
+                ArrayRef: 
+                  ID: tmp
+                  Constant: int, 2
+                ID: i
+              ArrayRef: 
+                ArrayRef: 
+                  ID: tmp
+                  Constant: int, 3
+                ID: i
+          Assignment: =
+            ID: a0
+            BinaryOp: +
+              ID: t0
+              ID: t2
+          Assignment: =
+            ID: a2
+            BinaryOp: -
+              ID: t0
+              ID: t2
+          Assignment: =
+            ID: a1
+            BinaryOp: +
+              ID: t1
+              ID: t3
+          Assignment: =
+            ID: a3
+            BinaryOp: -
+              ID: t1
+              ID: t3
+          Assignment: +=
+            ID: sum
+            BinaryOp: +
+              BinaryOp: +
+                BinaryOp: +
+                  ID: a0
+                  ID: a1
+                ID: a2
+              ID: a3
+      Return: 
+        BinaryOp: >>
+          BinaryOp: +
+            ID: sum
+            BinaryOp: >>
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'int']
+                ID: sum
+              Constant: int, 16
+          Constant: int, 1

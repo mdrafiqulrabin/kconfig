@@ -1,0 +1,58 @@
+TranslationUnitDecl 0x7fd6d60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd6d6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd6d6026740 '__int128'
+|-TypedefDecl 0x7fd6d6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd6d6026760 'unsigned __int128'
+|-TypedefDecl 0x7fd6d6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd6d6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd6d6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd6d6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd6d6026dc0 'char *'
+|   `-BuiltinType 0x7fd6d6026560 'char'
+|-TypedefDecl 0x7fd6d60270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd6d6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd6d6026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd6d6026e58 '__va_list_tag'
+|-TypedefDecl 0x7fd6d6027158 <c_files/pr50764.c:5:1, col:13> col:13 referenced aligned 'int'
+| |-BuiltinType 0x7fd6d60265c0 'int'
+| `-AlignedAttr 0x7fd6d60271b0 <col:37, col:48> aligned
+|   `-IntegerLiteral 0x7fd6d6027120 <col:46> 'int' 64
+|-FunctionDecl 0x7fd6d6826af0 <line:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd6d6826b88 prev 0x7fd6d6826af0 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd6d6826d08 <line:8:1, col:17> col:5 used bar 'int (void *)'
+| `-ParmVarDecl 0x7fd6d6826c38 <col:10, col:16> col:16 p 'void *'
+|-FunctionDecl 0x7fd6d6826e78 <line:10:1, line:18:1> line:11:1 foo 'void (void)'
+| `-CompoundStmt 0x7fd6d68275e0 <line:12:1, line:18:1>
+|   |-DeclStmt 0x7fd6d6827200 <line:13:3, col:34>
+|   | `-VarDecl 0x7fd6d6826f28 <col:3, col:33> col:9 used p 'char *' cinit
+|   |   `-ImplicitCastExpr 0x7fd6d68271e8 <col:13, col:33> 'char *' <BitCast>
+|   |     `-CallExpr 0x7fd6d68271a0 <col:13, col:33> 'void *'
+|   |       |-ImplicitCastExpr 0x7fd6d6827188 <col:13> 'void *(*)(unsigned long)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fd6d6827110 <col:13> '<builtin fn type>' Function 0x7fd6d6826fc8 '__builtin_alloca' 'void *(unsigned long)'
+|   |       `-ImplicitCastExpr 0x7fd6d68271d0 <col:31> 'unsigned long' <IntegralCast>
+|   |         `-IntegerLiteral 0x7fd6d6827138 <col:31> 'int' 13
+|   |-DeclStmt 0x7fd6d68272b0 <line:14:3, col:12>
+|   | `-VarDecl 0x7fd6d6827250 <col:3, col:11> col:11 used i 'aligned':'int'
+|   `-IfStmt 0x7fd6d68275a8 <line:16:3, line:17:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fd6d68274e8 <line:16:7, col:25> 'int' '||'
+|     | |-CallExpr 0x7fd6d6827360 <col:7, col:13> 'int'
+|     | | |-ImplicitCastExpr 0x7fd6d6827348 <col:7> 'int (*)(void *)' <FunctionToPointerDecay>
+|     | | | `-DeclRefExpr 0x7fd6d68272c8 <col:7> 'int (void *)' Function 0x7fd6d6826d08 'bar' 'int (void *)'
+|     | | `-ImplicitCastExpr 0x7fd6d68273a8 <col:12> 'void *' <BitCast>
+|     | |   `-ImplicitCastExpr 0x7fd6d6827390 <col:12> 'char *' <LValueToRValue>
+|     | |     `-DeclRefExpr 0x7fd6d68272f0 <col:12> 'char *' lvalue Var 0x7fd6d6826f28 'p' 'char *'
+|     | `-CallExpr 0x7fd6d68274a0 <col:18, col:25> 'int'
+|     |   |-ImplicitCastExpr 0x7fd6d6827488 <col:18> 'int (*)(void *)' <FunctionToPointerDecay>
+|     |   | `-DeclRefExpr 0x7fd6d68273c0 <col:18> 'int (void *)' Function 0x7fd6d6826d08 'bar' 'int (void *)'
+|     |   `-ImplicitCastExpr 0x7fd6d68274d0 <col:23, col:24> 'void *' <BitCast>
+|     |     `-UnaryOperator 0x7fd6d6827468 <col:23, col:24> 'aligned *' prefix '&'
+|     |       `-DeclRefExpr 0x7fd6d68273e8 <col:24> 'aligned':'int' lvalue Var 0x7fd6d6827250 'i' 'aligned':'int'
+|     |-CallExpr 0x7fd6d6827580 <line:17:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7fd6d6827568 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fd6d6827510 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fd6d6826b88 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fd6d6826fc8 <line:13:13> col:13 implicit used __builtin_alloca 'void *(unsigned long)' extern
+  |-ParmVarDecl 0x7fd6d6827060 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fd6d68270c8 <col:13> Implicit

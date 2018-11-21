@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7fd0870264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd087026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd087026740 '__int128'
+|-TypedefDecl 0x7fd087026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd087026760 'unsigned __int128'
+|-TypedefDecl 0x7fd087026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd087026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd087026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd087026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd087026dc0 'char *'
+|   `-BuiltinType 0x7fd087026560 'char'
+|-TypedefDecl 0x7fd0870270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd087027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd087026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd087026e58 '__va_list_tag'
+|-TypedefDecl 0x7fd087027138 <c_files/pr39464.c:5:1, col:13> col:13 referenced T 'int'
+| |-BuiltinType 0x7fd0870265c0 'int'
+| `-MayAliasAttr 0x7fd087027190 <col:30>
+|-TypedefDecl 0x7fd087826a00 <line:6:1, col:22> col:22 referenced U 'unsigned int'
+| |-BuiltinType 0x7fd087026660 'unsigned int'
+| `-MayAliasAttr 0x7fd087826a58 <col:39>
+`-FunctionDecl 0x7fd087826b80 <line:8:1, line:19:1> line:9:1 foo 'void (void *)'
+  |-ParmVarDecl 0x7fd087826ab8 <col:6, col:12> col:12 used p 'void *'
+  `-CompoundStmt 0x7fd087827358 <line:10:1, line:19:1>
+    |-DeclStmt 0x7fd087826dc8 <line:11:3, col:19>
+    | `-VarDecl 0x7fd087826ce8 <col:3, col:18> col:6 used a 'T *' cinit
+    |   `-CStyleCastExpr 0x7fd087826da0 <col:10, col:18> 'int *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fd087826d88 <col:18> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd087826d48 <col:18> 'void *' lvalue ParmVar 0x7fd087826ab8 'p' 'void *'
+    |-DeclStmt 0x7fd087826ed0 <line:12:3, col:19>
+    | `-VarDecl 0x7fd087826df8 <col:3, col:18> col:8 used b 'int *' cinit
+    |   `-CStyleCastExpr 0x7fd087826ea8 <col:12, col:18> 'T *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fd087826e90 <col:18> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd087826e58 <col:18> 'void *' lvalue ParmVar 0x7fd087826ab8 'p' 'void *'
+    |-DeclStmt 0x7fd087827058 <line:13:3, col:28>
+    | `-VarDecl 0x7fd087826f78 <col:3, col:27> col:6 used c 'U *' cinit
+    |   `-CStyleCastExpr 0x7fd087827030 <col:10, col:27> 'unsigned int *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fd087827018 <col:27> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd087826fd8 <col:27> 'void *' lvalue ParmVar 0x7fd087826ab8 'p' 'void *'
+    |-DeclStmt 0x7fd087827160 <line:14:3, col:28>
+    | `-VarDecl 0x7fd087827088 <col:3, col:27> col:17 used d 'unsigned int *' cinit
+    |   `-CStyleCastExpr 0x7fd087827138 <col:21, col:27> 'U *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fd087827120 <col:27> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd0878270e8 <col:27> 'void *' lvalue ParmVar 0x7fd087826ab8 'p' 'void *'
+    |-CStyleCastExpr 0x7fd0878271c8 <line:15:3, col:10> 'void' <ToVoid>
+    | `-ImplicitCastExpr 0x7fd0878271b0 <col:10> 'T *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd087827178 <col:10> 'T *' lvalue Var 0x7fd087826ce8 'a' 'T *'
+    |-CStyleCastExpr 0x7fd087827240 <line:16:3, col:10> 'void' <ToVoid>
+    | `-ImplicitCastExpr 0x7fd087827228 <col:10> 'int *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd0878271f0 <col:10> 'int *' lvalue Var 0x7fd087826df8 'b' 'int *'
+    |-CStyleCastExpr 0x7fd0878272b8 <line:17:3, col:10> 'void' <ToVoid>
+    | `-ImplicitCastExpr 0x7fd0878272a0 <col:10> 'U *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd087827268 <col:10> 'U *' lvalue Var 0x7fd087826f78 'c' 'U *'
+    `-CStyleCastExpr 0x7fd087827330 <line:18:3, col:10> 'void' <ToVoid>
+      `-ImplicitCastExpr 0x7fd087827318 <col:10> 'unsigned int *' <LValueToRValue>
+        `-DeclRefExpr 0x7fd0878272e0 <col:10> 'unsigned int *' lvalue Var 0x7fd087827088 'd' 'unsigned int *'

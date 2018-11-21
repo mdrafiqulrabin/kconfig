@@ -1,0 +1,22 @@
+c_files/pr84237.c:5:39: error: argument to 'section' attribute is not valid for this target: mach-o section specifier requires a segment whose length is between 1 and 16 characters
+const char __attribute__((__section__(".bss.page_aligned.const"), __aligned__(4096))) zero_page[4096];
+                                      ^
+1 error generated.
+TranslationUnitDecl 0x7fd0848264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd084826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd084826740 '__int128'
+|-TypedefDecl 0x7fd084826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd084826760 'unsigned __int128'
+|-TypedefDecl 0x7fd084826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd084826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd084826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd084826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd084826dc0 'char *'
+|   `-BuiltinType 0x7fd084826560 'char'
+|-TypedefDecl 0x7fd0848270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd084827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd084826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd084826e58 '__va_list_tag'
+`-VarDecl 0x7fd085026a98 <c_files/pr84237.c:5:1, col:101> col:87 zero_page 'const char [4096]'
+  `-AlignedAttr 0x7fd085026af8 <col:67, col:83> aligned
+    `-IntegerLiteral 0x7fd084827198 <col:79> 'int' 4096

@@ -1,0 +1,69 @@
+c_files/pr21331.c:12:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+main ()
+^
+1 warning generated.
+TranslationUnitDecl 0x7fe17d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe17d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe17d026740 '__int128'
+|-TypedefDecl 0x7fe17d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe17d026760 'unsigned __int128'
+|-TypedefDecl 0x7fe17d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe17d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe17d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe17d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe17d026dc0 'char *'
+|   `-BuiltinType 0x7fe17d026560 'char'
+|-TypedefDecl 0x7fe17d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe17d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe17d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe17d026e58 '__va_list_tag'
+|-FunctionDecl 0x7fe17d825a30 <c_files/pr21331.c:1:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe17d825ac8 prev 0x7fe17d825a30 <col:1, col:17> col:6 used abort 'void (void) __attribute__((noreturn))'
+|-FunctionDecl 0x7fe17d825c28 <line:3:1, col:31> col:5 used bar 'int (void)'
+| `-CompoundStmt 0x7fe17d825d58 <col:16, col:31>
+|   `-ReturnStmt 0x7fe17d825d40 <col:19, col:27>
+|     `-UnaryOperator 0x7fe17d825d20 <col:26, col:27> 'int' prefix '-'
+|       `-IntegerLiteral 0x7fe17d825d00 <col:27> 'int' 1
+|-FunctionDecl 0x7fe17d825dd0 <line:5:1, line:10:14> line:6:1 used foo 'unsigned long ()'
+| `-CompoundStmt 0x7fe17d826190 <line:7:1, line:10:14>
+|   |-DeclStmt 0x7fe17d825ee0 <line:7:3, col:23>
+|   | `-VarDecl 0x7fe17d825e80 <col:3, col:17> col:17 used retval 'unsigned long'
+|   |-BinaryOperator 0x7fe17d825fd0 <line:8:3, col:17> 'unsigned long' '='
+|   | |-DeclRefExpr 0x7fe17d825ef8 <col:3> 'unsigned long' lvalue Var 0x7fe17d825e80 'retval' 'unsigned long'
+|   | `-ImplicitCastExpr 0x7fe17d825fb8 <col:12, col:17> 'unsigned long' <IntegralCast>
+|   |   `-CallExpr 0x7fe17d825f90 <col:12, col:17> 'int'
+|   |     `-ImplicitCastExpr 0x7fe17d825f78 <col:12> 'int (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fe17d825f20 <col:12> 'int (void)' Function 0x7fe17d825c28 'bar' 'int (void)'
+|   |-IfStmt 0x7fe17d826108 <line:9:3, col:29>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fe17d826090 <col:7, col:18> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7fe17d826060 <col:7> 'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fe17d825ff8 <col:7> 'unsigned long' lvalue Var 0x7fe17d825e80 'retval' 'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fe17d826078 <col:17, col:18> 'unsigned long' <IntegralCast>
+|   | |   `-UnaryOperator 0x7fe17d826040 <col:17, col:18> 'int' prefix '-'
+|   | |     `-IntegerLiteral 0x7fe17d826020 <col:18> 'int' 1
+|   | |-ReturnStmt 0x7fe17d8260f0 <col:22, col:29>
+|   | | `-ImplicitCastExpr 0x7fe17d8260d8 <col:29> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fe17d8260b8 <col:29> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fe17d826178 <line:10:3, col:10>
+|     `-ImplicitCastExpr 0x7fe17d826160 <col:10> 'unsigned long' <IntegralCast>
+|       `-IntegerLiteral 0x7fe17d826140 <col:10> 'int' 3
+`-FunctionDecl 0x7fe17d826220 <line:12:1, line:14:14> line:12:1 main 'int ()'
+  `-CompoundStmt 0x7fe17d8264a8 <line:13:1, line:14:14>
+    |-IfStmt 0x7fe17d826438 <line:13:3, col:28>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe17d826380 <col:7, col:17> 'int' '!='
+    | | |-CallExpr 0x7fe17d826320 <col:7, col:12> 'unsigned long'
+    | | | `-ImplicitCastExpr 0x7fe17d826308 <col:7> 'unsigned long (*)()' <FunctionToPointerDecay>
+    | | |   `-DeclRefExpr 0x7fe17d8262b8 <col:7> 'unsigned long ()' Function 0x7fe17d825dd0 'foo' 'unsigned long ()'
+    | | `-ImplicitCastExpr 0x7fe17d826368 <col:17> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fe17d826348 <col:17> 'int' 0
+    | |-CallExpr 0x7fe17d826410 <col:21, col:28> 'void'
+    | | `-ImplicitCastExpr 0x7fe17d8263f8 <col:21> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe17d8263a8 <col:21> 'void (void) __attribute__((noreturn))' Function 0x7fe17d825ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe17d826490 <line:14:3, col:10>
+      `-IntegerLiteral 0x7fe17d826470 <col:10> 'int' 0

@@ -1,0 +1,113 @@
+c_files/pr41395-2.c:20:8: warning: array index 16 is past the end of the array (which contains 1 element) [-Warray-bounds]
+  q = &p->u.vec[16];
+       ^        ~~
+c_files/pr41395-2.c:6:7: note: array 'vec' declared here
+      short vec[1];
+      ^
+1 warning generated.
+TranslationUnitDecl 0x7f9d408264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9d40826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9d40826740 '__int128'
+|-TypedefDecl 0x7f9d40826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9d40826760 'unsigned __int128'
+|-TypedefDecl 0x7f9d40826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9d40826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9d40826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9d40826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9d40826dc0 'char *'
+|   `-BuiltinType 0x7f9d40826560 'char'
+|-TypedefDecl 0x7f9d408270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9d40827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9d40826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9d40826e58 '__va_list_tag'
+|-RecordDecl 0x7f9d40827120 <c_files/pr41395-2.c:1:1, line:13:1> line:1:8 struct VEC_char_base definition
+| |-FieldDecl 0x7f9d41025a00 <line:3:3, col:12> col:12 num 'unsigned int'
+| |-FieldDecl 0x7f9d41025a60 <line:4:3, col:12> col:12 alloc 'unsigned int'
+| |-RecordDecl 0x7f9d41025aa8 <line:5:3, line:12:3> line:5:3 union definition
+| | |-FieldDecl 0x7f9d41025bd0 <line:6:7, col:18> col:13 referenced vec 'short [1]'
+| | |-RecordDecl 0x7f9d41025c18 <line:7:7, line:11:7> line:7:7 struct definition
+| | | |-FieldDecl 0x7f9d41025cd8 <line:8:4, col:8> col:8 i 'int'
+| | | |-FieldDecl 0x7f9d41025d38 <line:9:4, col:8> col:8 j 'int'
+| | | `-FieldDecl 0x7f9d41025d98 <line:10:4, col:8> col:8 k 'int'
+| | `-FieldDecl 0x7f9d41025e30 <line:7:7, line:11:9> col:9 a 'struct (anonymous struct at c_files/pr41395-2.c:7:7)':'struct VEC_char_base::(anonymous at c_files/pr41395-2.c:7:7)'
+| `-FieldDecl 0x7f9d41025ed0 <line:5:3, line:12:5> col:5 referenced u 'union (anonymous union at c_files/pr41395-2.c:5:3)':'union VEC_char_base::(anonymous at c_files/pr41395-2.c:5:3)'
+|-FunctionDecl 0x7f9d41026168 <line:15:1, line:23:1> line:16:1 used foo 'short (struct VEC_char_base *, int)'
+| |-ParmVarDecl 0x7f9d41025fd0 <col:6, col:28> col:28 used p 'struct VEC_char_base *'
+| |-ParmVarDecl 0x7f9d41026048 <col:31, col:35> col:35 used i 'int'
+| |-CompoundStmt 0x7f9d41026888 <line:17:1, line:23:1>
+| | |-DeclStmt 0x7f9d41026340 <line:18:3, col:11>
+| | | `-VarDecl 0x7f9d410262e0 <col:3, col:10> col:10 used q 'short *'
+| | |-BinaryOperator 0x7f9d410264c0 <line:19:3, col:17> 'short' '='
+| | | |-ArraySubscriptExpr 0x7f9d41026460 <col:3, col:13> 'short' lvalue
+| | | | |-ImplicitCastExpr 0x7f9d41026430 <col:3, col:8> 'short *' <ArrayToPointerDecay>
+| | | | | `-MemberExpr 0x7f9d410263d0 <col:3, col:8> 'short [1]' lvalue .vec 0x7f9d41025bd0
+| | | | |   `-MemberExpr 0x7f9d41026398 <col:3, col:6> 'union (anonymous union at c_files/pr41395-2.c:5:3)':'union VEC_char_base::(anonymous at c_files/pr41395-2.c:5:3)' lvalue ->u 0x7f9d41025ed0
+| | | | |     `-ImplicitCastExpr 0x7f9d41026380 <col:3> 'struct VEC_char_base *' <LValueToRValue>
+| | | | |       `-DeclRefExpr 0x7f9d41026358 <col:3> 'struct VEC_char_base *' lvalue ParmVar 0x7f9d41025fd0 'p' 'struct VEC_char_base *'
+| | | | `-ImplicitCastExpr 0x7f9d41026448 <col:12> 'int' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7f9d41026408 <col:12> 'int' lvalue ParmVar 0x7f9d41026048 'i' 'int'
+| | | `-ImplicitCastExpr 0x7f9d410264a8 <col:17> 'short' <IntegralCast>
+| | |   `-IntegerLiteral 0x7f9d41026488 <col:17> 'int' 0
+| | |-BinaryOperator 0x7f9d41026640 <line:20:3, col:19> 'short *' '='
+| | | |-DeclRefExpr 0x7f9d410264e8 <col:3> 'short *' lvalue Var 0x7f9d410262e0 'q' 'short *'
+| | | `-UnaryOperator 0x7f9d41026620 <col:7, col:19> 'short *' prefix '&'
+| | |   `-ArraySubscriptExpr 0x7f9d410265f8 <col:8, col:19> 'short' lvalue
+| | |     |-ImplicitCastExpr 0x7f9d410265e0 <col:8, col:13> 'short *' <ArrayToPointerDecay>
+| | |     | `-MemberExpr 0x7f9d41026588 <col:8, col:13> 'short [1]' lvalue .vec 0x7f9d41025bd0
+| | |     |   `-MemberExpr 0x7f9d41026550 <col:8, col:11> 'union (anonymous union at c_files/pr41395-2.c:5:3)':'union VEC_char_base::(anonymous at c_files/pr41395-2.c:5:3)' lvalue ->u 0x7f9d41025ed0
+| | |     |     `-ImplicitCastExpr 0x7f9d41026538 <col:8> 'struct VEC_char_base *' <LValueToRValue>
+| | |     |       `-DeclRefExpr 0x7f9d41026510 <col:8> 'struct VEC_char_base *' lvalue ParmVar 0x7f9d41025fd0 'p' 'struct VEC_char_base *'
+| | |     `-IntegerLiteral 0x7f9d410265c0 <col:17> 'int' 16
+| | |-BinaryOperator 0x7f9d41026700 <line:21:3, col:8> 'short' '='
+| | | |-UnaryOperator 0x7f9d410266a8 <col:3, col:4> 'short' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7f9d41026690 <col:4> 'short *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7f9d41026668 <col:4> 'short *' lvalue Var 0x7f9d410262e0 'q' 'short *'
+| | | `-ImplicitCastExpr 0x7f9d410266e8 <col:8> 'short' <IntegralCast>
+| | |   `-IntegerLiteral 0x7f9d410266c8 <col:8> 'int' 1
+| | `-ReturnStmt 0x7f9d41026870 <line:22:3, col:20>
+| |   `-ImplicitCastExpr 0x7f9d41026858 <col:10, col:20> 'short' <LValueToRValue>
+| |     `-ArraySubscriptExpr 0x7f9d41026830 <col:10, col:20> 'short' lvalue
+| |       |-ImplicitCastExpr 0x7f9d41026800 <col:10, col:15> 'short *' <ArrayToPointerDecay>
+| |       | `-MemberExpr 0x7f9d410267a0 <col:10, col:15> 'short [1]' lvalue .vec 0x7f9d41025bd0
+| |       |   `-MemberExpr 0x7f9d41026768 <col:10, col:13> 'union (anonymous union at c_files/pr41395-2.c:5:3)':'union VEC_char_base::(anonymous at c_files/pr41395-2.c:5:3)' lvalue ->u 0x7f9d41025ed0
+| |       |     `-ImplicitCastExpr 0x7f9d41026750 <col:10> 'struct VEC_char_base *' <LValueToRValue>
+| |       |       `-DeclRefExpr 0x7f9d41026728 <col:10> 'struct VEC_char_base *' lvalue ParmVar 0x7f9d41025fd0 'p' 'struct VEC_char_base *'
+| |       `-ImplicitCastExpr 0x7f9d41026818 <col:19> 'int' <LValueToRValue>
+| |         `-DeclRefExpr 0x7f9d410267d8 <col:19> 'int' lvalue ParmVar 0x7f9d41026048 'i' 'int'
+| `-NoInlineAttr 0x7f9d41026210 <line:15:22>
+|-FunctionDecl 0x7f9d41027a00 <line:25:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9d41027a98 prev 0x7f9d41027a00 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9d41027c18 <line:26:14> col:14 implicit used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7f9d41027cb0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f9d41027d18 prev 0x7f9d41027c18 <col:1, col:35> col:14 used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7f9d41027b48 <<built-in>:75:23, col:37> c_files/pr41395-2.c:26:35 'unsigned long'
+`-FunctionDecl 0x7f9d41027e10 <line:28:1, line:35:1> line:29:1 main 'int ()'
+  `-CompoundStmt 0x7f9d41028338 <line:30:1, line:35:1>
+    |-DeclStmt 0x7f9d41028088 <line:31:3, col:73>
+    | `-VarDecl 0x7f9d41027ed0 <col:3, col:72> col:25 used p 'struct VEC_char_base *' cinit
+    |   `-ImplicitCastExpr 0x7f9d41028070 <col:29, col:72> 'struct VEC_char_base *' <BitCast>
+    |     `-CallExpr 0x7f9d41028040 <col:29, col:72> 'void *'
+    |       |-ImplicitCastExpr 0x7f9d41028028 <col:29> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7f9d41027f30 <col:29> 'void *(unsigned long)' Function 0x7f9d41027d18 'malloc' 'void *(unsigned long)'
+    |       `-BinaryOperator 0x7f9d41027fd0 <col:37, col:69> 'unsigned long' '+'
+    |         |-UnaryExprOrTypeTraitExpr 0x7f9d41027f78 <col:37, col:65> 'unsigned long' sizeof 'struct VEC_char_base':'struct VEC_char_base'
+    |         `-ImplicitCastExpr 0x7f9d41027fb8 <col:69> 'unsigned long' <IntegralCast>
+    |           `-IntegerLiteral 0x7f9d41027f98 <col:69> 'int' 256
+    |-IfStmt 0x7f9d410282c8 <line:32:3, line:33:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9d41028208 <line:32:7, col:22> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f9d410281f0 <col:7, col:17> 'int' <IntegralCast>
+    | | | `-CallExpr 0x7f9d41028180 <col:7, col:17> 'short'
+    | | |   |-ImplicitCastExpr 0x7f9d41028168 <col:7> 'short (*)(struct VEC_char_base *, int)' <FunctionToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7f9d410280a0 <col:7> 'short (struct VEC_char_base *, int)' Function 0x7f9d41026168 'foo' 'short (struct VEC_char_base *, int)'
+    | | |   |-ImplicitCastExpr 0x7f9d410281b8 <col:12> 'struct VEC_char_base *' <LValueToRValue>
+    | | |   | `-DeclRefExpr 0x7f9d410280c8 <col:12> 'struct VEC_char_base *' lvalue Var 0x7f9d41027ed0 'p' 'struct VEC_char_base *'
+    | | |   `-IntegerLiteral 0x7f9d410280f0 <col:15> 'int' 16
+    | | `-IntegerLiteral 0x7f9d410281d0 <col:22> 'int' 1
+    | |-CallExpr 0x7f9d410282a0 <line:33:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f9d41028288 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f9d41028230 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9d41027a98 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f9d41028320 <line:34:3, col:10>
+      `-IntegerLiteral 0x7f9d41028300 <col:10> 'int' 0

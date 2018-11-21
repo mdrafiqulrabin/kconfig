@@ -1,0 +1,51 @@
+c_files/pr36154.c:9:10: warning: implicitly declaring library function 'memcmp' with type 'int (const void *, const void *, unsigned long)' [-Wimplicit-function-declaration]
+  return memcmp(p, pkt_unaligned.packet, 1);
+         ^
+c_files/pr36154.c:9:10: note: include the header <string.h> or explicitly provide a declaration for 'memcmp'
+1 warning generated.
+TranslationUnitDecl 0x7ff1d38264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff1d3826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff1d3826740 '__int128'
+|-TypedefDecl 0x7ff1d3826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff1d3826760 'unsigned __int128'
+|-TypedefDecl 0x7ff1d3826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff1d3826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff1d3826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff1d3826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff1d3826dc0 'char *'
+|   `-BuiltinType 0x7ff1d3826560 'char'
+|-TypedefDecl 0x7ff1d38270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff1d3827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff1d3826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff1d3826e58 '__va_list_tag'
+|-RecordDecl 0x7ff1d3827120 <c_files/pr36154.c:1:1, line:5:1> line:1:8 struct eth_test_pkt definition
+| |-PackedAttr 0x7ff1d4025b48 <line:5:19>
+| |-FieldDecl 0x7ff1d4025a00 <line:2:3, col:18> col:18 len 'unsigned short'
+| |-FieldDecl 0x7ff1d4025a60 <line:3:3, col:18> col:18 ctr 'unsigned short'
+| `-FieldDecl 0x7ff1d4025b00 <line:4:3, col:24> col:17 referenced packet 'unsigned char []'
+|-VarDecl 0x7ff1d4025be0 <line:6:1, col:58> col:21 used pkt_unaligned 'struct eth_test_pkt':'struct eth_test_pkt' cinit
+| `-InitListExpr 0x7ff1d4025d70 <col:37, col:58> 'struct eth_test_pkt':'struct eth_test_pkt'
+|   |-ImplicitValueInitExpr 0x7ff1d4025e68 <<invalid sloc>> 'unsigned short'
+|   |-ImplicitValueInitExpr 0x7ff1d4025e78 <<invalid sloc>> 'unsigned short'
+|   `-InitListExpr 0x7ff1d4025dc8 <col:49, col:56> 'unsigned char [1]'
+|     `-ImplicitCastExpr 0x7ff1d4025e08 <col:51> 'unsigned char' <IntegralCast>
+|       `-IntegerLiteral 0x7ff1d4025c80 <col:51> 'int' 252
+|-FunctionDecl 0x7ff1d4025f98 <line:7:1, line:10:1> line:7:5 cmd_unaligned 'int (const void *)'
+| |-ParmVarDecl 0x7ff1d4025ed0 <col:19, col:31> col:31 used p 'const void *'
+| `-CompoundStmt 0x7ff1d4026838 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7ff1d4026820 <line:9:3, col:43>
+|     `-CallExpr 0x7ff1d4026780 <col:10, col:43> 'int'
+|       |-ImplicitCastExpr 0x7ff1d4026768 <col:10> 'int (*)(const void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7ff1d4026610 <col:10> 'int (const void *, const void *, unsigned long)' Function 0x7ff1d4026440 'memcmp' 'int (const void *, const void *, unsigned long)'
+|       |-ImplicitCastExpr 0x7ff1d40267c0 <col:17> 'const void *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff1d4026638 <col:17> 'const void *' lvalue ParmVar 0x7ff1d4025ed0 'p' 'const void *'
+|       |-ImplicitCastExpr 0x7ff1d40267f0 <col:20, col:34> 'const void *' <BitCast>
+|       | `-ImplicitCastExpr 0x7ff1d40267d8 <col:20, col:34> 'unsigned char *' <ArrayToPointerDecay>
+|       |   `-MemberExpr 0x7ff1d4026688 <col:20, col:34> 'unsigned char []' lvalue .packet 0x7ff1d4025b00
+|       |     `-DeclRefExpr 0x7ff1d4026660 <col:20> 'struct eth_test_pkt':'struct eth_test_pkt' lvalue Var 0x7ff1d4025be0 'pkt_unaligned' 'struct eth_test_pkt':'struct eth_test_pkt'
+|       `-ImplicitCastExpr 0x7ff1d4026808 <col:42> 'unsigned long' <IntegralCast>
+|         `-IntegerLiteral 0x7ff1d40266c0 <col:42> 'int' 1
+`-FunctionDecl 0x7ff1d4026440 <col:10> col:10 implicit used memcmp 'int (const void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7ff1d40264d8 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7ff1d4026538 <<invalid sloc>> <invalid sloc> 'const void *'
+  `-ParmVarDecl 0x7ff1d4026598 <<invalid sloc>> <invalid sloc> 'unsigned long'

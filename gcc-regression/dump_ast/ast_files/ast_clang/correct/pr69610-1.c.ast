@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fe0488264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe048826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe048826740 '__int128'
+|-TypedefDecl 0x7fe048826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe048826760 'unsigned __int128'
+|-TypedefDecl 0x7fe048826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe048826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe048826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe048826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe048826dc0 'char *'
+|   `-BuiltinType 0x7fe048826560 'char'
+|-TypedefDecl 0x7fe0488270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe048827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe048826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe048826e58 '__va_list_tag'
+|-TypedefDecl 0x7fe048827178 <c_files/pr69610-1.c:6:1, col:24> col:24 referenced v16u16 '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+| `-VectorType 0x7fe048827140 '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' 8
+|   `-BuiltinType 0x7fe048826640 'unsigned short'
+|-TypedefDecl 0x7fe048878438 <line:7:1, col:22> col:22 referenced v16u32 '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7fe048878400 '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' 4
+|   `-BuiltinType 0x7fe048826660 'unsigned int'
+`-FunctionDecl 0x7fe048878668 <line:9:1, line:14:1> line:10:1 foo 'unsigned short (v16u16, v16u32)'
+  |-ParmVarDecl 0x7fe0488784c0 <col:6, col:13> col:13 used v16u16_1 'v16u16':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+  |-ParmVarDecl 0x7fe048878550 <col:23, col:30> col:30 used v16u32_1 'v16u32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+  `-CompoundStmt 0x7fe0488789a8 <line:11:1, line:14:1>
+    |-CompoundAssignOperator 0x7fe0488787f0 <line:12:3, col:24> 'v16u16':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' '+=' ComputeLHSTy='v16u16':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' ComputeResultTy='v16u16':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+    | |-DeclRefExpr 0x7fe048878750 <col:3> 'v16u16':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue ParmVar 0x7fe0488784c0 'v16u16_1' 'v16u16':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+    | `-CStyleCastExpr 0x7fe0488787c8 <col:15, col:24> 'v16u16':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' <BitCast>
+    |   `-ImplicitCastExpr 0x7fe0488787b0 <col:24> 'v16u32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fe048878778 <col:24> 'v16u32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7fe048878550 'v16u32_1' 'v16u32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+    `-ReturnStmt 0x7fe048878990 <line:13:3, col:34>
+      `-ImplicitCastExpr 0x7fe048878978 <col:10, col:34> 'unsigned short' <IntegralCast>
+        `-BinaryOperator 0x7fe048878950 <col:10, col:34> 'unsigned int' '+'
+          |-ImplicitCastExpr 0x7fe048878920 <col:10, col:20> 'unsigned int' <IntegralCast>
+          | `-ImplicitCastExpr 0x7fe048878908 <col:10, col:20> 'unsigned short' <LValueToRValue>
+          |   `-ArraySubscriptExpr 0x7fe048878870 <col:10, col:20> 'unsigned short' lvalue vectorcomponent
+          |     |-DeclRefExpr 0x7fe048878828 <col:10> 'v16u16':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue ParmVar 0x7fe0488784c0 'v16u16_1' 'v16u16':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+          |     `-IntegerLiteral 0x7fe048878850 <col:19> 'int' 5
+          `-ImplicitCastExpr 0x7fe048878938 <col:24, col:34> 'unsigned int' <LValueToRValue>
+            `-ArraySubscriptExpr 0x7fe0488788e0 <col:24, col:34> 'unsigned int' lvalue vectorcomponent
+              |-DeclRefExpr 0x7fe048878898 <col:24> 'v16u32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7fe048878550 'v16u32_1' 'v16u32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+              `-IntegerLiteral 0x7fe0488788c0 <col:33> 'int' 1

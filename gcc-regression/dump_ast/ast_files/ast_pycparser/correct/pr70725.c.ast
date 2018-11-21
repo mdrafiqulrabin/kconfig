@@ -1,0 +1,91 @@
+FileAST: 
+  Decl: a, [], ['extern'], []
+    TypeDecl: a, []
+      IdentifierType: ['short']
+  Decl: b, [], ['extern'], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: d, [], ['extern'], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: c, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: c, []
+        IdentifierType: ['int']
+      Constant: int, 100
+  Decl: e, [], ['extern'], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], ['extern'], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        BinaryOp: <
+          ID: e
+          Constant: int, 2
+        Assignment: =
+          ID: e
+          BinaryOp: +
+            ID: e
+            Constant: int, 1
+        Assignment: =
+          ID: d
+          ID: a
+      For: 
+        For: 
+          DeclList: 
+            Decl: g, [], [], []
+              TypeDecl: g, []
+                IdentifierType: ['int']
+              Constant: int, 0
+          BinaryOp: <
+            ID: g
+            Constant: int, 5
+          Assignment: =
+            ID: g
+            BinaryOp: +
+              ID: g
+              Constant: int, 1
+          For: 
+            DeclList: 
+              Decl: h, [], [], []
+                TypeDecl: h, []
+                  IdentifierType: ['int']
+                Constant: int, 0
+            BinaryOp: <
+              ID: h
+              Constant: int, 2
+            Assignment: =
+              ID: h
+              BinaryOp: +
+                ID: h
+                Constant: int, 1
+            For: 
+              DeclList: 
+                Decl: i, [], [], []
+                  TypeDecl: i, []
+                    IdentifierType: ['int']
+                  Constant: int, 0
+              BinaryOp: <
+                ID: i
+                Constant: int, 3
+              Assignment: =
+                ID: i
+                BinaryOp: +
+                  ID: i
+                  Constant: int, 1
+              Assignment: =
+                ArrayRef: 
+                  ID: c
+                  BinaryOp: +
+                    ID: f
+                    ID: i
+                BinaryOp: &&
+                  ID: a
+                  ID: b

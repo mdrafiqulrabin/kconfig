@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7f7fb58264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f7fb5826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f7fb5826740 '__int128'
+|-TypedefDecl 0x7f7fb5826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f7fb5826760 'unsigned __int128'
+|-TypedefDecl 0x7f7fb5826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f7fb5826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f7fb5826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f7fb5826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f7fb5826dc0 'char *'
+|   `-BuiltinType 0x7f7fb5826560 'char'
+|-TypedefDecl 0x7f7fb58270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f7fb5827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f7fb5826ee0 'struct __va_list_tag'
+|     `-Record 0x7f7fb5826e58 '__va_list_tag'
+|-TypedefDecl 0x7f7fb6027a38 <c_files/pr49294.c:5:1, col:68> col:68 referenced V '__attribute__((__vector_size__(8 * sizeof(short)))) short'
+| `-VectorType 0x7f7fb6027a00 '__attribute__((__vector_size__(8 * sizeof(short)))) short' 8
+|   `-BuiltinType 0x7f7fb58265a0 'short'
+|-VarDecl 0x7f7fb6027aa8 <line:7:1, col:5> col:5 used k 'int'
+|-VarDecl 0x7f7fb6027b80 <line:8:1, col:3> col:3 used v 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short'
+`-FunctionDecl 0x7f7fb6027ca0 <line:10:1, line:15:1> line:11:1 foo 'void (void)'
+  `-CompoundStmt 0x7f7fb60282b0 <line:12:1, line:15:1>
+    |-DeclStmt 0x7f7fb6028168 <line:13:3, col:35>
+    | `-VarDecl 0x7f7fb6027d48 <col:3, col:34> col:5 used w 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short' cinit
+    |   `-InitListExpr 0x7f7fb6027f68 <col:9, col:34> 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short'
+    |     |-ImplicitCastExpr 0x7f7fb6028000 <col:11> 'short' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7f7fb6027fe8 <col:11> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f7fb6027da8 <col:11> 'int' lvalue Var 0x7f7fb6027aa8 'k' 'int'
+    |     |-ImplicitCastExpr 0x7f7fb6028030 <col:14> 'short' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7f7fb6028018 <col:14> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f7fb6027dd0 <col:14> 'int' lvalue Var 0x7f7fb6027aa8 'k' 'int'
+    |     |-ImplicitCastExpr 0x7f7fb6028060 <col:17> 'short' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7f7fb6028048 <col:17> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f7fb6027df8 <col:17> 'int' lvalue Var 0x7f7fb6027aa8 'k' 'int'
+    |     |-ImplicitCastExpr 0x7f7fb6028090 <col:20> 'short' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7f7fb6028078 <col:20> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f7fb6027e20 <col:20> 'int' lvalue Var 0x7f7fb6027aa8 'k' 'int'
+    |     |-ImplicitCastExpr 0x7f7fb60280c0 <col:23> 'short' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7f7fb60280a8 <col:23> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f7fb6027e48 <col:23> 'int' lvalue Var 0x7f7fb6027aa8 'k' 'int'
+    |     |-ImplicitCastExpr 0x7f7fb60280f0 <col:26> 'short' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7f7fb60280d8 <col:26> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f7fb6027e70 <col:26> 'int' lvalue Var 0x7f7fb6027aa8 'k' 'int'
+    |     |-ImplicitCastExpr 0x7f7fb6028120 <col:29> 'short' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7f7fb6028108 <col:29> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f7fb6027e98 <col:29> 'int' lvalue Var 0x7f7fb6027aa8 'k' 'int'
+    |     `-ImplicitCastExpr 0x7f7fb6028150 <col:32> 'short' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7f7fb6028138 <col:32> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f7fb6027ec0 <col:32> 'int' lvalue Var 0x7f7fb6027aa8 'k' 'int'
+    `-DeclStmt 0x7f7fb6028298 <line:14:3, col:15>
+      `-VarDecl 0x7f7fb6028190 <col:3, col:14> col:5 x 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short' cinit
+        `-BinaryOperator 0x7f7fb6028270 <col:9, col:14> 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short' '>>'
+          |-ImplicitCastExpr 0x7f7fb6028240 <col:9> 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short' <LValueToRValue>
+          | `-DeclRefExpr 0x7f7fb60281f0 <col:9> 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short' lvalue Var 0x7f7fb6027b80 'v' 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short'
+          `-ImplicitCastExpr 0x7f7fb6028258 <col:14> 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short' <LValueToRValue>
+            `-DeclRefExpr 0x7f7fb6028218 <col:14> 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short' lvalue Var 0x7f7fb6027d48 'w' 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short'

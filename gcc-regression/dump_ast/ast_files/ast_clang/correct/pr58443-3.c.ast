@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7f885e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f885e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f885e026740 '__int128'
+|-TypedefDecl 0x7f885e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f885e026760 'unsigned __int128'
+|-TypedefDecl 0x7f885e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f885e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f885e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f885e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f885e026dc0 'char *'
+|   `-BuiltinType 0x7f885e026560 'char'
+|-TypedefDecl 0x7f885e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f885e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f885e026ee0 'struct __va_list_tag'
+|     `-Record 0x7f885e026e58 '__va_list_tag'
+|-FunctionDecl 0x7f885e825ad8 <c_files/pr58443-3.c:5:1, line:9:1> line:6:1 foo 'int (int, int)'
+| |-ParmVarDecl 0x7f885e027138 <col:6, col:10> col:10 used u 'int'
+| |-ParmVarDecl 0x7f885e825a00 <col:13, col:17> col:17 used o 'int'
+| `-CompoundStmt 0x7f885e825c80 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7f885e825c68 <line:8:3, col:15>
+|     `-BinaryOperator 0x7f885e825c40 <col:10, col:15> 'int' '>>'
+|       |-ImplicitCastExpr 0x7f885e825c10 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f885e825bc0 <col:10> 'int' lvalue ParmVar 0x7f885e027138 'u' 'int'
+|       `-ImplicitCastExpr 0x7f885e825c28 <col:15> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f885e825be8 <col:15> 'int' lvalue ParmVar 0x7f885e825a00 'o' 'int'
+`-FunctionDecl 0x7f885e825dc8 <line:11:1, line:15:1> line:12:1 bar 'int (int, int)'
+  |-ParmVarDecl 0x7f885e825cb8 <col:6, col:10> col:10 used u 'int'
+  |-ParmVarDecl 0x7f885e825d30 <col:13, col:17> col:17 used o 'int'
+  `-CompoundStmt 0x7f885e825f30 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7f885e825f18 <line:14:3, col:14>
+      `-BinaryOperator 0x7f885e825ef0 <col:10, col:14> 'int' '/'
+        |-ImplicitCastExpr 0x7f885e825ec0 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f885e825e70 <col:10> 'int' lvalue ParmVar 0x7f885e825cb8 'u' 'int'
+        `-ImplicitCastExpr 0x7f885e825ed8 <col:14> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f885e825e98 <col:14> 'int' lvalue ParmVar 0x7f885e825d30 'o' 'int'

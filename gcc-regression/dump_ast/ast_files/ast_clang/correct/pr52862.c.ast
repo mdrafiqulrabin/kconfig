@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fbc27015ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbc27016420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbc27016140 '__int128'
+|-TypedefDecl 0x7fbc27016490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbc27016160 'unsigned __int128'
+|-TypedefDecl 0x7fbc27016768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbc27016570 'struct __NSConstantString_tag'
+|   `-Record 0x7fbc270164e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbc27016800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbc270167c0 'char *'
+|   `-BuiltinType 0x7fbc27015f60 'char'
+|-TypedefDecl 0x7fbc27016ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbc27016a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbc270168e0 'struct __va_list_tag'
+|     `-Record 0x7fbc27016858 '__va_list_tag'
+|-FunctionDecl 0x7fbc26836228 <c_files/pr52862.c:4:1, col:42> col:6 used ASMAtomicWritePtrVoid 'void (const void *)'
+| `-ParmVarDecl 0x7fbc27016b60 <col:28, col:40> col:40 pv 'const void *'
+`-FunctionDecl 0x7fbc268363d0 <line:5:1, line:9:1> line:5:6 rtThreadDestroy 'void (void)'
+  `-CompoundStmt 0x7fbc26836718 <line:6:1, line:9:1>
+    |-DeclStmt 0x7fbc26836578 <line:7:3, col:43>
+    | `-VarDecl 0x7fbc26836480 <col:3, col:42> col:16 used pvTypeChecked 'void *const' cinit
+    |   `-ImplicitCastExpr 0x7fbc26836560 <col:32, col:42> 'void *const' <NullToPointer>
+    |     `-ParenExpr 0x7fbc26836540 <col:32, col:42> 'void *'
+    |       `-CStyleCastExpr 0x7fbc26836518 <col:33, col:41> 'void *' <NullToPointer>
+    |         `-IntegerLiteral 0x7fbc268364e0 <col:41> 'int' 0
+    `-CallExpr 0x7fbc268366d0 <line:8:3, col:48> 'void'
+      |-ImplicitCastExpr 0x7fbc268366b8 <col:3> 'void (*)(const void *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fbc26836590 <col:3> 'void (const void *)' Function 0x7fbc26836228 'ASMAtomicWritePtrVoid' 'void (const void *)'
+      `-ImplicitCastExpr 0x7fbc26836700 <col:25, col:47> 'const void *' <BitCast>
+        `-CStyleCastExpr 0x7fbc26836660 <col:25, col:47> 'void *' <NoOp>
+          `-ImplicitCastExpr 0x7fbc26836648 <col:33, col:47> 'void *' <LValueToRValue>
+            `-ParenExpr 0x7fbc26836628 <col:33, col:47> 'void *const' lvalue
+              `-DeclRefExpr 0x7fbc268365b8 <col:34> 'void *const' lvalue Var 0x7fbc26836480 'pvTypeChecked' 'void *const'

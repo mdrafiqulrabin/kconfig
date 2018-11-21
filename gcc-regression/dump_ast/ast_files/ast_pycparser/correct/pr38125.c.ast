@@ -1,0 +1,109 @@
+FileAST: 
+  Typedef: TEST_SV, [], ['typedef']
+    TypeDecl: TEST_SV, []
+      Struct: sv
+  Typedef: TEST_AV, [], ['typedef']
+    TypeDecl: TEST_AV, []
+      Struct: av
+  Typedef: TEST_MAGIC, [], ['typedef']
+    TypeDecl: TEST_MAGIC, []
+      Struct: magic
+  Typedef: TEST_XPVAV, [], ['typedef']
+    TypeDecl: TEST_XPVAV, []
+      Struct: xpvav
+  Decl: None, [], [], []
+    Struct: sv
+      Decl: sv_any, [], [], []
+        PtrDecl: []
+          TypeDecl: sv_any, []
+            IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: av
+      Decl: sv_any, [], [], []
+        PtrDecl: []
+          TypeDecl: sv_any, []
+            IdentifierType: ['TEST_XPVAV']
+  Decl: None, [], [], []
+    Struct: xpvav
+      Decl: xav_array, [], [], []
+        PtrDecl: []
+          TypeDecl: xav_array, []
+            IdentifierType: ['char']
+      Decl: xav_fill, [], [], []
+        TypeDecl: xav_fill, []
+          IdentifierType: ['long', 'int']
+      Decl: xav_max, [], [], []
+        TypeDecl: xav_max, []
+          IdentifierType: ['long', 'int']
+  Decl: None, [], [], []
+    Struct: magic
+      Decl: mg_obj, [], [], []
+        PtrDecl: []
+          TypeDecl: mg_obj, []
+            IdentifierType: ['TEST_SV']
+  Decl: PL_sv_undef, [], ['extern'], []
+    TypeDecl: PL_sv_undef, []
+      IdentifierType: ['TEST_SV']
+  FuncDef: 
+    Decl: Perl_av_fill, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: av, [], ['register'], []
+            PtrDecl: []
+              TypeDecl: av, []
+                IdentifierType: ['TEST_AV']
+          Decl: fill, [], [], []
+            TypeDecl: fill, []
+              IdentifierType: ['int']
+        TypeDecl: Perl_av_fill, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: mg, [], [], []
+        PtrDecl: []
+          TypeDecl: mg, []
+            IdentifierType: ['TEST_MAGIC']
+      Decl: key, [], [], []
+        TypeDecl: key, []
+          IdentifierType: ['int']
+        StructRef: ->
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['TEST_XPVAV']
+            StructRef: ->
+              ID: av
+              ID: sv_any
+          ID: xav_fill
+      Decl: ary, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: ary, []
+              IdentifierType: ['TEST_SV']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['TEST_SV']
+          StructRef: ->
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['TEST_XPVAV']
+              StructRef: ->
+                ID: av
+                ID: sv_any
+            ID: xav_array
+      While: 
+        BinaryOp: <
+          ID: key
+          ID: fill
+        Assignment: =
+          ArrayRef: 
+            ID: ary
+            UnaryOp: ++
+              ID: key
+          UnaryOp: &
+            ID: PL_sv_undef

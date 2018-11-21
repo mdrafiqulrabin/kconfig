@@ -1,0 +1,20 @@
+c_files/progmem-warning-1.c:5:10: fatal error: 'progmem.h' file not found
+#include "progmem.h"
+         ^~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7ff8270082d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff827008820 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff827008540 '__int128'
+|-TypedefDecl 0x7ff827008890 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff827008560 'unsigned __int128'
+|-TypedefDecl 0x7ff827008b68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff827008970 'struct __NSConstantString_tag'
+|   `-Record 0x7ff8270088e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff827008c00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff827008bc0 'char *'
+|   `-BuiltinType 0x7ff827008360 'char'
+|-TypedefDecl 0x7ff827008ec8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff827008e70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff827008ce0 'struct __va_list_tag'
+|     `-Record 0x7ff827008c58 '__va_list_tag'
+`-VarDecl 0x7ff827008f30 <c_files/progmem-warning-1.c:7:1, col:12> col:12 c 'const char'

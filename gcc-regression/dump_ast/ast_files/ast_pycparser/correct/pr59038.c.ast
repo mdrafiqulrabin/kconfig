@@ -1,0 +1,92 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: first_ones_8bit, [], [], []
+    ArrayDecl: []
+      TypeDecl: first_ones_8bit, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 256
+  Decl: connected_passed, [], [], []
+    ArrayDecl: []
+      TypeDecl: connected_passed, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 256
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 256
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: connected_passed
+              ID: i
+            Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ID: first_ones_8bit
+              ID: i
+            Constant: int, 0
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 7
+            BinaryOp: >
+              ID: j
+              Constant: int, 0
+            UnaryOp: p--
+              ID: j
+            Compound: 
+              If: 
+                BinaryOp: ==
+                  BinaryOp: &
+                    ID: i
+                    BinaryOp: <<
+                      Constant: int, 3
+                      BinaryOp: -
+                        Constant: int, 7
+                        ID: j
+                  BinaryOp: <<
+                    Constant: int, 3
+                    BinaryOp: -
+                      Constant: int, 7
+                      ID: j
+                Compound: 
+                  Assignment: =
+                    ArrayRef: 
+                      ID: connected_passed
+                      ID: i
+                    ID: j
+                  Break: 
+      If: 
+        BinaryOp: !=
+          ArrayRef: 
+            ID: connected_passed
+            Constant: int, 3
+          Constant: int, 7
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

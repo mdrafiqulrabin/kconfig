@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fe2448264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe244826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe244826740 '__int128'
+|-TypedefDecl 0x7fe244826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe244826760 'unsigned __int128'
+|-TypedefDecl 0x7fe244826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe244826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe244826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe244826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe244826dc0 'char *'
+|   `-BuiltinType 0x7fe244826560 'char'
+|-TypedefDecl 0x7fe2448270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe244827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe244826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe244826e58 '__va_list_tag'
+`-FunctionDecl 0x7fe244878558 <c_files/pr67985-2.c:4:1, line:9:1> line:6:1 foo 'float (float, float)'
+  |-ParmVarDecl 0x7fe244878400 <col:6, col:12> col:12 used x 'float'
+  |-ParmVarDecl 0x7fe244878478 <col:15, col:21> col:21 used y 'float'
+  |-CompoundStmt 0x7fe244878760 <line:7:1, line:9:1>
+  | `-ReturnStmt 0x7fe244878748 <line:8:3, col:14>
+  |   `-BinaryOperator 0x7fe244878720 <col:10, col:14> 'float' '*'
+  |     |-ImplicitCastExpr 0x7fe2448786f0 <col:10> 'float' <LValueToRValue>
+  |     | `-DeclRefExpr 0x7fe2448786a0 <col:10> 'float' lvalue ParmVar 0x7fe244878400 'x' 'float'
+  |     `-ImplicitCastExpr 0x7fe244878708 <col:14> 'float' <LValueToRValue>
+  |       `-DeclRefExpr 0x7fe2448786c8 <col:14> 'float' lvalue ParmVar 0x7fe244878478 'y' 'float'
+  `-TargetAttr 0x7fe244878600 <line:5:16, col:38> "arch=lakemont"

@@ -1,0 +1,24 @@
+FileAST: 
+  FuncDef: 
+    Decl: libcall_dep, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['double']
+        TypeDecl: libcall_dep, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: tem, [], [], []
+        TypeDecl: tem, []
+          IdentifierType: ['double']
+        BinaryOp: +
+          ID: x
+          ID: y
+      Return: 
+        BinaryOp: *
+          ID: x
+          ID: tem

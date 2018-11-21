@@ -1,0 +1,59 @@
+c_files/pr25183.c:22:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7fdfb10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdfb1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdfb1026740 '__int128'
+|-TypedefDecl 0x7fdfb1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdfb1026760 'unsigned __int128'
+|-TypedefDecl 0x7fdfb1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdfb1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdfb1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdfb1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdfb1026dc0 'char *'
+|   `-BuiltinType 0x7fdfb1026560 'char'
+|-TypedefDecl 0x7fdfb10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdfb1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdfb1026ee0 'struct __va_list_tag'
+|     `-Record 0x7fdfb1026e58 '__va_list_tag'
+|-EnumDecl 0x7fdfb1027120 <c_files/pr25183.c:4:1, line:10:1> line:4:6 err
+| |-EnumConstantDecl 0x7fdfb1825a00 <line:5:3, col:12> col:3 referenced err_IO 'unsigned int'
+| | `-IntegerLiteral 0x7fdfb10271e0 <col:12> 'unsigned int' 2319777792
+| |-EnumConstantDecl 0x7fdfb1825a48 <line:6:3> col:3 referenced err_NM 'unsigned int'
+| |-EnumConstantDecl 0x7fdfb1825a90 <line:7:3> col:3 referenced err_EOF 'unsigned int'
+| |-EnumConstantDecl 0x7fdfb1825ad8 <line:8:3> col:3 referenced err_SE 'unsigned int'
+| `-EnumConstantDecl 0x7fdfb1825b20 <line:9:3> col:3 referenced err_PT 'unsigned int'
+|-VarDecl 0x7fdfb1825bc0 <line:11:1, col:17> col:17 used E_ 'enum err':'enum err' static
+`-FunctionDecl 0x7fdfb1825cb0 <line:12:1, line:22:1> line:12:5 error 'int ()'
+  `-CompoundStmt 0x7fdfb1826078 <line:13:1, line:22:1>
+    `-SwitchStmt 0x7fdfb1825da0 <line:14:3, line:21:3>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fdfb1825d88 <line:14:11> 'unsigned int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fdfb1825d70 <col:11> 'enum err':'enum err' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fdfb1825d48 <col:11> 'enum err':'enum err' lvalue Var 0x7fdfb1825bc0 'E_' 'enum err':'enum err'
+      `-CompoundStmt 0x7fdfb1826030 <col:15, line:21:3>
+        |-CaseStmt 0x7fdfb1825df8 <line:15:5, col:19>
+        | |-DeclRefExpr 0x7fdfb1825dd0 <col:10> 'unsigned int' EnumConstant 0x7fdfb1825a00 'err_IO' 'unsigned int'
+        | |-<<<NULL>>>
+        | `-BreakStmt 0x7fdfb1825e30 <col:19>
+        |-CaseStmt 0x7fdfb1825e60 <line:16:5, col:19>
+        | |-DeclRefExpr 0x7fdfb1825e38 <col:10> 'unsigned int' EnumConstant 0x7fdfb1825a48 'err_NM' 'unsigned int'
+        | |-<<<NULL>>>
+        | `-BreakStmt 0x7fdfb1825e98 <col:19>
+        |-CaseStmt 0x7fdfb1825ec8 <line:17:5, col:20>
+        | |-DeclRefExpr 0x7fdfb1825ea0 <col:10> 'unsigned int' EnumConstant 0x7fdfb1825a90 'err_EOF' 'unsigned int'
+        | |-<<<NULL>>>
+        | `-BreakStmt 0x7fdfb1825f00 <col:20>
+        |-CaseStmt 0x7fdfb1825f30 <line:18:5, col:19>
+        | |-DeclRefExpr 0x7fdfb1825f08 <col:10> 'unsigned int' EnumConstant 0x7fdfb1825ad8 'err_SE' 'unsigned int'
+        | |-<<<NULL>>>
+        | `-BreakStmt 0x7fdfb1825f68 <col:19>
+        |-CaseStmt 0x7fdfb1825f98 <line:19:5, col:19>
+        | |-DeclRefExpr 0x7fdfb1825f70 <col:10> 'unsigned int' EnumConstant 0x7fdfb1825b20 'err_PT' 'unsigned int'
+        | |-<<<NULL>>>
+        | `-BreakStmt 0x7fdfb1825fd0 <col:19>
+        `-DefaultStmt 0x7fdfb1826010 <line:20:5, col:22>
+          `-ReturnStmt 0x7fdfb1825ff8 <col:15, col:22>
+            `-IntegerLiteral 0x7fdfb1825fd8 <col:22> 'int' 0

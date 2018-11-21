@@ -1,0 +1,88 @@
+c_files/pr82337.c:23:27: warning: incompatible pointer types passing 'struct d *' to parameter of type 'void **' [-Wincompatible-pointer-types]
+    if (__builtin_setjmp (h))
+                          ^
+1 warning generated.
+TranslationUnitDecl 0x7fe8fe0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe8fe026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe8fe026740 '__int128'
+|-TypedefDecl 0x7fe8fe026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe8fe026760 'unsigned __int128'
+|-TypedefDecl 0x7fe8fe026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe8fe026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe8fe026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe8fe026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe8fe026dc0 'char *'
+|   `-BuiltinType 0x7fe8fe026560 'char'
+|-TypedefDecl 0x7fe8fe0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe8fe027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe8fe026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe8fe026e58 '__va_list_tag'
+|-VarDecl 0x7fe8fe027138 <c_files/pr82337.c:5:1, col:7> col:7 used a 'char *'
+|-VarDecl 0x7fe8fe825a00 <col:1, col:11> col:11 used b 'char *'
+|-VarDecl 0x7fe8fe825a78 <col:1, col:15> col:15 used c 'char *'
+|-RecordDecl 0x7fe8fe825af8 <line:7:1, line:10:1> line:7:8 struct d definition
+| |-FieldDecl 0x7fe8fe825bb8 <line:8:3, col:9> col:9 e 'short'
+| `-FieldDecl 0x7fe8fe825c48 <line:9:3, col:10> col:8 referenced f 'char []'
+|-FunctionDecl 0x7fe8fe825d50 <line:12:1, col:20> col:13 used j 'void (void)' extern
+|-FunctionDecl 0x7fe8fe825e38 <line:14:1, line:27:1> line:15:1 g 'void ()'
+| `-CompoundStmt 0x7fe8fe82c068 <col:5, line:27:1>
+|   |-DeclStmt 0x7fe8fe825fe0 <line:16:3, col:14>
+|   | `-VarDecl 0x7fe8fe825f80 <col:3, col:13> col:13 used h 'struct d *'
+|   |-DeclStmt 0x7fe8fe826070 <line:17:3, col:10>
+|   | `-VarDecl 0x7fe8fe826010 <col:3, col:9> col:9 used i 'char *'
+|   |-DeclStmt 0x7fe8fe826100 <line:18:3, col:8>
+|   | `-VarDecl 0x7fe8fe8260a0 <col:3, col:7> col:7 used d 'int'
+|   `-DoStmt 0x7fe8fe82c048 <line:19:3, line:26:13>
+|     |-CompoundStmt 0x7fe8fe82bfc8 <line:19:6, line:26:3>
+|     | |-BinaryOperator 0x7fe8fe826238 <line:20:5, col:16> 'char *' '='
+|     | | |-DeclRefExpr 0x7fe8fe826118 <col:5> 'char *' lvalue Var 0x7fe8fe826010 'i' 'char *'
+|     | | `-BinaryOperator 0x7fe8fe826210 <col:9, col:16> 'char *' '+'
+|     | |   |-ImplicitCastExpr 0x7fe8fe8261e0 <col:9, col:12> 'char *' <ArrayToPointerDecay>
+|     | |   | `-MemberExpr 0x7fe8fe826180 <col:9, col:12> 'char []' lvalue ->f 0x7fe8fe825c48
+|     | |   |   `-ImplicitCastExpr 0x7fe8fe826168 <col:9> 'struct d *' <LValueToRValue>
+|     | |   |     `-DeclRefExpr 0x7fe8fe826140 <col:9> 'struct d *' lvalue Var 0x7fe8fe825f80 'h' 'struct d *'
+|     | |   `-ImplicitCastExpr 0x7fe8fe8261f8 <col:16> 'int' <LValueToRValue>
+|     | |     `-DeclRefExpr 0x7fe8fe8261b8 <col:16> 'int' lvalue Var 0x7fe8fe8260a0 'd' 'int'
+|     | |-ConditionalOperator 0x7fe8fe826350 <line:21:5, col:16> 'void'
+|     | | |-IntegerLiteral 0x7fe8fe826260 <col:5> 'int' 20
+|     | | |-CallExpr 0x7fe8fe8262f0 <col:10, col:12> 'void'
+|     | | | `-ImplicitCastExpr 0x7fe8fe8262d8 <col:10> 'void (*)(void)' <FunctionToPointerDecay>
+|     | | |   `-DeclRefExpr 0x7fe8fe826280 <col:10> 'void (void)' Function 0x7fe8fe825d50 'j' 'void (void)'
+|     | | `-ImplicitCastExpr 0x7fe8fe826338 <col:16> 'void' <ToVoid>
+|     | |   `-IntegerLiteral 0x7fe8fe826318 <col:16> 'int' 0
+|     | |-BinaryOperator 0x7fe8fe8263e8 <line:22:5, col:9> 'char *' '='
+|     | | |-DeclRefExpr 0x7fe8fe826380 <col:5> 'char *' lvalue Var 0x7fe8fe826010 'i' 'char *'
+|     | | `-ImplicitCastExpr 0x7fe8fe8263d0 <col:9> 'char *' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7fe8fe8263a8 <col:9> 'char *' lvalue Var 0x7fe8fe825a78 'c' 'char *'
+|     | |-IfStmt 0x7fe8fe82be38 <line:23:5, line:24:18>
+|     | | |-<<<NULL>>>
+|     | | |-<<<NULL>>>
+|     | | |-CallExpr 0x7fe8fe826670 <line:23:9, col:28> 'int'
+|     | | | |-ImplicitCastExpr 0x7fe8fe826658 <col:9> 'int (*)(void **)' <BuiltinFnToFnPtr>
+|     | | | | `-DeclRefExpr 0x7fe8fe8265c0 <col:9> '<builtin fn type>' Function 0x7fe8fe826478 '__builtin_setjmp' 'int (void **)'
+|     | | | `-ImplicitCastExpr 0x7fe8fe8266b8 <col:27> 'void **' <BitCast>
+|     | | |   `-ImplicitCastExpr 0x7fe8fe8266a0 <col:27> 'struct d *' <LValueToRValue>
+|     | | |     `-DeclRefExpr 0x7fe8fe8265e8 <col:27> 'struct d *' lvalue Var 0x7fe8fe825f80 'h' 'struct d *'
+|     | | |-BinaryOperator 0x7fe8fe82be10 <line:24:7, col:18> 'char *' '='
+|     | | | |-DeclRefExpr 0x7fe8fe82bcf0 <col:7> 'char *' lvalue Var 0x7fe8fe825a00 'b' 'char *'
+|     | | | `-BinaryOperator 0x7fe8fe82bde8 <col:11, col:18> 'char *' '+'
+|     | | |   |-ImplicitCastExpr 0x7fe8fe82bdb8 <col:11, col:14> 'char *' <ArrayToPointerDecay>
+|     | | |   | `-MemberExpr 0x7fe8fe82bd58 <col:11, col:14> 'char []' lvalue ->f 0x7fe8fe825c48
+|     | | |   |   `-ImplicitCastExpr 0x7fe8fe82bd40 <col:11> 'struct d *' <LValueToRValue>
+|     | | |   |     `-DeclRefExpr 0x7fe8fe82bd18 <col:11> 'struct d *' lvalue Var 0x7fe8fe825f80 'h' 'struct d *'
+|     | | |   `-ImplicitCastExpr 0x7fe8fe82bdd0 <col:18> 'int' <LValueToRValue>
+|     | | |     `-DeclRefExpr 0x7fe8fe82bd90 <col:18> 'int' lvalue Var 0x7fe8fe8260a0 'd' 'int'
+|     | | `-<<<NULL>>>
+|     | `-BinaryOperator 0x7fe8fe82bfa0 <line:25:5, col:17> 'int' '='
+|     |   |-DeclRefExpr 0x7fe8fe82be70 <col:5> 'int' lvalue Var 0x7fe8fe8260a0 'd' 'int'
+|     |   `-CStyleCastExpr 0x7fe8fe82bf78 <col:9, col:17> 'int' <IntegralCast>
+|     |     `-ImplicitCastExpr 0x7fe8fe82bf60 <col:14, col:17> 'char' <LValueToRValue>
+|     |       `-ParenExpr 0x7fe8fe82bf40 <col:14, col:17> 'char' lvalue
+|     |         `-UnaryOperator 0x7fe8fe82bed8 <col:15, col:16> 'char' lvalue prefix '*'
+|     |           `-ImplicitCastExpr 0x7fe8fe82bec0 <col:16> 'char *' <LValueToRValue>
+|     |             `-DeclRefExpr 0x7fe8fe82be98 <col:16> 'char *' lvalue Var 0x7fe8fe826010 'i' 'char *'
+|     `-ImplicitCastExpr 0x7fe8fe82c030 <line:26:12> 'char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fe8fe82c008 <col:12> 'char *' lvalue Var 0x7fe8fe027138 'a' 'char *'
+`-FunctionDecl 0x7fe8fe826478 <line:23:9> col:9 implicit used __builtin_setjmp 'int (void **)' extern
+  |-ParmVarDecl 0x7fe8fe826510 <<invalid sloc>> <invalid sloc> 'void **'
+  `-ReturnsTwiceAttr 0x7fe8fe826578 <col:9> Implicit

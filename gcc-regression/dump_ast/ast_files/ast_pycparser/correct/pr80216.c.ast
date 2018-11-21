@@ -1,0 +1,100 @@
+FileAST: 
+  Decl: u4, [], [], []
+    TypeDecl: u4, []
+      IdentifierType: ['int']
+  Decl: lx, [], [], []
+    TypeDecl: lx, []
+      IdentifierType: ['int']
+  Decl: e0, [], [], []
+    TypeDecl: e0, []
+      IdentifierType: ['int']
+  Decl: zy, [], [], []
+    TypeDecl: zy, []
+      IdentifierType: ['int']
+  Decl: pz, [], [], []
+    TypeDecl: pz, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: tb, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: m6, [], [], []
+            TypeDecl: m6, []
+              IdentifierType: ['int']
+        TypeDecl: tb, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        Assignment: =
+          ID: pz
+          Constant: int, 0
+        BinaryOp: <
+          ID: pz
+          Constant: int, 1
+        UnaryOp: ++
+          ID: pz
+        Compound: 
+          For: 
+            Assignment: =
+              ID: zy
+              Constant: int, 0
+            BinaryOp: <
+              ID: zy
+              Constant: int, 1
+            UnaryOp: ++
+              ID: zy
+            For: 
+              Assignment: =
+                ID: u4
+                Constant: int, 0
+              BinaryOp: <
+                ID: u4
+                Constant: int, 1
+              UnaryOp: ++
+                ID: u4
+              For: 
+                Assignment: =
+                  ID: e0
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: e0
+                  Constant: int, 1
+                UnaryOp: ++
+                  ID: e0
+                Compound: 
+                  Label: as
+                    For: 
+                      Compound: 
+          If: 
+            BinaryOp: !=
+              ID: e0
+              Constant: int, 0
+            Goto: ql
+          If: 
+            Constant: int, 0
+            Compound: 
+              Label: o3
+                For: 
+                  Assignment: =
+                    ID: lx
+                    Constant: int, 0
+                  BinaryOp: <
+                    ID: lx
+                    Constant: int, 1
+                  UnaryOp: ++
+                    ID: lx
+                  Compound: 
+                    Assignment: |=
+                      ID: m6
+                      ID: lx
+                    If: 
+                      BinaryOp: ==
+                        ID: m6
+                        Constant: int, 0
+                      Assignment: =
+                        ID: lx
+                        Constant: int, 0
+                    Label: ql
+                      EmptyStatement: 
+              Goto: as
+      Goto: o3

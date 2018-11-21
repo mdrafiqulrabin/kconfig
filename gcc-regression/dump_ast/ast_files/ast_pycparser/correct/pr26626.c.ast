@@ -1,0 +1,39 @@
+FileAST: 
+  Typedef: U, [], ['typedef']
+    TypeDecl: U, []
+      Union: None
+        Decl: d, [], [], []
+          TypeDecl: d, []
+            IdentifierType: ['int']
+  Decl: rv, [], [], []
+    TypeDecl: rv, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: breakme, [], [], []
+      FuncDecl: 
+        TypeDecl: breakme, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: rv0, [], [], []
+        PtrDecl: []
+          TypeDecl: rv0, []
+            IdentifierType: ['U']
+      Decl: pretmp, [], [], []
+        PtrDecl: []
+          TypeDecl: pretmp, []
+            IdentifierType: ['U']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['U']
+          UnaryOp: &
+            ID: rv
+      Assignment: =
+        ID: rv0
+        ID: pretmp
+      Assignment: =
+        StructRef: ->
+          ID: rv0
+          ID: d
+        Constant: int, 42

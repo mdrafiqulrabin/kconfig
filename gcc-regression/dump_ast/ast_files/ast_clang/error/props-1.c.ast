@@ -1,0 +1,23 @@
+c_files/props-1.c:9:3: error: use of undeclared identifier '__transaction_atomic'
+  __transaction_atomic {
+  ^
+1 error generated.
+TranslationUnitDecl 0x7fc4c60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc4c6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc4c6026740 '__int128'
+|-TypedefDecl 0x7fc4c6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc4c6026760 'unsigned __int128'
+|-TypedefDecl 0x7fc4c6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc4c6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc4c6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc4c6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc4c6026dc0 'char *'
+|   `-BuiltinType 0x7fc4c6026560 'char'
+|-TypedefDecl 0x7fc4c60270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc4c6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc4c6026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc4c6026e58 '__va_list_tag'
+|-VarDecl 0x7fc4c6027138 <c_files/props-1.c:4:1, col:5> col:5 global 'int'
+`-FunctionDecl 0x7fc4c60774c0 <line:6:1, line:14:1> line:7:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fc4c6077400 <col:5, col:9> col:9 local 'int'
+  `-CompoundStmt 0x7fc4c6077578 <line:8:1, line:14:1>

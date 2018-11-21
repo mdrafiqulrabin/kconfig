@@ -1,0 +1,47 @@
+c_files/pr69246.c:4:23: warning: calling convention 'stdcall' ignored for this target [-Wignored-attributes]
+void (__attribute__ ((stdcall)) *a) (int);
+                      ^
+c_files/pr69246.c:6:22: warning: calling convention 'stdcall' ignored for this target [-Wignored-attributes]
+void __attribute__ ((stdcall))
+                     ^
+c_files/pr69246.c:12:22: warning: calling convention 'stdcall' ignored for this target [-Wignored-attributes]
+int (__attribute__ ((stdcall)) *b) (int);
+                     ^
+c_files/pr69246.c:14:21: warning: calling convention 'stdcall' ignored for this target [-Wignored-attributes]
+int __attribute__ ((stdcall))
+                    ^
+4 warnings generated.
+TranslationUnitDecl 0x7fd74e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd74e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd74e026740 '__int128'
+|-TypedefDecl 0x7fd74e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd74e026760 'unsigned __int128'
+|-TypedefDecl 0x7fd74e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd74e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd74e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd74e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd74e026dc0 'char *'
+|   `-BuiltinType 0x7fd74e026560 'char'
+|-TypedefDecl 0x7fd74e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd74e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd74e026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd74e026e58 '__va_list_tag'
+|-VarDecl 0x7fd74e826b08 <c_files/pr69246.c:4:1, col:34> col:34 used a 'void (*)(int) __attribute__((stdcall))'
+|-FunctionDecl 0x7fd74e826c90 <line:6:1, line:10:1> line:7:1 foo 'void (int) __attribute__((stdcall))':'void (int)'
+| |-ParmVarDecl 0x7fd74e826bc0 <col:6, col:10> col:10 used x 'int'
+| `-CompoundStmt 0x7fd74e826de0 <line:8:1, line:10:1>
+|   `-CallExpr 0x7fd74e826d98 <line:9:3, col:7> 'void'
+|     |-ImplicitCastExpr 0x7fd74e826d80 <col:3> 'void (*)(int) __attribute__((stdcall))' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fd74e826d30 <col:3> 'void (*)(int) __attribute__((stdcall))' lvalue Var 0x7fd74e826b08 'a' 'void (*)(int) __attribute__((stdcall))'
+|     `-ImplicitCastExpr 0x7fd74e826dc8 <col:6> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd74e826d58 <col:6> 'int' lvalue ParmVar 0x7fd74e826bc0 'x' 'int'
+|-VarDecl 0x7fd74e826fd0 <line:12:1, col:33> col:33 used b 'int (*)(int) __attribute__((stdcall))'
+`-FunctionDecl 0x7fd74e827128 <line:14:1, line:18:1> line:15:1 bar 'int (int) __attribute__((stdcall))':'int (int)'
+  |-ParmVarDecl 0x7fd74e827048 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fd74e827290 <line:16:1, line:18:1>
+    `-ReturnStmt 0x7fd74e827278 <line:17:3, col:14>
+      `-CallExpr 0x7fd74e827230 <col:10, col:14> 'int'
+        |-ImplicitCastExpr 0x7fd74e827218 <col:10> 'int (*)(int) __attribute__((stdcall))' <LValueToRValue>
+        | `-DeclRefExpr 0x7fd74e8271c8 <col:10> 'int (*)(int) __attribute__((stdcall))' lvalue Var 0x7fd74e826fd0 'b' 'int (*)(int) __attribute__((stdcall))'
+        `-ImplicitCastExpr 0x7fd74e827260 <col:13> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fd74e8271f0 <col:13> 'int' lvalue ParmVar 0x7fd74e827048 'x' 'int'

@@ -1,0 +1,87 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: a, [], [], []
+        PtrDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Decl: c, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: S
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: S
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: baz, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          Struct: S
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: s
+      Compound: 
+        Decl: a, [], [], []
+          ArrayDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+            StructRef: .
+              ID: s
+              ID: b
+        Decl: c, [], [], []
+          ArrayDecl: []
+            PtrDecl: []
+              TypeDecl: c, []
+                IdentifierType: ['int']
+            StructRef: .
+              ID: s
+              ID: d
+        Assignment: =
+          StructRef: .
+            ID: s
+            ID: a
+          ID: a
+        Assignment: =
+          StructRef: .
+            ID: s
+            ID: c
+          ID: c
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            UnaryOp: &
+              ID: s
+      Return: 
+        Constant: int, 0

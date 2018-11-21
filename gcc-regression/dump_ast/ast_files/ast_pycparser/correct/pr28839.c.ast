@@ -1,0 +1,67 @@
+FileAST: 
+  Decl: ready, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: ready, []
+        IdentifierType: ['int']
+      Constant: int, 10
+  Decl: abort, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: b, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: b, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: test_once, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: t, [], [], []
+            TypeDecl: t, []
+              IdentifierType: ['int']
+          Decl: t1, [], [], []
+            TypeDecl: t1, []
+              IdentifierType: ['int']
+        TypeDecl: test_once, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: repeat, [], [], []
+        TypeDecl: repeat, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: ready
+              ID: i
+            Constant: int, 0
+          If: 
+            ID: t1
+            If: 
+              FuncCall: 
+                ID: b
+              FuncCall: 
+                ID: abort
+      If: 
+        ID: t
+        FuncCall: 
+          ID: abort

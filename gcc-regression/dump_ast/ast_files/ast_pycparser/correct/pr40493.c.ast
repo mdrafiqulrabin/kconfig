@@ -1,0 +1,325 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Typedef: i386_operand_type, [], ['typedef']
+    TypeDecl: i386_operand_type, []
+      Union: i386_operand_type
+        Decl: bitfield, [], [], []
+          TypeDecl: bitfield, []
+            Struct: None
+              Decl: reg8, [], [], []
+                TypeDecl: reg8, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: reg16, [], [], []
+                TypeDecl: reg16, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: reg32, [], [], []
+                TypeDecl: reg32, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: reg64, [], [], []
+                TypeDecl: reg64, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: floatreg, [], [], []
+                TypeDecl: floatreg, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: regmmx, [], [], []
+                TypeDecl: regmmx, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: regxmm, [], [], []
+                TypeDecl: regxmm, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: regymm, [], [], []
+                TypeDecl: regymm, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: control, [], [], []
+                TypeDecl: control, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: debug, [], [], []
+                TypeDecl: debug, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: test, [], [], []
+                TypeDecl: test, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: sreg2, [], [], []
+                TypeDecl: sreg2, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: sreg3, [], [], []
+                TypeDecl: sreg3, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: imm1, [], [], []
+                TypeDecl: imm1, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: imm8, [], [], []
+                TypeDecl: imm8, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: imm8s, [], [], []
+                TypeDecl: imm8s, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: imm16, [], [], []
+                TypeDecl: imm16, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: imm32, [], [], []
+                TypeDecl: imm32, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: imm32s, [], [], []
+                TypeDecl: imm32s, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: imm64, [], [], []
+                TypeDecl: imm64, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: disp8, [], [], []
+                TypeDecl: disp8, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: disp16, [], [], []
+                TypeDecl: disp16, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: disp32, [], [], []
+                TypeDecl: disp32, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: disp32s, [], [], []
+                TypeDecl: disp32s, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: disp64, [], [], []
+                TypeDecl: disp64, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: acc, [], [], []
+                TypeDecl: acc, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: floatacc, [], [], []
+                TypeDecl: floatacc, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: baseindex, [], [], []
+                TypeDecl: baseindex, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: inoutportreg, [], [], []
+                TypeDecl: inoutportreg, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: shiftcount, [], [], []
+                TypeDecl: shiftcount, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: jumpabsolute, [], [], []
+                TypeDecl: jumpabsolute, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: esseg, [], [], []
+                TypeDecl: esseg, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: regmem, [], [], []
+                TypeDecl: regmem, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: mem, [], [], []
+                TypeDecl: mem, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: byte, [], [], []
+                TypeDecl: byte, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: word, [], [], []
+                TypeDecl: word, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: dword, [], [], []
+                TypeDecl: dword, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: fword, [], [], []
+                TypeDecl: fword, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: qword, [], [], []
+                TypeDecl: qword, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: tbyte, [], [], []
+                TypeDecl: tbyte, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: xmmword, [], [], []
+                TypeDecl: xmmword, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: ymmword, [], [], []
+                TypeDecl: ymmword, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: unspecified, [], [], []
+                TypeDecl: unspecified, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+              Decl: anysize, [], [], []
+                TypeDecl: anysize, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 1
+        Decl: array, [], [], []
+          ArrayDecl: []
+            TypeDecl: array, []
+              IdentifierType: ['unsigned', 'int']
+            Constant: int, 2
+  Decl: x00, [], [], []
+    TypeDecl: x00, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: x01, [], [], []
+    TypeDecl: x01, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: y00, [], [], []
+    TypeDecl: y00, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: y01, [], [], []
+    TypeDecl: y01, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argc, [], [], []
+            TypeDecl: argc, []
+              IdentifierType: ['int']
+          Decl: argv, [], [], []
+            ArrayDecl: []
+              PtrDecl: []
+                TypeDecl: argv, []
+                  IdentifierType: ['char']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['i386_operand_type']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['i386_operand_type']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['i386_operand_type']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['i386_operand_type']
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: a
+            ID: bitfield
+          ID: reg16
+        Constant: int, 1
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: a
+            ID: bitfield
+          ID: imm16
+        Constant: int, 0
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: a
+            ID: array
+          Constant: int, 1
+        Constant: int, 22
+      Assignment: =
+        ID: b
+        ID: a
+      Assignment: =
+        ID: x00
+        ArrayRef: 
+          StructRef: .
+            ID: b
+            ID: array
+          Constant: int, 0
+      Assignment: =
+        ID: x01
+        ArrayRef: 
+          StructRef: .
+            ID: b
+            ID: array
+          Constant: int, 1
+      Assignment: =
+        ID: c
+        ID: b
+      Assignment: =
+        ID: y00
+        ArrayRef: 
+          StructRef: .
+            ID: c
+            ID: array
+          Constant: int, 0
+      Assignment: =
+        ID: y01
+        ArrayRef: 
+          StructRef: .
+            ID: c
+            ID: array
+          Constant: int, 1
+      Assignment: =
+        ID: d
+        ID: c
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            StructRef: .
+              ID: d
+              ID: bitfield
+            ID: reg16
+          Constant: int, 1
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            StructRef: .
+              ID: d
+              ID: bitfield
+            ID: imm16
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          ArrayRef: 
+            StructRef: .
+              ID: d
+              ID: array
+            Constant: int, 1
+          Constant: int, 22
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

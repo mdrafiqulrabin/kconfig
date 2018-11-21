@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fe42a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe42a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe42a026740 '__int128'
+|-TypedefDecl 0x7fe42a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe42a026760 'unsigned __int128'
+|-TypedefDecl 0x7fe42a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe42a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe42a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe42a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe42a026dc0 'char *'
+|   `-BuiltinType 0x7fe42a026560 'char'
+|-TypedefDecl 0x7fe42a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe42a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe42a026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe42a026e58 '__va_list_tag'
+|-TypedefDecl 0x7fe42a027178 <c_files/pr47968.c:4:1, col:50> col:50 referenced float4 '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7fe42a027140 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7fe42a0266c0 'float'
+|-TypedefDecl 0x7fe42a078438 <line:5:1, col:51> col:51 referenced double2 '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7fe42a078400 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7fe42a0266e0 'double'
+`-FunctionDecl 0x7fe42a0785c8 <line:7:1, line:11:1> line:7:7 foo 'float (double2)'
+  |-ParmVarDecl 0x7fe42a0784c0 <col:12, col:20> col:20 used d2 'double2':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+  `-CompoundStmt 0x7fe42a078938 <line:8:1, line:11:1>
+    |-DeclStmt 0x7fe42a0787b8 <line:9:3, col:26>
+    | `-VarDecl 0x7fe42a0786e0 <col:3, col:24> col:10 used f4 'float4':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+    |   `-CStyleCastExpr 0x7fe42a078790 <col:15, col:24> 'float4':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <BitCast>
+    |     `-ImplicitCastExpr 0x7fe42a078778 <col:24> 'double2':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fe42a078740 <col:24> 'double2':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7fe42a0784c0 'd2' 'double2':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    `-ReturnStmt 0x7fe42a078920 <line:10:3, col:22>
+      `-ImplicitCastExpr 0x7fe42a078908 <col:10, col:22> 'float' <LValueToRValue>
+        `-UnaryOperator 0x7fe42a0788e8 <col:10, col:22> 'float' lvalue prefix '*'
+          `-CStyleCastExpr 0x7fe42a0788c0 <col:11, col:22> 'float *' <BitCast>
+            `-UnaryOperator 0x7fe42a078858 <col:21, col:22> 'float4 *' prefix '&'
+              `-DeclRefExpr 0x7fe42a0787d0 <col:22> 'float4':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fe42a0786e0 'f4' 'float4':'__attribute__((__vector_size__(4 * sizeof(float)))) float'

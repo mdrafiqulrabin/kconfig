@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7f83b88264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f83b8826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f83b8826740 '__int128'
+|-TypedefDecl 0x7f83b8826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f83b8826760 'unsigned __int128'
+|-TypedefDecl 0x7f83b8826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f83b8826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f83b8826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f83b8826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f83b8826dc0 'char *'
+|   `-BuiltinType 0x7f83b8826560 'char'
+|-TypedefDecl 0x7f83b88270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f83b8827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f83b8826ee0 'struct __va_list_tag'
+|     `-Record 0x7f83b8826e58 '__va_list_tag'
+|-RecordDecl 0x7f83b8827120 <c_files/pr85030.c:3:1, col:27> col:8 struct S definition
+| |-FieldDecl 0x7f83b8877400 <col:12, col:16> col:16 c 'int'
+| |-FieldDecl 0x7f83b8877490 <col:12, col:20> col:20 b 'int *'
+| `-FieldDecl 0x7f83b88774f0 <col:12, col:24> col:24 e 'int *'
+`-FunctionDecl 0x7f83b8877588 <line:5:1, line:10:1> line:6:1 foo 'void ()'
+  `-CompoundStmt 0x7f83b8877978 <line:7:1, line:10:1>
+    |-DeclStmt 0x7f83b8877710 <line:8:3, col:13>
+    | `-VarDecl 0x7f83b88776b0 <col:3, col:12> col:12 used a 'struct S':'struct S'
+    `-GCCAsmStmt 0x7f83b8877900 <line:9:3, col:41>
+      |-DeclRefExpr 0x7f83b88777f8 <col:29> 'struct S':'struct S' lvalue Var 0x7f83b88776b0 'a' 'struct S':'struct S'
+      `-IntegerLiteral 0x7f83b8877888 <col:39> 'int' 1

@@ -1,0 +1,78 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['char']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['int']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        TypeDecl: fn2, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 5
+  FuncDef: 
+    Decl: fn3, [], [], []
+      FuncDecl: 
+        TypeDecl: fn3, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        FuncCall: 
+          ID: fn2
+        EmptyStatement: 
+        Compound: 
+          Decl: c, [], [], []
+            ArrayDecl: []
+              TypeDecl: c, []
+                IdentifierType: ['char']
+              Constant: int, 5
+          Assignment: =
+            ArrayRef: 
+              ID: c
+              Constant: int, 0
+            Constant: int, 5
+          Label: lbl_608
+            FuncCall: 
+              ID: fn1
+              ExprList: 
+                ArrayRef: 
+                  ID: c
+                  Constant: int, 9
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+            ArrayRef: 
+              ID: c
+              Constant: int, 9
+          BinaryOp: |
+            ArrayRef: 
+              ID: c
+              Constant: int, 2
+            ID: a
+          Assignment: =
+            ID: d
+            ArrayRef: 
+              ID: c
+              ID: b
+      Goto: lbl_608
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 0

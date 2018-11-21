@@ -1,0 +1,71 @@
+TranslationUnitDecl 0x7fe0360264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe036026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe036026740 '__int128'
+|-TypedefDecl 0x7fe036026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe036026760 'unsigned __int128'
+|-TypedefDecl 0x7fe036026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe036026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe036026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe036026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe036026dc0 'char *'
+|   `-BuiltinType 0x7fe036026560 'char'
+|-TypedefDecl 0x7fe0360270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe036027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe036026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe036026e58 '__va_list_tag'
+|-RecordDecl 0x7fe036027120 <c_files/pr60647-2.c:4:1, line:7:1> line:4:8 struct _wincore definition
+| |-FieldDecl 0x7fe036077400 <line:6:3, col:7> col:7 width 'int'
+| `-FieldDecl 0x7fe036077460 <col:3, col:14> col:14 referenced height 'int'
+|-FunctionDecl 0x7fe036077580 <line:9:1, col:14> col:6 used fn1 'void (int)'
+| `-ParmVarDecl 0x7fe0360774c0 <col:11> col:14 'int'
+|-FunctionDecl 0x7fe036077870 <line:10:1, col:26> col:6 used fn2 'void (int, int, int *)'
+| |-ParmVarDecl 0x7fe036077678 <col:11> col:14 'int'
+| |-ParmVarDecl 0x7fe0360776f0 <col:16> col:19 'int'
+| `-ParmVarDecl 0x7fe036077790 <col:21, col:25> col:26 'int *'
+|-FunctionDecl 0x7fe036077c00 <line:12:1, line:16:1> line:13:1 used foo 'void (void *, struct _wincore *, int)' static
+| |-ParmVarDecl 0x7fe036077938 <col:6, col:12> col:12 dpy 'void *'
+| |-ParmVarDecl 0x7fe036077a50 <col:17, col:34> col:34 used winInfo 'struct _wincore *'
+| |-ParmVarDecl 0x7fe036077ac8 <col:43, col:47> col:47 offset 'int'
+| `-CompoundStmt 0x7fe036077dd8 <line:14:1, line:16:1>
+|   `-CallExpr 0x7fe036077d90 <line:15:3, col:23> 'void'
+|     |-ImplicitCastExpr 0x7fe036077d78 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe036077cb0 <col:3> 'void (int)' Function 0x7fe036077580 'fn1' 'void (int)'
+|     `-ImplicitCastExpr 0x7fe036077dc0 <col:8, col:17> 'int' <LValueToRValue>
+|       `-MemberExpr 0x7fe036077d18 <col:8, col:17> 'int' lvalue ->height 0x7fe036077460
+|         `-ImplicitCastExpr 0x7fe036077d00 <col:8> 'struct _wincore *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fe036077cd8 <col:8> 'struct _wincore *' lvalue ParmVar 0x7fe036077a50 'winInfo' 'struct _wincore *'
+|-FunctionDecl 0x7fe036077fe0 <line:18:1, line:23:1> line:19:1 used bar 'void (void *, int, int *)' static
+| |-ParmVarDecl 0x7fe036077e10 <col:6, col:12> col:12 dpy 'void *'
+| |-ParmVarDecl 0x7fe036077e88 <col:17, col:21> col:21 used winInfo 'int'
+| |-ParmVarDecl 0x7fe036077f00 <col:30, col:35> col:35 used visrgn 'int *'
+| `-CompoundStmt 0x7fe036079628 <line:20:1, line:23:1>
+|   |-CallExpr 0x7fe0360794a8 <line:21:3, col:62> 'void'
+|   | |-ParenExpr 0x7fe0360783d8 <col:3, col:37> 'void (*)(void *, int, int)'
+|   | | `-CStyleCastExpr 0x7fe0360783b0 <col:4, col:34> 'void (*)(void *, int, int)' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7fe036078398 <col:34> 'void (*)(void *, struct _wincore *, int)' <FunctionToPointerDecay>
+|   | |     `-DeclRefExpr 0x7fe0360781f8 <col:34> 'void (void *, struct _wincore *, int)' Function 0x7fe036077c00 'foo' 'void (void *, struct _wincore *, int)'
+|   | |-CStyleCastExpr 0x7fe036079438 <col:40, col:49> 'void *' <NullToPointer>
+|   | | `-IntegerLiteral 0x7fe036079400 <col:49> 'int' 0
+|   | |-ImplicitCastExpr 0x7fe0360794e8 <col:52> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fe036079460 <col:52> 'int' lvalue ParmVar 0x7fe036077e88 'winInfo' 'int'
+|   | `-IntegerLiteral 0x7fe036079488 <col:61> 'int' 0
+|   `-CallExpr 0x7fe0360795d0 <line:22:3, col:20> 'void'
+|     |-ImplicitCastExpr 0x7fe0360795b8 <col:3> 'void (*)(int, int, int *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe036079500 <col:3> 'void (int, int, int *)' Function 0x7fe036077870 'fn2' 'void (int, int, int *)'
+|     |-IntegerLiteral 0x7fe036079528 <col:8> 'int' 0
+|     |-IntegerLiteral 0x7fe036079548 <col:11> 'int' 0
+|     `-ImplicitCastExpr 0x7fe036079610 <col:14> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fe036079568 <col:14> 'int *' lvalue ParmVar 0x7fe036077f00 'visrgn' 'int *'
+`-FunctionDecl 0x7fe0360797f0 <line:25:1, line:29:1> line:26:1 baz 'void (void *, int, int)'
+  |-ParmVarDecl 0x7fe036079668 <col:6, col:12> col:12 dpy 'void *'
+  |-ParmVarDecl 0x7fe0360796e0 <col:17, col:21> col:21 win 'int'
+  |-ParmVarDecl 0x7fe036079758 <col:26, col:30> col:30 prop 'int'
+  `-CompoundStmt 0x7fe036079a30 <line:27:1, line:29:1>
+    `-CallExpr 0x7fe0360799f0 <line:28:3, col:32> 'void'
+      |-ImplicitCastExpr 0x7fe0360799d8 <col:3> 'void (*)(void *, int, int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe0360798a0 <col:3> 'void (void *, int, int *)' Function 0x7fe036077fe0 'bar' 'void (void *, int, int *)'
+      |-CStyleCastExpr 0x7fe036079900 <col:8, col:17> 'void *' <NullToPointer>
+      | `-IntegerLiteral 0x7fe0360798c8 <col:17> 'int' 0
+      |-IntegerLiteral 0x7fe036079928 <col:20> 'int' 0
+      `-CStyleCastExpr 0x7fe036079980 <col:23, col:31> 'int *' <NullToPointer>
+        `-IntegerLiteral 0x7fe036079948 <col:31> 'int' 0

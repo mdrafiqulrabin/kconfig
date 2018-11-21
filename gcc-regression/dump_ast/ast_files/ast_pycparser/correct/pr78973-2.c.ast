@@ -1,0 +1,46 @@
+FileAST: 
+  Decl: p, [], [], []
+    PtrDecl: []
+      TypeDecl: p, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: <=
+          ID: n
+          Constant: int, 4
+        Assignment: =
+          ID: p
+          FuncCall: 
+            ID: __builtin_malloc
+            ExprList: 
+              ID: n
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['unsigned']
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: <
+          ID: n
+          Constant: int, 5
+        Assignment: =
+          ID: n
+          Constant: int, 5
+      FuncCall: 
+        ID: f
+        ExprList: 
+          ID: n

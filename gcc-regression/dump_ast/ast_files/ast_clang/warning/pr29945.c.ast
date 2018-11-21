@@ -1,0 +1,56 @@
+c_files/pr29945.c:4:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+parse_real (unsigned char c)
+^
+c_files/pr29945.c:7:4: warning: implicit declaration of function 'unget_char' is invalid in C99 [-Wimplicit-function-declaration]
+   unget_char ( c);
+   ^
+c_files/pr29945.c:8:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+3 warnings generated.
+TranslationUnitDecl 0x7fb4cc0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb4cc026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb4cc026740 '__int128'
+|-TypedefDecl 0x7fb4cc026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb4cc026760 'unsigned __int128'
+|-TypedefDecl 0x7fb4cc026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb4cc026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb4cc026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb4cc026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb4cc026dc0 'char *'
+|   `-BuiltinType 0x7fb4cc026560 'char'
+|-TypedefDecl 0x7fb4cc0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb4cc027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb4cc026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb4cc026e58 '__va_list_tag'
+|-VarDecl 0x7fb4cc027138 <c_files/pr29945.c:2:1, col:20> col:20 used __ctype_ptr 'const char *' extern
+|-FunctionDecl 0x7fb4cc0774c8 <line:4:1, line:8:1> line:4:1 parse_real 'int (unsigned char)'
+| |-ParmVarDecl 0x7fb4cc077400 <col:13, col:27> col:27 used c 'unsigned char'
+| `-CompoundStmt 0x7fb4cc077988 <line:5:1, line:8:1>
+|   `-IfStmt 0x7fb4cc077950 <line:6:3, line:7:18>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fb4cc077740 <line:6:7, col:35> 'int' '&&'
+|     | |-ParenExpr 0x7fb4cc077688 <col:7, col:25> 'int'
+|     | | `-BinaryOperator 0x7fb4cc077660 <col:8, col:23> 'int' '&'
+|     | |   |-ImplicitCastExpr 0x7fb4cc077648 <col:8, col:21> 'int' <IntegralCast>
+|     | |   | `-ImplicitCastExpr 0x7fb4cc077630 <col:8, col:21> 'char' <LValueToRValue>
+|     | |   |   `-ArraySubscriptExpr 0x7fb4cc0775e8 <col:8, col:21> 'const char' lvalue
+|     | |   |     |-ImplicitCastExpr 0x7fb4cc0775b8 <col:8> 'const char *' <LValueToRValue>
+|     | |   |     | `-DeclRefExpr 0x7fb4cc077568 <col:8> 'const char *' lvalue Var 0x7fb4cc027138 '__ctype_ptr' 'const char *'
+|     | |   |     `-ImplicitCastExpr 0x7fb4cc0775d0 <col:20> 'unsigned char' <LValueToRValue>
+|     | |   |       `-DeclRefExpr 0x7fb4cc077590 <col:20> 'unsigned char' lvalue ParmVar 0x7fb4cc077400 'c' 'unsigned char'
+|     | |   `-IntegerLiteral 0x7fb4cc077610 <col:23> 'int' 4
+|     | `-BinaryOperator 0x7fb4cc077718 <col:30, col:35> 'int' '!='
+|     |   |-ImplicitCastExpr 0x7fb4cc077700 <col:30> 'int' <IntegralCast>
+|     |   | `-ImplicitCastExpr 0x7fb4cc0776e8 <col:30> 'unsigned char' <LValueToRValue>
+|     |   |   `-DeclRefExpr 0x7fb4cc0776a8 <col:30> 'unsigned char' lvalue ParmVar 0x7fb4cc077400 'c' 'unsigned char'
+|     |   `-CharacterLiteral 0x7fb4cc0776d0 <col:35> 'int' 46
+|     |-CallExpr 0x7fb4cc0778f0 <line:7:4, col:18> 'int'
+|     | |-ImplicitCastExpr 0x7fb4cc0778d8 <col:4> 'int (*)()' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7fb4cc077858 <col:4> 'int ()' Function 0x7fb4cc0777c0 'unget_char' 'int ()'
+|     | `-ImplicitCastExpr 0x7fb4cc077938 <col:17> 'int' <IntegralCast>
+|     |   `-ImplicitCastExpr 0x7fb4cc077920 <col:17> 'unsigned char' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7fb4cc077880 <col:17> 'unsigned char' lvalue ParmVar 0x7fb4cc077400 'c' 'unsigned char'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fb4cc0777c0 <<invalid sloc>> col:4 implicit used unget_char 'int ()'

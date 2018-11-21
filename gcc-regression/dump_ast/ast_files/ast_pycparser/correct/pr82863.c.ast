@@ -1,0 +1,21 @@
+FileAST: 
+  Typedef: a, [], ['typedef']
+    TypeDecl: a, []
+      IdentifierType: ['long', 'long']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['a']
+  FuncDef: 
+    Decl: c, [], [], []
+      FuncDecl: 
+        TypeDecl: c, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['float']
+        BinaryOp: >
+          ID: b
+          Constant: int, 0
+      Return: 
+        ID: d

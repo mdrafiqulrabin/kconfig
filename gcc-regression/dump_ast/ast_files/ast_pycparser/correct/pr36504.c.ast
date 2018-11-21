@@ -1,0 +1,102 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: b, [], [], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            Struct: None
+              Decl: a, [], [], []
+                TypeDecl: a, []
+                  IdentifierType: ['int']
+          Constant: int, 8
+  Decl: None, [], [], []
+    Struct: B
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: C
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          Struct: B
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: C
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                Struct: C
+          Decl: e, [], [], []
+            PtrDecl: []
+              TypeDecl: e, []
+                Struct: A
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          Struct: B
+    Compound: 
+      Decl: q, [], [], []
+        TypeDecl: q, []
+          Struct: B
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: p
+          StructRef: .
+            ArrayRef: 
+              StructRef: ->
+                ID: e
+                ID: b
+              ID: b
+            ID: a
+      Return: 
+        ID: q
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: e, [], [], []
+            PtrDecl: []
+              TypeDecl: e, []
+                Struct: A
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, [], [], []
+        TypeDecl: p, []
+          Struct: C
+      For: 
+        ID: b
+        UnaryOp: ++
+          ID: b
+        Assignment: =
+          StructRef: .
+            ID: p
+            ID: d
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              UnaryOp: &
+                ID: p
+              ID: e
+              ID: b

@@ -1,0 +1,91 @@
+FileAST: 
+  FuncDef: 
+    Decl: readint0, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+        TypeDecl: readint0, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        UnaryOp: *
+          ID: x
+  FuncDef: 
+    Decl: test0, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+        TypeDecl: test0, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: readint0
+          ExprList: 
+            ID: x
+  FuncDef: 
+    Decl: readint1, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+        TypeDecl: readint1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        UnaryOp: *
+          ID: x
+  FuncDef: 
+    Decl: test1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+        TypeDecl: test1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: readint1
+          ExprList: 
+            ID: x
+  FuncDef: 
+    Decl: readint2, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+        TypeDecl: readint2, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        UnaryOp: *
+          ID: x
+  FuncDef: 
+    Decl: test2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+        TypeDecl: test2, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: readint2
+          ExprList: 
+            ID: x

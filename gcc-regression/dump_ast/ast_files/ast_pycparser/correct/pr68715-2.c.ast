@@ -1,0 +1,95 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    ArrayDecl: []
+      TypeDecl: e, []
+        IdentifierType: ['int']
+      Constant: int, 1
+  Decl: h, [], [], []
+    ArrayDecl: []
+      TypeDecl: h, []
+        IdentifierType: ['int']
+      Constant: int, 1
+  Decl: fn2, [], [], []
+    FuncDecl: 
+      TypeDecl: fn2, []
+        IdentifierType: ['void']
+  Decl: fn3, [], [], []
+    FuncDecl: 
+      TypeDecl: fn3, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: fn2
+      Assignment: =
+        ID: b
+        Constant: int, 0
+      For: 
+        BinaryOp: <
+          ID: b
+          Constant: int, 10
+        UnaryOp: p++
+          ID: b
+        EmptyStatement: 
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        TypeDecl: fn2, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: a
+        Compound: 
+          FuncCall: 
+            ID: fn3
+          Assignment: =
+            ID: c
+            ID: d
+  FuncDef: 
+    Decl: fn3, [], [], []
+      FuncDecl: 
+        TypeDecl: fn3, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        ID: g
+        UnaryOp: p++
+          ID: g
+        Assignment: =
+          ArrayRef: 
+            ID: e
+            ID: g
+          Constant: int, 2
+      If: 
+        ID: f
+        For: 
+          ID: g
+          UnaryOp: p++
+            ID: g
+          Assignment: =
+            ArrayRef: 
+              ID: h
+              ID: g
+            Constant: int, 5

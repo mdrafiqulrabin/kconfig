@@ -1,0 +1,56 @@
+FileAST: 
+  Decl: xfer, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+      TypeDecl: xfer, []
+        IdentifierType: ['void']
+  Decl: t, [], [], []
+    TypeDecl: t, []
+      Struct: T
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: call, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+          Decl: arg, [], [], []
+            PtrDecl: []
+              TypeDecl: arg, []
+                IdentifierType: ['void']
+        TypeDecl: call, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: uc, [], [], []
+        PtrDecl: []
+          TypeDecl: uc, []
+            IdentifierType: ['unsigned', 'char']
+        ID: arg
+      FuncCall: 
+        ID: xfer
+        ExprList: 
+          ID: x
+          ID: y
+          ID: arg
+      FuncCall: 
+        ID: xfer
+        ExprList: 
+          ID: x
+          ID: y
+          ID: t

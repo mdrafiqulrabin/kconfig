@@ -1,0 +1,60 @@
+FileAST: 
+  Decl: db6, [], [], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: db6, []
+          IdentifierType: ['int']
+    Constant: int, 0
+  FuncDef: 
+    Decl: k26, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: k26, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: geb, [], ['static'], []
+        TypeDecl: geb, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: a22, [], [], []
+        PtrDecl: []
+          TypeDecl: a22, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: geb
+      Decl: l30, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: l30, []
+              IdentifierType: ['int']
+        UnaryOp: &
+          ID: a22
+      Decl: c4b, [], [], []
+        PtrDecl: []
+          TypeDecl: c4b, []
+            IdentifierType: ['int']
+      Decl: ndf, [], [], []
+        TypeDecl: ndf, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: ndf
+          Constant: int, 0
+        BinaryOp: <=
+          ID: ndf
+          Constant: int, 1
+        UnaryOp: ++
+          ID: ndf
+        Assignment: =
+          UnaryOp: *
+            ID: c4b
+          BinaryOp: &&
+            BinaryOp: ==
+              ID: db6
+              ID: l30
+            UnaryOp: p--
+              UnaryOp: *
+                ID: a22

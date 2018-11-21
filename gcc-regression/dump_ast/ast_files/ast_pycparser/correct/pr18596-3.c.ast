@@ -1,0 +1,35 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: g, [], ['static'], []
+        FuncDecl: 
+          TypeDecl: g, []
+            IdentifierType: ['int']
+        Constant: int, 0
+      Decl: f, [], ['static'], []
+        FuncDecl: 
+          TypeDecl: f, []
+            IdentifierType: ['int']
+        Constant: int, 1
+      Decl: h, [], ['auto'], []
+        FuncDecl: 
+          TypeDecl: h, []
+            IdentifierType: ['int']
+        Constant: int, 0
+      Decl: i, [], ['static'], []
+        FuncDecl: 
+          TypeDecl: i, []
+            IdentifierType: ['int']
+        InitList: 
+          Constant: int, 0
+      Decl: j, [], ['static'], []
+        FuncDecl: 
+          TypeDecl: j, []
+            IdentifierType: ['int']
+        InitList: 
+          Constant: int, 0
+          Constant: float, 0.0

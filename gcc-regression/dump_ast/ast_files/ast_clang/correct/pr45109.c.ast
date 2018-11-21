@@ -1,0 +1,76 @@
+TranslationUnitDecl 0x7f93800264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9380026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9380026740 '__int128'
+|-TypedefDecl 0x7f9380026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9380026760 'unsigned __int128'
+|-TypedefDecl 0x7f9380026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9380026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9380026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9380026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9380026dc0 'char *'
+|   `-BuiltinType 0x7f9380026560 'char'
+|-TypedefDecl 0x7f93800270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9380027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9380026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9380026e58 '__va_list_tag'
+|-RecordDecl 0x7f9380027120 <c_files/pr45109.c:1:1, col:8> col:8 struct o_fsm_t
+|-RecordDecl 0x7f9380825a00 <line:2:1, col:8> col:8 struct o_fsm_event_t
+|-TypedefDecl 0x7f9380825e18 <line:4:1, line:5:37> line:4:16 referenced fn_t 'void (*)(struct o_fsm_t *, const struct o_fsm_event_t *)'
+| `-PointerType 0x7f9380825db0 'void (*)(struct o_fsm_t *, const struct o_fsm_event_t *)'
+|   `-ParenType 0x7f9380825d50 'void (struct o_fsm_t *, const struct o_fsm_event_t *)' sugar
+|     `-FunctionProtoType 0x7f9380825d10 'void (struct o_fsm_t *, const struct o_fsm_event_t *)' cdecl
+|       |-BuiltinType 0x7f9380026520 'void'
+|       |-PointerType 0x7f9380825b10 'struct o_fsm_t *'
+|       | `-ElaboratedType 0x7f9380825ab0 'struct o_fsm_t' sugar
+|       |   `-RecordType 0x7f93800271b0 'struct o_fsm_t'
+|       |     `-Record 0x7f9380825f98 'o_fsm_t'
+|       `-PointerType 0x7f9380825c20 'const struct o_fsm_event_t *'
+|         `-QualType 0x7f9380825bc1 'const struct o_fsm_event_t' const
+|           `-ElaboratedType 0x7f9380825bc0 'struct o_fsm_event_t' sugar
+|             `-RecordType 0x7f9380825a90 'struct o_fsm_event_t'
+|               `-Record 0x7f9380825a00 'o_fsm_event_t'
+|-RecordDecl 0x7f9380825e70 <line:7:1, line:9:1> line:7:8 struct o_fsm_state_t definition
+| `-FieldDecl 0x7f9380825f50 <line:8:5, col:10> col:10 dispatch 'fn_t':'void (*)(struct o_fsm_t *, const struct o_fsm_event_t *)'
+|-RecordDecl 0x7f9380825f98 prev 0x7f9380027120 <line:11:1, line:13:1> line:11:8 struct o_fsm_t definition
+| `-FieldDecl 0x7f9380826030 <line:12:5, col:10> col:10 dispatch 'fn_t':'void (*)(struct o_fsm_t *, const struct o_fsm_event_t *)'
+|-FunctionDecl 0x7f9380826270 <line:15:1, line:16:43> line:15:29 used o_fsm_tran 'struct o_fsm_state_t (struct o_fsm_t *, struct o_fsm_state_t)' extern
+| |-ParmVarDecl 0x7f93808260a0 <col:40, col:56> col:56 fsm 'struct o_fsm_t *'
+| `-ParmVarDecl 0x7f9380826150 <line:16:12, col:33> col:33 next_state 'struct o_fsm_state_t':'struct o_fsm_state_t'
+|-FunctionDecl 0x7f9380826498 <line:17:1, line:18:47> line:17:13 used plist_parser_state_start 'void (struct o_fsm_t *, const struct o_fsm_event_t *)' static
+| |-ParmVarDecl 0x7f9380826380 <col:38, col:54> col:54 fsm 'struct o_fsm_t *'
+| `-ParmVarDecl 0x7f9380826408 <line:18:10, col:38> col:38 fsm_event 'const struct o_fsm_event_t *'
+|-FunctionDecl 0x7f9380826660 <line:20:1, line:23:1> line:20:22 used o_fsm_state 'struct o_fsm_state_t (fn_t)'
+| |-ParmVarDecl 0x7f9380826550 <col:34, col:39> col:39 used dispatch_fcn 'fn_t':'void (*)(struct o_fsm_t *, const struct o_fsm_event_t *)'
+| `-CompoundStmt 0x7f93808268a8 <line:21:1, line:23:1>
+|   `-ReturnStmt 0x7f9380826890 <line:22:3, col:36>
+|     `-ImplicitCastExpr 0x7f9380826878 <col:10, col:36> 'struct o_fsm_state_t':'struct o_fsm_state_t' <LValueToRValue>
+|       `-UnaryOperator 0x7f9380826858 <col:10, col:36> 'struct o_fsm_state_t':'struct o_fsm_state_t' lvalue prefix '*'
+|         `-CStyleCastExpr 0x7f9380826830 <col:11, col:36> 'struct o_fsm_state_t *' <BitCast>
+|           `-UnaryOperator 0x7f9380826788 <col:35, col:36> 'fn_t *' prefix '&'
+|             `-DeclRefExpr 0x7f9380826700 <col:36> 'fn_t':'void (*)(struct o_fsm_t *, const struct o_fsm_event_t *)' lvalue ParmVar 0x7f9380826550 'dispatch_fcn' 'fn_t':'void (*)(struct o_fsm_t *, const struct o_fsm_event_t *)'
+|-RecordDecl 0x7f93808268c8 <line:25:9, line:27:1> line:25:16 struct _o_plist_parser_t definition
+| `-FieldDecl 0x7f9380826990 <line:26:5, col:20> col:20 referenced fsm 'struct o_fsm_t':'struct o_fsm_t'
+|-TypedefDecl 0x7f9380827aa0 <line:25:1, line:27:3> col:3 referenced o_plist_parser_t 'struct _o_plist_parser_t':'struct _o_plist_parser_t'
+| `-ElaboratedType 0x7f9380827a50 'struct _o_plist_parser_t' sugar
+|   `-RecordType 0x7f9380826950 'struct _o_plist_parser_t'
+|     `-Record 0x7f93808268c8 '_o_plist_parser_t'
+|-FunctionDecl 0x7f9380827c50 prev 0x7f9380826498 <line:29:1, line:32:1> line:29:13 used plist_parser_state_start 'void (struct o_fsm_t *, const struct o_fsm_event_t *)' static
+| |-ParmVarDecl 0x7f9380827b38 <col:38, col:54> col:54 fsm 'struct o_fsm_t *'
+| |-ParmVarDecl 0x7f9380827bc0 <line:30:10, col:38> col:38 fsm_event 'const struct o_fsm_event_t *'
+| `-CompoundStmt 0x7f9380827cf8 <line:31:1, line:32:1>
+`-FunctionDecl 0x7f9380827df0 <line:34:1, line:38:1> line:34:6 o_plist_deserialize_xml 'void (int)'
+  |-ParmVarDecl 0x7f9380827d28 <col:30, col:34> col:34 fin 'int'
+  `-CompoundStmt 0x7f93808281b8 <line:35:1, line:38:1>
+    |-DeclStmt 0x7f9380827f20 <line:36:3, col:26>
+    | `-VarDecl 0x7f9380827ec0 <col:3, col:20> col:20 used parser 'o_plist_parser_t':'struct _o_plist_parser_t'
+    `-CallExpr 0x7f9380828180 <line:37:3, col:64> 'struct o_fsm_state_t':'struct o_fsm_state_t'
+      |-ImplicitCastExpr 0x7f9380828168 <col:3> 'struct o_fsm_state_t (*)(struct o_fsm_t *, struct o_fsm_state_t)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f9380827f38 <col:3> 'struct o_fsm_state_t (struct o_fsm_t *, struct o_fsm_state_t)' Function 0x7f9380826270 'o_fsm_tran' 'struct o_fsm_state_t (struct o_fsm_t *, struct o_fsm_state_t)'
+      |-UnaryOperator 0x7f9380827fc0 <col:14, col:22> 'struct o_fsm_t *' prefix '&'
+      | `-MemberExpr 0x7f9380827f88 <col:15, col:22> 'struct o_fsm_t':'struct o_fsm_t' lvalue .fsm 0x7f9380826990
+      |   `-DeclRefExpr 0x7f9380827f60 <col:15> 'o_plist_parser_t':'struct _o_plist_parser_t' lvalue Var 0x7f9380827ec0 'parser' 'o_plist_parser_t':'struct _o_plist_parser_t'
+      `-CallExpr 0x7f93808280a0 <col:27, col:63> 'struct o_fsm_state_t':'struct o_fsm_state_t'
+        |-ImplicitCastExpr 0x7f9380828088 <col:27> 'struct o_fsm_state_t (*)(fn_t)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f9380827fe0 <col:27> 'struct o_fsm_state_t (fn_t)' Function 0x7f9380826660 'o_fsm_state' 'struct o_fsm_state_t (fn_t)'
+        `-ImplicitCastExpr 0x7f93808280f8 <col:39> 'void (*)(struct o_fsm_t *, const struct o_fsm_event_t *)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f9380828008 <col:39> 'void (struct o_fsm_t *, const struct o_fsm_event_t *)' Function 0x7f9380827c50 'plist_parser_state_start' 'void (struct o_fsm_t *, const struct o_fsm_event_t *)'

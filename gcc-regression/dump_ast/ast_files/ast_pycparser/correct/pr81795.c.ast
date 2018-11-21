@@ -1,0 +1,20 @@
+FileAST: 
+  Pragma: GCC diagnostic push
+  Pragma: GCC diagnostic ignored "-Wc++-compat"
+  Decl: None, [], [], []
+    Struct: S
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+  Typedef: S, [], ['typedef']
+    TypeDecl: S, []
+      IdentifierType: ['int']
+  Typedef: T, [], ['typedef']
+    TypeDecl: T, []
+      IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: T
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+  Pragma: GCC diagnostic pop

@@ -1,0 +1,387 @@
+FileAST: 
+  Decl: __invalid_size_argument_for_IOC, [], ['extern'], []
+    TypeDecl: __invalid_size_argument_for_IOC, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: __u32, [], ['typedef']
+    TypeDecl: __u32, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: None, [], [], []
+    Struct: video_window
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['__u32']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['__u32']
+      Decl: width, [], [], []
+        TypeDecl: width, []
+          IdentifierType: ['__u32']
+      Decl: height, [], [], []
+        TypeDecl: height, []
+          IdentifierType: ['__u32']
+  Typedef: XID, [], ['typedef']
+    TypeDecl: XID, []
+      IdentifierType: ['unsigned', 'long']
+  Typedef: Window, [], ['typedef']
+    TypeDecl: Window, []
+      IdentifierType: ['XID']
+  Typedef: Screen, [], ['typedef']
+    TypeDecl: Screen, []
+      Struct: _XExtData
+        Decl: root, [], [], []
+          TypeDecl: root, []
+            IdentifierType: ['Window']
+  Typedef: XWindowAttributes, [], ['typedef']
+    TypeDecl: XWindowAttributes, []
+      Struct: None
+        Decl: border_width, [], [], []
+          TypeDecl: border_width, []
+            IdentifierType: ['int']
+  Typedef: Display, [], ['typedef']
+    TypeDecl: Display, []
+      Struct: _XDisplay
+  Typedef: _XPrivDisplay, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: _XPrivDisplay, []
+        Struct: None
+          Decl: default_screen, [], [], []
+            TypeDecl: default_screen, []
+              IdentifierType: ['int']
+          Decl: screens, [], [], []
+            PtrDecl: []
+              TypeDecl: screens, []
+                IdentifierType: ['Screen']
+  Typedef: XSizeHints, [], ['typedef']
+    TypeDecl: XSizeHints, []
+      Struct: None
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['int']
+        Decl: y, [], [], []
+          TypeDecl: y, []
+            IdentifierType: ['int']
+  Typedef: XF86VidModeModeInfo, [], ['typedef']
+    TypeDecl: XF86VidModeModeInfo, []
+      Struct: None
+        Decl: hdisplay, [], [], []
+          TypeDecl: hdisplay, []
+            IdentifierType: ['unsigned', 'short']
+        Decl: vdisplay, [], [], []
+          TypeDecl: vdisplay, []
+            IdentifierType: ['unsigned', 'short']
+  Decl: display, [], [], []
+    PtrDecl: []
+      TypeDecl: display, []
+        IdentifierType: ['Display']
+  Decl: tfd, [], [], []
+    TypeDecl: tfd, []
+      IdentifierType: ['int']
+  Decl: ccapt, [], [], []
+    TypeDecl: ccapt, []
+      IdentifierType: ['int']
+  Decl: tml, [], [], []
+    TypeDecl: tml, []
+      IdentifierType: ['int']
+  Decl: fswidth, [], [], []
+    TypeDecl: fswidth, []
+      IdentifierType: ['int']
+    Constant: int, 0
+  Decl: fsheight, [], [], []
+    TypeDecl: fsheight, []
+      IdentifierType: ['int']
+    Constant: int, 0
+  Decl: fmwin, [], [], []
+    TypeDecl: fmwin, []
+      IdentifierType: ['Window']
+  Decl: modelines, [], [], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: modelines, []
+          IdentifierType: ['XF86VidModeModeInfo']
+  Decl: fullscreenmode, [], [], []
+    PtrDecl: []
+      TypeDecl: fullscreenmode, []
+        IdentifierType: ['XF86VidModeModeInfo']
+    Cast: 
+      Typename: None, []
+        PtrDecl: []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      Constant: int, 0
+  Decl: vswin, [], [], []
+    TypeDecl: vswin, []
+      Struct: video_window
+  FuncDef: 
+    Decl: DoFullScreen, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: DoFullScreen, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: rx, [], [], []
+        TypeDecl: rx, []
+          IdentifierType: ['int']
+      Decl: ry, [], [], []
+        TypeDecl: ry, []
+          IdentifierType: ['int']
+      Decl: junkwin, [], [], []
+        TypeDecl: junkwin, []
+          IdentifierType: ['Window']
+      Decl: fmsizehints, [], [], []
+        TypeDecl: fmsizehints, []
+          IdentifierType: ['XSizeHints']
+      Decl: fmwinattr, [], [], []
+        TypeDecl: fmwinattr, []
+          IdentifierType: ['XWindowAttributes']
+      If: 
+        BinaryOp: <
+          FuncCall: 
+            ID: ioctl
+            ExprList: 
+              ID: tfd
+              BinaryOp: |
+                BinaryOp: |
+                  BinaryOp: |
+                    BinaryOp: <<
+                      Constant: int, 1U
+                      BinaryOp: +
+                        BinaryOp: +
+                          BinaryOp: +
+                            Constant: int, 0
+                            Constant: int, 8
+                          Constant: int, 8
+                        Constant: int, 14
+                    BinaryOp: <<
+                      Constant: char, 'v'
+                      BinaryOp: +
+                        Constant: int, 0
+                        Constant: int, 8
+                  BinaryOp: <<
+                    Constant: int, 8
+                    Constant: int, 0
+                BinaryOp: <<
+                  TernaryOp: 
+                    BinaryOp: &&
+                      BinaryOp: ==
+                        UnaryOp: sizeof
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['int']
+                        UnaryOp: sizeof
+                          Typename: None, []
+                            ArrayDecl: []
+                              TypeDecl: None, []
+                                IdentifierType: ['int']
+                              Constant: int, 1
+                      BinaryOp: <
+                        UnaryOp: sizeof
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['int']
+                        BinaryOp: <<
+                          Constant: int, 1
+                          Constant: int, 14
+                    UnaryOp: sizeof
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['int']
+                    ID: __invalid_size_argument_for_IOC
+                  BinaryOp: +
+                    BinaryOp: +
+                      Constant: int, 0
+                      Constant: int, 8
+                    Constant: int, 8
+              UnaryOp: &
+                ID: ccapt
+          Constant: int, 0
+        Compound: 
+          FuncCall: 
+            ID: perror
+            ExprList: 
+              Constant: string, "ioctl VIDIOCCAPTURE"
+      If: 
+        UnaryOp: !
+          FuncCall: 
+            ID: XTranslateCoordinates
+            ExprList: 
+              ID: display
+              ID: fmwin
+              StructRef: ->
+                UnaryOp: &
+                  ArrayRef: 
+                    StructRef: ->
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['_XPrivDisplay']
+                        ID: display
+                      ID: screens
+                    StructRef: ->
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['_XPrivDisplay']
+                        ID: display
+                      ID: default_screen
+                ID: root
+              UnaryOp: -
+                StructRef: .
+                  ID: fmwinattr
+                  ID: border_width
+              UnaryOp: -
+                StructRef: .
+                  ID: fmwinattr
+                  ID: border_width
+              UnaryOp: &
+                ID: rx
+              UnaryOp: &
+                ID: ry
+              UnaryOp: &
+                ID: junkwin
+        Compound: 
+      Assignment: =
+        StructRef: .
+          ID: vswin
+          ID: width
+        ID: fswidth
+      Assignment: =
+        StructRef: .
+          ID: vswin
+          ID: height
+        ID: fsheight
+      Assignment: =
+        StructRef: .
+          ID: vswin
+          ID: x
+        BinaryOp: +
+          StructRef: .
+            ID: fmsizehints
+            ID: x
+          ID: rx
+      Assignment: =
+        StructRef: .
+          ID: vswin
+          ID: y
+        BinaryOp: +
+          StructRef: .
+            ID: fmsizehints
+            ID: y
+          ID: ry
+      If: 
+        BinaryOp: <
+          FuncCall: 
+            ID: ioctl
+            ExprList: 
+              ID: tfd
+              BinaryOp: |
+                BinaryOp: |
+                  BinaryOp: |
+                    BinaryOp: <<
+                      Constant: int, 1U
+                      BinaryOp: +
+                        BinaryOp: +
+                          BinaryOp: +
+                            Constant: int, 0
+                            Constant: int, 8
+                          Constant: int, 8
+                        Constant: int, 14
+                    BinaryOp: <<
+                      Constant: char, 'v'
+                      BinaryOp: +
+                        Constant: int, 0
+                        Constant: int, 8
+                  BinaryOp: <<
+                    Constant: int, 8
+                    Constant: int, 0
+                BinaryOp: <<
+                  TernaryOp: 
+                    BinaryOp: &&
+                      BinaryOp: ==
+                        UnaryOp: sizeof
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['int']
+                        UnaryOp: sizeof
+                          Typename: None, []
+                            ArrayDecl: []
+                              TypeDecl: None, []
+                                IdentifierType: ['int']
+                              Constant: int, 1
+                      BinaryOp: <
+                        UnaryOp: sizeof
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['int']
+                        BinaryOp: <<
+                          Constant: int, 1
+                          Constant: int, 14
+                    UnaryOp: sizeof
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['int']
+                    ID: __invalid_size_argument_for_IOC
+                  BinaryOp: +
+                    BinaryOp: +
+                      Constant: int, 0
+                      Constant: int, 8
+                    Constant: int, 8
+              UnaryOp: &
+                ID: ccapt
+          Constant: int, 0
+        Compound: 
+          FuncCall: 
+            ID: XF86VidModeGetAllModeLines
+            ExprList: 
+              ID: display
+              FuncCall: 
+                ID: XDefaultScreen
+                ExprList: 
+                  ID: display
+              UnaryOp: &
+                ID: tml
+              UnaryOp: &
+                ID: modelines
+          Compound: 
+            If: 
+              BinaryOp: &&
+                BinaryOp: ==
+                  StructRef: ->
+                    ArrayRef: 
+                      ID: modelines
+                      ID: i
+                    ID: hdisplay
+                  ID: fswidth
+                BinaryOp: ==
+                  StructRef: ->
+                    ArrayRef: 
+                      ID: modelines
+                      ID: i
+                    ID: vdisplay
+                  ID: fsheight
+              Compound: 
+                Assignment: =
+                  ID: fullscreenmode
+                  ArrayRef: 
+                    ID: modelines
+                    ID: i
+          Compound: 
+            FuncCall: 
+              ID: XF86VidModeSetViewPort
+              ExprList: 
+                ID: display
+                FuncCall: 
+                  ID: XDefaultScreen
+                  ExprList: 
+                    ID: display
+                StructRef: .
+                  ID: vswin
+                  ID: x
+                StructRef: .
+                  ID: vswin
+                  ID: y

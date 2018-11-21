@@ -1,0 +1,54 @@
+FileAST: 
+  Typedef: fnp, [], ['typedef']
+    PtrDecl: []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fnp, []
+          IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['char']
+    Compound: 
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: bar, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['char']
+        PtrDecl: []
+          TypeDecl: bar, []
+            IdentifierType: ['void']
+    Compound: 
+      Decl: args, [], [], []
+        PtrDecl: []
+          TypeDecl: args, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __builtin_apply_args
+      Return: 
+        FuncCall: 
+          ID: __builtin_apply
+          ExprList: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['fnp']
+              ID: foo
+            ID: args
+            UnaryOp: sizeof
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']

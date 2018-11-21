@@ -1,0 +1,47 @@
+FileAST: 
+  Decl: puts, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      TypeDecl: puts, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+        Constant: int, 8
+      Pragma: omp parallel
+      Compound: 
+        FuncCall: 
+          ID: puts
+          ExprList: 
+            Constant: string, "foo"
+        For: 
+          Assignment: =
+            ID: i
+            Constant: int, 1
+          BinaryOp: <
+            ID: i
+            BinaryOp: -
+              ID: j
+              Constant: int, 1
+          UnaryOp: p++
+            ID: i
+          EmptyStatement: 
+      Return: 
+        Constant: int, 0

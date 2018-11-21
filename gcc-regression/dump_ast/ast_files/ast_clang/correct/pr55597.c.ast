@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7ff8788264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff878826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff878826740 '__int128'
+|-TypedefDecl 0x7ff878826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff878826760 'unsigned __int128'
+|-TypedefDecl 0x7ff878826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff878826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff878826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff878826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff878826dc0 'char *'
+|   `-BuiltinType 0x7ff878826560 'char'
+|-TypedefDecl 0x7ff8788270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff878827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff878826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff878826e58 '__va_list_tag'
+|-RecordDecl 0x7ff878827120 <c_files/pr55597.c:5:1, line:9:1> line:5:8 struct initial_sp definition
+| |-FieldDecl 0x7ff87901da00 <line:7:3, col:9> col:9 sp 'void *'
+| `-FieldDecl 0x7ff87901da60 <line:8:3, col:7> col:7 referenced mask 'int'
+|-VarDecl 0x7ff87901db00 <line:11:1, col:28> col:28 used __morestack_initial_sp 'struct initial_sp':'struct initial_sp' tls
+|-FunctionDecl 0x7ff87901dca0 <line:13:1, col:16> col:6 used foo 'void (int *)'
+| `-ParmVarDecl 0x7ff87901dbe0 <col:11, col:15> col:16 'int *'
+`-FunctionDecl 0x7ff87901de00 <line:15:1, line:18:1> line:15:6 __morestack_release_segments 'void (void)'
+  `-CompoundStmt 0x7ff87901dfb0 <line:16:1, line:18:1>
+    `-CallExpr 0x7ff87901df80 <line:17:3, col:36> 'void'
+      |-ImplicitCastExpr 0x7ff87901df68 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff87901de98 <col:3> 'void (int *)' Function 0x7ff87901dca0 'foo' 'void (int *)'
+      `-UnaryOperator 0x7ff87901df20 <col:8, col:32> 'int *' prefix '&'
+        `-MemberExpr 0x7ff87901dee8 <col:9, col:32> 'int' lvalue .mask 0x7ff87901da60
+          `-DeclRefExpr 0x7ff87901dec0 <col:9> 'struct initial_sp':'struct initial_sp' lvalue Var 0x7ff87901db00 '__morestack_initial_sp' 'struct initial_sp':'struct initial_sp'

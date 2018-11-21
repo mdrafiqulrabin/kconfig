@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7fbec60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbec6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbec6026740 '__int128'
+|-TypedefDecl 0x7fbec6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbec6026760 'unsigned __int128'
+|-TypedefDecl 0x7fbec6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbec6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbec6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbec6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbec6026dc0 'char *'
+|   `-BuiltinType 0x7fbec6026560 'char'
+|-TypedefDecl 0x7fbec60270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbec6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbec6026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbec6026e58 '__va_list_tag'
+|-FunctionDecl 0x7fbec6027168 <c_files/pr69454-2.c:4:1, col:18> col:13 used fn2 'void ()' extern
+|-VarDecl 0x7fbec6825a58 <line:5:1, col:11> col:11 used a 'long long'
+|-VarDecl 0x7fbec6825ad0 <col:1, col:14> col:14 used b 'long long'
+`-FunctionDecl 0x7fbec6825b68 <line:7:1, line:13:1> line:7:6 fn1 'void ()'
+  `-CompoundStmt 0x7fbec6825ee8 <line:8:1, line:13:1>
+    |-DeclStmt 0x7fbec6825cb8 <line:9:3, col:18>
+    | `-VarDecl 0x7fbec6825c18 <col:3, col:17> col:13 used c 'long long' cinit
+    |   `-ImplicitCastExpr 0x7fbec6825ca0 <col:17> 'long long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fbec6825c78 <col:17> 'long long' lvalue Var 0x7fbec6825a58 'a' 'long long'
+    |-BinaryOperator 0x7fbec6825da0 <line:10:3, col:11> 'long long' '='
+    | |-DeclRefExpr 0x7fbec6825cd0 <col:3> 'long long' lvalue Var 0x7fbec6825a58 'a' 'long long'
+    | `-BinaryOperator 0x7fbec6825d78 <col:7, col:11> 'long long' '^'
+    |   |-ImplicitCastExpr 0x7fbec6825d48 <col:7> 'long long' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fbec6825cf8 <col:7> 'long long' lvalue Var 0x7fbec6825ad0 'b' 'long long'
+    |   `-ImplicitCastExpr 0x7fbec6825d60 <col:11> 'long long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fbec6825d20 <col:11> 'long long' lvalue Var 0x7fbec6825a58 'a' 'long long'
+    |-CallExpr 0x7fbec6825e30 <line:11:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7fbec6825e18 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fbec6825dc8 <col:3> 'void ()' Function 0x7fbec6027168 'fn2' 'void ()'
+    `-BinaryOperator 0x7fbec6825ec0 <line:12:3, col:7> 'long long' '='
+      |-DeclRefExpr 0x7fbec6825e58 <col:3> 'long long' lvalue Var 0x7fbec6825a58 'a' 'long long'
+      `-ImplicitCastExpr 0x7fbec6825ea8 <col:7> 'long long' <LValueToRValue>
+        `-DeclRefExpr 0x7fbec6825e80 <col:7> 'long long' lvalue Var 0x7fbec6825c18 'c' 'long long'

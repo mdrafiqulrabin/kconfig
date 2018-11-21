@@ -1,0 +1,77 @@
+FileAST: 
+  Decl: exit, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: exit, []
+        IdentifierType: ['void']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['unsigned']
+        Constant: int, 0
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: b
+        ID: a
+      If: 
+        BinaryOp: <
+          ID: a
+          Constant: int, 0
+        Goto: L1
+      For: 
+        BinaryOp: <
+          ID: a
+          Constant: int, 1
+        UnaryOp: p++
+          ID: a
+        Assignment: =
+          ID: d
+          Constant: int, 0
+      For: 
+        BinaryOp: <
+          ID: d
+          Constant: int, 2
+        UnaryOp: p++
+          ID: d
+        Compound: 
+          For: 
+            Assignment: =
+              ID: c
+              Constant: int, 0
+            BinaryOp: <
+              ID: c
+              Constant: int, 3
+            UnaryOp: p++
+              ID: c
+            Label: L1
+              Assignment: =
+                ID: a
+                Constant: int, 2
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: fn1
+      FuncCall: 
+        ID: exit
+        ExprList: 
+          Constant: int, 0

@@ -1,0 +1,72 @@
+FileAST: 
+  Typedef: s, [], ['typedef']
+    TypeDecl: s, []
+      Struct: _s
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['int']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+        Decl: d, [], [], []
+          TypeDecl: d, []
+            IdentifierType: ['int']
+  Decl: g, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['s']
+      TypeDecl: g, []
+        IdentifierType: ['void']
+  Decl: f, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: f, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: test_signed_msg_encoding, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test_signed_msg_encoding, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: signInfo, [], [], []
+        TypeDecl: signInfo, []
+          IdentifierType: ['s']
+        InitList: 
+          UnaryOp: sizeof
+            ID: signInfo
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: signInfo
+          ID: b
+        Constant: int, 1
+      Assignment: =
+        StructRef: .
+          ID: signInfo
+          ID: c
+        Constant: int, 0
+      FuncCall: 
+        ID: g
+        ExprList: 
+          UnaryOp: &
+            ID: signInfo
+      Assignment: =
+        StructRef: .
+          ID: signInfo
+          ID: d
+        Constant: int, 0
+      FuncCall: 
+        ID: f

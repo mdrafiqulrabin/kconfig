@@ -1,0 +1,23 @@
+FileAST: 
+  Decl: z, [], ['extern'], []
+    TypeDecl: z, []
+      IdentifierType: ['long', 'long']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['long', 'long']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: z
+        BinaryOp: |
+          UnaryOp: -
+            ID: x
+          ID: y

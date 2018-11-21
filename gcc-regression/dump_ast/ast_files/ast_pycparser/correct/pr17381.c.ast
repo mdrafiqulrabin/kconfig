@@ -1,0 +1,23 @@
+FileAST: 
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['double']
+  FuncDef: 
+    Decl: test1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fParm, [], [], []
+            TypeDecl: fParm, []
+              IdentifierType: ['float']
+        TypeDecl: test1, []
+          IdentifierType: ['float']
+    Compound: 
+      Assignment: =
+        ID: d
+        BinaryOp: +
+          ID: fParm
+          Constant: float, 1.0
+      Return: 
+        BinaryOp: +
+          ID: fParm
+          Constant: float, 1.0f

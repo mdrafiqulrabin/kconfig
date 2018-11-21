@@ -1,0 +1,213 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: f1, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: <<
+            ID: x
+            ID: y
+          BinaryOp: >>
+            ID: x
+            BinaryOp: -
+              BinaryOp: *
+                ID: __CHAR_BIT__
+                ID: __SIZEOF_INT__
+              ID: y
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: f2, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: <<
+            ID: x
+            ID: y
+          BinaryOp: >>
+            ID: x
+            BinaryOp: &
+              UnaryOp: -
+                ID: y
+              BinaryOp: -
+                BinaryOp: *
+                  ID: __CHAR_BIT__
+                  ID: __SIZEOF_INT__
+                Constant: int, 1
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: f3, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: >>
+            ID: x
+            ID: y
+          BinaryOp: <<
+            ID: x
+            BinaryOp: -
+              BinaryOp: *
+                ID: __CHAR_BIT__
+                ID: __SIZEOF_INT__
+              ID: y
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: f4, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: >>
+            ID: x
+            ID: y
+          BinaryOp: <<
+            ID: x
+            BinaryOp: &
+              UnaryOp: -
+                ID: y
+              BinaryOp: -
+                BinaryOp: *
+                  ID: __CHAR_BIT__
+                  ID: __SIZEOF_INT__
+                Constant: int, 1
+  FuncDef: 
+    Decl: f5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: f5, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: >>
+            ID: x
+            BinaryOp: -
+              BinaryOp: *
+                ID: __CHAR_BIT__
+                ID: __SIZEOF_INT__
+              ID: y
+          BinaryOp: <<
+            ID: x
+            ID: y
+  FuncDef: 
+    Decl: f6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: f6, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: >>
+            ID: x
+            BinaryOp: &
+              UnaryOp: -
+                ID: y
+              BinaryOp: -
+                BinaryOp: *
+                  ID: __CHAR_BIT__
+                  ID: __SIZEOF_INT__
+                Constant: int, 1
+          BinaryOp: <<
+            ID: x
+            ID: y
+  FuncDef: 
+    Decl: f7, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: f7, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: <<
+            ID: x
+            BinaryOp: -
+              BinaryOp: *
+                ID: __CHAR_BIT__
+                ID: __SIZEOF_INT__
+              ID: y
+          BinaryOp: >>
+            ID: x
+            ID: y
+  FuncDef: 
+    Decl: f8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: f8, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: <<
+            ID: x
+            BinaryOp: &
+              UnaryOp: -
+                ID: y
+              BinaryOp: -
+                BinaryOp: *
+                  ID: __CHAR_BIT__
+                  ID: __SIZEOF_INT__
+                Constant: int, 1
+          BinaryOp: >>
+            ID: x
+            ID: y

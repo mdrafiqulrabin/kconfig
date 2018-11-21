@@ -1,0 +1,83 @@
+c_files/pr78428.c:21:25: warning: format string is empty [-Wformat-zero-length]
+      __builtin_printf ("", b.f2);
+                        ^~
+1 warning generated.
+TranslationUnitDecl 0x7fbdbe8236d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbdbe823c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbdbe823940 '__int128'
+|-TypedefDecl 0x7fbdbe823c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbdbe823960 'unsigned __int128'
+|-TypedefDecl 0x7fbdbe823f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbdbe823d70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbdbe823ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbdbe824000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbdbe823fc0 'char *'
+|   `-BuiltinType 0x7fbdbe823760 'char'
+|-TypedefDecl 0x7fbdbe8242c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbdbe824270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbdbe8240e0 'struct __va_list_tag'
+|     `-Record 0x7fbdbe824058 '__va_list_tag'
+|-RecordDecl 0x7fbdbe824320 <c_files/pr78428.c:5:1, line:10:1> line:5:8 struct S0 definition
+| |-FieldDecl 0x7fbdbf005e00 <line:7:3, col:7> col:7 referenced f2 'int'
+| |-FieldDecl 0x7fbdbf005e80 <line:8:3, col:10> col:7 f3 'int'
+| | `-IntegerLiteral 0x7fbdbf005e48 <col:10> 'int' 16
+| `-FieldDecl 0x7fbdbf005f00 <line:9:3, col:10> col:7 f4 'int'
+|   `-IntegerLiteral 0x7fbdbf005ec8 <col:10> 'int' 18
+|-VarDecl 0x7fbdbf005f60 <line:12:1, col:9> col:5 used a 'int' cinit
+| `-IntegerLiteral 0x7fbdbf006000 <col:9> 'int' 5
+|-VarDecl 0x7fbdbf006070 <line:13:1, col:25> col:11 used b 'struct S0':'struct S0' cinit
+| `-InitListExpr 0x7fbdbf006188 <col:15, col:25> 'struct S0':'struct S0'
+|   |-IntegerLiteral 0x7fbdbf0060d0 <col:17> 'int' 3
+|   |-IntegerLiteral 0x7fbdbf0060f0 <col:20> 'int' 0
+|   `-IntegerLiteral 0x7fbdbf006110 <col:23> 'int' 0
+|-VarDecl 0x7fbdbf006308 <line:14:1, col:61> col:18 used global 'struct S0 [2]' static cinit
+| `-InitListExpr 0x7fbdbf006528 <col:30, col:61> 'struct S0 [2]'
+|   |-InitListExpr 0x7fbdbf006578 <col:32, col:44> 'struct S0':'struct S0'
+|   | |-IntegerLiteral 0x7fbdbf006368 <col:34> 'int' 77
+|   | |-IntegerLiteral 0x7fbdbf006388 <col:38> 'int' 0
+|   | `-IntegerLiteral 0x7fbdbf0063a8 <col:41> 'int' 78
+|   `-InitListExpr 0x7fbdbf0065d0 <col:47, col:59> 'struct S0':'struct S0'
+|     |-IntegerLiteral 0x7fbdbf006420 <col:49> 'int' 77
+|     |-IntegerLiteral 0x7fbdbf006440 <col:53> 'int' 0
+|     `-IntegerLiteral 0x7fbdbf006460 <col:56> 'int' 78
+|-FunctionDecl 0x7fbdbf006680 <line:16:1, line:27:1> line:16:5 main 'int ()'
+| `-CompoundStmt 0x7fbdbe8530c8 <line:17:1, line:27:1>
+|   |-DeclStmt 0x7fbdbf006800 <line:18:3, col:24>
+|   | `-VarDecl 0x7fbdbf0067a0 <col:3, col:23> col:23 used j 'volatile struct S0 *'
+|   |-ForStmt 0x7fbdbe853058 <line:19:3, line:25:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fbdbf006840 <line:19:10> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fbdbf006818 <col:10> 'int' lvalue Var 0x7fbdbf005f60 'a' 'int'
+|   | |-<<<NULL>>>
+|   | `-CompoundStmt 0x7fbdbe853020 <line:20:5, line:25:5>
+|   |   |-CallExpr 0x7fbdbf006b20 <line:21:7, col:33> 'int'
+|   |   | |-ImplicitCastExpr 0x7fbdbf006b08 <col:7> 'int (*)(const char *, ...)' <BuiltinFnToFnPtr>
+|   |   | | `-DeclRefExpr 0x7fbdbf0069f0 <col:7> '<builtin fn type>' Function 0x7fbdbf006898 '__builtin_printf' 'int (const char *, ...)'
+|   |   | |-ImplicitCastExpr 0x7fbdbf006b70 <col:25> 'const char *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7fbdbf006b58 <col:25> 'char *' <ArrayToPointerDecay>
+|   |   | |   `-StringLiteral 0x7fbdbf006a58 <col:25> 'char [1]' lvalue ""
+|   |   | `-ImplicitCastExpr 0x7fbdbf006b88 <col:29, col:31> 'int' <LValueToRValue>
+|   |   |   `-MemberExpr 0x7fbdbf006aa8 <col:29, col:31> 'int' lvalue .f2 0x7fbdbf005e00
+|   |   |     `-DeclRefExpr 0x7fbdbf006a80 <col:29> 'struct S0':'struct S0' lvalue Var 0x7fbdbf006070 'b' 'struct S0':'struct S0'
+|   |   |-BinaryOperator 0x7fbdbf006c80 <line:22:7, col:12> 'volatile struct S0 *' '='
+|   |   | |-DeclRefExpr 0x7fbdbf006ba0 <col:7> 'volatile struct S0 *' lvalue Var 0x7fbdbf0067a0 'j' 'volatile struct S0 *'
+|   |   | `-ImplicitCastExpr 0x7fbdbf006c68 <col:11, col:12> 'volatile struct S0 *' <BitCast>
+|   |   |   `-UnaryOperator 0x7fbdbf006c48 <col:11, col:12> 'struct S0 *' prefix '&'
+|   |   |     `-DeclRefExpr 0x7fbdbf006bc8 <col:12> 'struct S0':'struct S0' lvalue Var 0x7fbdbf006070 'b' 'struct S0':'struct S0'
+|   |   |-BinaryOperator 0x7fbdbf006da8 <line:23:7, col:20> 'struct S0':'struct S0' '='
+|   |   | |-UnaryOperator 0x7fbdbf006ce8 <col:7, col:8> 'volatile struct S0':'volatile struct S0' lvalue prefix '*'
+|   |   | | `-ImplicitCastExpr 0x7fbdbf006cd0 <col:8> 'volatile struct S0 *' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7fbdbf006ca8 <col:8> 'volatile struct S0 *' lvalue Var 0x7fbdbf0067a0 'j' 'volatile struct S0 *'
+|   |   | `-ImplicitCastExpr 0x7fbdbf006d90 <col:12, col:20> 'struct S0':'struct S0' <LValueToRValue>
+|   |   |   `-ArraySubscriptExpr 0x7fbdbf006d68 <col:12, col:20> 'struct S0':'struct S0' lvalue
+|   |   |     |-ImplicitCastExpr 0x7fbdbf006d50 <col:12> 'struct S0 *' <ArrayToPointerDecay>
+|   |   |     | `-DeclRefExpr 0x7fbdbf006d08 <col:12> 'struct S0 [2]' lvalue Var 0x7fbdbf006308 'global' 'struct S0 [2]'
+|   |   |     `-IntegerLiteral 0x7fbdbf006d30 <col:19> 'int' 1
+|   |   `-UnaryOperator 0x7fbdbe853000 <line:24:7, col:8> 'int' postfix '--'
+|   |     `-DeclRefExpr 0x7fbdbf006dd0 <col:7> 'int' lvalue Var 0x7fbdbf005f60 'a' 'int'
+|   `-ReturnStmt 0x7fbdbe8530b0 <line:26:3, col:10>
+|     `-IntegerLiteral 0x7fbdbe853090 <col:10> 'int' 0
+`-FunctionDecl 0x7fbdbf006898 <line:21:7> col:7 implicit used __builtin_printf 'int (const char *, ...)' extern
+  |-ParmVarDecl 0x7fbdbf006930 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-FormatAttr 0x7fbdbf006998 <col:7> Implicit printf 1 2

@@ -1,0 +1,79 @@
+TranslationUnitDecl 0x7fdd2c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdd2c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdd2c826740 '__int128'
+|-TypedefDecl 0x7fdd2c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdd2c826760 'unsigned __int128'
+|-TypedefDecl 0x7fdd2c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdd2c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdd2c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdd2c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdd2c826dc0 'char *'
+|   `-BuiltinType 0x7fdd2c826560 'char'
+|-TypedefDecl 0x7fdd2c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdd2c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdd2c826ee0 'struct __va_list_tag'
+|     `-Record 0x7fdd2c826e58 '__va_list_tag'
+|-TypedefDecl 0x7fdd2c827138 <c_files/pr21291.c:9:1, col:23> col:23 referenced bngdigit 'unsigned long'
+| `-BuiltinType 0x7fdd2c826680 'unsigned long'
+|-TypedefDecl 0x7fdd2d025a38 <line:10:1, col:19> col:19 referenced bng 'bngdigit *'
+| `-PointerType 0x7fdd2d025a00 'bngdigit *'
+|   `-TypedefType 0x7fdd2c827190 'bngdigit' sugar
+|     |-Typedef 0x7fdd2c827138 'bngdigit'
+|     `-BuiltinType 0x7fdd2c826680 'unsigned long'
+|-TypedefDecl 0x7fdd2d025aa8 <line:11:1, col:22> col:22 referenced bngcarry 'unsigned int'
+| `-BuiltinType 0x7fdd2c826660 'unsigned int'
+|-TypedefDecl 0x7fdd2d025b18 <line:12:1, col:23> col:23 referenced bngsize 'unsigned long'
+| `-BuiltinType 0x7fdd2c826680 'unsigned long'
+`-FunctionDecl 0x7fdd2d025ee0 <line:14:1, line:36:1> line:15:1 bng_ia32_mult_sub_digit 'bngdigit (bng, bngsize, bng, bngsize, bngdigit)'
+  |-ParmVarDecl 0x7fdd2d025ba0 <col:26, col:30> col:30 used a 'bng':'bngdigit *'
+  |-ParmVarDecl 0x7fdd2d025c30 <col:33, col:41> col:41 used alen 'bngsize':'unsigned long'
+  |-ParmVarDecl 0x7fdd2d025ca0 <col:47, col:51> col:51 used b 'bng':'bngdigit *'
+  |-ParmVarDecl 0x7fdd2d025d10 <col:54, col:62> col:62 used blen 'bngsize':'unsigned long'
+  |-ParmVarDecl 0x7fdd2d025d80 <col:68, col:77> col:77 used d 'bngdigit':'unsigned long'
+  `-CompoundStmt 0x7fdd2d026a98 <line:16:1, line:36:1>
+    |-DeclStmt 0x7fdd2d0260d8 <line:17:3, col:20>
+    | |-VarDecl 0x7fdd2d025ff0 <col:3, col:12> col:12 used out 'bngdigit':'unsigned long'
+    | `-VarDecl 0x7fdd2d026060 <col:3, col:17> col:17 used tmp 'bngdigit':'unsigned long'
+    |-DeclStmt 0x7fdd2d026180 <line:18:3, col:17>
+    | `-VarDecl 0x7fdd2d026120 <col:3, col:12> col:12 carry 'bngcarry':'unsigned int'
+    |-DeclStmt 0x7fdd2d026208 <line:19:3, col:15>
+    | `-VarDecl 0x7fdd2d0261a8 <col:3, col:12> col:12 used a11 'bngdigit':'unsigned long'
+    |-CompoundAssignOperator 0x7fdd2d026288 <line:21:3, col:11> 'bngsize':'unsigned long' '-=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    | |-DeclRefExpr 0x7fdd2d026220 <col:3> 'bngsize':'unsigned long' lvalue ParmVar 0x7fdd2d025c30 'alen' 'bngsize':'unsigned long'
+    | `-ImplicitCastExpr 0x7fdd2d026270 <col:11> 'bngsize':'unsigned long' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fdd2d026248 <col:11> 'bngsize':'unsigned long' lvalue ParmVar 0x7fdd2d025d10 'blen' 'bngsize':'unsigned long'
+    |-BinaryOperator 0x7fdd2d026320 <line:22:3, col:9> 'bngdigit':'unsigned long' '='
+    | |-DeclRefExpr 0x7fdd2d0262c0 <col:3> 'bngdigit':'unsigned long' lvalue Var 0x7fdd2d025ff0 'out' 'bngdigit':'unsigned long'
+    | `-ImplicitCastExpr 0x7fdd2d026308 <col:9> 'bngdigit':'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fdd2d0262e8 <col:9> 'int' 0
+    |-GCCAsmStmt 0x7fdd2d0266b0 <line:23:3, line:26:22>
+    | |-DeclRefExpr 0x7fdd2d026418 <line:24:16> 'bng':'bngdigit *' lvalue ParmVar 0x7fdd2d025ba0 'a' 'bng':'bngdigit *'
+    | |-DeclRefExpr 0x7fdd2d026470 <col:26> 'bng':'bngdigit *' lvalue ParmVar 0x7fdd2d025ca0 'b' 'bng':'bngdigit *'
+    | |-DeclRefExpr 0x7fdd2d026508 <col:37> 'bngsize':'unsigned long' lvalue ParmVar 0x7fdd2d025d10 'blen' 'bngsize':'unsigned long'
+    | |-DeclRefExpr 0x7fdd2d026560 <col:51> 'bngdigit':'unsigned long' lvalue Var 0x7fdd2d025ff0 'out' 'bngdigit':'unsigned long'
+    | |-DeclRefExpr 0x7fdd2d0265b8 <col:64> 'bngdigit':'unsigned long' lvalue Var 0x7fdd2d026060 'tmp' 'bngdigit':'unsigned long'
+    | `-ImplicitCastExpr 0x7fdd2d026698 <line:25:16> 'bngdigit':'unsigned long' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fdd2d026610 <col:16> 'bngdigit':'unsigned long' lvalue ParmVar 0x7fdd2d025d80 'd' 'bngdigit':'unsigned long'
+    |-IfStmt 0x7fdd2d026950 <line:27:3, line:31:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fdd2d026810 <line:27:7, col:15> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fdd2d0267e0 <col:7> 'bngsize':'unsigned long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fdd2d026798 <col:7> 'bngsize':'unsigned long' lvalue ParmVar 0x7fdd2d025c30 'alen' 'bngsize':'unsigned long'
+    | | `-ImplicitCastExpr 0x7fdd2d0267f8 <col:15> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fdd2d0267c0 <col:15> 'int' 0
+    | |-CompoundStmt 0x7fdd2d026928 <line:28:5, line:31:5>
+    | | |-BinaryOperator 0x7fdd2d0268a0 <line:29:7, col:13> 'bngdigit':'unsigned long' '='
+    | | | |-DeclRefExpr 0x7fdd2d026838 <col:7> 'bngdigit':'unsigned long' lvalue Var 0x7fdd2d0261a8 'a11' 'bngdigit':'unsigned long'
+    | | | `-ImplicitCastExpr 0x7fdd2d026888 <col:13> 'bngdigit':'unsigned long' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fdd2d026860 <col:13> 'bngdigit':'unsigned long' lvalue Var 0x7fdd2d025ff0 'out' 'bngdigit':'unsigned long'
+    | | `-GotoStmt 0x7fdd2d026910 <line:30:7, col:12> 't' 0x7fdd2d0268c8
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fdd2d026a00 <line:33:3, col:9> 'bngdigit':'unsigned long' '='
+    | |-DeclRefExpr 0x7fdd2d026988 <col:3> 'bngdigit':'unsigned long' lvalue Var 0x7fdd2d0261a8 'a11' 'bngdigit':'unsigned long'
+    | `-ImplicitCastExpr 0x7fdd2d0269d0 <col:9> 'bngdigit':'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fdd2d0269b0 <col:9> 'int' 1
+    `-LabelStmt 0x7fdd2d026a80 <line:34:2, line:35:10> 't'
+      `-ReturnStmt 0x7fdd2d026a68 <col:3, col:10>
+        `-ImplicitCastExpr 0x7fdd2d026a50 <col:10> 'bngdigit':'unsigned long' <LValueToRValue>
+          `-DeclRefExpr 0x7fdd2d026a28 <col:10> 'bngdigit':'unsigned long' lvalue Var 0x7fdd2d0261a8 'a11' 'bngdigit':'unsigned long'

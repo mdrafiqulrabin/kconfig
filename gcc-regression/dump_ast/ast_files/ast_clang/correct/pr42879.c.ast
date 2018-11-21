@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fd1740264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd174026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd174026740 '__int128'
+|-TypedefDecl 0x7fd174026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd174026760 'unsigned __int128'
+|-TypedefDecl 0x7fd174026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd174026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd174026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd174026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd174026dc0 'char *'
+|   `-BuiltinType 0x7fd174026560 'char'
+|-TypedefDecl 0x7fd1740270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd174027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd174026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd174026e58 '__va_list_tag'
+|-RecordDecl 0x7fd174027120 <c_files/pr42879.c:5:1, line:11:1> line:5:8 struct A definition
+| `-FieldDecl 0x7fd174825a18 <line:10:3, col:9> col:7 referenced v 'int'
+|   `-IntegerLiteral 0x7fd1740271d0 <col:9> 'int' 1
+|-FunctionDecl 0x7fd174825ab0 <line:13:1, col:9> col:5 used bar 'int ()'
+`-FunctionDecl 0x7fd174825d48 <line:14:1, line:19:1> line:14:5 foo 'int (struct A *)'
+  |-ParmVarDecl 0x7fd174825c40 <col:9, col:19> col:19 used p 'struct A *'
+  `-CompoundStmt 0x7fd174825f90 <line:15:1, line:19:1>
+    |-IfStmt 0x7fd174825eb0 <line:16:3, line:17:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fd174825e60 <line:16:7, col:10> 'int' <LValueToRValue>
+    | | `-MemberExpr 0x7fd174825e28 <col:7, col:10> 'int' lvalue bitfield ->v 0x7fd174825a18
+    | |   `-ImplicitCastExpr 0x7fd174825e10 <col:7> 'struct A *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fd174825de8 <col:7> 'struct A *' lvalue ParmVar 0x7fd174825c40 'p' 'struct A *'
+    | |-ReturnStmt 0x7fd174825e98 <line:17:5, col:12>
+    | | `-IntegerLiteral 0x7fd174825e78 <col:12> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fd174825f78 <line:18:3, col:14>
+      `-CallExpr 0x7fd174825f50 <col:10, col:14> 'int'
+        `-ImplicitCastExpr 0x7fd174825f38 <col:10> 'int (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fd174825ee8 <col:10> 'int ()' Function 0x7fd174825ab0 'bar' 'int ()'

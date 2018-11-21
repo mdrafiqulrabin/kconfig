@@ -1,0 +1,77 @@
+c_files/pr42084.c:9:8: warning: comparison of address of 'g' equal to a null pointer is always false [-Wtautological-pointer-compare]
+  if (&g == 0)
+       ^    ~
+1 warning generated.
+TranslationUnitDecl 0x7fcd5c00e4d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcd5c00ea20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcd5c00e740 '__int128'
+|-TypedefDecl 0x7fcd5c00ea90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcd5c00e760 'unsigned __int128'
+|-TypedefDecl 0x7fcd5c00ed68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcd5c00eb70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcd5c00eae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcd5c00ee00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcd5c00edc0 'char *'
+|   `-BuiltinType 0x7fcd5c00e560 'char'
+|-TypedefDecl 0x7fcd5c00f0c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcd5c00f070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcd5c00eee0 'struct __va_list_tag'
+|     `-Record 0x7fcd5c00ee58 '__va_list_tag'
+|-FunctionDecl 0x7fcd5c825a30 <c_files/pr42084.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fcd5c825ac8 prev 0x7fcd5c825a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7fcd5c825b78 <line:4:1, col:9> col:5 used g 'int' cinit
+| `-IntegerLiteral 0x7fcd5c825c18 <col:9> 'int' 0
+|-FunctionDecl 0x7fcd5c825da8 <line:5:1, line:14:1> line:5:38 used f 'int (long long, long long)' static
+| |-ParmVarDecl 0x7fcd5c825c50 <col:41, col:51> col:51 used a 'long long'
+| |-ParmVarDecl 0x7fcd5c825cc8 <col:54, col:64> col:64 used b 'long long'
+| |-CompoundStmt 0x7fcd5c826250 <line:6:1, line:14:1>
+| | |-DeclStmt 0x7fcd5c825f10 <line:7:3, col:10>
+| | | `-VarDecl 0x7fcd5c825eb0 <col:3, col:7> col:7 used cmp 'int'
+| | |-BinaryOperator 0x7fcd5c825ff8 <line:8:3, col:13> 'int' '='
+| | | |-DeclRefExpr 0x7fcd5c825f28 <col:3> 'int' lvalue Var 0x7fcd5c825eb0 'cmp' 'int'
+| | | `-BinaryOperator 0x7fcd5c825fd0 <col:9, col:13> 'int' '>'
+| | |   |-ImplicitCastExpr 0x7fcd5c825fa0 <col:9> 'long long' <LValueToRValue>
+| | |   | `-DeclRefExpr 0x7fcd5c825f50 <col:9> 'long long' lvalue ParmVar 0x7fcd5c825c50 'a' 'long long'
+| | |   `-ImplicitCastExpr 0x7fcd5c825fb8 <col:13> 'long long' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7fcd5c825f78 <col:13> 'long long' lvalue ParmVar 0x7fcd5c825cc8 'b' 'long long'
+| | |-IfStmt 0x7fcd5c8261c0 <line:9:3, line:12:8>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fcd5c8260d0 <line:9:7, col:13> 'int' '=='
+| | | | |-UnaryOperator 0x7fcd5c826078 <col:7, col:8> 'int *' prefix '&'
+| | | | | `-DeclRefExpr 0x7fcd5c826020 <col:8> 'int' lvalue Var 0x7fcd5c825b78 'g' 'int'
+| | | | `-ImplicitCastExpr 0x7fcd5c8260b8 <col:13> 'int *' <NullToPointer>
+| | | |   `-IntegerLiteral 0x7fcd5c826098 <col:13> 'int' 0
+| | | |-CompoundAssignOperator 0x7fcd5c826140 <line:10:5, col:10> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+| | | | |-DeclRefExpr 0x7fcd5c8260f8 <col:5> 'int' lvalue Var 0x7fcd5c825eb0 'cmp' 'int'
+| | | | `-IntegerLiteral 0x7fcd5c826120 <col:10> 'int' 2
+| | | `-UnaryOperator 0x7fcd5c8261a0 <line:12:5, col:8> 'int' postfix '++'
+| | |   `-DeclRefExpr 0x7fcd5c826178 <col:5> 'int' lvalue Var 0x7fcd5c825eb0 'cmp' 'int'
+| | `-ReturnStmt 0x7fcd5c826238 <line:13:3, col:10>
+| |   `-ImplicitCastExpr 0x7fcd5c826220 <col:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fcd5c8261f8 <col:10> 'int' lvalue Var 0x7fcd5c825eb0 'cmp' 'int'
+| `-NoInlineAttr 0x7fcd5c825e50 <line:5:27>
+`-FunctionDecl 0x7fcd5c826358 <line:16:1, line:22:1> line:16:5 main 'int (void)'
+  `-CompoundStmt 0x7fcd5c826748 <line:17:1, line:22:1>
+    |-DeclStmt 0x7fcd5c8265a8 <line:18:3, col:21>
+    | `-VarDecl 0x7fcd5c826430 <col:3, col:20> col:7 used ret 'int' cinit
+    |   `-CallExpr 0x7fcd5c826540 <col:13, col:20> 'int'
+    |     |-ImplicitCastExpr 0x7fcd5c826528 <col:13> 'int (*)(long long, long long)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fcd5c826490 <col:13> 'int (long long, long long)' Function 0x7fcd5c825da8 'f' 'int (long long, long long)'
+    |     |-ImplicitCastExpr 0x7fcd5c826578 <col:16> 'long long' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fcd5c8264b8 <col:16> 'int' 2
+    |     `-ImplicitCastExpr 0x7fcd5c826590 <col:19> 'long long' <IntegralCast>
+    |       `-IntegerLiteral 0x7fcd5c8264d8 <col:19> 'int' 1
+    |-IfStmt 0x7fcd5c8266d8 <line:19:3, line:20:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcd5c826620 <line:19:7, col:14> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fcd5c826608 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fcd5c8265c0 <col:7> 'int' lvalue Var 0x7fcd5c826430 'ret' 'int'
+    | | `-IntegerLiteral 0x7fcd5c8265e8 <col:14> 'int' 2
+    | |-CallExpr 0x7fcd5c8266b0 <line:20:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fcd5c826698 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fcd5c826648 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fcd5c825ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fcd5c826730 <line:21:3, col:10>
+      `-IntegerLiteral 0x7fcd5c826710 <col:10> 'int' 0

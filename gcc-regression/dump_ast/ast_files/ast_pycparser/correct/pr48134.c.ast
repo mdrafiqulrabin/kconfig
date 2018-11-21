@@ -1,0 +1,78 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: w, [], [], []
+        TypeDecl: w, []
+          IdentifierType: ['int']
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: T
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          Struct: S
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: bar, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              Struct: S
+        TypeDecl: bar, []
+          Struct: S
+    Compound: 
+      UnaryOp: p++
+        ID: i
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: t, [], [], []
+            TypeDecl: t, []
+              Struct: T
+          Decl: s, [], [], []
+            TypeDecl: s, []
+              Struct: S
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        PtrDecl: []
+          TypeDecl: c, []
+            Struct: S
+        UnaryOp: &
+          ID: s
+      If: 
+        ID: i
+        Assignment: =
+          ID: c
+          UnaryOp: &
+            StructRef: .
+              ID: t
+              ID: s
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: t
+            ID: s
+          ID: w
+        Constant: int, 3
+      Assignment: =
+        ID: s
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            UnaryOp: *
+              ID: c
+      Return: 
+        StructRef: .
+          StructRef: .
+            ID: t
+            ID: s
+          ID: w

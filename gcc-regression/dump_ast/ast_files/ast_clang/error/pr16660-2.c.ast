@@ -1,0 +1,36 @@
+c_files/pr16660-2.c:4:10: fatal error: 'check.h' file not found
+#include "check.h"
+         ^~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fdb588264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdb58826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdb58826740 '__int128'
+|-TypedefDecl 0x7fdb58826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdb58826760 'unsigned __int128'
+|-TypedefDecl 0x7fdb58826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdb58826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdb58826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdb58826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdb58826dc0 'char *'
+|   `-BuiltinType 0x7fdb58826560 'char'
+|-TypedefDecl 0x7fdb588270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdb58827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdb58826ee0 'struct __va_list_tag'
+|     `-Record 0x7fdb58826e58 '__va_list_tag'
+|-TypedefDecl 0x7fdb58827138 <c_files/pr16660-2.c:6:1, col:23> col:23 size_t 'unsigned long'
+| `-BuiltinType 0x7fdb58826680 'unsigned long'
+|-FunctionDecl 0x7fdb58878458 <line:8:1, line:13:1> line:8:5 main 'int (void)'
+| `-CompoundStmt 0x7fdb588789a0 <line:9:1, line:13:1>
+|   |-DeclStmt 0x7fdb58878720 <line:10:3, col:67>
+|   | `-VarDecl 0x7fdb58878670 <col:3, col:30> col:7 used a 'int [64]'
+|   |   `-AlignedAttr 0x7fdb588786d0 <col:47, col:64> aligned
+|   |     `-IntegerLiteral 0x7fdb588785f0 <line:7:19> 'int' 256
+|   |-CallExpr 0x7fdb58878930 <line:11:3, col:23> 'int'
+|   | |-ImplicitCastExpr 0x7fdb58878918 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fdb58878828 <col:3> 'int ()' Function 0x7fdb58878790 'check' 'int ()'
+|   | |-UnaryOperator 0x7fdb588788a8 <col:10, col:11> 'int (*)[64]' prefix '&'
+|   | | `-DeclRefExpr 0x7fdb58878850 <col:11> 'int [64]' lvalue Var 0x7fdb58878670 'a' 'int [64]'
+|   | `-IntegerLiteral 0x7fdb588788c8 <line:7:19> 'int' 256
+|   `-ReturnStmt 0x7fdb58878988 <line:12:3, col:10>
+|     `-IntegerLiteral 0x7fdb58878968 <col:10> 'int' 0
+`-FunctionDecl 0x7fdb58878790 <<invalid sloc>> line:11:3 implicit used check 'int ()'

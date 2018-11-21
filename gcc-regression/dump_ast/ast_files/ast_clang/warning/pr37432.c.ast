@@ -1,0 +1,54 @@
+c_files/pr37432.c:2:5: warning: implicit declaration of function 'print_wkb_bytes' is invalid in C99 [-Wimplicit-function-declaration]
+    print_wkb_bytes((unsigned char *)&val, 1, 1);
+    ^
+1 warning generated.
+TranslationUnitDecl 0x7fa8de8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa8de826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa8de826740 '__int128'
+|-TypedefDecl 0x7fa8de826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa8de826760 'unsigned __int128'
+|-TypedefDecl 0x7fa8de826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa8de826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa8de826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa8de826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa8de826dc0 'char *'
+|   `-BuiltinType 0x7fa8de826560 'char'
+|-TypedefDecl 0x7fa8de8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa8de827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa8de826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa8de826e58 '__va_list_tag'
+|-FunctionDecl 0x7fa8df025a00 <c_files/pr37432.c:1:1, line:3:1> line:1:13 used print_wkb_byte 'void (unsigned char)' static
+| |-ParmVarDecl 0x7fa8de827138 <col:28, col:42> col:42 used val 'unsigned char'
+| `-CompoundStmt 0x7fa8df025d70 <col:47, line:3:1>
+|   `-CallExpr 0x7fa8df025d30 <line:2:5, col:48> 'int'
+|     |-ImplicitCastExpr 0x7fa8df025d18 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fa8df025bc8 <col:5> 'int ()' Function 0x7fa8df025b30 'print_wkb_bytes' 'int ()'
+|     |-CStyleCastExpr 0x7fa8df025c80 <col:21, col:39> 'unsigned char *' <NoOp>
+|     | `-UnaryOperator 0x7fa8df025c48 <col:38, col:39> 'unsigned char *' prefix '&'
+|     |   `-DeclRefExpr 0x7fa8df025bf0 <col:39> 'unsigned char' lvalue ParmVar 0x7fa8de827138 'val' 'unsigned char'
+|     |-IntegerLiteral 0x7fa8df025ca8 <col:44> 'int' 1
+|     `-IntegerLiteral 0x7fa8df025cc8 <col:47> 'int' 1
+|-FunctionDecl 0x7fa8df025b30 <<invalid sloc>> col:5 implicit used print_wkb_bytes 'int ()'
+`-FunctionDecl 0x7fa8df025e70 <line:4:1, line:8:1> line:4:6 InsertMultiPoint 'void (int)'
+  |-ParmVarDecl 0x7fa8df025da8 <col:23, col:27> col:27 used b 'int'
+  `-CompoundStmt 0x7fa8df0261c0 <col:30, line:8:1>
+    |-DeclStmt 0x7fa8df025fb8 <line:5:5, col:15>
+    | `-VarDecl 0x7fa8df025f20 <col:5, col:14> col:10 used a 'char' cinit
+    |   `-ImplicitCastExpr 0x7fa8df025fa0 <col:14> 'char' <IntegralCast>
+    |     `-IntegerLiteral 0x7fa8df025f80 <col:14> 'int' 1
+    |-IfStmt 0x7fa8df026098 <line:6:5, col:16>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fa8df025ff8 <col:9> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fa8df025fd0 <col:9> 'int' lvalue ParmVar 0x7fa8df025da8 'b' 'int'
+    | |-BinaryOperator 0x7fa8df026070 <col:12, col:16> 'char' '='
+    | | |-DeclRefExpr 0x7fa8df026010 <col:12> 'char' lvalue Var 0x7fa8df025f20 'a' 'char'
+    | | `-ImplicitCastExpr 0x7fa8df026058 <col:16> 'char' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fa8df026038 <col:16> 'int' 0
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fa8df026160 <line:7:5, col:21> 'void'
+      |-ImplicitCastExpr 0x7fa8df026148 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa8df0260d0 <col:5> 'void (unsigned char)' Function 0x7fa8df025a00 'print_wkb_byte' 'void (unsigned char)'
+      `-ImplicitCastExpr 0x7fa8df0261a8 <col:20> 'unsigned char' <IntegralCast>
+        `-ImplicitCastExpr 0x7fa8df026190 <col:20> 'char' <LValueToRValue>
+          `-DeclRefExpr 0x7fa8df0260f8 <col:20> 'char' lvalue Var 0x7fa8df025f20 'a' 'char'

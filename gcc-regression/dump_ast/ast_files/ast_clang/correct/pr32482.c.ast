@@ -1,0 +1,130 @@
+TranslationUnitDecl 0x7fd2438264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd243826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd243826740 '__int128'
+|-TypedefDecl 0x7fd243826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd243826760 'unsigned __int128'
+|-TypedefDecl 0x7fd243826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd243826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd243826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd243826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd243826dc0 'char *'
+|   `-BuiltinType 0x7fd243826560 'char'
+|-TypedefDecl 0x7fd2438270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd243827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd243826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd243826e58 '__va_list_tag'
+|-RecordDecl 0x7fd243827120 <c_files/pr32482.c:1:9, col:63> col:9 struct definition
+| `-FieldDecl 0x7fd244025c00 <col:18, col:60> col:32 referenced bits 'unsigned long [1]'
+|-TypedefDecl 0x7fd244025ca0 <col:1, col:65> col:65 referenced nodemask_t 'struct nodemask_t':'nodemask_t'
+| `-ElaboratedType 0x7fd244025c50 'struct nodemask_t' sugar
+|   `-RecordType 0x7fd2438271b0 'nodemask_t'
+|     `-Record 0x7fd243827120 ''
+|-FunctionDecl 0x7fd244025ea8 <line:2:1, line:6:1> line:3:5 used bitmap_empty 'int (const unsigned long *, int)' static inline
+| |-ParmVarDecl 0x7fd244025d50 <col:18, col:39> col:39 used src 'const unsigned long *'
+| |-ParmVarDecl 0x7fd244025dc8 <col:44, col:48> col:48 used nbits 'int'
+| |-CompoundStmt 0x7fd2440263b8 <line:4:1, line:6:1>
+| | `-ReturnStmt 0x7fd2440263a0 <line:5:3, col:71>
+| |   `-UnaryOperator 0x7fd244026380 <col:10, col:71> 'int' prefix '!'
+| |     `-ParenExpr 0x7fd244026360 <col:12, col:71> 'unsigned long'
+| |       `-BinaryOperator 0x7fd244026338 <col:13, col:70> 'unsigned long' '&'
+| |         |-ImplicitCastExpr 0x7fd244026320 <col:13, col:14> 'unsigned long' <LValueToRValue>
+| |         | `-UnaryOperator 0x7fd244026018 <col:13, col:14> 'const unsigned long' lvalue prefix '*'
+| |         |   `-ImplicitCastExpr 0x7fd244026000 <col:14> 'const unsigned long *' <LValueToRValue>
+| |         |     `-DeclRefExpr 0x7fd244025fd8 <col:14> 'const unsigned long *' lvalue ParmVar 0x7fd244025d50 'src' 'const unsigned long *'
+| |         `-ParenExpr 0x7fd244026300 <col:20, col:70> 'unsigned long'
+| |           `-ConditionalOperator 0x7fd2440262d0 <col:22, col:66> 'unsigned long'
+| |             |-ParenExpr 0x7fd2440260e0 <col:22, col:35> 'int'
+| |             | `-BinaryOperator 0x7fd2440260b8 <col:23, col:33> 'int' '%'
+| |             |   |-ImplicitCastExpr 0x7fd2440260a0 <col:23, col:29> 'int' <LValueToRValue>
+| |             |   | `-ParenExpr 0x7fd244026060 <col:23, col:29> 'int' lvalue
+| |             |   |   `-DeclRefExpr 0x7fd244026038 <col:24> 'int' lvalue ParmVar 0x7fd244025dc8 'nbits' 'int'
+| |             |   `-IntegerLiteral 0x7fd244026080 <col:33> 'int' 32
+| |             |-BinaryOperator 0x7fd244026268 <col:39, col:61> 'unsigned long' '-'
+| |             | |-ParenExpr 0x7fd244026210 <col:39, col:59> 'unsigned long'
+| |             | | `-BinaryOperator 0x7fd2440261e8 <col:40, col:58> 'unsigned long' '<<'
+| |             | |   |-IntegerLiteral 0x7fd244026100 <col:40> 'unsigned long' 1
+| |             | |   `-ParenExpr 0x7fd2440261c8 <col:45, col:58> 'int'
+| |             | |     `-BinaryOperator 0x7fd2440261a0 <col:46, col:56> 'int' '%'
+| |             | |       |-ImplicitCastExpr 0x7fd244026188 <col:46, col:52> 'int' <LValueToRValue>
+| |             | |       | `-ParenExpr 0x7fd244026148 <col:46, col:52> 'int' lvalue
+| |             | |       |   `-DeclRefExpr 0x7fd244026120 <col:47> 'int' lvalue ParmVar 0x7fd244025dc8 'nbits' 'int'
+| |             | |       `-IntegerLiteral 0x7fd244026168 <col:56> 'int' 32
+| |             | `-ImplicitCastExpr 0x7fd244026250 <col:61> 'unsigned long' <IntegralCast>
+| |             |   `-IntegerLiteral 0x7fd244026230 <col:61> 'int' 1
+| |             `-UnaryOperator 0x7fd2440262b0 <col:65, col:66> 'unsigned long' prefix '~'
+| |               `-IntegerLiteral 0x7fd244026290 <col:66> 'unsigned long' 0
+| `-AlwaysInlineAttr 0x7fd244025f50 <line:2:30> always_inline
+|-FunctionDecl 0x7fd2440265f8 <line:7:1, line:11:1> line:8:5 used __nodes_empty 'int (const nodemask_t *, int)' static inline
+| |-ParmVarDecl 0x7fd244026468 <col:19, col:37> col:37 used srcp 'const nodemask_t *'
+| |-ParmVarDecl 0x7fd2440264e0 <col:43, col:47> col:47 used nbits 'int'
+| |-CompoundStmt 0x7fd2440268b0 <line:9:1, line:11:1>
+| | `-ReturnStmt 0x7fd244026898 <line:10:2, col:39>
+| |   `-CallExpr 0x7fd2440267f0 <col:9, col:39> 'int'
+| |     |-ImplicitCastExpr 0x7fd2440267d8 <col:9> 'int (*)(const unsigned long *, int)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fd2440266e8 <col:9> 'int (const unsigned long *, int)' Function 0x7fd244025ea8 'bitmap_empty' 'int (const unsigned long *, int)'
+| |     |-ImplicitCastExpr 0x7fd244026868 <col:22, col:28> 'const unsigned long *' <ArrayToPointerDecay>
+| |     | `-MemberExpr 0x7fd244026750 <col:22, col:28> 'unsigned long const[1]' lvalue ->bits 0x7fd244025c00
+| |     |   `-ImplicitCastExpr 0x7fd244026738 <col:22> 'const nodemask_t *' <LValueToRValue>
+| |     |     `-DeclRefExpr 0x7fd244026710 <col:22> 'const nodemask_t *' lvalue ParmVar 0x7fd244026468 'srcp' 'const nodemask_t *'
+| |     `-ImplicitCastExpr 0x7fd244026880 <col:34> 'int' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fd244026788 <col:34> 'int' lvalue ParmVar 0x7fd2440264e0 'nbits' 'int'
+| `-AlwaysInlineAttr 0x7fd2440266a0 <line:7:30> always_inline
+|-VarDecl 0x7fd2440268e0 <line:12:1, col:19> col:19 used node_online_map 'nodemask_t':'nodemask_t' extern
+|-FunctionDecl 0x7fd244027a00 <line:13:1, col:22> col:6 used drain_array 'void (void)'
+`-FunctionDecl 0x7fd244027b28 <line:14:1, line:23:1> line:14:6 drain_cpu_caches 'void (void)'
+  `-CompoundStmt 0x7fd244028390 <line:15:1, line:23:1>
+    |-DeclStmt 0x7fd244027c38 <line:16:2, col:10>
+    | `-VarDecl 0x7fd244027bd8 <col:2, col:6> col:6 used node 'int'
+    |-IfStmt 0x7fd2440280f0 <line:17:2, line:20:6>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fd244027e80 <line:17:6, col:49> 'int' prefix '!'
+    | | `-CallExpr 0x7fd244027e30 <col:7, col:49> 'int'
+    | |   |-ImplicitCastExpr 0x7fd244027e18 <col:7> 'int (*)(const nodemask_t *, int)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7fd244027c50 <col:7> 'int (const nodemask_t *, int)' Function 0x7fd2440265f8 '__nodes_empty' 'int (const nodemask_t *, int)'
+    | |   |-ImplicitCastExpr 0x7fd244027e68 <col:21, col:38> 'const nodemask_t *' <BitCast>
+    | |   | `-UnaryOperator 0x7fd244027d18 <col:21, col:38> 'nodemask_t *' prefix '&'
+    | |   |   `-ParenExpr 0x7fd244027ca0 <col:22, col:38> 'nodemask_t':'nodemask_t' lvalue
+    | |   |     `-DeclRefExpr 0x7fd244027c78 <col:23> 'nodemask_t':'nodemask_t' lvalue Var 0x7fd2440268e0 'node_online_map' 'nodemask_t':'nodemask_t'
+    | |   `-ParenExpr 0x7fd244027da0 <col:41, col:48> 'int'
+    | |     `-BinaryOperator 0x7fd244027d78 <col:42, col:47> 'int' '<<'
+    | |       |-IntegerLiteral 0x7fd244027d38 <col:42> 'int' 1
+    | |       `-IntegerLiteral 0x7fd244027d58 <col:47> 'int' 0
+    | |-ForStmt 0x7fd2440280b8 <line:18:6, line:20:6>
+    | | |-BinaryOperator 0x7fd244027f28 <line:18:11, col:22> 'int' '='
+    | | | |-ParenExpr 0x7fd244027ee8 <col:11, col:18> 'int' lvalue
+    | | | | `-ParenExpr 0x7fd244027ec8 <col:12, col:17> 'int' lvalue
+    | | | |   `-DeclRefExpr 0x7fd244027ea0 <col:13> 'int' lvalue Var 0x7fd244027bd8 'node' 'int'
+    | | | `-IntegerLiteral 0x7fd244027f08 <col:22> 'int' 0
+    | | |-<<<NULL>>>
+    | | |-BinaryOperator 0x7fd244027ff0 <col:25, col:36> 'int' '<'
+    | | | |-ImplicitCastExpr 0x7fd244027fd8 <col:25, col:32> 'int' <LValueToRValue>
+    | | | | `-ParenExpr 0x7fd244027f98 <col:25, col:32> 'int' lvalue
+    | | | |   `-ParenExpr 0x7fd244027f78 <col:26, col:31> 'int' lvalue
+    | | | |     `-DeclRefExpr 0x7fd244027f50 <col:27> 'int' lvalue Var 0x7fd244027bd8 'node' 'int'
+    | | | `-IntegerLiteral 0x7fd244027fb8 <col:36> 'int' 1
+    | | |-UnaryOperator 0x7fd244028080 <col:39, col:47> 'int' postfix '++'
+    | | | `-ParenExpr 0x7fd244028060 <col:39, col:46> 'int' lvalue
+    | | |   `-ParenExpr 0x7fd244028040 <col:40, col:45> 'int' lvalue
+    | | |     `-DeclRefExpr 0x7fd244028018 <col:41> 'int' lvalue Var 0x7fd244027bd8 'node' 'int'
+    | | `-CompoundStmt 0x7fd2440280a0 <line:19:6, line:20:6>
+    | `-<<<NULL>>>
+    `-IfStmt 0x7fd244028358 <line:21:2, line:22:18>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7fd2440282a8 <line:21:6, col:49> 'int' prefix '!'
+      | `-CallExpr 0x7fd244028258 <col:7, col:49> 'int'
+      |   |-ImplicitCastExpr 0x7fd244028240 <col:7> 'int (*)(const nodemask_t *, int)' <FunctionToPointerDecay>
+      |   | `-DeclRefExpr 0x7fd244028128 <col:7> 'int (const nodemask_t *, int)' Function 0x7fd2440265f8 '__nodes_empty' 'int (const nodemask_t *, int)'
+      |   |-ImplicitCastExpr 0x7fd244028290 <col:21, col:38> 'const nodemask_t *' <BitCast>
+      |   | `-UnaryOperator 0x7fd244028198 <col:21, col:38> 'nodemask_t *' prefix '&'
+      |   |   `-ParenExpr 0x7fd244028178 <col:22, col:38> 'nodemask_t':'nodemask_t' lvalue
+      |   |     `-DeclRefExpr 0x7fd244028150 <col:23> 'nodemask_t':'nodemask_t' lvalue Var 0x7fd2440268e0 'node_online_map' 'nodemask_t':'nodemask_t'
+      |   `-ParenExpr 0x7fd244028220 <col:41, col:48> 'int'
+      |     `-BinaryOperator 0x7fd2440281f8 <col:42, col:47> 'int' '<<'
+      |       |-IntegerLiteral 0x7fd2440281b8 <col:42> 'int' 1
+      |       `-IntegerLiteral 0x7fd2440281d8 <col:47> 'int' 0
+      |-CallExpr 0x7fd244028330 <line:22:6, col:18> 'void'
+      | `-ImplicitCastExpr 0x7fd244028318 <col:6> 'void (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fd2440282c8 <col:6> 'void (void)' Function 0x7fd244027a00 'drain_array' 'void (void)'
+      `-<<<NULL>>>

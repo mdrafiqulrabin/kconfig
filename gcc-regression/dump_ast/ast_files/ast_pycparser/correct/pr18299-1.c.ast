@@ -1,0 +1,30 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: __t, ['const'], [], []
+        TypeDecl: __t, ['const']
+          IdentifierType: ['int']
+        ID: __t
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: g, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: f
+          ExprList: 
+            Constant: int, 0

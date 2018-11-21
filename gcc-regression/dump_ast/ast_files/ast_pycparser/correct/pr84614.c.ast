@@ -1,0 +1,92 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['unsigned', '__int128']
+  FuncDef: 
+    Decl: b, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: b, []
+          IdentifierType: ['unsigned', '__int128']
+    Compound: 
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['unsigned', 'long', 'long']
+      FuncCall: 
+        ID: __builtin_sub_overflow
+        ExprList: 
+          Constant: int, 0
+          ID: d
+          UnaryOp: &
+            ID: e
+      Assignment: >>=
+        ID: e
+        ID: c
+      Assignment: ^=
+        ID: c
+        Constant: int, 65535
+      Assignment: ^=
+        ID: d
+        Constant: int, 824
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            BinaryOp: +
+              ID: c
+              ID: a
+            ID: d
+          ID: e
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['unsigned', '__int128']
+        FuncCall: 
+          ID: b
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 9
+      If: 
+        BinaryOp: &&
+          BinaryOp: &&
+            BinaryOp: &&
+              BinaryOp: ==
+                BinaryOp: *
+                  ID: __SIZEOF_INT__
+                  ID: __CHAR_BIT__
+                Constant: int, 32
+              BinaryOp: ==
+                BinaryOp: *
+                  ID: __SIZEOF_LONG_LONG__
+                  ID: __CHAR_BIT__
+                Constant: int, 64
+            BinaryOp: ==
+              BinaryOp: *
+                ID: __SIZEOF_INT128__
+                ID: __CHAR_BIT__
+              Constant: int, 128
+          BinaryOp: !=
+            ID: x
+            BinaryOp: |
+              BinaryOp: <<
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned', '__int128']
+                  Constant: int, 1
+                Constant: int, 64
+              Constant: int, 0x10327
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

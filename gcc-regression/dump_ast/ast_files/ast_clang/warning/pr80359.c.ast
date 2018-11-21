@@ -1,0 +1,79 @@
+c_files/pr80359.c:3:10: warning: plain '_Complex' requires a type specifier; assuming '_Complex double'
+void FFT(_Complex *X, int length)
+         ^
+                  double
+1 warning generated.
+TranslationUnitDecl 0x7f9e708264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9e70826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9e70826740 '__int128'
+|-TypedefDecl 0x7f9e70826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9e70826760 'unsigned __int128'
+|-TypedefDecl 0x7f9e70826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9e70826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9e70826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9e70826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9e70826dc0 'char *'
+|   `-BuiltinType 0x7f9e70826560 'char'
+|-TypedefDecl 0x7f9e708270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9e70827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9e70826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9e70826e58 '__va_list_tag'
+`-FunctionDecl 0x7f9e71025ad0 <c_files/pr80359.c:3:1, line:12:1> line:3:6 FFT 'void (_Complex double *, int)'
+  |-ParmVarDecl 0x7f9e70827158 <col:10, col:20> col:20 used X '_Complex double *'
+  |-ParmVarDecl 0x7f9e71025a00 <col:23, col:27> col:27 used length 'int'
+  `-CompoundStmt 0x7f9e71026350 <line:4:1, line:12:1>
+    |-DeclStmt 0x7f9e71025cc0 <line:5:3, col:16>
+    | |-VarDecl 0x7f9e71025bd0 <col:3, col:12> col:12 used i 'unsigned int'
+    | `-VarDecl 0x7f9e71025c48 <col:3, col:15> col:15 used j 'unsigned int'
+    `-ForStmt 0x7f9e71026318 <line:6:3, line:11:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9e71025d70 <line:6:10, col:14> 'int' '<'
+      | |-ImplicitCastExpr 0x7f9e71025d28 <col:10> 'unsigned int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f9e71025cd8 <col:10> 'unsigned int' lvalue Var 0x7f9e71025bd0 'i' 'unsigned int'
+      | `-ImplicitCastExpr 0x7f9e71025d58 <col:14> 'unsigned int' <IntegralCast>
+      |   `-ImplicitCastExpr 0x7f9e71025d40 <col:14> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7f9e71025d00 <col:14> 'int' lvalue ParmVar 0x7f9e71025a00 'length' 'int'
+      |-UnaryOperator 0x7f9e71025dc0 <col:22, col:23> 'unsigned int' postfix '++'
+      | `-DeclRefExpr 0x7f9e71025d98 <col:22> 'unsigned int' lvalue Var 0x7f9e71025bd0 'i' 'unsigned int'
+      `-CompoundStmt 0x7f9e710262f0 <line:7:5, line:11:5>
+        |-BinaryOperator 0x7f9e71025ed8 <line:8:7, col:14> '_Complex double' '='
+        | |-ArraySubscriptExpr 0x7f9e71025e60 <col:7, col:10> '_Complex double' lvalue
+        | | |-ImplicitCastExpr 0x7f9e71025e30 <col:7> '_Complex double *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7f9e71025de0 <col:7> '_Complex double *' lvalue ParmVar 0x7f9e70827158 'X' '_Complex double *'
+        | | `-ImplicitCastExpr 0x7f9e71025e48 <col:9> 'unsigned int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7f9e71025e08 <col:9> 'unsigned int' lvalue Var 0x7f9e71025bd0 'i' 'unsigned int'
+        | `-ImplicitCastExpr 0x7f9e71025ec0 <col:14> '_Complex double' <FloatingRealToComplex>
+        |   `-ImplicitCastExpr 0x7f9e71025ea8 <col:14> 'double' <IntegralToFloating>
+        |     `-IntegerLiteral 0x7f9e71025e88 <col:14> 'int' 0
+        `-ForStmt 0x7f9e710262b8 <line:9:7, line:10:16>
+          |-BinaryOperator 0x7f9e71025f60 <line:9:12, col:16> 'unsigned int' '='
+          | |-DeclRefExpr 0x7f9e71025f00 <col:12> 'unsigned int' lvalue Var 0x7f9e71025c48 'j' 'unsigned int'
+          | `-ImplicitCastExpr 0x7f9e71025f48 <col:16> 'unsigned int' <IntegralCast>
+          |   `-IntegerLiteral 0x7f9e71025f28 <col:16> 'int' 0
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7f9e71026020 <col:19, col:23> 'int' '<'
+          | |-ImplicitCastExpr 0x7f9e71025fd8 <col:19> 'unsigned int' <LValueToRValue>
+          | | `-DeclRefExpr 0x7f9e71025f88 <col:19> 'unsigned int' lvalue Var 0x7f9e71025c48 'j' 'unsigned int'
+          | `-ImplicitCastExpr 0x7f9e71026008 <col:23> 'unsigned int' <IntegralCast>
+          |   `-ImplicitCastExpr 0x7f9e71025ff0 <col:23> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7f9e71025fb0 <col:23> 'int' lvalue ParmVar 0x7f9e71025a00 'length' 'int'
+          |-UnaryOperator 0x7f9e71026070 <col:31, col:32> 'unsigned int' postfix '++'
+          | `-DeclRefExpr 0x7f9e71026048 <col:31> 'unsigned int' lvalue Var 0x7f9e71025c48 'j' 'unsigned int'
+          `-BinaryOperator 0x7f9e71026290 <line:10:2, col:16> '_Complex double' '='
+            |-ArraySubscriptExpr 0x7f9e71026110 <col:2, col:5> '_Complex double' lvalue
+            | |-ImplicitCastExpr 0x7f9e710260e0 <col:2> '_Complex double *' <LValueToRValue>
+            | | `-DeclRefExpr 0x7f9e71026090 <col:2> '_Complex double *' lvalue ParmVar 0x7f9e70827158 'X' '_Complex double *'
+            | `-ImplicitCastExpr 0x7f9e710260f8 <col:4> 'unsigned int' <LValueToRValue>
+            |   `-DeclRefExpr 0x7f9e710260b8 <col:4> 'unsigned int' lvalue Var 0x7f9e71025bd0 'i' 'unsigned int'
+            `-BinaryOperator 0x7f9e71026268 <col:9, col:16> '_Complex double' '/'
+              |-ImplicitCastExpr 0x7f9e71026208 <col:9, col:12> '_Complex double' <LValueToRValue>
+              | `-ArraySubscriptExpr 0x7f9e710261b8 <col:9, col:12> '_Complex double' lvalue
+              |   |-ImplicitCastExpr 0x7f9e71026188 <col:9> '_Complex double *' <LValueToRValue>
+              |   | `-DeclRefExpr 0x7f9e71026138 <col:9> '_Complex double *' lvalue ParmVar 0x7f9e70827158 'X' '_Complex double *'
+              |   `-ImplicitCastExpr 0x7f9e710261a0 <col:11> 'unsigned int' <LValueToRValue>
+              |     `-DeclRefExpr 0x7f9e71026160 <col:11> 'unsigned int' lvalue Var 0x7f9e71025bd0 'i' 'unsigned int'
+              `-ImplicitCastExpr 0x7f9e71026250 <col:16> '_Complex double' <FloatingRealToComplex>
+                `-ImplicitCastExpr 0x7f9e71026238 <col:16> 'double' <IntegralToFloating>
+                  `-ImplicitCastExpr 0x7f9e71026220 <col:16> 'int' <LValueToRValue>
+                    `-DeclRefExpr 0x7f9e710261e0 <col:16> 'int' lvalue ParmVar 0x7f9e71025a00 'length' 'int'

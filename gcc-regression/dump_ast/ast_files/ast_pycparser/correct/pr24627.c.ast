@@ -1,0 +1,270 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Typedef: u_int32, [], ['typedef']
+    TypeDecl: u_int32, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: l_fp, [], ['typedef']
+    TypeDecl: l_fp, []
+      Struct: None
+        Decl: Ul_i, [], [], []
+          TypeDecl: Ul_i, []
+            Union: None
+              Decl: Xl_ui, [], [], []
+                TypeDecl: Xl_ui, []
+                  IdentifierType: ['u_int32']
+        Decl: Ul_f, [], [], []
+          TypeDecl: Ul_f, []
+            Union: None
+              Decl: Xl_uf, [], [], []
+                TypeDecl: Xl_uf, []
+                  IdentifierType: ['u_int32']
+  FuncDef: 
+    Decl: dolfptoa, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ndec, [], [], []
+            TypeDecl: ndec, []
+              IdentifierType: ['short']
+        TypeDecl: dolfptoa, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: work, [], [], []
+        TypeDecl: work, []
+          IdentifierType: ['l_fp']
+      Decl: ftmp, [], [], []
+        TypeDecl: ftmp, []
+          IdentifierType: ['l_fp']
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: work
+            ID: Ul_i
+          ID: Xl_ui
+        Constant: int, 0
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: work
+            ID: Ul_f
+          ID: Xl_uf
+        Constant: int, 0x535f3d8
+      While: 
+        BinaryOp: >
+          ID: ndec
+          Constant: int, 0
+        Compound: 
+          Decl: lo_tmp, [], [], []
+            TypeDecl: lo_tmp, []
+              IdentifierType: ['u_int32']
+          Decl: hi_tmp, [], [], []
+            TypeDecl: hi_tmp, []
+              IdentifierType: ['u_int32']
+          UnaryOp: p--
+            ID: ndec
+          Assignment: =
+            StructRef: .
+              StructRef: .
+                ID: work
+                ID: Ul_i
+              ID: Xl_ui
+            Constant: int, 0
+          Assignment: <<=
+            StructRef: .
+              StructRef: .
+                ID: work
+                ID: Ul_i
+              ID: Xl_ui
+            Constant: int, 1
+          If: 
+            BinaryOp: &
+              StructRef: .
+                StructRef: .
+                  ID: work
+                  ID: Ul_f
+                ID: Xl_uf
+              Constant: int, 0x80000000
+            Assignment: |=
+              StructRef: .
+                StructRef: .
+                  ID: work
+                  ID: Ul_i
+                ID: Xl_ui
+              Constant: int, 0x1
+          Assignment: <<=
+            StructRef: .
+              StructRef: .
+                ID: work
+                ID: Ul_f
+              ID: Xl_uf
+            Constant: int, 1
+          Assignment: =
+            ID: ftmp
+            ID: work
+          Assignment: <<=
+            StructRef: .
+              StructRef: .
+                ID: work
+                ID: Ul_i
+              ID: Xl_ui
+            Constant: int, 1
+          If: 
+            BinaryOp: &
+              StructRef: .
+                StructRef: .
+                  ID: work
+                  ID: Ul_f
+                ID: Xl_uf
+              Constant: int, 0x80000000
+            Assignment: |=
+              StructRef: .
+                StructRef: .
+                  ID: work
+                  ID: Ul_i
+                ID: Xl_ui
+              Constant: int, 0x1
+          Assignment: <<=
+            StructRef: .
+              StructRef: .
+                ID: work
+                ID: Ul_f
+              ID: Xl_uf
+            Constant: int, 1
+          Assignment: <<=
+            StructRef: .
+              StructRef: .
+                ID: work
+                ID: Ul_i
+              ID: Xl_ui
+            Constant: int, 1
+          If: 
+            BinaryOp: &
+              StructRef: .
+                StructRef: .
+                  ID: work
+                  ID: Ul_f
+                ID: Xl_uf
+              Constant: int, 0x80000000
+            Assignment: |=
+              StructRef: .
+                StructRef: .
+                  ID: work
+                  ID: Ul_i
+                ID: Xl_ui
+              Constant: int, 0x1
+          Assignment: <<=
+            StructRef: .
+              StructRef: .
+                ID: work
+                ID: Ul_f
+              ID: Xl_uf
+            Constant: int, 1
+          Assignment: =
+            ID: lo_tmp
+            BinaryOp: +
+              BinaryOp: &
+                StructRef: .
+                  StructRef: .
+                    ID: work
+                    ID: Ul_f
+                  ID: Xl_uf
+                Constant: int, 0xffff
+              BinaryOp: &
+                StructRef: .
+                  StructRef: .
+                    ID: ftmp
+                    ID: Ul_f
+                  ID: Xl_uf
+                Constant: int, 0xffff
+          Assignment: =
+            ID: hi_tmp
+            BinaryOp: +
+              BinaryOp: &
+                BinaryOp: >>
+                  StructRef: .
+                    StructRef: .
+                      ID: work
+                      ID: Ul_f
+                    ID: Xl_uf
+                  Constant: int, 16
+                Constant: int, 0xffff
+              BinaryOp: &
+                BinaryOp: >>
+                  StructRef: .
+                    StructRef: .
+                      ID: ftmp
+                      ID: Ul_f
+                    ID: Xl_uf
+                  Constant: int, 16
+                Constant: int, 0xffff
+          If: 
+            BinaryOp: &
+              ID: lo_tmp
+              Constant: int, 0x10000
+            UnaryOp: p++
+              ID: hi_tmp
+          Assignment: =
+            StructRef: .
+              StructRef: .
+                ID: work
+                ID: Ul_f
+              ID: Xl_uf
+            BinaryOp: |
+              BinaryOp: <<
+                BinaryOp: &
+                  ID: hi_tmp
+                  Constant: int, 0xffff
+                Constant: int, 16
+              BinaryOp: &
+                ID: lo_tmp
+                Constant: int, 0xffff
+          Assignment: +=
+            StructRef: .
+              StructRef: .
+                ID: work
+                ID: Ul_i
+              ID: Xl_ui
+            StructRef: .
+              StructRef: .
+                ID: ftmp
+                ID: Ul_i
+              ID: Xl_ui
+          If: 
+            BinaryOp: &
+              ID: hi_tmp
+              Constant: int, 0x10000
+            UnaryOp: p++
+              StructRef: .
+                StructRef: .
+                  ID: work
+                  ID: Ul_i
+                ID: Xl_ui
+          If: 
+            UnaryOp: !
+              BinaryOp: <
+                StructRef: .
+                  StructRef: .
+                    ID: work
+                    ID: Ul_i
+                  ID: Xl_ui
+                Constant: int, 10
+            FuncCall: 
+              ID: abort
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: dolfptoa
+        ExprList: 
+          Constant: int, 6
+      Return: 
+        Constant: int, 0

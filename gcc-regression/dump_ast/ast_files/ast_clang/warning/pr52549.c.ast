@@ -1,0 +1,44 @@
+c_files/pr52549.c:4:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+_mark (__SIZE_TYPE__ obj, int i, char *a)
+^
+c_files/pr52549.c:6:34: warning: expression result unused [-Wunused-value]
+  (char *)&(((long *)(obj)) [i]) - a;
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~
+c_files/pr52549.c:7:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+3 warnings generated.
+TranslationUnitDecl 0x7fa8a88264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa8a8826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa8a8826740 '__int128'
+|-TypedefDecl 0x7fa8a8826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa8a8826760 'unsigned __int128'
+|-TypedefDecl 0x7fa8a8826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa8a8826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa8a8826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa8a8826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa8a8826dc0 'char *'
+|   `-BuiltinType 0x7fa8a8826560 'char'
+|-TypedefDecl 0x7fa8a88270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa8a8827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa8a8826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa8a8826e58 '__va_list_tag'
+`-FunctionDecl 0x7fa8a8877568 <c_files/pr52549.c:4:1, line:7:1> line:4:1 _mark 'int (unsigned long, int, char *)'
+  |-ParmVarDecl 0x7fa8a8827138 <<built-in>:75:23, c_files/pr52549.c:4:22> col:22 used obj 'unsigned long'
+  |-ParmVarDecl 0x7fa8a8877400 <col:27, col:31> col:31 used i 'int'
+  |-ParmVarDecl 0x7fa8a8877478 <col:34, col:40> col:40 used a 'char *'
+  `-CompoundStmt 0x7fa8a88778c0 <line:5:1, line:7:1>
+    `-BinaryOperator 0x7fa8a8877898 <line:6:3, col:36> 'long' '-'
+      |-CStyleCastExpr 0x7fa8a8877830 <col:3, col:32> 'char *' <BitCast>
+      | `-UnaryOperator 0x7fa8a88777f8 <col:11, col:32> 'long *' prefix '&'
+      |   `-ParenExpr 0x7fa8a88777d8 <col:12, col:32> 'long' lvalue
+      |     `-ArraySubscriptExpr 0x7fa8a88777b0 <col:13, col:31> 'long' lvalue
+      |       |-ParenExpr 0x7fa8a8877750 <col:13, col:27> 'long *'
+      |       | `-CStyleCastExpr 0x7fa8a8877728 <col:14, col:26> 'long *' <IntegralToPointer>
+      |       |   `-ImplicitCastExpr 0x7fa8a8877710 <col:22, col:26> 'unsigned long' <LValueToRValue>
+      |       |     `-ParenExpr 0x7fa8a88776f0 <col:22, col:26> 'unsigned long' lvalue
+      |       |       `-DeclRefExpr 0x7fa8a8877658 <col:23> 'unsigned long' lvalue ParmVar 0x7fa8a8827138 'obj' 'unsigned long'
+      |       `-ImplicitCastExpr 0x7fa8a8877798 <col:30> 'int' <LValueToRValue>
+      |         `-DeclRefExpr 0x7fa8a8877770 <col:30> 'int' lvalue ParmVar 0x7fa8a8877400 'i' 'int'
+      `-ImplicitCastExpr 0x7fa8a8877880 <col:36> 'char *' <LValueToRValue>
+        `-DeclRefExpr 0x7fa8a8877858 <col:36> 'char *' lvalue ParmVar 0x7fa8a8877478 'a' 'char *'

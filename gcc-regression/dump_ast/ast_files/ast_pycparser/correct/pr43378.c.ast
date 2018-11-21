@@ -1,0 +1,48 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: left, [], [], []
+            TypeDecl: left, []
+              IdentifierType: ['int']
+          Decl: rite, [], [], []
+            TypeDecl: rite, []
+              IdentifierType: ['int']
+          Decl: element, [], [], []
+            TypeDecl: element, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        BinaryOp: <=
+          ID: left
+          ID: rite
+        Compound: 
+          Assignment: -=
+            ID: rite
+            ID: element
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              ID: left
+              ID: rite
+              ID: element
+          Assignment: +=
+            ID: left
+            ID: element

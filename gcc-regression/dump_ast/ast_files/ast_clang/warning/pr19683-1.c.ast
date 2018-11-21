@@ -1,0 +1,539 @@
+c_files/pr19683-1.c:20:30: warning: unknown attribute 'nomips16' ignored [-Wunknown-attributes]
+unsigned int __attribute__ ((nomips16))
+                             ^
+c_files/pr19683-1.c:34:21: warning: unknown attribute 'nomips16' ignored [-Wunknown-attributes]
+int __attribute__ ((nomips16))
+                    ^
+2 warnings generated.
+TranslationUnitDecl 0x7fc5cf0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc5cf026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc5cf026740 '__int128'
+|-TypedefDecl 0x7fc5cf026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc5cf026760 'unsigned __int128'
+|-TypedefDecl 0x7fc5cf026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc5cf026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc5cf026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc5cf026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc5cf026dc0 'char *'
+|   `-BuiltinType 0x7fc5cf026560 'char'
+|-TypedefDecl 0x7fc5cf0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc5cf027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc5cf026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc5cf026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc5cf077a30 <c_files/pr19683-1.c:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc5cf077ac8 prev 0x7fc5cf077a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc5cf077c78 <line:7:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fc5cf077d10 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fc5cf077d78 prev 0x7fc5cf077c78 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fc5cf077b78 <col:19> col:22 'int'
+|-RecordDecl 0x7fc5cf077e18 <line:18:1, col:53> col:7 union u definition
+| |-FieldDecl 0x7fc5cf077ed8 <col:11, col:30> col:30 referenced ll 'unsigned long long'
+| `-FieldDecl 0x7fc5cf077fa0 <col:34, col:50> col:47 referenced i 'unsigned int [2]'
+|-FunctionDecl 0x7fc5cf0780f8 <line:20:1, line:31:1> line:21:1 used foo 'unsigned int (volatile unsigned int *)'
+| |-ParmVarDecl 0x7fc5cf078030 <col:6, col:29> col:29 used ptr 'volatile unsigned int *'
+| `-CompoundStmt 0x7fc5cf08c8c8 <line:22:1, line:31:1>
+|   |-DeclStmt 0x7fc5cf078290 <line:23:3, col:12>
+|   | `-VarDecl 0x7fc5cf078230 <col:3, col:11> col:11 used u 'union u':'union u'
+|   |-DeclStmt 0x7fc5cf078320 <line:24:3, col:13>
+|   | `-VarDecl 0x7fc5cf0782c0 <col:3, col:7> col:7 used result 'int'
+|   |-BinaryOperator 0x7fc5cf078558 <line:26:3, col:45> 'unsigned long long' '='
+|   | |-MemberExpr 0x7fc5cf078360 <col:3, col:5> 'unsigned long long' lvalue .ll 0x7fc5cf077ed8
+|   | | `-DeclRefExpr 0x7fc5cf078338 <col:3> 'union u':'union u' lvalue Var 0x7fc5cf078230 'u' 'union u':'union u'
+|   | `-BinaryOperator 0x7fc5cf078530 <col:10, col:45> 'unsigned long long' '*'
+|   |   |-CStyleCastExpr 0x7fc5cf078450 <col:10, col:36> 'unsigned long long' <IntegralCast>
+|   |   | `-ImplicitCastExpr 0x7fc5cf078438 <col:31, col:36> 'unsigned int' <LValueToRValue>
+|   |   |   `-ArraySubscriptExpr 0x7fc5cf0783f8 <col:31, col:36> 'volatile unsigned int' lvalue
+|   |   |     |-ImplicitCastExpr 0x7fc5cf0783e0 <col:31> 'volatile unsigned int *' <LValueToRValue>
+|   |   |     | `-DeclRefExpr 0x7fc5cf078398 <col:31> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |   |     `-IntegerLiteral 0x7fc5cf0783c0 <col:35> 'int' 0
+|   |   `-ImplicitCastExpr 0x7fc5cf078518 <col:40, col:45> 'unsigned long long' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fc5cf078500 <col:40, col:45> 'unsigned int' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7fc5cf0784d8 <col:40, col:45> 'volatile unsigned int' lvalue
+|   |         |-ImplicitCastExpr 0x7fc5cf0784c0 <col:40> 'volatile unsigned int *' <LValueToRValue>
+|   |         | `-DeclRefExpr 0x7fc5cf078478 <col:40> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |         `-IntegerLiteral 0x7fc5cf0784a0 <col:44> 'int' 0
+|   |-DeclStmt 0x7fc5cf0786e8 <line:14:15, line:10:10>
+|   | `-VarDecl 0x7fc5cf0785e8 <line:14:15, col:40> <scratch space>:3:1 used x00 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf0786d0 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf0786a8 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf078690 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf078648 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf078670 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf078818 <col:15, line:10:19>
+|   | `-VarDecl 0x7fc5cf078718 <line:14:15, col:40> <scratch space>:5:1 used x01 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf078800 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf0787d8 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf0787c0 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf078778 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf0787a0 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf078948 <col:15, line:10:28>
+|   | `-VarDecl 0x7fc5cf078848 <line:14:15, col:40> <scratch space>:7:1 used x02 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf078930 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf078908 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf0788f0 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf0788a8 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf0788d0 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf083678 <col:15, line:10:37>
+|   | `-VarDecl 0x7fc5cf078978 <line:14:15, col:40> <scratch space>:9:1 used x03 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf083660 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf083638 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf083620 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf0789d8 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf083600 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf0837a8 <col:15, line:10:46>
+|   | `-VarDecl 0x7fc5cf0836a8 <line:14:15, col:40> <scratch space>:11:1 used x04 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf083790 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf083768 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf083750 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf083708 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf083730 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf0838d8 <col:15, line:11:10>
+|   | `-VarDecl 0x7fc5cf0837d8 <line:14:15, col:40> <scratch space>:13:1 used x05 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf0838c0 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf083898 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf083880 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf083838 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf083860 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf083a08 <col:15, line:11:19>
+|   | `-VarDecl 0x7fc5cf083908 <line:14:15, col:40> <scratch space>:15:1 used x06 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf0839f0 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf0839c8 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf0839b0 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf083968 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf083990 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf083b38 <col:15, line:11:28>
+|   | `-VarDecl 0x7fc5cf083a38 <line:14:15, col:40> <scratch space>:17:1 used x07 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf083b20 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf083af8 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf083ae0 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf083a98 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf083ac0 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf083c68 <col:15, line:11:37>
+|   | `-VarDecl 0x7fc5cf083b68 <line:14:15, col:40> <scratch space>:19:1 used x08 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf083c50 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf083c28 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf083c10 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf083bc8 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf083bf0 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf083d98 <col:15, line:13:36>
+|   | `-VarDecl 0x7fc5cf083c98 <line:14:15, col:40> <scratch space>:21:1 used x09 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf083d80 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf083d58 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf083d40 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf083cf8 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf083d20 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf083ec8 <col:15, line:10:10>
+|   | `-VarDecl 0x7fc5cf083dc8 <line:14:15, col:40> <scratch space>:23:1 used x10 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf083eb0 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf083e88 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf083e70 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf083e28 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf083e50 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf083ff8 <col:15, line:10:19>
+|   | `-VarDecl 0x7fc5cf083ef8 <line:14:15, col:40> <scratch space>:25:1 used x11 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf083fe0 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf083fb8 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf083fa0 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf083f58 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf083f80 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf084128 <col:15, line:10:28>
+|   | `-VarDecl 0x7fc5cf084028 <line:14:15, col:40> <scratch space>:27:1 used x12 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf084110 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf0840e8 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf0840d0 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf084088 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf0840b0 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf084258 <col:15, line:10:37>
+|   | `-VarDecl 0x7fc5cf084158 <line:14:15, col:40> <scratch space>:29:1 used x13 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf084240 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf084218 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf084200 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf0841b8 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf0841e0 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf084388 <col:15, line:10:46>
+|   | `-VarDecl 0x7fc5cf084288 <line:14:15, col:40> <scratch space>:31:1 used x14 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf084370 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf084348 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf084330 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf0842e8 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf084310 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf0844b8 <col:15, line:11:10>
+|   | `-VarDecl 0x7fc5cf0843b8 <line:14:15, col:40> <scratch space>:33:1 used x15 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf0844a0 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf084478 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf084460 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf084418 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf084440 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf0845e8 <col:15, line:11:19>
+|   | `-VarDecl 0x7fc5cf0844e8 <line:14:15, col:40> <scratch space>:35:1 used x16 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf0845d0 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf0845a8 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf084590 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf084548 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf084570 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf085318 <col:15, line:11:28>
+|   | `-VarDecl 0x7fc5cf085218 <line:14:15, col:40> <scratch space>:37:1 used x17 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf085300 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf0852d8 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf0852c0 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf085278 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf0852a0 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf085448 <col:15, line:11:37>
+|   | `-VarDecl 0x7fc5cf085348 <line:14:15, col:40> <scratch space>:39:1 used x18 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf085430 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf085408 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf0853f0 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf0853a8 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf0853d0 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf085578 <col:15, line:13:53>
+|   | `-VarDecl 0x7fc5cf085478 <line:14:15, col:40> <scratch space>:41:1 used x19 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf085560 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf085538 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf085520 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf0854d8 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf085500 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf0856a8 <col:15, line:10:10>
+|   | `-VarDecl 0x7fc5cf0855a8 <line:14:15, col:40> <scratch space>:43:1 used x20 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf085690 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf085668 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf085650 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf085608 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf085630 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf0857d8 <col:15, line:10:19>
+|   | `-VarDecl 0x7fc5cf0856d8 <line:14:15, col:40> <scratch space>:45:1 used x21 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf0857c0 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf085798 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf085780 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf085738 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf085760 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf085908 <col:15, line:10:28>
+|   | `-VarDecl 0x7fc5cf085808 <line:14:15, col:40> <scratch space>:47:1 used x22 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf0858f0 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf0858c8 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf0858b0 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf085868 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf085890 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf085a38 <col:15, line:10:37>
+|   | `-VarDecl 0x7fc5cf085938 <line:14:15, col:40> <scratch space>:49:1 used x23 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf085a20 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf0859f8 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf0859e0 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf085998 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf0859c0 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf085b68 <col:15, line:10:46>
+|   | `-VarDecl 0x7fc5cf085a68 <line:14:15, col:40> <scratch space>:51:1 used x24 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf085b50 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf085b28 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf085b10 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf085ac8 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf085af0 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf085c98 <col:15, line:11:10>
+|   | `-VarDecl 0x7fc5cf085b98 <line:14:15, col:40> <scratch space>:53:1 used x25 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf085c80 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf085c58 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf085c40 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf085bf8 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf085c20 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf085dc8 <col:15, line:11:19>
+|   | `-VarDecl 0x7fc5cf085cc8 <line:14:15, col:40> <scratch space>:55:1 used x26 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf085db0 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf085d88 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf085d70 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf085d28 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf085d50 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf085ef8 <col:15, line:11:28>
+|   | `-VarDecl 0x7fc5cf085df8 <line:14:15, col:40> <scratch space>:57:1 used x27 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf085ee0 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf085eb8 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf085ea0 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf085e58 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf085e80 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf086028 <col:15, line:11:37>
+|   | `-VarDecl 0x7fc5cf085f28 <line:14:15, col:40> <scratch space>:59:1 used x28 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf086010 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf085fe8 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf085fd0 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf085f88 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf085fb0 <col:39> 'int' 0
+|   |-DeclStmt 0x7fc5cf086158 <col:15, line:27:16>
+|   | `-VarDecl 0x7fc5cf086058 <line:14:15, col:40> <scratch space>:61:1 used x29 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fc5cf086140 <c_files/pr19683-1.c:14:35, col:40> 'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fc5cf086118 <col:35, col:40> 'volatile unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7fc5cf086100 <col:35> 'volatile unsigned int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fc5cf0860b8 <col:35> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   |       `-IntegerLiteral 0x7fc5cf0860e0 <col:39> 'int' 0
+|   |-BinaryOperator 0x7fc5cf087a40 <line:15:16, <scratch space>:63:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf0861d0 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf0861b8 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf086170 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf086198 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf087a28 <<scratch space>:63:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf087a00 <col:1> 'unsigned int' lvalue Var 0x7fc5cf0785e8 'x00' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf087b30 <c_files/pr19683-1.c:15:16, <scratch space>:65:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf087ac8 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf087ab0 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf087a68 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf087a90 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf087b18 <<scratch space>:65:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf087af0 <col:1> 'unsigned int' lvalue Var 0x7fc5cf078718 'x01' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf087c20 <c_files/pr19683-1.c:15:16, <scratch space>:67:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf087bb8 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf087ba0 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf087b58 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf087b80 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf087c08 <<scratch space>:67:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf087be0 <col:1> 'unsigned int' lvalue Var 0x7fc5cf078848 'x02' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf087d10 <c_files/pr19683-1.c:15:16, <scratch space>:69:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf087ca8 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf087c90 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf087c48 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf087c70 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf087cf8 <<scratch space>:69:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf087cd0 <col:1> 'unsigned int' lvalue Var 0x7fc5cf078978 'x03' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf087e00 <c_files/pr19683-1.c:15:16, <scratch space>:71:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf087d98 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf087d80 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf087d38 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf087d60 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf087de8 <<scratch space>:71:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf087dc0 <col:1> 'unsigned int' lvalue Var 0x7fc5cf0836a8 'x04' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf087ef0 <c_files/pr19683-1.c:15:16, <scratch space>:73:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf087e88 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf087e70 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf087e28 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf087e50 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf087ed8 <<scratch space>:73:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf087eb0 <col:1> 'unsigned int' lvalue Var 0x7fc5cf0837d8 'x05' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf087fe0 <c_files/pr19683-1.c:15:16, <scratch space>:75:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf087f78 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf087f60 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf087f18 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf087f40 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf087fc8 <<scratch space>:75:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf087fa0 <col:1> 'unsigned int' lvalue Var 0x7fc5cf083908 'x06' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf0880d0 <c_files/pr19683-1.c:15:16, <scratch space>:77:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf088068 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf088050 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf088008 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf088030 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf0880b8 <<scratch space>:77:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf088090 <col:1> 'unsigned int' lvalue Var 0x7fc5cf083a38 'x07' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf0881c0 <c_files/pr19683-1.c:15:16, <scratch space>:79:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf088158 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf088140 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf0880f8 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf088120 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf0881a8 <<scratch space>:79:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf088180 <col:1> 'unsigned int' lvalue Var 0x7fc5cf083b68 'x08' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf0882b0 <c_files/pr19683-1.c:15:16, <scratch space>:81:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf088248 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf088230 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf0881e8 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf088210 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf088298 <<scratch space>:81:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf088270 <col:1> 'unsigned int' lvalue Var 0x7fc5cf083c98 'x09' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf0883a0 <c_files/pr19683-1.c:15:16, <scratch space>:83:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf088338 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf088320 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf0882d8 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf088300 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf088388 <<scratch space>:83:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf088360 <col:1> 'unsigned int' lvalue Var 0x7fc5cf083dc8 'x10' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf088490 <c_files/pr19683-1.c:15:16, <scratch space>:85:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf088428 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf088410 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf0883c8 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf0883f0 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf088478 <<scratch space>:85:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf088450 <col:1> 'unsigned int' lvalue Var 0x7fc5cf083ef8 'x11' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf088580 <c_files/pr19683-1.c:15:16, <scratch space>:87:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf088518 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf088500 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf0884b8 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf0884e0 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf088568 <<scratch space>:87:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf088540 <col:1> 'unsigned int' lvalue Var 0x7fc5cf084028 'x12' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf088670 <c_files/pr19683-1.c:15:16, <scratch space>:89:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf088608 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf0885f0 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf0885a8 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf0885d0 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf088658 <<scratch space>:89:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf088630 <col:1> 'unsigned int' lvalue Var 0x7fc5cf084158 'x13' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf088760 <c_files/pr19683-1.c:15:16, <scratch space>:91:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf0886f8 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf0886e0 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf088698 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf0886c0 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf088748 <<scratch space>:91:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf088720 <col:1> 'unsigned int' lvalue Var 0x7fc5cf084288 'x14' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf088850 <c_files/pr19683-1.c:15:16, <scratch space>:93:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf0887e8 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf0887d0 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf088788 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf0887b0 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf088838 <<scratch space>:93:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf088810 <col:1> 'unsigned int' lvalue Var 0x7fc5cf0843b8 'x15' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf088940 <c_files/pr19683-1.c:15:16, <scratch space>:95:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf0888d8 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf0888c0 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf088878 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf0888a0 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf088928 <<scratch space>:95:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf088900 <col:1> 'unsigned int' lvalue Var 0x7fc5cf0844e8 'x16' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf08ba40 <c_files/pr19683-1.c:15:16, <scratch space>:97:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf0889c8 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf0889b0 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf088968 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf088990 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf08ba28 <<scratch space>:97:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf08ba00 <col:1> 'unsigned int' lvalue Var 0x7fc5cf085218 'x17' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf08bb30 <c_files/pr19683-1.c:15:16, <scratch space>:99:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf08bac8 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf08bab0 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf08ba68 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf08ba90 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf08bb18 <<scratch space>:99:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf08baf0 <col:1> 'unsigned int' lvalue Var 0x7fc5cf085348 'x18' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf08bc20 <c_files/pr19683-1.c:15:16, <scratch space>:101:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf08bbb8 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf08bba0 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf08bb58 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf08bb80 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf08bc08 <<scratch space>:101:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf08bbe0 <col:1> 'unsigned int' lvalue Var 0x7fc5cf085478 'x19' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf08bd10 <c_files/pr19683-1.c:15:16, <scratch space>:103:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf08bca8 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf08bc90 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf08bc48 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf08bc70 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf08bcf8 <<scratch space>:103:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf08bcd0 <col:1> 'unsigned int' lvalue Var 0x7fc5cf0855a8 'x20' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf08be00 <c_files/pr19683-1.c:15:16, <scratch space>:105:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf08bd98 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf08bd80 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf08bd38 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf08bd60 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf08bde8 <<scratch space>:105:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf08bdc0 <col:1> 'unsigned int' lvalue Var 0x7fc5cf0856d8 'x21' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf08bef0 <c_files/pr19683-1.c:15:16, <scratch space>:107:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf08be88 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf08be70 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf08be28 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf08be50 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf08bed8 <<scratch space>:107:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf08beb0 <col:1> 'unsigned int' lvalue Var 0x7fc5cf085808 'x22' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf08bfe0 <c_files/pr19683-1.c:15:16, <scratch space>:109:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf08bf78 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf08bf60 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf08bf18 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf08bf40 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf08bfc8 <<scratch space>:109:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf08bfa0 <col:1> 'unsigned int' lvalue Var 0x7fc5cf085938 'x23' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf08c0d0 <c_files/pr19683-1.c:15:16, <scratch space>:111:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf08c068 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf08c050 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf08c008 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf08c030 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf08c0b8 <<scratch space>:111:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf08c090 <col:1> 'unsigned int' lvalue Var 0x7fc5cf085a68 'x24' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf08c1c0 <c_files/pr19683-1.c:15:16, <scratch space>:113:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf08c158 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf08c140 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf08c0f8 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf08c120 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf08c1a8 <<scratch space>:113:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf08c180 <col:1> 'unsigned int' lvalue Var 0x7fc5cf085b98 'x25' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf08c2b0 <c_files/pr19683-1.c:15:16, <scratch space>:115:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf08c248 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf08c230 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf08c1e8 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf08c210 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf08c298 <<scratch space>:115:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf08c270 <col:1> 'unsigned int' lvalue Var 0x7fc5cf085cc8 'x26' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf08c3a0 <c_files/pr19683-1.c:15:16, <scratch space>:117:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf08c338 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf08c320 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf08c2d8 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf08c300 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf08c388 <<scratch space>:117:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf08c360 <col:1> 'unsigned int' lvalue Var 0x7fc5cf085df8 'x27' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf08c490 <c_files/pr19683-1.c:15:16, <scratch space>:119:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf08c428 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf08c410 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf08c3c8 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf08c3f0 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf08c478 <<scratch space>:119:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf08c450 <col:1> 'unsigned int' lvalue Var 0x7fc5cf085f28 'x28' 'unsigned int'
+|   |-BinaryOperator 0x7fc5cf08c580 <c_files/pr19683-1.c:15:16, <scratch space>:121:1> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fc5cf08c518 <c_files/pr19683-1.c:15:16, col:21> 'volatile unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fc5cf08c500 <col:16> 'volatile unsigned int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc5cf08c4b8 <col:16> 'volatile unsigned int *' lvalue ParmVar 0x7fc5cf078030 'ptr' 'volatile unsigned int *'
+|   | | `-IntegerLiteral 0x7fc5cf08c4e0 <col:20> 'int' 0
+|   | `-ImplicitCastExpr 0x7fc5cf08c568 <<scratch space>:121:1> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc5cf08c540 <col:1> 'unsigned int' lvalue Var 0x7fc5cf086058 'x29' 'unsigned int'
+|   |-GCCAsmStmt 0x7fc5cf08c7e0 <c_files/pr19683-1.c:29:3, col:42>
+|   | |-DeclRefExpr 0x7fc5cf08c688 <col:20> 'int' lvalue Var 0x7fc5cf0782c0 'result' 'int'
+|   | `-ImplicitCastExpr 0x7fc5cf08c7c8 <col:35, col:40> 'unsigned int' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7fc5cf08c7a0 <col:35, col:40> 'unsigned int' lvalue
+|   |     |-ImplicitCastExpr 0x7fc5cf08c788 <col:35, col:37> 'unsigned int *' <ArrayToPointerDecay>
+|   |     | `-MemberExpr 0x7fc5cf08c708 <col:35, col:37> 'unsigned int [2]' lvalue .i 0x7fc5cf077fa0
+|   |     |   `-DeclRefExpr 0x7fc5cf08c6e0 <col:35> 'union u':'union u' lvalue Var 0x7fc5cf078230 'u' 'union u':'union u'
+|   |     `-IntegerLiteral 0x7fc5cf08c740 <col:39> 'int' 1
+|   `-ReturnStmt 0x7fc5cf08c8b0 <line:30:3, col:10>
+|     `-ImplicitCastExpr 0x7fc5cf08c898 <col:10> 'unsigned int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7fc5cf08c880 <col:10> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fc5cf08c858 <col:10> 'int' lvalue Var 0x7fc5cf0782c0 'result' 'int'
+`-FunctionDecl 0x7fc5cf08ccd8 <line:34:1, line:46:1> line:35:1 main 'int (void)'
+  `-CompoundStmt 0x7fc5cf08d660 <line:36:1, line:46:1>
+    |-DeclStmt 0x7fc5cf08cfe8 <line:38:3, col:48>
+    | `-VarDecl 0x7fc5cf08cdf0 <col:3, col:47> col:16 used array 'unsigned int [1]' cinit
+    |   `-InitListExpr 0x7fc5cf08cf48 <col:26, col:47> 'unsigned int [1]'
+    |     `-ImplicitCastExpr 0x7fc5cf08cf88 <col:28, col:42> 'unsigned int' <IntegralCast>
+    |       `-BinaryOperator 0x7fc5cf08ced8 <col:28, col:42> 'int' '*'
+    |         |-BinaryOperator 0x7fc5cf08ce90 <col:28, col:35> 'int' '*'
+    |         | |-IntegerLiteral 0x7fc5cf08ce50 <col:28> 'int' 1000
+    |         | `-IntegerLiteral 0x7fc5cf08ce70 <col:35> 'int' 1000
+    |         `-IntegerLiteral 0x7fc5cf08ceb8 <col:42> 'int' 1000
+    |-DeclStmt 0x7fc5cf08d080 <line:39:3, col:12>
+    | `-VarDecl 0x7fc5cf08d020 <col:3, col:11> col:11 used u 'union u':'union u'
+    |-BinaryOperator 0x7fc5cf08d2b8 <line:41:3, col:49> 'unsigned long long' '='
+    | |-MemberExpr 0x7fc5cf08d0c0 <col:3, col:5> 'unsigned long long' lvalue .ll 0x7fc5cf077ed8
+    | | `-DeclRefExpr 0x7fc5cf08d098 <col:3> 'union u':'union u' lvalue Var 0x7fc5cf08d020 'u' 'union u':'union u'
+    | `-BinaryOperator 0x7fc5cf08d290 <col:10, col:49> 'unsigned long long' '*'
+    |   |-CStyleCastExpr 0x7fc5cf08d1b0 <col:10, col:38> 'unsigned long long' <IntegralCast>
+    |   | `-ImplicitCastExpr 0x7fc5cf08d198 <col:31, col:38> 'unsigned int' <LValueToRValue>
+    |   |   `-ArraySubscriptExpr 0x7fc5cf08d158 <col:31, col:38> 'unsigned int' lvalue
+    |   |     |-ImplicitCastExpr 0x7fc5cf08d140 <col:31> 'unsigned int *' <ArrayToPointerDecay>
+    |   |     | `-DeclRefExpr 0x7fc5cf08d0f8 <col:31> 'unsigned int [1]' lvalue Var 0x7fc5cf08cdf0 'array' 'unsigned int [1]'
+    |   |     `-IntegerLiteral 0x7fc5cf08d120 <col:37> 'int' 0
+    |   `-ImplicitCastExpr 0x7fc5cf08d278 <col:42, col:49> 'unsigned long long' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7fc5cf08d260 <col:42, col:49> 'unsigned int' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7fc5cf08d238 <col:42, col:49> 'unsigned int' lvalue
+    |         |-ImplicitCastExpr 0x7fc5cf08d220 <col:42> 'unsigned int *' <ArrayToPointerDecay>
+    |         | `-DeclRefExpr 0x7fc5cf08d1d8 <col:42> 'unsigned int [1]' lvalue Var 0x7fc5cf08cdf0 'array' 'unsigned int [1]'
+    |         `-IntegerLiteral 0x7fc5cf08d200 <col:48> 'int' 0
+    |-IfStmt 0x7fc5cf08d568 <line:42:3, line:43:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc5cf08d4a8 <line:42:7, col:27> 'int' '!='
+    | | |-CallExpr 0x7fc5cf08d370 <col:7, col:17> 'unsigned int'
+    | | | |-ImplicitCastExpr 0x7fc5cf08d358 <col:7> 'unsigned int (*)(volatile unsigned int *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fc5cf08d2e0 <col:7> 'unsigned int (volatile unsigned int *)' Function 0x7fc5cf0780f8 'foo' 'unsigned int (volatile unsigned int *)'
+    | | | `-ImplicitCastExpr 0x7fc5cf08d3b8 <col:12> 'volatile unsigned int *' <BitCast>
+    | | |   `-ImplicitCastExpr 0x7fc5cf08d3a0 <col:12> 'unsigned int *' <ArrayToPointerDecay>
+    | | |     `-DeclRefExpr 0x7fc5cf08d308 <col:12> 'unsigned int [1]' lvalue Var 0x7fc5cf08cdf0 'array' 'unsigned int [1]'
+    | | `-ImplicitCastExpr 0x7fc5cf08d490 <col:22, col:27> 'unsigned int' <LValueToRValue>
+    | |   `-ArraySubscriptExpr 0x7fc5cf08d468 <col:22, col:27> 'unsigned int' lvalue
+    | |     |-ImplicitCastExpr 0x7fc5cf08d450 <col:22, col:24> 'unsigned int *' <ArrayToPointerDecay>
+    | |     | `-MemberExpr 0x7fc5cf08d3f8 <col:22, col:24> 'unsigned int [2]' lvalue .i 0x7fc5cf077fa0
+    | |     |   `-DeclRefExpr 0x7fc5cf08d3d0 <col:22> 'union u':'union u' lvalue Var 0x7fc5cf08d020 'u' 'union u':'union u'
+    | |     `-IntegerLiteral 0x7fc5cf08d430 <col:26> 'int' 1
+    | |-CallExpr 0x7fc5cf08d540 <line:43:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc5cf08d528 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc5cf08d4d0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc5cf077ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fc5cf08d630 <line:45:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fc5cf08d618 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc5cf08d5a0 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fc5cf077d78 'exit' 'void (int) __attribute__((noreturn))'
+      `-IntegerLiteral 0x7fc5cf08d5c8 <col:9> 'int' 0

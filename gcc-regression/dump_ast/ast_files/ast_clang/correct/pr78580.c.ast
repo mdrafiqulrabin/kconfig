@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fdc668058d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdc66805e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdc66805b40 '__int128'
+|-TypedefDecl 0x7fdc66805e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdc66805b60 'unsigned __int128'
+|-TypedefDecl 0x7fdc66806168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdc66805f70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdc66805ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdc66806200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdc668061c0 'char *'
+|   `-BuiltinType 0x7fdc66805960 'char'
+|-TypedefDecl 0x7fdc668064c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdc66806470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdc668062e0 'struct __va_list_tag'
+|     `-Record 0x7fdc66806258 '__va_list_tag'
+|-VarDecl 0x7fdc66806538 <c_files/pr78580.c:5:1, col:26> col:26 used a 'const signed char' extern
+|-FunctionDecl 0x7fdc66033ac8 <line:7:1, line:11:1> line:8:1 used foo 'int (signed char)'
+| |-ParmVarDecl 0x7fdc66033a00 <col:6, col:18> col:18 used x 'signed char'
+| `-CompoundStmt 0x7fdc66033bd8 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fdc66033bc0 <line:10:3, col:10>
+|     `-ImplicitCastExpr 0x7fdc66033ba8 <col:10> 'int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7fdc66033b90 <col:10> 'signed char' <LValueToRValue>
+|         `-DeclRefExpr 0x7fdc66033b68 <col:10> 'signed char' lvalue ParmVar 0x7fdc66033a00 'x' 'signed char'
+`-FunctionDecl 0x7fdc66033c50 <line:13:1, line:18:1> line:14:1 main 'int ()'
+  `-CompoundStmt 0x7fdc66033e00 <line:15:1, line:18:1>
+    |-CallExpr 0x7fdc66033d80 <line:16:3, col:9> 'int'
+    | |-ImplicitCastExpr 0x7fdc66033d68 <col:3> 'int (*)(signed char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fdc66033ce8 <col:3> 'int (signed char)' Function 0x7fdc66033ac8 'foo' 'int (signed char)'
+    | `-ImplicitCastExpr 0x7fdc66033db0 <col:8> 'signed char' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fdc66033d10 <col:8> 'const signed char' lvalue Var 0x7fdc66806538 'a' 'const signed char'
+    `-ReturnStmt 0x7fdc66033de8 <line:17:3, col:10>
+      `-IntegerLiteral 0x7fdc66033dc8 <col:10> 'int' 0

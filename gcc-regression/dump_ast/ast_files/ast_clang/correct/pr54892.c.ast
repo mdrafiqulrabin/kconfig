@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7f95608264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9560826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9560826740 '__int128'
+|-TypedefDecl 0x7f9560826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9560826760 'unsigned __int128'
+|-TypedefDecl 0x7f9560826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9560826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9560826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9560826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9560826dc0 'char *'
+|   `-BuiltinType 0x7f9560826560 'char'
+|-TypedefDecl 0x7f95608270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9560827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9560826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9560826e58 '__va_list_tag'
+|-FunctionDecl 0x7f95608774d8 <c_files/pr54892.c:3:1, line:6:1> line:3:5 set_role 'int (unsigned char, short)'
+| |-ParmVarDecl 0x7f9560827138 <col:14, col:28> col:28 used role_id 'unsigned char'
+| |-ParmVarDecl 0x7f9560877400 <col:37, col:43> col:43 used m_role 'short'
+| `-CompoundStmt 0x7f9560877b70 <line:4:1, line:6:1>
+|   `-ReturnStmt 0x7f9560877b58 <line:5:3, col:59>
+|     `-ImplicitCastExpr 0x7f9560877b40 <col:10, col:59> 'int' <IntegralCast>
+|       `-CallExpr 0x7f95608777c0 <col:10, col:59> '_Bool'
+|         |-ImplicitCastExpr 0x7f9560877b28 <col:10> '_Bool (*)(volatile short *, short, short, ...)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7f9560877ad8 <col:10> '<builtin fn type>' Function 0x7f9560877878 '__sync_bool_compare_and_swap_2' '_Bool (volatile short *, short, short, ...)'
+|         |-UnaryOperator 0x7f95608776f8 <col:39, col:40> 'short *' prefix '&'
+|         | `-DeclRefExpr 0x7f95608776a8 <col:40> 'short' lvalue ParmVar 0x7f9560877400 'm_role' 'short'
+|         |-ImplicitCastExpr 0x7f9560877a90 <col:48, col:49> 'short' <IntegralCast>
+|         | `-UnaryOperator 0x7f9560877738 <col:48, col:49> 'int' prefix '-'
+|         |   `-IntegerLiteral 0x7f9560877718 <col:49> 'int' 1
+|         `-ImplicitCastExpr 0x7f9560877ac0 <col:52> 'short' <IntegralCast>
+|           `-ImplicitCastExpr 0x7f9560877aa8 <col:52> 'unsigned char' <LValueToRValue>
+|             `-DeclRefExpr 0x7f9560877758 <col:52> 'unsigned char' lvalue ParmVar 0x7f9560827138 'role_id' 'unsigned char'
+|-FunctionDecl 0x7f95608775e8 <col:10> col:10 implicit used __sync_bool_compare_and_swap 'void ()' extern
+`-FunctionDecl 0x7f9560877878 <col:10> col:10 implicit __sync_bool_compare_and_swap_2 '_Bool (volatile short *, short, short, ...)' extern
+  |-ParmVarDecl 0x7f9560877910 <<invalid sloc>> <invalid sloc> 'volatile short *'
+  |-ParmVarDecl 0x7f9560877970 <<invalid sloc>> <invalid sloc> 'short'
+  |-ParmVarDecl 0x7f95608779d0 <<invalid sloc>> <invalid sloc> 'short'
+  `-NoThrowAttr 0x7f9560877a48 <col:10> Implicit

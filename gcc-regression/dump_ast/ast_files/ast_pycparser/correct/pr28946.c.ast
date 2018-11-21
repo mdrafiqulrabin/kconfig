@@ -1,0 +1,39 @@
+FileAST: 
+  Decl: fct1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fct1, []
+        IdentifierType: ['int']
+  Decl: fct2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fct2, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: fct, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: nb, [], [], []
+            TypeDecl: nb, []
+              IdentifierType: ['unsigned']
+        TypeDecl: fct, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          BinaryOp: >>
+            ID: nb
+            Constant: int, 5
+          Constant: int, 0
+        Return: 
+          FuncCall: 
+            ID: fct1
+        Return: 
+          FuncCall: 
+            ID: fct2

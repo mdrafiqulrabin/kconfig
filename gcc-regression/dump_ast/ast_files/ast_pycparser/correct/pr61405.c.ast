@@ -1,0 +1,68 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: E
+      EnumeratorList: 
+        Enumerator: A
+        Enumerator: B
+        Enumerator: C
+  Decl: None, [], [], []
+    Struct: S
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          Enum: E
+        Constant: int, 2
+  Typedef: TS, [], ['typedef']
+    TypeDecl: TS, []
+      Struct: S
+  FuncDef: 
+    Decl: fn0, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                Struct: S
+        TypeDecl: fn0, []
+          IdentifierType: ['int']
+    Compound: 
+      Switch: 
+        StructRef: ->
+          ID: s
+          ID: e
+        Compound: 
+          Case: 
+            ID: A
+            Return: 
+              Constant: int, 1
+          Case: 
+            ID: B
+            Return: 
+              Constant: int, 2
+      Return: 
+        Constant: int, 3
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['TS']
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Switch: 
+        StructRef: ->
+          ID: s
+          ID: e
+        Compound: 
+          Case: 
+            ID: A
+            Return: 
+              Constant: int, 1
+          Case: 
+            ID: B
+            Return: 
+              Constant: int, 2
+      Return: 
+        Constant: int, 3

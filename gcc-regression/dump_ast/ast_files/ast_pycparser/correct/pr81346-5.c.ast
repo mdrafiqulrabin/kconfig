@@ -1,0 +1,205 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: <=
+          BinaryOp: -
+            ID: x
+            Constant: int, 1
+          BinaryOp: -
+            ID: __INT_MAX__
+            Constant: int, 1
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f2, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned']
+        Constant: int, 1
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned']
+        BinaryOp: -
+          ID: __INT_MAX__
+          Constant: int, 1
+      Return: 
+        BinaryOp: <=
+          BinaryOp: -
+            ID: x
+            ID: a
+          ID: b
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f3, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: <
+          BinaryOp: -
+            ID: x
+            Constant: int, 1
+          ID: __INT_MAX__
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f4, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned']
+        Constant: int, 1
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned']
+        ID: __INT_MAX__
+      Return: 
+        BinaryOp: <
+          BinaryOp: -
+            ID: x
+            ID: a
+          ID: b
+  FuncDef: 
+    Decl: f5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f5, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: &&
+          BinaryOp: >=
+            ID: x
+            Constant: int, 1
+          BinaryOp: <=
+            ID: x
+            ID: __INT_MAX__
+  FuncDef: 
+    Decl: f6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f6, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: >
+          BinaryOp: -
+            ID: x
+            Constant: int, 1
+          BinaryOp: -
+            ID: __INT_MAX__
+            Constant: int, 1
+  FuncDef: 
+    Decl: f7, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f7, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned']
+        Constant: int, 1
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned']
+        BinaryOp: -
+          ID: __INT_MAX__
+          Constant: int, 1
+      Return: 
+        BinaryOp: >
+          BinaryOp: -
+            ID: x
+            ID: a
+          ID: b
+  FuncDef: 
+    Decl: f8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f8, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: >=
+          BinaryOp: -
+            ID: x
+            Constant: int, 1
+          ID: __INT_MAX__
+  FuncDef: 
+    Decl: f9, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f9, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned']
+        Constant: int, 1
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned']
+        ID: __INT_MAX__
+      Return: 
+        BinaryOp: >=
+          BinaryOp: -
+            ID: x
+            ID: a
+          ID: b
+  FuncDef: 
+    Decl: f10, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f10, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: ||
+          BinaryOp: <
+            ID: x
+            Constant: int, 1
+          BinaryOp: >
+            ID: x
+            ID: __INT_MAX__

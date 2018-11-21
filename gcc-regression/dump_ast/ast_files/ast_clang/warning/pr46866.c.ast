@@ -1,0 +1,83 @@
+c_files/pr46866.c:7:8: warning: 'const' qualifier on function type 'typeof (destroy)' (aka 'void (union (anonymous union at c_files/pr46866.c:6:14))') has unspecified behavior
+static const typeof(destroy) *_destroy  = (const typeof(destroy)*)destroy;
+       ^~~~~~
+c_files/pr46866.c:7:44: warning: 'const' qualifier on function type 'typeof (destroy)' (aka 'void (union (anonymous union at c_files/pr46866.c:6:14))') has unspecified behavior
+static const typeof(destroy) *_destroy  = (const typeof(destroy)*)destroy;
+                                           ^~~~~~
+2 warnings generated.
+TranslationUnitDecl 0x7f93b58264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f93b5826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f93b5826740 '__int128'
+|-TypedefDecl 0x7f93b5826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f93b5826760 'unsigned __int128'
+|-TypedefDecl 0x7f93b5826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f93b5826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f93b5826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f93b5826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f93b5826dc0 'char *'
+|   `-BuiltinType 0x7f93b5826560 'char'
+|-TypedefDecl 0x7f93b58270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f93b5827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f93b5826ee0 'struct __va_list_tag'
+|     `-Record 0x7f93b5826e58 '__va_list_tag'
+|-FunctionDecl 0x7f93b6025a30 <c_files/pr46866.c:1:14> col:14 implicit used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7f93b6025ac8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f93b6025b30 prev 0x7f93b6025a30 <col:1, col:34> col:14 used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7f93b5827138 <<built-in>:75:23, col:37> c_files/pr46866.c:1:34 'unsigned long'
+|-RecordDecl 0x7f93b6025bd0 <line:2:9, col:16> col:16 struct T
+|-TypedefDecl 0x7f93b6025cd0 <col:1, col:18> col:18 referenced T 'struct T':'struct T'
+| `-ElaboratedType 0x7f93b6025c80 'struct T' sugar
+|   `-RecordType 0x7f93b6025c60 'struct T'
+|     `-Record 0x7f93b6025d40 'T'
+|-RecordDecl 0x7f93b6025d40 prev 0x7f93b6025bd0 <line:3:1, line:5:1> line:3:8 struct T definition
+| `-FieldDecl 0x7f93b6025f40 <line:4:5, col:27> col:12 destroy 'void (*)(void *)'
+|-RecordDecl 0x7f93b6025f88 <line:6:14, col:34> col:14 union definition
+| |-TransparentUnionAttr 0x7f93b6026090 <col:51>
+| `-FieldDecl 0x7f93b6026048 <col:22, col:28> col:28 this 'void *'
+|-FunctionDecl 0x7f93b6026230 <col:1, col:70> col:6 used destroy 'void (union (anonymous union at c_files/pr46866.c:6:14))'
+| `-ParmVarDecl 0x7f93b6026130 <col:14> col:70 'union (anonymous union at c_files/pr46866.c:6:14)':'union (anonymous at c_files/pr46866.c:6:14)'
+|-VarDecl 0x7f93b60267a0 <line:7:1, col:67> col:31 used _destroy 'typeof (destroy) *' static cinit
+| `-CStyleCastExpr 0x7f93b6026910 <col:43, col:67> 'typeof (destroy) *' <NoOp>
+|   `-ImplicitCastExpr 0x7f93b60268f8 <col:67> 'void (*)(union (anonymous union at c_files/pr46866.c:6:14))' <FunctionToPointerDecay>
+|     `-DeclRefExpr 0x7f93b6026848 <col:67> 'void (union (anonymous union at c_files/pr46866.c:6:14))' Function 0x7f93b6026230 'destroy' 'void (union (anonymous union at c_files/pr46866.c:6:14))'
+|-FunctionDecl 0x7f93b602dc00 prev 0x7f93b6026230 <line:8:1, col:24> col:6 used destroy 'void (void *)'
+| `-ParmVarDecl 0x7f93b6026950 <col:14, col:20> col:20 this 'void *'
+|-FunctionDecl 0x7f93b602de10 <line:9:1, line:14:1> line:9:11 used create_empty 'T *(void)' static
+| `-CompoundStmt 0x7f93b602e340 <line:10:1, line:14:1>
+|   |-DeclStmt 0x7f93b602e068 <line:11:3, col:34>
+|   | `-VarDecl 0x7f93b602deb8 <col:3, col:33> col:6 used this 'T *' cinit
+|   |   `-ImplicitCastExpr 0x7f93b602e050 <col:13, col:33> 'T *' <BitCast>
+|   |     `-CallExpr 0x7f93b602e020 <col:13, col:33> 'void *'
+|   |       |-ImplicitCastExpr 0x7f93b602e008 <col:13> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+|   |       | `-DeclRefExpr 0x7f93b602df18 <col:13> 'void *(unsigned long)' Function 0x7f93b6025b30 'malloc' 'void *(unsigned long)'
+|   |       `-UnaryExprOrTypeTraitExpr 0x7f93b602dfc0 <col:20, col:32> 'unsigned long' sizeof
+|   |         `-ParenExpr 0x7f93b602dfa0 <col:26, col:32> 'T':'struct T' lvalue
+|   |           `-UnaryOperator 0x7f93b602df80 <col:27, col:28> 'T':'struct T' lvalue prefix '*'
+|   |             `-ImplicitCastExpr 0x7f93b602df68 <col:28> 'T *' <LValueToRValue>
+|   |               `-DeclRefExpr 0x7f93b602df40 <col:28> 'T *' lvalue Var 0x7f93b602deb8 'this' 'T *'
+|   |-BinaryOperator 0x7f93b602e2c0 <line:12:3, col:37> 'T':'struct T' '='
+|   | |-UnaryOperator 0x7f93b602e0c0 <col:3, col:4> 'T':'struct T' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f93b602e0a8 <col:4> 'T *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f93b602e080 <col:4> 'T *' lvalue Var 0x7f93b602deb8 'this' 'T *'
+|   | `-ImplicitCastExpr 0x7f93b602e2a8 <col:11, col:37> 'typeof (*this)':'struct T' <LValueToRValue>
+|   |   `-CompoundLiteralExpr 0x7f93b602e280 <col:11, col:37> 'typeof (*this)':'struct T' lvalue
+|   |     `-InitListExpr 0x7f93b602e208 <col:26, col:37> 'typeof (*this)':'struct T'
+|   |       `-ImplicitCastExpr 0x7f93b602e268 <col:28> 'void (*)(void *)' <BitCast>
+|   |         `-ImplicitCastExpr 0x7f93b602e250 <col:28> 'typeof (destroy) *' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f93b602e198 <col:28> 'typeof (destroy) *' lvalue Var 0x7f93b60267a0 '_destroy' 'typeof (destroy) *'
+|   `-ReturnStmt 0x7f93b602e328 <line:13:3, col:10>
+|     `-ImplicitCastExpr 0x7f93b602e310 <col:10> 'T *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f93b602e2e8 <col:10> 'T *' lvalue Var 0x7f93b602deb8 'this' 'T *'
+`-FunctionDecl 0x7f93b602e430 <line:15:1, line:19:1> line:15:6 openssl_crl_load 'void (void)'
+  `-CompoundStmt 0x7f93b602e6d8 <line:16:1, line:19:1>
+    |-DeclStmt 0x7f93b602e5f8 <line:17:3, col:27>
+    | `-VarDecl 0x7f93b602e4d8 <col:3, col:26> col:6 used this 'T *' cinit
+    |   `-CallExpr 0x7f93b602e5d0 <col:13, col:26> 'T *'
+    |     `-ImplicitCastExpr 0x7f93b602e5b8 <col:13> 'T *(*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7f93b602e538 <col:13> 'T *(void)' Function 0x7f93b602de10 'create_empty' 'T *(void)'
+    `-CallExpr 0x7f93b602e678 <line:18:3, col:15> 'void'
+      |-ImplicitCastExpr 0x7f93b602e660 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f93b602e610 <col:3> 'void (void *)' Function 0x7f93b602dc00 'destroy' 'void (void *)'
+      `-ImplicitCastExpr 0x7f93b602e6c0 <col:11> 'void *' <BitCast>
+        `-ImplicitCastExpr 0x7f93b602e6a8 <col:11> 'T *' <LValueToRValue>
+          `-DeclRefExpr 0x7f93b602e638 <col:11> 'T *' lvalue Var 0x7f93b602e4d8 'this' 'T *'

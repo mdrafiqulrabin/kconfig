@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7ffcb20264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffcb2026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffcb2026740 '__int128'
+|-TypedefDecl 0x7ffcb2026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffcb2026760 'unsigned __int128'
+|-TypedefDecl 0x7ffcb2026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffcb2026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffcb2026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffcb2026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffcb2026dc0 'char *'
+|   `-BuiltinType 0x7ffcb2026560 'char'
+|-TypedefDecl 0x7ffcb20270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffcb2027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffcb2026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffcb2026e58 '__va_list_tag'
+|-VarDecl 0x7ffcb2027138 <c_files/pr31072.c:1:1, col:21> col:21 used ReadyFlag_NotProperlyInitialized 'volatile int' extern
+|-VarDecl 0x7ffcb2825a00 prev 0x7ffcb2027138 <line:3:1, col:47> col:14 used ReadyFlag_NotProperlyInitialized 'volatile int' cinit
+| `-IntegerLiteral 0x7ffcb2825a60 <col:47> 'int' 1
+|-FunctionDecl 0x7ffcb2825b48 <line:5:1, line:10:1> line:5:5 main 'int (void)'
+| `-CompoundStmt 0x7ffcb2825ea8 <line:6:1, line:10:1>
+|   |-IfStmt 0x7ffcb2825e38 <line:7:3, line:8:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ffcb2825c68 <line:7:7, col:43> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7ffcb2825c50 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ffcb2825c08 <col:7> 'volatile int' lvalue Var 0x7ffcb2825a00 'ReadyFlag_NotProperlyInitialized' 'volatile int'
+|   | | `-IntegerLiteral 0x7ffcb2825c30 <col:43> 'int' 1
+|   | |-CallExpr 0x7ffcb2825e10 <line:8:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7ffcb2825df8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7ffcb2825da0 <col:5> '<builtin fn type>' Function 0x7ffcb2825cc0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7ffcb2825e90 <line:9:3, col:10>
+|     `-IntegerLiteral 0x7ffcb2825e70 <col:10> 'int' 0
+`-FunctionDecl 0x7ffcb2825cc0 <line:8:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7ffcb2825d58 <col:5> Implicit

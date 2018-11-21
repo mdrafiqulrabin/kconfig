@@ -1,0 +1,80 @@
+FileAST: 
+  Typedef: filter_buffer_t, [], ['typedef']
+    TypeDecl: filter_buffer_t, []
+      Struct: filter_buffer
+  Decl: None, [], [], []
+    Struct: filter_buffer
+      Decl: buf, [], [], []
+        ArrayDecl: []
+          TypeDecl: buf, []
+            IdentifierType: ['char']
+          Constant: int, 1
+  Typedef: sbuf_header_t, [], ['typedef']
+    TypeDecl: sbuf_header_t, []
+      Struct: sbuf_header
+  FuncDef: 
+    Decl: const_f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: buf, [], [], []
+            PtrDecl: []
+              TypeDecl: buf, []
+                IdentifierType: ['filter_buffer_t']
+        TypeDecl: const_f, []
+          Struct: sbuf_header
+            Decl: buf, [], [], []
+              ArrayDecl: []
+                TypeDecl: buf, []
+                  IdentifierType: ['char']
+                Constant: int, 1
+    Compound: 
+      Decl: val, [], [], []
+        TypeDecl: val, []
+          IdentifierType: ['float']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['float']
+              UnaryOp: &
+                ArrayRef: 
+                  StructRef: ->
+                    Cast: 
+                      Typename: None, []
+                        PtrDecl: []
+                          TypeDecl: None, []
+                            IdentifierType: ['sbuf_header_t']
+                      FuncCall: 
+                        ID: __PTRDIFF_TYPE__
+                        ExprList: 
+                          BinaryOp: ==
+                            ID: buf
+                            Cast: 
+                              Typename: None, []
+                                PtrDecl: []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['filter_buffer_t']
+                              UnaryOp: &
+                                ArrayRef: 
+                                  StructRef: ->
+                                    ID: buf
+                                    ID: buf
+                                  Constant: int, 0
+                    ID: buf
+                  Constant: int, 0
+            ID: i
+          ID: val

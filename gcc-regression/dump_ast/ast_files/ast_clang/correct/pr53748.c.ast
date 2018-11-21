@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7ff2858264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff285826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff285826740 '__int128'
+|-TypedefDecl 0x7ff285826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff285826760 'unsigned __int128'
+|-TypedefDecl 0x7ff285826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff285826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff285826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff285826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff285826dc0 'char *'
+|   `-BuiltinType 0x7ff285826560 'char'
+|-TypedefDecl 0x7ff2858270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff285827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff285826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff285826e58 '__va_list_tag'
+|-TypedefDecl 0x7ff286027a00 <c_files/pr53748.c:3:1, col:22> col:22 referenced V '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7ff2858271c0 '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' 4
+|   `-BuiltinType 0x7ff285826660 'unsigned int'
+`-FunctionDecl 0x7ff286027c70 <line:5:1, line:9:1> line:6:1 foo 'void (int, V *)'
+  |-ParmVarDecl 0x7ff286027a70 <col:6, col:10> col:10 used x 'int'
+  |-ParmVarDecl 0x7ff286027b58 <col:13, col:16> col:16 used y 'V *'
+  `-CompoundStmt 0x7ff286028290 <line:7:1, line:9:1>
+    `-BinaryOperator 0x7ff286028268 <line:8:3, col:62> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' '='
+      |-UnaryOperator 0x7ff286027d98 <col:3, col:4> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7ff286027d80 <col:4> 'V *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ff286027d58 <col:4> 'V *' lvalue ParmVar 0x7ff286027b58 'y' 'V *'
+      `-ConditionalOperator 0x7ff286028238 <col:8, col:62> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+        |-ImplicitCastExpr 0x7ff2860281f0 <col:8> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7ff286027db8 <col:8> 'int' lvalue ParmVar 0x7ff286027a70 'x' 'int'
+        |-ImplicitCastExpr 0x7ff286028208 <col:12, col:39> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+        | `-ParenExpr 0x7ff286027fd8 <col:12, col:39> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue
+        |   `-CompoundLiteralExpr 0x7ff286027fb0 <col:13, col:38> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue
+        |     `-InitListExpr 0x7ff286027f50 <col:17, col:38> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+        |       |-UnaryOperator 0x7ff286027e10 <col:19, col:20> 'unsigned int' prefix '~'
+        |       | `-IntegerLiteral 0x7ff286027df0 <col:20> 'unsigned int' 0
+        |       |-UnaryOperator 0x7ff286027e50 <col:24, col:25> 'unsigned int' prefix '~'
+        |       | `-IntegerLiteral 0x7ff286027e30 <col:25> 'unsigned int' 0
+        |       |-UnaryOperator 0x7ff286027e90 <col:29, col:30> 'unsigned int' prefix '~'
+        |       | `-IntegerLiteral 0x7ff286027e70 <col:30> 'unsigned int' 0
+        |       `-UnaryOperator 0x7ff286027ed0 <col:34, col:35> 'unsigned int' prefix '~'
+        |         `-IntegerLiteral 0x7ff286027eb0 <col:35> 'unsigned int' 0
+        `-ImplicitCastExpr 0x7ff286028220 <col:43, col:62> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+          `-ParenExpr 0x7ff2860281d0 <col:43, col:62> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue
+            `-CompoundLiteralExpr 0x7ff2860281a8 <col:44, col:61> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue
+              `-InitListExpr 0x7ff2860280e8 <col:48, col:61> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+                |-ImplicitCastExpr 0x7ff286028148 <col:50> 'unsigned int' <IntegralCast>
+                | `-IntegerLiteral 0x7ff286028008 <col:50> 'int' 0
+                |-ImplicitCastExpr 0x7ff286028160 <col:53> 'unsigned int' <IntegralCast>
+                | `-IntegerLiteral 0x7ff286028028 <col:53> 'int' 0
+                |-ImplicitCastExpr 0x7ff286028178 <col:56> 'unsigned int' <IntegralCast>
+                | `-IntegerLiteral 0x7ff286028048 <col:56> 'int' 0
+                `-ImplicitCastExpr 0x7ff286028190 <col:59> 'unsigned int' <IntegralCast>
+                  `-IntegerLiteral 0x7ff286028068 <col:59> 'int' 0

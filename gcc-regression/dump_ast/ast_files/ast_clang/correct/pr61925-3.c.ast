@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fed1e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fed1e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fed1e826740 '__int128'
+|-TypedefDecl 0x7fed1e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fed1e826760 'unsigned __int128'
+|-TypedefDecl 0x7fed1e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fed1e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fed1e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fed1e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fed1e826dc0 'char *'
+|   `-BuiltinType 0x7fed1e826560 'char'
+|-TypedefDecl 0x7fed1e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fed1e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fed1e826ee0 'struct __va_list_tag'
+|     `-Record 0x7fed1e826e58 '__va_list_tag'
+|-TypedefDecl 0x7fed1e827178 <c_files/pr61925-3.c:8:1, col:15> col:15 __m128 '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| |-VectorType 0x7fed1e827140 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+| | `-BuiltinType 0x7fed1e8266c0 'float'
+| `-MayAliasAttr 0x7fed1e8271d0 <col:60>
+|-FunctionDecl 0x7fed1e878500 <line:10:1, line:13:1> line:11:1 foo 'void (void)'
+| `-CompoundStmt 0x7fed1e8785d8 <line:12:1, line:13:1>
+|-FunctionDecl 0x7fed1e8786e8 <line:15:1, line:18:1> line:16:1 bar 'void (void)'
+| |-CompoundStmt 0x7fed1e8787d8 <line:17:1, line:18:1>
+| `-TargetAttr 0x7fed1e878780 <line:15:16, col:29> "avx"
+`-FunctionDecl 0x7fed1e8789d0 <line:23:1, line:27:1> line:24:1 baz '__attribute__((__vector_size__(4 * sizeof(int)))) int (__attribute__((__vector_size__(4 * sizeof(int)))) int, __attribute__((__vector_size__(4 * sizeof(int)))) int)'
+  |-ParmVarDecl 0x7fed1e878868 <col:6, col:45> col:45 used a '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7fed1e8788f8 <col:48, col:87> col:87 used b '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  `-CompoundStmt 0x7fed1e878b38 <line:25:1, line:27:1>
+    `-ReturnStmt 0x7fed1e878b20 <line:26:3, col:14>
+      `-BinaryOperator 0x7fed1e878af8 <col:10, col:14> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '+'
+        |-ImplicitCastExpr 0x7fed1e878ac8 <col:10> '__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fed1e878a78 <col:10> '__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7fed1e878868 'a' '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+        `-ImplicitCastExpr 0x7fed1e878ae0 <col:14> '__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+          `-DeclRefExpr 0x7fed1e878aa0 <col:14> '__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7fed1e8788f8 'b' '__attribute__((__vector_size__(4 * sizeof(int)))) int'

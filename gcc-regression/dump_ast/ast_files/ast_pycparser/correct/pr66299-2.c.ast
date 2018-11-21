@@ -1,0 +1,103 @@
+FileAST: 
+  FuncDef: 
+    Decl: test1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              IdentifierType: ['unsigned']
+        TypeDecl: test1, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: ||
+              BinaryOp: ||
+                BinaryOp: ||
+                  BinaryOp: ||
+                    BinaryOp: !=
+                      BinaryOp: <<
+                        Constant: int, 1U
+                        ID: x
+                      Constant: int, 64
+                    BinaryOp: !=
+                      BinaryOp: <<
+                        Constant: int, 2
+                        ID: x
+                      ID: u
+                  BinaryOp: !=
+                    BinaryOp: <<
+                      ID: x
+                      ID: x
+                    Constant: int, 384
+                BinaryOp: ==
+                  BinaryOp: <<
+                    Constant: int, 3
+                    ID: x
+                  Constant: int, 9
+              BinaryOp: !=
+                BinaryOp: <<
+                  ID: x
+                  Constant: int, 14
+                Constant: int, 98304U
+            BinaryOp: ==
+              BinaryOp: <<
+                Constant: int, 1
+                ID: x
+              Constant: int, 14
+          BinaryOp: !=
+            BinaryOp: <<
+              Constant: int, 3
+              Constant: int, 2
+            Constant: int, 12
+        FuncCall: 
+          ID: __builtin_abort
+  FuncDef: 
+    Decl: test2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: test2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['unsigned', 'int']
+        BinaryOp: <<
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'int']
+            Constant: int, 1U
+          ID: x
+      If: 
+        BinaryOp: !=
+          ID: t
+          Constant: int, 2U
+        FuncCall: 
+          ID: __builtin_abort
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: test1
+        ExprList: 
+          Constant: int, 6
+          Constant: int, 128U
+      FuncCall: 
+        ID: test2
+        ExprList: 
+          Constant: int, 1

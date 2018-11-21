@@ -1,0 +1,96 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f4, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: di, [], [], []
+            TypeDecl: di, []
+              IdentifierType: ['double']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['double']
+          Decl: dd, [], [], []
+            PtrDecl: []
+              TypeDecl: dd, []
+                IdentifierType: ['double']
+        TypeDecl: f4, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            ID: d
+            Constant: int, 0
+          BinaryOp: ==
+            ID: di
+            Constant: int, 0
+        Assignment: =
+          UnaryOp: *
+            ID: dd
+          Constant: int, 0
+      FuncCall: 
+        ID: bar
+  FuncDef: 
+    Decl: f3, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['double']
+        TypeDecl: f3, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: di, [], [], []
+        TypeDecl: di, []
+          IdentifierType: ['double']
+        ID: i
+      Decl: dd, [], [], []
+        TypeDecl: dd, []
+          IdentifierType: ['double']
+      FuncCall: 
+        ID: f4
+        ExprList: 
+          ID: di
+          ID: d
+          UnaryOp: &
+            ID: dd
+  FuncDef: 
+    Decl: f2, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['double']
+        TypeDecl: f2, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: <
+          ID: d
+          Constant: int, 0
+        FuncCall: 
+          ID: f3
+          ExprList: 
+            ID: i
+            ID: d
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        TypeDecl: f1, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: f2
+        ExprList: 
+          Constant: int, 0
+          Constant: int, 1

@@ -1,0 +1,74 @@
+c_files/pr28726.c:14:24: warning: initializing 'const unsigned char *' with an expression of type 'char [4]' converts between pointers to integer types with different sign [-Wpointer-sign]
+  const unsigned char *start = "\005\b\000";
+                       ^       ~~~~~~~~~~~~
+1 warning generated.
+TranslationUnitDecl 0x7fd8be0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd8be026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd8be026740 '__int128'
+|-TypedefDecl 0x7fd8be026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd8be026760 'unsigned __int128'
+|-TypedefDecl 0x7fd8be026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd8be026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd8be026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd8be026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd8be026dc0 'char *'
+|   `-BuiltinType 0x7fd8be026560 'char'
+|-TypedefDecl 0x7fd8be0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd8be027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd8be026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd8be026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd8be825a30 <c_files/pr28726.c:7:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd8be825ac8 prev 0x7fd8be825a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd8be825c28 <line:9:1, col:53> col:15 used my_loop 'double (void)' static
+| `-NoInlineAttr 0x7fd8be825cc0 <col:44>
+|-FunctionDecl 0x7fd8be825de0 prev 0x7fd8be825c28 <line:11:1, line:21:1> line:11:15 used my_loop 'double (void)' static
+| |-CompoundStmt 0x7fd8be826818 <line:12:1, line:21:1>
+| | |-DeclStmt 0x7fd8be825f58 <line:13:3, col:22>
+| | | `-VarDecl 0x7fd8be825ed8 <col:3, col:19> col:10 used retval 'double' cinit
+| | |   `-FloatingLiteral 0x7fd8be825f38 <col:19> 'double' 0.000000e+00
+| | |-DeclStmt 0x7fd8be826460 <line:14:3, col:44>
+| | | `-VarDecl 0x7fd8be825fb0 <col:3, col:32> col:24 used start 'const unsigned char *' cinit
+| | |   `-ImplicitCastExpr 0x7fd8be826090 <col:32> 'const unsigned char *' <BitCast>
+| | |     `-ImplicitCastExpr 0x7fd8be826078 <col:32> 'char *' <ArrayToPointerDecay>
+| | |       `-StringLiteral 0x7fd8be826048 <col:32> 'char [4]' lvalue "\005\b\000"
+| | |-DeclStmt 0x7fd8be826578 <line:15:3, col:45>
+| | | `-VarDecl 0x7fd8be826490 <col:3, col:44> col:30 used end 'const unsigned char *const' cinit
+| | |   `-BinaryOperator 0x7fd8be826550 <col:36, col:44> 'const unsigned char *' '+'
+| | |     |-ImplicitCastExpr 0x7fd8be826538 <col:36> 'const unsigned char *' <LValueToRValue>
+| | |     | `-DeclRefExpr 0x7fd8be8264f0 <col:36> 'const unsigned char *' lvalue Var 0x7fd8be825fb0 'start' 'const unsigned char *'
+| | |     `-IntegerLiteral 0x7fd8be826518 <col:44> 'int' 2
+| | |-WhileStmt 0x7fd8be8267a0 <line:17:3, line:18:21>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fd8be826610 <line:17:10, col:18> 'int' '<'
+| | | | |-ImplicitCastExpr 0x7fd8be8265e0 <col:10> 'const unsigned char *' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fd8be826590 <col:10> 'const unsigned char *' lvalue Var 0x7fd8be825fb0 'start' 'const unsigned char *'
+| | | | `-ImplicitCastExpr 0x7fd8be8265f8 <col:18> 'const unsigned char *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fd8be8265b8 <col:18> 'const unsigned char *const' lvalue Var 0x7fd8be826490 'end' 'const unsigned char *const'
+| | | `-CompoundAssignOperator 0x7fd8be826768 <line:18:5, col:21> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+| | |   |-DeclRefExpr 0x7fd8be826690 <col:5> 'double' lvalue Var 0x7fd8be825ed8 'retval' 'double'
+| | |   `-ImplicitCastExpr 0x7fd8be826750 <col:15, col:21> 'double' <IntegralToFloating>
+| | |     `-ImplicitCastExpr 0x7fd8be826738 <col:15, col:21> 'int' <IntegralCast>
+| | |       `-ImplicitCastExpr 0x7fd8be826720 <col:15, col:21> 'unsigned char' <LValueToRValue>
+| | |         `-UnaryOperator 0x7fd8be826700 <col:15, col:21> 'const unsigned char' lvalue prefix '*'
+| | |           `-UnaryOperator 0x7fd8be8266e0 <col:16, col:21> 'const unsigned char *' postfix '++'
+| | |             `-DeclRefExpr 0x7fd8be8266b8 <col:16> 'const unsigned char *' lvalue Var 0x7fd8be825fb0 'start' 'const unsigned char *'
+| | `-ReturnStmt 0x7fd8be826800 <line:20:3, col:10>
+| |   `-ImplicitCastExpr 0x7fd8be8267e8 <col:10> 'double' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fd8be8267c0 <col:10> 'double' lvalue Var 0x7fd8be825ed8 'retval' 'double'
+| `-NoInlineAttr 0x7fd8be825eb0 <line:9:44> Inherited
+`-FunctionDecl 0x7fd8be826928 <line:23:1, line:29:1> line:23:5 main 'int (void)'
+  `-CompoundStmt 0x7fd8be827be8 <line:24:1, line:29:1>
+    |-IfStmt 0x7fd8be827b78 <line:25:3, line:26:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd8be827ab8 <line:25:7, col:20> 'int' '!='
+    | | |-CallExpr 0x7fd8be827a70 <col:7, col:15> 'double'
+    | | | `-ImplicitCastExpr 0x7fd8be827a58 <col:7> 'double (*)(void)' <FunctionToPointerDecay>
+    | | |   `-DeclRefExpr 0x7fd8be827a00 <col:7> 'double (void)' Function 0x7fd8be825de0 'my_loop' 'double (void)'
+    | | `-FloatingLiteral 0x7fd8be827a98 <col:20> 'double' 1.300000e+01
+    | |-CallExpr 0x7fd8be827b50 <line:26:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fd8be827b38 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd8be827ae0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fd8be825ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fd8be827bd0 <line:28:3, col:10>
+      `-IntegerLiteral 0x7fd8be827bb0 <col:10> 'int' 0

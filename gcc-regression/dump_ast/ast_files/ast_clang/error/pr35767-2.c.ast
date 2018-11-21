@@ -1,0 +1,36 @@
+c_files/pr35767-2.c:5:10: fatal error: 'sse2-check.h' file not found
+#include "sse2-check.h"
+         ^~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fa3eb0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa3eb026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa3eb026740 '__int128'
+|-TypedefDecl 0x7fa3eb026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa3eb026760 'unsigned __int128'
+|-TypedefDecl 0x7fa3eb026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa3eb026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa3eb026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa3eb026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa3eb026dc0 'char *'
+|   `-BuiltinType 0x7fa3eb026560 'char'
+|-TypedefDecl 0x7fa3eb0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa3eb027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa3eb026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa3eb026e58 '__va_list_tag'
+|-FunctionDecl 0x7fa3eb827a00 <c_files/pr35767-2.c:17:1, line:26:1> line:18:1 sse2_test 'void (void)'
+| `-CompoundStmt 0x7fa3eb828180 <line:19:1, line:26:1>
+|   `-IfStmt 0x7fa3eb828148 <line:24:3, line:25:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-OpaqueValueExpr 0x7fa3eb828128 <<invalid sloc>> '_Bool'
+|     |-CallExpr 0x7fa3eb828100 <col:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7fa3eb8280e8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fa3eb828098 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fa3eb828000 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fa3eb827b30 <<invalid sloc>> line:23:7 implicit used foo 'int ()'
+|-FunctionDecl 0x7fa3eb827d68 <line:24:7> col:7 implicit used __builtin_memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fa3eb827e00 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fa3eb827e60 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fa3eb827ec0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fa3eb827f38 <col:7> Implicit
+`-FunctionDecl 0x7fa3eb828000 <line:25:5> col:5 implicit used abort 'void (void) __attribute__((noreturn))' extern

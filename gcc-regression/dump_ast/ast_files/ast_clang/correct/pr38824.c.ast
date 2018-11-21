@@ -1,0 +1,70 @@
+TranslationUnitDecl 0x7ffeaa8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffeaa826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffeaa826740 '__int128'
+|-TypedefDecl 0x7ffeaa826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffeaa826760 'unsigned __int128'
+|-TypedefDecl 0x7ffeaa826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffeaa826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffeaa826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffeaa826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffeaa826dc0 'char *'
+|   `-BuiltinType 0x7ffeaa826560 'char'
+|-TypedefDecl 0x7ffeaa8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffeaa827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffeaa826ee0 'struct __va_list_tag'
+|     `-Record 0x7ffeaa826e58 '__va_list_tag'
+|-TypedefDecl 0x7ffeaa827178 <c_files/pr38824.c:4:1, col:15> col:15 referenced v4sf '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7ffeaa827140 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7ffeaa8266c0 'float'
+`-FunctionDecl 0x7ffeab026c70 <line:6:1, line:19:1> line:6:6 bench_1 'void (float *, float *, float, unsigned int)'
+  |-ParmVarDecl 0x7ffeab026a18 <col:14, col:22> col:22 used out 'float *'
+  |-ParmVarDecl 0x7ffeab026a90 <col:27, col:35> col:35 used in 'float *'
+  |-ParmVarDecl 0x7ffeab026b08 <col:39, col:45> col:45 used f 'float'
+  |-ParmVarDecl 0x7ffeab026b80 <col:48, col:61> col:61 used n 'unsigned int'
+  `-CompoundStmt 0x7ffeab0275d0 <line:7:1, line:19:1>
+    |-CompoundAssignOperator 0x7ffeab026dc8 <line:8:5, col:10> 'unsigned int' '/=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | |-DeclRefExpr 0x7ffeab026d68 <col:5> 'unsigned int' lvalue ParmVar 0x7ffeab026b80 'n' 'unsigned int'
+    | `-ImplicitCastExpr 0x7ffeab026db0 <col:10> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7ffeab026d90 <col:10> 'int' 4
+    |-DeclStmt 0x7ffeab027050 <line:9:5, col:33>
+    | `-VarDecl 0x7ffeab026e30 <col:5, col:32> col:10 used scalar 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+    |   `-InitListExpr 0x7ffeab026f90 <col:19, col:32> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    |     |-ImplicitCastExpr 0x7ffeab026ff0 <col:21> 'float' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffeab026e90 <col:21> 'float' lvalue ParmVar 0x7ffeab026b08 'f' 'float'
+    |     |-ImplicitCastExpr 0x7ffeab027008 <col:24> 'float' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffeab026eb8 <col:24> 'float' lvalue ParmVar 0x7ffeab026b08 'f' 'float'
+    |     |-ImplicitCastExpr 0x7ffeab027020 <col:27> 'float' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffeab026ee0 <col:27> 'float' lvalue ParmVar 0x7ffeab026b08 'f' 'float'
+    |     `-ImplicitCastExpr 0x7ffeab027038 <col:30> 'float' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ffeab026f08 <col:30> 'float' lvalue ParmVar 0x7ffeab026b08 'f' 'float'
+    `-DoStmt 0x7ffeab0275b0 <line:10:5, line:18:15>
+      |-CompoundStmt 0x7ffeab027528 <line:11:5, line:17:5>
+      | |-DeclStmt 0x7ffeab0271e0 <line:12:9, col:31>
+      | | `-VarDecl 0x7ffeab027078 <col:9, col:29> col:14 used arg 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+      | |   `-ImplicitCastExpr 0x7ffeab0271c8 <col:20, col:29> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+      | |     `-UnaryOperator 0x7ffeab0271a8 <col:20, col:29> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue prefix '*'
+      | |       `-CStyleCastExpr 0x7ffeab027180 <col:21, col:29> 'v4sf *' <BitCast>
+      | |         `-ImplicitCastExpr 0x7ffeab027168 <col:29> 'float *' <LValueToRValue>
+      | |           `-DeclRefExpr 0x7ffeab0270d8 <col:29> 'float *' lvalue ParmVar 0x7ffeab026a90 'in' 'float *'
+      | |-DeclStmt 0x7ffeab027310 <line:13:9, col:35>
+      | | `-VarDecl 0x7ffeab027208 <col:9, col:29> col:14 used result 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+      | |   `-BinaryOperator 0x7ffeab0272e8 <col:23, col:29> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '+'
+      | |     |-ImplicitCastExpr 0x7ffeab0272b8 <col:23> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+      | |     | `-DeclRefExpr 0x7ffeab027268 <col:23> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7ffeab027078 'arg' 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+      | |     `-ImplicitCastExpr 0x7ffeab0272d0 <col:29> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+      | |       `-DeclRefExpr 0x7ffeab027290 <col:29> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7ffeab026e30 'scalar' 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+      | |-BinaryOperator 0x7ffeab027400 <line:14:9, col:25> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+      | | |-UnaryOperator 0x7ffeab0273a0 <col:9, col:19> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue prefix '*'
+      | | | `-CStyleCastExpr 0x7ffeab027378 <col:10, col:19> 'v4sf *' <BitCast>
+      | | |   `-ImplicitCastExpr 0x7ffeab027360 <col:19> 'float *' <LValueToRValue>
+      | | |     `-DeclRefExpr 0x7ffeab027328 <col:19> 'float *' lvalue ParmVar 0x7ffeab026a18 'out' 'float *'
+      | | `-ImplicitCastExpr 0x7ffeab0273e8 <col:25> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7ffeab0273c0 <col:25> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7ffeab027208 'result' 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+      | |-CompoundAssignOperator 0x7ffeab027470 <line:15:9, col:15> 'float *' '+=' ComputeLHSTy='float *' ComputeResultTy='float *'
+      | | |-DeclRefExpr 0x7ffeab027428 <col:9> 'float *' lvalue ParmVar 0x7ffeab026a90 'in' 'float *'
+      | | `-IntegerLiteral 0x7ffeab027450 <col:15> 'int' 4
+      | `-CompoundAssignOperator 0x7ffeab0274f0 <line:16:9, col:16> 'float *' '+=' ComputeLHSTy='float *' ComputeResultTy='float *'
+      |   |-DeclRefExpr 0x7ffeab0274a8 <col:9> 'float *' lvalue ParmVar 0x7ffeab026a18 'out' 'float *'
+      |   `-IntegerLiteral 0x7ffeab0274d0 <col:16> 'int' 4
+      `-UnaryOperator 0x7ffeab027590 <line:18:12, col:14> 'unsigned int' prefix '--'
+        `-DeclRefExpr 0x7ffeab027568 <col:14> 'unsigned int' lvalue ParmVar 0x7ffeab026b80 'n' 'unsigned int'

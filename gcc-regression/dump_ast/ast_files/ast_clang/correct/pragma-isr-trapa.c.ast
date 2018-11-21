@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fe9a38264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe9a3826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe9a3826740 '__int128'
+|-TypedefDecl 0x7fe9a3826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe9a3826760 'unsigned __int128'
+|-TypedefDecl 0x7fe9a3826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe9a3826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe9a3826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe9a3826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe9a3826dc0 'char *'
+|   `-BuiltinType 0x7fe9a3826560 'char'
+|-TypedefDecl 0x7fe9a38270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe9a3827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe9a3826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe9a3826e58 '__va_list_tag'
+|-FunctionDecl 0x7fe9a3877400 <c_files/pragma-isr-trapa.c:9:1, col:22> col:13 used foo 'void (void)' extern
+`-FunctionDecl 0x7fe9a3877568 <line:12:1, line:16:1> line:13:1 isr 'void (void)'
+  `-CompoundStmt 0x7fe9a3877698 <line:14:1, line:16:1>
+    `-CallExpr 0x7fe9a3877670 <line:15:3, col:8> 'void'
+      `-ImplicitCastExpr 0x7fe9a3877658 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fe9a3877600 <col:3> 'void (void)' Function 0x7fe9a3877400 'foo' 'void (void)'

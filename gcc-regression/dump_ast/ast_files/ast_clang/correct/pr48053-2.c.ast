@@ -1,0 +1,86 @@
+TranslationUnitDecl 0x7fdafd0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdafd026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdafd026740 '__int128'
+|-TypedefDecl 0x7fdafd026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdafd026760 'unsigned __int128'
+|-TypedefDecl 0x7fdafd026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdafd026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdafd026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdafd026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdafd026dc0 'char *'
+|   `-BuiltinType 0x7fdafd026560 'char'
+|-TypedefDecl 0x7fdafd0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdafd027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdafd026ee0 'struct __va_list_tag'
+|     `-Record 0x7fdafd026e58 '__va_list_tag'
+|-RecordDecl 0x7fdafd027120 <c_files/pr48053-2.c:7:1, line:11:1> line:7:8 struct timeval definition
+| |-FieldDecl 0x7fdafd825a00 <line:9:3, col:8> col:8 referenced tv_sec 'long'
+| `-FieldDecl 0x7fdafd825a60 <line:10:3, col:8> col:8 referenced tv_usec 'long'
+|-FunctionDecl 0x7fdafd825c68 <line:13:1, col:35> col:14 used bar 'char *(struct timeval *)' extern
+| `-ParmVarDecl 0x7fdafd825b60 <col:19, col:34> col:35 'struct timeval *'
+|-VarDecl 0x7fdafd825d90 <line:14:1, col:6> col:6 used error 'int *'
+`-FunctionDecl 0x7fdafd825ed0 <line:16:1, line:39:1> line:17:1 foo 'void (void *)'
+  |-ParmVarDecl 0x7fdafd825e08 <col:6, col:12> col:12 used ptr 'void *'
+  `-CompoundStmt 0x7fdafd826918 <line:18:1, line:39:1>
+    |-DeclStmt 0x7fdafd825ff0 <line:19:3, col:20>
+    | `-VarDecl 0x7fdafd825f90 <col:3, col:18> col:18 used tm 'struct timeval':'struct timeval'
+    |-DeclStmt 0x7fdafd826110 <line:20:3, col:14>
+    | |-VarDecl 0x7fdafd826020 <col:3, col:8> col:8 used n1 'long'
+    | `-VarDecl 0x7fdafd826098 <col:3, col:12> col:12 used n2 'long'
+    |-IfStmt 0x7fdafd826540 <line:22:3, line:32:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fdafd826168 <line:22:7, col:8> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7fdafd826150 <col:8> 'void *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fdafd826128 <col:8> 'void *' lvalue ParmVar 0x7fdafd825e08 'ptr' 'void *'
+    | |-CompoundStmt 0x7fdafd826380 <line:23:5, line:27:5>
+    | | |-BinaryOperator 0x7fdafd826208 <line:24:7, col:16> 'int' '='
+    | | | |-UnaryOperator 0x7fdafd8261c8 <col:7, col:8> 'int' lvalue prefix '*'
+    | | | | `-ImplicitCastExpr 0x7fdafd8261b0 <col:8> 'int *' <LValueToRValue>
+    | | | |   `-DeclRefExpr 0x7fdafd826188 <col:8> 'int *' lvalue Var 0x7fdafd825d90 'error' 'int *'
+    | | | `-IntegerLiteral 0x7fdafd8261e8 <col:16> 'int' 1
+    | | |-BinaryOperator 0x7fdafd8262b0 <line:25:7, col:13> 'long' '='
+    | | | |-DeclRefExpr 0x7fdafd826230 <col:7> 'long' lvalue Var 0x7fdafd826020 'n1' 'long'
+    | | | `-ImplicitCastExpr 0x7fdafd826298 <col:12, col:13> 'long' <IntegralCast>
+    | | |   `-UnaryOperator 0x7fdafd826278 <col:12, col:13> 'int' prefix '-'
+    | | |     `-IntegerLiteral 0x7fdafd826258 <col:13> 'int' 1
+    | | `-BinaryOperator 0x7fdafd826358 <line:26:7, col:13> 'long' '='
+    | |   |-DeclRefExpr 0x7fdafd8262d8 <col:7> 'long' lvalue Var 0x7fdafd826098 'n2' 'long'
+    | |   `-ImplicitCastExpr 0x7fdafd826340 <col:12, col:13> 'long' <IntegralCast>
+    | |     `-UnaryOperator 0x7fdafd826320 <col:12, col:13> 'int' prefix '-'
+    | |       `-IntegerLiteral 0x7fdafd826300 <col:13> 'int' 1
+    | `-CompoundStmt 0x7fdafd826518 <line:29:5, line:32:5>
+    |   |-BinaryOperator 0x7fdafd826410 <line:30:7, col:12> 'long' '='
+    |   | |-DeclRefExpr 0x7fdafd8263b0 <col:7> 'long' lvalue Var 0x7fdafd826020 'n1' 'long'
+    |   | `-ImplicitCastExpr 0x7fdafd8263f8 <col:12> 'long' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7fdafd8263d8 <col:12> 'int' 0
+    |   `-BinaryOperator 0x7fdafd8264f0 <line:31:7, col:13> 'long' '='
+    |     |-DeclRefExpr 0x7fdafd826438 <col:7> 'long' lvalue Var 0x7fdafd826098 'n2' 'long'
+    |     `-ImplicitCastExpr 0x7fdafd8264d8 <col:12, col:13> 'long' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7fdafd8264c0 <col:12, col:13> 'int' <LValueToRValue>
+    |         `-UnaryOperator 0x7fdafd8264a0 <col:12, col:13> 'int' lvalue prefix '*'
+    |           `-ImplicitCastExpr 0x7fdafd826488 <col:13> 'int *' <LValueToRValue>
+    |             `-DeclRefExpr 0x7fdafd826460 <col:13> 'int *' lvalue Var 0x7fdafd825d90 'error' 'int *'
+    |-BinaryOperator 0x7fdafd826618 <line:34:3, col:15> 'long' '='
+    | |-MemberExpr 0x7fdafd8265a0 <col:3, col:6> 'long' lvalue .tv_sec 0x7fdafd825a00
+    | | `-DeclRefExpr 0x7fdafd826578 <col:3> 'struct timeval':'struct timeval' lvalue Var 0x7fdafd825f90 'tm' 'struct timeval':'struct timeval'
+    | `-ImplicitCastExpr 0x7fdafd826600 <col:15> 'long' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fdafd8265d8 <col:15> 'long' lvalue Var 0x7fdafd826020 'n1' 'long'
+    |-BinaryOperator 0x7fdafd826730 <line:35:3, col:16> 'long' '='
+    | |-MemberExpr 0x7fdafd8266b8 <col:3, col:6> 'long' lvalue .tv_usec 0x7fdafd825a60
+    | | `-DeclRefExpr 0x7fdafd826690 <col:3> 'struct timeval':'struct timeval' lvalue Var 0x7fdafd825f90 'tm' 'struct timeval':'struct timeval'
+    | `-ImplicitCastExpr 0x7fdafd826718 <col:16> 'long' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fdafd8266f0 <col:16> 'long' lvalue Var 0x7fdafd826098 'n2' 'long'
+    `-IfStmt 0x7fdafd8268e0 <line:37:3, line:38:13>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fdafd8267b8 <line:37:7, col:8> 'int' <LValueToRValue>
+      | `-UnaryOperator 0x7fdafd826798 <col:7, col:8> 'int' lvalue prefix '*'
+      |   `-ImplicitCastExpr 0x7fdafd826780 <col:8> 'int *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fdafd826758 <col:8> 'int *' lvalue Var 0x7fdafd825d90 'error' 'int *'
+      |-CallExpr 0x7fdafd8268b0 <line:38:5, col:13> 'char *'
+      | |-ImplicitCastExpr 0x7fdafd826898 <col:5> 'char *(*)(struct timeval *)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7fdafd8267d0 <col:5> 'char *(struct timeval *)' Function 0x7fdafd825c68 'bar' 'char *(struct timeval *)'
+      | `-UnaryOperator 0x7fdafd826820 <col:10, col:11> 'struct timeval *' prefix '&'
+      |   `-DeclRefExpr 0x7fdafd8267f8 <col:11> 'struct timeval':'struct timeval' lvalue Var 0x7fdafd825f90 'tm' 'struct timeval':'struct timeval'
+      `-<<<NULL>>>

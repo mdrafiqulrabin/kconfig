@@ -1,0 +1,33 @@
+c_files/pr71656-1.c:6:24: warning: unknown attribute 'altivec' ignored [-Wunknown-attributes]
+typedef __attribute__((altivec(vector__))) int type_t;
+                       ^
+c_files/pr71656-1.c:13:22: error: unknown register name 'r0' in asm
+                   : "r0", "r3", "r4", "r5", "r6", "r7",
+                     ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7faa99021ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faa99022020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faa99021d40 '__int128'
+|-TypedefDecl 0x7faa99022090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faa99021d60 'unsigned __int128'
+|-TypedefDecl 0x7faa99022368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faa99022170 'struct __NSConstantString_tag'
+|   `-Record 0x7faa990220e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faa99022400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faa990223c0 'char *'
+|   `-BuiltinType 0x7faa99021b60 'char'
+|-TypedefDecl 0x7faa990226c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faa99022670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faa990224e0 'struct __va_list_tag'
+|     `-Record 0x7faa99022458 '__va_list_tag'
+|-TypedefDecl 0x7faa99022748 <c_files/pr71656-1.c:6:1, col:48> col:48 referenced type_t 'int'
+| `-BuiltinType 0x7faa99021bc0 'int'
+`-FunctionDecl 0x7faa99074140 <line:7:1, line:18:1> line:8:1 func 'type_t (type_t *)'
+  |-ParmVarDecl 0x7faa99074038 <col:7, col:15> col:15 used src 'type_t *'
+  `-CompoundStmt 0x7faa99074960 <line:9:1, line:18:1>
+    `-ReturnStmt 0x7faa99074948 <line:17:3, col:15>
+      `-ImplicitCastExpr 0x7faa99074930 <col:10, col:15> 'type_t':'int' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7faa99074908 <col:10, col:15> 'type_t':'int' lvalue
+          |-ImplicitCastExpr 0x7faa990748f0 <col:10> 'type_t *' <LValueToRValue>
+          | `-DeclRefExpr 0x7faa990748a8 <col:10> 'type_t *' lvalue ParmVar 0x7faa99074038 'src' 'type_t *'
+          `-IntegerLiteral 0x7faa990748d0 <col:14> 'int' 1

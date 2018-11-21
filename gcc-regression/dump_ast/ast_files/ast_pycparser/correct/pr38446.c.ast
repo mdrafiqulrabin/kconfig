@@ -1,0 +1,79 @@
+FileAST: 
+  FuncDef: 
+    Decl: copy_data, [], [], []
+      FuncDecl: 
+        TypeDecl: copy_data, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: source, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: source, []
+                  IdentifierType: ['int']
+      Decl: dest, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: dest, []
+                  IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        UnaryOp: p++
+          ID: i
+        For: 
+          Assignment: =
+            ID: k
+            Constant: int, 0
+          BinaryOp: <
+            ID: k
+            Constant: int, 2
+          UnaryOp: p++
+            ID: k
+          For: 
+            Assignment: =
+              ID: l
+              Constant: int, 0
+            BinaryOp: <
+              ID: l
+              Constant: int, 65
+            UnaryOp: p++
+              ID: l
+            Assignment: =
+              ArrayRef: 
+                ArrayRef: 
+                  ArrayRef: 
+                    ArrayRef: 
+                      ID: source
+                      ID: i
+                    ID: j
+                  ID: k
+                ID: l
+              ArrayRef: 
+                ArrayRef: 
+                  ArrayRef: 
+                    ArrayRef: 
+                      ID: dest
+                      ID: i
+                    ID: j
+                  ID: k
+                ID: l

@@ -1,0 +1,27 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['char']
+  Decl: None, [], [], []
+    Struct: S
+      Decl: f0, [], [], []
+        TypeDecl: f0, []
+          IdentifierType: ['int']
+        Constant: int, 9
+  Decl: b, ['volatile'], [], []
+    TypeDecl: b, ['volatile']
+      Struct: S
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: <
+          BinaryOp: &
+            Constant: int, 1
+            StructRef: .
+              ID: b
+              ID: f0
+          ID: a

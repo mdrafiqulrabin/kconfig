@@ -1,0 +1,29 @@
+c_files/pr80993.c:5:1: error: x86-64 'interrupt' attribute only applies to functions that have only a pointer parameter optionally followed by an integer parameter
+void __attribute__((interrupt)) no_ref_handler (void)
+^
+1 error generated.
+TranslationUnitDecl 0x7fc3490264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc349026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc349026740 '__int128'
+|-TypedefDecl 0x7fc349026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc349026760 'unsigned __int128'
+|-TypedefDecl 0x7fc349026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc349026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc349026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc349026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc349026dc0 'char *'
+|   `-BuiltinType 0x7fc349026560 'char'
+|-TypedefDecl 0x7fc3490270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc349027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc349026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc349026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc349826a00 <c_files/pr80993.c:5:1, line:8:1> line:5:33 no_ref_handler 'void (void)'
+| `-CompoundStmt 0x7fc349826b28 <line:6:1, line:8:1>
+|   `-WhileStmt 0x7fc349826b08 <line:7:3, col:12>
+|     |-<<<NULL>>>
+|     |-IntegerLiteral 0x7fc349826ad8 <col:10> 'int' 1
+|     `-NullStmt 0x7fc349826af8 <col:12>
+`-FunctionDecl 0x7fc349826c18 <line:10:1, line:13:1> line:10:5 main 'int (void)'
+  `-CompoundStmt 0x7fc349826d10 <line:11:1, line:13:1>
+    `-ReturnStmt 0x7fc349826cf8 <line:12:3, col:10>
+      `-IntegerLiteral 0x7fc349826cd8 <col:10> 'int' 0

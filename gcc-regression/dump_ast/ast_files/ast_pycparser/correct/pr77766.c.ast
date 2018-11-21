@@ -1,0 +1,95 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['char']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['short']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['short']
+    Constant: int, 5
+  Decl: h, [], [], []
+    TypeDecl: h, []
+      IdentifierType: ['short']
+  Decl: c, [], [], []
+    ArrayDecl: []
+      TypeDecl: c, []
+        IdentifierType: ['char']
+      Constant: int, 1
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+    Constant: int, 4
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  Decl: j, [], [], []
+    TypeDecl: j, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        ID: f
+        Assignment: =
+          ID: f
+          ID: a
+        Compound: 
+          Assignment: =
+            ID: g
+            Constant: int, 0
+          For: 
+            BinaryOp: <=
+              ID: g
+              Constant: int, 32
+            UnaryOp: ++
+              ID: g
+            Compound: 
+              Assignment: =
+                ID: i
+                Constant: int, 0
+              For: 
+                BinaryOp: <
+                  ID: i
+                  Constant: int, 3
+                UnaryOp: p++
+                  ID: i
+                While: 
+                  BinaryOp: >
+                    Constant: int, 1
+                    ID: d
+                  If: 
+                    ArrayRef: 
+                      ID: c
+                      ID: b
+                    Break: 
+              Label: L
+                If: 
+                  ID: j
+                  Break: 
+      Assignment: =
+        ID: e
+        Constant: int, 0
+      For: 
+        ID: e
+        Assignment: =
+          ID: e
+          Constant: int, 0
+        Compound: 
+          UnaryOp: p++
+            ID: d
+          For: 
+            ID: h
+            Goto: L
+      Return: 
+        Constant: int, 0

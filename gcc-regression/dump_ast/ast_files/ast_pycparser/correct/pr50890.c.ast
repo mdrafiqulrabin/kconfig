@@ -1,0 +1,46 @@
+FileAST: 
+  FuncDef: 
+    Decl: make_insn_raw, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: make_insn_raw, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: emit_pattern_after_noloc, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: make_raw, [], [], []
+            FuncDecl: 
+              TypeDecl: make_raw, []
+                IdentifierType: ['int']
+        TypeDecl: emit_pattern_after_noloc, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: make_raw
+  FuncDef: 
+    Decl: emit_insn_after_noloc, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: emit_insn_after_noloc, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: emit_pattern_after_noloc
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            ID: make_insn_raw

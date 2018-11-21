@@ -1,0 +1,27 @@
+FileAST: 
+  Pragma: omp declare simd notinbranch
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: f1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ID: x
+  Pragma: omp declare simd notinbranch
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: f2, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ID: x

@@ -1,0 +1,136 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo_add, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: tmp, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: tmp, ['const']
+                IdentifierType: ['unsigned', 'char']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['int']
+        TypeDecl: foo_add, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+          TernaryOp: 
+            BinaryOp: >
+              BinaryOp: +
+                ArrayRef: 
+                  ID: tmp
+                  ID: i
+                ID: val
+              Constant: int, 0xFF
+            Constant: int, 0xFF
+            TernaryOp: 
+              BinaryOp: <
+                BinaryOp: +
+                  ArrayRef: 
+                    ID: tmp
+                    ID: i
+                  ID: val
+                Constant: int, 0
+              Constant: int, 0
+              BinaryOp: +
+                ArrayRef: 
+                  ID: tmp
+                  ID: i
+                ID: val
+  FuncDef: 
+    Decl: foo_sub, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: tmp, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: tmp, ['const']
+                IdentifierType: ['unsigned', 'char']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['int']
+        TypeDecl: foo_sub, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+          TernaryOp: 
+            BinaryOp: >
+              BinaryOp: -
+                ArrayRef: 
+                  ID: tmp
+                  ID: i
+                ID: val
+              Constant: int, 0xFF
+            Constant: int, 0xFF
+            TernaryOp: 
+              BinaryOp: <
+                BinaryOp: -
+                  ArrayRef: 
+                    ID: tmp
+                    ID: i
+                  ID: val
+                Constant: int, 0
+              Constant: int, 0
+              BinaryOp: -
+                ArrayRef: 
+                  ID: tmp
+                  ID: i
+                ID: val
+  FuncDef: 
+    Decl: foo_mul, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: tmp, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: tmp, ['const']
+                IdentifierType: ['unsigned', 'char']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['int']
+        TypeDecl: foo_mul, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+          TernaryOp: 
+            BinaryOp: >
+              BinaryOp: *
+                ArrayRef: 
+                  ID: tmp
+                  ID: i
+                ID: val
+              Constant: int, 0xFF
+            Constant: int, 0xFF
+            TernaryOp: 
+              BinaryOp: <
+                BinaryOp: *
+                  ArrayRef: 
+                    ID: tmp
+                    ID: i
+                  ID: val
+                Constant: int, 0
+              Constant: int, 0
+              BinaryOp: *
+                ArrayRef: 
+                  ID: tmp
+                  ID: i
+                ID: val

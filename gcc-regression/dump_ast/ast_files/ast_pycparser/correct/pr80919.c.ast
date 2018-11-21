@@ -1,0 +1,52 @@
+FileAST: 
+  FuncDef: 
+    Decl: fn, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fn, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['int']
+          Constant: int, 0
+      FuncCall: 
+        ID: __builtin_printf
+        ExprList: 
+          Constant: string, "%d\n"
+          UnaryOp: &
+            ID: a
+      FuncCall: 
+        ID: __builtin_printf
+        ExprList: 
+          Constant: string, "%i\n"
+          UnaryOp: &
+            ID: a
+      FuncCall: 
+        ID: __builtin_printf
+        ExprList: 
+          Constant: string, "%o\n"
+          UnaryOp: &
+            ID: a
+      FuncCall: 
+        ID: __builtin_printf
+        ExprList: 
+          Constant: string, "%u\n"
+          UnaryOp: &
+            ID: a
+      FuncCall: 
+        ID: __builtin_printf
+        ExprList: 
+          Constant: string, "%x\n"
+          UnaryOp: &
+            ID: a
+      FuncCall: 
+        ID: __builtin_printf
+        ExprList: 
+          Constant: string, "%X\n"
+          UnaryOp: &
+            ID: a

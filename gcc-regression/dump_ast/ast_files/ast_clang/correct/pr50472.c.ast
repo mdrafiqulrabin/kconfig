@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fe6988264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe698826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe698826740 '__int128'
+|-TypedefDecl 0x7fe698826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe698826760 'unsigned __int128'
+|-TypedefDecl 0x7fe698826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe698826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe698826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe698826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe698826dc0 'char *'
+|   `-BuiltinType 0x7fe698826560 'char'
+|-TypedefDecl 0x7fe6988270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe698827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe698826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe698826e58 '__va_list_tag'
+|-VarDecl 0x7fe698827138 <c_files/pr50472.c:5:1, col:33> col:27 used foo 'const unsigned int' static cinit
+| `-ImplicitCastExpr 0x7fe699025a00 <col:33> 'unsigned int' <IntegralCast>
+|   `-IntegerLiteral 0x7fe6988271d8 <col:33> 'int' 1
+`-FunctionDecl 0x7fe699025ae8 <line:6:1, line:10:1> line:6:14 test 'unsigned int (void)'
+  `-CompoundStmt 0x7fe699025d78 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fe699025cb0 <line:8:3, col:42>
+    | `-VarDecl 0x7fe699025bc0 <col:3, col:39> col:32 used bar 'const volatile unsigned int *' cinit
+    |   `-ImplicitCastExpr 0x7fe699025c98 <col:38, col:39> 'const volatile unsigned int *' <BitCast>
+    |     `-UnaryOperator 0x7fe699025c78 <col:38, col:39> 'const unsigned int *' prefix '&'
+    |       `-DeclRefExpr 0x7fe699025c20 <col:39> 'const unsigned int' lvalue Var 0x7fe698827138 'foo' 'const unsigned int'
+    `-ReturnStmt 0x7fe699025d60 <line:9:3, col:17>
+      `-ImplicitCastExpr 0x7fe699025d48 <col:10, col:17> 'unsigned int' <LValueToRValue>
+        `-ParenExpr 0x7fe699025d28 <col:10, col:17> 'const volatile unsigned int' lvalue
+          `-UnaryOperator 0x7fe699025d08 <col:12, col:13> 'const volatile unsigned int' lvalue prefix '*'
+            `-ImplicitCastExpr 0x7fe699025cf0 <col:13> 'const volatile unsigned int *' <LValueToRValue>
+              `-DeclRefExpr 0x7fe699025cc8 <col:13> 'const volatile unsigned int *' lvalue Var 0x7fe699025bc0 'bar' 'const volatile unsigned int *'

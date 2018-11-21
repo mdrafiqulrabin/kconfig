@@ -1,0 +1,34 @@
+FileAST: 
+  FuncDef: 
+    Decl: ntfs_getinfo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['void']
+        TypeDecl: ntfs_getinfo, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: bootsect, [], [], []
+        ArrayDecl: []
+          TypeDecl: bootsect, []
+            IdentifierType: ['char']
+          Constant: int, 8
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          ID: bootsect
+          ID: p
+          UnaryOp: sizeof
+            ID: bootsect
+      Return: 
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'short']
+            BinaryOp: +
+              ID: bootsect
+              Constant: int, 3

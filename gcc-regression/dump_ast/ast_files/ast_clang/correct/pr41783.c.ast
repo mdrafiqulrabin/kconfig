@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7fd70c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd70c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd70c826740 '__int128'
+|-TypedefDecl 0x7fd70c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd70c826760 'unsigned __int128'
+|-TypedefDecl 0x7fd70c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd70c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd70c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd70c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd70c826dc0 'char *'
+|   `-BuiltinType 0x7fd70c826560 'char'
+|-TypedefDecl 0x7fd70c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd70c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd70c826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd70c826e58 '__va_list_tag'
+|-VarDecl 0x7fd70c8271a0 <c_files/pr41783.c:3:1, col:11> col:5 used db 'int [100]'
+|-VarDecl 0x7fd70d025a58 <line:4:1, col:5> col:5 used a_global_var 'int'
+|-VarDecl 0x7fd70d025ad0 <col:1, col:19> col:19 used fact 'int'
+`-FunctionDecl 0x7fd70d025ba0 <line:5:1, line:15:1> line:5:5 main 'int ()'
+  `-CompoundStmt 0x7fd70d026200 <line:6:1, line:15:1>
+    |-DeclStmt 0x7fd70d025d60 <line:7:3, col:12>
+    | |-VarDecl 0x7fd70d025c50 <col:3, col:7> col:7 used i 'int'
+    | `-VarDecl 0x7fd70d025cc8 <col:3, col:11> col:9 used j 'int' cinit
+    |   `-IntegerLiteral 0x7fd70d025d28 <col:11> 'int' 0
+    `-DoStmt 0x7fd70d0261e0 <line:8:3, line:14:19>
+      |-CompoundStmt 0x7fd70d026128 <line:9:5, line:13:5>
+      | |-ForStmt 0x7fd70d025ff8 <line:10:7, line:11:17>
+      | | |-BinaryOperator 0x7fd70d025dc0 <line:10:12, col:14> 'int' '='
+      | | | |-DeclRefExpr 0x7fd70d025d78 <col:12> 'int' lvalue Var 0x7fd70d025c50 'i' 'int'
+      | | | `-IntegerLiteral 0x7fd70d025da0 <col:14> 'int' 0
+      | | |-<<<NULL>>>
+      | | |-BinaryOperator 0x7fd70d025e48 <col:17, col:19> 'int' '<'
+      | | | |-ImplicitCastExpr 0x7fd70d025e30 <col:17> 'int' <LValueToRValue>
+      | | | | `-DeclRefExpr 0x7fd70d025de8 <col:17> 'int' lvalue Var 0x7fd70d025c50 'i' 'int'
+      | | | `-IntegerLiteral 0x7fd70d025e10 <col:19> 'int' 100
+      | | |-UnaryOperator 0x7fd70d025e98 <col:24, col:26> 'int' prefix '++'
+      | | | `-DeclRefExpr 0x7fd70d025e70 <col:26> 'int' lvalue Var 0x7fd70d025c50 'i' 'int'
+      | | `-BinaryOperator 0x7fd70d025fd0 <line:11:9, col:17> 'int' '='
+      | |   |-ArraySubscriptExpr 0x7fd70d025f68 <col:9, col:13> 'int' lvalue
+      | |   | |-ImplicitCastExpr 0x7fd70d025f38 <col:9> 'int *' <ArrayToPointerDecay>
+      | |   | | `-DeclRefExpr 0x7fd70d025eb8 <col:9> 'int [100]' lvalue Var 0x7fd70c8271a0 'db' 'int [100]'
+      | |   | `-ImplicitCastExpr 0x7fd70d025f50 <col:12> 'int' <LValueToRValue>
+      | |   |   `-DeclRefExpr 0x7fd70d025ee0 <col:12> 'int' lvalue Var 0x7fd70d025c50 'i' 'int'
+      | |   `-ImplicitCastExpr 0x7fd70d025fb8 <col:17> 'int' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7fd70d025f90 <col:17> 'int' lvalue Var 0x7fd70d025c50 'i' 'int'
+      | `-BinaryOperator 0x7fd70d026100 <line:12:7, col:29> 'int' '='
+      |   |-DeclRefExpr 0x7fd70d026030 <col:7> 'int' lvalue Var 0x7fd70d025ad0 'fact' 'int'
+      |   `-BinaryOperator 0x7fd70d0260d8 <col:14, col:29> 'int' '*'
+      |     |-ImplicitCastExpr 0x7fd70d0260a8 <col:14> 'int' <LValueToRValue>
+      |     | `-DeclRefExpr 0x7fd70d026058 <col:14> 'int' lvalue Var 0x7fd70d025a58 'a_global_var' 'int'
+      |     `-ImplicitCastExpr 0x7fd70d0260c0 <col:29> 'int' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fd70d026080 <col:29> 'int' lvalue Var 0x7fd70d025c50 'i' 'int'
+      `-BinaryOperator 0x7fd70d0261b8 <line:14:10, col:16> 'int' '<'
+        |-UnaryOperator 0x7fd70d026178 <col:10, col:11> 'int' postfix '++'
+        | `-DeclRefExpr 0x7fd70d026150 <col:10> 'int' lvalue Var 0x7fd70d025cc8 'j' 'int'
+        `-IntegerLiteral 0x7fd70d026198 <col:16> 'int' 100

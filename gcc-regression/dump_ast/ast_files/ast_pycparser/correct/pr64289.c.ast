@@ -1,0 +1,23 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+          TernaryOp: 
+            Constant: int, 0
+            Constant: int, 0
+            TernaryOp: 
+              ID: a
+              ID: a
+              Constant: float, 0.5

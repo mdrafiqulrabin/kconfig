@@ -1,0 +1,79 @@
+FileAST: 
+  Decl: fs, [], [], []
+    TypeDecl: fs, []
+      IdentifierType: ['long', 'long', 'int']
+  Decl: vm, [], [], []
+    TypeDecl: vm, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: sd, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: sd, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: fs
+        Constant: int, 1
+      Assignment: =
+        ID: vm
+        Constant: int, 2
+      Goto: zf
+      If: 
+        Constant: int, 0
+        Compound: 
+          Decl: y6, [], [], []
+            TypeDecl: y6, []
+              IdentifierType: ['int']
+            Constant: int, 0
+          Decl: uu, [], [], []
+            PtrDecl: []
+              TypeDecl: uu, []
+                IdentifierType: ['int']
+            UnaryOp: &
+              ID: y6
+          Decl: he, [], [], []
+            TypeDecl: he, []
+              IdentifierType: ['short', 'int']
+          Decl: of, [], [], []
+            TypeDecl: of, []
+              IdentifierType: ['int']
+            Constant: int, 0
+          Label: zf
+            For: 
+              Compound: 
+                Assignment: =
+                  ID: he
+                  ID: of
+                If: 
+                  BinaryOp: ||
+                    ID: he
+                    Assignment: |=
+                      ID: fs
+                      ID: vm
+                  Compound: 
+                    Assignment: =
+                      UnaryOp: *
+                        ID: uu
+                      ID: fs
+                    Assignment: +=
+                      ID: fs
+                      ID: vm
+                If: 
+                  BinaryOp: ==
+                    ID: y6
+                    ID: vm
+                  Assignment: |=
+                    ID: fs
+                    ID: he
+                Assignment: =
+                  ID: he
+                  BinaryOp: ||
+                    ID: y6
+                    ID: fs
+                Assignment: /=
+                  ID: fs
+                  Constant: int, 0

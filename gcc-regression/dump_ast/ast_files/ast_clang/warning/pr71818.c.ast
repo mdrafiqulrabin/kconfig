@@ -1,0 +1,82 @@
+c_files/pr71818.c:8:18: warning: initializing 'unsigned char *' with an expression of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+  unsigned char *f = &e;
+                 ^   ~~
+1 warning generated.
+TranslationUnitDecl 0x7fc9f1825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc9f1826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc9f1825d40 '__int128'
+|-TypedefDecl 0x7fc9f1826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc9f1825d60 'unsigned __int128'
+|-TypedefDecl 0x7fc9f1826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc9f1826170 'struct __NSConstantString_tag'
+|   `-Record 0x7fc9f18260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc9f1826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc9f18263c0 'char *'
+|   `-BuiltinType 0x7fc9f1825b60 'char'
+|-TypedefDecl 0x7fc9f18266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc9f1826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc9f18264e0 'struct __va_list_tag'
+|     `-Record 0x7fc9f1826458 '__va_list_tag'
+|-VarDecl 0x7fc9f1826730 <c_files/pr71818.c:3:1, col:6> col:6 used a 'char'
+|-VarDecl 0x7fc9f1026400 <line:4:1, col:7> col:7 used b 'short'
+|-VarDecl 0x7fc9f1026478 <line:5:1, col:5> col:5 used c 'int'
+|-VarDecl 0x7fc9f10264f0 <col:1, col:8> col:8 used d 'int'
+`-FunctionDecl 0x7fc9f10265b8 <line:6:1, line:16:1> line:6:6 fn1 'void ()'
+  `-CompoundStmt 0x7fc9f1027218 <col:12, line:16:1>
+    |-DeclStmt 0x7fc9f1026780 <line:7:3, col:17>
+    | |-VarDecl 0x7fc9f1026660 <col:3, col:12> col:8 used e 'char' cinit
+    | | `-ImplicitCastExpr 0x7fc9f10266e0 <col:12> 'char' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fc9f10266c0 <col:12> 'int' 75
+    | `-VarDecl 0x7fc9f1026708 <col:3, col:16> col:16 used g 'char'
+    |-DeclStmt 0x7fc9f1026c50 <line:8:3, col:24>
+    | `-VarDecl 0x7fc9f10267e0 <col:3, col:23> col:18 used f 'unsigned char *' cinit
+    |   `-ImplicitCastExpr 0x7fc9f1026888 <col:22, col:23> 'unsigned char *' <BitCast>
+    |     `-UnaryOperator 0x7fc9f1026868 <col:22, col:23> 'char *' prefix '&'
+    |       `-DeclRefExpr 0x7fc9f1026840 <col:23> 'char' lvalue Var 0x7fc9f1026660 'e' 'char'
+    |-BinaryOperator 0x7fc9f1026cc8 <line:9:3, col:7> 'char' '='
+    | |-DeclRefExpr 0x7fc9f1026c68 <col:3> 'char' lvalue Var 0x7fc9f1826730 'a' 'char'
+    | `-ImplicitCastExpr 0x7fc9f1026cb0 <col:7> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fc9f1026c90 <col:7> 'int' 21
+    |-ForStmt 0x7fc9f1027100 <line:10:3, line:14:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc9f1026d68 <line:10:10, col:15> 'int' '<='
+    | | |-ImplicitCastExpr 0x7fc9f1026d50 <col:10> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fc9f1026d38 <col:10> 'char' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fc9f1026cf0 <col:10> 'char' lvalue Var 0x7fc9f1826730 'a' 'char'
+    | | `-IntegerLiteral 0x7fc9f1026d18 <col:15> 'int' 48
+    | |-UnaryOperator 0x7fc9f1026db8 <col:19, col:20> 'char' postfix '++'
+    | | `-DeclRefExpr 0x7fc9f1026d90 <col:19> 'char' lvalue Var 0x7fc9f1826730 'a' 'char'
+    | `-CompoundStmt 0x7fc9f10270d8 <col:24, line:14:3>
+    |   |-ForStmt 0x7fc9f1026e88 <line:11:5, line:12:7>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fc9f1026e50 <line:11:12, col:17> 'int' '<='
+    |   | | |-ImplicitCastExpr 0x7fc9f1026e38 <col:12> 'int' <IntegralCast>
+    |   | | | `-ImplicitCastExpr 0x7fc9f1026e20 <col:12> 'char' <LValueToRValue>
+    |   | | |   `-DeclRefExpr 0x7fc9f1026dd8 <col:12> 'char' lvalue Var 0x7fc9f1026660 'e' 'char'
+    |   | | `-IntegerLiteral 0x7fc9f1026e00 <col:17> 'int' 6
+    |   | |-<<<NULL>>>
+    |   | `-NullStmt 0x7fc9f1026e78 <line:12:7>
+    |   `-CompoundAssignOperator 0x7fc9f10270a0 <line:13:5, col:25> 'char' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+    |     |-DeclRefExpr 0x7fc9f1026ec0 <col:5> 'char' lvalue Var 0x7fc9f1026708 'g' 'char'
+    |     `-ImplicitCastExpr 0x7fc9f1027088 <col:10, col:25> 'int' <IntegralCast>
+    |       `-CompoundAssignOperator 0x7fc9f1027050 <col:10, col:25> 'char' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+    |         |-DeclRefExpr 0x7fc9f1026ee8 <col:10> 'char' lvalue Var 0x7fc9f1026660 'e' 'char'
+    |         `-BinaryOperator 0x7fc9f1027028 <col:15, col:25> 'int' '||'
+    |           |-ImplicitCastExpr 0x7fc9f1027010 <col:15> 'int' <IntegralCast>
+    |           | `-ImplicitCastExpr 0x7fc9f1026ff8 <col:15> 'short' <LValueToRValue>
+    |           |   `-DeclRefExpr 0x7fc9f1026f10 <col:15> 'short' lvalue Var 0x7fc9f1026400 'b' 'short'
+    |           `-BinaryOperator 0x7fc9f1026fd0 <col:20, col:25> 'int' '<='
+    |             |-ImplicitCastExpr 0x7fc9f1026fa0 <col:20> 'int' <IntegralCast>
+    |             | `-ImplicitCastExpr 0x7fc9f1026f88 <col:20> 'char' <LValueToRValue>
+    |             |   `-DeclRefExpr 0x7fc9f1026f38 <col:20> 'char' lvalue Var 0x7fc9f1026708 'g' 'char'
+    |             `-ImplicitCastExpr 0x7fc9f1026fb8 <col:25> 'int' <LValueToRValue>
+    |               `-DeclRefExpr 0x7fc9f1026f60 <col:25> 'int' lvalue Var 0x7fc9f1026478 'c' 'int'
+    `-BinaryOperator 0x7fc9f10271f0 <line:15:3, col:8> 'int' '='
+      |-DeclRefExpr 0x7fc9f1027138 <col:3> 'int' lvalue Var 0x7fc9f10264f0 'd' 'int'
+      `-ImplicitCastExpr 0x7fc9f10271d8 <col:7, col:8> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fc9f10271c0 <col:7, col:8> 'unsigned char' <LValueToRValue>
+          `-UnaryOperator 0x7fc9f10271a0 <col:7, col:8> 'unsigned char' lvalue prefix '*'
+            `-ImplicitCastExpr 0x7fc9f1027188 <col:8> 'unsigned char *' <LValueToRValue>
+              `-DeclRefExpr 0x7fc9f1027160 <col:8> 'unsigned char *' lvalue Var 0x7fc9f10267e0 'f' 'unsigned char *'

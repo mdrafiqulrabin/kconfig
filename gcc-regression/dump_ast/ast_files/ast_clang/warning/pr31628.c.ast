@@ -1,0 +1,48 @@
+c_files/pr31628.c:8:20: warning: calling convention '__stdcall__' ignored for this target [-Wignored-attributes]
+int __attribute__((__stdcall__)) bar(lptt);
+                   ^
+c_files/pr31628.c:10:20: warning: calling convention '__stdcall__' ignored for this target [-Wignored-attributes]
+int __attribute__((__stdcall__)) bar(tt *x)
+                   ^
+2 warnings generated.
+TranslationUnitDecl 0x7f8cb60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8cb6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8cb6026740 '__int128'
+|-TypedefDecl 0x7f8cb6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8cb6026760 'unsigned __int128'
+|-TypedefDecl 0x7f8cb6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8cb6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8cb6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8cb6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8cb6026dc0 'char *'
+|   `-BuiltinType 0x7f8cb6026560 'char'
+|-TypedefDecl 0x7f8cb60270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8cb6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8cb6026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8cb6026e58 '__va_list_tag'
+|-TypedefDecl 0x7f8cb6027138 <c_files/pr31628.c:6:1, col:13> col:13 referenced tt 'int'
+| `-BuiltinType 0x7f8cb60265c0 'int'
+|-TypedefDecl 0x7f8cb6825a00 <col:1, col:18> col:18 referenced lptt 'int *'
+| `-PointerType 0x7f8cb6027190 'int *'
+|   `-BuiltinType 0x7f8cb60265c0 'int'
+|-FunctionDecl 0x7f8cb6825bf8 <line:8:1, col:42> col:34 used bar 'int (lptt) __attribute__((stdcall))':'int (lptt)'
+| `-ParmVarDecl 0x7f8cb6825aa0 <col:38> col:42 'lptt':'int *'
+|-FunctionDecl 0x7f8cb6825e58 prev 0x7f8cb6825bf8 <line:10:1, line:13:1> line:10:34 used bar 'int (lptt) __attribute__((stdcall))':'int (lptt)'
+| |-ParmVarDecl 0x7f8cb6825d38 <col:38, col:42> col:42 x 'tt *'
+| `-CompoundStmt 0x7f8cb6825f30 <line:11:1, line:13:1>
+|   `-ReturnStmt 0x7f8cb6825f18 <line:12:3, col:10>
+|     `-IntegerLiteral 0x7f8cb6825ef8 <col:10> 'int' 0
+|-FunctionDecl 0x7f8cb6826018 <line:15:1, line:19:1> line:16:1 used foo 'int (void)'
+| `-CompoundStmt 0x7f8cb68261d0 <line:17:1, line:19:1>
+|   `-ReturnStmt 0x7f8cb68261b8 <line:18:3, col:16>
+|     `-CallExpr 0x7f8cb6826170 <col:10, col:16> 'int'
+|       |-ImplicitCastExpr 0x7f8cb6826158 <col:10> 'int (*)(lptt) __attribute__((stdcall))' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f8cb68260b0 <col:10> 'int (lptt) __attribute__((stdcall))':'int (lptt)' Function 0x7f8cb6825e58 'bar' 'int (lptt) __attribute__((stdcall))':'int (lptt)'
+|       `-ImplicitCastExpr 0x7f8cb68261a0 <col:15> 'lptt':'int *' <NullToPointer>
+|         `-IntegerLiteral 0x7f8cb68260d8 <col:15> 'int' 0
+`-FunctionDecl 0x7f8cb6826240 <line:21:1, line:25:1> line:22:1 main 'int ()'
+  `-CompoundStmt 0x7f8cb6826380 <line:23:1, line:25:1>
+    `-ReturnStmt 0x7f8cb6826368 <line:24:3, col:15>
+      `-CallExpr 0x7f8cb6826340 <col:10, col:15> 'int'
+        `-ImplicitCastExpr 0x7f8cb6826328 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f8cb68262d8 <col:10> 'int (void)' Function 0x7f8cb6826018 'foo' 'int (void)'

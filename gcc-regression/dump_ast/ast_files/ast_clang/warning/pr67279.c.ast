@@ -1,0 +1,49 @@
+c_files/pr67279.c:11:22: warning: signed shift result (0x280000000) requires 35 bits to represent, but 'int' only has 32 bits [-Wshift-overflow]
+  static int a2 = 10 << 30;
+                  ~~ ^  ~~
+c_files/pr67279.c:12:23: warning: signed shift result (0x640000000) requires 36 bits to represent, but 'int' only has 32 bits [-Wshift-overflow]
+  static int a3 = 100 << 28;
+                  ~~~ ^  ~~
+2 warnings generated.
+TranslationUnitDecl 0x7f85fc8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f85fc826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f85fc826740 '__int128'
+|-TypedefDecl 0x7f85fc826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f85fc826760 'unsigned __int128'
+|-TypedefDecl 0x7f85fc826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f85fc826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f85fc826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f85fc826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f85fc826dc0 'char *'
+|   `-BuiltinType 0x7f85fc826560 'char'
+|-TypedefDecl 0x7f85fc8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f85fc827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f85fc826ee0 'struct __va_list_tag'
+|     `-Record 0x7f85fc826e58 '__va_list_tag'
+`-FunctionDecl 0x7f85fd025a00 <c_files/pr67279.c:7:1, line:14:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7f85fd026318 <line:9:1, line:14:1>
+    |-DeclStmt 0x7f85fd025bb8 <line:10:3, col:26>
+    | `-VarDecl 0x7f85fd025af0 <col:3, col:24> col:14 a1 'int' static cinit
+    |   `-BinaryOperator 0x7f85fd025b90 <col:19, col:24> 'int' '<<'
+    |     |-IntegerLiteral 0x7f85fd025b50 <col:19> 'int' 1
+    |     `-IntegerLiteral 0x7f85fd025b70 <col:24> 'int' 31
+    |-DeclStmt 0x7f85fd026068 <line:11:3, col:27>
+    | `-VarDecl 0x7f85fd025be8 <col:3, col:25> col:14 a2 'int' static cinit
+    |   `-BinaryOperator 0x7f85fd026040 <col:19, col:25> 'int' '<<'
+    |     |-IntegerLiteral 0x7f85fd025c48 <col:19> 'int' 10
+    |     `-IntegerLiteral 0x7f85fd025c68 <col:25> 'int' 30
+    |-DeclStmt 0x7f85fd026160 <line:12:3, col:28>
+    | `-VarDecl 0x7f85fd026098 <col:3, col:26> col:14 a3 'int' static cinit
+    |   `-BinaryOperator 0x7f85fd026138 <col:19, col:26> 'int' '<<'
+    |     |-IntegerLiteral 0x7f85fd0260f8 <col:19> 'int' 100
+    |     `-IntegerLiteral 0x7f85fd026118 <col:26> 'int' 28
+    `-DeclStmt 0x7f85fd026300 <line:13:3, col:31>
+      `-VarDecl 0x7f85fd026190 <col:3, col:30> col:14 a4 'int' static cinit
+        `-BinaryOperator 0x7f85fd0262d8 <line:5:17, line:13:30> 'int' '/'
+          |-ParenExpr 0x7f85fd026278 <line:5:17, col:34> 'int'
+          | `-BinaryOperator 0x7f85fd026250 <col:18, col:33> 'int' '-'
+          |   |-UnaryOperator 0x7f85fd026210 <col:18, <built-in>:33:21> 'int' prefix '-'
+          |   | `-IntegerLiteral 0x7f85fd0261f0 <col:21> 'int' 2147483647
+          |   `-IntegerLiteral 0x7f85fd026230 <c_files/pr67279.c:5:33> 'int' 1
+          `-UnaryOperator 0x7f85fd0262b8 <line:13:29, col:30> 'int' prefix '-'
+            `-IntegerLiteral 0x7f85fd026298 <col:30> 'int' 1

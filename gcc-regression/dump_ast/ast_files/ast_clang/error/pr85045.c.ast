@@ -1,0 +1,23 @@
+c_files/pr85045.c:8:11: error: called object type 'double' is not a function or function pointer
+  (a / b) (); /* { dg-error "called object .a / b. is not a function or function pointer" } */
+  ~~~~~~~ ^
+1 error generated.
+TranslationUnitDecl 0x7f8fed0110d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8fed011620 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8fed011340 '__int128'
+|-TypedefDecl 0x7f8fed011690 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8fed011360 'unsigned __int128'
+|-TypedefDecl 0x7f8fed011968 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8fed011770 'struct __NSConstantString_tag'
+|   `-Record 0x7f8fed0116e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8fed011a00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8fed0119c0 'char *'
+|   `-BuiltinType 0x7f8fed011160 'char'
+|-TypedefDecl 0x7f8fed011cc8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8fed011c70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8fed011ae0 'struct __va_list_tag'
+|     `-Record 0x7f8fed011a58 '__va_list_tag'
+`-FunctionDecl 0x7f8fec83aed0 <c_files/pr85045.c:5:1, line:9:1> line:6:1 f 'void (double, double)'
+  |-ParmVarDecl 0x7f8fed011d38 <col:4, col:11> col:11 used a 'double'
+  |-ParmVarDecl 0x7f8fec83ae00 <col:14, col:21> col:21 used b 'double'
+  `-CompoundStmt 0x7f8fec83b460 <line:7:1, line:9:1>

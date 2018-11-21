@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7fa0a18264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa0a1826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa0a1826740 '__int128'
+|-TypedefDecl 0x7fa0a1826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa0a1826760 'unsigned __int128'
+|-TypedefDecl 0x7fa0a1826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa0a1826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa0a1826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa0a1826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa0a1826dc0 'char *'
+|   `-BuiltinType 0x7fa0a1826560 'char'
+|-TypedefDecl 0x7fa0a18270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa0a1827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa0a1826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa0a1826e58 '__va_list_tag'
+`-FunctionDecl 0x7fa0a2025a28 <c_files/pr33373.c:3:1, line:8:1> line:3:6 DOSMEM_FillIsrTable 'void (int *)'
+  |-ParmVarDecl 0x7fa0a1827160 <col:26, col:30> col:30 used isr 'int *'
+  `-CompoundStmt 0x7fa0a20260b0 <col:35, line:8:1>
+    |-DeclStmt 0x7fa0a2025b80 <line:4:5, col:10>
+    | `-VarDecl 0x7fa0a2025b20 <col:5, col:9> col:9 used i 'int'
+    `-ForStmt 0x7fa0a2026078 <line:6:5, line:7:68>
+      |-BinaryOperator 0x7fa0a2025be0 <line:6:10, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fa0a2025b98 <col:10> 'int' lvalue Var 0x7fa0a2025b20 'i' 'int'
+      | `-IntegerLiteral 0x7fa0a2025bc0 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa0a2025c68 <col:15, col:17> 'int' '<'
+      | |-ImplicitCastExpr 0x7fa0a2025c50 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fa0a2025c08 <col:15> 'int' lvalue Var 0x7fa0a2025b20 'i' 'int'
+      | `-IntegerLiteral 0x7fa0a2025c30 <col:17> 'int' 256
+      |-UnaryOperator 0x7fa0a2025cb8 <col:22, col:23> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fa0a2025c90 <col:22> 'int' lvalue Var 0x7fa0a2025b20 'i' 'int'
+      `-BinaryOperator 0x7fa0a2026050 <line:7:9, col:68> 'int' '='
+        |-ArraySubscriptExpr 0x7fa0a2025d58 <col:9, col:14> 'int' lvalue
+        | |-ImplicitCastExpr 0x7fa0a2025d28 <col:9> 'int *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fa0a2025cd8 <col:9> 'int *' lvalue ParmVar 0x7fa0a1827160 'isr' 'int *'
+        | `-ImplicitCastExpr 0x7fa0a2025d40 <col:13> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fa0a2025d00 <col:13> 'int' lvalue Var 0x7fa0a2025b20 'i' 'int'
+        `-ParenExpr 0x7fa0a2026030 <col:16, col:68> 'int'
+          `-BinaryOperator 0x7fa0a2026008 <col:17, col:66> 'int' '|'
+            |-ImplicitCastExpr 0x7fa0a2025ff0 <col:17, col:41> 'int' <IntegralCast>
+            | `-ParenExpr 0x7fa0a2025f00 <col:17, col:41> 'short'
+            |   `-CStyleCastExpr 0x7fa0a2025ed8 <col:18, col:40> 'short' <IntegralCast>
+            |     `-ParenExpr 0x7fa0a2025eb8 <col:25, col:40> 'int'
+            |       `-BinaryOperator 0x7fa0a2025e48 <col:26, col:34> 'int' '&'
+            |         |-ParenExpr 0x7fa0a2025e08 <col:26, col:30> 'int'
+            |         | `-BinaryOperator 0x7fa0a2025de0 <col:27, col:29> 'int' '*'
+            |         |   |-ImplicitCastExpr 0x7fa0a2025dc8 <col:27> 'int' <LValueToRValue>
+            |         |   | `-DeclRefExpr 0x7fa0a2025d80 <col:27> 'int' lvalue Var 0x7fa0a2025b20 'i' 'int'
+            |         |   `-IntegerLiteral 0x7fa0a2025da8 <col:29> 'int' 4
+            |         `-IntegerLiteral 0x7fa0a2025e28 <col:34> 'int' 65535
+            `-BinaryOperator 0x7fa0a2025fc8 <col:45, col:66> 'int' '<<'
+              |-ParenExpr 0x7fa0a2025f88 <col:45, col:61> 'int'
+              | `-BinaryOperator 0x7fa0a2025f60 <col:46, col:55> 'int' '&'
+              |   |-IntegerLiteral 0x7fa0a2025f20 <col:46> 'int' 61440
+              |   `-IntegerLiteral 0x7fa0a2025f40 <col:55> 'int' 65535
+              `-IntegerLiteral 0x7fa0a2025fa8 <col:66> 'int' 16

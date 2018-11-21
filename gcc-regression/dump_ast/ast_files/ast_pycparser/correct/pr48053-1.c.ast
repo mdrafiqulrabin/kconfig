@@ -1,0 +1,168 @@
+FileAST: 
+  Decl: sourcenode, [], [], []
+    TypeDecl: sourcenode, []
+      IdentifierType: ['int']
+  Decl: ARCHelems, [], [], []
+    TypeDecl: ARCHelems, []
+      IdentifierType: ['int']
+  Decl: source_elms, [], [], []
+    PtrDecl: []
+      TypeDecl: source_elms, []
+        IdentifierType: ['int']
+  Decl: vv12x12, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['double']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['double']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['double']
+      TypeDecl: vv12x12, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argc, [], [], []
+            TypeDecl: argc, []
+              IdentifierType: ['int']
+          Decl: argv, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: argv, []
+                  IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: cor, [], [], []
+        ArrayDecl: []
+          TypeDecl: cor, []
+            IdentifierType: ['int']
+          Constant: int, 4
+      Decl: Ke, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: Ke, []
+              IdentifierType: ['double']
+            Constant: int, 12
+          Constant: int, 12
+      Decl: Me, [], [], []
+        ArrayDecl: []
+          TypeDecl: Me, []
+            IdentifierType: ['double']
+          Constant: int, 12
+      Decl: Ce, [], [], []
+        ArrayDecl: []
+          TypeDecl: Ce, []
+            IdentifierType: ['double']
+          Constant: int, 12
+      Decl: Mexv, [], [], []
+        ArrayDecl: []
+          TypeDecl: Mexv, []
+            IdentifierType: ['double']
+          Constant: int, 12
+      Decl: Cexv, [], [], []
+        ArrayDecl: []
+          TypeDecl: Cexv, []
+            IdentifierType: ['double']
+          Constant: int, 12
+      Decl: v, [], [], []
+        ArrayDecl: []
+          TypeDecl: v, []
+            IdentifierType: ['double']
+          Constant: int, 12
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: ARCHelems
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              Constant: int, 12
+            UnaryOp: p++
+              ID: j
+            Assignment: =
+              ArrayRef: 
+                ID: Me
+                ID: j
+              Constant: float, 0.0
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                ID: cor
+                ID: j
+              ID: sourcenode
+            FuncCall: 
+              ID: vv12x12
+              ExprList: 
+                ID: Me
+                ID: v
+                ID: Mexv
+          FuncCall: 
+            ID: vv12x12
+            ExprList: 
+              ID: Ce
+              ID: v
+              ID: Cexv
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                ID: source_elms
+                ID: i
+              Constant: int, 3
+            For: 
+              Assignment: =
+                ID: j
+                Constant: int, 0
+              BinaryOp: <
+                ID: j
+                Constant: int, 12
+              UnaryOp: p++
+                ID: j
+              Compound: 
+                Assignment: =
+                  ArrayRef: 
+                    ID: v
+                    ID: j
+                  UnaryOp: -
+                    ArrayRef: 
+                      ID: v
+                      ID: j
+                Assignment: =
+                  ArrayRef: 
+                    ID: Mexv
+                    ID: j
+                  UnaryOp: -
+                    ArrayRef: 
+                      ID: Mexv
+                      ID: j
+                Assignment: =
+                  ArrayRef: 
+                    ID: Cexv
+                    ID: j
+                  UnaryOp: -
+                    ArrayRef: 
+                      ID: Cexv
+                      ID: j

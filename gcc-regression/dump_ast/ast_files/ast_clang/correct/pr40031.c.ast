@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fe4c38264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe4c3826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe4c3826740 '__int128'
+|-TypedefDecl 0x7fe4c3826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe4c3826760 'unsigned __int128'
+|-TypedefDecl 0x7fe4c3826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe4c3826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe4c3826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe4c3826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe4c3826dc0 'char *'
+|   `-BuiltinType 0x7fe4c3826560 'char'
+|-TypedefDecl 0x7fe4c38270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe4c3827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe4c3826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe4c3826e58 '__va_list_tag'
+|-VarDecl 0x7fe4c3827138 <c_files/pr40031.c:3:1, col:8> col:8 used c 'double'
+|-VarDecl 0x7fe4c4025a00 <line:4:1, col:8> col:8 used d 'double'
+`-FunctionDecl 0x7fe4c4025b78 <line:5:1, line:9:1> line:5:9 f 'double *(int)'
+  |-ParmVarDecl 0x7fe4c4025a78 <col:11, col:15> col:15 used a 'int'
+  `-CompoundStmt 0x7fe4c4025d50 <line:6:1, line:9:1>
+    |-IfStmt 0x7fe4c4025cb8 <line:7:3, col:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fe4c4025c40 <col:6> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe4c4025c18 <col:6> 'int' lvalue ParmVar 0x7fe4c4025a78 'a' 'int'
+    | |-ReturnStmt 0x7fe4c4025ca0 <col:9, col:17>
+    | | `-UnaryOperator 0x7fe4c4025c80 <col:16, col:17> 'double *' prefix '&'
+    | |   `-DeclRefExpr 0x7fe4c4025c58 <col:17> 'double' lvalue Var 0x7fe4c3827138 'c' 'double'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe4c4025d38 <line:8:3, col:11>
+      `-UnaryOperator 0x7fe4c4025d18 <col:10, col:11> 'double *' prefix '&'
+        `-DeclRefExpr 0x7fe4c4025cf0 <col:11> 'double' lvalue Var 0x7fe4c4025a00 'd' 'double'

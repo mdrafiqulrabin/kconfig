@@ -1,0 +1,97 @@
+FileAST: 
+  Typedef: gcv_object_t, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: gcv_object_t, []
+        IdentifierType: ['void']
+  Typedef: object, [], ['typedef']
+    TypeDecl: object, []
+      IdentifierType: ['gcv_object_t']
+  Typedef: Pseudofun, ['const'], ['typedef']
+    PtrDecl: []
+      TypeDecl: Pseudofun, ['const']
+        IdentifierType: ['void']
+  Decl: pseudocode_tab, [], ['extern'], []
+    TypeDecl: pseudocode_tab, []
+      Struct: pseudocode_tab_
+        Decl: pseudo_eql, [], [], []
+          TypeDecl: pseudo_eql, []
+            IdentifierType: ['Pseudofun']
+        Decl: pseudo_iconv_wcslen, [], [], []
+          TypeDecl: pseudo_iconv_wcslen, []
+            IdentifierType: ['Pseudofun']
+        Decl: pseudo_iconv_wcstombs, [], [], []
+          TypeDecl: pseudo_iconv_wcstombs, []
+            IdentifierType: ['Pseudofun']
+        Decl: pseudo_iconv_range, [], [], []
+          TypeDecl: pseudo_iconv_range, []
+            IdentifierType: ['Pseudofun']
+  Decl: pseudofun_tab, [], ['extern'], []
+    TypeDecl: pseudofun_tab, []
+      Struct: symbol_tab_
+        Decl: pointer, [], [], []
+          ArrayDecl: []
+            TypeDecl: pointer, []
+              IdentifierType: ['object']
+            Constant: int, 1024
+  FuncDef: 
+    Decl: init_memory, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: init_memory, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: ptr2, [], [], []
+        PtrDecl: []
+          TypeDecl: ptr2, []
+            IdentifierType: ['object']
+        UnaryOp: &
+          ArrayRef: 
+            StructRef: .
+              ID: pseudofun_tab
+              ID: pointer
+            Constant: int, 0
+      Decl: ptr1, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: ptr1, ['const']
+            IdentifierType: ['Pseudofun']
+        Cast: 
+          Typename: None, ['const']
+            PtrDecl: []
+              TypeDecl: None, ['const']
+                IdentifierType: ['Pseudofun']
+          UnaryOp: &
+            ID: pseudocode_tab
+      Decl: count, [], [], []
+        TypeDecl: count, []
+          IdentifierType: ['unsigned', 'int']
+        BinaryOp: /
+          UnaryOp: sizeof
+            ID: pseudocode_tab
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['Pseudofun']
+      While: 
+        UnaryOp: p--
+          ID: count
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: ptr2
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['gcv_object_t']
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned', 'char']
+                UnaryOp: *
+                  ID: ptr1
+          UnaryOp: p++
+            ID: ptr1

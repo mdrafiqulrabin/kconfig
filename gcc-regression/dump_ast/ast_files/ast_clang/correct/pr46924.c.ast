@@ -1,0 +1,72 @@
+TranslationUnitDecl 0x7f8da90264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8da9026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8da9026740 '__int128'
+|-TypedefDecl 0x7f8da9026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8da9026760 'unsigned __int128'
+|-TypedefDecl 0x7f8da9026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8da9026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8da9026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8da9026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8da9026dc0 'char *'
+|   `-BuiltinType 0x7f8da9026560 'char'
+|-TypedefDecl 0x7f8da90270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8da9027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8da9026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8da9026e58 '__va_list_tag'
+|-RecordDecl 0x7f8da9027120 <c_files/pr46924.c:3:1, line:7:1> line:3:8 struct S definition
+| |-FieldDecl 0x7f8da9825a00 <line:5:3, col:7> col:7 referenced n 'int'
+| `-FieldDecl 0x7f8da9825a90 <line:6:3, col:10> col:10 referenced a 'float *'
+`-FunctionDecl 0x7f8da9825c98 <line:9:1, line:18:1> line:9:7 foo 'float (struct S *)'
+  |-ParmVarDecl 0x7f8da9825b90 <col:12, col:22> col:22 used s 'struct S *'
+  `-CompoundStmt 0x7f8da9826540 <line:10:1, line:18:1>
+    |-DeclStmt 0x7f8da9825ef0 <line:11:3, col:19>
+    | |-VarDecl 0x7f8da9825d90 <col:3, col:13> col:9 used f 'float' cinit
+    | | `-ImplicitCastExpr 0x7f8da9825e10 <col:13> 'float' <IntegralToFloating>
+    | |   `-IntegerLiteral 0x7f8da9825df0 <col:13> 'int' 0
+    | `-VarDecl 0x7f8da9825e40 <col:3, col:18> col:16 g 'float' cinit
+    |   `-ImplicitCastExpr 0x7f8da9825ec0 <col:18> 'float' <IntegralToFloating>
+    |     `-IntegerLiteral 0x7f8da9825ea0 <col:18> 'int' 0
+    |-DeclStmt 0x7f8da9825f80 <line:12:3, col:8>
+    | `-VarDecl 0x7f8da9825f20 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7f8da98262b8 <line:13:3, line:14:16>
+    | |-BinaryOperator 0x7f8da9825fe0 <line:13:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7f8da9825f98 <col:8> 'int' lvalue Var 0x7f8da9825f20 'i' 'int'
+    | | `-IntegerLiteral 0x7f8da9825fc0 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8da98260d8 <col:15, col:22> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f8da98260a8 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f8da9826008 <col:15> 'int' lvalue Var 0x7f8da9825f20 'i' 'int'
+    | | `-ImplicitCastExpr 0x7f8da98260c0 <col:19, col:22> 'int' <LValueToRValue>
+    | |   `-MemberExpr 0x7f8da9826070 <col:19, col:22> 'int' lvalue ->n 0x7f8da9825a00
+    | |     `-ImplicitCastExpr 0x7f8da9826058 <col:19> 'struct S *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f8da9826030 <col:19> 'struct S *' lvalue ParmVar 0x7f8da9825b90 's' 'struct S *'
+    | |-UnaryOperator 0x7f8da9826128 <col:25, col:26> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7f8da9826100 <col:25> 'int' lvalue Var 0x7f8da9825f20 'i' 'int'
+    | `-CompoundAssignOperator 0x7f8da9826280 <line:14:5, col:16> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+    |   |-DeclRefExpr 0x7f8da9826148 <col:5> 'float' lvalue Var 0x7f8da9825d90 'f' 'float'
+    |   `-ImplicitCastExpr 0x7f8da9826268 <col:10, col:16> 'float' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7f8da9826240 <col:10, col:16> 'float' lvalue
+    |       |-ImplicitCastExpr 0x7f8da9826210 <col:10, col:13> 'float *' <LValueToRValue>
+    |       | `-MemberExpr 0x7f8da98261b0 <col:10, col:13> 'float *' lvalue ->a 0x7f8da9825a90
+    |       |   `-ImplicitCastExpr 0x7f8da9826198 <col:10> 'struct S *' <LValueToRValue>
+    |       |     `-DeclRefExpr 0x7f8da9826170 <col:10> 'struct S *' lvalue ParmVar 0x7f8da9825b90 's' 'struct S *'
+    |       `-ImplicitCastExpr 0x7f8da9826228 <col:15> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f8da98261e8 <col:15> 'int' lvalue Var 0x7f8da9825f20 'i' 'int'
+    |-ForStmt 0x7f8da98264b0 <line:15:3, line:16:5>
+    | |-BinaryOperator 0x7f8da9826338 <line:15:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7f8da98262f0 <col:8> 'int' lvalue Var 0x7f8da9825f20 'i' 'int'
+    | | `-IntegerLiteral 0x7f8da9826318 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8da9826430 <col:15, col:22> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f8da9826400 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f8da9826360 <col:15> 'int' lvalue Var 0x7f8da9825f20 'i' 'int'
+    | | `-ImplicitCastExpr 0x7f8da9826418 <col:19, col:22> 'int' <LValueToRValue>
+    | |   `-MemberExpr 0x7f8da98263c8 <col:19, col:22> 'int' lvalue ->n 0x7f8da9825a00
+    | |     `-ImplicitCastExpr 0x7f8da98263b0 <col:19> 'struct S *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f8da9826388 <col:19> 'struct S *' lvalue ParmVar 0x7f8da9825b90 's' 'struct S *'
+    | |-UnaryOperator 0x7f8da9826480 <col:25, col:26> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7f8da9826458 <col:25> 'int' lvalue Var 0x7f8da9825f20 'i' 'int'
+    | `-NullStmt 0x7f8da98264a0 <line:16:5>
+    `-ReturnStmt 0x7f8da9826528 <line:17:3, col:10>
+      `-ImplicitCastExpr 0x7f8da9826510 <col:10> 'float' <LValueToRValue>
+        `-DeclRefExpr 0x7f8da98264e8 <col:10> 'float' lvalue Var 0x7f8da9825d90 'f' 'float'

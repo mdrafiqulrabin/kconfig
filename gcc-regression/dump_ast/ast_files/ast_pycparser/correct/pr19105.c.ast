@@ -1,0 +1,66 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: e
+      EnumeratorList: 
+        Enumerator: a
+        Enumerator: b
+        Enumerator: c
+        Enumerator: d
+        Enumerator: e
+        Enumerator: f
+        Enumerator: g
+        Enumerator: h
+  FuncDef: 
+    Decl: range1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: v, [], [], []
+            TypeDecl: v, []
+              Enum: e
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: range1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: &&
+          BinaryOp: &&
+            BinaryOp: &&
+              ID: x
+              BinaryOp: !=
+                ID: v
+                ID: c
+            BinaryOp: !=
+              ID: v
+              ID: d
+          BinaryOp: !=
+            ID: v
+            ID: e
+  FuncDef: 
+    Decl: range2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: v, [], [], []
+            TypeDecl: v, []
+              Enum: e
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: range2, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: &&
+          ID: x
+          BinaryOp: &&
+            BinaryOp: &&
+              BinaryOp: !=
+                ID: v
+                ID: c
+              BinaryOp: !=
+                ID: v
+                ID: d
+            BinaryOp: !=
+              ID: v
+              ID: e

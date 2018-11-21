@@ -1,0 +1,44 @@
+FileAST: 
+  FuncDef: 
+    Decl: DrawChunk, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: tabSize, [], [], []
+            PtrDecl: []
+              TypeDecl: tabSize, []
+                IdentifierType: ['int']
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: DrawChunk, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: numEnds, ['const'], [], []
+        TypeDecl: numEnds, ['const']
+          IdentifierType: ['int']
+        Constant: int, 10
+      Decl: ends, [], [], []
+        ArrayDecl: []
+          TypeDecl: ends, []
+            IdentifierType: ['int']
+          BinaryOp: +
+            ID: numEnds
+            Constant: int, 2
+      If: 
+        BinaryOp: >
+          UnaryOp: *
+            ID: tabSize
+          Constant: int, 0
+        Compound: 
+          Assignment: -=
+            ID: x
+            Constant: int, 5
+          Assignment: =
+            ID: x
+            BinaryOp: /
+              BinaryOp: +
+                ID: x
+                UnaryOp: *
+                  ID: tabSize
+              UnaryOp: *
+                ID: tabSize

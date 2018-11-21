@@ -1,0 +1,73 @@
+TranslationUnitDecl 0x7f99700264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9970026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9970026740 '__int128'
+|-TypedefDecl 0x7f9970026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9970026760 'unsigned __int128'
+|-TypedefDecl 0x7f9970026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9970026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9970026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9970026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9970026dc0 'char *'
+|   `-BuiltinType 0x7f9970026560 'char'
+|-TypedefDecl 0x7f99700270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9970027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9970026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9970026e58 '__va_list_tag'
+|-VarDecl 0x7f9970027170 <c_files/pr30564-1.c:1:1, col:35> col:12 used spready 'int [4]' static cinit
+| `-InitListExpr 0x7f9970077520 <col:24, col:35> 'int [4]'
+|   |-IntegerLiteral 0x7f9970077440 <col:25> 'int' 0
+|   |-IntegerLiteral 0x7f9970077460 <col:28> 'int' 1
+|   |-IntegerLiteral 0x7f9970077480 <col:31> 'int' 2
+|   `-IntegerLiteral 0x7f99700774a0 <col:34> 'int' 3
+|-FunctionDecl 0x7f99700776b0 <line:2:1, line:8:1> line:2:6 used explosion_map 'void (int)'
+| |-ParmVarDecl 0x7f99700775f0 <col:21, col:25> col:25 used y 'int'
+| `-CompoundStmt 0x7f9970077b38 <line:3:1, line:8:1>
+|   |-DeclStmt 0x7f99700777c8 <line:4:3, col:8>
+|   | `-VarDecl 0x7f9970077768 <col:3, col:7> col:7 used i 'int'
+|   `-ForStmt 0x7f9970077b00 <line:5:3, line:7:7>
+|     |-BinaryOperator 0x7f9970077828 <line:5:8, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7f99700777e0 <col:8> 'int' lvalue Var 0x7f9970077768 'i' 'int'
+|     | `-IntegerLiteral 0x7f9970077808 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f99700778b0 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f9970077898 <col:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f9970077850 <col:15> 'int' lvalue Var 0x7f9970077768 'i' 'int'
+|     | `-IntegerLiteral 0x7f9970077878 <col:19> 'int' 4
+|     |-UnaryOperator 0x7f9970077900 <col:22, col:23> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7f99700778d8 <col:22> 'int' lvalue Var 0x7f9970077768 'i' 'int'
+|     `-IfStmt 0x7f9970077ac8 <line:6:5, line:7:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-BinaryOperator 0x7f9970077a98 <line:6:9, col:26> 'int' '<'
+|       | |-BinaryOperator 0x7f9970077a50 <col:9, col:22> 'int' '*'
+|       | | |-ImplicitCastExpr 0x7f9970077a20 <col:9> 'int' <LValueToRValue>
+|       | | | `-DeclRefExpr 0x7f9970077920 <col:9> 'int' lvalue ParmVar 0x7f99700775f0 'y' 'int'
+|       | | `-ImplicitCastExpr 0x7f9970077a38 <col:13, col:22> 'int' <LValueToRValue>
+|       | |   `-ArraySubscriptExpr 0x7f99700779f8 <col:13, col:22> 'int' lvalue
+|       | |     |-ImplicitCastExpr 0x7f99700779c8 <col:13> 'int *' <ArrayToPointerDecay>
+|       | |     | `-DeclRefExpr 0x7f9970077948 <col:13> 'int [4]' lvalue Var 0x7f9970027170 'spready' 'int [4]'
+|       | |     `-ImplicitCastExpr 0x7f99700779e0 <col:21> 'int' <LValueToRValue>
+|       | |       `-DeclRefExpr 0x7f9970077970 <col:21> 'int' lvalue Var 0x7f9970077768 'i' 'int'
+|       | `-IntegerLiteral 0x7f9970077a78 <col:26> 'int' 0
+|       |-BreakStmt 0x7f9970077ac0 <line:7:7>
+|       `-<<<NULL>>>
+`-FunctionDecl 0x7f9970077c20 <line:9:1, line:15:1> line:9:6 explosion 'void (void)'
+  `-CompoundStmt 0x7f9970077f80 <line:10:1, line:15:1>
+    |-DeclStmt 0x7f9970077d30 <line:11:3, col:8>
+    | `-VarDecl 0x7f9970077cd0 <col:3, col:7> col:7 used i 'int'
+    |-CallExpr 0x7f9970077dd0 <line:12:3, col:19> 'void'
+    | |-ImplicitCastExpr 0x7f9970077db8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f9970077d48 <col:3> 'void (int)' Function 0x7f99700776b0 'explosion_map' 'void (int)'
+    | `-IntegerLiteral 0x7f9970077d70 <col:18> 'int' 0
+    `-ForStmt 0x7f9970077f48 <line:13:3, line:14:5>
+      |-BinaryOperator 0x7f9970077e48 <line:13:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f9970077e00 <col:8> 'int' lvalue Var 0x7f9970077cd0 'i' 'int'
+      | `-IntegerLiteral 0x7f9970077e28 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9970077ed0 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7f9970077eb8 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f9970077e70 <col:15> 'int' lvalue Var 0x7f9970077cd0 'i' 'int'
+      | `-IntegerLiteral 0x7f9970077e98 <col:19> 'int' 2
+      |-UnaryOperator 0x7f9970077f20 <col:22, col:23> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f9970077ef8 <col:22> 'int' lvalue Var 0x7f9970077cd0 'i' 'int'
+      `-ContinueStmt 0x7f9970077f40 <line:14:5>

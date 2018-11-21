@@ -1,0 +1,49 @@
+c_files/pr70190.c:11:11: warning: incompatible integer to pointer conversion passing 'char' to parameter of type 'const void *' [-Wint-conversion]
+ l1: goto *(a[0]);
+          ^~~~~~~
+1 warning generated.
+TranslationUnitDecl 0x7fd58a016ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd58a017420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd58a017140 '__int128'
+|-TypedefDecl 0x7fd58a017490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd58a017160 'unsigned __int128'
+|-TypedefDecl 0x7fd58a017768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd58a017570 'struct __NSConstantString_tag'
+|   `-Record 0x7fd58a0174e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd58a017800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd58a0177c0 'char *'
+|   `-BuiltinType 0x7fd58a016f60 'char'
+|-TypedefDecl 0x7fd58a017ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd58a017a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd58a0178e0 'struct __va_list_tag'
+|     `-Record 0x7fd58a017858 '__va_list_tag'
+`-FunctionDecl 0x7fd58a067e00 <c_files/pr70190.c:5:1, line:13:1> line:6:1 fn1 'int ()'
+  `-CompoundStmt 0x7fd58a0688f0 <line:7:1, line:13:1>
+    |-DeclStmt 0x7fd58a067ff8 <line:8:3, col:26>
+    | `-VarDecl 0x7fd58a067f28 <col:3, col:21> col:15 used a 'char [4]' static cinit
+    |   `-StringLiteral 0x7fd58a067fc8 <col:21> 'char [4]' lvalue "foo"
+    |-DeclStmt 0x7fd58a068278 <line:9:3, col:36>
+    | `-VarDecl 0x7fd58a068060 <col:3, col:35> col:16 used b 'void *[2]' static cinit
+    |   `-InitListExpr 0x7fd58a0681e0 <col:22, col:35> 'void *[2]'
+    |     |-AddrLabelExpr 0x7fd58a068108 <col:24, col:26> 'void *' l1 0x7fd58a0680c0
+    |     `-AddrLabelExpr 0x7fd58a068170 <col:30, col:32> 'void *' l2 0x7fd58a068128
+    |-IndirectGotoStmt 0x7fd58a0683c8 <line:10:3, col:14>
+    | `-ImplicitCastExpr 0x7fd58a0683b0 <col:9, col:14> 'const void *' <BitCast>
+    |   `-ImplicitCastExpr 0x7fd58a068398 <col:9, col:14> 'void *' <LValueToRValue>
+    |     `-ParenExpr 0x7fd58a068348 <col:9, col:14> 'void *' lvalue
+    |       `-ArraySubscriptExpr 0x7fd58a068320 <col:10, col:13> 'void *' lvalue
+    |         |-ImplicitCastExpr 0x7fd58a068308 <col:10> 'void **' <ArrayToPointerDecay>
+    |         | `-DeclRefExpr 0x7fd58a068290 <col:10> 'void *[2]' lvalue Var 0x7fd58a068060 'b' 'void *[2]'
+    |         `-IntegerLiteral 0x7fd58a0682b8 <col:12> 'int' 1
+    |-LabelStmt 0x7fd58a068888 <line:11:2, col:17> 'l1'
+    | `-IndirectGotoStmt 0x7fd58a068870 <col:6, col:17>
+    |   `-ImplicitCastExpr 0x7fd58a0684a0 <col:12, col:17> 'const void *' <IntegralToPointer>
+    |     `-ImplicitCastExpr 0x7fd58a068488 <col:12, col:17> 'char' <LValueToRValue>
+    |       `-ParenExpr 0x7fd58a068468 <col:12, col:17> 'char' lvalue
+    |         `-ArraySubscriptExpr 0x7fd58a068440 <col:13, col:16> 'char' lvalue
+    |           |-ImplicitCastExpr 0x7fd58a068428 <col:13> 'char *' <ArrayToPointerDecay>
+    |           | `-DeclRefExpr 0x7fd58a0683e0 <col:13> 'char [4]' lvalue Var 0x7fd58a067f28 'a' 'char [4]'
+    |           `-IntegerLiteral 0x7fd58a068408 <col:15> 'int' 0
+    `-LabelStmt 0x7fd58a0688d8 <line:12:2, col:13> 'l2'
+      `-ReturnStmt 0x7fd58a0688c0 <col:6, col:13>
+        `-IntegerLiteral 0x7fd58a0688a0 <col:13> 'int' 0

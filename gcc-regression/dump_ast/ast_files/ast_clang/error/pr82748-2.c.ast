@@ -1,0 +1,110 @@
+c_files/pr82748-2.c:8:1: error: unknown type name '_Float128'
+_Float128
+^
+c_files/pr82748-2.c:9:10: error: unknown type name '_Float128'
+do_fabs (_Float128 a)
+         ^
+c_files/pr82748-2.c:11:10: error: use of unknown builtin '__builtin_fabsq' [-Wimplicit-function-declaration]
+  return __builtin_fabsq (a);
+         ^
+c_files/pr82748-2.c:14:1: error: unknown type name '_Float128'
+_Float128
+^
+c_files/pr82748-2.c:15:14: error: unknown type name '_Float128'
+do_copysign (_Float128 a, _Float128 b)
+             ^
+c_files/pr82748-2.c:15:27: error: unknown type name '_Float128'
+do_copysign (_Float128 a, _Float128 b)
+                          ^
+c_files/pr82748-2.c:17:10: error: use of unknown builtin '__builtin_copysignq' [-Wimplicit-function-declaration]
+  return __builtin_copysignq (a, b);
+         ^
+c_files/pr82748-2.c:20:1: error: unknown type name '_Float128'
+_Float128
+^
+c_files/pr82748-2.c:23:10: error: use of unknown builtin '__builtin_infq' [-Wimplicit-function-declaration]
+  return __builtin_infq ();
+         ^
+c_files/pr82748-2.c:23:10: note: did you mean '__builtin_fabsq'?
+c_files/pr82748-2.c:11:10: note: '__builtin_fabsq' declared here
+  return __builtin_fabsq (a);
+         ^
+c_files/pr82748-2.c:26:1: error: unknown type name '_Float128'
+_Float128
+^
+c_files/pr82748-2.c:29:10: error: use of unknown builtin '__builtin_nanq' [-Wimplicit-function-declaration]
+  return __builtin_nanq ("");
+         ^
+c_files/pr82748-2.c:32:1: error: unknown type name '_Float128'
+_Float128
+^
+c_files/pr82748-2.c:35:10: error: use of unknown builtin '__builtin_nansq' [-Wimplicit-function-declaration]
+  return __builtin_nansq ("");
+         ^
+c_files/pr82748-2.c:35:10: note: did you mean '__builtin_nanq'?
+c_files/pr82748-2.c:29:10: note: '__builtin_nanq' declared here
+  return __builtin_nanq ("");
+         ^
+c_files/pr82748-2.c:38:1: error: unknown type name '_Float128'
+_Float128
+^
+c_files/pr82748-2.c:41:10: error: use of unknown builtin '__builtin_huge_valq' [-Wimplicit-function-declaration]
+  return __builtin_huge_valq ();
+         ^
+15 errors generated.
+TranslationUnitDecl 0x7fc8b30264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc8b3026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc8b3026740 '__int128'
+|-TypedefDecl 0x7fc8b3026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc8b3026760 'unsigned __int128'
+|-TypedefDecl 0x7fc8b3026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc8b3026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc8b3026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc8b3026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc8b3026dc0 'char *'
+|   `-BuiltinType 0x7fc8b3026560 'char'
+|-TypedefDecl 0x7fc8b30270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc8b3027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc8b3026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc8b3026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc8b301c830 <c_files/pr82748-2.c:8:1, line:12:1> line:9:1 invalid do_fabs 'int (int)'
+| |-ParmVarDecl 0x7fc8b3027150 <col:10, col:20> col:20 invalid a 'int'
+| `-CompoundStmt 0x7fc8b301ca20 <line:10:1, line:12:1>
+|-FunctionDecl 0x7fc8b301c960 <<invalid sloc>> line:11:10 implicit used __builtin_fabsq 'int ()'
+|-FunctionDecl 0x7fc8b301cba8 <line:14:1, line:18:1> line:15:1 invalid do_copysign 'int (int, int)'
+| |-ParmVarDecl 0x7fc8b301ca50 <col:14, col:24> col:24 invalid a 'int'
+| |-ParmVarDecl 0x7fc8b301cac8 <col:27, col:37> col:37 invalid b 'int'
+| `-CompoundStmt 0x7fc8b301cd38 <line:16:1, line:18:1>
+|-FunctionDecl 0x7fc8b301cc78 <<invalid sloc>> line:17:10 implicit used __builtin_copysignq 'int ()'
+|-FunctionDecl 0x7fc8b301ce18 <line:20:1, line:24:1> line:21:1 invalid do_inf 'int (void)'
+| `-CompoundStmt 0x7fc8b301d020 <line:22:1, line:24:1>
+|   `-ReturnStmt 0x7fc8b301d008 <line:23:3, col:26>
+|     `-CallExpr 0x7fc8b301cfe0 <col:10, col:26> 'int'
+|       `-ImplicitCastExpr 0x7fc8b301cfc8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7fc8b301cf70 <col:10> 'int ()' Function 0x7fc8b301ced8 '__builtin_infq' 'int ()'
+|-FunctionDecl 0x7fc8b301ced8 <<invalid sloc>> col:10 implicit used __builtin_infq 'int ()'
+|-FunctionDecl 0x7fc8b301d0d8 <line:26:1, line:30:1> line:27:1 invalid do_nan 'int (void)'
+| `-CompoundStmt 0x7fc8b301d338 <line:28:1, line:30:1>
+|   `-ReturnStmt 0x7fc8b301d320 <line:29:3, col:28>
+|     `-CallExpr 0x7fc8b301d2d8 <col:10, col:28> 'int'
+|       |-ImplicitCastExpr 0x7fc8b301d2c0 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fc8b301d230 <col:10> 'int ()' Function 0x7fc8b301d198 '__builtin_nanq' 'int ()'
+|       `-ImplicitCastExpr 0x7fc8b301d308 <col:26> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7fc8b301d298 <col:26> 'char [1]' lvalue ""
+|-FunctionDecl 0x7fc8b301d198 <<invalid sloc>> col:10 implicit used __builtin_nanq 'int ()'
+|-FunctionDecl 0x7fc8b301d3f0 <line:32:1, line:36:1> line:33:1 invalid do_nans 'int (void)'
+| `-CompoundStmt 0x7fc8b301d610 <line:34:1, line:36:1>
+|   `-ReturnStmt 0x7fc8b301d5f8 <line:35:3, col:29>
+|     `-CallExpr 0x7fc8b301d5b0 <col:10, col:29> 'int'
+|       |-ImplicitCastExpr 0x7fc8b301d598 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fc8b301d548 <col:10> 'int ()' Function 0x7fc8b301d4b0 '__builtin_nansq' 'int ()'
+|       `-ImplicitCastExpr 0x7fc8b301d5e0 <col:27> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7fc8b301d570 <col:27> 'char [1]' lvalue ""
+|-FunctionDecl 0x7fc8b301d4b0 <<invalid sloc>> col:10 implicit used __builtin_nansq 'int ()'
+|-FunctionDecl 0x7fc8b301d6c8 <line:38:1, line:42:1> line:39:1 invalid do_huge_val 'int (void)'
+| `-CompoundStmt 0x7fc8b301d918 <line:40:1, line:42:1>
+|   `-ReturnStmt 0x7fc8b301d900 <line:41:3, col:31>
+|     `-CallExpr 0x7fc8b301d8d8 <col:10, col:31> 'int'
+|       `-ImplicitCastExpr 0x7fc8b301d8c0 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7fc8b301d898 <col:10> 'int ()' Function 0x7fc8b301d800 '__builtin_huge_valq' 'int ()'
+`-FunctionDecl 0x7fc8b301d800 <<invalid sloc>> col:10 implicit used __builtin_huge_valq 'int ()'

@@ -1,0 +1,54 @@
+FileAST: 
+  Decl: buffer, [], [], []
+    ArrayDecl: []
+      TypeDecl: buffer, []
+        IdentifierType: ['int']
+      BinaryOp: *
+        Constant: int, 256
+        Constant: int, 256
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: dest, [], [], []
+        PtrDecl: []
+          TypeDecl: dest, []
+            IdentifierType: ['int']
+        ID: buffer
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: x
+          Constant: int, 0
+        BinaryOp: <
+          ID: x
+          Constant: int, 256
+        UnaryOp: p++
+          ID: x
+        For: 
+          Assignment: =
+            ID: y
+            Constant: int, 0
+          BinaryOp: <
+            ID: y
+            Constant: int, 256
+          UnaryOp: p++
+            ID: y
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: dest
+            Constant: int, 0
+      Return: 
+        Constant: int, 0

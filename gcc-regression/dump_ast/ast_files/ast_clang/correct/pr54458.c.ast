@@ -1,0 +1,61 @@
+TranslationUnitDecl 0x7f82ae0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f82ae026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f82ae026740 '__int128'
+|-TypedefDecl 0x7f82ae026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f82ae026760 'unsigned __int128'
+|-TypedefDecl 0x7f82ae026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f82ae026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f82ae026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f82ae026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f82ae026dc0 'char *'
+|   `-BuiltinType 0x7f82ae026560 'char'
+|-TypedefDecl 0x7f82ae0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f82ae027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f82ae026ee0 'struct __va_list_tag'
+|     `-Record 0x7f82ae026e58 '__va_list_tag'
+|-VarDecl 0x7f82ae027138 <c_files/pr54458.c:3:1, col:14> col:14 used a 'unsigned int'
+|-VarDecl 0x7f82ae825a00 <col:1, col:17> col:17 used b 'unsigned int'
+|-VarDecl 0x7f82ae825a78 <col:1, col:20> col:20 used c 'unsigned int'
+`-FunctionDecl 0x7f82ae825bd0 <line:5:1, line:20:1> line:6:1 foo 'void (unsigned int)'
+  |-ParmVarDecl 0x7f82ae825b10 <col:6, col:19> col:19 used x 'unsigned int'
+  `-CompoundStmt 0x7f82ae8260e8 <line:7:1, line:20:1>
+    `-DoStmt 0x7f82ae8260c8 <line:8:3, line:19:11>
+      |-CompoundStmt 0x7f82ae826080 <line:9:5, line:18:5>
+      | |-IfStmt 0x7f82ae825fb8 <line:10:7, line:15:4>
+      | | |-<<<NULL>>>
+      | | |-<<<NULL>>>
+      | | |-ConditionalOperator 0x7f82ae825de8 <line:10:11, col:28> 'unsigned int'
+      | | | |-BinaryOperator 0x7f82ae825ce8 <col:11, col:16> 'int' '=='
+      | | | | |-ImplicitCastExpr 0x7f82ae825cb8 <col:11> 'unsigned int' <LValueToRValue>
+      | | | | | `-DeclRefExpr 0x7f82ae825c70 <col:11> 'unsigned int' lvalue Var 0x7f82ae027138 'a' 'unsigned int'
+      | | | | `-ImplicitCastExpr 0x7f82ae825cd0 <col:16> 'unsigned int' <IntegralCast>
+      | | | |   `-IntegerLiteral 0x7f82ae825c98 <col:16> 'int' 0
+      | | | |-ImplicitCastExpr 0x7f82ae825dd0 <col:20> 'unsigned int' <IntegralCast>
+      | | | | `-IntegerLiteral 0x7f82ae825d10 <col:20> 'int' 1
+      | | | `-BinaryOperator 0x7f82ae825da8 <col:24, col:28> 'unsigned int' '%'
+      | | |   |-ImplicitCastExpr 0x7f82ae825d90 <col:24> 'unsigned int' <IntegralCast>
+      | | |   | `-IntegerLiteral 0x7f82ae825d30 <col:24> 'int' 1
+      | | |   `-ImplicitCastExpr 0x7f82ae825d78 <col:28> 'unsigned int' <LValueToRValue>
+      | | |     `-DeclRefExpr 0x7f82ae825d50 <col:28> 'unsigned int' lvalue Var 0x7f82ae027138 'a' 'unsigned int'
+      | | |-ForStmt 0x7f82ae825f10 <line:11:2, line:12:8>
+      | | | |-<<<NULL>>>
+      | | | |-<<<NULL>>>
+      | | | |-ImplicitCastExpr 0x7f82ae825e40 <line:11:9> 'unsigned int' <LValueToRValue>
+      | | | | `-DeclRefExpr 0x7f82ae825e18 <col:9> 'unsigned int' lvalue Var 0x7f82ae825a00 'b' 'unsigned int'
+      | | | |-UnaryOperator 0x7f82ae825e80 <col:12, col:13> 'unsigned int' postfix '--'
+      | | | | `-DeclRefExpr 0x7f82ae825e58 <col:12> 'unsigned int' lvalue Var 0x7f82ae825a00 'b' 'unsigned int'
+      | | | `-LabelStmt 0x7f82ae825ef8 <line:12:4, col:8> 'lab'
+      | | |   `-NullStmt 0x7f82ae825ea0 <col:8>
+      | | `-WhileStmt 0x7f82ae825f98 <line:14:2, line:15:4>
+      | |   |-<<<NULL>>>
+      | |   |-ImplicitCastExpr 0x7f82ae825f70 <line:14:9> 'unsigned int' <LValueToRValue>
+      | |   | `-DeclRefExpr 0x7f82ae825f48 <col:9> 'unsigned int' lvalue ParmVar 0x7f82ae825b10 'x' 'unsigned int'
+      | |   `-NullStmt 0x7f82ae825f88 <line:15:4>
+      | `-IfStmt 0x7f82ae826048 <line:16:7, line:17:7>
+      |   |-<<<NULL>>>
+      |   |-<<<NULL>>>
+      |   |-ImplicitCastExpr 0x7f82ae826018 <line:16:11> 'unsigned int' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7f82ae825ff0 <col:11> 'unsigned int' lvalue Var 0x7f82ae825a78 'c' 'unsigned int'
+      |   |-GotoStmt 0x7f82ae826030 <line:17:2, col:7> 'lab' 0x7f82ae825eb0
+      |   `-<<<NULL>>>
+      `-IntegerLiteral 0x7f82ae8260a8 <line:19:10> 'int' 1

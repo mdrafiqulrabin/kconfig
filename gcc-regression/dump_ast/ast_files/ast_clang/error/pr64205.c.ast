@@ -1,0 +1,34 @@
+c_files/pr64205.c:8:3: error: GNU decimal type extension not supported
+  _Decimal32 sd;
+  ^
+c_files/pr64205.c:13:14: error: GNU decimal type extension not supported
+__decoded32 (_Decimal32 a)
+             ^
+2 errors generated.
+TranslationUnitDecl 0x7fdcd58264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdcd5826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdcd5826740 '__int128'
+|-TypedefDecl 0x7fdcd5826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdcd5826760 'unsigned __int128'
+|-TypedefDecl 0x7fdcd5826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdcd5826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdcd5826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdcd5826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdcd5826dc0 'char *'
+|   `-BuiltinType 0x7fdcd5826560 'char'
+|-TypedefDecl 0x7fdcd58270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdcd5827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdcd5826ee0 'struct __va_list_tag'
+|     `-Record 0x7fdcd5826e58 '__va_list_tag'
+|-RecordDecl 0x7fdcd5827120 <c_files/pr64205.c:6:1, line:10:1> line:6:7 invalid union ieee754r_Decimal32 definition
+| |-FieldDecl 0x7fdcd6025a00 <line:8:3, col:14> col:14 invalid sd 'int'
+| `-FieldDecl 0x7fdcd6025a60 <line:9:3, col:16> col:16 referenced cc0 'unsigned int'
+`-FunctionDecl 0x7fdcd6025b88 <line:12:1, line:18:1> line:13:1 invalid __decoded32 'unsigned int (int)'
+  |-ParmVarDecl 0x7fdcd6025ac0 <col:14, col:25> col:25 invalid a 'int'
+  `-CompoundStmt 0x7fdcd6025db0 <line:14:1, line:18:1>
+    |-DeclStmt 0x7fdcd6025ce0 <line:15:5, col:31>
+    | `-VarDecl 0x7fdcd6025c80 <col:5, col:30> col:30 used d 'union ieee754r_Decimal32':'union ieee754r_Decimal32'
+    `-ReturnStmt 0x7fdcd6025d98 <line:17:5, col:14>
+      `-ImplicitCastExpr 0x7fdcd6025d80 <col:12, col:14> 'unsigned int' <LValueToRValue>
+        `-MemberExpr 0x7fdcd6025d48 <col:12, col:14> 'unsigned int' lvalue .cc0 0x7fdcd6025a60
+          `-DeclRefExpr 0x7fdcd6025d20 <col:12> 'union ieee754r_Decimal32':'union ieee754r_Decimal32' lvalue Var 0x7fdcd6025c80 'd' 'union ieee754r_Decimal32':'union ieee754r_Decimal32'

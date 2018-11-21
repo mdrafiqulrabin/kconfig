@@ -1,0 +1,27 @@
+FileAST: 
+  Decl: data, [], [], []
+    ArrayDecl: []
+      TypeDecl: data, []
+        IdentifierType: ['int']
+      Constant: int, 4096
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: ==
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'long']
+            UnaryOp: &
+              ArrayRef: 
+                ID: data
+                Constant: int, 0
+          Constant: int, 0xdeadbea0U

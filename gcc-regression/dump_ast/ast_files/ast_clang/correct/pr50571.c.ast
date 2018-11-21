@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7f98050264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9805026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9805026740 '__int128'
+|-TypedefDecl 0x7f9805026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9805026760 'unsigned __int128'
+|-TypedefDecl 0x7f9805026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9805026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9805026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9805026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9805026dc0 'char *'
+|   `-BuiltinType 0x7f9805026560 'char'
+|-TypedefDecl 0x7f98050270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9805027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9805026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9805026e58 '__va_list_tag'
+|-VarDecl 0x7f9805825a00 <c_files/pr50571.c:5:1, col:40> col:18 used var 'const int [4]' static cinit
+| `-InitListExpr 0x7f9805825b80 <col:27, col:40> 'const int [4]'
+|   |-IntegerLiteral 0x7f9805825aa0 <col:29> 'int' 1
+|   |-IntegerLiteral 0x7f9805825ac0 <col:32> 'int' 2
+|   |-IntegerLiteral 0x7f9805825ae0 <col:35> 'int' 3
+|   `-IntegerLiteral 0x7f9805825b00 <col:38> 'int' 4
+`-FunctionDecl 0x7f9805825ca0 <line:7:1, line:11:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7f9805825f60 <line:9:1, line:11:1>
+    `-GCCAsmStmt 0x7f9805825f00 <line:10:3, col:44>
+      `-UnaryOperator 0x7f9805825ee0 <col:31, col:40> 'int' lvalue prefix '*'
+        `-CStyleCastExpr 0x7f9805825eb8 <col:32, col:40> 'int *' <BitCast>
+          `-ImplicitCastExpr 0x7f9805825e70 <col:40> 'const int *' <ArrayToPointerDecay>
+            `-DeclRefExpr 0x7f9805825e08 <col:40> 'const int [4]' lvalue Var 0x7f9805825a00 'var' 'const int [4]'

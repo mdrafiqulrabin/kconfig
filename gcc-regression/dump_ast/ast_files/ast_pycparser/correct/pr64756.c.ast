@@ -1,0 +1,89 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: tmp, [], [], []
+    PtrDecl: []
+      TypeDecl: tmp, []
+        IdentifierType: ['int']
+  Decl: c, [], [], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+    UnaryOp: &
+      ID: tmp
+  Decl: d, ['volatile'], [], []
+    TypeDecl: d, ['volatile']
+      IdentifierType: ['int']
+  Decl: e, [], ['static'], []
+    PtrDecl: []
+      PtrDecl: ['volatile']
+        TypeDecl: e, []
+          IdentifierType: ['int']
+    UnaryOp: &
+      ID: tmp
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: fn1, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['int']
+      For: 
+        BinaryOp: <
+          ID: f
+          Constant: int, 1
+        UnaryOp: p++
+          ID: f
+        For: 
+          Assignment: =
+            ID: g
+            Constant: int, 1
+          BinaryOp: >=
+            ID: g
+            Constant: int, 0
+          UnaryOp: p--
+            ID: g
+          Compound: 
+            BinaryOp: ||
+              ID: d
+              ID: d
+            Assignment: =
+              UnaryOp: *
+                ID: c
+              ID: p
+            If: 
+              BinaryOp: !=
+                ID: tmp
+                UnaryOp: &
+                  ID: a
+              FuncCall: 
+                ID: __builtin_abort
+            Assignment: =
+              UnaryOp: *
+                ID: e
+              Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: fn1
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7ff6bd0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff6bd026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff6bd026740 '__int128'
+|-TypedefDecl 0x7ff6bd026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff6bd026760 'unsigned __int128'
+|-TypedefDecl 0x7ff6bd026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff6bd026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff6bd026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff6bd026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff6bd026dc0 'char *'
+|   `-BuiltinType 0x7ff6bd026560 'char'
+|-TypedefDecl 0x7ff6bd0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff6bd027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff6bd026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff6bd026e58 '__va_list_tag'
+|-FunctionDecl 0x7ff6bd825be0 <c_files/pr53859.c:6:1, col:29> col:6 used bar 'void (int, int, char *, int)'
+| |-ParmVarDecl 0x7ff6bd027138 <col:11> col:14 'int'
+| |-ParmVarDecl 0x7ff6bd825a00 <col:15> col:18 'int'
+| |-ParmVarDecl 0x7ff6bd825a78 <col:19, col:23> col:25 'char *'
+| `-ParmVarDecl 0x7ff6bd825af0 <col:26> col:29 'int'
+`-FunctionDecl 0x7ff6bd825db0 <line:8:1, line:11:1> line:8:6 foo 'void (char)'
+  |-ParmVarDecl 0x7ff6bd825ce8 <col:11, col:16> col:16 used c 'char'
+  `-CompoundStmt 0x7ff6bd825fa8 <line:9:1, line:11:1>
+    `-CallExpr 0x7ff6bd825f60 <line:10:5, col:18> 'void'
+      |-ImplicitCastExpr 0x7ff6bd825f48 <col:5> 'void (*)(int, int, char *, int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff6bd825e50 <col:5> 'void (int, int, char *, int)' Function 0x7ff6bd825be0 'bar' 'void (int, int, char *, int)'
+      |-IntegerLiteral 0x7ff6bd825e78 <col:10> 'int' 1
+      |-IntegerLiteral 0x7ff6bd825e98 <col:12> 'int' 2
+      |-UnaryOperator 0x7ff6bd825ee0 <col:14, col:15> 'char *' prefix '&'
+      | `-DeclRefExpr 0x7ff6bd825eb8 <col:15> 'char' lvalue ParmVar 0x7ff6bd825ce8 'c' 'char'
+      `-IntegerLiteral 0x7ff6bd825f00 <col:17> 'int' 3

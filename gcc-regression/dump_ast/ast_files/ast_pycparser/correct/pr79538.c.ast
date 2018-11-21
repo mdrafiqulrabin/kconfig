@@ -1,0 +1,66 @@
+FileAST: 
+  Decl: a3, [], [], []
+    ArrayDecl: []
+      TypeDecl: a3, []
+        IdentifierType: ['char']
+      Constant: int, 3
+  Decl: a4, [], [], []
+    ArrayDecl: []
+      TypeDecl: a4, []
+        IdentifierType: ['char']
+      Constant: int, 4
+  Decl: d, [], [], []
+    ArrayDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['char']
+      Constant: int, 3
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: s, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: s, ['const']
+            IdentifierType: ['char']
+        TernaryOp: 
+          BinaryOp: <
+            ID: i
+            Constant: int, 0
+          ID: a3
+          ID: a4
+      FuncCall: 
+        ID: __builtin_sprintf
+        ExprList: 
+          ID: d
+          Constant: string, "%s"
+          ID: s
+      Return: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: des, [], [], []
+        ArrayDecl: []
+          TypeDecl: des, []
+            IdentifierType: ['char']
+          Constant: int, 3
+      Decl: src, [], [], []
+        ArrayDecl: []
+          TypeDecl: src, []
+            IdentifierType: ['char']
+        Constant: string, "abcd"
+      FuncCall: 
+        ID: __builtin_sprintf
+        ExprList: 
+          ID: des
+          Constant: string, "%s"
+          ID: src
+      Return: 

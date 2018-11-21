@@ -1,0 +1,102 @@
+c_files/pr83926.c:7:23: warning: unknown attribute 'altivec' ignored [-Wunknown-attributes]
+sdiv (__attribute__ ((altivec(vector__))) long long a,
+                      ^
+c_files/pr83926.c:8:23: warning: unknown attribute 'altivec' ignored [-Wunknown-attributes]
+      __attribute__ ((altivec(vector__))) long long b)
+                      ^
+c_files/pr83926.c:6:17: warning: unknown attribute 'altivec' ignored [-Wunknown-attributes]
+__attribute__ ((altivec(vector__))) long long
+                ^
+c_files/pr83926.c:10:10: error: use of unknown builtin '__builtin_vsx_div_2di' [-Wimplicit-function-declaration]
+  return __builtin_vsx_div_2di (a, b);
+         ^
+c_files/pr83926.c:13:23: warning: unknown attribute 'altivec' ignored [-Wunknown-attributes]
+udiv (__attribute__ ((altivec(vector__))) unsigned long long a,
+                      ^
+c_files/pr83926.c:14:23: warning: unknown attribute 'altivec' ignored [-Wunknown-attributes]
+      __attribute__ ((altivec(vector__))) unsigned long long b)
+                      ^
+c_files/pr83926.c:12:17: warning: unknown attribute 'altivec' ignored [-Wunknown-attributes]
+__attribute__ ((altivec(vector__))) unsigned long long
+                ^
+c_files/pr83926.c:16:10: error: use of unknown builtin '__builtin_vsx_udiv_2di' [-Wimplicit-function-declaration]
+  return __builtin_vsx_udiv_2di (a, b);
+         ^
+c_files/pr83926.c:16:10: note: did you mean '__builtin_vsx_div_2di'?
+c_files/pr83926.c:10:10: note: '__builtin_vsx_div_2di' declared here
+  return __builtin_vsx_div_2di (a, b);
+         ^
+c_files/pr83926.c:19:23: warning: unknown attribute 'altivec' ignored [-Wunknown-attributes]
+smul (__attribute__ ((altivec(vector__))) long long a,
+                      ^
+c_files/pr83926.c:20:23: warning: unknown attribute 'altivec' ignored [-Wunknown-attributes]
+      __attribute__ ((altivec(vector__))) long long b)
+                      ^
+c_files/pr83926.c:18:17: warning: unknown attribute 'altivec' ignored [-Wunknown-attributes]
+__attribute__ ((altivec(vector__))) long long
+                ^
+c_files/pr83926.c:22:10: error: use of unknown builtin '__builtin_vsx_mul_2di' [-Wimplicit-function-declaration]
+  return __builtin_vsx_mul_2di (a, b);
+         ^
+c_files/pr83926.c:22:10: note: did you mean '__builtin_vsx_div_2di'?
+c_files/pr83926.c:10:10: note: '__builtin_vsx_div_2di' declared here
+  return __builtin_vsx_div_2di (a, b);
+         ^
+9 warnings and 3 errors generated.
+TranslationUnitDecl 0x7fdc420264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdc42026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdc42026740 '__int128'
+|-TypedefDecl 0x7fdc42026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdc42026760 'unsigned __int128'
+|-TypedefDecl 0x7fdc42026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdc42026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdc42026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdc42026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdc42026dc0 'char *'
+|   `-BuiltinType 0x7fdc42026560 'char'
+|-TypedefDecl 0x7fdc420270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdc42027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdc42026ee0 'struct __va_list_tag'
+|     `-Record 0x7fdc42026e58 '__va_list_tag'
+|-FunctionDecl 0x7fdc42826ad8 <c_files/pr83926.c:6:1, line:11:1> line:7:1 sdiv 'long long (long long, long long)'
+| |-ParmVarDecl 0x7fdc42027158 <col:7, col:53> col:53 used a 'long long'
+| |-ParmVarDecl 0x7fdc42826a00 <line:8:7, col:53> col:53 used b 'long long'
+| `-CompoundStmt 0x7fdc42826e18 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fdc42826e00 <line:10:3, col:37>
+|     `-ImplicitCastExpr 0x7fdc42826de8 <col:10, col:37> 'long long' <IntegralCast>
+|       `-CallExpr 0x7fdc42826d80 <col:10, col:37> 'int'
+|         |-ImplicitCastExpr 0x7fdc42826d68 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fdc42826cc8 <col:10> 'int ()' Function 0x7fdc42826c30 '__builtin_vsx_div_2di' 'int ()'
+|         |-ImplicitCastExpr 0x7fdc42826db8 <col:33> 'long long' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fdc42826cf0 <col:33> 'long long' lvalue ParmVar 0x7fdc42027158 'a' 'long long'
+|         `-ImplicitCastExpr 0x7fdc42826dd0 <col:36> 'long long' <LValueToRValue>
+|           `-DeclRefExpr 0x7fdc42826d18 <col:36> 'long long' lvalue ParmVar 0x7fdc42826a00 'b' 'long long'
+|-FunctionDecl 0x7fdc42826c30 <<invalid sloc>> col:10 implicit used __builtin_vsx_div_2di 'int ()'
+|-FunctionDecl 0x7fdc42826fd8 <line:12:1, line:17:1> line:13:1 udiv 'unsigned long long (unsigned long long, unsigned long long)'
+| |-ParmVarDecl 0x7fdc42826e70 <col:7, col:62> col:62 used a 'unsigned long long'
+| |-ParmVarDecl 0x7fdc42826ef8 <line:14:7, col:62> col:62 used b 'unsigned long long'
+| `-CompoundStmt 0x7fdc42827268 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7fdc42827250 <line:16:3, col:38>
+|     `-ImplicitCastExpr 0x7fdc42827238 <col:10, col:38> 'unsigned long long' <IntegralCast>
+|       `-CallExpr 0x7fdc428271d0 <col:10, col:38> 'int'
+|         |-ImplicitCastExpr 0x7fdc428271b8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fdc42827140 <col:10> 'int ()' Function 0x7fdc428270a8 '__builtin_vsx_udiv_2di' 'int ()'
+|         |-ImplicitCastExpr 0x7fdc42827208 <col:34> 'unsigned long long' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fdc42827168 <col:34> 'unsigned long long' lvalue ParmVar 0x7fdc42826e70 'a' 'unsigned long long'
+|         `-ImplicitCastExpr 0x7fdc42827220 <col:37> 'unsigned long long' <LValueToRValue>
+|           `-DeclRefExpr 0x7fdc42827190 <col:37> 'unsigned long long' lvalue ParmVar 0x7fdc42826ef8 'b' 'unsigned long long'
+|-FunctionDecl 0x7fdc428270a8 <<invalid sloc>> col:10 implicit used __builtin_vsx_udiv_2di 'int ()'
+|-FunctionDecl 0x7fdc428273e0 <line:18:1, line:23:1> line:19:1 smul 'long long (long long, long long)'
+| |-ParmVarDecl 0x7fdc428272c0 <col:7, col:53> col:53 used a 'long long'
+| |-ParmVarDecl 0x7fdc42827348 <line:20:7, col:53> col:53 used b 'long long'
+| `-CompoundStmt 0x7fdc42827670 <line:21:1, line:23:1>
+|   `-ReturnStmt 0x7fdc42827658 <line:22:3, col:37>
+|     `-ImplicitCastExpr 0x7fdc42827640 <col:10, col:37> 'long long' <IntegralCast>
+|       `-CallExpr 0x7fdc428275d8 <col:10, col:37> 'int'
+|         |-ImplicitCastExpr 0x7fdc428275c0 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fdc42827548 <col:10> 'int ()' Function 0x7fdc428274b0 '__builtin_vsx_mul_2di' 'int ()'
+|         |-ImplicitCastExpr 0x7fdc42827610 <col:33> 'long long' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fdc42827570 <col:33> 'long long' lvalue ParmVar 0x7fdc428272c0 'a' 'long long'
+|         `-ImplicitCastExpr 0x7fdc42827628 <col:36> 'long long' <LValueToRValue>
+|           `-DeclRefExpr 0x7fdc42827598 <col:36> 'long long' lvalue ParmVar 0x7fdc42827348 'b' 'long long'
+`-FunctionDecl 0x7fdc428274b0 <<invalid sloc>> col:10 implicit used __builtin_vsx_mul_2di 'int ()'

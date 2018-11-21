@@ -1,0 +1,25 @@
+FileAST: 
+  Decl: a, [], ['extern'], []
+    TypeDecl: a, []
+      IdentifierType: ['float']
+  Decl: b, [], ['extern'], []
+    TypeDecl: b, []
+      IdentifierType: ['float']
+  Decl: c, [], ['extern'], []
+    TypeDecl: c, []
+      IdentifierType: ['float']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: c
+        BinaryOp: *
+          ID: a
+          ID: b

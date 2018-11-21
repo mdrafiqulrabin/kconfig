@@ -1,0 +1,32 @@
+c_files/pr56022.c:6:2: warning: control reaches end of non-void function [-Wreturn-type]
+{}
+ ^
+c_files/pr56022.c:7:24: warning: control reaches end of non-void function [-Wreturn-type]
+__m256 foo0(__m256 a) {}
+                       ^
+2 warnings generated.
+TranslationUnitDecl 0x7ff459025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff459026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff459025d40 '__int128'
+|-TypedefDecl 0x7ff459026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff459025d60 'unsigned __int128'
+|-TypedefDecl 0x7ff459026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff459026170 'struct __NSConstantString_tag'
+|   `-Record 0x7ff4590260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff459026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff4590263c0 'char *'
+|   `-BuiltinType 0x7ff459025b60 'char'
+|-TypedefDecl 0x7ff4590266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff459026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff4590264e0 'struct __va_list_tag'
+|     `-Record 0x7ff459026458 '__va_list_tag'
+|-TypedefDecl 0x7ff459026778 <c_files/pr56022.c:4:1, col:15> col:15 referenced __m256 '__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| |-VectorType 0x7ff459026740 '__attribute__((__vector_size__(8 * sizeof(float)))) float' 8
+| | `-BuiltinType 0x7ff459025cc0 'float'
+| `-MayAliasAttr 0x7ff4590267d0 <col:60>
+|-FunctionDecl 0x7ff459077b00 <line:5:1, line:6:2> line:5:46 currentImplementationSupported 'int ()' static
+| |-CompoundStmt 0x7ff459077c30 <line:6:1, col:2>
+| `-TargetAttr 0x7ff459077b98 <line:5:16, col:31> "no-avx"
+`-FunctionDecl 0x7ff459077d80 <line:7:1, col:24> col:8 foo0 '__m256 (__m256)'
+  |-ParmVarDecl 0x7ff459077c80 <col:13, col:20> col:20 a '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+  `-CompoundStmt 0x7ff459077e20 <col:23, col:24>

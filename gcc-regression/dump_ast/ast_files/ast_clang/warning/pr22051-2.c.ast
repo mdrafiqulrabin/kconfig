@@ -1,0 +1,39 @@
+c_files/pr22051-2.c:8:7: warning: incompatible pointer to integer conversion initializing 'int' with an expression of type 'void (*)(void)' [-Wint-conversion]
+  int r = q;
+      ^   ~
+1 warning generated.
+TranslationUnitDecl 0x7f97818264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9781826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9781826740 '__int128'
+|-TypedefDecl 0x7f9781826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9781826760 'unsigned __int128'
+|-TypedefDecl 0x7f9781826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9781826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9781826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9781826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9781826dc0 'char *'
+|   `-BuiltinType 0x7f9781826560 'char'
+|-TypedefDecl 0x7f97818270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9781827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9781826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9781826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9782025a00 <c_files/pr22051-2.c:4:1, col:12> col:7 arf 'void *()'
+`-FunctionDecl 0x7f9782025d48 <line:5:1, line:14:1> line:6:1 foo 'int (void (*)(void))'
+  |-ParmVarDecl 0x7f9782025c38 <col:5, col:19> col:12 used q 'void (*)(void)'
+  `-CompoundStmt 0x7f97820263b8 <line:7:1, line:14:1>
+    |-DeclStmt 0x7f9782026270 <line:8:3, col:12>
+    | `-VarDecl 0x7f9782025e00 <col:3, col:11> col:7 used r 'int' cinit
+    |   `-ImplicitCastExpr 0x7f9782025ea0 <col:11> 'int' <PointerToIntegral>
+    |     `-ImplicitCastExpr 0x7f9782025e88 <col:11> 'void (*)(void)' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9782025e60 <col:11> 'void (*)(void)' lvalue ParmVar 0x7f9782025c38 'q' 'void (*)(void)'
+    `-IfStmt 0x7f9782026380 <line:10:3, line:13:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f97820262e8 <line:10:7, col:12> 'int' '!='
+      | |-ImplicitCastExpr 0x7f97820262d0 <col:7> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f9782026288 <col:7> 'int' lvalue Var 0x7f9782025e00 'r' 'int'
+      | `-IntegerLiteral 0x7f97820262b0 <col:12> 'int' 0
+      |-ReturnStmt 0x7f9782026330 <line:11:5, col:12>
+      | `-IntegerLiteral 0x7f9782026310 <col:12> 'int' 1
+      `-ReturnStmt 0x7f9782026368 <line:13:5, col:12>
+        `-IntegerLiteral 0x7f9782026348 <col:12> 'int' 2

@@ -1,0 +1,83 @@
+TranslationUnitDecl 0x7fe9618264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe961826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe961826740 '__int128'
+|-TypedefDecl 0x7fe961826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe961826760 'unsigned __int128'
+|-TypedefDecl 0x7fe961826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe961826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe961826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe961826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe961826dc0 'char *'
+|   `-BuiltinType 0x7fe961826560 'char'
+|-TypedefDecl 0x7fe9618270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe961827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe961826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe961826e58 '__va_list_tag'
+|-FunctionDecl 0x7fe961877400 <c_files/pr29798.c:1:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe961877498 prev 0x7fe961877400 <col:1, col:20> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fe9618775b0 <line:3:1, line:26:1> line:4:1 main 'int ()'
+  `-CompoundStmt 0x7fe961878050 <line:5:1, line:26:1>
+    |-DeclStmt 0x7fe961877700 <line:6:3, col:8>
+    | `-VarDecl 0x7fe9618776a0 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7fe961877790 <line:7:3, col:16>
+    | `-VarDecl 0x7fe961877730 <col:3, col:10> col:10 used oldrho 'double'
+    |-DeclStmt 0x7fe961877840 <line:8:3, col:20>
+    | `-VarDecl 0x7fe9618777c0 <col:3, col:17> col:10 used beta 'double' cinit
+    |   `-FloatingLiteral 0x7fe961877820 <col:17> 'double' 0.000000e+00
+    |-DeclStmt 0x7fe9618778f0 <line:9:3, col:20>
+    | `-VarDecl 0x7fe961877870 <col:3, col:17> col:10 used work 'double' cinit
+    |   `-FloatingLiteral 0x7fe9618778d0 <col:17> 'double' 1.000000e+00
+    |-ForStmt 0x7fe961877fe0 <line:10:3, line:24:5>
+    | |-BinaryOperator 0x7fe961877950 <line:10:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fe961877908 <col:8> 'int' lvalue Var 0x7fe9618776a0 'i' 'int'
+    | | `-IntegerLiteral 0x7fe961877930 <col:12> 'int' 1
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe9618779d8 <col:15, col:20> 'int' '<='
+    | | |-ImplicitCastExpr 0x7fe9618779c0 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fe961877978 <col:15> 'int' lvalue Var 0x7fe9618776a0 'i' 'int'
+    | | `-IntegerLiteral 0x7fe9618779a0 <col:20> 'int' 2
+    | |-UnaryOperator 0x7fe961877a28 <col:23, col:24> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fe961877a00 <col:23> 'int' lvalue Var 0x7fe9618776a0 'i' 'int'
+    | `-CompoundStmt 0x7fe961877fa0 <line:11:5, line:24:5>
+    |   |-DeclStmt 0x7fe961877b68 <line:12:7, col:31>
+    |   | `-VarDecl 0x7fe961877a60 <col:7, col:27> col:14 used rho 'double' cinit
+    |   |   `-BinaryOperator 0x7fe961877b40 <col:20, col:27> 'double' '*'
+    |   |     |-ImplicitCastExpr 0x7fe961877b10 <col:20> 'double' <LValueToRValue>
+    |   |     | `-DeclRefExpr 0x7fe961877ac0 <col:20> 'double' lvalue Var 0x7fe961877870 'work' 'double'
+    |   |     `-ImplicitCastExpr 0x7fe961877b28 <col:27> 'double' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7fe961877ae8 <col:27> 'double' lvalue Var 0x7fe961877870 'work' 'double'
+    |   |-IfStmt 0x7fe961877d00 <line:13:7, line:14:22>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe961877be0 <line:13:11, col:16> 'int' '!='
+    |   | | |-ImplicitCastExpr 0x7fe961877bc8 <col:11> 'int' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x7fe961877b80 <col:11> 'int' lvalue Var 0x7fe9618776a0 'i' 'int'
+    |   | | `-IntegerLiteral 0x7fe961877ba8 <col:16> 'int' 1
+    |   | |-BinaryOperator 0x7fe961877cd8 <line:14:9, col:22> 'double' '='
+    |   | | |-DeclRefExpr 0x7fe961877c08 <col:9> 'double' lvalue Var 0x7fe9618777c0 'beta' 'double'
+    |   | | `-BinaryOperator 0x7fe961877cb0 <col:16, col:22> 'double' '/'
+    |   | |   |-ImplicitCastExpr 0x7fe961877c80 <col:16> 'double' <LValueToRValue>
+    |   | |   | `-DeclRefExpr 0x7fe961877c30 <col:16> 'double' lvalue Var 0x7fe961877a60 'rho' 'double'
+    |   | |   `-ImplicitCastExpr 0x7fe961877c98 <col:22> 'double' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7fe961877c58 <col:22> 'double' lvalue Var 0x7fe961877730 'oldrho' 'double'
+    |   | `-<<<NULL>>>
+    |   |-IfStmt 0x7fe961877e58 <line:15:7, line:16:16>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe961877d98 <line:15:11, col:19> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fe961877d80 <col:11> 'double' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x7fe961877d38 <col:11> 'double' lvalue Var 0x7fe9618777c0 'beta' 'double'
+    |   | | `-FloatingLiteral 0x7fe961877d60 <col:19> 'double' 1.000000e+00
+    |   | |-CallExpr 0x7fe961877e30 <line:16:9, col:16> 'void'
+    |   | | `-ImplicitCastExpr 0x7fe961877e18 <col:9> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |   | |   `-DeclRefExpr 0x7fe961877dc0 <col:9> 'void (void) __attribute__((noreturn))' Function 0x7fe961877498 'abort' 'void (void) __attribute__((noreturn))'
+    |   | `-<<<NULL>>>
+    |   |-CompoundAssignOperator 0x7fe961877ed8 <line:22:7, col:15> 'double' '/=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |-DeclRefExpr 0x7fe961877e90 <col:7> 'double' lvalue Var 0x7fe961877870 'work' 'double'
+    |   | `-FloatingLiteral 0x7fe961877eb8 <col:15> 'double' 2.000000e+00
+    |   `-BinaryOperator 0x7fe961877f78 <line:23:7, col:16> 'double' '='
+    |     |-DeclRefExpr 0x7fe961877f10 <col:7> 'double' lvalue Var 0x7fe961877730 'oldrho' 'double'
+    |     `-ImplicitCastExpr 0x7fe961877f60 <col:16> 'double' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fe961877f38 <col:16> 'double' lvalue Var 0x7fe961877a60 'rho' 'double'
+    `-ReturnStmt 0x7fe961878038 <line:25:3, col:10>
+      `-IntegerLiteral 0x7fe961878018 <col:10> 'int' 0

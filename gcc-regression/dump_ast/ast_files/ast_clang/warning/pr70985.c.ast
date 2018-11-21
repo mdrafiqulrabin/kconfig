@@ -1,0 +1,65 @@
+c_files/pr70985.c:25:12: warning: too many arguments in call to 'fn1'
+        if (fn1 (b))
+            ~~~   ^
+1 warning generated.
+TranslationUnitDecl 0x7fe9430264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe943026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe943026740 '__int128'
+|-TypedefDecl 0x7fe943026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe943026760 'unsigned __int128'
+|-TypedefDecl 0x7fe943026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe943026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe943026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe943026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe943026dc0 'char *'
+|   `-BuiltinType 0x7fe943026560 'char'
+|-TypedefDecl 0x7fe9430270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe943027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe943026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe943026e58 '__va_list_tag'
+|-RecordDecl 0x7fe943027120 <c_files/pr70985.c:4:1, line:7:1> line:4:1 struct definition
+| `-FieldDecl 0x7fe943825a18 <line:6:3, col:10> col:7 referenced f0 'int'
+|   `-IntegerLiteral 0x7fe9430271d0 <col:10> 'int' 24
+|-VarDecl 0x7fe943825ab0 <line:4:1, line:7:3> col:3 used a 'struct (anonymous struct at c_files/pr70985.c:4:1)':'struct (anonymous at c_files/pr70985.c:4:1)'
+|-VarDecl 0x7fe943825b70 <line:4:1, line:7:6> col:6 used c 'struct (anonymous struct at c_files/pr70985.c:4:1)':'struct (anonymous at c_files/pr70985.c:4:1)'
+|-VarDecl 0x7fe943825bf0 <line:4:1, line:7:9> col:9 used d 'struct (anonymous struct at c_files/pr70985.c:4:1)':'struct (anonymous at c_files/pr70985.c:4:1)'
+|-VarDecl 0x7fe943825c90 <line:9:1, col:5> col:5 used b 'int'
+|-FunctionDecl 0x7fe943825d40 <line:11:1, line:15:1> line:12:1 used fn1 'int ()'
+| `-CompoundStmt 0x7fe943825e10 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7fe943825df8 <line:14:3, col:10>
+|     `-IntegerLiteral 0x7fe943825dd8 <col:10> 'int' 0
+`-FunctionDecl 0x7fe943825e78 <line:17:1, line:28:1> line:18:1 fn2 'void ()'
+  `-CompoundStmt 0x7fe943826368 <line:19:1, line:28:1>
+    |-DeclStmt 0x7fe943825f88 <line:20:3, col:8>
+    | `-VarDecl 0x7fe943825f28 <col:3, col:7> col:7 used e 'int'
+    `-IfStmt 0x7fe943826330 <line:21:3, line:27:7>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fe943825fc8 <line:21:7> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fe943825fa0 <col:7> 'int' lvalue Var 0x7fe943825c90 'b' 'int'
+      |-ForStmt 0x7fe9438262f8 <line:22:5, line:27:7>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | |-ImplicitCastExpr 0x7fe943826008 <line:22:12> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe943825fe0 <col:12> 'int' lvalue Var 0x7fe943825f28 'e' 'int'
+      | |-<<<NULL>>>
+      | `-CompoundStmt 0x7fe9438262d0 <line:23:7, line:27:7>
+      |   |-BinaryOperator 0x7fe943826088 <line:24:2, col:6> 'struct (anonymous struct at c_files/pr70985.c:4:1)':'struct (anonymous at c_files/pr70985.c:4:1)' '='
+      |   | |-DeclRefExpr 0x7fe943826020 <col:2> 'struct (anonymous struct at c_files/pr70985.c:4:1)':'struct (anonymous at c_files/pr70985.c:4:1)' lvalue Var 0x7fe943825bf0 'd' 'struct (anonymous struct at c_files/pr70985.c:4:1)':'struct (anonymous at c_files/pr70985.c:4:1)'
+      |   | `-ImplicitCastExpr 0x7fe943826070 <col:6> 'struct (anonymous struct at c_files/pr70985.c:4:1)':'struct (anonymous at c_files/pr70985.c:4:1)' <LValueToRValue>
+      |   |   `-DeclRefExpr 0x7fe943826048 <col:6> 'struct (anonymous struct at c_files/pr70985.c:4:1)':'struct (anonymous at c_files/pr70985.c:4:1)' lvalue Var 0x7fe943825b70 'c' 'struct (anonymous struct at c_files/pr70985.c:4:1)':'struct (anonymous at c_files/pr70985.c:4:1)'
+      |   `-IfStmt 0x7fe943826298 <line:25:2, line:26:10>
+      |     |-<<<NULL>>>
+      |     |-<<<NULL>>>
+      |     |-CallExpr 0x7fe943826140 <line:25:6, col:12> 'int'
+      |     | |-ImplicitCastExpr 0x7fe943826128 <col:6> 'int (*)()' <FunctionToPointerDecay>
+      |     | | `-DeclRefExpr 0x7fe9438260b0 <col:6> 'int ()' Function 0x7fe943825d40 'fn1' 'int ()'
+      |     | `-ImplicitCastExpr 0x7fe943826170 <col:11> 'int' <LValueToRValue>
+      |     |   `-DeclRefExpr 0x7fe9438260d8 <col:11> 'int' lvalue Var 0x7fe943825c90 'b' 'int'
+      |     |-BinaryOperator 0x7fe943826228 <line:26:4, col:10> 'int' '='
+      |     | |-DeclRefExpr 0x7fe943826188 <col:4> 'int' lvalue Var 0x7fe943825c90 'b' 'int'
+      |     | `-ImplicitCastExpr 0x7fe943826210 <col:8, col:10> 'int' <LValueToRValue>
+      |     |   `-MemberExpr 0x7fe9438261d8 <col:8, col:10> 'int' lvalue bitfield .f0 0x7fe943825a18
+      |     |     `-DeclRefExpr 0x7fe9438261b0 <col:8> 'struct (anonymous struct at c_files/pr70985.c:4:1)':'struct (anonymous at c_files/pr70985.c:4:1)' lvalue Var 0x7fe943825ab0 'a' 'struct (anonymous struct at c_files/pr70985.c:4:1)':'struct (anonymous at c_files/pr70985.c:4:1)'
+      |     `-<<<NULL>>>
+      `-<<<NULL>>>

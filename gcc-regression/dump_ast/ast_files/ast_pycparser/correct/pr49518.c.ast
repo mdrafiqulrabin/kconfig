@@ -1,0 +1,91 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      Struct: S
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: t, [], [], []
+          TypeDecl: t, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: u, [], [], []
+          TypeDecl: u, []
+            IdentifierType: ['unsigned', 'int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      Struct: S
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: t, [], [], []
+          TypeDecl: t, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: u, [], [], []
+          TypeDecl: u, []
+            IdentifierType: ['unsigned', 'int']
+    InitList: 
+      Constant: int, 0
+      Constant: int, 1
+      Constant: int, 0
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: e, [], [], []
+        ArrayDecl: []
+          TypeDecl: e, []
+            IdentifierType: ['char']
+        InitList: 
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 1
+      For: 
+        Assignment: =
+          StructRef: .
+            ID: c
+            ID: s
+          Constant: int, 1
+        StructRef: .
+          ID: c
+          ID: s
+        UnaryOp: p++
+          StructRef: .
+            ID: c
+            ID: s
+        Compound: 
+          Assignment: =
+            ID: b
+            ArrayRef: 
+              ID: e
+              StructRef: .
+                ID: c
+                ID: s
+          If: 
+            ID: a
+            Break: 
+          Assignment: =
+            ID: b
+            BinaryOp: >=
+              ID: z
+              StructRef: .
+                ID: c
+                ID: u
+          If: 
+            StructRef: .
+              ID: d
+              ID: t
+            Break: 

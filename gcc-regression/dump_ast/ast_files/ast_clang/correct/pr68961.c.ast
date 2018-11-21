@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fae7b0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fae7b026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fae7b026740 '__int128'
+|-TypedefDecl 0x7fae7b026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fae7b026760 'unsigned __int128'
+|-TypedefDecl 0x7fae7b026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fae7b026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fae7b026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fae7b026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fae7b026dc0 'char *'
+|   `-BuiltinType 0x7fae7b026560 'char'
+|-TypedefDecl 0x7fae7b0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fae7b027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fae7b026ee0 'struct __va_list_tag'
+|     `-Record 0x7fae7b026e58 '__va_list_tag'
+|-RecordDecl 0x7fae7b027120 <c_files/pr68961.c:4:1, col:25> col:8 struct x definition
+| `-FieldDecl 0x7fae7b825a60 <col:12, col:22> col:19 referenced d 'double [2]'
+`-FunctionDecl 0x7fae7b825c90 <line:6:1, line:13:1> line:7:1 pack 'struct x (double, double)'
+  |-ParmVarDecl 0x7fae7b825ac0 <col:7, col:14> col:14 used a 'double'
+  |-ParmVarDecl 0x7fae7b825b38 <col:17, col:24> col:24 used aa 'double'
+  `-CompoundStmt 0x7fae7b8260e0 <line:8:1, line:13:1>
+    |-DeclStmt 0x7fae7b825df8 <line:9:3, col:13>
+    | `-VarDecl 0x7fae7b825d98 <col:3, col:12> col:12 used u 'struct x':'struct x'
+    |-BinaryOperator 0x7fae7b825f38 <line:10:3, col:12> 'double' '='
+    | |-ArraySubscriptExpr 0x7fae7b825ed0 <col:3, col:8> 'double' lvalue
+    | | |-ImplicitCastExpr 0x7fae7b825eb8 <col:3, col:5> 'double *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7fae7b825e38 <col:3, col:5> 'double [2]' lvalue .d 0x7fae7b825a60
+    | | |   `-DeclRefExpr 0x7fae7b825e10 <col:3> 'struct x':'struct x' lvalue Var 0x7fae7b825d98 'u' 'struct x':'struct x'
+    | | `-IntegerLiteral 0x7fae7b825e70 <col:7> 'int' 0
+    | `-ImplicitCastExpr 0x7fae7b825f20 <col:12> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fae7b825ef8 <col:12> 'double' lvalue ParmVar 0x7fae7b825ac0 'a' 'double'
+    |-BinaryOperator 0x7fae7b826060 <line:11:3, col:12> 'double' '='
+    | |-ArraySubscriptExpr 0x7fae7b825ff8 <col:3, col:8> 'double' lvalue
+    | | |-ImplicitCastExpr 0x7fae7b825fe0 <col:3, col:5> 'double *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7fae7b825f88 <col:3, col:5> 'double [2]' lvalue .d 0x7fae7b825a60
+    | | |   `-DeclRefExpr 0x7fae7b825f60 <col:3> 'struct x':'struct x' lvalue Var 0x7fae7b825d98 'u' 'struct x':'struct x'
+    | | `-IntegerLiteral 0x7fae7b825fc0 <col:7> 'int' 1
+    | `-ImplicitCastExpr 0x7fae7b826048 <col:12> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fae7b826020 <col:12> 'double' lvalue ParmVar 0x7fae7b825b38 'aa' 'double'
+    `-ReturnStmt 0x7fae7b8260c8 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7fae7b8260b0 <col:10> 'struct x':'struct x' <LValueToRValue>
+        `-DeclRefExpr 0x7fae7b826088 <col:10> 'struct x':'struct x' lvalue Var 0x7fae7b825d98 'u' 'struct x':'struct x'

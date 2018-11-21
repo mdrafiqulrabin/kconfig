@@ -1,0 +1,90 @@
+c_files/pr44546.c:22:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7ffea70264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffea7026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffea7026740 '__int128'
+|-TypedefDecl 0x7ffea7026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffea7026760 'unsigned __int128'
+|-TypedefDecl 0x7ffea7026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffea7026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffea7026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffea7026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffea7026dc0 'char *'
+|   `-BuiltinType 0x7ffea7026560 'char'
+|-TypedefDecl 0x7ffea70270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffea7027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffea7026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffea7026e58 '__va_list_tag'
+|-TypedefDecl 0x7ffea7027138 <c_files/pr44546.c:4:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7ffea7026680 'unsigned long'
+|-RecordDecl 0x7ffea7825a00 <line:5:9, line:8:1> line:5:9 struct definition
+| `-FieldDecl 0x7ffea7825af0 <line:7:3, col:10> col:10 referenced ewgts 'float *'
+|-TypedefDecl 0x7ffea7825b90 <line:5:1, line:8:3> col:3 referenced vtx_data 'struct vtx_data':'vtx_data'
+| `-ElaboratedType 0x7ffea7825b40 'struct vtx_data' sugar
+|   `-RecordType 0x7ffea7825a90 'vtx_data'
+|     `-Record 0x7ffea7825a00 ''
+|-FunctionDecl 0x7ffea7825d38 <line:10:1, col:29> col:14 used zmalloc 'void *(size_t)' extern
+| `-ParmVarDecl 0x7ffea7825c30 <col:23> col:29 'size_t':'unsigned long'
+|-FunctionDecl 0x7ffea7825fb8 <line:11:1, col:32> col:12 used whatever 'int (vtx_data *)' extern
+| `-ParmVarDecl 0x7ffea7825ea8 <col:22, col:31> col:32 'vtx_data *'
+`-FunctionDecl 0x7ffea78261f8 <line:13:1, line:22:1> line:14:1 compute_apsp_artifical_weights_packed 'float *(vtx_data *, int)'
+  |-ParmVarDecl 0x7ffea7826068 <col:40, col:51> col:51 used graph 'vtx_data *'
+  |-ParmVarDecl 0x7ffea78260e0 <col:58, col:62> col:62 used n 'int'
+  `-CompoundStmt 0x7ffea7827b68 <line:15:1, line:22:1>
+    |-DeclStmt 0x7ffea7826318 <line:16:3, col:17>
+    | `-VarDecl 0x7ffea78262b8 <col:3, col:10> col:10 used weights 'float *'
+    |-BinaryOperator 0x7ffea7826520 <line:18:3, col:50> 'float *' '='
+    | |-DeclRefExpr 0x7ffea7826330 <col:3> 'float *' lvalue Var 0x7ffea78262b8 'weights' 'float *'
+    | `-CStyleCastExpr 0x7ffea78264f8 <col:13, col:50> 'float *' <BitCast>
+    |   `-CallExpr 0x7ffea78264b0 <col:23, col:50> 'void *'
+    |     |-ImplicitCastExpr 0x7ffea7826498 <col:23> 'void *(*)(size_t)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7ffea7826358 <col:23> 'void *(size_t)' Function 0x7ffea7825d38 'zmalloc' 'void *(size_t)'
+    |     `-BinaryOperator 0x7ffea7826410 <col:32, col:49> 'unsigned long' '*'
+    |       |-ImplicitCastExpr 0x7ffea78263f8 <col:32> 'unsigned long' <IntegralCast>
+    |       | `-ImplicitCastExpr 0x7ffea78263e0 <col:32> 'int' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7ffea7826380 <col:32> 'int' lvalue ParmVar 0x7ffea78260e0 'n' 'int'
+    |       `-UnaryExprOrTypeTraitExpr 0x7ffea78263c0 <col:36, col:49> 'unsigned long' sizeof 'float'
+    `-BinaryOperator 0x7ffea7827b40 <line:19:3, line:21:40> 'float' '='
+      |-ArraySubscriptExpr 0x7ffea78265c8 <line:19:3, col:12> 'float' lvalue
+      | |-ImplicitCastExpr 0x7ffea7826598 <col:3> 'float *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ffea7826548 <col:3> 'float *' lvalue Var 0x7ffea78262b8 'weights' 'float *'
+      | `-ImplicitCastExpr 0x7ffea78265b0 <col:11> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ffea7826570 <col:11> 'int' lvalue ParmVar 0x7ffea78260e0 'n' 'int'
+      `-ConditionalOperator 0x7ffea7827b10 <line:20:5, line:21:40> 'float'
+        |-BinaryOperator 0x7ffea7826888 <line:20:5, col:40> 'int' '>'
+        | |-ImplicitCastExpr 0x7ffea7826870 <col:5, col:20> 'float' <IntegralToFloating>
+        | | `-CallExpr 0x7ffea78266b0 <col:5, col:20> 'int'
+        | |   |-ImplicitCastExpr 0x7ffea7826698 <col:5> 'int (*)(vtx_data *)' <FunctionToPointerDecay>
+        | |   | `-DeclRefExpr 0x7ffea78265f0 <col:5> 'int (vtx_data *)' Function 0x7ffea7825fb8 'whatever' 'int (vtx_data *)'
+        | |   `-ImplicitCastExpr 0x7ffea78266e0 <col:15> 'vtx_data *' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7ffea7826618 <col:15> 'vtx_data *' lvalue ParmVar 0x7ffea7826068 'graph' 'vtx_data *'
+        | `-ImplicitCastExpr 0x7ffea7826858 <col:24, col:40> 'float' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7ffea7826830 <col:24, col:40> 'float' lvalue
+        |     |-ImplicitCastExpr 0x7ffea7826800 <col:24, col:33> 'float *' <LValueToRValue>
+        |     | `-MemberExpr 0x7ffea78267a0 <col:24, col:33> 'float *' lvalue .ewgts 0x7ffea7825af0
+        |     |   `-ArraySubscriptExpr 0x7ffea7826778 <col:24, col:31> 'vtx_data':'vtx_data' lvalue
+        |     |     |-ImplicitCastExpr 0x7ffea7826748 <col:24> 'vtx_data *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7ffea78266f8 <col:24> 'vtx_data *' lvalue ParmVar 0x7ffea7826068 'graph' 'vtx_data *'
+        |     |     `-ImplicitCastExpr 0x7ffea7826760 <col:30> 'int' <LValueToRValue>
+        |     |       `-DeclRefExpr 0x7ffea7826720 <col:30> 'int' lvalue ParmVar 0x7ffea78260e0 'n' 'int'
+        |     `-ImplicitCastExpr 0x7ffea7826818 <col:39> 'int' <LValueToRValue>
+        |       `-DeclRefExpr 0x7ffea78267d8 <col:39> 'int' lvalue ParmVar 0x7ffea78260e0 'n' 'int'
+        |-ImplicitCastExpr 0x7ffea7827af8 <line:21:5, col:20> 'float' <IntegralToFloating>
+        | `-CallExpr 0x7ffea7826918 <col:5, col:20> 'int'
+        |   |-ImplicitCastExpr 0x7ffea7826900 <col:5> 'int (*)(vtx_data *)' <FunctionToPointerDecay>
+        |   | `-DeclRefExpr 0x7ffea78268b0 <col:5> 'int (vtx_data *)' Function 0x7ffea7825fb8 'whatever' 'int (vtx_data *)'
+        |   `-ImplicitCastExpr 0x7ffea7826948 <col:15> 'vtx_data *' <LValueToRValue>
+        |     `-DeclRefExpr 0x7ffea78268d8 <col:15> 'vtx_data *' lvalue ParmVar 0x7ffea7826068 'graph' 'vtx_data *'
+        `-ImplicitCastExpr 0x7ffea7827ae0 <col:24, col:40> 'float' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7ffea7827ab8 <col:24, col:40> 'float' lvalue
+            |-ImplicitCastExpr 0x7ffea7827a88 <col:24, col:33> 'float *' <LValueToRValue>
+            | `-MemberExpr 0x7ffea7827a28 <col:24, col:33> 'float *' lvalue .ewgts 0x7ffea7825af0
+            |   `-ArraySubscriptExpr 0x7ffea7827a00 <col:24, col:31> 'vtx_data':'vtx_data' lvalue
+            |     |-ImplicitCastExpr 0x7ffea78269b0 <col:24> 'vtx_data *' <LValueToRValue>
+            |     | `-DeclRefExpr 0x7ffea7826960 <col:24> 'vtx_data *' lvalue ParmVar 0x7ffea7826068 'graph' 'vtx_data *'
+            |     `-ImplicitCastExpr 0x7ffea78269c8 <col:30> 'int' <LValueToRValue>
+            |       `-DeclRefExpr 0x7ffea7826988 <col:30> 'int' lvalue ParmVar 0x7ffea78260e0 'n' 'int'
+            `-ImplicitCastExpr 0x7ffea7827aa0 <col:39> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7ffea7827a60 <col:39> 'int' lvalue ParmVar 0x7ffea78260e0 'n' 'int'

@@ -1,0 +1,55 @@
+c_files/pr26425.c:8:4: warning: implicit declaration of function 'key_put' is invalid in C99 [-Wimplicit-function-declaration]
+   key_put(keyring->keys[loop]);
+   ^
+1 warning generated.
+TranslationUnitDecl 0x7ffa870264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffa87026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffa87026740 '__int128'
+|-TypedefDecl 0x7ffa87026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffa87026760 'unsigned __int128'
+|-TypedefDecl 0x7ffa87026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffa87026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffa87026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffa87026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffa87026dc0 'char *'
+|   `-BuiltinType 0x7ffa87026560 'char'
+|-TypedefDecl 0x7ffa870270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffa87027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffa87026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffa87026e58 '__va_list_tag'
+|-RecordDecl 0x7ffa87027120 <c_files/pr26425.c:1:1, line:3:1> line:1:8 struct keyring_list definition
+| |-RecordDecl 0x7ffa87825a00 parent 0x7ffa870264d0 <line:2:2, col:9> col:9 struct key
+| `-FieldDecl 0x7ffa87825c20 <col:2, col:20> col:14 referenced keys 'struct key *[0]'
+|-FunctionDecl 0x7ffa87825eb0 <line:4:1, line:9:1> line:4:6 keyring_destroy 'void (struct keyring_list *, unsigned short)'
+| |-ParmVarDecl 0x7ffa87825d20 <col:22, col:43> col:43 used keyring 'struct keyring_list *'
+| |-ParmVarDecl 0x7ffa87825d98 <col:52, col:67> col:67 used a 'unsigned short'
+| `-CompoundStmt 0x7ffa87826510 <line:5:1, line:9:1>
+|   |-DeclStmt 0x7ffa87826010 <line:6:2, col:10>
+|   | `-VarDecl 0x7ffa87825fb0 <col:2, col:6> col:6 used loop 'int'
+|   `-ForStmt 0x7ffa878264d8 <line:7:3, line:8:31>
+|     |-BinaryOperator 0x7ffa878260f0 <line:7:8, col:19> 'int' '='
+|     | |-DeclRefExpr 0x7ffa87826028 <col:8> 'int' lvalue Var 0x7ffa87825fb0 'loop' 'int'
+|     | `-BinaryOperator 0x7ffa878260c8 <col:15, col:19> 'int' '-'
+|     |   |-ImplicitCastExpr 0x7ffa878260b0 <col:15> 'int' <IntegralCast>
+|     |   | `-ImplicitCastExpr 0x7ffa87826098 <col:15> 'unsigned short' <LValueToRValue>
+|     |   |   `-DeclRefExpr 0x7ffa87826050 <col:15> 'unsigned short' lvalue ParmVar 0x7ffa87825d98 'a' 'unsigned short'
+|     |   `-IntegerLiteral 0x7ffa87826078 <col:19> 'int' 1
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ffa87826178 <col:22, col:30> 'int' '>='
+|     | |-ImplicitCastExpr 0x7ffa87826160 <col:22> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7ffa87826118 <col:22> 'int' lvalue Var 0x7ffa87825fb0 'loop' 'int'
+|     | `-IntegerLiteral 0x7ffa87826140 <col:30> 'int' 0
+|     |-UnaryOperator 0x7ffa878261c8 <col:33, col:37> 'int' postfix '--'
+|     | `-DeclRefExpr 0x7ffa878261a0 <col:33> 'int' lvalue Var 0x7ffa87825fb0 'loop' 'int'
+|     `-CallExpr 0x7ffa87826490 <line:8:4, col:31> 'int'
+|       |-ImplicitCastExpr 0x7ffa87826478 <col:4> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7ffa878262d8 <col:4> 'int ()' Function 0x7ffa87826240 'key_put' 'int ()'
+|       `-ImplicitCastExpr 0x7ffa878264c0 <col:12, col:30> 'struct key *' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7ffa87826428 <col:12, col:30> 'struct key *' lvalue
+|           |-ImplicitCastExpr 0x7ffa878263f8 <col:12, col:21> 'struct key **' <ArrayToPointerDecay>
+|           | `-MemberExpr 0x7ffa87826340 <col:12, col:21> 'struct key *[0]' lvalue ->keys 0x7ffa87825c20
+|           |   `-ImplicitCastExpr 0x7ffa87826328 <col:12> 'struct keyring_list *' <LValueToRValue>
+|           |     `-DeclRefExpr 0x7ffa87826300 <col:12> 'struct keyring_list *' lvalue ParmVar 0x7ffa87825d20 'keyring' 'struct keyring_list *'
+|           `-ImplicitCastExpr 0x7ffa87826410 <col:26> 'int' <LValueToRValue>
+|             `-DeclRefExpr 0x7ffa87826378 <col:26> 'int' lvalue Var 0x7ffa87825fb0 'loop' 'int'
+`-FunctionDecl 0x7ffa87826240 <<invalid sloc>> col:4 implicit used key_put 'int ()'

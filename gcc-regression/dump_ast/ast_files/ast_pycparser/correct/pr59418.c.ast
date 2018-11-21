@@ -1,0 +1,101 @@
+FileAST: 
+  Decl: printf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: __format, ['const'], [], []
+          PtrDecl: []
+            TypeDecl: __format, ['const']
+              IdentifierType: ['char']
+        EllipsisParam: 
+      TypeDecl: printf, []
+        IdentifierType: ['int']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: pptr, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: pptr, ['const']
+                IdentifierType: ['char']
+          Decl: caplen, [], [], []
+            TypeDecl: caplen, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: type, [], [], []
+        TypeDecl: type, []
+          IdentifierType: ['int']
+      Decl: tptr, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: tptr, ['const']
+            IdentifierType: ['char']
+      If: 
+        BinaryOp: <
+          ID: caplen
+          Constant: int, 4
+        Compound: 
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+            FuncCall: 
+              ID: printf
+              ExprList: 
+                Constant: string, "foo"
+          Return: 
+      While: 
+        BinaryOp: <
+          ID: tptr
+          ID: pptr
+        Compound: 
+          Switch: 
+            ID: type
+            Compound: 
+              Case: 
+                Constant: int, 0x01
+                FuncCall: 
+                  ID: printf
+                  ExprList: 
+                    Constant: string, ""
+              Case: 
+                Constant: int, 0x0b
+                FuncCall: 
+                  ID: printf
+                  ExprList: 
+                    Constant: string, ""
+              Case: 
+                Constant: int, 0x0e
+                FuncCall: 
+                  ID: printf
+                  ExprList: 
+                    Constant: string, ""
+              Case: 
+                Constant: int, 0x10
+                FuncCall: 
+                  ID: printf
+                  ExprList: 
+                    Constant: string, "%1.2fW"
+                    BinaryOp: /
+                      FuncCall: 
+                        ID: bar
+                        ExprList: 
+                          ID: tptr
+                          ID: caplen
+                      Constant: float, 1000.0
+      FuncCall: 
+        ID: printf
+        ExprList: 
+          Constant: string, "foo"

@@ -1,0 +1,59 @@
+c_files/pr77687.c:17:20: error: unknown register name 'r28' in asm
+       asm("" : : :"r28");
+                   ^
+c_files/pr77687.c:18:20: error: unknown register name 'r29' in asm
+       asm("" : : :"r29");
+                   ^
+c_files/pr77687.c:19:20: error: unknown register name 'r30' in asm
+       asm("" : : :"r30");
+                   ^
+3 errors generated.
+TranslationUnitDecl 0x7fcae20264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcae2026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcae2026740 '__int128'
+|-TypedefDecl 0x7fcae2026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcae2026760 'unsigned __int128'
+|-TypedefDecl 0x7fcae2026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcae2026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcae2026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcae2026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcae2026dc0 'char *'
+|   `-BuiltinType 0x7fcae2026560 'char'
+|-TypedefDecl 0x7fcae20270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcae2027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcae2026ee0 'struct __va_list_tag'
+|     `-Record 0x7fcae2026e58 '__va_list_tag'
+|-FunctionDecl 0x7fcae2825ad0 <c_files/pr77687.c:6:1, col:19> col:6 used g 'void (int, char *)'
+| |-ParmVarDecl 0x7fcae2027138 <col:8> col:11 'int'
+| `-ParmVarDecl 0x7fcae2825a00 <col:13, col:18> col:19 'char *'
+|-VarDecl 0x7fcae2825bd0 <line:7:1, col:20> col:14 dum 'const char *' cinit
+| `-ImplicitCastExpr 0x7fcae2825cb0 <col:20> 'const char *' <BitCast>
+|   `-ImplicitCastExpr 0x7fcae2825c98 <col:20> 'char *' <ArrayToPointerDecay>
+|     `-StringLiteral 0x7fcae2825c68 <col:20> 'char [6]' lvalue "hello"
+`-FunctionDecl 0x7fcae2825da0 <line:9:1, line:20:1> line:9:6 f 'void (int)'
+  |-ParmVarDecl 0x7fcae2825ce0 <col:8, col:12> col:12 used x 'int'
+  `-CompoundStmt 0x7fcae2826590 <line:10:1, line:20:1>
+    |-DeclStmt 0x7fcae2825f18 <line:11:8, col:24>
+    | `-VarDecl 0x7fcae2825eb8 <col:8, col:23> col:13 used big 'char [200000]'
+    |-LabelStmt 0x7fcae28260a0 <line:12:2, line:13:16> 'start'
+    | `-CallExpr 0x7fcae2825ff0 <col:8, col:16> 'void'
+    |   |-ImplicitCastExpr 0x7fcae2825fd8 <col:8> 'void (*)(int, char *)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fcae2825f30 <col:8> 'void (int, char *)' Function 0x7fcae2825ad0 'g' 'void (int, char *)'
+    |   |-ImplicitCastExpr 0x7fcae2826028 <col:10> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fcae2825f58 <col:10> 'int' lvalue ParmVar 0x7fcae2825ce0 'x' 'int'
+    |   `-ImplicitCastExpr 0x7fcae2826040 <col:13> 'char *' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7fcae2825f80 <col:13> 'char [200000]' lvalue Var 0x7fcae2825eb8 'big' 'char [200000]'
+    |-CallExpr 0x7fcae2826148 <line:14:8, col:16> 'void'
+    | |-ImplicitCastExpr 0x7fcae2826130 <col:8> 'void (*)(int, char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fcae28260b8 <col:8> 'void (int, char *)' Function 0x7fcae2825ad0 'g' 'void (int, char *)'
+    | |-ImplicitCastExpr 0x7fcae2826180 <col:10> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fcae28260e0 <col:10> 'int' lvalue ParmVar 0x7fcae2825ce0 'x' 'int'
+    | `-ImplicitCastExpr 0x7fcae2826198 <col:13> 'char *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7fcae2826108 <col:13> 'char [200000]' lvalue Var 0x7fcae2825eb8 'big' 'char [200000]'
+    |-DeclStmt 0x7fcae2826308 <line:15:8, col:45>
+    | `-VarDecl 0x7fcae2826230 <col:8, col:40> col:23 used p 'void *' register cinit
+    |   |-AddrLabelExpr 0x7fcae28262e8 <col:38, col:40> 'void *' start 0x7fcae2826058
+    |   `-AsmLabelAttr 0x7fcae2826290 <col:29> "r11"
+    `-GCCAsmStmt 0x7fcae2826428 <line:16:8, col:25>
+      `-ImplicitCastExpr 0x7fcae2826410 <col:23> 'void *' <LValueToRValue>
+        `-DeclRefExpr 0x7fcae28263e8 <col:23> 'void *' lvalue Var 0x7fcae2826230 'p' 'void *'

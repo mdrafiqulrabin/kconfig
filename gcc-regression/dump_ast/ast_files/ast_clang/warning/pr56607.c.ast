@@ -1,0 +1,86 @@
+c_files/pr56607.c:8:12: warning: division by zero is undefined [-Wdivision-by-zero]
+  return 1 / (sizeof (char) - 1);       /* { dg-warning "division by zero" } */
+           ^ ~~~~~~~~~~~~~~~~~~~
+c_files/pr56607.c:15:12: warning: division by zero is undefined [-Wdivision-by-zero]
+  return 1 / x;                         /* { dg-warning "division by zero" } */
+           ^ ~
+c_files/pr56607.c:21:12: warning: division by zero is undefined [-Wdivision-by-zero]
+  return 1 / (sizeof (int) / 3 - 1);    /* { dg-warning "division by zero" } */
+           ^ ~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr56607.c:28:12: warning: division by zero is undefined [-Wdivision-by-zero]
+  return 1 / x;                         /* { dg-warning "division by zero" } */
+           ^ ~
+4 warnings generated.
+TranslationUnitDecl 0x7fb8400124d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb840012a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb840012740 '__int128'
+|-TypedefDecl 0x7fb840012a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb840012760 'unsigned __int128'
+|-TypedefDecl 0x7fb840012d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb840012b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb840012ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb840012e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb840012dc0 'char *'
+|   `-BuiltinType 0x7fb840012560 'char'
+|-TypedefDecl 0x7fb8400130c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb840013070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb840012ee0 'struct __va_list_tag'
+|     `-Record 0x7fb840012e58 '__va_list_tag'
+|-FunctionDecl 0x7fb840825a00 <c_files/pr56607.c:5:1, line:9:1> line:6:1 f1 'int (void)'
+| `-CompoundStmt 0x7fb840825c18 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fb840825c00 <line:8:3, col:32>
+|     `-ImplicitCastExpr 0x7fb840825be8 <col:10, col:32> 'int' <IntegralCast>
+|       `-BinaryOperator 0x7fb840825bc0 <col:10, col:32> 'unsigned long' '/'
+|         |-ImplicitCastExpr 0x7fb840825ba8 <col:10> 'unsigned long' <IntegralCast>
+|         | `-IntegerLiteral 0x7fb840825ad8 <col:10> 'int' 1
+|         `-ParenExpr 0x7fb840825b88 <col:14, col:32> 'unsigned long'
+|           `-BinaryOperator 0x7fb840825b60 <col:15, col:31> 'unsigned long' '-'
+|             |-UnaryExprOrTypeTraitExpr 0x7fb840825b08 <col:15, col:27> 'unsigned long' sizeof 'char'
+|             `-ImplicitCastExpr 0x7fb840825b48 <col:31> 'unsigned long' <IntegralCast>
+|               `-IntegerLiteral 0x7fb840825b28 <col:31> 'int' 1
+|-FunctionDecl 0x7fb840825cd0 <line:11:1, line:16:1> line:12:1 f2 'int (void)'
+| `-CompoundStmt 0x7fb840825f98 <line:13:1, line:16:1>
+|   |-DeclStmt 0x7fb840825e88 <line:14:3, col:34>
+|   | `-VarDecl 0x7fb840825d80 <col:3, col:33> col:13 used x 'const int' cinit
+|   |   `-ImplicitCastExpr 0x7fb840825e70 <col:17, col:33> 'int' <IntegralCast>
+|   |     `-BinaryOperator 0x7fb840825e48 <col:17, col:33> 'unsigned long' '-'
+|   |       |-UnaryExprOrTypeTraitExpr 0x7fb840825df0 <col:17, col:29> 'unsigned long' sizeof 'char'
+|   |       `-ImplicitCastExpr 0x7fb840825e30 <col:33> 'unsigned long' <IntegralCast>
+|   |         `-IntegerLiteral 0x7fb840825e10 <col:33> 'int' 1
+|   `-ReturnStmt 0x7fb840825f80 <line:15:3, col:14>
+|     `-BinaryOperator 0x7fb840825f58 <col:10, col:14> 'int' '/'
+|       |-IntegerLiteral 0x7fb840825ea0 <col:10> 'int' 1
+|       `-ImplicitCastExpr 0x7fb840825ee8 <col:14> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fb840825ec0 <col:14> 'const int' lvalue Var 0x7fb840825d80 'x' 'const int'
+|-FunctionDecl 0x7fb840826058 <line:18:1, line:22:1> line:19:1 f3 'int (void)'
+| `-CompoundStmt 0x7fb840826298 <line:20:1, line:22:1>
+|   `-ReturnStmt 0x7fb840826280 <line:21:3, col:35>
+|     `-ImplicitCastExpr 0x7fb840826268 <col:10, col:35> 'int' <IntegralCast>
+|       `-BinaryOperator 0x7fb840826240 <col:10, col:35> 'unsigned long' '/'
+|         |-ImplicitCastExpr 0x7fb840826228 <col:10> 'unsigned long' <IntegralCast>
+|         | `-IntegerLiteral 0x7fb8408260f0 <col:10> 'int' 1
+|         `-ParenExpr 0x7fb840826208 <col:14, col:35> 'unsigned long'
+|           `-BinaryOperator 0x7fb8408261e0 <col:15, col:34> 'unsigned long' '-'
+|             |-BinaryOperator 0x7fb840826180 <col:15, col:30> 'unsigned long' '/'
+|             | |-UnaryExprOrTypeTraitExpr 0x7fb840826128 <col:15, col:26> 'unsigned long' sizeof 'int'
+|             | `-ImplicitCastExpr 0x7fb840826168 <col:30> 'unsigned long' <IntegralCast>
+|             |   `-IntegerLiteral 0x7fb840826148 <col:30> 'int' 3
+|             `-ImplicitCastExpr 0x7fb8408261c8 <col:34> 'unsigned long' <IntegralCast>
+|               `-IntegerLiteral 0x7fb8408261a8 <col:34> 'int' 1
+`-FunctionDecl 0x7fb840826350 <line:24:1, line:29:1> line:25:1 f4 'int (void)'
+  `-CompoundStmt 0x7fb840826680 <line:26:1, line:29:1>
+    |-DeclStmt 0x7fb840826570 <line:27:3, col:37>
+    | `-VarDecl 0x7fb840826400 <col:3, col:36> col:13 used x 'const int' cinit
+    |   `-ImplicitCastExpr 0x7fb840826558 <col:17, col:36> 'int' <IntegralCast>
+    |     `-BinaryOperator 0x7fb840826530 <col:17, col:36> 'unsigned long' '-'
+    |       |-BinaryOperator 0x7fb8408264d0 <col:17, col:32> 'unsigned long' '/'
+    |       | |-UnaryExprOrTypeTraitExpr 0x7fb840826478 <col:17, col:28> 'unsigned long' sizeof 'int'
+    |       | `-ImplicitCastExpr 0x7fb8408264b8 <col:32> 'unsigned long' <IntegralCast>
+    |       |   `-IntegerLiteral 0x7fb840826498 <col:32> 'int' 3
+    |       `-ImplicitCastExpr 0x7fb840826518 <col:36> 'unsigned long' <IntegralCast>
+    |         `-IntegerLiteral 0x7fb8408264f8 <col:36> 'int' 1
+    `-ReturnStmt 0x7fb840826668 <line:28:3, col:14>
+      `-BinaryOperator 0x7fb840826640 <col:10, col:14> 'int' '/'
+        |-IntegerLiteral 0x7fb840826588 <col:10> 'int' 1
+        `-ImplicitCastExpr 0x7fb8408265d0 <col:14> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fb8408265a8 <col:14> 'const int' lvalue Var 0x7fb840826400 'x' 'const int'

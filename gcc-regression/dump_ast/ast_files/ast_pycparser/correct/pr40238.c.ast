@@ -1,0 +1,139 @@
+FileAST: 
+  Decl: xdo_rb_ctr_row, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: pos_code, [], [], []
+          PtrDecl: []
+            TypeDecl: pos_code, []
+              IdentifierType: ['int']
+      TypeDecl: xdo_rb_ctr_row, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: xgp_ahd_interpolate, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: tile, [], [], []
+            TypeDecl: tile, []
+              IdentifierType: ['int']
+        TypeDecl: xgp_ahd_interpolate, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: p, [], [], []
+        ArrayDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['int']
+          Constant: int, 4
+      Switch: 
+        ID: tile
+        Compound: 
+          Default: 
+          Case: 
+            Constant: int, 0
+          Case: 
+            Constant: int, 1
+            Assignment: =
+              ArrayRef: 
+                ID: p
+                Constant: int, 0
+              Constant: int, 0
+            Assignment: =
+              ArrayRef: 
+                ID: p
+                Constant: int, 1
+              Constant: int, 1
+            Assignment: =
+              ArrayRef: 
+                ID: p
+                Constant: int, 2
+              Constant: int, 2
+            Assignment: =
+              ArrayRef: 
+                ID: p
+                Constant: int, 3
+              Constant: int, 3
+            Break: 
+          Case: 
+            Constant: int, 2
+          Case: 
+            Constant: int, 3
+            Assignment: =
+              ArrayRef: 
+                ID: p
+                Constant: int, 0
+              Constant: int, 1
+            Assignment: =
+              ArrayRef: 
+                ID: p
+                Constant: int, 1
+              Constant: int, 0
+            Assignment: =
+              ArrayRef: 
+                ID: p
+                Constant: int, 2
+              Constant: int, 3
+            Assignment: =
+              ArrayRef: 
+                ID: p
+                Constant: int, 3
+              Constant: int, 2
+            Break: 
+          Case: 
+            Constant: int, 4
+          Case: 
+            Constant: int, 5
+            Assignment: =
+              ArrayRef: 
+                ID: p
+                Constant: int, 0
+              Constant: int, 3
+            Assignment: =
+              ArrayRef: 
+                ID: p
+                Constant: int, 1
+              Constant: int, 2
+            Assignment: =
+              ArrayRef: 
+                ID: p
+                Constant: int, 2
+              Constant: int, 1
+            Assignment: =
+              ArrayRef: 
+                ID: p
+                Constant: int, 3
+              Constant: int, 0
+            Break: 
+          Case: 
+            Constant: int, 6
+          Case: 
+            Constant: int, 7
+            Assignment: =
+              ArrayRef: 
+                ID: p
+                Constant: int, 0
+              Constant: int, 2
+            Assignment: =
+              ArrayRef: 
+                ID: p
+                Constant: int, 1
+              Constant: int, 3
+            Assignment: =
+              ArrayRef: 
+                ID: p
+                Constant: int, 2
+              Constant: int, 0
+            Assignment: =
+              ArrayRef: 
+                ID: p
+                Constant: int, 3
+              Constant: int, 1
+            Break: 
+      FuncCall: 
+        ID: xdo_rb_ctr_row
+        ExprList: 
+          ID: p
+      FuncCall: 
+        ID: xdo_rb_ctr_row
+        ExprList: 
+          ID: p
+      Return: 
+        Constant: int, 0

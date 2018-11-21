@@ -1,0 +1,105 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  Decl: h, [], [], []
+    TypeDecl: h, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['short']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fn1, []
+          IdentifierType: ['short']
+    Compound: 
+      Decl: j, [], [], []
+        ArrayDecl: []
+          TypeDecl: j, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      For: 
+        ID: e
+        UnaryOp: p++
+          ID: e
+        If: 
+          ArrayRef: 
+            ID: j
+            Constant: int, 0
+          For: 
+            EmptyStatement: 
+      If: 
+        UnaryOp: !
+          ID: g
+        Return: 
+          ID: f
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      For: 
+        BinaryOp: <
+          ID: a
+          Constant: int, 1
+        UnaryOp: p++
+          ID: a
+        Compound: 
+          For: 
+            Assignment: =
+              ID: c
+              Constant: int, 0
+            BinaryOp: <
+              ID: c
+              Constant: int, 2
+            UnaryOp: p++
+              ID: c
+            Compound: 
+              BinaryOp: &&
+                ID: d
+                Assignment: =
+                  ID: f
+                  Constant: int, 0
+              Assignment: =
+                ID: h
+                FuncCall: 
+                  ID: fn1
+          FuncCall: 
+            ID: __builtin_printf
+            ExprList: 
+              Constant: string, "%d\n"
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+                ID: f
+      Return: 
+        Constant: int, 0

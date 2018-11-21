@@ -1,0 +1,38 @@
+c_files/pr54694.c:4:28: error: register '%ebp' unsuitable for global register variables on this target
+register void *hfp __asm__("%ebp");     /* { dg-message "note: for" } */
+                           ^
+1 error generated.
+TranslationUnitDecl 0x7fa7718264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa771826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa771826740 '__int128'
+|-TypedefDecl 0x7fa771826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa771826760 'unsigned __int128'
+|-TypedefDecl 0x7fa771826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa771826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa771826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa771826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa771826dc0 'char *'
+|   `-BuiltinType 0x7fa771826560 'char'
+|-TypedefDecl 0x7fa7718270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa771827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa771826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa771826e58 '__va_list_tag'
+|-VarDecl 0x7fa7718271a0 <c_files/pr54694.c:4:1, col:16> col:16 hfp 'void *' register
+| `-AsmLabelAttr 0x7fa772800000 <col:28> "%ebp"
+|-FunctionDecl 0x7fa772800170 <line:6:1, col:21> col:13 used g 'void (void *)' extern
+| `-ParmVarDecl 0x7fa7728000b0 <col:15, col:20> col:21 'void *'
+|-FunctionDecl 0x7fa7728002f0 <line:8:1, line:11:1> line:8:6 f 'void (int)'
+| |-ParmVarDecl 0x7fa772800228 <col:8, col:12> col:12 used x 'int'
+| `-CompoundStmt 0x7fa7728006c0 <line:9:1, line:11:1>
+|   `-CallExpr 0x7fa772800690 <line:10:3, col:24> 'void'
+|     |-ImplicitCastExpr 0x7fa772800678 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fa772800390 <col:3> 'void (void *)' Function 0x7fa772800170 'g' 'void (void *)'
+|     `-CallExpr 0x7fa7728005f0 <col:5, col:23> 'void *'
+|       |-ImplicitCastExpr 0x7fa7728005d8 <col:5> 'void *(*)(unsigned long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fa772800540 <col:5> '<builtin fn type>' Function 0x7fa7728003f8 '__builtin_alloca' 'void *(unsigned long)'
+|       `-ImplicitCastExpr 0x7fa772800638 <col:22> 'unsigned long' <IntegralCast>
+|         `-ImplicitCastExpr 0x7fa772800620 <col:22> 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x7fa772800568 <col:22> 'int' lvalue ParmVar 0x7fa772800228 'x' 'int'
+`-FunctionDecl 0x7fa7728003f8 <col:5> col:5 implicit used __builtin_alloca 'void *(unsigned long)' extern
+  |-ParmVarDecl 0x7fa772800490 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fa7728004f8 <col:5> Implicit

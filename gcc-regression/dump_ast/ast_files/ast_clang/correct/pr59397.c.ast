@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fdea38264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdea3826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdea3826740 '__int128'
+|-TypedefDecl 0x7fdea3826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdea3826760 'unsigned __int128'
+|-TypedefDecl 0x7fdea3826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdea3826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdea3826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdea3826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdea3826dc0 'char *'
+|   `-BuiltinType 0x7fdea3826560 'char'
+|-TypedefDecl 0x7fdea38270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdea3827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdea3826ee0 'struct __va_list_tag'
+|     `-Record 0x7fdea3826e58 '__va_list_tag'
+|-EnumDecl 0x7fdea3827120 <c_files/pr59397.c:4:9, col:25> col:14 E
+| `-EnumConstantDecl 0x7fdea4025a20 <col:18, col:23> col:18 referenced A 'int'
+|   `-UnaryOperator 0x7fdea4025a00 <col:22, col:23> 'int' prefix '-'
+|     `-IntegerLiteral 0x7fdea38271e0 <col:23> 'int' 1
+|-TypedefDecl 0x7fdea4025ac0 <col:1, col:27> col:27 referenced e 'enum E':'enum E'
+| `-ElaboratedType 0x7fdea4025a70 'enum E' sugar
+|   `-EnumType 0x7fdea38271c0 'enum E'
+|     `-Enum 0x7fdea3827120 'E'
+`-FunctionDecl 0x7fdea4025bf8 <line:5:1, line:10:1> line:6:1 foo 'int (void)'
+  `-CompoundStmt 0x7fdea4025e70 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fdea4025da0 <line:8:3, col:10>
+    | `-VarDecl 0x7fdea4025d00 <col:3, col:9> col:5 used e 'e':'enum E' cinit
+    |   `-ImplicitCastExpr 0x7fdea4025d88 <col:9> 'e':'enum E' <IntegralCast>
+    |     `-DeclRefExpr 0x7fdea4025d60 <col:9> 'int' EnumConstant 0x7fdea4025a20 'A' 'int'
+    `-ReturnStmt 0x7fdea4025e58 <line:9:3, col:14>
+      `-BinaryOperator 0x7fdea4025e30 <col:10, col:14> 'int' '+'
+        |-ImplicitCastExpr 0x7fdea4025e18 <col:10> 'int' <IntegralCast>
+        | `-ImplicitCastExpr 0x7fdea4025e00 <col:10> 'e':'enum E' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fdea4025db8 <col:10> 'e':'enum E' lvalue Var 0x7fdea4025d00 'e' 'e':'enum E'
+        `-IntegerLiteral 0x7fdea4025de0 <col:14> 'int' 1

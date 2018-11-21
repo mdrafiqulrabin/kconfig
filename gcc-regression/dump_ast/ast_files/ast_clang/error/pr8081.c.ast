@@ -1,0 +1,58 @@
+c_files/pr8081.c:11:12: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+      char val[size];
+           ^
+c_files/pr8081.c:17:5: error: function definition is not allowed here
+    {
+    ^
+c_files/pr8081.c:22:5: warning: implicit declaration of function 'retframe_block' is invalid in C99 [-Wimplicit-function-declaration]
+  a=retframe_block ();
+    ^
+c_files/pr8081.c:22:4: error: assigning to 'block' (aka 'struct (anonymous at c_files/pr8081.c:9:11)') from incompatible type 'int'
+  a=retframe_block ();
+   ^~~~~~~~~~~~~~~~~~
+1 warning and 3 errors generated.
+TranslationUnitDecl 0x7fec520210d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fec52021620 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fec52021340 '__int128'
+|-TypedefDecl 0x7fec52021690 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fec52021360 'unsigned __int128'
+|-TypedefDecl 0x7fec52021968 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fec52021770 'struct __NSConstantString_tag'
+|   `-Record 0x7fec520216e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fec52021a00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fec520219c0 'char *'
+|   `-BuiltinType 0x7fec52021160 'char'
+|-TypedefDecl 0x7fec52021cc8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fec52021c70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fec52021ae0 'struct __va_list_tag'
+|     `-Record 0x7fec52021a58 '__va_list_tag'
+|-FunctionDecl 0x7fec52072030 <c_files/pr8081.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fec520720c8 prev 0x7fec52072030 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fec520722f8 <line:5:1, line:27:1> line:6:1 main 'int (int, char **)'
+| |-ParmVarDecl 0x7fec52072178 <col:7, col:11> col:11 argc 'int'
+| |-ParmVarDecl 0x7fec52072220 <col:17, col:24> col:24 argv 'char **'
+| `-CompoundStmt 0x7fec52074070 <line:7:1, line:27:1>
+|   |-DeclStmt 0x7fec52072478 <line:8:3, col:16>
+|   | `-VarDecl 0x7fec520723f8 <col:3, col:14> col:7 used size 'int' cinit
+|   |   `-IntegerLiteral 0x7fec52072458 <col:14> 'int' 10
+|   |-DeclStmt 0x7fec520726e0 <line:9:3, line:13:8>
+|   | |-RecordDecl 0x7fec52072490 <line:9:11, line:12:5> line:9:11 invalid struct definition
+|   | | `-FieldDecl 0x7fec520725d8 <line:11:7, col:20> col:12 invalid val 'char [size]'
+|   | `-TypedefDecl 0x7fec52072670 <line:9:3, line:13:3> col:3 referenced block 'struct (anonymous struct at c_files/pr8081.c:9:11)':'struct (anonymous at c_files/pr8081.c:9:11)'
+|   |   `-ElaboratedType 0x7fec52072620 'struct (anonymous struct at c_files/pr8081.c:9:11)' sugar
+|   |     `-RecordType 0x7fec52072520 'struct (anonymous at c_files/pr8081.c:9:11)'
+|   |       `-Record 0x7fec52072490 ''
+|   |-DeclStmt 0x7fec52072818 <line:14:3, col:13>
+|   | |-VarDecl 0x7fec52072730 <col:3, col:9> col:9 used a 'block':'struct (anonymous at c_files/pr8081.c:9:11)'
+|   | `-VarDecl 0x7fec520727a0 <col:3, col:12> col:12 used b 'block':'struct (anonymous at c_files/pr8081.c:9:11)'
+|   |-IfStmt 0x7fec52074000 <line:23:3, line:25:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7fec52072fc8 <<invalid sloc>> '_Bool'
+|   | |-CallExpr 0x7fec52072fa0 <col:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7fec52072f88 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fec52072f30 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fec520720c8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fec52074058 <line:26:3, col:10>
+|     `-IntegerLiteral 0x7fec52074038 <col:10> 'int' 0
+`-FunctionDecl 0x7fec52072980 <<invalid sloc>> line:22:5 implicit used retframe_block 'int ()'

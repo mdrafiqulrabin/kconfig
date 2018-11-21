@@ -1,0 +1,62 @@
+TranslationUnitDecl 0x7fe5d38264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe5d3826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe5d3826740 '__int128'
+|-TypedefDecl 0x7fe5d3826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe5d3826760 'unsigned __int128'
+|-TypedefDecl 0x7fe5d3826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe5d3826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe5d3826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe5d3826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe5d3826dc0 'char *'
+|   `-BuiltinType 0x7fe5d3826560 'char'
+|-TypedefDecl 0x7fe5d38270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe5d3827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe5d3826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe5d3826e58 '__va_list_tag'
+|-FunctionDecl 0x7fe5d3877430 <c_files/pr48770.c:6:1, line:17:1> line:6:5 used test_goto2 'int (int)'
+| |-ParmVarDecl 0x7fe5d3827138 <col:17, col:21> col:21 used f 'int'
+| `-CompoundStmt 0x7fe5d3877a28 <line:7:1, line:17:1>
+|   |-DeclStmt 0x7fe5d3877588 <line:8:3, col:8>
+|   | `-VarDecl 0x7fe5d3877528 <col:3, col:7> col:7 used i 'int'
+|   |-ForStmt 0x7fe5d3877968 <line:9:3, line:13:3>
+|   | |-BinaryOperator 0x7fe5d38775e8 <line:9:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7fe5d38775a0 <col:8> 'int' lvalue Var 0x7fe5d3877528 'i' 'int'
+|   | | `-IntegerLiteral 0x7fe5d38775c8 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-StmtExpr 0x7fe5d38777a0 <col:15, col:37> '_Bool'
+|   | | `-CompoundStmt 0x7fe5d3877778 <col:16, col:36>
+|   | |   |-DeclStmt 0x7fe5d3877720 <col:17, col:33>
+|   | |   | `-VarDecl 0x7fe5d3877620 <col:17, col:31> col:23 used a '_Bool' cinit
+|   | |   |   `-ImplicitCastExpr 0x7fe5d3877708 <col:27, col:31> '_Bool' <IntegralToBoolean>
+|   | |   |     `-BinaryOperator 0x7fe5d38776e0 <col:27, col:31> 'int' '<'
+|   | |   |       |-ImplicitCastExpr 0x7fe5d38776c8 <col:27> 'int' <LValueToRValue>
+|   | |   |       | `-DeclRefExpr 0x7fe5d3877680 <col:27> 'int' lvalue Var 0x7fe5d3877528 'i' 'int'
+|   | |   |       `-IntegerLiteral 0x7fe5d38776a8 <col:31> 'int' 10
+|   | |   `-ImplicitCastExpr 0x7fe5d3877760 <col:34> '_Bool' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fe5d3877738 <col:34> '_Bool' lvalue Var 0x7fe5d3877620 'a' '_Bool'
+|   | |-UnaryOperator 0x7fe5d38777e8 <col:40, col:41> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fe5d38777c0 <col:40> 'int' lvalue Var 0x7fe5d3877528 'i' 'int'
+|   | `-CompoundStmt 0x7fe5d3877948 <line:10:3, line:13:3>
+|   |   `-IfStmt 0x7fe5d3877910 <line:11:5, line:12:12>
+|   |     |-<<<NULL>>>
+|   |     |-<<<NULL>>>
+|   |     |-BinaryOperator 0x7fe5d3877888 <line:11:9, col:14> 'int' '=='
+|   |     | |-ImplicitCastExpr 0x7fe5d3877858 <col:9> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fe5d3877808 <col:9> 'int' lvalue Var 0x7fe5d3877528 'i' 'int'
+|   |     | `-ImplicitCastExpr 0x7fe5d3877870 <col:14> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fe5d3877830 <col:14> 'int' lvalue ParmVar 0x7fe5d3827138 'f' 'int'
+|   |     |-GotoStmt 0x7fe5d38778f8 <line:12:7, col:12> 'lab2' 0x7fe5d38778b0
+|   |     `-<<<NULL>>>
+|   |-ReturnStmt 0x7fe5d38779c0 <line:14:3, col:10>
+|   | `-IntegerLiteral 0x7fe5d38779a0 <col:10> 'int' 4
+|   `-LabelStmt 0x7fe5d3877a10 <line:15:1, line:16:10> 'lab2'
+|     `-ReturnStmt 0x7fe5d38779f8 <col:3, col:10>
+|       `-IntegerLiteral 0x7fe5d38779d8 <col:10> 'int' 8
+`-FunctionDecl 0x7fe5d3877ab0 <line:19:1, line:23:1> line:19:5 main 'int ()'
+  `-CompoundStmt 0x7fe5d3877c38 <line:20:1, line:23:1>
+    |-CallExpr 0x7fe5d3877bd0 <line:21:3, col:17> 'int'
+    | |-ImplicitCastExpr 0x7fe5d3877bb8 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe5d3877b48 <col:3> 'int (int)' Function 0x7fe5d3877430 'test_goto2' 'int (int)'
+    | `-IntegerLiteral 0x7fe5d3877b70 <col:15> 'int' 30
+    `-ReturnStmt 0x7fe5d3877c20 <line:22:3, col:10>
+      `-IntegerLiteral 0x7fe5d3877c00 <col:10> 'int' 0

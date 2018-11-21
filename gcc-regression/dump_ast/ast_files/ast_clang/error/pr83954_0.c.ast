@@ -1,0 +1,23 @@
+c_files/pr83954_0.c:2:10: fatal error: 'pr83954.h' file not found
+#include "pr83954.h"
+         ^~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7f97130124d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9713012a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9713012740 '__int128'
+|-TypedefDecl 0x7f9713012a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9713012760 'unsigned __int128'
+|-TypedefDecl 0x7f9713012d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9713012b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9713012ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9713012e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9713012dc0 'char *'
+|   `-BuiltinType 0x7f9713012560 'char'
+|-TypedefDecl 0x7f97130130c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9713013070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9713012ee0 'struct __va_list_tag'
+|     `-Record 0x7f9713012e58 '__va_list_tag'
+`-FunctionDecl 0x7f9713826a00 <c_files/pr83954_0.c:4:1, line:8:1> line:4:5 main 'int ()'
+  `-CompoundStmt 0x7f9713826b68 <col:12, line:8:1>
+    `-ReturnStmt 0x7f9713826b50 <line:7:3, col:10>
+      `-IntegerLiteral 0x7f9713826b30 <col:10> 'int' 0

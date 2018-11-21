@@ -1,0 +1,153 @@
+FileAST: 
+  Decl: f1, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: f1, []
+        IdentifierType: ['int']
+  Decl: f2, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: f2, []
+        IdentifierType: ['int']
+  Decl: a, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: find_reg, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: find_reg, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: pass, [], [], []
+        TypeDecl: pass, []
+          IdentifierType: ['int']
+      Decl: used, [], [], []
+        ArrayDecl: []
+          TypeDecl: used, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 2
+      Decl: used1, [], [], []
+        ArrayDecl: []
+          TypeDecl: used1, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 2
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        TernaryOp: 
+          ID: n
+          FuncCall: 
+            ID: f1
+            ExprList: 
+              ArrayRef: 
+                ID: a
+                Constant: int, 1
+          FuncCall: 
+            ID: f2
+            ExprList: 
+              ArrayRef: 
+                ID: a
+                Constant: int, 1
+      For: 
+        ExprList: 
+          Assignment: =
+            ID: i
+            Constant: int, 64
+          Assignment: =
+            ID: pass
+            Constant: int, 0
+        BinaryOp: &&
+          BinaryOp: <=
+            ID: pass
+            Constant: int, 1
+          BinaryOp: >=
+            ID: i
+            Constant: int, 64
+        UnaryOp: p++
+          ID: pass
+        Compound: 
+          If: 
+            BinaryOp: ==
+              ID: pass
+              Constant: int, 1
+            Compound: 
+              Decl: scan_tp_, [], [], []
+                PtrDecl: []
+                  TypeDecl: scan_tp_, []
+                    IdentifierType: ['unsigned', 'int']
+                ID: used
+              Decl: scan_fp_, [], [], []
+                PtrDecl: []
+                  TypeDecl: scan_fp_, []
+                    IdentifierType: ['unsigned', 'int']
+                ID: used1
+              Decl: j, [], [], []
+                TypeDecl: j, []
+                  IdentifierType: ['int']
+              For: 
+                Assignment: =
+                  ID: j
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: j
+                  Constant: int, 2
+                UnaryOp: p++
+                  ID: j
+                Assignment: =
+                  UnaryOp: *
+                    UnaryOp: p++
+                      ID: scan_tp_
+                  UnaryOp: *
+                    UnaryOp: p++
+                      ID: scan_fp_
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 0
+            BinaryOp: <
+              ID: i
+              Constant: int, 64
+            UnaryOp: p++
+              ID: i
+            Compound: 
+              Decl: regno, [], [], []
+                TypeDecl: regno, []
+                  IdentifierType: ['int']
+                ID: i
+              If: 
+                BinaryOp: ==
+                  ID: n
+                  Constant: int, 0
+                If: 
+                  BinaryOp: ==
+                    ID: i
+                    ID: regno
+                  Break: 
+  FuncDef: 
+    Decl: global_alloc, [], [], []
+      FuncDecl: 
+        TypeDecl: global_alloc, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: find_reg
+        ExprList: 
+          Constant: int, 0
+      FuncCall: 
+        ID: find_reg
+        ExprList: 
+          Constant: int, 1

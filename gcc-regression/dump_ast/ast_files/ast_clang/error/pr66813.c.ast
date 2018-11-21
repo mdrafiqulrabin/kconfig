@@ -1,0 +1,30 @@
+c_files/pr66813.c:4:36: error: invalid output constraint '=@ccc' in asm
+void f_s(void) { short x; asm("" : "=@ccc"(x)); }
+                                   ^
+c_files/pr66813.c:5:34: error: invalid output constraint '=@ccc' in asm
+void f_i(void) { int x; asm("" : "=@ccc"(x)); }
+                                 ^
+2 errors generated.
+TranslationUnitDecl 0x7fb5210264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb521026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb521026740 '__int128'
+|-TypedefDecl 0x7fb521026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb521026760 'unsigned __int128'
+|-TypedefDecl 0x7fb521026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb521026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb521026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb521026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb521026dc0 'char *'
+|   `-BuiltinType 0x7fb521026560 'char'
+|-TypedefDecl 0x7fb5210270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb521027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb521026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb521026e58 '__va_list_tag'
+|-FunctionDecl 0x7fb521825a00 <c_files/pr66813.c:4:1, col:49> col:6 f_s 'void (void)'
+| `-CompoundStmt 0x7fb521825c60 <col:16, col:49>
+|   `-DeclStmt 0x7fb521825b50 <col:18, col:25>
+|     `-VarDecl 0x7fb521825af0 <col:18, col:24> col:24 used x 'short'
+`-FunctionDecl 0x7fb521825d10 <line:5:1, col:47> col:6 f_i 'void (void)'
+  `-CompoundStmt 0x7fb521825eb8 <col:16, col:47>
+    `-DeclStmt 0x7fb521825e20 <col:18, col:23>
+      `-VarDecl 0x7fb521825dc0 <col:18, col:22> col:22 used x 'int'

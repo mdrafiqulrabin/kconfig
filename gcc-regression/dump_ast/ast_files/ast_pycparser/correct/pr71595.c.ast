@@ -1,0 +1,80 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  Decl: h, [], [], []
+    TypeDecl: h, []
+      IdentifierType: ['int']
+  Decl: b, [], ['static'], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+        Constant: int, 6
+    InitList: 
+      InitList: 
+        Constant: int, 0
+      InitList: 
+        Constant: int, 0
+      InitList: 
+        Constant: int, 1
+        Constant: int, 1
+      InitList: 
+        Constant: int, 1
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        ID: f
+        UnaryOp: p++
+          ID: f
+        If: 
+          ID: g
+          Compound: 
+            For: 
+              Assignment: =
+                ID: e
+                Constant: int, 0
+              BinaryOp: <
+                ID: e
+                Constant: int, 5
+              UnaryOp: p++
+                ID: e
+              If: 
+                ArrayRef: 
+                  ArrayRef: 
+                    ID: b
+                    BinaryOp: +
+                      ID: e
+                      Constant: int, 2
+                  Constant: int, 1
+                Compound: 
+                  Assignment: =
+                    ID: h
+                    TernaryOp: 
+                      ArrayRef: 
+                        ArrayRef: 
+                          ID: b
+                          Constant: int, 2
+                        ID: e
+                      Constant: int, 0
+                      ID: a
+                  Assignment: |=
+                    ID: d
+                    Constant: int, 4
+                Return: 

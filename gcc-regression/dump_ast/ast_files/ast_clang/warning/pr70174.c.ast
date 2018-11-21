@@ -1,0 +1,31 @@
+c_files/pr70174.c:10:7: warning: incompatible pointer to integer conversion assigning to 'int' from 'void (void)' [-Wint-conversion]
+  a.f = foo;    /* { dg-warning "assignment to 'signed char:4' from 'void \\(\\*\\)\\(void\\)' makes integer from pointer without a cast" } */
+      ^ ~~~
+1 warning generated.
+TranslationUnitDecl 0x7fb367025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb367026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb367025d40 '__int128'
+|-TypedefDecl 0x7fb367026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb367025d60 'unsigned __int128'
+|-TypedefDecl 0x7fb367026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb367026170 'struct __NSConstantString_tag'
+|   `-Record 0x7fb3670260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb367026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb3670263c0 'char *'
+|   `-BuiltinType 0x7fb367025b60 'char'
+|-TypedefDecl 0x7fb3670266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb367026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb3670264e0 'struct __va_list_tag'
+|     `-Record 0x7fb367026458 '__va_list_tag'
+|-RecordDecl 0x7fb367026720 <c_files/pr70174.c:5:1, col:23> col:8 struct S definition
+| `-FieldDecl 0x7fb366804018 <col:12, col:20> col:16 referenced f 'int'
+|   `-IntegerLiteral 0x7fb3670267d0 <col:20> 'int' 4
+|-VarDecl 0x7fb3668040b0 <col:1, col:25> col:25 used a 'struct S':'struct S'
+`-FunctionDecl 0x7fb366804230 <line:7:1, line:11:1> line:8:1 referenced foo 'void (void)'
+  `-CompoundStmt 0x7fb3668047d0 <line:9:1, line:11:1>
+    `-BinaryOperator 0x7fb366804760 <line:10:3, col:9> 'int' '='
+      |-MemberExpr 0x7fb3668042f0 <col:3, col:5> 'int' lvalue bitfield .f 0x7fb366804018
+      | `-DeclRefExpr 0x7fb3668042c8 <col:3> 'struct S':'struct S' lvalue Var 0x7fb3668040b0 'a' 'struct S':'struct S'
+      `-ImplicitCastExpr 0x7fb366804390 <col:9> 'int' <PointerToIntegral>
+        `-ImplicitCastExpr 0x7fb366804378 <col:9> 'void (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fb366804328 <col:9> 'void (void)' Function 0x7fb366804230 'foo' 'void (void)'

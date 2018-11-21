@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7f9a628264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9a62826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9a62826740 '__int128'
+|-TypedefDecl 0x7f9a62826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9a62826760 'unsigned __int128'
+|-TypedefDecl 0x7f9a62826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9a62826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9a62826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9a62826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9a62826dc0 'char *'
+|   `-BuiltinType 0x7f9a62826560 'char'
+|-TypedefDecl 0x7f9a628270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9a62827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9a62826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9a62826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9a62877430 <c_files/pragma-pack-3.c:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9a628774c8 prev 0x7f9a62877430 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7f9a62877560 <line:8:1, line:20:1> line:8:8 struct S definition
+| |-FieldDecl 0x7f9a62877688 <line:10:3, col:11> col:8 a 'char [3]'
+| |-RecordDecl 0x7f9a628776f0 parent 0x7f9a628264d0 <line:13:3, line:17:3> line:13:10 struct T definition
+| | |-MaxFieldAlignmentAttr 0x7f9a628777a0 <<invalid sloc>> Implicit 8
+| | |-FieldDecl 0x7f9a62877808 <line:15:5, col:10> col:10 b 'char'
+| | `-FieldDecl 0x7f9a62877868 <line:16:5, col:9> col:9 c 'int'
+| |-FieldDecl 0x7f9a62877900 <line:13:3, line:17:5> col:5 d 'struct T':'struct T'
+| `-FieldDecl 0x7f9a62877960 <line:19:3, col:7> col:7 e 'int'
+|-VarDecl 0x7f9a62877a00 <line:8:1, line:20:3> col:3 referenced s 'struct S':'struct S'
+`-FunctionDecl 0x7f9a62877b10 <line:22:1, line:28:1> line:23:1 main 'int ()'
+  `-CompoundStmt 0x7f9a62877ed8 <line:24:1, line:28:1>
+    |-IfStmt 0x7f9a62877e68 <line:25:3, line:26:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9a62877db0 <line:25:7, col:42> 'int' '&&'
+    | | |-BinaryOperator 0x7f9a62877c18 <col:7, col:23> 'int' '=='
+    | | | |-UnaryExprOrTypeTraitExpr 0x7f9a62877bc0 <col:7, col:18> 'unsigned long' sizeof 'int'
+    | | | `-ImplicitCastExpr 0x7f9a62877c00 <col:23> 'unsigned long' <IntegralCast>
+    | | |   `-IntegerLiteral 0x7f9a62877be0 <col:23> 'int' 4
+    | | `-BinaryOperator 0x7f9a62877ce0 <col:28, col:42> 'int' '!='
+    | |   |-UnaryExprOrTypeTraitExpr 0x7f9a62877c88 <col:28, col:37> 'unsigned long' sizeof
+    | |   | `-ParenExpr 0x7f9a62877c68 <col:35, col:37> 'struct S':'struct S' lvalue
+    | |   |   `-DeclRefExpr 0x7f9a62877c40 <col:36> 'struct S':'struct S' lvalue Var 0x7f9a62877a00 's' 'struct S':'struct S'
+    | |   `-ImplicitCastExpr 0x7f9a62877cc8 <col:42> 'unsigned long' <IntegralCast>
+    | |     `-IntegerLiteral 0x7f9a62877ca8 <col:42> 'int' 12
+    | |-CallExpr 0x7f9a62877e40 <line:26:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f9a62877e28 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f9a62877dd8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a628774c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f9a62877ec0 <line:27:3, col:10>
+      `-IntegerLiteral 0x7f9a62877ea0 <col:10> 'int' 0

@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7fb465818ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb465819020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb465818d40 '__int128'
+|-TypedefDecl 0x7fb465819090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb465818d60 'unsigned __int128'
+|-TypedefDecl 0x7fb465819368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb465819170 'struct __NSConstantString_tag'
+|   `-Record 0x7fb4658190e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb465819400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb4658193c0 'char *'
+|   `-BuiltinType 0x7fb465818b60 'char'
+|-TypedefDecl 0x7fb4658196c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb465819670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb4658194e0 'struct __va_list_tag'
+|     `-Record 0x7fb465819458 '__va_list_tag'
+|-TypedefDecl 0x7fb465819738 <c_files/pr33726.c:5:1, col:22> col:22 referenced U032 'unsigned int'
+| `-BuiltinType 0x7fb465818c60 'unsigned int'
+|-RecordDecl 0x7fb465033400 <line:6:18, line:11:1> line:6:25 struct X definition
+| |-FieldDecl 0x7fb465033588 <line:7:6, col:23> col:11 Monochrome 'U032 [1]'
+| |-RecordDecl 0x7fb4650335d0 <line:8:6, line:10:6> line:8:6 struct definition
+| | `-FieldDecl 0x7fb465033690 <line:9:11, col:16> col:16 referenced WidthHeight 'U032':'unsigned int'
+| `-FieldDecl 0x7fb465033828 <line:8:6, line:10:28> col:8 referenced UnclippedRectangle 'struct (anonymous struct at c_files/pr33726.c:8:6) [1]'
+|-TypedefDecl 0x7fb4650338c0 <line:6:1, line:11:3> col:3 referenced RivaBitmap 'volatile struct X':'volatile struct X'
+| `-QualType 0x7fb465033874 'volatile struct X' volatile
+|   `-ElaboratedType 0x7fb465033870 'struct X' sugar
+|     `-RecordType 0x7fb465033490 'struct X'
+|       `-Record 0x7fb465033400 'X'
+|-FunctionDecl 0x7fb465033a10 <line:12:1, col:19> col:6 used writel 'void (void *)'
+| `-ParmVarDecl 0x7fb465033948 <col:13, col:18> col:19 'void *'
+`-FunctionDecl 0x7fb465033c80 <line:13:1, line:16:1> line:13:6 rivafb_fillrect 'void (RivaBitmap *)'
+  |-ParmVarDecl 0x7fb465033b78 <col:22, col:34> col:34 used bm 'RivaBitmap *'
+  `-CompoundStmt 0x7fb465034040 <line:14:1, line:16:1>
+    `-CallExpr 0x7fb465034010 <line:15:3, col:56> 'void'
+      |-ImplicitCastExpr 0x7fb465033ff8 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb465033d20 <col:3> 'void (void *)' Function 0x7fb465033a10 'writel' 'void (void *)'
+      `-CStyleCastExpr 0x7fb465033fa8 <col:10, col:45> 'void *' <BitCast>
+        `-UnaryOperator 0x7fb465033f48 <col:18, col:45> 'volatile U032 *' prefix '&'
+          `-MemberExpr 0x7fb465033eb8 <col:19, col:45> 'volatile U032':'volatile unsigned int' lvalue .WidthHeight 0x7fb465033690
+            `-ArraySubscriptExpr 0x7fb465033e90 <col:19, col:43> 'volatile struct (anonymous struct at c_files/pr33726.c:8:6)':'volatile struct X::(anonymous at c_files/pr33726.c:8:6)' lvalue
+              |-ImplicitCastExpr 0x7fb465033e78 <col:19, col:23> 'volatile struct (anonymous struct at c_files/pr33726.c:8:6) *' <ArrayToPointerDecay>
+              | `-MemberExpr 0x7fb465033d88 <col:19, col:23> 'struct (anonymous struct at c_files/pr33726.c:8:6) volatile[1]' lvalue ->UnclippedRectangle 0x7fb465033828
+              |   `-ImplicitCastExpr 0x7fb465033d70 <col:19> 'RivaBitmap *' <LValueToRValue>
+              |     `-DeclRefExpr 0x7fb465033d48 <col:19> 'RivaBitmap *' lvalue ParmVar 0x7fb465033b78 'bm' 'RivaBitmap *'
+              `-IntegerLiteral 0x7fb465033dc0 <col:42> 'int' 0

@@ -1,0 +1,32 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['char']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['signed', 'short']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 19
+        Assignment: =
+          ID: i
+          BinaryOp: +
+            ID: i
+            Constant: int, 1
+        Assignment: =
+          ArrayRef: 
+            ID: s
+            ID: i
+          ID: i

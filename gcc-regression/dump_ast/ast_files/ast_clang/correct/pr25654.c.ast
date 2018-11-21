@@ -1,0 +1,102 @@
+TranslationUnitDecl 0x7ff6e60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff6e6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff6e6026740 '__int128'
+|-TypedefDecl 0x7ff6e6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff6e6026760 'unsigned __int128'
+|-TypedefDecl 0x7ff6e6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff6e6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff6e6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff6e6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff6e6026dc0 'char *'
+|   `-BuiltinType 0x7ff6e6026560 'char'
+|-TypedefDecl 0x7ff6e60270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff6e6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff6e6026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff6e6026e58 '__va_list_tag'
+|-FunctionDecl 0x7ff6e6826a20 <c_files/pr25654.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff6e6826ab8 prev 0x7ff6e6826a20 <col:1, col:50> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7ff6e6826b50 <line:7:1, line:13:1> line:7:8 struct wrapper definition
+| |-RecordDecl 0x7ff6e6826c00 parent 0x7ff6e60264d0 <line:8:1, line:12:1> line:8:7 union setconflict definition
+| | |-FieldDecl 0x7ff6e6826d40 <line:10:3, col:13> col:9 referenced a 'short [20]'
+| | `-FieldDecl 0x7ff6e6826e10 <line:11:3, col:11> col:7 referenced b 'int [10]'
+| `-FieldDecl 0x7ff6e6826eb0 <line:8:1, line:12:3> col:3 referenced a 'union setconflict':'union setconflict'
+`-FunctionDecl 0x7ff6e6826fa0 <line:15:1, line:41:1> line:16:1 main 'int ()'
+  `-CompoundStmt 0x7ff6e68281b8 <line:17:1, line:41:1>
+    |-DeclStmt 0x7ff6e6827110 <line:18:3, col:14>
+    | `-VarDecl 0x7ff6e6827090 <col:3, col:13> col:7 used sum 'int' cinit
+    |   `-IntegerLiteral 0x7ff6e68270f0 <col:13> 'int' 0
+    |-CompoundStmt 0x7ff6e68278e8 <line:19:3, line:27:3>
+    | |-DeclStmt 0x7ff6e68271e0 <line:20:5, col:21>
+    | | `-VarDecl 0x7ff6e6827180 <col:5, col:20> col:20 used a 'struct wrapper':'struct wrapper'
+    | |-DeclStmt 0x7ff6e68272a0 <line:21:5, col:13>
+    | | `-VarDecl 0x7ff6e6827240 <col:5, col:12> col:12 used c 'short *'
+    | |-BinaryOperator 0x7ff6e6827390 <line:22:5, col:13> 'short *' '='
+    | | |-DeclRefExpr 0x7ff6e68272b8 <col:5> 'short *' lvalue Var 0x7ff6e6827240 'c' 'short *'
+    | | `-ImplicitCastExpr 0x7ff6e6827378 <col:9, col:13> 'short *' <ArrayToPointerDecay>
+    | |   `-MemberExpr 0x7ff6e6827340 <col:9, col:13> 'short [20]' lvalue .a 0x7ff6e6826d40
+    | |     `-MemberExpr 0x7ff6e6827308 <col:9, col:11> 'union setconflict':'union setconflict' lvalue .a 0x7ff6e6826eb0
+    | |       `-DeclRefExpr 0x7ff6e68272e0 <col:9> 'struct wrapper':'struct wrapper' lvalue Var 0x7ff6e6827180 'a' 'struct wrapper':'struct wrapper'
+    | |-GCCAsmStmt 0x7ff6e6827558 <line:23:5, col:30>
+    | | |-DeclRefExpr 0x7ff6e6827488 <col:20> 'short *' lvalue Var 0x7ff6e6827240 'c' 'short *'
+    | | `-ImplicitCastExpr 0x7ff6e6827540 <col:28> 'short *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ff6e6827518 <col:28> 'short *' lvalue Var 0x7ff6e6827240 'c' 'short *'
+    | |-BinaryOperator 0x7ff6e6827668 <line:24:5, col:10> 'short' '='
+    | | |-UnaryOperator 0x7ff6e6827610 <col:5, col:6> 'short' lvalue prefix '*'
+    | | | `-ImplicitCastExpr 0x7ff6e68275f8 <col:6> 'short *' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7ff6e68275d0 <col:6> 'short *' lvalue Var 0x7ff6e6827240 'c' 'short *'
+    | | `-ImplicitCastExpr 0x7ff6e6827650 <col:10> 'short' <IntegralCast>
+    | |   `-IntegerLiteral 0x7ff6e6827630 <col:10> 'int' 0
+    | |-GCCAsmStmt 0x7ff6e6827780 <line:25:5, col:30>
+    | | |-DeclRefExpr 0x7ff6e68276e8 <col:20> 'short *' lvalue Var 0x7ff6e6827240 'c' 'short *'
+    | | `-ImplicitCastExpr 0x7ff6e6827768 <col:28> 'short *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ff6e6827740 <col:28> 'short *' lvalue Var 0x7ff6e6827240 'c' 'short *'
+    | `-CompoundAssignOperator 0x7ff6e68278b0 <line:26:5, col:13> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-DeclRefExpr 0x7ff6e68277f8 <col:5> 'int' lvalue Var 0x7ff6e6827090 'sum' 'int'
+    |   `-ImplicitCastExpr 0x7ff6e6827898 <col:12, col:13> 'int' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7ff6e6827880 <col:12, col:13> 'short' <LValueToRValue>
+    |       `-UnaryOperator 0x7ff6e6827860 <col:12, col:13> 'short' lvalue prefix '*'
+    |         `-ImplicitCastExpr 0x7ff6e6827848 <col:13> 'short *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7ff6e6827820 <col:13> 'short *' lvalue Var 0x7ff6e6827240 'c' 'short *'
+    |-CompoundStmt 0x7ff6e6827fe0 <line:28:3, line:36:3>
+    | |-DeclStmt 0x7ff6e68279b8 <line:29:5, col:21>
+    | | `-VarDecl 0x7ff6e6827958 <col:5, col:20> col:20 used a 'struct wrapper':'struct wrapper'
+    | |-DeclStmt 0x7ff6e6827a78 <line:30:5, col:11>
+    | | `-VarDecl 0x7ff6e6827a18 <col:5, col:10> col:10 used c 'int *'
+    | |-BinaryOperator 0x7ff6e6827b68 <line:31:5, col:13> 'int *' '='
+    | | |-DeclRefExpr 0x7ff6e6827a90 <col:5> 'int *' lvalue Var 0x7ff6e6827a18 'c' 'int *'
+    | | `-ImplicitCastExpr 0x7ff6e6827b50 <col:9, col:13> 'int *' <ArrayToPointerDecay>
+    | |   `-MemberExpr 0x7ff6e6827b18 <col:9, col:13> 'int [10]' lvalue .b 0x7ff6e6826e10
+    | |     `-MemberExpr 0x7ff6e6827ae0 <col:9, col:11> 'union setconflict':'union setconflict' lvalue .a 0x7ff6e6826eb0
+    | |       `-DeclRefExpr 0x7ff6e6827ab8 <col:9> 'struct wrapper':'struct wrapper' lvalue Var 0x7ff6e6827958 'a' 'struct wrapper':'struct wrapper'
+    | |-GCCAsmStmt 0x7ff6e6827c80 <line:32:5, col:30>
+    | | |-DeclRefExpr 0x7ff6e6827be8 <col:20> 'int *' lvalue Var 0x7ff6e6827a18 'c' 'int *'
+    | | `-ImplicitCastExpr 0x7ff6e6827c68 <col:28> 'int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ff6e6827c40 <col:28> 'int *' lvalue Var 0x7ff6e6827a18 'c' 'int *'
+    | |-BinaryOperator 0x7ff6e6827d78 <line:33:5, col:10> 'int' '='
+    | | |-UnaryOperator 0x7ff6e6827d38 <col:5, col:6> 'int' lvalue prefix '*'
+    | | | `-ImplicitCastExpr 0x7ff6e6827d20 <col:6> 'int *' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7ff6e6827cf8 <col:6> 'int *' lvalue Var 0x7ff6e6827a18 'c' 'int *'
+    | | `-IntegerLiteral 0x7ff6e6827d58 <col:10> 'int' 1
+    | |-GCCAsmStmt 0x7ff6e6827e90 <line:34:5, col:30>
+    | | |-DeclRefExpr 0x7ff6e6827df8 <col:20> 'int *' lvalue Var 0x7ff6e6827a18 'c' 'int *'
+    | | `-ImplicitCastExpr 0x7ff6e6827e78 <col:28> 'int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ff6e6827e50 <col:28> 'int *' lvalue Var 0x7ff6e6827a18 'c' 'int *'
+    | `-CompoundAssignOperator 0x7ff6e6827fa8 <line:35:5, col:13> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-DeclRefExpr 0x7ff6e6827f08 <col:5> 'int' lvalue Var 0x7ff6e6827090 'sum' 'int'
+    |   `-ImplicitCastExpr 0x7ff6e6827f90 <col:12, col:13> 'int' <LValueToRValue>
+    |     `-UnaryOperator 0x7ff6e6827f70 <col:12, col:13> 'int' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7ff6e6827f58 <col:13> 'int *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7ff6e6827f30 <col:13> 'int *' lvalue Var 0x7ff6e6827a18 'c' 'int *'
+    |-IfStmt 0x7ff6e6828148 <line:38:3, line:39:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff6e6828090 <line:38:7, col:14> 'int' '!='
+    | | |-ImplicitCastExpr 0x7ff6e6828078 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff6e6828030 <col:7> 'int' lvalue Var 0x7ff6e6827090 'sum' 'int'
+    | | `-IntegerLiteral 0x7ff6e6828058 <col:14> 'int' 1
+    | |-CallExpr 0x7ff6e6828120 <line:39:5, col:11> 'void'
+    | | `-ImplicitCastExpr 0x7ff6e6828108 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff6e68280b8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff6e6826ab8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ff6e68281a0 <line:40:3, col:10>
+      `-IntegerLiteral 0x7ff6e6828180 <col:10> 'int' 0

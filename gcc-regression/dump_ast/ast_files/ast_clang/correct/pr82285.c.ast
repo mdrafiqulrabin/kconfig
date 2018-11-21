@@ -1,0 +1,73 @@
+TranslationUnitDecl 0x7f99c7019ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f99c701a020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f99c7019d40 '__int128'
+|-TypedefDecl 0x7f99c701a090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f99c7019d60 'unsigned __int128'
+|-TypedefDecl 0x7f99c701a368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f99c701a170 'struct __NSConstantString_tag'
+|   `-Record 0x7f99c701a0e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f99c701a400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f99c701a3c0 'char *'
+|   `-BuiltinType 0x7f99c7019b60 'char'
+|-TypedefDecl 0x7f99c701a6c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f99c701a670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f99c701a4e0 'struct __va_list_tag'
+|     `-Record 0x7f99c701a458 '__va_list_tag'
+|-EnumDecl 0x7f99c701a720 <c_files/pr82285.c:3:1, col:34> col:6 tst
+| |-EnumConstantDecl 0x7f99c6832600 <col:12, col:20> col:12 referenced first 'int'
+| | `-IntegerLiteral 0x7f99c701a7e0 <col:20> 'int' 0
+| `-EnumConstantDecl 0x7f99c6832668 <col:23, col:32> col:23 referenced second 'int'
+|   `-IntegerLiteral 0x7f99c6832648 <col:32> 'int' 1
+|-FunctionDecl 0x7f99c6832700 <line:5:1, line:16:1> line:6:1 main 'int ()'
+| `-CompoundStmt 0x7f99c68330f8 <line:7:1, line:16:1>
+|   |-DeclStmt 0x7f99c6832938 <line:8:3, col:20>
+|   | `-VarDecl 0x7f99c68328d8 <col:3, col:19> col:12 used data 'enum tst [16]'
+|   |-ForStmt 0x7f99c6832d80 <line:10:3, line:11:38>
+|   | |-DeclStmt 0x7f99c6832a00 <line:10:8, col:22>
+|   | | `-VarDecl 0x7f99c6832968 <col:8, col:21> col:17 used i 'unsigned int' cinit
+|   | |   `-ImplicitCastExpr 0x7f99c68329e8 <col:21> 'unsigned int' <IntegralCast>
+|   | |     `-IntegerLiteral 0x7f99c68329c8 <col:21> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f99c6832a90 <col:24, col:28> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f99c6832a60 <col:24> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f99c6832a18 <col:24> 'unsigned int' lvalue Var 0x7f99c6832968 'i' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7f99c6832a78 <col:28> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f99c6832a40 <col:28> 'int' 16
+|   | |-UnaryOperator 0x7f99c6832ae0 <col:32, col:33> 'unsigned int' postfix '++'
+|   | | `-DeclRefExpr 0x7f99c6832ab8 <col:32> 'unsigned int' lvalue Var 0x7f99c6832968 'i' 'unsigned int'
+|   | `-BinaryOperator 0x7f99c6832d58 <line:11:5, col:38> 'enum tst':'enum tst' '='
+|   |   |-ArraySubscriptExpr 0x7f99c6832bd8 <col:5, col:11> 'enum tst':'enum tst' lvalue
+|   |   | |-ImplicitCastExpr 0x7f99c6832ba8 <col:5> 'enum tst *' <ArrayToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7f99c6832b00 <col:5> 'enum tst [16]' lvalue Var 0x7f99c68328d8 'data' 'enum tst [16]'
+|   |   | `-ImplicitCastExpr 0x7f99c6832bc0 <col:10> 'unsigned int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7f99c6832b28 <col:10> 'unsigned int' lvalue Var 0x7f99c6832968 'i' 'unsigned int'
+|   |   `-ImplicitCastExpr 0x7f99c6832d40 <col:15, col:38> 'enum tst':'enum tst' <IntegralCast>
+|   |     `-ParenExpr 0x7f99c6832d20 <col:15, col:38> 'int'
+|   |       `-ConditionalOperator 0x7f99c6832cf0 <col:16, col:33> 'int'
+|   |         |-BinaryOperator 0x7f99c6832c78 <col:16, col:20> 'int' '<'
+|   |         | |-ImplicitCastExpr 0x7f99c6832c48 <col:16> 'unsigned int' <LValueToRValue>
+|   |         | | `-DeclRefExpr 0x7f99c6832c00 <col:16> 'unsigned int' lvalue Var 0x7f99c6832968 'i' 'unsigned int'
+|   |         | `-ImplicitCastExpr 0x7f99c6832c60 <col:20> 'unsigned int' <IntegralCast>
+|   |         |   `-IntegerLiteral 0x7f99c6832c28 <col:20> 'int' 5
+|   |         |-DeclRefExpr 0x7f99c6832ca0 <col:24> 'int' EnumConstant 0x7f99c6832668 'second' 'int'
+|   |         `-DeclRefExpr 0x7f99c6832cc8 <col:33> 'int' EnumConstant 0x7f99c6832600 'first' 'int'
+|   |-IfStmt 0x7f99c6833088 <line:13:3, line:14:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f99c6832eb0 <line:13:7, col:18> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7f99c6832e80 <col:7, col:13> 'unsigned int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f99c6832e68 <col:7, col:13> 'enum tst':'enum tst' <LValueToRValue>
+|   | | |   `-ArraySubscriptExpr 0x7f99c6832e18 <col:7, col:13> 'enum tst':'enum tst' lvalue
+|   | | |     |-ImplicitCastExpr 0x7f99c6832e00 <col:7> 'enum tst *' <ArrayToPointerDecay>
+|   | | |     | `-DeclRefExpr 0x7f99c6832db8 <col:7> 'enum tst [16]' lvalue Var 0x7f99c68328d8 'data' 'enum tst [16]'
+|   | | |     `-IntegerLiteral 0x7f99c6832de0 <col:12> 'int' 2
+|   | | `-ImplicitCastExpr 0x7f99c6832e98 <col:18> 'unsigned int' <IntegralCast>
+|   | |   `-DeclRefExpr 0x7f99c6832e40 <col:18> 'int' EnumConstant 0x7f99c6832668 'second' 'int'
+|   | |-CallExpr 0x7f99c6833060 <line:14:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f99c6833048 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f99c6832ff0 <col:5> '<builtin fn type>' Function 0x7f99c6832f10 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f99c68330e0 <line:15:3, col:10>
+|     `-IntegerLiteral 0x7f99c68330c0 <col:10> 'int' 0
+`-FunctionDecl 0x7f99c6832f10 <line:14:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f99c6832fa8 <col:5> Implicit

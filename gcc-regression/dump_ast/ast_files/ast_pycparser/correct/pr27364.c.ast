@@ -1,0 +1,50 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: number_of_digits_to_use, [], [], []
+            TypeDecl: number_of_digits_to_use, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: >
+          ID: number_of_digits_to_use
+          Constant: int, 1294
+        Return: 
+          Constant: int, 0
+      Return: 
+        BinaryOp: /
+          BinaryOp: +
+            BinaryOp: /
+              BinaryOp: *
+                ID: number_of_digits_to_use
+                Constant: int, 3321928
+              Constant: int, 1000000
+            Constant: int, 1
+          Constant: int, 16
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: f
+            ExprList: 
+              Constant: int, 11
+          Constant: int, 2
+        FuncCall: 
+          ID: __builtin_abort
+      FuncCall: 
+        ID: exit
+        ExprList: 
+          Constant: int, 0

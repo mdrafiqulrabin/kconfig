@@ -1,0 +1,63 @@
+c_files/pr56154-4.c:6:10: fatal error: '../nop.h' file not found
+#include "../nop.h"
+         ^~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fbd6b0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbd6b026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbd6b026740 '__int128'
+|-TypedefDecl 0x7fbd6b026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbd6b026760 'unsigned __int128'
+|-TypedefDecl 0x7fbd6b026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbd6b026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbd6b026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbd6b026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbd6b026dc0 'char *'
+|   `-BuiltinType 0x7fbd6b026560 'char'
+|-TypedefDecl 0x7fbd6b0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbd6b027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbd6b026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbd6b026e58 '__va_list_tag'
+|-FunctionDecl 0x7fbd6b827a30 <c_files/pr56154-4.c:8:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbd6b827ac8 prev 0x7fbd6b827a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7fbd6b827b78 <line:10:1, col:14> col:14 used z 'volatile int'
+|-FunctionDecl 0x7fbd6b827cf8 <line:12:1, line:27:1> line:13:1 used foo 'int (int)'
+| |-ParmVarDecl 0x7fbd6b827c30 <col:6, col:10> col:10 used x 'int'
+| |-CompoundStmt 0x7fbd6b8280e8 <line:14:1, line:27:1>
+| | |-BinaryOperator 0x7fbd6b827e28 <line:15:3, col:7> 'int' '='
+| | | |-DeclRefExpr 0x7fbd6b827de0 <col:3> 'volatile int' lvalue Var 0x7fbd6b827b78 'z' 'volatile int'
+| | | `-IntegerLiteral 0x7fbd6b827e08 <col:7> 'int' 6
+| | |-UnaryOperator 0x7fbd6b827e78 <line:16:3, col:4> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fbd6b827e50 <col:3> 'int' lvalue ParmVar 0x7fbd6b827c30 'x' 'int'
+| | |-UnaryOperator 0x7fbd6b827ec0 <line:17:3, col:4> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fbd6b827e98 <col:3> 'int' lvalue ParmVar 0x7fbd6b827c30 'x' 'int'
+| | |-UnaryOperator 0x7fbd6b827f08 <line:18:3, col:4> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fbd6b827ee0 <col:3> 'int' lvalue ParmVar 0x7fbd6b827c30 'x' 'int'
+| | |-UnaryOperator 0x7fbd6b827f50 <line:19:3, col:4> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fbd6b827f28 <col:3> 'int' lvalue ParmVar 0x7fbd6b827c30 'x' 'int'
+| | |-UnaryOperator 0x7fbd6b827f98 <line:20:3, col:4> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fbd6b827f70 <col:3> 'int' lvalue ParmVar 0x7fbd6b827c30 'x' 'int'
+| | |-UnaryOperator 0x7fbd6b827fe0 <line:21:3, col:4> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fbd6b827fb8 <col:3> 'int' lvalue ParmVar 0x7fbd6b827c30 'x' 'int'
+| | |-UnaryOperator 0x7fbd6b828028 <line:22:3, col:4> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fbd6b828000 <col:3> 'int' lvalue ParmVar 0x7fbd6b827c30 'x' 'int'
+| | |-UnaryOperator 0x7fbd6b828070 <line:23:3, col:4> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fbd6b828048 <col:3> 'int' lvalue ParmVar 0x7fbd6b827c30 'x' 'int'
+| | `-ReturnStmt 0x7fbd6b8280d0 <line:26:3, col:10>
+| |   `-ImplicitCastExpr 0x7fbd6b8280b8 <col:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fbd6b828090 <col:10> 'int' lvalue ParmVar 0x7fbd6b827c30 'x' 'int'
+| `-NoInlineAttr 0x7fbd6b827d98 <line:12:16>
+`-FunctionDecl 0x7fbd6b8281e0 <line:29:1, line:34:1> line:30:1 test_main 'void (void)'
+  `-CompoundStmt 0x7fbd6b828440 <line:31:1, line:34:1>
+    `-IfStmt 0x7fbd6b828408 <line:32:3, line:33:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fbd6b828350 <line:32:7, col:19> 'int' '!='
+      | |-CallExpr 0x7fbd6b828300 <col:7, col:14> 'int'
+      | | |-ImplicitCastExpr 0x7fbd6b8282e8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+      | | | `-DeclRefExpr 0x7fbd6b828278 <col:7> 'int (int)' Function 0x7fbd6b827cf8 'foo' 'int (int)'
+      | | `-IntegerLiteral 0x7fbd6b8282a0 <col:12> 'int' 20
+      | `-IntegerLiteral 0x7fbd6b828330 <col:19> 'int' 28
+      |-CallExpr 0x7fbd6b8283e0 <line:33:5, col:12> 'void'
+      | `-ImplicitCastExpr 0x7fbd6b8283c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fbd6b828378 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbd6b827ac8 'abort' 'void (void) __attribute__((noreturn))'
+      `-<<<NULL>>>

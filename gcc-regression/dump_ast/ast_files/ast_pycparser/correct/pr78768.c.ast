@@ -1,0 +1,32 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: d, [], [], []
+        PtrDecl: []
+          TypeDecl: d, []
+            IdentifierType: ['char']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['char']
+          FuncCall: 
+            ID: __builtin_alloca
+            ExprList: 
+              Constant: int, 12
+      FuncCall: 
+        ID: __builtin_sprintf
+        ExprList: 
+          ID: d
+          Constant: string, "%32s"
+          Constant: string, "x"
+      Return: 
+        Constant: int, 0

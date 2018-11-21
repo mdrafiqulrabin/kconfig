@@ -1,0 +1,51 @@
+FileAST: 
+  Decl: DVDinput_read, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: DVDinput_read, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: DVDReadBlocksPath, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: offset, [], [], []
+            TypeDecl: offset, []
+              IdentifierType: ['int']
+          Decl: block_count, [], [], []
+            TypeDecl: block_count, []
+              IdentifierType: ['int']
+        TypeDecl: DVDReadBlocksPath, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: ret, [], [], []
+        TypeDecl: ret, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: ret2, [], [], []
+        TypeDecl: ret2, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        Compound: 
+          If: 
+            ID: offset
+            Assignment: =
+              ID: ret
+              FuncCall: 
+                ID: DVDinput_read
+                ExprList: 
+                  ID: block_count
+            Assignment: =
+              ID: ret2
+              FuncCall: 
+                ID: DVDinput_read
+                ExprList: 
+                  ID: block_count
+          Break: 
+      Return: 
+        BinaryOp: +
+          ID: ret
+          ID: ret2

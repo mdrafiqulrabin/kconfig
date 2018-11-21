@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fd08b0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd08b026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd08b026740 '__int128'
+|-TypedefDecl 0x7fd08b026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd08b026760 'unsigned __int128'
+|-TypedefDecl 0x7fd08b026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd08b026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd08b026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd08b026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd08b026dc0 'char *'
+|   `-BuiltinType 0x7fd08b026560 'char'
+|-TypedefDecl 0x7fd08b0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd08b027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd08b026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd08b026e58 '__va_list_tag'
+|-TypedefDecl 0x7fd08b027178 <c_files/pr80019.c:5:1, col:14> col:14 referenced v16qi '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+| `-VectorType 0x7fd08b027140 '__attribute__((__vector_size__(16 * sizeof(char)))) char' 16
+|   `-BuiltinType 0x7fd08b026560 'char'
+|-VarDecl 0x7fd08b826a00 <line:7:1, col:14> col:14 used b 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' extern
+|-VarDecl 0x7fd08b826ab0 <col:1, col:17> col:17 used c 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' extern
+`-FunctionDecl 0x7fd08b826c00 <line:9:1, line:13:1> line:10:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fd08b826b40 <col:6, col:10> col:10 used e 'int'
+  `-CompoundStmt 0x7fd08b826de0 <line:11:1, line:13:1>
+    `-BinaryOperator 0x7fd08b826db8 <line:12:3, col:12> 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' '='
+      |-DeclRefExpr 0x7fd08b826ca0 <col:3> 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' lvalue Var 0x7fd08b826a00 'b' 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+      `-BinaryOperator 0x7fd08b826d90 <col:7, col:12> 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' '<<'
+        |-ImplicitCastExpr 0x7fd08b826d18 <col:7> 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' <LValueToRValue>
+        | `-DeclRefExpr 0x7fd08b826cc8 <col:7> 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' lvalue Var 0x7fd08b826ab0 'c' 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+        `-ImplicitCastExpr 0x7fd08b826d78 <col:12> 'int __attribute__((ext_vector_type(16)))' <VectorSplat>
+          `-ImplicitCastExpr 0x7fd08b826d30 <col:12> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fd08b826cf0 <col:12> 'int' lvalue ParmVar 0x7fd08b826b40 'e' 'int'

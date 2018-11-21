@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7ffc6b0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffc6b026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffc6b026740 '__int128'
+|-TypedefDecl 0x7ffc6b026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffc6b026760 'unsigned __int128'
+|-TypedefDecl 0x7ffc6b026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffc6b026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffc6b026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffc6b026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffc6b026dc0 'char *'
+|   `-BuiltinType 0x7ffc6b026560 'char'
+|-TypedefDecl 0x7ffc6b0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffc6b027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffc6b026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffc6b026e58 '__va_list_tag'
+|-FunctionDecl 0x7ffc6b825a00 <c_files/pr68937-1.c:4:1, col:21> col:13 used bar 'void (int)' extern
+| `-ParmVarDecl 0x7ffc6b027138 <col:18> col:21 'int'
+`-FunctionDecl 0x7ffc6b825b80 <line:6:1, line:11:1> line:7:1 foo 'void (int)'
+  |-ParmVarDecl 0x7ffc6b825af8 <col:6, col:10> col:10 used b 'int'
+  `-CompoundStmt 0x7ffc6b825da8 <line:8:1, line:11:1>
+    |-CallExpr 0x7ffc6b825cb0 <line:9:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7ffc6b825c98 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ffc6b825c20 <col:3> 'void (int)' Function 0x7ffc6b825a00 'bar' 'void (int)'
+    | `-ImplicitCastExpr 0x7ffc6b825ce0 <col:8> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ffc6b825c48 <col:8> 'int' lvalue ParmVar 0x7ffc6b825af8 'b' 'int'
+    `-CallExpr 0x7ffc6b825d60 <line:10:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7ffc6b825d48 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ffc6b825cf8 <col:3> 'void (int)' Function 0x7ffc6b825a00 'bar' 'void (int)'
+      `-ImplicitCastExpr 0x7ffc6b825d90 <col:8> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7ffc6b825d20 <col:8> 'int' lvalue ParmVar 0x7ffc6b825af8 'b' 'int'

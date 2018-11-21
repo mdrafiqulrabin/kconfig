@@ -1,0 +1,86 @@
+c_files/pr57293.c:5:43: warning: calling convention '__stdcall__' ignored for this target [-Wignored-attributes]
+__attribute__((__noinline__, __noclone__, __stdcall__)) void g(int a)
+                                          ^
+c_files/pr57293.c:5:30: warning: unknown attribute '__noclone__' ignored [-Wunknown-attributes]
+__attribute__((__noinline__, __noclone__, __stdcall__)) void g(int a)
+                             ^
+c_files/pr57293.c:5:30: warning: unknown attribute '__noclone__' ignored [-Wunknown-attributes]
+c_files/pr57293.c:10:43: warning: calling convention '__thiscall__' ignored for this target [-Wignored-attributes]
+__attribute__((__noinline__, __noclone__, __thiscall__)) void h(int a, int b)
+                                          ^
+c_files/pr57293.c:10:30: warning: unknown attribute '__noclone__' ignored [-Wunknown-attributes]
+__attribute__((__noinline__, __noclone__, __thiscall__)) void h(int a, int b)
+                             ^
+c_files/pr57293.c:10:30: warning: unknown attribute '__noclone__' ignored [-Wunknown-attributes]
+c_files/pr57293.c:19:3: error: use of unknown builtin '__builtin_puts' [-Wimplicit-function-declaration]
+  __builtin_puts("in f()");
+  ^
+c_files/pr57293.c:19:3: note: did you mean '__builtin_printf'?
+c_files/pr57293.c:7:3: note: '__builtin_printf' declared here
+  __builtin_printf("in g(): %d\n", a);
+  ^
+6 warnings and 1 error generated.
+TranslationUnitDecl 0x7f99838264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9983826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9983826740 '__int128'
+|-TypedefDecl 0x7f9983826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9983826760 'unsigned __int128'
+|-TypedefDecl 0x7f9983826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9983826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9983826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9983826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9983826dc0 'char *'
+|   `-BuiltinType 0x7f9983826560 'char'
+|-TypedefDecl 0x7f99838270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9983827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9983826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9983826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9983878470 <c_files/pr57293.c:5:1, line:8:1> line:5:62 used g 'void (int) __attribute__((stdcall))':'void (int)'
+| |-ParmVarDecl 0x7f9983827138 <col:64, col:68> col:68 used a 'int'
+| |-CompoundStmt 0x7f99838788d0 <line:6:1, line:8:1>
+| | `-CallExpr 0x7f9983878850 <line:7:3, col:37> 'int'
+| |   |-ImplicitCastExpr 0x7f9983878838 <col:3> 'int (*)(const char *, ...)' <BuiltinFnToFnPtr>
+| |   | `-DeclRefExpr 0x7f9983878740 <col:3> '<builtin fn type>' Function 0x7f99838785e8 '__builtin_printf' 'int (const char *, ...)'
+| |   |-ImplicitCastExpr 0x7f99838788a0 <col:20> 'const char *' <BitCast>
+| |   | `-ImplicitCastExpr 0x7f9983878888 <col:20> 'char *' <ArrayToPointerDecay>
+| |   |   `-StringLiteral 0x7f99838787a8 <col:20> 'char [12]' lvalue "in g(): %d\n"
+| |   `-ImplicitCastExpr 0x7f99838788b8 <col:36> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f99838787e0 <col:36> 'int' lvalue ParmVar 0x7f9983827138 'a' 'int'
+| |-NoInlineAttr 0x7f9983878510 <line:5:16>
+| `-NoInlineAttr 0x7f9983878558 <col:16>
+|-FunctionDecl 0x7f99838785e8 <line:7:3> col:3 implicit used __builtin_printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7f9983878680 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f99838786e8 <col:3> Implicit printf 1 2
+|-FunctionDecl 0x7f9983878a98 <line:10:1, line:13:1> line:10:63 used h 'void (int, int) __attribute__((thiscall))':'void (int, int)'
+| |-ParmVarDecl 0x7f9983878908 <col:65, col:69> col:69 used a 'int'
+| |-ParmVarDecl 0x7f9983878980 <col:72, col:76> col:76 used b 'int'
+| |-CompoundStmt 0x7f9983878d38 <line:11:1, line:13:1>
+| | `-CallExpr 0x7f9983878c98 <line:12:3, col:43> 'int'
+| |   |-ImplicitCastExpr 0x7f9983878c80 <col:3> 'int (*)(const char *, ...)' <BuiltinFnToFnPtr>
+| |   | `-DeclRefExpr 0x7f9983878b98 <col:3> '<builtin fn type>' Function 0x7f99838785e8 '__builtin_printf' 'int (const char *, ...)'
+| |   |-ImplicitCastExpr 0x7f9983878cf0 <col:20> 'const char *' <BitCast>
+| |   | `-ImplicitCastExpr 0x7f9983878cd8 <col:20> 'char *' <ArrayToPointerDecay>
+| |   |   `-StringLiteral 0x7f9983878bf8 <col:20> 'char [15]' lvalue "in h(): %d %d\n"
+| |   |-ImplicitCastExpr 0x7f9983878d08 <col:39> 'int' <LValueToRValue>
+| |   | `-DeclRefExpr 0x7f9983878c30 <col:39> 'int' lvalue ParmVar 0x7f9983878908 'a' 'int'
+| |   `-ImplicitCastExpr 0x7f9983878d20 <col:42> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f9983878c58 <col:42> 'int' lvalue ParmVar 0x7f9983878980 'b' 'int'
+| |-NoInlineAttr 0x7f9983878b40 <line:10:16>
+| `-NoInlineAttr 0x7f9983878b88 <col:16>
+|-FunctionDecl 0x7f9983878da8 <line:15:1, line:20:1> line:15:6 f 'void ()'
+| `-CompoundStmt 0x7f9983879268 <line:16:1, line:20:1>
+|   |-CallExpr 0x7f9983878f00 <line:17:3, col:6> 'void'
+|   | |-ImplicitCastExpr 0x7f9983878ee8 <col:3> 'void (*)(int) __attribute__((stdcall))' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f9983878e40 <col:3> 'void (int) __attribute__((stdcall))':'void (int)' Function 0x7f9983878470 'g' 'void (int) __attribute__((stdcall))':'void (int)'
+|   | `-IntegerLiteral 0x7f9983878e68 <col:5> 'int' 0
+|   |-CallExpr 0x7f9983879010 <line:18:3, col:9> 'void'
+|   | |-ImplicitCastExpr 0x7f9983878ff8 <col:3> 'void (*)(int, int) __attribute__((thiscall))' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f9983878f30 <col:3> 'void (int, int) __attribute__((thiscall))':'void (int, int)' Function 0x7f9983878a98 'h' 'void (int, int) __attribute__((thiscall))':'void (int, int)'
+|   | |-IntegerLiteral 0x7f9983878f58 <col:5> 'int' 0
+|   | `-IntegerLiteral 0x7f9983878f78 <col:8> 'int' 1
+|   `-CallExpr 0x7f9983879220 <line:19:3, col:26> 'int'
+|     |-ImplicitCastExpr 0x7f9983879208 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f9983879148 <col:3> 'int ()' Function 0x7f99838790b0 '__builtin_puts' 'int ()'
+|     `-ImplicitCastExpr 0x7f9983879250 <col:18> 'char *' <ArrayToPointerDecay>
+|       `-StringLiteral 0x7f99838791a8 <col:18> 'char [7]' lvalue "in f()"
+`-FunctionDecl 0x7f99838790b0 <<invalid sloc>> col:3 implicit used __builtin_puts 'int ()'

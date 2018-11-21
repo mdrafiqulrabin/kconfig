@@ -1,0 +1,60 @@
+FileAST: 
+  Typedef: yystype, [], ['typedef']
+    TypeDecl: yystype, []
+      Union: None
+        Decl: string, [], [], []
+          PtrDecl: []
+            TypeDecl: string, []
+              IdentifierType: ['char']
+        Decl: dval, [], [], []
+          TypeDecl: dval, []
+            IdentifierType: ['double']
+        Decl: fval, [], [], []
+          TypeDecl: fval, []
+            IdentifierType: ['float']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: f, []
+            IdentifierType: ['char']
+    Compound: 
+      Decl: tok, [], [], []
+        TypeDecl: tok, []
+          IdentifierType: ['yystype']
+      Assignment: =
+        StructRef: .
+          ID: tok
+          ID: dval
+        Constant: int, 0
+      Return: 
+        StructRef: .
+          ID: tok
+          ID: string
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: f1, []
+            IdentifierType: ['char']
+    Compound: 
+      Decl: tok, [], [], []
+        TypeDecl: tok, []
+          IdentifierType: ['yystype']
+      Assignment: =
+        StructRef: .
+          ID: tok
+          ID: fval
+        Constant: int, 0
+      Return: 
+        StructRef: .
+          ID: tok
+          ID: string

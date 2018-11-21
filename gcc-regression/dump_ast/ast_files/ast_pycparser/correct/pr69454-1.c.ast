@@ -1,0 +1,49 @@
+FileAST: 
+  Typedef: V128, [], ['typedef']
+    TypeDecl: V128, []
+      Struct: None
+        Decl: w64, [], [], []
+          ArrayDecl: []
+            TypeDecl: w64, []
+              IdentifierType: ['long', 'long']
+            Constant: int, 2
+  Decl: fn2, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: fn2, []
+          IdentifierType: ['V128']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['long', 'long']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['V128']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        PtrDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['V128']
+        FuncCall: 
+          ID: fn2
+      Assignment: =
+        ArrayRef: 
+          StructRef: ->
+            ID: c
+            ID: w64
+          Constant: int, 0
+        BinaryOp: ^
+          ID: a
+          ArrayRef: 
+            StructRef: .
+              ID: b
+              ID: w64
+            Constant: int, 0

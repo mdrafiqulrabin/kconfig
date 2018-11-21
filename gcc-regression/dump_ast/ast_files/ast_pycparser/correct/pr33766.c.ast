@@ -1,0 +1,53 @@
+FileAST: 
+  FuncDef: 
+    Decl: fxt1_quantize_ALPHA1, [], [], []
+      FuncDecl: 
+        TypeDecl: fxt1_quantize_ALPHA1, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: j1, [], [], []
+        TypeDecl: j1, []
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: tv, [], [], []
+        PtrDecl: []
+          TypeDecl: tv, []
+            IdentifierType: ['float']
+      For: 
+        Assignment: =
+          ID: j1
+          Constant: int, 1
+        BinaryOp: <
+          ID: j1
+          Constant: int, 2048
+        UnaryOp: p++
+          ID: j1
+        Compound: 
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['float']
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 1
+            BinaryOp: <
+              ID: i
+              Constant: int, 2048
+            UnaryOp: p++
+              ID: i
+            Assignment: =
+              ID: e
+              ArrayRef: 
+                ID: tv
+                ID: i
+          If: 
+            ID: e
+            Assignment: =
+              ID: i
+              ID: j1
+      Return: 
+        ArrayRef: 
+          ID: tv
+          ID: i

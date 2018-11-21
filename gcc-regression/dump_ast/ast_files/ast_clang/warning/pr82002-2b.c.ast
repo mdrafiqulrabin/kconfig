@@ -1,0 +1,45 @@
+c_files/pr82002-2b.c:9:3: warning: array index 1099511627776 is past the end of the array (which contains 10000000000 elements) [-Warray-bounds]
+  c[1099511627776] = 'b';
+  ^ ~~~~~~~~~~~~~
+c_files/pr82002-2b.c:8:3: note: array 'c' declared here
+  char c[10000000000];
+  ^
+1 warning generated.
+TranslationUnitDecl 0x7fc948825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc948826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc948825d40 '__int128'
+|-TypedefDecl 0x7fc948826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc948825d60 'unsigned __int128'
+|-TypedefDecl 0x7fc948826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc948826170 'struct __NSConstantString_tag'
+|   `-Record 0x7fc9488260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc948826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc9488263c0 'char *'
+|   `-BuiltinType 0x7fc948825b60 'char'
+|-TypedefDecl 0x7fc9488266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc948826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc9488264e0 'struct __va_list_tag'
+|     `-Record 0x7fc948826458 '__va_list_tag'
+|-FunctionDecl 0x7fc94881a870 <c_files/pr82002-2b.c:4:1, col:41> col:32 used a 'void (char *) __attribute__((sysv_abi))':'void (char *)'
+| `-ParmVarDecl 0x7fc948826738 <col:35, col:40> col:41 'char *'
+`-FunctionDecl 0x7fc94881a998 <line:5:1, line:12:1> line:6:1 b 'void ()'
+  `-CompoundStmt 0x7fc94881adb8 <line:7:1, line:12:1>
+    |-DeclStmt 0x7fc94881ab08 <line:8:3, col:22>
+    | `-VarDecl 0x7fc94881aaa8 <col:3, col:21> col:8 used c 'char [10000000000]'
+    |-BinaryOperator 0x7fc94881abd8 <line:9:3, col:22> 'char' '='
+    | |-ArraySubscriptExpr 0x7fc94881ab80 <col:3, col:18> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fc94881ab68 <col:3> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fc94881ab20 <col:3> 'char [10000000000]' lvalue Var 0x7fc94881aaa8 'c' 'char [10000000000]'
+    | | `-IntegerLiteral 0x7fc94881ab48 <col:5> 'long' 1099511627776
+    | `-ImplicitCastExpr 0x7fc94881abc0 <col:22> 'char' <IntegralCast>
+    |   `-CharacterLiteral 0x7fc94881aba8 <col:22> 'int' 98
+    |-CallExpr 0x7fc94881acc0 <line:10:3, col:7> 'void'
+    | |-ImplicitCastExpr 0x7fc94881aca8 <col:3> 'void (*)(char *) __attribute__((sysv_abi))' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc94881ac00 <col:3> 'void (char *) __attribute__((sysv_abi))':'void (char *)' Function 0x7fc94881a870 'a' 'void (char *) __attribute__((sysv_abi))':'void (char *)'
+    | `-ImplicitCastExpr 0x7fc94881acf0 <col:6> 'char *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7fc94881ac28 <col:6> 'char [10000000000]' lvalue Var 0x7fc94881aaa8 'c' 'char [10000000000]'
+    `-CallExpr 0x7fc94881ad70 <line:11:3, col:7> 'void'
+      |-ImplicitCastExpr 0x7fc94881ad58 <col:3> 'void (*)(char *) __attribute__((sysv_abi))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc94881ad08 <col:3> 'void (char *) __attribute__((sysv_abi))':'void (char *)' Function 0x7fc94881a870 'a' 'void (char *) __attribute__((sysv_abi))':'void (char *)'
+      `-ImplicitCastExpr 0x7fc94881ada0 <col:6> 'char *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7fc94881ad30 <col:6> 'char [10000000000]' lvalue Var 0x7fc94881aaa8 'c' 'char [10000000000]'

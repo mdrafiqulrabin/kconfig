@@ -1,0 +1,75 @@
+FileAST: 
+  Decl: func, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: func, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: bug, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['int']
+          Decl: N, [], [], []
+            TypeDecl: N, []
+              IdentifierType: ['unsigned', 'long', 'int']
+        TypeDecl: bug, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'long', 'int']
+      Decl: t, [], [], []
+        PtrDecl: []
+          TypeDecl: t, []
+            IdentifierType: ['int']
+      While: 
+        Constant: int, 1
+        Compound: 
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 1
+            BinaryOp: <=
+              ID: i
+              ID: N
+            UnaryOp: p++
+              ID: i
+            Compound: 
+              Assignment: =
+                ArrayRef: 
+                  ID: y
+                  ID: i
+                FuncCall: 
+                  ID: func
+                  ExprList: 
+                    BinaryOp: -
+                      ArrayRef: 
+                        ID: x
+                        ID: i
+                      ArrayRef: 
+                        ID: x
+                        Constant: int, 1
+              If: 
+                ArrayRef: 
+                  ID: y
+                  ID: i
+                Return: 
+          Assignment: =
+            ID: t
+            ID: x
+          Assignment: =
+            ID: x
+            ID: y
+          Assignment: =
+            ID: y
+            ID: t

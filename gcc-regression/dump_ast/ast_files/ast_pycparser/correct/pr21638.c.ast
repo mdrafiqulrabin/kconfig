@@ -1,0 +1,92 @@
+FileAST: 
+  Typedef: HASHHDR, [], ['typedef']
+    TypeDecl: HASHHDR, []
+      Struct: hashhdr
+        Decl: bitmaps, [], [], []
+          ArrayDecl: []
+            TypeDecl: bitmaps, []
+              IdentifierType: ['int']
+            Constant: int, 32
+  FuncDef: 
+    Decl: swap_header_copy, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: srcp, [], [], []
+            PtrDecl: []
+              TypeDecl: srcp, []
+                IdentifierType: ['HASHHDR']
+          Decl: destp, [], [], []
+            PtrDecl: []
+              TypeDecl: destp, []
+                IdentifierType: ['HASHHDR']
+        TypeDecl: swap_header_copy, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 32
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+              UnaryOp: &
+                ArrayRef: 
+                  StructRef: ->
+                    ID: destp
+                    ID: bitmaps
+                  ID: i
+            Constant: int, 0
+          ArrayRef: 
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+              UnaryOp: &
+                ArrayRef: 
+                  StructRef: ->
+                    ID: srcp
+                    ID: bitmaps
+                  ID: i
+            Constant: int, 1
+  FuncDef: 
+    Decl: flush_meta, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: whdrp1, [], [], []
+            PtrDecl: []
+              TypeDecl: whdrp1, []
+                IdentifierType: ['HASHHDR']
+        TypeDecl: flush_meta, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: whdrp, [], [], []
+        PtrDecl: []
+          TypeDecl: whdrp, []
+            IdentifierType: ['HASHHDR']
+      Decl: whdr, [], [], []
+        TypeDecl: whdr, []
+          IdentifierType: ['HASHHDR']
+      Assignment: =
+        ID: whdrp
+        UnaryOp: &
+          ID: whdr
+      FuncCall: 
+        ID: swap_header_copy
+        ExprList: 
+          ID: whdrp1
+          ID: whdrp
+      Return: 
+        Constant: int, 0

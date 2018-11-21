@@ -1,0 +1,134 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: n
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: *=
+            ArrayRef: 
+              ID: a
+              ID: i
+            Constant: int, 2
+          Assignment: =
+            ArrayRef: 
+              ID: a
+              BinaryOp: +
+                ID: i
+                Constant: int, 1
+            BinaryOp: +
+              ArrayRef: 
+                ID: a
+                BinaryOp: -
+                  ID: i
+                  Constant: int, 1
+              ArrayRef: 
+                ID: a
+                BinaryOp: -
+                  ID: i
+                  Constant: int, 2
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+      Constant: int, 16
+  Decl: ref, [], [], []
+    ArrayDecl: []
+      TypeDecl: ref, []
+        IdentifierType: ['int']
+      Constant: int, 16
+    InitList: 
+      Constant: int, 0
+      Constant: int, 1
+      Constant: int, 4
+      Constant: int, 2
+      Constant: int, 10
+      Constant: int, 12
+      Constant: int, 24
+      Constant: int, 44
+      Constant: int, 72
+      Constant: int, 136
+      Constant: int, 232
+      Constant: int, 416
+      Constant: int, 736
+      Constant: int, 1296
+      Constant: int, 2304
+      Constant: int, 2032
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: a
+            ID: i
+          ID: i
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          BinaryOp: +
+            ID: a
+            Constant: int, 2
+          BinaryOp: -
+            Constant: int, 16
+            Constant: int, 3
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: p++
+          ID: i
+        If: 
+          BinaryOp: !=
+            ArrayRef: 
+              ID: ref
+              ID: i
+            ArrayRef: 
+              ID: a
+              ID: i
+          FuncCall: 
+            ID: abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,85 @@
+FileAST: 
+  Decl: bad, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bad, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: src, [], [], []
+            PtrDecl: []
+              TypeDecl: src, []
+                IdentifierType: ['char']
+          Decl: last, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: last, []
+                  IdentifierType: ['char']
+        PtrDecl: []
+          TypeDecl: foo, []
+            IdentifierType: ['char']
+    Compound: 
+      Decl: dst, [], [], []
+        PtrDecl: []
+          TypeDecl: dst, []
+            IdentifierType: ['char']
+      Decl: ch, [], [], []
+        TypeDecl: ch, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: dst
+        Assignment: =
+          ID: src
+          TernaryOp: 
+            ID: src
+            ID: src
+            UnaryOp: *
+              ID: last
+      If: 
+        BinaryOp: ==
+          UnaryOp: *
+            ID: src
+          Constant: int, 0
+        Return: 
+          Constant: int, 0
+      While: 
+        ArrayRef: 
+          ID: src
+          Constant: int, 0
+        Compound: 
+          If: 
+            UnaryOp: !
+              ArrayRef: 
+                ID: src
+                Constant: int, 1
+            Compound: 
+              FuncCall: 
+                ID: bad
+              Break: 
+          Assignment: =
+            UnaryOp: *
+              ID: dst
+            UnaryOp: *
+              ID: src
+          Assignment: +=
+            ID: dst
+            Constant: int, 1
+          Assignment: +=
+            ID: src
+            Constant: int, 2
+      Assignment: =
+        UnaryOp: *
+          ID: last
+        ID: src
+      Assignment: =
+        UnaryOp: *
+          ID: dst
+        Constant: int, 0
+      Return: 
+        UnaryOp: *
+          ID: last

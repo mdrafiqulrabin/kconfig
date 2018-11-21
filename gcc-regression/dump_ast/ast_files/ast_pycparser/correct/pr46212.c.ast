@@ -1,0 +1,104 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['unsigned']
+        UnaryOp: *
+          Cast: 
+            Typename: None, ['volatile']
+              PtrDecl: []
+                TypeDecl: None, ['volatile']
+                  IdentifierType: ['unsigned']
+            ID: x
+      Return: 
+        BinaryOp: |
+          BinaryOp: |
+            BinaryOp: |
+              BinaryOp: >>
+                ID: y
+                Constant: int, 24
+              BinaryOp: &
+                BinaryOp: >>
+                  ID: y
+                  Constant: int, 8
+                Constant: int, 0xff00
+            BinaryOp: <<
+              BinaryOp: &
+                ID: y
+                Constant: int, 0xff00
+              Constant: int, 8
+          BinaryOp: <<
+            ID: y
+            Constant: int, 24
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['void']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['void']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['unsigned']
+      While: 
+        UnaryOp: p--
+          ID: z
+        Compound: 
+          Assignment: =
+            ID: c
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                ID: y
+          Assignment: =
+            UnaryOp: *
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned']
+                ID: x
+            BinaryOp: |
+              BinaryOp: |
+                BinaryOp: |
+                  BinaryOp: >>
+                    BinaryOp: &
+                      ID: c
+                      Constant: int, 0xf80000
+                    Constant: int, 9
+                  BinaryOp: >>
+                    BinaryOp: &
+                      ID: c
+                      Constant: int, 0xf800
+                    Constant: int, 6
+                BinaryOp: >>
+                  BinaryOp: &
+                    ID: c
+                    Constant: int, 0xf8
+                  Constant: int, 3
+              BinaryOp: >>
+                BinaryOp: &
+                  ID: c
+                  Constant: int, 0x80000000
+                Constant: int, 16

@@ -1,0 +1,117 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: my_add, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: si1, [], [], []
+            TypeDecl: si1, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: si2, [], [], []
+            TypeDecl: si2, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: my_add, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: >
+            ID: si1
+            BinaryOp: -
+              Constant: int, 50
+              ID: si2
+          ID: si1
+          BinaryOp: +
+            ID: si1
+            ID: si2
+  FuncDef: 
+    Decl: my_shift, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: left, [], [], []
+            TypeDecl: left, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: right, [], [], []
+            TypeDecl: right, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: my_shift, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: >
+            ID: right
+            Constant: int, 100
+          ID: left
+          BinaryOp: >>
+            ID: left
+            ID: right
+  FuncDef: 
+    Decl: func_4, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p_6, [], [], []
+            TypeDecl: p_6, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: func_4, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: count, [], [], []
+        TypeDecl: count, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: p_6
+          Constant: int, 1
+        BinaryOp: <
+          ID: p_6
+          Constant: int, 3
+        Assignment: =
+          ID: p_6
+          FuncCall: 
+            ID: my_add
+            ExprList: 
+              ID: p_6
+              Constant: int, 1
+        Compound: 
+          If: 
+            BinaryOp: >
+              UnaryOp: p++
+                ID: count
+              Constant: int, 1
+            FuncCall: 
+              ID: abort
+          If: 
+            FuncCall: 
+              ID: my_shift
+              ExprList: 
+                ID: p_6
+                ID: p_6
+            Return: 
+              Constant: int, 0
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: func_4
+        ExprList: 
+          Constant: int, 0
+      Return: 
+        Constant: int, 0

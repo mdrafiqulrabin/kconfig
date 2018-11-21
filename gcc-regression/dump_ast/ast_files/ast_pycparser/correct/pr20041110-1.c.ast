@@ -1,0 +1,94 @@
+FileAST: 
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: foo, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['int']
+          Constant: int, 50
+      Decl: b, [], [], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+          Constant: int, 50
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 4
+        BinaryOp: <
+          ID: i
+          Constant: int, 30
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 3
+            BinaryOp: <
+              ID: j
+              Constant: int, 40
+            UnaryOp: p++
+              ID: j
+            Compound: 
+              For: 
+                Assignment: =
+                  ID: k
+                  Constant: int, 9
+                BinaryOp: <
+                  ID: k
+                  Constant: int, 50
+                UnaryOp: p++
+                  ID: k
+                Compound: 
+                  Assignment: =
+                    ArrayRef: 
+                      ID: b
+                      ID: j
+                    ArrayRef: 
+                      ID: a
+                      ID: i
+                  Assignment: =
+                    ArrayRef: 
+                      ID: a
+                      ID: k
+                    ArrayRef: 
+                      ID: b
+                      ID: i
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ArrayRef: 
+            ID: a
+            ID: i
+          ArrayRef: 
+            ID: b
+            ID: i

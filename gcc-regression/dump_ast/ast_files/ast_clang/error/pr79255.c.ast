@@ -1,0 +1,61 @@
+c_files/pr79255.c:17:3: error: function definition is not allowed here
+  {
+  ^
+c_files/pr79255.c:20:10: warning: implicit declaration of function 'bar' is invalid in C99 [-Wimplicit-function-declaration]
+  return bar (x) + bar (x + 2);
+         ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fac6c80fcd0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fac6c810220 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fac6c80ff40 '__int128'
+|-TypedefDecl 0x7fac6c810290 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fac6c80ff60 'unsigned __int128'
+|-TypedefDecl 0x7fac6c810568 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fac6c810370 'struct __NSConstantString_tag'
+|   `-Record 0x7fac6c8102e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fac6c810600 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fac6c8105c0 'char *'
+|   `-BuiltinType 0x7fac6c80fd60 'char'
+|-TypedefDecl 0x7fac6c8108c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fac6c810870 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fac6c8106e0 'struct __va_list_tag'
+|     `-Record 0x7fac6c810658 '__va_list_tag'
+|-FunctionDecl 0x7fac6b809a30 <c_files/pr79255.c:5:1, col:60> col:50 used foo 'int (int)' static inline
+| |-ParmVarDecl 0x7fac6c810938 <col:55, col:59> col:59 x 'int'
+| `-AlwaysInlineAttr 0x7fac6b809ad0 <col:30> always_inline
+|-FunctionDecl 0x7fac6b809c28 <line:7:1, line:11:1> line:8:1 baz 'int (void)'
+| `-CompoundStmt 0x7fac6b809f08 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fac6b809ef0 <line:10:3, col:36>
+|     `-BinaryOperator 0x7fac6b809ec8 <col:10, col:36> 'int' '+'
+|       |-BinaryOperator 0x7fac6b809e10 <col:10, col:26> 'int' '+'
+|       | |-CallExpr 0x7fac6b809d50 <col:10, col:16> 'int'
+|       | | |-ImplicitCastExpr 0x7fac6b809d38 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+|       | | | `-DeclRefExpr 0x7fac6b809cc0 <col:10> 'int (int)' Function 0x7fac6b809a30 'foo' 'int (int)'
+|       | | `-IntegerLiteral 0x7fac6b809ce8 <col:15> 'int' 3
+|       | `-CallExpr 0x7fac6b809de0 <col:20, col:26> 'int'
+|       |   |-ImplicitCastExpr 0x7fac6b809dc8 <col:20> 'int (*)(int)' <FunctionToPointerDecay>
+|       |   | `-DeclRefExpr 0x7fac6b809d80 <col:20> 'int (int)' Function 0x7fac6b809a30 'foo' 'int (int)'
+|       |   `-IntegerLiteral 0x7fac6b809da8 <col:25> 'int' 6
+|       `-CallExpr 0x7fac6b809e98 <col:30, col:36> 'int'
+|         |-ImplicitCastExpr 0x7fac6b809e80 <col:30> 'int (*)(int)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fac6b809e38 <col:30> 'int (int)' Function 0x7fac6b809a30 'foo' 'int (int)'
+|         `-IntegerLiteral 0x7fac6b809e60 <col:35> 'int' 9
+|-FunctionDecl 0x7fac6b809fd0 prev 0x7fac6b809a30 <line:13:1, line:21:1> line:14:1 used foo 'int (int)' static inline
+| |-ParmVarDecl 0x7fac6b809f40 <col:6, col:10> col:10 used x 'int'
+| |-CompoundStmt 0x7fac6b80a430 <line:15:1, line:21:1>
+| | `-ReturnStmt 0x7fac6b80a418 <line:20:3, col:30>
+| |   `-BinaryOperator 0x7fac6b80a3f0 <col:10, col:30> 'int' '+'
+| |     |-CallExpr 0x7fac6b80a2b0 <col:10, col:16> 'int'
+| |     | |-ImplicitCastExpr 0x7fac6b80a298 <col:10> 'int (*)()' <FunctionToPointerDecay>
+| |     | | `-DeclRefExpr 0x7fac6b80a218 <col:10> 'int ()' Function 0x7fac6b80a180 'bar' 'int ()'
+| |     | `-ImplicitCastExpr 0x7fac6b80a2e0 <col:15> 'int' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7fac6b80a240 <col:15> 'int' lvalue ParmVar 0x7fac6b809f40 'x' 'int'
+| |     `-CallExpr 0x7fac6b80a3c0 <col:20, col:30> 'int'
+| |       |-ImplicitCastExpr 0x7fac6b80a3a8 <col:20> 'int (*)()' <FunctionToPointerDecay>
+| |       | `-DeclRefExpr 0x7fac6b80a2f8 <col:20> 'int ()' Function 0x7fac6b80a180 'bar' 'int ()'
+| |       `-BinaryOperator 0x7fac6b80a380 <col:25, col:29> 'int' '+'
+| |         |-ImplicitCastExpr 0x7fac6b80a368 <col:25> 'int' <LValueToRValue>
+| |         | `-DeclRefExpr 0x7fac6b80a320 <col:25> 'int' lvalue ParmVar 0x7fac6b809f40 'x' 'int'
+| |         `-IntegerLiteral 0x7fac6b80a348 <col:29> 'int' 2
+| `-AlwaysInlineAttr 0x7fac6b80a070 <line:13:30> always_inline
+`-FunctionDecl 0x7fac6b80a180 <<invalid sloc>> line:20:10 implicit used bar 'int ()'

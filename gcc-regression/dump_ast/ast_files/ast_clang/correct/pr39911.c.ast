@@ -1,0 +1,103 @@
+TranslationUnitDecl 0x7ffed20264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffed2026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffed2026740 '__int128'
+|-TypedefDecl 0x7ffed2026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffed2026760 'unsigned __int128'
+|-TypedefDecl 0x7ffed2026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffed2026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffed2026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffed2026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffed2026dc0 'char *'
+|   `-BuiltinType 0x7ffed2026560 'char'
+|-TypedefDecl 0x7ffed20270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffed2027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffed2026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffed2026e58 '__va_list_tag'
+|-FunctionDecl 0x7ffed2027168 <c_files/pr39911.c:4:1, line:12:1> line:5:1 bar1 'void ()'
+| `-CompoundStmt 0x7ffed20782e0 <line:6:1, line:12:1>
+|   |-DeclStmt 0x7ffed2077cb0 <line:7:3, col:11>
+|   | `-VarDecl 0x7ffed2077c50 <col:3, col:8> col:8 used foo 'char'
+|   |-GCCAsmStmt 0x7ffed2077e40 <line:8:3, col:56>
+|   | |-DeclRefExpr 0x7ffed2077da8 <col:40> 'char' lvalue Var 0x7ffed2077c50 'foo' 'char'
+|   | `-UnaryOperator 0x7ffed2077e20 <col:52, col:53> 'int' prefix '-'
+|   |   `-IntegerLiteral 0x7ffed2077e00 <col:53> 'int' 23
+|   |-GCCAsmStmt 0x7ffed2077f98 <line:9:3, col:55>
+|   | |-DeclRefExpr 0x7ffed2077f20 <col:40> 'char' lvalue Var 0x7ffed2077c50 'foo' 'char'
+|   | `-IntegerLiteral 0x7ffed2077f78 <col:52> 'int' 23
+|   |-GCCAsmStmt 0x7ffed2078110 <line:10:3, col:56>
+|   | |-DeclRefExpr 0x7ffed2078078 <col:40> 'char' lvalue Var 0x7ffed2077c50 'foo' 'char'
+|   | `-UnaryOperator 0x7ffed20780f0 <col:52, col:53> 'int' prefix '-'
+|   |   `-IntegerLiteral 0x7ffed20780d0 <col:53> 'int' 23
+|   `-GCCAsmStmt 0x7ffed2078268 <line:11:3, col:55>
+|     |-DeclRefExpr 0x7ffed20781f0 <col:40> 'char' lvalue Var 0x7ffed2077c50 'foo' 'char'
+|     `-IntegerLiteral 0x7ffed2078248 <col:52> 'int' 23
+|-FunctionDecl 0x7ffed2078340 <line:14:1, line:25:1> line:15:1 bar2 'void ()'
+| `-CompoundStmt 0x7ffed2078c60 <line:16:1, line:25:1>
+|   |-DeclStmt 0x7ffed2078450 <line:17:3, col:12>
+|   | `-VarDecl 0x7ffed20783f0 <col:3, col:9> col:9 used foo 'short'
+|   |-GCCAsmStmt 0x7ffed2078568 <line:18:3, col:56>
+|   | |-DeclRefExpr 0x7ffed20784d0 <col:40> 'short' lvalue Var 0x7ffed20783f0 'foo' 'short'
+|   | `-UnaryOperator 0x7ffed2078548 <col:52, col:53> 'int' prefix '-'
+|   |   `-IntegerLiteral 0x7ffed2078528 <col:53> 'int' 23
+|   |-GCCAsmStmt 0x7ffed20786c0 <line:19:3, col:55>
+|   | |-DeclRefExpr 0x7ffed2078648 <col:40> 'short' lvalue Var 0x7ffed20783f0 'foo' 'short'
+|   | `-IntegerLiteral 0x7ffed20786a0 <col:52> 'int' 23
+|   |-GCCAsmStmt 0x7ffed2078838 <line:20:3, col:56>
+|   | |-DeclRefExpr 0x7ffed20787a0 <col:40> 'short' lvalue Var 0x7ffed20783f0 'foo' 'short'
+|   | `-UnaryOperator 0x7ffed2078818 <col:52, col:53> 'int' prefix '-'
+|   |   `-IntegerLiteral 0x7ffed20787f8 <col:53> 'int' 23
+|   |-GCCAsmStmt 0x7ffed2078990 <line:21:3, col:55>
+|   | |-DeclRefExpr 0x7ffed2078918 <col:40> 'short' lvalue Var 0x7ffed20783f0 'foo' 'short'
+|   | `-IntegerLiteral 0x7ffed2078970 <col:52> 'int' 23
+|   |-GCCAsmStmt 0x7ffed2078ad8 <line:23:3, col:40>
+|   | `-DeclRefExpr 0x7ffed2078ab0 <col:36> 'short' lvalue Var 0x7ffed20783f0 'foo' 'short'
+|   `-GCCAsmStmt 0x7ffed2078c00 <line:24:3, col:40>
+|     `-DeclRefExpr 0x7ffed2078ba0 <col:36> 'short' lvalue Var 0x7ffed20783f0 'foo' 'short'
+|-FunctionDecl 0x7ffed2078cd0 <line:27:1, line:43:1> line:28:1 bar3 'void ()'
+| `-CompoundStmt 0x7ffed2079398 <line:29:1, line:43:1>
+|   |-DeclStmt 0x7ffed2078de0 <line:30:3, col:10>
+|   | `-VarDecl 0x7ffed2078d80 <col:3, col:7> col:7 used foo 'int'
+|   |-GCCAsmStmt 0x7ffed2078ef8 <line:31:3, col:56>
+|   | |-DeclRefExpr 0x7ffed2078e60 <col:40> 'int' lvalue Var 0x7ffed2078d80 'foo' 'int'
+|   | `-UnaryOperator 0x7ffed2078ed8 <col:52, col:53> 'int' prefix '-'
+|   |   `-IntegerLiteral 0x7ffed2078eb8 <col:53> 'int' 23
+|   |-GCCAsmStmt 0x7ffed2079050 <line:32:3, col:55>
+|   | |-DeclRefExpr 0x7ffed2078fd8 <col:40> 'int' lvalue Var 0x7ffed2078d80 'foo' 'int'
+|   | `-IntegerLiteral 0x7ffed2079030 <col:52> 'int' 23
+|   |-GCCAsmStmt 0x7ffed20791c8 <line:33:3, col:56>
+|   | |-DeclRefExpr 0x7ffed2079130 <col:40> 'int' lvalue Var 0x7ffed2078d80 'foo' 'int'
+|   | `-UnaryOperator 0x7ffed20791a8 <col:52, col:53> 'int' prefix '-'
+|   |   `-IntegerLiteral 0x7ffed2079188 <col:53> 'int' 23
+|   `-GCCAsmStmt 0x7ffed2079320 <line:34:3, col:55>
+|     |-DeclRefExpr 0x7ffed20792a8 <col:40> 'int' lvalue Var 0x7ffed2078d80 'foo' 'int'
+|     `-IntegerLiteral 0x7ffed2079300 <col:52> 'int' 23
+`-FunctionDecl 0x7ffed20793f8 <line:45:1, line:59:1> line:46:1 bar4 'void ()'
+  `-CompoundStmt 0x7ffed207add8 <line:47:1, line:59:1>
+    `-IfStmt 0x7ffed207ada0 <line:48:3, line:58:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ffed2079500 <line:48:7, col:43> 'int' '=='
+      | |-UnaryExprOrTypeTraitExpr 0x7ffed20794a8 <col:7, col:21> 'unsigned long' sizeof 'void *'
+      | `-UnaryExprOrTypeTraitExpr 0x7ffed20794e0 <col:26, col:43> 'unsigned long' sizeof 'long long'
+      |-CompoundStmt 0x7ffed207ad50 <line:49:5, line:58:5>
+      | |-DeclStmt 0x7ffed20795a0 <line:50:7, col:20>
+      | | `-VarDecl 0x7ffed2079540 <col:7, col:17> col:17 used foo 'long long'
+      | |-GCCAsmStmt 0x7ffed20796b8 <line:51:7, col:60>
+      | | |-DeclRefExpr 0x7ffed2079620 <col:44> 'long long' lvalue Var 0x7ffed2079540 'foo' 'long long'
+      | | `-UnaryOperator 0x7ffed2079698 <col:56, col:57> 'int' prefix '-'
+      | |   `-IntegerLiteral 0x7ffed2079678 <col:57> 'int' 23
+      | |-GCCAsmStmt 0x7ffed2079810 <line:52:7, col:59>
+      | | |-DeclRefExpr 0x7ffed2079798 <col:44> 'long long' lvalue Var 0x7ffed2079540 'foo' 'long long'
+      | | `-IntegerLiteral 0x7ffed20797f0 <col:56> 'int' 23
+      | |-GCCAsmStmt 0x7ffed2079988 <line:53:7, col:60>
+      | | |-DeclRefExpr 0x7ffed20798f0 <col:44> 'long long' lvalue Var 0x7ffed2079540 'foo' 'long long'
+      | | `-UnaryOperator 0x7ffed2079968 <col:56, col:57> 'int' prefix '-'
+      | |   `-IntegerLiteral 0x7ffed2079948 <col:57> 'int' 23
+      | |-GCCAsmStmt 0x7ffed2079ae0 <line:54:7, col:59>
+      | | |-DeclRefExpr 0x7ffed2079a68 <col:44> 'long long' lvalue Var 0x7ffed2079540 'foo' 'long long'
+      | | `-IntegerLiteral 0x7ffed2079ac0 <col:56> 'int' 23
+      | |-GCCAsmStmt 0x7ffed207ac00 <line:56:7, col:44>
+      | | `-DeclRefExpr 0x7ffed2079bc0 <col:40> 'long long' lvalue Var 0x7ffed2079540 'foo' 'long long'
+      | `-GCCAsmStmt 0x7ffed207acf0 <line:57:7, col:44>
+      |   `-DeclRefExpr 0x7ffed207acc8 <col:40> 'long long' lvalue Var 0x7ffed2079540 'foo' 'long long'
+      `-<<<NULL>>>

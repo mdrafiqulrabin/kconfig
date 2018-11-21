@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7fdda10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdda1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdda1026740 '__int128'
+|-TypedefDecl 0x7fdda1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdda1026760 'unsigned __int128'
+|-TypedefDecl 0x7fdda1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdda1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdda1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdda1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdda1026dc0 'char *'
+|   `-BuiltinType 0x7fdda1026560 'char'
+|-TypedefDecl 0x7fdda10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdda1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdda1026ee0 'struct __va_list_tag'
+|     `-Record 0x7fdda1026e58 '__va_list_tag'
+|-RecordDecl 0x7fdda1027120 <c_files/pr50565-1.c:1:1, col:23> col:8 struct s definition
+| `-FieldDecl 0x7fdda1825a58 <col:12, col:20> col:17 referenced p 'char [2]'
+|-VarDecl 0x7fdda1825af0 <line:2:1, col:17> col:17 used v 'struct s':'struct s' static
+|-VarDecl 0x7fdda1825ba8 <line:3:1, col:57> col:11 o0 'const int' cinit
+| `-ImplicitCastExpr 0x7fdda1825f20 <col:16, col:57> 'int' <IntegralCast>
+|   `-BinaryOperator 0x7fdda1825ef8 <col:16, col:57> 'unsigned int' '+'
+|     |-ImplicitCastExpr 0x7fdda1825ee0 <col:16, col:53> 'unsigned int' <IntegralCast>
+|     | `-CStyleCastExpr 0x7fdda1825e98 <col:16, col:53> 'int' <IntegralCast>
+|     |   `-ParenExpr 0x7fdda1825e78 <col:22, col:53> 'long'
+|     |     `-BinaryOperator 0x7fdda1825e08 <col:23, col:52> 'long' '-'
+|     |       |-CStyleCastExpr 0x7fdda1825d00 <col:23, col:38> 'void *' <BitCast>
+|     |       | `-UnaryOperator 0x7fdda1825cc8 <col:32, col:38> 'char *' prefix '&'
+|     |       |   `-ArraySubscriptExpr 0x7fdda1825ca0 <col:33, col:38> 'char' lvalue
+|     |       |     |-ImplicitCastExpr 0x7fdda1825c88 <col:33, col:35> 'char *' <ArrayToPointerDecay>
+|     |       |     | `-MemberExpr 0x7fdda1825c30 <col:33, col:35> 'char [2]' lvalue .p 0x7fdda1825a58
+|     |       |     |   `-DeclRefExpr 0x7fdda1825c08 <col:33> 'struct s':'struct s' lvalue Var 0x7fdda1825af0 'v' 'struct s':'struct s'
+|     |       |     `-IntegerLiteral 0x7fdda1825c68 <col:37> 'int' 0
+|     |       `-CStyleCastExpr 0x7fdda1825de0 <col:42, col:52> 'void *' <BitCast>
+|     |         `-UnaryOperator 0x7fdda1825da8 <col:51, col:52> 'struct s *' prefix '&'
+|     |           `-DeclRefExpr 0x7fdda1825d28 <col:52> 'struct s':'struct s' lvalue Var 0x7fdda1825af0 'v' 'struct s':'struct s'
+|     `-IntegerLiteral 0x7fdda1825ec0 <col:57> 'unsigned int' 0
+`-VarDecl 0x7fdda1825f98 <line:4:1, col:57> col:11 o1 'const int' cinit
+  `-ImplicitCastExpr 0x7fdda18262b8 <col:16, col:57> 'int' <IntegralCast>
+    `-BinaryOperator 0x7fdda1826290 <col:16, col:57> 'unsigned int' '+'
+      |-ImplicitCastExpr 0x7fdda1826278 <col:16, col:53> 'unsigned int' <IntegralCast>
+      | `-CStyleCastExpr 0x7fdda1826230 <col:16, col:53> 'int' <IntegralCast>
+      |   `-ParenExpr 0x7fdda1826210 <col:22, col:53> 'long'
+      |     `-BinaryOperator 0x7fdda18261a0 <col:23, col:52> 'long' '-'
+      |       |-CStyleCastExpr 0x7fdda18260f0 <col:23, col:38> 'void *' <BitCast>
+      |       | `-UnaryOperator 0x7fdda18260b8 <col:32, col:38> 'char *' prefix '&'
+      |       |   `-ArraySubscriptExpr 0x7fdda1826090 <col:33, col:38> 'char' lvalue
+      |       |     |-ImplicitCastExpr 0x7fdda1826078 <col:33, col:35> 'char *' <ArrayToPointerDecay>
+      |       |     | `-MemberExpr 0x7fdda1826020 <col:33, col:35> 'char [2]' lvalue .p 0x7fdda1825a58
+      |       |     |   `-DeclRefExpr 0x7fdda1825ff8 <col:33> 'struct s':'struct s' lvalue Var 0x7fdda1825af0 'v' 'struct s':'struct s'
+      |       |     `-IntegerLiteral 0x7fdda1826058 <col:37> 'int' 0
+      |       `-CStyleCastExpr 0x7fdda1826178 <col:42, col:52> 'void *' <BitCast>
+      |         `-UnaryOperator 0x7fdda1826140 <col:51, col:52> 'struct s *' prefix '&'
+      |           `-DeclRefExpr 0x7fdda1826118 <col:52> 'struct s':'struct s' lvalue Var 0x7fdda1825af0 'v' 'struct s':'struct s'
+      `-IntegerLiteral 0x7fdda1826258 <col:57> 'unsigned int' 1

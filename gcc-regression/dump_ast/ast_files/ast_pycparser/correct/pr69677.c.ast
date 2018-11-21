@@ -1,0 +1,57 @@
+FileAST: 
+  Decl: a, ['const'], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: a, ['const']
+        IdentifierType: ['unsigned', 'int']
+  Decl: b, ['const'], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: b, ['const']
+        IdentifierType: ['unsigned', 'long', 'long']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: p2, [], [], []
+            TypeDecl: p2, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: p3, [], [], []
+        TypeDecl: p3, []
+          IdentifierType: ['unsigned', 'int']
+      Assignment: =
+        ID: p3
+        ArrayRef: 
+          ID: a
+          ID: p1
+      If: 
+        BinaryOp: ||
+          BinaryOp: ==
+            ID: p3
+            Constant: int, 0
+          BinaryOp: >
+            ID: p3
+            Constant: int, 64
+        Return: 
+          Constant: int, 0
+      Assignment: &=
+        ID: p2
+        ArrayRef: 
+          ID: b
+          ID: p1
+      Return: 
+        BinaryOp: ==
+          ID: p2
+          BinaryOp: <<
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'long', 'long']
+              Constant: int, 1
+            BinaryOp: -
+              ID: p3
+              Constant: int, 1

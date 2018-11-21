@@ -1,0 +1,457 @@
+TranslationUnitDecl 0x7fabe70264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fabe7026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fabe7026740 '__int128'
+|-TypedefDecl 0x7fabe7026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fabe7026760 'unsigned __int128'
+|-TypedefDecl 0x7fabe7026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fabe7026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fabe7026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fabe7026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fabe7026dc0 'char *'
+|   `-BuiltinType 0x7fabe7026560 'char'
+|-TypedefDecl 0x7fabe70270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fabe7027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fabe7026ee0 'struct __va_list_tag'
+|     `-Record 0x7fabe7026e58 '__va_list_tag'
+|-FunctionDecl 0x7fabe7825a30 <c_files/pr33870-1.c:1:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fabe7825ac8 prev 0x7fabe7825a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fabe7825b60 <line:3:9, col:16> col:16 struct PgHdr
+|-TypedefDecl 0x7fabe7825c60 <col:1, col:22> col:22 referenced PgHdr 'struct PgHdr':'struct PgHdr'
+| `-ElaboratedType 0x7fabe7825c10 'struct PgHdr' sugar
+|   `-RecordType 0x7fabe7825bf0 'struct PgHdr'
+|     `-Record 0x7fabe7825d40 'PgHdr'
+|-TypedefDecl 0x7fabe7825ce8 <line:4:1, col:23> col:23 referenced u8 'unsigned char'
+| `-BuiltinType 0x7fabe7026620 'unsigned char'
+|-RecordDecl 0x7fabe7825d40 prev 0x7fabe7825b60 <line:5:1, line:17:1> line:5:8 struct PgHdr definition
+| |-FieldDecl 0x7fabe7825de0 <line:6:1, col:5> col:5 referenced y 'int'
+| |-RecordDecl 0x7fabe7825e28 <line:7:1, line:16:1> line:7:1 struct definition
+| | |-FieldDecl 0x7fabe7825ee8 <line:8:2, col:15> col:15 referenced pgno 'unsigned int'
+| | |-FieldDecl 0x7fabe7825fb8 <line:9:2, col:9> col:9 pNextHash 'PgHdr *'
+| | |-FieldDecl 0x7fabe7826010 <col:2, col:21> col:21 pPrevHash 'PgHdr *'
+| | |-FieldDecl 0x7fabe7826068 <line:10:2, col:9> col:9 pNextFree 'PgHdr *'
+| | |-FieldDecl 0x7fabe78260c0 <col:2, col:21> col:21 pPrevFree 'PgHdr *'
+| | |-FieldDecl 0x7fabe7826118 <line:11:2, col:9> col:9 pNextAll 'PgHdr *'
+| | |-FieldDecl 0x7fabe7826190 <line:12:2, col:5> col:5 inJournal 'u8':'unsigned char'
+| | |-FieldDecl 0x7fabe78261f0 <line:13:2, col:12> col:12 nRef 'short'
+| | |-FieldDecl 0x7fabe7826248 <line:14:2, col:9> col:9 referenced pDirty 'PgHdr *'
+| | |-FieldDecl 0x7fabe78262a0 <col:2, col:18> col:18 pPrevDirty 'PgHdr *'
+| | `-FieldDecl 0x7fabe7826300 <line:15:2, col:15> col:15 notUsed 'unsigned int'
+| `-FieldDecl 0x7fabe78263a0 <line:7:1, line:16:3> col:3 referenced x 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)'
+|-VarDecl 0x7fabe7826460 <line:18:1, col:9> col:9 used xx 'PgHdr **'
+|-VarDecl 0x7fabe7826518 <line:19:1, col:14> col:14 used vx 'volatile int'
+|-FunctionDecl 0x7fabe7826710 <line:20:1, line:46:1> line:20:22 used merge_pagelist 'PgHdr *(PgHdr *, PgHdr *)' static inline
+| |-ParmVarDecl 0x7fabe7826588 <col:37, col:44> col:44 used pA 'PgHdr *'
+| |-ParmVarDecl 0x7fabe78265f8 <col:48, col:55> col:55 used pB 'PgHdr *'
+| `-CompoundStmt 0x7fabe782cbc0 <line:21:1, line:46:1>
+|   |-DeclStmt 0x7fabe7826828 <line:22:2, col:14>
+|   | `-VarDecl 0x7fabe78267c8 <col:2, col:8> col:8 used result 'PgHdr':'struct PgHdr'
+|   |-DeclStmt 0x7fabe78268b0 <line:23:2, col:14>
+|   | `-VarDecl 0x7fabe7826850 <col:2, col:9> col:9 used pTail 'PgHdr *'
+|   |-BinaryOperator 0x7fabe78269a8 <line:24:2, col:17> 'PgHdr **' '='
+|   | |-DeclRefExpr 0x7fabe78268c8 <col:2> 'PgHdr **' lvalue Var 0x7fabe7826460 'xx' 'PgHdr **'
+|   | `-UnaryOperator 0x7fabe7826988 <col:7, col:17> 'PgHdr **' prefix '&'
+|   |   `-MemberExpr 0x7fabe7826950 <col:8, col:17> 'PgHdr *' lvalue .pDirty 0x7fabe7826248
+|   |     `-MemberExpr 0x7fabe7826918 <col:8, col:15> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue .x 0x7fabe78263a0
+|   |       `-DeclRefExpr 0x7fabe78268f0 <col:8> 'PgHdr':'struct PgHdr' lvalue Var 0x7fabe78267c8 'result' 'PgHdr':'struct PgHdr'
+|   |-BinaryOperator 0x7fabe782bc48 <line:25:2, col:11> 'PgHdr *' '='
+|   | |-DeclRefExpr 0x7fabe78269d0 <col:2> 'PgHdr *' lvalue Var 0x7fabe7826850 'pTail' 'PgHdr *'
+|   | `-UnaryOperator 0x7fabe782bc28 <col:10, col:11> 'PgHdr *' prefix '&'
+|   |   `-DeclRefExpr 0x7fabe782bc00 <col:11> 'PgHdr':'struct PgHdr' lvalue Var 0x7fabe78267c8 'result' 'PgHdr':'struct PgHdr'
+|   |-WhileStmt 0x7fabe782c648 <line:26:2, line:37:2>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fabe782bcf0 <line:26:9, col:15> 'int' '&&'
+|   | | |-ImplicitCastExpr 0x7fabe782bcc0 <col:9> 'PgHdr *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fabe782bc70 <col:9> 'PgHdr *' lvalue ParmVar 0x7fabe7826588 'pA' 'PgHdr *'
+|   | | `-ImplicitCastExpr 0x7fabe782bcd8 <col:15> 'PgHdr *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fabe782bc98 <col:15> 'PgHdr *' lvalue ParmVar 0x7fabe78265f8 'pB' 'PgHdr *'
+|   | `-CompoundStmt 0x7fabe782c620 <col:19, line:37:2>
+|   |   |-IfStmt 0x7fabe782c4b0 <line:27:4, line:35:4>
+|   |   | |-<<<NULL>>>
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7fabe782bea8 <line:27:8, col:25> 'int' '<'
+|   |   | | |-ImplicitCastExpr 0x7fabe782be78 <col:8, col:14> 'unsigned int' <LValueToRValue>
+|   |   | | | `-MemberExpr 0x7fabe782bd90 <col:8, col:14> 'unsigned int' lvalue .pgno 0x7fabe7825ee8
+|   |   | | |   `-MemberExpr 0x7fabe782bd58 <col:8, col:12> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue ->x 0x7fabe78263a0
+|   |   | | |     `-ImplicitCastExpr 0x7fabe782bd40 <col:8> 'PgHdr *' <LValueToRValue>
+|   |   | | |       `-DeclRefExpr 0x7fabe782bd18 <col:8> 'PgHdr *' lvalue ParmVar 0x7fabe7826588 'pA' 'PgHdr *'
+|   |   | | `-ImplicitCastExpr 0x7fabe782be90 <col:19, col:25> 'unsigned int' <LValueToRValue>
+|   |   | |   `-MemberExpr 0x7fabe782be40 <col:19, col:25> 'unsigned int' lvalue .pgno 0x7fabe7825ee8
+|   |   | |     `-MemberExpr 0x7fabe782be08 <col:19, col:23> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue ->x 0x7fabe78263a0
+|   |   | |       `-ImplicitCastExpr 0x7fabe782bdf0 <col:19> 'PgHdr *' <LValueToRValue>
+|   |   | |         `-DeclRefExpr 0x7fabe782bdc8 <col:19> 'PgHdr *' lvalue ParmVar 0x7fabe78265f8 'pB' 'PgHdr *'
+|   |   | |-CompoundStmt 0x7fabe782c190 <col:31, line:31:4>
+|   |   | | |-BinaryOperator 0x7fabe782bfc0 <line:28:6, col:24> 'PgHdr *' '='
+|   |   | | | |-MemberExpr 0x7fabe782bf48 <col:6, col:15> 'PgHdr *' lvalue .pDirty 0x7fabe7826248
+|   |   | | | | `-MemberExpr 0x7fabe782bf10 <col:6, col:13> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue ->x 0x7fabe78263a0
+|   |   | | | |   `-ImplicitCastExpr 0x7fabe782bef8 <col:6> 'PgHdr *' <LValueToRValue>
+|   |   | | | |     `-DeclRefExpr 0x7fabe782bed0 <col:6> 'PgHdr *' lvalue Var 0x7fabe7826850 'pTail' 'PgHdr *'
+|   |   | | | `-ImplicitCastExpr 0x7fabe782bfa8 <col:24> 'PgHdr *' <LValueToRValue>
+|   |   | | |   `-DeclRefExpr 0x7fabe782bf80 <col:24> 'PgHdr *' lvalue ParmVar 0x7fabe7826588 'pA' 'PgHdr *'
+|   |   | | |-BinaryOperator 0x7fabe782c050 <line:29:6, col:14> 'PgHdr *' '='
+|   |   | | | |-DeclRefExpr 0x7fabe782bfe8 <col:6> 'PgHdr *' lvalue Var 0x7fabe7826850 'pTail' 'PgHdr *'
+|   |   | | | `-ImplicitCastExpr 0x7fabe782c038 <col:14> 'PgHdr *' <LValueToRValue>
+|   |   | | |   `-DeclRefExpr 0x7fabe782c010 <col:14> 'PgHdr *' lvalue ParmVar 0x7fabe7826588 'pA' 'PgHdr *'
+|   |   | | `-BinaryOperator 0x7fabe782c168 <line:30:6, col:17> 'PgHdr *' '='
+|   |   | |   |-DeclRefExpr 0x7fabe782c078 <col:6> 'PgHdr *' lvalue ParmVar 0x7fabe7826588 'pA' 'PgHdr *'
+|   |   | |   `-ImplicitCastExpr 0x7fabe782c150 <col:11, col:17> 'PgHdr *' <LValueToRValue>
+|   |   | |     `-MemberExpr 0x7fabe782c118 <col:11, col:17> 'PgHdr *' lvalue .pDirty 0x7fabe7826248
+|   |   | |       `-MemberExpr 0x7fabe782c0e0 <col:11, col:15> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue ->x 0x7fabe78263a0
+|   |   | |         `-ImplicitCastExpr 0x7fabe782c0c8 <col:11> 'PgHdr *' <LValueToRValue>
+|   |   | |           `-DeclRefExpr 0x7fabe782c0a0 <col:11> 'PgHdr *' lvalue ParmVar 0x7fabe7826588 'pA' 'PgHdr *'
+|   |   | `-CompoundStmt 0x7fabe782c480 <line:31:9, line:35:4>
+|   |   |   |-BinaryOperator 0x7fabe782c2b0 <line:32:6, col:24> 'PgHdr *' '='
+|   |   |   | |-MemberExpr 0x7fabe782c238 <col:6, col:15> 'PgHdr *' lvalue .pDirty 0x7fabe7826248
+|   |   |   | | `-MemberExpr 0x7fabe782c200 <col:6, col:13> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue ->x 0x7fabe78263a0
+|   |   |   | |   `-ImplicitCastExpr 0x7fabe782c1e8 <col:6> 'PgHdr *' <LValueToRValue>
+|   |   |   | |     `-DeclRefExpr 0x7fabe782c1c0 <col:6> 'PgHdr *' lvalue Var 0x7fabe7826850 'pTail' 'PgHdr *'
+|   |   |   | `-ImplicitCastExpr 0x7fabe782c298 <col:24> 'PgHdr *' <LValueToRValue>
+|   |   |   |   `-DeclRefExpr 0x7fabe782c270 <col:24> 'PgHdr *' lvalue ParmVar 0x7fabe78265f8 'pB' 'PgHdr *'
+|   |   |   |-BinaryOperator 0x7fabe782c340 <line:33:6, col:14> 'PgHdr *' '='
+|   |   |   | |-DeclRefExpr 0x7fabe782c2d8 <col:6> 'PgHdr *' lvalue Var 0x7fabe7826850 'pTail' 'PgHdr *'
+|   |   |   | `-ImplicitCastExpr 0x7fabe782c328 <col:14> 'PgHdr *' <LValueToRValue>
+|   |   |   |   `-DeclRefExpr 0x7fabe782c300 <col:14> 'PgHdr *' lvalue ParmVar 0x7fabe78265f8 'pB' 'PgHdr *'
+|   |   |   `-BinaryOperator 0x7fabe782c458 <line:34:6, col:17> 'PgHdr *' '='
+|   |   |     |-DeclRefExpr 0x7fabe782c368 <col:6> 'PgHdr *' lvalue ParmVar 0x7fabe78265f8 'pB' 'PgHdr *'
+|   |   |     `-ImplicitCastExpr 0x7fabe782c440 <col:11, col:17> 'PgHdr *' <LValueToRValue>
+|   |   |       `-MemberExpr 0x7fabe782c408 <col:11, col:17> 'PgHdr *' lvalue .pDirty 0x7fabe7826248
+|   |   |         `-MemberExpr 0x7fabe782c3d0 <col:11, col:15> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue ->x 0x7fabe78263a0
+|   |   |           `-ImplicitCastExpr 0x7fabe782c3b8 <col:11> 'PgHdr *' <LValueToRValue>
+|   |   |             `-DeclRefExpr 0x7fabe782c390 <col:11> 'PgHdr *' lvalue ParmVar 0x7fabe78265f8 'pB' 'PgHdr *'
+|   |   `-BinaryOperator 0x7fabe782c5f8 <line:36:4, col:16> 'int' '='
+|   |     |-DeclRefExpr 0x7fabe782c4e8 <col:4> 'volatile int' lvalue Var 0x7fabe7826518 'vx' 'volatile int'
+|   |     `-ImplicitCastExpr 0x7fabe782c5e0 <col:9, col:16> 'int' <LValueToRValue>
+|   |       `-MemberExpr 0x7fabe782c5a8 <col:9, col:16> 'int' lvalue ->y 0x7fabe7825de0
+|   |         `-ImplicitCastExpr 0x7fabe782c590 <col:9, col:13> 'PgHdr *' <LValueToRValue>
+|   |           `-ParenExpr 0x7fabe782c570 <col:9, col:13> 'PgHdr *' lvalue
+|   |             `-UnaryOperator 0x7fabe782c550 <col:10, col:11> 'PgHdr *' lvalue prefix '*'
+|   |               `-ImplicitCastExpr 0x7fabe782c538 <col:11> 'PgHdr **' <LValueToRValue>
+|   |                 `-DeclRefExpr 0x7fabe782c510 <col:11> 'PgHdr **' lvalue Var 0x7fabe7826460 'xx' 'PgHdr **'
+|   |-IfStmt 0x7fabe782cac0 <line:38:2, line:44:2>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fabe782c690 <line:38:6> 'PgHdr *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fabe782c668 <col:6> 'PgHdr *' lvalue ParmVar 0x7fabe7826588 'pA' 'PgHdr *'
+|   | |-CompoundStmt 0x7fabe782c7c0 <col:10, line:40:2>
+|   | | `-BinaryOperator 0x7fabe782c798 <line:39:4, col:22> 'PgHdr *' '='
+|   | |   |-MemberExpr 0x7fabe782c720 <col:4, col:13> 'PgHdr *' lvalue .pDirty 0x7fabe7826248
+|   | |   | `-MemberExpr 0x7fabe782c6e8 <col:4, col:11> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue ->x 0x7fabe78263a0
+|   | |   |   `-ImplicitCastExpr 0x7fabe782c6d0 <col:4> 'PgHdr *' <LValueToRValue>
+|   | |   |     `-DeclRefExpr 0x7fabe782c6a8 <col:4> 'PgHdr *' lvalue Var 0x7fabe7826850 'pTail' 'PgHdr *'
+|   | |   `-ImplicitCastExpr 0x7fabe782c780 <col:22> 'PgHdr *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fabe782c758 <col:22> 'PgHdr *' lvalue ParmVar 0x7fabe7826588 'pA' 'PgHdr *'
+|   | `-IfStmt 0x7fabe782ca88 <line:40:8, line:44:2>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-ImplicitCastExpr 0x7fabe782c808 <line:40:12> 'PgHdr *' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fabe782c7e0 <col:12> 'PgHdr *' lvalue ParmVar 0x7fabe78265f8 'pB' 'PgHdr *'
+|   |   |-CompoundStmt 0x7fabe782c938 <col:16, line:42:2>
+|   |   | `-BinaryOperator 0x7fabe782c910 <line:41:4, col:22> 'PgHdr *' '='
+|   |   |   |-MemberExpr 0x7fabe782c898 <col:4, col:13> 'PgHdr *' lvalue .pDirty 0x7fabe7826248
+|   |   |   | `-MemberExpr 0x7fabe782c860 <col:4, col:11> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue ->x 0x7fabe78263a0
+|   |   |   |   `-ImplicitCastExpr 0x7fabe782c848 <col:4> 'PgHdr *' <LValueToRValue>
+|   |   |   |     `-DeclRefExpr 0x7fabe782c820 <col:4> 'PgHdr *' lvalue Var 0x7fabe7826850 'pTail' 'PgHdr *'
+|   |   |   `-ImplicitCastExpr 0x7fabe782c8f8 <col:22> 'PgHdr *' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7fabe782c8d0 <col:22> 'PgHdr *' lvalue ParmVar 0x7fabe78265f8 'pB' 'PgHdr *'
+|   |   `-CompoundStmt 0x7fabe782ca68 <line:42:7, line:44:2>
+|   |     `-BinaryOperator 0x7fabe782ca40 <line:43:4, col:22> 'PgHdr *' '='
+|   |       |-MemberExpr 0x7fabe782c9d0 <col:4, col:13> 'PgHdr *' lvalue .pDirty 0x7fabe7826248
+|   |       | `-MemberExpr 0x7fabe782c998 <col:4, col:11> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue ->x 0x7fabe78263a0
+|   |       |   `-ImplicitCastExpr 0x7fabe782c980 <col:4> 'PgHdr *' <LValueToRValue>
+|   |       |     `-DeclRefExpr 0x7fabe782c958 <col:4> 'PgHdr *' lvalue Var 0x7fabe7826850 'pTail' 'PgHdr *'
+|   |       `-ImplicitCastExpr 0x7fabe782ca28 <col:22> 'PgHdr *' <NullToPointer>
+|   |         `-IntegerLiteral 0x7fabe782ca08 <col:22> 'int' 0
+|   `-ReturnStmt 0x7fabe782cba8 <line:45:2, col:18>
+|     `-ImplicitCastExpr 0x7fabe782cb90 <col:9, col:18> 'PgHdr *' <LValueToRValue>
+|       `-MemberExpr 0x7fabe782cb58 <col:9, col:18> 'PgHdr *' lvalue .pDirty 0x7fabe7826248
+|         `-MemberExpr 0x7fabe782cb20 <col:9, col:16> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue .x 0x7fabe78263a0
+|           `-DeclRefExpr 0x7fabe782caf8 <col:9> 'PgHdr':'struct PgHdr' lvalue Var 0x7fabe78267c8 'result' 'PgHdr':'struct PgHdr'
+|-FunctionDecl 0x7fabe782cd50 <line:48:1, line:76:1> line:48:35 used sort_pagelist 'PgHdr *(PgHdr *)'
+| |-ParmVarDecl 0x7fabe782cc48 <col:49, col:56> col:56 used pIn 'PgHdr *'
+| |-CompoundStmt 0x7fabe782e8f8 <line:49:1, line:76:1>
+| | |-DeclStmt 0x7fabe782cfe0 <line:50:2, col:18>
+| | | |-VarDecl 0x7fabe782cef8 <col:2, col:13> col:9 used a 'PgHdr *[25]'
+| | | `-VarDecl 0x7fabe782cf68 <col:2, col:17> col:17 used p 'PgHdr *'
+| | |-DeclStmt 0x7fabe782d070 <line:51:2, col:7>
+| | | `-VarDecl 0x7fabe782d010 <col:2, col:6> col:6 used i 'int'
+| | |-CallExpr 0x7fabe782d420 <line:52:2, col:36> 'void *'
+| | | |-ImplicitCastExpr 0x7fabe782d408 <col:2> 'void *(*)(void *, int, unsigned long)' <BuiltinFnToFnPtr>
+| | | | `-DeclRefExpr 0x7fabe782d2f0 <col:2> '<builtin fn type>' Function 0x7fabe782d0d8 '__builtin_memset' 'void *(void *, int, unsigned long)'
+| | | |-ImplicitCastExpr 0x7fabe782d478 <col:20> 'void *' <BitCast>
+| | | | `-ImplicitCastExpr 0x7fabe782d460 <col:20> 'PgHdr **' <ArrayToPointerDecay>
+| | | |   `-DeclRefExpr 0x7fabe782d318 <col:20> 'PgHdr *[25]' lvalue Var 0x7fabe782cef8 'a' 'PgHdr *[25]'
+| | | |-IntegerLiteral 0x7fabe782d340 <col:23> 'int' 0
+| | | `-UnaryExprOrTypeTraitExpr 0x7fabe782d3a8 <col:26, col:35> 'unsigned long' sizeof
+| | |   `-ParenExpr 0x7fabe782d388 <col:33, col:35> 'PgHdr *[25]' lvalue
+| | |     `-DeclRefExpr 0x7fabe782d360 <col:34> 'PgHdr *[25]' lvalue Var 0x7fabe782cef8 'a' 'PgHdr *[25]'
+| | |-WhileStmt 0x7fabe782e430 <line:53:2, line:70:2>
+| | | |-<<<NULL>>>
+| | | |-ImplicitCastExpr 0x7fabe782d4b8 <line:53:9> 'PgHdr *' <LValueToRValue>
+| | | | `-DeclRefExpr 0x7fabe782d490 <col:9> 'PgHdr *' lvalue ParmVar 0x7fabe782cc48 'pIn' 'PgHdr *'
+| | | `-CompoundStmt 0x7fabe782e3f0 <col:14, line:70:2>
+| | |   |-BinaryOperator 0x7fabe782d538 <line:54:4, col:8> 'PgHdr *' '='
+| | |   | |-DeclRefExpr 0x7fabe782d4d0 <col:4> 'PgHdr *' lvalue Var 0x7fabe782cf68 'p' 'PgHdr *'
+| | |   | `-ImplicitCastExpr 0x7fabe782d520 <col:8> 'PgHdr *' <LValueToRValue>
+| | |   |   `-DeclRefExpr 0x7fabe782d4f8 <col:8> 'PgHdr *' lvalue ParmVar 0x7fabe782cc48 'pIn' 'PgHdr *'
+| | |   |-BinaryOperator 0x7fabe782d650 <line:55:4, col:15> 'PgHdr *' '='
+| | |   | |-DeclRefExpr 0x7fabe782d560 <col:4> 'PgHdr *' lvalue ParmVar 0x7fabe782cc48 'pIn' 'PgHdr *'
+| | |   | `-ImplicitCastExpr 0x7fabe782d638 <col:10, col:15> 'PgHdr *' <LValueToRValue>
+| | |   |   `-MemberExpr 0x7fabe782d600 <col:10, col:15> 'PgHdr *' lvalue .pDirty 0x7fabe7826248
+| | |   |     `-MemberExpr 0x7fabe782d5c8 <col:10, col:13> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue ->x 0x7fabe78263a0
+| | |   |       `-ImplicitCastExpr 0x7fabe782d5b0 <col:10> 'PgHdr *' <LValueToRValue>
+| | |   |         `-DeclRefExpr 0x7fabe782d588 <col:10> 'PgHdr *' lvalue Var 0x7fabe782cf68 'p' 'PgHdr *'
+| | |   |-BinaryOperator 0x7fabe782d760 <line:56:4, col:18> 'PgHdr *' '='
+| | |   | |-MemberExpr 0x7fabe782d6f0 <col:4, col:9> 'PgHdr *' lvalue .pDirty 0x7fabe7826248
+| | |   | | `-MemberExpr 0x7fabe782d6b8 <col:4, col:7> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue ->x 0x7fabe78263a0
+| | |   | |   `-ImplicitCastExpr 0x7fabe782d6a0 <col:4> 'PgHdr *' <LValueToRValue>
+| | |   | |     `-DeclRefExpr 0x7fabe782d678 <col:4> 'PgHdr *' lvalue Var 0x7fabe782cf68 'p' 'PgHdr *'
+| | |   | `-ImplicitCastExpr 0x7fabe782d748 <col:18> 'PgHdr *' <NullToPointer>
+| | |   |   `-IntegerLiteral 0x7fabe782d728 <col:18> 'int' 0
+| | |   |-ForStmt 0x7fabe782e048 <line:57:4, line:66:4>
+| | |   | |-BinaryOperator 0x7fabe782d7d0 <line:57:8, col:10> 'int' '='
+| | |   | | |-DeclRefExpr 0x7fabe782d788 <col:8> 'int' lvalue Var 0x7fabe782d010 'i' 'int'
+| | |   | | `-IntegerLiteral 0x7fabe782d7b0 <col:10> 'int' 0
+| | |   | |-<<<NULL>>>
+| | |   | |-BinaryOperator 0x7fabe782d8a0 <col:13, col:19> 'int' '<'
+| | |   | | |-ImplicitCastExpr 0x7fabe782d888 <col:13> 'int' <LValueToRValue>
+| | |   | | | `-DeclRefExpr 0x7fabe782d7f8 <col:13> 'int' lvalue Var 0x7fabe782d010 'i' 'int'
+| | |   | | `-BinaryOperator 0x7fabe782d860 <col:15, col:19> 'int' '-'
+| | |   | |   |-IntegerLiteral 0x7fabe782d820 <col:15> 'int' 25
+| | |   | |   `-IntegerLiteral 0x7fabe782d840 <col:19> 'int' 1
+| | |   | |-UnaryOperator 0x7fabe782d8f0 <col:22, col:23> 'int' postfix '++'
+| | |   | | `-DeclRefExpr 0x7fabe782d8c8 <col:22> 'int' lvalue Var 0x7fabe782d010 'i' 'int'
+| | |   | `-CompoundStmt 0x7fabe782e028 <col:26, line:66:4>
+| | |   |   `-IfStmt 0x7fabe782dff0 <line:58:6, line:65:6>
+| | |   |     |-<<<NULL>>>
+| | |   |     |-<<<NULL>>>
+| | |   |     |-BinaryOperator 0x7fabe782da08 <line:58:10, col:16> 'int' '=='
+| | |   |     | |-ImplicitCastExpr 0x7fabe782d9d8 <col:10, col:13> 'PgHdr *' <LValueToRValue>
+| | |   |     | | `-ArraySubscriptExpr 0x7fabe782d990 <col:10, col:13> 'PgHdr *' lvalue
+| | |   |     | |   |-ImplicitCastExpr 0x7fabe782d960 <col:10> 'PgHdr **' <ArrayToPointerDecay>
+| | |   |     | |   | `-DeclRefExpr 0x7fabe782d910 <col:10> 'PgHdr *[25]' lvalue Var 0x7fabe782cef8 'a' 'PgHdr *[25]'
+| | |   |     | |   `-ImplicitCastExpr 0x7fabe782d978 <col:12> 'int' <LValueToRValue>
+| | |   |     | |     `-DeclRefExpr 0x7fabe782d938 <col:12> 'int' lvalue Var 0x7fabe782d010 'i' 'int'
+| | |   |     | `-ImplicitCastExpr 0x7fabe782d9f0 <col:16> 'PgHdr *' <NullToPointer>
+| | |   |     |   `-IntegerLiteral 0x7fabe782d9b8 <col:16> 'int' 0
+| | |   |     |-CompoundStmt 0x7fabe782db48 <col:19, line:61:6>
+| | |   |     | |-BinaryOperator 0x7fabe782db18 <line:59:8, col:15> 'PgHdr *' '='
+| | |   |     | | |-ArraySubscriptExpr 0x7fabe782dab0 <col:8, col:11> 'PgHdr *' lvalue
+| | |   |     | | | |-ImplicitCastExpr 0x7fabe782da80 <col:8> 'PgHdr **' <ArrayToPointerDecay>
+| | |   |     | | | | `-DeclRefExpr 0x7fabe782da30 <col:8> 'PgHdr *[25]' lvalue Var 0x7fabe782cef8 'a' 'PgHdr *[25]'
+| | |   |     | | | `-ImplicitCastExpr 0x7fabe782da98 <col:10> 'int' <LValueToRValue>
+| | |   |     | | |   `-DeclRefExpr 0x7fabe782da58 <col:10> 'int' lvalue Var 0x7fabe782d010 'i' 'int'
+| | |   |     | | `-ImplicitCastExpr 0x7fabe782db00 <col:15> 'PgHdr *' <LValueToRValue>
+| | |   |     | |   `-DeclRefExpr 0x7fabe782dad8 <col:15> 'PgHdr *' lvalue Var 0x7fabe782cf68 'p' 'PgHdr *'
+| | |   |     | `-BreakStmt 0x7fabe782db40 <line:60:8>
+| | |   |     `-CompoundStmt 0x7fabe782dfc0 <line:61:11, line:65:6>
+| | |   |       |-BinaryOperator 0x7fabe782dd88 <line:62:8, col:34> 'PgHdr *' '='
+| | |   |       | |-DeclRefExpr 0x7fabe782db70 <col:8> 'PgHdr *' lvalue Var 0x7fabe782cf68 'p' 'PgHdr *'
+| | |   |       | `-CallExpr 0x7fabe782dd20 <col:12, col:34> 'PgHdr *'
+| | |   |       |   |-ImplicitCastExpr 0x7fabe782dd08 <col:12> 'PgHdr *(*)(PgHdr *, PgHdr *)' <FunctionToPointerDecay>
+| | |   |       |   | `-DeclRefExpr 0x7fabe782db98 <col:12> 'PgHdr *(PgHdr *, PgHdr *)' Function 0x7fabe7826710 'merge_pagelist' 'PgHdr *(PgHdr *, PgHdr *)'
+| | |   |       |   |-ImplicitCastExpr 0x7fabe782dd58 <col:27, col:30> 'PgHdr *' <LValueToRValue>
+| | |   |       |   | `-ArraySubscriptExpr 0x7fabe782dc58 <col:27, col:30> 'PgHdr *' lvalue
+| | |   |       |   |   |-ImplicitCastExpr 0x7fabe782dc28 <col:27> 'PgHdr **' <ArrayToPointerDecay>
+| | |   |       |   |   | `-DeclRefExpr 0x7fabe782dbc0 <col:27> 'PgHdr *[25]' lvalue Var 0x7fabe782cef8 'a' 'PgHdr *[25]'
+| | |   |       |   |   `-ImplicitCastExpr 0x7fabe782dc40 <col:29> 'int' <LValueToRValue>
+| | |   |       |   |     `-DeclRefExpr 0x7fabe782dc00 <col:29> 'int' lvalue Var 0x7fabe782d010 'i' 'int'
+| | |   |       |   `-ImplicitCastExpr 0x7fabe782dd70 <col:33> 'PgHdr *' <LValueToRValue>
+| | |   |       |     `-DeclRefExpr 0x7fabe782dc80 <col:33> 'PgHdr *' lvalue Var 0x7fabe782cf68 'p' 'PgHdr *'
+| | |   |       |-BinaryOperator 0x7fabe782de90 <line:63:8, col:15> 'PgHdr *' '='
+| | |   |       | |-ArraySubscriptExpr 0x7fabe782de30 <col:8, col:11> 'PgHdr *' lvalue
+| | |   |       | | |-ImplicitCastExpr 0x7fabe782de00 <col:8> 'PgHdr **' <ArrayToPointerDecay>
+| | |   |       | | | `-DeclRefExpr 0x7fabe782ddb0 <col:8> 'PgHdr *[25]' lvalue Var 0x7fabe782cef8 'a' 'PgHdr *[25]'
+| | |   |       | | `-ImplicitCastExpr 0x7fabe782de18 <col:10> 'int' <LValueToRValue>
+| | |   |       | |   `-DeclRefExpr 0x7fabe782ddd8 <col:10> 'int' lvalue Var 0x7fabe782d010 'i' 'int'
+| | |   |       | `-ImplicitCastExpr 0x7fabe782de78 <col:15> 'PgHdr *' <NullToPointer>
+| | |   |       |   `-IntegerLiteral 0x7fabe782de58 <col:15> 'int' 0
+| | |   |       `-BinaryOperator 0x7fabe782df98 <line:64:8, col:15> 'PgHdr *' '='
+| | |   |         |-ArraySubscriptExpr 0x7fabe782df38 <col:8, col:11> 'PgHdr *' lvalue
+| | |   |         | |-ImplicitCastExpr 0x7fabe782df08 <col:8> 'PgHdr **' <ArrayToPointerDecay>
+| | |   |         | | `-DeclRefExpr 0x7fabe782deb8 <col:8> 'PgHdr *[25]' lvalue Var 0x7fabe782cef8 'a' 'PgHdr *[25]'
+| | |   |         | `-ImplicitCastExpr 0x7fabe782df20 <col:10> 'int' <LValueToRValue>
+| | |   |         |   `-DeclRefExpr 0x7fabe782dee0 <col:10> 'int' lvalue Var 0x7fabe782d010 'i' 'int'
+| | |   |         `-ImplicitCastExpr 0x7fabe782df80 <col:15> 'PgHdr *' <NullToPointer>
+| | |   |           `-IntegerLiteral 0x7fabe782df60 <col:15> 'int' 0
+| | |   `-IfStmt 0x7fabe782e3b8 <line:67:4, line:69:4>
+| | |     |-<<<NULL>>>
+| | |     |-<<<NULL>>>
+| | |     |-BinaryOperator 0x7fabe782e128 <line:67:8, col:15> 'int' '=='
+| | |     | |-ImplicitCastExpr 0x7fabe782e110 <col:8> 'int' <LValueToRValue>
+| | |     | | `-DeclRefExpr 0x7fabe782e080 <col:8> 'int' lvalue Var 0x7fabe782d010 'i' 'int'
+| | |     | `-BinaryOperator 0x7fabe782e0e8 <col:11, col:15> 'int' '-'
+| | |     |   |-IntegerLiteral 0x7fabe782e0a8 <col:11> 'int' 25
+| | |     |   `-IntegerLiteral 0x7fabe782e0c8 <col:15> 'int' 1
+| | |     |-CompoundStmt 0x7fabe782e398 <col:18, line:69:4>
+| | |     | `-BinaryOperator 0x7fabe782e370 <line:68:6, col:35> 'PgHdr *' '='
+| | |     |   |-ArraySubscriptExpr 0x7fabe782e1d0 <col:6, col:9> 'PgHdr *' lvalue
+| | |     |   | |-ImplicitCastExpr 0x7fabe782e1a0 <col:6> 'PgHdr **' <ArrayToPointerDecay>
+| | |     |   | | `-DeclRefExpr 0x7fabe782e150 <col:6> 'PgHdr *[25]' lvalue Var 0x7fabe782cef8 'a' 'PgHdr *[25]'
+| | |     |   | `-ImplicitCastExpr 0x7fabe782e1b8 <col:8> 'int' <LValueToRValue>
+| | |     |   |   `-DeclRefExpr 0x7fabe782e178 <col:8> 'int' lvalue Var 0x7fabe782d010 'i' 'int'
+| | |     |   `-CallExpr 0x7fabe782e308 <col:13, col:35> 'PgHdr *'
+| | |     |     |-ImplicitCastExpr 0x7fabe782e2f0 <col:13> 'PgHdr *(*)(PgHdr *, PgHdr *)' <FunctionToPointerDecay>
+| | |     |     | `-DeclRefExpr 0x7fabe782e1f8 <col:13> 'PgHdr *(PgHdr *, PgHdr *)' Function 0x7fabe7826710 'merge_pagelist' 'PgHdr *(PgHdr *, PgHdr *)'
+| | |     |     |-ImplicitCastExpr 0x7fabe782e340 <col:28, col:31> 'PgHdr *' <LValueToRValue>
+| | |     |     | `-ArraySubscriptExpr 0x7fabe782e2a0 <col:28, col:31> 'PgHdr *' lvalue
+| | |     |     |   |-ImplicitCastExpr 0x7fabe782e270 <col:28> 'PgHdr **' <ArrayToPointerDecay>
+| | |     |     |   | `-DeclRefExpr 0x7fabe782e220 <col:28> 'PgHdr *[25]' lvalue Var 0x7fabe782cef8 'a' 'PgHdr *[25]'
+| | |     |     |   `-ImplicitCastExpr 0x7fabe782e288 <col:30> 'int' <LValueToRValue>
+| | |     |     |     `-DeclRefExpr 0x7fabe782e248 <col:30> 'int' lvalue Var 0x7fabe782d010 'i' 'int'
+| | |     |     `-ImplicitCastExpr 0x7fabe782e358 <col:34> 'PgHdr *' <LValueToRValue>
+| | |     |       `-DeclRefExpr 0x7fabe782e2c8 <col:34> 'PgHdr *' lvalue Var 0x7fabe782cf68 'p' 'PgHdr *'
+| | |     `-<<<NULL>>>
+| | |-BinaryOperator 0x7fabe782e518 <line:71:2, col:9> 'PgHdr *' '='
+| | | |-DeclRefExpr 0x7fabe782e450 <col:2> 'PgHdr *' lvalue Var 0x7fabe782cf68 'p' 'PgHdr *'
+| | | `-ImplicitCastExpr 0x7fabe782e500 <col:6, col:9> 'PgHdr *' <LValueToRValue>
+| | |   `-ArraySubscriptExpr 0x7fabe782e4d8 <col:6, col:9> 'PgHdr *' lvalue
+| | |     |-ImplicitCastExpr 0x7fabe782e4c0 <col:6> 'PgHdr **' <ArrayToPointerDecay>
+| | |     | `-DeclRefExpr 0x7fabe782e478 <col:6> 'PgHdr *[25]' lvalue Var 0x7fabe782cef8 'a' 'PgHdr *[25]'
+| | |     `-IntegerLiteral 0x7fabe782e4a0 <col:8> 'int' 0
+| | |-ForStmt 0x7fabe782e868 <line:72:2, line:74:2>
+| | | |-BinaryOperator 0x7fabe782e588 <line:72:6, col:8> 'int' '='
+| | | | |-DeclRefExpr 0x7fabe782e540 <col:6> 'int' lvalue Var 0x7fabe782d010 'i' 'int'
+| | | | `-IntegerLiteral 0x7fabe782e568 <col:8> 'int' 1
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fabe782e610 <col:11, col:13> 'int' '<'
+| | | | |-ImplicitCastExpr 0x7fabe782e5f8 <col:11> 'int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fabe782e5b0 <col:11> 'int' lvalue Var 0x7fabe782d010 'i' 'int'
+| | | | `-IntegerLiteral 0x7fabe782e5d8 <col:13> 'int' 25
+| | | |-UnaryOperator 0x7fabe782e660 <col:17, col:18> 'int' postfix '++'
+| | | | `-DeclRefExpr 0x7fabe782e638 <col:17> 'int' lvalue Var 0x7fabe782d010 'i' 'int'
+| | | `-CompoundStmt 0x7fabe782e848 <col:21, line:74:2>
+| | |   `-BinaryOperator 0x7fabe782e820 <line:73:4, col:31> 'PgHdr *' '='
+| | |     |-DeclRefExpr 0x7fabe782e680 <col:4> 'PgHdr *' lvalue Var 0x7fabe782cf68 'p' 'PgHdr *'
+| | |     `-CallExpr 0x7fabe782e7b8 <col:8, col:31> 'PgHdr *'
+| | |       |-ImplicitCastExpr 0x7fabe782e7a0 <col:8> 'PgHdr *(*)(PgHdr *, PgHdr *)' <FunctionToPointerDecay>
+| | |       | `-DeclRefExpr 0x7fabe782e6a8 <col:8> 'PgHdr *(PgHdr *, PgHdr *)' Function 0x7fabe7826710 'merge_pagelist' 'PgHdr *(PgHdr *, PgHdr *)'
+| | |       |-ImplicitCastExpr 0x7fabe782e7f0 <col:24> 'PgHdr *' <LValueToRValue>
+| | |       | `-DeclRefExpr 0x7fabe782e6d0 <col:24> 'PgHdr *' lvalue Var 0x7fabe782cf68 'p' 'PgHdr *'
+| | |       `-ImplicitCastExpr 0x7fabe782e808 <col:27, col:30> 'PgHdr *' <LValueToRValue>
+| | |         `-ArraySubscriptExpr 0x7fabe782e778 <col:27, col:30> 'PgHdr *' lvalue
+| | |           |-ImplicitCastExpr 0x7fabe782e748 <col:27> 'PgHdr **' <ArrayToPointerDecay>
+| | |           | `-DeclRefExpr 0x7fabe782e6f8 <col:27> 'PgHdr *[25]' lvalue Var 0x7fabe782cef8 'a' 'PgHdr *[25]'
+| | |           `-ImplicitCastExpr 0x7fabe782e760 <col:29> 'int' <LValueToRValue>
+| | |             `-DeclRefExpr 0x7fabe782e720 <col:29> 'int' lvalue Var 0x7fabe782d010 'i' 'int'
+| | `-ReturnStmt 0x7fabe782e8e0 <line:75:2, col:9>
+| |   `-ImplicitCastExpr 0x7fabe782e8c8 <col:9> 'PgHdr *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fabe782e8a0 <col:9> 'PgHdr *' lvalue Var 0x7fabe782cf68 'p' 'PgHdr *'
+| `-NoInlineAttr 0x7fabe782cdf0 <line:48:24>
+|-FunctionDecl 0x7fabe782d0d8 <line:52:2> col:2 implicit used __builtin_memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fabe782d170 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fabe782d1d0 <<invalid sloc>> <invalid sloc> 'int'
+| |-ParmVarDecl 0x7fabe782d230 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fabe782d2a8 <col:2> Implicit
+`-FunctionDecl 0x7fabe782e9a0 <line:78:1, line:94:1> line:78:5 main 'int ()'
+  `-CompoundStmt 0x7fabe782fd28 <line:79:1, line:94:1>
+    |-DeclStmt 0x7fabe7830c60 <line:80:2, col:12>
+    | `-VarDecl 0x7fabe7830c00 <col:2, col:11> col:8 used a 'PgHdr [5]'
+    |-DeclStmt 0x7fabe7830ce8 <line:81:2, col:10>
+    | `-VarDecl 0x7fabe7830c88 <col:2, col:9> col:9 used p 'PgHdr *'
+    |-BinaryOperator 0x7fabe7830e30 <line:82:2, col:16> 'unsigned int' '='
+    | |-MemberExpr 0x7fabe7830dc0 <col:2, col:9> 'unsigned int' lvalue .pgno 0x7fabe7825ee8
+    | | `-MemberExpr 0x7fabe7830d88 <col:2, col:7> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue .x 0x7fabe78263a0
+    | |   `-ArraySubscriptExpr 0x7fabe7830d60 <col:2, col:5> 'PgHdr':'struct PgHdr' lvalue
+    | |     |-ImplicitCastExpr 0x7fabe7830d48 <col:2> 'PgHdr *' <ArrayToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fabe7830d00 <col:2> 'PgHdr [5]' lvalue Var 0x7fabe7830c00 'a' 'PgHdr [5]'
+    | |     `-IntegerLiteral 0x7fabe7830d28 <col:4> 'int' 0
+    | `-ImplicitCastExpr 0x7fabe7830e18 <col:16> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fabe7830df8 <col:16> 'int' 5
+    |-BinaryOperator 0x7fabe7830ff8 <line:83:2, col:22> 'PgHdr *' '='
+    | |-MemberExpr 0x7fabe7830f18 <col:2, col:9> 'PgHdr *' lvalue .pDirty 0x7fabe7826248
+    | | `-MemberExpr 0x7fabe7830ee0 <col:2, col:7> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue .x 0x7fabe78263a0
+    | |   `-ArraySubscriptExpr 0x7fabe7830eb8 <col:2, col:5> 'PgHdr':'struct PgHdr' lvalue
+    | |     |-ImplicitCastExpr 0x7fabe7830ea0 <col:2> 'PgHdr *' <ArrayToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fabe7830e58 <col:2> 'PgHdr [5]' lvalue Var 0x7fabe7830c00 'a' 'PgHdr [5]'
+    | |     `-IntegerLiteral 0x7fabe7830e80 <col:4> 'int' 0
+    | `-UnaryOperator 0x7fabe7830fd8 <col:18, col:22> 'PgHdr *' prefix '&'
+    |   `-ArraySubscriptExpr 0x7fabe7830fb0 <col:19, col:22> 'PgHdr':'struct PgHdr' lvalue
+    |     |-ImplicitCastExpr 0x7fabe7830f98 <col:19> 'PgHdr *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7fabe7830f50 <col:19> 'PgHdr [5]' lvalue Var 0x7fabe7830c00 'a' 'PgHdr [5]'
+    |     `-IntegerLiteral 0x7fabe7830f78 <col:21> 'int' 1
+    |-BinaryOperator 0x7fabe7831150 <line:84:2, col:16> 'unsigned int' '='
+    | |-MemberExpr 0x7fabe78310e0 <col:2, col:9> 'unsigned int' lvalue .pgno 0x7fabe7825ee8
+    | | `-MemberExpr 0x7fabe78310a8 <col:2, col:7> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue .x 0x7fabe78263a0
+    | |   `-ArraySubscriptExpr 0x7fabe7831080 <col:2, col:5> 'PgHdr':'struct PgHdr' lvalue
+    | |     |-ImplicitCastExpr 0x7fabe7831068 <col:2> 'PgHdr *' <ArrayToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fabe7831020 <col:2> 'PgHdr [5]' lvalue Var 0x7fabe7830c00 'a' 'PgHdr [5]'
+    | |     `-IntegerLiteral 0x7fabe7831048 <col:4> 'int' 1
+    | `-ImplicitCastExpr 0x7fabe7831138 <col:16> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fabe7831118 <col:16> 'int' 4
+    |-BinaryOperator 0x7fabe7831318 <line:85:2, col:22> 'PgHdr *' '='
+    | |-MemberExpr 0x7fabe7831238 <col:2, col:9> 'PgHdr *' lvalue .pDirty 0x7fabe7826248
+    | | `-MemberExpr 0x7fabe7831200 <col:2, col:7> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue .x 0x7fabe78263a0
+    | |   `-ArraySubscriptExpr 0x7fabe78311d8 <col:2, col:5> 'PgHdr':'struct PgHdr' lvalue
+    | |     |-ImplicitCastExpr 0x7fabe78311c0 <col:2> 'PgHdr *' <ArrayToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fabe7831178 <col:2> 'PgHdr [5]' lvalue Var 0x7fabe7830c00 'a' 'PgHdr [5]'
+    | |     `-IntegerLiteral 0x7fabe78311a0 <col:4> 'int' 1
+    | `-UnaryOperator 0x7fabe78312f8 <col:18, col:22> 'PgHdr *' prefix '&'
+    |   `-ArraySubscriptExpr 0x7fabe78312d0 <col:19, col:22> 'PgHdr':'struct PgHdr' lvalue
+    |     |-ImplicitCastExpr 0x7fabe78312b8 <col:19> 'PgHdr *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7fabe7831270 <col:19> 'PgHdr [5]' lvalue Var 0x7fabe7830c00 'a' 'PgHdr [5]'
+    |     `-IntegerLiteral 0x7fabe7831298 <col:21> 'int' 2
+    |-BinaryOperator 0x7fabe7831470 <line:86:2, col:16> 'unsigned int' '='
+    | |-MemberExpr 0x7fabe7831400 <col:2, col:9> 'unsigned int' lvalue .pgno 0x7fabe7825ee8
+    | | `-MemberExpr 0x7fabe78313c8 <col:2, col:7> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue .x 0x7fabe78263a0
+    | |   `-ArraySubscriptExpr 0x7fabe78313a0 <col:2, col:5> 'PgHdr':'struct PgHdr' lvalue
+    | |     |-ImplicitCastExpr 0x7fabe7831388 <col:2> 'PgHdr *' <ArrayToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fabe7831340 <col:2> 'PgHdr [5]' lvalue Var 0x7fabe7830c00 'a' 'PgHdr [5]'
+    | |     `-IntegerLiteral 0x7fabe7831368 <col:4> 'int' 2
+    | `-ImplicitCastExpr 0x7fabe7831458 <col:16> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fabe7831438 <col:16> 'int' 1
+    |-BinaryOperator 0x7fabe7831638 <line:87:2, col:22> 'PgHdr *' '='
+    | |-MemberExpr 0x7fabe7831558 <col:2, col:9> 'PgHdr *' lvalue .pDirty 0x7fabe7826248
+    | | `-MemberExpr 0x7fabe7831520 <col:2, col:7> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue .x 0x7fabe78263a0
+    | |   `-ArraySubscriptExpr 0x7fabe78314f8 <col:2, col:5> 'PgHdr':'struct PgHdr' lvalue
+    | |     |-ImplicitCastExpr 0x7fabe78314e0 <col:2> 'PgHdr *' <ArrayToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fabe7831498 <col:2> 'PgHdr [5]' lvalue Var 0x7fabe7830c00 'a' 'PgHdr [5]'
+    | |     `-IntegerLiteral 0x7fabe78314c0 <col:4> 'int' 2
+    | `-UnaryOperator 0x7fabe7831618 <col:18, col:22> 'PgHdr *' prefix '&'
+    |   `-ArraySubscriptExpr 0x7fabe78315f0 <col:19, col:22> 'PgHdr':'struct PgHdr' lvalue
+    |     |-ImplicitCastExpr 0x7fabe78315d8 <col:19> 'PgHdr *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7fabe7831590 <col:19> 'PgHdr [5]' lvalue Var 0x7fabe7830c00 'a' 'PgHdr [5]'
+    |     `-IntegerLiteral 0x7fabe78315b8 <col:21> 'int' 3
+    |-BinaryOperator 0x7fabe7831790 <line:88:2, col:16> 'unsigned int' '='
+    | |-MemberExpr 0x7fabe7831720 <col:2, col:9> 'unsigned int' lvalue .pgno 0x7fabe7825ee8
+    | | `-MemberExpr 0x7fabe78316e8 <col:2, col:7> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue .x 0x7fabe78263a0
+    | |   `-ArraySubscriptExpr 0x7fabe78316c0 <col:2, col:5> 'PgHdr':'struct PgHdr' lvalue
+    | |     |-ImplicitCastExpr 0x7fabe78316a8 <col:2> 'PgHdr *' <ArrayToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fabe7831660 <col:2> 'PgHdr [5]' lvalue Var 0x7fabe7830c00 'a' 'PgHdr [5]'
+    | |     `-IntegerLiteral 0x7fabe7831688 <col:4> 'int' 3
+    | `-ImplicitCastExpr 0x7fabe7831778 <col:16> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fabe7831758 <col:16> 'int' 3
+    |-BinaryOperator 0x7fabe78318e8 <line:89:2, col:18> 'PgHdr *' '='
+    | |-MemberExpr 0x7fabe7831878 <col:2, col:9> 'PgHdr *' lvalue .pDirty 0x7fabe7826248
+    | | `-MemberExpr 0x7fabe7831840 <col:2, col:7> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue .x 0x7fabe78263a0
+    | |   `-ArraySubscriptExpr 0x7fabe7831818 <col:2, col:5> 'PgHdr':'struct PgHdr' lvalue
+    | |     |-ImplicitCastExpr 0x7fabe7831800 <col:2> 'PgHdr *' <ArrayToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fabe78317b8 <col:2> 'PgHdr [5]' lvalue Var 0x7fabe7830c00 'a' 'PgHdr [5]'
+    | |     `-IntegerLiteral 0x7fabe78317e0 <col:4> 'int' 3
+    | `-ImplicitCastExpr 0x7fabe78318d0 <col:18> 'PgHdr *' <NullToPointer>
+    |   `-IntegerLiteral 0x7fabe78318b0 <col:18> 'int' 0
+    |-BinaryOperator 0x7fabe7831ab0 <line:90:2, col:26> 'PgHdr *' '='
+    | |-DeclRefExpr 0x7fabe7831910 <col:2> 'PgHdr *' lvalue Var 0x7fabe7830c88 'p' 'PgHdr *'
+    | `-CallExpr 0x7fabe7831a80 <col:6, col:26> 'PgHdr *'
+    |   |-ImplicitCastExpr 0x7fabe7831a68 <col:6> 'PgHdr *(*)(PgHdr *)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fabe7831938 <col:6> 'PgHdr *(PgHdr *)' Function 0x7fabe782cd50 'sort_pagelist' 'PgHdr *(PgHdr *)'
+    |   `-UnaryOperator 0x7fabe78319e8 <col:21, col:25> 'PgHdr *' prefix '&'
+    |     `-ArraySubscriptExpr 0x7fabe78319c0 <col:22, col:25> 'PgHdr':'struct PgHdr' lvalue
+    |       |-ImplicitCastExpr 0x7fabe78319a8 <col:22> 'PgHdr *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7fabe7831960 <col:22> 'PgHdr [5]' lvalue Var 0x7fabe7830c00 'a' 'PgHdr [5]'
+    |       `-IntegerLiteral 0x7fabe7831988 <col:24> 'int' 0
+    |-IfStmt 0x7fabe782fcb8 <line:91:2, line:92:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fabe782fc00 <line:91:6, col:21> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fabe7831bb0 <col:6, col:11> 'PgHdr *' <LValueToRValue>
+    | | | `-MemberExpr 0x7fabe7831b50 <col:6, col:11> 'PgHdr *' lvalue .pDirty 0x7fabe7826248
+    | | |   `-MemberExpr 0x7fabe7831b18 <col:6, col:9> 'struct (anonymous struct at c_files/pr33870-1.c:7:1)':'struct PgHdr::(anonymous at c_files/pr33870-1.c:7:1)' lvalue ->x 0x7fabe78263a0
+    | | |     `-ImplicitCastExpr 0x7fabe7831b00 <col:6> 'PgHdr *' <LValueToRValue>
+    | | |       `-DeclRefExpr 0x7fabe7831ad8 <col:6> 'PgHdr *' lvalue Var 0x7fabe7830c88 'p' 'PgHdr *'
+    | | `-ImplicitCastExpr 0x7fabe7831bc8 <col:21> 'PgHdr *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fabe7831b88 <col:21> 'PgHdr *' lvalue Var 0x7fabe7830c88 'p' 'PgHdr *'
+    | |-CallExpr 0x7fabe782fc90 <line:92:4, col:11> 'void'
+    | | `-ImplicitCastExpr 0x7fabe782fc78 <col:4> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fabe782fc28 <col:4> 'void (void) __attribute__((noreturn))' Function 0x7fabe7825ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fabe782fd10 <line:93:2, col:9>
+      `-IntegerLiteral 0x7fabe782fcf0 <col:9> 'int' 0

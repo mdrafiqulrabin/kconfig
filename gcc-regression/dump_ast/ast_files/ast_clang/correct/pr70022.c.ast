@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7f8dc18264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8dc1826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8dc1826740 '__int128'
+|-TypedefDecl 0x7f8dc1826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8dc1826760 'unsigned __int128'
+|-TypedefDecl 0x7f8dc1826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8dc1826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8dc1826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8dc1826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8dc1826dc0 'char *'
+|   `-BuiltinType 0x7f8dc1826560 'char'
+|-TypedefDecl 0x7f8dc18270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8dc1827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8dc1826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8dc1826e58 '__va_list_tag'
+|-TypedefDecl 0x7f8dc1827178 <c_files/pr70022.c:4:1, col:13> col:13 referenced v4si '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7f8dc1827140 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7f8dc18265c0 'int'
+`-FunctionDecl 0x7f8dc1878508 <line:6:1, line:10:1> line:7:1 foo 'int (v4si)'
+  |-ParmVarDecl 0x7f8dc1878400 <col:6, col:11> col:11 used v 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  `-CompoundStmt 0x7f8dc18786a8 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7f8dc1878690 <line:9:3, col:16>
+      `-ImplicitCastExpr 0x7f8dc1878678 <col:10, col:16> 'int' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7f8dc1878650 <col:10, col:16> 'int' lvalue vectorcomponent
+          |-DeclRefExpr 0x7f8dc18785e8 <col:10> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7f8dc1878400 'v' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+          `-UnaryOperator 0x7f8dc1878630 <col:12, col:13> 'unsigned long' prefix '~'
+            `-IntegerLiteral 0x7f8dc1878610 <col:13> 'unsigned long' 0

@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fcf338264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcf33826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcf33826740 '__int128'
+|-TypedefDecl 0x7fcf33826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcf33826760 'unsigned __int128'
+|-TypedefDecl 0x7fcf33826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcf33826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcf33826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcf33826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcf33826dc0 'char *'
+|   `-BuiltinType 0x7fcf33826560 'char'
+|-TypedefDecl 0x7fcf338270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcf33827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcf33826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcf33826e58 '__va_list_tag'
+|-RecordDecl 0x7fcf33827120 <c_files/pr22531.c:1:9, line:3:1> line:1:16 struct dw_cfi_oprnd_struct definition
+| `-FieldDecl 0x7fcf34025a00 <line:2:7, col:21> col:21 referenced reg 'unsigned long'
+|-TypedefDecl 0x7fcf34025aa0 <line:1:1, line:3:3> col:3 referenced dw_cfa_location 'struct dw_cfi_oprnd_struct':'struct dw_cfi_oprnd_struct'
+| `-ElaboratedType 0x7fcf34025a50 'struct dw_cfi_oprnd_struct' sugar
+|   `-RecordType 0x7fcf338271b0 'struct dw_cfi_oprnd_struct'
+|     `-Record 0x7fcf33827120 'dw_cfi_oprnd_struct'
+`-FunctionDecl 0x7fcf34025bd0 <line:4:1, line:7:1> line:4:6 def_cfa_1 'void (void)'
+  `-CompoundStmt 0x7fcf34025ea0 <col:23, line:7:1>
+    |-DeclStmt 0x7fcf34025d40 <line:5:7, col:26>
+    | `-VarDecl 0x7fcf34025ce0 <col:7, col:23> col:23 used loc 'dw_cfa_location':'struct dw_cfi_oprnd_struct'
+    `-BinaryOperator 0x7fcf34025e30 <line:6:9, col:23> 'unsigned long' '='
+      |-MemberExpr 0x7fcf34025d80 <col:9, col:13> 'unsigned long' lvalue .reg 0x7fcf34025a00
+      | `-DeclRefExpr 0x7fcf34025d58 <col:9> 'dw_cfa_location':'struct dw_cfi_oprnd_struct' lvalue Var 0x7fcf34025ce0 'loc' 'dw_cfa_location':'struct dw_cfi_oprnd_struct'
+      `-ImplicitCastExpr 0x7fcf34025e18 <col:19, col:23> 'unsigned long' <LValueToRValue>
+        `-MemberExpr 0x7fcf34025de0 <col:19, col:23> 'unsigned long' lvalue .reg 0x7fcf34025a00
+          `-DeclRefExpr 0x7fcf34025db8 <col:19> 'dw_cfa_location':'struct dw_cfi_oprnd_struct' lvalue Var 0x7fcf34025ce0 'loc' 'dw_cfa_location':'struct dw_cfi_oprnd_struct'

@@ -1,0 +1,53 @@
+FileAST: 
+  FuncDef: 
+    Decl: crash_me, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: num1, [], [], []
+            TypeDecl: num1, []
+              IdentifierType: ['int']
+          Decl: num2, [], [], []
+            TypeDecl: num2, []
+              IdentifierType: ['int']
+          Decl: in, [], [], []
+            PtrDecl: []
+              TypeDecl: in, []
+                IdentifierType: ['char']
+          Decl: out, [], [], []
+            PtrDecl: []
+              TypeDecl: out, []
+                IdentifierType: ['char']
+        TypeDecl: crash_me, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: <
+          ID: j
+          ID: num1
+        UnaryOp: p++
+          ID: j
+        For: 
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          BinaryOp: <
+            ID: i
+            ID: num2
+          UnaryOp: p++
+            ID: i
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: out
+            UnaryOp: *
+              UnaryOp: p++
+                ID: in

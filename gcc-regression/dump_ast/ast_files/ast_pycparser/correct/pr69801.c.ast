@@ -1,0 +1,43 @@
+FileAST: 
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Struct: None
+        Decl: c, [], [], []
+          ArrayDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['char']
+            Constant: int, 1
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      Struct: None
+        Decl: c, [], [], []
+          ArrayDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['char']
+            Constant: int, 1
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      TernaryOp: 
+        ID: e
+        StructRef: .
+          TernaryOp: 
+            ID: d
+            ID: b
+            ID: c
+          ID: c
+        StructRef: .
+          TernaryOp: 
+            ID: d
+            ID: b
+            ID: c
+          ID: c

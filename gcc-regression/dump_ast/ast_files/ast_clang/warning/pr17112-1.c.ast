@@ -1,0 +1,81 @@
+c_files/pr17112-1.c:15:3: warning: implicit truncation from 'int' to bit-field changes value from 14610450 to -2166766 [-Wbitfield-constant-conversion]
+  0xdef012
+  ^~~~~~~~
+1 warning generated.
+TranslationUnitDecl 0x7fc27f8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc27f826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc27f826740 '__int128'
+|-TypedefDecl 0x7fc27f826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc27f826760 'unsigned __int128'
+|-TypedefDecl 0x7fc27f826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc27f826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc27f826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc27f826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc27f826dc0 'char *'
+|   `-BuiltinType 0x7fc27f826560 'char'
+|-TypedefDecl 0x7fc27f8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc27f827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc27f826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc27f826e58 '__va_list_tag'
+|-FunctionDecl 0x7fc280025a30 <c_files/pr17112-1.c:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc280025ac8 prev 0x7fc280025a30 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fc280025b60 <line:8:9, line:10:1> line:8:9 struct definition
+| `-FieldDecl 0x7fc280025c48 <line:9:3, col:13> col:7 referenced int24 'int'
+|   |-IntegerLiteral 0x7fc280025c10 <col:13> 'int' 24
+|   `-PackedAttr 0x7fc280025c90 <col:33>
+|-TypedefDecl 0x7fc280025d30 <line:8:1, line:10:3> col:3 referenced myint24 'struct myint24':'myint24'
+| `-ElaboratedType 0x7fc280025ce0 'struct myint24' sugar
+|   `-RecordType 0x7fc280025bf0 'myint24'
+|     `-Record 0x7fc280025b60 ''
+|-VarDecl 0x7fc280025ec8 <line:12:1, line:16:1> line:12:9 used x 'myint24 [3]' cinit
+| `-InitListExpr 0x7fc280026020 <col:16, line:16:1> 'myint24 [3]'
+|   |-InitListExpr 0x7fc280026078 <line:13:3> 'myint24':'myint24'
+|   | `-IntegerLiteral 0x7fc280025f68 <col:3> 'int' 1193046
+|   |-InitListExpr 0x7fc2800260c0 <line:14:3> 'myint24':'myint24'
+|   | `-IntegerLiteral 0x7fc280025f88 <col:3> 'int' 7903932
+|   `-InitListExpr 0x7fc280026108 <line:15:3> 'myint24':'myint24'
+|     `-IntegerLiteral 0x7fc280025fa8 <col:3> 'int' 14610450
+|-VarDecl 0x7fc280026540 <line:18:1, col:12> col:9 used y 'myint24 [3]'
+|-FunctionDecl 0x7fc2800265e8 <line:20:1, line:23:1> line:20:6 used foo 'void ()'
+| `-CompoundStmt 0x7fc280026830 <line:21:1, line:23:1>
+|   `-BinaryOperator 0x7fc280026808 <line:22:3, col:13> 'myint24':'myint24' '='
+|     |-ArraySubscriptExpr 0x7fc280026740 <col:3, col:6> 'myint24':'myint24' lvalue
+|     | |-ImplicitCastExpr 0x7fc280026728 <col:3> 'myint24 *' <ArrayToPointerDecay>
+|     | | `-DeclRefExpr 0x7fc280026680 <col:3> 'myint24 [3]' lvalue Var 0x7fc280026540 'y' 'myint24 [3]'
+|     | `-IntegerLiteral 0x7fc2800266a8 <col:5> 'int' 1
+|     `-ImplicitCastExpr 0x7fc2800267f0 <col:10, col:13> 'myint24':'myint24' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fc2800267c8 <col:10, col:13> 'myint24':'myint24' lvalue
+|         |-ImplicitCastExpr 0x7fc2800267b0 <col:10> 'myint24 *' <ArrayToPointerDecay>
+|         | `-DeclRefExpr 0x7fc280026768 <col:10> 'myint24 [3]' lvalue Var 0x7fc280025ec8 'x' 'myint24 [3]'
+|         `-IntegerLiteral 0x7fc280026790 <col:12> 'int' 1
+`-FunctionDecl 0x7fc2800268a0 <line:25:1, line:32:1> line:25:5 main 'int ()'
+  `-CompoundStmt 0x7fc280027d48 <line:26:1, line:32:1>
+    |-CallExpr 0x7fc2800269a0 <line:27:3, col:7> 'void'
+    | `-ImplicitCastExpr 0x7fc280026988 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc280026938 <col:3> 'void ()' Function 0x7fc2800265e8 'foo' 'void ()'
+    |-IfStmt 0x7fc280027cd8 <line:29:3, line:30:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc280027c18 <line:29:7, col:40> 'int' '||'
+    | | |-BinaryOperator 0x7fc280027ad0 <col:7, col:21> 'int' '!='
+    | | | |-ImplicitCastExpr 0x7fc280027ab8 <col:7, col:12> 'int' <LValueToRValue>
+    | | | | `-MemberExpr 0x7fc280027a60 <col:7, col:12> 'int' lvalue bitfield .int24 0x7fc280025c48
+    | | | |   `-ArraySubscriptExpr 0x7fc280027a38 <col:7, col:10> 'myint24':'myint24' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fc280027a20 <col:7> 'myint24 *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fc2800269c8 <col:7> 'myint24 [3]' lvalue Var 0x7fc280026540 'y' 'myint24 [3]'
+    | | | |     `-IntegerLiteral 0x7fc280027a00 <col:9> 'int' 0
+    | | | `-IntegerLiteral 0x7fc280027a98 <col:21> 'int' 0
+    | | `-BinaryOperator 0x7fc280027bf0 <col:26, col:40> 'int' '!='
+    | |   |-ImplicitCastExpr 0x7fc280027bd8 <col:26, col:31> 'int' <LValueToRValue>
+    | |   | `-MemberExpr 0x7fc280027b80 <col:26, col:31> 'int' lvalue bitfield .int24 0x7fc280025c48
+    | |   |   `-ArraySubscriptExpr 0x7fc280027b58 <col:26, col:29> 'myint24':'myint24' lvalue
+    | |   |     |-ImplicitCastExpr 0x7fc280027b40 <col:26> 'myint24 *' <ArrayToPointerDecay>
+    | |   |     | `-DeclRefExpr 0x7fc280027af8 <col:26> 'myint24 [3]' lvalue Var 0x7fc280026540 'y' 'myint24 [3]'
+    | |   |     `-IntegerLiteral 0x7fc280027b20 <col:28> 'int' 2
+    | |   `-IntegerLiteral 0x7fc280027bb8 <col:40> 'int' 0
+    | |-CallExpr 0x7fc280027cb0 <line:30:5, col:11> 'void'
+    | | `-ImplicitCastExpr 0x7fc280027c98 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc280027c40 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc280025ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc280027d30 <line:31:3, col:10>
+      `-IntegerLiteral 0x7fc280027d10 <col:10> 'int' 0

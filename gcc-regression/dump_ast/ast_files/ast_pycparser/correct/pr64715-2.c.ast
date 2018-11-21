@@ -1,0 +1,57 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, [], [], []
+        ArrayDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+          Constant: int, 16
+      Decl: q, [], [], []
+        PtrDecl: []
+          TypeDecl: q, []
+            IdentifierType: ['char']
+      Assignment: =
+        ID: q
+        ID: p
+      If: 
+        ID: x
+        Assignment: =
+          ID: q
+          BinaryOp: +
+            ID: p
+            Constant: int, 3
+      FuncCall: 
+        ID: __builtin___strcpy_chk
+        ExprList: 
+          ID: q
+          Constant: string, "abcdefghijkl"
+          FuncCall: 
+            ID: __builtin_object_size
+            ExprList: 
+              ID: q
+              Constant: int, 1
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: p
+          ID: x

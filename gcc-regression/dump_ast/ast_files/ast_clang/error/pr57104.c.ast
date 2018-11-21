@@ -1,0 +1,30 @@
+c_files/pr57104.c:5:21: error: register 'r14' unsuitable for global register variables on this target
+register int r asm ("r14");
+                    ^
+1 error generated.
+TranslationUnitDecl 0x7fa7930264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa793026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa793026740 '__int128'
+|-TypedefDecl 0x7fa793026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa793026760 'unsigned __int128'
+|-TypedefDecl 0x7fa793026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa793026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa793026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa793026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa793026dc0 'char *'
+|   `-BuiltinType 0x7fa793026560 'char'
+|-TypedefDecl 0x7fa7930270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa793027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa793026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa793026e58 '__va_list_tag'
+|-VarDecl 0x7fa7930271a0 <c_files/pr57104.c:5:1, col:14> col:14 used r 'int' register
+| `-AsmLabelAttr 0x7fa793825a00 <col:21> "r14"
+|-VarDecl 0x7fa793825ab0 <line:6:1, col:5> col:5 used v 'int'
+`-FunctionDecl 0x7fa793825bd8 <line:8:1, line:12:1> line:9:1 foo 'int (void)'
+  `-CompoundStmt 0x7fa793825d30 <line:10:1, line:12:1>
+    `-ReturnStmt 0x7fa793825d18 <line:11:3, col:14>
+      `-BinaryOperator 0x7fa793825cf0 <col:10, col:14> 'int' '+'
+        |-ImplicitCastExpr 0x7fa793825cc0 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fa793825c70 <col:10> 'int' lvalue Var 0x7fa7930271a0 'r' 'int'
+        `-ImplicitCastExpr 0x7fa793825cd8 <col:14> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fa793825c98 <col:14> 'int' lvalue Var 0x7fa793825ab0 'v' 'int'

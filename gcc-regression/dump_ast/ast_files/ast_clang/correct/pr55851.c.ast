@@ -1,0 +1,52 @@
+TranslationUnitDecl 0x7fba7a8002d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fba7a800820 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fba7a800540 '__int128'
+|-TypedefDecl 0x7fba7a800890 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fba7a800560 'unsigned __int128'
+|-TypedefDecl 0x7fba7a800b68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fba7a800970 'struct __NSConstantString_tag'
+|   `-Record 0x7fba7a8008e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fba7a800c00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fba7a800bc0 'char *'
+|   `-BuiltinType 0x7fba7a800360 'char'
+|-TypedefDecl 0x7fba7a800ec8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fba7a800e70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fba7a800ce0 'struct __va_list_tag'
+|     `-Record 0x7fba7a800c58 '__va_list_tag'
+|-EnumDecl 0x7fba7a800f20 <c_files/pr55851.c:4:1, col:26> col:1
+| |-EnumConstantDecl 0x7fba7a855818 <col:8, col:12> col:8 referenced A 'int'
+| | `-ImplicitCastExpr 0x7fba7a855800 <col:12> 'int' <IntegralCast>
+| |   `-IntegerLiteral 0x7fba7a800fe0 <col:12> 'unsigned long' 1
+| `-EnumConstantDecl 0x7fba7a8558a0 <col:17, col:22> col:17 B 'unsigned long'
+|   `-UnaryOperator 0x7fba7a855880 <col:21, col:22> 'unsigned long' prefix '-'
+|     `-IntegerLiteral 0x7fba7a855860 <col:22> 'unsigned long' 1
+|-VarDecl 0x7fba7a855940 <col:1, col:34> col:28 used var 'enum (anonymous enum at c_files/pr55851.c:4:1)':'enum (anonymous at c_files/pr55851.c:4:1)' cinit
+| `-ImplicitCastExpr 0x7fba7a855a08 <col:34> 'enum (anonymous enum at c_files/pr55851.c:4:1)':'enum (anonymous at c_files/pr55851.c:4:1)' <IntegralCast>
+|   `-DeclRefExpr 0x7fba7a8559e0 <col:34> 'int' EnumConstant 0x7fba7a855818 'A' 'int'
+|-FunctionDecl 0x7fba7a855b10 <line:5:1, col:17> col:6 used foo 'void (char *)'
+| `-ParmVarDecl 0x7fba7a855a50 <col:11, col:16> col:17 'char *'
+`-FunctionDecl 0x7fba7a855c70 <line:7:1, line:13:1> line:8:1 test 'void (void)'
+  `-CompoundStmt 0x7fba7a8561b0 <line:9:1, line:13:1>
+    |-DeclStmt 0x7fba7a855e78 <line:10:3, col:19>
+    | `-VarDecl 0x7fba7a855e18 <col:3, col:18> col:8 used vla 'char [1][var]'
+    |-BinaryOperator 0x7fba7a855fe0 <line:11:3, col:15> 'char' '='
+    | |-ArraySubscriptExpr 0x7fba7a855f80 <col:3, col:11> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fba7a855f68 <col:3, col:8> 'char *' <ArrayToPointerDecay>
+    | | | `-ArraySubscriptExpr 0x7fba7a855f20 <col:3, col:8> 'char [var]' lvalue
+    | | |   |-ImplicitCastExpr 0x7fba7a855f08 <col:3> 'char (*)[var]' <ArrayToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7fba7a855e90 <col:3> 'char [1][var]' lvalue Var 0x7fba7a855e18 'vla' 'char [1][var]'
+    | | |   `-IntegerLiteral 0x7fba7a855eb8 <col:7> 'int' 0
+    | | `-IntegerLiteral 0x7fba7a855f48 <col:10> 'int' 0
+    | `-ImplicitCastExpr 0x7fba7a855fc8 <col:15> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fba7a855fa8 <col:15> 'int' 1
+    `-CallExpr 0x7fba7a856180 <line:12:3, col:18> 'void'
+      |-ImplicitCastExpr 0x7fba7a856168 <col:3> 'void (*)(char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fba7a856008 <col:3> 'void (char *)' Function 0x7fba7a855b10 'foo' 'void (char *)'
+      `-UnaryOperator 0x7fba7a856118 <col:8, col:17> 'char *' prefix '&'
+        `-ArraySubscriptExpr 0x7fba7a8560f0 <col:9, col:17> 'char' lvalue
+          |-ImplicitCastExpr 0x7fba7a8560d8 <col:9, col:14> 'char *' <ArrayToPointerDecay>
+          | `-ArraySubscriptExpr 0x7fba7a856090 <col:9, col:14> 'char [var]' lvalue
+          |   |-ImplicitCastExpr 0x7fba7a856078 <col:9> 'char (*)[var]' <ArrayToPointerDecay>
+          |   | `-DeclRefExpr 0x7fba7a856030 <col:9> 'char [1][var]' lvalue Var 0x7fba7a855e18 'vla' 'char [1][var]'
+          |   `-IntegerLiteral 0x7fba7a856058 <col:13> 'int' 0
+          `-IntegerLiteral 0x7fba7a8560b8 <col:16> 'int' 0

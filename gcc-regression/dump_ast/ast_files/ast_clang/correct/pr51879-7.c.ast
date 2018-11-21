@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fb8eb0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb8eb026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb8eb026740 '__int128'
+|-TypedefDecl 0x7fb8eb026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb8eb026760 'unsigned __int128'
+|-TypedefDecl 0x7fb8eb026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb8eb026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb8eb026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb8eb026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb8eb026dc0 'char *'
+|   `-BuiltinType 0x7fb8eb026560 'char'
+|-TypedefDecl 0x7fb8eb0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb8eb027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb8eb026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb8eb026e58 '__va_list_tag'
+|-VarDecl 0x7fb8eb027138 <c_files/pr51879-7.c:4:1, col:5> col:5 used z 'int'
+`-FunctionDecl 0x7fb8eb825ac0 <line:6:1, line:13:1> line:7:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fb8eb825a00 <col:6, col:10> col:10 used y 'int'
+  `-CompoundStmt 0x7fb8eb825d00 <line:8:1, line:13:1>
+    `-IfStmt 0x7fb8eb825cc8 <line:9:3, line:12:9>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fb8eb825bc0 <line:9:7, col:12> 'int' '=='
+      | |-ImplicitCastExpr 0x7fb8eb825ba8 <col:7> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fb8eb825b60 <col:7> 'int' lvalue ParmVar 0x7fb8eb825a00 'y' 'int'
+      | `-IntegerLiteral 0x7fb8eb825b88 <col:12> 'int' 6
+      |-BinaryOperator 0x7fb8eb825c30 <line:10:5, col:9> 'int' '='
+      | |-DeclRefExpr 0x7fb8eb825be8 <col:5> 'int' lvalue Var 0x7fb8eb027138 'z' 'int'
+      | `-IntegerLiteral 0x7fb8eb825c10 <col:9> 'int' 5
+      `-BinaryOperator 0x7fb8eb825ca0 <line:12:5, col:9> 'int' '='
+        |-DeclRefExpr 0x7fb8eb825c58 <col:5> 'int' lvalue Var 0x7fb8eb027138 'z' 'int'
+        `-IntegerLiteral 0x7fb8eb825c80 <col:9> 'int' 5

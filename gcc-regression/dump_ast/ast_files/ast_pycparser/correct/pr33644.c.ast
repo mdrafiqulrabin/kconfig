@@ -1,0 +1,71 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      PtrDecl: []
+        TypeDecl: bar, []
+          IdentifierType: ['char']
+  Decl: m, [], [], []
+    PtrDecl: []
+      TypeDecl: m, []
+        IdentifierType: ['int']
+  Decl: b, [], [], []
+    PtrDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: mv, [], [], []
+        PtrDecl: []
+          TypeDecl: mv, []
+            IdentifierType: ['int']
+      Decl: p, [], [], []
+        TypeDecl: p, []
+          IdentifierType: ['int']
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+          Constant: int, 17
+      Assignment: =
+        ID: p
+        BinaryOp: -
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              ID: a
+          ID: a
+      For: 
+        Assignment: =
+          ID: mv
+          ID: m
+        BinaryOp: <
+          ID: mv
+          ID: b
+        UnaryOp: p++
+          ID: mv
+        If: 
+          BinaryOp: &&
+            ID: p
+            BinaryOp: !=
+              BinaryOp: &
+                UnaryOp: *
+                  ID: mv
+                Constant: int, 7
+              ID: p
+          Assignment: =
+            UnaryOp: *
+              ID: mv
+            Constant: int, 0

@@ -1,0 +1,74 @@
+FileAST: 
+  Decl: stderr, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: stderr, []
+        IdentifierType: ['int']
+  Decl: f, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        EllipsisParam: 
+      TypeDecl: f, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: conf_name, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: conf_name, ['const']
+                IdentifierType: ['char']
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      Typedef: Section, [], ['typedef']
+        TypeDecl: Section, []
+          Struct: None
+            Decl: label, ['const'], [], []
+              PtrDecl: []
+                TypeDecl: label, ['const']
+                  IdentifierType: ['char']
+            Decl: value, ['const'], [], []
+              TypeDecl: value, ['const']
+                IdentifierType: ['int']
+      Decl: sections, ['const'], [], []
+        ArrayDecl: []
+          TypeDecl: sections, ['const']
+            IdentifierType: ['Section']
+          Constant: int, 2
+        InitList: 
+          InitList: 
+            Constant: string, ""
+            Constant: int, 0
+          InitList: 
+            Constant: string, ""
+            Constant: int, 1
+      FuncCall: 
+        ID: f
+        ExprList: 
+          ID: stderr
+          Constant: string, ""
+          Constant: string, ""
+          ID: conf_name
+          Constant: int, 0
+          ArrayRef: 
+            ID: sections
+            Constant: int, 0
+      FuncCall: 
+        ID: f
+        ExprList: 
+          ID: stderr
+          Constant: string, ""
+          Constant: string, ""
+          ID: conf_name
+          Constant: int, 0
+          ArrayRef: 
+            ID: sections
+            Constant: int, 0

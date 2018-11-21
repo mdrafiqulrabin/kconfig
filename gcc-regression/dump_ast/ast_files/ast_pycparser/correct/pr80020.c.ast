@@ -1,0 +1,61 @@
+FileAST: 
+  Decl: sink, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: sink, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: None, [], [], []
+        Enum: None
+          EnumeratorList: 
+            Enumerator: Align
+              Constant: int, 32
+            Enumerator: Size
+              Constant: int, 123
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __builtin_aligned_alloc
+          ExprList: 
+            ID: Align
+            ID: Size
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['unsigned']
+        FuncCall: 
+          ID: __builtin_object_size
+          ExprList: 
+            ID: p
+            Constant: int, 0
+      If: 
+        BinaryOp: !=
+          ID: n
+          ID: Size
+        FuncCall: 
+          ID: __builtin_abort
+      FuncCall: 
+        ID: __builtin___memset_chk
+        ExprList: 
+          ID: p
+          Constant: int, 0
+          ID: Size
+          ID: n
+      FuncCall: 
+        ID: sink
+        ExprList: 
+          ID: p

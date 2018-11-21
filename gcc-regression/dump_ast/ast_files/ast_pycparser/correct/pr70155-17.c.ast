@@ -1,0 +1,50 @@
+FileAST: 
+  Decl: a, [], ['extern'], []
+    TypeDecl: a, []
+      IdentifierType: ['__int128']
+  Decl: b, [], ['extern'], []
+    TypeDecl: b, []
+      IdentifierType: ['__int128']
+  Decl: c, [], ['extern'], []
+    TypeDecl: c, []
+      IdentifierType: ['__int128']
+  Decl: d, [], ['extern'], []
+    TypeDecl: d, []
+      IdentifierType: ['__int128']
+  Decl: e, [], ['extern'], []
+    TypeDecl: e, []
+      IdentifierType: ['__int128']
+  Decl: f, [], ['extern'], []
+    TypeDecl: f, []
+      IdentifierType: ['__int128']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: a
+        Constant: int, 0
+      Assignment: =
+        ID: b
+        UnaryOp: -
+          Constant: int, 1
+      Assignment: =
+        ID: c
+        Constant: int, 0
+      Assignment: =
+        ID: d
+        UnaryOp: -
+          Constant: int, 1
+      Assignment: =
+        ID: e
+        Constant: int, 0
+      Assignment: =
+        ID: f
+        UnaryOp: -
+          Constant: int, 1

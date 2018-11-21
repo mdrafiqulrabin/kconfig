@@ -1,0 +1,40 @@
+c_files/pr61925-2.c:9:75: warning: unknown attribute '__artificial__' ignored [-Wunknown-attributes]
+extern __inline __m128 __attribute__ ((__gnu_inline__, __always_inline__, __artificial__))
+                                                                          ^
+c_files/pr61925-2.c:12:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+TranslationUnitDecl 0x7ffab98264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffab9826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffab9826740 '__int128'
+|-TypedefDecl 0x7ffab9826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffab9826760 'unsigned __int128'
+|-TypedefDecl 0x7ffab9826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffab9826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffab9826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffab9826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffab9826dc0 'char *'
+|   `-BuiltinType 0x7ffab9826560 'char'
+|-TypedefDecl 0x7ffab98270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffab9827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffab9826ee0 'struct __va_list_tag'
+|     `-Record 0x7ffab9826e58 '__va_list_tag'
+|-TypedefDecl 0x7ffab9827178 <c_files/pr61925-2.c:8:1, col:15> col:15 referenced __m128 '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| |-VectorType 0x7ffab9827140 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+| | `-BuiltinType 0x7ffab98266c0 'float'
+| `-MayAliasAttr 0x7ffab98271d0 <col:60>
+|-FunctionDecl 0x7ffab9878550 <line:9:1, line:12:1> line:10:1 foo '__m128 (void)' extern inline
+| |-CompoundStmt 0x7ffab9878680 <line:11:1, line:12:1>
+| |-AlwaysInlineAttr 0x7ffab98785e8 <line:9:56> always_inline
+| `-GNUInlineAttr 0x7ffab9878630 <col:40>
+`-FunctionDecl 0x7ffab9878880 <line:17:1, line:21:1> line:18:1 bar '__attribute__((__vector_size__(4 * sizeof(int)))) int (__attribute__((__vector_size__(4 * sizeof(int)))) int, __attribute__((__vector_size__(4 * sizeof(int)))) int)'
+  |-ParmVarDecl 0x7ffab9878718 <col:6, col:45> col:45 used a '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7ffab98787a8 <col:48, col:87> col:87 used b '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  `-CompoundStmt 0x7ffab98789e8 <line:19:1, line:21:1>
+    `-ReturnStmt 0x7ffab98789d0 <line:20:3, col:14>
+      `-BinaryOperator 0x7ffab98789a8 <col:10, col:14> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '+'
+        |-ImplicitCastExpr 0x7ffab9878978 <col:10> '__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+        | `-DeclRefExpr 0x7ffab9878928 <col:10> '__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7ffab9878718 'a' '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+        `-ImplicitCastExpr 0x7ffab9878990 <col:14> '__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+          `-DeclRefExpr 0x7ffab9878950 <col:14> '__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7ffab98787a8 'b' '__attribute__((__vector_size__(4 * sizeof(int)))) int'

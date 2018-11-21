@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7f9e688264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9e68826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9e68826740 '__int128'
+|-TypedefDecl 0x7f9e68826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9e68826760 'unsigned __int128'
+|-TypedefDecl 0x7f9e68826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9e68826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9e68826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9e68826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9e68826dc0 'char *'
+|   `-BuiltinType 0x7f9e68826560 'char'
+|-TypedefDecl 0x7f9e688270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9e68827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9e68826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9e68826e58 '__va_list_tag'
+|-VarDecl 0x7f9e68827138 <c_files/pr71374.c:3:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7f9e68877400 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7f9e68877478 <col:1, col:11> col:11 used c 'int'
+`-FunctionDecl 0x7f9e68877660 <line:4:1, line:8:1> line:5:1 foo 'void (void *, void *)'
+  |-ParmVarDecl 0x7f9e68877510 <col:6, col:12> col:12 x 'void *'
+  |-ParmVarDecl 0x7f9e68877588 <col:15, col:21> col:21 used y 'void *'
+  `-CompoundStmt 0x7f9e68877a88 <line:6:1, line:8:1>
+    `-GCCAsmStmt 0x7f9e688779c8 <line:7:3, col:65>
+      |-DeclRefExpr 0x7f9e688777d8 <col:23> 'int' lvalue Var 0x7f9e68827138 'a' 'int'
+      |-DeclRefExpr 0x7f9e68877830 <col:34> 'int' lvalue Var 0x7f9e68877400 'b' 'int'
+      |-DeclRefExpr 0x7f9e68877888 <col:45> 'int' lvalue Var 0x7f9e68877478 'c' 'int'
+      |-ImplicitCastExpr 0x7f9e68877998 <col:54> 'void *' <LValueToRValue>
+      | `-DeclRefExpr 0x7f9e68877918 <col:54> 'void *' lvalue ParmVar 0x7f9e68877588 'y' 'void *'
+      `-ImplicitCastExpr 0x7f9e688779b0 <col:63> 'void *' <LValueToRValue>
+        `-DeclRefExpr 0x7f9e68877970 <col:63> 'void *' lvalue ParmVar 0x7f9e68877588 'y' 'void *'

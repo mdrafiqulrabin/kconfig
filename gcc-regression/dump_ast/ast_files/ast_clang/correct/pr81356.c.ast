@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fe9c80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe9c8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe9c8026740 '__int128'
+|-TypedefDecl 0x7fe9c8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe9c8026760 'unsigned __int128'
+|-TypedefDecl 0x7fe9c8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe9c8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe9c8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe9c8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe9c8026dc0 'char *'
+|   `-BuiltinType 0x7fe9c8026560 'char'
+|-TypedefDecl 0x7fe9c80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe9c8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe9c8026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe9c8026e58 '__va_list_tag'
+|-FunctionDecl 0x7fe9c8825a00 <c_files/pr81356.c:4:1, line:7:1> line:4:6 f 'void (char *)'
+| |-ParmVarDecl 0x7fe9c8027138 <col:8, col:14> col:14 used a 'char *'
+| `-CompoundStmt 0x7fe9c8825e70 <line:5:1, line:7:1>
+|   `-CallExpr 0x7fe9c8825df0 <line:6:3, col:26> 'char *'
+|     |-ImplicitCastExpr 0x7fe9c8825dd8 <col:3> 'char *(*)(char *, const char *)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fe9c8825cd0 <col:3> '<builtin fn type>' Function 0x7fe9c8825b20 '__builtin_strcpy' 'char *(char *, const char *)'
+|     |-ImplicitCastExpr 0x7fe9c8825e28 <col:21> 'char *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fe9c8825cf8 <col:21> 'char *' lvalue ParmVar 0x7fe9c8027138 'a' 'char *'
+|     `-ImplicitCastExpr 0x7fe9c8825e58 <col:24> 'const char *' <BitCast>
+|       `-ImplicitCastExpr 0x7fe9c8825e40 <col:24> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7fe9c8825d58 <col:24> 'char [1]' lvalue ""
+`-FunctionDecl 0x7fe9c8825b20 <col:3> col:3 implicit used __builtin_strcpy 'char *(char *, const char *)' extern
+  |-ParmVarDecl 0x7fe9c8825bb8 <<invalid sloc>> <invalid sloc> 'char *'
+  |-ParmVarDecl 0x7fe9c8825c18 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-NoThrowAttr 0x7fe9c8825c88 <col:3> Implicit

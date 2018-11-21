@@ -1,0 +1,101 @@
+FileAST: 
+  Typedef: ImageParameters, [], ['typedef']
+    TypeDecl: ImageParameters, []
+      Struct: None
+        Decl: cofAC, [], [], []
+          PtrDecl: []
+            PtrDecl: []
+              PtrDecl: []
+                PtrDecl: []
+                  TypeDecl: cofAC, []
+                    IdentifierType: ['int']
+  Typedef: RD_DATA, [], ['typedef']
+    TypeDecl: RD_DATA, []
+      Struct: None
+        Decl: cofAC, [], [], []
+          PtrDecl: []
+            PtrDecl: []
+              PtrDecl: []
+                PtrDecl: []
+                  TypeDecl: cofAC, []
+                    IdentifierType: ['int']
+  Decl: rdopt, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: rdopt, []
+        IdentifierType: ['RD_DATA']
+  Decl: img, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: img, []
+        IdentifierType: ['ImageParameters']
+  FuncDef: 
+    Decl: dummy_slice_too_big, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: bits_slice, [], [], []
+            TypeDecl: bits_slice, []
+              IdentifierType: ['int']
+        TypeDecl: dummy_slice_too_big, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: <
+          ID: j
+          Constant: int, 4
+        UnaryOp: p++
+          ID: j
+        For: 
+          Assignment: =
+            ID: k
+            Constant: int, 0
+          BinaryOp: <
+            ID: k
+            Constant: int, 2
+          UnaryOp: p++
+            ID: k
+          For: 
+            Assignment: =
+              ID: l
+              Constant: int, 0
+            BinaryOp: <
+              ID: l
+              Constant: int, 65
+            UnaryOp: p++
+              ID: l
+            Assignment: =
+              ArrayRef: 
+                ArrayRef: 
+                  ArrayRef: 
+                    ArrayRef: 
+                      StructRef: ->
+                        ID: img
+                        ID: cofAC
+                      ID: i
+                    ID: j
+                  ID: k
+                ID: l
+              ArrayRef: 
+                ArrayRef: 
+                  ArrayRef: 
+                    ArrayRef: 
+                      StructRef: ->
+                        ID: rdopt
+                        ID: cofAC
+                      ID: i
+                    ID: j
+                  ID: k
+                ID: l

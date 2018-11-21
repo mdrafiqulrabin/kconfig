@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7f8a0a019ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8a0a01a020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8a0a019d40 '__int128'
+|-TypedefDecl 0x7f8a0a01a090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8a0a019d60 'unsigned __int128'
+|-TypedefDecl 0x7f8a0a01a368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8a0a01a170 'struct __NSConstantString_tag'
+|   `-Record 0x7f8a0a01a0e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8a0a01a400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8a0a01a3c0 'char *'
+|   `-BuiltinType 0x7f8a0a019b60 'char'
+|-TypedefDecl 0x7f8a0a01a6c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8a0a01a670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8a0a01a4e0 'struct __va_list_tag'
+|     `-Record 0x7f8a0a01a458 '__va_list_tag'
+|-TypedefDecl 0x7f8a0a01a778 <c_files/pr59037.c:4:1, col:13> col:13 referenced v4si '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7f8a0a01a740 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7f8a0a019bc0 'int'
+`-FunctionDecl 0x7f8a0a826b78 <line:6:1, line:12:1> line:7:1 main 'int (int, char **)'
+  |-ParmVarDecl 0x7f8a0a826a00 <col:7, col:11> col:11 argc 'int'
+  |-ParmVarDecl 0x7f8a0a826aa0 <col:17, col:24> col:24 argv 'char **'
+  `-CompoundStmt 0x7f8a0a8272e8 <line:8:1, line:12:1>
+    |-DeclStmt 0x7f8a0a826e30 <line:9:3, col:21>
+    | `-VarDecl 0x7f8a0a826c90 <col:3, col:20> col:8 used x 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' cinit
+    |   `-InitListExpr 0x7f8a0a826dd0 <col:12, col:20> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    |     |-IntegerLiteral 0x7f8a0a826cf0 <col:13> 'int' 0
+    |     |-IntegerLiteral 0x7f8a0a826d10 <col:15> 'int' 1
+    |     |-IntegerLiteral 0x7f8a0a826d30 <col:17> 'int' 2
+    |     `-IntegerLiteral 0x7f8a0a826d50 <col:19> 'int' 3
+    |-BinaryOperator 0x7f8a0a827220 <line:10:3, col:45> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' '='
+    | |-DeclRefExpr 0x7f8a0a826e48 <col:3> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7f8a0a826c90 'x' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    | `-ImplicitCastExpr 0x7f8a0a827208 <col:7, col:45> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+    |   `-CompoundLiteralExpr 0x7f8a0a8271e0 <col:7, col:45> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+    |     `-InitListExpr 0x7f8a0a827120 <col:14, col:45> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    |       |-ImplicitCastExpr 0x7f8a0a827180 <col:15, col:20> 'int' <LValueToRValue>
+    |       | `-ArraySubscriptExpr 0x7f8a0a826ee8 <col:15, col:20> 'int' lvalue vectorcomponent
+    |       |   |-ParenExpr 0x7f8a0a826ea8 <col:15, col:17> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+    |       |   | `-DeclRefExpr 0x7f8a0a826e80 <col:16> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7f8a0a826c90 'x' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    |       |   `-IntegerLiteral 0x7f8a0a826ec8 <col:19> 'int' 3
+    |       |-ImplicitCastExpr 0x7f8a0a827198 <col:23, col:28> 'int' <LValueToRValue>
+    |       | `-ArraySubscriptExpr 0x7f8a0a826f78 <col:23, col:28> 'int' lvalue vectorcomponent
+    |       |   |-ParenExpr 0x7f8a0a826f38 <col:23, col:25> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+    |       |   | `-DeclRefExpr 0x7f8a0a826f10 <col:24> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7f8a0a826c90 'x' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    |       |   `-IntegerLiteral 0x7f8a0a826f58 <col:27> 'int' 2
+    |       |-ImplicitCastExpr 0x7f8a0a8271b0 <col:31, col:36> 'int' <LValueToRValue>
+    |       | `-ArraySubscriptExpr 0x7f8a0a827008 <col:31, col:36> 'int' lvalue vectorcomponent
+    |       |   |-ParenExpr 0x7f8a0a826fc8 <col:31, col:33> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+    |       |   | `-DeclRefExpr 0x7f8a0a826fa0 <col:32> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7f8a0a826c90 'x' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    |       |   `-IntegerLiteral 0x7f8a0a826fe8 <col:35> 'int' 1
+    |       `-ImplicitCastExpr 0x7f8a0a8271c8 <col:39, col:44> 'int' <LValueToRValue>
+    |         `-ArraySubscriptExpr 0x7f8a0a827098 <col:39, col:44> 'int' lvalue vectorcomponent
+    |           |-ParenExpr 0x7f8a0a827058 <col:39, col:41> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+    |           | `-DeclRefExpr 0x7f8a0a827030 <col:40> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7f8a0a826c90 'x' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    |           `-IntegerLiteral 0x7f8a0a827078 <col:43> 'int' 0
+    `-ReturnStmt 0x7f8a0a8272d0 <line:11:3, col:13>
+      `-ImplicitCastExpr 0x7f8a0a8272b8 <col:10, col:13> 'int' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7f8a0a827290 <col:10, col:13> 'int' lvalue vectorcomponent
+          |-DeclRefExpr 0x7f8a0a827248 <col:10> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7f8a0a826c90 'x' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+          `-IntegerLiteral 0x7f8a0a827270 <col:12> 'int' 4

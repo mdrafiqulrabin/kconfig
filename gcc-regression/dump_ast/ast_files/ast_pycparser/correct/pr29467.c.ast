@@ -1,0 +1,23 @@
+FileAST: 
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['_Bool']
+  Typedef: B, [], ['typedef']
+    TypeDecl: B, []
+      IdentifierType: ['_Bool']
+  Decl: sb, [], ['static'], []
+    TypeDecl: sb, []
+      IdentifierType: ['_Bool']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: bp, [], [], []
+            TypeDecl: bp, []
+              IdentifierType: ['_Bool']
+        TypeDecl: foo, []
+          IdentifierType: ['_Bool']
+    Compound: 
+      Decl: bl, [], [], []
+        TypeDecl: bl, []
+          IdentifierType: ['_Bool']

@@ -1,0 +1,55 @@
+FileAST: 
+  Decl: fff, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: fff, []
+        IdentifierType: ['long']
+  Decl: T, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: T, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: F2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: node, [], [], []
+            PtrDecl: []
+              TypeDecl: node, []
+                IdentifierType: ['int']
+        TypeDecl: F2, []
+          IdentifierType: ['long']
+    Compound: 
+      Decl: call_result, [], [], []
+        TypeDecl: call_result, []
+          IdentifierType: ['long']
+        Constant: int, 0
+      If: 
+        Assignment: =
+          ID: call_result
+          FuncCall: 
+            ID: fff
+            ExprList: 
+              ID: node
+        Goto: error_free_node
+      FuncCall: 
+        ID: T
+        ExprList: 
+          ID: node
+      Return: 
+        Constant: int, 0
+      Label: error_free_node
+        FuncCall: 
+          ID: T
+          ExprList: 
+            ID: node
+      Return: 
+        ID: call_result

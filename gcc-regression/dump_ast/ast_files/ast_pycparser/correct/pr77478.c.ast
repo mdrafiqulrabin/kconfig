@@ -1,0 +1,116 @@
+FileAST: 
+  Decl: A, ['const'], ['static'], []
+    ArrayDecl: []
+      TypeDecl: A, ['const']
+        IdentifierType: ['float']
+      Constant: int, 10
+    InitList: 
+      Constant: int, 1
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            PtrDecl: []
+              TypeDecl: f, []
+                IdentifierType: ['float']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['float']
+        Constant: int, 0
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['float']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          BinaryOp: /
+            ID: n
+            Constant: int, 2
+        BinaryOp: <
+          ID: i
+          ID: n
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: a
+          BinaryOp: *
+            ArrayRef: 
+              ID: f
+              ID: i
+            Constant: float, .1f
+      For: 
+        ExprList: 
+          Assignment: =
+            ID: i
+            BinaryOp: /
+              ID: n
+              Constant: int, 2
+          Assignment: =
+            ID: j
+            Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: n
+        ExprList: 
+          UnaryOp: p++
+            ID: i
+          UnaryOp: p++
+            ID: j
+        Assignment: +=
+          ID: b
+          BinaryOp: +
+            BinaryOp: *
+              ArrayRef: 
+                ID: f
+                ID: i
+              ArrayRef: 
+                ID: A
+                ID: j
+            BinaryOp: *
+              ID: a
+              ArrayRef: 
+                ID: A
+                ID: j
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['float']
+          Constant: int, 21
+        InitList: 
+          Constant: int, 0
+      Return: 
+        BinaryOp: +
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              BinaryOp: +
+                ID: a
+                Constant: int, 1
+              Constant: int, 20
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              ID: a
+              Constant: int, 20

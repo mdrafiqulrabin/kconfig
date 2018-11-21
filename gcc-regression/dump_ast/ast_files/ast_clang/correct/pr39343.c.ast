@@ -1,0 +1,75 @@
+TranslationUnitDecl 0x7f7eef0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f7eef026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f7eef026740 '__int128'
+|-TypedefDecl 0x7f7eef026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f7eef026760 'unsigned __int128'
+|-TypedefDecl 0x7f7eef026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f7eef026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f7eef026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f7eef026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f7eef026dc0 'char *'
+|   `-BuiltinType 0x7f7eef026560 'char'
+|-TypedefDecl 0x7f7eef0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f7eef027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f7eef026ee0 'struct __va_list_tag'
+|     `-Record 0x7f7eef026e58 '__va_list_tag'
+|-FunctionDecl 0x7f7eef077430 <c_files/pr39343.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f7eef0774c8 prev 0x7f7eef077430 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f7eef077648 <line:7:1, line:11:1> line:8:1 used foo 'int (char *)' extern inline
+| |-ParmVarDecl 0x7f7eef077578 <col:6, col:12> col:12 used dest 'char *'
+| |-CompoundStmt 0x7f7eef077af8 <line:9:1, line:11:1>
+| | `-ReturnStmt 0x7f7eef077ae0 <line:10:3, col:40>
+| |   `-ImplicitCastExpr 0x7f7eef077ac8 <col:10, col:40> 'int' <IntegralCast>
+| |     `-CallExpr 0x7f7eef077a60 <col:10, col:40> 'unsigned long'
+| |       |-ImplicitCastExpr 0x7f7eef077a48 <col:10> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+| |       | `-DeclRefExpr 0x7f7eef077990 <col:10> '<builtin fn type>' Function 0x7f7eef0777e0 '__builtin_object_size' 'unsigned long (const void *, int)'
+| |       |-ImplicitCastExpr 0x7f7eef077ab0 <col:33> 'const void *' <BitCast>
+| |       | `-ImplicitCastExpr 0x7f7eef077a98 <col:33> 'char *' <LValueToRValue>
+| |       |   `-DeclRefExpr 0x7f7eef0779b8 <col:33> 'char *' lvalue ParmVar 0x7f7eef077578 'dest' 'char *'
+| |       `-IntegerLiteral 0x7f7eef0779e0 <col:39> 'int' 1
+| `-AlwaysInlineAttr 0x7f7eef0776e8 <line:7:31> always_inline
+|-FunctionDecl 0x7f7eef0777e0 <line:10:10> col:10 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+| |-ParmVarDecl 0x7f7eef077878 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7f7eef0778d8 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7f7eef077948 <col:10> Implicit
+|-RecordDecl 0x7f7eef077b18 <line:13:1, line:20:1> line:13:8 struct S definition
+| |-RecordDecl 0x7f7eef077bc0 <line:15:3, line:19:3> line:15:3 union definition
+| | |-RecordDecl 0x7f7eef077c70 <line:17:5, col:35> col:5 struct definition
+| | | |-FieldDecl 0x7f7eef077d38 <col:14, col:18> col:18 a 'int'
+| | | |-FieldDecl 0x7f7eef077d98 <col:14, col:21> col:21 b 'int'
+| | | |-FieldDecl 0x7f7eef077df0 <col:24, col:29> col:29 c 'char'
+| | | `-FieldDecl 0x7f7eef077e48 <col:24, col:32> col:32 d 'char'
+| | |-FieldDecl 0x7f7eef077ee0 <col:5, col:37> col:37 f 'struct (anonymous struct at c_files/pr39343.c:17:5)':'struct S::(anonymous at c_files/pr39343.c:17:5)'
+| | |-RecordDecl 0x7f7eef077f28 <line:18:5, col:54> col:5 struct definition
+| | | |-RecordDecl 0x7f7eef077fd0 <col:14, col:49> col:14 struct definition
+| | | | |-FieldDecl 0x7f7eef078098 <col:23, col:27> col:27 a 'int'
+| | | | |-FieldDecl 0x7f7eef0780f8 <col:23, col:30> col:30 b 'int'
+| | | | |-FieldDecl 0x7f7eef078150 <col:33, col:38> col:38 c 'char'
+| | | | `-FieldDecl 0x7f7eef078218 <col:33, col:46> col:41 referenced d 'char [255]'
+| | | `-FieldDecl 0x7f7eef0782b0 <col:14, col:51> col:51 referenced e 'struct (anonymous struct at c_files/pr39343.c:18:14)':'struct S::(anonymous at c_files/pr39343.c:18:14)'
+| | `-FieldDecl 0x7f7eef0783b0 <col:5, col:56> col:56 referenced g 'struct (anonymous struct at c_files/pr39343.c:18:5)':'struct S::(anonymous at c_files/pr39343.c:18:5)'
+| `-FieldDecl 0x7f7eef0794b0 <line:15:3, line:19:5> col:5 referenced u 'union (anonymous union at c_files/pr39343.c:15:3)':'union S::(anonymous at c_files/pr39343.c:15:3)'
+`-FunctionDecl 0x7f7eef079658 <line:22:1, line:29:1> line:23:1 main 'int (void)'
+  `-CompoundStmt 0x7f7eef079af8 <line:24:1, line:29:1>
+    |-DeclStmt 0x7f7eef0797d0 <line:25:3, col:13>
+    | `-VarDecl 0x7f7eef079770 <col:3, col:12> col:12 used s 'struct S':'struct S'
+    |-IfStmt 0x7f7eef079a88 <line:26:3, line:27:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f7eef0799c8 <line:26:7, col:26> 'int' '!='
+    | | |-CallExpr 0x7f7eef079960 <col:7, col:21> 'int'
+    | | | |-ImplicitCastExpr 0x7f7eef079948 <col:7> 'int (*)(char *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f7eef0797e8 <col:7> 'int (char *)' Function 0x7f7eef077648 'foo' 'int (char *)'
+    | | | `-ImplicitCastExpr 0x7f7eef079990 <col:12, col:20> 'char *' <ArrayToPointerDecay>
+    | | |   `-MemberExpr 0x7f7eef0798e0 <col:12, col:20> 'char [255]' lvalue .d 0x7f7eef078218
+    | | |     `-MemberExpr 0x7f7eef0798a8 <col:12, col:18> 'struct (anonymous struct at c_files/pr39343.c:18:14)':'struct S::(anonymous at c_files/pr39343.c:18:14)' lvalue .e 0x7f7eef0782b0
+    | | |       `-MemberExpr 0x7f7eef079870 <col:12, col:16> 'struct (anonymous struct at c_files/pr39343.c:18:5)':'struct S::(anonymous at c_files/pr39343.c:18:5)' lvalue .g 0x7f7eef0783b0
+    | | |         `-MemberExpr 0x7f7eef079838 <col:12, col:14> 'union (anonymous union at c_files/pr39343.c:15:3)':'union S::(anonymous at c_files/pr39343.c:15:3)' lvalue .u 0x7f7eef0794b0
+    | | |           `-DeclRefExpr 0x7f7eef079810 <col:12> 'struct S':'struct S' lvalue Var 0x7f7eef079770 's' 'struct S':'struct S'
+    | | `-IntegerLiteral 0x7f7eef0799a8 <col:26> 'int' 255
+    | |-CallExpr 0x7f7eef079a60 <line:27:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f7eef079a48 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f7eef0799f0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f7eef0774c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f7eef079ae0 <line:28:3, col:10>
+      `-IntegerLiteral 0x7f7eef079ac0 <col:10> 'int' 0

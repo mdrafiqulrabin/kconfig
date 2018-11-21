@@ -1,0 +1,45 @@
+c_files/pr43508.c:11:11: error: use of unknown builtin '__builtin_ia32_vec_ext_v4si' [-Wimplicit-function-declaration]
+  int x = __builtin_ia32_vec_ext_v4si (vi, 0);
+          ^
+1 error generated.
+TranslationUnitDecl 0x7fc9148264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc914826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc914826740 '__int128'
+|-TypedefDecl 0x7fc914826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc914826760 'unsigned __int128'
+|-TypedefDecl 0x7fc914826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc914826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc914826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc914826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc914826dc0 'char *'
+|   `-BuiltinType 0x7fc914826560 'char'
+|-TypedefDecl 0x7fc9148270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc914827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc914826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc914826e58 '__va_list_tag'
+|-TypedefDecl 0x7fc914827178 <c_files/pr43508.c:4:1, col:15> col:15 referenced v4sf '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7fc914827140 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7fc9148266c0 'float'
+|-TypedefDecl 0x7fc915026a38 <line:5:1, col:13> col:13 referenced v4si '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fc915026a00 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fc9148265c0 'int'
+|-FunctionDecl 0x7fc915026bd0 <line:7:1, col:13> col:6 used bar 'v4sf (int)'
+| `-ParmVarDecl 0x7fc915026ac8 <col:10> col:13 'int'
+|-FunctionDecl 0x7fc915026de0 <line:9:1, line:13:1> line:9:6 foo 'v4sf (v4si)'
+| |-ParmVarDecl 0x7fc915026ce0 <col:10, col:15> col:15 used vi 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-CompoundStmt 0x7fc915027240 <line:10:1, line:13:1>
+|   |-DeclStmt 0x7fc915027100 <line:11:3, col:46>
+|   | `-VarDecl 0x7fc915026e98 <col:3, col:45> col:7 used x 'int' cinit
+|   |   `-CallExpr 0x7fc9150270b0 <col:11, col:45> 'int'
+|   |     |-ImplicitCastExpr 0x7fc915027098 <col:11> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fc915026ff8 <col:11> 'int ()' Function 0x7fc915026f60 '__builtin_ia32_vec_ext_v4si' 'int ()'
+|   |     |-ImplicitCastExpr 0x7fc9150270e8 <col:40> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fc915027020 <col:40> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7fc915026ce0 'vi' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |     `-IntegerLiteral 0x7fc915027048 <col:44> 'int' 0
+|   `-ReturnStmt 0x7fc915027228 <line:12:3, col:15>
+|     `-CallExpr 0x7fc9150271e0 <col:10, col:15> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|       |-ImplicitCastExpr 0x7fc9150271c8 <col:10> 'v4sf (*)(int)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fc915027118 <col:10> 'v4sf (int)' Function 0x7fc915026bd0 'bar' 'v4sf (int)'
+|       `-ImplicitCastExpr 0x7fc915027210 <col:14> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fc915027140 <col:14> 'int' lvalue Var 0x7fc915026e98 'x' 'int'
+`-FunctionDecl 0x7fc915026f60 <<invalid sloc>> line:11:11 implicit used __builtin_ia32_vec_ext_v4si 'int ()'

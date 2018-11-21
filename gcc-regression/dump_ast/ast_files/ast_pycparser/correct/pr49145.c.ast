@@ -1,0 +1,102 @@
+FileAST: 
+  FuncDef: 
+    Decl: func1, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: func1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          ID: b
+          ID: a
+          BinaryOp: /
+            ID: a
+            ID: b
+  FuncDef: 
+    Decl: func2, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: func2, []
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          ID: b
+          ID: a
+          ID: b
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: func3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arg, ['const'], [], []
+            TypeDecl: arg, ['const']
+              IdentifierType: ['int']
+        TypeDecl: func3, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: !=
+          ID: i
+          Constant: int, 10
+        Assignment: =
+          ID: i
+          FuncCall: 
+            ID: foo
+        Compound: 
+          If: 
+            UnaryOp: !
+              ID: arg
+            Compound: 
+              Decl: j, [], [], []
+                TypeDecl: j, []
+                  IdentifierType: ['int']
+              For: 
+                Assignment: =
+                  ID: j
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: j
+                  Constant: int, 5
+                Assignment: +=
+                  ID: j
+                  Constant: int, 1
+                Compound: 
+                  Decl: ptr, [], [], []
+                    PtrDecl: []
+                      TypeDecl: ptr, []
+                        IdentifierType: ['int']
+                  Assignment: =
+                    UnaryOp: *
+                      ID: ptr
+                    FuncCall: 
+                      ID: func2
+                      ExprList: 
+                        FuncCall: 
+                          ID: func1
+                          ExprList: 
+                            ID: arg
+                            UnaryOp: *
+                              ID: ptr
+                        FuncCall: 
+                          ID: foo
+                          ExprList: 
+                            ID: arg

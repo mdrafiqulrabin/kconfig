@@ -1,0 +1,34 @@
+c_files/pr79683.c:8:29: error: expected ')'
+void test(struct s __seg_gs *x) {
+                            ^
+c_files/pr79683.c:8:10: note: to match this '('
+void test(struct s __seg_gs *x) {
+         ^
+c_files/pr79683.c:9:5: error: use of undeclared identifier 'x'
+    x->a += 1;
+    ^
+c_files/pr79683.c:10:5: error: use of undeclared identifier 'x'
+    x->b -= 1;
+    ^
+3 errors generated.
+TranslationUnitDecl 0x7fbb340264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbb34026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbb34026740 '__int128'
+|-TypedefDecl 0x7fbb34026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbb34026760 'unsigned __int128'
+|-TypedefDecl 0x7fbb34026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbb34026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbb34026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbb34026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbb34026dc0 'char *'
+|   `-BuiltinType 0x7fbb34026560 'char'
+|-TypedefDecl 0x7fbb340270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbb34027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbb34026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbb34026e58 '__va_list_tag'
+|-RecordDecl 0x7fbb34027120 <c_files/pr79683.c:4:1, line:7:1> line:4:8 struct s definition
+| |-FieldDecl 0x7fbb34825a00 <<built-in>:152:24, c_files/pr79683.c:5:20> col:20 a 'long long'
+| `-FieldDecl 0x7fbb34825a60 <<built-in>:152:24, c_files/pr79683.c:6:20> col:20 b 'long long'
+`-FunctionDecl 0x7fbb34825c00 <line:8:1, line:11:1> line:8:6 test 'void (struct s)'
+  |-ParmVarDecl 0x7fbb34825b00 <col:11, col:20> col:20 __seg_gs 'struct s':'struct s'
+  `-CompoundStmt 0x7fbb34825d38 <col:33, line:11:1>

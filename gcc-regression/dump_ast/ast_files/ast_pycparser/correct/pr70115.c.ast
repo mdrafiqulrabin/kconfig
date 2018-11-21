@@ -1,0 +1,52 @@
+FileAST: 
+  Typedef: size_t, [], ['typedef']
+    TypeDecl: size_t, []
+      IdentifierType: ['int']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['char']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['size_t']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['size_t']
+      For: 
+        Compound: 
+          Assignment: =
+            ID: b
+            Constant: int, 0
+          For: 
+            ID: c
+            EmptyStatement: 
+          For: 
+            BinaryOp: <
+              ID: b
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['long']
+            UnaryOp: p++
+              ID: b
+            EmptyStatement: 
+          For: 
+            BinaryOp: <
+              ID: b
+              ID: c
+            UnaryOp: p++
+              ID: b
+            UnaryOp: p++
+              ID: a
+          For: 
+            BinaryOp: <
+              ID: c
+              ID: b
+            UnaryOp: p++
+              ID: c
+            EmptyStatement: 

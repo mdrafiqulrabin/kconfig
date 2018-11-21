@@ -1,0 +1,326 @@
+FileAST: 
+  Typedef: TScreen, [], ['typedef']
+    TypeDecl: TScreen, []
+      Struct: None
+        Decl: Vshow, [], [], []
+          TypeDecl: Vshow, []
+            IdentifierType: ['char']
+  Typedef: Misc, [], ['typedef']
+    TypeDecl: Misc, []
+      Struct: _Misc
+        Decl: Tshow, [], [], []
+          TypeDecl: Tshow, []
+            IdentifierType: ['char']
+  Typedef: XtermWidgetRec, [], ['typedef']
+    TypeDecl: XtermWidgetRec, []
+      Struct: _XtermWidgetRec
+        Decl: screen, [], [], []
+          TypeDecl: screen, []
+            IdentifierType: ['TScreen']
+        Decl: misc, [], [], []
+          TypeDecl: misc, []
+            IdentifierType: ['Misc']
+  Typedef: XtermWidget, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: XtermWidget, []
+        Struct: _XtermWidgetRec
+          Decl: screen, [], [], []
+            TypeDecl: screen, []
+              IdentifierType: ['TScreen']
+          Decl: misc, [], [], []
+            TypeDecl: misc, []
+              IdentifierType: ['Misc']
+  Decl: term, [], ['extern'], []
+    TypeDecl: term, []
+      IdentifierType: ['XtermWidget']
+  Decl: Bell, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['XtermWidget']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: Bell, []
+        IdentifierType: ['void']
+  Decl: set_tek_visibility, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: set_tek_visibility, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: handle_tekshow, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: gw, [], [], []
+            PtrDecl: []
+              TypeDecl: gw, []
+                IdentifierType: ['void']
+          Decl: allowswitch, [], [], []
+            TypeDecl: allowswitch, []
+              IdentifierType: ['int']
+        TypeDecl: handle_tekshow, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: xw, [], [], []
+        TypeDecl: xw, []
+          IdentifierType: ['XtermWidget']
+        ID: term
+      If: 
+        UnaryOp: !
+          StructRef: .
+            StructRef: ->
+              ID: xw
+              ID: misc
+            ID: Tshow
+        FuncCall: 
+          ID: set_tek_visibility
+          ExprList: 
+            Constant: int, 1
+  FuncDef: 
+    Decl: do_tekonoff, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: gw, [], [], []
+            PtrDecl: []
+              TypeDecl: gw, []
+                IdentifierType: ['void']
+          Decl: closure, [], [], []
+            PtrDecl: []
+              TypeDecl: closure, []
+                IdentifierType: ['void']
+          Decl: data, [], [], []
+            PtrDecl: []
+              TypeDecl: data, []
+                IdentifierType: ['void']
+        TypeDecl: do_tekonoff, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: handle_tekshow
+        ExprList: 
+          ID: gw
+          Constant: int, 0
+  FuncDef: 
+    Decl: do_vtonoff, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: gw, [], [], []
+            PtrDecl: []
+              TypeDecl: gw, []
+                IdentifierType: ['void']
+          Decl: closure, [], [], []
+            PtrDecl: []
+              TypeDecl: closure, []
+                IdentifierType: ['void']
+          Decl: data, [], [], []
+            PtrDecl: []
+              TypeDecl: data, []
+                IdentifierType: ['void']
+        TypeDecl: do_vtonoff, []
+          IdentifierType: ['void']
+    Compound: 
+  FuncDef: 
+    Decl: handle_toggle, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: proc, [], [], []
+            PtrDecl: []
+              FuncDecl: 
+                ParamList: 
+                  Decl: gw, [], [], []
+                    PtrDecl: []
+                      TypeDecl: gw, []
+                        IdentifierType: ['void']
+                  Decl: closure, [], [], []
+                    PtrDecl: []
+                      TypeDecl: closure, []
+                        IdentifierType: ['void']
+                  Decl: data, [], [], []
+                    PtrDecl: []
+                      TypeDecl: data, []
+                        IdentifierType: ['void']
+                TypeDecl: proc, []
+                  IdentifierType: ['void']
+          Decl: var, [], [], []
+            TypeDecl: var, []
+              IdentifierType: ['int']
+          Decl: params, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: params, []
+                  IdentifierType: ['char']
+          Decl: nparams, [], [], []
+            TypeDecl: nparams, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: w, [], [], []
+            PtrDecl: []
+              TypeDecl: w, []
+                IdentifierType: ['void']
+          Decl: closure, [], [], []
+            PtrDecl: []
+              TypeDecl: closure, []
+                IdentifierType: ['void']
+          Decl: data, [], [], []
+            PtrDecl: []
+              TypeDecl: data, []
+                IdentifierType: ['void']
+        TypeDecl: handle_toggle, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: xw, [], [], []
+        TypeDecl: xw, []
+          IdentifierType: ['XtermWidget']
+        ID: term
+      Decl: dir, [], [], []
+        TypeDecl: dir, []
+          IdentifierType: ['int']
+        UnaryOp: -
+          Constant: int, 2
+      Switch: 
+        ID: nparams
+        Compound: 
+          Case: 
+            Constant: int, 0
+            Assignment: =
+              ID: dir
+              UnaryOp: -
+                Constant: int, 1
+      Switch: 
+        ID: dir
+        Compound: 
+          Case: 
+            Constant: int, 1
+            FuncCall: 
+              UnaryOp: *
+                ID: proc
+              ExprList: 
+                ID: w
+                ID: closure
+                ID: data
+            FuncCall: 
+              ID: Bell
+              ExprList: 
+                ID: xw
+                Constant: int, 2
+                Constant: int, 0
+  FuncDef: 
+    Decl: HandleVisibility, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: w, [], [], []
+            PtrDecl: []
+              TypeDecl: w, []
+                IdentifierType: ['void']
+          Decl: params, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: params, []
+                  IdentifierType: ['char']
+          Decl: param_count, [], [], []
+            PtrDecl: []
+              TypeDecl: param_count, []
+                IdentifierType: ['unsigned', 'int']
+        TypeDecl: HandleVisibility, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: xw, [], [], []
+        TypeDecl: xw, []
+          IdentifierType: ['XtermWidget']
+        ID: term
+      If: 
+        BinaryOp: ==
+          UnaryOp: *
+            ID: param_count
+          Constant: int, 2
+        Switch: 
+          ArrayRef: 
+            ArrayRef: 
+              ID: params
+              Constant: int, 0
+            Constant: int, 0
+          Compound: 
+            Case: 
+              Constant: char, 'v'
+              FuncCall: 
+                ID: handle_toggle
+                ExprList: 
+                  ID: do_vtonoff
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['int']
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['int']
+                      StructRef: ->
+                        UnaryOp: &
+                          StructRef: ->
+                            ID: xw
+                            ID: screen
+                        ID: Vshow
+                  BinaryOp: +
+                    ID: params
+                    Constant: int, 1
+                  BinaryOp: -
+                    UnaryOp: *
+                      ID: param_count
+                    Constant: int, 1
+                  ID: w
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['void']
+                    Constant: int, 0
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['void']
+                    Constant: int, 0
+              FuncCall: 
+                ID: handle_toggle
+                ExprList: 
+                  ID: do_tekonoff
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['int']
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['int']
+                      StructRef: .
+                        StructRef: ->
+                          ID: xw
+                          ID: misc
+                        ID: Tshow
+                  BinaryOp: +
+                    ID: params
+                    Constant: int, 1
+                  BinaryOp: -
+                    UnaryOp: *
+                      ID: param_count
+                    Constant: int, 1
+                  ID: w
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['void']
+                    Constant: int, 0
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['void']
+                    Constant: int, 0

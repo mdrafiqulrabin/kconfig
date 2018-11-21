@@ -1,0 +1,44 @@
+FileAST: 
+  Decl: spinlock, [], [], []
+    ArrayDecl: []
+      TypeDecl: spinlock, []
+        IdentifierType: ['int']
+      Constant: int, 2
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: spinlock0, ['volatile'], [], []
+        PtrDecl: []
+          TypeDecl: spinlock0, ['volatile']
+            IdentifierType: ['int']
+      Decl: spinlock1, ['volatile'], [], []
+        PtrDecl: []
+          TypeDecl: spinlock1, ['volatile']
+            IdentifierType: ['int']
+      Assignment: =
+        ID: spinlock0
+        UnaryOp: &
+          ArrayRef: 
+            ID: spinlock
+            Constant: int, 0
+      Assignment: =
+        ID: spinlock1
+        UnaryOp: &
+          ArrayRef: 
+            ID: spinlock
+            Constant: int, 1
+      Assignment: =
+        UnaryOp: *
+          ID: spinlock0
+        Constant: int, 0
+      Assignment: =
+        UnaryOp: *
+          ID: spinlock1
+        Constant: int, 0
+      While: 
+        UnaryOp: *
+          ID: spinlock0
+        EmptyStatement: 

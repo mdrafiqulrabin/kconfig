@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fa2af8002d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa2af800820 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa2af800540 '__int128'
+|-TypedefDecl 0x7fa2af800890 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa2af800560 'unsigned __int128'
+|-TypedefDecl 0x7fa2af800b68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa2af800970 'struct __NSConstantString_tag'
+|   `-Record 0x7fa2af8008e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa2af800c00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa2af800bc0 'char *'
+|   `-BuiltinType 0x7fa2af800360 'char'
+|-TypedefDecl 0x7fa2af800ec8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa2af800e70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa2af800ce0 'struct __va_list_tag'
+|     `-Record 0x7fa2af800c58 '__va_list_tag'
+|-FunctionDecl 0x7fa2b0826a00 <c_files/pr68648.c:2:1, line:6:1> line:3:1 used foo 'int (void)'
+| |-CompoundStmt 0x7fa2b0826b58 <line:4:1, line:6:1>
+| | `-ReturnStmt 0x7fa2b0826b40 <line:5:3, col:10>
+| |   `-IntegerLiteral 0x7fa2b0826b20 <col:10> 'int' 123
+| `-NoInlineAttr 0x7fa2b0826a98 <line:2:21>
+|-FunctionDecl 0x7fa2b0826c10 <line:8:1, line:14:1> line:9:1 used bar 'int (void)'
+| |-CompoundStmt 0x7fa2b0826fb0 <line:10:1, line:14:1>
+| | |-DeclStmt 0x7fa2b0826d88 <line:11:3, col:12>
+| | | `-VarDecl 0x7fa2b0826d08 <col:3, col:11> col:7 used c 'int' cinit
+| | |   `-IntegerLiteral 0x7fa2b0826d68 <col:11> 'int' 1
+| | |-CompoundAssignOperator 0x7fa2b0826f20 <line:12:3, col:44> 'int' '|=' ComputeLHSTy='long' ComputeResultTy='long'
+| | | |-DeclRefExpr 0x7fa2b0826da0 <col:3> 'int' lvalue Var 0x7fa2b0826d08 'c' 'int'
+| | | `-BinaryOperator 0x7fa2b0826ef8 <col:8, col:44> 'long' '^'
+| | |   |-IntegerLiteral 0x7fa2b0826dc8 <col:8> 'long' 4294967295
+| | |   `-ParenExpr 0x7fa2b0826ed8 <col:21, col:44> 'long'
+| | |     `-BinaryOperator 0x7fa2b0826eb0 <col:22, col:31> 'long' '|'
+| | |       |-ImplicitCastExpr 0x7fa2b0826e98 <col:22, col:27> 'long' <IntegralCast>
+| | |       | `-CallExpr 0x7fa2b0826e50 <col:22, col:27> 'int'
+| | |       |   `-ImplicitCastExpr 0x7fa2b0826e38 <col:22> 'int (*)(void)' <FunctionToPointerDecay>
+| | |       |     `-DeclRefExpr 0x7fa2b0826de8 <col:22> 'int (void)' Function 0x7fa2b0826a00 'foo' 'int (void)'
+| | |       `-IntegerLiteral 0x7fa2b0826e78 <col:31> 'long' 4073709551608
+| | `-ReturnStmt 0x7fa2b0826f98 <line:13:3, col:10>
+| |   `-ImplicitCastExpr 0x7fa2b0826f80 <col:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fa2b0826f58 <col:10> 'int' lvalue Var 0x7fa2b0826d08 'c' 'int'
+| `-NoInlineAttr 0x7fa2b0826ca8 <line:8:21>
+|-FunctionDecl 0x7fa2b0827030 <line:16:1, line:21:1> line:17:1 main 'int ()'
+| `-CompoundStmt 0x7fa2b0827370 <line:18:1, line:21:1>
+|   `-IfStmt 0x7fa2b0827338 <line:19:3, line:20:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fa2b0827168 <line:19:7, col:17> 'int' '!='
+|     | |-ImplicitCastExpr 0x7fa2b0827150 <col:7, col:12> 'unsigned int' <IntegralCast>
+|     | | `-CallExpr 0x7fa2b0827108 <col:7, col:12> 'int'
+|     | |   `-ImplicitCastExpr 0x7fa2b08270f0 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+|     | |     `-DeclRefExpr 0x7fa2b08270c8 <col:7> 'int (void)' Function 0x7fa2b0826c10 'bar' 'int (void)'
+|     | `-IntegerLiteral 0x7fa2b0827130 <col:17> 'unsigned int' 2214412293
+|     |-CallExpr 0x7fa2b0827310 <line:20:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7fa2b08272f8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7fa2b08272a0 <col:5> '<builtin fn type>' Function 0x7fa2b08271c0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fa2b08271c0 <col:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fa2b0827258 <col:5> Implicit

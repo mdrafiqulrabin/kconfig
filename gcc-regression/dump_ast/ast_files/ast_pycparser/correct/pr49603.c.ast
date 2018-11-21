@@ -1,0 +1,84 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: gl_visual
+      Decl: AlphaScale, [], [], []
+        TypeDecl: AlphaScale, []
+          IdentifierType: ['float']
+  Decl: None, [], [], []
+    Struct: gl_context
+      Decl: Visual, [], [], []
+        PtrDecl: []
+          TypeDecl: Visual, []
+            Struct: gl_visual
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: quickdraw_rgb, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ctx, [], [], []
+            PtrDecl: []
+              TypeDecl: ctx, []
+                Struct: gl_context
+          Decl: width, [], [], []
+            TypeDecl: width, []
+              IdentifierType: ['int']
+          Decl: height, [], [], []
+            TypeDecl: height, []
+              IdentifierType: ['int']
+        TypeDecl: quickdraw_rgb, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: alpha, [], [], []
+        ArrayDecl: []
+          TypeDecl: alpha, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 1600
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: <
+          ID: j
+          ID: width
+        UnaryOp: p++
+          ID: j
+        Assignment: =
+          ArrayRef: 
+            ID: alpha
+            ID: j
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            StructRef: ->
+              StructRef: ->
+                ID: ctx
+                ID: Visual
+              ID: AlphaScale
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: height
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            ID: alpha

@@ -1,0 +1,51 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['void']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: <=
+          ID: n
+          Constant: int, 4
+        FuncCall: 
+          ID: __builtin_memset
+          ExprList: 
+            ID: p
+            Constant: int, 0
+            ID: n
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d, [], [], []
+            PtrDecl: []
+              TypeDecl: d, []
+                IdentifierType: ['void']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['unsigned']
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: <
+          ID: n
+          Constant: int, 5
+        Assignment: =
+          ID: n
+          Constant: int, 5
+      FuncCall: 
+        ID: f
+        ExprList: 
+          ID: d
+          ID: n

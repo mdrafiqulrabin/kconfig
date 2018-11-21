@@ -1,0 +1,31 @@
+FileAST: 
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      For: 
+        Compound: 
+          Switch: 
+            ID: i
+            Compound: 
+              Case: 
+                Constant: int, 0
+              Case: 
+                Constant: int, 1
+                Return: 
+                  Constant: int, 1
+              Case: 
+                Constant: int, 2
+              Case: 
+                Constant: int, 3
+                Return: 
+                  Constant: int, 0
+              Case: 
+                Constant: int, 5
+                UnaryOp: --
+                  ID: i

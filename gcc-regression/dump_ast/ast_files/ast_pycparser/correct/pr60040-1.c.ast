@@ -1,0 +1,108 @@
+FileAST: 
+  Decl: dhistory, [], [], []
+    ArrayDecl: []
+      TypeDecl: dhistory, []
+        IdentifierType: ['float']
+      Constant: int, 10
+  Decl: test, [], [], []
+    TypeDecl: test, []
+      IdentifierType: ['float']
+  FuncDef: 
+    Decl: getSlope, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: history, [], [], []
+            ArrayDecl: []
+              TypeDecl: history, []
+                IdentifierType: ['float']
+        TypeDecl: getSlope, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: sumx, [], [], []
+        TypeDecl: sumx, []
+          IdentifierType: ['float']
+        Constant: int, 0
+      Decl: sumy, [], [], []
+        TypeDecl: sumy, []
+          IdentifierType: ['float']
+        Constant: int, 0
+      Decl: sumxy, [], [], []
+        TypeDecl: sumxy, []
+          IdentifierType: ['float']
+        Constant: int, 0
+      Decl: sumxsq, [], [], []
+        TypeDecl: sumxsq, []
+          IdentifierType: ['float']
+        Constant: int, 0
+      Decl: rate, [], [], []
+        TypeDecl: rate, []
+          IdentifierType: ['float']
+        Constant: int, 0
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+        Constant: int, 10
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 1
+        BinaryOp: <
+          ID: i
+          Constant: int, 11
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: sumx
+            BinaryOp: +
+              ID: sumx
+              ID: i
+          Assignment: =
+            ID: sumy
+            BinaryOp: +
+              ID: sumy
+              ArrayRef: 
+                ID: history
+                BinaryOp: -
+                  ID: i
+                  Constant: int, 1
+          Assignment: =
+            ID: sumy
+            BinaryOp: +
+              ID: sumy
+              ArrayRef: 
+                ID: history
+                BinaryOp: -
+                  ID: i
+                  Constant: int, 1
+          Assignment: =
+            ID: sumxsq
+            BinaryOp: +
+              ID: sumxsq
+              BinaryOp: *
+                ID: i
+                ID: i
+      Assignment: =
+        ID: rate
+        BinaryOp: +
+          BinaryOp: +
+            ID: sumy
+            ID: sumx
+          ID: sumxsq
+      Return: 
+        ID: rate
+  FuncDef: 
+    Decl: loop, [], [], []
+      FuncDecl: 
+        TypeDecl: loop, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: test
+        FuncCall: 
+          ID: getSlope
+          ExprList: 
+            ID: dhistory

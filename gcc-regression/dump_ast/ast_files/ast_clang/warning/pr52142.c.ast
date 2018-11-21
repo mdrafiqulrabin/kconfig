@@ -1,0 +1,34 @@
+c_files/pr52142.c:5:16: warning: unknown attribute 'transaction_pure' ignored [-Wunknown-attributes]
+__attribute__((transaction_pure))
+               ^
+c_files/pr52142.c:11:16: warning: unknown attribute 'transaction_safe' ignored [-Wunknown-attributes]
+__attribute__((transaction_safe))
+               ^
+c_files/pr52142.c:16:3: error: use of undeclared identifier '__transaction_atomic'
+  __transaction_atomic {
+  ^
+2 warnings and 1 error generated.
+TranslationUnitDecl 0x7fbae98264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbae9826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbae9826740 '__int128'
+|-TypedefDecl 0x7fbae9826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbae9826760 'unsigned __int128'
+|-TypedefDecl 0x7fbae9826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbae9826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbae9826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbae9826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbae9826dc0 'char *'
+|   `-BuiltinType 0x7fbae9826560 'char'
+|-TypedefDecl 0x7fbae98270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbae9827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbae9826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbae9826e58 '__va_list_tag'
+|-VarDecl 0x7fbae9827138 <c_files/pr52142.c:3:1, col:21> col:12 used global 'int' static cinit
+| `-IntegerLiteral 0x7fbae98271d8 <col:21> 'int' 0
+|-FunctionDecl 0x7fbae9878448 <line:5:1, line:9:1> line:6:20 purefunc 'void ()' static inline
+| `-CompoundStmt 0x7fbae9878528 <line:7:1, line:9:1>
+|   `-UnaryOperator 0x7fbae9878508 <line:8:3, col:9> 'int' postfix '++'
+|     `-DeclRefExpr 0x7fbae98784e0 <col:3> 'int' lvalue Var 0x7fbae9827138 'global' 'int'
+|-FunctionDecl 0x7fbae9878568 <line:11:1, line:12:8> col:6 f 'void ()'
+`-FunctionDecl 0x7fbae9878620 <line:14:1, line:20:1> line:14:6 push 'void ()'
+  `-CompoundStmt 0x7fbae98786d0 <line:15:1, line:20:1>

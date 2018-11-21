@@ -1,0 +1,76 @@
+FileAST: 
+  Typedef: callptr, [], ['typedef']
+    PtrDecl: []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: callptr, []
+          IdentifierType: ['int']
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: x, [], [], []
+          PtrDecl: []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['void']
+      TypeDecl: foo, []
+        IdentifierType: ['int']
+  Decl: foo2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['callptr']
+      TypeDecl: foo2, []
+        IdentifierType: ['void']
+  Decl: foo_ptr, [], [], []
+    PtrDecl: []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: x, []
+                  IdentifierType: ['void']
+        TypeDecl: foo_ptr, []
+          IdentifierType: ['int']
+    ID: foo
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: ptr, [], [], []
+        PtrDecl: []
+          TypeDecl: ptr, []
+            IdentifierType: ['void']
+      FuncCall: 
+        ID: foo2
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['callptr']
+            UnaryOp: &
+              ID: ptr
+      Assignment: =
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+            UnaryOp: &
+              ID: foo_ptr
+        ID: ptr

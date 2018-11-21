@@ -1,0 +1,21 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: s, ['const']
+                IdentifierType: ['char']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: <=
+          ID: __PTRDIFF_MAX__
+          FuncCall: 
+            ID: __builtin_strlen
+            ExprList: 
+              ID: s
+        FuncCall: 
+          ID: __builtin_abort

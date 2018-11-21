@@ -1,0 +1,78 @@
+FileAST: 
+  Decl: link_error, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: link_error, []
+        IdentifierType: ['void']
+  Typedef: Calculable, [], ['typedef']
+    PtrDecl: []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: Calculable, []
+          IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: one, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: one, []
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Return: 
+        Constant: int, 1
+  FuncDef: 
+    Decl: two, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: two, []
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Return: 
+        Constant: int, 2
+  FuncDef: 
+    Decl: print, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: calculate, [], [], []
+            TypeDecl: calculate, []
+              IdentifierType: ['Calculable']
+        TypeDecl: print, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            FuncCall: 
+              ID: calculate
+            FuncCall: 
+              ID: calculate
+          Constant: int, 1
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: print
+            ExprList: 
+              ID: one
+          Constant: int, 3
+        FuncCall: 
+          ID: link_error
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: print
+            ExprList: 
+              ID: two
+          Constant: int, 5
+        FuncCall: 
+          ID: link_error
+      Return: 
+        Constant: int, 0

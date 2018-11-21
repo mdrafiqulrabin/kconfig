@@ -1,0 +1,25 @@
+c_files/pr26765.c:9:1: error: unknown type name 'NOMIPS16'
+NOMIPS16 void foo (void)
+^
+c_files/pr26765.c:9:10: error: expected identifier or '('
+NOMIPS16 void foo (void)
+         ^
+2 errors generated.
+TranslationUnitDecl 0x7f8e010264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8e01026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8e01026740 '__int128'
+|-TypedefDecl 0x7f8e01026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8e01026760 'unsigned __int128'
+|-TypedefDecl 0x7f8e01026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8e01026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8e01026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8e01026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8e01026dc0 'char *'
+|   `-BuiltinType 0x7f8e01026560 'char'
+|-TypedefDecl 0x7f8e010270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8e01027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8e01026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8e01026e58 '__va_list_tag'
+`-VarDecl 0x7f8e01027160 <c_files/pr26765.c:7:1, col:19> col:15 a 'int *' tls cinit
+  `-ImplicitCastExpr 0x7f8e01825a20 <col:19> 'int *' <NullToPointer>
+    `-IntegerLiteral 0x7f8e01825a00 <col:19> 'int' 0

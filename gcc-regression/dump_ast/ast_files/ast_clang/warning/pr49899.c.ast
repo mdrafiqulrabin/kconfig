@@ -1,0 +1,27 @@
+c_files/pr49899.c:2:32: warning: attribute declaration must precede definition [-Wignored-attributes]
+int foo (void)  __attribute__((weak));
+                               ^
+c_files/pr49899.c:1:12: note: previous definition is here
+static int foo (void) { return 0; } /* { dg-error "weak declaration of 'foo' being applied to a already existing, static definition" } */
+           ^
+1 warning generated.
+TranslationUnitDecl 0x7ffb9a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffb9a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffb9a026740 '__int128'
+|-TypedefDecl 0x7ffb9a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffb9a026760 'unsigned __int128'
+|-TypedefDecl 0x7ffb9a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffb9a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffb9a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffb9a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffb9a026dc0 'char *'
+|   `-BuiltinType 0x7ffb9a026560 'char'
+|-TypedefDecl 0x7ffb9a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffb9a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffb9a026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffb9a026e58 '__va_list_tag'
+|-FunctionDecl 0x7ffb9a077400 <c_files/pr49899.c:1:1, col:35> col:12 foo 'int (void)' static
+| `-CompoundStmt 0x7ffb9a077510 <col:23, col:35>
+|   `-ReturnStmt 0x7ffb9a0774f8 <col:25, col:32>
+|     `-IntegerLiteral 0x7ffb9a0774d8 <col:32> 'int' 0
+`-FunctionDecl 0x7ffb9a0775c8 prev 0x7ffb9a077400 <line:2:1, col:37> col:5 foo 'int (void)'

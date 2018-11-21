@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fd4460264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd446026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd446026740 '__int128'
+|-TypedefDecl 0x7fd446026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd446026760 'unsigned __int128'
+|-TypedefDecl 0x7fd446026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd446026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd446026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd446026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd446026dc0 'char *'
+|   `-BuiltinType 0x7fd446026560 'char'
+|-TypedefDecl 0x7fd4460270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd446027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd446026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd446026e58 '__va_list_tag'
+|-TypedefDecl 0x7fd446027178 <c_files/pr60205-1.c:7:1, col:13> col:13 referenced __v16si '__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| `-VectorType 0x7fd446027140 '__attribute__((__vector_size__(16 * sizeof(int)))) int' 16
+|   `-BuiltinType 0x7fd4460265c0 'int'
+|-VarDecl 0x7fd446826a00 <line:9:1, col:16> col:16 used x '__v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' extern
+|-FunctionDecl 0x7fd446826bb0 <line:11:1, col:25> col:13 used bar 'void (__v16si)' extern
+| `-ParmVarDecl 0x7fd446826ab0 <col:18> col:25 '__v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+`-FunctionDecl 0x7fd446826d10 <line:12:1, line:16:1> line:13:1 foo 'void (void)'
+  `-CompoundStmt 0x7fd446826eb8 <line:14:1, line:16:1>
+    `-CallExpr 0x7fd446826e70 <line:15:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fd446826e58 <col:3> 'void (*)(__v16si)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd446826da8 <col:3> 'void (__v16si)' Function 0x7fd446826bb0 'bar' 'void (__v16si)'
+      `-ImplicitCastExpr 0x7fd446826ea0 <col:8> '__v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <LValueToRValue>
+        `-DeclRefExpr 0x7fd446826dd0 <col:8> '__v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue Var 0x7fd446826a00 'x' '__v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int'

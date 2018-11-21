@@ -1,0 +1,111 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: __sched_cpucount, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: __sched_cpucount, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        ID: b
+        Compound: 
+          Decl: l, [], [], []
+            TypeDecl: l, []
+              IdentifierType: ['long']
+            UnaryOp: p++
+              ID: b
+          Assignment: +=
+            ID: a
+            FuncCall: 
+              ID: __builtin_popcountl
+              ExprList: 
+                ID: l
+  FuncDef: 
+    Decl: slp_test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['long']
+        TypeDecl: slp_test, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        DeclList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+            Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 512
+        Assignment: +=
+          ID: i
+          Constant: int, 4
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: x
+              ID: i
+            FuncCall: 
+              ID: __builtin_popcountl
+              ExprList: 
+                ArrayRef: 
+                  ID: y
+                  ID: i
+          Assignment: =
+            ArrayRef: 
+              ID: x
+              BinaryOp: +
+                ID: i
+                Constant: int, 1
+            FuncCall: 
+              ID: __builtin_popcountl
+              ExprList: 
+                ArrayRef: 
+                  ID: y
+                  BinaryOp: +
+                    ID: i
+                    Constant: int, 1
+          Assignment: =
+            ArrayRef: 
+              ID: x
+              BinaryOp: +
+                ID: i
+                Constant: int, 2
+            FuncCall: 
+              ID: __builtin_popcountl
+              ExprList: 
+                ArrayRef: 
+                  ID: y
+                  BinaryOp: +
+                    ID: i
+                    Constant: int, 2
+          Assignment: =
+            ArrayRef: 
+              ID: x
+              BinaryOp: +
+                ID: i
+                Constant: int, 3
+            FuncCall: 
+              ID: __builtin_popcountl
+              ExprList: 
+                ArrayRef: 
+                  ID: y
+                  BinaryOp: +
+                    ID: i
+                    Constant: int, 3

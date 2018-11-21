@@ -1,0 +1,86 @@
+TranslationUnitDecl 0x7fc38a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc38a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc38a026740 '__int128'
+|-TypedefDecl 0x7fc38a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc38a026760 'unsigned __int128'
+|-TypedefDecl 0x7fc38a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc38a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc38a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc38a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc38a026dc0 'char *'
+|   `-BuiltinType 0x7fc38a026560 'char'
+|-TypedefDecl 0x7fc38a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc38a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc38a026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc38a026e58 '__va_list_tag'
+|-TypedefDecl 0x7fc38a027178 <c_files/pr78542.c:4:1, col:18> col:18 referenced V '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7fc38a027140 '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' 4
+|   `-BuiltinType 0x7fc38a026660 'unsigned int'
+|-FunctionDecl 0x7fc38a0785a0 <line:6:1, line:14:1> line:7:1 used foo 'V (unsigned int, V)'
+| |-ParmVarDecl 0x7fc38a078418 <col:6, col:15> col:15 used x 'unsigned int'
+| |-ParmVarDecl 0x7fc38a078488 <col:18, col:20> col:20 used v 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+| `-CompoundStmt 0x7fc38a0788f0 <line:8:1, line:14:1>
+|   |-DoStmt 0x7fc38a078878 <line:9:3, line:12:16>
+|   | |-CompoundStmt 0x7fc38a0787c8 <line:9:6, line:12:3>
+|   | | |-CompoundAssignOperator 0x7fc38a078708 <line:10:7, col:12> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' '%=' ComputeLHSTy='V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' ComputeResultTy='V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|   | | | |-DeclRefExpr 0x7fc38a078688 <col:7> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7fc38a078488 'v' 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|   | | | `-ImplicitCastExpr 0x7fc38a0786f0 <col:12> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <VectorSplat>
+|   | | |   `-ImplicitCastExpr 0x7fc38a0786d8 <col:12> 'unsigned int' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fc38a0786b0 <col:12> 'unsigned int' lvalue ParmVar 0x7fc38a078418 'x' 'unsigned int'
+|   | | `-BinaryOperator 0x7fc38a0787a0 <line:11:7, col:11> 'unsigned int' '='
+|   | |   |-DeclRefExpr 0x7fc38a078740 <col:7> 'unsigned int' lvalue ParmVar 0x7fc38a078418 'x' 'unsigned int'
+|   | |   `-ImplicitCastExpr 0x7fc38a078788 <col:11> 'unsigned int' <IntegralCast>
+|   | |     `-IntegerLiteral 0x7fc38a078768 <col:11> 'int' 1
+|   | `-ImplicitCastExpr 0x7fc38a078860 <line:12:12, col:15> 'unsigned int' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7fc38a078838 <col:12, col:15> 'unsigned int' lvalue vectorcomponent
+|   |     |-DeclRefExpr 0x7fc38a0787f0 <col:12> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7fc38a078488 'v' 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|   |     `-IntegerLiteral 0x7fc38a078818 <col:14> 'int' 1
+|   `-ReturnStmt 0x7fc38a0788d8 <line:13:3, col:10>
+|     `-ImplicitCastExpr 0x7fc38a0788c0 <col:10> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc38a078898 <col:10> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7fc38a078488 'v' 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|-FunctionDecl 0x7fc38a078970 <line:16:1, line:23:1> line:17:1 main 'int ()'
+| `-CompoundStmt 0x7fc38a0791e8 <line:18:1, line:23:1>
+|   |-DeclStmt 0x7fc38a078d18 <line:19:3, col:30>
+|   | `-VarDecl 0x7fc38a078a18 <col:3, col:29> col:5 used x 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' cinit
+|   |   `-CallExpr 0x7fc38a078cb0 <col:9, col:29> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|   |     |-ImplicitCastExpr 0x7fc38a078c98 <col:9> 'V (*)(unsigned int, V)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fc38a078a78 <col:9> 'V (unsigned int, V)' Function 0x7fc38a0785a0 'foo' 'V (unsigned int, V)'
+|   |     |-ImplicitCastExpr 0x7fc38a078ce8 <col:14> 'unsigned int' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc38a078aa0 <col:14> 'int' 5
+|   |     `-ImplicitCastExpr 0x7fc38a078d00 <col:17, col:28> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+|   |       `-CompoundLiteralExpr 0x7fc38a078c10 <col:17, col:28> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue
+|   |         `-InitListExpr 0x7fc38a078b60 <col:21, col:28> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|   |           |-ImplicitCastExpr 0x7fc38a078bc0 <col:23> 'unsigned int' <IntegralCast>
+|   |           | `-IntegerLiteral 0x7fc38a078ad0 <col:23> 'int' 0
+|   |           `-ImplicitCastExpr 0x7fc38a078bd8 <col:26> 'unsigned int' <IntegralCast>
+|   |             `-IntegerLiteral 0x7fc38a078af0 <col:26> 'int' 1
+|   |-IfStmt 0x7fc38a079178 <line:20:3, line:21:21>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc38a078fa0 <line:20:7, col:34> 'int' '||'
+|   | | |-BinaryOperator 0x7fc38a078ef0 <col:7, col:26> 'int' '||'
+|   | | | |-BinaryOperator 0x7fc38a078e40 <col:7, col:18> 'int' '||'
+|   | | | | |-ImplicitCastExpr 0x7fc38a078e10 <col:7, col:10> 'unsigned int' <LValueToRValue>
+|   | | | | | `-ArraySubscriptExpr 0x7fc38a078d78 <col:7, col:10> 'unsigned int' lvalue vectorcomponent
+|   | | | | |   |-DeclRefExpr 0x7fc38a078d30 <col:7> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fc38a078a18 'x' 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|   | | | | |   `-IntegerLiteral 0x7fc38a078d58 <col:9> 'int' 0
+|   | | | | `-ImplicitCastExpr 0x7fc38a078e28 <col:15, col:18> 'unsigned int' <LValueToRValue>
+|   | | | |   `-ArraySubscriptExpr 0x7fc38a078de8 <col:15, col:18> 'unsigned int' lvalue vectorcomponent
+|   | | | |     |-DeclRefExpr 0x7fc38a078da0 <col:15> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fc38a078a18 'x' 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|   | | | |     `-IntegerLiteral 0x7fc38a078dc8 <col:17> 'int' 1
+|   | | | `-ImplicitCastExpr 0x7fc38a078ed8 <col:23, col:26> 'unsigned int' <LValueToRValue>
+|   | | |   `-ArraySubscriptExpr 0x7fc38a078eb0 <col:23, col:26> 'unsigned int' lvalue vectorcomponent
+|   | | |     |-DeclRefExpr 0x7fc38a078e68 <col:23> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fc38a078a18 'x' 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|   | | |     `-IntegerLiteral 0x7fc38a078e90 <col:25> 'int' 2
+|   | | `-ImplicitCastExpr 0x7fc38a078f88 <col:31, col:34> 'unsigned int' <LValueToRValue>
+|   | |   `-ArraySubscriptExpr 0x7fc38a078f60 <col:31, col:34> 'unsigned int' lvalue vectorcomponent
+|   | |     |-DeclRefExpr 0x7fc38a078f18 <col:31> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fc38a078a18 'x' 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|   | |     `-IntegerLiteral 0x7fc38a078f40 <col:33> 'int' 3
+|   | |-CallExpr 0x7fc38a079150 <line:21:5, col:21> 'void'
+|   | | `-ImplicitCastExpr 0x7fc38a079138 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fc38a0790e0 <col:5> '<builtin fn type>' Function 0x7fc38a079000 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fc38a0791d0 <line:22:3, col:10>
+|     `-IntegerLiteral 0x7fc38a0791b0 <col:10> 'int' 0
+`-FunctionDecl 0x7fc38a079000 <line:21:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fc38a079098 <col:5> Implicit

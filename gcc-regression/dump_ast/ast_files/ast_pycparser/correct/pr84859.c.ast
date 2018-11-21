@@ -1,0 +1,54 @@
+FileAST: 
+  FuncDef: 
+    Decl: h, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: p, ['const']
+                IdentifierType: ['void']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['unsigned']
+        TypeDecl: h, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 8
+      If: 
+        BinaryOp: >
+          ID: n
+          UnaryOp: sizeof
+            ID: a
+        Return: 
+      For: 
+        BinaryOp: >
+          ID: n
+          Constant: int, 0
+        Assignment: -=
+          ID: n
+          UnaryOp: *
+            ID: a
+        Compound: 
+          If: 
+            BinaryOp: >
+              ID: n
+              Constant: int, 255
+            Assignment: =
+              UnaryOp: *
+                ID: a
+              Constant: int, 255
+            Assignment: =
+              UnaryOp: *
+                ID: a
+              ID: n
+          FuncCall: 
+            ID: __builtin_memcpy
+            ExprList: 
+              ID: a
+              ID: p
+              UnaryOp: *
+                ID: a

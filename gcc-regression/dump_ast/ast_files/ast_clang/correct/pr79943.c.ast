@@ -1,0 +1,111 @@
+TranslationUnitDecl 0x7fd62f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd62f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd62f026740 '__int128'
+|-TypedefDecl 0x7fd62f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd62f026760 'unsigned __int128'
+|-TypedefDecl 0x7fd62f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd62f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd62f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd62f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd62f026dc0 'char *'
+|   `-BuiltinType 0x7fd62f026560 'char'
+|-TypedefDecl 0x7fd62f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd62f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd62f026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd62f026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd630025a30 <c_files/pr79943.c:8:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd630025ac8 prev 0x7fd630025a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fd630025b60 <line:11:9, line:13:1> line:11:9 struct definition
+| `-FieldDecl 0x7fd630025c28 <line:12:3, col:7> col:7 referenced n 'int'
+|-TypedefDecl 0x7fd630025cc0 <line:11:1, line:13:3> col:3 referenced region_t 'struct region_t':'region_t'
+| `-ElaboratedType 0x7fd630025c70 'struct region_t' sugar
+|   `-RecordType 0x7fd630025bf0 'region_t'
+|     `-Record 0x7fd630025b60 ''
+|-FunctionDecl 0x7fd630025ec0 <line:15:1, col:53> col:6 used set 'void (region_t *)'
+| |-ParmVarDecl 0x7fd630025db8 <col:11, col:21> col:21 region 'region_t *'
+| `-NoInlineAttr 0x7fd630025f60 <col:44>
+|-FunctionDecl 0x7fd630026210 <line:16:1, line:17:27> line:16:6 used doit 'void (region_t *, region_t *, region_t *)'
+| |-ParmVarDecl 0x7fd630025ff8 <col:12, col:22> col:22 beg 'region_t *'
+| |-ParmVarDecl 0x7fd630026068 <col:27, col:37> col:37 end 'region_t *'
+| |-ParmVarDecl 0x7fd6300260d8 <col:42, col:52> col:52 limit 'region_t *'
+| `-NoInlineAttr 0x7fd6300262c0 <line:17:18>
+|-VarDecl 0x7fd630026408 <line:19:1, col:20> col:10 used regions 'region_t [10]'
+|-FunctionDecl 0x7fd630026500 prev 0x7fd630025ec0 <line:21:1, line:24:1> line:22:1 used set 'void (region_t *)'
+| |-ParmVarDecl 0x7fd630026478 <col:6, col:16> col:16 used region 'region_t *'
+| |-CompoundStmt 0x7fd6300266a8 <col:24, line:24:1>
+| | `-BinaryOperator 0x7fd630026680 <line:23:3, col:15> 'int' '='
+| |   |-MemberExpr 0x7fd630026628 <col:3, col:11> 'int' lvalue ->n 0x7fd630025c28
+| |   | `-ImplicitCastExpr 0x7fd630026610 <col:3> 'region_t *' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7fd6300265e8 <col:3> 'region_t *' lvalue ParmVar 0x7fd630026478 'region' 'region_t *'
+| |   `-IntegerLiteral 0x7fd630026660 <col:15> 'int' 1
+| `-NoInlineAttr 0x7fd6300265d8 <line:15:44> Inherited
+|-FunctionDecl 0x7fd630026850 prev 0x7fd630026210 <line:26:1, line:33:1> line:27:1 used doit 'void (region_t *, region_t *, region_t *)'
+| |-ParmVarDecl 0x7fd6300266d8 <col:7, col:17> col:17 used beg 'region_t *'
+| |-ParmVarDecl 0x7fd630026748 <col:22, col:32> col:32 used end 'region_t *'
+| |-ParmVarDecl 0x7fd6300267b8 <col:37, col:47> col:47 used limit 'region_t *'
+| |-CompoundStmt 0x7fd630027d68 <col:54, line:33:1>
+| | `-ForStmt 0x7fd630027d30 <line:28:3, line:32:3>
+| |   |-DeclStmt 0x7fd630027a00 <line:28:8, col:27>
+| |   | `-VarDecl 0x7fd630026958 <col:8, col:24> col:18 used cur 'region_t *' cinit
+| |   |   `-ImplicitCastExpr 0x7fd6300269e0 <col:24> 'region_t *' <LValueToRValue>
+| |   |     `-DeclRefExpr 0x7fd6300269b8 <col:24> 'region_t *' lvalue ParmVar 0x7fd6300266d8 'beg' 'region_t *'
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fd630027a98 <col:29, col:35> 'int' '<'
+| |   | |-ImplicitCastExpr 0x7fd630027a68 <col:29> 'region_t *' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fd630027a18 <col:29> 'region_t *' lvalue Var 0x7fd630026958 'cur' 'region_t *'
+| |   | `-ImplicitCastExpr 0x7fd630027a80 <col:35> 'region_t *' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7fd630027a40 <col:35> 'region_t *' lvalue ParmVar 0x7fd630026748 'end' 'region_t *'
+| |   |-UnaryOperator 0x7fd630027ae8 <col:40, col:43> 'region_t *' postfix '++'
+| |   | `-DeclRefExpr 0x7fd630027ac0 <col:40> 'region_t *' lvalue Var 0x7fd630026958 'cur' 'region_t *'
+| |   `-CompoundStmt 0x7fd630027d10 <col:47, line:32:3>
+| |     `-IfStmt 0x7fd630027cd8 <line:29:5, line:31:5>
+| |       |-<<<NULL>>>
+| |       |-<<<NULL>>>
+| |       |-BinaryOperator 0x7fd630027b88 <line:29:9, col:15> 'int' '<'
+| |       | |-ImplicitCastExpr 0x7fd630027b58 <col:9> 'region_t *' <LValueToRValue>
+| |       | | `-DeclRefExpr 0x7fd630027b08 <col:9> 'region_t *' lvalue Var 0x7fd630026958 'cur' 'region_t *'
+| |       | `-ImplicitCastExpr 0x7fd630027b70 <col:15> 'region_t *' <LValueToRValue>
+| |       |   `-DeclRefExpr 0x7fd630027b30 <col:15> 'region_t *' lvalue ParmVar 0x7fd6300267b8 'limit' 'region_t *'
+| |       |-CompoundStmt 0x7fd630027cb8 <col:22, line:31:5>
+| |       | `-CallExpr 0x7fd630027c70 <line:30:7, col:14> 'void'
+| |       |   |-ImplicitCastExpr 0x7fd630027c58 <col:7> 'void (*)(region_t *)' <FunctionToPointerDecay>
+| |       |   | `-DeclRefExpr 0x7fd630027bb0 <col:7> 'void (region_t *)' Function 0x7fd630026500 'set' 'void (region_t *)'
+| |       |   `-ImplicitCastExpr 0x7fd630027ca0 <col:11> 'region_t *' <LValueToRValue>
+| |       |     `-DeclRefExpr 0x7fd630027bd8 <col:11> 'region_t *' lvalue Var 0x7fd630026958 'cur' 'region_t *'
+| |       `-<<<NULL>>>
+| `-NoInlineAttr 0x7fd630026938 <line:17:18> Inherited
+`-FunctionDecl 0x7fd630027e58 <line:35:1, line:40:1> line:36:1 main 'int (void)'
+  `-CompoundStmt 0x7fd6300283e0 <col:13, line:40:1>
+    |-CallExpr 0x7fd6300281b0 <line:37:3, col:46> 'void'
+    | |-ImplicitCastExpr 0x7fd630028198 <col:3> 'void (*)(region_t *, region_t *, region_t *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd630027f18 <col:3> 'void (region_t *, region_t *, region_t *)' Function 0x7fd630026850 'doit' 'void (region_t *, region_t *, region_t *)'
+    | |-UnaryOperator 0x7fd630027fc8 <col:8, col:18> 'region_t *' prefix '&'
+    | | `-ArraySubscriptExpr 0x7fd630027fa0 <col:9, col:18> 'region_t':'region_t' lvalue
+    | |   |-ImplicitCastExpr 0x7fd630027f88 <col:9> 'region_t *' <ArrayToPointerDecay>
+    | |   | `-DeclRefExpr 0x7fd630027f40 <col:9> 'region_t [10]' lvalue Var 0x7fd630026408 'regions' 'region_t [10]'
+    | |   `-IntegerLiteral 0x7fd630027f68 <col:17> 'int' 0
+    | |-UnaryOperator 0x7fd630028070 <col:21, col:31> 'region_t *' prefix '&'
+    | | `-ArraySubscriptExpr 0x7fd630028048 <col:22, col:31> 'region_t':'region_t' lvalue
+    | |   |-ImplicitCastExpr 0x7fd630028030 <col:22> 'region_t *' <ArrayToPointerDecay>
+    | |   | `-DeclRefExpr 0x7fd630027fe8 <col:22> 'region_t [10]' lvalue Var 0x7fd630026408 'regions' 'region_t [10]'
+    | |   `-IntegerLiteral 0x7fd630028010 <col:30> 'int' 2
+    | `-UnaryOperator 0x7fd630028118 <col:34, col:45> 'region_t *' prefix '&'
+    |   `-ArraySubscriptExpr 0x7fd6300280f0 <col:35, col:45> 'region_t':'region_t' lvalue
+    |     |-ImplicitCastExpr 0x7fd6300280d8 <col:35> 'region_t *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7fd630028090 <col:35> 'region_t [10]' lvalue Var 0x7fd630026408 'regions' 'region_t [10]'
+    |     `-IntegerLiteral 0x7fd6300280b8 <col:43> 'int' 10
+    `-IfStmt 0x7fd6300283a8 <line:38:3, line:39:11>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd6300282e8 <line:38:7, col:23> 'int' '!='
+      | |-ImplicitCastExpr 0x7fd6300282d0 <col:7, col:18> 'int' <LValueToRValue>
+      | | `-MemberExpr 0x7fd630028278 <col:7, col:18> 'int' lvalue .n 0x7fd630025c28
+      | |   `-ArraySubscriptExpr 0x7fd630028250 <col:7, col:16> 'region_t':'region_t' lvalue
+      | |     |-ImplicitCastExpr 0x7fd630028238 <col:7> 'region_t *' <ArrayToPointerDecay>
+      | |     | `-DeclRefExpr 0x7fd6300281f0 <col:7> 'region_t [10]' lvalue Var 0x7fd630026408 'regions' 'region_t [10]'
+      | |     `-IntegerLiteral 0x7fd630028218 <col:15> 'int' 1
+      | `-IntegerLiteral 0x7fd6300282b0 <col:23> 'int' 1
+      |-CallExpr 0x7fd630028380 <line:39:5, col:11> 'void'
+      | `-ImplicitCastExpr 0x7fd630028368 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fd630028310 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fd630025ac8 'abort' 'void (void) __attribute__((noreturn))'
+      `-<<<NULL>>>

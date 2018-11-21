@@ -1,0 +1,39 @@
+FileAST: 
+  Decl: link_error, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: link_error, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+        TypeDecl: g, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          UnaryOp: &
+            ID: f
+          Constant: int, 0
+      If: 
+        UnaryOp: !
+          ID: a
+        FuncCall: 
+          ID: link_error
+      Return: 
+        ID: a
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: g
+        ExprList: 
+          Constant: int, 10

@@ -1,0 +1,46 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    TypeDecl: bar, []
+      Struct: bar_t
+  Decl: a, [], [], []
+    PtrDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: p, []
+              IdentifierType: ['void']
+        ID: a
+      DoWhile: 
+        ID: p
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: p
+            BinaryOp: +
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned', 'char']
+                UnaryOp: &
+                  ID: bar
+              BinaryOp: <<
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned', 'long', 'int']
+                  Constant: int, 1L
+                Constant: int, 31

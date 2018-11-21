@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7fc7360016d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc736001c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc736001940 '__int128'
+|-TypedefDecl 0x7fc736001c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc736001960 'unsigned __int128'
+|-TypedefDecl 0x7fc736001f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc736001d70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc736001ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc736002000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc736001fc0 'char *'
+|   `-BuiltinType 0x7fc736001760 'char'
+|-TypedefDecl 0x7fc7360022c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc736002270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc7360020e0 'struct __va_list_tag'
+|     `-Record 0x7fc736002058 '__va_list_tag'
+|-RecordDecl 0x7fc736002340 <c_files/pr79179.c:13:1, line:16:1> line:13:1 struct definition
+| |-MaxFieldAlignmentAttr 0x7fc7360023f0 <<invalid sloc>> Implicit 8
+| |-FieldDecl 0x7fc736829c70 <line:14:9, col:18> col:9 'int'
+| | `-IntegerLiteral 0x7fc736829c38 <col:18> 'int' 1
+| `-FieldDecl 0x7fc736829cd0 <line:15:9, col:23> col:23 referenced a 'unsigned long'
+|-VarDecl 0x7fc736829d70 <line:13:1, line:16:3> col:3 used b 'struct (anonymous struct at c_files/pr79179.c:13:1)':'struct (anonymous at c_files/pr79179.c:13:1)'
+`-FunctionDecl 0x7fc736829ef0 <line:18:1, line:23:1> line:18:6 c 'void (void)'
+  `-CompoundStmt 0x7fc73682a370 <line:19:1, line:23:1>
+    |-BinaryOperator 0x7fc73682a020 <line:20:9, col:15> 'unsigned long' '='
+    | |-MemberExpr 0x7fc736829fb0 <col:9, col:11> 'unsigned long' lvalue .a 0x7fc736829cd0
+    | | `-DeclRefExpr 0x7fc736829f88 <col:9> 'struct (anonymous struct at c_files/pr79179.c:13:1)':'struct (anonymous at c_files/pr79179.c:13:1)' lvalue Var 0x7fc736829d70 'b' 'struct (anonymous struct at c_files/pr79179.c:13:1)':'struct (anonymous at c_files/pr79179.c:13:1)'
+    | `-ImplicitCastExpr 0x7fc73682a008 <col:15> 'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fc736829fe8 <col:15> 'int' 0
+    `-ForStmt 0x7fc73682a338 <line:21:9, line:22:17>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc73682a148 <line:21:16, col:23> 'int' '<='
+      | |-ImplicitCastExpr 0x7fc73682a118 <col:16, col:18> 'unsigned long' <LValueToRValue>
+      | | `-MemberExpr 0x7fc73682a0c0 <col:16, col:18> 'unsigned long' lvalue .a 0x7fc736829cd0
+      | |   `-DeclRefExpr 0x7fc73682a098 <col:16> 'struct (anonymous struct at c_files/pr79179.c:13:1)':'struct (anonymous at c_files/pr79179.c:13:1)' lvalue Var 0x7fc736829d70 'b' 'struct (anonymous struct at c_files/pr79179.c:13:1)':'struct (anonymous at c_files/pr79179.c:13:1)'
+      | `-ImplicitCastExpr 0x7fc73682a130 <col:23> 'unsigned long' <IntegralCast>
+      |   `-IntegerLiteral 0x7fc73682a0f8 <col:23> 'int' 45
+      |-BinaryOperator 0x7fc73682a300 <col:27, col:45> 'unsigned long' '='
+      | |-MemberExpr 0x7fc73682a198 <col:27, col:29> 'unsigned long' lvalue .a 0x7fc736829cd0
+      | | `-DeclRefExpr 0x7fc73682a170 <col:27> 'struct (anonymous struct at c_files/pr79179.c:13:1)':'struct (anonymous at c_files/pr79179.c:13:1)' lvalue Var 0x7fc736829d70 'b' 'struct (anonymous struct at c_files/pr79179.c:13:1)':'struct (anonymous at c_files/pr79179.c:13:1)'
+      | `-ImplicitCastExpr 0x7fc73682a2e8 <col:33, col:45> 'unsigned long' <IntegralCast>
+      |   `-BinaryOperator 0x7fc73682a2c0 <col:33, col:45> 'long' '+'
+      |     |-CStyleCastExpr 0x7fc73682a260 <col:33, col:41> 'long' <IntegralCast>
+      |     | `-ImplicitCastExpr 0x7fc73682a248 <col:39, col:41> 'unsigned long' <LValueToRValue>
+      |     |   `-MemberExpr 0x7fc73682a1f8 <col:39, col:41> 'unsigned long' lvalue .a 0x7fc736829cd0
+      |     |     `-DeclRefExpr 0x7fc73682a1d0 <col:39> 'struct (anonymous struct at c_files/pr79179.c:13:1)':'struct (anonymous at c_files/pr79179.c:13:1)' lvalue Var 0x7fc736829d70 'b' 'struct (anonymous struct at c_files/pr79179.c:13:1)':'struct (anonymous at c_files/pr79179.c:13:1)'
+      |     `-ImplicitCastExpr 0x7fc73682a2a8 <col:45> 'long' <IntegralCast>
+      |       `-IntegerLiteral 0x7fc73682a288 <col:45> 'int' 1
+      `-NullStmt 0x7fc73682a328 <line:22:17>

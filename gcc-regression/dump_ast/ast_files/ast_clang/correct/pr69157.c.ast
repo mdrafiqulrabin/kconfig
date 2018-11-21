@@ -1,0 +1,65 @@
+TranslationUnitDecl 0x7f82168264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8216826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8216826740 '__int128'
+|-TypedefDecl 0x7f8216826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8216826760 'unsigned __int128'
+|-TypedefDecl 0x7f8216826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8216826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8216826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8216826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8216826dc0 'char *'
+|   `-BuiltinType 0x7f8216826560 'char'
+|-TypedefDecl 0x7f82168270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8216827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8216826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8216826e58 '__va_list_tag'
+|-RecordDecl 0x7f8216827120 <c_files/pr69157.c:3:9, line:8:1> line:3:9 struct definition
+| |-FieldDecl 0x7f8217025a18 <line:4:5, col:12> col:12 referenced data_normal3f 'float *'
+| |-FieldDecl 0x7f8217025a78 <line:5:5, col:12> col:12 referenced data_texcoordtexture2f 'float *'
+| |-FieldDecl 0x7f8217025ad8 <line:6:5, col:12> col:12 referenced data_texcoordlightmap2f 'float *'
+| `-FieldDecl 0x7f8217025b38 <line:7:5, col:12> col:12 referenced data_color4f 'float *'
+|-TypedefDecl 0x7f8217025bd0 <line:3:1, line:8:3> col:3 referenced dp_model_t 'struct dp_model_t':'dp_model_t'
+| `-ElaboratedType 0x7f8217025b80 'struct dp_model_t' sugar
+|   `-RecordType 0x7f82168271b0 'dp_model_t'
+|     `-Record 0x7f8216827120 ''
+|-VarDecl 0x7f8217025c70 <line:9:1, col:12> col:12 used a 'dp_model_t':'dp_model_t'
+|-VarDecl 0x7f8217025d28 <line:10:1, col:8> col:8 used b 'float *'
+`-FunctionDecl 0x7f8217025dd8 <line:11:1, line:17:1> line:11:6 fn1 'void ()'
+  `-CompoundStmt 0x7f8217026460 <col:12, line:17:1>
+    |-DeclStmt 0x7f8217025ee8 <line:12:5, col:10>
+    | `-VarDecl 0x7f8217025e88 <col:5, col:9> col:9 used c 'int'
+    |-BinaryOperator 0x7f8217026050 <line:13:5, col:31> 'float *' '='
+    | |-MemberExpr 0x7f8217025f28 <col:5, col:7> 'float *' lvalue .data_normal3f 0x7f8217025a18
+    | | `-DeclRefExpr 0x7f8217025f00 <col:5> 'dp_model_t':'dp_model_t' lvalue Var 0x7f8217025c70 'a' 'dp_model_t':'dp_model_t'
+    | `-BinaryOperator 0x7f8217026028 <col:23, col:31> 'float *' '+'
+    |   |-ImplicitCastExpr 0x7f8217026010 <col:23> 'float *' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f8217025f60 <col:23> 'float *' lvalue Var 0x7f8217025d28 'b' 'float *'
+    |   `-BinaryOperator 0x7f8217025fe8 <col:27, col:31> 'int' '*'
+    |     |-ImplicitCastExpr 0x7f8217025fd0 <col:27> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f8217025f88 <col:27> 'int' lvalue Var 0x7f8217025e88 'c' 'int'
+    |     `-IntegerLiteral 0x7f8217025fb0 <col:31> 'int' 3
+    |-BinaryOperator 0x7f8217026200 <line:14:5, col:54> 'float *' '='
+    | |-MemberExpr 0x7f82170260a0 <col:5, col:7> 'float *' lvalue .data_texcoordtexture2f 0x7f8217025a78
+    | | `-DeclRefExpr 0x7f8217026078 <col:5> 'dp_model_t':'dp_model_t' lvalue Var 0x7f8217025c70 'a' 'dp_model_t':'dp_model_t'
+    | `-BinaryOperator 0x7f82170261d8 <col:32, col:54> 'float *' '+'
+    |   |-ImplicitCastExpr 0x7f82170261c0 <col:32, col:34> 'float *' <LValueToRValue>
+    |   | `-MemberExpr 0x7f8217026100 <col:32, col:34> 'float *' lvalue .data_normal3f 0x7f8217025a18
+    |   |   `-DeclRefExpr 0x7f82170260d8 <col:32> 'dp_model_t':'dp_model_t' lvalue Var 0x7f8217025c70 'a' 'dp_model_t':'dp_model_t'
+    |   `-BinaryOperator 0x7f8217026198 <col:50, col:54> 'int' '*'
+    |     |-ImplicitCastExpr 0x7f8217026180 <col:50> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f8217026138 <col:50> 'int' lvalue Var 0x7f8217025e88 'c' 'int'
+    |     `-IntegerLiteral 0x7f8217026160 <col:54> 'int' 3
+    `-BinaryOperator 0x7f8217026438 <line:15:5, line:16:34> 'float *' '='
+      |-MemberExpr 0x7f8217026250 <line:15:5, col:7> 'float *' lvalue .data_texcoordlightmap2f 0x7f8217025ad8
+      | `-DeclRefExpr 0x7f8217026228 <col:5> 'dp_model_t':'dp_model_t' lvalue Var 0x7f8217025c70 'a' 'dp_model_t':'dp_model_t'
+      `-BinaryOperator 0x7f8217026410 <col:33, line:16:34> 'float *' '='
+        |-MemberExpr 0x7f82170262b0 <line:15:33, col:35> 'float *' lvalue .data_color4f 0x7f8217025b38
+        | `-DeclRefExpr 0x7f8217026288 <col:33> 'dp_model_t':'dp_model_t' lvalue Var 0x7f8217025c70 'a' 'dp_model_t':'dp_model_t'
+        `-BinaryOperator 0x7f82170263e8 <line:16:2, col:34> 'float *' '+'
+          |-ImplicitCastExpr 0x7f82170263d0 <col:2, col:4> 'float *' <LValueToRValue>
+          | `-MemberExpr 0x7f8217026310 <col:2, col:4> 'float *' lvalue .data_texcoordlightmap2f 0x7f8217025ad8
+          |   `-DeclRefExpr 0x7f82170262e8 <col:2> 'dp_model_t':'dp_model_t' lvalue Var 0x7f8217025c70 'a' 'dp_model_t':'dp_model_t'
+          `-BinaryOperator 0x7f82170263a8 <col:30, col:34> 'int' '*'
+            |-ImplicitCastExpr 0x7f8217026390 <col:30> 'int' <LValueToRValue>
+            | `-DeclRefExpr 0x7f8217026348 <col:30> 'int' lvalue Var 0x7f8217025e88 'c' 'int'
+            `-IntegerLiteral 0x7f8217026370 <col:34> 'int' 2

@@ -1,0 +1,51 @@
+FileAST: 
+  Decl: data, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: data, []
+        IdentifierType: ['int']
+  Decl: i, [], ['extern'], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: buf, [], [], []
+        ArrayDecl: []
+          TypeDecl: buf, []
+            IdentifierType: ['char']
+          Constant: int, 8
+      FuncCall: 
+        ID: __builtin___memcpy_chk
+        ExprList: 
+          ID: buf
+          ID: data
+          TernaryOp: 
+            ID: i
+            Constant: int, 8
+            Constant: int, 4
+          FuncCall: 
+            ID: __builtin_object_size
+            ExprList: 
+              ID: buf
+              Constant: int, 0
+      FuncCall: 
+        ID: __builtin___memcpy_chk
+        ExprList: 
+          ID: buf
+          ID: data
+          TernaryOp: 
+            ID: i
+            Constant: int, 8
+            Constant: int, 4
+          FuncCall: 
+            ID: __builtin_object_size
+            ExprList: 
+              ID: buf
+              Constant: int, 0

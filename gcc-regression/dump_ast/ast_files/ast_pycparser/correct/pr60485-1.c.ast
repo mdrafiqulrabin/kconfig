@@ -1,0 +1,94 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: S
+      Decl: i, [], [], []
+        ArrayDecl: []
+          PtrDecl: []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Constant: int, 4
+      Decl: p1, [], [], []
+        PtrDecl: []
+          TypeDecl: p1, []
+            IdentifierType: ['int']
+      Decl: p2, [], [], []
+        PtrDecl: []
+          TypeDecl: p2, []
+            IdentifierType: ['int']
+      Decl: p3, [], [], []
+        PtrDecl: []
+          TypeDecl: p3, []
+            IdentifierType: ['int']
+      Decl: p4, [], [], []
+        PtrDecl: []
+          TypeDecl: p4, []
+            IdentifierType: ['int']
+  Decl: b, [], [], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          Struct: S
+      Assignment: =
+        StructRef: .
+          ID: s
+          ID: p3
+        UnaryOp: &
+          ID: i
+      Decl: p, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+      If: 
+        ID: b
+        Assignment: =
+          ID: p
+          ID: b
+        Assignment: =
+          ID: p
+          UnaryOp: &
+            ArrayRef: 
+              StructRef: .
+                ID: s
+                ID: i
+              Constant: int, 2
+      Assignment: +=
+        ID: p
+        Constant: int, 4
+      If: 
+        UnaryOp: !
+          ID: b
+        Assignment: =
+          UnaryOp: *
+            UnaryOp: *
+              ID: p
+          Constant: int, 0
+      If: 
+        BinaryOp: !=
+          ID: i
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      Return: 
+        ID: i

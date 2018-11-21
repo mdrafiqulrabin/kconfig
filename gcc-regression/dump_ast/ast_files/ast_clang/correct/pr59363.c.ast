@@ -1,0 +1,68 @@
+TranslationUnitDecl 0x7fa24e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa24e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa24e026740 '__int128'
+|-TypedefDecl 0x7fa24e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa24e026760 'unsigned __int128'
+|-TypedefDecl 0x7fa24e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa24e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa24e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa24e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa24e026dc0 'char *'
+|   `-BuiltinType 0x7fa24e026560 'char'
+|-TypedefDecl 0x7fa24e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa24e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa24e026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa24e026e58 '__va_list_tag'
+|-RecordDecl 0x7fa24e027120 <c_files/pr59363.c:5:9, line:12:1> line:5:9 struct definition
+| |-FieldDecl 0x7fa24e077400 <line:6:3, col:7> col:7 ctxlen 'int'
+| |-FieldDecl 0x7fa24e077460 <line:7:3, col:8> col:8 interhunkctxlen 'long'
+| |-FieldDecl 0x7fa24e0774c0 <line:8:3, col:7> col:7 flags 'int'
+| |-FieldDecl 0x7fa24e077520 <line:9:3, col:8> col:8 find_func 'long'
+| |-FieldDecl 0x7fa24e077580 <line:10:3, col:9> col:9 find_func_priv 'void *'
+| `-FieldDecl 0x7fa24e0775e0 <line:11:3, col:7> col:7 referenced hunk_func 'int'
+|-TypedefDecl 0x7fa24e077680 <line:5:1, line:12:3> col:3 referenced xdemitconf_t 'struct xdemitconf_t':'xdemitconf_t'
+| `-ElaboratedType 0x7fa24e077630 'struct xdemitconf_t' sugar
+|   `-RecordType 0x7fa24e0271b0 'xdemitconf_t'
+|     `-Record 0x7fa24e027120 ''
+|-FunctionDecl 0x7fa24e077888 <line:14:1, line:19:1> line:15:5 used xdi_diff 'int (xdemitconf_t *)'
+| |-ParmVarDecl 0x7fa24e077778 <col:14, col:28> col:28 used xecfg 'xdemitconf_t *'
+| |-CompoundStmt 0x7fa24e077ca8 <col:35, line:19:1>
+| | |-IfStmt 0x7fa24e077c38 <line:16:3, line:17:21>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fa24e077a60 <line:16:7, col:27> 'int' '=='
+| | | | |-ImplicitCastExpr 0x7fa24e077a48 <col:7, col:14> 'int' <LValueToRValue>
+| | | | | `-MemberExpr 0x7fa24e0779f0 <col:7, col:14> 'int' lvalue ->hunk_func 0x7fa24e0775e0
+| | | | |   `-ImplicitCastExpr 0x7fa24e0779d8 <col:7> 'xdemitconf_t *' <LValueToRValue>
+| | | | |     `-DeclRefExpr 0x7fa24e0779b0 <col:7> 'xdemitconf_t *' lvalue ParmVar 0x7fa24e077778 'xecfg' 'xdemitconf_t *'
+| | | | `-IntegerLiteral 0x7fa24e077a28 <col:27> 'int' 0
+| | | |-CallExpr 0x7fa24e077c10 <line:17:5, col:21> 'void'
+| | | | `-ImplicitCastExpr 0x7fa24e077bf8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | | |   `-DeclRefExpr 0x7fa24e077ba0 <col:5> '<builtin fn type>' Function 0x7fa24e077ac0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7fa24e077c90 <line:18:3, col:10>
+| |   `-IntegerLiteral 0x7fa24e077c70 <col:10> 'int' 0
+| `-NoInlineAttr 0x7fa24e077928 <line:14:16>
+|-FunctionDecl 0x7fa24e077ac0 <line:17:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fa24e077b58 <col:5> Implicit
+`-FunctionDecl 0x7fa24e077d20 <line:20:1, line:24:1> line:20:5 main 'int ()'
+  `-CompoundStmt 0x7fa24e0781a8 <col:12, line:24:1>
+    |-DeclStmt 0x7fa24e077f50 <line:21:3, col:27>
+    | `-VarDecl 0x7fa24e077dc8 <col:3, col:26> col:16 used xecfg 'xdemitconf_t':'xdemitconf_t' cinit
+    |   `-InitListExpr 0x7fa24e077e90 <col:24, col:26> 'xdemitconf_t':'xdemitconf_t'
+    |     |-IntegerLiteral 0x7fa24e077e28 <col:25> 'int' 0
+    |     |-ImplicitValueInitExpr 0x7fa24e077f00 <<invalid sloc>> 'long'
+    |     |-ImplicitValueInitExpr 0x7fa24e077f10 <<invalid sloc>> 'int'
+    |     |-ImplicitValueInitExpr 0x7fa24e077f20 <<invalid sloc>> 'long'
+    |     |-ImplicitValueInitExpr 0x7fa24e077f30 <<invalid sloc>> 'void *'
+    |     `-ImplicitValueInitExpr 0x7fa24e077f40 <<invalid sloc>> 'int'
+    |-BinaryOperator 0x7fa24e077fe8 <line:22:3, col:21> 'int' '='
+    | |-MemberExpr 0x7fa24e077f90 <col:3, col:9> 'int' lvalue .hunk_func 0x7fa24e0775e0
+    | | `-DeclRefExpr 0x7fa24e077f68 <col:3> 'xdemitconf_t':'xdemitconf_t' lvalue Var 0x7fa24e077dc8 'xecfg' 'xdemitconf_t':'xdemitconf_t'
+    | `-IntegerLiteral 0x7fa24e077fc8 <col:21> 'int' 1
+    `-ReturnStmt 0x7fa24e078190 <line:23:3, col:25>
+      `-CallExpr 0x7fa24e078160 <col:10, col:25> 'int'
+        |-ImplicitCastExpr 0x7fa24e078148 <col:10> 'int (*)(xdemitconf_t *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fa24e078080 <col:10> 'int (xdemitconf_t *)' Function 0x7fa24e077888 'xdi_diff' 'int (xdemitconf_t *)'
+        `-UnaryOperator 0x7fa24e0780d0 <col:19, col:20> 'xdemitconf_t *' prefix '&'
+          `-DeclRefExpr 0x7fa24e0780a8 <col:20> 'xdemitconf_t':'xdemitconf_t' lvalue Var 0x7fa24e077dc8 'xecfg' 'xdemitconf_t':'xdemitconf_t'

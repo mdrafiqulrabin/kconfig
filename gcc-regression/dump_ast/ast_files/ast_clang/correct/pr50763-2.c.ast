@@ -1,0 +1,84 @@
+TranslationUnitDecl 0x7fdf41823ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdf41824420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdf41824140 '__int128'
+|-TypedefDecl 0x7fdf41824490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdf41824160 'unsigned __int128'
+|-TypedefDecl 0x7fdf41824768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdf41824570 'struct __NSConstantString_tag'
+|   `-Record 0x7fdf418244e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdf41824800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdf418247c0 'char *'
+|   `-BuiltinType 0x7fdf41823f60 'char'
+|-TypedefDecl 0x7fdf41824ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdf41824a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdf418248e0 'struct __va_list_tag'
+|     `-Record 0x7fdf41824858 '__va_list_tag'
+|-RecordDecl 0x7fdf41824b20 <c_files/pr50763-2.c:4:9, col:15> col:15 union tree_node
+|-TypedefDecl 0x7fdf41874e80 <col:1, col:26> col:26 referenced tree 'union tree_node *'
+| `-PointerType 0x7fdf41874e30 'union tree_node *'
+|   `-ElaboratedType 0x7fdf41824bd0 'union tree_node' sugar
+|     `-RecordType 0x7fdf41824bb0 'union tree_node'
+|       `-Record 0x7fdf418754a8 'tree_node'
+|-RecordDecl 0x7fdf41874ef0 <line:6:1, line:9:1> line:6:8 struct tree_base definition
+| `-FieldDecl 0x7fdf41874fb8 <line:8:3, col:7> col:7 referenced code 'int'
+|-RecordDecl 0x7fdf41875000 <line:11:1, line:15:1> line:11:8 struct tree_typed definition
+| |-FieldDecl 0x7fdf41875100 <line:13:3, col:20> col:20 base 'struct tree_base':'struct tree_base'
+| `-FieldDecl 0x7fdf41875180 <line:14:3, col:8> col:8 referenced type 'tree':'union tree_node *'
+|-RecordDecl 0x7fdf41875210 <line:17:1, line:20:1> line:17:8 struct tree_common definition
+| `-FieldDecl 0x7fdf41875310 <line:19:3, col:21> col:21 typed 'struct tree_typed':'struct tree_typed'
+|-RecordDecl 0x7fdf418753a8 <line:22:1, line:25:1> line:22:8 struct tree_type_common definition
+| `-FieldDecl 0x7fdf41875460 <line:24:3, col:8> col:8 referenced main_variant 'tree':'union tree_node *'
+|-RecordDecl 0x7fdf418754a8 prev 0x7fdf41824b20 <line:27:1, line:32:1> line:27:7 union tree_node definition
+| |-FieldDecl 0x7fdf41875550 <line:29:3, col:20> col:20 referenced base 'struct tree_base':'struct tree_base'
+| |-FieldDecl 0x7fdf418755b8 <line:30:3, col:21> col:21 referenced typed 'struct tree_typed':'struct tree_typed'
+| `-FieldDecl 0x7fdf41875650 <line:31:3, col:27> col:27 referenced type_common 'struct tree_type_common':'struct tree_type_common'
+`-FunctionDecl 0x7fdf418757b8 <line:34:1, line:46:1> line:34:5 std_canonical_va_list_type 'int (tree)'
+  |-ParmVarDecl 0x7fdf418756a8 <col:33, col:38> col:38 used type 'tree':'union tree_node *'
+  `-CompoundStmt 0x7fdf41875ec0 <line:35:1, line:46:1>
+    |-IfStmt 0x7fdf41875d18 <line:36:3, line:40:26>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fdf41875948 <line:36:7, col:18> 'int' <LValueToRValue>
+    | | `-MemberExpr 0x7fdf41875910 <col:7, col:18> 'int' lvalue .code 0x7fdf41874fb8
+    | |   `-MemberExpr 0x7fdf418758d8 <col:7, col:13> 'struct tree_base':'struct tree_base' lvalue ->base 0x7fdf41875550
+    | |     `-ImplicitCastExpr 0x7fdf418758c0 <col:7> 'tree':'union tree_node *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fdf41875898 <col:7> 'tree':'union tree_node *' lvalue ParmVar 0x7fdf418756a8 'type' 'tree':'union tree_node *'
+    | |-BinaryOperator 0x7fdf41875a50 <line:37:5, col:24> 'tree':'union tree_node *' '='
+    | | |-DeclRefExpr 0x7fdf41875960 <col:5> 'tree':'union tree_node *' lvalue ParmVar 0x7fdf418756a8 'type' 'tree':'union tree_node *'
+    | | `-ImplicitCastExpr 0x7fdf41875a38 <col:12, col:24> 'tree':'union tree_node *' <LValueToRValue>
+    | |   `-MemberExpr 0x7fdf41875a00 <col:12, col:24> 'tree':'union tree_node *' lvalue .type 0x7fdf41875180
+    | |     `-MemberExpr 0x7fdf418759c8 <col:12, col:18> 'struct tree_typed':'struct tree_typed' lvalue ->typed 0x7fdf418755b8
+    | |       `-ImplicitCastExpr 0x7fdf418759b0 <col:12> 'tree':'union tree_node *' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fdf41875988 <col:12> 'tree':'union tree_node *' lvalue ParmVar 0x7fdf418756a8 'type' 'tree':'union tree_node *'
+    | `-IfStmt 0x7fdf41875ce0 <line:39:5, line:40:26>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-ImplicitCastExpr 0x7fdf41875bb0 <line:39:9, col:32> 'int' <LValueToRValue>
+    |   | `-MemberExpr 0x7fdf41875b78 <col:9, col:32> 'int' lvalue .code 0x7fdf41874fb8
+    |   |   `-MemberExpr 0x7fdf41875b40 <col:9, col:27> 'struct tree_base':'struct tree_base' lvalue ->base 0x7fdf41875550
+    |   |     `-ImplicitCastExpr 0x7fdf41875b28 <col:9, col:21> 'tree':'union tree_node *' <LValueToRValue>
+    |   |       `-MemberExpr 0x7fdf41875af0 <col:9, col:21> 'tree':'union tree_node *' lvalue .type 0x7fdf41875180
+    |   |         `-MemberExpr 0x7fdf41875ab8 <col:9, col:15> 'struct tree_typed':'struct tree_typed' lvalue ->typed 0x7fdf418755b8
+    |   |           `-ImplicitCastExpr 0x7fdf41875aa0 <col:9> 'tree':'union tree_node *' <LValueToRValue>
+    |   |             `-DeclRefExpr 0x7fdf41875a78 <col:9> 'tree':'union tree_node *' lvalue ParmVar 0x7fdf418756a8 'type' 'tree':'union tree_node *'
+    |   |-BinaryOperator 0x7fdf41875cb8 <line:40:7, col:26> 'tree':'union tree_node *' '='
+    |   | |-DeclRefExpr 0x7fdf41875bc8 <col:7> 'tree':'union tree_node *' lvalue ParmVar 0x7fdf418756a8 'type' 'tree':'union tree_node *'
+    |   | `-ImplicitCastExpr 0x7fdf41875ca0 <col:14, col:26> 'tree':'union tree_node *' <LValueToRValue>
+    |   |   `-MemberExpr 0x7fdf41875c68 <col:14, col:26> 'tree':'union tree_node *' lvalue .type 0x7fdf41875180
+    |   |     `-MemberExpr 0x7fdf41875c30 <col:14, col:20> 'struct tree_typed':'struct tree_typed' lvalue ->typed 0x7fdf418755b8
+    |   |       `-ImplicitCastExpr 0x7fdf41875c18 <col:14> 'tree':'union tree_node *' <LValueToRValue>
+    |   |         `-DeclRefExpr 0x7fdf41875bf0 <col:14> 'tree':'union tree_node *' lvalue ParmVar 0x7fdf418756a8 'type' 'tree':'union tree_node *'
+    |   `-<<<NULL>>>
+    |-IfStmt 0x7fdf41875e50 <line:42:3, line:43:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fdf41875e00 <line:42:7, col:25> 'tree':'union tree_node *' <LValueToRValue>
+    | | `-MemberExpr 0x7fdf41875dc8 <col:7, col:25> 'tree':'union tree_node *' lvalue .main_variant 0x7fdf41875460
+    | |   `-MemberExpr 0x7fdf41875d90 <col:7, col:13> 'struct tree_type_common':'struct tree_type_common' lvalue ->type_common 0x7fdf41875650
+    | |     `-ImplicitCastExpr 0x7fdf41875d78 <col:7> 'tree':'union tree_node *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fdf41875d50 <col:7> 'tree':'union tree_node *' lvalue ParmVar 0x7fdf418756a8 'type' 'tree':'union tree_node *'
+    | |-ReturnStmt 0x7fdf41875e38 <line:43:5, col:12>
+    | | `-IntegerLiteral 0x7fdf41875e18 <col:12> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fdf41875ea8 <line:45:3, col:10>
+      `-IntegerLiteral 0x7fdf41875e88 <col:10> 'int' 0

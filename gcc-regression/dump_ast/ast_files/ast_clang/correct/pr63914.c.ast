@@ -1,0 +1,142 @@
+TranslationUnitDecl 0x7fd7020124d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd702012a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd702012740 '__int128'
+|-TypedefDecl 0x7fd702012a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd702012760 'unsigned __int128'
+|-TypedefDecl 0x7fd702012d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd702012b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd702012ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd702012e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd702012dc0 'char *'
+|   `-BuiltinType 0x7fd702012560 'char'
+|-TypedefDecl 0x7fd7020130c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd702013070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd702012ee0 'struct __va_list_tag'
+|     `-Record 0x7fd702012e58 '__va_list_tag'
+|-TypedefDecl 0x7fd702013178 <c_files/pr63914.c:8:1, col:15> col:15 referenced __m128 '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7fd702013140 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7fd7020126c0 'float'
+|-VarDecl 0x7fd702064400 <line:9:1, col:8> col:8 used a '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-VarDecl 0x7fd7020644b0 <col:1, col:11> col:11 used d '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-VarDecl 0x7fd702064520 <col:1, col:14> col:14 used e '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-VarDecl 0x7fd7020645b8 <line:10:1, col:5> col:5 used b 'int'
+|-RecordDecl 0x7fd702064618 <line:11:1, col:8> col:8 struct dt_interpolation
+|-VarDecl 0x7fd702064710 <col:1, col:25> col:25 used c 'struct dt_interpolation':'struct dt_interpolation'
+|-FunctionDecl 0x7fd7020648a0 <line:12:1, line:16:1> line:13:1 used fn1 '__m128 (float)'
+| |-ParmVarDecl 0x7fd7020647a0 <col:6, col:12> col:12 used p1 'float'
+| `-CompoundStmt 0x7fd702064b60 <line:14:1, line:16:1>
+|   `-ReturnStmt 0x7fd702064b48 <line:15:3, col:71>
+|     `-ImplicitCastExpr 0x7fd702064b30 <col:10, col:71> '__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|       `-CompoundLiteralExpr 0x7fd702064b08 <col:10, col:71> '__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue
+|         `-InitListExpr 0x7fd702064a60 <col:66, col:71> '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|           `-ImplicitCastExpr 0x7fd702064ac0 <col:68> 'float' <LValueToRValue>
+|             `-DeclRefExpr 0x7fd7020649f0 <col:68> 'float' lvalue ParmVar 0x7fd7020647a0 'p1' 'float'
+|-FunctionDecl 0x7fd702064c20 <line:17:1, line:21:1> line:18:1 used fn2 '__m128 (float)'
+| |-ParmVarDecl 0x7fd702064b98 <col:6, col:12> col:12 used p1 'float'
+| `-CompoundStmt 0x7fd702064de0 <line:19:1, line:21:1>
+|   `-ReturnStmt 0x7fd702064dc8 <line:20:3, col:17>
+|     `-CallExpr 0x7fd702064d80 <col:10, col:17> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|       |-ImplicitCastExpr 0x7fd702064d68 <col:10> '__m128 (*)(float)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fd702064cc0 <col:10> '__m128 (float)' Function 0x7fd7020648a0 'fn1' '__m128 (float)'
+|       `-ImplicitCastExpr 0x7fd702064db0 <col:15> 'float' <LValueToRValue>
+|         `-DeclRefExpr 0x7fd702064ce8 <col:15> 'float' lvalue ParmVar 0x7fd702064b98 'p1' 'float'
+|-RecordDecl 0x7fd702064e00 prev 0x7fd702064618 <line:22:1, line:25:1> line:22:8 struct dt_interpolation definition
+| `-FieldDecl 0x7fd702064ea0 <line:24:3, col:7> col:7 referenced width 'int'
+|-FunctionDecl 0x7fd702065120 <line:26:1, line:33:1> line:27:1 used fn3 'void (struct dt_interpolation *, int *)'
+| |-ParmVarDecl 0x7fd702064f70 <col:6, col:31> col:31 used p1 'struct dt_interpolation *'
+| |-ParmVarDecl 0x7fd702065010 <col:35, col:40> col:40 used p2 'int *'
+| `-CompoundStmt 0x7fd7020665e8 <line:28:1, line:33:1>
+|   |-DeclStmt 0x7fd702065310 <line:29:3, col:19>
+|   | |-VarDecl 0x7fd7020651e0 <col:3, col:11> col:7 used i 'int' cinit
+|   | | `-IntegerLiteral 0x7fd702065240 <col:11> 'int' 0
+|   | `-VarDecl 0x7fd702065278 <col:3, col:18> col:14 used n 'int' cinit
+|   |   `-IntegerLiteral 0x7fd7020652d8 <col:18> 'int' 0
+|   |-WhileStmt 0x7fd702066500 <line:30:3, line:31:10>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fd702066440 <line:30:10, col:22> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fd702066428 <col:10> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fd702065328 <col:10> 'int' lvalue Var 0x7fd7020651e0 'i' 'int'
+|   | | `-BinaryOperator 0x7fd702066400 <col:14, col:22> 'int' '*'
+|   | |   |-IntegerLiteral 0x7fd702065350 <col:14> 'int' 2
+|   | |   `-ImplicitCastExpr 0x7fd7020653e8 <col:18, col:22> 'int' <LValueToRValue>
+|   | |     `-MemberExpr 0x7fd7020653b0 <col:18, col:22> 'int' lvalue ->width 0x7fd702064ea0
+|   | |       `-ImplicitCastExpr 0x7fd702065398 <col:18> 'struct dt_interpolation *' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x7fd702065370 <col:18> 'struct dt_interpolation *' lvalue ParmVar 0x7fd702064f70 'p1' 'struct dt_interpolation *'
+|   | `-BinaryOperator 0x7fd7020664d8 <line:31:5, col:10> 'int' '='
+|   |   |-DeclRefExpr 0x7fd702066468 <col:5> 'int' lvalue Var 0x7fd702065278 'n' 'int'
+|   |   `-UnaryOperator 0x7fd7020664b8 <col:9, col:10> 'int' postfix '++'
+|   |     `-DeclRefExpr 0x7fd702066490 <col:9> 'int' lvalue Var 0x7fd7020651e0 'i' 'int'
+|   `-BinaryOperator 0x7fd7020665c0 <line:32:3, col:9> 'int' '='
+|     |-UnaryOperator 0x7fd702066560 <col:3, col:4> 'int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fd702066548 <col:4> 'int *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd702066520 <col:4> 'int *' lvalue ParmVar 0x7fd702065010 'p2' 'int *'
+|     `-ImplicitCastExpr 0x7fd7020665a8 <col:9> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd702066580 <col:9> 'int' lvalue Var 0x7fd702065278 'n' 'int'
+`-FunctionDecl 0x7fd702066668 <line:34:1, line:49:1> line:35:1 fn4 'void ()'
+  `-CompoundStmt 0x7fd702067258 <line:36:1, line:49:1>
+    |-DeclStmt 0x7fd702066770 <line:37:3, col:11>
+    | `-VarDecl 0x7fd702066710 <col:3, col:10> col:10 used f '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    |-CallExpr 0x7fd7020668b0 <line:38:3, col:14> 'void'
+    | |-ImplicitCastExpr 0x7fd702066898 <col:3> 'void (*)(struct dt_interpolation *, int *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd702066788 <col:3> 'void (struct dt_interpolation *, int *)' Function 0x7fd702065120 'fn3' 'void (struct dt_interpolation *, int *)'
+    | |-UnaryOperator 0x7fd7020667d8 <col:8, col:9> 'struct dt_interpolation *' prefix '&'
+    | | `-DeclRefExpr 0x7fd7020667b0 <col:9> 'struct dt_interpolation':'struct dt_interpolation' lvalue Var 0x7fd702064710 'c' 'struct dt_interpolation':'struct dt_interpolation'
+    | `-UnaryOperator 0x7fd702066820 <col:12, col:13> 'int *' prefix '&'
+    |   `-DeclRefExpr 0x7fd7020667f8 <col:13> 'int' lvalue Var 0x7fd7020645b8 'b' 'int'
+    |-DeclStmt 0x7fd702066a68 <line:39:3, col:27>
+    | `-VarDecl 0x7fd7020668f8 <col:3, col:26> col:10 used g '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+    |   `-CallExpr 0x7fd702066a38 <col:14, col:26> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    |     |-ImplicitCastExpr 0x7fd702066a20 <col:14> '__m128 (*)(float)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fd702066958 <col:14> '__m128 (float)' Function 0x7fd702064c20 'fn2' '__m128 (float)'
+    |     `-BinaryOperator 0x7fd7020669f8 <col:19, col:25> 'float' '/'
+    |       |-FloatingLiteral 0x7fd702066980 <col:19> 'float' 1.000000e+00
+    |       `-ImplicitCastExpr 0x7fd7020669e0 <col:25> 'float' <IntegralToFloating>
+    |         `-ImplicitCastExpr 0x7fd7020669c8 <col:25> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fd7020669a0 <col:25> 'int' lvalue Var 0x7fd7020645b8 'b' 'int'
+    |-BinaryOperator 0x7fd702066bd8 <line:40:3, col:16> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+    | |-DeclRefExpr 0x7fd702066a80 <col:3> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fd702064520 'e' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    | `-ImplicitCastExpr 0x7fd702066bc0 <col:7, col:16> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+    |   `-CompoundLiteralExpr 0x7fd702066b98 <col:7, col:16> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue
+    |     `-InitListExpr 0x7fd702066af8 <col:15, col:16> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    |-DeclStmt 0x7fd702066cb0 <line:41:3, col:15>
+    | `-VarDecl 0x7fd702066c10 <col:3, col:14> col:10 used h '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+    |   `-ImplicitCastExpr 0x7fd702066c98 <col:14> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fd702066c70 <col:14> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fd702064520 'e' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    |-ForStmt 0x7fd702067128 <line:42:3, line:47:5>
+    | |-DeclStmt 0x7fd702066d60 <line:42:8, col:17>
+    | | `-VarDecl 0x7fd702066ce0 <col:8, col:16> col:12 used i 'int' cinit
+    | |   `-IntegerLiteral 0x7fd702066d40 <col:16> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd702066e78 <col:19, col:29> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fd702066e60 <col:19> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fd702066d78 <col:19> 'int' lvalue Var 0x7fd702066ce0 'i' 'int'
+    | | `-BinaryOperator 0x7fd702066e38 <col:23, col:29> 'int' '*'
+    | |   |-IntegerLiteral 0x7fd702066da0 <col:23> 'int' 2
+    | |   `-ImplicitCastExpr 0x7fd702066e20 <col:27, col:29> 'int' <LValueToRValue>
+    | |     `-MemberExpr 0x7fd702066de8 <col:27, col:29> 'int' lvalue .width 0x7fd702064ea0
+    | |       `-DeclRefExpr 0x7fd702066dc0 <col:27> 'struct dt_interpolation':'struct dt_interpolation' lvalue Var 0x7fd702064710 'c' 'struct dt_interpolation':'struct dt_interpolation'
+    | |-UnaryOperator 0x7fd702066f10 <col:36, col:37> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fd702066ee8 <col:36> 'int' lvalue Var 0x7fd702066ce0 'i' 'int'
+    | `-CompoundStmt 0x7fd702067100 <line:43:5, line:47:5>
+    |   |-ForStmt 0x7fd702067038 <line:44:7, line:45:6>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-ImplicitCastExpr 0x7fd702066f90 <line:44:14, col:16> 'int' <LValueToRValue>
+    |   | | `-MemberExpr 0x7fd702066f58 <col:14, col:16> 'int' lvalue .width 0x7fd702064ea0
+    |   | |   `-DeclRefExpr 0x7fd702066f30 <col:14> 'struct dt_interpolation':'struct dt_interpolation' lvalue Var 0x7fd702064710 'c' 'struct dt_interpolation':'struct dt_interpolation'
+    |   | |-<<<NULL>>>
+    |   | `-BinaryOperator 0x7fd702067010 <line:45:2, col:6> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+    |   |   |-DeclRefExpr 0x7fd702066fa8 <col:2> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fd702066710 'f' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    |   |   `-ImplicitCastExpr 0x7fd702066ff8 <col:6> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7fd702066fd0 <col:6> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fd702064400 'a' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    |   `-BinaryOperator 0x7fd7020670d8 <line:46:7, col:11> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+    |     |-DeclRefExpr 0x7fd702067070 <col:7> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fd702066c10 'h' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    |     `-ImplicitCastExpr 0x7fd7020670c0 <col:11> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd702067098 <col:11> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fd702066710 'f' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    `-BinaryOperator 0x7fd702067230 <line:48:3, col:11> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+      |-DeclRefExpr 0x7fd702067160 <col:3> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fd7020644b0 'd' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+      `-BinaryOperator 0x7fd702067208 <col:7, col:11> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '*'
+        |-ImplicitCastExpr 0x7fd7020671d8 <col:7> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+        | `-DeclRefExpr 0x7fd702067188 <col:7> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fd702066c10 'h' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+        `-ImplicitCastExpr 0x7fd7020671f0 <col:11> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+          `-DeclRefExpr 0x7fd7020671b0 <col:11> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fd7020668f8 'g' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'

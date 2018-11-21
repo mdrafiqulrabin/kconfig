@@ -1,0 +1,10 @@
+FileAST: 
+  FuncDef: 
+    Decl: get_c_string, [], [], []
+      FuncDecl: 
+        PtrDecl: []
+          TypeDecl: get_c_string, []
+            IdentifierType: ['char']
+    Compound: 
+      Return: 
+        Constant: string, "c_string"

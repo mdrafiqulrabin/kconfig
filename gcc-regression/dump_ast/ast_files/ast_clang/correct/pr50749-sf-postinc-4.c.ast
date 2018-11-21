@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7fa68f8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa68f826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa68f826740 '__int128'
+|-TypedefDecl 0x7fa68f826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa68f826760 'unsigned __int128'
+|-TypedefDecl 0x7fa68f826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa68f826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa68f826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa68f826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa68f826dc0 'char *'
+|   `-BuiltinType 0x7fa68f826560 'char'
+|-TypedefDecl 0x7fa68f8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa68f827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa68f826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa68f826e58 '__va_list_tag'
+`-FunctionDecl 0x7fa68f8774d8 <c_files/pr50749-sf-postinc-4.c:7:1, line:18:1> line:8:1 test_func_00 'float (float *, int)'
+  |-ParmVarDecl 0x7fa68f827160 <col:15, col:22> col:22 used p 'float *'
+  |-ParmVarDecl 0x7fa68f877400 <col:25, col:29> col:29 used c 'int'
+  `-CompoundStmt 0x7fa68f877a18 <line:9:1, line:18:1>
+    |-DeclStmt 0x7fa68f877670 <line:10:3, col:14>
+    | `-VarDecl 0x7fa68f8775d8 <col:3, col:13> col:9 used r 'float' cinit
+    |   `-ImplicitCastExpr 0x7fa68f877658 <col:13> 'float' <IntegralToFloating>
+    |     `-IntegerLiteral 0x7fa68f877638 <col:13> 'int' 0
+    |-DoStmt 0x7fa68f8779a0 <line:11:3, line:16:15>
+    | |-CompoundStmt 0x7fa68f877928 <line:12:3, line:16:3>
+    | | |-CompoundAssignOperator 0x7fa68f877730 <line:13:5, col:12> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+    | | | |-DeclRefExpr 0x7fa68f877688 <col:5> 'float' lvalue Var 0x7fa68f8775d8 'r' 'float'
+    | | | `-ImplicitCastExpr 0x7fa68f877718 <col:10, col:12> 'float' <LValueToRValue>
+    | | |   `-UnaryOperator 0x7fa68f8776f8 <col:10, col:12> 'float' lvalue prefix '*'
+    | | |     `-UnaryOperator 0x7fa68f8776d8 <col:11, col:12> 'float *' postfix '++'
+    | | |       `-DeclRefExpr 0x7fa68f8776b0 <col:11> 'float *' lvalue ParmVar 0x7fa68f827160 'p' 'float *'
+    | | |-CompoundAssignOperator 0x7fa68f877810 <line:14:5, col:12> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+    | | | |-DeclRefExpr 0x7fa68f877768 <col:5> 'float' lvalue Var 0x7fa68f8775d8 'r' 'float'
+    | | | `-ImplicitCastExpr 0x7fa68f8777f8 <col:10, col:12> 'float' <LValueToRValue>
+    | | |   `-UnaryOperator 0x7fa68f8777d8 <col:10, col:12> 'float' lvalue prefix '*'
+    | | |     `-UnaryOperator 0x7fa68f8777b8 <col:11, col:12> 'float *' postfix '++'
+    | | |       `-DeclRefExpr 0x7fa68f877790 <col:11> 'float *' lvalue ParmVar 0x7fa68f827160 'p' 'float *'
+    | | `-CompoundAssignOperator 0x7fa68f8778f0 <line:15:5, col:12> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+    | |   |-DeclRefExpr 0x7fa68f877848 <col:5> 'float' lvalue Var 0x7fa68f8775d8 'r' 'float'
+    | |   `-ImplicitCastExpr 0x7fa68f8778d8 <col:10, col:12> 'float' <LValueToRValue>
+    | |     `-UnaryOperator 0x7fa68f8778b8 <col:10, col:12> 'float' lvalue prefix '*'
+    | |       `-UnaryOperator 0x7fa68f877898 <col:11, col:12> 'float *' postfix '++'
+    | |         `-DeclRefExpr 0x7fa68f877870 <col:11> 'float *' lvalue ParmVar 0x7fa68f827160 'p' 'float *'
+    | `-UnaryOperator 0x7fa68f877980 <line:16:12, col:14> 'int' prefix '--'
+    |   `-DeclRefExpr 0x7fa68f877958 <col:14> 'int' lvalue ParmVar 0x7fa68f877400 'c' 'int'
+    `-ReturnStmt 0x7fa68f877a00 <line:17:3, col:10>
+      `-ImplicitCastExpr 0x7fa68f8779e8 <col:10> 'float' <LValueToRValue>
+        `-DeclRefExpr 0x7fa68f8779c0 <col:10> 'float' lvalue Var 0x7fa68f8775d8 'r' 'float'

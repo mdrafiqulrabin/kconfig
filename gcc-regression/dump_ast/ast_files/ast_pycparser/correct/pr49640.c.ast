@@ -1,0 +1,231 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: N, [], [], []
+            TypeDecl: N, []
+              IdentifierType: ['int']
+          Decl: M, [], [], []
+            TypeDecl: M, []
+              IdentifierType: ['int']
+          Decl: K, [], [], []
+            TypeDecl: K, []
+              IdentifierType: ['int']
+          Decl: P, [], [], []
+            TypeDecl: P, []
+              IdentifierType: ['int']
+          Decl: Q, [], [], []
+            TypeDecl: Q, []
+              IdentifierType: ['int']
+          Decl: R, [], [], []
+            TypeDecl: R, []
+              IdentifierType: ['int']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['int']
+          Decl: x, [], [], []
+            ArrayDecl: []
+              ArrayDecl: []
+                ArrayDecl: []
+                  TypeDecl: x, []
+                    IdentifierType: ['unsigned', 'char']
+                  ID: R
+                ID: Q
+              ID: P
+          Decl: y, [], [], []
+            ArrayDecl: []
+              ArrayDecl: []
+                ArrayDecl: []
+                  TypeDecl: y, []
+                    IdentifierType: ['int']
+                  ID: K
+                ID: M
+              ID: N
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: ii, [], [], []
+        TypeDecl: ii, []
+          IdentifierType: ['int']
+      Decl: jj, [], [], []
+        TypeDecl: jj, []
+          IdentifierType: ['int']
+      Decl: kk, [], [], []
+        TypeDecl: kk, []
+          IdentifierType: ['int']
+      Pragma: omp parallel for private(ii,jj,kk)
+      For: 
+        Assignment: =
+          ID: ii
+          Constant: int, 0
+        BinaryOp: <
+          ID: ii
+          ID: P
+        UnaryOp: ++
+          ID: ii
+        For: 
+          Assignment: =
+            ID: jj
+            Constant: int, 0
+          BinaryOp: <
+            ID: jj
+            ID: Q
+          UnaryOp: ++
+            ID: jj
+          For: 
+            Assignment: =
+              ID: kk
+              Constant: int, 0
+            BinaryOp: <
+              ID: kk
+              ID: R
+            UnaryOp: ++
+              ID: kk
+            Assignment: =
+              ArrayRef: 
+                ArrayRef: 
+                  ArrayRef: 
+                    ID: y
+                    BinaryOp: +
+                      ID: i
+                      ID: ii
+                  BinaryOp: +
+                    ID: j
+                    ID: jj
+                BinaryOp: +
+                  ID: k
+                  ID: kk
+              ArrayRef: 
+                ArrayRef: 
+                  ArrayRef: 
+                    ID: x
+                    ID: ii
+                  ID: jj
+                ID: kk
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: N, [], [], []
+            TypeDecl: N, []
+              IdentifierType: ['int']
+          Decl: M, [], [], []
+            TypeDecl: M, []
+              IdentifierType: ['int']
+          Decl: K, [], [], []
+            TypeDecl: K, []
+              IdentifierType: ['int']
+          Decl: P, [], [], []
+            TypeDecl: P, []
+              IdentifierType: ['int']
+          Decl: Q, [], [], []
+            TypeDecl: Q, []
+              IdentifierType: ['int']
+          Decl: R, [], [], []
+            TypeDecl: R, []
+              IdentifierType: ['int']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['int']
+          Decl: x, [], [], []
+            ArrayDecl: []
+              ArrayDecl: []
+                ArrayDecl: []
+                  TypeDecl: x, []
+                    IdentifierType: ['unsigned', 'char']
+                  ID: R
+                ID: Q
+              ID: P
+          Decl: y, [], [], []
+            ArrayDecl: []
+              ArrayDecl: []
+                ArrayDecl: []
+                  TypeDecl: y, []
+                    IdentifierType: ['float']
+                  ID: K
+                ID: M
+              ID: N
+          Decl: factor, [], [], []
+            TypeDecl: factor, []
+              IdentifierType: ['float']
+          Decl: zero, [], [], []
+            TypeDecl: zero, []
+              IdentifierType: ['float']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: ii, [], [], []
+        TypeDecl: ii, []
+          IdentifierType: ['int']
+      Decl: jj, [], [], []
+        TypeDecl: jj, []
+          IdentifierType: ['int']
+      Decl: kk, [], [], []
+        TypeDecl: kk, []
+          IdentifierType: ['int']
+      Pragma: omp parallel for private(ii,jj,kk)
+      For: 
+        Assignment: =
+          ID: ii
+          Constant: int, 0
+        BinaryOp: <
+          ID: ii
+          ID: P
+        UnaryOp: ++
+          ID: ii
+        For: 
+          Assignment: =
+            ID: jj
+            Constant: int, 0
+          BinaryOp: <
+            ID: jj
+            ID: Q
+          UnaryOp: ++
+            ID: jj
+          For: 
+            Assignment: =
+              ID: kk
+              Constant: int, 0
+            BinaryOp: <
+              ID: kk
+              ID: R
+            UnaryOp: ++
+              ID: kk
+            Assignment: =
+              ArrayRef: 
+                ArrayRef: 
+                  ArrayRef: 
+                    ID: y
+                    BinaryOp: +
+                      ID: i
+                      ID: ii
+                  BinaryOp: +
+                    ID: j
+                    ID: jj
+                BinaryOp: +
+                  ID: k
+                  ID: kk
+              BinaryOp: +
+                BinaryOp: *
+                  ID: factor
+                  ArrayRef: 
+                    ArrayRef: 
+                      ArrayRef: 
+                        ID: x
+                        ID: ii
+                      ID: jj
+                    ID: kk
+                ID: zero

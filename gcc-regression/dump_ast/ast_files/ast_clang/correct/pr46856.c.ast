@@ -1,0 +1,88 @@
+TranslationUnitDecl 0x7f953e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f953e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f953e026740 '__int128'
+|-TypedefDecl 0x7f953e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f953e026760 'unsigned __int128'
+|-TypedefDecl 0x7f953e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f953e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f953e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f953e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f953e026dc0 'char *'
+|   `-BuiltinType 0x7f953e026560 'char'
+|-TypedefDecl 0x7f953e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f953e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f953e026ee0 'struct __va_list_tag'
+|     `-Record 0x7f953e026e58 '__va_list_tag'
+|-RecordDecl 0x7f953e027120 <c_files/pr46856.c:1:1, line:4:1> line:1:8 struct data definition
+| |-FieldDecl 0x7f953e825a00 <line:2:5, col:9> col:9 referenced prio 'int'
+| `-FieldDecl 0x7f953e825a60 <line:3:5, col:17> col:17 referenced status 'signed char'
+|-RecordDecl 0x7f953e825aa8 <line:6:1, line:9:1> line:6:8 struct base definition
+| |-FieldDecl 0x7f953e825b68 <line:7:5, col:14> col:14 _num 'unsigned int'
+| `-FieldDecl 0x7f953e825cf8 <line:8:5, col:23> col:17 referenced vec 'struct data [10]'
+|-FunctionDecl 0x7f953e825ff8 <line:11:1, line:14:1> line:11:21 used ix 'struct data *(struct base *, unsigned int)' static
+| |-ParmVarDecl 0x7f953e825df0 <col:24, col:37> col:37 used base 'struct base *'
+| |-ParmVarDecl 0x7f953e825e68 <col:43, col:52> col:52 used i 'unsigned int'
+| `-CompoundStmt 0x7f953e826210 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7f953e8261f8 <line:13:5, col:24>
+|     `-UnaryOperator 0x7f953e8261d8 <col:12, col:24> 'struct data *' prefix '&'
+|       `-ArraySubscriptExpr 0x7f953e8261b0 <col:13, col:24> 'struct data':'struct data' lvalue
+|         |-ImplicitCastExpr 0x7f953e826180 <col:13, col:19> 'struct data *' <ArrayToPointerDecay>
+|         | `-MemberExpr 0x7f953e826120 <col:13, col:19> 'struct data [10]' lvalue ->vec 0x7f953e825cf8
+|         |   `-ImplicitCastExpr 0x7f953e826108 <col:13> 'struct base *' <LValueToRValue>
+|         |     `-DeclRefExpr 0x7f953e8260e0 <col:13> 'struct base *' lvalue ParmVar 0x7f953e825df0 'base' 'struct base *'
+|         `-ImplicitCastExpr 0x7f953e826198 <col:23> 'unsigned int' <LValueToRValue>
+|           `-DeclRefExpr 0x7f953e826158 <col:23> 'unsigned int' lvalue ParmVar 0x7f953e825e68 'i' 'unsigned int'
+|-RecordDecl 0x7f953e826230 <line:16:1, line:18:1> line:16:8 struct heap definition
+| `-FieldDecl 0x7f953e826300 <line:17:5, col:17> col:17 referenced base 'struct base':'struct base'
+|-VarDecl 0x7f953e826450 <line:20:1, col:14> col:14 used heap 'struct heap *'
+`-FunctionDecl 0x7f953e826640 <line:22:1, line:26:1> line:22:6 increase_insn_priority 'void (int *, int)'
+  |-ParmVarDecl 0x7f953e8264f0 <col:30, col:35> col:35 used fld 'int *'
+  |-ParmVarDecl 0x7f953e826568 <col:40, col:44> col:44 used amount 'int'
+  `-CompoundStmt 0x7f953e82bf70 <line:23:1, line:26:1>
+    `-IfStmt 0x7f953e82bf38 <line:24:5, line:25:44>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f953e82bc18 <line:24:9, col:52> 'int' '>'
+      | |-ImplicitCastExpr 0x7f953e82bc00 <col:9, col:43> 'int' <IntegralCast>
+      | | `-ImplicitCastExpr 0x7f953e8269e0 <col:9, col:43> 'signed char' <LValueToRValue>
+      | |   `-MemberExpr 0x7f953e826988 <col:9, col:43> 'signed char' lvalue ->status 0x7f953e825a60
+      | |     `-CallExpr 0x7f953e826920 <col:9, col:40> 'struct data *'
+      | |       |-ImplicitCastExpr 0x7f953e826908 <col:9> 'struct data *(*)(struct base *, unsigned int)' <FunctionToPointerDecay>
+      | |       | `-DeclRefExpr 0x7f953e8266e8 <col:9> 'struct data *(struct base *, unsigned int)' Function 0x7f953e825ff8 'ix' 'struct data *(struct base *, unsigned int)'
+      | |       |-ConditionalOperator 0x7f953e826820 <col:12, col:33> 'struct base *'
+      | |       | |-ImplicitCastExpr 0x7f953e8267f0 <col:12> 'struct heap *' <LValueToRValue>
+      | |       | | `-DeclRefExpr 0x7f953e826710 <col:12> 'struct heap *' lvalue Var 0x7f953e826450 'heap' 'struct heap *'
+      | |       | |-UnaryOperator 0x7f953e8267b0 <col:19, col:26> 'struct base *' prefix '&'
+      | |       | | `-MemberExpr 0x7f953e826778 <col:20, col:26> 'struct base':'struct base' lvalue ->base 0x7f953e826300
+      | |       | |   `-ImplicitCastExpr 0x7f953e826760 <col:20> 'struct heap *' <LValueToRValue>
+      | |       | |     `-DeclRefExpr 0x7f953e826738 <col:20> 'struct heap *' lvalue Var 0x7f953e826450 'heap' 'struct heap *'
+      | |       | `-ImplicitCastExpr 0x7f953e826808 <col:33> 'struct base *' <NullToPointer>
+      | |       |   `-IntegerLiteral 0x7f953e8267d0 <col:33> 'int' 0
+      | |       `-ImplicitCastExpr 0x7f953e826970 <col:36, col:37> 'unsigned int' <IntegralCast>
+      | |         `-ImplicitCastExpr 0x7f953e826958 <col:36, col:37> 'int' <LValueToRValue>
+      | |           `-UnaryOperator 0x7f953e826890 <col:36, col:37> 'int' lvalue prefix '*'
+      | |             `-ImplicitCastExpr 0x7f953e826878 <col:37> 'int *' <LValueToRValue>
+      | |               `-DeclRefExpr 0x7f953e826850 <col:37> 'int *' lvalue ParmVar 0x7f953e8264f0 'fld' 'int *'
+      | `-IntegerLiteral 0x7f953e8269c0 <col:52> 'int' 0
+      |-CompoundAssignOperator 0x7f953e82bf00 <line:25:2, col:44> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+      | |-MemberExpr 0x7f953e82be88 <col:2, col:36> 'int' lvalue ->prio 0x7f953e825a00
+      | | `-CallExpr 0x7f953e82be20 <col:2, col:33> 'struct data *'
+      | |   |-ImplicitCastExpr 0x7f953e82be08 <col:2> 'struct data *(*)(struct base *, unsigned int)' <FunctionToPointerDecay>
+      | |   | `-DeclRefExpr 0x7f953e82bc40 <col:2> 'struct data *(struct base *, unsigned int)' Function 0x7f953e825ff8 'ix' 'struct data *(struct base *, unsigned int)'
+      | |   |-ConditionalOperator 0x7f953e82bd78 <col:5, col:26> 'struct base *'
+      | |   | |-ImplicitCastExpr 0x7f953e82bd48 <col:5> 'struct heap *' <LValueToRValue>
+      | |   | | `-DeclRefExpr 0x7f953e82bc68 <col:5> 'struct heap *' lvalue Var 0x7f953e826450 'heap' 'struct heap *'
+      | |   | |-UnaryOperator 0x7f953e82bd08 <col:12, col:19> 'struct base *' prefix '&'
+      | |   | | `-MemberExpr 0x7f953e82bcd0 <col:13, col:19> 'struct base':'struct base' lvalue ->base 0x7f953e826300
+      | |   | |   `-ImplicitCastExpr 0x7f953e82bcb8 <col:13> 'struct heap *' <LValueToRValue>
+      | |   | |     `-DeclRefExpr 0x7f953e82bc90 <col:13> 'struct heap *' lvalue Var 0x7f953e826450 'heap' 'struct heap *'
+      | |   | `-ImplicitCastExpr 0x7f953e82bd60 <col:26> 'struct base *' <NullToPointer>
+      | |   |   `-IntegerLiteral 0x7f953e82bd28 <col:26> 'int' 0
+      | |   `-ImplicitCastExpr 0x7f953e82be70 <col:29, col:30> 'unsigned int' <IntegralCast>
+      | |     `-ImplicitCastExpr 0x7f953e82be58 <col:29, col:30> 'int' <LValueToRValue>
+      | |       `-UnaryOperator 0x7f953e82bde8 <col:29, col:30> 'int' lvalue prefix '*'
+      | |         `-ImplicitCastExpr 0x7f953e82bdd0 <col:30> 'int *' <LValueToRValue>
+      | |           `-DeclRefExpr 0x7f953e82bda8 <col:30> 'int *' lvalue ParmVar 0x7f953e8264f0 'fld' 'int *'
+      | `-ImplicitCastExpr 0x7f953e82bee8 <col:44> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f953e82bec0 <col:44> 'int' lvalue ParmVar 0x7f953e826568 'amount' 'int'
+      `-<<<NULL>>>

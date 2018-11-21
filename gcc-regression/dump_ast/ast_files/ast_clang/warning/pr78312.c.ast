@@ -1,0 +1,74 @@
+c_files/pr78312.c:7:31: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+u16 __attribute__ ((noinline, noclone))
+                              ^
+1 warning generated.
+TranslationUnitDecl 0x7fcdf10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcdf1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcdf1026740 '__int128'
+|-TypedefDecl 0x7fcdf1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcdf1026760 'unsigned __int128'
+|-TypedefDecl 0x7fcdf1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcdf1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcdf1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcdf1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcdf1026dc0 'char *'
+|   `-BuiltinType 0x7fcdf1026560 'char'
+|-TypedefDecl 0x7fcdf10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcdf1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcdf1026ee0 'struct __va_list_tag'
+|     `-Record 0x7fcdf1026e58 '__va_list_tag'
+|-TypedefDecl 0x7fcdf1027138 <c_files/pr78312.c:3:1, col:24> col:24 referenced u16 'unsigned short'
+| `-BuiltinType 0x7fcdf1026640 'unsigned short'
+|-VarDecl 0x7fcdf1825a00 <line:5:1, col:12> col:12 used a 'u16':'unsigned short' static
+|-FunctionDecl 0x7fcdf1825bc0 <line:7:1, line:14:1> line:8:1 used foo 'u16 (int)'
+| |-ParmVarDecl 0x7fcdf1825ab8 <col:6, col:10> col:10 used p1 'int'
+| |-CompoundStmt 0x7fcdf1826010 <line:9:1, line:14:1>
+| | |-BinaryOperator 0x7fcdf1825db0 <line:10:3, col:15> 'u16':'unsigned short' '='
+| | | |-DeclRefExpr 0x7fcdf1825ca8 <col:3> 'u16':'unsigned short' lvalue Var 0x7fcdf1825a00 'a' 'u16':'unsigned short'
+| | | `-ImplicitCastExpr 0x7fcdf1825d98 <col:7, col:15> 'u16':'unsigned short' <IntegralCast>
+| | |   `-UnaryOperator 0x7fcdf1825d78 <col:7, col:15> 'int' prefix '-'
+| | |     `-ParenExpr 0x7fcdf1825d58 <col:8, col:15> 'int'
+| | |       `-BinaryOperator 0x7fcdf1825d30 <col:9, col:14> 'int' '>'
+| | |         |-ImplicitCastExpr 0x7fcdf1825d18 <col:9> 'int' <LValueToRValue>
+| | |         | `-DeclRefExpr 0x7fcdf1825cd0 <col:9> 'int' lvalue ParmVar 0x7fcdf1825ab8 'p1' 'int'
+| | |         `-IntegerLiteral 0x7fcdf1825cf8 <col:14> 'int' 0
+| | |-CompoundAssignOperator 0x7fcdf1825ea0 <line:11:3, col:13> 'u16':'unsigned short' '*=' ComputeLHSTy='int' ComputeResultTy='int'
+| | | |-DeclRefExpr 0x7fcdf1825dd8 <col:3> 'u16':'unsigned short' lvalue Var 0x7fcdf1825a00 'a' 'u16':'unsigned short'
+| | | `-BinaryOperator 0x7fcdf1825e78 <col:8, col:13> 'int' '!='
+| | |   |-IntegerLiteral 0x7fcdf1825e00 <col:8> 'int' 0
+| | |   `-ImplicitCastExpr 0x7fcdf1825e60 <col:13> 'int' <IntegralCast>
+| | |     `-ImplicitCastExpr 0x7fcdf1825e48 <col:13> 'u16':'unsigned short' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7fcdf1825e20 <col:13> 'u16':'unsigned short' lvalue Var 0x7fcdf1825a00 'a' 'u16':'unsigned short'
+| | |-CompoundAssignOperator 0x7fcdf1825f80 <line:12:3, col:18> 'u16':'unsigned short' '*=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7fcdf1825ed8 <col:3> 'u16':'unsigned short' lvalue Var 0x7fcdf1825a00 'a' 'u16':'unsigned short'
+| | | `-CStyleCastExpr 0x7fcdf1825f58 <col:8, col:18> 'unsigned int' <IntegralCast>
+| | |   `-ImplicitCastExpr 0x7fcdf1825f40 <col:18> 'u16':'unsigned short' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7fcdf1825f00 <col:18> 'u16':'unsigned short' lvalue Var 0x7fcdf1825a00 'a' 'u16':'unsigned short'
+| | `-ReturnStmt 0x7fcdf1825ff8 <line:13:3, col:10>
+| |   `-ImplicitCastExpr 0x7fcdf1825fe0 <col:10> 'u16':'unsigned short' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fcdf1825fb8 <col:10> 'u16':'unsigned short' lvalue Var 0x7fcdf1825a00 'a' 'u16':'unsigned short'
+| `-NoInlineAttr 0x7fcdf1825c60 <line:7:21>
+|-FunctionDecl 0x7fcdf18260a0 <line:16:1, line:23:1> line:17:1 main 'int ()'
+| `-CompoundStmt 0x7fcdf1826568 <line:18:1, line:23:1>
+|   |-DeclStmt 0x7fcdf1826290 <line:19:3, col:18>
+|   | `-VarDecl 0x7fcdf1826148 <col:3, col:17> col:7 used x 'u16':'unsigned short' cinit
+|   |   `-CallExpr 0x7fcdf1826260 <col:11, col:17> 'u16':'unsigned short'
+|   |     |-ImplicitCastExpr 0x7fcdf1826248 <col:11> 'u16 (*)(int)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fcdf18261a8 <col:11> 'u16 (int)' Function 0x7fcdf1825bc0 'foo' 'u16 (int)'
+|   |     `-IntegerLiteral 0x7fcdf18261d0 <col:16> 'int' 1
+|   |-IfStmt 0x7fcdf18264f8 <line:20:3, line:21:21>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fcdf1826320 <line:20:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fcdf1826308 <col:7> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7fcdf18262f0 <col:7> 'u16':'unsigned short' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7fcdf18262a8 <col:7> 'u16':'unsigned short' lvalue Var 0x7fcdf1826148 'x' 'u16':'unsigned short'
+|   | | `-IntegerLiteral 0x7fcdf18262d0 <col:12> 'int' 1
+|   | |-CallExpr 0x7fcdf18264d0 <line:21:5, col:21> 'void'
+|   | | `-ImplicitCastExpr 0x7fcdf18264b8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fcdf1826460 <col:5> '<builtin fn type>' Function 0x7fcdf1826380 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fcdf1826550 <line:22:3, col:10>
+|     `-IntegerLiteral 0x7fcdf1826530 <col:10> 'int' 0
+`-FunctionDecl 0x7fcdf1826380 <line:21:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fcdf1826418 <col:5> Implicit

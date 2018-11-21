@@ -1,0 +1,184 @@
+TranslationUnitDecl 0x7fb75f8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb75f826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb75f826740 '__int128'
+|-TypedefDecl 0x7fb75f826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb75f826760 'unsigned __int128'
+|-TypedefDecl 0x7fb75f826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb75f826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb75f826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb75f826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb75f826dc0 'char *'
+|   `-BuiltinType 0x7fb75f826560 'char'
+|-TypedefDecl 0x7fb75f8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb75f827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb75f826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb75f826e58 '__va_list_tag'
+|-TypedefDecl 0x7fb75f827138 <c_files/pr57351.c:6:1, col:22> col:22 referenced size_t 'unsigned int'
+| `-BuiltinType 0x7fb75f826660 'unsigned int'
+|-TypedefDecl 0x7fb75f8271a8 <line:7:1, col:13> col:13 referenced ptrdiff_t 'int'
+| `-BuiltinType 0x7fb75f8265c0 'int'
+|-TypedefDecl 0x7fb760025a18 <line:8:1, col:21> col:21 referenced int8_t 'signed char'
+| `-BuiltinType 0x7fb75f826580 'signed char'
+|-TypedefDecl 0x7fb760025a88 <line:9:1, col:26> col:26 referenced int64_t 'long long'
+| `-BuiltinType 0x7fb75f826600 'long long'
+|-TypedefDecl 0x7fb760025b10 <line:10:1, col:16> col:16 referenced GFC_INTEGER_1 'int8_t':'signed char'
+| `-TypedefType 0x7fb760025ae0 'int8_t' sugar
+|   |-Typedef 0x7fb760025a18 'int8_t'
+|   `-BuiltinType 0x7fb75f826580 'signed char'
+|-TypedefDecl 0x7fb760025ba0 <line:11:1, col:23> col:23 referenced GFC_LOGICAL_1 'GFC_INTEGER_1':'signed char'
+| `-TypedefType 0x7fb760025b70 'GFC_INTEGER_1' sugar
+|   |-Typedef 0x7fb760025b10 'GFC_INTEGER_1'
+|   `-TypedefType 0x7fb760025ae0 'int8_t' sugar
+|     |-Typedef 0x7fb760025a18 'int8_t'
+|     `-BuiltinType 0x7fb75f826580 'signed char'
+|-TypedefDecl 0x7fb760025c30 <line:12:1, col:17> col:17 referenced GFC_INTEGER_8 'int64_t':'long long'
+| `-TypedefType 0x7fb760025c00 'int64_t' sugar
+|   |-Typedef 0x7fb760025a88 'int64_t'
+|   `-BuiltinType 0x7fb75f826600 'long long'
+|-TypedefDecl 0x7fb760025cc0 <line:13:1, col:23> col:23 referenced GFC_LOGICAL_8 'GFC_INTEGER_8':'long long'
+| `-TypedefType 0x7fb760025c90 'GFC_INTEGER_8' sugar
+|   |-Typedef 0x7fb760025c30 'GFC_INTEGER_8'
+|   `-TypedefType 0x7fb760025c00 'int64_t' sugar
+|     |-Typedef 0x7fb760025a88 'int64_t'
+|     `-BuiltinType 0x7fb75f826600 'long long'
+|-TypedefDecl 0x7fb760025d50 <line:14:1, col:19> col:19 referenced index_type 'ptrdiff_t':'int'
+| `-TypedefType 0x7fb760025d20 'ptrdiff_t' sugar
+|   |-Typedef 0x7fb75f8271a8 'ptrdiff_t'
+|   `-BuiltinType 0x7fb75f8265c0 'int'
+|-RecordDecl 0x7fb760025da8 <line:15:9, line:19:1> line:15:16 struct descriptor_dimension definition
+| |-FieldDecl 0x7fb760025e80 <line:17:3, col:14> col:14 referenced lower_bound 'index_type':'int'
+| `-FieldDecl 0x7fb760025ed8 <line:18:3, col:14> col:14 referenced _ubound 'index_type':'int'
+|-TypedefDecl 0x7fb760025f70 <line:15:1, line:20:1> col:1 referenced descriptor_dimension 'struct descriptor_dimension':'struct descriptor_dimension'
+| `-ElaboratedType 0x7fb760025f20 'struct descriptor_dimension' sugar
+|   `-RecordType 0x7fb760025e30 'struct descriptor_dimension'
+|     `-Record 0x7fb760025da8 'descriptor_dimension'
+|-RecordDecl 0x7fb760025fe0 <line:21:9, col:105> col:9 struct definition
+| |-FieldDecl 0x7fb760026118 <col:18, col:33> col:33 base_addr 'GFC_LOGICAL_1 *'
+| |-FieldDecl 0x7fb760026190 <col:44, col:51> col:51 offset 'size_t':'unsigned int'
+| |-FieldDecl 0x7fb7600261e8 <col:59, col:70> col:70 dtype 'index_type':'int'
+| `-FieldDecl 0x7fb760026358 <col:77, col:103> col:98 referenced dim 'descriptor_dimension [7]'
+|-TypedefDecl 0x7fb7600263f0 <col:1, col:107> col:107 referenced gfc_array_l1 'struct gfc_array_l1':'gfc_array_l1'
+| `-ElaboratedType 0x7fb7600263a0 'struct gfc_array_l1' sugar
+|   `-RecordType 0x7fb760026070 'gfc_array_l1'
+|     `-Record 0x7fb760025fe0 ''
+|-RecordDecl 0x7fb760026460 <line:22:9, col:105> col:9 struct definition
+| |-FieldDecl 0x7fb760026598 <col:18, col:33> col:33 base_addr 'GFC_LOGICAL_8 *'
+| |-FieldDecl 0x7fb7600265f0 <col:44, col:51> col:51 offset 'size_t':'unsigned int'
+| |-FieldDecl 0x7fb760026648 <col:59, col:70> col:70 dtype 'index_type':'int'
+| `-FieldDecl 0x7fb7600266d0 <col:77, col:103> col:98 dim 'descriptor_dimension [7]'
+|-TypedefDecl 0x7fb760026770 <col:1, col:107> col:107 referenced gfc_array_l8 'struct gfc_array_l8':'gfc_array_l8'
+| `-ElaboratedType 0x7fb760026720 'struct gfc_array_l8' sugar
+|   `-RecordType 0x7fb7600264f0 'gfc_array_l8'
+|     `-Record 0x7fb760026460 ''
+`-FunctionDecl 0x7fb76002bd30 <line:23:1, line:54:1> line:24:1 all_l8 'void (gfc_array_l8 *const __restrict, gfc_array_l1 *const __restrict, const index_type *const __restrict)'
+  |-ParmVarDecl 0x7fb760026868 <col:9, col:39> col:39 retarray 'gfc_array_l8 *const __restrict'
+  |-ParmVarDecl 0x7fb760026958 <line:25:2, col:32> col:32 used array 'gfc_array_l1 *const __restrict'
+  |-ParmVarDecl 0x7fb76002bc00 <line:26:2, col:36> col:36 used pdim 'const index_type *const __restrict'
+  `-CompoundStmt 0x7fb76002d2e8 <line:27:1, line:54:1>
+    |-DeclStmt 0x7fb76002be90 <line:28:3, col:32>
+    | `-VarDecl 0x7fb76002be30 <col:3, col:28> col:28 used dest 'GFC_LOGICAL_8 *__restrict'
+    |-DeclStmt 0x7fb76002bf18 <line:29:3, col:15>
+    | `-VarDecl 0x7fb76002beb8 <col:3, col:14> col:14 used n 'index_type':'int'
+    |-DeclStmt 0x7fb76002bfa0 <line:30:3, col:17>
+    | `-VarDecl 0x7fb76002bf40 <col:3, col:14> col:14 used len 'index_type':'int'
+    |-DeclStmt 0x7fb76002c028 <line:31:3, col:19>
+    | `-VarDecl 0x7fb76002bfc8 <col:3, col:14> col:14 used delta 'index_type':'int'
+    |-DeclStmt 0x7fb76002c0b0 <line:32:3, col:17>
+    | `-VarDecl 0x7fb76002c050 <col:3, col:14> col:14 used dim 'index_type':'int'
+    |-BinaryOperator 0x7fb76002c1d0 <line:33:3, col:19> 'index_type':'int' '='
+    | |-DeclRefExpr 0x7fb76002c0c8 <col:3> 'index_type':'int' lvalue Var 0x7fb76002c050 'dim' 'index_type':'int'
+    | `-BinaryOperator 0x7fb76002c1a8 <col:9, col:19> 'int' '-'
+    |   |-ImplicitCastExpr 0x7fb76002c190 <col:9, col:15> 'index_type':'int' <LValueToRValue>
+    |   | `-ParenExpr 0x7fb76002c150 <col:9, col:15> 'const index_type':'const int' lvalue
+    |   |   `-UnaryOperator 0x7fb76002c130 <col:10, col:11> 'const index_type':'const int' lvalue prefix '*'
+    |   |     `-ImplicitCastExpr 0x7fb76002c118 <col:11> 'const index_type *' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7fb76002c0f0 <col:11> 'const index_type *const __restrict' lvalue ParmVar 0x7fb76002bc00 'pdim' 'const index_type *const __restrict'
+    |   `-IntegerLiteral 0x7fb76002c170 <col:19> 'int' 1
+    |-BinaryOperator 0x7fb76002c5d8 <line:34:3, col:71> 'index_type':'int' '='
+    | |-DeclRefExpr 0x7fb76002c1f8 <col:3> 'index_type':'int' lvalue Var 0x7fb76002bf40 'len' 'index_type':'int'
+    | `-ParenExpr 0x7fb76002c5b8 <col:9, col:71> 'int'
+    |   `-BinaryOperator 0x7fb76002c590 <col:10, col:60> 'int' '-'
+    |     |-BinaryOperator 0x7fb76002c400 <col:10, col:38> 'int' '+'
+    |     | |-ImplicitCastExpr 0x7fb76002c3e8 <col:10, col:28> 'index_type':'int' <LValueToRValue>
+    |     | | `-MemberExpr 0x7fb76002c390 <col:10, col:28> 'index_type':'int' lvalue ._ubound 0x7fb760025ed8
+    |     | |   `-ArraySubscriptExpr 0x7fb76002c368 <col:10, col:26> 'descriptor_dimension':'struct descriptor_dimension' lvalue
+    |     | |     |-ImplicitCastExpr 0x7fb76002c338 <col:10, col:19> 'descriptor_dimension *' <ArrayToPointerDecay>
+    |     | |     | `-MemberExpr 0x7fb76002c280 <col:10, col:19> 'descriptor_dimension [7]' lvalue ->dim 0x7fb760026358
+    |     | |     |   `-ImplicitCastExpr 0x7fb76002c268 <col:10, col:16> 'gfc_array_l1 *' <LValueToRValue>
+    |     | |     |     `-ParenExpr 0x7fb76002c248 <col:10, col:16> 'gfc_array_l1 *const __restrict' lvalue
+    |     | |     |       `-DeclRefExpr 0x7fb76002c220 <col:11> 'gfc_array_l1 *const __restrict' lvalue ParmVar 0x7fb760026958 'array' 'gfc_array_l1 *const __restrict'
+    |     | |     `-ImplicitCastExpr 0x7fb76002c350 <col:23> 'index_type':'int' <LValueToRValue>
+    |     | |       `-DeclRefExpr 0x7fb76002c2b8 <col:23> 'index_type':'int' lvalue Var 0x7fb76002c050 'dim' 'index_type':'int'
+    |     | `-IntegerLiteral 0x7fb76002c3c8 <col:38> 'int' 1
+    |     `-ImplicitCastExpr 0x7fb76002c578 <col:42, col:60> 'index_type':'int' <LValueToRValue>
+    |       `-MemberExpr 0x7fb76002c540 <col:42, col:60> 'index_type':'int' lvalue .lower_bound 0x7fb760025e80
+    |         `-ArraySubscriptExpr 0x7fb76002c518 <col:42, col:58> 'descriptor_dimension':'struct descriptor_dimension' lvalue
+    |           |-ImplicitCastExpr 0x7fb76002c4e8 <col:42, col:51> 'descriptor_dimension *' <ArrayToPointerDecay>
+    |           | `-MemberExpr 0x7fb76002c488 <col:42, col:51> 'descriptor_dimension [7]' lvalue ->dim 0x7fb760026358
+    |           |   `-ImplicitCastExpr 0x7fb76002c470 <col:42, col:48> 'gfc_array_l1 *' <LValueToRValue>
+    |           |     `-ParenExpr 0x7fb76002c450 <col:42, col:48> 'gfc_array_l1 *const __restrict' lvalue
+    |           |       `-DeclRefExpr 0x7fb76002c428 <col:43> 'gfc_array_l1 *const __restrict' lvalue ParmVar 0x7fb760026958 'array' 'gfc_array_l1 *const __restrict'
+    |           `-ImplicitCastExpr 0x7fb76002c500 <col:55> 'index_type':'int' <LValueToRValue>
+    |             `-DeclRefExpr 0x7fb76002c4c0 <col:55> 'index_type':'int' lvalue Var 0x7fb76002c050 'dim' 'index_type':'int'
+    `-ForStmt 0x7fb76002d2b0 <line:35:3, line:53:5>
+      |-BinaryOperator 0x7fb76002c648 <line:35:8, col:12> 'index_type':'int' '='
+      | |-DeclRefExpr 0x7fb76002c600 <col:8> 'index_type':'int' lvalue Var 0x7fb76002beb8 'n' 'index_type':'int'
+      | `-IntegerLiteral 0x7fb76002c628 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fb76002c6f0 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fb76002c6c0 <col:15> 'index_type':'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fb76002c670 <col:15> 'index_type':'int' lvalue Var 0x7fb76002beb8 'n' 'index_type':'int'
+      | `-ImplicitCastExpr 0x7fb76002c6d8 <col:19> 'index_type':'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb76002c698 <col:19> 'index_type':'int' lvalue Var 0x7fb76002c050 'dim' 'index_type':'int'
+      |-UnaryOperator 0x7fb76002c740 <col:24, col:25> 'index_type':'int' postfix '++'
+      | `-DeclRefExpr 0x7fb76002c718 <col:24> 'index_type':'int' lvalue Var 0x7fb76002beb8 'n' 'index_type':'int'
+      `-CompoundStmt 0x7fb76002d280 <line:36:5, line:53:5>
+        |-DeclStmt 0x7fb76002c828 <line:37:7, col:41>
+        | `-VarDecl 0x7fb76002c7c8 <col:7, col:38> col:38 used src 'const GFC_LOGICAL_1 *__restrict'
+        |-DeclStmt 0x7fb76002c8b0 <line:38:7, col:27>
+        | `-VarDecl 0x7fb76002c850 <col:7, col:21> col:21 used result 'GFC_LOGICAL_8':'long long'
+        `-CompoundStmt 0x7fb76002d258 <line:39:7, line:52:7>
+          |-BinaryOperator 0x7fb76002c928 <line:40:3, col:12> 'GFC_LOGICAL_8':'long long' '='
+          | |-DeclRefExpr 0x7fb76002c8c8 <col:3> 'GFC_LOGICAL_8':'long long' lvalue Var 0x7fb76002c850 'result' 'GFC_LOGICAL_8':'long long'
+          | `-ImplicitCastExpr 0x7fb76002c910 <col:12> 'GFC_LOGICAL_8':'long long' <IntegralCast>
+          |   `-IntegerLiteral 0x7fb76002c8f0 <col:12> 'int' 1
+          `-CompoundStmt 0x7fb76002d230 <line:41:4, line:51:4>
+            |-ForStmt 0x7fb76002d130 <line:42:6, line:49:11>
+            | |-BinaryOperator 0x7fb76002c998 <line:42:11, col:15> 'index_type':'int' '='
+            | | |-DeclRefExpr 0x7fb76002c950 <col:11> 'index_type':'int' lvalue Var 0x7fb76002beb8 'n' 'index_type':'int'
+            | | `-IntegerLiteral 0x7fb76002c978 <col:15> 'int' 0
+            | |-<<<NULL>>>
+            | |-BinaryOperator 0x7fb76002ca40 <col:18, col:22> 'int' '<'
+            | | |-ImplicitCastExpr 0x7fb76002ca10 <col:18> 'index_type':'int' <LValueToRValue>
+            | | | `-DeclRefExpr 0x7fb76002c9c0 <col:18> 'index_type':'int' lvalue Var 0x7fb76002beb8 'n' 'index_type':'int'
+            | | `-ImplicitCastExpr 0x7fb76002ca28 <col:22> 'index_type':'int' <LValueToRValue>
+            | |   `-DeclRefExpr 0x7fb76002c9e8 <col:22> 'index_type':'int' lvalue Var 0x7fb76002bf40 'len' 'index_type':'int'
+            | |-BinaryOperator 0x7fb76002cb50 <col:27, col:39> 'const GFC_LOGICAL_1 *' ','
+            | | |-UnaryOperator 0x7fb76002ca90 <col:27, col:28> 'index_type':'int' postfix '++'
+            | | | `-DeclRefExpr 0x7fb76002ca68 <col:27> 'index_type':'int' lvalue Var 0x7fb76002beb8 'n' 'index_type':'int'
+            | | `-CompoundAssignOperator 0x7fb76002cb18 <col:32, col:39> 'const GFC_LOGICAL_1 *' '+=' ComputeLHSTy='const GFC_LOGICAL_1 *__restrict' ComputeResultTy='const GFC_LOGICAL_1 *__restrict'
+            | |   |-DeclRefExpr 0x7fb76002cab0 <col:32> 'const GFC_LOGICAL_1 *__restrict' lvalue Var 0x7fb76002c7c8 'src' 'const GFC_LOGICAL_1 *__restrict'
+            | |   `-ImplicitCastExpr 0x7fb76002cb00 <col:39> 'index_type':'int' <LValueToRValue>
+            | |     `-DeclRefExpr 0x7fb76002cad8 <col:39> 'index_type':'int' lvalue Var 0x7fb76002bfc8 'delta' 'index_type':'int'
+            | `-CompoundStmt 0x7fb76002d110 <line:43:8, line:49:11>
+            |   `-IfStmt 0x7fb76002d0d8 <line:44:3, line:48:5>
+            |     |-<<<NULL>>>
+            |     |-<<<NULL>>>
+            |     |-UnaryOperator 0x7fb76002d000 <line:44:7, col:10> 'int' prefix '!'
+            |     | `-ImplicitCastExpr 0x7fb76002cbd8 <col:9, col:10> 'GFC_LOGICAL_1':'signed char' <LValueToRValue>
+            |     |   `-UnaryOperator 0x7fb76002cbb8 <col:9, col:10> 'const GFC_LOGICAL_1':'const signed char' lvalue prefix '*'
+            |     |     `-ImplicitCastExpr 0x7fb76002cba0 <col:10> 'const GFC_LOGICAL_1 *' <LValueToRValue>
+            |     |       `-DeclRefExpr 0x7fb76002cb78 <col:10> 'const GFC_LOGICAL_1 *__restrict' lvalue Var 0x7fb76002c7c8 'src' 'const GFC_LOGICAL_1 *__restrict'
+            |     |-CompoundStmt 0x7fb76002d0b0 <line:45:5, line:48:5>
+            |     | |-BinaryOperator 0x7fb76002d080 <line:46:7, col:16> 'GFC_LOGICAL_8':'long long' '='
+            |     | | |-DeclRefExpr 0x7fb76002d020 <col:7> 'GFC_LOGICAL_8':'long long' lvalue Var 0x7fb76002c850 'result' 'GFC_LOGICAL_8':'long long'
+            |     | | `-ImplicitCastExpr 0x7fb76002d068 <col:16> 'GFC_LOGICAL_8':'long long' <IntegralCast>
+            |     | |   `-IntegerLiteral 0x7fb76002d048 <col:16> 'int' 0
+            |     | `-BreakStmt 0x7fb76002d0a8 <line:47:7>
+            |     `-<<<NULL>>>
+            `-BinaryOperator 0x7fb76002d208 <line:50:6, col:14> 'GFC_LOGICAL_8':'long long' '='
+              |-UnaryOperator 0x7fb76002d1a8 <col:6, col:7> 'GFC_LOGICAL_8':'long long' lvalue prefix '*'
+              | `-ImplicitCastExpr 0x7fb76002d190 <col:7> 'GFC_LOGICAL_8 *' <LValueToRValue>
+              |   `-DeclRefExpr 0x7fb76002d168 <col:7> 'GFC_LOGICAL_8 *__restrict' lvalue Var 0x7fb76002be30 'dest' 'GFC_LOGICAL_8 *__restrict'
+              `-ImplicitCastExpr 0x7fb76002d1f0 <col:14> 'GFC_LOGICAL_8':'long long' <LValueToRValue>
+                `-DeclRefExpr 0x7fb76002d1c8 <col:14> 'GFC_LOGICAL_8':'long long' lvalue Var 0x7fb76002c850 'result' 'GFC_LOGICAL_8':'long long'

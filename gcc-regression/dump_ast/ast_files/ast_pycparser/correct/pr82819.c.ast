@@ -1,0 +1,70 @@
+FileAST: 
+  Decl: ts, [], [], []
+    PtrDecl: []
+      TypeDecl: ts, []
+        IdentifierType: ['short', 'int']
+  FuncDef: 
+    Decl: c2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s4, [], [], []
+            TypeDecl: s4, []
+              IdentifierType: ['unsigned', 'long', 'long', 'int']
+          Decl: ns, [], [], []
+            TypeDecl: ns, []
+              IdentifierType: ['int']
+        TypeDecl: c2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: b2, [], [], []
+        PtrDecl: []
+          TypeDecl: b2, []
+            IdentifierType: ['short', 'int']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['short', 'int']
+          UnaryOp: &
+            ID: ns
+      While: 
+        BinaryOp: !=
+          ID: ns
+          Constant: int, 0
+        Compound: 
+          Decl: xn, [], [], []
+            TypeDecl: xn, []
+              IdentifierType: ['int']
+          For: 
+            Assignment: =
+              ID: xn
+              Constant: int, 0
+            BinaryOp: <
+              ID: xn
+              Constant: int, 3
+            UnaryOp: ++
+              ID: xn
+            For: 
+              Assignment: =
+                UnaryOp: *
+                  ID: b2
+                Constant: int, 0
+              BinaryOp: <
+                UnaryOp: *
+                  ID: b2
+                Constant: int, 2
+              UnaryOp: ++
+                UnaryOp: *
+                  ID: b2
+              Assignment: +=
+                ID: s4
+                ID: xn
+          If: 
+            BinaryOp: !=
+              ID: s4
+              Constant: int, 0
+            Assignment: =
+              ID: b2
+              ID: ts
+          UnaryOp: ++
+            ID: ns

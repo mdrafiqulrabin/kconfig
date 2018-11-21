@@ -1,0 +1,62 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: _Unwind_Context
+      Decl: ra, [], [], []
+        PtrDecl: []
+          TypeDecl: ra, []
+            IdentifierType: ['void']
+  Decl: uw_install_context_1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: _Unwind_Context
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: _Unwind_Context
+      TypeDecl: uw_install_context_1, []
+        IdentifierType: ['long']
+  FuncDef: 
+    Decl: _Unwind_RaiseException, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: _Unwind_RaiseException, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: this_context, [], [], []
+        TypeDecl: this_context, []
+          Struct: _Unwind_Context
+      Decl: cur_context, [], [], []
+        TypeDecl: cur_context, []
+          Struct: _Unwind_Context
+      Decl: offset, [], [], []
+        TypeDecl: offset, []
+          IdentifierType: ['long']
+        FuncCall: 
+          ID: uw_install_context_1
+          ExprList: 
+            UnaryOp: &
+              ID: this_context
+            UnaryOp: &
+              ID: cur_context
+      Decl: handler, [], [], []
+        PtrDecl: []
+          TypeDecl: handler, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __builtin_frob_return_addr
+          ExprList: 
+            StructRef: ->
+              UnaryOp: &
+                ID: cur_context
+              ID: ra
+      FuncCall: 
+        ID: __builtin_eh_return
+        ExprList: 
+          ID: offset
+          ID: handler

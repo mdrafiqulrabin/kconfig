@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7ffcc80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffcc8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffcc8026740 '__int128'
+|-TypedefDecl 0x7ffcc8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffcc8026760 'unsigned __int128'
+|-TypedefDecl 0x7ffcc8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffcc8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffcc8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffcc8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffcc8026dc0 'char *'
+|   `-BuiltinType 0x7ffcc8026560 'char'
+|-TypedefDecl 0x7ffcc80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffcc8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffcc8026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffcc8026e58 '__va_list_tag'
+`-FunctionDecl 0x7ffcc8077430 <<built-in>:75:23, c_files/pr32796.c:6:1> line:3:15 f 'unsigned long (void *)'
+  |-ParmVarDecl 0x7ffcc8027138 <col:18, col:24> col:24 used ptr 'void *'
+  `-CompoundStmt 0x7ffcc80776f0 <line:4:1, line:6:1>
+    `-ReturnStmt 0x7ffcc80776d8 <line:5:3, col:37>
+      `-ImplicitCastExpr 0x7ffcc80776c0 <col:10, col:37> 'unsigned long' <IntegralCast>
+        `-BinaryOperator 0x7ffcc8077698 <col:10, col:37> 'unsigned long long' '|'
+          |-ImplicitCastExpr 0x7ffcc8077680 <col:10, col:33> 'unsigned long long' <IntegralCast>
+          | `-ParenExpr 0x7ffcc8077640 <col:10, col:33> 'unsigned long'
+          |   `-BinaryOperator 0x7ffcc8077618 <col:11, col:32> 'unsigned long' '-'
+          |     |-CStyleCastExpr 0x7ffcc80775b8 <col:11, col:30> 'unsigned long' <PointerToIntegral>
+          |     | `-ImplicitCastExpr 0x7ffcc80775a0 <col:26, col:30> 'void *' <LValueToRValue>
+          |     |   `-ParenExpr 0x7ffcc8077580 <col:26, col:30> 'void *' lvalue
+          |     |     `-DeclRefExpr 0x7ffcc8077510 <col:27> 'void *' lvalue ParmVar 0x7ffcc8027138 'ptr' 'void *'
+          |     `-ImplicitCastExpr 0x7ffcc8077600 <col:32> 'unsigned long' <IntegralCast>
+          |       `-IntegerLiteral 0x7ffcc80775e0 <col:32> 'int' 1
+          `-IntegerLiteral 0x7ffcc8077660 <col:37> 'unsigned long long' 1

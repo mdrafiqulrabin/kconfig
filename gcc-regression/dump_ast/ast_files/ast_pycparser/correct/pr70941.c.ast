@@ -1,0 +1,48 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['signed', 'char']
+    Constant: int, 0
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['signed', 'char']
+    Constant: int, 0
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['signed', 'char']
+    Constant: int, 0
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['signed', 'char']
+    Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: a
+        BinaryOp: -
+          UnaryOp: -
+            BinaryOp: -
+              ID: b
+              Constant: int, 405418259
+          BinaryOp: ^
+            BinaryOp: &&
+              ID: d
+              ID: c
+            Constant: int, 2040097152
+      If: 
+        BinaryOp: !=
+          ID: a
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['signed', 'char']
+            UnaryOp: -
+              Constant: int, 1634678893
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

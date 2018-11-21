@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fdf950264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdf95026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdf95026740 '__int128'
+|-TypedefDecl 0x7fdf95026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdf95026760 'unsigned __int128'
+|-TypedefDecl 0x7fdf95026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdf95026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdf95026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdf95026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdf95026dc0 'char *'
+|   `-BuiltinType 0x7fdf95026560 'char'
+|-TypedefDecl 0x7fdf950270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdf95027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdf95026ee0 'struct __va_list_tag'
+|     `-Record 0x7fdf95026e58 '__va_list_tag'
+|-TypedefDecl 0x7fdf95027138 <c_files/pr64905.c:5:1, col:24> col:24 referenced uint16_t 'unsigned short'
+| `-BuiltinType 0x7fdf95026640 'unsigned short'
+|-VarDecl 0x7fdf95825a00 <line:6:1, col:10> col:10 used a_global 'uint16_t':'unsigned short'
+`-FunctionDecl 0x7fdf95825c70 <line:8:1, line:13:1> line:9:1 function 'void (uint16_t **)'
+  |-ParmVarDecl 0x7fdf95825b70 <col:11, col:22> col:22 used a_p 'uint16_t **'
+  `-CompoundStmt 0x7fdf95825e10 <line:10:1, line:13:1>
+    `-BinaryOperator 0x7fdf95825de8 <line:12:3, col:16> 'uint16_t':'unsigned short' '='
+      |-DeclRefExpr 0x7fdf95825d10 <col:3> 'uint16_t':'unsigned short' lvalue Var 0x7fdf95825a00 'a_global' 'uint16_t':'unsigned short'
+      `-ImplicitCastExpr 0x7fdf95825dd0 <col:14, col:16> 'uint16_t':'unsigned short' <LValueToRValue>
+        `-UnaryOperator 0x7fdf95825db0 <col:14, col:16> 'uint16_t':'unsigned short' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fdf95825d98 <col:15, col:16> 'uint16_t *' <LValueToRValue>
+            `-UnaryOperator 0x7fdf95825d78 <col:15, col:16> 'uint16_t *' lvalue prefix '*'
+              `-ImplicitCastExpr 0x7fdf95825d60 <col:16> 'uint16_t **' <LValueToRValue>
+                `-DeclRefExpr 0x7fdf95825d38 <col:16> 'uint16_t **' lvalue ParmVar 0x7fdf95825b70 'a_p' 'uint16_t **'

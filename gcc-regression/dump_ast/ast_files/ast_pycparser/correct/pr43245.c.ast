@@ -1,0 +1,42 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: bar, []
+            IdentifierType: ['char']
+    Compound: 
+      Decl: s, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: s, ['const']
+            IdentifierType: ['char']
+        Constant: string, "foo"
+      Decl: s1, [], [], []
+        PtrDecl: []
+          TypeDecl: s1, []
+            IdentifierType: ['char']
+        ID: s
+      Assignment: =
+        ID: s1
+        ID: s
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: s
+      Return: 
+        ID: s

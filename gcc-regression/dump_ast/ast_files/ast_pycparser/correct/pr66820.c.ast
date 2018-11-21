@@ -1,0 +1,56 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: x, []
+                  IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Pragma: omp parallel for
+      For: 
+        DeclList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+            Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: y, [], [], []
+            ArrayDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['char']
+              Constant: int, 50
+          FuncCall: 
+            ID: __builtin_strcpy
+            ExprList: 
+              ID: y
+              ArrayRef: 
+                ID: x
+                ID: i
+          FuncCall: 
+            ID: __builtin_strcat
+            ExprList: 
+              ID: y
+              Constant: string, "foo"
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              ID: y

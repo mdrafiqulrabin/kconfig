@@ -1,0 +1,32 @@
+FileAST: 
+  Decl: vx, [], [], []
+    PtrDecl: []
+      TypeDecl: vx, []
+        IdentifierType: ['char']
+  Decl: buf, [], [], []
+    ArrayDecl: []
+      TypeDecl: buf, []
+        IdentifierType: ['char']
+      Constant: int, 20
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: vx
+        FuncCall: 
+          ID: __builtin___stpcpy_chk
+          ExprList: 
+            ID: buf
+            TernaryOp: 
+              ID: vx
+              Constant: string, "gh"
+              Constant: string, "e"
+            UnaryOp: sizeof
+              ID: buf

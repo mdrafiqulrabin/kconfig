@@ -1,0 +1,1632 @@
+TranslationUnitDecl 0x7f8b798264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8b79826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8b79826740 '__int128'
+|-TypedefDecl 0x7f8b79826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8b79826760 'unsigned __int128'
+|-TypedefDecl 0x7f8b79826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8b79826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8b79826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8b79826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8b79826dc0 'char *'
+|   `-BuiltinType 0x7f8b79826560 'char'
+|-TypedefDecl 0x7f8b798270c8 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8b79827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8b79826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8b79826e58 '__va_list_tag'
+|-TypedefDecl 0x7f8b79827138 </usr/include/i386/_types.h:37:1, col:24> col:24 __int8_t 'signed char'
+| `-BuiltinType 0x7f8b79826580 'signed char'
+|-TypedefDecl 0x7f8b798271a8 <line:41:1, col:24> col:24 __uint8_t 'unsigned char'
+| `-BuiltinType 0x7f8b79826620 'unsigned char'
+|-TypedefDecl 0x7f8b7989cc18 <line:42:1, col:17> col:17 __int16_t 'short'
+| `-BuiltinType 0x7f8b798265a0 'short'
+|-TypedefDecl 0x7f8b7989cc88 <line:43:1, col:25> col:25 referenced __uint16_t 'unsigned short'
+| `-BuiltinType 0x7f8b79826640 'unsigned short'
+|-TypedefDecl 0x7f8b7989ccf8 <line:44:1, col:15> col:15 referenced __int32_t 'int'
+| `-BuiltinType 0x7f8b798265c0 'int'
+|-TypedefDecl 0x7f8b7989cd68 <line:45:1, col:23> col:23 referenced __uint32_t 'unsigned int'
+| `-BuiltinType 0x7f8b79826660 'unsigned int'
+|-TypedefDecl 0x7f8b7989cdd8 <line:46:1, col:20> col:20 referenced __int64_t 'long long'
+| `-BuiltinType 0x7f8b79826600 'long long'
+|-TypedefDecl 0x7f8b7989ce48 <line:47:1, col:28> col:28 referenced __uint64_t 'unsigned long long'
+| `-BuiltinType 0x7f8b798266a0 'unsigned long long'
+|-TypedefDecl 0x7f8b7989ceb8 <line:49:1, col:16> col:16 referenced __darwin_intptr_t 'long'
+| `-BuiltinType 0x7f8b798265e0 'long'
+|-TypedefDecl 0x7f8b7989cf28 <line:50:1, col:23> col:23 referenced __darwin_natural_t 'unsigned int'
+| `-BuiltinType 0x7f8b79826660 'unsigned int'
+|-TypedefDecl 0x7f8b7989cf98 <line:70:1, col:15> col:15 __darwin_ct_rune_t 'int'
+| `-BuiltinType 0x7f8b798265c0 'int'
+|-RecordDecl 0x7f8b7989cff0 <line:76:9, line:79:1> line:76:9 union definition
+| |-FieldDecl 0x7f8b7989d118 <line:77:2, col:22> col:8 __mbstate8 'char [128]'
+| `-FieldDecl 0x7f8b7989d178 <line:78:2, col:12> col:12 _mbstateL 'long long'
+|-TypedefDecl 0x7f8b7989d210 <line:76:1, line:79:3> col:3 referenced __mbstate_t 'union __mbstate_t':'__mbstate_t'
+| `-ElaboratedType 0x7f8b7989d1c0 'union __mbstate_t' sugar
+|   `-RecordType 0x7f8b7989d080 '__mbstate_t'
+|     `-Record 0x7f8b7989cff0 ''
+|-TypedefDecl 0x7f8b7989d2b0 <line:81:1, col:22> col:22 __darwin_mbstate_t '__mbstate_t':'__mbstate_t'
+| `-TypedefType 0x7f8b7989d280 '__mbstate_t' sugar
+|   |-Typedef 0x7f8b7989d210 '__mbstate_t'
+|   `-ElaboratedType 0x7f8b7989d1c0 'union __mbstate_t' sugar
+|     `-RecordType 0x7f8b7989d080 '__mbstate_t'
+|       `-Record 0x7f8b7989cff0 ''
+|-TypedefDecl 0x7f8b7989d320 <line:84:1, col:26> col:26 __darwin_ptrdiff_t 'long'
+| `-BuiltinType 0x7f8b798265e0 'long'
+|-TypedefDecl 0x7f8b7989d390 <line:92:1, col:24> col:24 referenced __darwin_size_t 'unsigned long'
+| `-BuiltinType 0x7f8b79826680 'unsigned long'
+|-TypedefDecl 0x7f8b7989d420 <line:98:1, col:27> col:27 referenced __darwin_va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7f8b7989d3f0 '__builtin_va_list' sugar
+|   |-Typedef 0x7f8b798270c8 '__builtin_va_list'
+|   `-ConstantArrayType 0x7f8b79827070 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7f8b79826ee0 'struct __va_list_tag'
+|       `-Record 0x7f8b79826e58 '__va_list_tag'
+|-TypedefDecl 0x7f8b7989d490 <line:104:1, col:25> col:25 referenced __darwin_wchar_t 'int'
+| `-BuiltinType 0x7f8b798265c0 'int'
+|-TypedefDecl 0x7f8b7989d520 <line:109:1, col:26> col:26 __darwin_rune_t '__darwin_wchar_t':'int'
+| `-TypedefType 0x7f8b7989d4f0 '__darwin_wchar_t' sugar
+|   |-Typedef 0x7f8b7989d490 '__darwin_wchar_t'
+|   `-BuiltinType 0x7f8b798265c0 'int'
+|-TypedefDecl 0x7f8b7989d590 <line:112:1, col:24> col:24 __darwin_wint_t 'int'
+| `-BuiltinType 0x7f8b798265c0 'int'
+|-TypedefDecl 0x7f8b7989d600 <line:117:1, col:24> col:24 __darwin_clock_t 'unsigned long'
+| `-BuiltinType 0x7f8b79826680 'unsigned long'
+|-TypedefDecl 0x7f8b7989d690 <line:118:1, col:21> col:21 __darwin_socklen_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7f8b7989d660 '__uint32_t' sugar
+|   |-Typedef 0x7f8b7989cd68 '__uint32_t'
+|   `-BuiltinType 0x7f8b79826660 'unsigned int'
+|-TypedefDecl 0x7f8b7989d700 <line:119:1, col:16> col:16 referenced __darwin_ssize_t 'long'
+| `-BuiltinType 0x7f8b798265e0 'long'
+|-TypedefDecl 0x7f8b7989d770 <line:120:1, col:16> col:16 __darwin_time_t 'long'
+| `-BuiltinType 0x7f8b798265e0 'long'
+|-TypedefDecl 0x7f8b7989d800 </usr/include/sys/_types.h:55:1, col:19> col:19 __darwin_blkcnt_t '__int64_t':'long long'
+| `-TypedefType 0x7f8b7989d7d0 '__int64_t' sugar
+|   |-Typedef 0x7f8b7989cdd8 '__int64_t'
+|   `-BuiltinType 0x7f8b79826600 'long long'
+|-TypedefDecl 0x7f8b7989d890 <line:56:1, col:19> col:19 __darwin_blksize_t '__int32_t':'int'
+| `-TypedefType 0x7f8b7989d860 '__int32_t' sugar
+|   |-Typedef 0x7f8b7989ccf8 '__int32_t'
+|   `-BuiltinType 0x7f8b798265c0 'int'
+|-TypedefDecl 0x7f8b7989d8f8 <line:57:1, col:19> col:19 __darwin_dev_t '__int32_t':'int'
+| `-TypedefType 0x7f8b7989d860 '__int32_t' sugar
+|   |-Typedef 0x7f8b7989ccf8 '__int32_t'
+|   `-BuiltinType 0x7f8b798265c0 'int'
+|-TypedefDecl 0x7f8b7989d968 <line:58:1, col:22> col:22 __darwin_fsblkcnt_t 'unsigned int'
+| `-BuiltinType 0x7f8b79826660 'unsigned int'
+|-TypedefDecl 0x7f8b7989d9d8 <line:59:1, col:22> col:22 __darwin_fsfilcnt_t 'unsigned int'
+| `-BuiltinType 0x7f8b79826660 'unsigned int'
+|-TypedefDecl 0x7f8b7989da40 <line:60:1, col:20> col:20 __darwin_gid_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7f8b7989d660 '__uint32_t' sugar
+|   |-Typedef 0x7f8b7989cd68 '__uint32_t'
+|   `-BuiltinType 0x7f8b79826660 'unsigned int'
+|-TypedefDecl 0x7f8b7989daa8 <line:61:1, col:20> col:20 __darwin_id_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7f8b7989d660 '__uint32_t' sugar
+|   |-Typedef 0x7f8b7989cd68 '__uint32_t'
+|   `-BuiltinType 0x7f8b79826660 'unsigned int'
+|-TypedefDecl 0x7f8b7989db30 <line:62:1, col:20> col:20 referenced __darwin_ino64_t '__uint64_t':'unsigned long long'
+| `-TypedefType 0x7f8b7989db00 '__uint64_t' sugar
+|   |-Typedef 0x7f8b7989ce48 '__uint64_t'
+|   `-BuiltinType 0x7f8b798266a0 'unsigned long long'
+|-TypedefDecl 0x7f8b7989dc00 <line:64:1, col:26> col:26 __darwin_ino_t '__darwin_ino64_t':'unsigned long long'
+| `-TypedefType 0x7f8b7989db90 '__darwin_ino64_t' sugar
+|   |-Typedef 0x7f8b7989db30 '__darwin_ino64_t'
+|   `-TypedefType 0x7f8b7989db00 '__uint64_t' sugar
+|     |-Typedef 0x7f8b7989ce48 '__uint64_t'
+|     `-BuiltinType 0x7f8b798266a0 'unsigned long long'
+|-TypedefDecl 0x7f8b7989dc90 <line:68:1, col:28> col:28 referenced __darwin_mach_port_name_t '__darwin_natural_t':'unsigned int'
+| `-TypedefType 0x7f8b7989dc60 '__darwin_natural_t' sugar
+|   |-Typedef 0x7f8b7989cf28 '__darwin_natural_t'
+|   `-BuiltinType 0x7f8b79826660 'unsigned int'
+|-TypedefDecl 0x7f8b7989dd20 <line:69:1, col:35> col:35 __darwin_mach_port_t '__darwin_mach_port_name_t':'unsigned int'
+| `-TypedefType 0x7f8b7989dcf0 '__darwin_mach_port_name_t' sugar
+|   |-Typedef 0x7f8b7989dc90 '__darwin_mach_port_name_t'
+|   `-TypedefType 0x7f8b7989dc60 '__darwin_natural_t' sugar
+|     |-Typedef 0x7f8b7989cf28 '__darwin_natural_t'
+|     `-BuiltinType 0x7f8b79826660 'unsigned int'
+|-TypedefDecl 0x7f8b7989ddb0 <line:70:1, col:20> col:20 __darwin_mode_t '__uint16_t':'unsigned short'
+| `-TypedefType 0x7f8b7989dd80 '__uint16_t' sugar
+|   |-Typedef 0x7f8b7989cc88 '__uint16_t'
+|   `-BuiltinType 0x7f8b79826640 'unsigned short'
+|-TypedefDecl 0x7f8b7989de18 <line:71:1, col:19> col:19 referenced __darwin_off_t '__int64_t':'long long'
+| `-TypedefType 0x7f8b7989d7d0 '__int64_t' sugar
+|   |-Typedef 0x7f8b7989cdd8 '__int64_t'
+|   `-BuiltinType 0x7f8b79826600 'long long'
+|-TypedefDecl 0x7f8b7989de80 <line:72:1, col:19> col:19 __darwin_pid_t '__int32_t':'int'
+| `-TypedefType 0x7f8b7989d860 '__int32_t' sugar
+|   |-Typedef 0x7f8b7989ccf8 '__int32_t'
+|   `-BuiltinType 0x7f8b798265c0 'int'
+|-TypedefDecl 0x7f8b7989dee8 <line:73:1, col:20> col:20 __darwin_sigset_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7f8b7989d660 '__uint32_t' sugar
+|   |-Typedef 0x7f8b7989cd68 '__uint32_t'
+|   `-BuiltinType 0x7f8b79826660 'unsigned int'
+|-TypedefDecl 0x7f8b7989df50 <line:74:1, col:19> col:19 __darwin_suseconds_t '__int32_t':'int'
+| `-TypedefType 0x7f8b7989d860 '__int32_t' sugar
+|   |-Typedef 0x7f8b7989ccf8 '__int32_t'
+|   `-BuiltinType 0x7f8b798265c0 'int'
+|-TypedefDecl 0x7f8b7989dfb8 <line:75:1, col:20> col:20 __darwin_uid_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7f8b7989d660 '__uint32_t' sugar
+|   |-Typedef 0x7f8b7989cd68 '__uint32_t'
+|   `-BuiltinType 0x7f8b79826660 'unsigned int'
+|-TypedefDecl 0x7f8b7989e020 <line:76:1, col:20> col:20 __darwin_useconds_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7f8b7989d660 '__uint32_t' sugar
+|   |-Typedef 0x7f8b7989cd68 '__uint32_t'
+|   `-BuiltinType 0x7f8b79826660 'unsigned int'
+|-TypedefDecl 0x7f8b7989e100 <line:77:1, col:41> col:23 __darwin_uuid_t 'unsigned char [16]'
+| `-ConstantArrayType 0x7f8b7989e0a0 'unsigned char [16]' 16 
+|   `-BuiltinType 0x7f8b79826620 'unsigned char'
+|-TypedefDecl 0x7f8b7989e1d8 <line:78:1, col:39> col:14 __darwin_uuid_string_t 'char [37]'
+| `-ConstantArrayType 0x7f8b7989e180 'char [37]' 37 
+|   `-BuiltinType 0x7f8b79826560 'char'
+|-RecordDecl 0x7f8b7989e230 </usr/include/sys/_pthread/_pthread_types.h:57:1, line:61:1> line:57:8 struct __darwin_pthread_handler_rec definition
+| |-FieldDecl 0x7f8b7989e460 <line:58:2, col:26> col:9 __routine 'void (*)(void *)'
+| |-FieldDecl 0x7f8b7989e4c0 <line:59:2, col:8> col:8 __arg 'void *'
+| `-FieldDecl 0x7f8b7989e5c0 <line:60:2, col:39> col:39 __next 'struct __darwin_pthread_handler_rec *'
+|-RecordDecl 0x7f8b7989e608 <line:63:1, line:66:1> line:63:8 struct _opaque_pthread_attr_t definition
+| |-FieldDecl 0x7f8b7989e6c8 <line:64:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7f8b7989e788 <line:65:2, col:37> col:7 __opaque 'char [56]'
+|-RecordDecl 0x7f8b7989e7d0 <line:68:1, line:71:1> line:68:8 struct _opaque_pthread_cond_t definition
+| |-FieldDecl 0x7f8b7989e898 <line:69:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7f8b7989e958 <line:70:2, col:37> col:7 __opaque 'char [40]'
+|-RecordDecl 0x7f8b7989e9a0 <line:73:1, line:76:1> line:73:8 struct _opaque_pthread_condattr_t definition
+| |-FieldDecl 0x7f8b7989ea68 <line:74:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7f8b7989eb28 <line:75:2, col:41> col:7 __opaque 'char [8]'
+|-RecordDecl 0x7f8b7989eb70 <line:78:1, line:81:1> line:78:8 struct _opaque_pthread_mutex_t definition
+| |-FieldDecl 0x7f8b7989fc38 <line:79:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7f8b7989fcc0 <line:80:2, col:38> col:7 __opaque 'char [56]'
+|-RecordDecl 0x7f8b7989fd08 <line:83:1, line:86:1> line:83:8 struct _opaque_pthread_mutexattr_t definition
+| |-FieldDecl 0x7f8b7989fdc8 <line:84:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7f8b7989fe50 <line:85:2, col:42> col:7 __opaque 'char [8]'
+|-RecordDecl 0x7f8b7989fe98 <line:88:1, line:91:1> line:88:8 struct _opaque_pthread_once_t definition
+| |-FieldDecl 0x7f8b7989ff58 <line:89:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7f8b7989ffe0 <line:90:2, col:37> col:7 __opaque 'char [8]'
+|-RecordDecl 0x7f8b798a0028 <line:93:1, line:96:1> line:93:8 struct _opaque_pthread_rwlock_t definition
+| |-FieldDecl 0x7f8b798a00e8 <line:94:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7f8b798a01a8 <line:95:2, col:39> col:7 __opaque 'char [192]'
+|-RecordDecl 0x7f8b798a01f0 <line:98:1, line:101:1> line:98:8 struct _opaque_pthread_rwlockattr_t definition
+| |-FieldDecl 0x7f8b798a02b8 <line:99:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7f8b798a0378 <line:100:2, col:43> col:7 __opaque 'char [16]'
+|-RecordDecl 0x7f8b798a03c0 <line:103:1, line:107:1> line:103:8 struct _opaque_pthread_t definition
+| |-FieldDecl 0x7f8b798a0488 <line:104:2, col:7> col:7 __sig 'long'
+| |-FieldDecl 0x7f8b798a04f8 <line:105:2, col:40> col:40 __cleanup_stack 'struct __darwin_pthread_handler_rec *'
+| `-FieldDecl 0x7f8b798a05b8 <line:106:2, col:32> col:7 __opaque 'char [8176]'
+|-TypedefDecl 0x7f8b798a0650 <line:109:1, col:39> col:39 __darwin_pthread_attr_t 'struct _opaque_pthread_attr_t':'struct _opaque_pthread_attr_t'
+| `-ElaboratedType 0x7f8b798a0600 'struct _opaque_pthread_attr_t' sugar
+|   `-RecordType 0x7f8b7989e690 'struct _opaque_pthread_attr_t'
+|     `-Record 0x7f8b7989e608 '_opaque_pthread_attr_t'
+|-TypedefDecl 0x7f8b798a0700 <line:110:1, col:39> col:39 __darwin_pthread_cond_t 'struct _opaque_pthread_cond_t':'struct _opaque_pthread_cond_t'
+| `-ElaboratedType 0x7f8b798a06b0 'struct _opaque_pthread_cond_t' sugar
+|   `-RecordType 0x7f8b7989e860 'struct _opaque_pthread_cond_t'
+|     `-Record 0x7f8b7989e7d0 '_opaque_pthread_cond_t'
+|-TypedefDecl 0x7f8b798a07b0 <line:111:1, col:43> col:43 __darwin_pthread_condattr_t 'struct _opaque_pthread_condattr_t':'struct _opaque_pthread_condattr_t'
+| `-ElaboratedType 0x7f8b798a0760 'struct _opaque_pthread_condattr_t' sugar
+|   `-RecordType 0x7f8b7989ea30 'struct _opaque_pthread_condattr_t'
+|     `-Record 0x7f8b7989e9a0 '_opaque_pthread_condattr_t'
+|-TypedefDecl 0x7f8b798a0820 <line:112:1, col:23> col:23 __darwin_pthread_key_t 'unsigned long'
+| `-BuiltinType 0x7f8b79826680 'unsigned long'
+|-TypedefDecl 0x7f8b798a08d0 <line:113:1, col:40> col:40 __darwin_pthread_mutex_t 'struct _opaque_pthread_mutex_t':'struct _opaque_pthread_mutex_t'
+| `-ElaboratedType 0x7f8b798a0880 'struct _opaque_pthread_mutex_t' sugar
+|   `-RecordType 0x7f8b7989fc00 'struct _opaque_pthread_mutex_t'
+|     `-Record 0x7f8b7989eb70 '_opaque_pthread_mutex_t'
+|-TypedefDecl 0x7f8b798a0980 <line:114:1, col:44> col:44 __darwin_pthread_mutexattr_t 'struct _opaque_pthread_mutexattr_t':'struct _opaque_pthread_mutexattr_t'
+| `-ElaboratedType 0x7f8b798a0930 'struct _opaque_pthread_mutexattr_t' sugar
+|   `-RecordType 0x7f8b7989fd90 'struct _opaque_pthread_mutexattr_t'
+|     `-Record 0x7f8b7989fd08 '_opaque_pthread_mutexattr_t'
+|-TypedefDecl 0x7f8b798a0a30 <line:115:1, col:39> col:39 __darwin_pthread_once_t 'struct _opaque_pthread_once_t':'struct _opaque_pthread_once_t'
+| `-ElaboratedType 0x7f8b798a09e0 'struct _opaque_pthread_once_t' sugar
+|   `-RecordType 0x7f8b7989ff20 'struct _opaque_pthread_once_t'
+|     `-Record 0x7f8b7989fe98 '_opaque_pthread_once_t'
+|-TypedefDecl 0x7f8b798a0ae0 <line:116:1, col:41> col:41 __darwin_pthread_rwlock_t 'struct _opaque_pthread_rwlock_t':'struct _opaque_pthread_rwlock_t'
+| `-ElaboratedType 0x7f8b798a0a90 'struct _opaque_pthread_rwlock_t' sugar
+|   `-RecordType 0x7f8b798a00b0 'struct _opaque_pthread_rwlock_t'
+|     `-Record 0x7f8b798a0028 '_opaque_pthread_rwlock_t'
+|-TypedefDecl 0x7f8b798a0b90 <line:117:1, col:45> col:45 __darwin_pthread_rwlockattr_t 'struct _opaque_pthread_rwlockattr_t':'struct _opaque_pthread_rwlockattr_t'
+| `-ElaboratedType 0x7f8b798a0b40 'struct _opaque_pthread_rwlockattr_t' sugar
+|   `-RecordType 0x7f8b798a0280 'struct _opaque_pthread_rwlockattr_t'
+|     `-Record 0x7f8b798a01f0 '_opaque_pthread_rwlockattr_t'
+|-TypedefDecl 0x7f8b798a1cb0 <line:118:1, col:35> col:35 __darwin_pthread_t 'struct _opaque_pthread_t *'
+| `-PointerType 0x7f8b798a1c60 'struct _opaque_pthread_t *'
+|   `-ElaboratedType 0x7f8b798a1c00 'struct _opaque_pthread_t' sugar
+|     `-RecordType 0x7f8b798a0450 'struct _opaque_pthread_t'
+|       `-Record 0x7f8b798a03c0 '_opaque_pthread_t'
+|-TypedefDecl 0x7f8b798a1d20 </usr/include/_types.h:40:1, col:14> col:14 __darwin_nl_item 'int'
+| `-BuiltinType 0x7f8b798265c0 'int'
+|-TypedefDecl 0x7f8b798a1d90 <line:41:1, col:14> col:14 __darwin_wctrans_t 'int'
+| `-BuiltinType 0x7f8b798265c0 'int'
+|-TypedefDecl 0x7f8b798a1df8 <line:43:1, col:20> col:20 __darwin_wctype_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7f8b7989d660 '__uint32_t' sugar
+|   |-Typedef 0x7f8b7989cd68 '__uint32_t'
+|   `-BuiltinType 0x7f8b79826660 'unsigned int'
+|-TypedefDecl 0x7f8b798a1e68 </usr/include/sys/_types/_int8_t.h:30:1, col:24> col:24 int8_t 'signed char'
+| `-BuiltinType 0x7f8b79826580 'signed char'
+|-TypedefDecl 0x7f8b798a1ed8 </usr/include/sys/_types/_int16_t.h:30:1, col:17> col:17 int16_t 'short'
+| `-BuiltinType 0x7f8b798265a0 'short'
+|-TypedefDecl 0x7f8b798a1f48 </usr/include/sys/_types/_int32_t.h:30:1, col:15> col:15 int32_t 'int'
+| `-BuiltinType 0x7f8b798265c0 'int'
+|-TypedefDecl 0x7f8b798a1fb8 </usr/include/sys/_types/_int64_t.h:30:1, col:20> col:20 referenced int64_t 'long long'
+| `-BuiltinType 0x7f8b79826600 'long long'
+|-TypedefDecl 0x7f8b798a2028 </usr/include/sys/_types/_u_int8_t.h:30:1, col:24> col:24 u_int8_t 'unsigned char'
+| `-BuiltinType 0x7f8b79826620 'unsigned char'
+|-TypedefDecl 0x7f8b798a2098 </usr/include/sys/_types/_u_int16_t.h:30:1, col:26> col:26 u_int16_t 'unsigned short'
+| `-BuiltinType 0x7f8b79826640 'unsigned short'
+|-TypedefDecl 0x7f8b798a2108 </usr/include/sys/_types/_u_int32_t.h:30:1, col:23> col:23 u_int32_t 'unsigned int'
+| `-BuiltinType 0x7f8b79826660 'unsigned int'
+|-TypedefDecl 0x7f8b798a2178 </usr/include/sys/_types/_u_int64_t.h:30:1, col:28> col:28 referenced u_int64_t 'unsigned long long'
+| `-BuiltinType 0x7f8b798266a0 'unsigned long long'
+|-TypedefDecl 0x7f8b798a2200 </usr/include/i386/types.h:87:1, col:19> col:19 register_t 'int64_t':'long long'
+| `-TypedefType 0x7f8b798a21d0 'int64_t' sugar
+|   |-Typedef 0x7f8b798a1fb8 'int64_t'
+|   `-BuiltinType 0x7f8b79826600 'long long'
+|-TypedefDecl 0x7f8b798a2290 </usr/include/sys/_types/_intptr_t.h:32:1, col:27> col:27 intptr_t '__darwin_intptr_t':'long'
+| `-TypedefType 0x7f8b798a2260 '__darwin_intptr_t' sugar
+|   |-Typedef 0x7f8b7989ceb8 '__darwin_intptr_t'
+|   `-BuiltinType 0x7f8b798265e0 'long'
+|-TypedefDecl 0x7f8b798a2300 </usr/include/sys/_types/_uintptr_t.h:30:1, col:24> col:24 uintptr_t 'unsigned long'
+| `-BuiltinType 0x7f8b79826680 'unsigned long'
+|-TypedefDecl 0x7f8b798a2390 </usr/include/i386/types.h:97:1, col:20> col:20 user_addr_t 'u_int64_t':'unsigned long long'
+| `-TypedefType 0x7f8b798a2360 'u_int64_t' sugar
+|   |-Typedef 0x7f8b798a2178 'u_int64_t'
+|   `-BuiltinType 0x7f8b798266a0 'unsigned long long'
+|-TypedefDecl 0x7f8b798a23f8 <line:98:1, col:20> col:20 user_size_t 'u_int64_t':'unsigned long long'
+| `-TypedefType 0x7f8b798a2360 'u_int64_t' sugar
+|   |-Typedef 0x7f8b798a2178 'u_int64_t'
+|   `-BuiltinType 0x7f8b798266a0 'unsigned long long'
+|-TypedefDecl 0x7f8b798a2460 <line:99:1, col:19> col:19 user_ssize_t 'int64_t':'long long'
+| `-TypedefType 0x7f8b798a21d0 'int64_t' sugar
+|   |-Typedef 0x7f8b798a1fb8 'int64_t'
+|   `-BuiltinType 0x7f8b79826600 'long long'
+|-TypedefDecl 0x7f8b798a24c8 <line:100:1, col:19> col:19 user_long_t 'int64_t':'long long'
+| `-TypedefType 0x7f8b798a21d0 'int64_t' sugar
+|   |-Typedef 0x7f8b798a1fb8 'int64_t'
+|   `-BuiltinType 0x7f8b79826600 'long long'
+|-TypedefDecl 0x7f8b798a2530 <line:101:1, col:20> col:20 user_ulong_t 'u_int64_t':'unsigned long long'
+| `-TypedefType 0x7f8b798a2360 'u_int64_t' sugar
+|   |-Typedef 0x7f8b798a2178 'u_int64_t'
+|   `-BuiltinType 0x7f8b798266a0 'unsigned long long'
+|-TypedefDecl 0x7f8b798a2598 <line:102:1, col:19> col:19 user_time_t 'int64_t':'long long'
+| `-TypedefType 0x7f8b798a21d0 'int64_t' sugar
+|   |-Typedef 0x7f8b798a1fb8 'int64_t'
+|   `-BuiltinType 0x7f8b79826600 'long long'
+|-TypedefDecl 0x7f8b798a2600 <line:103:1, col:19> col:19 user_off_t 'int64_t':'long long'
+| `-TypedefType 0x7f8b798a21d0 'int64_t' sugar
+|   |-Typedef 0x7f8b798a1fb8 'int64_t'
+|   `-BuiltinType 0x7f8b79826600 'long long'
+|-TypedefDecl 0x7f8b798a2668 <line:111:1, col:20> col:20 syscall_arg_t 'u_int64_t':'unsigned long long'
+| `-TypedefType 0x7f8b798a2360 'u_int64_t' sugar
+|   |-Typedef 0x7f8b798a2178 'u_int64_t'
+|   `-BuiltinType 0x7f8b798266a0 'unsigned long long'
+|-TypedefDecl 0x7f8b798a26f0 </usr/include/sys/_types/_va_list.h:32:1, col:26> col:26 referenced va_list '__darwin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7f8b798a26c0 '__darwin_va_list' sugar
+|   |-Typedef 0x7f8b7989d420 '__darwin_va_list'
+|   `-TypedefType 0x7f8b7989d3f0 '__builtin_va_list' sugar
+|     |-Typedef 0x7f8b798270c8 '__builtin_va_list'
+|     `-ConstantArrayType 0x7f8b79827070 'struct __va_list_tag [1]' 1 
+|       `-RecordType 0x7f8b79826ee0 'struct __va_list_tag'
+|         `-Record 0x7f8b79826e58 '__va_list_tag'
+|-TypedefDecl 0x7f8b798a2780 </usr/include/sys/_types/_size_t.h:31:1, col:32> col:32 referenced size_t '__darwin_size_t':'unsigned long'
+| `-TypedefType 0x7f8b798a2750 '__darwin_size_t' sugar
+|   |-Typedef 0x7f8b7989d390 '__darwin_size_t'
+|   `-BuiltinType 0x7f8b79826680 'unsigned long'
+|-FunctionDecl 0x7f8b798a2a68 </usr/include/sys/stdio.h:39:1, /usr/include/AvailabilityInternal.h:30833:126> /usr/include/sys/stdio.h:39:5 renameat 'int (int, const char *, int, const char *)'
+| |-ParmVarDecl 0x7f8b798a27f0 <col:14> col:17 'int'
+| |-ParmVarDecl 0x7f8b798a2868 <col:19, col:30> col:31 'const char *'
+| |-ParmVarDecl 0x7f8b798a28e0 <col:33> col:36 'int'
+| |-ParmVarDecl 0x7f8b798a2958 <col:38, col:49> col:50 'const char *'
+| `-AvailabilityAttr 0x7f8b798a2b20 </usr/include/AvailabilityInternal.h:30833:88, col:124> macos 10.10 0 0 "" ""
+|-FunctionDecl 0x7f8b798af838 </usr/include/sys/stdio.h:46:1, /usr/include/Availability.h:231:117> /usr/include/sys/stdio.h:46:5 renamex_np 'int (const char *, const char *, unsigned int)'
+| |-ParmVarDecl 0x7f8b798af618 <col:16, col:27> col:28 'const char *'
+| |-ParmVarDecl 0x7f8b798af690 <col:30, col:41> col:42 'const char *'
+| |-ParmVarDecl 0x7f8b798af708 <col:44, col:53> col:56 'unsigned int'
+| |-AvailabilityAttr 0x7f8b798af8e8 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| |-AvailabilityAttr 0x7f8b798af988 <col:81, col:115> tvos 10.0 0 0 "" ""
+| |-AvailabilityAttr 0x7f8b798af9f0 <col:81, col:115> ios 10.0 0 0 "" ""
+| `-AvailabilityAttr 0x7f8b798afa58 <col:81, col:115> macos 10.12 0 0 "" ""
+|-FunctionDecl 0x7f8b798afe08 </usr/include/sys/stdio.h:47:1, /usr/include/Availability.h:231:117> /usr/include/sys/stdio.h:47:5 renameatx_np 'int (int, const char *, int, const char *, unsigned int)'
+| |-ParmVarDecl 0x7f8b798afad8 <col:18> col:21 'int'
+| |-ParmVarDecl 0x7f8b798afb50 <col:23, col:34> col:35 'const char *'
+| |-ParmVarDecl 0x7f8b798afbc8 <col:37> col:40 'int'
+| |-ParmVarDecl 0x7f8b798afc40 <col:42, col:53> col:54 'const char *'
+| |-ParmVarDecl 0x7f8b798afcb8 <col:56, col:65> col:68 'unsigned int'
+| |-AvailabilityAttr 0x7f8b798afec8 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| |-AvailabilityAttr 0x7f8b798aff68 <col:81, col:115> tvos 10.0 0 0 "" ""
+| |-AvailabilityAttr 0x7f8b798affd0 <col:81, col:115> ios 10.0 0 0 "" ""
+| `-AvailabilityAttr 0x7f8b798b0038 <col:81, col:115> macos 10.12 0 0 "" ""
+|-TypedefDecl 0x7f8b798b00d0 </usr/include/_stdio.h:81:1, col:25> col:25 referenced fpos_t '__darwin_off_t':'long long'
+| `-TypedefType 0x7f8b798b00a0 '__darwin_off_t' sugar
+|   |-Typedef 0x7f8b7989de18 '__darwin_off_t'
+|   `-TypedefType 0x7f8b7989d7d0 '__int64_t' sugar
+|     |-Typedef 0x7f8b7989cdd8 '__int64_t'
+|     `-BuiltinType 0x7f8b79826600 'long long'
+|-RecordDecl 0x7f8b798b0128 <line:92:1, line:95:1> line:92:8 struct __sbuf definition
+| |-FieldDecl 0x7f8b798b0210 <line:93:2, col:17> col:17 _base 'unsigned char *'
+| `-FieldDecl 0x7f8b798b0270 <line:94:2, col:7> col:7 _size 'int'
+|-RecordDecl 0x7f8b798b02b8 <line:98:1, col:8> col:8 struct __sFILEX
+|-RecordDecl 0x7f8b798b0360 <line:126:9, line:157:1> line:126:16 struct __sFILE definition
+| |-FieldDecl 0x7f8b798b0428 <line:127:2, col:17> col:17 referenced _p 'unsigned char *'
+| |-FieldDecl 0x7f8b798b0488 <line:128:2, col:6> col:6 _r 'int'
+| |-FieldDecl 0x7f8b798b04e8 <line:129:2, col:6> col:6 referenced _w 'int'
+| |-FieldDecl 0x7f8b798b0548 <line:130:2, col:8> col:8 _flags 'short'
+| |-FieldDecl 0x7f8b798b05a8 <line:131:2, col:8> col:8 _file 'short'
+| |-FieldDecl 0x7f8b79881650 <line:132:2, col:16> col:16 _bf 'struct __sbuf':'struct __sbuf'
+| |-FieldDecl 0x7f8b798816b0 <line:133:2, col:6> col:6 referenced _lbfsize 'int'
+| |-FieldDecl 0x7f8b79881710 <line:136:2, col:8> col:8 _cookie 'void *'
+| |-FieldDecl 0x7f8b79881928 <line:137:2, col:19> col:19 _close 'int (* _Nullable)(void *)':'int (*)(void *)'
+| |-FieldDecl 0x7f8b79881c58 <line:138:2, col:19> col:19 _read 'int (* _Nullable)(void *, char *, int)':'int (*)(void *, char *, int)'
+| |-FieldDecl 0x7f8b79881fe0 <line:139:2, col:22> col:22 _seek 'fpos_t (* _Nullable)(void *, fpos_t, int)':'fpos_t (*)(void *, fpos_t, int)'
+| |-FieldDecl 0x7f8b79882308 <line:140:2, col:19> col:19 _write 'int (* _Nullable)(void *, const char *, int)':'int (*)(void *, const char *, int)'
+| |-FieldDecl 0x7f8b79882370 <line:143:2, col:16> col:16 _ub 'struct __sbuf':'struct __sbuf'
+| |-FieldDecl 0x7f8b79882470 <line:144:2, col:19> col:19 _extra 'struct __sFILEX *'
+| |-FieldDecl 0x7f8b798824d0 <line:145:2, col:6> col:6 _ur 'int'
+| |-FieldDecl 0x7f8b798825a0 <line:148:2, col:23> col:16 _ubuf 'unsigned char [3]'
+| |-FieldDecl 0x7f8b79882680 <line:149:2, col:23> col:16 _nbuf 'unsigned char [1]'
+| |-FieldDecl 0x7f8b798826e8 <line:152:2, col:16> col:16 _lb 'struct __sbuf':'struct __sbuf'
+| |-FieldDecl 0x7f8b79882748 <line:155:2, col:6> col:6 _blksize 'int'
+| `-FieldDecl 0x7f8b798827a0 <line:156:2, col:9> col:9 _offset 'fpos_t':'long long'
+|-TypedefDecl 0x7f8b79882840 <line:126:1, line:157:3> col:3 referenced FILE 'struct __sFILE':'struct __sFILE'
+| `-ElaboratedType 0x7f8b798827f0 'struct __sFILE' sugar
+|   `-RecordType 0x7f8b798b03f0 'struct __sFILE'
+|     `-Record 0x7f8b798b0360 '__sFILE'
+|-VarDecl 0x7f8b79882938 </usr/include/stdio.h:67:1, col:14> col:14 __stdinp 'FILE *' extern
+|-VarDecl 0x7f8b798829a8 <line:68:1, col:14> col:14 __stdoutp 'FILE *' extern
+|-VarDecl 0x7f8b79882a18 <line:69:1, col:14> col:14 used __stderrp 'FILE *' extern
+|-FunctionDecl 0x7f8b79882b90 <line:142:1, col:22> col:7 clearerr 'void (FILE *)'
+| `-ParmVarDecl 0x7f8b79882a88 <col:16, col:21> col:22 'FILE *'
+|-FunctionDecl 0x7f8b79882d48 <line:143:1, col:19> col:6 fclose 'int (FILE *)'
+| `-ParmVarDecl 0x7f8b79882c40 <col:13, col:18> col:19 'FILE *'
+|-FunctionDecl 0x7f8b79882e88 <line:144:1, col:17> col:6 feof 'int (FILE *)'
+| `-ParmVarDecl 0x7f8b79882df8 <col:11, col:16> col:17 'FILE *'
+|-FunctionDecl 0x7f8b79882fc8 <line:145:1, col:19> col:6 ferror 'int (FILE *)'
+| `-ParmVarDecl 0x7f8b79882f38 <col:13, col:18> col:19 'FILE *'
+|-FunctionDecl 0x7f8b79883108 <line:146:1, col:19> col:6 fflush 'int (FILE *)'
+| `-ParmVarDecl 0x7f8b79883078 <col:13, col:18> col:19 'FILE *'
+|-FunctionDecl 0x7f8b79883248 <line:147:1, col:18> col:6 fgetc 'int (FILE *)'
+| `-ParmVarDecl 0x7f8b798831b8 <col:12, col:17> col:18 'FILE *'
+|-FunctionDecl 0x7f8b798834e8 <line:148:1, col:41> col:6 fgetpos 'int (FILE *__restrict, fpos_t *)'
+| |-ParmVarDecl 0x7f8b798832f8 <col:14, col:19> col:31 'FILE *__restrict'
+| `-ParmVarDecl 0x7f8b798833c8 <col:33, col:40> col:41 'fpos_t *'
+|-FunctionDecl 0x7f8b798b8028 <line:149:1, col:43> col:7 fgets 'char *(char *__restrict, int, FILE *)'
+| |-ParmVarDecl 0x7f8b798b7e00 <col:13, col:18> col:30 'char *__restrict'
+| |-ParmVarDecl 0x7f8b798b7e78 <col:32> col:35 'int'
+| `-ParmVarDecl 0x7f8b798b7ee8 <col:37, col:42> col:43 'FILE *'
+|-FunctionDecl 0x7f8b798b82f0 <line:153:1, /usr/include/sys/cdefs.h:569:73> /usr/include/stdio.h:153:7 fopen 'FILE *(const char *__restrict, const char *__restrict)'
+| |-ParmVarDecl 0x7f8b798b80f0 <col:13, col:37> col:37 __filename 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798b8168 <col:49, col:73> col:73 __mode 'const char *__restrict'
+| `-AsmLabelAttr 0x7f8b798b8388 </usr/include/sys/cdefs.h:569:36> "_fopen"
+|-FunctionDecl 0x7f8b798b8630 </usr/include/stdio.h:155:6> col:6 implicit used fprintf 'int (FILE *, const char *, ...)' extern
+| |-ParmVarDecl 0x7f8b798b86c8 <<invalid sloc>> <invalid sloc> 'FILE *'
+| |-ParmVarDecl 0x7f8b798b8728 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f8b798b8798 <col:6> Implicit printf 2 3
+|-FunctionDecl 0x7f8b798b87f0 prev 0x7f8b798b8630 <col:1, /usr/include/sys/cdefs.h:351:63> /usr/include/stdio.h:155:6 used fprintf 'int (FILE *, const char *, ...)'
+| |-ParmVarDecl 0x7f8b798b8400 <col:14, col:19> col:31 'FILE *__restrict'
+| |-ParmVarDecl 0x7f8b798b8478 <col:33, col:44> col:56 'const char *__restrict'
+| `-FormatAttr 0x7f8b798b8898 </usr/include/sys/cdefs.h:351:18, col:61> printf 2 3
+|-FunctionDecl 0x7f8b798b8a98 </usr/include/stdio.h:156:1, col:23> col:6 fputc 'int (int, FILE *)'
+| |-ParmVarDecl 0x7f8b798b8908 <col:12> col:15 'int'
+| `-ParmVarDecl 0x7f8b798b8978 <col:17, col:22> col:23 'FILE *'
+|-FunctionDecl 0x7f8b798b8d18 <line:157:1, /usr/include/sys/cdefs.h:569:73> /usr/include/stdio.h:157:6 fputs 'int (const char *__restrict, FILE *__restrict)'
+| |-ParmVarDecl 0x7f8b798b8b58 <col:12, col:23> col:35 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798b8bc8 <col:37, col:42> col:54 'FILE *__restrict'
+| `-AsmLabelAttr 0x7f8b798b8db0 </usr/include/sys/cdefs.h:569:36> "_fputs"
+|-FunctionDecl 0x7f8b798b9120 </usr/include/stdio.h:158:1, col:98> col:9 fread 'size_t (void *__restrict, size_t, size_t, FILE *__restrict)'
+| |-ParmVarDecl 0x7f8b798b8e88 <col:15, col:33> col:33 __ptr 'void *__restrict'
+| |-ParmVarDecl 0x7f8b798b8ef8 <col:40, col:47> col:47 __size 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7f8b798b8f68 <col:55, col:62> col:62 __nitems 'size_t':'unsigned long'
+| `-ParmVarDecl 0x7f8b798b8fd8 <col:72, col:90> col:90 __stream 'FILE *__restrict'
+|-FunctionDecl 0x7f8b798b9480 <line:159:1, /usr/include/sys/cdefs.h:569:73> /usr/include/stdio.h:159:7 freopen 'FILE *(const char *__restrict, const char *__restrict, FILE *__restrict)'
+| |-ParmVarDecl 0x7f8b798b91f0 <col:15, col:26> col:38 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798b9268 <col:40, col:51> col:63 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798b92d8 <line:160:18, col:23> col:35 'FILE *__restrict'
+| `-AsmLabelAttr 0x7f8b798b9518 </usr/include/sys/cdefs.h:569:36> "_freopen"
+|-FunctionDecl 0x7f8b798b96f8 </usr/include/stdio.h:161:6> col:6 implicit fscanf 'int (FILE *__restrict, const char *__restrict, ...)' extern
+| |-ParmVarDecl 0x7f8b798b9790 <<invalid sloc>> <invalid sloc> 'FILE *__restrict'
+| |-ParmVarDecl 0x7f8b798b97f0 <<invalid sloc>> <invalid sloc> 'const char *__restrict'
+| `-FormatAttr 0x7f8b798b9860 <col:6> Implicit scanf 2 3
+|-FunctionDecl 0x7f8b798b98b8 prev 0x7f8b798b96f8 <col:1, /usr/include/sys/cdefs.h:355:62> /usr/include/stdio.h:161:6 fscanf 'int (FILE *__restrict, const char *__restrict, ...)'
+| |-ParmVarDecl 0x7f8b798b9598 <col:13, col:18> col:30 'FILE *__restrict'
+| |-ParmVarDecl 0x7f8b798b9610 <col:32, col:43> col:55 'const char *__restrict'
+| `-FormatAttr 0x7f8b798b9960 </usr/include/sys/cdefs.h:355:18, col:60> scanf 2 3
+|-FunctionDecl 0x7f8b798b9bf8 </usr/include/stdio.h:162:1, col:29> col:6 fseek 'int (FILE *, long, int)'
+| |-ParmVarDecl 0x7f8b798b99c8 <col:12, col:17> col:18 'FILE *'
+| |-ParmVarDecl 0x7f8b798b9a40 <col:20> col:24 'long'
+| `-ParmVarDecl 0x7f8b798b9ab8 <col:26> col:29 'int'
+|-FunctionDecl 0x7f8b798baeb8 <line:163:1, col:36> col:6 fsetpos 'int (FILE *, const fpos_t *)'
+| |-ParmVarDecl 0x7f8b798b9cb8 <col:14, col:19> col:20 'FILE *'
+| `-ParmVarDecl 0x7f8b798b9d88 <col:22, col:35> col:36 'const fpos_t *'
+|-FunctionDecl 0x7f8b798bb078 <line:164:1, col:19> col:7 ftell 'long (FILE *)'
+| `-ParmVarDecl 0x7f8b798baf70 <col:13, col:18> col:19 'FILE *'
+|-FunctionDecl 0x7f8b798bb430 <line:165:1, /usr/include/sys/cdefs.h:569:73> /usr/include/stdio.h:165:9 fwrite 'size_t (const void *__restrict, size_t, size_t, FILE *__restrict)'
+| |-ParmVarDecl 0x7f8b798bb160 <col:16, col:40> col:40 __ptr 'const void *__restrict'
+| |-ParmVarDecl 0x7f8b798bb1d0 <col:47, col:54> col:54 __size 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7f8b798bb240 <col:62, col:69> col:69 __nitems 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7f8b798bb2b0 <col:79, col:97> col:97 __stream 'FILE *__restrict'
+| `-AsmLabelAttr 0x7f8b798bb4c8 </usr/include/sys/cdefs.h:569:36> "_fwrite"
+|-FunctionDecl 0x7f8b798bb5e0 </usr/include/stdio.h:166:1, col:17> col:6 getc 'int (FILE *)'
+| `-ParmVarDecl 0x7f8b798bb550 <col:11, col:16> col:17 'FILE *'
+|-FunctionDecl 0x7f8b798bb748 <line:167:1, col:18> col:6 getchar 'int (void)'
+|-FunctionDecl 0x7f8b798bb8c8 <line:168:1, col:18> col:7 gets 'char *(char *)'
+| `-ParmVarDecl 0x7f8b798bb7f8 <col:12, col:17> col:18 'char *'
+|-FunctionDecl 0x7f8b798bba40 <line:169:1, col:26> col:7 perror 'void (const char *)'
+| `-ParmVarDecl 0x7f8b798bb980 <col:14, col:25> col:26 'const char *'
+|-FunctionDecl 0x7f8b798bbc58 <line:170:6> col:6 implicit printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7f8b798bbcf0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f8b798bbd58 <col:6> Implicit printf 1 2
+|-FunctionDecl 0x7f8b798bbe00 prev 0x7f8b798bbc58 <col:1, /usr/include/sys/cdefs.h:351:63> /usr/include/stdio.h:170:6 printf 'int (const char *, ...)'
+| |-ParmVarDecl 0x7f8b798bbaf8 <col:13, col:24> col:36 'const char *__restrict'
+| `-FormatAttr 0x7f8b798bbea0 </usr/include/sys/cdefs.h:351:18, col:61> printf 1 2
+|-FunctionDecl 0x7f8b798bc018 </usr/include/stdio.h:171:1, col:22> col:6 putc 'int (int, FILE *)'
+| |-ParmVarDecl 0x7f8b798bbf10 <col:11> col:14 'int'
+| `-ParmVarDecl 0x7f8b798bbf80 <col:16, col:21> col:22 'FILE *'
+|-FunctionDecl 0x7f8b798bc1a8 <line:172:1, col:17> col:6 putchar 'int (int)'
+| `-ParmVarDecl 0x7f8b798bc0d8 <col:14> col:17 'int'
+|-FunctionDecl 0x7f8b798bc328 <line:173:1, col:23> col:6 puts 'int (const char *)'
+| `-ParmVarDecl 0x7f8b798bc260 <col:11, col:22> col:23 'const char *'
+|-FunctionDecl 0x7f8b798bc470 <line:174:1, col:25> col:6 remove 'int (const char *)'
+| `-ParmVarDecl 0x7f8b798bc3e0 <col:13, col:24> col:25 'const char *'
+|-FunctionDecl 0x7f8b798bc678 <line:175:1, col:50> col:6 rename 'int (const char *, const char *)'
+| |-ParmVarDecl 0x7f8b798bc528 <col:14, col:26> col:26 __old 'const char *'
+| `-ParmVarDecl 0x7f8b798bc5a0 <col:33, col:45> col:45 __new 'const char *'
+|-FunctionDecl 0x7f8b798bc7b8 <line:176:1, col:20> col:7 rewind 'void (FILE *)'
+| `-ParmVarDecl 0x7f8b798bc730 <col:14, col:19> col:20 'FILE *'
+|-FunctionDecl 0x7f8b798bc950 <line:177:6> col:6 implicit scanf 'int (const char *__restrict, ...)' extern
+| |-ParmVarDecl 0x7f8b798bc9e8 <<invalid sloc>> <invalid sloc> 'const char *__restrict'
+| `-FormatAttr 0x7f8b798bca50 <col:6> Implicit scanf 1 2
+|-FunctionDecl 0x7f8b798bcaa8 prev 0x7f8b798bc950 <col:1, /usr/include/sys/cdefs.h:355:62> /usr/include/stdio.h:177:6 scanf 'int (const char *__restrict, ...)'
+| |-ParmVarDecl 0x7f8b798bc870 <col:12, col:23> col:35 'const char *__restrict'
+| `-FormatAttr 0x7f8b798bcb48 </usr/include/sys/cdefs.h:355:18, col:60> scanf 1 2
+|-FunctionDecl 0x7f8b798bcd40 </usr/include/stdio.h:178:1, col:50> col:7 setbuf 'void (FILE *__restrict, char *__restrict)'
+| |-ParmVarDecl 0x7f8b798bcbb0 <col:14, col:19> col:31 'FILE *__restrict'
+| `-ParmVarDecl 0x7f8b798bcc28 <col:33, col:38> col:50 'char *__restrict'
+|-FunctionDecl 0x7f8b798bd0a8 <line:179:1, col:63> col:6 setvbuf 'int (FILE *__restrict, char *__restrict, int, size_t)'
+| |-ParmVarDecl 0x7f8b798bce00 <col:14, col:19> col:31 'FILE *__restrict'
+| |-ParmVarDecl 0x7f8b798bce78 <col:33, col:38> col:50 'char *__restrict'
+| |-ParmVarDecl 0x7f8b798bcef0 <col:52> col:55 'int'
+| `-ParmVarDecl 0x7f8b798bcf60 <col:57> col:63 'size_t':'unsigned long'
+|-FunctionDecl 0x7f8b798bd3e8 <line:180:6> col:6 implicit sprintf 'int (char *, const char *, ...)' extern
+| |-ParmVarDecl 0x7f8b798bd480 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7f8b798bd4e0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f8b798bd550 <col:6> Implicit printf 2 3
+|-FunctionDecl 0x7f8b798bd5a8 prev 0x7f8b798bd3e8 <col:1, /usr/include/sys/cdefs.h:275:101> /usr/include/stdio.h:180:6 sprintf 'int (char *, const char *, ...)'
+| |-ParmVarDecl 0x7f8b798bd178 <col:14, col:19> col:31 'char *__restrict'
+| |-ParmVarDecl 0x7f8b798bd1f0 <col:33, col:44> col:56 'const char *__restrict'
+| |-AvailabilityAttr 0x7f8b798bd650 </usr/include/sys/cdefs.h:275:50, col:99> swift 0 0 0 Unavailable "Use snprintf instead." ""
+| `-FormatAttr 0x7f8b798bd708 <line:351:18, col:61> printf 2 3
+|-FunctionDecl 0x7f8b798bd928 </usr/include/stdio.h:181:6> col:6 implicit sscanf 'int (const char *__restrict, const char *__restrict, ...)' extern
+| |-ParmVarDecl 0x7f8b798bd9c0 <<invalid sloc>> <invalid sloc> 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798bda20 <<invalid sloc>> <invalid sloc> 'const char *__restrict'
+| `-FormatAttr 0x7f8b798bda90 <col:6> Implicit scanf 2 3
+|-FunctionDecl 0x7f8b798bdae8 prev 0x7f8b798bd928 <col:1, /usr/include/sys/cdefs.h:355:62> /usr/include/stdio.h:181:6 sscanf 'int (const char *__restrict, const char *__restrict, ...)'
+| |-ParmVarDecl 0x7f8b798bd740 <col:13, col:24> col:36 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798bd7b8 <col:38, col:49> col:61 'const char *__restrict'
+| `-FormatAttr 0x7f8b798bdb90 </usr/include/sys/cdefs.h:355:18, col:60> scanf 2 3
+|-FunctionDecl 0x7f8b798bdce0 </usr/include/stdio.h:182:1, col:19> col:7 tmpfile 'FILE *(void)'
+|-FunctionDecl 0x7f8b798bdfe0 </usr/include/sys/cdefs.h:275:35, /usr/include/stdio.h:188:20> col:7 tmpnam 'char *(char *)'
+| |-ParmVarDecl 0x7f8b798bdf50 <col:14, col:19> col:20 'char *'
+| |-DeprecatedAttr 0x7f8b798be080 </usr/include/sys/cdefs.h:180:48, col:63> "This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of tmpnam(3), it is highly recommended that you use mkstemp(3) instead." ""
+| `-AvailabilityAttr 0x7f8b798be198 <line:275:50, col:99> swift 0 0 0 Unavailable "Use mkstemp(3) instead." ""
+|-FunctionDecl 0x7f8b798be338 </usr/include/stdio.h:189:1, col:24> col:6 ungetc 'int (int, FILE *)'
+| |-ParmVarDecl 0x7f8b798be230 <col:13> col:16 'int'
+| `-ParmVarDecl 0x7f8b798be2a0 <col:18, col:23> col:24 'FILE *'
+|-FunctionDecl 0x7f8b798be738 <line:190:6> col:6 implicit vfprintf 'int (FILE *, const char *, struct __va_list_tag *)' extern
+| |-ParmVarDecl 0x7f8b798be7d0 <<invalid sloc>> <invalid sloc> 'FILE *'
+| |-ParmVarDecl 0x7f8b798be830 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x7f8b798be890 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+| `-FormatAttr 0x7f8b798be908 <col:6> Implicit printf 2 0
+|-FunctionDecl 0x7f8b798be960 prev 0x7f8b798be738 <col:1, /usr/include/sys/cdefs.h:351:63> /usr/include/stdio.h:190:6 vfprintf 'int (FILE *, const char *, struct __va_list_tag *)'
+| |-ParmVarDecl 0x7f8b798be3f0 <col:15, col:20> col:32 'FILE *__restrict'
+| |-ParmVarDecl 0x7f8b798be468 <col:34, col:45> col:57 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798be560 <col:59> col:66 'struct __va_list_tag *':'struct __va_list_tag *'
+| `-FormatAttr 0x7f8b798bea10 </usr/include/sys/cdefs.h:351:18, col:61> printf 2 0
+|-FunctionDecl 0x7f8b798bec58 </usr/include/stdio.h:191:6> col:6 implicit vprintf 'int (const char *, struct __va_list_tag *)' extern
+| |-ParmVarDecl 0x7f8b798becf0 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x7f8b798bed50 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+| `-FormatAttr 0x7f8b798bedc0 <col:6> Implicit printf 1 0
+|-FunctionDecl 0x7f8b798bee38 prev 0x7f8b798bec58 <col:1, /usr/include/sys/cdefs.h:351:63> /usr/include/stdio.h:191:6 vprintf 'int (const char *, struct __va_list_tag *)'
+| |-ParmVarDecl 0x7f8b798bea80 <col:14, col:25> col:37 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798beaf0 <col:39> col:46 'struct __va_list_tag *':'struct __va_list_tag *'
+| `-FormatAttr 0x7f8b798beee0 </usr/include/sys/cdefs.h:351:18, col:61> printf 1 0
+|-FunctionDecl 0x7f8b798bf258 </usr/include/stdio.h:192:6> col:6 implicit vsprintf 'int (char *, const char *, struct __va_list_tag *)' extern
+| |-ParmVarDecl 0x7f8b798bf2f0 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7f8b798bf350 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x7f8b798bf3b0 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+| `-FormatAttr 0x7f8b798bf428 <col:6> Implicit printf 2 0
+|-FunctionDecl 0x7f8b798bf480 prev 0x7f8b798bf258 <col:1, /usr/include/sys/cdefs.h:275:101> /usr/include/stdio.h:192:6 vsprintf 'int (char *, const char *, struct __va_list_tag *)'
+| |-ParmVarDecl 0x7f8b798bef50 <col:15, col:20> col:32 'char *__restrict'
+| |-ParmVarDecl 0x7f8b798befc8 <col:34, col:45> col:57 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798bf038 <col:59> col:66 'struct __va_list_tag *':'struct __va_list_tag *'
+| |-AvailabilityAttr 0x7f8b798bf530 </usr/include/sys/cdefs.h:275:50, col:99> swift 0 0 0 Unavailable "Use vsnprintf instead." ""
+| `-FormatAttr 0x7f8b798bf5e8 <line:351:18, col:61> printf 2 0
+|-FunctionDecl 0x7f8b798bf6b0 </usr/include/stdio.h:208:1, col:21> col:7 ctermid 'char *(char *)'
+| `-ParmVarDecl 0x7f8b798bf620 <col:15, col:20> col:21 'char *'
+|-FunctionDecl 0x7f8b798bf930 <line:214:1, /usr/include/sys/cdefs.h:569:73> /usr/include/stdio.h:214:7 fdopen 'FILE *(int, const char *)'
+| |-ParmVarDecl 0x7f8b798bf768 <col:14> col:17 'int'
+| |-ParmVarDecl 0x7f8b798bf7e0 <col:19, col:30> col:31 'const char *'
+| `-AsmLabelAttr 0x7f8b798bf9c8 </usr/include/sys/cdefs.h:569:36> "_fdopen"
+|-FunctionDecl 0x7f8b798bfad0 </usr/include/stdio.h:216:1, col:19> col:6 fileno 'int (FILE *)'
+| `-ParmVarDecl 0x7f8b798bfa40 <col:13, col:18> col:19 'FILE *'
+|-FunctionDecl 0x7f8b798bfc70 <line:232:1, /usr/include/sys/cdefs.h:275:101> /usr/include/stdio.h:232:6 pclose 'int (FILE *)'
+| |-ParmVarDecl 0x7f8b798bfb80 <col:13, col:18> col:19 'FILE *'
+| `-AvailabilityAttr 0x7f8b798bfd10 </usr/include/sys/cdefs.h:275:50, col:99> swift 0 0 0 Unavailable "Use posix_spawn APIs or NSTask instead." ""
+|-FunctionDecl 0x7f8b798bffe0 </usr/include/stdio.h:236:1, /usr/include/sys/cdefs.h:275:101> /usr/include/stdio.h:236:7 popen 'FILE *(const char *, const char *)'
+| |-ParmVarDecl 0x7f8b798bfe00 <col:13, col:24> col:25 'const char *'
+| |-ParmVarDecl 0x7f8b798bfe78 <col:27, col:38> col:39 'const char *'
+| |-AsmLabelAttr 0x7f8b798c0078 </usr/include/sys/cdefs.h:569:36> "_popen"
+| `-AvailabilityAttr 0x7f8b798c00e0 <line:275:50, col:99> swift 0 0 0 Unavailable "Use posix_spawn APIs or NSTask instead." ""
+|-FunctionDecl 0x7f8b798c0210 </usr/include/stdio.h:253:1, col:19> col:5 __srget 'int (FILE *)'
+| `-ParmVarDecl 0x7f8b798c0180 <col:13, col:18> col:19 'FILE *'
+|-FunctionDecl 0x7f8b798c04e8 <line:254:1, /usr/include/sys/cdefs.h:355:62> /usr/include/stdio.h:254:5 __svfscanf 'int (FILE *, const char *, struct __va_list_tag *)'
+| |-ParmVarDecl 0x7f8b798c02c0 <col:16, col:21> col:22 'FILE *'
+| |-ParmVarDecl 0x7f8b798c0338 <col:24, col:35> col:36 'const char *'
+| |-ParmVarDecl 0x7f8b798c03a8 <col:38> col:45 'struct __va_list_tag *':'struct __va_list_tag *'
+| `-FormatAttr 0x7f8b798c0598 </usr/include/sys/cdefs.h:355:18, col:60> scanf 2 0
+|-FunctionDecl 0x7f8b798c0710 </usr/include/stdio.h:255:1, col:24> col:5 used __swbuf 'int (int, FILE *)'
+| |-ParmVarDecl 0x7f8b798c0608 <col:13> col:16 'int'
+| `-ParmVarDecl 0x7f8b798c0678 <col:18, col:23> col:24 'FILE *'
+|-FunctionDecl 0x7f8b798c08d8 </usr/include/sys/cdefs.h:300:36, /usr/include/stdio.h:269:1> line:264:28 __sputc 'int (int, FILE *)' inline
+| |-ParmVarDecl 0x7f8b798c07d0 <col:36, col:40> col:40 used _c 'int'
+| |-ParmVarDecl 0x7f8b798c0840 <col:44, col:50> col:50 used _p 'FILE *'
+| |-CompoundStmt 0x7f8b798c2098 <col:54, line:269:1>
+| | `-IfStmt 0x7f8b798c2060 <line:265:2, line:268:26>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7f8b798c0d08 <line:265:6, col:66> 'int' '||'
+| |   | |-BinaryOperator 0x7f8b798c0a80 <col:6, col:18> 'int' '>='
+| |   | | |-UnaryOperator 0x7f8b798c0a40 <col:6, col:12> 'int' prefix '--'
+| |   | | | `-MemberExpr 0x7f8b798c0a08 <col:8, col:12> 'int' lvalue ->_w 0x7f8b798b04e8
+| |   | | |   `-ImplicitCastExpr 0x7f8b798c09f0 <col:8> 'FILE *' <LValueToRValue>
+| |   | | |     `-DeclRefExpr 0x7f8b798c09c8 <col:8> 'FILE *' lvalue ParmVar 0x7f8b798c0840 '_p' 'FILE *'
+| |   | | `-IntegerLiteral 0x7f8b798c0a60 <col:18> 'int' 0
+| |   | `-ParenExpr 0x7f8b798c0ce8 <col:23, col:66> 'int'
+| |   |   `-BinaryOperator 0x7f8b798c0cc0 <col:24, col:62> 'int' '&&'
+| |   |     |-BinaryOperator 0x7f8b798c0bc8 <col:24, col:38> 'int' '>='
+| |   |     | |-ImplicitCastExpr 0x7f8b798c0b98 <col:24, col:28> 'int' <LValueToRValue>
+| |   |     | | `-MemberExpr 0x7f8b798c0ae8 <col:24, col:28> 'int' lvalue ->_w 0x7f8b798b04e8
+| |   |     | |   `-ImplicitCastExpr 0x7f8b798c0ad0 <col:24> 'FILE *' <LValueToRValue>
+| |   |     | |     `-DeclRefExpr 0x7f8b798c0aa8 <col:24> 'FILE *' lvalue ParmVar 0x7f8b798c0840 '_p' 'FILE *'
+| |   |     | `-ImplicitCastExpr 0x7f8b798c0bb0 <col:34, col:38> 'int' <LValueToRValue>
+| |   |     |   `-MemberExpr 0x7f8b798c0b60 <col:34, col:38> 'int' lvalue ->_lbfsize 0x7f8b798816b0
+| |   |     |     `-ImplicitCastExpr 0x7f8b798c0b48 <col:34> 'FILE *' <LValueToRValue>
+| |   |     |       `-DeclRefExpr 0x7f8b798c0b20 <col:34> 'FILE *' lvalue ParmVar 0x7f8b798c0840 '_p' 'FILE *'
+| |   |     `-BinaryOperator 0x7f8b798c0c98 <col:50, col:62> 'int' '!='
+| |   |       |-ImplicitCastExpr 0x7f8b798c0c80 <col:50, col:56> 'int' <IntegralCast>
+| |   |       | `-CStyleCastExpr 0x7f8b798c0c40 <col:50, col:56> 'char' <IntegralCast>
+| |   |       |   `-ImplicitCastExpr 0x7f8b798c0c28 <col:56> 'int' <LValueToRValue>
+| |   |       |     `-DeclRefExpr 0x7f8b798c0bf0 <col:56> 'int' lvalue ParmVar 0x7f8b798c07d0 '_c' 'int'
+| |   |       `-CharacterLiteral 0x7f8b798c0c68 <col:62> 'int' 10
+| |   |-ReturnStmt 0x7f8b798c1eb8 <line:266:3, col:25>
+| |   | `-ImplicitCastExpr 0x7f8b798c1ea0 <col:10, col:25> 'int' <IntegralCast>
+| |   |   `-ParenExpr 0x7f8b798c1e80 <col:10, col:25> 'unsigned char'
+| |   |     `-BinaryOperator 0x7f8b798c1e58 <col:11, col:23> 'unsigned char' '='
+| |   |       |-UnaryOperator 0x7f8b798c0dc8 <col:11, col:18> 'unsigned char' lvalue prefix '*'
+| |   |       | `-UnaryOperator 0x7f8b798c0da8 <col:12, col:18> 'unsigned char *' postfix '++'
+| |   |       |   `-MemberExpr 0x7f8b798c0d70 <col:12, col:16> 'unsigned char *' lvalue ->_p 0x7f8b798b0428
+| |   |       |     `-ImplicitCastExpr 0x7f8b798c0d58 <col:12> 'FILE *' <LValueToRValue>
+| |   |       |       `-DeclRefExpr 0x7f8b798c0d30 <col:12> 'FILE *' lvalue ParmVar 0x7f8b798c0840 '_p' 'FILE *'
+| |   |       `-ImplicitCastExpr 0x7f8b798c1e40 <col:23> 'unsigned char' <IntegralCast>
+| |   |         `-ImplicitCastExpr 0x7f8b798c1e28 <col:23> 'int' <LValueToRValue>
+| |   |           `-DeclRefExpr 0x7f8b798c1e00 <col:23> 'int' lvalue ParmVar 0x7f8b798c07d0 '_c' 'int'
+| |   `-ReturnStmt 0x7f8b798c2048 <line:268:3, col:26>
+| |     `-ParenExpr 0x7f8b798c2028 <col:10, col:26> 'int'
+| |       `-CallExpr 0x7f8b798c1fc0 <col:11, col:25> 'int'
+| |         |-ImplicitCastExpr 0x7f8b798c1fa8 <col:11> 'int (*)(int, FILE *)' <FunctionToPointerDecay>
+| |         | `-DeclRefExpr 0x7f8b798c1ed0 <col:11> 'int (int, FILE *)' Function 0x7f8b798c0710 '__swbuf' 'int (int, FILE *)'
+| |         |-ImplicitCastExpr 0x7f8b798c1ff8 <col:19> 'int' <LValueToRValue>
+| |         | `-DeclRefExpr 0x7f8b798c1ef8 <col:19> 'int' lvalue ParmVar 0x7f8b798c07d0 '_c' 'int'
+| |         `-ImplicitCastExpr 0x7f8b798c2010 <col:23> 'FILE *' <LValueToRValue>
+| |           `-DeclRefExpr 0x7f8b798c1f20 <col:23> 'FILE *' lvalue ParmVar 0x7f8b798c0840 '_p' 'FILE *'
+| `-AlwaysInlineAttr 0x7f8b798c0980 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7f8b798c2150 </usr/include/stdio.h:290:1, col:23> col:7 flockfile 'void (FILE *)'
+| `-ParmVarDecl 0x7f8b798c20c8 <col:17, col:22> col:23 'FILE *'
+|-FunctionDecl 0x7f8b798c2290 <line:291:1, col:25> col:6 ftrylockfile 'int (FILE *)'
+| `-ParmVarDecl 0x7f8b798c2200 <col:19, col:24> col:25 'FILE *'
+|-FunctionDecl 0x7f8b798c23c8 <line:292:1, col:25> col:7 funlockfile 'void (FILE *)'
+| `-ParmVarDecl 0x7f8b798c2340 <col:19, col:24> col:25 'FILE *'
+|-FunctionDecl 0x7f8b798c2508 <line:293:1, col:26> col:6 getc_unlocked 'int (FILE *)'
+| `-ParmVarDecl 0x7f8b798c2478 <col:20, col:25> col:26 'FILE *'
+|-FunctionDecl 0x7f8b798c2640 <line:294:1, col:27> col:6 getchar_unlocked 'int (void)'
+|-FunctionDecl 0x7f8b798c27f8 <line:295:1, col:31> col:6 putc_unlocked 'int (int, FILE *)'
+| |-ParmVarDecl 0x7f8b798c26f0 <col:20> col:23 'int'
+| `-ParmVarDecl 0x7f8b798c2760 <col:25, col:30> col:31 'FILE *'
+|-FunctionDecl 0x7f8b798c2948 <line:296:1, col:26> col:6 putchar_unlocked 'int (int)'
+| `-ParmVarDecl 0x7f8b798c28b8 <col:23> col:26 'int'
+|-FunctionDecl 0x7f8b798c2a88 <line:300:1, col:17> col:6 getw 'int (FILE *)'
+| `-ParmVarDecl 0x7f8b798c29f8 <col:11, col:16> col:17 'FILE *'
+|-FunctionDecl 0x7f8b798c2c48 <line:301:1, col:22> col:6 putw 'int (int, FILE *)'
+| |-ParmVarDecl 0x7f8b798c2b40 <col:11> col:14 'int'
+| `-ParmVarDecl 0x7f8b798c2bb0 <col:16, col:21> col:22 'FILE *'
+|-FunctionDecl 0x7f8b798c3058 </usr/include/sys/cdefs.h:275:35, line:569:73> /usr/include/stdio.h:308:7 tempnam 'char *(const char *, const char *)'
+| |-ParmVarDecl 0x7f8b798c2ed0 <col:15, col:27> col:27 __dir 'const char *'
+| |-ParmVarDecl 0x7f8b798c2f48 <col:34, col:46> col:46 __prefix 'const char *'
+| |-AsmLabelAttr 0x7f8b798c30f0 </usr/include/sys/cdefs.h:569:36> "_tempnam"
+| |-DeprecatedAttr 0x7f8b798c3158 <line:180:48, col:63> "This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of tempnam(3), it is highly recommended that you use mkstemp(3) instead." ""
+| `-AvailabilityAttr 0x7f8b798c3238 <line:275:50, col:99> swift 0 0 0 Unavailable "Use mkstemp(3) instead." ""
+|-TypedefDecl 0x7f8b798c32c8 </usr/include/sys/_types/_off_t.h:31:1, col:25> col:25 referenced off_t '__darwin_off_t':'long long'
+| `-TypedefType 0x7f8b798b00a0 '__darwin_off_t' sugar
+|   |-Typedef 0x7f8b7989de18 '__darwin_off_t'
+|   `-TypedefType 0x7f8b7989d7d0 '__int64_t' sugar
+|     |-Typedef 0x7f8b7989cdd8 '__int64_t'
+|     `-BuiltinType 0x7f8b79826600 'long long'
+|-FunctionDecl 0x7f8b798c3578 </usr/include/stdio.h:331:1, col:58> col:6 fseeko 'int (FILE *, off_t, int)'
+| |-ParmVarDecl 0x7f8b798c3330 <col:13, col:20> col:20 __stream 'FILE *'
+| |-ParmVarDecl 0x7f8b798c33c0 <col:30, col:36> col:36 __offset 'off_t':'long long'
+| `-ParmVarDecl 0x7f8b798c3438 <col:46, col:50> col:50 __whence 'int'
+|-FunctionDecl 0x7f8b798c3740 <line:332:1, col:30> col:8 ftello 'off_t (FILE *)'
+| `-ParmVarDecl 0x7f8b798c3638 <col:15, col:22> col:22 __stream 'FILE *'
+|-FunctionDecl 0x7f8b798c3a68 <line:338:6> col:6 implicit snprintf 'int (char *, unsigned long, const char *, ...)' extern
+| |-ParmVarDecl 0x7f8b798c3b00 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7f8b798c3b60 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7f8b798c3bc0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f8b798c3c38 <col:6> Implicit printf 3 4
+|-FunctionDecl 0x7f8b798c3c90 prev 0x7f8b798c3a68 <col:1, /usr/include/sys/cdefs.h:351:63> /usr/include/stdio.h:338:6 snprintf 'int (char *, unsigned long, const char *, ...)'
+| |-ParmVarDecl 0x7f8b798c37f8 <col:15, col:33> col:33 __str 'char *__restrict'
+| |-ParmVarDecl 0x7f8b798c3868 <col:40, col:47> col:47 __size 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7f8b798c38e0 <col:55, col:79> col:79 __format 'const char *__restrict'
+| `-FormatAttr 0x7f8b798c3d40 </usr/include/sys/cdefs.h:351:18, col:61> printf 3 4
+|-FunctionDecl 0x7f8b798c5628 </usr/include/stdio.h:339:6> col:6 implicit vfscanf 'int (FILE *__restrict, const char *__restrict, struct __va_list_tag *)' extern
+| |-ParmVarDecl 0x7f8b798c56c0 <<invalid sloc>> <invalid sloc> 'FILE *__restrict'
+| |-ParmVarDecl 0x7f8b798c5720 <<invalid sloc>> <invalid sloc> 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798c5780 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+| `-FormatAttr 0x7f8b798c57f8 <col:6> Implicit scanf 2 0
+|-FunctionDecl 0x7f8b798c5850 prev 0x7f8b798c5628 <col:1, /usr/include/sys/cdefs.h:355:62> /usr/include/stdio.h:339:6 vfscanf 'int (FILE *__restrict, const char *__restrict, struct __va_list_tag *)'
+| |-ParmVarDecl 0x7f8b798c5400 <col:14, col:32> col:32 __stream 'FILE *__restrict'
+| |-ParmVarDecl 0x7f8b798c5478 <col:42, col:66> col:66 __format 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798c54e8 <col:76> col:83 'struct __va_list_tag *':'struct __va_list_tag *'
+| `-FormatAttr 0x7f8b798c5900 </usr/include/sys/cdefs.h:355:18, col:60> scanf 2 0
+|-FunctionDecl 0x7f8b798c5b10 </usr/include/stdio.h:340:6> col:6 implicit vscanf 'int (const char *__restrict, struct __va_list_tag *)' extern
+| |-ParmVarDecl 0x7f8b798c5ba8 <<invalid sloc>> <invalid sloc> 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798c5c08 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+| `-FormatAttr 0x7f8b798c5c78 <col:6> Implicit scanf 1 0
+|-FunctionDecl 0x7f8b798c5cd0 prev 0x7f8b798c5b10 <col:1, /usr/include/sys/cdefs.h:355:62> /usr/include/stdio.h:340:6 vscanf 'int (const char *__restrict, struct __va_list_tag *)'
+| |-ParmVarDecl 0x7f8b798c5970 <col:13, col:37> col:37 __format 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798c59e0 <col:47> col:54 'struct __va_list_tag *':'struct __va_list_tag *'
+| `-FormatAttr 0x7f8b798c5d78 </usr/include/sys/cdefs.h:355:18, col:60> scanf 1 0
+|-FunctionDecl 0x7f8b798c60d8 </usr/include/stdio.h:341:6> col:6 implicit vsnprintf 'int (char *, unsigned long, const char *, struct __va_list_tag *)' extern
+| |-ParmVarDecl 0x7f8b798c6170 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7f8b798c61d0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7f8b798c6230 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x7f8b798c6290 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+| `-FormatAttr 0x7f8b798c6310 <col:6> Implicit printf 3 0
+|-FunctionDecl 0x7f8b798c6368 prev 0x7f8b798c60d8 <col:1, /usr/include/sys/cdefs.h:351:63> /usr/include/stdio.h:341:6 vsnprintf 'int (char *, unsigned long, const char *, struct __va_list_tag *)'
+| |-ParmVarDecl 0x7f8b798c5de8 <col:16, col:34> col:34 __str 'char *__restrict'
+| |-ParmVarDecl 0x7f8b798c5e58 <col:41, col:48> col:48 __size 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7f8b798c5ed0 <col:56, col:80> col:80 __format 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798c5f40 <col:90> col:97 'struct __va_list_tag *':'struct __va_list_tag *'
+| `-FormatAttr 0x7f8b798c6420 </usr/include/sys/cdefs.h:351:18, col:61> printf 3 0
+|-FunctionDecl 0x7f8b798c6758 </usr/include/stdio.h:342:6> col:6 implicit vsscanf 'int (const char *__restrict, const char *__restrict, struct __va_list_tag *)' extern
+| |-ParmVarDecl 0x7f8b798c67f0 <<invalid sloc>> <invalid sloc> 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798c6850 <<invalid sloc>> <invalid sloc> 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798c68b0 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+| `-FormatAttr 0x7f8b798c6928 <col:6> Implicit scanf 2 0
+|-FunctionDecl 0x7f8b798c6980 prev 0x7f8b798c6758 <col:1, /usr/include/sys/cdefs.h:355:62> /usr/include/stdio.h:342:6 vsscanf 'int (const char *__restrict, const char *__restrict, struct __va_list_tag *)'
+| |-ParmVarDecl 0x7f8b798c6490 <col:14, col:38> col:38 __str 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798c6508 <col:45, col:69> col:69 __format 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798c6578 <col:79> col:86 'struct __va_list_tag *':'struct __va_list_tag *'
+| `-FormatAttr 0x7f8b798c6a30 </usr/include/sys/cdefs.h:355:18, col:60> scanf 2 0
+|-TypedefDecl 0x7f8b798c6ac0 </usr/include/sys/_types/_ssize_t.h:31:1, col:33> col:33 referenced ssize_t '__darwin_ssize_t':'long'
+| `-TypedefType 0x7f8b798c6a90 '__darwin_ssize_t' sugar
+|   |-Typedef 0x7f8b7989d700 '__darwin_ssize_t'
+|   `-BuiltinType 0x7f8b798265e0 'long'
+|-FunctionDecl 0x7f8b798c6d28 </usr/include/stdio.h:356:1, /usr/include/AvailabilityInternal.h:30518:124> /usr/include/stdio.h:356:5 dprintf 'int (int, const char *__restrict, ...)'
+| |-ParmVarDecl 0x7f8b798c6b30 <col:13> col:16 'int'
+| |-ParmVarDecl 0x7f8b798c6ba8 <col:18, col:29> col:41 'const char *__restrict'
+| |-AvailabilityAttr 0x7f8b798c6dd0 </usr/include/AvailabilityInternal.h:30518:87, col:122> macos 10.7 0 0 "" ""
+| `-FormatAttr 0x7f8b798c6e70 </usr/include/sys/cdefs.h:351:18, col:61> printf 2 3
+|-FunctionDecl 0x7f8b798c7128 </usr/include/stdio.h:357:1, /usr/include/AvailabilityInternal.h:30518:124> /usr/include/stdio.h:357:5 vdprintf 'int (int, const char *__restrict, struct __va_list_tag *)'
+| |-ParmVarDecl 0x7f8b798c6ea8 <col:14> col:17 'int'
+| |-ParmVarDecl 0x7f8b798c6f20 <col:19, col:30> col:42 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798c6f90 <col:44> col:51 'struct __va_list_tag *':'struct __va_list_tag *'
+| |-AvailabilityAttr 0x7f8b798c71d8 </usr/include/AvailabilityInternal.h:30518:87, col:122> macos 10.7 0 0 "" ""
+| `-FormatAttr 0x7f8b798c7278 </usr/include/sys/cdefs.h:351:18, col:61> printf 2 0
+|-FunctionDecl 0x7f8b798c7e40 </usr/include/stdio.h:358:1, /usr/include/AvailabilityInternal.h:30518:124> /usr/include/stdio.h:358:9 getdelim 'ssize_t (char **__restrict, size_t *__restrict, int, FILE *__restrict)'
+| |-ParmVarDecl 0x7f8b798c7300 <col:18, col:37> col:37 __linep 'char **__restrict'
+| |-ParmVarDecl 0x7f8b798c7c00 <col:46, col:66> col:66 __linecapp 'size_t *__restrict'
+| |-ParmVarDecl 0x7f8b798c7c78 <col:78, col:82> col:82 __delimiter 'int'
+| |-ParmVarDecl 0x7f8b798c7ce8 <col:95, col:113> col:113 __stream 'FILE *__restrict'
+| `-AvailabilityAttr 0x7f8b798c7ef8 </usr/include/AvailabilityInternal.h:30518:87, col:122> macos 10.7 0 0 "" ""
+|-FunctionDecl 0x7f8b798c81d0 </usr/include/stdio.h:359:1, /usr/include/AvailabilityInternal.h:30518:124> /usr/include/stdio.h:359:9 getline 'ssize_t (char **__restrict, size_t *__restrict, FILE *__restrict)'
+| |-ParmVarDecl 0x7f8b798c7fb0 <col:17, col:36> col:36 __linep 'char **__restrict'
+| |-ParmVarDecl 0x7f8b798c8020 <col:45, col:65> col:65 __linecapp 'size_t *__restrict'
+| |-ParmVarDecl 0x7f8b798c8090 <col:77, col:95> col:95 __stream 'FILE *__restrict'
+| `-AvailabilityAttr 0x7f8b798c8280 </usr/include/AvailabilityInternal.h:30518:87, col:122> macos 10.7 0 0 "" ""
+|-FunctionDecl 0x7f8b798c8590 </usr/include/stdio.h:360:1, /usr/include/AvailabilityInternal.h:33235:82> /usr/include/stdio.h:360:7 fmemopen 'FILE *(void *__restrict, size_t, const char *__restrict)'
+| |-ParmVarDecl 0x7f8b798c8338 <col:16, col:34> col:34 __buf 'void *__restrict'
+| |-ParmVarDecl 0x7f8b798c83a8 <col:41, col:48> col:48 __size 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7f8b798c8420 <col:56, col:80> col:80 __mode 'const char *__restrict'
+| |-AvailabilityAttr 0x7f8b798c8640 </usr/include/AvailabilityInternal.h:33235:39, col:80> watchos 4.0 0 0 "" ""
+| |-AvailabilityAttr 0x7f8b798c86e0 <col:39, col:80> tvos 11.0 0 0 "" ""
+| |-AvailabilityAttr 0x7f8b798c8748 <col:39, col:80> ios 11.0 0 0 "" ""
+| `-AvailabilityAttr 0x7f8b798c87b0 <col:39, col:80> macos 10.13 0 0 "" ""
+|-FunctionDecl 0x7f8b798c89f0 </usr/include/stdio.h:361:1, /usr/include/AvailabilityInternal.h:33235:82> /usr/include/stdio.h:361:7 open_memstream 'FILE *(char **, size_t *)'
+| |-ParmVarDecl 0x7f8b798c8830 <col:22, col:29> col:29 __bufp 'char **'
+| |-ParmVarDecl 0x7f8b798c88a0 <col:37, col:45> col:45 __sizep 'size_t *'
+| |-AvailabilityAttr 0x7f8b798c8a98 </usr/include/AvailabilityInternal.h:33235:39, col:80> watchos 4.0 0 0 "" ""
+| |-AvailabilityAttr 0x7f8b798c8b38 <col:39, col:80> tvos 11.0 0 0 "" ""
+| |-AvailabilityAttr 0x7f8b798cba00 <col:39, col:80> ios 11.0 0 0 "" ""
+| `-AvailabilityAttr 0x7f8b798cba68 <col:39, col:80> macos 10.13 0 0 "" ""
+|-VarDecl 0x7f8b798cbae8 </usr/include/stdio.h:371:1, col:20> col:20 sys_nerr 'const int' extern
+|-VarDecl 0x7f8b798cbbd0 <line:372:1, col:42> col:30 sys_errlist 'const char *const []' extern
+|-FunctionDecl 0x7f8b798cbe28 <line:374:1, /usr/include/sys/cdefs.h:351:63> /usr/include/stdio.h:374:6 asprintf 'int (char **__restrict, const char *__restrict, ...)'
+| |-ParmVarDecl 0x7f8b798cbc48 <col:15, col:21> col:33 'char **__restrict'
+| |-ParmVarDecl 0x7f8b798cbcc0 <col:35, col:46> col:58 'const char *__restrict'
+| `-FormatAttr 0x7f8b798cbed0 </usr/include/sys/cdefs.h:351:18, col:61> printf 2 3
+|-FunctionDecl 0x7f8b798cbfd0 </usr/include/stdio.h:375:1, col:23> col:7 ctermid_r 'char *(char *)'
+| `-ParmVarDecl 0x7f8b798cbf40 <col:17, col:22> col:23 'char *'
+|-FunctionDecl 0x7f8b798cc208 <line:376:1, col:30> col:7 fgetln 'char *(FILE *, size_t *)'
+| |-ParmVarDecl 0x7f8b798cc080 <col:14, col:19> col:20 'FILE *'
+| `-ParmVarDecl 0x7f8b798cc0f0 <col:22, col:29> col:30 'size_t *'
+|-FunctionDecl 0x7f8b798cc418 </usr/include/sys/cdefs.h:116:18, /usr/include/stdio.h:377:50> col:15 fmtcheck 'const char *(const char *, const char *)'
+| |-ParmVarDecl 0x7f8b798cc2c8 <col:24, col:35> col:36 'const char *'
+| `-ParmVarDecl 0x7f8b798cc340 <col:38, col:49> col:50 'const char *'
+|-FunctionDecl 0x7f8b798cc560 <line:378:1, col:19> col:6 fpurge 'int (FILE *)'
+| `-ParmVarDecl 0x7f8b798cc4d0 <col:13, col:18> col:19 'FILE *'
+|-FunctionDecl 0x7f8b798cc830 <line:379:1, col:36> col:7 setbuffer 'void (FILE *, char *, int)'
+| |-ParmVarDecl 0x7f8b798cc610 <col:17, col:22> col:23 'FILE *'
+| |-ParmVarDecl 0x7f8b798cc688 <col:25, col:30> col:31 'char *'
+| `-ParmVarDecl 0x7f8b798cc700 <col:33> col:36 'int'
+|-FunctionDecl 0x7f8b798cca00 <line:380:1, col:23> col:6 setlinebuf 'int (FILE *)'
+| `-ParmVarDecl 0x7f8b798cc8f0 <col:17, col:22> col:23 'FILE *'
+|-FunctionDecl 0x7f8b798ccd28 <line:381:1, /usr/include/sys/cdefs.h:351:63> /usr/include/stdio.h:381:6 vasprintf 'int (char **__restrict, const char *__restrict, struct __va_list_tag *)'
+| |-ParmVarDecl 0x7f8b798ccab8 <col:16, col:22> col:34 'char **__restrict'
+| |-ParmVarDecl 0x7f8b798ccb30 <col:36, col:47> col:59 'const char *__restrict'
+| |-ParmVarDecl 0x7f8b798ccba0 <col:61> col:68 'struct __va_list_tag *':'struct __va_list_tag *'
+| `-FormatAttr 0x7f8b798ccdd8 </usr/include/sys/cdefs.h:351:18, col:61> printf 2 0
+|-FunctionDecl 0x7f8b798cd070 </usr/include/stdio.h:382:1, col:44> col:7 zopen 'FILE *(const char *, const char *, int)'
+| |-ParmVarDecl 0x7f8b798cce48 <col:13, col:24> col:25 'const char *'
+| |-ParmVarDecl 0x7f8b798ccec0 <col:27, col:38> col:39 'const char *'
+| `-ParmVarDecl 0x7f8b798ccf38 <col:41> col:44 'int'
+|-FunctionDecl 0x7f8b798ceaa0 <line:388:1, line:392:43> line:388:7 funopen 'FILE *(const void *, int (* _Nullable)(void *, char *, int), int (* _Nullable)(void *, const char *, int), fpos_t (* _Nullable)(void *, fpos_t, int), int (* _Nullable)(void *))'
+| |-ParmVarDecl 0x7f8b798cd138 <col:15, col:26> col:27 'const void *'
+| |-ParmVarDecl 0x7f8b798cd368 <line:389:18, col:25> col:34 'int (* _Nullable)(void *, char *, int)':'int (*)(void *, char *, int)'
+| |-ParmVarDecl 0x7f8b798cd598 <line:390:18, col:25> col:34 'int (* _Nullable)(void *, const char *, int)':'int (*)(void *, const char *, int)'
+| |-ParmVarDecl 0x7f8b798cd7b8 <line:391:18, col:28> col:37 'fpos_t (* _Nullable)(void *, fpos_t, int)':'fpos_t (*)(void *, fpos_t, int)'
+| `-ParmVarDecl 0x7f8b798cd8e8 <line:392:18, col:25> col:34 'int (* _Nullable)(void *)':'int (*)(void *)'
+|-FunctionDecl 0x7f8b798cee28 </usr/include/secure/_stdio.h:42:1, line:43:34> line:42:12 __sprintf_chk 'int (char *__restrict, int, size_t, const char *__restrict, ...)' extern
+| |-ParmVarDecl 0x7f8b798ceb78 <col:27, col:32> col:44 'char *__restrict'
+| |-ParmVarDecl 0x7f8b798cebf0 <col:46> col:49 'int'
+| |-ParmVarDecl 0x7f8b798cec60 <col:51> col:57 'size_t':'unsigned long'
+| `-ParmVarDecl 0x7f8b798cecd8 <line:43:6, col:17> col:29 'const char *__restrict'
+|-FunctionDecl 0x7f8b798cf238 <line:52:1, line:53:35> line:52:12 __snprintf_chk 'int (char *__restrict, size_t, int, size_t, const char *__restrict, ...)' extern
+| |-ParmVarDecl 0x7f8b798ceef8 <col:28, col:33> col:45 'char *__restrict'
+| |-ParmVarDecl 0x7f8b798cef68 <col:47> col:53 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7f8b798cefe0 <col:55> col:58 'int'
+| |-ParmVarDecl 0x7f8b798cf050 <col:60> col:66 'size_t':'unsigned long'
+| `-ParmVarDecl 0x7f8b798cf0c8 <line:53:7, col:18> col:30 'const char *__restrict'
+|-FunctionDecl 0x7f8b798cf648 <line:61:1, line:62:39> line:61:12 __vsprintf_chk 'int (char *__restrict, int, size_t, const char *__restrict, struct __va_list_tag *)' extern
+| |-ParmVarDecl 0x7f8b798cf310 <col:28, col:33> col:45 'char *__restrict'
+| |-ParmVarDecl 0x7f8b798cf388 <col:47> col:50 'int'
+| |-ParmVarDecl 0x7f8b798cf3f8 <col:52> col:58 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7f8b798cf470 <line:62:7, col:18> col:30 'const char *__restrict'
+| `-ParmVarDecl 0x7f8b798cf4e0 <col:32> col:39 'struct __va_list_tag *':'struct __va_list_tag *'
+|-FunctionDecl 0x7f8b798d3518 <line:70:1, line:71:40> line:70:12 __vsnprintf_chk 'int (char *__restrict, size_t, int, size_t, const char *__restrict, struct __va_list_tag *)' extern
+| |-ParmVarDecl 0x7f8b798cf720 <col:29, col:34> col:46 'char *__restrict'
+| |-ParmVarDecl 0x7f8b798cf790 <col:48> col:54 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7f8b798cf808 <col:56> col:59 'int'
+| |-ParmVarDecl 0x7f8b798cf878 <col:61> col:67 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7f8b798cf8f0 <line:71:8, col:19> col:31 'const char *__restrict'
+| `-ParmVarDecl 0x7f8b798cf960 <col:33> col:40 'struct __va_list_tag *':'struct __va_list_tag *'
+|-FunctionDecl 0x7f8b798d36d0 <c_files/pr44606.c:8:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f8b798d3768 prev 0x7f8b798d36d0 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7f8b798d3800 <line:10:10, col:56> col:17 struct _PixelPacket definition
+| |-FieldDecl 0x7f8b798d38c8 <col:33, col:47> col:47 referenced r 'unsigned char'
+| |-FieldDecl 0x7f8b798d3928 <col:33, col:50> col:50 referenced g 'unsigned char'
+| `-FieldDecl 0x7f8b798d3988 <col:33, col:53> col:53 referenced b 'unsigned char'
+|-TypedefDecl 0x7f8b798d3a20 <col:2, line:11:2> col:2 referenced PixelPacket 'struct _PixelPacket':'struct _PixelPacket'
+| `-ElaboratedType 0x7f8b798d39d0 'struct _PixelPacket' sugar
+|   `-RecordType 0x7f8b798d3890 'struct _PixelPacket'
+|     `-Record 0x7f8b798d3800 '_PixelPacket'
+|-VarDecl 0x7f8b798d3bc8 <line:13:1, col:16> col:13 used q 'PixelPacket [6]'
+|-VarDecl 0x7f8b798d3fd8 <line:15:1, col:26> col:13 used p 'PixelPacket [32]'
+|-VarDecl 0x7f8b798d4050 <line:21:1, line:14:30> line:21:15 used columns 'unsigned long' cinit
+| `-ParenExpr 0x7f8b798d4288 <line:14:14, col:30> 'unsigned long'
+|   `-BinaryOperator 0x7f8b798d4260 <line:12:21, line:14:29> 'unsigned long' '-'
+|     |-ParenExpr 0x7f8b798d4208 <line:12:21, col:44> 'unsigned long'
+|     | `-BinaryOperator 0x7f8b798d41e0 <col:22, col:43> 'unsigned long' '/'
+|     |   |-UnaryExprOrTypeTraitExpr 0x7f8b798d40f8 <col:22, col:30> 'unsigned long' sizeof
+|     |   | `-ParenExpr 0x7f8b798d40d8 <col:28, col:30> 'PixelPacket [6]' lvalue
+|     |   |   `-DeclRefExpr 0x7f8b798d40b0 <line:14:24> 'PixelPacket [6]' lvalue Var 0x7f8b798d3bc8 'q' 'PixelPacket [6]'
+|     |   `-UnaryExprOrTypeTraitExpr 0x7f8b798d41c0 <line:12:32, col:43> 'unsigned long' sizeof
+|     |     `-ParenExpr 0x7f8b798d41a0 <col:38, col:43> 'PixelPacket':'struct _PixelPacket' lvalue
+|     |       `-ArraySubscriptExpr 0x7f8b798d4178 <line:14:24, line:12:42> 'PixelPacket':'struct _PixelPacket' lvalue
+|     |         |-ImplicitCastExpr 0x7f8b798d4160 <line:14:24> 'PixelPacket *' <ArrayToPointerDecay>
+|     |         | `-DeclRefExpr 0x7f8b798d4118 <col:24> 'PixelPacket [6]' lvalue Var 0x7f8b798d3bc8 'q' 'PixelPacket [6]'
+|     |         `-IntegerLiteral 0x7f8b798d4140 <line:12:41> 'int' 0
+|     `-ImplicitCastExpr 0x7f8b798d4248 <line:14:29> 'unsigned long' <IntegralCast>
+|       `-IntegerLiteral 0x7f8b798d4228 <col:29> 'int' 1
+`-FunctionDecl 0x7f8b798d4340 <line:22:1, line:53:1> line:22:5 main 'int (void)'
+  `-CompoundStmt 0x7f8b7b019340 <line:23:1, line:53:1>
+    |-DeclStmt 0x7f8b798d48b8 <line:24:2, col:67>
+    | `-VarDecl 0x7f8b798d4670 <col:2, col:66> col:29 used answers 'const unsigned char [5]' static cinit
+    |   `-InitListExpr 0x7f8b798d47d8 <col:45, col:66> 'const unsigned char [5]'
+    |     |-ImplicitCastExpr 0x7f8b798d4840 <col:47> 'unsigned char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f8b798d46d0 <col:47> 'int' 31
+    |     |-ImplicitCastExpr 0x7f8b798d4858 <col:51> 'unsigned char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f8b798d46f0 <col:51> 'int' 32
+    |     |-ImplicitCastExpr 0x7f8b798d4870 <col:55> 'unsigned char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f8b798d4710 <col:55> 'int' 34
+    |     |-ImplicitCastExpr 0x7f8b798d4888 <col:59> 'unsigned char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f8b798d4730 <col:59> 'int' 35
+    |     `-ImplicitCastExpr 0x7f8b798d48a0 <col:63> 'unsigned char' <IntegralCast>
+    |       `-IntegerLiteral 0x7f8b798d4750 <col:63> 'int' 36
+    |-DeclStmt 0x7f8b798d4948 <line:25:2, col:17>
+    | `-VarDecl 0x7f8b798d48e8 <col:2, col:16> col:16 used x 'unsigned long'
+    |-ForStmt 0x7f8b798d4e50 <line:26:2, line:28:2>
+    | |-BinaryOperator 0x7f8b798d49c0 <line:26:7, col:11> 'unsigned long' '='
+    | | |-DeclRefExpr 0x7f8b798d4960 <col:7> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    | | `-ImplicitCastExpr 0x7f8b798d49a8 <col:11> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f8b798d4988 <col:11> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8b798d4b80 <col:14, col:39> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f8b798d4b68 <col:14> 'unsigned long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f8b798d49e8 <col:14> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    | | `-BinaryOperator 0x7f8b798d4b40 <col:18, col:39> 'unsigned long' '/'
+    | |   |-UnaryExprOrTypeTraitExpr 0x7f8b798d4a58 <col:18, col:26> 'unsigned long' sizeof
+    | |   | `-ParenExpr 0x7f8b798d4a38 <col:24, col:26> 'PixelPacket [32]' lvalue
+    | |   |   `-DeclRefExpr 0x7f8b798d4a10 <col:25> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    | |   `-UnaryExprOrTypeTraitExpr 0x7f8b798d4b20 <col:28, col:39> 'unsigned long' sizeof
+    | |     `-ParenExpr 0x7f8b798d4b00 <col:34, col:39> 'PixelPacket':'struct _PixelPacket' lvalue
+    | |       `-ArraySubscriptExpr 0x7f8b798d4ad8 <col:35, col:38> 'PixelPacket':'struct _PixelPacket' lvalue
+    | |         |-ImplicitCastExpr 0x7f8b798d4ac0 <col:35> 'PixelPacket *' <ArrayToPointerDecay>
+    | |         | `-DeclRefExpr 0x7f8b798d4a78 <col:35> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    | |         `-IntegerLiteral 0x7f8b798d4aa0 <col:37> 'int' 0
+    | |-UnaryOperator 0x7f8b798d4bd0 <col:42, col:43> 'unsigned long' postfix '++'
+    | | `-DeclRefExpr 0x7f8b798d4ba8 <col:42> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    | `-CompoundStmt 0x7f8b798d4e30 <col:47, line:28:2>
+    |   `-BinaryOperator 0x7f8b798d4e08 <line:27:3, col:23> 'unsigned char' '='
+    |     |-MemberExpr 0x7f8b798d4c98 <col:3, col:8> 'unsigned char' lvalue .b 0x7f8b798d3988
+    |     | `-ArraySubscriptExpr 0x7f8b798d4c70 <col:3, col:6> 'PixelPacket':'struct _PixelPacket' lvalue
+    |     |   |-ImplicitCastExpr 0x7f8b798d4c40 <col:3> 'PixelPacket *' <ArrayToPointerDecay>
+    |     |   | `-DeclRefExpr 0x7f8b798d4bf0 <col:3> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |     |   `-ImplicitCastExpr 0x7f8b798d4c58 <col:5> 'unsigned long' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7f8b798d4c18 <col:5> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |     `-ImplicitCastExpr 0x7f8b798d4df0 <col:12, col:23> 'unsigned char' <IntegralCast>
+    |       `-BinaryOperator 0x7f8b798d4dc8 <col:12, col:23> 'unsigned long' '|'
+    |         |-ParenExpr 0x7f8b798d4d70 <col:12, col:19> 'unsigned long'
+    |         | `-BinaryOperator 0x7f8b798d4d48 <col:13, col:17> 'unsigned long' '+'
+    |         |   |-ImplicitCastExpr 0x7f8b798d4d18 <col:13> 'unsigned long' <LValueToRValue>
+    |         |   | `-DeclRefExpr 0x7f8b798d4cd0 <col:13> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |         |   `-ImplicitCastExpr 0x7f8b798d4d30 <col:17> 'unsigned long' <IntegralCast>
+    |         |     `-IntegerLiteral 0x7f8b798d4cf8 <col:17> 'int' 34
+    |         `-ImplicitCastExpr 0x7f8b798d4db0 <col:23> 'unsigned long' <IntegralCast>
+    |           `-IntegerLiteral 0x7f8b798d4d90 <col:23> 'int' 1
+    |-ForStmt 0x7f8b7b018c40 <line:29:2, line:47:2>
+    | |-BinaryOperator 0x7f8b798d4ee8 <line:29:7, col:11> 'unsigned long' '='
+    | | |-DeclRefExpr 0x7f8b798d4e88 <col:7> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    | | `-ImplicitCastExpr 0x7f8b798d4ed0 <col:11> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f8b798d4eb0 <col:11> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8b798d4f90 <col:14, col:18> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f8b798d4f60 <col:14> 'unsigned long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f8b798d4f10 <col:14> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    | | `-ImplicitCastExpr 0x7f8b798d4f78 <col:18> 'unsigned long' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f8b798d4f38 <col:18> 'unsigned long' lvalue Var 0x7f8b798d4050 'columns' 'unsigned long'
+    | |-UnaryOperator 0x7f8b798d4fe0 <col:27, col:28> 'unsigned long' postfix '++'
+    | | `-DeclRefExpr 0x7f8b798d4fb8 <col:27> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    | `-CompoundStmt 0x7f8b7b018ba0 <col:32, line:47:2>
+    |   |-DeclStmt 0x7f8b798d5230 <line:30:3, col:47>
+    |   | |-VarDecl 0x7f8b798d5018 <col:3, col:20> col:10 used total_r 'double' cinit
+    |   | | `-ImplicitCastExpr 0x7f8b798d5098 <col:20> 'double' <IntegralToFloating>
+    |   | |   `-IntegerLiteral 0x7f8b798d5078 <col:20> 'int' 0
+    |   | |-VarDecl 0x7f8b798d50c8 <col:3, col:33> col:23 used total_g 'double' cinit
+    |   | | `-ImplicitCastExpr 0x7f8b798d5148 <col:33> 'double' <IntegralToFloating>
+    |   | |   `-IntegerLiteral 0x7f8b798d5128 <col:33> 'int' 0
+    |   | `-VarDecl 0x7f8b798d5178 <col:3, col:46> col:36 used total_b 'double' cinit
+    |   |   `-ImplicitCastExpr 0x7f8b798d51f8 <col:46> 'double' <IntegralToFloating>
+    |   |     `-IntegerLiteral 0x7f8b798d51d8 <col:46> 'int' 0
+    |   |-DeclStmt 0x7f8b798d54b8 <line:31:3, col:47>
+    |   | |-VarDecl 0x7f8b798d5260 <col:3, col:20> col:10 used saved_r 'double' cinit
+    |   | | `-ImplicitCastExpr 0x7f8b798d52e0 <col:20> 'double' <IntegralToFloating>
+    |   | |   `-IntegerLiteral 0x7f8b798d52c0 <col:20> 'int' 0
+    |   | |-VarDecl 0x7f8b798d5310 <col:3, col:33> col:23 used saved_g 'double' cinit
+    |   | | `-ImplicitCastExpr 0x7f8b798d5390 <col:33> 'double' <IntegralToFloating>
+    |   | |   `-IntegerLiteral 0x7f8b798d5370 <col:33> 'int' 0
+    |   | `-VarDecl 0x7f8b798d5400 <col:3, col:46> col:36 used saved_b 'double' cinit
+    |   |   `-ImplicitCastExpr 0x7f8b798d5480 <col:46> 'double' <IntegralToFloating>
+    |   |     `-IntegerLiteral 0x7f8b798d5460 <col:46> 'int' 0
+    |   |-DoStmt 0x7f8b798d5d90 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f8b798d5d40 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f8b798d5768 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b798d54d0 <col:2> 'double' lvalue Var 0x7f8b798d5018 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f8b798d5740 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b798d5518 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b798d54f8 <line:32:21> 'double' 3.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f8b798d5728 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b798d5710 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b798d56f8 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b798d56d8 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b798d56a0 <col:23, col:30> 'unsigned char' lvalue .r 0x7f8b798d38c8
+    |   | | |             `-ArraySubscriptExpr 0x7f8b798d5678 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b798d5660 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b798d5538 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b798d5638 <line:32:10, col:17> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b798d55d8 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b798d55c0 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b798d5560 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b798d55a8 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b798d5580 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b798d5620 <col:17> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b798d5600 <col:17> 'int' 0
+    |   | | |-CompoundAssignOperator 0x7f8b798d5a38 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b798d57a0 <col:2> 'double' lvalue Var 0x7f8b798d50c8 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f8b798d5a10 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b798d57e8 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b798d57c8 <line:32:21> 'double' 3.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f8b798d59f8 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b798d59e0 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b798d59c8 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b798d59a8 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b798d5970 <col:23, col:30> 'unsigned char' lvalue .g 0x7f8b798d3928
+    |   | | |             `-ArraySubscriptExpr 0x7f8b798d5948 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b798d5930 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b798d5808 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b798d5908 <line:32:10, col:17> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b798d58a8 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b798d5890 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b798d5830 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b798d5878 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b798d5850 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b798d58f0 <col:17> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b798d58d0 <col:17> 'int' 0
+    |   | | `-CompoundAssignOperator 0x7f8b798d5d08 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f8b798d5a70 <col:2> 'double' lvalue Var 0x7f8b798d5178 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f8b798d5ce0 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f8b798d5ab8 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f8b798d5a98 <line:32:21> 'double' 3.000000e+00
+    |   | |     `-ImplicitCastExpr 0x7f8b798d5cc8 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f8b798d5cb0 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f8b798d5c98 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f8b798d5c78 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f8b798d5c40 <col:23, col:30> 'unsigned char' lvalue .b 0x7f8b798d3988
+    |   | |               `-ArraySubscriptExpr 0x7f8b798d5c18 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f8b798d5c00 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f8b798d5ad8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f8b798d5bd8 <line:32:10, col:17> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f8b798d5b78 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f8b798d5b60 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f8b798d5b00 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f8b798d5b48 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f8b798d5b20 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f8b798d5bc0 <col:17> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f8b798d5ba0 <col:17> 'int' 0
+    |   | `-IntegerLiteral 0x7f8b798d5d70 <line:20:10> 'int' 0
+    |   |-DoStmt 0x7f8b798d6670 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f8b798d6620 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f8b798d6048 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b798d5db0 <col:2> 'double' lvalue Var 0x7f8b798d5018 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f8b798d6020 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b798d5df8 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b798d5dd8 <line:33:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f8b798d6008 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b798d5ff0 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b798d5fd8 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b798d5fb8 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b798d5f80 <col:23, col:30> 'unsigned char' lvalue .r 0x7f8b798d38c8
+    |   | | |             `-ArraySubscriptExpr 0x7f8b798d5f58 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b798d5f40 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b798d5e18 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b798d5f18 <line:33:10, col:17> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b798d5eb8 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b798d5ea0 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b798d5e40 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b798d5e88 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b798d5e60 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b798d5f00 <col:17> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b798d5ee0 <col:17> 'int' 1
+    |   | | |-CompoundAssignOperator 0x7f8b798d6318 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b798d6080 <col:2> 'double' lvalue Var 0x7f8b798d50c8 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f8b798d62f0 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b798d60c8 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b798d60a8 <line:33:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f8b798d62d8 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b798d62c0 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b798d62a8 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b798d6288 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b798d6250 <col:23, col:30> 'unsigned char' lvalue .g 0x7f8b798d3928
+    |   | | |             `-ArraySubscriptExpr 0x7f8b798d6228 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b798d6210 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b798d60e8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b798d61e8 <line:33:10, col:17> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b798d6188 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b798d6170 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b798d6110 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b798d6158 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b798d6130 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b798d61d0 <col:17> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b798d61b0 <col:17> 'int' 1
+    |   | | `-CompoundAssignOperator 0x7f8b798d65e8 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f8b798d6350 <col:2> 'double' lvalue Var 0x7f8b798d5178 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f8b798d65c0 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f8b798d6398 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f8b798d6378 <line:33:21> 'double' 7.000000e+00
+    |   | |     `-ImplicitCastExpr 0x7f8b798d65a8 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f8b798d6590 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f8b798d6578 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f8b798d6558 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f8b798d6520 <col:23, col:30> 'unsigned char' lvalue .b 0x7f8b798d3988
+    |   | |               `-ArraySubscriptExpr 0x7f8b798d64f8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f8b798d64e0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f8b798d63b8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f8b798d64b8 <line:33:10, col:17> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f8b798d6458 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f8b798d6440 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f8b798d63e0 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f8b798d6428 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f8b798d6400 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f8b798d64a0 <col:17> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f8b798d6480 <col:17> 'int' 1
+    |   | `-IntegerLiteral 0x7f8b798d6650 <line:20:10> 'int' 0
+    |   |-DoStmt 0x7f8b798d6f50 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f8b798d6f00 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f8b798d6928 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b798d6690 <col:2> 'double' lvalue Var 0x7f8b798d5018 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f8b798d6900 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b798d66d8 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b798d66b8 <line:34:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f8b798d68e8 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b798d68d0 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b798d68b8 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b798d6898 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b798d6860 <col:23, col:30> 'unsigned char' lvalue .r 0x7f8b798d38c8
+    |   | | |             `-ArraySubscriptExpr 0x7f8b798d6838 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b798d6820 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b798d66f8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b798d67f8 <line:34:10, col:17> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b798d6798 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b798d6780 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b798d6720 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b798d6768 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b798d6740 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b798d67e0 <col:17> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b798d67c0 <col:17> 'int' 2
+    |   | | |-CompoundAssignOperator 0x7f8b798d6bf8 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b798d6960 <col:2> 'double' lvalue Var 0x7f8b798d50c8 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f8b798d6bd0 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b798d69a8 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b798d6988 <line:34:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f8b798d6bb8 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b798d6ba0 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b798d6b88 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b798d6b68 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b798d6b30 <col:23, col:30> 'unsigned char' lvalue .g 0x7f8b798d3928
+    |   | | |             `-ArraySubscriptExpr 0x7f8b798d6b08 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b798d6af0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b798d69c8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b798d6ac8 <line:34:10, col:17> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b798d6a68 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b798d6a50 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b798d69f0 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b798d6a38 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b798d6a10 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b798d6ab0 <col:17> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b798d6a90 <col:17> 'int' 2
+    |   | | `-CompoundAssignOperator 0x7f8b798d6ec8 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f8b798d6c30 <col:2> 'double' lvalue Var 0x7f8b798d5178 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f8b798d6ea0 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f8b798d6c78 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f8b798d6c58 <line:34:21> 'double' 7.000000e+00
+    |   | |     `-ImplicitCastExpr 0x7f8b798d6e88 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f8b798d6e70 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f8b798d6e58 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f8b798d6e38 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f8b798d6e00 <col:23, col:30> 'unsigned char' lvalue .b 0x7f8b798d3988
+    |   | |               `-ArraySubscriptExpr 0x7f8b798d6dd8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f8b798d6dc0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f8b798d6c98 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f8b798d6d98 <line:34:10, col:17> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f8b798d6d38 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f8b798d6d20 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f8b798d6cc0 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f8b798d6d08 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f8b798d6ce0 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f8b798d6d80 <col:17> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f8b798d6d60 <col:17> 'int' 2
+    |   | `-IntegerLiteral 0x7f8b798d6f30 <line:20:10> 'int' 0
+    |   |-BinaryOperator 0x7f8b798d6fd8 <line:35:3, col:13> 'double' '='
+    |   | |-DeclRefExpr 0x7f8b798d6f70 <col:3> 'double' lvalue Var 0x7f8b798d5260 'saved_r' 'double'
+    |   | `-ImplicitCastExpr 0x7f8b798d6fc0 <col:13> 'double' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7f8b798d6f98 <col:13> 'double' lvalue Var 0x7f8b798d5018 'total_r' 'double'
+    |   |-BinaryOperator 0x7f8b798d7068 <line:36:3, col:13> 'double' '='
+    |   | |-DeclRefExpr 0x7f8b798d7000 <col:3> 'double' lvalue Var 0x7f8b798d5310 'saved_g' 'double'
+    |   | `-ImplicitCastExpr 0x7f8b798d7050 <col:13> 'double' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7f8b798d7028 <col:13> 'double' lvalue Var 0x7f8b798d50c8 'total_g' 'double'
+    |   |-DoStmt 0x7f8b7b015560 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f8b7b015510 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f8b798d7328 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b798d7090 <col:2> 'double' lvalue Var 0x7f8b798d5018 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f8b798d7300 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b798d70d8 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b798d70b8 <line:37:20> 'double' 1.500000e+01
+    |   | | |   `-ImplicitCastExpr 0x7f8b798d72e8 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b798d72d0 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b798d72b8 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b798d7298 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b798d7260 <col:23, col:30> 'unsigned char' lvalue .r 0x7f8b798d38c8
+    |   | | |             `-ArraySubscriptExpr 0x7f8b798d7238 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b798d7220 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b798d70f8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b798d71f8 <line:37:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b798d7198 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b798d7180 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b798d7120 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b798d7168 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b798d7140 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b798d71e0 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b798d71c0 <col:16> 'int' 11
+    |   | | |-CompoundAssignOperator 0x7f8b7b015208 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b798d7360 <col:2> 'double' lvalue Var 0x7f8b798d50c8 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f8b7b0151e0 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b798d73a8 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b798d7388 <line:37:20> 'double' 1.500000e+01
+    |   | | |   `-ImplicitCastExpr 0x7f8b7b0151c8 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b7b0151b0 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b7b015198 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b7b015178 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b7b015140 <col:23, col:30> 'unsigned char' lvalue .g 0x7f8b798d3928
+    |   | | |             `-ArraySubscriptExpr 0x7f8b7b015118 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b7b015100 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b798d73c8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b7b0150d8 <line:37:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b7b015078 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b7b015060 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b7b015000 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b7b015048 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b7b015020 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b7b0150c0 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b7b0150a0 <col:16> 'int' 11
+    |   | | `-CompoundAssignOperator 0x7f8b7b0154d8 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f8b7b015240 <col:2> 'double' lvalue Var 0x7f8b798d5178 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f8b7b0154b0 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f8b7b015288 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f8b7b015268 <line:37:20> 'double' 1.500000e+01
+    |   | |     `-ImplicitCastExpr 0x7f8b7b015498 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f8b7b015480 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f8b7b015468 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f8b7b015448 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f8b7b015410 <col:23, col:30> 'unsigned char' lvalue .b 0x7f8b798d3988
+    |   | |               `-ArraySubscriptExpr 0x7f8b7b0153e8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f8b7b0153d0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f8b7b0152a8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f8b7b0153a8 <line:37:10, col:16> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f8b7b015348 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f8b7b015330 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f8b7b0152d0 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f8b7b015318 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f8b7b0152f0 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f8b7b015390 <col:16> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f8b7b015370 <col:16> 'int' 11
+    |   | `-IntegerLiteral 0x7f8b7b015540 <line:20:10> 'int' 0
+    |   |-DoStmt 0x7f8b7b015e40 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f8b7b015df0 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f8b7b015818 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b7b015580 <col:2> 'double' lvalue Var 0x7f8b798d5018 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f8b7b0157f0 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b7b0155c8 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b7b0155a8 <line:38:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f8b7b0157d8 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b7b0157c0 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b7b0157a8 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b7b015788 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b7b015750 <col:23, col:30> 'unsigned char' lvalue .r 0x7f8b798d38c8
+    |   | | |             `-ArraySubscriptExpr 0x7f8b7b015728 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b7b015710 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b7b0155e8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b7b0156e8 <line:38:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b7b015688 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b7b015670 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b7b015610 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b7b015658 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b7b015630 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b7b0156d0 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b7b0156b0 <col:16> 'int' 12
+    |   | | |-CompoundAssignOperator 0x7f8b7b015ae8 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b7b015850 <col:2> 'double' lvalue Var 0x7f8b798d50c8 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f8b7b015ac0 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b7b015898 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b7b015878 <line:38:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f8b7b015aa8 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b7b015a90 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b7b015a78 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b7b015a58 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b7b015a20 <col:23, col:30> 'unsigned char' lvalue .g 0x7f8b798d3928
+    |   | | |             `-ArraySubscriptExpr 0x7f8b7b0159f8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b7b0159e0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b7b0158b8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b7b0159b8 <line:38:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b7b015958 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b7b015940 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b7b0158e0 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b7b015928 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b7b015900 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b7b0159a0 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b7b015980 <col:16> 'int' 12
+    |   | | `-CompoundAssignOperator 0x7f8b7b015db8 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f8b7b015b20 <col:2> 'double' lvalue Var 0x7f8b798d5178 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f8b7b015d90 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f8b7b015b68 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f8b7b015b48 <line:38:21> 'double' 7.000000e+00
+    |   | |     `-ImplicitCastExpr 0x7f8b7b015d78 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f8b7b015d60 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f8b7b015d48 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f8b7b015d28 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f8b7b015cf0 <col:23, col:30> 'unsigned char' lvalue .b 0x7f8b798d3988
+    |   | |               `-ArraySubscriptExpr 0x7f8b7b015cc8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f8b7b015cb0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f8b7b015b88 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f8b7b015c88 <line:38:10, col:16> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f8b7b015c28 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f8b7b015c10 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f8b7b015bb0 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f8b7b015bf8 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f8b7b015bd0 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f8b7b015c70 <col:16> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f8b7b015c50 <col:16> 'int' 12
+    |   | `-IntegerLiteral 0x7f8b7b015e20 <line:20:10> 'int' 0
+    |   |-DoStmt 0x7f8b7b016730 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f8b7b0166e0 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f8b7b016108 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b7b015e60 <col:2> 'double' lvalue Var 0x7f8b798d5018 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f8b7b0160e0 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b7b015ea8 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b7b015e88 <line:39:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f8b7b0160c8 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b7b0160b0 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b7b016098 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b7b016078 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b7b016040 <col:23, col:30> 'unsigned char' lvalue .r 0x7f8b798d38c8
+    |   | | |             `-ArraySubscriptExpr 0x7f8b7b016018 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b7b016000 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b7b015ec8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b7b015fc8 <line:39:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b7b015f68 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b7b015f50 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b7b015ef0 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b7b015f38 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b7b015f10 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b7b015fb0 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b7b015f90 <col:16> 'int' 18
+    |   | | |-CompoundAssignOperator 0x7f8b7b0163d8 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b7b016140 <col:2> 'double' lvalue Var 0x7f8b798d50c8 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f8b7b0163b0 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b7b016188 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b7b016168 <line:39:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f8b7b016398 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b7b016380 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b7b016368 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b7b016348 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b7b016310 <col:23, col:30> 'unsigned char' lvalue .g 0x7f8b798d3928
+    |   | | |             `-ArraySubscriptExpr 0x7f8b7b0162e8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b7b0162d0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b7b0161a8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b7b0162a8 <line:39:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b7b016248 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b7b016230 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b7b0161d0 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b7b016218 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b7b0161f0 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b7b016290 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b7b016270 <col:16> 'int' 18
+    |   | | `-CompoundAssignOperator 0x7f8b7b0166a8 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f8b7b016410 <col:2> 'double' lvalue Var 0x7f8b798d5178 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f8b7b016680 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f8b7b016458 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f8b7b016438 <line:39:21> 'double' 7.000000e+00
+    |   | |     `-ImplicitCastExpr 0x7f8b7b016668 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f8b7b016650 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f8b7b016638 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f8b7b016618 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f8b7b0165e0 <col:23, col:30> 'unsigned char' lvalue .b 0x7f8b798d3988
+    |   | |               `-ArraySubscriptExpr 0x7f8b7b0165b8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f8b7b0165a0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f8b7b016478 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f8b7b016578 <line:39:10, col:16> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f8b7b016518 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f8b7b016500 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f8b7b0164a0 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f8b7b0164e8 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f8b7b0164c0 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f8b7b016560 <col:16> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f8b7b016540 <col:16> 'int' 18
+    |   | `-IntegerLiteral 0x7f8b7b016710 <line:20:10> 'int' 0
+    |   |-DoStmt 0x7f8b7b017020 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f8b7b016fc0 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f8b7b0169e8 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b7b016750 <col:2> 'double' lvalue Var 0x7f8b798d5018 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f8b7b0169c0 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b7b016798 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b7b016778 <line:40:20> 'double' 1.500000e+01
+    |   | | |   `-ImplicitCastExpr 0x7f8b7b0169a8 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b7b016990 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b7b016978 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b7b016958 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b7b016920 <col:23, col:30> 'unsigned char' lvalue .r 0x7f8b798d38c8
+    |   | | |             `-ArraySubscriptExpr 0x7f8b7b0168f8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b7b0168e0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b7b0167b8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b7b0168b8 <line:40:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b7b016858 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b7b016840 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b7b0167e0 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b7b016828 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b7b016800 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b7b0168a0 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b7b016880 <col:16> 'int' 19
+    |   | | |-CompoundAssignOperator 0x7f8b7b016cb8 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b7b016a20 <col:2> 'double' lvalue Var 0x7f8b798d50c8 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f8b7b016c90 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b7b016a68 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b7b016a48 <line:40:20> 'double' 1.500000e+01
+    |   | | |   `-ImplicitCastExpr 0x7f8b7b016c78 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b7b016c60 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b7b016c48 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b7b016c28 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b7b016bf0 <col:23, col:30> 'unsigned char' lvalue .g 0x7f8b798d3928
+    |   | | |             `-ArraySubscriptExpr 0x7f8b7b016bc8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b7b016bb0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b7b016a88 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b7b016b88 <line:40:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b7b016b28 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b7b016b10 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b7b016ab0 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b7b016af8 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b7b016ad0 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b7b016b70 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b7b016b50 <col:16> 'int' 19
+    |   | | `-CompoundAssignOperator 0x7f8b7b016f88 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f8b7b016cf0 <col:2> 'double' lvalue Var 0x7f8b798d5178 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f8b7b016f60 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f8b7b016d38 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f8b7b016d18 <line:40:20> 'double' 1.500000e+01
+    |   | |     `-ImplicitCastExpr 0x7f8b7b016f48 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f8b7b016f30 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f8b7b016f18 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f8b7b016ef8 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f8b7b016ec0 <col:23, col:30> 'unsigned char' lvalue .b 0x7f8b798d3988
+    |   | |               `-ArraySubscriptExpr 0x7f8b7b016e98 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f8b7b016e80 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f8b7b016d58 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f8b7b016e58 <line:40:10, col:16> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f8b7b016df8 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f8b7b016de0 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f8b7b016d80 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f8b7b016dc8 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f8b7b016da0 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f8b7b016e40 <col:16> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f8b7b016e20 <col:16> 'int' 19
+    |   | `-IntegerLiteral 0x7f8b7b017000 <line:20:10> 'int' 0
+    |   |-DoStmt 0x7f8b7b017900 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f8b7b0178b0 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f8b7b0172d8 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b7b017040 <col:2> 'double' lvalue Var 0x7f8b798d5018 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f8b7b0172b0 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b7b017088 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b7b017068 <line:41:20> 'double' 1.500000e+01
+    |   | | |   `-ImplicitCastExpr 0x7f8b7b017298 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b7b017280 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b7b017268 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b7b017248 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b7b017210 <col:23, col:30> 'unsigned char' lvalue .r 0x7f8b798d38c8
+    |   | | |             `-ArraySubscriptExpr 0x7f8b7b0171e8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b7b0171d0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b7b0170a8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b7b0171a8 <line:41:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b7b017148 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b7b017130 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b7b0170d0 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b7b017118 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b7b0170f0 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b7b017190 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b7b017170 <col:16> 'int' 20
+    |   | | |-CompoundAssignOperator 0x7f8b7b0175a8 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b7b017310 <col:2> 'double' lvalue Var 0x7f8b798d50c8 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f8b7b017580 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b7b017358 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b7b017338 <line:41:20> 'double' 1.500000e+01
+    |   | | |   `-ImplicitCastExpr 0x7f8b7b017568 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b7b017550 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b7b017538 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b7b017518 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b7b0174e0 <col:23, col:30> 'unsigned char' lvalue .g 0x7f8b798d3928
+    |   | | |             `-ArraySubscriptExpr 0x7f8b7b0174b8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b7b0174a0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b7b017378 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b7b017478 <line:41:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b7b017418 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b7b017400 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b7b0173a0 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b7b0173e8 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b7b0173c0 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b7b017460 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b7b017440 <col:16> 'int' 20
+    |   | | `-CompoundAssignOperator 0x7f8b7b017878 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f8b7b0175e0 <col:2> 'double' lvalue Var 0x7f8b798d5178 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f8b7b017850 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f8b7b017628 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f8b7b017608 <line:41:20> 'double' 1.500000e+01
+    |   | |     `-ImplicitCastExpr 0x7f8b7b017838 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f8b7b017820 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f8b7b017808 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f8b7b0177e8 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f8b7b0177b0 <col:23, col:30> 'unsigned char' lvalue .b 0x7f8b798d3988
+    |   | |               `-ArraySubscriptExpr 0x7f8b7b017788 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f8b7b017770 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f8b7b017648 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f8b7b017748 <line:41:10, col:16> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f8b7b0176e8 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f8b7b0176d0 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f8b7b017670 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f8b7b0176b8 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f8b7b017690 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f8b7b017730 <col:16> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f8b7b017710 <col:16> 'int' 20
+    |   | `-IntegerLiteral 0x7f8b7b0178e0 <line:20:10> 'int' 0
+    |   |-DoStmt 0x7f8b7b0181f0 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f8b7b0181a0 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f8b7b017bb8 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b7b017920 <col:2> 'double' lvalue Var 0x7f8b798d5018 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f8b7b017b90 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b7b017968 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b7b017948 <line:42:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f8b7b017b78 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b7b017b60 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b7b017b48 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b7b017b28 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b7b017af0 <col:23, col:30> 'unsigned char' lvalue .r 0x7f8b798d38c8
+    |   | | |             `-ArraySubscriptExpr 0x7f8b7b017ac8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b7b017ab0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b7b017988 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b7b017a88 <line:42:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b7b017a28 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b7b017a10 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b7b0179b0 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b7b0179f8 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b7b0179d0 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b7b017a70 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b7b017a50 <col:16> 'int' 21
+    |   | | |-CompoundAssignOperator 0x7f8b7b017e88 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f8b7b017bf0 <col:2> 'double' lvalue Var 0x7f8b798d50c8 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f8b7b017e60 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f8b7b017c38 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f8b7b017c18 <line:42:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f8b7b017e48 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f8b7b017e30 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f8b7b017e18 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f8b7b017df8 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f8b7b017dc0 <col:23, col:30> 'unsigned char' lvalue .g 0x7f8b798d3928
+    |   | | |             `-ArraySubscriptExpr 0x7f8b7b017d98 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f8b7b017d80 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f8b7b017c58 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f8b7b017d58 <line:42:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f8b7b017cf8 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f8b7b017ce0 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f8b7b017c80 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f8b7b017cc8 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f8b7b017ca0 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f8b7b017d40 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f8b7b017d20 <col:16> 'int' 21
+    |   | | `-CompoundAssignOperator 0x7f8b7b018168 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f8b7b017ec0 <col:2> 'double' lvalue Var 0x7f8b798d5178 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f8b7b018140 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f8b7b017f08 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f8b7b017ee8 <line:42:21> 'double' 7.000000e+00
+    |   | |     `-ImplicitCastExpr 0x7f8b7b018128 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f8b7b018110 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f8b7b0180f8 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f8b7b0180d8 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f8b7b0180a0 <col:23, col:30> 'unsigned char' lvalue .b 0x7f8b798d3988
+    |   | |               `-ArraySubscriptExpr 0x7f8b7b018078 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f8b7b018060 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f8b7b017f28 <col:23> 'PixelPacket [32]' lvalue Var 0x7f8b798d3fd8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f8b7b018038 <line:42:10, col:16> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f8b7b017fc8 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f8b7b017fb0 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f8b7b017f50 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f8b7b017f98 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f8b7b017f70 <col:12> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f8b7b018020 <col:16> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f8b7b018000 <col:16> 'int' 21
+    |   | `-IntegerLiteral 0x7f8b7b0181d0 <line:20:10> 'int' 0
+    |   |-BinaryOperator 0x7f8b7b018450 <line:43:3, col:47> 'unsigned char' '='
+    |   | |-MemberExpr 0x7f8b7b0182b8 <col:3, col:8> 'unsigned char' lvalue .r 0x7f8b798d38c8
+    |   | | `-ArraySubscriptExpr 0x7f8b7b018290 <col:3, col:6> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |   |-ImplicitCastExpr 0x7f8b7b018260 <col:3> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |   | `-DeclRefExpr 0x7f8b7b018210 <col:3> 'PixelPacket [6]' lvalue Var 0x7f8b798d3bc8 'q' 'PixelPacket [6]'
+    |   | |   `-ImplicitCastExpr 0x7f8b7b018278 <col:5> 'unsigned long' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7f8b7b018238 <col:5> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | `-CStyleCastExpr 0x7f8b7b018428 <col:12, col:47> 'unsigned char' <FloatingToIntegral>
+    |   |   `-ParenExpr 0x7f8b7b018408 <col:27, col:47> 'double'
+    |   |     `-BinaryOperator 0x7f8b7b018398 <col:28, col:44> 'double' '+'
+    |   |       |-BinaryOperator 0x7f8b7b018350 <col:28, col:36> 'double' '/'
+    |   |       | |-ImplicitCastExpr 0x7f8b7b018338 <col:28> 'double' <LValueToRValue>
+    |   |       | | `-DeclRefExpr 0x7f8b7b0182f0 <col:28> 'double' lvalue Var 0x7f8b798d5018 'total_r' 'double'
+    |   |       | `-FloatingLiteral 0x7f8b7b018318 <col:36> 'double' 1.280000e+02
+    |   |       `-FloatingLiteral 0x7f8b7b018378 <col:44> 'double' 5.000000e-01
+    |   |-BinaryOperator 0x7f8b7b0186b8 <line:44:3, col:47> 'unsigned char' '='
+    |   | |-MemberExpr 0x7f8b7b018520 <col:3, col:8> 'unsigned char' lvalue .g 0x7f8b798d3928
+    |   | | `-ArraySubscriptExpr 0x7f8b7b0184f8 <col:3, col:6> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |   |-ImplicitCastExpr 0x7f8b7b0184c8 <col:3> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |   | `-DeclRefExpr 0x7f8b7b018478 <col:3> 'PixelPacket [6]' lvalue Var 0x7f8b798d3bc8 'q' 'PixelPacket [6]'
+    |   | |   `-ImplicitCastExpr 0x7f8b7b0184e0 <col:5> 'unsigned long' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7f8b7b0184a0 <col:5> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | `-CStyleCastExpr 0x7f8b7b018690 <col:12, col:47> 'unsigned char' <FloatingToIntegral>
+    |   |   `-ParenExpr 0x7f8b7b018670 <col:27, col:47> 'double'
+    |   |     `-BinaryOperator 0x7f8b7b018600 <col:28, col:44> 'double' '+'
+    |   |       |-BinaryOperator 0x7f8b7b0185b8 <col:28, col:36> 'double' '/'
+    |   |       | |-ImplicitCastExpr 0x7f8b7b0185a0 <col:28> 'double' <LValueToRValue>
+    |   |       | | `-DeclRefExpr 0x7f8b7b018558 <col:28> 'double' lvalue Var 0x7f8b798d50c8 'total_g' 'double'
+    |   |       | `-FloatingLiteral 0x7f8b7b018580 <col:36> 'double' 1.280000e+02
+    |   |       `-FloatingLiteral 0x7f8b7b0185e0 <col:44> 'double' 5.000000e-01
+    |   |-BinaryOperator 0x7f8b7b018920 <line:45:3, col:47> 'unsigned char' '='
+    |   | |-MemberExpr 0x7f8b7b018788 <col:3, col:8> 'unsigned char' lvalue .b 0x7f8b798d3988
+    |   | | `-ArraySubscriptExpr 0x7f8b7b018760 <col:3, col:6> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |   |-ImplicitCastExpr 0x7f8b7b018730 <col:3> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |   | `-DeclRefExpr 0x7f8b7b0186e0 <col:3> 'PixelPacket [6]' lvalue Var 0x7f8b798d3bc8 'q' 'PixelPacket [6]'
+    |   | |   `-ImplicitCastExpr 0x7f8b7b018748 <col:5> 'unsigned long' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7f8b7b018708 <col:5> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |   | `-CStyleCastExpr 0x7f8b7b0188f8 <col:12, col:47> 'unsigned char' <FloatingToIntegral>
+    |   |   `-ParenExpr 0x7f8b7b0188d8 <col:27, col:47> 'double'
+    |   |     `-BinaryOperator 0x7f8b7b018868 <col:28, col:44> 'double' '+'
+    |   |       |-BinaryOperator 0x7f8b7b018820 <col:28, col:36> 'double' '/'
+    |   |       | |-ImplicitCastExpr 0x7f8b7b018808 <col:28> 'double' <LValueToRValue>
+    |   |       | | `-DeclRefExpr 0x7f8b7b0187c0 <col:28> 'double' lvalue Var 0x7f8b798d5178 'total_b' 'double'
+    |   |       | `-FloatingLiteral 0x7f8b7b0187e8 <col:36> 'double' 1.280000e+02
+    |   |       `-FloatingLiteral 0x7f8b7b018848 <col:44> 'double' 5.000000e-01
+    |   `-CallExpr 0x7f8b7b018ac0 <line:46:3, col:64> 'int'
+    |     |-ImplicitCastExpr 0x7f8b7b018aa8 <col:3> 'int (*)(FILE *, const char *, ...)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f8b7b018948 <col:3> 'int (FILE *, const char *, ...)' Function 0x7f8b798b87f0 'fprintf' 'int (FILE *, const char *, ...)'
+    |     |-ImplicitCastExpr 0x7f8b7b018b10 </usr/include/stdio.h:129:16> 'FILE *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f8b7b018970 <col:16> 'FILE *' lvalue Var 0x7f8b79882a18 '__stderrp' 'FILE *'
+    |     |-ImplicitCastExpr 0x7f8b7b018b40 <c_files/pr44606.c:46:19> 'const char *' <BitCast>
+    |     | `-ImplicitCastExpr 0x7f8b7b018b28 <col:19> 'char *' <ArrayToPointerDecay>
+    |     |   `-StringLiteral 0x7f8b7b018998 <col:19> 'char [16]' lvalue "r:%f g:%f b:%f\n"
+    |     |-ImplicitCastExpr 0x7f8b7b018b58 <col:39> 'double' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f8b7b0189d0 <col:39> 'double' lvalue Var 0x7f8b798d5260 'saved_r' 'double'
+    |     |-ImplicitCastExpr 0x7f8b7b018b70 <col:48> 'double' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f8b7b0189f8 <col:48> 'double' lvalue Var 0x7f8b798d5310 'saved_g' 'double'
+    |     `-ImplicitCastExpr 0x7f8b7b018b88 <col:57> 'double' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f8b7b018a20 <col:57> 'double' lvalue Var 0x7f8b798d5400 'saved_b' 'double'
+    |-ForStmt 0x7f8b7b0192d0 <line:48:2, line:51:2>
+    | |-BinaryOperator 0x7f8b7b018cd8 <line:48:7, col:11> 'unsigned long' '='
+    | | |-DeclRefExpr 0x7f8b7b018c78 <col:7> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    | | `-ImplicitCastExpr 0x7f8b7b018cc0 <col:11> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f8b7b018ca0 <col:11> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8b7b018f38 <col:14, line:14:30> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f8b7b018f20 <line:48:14> 'unsigned long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f8b7b018d00 <col:14> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    | | `-ParenExpr 0x7f8b7b018f00 <line:14:14, col:30> 'unsigned long'
+    | |   `-BinaryOperator 0x7f8b7b018ed8 <line:12:21, line:14:29> 'unsigned long' '-'
+    | |     |-ParenExpr 0x7f8b7b018e80 <line:12:21, col:44> 'unsigned long'
+    | |     | `-BinaryOperator 0x7f8b7b018e58 <col:22, col:43> 'unsigned long' '/'
+    | |     |   |-UnaryExprOrTypeTraitExpr 0x7f8b7b018d70 <col:22, col:30> 'unsigned long' sizeof
+    | |     |   | `-ParenExpr 0x7f8b7b018d50 <col:28, col:30> 'PixelPacket [6]' lvalue
+    | |     |   |   `-DeclRefExpr 0x7f8b7b018d28 <line:14:24> 'PixelPacket [6]' lvalue Var 0x7f8b798d3bc8 'q' 'PixelPacket [6]'
+    | |     |   `-UnaryExprOrTypeTraitExpr 0x7f8b7b018e38 <line:12:32, col:43> 'unsigned long' sizeof
+    | |     |     `-ParenExpr 0x7f8b7b018e18 <col:38, col:43> 'PixelPacket':'struct _PixelPacket' lvalue
+    | |     |       `-ArraySubscriptExpr 0x7f8b7b018df0 <line:14:24, line:12:42> 'PixelPacket':'struct _PixelPacket' lvalue
+    | |     |         |-ImplicitCastExpr 0x7f8b7b018dd8 <line:14:24> 'PixelPacket *' <ArrayToPointerDecay>
+    | |     |         | `-DeclRefExpr 0x7f8b7b018d90 <col:24> 'PixelPacket [6]' lvalue Var 0x7f8b798d3bc8 'q' 'PixelPacket [6]'
+    | |     |         `-IntegerLiteral 0x7f8b7b018db8 <line:12:41> 'int' 0
+    | |     `-ImplicitCastExpr 0x7f8b7b018ec0 <line:14:29> 'unsigned long' <IntegralCast>
+    | |       `-IntegerLiteral 0x7f8b7b018ea0 <col:29> 'int' 1
+    | |-UnaryOperator 0x7f8b7b018f88 <line:48:24, col:25> 'unsigned long' postfix '++'
+    | | `-DeclRefExpr 0x7f8b7b018f60 <col:24> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    | `-CompoundStmt 0x7f8b7b0192b0 <col:29, line:51:2>
+    |   `-IfStmt 0x7f8b7b019278 <line:49:3, line:50:10>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7f8b7b0191c0 <line:49:7, col:26> 'int' '!='
+    |     | |-ImplicitCastExpr 0x7f8b7b019178 <col:7, col:16> 'int' <IntegralCast>
+    |     | | `-ImplicitCastExpr 0x7f8b7b019160 <col:7, col:16> 'unsigned char' <LValueToRValue>
+    |     | |   `-ArraySubscriptExpr 0x7f8b7b019058 <col:7, col:16> 'const unsigned char' lvalue
+    |     | |     |-ImplicitCastExpr 0x7f8b7b019028 <col:7> 'const unsigned char *' <ArrayToPointerDecay>
+    |     | |     | `-DeclRefExpr 0x7f8b7b018fa8 <col:7> 'const unsigned char [5]' lvalue Var 0x7f8b798d4670 'answers' 'const unsigned char [5]'
+    |     | |     `-ImplicitCastExpr 0x7f8b7b019040 <col:15> 'unsigned long' <LValueToRValue>
+    |     | |       `-DeclRefExpr 0x7f8b7b018fd0 <col:15> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |     | `-ImplicitCastExpr 0x7f8b7b0191a8 <col:21, col:26> 'int' <IntegralCast>
+    |     |   `-ImplicitCastExpr 0x7f8b7b019190 <col:21, col:26> 'unsigned char' <LValueToRValue>
+    |     |     `-MemberExpr 0x7f8b7b019128 <col:21, col:26> 'unsigned char' lvalue .b 0x7f8b798d3988
+    |     |       `-ArraySubscriptExpr 0x7f8b7b019100 <col:21, col:24> 'PixelPacket':'struct _PixelPacket' lvalue
+    |     |         |-ImplicitCastExpr 0x7f8b7b0190d0 <col:21> 'PixelPacket *' <ArrayToPointerDecay>
+    |     |         | `-DeclRefExpr 0x7f8b7b019080 <col:21> 'PixelPacket [6]' lvalue Var 0x7f8b798d3bc8 'q' 'PixelPacket [6]'
+    |     |         `-ImplicitCastExpr 0x7f8b7b0190e8 <col:23> 'unsigned long' <LValueToRValue>
+    |     |           `-DeclRefExpr 0x7f8b7b0190a8 <col:23> 'unsigned long' lvalue Var 0x7f8b798d48e8 'x' 'unsigned long'
+    |     |-CallExpr 0x7f8b7b019250 <line:50:4, col:10> 'void'
+    |     | `-ImplicitCastExpr 0x7f8b7b019238 <col:4> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |     |   `-DeclRefExpr 0x7f8b7b0191e8 <col:4> 'void (void) __attribute__((noreturn))' Function 0x7f8b798d3768 'abort' 'void (void) __attribute__((noreturn))'
+    |     `-<<<NULL>>>
+    `-ReturnStmt 0x7f8b7b019328 <line:52:2, col:9>
+      `-IntegerLiteral 0x7f8b7b019308 <col:9> 'int' 0

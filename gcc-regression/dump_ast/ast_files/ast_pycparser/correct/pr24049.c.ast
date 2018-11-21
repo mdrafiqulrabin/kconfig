@@ -1,0 +1,57 @@
+FileAST: 
+  Decl: unscrunch, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: unscrunch, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: DES_CBCUpdate, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: output, [], [], []
+            PtrDecl: []
+              TypeDecl: output, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['int']
+        TypeDecl: DES_CBCUpdate, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: work, [], [], []
+        ArrayDecl: []
+          TypeDecl: work, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          BinaryOp: /
+            ID: len
+            Constant: int, 8
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: unscrunch
+          ExprList: 
+            UnaryOp: &
+              ArrayRef: 
+                ID: output
+                BinaryOp: *
+                  Constant: int, 8
+                  ID: i
+            ID: work

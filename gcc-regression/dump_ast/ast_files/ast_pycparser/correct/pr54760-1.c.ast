@@ -1,0 +1,30 @@
+FileAST: 
+  FuncDef: 
+    Decl: test00, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: test00, []
+            IdentifierType: ['void']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_thread_pointer
+  FuncDef: 
+    Decl: test01, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['void']
+        TypeDecl: test01, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_set_thread_pointer
+        ExprList: 
+          ID: p

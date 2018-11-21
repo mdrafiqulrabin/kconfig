@@ -1,0 +1,24 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: j, [], ['extern'], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      If: 
+        ID: i
+        Compound: 
+          Assignment: =
+            ID: j
+            Constant: int, 10
+        Compound: 
+          Assignment: =
+            ID: j
+            Constant: int, 20

@@ -1,0 +1,92 @@
+c_files/pr30957-1.c:4:1: warning: '/*' within block comment [-Wcomment]
+/* { dg-require-effective-target hard_float } */
+^
+1 warning generated.
+TranslationUnitDecl 0x7fa5858264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa585826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa585826740 '__int128'
+|-TypedefDecl 0x7fa585826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa585826760 'unsigned __int128'
+|-TypedefDecl 0x7fa585826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa585826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa585826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa585826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa585826dc0 'char *'
+|   `-BuiltinType 0x7fa585826560 'char'
+|-TypedefDecl 0x7fa5858270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa585827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa585826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa585826e58 '__va_list_tag'
+|-FunctionDecl 0x7fa586025a30 <c_files/pr30957-1.c:8:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fa586025ac8 prev 0x7fa586025a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fa586025c78 <line:9:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fa586025d10 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fa586025d78 prev 0x7fa586025c78 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fa586025b78 <col:19> col:22 'int'
+|-FunctionDecl 0x7fa586025f88 <line:11:1, line:21:1> line:12:1 used foo 'float (float, int)'
+| |-ParmVarDecl 0x7fa586025e30 <col:6, col:12> col:12 used d 'float'
+| |-ParmVarDecl 0x7fa586025ea8 <col:15, col:19> col:19 used n 'int'
+| |-CompoundStmt 0x7fa5860264d8 <line:13:1, line:21:1>
+| | |-DeclStmt 0x7fa586026130 <line:14:3, col:13>
+| | | `-VarDecl 0x7fa5860260d0 <col:3, col:12> col:12 used i 'unsigned int'
+| | |-DeclStmt 0x7fa586026200 <line:15:3, col:18>
+| | | `-VarDecl 0x7fa586026160 <col:3, col:17> col:9 used accum 'float' cinit
+| | |   `-ImplicitCastExpr 0x7fa5860261e8 <col:17> 'float' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7fa5860261c0 <col:17> 'float' lvalue ParmVar 0x7fa586025e30 'd' 'float'
+| | |-ForStmt 0x7fa586026448 <line:17:3, line:18:14>
+| | | |-BinaryOperator 0x7fa586026278 <line:17:8, col:12> 'unsigned int' '='
+| | | | |-DeclRefExpr 0x7fa586026218 <col:8> 'unsigned int' lvalue Var 0x7fa5860260d0 'i' 'unsigned int'
+| | | | `-ImplicitCastExpr 0x7fa586026260 <col:12> 'unsigned int' <IntegralCast>
+| | | |   `-IntegerLiteral 0x7fa586026240 <col:12> 'int' 0
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fa586026338 <col:15, col:19> 'int' '<'
+| | | | |-ImplicitCastExpr 0x7fa5860262f0 <col:15> 'unsigned int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fa5860262a0 <col:15> 'unsigned int' lvalue Var 0x7fa5860260d0 'i' 'unsigned int'
+| | | | `-ImplicitCastExpr 0x7fa586026320 <col:19> 'unsigned int' <IntegralCast>
+| | | |   `-ImplicitCastExpr 0x7fa586026308 <col:19> 'int' <LValueToRValue>
+| | | |     `-DeclRefExpr 0x7fa5860262c8 <col:19> 'int' lvalue ParmVar 0x7fa586025ea8 'n' 'int'
+| | | |-UnaryOperator 0x7fa586026388 <col:22, col:23> 'unsigned int' postfix '++'
+| | | | `-DeclRefExpr 0x7fa586026360 <col:22> 'unsigned int' lvalue Var 0x7fa5860260d0 'i' 'unsigned int'
+| | | `-CompoundAssignOperator 0x7fa586026410 <line:18:5, col:14> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+| | |   |-DeclRefExpr 0x7fa5860263a8 <col:5> 'float' lvalue Var 0x7fa586026160 'accum' 'float'
+| | |   `-ImplicitCastExpr 0x7fa5860263f8 <col:14> 'float' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7fa5860263d0 <col:14> 'float' lvalue ParmVar 0x7fa586025e30 'd' 'float'
+| | `-ReturnStmt 0x7fa5860264c0 <line:20:3, col:10>
+| |   `-ImplicitCastExpr 0x7fa5860264a8 <col:10> 'float' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fa586026480 <col:10> 'float' lvalue Var 0x7fa586026160 'accum' 'float'
+| `-NoInlineAttr 0x7fa586026030 <line:11:22>
+|-FunctionDecl 0x7fa586026560 <line:23:1, line:34:1> line:24:1 main 'int ()'
+| `-CompoundStmt 0x7fa586027c40 <line:25:1, line:34:1>
+|   |-IfStmt 0x7fa586027b48 <line:31:3, line:32:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa586027a88 <line:31:7, col:58> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fa586027a70 <col:7, col:53> 'double' <FloatingCast>
+|   | | | `-CallExpr 0x7fa586027a00 <col:7, col:53> 'float'
+|   | | |   |-ImplicitCastExpr 0x7fa5860269d8 <col:7> 'float (*)(float, float)' <BuiltinFnToFnPtr>
+|   | | |   | `-DeclRefExpr 0x7fa586026800 <col:7> '<builtin fn type>' Function 0x7fa586026640 '__builtin_copysignf' 'float (float, float)'
+|   | | |   |-ImplicitCastExpr 0x7fa586027a38 <col:28> 'float' <FloatingCast>
+|   | | |   | `-FloatingLiteral 0x7fa586026828 <col:28> 'double' 1.000000e+00
+|   | | |   `-CallExpr 0x7fa586026960 <col:33, col:52> 'float'
+|   | | |     |-ImplicitCastExpr 0x7fa586026948 <col:33> 'float (*)(float, int)' <FunctionToPointerDecay>
+|   | | |     | `-DeclRefExpr 0x7fa586026848 <col:33> 'float (float, int)' Function 0x7fa586025f88 'foo' 'float (float, int)'
+|   | | |     |-ImplicitCastExpr 0x7fa586026998 <col:38, col:45> 'float' <FloatingCast>
+|   | | |     | `-BinaryOperator 0x7fa5860268d0 <col:38, col:45> 'double' '/'
+|   | | |     |   |-FloatingLiteral 0x7fa586026870 <col:38> 'double' 0.000000e+00
+|   | | |     |   `-UnaryOperator 0x7fa5860268b0 <col:44, col:45> 'double' prefix '-'
+|   | | |     |     `-FloatingLiteral 0x7fa586026890 <col:45> 'double' 5.000000e+00
+|   | | |     `-IntegerLiteral 0x7fa5860268f8 <col:50> 'int' 10
+|   | | `-FloatingLiteral 0x7fa586027a50 <col:58> 'double' 1.000000e+00
+|   | |-CallExpr 0x7fa586027b20 <line:32:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7fa586027b08 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fa586027ab0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fa586025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-CallExpr 0x7fa586027c10 <line:33:3, col:10> 'void'
+|     |-ImplicitCastExpr 0x7fa586027bf8 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fa586027b80 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fa586025d78 'exit' 'void (int) __attribute__((noreturn))'
+|     `-IntegerLiteral 0x7fa586027ba8 <col:9> 'int' 0
+`-FunctionDecl 0x7fa586026640 <line:31:7> col:7 implicit used __builtin_copysignf 'float (float, float)' extern
+  |-ParmVarDecl 0x7fa5860266d8 <<invalid sloc>> <invalid sloc> 'float'
+  |-ParmVarDecl 0x7fa586026738 <<invalid sloc>> <invalid sloc> 'float'
+  |-NoThrowAttr 0x7fa5860267a8 <col:7> Implicit
+  `-ConstAttr 0x7fa5860267f0 <col:7> Implicit

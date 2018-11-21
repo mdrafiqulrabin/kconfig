@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fb9358264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb935826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb935826740 '__int128'
+|-TypedefDecl 0x7fb935826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb935826760 'unsigned __int128'
+|-TypedefDecl 0x7fb935826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb935826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb935826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb935826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb935826dc0 'char *'
+|   `-BuiltinType 0x7fb935826560 'char'
+|-TypedefDecl 0x7fb9358270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb935827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb935826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb935826e58 '__va_list_tag'
+|-VarDecl 0x7fb935827178 <c_files/pr83930.c:5:1, col:49> col:49 used v '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|-FunctionDecl 0x7fb936026b20 <line:7:1, line:11:1> line:8:1 used bar 'void (unsigned char)' static inline
+| |-ParmVarDecl 0x7fb936026a58 <col:6, col:20> col:20 used d 'unsigned char'
+| `-CompoundStmt 0x7fb936026c90 <line:9:1, line:11:1>
+|   `-CompoundAssignOperator 0x7fb936026c58 <line:10:3, col:8> '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' '/=' ComputeLHSTy='__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' ComputeResultTy='__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|     |-DeclRefExpr 0x7fb936026bc0 <col:3> '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fb935827178 'v' '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|     `-ImplicitCastExpr 0x7fb936026c40 <col:8> '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <VectorSplat>
+|       `-ImplicitCastExpr 0x7fb936026c28 <col:8> 'unsigned int' <IntegralCast>
+|         `-ImplicitCastExpr 0x7fb936026c10 <col:8> 'unsigned char' <LValueToRValue>
+|           `-DeclRefExpr 0x7fb936026be8 <col:8> 'unsigned char' lvalue ParmVar 0x7fb936026a58 'd' 'unsigned char'
+`-FunctionDecl 0x7fb936026d70 <line:13:1, line:17:1> line:14:1 foo 'void (void)'
+  |-CompoundStmt 0x7fb936026f28 <line:15:1, line:17:1>
+  | `-CallExpr 0x7fb936026ee0 <line:16:3, col:9> 'void'
+  |   |-ImplicitCastExpr 0x7fb936026ec8 <col:3> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x7fb936026e50 <col:3> 'void (unsigned char)' Function 0x7fb936026b20 'bar' 'void (unsigned char)'
+  |   `-ImplicitCastExpr 0x7fb936026f10 <col:8> 'unsigned char' <IntegralCast>
+  |     `-IntegerLiteral 0x7fb936026e78 <col:8> 'int' 4
+  `-AlwaysInlineAttr 0x7fb936026e08 <line:13:17> always_inline

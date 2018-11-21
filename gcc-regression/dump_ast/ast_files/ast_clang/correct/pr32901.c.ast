@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7fc97c0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc97c026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc97c026740 '__int128'
+|-TypedefDecl 0x7fc97c026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc97c026760 'unsigned __int128'
+|-TypedefDecl 0x7fc97c026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc97c026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc97c026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc97c026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc97c026dc0 'char *'
+|   `-BuiltinType 0x7fc97c026560 'char'
+|-TypedefDecl 0x7fc97c0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc97c027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc97c026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc97c026e58 '__va_list_tag'
+|-RecordDecl 0x7fc97c027120 <c_files/pr32901.c:4:1, line:8:1> line:4:8 struct foo definition
+| |-FieldDecl 0x7fc97c825a18 <line:5:9, col:22> col:18 a1 'unsigned int'
+| | `-IntegerLiteral 0x7fc97c0271d0 <col:22> 'int' 1
+| |-FieldDecl 0x7fc97c825a98 <line:6:9, col:22> col:18 a2 'unsigned int'
+| | `-IntegerLiteral 0x7fc97c825a60 <col:22> 'int' 3
+| `-FieldDecl 0x7fc97c825b18 <line:7:9, col:20> col:9 'unsigned int'
+|   `-IntegerLiteral 0x7fc97c825ae0 <col:20> 'int' 4
+|-VarDecl 0x7fc97c825bb0 <line:10:1, col:19> col:19 used thefoo 'struct foo':'struct foo' extern
+|-VarDecl 0x7fc97c825c70 <col:1, col:27> col:27 used theotherfoo 'struct foo':'struct foo' extern
+`-FunctionDecl 0x7fc97c825db0 <line:12:1, line:24:1> line:12:6 setup_foo 'void (void)'
+  `-CompoundStmt 0x7fc97c8263c8 <line:13:1, line:24:1>
+    |-DeclStmt 0x7fc97c826060 <line:14:9, line:17:10>
+    | `-VarDecl 0x7fc97c825e68 <line:14:9, line:17:9> line:14:26 used init 'const struct foo':'const struct foo' cinit
+    |   `-InitListExpr 0x7fc97c825fd8 <col:33, line:17:9> 'struct foo':'struct foo'
+    |     |-ImplicitCastExpr 0x7fc97c826030 <line:15:23> 'unsigned int' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fc97c825ec8 <col:23> 'int' 1
+    |     `-ImplicitCastExpr 0x7fc97c826048 <line:16:23> 'unsigned int' <IntegralCast>
+    |       `-IntegerLiteral 0x7fc97c825f28 <col:23> 'int' 5
+    |-DeclStmt 0x7fc97c826290 <line:18:2, line:21:3>
+    | `-VarDecl 0x7fc97c826098 <line:18:2, line:21:2> line:18:28 used volinit 'const volatile struct foo':'const volatile struct foo' cinit
+    |   `-InitListExpr 0x7fc97c826208 <col:38, line:21:2> 'struct foo':'struct foo'
+    |     |-ImplicitCastExpr 0x7fc97c826260 <line:19:9> 'unsigned int' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fc97c8260f8 <col:9> 'int' 0
+    |     `-ImplicitCastExpr 0x7fc97c826278 <line:20:9> 'unsigned int' <IntegralCast>
+    |       `-IntegerLiteral 0x7fc97c826158 <col:9> 'int' 6
+    |-BinaryOperator 0x7fc97c826310 <line:22:9, col:18> 'struct foo':'struct foo' '='
+    | |-DeclRefExpr 0x7fc97c8262a8 <col:9> 'struct foo':'struct foo' lvalue Var 0x7fc97c825bb0 'thefoo' 'struct foo':'struct foo'
+    | `-ImplicitCastExpr 0x7fc97c8262f8 <col:18> 'struct foo':'struct foo' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fc97c8262d0 <col:18> 'const struct foo':'const struct foo' lvalue Var 0x7fc97c825e68 'init' 'const struct foo':'const struct foo'
+    `-BinaryOperator 0x7fc97c8263a0 <line:23:2, col:16> 'struct foo':'struct foo' '='
+      |-DeclRefExpr 0x7fc97c826338 <col:2> 'struct foo':'struct foo' lvalue Var 0x7fc97c825c70 'theotherfoo' 'struct foo':'struct foo'
+      `-ImplicitCastExpr 0x7fc97c826388 <col:16> 'struct foo':'struct foo' <LValueToRValue>
+        `-DeclRefExpr 0x7fc97c826360 <col:16> 'const volatile struct foo':'const volatile struct foo' lvalue Var 0x7fc97c826098 'volinit' 'const volatile struct foo':'const volatile struct foo'

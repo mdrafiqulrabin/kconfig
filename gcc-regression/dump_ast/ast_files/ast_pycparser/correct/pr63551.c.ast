@@ -1,0 +1,64 @@
+FileAST: 
+  Decl: None, [], [], []
+    Union: U
+      Decl: f0, [], [], []
+        TypeDecl: f0, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: f1, [], [], []
+        TypeDecl: f1, []
+          IdentifierType: ['int']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              Union: U
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: <=
+          StructRef: .
+            ID: p
+            ID: f1
+          Constant: int, 0
+        If: 
+          ID: a
+          Assignment: =
+            ID: d
+            Constant: int, 0
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        TypeDecl: fn2, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: d
+        Constant: int, 0
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          Union: U
+        InitList: 
+          Constant: int, 4294967286U
+      FuncCall: 
+        ID: fn1
+        ExprList: 
+          ID: b
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: fn2
+      Return: 
+        Constant: int, 0

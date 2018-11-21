@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fd9370264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd937026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd937026740 '__int128'
+|-TypedefDecl 0x7fd937026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd937026760 'unsigned __int128'
+|-TypedefDecl 0x7fd937026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd937026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd937026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd937026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd937026dc0 'char *'
+|   `-BuiltinType 0x7fd937026560 'char'
+|-TypedefDecl 0x7fd9370270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd937027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd937026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd937026e58 '__va_list_tag'
+|-VarDecl 0x7fd937027138 <c_files/pr60034.c:4:1, col:22> col:22 used global_max_fast 'unsigned long' static
+`-FunctionDecl 0x7fd937825b50 <line:6:1, line:10:1> line:6:6 __libc_mallopt 'void (int, int)'
+  |-ParmVarDecl 0x7fd937825a00 <col:22, col:26> col:26 param_number 'int'
+  |-ParmVarDecl 0x7fd937825a78 <col:40, col:44> col:44 value 'int'
+  `-CompoundStmt 0x7fd937825e20 <line:7:1, line:10:1>
+    |-GCCAsmStmt 0x7fd937825d38 <line:8:2, col:79>
+    | `-ImplicitCastExpr 0x7fd937825d20 <col:61, col:77> 'unsigned long' <LValueToRValue>
+    |   `-ParenExpr 0x7fd937825d00 <col:61, col:77> 'unsigned long' lvalue
+    |     `-DeclRefExpr 0x7fd937825cd8 <col:62> 'unsigned long' lvalue Var 0x7fd937027138 'global_max_fast' 'unsigned long'
+    `-BinaryOperator 0x7fd937825df8 <line:9:2, col:20> 'unsigned long' '='
+      |-DeclRefExpr 0x7fd937825d98 <col:2> 'unsigned long' lvalue Var 0x7fd937027138 'global_max_fast' 'unsigned long'
+      `-ImplicitCastExpr 0x7fd937825de0 <col:20> 'unsigned long' <IntegralCast>
+        `-IntegerLiteral 0x7fd937825dc0 <col:20> 'int' 1

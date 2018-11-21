@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7f9b368264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9b36826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9b36826740 '__int128'
+|-TypedefDecl 0x7f9b36826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9b36826760 'unsigned __int128'
+|-TypedefDecl 0x7f9b36826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9b36826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9b36826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9b36826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9b36826dc0 'char *'
+|   `-BuiltinType 0x7f9b36826560 'char'
+|-TypedefDecl 0x7f9b368270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9b36827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9b36826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9b36826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9b37025a30 <c_files/pr48063.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9b37025ac8 prev 0x7f9b37025a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9b37025ba8 <line:6:1, col:18> col:13 used bar 'void ()' static
+|-FunctionDecl 0x7f9b37025ca0 <line:8:1, line:12:1> line:9:1 foo 'void ()'
+| `-CompoundStmt 0x7f9b37025df0 <line:10:1, line:12:1>
+|   `-CallExpr 0x7f9b37025dc0 <line:11:3, col:9> 'void'
+|     |-ImplicitCastExpr 0x7f9b37025da8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f9b37025d38 <col:3> 'void ()' Function 0x7f9b37025ba8 'bar' 'void ()'
+|     `-IntegerLiteral 0x7f9b37025d60 <col:8> 'int' 1
+`-FunctionDecl 0x7f9b37025ef0 prev 0x7f9b37025ba8 <line:14:1, line:19:1> line:15:1 used bar 'void (double)' static
+  |-ParmVarDecl 0x7f9b37025e28 <col:6, col:13> col:13 used i 'double'
+  `-CompoundStmt 0x7f9b370260a0 <line:16:1, line:19:1>
+    `-IfStmt 0x7f9b37026068 <line:17:3, line:18:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f9b37025fb8 <line:17:7> 'double' <LValueToRValue>
+      | `-DeclRefExpr 0x7f9b37025f90 <col:7> 'double' lvalue ParmVar 0x7f9b37025e28 'i' 'double'
+      |-CallExpr 0x7f9b37026040 <line:18:5, col:12> 'void'
+      | `-ImplicitCastExpr 0x7f9b37026028 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7f9b37025fd0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9b37025ac8 'abort' 'void (void) __attribute__((noreturn))'
+      `-<<<NULL>>>

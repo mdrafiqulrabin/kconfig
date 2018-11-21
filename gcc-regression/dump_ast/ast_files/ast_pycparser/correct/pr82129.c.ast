@@ -1,0 +1,101 @@
+FileAST: 
+  Decl: pj, [], [], []
+    TypeDecl: pj, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: g4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: bc, [], [], []
+            PtrDecl: []
+              TypeDecl: bc, []
+                IdentifierType: ['unsigned', 'long', 'int']
+          Decl: h5, [], [], []
+            PtrDecl: []
+              TypeDecl: h5, []
+                IdentifierType: ['unsigned', 'long', 'int']
+        TypeDecl: g4, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: pj
+          Constant: int, 0
+        Compound: 
+          Decl: ib, [], [], []
+            TypeDecl: ib, []
+              IdentifierType: ['int']
+            Constant: int, 0
+          While: 
+            BinaryOp: !=
+              ID: bc
+              Constant: int, 0
+            Compound: 
+              Label: m6
+                For: 
+                  Assignment: =
+                    ID: pj
+                    Constant: int, 0
+                  BinaryOp: <
+                    ID: pj
+                    Constant: int, 2
+                  UnaryOp: ++
+                    ID: pj
+                  Assignment: =
+                    ID: pj
+                    Constant: int, 0
+              While: 
+                BinaryOp: !=
+                  ID: pj
+                  Constant: int, 0
+                Compound: 
+                  For: 
+                    Compound: 
+                  While: 
+                    BinaryOp: !=
+                      ID: ib
+                      Constant: int, 0
+                    Compound: 
+                      Decl: tv, [], [], []
+                        TypeDecl: tv, []
+                          IdentifierType: ['unsigned', 'long', 'int']
+                        UnaryOp: *
+                          ID: bc
+                      Decl: n7, [], [], []
+                        TypeDecl: n7, []
+                          IdentifierType: ['unsigned', 'long', 'int']
+                      Assignment: =
+                        UnaryOp: *
+                          ID: bc
+                        Constant: int, 1
+                      While: 
+                        BinaryOp: !=
+                          UnaryOp: *
+                            ID: bc
+                          Constant: int, 0
+                        Compound: 
+                      Label: ut
+                        If: 
+                          BinaryOp: ==
+                            ID: pj
+                            Constant: int, 0
+                          Assignment: =
+                            ID: n7
+                            BinaryOp: >
+                              UnaryOp: *
+                                ID: h5
+                              Constant: int, 0
+                          Compound: 
+                            Assignment: =
+                              UnaryOp: *
+                                ID: h5
+                              ID: tv
+                            Assignment: =
+                              ID: n7
+                              UnaryOp: *
+                                ID: h5
+                      Assignment: +=
+                        ID: ib
+                        ID: n7
+          Goto: ut
+      Goto: m6

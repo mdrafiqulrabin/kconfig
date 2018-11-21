@@ -1,0 +1,28 @@
+c_files/pr35442.c:11:11: error: called object type 'B' (vector of 16 'int' values) is not a function or function pointer
+  ((B) a) ();   /* { dg-error "is not a function" } */
+  ~~~~~~~ ^
+1 error generated.
+TranslationUnitDecl 0x7f93958124d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9395812a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9395812740 '__int128'
+|-TypedefDecl 0x7f9395812a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9395812760 'unsigned __int128'
+|-TypedefDecl 0x7f9395812d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9395812b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9395812ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9395812e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9395812dc0 'char *'
+|   `-BuiltinType 0x7f9395812560 'char'
+|-TypedefDecl 0x7f93958130c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9395813070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9395812ee0 'struct __va_list_tag'
+|     `-Record 0x7f9395812e58 '__va_list_tag'
+|-TypedefDecl 0x7f9395813178 <c_files/pr35442.c:5:1, col:14> col:14 referenced A '__attribute__((__vector_size__(64 * sizeof(char)))) char'
+| `-VectorType 0x7f9395813140 '__attribute__((__vector_size__(64 * sizeof(char)))) char' 64
+|   `-BuiltinType 0x7f9395812560 'char'
+|-TypedefDecl 0x7f9395864438 <line:6:1, col:13> col:13 referenced B '__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| `-VectorType 0x7f9395864400 '__attribute__((__vector_size__(16 * sizeof(int)))) int' 16
+|   `-BuiltinType 0x7f93958125c0 'int'
+`-FunctionDecl 0x7f93958645c0 <line:8:1, line:12:1> line:9:1 foo 'void (A)'
+  |-ParmVarDecl 0x7f93958644c0 <col:6, col:8> col:8 used a 'A':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+  `-CompoundStmt 0x7f9395864b30 <line:10:1, line:12:1>

@@ -1,0 +1,38 @@
+c_files/pr28865.c:13:8: error: initialization of flexible array member is not allowed
+  { 1, "Long exposure noise reduction" }, /* { dg-error "initialization of flexible array member" } */
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr28865.c:4:14: note: initialized flexible array member 'field2' is here
+  const char field2[];
+             ^
+c_files/pr28865.c:14:8: error: initialization of flexible array member is not allowed
+  { 2, "Shutter/AE lock buttons" }, /* { dg-error "initialization of flexible array member" } */
+       ^~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr28865.c:4:14: note: initialized flexible array member 'field2' is here
+  const char field2[];
+             ^
+c_files/pr28865.c:15:8: error: initialization of flexible array member is not allowed
+  { 3, "Mirror lockup" } /* { dg-error "initialization of flexible array member" } */
+       ^~~~~~~~~~~~~~~
+c_files/pr28865.c:4:14: note: initialized flexible array member 'field2' is here
+  const char field2[];
+             ^
+3 errors generated.
+TranslationUnitDecl 0x7f89970264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8997026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8997026740 '__int128'
+|-TypedefDecl 0x7f8997026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8997026760 'unsigned __int128'
+|-TypedefDecl 0x7f8997026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8997026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8997026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8997026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8997026dc0 'char *'
+|   `-BuiltinType 0x7f8997026560 'char'
+|-TypedefDecl 0x7f89970270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8997027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8997026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8997026e58 '__va_list_tag'
+|-RecordDecl 0x7f8997027120 <c_files/pr28865.c:1:1, line:5:1> line:1:8 struct var_len definition
+| |-FieldDecl 0x7f8997825a00 <line:3:3, col:7> col:7 field1 'int'
+| `-FieldDecl 0x7f8997825ac8 <line:4:3, col:21> col:14 field2 'const char []'
+`-VarDecl 0x7f8997825bc8 <line:11:1, col:39> col:29 invalid var_array 'const struct var_len []' static

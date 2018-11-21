@@ -1,0 +1,146 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+      Decl: x, [], [], []
+        ArrayDecl: []
+          TypeDecl: x, []
+            IdentifierType: ['float']
+          Constant: int, 5
+      Decl: y, [], [], []
+        ArrayDecl: []
+          TypeDecl: y, []
+            IdentifierType: ['float']
+          Constant: int, 5
+      Decl: z, [], [], []
+        ArrayDecl: []
+          TypeDecl: z, []
+            IdentifierType: ['float']
+          BinaryOp: -
+            Constant: int, 5
+            Constant: int, 1
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                Struct: S
+          Decl: a, [], [], []
+            ArrayDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['float']
+          Decl: b, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: b, []
+                  IdentifierType: ['float']
+          Decl: c, [], [], []
+            ArrayDecl: []
+              TypeDecl: c, []
+                IdentifierType: ['float']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            StructRef: ->
+              ID: s
+              ID: b
+            Constant: int, 1
+          BinaryOp: >
+            StructRef: ->
+              ID: s
+              ID: d
+            Constant: int, 0
+        Compound: 
+          For: 
+            DeclList: 
+              Decl: i, [], [], []
+                TypeDecl: i, []
+                  IdentifierType: ['int']
+                Constant: int, 0
+            BinaryOp: <
+              ID: i
+              StructRef: ->
+                ID: s
+                ID: a
+            UnaryOp: p++
+              ID: i
+            Compound: 
+              If: 
+                BinaryOp: !=
+                  ArrayRef: 
+                    ID: a
+                    ID: i
+                  Constant: float, 0.0
+                Compound: 
+                  For: 
+                    DeclList: 
+                      Decl: j, [], [], []
+                        TypeDecl: j, []
+                          IdentifierType: ['int']
+                        Constant: int, 0
+                    BinaryOp: <
+                      ID: j
+                      BinaryOp: -
+                        StructRef: ->
+                          ID: s
+                          ID: d
+                        Constant: int, 1
+                    UnaryOp: p++
+                      ID: j
+                    Compound: 
+                      If: 
+                        BinaryOp: &&
+                          BinaryOp: >=
+                            ArrayRef: 
+                              ID: c
+                              ID: i
+                            ArrayRef: 
+                              StructRef: ->
+                                ID: s
+                                ID: x
+                              ID: j
+                          BinaryOp: <=
+                            ArrayRef: 
+                              ID: c
+                              ID: i
+                            ArrayRef: 
+                              StructRef: ->
+                                ID: s
+                                ID: x
+                              BinaryOp: +
+                                ID: j
+                                Constant: int, 1
+                        Compound: 
+                          Assignment: =
+                            ArrayRef: 
+                              ArrayRef: 
+                                ID: b
+                                BinaryOp: *
+                                  Constant: int, 2
+                                  ID: j
+                              ID: i
+                            ArrayRef: 
+                              StructRef: ->
+                                ID: s
+                                ID: x
+                              ID: j
+                          Break: 

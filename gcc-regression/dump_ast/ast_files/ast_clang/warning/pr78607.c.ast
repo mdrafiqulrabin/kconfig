@@ -1,0 +1,46 @@
+c_files/pr78607.c:8:22: warning: division by zero is undefined [-Wdivision-by-zero]
+  if (mq == 0 && (cx / 0) != 0)
+                     ^ ~
+1 warning generated.
+TranslationUnitDecl 0x7fc4af0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc4af026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc4af026740 '__int128'
+|-TypedefDecl 0x7fc4af026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc4af026760 'unsigned __int128'
+|-TypedefDecl 0x7fc4af026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc4af026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc4af026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc4af026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc4af026dc0 'char *'
+|   `-BuiltinType 0x7fc4af026560 'char'
+|-TypedefDecl 0x7fc4af0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc4af027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc4af026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc4af026e58 '__va_list_tag'
+`-FunctionDecl 0x7fc4af825a00 <c_files/pr78607.c:3:1, line:12:1> line:4:1 rc 'void (int)'
+  |-ParmVarDecl 0x7fc4af027138 <col:5, col:9> col:9 used cx 'int'
+  `-CompoundStmt 0x7fc4af825d98 <line:5:1, line:12:1>
+    |-DeclStmt 0x7fc4af825b58 <line:6:3, col:9>
+    | `-VarDecl 0x7fc4af825af8 <col:3, col:7> col:7 used mq 'int'
+    `-IfStmt 0x7fc4af825d60 <line:8:3, line:11:7>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc4af825ce8 <line:8:7, col:30> 'int' '&&'
+      | |-BinaryOperator 0x7fc4af825bd0 <col:7, col:13> 'int' '=='
+      | | |-ImplicitCastExpr 0x7fc4af825bb8 <col:7> 'int' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7fc4af825b70 <col:7> 'int' lvalue Var 0x7fc4af825af8 'mq' 'int'
+      | | `-IntegerLiteral 0x7fc4af825b98 <col:13> 'int' 0
+      | `-BinaryOperator 0x7fc4af825cc0 <col:18, col:30> 'int' '!='
+      |   |-ParenExpr 0x7fc4af825c80 <col:18, col:25> 'int'
+      |   | `-BinaryOperator 0x7fc4af825c58 <col:19, col:24> 'int' '/'
+      |   |   |-ImplicitCastExpr 0x7fc4af825c40 <col:19> 'int' <LValueToRValue>
+      |   |   | `-DeclRefExpr 0x7fc4af825bf8 <col:19> 'int' lvalue ParmVar 0x7fc4af027138 'cx' 'int'
+      |   |   `-IntegerLiteral 0x7fc4af825c20 <col:24> 'int' 0
+      |   `-IntegerLiteral 0x7fc4af825ca0 <col:30> 'int' 0
+      |-ForStmt 0x7fc4af825d28 <line:9:5, line:11:7>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | `-CompoundStmt 0x7fc4af825d10 <line:10:7, line:11:7>
+      `-<<<NULL>>>

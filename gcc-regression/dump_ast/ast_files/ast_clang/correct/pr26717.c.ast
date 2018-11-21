@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7f82798264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8279826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8279826740 '__int128'
+|-TypedefDecl 0x7f8279826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8279826760 'unsigned __int128'
+|-TypedefDecl 0x7f8279826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8279826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8279826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8279826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8279826dc0 'char *'
+|   `-BuiltinType 0x7f8279826560 'char'
+|-TypedefDecl 0x7f82798270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8279827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8279826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8279826e58 '__va_list_tag'
+`-FunctionDecl 0x7f827a025a00 <c_files/pr26717.c:3:1, line:7:1> line:3:16 f '_Complex float (_Complex float)'
+  |-ParmVarDecl 0x7f8279827130 <col:19, col:34> col:34 used a '_Complex float'
+  `-CompoundStmt 0x7f827a025c68 <line:4:1, line:7:1>
+    |-DeclStmt 0x7f827a025bf8 <line:5:3, col:27>
+    | `-VarDecl 0x7f827a025af0 <col:3, col:26> col:18 used b '_Complex float' cinit
+    |   `-BinaryOperator 0x7f827a025bd0 <col:22, col:26> '_Complex float' '/'
+    |     |-ImplicitCastExpr 0x7f827a025ba0 <col:22> '_Complex float' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f827a025b50 <col:22> '_Complex float' lvalue ParmVar 0x7f8279827130 'a' '_Complex float'
+    |     `-ImplicitCastExpr 0x7f827a025bb8 <col:26> '_Complex float' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f827a025b78 <col:26> '_Complex float' lvalue ParmVar 0x7f8279827130 'a' '_Complex float'
+    `-ReturnStmt 0x7f827a025c50 <line:6:3, col:10>
+      `-ImplicitCastExpr 0x7f827a025c38 <col:10> '_Complex float' <LValueToRValue>
+        `-DeclRefExpr 0x7f827a025c10 <col:10> '_Complex float' lvalue Var 0x7f827a025af0 'b' '_Complex float'

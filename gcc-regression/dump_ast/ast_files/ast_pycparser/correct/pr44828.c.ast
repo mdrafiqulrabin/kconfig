@@ -1,0 +1,56 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: si1, [], [], []
+            TypeDecl: si1, []
+              IdentifierType: ['signed', 'char']
+          Decl: si2, [], [], []
+            TypeDecl: si2, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: foo, []
+          IdentifierType: ['signed', 'char']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          ID: si1
+          ID: si2
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+    Constant: int, 0x105F61CA
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+        Constant: int, 0x0332F5C8
+      If: 
+        BinaryOp: >
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              ID: b
+              ID: a
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

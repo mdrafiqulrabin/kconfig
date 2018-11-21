@@ -1,0 +1,50 @@
+TranslationUnitDecl 0x7f9ccd818ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9ccd819420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9ccd819140 '__int128'
+|-TypedefDecl 0x7f9ccd819490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9ccd819160 'unsigned __int128'
+|-TypedefDecl 0x7f9ccd819768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9ccd819570 'struct __NSConstantString_tag'
+|   `-Record 0x7f9ccd8194e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9ccd819800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9ccd8197c0 'char *'
+|   `-BuiltinType 0x7f9ccd818f60 'char'
+|-TypedefDecl 0x7f9ccd819ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9ccd819a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9ccd8198e0 'struct __va_list_tag'
+|     `-Record 0x7f9ccd819858 '__va_list_tag'
+|-FunctionDecl 0x7f9ccd033230 <c_files/pr67271.c:5:17> col:17 implicit used labs 'long (long)' extern
+| |-ParmVarDecl 0x7f9ccd0332c8 <<invalid sloc>> <invalid sloc> 'long'
+| |-NoThrowAttr 0x7f9ccd033330 <col:17> Implicit
+| `-ConstAttr 0x7f9ccd033378 <col:17> Implicit
+|-FunctionDecl 0x7f9ccd033388 prev 0x7f9ccd033230 <col:1, col:33> col:17 used labs 'long (long)' extern
+| |-ParmVarDecl 0x7f9ccd819b38 <col:23, col:32> col:32 j 'long'
+| |-NoThrowAttr 0x7f9ccd033460 <col:17> Inherited Implicit
+| `-ConstAttr 0x7f9ccd033470 <col:17> Inherited Implicit
+`-FunctionDecl 0x7f9ccd0334d0 <line:6:1, line:13:1> line:7:1 main 'int ()'
+  `-CompoundStmt 0x7f9ccd033a38 <line:8:1, line:13:1>
+    |-DeclStmt 0x7f9ccd033710 <line:9:3, col:28>
+    | `-VarDecl 0x7f9ccd0335f0 <col:3, col:21> col:9 used a 'long *' cinit
+    |   `-CStyleCastExpr 0x7f9ccd0336e8 <col:13, col:21> 'long *' <BitCast>
+    |     `-ImplicitCastExpr 0x7f9ccd0336d0 <col:21> 'char *' <ArrayToPointerDecay>
+    |       `-StringLiteral 0x7f9ccd033688 <col:21> 'char [6]' lvalue "empty"
+    |-DeclStmt 0x7f9ccd0337c0 <line:10:3, col:21>
+    | `-VarDecl 0x7f9ccd033740 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x7f9ccd0337a0 <col:11> 'int' 1441516387
+    |-BinaryOperator 0x7f9ccd0339d8 <line:11:3, col:20> 'long' '='
+    | |-ArraySubscriptExpr 0x7f9ccd033858 <col:3, col:6> 'long' lvalue
+    | | |-ImplicitCastExpr 0x7f9ccd033828 <col:3> 'long *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f9ccd0337d8 <col:3> 'long *' lvalue Var 0x7f9ccd0335f0 'a' 'long *'
+    | | `-ImplicitCastExpr 0x7f9ccd033840 <col:5> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9ccd033800 <col:5> 'int' lvalue Var 0x7f9ccd033740 'i' 'int'
+    | `-CallExpr 0x7f9ccd033990 <col:10, col:20> 'long'
+    |   |-ImplicitCastExpr 0x7f9ccd033978 <col:10> 'long (*)(long)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7f9ccd033880 <col:10> 'long (long)' Function 0x7f9ccd033388 'labs' 'long (long)'
+    |   `-ImplicitCastExpr 0x7f9ccd0339c0 <col:16, col:19> 'long' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7f9ccd033928 <col:16, col:19> 'long' lvalue
+    |       |-ImplicitCastExpr 0x7f9ccd0338f8 <col:16> 'long *' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7f9ccd0338a8 <col:16> 'long *' lvalue Var 0x7f9ccd0335f0 'a' 'long *'
+    |       `-ImplicitCastExpr 0x7f9ccd033910 <col:18> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f9ccd0338d0 <col:18> 'int' lvalue Var 0x7f9ccd033740 'i' 'int'
+    `-ReturnStmt 0x7f9ccd033a20 <line:12:3, col:10>
+      `-IntegerLiteral 0x7f9ccd033a00 <col:10> 'int' 0

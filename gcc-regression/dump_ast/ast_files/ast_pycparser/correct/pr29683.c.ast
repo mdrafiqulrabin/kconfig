@@ -1,0 +1,128 @@
+FileAST: 
+  Decl: abort, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Typedef: agg7, [], ['typedef']
+    TypeDecl: agg7, []
+      Struct: None
+        Decl: x, [], [], []
+          ArrayDecl: []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+            Constant: int, 7
+  Typedef: agg2, [], ['typedef']
+    TypeDecl: agg2, []
+      Struct: None
+        Decl: mbr1, [], [], []
+          TypeDecl: mbr1, []
+            IdentifierType: ['int']
+        Decl: mbr2, [], [], []
+          TypeDecl: mbr2, []
+            IdentifierType: ['int']
+  Decl: expected, [], [], []
+    TypeDecl: expected, []
+      IdentifierType: ['int']
+    Constant: int, 31415
+  Decl: filler, [], [], []
+    TypeDecl: filler, []
+      IdentifierType: ['agg7']
+  FuncDef: 
+    Decl: GetConst, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: filler, [], [], []
+            TypeDecl: filler, []
+              IdentifierType: ['agg7']
+          Decl: split, [], [], []
+            TypeDecl: split, []
+              IdentifierType: ['agg2']
+        TypeDecl: GetConst, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ID: expected
+  FuncDef: 
+    Decl: VerifyValues, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: filler, [], [], []
+            TypeDecl: filler, []
+              IdentifierType: ['agg7']
+          Decl: last_reg, [], [], []
+            TypeDecl: last_reg, []
+              IdentifierType: ['int']
+          Decl: first_stack, [], [], []
+            TypeDecl: first_stack, []
+              IdentifierType: ['int']
+          Decl: second_stack, [], [], []
+            TypeDecl: second_stack, []
+              IdentifierType: ['int']
+        TypeDecl: VerifyValues, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: !=
+            ID: first_stack
+            Constant: int, 123
+          BinaryOp: !=
+            ID: second_stack
+            ID: expected
+        FuncCall: 
+          ID: abort
+  FuncDef: 
+    Decl: RunTest, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['agg2']
+        TypeDecl: RunTest, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: result, [], [], []
+        TypeDecl: result, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: result
+        FuncCall: 
+          ID: GetConst
+          ExprList: 
+            ID: filler
+            ID: a
+      FuncCall: 
+        ID: VerifyValues
+        ExprList: 
+          ID: filler
+          Constant: int, 0
+          StructRef: .
+            ID: a
+            ID: mbr1
+          ID: result
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: result, [], [], []
+        TypeDecl: result, []
+          IdentifierType: ['agg2']
+        InitList: 
+          Constant: int, 123
+          Constant: int, 456
+      FuncCall: 
+        ID: RunTest
+        ExprList: 
+          ID: result
+      Return: 
+        Constant: int, 0

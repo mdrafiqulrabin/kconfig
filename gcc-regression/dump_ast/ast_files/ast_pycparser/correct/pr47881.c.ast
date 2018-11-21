@@ -1,0 +1,117 @@
+FileAST: 
+  Decl: data, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: data, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: t, [], [], []
+            PtrDecl: []
+              TypeDecl: t, []
+                IdentifierType: ['int']
+          Decl: f, [], [], []
+            PtrDecl: []
+              TypeDecl: f, []
+                IdentifierType: ['int']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      While: 
+        BinaryOp: &&
+          ArrayRef: 
+            ID: data
+            UnaryOp: *
+              ID: f
+          ID: n
+        UnaryOp: p--
+          ID: n
+      For: 
+        BinaryOp: <
+          ID: i
+          ID: n
+        Assignment: +=
+          ID: i
+          Constant: int, 4
+        Compound: 
+          Assignment: =
+            ID: a
+            ArrayRef: 
+              ID: data
+              BinaryOp: &
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: f
+                Constant: int, 0x7f
+          Assignment: =
+            ID: c
+            ArrayRef: 
+              ID: data
+              BinaryOp: &
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: f
+                Constant: int, 0x7f
+          Assignment: =
+            ID: c
+            ArrayRef: 
+              ID: data
+              BinaryOp: &
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: f
+                Constant: int, 0x7f
+          Assignment: =
+            ID: d
+            ArrayRef: 
+              ID: data
+              BinaryOp: &
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: f
+                Constant: int, 0x7f
+          If: 
+            BinaryOp: ||
+              BinaryOp: ||
+                BinaryOp: ||
+                  BinaryOp: &
+                    ID: a
+                    Constant: int, 0x80
+                  BinaryOp: &
+                    ID: b
+                    Constant: int, 0x80
+                BinaryOp: &
+                  ID: c
+                  Constant: int, 0x80
+              BinaryOp: &
+                ID: d
+                Constant: int, 0x80
+            Return: 
+              Constant: int, 1
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: t
+            Constant: int, 16
+      Return: 
+        Constant: int, 0

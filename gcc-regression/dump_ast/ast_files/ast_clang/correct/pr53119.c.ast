@@ -1,0 +1,63 @@
+TranslationUnitDecl 0x7fbf3b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbf3b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbf3b826740 '__int128'
+|-TypedefDecl 0x7fbf3b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbf3b826760 'unsigned __int128'
+|-TypedefDecl 0x7fbf3b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbf3b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbf3b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbf3b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbf3b826dc0 'char *'
+|   `-BuiltinType 0x7fbf3b826560 'char'
+|-TypedefDecl 0x7fbf3b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbf3b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbf3b826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbf3b826e58 '__va_list_tag'
+|-RecordDecl 0x7fbf3b827120 <c_files/pr53119.c:4:1, line:6:1> line:4:8 struct a definition
+| |-FieldDecl 0x7fbf3b877400 <line:5:3, col:7> col:7 x 'int'
+| |-FieldDecl 0x7fbf3b877460 <col:3, col:10> col:10 y 'int'
+| `-FieldDecl 0x7fbf3b8774c0 <col:3, col:13> col:13 z 'int'
+|-RecordDecl 0x7fbf3b877508 <line:8:1, line:10:1> line:8:8 struct b definition
+| |-FieldDecl 0x7fbf3b877600 <line:9:3, col:12> col:12 w 'struct a':'struct a'
+| `-FieldDecl 0x7fbf3b877668 <col:3, col:15> col:15 z 'struct a':'struct a'
+`-FunctionDecl 0x7fbf3b8777d8 <line:12:1, line:22:1> line:12:5 main 'int (void)'
+  `-CompoundStmt 0x7fbf3b878268 <line:13:1, line:22:1>
+    |-DeclStmt 0x7fbf3b877a38 <line:14:3, col:22>
+    | `-VarDecl 0x7fbf3b8778f8 <col:3, col:21> col:12 az 'struct a':'struct a' cinit
+    |   `-InitListExpr 0x7fbf3b8779c0 <col:17, col:21> 'struct a':'struct a'
+    |     |-IntegerLiteral 0x7fbf3b877958 <col:19> 'int' 0
+    |     |-ImplicitValueInitExpr 0x7fbf3b877a18 <<invalid sloc>> 'int'
+    |     `-ImplicitValueInitExpr 0x7fbf3b877a28 <<invalid sloc>> 'int'
+    |-DeclStmt 0x7fbf3b877bb0 <line:15:3, col:23>
+    | `-VarDecl 0x7fbf3b877a70 <col:3, col:22> col:12 anz 'struct a':'struct a' cinit
+    |   `-InitListExpr 0x7fbf3b877b38 <col:18, col:22> 'struct a':'struct a'
+    |     |-IntegerLiteral 0x7fbf3b877ad0 <col:20> 'int' 1
+    |     |-ImplicitValueInitExpr 0x7fbf3b877b90 <<invalid sloc>> 'int'
+    |     `-ImplicitValueInitExpr 0x7fbf3b877ba0 <<invalid sloc>> 'int'
+    |-DeclStmt 0x7fbf3b877d40 <line:16:3, col:26>
+    | `-VarDecl 0x7fbf3b877be8 <col:3, col:25> col:12 aez 'struct a':'struct a' cinit
+    |   `-InitListExpr 0x7fbf3b877cd8 <col:18, col:25> 'struct a':'struct a'
+    |     |-IntegerLiteral 0x7fbf3b877c48 <col:20> 'int' 0
+    |     |-IntegerLiteral 0x7fbf3b877c68 <col:23> 'int' 0
+    |     `-ImplicitValueInitExpr 0x7fbf3b877d30 <<invalid sloc>> 'int'
+    |-DeclStmt 0x7fbf3b877f50 <line:18:3, col:22>
+    | `-VarDecl 0x7fbf3b877db0 <col:3, col:21> col:12 bz 'struct b':'struct b' cinit
+    |   `-InitListExpr 0x7fbf3b877e78 <col:17, col:21> 'struct b':'struct b'
+    |     |-InitListExpr 0x7fbf3b877ec8 <col:19> 'struct a':'struct a'
+    |     | |-IntegerLiteral 0x7fbf3b877e10 <col:19> 'int' 0
+    |     | |-ImplicitValueInitExpr 0x7fbf3b877f20 <<invalid sloc>> 'int'
+    |     | `-ImplicitValueInitExpr 0x7fbf3b877f30 <<invalid sloc>> 'int'
+    |     `-ImplicitValueInitExpr 0x7fbf3b877f40 <<invalid sloc>> 'struct a':'struct a'
+    |-DeclStmt 0x7fbf3b878218 <line:19:3, col:38>
+    | `-VarDecl 0x7fbf3b877f88 <col:3, col:37> col:12 bnz 'struct b':'struct b' cinit
+    |   `-InitListExpr 0x7fbf3b878118 <col:18, col:37> 'struct b':'struct b'
+    |     |-InitListExpr 0x7fbf3b878168 <col:20, col:26> 'struct a':'struct a'
+    |     | |-IntegerLiteral 0x7fbf3b877fe8 <col:20> 'int' 0
+    |     | |-IntegerLiteral 0x7fbf3b878008 <col:23> 'int' 0
+    |     | `-IntegerLiteral 0x7fbf3b878028 <col:26> 'int' 0
+    |     `-InitListExpr 0x7fbf3b8781c0 <col:29, col:35> 'struct a':'struct a'
+    |       |-IntegerLiteral 0x7fbf3b878048 <col:29> 'int' 0
+    |       |-IntegerLiteral 0x7fbf3b878068 <col:32> 'int' 0
+    |       `-IntegerLiteral 0x7fbf3b878088 <col:35> 'int' 0
+    `-ReturnStmt 0x7fbf3b878250 <line:21:3, col:10>
+      `-IntegerLiteral 0x7fbf3b878230 <col:10> 'int' 0

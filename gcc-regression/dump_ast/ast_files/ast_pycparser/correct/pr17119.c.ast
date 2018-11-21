@@ -1,0 +1,45 @@
+FileAST: 
+  FuncDef: 
+    Decl: _mesa_DrawPixels, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: width, [], [], []
+            TypeDecl: width, []
+              IdentifierType: ['int']
+          Decl: height, [], [], []
+            TypeDecl: height, []
+              IdentifierType: ['int']
+          Decl: format, [], [], []
+            TypeDecl: format, []
+              IdentifierType: ['unsigned']
+          Decl: type, [], [], []
+            TypeDecl: type, []
+              IdentifierType: ['unsigned']
+          Decl: pixels, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: pixels, ['const']
+                IdentifierType: ['void']
+        TypeDecl: _mesa_DrawPixels, []
+          IdentifierType: ['void']
+    Compound: 
+      Switch: 
+        ID: format
+        Compound: 
+          Case: 
+            Constant: int, 0x1900
+            FuncCall: 
+              ID: func1
+            Break: 
+          Case: 
+            Constant: int, 0x1907
+          Case: 
+            Constant: int, 0x80E0
+          Case: 
+            Constant: int, 0x1908
+          Case: 
+            Constant: int, 0x80E1
+          Case: 
+            Constant: int, 0x8000
+            FuncCall: 
+              ID: func2
+            Break: 

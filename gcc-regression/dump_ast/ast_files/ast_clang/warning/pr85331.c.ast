@@ -1,0 +1,78 @@
+c_files/pr85331.c:6:16: warning: unknown attribute 'noipa' ignored [-Wunknown-attributes]
+__attribute__((noipa)) void
+               ^
+c_files/pr85331.c:11:8: error: use of unknown builtin '__builtin_shuffle' [-Wimplicit-function-declaration]
+  *r = __builtin_shuffle (y, m);
+       ^
+c_files/pr85331.c:11:6: error: assigning to 'V' (vector of 2 'double' values) from incompatible type 'int'
+  *r = __builtin_shuffle (y, m);
+     ^ ~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning and 2 errors generated.
+TranslationUnitDecl 0x7ff5d68264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff5d6826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff5d6826740 '__int128'
+|-TypedefDecl 0x7ff5d6826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff5d6826760 'unsigned __int128'
+|-TypedefDecl 0x7ff5d6826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff5d6826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff5d6826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff5d6826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff5d6826dc0 'char *'
+|   `-BuiltinType 0x7ff5d6826560 'char'
+|-TypedefDecl 0x7ff5d68270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff5d6827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff5d6826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff5d6826e58 '__va_list_tag'
+|-TypedefDecl 0x7ff5d7027a00 <c_files/pr85331.c:3:1, col:16> col:16 referenced V '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7ff5d68271c0 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7ff5d68266e0 'double'
+|-TypedefDecl 0x7ff5d7027b28 <line:4:1, col:19> col:19 referenced W '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-VectorType 0x7ff5d7027af0 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+|   `-BuiltinType 0x7ff5d6826600 'long long'
+|-FunctionDecl 0x7ff5d7027d10 <line:6:1, line:12:1> line:7:1 used foo 'void (V *)'
+| |-ParmVarDecl 0x7ff5d7027c08 <col:6, col:9> col:9 used r 'V *'
+| `-CompoundStmt 0x7ff5d7028720 <line:8:1, line:12:1>
+|   |-DeclStmt 0x7ff5d7027f40 <line:9:3, col:21>
+|   | `-VarDecl 0x7ff5d7027e00 <col:3, col:20> col:5 used y 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|   |   `-InitListExpr 0x7ff5d7027ef0 <col:9, col:20> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     |-FloatingLiteral 0x7ff5d7027e60 <col:11> 'double' 1.000000e+00
+|   |     `-FloatingLiteral 0x7ff5d7027e80 <col:16> 'double' 2.000000e+00
+|   `-DeclStmt 0x7ff5d70280d0 <line:10:3, col:31>
+|     `-VarDecl 0x7ff5d7027f90 <col:3, col:30> col:5 used m 'W':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' cinit
+|       `-InitListExpr 0x7ff5d7028080 <col:9, col:30> 'W':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|         |-IntegerLiteral 0x7ff5d7027ff0 <col:11> 'long long' 10000000001
+|         `-IntegerLiteral 0x7ff5d7028010 <col:26> 'long long' 0
+|-FunctionDecl 0x7ff5d70281b0 <<invalid sloc>> line:11:8 implicit used __builtin_shuffle 'int ()'
+|-FunctionDecl 0x7ff5d7028770 <line:14:1, line:22:1> line:15:1 main 'int ()'
+| `-CompoundStmt 0x7ff5d8000398 <line:16:1, line:22:1>
+|   |-DeclStmt 0x7ff5d7028878 <line:17:3, col:6>
+|   | `-VarDecl 0x7ff5d7028818 <col:3, col:5> col:5 used r 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |-CallExpr 0x7ff5d7028970 <line:18:3, col:10> 'void'
+|   | |-ImplicitCastExpr 0x7ff5d7028958 <col:3> 'void (*)(V *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ff5d7028890 <col:3> 'void (V *)' Function 0x7ff5d7027d10 'foo' 'void (V *)'
+|   | `-UnaryOperator 0x7ff5d70288e0 <col:8, col:9> 'V *' prefix '&'
+|   |   `-DeclRefExpr 0x7ff5d70288b8 <col:9> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7ff5d7028818 'r' 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |-IfStmt 0x7ff5d8000328 <line:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff5d8000158 <line:19:7, col:30> 'int' '||'
+|   | | |-BinaryOperator 0x7ff5d8000060 <col:7, col:15> 'int' '!='
+|   | | | |-ImplicitCastExpr 0x7ff5d8000048 <col:7, col:10> 'double' <LValueToRValue>
+|   | | | | `-ArraySubscriptExpr 0x7ff5d8000000 <col:7, col:10> 'double' lvalue vectorcomponent
+|   | | | |   |-DeclRefExpr 0x7ff5d70289a0 <col:7> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7ff5d7028818 'r' 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   | | | |   `-IntegerLiteral 0x7ff5d70289c8 <col:9> 'int' 0
+|   | | | `-FloatingLiteral 0x7ff5d8000028 <col:15> 'double' 2.000000e+00
+|   | | `-BinaryOperator 0x7ff5d8000130 <col:22, col:30> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7ff5d8000118 <col:22, col:25> 'double' <LValueToRValue>
+|   | |   | `-ArraySubscriptExpr 0x7ff5d80000d0 <col:22, col:25> 'double' lvalue vectorcomponent
+|   | |   |   |-DeclRefExpr 0x7ff5d8000088 <col:22> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7ff5d7028818 'r' 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   | |   |   `-IntegerLiteral 0x7ff5d80000b0 <col:24> 'int' 1
+|   | |   `-FloatingLiteral 0x7ff5d80000f8 <col:30> 'double' 1.000000e+00
+|   | |-CallExpr 0x7ff5d8000300 <line:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7ff5d80002e8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7ff5d8000290 <col:5> '<builtin fn type>' Function 0x7ff5d80001b0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7ff5d8000380 <line:21:3, col:10>
+|     `-IntegerLiteral 0x7ff5d8000360 <col:10> 'int' 0
+`-FunctionDecl 0x7ff5d80001b0 <line:20:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7ff5d8000248 <col:5> Implicit

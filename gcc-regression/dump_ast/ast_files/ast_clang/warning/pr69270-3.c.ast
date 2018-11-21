@@ -1,0 +1,99 @@
+c_files/pr69270-3.c:16:11: warning: implicit declaration of function 'end_imm_use_stmt_p' is invalid in C99 [-Wimplicit-function-declaration]
+  for (; !end_imm_use_stmt_p (); next_imm_use_stmt ())
+          ^
+c_files/pr69270-3.c:16:34: warning: implicit declaration of function 'next_imm_use_stmt' is invalid in C99 [-Wimplicit-function-declaration]
+  for (; !end_imm_use_stmt_p (); next_imm_use_stmt ())
+                                 ^
+c_files/pr69270-3.c:18:13: warning: implicit declaration of function 'arf' is invalid in C99 [-Wimplicit-function-declaration]
+      if (!(arf () == 10 && boo () == 20))
+            ^
+c_files/pr69270-3.c:18:29: warning: implicit declaration of function 'boo' is invalid in C99 [-Wimplicit-function-declaration]
+      if (!(arf () == 10 && boo () == 20))
+                            ^
+c_files/pr69270-3.c:23:9: warning: implicit declaration of function 'update_stmt' is invalid in C99 [-Wimplicit-function-declaration]
+        update_stmt ();
+        ^
+c_files/pr69270-3.c:25:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+6 warnings generated.
+TranslationUnitDecl 0x7f83440264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8344026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8344026740 '__int128'
+|-TypedefDecl 0x7f8344026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8344026760 'unsigned __int128'
+|-TypedefDecl 0x7f8344026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8344026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8344026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8344026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8344026dc0 'char *'
+|   `-BuiltinType 0x7f8344026560 'char'
+|-TypedefDecl 0x7f83440270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8344027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8344026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8344026e58 '__va_list_tag'
+|-TypedefDecl 0x7f8344027138 <c_files/pr69270-3.c:8:1, col:27> col:27 size_t 'unsigned long'
+| `-BuiltinType 0x7f8344026680 'unsigned long'
+|-RecordDecl 0x7f8344825a00 <line:9:9, col:15> col:15 union gimple_statement_d
+|-TypedefDecl 0x7f8344825b60 <col:1, col:35> col:35 referenced gimple 'union gimple_statement_d *'
+| `-PointerType 0x7f8344825b10 'union gimple_statement_d *'
+|   `-ElaboratedType 0x7f8344825ab0 'union gimple_statement_d' sugar
+|     `-RecordType 0x7f8344825a90 'union gimple_statement_d'
+|       `-Record 0x7f8344825a00 'gimple_statement_d'
+|-FunctionDecl 0x7f8344825c20 <line:10:1, line:25:1> line:11:1 propagate_with_phi 'unsigned char ()'
+| `-CompoundStmt 0x7f83448267b0 <line:12:1, line:25:1>
+|   |-DeclStmt 0x7f8344825d90 <line:13:3, col:18>
+|   | `-VarDecl 0x7f8344825d30 <col:3, col:10> col:10 use_stmt 'gimple':'union gimple_statement_d *'
+|   |-DeclStmt 0x7f8344825e20 <line:14:3, col:29>
+|   | `-VarDecl 0x7f8344825dc0 <col:3, col:17> col:17 used phi_inserted 'unsigned char'
+|   |-BinaryOperator 0x7f8344825e98 <line:15:3, col:18> 'unsigned char' '='
+|   | |-DeclRefExpr 0x7f8344825e38 <col:3> 'unsigned char' lvalue Var 0x7f8344825dc0 'phi_inserted' 'unsigned char'
+|   | `-ImplicitCastExpr 0x7f8344825e80 <col:18> 'unsigned char' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f8344825e60 <col:18> 'int' 0
+|   `-ForStmt 0x7f8344826778 <line:16:3, line:24:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-UnaryOperator 0x7f8344826038 <line:16:10, col:31> 'int' prefix '!'
+|     | `-CallExpr 0x7f8344826010 <col:11, col:31> 'int'
+|     |   `-ImplicitCastExpr 0x7f8344825ff8 <col:11> 'int (*)()' <FunctionToPointerDecay>
+|     |     `-DeclRefExpr 0x7f8344825fa8 <col:11> 'int ()' Function 0x7f8344825f10 'end_imm_use_stmt_p' 'int ()'
+|     |-CallExpr 0x7f8344826158 <col:34, col:53> 'int'
+|     | `-ImplicitCastExpr 0x7f8344826140 <col:34> 'int (*)()' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f8344826118 <col:34> 'int ()' Function 0x7f8344826080 'next_imm_use_stmt' 'int ()'
+|     `-CompoundStmt 0x7f8344826750 <line:17:5, line:24:5>
+|       |-IfStmt 0x7f83448264d0 <line:18:7, line:19:9>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-UnaryOperator 0x7f83448264a8 <line:18:11, col:41> 'int' prefix '!'
+|       | | `-ParenExpr 0x7f8344826488 <col:12, col:41> 'int'
+|       | |   `-BinaryOperator 0x7f8344826460 <col:13, col:39> 'int' '&&'
+|       | |     |-BinaryOperator 0x7f83448262c8 <col:13, col:23> 'int' '=='
+|       | |     | |-CallExpr 0x7f8344826280 <col:13, col:18> 'int'
+|       | |     | | `-ImplicitCastExpr 0x7f8344826268 <col:13> 'int (*)()' <FunctionToPointerDecay>
+|       | |     | |   `-DeclRefExpr 0x7f8344826240 <col:13> 'int ()' Function 0x7f83448261a8 'arf' 'int ()'
+|       | |     | `-IntegerLiteral 0x7f83448262a8 <col:23> 'int' 10
+|       | |     `-BinaryOperator 0x7f8344826438 <col:29, col:39> 'int' '=='
+|       | |       |-CallExpr 0x7f83448263f0 <col:29, col:34> 'int'
+|       | |       | `-ImplicitCastExpr 0x7f83448263d8 <col:29> 'int (*)()' <FunctionToPointerDecay>
+|       | |       |   `-DeclRefExpr 0x7f83448263b0 <col:29> 'int ()' Function 0x7f8344826318 'boo' 'int ()'
+|       | |       `-IntegerLiteral 0x7f8344826418 <col:39> 'int' 20
+|       | |-ContinueStmt 0x7f83448264c8 <line:19:9>
+|       | `-<<<NULL>>>
+|       `-IfStmt 0x7f8344826718 <line:20:7, line:23:22>
+|         |-<<<NULL>>>
+|         |-<<<NULL>>>
+|         |-UnaryOperator 0x7f8344826548 <line:20:11, col:12> 'int' prefix '!'
+|         | `-ImplicitCastExpr 0x7f8344826530 <col:12> 'unsigned char' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7f8344826508 <col:12> 'unsigned char' lvalue Var 0x7f8344825dc0 'phi_inserted' 'unsigned char'
+|         |-BinaryOperator 0x7f83448265c8 <line:21:9, col:24> 'unsigned char' '='
+|         | |-DeclRefExpr 0x7f8344826568 <col:9> 'unsigned char' lvalue Var 0x7f8344825dc0 'phi_inserted' 'unsigned char'
+|         | `-ImplicitCastExpr 0x7f83448265b0 <col:24> 'unsigned char' <IntegralCast>
+|         |   `-IntegerLiteral 0x7f8344826590 <col:24> 'int' 1
+|         `-CallExpr 0x7f83448266f0 <line:23:9, col:22> 'int'
+|           `-ImplicitCastExpr 0x7f83448266d8 <col:9> 'int (*)()' <FunctionToPointerDecay>
+|             `-DeclRefExpr 0x7f83448266b0 <col:9> 'int ()' Function 0x7f8344826618 'update_stmt' 'int ()'
+|-FunctionDecl 0x7f8344825f10 <<invalid sloc>> line:16:11 implicit used end_imm_use_stmt_p 'int ()'
+|-FunctionDecl 0x7f8344826080 <<invalid sloc>> col:34 implicit used next_imm_use_stmt 'int ()'
+|-FunctionDecl 0x7f83448261a8 <<invalid sloc>> line:18:13 implicit used arf 'int ()'
+|-FunctionDecl 0x7f8344826318 <<invalid sloc>> col:29 implicit used boo 'int ()'
+`-FunctionDecl 0x7f8344826618 <<invalid sloc>> line:23:9 implicit used update_stmt 'int ()'

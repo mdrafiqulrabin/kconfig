@@ -1,0 +1,26 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['unsigned', '__int128']
+      Return: 
+        FuncCall: 
+          ID: __builtin_mul_overflow_p
+          ExprList: 
+            Constant: int, 59
+            UnaryOp: -
+              ID: c
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['short']
+              Constant: int, 0

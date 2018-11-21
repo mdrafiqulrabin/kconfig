@@ -1,0 +1,78 @@
+FileAST: 
+  Typedef: real, [], ['typedef']
+    TypeDecl: real, []
+      IdentifierType: ['float']
+  Typedef: rvec, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: rvec, []
+        IdentifierType: ['real']
+      Constant: int, 3
+  Decl: calc_dx2dx, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['real']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['real']
+      TypeDecl: calc_dx2dx, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: phi_sr, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: nj, [], [], []
+            TypeDecl: nj, []
+              IdentifierType: ['int']
+          Decl: x, [], [], []
+            ArrayDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['rvec']
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['int']
+        TypeDecl: phi_sr, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          BinaryOp: -
+            ID: nj
+            Constant: int, 1
+        UnaryOp: p++
+          ID: i
+        For: 
+          Assignment: =
+            ID: j
+            BinaryOp: +
+              ID: i
+              Constant: int, 1
+          BinaryOp: <
+            ID: j
+            ID: nj
+          UnaryOp: p++
+            ID: j
+          If: 
+            ID: k
+            FuncCall: 
+              ID: calc_dx2dx
+              ExprList: 
+                ArrayRef: 
+                  ID: x
+                  ID: i
+                ArrayRef: 
+                  ID: x
+                  ID: j

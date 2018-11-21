@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7f87f98264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f87f9826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f87f9826740 '__int128'
+|-TypedefDecl 0x7f87f9826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f87f9826760 'unsigned __int128'
+|-TypedefDecl 0x7f87f9826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f87f9826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f87f9826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f87f9826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f87f9826dc0 'char *'
+|   `-BuiltinType 0x7f87f9826560 'char'
+|-TypedefDecl 0x7f87f98270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f87f9827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f87f9826ee0 'struct __va_list_tag'
+|     `-Record 0x7f87f9826e58 '__va_list_tag'
+|-FunctionDecl 0x7f87fa025a28 <c_files/pr63910.c:5:1, col:26> col:13 used bar 'void (float *)' extern
+| `-ParmVarDecl 0x7f87f9827160 <col:18, col:25> col:25 c 'float *'
+`-FunctionDecl 0x7f87fa025bd0 <line:7:1, line:12:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7f87fa025ed8 <line:9:1, line:12:1>
+    |-DeclStmt 0x7f87fa025de0 <line:10:3, col:22>
+    | `-VarDecl 0x7f87fa025cf0 <col:3, col:21> col:9 used c 'float [1024]' cinit
+    |   `-InitListExpr 0x7f87fa025d90 <col:19, col:21> 'float [1024]'
+    |     `-array filler
+    |       `-ImplicitValueInitExpr 0x7f87fa025dd0 <<invalid sloc>> 'float'
+    `-CallExpr 0x7f87fa025e90 <line:11:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7f87fa025e78 <col:3> 'void (*)(float *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f87fa025df8 <col:3> 'void (float *)' Function 0x7f87fa025a28 'bar' 'void (float *)'
+      `-ImplicitCastExpr 0x7f87fa025ec0 <col:8> 'float *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7f87fa025e20 <col:8> 'float [1024]' lvalue Var 0x7f87fa025cf0 'c' 'float [1024]'

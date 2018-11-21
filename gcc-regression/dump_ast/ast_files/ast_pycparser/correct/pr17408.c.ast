@@ -1,0 +1,28 @@
+FileAST: 
+  Decl: t, [], ['extern'], []
+    TypeDecl: t, []
+      IdentifierType: ['int']
+  Decl: t, [], ['extern'], []
+    TypeDecl: t, []
+      IdentifierType: ['int']
+    Constant: int, 0
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: t
+        Constant: int, 0
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: h
+        ExprList: 
+          UnaryOp: &
+            ID: t

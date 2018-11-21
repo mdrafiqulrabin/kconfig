@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fd6640110d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd664011620 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd664011340 '__int128'
+|-TypedefDecl 0x7fd664011690 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd664011360 'unsigned __int128'
+|-TypedefDecl 0x7fd664011968 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd664011770 'struct __NSConstantString_tag'
+|   `-Record 0x7fd6640116e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd664011a00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd6640119c0 'char *'
+|   `-BuiltinType 0x7fd664011160 'char'
+|-TypedefDecl 0x7fd664011cc8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd664011c70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd664011ae0 'struct __va_list_tag'
+|     `-Record 0x7fd664011a58 '__va_list_tag'
+|-TypedefDecl 0x7fd664011d78 <c_files/pr14552.c:4:1, col:15> col:15 referenced mmxw '__attribute__((__vector_size__(4 * sizeof(short)))) short'
+| `-VectorType 0x7fd664011d40 '__attribute__((__vector_size__(4 * sizeof(short)))) short' 4
+|   `-BuiltinType 0x7fd6640111a0 'short'
+|-TypedefDecl 0x7fd664826a38 <line:5:1, col:15> col:15 referenced mmxdw '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7fd664826a00 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7fd6640111c0 'int'
+|-VarDecl 0x7fd664826ac0 <line:7:1, col:7> col:7 used dw 'mmxdw':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|-VarDecl 0x7fd664826b90 <line:8:1, col:6> col:6 used w 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short'
+`-FunctionDecl 0x7fd664826c38 <line:10:1, line:14:1> line:10:6 test 'void ()'
+  `-CompoundStmt 0x7fd664826e38 <line:11:1, line:14:1>
+    |-CompoundAssignOperator 0x7fd664826d38 <line:12:3, col:6> 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short' '+=' ComputeLHSTy='mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short' ComputeResultTy='mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short'
+    | |-DeclRefExpr 0x7fd664826cd0 <col:3> 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short' lvalue Var 0x7fd664826b90 'w' 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short'
+    | `-ImplicitCastExpr 0x7fd664826d20 <col:6> 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd664826cf8 <col:6> 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short' lvalue Var 0x7fd664826b90 'w' 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short'
+    `-BinaryOperator 0x7fd664826e10 <line:13:3, col:14> 'mmxdw':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+      |-DeclRefExpr 0x7fd664826d70 <col:3> 'mmxdw':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7fd664826ac0 'dw' 'mmxdw':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+      `-CStyleCastExpr 0x7fd664826de8 <col:7, col:14> 'mmxdw':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <BitCast>
+        `-ImplicitCastExpr 0x7fd664826dd0 <col:14> 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short' <LValueToRValue>
+          `-DeclRefExpr 0x7fd664826d98 <col:14> 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short' lvalue Var 0x7fd664826b90 'w' 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short'

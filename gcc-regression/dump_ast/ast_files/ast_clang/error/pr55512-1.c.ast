@@ -1,0 +1,30 @@
+c_files/pr55512-1.c:7:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : "r" (x), "r" (x + 1), "r" (x + 2), "r" (x + 3), /* { dg-error "operand has impossible constraints" } */
+      ^
+1 error generated.
+TranslationUnitDecl 0x7fecc08264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fecc0826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fecc0826740 '__int128'
+|-TypedefDecl 0x7fecc0826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fecc0826760 'unsigned __int128'
+|-TypedefDecl 0x7fecc0826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fecc0826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fecc0826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fecc0826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fecc0826dc0 'char *'
+|   `-BuiltinType 0x7fecc0826560 'char'
+|-TypedefDecl 0x7fecc08270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fecc0827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fecc0826ee0 'struct __va_list_tag'
+|     `-Record 0x7fecc0826e58 '__va_list_tag'
+|-FunctionDecl 0x7fecc1025a30 <c_files/pr55512-1.c:4:1, line:14:1> line:5:1 foo 'int (int)'
+| |-ParmVarDecl 0x7fecc0827138 <col:6, col:10> col:10 x 'int'
+| `-CompoundStmt 0x7fecc1025d50 <line:6:1, line:14:1>
+|   |-CallExpr 0x7fecc1025c90 <line:11:3, col:26> 'void'
+|   | `-ImplicitCastExpr 0x7fecc1025c78 <col:3> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   |   `-DeclRefExpr 0x7fecc1025c20 <col:3> '<builtin fn type>' Function 0x7fecc1025b40 '__builtin_unreachable' 'void (void) __attribute__((noreturn))'
+|   `-LabelStmt 0x7fecc1025d38 <line:12:2, line:13:10> 'lab'
+|     `-ReturnStmt 0x7fecc1025cd8 <col:3, col:10>
+|       `-IntegerLiteral 0x7fecc1025cb8 <col:10> 'int' 0
+`-FunctionDecl 0x7fecc1025b40 <line:11:3> col:3 implicit used __builtin_unreachable 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fecc1025bd8 <col:3> Implicit

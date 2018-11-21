@@ -1,0 +1,54 @@
+FileAST: 
+  FuncDef: 
+    Decl: frobulate_for_gcc, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: v, [], [], []
+            TypeDecl: v, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: frobulate_for_gcc, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: s, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: s, ['const']
+            IdentifierType: ['char']
+      Switch: 
+        ID: v
+        Compound: 
+          Case: 
+            Constant: int, 0
+            Assignment: =
+              ID: s
+              Constant: string, "foo"
+            Break: 
+          Case: 
+            Constant: int, 1
+            Assignment: =
+              ID: s
+              Constant: string, "bar"
+            Break: 
+          Case: 
+            Constant: int, 2
+            Assignment: =
+              ID: s
+              Constant: string, "spam"
+            Break: 
+          Default: 
+            Assignment: =
+              ID: s
+              Cast: 
+                Typename: None, ['const']
+                  PtrDecl: []
+                    TypeDecl: None, ['const']
+                      IdentifierType: ['char']
+                Constant: int, 0
+            Break: 
+      If: 
+        UnaryOp: !
+          ID: s
+        FuncCall: 
+          ID: __builtin_printf
+          ExprList: 
+            Constant: string, "%s\n"
+            ID: s

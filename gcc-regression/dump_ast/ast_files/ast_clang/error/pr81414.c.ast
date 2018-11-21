@@ -1,0 +1,35 @@
+c_files/pr81414.c:4:9: error: unknown type name '__Float32x2_t'
+typedef __Float32x2_t float32x2_t;
+        ^
+1 error generated.
+TranslationUnitDecl 0x7fd5a78264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd5a7826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd5a7826740 '__int128'
+|-TypedefDecl 0x7fd5a7826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd5a7826760 'unsigned __int128'
+|-TypedefDecl 0x7fd5a7826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd5a7826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd5a7826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd5a7826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd5a7826dc0 'char *'
+|   `-BuiltinType 0x7fd5a7826560 'char'
+|-TypedefDecl 0x7fd5a78270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd5a7827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd5a7826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd5a7826e58 '__va_list_tag'
+|-TypedefDecl 0x7fd5a7827150 <c_files/pr81414.c:4:1, col:23> col:23 referenced invalid float32x2_t 'int'
+| `-BuiltinType 0x7fd5a78265c0 'int'
+`-FunctionDecl 0x7fd5a7878610 <line:5:1, line:8:1> line:6:1 foo1 'float32x2_t (float32x2_t, float32x2_t, float32x2_t)'
+  |-ParmVarDecl 0x7fd5a7878400 <col:7, col:19> col:19 used __a 'float32x2_t':'int'
+  |-ParmVarDecl 0x7fd5a7878470 <col:24, col:36> col:36 used __b 'float32x2_t':'int'
+  |-ParmVarDecl 0x7fd5a78784e0 <col:41, col:53> col:53 used __c 'float32x2_t':'int'
+  `-CompoundStmt 0x7fd5a7878828 <col:58, line:8:1>
+    `-ReturnStmt 0x7fd5a7878810 <line:7:3, col:22>
+      `-BinaryOperator 0x7fd5a78787e8 <col:10, col:22> 'int' '+'
+        |-BinaryOperator 0x7fd5a7878780 <col:10, col:16> 'int' '*'
+        | |-ImplicitCastExpr 0x7fd5a7878750 <col:10> 'float32x2_t':'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fd5a7878700 <col:10> 'float32x2_t':'int' lvalue ParmVar 0x7fd5a7878470 '__b' 'float32x2_t':'int'
+        | `-ImplicitCastExpr 0x7fd5a7878768 <col:16> 'float32x2_t':'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fd5a7878728 <col:16> 'float32x2_t':'int' lvalue ParmVar 0x7fd5a78784e0 '__c' 'float32x2_t':'int'
+        `-ImplicitCastExpr 0x7fd5a78787d0 <col:22> 'float32x2_t':'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fd5a78787a8 <col:22> 'float32x2_t':'int' lvalue ParmVar 0x7fd5a7878400 '__a' 'float32x2_t':'int'

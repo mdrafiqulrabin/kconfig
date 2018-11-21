@@ -1,0 +1,118 @@
+FileAST: 
+  Decl: f1, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: f1, []
+        IdentifierType: ['int']
+  Decl: f2, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: f2, []
+        IdentifierType: ['int']
+  Decl: f3, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      PtrDecl: []
+        TypeDecl: f3, []
+          IdentifierType: ['void']
+  Decl: xmsih, [], [], []
+    TypeDecl: xmsih, []
+      IdentifierType: ['int']
+  Typedef: XWCHAR, [], ['typedef']
+    TypeDecl: XWCHAR, []
+      IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: xstrlenW, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: str, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: str, ['const']
+                IdentifierType: ['XWCHAR']
+        TypeDecl: xstrlenW, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: s, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: s, ['const']
+            IdentifierType: ['XWCHAR']
+        ID: str
+      While: 
+        UnaryOp: *
+          ID: s
+        UnaryOp: p++
+          ID: s
+      Return: 
+        BinaryOp: -
+          ID: s
+          ID: str
+  FuncDef: 
+    Decl: msi_dialog_register_class, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: msi_dialog_register_class, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: cls, [], [], []
+        TypeDecl: cls, []
+          IdentifierType: ['int']
+      If: 
+        UnaryOp: !
+          FuncCall: 
+            ID: f2
+            ExprList: 
+              UnaryOp: &
+                ID: cls
+        Return: 
+          Constant: int, 0
+      If: 
+        UnaryOp: !
+          FuncCall: 
+            ID: f2
+            ExprList: 
+              UnaryOp: &
+                ID: cls
+        Return: 
+          Constant: int, 0
+      Assignment: =
+        ID: xmsih
+        FuncCall: 
+          ID: f1
+      If: 
+        UnaryOp: !
+          ID: xmsih
+        Return: 
+          Constant: int, 0
+      Return: 
+        Constant: int, 1
+  FuncDef: 
+    Decl: xmsi_dialog_create, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: szDialogName, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: szDialogName, ['const']
+                IdentifierType: ['XWCHAR']
+        PtrDecl: []
+          TypeDecl: xmsi_dialog_create, []
+            IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: msi_dialog_register_class
+      Return: 
+        FuncCall: 
+          ID: f3
+          ExprList: 
+            FuncCall: 
+              ID: xstrlenW
+              ExprList: 
+                ID: szDialogName

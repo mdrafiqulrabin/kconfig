@@ -1,0 +1,200 @@
+FileAST: 
+  Decl: I, [], [], []
+    TypeDecl: I, []
+      IdentifierType: ['int']
+    Constant: int, 50
+  Decl: J, [], [], []
+    TypeDecl: J, []
+      IdentifierType: ['int']
+    Constant: int, 50
+  Decl: S, [], [], []
+    TypeDecl: S, []
+      IdentifierType: ['int']
+  Decl: L, [], [], []
+    TypeDecl: L, []
+      IdentifierType: ['int']
+  Decl: pL, ['const'], [], []
+    PtrDecl: []
+      TypeDecl: pL, ['const']
+        IdentifierType: ['int']
+  Decl: pS, ['const'], [], []
+    PtrDecl: []
+      TypeDecl: pS, ['const']
+        IdentifierType: ['int']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: K, [], [], []
+            TypeDecl: K, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: LD, [], ['static'], []
+        TypeDecl: LD, []
+          IdentifierType: ['float']
+      Decl: SD, [], ['static'], []
+        TypeDecl: SD, []
+          IdentifierType: ['float']
+      For: 
+        Assignment: =
+          ID: k
+          Constant: int, 0
+        BinaryOp: <
+          ID: k
+          ID: K
+        UnaryOp: p++
+          ID: k
+        Compound: 
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 0
+            BinaryOp: <
+              ID: i
+              BinaryOp: -
+                ID: I
+                Constant: int, 1
+            UnaryOp: p++
+              ID: i
+            Compound: 
+              If: 
+                BinaryOp: &&
+                  BinaryOp: <
+                    ID: L
+                    ArrayRef: 
+                      ID: pL
+                      BinaryOp: +
+                        ID: i
+                        Constant: int, 1
+                  BinaryOp: >=
+                    ID: L
+                    ArrayRef: 
+                      ID: pL
+                      ID: i
+                Break: 
+          If: 
+            BinaryOp: ==
+              ID: i
+              BinaryOp: -
+                ID: I
+                Constant: int, 1
+            Assignment: =
+              ID: L
+              ArrayRef: 
+                ID: pL
+                ID: i
+          Assignment: =
+            ID: LD
+            BinaryOp: /
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['float']
+                BinaryOp: -
+                  ID: L
+                  ArrayRef: 
+                    ID: pL
+                    ID: i
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['float']
+                BinaryOp: -
+                  ArrayRef: 
+                    ID: pL
+                    BinaryOp: +
+                      ID: i
+                      Constant: int, 1
+                  ArrayRef: 
+                    ID: pL
+                    ID: i
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              BinaryOp: -
+                ID: J
+                Constant: int, 1
+            UnaryOp: p++
+              ID: j
+            Compound: 
+              If: 
+                BinaryOp: &&
+                  BinaryOp: <
+                    ID: S
+                    ArrayRef: 
+                      ID: pS
+                      BinaryOp: +
+                        ID: j
+                        Constant: int, 1
+                  BinaryOp: >=
+                    ID: S
+                    ArrayRef: 
+                      ID: pS
+                      ID: j
+                Break: 
+          If: 
+            BinaryOp: ==
+              ID: j
+              BinaryOp: -
+                ID: J
+                Constant: int, 1
+            Assignment: =
+              ID: S
+              ArrayRef: 
+                ID: pS
+                ID: j
+          Assignment: =
+            ID: SD
+            BinaryOp: /
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['float']
+                BinaryOp: -
+                  ID: S
+                  ArrayRef: 
+                    ID: pS
+                    ID: j
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['float']
+                BinaryOp: -
+                  ArrayRef: 
+                    ID: pS
+                    BinaryOp: +
+                      ID: j
+                      Constant: int, 1
+                  ArrayRef: 
+                    ID: pS
+                    ID: j
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              ID: LD
+              ID: SD

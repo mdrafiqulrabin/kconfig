@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fca410264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fca41026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fca41026740 '__int128'
+|-TypedefDecl 0x7fca41026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fca41026760 'unsigned __int128'
+|-TypedefDecl 0x7fca41026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fca41026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fca41026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fca41026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fca41026dc0 'char *'
+|   `-BuiltinType 0x7fca41026560 'char'
+|-TypedefDecl 0x7fca410270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fca41027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fca41026ee0 'struct __va_list_tag'
+|     `-Record 0x7fca41026e58 '__va_list_tag'
+|-RecordDecl 0x7fca41027120 <c_files/pr58218.c:5:1, col:26> col:1 struct definition
+| `-FieldDecl 0x7fca41825a60 <col:10, col:23> col:16 x 'float [16385]'
+`-VarDecl 0x7fca41825b00 <col:1, col:43> col:28 a 'struct (anonymous struct at c_files/pr58218.c:5:1)':'struct (anonymous at c_files/pr58218.c:5:1)' cinit
+  `-InitListExpr 0x7fca41825c50 <col:32, col:43> 'struct (anonymous struct at c_files/pr58218.c:5:1)':'struct (anonymous at c_files/pr58218.c:5:1)'
+    `-InitListExpr 0x7fca41825c98 <col:34, col:41> 'float [16385]'
+      |-array filler
+      | `-ImplicitValueInitExpr 0x7fca41825ce0 <<invalid sloc>> 'float'
+      `-FloatingLiteral 0x7fca41825ba0 <col:36> 'float' 0.000000e+00

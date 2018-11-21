@@ -1,0 +1,32 @@
+c_files/pr22061-2.c:6:3: warning: implicitly declaring library function 'exit' with type 'void (int) __attribute__((noreturn))' [-Wimplicit-function-declaration]
+  exit (0);
+  ^
+c_files/pr22061-2.c:6:3: note: include the header <stdlib.h> or explicitly provide a declaration for 'exit'
+1 warning generated.
+TranslationUnitDecl 0x7fc3890264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc389026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc389026740 '__int128'
+|-TypedefDecl 0x7fc389026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc389026760 'unsigned __int128'
+|-TypedefDecl 0x7fc389026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc389026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc389026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc389026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc389026dc0 'char *'
+|   `-BuiltinType 0x7fc389026560 'char'
+|-TypedefDecl 0x7fc3890270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc389027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc389026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc389026e58 '__va_list_tag'
+|-VarDecl 0x7fc389027160 <c_files/pr22061-2.c:1:1, col:6> col:6 used x 'int *'
+|-FunctionDecl 0x7fc389825d40 <line:2:1, col:38> col:13 bar 'void (char (*)[(*x)++])' static
+| |-ParmVarDecl 0x7fc389825bd0 <col:18, col:34> col:23 a 'char (*)[(*x)++]':'char (*)[(*x)++]'
+| `-CompoundStmt 0x7fc389825de0 <col:37, col:38>
+|-FunctionDecl 0x7fc389825ec8 <line:3:1, line:7:1> line:4:1 main 'int (void)'
+| `-CompoundStmt 0x7fc389826540 <line:5:1, line:7:1>
+|   `-CallExpr 0x7fc389826510 <line:6:3, col:10> 'void'
+|     |-ImplicitCastExpr 0x7fc3898264f8 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fc389826480 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fc389826380 'exit' 'void (int) __attribute__((noreturn))'
+|     `-IntegerLiteral 0x7fc3898264a8 <col:9> 'int' 0
+`-FunctionDecl 0x7fc389826380 <col:3> col:3 implicit used exit 'void (int) __attribute__((noreturn))' extern
+  `-ParmVarDecl 0x7fc389826418 <<invalid sloc>> <invalid sloc> 'int'

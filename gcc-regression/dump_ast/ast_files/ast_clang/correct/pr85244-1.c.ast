@@ -1,0 +1,61 @@
+TranslationUnitDecl 0x7fd7c40264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd7c4026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd7c4026740 '__int128'
+|-TypedefDecl 0x7fd7c4026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd7c4026760 'unsigned __int128'
+|-TypedefDecl 0x7fd7c4026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd7c4026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd7c4026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd7c4026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd7c4026dc0 'char *'
+|   `-BuiltinType 0x7fd7c4026560 'char'
+|-TypedefDecl 0x7fd7c40270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd7c4027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd7c4026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd7c4026e58 '__va_list_tag'
+|-RecordDecl 0x7fd7c4027120 <c_files/pr85244-1.c:4:1, line:8:1> line:4:8 struct s definition
+| |-FieldDecl 0x7fd7c4825a00 <line:5:2, col:7> col:7 a 'long'
+| |-FieldDecl 0x7fd7c4825a60 <line:6:2, col:6> col:6 b 'int'
+| `-FieldDecl 0x7fd7c4825b00 <line:7:2, col:10> col:6 referenced tab 'int []'
+|-VarDecl 0x7fd7c4825ba0 <line:10:1, col:23> col:23 used val 'const struct s':'const struct s' extern
+|-VarDecl 0x7fd7c4825c58 <line:11:1, col:12> col:12 used idx 'int' extern
+|-FunctionDecl 0x7fd7c4825db0 <line:12:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd7c4825e48 prev 0x7fd7c4825db0 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fd7c4825f30 <line:14:1, line:19:1> line:14:5 main 'int ()'
+  `-CompoundStmt 0x7fd7c4826528 <line:15:1, line:19:1>
+    |-IfStmt 0x7fd7c48264b8 <line:16:3, line:17:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd7c48263f8 <line:16:7, col:65> 'int' '||'
+    | | |-BinaryOperator 0x7fd7c4826290 <col:7, col:41> 'int' '||'
+    | | | |-BinaryOperator 0x7fd7c48260f0 <col:7, col:21> 'int' '!='
+    | | | | |-ImplicitCastExpr 0x7fd7c48260d8 <col:7, col:16> 'int' <LValueToRValue>
+    | | | | | `-ArraySubscriptExpr 0x7fd7c4826090 <col:7, col:16> 'const int' lvalue
+    | | | | |   |-ImplicitCastExpr 0x7fd7c4826078 <col:7, col:11> 'const int *' <ArrayToPointerDecay>
+    | | | | |   | `-MemberExpr 0x7fd7c4825ff0 <col:7, col:11> 'int const[]' lvalue .tab 0x7fd7c4825b00
+    | | | | |   |   `-DeclRefExpr 0x7fd7c4825fc8 <col:7> 'const struct s':'const struct s' lvalue Var 0x7fd7c4825ba0 'val' 'const struct s':'const struct s'
+    | | | | |   `-IntegerLiteral 0x7fd7c4826028 <col:15> 'int' 0
+    | | | | `-IntegerLiteral 0x7fd7c48260b8 <col:21> 'int' 42
+    | | | `-BinaryOperator 0x7fd7c4826210 <col:27, col:41> 'int' '!='
+    | | |   |-ImplicitCastExpr 0x7fd7c48261f8 <col:27, col:36> 'int' <LValueToRValue>
+    | | |   | `-ArraySubscriptExpr 0x7fd7c48261b0 <col:27, col:36> 'const int' lvalue
+    | | |   |   |-ImplicitCastExpr 0x7fd7c4826198 <col:27, col:31> 'const int *' <ArrayToPointerDecay>
+    | | |   |   | `-MemberExpr 0x7fd7c4826140 <col:27, col:31> 'int const[]' lvalue .tab 0x7fd7c4825b00
+    | | |   |   |   `-DeclRefExpr 0x7fd7c4826118 <col:27> 'const struct s':'const struct s' lvalue Var 0x7fd7c4825ba0 'val' 'const struct s':'const struct s'
+    | | |   |   `-IntegerLiteral 0x7fd7c4826178 <col:35> 'int' 1
+    | | |   `-IntegerLiteral 0x7fd7c48261d8 <col:41> 'int' 1337
+    | | `-BinaryOperator 0x7fd7c48263d0 <col:49, col:65> 'int' '!='
+    | |   |-ImplicitCastExpr 0x7fd7c48263b8 <col:49, col:60> 'int' <LValueToRValue>
+    | |   | `-ArraySubscriptExpr 0x7fd7c4826370 <col:49, col:60> 'const int' lvalue
+    | |   |   |-ImplicitCastExpr 0x7fd7c4826340 <col:49, col:53> 'const int *' <ArrayToPointerDecay>
+    | |   |   | `-MemberExpr 0x7fd7c48262e0 <col:49, col:53> 'int const[]' lvalue .tab 0x7fd7c4825b00
+    | |   |   |   `-DeclRefExpr 0x7fd7c48262b8 <col:49> 'const struct s':'const struct s' lvalue Var 0x7fd7c4825ba0 'val' 'const struct s':'const struct s'
+    | |   |   `-ImplicitCastExpr 0x7fd7c4826358 <col:57> 'int' <LValueToRValue>
+    | |   |     `-DeclRefExpr 0x7fd7c4826318 <col:57> 'int' lvalue Var 0x7fd7c4825c58 'idx' 'int'
+    | |   `-IntegerLiteral 0x7fd7c4826398 <col:65> 'int' 1337
+    | |-CallExpr 0x7fd7c4826490 <line:17:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fd7c4826478 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd7c4826420 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fd7c4825e48 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fd7c4826510 <line:18:3, col:10>
+      `-IntegerLiteral 0x7fd7c48264f0 <col:10> 'int' 0

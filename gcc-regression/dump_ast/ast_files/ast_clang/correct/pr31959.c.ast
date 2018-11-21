@@ -1,0 +1,61 @@
+TranslationUnitDecl 0x7fab688264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fab68826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fab68826740 '__int128'
+|-TypedefDecl 0x7fab68826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fab68826760 'unsigned __int128'
+|-TypedefDecl 0x7fab68826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fab68826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fab68826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fab68826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fab68826dc0 'char *'
+|   `-BuiltinType 0x7fab68826560 'char'
+|-TypedefDecl 0x7fab688270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fab68827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fab68826ee0 'struct __va_list_tag'
+|     `-Record 0x7fab68826e58 '__va_list_tag'
+|-RecordDecl 0x7fab68827120 <c_files/pr31959.c:5:1, col:19> col:8 struct A definition
+| `-FieldDecl 0x7fab69025a00 <col:12, col:16> col:16 i 'int'
+|-FunctionDecl 0x7fab69025c18 <line:7:1, line:11:1> line:8:1 used bar 'struct A *(struct A *)' static inline
+| |-ParmVarDecl 0x7fab69025b00 <col:6, col:16> col:16 used x 'struct A *'
+| `-CompoundStmt 0x7fab69025d50 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fab69025d38 <line:10:3, col:10>
+|     `-ImplicitCastExpr 0x7fab69025d20 <col:10> 'struct A *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fab69025cf8 <col:10> 'struct A *' lvalue ParmVar 0x7fab69025b00 'x' 'struct A *'
+|-FunctionDecl 0x7fab69025f28 <line:13:1, line:20:1> line:14:1 foo 'void *(struct A *, int)'
+| |-ParmVarDecl 0x7fab69025d98 <col:6, col:16> col:16 used x 'struct A *'
+| |-ParmVarDecl 0x7fab69025e10 <col:19, col:23> col:23 used y 'int'
+| `-CompoundStmt 0x7fab69026638 <line:15:1, line:20:1>
+|   |-DeclStmt 0x7fab690260a8 <line:16:3, col:23>
+|   | `-VarDecl 0x7fab69025fe8 <col:3, col:22> col:9 used p 'void *' cinit
+|   |   `-CStyleCastExpr 0x7fab69026080 <col:13, col:22> 'void *' <NullToPointer>
+|   |     `-IntegerLiteral 0x7fab69026048 <col:22> 'int' 0
+|   |-IfStmt 0x7fab690265a8 <line:17:3, line:18:15>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fab690263d0 <line:17:7, col:34> 'long'
+|   | | |-ImplicitCastExpr 0x7fab690263b8 <col:7> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7fab690262c0 <col:7> '<builtin fn type>' Function 0x7fab69026100 '__builtin_expect' 'long (long, long)'
+|   | | |-ImplicitCastExpr 0x7fab69026408 <col:25, col:30> 'long' <IntegralCast>
+|   | | | `-BinaryOperator 0x7fab69026348 <col:25, col:30> 'int' '>='
+|   | | |   |-ImplicitCastExpr 0x7fab69026330 <col:25> 'int' <LValueToRValue>
+|   | | |   | `-DeclRefExpr 0x7fab690262e8 <col:25> 'int' lvalue ParmVar 0x7fab69025e10 'y' 'int'
+|   | | |   `-IntegerLiteral 0x7fab69026310 <col:30> 'int' 6
+|   | | `-ImplicitCastExpr 0x7fab69026420 <col:33> 'long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fab69026370 <col:33> 'int' 0
+|   | |-BinaryOperator 0x7fab69026580 <line:18:5, col:15> 'void *' '='
+|   | | |-DeclRefExpr 0x7fab69026438 <col:5> 'void *' lvalue Var 0x7fab69025fe8 'p' 'void *'
+|   | | `-ImplicitCastExpr 0x7fab69026568 <col:9, col:15> 'void *' <BitCast>
+|   | |   `-CallExpr 0x7fab69026520 <col:9, col:15> 'struct A *'
+|   | |     |-ImplicitCastExpr 0x7fab69026508 <col:9> 'struct A *(*)(struct A *)' <FunctionToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7fab69026460 <col:9> 'struct A *(struct A *)' Function 0x7fab69025c18 'bar' 'struct A *(struct A *)'
+|   | |     `-ImplicitCastExpr 0x7fab69026550 <col:14> 'struct A *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7fab69026488 <col:14> 'struct A *' lvalue ParmVar 0x7fab69025d98 'x' 'struct A *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fab69026620 <line:19:3, col:10>
+|     `-ImplicitCastExpr 0x7fab69026608 <col:10> 'void *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fab690265e0 <col:10> 'void *' lvalue Var 0x7fab69025fe8 'p' 'void *'
+`-FunctionDecl 0x7fab69026100 <line:17:7> col:7 implicit used __builtin_expect 'long (long, long)' extern
+  |-ParmVarDecl 0x7fab69026198 <<invalid sloc>> <invalid sloc> 'long'
+  |-ParmVarDecl 0x7fab690261f8 <<invalid sloc>> <invalid sloc> 'long'
+  |-NoThrowAttr 0x7fab69026268 <col:7> Implicit
+  `-ConstAttr 0x7fab690262b0 <col:7> Implicit

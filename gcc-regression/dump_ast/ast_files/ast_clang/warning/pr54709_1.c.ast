@@ -1,0 +1,43 @@
+c_files/pr54709_1.c:1:8: warning: incompatible redeclaration of library function 'memcpy' [-Wincompatible-library-redeclaration]
+void * memcpy (void *, void *, __SIZE_TYPE__);
+       ^
+c_files/pr54709_1.c:1:8: note: 'memcpy' is a builtin with type 'void *(void *, const void *, unsigned long)'
+1 warning generated.
+TranslationUnitDecl 0x7fb265825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb265826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb265825d40 '__int128'
+|-TypedefDecl 0x7fb265826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb265825d60 'unsigned __int128'
+|-TypedefDecl 0x7fb265826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb265826170 'struct __NSConstantString_tag'
+|   `-Record 0x7fb2658260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb265826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb2658263c0 'char *'
+|   `-BuiltinType 0x7fb265825b60 'char'
+|-TypedefDecl 0x7fb2658266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb265826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb2658264e0 'struct __va_list_tag'
+|     `-Record 0x7fb265826458 '__va_list_tag'
+|-FunctionDecl 0x7fb266025be8 <c_files/pr54709_1.c:1:8> col:8 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fb266025c80 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fb266025ce0 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fb266025d40 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fb266025db8 prev 0x7fb266025be8 <col:1, col:45> col:8 used memcpy 'void *(void *, void *, unsigned long)'
+| |-ParmVarDecl 0x7fb265826738 <col:16, col:21> col:22 'void *'
+| |-ParmVarDecl 0x7fb266025a00 <col:24, col:29> col:30 'void *'
+| `-ParmVarDecl 0x7fb266025a78 <<built-in>:75:23, col:37> c_files/pr54709_1.c:1:45 'unsigned long'
+`-FunctionDecl 0x7fb266026410 <line:2:1, line:5:1> line:2:6 bar 'void (void *, void *, unsigned int)'
+  |-ParmVarDecl 0x7fb266026238 <col:11, col:17> col:17 used p 'void *'
+  |-ParmVarDecl 0x7fb2660262b0 <col:20, col:26> col:26 used q 'void *'
+  |-ParmVarDecl 0x7fb266026328 <col:29, col:38> col:38 used s 'unsigned int'
+  `-CompoundStmt 0x7fb266026680 <line:3:1, line:5:1>
+    `-CallExpr 0x7fb2660265e0 <line:4:3, col:18> 'void *'
+      |-ImplicitCastExpr 0x7fb2660265c8 <col:3> 'void *(*)(void *, void *, unsigned long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb266026500 <col:3> 'void *(void *, void *, unsigned long)' Function 0x7fb266025db8 'memcpy' 'void *(void *, void *, unsigned long)'
+      |-ImplicitCastExpr 0x7fb266026620 <col:11> 'void *' <LValueToRValue>
+      | `-DeclRefExpr 0x7fb266026528 <col:11> 'void *' lvalue ParmVar 0x7fb266026238 'p' 'void *'
+      |-ImplicitCastExpr 0x7fb266026638 <col:14> 'void *' <LValueToRValue>
+      | `-DeclRefExpr 0x7fb266026550 <col:14> 'void *' lvalue ParmVar 0x7fb2660262b0 'q' 'void *'
+      `-ImplicitCastExpr 0x7fb266026668 <col:17> 'unsigned long' <IntegralCast>
+        `-ImplicitCastExpr 0x7fb266026650 <col:17> 'unsigned int' <LValueToRValue>
+          `-DeclRefExpr 0x7fb266026578 <col:17> 'unsigned int' lvalue ParmVar 0x7fb266026328 's' 'unsigned int'

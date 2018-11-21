@@ -1,0 +1,89 @@
+c_files/pr33238.c:9:17: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+  struct { char w[z]; } *p = x, a;
+                ^
+1 error generated.
+TranslationUnitDecl 0x7f9a7b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9a7b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9a7b826740 '__int128'
+|-TypedefDecl 0x7f9a7b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9a7b826760 'unsigned __int128'
+|-TypedefDecl 0x7f9a7b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9a7b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9a7b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9a7b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9a7b826dc0 'char *'
+|   `-BuiltinType 0x7f9a7b826560 'char'
+|-TypedefDecl 0x7f9a7b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9a7b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9a7b826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9a7b826e58 '__va_list_tag'
+`-FunctionDecl 0x7f9a7c025b60 <c_files/pr33238.c:6:1, line:13:1> line:7:1 reverse 'void (void *, int, int)'
+  |-ParmVarDecl 0x7f9a7b827138 <col:10, col:16> col:16 used x 'void *'
+  |-ParmVarDecl 0x7f9a7c025a00 <col:19, col:23> col:23 used y 'int'
+  |-ParmVarDecl 0x7f9a7c025a78 <col:26, col:30> col:30 used z 'int'
+  `-CompoundStmt 0x7f9a7c026870 <line:8:1, line:13:1>
+    |-DeclStmt 0x7f9a7c025fe8 <line:9:3, col:34>
+    | |-RecordDecl 0x7f9a7c025c50 <col:3, col:23> col:3 invalid struct definition
+    | | `-FieldDecl 0x7f9a7c025d98 <col:12, col:20> col:17 invalid w 'char [z]'
+    | |-VarDecl 0x7f9a7c025e90 <col:3, col:30> col:26 used p 'struct (anonymous struct at c_files/pr33238.c:9:3) *' cinit
+    | | `-ImplicitCastExpr 0x7f9a7c025f30 <col:30> 'struct (anonymous struct at c_files/pr33238.c:9:3) *' <BitCast>
+    | |   `-ImplicitCastExpr 0x7f9a7c025f18 <col:30> 'void *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f9a7c025ef0 <col:30> 'void *' lvalue ParmVar 0x7f9a7b827138 'x' 'void *'
+    | `-VarDecl 0x7f9a7c025f68 <col:3, col:33> col:33 used a 'struct (anonymous struct at c_files/pr33238.c:9:3)':'struct (anonymous at c_files/pr33238.c:9:3)'
+    |-DeclStmt 0x7f9a7c026108 <line:10:3, col:11>
+    | |-VarDecl 0x7f9a7c026018 <col:3, col:7> col:7 used i 'int'
+    | `-VarDecl 0x7f9a7c026090 <col:3, col:10> col:10 used j 'int'
+    `-ForStmt 0x7f9a7c026838 <line:11:3, line:12:42>
+      |-BinaryOperator 0x7f9a7c026268 <line:11:8, col:23> 'int' ','
+      | |-BinaryOperator 0x7f9a7c0261d0 <col:8, col:16> 'int' '='
+      | | |-DeclRefExpr 0x7f9a7c026120 <col:8> 'int' lvalue Var 0x7f9a7c026018 'i' 'int'
+      | | `-BinaryOperator 0x7f9a7c0261a8 <col:12, col:16> 'int' '-'
+      | |   |-ImplicitCastExpr 0x7f9a7c026190 <col:12> 'int' <LValueToRValue>
+      | |   | `-DeclRefExpr 0x7f9a7c026148 <col:12> 'int' lvalue ParmVar 0x7f9a7c025a00 'y' 'int'
+      | |   `-IntegerLiteral 0x7f9a7c026170 <col:16> 'int' 1
+      | `-BinaryOperator 0x7f9a7c026240 <col:19, col:23> 'int' '='
+      |   |-DeclRefExpr 0x7f9a7c0261f8 <col:19> 'int' lvalue Var 0x7f9a7c026090 'j' 'int'
+      |   `-IntegerLiteral 0x7f9a7c026220 <col:23> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9a7c026358 <col:26, col:34> 'int' '<'
+      | |-ImplicitCastExpr 0x7f9a7c026340 <col:26> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f9a7c026290 <col:26> 'int' lvalue Var 0x7f9a7c026090 'j' 'int'
+      | `-BinaryOperator 0x7f9a7c026318 <col:30, col:34> 'int' '/'
+      |   |-ImplicitCastExpr 0x7f9a7c026300 <col:30> 'int' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7f9a7c0262b8 <col:30> 'int' lvalue ParmVar 0x7f9a7c025a00 'y' 'int'
+      |   `-IntegerLiteral 0x7f9a7c0262e0 <col:34> 'int' 2
+      |-BinaryOperator 0x7f9a7c026410 <col:37, col:43> 'int' ','
+      | |-UnaryOperator 0x7f9a7c0263a8 <col:37, col:38> 'int' postfix '--'
+      | | `-DeclRefExpr 0x7f9a7c026380 <col:37> 'int' lvalue Var 0x7f9a7c026018 'i' 'int'
+      | `-UnaryOperator 0x7f9a7c0263f0 <col:42, col:43> 'int' postfix '++'
+      |   `-DeclRefExpr 0x7f9a7c0263c8 <col:42> 'int' lvalue Var 0x7f9a7c026090 'j' 'int'
+      `-StmtExpr 0x7f9a7c026818 <line:12:5, col:42> 'struct (anonymous struct at c_files/pr33238.c:9:3)':'struct (anonymous at c_files/pr33238.c:9:3)'
+        `-CompoundStmt 0x7f9a7c0267e8 <col:6, col:41>
+          |-BinaryOperator 0x7f9a7c026520 <col:8, col:15> 'struct (anonymous struct at c_files/pr33238.c:9:3)':'struct (anonymous at c_files/pr33238.c:9:3)' '='
+          | |-DeclRefExpr 0x7f9a7c026438 <col:8> 'struct (anonymous struct at c_files/pr33238.c:9:3)':'struct (anonymous at c_files/pr33238.c:9:3)' lvalue Var 0x7f9a7c025f68 'a' 'struct (anonymous struct at c_files/pr33238.c:9:3)':'struct (anonymous at c_files/pr33238.c:9:3)'
+          | `-ImplicitCastExpr 0x7f9a7c026508 <col:12, col:15> 'struct (anonymous struct at c_files/pr33238.c:9:3)':'struct (anonymous at c_files/pr33238.c:9:3)' <LValueToRValue>
+          |   `-ArraySubscriptExpr 0x7f9a7c0264e0 <col:12, col:15> 'struct (anonymous struct at c_files/pr33238.c:9:3)':'struct (anonymous at c_files/pr33238.c:9:3)' lvalue
+          |     |-ImplicitCastExpr 0x7f9a7c0264b0 <col:12> 'struct (anonymous struct at c_files/pr33238.c:9:3) *' <LValueToRValue>
+          |     | `-DeclRefExpr 0x7f9a7c026460 <col:12> 'struct (anonymous struct at c_files/pr33238.c:9:3) *' lvalue Var 0x7f9a7c025e90 'p' 'struct (anonymous struct at c_files/pr33238.c:9:3) *'
+          |     `-ImplicitCastExpr 0x7f9a7c0264c8 <col:14> 'int' <LValueToRValue>
+          |       `-DeclRefExpr 0x7f9a7c026488 <col:14> 'int' lvalue Var 0x7f9a7c026018 'i' 'int'
+          |-BinaryOperator 0x7f9a7c0266b0 <col:18, col:28> 'struct (anonymous struct at c_files/pr33238.c:9:3)':'struct (anonymous at c_files/pr33238.c:9:3)' '='
+          | |-ArraySubscriptExpr 0x7f9a7c0265c8 <col:18, col:21> 'struct (anonymous struct at c_files/pr33238.c:9:3)':'struct (anonymous at c_files/pr33238.c:9:3)' lvalue
+          | | |-ImplicitCastExpr 0x7f9a7c026598 <col:18> 'struct (anonymous struct at c_files/pr33238.c:9:3) *' <LValueToRValue>
+          | | | `-DeclRefExpr 0x7f9a7c026548 <col:18> 'struct (anonymous struct at c_files/pr33238.c:9:3) *' lvalue Var 0x7f9a7c025e90 'p' 'struct (anonymous struct at c_files/pr33238.c:9:3) *'
+          | | `-ImplicitCastExpr 0x7f9a7c0265b0 <col:20> 'int' <LValueToRValue>
+          | |   `-DeclRefExpr 0x7f9a7c026570 <col:20> 'int' lvalue Var 0x7f9a7c026018 'i' 'int'
+          | `-ImplicitCastExpr 0x7f9a7c026698 <col:25, col:28> 'struct (anonymous struct at c_files/pr33238.c:9:3)':'struct (anonymous at c_files/pr33238.c:9:3)' <LValueToRValue>
+          |   `-ArraySubscriptExpr 0x7f9a7c026670 <col:25, col:28> 'struct (anonymous struct at c_files/pr33238.c:9:3)':'struct (anonymous at c_files/pr33238.c:9:3)' lvalue
+          |     |-ImplicitCastExpr 0x7f9a7c026640 <col:25> 'struct (anonymous struct at c_files/pr33238.c:9:3) *' <LValueToRValue>
+          |     | `-DeclRefExpr 0x7f9a7c0265f0 <col:25> 'struct (anonymous struct at c_files/pr33238.c:9:3) *' lvalue Var 0x7f9a7c025e90 'p' 'struct (anonymous struct at c_files/pr33238.c:9:3) *'
+          |     `-ImplicitCastExpr 0x7f9a7c026658 <col:27> 'int' <LValueToRValue>
+          |       `-DeclRefExpr 0x7f9a7c026618 <col:27> 'int' lvalue Var 0x7f9a7c026090 'j' 'int'
+          `-BinaryOperator 0x7f9a7c0267c0 <col:31, col:38> 'struct (anonymous struct at c_files/pr33238.c:9:3)':'struct (anonymous at c_files/pr33238.c:9:3)' '='
+            |-ArraySubscriptExpr 0x7f9a7c026758 <col:31, col:34> 'struct (anonymous struct at c_files/pr33238.c:9:3)':'struct (anonymous at c_files/pr33238.c:9:3)' lvalue
+            | |-ImplicitCastExpr 0x7f9a7c026728 <col:31> 'struct (anonymous struct at c_files/pr33238.c:9:3) *' <LValueToRValue>
+            | | `-DeclRefExpr 0x7f9a7c0266d8 <col:31> 'struct (anonymous struct at c_files/pr33238.c:9:3) *' lvalue Var 0x7f9a7c025e90 'p' 'struct (anonymous struct at c_files/pr33238.c:9:3) *'
+            | `-ImplicitCastExpr 0x7f9a7c026740 <col:33> 'int' <LValueToRValue>
+            |   `-DeclRefExpr 0x7f9a7c026700 <col:33> 'int' lvalue Var 0x7f9a7c026090 'j' 'int'
+            `-ImplicitCastExpr 0x7f9a7c0267a8 <col:38> 'struct (anonymous struct at c_files/pr33238.c:9:3)':'struct (anonymous at c_files/pr33238.c:9:3)' <LValueToRValue>
+              `-DeclRefExpr 0x7f9a7c026780 <col:38> 'struct (anonymous struct at c_files/pr33238.c:9:3)':'struct (anonymous at c_files/pr33238.c:9:3)' lvalue Var 0x7f9a7c025f68 'a' 'struct (anonymous struct at c_files/pr33238.c:9:3)':'struct (anonymous at c_files/pr33238.c:9:3)'

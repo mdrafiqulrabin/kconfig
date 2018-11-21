@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7f91958264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9195826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9195826740 '__int128'
+|-TypedefDecl 0x7f9195826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9195826760 'unsigned __int128'
+|-TypedefDecl 0x7f9195826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9195826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9195826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9195826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9195826dc0 'char *'
+|   `-BuiltinType 0x7f9195826560 'char'
+|-TypedefDecl 0x7f91958270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9195827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9195826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9195826e58 '__va_list_tag'
+|-TypedefDecl 0x7f9195827178 <c_files/pr39162.c:6:1, col:19> col:19 referenced __m256i '__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+| |-VectorType 0x7f9195827140 '__attribute__((__vector_size__(4 * sizeof(long long)))) long long' 4
+| | `-BuiltinType 0x7f9195826600 'long long'
+| `-MayAliasAttr 0x7f91958271d0 <col:65>
+|-VarDecl 0x7f9196026a70 <line:8:1, col:16> col:16 used y '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' extern
+`-FunctionDecl 0x7f9196026c20 <line:10:1, line:14:1> line:11:1 bar 'void (__m256i)'
+  |-ParmVarDecl 0x7f9196026b20 <col:6, col:14> col:14 used x '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+  `-CompoundStmt 0x7f9196026d50 <line:12:1, line:14:1>
+    `-BinaryOperator 0x7f9196026d28 <line:13:3, col:7> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' '='
+      |-DeclRefExpr 0x7f9196026cc0 <col:3> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' lvalue Var 0x7f9196026a70 'y' '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+      `-ImplicitCastExpr 0x7f9196026d10 <col:7> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' <LValueToRValue>
+        `-DeclRefExpr 0x7f9196026ce8 <col:7> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' lvalue ParmVar 0x7f9196026b20 'x' '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long'

@@ -1,0 +1,62 @@
+FileAST: 
+  Decl: link_error, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: link_error, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['int']
+        BinaryOp: <<
+          Constant: int, 1
+          BinaryOp: <<
+            BinaryOp: /
+              Constant: int, 1
+              ID: k
+            Constant: int, 8
+      If: 
+        BinaryOp: !=
+          ID: t
+          Constant: int, 1
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['int']
+          Decl: l, [], [], []
+            TypeDecl: l, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['int']
+        BinaryOp: <<
+          ID: l
+          BinaryOp: <<
+            ID: k
+            Constant: int, 8
+      If: 
+        BinaryOp: !=
+          ID: t
+          ID: l
+        FuncCall: 
+          ID: link_error

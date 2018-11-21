@@ -1,0 +1,71 @@
+FileAST: 
+  FuncDef: 
+    Decl: dd, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: gj, [], [], []
+            TypeDecl: gj, []
+              IdentifierType: ['int']
+          Decl: o7, [], [], []
+            TypeDecl: o7, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: dd, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: e8, [], [], []
+        TypeDecl: e8, []
+          IdentifierType: ['long', 'long', 'int']
+        ID: gj
+      Assignment: |=
+        ID: e8
+        BinaryOp: +
+          ID: gj
+          Constant: int, 1u
+      If: 
+        BinaryOp: !=
+          ID: e8
+          Constant: int, 0
+        Compound: 
+          Decl: mn, [], [], []
+            PtrDecl: []
+              TypeDecl: mn, []
+                IdentifierType: ['short', 'int']
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['short', 'int']
+              UnaryOp: &
+                ID: e8
+          Decl: pv, [], [], []
+            TypeDecl: pv, []
+              IdentifierType: ['int']
+          Assignment: &=
+            ID: e8
+            BinaryOp: >
+              ID: e8
+              ID: gj
+          Assignment: =
+            ID: gj
+            BinaryOp: >
+              ID: o7
+              ID: e8
+          Assignment: =
+            ID: pv
+            BinaryOp: &&
+              TernaryOp: 
+                BinaryOp: !=
+                  ID: gj
+                  Constant: int, 0
+                ID: gj
+                UnaryOp: *
+                  ID: mn
+              ID: e8
+          Assignment: |=
+            ID: gj
+            BinaryOp: /
+              UnaryOp: *
+                ID: mn
+              ID: pv
+      Return: 
+        ID: gj

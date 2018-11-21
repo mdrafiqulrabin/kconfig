@@ -1,0 +1,70 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['unsigned']
+        Constant: int, 1
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned']
+        Constant: int, 0
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          Struct: S
+      Assignment: =
+        ID: d
+        BinaryOp: &
+          BinaryOp: <
+            BinaryOp: &&
+              Constant: int, 1
+              ID: b
+            StructRef: .
+              ID: c
+              ID: f
+          StructRef: .
+            ID: c
+            ID: f
+      Return: 
+        ID: a
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['_Bool']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned']
+        Constant: int, 0
+      Assignment: =
+        ID: d
+        BinaryOp: &
+          BinaryOp: <
+            BinaryOp: &&
+              Constant: int, 1
+              ID: b
+            ID: c
+          ID: c
+      Return: 
+        ID: a

@@ -1,0 +1,89 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: epic_private
+      Decl: rx_ring, [], [], []
+        PtrDecl: []
+          TypeDecl: rx_ring, []
+            IdentifierType: ['unsigned', 'int']
+      Decl: rx_skbuff, [], [], []
+        ArrayDecl: []
+          TypeDecl: rx_skbuff, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 5
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: ep, [], [], []
+        TypeDecl: ep, []
+          Struct: epic_private
+      Decl: rx_ring, [], [], []
+        ArrayDecl: []
+          TypeDecl: rx_ring, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 5
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: ep
+            ID: rx_skbuff
+          Constant: int, 0
+        Constant: int, 5
+      Assignment: =
+        StructRef: .
+          ID: ep
+          ID: rx_ring
+        ID: rx_ring
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 5
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              StructRef: .
+                ID: ep
+                ID: rx_ring
+              ID: i
+            ID: i
+          Assignment: =
+            ArrayRef: 
+              StructRef: .
+                ID: ep
+                ID: rx_skbuff
+              ID: i
+            Constant: int, 0
+      If: 
+        BinaryOp: !=
+          ArrayRef: 
+            StructRef: .
+              ID: ep
+              ID: rx_skbuff
+            Constant: int, 0
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

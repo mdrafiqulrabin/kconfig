@@ -1,0 +1,30 @@
+FileAST: 
+  Decl: f, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: f, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: mkcatdefs, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fname, [], [], []
+            PtrDecl: []
+              TypeDecl: fname, []
+                IdentifierType: ['char']
+        TypeDecl: mkcatdefs, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: line, [], [], []
+        ArrayDecl: []
+          TypeDecl: line, []
+            IdentifierType: ['char']
+          Constant: int, 2147483647
+      FuncCall: 
+        ID: f
+        ExprList: 
+          ID: line

@@ -1,0 +1,104 @@
+FileAST: 
+  Decl: link_error, [], [], []
+    FuncDecl: 
+      TypeDecl: link_error, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          Struct: None
+            Decl: b, [], [], []
+              ArrayDecl: []
+                TypeDecl: b, []
+                  IdentifierType: ['int']
+                Constant: int, 2
+      Decl: b, [], [], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      If: 
+        BinaryOp: !=
+          UnaryOp: &
+            ArrayRef: 
+              ID: b
+              Constant: int, 1
+          UnaryOp: &
+            ArrayRef: 
+              ID: b
+              Constant: int, 1
+        FuncCall: 
+          ID: link_error
+      If: 
+        BinaryOp: !=
+          UnaryOp: &
+            ArrayRef: 
+              ID: b
+              Constant: int, 0
+          ID: b
+        FuncCall: 
+          ID: link_error
+      If: 
+        BinaryOp: ==
+          ID: b
+          UnaryOp: &
+            ArrayRef: 
+              ID: b
+              Constant: int, 2
+        FuncCall: 
+          ID: link_error
+      If: 
+        BinaryOp: !=
+          ID: b
+          ID: b
+        FuncCall: 
+          ID: link_error
+      If: 
+        BinaryOp: ==
+          UnaryOp: &
+            ArrayRef: 
+              StructRef: .
+                ID: x
+                ID: b
+              Constant: int, 1
+          UnaryOp: &
+            ArrayRef: 
+              StructRef: .
+                ID: x
+                ID: b
+              Constant: int, 0
+        FuncCall: 
+          ID: link_error
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            ID: x
+            ID: b
+          UnaryOp: &
+            ArrayRef: 
+              StructRef: .
+                ID: x
+                ID: b
+              Constant: int, 0
+        FuncCall: 
+          ID: link_error
+      If: 
+        BinaryOp: ==
+          UnaryOp: &
+            ArrayRef: 
+              StructRef: .
+                ID: x
+                ID: b
+              Constant: int, 1
+          StructRef: .
+            ID: x
+            ID: b
+        FuncCall: 
+          ID: link_error
+      Return: 
+        Constant: int, 0

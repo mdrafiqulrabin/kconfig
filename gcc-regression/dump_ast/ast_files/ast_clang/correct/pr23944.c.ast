@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fe3200264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe320026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe320026740 '__int128'
+|-TypedefDecl 0x7fe320026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe320026760 'unsigned __int128'
+|-TypedefDecl 0x7fe320026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe320026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe320026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe320026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe320026dc0 'char *'
+|   `-BuiltinType 0x7fe320026560 'char'
+|-TypedefDecl 0x7fe3200270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe320027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe320026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe320026e58 '__va_list_tag'
+`-FunctionDecl 0x7fe320825b68 <c_files/pr23944.c:1:1, line:4:1> line:1:7 f 'float (float (*)[4])'
+  |-ParmVarDecl 0x7fe320825a60 <col:9, col:22> col:15 used src 'float (*)[4]':'float (*)[4]'
+  `-CompoundStmt 0x7fe320825d80 <line:2:1, line:4:1>
+    `-ReturnStmt 0x7fe320825d68 <line:3:2, col:17>
+      `-ImplicitCastExpr 0x7fe320825d50 <col:9, col:17> 'float' <LValueToRValue>
+        `-UnaryOperator 0x7fe320825d30 <col:9, col:17> 'float' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fe320825d18 <col:10, col:17> 'float *' <ArrayToPointerDecay>
+            `-ParenExpr 0x7fe320825cd0 <col:10, col:17> 'float [4]' lvalue
+              `-ArraySubscriptExpr 0x7fe320825ca8 <col:11, col:16> 'float [4]' lvalue
+                |-ImplicitCastExpr 0x7fe320825c90 <col:11> 'float (*)[4]':'float (*)[4]' <LValueToRValue>
+                | `-DeclRefExpr 0x7fe320825c48 <col:11> 'float (*)[4]':'float (*)[4]' lvalue ParmVar 0x7fe320825a60 'src' 'float (*)[4]':'float (*)[4]'
+                `-IntegerLiteral 0x7fe320825c70 <col:15> 'int' 3

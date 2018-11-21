@@ -1,0 +1,32 @@
+c_files/pr66978.c:11:5: error: function definition is not allowed here
+    {
+    ^
+c_files/pr66978.c:14:10: warning: implicit declaration of function 'hack_digit' is invalid in C99 [-Wimplicit-function-declaration]
+  return hack_digit ();
+         ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fdc198264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdc19826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdc19826740 '__int128'
+|-TypedefDecl 0x7fdc19826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdc19826760 'unsigned __int128'
+|-TypedefDecl 0x7fdc19826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdc19826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdc19826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdc19826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdc19826dc0 'char *'
+|   `-BuiltinType 0x7fdc19826560 'char'
+|-TypedefDecl 0x7fdc198270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdc19827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdc19826ee0 'struct __va_list_tag'
+|     `-Record 0x7fdc19826e58 '__va_list_tag'
+|-FunctionDecl 0x7fdc19877430 <c_files/pr66978.c:5:1, col:22> col:12 foo 'int (int *)' extern
+| `-ParmVarDecl 0x7fdc19827160 <col:17, col:21> col:22 'int *'
+|-FunctionDecl 0x7fdc198775b8 <line:6:1, line:15:1> line:7:1 bar 'int (int *)'
+| |-ParmVarDecl 0x7fdc19877528 <col:6, col:11> col:11 p 'int *'
+| `-CompoundStmt 0x7fdc19877860 <line:8:1, line:15:1>
+|   `-ReturnStmt 0x7fdc19877848 <line:14:3, col:22>
+|     `-CallExpr 0x7fdc19877820 <col:10, col:22> 'int'
+|       `-ImplicitCastExpr 0x7fdc19877808 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7fdc198777b8 <col:10> 'int ()' Function 0x7fdc19877720 'hack_digit' 'int ()'
+`-FunctionDecl 0x7fdc19877720 <<invalid sloc>> col:10 implicit used hack_digit 'int ()'

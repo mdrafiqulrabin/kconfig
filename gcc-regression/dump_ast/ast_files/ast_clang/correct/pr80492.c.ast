@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7fe78d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe78d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe78d026740 '__int128'
+|-TypedefDecl 0x7fe78d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe78d026760 'unsigned __int128'
+|-TypedefDecl 0x7fe78d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe78d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe78d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe78d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe78d026dc0 'char *'
+|   `-BuiltinType 0x7fe78d026560 'char'
+|-TypedefDecl 0x7fe78d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe78d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe78d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe78d026e58 '__va_list_tag'
+|-FunctionDecl 0x7fe78d826a00 <c_files/pr80492.c:4:1, line:9:1> line:5:6 used syscall_7 'void (int)' static inline
+| |-ParmVarDecl 0x7fe78d027138 <col:17, col:21> col:21 used val 'int'
+| |-CompoundStmt 0x7fe78d826e08 <line:6:1, line:9:1>
+| | |-DeclStmt 0x7fe78d826ca8 <line:7:3, col:37>
+| | | `-VarDecl 0x7fe78d826bb0 <col:3, col:34> col:16 used reg 'int' register cinit
+| | |   |-ImplicitCastExpr 0x7fe78d826c90 <col:34> 'int' <LValueToRValue>
+| | |   | `-DeclRefExpr 0x7fe78d826c68 <col:34> 'int' lvalue ParmVar 0x7fe78d027138 'val' 'int'
+| | |   `-AsmLabelAttr 0x7fe78d826c10 <col:27> "4"
+| | `-GCCAsmStmt 0x7fe78d826da8 <line:8:3, col:56>
+| |   `-ImplicitCastExpr 0x7fe78d826d90 <col:52> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fe78d826d68 <col:52> 'int' lvalue Var 0x7fe78d826bb0 'reg' 'int'
+| `-AlwaysInlineAttr 0x7fe78d826aa0 <line:4:34> always_inline
+`-FunctionDecl 0x7fe78d826ef0 <line:11:1, line:18:1> line:11:6 do_syscalls 'void (void)'
+  `-CompoundStmt 0x7fe78d8272b0 <line:12:1, line:18:1>
+    `-ForStmt 0x7fe78d827278 <line:13:3, line:17:5>
+      |-DeclStmt 0x7fe78d827020 <line:13:8, col:17>
+      | `-VarDecl 0x7fe78d826fa0 <col:8, col:16> col:12 used s 'int' cinit
+      |   `-IntegerLiteral 0x7fe78d827000 <col:16> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe78d827098 <col:19, col:23> 'int' '<'
+      | |-ImplicitCastExpr 0x7fe78d827080 <col:19> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe78d827038 <col:19> 'int' lvalue Var 0x7fe78d826fa0 's' 'int'
+      | `-IntegerLiteral 0x7fe78d827060 <col:23> 'int' 2
+      |-UnaryOperator 0x7fe78d8270e8 <col:26, col:27> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fe78d8270c0 <col:26> 'int' lvalue Var 0x7fe78d826fa0 's' 'int'
+      `-CompoundStmt 0x7fe78d827250 <line:14:5, line:17:5>
+        |-CallExpr 0x7fe78d827190 <line:15:7, col:19> 'void'
+        | |-ImplicitCastExpr 0x7fe78d827178 <col:7> 'void (*)(int)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fe78d827108 <col:7> 'void (int)' Function 0x7fe78d826a00 'syscall_7' 'void (int)'
+        | `-IntegerLiteral 0x7fe78d827130 <col:18> 'int' 0
+        `-CallExpr 0x7fe78d827220 <line:16:7, col:19> 'void'
+          |-ImplicitCastExpr 0x7fe78d827208 <col:7> 'void (*)(int)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fe78d8271c0 <col:7> 'void (int)' Function 0x7fe78d826a00 'syscall_7' 'void (int)'
+          `-IntegerLiteral 0x7fe78d8271e8 <col:18> 'int' 1

@@ -1,0 +1,61 @@
+c_files/pr50251.c:13:7: error: use of unknown builtin '__builtin_stack_save' [-Wimplicit-function-declaration]
+  p = __builtin_stack_save ();
+      ^
+c_files/pr50251.c:13:5: warning: incompatible integer to pointer conversion assigning to 'char *' from 'int' [-Wint-conversion]
+  p = __builtin_stack_save ();
+    ^ ~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr50251.c:15:3: error: use of unknown builtin '__builtin_stack_restore' [-Wimplicit-function-declaration]
+  __builtin_stack_restore (p);
+  ^
+c_files/pr50251.c:15:3: note: did you mean '__builtin_stack_save'?
+c_files/pr50251.c:13:7: note: '__builtin_stack_save' declared here
+  p = __builtin_stack_save ();
+      ^
+1 warning and 2 errors generated.
+TranslationUnitDecl 0x7ff7458264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff745826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff745826740 '__int128'
+|-TypedefDecl 0x7ff745826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff745826760 'unsigned __int128'
+|-TypedefDecl 0x7ff745826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff745826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff745826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff745826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff745826dc0 'char *'
+|   `-BuiltinType 0x7ff745826560 'char'
+|-TypedefDecl 0x7ff7458270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff745827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff745826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff745826e58 '__va_list_tag'
+|-FunctionDecl 0x7ff746025a28 <c_files/pr50251.c:5:1, col:22> col:13 used bar 'void (int *)' extern
+| `-ParmVarDecl 0x7ff745827160 <col:18, col:21> col:22 'int *'
+|-VarDecl 0x7ff746025b20 <line:7:1, col:7> col:7 used p 'char *'
+|-FunctionDecl 0x7ff746025bd0 <line:9:1, line:18:1> line:10:1 main 'int ()'
+| `-CompoundStmt 0x7ff7460265c0 <line:11:1, line:18:1>
+|   |-DeclStmt 0x7ff746025ce0 <line:12:3, col:8>
+|   | `-VarDecl 0x7ff746025c80 <col:3, col:7> col:7 used q 'int'
+|   |-BinaryOperator 0x7ff746026250 <line:13:3, col:29> 'char *' '='
+|   | |-DeclRefExpr 0x7ff746025cf8 <col:3> 'char *' lvalue Var 0x7ff746025b20 'p' 'char *'
+|   | `-ImplicitCastExpr 0x7ff746025e88 <col:7, col:29> 'char *' <IntegralToPointer>
+|   |   `-CallExpr 0x7ff746025e60 <col:7, col:29> 'int'
+|   |     `-ImplicitCastExpr 0x7ff746025e48 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7ff746025df8 <col:7> 'int ()' Function 0x7ff746025d60 '__builtin_stack_save' 'int ()'
+|   |-CallExpr 0x7ff746026330 <line:14:3, col:10> 'void'
+|   | |-ImplicitCastExpr 0x7ff746026318 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ff746026278 <col:3> 'void (int *)' Function 0x7ff746025a28 'bar' 'void (int *)'
+|   | `-UnaryOperator 0x7ff7460262c8 <col:8, col:9> 'int *' prefix '&'
+|   |   `-DeclRefExpr 0x7ff7460262a0 <col:9> 'int' lvalue Var 0x7ff746025c80 'q' 'int'
+|   |-CallExpr 0x7ff746026488 <line:15:3, col:29> 'int'
+|   | |-ImplicitCastExpr 0x7ff746026470 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ff746026420 <col:3> 'int ()' Function 0x7ff746026388 '__builtin_stack_restore' 'int ()'
+|   | `-ImplicitCastExpr 0x7ff7460264b8 <col:28> 'char *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7ff746026448 <col:28> 'char *' lvalue Var 0x7ff746025b20 'p' 'char *'
+|   |-CallExpr 0x7ff746026558 <line:16:3, col:10> 'void'
+|   | |-ImplicitCastExpr 0x7ff746026540 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ff7460264d0 <col:3> 'void (int *)' Function 0x7ff746025a28 'bar' 'void (int *)'
+|   | `-UnaryOperator 0x7ff746026520 <col:8, col:9> 'int *' prefix '&'
+|   |   `-DeclRefExpr 0x7ff7460264f8 <col:9> 'int' lvalue Var 0x7ff746025c80 'q' 'int'
+|   `-ReturnStmt 0x7ff7460265a8 <line:17:3, col:10>
+|     `-IntegerLiteral 0x7ff746026588 <col:10> 'int' 0
+|-FunctionDecl 0x7ff746025d60 <<invalid sloc>> line:13:7 implicit used __builtin_stack_save 'int ()'
+`-FunctionDecl 0x7ff746026388 <<invalid sloc>> line:15:3 implicit used __builtin_stack_restore 'int ()'

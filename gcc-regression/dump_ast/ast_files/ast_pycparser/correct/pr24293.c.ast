@@ -1,0 +1,19 @@
+FileAST: 
+  Decl: x, [], ['static'], []
+    TypeDecl: x, []
+      Struct: foo
+  Decl: y, [], ['static'], []
+    TypeDecl: y, []
+      Union: bar
+  Typedef: p, [], ['typedef']
+    TypeDecl: p, []
+      Struct: P
+  Decl: p_obj, [], ['static'], []
+    TypeDecl: p_obj, []
+      IdentifierType: ['p']
+  Decl: e_var, [], ['static'], []
+    TypeDecl: e_var, []
+      Enum: e
+  Decl: object, [], ['extern'], []
+    TypeDecl: object, []
+      Struct: undefined_object

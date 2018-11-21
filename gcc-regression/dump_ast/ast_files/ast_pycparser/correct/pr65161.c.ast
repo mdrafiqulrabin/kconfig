@@ -1,0 +1,34 @@
+FileAST: 
+  Decl: data_ch, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: data_ch, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['short']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: shortsum, [], [], []
+        TypeDecl: shortsum, []
+          IdentifierType: ['short']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: shortsum
+          ArrayRef: 
+            ID: data_ch
+            ID: i
+      Return: 
+        ID: shortsum

@@ -1,0 +1,55 @@
+FileAST: 
+  Decl: x, [], [], []
+    ArrayDecl: []
+      TypeDecl: x, []
+        IdentifierType: ['float']
+      Constant: int, 256
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: foo, []
+            IdentifierType: ['double']
+    Compound: 
+      Decl: z, [], [], []
+        PtrDecl: []
+          TypeDecl: z, []
+            IdentifierType: ['double']
+        FuncCall: 
+          ID: __builtin_malloc
+          ExprList: 
+            BinaryOp: *
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['double']
+              Constant: int, 256
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 256
+        UnaryOp: ++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: z
+            ID: i
+          BinaryOp: +
+            ArrayRef: 
+              ID: x
+              ID: i
+            Constant: float, 1.0f
+      FuncCall: 
+        ID: foo
+      Return: 
+        Constant: int, 0

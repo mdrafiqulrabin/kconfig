@@ -1,0 +1,51 @@
+c_files/pr78041.c:7:27: error: unknown register name 'r1' in asm
+register long long x asm ("r1");
+                          ^
+1 error generated.
+TranslationUnitDecl 0x7fc8f10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc8f1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc8f1026740 '__int128'
+|-TypedefDecl 0x7fc8f1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc8f1026760 'unsigned __int128'
+|-TypedefDecl 0x7fc8f1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc8f1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc8f1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc8f1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc8f1026dc0 'char *'
+|   `-BuiltinType 0x7fc8f1026560 'char'
+|-TypedefDecl 0x7fc8f10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc8f1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc8f1026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc8f1026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc8f1825a30 <c_files/pr78041.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc8f1825ac8 prev 0x7fc8f1825a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7fc8f1825be0 <line:7:1, col:20> col:20 used x 'long long' register
+| `-AsmLabelAttr 0x7fc8f1825c40 <col:27> "r1"
+|-FunctionDecl 0x7fc8f1825da8 <line:9:1, line:12:1> line:9:11 used f 'long long (void)'
+| `-CompoundStmt 0x7fc8f1825ee0 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7fc8f1825ec8 <line:11:3, col:15>
+|     `-BinaryOperator 0x7fc8f1825ea0 <col:10, col:15> 'long long' '<<'
+|       |-ImplicitCastExpr 0x7fc8f1825e88 <col:10> 'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fc8f1825e40 <col:10> 'long long' lvalue Var 0x7fc8f1825be0 'x' 'long long'
+|       `-IntegerLiteral 0x7fc8f1825e68 <col:15> 'int' 5
+`-FunctionDecl 0x7fc8f1825f50 <line:14:1, line:20:1> line:14:5 main 'int ()'
+  `-CompoundStmt 0x7fc8f1826268 <line:15:1, line:20:1>
+    |-BinaryOperator 0x7fc8f1826048 <line:16:3, col:7> 'long long' '='
+    | |-DeclRefExpr 0x7fc8f1825fe8 <col:3> 'long long' lvalue Var 0x7fc8f1825be0 'x' 'long long'
+    | `-ImplicitCastExpr 0x7fc8f1826030 <col:7> 'long long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fc8f1826010 <col:7> 'long' 4294967297
+    |-IfStmt 0x7fc8f18261f8 <line:17:3, line:18:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc8f1826140 <line:17:7, col:15> 'int' '!='
+    | | |-CallExpr 0x7fc8f18260e0 <col:7, col:10> 'long long'
+    | | | `-ImplicitCastExpr 0x7fc8f18260c8 <col:7> 'long long (*)(void)' <FunctionToPointerDecay>
+    | | |   `-DeclRefExpr 0x7fc8f1826070 <col:7> 'long long (void)' Function 0x7fc8f1825da8 'f' 'long long (void)'
+    | | `-ImplicitCastExpr 0x7fc8f1826128 <col:15> 'long long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fc8f1826108 <col:15> 'long' 137438953504
+    | |-CallExpr 0x7fc8f18261d0 <line:18:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc8f18261b8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc8f1826168 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc8f1825ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc8f1826250 <line:19:3, col:10>
+      `-IntegerLiteral 0x7fc8f1826230 <col:10> 'int' 0

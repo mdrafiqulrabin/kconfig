@@ -1,0 +1,16 @@
+FileAST: 
+  Decl: s, [], ['extern'], []
+    TypeDecl: s, []
+      Struct: S
+  FuncDef: 
+    Decl: func2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: func2, []
+          IdentifierType: ['void']
+    Compound: 
+      UnaryOp: &
+        ID: s

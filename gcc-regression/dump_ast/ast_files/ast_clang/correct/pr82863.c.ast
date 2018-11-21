@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7faedd8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faedd826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faedd826740 '__int128'
+|-TypedefDecl 0x7faedd826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faedd826760 'unsigned __int128'
+|-TypedefDecl 0x7faedd826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faedd826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faedd826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faedd826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faedd826dc0 'char *'
+|   `-BuiltinType 0x7faedd826560 'char'
+|-TypedefDecl 0x7faedd8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faedd827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faedd826ee0 'struct __va_list_tag'
+|     `-Record 0x7faedd826e58 '__va_list_tag'
+|-TypedefDecl 0x7faedd827138 <c_files/pr82863.c:5:1, col:19> col:19 referenced a 'long long'
+| `-BuiltinType 0x7faedd826600 'long long'
+|-VarDecl 0x7faede025a00 <line:6:1, col:3> col:3 used b 'a':'long long'
+`-FunctionDecl 0x7faede025af0 <line:7:1, line:12:1> line:8:1 c 'float ()'
+  `-CompoundStmt 0x7faede025d28 <line:9:1, line:12:1>
+    |-DeclStmt 0x7faede025cb8 <line:10:3, col:18>
+    | `-VarDecl 0x7faede025ba0 <col:3, col:17> col:9 used d 'float' cinit
+    |   `-ImplicitCastExpr 0x7faede025ca0 <col:13, col:17> 'float' <IntegralToFloating>
+    |     `-BinaryOperator 0x7faede025c78 <col:13, col:17> 'int' '>'
+    |       |-ImplicitCastExpr 0x7faede025c48 <col:13> 'a':'long long' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7faede025c00 <col:13> 'a':'long long' lvalue Var 0x7faede025a00 'b' 'a':'long long'
+    |       `-ImplicitCastExpr 0x7faede025c60 <col:17> 'long long' <IntegralCast>
+    |         `-IntegerLiteral 0x7faede025c28 <col:17> 'int' 0
+    `-ReturnStmt 0x7faede025d10 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7faede025cf8 <col:10> 'float' <LValueToRValue>
+        `-DeclRefExpr 0x7faede025cd0 <col:10> 'float' lvalue Var 0x7faede025ba0 'd' 'float'

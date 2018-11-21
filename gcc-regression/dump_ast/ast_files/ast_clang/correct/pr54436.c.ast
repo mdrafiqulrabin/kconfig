@@ -1,0 +1,178 @@
+TranslationUnitDecl 0x7fa0568264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa056826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa056826740 '__int128'
+|-TypedefDecl 0x7fa056826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa056826760 'unsigned __int128'
+|-TypedefDecl 0x7fa056826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa056826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa056826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa056826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa056826dc0 'char *'
+|   `-BuiltinType 0x7fa056826560 'char'
+|-TypedefDecl 0x7fa0568270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa056827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa056826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa056826e58 '__va_list_tag'
+|-FunctionDecl 0x7fa057025a30 <c_files/pr54436.c:5:1, line:17:1> line:6:1 used baz 'unsigned short (unsigned short *)' static inline
+| |-ParmVarDecl 0x7fa056827160 <col:6, col:22> col:22 used x 'unsigned short *'
+| `-CompoundStmt 0x7fa057026e68 <line:7:1, line:17:1>
+|   |-DeclStmt 0x7fa057025ec0 <line:8:3, col:63>
+|   | |-RecordDecl 0x7fa057025b10 <col:3, col:51> col:9 union U definition
+|   | | |-FieldDecl 0x7fa057025bd8 <col:13, col:28> col:28 referenced a 'unsigned short'
+|   | | `-FieldDecl 0x7fa057025ca0 <col:31, col:48> col:45 referenced b 'unsigned char [2]'
+|   | `-VarDecl 0x7fa057025d40 <col:3, col:62> col:53 used u 'union U':'union U' cinit
+|   |   `-InitListExpr 0x7fa057025e48 <col:57, col:62> 'union U':'union U' field Field 0x7fa057025bd8 'a' 'unsigned short'
+|   |     `-ImplicitCastExpr 0x7fa057025e90 <col:59, col:60> 'unsigned short' <LValueToRValue>
+|   |       `-UnaryOperator 0x7fa057025de0 <col:59, col:60> 'unsigned short' lvalue prefix '*'
+|   |         `-ImplicitCastExpr 0x7fa057025dc8 <col:60> 'unsigned short *' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fa057025da0 <col:60> 'unsigned short *' lvalue ParmVar 0x7fa056827160 'x' 'unsigned short *'
+|   |-BinaryOperator 0x7fa0570263f8 <line:9:3, line:10:59> 'unsigned char' '='
+|   | |-ArraySubscriptExpr 0x7fa057025fa0 <line:9:3, col:8> 'unsigned char' lvalue
+|   | | |-ImplicitCastExpr 0x7fa057025f88 <col:3, col:5> 'unsigned char *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7fa057025f00 <col:3, col:5> 'unsigned char [2]' lvalue .b 0x7fa057025ca0
+|   | | |   `-DeclRefExpr 0x7fa057025ed8 <col:3> 'union U':'union U' lvalue Var 0x7fa057025d40 'u' 'union U':'union U'
+|   | | `-IntegerLiteral 0x7fa057025f38 <col:7> 'int' 0
+|   | `-ImplicitCastExpr 0x7fa0570263e0 <col:12, line:10:59> 'unsigned char' <IntegralCast>
+|   |   `-BinaryOperator 0x7fa0570263b8 <line:9:12, line:10:59> 'unsigned long long' '>>'
+|   |     |-BinaryOperator 0x7fa057026370 <line:9:12, line:10:45> 'unsigned long long' '*'
+|   |     | |-ParenExpr 0x7fa057026330 <line:9:12, line:10:41> 'unsigned long long'
+|   |     | | `-BinaryOperator 0x7fa057026308 <line:9:13, line:10:40> 'unsigned long long' '|'
+|   |     | |   |-ParenExpr 0x7fa057026148 <line:9:13, col:45> 'unsigned long long'
+|   |     | |   | `-BinaryOperator 0x7fa057026120 <col:14, col:35> 'unsigned long long' '&'
+|   |     | |   |   |-BinaryOperator 0x7fa0570260d8 <col:14, col:23> 'unsigned long long' '*'
+|   |     | |   |   | |-ImplicitCastExpr 0x7fa0570260c0 <col:14, col:19> 'unsigned long long' <IntegralCast>
+|   |     | |   |   | | `-ImplicitCastExpr 0x7fa0570260a8 <col:14, col:19> 'unsigned char' <LValueToRValue>
+|   |     | |   |   | |   `-ArraySubscriptExpr 0x7fa057026060 <col:14, col:19> 'unsigned char' lvalue
+|   |     | |   |   | |     |-ImplicitCastExpr 0x7fa057026048 <col:14, col:16> 'unsigned char *' <ArrayToPointerDecay>
+|   |     | |   |   | |     | `-MemberExpr 0x7fa057025ff0 <col:14, col:16> 'unsigned char [2]' lvalue .b 0x7fa057025ca0
+|   |     | |   |   | |     |   `-DeclRefExpr 0x7fa057025fc8 <col:14> 'union U':'union U' lvalue Var 0x7fa057025d40 'u' 'union U':'union U'
+|   |     | |   |   | |     `-IntegerLiteral 0x7fa057026028 <col:18> 'int' 0
+|   |     | |   |   | `-IntegerLiteral 0x7fa057026088 <col:23> 'unsigned long long' 2050
+|   |     | |   |   `-IntegerLiteral 0x7fa057026100 <col:35> 'unsigned long long' 139536
+|   |     | |   `-ParenExpr 0x7fa0570262e8 <line:10:8, col:40> 'unsigned long long'
+|   |     | |     `-BinaryOperator 0x7fa0570262c0 <col:9, col:30> 'unsigned long long' '&'
+|   |     | |       |-BinaryOperator 0x7fa057026278 <col:9, col:18> 'unsigned long long' '*'
+|   |     | |       | |-ImplicitCastExpr 0x7fa057026260 <col:9, col:14> 'unsigned long long' <IntegralCast>
+|   |     | |       | | `-ImplicitCastExpr 0x7fa057026248 <col:9, col:14> 'unsigned char' <LValueToRValue>
+|   |     | |       | |   `-ArraySubscriptExpr 0x7fa057026200 <col:9, col:14> 'unsigned char' lvalue
+|   |     | |       | |     |-ImplicitCastExpr 0x7fa0570261e8 <col:9, col:11> 'unsigned char *' <ArrayToPointerDecay>
+|   |     | |       | |     | `-MemberExpr 0x7fa057026190 <col:9, col:11> 'unsigned char [2]' lvalue .b 0x7fa057025ca0
+|   |     | |       | |     |   `-DeclRefExpr 0x7fa057026168 <col:9> 'union U':'union U' lvalue Var 0x7fa057025d40 'u' 'union U':'union U'
+|   |     | |       | |     `-IntegerLiteral 0x7fa0570261c8 <col:13> 'int' 0
+|   |     | |       | `-IntegerLiteral 0x7fa057026228 <col:18> 'unsigned long long' 32800
+|   |     | |       `-IntegerLiteral 0x7fa0570262a0 <col:30> 'unsigned long long' 558144
+|   |     | `-IntegerLiteral 0x7fa057026350 <col:45> 'unsigned long long' 65793
+|   |     `-IntegerLiteral 0x7fa057026398 <col:59> 'int' 16
+|   |-BinaryOperator 0x7fa057026960 <line:11:3, line:12:59> 'unsigned char' '='
+|   | |-ArraySubscriptExpr 0x7fa057026508 <line:11:3, col:8> 'unsigned char' lvalue
+|   | | |-ImplicitCastExpr 0x7fa0570264f0 <col:3, col:5> 'unsigned char *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7fa057026498 <col:3, col:5> 'unsigned char [2]' lvalue .b 0x7fa057025ca0
+|   | | |   `-DeclRefExpr 0x7fa057026470 <col:3> 'union U':'union U' lvalue Var 0x7fa057025d40 'u' 'union U':'union U'
+|   | | `-IntegerLiteral 0x7fa0570264d0 <col:7> 'int' 1
+|   | `-ImplicitCastExpr 0x7fa057026948 <col:12, line:12:59> 'unsigned char' <IntegralCast>
+|   |   `-BinaryOperator 0x7fa057026920 <line:11:12, line:12:59> 'unsigned long long' '>>'
+|   |     |-BinaryOperator 0x7fa0570268d8 <line:11:12, line:12:45> 'unsigned long long' '*'
+|   |     | |-ParenExpr 0x7fa057026898 <line:11:12, line:12:41> 'unsigned long long'
+|   |     | | `-BinaryOperator 0x7fa057026870 <line:11:13, line:12:40> 'unsigned long long' '|'
+|   |     | |   |-ParenExpr 0x7fa0570266b0 <line:11:13, col:45> 'unsigned long long'
+|   |     | |   | `-BinaryOperator 0x7fa057026688 <col:14, col:35> 'unsigned long long' '&'
+|   |     | |   |   |-BinaryOperator 0x7fa057026640 <col:14, col:23> 'unsigned long long' '*'
+|   |     | |   |   | |-ImplicitCastExpr 0x7fa057026628 <col:14, col:19> 'unsigned long long' <IntegralCast>
+|   |     | |   |   | | `-ImplicitCastExpr 0x7fa057026610 <col:14, col:19> 'unsigned char' <LValueToRValue>
+|   |     | |   |   | |   `-ArraySubscriptExpr 0x7fa0570265c8 <col:14, col:19> 'unsigned char' lvalue
+|   |     | |   |   | |     |-ImplicitCastExpr 0x7fa0570265b0 <col:14, col:16> 'unsigned char *' <ArrayToPointerDecay>
+|   |     | |   |   | |     | `-MemberExpr 0x7fa057026558 <col:14, col:16> 'unsigned char [2]' lvalue .b 0x7fa057025ca0
+|   |     | |   |   | |     |   `-DeclRefExpr 0x7fa057026530 <col:14> 'union U':'union U' lvalue Var 0x7fa057025d40 'u' 'union U':'union U'
+|   |     | |   |   | |     `-IntegerLiteral 0x7fa057026590 <col:18> 'int' 1
+|   |     | |   |   | `-IntegerLiteral 0x7fa0570265f0 <col:23> 'unsigned long long' 2050
+|   |     | |   |   `-IntegerLiteral 0x7fa057026668 <col:35> 'unsigned long long' 139536
+|   |     | |   `-ParenExpr 0x7fa057026850 <line:12:8, col:40> 'unsigned long long'
+|   |     | |     `-BinaryOperator 0x7fa057026828 <col:9, col:30> 'unsigned long long' '&'
+|   |     | |       |-BinaryOperator 0x7fa0570267e0 <col:9, col:18> 'unsigned long long' '*'
+|   |     | |       | |-ImplicitCastExpr 0x7fa0570267c8 <col:9, col:14> 'unsigned long long' <IntegralCast>
+|   |     | |       | | `-ImplicitCastExpr 0x7fa0570267b0 <col:9, col:14> 'unsigned char' <LValueToRValue>
+|   |     | |       | |   `-ArraySubscriptExpr 0x7fa057026768 <col:9, col:14> 'unsigned char' lvalue
+|   |     | |       | |     |-ImplicitCastExpr 0x7fa057026750 <col:9, col:11> 'unsigned char *' <ArrayToPointerDecay>
+|   |     | |       | |     | `-MemberExpr 0x7fa0570266f8 <col:9, col:11> 'unsigned char [2]' lvalue .b 0x7fa057025ca0
+|   |     | |       | |     |   `-DeclRefExpr 0x7fa0570266d0 <col:9> 'union U':'union U' lvalue Var 0x7fa057025d40 'u' 'union U':'union U'
+|   |     | |       | |     `-IntegerLiteral 0x7fa057026730 <col:13> 'int' 1
+|   |     | |       | `-IntegerLiteral 0x7fa057026790 <col:18> 'unsigned long long' 32800
+|   |     | |       `-IntegerLiteral 0x7fa057026808 <col:30> 'unsigned long long' 558144
+|   |     | `-IntegerLiteral 0x7fa0570268b8 <col:45> 'unsigned long long' 65793
+|   |     `-IntegerLiteral 0x7fa057026900 <col:59> 'int' 16
+|   |-DeclStmt 0x7fa057026ad8 <line:13:3, col:27>
+|   | `-VarDecl 0x7fa0570269a0 <col:3, col:26> col:17 used t 'unsigned char' cinit
+|   |   `-ImplicitCastExpr 0x7fa057026ac0 <col:21, col:26> 'unsigned char' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fa057026a98 <col:21, col:26> 'unsigned char' lvalue
+|   |       |-ImplicitCastExpr 0x7fa057026a80 <col:21, col:23> 'unsigned char *' <ArrayToPointerDecay>
+|   |       | `-MemberExpr 0x7fa057026a28 <col:21, col:23> 'unsigned char [2]' lvalue .b 0x7fa057025ca0
+|   |       |   `-DeclRefExpr 0x7fa057026a00 <col:21> 'union U':'union U' lvalue Var 0x7fa057025d40 'u' 'union U':'union U'
+|   |       `-IntegerLiteral 0x7fa057026a60 <col:25> 'int' 0
+|   |-BinaryOperator 0x7fa057026c88 <line:14:3, col:17> 'unsigned char' '='
+|   | |-ArraySubscriptExpr 0x7fa057026b88 <col:3, col:8> 'unsigned char' lvalue
+|   | | |-ImplicitCastExpr 0x7fa057026b70 <col:3, col:5> 'unsigned char *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7fa057026b18 <col:3, col:5> 'unsigned char [2]' lvalue .b 0x7fa057025ca0
+|   | | |   `-DeclRefExpr 0x7fa057026af0 <col:3> 'union U':'union U' lvalue Var 0x7fa057025d40 'u' 'union U':'union U'
+|   | | `-IntegerLiteral 0x7fa057026b50 <col:7> 'int' 0
+|   | `-ImplicitCastExpr 0x7fa057026c70 <col:12, col:17> 'unsigned char' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7fa057026c48 <col:12, col:17> 'unsigned char' lvalue
+|   |     |-ImplicitCastExpr 0x7fa057026c30 <col:12, col:14> 'unsigned char *' <ArrayToPointerDecay>
+|   |     | `-MemberExpr 0x7fa057026bd8 <col:12, col:14> 'unsigned char [2]' lvalue .b 0x7fa057025ca0
+|   |     |   `-DeclRefExpr 0x7fa057026bb0 <col:12> 'union U':'union U' lvalue Var 0x7fa057025d40 'u' 'union U':'union U'
+|   |     `-IntegerLiteral 0x7fa057026c10 <col:16> 'int' 1
+|   |-BinaryOperator 0x7fa057026db0 <line:15:3, col:12> 'unsigned char' '='
+|   | |-ArraySubscriptExpr 0x7fa057026d48 <col:3, col:8> 'unsigned char' lvalue
+|   | | |-ImplicitCastExpr 0x7fa057026d30 <col:3, col:5> 'unsigned char *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7fa057026cd8 <col:3, col:5> 'unsigned char [2]' lvalue .b 0x7fa057025ca0
+|   | | |   `-DeclRefExpr 0x7fa057026cb0 <col:3> 'union U':'union U' lvalue Var 0x7fa057025d40 'u' 'union U':'union U'
+|   | | `-IntegerLiteral 0x7fa057026d10 <col:7> 'int' 1
+|   | `-ImplicitCastExpr 0x7fa057026d98 <col:12> 'unsigned char' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fa057026d70 <col:12> 'unsigned char' lvalue Var 0x7fa0570269a0 't' 'unsigned char'
+|   `-ReturnStmt 0x7fa057026e50 <line:16:3, col:12>
+|     `-ImplicitCastExpr 0x7fa057026e38 <col:10, col:12> 'unsigned short' <LValueToRValue>
+|       `-MemberExpr 0x7fa057026e00 <col:10, col:12> 'unsigned short' lvalue .a 0x7fa057025bd8
+|         `-DeclRefExpr 0x7fa057026dd8 <col:10> 'union U':'union U' lvalue Var 0x7fa057025d40 'u' 'union U':'union U'
+|-FunctionDecl 0x7fa057026fc8 <line:19:1, line:25:1> line:20:1 used bar 'unsigned long long (unsigned long long *)' static inline
+| |-ParmVarDecl 0x7fa057026f00 <col:6, col:26> col:26 used x 'unsigned long long *'
+| `-CompoundStmt 0x7fa057027768 <line:21:1, line:25:1>
+|   |-DeclStmt 0x7fa057027410 <line:22:3, col:68>
+|   | |-RecordDecl 0x7fa057027068 <col:3, col:56> col:9 union U definition
+|   | | |-FieldDecl 0x7fa057027128 <col:13, col:32> col:32 referenced a 'unsigned long long'
+|   | | `-FieldDecl 0x7fa0570271f0 <col:35, col:53> col:50 referenced b 'unsigned short [4]'
+|   | `-VarDecl 0x7fa057027290 <col:3, col:67> col:58 used u 'union U':'union U' cinit
+|   |   `-InitListExpr 0x7fa057027398 <col:62, col:67> 'union U':'union U' field Field 0x7fa057027128 'a' 'unsigned long long'
+|   |     `-ImplicitCastExpr 0x7fa0570273e0 <col:64, col:65> 'unsigned long long' <LValueToRValue>
+|   |       `-UnaryOperator 0x7fa057027330 <col:64, col:65> 'unsigned long long' lvalue prefix '*'
+|   |         `-ImplicitCastExpr 0x7fa057027318 <col:65> 'unsigned long long *' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fa0570272f0 <col:65> 'unsigned long long *' lvalue ParmVar 0x7fa057026f00 'x' 'unsigned long long *'
+|   |-BinaryOperator 0x7fa057027660 <line:23:3, col:24> 'unsigned short' '='
+|   | |-ArraySubscriptExpr 0x7fa0570274c0 <col:3, col:8> 'unsigned short' lvalue
+|   | | |-ImplicitCastExpr 0x7fa0570274a8 <col:3, col:5> 'unsigned short *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7fa057027450 <col:3, col:5> 'unsigned short [4]' lvalue .b 0x7fa0570271f0
+|   | | |   `-DeclRefExpr 0x7fa057027428 <col:3> 'union U':'union U' lvalue Var 0x7fa057027290 'u' 'union U':'union U'
+|   | | `-IntegerLiteral 0x7fa057027488 <col:7> 'int' 0
+|   | `-CallExpr 0x7fa057027630 <col:12, col:24> 'unsigned short'
+|   |   |-ImplicitCastExpr 0x7fa057027618 <col:12> 'unsigned short (*)(unsigned short *)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fa0570274e8 <col:12> 'unsigned short (unsigned short *)' Function 0x7fa057025a30 'baz' 'unsigned short (unsigned short *)'
+|   |   `-UnaryOperator 0x7fa0570275d0 <col:17, col:23> 'unsigned short *' prefix '&'
+|   |     `-ArraySubscriptExpr 0x7fa0570275a8 <col:18, col:23> 'unsigned short' lvalue
+|   |       |-ImplicitCastExpr 0x7fa057027590 <col:18, col:20> 'unsigned short *' <ArrayToPointerDecay>
+|   |       | `-MemberExpr 0x7fa057027538 <col:18, col:20> 'unsigned short [4]' lvalue .b 0x7fa0570271f0
+|   |       |   `-DeclRefExpr 0x7fa057027510 <col:18> 'union U':'union U' lvalue Var 0x7fa057027290 'u' 'union U':'union U'
+|   |       `-IntegerLiteral 0x7fa057027570 <col:22> 'int' 0
+|   `-ReturnStmt 0x7fa057027750 <line:24:3, col:12>
+|     `-ImplicitCastExpr 0x7fa057027738 <col:10, col:12> 'unsigned long long' <LValueToRValue>
+|       `-MemberExpr 0x7fa057027700 <col:10, col:12> 'unsigned long long' lvalue .a 0x7fa057027128
+|         `-DeclRefExpr 0x7fa0570276d8 <col:10> 'union U':'union U' lvalue Var 0x7fa057027290 'u' 'union U':'union U'
+`-FunctionDecl 0x7fa057027860 <line:27:1, line:32:1> line:28:1 foo 'void (void)'
+  `-CompoundStmt 0x7fa057027c10 <line:29:1, line:32:1>
+    |-DeclStmt 0x7fa0570279b0 <line:30:3, col:31>
+    | `-VarDecl 0x7fa057027910 <col:3, col:27> col:22 used l 'unsigned long long' cinit
+    |   `-UnaryOperator 0x7fa057027990 <col:26, col:27> 'unsigned long long' prefix '-'
+    |     `-IntegerLiteral 0x7fa057027970 <col:27> 'unsigned long long' 1
+    `-GCCAsmStmt 0x7fa057027bb0 <line:31:3, col:40>
+      `-CallExpr 0x7fa057027b80 <col:31, col:38> 'unsigned long long'
+        |-ImplicitCastExpr 0x7fa057027b68 <col:31> 'unsigned long long (*)(unsigned long long *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fa057027ac8 <col:31> 'unsigned long long (unsigned long long *)' Function 0x7fa057026fc8 'bar' 'unsigned long long (unsigned long long *)'
+        `-UnaryOperator 0x7fa057027b18 <col:36, col:37> 'unsigned long long *' prefix '&'
+          `-DeclRefExpr 0x7fa057027af0 <col:37> 'unsigned long long' lvalue Var 0x7fa057027910 'l' 'unsigned long long'

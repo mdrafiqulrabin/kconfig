@@ -1,0 +1,67 @@
+c_files/pr70396.c:11:7: warning: expression result unused [-Wunused-value]
+    b / e.f1;
+    ~ ^ ~~~~
+1 warning generated.
+TranslationUnitDecl 0x7fbf6d00e8d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbf6d00ee20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbf6d00eb40 '__int128'
+|-TypedefDecl 0x7fbf6d00ee90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbf6d00eb60 'unsigned __int128'
+|-TypedefDecl 0x7fbf6d00f168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbf6d00ef70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbf6d00eee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbf6d00f200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbf6d00f1c0 'char *'
+|   `-BuiltinType 0x7fbf6d00e960 'char'
+|-TypedefDecl 0x7fbf6d00f4c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbf6d00f470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbf6d00f2e0 'struct __va_list_tag'
+|     `-Record 0x7fbf6d00f258 '__va_list_tag'
+|-RecordDecl 0x7fbf6d00f520 <c_files/pr70396.c:3:1, line:5:1> line:3:8 struct S2 definition
+| `-FieldDecl 0x7fbf6d825a18 <line:4:5, col:17> col:12 referenced f1 'int'
+|   `-IntegerLiteral 0x7fbf6d00f5d0 <col:17> 'int' 3
+|-VarDecl 0x7fbf6d825ae0 <line:6:1, col:10> col:5 used a 'int [100]'
+|-VarDecl 0x7fbf6d825b98 <line:7:1, col:5> col:5 used b 'int'
+|-VarDecl 0x7fbf6d825c10 <col:1, col:8> col:8 used c 'int'
+|-VarDecl 0x7fbf6d825c98 <line:8:1, col:6> col:6 used d 'char'
+`-FunctionDecl 0x7fbf6d825d48 <line:9:1, line:17:1> line:9:6 fn1 'void ()'
+  `-CompoundStmt 0x7fbf6d826410 <col:12, line:17:1>
+    |-DeclStmt 0x7fbf6d825e90 <line:10:5, col:16>
+    | `-VarDecl 0x7fbf6d825e30 <col:5, col:15> col:15 used e 'struct S2':'struct S2'
+    |-BinaryOperator 0x7fbf6d825fa8 <line:11:5, col:11> 'int' '/'
+    | |-ImplicitCastExpr 0x7fbf6d825f30 <col:5> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fbf6d825ea8 <col:5> 'int' lvalue Var 0x7fbf6d825b98 'b' 'int'
+    | `-ImplicitCastExpr 0x7fbf6d825f48 <col:9, col:11> 'int' <LValueToRValue>
+    |   `-MemberExpr 0x7fbf6d825ef8 <col:9, col:11> 'int' lvalue bitfield .f1 0x7fbf6d825a18
+    |     `-DeclRefExpr 0x7fbf6d825ed0 <col:9> 'struct S2':'struct S2' lvalue Var 0x7fbf6d825e30 'e' 'struct S2':'struct S2'
+    |-BinaryOperator 0x7fbf6d826018 <line:12:5, col:9> 'int' '='
+    | |-DeclRefExpr 0x7fbf6d825fd0 <col:5> 'int' lvalue Var 0x7fbf6d825c10 'c' 'int'
+    | `-IntegerLiteral 0x7fbf6d825ff8 <col:9> 'int' 2
+    `-ForStmt 0x7fbf6d8263d8 <line:13:5, line:16:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fbf6d8260a0 <line:13:12, col:16> 'int' '<'
+      | |-ImplicitCastExpr 0x7fbf6d826088 <col:12> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fbf6d826040 <col:12> 'int' lvalue Var 0x7fbf6d825c10 'c' 'int'
+      | `-IntegerLiteral 0x7fbf6d826068 <col:16> 'int' 100
+      |-UnaryOperator 0x7fbf6d8260f0 <col:21, col:22> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fbf6d8260c8 <col:21> 'int' lvalue Var 0x7fbf6d825c10 'c' 'int'
+      `-CompoundStmt 0x7fbf6d8263b0 <col:26, line:16:5>
+        |-BinaryOperator 0x7fbf6d826170 <line:14:2, col:6> 'char' '='
+        | |-DeclRefExpr 0x7fbf6d826110 <col:2> 'char' lvalue Var 0x7fbf6d825c98 'd' 'char'
+        | `-ImplicitCastExpr 0x7fbf6d826158 <col:6> 'char' <IntegralCast>
+        |   `-IntegerLiteral 0x7fbf6d826138 <col:6> 'int' 0
+        `-BinaryOperator 0x7fbf6d826388 <line:15:2, col:18> 'int' '='
+          |-ArraySubscriptExpr 0x7fbf6d826248 <col:2, col:5> 'int' lvalue
+          | |-ImplicitCastExpr 0x7fbf6d826218 <col:2> 'int *' <ArrayToPointerDecay>
+          | | `-DeclRefExpr 0x7fbf6d826198 <col:2> 'int [100]' lvalue Var 0x7fbf6d825ae0 'a' 'int [100]'
+          | `-ImplicitCastExpr 0x7fbf6d826230 <col:4> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fbf6d8261c0 <col:4> 'int' lvalue Var 0x7fbf6d825c10 'c' 'int'
+          `-BinaryOperator 0x7fbf6d826360 <col:9, col:18> 'int' '!='
+            |-UnaryOperator 0x7fbf6d8262e8 <col:9, col:12> 'int' prefix '~'
+            | `-ImplicitCastExpr 0x7fbf6d8262d0 <col:10, col:12> 'int' <LValueToRValue>
+            |   `-MemberExpr 0x7fbf6d826298 <col:10, col:12> 'int' lvalue bitfield .f1 0x7fbf6d825a18
+            |     `-DeclRefExpr 0x7fbf6d826270 <col:10> 'struct S2':'struct S2' lvalue Var 0x7fbf6d825e30 'e' 'struct S2':'struct S2'
+            `-ImplicitCastExpr 0x7fbf6d826348 <col:18> 'int' <IntegralCast>
+              `-ImplicitCastExpr 0x7fbf6d826330 <col:18> 'char' <LValueToRValue>
+                `-DeclRefExpr 0x7fbf6d826308 <col:18> 'char' lvalue Var 0x7fbf6d825c98 'd' 'char'

@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7fdaf10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdaf1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdaf1026740 '__int128'
+|-TypedefDecl 0x7fdaf1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdaf1026760 'unsigned __int128'
+|-TypedefDecl 0x7fdaf1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdaf1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdaf1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdaf1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdaf1026dc0 'char *'
+|   `-BuiltinType 0x7fdaf1026560 'char'
+|-TypedefDecl 0x7fdaf10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdaf1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdaf1026ee0 'struct __va_list_tag'
+|     `-Record 0x7fdaf1026e58 '__va_list_tag'
+|-RecordDecl 0x7fdaf1027120 <c_files/pr65067.c:5:1, line:15:1> line:5:8 struct tmp definition
+| |-FieldDecl 0x7fdaf1825a00 <line:6:2, col:15> col:15 dummy 'unsigned int'
+| |-RecordDecl 0x7fdaf1825a48 <line:7:2, line:14:2> line:7:2 union definition
+| | |-RecordDecl 0x7fdaf1825af0 <line:8:3, line:12:3> line:8:3 struct definition
+| | | |-FieldDecl 0x7fdaf1825bd8 <line:9:4, col:23> col:17 xyz 'unsigned int'
+| | | | `-IntegerLiteral 0x7fdaf1825ba0 <col:23> 'int' 1
+| | | |-FieldDecl 0x7fdaf1825c58 <line:10:4, col:23> col:17 referenced mode 'unsigned int'
+| | | | `-IntegerLiteral 0x7fdaf1825c20 <col:23> 'int' 3
+| | | `-FieldDecl 0x7fdaf1825cd8 <line:11:4, col:23> col:17 res 'unsigned int'
+| | |   `-IntegerLiteral 0x7fdaf1825ca0 <col:23> 'int' 28
+| | |-FieldDecl 0x7fdaf1825d70 <line:8:3, line:12:5> col:5 referenced bf 'struct (anonymous struct at c_files/pr65067.c:8:3)':'struct tmp::(anonymous at c_files/pr65067.c:8:3)'
+| | `-FieldDecl 0x7fdaf1825dd0 <line:13:3, col:16> col:16 wordval 'unsigned int'
+| `-FieldDecl 0x7fdaf1825ec0 <line:7:2, line:14:4> col:4 referenced reg 'union (anonymous union at c_files/pr65067.c:7:2)':'union tmp::(anonymous at c_files/pr65067.c:7:2)'
+`-FunctionDecl 0x7fdaf1825fe0 <line:17:1, line:21:1> line:17:6 set_mode 'void (int)'
+  |-ParmVarDecl 0x7fdaf1825f20 <col:15, col:19> col:19 used mode 'int'
+  `-CompoundStmt 0x7fdaf1826430 <line:18:1, line:21:1>
+    |-DeclStmt 0x7fdaf18262b0 <line:19:2, col:48>
+    | `-VarDecl 0x7fdaf1826170 <col:2, col:42> col:23 used t 'volatile struct tmp *' cinit
+    |   `-ImplicitCastExpr 0x7fdaf1826298 <col:27, col:42> 'volatile struct tmp *' <BitCast>
+    |     `-CStyleCastExpr 0x7fdaf1826270 <col:27, col:42> 'struct tmp *' <IntegralToPointer>
+    |       `-IntegerLiteral 0x7fdaf18261d0 <col:42> 'int' 4096
+    `-BinaryOperator 0x7fdaf1826408 <line:20:2, col:19> 'unsigned int' '='
+      |-MemberExpr 0x7fdaf1826378 <col:2, col:12> 'volatile unsigned int' lvalue bitfield .mode 0x7fdaf1825c58
+      | `-MemberExpr 0x7fdaf1826340 <col:2, col:9> 'volatile struct (anonymous struct at c_files/pr65067.c:8:3)':'volatile struct tmp::(anonymous at c_files/pr65067.c:8:3)' lvalue .bf 0x7fdaf1825d70
+      |   `-MemberExpr 0x7fdaf1826308 <col:2, col:5> 'volatile union (anonymous union at c_files/pr65067.c:7:2)':'volatile union tmp::(anonymous at c_files/pr65067.c:7:2)' lvalue ->reg 0x7fdaf1825ec0
+      |     `-ImplicitCastExpr 0x7fdaf18262f0 <col:2> 'volatile struct tmp *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fdaf18262c8 <col:2> 'volatile struct tmp *' lvalue Var 0x7fdaf1826170 't' 'volatile struct tmp *'
+      `-ImplicitCastExpr 0x7fdaf18263f0 <col:19> 'unsigned int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fdaf18263d8 <col:19> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fdaf18263b0 <col:19> 'int' lvalue ParmVar 0x7fdaf1825f20 'mode' 'int'

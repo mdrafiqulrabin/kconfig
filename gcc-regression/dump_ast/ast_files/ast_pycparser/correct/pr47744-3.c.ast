@@ -1,0 +1,323 @@
+FileAST: 
+  Typedef: rtunion, [], ['typedef']
+    TypeDecl: rtunion, []
+      Union: rtunion_def
+        Decl: rtx, [], [], []
+          PtrDecl: []
+            TypeDecl: rtx, []
+              Struct: rtx_def
+  Typedef: rtx, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: rtx, []
+        Struct: rtx_def
+          Decl: code, [], [], []
+            TypeDecl: code, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: fld, [], [], []
+            ArrayDecl: []
+              TypeDecl: fld, []
+                IdentifierType: ['rtunion']
+              Constant: int, 1
+  Decl: recog_operand, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: recog_operand, []
+        IdentifierType: ['rtx']
+  Decl: recog_operand_loc, [], ['extern'], []
+    ArrayDecl: []
+      PtrDecl: []
+        TypeDecl: recog_operand_loc, []
+          IdentifierType: ['rtx']
+  Decl: reload_n_operands, [], ['extern'], []
+    TypeDecl: reload_n_operands, []
+      IdentifierType: ['int']
+  Decl: find_dummy_reload, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: find_dummy_reload, []
+        IdentifierType: ['void']
+  Decl: asm_noperands, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['rtx']
+      TypeDecl: asm_noperands, []
+        IdentifierType: ['int']
+  Decl: n_occurrences, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['char']
+      TypeDecl: n_occurrences, []
+        IdentifierType: ['int']
+  Decl: operands_match, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: operands_match, []
+          IdentifierType: ['char']
+        Constant: int, 10
+      Constant: int, 10
+  FuncDef: 
+    Decl: find_reloads, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: insn, [], [], []
+            TypeDecl: insn, []
+              IdentifierType: ['rtx']
+          Decl: n_alternatives, [], [], []
+            TypeDecl: n_alternatives, []
+              IdentifierType: ['int']
+          Decl: commutative, [], [], []
+            TypeDecl: commutative, []
+              IdentifierType: ['int']
+        TypeDecl: find_reloads, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], ['register'], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], ['register'], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: noperands, [], [], []
+        TypeDecl: noperands, []
+          IdentifierType: ['int']
+      Decl: constraints, [], [], []
+        ArrayDecl: []
+          PtrDecl: []
+            TypeDecl: constraints, []
+              IdentifierType: ['char']
+          Constant: int, 10
+      Decl: address_reloaded, [], [], []
+        ArrayDecl: []
+          TypeDecl: address_reloaded, []
+            IdentifierType: ['int']
+          Constant: int, 10
+      Decl: this_alternative, [], [], []
+        ArrayDecl: []
+          TypeDecl: this_alternative, []
+            IdentifierType: ['int']
+          Constant: int, 10
+      Decl: this_alternative_win, [], [], []
+        ArrayDecl: []
+          TypeDecl: this_alternative_win, []
+            IdentifierType: ['char']
+          Constant: int, 10
+      Decl: this_alternative_matches, [], [], []
+        ArrayDecl: []
+          TypeDecl: this_alternative_matches, []
+            IdentifierType: ['int']
+          Constant: int, 10
+      Decl: this_alternative_number, [], [], []
+        TypeDecl: this_alternative_number, []
+          IdentifierType: ['int']
+      Decl: body, [], [], []
+        TypeDecl: body, []
+          IdentifierType: ['rtx']
+        StructRef: .
+          ArrayRef: 
+            StructRef: ->
+              ID: insn
+              ID: fld
+            Constant: int, 3
+          ID: rtx
+      Decl: operand_mode, [], [], []
+        ArrayDecl: []
+          TypeDecl: operand_mode, []
+            IdentifierType: ['int']
+          Constant: int, 10
+      If: 
+        BinaryOp: ==
+          StructRef: ->
+            ID: body
+            ID: code
+          Constant: int, 1
+        Compound: 
+          Assignment: =
+            ID: reload_n_operands
+            Assignment: =
+              ID: noperands
+              FuncCall: 
+                ID: asm_noperands
+                ExprList: 
+                  ID: body
+          Assignment: =
+            ID: n_alternatives
+            FuncCall: 
+              ID: n_occurrences
+              ExprList: 
+                ID: constraints
+      For: 
+        Assignment: =
+          ID: this_alternative_number
+          Constant: int, 0
+        BinaryOp: <
+          ID: this_alternative_number
+          ID: n_alternatives
+        UnaryOp: p++
+          ID: this_alternative_number
+        For: 
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          BinaryOp: <
+            ID: i
+            ID: noperands
+          UnaryOp: p++
+            ID: i
+          Compound: 
+            Decl: p, [], ['register'], []
+              PtrDecl: []
+                TypeDecl: p, []
+                  IdentifierType: ['char']
+              ArrayRef: 
+                ID: constraints
+                ID: i
+            Decl: win, [], ['register'], []
+              TypeDecl: win, []
+                IdentifierType: ['int']
+              Constant: int, 0
+            Decl: badop, [], [], []
+              TypeDecl: badop, []
+                IdentifierType: ['int']
+              Constant: int, 1
+            Decl: c, [], [], []
+              TypeDecl: c, []
+                IdentifierType: ['int']
+            Decl: operand, [], ['register'], []
+              TypeDecl: operand, []
+                IdentifierType: ['rtx']
+              ArrayRef: 
+                ID: recog_operand
+                ID: i
+            Decl: force_reload, [], [], []
+              TypeDecl: force_reload, []
+                IdentifierType: ['int']
+              Constant: int, 0
+            Assignment: =
+              ArrayRef: 
+                ID: this_alternative_win
+                ID: i
+              Constant: int, 0
+            Assignment: =
+              ArrayRef: 
+                ID: this_alternative
+                ID: i
+              Constant: int, 1
+            While: 
+              BinaryOp: &&
+                UnaryOp: *
+                  ID: p
+                BinaryOp: !=
+                  Assignment: =
+                    ID: c
+                    UnaryOp: *
+                      UnaryOp: p++
+                        ID: p
+                  Constant: char, ','
+              Switch: 
+                ID: c
+                Compound: 
+                  Case: 
+                    Constant: char, '4'
+                    Assignment: -=
+                      ID: c
+                      Constant: char, '0'
+                    Assignment: =
+                      ArrayRef: 
+                        ID: this_alternative_matches
+                        ID: i
+                      ID: c
+                    If: 
+                      BinaryOp: &&
+                        BinaryOp: ||
+                          BinaryOp: !=
+                            ID: c
+                            ID: commutative
+                          BinaryOp: !=
+                            ID: i
+                            BinaryOp: +
+                              ID: commutative
+                              Constant: int, 1
+                        ArrayRef: 
+                          ArrayRef: 
+                            ID: operands_match
+                            ID: c
+                          ID: i
+                      Assignment: =
+                        ID: win
+                        ArrayRef: 
+                          ID: this_alternative_win
+                          ID: c
+                      FuncCall: 
+                        ID: find_dummy_reload
+                        ExprList: 
+                          ArrayRef: 
+                            ID: operand_mode
+                            ID: i
+                          ArrayRef: 
+                            ID: this_alternative
+                            ID: c
+                    If: 
+                      BinaryOp: ||
+                        UnaryOp: !
+                          ID: win
+                        ID: force_reload
+                      For: 
+                        Assignment: =
+                          ID: j
+                          Constant: int, 0
+                        BinaryOp: <
+                          ID: j
+                          ID: i
+                        UnaryOp: p++
+                          ID: j
+                        If: 
+                          BinaryOp: ==
+                            ArrayRef: 
+                              ID: this_alternative_matches
+                              ID: j
+                            ArrayRef: 
+                              ID: this_alternative_matches
+                              ID: i
+                          Assignment: =
+                            ID: badop
+                            Constant: int, 1
+                    Break: 
+                  Case: 
+                    Constant: char, '<'
+                    If: 
+                      BinaryOp: &&
+                        BinaryOp: &&
+                          BinaryOp: ==
+                            StructRef: ->
+                              ID: operand
+                              ID: code
+                            Constant: int, 2
+                          UnaryOp: !
+                            ArrayRef: 
+                              ID: address_reloaded
+                              ID: i
+                        BinaryOp: ==
+                          StructRef: ->
+                            StructRef: .
+                              ArrayRef: 
+                                StructRef: ->
+                                  ID: operand
+                                  ID: fld
+                                Constant: int, 0
+                              ID: rtx
+                            ID: code
+                          Constant: int, 3
+                      Assignment: =
+                        ID: win
+                        Constant: int, 1

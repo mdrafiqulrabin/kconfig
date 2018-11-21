@@ -1,0 +1,101 @@
+c_files/pr52693.c:17:31: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+void __attribute__ ((noinline,noclone))
+                              ^
+1 warning generated.
+TranslationUnitDecl 0x7ff70d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff70d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff70d026740 '__int128'
+|-TypedefDecl 0x7ff70d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff70d026760 'unsigned __int128'
+|-TypedefDecl 0x7ff70d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff70d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff70d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff70d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff70d026dc0 'char *'
+|   `-BuiltinType 0x7ff70d026560 'char'
+|-TypedefDecl 0x7ff70d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff70d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff70d026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff70d026e58 '__va_list_tag'
+|-RecordDecl 0x7ff70d027120 <c_files/pr52693.c:3:1, line:7:1> line:3:8 struct pair definition
+| |-FieldDecl 0x7ff70d077400 <line:5:3, col:7> col:7 referenced x 'int'
+| `-FieldDecl 0x7ff70d077460 <line:6:3, col:7> col:7 referenced y 'int'
+|-RecordDecl 0x7ff70d0774a8 <line:9:1, line:13:1> line:9:8 struct array definition
+| |-FieldDecl 0x7ff70d077698 <line:11:3, col:24> col:15 referenced elems 'struct pair [2]'
+| `-FieldDecl 0x7ff70d0776f8 <line:12:3, col:12> col:12 referenced index 'unsigned int'
+|-FunctionDecl 0x7ff70d0777c0 <line:15:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff70d077858 prev 0x7ff70d0777c0 <col:1, col:20> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff70d077b90 <line:17:1, line:22:1> line:18:1 used test_results 'void (int, int, int, int)'
+| |-ParmVarDecl 0x7ff70d077930 <col:15, col:19> col:19 used x1 'int'
+| |-ParmVarDecl 0x7ff70d0779a8 <col:23, col:27> col:27 used y1 'int'
+| |-ParmVarDecl 0x7ff70d077a20 <col:31, col:35> col:35 used x2 'int'
+| |-ParmVarDecl 0x7ff70d077a98 <col:39, col:43> col:43 used y2 'int'
+| |-CompoundStmt 0x7ff70d077f10 <line:19:1, line:22:1>
+| | `-IfStmt 0x7ff70d077ed8 <line:20:3, line:21:12>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7ff70d077e20 <line:20:7, col:25> 'int' '||'
+| |   | |-BinaryOperator 0x7ff70d077d50 <col:7, col:13> 'int' '!='
+| |   | | |-ImplicitCastExpr 0x7ff70d077d20 <col:7> 'int' <LValueToRValue>
+| |   | | | `-DeclRefExpr 0x7ff70d077cd0 <col:7> 'int' lvalue ParmVar 0x7ff70d077930 'x1' 'int'
+| |   | | `-ImplicitCastExpr 0x7ff70d077d38 <col:13> 'int' <LValueToRValue>
+| |   | |   `-DeclRefExpr 0x7ff70d077cf8 <col:13> 'int' lvalue ParmVar 0x7ff70d077a20 'x2' 'int'
+| |   | `-BinaryOperator 0x7ff70d077df8 <col:19, col:25> 'int' '!='
+| |   |   |-ImplicitCastExpr 0x7ff70d077dc8 <col:19> 'int' <LValueToRValue>
+| |   |   | `-DeclRefExpr 0x7ff70d077d78 <col:19> 'int' lvalue ParmVar 0x7ff70d0779a8 'y1' 'int'
+| |   |   `-ImplicitCastExpr 0x7ff70d077de0 <col:25> 'int' <LValueToRValue>
+| |   |     `-DeclRefExpr 0x7ff70d077da0 <col:25> 'int' lvalue ParmVar 0x7ff70d077a98 'y2' 'int'
+| |   |-CallExpr 0x7ff70d077eb0 <line:21:5, col:12> 'void'
+| |   | `-ImplicitCastExpr 0x7ff70d077e98 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   |   `-DeclRefExpr 0x7ff70d077e48 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff70d077858 'abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7ff70d077c48 <line:17:22>
+`-FunctionDecl 0x7ff70d077ff8 <line:24:1, line:33:1> line:25:1 main 'int (void)'
+  `-CompoundStmt 0x7ff70d079b40 <line:26:1, line:33:1>
+    |-DeclStmt 0x7ff70d0794b8 <line:27:3, col:41>
+    | `-VarDecl 0x7ff70d078110 <col:3, col:40> col:16 used arr 'struct array':'struct array' cinit
+    |   `-InitListExpr 0x7ff70d078350 <col:22, col:40> 'struct array':'struct array'
+    |     |-InitListExpr 0x7ff70d0783a0 <col:23, col:36> 'struct pair [2]'
+    |     | |-InitListExpr 0x7ff70d079400 <col:24, col:28> 'struct pair':'struct pair'
+    |     | | |-IntegerLiteral 0x7ff70d078170 <col:25> 'int' 1
+    |     | | `-IntegerLiteral 0x7ff70d078190 <col:27> 'int' 2
+    |     | `-InitListExpr 0x7ff70d079450 <col:31, col:35> 'struct pair':'struct pair'
+    |     |   |-IntegerLiteral 0x7ff70d078200 <col:32> 'int' 3
+    |     |   `-IntegerLiteral 0x7ff70d078220 <col:34> 'int' 4
+    |     `-ImplicitCastExpr 0x7ff70d0794a0 <col:39> 'unsigned int' <IntegralCast>
+    |       `-IntegerLiteral 0x7ff70d0782e0 <col:39> 'int' 1
+    |-DeclStmt 0x7ff70d079728 <line:28:3, col:42>
+    | `-VarDecl 0x7ff70d0794f0 <col:3, col:41> col:15 used last 'struct pair':'struct pair' cinit
+    |   `-ImplicitCastExpr 0x7ff70d0796c0 <col:22, col:41> 'struct pair':'struct pair' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7ff70d079698 <col:22, col:41> 'struct pair':'struct pair' lvalue
+    |       |-ImplicitCastExpr 0x7ff70d079668 <col:22, col:26> 'struct pair *' <ArrayToPointerDecay>
+    |       | `-MemberExpr 0x7ff70d079578 <col:22, col:26> 'struct pair [2]' lvalue .elems 0x7ff70d077698
+    |       |   `-DeclRefExpr 0x7ff70d079550 <col:22> 'struct array':'struct array' lvalue Var 0x7ff70d078110 'arr' 'struct array':'struct array'
+    |       `-ImplicitCastExpr 0x7ff70d079680 <col:32, col:36> 'unsigned int' <LValueToRValue>
+    |         `-MemberExpr 0x7ff70d0795d8 <col:32, col:36> 'unsigned int' lvalue .index 0x7ff70d0776f8
+    |           `-DeclRefExpr 0x7ff70d0795b0 <col:32> 'struct array':'struct array' lvalue Var 0x7ff70d078110 'arr' 'struct array':'struct array'
+    |-CallExpr 0x7ff70d079a60 <line:30:3, col:64> 'void'
+    | |-ImplicitCastExpr 0x7ff70d079a48 <col:3> 'void (*)(int, int, int, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff70d079740 <col:3> 'void (int, int, int, int)' Function 0x7ff70d077b90 'test_results' 'void (int, int, int, int)'
+    | |-ImplicitCastExpr 0x7ff70d079aa8 <col:18, col:23> 'int' <LValueToRValue>
+    | | `-MemberExpr 0x7ff70d079790 <col:18, col:23> 'int' lvalue .x 0x7ff70d077400
+    | |   `-DeclRefExpr 0x7ff70d079768 <col:18> 'struct pair':'struct pair' lvalue Var 0x7ff70d0794f0 'last' 'struct pair':'struct pair'
+    | |-ImplicitCastExpr 0x7ff70d079ac0 <col:26, col:31> 'int' <LValueToRValue>
+    | | `-MemberExpr 0x7ff70d0797f0 <col:26, col:31> 'int' lvalue .y 0x7ff70d077460
+    | |   `-DeclRefExpr 0x7ff70d0797c8 <col:26> 'struct pair':'struct pair' lvalue Var 0x7ff70d0794f0 'last' 'struct pair':'struct pair'
+    | |-ImplicitCastExpr 0x7ff70d079ad8 <col:34, col:47> 'int' <LValueToRValue>
+    | | `-MemberExpr 0x7ff70d0798e8 <col:34, col:47> 'int' lvalue .x 0x7ff70d077400
+    | |   `-ArraySubscriptExpr 0x7ff70d0798c0 <col:34, col:45> 'struct pair':'struct pair' lvalue
+    | |     |-ImplicitCastExpr 0x7ff70d0798a8 <col:34, col:38> 'struct pair *' <ArrayToPointerDecay>
+    | |     | `-MemberExpr 0x7ff70d079850 <col:34, col:38> 'struct pair [2]' lvalue .elems 0x7ff70d077698
+    | |     |   `-DeclRefExpr 0x7ff70d079828 <col:34> 'struct array':'struct array' lvalue Var 0x7ff70d078110 'arr' 'struct array':'struct array'
+    | |     `-IntegerLiteral 0x7ff70d079888 <col:44> 'int' 1
+    | `-ImplicitCastExpr 0x7ff70d079af0 <col:50, col:63> 'int' <LValueToRValue>
+    |   `-MemberExpr 0x7ff70d0799e0 <col:50, col:63> 'int' lvalue .y 0x7ff70d077460
+    |     `-ArraySubscriptExpr 0x7ff70d0799b8 <col:50, col:61> 'struct pair':'struct pair' lvalue
+    |       |-ImplicitCastExpr 0x7ff70d0799a0 <col:50, col:54> 'struct pair *' <ArrayToPointerDecay>
+    |       | `-MemberExpr 0x7ff70d079948 <col:50, col:54> 'struct pair [2]' lvalue .elems 0x7ff70d077698
+    |       |   `-DeclRefExpr 0x7ff70d079920 <col:50> 'struct array':'struct array' lvalue Var 0x7ff70d078110 'arr' 'struct array':'struct array'
+    |       `-IntegerLiteral 0x7ff70d079980 <col:60> 'int' 1
+    `-ReturnStmt 0x7ff70d079b28 <line:32:3, col:10>
+      `-IntegerLiteral 0x7ff70d079b08 <col:10> 'int' 0

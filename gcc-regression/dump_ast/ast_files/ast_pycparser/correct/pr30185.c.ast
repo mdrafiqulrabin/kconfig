@@ -1,0 +1,111 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Typedef: S, [], ['typedef']
+    TypeDecl: S, []
+      Struct: S
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['long', 'long']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['S']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['S']
+        TypeDecl: foo, []
+          IdentifierType: ['S']
+    Compound: 
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['S']
+      Assignment: =
+        StructRef: .
+          ID: z
+          ID: b
+        BinaryOp: /
+          StructRef: .
+            ID: x
+            ID: b
+          StructRef: .
+            ID: y
+            ID: b
+      Return: 
+        ID: z
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['S']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['S']
+      Assignment: =
+        StructRef: .
+          ID: a
+          ID: b
+        Constant: int, 32LL
+      Assignment: =
+        StructRef: .
+          ID: b
+          ID: b
+        Constant: int, 4LL
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                ID: a
+                ID: b
+            ID: b
+          Constant: int, 8LL
+        FuncCall: 
+          ID: abort
+      Assignment: =
+        StructRef: .
+          ID: a
+          ID: b
+        UnaryOp: -
+          Constant: int, 8LL
+      Assignment: =
+        StructRef: .
+          ID: b
+          ID: b
+        UnaryOp: -
+          Constant: int, 2LL
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                ID: a
+                ID: b
+            ID: b
+          Constant: int, 4LL
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

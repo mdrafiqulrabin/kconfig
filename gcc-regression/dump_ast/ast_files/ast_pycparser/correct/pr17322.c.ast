@@ -1,0 +1,29 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: s
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+          Constant: int, 1
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      Struct: s
+  Decl: y, [], [], []
+    PtrDecl: []
+      TypeDecl: y, []
+        IdentifierType: ['int']
+    StructRef: ->
+      Cast: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: s
+        UnaryOp: &
+          StructRef: .
+            ID: x
+            ID: a
+      ID: b

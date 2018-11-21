@@ -1,0 +1,89 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: st_a
+      Decl: data, [], [], []
+        TypeDecl: data, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: st_b
+      Decl: p_a, [], [], []
+        PtrDecl: []
+          TypeDecl: p_a, []
+            Struct: st_a
+      Decl: next, [], [], []
+        PtrDecl: []
+          TypeDecl: next, []
+            Struct: st_b
+  Decl: gObj, [], ['extern'], []
+    TypeDecl: gObj, []
+      Struct: st_b
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: st_b
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: goo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: obj, [], [], []
+            PtrDecl: []
+              TypeDecl: obj, []
+                Struct: st_b
+        TypeDecl: goo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: pa, [], [], []
+        PtrDecl: []
+          TypeDecl: pa, []
+            Struct: st_a
+      If: 
+        BinaryOp: !=
+          StructRef: ->
+            StructRef: .
+              ID: gObj
+              ID: p_a
+            ID: data
+          Constant: int, 0
+        Compound: 
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              StructRef: ->
+                StructRef: .
+                  ID: gObj
+                  ID: p_a
+                ID: data
+              ID: obj
+      Assignment: =
+        ID: pa
+        StructRef: ->
+          ID: obj
+          ID: p_a
+      If: 
+        BinaryOp: ==
+          ID: pa
+          Constant: int, 0
+        Compound: 
+          Return: 
+            Constant: int, 0
+        If: 
+          BinaryOp: ==
+            ID: pa
+            StructRef: .
+              ID: gObj
+              ID: p_a
+          Compound: 
+            Return: 
+              Constant: int, 0
+      Return: 
+        StructRef: ->
+          ID: pa
+          ID: data

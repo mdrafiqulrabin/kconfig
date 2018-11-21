@@ -1,0 +1,18 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_pow
+          ExprList: 
+            Constant: float, 0.0
+            UnaryOp: -
+              Constant: float, 1.5

@@ -1,0 +1,387 @@
+c_files/pr35635.c:48:24: warning: implicit conversion from 'double' to 'signed char' changes value from 2.1 to 2 [-Wliteral-conversion]
+  schar_x = bar != 0 ? 2.1 : 10; /* { dg-warning "conversion" } */
+          ~            ^~~
+c_files/pr35635.c:49:44: warning: implicit conversion from 'int' to 'signed char' changes value from -1024 to 0 [-Wconstant-conversion]
+  schar_x = bar != 0 ? (signed char) 1024: -1024; /* { dg-warning "conversion" } */
+          ~                                ^~~~~
+c_files/pr35635.c:64:24: warning: implicit conversion from 'double' to 'unsigned char' changes value from 2.1 to 2 [-Wliteral-conversion]
+  uchar_x = bar != 0 ? 2.1 : 10; /* { dg-warning "conversion" } */
+          ~            ^~~
+3 warnings generated.
+TranslationUnitDecl 0x7fd9a68264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd9a6826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd9a6826740 '__int128'
+|-TypedefDecl 0x7fd9a6826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd9a6826760 'unsigned __int128'
+|-TypedefDecl 0x7fd9a6826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd9a6826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd9a6826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd9a6826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd9a6826dc0 'char *'
+|   `-BuiltinType 0x7fd9a6826560 'char'
+|-TypedefDecl 0x7fd9a68270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd9a6827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd9a6826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd9a6826e58 '__va_list_tag'
+|-RecordDecl 0x7fd9a6827120 <c_files/pr35635.c:5:1, line:7:1> line:5:8 struct unsigned_bit definition
+| `-FieldDecl 0x7fd9a7025a18 <line:6:3, col:18> col:16 referenced x 'unsigned int'
+|   `-IntegerLiteral 0x7fd9a68271d0 <col:18> 'int' 1
+|-VarDecl 0x7fd9a7025ab0 <line:5:1, line:7:3> col:3 used unsigned_bit 'struct unsigned_bit':'struct unsigned_bit'
+|-RecordDecl 0x7fd9a7025b68 <line:8:1, line:10:1> line:8:8 struct signed_bit definition
+| `-FieldDecl 0x7fd9a7025c48 <line:9:3, col:9> col:7 referenced x 'int'
+|   `-IntegerLiteral 0x7fd9a7025c10 <col:9> 'int' 1
+|-VarDecl 0x7fd9a7025ce0 <line:8:1, line:10:3> col:3 used signed_bit 'struct signed_bit':'struct signed_bit'
+|-VarDecl 0x7fd9a7025d70 <line:11:1, col:5> col:5 used bar 'int'
+|-VarDecl 0x7fd9a7025de8 <line:12:1, col:5> col:5 used bar2 'int'
+|-FunctionDecl 0x7fd9a7025e98 <line:14:1, line:36:1> line:14:6 func1 'void ()'
+| `-CompoundStmt 0x7fd9a702c388 <line:15:1, line:36:1>
+|   |-BinaryOperator 0x7fd9a7026050 <line:18:3, col:29> 'unsigned int' '='
+|   | |-MemberExpr 0x7fd9a7025f58 <col:3, col:16> 'unsigned int' lvalue bitfield .x 0x7fd9a7025a18
+|   | | `-DeclRefExpr 0x7fd9a7025f30 <col:3> 'struct unsigned_bit':'struct unsigned_bit' lvalue Var 0x7fd9a7025ab0 'unsigned_bit' 'struct unsigned_bit':'struct unsigned_bit'
+|   | `-ImplicitCastExpr 0x7fd9a7026038 <col:20, col:29> 'unsigned int' <IntegralCast>
+|   |   `-ParenExpr 0x7fd9a7026018 <col:20, col:29> 'int'
+|   |     `-BinaryOperator 0x7fd9a7025ff0 <col:21, col:28> 'int' '!='
+|   |       |-ImplicitCastExpr 0x7fd9a7025fd8 <col:21> 'int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fd9a7025f90 <col:21> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |       `-IntegerLiteral 0x7fd9a7025fb8 <col:28> 'int' 0
+|   |-BinaryOperator 0x7fd9a70261e0 <line:19:3, col:29> 'unsigned int' '='
+|   | |-MemberExpr 0x7fd9a70260e8 <col:3, col:16> 'unsigned int' lvalue bitfield .x 0x7fd9a7025a18
+|   | | `-DeclRefExpr 0x7fd9a70260c0 <col:3> 'struct unsigned_bit':'struct unsigned_bit' lvalue Var 0x7fd9a7025ab0 'unsigned_bit' 'struct unsigned_bit':'struct unsigned_bit'
+|   | `-ImplicitCastExpr 0x7fd9a70261c8 <col:20, col:29> 'unsigned int' <IntegralCast>
+|   |   `-ParenExpr 0x7fd9a70261a8 <col:20, col:29> 'int'
+|   |     `-BinaryOperator 0x7fd9a7026180 <col:21, col:28> 'int' '=='
+|   |       |-ImplicitCastExpr 0x7fd9a7026168 <col:21> 'int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fd9a7026120 <col:21> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |       `-IntegerLiteral 0x7fd9a7026148 <col:28> 'int' 0
+|   |-BinaryOperator 0x7fd9a7026328 <line:20:3, col:29> 'unsigned int' '='
+|   | |-MemberExpr 0x7fd9a7026230 <col:3, col:16> 'unsigned int' lvalue bitfield .x 0x7fd9a7025a18
+|   | | `-DeclRefExpr 0x7fd9a7026208 <col:3> 'struct unsigned_bit':'struct unsigned_bit' lvalue Var 0x7fd9a7025ab0 'unsigned_bit' 'struct unsigned_bit':'struct unsigned_bit'
+|   | `-ImplicitCastExpr 0x7fd9a7026310 <col:20, col:29> 'unsigned int' <IntegralCast>
+|   |   `-ParenExpr 0x7fd9a70262f0 <col:20, col:29> 'int'
+|   |     `-BinaryOperator 0x7fd9a70262c8 <col:21, col:28> 'int' '<='
+|   |       |-ImplicitCastExpr 0x7fd9a70262b0 <col:21> 'int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fd9a7026268 <col:21> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |       `-IntegerLiteral 0x7fd9a7026290 <col:28> 'int' 0
+|   |-BinaryOperator 0x7fd9a7026470 <line:21:3, col:29> 'unsigned int' '='
+|   | |-MemberExpr 0x7fd9a7026378 <col:3, col:16> 'unsigned int' lvalue bitfield .x 0x7fd9a7025a18
+|   | | `-DeclRefExpr 0x7fd9a7026350 <col:3> 'struct unsigned_bit':'struct unsigned_bit' lvalue Var 0x7fd9a7025ab0 'unsigned_bit' 'struct unsigned_bit':'struct unsigned_bit'
+|   | `-ImplicitCastExpr 0x7fd9a7026458 <col:20, col:29> 'unsigned int' <IntegralCast>
+|   |   `-ParenExpr 0x7fd9a7026438 <col:20, col:29> 'int'
+|   |     `-BinaryOperator 0x7fd9a7026410 <col:21, col:28> 'int' '>='
+|   |       |-ImplicitCastExpr 0x7fd9a70263f8 <col:21> 'int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fd9a70263b0 <col:21> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |       `-IntegerLiteral 0x7fd9a70263d8 <col:28> 'int' 0
+|   |-BinaryOperator 0x7fd9a70265b8 <line:22:3, col:28> 'unsigned int' '='
+|   | |-MemberExpr 0x7fd9a70264c0 <col:3, col:16> 'unsigned int' lvalue bitfield .x 0x7fd9a7025a18
+|   | | `-DeclRefExpr 0x7fd9a7026498 <col:3> 'struct unsigned_bit':'struct unsigned_bit' lvalue Var 0x7fd9a7025ab0 'unsigned_bit' 'struct unsigned_bit':'struct unsigned_bit'
+|   | `-ImplicitCastExpr 0x7fd9a70265a0 <col:20, col:28> 'unsigned int' <IntegralCast>
+|   |   `-ParenExpr 0x7fd9a7026580 <col:20, col:28> 'int'
+|   |     `-BinaryOperator 0x7fd9a7026558 <col:21, col:27> 'int' '<'
+|   |       |-ImplicitCastExpr 0x7fd9a7026540 <col:21> 'int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fd9a70264f8 <col:21> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |       `-IntegerLiteral 0x7fd9a7026520 <col:27> 'int' 0
+|   |-BinaryOperator 0x7fd9a7026700 <line:23:3, col:28> 'unsigned int' '='
+|   | |-MemberExpr 0x7fd9a7026608 <col:3, col:16> 'unsigned int' lvalue bitfield .x 0x7fd9a7025a18
+|   | | `-DeclRefExpr 0x7fd9a70265e0 <col:3> 'struct unsigned_bit':'struct unsigned_bit' lvalue Var 0x7fd9a7025ab0 'unsigned_bit' 'struct unsigned_bit':'struct unsigned_bit'
+|   | `-ImplicitCastExpr 0x7fd9a70266e8 <col:20, col:28> 'unsigned int' <IntegralCast>
+|   |   `-ParenExpr 0x7fd9a70266c8 <col:20, col:28> 'int'
+|   |     `-BinaryOperator 0x7fd9a70266a0 <col:21, col:27> 'int' '>'
+|   |       |-ImplicitCastExpr 0x7fd9a7026688 <col:21> 'int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fd9a7026640 <col:21> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |       `-IntegerLiteral 0x7fd9a7026668 <col:27> 'int' 0
+|   |-BinaryOperator 0x7fd9a7026800 <line:24:3, col:21> 'unsigned int' '='
+|   | |-MemberExpr 0x7fd9a7026750 <col:3, col:16> 'unsigned int' lvalue bitfield .x 0x7fd9a7025a18
+|   | | `-DeclRefExpr 0x7fd9a7026728 <col:3> 'struct unsigned_bit':'struct unsigned_bit' lvalue Var 0x7fd9a7025ab0 'unsigned_bit' 'struct unsigned_bit':'struct unsigned_bit'
+|   | `-ImplicitCastExpr 0x7fd9a70267e8 <col:20, col:21> 'unsigned int' <IntegralCast>
+|   |   `-UnaryOperator 0x7fd9a70267c8 <col:20, col:21> 'int' prefix '!'
+|   |     `-ImplicitCastExpr 0x7fd9a70267b0 <col:21> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd9a7026788 <col:21> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |-BinaryOperator 0x7fd9a7026968 <line:25:3, col:32> 'unsigned int' '='
+|   | |-MemberExpr 0x7fd9a7026850 <col:3, col:16> 'unsigned int' lvalue bitfield .x 0x7fd9a7025a18
+|   | | `-DeclRefExpr 0x7fd9a7026828 <col:3> 'struct unsigned_bit':'struct unsigned_bit' lvalue Var 0x7fd9a7025ab0 'unsigned_bit' 'struct unsigned_bit':'struct unsigned_bit'
+|   | `-ImplicitCastExpr 0x7fd9a7026950 <col:20, col:32> 'unsigned int' <IntegralCast>
+|   |   `-ParenExpr 0x7fd9a7026930 <col:20, col:32> 'int'
+|   |     `-BinaryOperator 0x7fd9a7026908 <col:21, col:28> 'int' '||'
+|   |       |-ImplicitCastExpr 0x7fd9a70268d8 <col:21> 'int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fd9a7026888 <col:21> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |       `-ImplicitCastExpr 0x7fd9a70268f0 <col:28> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fd9a70268b0 <col:28> 'int' lvalue Var 0x7fd9a7025de8 'bar2' 'int'
+|   |-BinaryOperator 0x7fd9a702bce0 <line:26:3, col:32> 'unsigned int' '='
+|   | |-MemberExpr 0x7fd9a70269b8 <col:3, col:16> 'unsigned int' lvalue bitfield .x 0x7fd9a7025a18
+|   | | `-DeclRefExpr 0x7fd9a7026990 <col:3> 'struct unsigned_bit':'struct unsigned_bit' lvalue Var 0x7fd9a7025ab0 'unsigned_bit' 'struct unsigned_bit':'struct unsigned_bit'
+|   | `-ImplicitCastExpr 0x7fd9a702bcc8 <col:20, col:32> 'unsigned int' <IntegralCast>
+|   |   `-ParenExpr 0x7fd9a702bca8 <col:20, col:32> 'int'
+|   |     `-BinaryOperator 0x7fd9a702bc80 <col:21, col:28> 'int' '&&'
+|   |       |-ImplicitCastExpr 0x7fd9a702bc50 <col:21> 'int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fd9a702bc00 <col:21> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |       `-ImplicitCastExpr 0x7fd9a702bc68 <col:28> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fd9a702bc28 <col:28> 'int' lvalue Var 0x7fd9a7025de8 'bar2' 'int'
+|   |-BinaryOperator 0x7fd9a702be78 <line:29:3, col:35> 'unsigned int' '='
+|   | |-MemberExpr 0x7fd9a702bd30 <col:3, col:16> 'unsigned int' lvalue bitfield .x 0x7fd9a7025a18
+|   | | `-DeclRefExpr 0x7fd9a702bd08 <col:3> 'struct unsigned_bit':'struct unsigned_bit' lvalue Var 0x7fd9a7025ab0 'unsigned_bit' 'struct unsigned_bit':'struct unsigned_bit'
+|   | `-ImplicitCastExpr 0x7fd9a702be60 <col:20, col:35> 'unsigned int' <IntegralCast>
+|   |   `-ConditionalOperator 0x7fd9a702be30 <col:20, col:35> 'int'
+|   |     |-BinaryOperator 0x7fd9a702bdc8 <col:20, col:27> 'int' '!='
+|   |     | |-ImplicitCastExpr 0x7fd9a702bdb0 <col:20> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fd9a702bd68 <col:20> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |     | `-IntegerLiteral 0x7fd9a702bd90 <col:27> 'int' 0
+|   |     |-IntegerLiteral 0x7fd9a702bdf0 <col:31> 'int' 1
+|   |     `-IntegerLiteral 0x7fd9a702be10 <col:35> 'int' 0
+|   |-BinaryOperator 0x7fd9a702c010 <line:30:3, col:37> 'unsigned int' '='
+|   | |-MemberExpr 0x7fd9a702bec8 <col:3, col:16> 'unsigned int' lvalue bitfield .x 0x7fd9a7025a18
+|   | | `-DeclRefExpr 0x7fd9a702bea0 <col:3> 'struct unsigned_bit':'struct unsigned_bit' lvalue Var 0x7fd9a7025ab0 'unsigned_bit' 'struct unsigned_bit':'struct unsigned_bit'
+|   | `-ImplicitCastExpr 0x7fd9a702bff8 <col:20, col:37> 'unsigned int' <FloatingToIntegral>
+|   |   `-ConditionalOperator 0x7fd9a702bfc8 <col:20, col:37> 'double'
+|   |     |-BinaryOperator 0x7fd9a702bf60 <col:20, col:27> 'int' '!='
+|   |     | |-ImplicitCastExpr 0x7fd9a702bf48 <col:20> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fd9a702bf00 <col:20> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |     | `-IntegerLiteral 0x7fd9a702bf28 <col:27> 'int' 0
+|   |     |-FloatingLiteral 0x7fd9a702bf88 <col:31> 'double' 1.000000e+00
+|   |     `-FloatingLiteral 0x7fd9a702bfa8 <col:37> 'double' 0.000000e+00
+|   |-BinaryOperator 0x7fd9a702c1a8 <line:34:3, col:35> 'unsigned int' '='
+|   | |-MemberExpr 0x7fd9a702c060 <col:3, col:16> 'unsigned int' lvalue bitfield .x 0x7fd9a7025a18
+|   | | `-DeclRefExpr 0x7fd9a702c038 <col:3> 'struct unsigned_bit':'struct unsigned_bit' lvalue Var 0x7fd9a7025ab0 'unsigned_bit' 'struct unsigned_bit':'struct unsigned_bit'
+|   | `-ImplicitCastExpr 0x7fd9a702c190 <col:20, col:35> 'unsigned int' <IntegralCast>
+|   |   `-ConditionalOperator 0x7fd9a702c160 <col:20, col:35> 'int'
+|   |     |-BinaryOperator 0x7fd9a702c0f8 <col:20, col:27> 'int' '!='
+|   |     | |-ImplicitCastExpr 0x7fd9a702c0e0 <col:20> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fd9a702c098 <col:20> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |     | `-IntegerLiteral 0x7fd9a702c0c0 <col:27> 'int' 0
+|   |     |-IntegerLiteral 0x7fd9a702c120 <col:31> 'int' 2
+|   |     `-IntegerLiteral 0x7fd9a702c140 <col:35> 'int' 0
+|   `-BinaryOperator 0x7fd9a702c360 <line:35:3, col:36> 'unsigned int' '='
+|     |-MemberExpr 0x7fd9a702c1f8 <col:3, col:16> 'unsigned int' lvalue bitfield .x 0x7fd9a7025a18
+|     | `-DeclRefExpr 0x7fd9a702c1d0 <col:3> 'struct unsigned_bit':'struct unsigned_bit' lvalue Var 0x7fd9a7025ab0 'unsigned_bit' 'struct unsigned_bit':'struct unsigned_bit'
+|     `-ImplicitCastExpr 0x7fd9a702c348 <col:20, col:36> 'unsigned int' <IntegralCast>
+|       `-ConditionalOperator 0x7fd9a702c318 <col:20, col:36> 'int'
+|         |-BinaryOperator 0x7fd9a702c290 <col:20, col:27> 'int' '!='
+|         | |-ImplicitCastExpr 0x7fd9a702c278 <col:20> 'int' <LValueToRValue>
+|         | | `-DeclRefExpr 0x7fd9a702c230 <col:20> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|         | `-IntegerLiteral 0x7fd9a702c258 <col:27> 'int' 0
+|         |-IntegerLiteral 0x7fd9a702c2b8 <col:31> 'int' 0
+|         `-UnaryOperator 0x7fd9a702c2f8 <col:35, col:36> 'int' prefix '-'
+|           `-IntegerLiteral 0x7fd9a702c2d8 <col:36> 'int' 1
+|-FunctionDecl 0x7fd9a702c428 <line:38:1, line:50:1> line:38:6 func2 'void ()'
+| `-CompoundStmt 0x7fd9a702cf48 <line:39:1, line:50:1>
+|   |-DeclStmt 0x7fd9a702c538 <line:40:3, col:22>
+|   | `-VarDecl 0x7fd9a702c4d8 <col:3, col:15> col:15 used schar_x 'signed char'
+|   |-BinaryOperator 0x7fd9a702c688 <line:43:3, col:28> 'signed char' '='
+|   | |-DeclRefExpr 0x7fd9a702c550 <col:3> 'signed char' lvalue Var 0x7fd9a702c4d8 'schar_x' 'signed char'
+|   | `-ImplicitCastExpr 0x7fd9a702c670 <col:13, col:28> 'signed char' <IntegralCast>
+|   |   `-ConditionalOperator 0x7fd9a702c640 <col:13, col:28> 'int'
+|   |     |-BinaryOperator 0x7fd9a702c5d8 <col:13, col:20> 'int' '!='
+|   |     | |-ImplicitCastExpr 0x7fd9a702c5c0 <col:13> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fd9a702c578 <col:13> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |     | `-IntegerLiteral 0x7fd9a702c5a0 <col:20> 'int' 0
+|   |     |-IntegerLiteral 0x7fd9a702c600 <col:24> 'int' 1
+|   |     `-IntegerLiteral 0x7fd9a702c620 <col:28> 'int' 0
+|   |-BinaryOperator 0x7fd9a702c800 <line:44:3, col:30> 'signed char' '='
+|   | |-DeclRefExpr 0x7fd9a702c6b0 <col:3> 'signed char' lvalue Var 0x7fd9a702c4d8 'schar_x' 'signed char'
+|   | `-ImplicitCastExpr 0x7fd9a702c7e8 <col:13, col:30> 'signed char' <FloatingToIntegral>
+|   |   `-ConditionalOperator 0x7fd9a702c7b8 <col:13, col:30> 'double'
+|   |     |-BinaryOperator 0x7fd9a702c738 <col:13, col:20> 'int' '!='
+|   |     | |-ImplicitCastExpr 0x7fd9a702c720 <col:13> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fd9a702c6d8 <col:13> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |     | `-IntegerLiteral 0x7fd9a702c700 <col:20> 'int' 0
+|   |     |-FloatingLiteral 0x7fd9a702c760 <col:24> 'double' 2.000000e+00
+|   |     `-ImplicitCastExpr 0x7fd9a702c7a0 <col:30> 'double' <IntegralToFloating>
+|   |       `-IntegerLiteral 0x7fd9a702c780 <col:30> 'int' 10
+|   |-BinaryOperator 0x7fd9a702c978 <line:48:3, col:30> 'signed char' '='
+|   | |-DeclRefExpr 0x7fd9a702c828 <col:3> 'signed char' lvalue Var 0x7fd9a702c4d8 'schar_x' 'signed char'
+|   | `-ImplicitCastExpr 0x7fd9a702c960 <col:13, col:30> 'signed char' <FloatingToIntegral>
+|   |   `-ConditionalOperator 0x7fd9a702c930 <col:13, col:30> 'double'
+|   |     |-BinaryOperator 0x7fd9a702c8b0 <col:13, col:20> 'int' '!='
+|   |     | |-ImplicitCastExpr 0x7fd9a702c898 <col:13> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fd9a702c850 <col:13> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |     | `-IntegerLiteral 0x7fd9a702c878 <col:20> 'int' 0
+|   |     |-FloatingLiteral 0x7fd9a702c8d8 <col:24> 'double' 2.100000e+00
+|   |     `-ImplicitCastExpr 0x7fd9a702c918 <col:30> 'double' <IntegralToFloating>
+|   |       `-IntegerLiteral 0x7fd9a702c8f8 <col:30> 'int' 10
+|   `-BinaryOperator 0x7fd9a702cf20 <line:49:3, col:45> 'signed char' '='
+|     |-DeclRefExpr 0x7fd9a702cd70 <col:3> 'signed char' lvalue Var 0x7fd9a702c4d8 'schar_x' 'signed char'
+|     `-ImplicitCastExpr 0x7fd9a702cf08 <col:13, col:45> 'signed char' <IntegralCast>
+|       `-ConditionalOperator 0x7fd9a702ced8 <col:13, col:45> 'int'
+|         |-BinaryOperator 0x7fd9a702cdf8 <col:13, col:20> 'int' '!='
+|         | |-ImplicitCastExpr 0x7fd9a702cde0 <col:13> 'int' <LValueToRValue>
+|         | | `-DeclRefExpr 0x7fd9a702cd98 <col:13> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|         | `-IntegerLiteral 0x7fd9a702cdc0 <col:20> 'int' 0
+|         |-ImplicitCastExpr 0x7fd9a702cec0 <col:24, col:38> 'int' <IntegralCast>
+|         | `-CStyleCastExpr 0x7fd9a702ce58 <col:24, col:38> 'signed char' <IntegralCast>
+|         |   `-IntegerLiteral 0x7fd9a702ce20 <col:38> 'int' 1024
+|         `-UnaryOperator 0x7fd9a702cea0 <col:44, col:45> 'int' prefix '-'
+|           `-IntegerLiteral 0x7fd9a702ce80 <col:45> 'int' 1024
+|-FunctionDecl 0x7fd9a702cfa8 <line:54:1, line:68:1> line:54:6 func3 'void ()'
+| `-CompoundStmt 0x7fd9a702d6f8 <line:55:1, line:68:1>
+|   |-DeclStmt 0x7fd9a702d0b8 <line:56:3, col:24>
+|   | `-VarDecl 0x7fd9a702d058 <col:3, col:17> col:17 used uchar_x 'unsigned char'
+|   |-BinaryOperator 0x7fd9a702d208 <line:59:3, col:28> 'unsigned char' '='
+|   | |-DeclRefExpr 0x7fd9a702d0d0 <col:3> 'unsigned char' lvalue Var 0x7fd9a702d058 'uchar_x' 'unsigned char'
+|   | `-ImplicitCastExpr 0x7fd9a702d1f0 <col:13, col:28> 'unsigned char' <IntegralCast>
+|   |   `-ConditionalOperator 0x7fd9a702d1c0 <col:13, col:28> 'int'
+|   |     |-BinaryOperator 0x7fd9a702d158 <col:13, col:20> 'int' '!='
+|   |     | |-ImplicitCastExpr 0x7fd9a702d140 <col:13> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fd9a702d0f8 <col:13> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |     | `-IntegerLiteral 0x7fd9a702d120 <col:20> 'int' 0
+|   |     |-IntegerLiteral 0x7fd9a702d180 <col:24> 'int' 1
+|   |     `-IntegerLiteral 0x7fd9a702d1a0 <col:28> 'int' 0
+|   |-BinaryOperator 0x7fd9a702d380 <line:60:3, col:30> 'unsigned char' '='
+|   | |-DeclRefExpr 0x7fd9a702d230 <col:3> 'unsigned char' lvalue Var 0x7fd9a702d058 'uchar_x' 'unsigned char'
+|   | `-ImplicitCastExpr 0x7fd9a702d368 <col:13, col:30> 'unsigned char' <FloatingToIntegral>
+|   |   `-ConditionalOperator 0x7fd9a702d338 <col:13, col:30> 'double'
+|   |     |-BinaryOperator 0x7fd9a702d2b8 <col:13, col:20> 'int' '!='
+|   |     | |-ImplicitCastExpr 0x7fd9a702d2a0 <col:13> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fd9a702d258 <col:13> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |     | `-IntegerLiteral 0x7fd9a702d280 <col:20> 'int' 0
+|   |     |-FloatingLiteral 0x7fd9a702d2e0 <col:24> 'double' 2.000000e+00
+|   |     `-ImplicitCastExpr 0x7fd9a702d320 <col:30> 'double' <IntegralToFloating>
+|   |       `-IntegerLiteral 0x7fd9a702d300 <col:30> 'int' 10
+|   |-BinaryOperator 0x7fd9a702d4f8 <line:64:3, col:30> 'unsigned char' '='
+|   | |-DeclRefExpr 0x7fd9a702d3a8 <col:3> 'unsigned char' lvalue Var 0x7fd9a702d058 'uchar_x' 'unsigned char'
+|   | `-ImplicitCastExpr 0x7fd9a702d4e0 <col:13, col:30> 'unsigned char' <FloatingToIntegral>
+|   |   `-ConditionalOperator 0x7fd9a702d4b0 <col:13, col:30> 'double'
+|   |     |-BinaryOperator 0x7fd9a702d430 <col:13, col:20> 'int' '!='
+|   |     | |-ImplicitCastExpr 0x7fd9a702d418 <col:13> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fd9a702d3d0 <col:13> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|   |     | `-IntegerLiteral 0x7fd9a702d3f8 <col:20> 'int' 0
+|   |     |-FloatingLiteral 0x7fd9a702d458 <col:24> 'double' 2.100000e+00
+|   |     `-ImplicitCastExpr 0x7fd9a702d498 <col:30> 'double' <IntegralToFloating>
+|   |       `-IntegerLiteral 0x7fd9a702d478 <col:30> 'int' 10
+|   `-BinaryOperator 0x7fd9a702d6d0 <line:65:3, line:67:8> 'unsigned char' '='
+|     |-DeclRefExpr 0x7fd9a702d520 <line:65:3> 'unsigned char' lvalue Var 0x7fd9a702d058 'uchar_x' 'unsigned char'
+|     `-ImplicitCastExpr 0x7fd9a702d6b8 <col:13, line:67:8> 'unsigned char' <IntegralCast>
+|       `-ConditionalOperator 0x7fd9a702d688 <line:65:13, line:67:8> 'int'
+|         |-BinaryOperator 0x7fd9a702d5a8 <line:65:13, col:20> 'int' '!='
+|         | |-ImplicitCastExpr 0x7fd9a702d590 <col:13> 'int' <LValueToRValue>
+|         | | `-DeclRefExpr 0x7fd9a702d548 <col:13> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+|         | `-IntegerLiteral 0x7fd9a702d570 <col:20> 'int' 0
+|         |-ImplicitCastExpr 0x7fd9a702d670 <line:66:7, col:23> 'int' <IntegralCast>
+|         | `-CStyleCastExpr 0x7fd9a702d608 <col:7, col:23> 'unsigned char' <IntegralCast>
+|         |   `-IntegerLiteral 0x7fd9a702d5d0 <col:23> 'int' 1024
+|         `-UnaryOperator 0x7fd9a702d650 <line:67:7, col:8> 'int' prefix '-'
+|           `-IntegerLiteral 0x7fd9a702d630 <col:8> 'int' 1
+`-FunctionDecl 0x7fd9a702d758 <line:70:1, line:89:1> line:70:6 func4 'void ()'
+  `-CompoundStmt 0x7fd9a7030aa8 <line:71:1, line:89:1>
+    |-BinaryOperator 0x7fd9a702d890 <line:72:3, col:19> 'int' '='
+    | |-MemberExpr 0x7fd9a702d818 <col:3, col:14> 'int' lvalue bitfield .x 0x7fd9a7025c48
+    | | `-DeclRefExpr 0x7fd9a702d7f0 <col:3> 'struct signed_bit':'struct signed_bit' lvalue Var 0x7fd9a7025ce0 'signed_bit' 'struct signed_bit':'struct signed_bit'
+    | `-UnaryOperator 0x7fd9a702d870 <col:18, col:19> 'int' prefix '-'
+    |   `-IntegerLiteral 0x7fd9a702d850 <col:19> 'int' 1
+    |-BinaryOperator 0x7fd9a702da90 <line:73:3, col:36> 'int' '='
+    | |-MemberExpr 0x7fd9a702d928 <col:3, col:14> 'int' lvalue bitfield .x 0x7fd9a7025c48
+    | | `-DeclRefExpr 0x7fd9a702d900 <col:3> 'struct signed_bit':'struct signed_bit' lvalue Var 0x7fd9a7025ce0 'signed_bit' 'struct signed_bit':'struct signed_bit'
+    | `-ImplicitCastExpr 0x7fd9a702da78 <col:18, col:36> 'int' <FloatingToIntegral>
+    |   `-ConditionalOperator 0x7fd9a702da48 <col:18, col:36> 'double'
+    |     |-BinaryOperator 0x7fd9a702d9c0 <col:18, col:25> 'int' '!='
+    |     | |-ImplicitCastExpr 0x7fd9a702d9a8 <col:18> 'int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fd9a702d960 <col:18> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+    |     | `-IntegerLiteral 0x7fd9a702d988 <col:25> 'int' 0
+    |     |-UnaryOperator 0x7fd9a702da08 <col:29, col:30> 'double' prefix '-'
+    |     | `-FloatingLiteral 0x7fd9a702d9e8 <col:30> 'double' 1.000000e+00
+    |     `-FloatingLiteral 0x7fd9a702da28 <col:36> 'double' 0.000000e+00
+    |-BinaryOperator 0x7fd9a702fc30 <line:74:3, col:34> 'int' '='
+    | |-MemberExpr 0x7fd9a702dae0 <col:3, col:14> 'int' lvalue bitfield .x 0x7fd9a7025c48
+    | | `-DeclRefExpr 0x7fd9a702dab8 <col:3> 'struct signed_bit':'struct signed_bit' lvalue Var 0x7fd9a7025ce0 'signed_bit' 'struct signed_bit':'struct signed_bit'
+    | `-ConditionalOperator 0x7fd9a702fc00 <col:18, col:34> 'int'
+    |   |-BinaryOperator 0x7fd9a702db78 <col:18, col:25> 'int' '!='
+    |   | |-ImplicitCastExpr 0x7fd9a702db60 <col:18> 'int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7fd9a702db18 <col:18> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+    |   | `-IntegerLiteral 0x7fd9a702db40 <col:25> 'int' 0
+    |   |-UnaryOperator 0x7fd9a702dbc0 <col:29, col:30> 'int' prefix '-'
+    |   | `-IntegerLiteral 0x7fd9a702dba0 <col:30> 'int' 1
+    |   `-IntegerLiteral 0x7fd9a702dbe0 <col:34> 'int' 0
+    |-BinaryOperator 0x7fd9a702fcd8 <line:77:3, col:18> 'int' '='
+    | |-MemberExpr 0x7fd9a702fc80 <col:3, col:14> 'int' lvalue bitfield .x 0x7fd9a7025c48
+    | | `-DeclRefExpr 0x7fd9a702fc58 <col:3> 'struct signed_bit':'struct signed_bit' lvalue Var 0x7fd9a7025ce0 'signed_bit' 'struct signed_bit':'struct signed_bit'
+    | `-IntegerLiteral 0x7fd9a702fcb8 <col:18> 'int' 1
+    |-BinaryOperator 0x7fd9a702fe08 <line:78:3, col:27> 'int' '='
+    | |-MemberExpr 0x7fd9a702fd28 <col:3, col:14> 'int' lvalue bitfield .x 0x7fd9a7025c48
+    | | `-DeclRefExpr 0x7fd9a702fd00 <col:3> 'struct signed_bit':'struct signed_bit' lvalue Var 0x7fd9a7025ce0 'signed_bit' 'struct signed_bit':'struct signed_bit'
+    | `-ParenExpr 0x7fd9a702fde8 <col:18, col:27> 'int'
+    |   `-BinaryOperator 0x7fd9a702fdc0 <col:19, col:26> 'int' '!='
+    |     |-ImplicitCastExpr 0x7fd9a702fda8 <col:19> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd9a702fd60 <col:19> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+    |     `-IntegerLiteral 0x7fd9a702fd88 <col:26> 'int' 0
+    |-BinaryOperator 0x7fd9a702ff38 <line:79:3, col:27> 'int' '='
+    | |-MemberExpr 0x7fd9a702fe58 <col:3, col:14> 'int' lvalue bitfield .x 0x7fd9a7025c48
+    | | `-DeclRefExpr 0x7fd9a702fe30 <col:3> 'struct signed_bit':'struct signed_bit' lvalue Var 0x7fd9a7025ce0 'signed_bit' 'struct signed_bit':'struct signed_bit'
+    | `-ParenExpr 0x7fd9a702ff18 <col:18, col:27> 'int'
+    |   `-BinaryOperator 0x7fd9a702fef0 <col:19, col:26> 'int' '=='
+    |     |-ImplicitCastExpr 0x7fd9a702fed8 <col:19> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd9a702fe90 <col:19> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+    |     `-IntegerLiteral 0x7fd9a702feb8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fd9a7030068 <line:80:3, col:27> 'int' '='
+    | |-MemberExpr 0x7fd9a702ff88 <col:3, col:14> 'int' lvalue bitfield .x 0x7fd9a7025c48
+    | | `-DeclRefExpr 0x7fd9a702ff60 <col:3> 'struct signed_bit':'struct signed_bit' lvalue Var 0x7fd9a7025ce0 'signed_bit' 'struct signed_bit':'struct signed_bit'
+    | `-ParenExpr 0x7fd9a7030048 <col:18, col:27> 'int'
+    |   `-BinaryOperator 0x7fd9a7030020 <col:19, col:26> 'int' '<='
+    |     |-ImplicitCastExpr 0x7fd9a7030008 <col:19> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd9a702ffc0 <col:19> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+    |     `-IntegerLiteral 0x7fd9a702ffe8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fd9a7030198 <line:81:3, col:27> 'int' '='
+    | |-MemberExpr 0x7fd9a70300b8 <col:3, col:14> 'int' lvalue bitfield .x 0x7fd9a7025c48
+    | | `-DeclRefExpr 0x7fd9a7030090 <col:3> 'struct signed_bit':'struct signed_bit' lvalue Var 0x7fd9a7025ce0 'signed_bit' 'struct signed_bit':'struct signed_bit'
+    | `-ParenExpr 0x7fd9a7030178 <col:18, col:27> 'int'
+    |   `-BinaryOperator 0x7fd9a7030150 <col:19, col:26> 'int' '>='
+    |     |-ImplicitCastExpr 0x7fd9a7030138 <col:19> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd9a70300f0 <col:19> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+    |     `-IntegerLiteral 0x7fd9a7030118 <col:26> 'int' 0
+    |-BinaryOperator 0x7fd9a70302c8 <line:82:3, col:26> 'int' '='
+    | |-MemberExpr 0x7fd9a70301e8 <col:3, col:14> 'int' lvalue bitfield .x 0x7fd9a7025c48
+    | | `-DeclRefExpr 0x7fd9a70301c0 <col:3> 'struct signed_bit':'struct signed_bit' lvalue Var 0x7fd9a7025ce0 'signed_bit' 'struct signed_bit':'struct signed_bit'
+    | `-ParenExpr 0x7fd9a70302a8 <col:18, col:26> 'int'
+    |   `-BinaryOperator 0x7fd9a7030280 <col:19, col:25> 'int' '<'
+    |     |-ImplicitCastExpr 0x7fd9a7030268 <col:19> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd9a7030220 <col:19> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+    |     `-IntegerLiteral 0x7fd9a7030248 <col:25> 'int' 0
+    |-BinaryOperator 0x7fd9a70303f8 <line:83:3, col:26> 'int' '='
+    | |-MemberExpr 0x7fd9a7030318 <col:3, col:14> 'int' lvalue bitfield .x 0x7fd9a7025c48
+    | | `-DeclRefExpr 0x7fd9a70302f0 <col:3> 'struct signed_bit':'struct signed_bit' lvalue Var 0x7fd9a7025ce0 'signed_bit' 'struct signed_bit':'struct signed_bit'
+    | `-ParenExpr 0x7fd9a70303d8 <col:18, col:26> 'int'
+    |   `-BinaryOperator 0x7fd9a70303b0 <col:19, col:25> 'int' '>'
+    |     |-ImplicitCastExpr 0x7fd9a7030398 <col:19> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd9a7030350 <col:19> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+    |     `-IntegerLiteral 0x7fd9a7030378 <col:25> 'int' 0
+    |-BinaryOperator 0x7fd9a70304e0 <line:84:3, col:19> 'int' '='
+    | |-MemberExpr 0x7fd9a7030448 <col:3, col:14> 'int' lvalue bitfield .x 0x7fd9a7025c48
+    | | `-DeclRefExpr 0x7fd9a7030420 <col:3> 'struct signed_bit':'struct signed_bit' lvalue Var 0x7fd9a7025ce0 'signed_bit' 'struct signed_bit':'struct signed_bit'
+    | `-UnaryOperator 0x7fd9a70304c0 <col:18, col:19> 'int' prefix '!'
+    |   `-ImplicitCastExpr 0x7fd9a70304a8 <col:19> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fd9a7030480 <col:19> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+    |-BinaryOperator 0x7fd9a7030630 <line:85:3, col:30> 'int' '='
+    | |-MemberExpr 0x7fd9a7030530 <col:3, col:14> 'int' lvalue bitfield .x 0x7fd9a7025c48
+    | | `-DeclRefExpr 0x7fd9a7030508 <col:3> 'struct signed_bit':'struct signed_bit' lvalue Var 0x7fd9a7025ce0 'signed_bit' 'struct signed_bit':'struct signed_bit'
+    | `-ParenExpr 0x7fd9a7030610 <col:18, col:30> 'int'
+    |   `-BinaryOperator 0x7fd9a70305e8 <col:19, col:26> 'int' '||'
+    |     |-ImplicitCastExpr 0x7fd9a70305b8 <col:19> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd9a7030568 <col:19> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+    |     `-ImplicitCastExpr 0x7fd9a70305d0 <col:26> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd9a7030590 <col:26> 'int' lvalue Var 0x7fd9a7025de8 'bar2' 'int'
+    |-BinaryOperator 0x7fd9a7030780 <line:86:3, col:30> 'int' '='
+    | |-MemberExpr 0x7fd9a7030680 <col:3, col:14> 'int' lvalue bitfield .x 0x7fd9a7025c48
+    | | `-DeclRefExpr 0x7fd9a7030658 <col:3> 'struct signed_bit':'struct signed_bit' lvalue Var 0x7fd9a7025ce0 'signed_bit' 'struct signed_bit':'struct signed_bit'
+    | `-ParenExpr 0x7fd9a7030760 <col:18, col:30> 'int'
+    |   `-BinaryOperator 0x7fd9a7030738 <col:19, col:26> 'int' '&&'
+    |     |-ImplicitCastExpr 0x7fd9a7030708 <col:19> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd9a70306b8 <col:19> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+    |     `-ImplicitCastExpr 0x7fd9a7030720 <col:26> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd9a70306e0 <col:26> 'int' lvalue Var 0x7fd9a7025de8 'bar2' 'int'
+    |-BinaryOperator 0x7fd9a7030900 <line:87:3, col:33> 'int' '='
+    | |-MemberExpr 0x7fd9a70307d0 <col:3, col:14> 'int' lvalue bitfield .x 0x7fd9a7025c48
+    | | `-DeclRefExpr 0x7fd9a70307a8 <col:3> 'struct signed_bit':'struct signed_bit' lvalue Var 0x7fd9a7025ce0 'signed_bit' 'struct signed_bit':'struct signed_bit'
+    | `-ConditionalOperator 0x7fd9a70308d0 <col:18, col:33> 'int'
+    |   |-BinaryOperator 0x7fd9a7030868 <col:18, col:25> 'int' '!='
+    |   | |-ImplicitCastExpr 0x7fd9a7030850 <col:18> 'int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7fd9a7030808 <col:18> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+    |   | `-IntegerLiteral 0x7fd9a7030830 <col:25> 'int' 0
+    |   |-IntegerLiteral 0x7fd9a7030890 <col:29> 'int' 1
+    |   `-IntegerLiteral 0x7fd9a70308b0 <col:33> 'int' 0
+    `-BinaryOperator 0x7fd9a7030a80 <line:88:3, col:33> 'int' '='
+      |-MemberExpr 0x7fd9a7030950 <col:3, col:14> 'int' lvalue bitfield .x 0x7fd9a7025c48
+      | `-DeclRefExpr 0x7fd9a7030928 <col:3> 'struct signed_bit':'struct signed_bit' lvalue Var 0x7fd9a7025ce0 'signed_bit' 'struct signed_bit':'struct signed_bit'
+      `-ConditionalOperator 0x7fd9a7030a50 <col:18, col:33> 'int'
+        |-BinaryOperator 0x7fd9a70309e8 <col:18, col:25> 'int' '!='
+        | |-ImplicitCastExpr 0x7fd9a70309d0 <col:18> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fd9a7030988 <col:18> 'int' lvalue Var 0x7fd9a7025d70 'bar' 'int'
+        | `-IntegerLiteral 0x7fd9a70309b0 <col:25> 'int' 0
+        |-IntegerLiteral 0x7fd9a7030a10 <col:29> 'int' 2
+        `-IntegerLiteral 0x7fd9a7030a30 <col:33> 'int' 0

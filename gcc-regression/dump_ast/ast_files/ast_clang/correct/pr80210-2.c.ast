@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fafa681c0d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fafa681c620 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fafa681c340 '__int128'
+|-TypedefDecl 0x7fafa681c690 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fafa681c360 'unsigned __int128'
+|-TypedefDecl 0x7fafa681c968 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fafa681c770 'struct __NSConstantString_tag'
+|   `-Record 0x7fafa681c6e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fafa681ca00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fafa681c9c0 'char *'
+|   `-BuiltinType 0x7fafa681c160 'char'
+|-TypedefDecl 0x7fafa681ccc8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fafa681cc70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fafa681cae0 'struct __va_list_tag'
+|     `-Record 0x7fafa681ca58 '__va_list_tag'
+|-FunctionDecl 0x7fafa6030030 <c_files/pr80210-2.c:6:1, line:10:1> line:7:1 foo 'double (double)'
+| |-ParmVarDecl 0x7fafa681cd38 <col:6, col:13> col:13 used a 'double'
+| `-CompoundStmt 0x7fafa6030360 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7fafa6030348 <line:9:3, col:27>
+|     `-CallExpr 0x7fafa6030300 <col:10, col:27> 'double'
+|       |-ImplicitCastExpr 0x7fafa60302e8 <col:10> 'double (*)(double)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fafa6030268 <col:10> '<builtin fn type>' Function 0x7fafa6030110 '__builtin_sqrt' 'double (double)'
+|       `-ImplicitCastExpr 0x7fafa6030330 <col:26> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fafa6030290 <col:26> 'double' lvalue ParmVar 0x7fafa681cd38 'a' 'double'
+`-FunctionDecl 0x7fafa6030110 <col:10> col:10 implicit used __builtin_sqrt 'double (double)' extern
+  |-ParmVarDecl 0x7fafa60301a8 <<invalid sloc>> <invalid sloc> 'double'
+  |-NoThrowAttr 0x7fafa6030210 <col:10> Implicit
+  `-ConstAttr 0x7fafa6030258 <col:10> Implicit

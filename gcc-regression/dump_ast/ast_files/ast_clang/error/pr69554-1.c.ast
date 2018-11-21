@@ -1,0 +1,58 @@
+c_files/pr69554-1.c:11:18: error: invalid operands to binary expression ('const char *' and 'const char *')
+  return (p + 1) + (q + 1); /* { dg-error "invalid operands" } */
+         ~~~~~~~ ^ ~~~~~~~
+c_files/pr69554-1.c:24:12: error: invalid operands to binary expression ('const char *' and 'const char *')
+           +  /* { dg-error "invalid operands" } */
+           ^
+c_files/pr69554-1.c:44:12: error: invalid operands to binary expression ('const char *' and 'const char *')
+           +  /* { dg-error "invalid operands" } */
+           ^
+c_files/pr69554-1.c:65:12: error: invalid operands to binary expression ('const char *' and 'const char *')
+           +  /* { dg-error "invalid operands" } */
+           ^
+c_files/pr69554-1.c:88:12: error: invalid operands to binary expression ('const char *' and 'const char *')
+           +  /* { dg-error "invalid operands" } */
+           ^
+c_files/pr69554-1.c:125:12: error: invalid operands to binary expression ('const char *' and 'const char *')
+           +  /* { dg-error "invalid operands" } */
+           ^
+6 errors generated.
+TranslationUnitDecl 0x7fd16a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd16a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd16a026740 '__int128'
+|-TypedefDecl 0x7fd16a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd16a026760 'unsigned __int128'
+|-TypedefDecl 0x7fd16a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd16a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd16a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd16a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd16a026dc0 'char *'
+|   `-BuiltinType 0x7fd16a026560 'char'
+|-TypedefDecl 0x7fd16a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd16a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd16a026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd16a026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd16a825ad8 <c_files/pr69554-1.c:9:1, line:16:1> line:9:5 test_1 'int (const char *, const char *)'
+| |-ParmVarDecl 0x7fd16a027138 <col:13, col:25> col:25 used p 'const char *'
+| |-ParmVarDecl 0x7fd16a825a00 <col:28, col:40> col:40 used q 'const char *'
+| `-CompoundStmt 0x7fd16a8260c0 <line:10:1, line:16:1>
+|-FunctionDecl 0x7fd16a826200 <line:21:1, line:34:1> line:21:5 test_2 'int (const char *, const char *)'
+| |-ParmVarDecl 0x7fd16a8260f0 <col:13, col:25> col:25 used p 'const char *'
+| |-ParmVarDecl 0x7fd16a826168 <col:28, col:40> col:40 used q 'const char *'
+| `-CompoundStmt 0x7fd16a8263f8 <line:22:1, line:34:1>
+|-FunctionDecl 0x7fd16a826538 <line:40:1, line:57:1> line:40:5 test_3 'int (const char *, const char *)'
+| |-ParmVarDecl 0x7fd16a826428 <col:13, col:25> col:25 used p 'const char *'
+| |-ParmVarDecl 0x7fd16a8264a0 <col:28, col:40> col:40 used q 'const char *'
+| `-CompoundStmt 0x7fd16a826730 <line:41:1, line:57:1>
+|-FunctionDecl 0x7fd16a826870 <line:62:1, line:78:1> line:62:5 test_4 'int (const char *, const char *)'
+| |-ParmVarDecl 0x7fd16a826760 <col:13, col:25> col:25 used p 'const char *'
+| |-ParmVarDecl 0x7fd16a8267d8 <col:28, col:40> col:40 used q 'const char *'
+| `-CompoundStmt 0x7fd16a826a80 <line:63:1, line:78:1>
+|-FunctionDecl 0x7fd16a826bc0 <line:84:1, line:104:1> line:84:5 test_5 'int (const char *, const char *)'
+| |-ParmVarDecl 0x7fd16a826ab0 <col:13, col:25> col:25 used p 'const char *'
+| |-ParmVarDecl 0x7fd16a826b28 <col:28, col:40> col:40 used q 'const char *'
+| `-CompoundStmt 0x7fd16a826db8 <line:85:1, line:104:1>
+`-FunctionDecl 0x7fd16a826ef8 <line:110:1, line:152:1> line:110:5 test_6 'int (const char *, const char *)'
+  |-ParmVarDecl 0x7fd16a826de8 <col:13, col:25> col:25 used p 'const char *'
+  |-ParmVarDecl 0x7fd16a826e60 <col:28, col:40> col:40 used q 'const char *'
+  `-CompoundStmt 0x7fd16a8270f0 <line:111:1, line:152:1>

@@ -1,0 +1,64 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: S
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            TypeDecl: s, []
+              Struct: S
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['double']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          Struct: S
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: *
+            BinaryOp: *
+              BinaryOp: *
+                StructRef: .
+                  ID: s
+                  ID: n
+                ID: a
+              ID: i
+            ID: j
+      Assignment: =
+        StructRef: .
+          ID: t
+          ID: n
+        BinaryOp: *
+          BinaryOp: *
+            BinaryOp: *
+              StructRef: .
+                ID: s
+                ID: n
+              ID: a
+            ID: i
+          ID: k

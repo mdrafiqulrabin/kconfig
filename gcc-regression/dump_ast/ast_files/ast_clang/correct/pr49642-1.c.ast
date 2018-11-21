@@ -1,0 +1,967 @@
+TranslationUnitDecl 0x7fb2dc825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb2dc826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb2dc825d40 '__int128'
+|-TypedefDecl 0x7fb2dc826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb2dc825d60 'unsigned __int128'
+|-TypedefDecl 0x7fb2dc826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb2dc826170 'struct __NSConstantString_tag'
+|   `-Record 0x7fb2dc8260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb2dc826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb2dc8263c0 'char *'
+|   `-BuiltinType 0x7fb2dc825b60 'char'
+|-TypedefDecl 0x7fb2dc8266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb2dc826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb2dc8264e0 'struct __va_list_tag'
+|     `-Record 0x7fb2dc826458 '__va_list_tag'
+|-TypedefDecl 0x7fb2dc826738 <c_files/pr49642-1.c:6:1, col:22> col:22 referenced u32 'unsigned int'
+| `-BuiltinType 0x7fb2dc825c60 'unsigned int'
+|-TypedefDecl 0x7fb2dc8267a8 <line:7:1, col:28> col:28 referenced u64 'unsigned long long'
+| `-BuiltinType 0x7fb2dc825ca0 'unsigned long long'
+|-FunctionDecl 0x7fb2dc027538 <line:9:1, line:15:1> line:10:5 used __ilog2_u32 'int (u32)' static inline
+| |-ParmVarDecl 0x7fb2dc027430 <col:17, col:21> col:21 used n 'u32':'unsigned int'
+| |-CompoundStmt 0x7fb2dc0279c0 <line:11:1, line:15:1>
+| | |-DeclStmt 0x7fb2dc0276e8 <line:12:2, col:9>
+| | | `-VarDecl 0x7fb2dc027688 <col:2, col:6> col:6 used bit 'int'
+| | |-GCCAsmStmt 0x7fb2dc0278a8 <line:13:2, col:44>
+| | | |-DeclRefExpr 0x7fb2dc0277d8 <col:30> 'int' lvalue Var 0x7fb2dc027688 'bit' 'int'
+| | | `-ImplicitCastExpr 0x7fb2dc027890 <col:42> 'u32':'unsigned int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fb2dc027868 <col:42> 'u32':'unsigned int' lvalue ParmVar 0x7fb2dc027430 'n' 'u32':'unsigned int'
+| | `-ReturnStmt 0x7fb2dc0279a8 <line:14:2, col:14>
+| |   `-BinaryOperator 0x7fb2dc027980 <col:9, col:14> 'int' '-'
+| |     |-IntegerLiteral 0x7fb2dc027920 <col:9> 'int' 31
+| |     `-ImplicitCastExpr 0x7fb2dc027968 <col:14> 'int' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fb2dc027940 <col:14> 'int' lvalue Var 0x7fb2dc027688 'bit' 'int'
+| |-ConstAttr 0x7fb2dc0275d8 <line:9:61>
+| `-AlwaysInlineAttr 0x7fb2dc027620 <col:30> always_inline
+|-FunctionDecl 0x7fb2dc027b28 <line:18:1, line:24:1> line:19:5 used __ilog2_u64 'int (u64)' static inline
+| |-ParmVarDecl 0x7fb2dc027a20 <col:17, col:21> col:21 used n 'u64':'unsigned long long'
+| |-CompoundStmt 0x7fb2dc027ec8 <line:20:1, line:24:1>
+| | |-DeclStmt 0x7fb2dc027c98 <line:21:2, col:9>
+| | | `-VarDecl 0x7fb2dc027c38 <col:2, col:6> col:6 used bit 'int'
+| | |-GCCAsmStmt 0x7fb2dc027db0 <line:22:2, col:44>
+| | | |-DeclRefExpr 0x7fb2dc027d18 <col:30> 'int' lvalue Var 0x7fb2dc027c38 'bit' 'int'
+| | | `-ImplicitCastExpr 0x7fb2dc027d98 <col:42> 'u64':'unsigned long long' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fb2dc027d70 <col:42> 'u64':'unsigned long long' lvalue ParmVar 0x7fb2dc027a20 'n' 'u64':'unsigned long long'
+| | `-ReturnStmt 0x7fb2dc027eb0 <line:23:2, col:14>
+| |   `-BinaryOperator 0x7fb2dc027e88 <col:9, col:14> 'int' '-'
+| |     |-IntegerLiteral 0x7fb2dc027e28 <col:9> 'int' 63
+| |     `-ImplicitCastExpr 0x7fb2dc027e70 <col:14> 'int' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fb2dc027e48 <col:14> 'int' lvalue Var 0x7fb2dc027c38 'bit' 'int'
+| |-ConstAttr 0x7fb2dc027bc8 <line:18:61>
+| `-AlwaysInlineAttr 0x7fb2dc027c10 <col:30> always_inline
+|-FunctionDecl 0x7fb2dc028010 <line:28:1, col:38> col:12 ehca_map_vaddr 'u64 (void *)' static
+| `-ParmVarDecl 0x7fb2dc027f10 <col:27, col:33> col:33 caddr 'void *'
+|-RecordDecl 0x7fb2dc0280b0 <line:30:1, line:32:1> line:30:8 struct ehca_shca definition
+| `-FieldDecl 0x7fb2dc028170 <line:31:9, col:13> col:13 referenced hca_cap_mr_pgsize 'u32':'unsigned int'
+|-FunctionDecl 0x7fb2dc028288 <line:34:1, col:24> col:5 used ____ilog2_NaN 'int (void)'
+|-FunctionDecl 0x7fb2dc028500 <line:36:1, line:39:1> line:36:12 used ehca_get_max_hwpage_size 'u64 (struct ehca_shca *)' static
+| |-ParmVarDecl 0x7fb2dc028400 <col:37, col:55> col:55 used shca 'struct ehca_shca *'
+| `-CompoundStmt 0x7fb2dc0301a8 <line:37:1, line:39:1>
+|   `-ReturnStmt 0x7fb2dc030190 <line:38:2, col:3307>
+|     `-ImplicitCastExpr 0x7fb2dc030178 <col:9, col:3307> 'u64':'unsigned long long' <IntegralCast>
+|       `-BinaryOperator 0x7fb2dc030150 <col:9, col:3307> 'unsigned long' '<<'
+|         |-IntegerLiteral 0x7fb2dc0285a0 <col:9> 'unsigned long' 1
+|         `-ParenExpr 0x7fb2dc030130 <col:16, col:3307> 'int'
+|           `-ConditionalOperator 0x7fb2dc030100 <col:18, col:3305> 'int'
+|             |-CallExpr 0x7fb2dc0287c0 <col:18, col:62> 'int'
+|             | |-ImplicitCastExpr 0x7fb2dc0287a8 <col:18> 'int (*)()' <BuiltinFnToFnPtr>
+|             | | `-DeclRefExpr 0x7fb2dc0286d8 <col:18> '<builtin fn type>' Function 0x7fb2dc0285e8 '__builtin_constant_p' 'int ()'
+|             | `-MemberExpr 0x7fb2dc028740 <col:39, col:45> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |   `-ImplicitCastExpr 0x7fb2dc028728 <col:39> 'struct ehca_shca *' <LValueToRValue>
+|             |     `-DeclRefExpr 0x7fb2dc028700 <col:39> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |-ParenExpr 0x7fb2dc02fca0 <col:66, col:3186> 'int'
+|             | `-ConditionalOperator 0x7fb2dc02fc70 <col:68, col:3184> 'int'
+|             |   |-BinaryOperator 0x7fb2dc0288d8 <col:68, col:96> 'int' '<'
+|             |   | |-ImplicitCastExpr 0x7fb2dc0288a8 <col:68, col:92> 'u32':'unsigned int' <LValueToRValue>
+|             |   | | `-ParenExpr 0x7fb2dc028868 <col:68, col:92> 'u32':'unsigned int' lvalue
+|             |   | |   `-MemberExpr 0x7fb2dc028830 <col:69, col:75> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |   | |     `-ImplicitCastExpr 0x7fb2dc028818 <col:69> 'struct ehca_shca *' <LValueToRValue>
+|             |   | |       `-DeclRefExpr 0x7fb2dc0287f0 <col:69> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |   | `-ImplicitCastExpr 0x7fb2dc0288c0 <col:96> 'unsigned int' <IntegralCast>
+|             |   |   `-IntegerLiteral 0x7fb2dc028888 <col:96> 'int' 1
+|             |   |-CallExpr 0x7fb2dc028970 <col:100, col:114> 'int'
+|             |   | `-ImplicitCastExpr 0x7fb2dc028958 <col:100> 'int (*)(void)' <FunctionToPointerDecay>
+|             |   |   `-DeclRefExpr 0x7fb2dc028900 <col:100> 'int (void)' Function 0x7fb2dc028288 '____ilog2_NaN' 'int (void)'
+|             |   `-ConditionalOperator 0x7fb2dc02fc40 <col:118, col:3184> 'int'
+|             |     |-BinaryOperator 0x7fb2dc028ae8 <col:118, col:157> 'unsigned long long' '&'
+|             |     | |-ImplicitCastExpr 0x7fb2dc028ad0 <col:118, col:142> 'unsigned long long' <IntegralCast>
+|             |     | | `-ImplicitCastExpr 0x7fb2dc028ab8 <col:118, col:142> 'u32':'unsigned int' <LValueToRValue>
+|             |     | |   `-ParenExpr 0x7fb2dc028a10 <col:118, col:142> 'u32':'unsigned int' lvalue
+|             |     | |     `-MemberExpr 0x7fb2dc0289d8 <col:119, col:125> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |     | |       `-ImplicitCastExpr 0x7fb2dc0289c0 <col:119> 'struct ehca_shca *' <LValueToRValue>
+|             |     | |         `-DeclRefExpr 0x7fb2dc028998 <col:119> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |     | `-ParenExpr 0x7fb2dc028a98 <col:146, col:157> 'unsigned long long'
+|             |     |   `-BinaryOperator 0x7fb2dc028a70 <col:147, col:155> 'unsigned long long' '<<'
+|             |     |     |-IntegerLiteral 0x7fb2dc028a30 <col:147> 'unsigned long long' 1
+|             |     |     `-IntegerLiteral 0x7fb2dc028a50 <col:155> 'int' 63
+|             |     |-IntegerLiteral 0x7fb2dc028b10 <col:161> 'int' 63
+|             |     `-ConditionalOperator 0x7fb2dc02fc10 <col:166, col:3184> 'int'
+|             |       |-BinaryOperator 0x7fb2dc028c80 <col:166, col:205> 'unsigned long long' '&'
+|             |       | |-ImplicitCastExpr 0x7fb2dc028c68 <col:166, col:190> 'unsigned long long' <IntegralCast>
+|             |       | | `-ImplicitCastExpr 0x7fb2dc028c50 <col:166, col:190> 'u32':'unsigned int' <LValueToRValue>
+|             |       | |   `-ParenExpr 0x7fb2dc028ba8 <col:166, col:190> 'u32':'unsigned int' lvalue
+|             |       | |     `-MemberExpr 0x7fb2dc028b70 <col:167, col:173> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |       | |       `-ImplicitCastExpr 0x7fb2dc028b58 <col:167> 'struct ehca_shca *' <LValueToRValue>
+|             |       | |         `-DeclRefExpr 0x7fb2dc028b30 <col:167> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |       | `-ParenExpr 0x7fb2dc028c30 <col:194, col:205> 'unsigned long long'
+|             |       |   `-BinaryOperator 0x7fb2dc028c08 <col:195, col:203> 'unsigned long long' '<<'
+|             |       |     |-IntegerLiteral 0x7fb2dc028bc8 <col:195> 'unsigned long long' 1
+|             |       |     `-IntegerLiteral 0x7fb2dc028be8 <col:203> 'int' 62
+|             |       |-IntegerLiteral 0x7fb2dc028ca8 <col:209> 'int' 62
+|             |       `-ConditionalOperator 0x7fb2dc02fbe0 <col:214, col:3184> 'int'
+|             |         |-BinaryOperator 0x7fb2dc028e18 <col:214, col:253> 'unsigned long long' '&'
+|             |         | |-ImplicitCastExpr 0x7fb2dc028e00 <col:214, col:238> 'unsigned long long' <IntegralCast>
+|             |         | | `-ImplicitCastExpr 0x7fb2dc028de8 <col:214, col:238> 'u32':'unsigned int' <LValueToRValue>
+|             |         | |   `-ParenExpr 0x7fb2dc028d40 <col:214, col:238> 'u32':'unsigned int' lvalue
+|             |         | |     `-MemberExpr 0x7fb2dc028d08 <col:215, col:221> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |         | |       `-ImplicitCastExpr 0x7fb2dc028cf0 <col:215> 'struct ehca_shca *' <LValueToRValue>
+|             |         | |         `-DeclRefExpr 0x7fb2dc028cc8 <col:215> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |         | `-ParenExpr 0x7fb2dc028dc8 <col:242, col:253> 'unsigned long long'
+|             |         |   `-BinaryOperator 0x7fb2dc028da0 <col:243, col:251> 'unsigned long long' '<<'
+|             |         |     |-IntegerLiteral 0x7fb2dc028d60 <col:243> 'unsigned long long' 1
+|             |         |     `-IntegerLiteral 0x7fb2dc028d80 <col:251> 'int' 61
+|             |         |-IntegerLiteral 0x7fb2dc028e40 <col:257> 'int' 61
+|             |         `-ConditionalOperator 0x7fb2dc02fbb0 <col:262, col:3184> 'int'
+|             |           |-BinaryOperator 0x7fb2dc028fb0 <col:262, col:301> 'unsigned long long' '&'
+|             |           | |-ImplicitCastExpr 0x7fb2dc028f98 <col:262, col:286> 'unsigned long long' <IntegralCast>
+|             |           | | `-ImplicitCastExpr 0x7fb2dc028f80 <col:262, col:286> 'u32':'unsigned int' <LValueToRValue>
+|             |           | |   `-ParenExpr 0x7fb2dc028ed8 <col:262, col:286> 'u32':'unsigned int' lvalue
+|             |           | |     `-MemberExpr 0x7fb2dc028ea0 <col:263, col:269> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |           | |       `-ImplicitCastExpr 0x7fb2dc028e88 <col:263> 'struct ehca_shca *' <LValueToRValue>
+|             |           | |         `-DeclRefExpr 0x7fb2dc028e60 <col:263> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |           | `-ParenExpr 0x7fb2dc028f60 <col:290, col:301> 'unsigned long long'
+|             |           |   `-BinaryOperator 0x7fb2dc028f38 <col:291, col:299> 'unsigned long long' '<<'
+|             |           |     |-IntegerLiteral 0x7fb2dc028ef8 <col:291> 'unsigned long long' 1
+|             |           |     `-IntegerLiteral 0x7fb2dc028f18 <col:299> 'int' 60
+|             |           |-IntegerLiteral 0x7fb2dc028fd8 <col:305> 'int' 60
+|             |           `-ConditionalOperator 0x7fb2dc02fb80 <col:310, col:3184> 'int'
+|             |             |-BinaryOperator 0x7fb2dc029148 <col:310, col:349> 'unsigned long long' '&'
+|             |             | |-ImplicitCastExpr 0x7fb2dc029130 <col:310, col:334> 'unsigned long long' <IntegralCast>
+|             |             | | `-ImplicitCastExpr 0x7fb2dc029118 <col:310, col:334> 'u32':'unsigned int' <LValueToRValue>
+|             |             | |   `-ParenExpr 0x7fb2dc029070 <col:310, col:334> 'u32':'unsigned int' lvalue
+|             |             | |     `-MemberExpr 0x7fb2dc029038 <col:311, col:317> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |             | |       `-ImplicitCastExpr 0x7fb2dc029020 <col:311> 'struct ehca_shca *' <LValueToRValue>
+|             |             | |         `-DeclRefExpr 0x7fb2dc028ff8 <col:311> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |             | `-ParenExpr 0x7fb2dc0290f8 <col:338, col:349> 'unsigned long long'
+|             |             |   `-BinaryOperator 0x7fb2dc0290d0 <col:339, col:347> 'unsigned long long' '<<'
+|             |             |     |-IntegerLiteral 0x7fb2dc029090 <col:339> 'unsigned long long' 1
+|             |             |     `-IntegerLiteral 0x7fb2dc0290b0 <col:347> 'int' 59
+|             |             |-IntegerLiteral 0x7fb2dc029170 <col:353> 'int' 59
+|             |             `-ConditionalOperator 0x7fb2dc02fb50 <col:358, col:3184> 'int'
+|             |               |-BinaryOperator 0x7fb2dc0292e0 <col:358, col:397> 'unsigned long long' '&'
+|             |               | |-ImplicitCastExpr 0x7fb2dc0292c8 <col:358, col:382> 'unsigned long long' <IntegralCast>
+|             |               | | `-ImplicitCastExpr 0x7fb2dc0292b0 <col:358, col:382> 'u32':'unsigned int' <LValueToRValue>
+|             |               | |   `-ParenExpr 0x7fb2dc029208 <col:358, col:382> 'u32':'unsigned int' lvalue
+|             |               | |     `-MemberExpr 0x7fb2dc0291d0 <col:359, col:365> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |               | |       `-ImplicitCastExpr 0x7fb2dc0291b8 <col:359> 'struct ehca_shca *' <LValueToRValue>
+|             |               | |         `-DeclRefExpr 0x7fb2dc029190 <col:359> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |               | `-ParenExpr 0x7fb2dc029290 <col:386, col:397> 'unsigned long long'
+|             |               |   `-BinaryOperator 0x7fb2dc029268 <col:387, col:395> 'unsigned long long' '<<'
+|             |               |     |-IntegerLiteral 0x7fb2dc029228 <col:387> 'unsigned long long' 1
+|             |               |     `-IntegerLiteral 0x7fb2dc029248 <col:395> 'int' 58
+|             |               |-IntegerLiteral 0x7fb2dc029308 <col:401> 'int' 58
+|             |               `-ConditionalOperator 0x7fb2dc02fb20 <col:406, col:3184> 'int'
+|             |                 |-BinaryOperator 0x7fb2dc029478 <col:406, col:445> 'unsigned long long' '&'
+|             |                 | |-ImplicitCastExpr 0x7fb2dc029460 <col:406, col:430> 'unsigned long long' <IntegralCast>
+|             |                 | | `-ImplicitCastExpr 0x7fb2dc029448 <col:406, col:430> 'u32':'unsigned int' <LValueToRValue>
+|             |                 | |   `-ParenExpr 0x7fb2dc0293a0 <col:406, col:430> 'u32':'unsigned int' lvalue
+|             |                 | |     `-MemberExpr 0x7fb2dc029368 <col:407, col:413> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                 | |       `-ImplicitCastExpr 0x7fb2dc029350 <col:407> 'struct ehca_shca *' <LValueToRValue>
+|             |                 | |         `-DeclRefExpr 0x7fb2dc029328 <col:407> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                 | `-ParenExpr 0x7fb2dc029428 <col:434, col:445> 'unsigned long long'
+|             |                 |   `-BinaryOperator 0x7fb2dc029400 <col:435, col:443> 'unsigned long long' '<<'
+|             |                 |     |-IntegerLiteral 0x7fb2dc0293c0 <col:435> 'unsigned long long' 1
+|             |                 |     `-IntegerLiteral 0x7fb2dc0293e0 <col:443> 'int' 57
+|             |                 |-IntegerLiteral 0x7fb2dc0294a0 <col:449> 'int' 57
+|             |                 `-ConditionalOperator 0x7fb2dc02faf0 <col:454, col:3184> 'int'
+|             |                   |-BinaryOperator 0x7fb2dc029610 <col:454, col:493> 'unsigned long long' '&'
+|             |                   | |-ImplicitCastExpr 0x7fb2dc0295f8 <col:454, col:478> 'unsigned long long' <IntegralCast>
+|             |                   | | `-ImplicitCastExpr 0x7fb2dc0295e0 <col:454, col:478> 'u32':'unsigned int' <LValueToRValue>
+|             |                   | |   `-ParenExpr 0x7fb2dc029538 <col:454, col:478> 'u32':'unsigned int' lvalue
+|             |                   | |     `-MemberExpr 0x7fb2dc029500 <col:455, col:461> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                   | |       `-ImplicitCastExpr 0x7fb2dc0294e8 <col:455> 'struct ehca_shca *' <LValueToRValue>
+|             |                   | |         `-DeclRefExpr 0x7fb2dc0294c0 <col:455> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                   | `-ParenExpr 0x7fb2dc0295c0 <col:482, col:493> 'unsigned long long'
+|             |                   |   `-BinaryOperator 0x7fb2dc029598 <col:483, col:491> 'unsigned long long' '<<'
+|             |                   |     |-IntegerLiteral 0x7fb2dc029558 <col:483> 'unsigned long long' 1
+|             |                   |     `-IntegerLiteral 0x7fb2dc029578 <col:491> 'int' 56
+|             |                   |-IntegerLiteral 0x7fb2dc029638 <col:497> 'int' 56
+|             |                   `-ConditionalOperator 0x7fb2dc02fac0 <col:502, col:3184> 'int'
+|             |                     |-BinaryOperator 0x7fb2dc0297a8 <col:502, col:541> 'unsigned long long' '&'
+|             |                     | |-ImplicitCastExpr 0x7fb2dc029790 <col:502, col:526> 'unsigned long long' <IntegralCast>
+|             |                     | | `-ImplicitCastExpr 0x7fb2dc029778 <col:502, col:526> 'u32':'unsigned int' <LValueToRValue>
+|             |                     | |   `-ParenExpr 0x7fb2dc0296d0 <col:502, col:526> 'u32':'unsigned int' lvalue
+|             |                     | |     `-MemberExpr 0x7fb2dc029698 <col:503, col:509> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                     | |       `-ImplicitCastExpr 0x7fb2dc029680 <col:503> 'struct ehca_shca *' <LValueToRValue>
+|             |                     | |         `-DeclRefExpr 0x7fb2dc029658 <col:503> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                     | `-ParenExpr 0x7fb2dc029758 <col:530, col:541> 'unsigned long long'
+|             |                     |   `-BinaryOperator 0x7fb2dc029730 <col:531, col:539> 'unsigned long long' '<<'
+|             |                     |     |-IntegerLiteral 0x7fb2dc0296f0 <col:531> 'unsigned long long' 1
+|             |                     |     `-IntegerLiteral 0x7fb2dc029710 <col:539> 'int' 55
+|             |                     |-IntegerLiteral 0x7fb2dc0297d0 <col:545> 'int' 55
+|             |                     `-ConditionalOperator 0x7fb2dc02fa90 <col:550, col:3184> 'int'
+|             |                       |-BinaryOperator 0x7fb2dc029940 <col:550, col:589> 'unsigned long long' '&'
+|             |                       | |-ImplicitCastExpr 0x7fb2dc029928 <col:550, col:574> 'unsigned long long' <IntegralCast>
+|             |                       | | `-ImplicitCastExpr 0x7fb2dc029910 <col:550, col:574> 'u32':'unsigned int' <LValueToRValue>
+|             |                       | |   `-ParenExpr 0x7fb2dc029868 <col:550, col:574> 'u32':'unsigned int' lvalue
+|             |                       | |     `-MemberExpr 0x7fb2dc029830 <col:551, col:557> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                       | |       `-ImplicitCastExpr 0x7fb2dc029818 <col:551> 'struct ehca_shca *' <LValueToRValue>
+|             |                       | |         `-DeclRefExpr 0x7fb2dc0297f0 <col:551> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                       | `-ParenExpr 0x7fb2dc0298f0 <col:578, col:589> 'unsigned long long'
+|             |                       |   `-BinaryOperator 0x7fb2dc0298c8 <col:579, col:587> 'unsigned long long' '<<'
+|             |                       |     |-IntegerLiteral 0x7fb2dc029888 <col:579> 'unsigned long long' 1
+|             |                       |     `-IntegerLiteral 0x7fb2dc0298a8 <col:587> 'int' 54
+|             |                       |-IntegerLiteral 0x7fb2dc029968 <col:593> 'int' 54
+|             |                       `-ConditionalOperator 0x7fb2dc02fa60 <col:598, col:3184> 'int'
+|             |                         |-BinaryOperator 0x7fb2dc029ad8 <col:598, col:637> 'unsigned long long' '&'
+|             |                         | |-ImplicitCastExpr 0x7fb2dc029ac0 <col:598, col:622> 'unsigned long long' <IntegralCast>
+|             |                         | | `-ImplicitCastExpr 0x7fb2dc029aa8 <col:598, col:622> 'u32':'unsigned int' <LValueToRValue>
+|             |                         | |   `-ParenExpr 0x7fb2dc029a00 <col:598, col:622> 'u32':'unsigned int' lvalue
+|             |                         | |     `-MemberExpr 0x7fb2dc0299c8 <col:599, col:605> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                         | |       `-ImplicitCastExpr 0x7fb2dc0299b0 <col:599> 'struct ehca_shca *' <LValueToRValue>
+|             |                         | |         `-DeclRefExpr 0x7fb2dc029988 <col:599> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                         | `-ParenExpr 0x7fb2dc029a88 <col:626, col:637> 'unsigned long long'
+|             |                         |   `-BinaryOperator 0x7fb2dc029a60 <col:627, col:635> 'unsigned long long' '<<'
+|             |                         |     |-IntegerLiteral 0x7fb2dc029a20 <col:627> 'unsigned long long' 1
+|             |                         |     `-IntegerLiteral 0x7fb2dc029a40 <col:635> 'int' 53
+|             |                         |-IntegerLiteral 0x7fb2dc029b00 <col:641> 'int' 53
+|             |                         `-ConditionalOperator 0x7fb2dc02fa30 <col:646, col:3184> 'int'
+|             |                           |-BinaryOperator 0x7fb2dc029c70 <col:646, col:685> 'unsigned long long' '&'
+|             |                           | |-ImplicitCastExpr 0x7fb2dc029c58 <col:646, col:670> 'unsigned long long' <IntegralCast>
+|             |                           | | `-ImplicitCastExpr 0x7fb2dc029c40 <col:646, col:670> 'u32':'unsigned int' <LValueToRValue>
+|             |                           | |   `-ParenExpr 0x7fb2dc029b98 <col:646, col:670> 'u32':'unsigned int' lvalue
+|             |                           | |     `-MemberExpr 0x7fb2dc029b60 <col:647, col:653> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                           | |       `-ImplicitCastExpr 0x7fb2dc029b48 <col:647> 'struct ehca_shca *' <LValueToRValue>
+|             |                           | |         `-DeclRefExpr 0x7fb2dc029b20 <col:647> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                           | `-ParenExpr 0x7fb2dc029c20 <col:674, col:685> 'unsigned long long'
+|             |                           |   `-BinaryOperator 0x7fb2dc029bf8 <col:675, col:683> 'unsigned long long' '<<'
+|             |                           |     |-IntegerLiteral 0x7fb2dc029bb8 <col:675> 'unsigned long long' 1
+|             |                           |     `-IntegerLiteral 0x7fb2dc029bd8 <col:683> 'int' 52
+|             |                           |-IntegerLiteral 0x7fb2dc029c98 <col:689> 'int' 52
+|             |                           `-ConditionalOperator 0x7fb2dc02fa00 <col:694, col:3184> 'int'
+|             |                             |-BinaryOperator 0x7fb2dc029e08 <col:694, col:733> 'unsigned long long' '&'
+|             |                             | |-ImplicitCastExpr 0x7fb2dc029df0 <col:694, col:718> 'unsigned long long' <IntegralCast>
+|             |                             | | `-ImplicitCastExpr 0x7fb2dc029dd8 <col:694, col:718> 'u32':'unsigned int' <LValueToRValue>
+|             |                             | |   `-ParenExpr 0x7fb2dc029d30 <col:694, col:718> 'u32':'unsigned int' lvalue
+|             |                             | |     `-MemberExpr 0x7fb2dc029cf8 <col:695, col:701> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                             | |       `-ImplicitCastExpr 0x7fb2dc029ce0 <col:695> 'struct ehca_shca *' <LValueToRValue>
+|             |                             | |         `-DeclRefExpr 0x7fb2dc029cb8 <col:695> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                             | `-ParenExpr 0x7fb2dc029db8 <col:722, col:733> 'unsigned long long'
+|             |                             |   `-BinaryOperator 0x7fb2dc029d90 <col:723, col:731> 'unsigned long long' '<<'
+|             |                             |     |-IntegerLiteral 0x7fb2dc029d50 <col:723> 'unsigned long long' 1
+|             |                             |     `-IntegerLiteral 0x7fb2dc029d70 <col:731> 'int' 51
+|             |                             |-IntegerLiteral 0x7fb2dc029e30 <col:737> 'int' 51
+|             |                             `-ConditionalOperator 0x7fb2dc02f9d0 <col:742, col:3184> 'int'
+|             |                               |-BinaryOperator 0x7fb2dc029fa0 <col:742, col:781> 'unsigned long long' '&'
+|             |                               | |-ImplicitCastExpr 0x7fb2dc029f88 <col:742, col:766> 'unsigned long long' <IntegralCast>
+|             |                               | | `-ImplicitCastExpr 0x7fb2dc029f70 <col:742, col:766> 'u32':'unsigned int' <LValueToRValue>
+|             |                               | |   `-ParenExpr 0x7fb2dc029ec8 <col:742, col:766> 'u32':'unsigned int' lvalue
+|             |                               | |     `-MemberExpr 0x7fb2dc029e90 <col:743, col:749> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                               | |       `-ImplicitCastExpr 0x7fb2dc029e78 <col:743> 'struct ehca_shca *' <LValueToRValue>
+|             |                               | |         `-DeclRefExpr 0x7fb2dc029e50 <col:743> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                               | `-ParenExpr 0x7fb2dc029f50 <col:770, col:781> 'unsigned long long'
+|             |                               |   `-BinaryOperator 0x7fb2dc029f28 <col:771, col:779> 'unsigned long long' '<<'
+|             |                               |     |-IntegerLiteral 0x7fb2dc029ee8 <col:771> 'unsigned long long' 1
+|             |                               |     `-IntegerLiteral 0x7fb2dc029f08 <col:779> 'int' 50
+|             |                               |-IntegerLiteral 0x7fb2dc029fc8 <col:785> 'int' 50
+|             |                               `-ConditionalOperator 0x7fb2dc02f9a0 <col:790, col:3184> 'int'
+|             |                                 |-BinaryOperator 0x7fb2dc02a138 <col:790, col:829> 'unsigned long long' '&'
+|             |                                 | |-ImplicitCastExpr 0x7fb2dc02a120 <col:790, col:814> 'unsigned long long' <IntegralCast>
+|             |                                 | | `-ImplicitCastExpr 0x7fb2dc02a108 <col:790, col:814> 'u32':'unsigned int' <LValueToRValue>
+|             |                                 | |   `-ParenExpr 0x7fb2dc02a060 <col:790, col:814> 'u32':'unsigned int' lvalue
+|             |                                 | |     `-MemberExpr 0x7fb2dc02a028 <col:791, col:797> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                 | |       `-ImplicitCastExpr 0x7fb2dc02a010 <col:791> 'struct ehca_shca *' <LValueToRValue>
+|             |                                 | |         `-DeclRefExpr 0x7fb2dc029fe8 <col:791> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                 | `-ParenExpr 0x7fb2dc02a0e8 <col:818, col:829> 'unsigned long long'
+|             |                                 |   `-BinaryOperator 0x7fb2dc02a0c0 <col:819, col:827> 'unsigned long long' '<<'
+|             |                                 |     |-IntegerLiteral 0x7fb2dc02a080 <col:819> 'unsigned long long' 1
+|             |                                 |     `-IntegerLiteral 0x7fb2dc02a0a0 <col:827> 'int' 49
+|             |                                 |-IntegerLiteral 0x7fb2dc02a160 <col:833> 'int' 49
+|             |                                 `-ConditionalOperator 0x7fb2dc02f970 <col:838, col:3184> 'int'
+|             |                                   |-BinaryOperator 0x7fb2dc02a2d0 <col:838, col:877> 'unsigned long long' '&'
+|             |                                   | |-ImplicitCastExpr 0x7fb2dc02a2b8 <col:838, col:862> 'unsigned long long' <IntegralCast>
+|             |                                   | | `-ImplicitCastExpr 0x7fb2dc02a2a0 <col:838, col:862> 'u32':'unsigned int' <LValueToRValue>
+|             |                                   | |   `-ParenExpr 0x7fb2dc02a1f8 <col:838, col:862> 'u32':'unsigned int' lvalue
+|             |                                   | |     `-MemberExpr 0x7fb2dc02a1c0 <col:839, col:845> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                   | |       `-ImplicitCastExpr 0x7fb2dc02a1a8 <col:839> 'struct ehca_shca *' <LValueToRValue>
+|             |                                   | |         `-DeclRefExpr 0x7fb2dc02a180 <col:839> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                   | `-ParenExpr 0x7fb2dc02a280 <col:866, col:877> 'unsigned long long'
+|             |                                   |   `-BinaryOperator 0x7fb2dc02a258 <col:867, col:875> 'unsigned long long' '<<'
+|             |                                   |     |-IntegerLiteral 0x7fb2dc02a218 <col:867> 'unsigned long long' 1
+|             |                                   |     `-IntegerLiteral 0x7fb2dc02a238 <col:875> 'int' 48
+|             |                                   |-IntegerLiteral 0x7fb2dc02a2f8 <col:881> 'int' 48
+|             |                                   `-ConditionalOperator 0x7fb2dc02f940 <col:886, col:3184> 'int'
+|             |                                     |-BinaryOperator 0x7fb2dc02a478 <col:886, col:925> 'unsigned long long' '&'
+|             |                                     | |-ImplicitCastExpr 0x7fb2dc02a460 <col:886, col:910> 'unsigned long long' <IntegralCast>
+|             |                                     | | `-ImplicitCastExpr 0x7fb2dc02a448 <col:886, col:910> 'u32':'unsigned int' <LValueToRValue>
+|             |                                     | |   `-ParenExpr 0x7fb2dc02a390 <col:886, col:910> 'u32':'unsigned int' lvalue
+|             |                                     | |     `-MemberExpr 0x7fb2dc02a358 <col:887, col:893> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                     | |       `-ImplicitCastExpr 0x7fb2dc02a340 <col:887> 'struct ehca_shca *' <LValueToRValue>
+|             |                                     | |         `-DeclRefExpr 0x7fb2dc02a318 <col:887> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                     | `-ParenExpr 0x7fb2dc02a428 <col:914, col:925> 'unsigned long long'
+|             |                                     |   `-BinaryOperator 0x7fb2dc02a400 <col:915, col:923> 'unsigned long long' '<<'
+|             |                                     |     |-IntegerLiteral 0x7fb2dc02a3b0 <col:915> 'unsigned long long' 1
+|             |                                     |     `-IntegerLiteral 0x7fb2dc02a3d0 <col:923> 'int' 47
+|             |                                     |-IntegerLiteral 0x7fb2dc02a4a0 <col:929> 'int' 47
+|             |                                     `-ConditionalOperator 0x7fb2dc02f910 <col:934, col:3184> 'int'
+|             |                                       |-BinaryOperator 0x7fb2dc02a610 <col:934, col:973> 'unsigned long long' '&'
+|             |                                       | |-ImplicitCastExpr 0x7fb2dc02a5f8 <col:934, col:958> 'unsigned long long' <IntegralCast>
+|             |                                       | | `-ImplicitCastExpr 0x7fb2dc02a5e0 <col:934, col:958> 'u32':'unsigned int' <LValueToRValue>
+|             |                                       | |   `-ParenExpr 0x7fb2dc02a538 <col:934, col:958> 'u32':'unsigned int' lvalue
+|             |                                       | |     `-MemberExpr 0x7fb2dc02a500 <col:935, col:941> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                       | |       `-ImplicitCastExpr 0x7fb2dc02a4e8 <col:935> 'struct ehca_shca *' <LValueToRValue>
+|             |                                       | |         `-DeclRefExpr 0x7fb2dc02a4c0 <col:935> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                       | `-ParenExpr 0x7fb2dc02a5c0 <col:962, col:973> 'unsigned long long'
+|             |                                       |   `-BinaryOperator 0x7fb2dc02a598 <col:963, col:971> 'unsigned long long' '<<'
+|             |                                       |     |-IntegerLiteral 0x7fb2dc02a558 <col:963> 'unsigned long long' 1
+|             |                                       |     `-IntegerLiteral 0x7fb2dc02a578 <col:971> 'int' 46
+|             |                                       |-IntegerLiteral 0x7fb2dc02a638 <col:977> 'int' 46
+|             |                                       `-ConditionalOperator 0x7fb2dc02f8e0 <col:982, col:3184> 'int'
+|             |                                         |-BinaryOperator 0x7fb2dc02a7a8 <col:982, col:1021> 'unsigned long long' '&'
+|             |                                         | |-ImplicitCastExpr 0x7fb2dc02a790 <col:982, col:1006> 'unsigned long long' <IntegralCast>
+|             |                                         | | `-ImplicitCastExpr 0x7fb2dc02a778 <col:982, col:1006> 'u32':'unsigned int' <LValueToRValue>
+|             |                                         | |   `-ParenExpr 0x7fb2dc02a6d0 <col:982, col:1006> 'u32':'unsigned int' lvalue
+|             |                                         | |     `-MemberExpr 0x7fb2dc02a698 <col:983, col:989> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                         | |       `-ImplicitCastExpr 0x7fb2dc02a680 <col:983> 'struct ehca_shca *' <LValueToRValue>
+|             |                                         | |         `-DeclRefExpr 0x7fb2dc02a658 <col:983> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                         | `-ParenExpr 0x7fb2dc02a758 <col:1010, col:1021> 'unsigned long long'
+|             |                                         |   `-BinaryOperator 0x7fb2dc02a730 <col:1011, col:1019> 'unsigned long long' '<<'
+|             |                                         |     |-IntegerLiteral 0x7fb2dc02a6f0 <col:1011> 'unsigned long long' 1
+|             |                                         |     `-IntegerLiteral 0x7fb2dc02a710 <col:1019> 'int' 45
+|             |                                         |-IntegerLiteral 0x7fb2dc02a7d0 <col:1025> 'int' 45
+|             |                                         `-ConditionalOperator 0x7fb2dc02f8b0 <col:1030, col:3184> 'int'
+|             |                                           |-BinaryOperator 0x7fb2dc02a940 <col:1030, col:1069> 'unsigned long long' '&'
+|             |                                           | |-ImplicitCastExpr 0x7fb2dc02a928 <col:1030, col:1054> 'unsigned long long' <IntegralCast>
+|             |                                           | | `-ImplicitCastExpr 0x7fb2dc02a910 <col:1030, col:1054> 'u32':'unsigned int' <LValueToRValue>
+|             |                                           | |   `-ParenExpr 0x7fb2dc02a868 <col:1030, col:1054> 'u32':'unsigned int' lvalue
+|             |                                           | |     `-MemberExpr 0x7fb2dc02a830 <col:1031, col:1037> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                           | |       `-ImplicitCastExpr 0x7fb2dc02a818 <col:1031> 'struct ehca_shca *' <LValueToRValue>
+|             |                                           | |         `-DeclRefExpr 0x7fb2dc02a7f0 <col:1031> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                           | `-ParenExpr 0x7fb2dc02a8f0 <col:1058, col:1069> 'unsigned long long'
+|             |                                           |   `-BinaryOperator 0x7fb2dc02a8c8 <col:1059, col:1067> 'unsigned long long' '<<'
+|             |                                           |     |-IntegerLiteral 0x7fb2dc02a888 <col:1059> 'unsigned long long' 1
+|             |                                           |     `-IntegerLiteral 0x7fb2dc02a8a8 <col:1067> 'int' 44
+|             |                                           |-IntegerLiteral 0x7fb2dc02a968 <col:1073> 'int' 44
+|             |                                           `-ConditionalOperator 0x7fb2dc02f880 <col:1078, col:3184> 'int'
+|             |                                             |-BinaryOperator 0x7fb2dc02aad8 <col:1078, col:1117> 'unsigned long long' '&'
+|             |                                             | |-ImplicitCastExpr 0x7fb2dc02aac0 <col:1078, col:1102> 'unsigned long long' <IntegralCast>
+|             |                                             | | `-ImplicitCastExpr 0x7fb2dc02aaa8 <col:1078, col:1102> 'u32':'unsigned int' <LValueToRValue>
+|             |                                             | |   `-ParenExpr 0x7fb2dc02aa00 <col:1078, col:1102> 'u32':'unsigned int' lvalue
+|             |                                             | |     `-MemberExpr 0x7fb2dc02a9c8 <col:1079, col:1085> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                             | |       `-ImplicitCastExpr 0x7fb2dc02a9b0 <col:1079> 'struct ehca_shca *' <LValueToRValue>
+|             |                                             | |         `-DeclRefExpr 0x7fb2dc02a988 <col:1079> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                             | `-ParenExpr 0x7fb2dc02aa88 <col:1106, col:1117> 'unsigned long long'
+|             |                                             |   `-BinaryOperator 0x7fb2dc02aa60 <col:1107, col:1115> 'unsigned long long' '<<'
+|             |                                             |     |-IntegerLiteral 0x7fb2dc02aa20 <col:1107> 'unsigned long long' 1
+|             |                                             |     `-IntegerLiteral 0x7fb2dc02aa40 <col:1115> 'int' 43
+|             |                                             |-IntegerLiteral 0x7fb2dc02ab00 <col:1121> 'int' 43
+|             |                                             `-ConditionalOperator 0x7fb2dc02f850 <col:1126, col:3184> 'int'
+|             |                                               |-BinaryOperator 0x7fb2dc02ac70 <col:1126, col:1165> 'unsigned long long' '&'
+|             |                                               | |-ImplicitCastExpr 0x7fb2dc02ac58 <col:1126, col:1150> 'unsigned long long' <IntegralCast>
+|             |                                               | | `-ImplicitCastExpr 0x7fb2dc02ac40 <col:1126, col:1150> 'u32':'unsigned int' <LValueToRValue>
+|             |                                               | |   `-ParenExpr 0x7fb2dc02ab98 <col:1126, col:1150> 'u32':'unsigned int' lvalue
+|             |                                               | |     `-MemberExpr 0x7fb2dc02ab60 <col:1127, col:1133> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                               | |       `-ImplicitCastExpr 0x7fb2dc02ab48 <col:1127> 'struct ehca_shca *' <LValueToRValue>
+|             |                                               | |         `-DeclRefExpr 0x7fb2dc02ab20 <col:1127> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                               | `-ParenExpr 0x7fb2dc02ac20 <col:1154, col:1165> 'unsigned long long'
+|             |                                               |   `-BinaryOperator 0x7fb2dc02abf8 <col:1155, col:1163> 'unsigned long long' '<<'
+|             |                                               |     |-IntegerLiteral 0x7fb2dc02abb8 <col:1155> 'unsigned long long' 1
+|             |                                               |     `-IntegerLiteral 0x7fb2dc02abd8 <col:1163> 'int' 42
+|             |                                               |-IntegerLiteral 0x7fb2dc02ac98 <col:1169> 'int' 42
+|             |                                               `-ConditionalOperator 0x7fb2dc02f820 <col:1174, col:3184> 'int'
+|             |                                                 |-BinaryOperator 0x7fb2dc02ae08 <col:1174, col:1213> 'unsigned long long' '&'
+|             |                                                 | |-ImplicitCastExpr 0x7fb2dc02adf0 <col:1174, col:1198> 'unsigned long long' <IntegralCast>
+|             |                                                 | | `-ImplicitCastExpr 0x7fb2dc02add8 <col:1174, col:1198> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                 | |   `-ParenExpr 0x7fb2dc02ad30 <col:1174, col:1198> 'u32':'unsigned int' lvalue
+|             |                                                 | |     `-MemberExpr 0x7fb2dc02acf8 <col:1175, col:1181> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                 | |       `-ImplicitCastExpr 0x7fb2dc02ace0 <col:1175> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                 | |         `-DeclRefExpr 0x7fb2dc02acb8 <col:1175> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                 | `-ParenExpr 0x7fb2dc02adb8 <col:1202, col:1213> 'unsigned long long'
+|             |                                                 |   `-BinaryOperator 0x7fb2dc02ad90 <col:1203, col:1211> 'unsigned long long' '<<'
+|             |                                                 |     |-IntegerLiteral 0x7fb2dc02ad50 <col:1203> 'unsigned long long' 1
+|             |                                                 |     `-IntegerLiteral 0x7fb2dc02ad70 <col:1211> 'int' 41
+|             |                                                 |-IntegerLiteral 0x7fb2dc02ae30 <col:1217> 'int' 41
+|             |                                                 `-ConditionalOperator 0x7fb2dc02f7f0 <col:1222, col:3184> 'int'
+|             |                                                   |-BinaryOperator 0x7fb2dc02afa0 <col:1222, col:1261> 'unsigned long long' '&'
+|             |                                                   | |-ImplicitCastExpr 0x7fb2dc02af88 <col:1222, col:1246> 'unsigned long long' <IntegralCast>
+|             |                                                   | | `-ImplicitCastExpr 0x7fb2dc02af70 <col:1222, col:1246> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                   | |   `-ParenExpr 0x7fb2dc02aec8 <col:1222, col:1246> 'u32':'unsigned int' lvalue
+|             |                                                   | |     `-MemberExpr 0x7fb2dc02ae90 <col:1223, col:1229> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                   | |       `-ImplicitCastExpr 0x7fb2dc02ae78 <col:1223> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                   | |         `-DeclRefExpr 0x7fb2dc02ae50 <col:1223> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                   | `-ParenExpr 0x7fb2dc02af50 <col:1250, col:1261> 'unsigned long long'
+|             |                                                   |   `-BinaryOperator 0x7fb2dc02af28 <col:1251, col:1259> 'unsigned long long' '<<'
+|             |                                                   |     |-IntegerLiteral 0x7fb2dc02aee8 <col:1251> 'unsigned long long' 1
+|             |                                                   |     `-IntegerLiteral 0x7fb2dc02af08 <col:1259> 'int' 40
+|             |                                                   |-IntegerLiteral 0x7fb2dc02afc8 <col:1265> 'int' 40
+|             |                                                   `-ConditionalOperator 0x7fb2dc02f7c0 <col:1270, col:3184> 'int'
+|             |                                                     |-BinaryOperator 0x7fb2dc02b138 <col:1270, col:1309> 'unsigned long long' '&'
+|             |                                                     | |-ImplicitCastExpr 0x7fb2dc02b120 <col:1270, col:1294> 'unsigned long long' <IntegralCast>
+|             |                                                     | | `-ImplicitCastExpr 0x7fb2dc02b108 <col:1270, col:1294> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                     | |   `-ParenExpr 0x7fb2dc02b060 <col:1270, col:1294> 'u32':'unsigned int' lvalue
+|             |                                                     | |     `-MemberExpr 0x7fb2dc02b028 <col:1271, col:1277> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                     | |       `-ImplicitCastExpr 0x7fb2dc02b010 <col:1271> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                     | |         `-DeclRefExpr 0x7fb2dc02afe8 <col:1271> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                     | `-ParenExpr 0x7fb2dc02b0e8 <col:1298, col:1309> 'unsigned long long'
+|             |                                                     |   `-BinaryOperator 0x7fb2dc02b0c0 <col:1299, col:1307> 'unsigned long long' '<<'
+|             |                                                     |     |-IntegerLiteral 0x7fb2dc02b080 <col:1299> 'unsigned long long' 1
+|             |                                                     |     `-IntegerLiteral 0x7fb2dc02b0a0 <col:1307> 'int' 39
+|             |                                                     |-IntegerLiteral 0x7fb2dc02b160 <col:1313> 'int' 39
+|             |                                                     `-ConditionalOperator 0x7fb2dc02f790 <col:1318, col:3184> 'int'
+|             |                                                       |-BinaryOperator 0x7fb2dc02b2d0 <col:1318, col:1357> 'unsigned long long' '&'
+|             |                                                       | |-ImplicitCastExpr 0x7fb2dc02b2b8 <col:1318, col:1342> 'unsigned long long' <IntegralCast>
+|             |                                                       | | `-ImplicitCastExpr 0x7fb2dc02b2a0 <col:1318, col:1342> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                       | |   `-ParenExpr 0x7fb2dc02b1f8 <col:1318, col:1342> 'u32':'unsigned int' lvalue
+|             |                                                       | |     `-MemberExpr 0x7fb2dc02b1c0 <col:1319, col:1325> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                       | |       `-ImplicitCastExpr 0x7fb2dc02b1a8 <col:1319> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                       | |         `-DeclRefExpr 0x7fb2dc02b180 <col:1319> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                       | `-ParenExpr 0x7fb2dc02b280 <col:1346, col:1357> 'unsigned long long'
+|             |                                                       |   `-BinaryOperator 0x7fb2dc02b258 <col:1347, col:1355> 'unsigned long long' '<<'
+|             |                                                       |     |-IntegerLiteral 0x7fb2dc02b218 <col:1347> 'unsigned long long' 1
+|             |                                                       |     `-IntegerLiteral 0x7fb2dc02b238 <col:1355> 'int' 38
+|             |                                                       |-IntegerLiteral 0x7fb2dc02b2f8 <col:1361> 'int' 38
+|             |                                                       `-ConditionalOperator 0x7fb2dc02f760 <col:1366, col:3184> 'int'
+|             |                                                         |-BinaryOperator 0x7fb2dc02b478 <col:1366, col:1405> 'unsigned long long' '&'
+|             |                                                         | |-ImplicitCastExpr 0x7fb2dc02b460 <col:1366, col:1390> 'unsigned long long' <IntegralCast>
+|             |                                                         | | `-ImplicitCastExpr 0x7fb2dc02b448 <col:1366, col:1390> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                         | |   `-ParenExpr 0x7fb2dc02b390 <col:1366, col:1390> 'u32':'unsigned int' lvalue
+|             |                                                         | |     `-MemberExpr 0x7fb2dc02b358 <col:1367, col:1373> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                         | |       `-ImplicitCastExpr 0x7fb2dc02b340 <col:1367> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                         | |         `-DeclRefExpr 0x7fb2dc02b318 <col:1367> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                         | `-ParenExpr 0x7fb2dc02b428 <col:1394, col:1405> 'unsigned long long'
+|             |                                                         |   `-BinaryOperator 0x7fb2dc02b400 <col:1395, col:1403> 'unsigned long long' '<<'
+|             |                                                         |     |-IntegerLiteral 0x7fb2dc02b3b0 <col:1395> 'unsigned long long' 1
+|             |                                                         |     `-IntegerLiteral 0x7fb2dc02b3d0 <col:1403> 'int' 37
+|             |                                                         |-IntegerLiteral 0x7fb2dc02b4a0 <col:1409> 'int' 37
+|             |                                                         `-ConditionalOperator 0x7fb2dc02f730 <col:1414, col:3184> 'int'
+|             |                                                           |-BinaryOperator 0x7fb2dc02b610 <col:1414, col:1453> 'unsigned long long' '&'
+|             |                                                           | |-ImplicitCastExpr 0x7fb2dc02b5f8 <col:1414, col:1438> 'unsigned long long' <IntegralCast>
+|             |                                                           | | `-ImplicitCastExpr 0x7fb2dc02b5e0 <col:1414, col:1438> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                           | |   `-ParenExpr 0x7fb2dc02b538 <col:1414, col:1438> 'u32':'unsigned int' lvalue
+|             |                                                           | |     `-MemberExpr 0x7fb2dc02b500 <col:1415, col:1421> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                           | |       `-ImplicitCastExpr 0x7fb2dc02b4e8 <col:1415> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                           | |         `-DeclRefExpr 0x7fb2dc02b4c0 <col:1415> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                           | `-ParenExpr 0x7fb2dc02b5c0 <col:1442, col:1453> 'unsigned long long'
+|             |                                                           |   `-BinaryOperator 0x7fb2dc02b598 <col:1443, col:1451> 'unsigned long long' '<<'
+|             |                                                           |     |-IntegerLiteral 0x7fb2dc02b558 <col:1443> 'unsigned long long' 1
+|             |                                                           |     `-IntegerLiteral 0x7fb2dc02b578 <col:1451> 'int' 36
+|             |                                                           |-IntegerLiteral 0x7fb2dc02b638 <col:1457> 'int' 36
+|             |                                                           `-ConditionalOperator 0x7fb2dc02f700 <col:1462, col:3184> 'int'
+|             |                                                             |-BinaryOperator 0x7fb2dc02b7a8 <col:1462, col:1501> 'unsigned long long' '&'
+|             |                                                             | |-ImplicitCastExpr 0x7fb2dc02b790 <col:1462, col:1486> 'unsigned long long' <IntegralCast>
+|             |                                                             | | `-ImplicitCastExpr 0x7fb2dc02b778 <col:1462, col:1486> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                             | |   `-ParenExpr 0x7fb2dc02b6d0 <col:1462, col:1486> 'u32':'unsigned int' lvalue
+|             |                                                             | |     `-MemberExpr 0x7fb2dc02b698 <col:1463, col:1469> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                             | |       `-ImplicitCastExpr 0x7fb2dc02b680 <col:1463> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                             | |         `-DeclRefExpr 0x7fb2dc02b658 <col:1463> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                             | `-ParenExpr 0x7fb2dc02b758 <col:1490, col:1501> 'unsigned long long'
+|             |                                                             |   `-BinaryOperator 0x7fb2dc02b730 <col:1491, col:1499> 'unsigned long long' '<<'
+|             |                                                             |     |-IntegerLiteral 0x7fb2dc02b6f0 <col:1491> 'unsigned long long' 1
+|             |                                                             |     `-IntegerLiteral 0x7fb2dc02b710 <col:1499> 'int' 35
+|             |                                                             |-IntegerLiteral 0x7fb2dc02b7d0 <col:1505> 'int' 35
+|             |                                                             `-ConditionalOperator 0x7fb2dc02f6d0 <col:1510, col:3184> 'int'
+|             |                                                               |-BinaryOperator 0x7fb2dc02b940 <col:1510, col:1549> 'unsigned long long' '&'
+|             |                                                               | |-ImplicitCastExpr 0x7fb2dc02b928 <col:1510, col:1534> 'unsigned long long' <IntegralCast>
+|             |                                                               | | `-ImplicitCastExpr 0x7fb2dc02b910 <col:1510, col:1534> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                               | |   `-ParenExpr 0x7fb2dc02b868 <col:1510, col:1534> 'u32':'unsigned int' lvalue
+|             |                                                               | |     `-MemberExpr 0x7fb2dc02b830 <col:1511, col:1517> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                               | |       `-ImplicitCastExpr 0x7fb2dc02b818 <col:1511> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                               | |         `-DeclRefExpr 0x7fb2dc02b7f0 <col:1511> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                               | `-ParenExpr 0x7fb2dc02b8f0 <col:1538, col:1549> 'unsigned long long'
+|             |                                                               |   `-BinaryOperator 0x7fb2dc02b8c8 <col:1539, col:1547> 'unsigned long long' '<<'
+|             |                                                               |     |-IntegerLiteral 0x7fb2dc02b888 <col:1539> 'unsigned long long' 1
+|             |                                                               |     `-IntegerLiteral 0x7fb2dc02b8a8 <col:1547> 'int' 34
+|             |                                                               |-IntegerLiteral 0x7fb2dc02b968 <col:1553> 'int' 34
+|             |                                                               `-ConditionalOperator 0x7fb2dc02f6a0 <col:1558, col:3184> 'int'
+|             |                                                                 |-BinaryOperator 0x7fb2dc02bad8 <col:1558, col:1597> 'unsigned long long' '&'
+|             |                                                                 | |-ImplicitCastExpr 0x7fb2dc02bac0 <col:1558, col:1582> 'unsigned long long' <IntegralCast>
+|             |                                                                 | | `-ImplicitCastExpr 0x7fb2dc02baa8 <col:1558, col:1582> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                 | |   `-ParenExpr 0x7fb2dc02ba00 <col:1558, col:1582> 'u32':'unsigned int' lvalue
+|             |                                                                 | |     `-MemberExpr 0x7fb2dc02b9c8 <col:1559, col:1565> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                 | |       `-ImplicitCastExpr 0x7fb2dc02b9b0 <col:1559> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                 | |         `-DeclRefExpr 0x7fb2dc02b988 <col:1559> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                 | `-ParenExpr 0x7fb2dc02ba88 <col:1586, col:1597> 'unsigned long long'
+|             |                                                                 |   `-BinaryOperator 0x7fb2dc02ba60 <col:1587, col:1595> 'unsigned long long' '<<'
+|             |                                                                 |     |-IntegerLiteral 0x7fb2dc02ba20 <col:1587> 'unsigned long long' 1
+|             |                                                                 |     `-IntegerLiteral 0x7fb2dc02ba40 <col:1595> 'int' 33
+|             |                                                                 |-IntegerLiteral 0x7fb2dc02bb00 <col:1601> 'int' 33
+|             |                                                                 `-ConditionalOperator 0x7fb2dc02f670 <col:1606, col:3184> 'int'
+|             |                                                                   |-BinaryOperator 0x7fb2dc02bc70 <col:1606, col:1645> 'unsigned long long' '&'
+|             |                                                                   | |-ImplicitCastExpr 0x7fb2dc02bc58 <col:1606, col:1630> 'unsigned long long' <IntegralCast>
+|             |                                                                   | | `-ImplicitCastExpr 0x7fb2dc02bc40 <col:1606, col:1630> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                   | |   `-ParenExpr 0x7fb2dc02bb98 <col:1606, col:1630> 'u32':'unsigned int' lvalue
+|             |                                                                   | |     `-MemberExpr 0x7fb2dc02bb60 <col:1607, col:1613> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                   | |       `-ImplicitCastExpr 0x7fb2dc02bb48 <col:1607> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                   | |         `-DeclRefExpr 0x7fb2dc02bb20 <col:1607> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                   | `-ParenExpr 0x7fb2dc02bc20 <col:1634, col:1645> 'unsigned long long'
+|             |                                                                   |   `-BinaryOperator 0x7fb2dc02bbf8 <col:1635, col:1643> 'unsigned long long' '<<'
+|             |                                                                   |     |-IntegerLiteral 0x7fb2dc02bbb8 <col:1635> 'unsigned long long' 1
+|             |                                                                   |     `-IntegerLiteral 0x7fb2dc02bbd8 <col:1643> 'int' 32
+|             |                                                                   |-IntegerLiteral 0x7fb2dc02bc98 <col:1649> 'int' 32
+|             |                                                                   `-ConditionalOperator 0x7fb2dc02f640 <col:1654, col:3184> 'int'
+|             |                                                                     |-BinaryOperator 0x7fb2dc02be08 <col:1654, col:1693> 'unsigned long long' '&'
+|             |                                                                     | |-ImplicitCastExpr 0x7fb2dc02bdf0 <col:1654, col:1678> 'unsigned long long' <IntegralCast>
+|             |                                                                     | | `-ImplicitCastExpr 0x7fb2dc02bdd8 <col:1654, col:1678> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                     | |   `-ParenExpr 0x7fb2dc02bd30 <col:1654, col:1678> 'u32':'unsigned int' lvalue
+|             |                                                                     | |     `-MemberExpr 0x7fb2dc02bcf8 <col:1655, col:1661> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                     | |       `-ImplicitCastExpr 0x7fb2dc02bce0 <col:1655> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                     | |         `-DeclRefExpr 0x7fb2dc02bcb8 <col:1655> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                     | `-ParenExpr 0x7fb2dc02bdb8 <col:1682, col:1693> 'unsigned long long'
+|             |                                                                     |   `-BinaryOperator 0x7fb2dc02bd90 <col:1683, col:1691> 'unsigned long long' '<<'
+|             |                                                                     |     |-IntegerLiteral 0x7fb2dc02bd50 <col:1683> 'unsigned long long' 1
+|             |                                                                     |     `-IntegerLiteral 0x7fb2dc02bd70 <col:1691> 'int' 31
+|             |                                                                     |-IntegerLiteral 0x7fb2dc02be30 <col:1697> 'int' 31
+|             |                                                                     `-ConditionalOperator 0x7fb2dc02f610 <col:1702, col:3184> 'int'
+|             |                                                                       |-BinaryOperator 0x7fb2dc02bfa0 <col:1702, col:1741> 'unsigned long long' '&'
+|             |                                                                       | |-ImplicitCastExpr 0x7fb2dc02bf88 <col:1702, col:1726> 'unsigned long long' <IntegralCast>
+|             |                                                                       | | `-ImplicitCastExpr 0x7fb2dc02bf70 <col:1702, col:1726> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                       | |   `-ParenExpr 0x7fb2dc02bec8 <col:1702, col:1726> 'u32':'unsigned int' lvalue
+|             |                                                                       | |     `-MemberExpr 0x7fb2dc02be90 <col:1703, col:1709> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                       | |       `-ImplicitCastExpr 0x7fb2dc02be78 <col:1703> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                       | |         `-DeclRefExpr 0x7fb2dc02be50 <col:1703> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                       | `-ParenExpr 0x7fb2dc02bf50 <col:1730, col:1741> 'unsigned long long'
+|             |                                                                       |   `-BinaryOperator 0x7fb2dc02bf28 <col:1731, col:1739> 'unsigned long long' '<<'
+|             |                                                                       |     |-IntegerLiteral 0x7fb2dc02bee8 <col:1731> 'unsigned long long' 1
+|             |                                                                       |     `-IntegerLiteral 0x7fb2dc02bf08 <col:1739> 'int' 30
+|             |                                                                       |-IntegerLiteral 0x7fb2dc02bfc8 <col:1745> 'int' 30
+|             |                                                                       `-ConditionalOperator 0x7fb2dc02f5e0 <col:1750, col:3184> 'int'
+|             |                                                                         |-BinaryOperator 0x7fb2dc02c138 <col:1750, col:1789> 'unsigned long long' '&'
+|             |                                                                         | |-ImplicitCastExpr 0x7fb2dc02c120 <col:1750, col:1774> 'unsigned long long' <IntegralCast>
+|             |                                                                         | | `-ImplicitCastExpr 0x7fb2dc02c108 <col:1750, col:1774> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                         | |   `-ParenExpr 0x7fb2dc02c060 <col:1750, col:1774> 'u32':'unsigned int' lvalue
+|             |                                                                         | |     `-MemberExpr 0x7fb2dc02c028 <col:1751, col:1757> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                         | |       `-ImplicitCastExpr 0x7fb2dc02c010 <col:1751> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                         | |         `-DeclRefExpr 0x7fb2dc02bfe8 <col:1751> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                         | `-ParenExpr 0x7fb2dc02c0e8 <col:1778, col:1789> 'unsigned long long'
+|             |                                                                         |   `-BinaryOperator 0x7fb2dc02c0c0 <col:1779, col:1787> 'unsigned long long' '<<'
+|             |                                                                         |     |-IntegerLiteral 0x7fb2dc02c080 <col:1779> 'unsigned long long' 1
+|             |                                                                         |     `-IntegerLiteral 0x7fb2dc02c0a0 <col:1787> 'int' 29
+|             |                                                                         |-IntegerLiteral 0x7fb2dc02c160 <col:1793> 'int' 29
+|             |                                                                         `-ConditionalOperator 0x7fb2dc02f5b0 <col:1798, col:3184> 'int'
+|             |                                                                           |-BinaryOperator 0x7fb2dc02c2d0 <col:1798, col:1837> 'unsigned long long' '&'
+|             |                                                                           | |-ImplicitCastExpr 0x7fb2dc02c2b8 <col:1798, col:1822> 'unsigned long long' <IntegralCast>
+|             |                                                                           | | `-ImplicitCastExpr 0x7fb2dc02c2a0 <col:1798, col:1822> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                           | |   `-ParenExpr 0x7fb2dc02c1f8 <col:1798, col:1822> 'u32':'unsigned int' lvalue
+|             |                                                                           | |     `-MemberExpr 0x7fb2dc02c1c0 <col:1799, col:1805> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                           | |       `-ImplicitCastExpr 0x7fb2dc02c1a8 <col:1799> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                           | |         `-DeclRefExpr 0x7fb2dc02c180 <col:1799> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                           | `-ParenExpr 0x7fb2dc02c280 <col:1826, col:1837> 'unsigned long long'
+|             |                                                                           |   `-BinaryOperator 0x7fb2dc02c258 <col:1827, col:1835> 'unsigned long long' '<<'
+|             |                                                                           |     |-IntegerLiteral 0x7fb2dc02c218 <col:1827> 'unsigned long long' 1
+|             |                                                                           |     `-IntegerLiteral 0x7fb2dc02c238 <col:1835> 'int' 28
+|             |                                                                           |-IntegerLiteral 0x7fb2dc02c2f8 <col:1841> 'int' 28
+|             |                                                                           `-ConditionalOperator 0x7fb2dc02f580 <col:1846, col:3184> 'int'
+|             |                                                                             |-BinaryOperator 0x7fb2dc02c478 <col:1846, col:1885> 'unsigned long long' '&'
+|             |                                                                             | |-ImplicitCastExpr 0x7fb2dc02c460 <col:1846, col:1870> 'unsigned long long' <IntegralCast>
+|             |                                                                             | | `-ImplicitCastExpr 0x7fb2dc02c448 <col:1846, col:1870> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                             | |   `-ParenExpr 0x7fb2dc02c390 <col:1846, col:1870> 'u32':'unsigned int' lvalue
+|             |                                                                             | |     `-MemberExpr 0x7fb2dc02c358 <col:1847, col:1853> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                             | |       `-ImplicitCastExpr 0x7fb2dc02c340 <col:1847> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                             | |         `-DeclRefExpr 0x7fb2dc02c318 <col:1847> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                             | `-ParenExpr 0x7fb2dc02c428 <col:1874, col:1885> 'unsigned long long'
+|             |                                                                             |   `-BinaryOperator 0x7fb2dc02c400 <col:1875, col:1883> 'unsigned long long' '<<'
+|             |                                                                             |     |-IntegerLiteral 0x7fb2dc02c3b0 <col:1875> 'unsigned long long' 1
+|             |                                                                             |     `-IntegerLiteral 0x7fb2dc02c3d0 <col:1883> 'int' 27
+|             |                                                                             |-IntegerLiteral 0x7fb2dc02c4a0 <col:1889> 'int' 27
+|             |                                                                             `-ConditionalOperator 0x7fb2dc02f550 <col:1894, col:3184> 'int'
+|             |                                                                               |-BinaryOperator 0x7fb2dc02c610 <col:1894, col:1933> 'unsigned long long' '&'
+|             |                                                                               | |-ImplicitCastExpr 0x7fb2dc02c5f8 <col:1894, col:1918> 'unsigned long long' <IntegralCast>
+|             |                                                                               | | `-ImplicitCastExpr 0x7fb2dc02c5e0 <col:1894, col:1918> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                               | |   `-ParenExpr 0x7fb2dc02c538 <col:1894, col:1918> 'u32':'unsigned int' lvalue
+|             |                                                                               | |     `-MemberExpr 0x7fb2dc02c500 <col:1895, col:1901> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                               | |       `-ImplicitCastExpr 0x7fb2dc02c4e8 <col:1895> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                               | |         `-DeclRefExpr 0x7fb2dc02c4c0 <col:1895> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                               | `-ParenExpr 0x7fb2dc02c5c0 <col:1922, col:1933> 'unsigned long long'
+|             |                                                                               |   `-BinaryOperator 0x7fb2dc02c598 <col:1923, col:1931> 'unsigned long long' '<<'
+|             |                                                                               |     |-IntegerLiteral 0x7fb2dc02c558 <col:1923> 'unsigned long long' 1
+|             |                                                                               |     `-IntegerLiteral 0x7fb2dc02c578 <col:1931> 'int' 26
+|             |                                                                               |-IntegerLiteral 0x7fb2dc02c638 <col:1937> 'int' 26
+|             |                                                                               `-ConditionalOperator 0x7fb2dc02f520 <col:1942, col:3184> 'int'
+|             |                                                                                 |-BinaryOperator 0x7fb2dc02c7a8 <col:1942, col:1981> 'unsigned long long' '&'
+|             |                                                                                 | |-ImplicitCastExpr 0x7fb2dc02c790 <col:1942, col:1966> 'unsigned long long' <IntegralCast>
+|             |                                                                                 | | `-ImplicitCastExpr 0x7fb2dc02c778 <col:1942, col:1966> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                 | |   `-ParenExpr 0x7fb2dc02c6d0 <col:1942, col:1966> 'u32':'unsigned int' lvalue
+|             |                                                                                 | |     `-MemberExpr 0x7fb2dc02c698 <col:1943, col:1949> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                 | |       `-ImplicitCastExpr 0x7fb2dc02c680 <col:1943> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                 | |         `-DeclRefExpr 0x7fb2dc02c658 <col:1943> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                 | `-ParenExpr 0x7fb2dc02c758 <col:1970, col:1981> 'unsigned long long'
+|             |                                                                                 |   `-BinaryOperator 0x7fb2dc02c730 <col:1971, col:1979> 'unsigned long long' '<<'
+|             |                                                                                 |     |-IntegerLiteral 0x7fb2dc02c6f0 <col:1971> 'unsigned long long' 1
+|             |                                                                                 |     `-IntegerLiteral 0x7fb2dc02c710 <col:1979> 'int' 25
+|             |                                                                                 |-IntegerLiteral 0x7fb2dc02c7d0 <col:1985> 'int' 25
+|             |                                                                                 `-ConditionalOperator 0x7fb2dc02f4f0 <col:1990, col:3184> 'int'
+|             |                                                                                   |-BinaryOperator 0x7fb2dc02c940 <col:1990, col:2029> 'unsigned long long' '&'
+|             |                                                                                   | |-ImplicitCastExpr 0x7fb2dc02c928 <col:1990, col:2014> 'unsigned long long' <IntegralCast>
+|             |                                                                                   | | `-ImplicitCastExpr 0x7fb2dc02c910 <col:1990, col:2014> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                   | |   `-ParenExpr 0x7fb2dc02c868 <col:1990, col:2014> 'u32':'unsigned int' lvalue
+|             |                                                                                   | |     `-MemberExpr 0x7fb2dc02c830 <col:1991, col:1997> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                   | |       `-ImplicitCastExpr 0x7fb2dc02c818 <col:1991> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                   | |         `-DeclRefExpr 0x7fb2dc02c7f0 <col:1991> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                   | `-ParenExpr 0x7fb2dc02c8f0 <col:2018, col:2029> 'unsigned long long'
+|             |                                                                                   |   `-BinaryOperator 0x7fb2dc02c8c8 <col:2019, col:2027> 'unsigned long long' '<<'
+|             |                                                                                   |     |-IntegerLiteral 0x7fb2dc02c888 <col:2019> 'unsigned long long' 1
+|             |                                                                                   |     `-IntegerLiteral 0x7fb2dc02c8a8 <col:2027> 'int' 24
+|             |                                                                                   |-IntegerLiteral 0x7fb2dc02c968 <col:2033> 'int' 24
+|             |                                                                                   `-ConditionalOperator 0x7fb2dc02f4c0 <col:2038, col:3184> 'int'
+|             |                                                                                     |-BinaryOperator 0x7fb2dc02cad8 <col:2038, col:2077> 'unsigned long long' '&'
+|             |                                                                                     | |-ImplicitCastExpr 0x7fb2dc02cac0 <col:2038, col:2062> 'unsigned long long' <IntegralCast>
+|             |                                                                                     | | `-ImplicitCastExpr 0x7fb2dc02caa8 <col:2038, col:2062> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                     | |   `-ParenExpr 0x7fb2dc02ca00 <col:2038, col:2062> 'u32':'unsigned int' lvalue
+|             |                                                                                     | |     `-MemberExpr 0x7fb2dc02c9c8 <col:2039, col:2045> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                     | |       `-ImplicitCastExpr 0x7fb2dc02c9b0 <col:2039> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                     | |         `-DeclRefExpr 0x7fb2dc02c988 <col:2039> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                     | `-ParenExpr 0x7fb2dc02ca88 <col:2066, col:2077> 'unsigned long long'
+|             |                                                                                     |   `-BinaryOperator 0x7fb2dc02ca60 <col:2067, col:2075> 'unsigned long long' '<<'
+|             |                                                                                     |     |-IntegerLiteral 0x7fb2dc02ca20 <col:2067> 'unsigned long long' 1
+|             |                                                                                     |     `-IntegerLiteral 0x7fb2dc02ca40 <col:2075> 'int' 23
+|             |                                                                                     |-IntegerLiteral 0x7fb2dc02cb00 <col:2081> 'int' 23
+|             |                                                                                     `-ConditionalOperator 0x7fb2dc02f490 <col:2086, col:3184> 'int'
+|             |                                                                                       |-BinaryOperator 0x7fb2dc02cc70 <col:2086, col:2125> 'unsigned long long' '&'
+|             |                                                                                       | |-ImplicitCastExpr 0x7fb2dc02cc58 <col:2086, col:2110> 'unsigned long long' <IntegralCast>
+|             |                                                                                       | | `-ImplicitCastExpr 0x7fb2dc02cc40 <col:2086, col:2110> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                       | |   `-ParenExpr 0x7fb2dc02cb98 <col:2086, col:2110> 'u32':'unsigned int' lvalue
+|             |                                                                                       | |     `-MemberExpr 0x7fb2dc02cb60 <col:2087, col:2093> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                       | |       `-ImplicitCastExpr 0x7fb2dc02cb48 <col:2087> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                       | |         `-DeclRefExpr 0x7fb2dc02cb20 <col:2087> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                       | `-ParenExpr 0x7fb2dc02cc20 <col:2114, col:2125> 'unsigned long long'
+|             |                                                                                       |   `-BinaryOperator 0x7fb2dc02cbf8 <col:2115, col:2123> 'unsigned long long' '<<'
+|             |                                                                                       |     |-IntegerLiteral 0x7fb2dc02cbb8 <col:2115> 'unsigned long long' 1
+|             |                                                                                       |     `-IntegerLiteral 0x7fb2dc02cbd8 <col:2123> 'int' 22
+|             |                                                                                       |-IntegerLiteral 0x7fb2dc02cc98 <col:2129> 'int' 22
+|             |                                                                                       `-ConditionalOperator 0x7fb2dc02f460 <col:2134, col:3184> 'int'
+|             |                                                                                         |-BinaryOperator 0x7fb2dc02ce08 <col:2134, col:2173> 'unsigned long long' '&'
+|             |                                                                                         | |-ImplicitCastExpr 0x7fb2dc02cdf0 <col:2134, col:2158> 'unsigned long long' <IntegralCast>
+|             |                                                                                         | | `-ImplicitCastExpr 0x7fb2dc02cdd8 <col:2134, col:2158> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                         | |   `-ParenExpr 0x7fb2dc02cd30 <col:2134, col:2158> 'u32':'unsigned int' lvalue
+|             |                                                                                         | |     `-MemberExpr 0x7fb2dc02ccf8 <col:2135, col:2141> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                         | |       `-ImplicitCastExpr 0x7fb2dc02cce0 <col:2135> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                         | |         `-DeclRefExpr 0x7fb2dc02ccb8 <col:2135> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                         | `-ParenExpr 0x7fb2dc02cdb8 <col:2162, col:2173> 'unsigned long long'
+|             |                                                                                         |   `-BinaryOperator 0x7fb2dc02cd90 <col:2163, col:2171> 'unsigned long long' '<<'
+|             |                                                                                         |     |-IntegerLiteral 0x7fb2dc02cd50 <col:2163> 'unsigned long long' 1
+|             |                                                                                         |     `-IntegerLiteral 0x7fb2dc02cd70 <col:2171> 'int' 21
+|             |                                                                                         |-IntegerLiteral 0x7fb2dc02ce30 <col:2177> 'int' 21
+|             |                                                                                         `-ConditionalOperator 0x7fb2dc02f430 <col:2182, col:3184> 'int'
+|             |                                                                                           |-BinaryOperator 0x7fb2dc02cfa0 <col:2182, col:2221> 'unsigned long long' '&'
+|             |                                                                                           | |-ImplicitCastExpr 0x7fb2dc02cf88 <col:2182, col:2206> 'unsigned long long' <IntegralCast>
+|             |                                                                                           | | `-ImplicitCastExpr 0x7fb2dc02cf70 <col:2182, col:2206> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                           | |   `-ParenExpr 0x7fb2dc02cec8 <col:2182, col:2206> 'u32':'unsigned int' lvalue
+|             |                                                                                           | |     `-MemberExpr 0x7fb2dc02ce90 <col:2183, col:2189> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                           | |       `-ImplicitCastExpr 0x7fb2dc02ce78 <col:2183> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                           | |         `-DeclRefExpr 0x7fb2dc02ce50 <col:2183> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                           | `-ParenExpr 0x7fb2dc02cf50 <col:2210, col:2221> 'unsigned long long'
+|             |                                                                                           |   `-BinaryOperator 0x7fb2dc02cf28 <col:2211, col:2219> 'unsigned long long' '<<'
+|             |                                                                                           |     |-IntegerLiteral 0x7fb2dc02cee8 <col:2211> 'unsigned long long' 1
+|             |                                                                                           |     `-IntegerLiteral 0x7fb2dc02cf08 <col:2219> 'int' 20
+|             |                                                                                           |-IntegerLiteral 0x7fb2dc02cfc8 <col:2225> 'int' 20
+|             |                                                                                           `-ConditionalOperator 0x7fb2dc02f400 <col:2230, col:3184> 'int'
+|             |                                                                                             |-BinaryOperator 0x7fb2dc02d138 <col:2230, col:2269> 'unsigned long long' '&'
+|             |                                                                                             | |-ImplicitCastExpr 0x7fb2dc02d120 <col:2230, col:2254> 'unsigned long long' <IntegralCast>
+|             |                                                                                             | | `-ImplicitCastExpr 0x7fb2dc02d108 <col:2230, col:2254> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                             | |   `-ParenExpr 0x7fb2dc02d060 <col:2230, col:2254> 'u32':'unsigned int' lvalue
+|             |                                                                                             | |     `-MemberExpr 0x7fb2dc02d028 <col:2231, col:2237> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                             | |       `-ImplicitCastExpr 0x7fb2dc02d010 <col:2231> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                             | |         `-DeclRefExpr 0x7fb2dc02cfe8 <col:2231> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                             | `-ParenExpr 0x7fb2dc02d0e8 <col:2258, col:2269> 'unsigned long long'
+|             |                                                                                             |   `-BinaryOperator 0x7fb2dc02d0c0 <col:2259, col:2267> 'unsigned long long' '<<'
+|             |                                                                                             |     |-IntegerLiteral 0x7fb2dc02d080 <col:2259> 'unsigned long long' 1
+|             |                                                                                             |     `-IntegerLiteral 0x7fb2dc02d0a0 <col:2267> 'int' 19
+|             |                                                                                             |-IntegerLiteral 0x7fb2dc02d160 <col:2273> 'int' 19
+|             |                                                                                             `-ConditionalOperator 0x7fb2dc02f3b0 <col:2278, col:3184> 'int'
+|             |                                                                                               |-BinaryOperator 0x7fb2dc02d2d0 <col:2278, col:2317> 'unsigned long long' '&'
+|             |                                                                                               | |-ImplicitCastExpr 0x7fb2dc02d2b8 <col:2278, col:2302> 'unsigned long long' <IntegralCast>
+|             |                                                                                               | | `-ImplicitCastExpr 0x7fb2dc02d2a0 <col:2278, col:2302> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                               | |   `-ParenExpr 0x7fb2dc02d1f8 <col:2278, col:2302> 'u32':'unsigned int' lvalue
+|             |                                                                                               | |     `-MemberExpr 0x7fb2dc02d1c0 <col:2279, col:2285> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                               | |       `-ImplicitCastExpr 0x7fb2dc02d1a8 <col:2279> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                               | |         `-DeclRefExpr 0x7fb2dc02d180 <col:2279> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                               | `-ParenExpr 0x7fb2dc02d280 <col:2306, col:2317> 'unsigned long long'
+|             |                                                                                               |   `-BinaryOperator 0x7fb2dc02d258 <col:2307, col:2315> 'unsigned long long' '<<'
+|             |                                                                                               |     |-IntegerLiteral 0x7fb2dc02d218 <col:2307> 'unsigned long long' 1
+|             |                                                                                               |     `-IntegerLiteral 0x7fb2dc02d238 <col:2315> 'int' 18
+|             |                                                                                               |-IntegerLiteral 0x7fb2dc02d2f8 <col:2321> 'int' 18
+|             |                                                                                               `-ConditionalOperator 0x7fb2dc02f380 <col:2326, col:3184> 'int'
+|             |                                                                                                 |-BinaryOperator 0x7fb2dc02d478 <col:2326, col:2365> 'unsigned long long' '&'
+|             |                                                                                                 | |-ImplicitCastExpr 0x7fb2dc02d460 <col:2326, col:2350> 'unsigned long long' <IntegralCast>
+|             |                                                                                                 | | `-ImplicitCastExpr 0x7fb2dc02d448 <col:2326, col:2350> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                 | |   `-ParenExpr 0x7fb2dc02d390 <col:2326, col:2350> 'u32':'unsigned int' lvalue
+|             |                                                                                                 | |     `-MemberExpr 0x7fb2dc02d358 <col:2327, col:2333> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                 | |       `-ImplicitCastExpr 0x7fb2dc02d340 <col:2327> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                 | |         `-DeclRefExpr 0x7fb2dc02d318 <col:2327> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                 | `-ParenExpr 0x7fb2dc02d428 <col:2354, col:2365> 'unsigned long long'
+|             |                                                                                                 |   `-BinaryOperator 0x7fb2dc02d400 <col:2355, col:2363> 'unsigned long long' '<<'
+|             |                                                                                                 |     |-IntegerLiteral 0x7fb2dc02d3b0 <col:2355> 'unsigned long long' 1
+|             |                                                                                                 |     `-IntegerLiteral 0x7fb2dc02d3d0 <col:2363> 'int' 17
+|             |                                                                                                 |-IntegerLiteral 0x7fb2dc02d4a0 <col:2369> 'int' 17
+|             |                                                                                                 `-ConditionalOperator 0x7fb2dc02f350 <col:2374, col:3184> 'int'
+|             |                                                                                                   |-BinaryOperator 0x7fb2dc02d610 <col:2374, col:2413> 'unsigned long long' '&'
+|             |                                                                                                   | |-ImplicitCastExpr 0x7fb2dc02d5f8 <col:2374, col:2398> 'unsigned long long' <IntegralCast>
+|             |                                                                                                   | | `-ImplicitCastExpr 0x7fb2dc02d5e0 <col:2374, col:2398> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                   | |   `-ParenExpr 0x7fb2dc02d538 <col:2374, col:2398> 'u32':'unsigned int' lvalue
+|             |                                                                                                   | |     `-MemberExpr 0x7fb2dc02d500 <col:2375, col:2381> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                   | |       `-ImplicitCastExpr 0x7fb2dc02d4e8 <col:2375> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                   | |         `-DeclRefExpr 0x7fb2dc02d4c0 <col:2375> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                   | `-ParenExpr 0x7fb2dc02d5c0 <col:2402, col:2413> 'unsigned long long'
+|             |                                                                                                   |   `-BinaryOperator 0x7fb2dc02d598 <col:2403, col:2411> 'unsigned long long' '<<'
+|             |                                                                                                   |     |-IntegerLiteral 0x7fb2dc02d558 <col:2403> 'unsigned long long' 1
+|             |                                                                                                   |     `-IntegerLiteral 0x7fb2dc02d578 <col:2411> 'int' 16
+|             |                                                                                                   |-IntegerLiteral 0x7fb2dc02d638 <col:2417> 'int' 16
+|             |                                                                                                   `-ConditionalOperator 0x7fb2dc02f320 <col:2422, col:3184> 'int'
+|             |                                                                                                     |-BinaryOperator 0x7fb2dc02d7a8 <col:2422, col:2461> 'unsigned long long' '&'
+|             |                                                                                                     | |-ImplicitCastExpr 0x7fb2dc02d790 <col:2422, col:2446> 'unsigned long long' <IntegralCast>
+|             |                                                                                                     | | `-ImplicitCastExpr 0x7fb2dc02d778 <col:2422, col:2446> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                     | |   `-ParenExpr 0x7fb2dc02d6d0 <col:2422, col:2446> 'u32':'unsigned int' lvalue
+|             |                                                                                                     | |     `-MemberExpr 0x7fb2dc02d698 <col:2423, col:2429> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                     | |       `-ImplicitCastExpr 0x7fb2dc02d680 <col:2423> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                     | |         `-DeclRefExpr 0x7fb2dc02d658 <col:2423> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                     | `-ParenExpr 0x7fb2dc02d758 <col:2450, col:2461> 'unsigned long long'
+|             |                                                                                                     |   `-BinaryOperator 0x7fb2dc02d730 <col:2451, col:2459> 'unsigned long long' '<<'
+|             |                                                                                                     |     |-IntegerLiteral 0x7fb2dc02d6f0 <col:2451> 'unsigned long long' 1
+|             |                                                                                                     |     `-IntegerLiteral 0x7fb2dc02d710 <col:2459> 'int' 15
+|             |                                                                                                     |-IntegerLiteral 0x7fb2dc02d7d0 <col:2465> 'int' 15
+|             |                                                                                                     `-ConditionalOperator 0x7fb2dc02f2f0 <col:2470, col:3184> 'int'
+|             |                                                                                                       |-BinaryOperator 0x7fb2dc02d940 <col:2470, col:2509> 'unsigned long long' '&'
+|             |                                                                                                       | |-ImplicitCastExpr 0x7fb2dc02d928 <col:2470, col:2494> 'unsigned long long' <IntegralCast>
+|             |                                                                                                       | | `-ImplicitCastExpr 0x7fb2dc02d910 <col:2470, col:2494> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                       | |   `-ParenExpr 0x7fb2dc02d868 <col:2470, col:2494> 'u32':'unsigned int' lvalue
+|             |                                                                                                       | |     `-MemberExpr 0x7fb2dc02d830 <col:2471, col:2477> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                       | |       `-ImplicitCastExpr 0x7fb2dc02d818 <col:2471> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                       | |         `-DeclRefExpr 0x7fb2dc02d7f0 <col:2471> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                       | `-ParenExpr 0x7fb2dc02d8f0 <col:2498, col:2509> 'unsigned long long'
+|             |                                                                                                       |   `-BinaryOperator 0x7fb2dc02d8c8 <col:2499, col:2507> 'unsigned long long' '<<'
+|             |                                                                                                       |     |-IntegerLiteral 0x7fb2dc02d888 <col:2499> 'unsigned long long' 1
+|             |                                                                                                       |     `-IntegerLiteral 0x7fb2dc02d8a8 <col:2507> 'int' 14
+|             |                                                                                                       |-IntegerLiteral 0x7fb2dc02d968 <col:2513> 'int' 14
+|             |                                                                                                       `-ConditionalOperator 0x7fb2dc02f2c0 <col:2518, col:3184> 'int'
+|             |                                                                                                         |-BinaryOperator 0x7fb2dc02dad8 <col:2518, col:2557> 'unsigned long long' '&'
+|             |                                                                                                         | |-ImplicitCastExpr 0x7fb2dc02dac0 <col:2518, col:2542> 'unsigned long long' <IntegralCast>
+|             |                                                                                                         | | `-ImplicitCastExpr 0x7fb2dc02daa8 <col:2518, col:2542> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                         | |   `-ParenExpr 0x7fb2dc02da00 <col:2518, col:2542> 'u32':'unsigned int' lvalue
+|             |                                                                                                         | |     `-MemberExpr 0x7fb2dc02d9c8 <col:2519, col:2525> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                         | |       `-ImplicitCastExpr 0x7fb2dc02d9b0 <col:2519> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                         | |         `-DeclRefExpr 0x7fb2dc02d988 <col:2519> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                         | `-ParenExpr 0x7fb2dc02da88 <col:2546, col:2557> 'unsigned long long'
+|             |                                                                                                         |   `-BinaryOperator 0x7fb2dc02da60 <col:2547, col:2555> 'unsigned long long' '<<'
+|             |                                                                                                         |     |-IntegerLiteral 0x7fb2dc02da20 <col:2547> 'unsigned long long' 1
+|             |                                                                                                         |     `-IntegerLiteral 0x7fb2dc02da40 <col:2555> 'int' 13
+|             |                                                                                                         |-IntegerLiteral 0x7fb2dc02db00 <col:2561> 'int' 13
+|             |                                                                                                         `-ConditionalOperator 0x7fb2dc02f290 <col:2566, col:3184> 'int'
+|             |                                                                                                           |-BinaryOperator 0x7fb2dc02dc70 <col:2566, col:2605> 'unsigned long long' '&'
+|             |                                                                                                           | |-ImplicitCastExpr 0x7fb2dc02dc58 <col:2566, col:2590> 'unsigned long long' <IntegralCast>
+|             |                                                                                                           | | `-ImplicitCastExpr 0x7fb2dc02dc40 <col:2566, col:2590> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                           | |   `-ParenExpr 0x7fb2dc02db98 <col:2566, col:2590> 'u32':'unsigned int' lvalue
+|             |                                                                                                           | |     `-MemberExpr 0x7fb2dc02db60 <col:2567, col:2573> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                           | |       `-ImplicitCastExpr 0x7fb2dc02db48 <col:2567> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                           | |         `-DeclRefExpr 0x7fb2dc02db20 <col:2567> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                           | `-ParenExpr 0x7fb2dc02dc20 <col:2594, col:2605> 'unsigned long long'
+|             |                                                                                                           |   `-BinaryOperator 0x7fb2dc02dbf8 <col:2595, col:2603> 'unsigned long long' '<<'
+|             |                                                                                                           |     |-IntegerLiteral 0x7fb2dc02dbb8 <col:2595> 'unsigned long long' 1
+|             |                                                                                                           |     `-IntegerLiteral 0x7fb2dc02dbd8 <col:2603> 'int' 12
+|             |                                                                                                           |-IntegerLiteral 0x7fb2dc02dc98 <col:2609> 'int' 12
+|             |                                                                                                           `-ConditionalOperator 0x7fb2dc02f260 <col:2614, col:3184> 'int'
+|             |                                                                                                             |-BinaryOperator 0x7fb2dc02de08 <col:2614, col:2653> 'unsigned long long' '&'
+|             |                                                                                                             | |-ImplicitCastExpr 0x7fb2dc02ddf0 <col:2614, col:2638> 'unsigned long long' <IntegralCast>
+|             |                                                                                                             | | `-ImplicitCastExpr 0x7fb2dc02ddd8 <col:2614, col:2638> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                             | |   `-ParenExpr 0x7fb2dc02dd30 <col:2614, col:2638> 'u32':'unsigned int' lvalue
+|             |                                                                                                             | |     `-MemberExpr 0x7fb2dc02dcf8 <col:2615, col:2621> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                             | |       `-ImplicitCastExpr 0x7fb2dc02dce0 <col:2615> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                             | |         `-DeclRefExpr 0x7fb2dc02dcb8 <col:2615> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                             | `-ParenExpr 0x7fb2dc02ddb8 <col:2642, col:2653> 'unsigned long long'
+|             |                                                                                                             |   `-BinaryOperator 0x7fb2dc02dd90 <col:2643, col:2651> 'unsigned long long' '<<'
+|             |                                                                                                             |     |-IntegerLiteral 0x7fb2dc02dd50 <col:2643> 'unsigned long long' 1
+|             |                                                                                                             |     `-IntegerLiteral 0x7fb2dc02dd70 <col:2651> 'int' 11
+|             |                                                                                                             |-IntegerLiteral 0x7fb2dc02de30 <col:2657> 'int' 11
+|             |                                                                                                             `-ConditionalOperator 0x7fb2dc02f230 <col:2662, col:3184> 'int'
+|             |                                                                                                               |-BinaryOperator 0x7fb2dc02dfa0 <col:2662, col:2701> 'unsigned long long' '&'
+|             |                                                                                                               | |-ImplicitCastExpr 0x7fb2dc02df88 <col:2662, col:2686> 'unsigned long long' <IntegralCast>
+|             |                                                                                                               | | `-ImplicitCastExpr 0x7fb2dc02df70 <col:2662, col:2686> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                               | |   `-ParenExpr 0x7fb2dc02dec8 <col:2662, col:2686> 'u32':'unsigned int' lvalue
+|             |                                                                                                               | |     `-MemberExpr 0x7fb2dc02de90 <col:2663, col:2669> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                               | |       `-ImplicitCastExpr 0x7fb2dc02de78 <col:2663> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                               | |         `-DeclRefExpr 0x7fb2dc02de50 <col:2663> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                               | `-ParenExpr 0x7fb2dc02df50 <col:2690, col:2701> 'unsigned long long'
+|             |                                                                                                               |   `-BinaryOperator 0x7fb2dc02df28 <col:2691, col:2699> 'unsigned long long' '<<'
+|             |                                                                                                               |     |-IntegerLiteral 0x7fb2dc02dee8 <col:2691> 'unsigned long long' 1
+|             |                                                                                                               |     `-IntegerLiteral 0x7fb2dc02df08 <col:2699> 'int' 10
+|             |                                                                                                               |-IntegerLiteral 0x7fb2dc02dfc8 <col:2705> 'int' 10
+|             |                                                                                                               `-ConditionalOperator 0x7fb2dc02f200 <col:2710, col:3184> 'int'
+|             |                                                                                                                 |-BinaryOperator 0x7fb2dc02e138 <col:2710, col:2748> 'unsigned long long' '&'
+|             |                                                                                                                 | |-ImplicitCastExpr 0x7fb2dc02e120 <col:2710, col:2734> 'unsigned long long' <IntegralCast>
+|             |                                                                                                                 | | `-ImplicitCastExpr 0x7fb2dc02e108 <col:2710, col:2734> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                                 | |   `-ParenExpr 0x7fb2dc02e060 <col:2710, col:2734> 'u32':'unsigned int' lvalue
+|             |                                                                                                                 | |     `-MemberExpr 0x7fb2dc02e028 <col:2711, col:2717> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                                 | |       `-ImplicitCastExpr 0x7fb2dc02e010 <col:2711> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                                 | |         `-DeclRefExpr 0x7fb2dc02dfe8 <col:2711> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                                 | `-ParenExpr 0x7fb2dc02e0e8 <col:2738, col:2748> 'unsigned long long'
+|             |                                                                                                                 |   `-BinaryOperator 0x7fb2dc02e0c0 <col:2739, col:2747> 'unsigned long long' '<<'
+|             |                                                                                                                 |     |-IntegerLiteral 0x7fb2dc02e080 <col:2739> 'unsigned long long' 1
+|             |                                                                                                                 |     `-IntegerLiteral 0x7fb2dc02e0a0 <col:2747> 'int' 9
+|             |                                                                                                                 |-IntegerLiteral 0x7fb2dc02e160 <col:2752> 'int' 9
+|             |                                                                                                                 `-ConditionalOperator 0x7fb2dc02f1d0 <col:2756, col:3184> 'int'
+|             |                                                                                                                   |-BinaryOperator 0x7fb2dc02e2d0 <col:2756, col:2794> 'unsigned long long' '&'
+|             |                                                                                                                   | |-ImplicitCastExpr 0x7fb2dc02e2b8 <col:2756, col:2780> 'unsigned long long' <IntegralCast>
+|             |                                                                                                                   | | `-ImplicitCastExpr 0x7fb2dc02e2a0 <col:2756, col:2780> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                                   | |   `-ParenExpr 0x7fb2dc02e1f8 <col:2756, col:2780> 'u32':'unsigned int' lvalue
+|             |                                                                                                                   | |     `-MemberExpr 0x7fb2dc02e1c0 <col:2757, col:2763> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                                   | |       `-ImplicitCastExpr 0x7fb2dc02e1a8 <col:2757> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                                   | |         `-DeclRefExpr 0x7fb2dc02e180 <col:2757> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                                   | `-ParenExpr 0x7fb2dc02e280 <col:2784, col:2794> 'unsigned long long'
+|             |                                                                                                                   |   `-BinaryOperator 0x7fb2dc02e258 <col:2785, col:2793> 'unsigned long long' '<<'
+|             |                                                                                                                   |     |-IntegerLiteral 0x7fb2dc02e218 <col:2785> 'unsigned long long' 1
+|             |                                                                                                                   |     `-IntegerLiteral 0x7fb2dc02e238 <col:2793> 'int' 8
+|             |                                                                                                                   |-IntegerLiteral 0x7fb2dc02e2f8 <col:2798> 'int' 8
+|             |                                                                                                                   `-ConditionalOperator 0x7fb2dc02f1a0 <col:2802, col:3184> 'int'
+|             |                                                                                                                     |-BinaryOperator 0x7fb2dc02e478 <col:2802, col:2840> 'unsigned long long' '&'
+|             |                                                                                                                     | |-ImplicitCastExpr 0x7fb2dc02e460 <col:2802, col:2826> 'unsigned long long' <IntegralCast>
+|             |                                                                                                                     | | `-ImplicitCastExpr 0x7fb2dc02e448 <col:2802, col:2826> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                                     | |   `-ParenExpr 0x7fb2dc02e390 <col:2802, col:2826> 'u32':'unsigned int' lvalue
+|             |                                                                                                                     | |     `-MemberExpr 0x7fb2dc02e358 <col:2803, col:2809> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                                     | |       `-ImplicitCastExpr 0x7fb2dc02e340 <col:2803> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                                     | |         `-DeclRefExpr 0x7fb2dc02e318 <col:2803> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                                     | `-ParenExpr 0x7fb2dc02e428 <col:2830, col:2840> 'unsigned long long'
+|             |                                                                                                                     |   `-BinaryOperator 0x7fb2dc02e400 <col:2831, col:2839> 'unsigned long long' '<<'
+|             |                                                                                                                     |     |-IntegerLiteral 0x7fb2dc02e3b0 <col:2831> 'unsigned long long' 1
+|             |                                                                                                                     |     `-IntegerLiteral 0x7fb2dc02e3d0 <col:2839> 'int' 7
+|             |                                                                                                                     |-IntegerLiteral 0x7fb2dc02e4a0 <col:2844> 'int' 7
+|             |                                                                                                                     `-ConditionalOperator 0x7fb2dc02f170 <col:2848, col:3184> 'int'
+|             |                                                                                                                       |-BinaryOperator 0x7fb2dc02e610 <col:2848, col:2886> 'unsigned long long' '&'
+|             |                                                                                                                       | |-ImplicitCastExpr 0x7fb2dc02e5f8 <col:2848, col:2872> 'unsigned long long' <IntegralCast>
+|             |                                                                                                                       | | `-ImplicitCastExpr 0x7fb2dc02e5e0 <col:2848, col:2872> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                                       | |   `-ParenExpr 0x7fb2dc02e538 <col:2848, col:2872> 'u32':'unsigned int' lvalue
+|             |                                                                                                                       | |     `-MemberExpr 0x7fb2dc02e500 <col:2849, col:2855> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                                       | |       `-ImplicitCastExpr 0x7fb2dc02e4e8 <col:2849> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                                       | |         `-DeclRefExpr 0x7fb2dc02e4c0 <col:2849> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                                       | `-ParenExpr 0x7fb2dc02e5c0 <col:2876, col:2886> 'unsigned long long'
+|             |                                                                                                                       |   `-BinaryOperator 0x7fb2dc02e598 <col:2877, col:2885> 'unsigned long long' '<<'
+|             |                                                                                                                       |     |-IntegerLiteral 0x7fb2dc02e558 <col:2877> 'unsigned long long' 1
+|             |                                                                                                                       |     `-IntegerLiteral 0x7fb2dc02e578 <col:2885> 'int' 6
+|             |                                                                                                                       |-IntegerLiteral 0x7fb2dc02e638 <col:2890> 'int' 6
+|             |                                                                                                                       `-ConditionalOperator 0x7fb2dc02f140 <col:2894, col:3184> 'int'
+|             |                                                                                                                         |-BinaryOperator 0x7fb2dc02e7a8 <col:2894, col:2932> 'unsigned long long' '&'
+|             |                                                                                                                         | |-ImplicitCastExpr 0x7fb2dc02e790 <col:2894, col:2918> 'unsigned long long' <IntegralCast>
+|             |                                                                                                                         | | `-ImplicitCastExpr 0x7fb2dc02e778 <col:2894, col:2918> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                                         | |   `-ParenExpr 0x7fb2dc02e6d0 <col:2894, col:2918> 'u32':'unsigned int' lvalue
+|             |                                                                                                                         | |     `-MemberExpr 0x7fb2dc02e698 <col:2895, col:2901> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                                         | |       `-ImplicitCastExpr 0x7fb2dc02e680 <col:2895> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                                         | |         `-DeclRefExpr 0x7fb2dc02e658 <col:2895> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                                         | `-ParenExpr 0x7fb2dc02e758 <col:2922, col:2932> 'unsigned long long'
+|             |                                                                                                                         |   `-BinaryOperator 0x7fb2dc02e730 <col:2923, col:2931> 'unsigned long long' '<<'
+|             |                                                                                                                         |     |-IntegerLiteral 0x7fb2dc02e6f0 <col:2923> 'unsigned long long' 1
+|             |                                                                                                                         |     `-IntegerLiteral 0x7fb2dc02e710 <col:2931> 'int' 5
+|             |                                                                                                                         |-IntegerLiteral 0x7fb2dc02e7d0 <col:2936> 'int' 5
+|             |                                                                                                                         `-ConditionalOperator 0x7fb2dc02f110 <col:2940, col:3184> 'int'
+|             |                                                                                                                           |-BinaryOperator 0x7fb2dc02e940 <col:2940, col:2978> 'unsigned long long' '&'
+|             |                                                                                                                           | |-ImplicitCastExpr 0x7fb2dc02e928 <col:2940, col:2964> 'unsigned long long' <IntegralCast>
+|             |                                                                                                                           | | `-ImplicitCastExpr 0x7fb2dc02e910 <col:2940, col:2964> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                                           | |   `-ParenExpr 0x7fb2dc02e868 <col:2940, col:2964> 'u32':'unsigned int' lvalue
+|             |                                                                                                                           | |     `-MemberExpr 0x7fb2dc02e830 <col:2941, col:2947> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                                           | |       `-ImplicitCastExpr 0x7fb2dc02e818 <col:2941> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                                           | |         `-DeclRefExpr 0x7fb2dc02e7f0 <col:2941> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                                           | `-ParenExpr 0x7fb2dc02e8f0 <col:2968, col:2978> 'unsigned long long'
+|             |                                                                                                                           |   `-BinaryOperator 0x7fb2dc02e8c8 <col:2969, col:2977> 'unsigned long long' '<<'
+|             |                                                                                                                           |     |-IntegerLiteral 0x7fb2dc02e888 <col:2969> 'unsigned long long' 1
+|             |                                                                                                                           |     `-IntegerLiteral 0x7fb2dc02e8a8 <col:2977> 'int' 4
+|             |                                                                                                                           |-IntegerLiteral 0x7fb2dc02e968 <col:2982> 'int' 4
+|             |                                                                                                                           `-ConditionalOperator 0x7fb2dc02f0e0 <col:2986, col:3184> 'int'
+|             |                                                                                                                             |-BinaryOperator 0x7fb2dc02ead8 <col:2986, col:3024> 'unsigned long long' '&'
+|             |                                                                                                                             | |-ImplicitCastExpr 0x7fb2dc02eac0 <col:2986, col:3010> 'unsigned long long' <IntegralCast>
+|             |                                                                                                                             | | `-ImplicitCastExpr 0x7fb2dc02eaa8 <col:2986, col:3010> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                                             | |   `-ParenExpr 0x7fb2dc02ea00 <col:2986, col:3010> 'u32':'unsigned int' lvalue
+|             |                                                                                                                             | |     `-MemberExpr 0x7fb2dc02e9c8 <col:2987, col:2993> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                                             | |       `-ImplicitCastExpr 0x7fb2dc02e9b0 <col:2987> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                                             | |         `-DeclRefExpr 0x7fb2dc02e988 <col:2987> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                                             | `-ParenExpr 0x7fb2dc02ea88 <col:3014, col:3024> 'unsigned long long'
+|             |                                                                                                                             |   `-BinaryOperator 0x7fb2dc02ea60 <col:3015, col:3023> 'unsigned long long' '<<'
+|             |                                                                                                                             |     |-IntegerLiteral 0x7fb2dc02ea20 <col:3015> 'unsigned long long' 1
+|             |                                                                                                                             |     `-IntegerLiteral 0x7fb2dc02ea40 <col:3023> 'int' 3
+|             |                                                                                                                             |-IntegerLiteral 0x7fb2dc02eb00 <col:3028> 'int' 3
+|             |                                                                                                                             `-ConditionalOperator 0x7fb2dc02f0b0 <col:3032, col:3184> 'int'
+|             |                                                                                                                               |-BinaryOperator 0x7fb2dc02ec70 <col:3032, col:3070> 'unsigned long long' '&'
+|             |                                                                                                                               | |-ImplicitCastExpr 0x7fb2dc02ec58 <col:3032, col:3056> 'unsigned long long' <IntegralCast>
+|             |                                                                                                                               | | `-ImplicitCastExpr 0x7fb2dc02ec40 <col:3032, col:3056> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                                               | |   `-ParenExpr 0x7fb2dc02eb98 <col:3032, col:3056> 'u32':'unsigned int' lvalue
+|             |                                                                                                                               | |     `-MemberExpr 0x7fb2dc02eb60 <col:3033, col:3039> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                                               | |       `-ImplicitCastExpr 0x7fb2dc02eb48 <col:3033> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                                               | |         `-DeclRefExpr 0x7fb2dc02eb20 <col:3033> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                                               | `-ParenExpr 0x7fb2dc02ec20 <col:3060, col:3070> 'unsigned long long'
+|             |                                                                                                                               |   `-BinaryOperator 0x7fb2dc02ebf8 <col:3061, col:3069> 'unsigned long long' '<<'
+|             |                                                                                                                               |     |-IntegerLiteral 0x7fb2dc02ebb8 <col:3061> 'unsigned long long' 1
+|             |                                                                                                                               |     `-IntegerLiteral 0x7fb2dc02ebd8 <col:3069> 'int' 2
+|             |                                                                                                                               |-IntegerLiteral 0x7fb2dc02ec98 <col:3074> 'int' 2
+|             |                                                                                                                               `-ConditionalOperator 0x7fb2dc02f080 <col:3078, col:3184> 'int'
+|             |                                                                                                                                 |-BinaryOperator 0x7fb2dc02ee08 <col:3078, col:3116> 'unsigned long long' '&'
+|             |                                                                                                                                 | |-ImplicitCastExpr 0x7fb2dc02edf0 <col:3078, col:3102> 'unsigned long long' <IntegralCast>
+|             |                                                                                                                                 | | `-ImplicitCastExpr 0x7fb2dc02edd8 <col:3078, col:3102> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                                                 | |   `-ParenExpr 0x7fb2dc02ed30 <col:3078, col:3102> 'u32':'unsigned int' lvalue
+|             |                                                                                                                                 | |     `-MemberExpr 0x7fb2dc02ecf8 <col:3079, col:3085> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                                                 | |       `-ImplicitCastExpr 0x7fb2dc02ece0 <col:3079> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                                                 | |         `-DeclRefExpr 0x7fb2dc02ecb8 <col:3079> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                                                 | `-ParenExpr 0x7fb2dc02edb8 <col:3106, col:3116> 'unsigned long long'
+|             |                                                                                                                                 |   `-BinaryOperator 0x7fb2dc02ed90 <col:3107, col:3115> 'unsigned long long' '<<'
+|             |                                                                                                                                 |     |-IntegerLiteral 0x7fb2dc02ed50 <col:3107> 'unsigned long long' 1
+|             |                                                                                                                                 |     `-IntegerLiteral 0x7fb2dc02ed70 <col:3115> 'int' 1
+|             |                                                                                                                                 |-IntegerLiteral 0x7fb2dc02ee30 <col:3120> 'int' 1
+|             |                                                                                                                                 `-ConditionalOperator 0x7fb2dc02f050 <col:3124, col:3184> 'int'
+|             |                                                                                                                                   |-BinaryOperator 0x7fb2dc02efa0 <col:3124, col:3162> 'unsigned long long' '&'
+|             |                                                                                                                                   | |-ImplicitCastExpr 0x7fb2dc02ef88 <col:3124, col:3148> 'unsigned long long' <IntegralCast>
+|             |                                                                                                                                   | | `-ImplicitCastExpr 0x7fb2dc02ef70 <col:3124, col:3148> 'u32':'unsigned int' <LValueToRValue>
+|             |                                                                                                                                   | |   `-ParenExpr 0x7fb2dc02eec8 <col:3124, col:3148> 'u32':'unsigned int' lvalue
+|             |                                                                                                                                   | |     `-MemberExpr 0x7fb2dc02ee90 <col:3125, col:3131> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|             |                                                                                                                                   | |       `-ImplicitCastExpr 0x7fb2dc02ee78 <col:3125> 'struct ehca_shca *' <LValueToRValue>
+|             |                                                                                                                                   | |         `-DeclRefExpr 0x7fb2dc02ee50 <col:3125> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|             |                                                                                                                                   | `-ParenExpr 0x7fb2dc02ef50 <col:3152, col:3162> 'unsigned long long'
+|             |                                                                                                                                   |   `-BinaryOperator 0x7fb2dc02ef28 <col:3153, col:3161> 'unsigned long long' '<<'
+|             |                                                                                                                                   |     |-IntegerLiteral 0x7fb2dc02eee8 <col:3153> 'unsigned long long' 1
+|             |                                                                                                                                   |     `-IntegerLiteral 0x7fb2dc02ef08 <col:3161> 'int' 0
+|             |                                                                                                                                   |-IntegerLiteral 0x7fb2dc02efc8 <col:3166> 'int' 0
+|             |                                                                                                                                   `-CallExpr 0x7fb2dc02f028 <col:3170, col:3184> 'int'
+|             |                                                                                                                                     `-ImplicitCastExpr 0x7fb2dc02f010 <col:3170> 'int (*)(void)' <FunctionToPointerDecay>
+|             |                                                                                                                                       `-DeclRefExpr 0x7fb2dc02efe8 <col:3170> 'int (void)' Function 0x7fb2dc028288 '____ilog2_NaN' 'int (void)'
+|             `-ConditionalOperator 0x7fb2dc0300d0 <col:3190, col:3305> 'int'
+|               |-ParenExpr 0x7fb2dc02fdd8 <col:3190, col:3227> 'int'
+|               | `-BinaryOperator 0x7fb2dc02fdb0 <col:3191, col:3226> 'int' '<='
+|               |   |-UnaryExprOrTypeTraitExpr 0x7fb2dc02fd58 <col:3191, col:3221> 'unsigned long' sizeof
+|               |   | `-ParenExpr 0x7fb2dc02fd38 <col:3197, col:3221> 'u32':'unsigned int' lvalue
+|               |   |   `-MemberExpr 0x7fb2dc02fd00 <col:3198, col:3204> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|               |   |     `-ImplicitCastExpr 0x7fb2dc02fce8 <col:3198> 'struct ehca_shca *' <LValueToRValue>
+|               |   |       `-DeclRefExpr 0x7fb2dc02fcc0 <col:3198> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|               |   `-ImplicitCastExpr 0x7fb2dc02fd98 <col:3226> 'unsigned long' <IntegralCast>
+|               |     `-IntegerLiteral 0x7fb2dc02fd78 <col:3226> 'int' 4
+|               |-CallExpr 0x7fb2dc02ff10 <col:3231, col:3266> 'int'
+|               | |-ImplicitCastExpr 0x7fb2dc02fef8 <col:3231> 'int (*)(u32)' <FunctionToPointerDecay>
+|               | | `-DeclRefExpr 0x7fb2dc02fdf8 <col:3231> 'int (u32)' Function 0x7fb2dc027538 '__ilog2_u32' 'int (u32)'
+|               | `-ImplicitCastExpr 0x7fb2dc02ff40 <col:3243, col:3249> 'u32':'unsigned int' <LValueToRValue>
+|               |   `-MemberExpr 0x7fb2dc02fe60 <col:3243, col:3249> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|               |     `-ImplicitCastExpr 0x7fb2dc02fe48 <col:3243> 'struct ehca_shca *' <LValueToRValue>
+|               |       `-DeclRefExpr 0x7fb2dc02fe20 <col:3243> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|               `-CallExpr 0x7fb2dc030070 <col:3270, col:3305> 'int'
+|                 |-ImplicitCastExpr 0x7fb2dc030058 <col:3270> 'int (*)(u64)' <FunctionToPointerDecay>
+|                 | `-DeclRefExpr 0x7fb2dc02ff58 <col:3270> 'int (u64)' Function 0x7fb2dc027b28 '__ilog2_u64' 'int (u64)'
+|                 `-ImplicitCastExpr 0x7fb2dc0300b8 <col:3282, col:3288> 'u64':'unsigned long long' <IntegralCast>
+|                   `-ImplicitCastExpr 0x7fb2dc0300a0 <col:3282, col:3288> 'u32':'unsigned int' <LValueToRValue>
+|                     `-MemberExpr 0x7fb2dc02ffc0 <col:3282, col:3288> 'u32':'unsigned int' lvalue ->hca_cap_mr_pgsize 0x7fb2dc028170
+|                       `-ImplicitCastExpr 0x7fb2dc02ffa8 <col:3282> 'struct ehca_shca *' <LValueToRValue>
+|                         `-DeclRefExpr 0x7fb2dc02ff80 <col:3282> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc028400 'shca' 'struct ehca_shca *'
+|-FunctionDecl 0x7fb2dc0285e8 <col:18> col:18 implicit used __builtin_constant_p 'int ()' extern
+| |-NoThrowAttr 0x7fb2dc028680 <col:18> Implicit
+| `-ConstAttr 0x7fb2dc0286c8 <col:18> Implicit
+|-FunctionDecl 0x7fb2dc0302f8 <line:41:1, line:43:1> line:41:5 x 'int (struct ehca_shca *)'
+| |-ParmVarDecl 0x7fb2dc0301f0 <col:7, col:25> col:25 used shca 'struct ehca_shca *'
+| `-CompoundStmt 0x7fb2dc03f4e8 <col:31, line:43:1>
+|   `-ReturnStmt 0x7fb2dc03f4d0 <line:42:9, col:45>
+|     `-ImplicitCastExpr 0x7fb2dc03f4b8 <col:16, col:45> 'int' <IntegralCast>
+|       `-CallExpr 0x7fb2dc03f470 <col:16, col:45> 'u64':'unsigned long long'
+|         |-ImplicitCastExpr 0x7fb2dc03f458 <col:16> 'u64 (*)(struct ehca_shca *)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fb2dc030398 <col:16> 'u64 (struct ehca_shca *)' Function 0x7fb2dc028500 'ehca_get_max_hwpage_size' 'u64 (struct ehca_shca *)'
+|         `-ImplicitCastExpr 0x7fb2dc03f4a0 <col:41> 'struct ehca_shca *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fb2dc0303c0 <col:41> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc0301f0 'shca' 'struct ehca_shca *'
+`-FunctionDecl 0x7fb2dc03f5c0 <line:45:1, line:48:1> line:45:5 y 'int (struct ehca_shca *)'
+  |-ParmVarDecl 0x7fb2dc03f530 <col:7, col:25> col:25 used shca 'struct ehca_shca *'
+  `-CompoundStmt 0x7fb2dc03f740 <line:46:1, line:48:1>
+    `-ReturnStmt 0x7fb2dc03f728 <line:47:9, col:45>
+      `-ImplicitCastExpr 0x7fb2dc03f710 <col:16, col:45> 'int' <IntegralCast>
+        `-CallExpr 0x7fb2dc03f6c8 <col:16, col:45> 'u64':'unsigned long long'
+          |-ImplicitCastExpr 0x7fb2dc03f6b0 <col:16> 'u64 (*)(struct ehca_shca *)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fb2dc03f660 <col:16> 'u64 (struct ehca_shca *)' Function 0x7fb2dc028500 'ehca_get_max_hwpage_size' 'u64 (struct ehca_shca *)'
+          `-ImplicitCastExpr 0x7fb2dc03f6f8 <col:41> 'struct ehca_shca *' <LValueToRValue>
+            `-DeclRefExpr 0x7fb2dc03f688 <col:41> 'struct ehca_shca *' lvalue ParmVar 0x7fb2dc03f530 'shca' 'struct ehca_shca *'

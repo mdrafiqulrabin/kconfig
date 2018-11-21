@@ -1,0 +1,33 @@
+c_files/pr59610.c:7:16: warning: unknown attribute 'optimize' ignored [-Wunknown-attributes]
+__attribute__((optimize (0))) void
+               ^
+1 warning generated.
+TranslationUnitDecl 0x7fa2db81d8d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa2db81de20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa2db81db40 '__int128'
+|-TypedefDecl 0x7fa2db81de90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa2db81db60 'unsigned __int128'
+|-TypedefDecl 0x7fa2db81e168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa2db81df70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa2db81dee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa2db81e200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa2db81e1c0 'char *'
+|   `-BuiltinType 0x7fa2db81d960 'char'
+|-TypedefDecl 0x7fa2db81e4c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa2db81e470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa2db81e2e0 'struct __va_list_tag'
+|     `-Record 0x7fa2db81e258 '__va_list_tag'
+|-RecordDecl 0x7fa2db81e520 <c_files/pr59610.c:4:1, col:19> col:8 struct A definition
+| `-FieldDecl 0x7fa2db86ba00 <col:12, col:16> col:16 a 'int'
+|-VarDecl 0x7fa2db86ba60 <line:5:1, col:14> col:14 used y 'void *' extern
+`-FunctionDecl 0x7fa2db86bd00 <line:7:1, line:11:1> line:8:1 referenced foo 'void (void *, struct A)'
+  |-ParmVarDecl 0x7fa2db86bb38 <col:6, col:12> col:12 p 'void *'
+  |-ParmVarDecl 0x7fa2db86bbf0 <col:15, col:24> col:24 used x 'struct A':'struct A'
+  `-CompoundStmt 0x7fa2db86bef8 <line:9:1, line:11:1>
+    `-CallExpr 0x7fa2db86be90 <line:10:3, col:12> 'void'
+      |-ImplicitCastExpr 0x7fa2db86be78 <col:3> 'void (*)(void *, struct A)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa2db86bda8 <col:3> 'void (void *, struct A)' Function 0x7fa2db86bd00 'foo' 'void (void *, struct A)'
+      |-ImplicitCastExpr 0x7fa2db86bec8 <col:8> 'void *' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa2db86bdd0 <col:8> 'void *' lvalue Var 0x7fa2db86ba60 'y' 'void *'
+      `-ImplicitCastExpr 0x7fa2db86bee0 <col:11> 'struct A':'struct A' <LValueToRValue>
+        `-DeclRefExpr 0x7fa2db86bdf8 <col:11> 'struct A':'struct A' lvalue ParmVar 0x7fa2db86bbf0 'x' 'struct A':'struct A'

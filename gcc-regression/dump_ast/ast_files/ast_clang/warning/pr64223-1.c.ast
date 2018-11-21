@@ -1,0 +1,35 @@
+c_files/pr64223-1.c:10:19: warning: format specifies type 'int' but the argument has type 'unsigned long' [-Wformat]
+  printf ("%d\n", 0UL); /* { dg-bogus "expects argument of type.*expects argument of type" } */
+           ~~     ^~~
+           %lu
+1 warning generated.
+TranslationUnitDecl 0x7fb61d8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb61d826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb61d826740 '__int128'
+|-TypedefDecl 0x7fb61d826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb61d826760 'unsigned __int128'
+|-TypedefDecl 0x7fb61d826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb61d826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb61d826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb61d826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb61d826dc0 'char *'
+|   `-BuiltinType 0x7fb61d826560 'char'
+|-TypedefDecl 0x7fb61d8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb61d827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb61d826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb61d826e58 '__va_list_tag'
+|-FunctionDecl 0x7fb61d878468 <c_files/pr64223-1.c:5:5> col:5 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fb61d878500 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fb61d878568 <col:5> Implicit printf 1 2
+|-FunctionDecl 0x7fb61d8785c0 prev 0x7fb61d878468 <col:1, col:78> col:5 used printf 'int (const char *, ...)'
+| |-ParmVarDecl 0x7fb61d827138 <col:13, col:24> col:25 'const char *'
+| `-FormatAttr 0x7fb61d878660 <col:48, col:76> printf 1 2
+`-FunctionDecl 0x7fb61d878780 <line:7:1, line:12:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb61d878d70 <line:9:1, line:12:1>
+    `-CallExpr 0x7fb61d878950 <line:10:3, col:22> 'int'
+      |-ImplicitCastExpr 0x7fb61d878938 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb61d878858 <col:3> 'int (const char *, ...)' Function 0x7fb61d8785c0 'printf' 'int (const char *, ...)'
+      |-ImplicitCastExpr 0x7fb61d8789a0 <col:11> 'const char *' <BitCast>
+      | `-ImplicitCastExpr 0x7fb61d878988 <col:11> 'char *' <ArrayToPointerDecay>
+      |   `-StringLiteral 0x7fb61d8788b8 <col:11> 'char [4]' lvalue "%d\n"
+      `-IntegerLiteral 0x7fb61d8788e8 <col:19> 'unsigned long' 0

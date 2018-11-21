@@ -1,0 +1,61 @@
+FileAST: 
+  Decl: mc, [], [], []
+    ArrayDecl: []
+      TypeDecl: mc, []
+        IdentifierType: ['int']
+      Constant: int, 2
+  Decl: f2, [], [], []
+    TypeDecl: f2, []
+      IdentifierType: ['int']
+  Decl: sk, [], [], []
+    TypeDecl: sk, []
+      IdentifierType: ['int']
+  Decl: hm, [], [], []
+    TypeDecl: hm, []
+      IdentifierType: ['short', 'int']
+  FuncDef: 
+    Decl: zm, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: zm, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: k1, [], [], []
+        TypeDecl: k1, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: k1
+          Constant: int, 0
+        BinaryOp: <
+          ID: k1
+          Constant: int, 2
+        UnaryOp: ++
+          ID: k1
+        Compound: 
+          For: 
+            Assignment: =
+              ID: sk
+              Constant: int, 0
+            BinaryOp: <
+              ID: sk
+              Constant: int, 2
+            UnaryOp: ++
+              ID: sk
+            Assignment: =
+              ArrayRef: 
+                ID: mc
+                ID: sk
+              Assignment: =
+                ID: hm
+                UnaryOp: ++
+                  ID: f2
+          If: 
+            BinaryOp: >=
+              ID: hm
+              Constant: int, 0
+            UnaryOp: ++
+              ID: hm

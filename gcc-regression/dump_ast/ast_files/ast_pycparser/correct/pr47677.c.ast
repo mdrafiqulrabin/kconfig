@@ -1,0 +1,178 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['int']
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          IdentifierType: ['int']
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  Decl: baz, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: baz, []
+          Struct: S
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                Struct: S
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['char']
+          Decl: v, [], [], []
+            PtrDecl: []
+              TypeDecl: v, []
+                IdentifierType: ['int']
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                Struct: S
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: &
+          ID: x
+          Constant: int, 2
+        Assignment: =
+          ID: d
+          Constant: int, 1
+        Compound: 
+          Assignment: =
+            ID: d
+            TernaryOp: 
+              BinaryOp: &
+                ID: x
+                Constant: int, 1
+              Constant: int, 11
+              Constant: int, 0
+          While: 
+            BinaryOp: !=
+              Assignment: =
+                ID: c
+                TernaryOp: 
+                  BinaryOp: !=
+                    StructRef: ->
+                      ID: s
+                      ID: s
+                    BinaryOp: &
+                      StructRef: ->
+                        ID: s
+                        ID: u
+                      Constant: int, 1
+                  StructRef: ->
+                    ID: s
+                    ID: s
+                  FuncCall: 
+                    ID: bar
+              Constant: char, '\0'
+            EmptyStatement: 
+          Assignment: =
+            ID: c
+            TernaryOp: 
+              BinaryOp: &&
+                BinaryOp: !=
+                  StructRef: ->
+                    ID: s
+                    ID: s
+                  Constant: char, '\\'
+                BinaryOp: &
+                  StructRef: ->
+                    ID: s
+                    ID: u
+                  Constant: int, 4
+              StructRef: ->
+                ID: s
+                ID: s
+              FuncCall: 
+                ID: bar
+          If: 
+            BinaryOp: ==
+              ID: c
+              Constant: char, '<'
+            Goto: lab
+      While: 
+        BinaryOp: &&
+          BinaryOp: !=
+            Assignment: =
+              ID: c
+              TernaryOp: 
+                BinaryOp: &
+                  StructRef: ->
+                    ID: s
+                    ID: u
+                  Constant: int, 1
+                StructRef: ->
+                  ID: s
+                  ID: s
+                FuncCall: 
+                  ID: bar
+            Constant: int, 0
+          BinaryOp: ||
+            BinaryOp: &&
+              BinaryOp: !=
+                ID: d
+                Constant: int, 11
+              BinaryOp: !=
+                ID: d
+                Constant: int, 17
+            BinaryOp: ==
+              BinaryOp: &
+                ArrayRef: 
+                  ID: v
+                  ID: c
+                Constant: int, 1
+              Constant: int, 0
+        Compound: 
+          Label: lab
+            EmptyStatement: 
+          Switch: 
+            ID: d
+            Compound: 
+              Case: 
+                Constant: int, 14
+                If: 
+                  BinaryOp: ==
+                    ID: c
+                    Constant: char, '}'
+                  Assignment: =
+                    ID: y
+                    FuncCall: 
+                      ID: baz
+                Assignment: =
+                  ID: d
+                  Assignment: =
+                    StructRef: ->
+                      ID: y
+                      ID: s
+                    TernaryOp: 
+                      BinaryOp: ==
+                        ID: z
+                        Constant: char, '<'
+                      Constant: int, 17
+                      Constant: int, 11

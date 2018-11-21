@@ -1,0 +1,25 @@
+FileAST: 
+  Decl: g1, [], [], []
+    TypeDecl: g1, []
+      Struct: None
+        Decl: f4, [], [], []
+          TypeDecl: f4, []
+            IdentifierType: ['int']
+  Decl: g2, [], [], []
+    TypeDecl: g2, []
+      IdentifierType: ['long']
+  Decl: g3, ['volatile'], [], []
+    TypeDecl: g3, ['volatile']
+      IdentifierType: ['long']
+  FuncDef: 
+    Decl: func_1, [], [], []
+      FuncDecl: 
+        TypeDecl: func_1, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: g2
+        Assignment: =
+          ID: g1
+          ID: g1
+        ID: g3

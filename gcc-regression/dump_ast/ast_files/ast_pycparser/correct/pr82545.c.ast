@@ -1,0 +1,49 @@
+FileAST: 
+  Decl: c, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: c, []
+        IdentifierType: ['void']
+  Decl: d, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: d, []
+        IdentifierType: ['void']
+  Decl: buf, [], [], []
+    ArrayDecl: []
+      PtrDecl: []
+        TypeDecl: buf, []
+          IdentifierType: ['void']
+      Constant: int, 5
+  FuncDef: 
+    Decl: a, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: a, []
+          IdentifierType: ['void']
+    Compound: 
+      Compound: 
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: b
+        FuncCall: 
+          ID: __builtin_setjmp
+          ExprList: 
+            ID: buf
+        FuncCall: 
+          ID: c
+          ExprList: 
+            ID: b
+      FuncCall: 
+        ID: d

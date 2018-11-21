@@ -1,0 +1,19 @@
+c_files/pragma-pop_macro-1.c:9:10: warning: pragma pop_macro could not pop 'X', no matching push_macro [-Wignored-pragmas]
+# pragma pop_macro("X")
+         ^
+1 warning generated.
+TranslationUnitDecl 0x7f86398264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8639826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8639826740 '__int128'
+|-TypedefDecl 0x7f8639826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8639826760 'unsigned __int128'
+|-TypedefDecl 0x7f8639826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8639826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8639826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8639826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8639826dc0 'char *'
+|   `-BuiltinType 0x7f8639826560 'char'
+`-TypedefDecl 0x7f86398270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7f8639827070 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7f8639826ee0 'struct __va_list_tag'
+      `-Record 0x7f8639826e58 '__va_list_tag'

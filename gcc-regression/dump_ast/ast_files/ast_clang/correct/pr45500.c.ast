@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fc0fc025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc0fc026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc0fc025d40 '__int128'
+|-TypedefDecl 0x7fc0fc026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc0fc025d60 'unsigned __int128'
+|-TypedefDecl 0x7fc0fc026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc0fc026170 'struct __NSConstantString_tag'
+|   `-Record 0x7fc0fc0260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc0fc026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc0fc0263c0 'char *'
+|   `-BuiltinType 0x7fc0fc025b60 'char'
+|-TypedefDecl 0x7fc0fc0266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc0fc026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc0fc0264e0 'struct __va_list_tag'
+|     `-Record 0x7fc0fc026458 '__va_list_tag'
+|-TypedefDecl 0x7fc0fc026778 <c_files/pr45500.c:5:1, col:14> col:14 referenced V '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+| `-VectorType 0x7fc0fc026740 '__attribute__((__vector_size__(16 * sizeof(char)))) char' 16
+|   `-BuiltinType 0x7fc0fc025b60 'char'
+`-VarDecl 0x7fc0fb827400 <line:6:1, col:44> col:16 s 'const V':'__attribute__((__vector_size__(16 * sizeof(char)))) char const' static cinit
+  `-InitListExpr 0x7fc0fb827560 <col:20, col:44> 'V':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+    |-ImplicitCastExpr 0x7fc0fb827620 <col:22> 'char' <IntegralCast>
+    | `-CharacterLiteral 0x7fc0fb8274a0 <col:22> 'int' 10
+    |-ImplicitCastExpr 0x7fc0fb827638 <col:28> 'char' <IntegralCast>
+    | `-CharacterLiteral 0x7fc0fb8274b8 <col:28> 'int' 13
+    |-ImplicitCastExpr 0x7fc0fb827650 <col:34> 'char' <IntegralCast>
+    | `-CharacterLiteral 0x7fc0fb8274d0 <col:34> 'int' 63
+    `-ImplicitCastExpr 0x7fc0fb827668 <col:39> 'char' <IntegralCast>
+      `-CharacterLiteral 0x7fc0fb8274e8 <col:39> 'int' 92

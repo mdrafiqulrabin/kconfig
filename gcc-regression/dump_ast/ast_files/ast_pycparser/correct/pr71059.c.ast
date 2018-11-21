@@ -1,0 +1,62 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['short']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['short']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Union: None
+        Decl: f0, [], [], []
+          TypeDecl: f0, []
+            IdentifierType: ['unsigned']
+        Decl: f1, [], [], []
+          TypeDecl: f1, []
+            IdentifierType: ['unsigned', 'short']
+  Decl: d, ['volatile'], [], []
+    TypeDecl: d, ['volatile']
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['short']
+        TypeDecl: fn1, []
+          IdentifierType: ['short']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          ID: p1
+          ID: a
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        TypeDecl: fn2, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: b
+          ID: f0
+        Constant: int, 0
+      For: 
+        Assignment: =
+          StructRef: .
+            ID: b
+            ID: f0
+          FuncCall: 
+            ID: fn1
+            ExprList: 
+              StructRef: .
+                ID: b
+                ID: f0
+        BinaryOp: ||
+          BinaryOp: &&
+            ID: c
+            StructRef: .
+              ID: b
+              ID: f1
+          ID: d

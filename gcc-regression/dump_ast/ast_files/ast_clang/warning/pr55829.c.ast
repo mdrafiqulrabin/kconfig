@@ -1,0 +1,125 @@
+c_files/pr55829.c:11:30: warning: unknown attribute '__noclone__' ignored [-Wunknown-attributes]
+__attribute__((__noinline__, __noclone__)) int chk_pd (double *v1, double *v2)
+                             ^
+c_files/pr55829.c:19:16: error: use of unknown builtin '__builtin_ia32_shufpd' [-Wimplicit-function-declaration]
+  __m128d t2 = __builtin_ia32_shufpd (t1, t1, 0);
+               ^
+c_files/pr55829.c:19:11: error: initializing '__m128d' (vector of 2 'double' values) with an expression of incompatible type 'int'
+  __m128d t2 = __builtin_ia32_shufpd (t1, t1, 0);
+          ^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr55829.c:20:3: error: use of unknown builtin '__builtin_ia32_storeupd' [-Wimplicit-function-declaration]
+  __builtin_ia32_storeupd (r, t2);
+  ^
+c_files/pr55829.c:20:3: note: did you mean '__builtin_ia32_shufpd'?
+c_files/pr55829.c:19:16: note: '__builtin_ia32_shufpd' declared here
+  __m128d t2 = __builtin_ia32_shufpd (t1, t1, 0);
+               ^
+1 warning and 3 errors generated.
+TranslationUnitDecl 0x7fcc138264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcc13826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcc13826740 '__int128'
+|-TypedefDecl 0x7fcc13826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcc13826760 'unsigned __int128'
+|-TypedefDecl 0x7fcc13826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcc13826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcc13826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcc13826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcc13826dc0 'char *'
+|   `-BuiltinType 0x7fcc13826560 'char'
+|-TypedefDecl 0x7fcc138270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcc13827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcc13826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcc13826e58 '__va_list_tag'
+|-TypedefDecl 0x7fcc13827178 <c_files/pr55829.c:4:1, col:16> col:16 referenced __m128d '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7fcc13827140 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7fcc138266e0 'double'
+|-VarDecl 0x7fcc14026a28 <line:6:1, col:18> col:15 used p1 'double []' extern
+|-VarDecl 0x7fcc14026af0 <line:7:1, col:18> col:15 used p2 'double []' extern
+|-VarDecl 0x7fcc14026b78 <line:8:1, col:18> col:15 used ck 'double []' extern
+|-VarDecl 0x7fcc14026bf0 <line:9:1, col:12> col:12 used n 'int' extern
+|-FunctionDecl 0x7fcc14026de8 <line:11:1, line:14:1> line:11:48 used chk_pd 'int (double *, double *)'
+| |-ParmVarDecl 0x7fcc14026c90 <col:56, col:64> col:64 used v1 'double *'
+| |-ParmVarDecl 0x7fcc14026d08 <col:68, col:76> col:76 used v2 'double *'
+| |-CompoundStmt 0x7fcc14027098 <line:12:1, line:14:1>
+| | `-ReturnStmt 0x7fcc14027080 <line:13:3, col:23>
+| |   `-BinaryOperator 0x7fcc14027058 <col:10, col:23> 'int' '!='
+| |     |-ImplicitCastExpr 0x7fcc14027028 <col:10, col:14> 'double' <LValueToRValue>
+| |     | `-ArraySubscriptExpr 0x7fcc14026f58 <col:10, col:14> 'double' lvalue
+| |     |   |-ImplicitCastExpr 0x7fcc14026f28 <col:10> 'double *' <LValueToRValue>
+| |     |   | `-DeclRefExpr 0x7fcc14026ed8 <col:10> 'double *' lvalue ParmVar 0x7fcc14026d08 'v2' 'double *'
+| |     |   `-ImplicitCastExpr 0x7fcc14026f40 <col:13> 'int' <LValueToRValue>
+| |     |     `-DeclRefExpr 0x7fcc14026f00 <col:13> 'int' lvalue Var 0x7fcc14026bf0 'n' 'int'
+| |     `-ImplicitCastExpr 0x7fcc14027040 <col:19, col:23> 'double' <LValueToRValue>
+| |       `-ArraySubscriptExpr 0x7fcc14027000 <col:19, col:23> 'double' lvalue
+| |         |-ImplicitCastExpr 0x7fcc14026fd0 <col:19> 'double *' <LValueToRValue>
+| |         | `-DeclRefExpr 0x7fcc14026f80 <col:19> 'double *' lvalue ParmVar 0x7fcc14026c90 'v1' 'double *'
+| |         `-ImplicitCastExpr 0x7fcc14026fe8 <col:22> 'int' <LValueToRValue>
+| |           `-DeclRefExpr 0x7fcc14026fa8 <col:22> 'int' lvalue Var 0x7fcc14026bf0 'n' 'int'
+| `-NoInlineAttr 0x7fcc14026e90 <line:11:16>
+|-FunctionDecl 0x7fcc14027220 <line:16:1, line:21:1> line:16:20 used sse3_test_movddup_reg_subsume_ldsd 'void (double *, double *)' static inline
+| |-ParmVarDecl 0x7fcc140270d0 <col:56, col:64> col:64 used i1 'double *'
+| |-ParmVarDecl 0x7fcc14027148 <col:68, col:76> col:76 used r 'double *'
+| `-CompoundStmt 0x7fcc14028ca8 <line:17:1, line:21:1>
+|   |-DeclStmt 0x7fcc14027500 <line:18:3, col:33>
+|   | `-VarDecl 0x7fcc14027300 <col:3, col:32> col:11 used t1 '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|   |   `-ImplicitCastExpr 0x7fcc140274e8 <col:16, col:32> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|   |     `-CompoundLiteralExpr 0x7fcc140274c0 <col:16, col:32> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue
+|   |       `-InitListExpr 0x7fcc14027440 <col:25, col:32> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |         |-ImplicitCastExpr 0x7fcc14027490 <col:26, col:27> 'double' <LValueToRValue>
+|   |         | `-UnaryOperator 0x7fcc140273b0 <col:26, col:27> 'double' lvalue prefix '*'
+|   |         |   `-ImplicitCastExpr 0x7fcc14027398 <col:27> 'double *' <LValueToRValue>
+|   |         |     `-DeclRefExpr 0x7fcc14027370 <col:27> 'double *' lvalue ParmVar 0x7fcc140270d0 'i1' 'double *'
+|   |         `-ImplicitCastExpr 0x7fcc140274a8 <col:31> 'double' <IntegralToFloating>
+|   |           `-IntegerLiteral 0x7fcc140273d0 <col:31> 'int' 0
+|   `-DeclStmt 0x7fcc14028b80 <line:19:3, col:49>
+|     `-VarDecl 0x7fcc14027528 <col:3, col:11> col:11 invalid t2 '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-FunctionDecl 0x7fcc140275f0 <<invalid sloc>> col:16 implicit used __builtin_ia32_shufpd 'int ()'
+|-FunctionDecl 0x7fcc14028bc0 <<invalid sloc>> line:20:3 implicit used __builtin_ia32_storeupd 'int ()'
+`-FunctionDecl 0x7fcc14028d98 <line:23:1, line:34:1> line:23:5 sse3_test 'int (void)'
+  `-CompoundStmt 0x7fcc14029558 <line:24:1, line:34:1>
+    |-DeclStmt 0x7fcc14028ec8 <line:25:3, col:12>
+    | `-VarDecl 0x7fcc14028e48 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x7fcc14028ea8 <col:11> 'int' 0
+    |-DeclStmt 0x7fcc14028f78 <line:26:3, col:15>
+    | `-VarDecl 0x7fcc14028ef8 <col:3, col:14> col:7 used fail 'int' cinit
+    |   `-IntegerLiteral 0x7fcc14028f58 <col:14> 'int' 0
+    |-ForStmt 0x7fcc140294c8 <line:27:3, line:32:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcc14028ff0 <line:27:10, col:14> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fcc14028fd8 <col:10> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fcc14028f90 <col:10> 'int' lvalue Var 0x7fcc14028e48 'i' 'int'
+    | | `-IntegerLiteral 0x7fcc14028fb8 <col:14> 'int' 80
+    | |-CompoundAssignOperator 0x7fcc14029060 <col:18, col:23> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fcc14029018 <col:18> 'int' lvalue Var 0x7fcc14028e48 'i' 'int'
+    | | `-IntegerLiteral 0x7fcc14029040 <col:23> 'int' 1
+    | `-CompoundStmt 0x7fcc14029498 <line:28:5, line:32:5>
+    |   |-BinaryOperator 0x7fcc140291c0 <line:29:7, col:19> 'double' '='
+    |   | |-ArraySubscriptExpr 0x7fcc140290f8 <col:7, col:11> 'double' lvalue
+    |   | | |-ImplicitCastExpr 0x7fcc140290e0 <col:7> 'double *' <ArrayToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fcc14029098 <col:7> 'double []' lvalue Var 0x7fcc14026b78 'ck' 'double []'
+    |   | | `-IntegerLiteral 0x7fcc140290c0 <col:10> 'int' 0
+    |   | `-ImplicitCastExpr 0x7fcc140291a8 <col:15, col:19> 'double' <LValueToRValue>
+    |   |   `-ArraySubscriptExpr 0x7fcc14029180 <col:15, col:19> 'double' lvalue
+    |   |     |-ImplicitCastExpr 0x7fcc14029168 <col:15> 'double *' <ArrayToPointerDecay>
+    |   |     | `-DeclRefExpr 0x7fcc14029120 <col:15> 'double []' lvalue Var 0x7fcc14026a28 'p1' 'double []'
+    |   |     `-IntegerLiteral 0x7fcc14029148 <col:18> 'int' 0
+    |   |-CompoundAssignOperator 0x7fcc14029338 <line:30:7, col:29> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   | |-DeclRefExpr 0x7fcc140291e8 <col:7> 'int' lvalue Var 0x7fcc14028ef8 'fail' 'int'
+    |   | `-CallExpr 0x7fcc140292d0 <col:15, col:29> 'int'
+    |   |   |-ImplicitCastExpr 0x7fcc140292b8 <col:15> 'int (*)(double *, double *)' <FunctionToPointerDecay>
+    |   |   | `-DeclRefExpr 0x7fcc14029210 <col:15> 'int (double *, double *)' Function 0x7fcc14026de8 'chk_pd' 'int (double *, double *)'
+    |   |   |-ImplicitCastExpr 0x7fcc14029308 <col:23> 'double *' <ArrayToPointerDecay>
+    |   |   | `-DeclRefExpr 0x7fcc14029238 <col:23> 'double []' lvalue Var 0x7fcc14026b78 'ck' 'double []'
+    |   |   `-ImplicitCastExpr 0x7fcc14029320 <col:27> 'double *' <ArrayToPointerDecay>
+    |   |     `-DeclRefExpr 0x7fcc14029260 <col:27> 'double []' lvalue Var 0x7fcc14026af0 'p2' 'double []'
+    |   `-CallExpr 0x7fcc14029430 <line:31:7, col:49> 'void'
+    |     |-ImplicitCastExpr 0x7fcc14029418 <col:7> 'void (*)(double *, double *)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fcc14029370 <col:7> 'void (double *, double *)' Function 0x7fcc14027220 'sse3_test_movddup_reg_subsume_ldsd' 'void (double *, double *)'
+    |     |-ImplicitCastExpr 0x7fcc14029468 <col:43> 'double *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7fcc14029398 <col:43> 'double []' lvalue Var 0x7fcc14026a28 'p1' 'double []'
+    |     `-ImplicitCastExpr 0x7fcc14029480 <col:47> 'double *' <ArrayToPointerDecay>
+    |       `-DeclRefExpr 0x7fcc140293c0 <col:47> 'double []' lvalue Var 0x7fcc14026af0 'p2' 'double []'
+    `-ReturnStmt 0x7fcc14029540 <line:33:3, col:10>
+      `-ImplicitCastExpr 0x7fcc14029528 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fcc14029500 <col:10> 'int' lvalue Var 0x7fcc14028ef8 'fail' 'int'

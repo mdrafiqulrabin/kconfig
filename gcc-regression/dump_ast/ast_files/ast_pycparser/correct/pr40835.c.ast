@@ -1,0 +1,146 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  Decl: goo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: goo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: eq, [], [], []
+      FuncDecl: 
+        TypeDecl: eq, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: bar
+      If: 
+        BinaryOp: ==
+          ID: v
+          Constant: int, 0
+        Return: 
+      FuncCall: 
+        ID: goo
+        ExprList: 
+          Constant: int, 1
+          ID: v
+  FuncDef: 
+    Decl: ge, [], [], []
+      FuncDecl: 
+        TypeDecl: ge, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: bar
+      If: 
+        BinaryOp: >=
+          ID: v
+          Constant: int, 0
+        Return: 
+      FuncCall: 
+        ID: goo
+        ExprList: 
+          Constant: int, 1
+          ID: v
+  FuncDef: 
+    Decl: gt, [], [], []
+      FuncDecl: 
+        TypeDecl: gt, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: bar
+      If: 
+        BinaryOp: >
+          ID: v
+          Constant: int, 0
+        Return: 
+      FuncCall: 
+        ID: goo
+        ExprList: 
+          Constant: int, 1
+          ID: v
+  FuncDef: 
+    Decl: lt, [], [], []
+      FuncDecl: 
+        TypeDecl: lt, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: bar
+      If: 
+        BinaryOp: <
+          ID: v
+          Constant: int, 0
+        Return: 
+      FuncCall: 
+        ID: goo
+        ExprList: 
+          Constant: int, 1
+          ID: v
+  FuncDef: 
+    Decl: le, [], [], []
+      FuncDecl: 
+        TypeDecl: le, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: bar
+      If: 
+        BinaryOp: <=
+          ID: v
+          Constant: int, 0
+        Return: 
+      FuncCall: 
+        ID: goo
+        ExprList: 
+          Constant: int, 1
+          ID: v
+  Decl: foo, [], [], []
+    FuncDecl: 
+      TypeDecl: foo, []
+        IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: leu, [], [], []
+      FuncDecl: 
+        TypeDecl: leu, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['unsigned', 'int']
+        FuncCall: 
+          ID: foo
+      If: 
+        BinaryOp: <=
+          ID: v
+          Constant: int, 0
+        Return: 
+      FuncCall: 
+        ID: goo
+        ExprList: 
+          Constant: int, 1
+          ID: v

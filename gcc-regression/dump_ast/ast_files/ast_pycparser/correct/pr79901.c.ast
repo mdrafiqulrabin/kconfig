@@ -1,0 +1,76 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            TypeDecl: x, ['const']
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      If: 
+        BinaryOp: <
+          ID: x
+          Constant: int, 0
+        Return: 
+          Constant: int, 0
+        If: 
+          BinaryOp: >
+            ID: x
+            UnaryOp: ~
+              Constant: int, 0U
+          Return: 
+            UnaryOp: ~
+              Constant: int, 0U
+          Return: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'int']
+              ID: x
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['unsigned', 'int']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: x
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: y
+            ID: i
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              BinaryOp: *
+                ArrayRef: 
+                  ID: y
+                  ID: i
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned', 'long', 'long']
+                  ID: z

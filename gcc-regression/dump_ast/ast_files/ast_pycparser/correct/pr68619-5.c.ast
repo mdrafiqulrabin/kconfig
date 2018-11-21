@@ -1,0 +1,834 @@
+FileAST: 
+  Typedef: tree, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: tree, []
+        Union: tree_node
+  Typedef: gimple, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: gimple, []
+        Union: gimple_statement_d
+  Decl: None, [], [], []
+    Enum: machine_mode
+      EnumeratorList: 
+        Enumerator: VOIDmode
+        Enumerator: BLKmode
+        Enumerator: CCmode
+        Enumerator: CCGCmode
+        Enumerator: CCGOCmode
+        Enumerator: CCNOmode
+        Enumerator: CCAmode
+        Enumerator: CCCmode
+        Enumerator: CCOmode
+        Enumerator: CCSmode
+        Enumerator: CCZmode
+        Enumerator: CCFPmode
+        Enumerator: CCFPUmode
+        Enumerator: BImode
+        Enumerator: QImode
+        Enumerator: HImode
+        Enumerator: SImode
+        Enumerator: DImode
+        Enumerator: TImode
+        Enumerator: OImode
+        Enumerator: QQmode
+        Enumerator: HQmode
+        Enumerator: SQmode
+        Enumerator: DQmode
+        Enumerator: TQmode
+        Enumerator: UQQmode
+        Enumerator: UHQmode
+        Enumerator: USQmode
+        Enumerator: UDQmode
+        Enumerator: UTQmode
+        Enumerator: HAmode
+        Enumerator: SAmode
+        Enumerator: DAmode
+        Enumerator: TAmode
+        Enumerator: UHAmode
+        Enumerator: USAmode
+        Enumerator: UDAmode
+        Enumerator: UTAmode
+        Enumerator: SFmode
+        Enumerator: DFmode
+        Enumerator: XFmode
+        Enumerator: TFmode
+        Enumerator: SDmode
+        Enumerator: DDmode
+        Enumerator: TDmode
+        Enumerator: CQImode
+        Enumerator: CHImode
+        Enumerator: CSImode
+        Enumerator: CDImode
+        Enumerator: CTImode
+        Enumerator: COImode
+        Enumerator: SCmode
+        Enumerator: DCmode
+        Enumerator: XCmode
+        Enumerator: TCmode
+        Enumerator: V2QImode
+        Enumerator: V4QImode
+        Enumerator: V2HImode
+        Enumerator: V1SImode
+        Enumerator: V8QImode
+        Enumerator: V4HImode
+        Enumerator: V2SImode
+        Enumerator: V1DImode
+        Enumerator: V16QImode
+        Enumerator: V8HImode
+        Enumerator: V4SImode
+        Enumerator: V2DImode
+        Enumerator: V1TImode
+        Enumerator: V32QImode
+        Enumerator: V16HImode
+        Enumerator: V8SImode
+        Enumerator: V4DImode
+        Enumerator: V2TImode
+        Enumerator: V64QImode
+        Enumerator: V32HImode
+        Enumerator: V16SImode
+        Enumerator: V8DImode
+        Enumerator: V4TImode
+        Enumerator: V2SFmode
+        Enumerator: V4SFmode
+        Enumerator: V2DFmode
+        Enumerator: V8SFmode
+        Enumerator: V4DFmode
+        Enumerator: V2TFmode
+        Enumerator: V16SFmode
+        Enumerator: V8DFmode
+        Enumerator: V4TFmode
+        Enumerator: MAX_MACHINE_MODE
+        Enumerator: MIN_MODE_RANDOM
+          ID: VOIDmode
+        Enumerator: MAX_MODE_RANDOM
+          ID: BLKmode
+        Enumerator: MIN_MODE_CC
+          ID: CCmode
+        Enumerator: MAX_MODE_CC
+          ID: CCFPUmode
+        Enumerator: MIN_MODE_INT
+          ID: QImode
+        Enumerator: MAX_MODE_INT
+          ID: OImode
+        Enumerator: MIN_MODE_PARTIAL_INT
+          ID: VOIDmode
+        Enumerator: MAX_MODE_PARTIAL_INT
+          ID: VOIDmode
+        Enumerator: MIN_MODE_FRACT
+          ID: QQmode
+        Enumerator: MAX_MODE_FRACT
+          ID: TQmode
+        Enumerator: MIN_MODE_UFRACT
+          ID: UQQmode
+        Enumerator: MAX_MODE_UFRACT
+          ID: UTQmode
+        Enumerator: MIN_MODE_ACCUM
+          ID: HAmode
+        Enumerator: MAX_MODE_ACCUM
+          ID: TAmode
+        Enumerator: MIN_MODE_UACCUM
+          ID: UHAmode
+        Enumerator: MAX_MODE_UACCUM
+          ID: UTAmode
+        Enumerator: MIN_MODE_FLOAT
+          ID: SFmode
+        Enumerator: MAX_MODE_FLOAT
+          ID: TFmode
+        Enumerator: MIN_MODE_DECIMAL_FLOAT
+          ID: SDmode
+        Enumerator: MAX_MODE_DECIMAL_FLOAT
+          ID: TDmode
+        Enumerator: MIN_MODE_COMPLEX_INT
+          ID: CQImode
+        Enumerator: MAX_MODE_COMPLEX_INT
+          ID: COImode
+        Enumerator: MIN_MODE_COMPLEX_FLOAT
+          ID: SCmode
+        Enumerator: MAX_MODE_COMPLEX_FLOAT
+          ID: TCmode
+        Enumerator: MIN_MODE_VECTOR_INT
+          ID: V2QImode
+        Enumerator: MAX_MODE_VECTOR_INT
+          ID: V4TImode
+        Enumerator: MIN_MODE_VECTOR_FRACT
+          ID: VOIDmode
+        Enumerator: MAX_MODE_VECTOR_FRACT
+          ID: VOIDmode
+        Enumerator: MIN_MODE_VECTOR_UFRACT
+          ID: VOIDmode
+        Enumerator: MAX_MODE_VECTOR_UFRACT
+          ID: VOIDmode
+        Enumerator: MIN_MODE_VECTOR_ACCUM
+          ID: VOIDmode
+        Enumerator: MAX_MODE_VECTOR_ACCUM
+          ID: VOIDmode
+        Enumerator: MIN_MODE_VECTOR_UACCUM
+          ID: VOIDmode
+        Enumerator: MAX_MODE_VECTOR_UACCUM
+          ID: VOIDmode
+        Enumerator: MIN_MODE_VECTOR_FLOAT
+          ID: V2SFmode
+        Enumerator: MAX_MODE_VECTOR_FLOAT
+          ID: V4TFmode
+        Enumerator: NUM_MACHINE_MODES
+          ID: MAX_MACHINE_MODE
+  Decl: None, [], [], []
+    Enum: mode_class
+      EnumeratorList: 
+        Enumerator: MODE_RANDOM
+        Enumerator: MODE_CC
+        Enumerator: MODE_INT
+        Enumerator: MODE_PARTIAL_INT
+        Enumerator: MODE_FRACT
+        Enumerator: MODE_UFRACT
+        Enumerator: MODE_ACCUM
+        Enumerator: MODE_UACCUM
+        Enumerator: MODE_FLOAT
+        Enumerator: MODE_DECIMAL_FLOAT
+        Enumerator: MODE_COMPLEX_INT
+        Enumerator: MODE_COMPLEX_FLOAT
+        Enumerator: MODE_VECTOR_INT
+        Enumerator: MODE_VECTOR_FRACT
+        Enumerator: MODE_VECTOR_UFRACT
+        Enumerator: MODE_VECTOR_ACCUM
+        Enumerator: MODE_VECTOR_UACCUM
+        Enumerator: MODE_VECTOR_FLOAT
+        Enumerator: MAX_MODE_CLASS
+  Decl: mode_class, ['const'], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: mode_class, ['const']
+        IdentifierType: ['unsigned', 'char']
+      ID: NUM_MACHINE_MODES
+  Decl: mode_inner, ['const'], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: mode_inner, ['const']
+        IdentifierType: ['unsigned', 'char']
+      ID: NUM_MACHINE_MODES
+  Decl: None, [], [], []
+    Struct: real_format
+      Decl: has_nans, [], [], []
+        TypeDecl: has_nans, []
+          IdentifierType: ['unsigned', 'char']
+  Decl: real_format_for_mode, ['const'], ['extern'], []
+    ArrayDecl: []
+      PtrDecl: []
+        TypeDecl: real_format_for_mode, ['const']
+          Struct: real_format
+      BinaryOp: +
+        BinaryOp: -
+          BinaryOp: +
+            BinaryOp: +
+              BinaryOp: -
+                ID: MAX_MODE_FLOAT
+                ID: MIN_MODE_FLOAT
+              Constant: int, 1
+            ID: MAX_MODE_DECIMAL_FLOAT
+          ID: MIN_MODE_DECIMAL_FLOAT
+        Constant: int, 1
+  Decl: None, [], [], []
+    Enum: tree_code
+      EnumeratorList: 
+        Enumerator: ERROR_MARK
+        Enumerator: IDENTIFIER_NODE
+        Enumerator: TREE_LIST
+        Enumerator: TREE_VEC
+        Enumerator: BLOCK
+        Enumerator: OFFSET_TYPE
+        Enumerator: ENUMERAL_TYPE
+        Enumerator: BOOLEAN_TYPE
+        Enumerator: INTEGER_TYPE
+        Enumerator: REAL_TYPE
+        Enumerator: POINTER_TYPE
+        Enumerator: REFERENCE_TYPE
+        Enumerator: NULLPTR_TYPE
+        Enumerator: FIXED_POINT_TYPE
+        Enumerator: COMPLEX_TYPE
+        Enumerator: VECTOR_TYPE
+        Enumerator: ARRAY_TYPE
+        Enumerator: RECORD_TYPE
+        Enumerator: UNION_TYPE
+        Enumerator: QUAL_UNION_TYPE
+        Enumerator: VOID_TYPE
+        Enumerator: FUNCTION_TYPE
+        Enumerator: METHOD_TYPE
+        Enumerator: LANG_TYPE
+        Enumerator: INTEGER_CST
+        Enumerator: REAL_CST
+        Enumerator: FIXED_CST
+        Enumerator: COMPLEX_CST
+        Enumerator: VECTOR_CST
+        Enumerator: STRING_CST
+        Enumerator: FUNCTION_DECL
+        Enumerator: LABEL_DECL
+        Enumerator: FIELD_DECL
+        Enumerator: VAR_DECL
+        Enumerator: CONST_DECL
+        Enumerator: PARM_DECL
+        Enumerator: TYPE_DECL
+        Enumerator: RESULT_DECL
+        Enumerator: DEBUG_EXPR_DECL
+        Enumerator: NAMESPACE_DECL
+        Enumerator: IMPORTED_DECL
+        Enumerator: TRANSLATION_UNIT_DECL
+        Enumerator: COMPONENT_REF
+        Enumerator: BIT_FIELD_REF
+        Enumerator: REALPART_EXPR
+        Enumerator: IMAGPART_EXPR
+        Enumerator: ARRAY_REF
+        Enumerator: ARRAY_RANGE_REF
+        Enumerator: INDIRECT_REF
+        Enumerator: OBJ_TYPE_REF
+        Enumerator: CONSTRUCTOR
+        Enumerator: COMPOUND_EXPR
+        Enumerator: MODIFY_EXPR
+        Enumerator: INIT_EXPR
+        Enumerator: TARGET_EXPR
+        Enumerator: COND_EXPR
+        Enumerator: VEC_COND_EXPR
+        Enumerator: BIND_EXPR
+        Enumerator: CALL_EXPR
+        Enumerator: WITH_CLEANUP_EXPR
+        Enumerator: CLEANUP_POINT_EXPR
+        Enumerator: PLACEHOLDER_EXPR
+        Enumerator: PLUS_EXPR
+        Enumerator: MINUS_EXPR
+        Enumerator: MULT_EXPR
+        Enumerator: POINTER_PLUS_EXPR
+        Enumerator: TRUNC_DIV_EXPR
+        Enumerator: CEIL_DIV_EXPR
+        Enumerator: FLOOR_DIV_EXPR
+        Enumerator: ROUND_DIV_EXPR
+        Enumerator: TRUNC_MOD_EXPR
+        Enumerator: CEIL_MOD_EXPR
+        Enumerator: FLOOR_MOD_EXPR
+        Enumerator: ROUND_MOD_EXPR
+        Enumerator: RDIV_EXPR
+        Enumerator: EXACT_DIV_EXPR
+        Enumerator: FIX_TRUNC_EXPR
+        Enumerator: FLOAT_EXPR
+        Enumerator: NEGATE_EXPR
+        Enumerator: MIN_EXPR
+        Enumerator: MAX_EXPR
+        Enumerator: ABS_EXPR
+        Enumerator: LSHIFT_EXPR
+        Enumerator: RSHIFT_EXPR
+        Enumerator: LROTATE_EXPR
+        Enumerator: RROTATE_EXPR
+        Enumerator: BIT_IOR_EXPR
+        Enumerator: BIT_XOR_EXPR
+        Enumerator: BIT_AND_EXPR
+        Enumerator: BIT_NOT_EXPR
+        Enumerator: TRUTH_ANDIF_EXPR
+        Enumerator: TRUTH_ORIF_EXPR
+        Enumerator: TRUTH_AND_EXPR
+        Enumerator: TRUTH_OR_EXPR
+        Enumerator: TRUTH_XOR_EXPR
+        Enumerator: TRUTH_NOT_EXPR
+        Enumerator: LT_EXPR
+        Enumerator: LE_EXPR
+        Enumerator: GT_EXPR
+        Enumerator: GE_EXPR
+        Enumerator: EQ_EXPR
+        Enumerator: NE_EXPR
+        Enumerator: UNORDERED_EXPR
+        Enumerator: ORDERED_EXPR
+        Enumerator: UNLT_EXPR
+        Enumerator: UNLE_EXPR
+        Enumerator: UNGT_EXPR
+        Enumerator: UNGE_EXPR
+        Enumerator: UNEQ_EXPR
+        Enumerator: LTGT_EXPR
+        Enumerator: RANGE_EXPR
+        Enumerator: PAREN_EXPR
+        Enumerator: CONVERT_EXPR
+        Enumerator: ADDR_SPACE_CONVERT_EXPR
+        Enumerator: FIXED_CONVERT_EXPR
+        Enumerator: NOP_EXPR
+        Enumerator: NON_LVALUE_EXPR
+        Enumerator: VIEW_CONVERT_EXPR
+        Enumerator: COMPOUND_LITERAL_EXPR
+        Enumerator: SAVE_EXPR
+        Enumerator: ADDR_EXPR
+        Enumerator: FDESC_EXPR
+        Enumerator: COMPLEX_EXPR
+        Enumerator: CONJ_EXPR
+        Enumerator: PREDECREMENT_EXPR
+        Enumerator: PREINCREMENT_EXPR
+        Enumerator: POSTDECREMENT_EXPR
+        Enumerator: POSTINCREMENT_EXPR
+        Enumerator: VA_ARG_EXPR
+        Enumerator: TRY_CATCH_EXPR
+        Enumerator: TRY_FINALLY_EXPR
+        Enumerator: DECL_EXPR
+        Enumerator: LABEL_EXPR
+        Enumerator: GOTO_EXPR
+        Enumerator: RETURN_EXPR
+        Enumerator: EXIT_EXPR
+        Enumerator: LOOP_EXPR
+        Enumerator: SWITCH_EXPR
+        Enumerator: CASE_LABEL_EXPR
+        Enumerator: ASM_EXPR
+        Enumerator: SSA_NAME
+        Enumerator: CATCH_EXPR
+        Enumerator: EH_FILTER_EXPR
+        Enumerator: SCEV_KNOWN
+        Enumerator: SCEV_NOT_KNOWN
+        Enumerator: POLYNOMIAL_CHREC
+        Enumerator: STATEMENT_LIST
+        Enumerator: ASSERT_EXPR
+        Enumerator: TREE_BINFO
+        Enumerator: WITH_SIZE_EXPR
+        Enumerator: REALIGN_LOAD_EXPR
+        Enumerator: TARGET_MEM_REF
+        Enumerator: MEM_REF
+        Enumerator: OMP_PARALLEL
+        Enumerator: OMP_TASK
+        Enumerator: OMP_FOR
+        Enumerator: OMP_SECTIONS
+        Enumerator: OMP_SINGLE
+        Enumerator: OMP_SECTION
+        Enumerator: OMP_MASTER
+        Enumerator: OMP_ORDERED
+        Enumerator: OMP_CRITICAL
+        Enumerator: OMP_ATOMIC
+        Enumerator: OMP_CLAUSE
+        Enumerator: REDUC_MAX_EXPR
+        Enumerator: REDUC_MIN_EXPR
+        Enumerator: REDUC_PLUS_EXPR
+        Enumerator: DOT_PROD_EXPR
+        Enumerator: WIDEN_SUM_EXPR
+        Enumerator: WIDEN_MULT_EXPR
+        Enumerator: WIDEN_MULT_PLUS_EXPR
+        Enumerator: WIDEN_MULT_MINUS_EXPR
+        Enumerator: FMA_EXPR
+        Enumerator: VEC_LSHIFT_EXPR
+        Enumerator: VEC_RSHIFT_EXPR
+        Enumerator: VEC_WIDEN_MULT_HI_EXPR
+        Enumerator: VEC_WIDEN_MULT_LO_EXPR
+        Enumerator: VEC_UNPACK_HI_EXPR
+        Enumerator: VEC_UNPACK_LO_EXPR
+        Enumerator: VEC_UNPACK_FLOAT_HI_EXPR
+        Enumerator: VEC_UNPACK_FLOAT_LO_EXPR
+        Enumerator: VEC_PACK_TRUNC_EXPR
+        Enumerator: VEC_PACK_SAT_EXPR
+        Enumerator: VEC_PACK_FIX_TRUNC_EXPR
+        Enumerator: VEC_EXTRACT_EVEN_EXPR
+        Enumerator: VEC_EXTRACT_ODD_EXPR
+        Enumerator: VEC_INTERLEAVE_HIGH_EXPR
+        Enumerator: VEC_INTERLEAVE_LOW_EXPR
+        Enumerator: PREDICT_EXPR
+        Enumerator: OPTIMIZATION_NODE
+        Enumerator: TARGET_OPTION_NODE
+        Enumerator: LAST_AND_UNUSED_TREE_CODE
+        Enumerator: C_MAYBE_CONST_EXPR
+        Enumerator: EXCESS_PRECISION_EXPR
+        Enumerator: UNCONSTRAINED_ARRAY_TYPE
+        Enumerator: UNCONSTRAINED_ARRAY_REF
+        Enumerator: NULL_EXPR
+        Enumerator: PLUS_NOMOD_EXPR
+        Enumerator: MINUS_NOMOD_EXPR
+        Enumerator: ATTR_ADDR_EXPR
+        Enumerator: STMT_STMT
+        Enumerator: LOOP_STMT
+        Enumerator: EXIT_STMT
+        Enumerator: OFFSET_REF
+        Enumerator: PTRMEM_CST
+        Enumerator: NEW_EXPR
+        Enumerator: VEC_NEW_EXPR
+        Enumerator: DELETE_EXPR
+        Enumerator: VEC_DELETE_EXPR
+        Enumerator: SCOPE_REF
+        Enumerator: MEMBER_REF
+        Enumerator: TYPE_EXPR
+        Enumerator: AGGR_INIT_EXPR
+        Enumerator: VEC_INIT_EXPR
+        Enumerator: THROW_EXPR
+        Enumerator: EMPTY_CLASS_EXPR
+        Enumerator: BASELINK
+        Enumerator: TEMPLATE_DECL
+        Enumerator: TEMPLATE_PARM_INDEX
+        Enumerator: TEMPLATE_TEMPLATE_PARM
+        Enumerator: TEMPLATE_TYPE_PARM
+        Enumerator: TYPENAME_TYPE
+        Enumerator: TYPEOF_TYPE
+        Enumerator: BOUND_TEMPLATE_TEMPLATE_PARM
+        Enumerator: UNBOUND_CLASS_TEMPLATE
+        Enumerator: USING_DECL
+        Enumerator: USING_STMT
+        Enumerator: DEFAULT_ARG
+        Enumerator: TEMPLATE_ID_EXPR
+        Enumerator: OVERLOAD
+        Enumerator: PSEUDO_DTOR_EXPR
+        Enumerator: MODOP_EXPR
+        Enumerator: CAST_EXPR
+        Enumerator: REINTERPRET_CAST_EXPR
+        Enumerator: CONST_CAST_EXPR
+        Enumerator: STATIC_CAST_EXPR
+        Enumerator: DYNAMIC_CAST_EXPR
+        Enumerator: DOTSTAR_EXPR
+        Enumerator: TYPEID_EXPR
+        Enumerator: NOEXCEPT_EXPR
+        Enumerator: NON_DEPENDENT_EXPR
+        Enumerator: CTOR_INITIALIZER
+        Enumerator: TRY_BLOCK
+        Enumerator: EH_SPEC_BLOCK
+        Enumerator: HANDLER
+        Enumerator: MUST_NOT_THROW_EXPR
+        Enumerator: CLEANUP_STMT
+        Enumerator: IF_STMT
+        Enumerator: FOR_STMT
+        Enumerator: RANGE_FOR_STMT
+        Enumerator: WHILE_STMT
+        Enumerator: DO_STMT
+        Enumerator: BREAK_STMT
+        Enumerator: CONTINUE_STMT
+        Enumerator: SWITCH_STMT
+        Enumerator: EXPR_STMT
+        Enumerator: TAG_DEFN
+        Enumerator: OFFSETOF_EXPR
+        Enumerator: SIZEOF_EXPR
+        Enumerator: ARROW_EXPR
+        Enumerator: ALIGNOF_EXPR
+        Enumerator: AT_ENCODE_EXPR
+        Enumerator: STMT_EXPR
+        Enumerator: UNARY_PLUS_EXPR
+        Enumerator: STATIC_ASSERT
+        Enumerator: TYPE_ARGUMENT_PACK
+        Enumerator: NONTYPE_ARGUMENT_PACK
+        Enumerator: TYPE_PACK_EXPANSION
+        Enumerator: EXPR_PACK_EXPANSION
+        Enumerator: ARGUMENT_PACK_SELECT
+        Enumerator: TRAIT_EXPR
+        Enumerator: LAMBDA_EXPR
+        Enumerator: DECLTYPE_TYPE
+        Enumerator: TEMPLATE_INFO
+        Enumerator: URSHIFT_EXPR
+        Enumerator: COMPARE_EXPR
+        Enumerator: COMPARE_L_EXPR
+        Enumerator: COMPARE_G_EXPR
+        Enumerator: CLASS_INTERFACE_TYPE
+        Enumerator: CLASS_IMPLEMENTATION_TYPE
+        Enumerator: CATEGORY_INTERFACE_TYPE
+        Enumerator: CATEGORY_IMPLEMENTATION_TYPE
+        Enumerator: PROTOCOL_INTERFACE_TYPE
+        Enumerator: KEYWORD_DECL
+        Enumerator: INSTANCE_METHOD_DECL
+        Enumerator: CLASS_METHOD_DECL
+        Enumerator: PROPERTY_DECL
+        Enumerator: MESSAGE_SEND_EXPR
+        Enumerator: CLASS_REFERENCE_EXPR
+        Enumerator: PROPERTY_REF
+        Enumerator: MAX_TREE_CODES
+  Decl: None, [], [], []
+    Struct: tree_base
+      Decl: code, [], [], []
+        TypeDecl: code, []
+          Enum: tree_code
+        Constant: int, 16
+  Decl: None, [], [], []
+    Struct: tree_typed
+      Decl: type, [], [], []
+        TypeDecl: type, []
+          IdentifierType: ['tree']
+  Decl: None, [], [], []
+    Struct: tree_type
+      Decl: mode, [], [], []
+        TypeDecl: mode, []
+          Enum: machine_mode
+        Constant: int, 8
+  Decl: None, [], [], []
+    Union: tree_node
+      Decl: base, [], [], []
+        TypeDecl: base, []
+          Struct: tree_base
+      Decl: typed, [], [], []
+        TypeDecl: typed, []
+          Struct: tree_typed
+      Decl: type, [], [], []
+        TypeDecl: type, []
+          Struct: tree_type
+  FuncDef: 
+    Decl: parse_predicate, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: cond, [], [], []
+            TypeDecl: cond, []
+              IdentifierType: ['tree']
+          Decl: op0, [], [], []
+            PtrDecl: []
+              TypeDecl: op0, []
+                IdentifierType: ['tree']
+          Decl: op1, [], [], []
+            PtrDecl: []
+              TypeDecl: op1, []
+                IdentifierType: ['tree']
+        TypeDecl: parse_predicate, []
+          Enum: tree_code
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['gimple']
+      Decl: op, [], [], []
+        TypeDecl: op, []
+          IdentifierType: ['tree']
+      Decl: type, [], [], []
+        TypeDecl: type, []
+          IdentifierType: ['tree']
+        UnaryOp: *
+          UnaryOp: &
+            StructRef: .
+              StructRef: ->
+                ID: op
+                ID: typed
+              ID: type
+      Decl: code, [], [], []
+        TypeDecl: code, []
+          Enum: tree_code
+      Return: 
+        FuncCall: 
+          ID: invert_tree_comparison
+          ExprList: 
+            ID: code
+            BinaryOp: &&
+              BinaryOp: ==
+                ArrayRef: 
+                  ID: mode_class
+                  TernaryOp: 
+                    BinaryOp: ==
+                      StructRef: .
+                        StructRef: ->
+                          ID: type
+                          ID: base
+                        ID: code
+                      ID: VECTOR_TYPE
+                    FuncCall: 
+                      ID: vector_type_mode
+                      ExprList: 
+                        ID: type
+                    StructRef: .
+                      StructRef: ->
+                        ID: type
+                        ID: type
+                      ID: mode
+                ID: MODE_VECTOR_FLOAT
+              StructRef: ->
+                ArrayRef: 
+                  ID: real_format_for_mode
+                  TernaryOp: 
+                    BinaryOp: ==
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            Enum: mode_class
+                        ArrayRef: 
+                          ID: mode_class
+                          TernaryOp: 
+                            BinaryOp: ==
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    Enum: mode_class
+                                ArrayRef: 
+                                  ID: mode_class
+                                  TernaryOp: 
+                                    BinaryOp: ==
+                                      StructRef: .
+                                        StructRef: ->
+                                          ID: type
+                                          ID: base
+                                        ID: code
+                                      ID: VECTOR_TYPE
+                                    FuncCall: 
+                                      ID: vector_type_mode
+                                      ExprList: 
+                                        ID: type
+                                    StructRef: .
+                                      StructRef: ->
+                                        ID: type
+                                        ID: type
+                                      ID: mode
+                              ID: MODE_DECIMAL_FLOAT
+                            TernaryOp: 
+                              BinaryOp: ==
+                                StructRef: .
+                                  StructRef: ->
+                                    ID: type
+                                    ID: base
+                                  ID: code
+                                ID: VECTOR_TYPE
+                              FuncCall: 
+                                ID: vector_type_mode
+                                ExprList: 
+                                  ID: type
+                              StructRef: .
+                                StructRef: ->
+                                  ID: type
+                                  ID: type
+                                ID: mode
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  Enum: machine_mode
+                              ArrayRef: 
+                                ID: mode_inner
+                                TernaryOp: 
+                                  BinaryOp: ==
+                                    StructRef: .
+                                      StructRef: ->
+                                        ID: type
+                                        ID: base
+                                      ID: code
+                                    ID: VECTOR_TYPE
+                                  FuncCall: 
+                                    ID: vector_type_mode
+                                    ExprList: 
+                                      ID: type
+                                  StructRef: .
+                                    StructRef: ->
+                                      ID: type
+                                      ID: type
+                                    ID: mode
+                      ID: MODE_DECIMAL_FLOAT
+                    BinaryOp: +
+                      BinaryOp: -
+                        TernaryOp: 
+                          BinaryOp: ==
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  Enum: mode_class
+                              ArrayRef: 
+                                ID: mode_class
+                                TernaryOp: 
+                                  BinaryOp: ==
+                                    StructRef: .
+                                      StructRef: ->
+                                        ID: type
+                                        ID: base
+                                      ID: code
+                                    ID: VECTOR_TYPE
+                                  FuncCall: 
+                                    ID: vector_type_mode
+                                    ExprList: 
+                                      ID: type
+                                  StructRef: .
+                                    StructRef: ->
+                                      ID: type
+                                      ID: type
+                                    ID: mode
+                            ID: MODE_DECIMAL_FLOAT
+                          TernaryOp: 
+                            BinaryOp: ==
+                              StructRef: .
+                                StructRef: ->
+                                  ID: type
+                                  ID: base
+                                ID: code
+                              ID: VECTOR_TYPE
+                            FuncCall: 
+                              ID: vector_type_mode
+                              ExprList: 
+                                ID: type
+                            StructRef: .
+                              StructRef: ->
+                                ID: type
+                                ID: type
+                              ID: mode
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                Enum: machine_mode
+                            ArrayRef: 
+                              ID: mode_inner
+                              TernaryOp: 
+                                BinaryOp: ==
+                                  StructRef: .
+                                    StructRef: ->
+                                      ID: type
+                                      ID: base
+                                    ID: code
+                                  ID: VECTOR_TYPE
+                                FuncCall: 
+                                  ID: vector_type_mode
+                                  ExprList: 
+                                    ID: type
+                                StructRef: .
+                                  StructRef: ->
+                                    ID: type
+                                    ID: type
+                                  ID: mode
+                        ID: MIN_MODE_DECIMAL_FLOAT
+                      BinaryOp: +
+                        BinaryOp: -
+                          ID: MAX_MODE_FLOAT
+                          ID: MIN_MODE_FLOAT
+                        Constant: int, 1
+                    BinaryOp: -
+                      TernaryOp: 
+                        BinaryOp: ==
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                Enum: mode_class
+                            ArrayRef: 
+                              ID: mode_class
+                              TernaryOp: 
+                                BinaryOp: ==
+                                  StructRef: .
+                                    StructRef: ->
+                                      ID: type
+                                      ID: base
+                                    ID: code
+                                  ID: VECTOR_TYPE
+                                FuncCall: 
+                                  ID: vector_type_mode
+                                  ExprList: 
+                                    ID: type
+                                StructRef: .
+                                  StructRef: ->
+                                    ID: type
+                                    ID: type
+                                  ID: mode
+                          ID: MODE_DECIMAL_FLOAT
+                        TernaryOp: 
+                          BinaryOp: ==
+                            StructRef: .
+                              StructRef: ->
+                                ID: type
+                                ID: base
+                              ID: code
+                            ID: VECTOR_TYPE
+                          FuncCall: 
+                            ID: vector_type_mode
+                            ExprList: 
+                              ID: type
+                          StructRef: .
+                            StructRef: ->
+                              ID: type
+                              ID: type
+                            ID: mode
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              Enum: machine_mode
+                          ArrayRef: 
+                            ID: mode_inner
+                            TernaryOp: 
+                              BinaryOp: ==
+                                StructRef: .
+                                  StructRef: ->
+                                    ID: type
+                                    ID: base
+                                  ID: code
+                                ID: VECTOR_TYPE
+                              FuncCall: 
+                                ID: vector_type_mode
+                                ExprList: 
+                                  ID: type
+                              StructRef: .
+                                StructRef: ->
+                                  ID: type
+                                  ID: type
+                                ID: mode
+                      ID: MIN_MODE_FLOAT
+                ID: has_nans

@@ -1,0 +1,72 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: s, ['volatile'], ['static'], []
+    TypeDecl: s, ['volatile']
+      Struct: S0
+        Decl: f3, [], [], []
+          ArrayDecl: []
+            TypeDecl: f3, []
+              IdentifierType: ['short']
+            Constant: int, 9
+        Decl: f8, [], [], []
+          TypeDecl: f8, []
+            IdentifierType: ['unsigned']
+          Constant: int, 15
+    InitList: 
+      Constant: int, 1
+  Decl: sh, [], ['static'], []
+    TypeDecl: sh, []
+      IdentifierType: ['unsigned', 'short']
+    Constant: int, 0x1234
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Struct: S0
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Struct: S0
+  Decl: vi, [], [], []
+    TypeDecl: vi, []
+      IdentifierType: ['int']
+    Constant: int, 0
+  FuncDef: 
+    Decl: func_4, [], [], []
+      FuncDecl: 
+        TypeDecl: func_4, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: |=
+        StructRef: .
+          ID: s
+          ID: f8
+        Constant: int, 1
+      Assignment: =
+        ID: sh
+        Constant: int, 15
+      If: 
+        ID: vi
+        Assignment: =
+          ID: a
+          ID: b
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: func_4
+      If: 
+        BinaryOp: !=
+          ID: sh
+          Constant: int, 15
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

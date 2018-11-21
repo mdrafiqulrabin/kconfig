@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7fcb928264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcb92826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcb92826740 '__int128'
+|-TypedefDecl 0x7fcb92826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcb92826760 'unsigned __int128'
+|-TypedefDecl 0x7fcb92826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcb92826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcb92826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcb92826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcb92826dc0 'char *'
+|   `-BuiltinType 0x7fcb92826560 'char'
+|-TypedefDecl 0x7fcb928270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcb92827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcb92826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcb92826e58 '__va_list_tag'
+|-FunctionDecl 0x7fcb93025a30 <c_files/pr77407.c:4:1, line:9:1> line:4:5 foo 'int (int)'
+| |-ParmVarDecl 0x7fcb92827138 <col:10, col:14> col:14 used c 'int'
+| `-CompoundStmt 0x7fcb93025ec0 <line:5:1, line:9:1>
+|   |-IfStmt 0x7fcb93025e30 <line:6:3, line:7:26>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fcb93025b70 <line:6:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fcb93025b58 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fcb93025b10 <col:7> 'int' lvalue ParmVar 0x7fcb92827138 'c' 'int'
+|   | | `-IntegerLiteral 0x7fcb93025b38 <col:12> 'int' 0
+|   | |-CompoundAssignOperator 0x7fcb93025df8 <line:7:5, col:26> 'int' '/=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | | |-DeclRefExpr 0x7fcb93025b98 <col:5> 'int' lvalue ParmVar 0x7fcb92827138 'c' 'int'
+|   | | `-CallExpr 0x7fcb93025db0 <col:10, col:26> 'int'
+|   | |   |-ImplicitCastExpr 0x7fcb93025d98 <col:10> 'int (*)(int)' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7fcb93025d18 <col:10> '<builtin fn type>' Function 0x7fcb93025bc0 '__builtin_abs' 'int (int)'
+|   | |   `-ImplicitCastExpr 0x7fcb93025de0 <col:25> 'int' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fcb93025d40 <col:25> 'int' lvalue ParmVar 0x7fcb92827138 'c' 'int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fcb93025ea8 <line:8:3, col:10>
+|     `-ImplicitCastExpr 0x7fcb93025e90 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fcb93025e68 <col:10> 'int' lvalue ParmVar 0x7fcb92827138 'c' 'int'
+|-FunctionDecl 0x7fcb93025bc0 <line:7:10> col:10 implicit used __builtin_abs 'int (int)' extern
+| |-ParmVarDecl 0x7fcb93025c58 <<invalid sloc>> <invalid sloc> 'int'
+| |-NoThrowAttr 0x7fcb93025cc0 <col:10> Implicit
+| `-ConstAttr 0x7fcb93025d08 <col:10> Implicit
+`-FunctionDecl 0x7fcb93025f90 <line:11:1, line:16:1> line:11:5 bar 'int (int)'
+  |-ParmVarDecl 0x7fcb93025f00 <col:10, col:14> col:14 used c 'int'
+  `-CompoundStmt 0x7fcb93026208 <line:12:1, line:16:1>
+    |-IfStmt 0x7fcb93026178 <line:13:3, line:14:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcb93026090 <line:13:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fcb93026078 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fcb93026030 <col:7> 'int' lvalue ParmVar 0x7fcb93025f00 'c' 'int'
+    | | `-IntegerLiteral 0x7fcb93026058 <col:12> 'int' 0
+    | |-CompoundAssignOperator 0x7fcb93026140 <line:14:5, col:11> 'int' '/=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fcb930260b8 <col:5> 'int' lvalue ParmVar 0x7fcb93025f00 'c' 'int'
+    | | `-UnaryOperator 0x7fcb93026120 <col:10, col:11> 'int' prefix '-'
+    | |   `-ImplicitCastExpr 0x7fcb93026108 <col:11> 'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fcb930260e0 <col:11> 'int' lvalue ParmVar 0x7fcb93025f00 'c' 'int'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fcb930261f0 <line:15:3, col:10>
+      `-ImplicitCastExpr 0x7fcb930261d8 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fcb930261b0 <col:10> 'int' lvalue ParmVar 0x7fcb93025f00 'c' 'int'

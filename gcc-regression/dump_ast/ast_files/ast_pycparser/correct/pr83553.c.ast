@@ -1,0 +1,112 @@
+FileAST: 
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+      Constant: int, 3
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Switch: 
+        ID: n
+        Compound: 
+          Case: 
+            Constant: int, 0
+            For: 
+              ExprList: 
+                Assignment: =
+                  ID: n
+                  Constant: int, 7
+                UnaryOp: p++
+                  ArrayRef: 
+                    ID: a
+                    Constant: int, 0
+              Constant: int, 0
+              Assignment: =
+                ArrayRef: 
+                  ID: a
+                  Constant: int, 2
+                BinaryOp: +
+                  ArrayRef: 
+                    ID: a
+                    Constant: int, 1
+                  Constant: int, 1
+              Compound: 
+                Case: 
+                  Constant: int, 2
+                  Assignment: =
+                    ArrayRef: 
+                      ID: a
+                      Constant: int, 1
+                    BinaryOp: +
+                      ArrayRef: 
+                        ID: a
+                        Constant: int, 0
+                      Constant: int, 1
+      Return: 
+        ID: n
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: ||
+              BinaryOp: !=
+                FuncCall: 
+                  ID: foo
+                  ExprList: 
+                    Constant: int, 0
+                Constant: int, 7
+              BinaryOp: !=
+                ArrayRef: 
+                  ID: a
+                  Constant: int, 0
+                Constant: int, 1
+            ArrayRef: 
+              ID: a
+              Constant: int, 1
+          ArrayRef: 
+            ID: a
+            Constant: int, 2
+        FuncCall: 
+          ID: __builtin_abort
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: ||
+              BinaryOp: !=
+                FuncCall: 
+                  ID: foo
+                  ExprList: 
+                    Constant: int, 2
+                Constant: int, 2
+              BinaryOp: !=
+                ArrayRef: 
+                  ID: a
+                  Constant: int, 0
+                Constant: int, 1
+            BinaryOp: !=
+              ArrayRef: 
+                ID: a
+                Constant: int, 1
+              Constant: int, 2
+          BinaryOp: !=
+            ArrayRef: 
+              ID: a
+              Constant: int, 2
+            Constant: int, 3
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,35 @@
+c_files/pr80101-1.c:18:9: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+    int a[b];
+        ^
+1 error generated.
+TranslationUnitDecl 0x7f9a820264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9a82026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9a82026740 '__int128'
+|-TypedefDecl 0x7f9a82026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9a82026760 'unsigned __int128'
+|-TypedefDecl 0x7f9a82026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9a82026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9a82026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9a82026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9a82026dc0 'char *'
+|   `-BuiltinType 0x7f9a82026560 'char'
+|-TypedefDecl 0x7f9a820270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9a82027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9a82026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9a82026e58 '__va_list_tag'
+|-VarDecl 0x7f9a82027138 <c_files/pr80101-1.c:10:1, col:5> col:5 used b 'int'
+|-FunctionDecl 0x7f9a82077448 <line:12:1, col:9> col:6 used e 'void ()'
+`-FunctionDecl 0x7f9a82077530 <line:14:1, line:22:1> line:14:5 c 'int ()'
+  `-CompoundStmt 0x7f9a82077970 <line:15:1, line:22:1>
+    |-DeclStmt 0x7f9a82077828 <line:16:3, line:19:6>
+    | |-RecordDecl 0x7f9a820775c8 <line:16:3, line:19:3> line:16:3 invalid struct definition
+    | | `-FieldDecl 0x7f9a82077710 <line:18:5, col:12> col:9 invalid a 'int [b]'
+    | `-VarDecl 0x7f9a820777b0 <line:16:3, line:19:5> col:5 used d 'struct (anonymous struct at c_files/pr80101-1.c:16:3)':'struct (anonymous at c_files/pr80101-1.c:16:3)'
+    `-IfStmt 0x7f9a82077938 <line:20:3, line:21:8>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-OpaqueValueExpr 0x7f9a82077918 <<invalid sloc>> '_Bool'
+      |-CallExpr 0x7f9a820778f0 <col:5, col:8> 'void'
+      | `-ImplicitCastExpr 0x7f9a820778d8 <col:5> 'void (*)()' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7f9a82077888 <col:5> 'void ()' Function 0x7f9a82077448 'e' 'void ()'
+      `-<<<NULL>>>

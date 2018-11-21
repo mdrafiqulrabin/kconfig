@@ -1,0 +1,52 @@
+TranslationUnitDecl 0x7f99c30264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f99c3026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f99c3026740 '__int128'
+|-TypedefDecl 0x7f99c3026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f99c3026760 'unsigned __int128'
+|-TypedefDecl 0x7f99c3026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f99c3026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f99c3026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f99c3026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f99c3026dc0 'char *'
+|   `-BuiltinType 0x7f99c3026560 'char'
+|-TypedefDecl 0x7f99c30270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f99c3027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f99c3026ee0 'struct __va_list_tag'
+|     `-Record 0x7f99c3026e58 '__va_list_tag'
+|-RecordDecl 0x7f99c3027120 <c_files/pr43879_2.c:1:1, line:3:1> line:1:8 struct TBL definition
+| `-FieldDecl 0x7f99c4022388 <line:2:2, col:17> col:8 p 'int (*)(int *)'
+|-FunctionDecl 0x7f99c40224b0 <line:5:1, col:22> col:13 used bar 'void (int)' extern
+| `-ParmVarDecl 0x7f99c40223e8 <col:17, col:21> col:21 i 'int'
+|-FunctionDecl 0x7f99c4022670 <line:6:1, col:23> col:13 used baz 'void (int *)' extern
+| `-ParmVarDecl 0x7f99c40225a8 <col:17, col:22> col:22 i 'int *'
+|-FunctionDecl 0x7f99c40227b8 <line:8:1, line:14:1> line:8:12 used foo 'int (int *)' static
+| |-ParmVarDecl 0x7f99c4022728 <col:16, col:21> col:21 used i 'int *'
+| `-CompoundStmt 0x7f99c4022bc0 <line:9:1, line:14:1>
+|   |-CallExpr 0x7f99c4022920 <line:10:2, col:8> 'void'
+|   | |-ImplicitCastExpr 0x7f99c4022908 <col:2> 'void (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c4022858 <col:2> 'void (int)' Function 0x7f99c40224b0 'bar' 'void (int)'
+|   | `-ImplicitCastExpr 0x7f99c4022950 <col:6, col:7> 'int' <LValueToRValue>
+|   |   `-UnaryOperator 0x7f99c40228c0 <col:6, col:7> 'int' lvalue prefix '*'
+|   |     `-ImplicitCastExpr 0x7f99c40228a8 <col:7> 'int *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f99c4022880 <col:7> 'int *' lvalue ParmVar 0x7f99c4022728 'i' 'int *'
+|   |-CallExpr 0x7f99c4022a00 <line:11:2, col:7> 'void'
+|   | |-ImplicitCastExpr 0x7f99c40229e8 <col:2> 'void (*)(int *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c4022968 <col:2> 'void (int *)' Function 0x7f99c4022670 'baz' 'void (int *)'
+|   | `-ImplicitCastExpr 0x7f99c4022a30 <col:6> 'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c4022990 <col:6> 'int *' lvalue ParmVar 0x7f99c4022728 'i' 'int *'
+|   |-CallExpr 0x7f99c4022ae8 <line:12:2, col:8> 'void'
+|   | |-ImplicitCastExpr 0x7f99c4022ad0 <col:2> 'void (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c4022a48 <col:2> 'void (int)' Function 0x7f99c40224b0 'bar' 'void (int)'
+|   | `-ImplicitCastExpr 0x7f99c4022b18 <col:6, col:7> 'int' <LValueToRValue>
+|   |   `-UnaryOperator 0x7f99c4022ab0 <col:6, col:7> 'int' lvalue prefix '*'
+|   |     `-ImplicitCastExpr 0x7f99c4022a98 <col:7> 'int *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f99c4022a70 <col:7> 'int *' lvalue ParmVar 0x7f99c4022728 'i' 'int *'
+|   `-ReturnStmt 0x7f99c4022ba8 <line:13:2, col:10>
+|     `-ImplicitCastExpr 0x7f99c4022b90 <col:9, col:10> 'int' <LValueToRValue>
+|       `-UnaryOperator 0x7f99c4022b70 <col:9, col:10> 'int' lvalue prefix '*'
+|         `-ImplicitCastExpr 0x7f99c4022b58 <col:10> 'int *' <LValueToRValue>
+|           `-DeclRefExpr 0x7f99c4022b30 <col:10> 'int *' lvalue ParmVar 0x7f99c4022728 'i' 'int *'
+`-VarDecl 0x7f99c4022c50 <line:16:1, col:24> col:12 tbl 'struct TBL':'struct TBL' cinit
+  `-InitListExpr 0x7f99c4022d20 <col:18, col:24> 'struct TBL':'struct TBL'
+    `-ImplicitCastExpr 0x7f99c4022d68 <col:20> 'int (*)(int *)' <FunctionToPointerDecay>
+      `-DeclRefExpr 0x7f99c4022cb0 <col:20> 'int (int *)' Function 0x7f99c40227b8 'foo' 'int (int *)'

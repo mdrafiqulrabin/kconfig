@@ -1,0 +1,83 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    PtrDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['unsigned']
+  Decl: e, [], [], []
+    ArrayDecl: []
+      TypeDecl: e, []
+        IdentifierType: ['int']
+      Constant: int, 1
+  Decl: fn1, [], [], []
+    FuncDecl: 
+      TypeDecl: fn1, []
+        IdentifierType: ['void']
+  Decl: fn2, [], [], []
+    FuncDecl: 
+      TypeDecl: fn2, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn3, [], [], []
+      FuncDecl: 
+        TypeDecl: fn3, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: f, [], [], []
+        PtrDecl: []
+          TypeDecl: f, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: a
+      If: 
+        FuncCall: 
+          ID: fn2
+        Compound: 
+          For: 
+            ID: c
+            UnaryOp: p++
+              ID: c
+            Compound: 
+              BinaryOp: &&
+                ArrayRef: 
+                  ID: e
+                  ID: a
+                Assignment: =
+                  ID: b
+                  Constant: int, 0
+              FuncCall: 
+                ID: fn1
+              If: 
+                ArrayRef: 
+                  ID: e
+                  ID: a
+                Return: 
+                  Constant: int, 0
+          For: 
+            BinaryOp: <=
+              ID: c
+              Constant: int, 0
+            UnaryOp: p++
+              ID: c
+            For: 
+              EmptyStatement: 
+        Assignment: =
+          ArrayRef: 
+            ID: e
+            Constant: int, 0
+          BinaryOp: !=
+            Constant: int, 0
+            Assignment: =
+              ID: d
+              ID: f
+      Return: 
+        UnaryOp: *
+          ID: d

@@ -1,0 +1,77 @@
+TranslationUnitDecl 0x7f966a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f966a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f966a026740 '__int128'
+|-TypedefDecl 0x7f966a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f966a026760 'unsigned __int128'
+|-TypedefDecl 0x7f966a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f966a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f966a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f966a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f966a026dc0 'char *'
+|   `-BuiltinType 0x7f966a026560 'char'
+|-TypedefDecl 0x7f966a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f966a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f966a026ee0 'struct __va_list_tag'
+|     `-Record 0x7f966a026e58 '__va_list_tag'
+|-FunctionDecl 0x7f966a825a30 <c_files/pr43299.c:5:1, col:31> col:14 used emit_insn 'void *(void *)' extern
+| `-ParmVarDecl 0x7f966a027138 <col:25, col:30> col:31 'void *'
+|-FunctionDecl 0x7f966a825c78 <line:7:1, line:11:1> line:8:7 used gen_load_locked_si 'void *(void *, void *)'
+| |-ParmVarDecl 0x7f966a825b28 <col:27, col:33> col:33 used x 'void *'
+| |-ParmVarDecl 0x7f966a825ba0 <col:36, col:42> col:42 y 'void *'
+| |-CompoundStmt 0x7f966a825dc0 <line:9:1, line:11:1>
+| | `-ReturnStmt 0x7f966a825da8 <line:10:3, col:10>
+| |   `-ImplicitCastExpr 0x7f966a825d90 <col:10> 'void *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f966a825d68 <col:10> 'void *' lvalue ParmVar 0x7f966a825b28 'x' 'void *'
+| `-NoInlineAttr 0x7f966a825d20 <line:7:16>
+|-FunctionDecl 0x7f966a825f08 <line:13:1, line:17:1> line:14:7 used gen_load_locked_di 'void *(void *, void *)'
+| |-ParmVarDecl 0x7f966a825df8 <col:27, col:33> col:33 used x 'void *'
+| |-ParmVarDecl 0x7f966a825e70 <col:36, col:42> col:42 y 'void *'
+| |-CompoundStmt 0x7f966a826050 <line:15:1, line:17:1>
+| | `-ReturnStmt 0x7f966a826038 <line:16:3, col:10>
+| |   `-ImplicitCastExpr 0x7f966a826020 <col:10> 'void *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f966a825ff8 <col:10> 'void *' lvalue ParmVar 0x7f966a825df8 'x' 'void *'
+| `-NoInlineAttr 0x7f966a825fb0 <line:13:16>
+`-FunctionDecl 0x7f966a826260 <line:19:1, line:28:1> line:20:1 emit_load_locked 'void (int, void *, void *)'
+  |-ParmVarDecl 0x7f966a826088 <col:19, col:23> col:23 used mode 'int'
+  |-ParmVarDecl 0x7f966a826100 <col:29, col:35> col:35 used reg 'void *'
+  |-ParmVarDecl 0x7f966a826178 <col:40, col:46> col:46 used mem 'void *'
+  `-CompoundStmt 0x7f966a828a10 <line:21:1, line:28:1>
+    |-DeclStmt 0x7f966a8265c8 <line:22:3, col:46>
+    | `-VarDecl 0x7f966a8264d0 <col:3, col:45> col:12 used fn 'void *(*)(void *, void *)' cinit
+    |   `-ImplicitCastExpr 0x7f966a8265b0 <col:35, col:45> 'void *(*)(void *, void *)' <NullToPointer>
+    |     `-ParenExpr 0x7f966a826590 <col:35, col:45> 'void *'
+    |       `-CStyleCastExpr 0x7f966a826568 <col:36, col:44> 'void *' <NullToPointer>
+    |         `-IntegerLiteral 0x7f966a826530 <col:44> 'int' 0
+    |-IfStmt 0x7f966a826848 <line:23:3, line:26:10>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f966a826640 <line:23:7, col:15> 'int' '=='
+    | | |-ImplicitCastExpr 0x7f966a826628 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f966a8265e0 <col:7> 'int' lvalue ParmVar 0x7f966a826088 'mode' 'int'
+    | | `-IntegerLiteral 0x7f966a826608 <col:15> 'int' 9
+    | |-BinaryOperator 0x7f966a8266d0 <line:24:5, col:10> 'void *(*)(void *, void *)' '='
+    | | |-DeclRefExpr 0x7f966a826668 <col:5> 'void *(*)(void *, void *)' lvalue Var 0x7f966a8264d0 'fn' 'void *(*)(void *, void *)'
+    | | `-ImplicitCastExpr 0x7f966a8266b8 <col:10> 'void *(*)(void *, void *)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f966a826690 <col:10> 'void *(void *, void *)' Function 0x7f966a825c78 'gen_load_locked_si' 'void *(void *, void *)'
+    | `-IfStmt 0x7f966a826810 <line:25:8, line:26:10>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7f966a826758 <line:25:12, col:20> 'int' '=='
+    |   | |-ImplicitCastExpr 0x7f966a826740 <col:12> 'int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7f966a8266f8 <col:12> 'int' lvalue ParmVar 0x7f966a826088 'mode' 'int'
+    |   | `-IntegerLiteral 0x7f966a826720 <col:20> 'int' 10
+    |   |-BinaryOperator 0x7f966a8267e8 <line:26:5, col:10> 'void *(*)(void *, void *)' '='
+    |   | |-DeclRefExpr 0x7f966a826780 <col:5> 'void *(*)(void *, void *)' lvalue Var 0x7f966a8264d0 'fn' 'void *(*)(void *, void *)'
+    |   | `-ImplicitCastExpr 0x7f966a8267d0 <col:10> 'void *(*)(void *, void *)' <FunctionToPointerDecay>
+    |   |   `-DeclRefExpr 0x7f966a8267a8 <col:10> 'void *(void *, void *)' Function 0x7f966a825f08 'gen_load_locked_di' 'void *(void *, void *)'
+    |   `-<<<NULL>>>
+    `-CallExpr 0x7f966a8269e0 <line:27:3, col:27> 'void *'
+      |-ImplicitCastExpr 0x7f966a8269c8 <col:3> 'void *(*)(void *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f966a826880 <col:3> 'void *(void *)' Function 0x7f966a825a30 'emit_insn' 'void *(void *)'
+      `-CallExpr 0x7f966a826938 <col:14, col:26> 'void *'
+        |-ImplicitCastExpr 0x7f966a826920 <col:14> 'void *(*)(void *, void *)' <LValueToRValue>
+        | `-DeclRefExpr 0x7f966a8268a8 <col:14> 'void *(*)(void *, void *)' lvalue Var 0x7f966a8264d0 'fn' 'void *(*)(void *, void *)'
+        |-ImplicitCastExpr 0x7f966a826970 <col:18> 'void *' <LValueToRValue>
+        | `-DeclRefExpr 0x7f966a8268d0 <col:18> 'void *' lvalue ParmVar 0x7f966a826100 'reg' 'void *'
+        `-ImplicitCastExpr 0x7f966a826988 <col:23> 'void *' <LValueToRValue>
+          `-DeclRefExpr 0x7f966a8268f8 <col:23> 'void *' lvalue ParmVar 0x7f966a826178 'mem' 'void *'

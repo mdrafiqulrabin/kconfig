@@ -1,0 +1,44 @@
+c_files/pr23237.c:7:37: error: argument to 'section' attribute is not valid for this target: mach-o section specifier requires a segment and section separated by a comma
+static __attribute__ ((__section__ (".init.data"))) char *message;
+                                    ^
+c_files/pr23237.c:8:37: error: argument to 'section' attribute is not valid for this target: mach-o section specifier requires a segment and section separated by a comma
+static __attribute__ ((__section__ (".init.data"))) int (*actions[])(void) = {};
+                                    ^
+2 errors generated.
+TranslationUnitDecl 0x7ff0fe8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff0fe826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff0fe826740 '__int128'
+|-TypedefDecl 0x7ff0fe826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff0fe826760 'unsigned __int128'
+|-TypedefDecl 0x7ff0fe826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff0fe826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff0fe826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff0fe826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff0fe826dc0 'char *'
+|   `-BuiltinType 0x7ff0fe826560 'char'
+|-TypedefDecl 0x7ff0fe8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff0fe827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff0fe826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff0fe826e58 '__va_list_tag'
+|-VarDecl 0x7ff0ff026a00 <c_files/pr23237.c:7:1, col:59> col:59 used message 'char *' static
+|-VarDecl 0x7ff0ff026cb0 <line:8:1, col:79> col:59 used actions 'int (*[0])(void)' static cinit
+| `-InitListExpr 0x7ff0ff026d50 <col:78, col:79> 'int (*[0])(void)'
+`-FunctionDecl 0x7ff0ff026ed0 <line:9:1, line:16:1> line:9:6 unpack_to_rootfs 'void (void)'
+  `-CompoundStmt 0x7ff0ff027170 <line:10:1, line:16:1>
+    `-WhileStmt 0x7ff0ff027150 <line:11:3, line:15:3>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7ff0ff026fa8 <line:11:10, col:11> 'int' prefix '!'
+      | `-ImplicitCastExpr 0x7ff0ff026f90 <col:11> 'char *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ff0ff026f68 <col:11> 'char *' lvalue Var 0x7ff0ff026a00 'message' 'char *'
+      `-CompoundStmt 0x7ff0ff027130 <line:12:3, line:15:3>
+        `-IfStmt 0x7ff0ff0270f8 <line:13:5, line:14:7>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-UnaryOperator 0x7ff0ff0270c0 <line:13:8, col:18> 'int' prefix '!'
+          | `-ImplicitCastExpr 0x7ff0ff0270a8 <col:9, col:18> 'int (*)(void)' <LValueToRValue>
+          |   `-ArraySubscriptExpr 0x7ff0ff027080 <col:9, col:18> 'int (*)(void)' lvalue
+          |     |-ImplicitCastExpr 0x7ff0ff027068 <col:9> 'int (**)(void)' <ArrayToPointerDecay>
+          |     | `-DeclRefExpr 0x7ff0ff026fc8 <col:9> 'int (*[0])(void)' lvalue Var 0x7ff0ff026cb0 'actions' 'int (*[0])(void)'
+          |     `-IntegerLiteral 0x7ff0ff026ff0 <col:17> 'int' 0
+          |-ReturnStmt 0x7ff0ff0270e0 <line:14:7>
+          `-<<<NULL>>>

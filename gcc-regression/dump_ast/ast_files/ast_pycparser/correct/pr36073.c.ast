@@ -1,0 +1,37 @@
+FileAST: 
+  Decl: log, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['double']
+      TypeDecl: log, []
+        IdentifierType: ['double']
+  Decl: f, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: f, []
+        IdentifierType: ['int']
+  Decl: cached_value, [], [], []
+    TypeDecl: cached_value, []
+      IdentifierType: ['double']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: cached_value
+        FuncCall: 
+          ID: log
+          ExprList: 
+            FuncCall: 
+              ID: f

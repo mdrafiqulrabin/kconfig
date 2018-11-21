@@ -1,0 +1,28 @@
+c_files/pr63282.c:8:16: error: 'asm goto' constructs are not supported yet
+  asm volatile goto ("" : : : : a, b);
+               ^
+1 error generated.
+TranslationUnitDecl 0x7fcf920264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcf92026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcf92026740 '__int128'
+|-TypedefDecl 0x7fcf92026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcf92026760 'unsigned __int128'
+|-TypedefDecl 0x7fcf92026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcf92026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcf92026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcf92026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcf92026dc0 'char *'
+|   `-BuiltinType 0x7fcf92026560 'char'
+|-TypedefDecl 0x7fcf920270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcf92027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcf92026ee0 'struct __va_list_tag'
+|     `-Record 0x7fcf92026e58 '__va_list_tag'
+|-FunctionDecl 0x7fcf92825a00 <c_files/pr63282.c:3:1, col:15> col:6 used bar 'void (void)'
+`-FunctionDecl 0x7fcf92825b68 <line:5:1, line:13:1> line:6:1 foo 'void (void)'
+  `-CompoundStmt 0x7fcf92825d70 <line:7:1, line:13:1>
+    |-LabelStmt 0x7fcf92825ce0 <line:9:1, line:10:8> 'a'
+    | `-CallExpr 0x7fcf92825c70 <col:3, col:8> 'void'
+    |   `-ImplicitCastExpr 0x7fcf92825c58 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7fcf92825c00 <col:3> 'void (void)' Function 0x7fcf92825a00 'bar' 'void (void)'
+    `-LabelStmt 0x7fcf92825d58 <line:11:1, line:12:3> 'b'
+      `-ReturnStmt 0x7fcf92825cf8 <col:3>

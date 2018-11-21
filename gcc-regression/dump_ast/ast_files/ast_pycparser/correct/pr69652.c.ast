@@ -1,0 +1,76 @@
+FileAST: 
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: matrix, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: matrix, []
+                  IdentifierType: ['double']
+          Decl: column, [], [], []
+            TypeDecl: column, []
+              IdentifierType: ['int']
+          Decl: row, [], [], []
+            TypeDecl: row, []
+              IdentifierType: ['int']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: k
+          Constant: int, 0
+        BinaryOp: <
+          ID: k
+          ID: n
+        UnaryOp: p++
+          ID: k
+        If: 
+          BinaryOp: !=
+            ArrayRef: 
+              ArrayRef: 
+                ID: matrix
+                ID: row
+              ID: k
+            ArrayRef: 
+              ArrayRef: 
+                ID: matrix
+                ID: column
+              ID: k
+          Compound: 
+            Assignment: =
+              ArrayRef: 
+                ArrayRef: 
+                  ID: matrix
+                  ID: column
+                ID: k
+              UnaryOp: -
+                ArrayRef: 
+                  ArrayRef: 
+                    ID: matrix
+                    ID: column
+                  ID: k
+            Assignment: =
+              ArrayRef: 
+                ArrayRef: 
+                  ID: matrix
+                  ID: row
+                ID: k
+              BinaryOp: -
+                ArrayRef: 
+                  ArrayRef: 
+                    ID: matrix
+                    ID: row
+                  ID: k
+                ArrayRef: 
+                  ArrayRef: 
+                    ID: matrix
+                    ID: column
+                  ID: k

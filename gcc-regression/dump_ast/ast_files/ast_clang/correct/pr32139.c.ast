@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7fec410264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fec41026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fec41026740 '__int128'
+|-TypedefDecl 0x7fec41026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fec41026760 'unsigned __int128'
+|-TypedefDecl 0x7fec41026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fec41026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fec41026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fec41026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fec41026dc0 'char *'
+|   `-BuiltinType 0x7fec41026560 'char'
+|-TypedefDecl 0x7fec410270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fec41027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fec41026ee0 'struct __va_list_tag'
+|     `-Record 0x7fec41026e58 '__va_list_tag'
+|-FunctionDecl 0x7fec41825a00 <c_files/pr32139.c:2:1, col:14> col:5 used foo 'int (void)'
+|-FunctionDecl 0x7fec41825b70 <line:3:1, col:38> col:5 used bar 'int (void)'
+| `-ConstAttr 0x7fec41825c08 <col:32>
+`-FunctionDecl 0x7fec41825d38 <line:5:1, line:11:1> line:6:1 test 'int (int)'
+  |-ParmVarDecl 0x7fec41825c68 <col:7, col:11> col:11 used x 'int'
+  `-CompoundStmt 0x7fec418263b0 <line:7:1, line:11:1>
+    |-DeclStmt 0x7fec418260c8 <line:8:3, col:38>
+    | `-VarDecl 0x7fec41825df0 <col:3, col:37> col:7 used a 'int' cinit
+    |   `-CallExpr 0x7fec418260a0 <col:11, col:37> 'int'
+    |     `-ParenExpr 0x7fec41826080 <col:11, col:34> 'int (*)(void)'
+    |       `-ConditionalOperator 0x7fec41826050 <col:12, col:31> 'int (*)(void)'
+    |         |-BinaryOperator 0x7fec41825eb0 <col:12, col:17> 'int' '=='
+    |         | |-ImplicitCastExpr 0x7fec41825e98 <col:12> 'int' <LValueToRValue>
+    |         | | `-DeclRefExpr 0x7fec41825e50 <col:12> 'int' lvalue ParmVar 0x7fec41825c68 'x' 'int'
+    |         | `-IntegerLiteral 0x7fec41825e78 <col:17> 'int' 10000
+    |         |-ImplicitCastExpr 0x7fec41825f58 <col:25> 'int (*)(void)' <FunctionToPointerDecay>
+    |         | `-DeclRefExpr 0x7fec41825ed8 <col:25> 'int (void)' Function 0x7fec41825a00 'foo' 'int (void)'
+    |         `-ImplicitCastExpr 0x7fec41825f70 <col:31> 'int (*)(void)' <FunctionToPointerDecay>
+    |           `-DeclRefExpr 0x7fec41825f00 <col:31> 'int (void)' Function 0x7fec41825b70 'bar' 'int (void)'
+    |-DeclStmt 0x7fec418262d8 <line:9:3, col:38>
+    | `-VarDecl 0x7fec418260f8 <col:3, col:37> col:7 used b 'int' cinit
+    |   `-CallExpr 0x7fec418262b0 <col:11, col:37> 'int'
+    |     `-ParenExpr 0x7fec41826290 <col:11, col:34> 'int (*)(void)'
+    |       `-ConditionalOperator 0x7fec41826260 <col:12, col:31> 'int (*)(void)'
+    |         |-BinaryOperator 0x7fec418261b8 <col:12, col:17> 'int' '=='
+    |         | |-ImplicitCastExpr 0x7fec418261a0 <col:12> 'int' <LValueToRValue>
+    |         | | `-DeclRefExpr 0x7fec41826158 <col:12> 'int' lvalue ParmVar 0x7fec41825c68 'x' 'int'
+    |         | `-IntegerLiteral 0x7fec41826180 <col:17> 'int' 10000
+    |         |-ImplicitCastExpr 0x7fec41826230 <col:25> 'int (*)(void)' <FunctionToPointerDecay>
+    |         | `-DeclRefExpr 0x7fec418261e0 <col:25> 'int (void)' Function 0x7fec41825a00 'foo' 'int (void)'
+    |         `-ImplicitCastExpr 0x7fec41826248 <col:31> 'int (*)(void)' <FunctionToPointerDecay>
+    |           `-DeclRefExpr 0x7fec41826208 <col:31> 'int (void)' Function 0x7fec41825b70 'bar' 'int (void)'
+    `-ReturnStmt 0x7fec41826398 <line:10:3, col:14>
+      `-BinaryOperator 0x7fec41826370 <col:10, col:14> 'int' '+'
+        |-ImplicitCastExpr 0x7fec41826340 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fec418262f0 <col:10> 'int' lvalue Var 0x7fec41825df0 'a' 'int'
+        `-ImplicitCastExpr 0x7fec41826358 <col:14> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fec41826318 <col:14> 'int' lvalue Var 0x7fec418260f8 'b' 'int'

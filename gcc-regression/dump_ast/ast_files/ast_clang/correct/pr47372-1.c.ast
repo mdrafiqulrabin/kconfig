@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fa31e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa31e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa31e826740 '__int128'
+|-TypedefDecl 0x7fa31e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa31e826760 'unsigned __int128'
+|-TypedefDecl 0x7fa31e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa31e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa31e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa31e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa31e826dc0 'char *'
+|   `-BuiltinType 0x7fa31e826560 'char'
+|-TypedefDecl 0x7fa31e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa31e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa31e826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa31e826e58 '__va_list_tag'
+|-RecordDecl 0x7fa31e827120 <c_files/pr47372-1.c:5:9, col:16> col:16 struct FILE
+|-TypedefDecl 0x7fa31e877420 <col:1, col:21> col:21 referenced FILE 'struct FILE':'struct FILE'
+| `-ElaboratedType 0x7fa31e8271d0 'struct FILE' sugar
+|   `-RecordType 0x7fa31e8271b0 'struct FILE'
+|     `-Record 0x7fa31e827120 'FILE'
+|-FunctionDecl 0x7fa31e8777d8 <line:6:1, col:27> col:5 used _fwalk 'int (int (*)(FILE *))'
+| `-ParmVarDecl 0x7fa31e8776c8 <col:12, col:26> col:18 'int (*)(FILE *)'
+|-FunctionDecl 0x7fa31e877958 <line:7:1, col:20> col:5 used __sflush 'int (FILE *)'
+| `-ParmVarDecl 0x7fa31e8778c8 <col:14, col:19> col:20 'FILE *'
+`-FunctionDecl 0x7fa31e877a98 <line:8:1, line:12:1> line:9:1 fflush 'int (FILE *)'
+  |-ParmVarDecl 0x7fa31e877a08 <col:8, col:14> col:14 fp 'FILE *'
+  `-CompoundStmt 0x7fa31e877ca8 <line:10:1, line:12:1>
+    `-ReturnStmt 0x7fa31e877c90 <line:11:3, col:27>
+      `-ParenExpr 0x7fa31e877c70 <col:10, col:27> 'int'
+        `-CallExpr 0x7fa31e877c00 <col:11, col:26> 'int'
+          |-ImplicitCastExpr 0x7fa31e877be8 <col:11> 'int (*)(int (*)(FILE *))' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fa31e877b38 <col:11> 'int (int (*)(FILE *))' Function 0x7fa31e8777d8 '_fwalk' 'int (int (*)(FILE *))'
+          `-ImplicitCastExpr 0x7fa31e877c58 <col:18> 'int (*)(FILE *)' <FunctionToPointerDecay>
+            `-DeclRefExpr 0x7fa31e877b60 <col:18> 'int (FILE *)' Function 0x7fa31e877958 '__sflush' 'int (FILE *)'

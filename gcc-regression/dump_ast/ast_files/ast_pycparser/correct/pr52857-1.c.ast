@@ -1,0 +1,28 @@
+FileAST: 
+  Decl: get_BID128, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: get_BID128, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: __bid128_div, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: __bid128_div, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: res, [], [], []
+        TypeDecl: res, []
+          IdentifierType: ['int']
+      FuncCall: 
+        ID: get_BID128
+        ExprList: 
+          UnaryOp: &
+            ID: res

@@ -1,0 +1,38 @@
+FileAST: 
+  Decl: ek, [], [], []
+    TypeDecl: ek, []
+      IdentifierType: ['int']
+  Decl: zu, [], [], []
+    TypeDecl: zu, []
+      IdentifierType: ['float']
+  FuncDef: 
+    Decl: k5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ks, [], [], []
+            TypeDecl: ks, []
+              IdentifierType: ['int']
+        TypeDecl: k5, []
+          IdentifierType: ['int']
+    Compound: 
+      While: 
+        BinaryOp: <
+          ID: ek
+          Constant: int, 1
+        Compound: 
+          Assignment: +=
+            ID: ks
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+              BinaryOp: +
+                BinaryOp: +
+                  Constant: int, 0x1000000
+                  ID: zu
+                UnaryOp: !
+                  ID: ek
+          UnaryOp: ++
+            ID: ek
+      Return: 
+        ID: ks

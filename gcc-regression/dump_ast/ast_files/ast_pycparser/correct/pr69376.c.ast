@@ -1,0 +1,145 @@
+FileAST: 
+  Decl: printf, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        EllipsisParam: 
+      TypeDecl: printf, []
+        IdentifierType: ['int']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['unsigned']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['unsigned']
+  Decl: d, [], [], []
+    PtrDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['unsigned']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['unsigned']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['char']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['char']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['short']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['unsigned']
+        Constant: int, 4294967290
+      If: 
+        BinaryOp: >=
+          ID: b
+          Constant: int, 0
+        Compound: 
+          Assignment: =
+            ID: h
+            ID: b
+          Assignment: =
+            ID: c
+            BinaryOp: /
+              ID: b
+              Constant: int, 290
+          Assignment: =
+            ID: f
+            UnaryOp: ~
+              BinaryOp: -
+                ID: c
+                BinaryOp: ||
+                  Constant: int, 8
+                  ID: h
+          If: 
+            ID: f
+            FuncCall: 
+              ID: printf
+              ExprList: 
+                Constant: string, "%d\n"
+                Constant: int, 1
+          If: 
+            ID: f
+            FuncCall: 
+              ID: printf
+              ExprList: 
+                Constant: string, "%d\n"
+                ID: f
+          Assignment: =
+            ID: g
+            UnaryOp: ~
+              ID: f
+          If: 
+            BinaryOp: <
+              ID: c
+              Constant: int, 3
+            Compound: 
+              Decl: i, [], [], []
+                TypeDecl: i, []
+                  IdentifierType: ['int']
+                BinaryOp: <
+                  UnaryOp: -
+                    ID: h
+                  UnaryOp: ~
+                    ID: c
+              Decl: j, [], [], []
+                TypeDecl: j, []
+                  IdentifierType: ['unsigned']
+              If: 
+                ID: i
+                Assignment: =
+                  ID: j
+                  ID: h
+              Assignment: =
+                ID: h
+                BinaryOp: *
+                  UnaryOp: -
+                    ID: j
+                  ID: g
+          Assignment: =
+            ID: c
+            ID: h
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['unsigned']
+        UnaryOp: ~
+          ID: h
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['char']
+        BinaryOp: ||
+          ID: e
+          ID: g
+      If: 
+        BinaryOp: ||
+          BinaryOp: <
+            ID: l
+            Constant: int, 1
+          BinaryOp: <
+            ID: k
+            Constant: int, 7
+        Assignment: =
+          UnaryOp: *
+            ID: d
+          ID: a
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: fn1
+      Return: 
+        Constant: int, 0

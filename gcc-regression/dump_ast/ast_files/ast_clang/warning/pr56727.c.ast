@@ -1,0 +1,38 @@
+c_files/pr56727.c:2:1: warning: '/*' within block comment [-Wcomment]
+/* { dg-require-alias "" } */
+^
+c_files/pr56727.c:13:30: error: aliases are not supported on darwin
+void g(int b) __attribute__((alias(("do_not_optimize"))));
+                             ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7f954a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f954a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f954a026740 '__int128'
+|-TypedefDecl 0x7f954a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f954a026760 'unsigned __int128'
+|-TypedefDecl 0x7f954a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f954a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f954a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f954a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f954a026dc0 'char *'
+|   `-BuiltinType 0x7f954a026560 'char'
+|-TypedefDecl 0x7f954a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f954a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f954a026ee0 'struct __va_list_tag'
+|     `-Record 0x7f954a026e58 '__va_list_tag'
+|-FunctionDecl 0x7f954a825a00 <c_files/pr56727.c:4:1, line:7:1> line:4:6 referenced do_not_optimize 'void (int)'
+| |-ParmVarDecl 0x7f954a027138 <col:22, col:26> col:26 b 'int'
+| `-CompoundStmt 0x7f954a825ba0 <line:5:1, line:7:1>
+|   `-CallExpr 0x7f954a825b70 <line:6:5, col:22> 'void'
+|     |-ImplicitCastExpr 0x7f954a825b58 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f954a825ae0 <col:5> 'void (int)' Function 0x7f954a825a00 'do_not_optimize' 'void (int)'
+|     `-IntegerLiteral 0x7f954a825b08 <col:21> 'int' 0
+|-FunctionDecl 0x7f954a825c60 <line:8:1, line:11:1> line:8:6 referenced do_optimize 'void (int)'
+| |-ParmVarDecl 0x7f954a825bd8 <col:18, col:22> col:22 b 'int'
+| `-CompoundStmt 0x7f954a825d90 <line:9:1, line:11:1>
+|   `-CallExpr 0x7f954a825d60 <line:10:5, col:18> 'void'
+|     |-ImplicitCastExpr 0x7f954a825d48 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f954a825d00 <col:5> 'void (int)' Function 0x7f954a825c60 'do_optimize' 'void (int)'
+|     `-IntegerLiteral 0x7f954a825d28 <col:17> 'int' 0
+`-FunctionDecl 0x7f954a825ee8 <line:13:1, col:57> col:6 g 'void (int)'
+  `-ParmVarDecl 0x7f954a825dc8 <col:8, col:12> col:12 b 'int'

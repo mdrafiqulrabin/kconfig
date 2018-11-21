@@ -1,0 +1,33 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: a
+          Constant: int, 0
+        BinaryOp: <
+          ID: a
+          Constant: int, 2
+        UnaryOp: p++
+          ID: a
+        If: 
+          ArrayRef: 
+            ID: x
+            ID: a
+          Goto: lab
+      FuncCall: 
+        ID: __builtin_unreachable
+      Label: lab
+        EmptyStatement: 

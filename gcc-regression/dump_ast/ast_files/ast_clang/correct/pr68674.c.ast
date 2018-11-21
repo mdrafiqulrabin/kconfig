@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f95040264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9504026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9504026740 '__int128'
+|-TypedefDecl 0x7f9504026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9504026760 'unsigned __int128'
+|-TypedefDecl 0x7f9504026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9504026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9504026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9504026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9504026dc0 'char *'
+|   `-BuiltinType 0x7f9504026560 'char'
+|-TypedefDecl 0x7f95040270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9504027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9504026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9504026e58 '__va_list_tag'
+|-TypedefDecl 0x7f9504027178 <c_files/pr68674.c:6:1, col:13> col:13 referenced v8si '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7f9504027140 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7f95040265c0 'int'
+|-VarDecl 0x7f9504078400 <line:8:1, col:6> col:6 used a 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+`-FunctionDecl 0x7f9504078588 <line:10:2, line:15:1> line:12:1 foo 'v8si ()'
+  |-CompoundStmt 0x7f95040786d0 <line:13:1, line:15:1>
+  | `-ReturnStmt 0x7f95040786b8 <line:14:5, col:12>
+  |   `-ImplicitCastExpr 0x7f95040786a0 <col:12> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+  |     `-DeclRefExpr 0x7f9504078678 <col:12> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7f9504078400 'a' 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+  `-TargetAttr 0x7f9504078620 <line:10:17, col:29> "avx"

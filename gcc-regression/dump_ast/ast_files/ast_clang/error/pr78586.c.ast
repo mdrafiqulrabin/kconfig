@@ -1,0 +1,60 @@
+c_files/pr78586.c:7:21: error: use of unknown builtin '__builtin_sprintf' [-Wimplicit-function-declaration]
+  unsigned long b = __builtin_sprintf (a, "%lu", x);
+                    ^
+1 error generated.
+TranslationUnitDecl 0x7f97c38264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f97c3826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f97c3826740 '__int128'
+|-TypedefDecl 0x7f97c3826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f97c3826760 'unsigned __int128'
+|-TypedefDecl 0x7f97c3826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f97c3826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f97c3826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f97c3826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f97c3826dc0 'char *'
+|   `-BuiltinType 0x7f97c3826560 'char'
+|-TypedefDecl 0x7f97c38270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f97c3827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f97c3826ee0 'struct __va_list_tag'
+|     `-Record 0x7f97c3826e58 '__va_list_tag'
+|-FunctionDecl 0x7f97c3877400 <c_files/pr78586.c:3:1, line:10:1> line:4:1 used foo 'void (unsigned long)'
+| |-ParmVarDecl 0x7f97c3827138 <col:6, col:20> col:20 used x 'unsigned long'
+| `-CompoundStmt 0x7f97c3877bb0 <line:5:1, line:10:1>
+|   |-DeclStmt 0x7f97c38775b8 <line:6:3, col:13>
+|   | `-VarDecl 0x7f97c3877558 <col:3, col:12> col:8 used a 'char [30]'
+|   |-DeclStmt 0x7f97c3877910 <line:7:3, col:52>
+|   | `-VarDecl 0x7f97c38775e8 <col:3, col:51> col:17 used b 'unsigned long' cinit
+|   |   `-ImplicitCastExpr 0x7f97c38778f8 <col:21, col:51> 'unsigned long' <IntegralCast>
+|   |     `-CallExpr 0x7f97c3877870 <col:21, col:51> 'int'
+|   |       |-ImplicitCastExpr 0x7f97c3877858 <col:21> 'int (*)()' <FunctionToPointerDecay>
+|   |       | `-DeclRefExpr 0x7f97c3877748 <col:21> 'int ()' Function 0x7f97c38776b0 '__builtin_sprintf' 'int ()'
+|   |       |-ImplicitCastExpr 0x7f97c38778b0 <col:40> 'char *' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7f97c3877770 <col:40> 'char [30]' lvalue Var 0x7f97c3877558 'a' 'char [30]'
+|   |       |-ImplicitCastExpr 0x7f97c38778c8 <col:43> 'char *' <ArrayToPointerDecay>
+|   |       | `-StringLiteral 0x7f97c38777d8 <col:43> 'char [4]' lvalue "%lu"
+|   |       `-ImplicitCastExpr 0x7f97c38778e0 <col:50> 'unsigned long' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7f97c3877808 <col:50> 'unsigned long' lvalue ParmVar 0x7f97c3827138 'x' 'unsigned long'
+|   `-IfStmt 0x7f97c3877b78 <line:8:3, line:9:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f97c38779a0 <line:8:7, col:12> 'int' '!='
+|     | |-ImplicitCastExpr 0x7f97c3877970 <col:7> 'unsigned long' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f97c3877928 <col:7> 'unsigned long' lvalue Var 0x7f97c38775e8 'b' 'unsigned long'
+|     | `-ImplicitCastExpr 0x7f97c3877988 <col:12> 'unsigned long' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f97c3877950 <col:12> 'int' 4
+|     |-CallExpr 0x7f97c3877b50 <line:9:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7f97c3877b38 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7f97c3877ae0 <col:5> '<builtin fn type>' Function 0x7f97c3877a00 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f97c38776b0 <<invalid sloc>> line:7:21 implicit used __builtin_sprintf 'int ()'
+|-FunctionDecl 0x7f97c3877a00 <line:9:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7f97c3877a98 <col:5> Implicit
+`-FunctionDecl 0x7f97c3877c08 <line:12:1, line:17:1> line:13:1 main 'int ()'
+  `-CompoundStmt 0x7f97c3877db0 <line:14:1, line:17:1>
+    |-CallExpr 0x7f97c3877d30 <line:15:3, col:12> 'void'
+    | |-ImplicitCastExpr 0x7f97c3877d18 <col:3> 'void (*)(unsigned long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f97c3877ca0 <col:3> 'void (unsigned long)' Function 0x7f97c3877400 'foo' 'void (unsigned long)'
+    | `-ImplicitCastExpr 0x7f97c3877d60 <col:8> 'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f97c3877cc8 <col:8> 'int' 1000
+    `-ReturnStmt 0x7f97c3877d98 <line:16:3, col:10>
+      `-IntegerLiteral 0x7f97c3877d78 <col:10> 'int' 0

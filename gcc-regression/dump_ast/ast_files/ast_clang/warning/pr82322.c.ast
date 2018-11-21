@@ -1,0 +1,32 @@
+In file included from c_files/pr82322.c:12:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/vecintrin.h:10468:2: error: "Use -fzvector to enable vector extensions"
+#error "Use -fzvector to enable vector extensions"
+ ^
+c_files/pr82322.c:14:1: error: unknown type name 'vector'
+vector double
+^
+c_files/pr82322.c:14:8: error: expected identifier or '('
+vector double
+       ^
+c_files/pr82322.c:19:1: error: unknown type name 'vector'
+vector float
+^
+c_files/pr82322.c:19:8: error: expected identifier or '('
+vector float
+       ^
+5 errors generated.
+TranslationUnitDecl 0x7fd20d8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd20d826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd20d826740 '__int128'
+|-TypedefDecl 0x7fd20d826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd20d826760 'unsigned __int128'
+|-TypedefDecl 0x7fd20d826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd20d826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd20d826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd20d826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd20d826dc0 'char *'
+|   `-BuiltinType 0x7fd20d826560 'char'
+`-TypedefDecl 0x7fd20d8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fd20d827070 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fd20d826ee0 'struct __va_list_tag'
+      `-Record 0x7fd20d826e58 '__va_list_tag'

@@ -1,0 +1,36 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: d, ['volatile'], [], []
+        TypeDecl: d, ['volatile']
+          IdentifierType: ['double']
+        Constant: float, 0.0
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['double']
+        FuncCall: 
+          ID: __builtin_calloc
+          ExprList: 
+            Constant: int, 1
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['double']
+      Assignment: +=
+        ID: d
+        Constant: float, 1.0
+      Assignment: +=
+        UnaryOp: *
+          ID: p
+        Constant: float, 2.0
+      FuncCall: 
+        ID: __builtin_free
+        ExprList: 
+          ID: p
+      Return: 
+        Constant: int, 0

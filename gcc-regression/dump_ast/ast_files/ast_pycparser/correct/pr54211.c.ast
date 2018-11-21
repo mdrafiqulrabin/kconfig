@@ -1,0 +1,69 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        PtrDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['unsigned', 'char']
+        Constant: int, 0
+      For: 
+        UnaryOp: p++
+          ID: a
+        Compound: 
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['unsigned', 'char']
+            UnaryOp: *
+              BinaryOp: +
+                ID: c
+                ID: b
+          For: 
+            BinaryOp: <
+              UnaryOp: &
+                ID: e
+              UnaryOp: &
+                ID: d
+            UnaryOp: p++
+              ID: c
+            Goto: Found_Top
+      Label: Found_Top
+        If: 
+          Constant: int, 0
+          Goto: Empty_Bitmap
+      For: 
+        UnaryOp: p++
+          ID: a
+        Compound: 
+          Decl: e, [], [], []
+            PtrDecl: []
+              TypeDecl: e, []
+                IdentifierType: ['unsigned', 'char']
+            BinaryOp: +
+              ID: c
+              ID: b
+          For: 
+            BinaryOp: <
+              ID: c
+              ID: e
+            UnaryOp: p++
+              ID: c
+            Goto: Found_Bottom
+          Assignment: -=
+            ID: c
+            ID: b
+      Label: Found_Bottom
+        Label: Empty_Bitmap
+          EmptyStatement: 

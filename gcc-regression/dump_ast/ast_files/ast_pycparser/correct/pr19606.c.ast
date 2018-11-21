@@ -1,0 +1,117 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['signed', 'char']
+    UnaryOp: -
+      Constant: int, 4
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: /
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'int']
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['signed', 'int']
+              ID: a
+          Constant: int, 2LL
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: %
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'int']
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['signed', 'int']
+              ID: a
+          Constant: int, 5LL
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: r
+        FuncCall: 
+          ID: foo
+      If: 
+        BinaryOp: !=
+          ID: r
+          BinaryOp: /
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'int']
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['signed', 'int']
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['signed', 'char']
+                  UnaryOp: -
+                    Constant: int, 4
+            Constant: int, 2LL
+        FuncCall: 
+          ID: abort
+      Assignment: =
+        ID: r
+        FuncCall: 
+          ID: bar
+      If: 
+        BinaryOp: !=
+          ID: r
+          BinaryOp: %
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'int']
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['signed', 'int']
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['signed', 'char']
+                  UnaryOp: -
+                    Constant: int, 4
+            Constant: int, 5LL
+        FuncCall: 
+          ID: abort
+      FuncCall: 
+        ID: exit
+        ExprList: 
+          Constant: int, 0

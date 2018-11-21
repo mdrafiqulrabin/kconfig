@@ -1,0 +1,31 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u, [], [], []
+            PtrDecl: []
+              TypeDecl: u, []
+                IdentifierType: ['unsigned']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: __builtin_ia32_rdseed_si_step
+          ExprList: 
+            ID: u
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: i

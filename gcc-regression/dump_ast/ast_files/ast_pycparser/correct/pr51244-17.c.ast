@@ -1,0 +1,1363 @@
+FileAST: 
+  FuncDef: 
+    Decl: test00, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test00, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0
+      Return: 
+        BinaryOp: ==
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test01, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test01, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          ID: d
+      Return: 
+        BinaryOp: ==
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test02, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test02, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          ID: d
+      Return: 
+        BinaryOp: ==
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test03, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test03, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: c
+          ID: d
+      Return: 
+        BinaryOp: ==
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test04, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test04, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: c
+          ID: d
+      Return: 
+        BinaryOp: ==
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test05, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test05, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0
+      Return: 
+        BinaryOp: !=
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test06, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test06, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0
+      Return: 
+        BinaryOp: ^
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test07, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test07, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0
+      Return: 
+        BinaryOp: |
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test08, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test08, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0
+      Return: 
+        BinaryOp: &
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test09, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test09, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          ID: d
+      Return: 
+        BinaryOp: !=
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test10, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test10, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          ID: d
+      Return: 
+        BinaryOp: !=
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test11, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test11, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: c
+          ID: d
+      Return: 
+        BinaryOp: !=
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test12, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test12, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: c
+          ID: d
+      Return: 
+        BinaryOp: !=
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test13, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+        TypeDecl: test13, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: d
+          ID: e
+      Return: 
+        BinaryOp: ||
+          BinaryOp: ==
+            ID: x
+            ID: y
+          BinaryOp: ==
+            ID: x
+            ID: z
+  FuncDef: 
+    Decl: test14, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+        TypeDecl: test14, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: d
+          ID: e
+      Return: 
+        BinaryOp: &&
+          BinaryOp: ==
+            ID: x
+            ID: y
+          BinaryOp: ==
+            ID: x
+            ID: z
+  FuncDef: 
+    Decl: test15, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+        TypeDecl: test15, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: d
+          ID: e
+      Return: 
+        BinaryOp: ||
+          BinaryOp: ==
+            ID: x
+            ID: y
+          BinaryOp: ==
+            ID: x
+            ID: z
+  FuncDef: 
+    Decl: test16, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+        TypeDecl: test16, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: d
+          ID: e
+      Return: 
+        BinaryOp: &&
+          BinaryOp: ==
+            ID: x
+            ID: y
+          BinaryOp: ==
+            ID: x
+            ID: z
+  FuncDef: 
+    Decl: test17, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+        TypeDecl: test17, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: c
+          Constant: int, 0
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: d
+          ID: e
+      Return: 
+        BinaryOp: ||
+          BinaryOp: ==
+            ID: x
+            ID: y
+          BinaryOp: ==
+            ID: x
+            ID: z
+  FuncDef: 
+    Decl: test18, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+        TypeDecl: test18, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: c
+          Constant: int, 0
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: d
+          ID: e
+      Return: 
+        BinaryOp: &&
+          BinaryOp: ==
+            ID: x
+            ID: y
+          BinaryOp: ==
+            ID: x
+            ID: z
+  FuncDef: 
+    Decl: test19, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+        TypeDecl: test19, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: c
+          Constant: int, 0
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: d
+          ID: e
+      Return: 
+        BinaryOp: ||
+          BinaryOp: ==
+            ID: x
+            ID: y
+          BinaryOp: ==
+            ID: x
+            ID: z
+  FuncDef: 
+    Decl: test20, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+        TypeDecl: test20, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: c
+          Constant: int, 0
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: d
+          ID: e
+      Return: 
+        BinaryOp: &&
+          BinaryOp: ==
+            ID: x
+            ID: y
+          BinaryOp: ==
+            ID: x
+            ID: z
+  FuncDef: 
+    Decl: test21, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test21, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0
+      Return: 
+        BinaryOp: +
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test22, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test22, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0
+      Return: 
+        BinaryOp: +
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test23, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test23, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: c
+          Constant: int, 0
+      Return: 
+        BinaryOp: +
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test24, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test24, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0
+      Return: 
+        BinaryOp: -
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test25, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test25, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0
+      Return: 
+        BinaryOp: -
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test26, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test26, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: c
+          Constant: int, 0
+      Return: 
+        BinaryOp: -
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test27, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test27, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0
+      Return: 
+        BinaryOp: *
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test28, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test28, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0
+      Return: 
+        BinaryOp: *
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test29, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: test29, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: a
+          ID: b
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: c
+          Constant: int, 0
+      Return: 
+        BinaryOp: *
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: test30, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: test30, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: |
+            BinaryOp: ==
+              BinaryOp: &
+                ID: a
+                Constant: int, 0x7F
+              Constant: int, 1
+            BinaryOp: ==
+              BinaryOp: &
+                ID: a
+                Constant: int, 0xFF00
+              Constant: int, 0x0200
+          BinaryOp: ==
+            BinaryOp: &
+              ID: a
+              Constant: int, 0xFF0000
+            Constant: int, 0x030000
+  FuncDef: 
+    Decl: test31, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: test31, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: |
+            BinaryOp: |
+              BinaryOp: ==
+                BinaryOp: &
+                  ID: a
+                  Constant: int, 0x7F
+                Constant: int, 1
+              BinaryOp: ==
+                BinaryOp: &
+                  ID: a
+                  Constant: int, 0xFF00
+                Constant: int, 0x0200
+            BinaryOp: ==
+              BinaryOp: &
+                ID: a
+                Constant: int, 0xFF0000
+              Constant: int, 0x030000
+          BinaryOp: ==
+            BinaryOp: &
+              ID: a
+              Constant: int, 0xFF000000
+            Constant: int, 0x04000000
+  FuncDef: 
+    Decl: test32, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, ['volatile'], [], []
+            PtrDecl: []
+              TypeDecl: d, ['volatile']
+                IdentifierType: ['char']
+        TypeDecl: test32, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: d
+          Constant: int, 1
+        BinaryOp: !=
+          ArrayRef: 
+            ID: a
+            Constant: int, 0
+          Constant: int, 0
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: test33, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, ['volatile'], [], []
+            PtrDecl: []
+              TypeDecl: d, ['volatile']
+                IdentifierType: ['char']
+        TypeDecl: test33, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: d
+          Constant: int, 1
+        BinaryOp: ==
+          ArrayRef: 
+            ID: a
+            Constant: int, 0
+          Constant: int, 0
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: test34, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['int']
+        TypeDecl: test34, []
+          IdentifierType: ['char']
+    Compound: 
+      Return: 
+        BinaryOp: ==
+          BinaryOp: &
+            BinaryOp: &
+              ArrayRef: 
+                ID: b
+                Constant: int, 4
+              ArrayRef: 
+                ID: b
+                Constant: int, 0
+            ID: a
+          ID: a
+  FuncDef: 
+    Decl: test35, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['int']
+        TypeDecl: test35, []
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Return: 
+        BinaryOp: ==
+          BinaryOp: &
+            BinaryOp: &
+              ArrayRef: 
+                ID: b
+                Constant: int, 4
+              ArrayRef: 
+                ID: b
+                Constant: int, 0
+            ID: a
+          ID: a

@@ -1,0 +1,85 @@
+c_files/pr50838.c:27:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7f8884818ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8884819420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8884819140 '__int128'
+|-TypedefDecl 0x7f8884819490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8884819160 'unsigned __int128'
+|-TypedefDecl 0x7f8884819768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8884819570 'struct __NSConstantString_tag'
+|   `-Record 0x7f88848194e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8884819800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f88848197c0 'char *'
+|   `-BuiltinType 0x7f8884818f60 'char'
+|-TypedefDecl 0x7f8884819ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8884819a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f88848198e0 'struct __va_list_tag'
+|     `-Record 0x7f8884819858 '__va_list_tag'
+|-TypedefDecl 0x7f8884819b38 <c_files/pr50838.c:3:1, col:16> col:16 referenced gcv_object_t 'void *'
+| `-PointerType 0x7f88848193a0 'void *'
+|   `-BuiltinType 0x7f8884818f20 'void'
+|-TypedefDecl 0x7f8884869e00 <line:4:1, col:22> col:22 referenced object 'gcv_object_t':'void *'
+| `-TypedefType 0x7f8884819b90 'gcv_object_t' sugar
+|   |-Typedef 0x7f8884819b38 'gcv_object_t'
+|   `-PointerType 0x7f88848193a0 'void *'
+|     `-BuiltinType 0x7f8884818f20 'void'
+|-TypedefDecl 0x7f8884869ea0 <line:5:1, col:22> col:22 referenced Pseudofun 'const void *'
+| `-PointerType 0x7f8884869e60 'const void *'
+|   `-QualType 0x7f8884818f21 'const void' const
+|     `-BuiltinType 0x7f8884818f20 'void'
+|-RecordDecl 0x7f8884869ef8 <line:6:8, line:11:1> line:6:15 struct pseudocode_tab_ definition
+| |-FieldDecl 0x7f8884869fd0 <line:7:5, col:15> col:15 pseudo_eql 'Pseudofun':'const void *'
+| |-FieldDecl 0x7f888486a028 <line:8:5, col:15> col:15 pseudo_iconv_wcslen 'Pseudofun':'const void *'
+| |-FieldDecl 0x7f888486a080 <line:9:5, col:15> col:15 pseudo_iconv_wcstombs 'Pseudofun':'const void *'
+| `-FieldDecl 0x7f888486a0d8 <line:10:5, col:15> col:15 pseudo_iconv_range 'Pseudofun':'const void *'
+|-VarDecl 0x7f888486a170 <line:6:1, line:12:1> col:1 used pseudocode_tab 'struct pseudocode_tab_':'struct pseudocode_tab_' extern
+|-RecordDecl 0x7f888486a228 <line:13:8, line:15:1> line:13:15 struct symbol_tab_ definition
+| `-FieldDecl 0x7f888486a3a8 <line:14:5, col:24> col:12 referenced pointer 'object [1024]'
+|-VarDecl 0x7f888486a440 <line:13:1, line:15:3> col:3 used pseudofun_tab 'struct symbol_tab_':'struct symbol_tab_' extern
+`-FunctionDecl 0x7f888486a588 <line:16:1, line:27:1> line:17:1 init_memory 'int (void)'
+  `-CompoundStmt 0x7f888486bee0 <line:18:1, line:27:1>
+    |-DeclStmt 0x7f888486a7c8 <line:19:3, col:43>
+    | `-VarDecl 0x7f888486a688 <col:3, col:42> col:11 used ptr2 'object *' cinit
+    |   `-UnaryOperator 0x7f888486a7a8 <col:18, col:42> 'object *' prefix '&'
+    |     `-ArraySubscriptExpr 0x7f888486a780 <col:19, col:42> 'object':'void *' lvalue
+    |       |-ImplicitCastExpr 0x7f888486a768 <col:19, col:33> 'object *' <ArrayToPointerDecay>
+    |       | `-MemberExpr 0x7f888486a710 <col:19, col:33> 'object [1024]' lvalue .pointer 0x7f888486a3a8
+    |       |   `-DeclRefExpr 0x7f888486a6e8 <col:19> 'struct symbol_tab_':'struct symbol_tab_' lvalue Var 0x7f888486a440 'pseudofun_tab' 'struct symbol_tab_':'struct symbol_tab_'
+    |       `-IntegerLiteral 0x7f888486a748 <col:41> 'int' 0
+    |-DeclStmt 0x7f888486a980 <line:20:3, col:60>
+    | `-VarDecl 0x7f888486a848 <col:3, col:46> col:20 used ptr1 'const Pseudofun *' cinit
+    |   `-CStyleCastExpr 0x7f888486a958 <col:27, col:46> 'const Pseudofun *' <BitCast>
+    |     `-UnaryOperator 0x7f888486a928 <col:45, col:46> 'struct pseudocode_tab_ *' prefix '&'
+    |       `-DeclRefExpr 0x7f888486a8a8 <col:46> 'struct pseudocode_tab_':'struct pseudocode_tab_' lvalue Var 0x7f888486a170 'pseudocode_tab' 'struct pseudocode_tab_':'struct pseudocode_tab_'
+    |-DeclStmt 0x7f888486ab68 <line:21:3, col:66>
+    | `-VarDecl 0x7f888486a9b0 <col:3, col:65> col:16 used count 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7f888486aaf0 <col:24, col:65> 'unsigned int' <IntegralCast>
+    |     `-ParenExpr 0x7f888486aad0 <col:24, col:65> 'unsigned long'
+    |       `-BinaryOperator 0x7f888486aaa8 <col:25, col:64> 'unsigned long' '/'
+    |         |-UnaryExprOrTypeTraitExpr 0x7f888486aa58 <col:25, col:46> 'unsigned long' sizeof
+    |         | `-ParenExpr 0x7f888486aa38 <col:31, col:46> 'struct pseudocode_tab_':'struct pseudocode_tab_' lvalue
+    |         |   `-DeclRefExpr 0x7f888486aa10 <col:32> 'struct pseudocode_tab_':'struct pseudocode_tab_' lvalue Var 0x7f888486a170 'pseudocode_tab' 'struct pseudocode_tab_':'struct pseudocode_tab_'
+    |         `-UnaryExprOrTypeTraitExpr 0x7f888486aa88 <col:48, col:64> 'unsigned long' sizeof 'Pseudofun':'const void *'
+    `-WhileStmt 0x7f888486bec0 <line:22:3, line:26:5>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7f888486aba8 <line:22:10, col:15> 'unsigned int' postfix '--'
+      | `-DeclRefExpr 0x7f888486ab80 <col:10> 'unsigned int' lvalue Var 0x7f888486a9b0 'count' 'unsigned int'
+      `-CompoundStmt 0x7f888486be98 <line:23:5, line:26:5>
+        |-BinaryOperator 0x7f888486be28 <line:24:7, col:60> 'object':'void *' '='
+        | |-UnaryOperator 0x7f888486ac10 <col:7, col:12> 'object':'void *' lvalue prefix '*'
+        | | `-UnaryOperator 0x7f888486abf0 <col:8, col:12> 'object *' postfix '++'
+        | |   `-DeclRefExpr 0x7f888486abc8 <col:8> 'object *' lvalue Var 0x7f888486a688 'ptr2' 'object *'
+        | `-CStyleCastExpr 0x7f888486be00 <col:17, col:60> 'gcv_object_t':'void *' <BitCast>
+        |   `-ParenExpr 0x7f888486ade0 <col:31, col:60> 'unsigned char *'
+        |     `-ParenExpr 0x7f888486ad80 <col:32, col:59> 'unsigned char *'
+        |       `-CStyleCastExpr 0x7f888486ad58 <col:33, col:58> 'unsigned char *' <BitCast>
+        |         `-ImplicitCastExpr 0x7f888486ad40 <col:50, col:58> 'Pseudofun':'const void *' <LValueToRValue>
+        |           `-ParenExpr 0x7f888486ad20 <col:50, col:58> 'const Pseudofun':'const void *const' lvalue
+        |             `-ParenExpr 0x7f888486ac90 <col:51, col:57> 'const Pseudofun':'const void *const' lvalue
+        |               `-UnaryOperator 0x7f888486ac70 <col:52, col:53> 'const Pseudofun':'const void *const' lvalue prefix '*'
+        |                 `-ImplicitCastExpr 0x7f888486ac58 <col:53> 'const Pseudofun *' <LValueToRValue>
+        |                   `-DeclRefExpr 0x7f888486ac30 <col:53> 'const Pseudofun *' lvalue Var 0x7f888486a848 'ptr1' 'const Pseudofun *'
+        `-UnaryOperator 0x7f888486be78 <line:25:7, col:11> 'const Pseudofun *' postfix '++'
+          `-DeclRefExpr 0x7f888486be50 <col:7> 'const Pseudofun *' lvalue Var 0x7f888486a848 'ptr1' 'const Pseudofun *'

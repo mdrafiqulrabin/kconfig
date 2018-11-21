@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fa3d10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa3d1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa3d1026740 '__int128'
+|-TypedefDecl 0x7fa3d1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa3d1026760 'unsigned __int128'
+|-TypedefDecl 0x7fa3d1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa3d1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa3d1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa3d1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa3d1026dc0 'char *'
+|   `-BuiltinType 0x7fa3d1026560 'char'
+|-TypedefDecl 0x7fa3d10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa3d1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa3d1026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa3d1026e58 '__va_list_tag'
+`-FunctionDecl 0x7fa3d1077430 <c_files/pr50099.c:4:1, line:10:1> line:4:11 foo 'long long (signed char *)'
+  |-ParmVarDecl 0x7fa3d1027160 <col:16, col:30> col:30 used arg 'signed char *'
+  `-CompoundStmt 0x7fa3d1077700 <line:5:1, line:10:1>
+    |-DeclStmt 0x7fa3d1077588 <line:6:3, col:19>
+    | `-VarDecl 0x7fa3d1077528 <col:3, col:13> col:13 used temp_1 'long long'
+    |-BinaryOperator 0x7fa3d1077680 <line:8:3, col:19> 'long long' '='
+    | |-DeclRefExpr 0x7fa3d10775a0 <col:3> 'long long' lvalue Var 0x7fa3d1077528 'temp_1' 'long long'
+    | `-ImplicitCastExpr 0x7fa3d1077668 <col:12, col:19> 'long long' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7fa3d1077650 <col:12, col:19> 'signed char' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7fa3d1077628 <col:12, col:19> 'signed char' lvalue
+    |       |-ImplicitCastExpr 0x7fa3d1077610 <col:12> 'signed char *' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7fa3d10775c8 <col:12> 'signed char *' lvalue ParmVar 0x7fa3d1027160 'arg' 'signed char *'
+    |       `-IntegerLiteral 0x7fa3d10775f0 <col:16> 'int' 256
+    `-ReturnStmt 0x7fa3d10776e8 <line:9:3, col:10>
+      `-ImplicitCastExpr 0x7fa3d10776d0 <col:10> 'long long' <LValueToRValue>
+        `-DeclRefExpr 0x7fa3d10776a8 <col:10> 'long long' lvalue Var 0x7fa3d1077528 'temp_1' 'long long'

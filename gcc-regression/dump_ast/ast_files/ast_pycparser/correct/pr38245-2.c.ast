@@ -1,0 +1,330 @@
+FileAST: 
+  Decl: link_error, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: link_error, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: f1, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: a
+          Constant: int, 28
+        Compound: 
+          If: 
+            BinaryOp: ==
+              BinaryOp: /
+                Constant: int, 4
+                ID: a
+              Constant: int, 5
+            FuncCall: 
+              ID: link_error
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: f2, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          BinaryOp: /
+            Constant: int, 4
+            ID: a
+          Constant: int, 5
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: f3, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          BinaryOp: /
+            Constant: int, 4
+            BinaryOp: &
+              ID: a
+              Constant: int, 0xff
+          Constant: int, 5
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: f4, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          BinaryOp: /
+            BinaryOp: &
+              ID: b
+              Constant: int, 3
+            BinaryOp: +
+              BinaryOp: &
+                ID: a
+                Constant: int, 0xff
+              Constant: int, 1
+          Constant: int, 5
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: f5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: f5, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: a
+          Constant: int, 28
+        Compound: 
+          If: 
+            BinaryOp: ==
+              BinaryOp: /
+                Constant: int, 4
+                ID: a
+              Constant: int, 5
+            FuncCall: 
+              ID: link_error
+  FuncDef: 
+    Decl: f6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: f6, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          BinaryOp: /
+            Constant: int, 4
+            ID: a
+          Constant: int, 5
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: f7, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: f7, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          BinaryOp: /
+            Constant: int, 4
+            BinaryOp: &
+              ID: a
+              Constant: int, 0xff
+          Constant: int, 5
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: f8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: f8, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          BinaryOp: /
+            BinaryOp: &
+              ID: b
+              Constant: int, 3
+            BinaryOp: +
+              BinaryOp: &
+                ID: a
+                Constant: int, 0xff
+              Constant: int, 1
+          Constant: int, 5
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: f9, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: f9, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: >=
+          ID: b
+          Constant: int, 4
+        If: 
+          BinaryOp: ==
+            BinaryOp: /
+              ID: a
+              ID: b
+            BinaryOp: /
+              ID: __INT_MAX__
+              Constant: int, 2
+          FuncCall: 
+            ID: link_error
+  FuncDef: 
+    Decl: f10, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: f10, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: >=
+          ID: b
+          Constant: int, 16
+        If: 
+          BinaryOp: ==
+            BinaryOp: /
+              ID: a
+              ID: b
+            BinaryOp: /
+              ID: __INT_MAX__
+              Constant: int, 4
+          FuncCall: 
+            ID: link_error
+  FuncDef: 
+    Decl: f11, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: f11, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: <=
+          ID: b
+          UnaryOp: -
+            Constant: int, 32
+        If: 
+          BinaryOp: ==
+            BinaryOp: /
+              ID: a
+              ID: b
+            BinaryOp: /
+              UnaryOp: -
+                ID: __INT_MAX__
+              Constant: int, 16
+          FuncCall: 
+            ID: link_error
+  FuncDef: 
+    Decl: f12, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: f12, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: >=
+            ID: a
+            UnaryOp: -
+              Constant: int, 6
+          BinaryOp: <=
+            ID: a
+            Constant: int, 4
+        If: 
+          BinaryOp: ||
+            BinaryOp: ==
+              BinaryOp: /
+                ID: a
+                ID: b
+              UnaryOp: -
+                Constant: int, 7
+            BinaryOp: ==
+              BinaryOp: /
+                ID: a
+                ID: b
+              Constant: int, 7
+          FuncCall: 
+            ID: link_error
+  FuncDef: 
+    Decl: f13, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: f13, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: <=
+          ID: a
+          Constant: int, 4
+        If: 
+          BinaryOp: ==
+            BinaryOp: /
+              ID: a
+              ID: b
+            Constant: int, 5
+          FuncCall: 
+            ID: link_error

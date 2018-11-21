@@ -1,0 +1,158 @@
+c_files/pr41750.c:50:31: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+int * __attribute__((noinline,noclone))
+                              ^
+1 warning generated.
+TranslationUnitDecl 0x7fa2270264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa227026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa227026740 '__int128'
+|-TypedefDecl 0x7fa227026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa227026760 'unsigned __int128'
+|-TypedefDecl 0x7fa227026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa227026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa227026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa227026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa227026dc0 'char *'
+|   `-BuiltinType 0x7fa227026560 'char'
+|-TypedefDecl 0x7fa2270270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa227027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa227026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa227026e58 '__va_list_tag'
+|-RecordDecl 0x7fa227027120 <c_files/pr41750.c:4:1, line:7:1> line:4:8 struct bfd_link_hash_table definition
+| `-FieldDecl 0x7fa227825a00 <line:6:3, col:7> col:7 hash 'int'
+|-RecordDecl 0x7fa227825a48 <line:9:1, line:14:1> line:9:8 struct foo_link_hash_table definition
+| |-FieldDecl 0x7fa227825b40 <line:11:3, col:30> col:30 root 'struct bfd_link_hash_table':'struct bfd_link_hash_table'
+| |-FieldDecl 0x7fa227825bd0 <line:12:3, col:8> col:8 referenced dynobj 'int *'
+| `-FieldDecl 0x7fa227825c30 <line:13:3, col:8> col:8 referenced sgot 'int *'
+|-RecordDecl 0x7fa227825cc0 <line:16:1, line:19:1> line:16:8 struct foo_link_info definition
+| `-FieldDecl 0x7fa227825e20 <line:18:3, col:31> col:31 referenced hash 'struct foo_link_hash_table *'
+|-FunctionDecl 0x7fa227825f60 <line:21:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fa227825ff8 prev 0x7fa227825f60 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fa2278262d8 <line:23:1, line:28:1> line:24:1 used foo_create_got_section 'int (int *, struct foo_link_info *)'
+| |-ParmVarDecl 0x7fa2278260a8 <col:25, col:30> col:30 used abfd 'int *'
+| |-ParmVarDecl 0x7fa2278261c0 <col:36, col:58> col:58 used info 'struct foo_link_info *'
+| |-CompoundStmt 0x7fa227826570 <line:25:1, line:28:1>
+| | |-BinaryOperator 0x7fa227826510 <line:26:3, col:22> 'int *' '='
+| | | |-MemberExpr 0x7fa227826498 <col:3, col:15> 'int *' lvalue ->sgot 0x7fa227825c30
+| | | | `-ImplicitCastExpr 0x7fa227826480 <col:3, col:9> 'struct foo_link_hash_table *' <LValueToRValue>
+| | | |   `-MemberExpr 0x7fa227826448 <col:3, col:9> 'struct foo_link_hash_table *' lvalue ->hash 0x7fa227825e20
+| | | |     `-ImplicitCastExpr 0x7fa227826430 <col:3> 'struct foo_link_info *' <LValueToRValue>
+| | | |       `-DeclRefExpr 0x7fa227826408 <col:3> 'struct foo_link_info *' lvalue ParmVar 0x7fa2278261c0 'info' 'struct foo_link_info *'
+| | | `-ImplicitCastExpr 0x7fa2278264f8 <col:22> 'int *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa2278264d0 <col:22> 'int *' lvalue ParmVar 0x7fa2278260a8 'abfd' 'int *'
+| | `-ReturnStmt 0x7fa227826558 <line:27:3, col:10>
+| |   `-IntegerLiteral 0x7fa227826538 <col:10> 'int' 1
+| `-NoInlineAttr 0x7fa227826380 <line:23:20>
+|-FunctionDecl 0x7fa2278267f8 <line:30:1, line:48:1> line:31:1 used get_got 'int *(int *, struct foo_link_info *, struct foo_link_hash_table *)' static
+| |-ParmVarDecl 0x7fa2278265b0 <col:10, col:15> col:15 used abfd 'int *'
+| |-ParmVarDecl 0x7fa227826638 <col:21, col:43> col:43 used info 'struct foo_link_info *'
+| |-ParmVarDecl 0x7fa2278266c0 <line:32:3, col:31> col:31 used hash 'struct foo_link_hash_table *'
+| `-CompoundStmt 0x7fa227828168 <line:33:1, line:48:1>
+|   |-DeclStmt 0x7fa227826920 <line:34:3, col:11>
+|   | `-VarDecl 0x7fa2278268c0 <col:3, col:8> col:8 used got 'int *'
+|   |-DeclStmt 0x7fa2278269b0 <line:35:3, col:14>
+|   | `-VarDecl 0x7fa227826950 <col:3, col:8> col:8 used dynobj 'int *'
+|   |-BinaryOperator 0x7fa227827a90 <line:37:3, col:15> 'int *' '='
+|   | |-DeclRefExpr 0x7fa2278269c8 <col:3> 'int *' lvalue Var 0x7fa2278268c0 'got' 'int *'
+|   | `-ImplicitCastExpr 0x7fa227827a78 <col:9, col:15> 'int *' <LValueToRValue>
+|   |   `-MemberExpr 0x7fa227827a40 <col:9, col:15> 'int *' lvalue ->sgot 0x7fa227825c30
+|   |     `-ImplicitCastExpr 0x7fa227827a28 <col:9> 'struct foo_link_hash_table *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fa227827a00 <col:9> 'struct foo_link_hash_table *' lvalue ParmVar 0x7fa2278266c0 'hash' 'struct foo_link_hash_table *'
+|   |-IfStmt 0x7fa2278280d8 <line:38:3, line:46:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fa227827af8 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7fa227827ae0 <col:8> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fa227827ab8 <col:8> 'int *' lvalue Var 0x7fa2278268c0 'got' 'int *'
+|   | |-CompoundStmt 0x7fa2278280a0 <line:39:5, line:46:5>
+|   | | |-BinaryOperator 0x7fa227827bd0 <line:40:7, col:22> 'int *' '='
+|   | | | |-DeclRefExpr 0x7fa227827b18 <col:7> 'int *' lvalue Var 0x7fa227826950 'dynobj' 'int *'
+|   | | | `-ImplicitCastExpr 0x7fa227827bb8 <col:16, col:22> 'int *' <LValueToRValue>
+|   | | |   `-MemberExpr 0x7fa227827b80 <col:16, col:22> 'int *' lvalue ->dynobj 0x7fa227825bd0
+|   | | |     `-ImplicitCastExpr 0x7fa227827b68 <col:16> 'struct foo_link_hash_table *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7fa227827b40 <col:16> 'struct foo_link_hash_table *' lvalue ParmVar 0x7fa2278266c0 'hash' 'struct foo_link_hash_table *'
+|   | | |-IfStmt 0x7fa227827d88 <line:41:7, line:42:26>
+|   | | | |-<<<NULL>>>
+|   | | | |-<<<NULL>>>
+|   | | | |-UnaryOperator 0x7fa227827c38 <line:41:11, col:12> 'int' prefix '!'
+|   | | | | `-ImplicitCastExpr 0x7fa227827c20 <col:12> 'int *' <LValueToRValue>
+|   | | | |   `-DeclRefExpr 0x7fa227827bf8 <col:12> 'int *' lvalue Var 0x7fa227826950 'dynobj' 'int *'
+|   | | | |-BinaryOperator 0x7fa227827d60 <line:42:2, col:26> 'int *' '='
+|   | | | | |-MemberExpr 0x7fa227827c98 <col:2, col:8> 'int *' lvalue ->dynobj 0x7fa227825bd0
+|   | | | | | `-ImplicitCastExpr 0x7fa227827c80 <col:2> 'struct foo_link_hash_table *' <LValueToRValue>
+|   | | | | |   `-DeclRefExpr 0x7fa227827c58 <col:2> 'struct foo_link_hash_table *' lvalue ParmVar 0x7fa2278266c0 'hash' 'struct foo_link_hash_table *'
+|   | | | | `-BinaryOperator 0x7fa227827d38 <col:17, col:26> 'int *' '='
+|   | | | |   |-DeclRefExpr 0x7fa227827cd0 <col:17> 'int *' lvalue Var 0x7fa227826950 'dynobj' 'int *'
+|   | | | |   `-ImplicitCastExpr 0x7fa227827d20 <col:26> 'int *' <LValueToRValue>
+|   | | | |     `-DeclRefExpr 0x7fa227827cf8 <col:26> 'int *' lvalue ParmVar 0x7fa2278265b0 'abfd' 'int *'
+|   | | | `-<<<NULL>>>
+|   | | |-IfStmt 0x7fa227827f88 <line:43:7, line:44:9>
+|   | | | |-<<<NULL>>>
+|   | | | |-<<<NULL>>>
+|   | | | |-UnaryOperator 0x7fa227827f18 <line:43:11, col:48> 'int' prefix '!'
+|   | | | | `-CallExpr 0x7fa227827eb0 <col:12, col:48> 'int'
+|   | | | |   |-ImplicitCastExpr 0x7fa227827e98 <col:12> 'int (*)(int *, struct foo_link_info *)' <FunctionToPointerDecay>
+|   | | | |   | `-DeclRefExpr 0x7fa227827dc0 <col:12> 'int (int *, struct foo_link_info *)' Function 0x7fa2278262d8 'foo_create_got_section' 'int (int *, struct foo_link_info *)'
+|   | | | |   |-ImplicitCastExpr 0x7fa227827ee8 <col:36> 'int *' <LValueToRValue>
+|   | | | |   | `-DeclRefExpr 0x7fa227827de8 <col:36> 'int *' lvalue Var 0x7fa227826950 'dynobj' 'int *'
+|   | | | |   `-ImplicitCastExpr 0x7fa227827f00 <col:44> 'struct foo_link_info *' <LValueToRValue>
+|   | | | |     `-DeclRefExpr 0x7fa227827e10 <col:44> 'struct foo_link_info *' lvalue ParmVar 0x7fa227826638 'info' 'struct foo_link_info *'
+|   | | | |-ReturnStmt 0x7fa227827f70 <line:44:2, col:9>
+|   | | | | `-ImplicitCastExpr 0x7fa227827f58 <col:9> 'int *' <NullToPointer>
+|   | | | |   `-IntegerLiteral 0x7fa227827f38 <col:9> 'int' 0
+|   | | | `-<<<NULL>>>
+|   | | `-BinaryOperator 0x7fa227828078 <line:45:7, col:19> 'int *' '='
+|   | |   |-DeclRefExpr 0x7fa227827fc0 <col:7> 'int *' lvalue Var 0x7fa2278268c0 'got' 'int *'
+|   | |   `-ImplicitCastExpr 0x7fa227828060 <col:13, col:19> 'int *' <LValueToRValue>
+|   | |     `-MemberExpr 0x7fa227828028 <col:13, col:19> 'int *' lvalue ->sgot 0x7fa227825c30
+|   | |       `-ImplicitCastExpr 0x7fa227828010 <col:13> 'struct foo_link_hash_table *' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x7fa227827fe8 <col:13> 'struct foo_link_hash_table *' lvalue ParmVar 0x7fa2278266c0 'hash' 'struct foo_link_hash_table *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fa227828150 <line:47:3, col:10>
+|     `-ImplicitCastExpr 0x7fa227828138 <col:10> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa227828110 <col:10> 'int *' lvalue Var 0x7fa2278268c0 'got' 'int *'
+|-FunctionDecl 0x7fa227828368 <line:50:1, line:54:1> line:51:1 used elf64_ia64_check_relocs 'int *(int *, struct foo_link_info *)'
+| |-ParmVarDecl 0x7fa2278281c0 <col:26, col:31> col:31 used abfd 'int *'
+| |-ParmVarDecl 0x7fa227828248 <col:37, col:59> col:59 used info 'struct foo_link_info *'
+| |-CompoundStmt 0x7fa227828660 <line:52:1, line:54:1>
+| | `-ReturnStmt 0x7fa227828648 <line:53:3, col:41>
+| |   `-CallExpr 0x7fa2278285c0 <col:10, col:41> 'int *'
+| |     |-ImplicitCastExpr 0x7fa2278285a8 <col:10> 'int *(*)(int *, struct foo_link_info *, struct foo_link_hash_table *)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fa227828458 <col:10> 'int *(int *, struct foo_link_info *, struct foo_link_hash_table *)' Function 0x7fa2278267f8 'get_got' 'int *(int *, struct foo_link_info *, struct foo_link_hash_table *)'
+| |     |-ImplicitCastExpr 0x7fa227828600 <col:19> 'int *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fa227828480 <col:19> 'int *' lvalue ParmVar 0x7fa2278281c0 'abfd' 'int *'
+| |     |-ImplicitCastExpr 0x7fa227828618 <col:25> 'struct foo_link_info *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fa2278284a8 <col:25> 'struct foo_link_info *' lvalue ParmVar 0x7fa227828248 'info' 'struct foo_link_info *'
+| |     `-ImplicitCastExpr 0x7fa227828630 <col:31, col:37> 'struct foo_link_hash_table *' <LValueToRValue>
+| |       `-MemberExpr 0x7fa227828510 <col:31, col:37> 'struct foo_link_hash_table *' lvalue ->hash 0x7fa227825e20
+| |         `-ImplicitCastExpr 0x7fa2278284f8 <col:31> 'struct foo_link_info *' <LValueToRValue>
+| |           `-DeclRefExpr 0x7fa2278284d0 <col:31> 'struct foo_link_info *' lvalue ParmVar 0x7fa227828248 'info' 'struct foo_link_info *'
+| `-NoInlineAttr 0x7fa227828410 <line:50:22>
+|-VarDecl 0x7fa2278286a0 <line:56:1, col:22> col:22 used link_info 'struct foo_link_info':'struct foo_link_info'
+|-VarDecl 0x7fa227828720 <line:57:1, col:28> col:28 used hash 'struct foo_link_hash_table':'struct foo_link_hash_table'
+|-VarDecl 0x7fa227828798 <line:58:1, col:5> col:5 used abfd 'int'
+`-FunctionDecl 0x7fa227828850 <line:60:1, line:67:1> line:61:1 main 'int ()'
+  `-CompoundStmt 0x7fa227828ca8 <line:62:1, line:67:1>
+    |-BinaryOperator 0x7fa227828990 <line:63:3, col:21> 'struct foo_link_hash_table *' '='
+    | |-MemberExpr 0x7fa227828910 <col:3, col:13> 'struct foo_link_hash_table *' lvalue .hash 0x7fa227825e20
+    | | `-DeclRefExpr 0x7fa2278288e8 <col:3> 'struct foo_link_info':'struct foo_link_info' lvalue Var 0x7fa2278286a0 'link_info' 'struct foo_link_info':'struct foo_link_info'
+    | `-UnaryOperator 0x7fa227828970 <col:20, col:21> 'struct foo_link_hash_table *' prefix '&'
+    |   `-DeclRefExpr 0x7fa227828948 <col:21> 'struct foo_link_hash_table':'struct foo_link_hash_table' lvalue Var 0x7fa227828720 'hash' 'struct foo_link_hash_table':'struct foo_link_hash_table'
+    |-IfStmt 0x7fa227828c38 <line:64:3, line:65:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa227828b80 <line:64:7, col:55> 'int' '!='
+    | | |-CallExpr 0x7fa227828b00 <col:7, col:49> 'int *'
+    | | | |-ImplicitCastExpr 0x7fa227828ae8 <col:7> 'int *(*)(int *, struct foo_link_info *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fa2278289b8 <col:7> 'int *(int *, struct foo_link_info *)' Function 0x7fa227828368 'elf64_ia64_check_relocs' 'int *(int *, struct foo_link_info *)'
+    | | | |-UnaryOperator 0x7fa227828a28 <col:32, col:33> 'int *' prefix '&'
+    | | | | `-DeclRefExpr 0x7fa227828a00 <col:33> 'int' lvalue Var 0x7fa227828798 'abfd' 'int'
+    | | | `-UnaryOperator 0x7fa227828a70 <col:39, col:40> 'struct foo_link_info *' prefix '&'
+    | | |   `-DeclRefExpr 0x7fa227828a48 <col:40> 'struct foo_link_info':'struct foo_link_info' lvalue Var 0x7fa2278286a0 'link_info' 'struct foo_link_info':'struct foo_link_info'
+    | | `-UnaryOperator 0x7fa227828b60 <col:54, col:55> 'int *' prefix '&'
+    | |   `-DeclRefExpr 0x7fa227828b38 <col:55> 'int' lvalue Var 0x7fa227828798 'abfd' 'int'
+    | |-CallExpr 0x7fa227828c10 <line:65:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fa227828bf8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fa227828ba8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fa227825ff8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fa227828c90 <line:66:3, col:10>
+      `-IntegerLiteral 0x7fa227828c70 <col:10> 'int' 0

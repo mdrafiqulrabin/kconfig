@@ -1,0 +1,54 @@
+c_files/pr81959.c:13:26: error: __float128 is not supported on this target
+convert_int_to_float128 (__float128 * __restrict__ p,
+                         ^
+c_files/pr81959.c:19:13: error: __float128 is not supported on this target
+    p[i] = (__float128)q[i];
+            ^
+2 errors generated.
+TranslationUnitDecl 0x7fa1460264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa146026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa146026740 '__int128'
+|-TypedefDecl 0x7fa146026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa146026760 'unsigned __int128'
+|-TypedefDecl 0x7fa146026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa146026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa146026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa146026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa146026dc0 'char *'
+|   `-BuiltinType 0x7fa146026560 'char'
+|-TypedefDecl 0x7fa1460270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa146027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa146026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa146026e58 '__va_list_tag'
+`-FunctionDecl 0x7fa146825b10 <c_files/pr81959.c:12:1, line:20:1> line:13:1 convert_int_to_float128 'void (__float128 *__restrict, int *__restrict)'
+  |-ParmVarDecl 0x7fa146027160 <col:26, col:52> col:52 used p '__float128 *__restrict'
+  |-ParmVarDecl 0x7fa146825a00 <line:14:5, col:24> col:24 used q 'int *__restrict'
+  `-CompoundStmt 0x7fa146826000 <line:15:1, line:20:1>
+    |-DeclStmt 0x7fa146825c70 <line:16:3, col:18>
+    | `-VarDecl 0x7fa146825c10 <col:3, col:17> col:17 used i 'unsigned long'
+    `-ForStmt 0x7fa146825fc8 <line:18:3, line:19:27>
+      |-BinaryOperator 0x7fa146825ce8 <line:18:8, col:12> 'unsigned long' '='
+      | |-DeclRefExpr 0x7fa146825c88 <col:8> 'unsigned long' lvalue Var 0x7fa146825c10 'i' 'unsigned long'
+      | `-ImplicitCastExpr 0x7fa146825cd0 <col:12> 'unsigned long' <IntegralCast>
+      |   `-IntegerLiteral 0x7fa146825cb0 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa146825d88 <col:15, line:9:20> 'int' '<'
+      | |-ImplicitCastExpr 0x7fa146825d58 <line:18:15> 'unsigned long' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fa146825d10 <col:15> 'unsigned long' lvalue Var 0x7fa146825c10 'i' 'unsigned long'
+      | `-ImplicitCastExpr 0x7fa146825d70 <line:9:20> 'unsigned long' <IntegralCast>
+      |   `-IntegerLiteral 0x7fa146825d38 <col:20> 'int' 1024
+      |-UnaryOperator 0x7fa146825dd8 <line:18:31, col:32> 'unsigned long' postfix '++'
+      | `-DeclRefExpr 0x7fa146825db0 <col:31> 'unsigned long' lvalue Var 0x7fa146825c10 'i' 'unsigned long'
+      `-BinaryOperator 0x7fa146825fa0 <line:19:5, col:27> '__float128' '='
+        |-ArraySubscriptExpr 0x7fa146825e78 <col:5, col:8> '__float128' lvalue
+        | |-ImplicitCastExpr 0x7fa146825e48 <col:5> '__float128 *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fa146825df8 <col:5> '__float128 *__restrict' lvalue ParmVar 0x7fa146027160 'p' '__float128 *__restrict'
+        | `-ImplicitCastExpr 0x7fa146825e60 <col:7> 'unsigned long' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fa146825e20 <col:7> 'unsigned long' lvalue Var 0x7fa146825c10 'i' 'unsigned long'
+        `-CStyleCastExpr 0x7fa146825f78 <col:12, col:27> '__float128' <IntegralToFloating>
+          `-ImplicitCastExpr 0x7fa146825f60 <col:24, col:27> 'int' <LValueToRValue>
+            `-ArraySubscriptExpr 0x7fa146825f20 <col:24, col:27> 'int' lvalue
+              |-ImplicitCastExpr 0x7fa146825ef0 <col:24> 'int *' <LValueToRValue>
+              | `-DeclRefExpr 0x7fa146825ea0 <col:24> 'int *__restrict' lvalue ParmVar 0x7fa146825a00 'q' 'int *__restrict'
+              `-ImplicitCastExpr 0x7fa146825f08 <col:26> 'unsigned long' <LValueToRValue>
+                `-DeclRefExpr 0x7fa146825ec8 <col:26> 'unsigned long' lvalue Var 0x7fa146825c10 'i' 'unsigned long'

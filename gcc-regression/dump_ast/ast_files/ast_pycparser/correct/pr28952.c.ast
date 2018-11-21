@@ -1,0 +1,88 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: player_spaceship
+      Decl: structure, [], [], []
+        ArrayDecl: []
+          TypeDecl: structure, []
+            IdentifierType: ['_Bool']
+          Constant: int, 32
+  Decl: None, [], [], []
+    Struct: player
+      Decl: spaceship, [], [], []
+        TypeDecl: spaceship, []
+          Struct: player_spaceship
+  Decl: None, [], [], []
+    Struct: packet_spaceship_info
+      Decl: structure, [], [], []
+        ArrayDecl: []
+          TypeDecl: structure, []
+            IdentifierType: ['char']
+          BinaryOp: +
+            Constant: int, 32
+            Constant: int, 1
+  Decl: lsend_packet_spaceship_info, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: packet_spaceship_info
+      TypeDecl: lsend_packet_spaceship_info, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: send_spaceship_info, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: send_spaceship_info, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: pplayer, [], [], []
+        PtrDecl: []
+          TypeDecl: pplayer, []
+            Struct: player
+      Decl: info, [], [], []
+        TypeDecl: info, []
+          Struct: packet_spaceship_info
+      Decl: ship, [], [], []
+        PtrDecl: []
+          TypeDecl: ship, []
+            Struct: player_spaceship
+        UnaryOp: &
+          StructRef: ->
+            ID: pplayer
+            ID: spaceship
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: <
+          ID: j
+          Constant: int, 32
+        UnaryOp: p++
+          ID: j
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              StructRef: .
+                ID: info
+                ID: structure
+              ID: j
+            TernaryOp: 
+              ArrayRef: 
+                StructRef: ->
+                  ID: ship
+                  ID: structure
+                ID: j
+              Constant: char, '1'
+              Constant: char, '0'
+      FuncCall: 
+        ID: lsend_packet_spaceship_info
+        ExprList: 
+          UnaryOp: &
+            ID: info

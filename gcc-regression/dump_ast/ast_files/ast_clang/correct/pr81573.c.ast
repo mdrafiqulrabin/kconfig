@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fefae0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fefae026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fefae026740 '__int128'
+|-TypedefDecl 0x7fefae026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fefae026760 'unsigned __int128'
+|-TypedefDecl 0x7fefae026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fefae026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fefae026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fefae026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fefae026dc0 'char *'
+|   `-BuiltinType 0x7fefae026560 'char'
+|-TypedefDecl 0x7fefae0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fefae027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fefae026ee0 'struct __va_list_tag'
+|     `-Record 0x7fefae026e58 '__va_list_tag'
+|-VarDecl 0x7fefae027138 <c_files/pr81573.c:3:1, col:9> col:5 used a 'int' cinit
+| `-IntegerLiteral 0x7fefae0271d8 <col:9> 'int' 1
+|-VarDecl 0x7fefae077440 <col:1, col:18> col:13 used c 'int *' cinit
+| `-UnaryOperator 0x7fefae0774c8 <col:17, col:18> 'int *' prefix '&'
+|   `-DeclRefExpr 0x7fefae0774a0 <col:18> 'int' lvalue Var 0x7fefae027138 'a' 'int'
+|-VarDecl 0x7fefae077500 <col:1, col:21> col:21 d 'int'
+|-VarDecl 0x7fefae077598 <line:4:1, col:13> col:13 used b 'signed char'
+`-FunctionDecl 0x7fefae077650 <line:6:1, line:16:1> line:6:5 main 'int ()'
+  `-CompoundStmt 0x7fefae077ae8 <line:7:1, line:16:1>
+    |-ForStmt 0x7fefae0779c0 <line:8:3, line:12:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fefae077780 <line:8:10, col:15> 'int' '>'
+    | | |-ImplicitCastExpr 0x7fefae077768 <col:10> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fefae077750 <col:10> 'signed char' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fefae0776e8 <col:10> 'signed char' lvalue Var 0x7fefae077598 'b' 'signed char'
+    | | `-UnaryOperator 0x7fefae077730 <col:14, col:15> 'int' prefix '-'
+    | |   `-IntegerLiteral 0x7fefae077710 <col:15> 'int' 27
+    | |-UnaryOperator 0x7fefae0777d0 <col:19, col:20> 'signed char' postfix '--'
+    | | `-DeclRefExpr 0x7fefae0777a8 <col:19> 'signed char' lvalue Var 0x7fefae077598 'b' 'signed char'
+    | `-CompoundStmt 0x7fefae077998 <line:9:5, line:12:5>
+    |   |-CompoundAssignOperator 0x7fefae0778a8 <line:10:7, col:13> 'int' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   | |-UnaryOperator 0x7fefae077830 <col:7, col:8> 'int' lvalue prefix '*'
+    |   | | `-ImplicitCastExpr 0x7fefae077818 <col:8> 'int *' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fefae0777f0 <col:8> 'int *' lvalue Var 0x7fefae077440 'c' 'int *'
+    |   | `-ImplicitCastExpr 0x7fefae077890 <col:13> 'int' <IntegralCast>
+    |   |   `-ImplicitCastExpr 0x7fefae077878 <col:13> 'signed char' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7fefae077850 <col:13> 'signed char' lvalue Var 0x7fefae077598 'b' 'signed char'
+    |   `-CompoundAssignOperator 0x7fefae077960 <line:11:7, col:13> 'int' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+    |     |-UnaryOperator 0x7fefae077920 <col:7, col:8> 'int' lvalue prefix '*'
+    |     | `-ImplicitCastExpr 0x7fefae077908 <col:8> 'int *' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fefae0778e0 <col:8> 'int *' lvalue Var 0x7fefae077440 'c' 'int *'
+    |     `-IntegerLiteral 0x7fefae077940 <col:13> 'int' 1
+    |-WhileStmt 0x7fefae077a90 <line:13:3, line:14:5>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fefae077a58 <line:13:10, col:14> 'int' '>'
+    | | |-ImplicitCastExpr 0x7fefae077a40 <col:10> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fefae0779f8 <col:10> 'int' lvalue Var 0x7fefae027138 'a' 'int'
+    | | `-IntegerLiteral 0x7fefae077a20 <col:14> 'int' 1
+    | `-NullStmt 0x7fefae077a80 <line:14:5>
+    `-ReturnStmt 0x7fefae077ad0 <line:15:3, col:10>
+      `-IntegerLiteral 0x7fefae077ab0 <col:10> 'int' 0

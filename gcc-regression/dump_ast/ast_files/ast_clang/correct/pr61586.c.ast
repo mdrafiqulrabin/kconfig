@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7fa41d80e4d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa41d80ea20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa41d80e740 '__int128'
+|-TypedefDecl 0x7fa41d80ea90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa41d80e760 'unsigned __int128'
+|-TypedefDecl 0x7fa41d80ed68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa41d80eb70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa41d80eae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa41d80ee00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa41d80edc0 'char *'
+|   `-BuiltinType 0x7fa41d80e560 'char'
+|-TypedefDecl 0x7fa41d80f0c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa41d80f070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa41d80eee0 'struct __va_list_tag'
+|     `-Record 0x7fa41d80ee58 '__va_list_tag'
+`-FunctionDecl 0x7fa41e0549a0 <c_files/pr61586.c:4:1, line:10:1> line:4:6 foo 'void (int *, double **, int)'
+  |-ParmVarDecl 0x7fa41d80f160 <col:11, col:16> col:16 used dimensions 'int *'
+  |-ParmVarDecl 0x7fa41e054848 <col:28, col:37> col:37 used params 'double **'
+  |-ParmVarDecl 0x7fa41e0548c0 <col:45, col:49> col:49 used hh 'int'
+  `-CompoundStmt 0x7fa41e054e40 <line:5:1, line:10:1>
+    `-IfStmt 0x7fa41e054e08 <line:6:3, line:9:21>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fa41e054b38 <line:6:7, col:16> 'double *' <LValueToRValue>
+      | `-ArraySubscriptExpr 0x7fa41e054b10 <col:7, col:16> 'double *' lvalue
+      |   |-ImplicitCastExpr 0x7fa41e054ae0 <col:7> 'double **' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fa41e054a90 <col:7> 'double **' lvalue ParmVar 0x7fa41e054848 'params' 'double **'
+      |   `-ImplicitCastExpr 0x7fa41e054af8 <col:14> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fa41e054ab8 <col:14> 'int' lvalue ParmVar 0x7fa41e0548c0 'hh' 'int'
+      |-NullStmt 0x7fa41e054b50 <line:7:5>
+      `-IfStmt 0x7fa41e054dd0 <line:8:8, line:9:21>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-BinaryOperator 0x7fa41e054c40 <line:8:12, col:29> 'int' '>'
+        | |-ImplicitCastExpr 0x7fa41e054c28 <col:12, col:25> 'int' <LValueToRValue>
+        | | `-ArraySubscriptExpr 0x7fa41e054be0 <col:12, col:25> 'int' lvalue
+        | |   |-ImplicitCastExpr 0x7fa41e054bb0 <col:12> 'int *' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7fa41e054b60 <col:12> 'int *' lvalue ParmVar 0x7fa41d80f160 'dimensions' 'int *'
+        | |   `-ImplicitCastExpr 0x7fa41e054bc8 <col:23> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fa41e054b88 <col:23> 'int' lvalue ParmVar 0x7fa41e0548c0 'hh' 'int'
+        | `-IntegerLiteral 0x7fa41e054c08 <col:29> 'int' 0
+        |-BinaryOperator 0x7fa41e054da8 <line:9:5, col:21> 'double' '='
+        | |-ArraySubscriptExpr 0x7fa41e054d48 <col:5, col:17> 'double' lvalue
+        | | |-ImplicitCastExpr 0x7fa41e054d30 <col:5, col:14> 'double *' <LValueToRValue>
+        | | | `-ArraySubscriptExpr 0x7fa41e054ce8 <col:5, col:14> 'double *' lvalue
+        | | |   |-ImplicitCastExpr 0x7fa41e054cb8 <col:5> 'double **' <LValueToRValue>
+        | | |   | `-DeclRefExpr 0x7fa41e054c68 <col:5> 'double **' lvalue ParmVar 0x7fa41e054848 'params' 'double **'
+        | | |   `-ImplicitCastExpr 0x7fa41e054cd0 <col:12> 'int' <LValueToRValue>
+        | | |     `-DeclRefExpr 0x7fa41e054c90 <col:12> 'int' lvalue ParmVar 0x7fa41e0548c0 'hh' 'int'
+        | | `-IntegerLiteral 0x7fa41e054d10 <col:16> 'int' 0
+        | `-ImplicitCastExpr 0x7fa41e054d90 <col:21> 'double' <FloatingCast>
+        |   `-FloatingLiteral 0x7fa41e054d70 <col:21> 'float' 1.000000e+00
+        `-<<<NULL>>>

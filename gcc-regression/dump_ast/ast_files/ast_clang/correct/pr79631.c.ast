@@ -1,0 +1,96 @@
+TranslationUnitDecl 0x7f9f0581d8d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9f0581de20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9f0581db40 '__int128'
+|-TypedefDecl 0x7f9f0581de90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9f0581db60 'unsigned __int128'
+|-TypedefDecl 0x7f9f0581e168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9f0581df70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9f0581dee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9f0581e200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9f0581e1c0 'char *'
+|   `-BuiltinType 0x7f9f0581d960 'char'
+|-TypedefDecl 0x7f9f0581e4c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9f0581e470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9f0581e2e0 'struct __va_list_tag'
+|     `-Record 0x7f9f0581e258 '__va_list_tag'
+|-RecordDecl 0x7f9f0581e520 <c_files/pr79631.c:4:9, col:32> col:9 struct definition
+| `-FieldDecl 0x7f9f0586e800 <col:18, col:22> col:22 referenced _mp_size 'int'
+|-TypedefDecl 0x7f9f0586e998 <col:1, col:41> col:34 referenced mpz_t 'struct (anonymous struct at c_files/pr79631.c:4:9) [1]'
+| `-ConstantArrayType 0x7f9f0586e930 'struct (anonymous struct at c_files/pr79631.c:4:9) [1]' 1 
+|   `-ElaboratedType 0x7f9f0586e870 'struct (anonymous struct at c_files/pr79631.c:4:9)' sugar
+|     `-RecordType 0x7f9f0581e5b0 'struct (anonymous at c_files/pr79631.c:4:9)'
+|       `-Record 0x7f9f0581e520 ''
+|-VarDecl 0x7f9f0586ea20 <line:5:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7f9f0586ead8 <col:1, col:8> col:8 used b 'int'
+`-FunctionDecl 0x7f9f0586eb98 <line:6:1, line:15:1> line:6:6 fn1 'void ()'
+  `-CompoundStmt 0x7f9f0586f8b8 <line:7:1, line:15:1>
+    |-DeclStmt 0x7f9f0586ee38 <line:8:3, col:16>
+    | `-VarDecl 0x7f9f0586edd8 <col:3, col:15> col:9 used c 'mpz_t [1][b]'
+    `-ForStmt 0x7f9f0586f880 <line:9:3, line:14:3>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7f9f0586f858 <line:9:12, line:14:3>
+        |-DeclStmt 0x7f9f0586f710 <line:10:7, line:11:60>
+        | |-VarDecl 0x7f9f0586ee68 <line:10:7, col:66> col:11 used d 'int' cinit
+        | | `-ConditionalOperator 0x7f9f0586f300 <col:15, col:66> 'int'
+        | |   |-BinaryOperator 0x7f9f0586ef08 <col:15, col:20> 'int' '>='
+        | |   | |-IntegerLiteral 0x7f9f0586eec8 <col:15> 'int' 0
+        | |   | `-IntegerLiteral 0x7f9f0586eee8 <col:20> 'int' 0
+        | |   |-ConditionalOperator 0x7f9f0586f2b0 <col:24, col:62> 'int'
+        | |   | |-BinaryOperator 0x7f9f0586ef70 <col:24, col:29> 'int' '=='
+        | |   | | |-IntegerLiteral 0x7f9f0586ef30 <col:24> 'int' 0
+        | |   | | `-IntegerLiteral 0x7f9f0586ef50 <col:29> 'int' 0
+        | |   | |-ConditionalOperator 0x7f9f0586f260 <col:33, col:58> 'int'
+        | |   | | |-ImplicitCastExpr 0x7f9f0586f248 <col:33, col:42> 'int' <LValueToRValue>
+        | |   | | | `-MemberExpr 0x7f9f0586f1b0 <col:33, col:42> 'int' lvalue ->_mp_size 0x7f9f0586e800
+        | |   | | |   `-ImplicitCastExpr 0x7f9f0586f198 <col:33, col:39> 'struct (anonymous struct at c_files/pr79631.c:4:9) *' <ArrayToPointerDecay>
+        | |   | | |     `-ArraySubscriptExpr 0x7f9f0586f110 <col:33, col:39> 'mpz_t':'struct (anonymous struct at c_files/pr79631.c:4:9) [1]' lvalue
+        | |   | | |       |-ImplicitCastExpr 0x7f9f0586f0f8 <col:33, col:36> 'mpz_t *' <ArrayToPointerDecay>
+        | |   | | |       | `-ArraySubscriptExpr 0x7f9f0586f050 <col:33, col:36> 'mpz_t [b]' lvalue
+        | |   | | |       |   |-ImplicitCastExpr 0x7f9f0586f038 <col:33> 'mpz_t (*)[b]' <ArrayToPointerDecay>
+        | |   | | |       |   | `-DeclRefExpr 0x7f9f0586ef98 <col:33> 'mpz_t [1][b]' lvalue Var 0x7f9f0586edd8 'c' 'mpz_t [1][b]'
+        | |   | | |       |   `-IntegerLiteral 0x7f9f0586efc0 <col:35> 'int' 0
+        | |   | | |       `-IntegerLiteral 0x7f9f0586f078 <col:38> 'int' 0
+        | |   | | |-UnaryOperator 0x7f9f0586f208 <col:53, col:54> 'int' prefix '-'
+        | |   | | | `-IntegerLiteral 0x7f9f0586f1e8 <col:54> 'int' 1
+        | |   | | `-IntegerLiteral 0x7f9f0586f228 <col:58> 'int' 0
+        | |   | `-IntegerLiteral 0x7f9f0586f290 <col:62> 'int' 0
+        | |   `-IntegerLiteral 0x7f9f0586f2e0 <col:66> 'int' 0
+        | `-VarDecl 0x7f9f0586f348 <col:7, line:11:59> col:4 used e 'int' cinit
+        |   `-ConditionalOperator 0x7f9f0586f6c8 <col:8, col:59> 'int'
+        |     |-BinaryOperator 0x7f9f0586f3e8 <col:8, col:13> 'int' '>='
+        |     | |-IntegerLiteral 0x7f9f0586f3a8 <col:8> 'int' 0
+        |     | `-IntegerLiteral 0x7f9f0586f3c8 <col:13> 'int' 0
+        |     |-ConditionalOperator 0x7f9f0586f678 <col:17, col:55> 'int'
+        |     | |-BinaryOperator 0x7f9f0586f450 <col:17, col:22> 'int' '=='
+        |     | | |-IntegerLiteral 0x7f9f0586f410 <col:17> 'int' 0
+        |     | | `-IntegerLiteral 0x7f9f0586f430 <col:22> 'int' 0
+        |     | |-ConditionalOperator 0x7f9f0586f628 <col:26, col:51> 'int'
+        |     | | |-ImplicitCastExpr 0x7f9f0586f610 <col:26, col:35> 'int' <LValueToRValue>
+        |     | | | `-MemberExpr 0x7f9f0586f578 <col:26, col:35> 'int' lvalue ->_mp_size 0x7f9f0586e800
+        |     | | |   `-ImplicitCastExpr 0x7f9f0586f560 <col:26, col:32> 'struct (anonymous struct at c_files/pr79631.c:4:9) *' <ArrayToPointerDecay>
+        |     | | |     `-ArraySubscriptExpr 0x7f9f0586f538 <col:26, col:32> 'mpz_t':'struct (anonymous struct at c_files/pr79631.c:4:9) [1]' lvalue
+        |     | | |       |-ImplicitCastExpr 0x7f9f0586f520 <col:26, col:29> 'mpz_t *' <ArrayToPointerDecay>
+        |     | | |       | `-ArraySubscriptExpr 0x7f9f0586f4d8 <col:26, col:29> 'mpz_t [b]' lvalue
+        |     | | |       |   |-ImplicitCastExpr 0x7f9f0586f4c0 <col:26> 'mpz_t (*)[b]' <ArrayToPointerDecay>
+        |     | | |       |   | `-DeclRefExpr 0x7f9f0586f478 <col:26> 'mpz_t [1][b]' lvalue Var 0x7f9f0586edd8 'c' 'mpz_t [1][b]'
+        |     | | |       |   `-IntegerLiteral 0x7f9f0586f4a0 <col:28> 'int' 1
+        |     | | |       `-IntegerLiteral 0x7f9f0586f500 <col:31> 'int' 1
+        |     | | |-UnaryOperator 0x7f9f0586f5d0 <col:46, col:47> 'int' prefix '-'
+        |     | | | `-IntegerLiteral 0x7f9f0586f5b0 <col:47> 'int' 1
+        |     | | `-IntegerLiteral 0x7f9f0586f5f0 <col:51> 'int' 0
+        |     | `-IntegerLiteral 0x7f9f0586f658 <col:55> 'int' 0
+        |     `-IntegerLiteral 0x7f9f0586f6a8 <col:59> 'int' 0
+        `-IfStmt 0x7f9f0586f820 <line:12:7, line:13:3>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7f9f0586f7a8 <line:12:11, col:16> 'int' '!='
+          | |-ImplicitCastExpr 0x7f9f0586f778 <col:11> 'int' <LValueToRValue>
+          | | `-DeclRefExpr 0x7f9f0586f728 <col:11> 'int' lvalue Var 0x7f9f0586ee68 'd' 'int'
+          | `-ImplicitCastExpr 0x7f9f0586f790 <col:16> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7f9f0586f750 <col:16> 'int' lvalue Var 0x7f9f0586f348 'e' 'int'
+          |-UnaryOperator 0x7f9f0586f800 <line:13:2, col:3> 'int' postfix '++'
+          | `-DeclRefExpr 0x7f9f0586f7d0 <col:2> 'int' lvalue Var 0x7f9f0586ea20 'a' 'int'
+          `-<<<NULL>>>

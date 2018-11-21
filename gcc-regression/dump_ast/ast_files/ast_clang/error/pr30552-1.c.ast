@@ -1,0 +1,33 @@
+c_files/pr30552-1.c:12:18: error: expected ';' at end of declaration
+  void fun(int a) /* { dg-error "old-style parameter declarations in prototyped function definition" } */
+                 ^
+                 ;
+c_files/pr30552-1.c:13:21: error: function definition is not allowed here
+    int a[({void h(){}2;})]; /* { dg-error "braced-group within expression allowed only inside a function" } */
+                    ^
+2 errors generated.
+TranslationUnitDecl 0x7fb9338264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb933826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb933826740 '__int128'
+|-TypedefDecl 0x7fb933826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb933826760 'unsigned __int128'
+|-TypedefDecl 0x7fb933826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb933826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb933826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb933826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb933826dc0 'char *'
+|   `-BuiltinType 0x7fb933826560 'char'
+|-TypedefDecl 0x7fb9338270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb933827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb933826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb933826e58 '__va_list_tag'
+`-FunctionDecl 0x7fb934025a00 <c_files/pr30552-1.c:10:1, line:17:1> line:10:5 main 'int ()'
+  `-CompoundStmt 0x7fb934025e08 <line:11:1, line:17:1>
+    |-DeclStmt 0x7fb934025c60 <line:12:3, line:13:5>
+    | `-FunctionDecl 0x7fb934025bb0 parent 0x7fb9338264d0 <line:12:3, col:17> col:8 fun 'void (int)'
+    |   `-ParmVarDecl 0x7fb934025af0 <col:12, col:16> col:16 a 'int'
+    |-DeclStmt 0x7fb934025da0 <line:13:5, col:28>
+    | `-VarDecl 0x7fb934025d40 <col:5, col:27> col:9 a 'int [2]'
+    |-CompoundStmt 0x7fb934025db8 <line:14:3, line:15:3>
+    `-ReturnStmt 0x7fb934025df0 <line:16:3, col:10>
+      `-IntegerLiteral 0x7fb934025dd0 <col:10> 'int' 0

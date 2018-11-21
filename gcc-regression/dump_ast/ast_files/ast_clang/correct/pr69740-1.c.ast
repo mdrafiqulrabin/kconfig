@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7fb0888264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb088826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb088826740 '__int128'
+|-TypedefDecl 0x7fb088826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb088826760 'unsigned __int128'
+|-TypedefDecl 0x7fb088826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb088826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb088826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb088826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb088826dc0 'char *'
+|   `-BuiltinType 0x7fb088826560 'char'
+|-TypedefDecl 0x7fb0888270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb088827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb088826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb088826e58 '__va_list_tag'
+|-VarDecl 0x7fb088827130 <c_files/pr69740-1.c:1:1, col:6> col:6 used a 'char'
+|-VarDecl 0x7fb089025a00 <line:2:1, col:7> col:7 used b 'short'
+`-FunctionDecl 0x7fb089025aa8 <line:3:1, line:12:1> line:3:6 fn1 'void ()'
+  `-CompoundStmt 0x7fb089025e98 <col:12, line:12:1>
+    |-IfStmt 0x7fb089025dd0 <line:4:3, line:9:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fb089025b68 <line:4:7> 'short' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fb089025b40 <col:7> 'short' lvalue Var 0x7fb089025a00 'b' 'short'
+    | |-NullStmt 0x7fb089025b80 <line:5:5>
+    | `-CompoundStmt 0x7fb089025da8 <line:6:8, line:9:3>
+    |   |-DeclStmt 0x7fb089025d20 <line:7:5, col:19>
+    |   | `-VarDecl 0x7fb089025c10 <col:5, col:18> col:9 c 'int [1]' cinit
+    |   |   `-InitListExpr 0x7fb089025cd8 <col:16, col:18> 'int [1]'
+    |   |     `-IntegerLiteral 0x7fb089025c70 <col:17> 'int' 0
+    |   `-LabelStmt 0x7fb089025d90 <line:8:3, col:6> 'l1'
+    |     `-NullStmt 0x7fb089025d38 <col:6>
+    `-IfStmt 0x7fb089025e60 <line:10:3, line:11:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fb089025e30 <line:10:7> 'char' <LValueToRValue>
+      | `-DeclRefExpr 0x7fb089025e08 <col:7> 'char' lvalue Var 0x7fb088827130 'a' 'char'
+      |-GotoStmt 0x7fb089025e48 <line:11:5, col:10> 'l1' 0x7fb089025d48
+      `-<<<NULL>>>

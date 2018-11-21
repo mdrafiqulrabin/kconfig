@@ -1,0 +1,12 @@
+FileAST: 
+  Typedef: Harry_t, [], ['typedef']
+    TypeDecl: Harry_t, []
+      Struct: _Harry
+        Decl: dummy, [], [], []
+          TypeDecl: dummy, []
+            IdentifierType: ['int']
+  Decl: harry, ['const'], [], []
+    ArrayDecl: []
+      TypeDecl: harry, ['const']
+        IdentifierType: ['Harry_t']
+      Constant: int, 5

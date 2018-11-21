@@ -1,0 +1,42 @@
+FileAST: 
+  Typedef: uint8_t, [], ['typedef']
+    TypeDecl: uint8_t, []
+      IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: safe_div_func_uint8_t_u_u, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ui1, [], [], []
+            TypeDecl: ui1, []
+              IdentifierType: ['uint8_t']
+          Decl: ui2, [], [], []
+            TypeDecl: ui2, []
+              IdentifierType: ['uint8_t']
+        TypeDecl: safe_div_func_uint8_t_u_u, []
+          IdentifierType: ['uint8_t']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          ID: ui2
+          ID: ui2
+          BinaryOp: /
+            ID: ui1
+            ID: ui2
+  FuncDef: 
+    Decl: int81, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: int81, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: safe_div_func_uint8_t_u_u
+          ExprList: 
+            Constant: int, 1
+            BinaryOp: &
+              Constant: int, 8
+              ID: x

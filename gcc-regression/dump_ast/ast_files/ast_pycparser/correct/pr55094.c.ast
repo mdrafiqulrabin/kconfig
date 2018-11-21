@@ -1,0 +1,109 @@
+FileAST: 
+  Decl: fn, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['long']
+      TypeDecl: fn, []
+        IdentifierType: ['int']
+  Decl: v, [], [], []
+    TypeDecl: v, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['long']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        ID: x
+        Compound: 
+          FuncCall: 
+            ID: fn
+            ExprList: 
+              ArrayRef: 
+                ID: y
+                Constant: int, 0
+          FuncCall: 
+            ID: __builtin_trap
+      FuncCall: 
+        ID: __builtin_trap
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['long']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        ID: x
+        Compound: 
+          FuncCall: 
+            ID: fn
+            ExprList: 
+              ArrayRef: 
+                ID: y
+                Constant: int, 0
+          Assignment: =
+            ID: v
+            Constant: int, 1
+          FuncCall: 
+            ID: __builtin_unreachable
+      Assignment: =
+        ID: v
+        Constant: int, 1
+      FuncCall: 
+        ID: __builtin_unreachable
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['long']
+        TypeDecl: baz, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        ID: x
+        Compound: 
+          FuncCall: 
+            ID: fn
+            ExprList: 
+              ArrayRef: 
+                ID: y
+                Constant: int, 0
+          Assignment: =
+            ID: v
+            Constant: int, 1
+          FuncCall: 
+            ID: __builtin_unreachable
+      Assignment: =
+        ID: v
+        Constant: int, 1
+      Decl: w, [], [], []
+        TypeDecl: w, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      FuncCall: 
+        ID: __builtin_unreachable

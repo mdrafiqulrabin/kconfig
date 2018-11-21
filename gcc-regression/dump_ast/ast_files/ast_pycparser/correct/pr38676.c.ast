@@ -1,0 +1,33 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: bar, [], [], []
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+      Decl: foo, [], [], []
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      Pragma: omp parallel for shared(foo)
+      For: 
+        Assignment: =
+          ID: bar
+          Constant: int, 0
+        BinaryOp: <
+          ID: bar
+          Constant: int, 3
+        UnaryOp: p++
+          ID: bar
+        Compound: 
+          Switch: 
+            ID: foo
+            Compound: 
+              Case: 
+                Constant: int, 1
+                Break: 
+      Return: 
+        Constant: int, 0

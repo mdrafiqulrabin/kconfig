@@ -1,0 +1,34 @@
+c_files/pr79690.c:4:34: error: expected ')'
+void fill(unsigned char __seg_gs *arr, unsigned char c, long n)
+                                 ^
+c_files/pr79690.c:4:10: note: to match this '('
+void fill(unsigned char __seg_gs *arr, unsigned char c, long n)
+         ^
+c_files/pr79690.c:6:24: error: use of undeclared identifier 'n'
+  for (long i = 0; i < n; ++i)
+                       ^
+c_files/pr79690.c:7:5: error: use of undeclared identifier 'arr'
+    arr[i] = c;
+    ^
+c_files/pr79690.c:7:14: error: use of undeclared identifier 'c'
+    arr[i] = c;
+             ^
+4 errors generated.
+TranslationUnitDecl 0x7fd5f38012d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd5f3801820 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd5f3801540 '__int128'
+|-TypedefDecl 0x7fd5f3801890 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd5f3801560 'unsigned __int128'
+|-TypedefDecl 0x7fd5f3801b68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd5f3801970 'struct __NSConstantString_tag'
+|   `-Record 0x7fd5f38018e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd5f3801c00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd5f3801bc0 'char *'
+|   `-BuiltinType 0x7fd5f3801360 'char'
+|-TypedefDecl 0x7fd5f3801ec8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd5f3801e70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd5f3801ce0 'struct __va_list_tag'
+|     `-Record 0x7fd5f3801c58 '__va_list_tag'
+`-FunctionDecl 0x7fd5f4813800 <c_files/pr79690.c:4:1, line:8:1> line:4:6 fill 'void (unsigned char)'
+  |-ParmVarDecl 0x7fd5f3801f38 <col:11, col:25> col:25 __seg_gs 'unsigned char'
+  `-CompoundStmt 0x7fd5f4813a78 <line:5:1, line:8:1>

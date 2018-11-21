@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fcf048264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcf04826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcf04826740 '__int128'
+|-TypedefDecl 0x7fcf04826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcf04826760 'unsigned __int128'
+|-TypedefDecl 0x7fcf04826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcf04826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcf04826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcf04826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcf04826dc0 'char *'
+|   `-BuiltinType 0x7fcf04826560 'char'
+|-TypedefDecl 0x7fcf048270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcf04827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcf04826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcf04826e58 '__va_list_tag'
+|-TypedefDecl 0x7fcf04827178 <c_files/pr59471.c:4:1, col:23> col:23 referenced uint8x4_t '__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+| `-VectorType 0x7fcf04827140 '__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' 4
+|   `-BuiltinType 0x7fcf04826620 'unsigned char'
+|-TypedefDecl 0x7fcf05026a38 <line:7:1, col:24> col:24 referenced uint16x8_t '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+| `-VectorType 0x7fcf05026a00 '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' 8
+|   `-BuiltinType 0x7fcf04826640 'unsigned short'
+|-TypedefDecl 0x7fcf05026ae8 <line:10:1, col:22> col:22 referenced uint32x4_t '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7fcf05026ab0 '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' 4
+|   `-BuiltinType 0x7fcf04826660 'unsigned int'
+`-FunctionDecl 0x7fcf05026dd0 <line:13:1, line:17:1> line:14:1 foo 'void (uint16x8_t *, uint8x4_t *)'
+  |-ParmVarDecl 0x7fcf05026bc8 <col:6, col:18> col:18 used x 'uint16x8_t *'
+  |-ParmVarDecl 0x7fcf05026cb8 <col:21, col:32> col:32 used y 'uint8x4_t *'
+  `-CompoundStmt 0x7fcf05027138 <line:15:1, line:17:1>
+    `-BinaryOperator 0x7fcf05027110 <line:16:3, col:41> 'uint8x4_t':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' '='
+      |-UnaryOperator 0x7fcf05026ef8 <col:3, col:4> 'uint8x4_t':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fcf05026ee0 <col:4> 'uint8x4_t *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fcf05026eb8 <col:4> 'uint8x4_t *' lvalue ParmVar 0x7fcf05026cb8 'y' 'uint8x4_t *'
+      `-CStyleCastExpr 0x7fcf050270e8 <col:8, col:41> 'uint8x4_t':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' <BitCast>
+        `-ArraySubscriptExpr 0x7fcf050270b0 <col:20, col:41> 'unsigned int'
+          |-ParenExpr 0x7fcf05027090 <col:20, col:38> 'uint32x4_t':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+          | `-CStyleCastExpr 0x7fcf05027018 <col:21, col:37> 'uint32x4_t':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <BitCast>
+          |   `-ImplicitCastExpr 0x7fcf05027000 <col:34, col:37> 'uint16x8_t':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+          |     `-ParenExpr 0x7fcf05026fe0 <col:34, col:37> 'uint16x8_t':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue
+          |       `-UnaryOperator 0x7fcf05026f80 <col:35, col:36> 'uint16x8_t':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue prefix '*'
+          |         `-ImplicitCastExpr 0x7fcf05026f68 <col:36> 'uint16x8_t *' <LValueToRValue>
+          |           `-DeclRefExpr 0x7fcf05026f40 <col:36> 'uint16x8_t *' lvalue ParmVar 0x7fcf05026bc8 'x' 'uint16x8_t *'
+          `-IntegerLiteral 0x7fcf05027070 <col:40> 'int' 0

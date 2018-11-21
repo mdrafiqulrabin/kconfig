@@ -1,0 +1,112 @@
+TranslationUnitDecl 0x7f9b0b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9b0b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9b0b826740 '__int128'
+|-TypedefDecl 0x7f9b0b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9b0b826760 'unsigned __int128'
+|-TypedefDecl 0x7f9b0b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9b0b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9b0b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9b0b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9b0b826dc0 'char *'
+|   `-BuiltinType 0x7f9b0b826560 'char'
+|-TypedefDecl 0x7f9b0b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9b0b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9b0b826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9b0b826e58 '__va_list_tag'
+|-RecordDecl 0x7f9b0b827120 <c_files/pr62004.c:4:1, line:8:1> line:4:8 struct node definition
+| |-FieldDecl 0x7f9b0b877480 <line:6:3, col:16> col:16 referenced next 'struct node *'
+| `-FieldDecl 0x7f9b0b8774f0 <line:7:3, col:16> col:16 referenced prev 'struct node *'
+|-VarDecl 0x7f9b0b877558 <line:10:1, col:13> col:13 used node 'struct node':'struct node'
+|-RecordDecl 0x7f9b0b8775f8 <line:12:1, line:15:1> line:12:8 struct head definition
+| `-FieldDecl 0x7f9b0b8776c8 <line:14:3, col:16> col:16 referenced first 'struct node *'
+|-VarDecl 0x7f9b0b877858 <line:17:1, col:20> col:13 used heads 'struct head [5]'
+|-VarDecl 0x7f9b0b8778d0 <line:19:1, col:9> col:5 used k 'int' cinit
+| `-IntegerLiteral 0x7f9b0b877930 <col:9> 'int' 2
+|-VarDecl 0x7f9b0b8779d0 <line:21:1, col:29> col:14 used head 'struct head *' cinit
+| `-UnaryOperator 0x7f9b0b877ab8 <col:21, col:29> 'struct head *' prefix '&'
+|   `-ArraySubscriptExpr 0x7f9b0b877a90 <col:22, col:29> 'struct head':'struct head' lvalue
+|     |-ImplicitCastExpr 0x7f9b0b877a78 <col:22> 'struct head *' <ArrayToPointerDecay>
+|     | `-DeclRefExpr 0x7f9b0b877a30 <col:22> 'struct head [5]' lvalue Var 0x7f9b0b877858 'heads' 'struct head [5]'
+|     `-IntegerLiteral 0x7f9b0b877a58 <col:28> 'int' 2
+`-FunctionDecl 0x7f9b0b877b30 <line:23:1, line:47:1> line:24:1 main 'int ()'
+  `-CompoundStmt 0x7f9b0b87ea80 <line:25:1, line:47:1>
+    |-DeclStmt 0x7f9b0b877c50 <line:26:3, col:17>
+    | `-VarDecl 0x7f9b0b877bf0 <col:3, col:16> col:16 used p 'struct node *'
+    |-BinaryOperator 0x7f9b0b877d40 <line:28:3, col:22> 'struct node *' '='
+    | |-MemberExpr 0x7f9b0b877c90 <col:3, col:8> 'struct node *' lvalue .next 0x7f9b0b877480
+    | | `-DeclRefExpr 0x7f9b0b877c68 <col:3> 'struct node':'struct node' lvalue Var 0x7f9b0b877558 'node' 'struct node':'struct node'
+    | `-ImplicitCastExpr 0x7f9b0b877d28 <col:15, col:22> 'struct node *' <NullToPointer>
+    |   `-CStyleCastExpr 0x7f9b0b877d00 <col:15, col:22> 'void *' <NullToPointer>
+    |     `-IntegerLiteral 0x7f9b0b877cc8 <col:22> 'int' 0
+    |-BinaryOperator 0x7f9b0b877e60 <line:30:3, col:23> 'struct node *' '='
+    | |-MemberExpr 0x7f9b0b877d90 <col:3, col:8> 'struct node *' lvalue .prev 0x7f9b0b8774f0
+    | | `-DeclRefExpr 0x7f9b0b877d68 <col:3> 'struct node':'struct node' lvalue Var 0x7f9b0b877558 'node' 'struct node':'struct node'
+    | `-ImplicitCastExpr 0x7f9b0b877e48 <col:15, col:23> 'struct node *' <BitCast>
+    |   `-CStyleCastExpr 0x7f9b0b877e20 <col:15, col:23> 'void *' <BitCast>
+    |     `-ImplicitCastExpr 0x7f9b0b877e08 <col:23> 'struct head *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9b0b877dc8 <col:23> 'struct head *' lvalue Var 0x7f9b0b8779d0 'head' 'struct head *'
+    |-BinaryOperator 0x7f9b0b877f48 <line:32:3, col:18> 'struct node *' '='
+    | |-MemberExpr 0x7f9b0b877ec8 <col:3, col:9> 'struct node *' lvalue ->first 0x7f9b0b8776c8
+    | | `-ImplicitCastExpr 0x7f9b0b877eb0 <col:3> 'struct head *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9b0b877e88 <col:3> 'struct head *' lvalue Var 0x7f9b0b8779d0 'head' 'struct head *'
+    | `-UnaryOperator 0x7f9b0b877f28 <col:17, col:18> 'struct node *' prefix '&'
+    |   `-DeclRefExpr 0x7f9b0b877f00 <col:18> 'struct node':'struct node' lvalue Var 0x7f9b0b877558 'node' 'struct node':'struct node'
+    |-DeclStmt 0x7f9b0b878088 <line:34:3, col:31>
+    | `-VarDecl 0x7f9b0b877f98 <col:3, col:26> col:16 used n 'struct node *' cinit
+    |   `-ImplicitCastExpr 0x7f9b0b878070 <col:20, col:26> 'struct node *' <LValueToRValue>
+    |     `-MemberExpr 0x7f9b0b878038 <col:20, col:26> 'struct node *' lvalue ->first 0x7f9b0b8776c8
+    |       `-ImplicitCastExpr 0x7f9b0b878020 <col:20> 'struct head *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f9b0b877ff8 <col:20> 'struct head *' lvalue Var 0x7f9b0b8779d0 'head' 'struct head *'
+    |-DeclStmt 0x7f9b0b8781f0 <line:36:3, col:29>
+    | `-VarDecl 0x7f9b0b8780c8 <col:3, col:28> col:16 used h 'struct head *' cinit
+    |   `-UnaryOperator 0x7f9b0b8781d0 <col:20, col:28> 'struct head *' prefix '&'
+    |     `-ArraySubscriptExpr 0x7f9b0b8781a8 <col:21, col:28> 'struct head':'struct head' lvalue
+    |       |-ImplicitCastExpr 0x7f9b0b878178 <col:21> 'struct head *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7f9b0b878128 <col:21> 'struct head [5]' lvalue Var 0x7f9b0b877858 'heads' 'struct head [5]'
+    |       `-ImplicitCastExpr 0x7f9b0b878190 <col:27> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f9b0b878150 <col:27> 'int' lvalue Var 0x7f9b0b8778d0 'k' 'int'
+    |-BinaryOperator 0x7f9b0b878358 <line:38:3, col:23> 'struct node *' '='
+    | |-MemberExpr 0x7f9b0b878290 <col:3, col:12> 'struct node *' lvalue .first 0x7f9b0b8776c8
+    | | `-ArraySubscriptExpr 0x7f9b0b878268 <col:3, col:10> 'struct head':'struct head' lvalue
+    | |   |-ImplicitCastExpr 0x7f9b0b878250 <col:3> 'struct head *' <ArrayToPointerDecay>
+    | |   | `-DeclRefExpr 0x7f9b0b878208 <col:3> 'struct head [5]' lvalue Var 0x7f9b0b877858 'heads' 'struct head [5]'
+    | |   `-IntegerLiteral 0x7f9b0b878230 <col:9> 'int' 2
+    | `-ImplicitCastExpr 0x7f9b0b878340 <col:20, col:23> 'struct node *' <LValueToRValue>
+    |   `-MemberExpr 0x7f9b0b878308 <col:20, col:23> 'struct node *' lvalue ->next 0x7f9b0b877480
+    |     `-ImplicitCastExpr 0x7f9b0b8782f0 <col:20> 'struct node *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9b0b8782c8 <col:20> 'struct node *' lvalue Var 0x7f9b0b877f98 'n' 'struct node *'
+    |-IfStmt 0x7f9b0b87e910 <line:40:3, line:44:18>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9b0b87e6d8 <line:40:7, col:33> 'int' '=='
+    | | |-CStyleCastExpr 0x7f9b0b87e630 <col:7, col:17> 'void *' <BitCast>
+    | | | `-ImplicitCastExpr 0x7f9b0b87e618 <col:14, col:17> 'struct node *' <LValueToRValue>
+    | | |   `-MemberExpr 0x7f9b0b8783c0 <col:14, col:17> 'struct node *' lvalue ->prev 0x7f9b0b8774f0
+    | | |     `-ImplicitCastExpr 0x7f9b0b8783a8 <col:14> 'struct node *' <LValueToRValue>
+    | | |       `-DeclRefExpr 0x7f9b0b878380 <col:14> 'struct node *' lvalue Var 0x7f9b0b877f98 'n' 'struct node *'
+    | | `-CStyleCastExpr 0x7f9b0b87e6b0 <col:25, col:33> 'void *' <BitCast>
+    | |   `-ImplicitCastExpr 0x7f9b0b87e698 <col:33> 'struct head *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f9b0b87e658 <col:33> 'struct head *' lvalue Var 0x7f9b0b8780c8 'h' 'struct head *'
+    | |-BinaryOperator 0x7f9b0b87e7b8 <line:41:5, col:12> 'struct node *' '='
+    | | |-DeclRefExpr 0x7f9b0b87e700 <col:5> 'struct node *' lvalue Var 0x7f9b0b877bf0 'p' 'struct node *'
+    | | `-ImplicitCastExpr 0x7f9b0b87e7a0 <col:9, col:12> 'struct node *' <LValueToRValue>
+    | |   `-MemberExpr 0x7f9b0b87e768 <col:9, col:12> 'struct node *' lvalue ->first 0x7f9b0b8776c8
+    | |     `-ImplicitCastExpr 0x7f9b0b87e750 <col:9> 'struct head *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f9b0b87e728 <col:9> 'struct head *' lvalue Var 0x7f9b0b8780c8 'h' 'struct head *'
+    | `-BinaryOperator 0x7f9b0b87e8e8 <line:44:5, col:18> 'struct node *' '='
+    |   |-DeclRefExpr 0x7f9b0b87e7e0 <col:5> 'struct node *' lvalue Var 0x7f9b0b877bf0 'p' 'struct node *'
+    |   `-ImplicitCastExpr 0x7f9b0b87e8d0 <col:9, col:18> 'struct node *' <LValueToRValue>
+    |     `-MemberExpr 0x7f9b0b87e898 <col:9, col:18> 'struct node *' lvalue ->next 0x7f9b0b877480
+    |       `-ImplicitCastExpr 0x7f9b0b87e880 <col:9, col:12> 'struct node *' <LValueToRValue>
+    |         `-MemberExpr 0x7f9b0b87e848 <col:9, col:12> 'struct node *' lvalue ->prev 0x7f9b0b8774f0
+    |           `-ImplicitCastExpr 0x7f9b0b87e830 <col:9> 'struct node *' <LValueToRValue>
+    |             `-DeclRefExpr 0x7f9b0b87e808 <col:9> 'struct node *' lvalue Var 0x7f9b0b877f98 'n' 'struct node *'
+    `-ReturnStmt 0x7f9b0b87ea68 <line:46:3, col:25>
+      `-UnaryOperator 0x7f9b0b87ea48 <col:10, col:25> 'int' prefix '!'
+        `-ParenExpr 0x7f9b0b87ea28 <col:11, col:25> 'int'
+          `-BinaryOperator 0x7f9b0b87ea00 <col:12, col:24> 'int' '=='
+            |-ImplicitCastExpr 0x7f9b0b87e9d0 <col:12> 'struct node *' <LValueToRValue>
+            | `-DeclRefExpr 0x7f9b0b87e948 <col:12> 'struct node *' lvalue Var 0x7f9b0b877bf0 'p' 'struct node *'
+            `-ImplicitCastExpr 0x7f9b0b87e9e8 <col:17, col:24> 'struct node *' <BitCast>
+              `-CStyleCastExpr 0x7f9b0b87e9a8 <col:17, col:24> 'void *' <NullToPointer>
+                `-IntegerLiteral 0x7f9b0b87e970 <col:24> 'int' 0

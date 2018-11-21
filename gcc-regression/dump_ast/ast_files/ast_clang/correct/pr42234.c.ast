@@ -1,0 +1,58 @@
+TranslationUnitDecl 0x7faf540264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faf54026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faf54026740 '__int128'
+|-TypedefDecl 0x7faf54026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faf54026760 'unsigned __int128'
+|-TypedefDecl 0x7faf54026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faf54026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faf54026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faf54026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faf54026dc0 'char *'
+|   `-BuiltinType 0x7faf54026560 'char'
+|-TypedefDecl 0x7faf540270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faf54027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faf54026ee0 'struct __va_list_tag'
+|     `-Record 0x7faf54026e58 '__va_list_tag'
+`-FunctionDecl 0x7faf54077400 <c_files/pr42234.c:3:1, line:14:1> line:4:1 foo 'void (int)'
+  |-ParmVarDecl 0x7faf54027138 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7faf54077c50 <line:5:1, line:14:1>
+    |-DeclStmt 0x7faf54077768 <line:6:3, col:32>
+    | |-RecordDecl 0x7faf540774e0 <col:3, col:21> col:10 struct S definition
+    | | `-FieldDecl 0x7faf540775a8 <col:14, col:18> col:18 referenced s 'int'
+    | `-VarDecl 0x7faf54077640 <col:3, col:31> col:23 used d 'struct S':'struct S' cinit
+    |   `-InitListExpr 0x7faf54077708 <col:27, col:31> 'struct S':'struct S'
+    |     `-IntegerLiteral 0x7faf540776a0 <col:29> 'int' 1
+    |-DeclStmt 0x7faf54077830 <line:7:3, col:21>
+    | `-VarDecl 0x7faf54077798 <col:3, col:20> col:16 used e 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7faf54077818 <col:20> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7faf540777f8 <col:20> 'int' 1
+    |-IfStmt 0x7faf54077bd0 <line:8:3, line:12:7>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7faf54077870 <line:8:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7faf54077848 <col:7> 'int' lvalue ParmVar 0x7faf54027138 'x' 'int'
+    | |-BinaryOperator 0x7faf540779f0 <line:9:5, col:16> 'unsigned int' '='
+    | | |-DeclRefExpr 0x7faf54077888 <col:5> 'unsigned int' lvalue Var 0x7faf54077798 'e' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7faf540779d8 <col:9, col:16> 'unsigned int' <IntegralCast>
+    | |   `-BinaryOperator 0x7faf540779b0 <col:9, col:16> 'int' '&&'
+    | |     |-ImplicitCastExpr 0x7faf54077980 <col:9> 'int' <LValueToRValue>
+    | |     | `-DeclRefExpr 0x7faf540778b0 <col:9> 'int' lvalue ParmVar 0x7faf54027138 'x' 'int'
+    | |     `-ImplicitCastExpr 0x7faf54077998 <col:14, col:16> 'int' <LValueToRValue>
+    | |       `-MemberExpr 0x7faf54077900 <col:14, col:16> 'int' lvalue .s 0x7faf540775a8
+    | |         `-DeclRefExpr 0x7faf540778d8 <col:14> 'struct S':'struct S' lvalue Var 0x7faf54077640 'd' 'struct S':'struct S'
+    | `-ForStmt 0x7faf54077b98 <line:11:5, line:12:7>
+    |   |-BinaryOperator 0x7faf54077a78 <line:11:10, col:14> 'unsigned int' '='
+    |   | |-DeclRefExpr 0x7faf54077a18 <col:10> 'unsigned int' lvalue Var 0x7faf54077798 'e' 'unsigned int'
+    |   | `-ImplicitCastExpr 0x7faf54077a60 <col:14> 'unsigned int' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7faf54077a40 <col:14> 'int' 0
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7faf54077b18 <col:17, col:22> 'int' '<='
+    |   | |-ImplicitCastExpr 0x7faf54077ae8 <col:17> 'unsigned int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7faf54077aa0 <col:17> 'unsigned int' lvalue Var 0x7faf54077798 'e' 'unsigned int'
+    |   | `-ImplicitCastExpr 0x7faf54077b00 <col:22> 'unsigned int' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7faf54077ac8 <col:22> 'int' 3
+    |   |-UnaryOperator 0x7faf54077b68 <col:25, col:26> 'unsigned int' postfix '--'
+    |   | `-DeclRefExpr 0x7faf54077b40 <col:25> 'unsigned int' lvalue Var 0x7faf54077798 'e' 'unsigned int'
+    |   `-NullStmt 0x7faf54077b88 <line:12:7>
+    `-UnaryOperator 0x7faf54077c30 <line:13:3, col:4> 'unsigned int' postfix '++'
+      `-DeclRefExpr 0x7faf54077c08 <col:3> 'unsigned int' lvalue Var 0x7faf54077798 'e' 'unsigned int'

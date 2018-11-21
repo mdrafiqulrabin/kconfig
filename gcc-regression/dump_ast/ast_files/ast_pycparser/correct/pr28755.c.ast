@@ -1,0 +1,116 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: s1, [], [], []
+        PtrDecl: []
+          TypeDecl: s1, []
+            IdentifierType: ['void']
+      Decl: s2, [], [], []
+        TypeDecl: s2, []
+          IdentifierType: ['unsigned']
+      Decl: s3, [], [], []
+        TypeDecl: s3, []
+          IdentifierType: ['unsigned']
+      Decl: s4, [], [], []
+        TypeDecl: s4, []
+          IdentifierType: ['unsigned']
+      Decl: s5, [], [], []
+        TypeDecl: s5, []
+          IdentifierType: ['unsigned']
+      Decl: s6, [], [], []
+        TypeDecl: s6, []
+          IdentifierType: ['unsigned']
+      Decl: s7, [], [], []
+        TypeDecl: s7, []
+          IdentifierType: ['unsigned']
+      Decl: s8, [], [], []
+        TypeDecl: s8, []
+          IdentifierType: ['unsigned']
+      Decl: s9, [], [], []
+        TypeDecl: s9, []
+          IdentifierType: ['unsigned']
+      Decl: s10, [], [], []
+        TypeDecl: s10, []
+          IdentifierType: ['unsigned']
+      Decl: s11, [], [], []
+        TypeDecl: s11, []
+          IdentifierType: ['unsigned']
+      Decl: s12, [], [], []
+        TypeDecl: s12, []
+          IdentifierType: ['unsigned']
+      Decl: s13, [], [], []
+        TypeDecl: s13, []
+          IdentifierType: ['unsigned']
+      Decl: s14, [], [], []
+        TypeDecl: s14, []
+          IdentifierType: ['unsigned']
+  Decl: array, ['const'], [], []
+    ArrayDecl: []
+      TypeDecl: array, ['const']
+        Struct: S
+    InitList: 
+      InitList: 
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          Constant: int, 0
+        Constant: int, 60
+        Constant: int, 640
+        Constant: int, 2112543726
+        Constant: int, 39682
+        Constant: int, 48
+        Constant: int, 16
+        Constant: int, 33
+        Constant: int, 10
+        Constant: int, 96
+        Constant: int, 2
+        Constant: int, 0
+        Constant: int, 0
+        Constant: int, 4
+      InitList: 
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          Constant: int, 0
+        Constant: int, 60
+        Constant: int, 2112543726
+        Constant: int, 192
+        Constant: int, 18251
+        Constant: int, 16
+        Constant: int, 33
+        Constant: int, 10
+        Constant: int, 96
+        Constant: int, 2
+        Constant: int, 0
+        Constant: int, 0
+        Constant: int, 4
+        Constant: int, 212
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: S
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: x
+          Constant: int, 0
+        ArrayRef: 
+          ID: array
+          Constant: int, 0
+      Assignment: =
+        ArrayRef: 
+          ID: x
+          Constant: int, 5
+        ArrayRef: 
+          ID: array
+          Constant: int, 1

@@ -1,0 +1,96 @@
+FileAST: 
+  Decl: x1, [], ['extern'], []
+    TypeDecl: x1, []
+      IdentifierType: ['unsigned', 'long']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['char']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['char']
+        PtrDecl: []
+          TypeDecl: f, []
+            IdentifierType: ['char']
+    Compound: 
+      Return: 
+        ID: a
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['char']
+        TypeDecl: g, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 2
+  FuncDef: 
+    Decl: h, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            ArrayDecl: []
+              PtrDecl: []
+                TypeDecl: p, []
+                  IdentifierType: ['char']
+        TypeDecl: h, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: n, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: n, []
+              IdentifierType: ['char']
+            Constant: int, 512
+          ID: x1
+      Decl: l, [], [], []
+        PtrDecl: []
+          TypeDecl: l, []
+            IdentifierType: ['char']
+        FuncCall: 
+          ID: f
+          ExprList: 
+            ArrayRef: 
+              ID: p
+              Constant: int, 1
+            Constant: string, " "
+      If: 
+        FuncCall: 
+          ID: g
+          ExprList: 
+            ArrayRef: 
+              ID: p
+              Constant: int, 0
+        Assignment: =
+          ArrayRef: 
+            ArrayRef: 
+              ID: n
+              Constant: int, 0
+            Constant: int, 0
+          Constant: char, '\0'
+      While: 
+        BinaryOp: &&
+          ID: l
+          UnaryOp: *
+            ID: l
+        Compound: 
+  Decl: x1, [], [], []
+    TypeDecl: x1, []
+      IdentifierType: ['unsigned', 'long']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 0

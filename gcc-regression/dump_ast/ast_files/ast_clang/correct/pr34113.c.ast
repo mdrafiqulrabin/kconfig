@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7fc3060264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc306026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc306026740 '__int128'
+|-TypedefDecl 0x7fc306026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc306026760 'unsigned __int128'
+|-TypedefDecl 0x7fc306026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc306026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc306026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc306026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc306026dc0 'char *'
+|   `-BuiltinType 0x7fc306026560 'char'
+|-TypedefDecl 0x7fc3060270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc306027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc306026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc306026e58 '__va_list_tag'
+|-RecordDecl 0x7fc306027120 <c_files/pr34113.c:1:1, col:36> col:8 struct sockaddr_in definition
+| `-FieldDecl 0x7fc306825a00 <col:22, col:26> col:26 referenced sin_addr 'int'
+|-FunctionDecl 0x7fc306825cb0 <line:2:1, line:5:1> line:2:13 used ConvertAddr 'void (struct sockaddr_in *, void **)' static
+| |-ParmVarDecl 0x7fc306825b00 <col:26, col:46> col:46 used saddr 'struct sockaddr_in *'
+| |-ParmVarDecl 0x7fc306825ba0 <col:53, col:60> col:60 used addr 'void **'
+| `-CompoundStmt 0x7fc306825f20 <line:3:1, line:5:1>
+|   `-BinaryOperator 0x7fc306825ef8 <line:4:3, col:28> 'void *' '='
+|     |-UnaryOperator 0x7fc306825dd8 <col:3, col:4> 'void *' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fc306825dc0 <col:4> 'void **' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fc306825d98 <col:4> 'void **' lvalue ParmVar 0x7fc306825ba0 'addr' 'void **'
+|     `-CStyleCastExpr 0x7fc306825ed0 <col:11, col:28> 'void *' <BitCast>
+|       `-UnaryOperator 0x7fc306825e98 <col:20, col:28> 'int *' prefix '&'
+|         `-MemberExpr 0x7fc306825e38 <col:21, col:28> 'int' lvalue ->sin_addr 0x7fc306825a00
+|           `-ImplicitCastExpr 0x7fc306825e20 <col:21> 'struct sockaddr_in *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fc306825df8 <col:21> 'struct sockaddr_in *' lvalue ParmVar 0x7fc306825b00 'saddr' 'struct sockaddr_in *'
+`-FunctionDecl 0x7fc306826078 <line:6:1, line:11:1> line:6:15 EnableLocalHost 'unsigned char (struct sockaddr_in *)'
+  |-ParmVarDecl 0x7fc306825f68 <col:32, col:52> col:52 used ifa_addr 'struct sockaddr_in *'
+  `-CompoundStmt 0x7fc306826458 <line:7:1, line:11:1>
+    |-DeclStmt 0x7fc3068261c0 <line:8:3, col:23>
+    | `-VarDecl 0x7fc306826160 <col:3, col:19> col:19 used addr 'unsigned char *'
+    |-CallExpr 0x7fc306826350 <line:9:3, col:39> 'void'
+    | |-ImplicitCastExpr 0x7fc306826338 <col:3> 'void (*)(struct sockaddr_in *, void **)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc3068261d8 <col:3> 'void (struct sockaddr_in *, void **)' Function 0x7fc306825cb0 'ConvertAddr' 'void (struct sockaddr_in *, void **)'
+    | |-ImplicitCastExpr 0x7fc306826388 <col:15> 'struct sockaddr_in *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fc306826200 <col:15> 'struct sockaddr_in *' lvalue ParmVar 0x7fc306825f68 'ifa_addr' 'struct sockaddr_in *'
+    | `-CStyleCastExpr 0x7fc3068262b0 <col:25, col:35> 'void **' <BitCast>
+    |   `-UnaryOperator 0x7fc306826278 <col:34, col:35> 'unsigned char **' prefix '&'
+    |     `-DeclRefExpr 0x7fc306826228 <col:35> 'unsigned char *' lvalue Var 0x7fc306826160 'addr' 'unsigned char *'
+    `-ReturnStmt 0x7fc306826440 <line:10:3, col:16>
+      `-ImplicitCastExpr 0x7fc306826428 <col:10, col:16> 'unsigned char' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7fc306826400 <col:10, col:16> 'unsigned char' lvalue
+          |-ImplicitCastExpr 0x7fc3068263e8 <col:10> 'unsigned char *' <LValueToRValue>
+          | `-DeclRefExpr 0x7fc3068263a0 <col:10> 'unsigned char *' lvalue Var 0x7fc306826160 'addr' 'unsigned char *'
+          `-IntegerLiteral 0x7fc3068263c8 <col:15> 'int' 0

@@ -1,0 +1,93 @@
+c_files/pr69764.c:7:12: warning: shift count is negative [-Wshift-count-negative]
+  return a >> ~6;       /* { dg-warning "right shift count is negative" } */
+           ^  ~~
+c_files/pr69764.c:13:12: warning: shift count is negative [-Wshift-count-negative]
+  return a >> ~6;       /* { dg-warning "right shift count is negative" } */
+           ^  ~~
+c_files/pr69764.c:19:12: warning: shift count is negative [-Wshift-count-negative]
+  return a >> ~6;       /* { dg-warning "right shift count is negative" } */
+           ^  ~~
+c_files/pr69764.c:25:12: warning: shift count >= width of type [-Wshift-count-overflow]
+  return a >> 0xff03;   /* { dg-warning "right shift count >= width of type" } */
+           ^  ~~~~~~
+c_files/pr69764.c:31:12: warning: shift count >= width of type [-Wshift-count-overflow]
+  return a >> 0xff03;   /* { dg-warning "right shift count >= width of type" } */
+           ^  ~~~~~~
+c_files/pr69764.c:37:12: warning: shift count >= width of type [-Wshift-count-overflow]
+  return a >> 0xff03;   /* { dg-warning "right shift count >= width of type" } */
+           ^  ~~~~~~
+6 warnings generated.
+TranslationUnitDecl 0x7fc8338264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc833826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc833826740 '__int128'
+|-TypedefDecl 0x7fc833826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc833826760 'unsigned __int128'
+|-TypedefDecl 0x7fc833826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc833826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc833826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc833826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc833826dc0 'char *'
+|   `-BuiltinType 0x7fc833826560 'char'
+|-TypedefDecl 0x7fc8338270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc833827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc833826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc833826e58 '__va_list_tag'
+|-FunctionDecl 0x7fc834025a30 <c_files/pr69764.c:4:1, line:8:1> line:5:1 fn1 'unsigned char (unsigned char)'
+| |-ParmVarDecl 0x7fc833827138 <col:6, col:20> col:20 used a 'unsigned char'
+| `-CompoundStmt 0x7fc834025c00 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7fc834025be8 <line:7:3, col:16>
+|     `-ImplicitCastExpr 0x7fc834025bd0 <col:10, col:16> 'unsigned char' <IntegralCast>
+|       `-BinaryOperator 0x7fc834025ba8 <col:10, col:16> 'int' '>>'
+|         |-ImplicitCastExpr 0x7fc834025b90 <col:10> 'int' <IntegralCast>
+|         | `-ImplicitCastExpr 0x7fc834025b78 <col:10> 'unsigned char' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fc834025b10 <col:10> 'unsigned char' lvalue ParmVar 0x7fc833827138 'a' 'unsigned char'
+|         `-UnaryOperator 0x7fc834025b58 <col:15, col:16> 'int' prefix '~'
+|           `-IntegerLiteral 0x7fc834025b38 <col:16> 'int' 6
+|-FunctionDecl 0x7fc834025d08 <line:10:1, line:14:1> line:11:1 fn2 'unsigned short (unsigned short)'
+| |-ParmVarDecl 0x7fc834025c38 <col:6, col:21> col:21 used a 'unsigned short'
+| `-CompoundStmt 0x7fc834025e98 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7fc834025e80 <line:13:3, col:16>
+|     `-ImplicitCastExpr 0x7fc834025e68 <col:10, col:16> 'unsigned short' <IntegralCast>
+|       `-BinaryOperator 0x7fc834025e40 <col:10, col:16> 'int' '>>'
+|         |-ImplicitCastExpr 0x7fc834025e28 <col:10> 'int' <IntegralCast>
+|         | `-ImplicitCastExpr 0x7fc834025e10 <col:10> 'unsigned short' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fc834025da8 <col:10> 'unsigned short' lvalue ParmVar 0x7fc834025c38 'a' 'unsigned short'
+|         `-UnaryOperator 0x7fc834025df0 <col:15, col:16> 'int' prefix '~'
+|           `-IntegerLiteral 0x7fc834025dd0 <col:16> 'int' 6
+|-FunctionDecl 0x7fc834025f98 <line:16:1, line:20:1> line:17:1 fn3 'unsigned int (unsigned int)'
+| |-ParmVarDecl 0x7fc834025ed0 <col:6, col:19> col:19 used a 'unsigned int'
+| `-CompoundStmt 0x7fc8340260f8 <line:18:1, line:20:1>
+|   `-ReturnStmt 0x7fc8340260e0 <line:19:3, col:16>
+|     `-BinaryOperator 0x7fc8340260b8 <col:10, col:16> 'unsigned int' '>>'
+|       |-ImplicitCastExpr 0x7fc8340260a0 <col:10> 'unsigned int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fc834026038 <col:10> 'unsigned int' lvalue ParmVar 0x7fc834025ed0 'a' 'unsigned int'
+|       `-UnaryOperator 0x7fc834026080 <col:15, col:16> 'int' prefix '~'
+|         `-IntegerLiteral 0x7fc834026060 <col:16> 'int' 6
+|-FunctionDecl 0x7fc8340261c0 <line:22:1, line:26:1> line:23:1 fn4 'unsigned char (unsigned char)'
+| |-ParmVarDecl 0x7fc834026130 <col:6, col:20> col:20 used a 'unsigned char'
+| `-CompoundStmt 0x7fc834026330 <line:24:1, line:26:1>
+|   `-ReturnStmt 0x7fc834026318 <line:25:3, col:15>
+|     `-ImplicitCastExpr 0x7fc834026300 <col:10, col:15> 'unsigned char' <IntegralCast>
+|       `-BinaryOperator 0x7fc8340262d8 <col:10, col:15> 'int' '>>'
+|         |-ImplicitCastExpr 0x7fc8340262c0 <col:10> 'int' <IntegralCast>
+|         | `-ImplicitCastExpr 0x7fc8340262a8 <col:10> 'unsigned char' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fc834026260 <col:10> 'unsigned char' lvalue ParmVar 0x7fc834026130 'a' 'unsigned char'
+|         `-IntegerLiteral 0x7fc834026288 <col:15> 'int' 65283
+|-FunctionDecl 0x7fc8340263f8 <line:28:1, line:32:1> line:29:1 fn5 'unsigned short (unsigned short)'
+| |-ParmVarDecl 0x7fc834026368 <col:6, col:21> col:21 used a 'unsigned short'
+| `-CompoundStmt 0x7fc834026568 <line:30:1, line:32:1>
+|   `-ReturnStmt 0x7fc834026550 <line:31:3, col:15>
+|     `-ImplicitCastExpr 0x7fc834026538 <col:10, col:15> 'unsigned short' <IntegralCast>
+|       `-BinaryOperator 0x7fc834026510 <col:10, col:15> 'int' '>>'
+|         |-ImplicitCastExpr 0x7fc8340264f8 <col:10> 'int' <IntegralCast>
+|         | `-ImplicitCastExpr 0x7fc8340264e0 <col:10> 'unsigned short' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fc834026498 <col:10> 'unsigned short' lvalue ParmVar 0x7fc834026368 'a' 'unsigned short'
+|         `-IntegerLiteral 0x7fc8340264c0 <col:15> 'int' 65283
+`-FunctionDecl 0x7fc834026630 <line:34:1, line:38:1> line:35:1 fn6 'unsigned int (unsigned int)'
+  |-ParmVarDecl 0x7fc8340265a0 <col:6, col:19> col:19 used a 'unsigned int'
+  `-CompoundStmt 0x7fc834026770 <line:36:1, line:38:1>
+    `-ReturnStmt 0x7fc834026758 <line:37:3, col:15>
+      `-BinaryOperator 0x7fc834026730 <col:10, col:15> 'unsigned int' '>>'
+        |-ImplicitCastExpr 0x7fc834026718 <col:10> 'unsigned int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fc8340266d0 <col:10> 'unsigned int' lvalue ParmVar 0x7fc8340265a0 'a' 'unsigned int'
+        `-IntegerLiteral 0x7fc8340266f8 <col:15> 'int' 65283

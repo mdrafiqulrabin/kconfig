@@ -1,0 +1,33 @@
+c_files/pr69985.c:6:15: warning: more '%' conversions than data arguments [-Wformat]
+  printf ("%llu01233456789012334567890123345678901233456789012334567890123345678901233456789012334567890123345678901233456789012334567890123345678901233456789"); /* { dg-warning "15: format .%llu. expects a matching" } */
+           ~~~^
+1 warning generated.
+TranslationUnitDecl 0x7fb30a8078d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb30a807e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb30a807b40 '__int128'
+|-TypedefDecl 0x7fb30a807e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb30a807b60 'unsigned __int128'
+|-TypedefDecl 0x7fb30a808168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb30a807f70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb30a807ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb30a808200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb30a8081c0 'char *'
+|   `-BuiltinType 0x7fb30a807960 'char'
+|-TypedefDecl 0x7fb30a8084c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb30a808470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb30a8082e0 'struct __va_list_tag'
+|     `-Record 0x7fb30a808258 '__va_list_tag'
+|-FunctionDecl 0x7fb309827a68 <c_files/pr69985.c:2:12> col:12 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fb309827b00 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fb309827b68 <col:12> Implicit printf 1 2
+|-FunctionDecl 0x7fb309827bc0 prev 0x7fb309827a68 <col:1, col:56> col:12 used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fb30a808538 <col:20, col:43> col:43 __format 'const char *__restrict'
+| `-FormatAttr 0x7fb309827c98 <col:12> Inherited printf 1 2
+`-FunctionDecl 0x7fb309827d80 <line:3:1, line:7:1> line:3:6 test 'void (void)'
+  `-CompoundStmt 0x7fb309828020 <line:4:1, line:7:1>
+    `-CallExpr 0x7fb309827fc0 <line:6:3, col:160> 'int'
+      |-ImplicitCastExpr 0x7fb309827fa8 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb309827e58 <col:3> 'int (const char *, ...)' Function 0x7fb309827bc0 'printf' 'int (const char *, ...)'
+      `-ImplicitCastExpr 0x7fb309828008 <col:11> 'const char *' <BitCast>
+        `-ImplicitCastExpr 0x7fb309827ff0 <col:11> 'char *' <ArrayToPointerDecay>
+          `-StringLiteral 0x7fb309827eb8 <col:11> 'char [148]' lvalue "%llu01233456789012334567890123345678901233456789012334567890123345678901233456789012334567890123345678901233456789012334567890123345678901233456789"

@@ -1,0 +1,91 @@
+TranslationUnitDecl 0x7f98338264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9833826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9833826740 '__int128'
+|-TypedefDecl 0x7f9833826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9833826760 'unsigned __int128'
+|-TypedefDecl 0x7f9833826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9833826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9833826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9833826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9833826dc0 'char *'
+|   `-BuiltinType 0x7f9833826560 'char'
+|-TypedefDecl 0x7f98338270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9833827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9833826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9833826e58 '__va_list_tag'
+|-TypedefDecl 0x7f9833827138 <c_files/pr69174.c:3:1, col:13> col:13 referenced pixval 'int'
+| `-BuiltinType 0x7f98338265c0 'int'
+|-RecordDecl 0x7f9834025a00 <line:4:9, col:34> col:9 struct definition
+| |-FieldDecl 0x7f9834025ae0 <col:18, col:25> col:25 referenced r 'pixval':'int'
+| |-FieldDecl 0x7f9834025b38 <col:18, col:28> col:28 referenced g 'pixval':'int'
+| `-FieldDecl 0x7f9834025b90 <col:18, col:31> col:31 referenced b 'pixval':'int'
+|-TypedefDecl 0x7f9834025c30 <col:1, col:36> col:36 referenced xel 'struct xel':'xel'
+| `-ElaboratedType 0x7f9834025be0 'struct xel' sugar
+|   `-RecordType 0x7f9834025a90 'xel'
+|     `-Record 0x7f9834025a00 ''
+|-VarDecl 0x7f9834025cb8 <line:5:1, col:5> col:5 used convertRow_sample 'int'
+|-VarDecl 0x7f9834025d70 <col:1, col:24> col:24 used convertRaster_col 'int'
+|-VarDecl 0x7f9834025e30 <line:6:1, col:8> col:8 used convertRow_samplebuf 'short *'
+|-VarDecl 0x7f9834025f18 <line:7:1, col:6> col:6 used convertRow_xelrow 'xel *'
+|-VarDecl 0x7f9834025f90 <line:8:1, col:7> col:7 used convertRow_spp 'short'
+`-FunctionDecl 0x7f9834026038 <line:9:1, line:19:1> line:9:6 fn1 'void ()'
+  `-CompoundStmt 0x7f9834026930 <col:12, line:19:1>
+    |-DeclStmt 0x7f9834026170 <line:10:5, col:18>
+    | `-VarDecl 0x7f9834026110 <col:5, col:10> col:10 used alpharow 'int *'
+    `-ForStmt 0x7f98340268f8 <line:11:5, line:18:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f98340261b0 <line:11:12> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f9834026188 <col:12> 'int' lvalue Var 0x7f9834025d70 'convertRaster_col' 'int'
+      |-BinaryOperator 0x7f98340262c8 <line:12:3, col:45> 'int' ','
+      | |-UnaryOperator 0x7f98340261f0 <col:3, col:5> 'int' prefix '++'
+      | | `-DeclRefExpr 0x7f98340261c8 <col:5> 'int' lvalue Var 0x7f9834025d70 'convertRaster_col' 'int'
+      | `-CompoundAssignOperator 0x7f9834026290 <col:24, col:45> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+      |   |-DeclRefExpr 0x7f9834026210 <col:24> 'int' lvalue Var 0x7f9834025cb8 'convertRow_sample' 'int'
+      |   `-ImplicitCastExpr 0x7f9834026278 <col:45> 'int' <IntegralCast>
+      |     `-ImplicitCastExpr 0x7f9834026260 <col:45> 'short' <LValueToRValue>
+      |       `-DeclRefExpr 0x7f9834026238 <col:45> 'short' lvalue Var 0x7f9834025f90 'convertRow_spp' 'short'
+      `-CompoundStmt 0x7f98340268d0 <col:61, line:18:5>
+        |-BinaryOperator 0x7f98340266b8 <line:13:2, line:16:44> 'pixval':'int' '='
+        | |-MemberExpr 0x7f9834026398 <line:13:2, col:39> 'pixval':'int' lvalue .r 0x7f9834025ae0
+        | | `-ArraySubscriptExpr 0x7f9834026370 <col:2, col:37> 'xel':'xel' lvalue
+        | |   |-ImplicitCastExpr 0x7f9834026340 <col:2> 'xel *' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7f98340262f0 <col:2> 'xel *' lvalue Var 0x7f9834025f18 'convertRow_xelrow' 'xel *'
+        | |   `-ImplicitCastExpr 0x7f9834026358 <col:20> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7f9834026318 <col:20> 'int' lvalue Var 0x7f9834025d70 'convertRaster_col' 'int'
+        | `-BinaryOperator 0x7f9834026690 <line:14:6, line:16:44> 'pixval':'int' '='
+        |   |-MemberExpr 0x7f9834026478 <line:14:6, col:43> 'pixval':'int' lvalue .g 0x7f9834025b38
+        |   | `-ArraySubscriptExpr 0x7f9834026450 <col:6, col:41> 'xel':'xel' lvalue
+        |   |   |-ImplicitCastExpr 0x7f9834026420 <col:6> 'xel *' <LValueToRValue>
+        |   |   | `-DeclRefExpr 0x7f98340263d0 <col:6> 'xel *' lvalue Var 0x7f9834025f18 'convertRow_xelrow' 'xel *'
+        |   |   `-ImplicitCastExpr 0x7f9834026438 <col:24> 'int' <LValueToRValue>
+        |   |     `-DeclRefExpr 0x7f98340263f8 <col:24> 'int' lvalue Var 0x7f9834025d70 'convertRaster_col' 'int'
+        |   `-BinaryOperator 0x7f9834026668 <line:15:6, line:16:44> 'pixval':'int' '='
+        |     |-MemberExpr 0x7f9834026558 <line:15:6, col:43> 'pixval':'int' lvalue .b 0x7f9834025b90
+        |     | `-ArraySubscriptExpr 0x7f9834026530 <col:6, col:41> 'xel':'xel' lvalue
+        |     |   |-ImplicitCastExpr 0x7f9834026500 <col:6> 'xel *' <LValueToRValue>
+        |     |   | `-DeclRefExpr 0x7f98340264b0 <col:6> 'xel *' lvalue Var 0x7f9834025f18 'convertRow_xelrow' 'xel *'
+        |     |   `-ImplicitCastExpr 0x7f9834026518 <col:24> 'int' <LValueToRValue>
+        |     |     `-DeclRefExpr 0x7f98340264d8 <col:24> 'int' lvalue Var 0x7f9834025d70 'convertRaster_col' 'int'
+        |     `-ImplicitCastExpr 0x7f9834026650 <line:16:6, col:44> 'pixval':'int' <IntegralCast>
+        |       `-ImplicitCastExpr 0x7f9834026638 <col:6, col:44> 'short' <LValueToRValue>
+        |         `-ArraySubscriptExpr 0x7f9834026610 <col:6, col:44> 'short' lvalue
+        |           |-ImplicitCastExpr 0x7f98340265e0 <col:6> 'short *' <LValueToRValue>
+        |           | `-DeclRefExpr 0x7f9834026590 <col:6> 'short *' lvalue Var 0x7f9834025e30 'convertRow_samplebuf' 'short *'
+        |           `-ImplicitCastExpr 0x7f98340265f8 <col:27> 'int' <LValueToRValue>
+        |             `-DeclRefExpr 0x7f98340265b8 <col:27> 'int' lvalue Var 0x7f9834025cb8 'convertRow_sample' 'int'
+        `-BinaryOperator 0x7f98340268a8 <line:17:2, col:74> 'int' '='
+          |-ArraySubscriptExpr 0x7f9834026760 <col:2, col:28> 'int' lvalue
+          | |-ImplicitCastExpr 0x7f9834026730 <col:2> 'int *' <LValueToRValue>
+          | | `-DeclRefExpr 0x7f98340266e0 <col:2> 'int *' lvalue Var 0x7f9834026110 'alpharow' 'int *'
+          | `-ImplicitCastExpr 0x7f9834026748 <col:11> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7f9834026708 <col:11> 'int' lvalue Var 0x7f9834025d70 'convertRaster_col' 'int'
+          `-ImplicitCastExpr 0x7f9834026890 <col:32, col:74> 'int' <IntegralCast>
+            `-ImplicitCastExpr 0x7f9834026878 <col:32, col:74> 'short' <LValueToRValue>
+              `-ArraySubscriptExpr 0x7f9834026850 <col:32, col:74> 'short' lvalue
+                |-ImplicitCastExpr 0x7f9834026838 <col:32> 'short *' <LValueToRValue>
+                | `-DeclRefExpr 0x7f9834026788 <col:32> 'short *' lvalue Var 0x7f9834025e30 'convertRow_samplebuf' 'short *'
+                `-BinaryOperator 0x7f9834026810 <col:53, col:73> 'int' '+'
+                  |-ImplicitCastExpr 0x7f98340267f8 <col:53> 'int' <LValueToRValue>
+                  | `-DeclRefExpr 0x7f98340267b0 <col:53> 'int' lvalue Var 0x7f9834025cb8 'convertRow_sample' 'int'
+                  `-IntegerLiteral 0x7f98340267d8 <col:73> 'int' 3

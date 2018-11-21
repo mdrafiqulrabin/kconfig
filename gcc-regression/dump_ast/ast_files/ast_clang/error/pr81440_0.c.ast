@@ -1,0 +1,22 @@
+c_files/pr81440_0.c:3:10: fatal error: 'pr81440.h' file not found
+#include "pr81440.h"
+         ^~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7f9a7b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9a7b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9a7b826740 '__int128'
+|-TypedefDecl 0x7f9a7b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9a7b826760 'unsigned __int128'
+|-TypedefDecl 0x7f9a7b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9a7b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9a7b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9a7b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9a7b826dc0 'char *'
+|   `-BuiltinType 0x7f9a7b826560 'char'
+|-TypedefDecl 0x7f9a7b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9a7b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9a7b826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9a7b826e58 '__va_list_tag'
+|-RecordDecl 0x7f9a7b827138 <c_files/pr81440_0.c:5:8, col:17> col:17 struct my_struct
+`-FunctionDecl 0x7f9a7b878450 <line:7:1, line:9:1> line:7:5 main 'int ()'
+  `-CompoundStmt 0x7f9a7b878548 <col:12, line:9:1>

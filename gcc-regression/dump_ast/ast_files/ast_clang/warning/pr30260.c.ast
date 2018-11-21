@@ -1,0 +1,114 @@
+c_files/pr30260.c:33:26: warning: overflow in enumeration value
+enum E1 { e10 = INT_MAX, e11 }; /* { dg-error "overflow in enumeration values" } */
+                         ^
+c_files/pr30260.c:34:37: warning: overflow in enumeration value
+enum E2 { e20 = (unsigned) INT_MAX, e21 }; /* { dg-error "overflow in enumeration values" } */
+                                    ^
+2 warnings generated.
+TranslationUnitDecl 0x7ffc168264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffc16826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffc16826740 '__int128'
+|-TypedefDecl 0x7ffc16826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffc16826760 'unsigned __int128'
+|-TypedefDecl 0x7ffc16826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffc16826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffc16826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffc16826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffc16826dc0 'char *'
+|   `-BuiltinType 0x7ffc16826560 'char'
+|-TypedefDecl 0x7ffc168270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffc16827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffc16826ee0 'struct __va_list_tag'
+|     `-Record 0x7ffc16826e58 '__va_list_tag'
+|-FunctionDecl 0x7ffc1704f000 <c_files/pr30260.c:6:1, col:22> col:6 used link_error 'void (void)'
+|-EnumDecl 0x7ffc1704f0d8 <line:8:1, line:11:1> line:8:6 A
+| |-EnumConstantDecl 0x7ffc1704f1b0 <line:9:3, col:8> col:3 referenced A1 'int'
+| | `-IntegerLiteral 0x7ffc1704f190 <col:8> 'int' 0
+| `-EnumConstantDecl 0x7ffc1704f268 <line:10:3, col:13> col:3 referenced A2 'int'
+|   `-BinaryOperator 0x7ffc1704f240 <col:8, col:13> 'int' '-'
+|     |-DeclRefExpr 0x7ffc1704f1f8 <col:8> 'int' EnumConstant 0x7ffc1704f1b0 'A1' 'int'
+|     `-IntegerLiteral 0x7ffc1704f220 <col:13> 'int' 1
+|-EnumDecl 0x7ffc1704f2b0 <line:12:1, line:15:1> line:12:6 B
+| |-EnumConstantDecl 0x7ffc1704f3a8 <line:13:3, col:8> col:3 referenced B1 'int'
+| | `-ImplicitCastExpr 0x7ffc1704f390 <col:8> 'int' <IntegralCast>
+| |   `-IntegerLiteral 0x7ffc1704f370 <col:8> 'unsigned int' 0
+| `-EnumConstantDecl 0x7ffc1704f460 <line:14:3, col:13> col:3 referenced B2 'int'
+|   `-BinaryOperator 0x7ffc1704f438 <col:8, col:13> 'int' '-'
+|     |-DeclRefExpr 0x7ffc1704f3f0 <col:8> 'int' EnumConstant 0x7ffc1704f3a8 'B1' 'int'
+|     `-IntegerLiteral 0x7ffc1704f418 <col:13> 'int' 1
+|-FunctionDecl 0x7ffc1704f578 <line:16:1, line:31:1> line:16:5 main 'int (void)'
+| `-CompoundStmt 0x7ffc1704fe88 <line:17:1, line:31:1>
+|   |-DeclStmt 0x7ffc1704f748 <line:18:3, col:16>
+|   | `-VarDecl 0x7ffc1704f690 <col:3, col:15> col:10 used a 'enum A':'enum A' cinit
+|   |   `-ImplicitCastExpr 0x7ffc1704f730 <col:14, col:15> 'enum A':'enum A' <IntegralCast>
+|   |     `-UnaryOperator 0x7ffc1704f710 <col:14, col:15> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x7ffc1704f6f0 <col:15> 'int' 1
+|   |-DeclStmt 0x7ffc1704f868 <line:19:3, col:16>
+|   | `-VarDecl 0x7ffc1704f7b0 <col:3, col:15> col:10 used b 'enum B':'enum B' cinit
+|   |   `-ImplicitCastExpr 0x7ffc1704f850 <col:14, col:15> 'enum B':'enum B' <IntegralCast>
+|   |     `-UnaryOperator 0x7ffc1704f830 <col:14, col:15> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x7ffc1704f810 <col:15> 'int' 1
+|   |-IfStmt 0x7ffc1704f9f8 <line:21:3, line:22:17>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7ffc1704f940 <line:21:7, col:14> 'int' prefix '!'
+|   | | `-ParenExpr 0x7ffc1704f920 <col:8, col:14> 'int'
+|   | |   `-BinaryOperator 0x7ffc1704f8f8 <col:9, col:13> 'int' '<'
+|   | |     |-ImplicitCastExpr 0x7ffc1704f8e0 <col:9> 'int' <IntegralCast>
+|   | |     | `-ImplicitCastExpr 0x7ffc1704f8c8 <col:9> 'enum A':'enum A' <LValueToRValue>
+|   | |     |   `-DeclRefExpr 0x7ffc1704f880 <col:9> 'enum A':'enum A' lvalue Var 0x7ffc1704f690 'a' 'enum A':'enum A'
+|   | |     `-IntegerLiteral 0x7ffc1704f8a8 <col:13> 'int' 0
+|   | |-CallExpr 0x7ffc1704f9d0 <line:22:5, col:17> 'void'
+|   | | `-ImplicitCastExpr 0x7ffc1704f9b8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7ffc1704f960 <col:5> 'void (void)' Function 0x7ffc1704f000 'link_error' 'void (void)'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7ffc1704fb48 <line:23:3, line:24:17>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7ffc1704fac0 <line:23:7, col:15> 'int' prefix '!'
+|   | | `-ParenExpr 0x7ffc1704faa0 <col:8, col:15> 'int'
+|   | |   `-BinaryOperator 0x7ffc1704fa78 <col:9, col:14> 'int' '<'
+|   | |     |-DeclRefExpr 0x7ffc1704fa30 <col:9> 'int' EnumConstant 0x7ffc1704f268 'A2' 'int'
+|   | |     `-IntegerLiteral 0x7ffc1704fa58 <col:14> 'int' 0
+|   | |-CallExpr 0x7ffc1704fb20 <line:24:5, col:17> 'void'
+|   | | `-ImplicitCastExpr 0x7ffc1704fb08 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7ffc1704fae0 <col:5> 'void (void)' Function 0x7ffc1704f000 'link_error' 'void (void)'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7ffc1704fcc8 <line:25:3, line:26:17>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7ffc1704fc40 <line:25:7, col:14> 'int' prefix '!'
+|   | | `-ParenExpr 0x7ffc1704fc20 <col:8, col:14> 'int'
+|   | |   `-BinaryOperator 0x7ffc1704fbf8 <col:9, col:13> 'int' '<'
+|   | |     |-ImplicitCastExpr 0x7ffc1704fbe0 <col:9> 'int' <IntegralCast>
+|   | |     | `-ImplicitCastExpr 0x7ffc1704fbc8 <col:9> 'enum B':'enum B' <LValueToRValue>
+|   | |     |   `-DeclRefExpr 0x7ffc1704fb80 <col:9> 'enum B':'enum B' lvalue Var 0x7ffc1704f7b0 'b' 'enum B':'enum B'
+|   | |     `-IntegerLiteral 0x7ffc1704fba8 <col:13> 'int' 0
+|   | |-CallExpr 0x7ffc1704fca0 <line:26:5, col:17> 'void'
+|   | | `-ImplicitCastExpr 0x7ffc1704fc88 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7ffc1704fc60 <col:5> 'void (void)' Function 0x7ffc1704f000 'link_error' 'void (void)'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7ffc1704fe18 <line:27:3, line:28:17>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7ffc1704fd90 <line:27:7, col:15> 'int' prefix '!'
+|   | | `-ParenExpr 0x7ffc1704fd70 <col:8, col:15> 'int'
+|   | |   `-BinaryOperator 0x7ffc1704fd48 <col:9, col:14> 'int' '<'
+|   | |     |-DeclRefExpr 0x7ffc1704fd00 <col:9> 'int' EnumConstant 0x7ffc1704f460 'B2' 'int'
+|   | |     `-IntegerLiteral 0x7ffc1704fd28 <col:14> 'int' 0
+|   | |-CallExpr 0x7ffc1704fdf0 <line:28:5, col:17> 'void'
+|   | | `-ImplicitCastExpr 0x7ffc1704fdd8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7ffc1704fdb0 <col:5> 'void (void)' Function 0x7ffc1704f000 'link_error' 'void (void)'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7ffc1704fe70 <line:30:3, col:10>
+|     `-IntegerLiteral 0x7ffc1704fe50 <col:10> 'int' 0
+|-EnumDecl 0x7ffc1704fed8 <line:33:1, col:30> col:6 E1
+| |-EnumConstantDecl 0x7ffc1704ffb0 <col:11, <built-in>:33:21> c_files/pr30260.c:33:11 e10 'int'
+| | `-IntegerLiteral 0x7ffc1704ff90 <<built-in>:33:21> 'int' 2147483647
+| `-EnumConstantDecl 0x7ffc17050000 <c_files/pr30260.c:33:26> col:26 e11 'unsigned int'
+`-EnumDecl 0x7ffc17050048 <line:34:1, col:41> col:6 E2
+  |-EnumConstantDecl 0x7ffc17050178 <col:11, <built-in>:33:21> c_files/pr30260.c:34:11 e20 'int'
+  | `-ImplicitCastExpr 0x7ffc17050160 <col:17, <built-in>:33:21> 'int' <IntegralCast>
+  |   `-CStyleCastExpr 0x7ffc17050138 <c_files/pr30260.c:34:17, <built-in>:33:21> 'unsigned int' <IntegralCast>
+  |     `-IntegerLiteral 0x7ffc17050100 <col:21> 'int' 2147483647
+  `-EnumConstantDecl 0x7ffc170501c0 <c_files/pr30260.c:34:37> col:37 e21 'unsigned int'

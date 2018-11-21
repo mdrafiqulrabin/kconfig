@@ -1,0 +1,52 @@
+FileAST: 
+  Typedef: rtems_rfs_block_map, [], ['typedef']
+    TypeDecl: rtems_rfs_block_map, []
+      Struct: rtems_rfs_block_map_s
+        Decl: blocks, [], [], []
+          ArrayDecl: []
+            TypeDecl: blocks, []
+              IdentifierType: ['long', 'unsigned', 'int']
+            Constant: int, 5
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: foo, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: rtems_rfs_block_map_indirect_alloc, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: map, [], [], []
+            PtrDecl: []
+              TypeDecl: map, []
+                IdentifierType: ['rtems_rfs_block_map']
+          Decl: buffer, [], [], []
+            PtrDecl: []
+              TypeDecl: buffer, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: rtems_rfs_block_map_indirect_alloc, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          BinaryOp: +
+            ID: buffer
+            BinaryOp: *
+              ID: b
+              Constant: int, 4
+          Constant: int, 3
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+          ArrayRef: 
+            StructRef: ->
+              ID: map
+              ID: blocks
+            ID: b

@@ -1,0 +1,72 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: checkgroups, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: last, [], [], []
+            TypeDecl: last, []
+              IdentifierType: ['int']
+          Decl: verbose, [], [], []
+            TypeDecl: verbose, []
+              IdentifierType: ['int']
+        TypeDecl: checkgroups, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: window, [], [], []
+        TypeDecl: window, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: outstanding, [], [], []
+        TypeDecl: outstanding, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      While: 
+        BinaryOp: ||
+          BinaryOp: <
+            ID: window
+            ID: last
+          ID: outstanding
+        Compound: 
+          While: 
+            BinaryOp: &&
+              BinaryOp: <
+                ID: outstanding
+                Constant: int, 47
+              BinaryOp: <
+                ID: window
+                ID: last
+            Compound: 
+              If: 
+                BinaryOp: <
+                  ID: window
+                  ID: last
+                Compound: 
+                  UnaryOp: p++
+                    ID: outstanding
+                  If: 
+                    ID: verbose
+                    FuncCall: 
+                      ID: bar
+                      ExprList: 
+                        ID: window
+                  FuncCall: 
+                    ID: bar
+                    ExprList: 
+                      UnaryOp: p++
+                        ID: window
+          If: 
+            BinaryOp: >
+              ID: outstanding
+              Constant: int, 0
+            FuncCall: 
+              ID: bar
+              ExprList: 
+                Constant: int, 0

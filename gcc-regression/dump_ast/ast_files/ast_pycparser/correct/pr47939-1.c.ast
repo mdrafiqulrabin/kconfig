@@ -1,0 +1,10 @@
+FileAST: 
+  Typedef: Harry_t, [], ['typedef']
+    TypeDecl: Harry_t, []
+      Struct: _Harry
+        Decl: dummy, [], [], []
+          TypeDecl: dummy, []
+            IdentifierType: ['int']
+  Decl: harry, [], [], []
+    TypeDecl: harry, []
+      IdentifierType: ['Harry_t']

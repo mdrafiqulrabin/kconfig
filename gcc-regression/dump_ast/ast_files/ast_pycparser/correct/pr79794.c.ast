@@ -1,0 +1,61 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: node_struct
+      Decl: gap, [], [], []
+        TypeDecl: gap, []
+          IdentifierType: ['float', '_Complex']
+      Decl: state, [], [], []
+        TypeDecl: state, []
+          IdentifierType: ['unsigned', 'long', 'long']
+  Decl: None, [], [], []
+    Struct: reg_struct
+      Decl: size, [], [], []
+        TypeDecl: size, []
+          IdentifierType: ['int']
+      Decl: node, [], [], []
+        PtrDecl: []
+          TypeDecl: node, []
+            Struct: node_struct
+  FuncDef: 
+    Decl: func, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: target, [], [], []
+            TypeDecl: target, []
+              IdentifierType: ['int']
+          Decl: reg, [], [], []
+            PtrDecl: []
+              TypeDecl: reg, []
+                Struct: reg_struct
+        TypeDecl: func, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          StructRef: ->
+            ID: reg
+            ID: size
+        UnaryOp: p++
+          ID: i
+        Assignment: ^=
+          StructRef: .
+            ArrayRef: 
+              StructRef: ->
+                ID: reg
+                ID: node
+              ID: i
+            ID: state
+          BinaryOp: <<
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'long', 'long']
+              Constant: int, 1
+            ID: target

@@ -1,0 +1,90 @@
+c_files/pr61923.c:32:45: error: invalid input constraint '' in asm
+      asm("" : "+m"(*&lock->tickets.head) : ""(0));
+                                            ^
+1 error generated.
+TranslationUnitDecl 0x7ff3c80234d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff3c8023a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff3c8023740 '__int128'
+|-TypedefDecl 0x7ff3c8023a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff3c8023760 'unsigned __int128'
+|-TypedefDecl 0x7ff3c8023d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff3c8023b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff3c8023ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff3c8023e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff3c8023dc0 'char *'
+|   `-BuiltinType 0x7ff3c8023560 'char'
+|-TypedefDecl 0x7ff3c80240c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff3c8024070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff3c8023ee0 'struct __va_list_tag'
+|     `-Record 0x7ff3c8023e58 '__va_list_tag'
+|-RecordDecl 0x7ff3c8024120 <c_files/pr61923.c:5:9, line:14:1> line:5:9 struct definition
+| |-RecordDecl 0x7ff3c8074400 <line:7:3, line:13:3> line:7:3 struct definition
+| | |-RecordDecl 0x7ff3c80744b0 <line:9:5, line:12:5> line:9:5 struct definition
+| | | `-FieldDecl 0x7ff3c8074570 <line:11:7, col:12> col:12 referenced head 'char'
+| | `-FieldDecl 0x7ff3c8074610 <line:9:5, line:12:7> col:7 referenced tickets 'struct (anonymous struct at c_files/pr61923.c:9:5)':'struct arch_spinlock_t::(anonymous at c_files/pr61923.c:9:5)'
+| |-FieldDecl 0x7ff3c80746f0 <line:7:3> col:3 implicit referenced 'struct arch_spinlock_t::(anonymous at c_files/pr61923.c:7:3)'
+| `-IndirectFieldDecl 0x7ff3c8074748 <line:12:7> col:7 implicit tickets 'struct (anonymous struct at c_files/pr61923.c:9:5)':'struct arch_spinlock_t::(anonymous at c_files/pr61923.c:9:5)'
+|   |-Field 0x7ff3c80746f0 '' 'struct arch_spinlock_t::(anonymous at c_files/pr61923.c:7:3)'
+|   `-Field 0x7ff3c8074610 'tickets' 'struct (anonymous struct at c_files/pr61923.c:9:5)':'struct arch_spinlock_t::(anonymous at c_files/pr61923.c:9:5)'
+|-TypedefDecl 0x7ff3c8074820 <line:5:1, line:14:3> col:3 referenced arch_spinlock_t 'struct arch_spinlock_t':'arch_spinlock_t'
+| `-ElaboratedType 0x7ff3c80747d0 'struct arch_spinlock_t' sugar
+|   `-RecordType 0x7ff3c80241b0 'arch_spinlock_t'
+|     `-Record 0x7ff3c8024120 ''
+|-RecordDecl 0x7ff3c8074890 <line:15:1, line:20:1> line:15:8 struct ext4_map_blocks definition
+| |-FieldDecl 0x7ff3c8074958 <line:17:3, col:7> col:7 referenced m_lblk 'int'
+| |-FieldDecl 0x7ff3c80749b8 <line:18:3, col:7> col:7 referenced m_len 'int'
+| `-FieldDecl 0x7ff3c8074a18 <line:19:3, col:7> col:7 referenced m_flags 'int'
+|-VarDecl 0x7ff3c8074a78 <line:21:1, col:5> col:5 used ext4_da_map_blocks_ei_0 'int'
+|-FunctionDecl 0x7ff3c8074c80 <line:22:1, col:19> col:6 used fn2 'void (int, int)'
+| |-ParmVarDecl 0x7ff3c8074b30 <col:11> col:14 'int'
+| `-ParmVarDecl 0x7ff3c8074ba8 <col:16> col:19 'int'
+`-FunctionDecl 0x7ff3c8074f60 <line:23:1, line:37:1> line:23:6 fn1 'void (int, struct ext4_map_blocks *)'
+  |-ParmVarDecl 0x7ff3c8074d40 <col:11, col:15> col:15 p1 'int'
+  |-ParmVarDecl 0x7ff3c8074e50 <col:19, col:43> col:43 used p2 'struct ext4_map_blocks *'
+  `-CompoundStmt 0x7ff3c80759f8 <line:24:1, line:37:1>
+    |-DeclStmt 0x7ff3c8075080 <line:25:3, col:10>
+    | `-VarDecl 0x7ff3c8075020 <col:3, col:7> col:7 used ret 'int'
+    |-IfStmt 0x7ff3c80757f8 <line:26:3, line:35:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ff3c8075110 <line:26:7, col:11> 'int' <LValueToRValue>
+    | | `-MemberExpr 0x7ff3c80750d8 <col:7, col:11> 'int' lvalue ->m_flags 0x7ff3c8074a18
+    | |   `-ImplicitCastExpr 0x7ff3c80750c0 <col:7> 'struct ext4_map_blocks *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7ff3c8075098 <col:7> 'struct ext4_map_blocks *' lvalue ParmVar 0x7ff3c8074e50 'p2' 'struct ext4_map_blocks *'
+    | |-CompoundStmt 0x7ff3c80757b8 <line:27:5, line:35:5>
+    | | |-UnaryOperator 0x7ff3c8075150 <line:28:7, col:30> 'int' postfix '++'
+    | | | `-DeclRefExpr 0x7ff3c8075128 <col:7> 'int' lvalue Var 0x7ff3c8074a78 'ext4_da_map_blocks_ei_0' 'int'
+    | | |-DeclStmt 0x7ff3c8075258 <line:29:7, col:28>
+    | | | `-VarDecl 0x7ff3c80751f8 <col:7, col:24> col:24 used lock 'arch_spinlock_t *'
+    | | |-SwitchStmt 0x7ff3c80753d0 <line:30:7, <invalid sloc>>
+    | | | |-<<<NULL>>>
+    | | | |-<<<NULL>>>
+    | | | |-UnaryExprOrTypeTraitExpr 0x7ff3c80753b0 <col:15, col:38> 'unsigned long' sizeof
+    | | | | `-UnaryOperator 0x7ff3c8075390 <col:22, col:38> 'char' lvalue prefix '*'
+    | | | |   `-UnaryOperator 0x7ff3c8075370 <col:23, col:38> 'char *' prefix '&'
+    | | | |     `-MemberExpr 0x7ff3c8075338 <col:24, col:38> 'char' lvalue .head 0x7ff3c8074570
+    | | | |       `-MemberExpr 0x7ff3c8075300 <col:24, col:30> 'struct (anonymous struct at c_files/pr61923.c:9:5)':'struct arch_spinlock_t::(anonymous at c_files/pr61923.c:9:5)' lvalue .tickets 0x7ff3c8074610
+    | | | |         `-MemberExpr 0x7ff3c80752b0 <col:24, col:30> 'struct arch_spinlock_t::(anonymous at c_files/pr61923.c:7:3)' lvalue -> 0x7ff3c80746f0
+    | | | |           `-ImplicitCastExpr 0x7ff3c8075298 <col:24> 'arch_spinlock_t *' <LValueToRValue>
+    | | | |             `-DeclRefExpr 0x7ff3c8075270 <col:24> 'arch_spinlock_t *' lvalue Var 0x7ff3c80751f8 'lock' 'arch_spinlock_t *'
+    | | | `-CaseStmt 0x7ff3c8075420 <line:31:7, <invalid sloc>>
+    | | |   |-ImplicitCastExpr 0x7ff3c80756c0 <col:12> 'unsigned long' <IntegralCast>
+    | | |   | `-IntegerLiteral 0x7ff3c8075400 <col:12> 'int' 1
+    | | |   |-<<<NULL>>>
+    | | |   `-NullStmt 0x7ff3c80756b0 <<invalid sloc>>
+    | | |-GCCAsmStmt 0x7ff3c8075700 <line:33:7, col:17>
+    | | `-BinaryOperator 0x7ff3c8075790 <line:34:7, col:13> 'int' '='
+    | |   |-DeclRefExpr 0x7ff3c8075748 <col:7> 'int' lvalue Var 0x7ff3c8075020 'ret' 'int'
+    | |   `-IntegerLiteral 0x7ff3c8075770 <col:13> 'int' 0
+    | `-<<<NULL>>>
+    `-CallExpr 0x7ff3c8075990 <line:36:3, col:29> 'void'
+      |-ImplicitCastExpr 0x7ff3c8075978 <col:3> 'void (*)(int, int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff3c8075830 <col:3> 'void (int, int)' Function 0x7ff3c8074c80 'fn2' 'void (int, int)'
+      |-ImplicitCastExpr 0x7ff3c80759c8 <col:8, col:12> 'int' <LValueToRValue>
+      | `-MemberExpr 0x7ff3c8075898 <col:8, col:12> 'int' lvalue ->m_lblk 0x7ff3c8074958
+      |   `-ImplicitCastExpr 0x7ff3c8075880 <col:8> 'struct ext4_map_blocks *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7ff3c8075858 <col:8> 'struct ext4_map_blocks *' lvalue ParmVar 0x7ff3c8074e50 'p2' 'struct ext4_map_blocks *'
+      `-ImplicitCastExpr 0x7ff3c80759e0 <col:20, col:24> 'int' <LValueToRValue>
+        `-MemberExpr 0x7ff3c8075910 <col:20, col:24> 'int' lvalue ->m_len 0x7ff3c80749b8
+          `-ImplicitCastExpr 0x7ff3c80758f8 <col:20> 'struct ext4_map_blocks *' <LValueToRValue>
+            `-DeclRefExpr 0x7ff3c80758d0 <col:20> 'struct ext4_map_blocks *' lvalue ParmVar 0x7ff3c8074e50 'p2' 'struct ext4_map_blocks *'

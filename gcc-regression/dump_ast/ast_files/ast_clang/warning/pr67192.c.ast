@@ -1,0 +1,175 @@
+c_files/pr67192.c:7:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone)) static int
+                         ^
+c_files/pr67192.c:13:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone)) static void
+                         ^
+c_files/pr67192.c:19:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone)) static void
+                         ^
+c_files/pr67192.c:30:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone)) static void
+                         ^
+c_files/pr67192.c:42:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone)) static void
+                         ^
+c_files/pr67192.c:51:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone)) static void
+                         ^
+6 warnings generated.
+TranslationUnitDecl 0x7fed998264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fed99826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fed99826740 '__int128'
+|-TypedefDecl 0x7fed99826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fed99826760 'unsigned __int128'
+|-TypedefDecl 0x7fed99826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fed99826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fed99826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fed99826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fed99826dc0 'char *'
+|   `-BuiltinType 0x7fed99826560 'char'
+|-TypedefDecl 0x7fed998270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fed99827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fed99826ee0 'struct __va_list_tag'
+|     `-Record 0x7fed99826e58 '__va_list_tag'
+|-VarDecl 0x7fed99827138 <c_files/pr67192.c:5:1, col:20> col:14 used cnt 'volatile int' cinit
+| `-IntegerLiteral 0x7fed998271d8 <col:20> 'int' 0
+|-FunctionDecl 0x7fed9a026ac8 <line:7:1, line:11:1> line:8:1 used last 'int (void)' static
+| |-CompoundStmt 0x7fed9a026c98 <line:9:1, line:11:1>
+| | `-ReturnStmt 0x7fed9a026c80 <line:10:3, col:23>
+| |   `-BinaryOperator 0x7fed9a026c58 <col:10, col:23> 'int' '=='
+| |     |-BinaryOperator 0x7fed9a026c10 <col:10, col:18> 'int' '%'
+| |     | |-UnaryOperator 0x7fed9a026bd0 <col:10, col:12> 'int' prefix '++'
+| |     | | `-DeclRefExpr 0x7fed9a026ba8 <col:12> 'volatile int' lvalue Var 0x7fed99827138 'cnt' 'volatile int'
+| |     | `-IntegerLiteral 0x7fed9a026bf0 <col:18> 'int' 5
+| |     `-IntegerLiteral 0x7fed9a026c38 <col:23> 'int' 0
+| `-NoInlineAttr 0x7fed9a026b60 <line:7:16>
+|-FunctionDecl 0x7fed9a026d80 <line:13:1, line:17:1> line:14:1 used do_it 'void (void)' static
+| |-CompoundStmt 0x7fed9a027070 <line:15:1, line:17:1>
+| | `-GCCAsmStmt 0x7fed9a027008 <line:16:3, col:45>
+| |   `-UnaryOperator 0x7fed9a026f78 <col:29, col:30> 'volatile int *' prefix '&'
+| |     `-DeclRefExpr 0x7fed9a026f28 <col:30> 'volatile int' lvalue Var 0x7fed99827138 'cnt' 'volatile int'
+| `-NoInlineAttr 0x7fed9a026e18 <line:13:16>
+|-FunctionDecl 0x7fed9a027120 <line:19:1, line:28:1> line:20:1 used f1 'void (void)' static
+| |-CompoundStmt 0x7fed9a027428 <line:21:1, line:28:1>
+| | |-ForStmt 0x7fed9a027388 <line:22:3, line:26:5>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-CallExpr 0x7fed9a027270 <line:22:11, col:17> 'void'
+| | | | `-ImplicitCastExpr 0x7fed9a027258 <col:11> 'void (*)(void)' <FunctionToPointerDecay>
+| | | |   `-DeclRefExpr 0x7fed9a027200 <col:11> 'void (void)' Function 0x7fed9a026d80 'do_it' 'void (void)'
+| | | `-CompoundStmt 0x7fed9a027368 <line:23:5, line:26:5>
+| | |   `-IfStmt 0x7fed9a027330 <line:24:7, line:25:2>
+| | |     |-<<<NULL>>>
+| | |     |-<<<NULL>>>
+| | |     |-CallExpr 0x7fed9a027300 <line:24:11, col:17> 'int'
+| | |     | `-ImplicitCastExpr 0x7fed9a0272e8 <col:11> 'int (*)(void)' <FunctionToPointerDecay>
+| | |     |   `-DeclRefExpr 0x7fed9a027298 <col:11> 'int (void)' Function 0x7fed9a026ac8 'last' 'int (void)'
+| | |     |-BreakStmt 0x7fed9a027328 <line:25:2>
+| | |     `-<<<NULL>>>
+| | `-CallExpr 0x7fed9a027400 <line:27:3, col:10> 'void'
+| |   `-ImplicitCastExpr 0x7fed9a0273e8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7fed9a0273c0 <col:3> 'void (void)' Function 0x7fed9a026d80 'do_it' 'void (void)'
+| `-NoInlineAttr 0x7fed9a0271b8 <line:19:16>
+|-FunctionDecl 0x7fed9a0274e0 <line:30:1, line:40:1> line:31:1 used f2 'void (void)' static
+| |-CompoundStmt 0x7fed9a0277a0 <line:32:1, line:40:1>
+| | |-WhileStmt 0x7fed9a027718 <line:33:3, line:38:5>
+| | | |-<<<NULL>>>
+| | | |-IntegerLiteral 0x7fed9a0275c0 <line:33:10> 'int' 1
+| | | `-CompoundStmt 0x7fed9a0276f0 <line:34:5, line:38:5>
+| | |   |-IfStmt 0x7fed9a027650 <line:35:7, line:36:2>
+| | |   | |-<<<NULL>>>
+| | |   | |-<<<NULL>>>
+| | |   | |-CallExpr 0x7fed9a027620 <line:35:11, col:17> 'int'
+| | |   | | `-ImplicitCastExpr 0x7fed9a027608 <col:11> 'int (*)(void)' <FunctionToPointerDecay>
+| | |   | |   `-DeclRefExpr 0x7fed9a0275e0 <col:11> 'int (void)' Function 0x7fed9a026ac8 'last' 'int (void)'
+| | |   | |-BreakStmt 0x7fed9a027648 <line:36:2>
+| | |   | `-<<<NULL>>>
+| | |   `-CallExpr 0x7fed9a0276c8 <line:37:7, col:14> 'void'
+| | |     `-ImplicitCastExpr 0x7fed9a0276b0 <col:7> 'void (*)(void)' <FunctionToPointerDecay>
+| | |       `-DeclRefExpr 0x7fed9a027688 <col:7> 'void (void)' Function 0x7fed9a026d80 'do_it' 'void (void)'
+| | `-CallExpr 0x7fed9a027778 <line:39:3, col:10> 'void'
+| |   `-ImplicitCastExpr 0x7fed9a027760 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7fed9a027738 <col:3> 'void (void)' Function 0x7fed9a026d80 'do_it' 'void (void)'
+| `-NoInlineAttr 0x7fed9a027578 <line:30:16>
+|-FunctionDecl 0x7fed9a027858 <line:42:1, line:49:1> line:43:1 used f3 'void (void)' static
+| |-CompoundStmt 0x7fed9a027ae8 <line:44:1, line:49:1>
+| | |-ForStmt 0x7fed9a027a48 <line:45:3, line:47:7>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-CallExpr 0x7fed9a027978 <line:45:11, col:17> 'void'
+| | | | `-ImplicitCastExpr 0x7fed9a027960 <col:11> 'void (*)(void)' <FunctionToPointerDecay>
+| | | |   `-DeclRefExpr 0x7fed9a027938 <col:11> 'void (void)' Function 0x7fed9a026d80 'do_it' 'void (void)'
+| | | `-IfStmt 0x7fed9a027a10 <line:46:5, line:47:7>
+| | |   |-<<<NULL>>>
+| | |   |-<<<NULL>>>
+| | |   |-CallExpr 0x7fed9a0279e0 <line:46:9, col:15> 'int'
+| | |   | `-ImplicitCastExpr 0x7fed9a0279c8 <col:9> 'int (*)(void)' <FunctionToPointerDecay>
+| | |   |   `-DeclRefExpr 0x7fed9a0279a0 <col:9> 'int (void)' Function 0x7fed9a026ac8 'last' 'int (void)'
+| | |   |-BreakStmt 0x7fed9a027a08 <line:47:7>
+| | |   `-<<<NULL>>>
+| | `-CallExpr 0x7fed9a027ac0 <line:48:3, col:10> 'void'
+| |   `-ImplicitCastExpr 0x7fed9a027aa8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7fed9a027a80 <col:3> 'void (void)' Function 0x7fed9a026d80 'do_it' 'void (void)'
+| `-NoInlineAttr 0x7fed9a0278f0 <line:42:16>
+|-FunctionDecl 0x7fed9a027ba0 <line:51:1, line:60:1> line:52:1 used f4 'void (void)' static
+| |-CompoundStmt 0x7fed9a027e38 <line:53:1, line:60:1>
+| | |-WhileStmt 0x7fed9a027db0 <line:54:3, line:58:14>
+| | | |-<<<NULL>>>
+| | | |-IntegerLiteral 0x7fed9a027c80 <line:54:10> 'int' 1
+| | | `-IfStmt 0x7fed9a027d78 <line:55:5, line:58:14>
+| | |   |-<<<NULL>>>
+| | |   |-<<<NULL>>>
+| | |   |-CallExpr 0x7fed9a027ce0 <line:55:9, col:15> 'int'
+| | |   | `-ImplicitCastExpr 0x7fed9a027cc8 <col:9> 'int (*)(void)' <FunctionToPointerDecay>
+| | |   |   `-DeclRefExpr 0x7fed9a027ca0 <col:9> 'int (void)' Function 0x7fed9a026ac8 'last' 'int (void)'
+| | |   |-BreakStmt 0x7fed9a027d08 <line:56:7>
+| | |   `-CallExpr 0x7fed9a027d50 <line:58:7, col:14> 'void'
+| | |     `-ImplicitCastExpr 0x7fed9a027d38 <col:7> 'void (*)(void)' <FunctionToPointerDecay>
+| | |       `-DeclRefExpr 0x7fed9a027d10 <col:7> 'void (void)' Function 0x7fed9a026d80 'do_it' 'void (void)'
+| | `-CallExpr 0x7fed9a027e10 <line:59:3, col:10> 'void'
+| |   `-ImplicitCastExpr 0x7fed9a027df8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7fed9a027dd0 <col:3> 'void (void)' Function 0x7fed9a026d80 'do_it' 'void (void)'
+| `-NoInlineAttr 0x7fed9a027c38 <line:51:16>
+|-VarDecl 0x7fed9a027f58 <line:62:1, col:32> col:17 used fnp1 'void (*volatile)(void)' cinit
+| `-ImplicitCastExpr 0x7fed9a027fe0 <col:32> 'void (*)(void)' <FunctionToPointerDecay>
+|   `-DeclRefExpr 0x7fed9a027fb8 <col:32> 'void (void)' Function 0x7fed9a027120 'f1' 'void (void)'
+|-VarDecl 0x7fed9a028098 <line:63:1, col:32> col:17 used fnp2 'void (*volatile)(void)' cinit
+| `-ImplicitCastExpr 0x7fed9a028120 <col:32> 'void (*)(void)' <FunctionToPointerDecay>
+|   `-DeclRefExpr 0x7fed9a0280f8 <col:32> 'void (void)' Function 0x7fed9a0274e0 'f2' 'void (void)'
+|-VarDecl 0x7fed9a0281d8 <line:64:1, col:32> col:17 used fnp3 'void (*volatile)(void)' cinit
+| `-ImplicitCastExpr 0x7fed9a028260 <col:32> 'void (*)(void)' <FunctionToPointerDecay>
+|   `-DeclRefExpr 0x7fed9a028238 <col:32> 'void (void)' Function 0x7fed9a027858 'f3' 'void (void)'
+|-VarDecl 0x7fed9a028318 <line:65:1, col:32> col:17 used fnp4 'void (*volatile)(void)' cinit
+| `-ImplicitCastExpr 0x7fed9a0283a0 <col:32> 'void (*)(void)' <FunctionToPointerDecay>
+|   `-DeclRefExpr 0x7fed9a028378 <col:32> 'void (void)' Function 0x7fed9a027ba0 'f4' 'void (void)'
+`-FunctionDecl 0x7fed9a028410 <line:67:1, line:79:1> line:68:1 main 'int ()'
+  `-CompoundStmt 0x7fed9a028bd8 <line:69:1, line:79:1>
+    |-GCCAsmStmt 0x7fed9a0285d8 <line:70:3, col:46>
+    | `-UnaryOperator 0x7fed9a028588 <col:29, col:30> 'void (*volatile *)(void)' prefix '&'
+    |   `-DeclRefExpr 0x7fed9a028500 <col:30> 'void (*volatile)(void)' lvalue Var 0x7fed9a027f58 'fnp1' 'void (*volatile)(void)'
+    |-GCCAsmStmt 0x7fed9a028710 <line:71:3, col:46>
+    | `-UnaryOperator 0x7fed9a0286c0 <col:29, col:30> 'void (*volatile *)(void)' prefix '&'
+    |   `-DeclRefExpr 0x7fed9a028698 <col:30> 'void (*volatile)(void)' lvalue Var 0x7fed9a028098 'fnp2' 'void (*volatile)(void)'
+    |-GCCAsmStmt 0x7fed9a028848 <line:72:3, col:46>
+    | `-UnaryOperator 0x7fed9a0287f8 <col:29, col:30> 'void (*volatile *)(void)' prefix '&'
+    |   `-DeclRefExpr 0x7fed9a0287d0 <col:30> 'void (*volatile)(void)' lvalue Var 0x7fed9a0281d8 'fnp3' 'void (*volatile)(void)'
+    |-GCCAsmStmt 0x7fed9a028980 <line:73:3, col:46>
+    | `-UnaryOperator 0x7fed9a028930 <col:29, col:30> 'void (*volatile *)(void)' prefix '&'
+    |   `-DeclRefExpr 0x7fed9a028908 <col:30> 'void (*volatile)(void)' lvalue Var 0x7fed9a028318 'fnp4' 'void (*volatile)(void)'
+    |-CallExpr 0x7fed9a028a40 <line:74:3, col:9> 'void'
+    | `-ImplicitCastExpr 0x7fed9a028a28 <col:3> 'void (*)(void)' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fed9a028a00 <col:3> 'void (*volatile)(void)' lvalue Var 0x7fed9a027f58 'fnp1' 'void (*volatile)(void)'
+    |-CallExpr 0x7fed9a028aa8 <line:75:3, col:9> 'void'
+    | `-ImplicitCastExpr 0x7fed9a028a90 <col:3> 'void (*)(void)' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fed9a028a68 <col:3> 'void (*volatile)(void)' lvalue Var 0x7fed9a028098 'fnp2' 'void (*volatile)(void)'
+    |-CallExpr 0x7fed9a028b10 <line:76:3, col:9> 'void'
+    | `-ImplicitCastExpr 0x7fed9a028af8 <col:3> 'void (*)(void)' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fed9a028ad0 <col:3> 'void (*volatile)(void)' lvalue Var 0x7fed9a0281d8 'fnp3' 'void (*volatile)(void)'
+    |-CallExpr 0x7fed9a028b78 <line:77:3, col:9> 'void'
+    | `-ImplicitCastExpr 0x7fed9a028b60 <col:3> 'void (*)(void)' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fed9a028b38 <col:3> 'void (*volatile)(void)' lvalue Var 0x7fed9a028318 'fnp4' 'void (*volatile)(void)'
+    `-ReturnStmt 0x7fed9a028bc0 <line:78:3, col:10>
+      `-IntegerLiteral 0x7fed9a028ba0 <col:10> 'int' 0

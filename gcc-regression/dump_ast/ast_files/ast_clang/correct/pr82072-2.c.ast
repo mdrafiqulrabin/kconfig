@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fcfd30252d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcfd3025820 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcfd3025540 '__int128'
+|-TypedefDecl 0x7fcfd3025890 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcfd3025560 'unsigned __int128'
+|-TypedefDecl 0x7fcfd3025b68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcfd3025970 'struct __NSConstantString_tag'
+|   `-Record 0x7fcfd30258e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcfd3025c00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcfd3025bc0 'char *'
+|   `-BuiltinType 0x7fcfd3025360 'char'
+|-TypedefDecl 0x7fcfd3025ec8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcfd3025e70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcfd3025ce0 'struct __va_list_tag'
+|     `-Record 0x7fcfd3025c58 '__va_list_tag'
+`-FunctionDecl 0x7fcfd3826c00 <c_files/pr82072-2.c:5:1, line:13:1> line:6:1 main 'int ()'
+  `-CompoundStmt 0x7fcfd38270e8 <line:7:1, line:13:1>
+    |-DeclStmt 0x7fcfd3826df0 <line:8:3, col:43>
+    | `-VarDecl 0x7fcfd3826cf0 <col:3, col:42> col:17 used l 'long long' cinit
+    |   `-BinaryOperator 0x7fcfd3826dc8 <col:21, col:42> 'long long' '-'
+    |     |-UnaryOperator 0x7fcfd3826d70 <col:21, <built-in>:35:27> 'long long' prefix '-'
+    |     | `-IntegerLiteral 0x7fcfd3826d50 <col:27> 'long long' 9223372036854775807
+    |     `-ImplicitCastExpr 0x7fcfd3826db0 <c_files/pr82072-2.c:8:42> 'long long' <IntegralCast>
+    |       `-IntegerLiteral 0x7fcfd3826d90 <col:42> 'int' 1
+    |-DeclStmt 0x7fcfd3826e80 <line:9:3, col:17>
+    | `-VarDecl 0x7fcfd3826e20 <col:3, col:16> col:16 used u 'unsigned int'
+    |-BinaryOperator 0x7fcfd3826f38 <line:10:3, col:8> 'unsigned int' '='
+    | |-DeclRefExpr 0x7fcfd3826e98 <col:3> 'unsigned int' lvalue Var 0x7fcfd3826e20 'u' 'unsigned int'
+    | `-ImplicitCastExpr 0x7fcfd3826f20 <col:7, col:8> 'unsigned int' <IntegralCast>
+    |   `-UnaryOperator 0x7fcfd3826f00 <col:7, col:8> 'long long' prefix '-'
+    |     `-ImplicitCastExpr 0x7fcfd3826ee8 <col:8> 'long long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fcfd3826ec0 <col:8> 'long long' lvalue Var 0x7fcfd3826cf0 'l' 'long long'
+    |-GCCAsmStmt 0x7fcfd3827050 <line:11:3, col:30>
+    | `-DeclRefExpr 0x7fcfd3827028 <col:28> 'unsigned int' lvalue Var 0x7fcfd3826e20 'u' 'unsigned int'
+    `-ReturnStmt 0x7fcfd38270d0 <line:12:3, col:10>
+      `-IntegerLiteral 0x7fcfd38270b0 <col:10> 'int' 0

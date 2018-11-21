@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fd17d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd17d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd17d026740 '__int128'
+|-TypedefDecl 0x7fd17d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd17d026760 'unsigned __int128'
+|-TypedefDecl 0x7fd17d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd17d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd17d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd17d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd17d026dc0 'char *'
+|   `-BuiltinType 0x7fd17d026560 'char'
+|-TypedefDecl 0x7fd17d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd17d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd17d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd17d026e58 '__va_list_tag'
+`-FunctionDecl 0x7fd17d077430 <c_files/pr84841.c:5:1, line:9:1> line:6:1 foo 'double (double)'
+  |-ParmVarDecl 0x7fd17d027138 <col:6, col:13> col:13 used x 'double'
+  `-CompoundStmt 0x7fd17d077618 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fd17d077600 <line:8:3, col:21>
+      `-BinaryOperator 0x7fd17d0775d8 <col:10, col:21> 'double' '*'
+        |-BinaryOperator 0x7fd17d077590 <col:10, col:15> 'double' '*'
+        | |-UnaryOperator 0x7fd17d077550 <col:10, col:11> 'double' prefix '-'
+        | | `-ImplicitCastExpr 0x7fd17d077538 <col:11> 'double' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fd17d077510 <col:11> 'double' lvalue ParmVar 0x7fd17d027138 'x' 'double'
+        | `-FloatingLiteral 0x7fd17d077570 <col:15> 'double' 1.000000e-01
+        `-FloatingLiteral 0x7fd17d0775b8 <col:21> 'double' 1.000000e-01

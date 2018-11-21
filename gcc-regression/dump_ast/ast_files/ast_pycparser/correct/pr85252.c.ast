@@ -1,0 +1,35 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], ['static'], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+          Constant: int, 0
+        Constant: string, ""
+      Decl: b, [], ['static'], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['char']
+          Constant: int, 0
+        Constant: string, "b"
+      Decl: c, [], ['static'], []
+        ArrayDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['char']
+          Constant: int, 1
+        Constant: string, "c"
+      Decl: d, [], ['static'], []
+        ArrayDecl: []
+          TypeDecl: d, []
+            IdentifierType: ['char']
+          Constant: int, 1
+        Constant: string, "de"

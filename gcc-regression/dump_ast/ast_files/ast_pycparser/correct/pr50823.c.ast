@@ -1,0 +1,129 @@
+FileAST: 
+  Decl: k1, [], [], []
+    TypeDecl: k1, []
+      IdentifierType: ['int']
+  Decl: k2, [], [], []
+    TypeDecl: k2, []
+      IdentifierType: ['int']
+  Decl: k3, [], [], []
+    TypeDecl: k3, []
+      IdentifierType: ['int']
+  Decl: k4, [], [], []
+    TypeDecl: k4, []
+      IdentifierType: ['int']
+  Decl: k5, [], [], []
+    TypeDecl: k5, []
+      IdentifierType: ['int']
+  Decl: k6, [], [], []
+    TypeDecl: k6, []
+      IdentifierType: ['int']
+  Decl: k7, [], [], []
+    TypeDecl: k7, []
+      IdentifierType: ['int']
+  Decl: k8, [], [], []
+    TypeDecl: k8, []
+      IdentifierType: ['int']
+  Decl: set_first_insn, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: set_first_insn, []
+        IdentifierType: ['void']
+  Decl: set_last_insn, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: set_last_insn, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: make_insn_raw, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: make_insn_raw, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: set_first_insn
+        ExprList: 
+          Constant: int, 0
+      FuncCall: 
+        ID: set_last_insn
+      Return: 
+        ID: k1
+  FuncDef: 
+    Decl: add_insn_after, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: add_insn_after, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: k2
+        Assignment: =
+          ID: k3
+          ID: k4
+      If: 
+        ID: k5
+        Assignment: =
+          ID: k6
+          ID: k7
+  FuncDef: 
+    Decl: emit_pattern_after_noloc, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: make_raw, [], [], []
+            FuncDecl: 
+              ParamList: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+              TypeDecl: make_raw, []
+                IdentifierType: ['int']
+        TypeDecl: emit_pattern_after_noloc, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: k8
+        Compound: 
+          FuncCall: 
+            ID: make_raw
+          FuncCall: 
+            ID: add_insn_after
+  FuncDef: 
+    Decl: emit_insn_after_noloc, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: emit_insn_after_noloc, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: emit_pattern_after_noloc
+        ExprList: 
+          ID: make_insn_raw
+  FuncDef: 
+    Decl: emit_debug_insn_before_setloc, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: k9, [], [], []
+            TypeDecl: k9, []
+              IdentifierType: ['int']
+        TypeDecl: emit_debug_insn_before_setloc, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: k9
+        FuncCall: 
+          ID: make_insn_raw

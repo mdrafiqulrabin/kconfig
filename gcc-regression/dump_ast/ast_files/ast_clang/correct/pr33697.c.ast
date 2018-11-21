@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7fbd3c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbd3c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbd3c826740 '__int128'
+|-TypedefDecl 0x7fbd3c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbd3c826760 'unsigned __int128'
+|-TypedefDecl 0x7fbd3c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbd3c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbd3c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbd3c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbd3c826dc0 'char *'
+|   `-BuiltinType 0x7fbd3c826560 'char'
+|-TypedefDecl 0x7fbd3c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbd3c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbd3c826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbd3c826e58 '__va_list_tag'
+|-TypedefDecl 0x7fbd3c827138 <c_files/pr33697.c:5:1, col:22> col:22 referenced gint16 'short'
+| `-BuiltinType 0x7fbd3c8265a0 'short'
+|-TypedefDecl 0x7fbd3c8271a8 <line:6:1, col:24> col:24 referenced guint16 'unsigned short'
+| `-BuiltinType 0x7fbd3c826640 'unsigned short'
+`-FunctionDecl 0x7fbd3d025b30 <line:7:1, line:10:1> line:7:8 dissect_old_pflog 'gint16 (gint16)'
+  |-ParmVarDecl 0x7fbd3d025a30 <col:26, col:33> col:33 used rnr 'gint16':'short'
+  `-CompoundStmt 0x7fbd3d026000 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7fbd3d025fe8 <line:9:3, col:82>
+      `-ImplicitCastExpr 0x7fbd3d025fd0 <col:10, col:82> 'gint16':'short' <IntegralCast>
+        `-CStyleCastExpr 0x7fbd3d025fa8 <col:10, col:82> 'guint16':'unsigned short' <IntegralCast>
+          `-ParenExpr 0x7fbd3d025f88 <col:20, col:82> 'int'
+            `-BinaryOperator 0x7fbd3d025f20 <col:21, col:81> 'int' '|'
+              |-ImplicitCastExpr 0x7fbd3d025ef0 <col:21, col:49> 'int' <IntegralCast>
+              | `-CStyleCastExpr 0x7fbd3d025d68 <col:21, col:49> 'guint16':'unsigned short' <IntegralCast>
+              |   `-ParenExpr 0x7fbd3d025d48 <col:31, col:49> 'int'
+              |     `-BinaryOperator 0x7fbd3d025ce0 <col:32, col:48> 'int' '>>'
+              |       |-ImplicitCastExpr 0x7fbd3d025cc8 <col:32, col:41> 'int' <IntegralCast>
+              |       | `-CStyleCastExpr 0x7fbd3d025c80 <col:32, col:41> 'guint16':'unsigned short' <IntegralCast>
+              |       |   `-ImplicitCastExpr 0x7fbd3d025c68 <col:41> 'gint16':'short' <LValueToRValue>
+              |       |     `-DeclRefExpr 0x7fbd3d025c30 <col:41> 'gint16':'short' lvalue ParmVar 0x7fbd3d025a30 'rnr' 'gint16':'short'
+              |       `-IntegerLiteral 0x7fbd3d025ca8 <col:48> 'int' 8
+              `-ImplicitCastExpr 0x7fbd3d025f08 <col:53, col:81> 'int' <IntegralCast>
+                `-CStyleCastExpr 0x7fbd3d025ec8 <col:53, col:81> 'guint16':'unsigned short' <IntegralCast>
+                  `-ParenExpr 0x7fbd3d025ea8 <col:63, col:81> 'int'
+                    `-BinaryOperator 0x7fbd3d025e40 <col:64, col:80> 'int' '<<'
+                      |-ImplicitCastExpr 0x7fbd3d025e28 <col:64, col:73> 'int' <IntegralCast>
+                      | `-CStyleCastExpr 0x7fbd3d025de0 <col:64, col:73> 'guint16':'unsigned short' <IntegralCast>
+                      |   `-ImplicitCastExpr 0x7fbd3d025dc8 <col:73> 'gint16':'short' <LValueToRValue>
+                      |     `-DeclRefExpr 0x7fbd3d025d90 <col:73> 'gint16':'short' lvalue ParmVar 0x7fbd3d025a30 'rnr' 'gint16':'short'
+                      `-IntegerLiteral 0x7fbd3d025e08 <col:80> 'int' 8

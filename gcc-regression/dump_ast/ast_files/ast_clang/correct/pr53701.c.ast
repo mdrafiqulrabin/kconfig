@@ -1,0 +1,208 @@
+TranslationUnitDecl 0x7f9c550264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9c55026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9c55026740 '__int128'
+|-TypedefDecl 0x7f9c55026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9c55026760 'unsigned __int128'
+|-TypedefDecl 0x7f9c55026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9c55026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9c55026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9c55026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9c55026dc0 'char *'
+|   `-BuiltinType 0x7f9c55026560 'char'
+|-TypedefDecl 0x7f9c550270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9c55027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9c55026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9c55026e58 '__va_list_tag'
+|-TypedefDecl 0x7f9c55027138 <c_files/pr53701.c:3:1, col:28> col:28 referenced uint16_t 'unsigned short'
+| `-BuiltinType 0x7f9c55026640 'unsigned short'
+|-TypedefDecl 0x7f9c550271a8 <line:4:15, col:40> col:40 referenced uintptr_t 'unsigned long'
+| `-BuiltinType 0x7f9c55026680 'unsigned long'
+|-RecordDecl 0x7f9c55825a00 <line:5:9, line:9:1> line:5:16 struct GFX_VTABLE definition
+| |-FieldDecl 0x7f9c55825ac8 <line:7:3, col:7> col:7 color_depth 'int'
+| `-FieldDecl 0x7f9c55825b90 <line:8:3, col:23> col:18 referenced line 'unsigned char *[]'
+|-TypedefDecl 0x7f9c55825c30 <line:5:1, line:10:1> col:1 referenced BITMAP 'struct GFX_VTABLE':'struct GFX_VTABLE'
+| `-ElaboratedType 0x7f9c55825be0 'struct GFX_VTABLE' sugar
+|   `-RecordType 0x7f9c55825a90 'struct GFX_VTABLE'
+|     `-Record 0x7f9c55825a00 'GFX_VTABLE'
+|-VarDecl 0x7f9c55825cb8 <line:11:1, col:12> col:12 used _drawing_mode 'int' extern
+|-VarDecl 0x7f9c55825de8 <line:12:1, col:16> col:16 used _drawing_pattern 'BITMAP *' extern
+|-VarDecl 0x7f9c55825e60 <line:13:1, col:12> col:12 used _drawing_y_anchor 'int' extern
+|-VarDecl 0x7f9c55825ed8 <line:14:1, col:21> col:21 used _drawing_x_mask 'unsigned int' extern
+|-VarDecl 0x7f9c55825f50 <line:15:1, col:21> col:21 used _drawing_y_mask 'unsigned int' extern
+|-FunctionDecl 0x7f9c55826170 <line:16:1, col:47> col:18 used bmp_write_line 'uintptr_t (BITMAP *, int)' extern
+| |-ParmVarDecl 0x7f9c55825fe0 <col:34, col:41> col:42 'BITMAP *'
+| `-ParmVarDecl 0x7f9c55826058 <col:44> col:47 'int'
+`-FunctionDecl 0x7f9c55826570 <line:17:3, line:59:1> line:18:1 _linear_hline15 'void (BITMAP *, int, int, int, int)'
+  |-ParmVarDecl 0x7f9c55826228 <col:18, col:27> col:27 used dst 'BITMAP *'
+  |-ParmVarDecl 0x7f9c558262a0 <col:32, col:36> col:36 used dx1 'int'
+  |-ParmVarDecl 0x7f9c55826318 <col:41, col:45> col:45 used dy 'int'
+  |-ParmVarDecl 0x7f9c55826390 <col:49, col:53> col:53 dx2 'int'
+  |-ParmVarDecl 0x7f9c55826408 <col:58, col:62> col:62 used color 'int'
+  `-CompoundStmt 0x7f9c558290c0 <line:19:1, line:59:1>
+    |-DeclStmt 0x7f9c558266a8 <line:20:3, col:8>
+    | `-VarDecl 0x7f9c55826648 <col:3, col:7> col:7 used w 'int'
+    `-IfStmt 0x7f9c55829088 <line:21:3, line:58:3>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9c55826720 <line:21:7, col:24> 'int' '=='
+      | |-ImplicitCastExpr 0x7f9c55826708 <col:7> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f9c558266c0 <col:7> 'int' lvalue Var 0x7f9c55825cb8 '_drawing_mode' 'int'
+      | `-IntegerLiteral 0x7f9c558266e8 <col:24> 'int' 0
+      |-CompoundStmt 0x7f9c55829040 <line:22:3, line:58:3>
+      | |-DeclStmt 0x7f9c55826850 <line:23:5, col:16>
+      | | |-VarDecl 0x7f9c55826760 <col:5, col:9> col:9 used x 'int'
+      | | `-VarDecl 0x7f9c558267d8 <col:5, col:12> col:12 used curw 'int'
+      | |-DeclStmt 0x7f9c55826c10 <line:24:5, line:27:51>
+      | | `-VarDecl 0x7f9c558268b0 <line:24:5, line:27:50> line:24:21 used sline 'unsigned short *' cinit
+      | |   `-CStyleCastExpr 0x7f9c55826be8 <line:25:7, line:27:50> 'unsigned short *' <BitCast>
+      | |     `-ImplicitCastExpr 0x7f9c55826bd0 <line:25:26, line:27:50> 'unsigned char *' <LValueToRValue>
+      | |       `-ParenExpr 0x7f9c55826bb0 <line:25:26, line:27:50> 'unsigned char *' lvalue
+      | |         `-ArraySubscriptExpr 0x7f9c55826b40 <line:25:27, line:27:49> 'unsigned char *' lvalue
+      | |           |-ImplicitCastExpr 0x7f9c55826b28 <line:25:27, line:26:11> 'unsigned char **' <ArrayToPointerDecay>
+      | |           | `-MemberExpr 0x7f9c55826950 <line:25:27, line:26:11> 'unsigned char *[]' lvalue ->line 0x7f9c55825b90
+      | |           |   `-ImplicitCastExpr 0x7f9c55826938 <line:25:27> 'BITMAP *' <LValueToRValue>
+      | |           |     `-DeclRefExpr 0x7f9c55826910 <col:27> 'BITMAP *' lvalue Var 0x7f9c55825de8 '_drawing_pattern' 'BITMAP *'
+      | |           `-BinaryOperator 0x7f9c55826ad0 <line:26:16, line:27:34> 'unsigned int' '&'
+      | |             |-ImplicitCastExpr 0x7f9c55826ab8 <line:26:16, line:27:30> 'unsigned int' <IntegralCast>
+      | |             | `-ParenExpr 0x7f9c55826a58 <line:26:16, line:27:30> 'int'
+      | |             |   `-BinaryOperator 0x7f9c55826a30 <line:26:17, line:27:13> 'int' '-'
+      | |             |     |-ImplicitCastExpr 0x7f9c55826a00 <line:26:17, col:20> 'int' <LValueToRValue>
+      | |             |     | `-ParenExpr 0x7f9c558269b0 <col:17, col:20> 'int' lvalue
+      | |             |     |   `-DeclRefExpr 0x7f9c55826988 <col:18> 'int' lvalue ParmVar 0x7f9c55826318 'dy' 'int'
+      | |             |     `-ImplicitCastExpr 0x7f9c55826a18 <line:27:13> 'int' <LValueToRValue>
+      | |             |       `-DeclRefExpr 0x7f9c558269d0 <col:13> 'int' lvalue Var 0x7f9c55825e60 '_drawing_y_anchor' 'int'
+      | |             `-ImplicitCastExpr 0x7f9c55826aa0 <col:34> 'unsigned int' <LValueToRValue>
+      | |               `-DeclRefExpr 0x7f9c55826a78 <col:34> 'unsigned int' lvalue Var 0x7f9c55825f50 '_drawing_y_mask' 'unsigned int'
+      | |-DeclStmt 0x7f9c55826ca0 <line:28:5, col:22>
+      | | `-VarDecl 0x7f9c55826c40 <col:5, col:21> col:21 used s 'unsigned short *'
+      | |-DeclStmt 0x7f9c55826fc0 <line:29:5, line:30:62>
+      | | `-VarDecl 0x7f9c55826cd0 <line:29:5, line:30:61> line:29:21 used d 'unsigned short *' cinit
+      | |   `-ParenExpr 0x7f9c55826fa0 <line:30:7, col:61> 'unsigned short *'
+      | |     `-BinaryOperator 0x7f9c55826f78 <col:8, col:60> 'unsigned short *' '+'
+      | |       |-CStyleCastExpr 0x7f9c55826ef0 <col:8, col:52> 'unsigned short *' <IntegralToPointer>
+      | |       | `-ParenExpr 0x7f9c55826ed0 <col:27, col:52> 'uintptr_t':'unsigned long'
+      | |       |   `-CallExpr 0x7f9c55826e20 <col:28, col:51> 'uintptr_t':'unsigned long'
+      | |       |     |-ImplicitCastExpr 0x7f9c55826e08 <col:28> 'uintptr_t (*)(BITMAP *, int)' <FunctionToPointerDecay>
+      | |       |     | `-DeclRefExpr 0x7f9c55826d30 <col:28> 'uintptr_t (BITMAP *, int)' Function 0x7f9c55826170 'bmp_write_line' 'uintptr_t (BITMAP *, int)'
+      | |       |     |-ImplicitCastExpr 0x7f9c55826e58 <col:44> 'BITMAP *' <LValueToRValue>
+      | |       |     | `-DeclRefExpr 0x7f9c55826d58 <col:44> 'BITMAP *' lvalue ParmVar 0x7f9c55826228 'dst' 'BITMAP *'
+      | |       |     `-ImplicitCastExpr 0x7f9c55826e70 <col:49> 'int' <LValueToRValue>
+      | |       |       `-DeclRefExpr 0x7f9c55826d80 <col:49> 'int' lvalue ParmVar 0x7f9c55826318 'dy' 'int'
+      | |       `-ImplicitCastExpr 0x7f9c55826f60 <col:56, col:60> 'int' <LValueToRValue>
+      | |         `-ParenExpr 0x7f9c55826f40 <col:56, col:60> 'int' lvalue
+      | |           `-DeclRefExpr 0x7f9c55826f18 <col:57> 'int' lvalue ParmVar 0x7f9c558262a0 'dx1' 'int'
+      | |-BinaryOperator 0x7f9c55827178 <line:31:5, col:42> 'unsigned short *' '='
+      | | |-DeclRefExpr 0x7f9c55826fd8 <col:5> 'unsigned short *' lvalue Var 0x7f9c55826c40 's' 'unsigned short *'
+      | | `-ParenExpr 0x7f9c55827158 <col:9, col:42> 'unsigned short *'
+      | |   `-BinaryOperator 0x7f9c55827130 <col:10, col:41> 'unsigned short *' '+'
+      | |     |-CStyleCastExpr 0x7f9c558270a8 <col:10, col:35> 'unsigned short *' <NoOp>
+      | |     | `-ImplicitCastExpr 0x7f9c55827090 <col:29, col:35> 'unsigned short *' <LValueToRValue>
+      | |     |   `-ParenExpr 0x7f9c55827070 <col:29, col:35> 'unsigned short *' lvalue
+      | |     |     `-DeclRefExpr 0x7f9c55827000 <col:30> 'unsigned short *' lvalue Var 0x7f9c558268b0 'sline' 'unsigned short *'
+      | |     `-ImplicitCastExpr 0x7f9c55827118 <col:39, col:41> 'int' <LValueToRValue>
+      | |       `-ParenExpr 0x7f9c558270f8 <col:39, col:41> 'int' lvalue
+      | |         `-DeclRefExpr 0x7f9c558270d0 <col:40> 'int' lvalue Var 0x7f9c55826760 'x' 'int'
+      | `-IfStmt 0x7f9c55829008 <line:32:5, line:57:5>
+      |   |-<<<NULL>>>
+      |   |-<<<NULL>>>
+      |   |-BinaryOperator 0x7f9c55827200 <line:32:9, col:26> 'int' '=='
+      |   | |-ImplicitCastExpr 0x7f9c558271e8 <col:9> 'int' <LValueToRValue>
+      |   | | `-DeclRefExpr 0x7f9c558271a0 <col:9> 'int' lvalue Var 0x7f9c55825cb8 '_drawing_mode' 'int'
+      |   | `-IntegerLiteral 0x7f9c558271c8 <col:26> 'int' 2
+      |   |-CompoundStmt 0x7f9c55827228 <line:33:5, line:34:5>
+      |   `-IfStmt 0x7f9c55828fd0 <line:35:10, line:57:5>
+      |     |-<<<NULL>>>
+      |     |-<<<NULL>>>
+      |     |-BinaryOperator 0x7f9c558272a0 <line:35:14, col:31> 'int' '=='
+      |     | |-ImplicitCastExpr 0x7f9c55827288 <col:14> 'int' <LValueToRValue>
+      |     | | `-DeclRefExpr 0x7f9c55827240 <col:14> 'int' lvalue Var 0x7f9c55825cb8 '_drawing_mode' 'int'
+      |     | `-IntegerLiteral 0x7f9c55827268 <col:31> 'int' 3
+      |     |-CompoundStmt 0x7f9c55828fb0 <line:36:5, line:57:5>
+      |     | `-DoStmt 0x7f9c55828f90 <line:37:7, line:56:22>
+      |     |   |-CompoundStmt 0x7f9c55828ed0 <line:38:7, line:55:7>
+      |     |   | |-CompoundAssignOperator 0x7f9c55827330 <line:39:9, col:14> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+      |     |   | | |-DeclRefExpr 0x7f9c558272c8 <col:9> 'int' lvalue Var 0x7f9c55826648 'w' 'int'
+      |     |   | | `-ImplicitCastExpr 0x7f9c55827318 <col:14> 'int' <LValueToRValue>
+      |     |   | |   `-DeclRefExpr 0x7f9c558272f0 <col:14> 'int' lvalue Var 0x7f9c558267d8 'curw' 'int'
+      |     |   | |-DoStmt 0x7f9c55828aa8 <line:40:9, line:49:26>
+      |     |   | | |-CompoundStmt 0x7f9c558279e0 <line:41:9, line:48:9>
+      |     |   | | | |-DeclStmt 0x7f9c558274b0 <line:42:11, col:35>
+      |     |   | | | | `-VarDecl 0x7f9c55827380 <col:11, col:34> col:25 used c 'unsigned long' cinit
+      |     |   | | | |   `-ImplicitCastExpr 0x7f9c55827498 <col:29, col:34> 'unsigned long' <IntegralCast>
+      |     |   | | | |     `-ImplicitCastExpr 0x7f9c55827480 <col:29, col:34> 'unsigned short' <LValueToRValue>
+      |     |   | | | |       `-ParenExpr 0x7f9c55827460 <col:29, col:34> 'unsigned short' lvalue
+      |     |   | | | |         `-UnaryOperator 0x7f9c55827440 <col:30, col:33> 'unsigned short' lvalue prefix '*'
+      |     |   | | | |           `-ImplicitCastExpr 0x7f9c55827428 <col:31, col:33> 'unsigned short *' <LValueToRValue>
+      |     |   | | | |             `-ParenExpr 0x7f9c55827408 <col:31, col:33> 'unsigned short *' lvalue
+      |     |   | | | |               `-DeclRefExpr 0x7f9c558273e0 <col:32> 'unsigned short *' lvalue Var 0x7f9c55826c40 's' 'unsigned short *'
+      |     |   | | | |-IfStmt 0x7f9c55827920 <line:43:11, line:46:11>
+      |     |   | | | | |-<<<NULL>>>
+      |     |   | | | | |-<<<NULL>>>
+      |     |   | | | | |-UnaryOperator 0x7f9c55827618 <line:43:15, col:46> 'int' prefix '!'
+      |     |   | | | | | `-ParenExpr 0x7f9c558275f8 <col:16, col:46> 'int'
+      |     |   | | | | |   `-BinaryOperator 0x7f9c558275d0 <col:17, col:40> 'int' '=='
+      |     |   | | | | |     |-CStyleCastExpr 0x7f9c55827570 <col:17, col:35> 'unsigned long' <NoOp>
+      |     |   | | | | |     | `-ImplicitCastExpr 0x7f9c55827558 <col:33, col:35> 'unsigned long' <LValueToRValue>
+      |     |   | | | | |     |   `-ParenExpr 0x7f9c55827538 <col:33, col:35> 'unsigned long' lvalue
+      |     |   | | | | |     |     `-DeclRefExpr 0x7f9c558274c8 <col:34> 'unsigned long' lvalue Var 0x7f9c55827380 'c' 'unsigned long'
+      |     |   | | | | |     `-ImplicitCastExpr 0x7f9c558275b8 <col:40> 'unsigned long' <IntegralCast>
+      |     |   | | | | |       `-IntegerLiteral 0x7f9c55827598 <col:40> 'int' 31775
+      |     |   | | | | |-CompoundStmt 0x7f9c55827900 <line:44:11, line:46:11>
+      |     |   | | | | | `-ParenExpr 0x7f9c558278e0 <line:45:13, col:59> 'uint16_t':'unsigned short'
+      |     |   | | | | |   `-BinaryOperator 0x7f9c558278b8 <col:14, col:58> 'uint16_t':'unsigned short' '='
+      |     |   | | | | |     |-UnaryOperator 0x7f9c55827800 <col:14, col:46> 'uint16_t':'unsigned short' lvalue prefix '*'
+      |     |   | | | | |     | `-ParenExpr 0x7f9c558277e0 <col:15, col:46> 'uint16_t *'
+      |     |   | | | | |     |   `-CStyleCastExpr 0x7f9c558277b8 <col:16, col:45> 'uint16_t *' <IntegralToPointer>
+      |     |   | | | | |     |     `-ParenExpr 0x7f9c55827798 <col:29, col:45> 'uintptr_t':'unsigned long'
+      |     |   | | | | |     |       `-CStyleCastExpr 0x7f9c55827700 <col:30, col:44> 'uintptr_t':'unsigned long' <PointerToIntegral>
+      |     |   | | | | |     |         `-ImplicitCastExpr 0x7f9c558276e8 <col:42, col:44> 'unsigned short *' <LValueToRValue>
+      |     |   | | | | |     |           `-ParenExpr 0x7f9c558276c8 <col:42, col:44> 'unsigned short *' lvalue
+      |     |   | | | | |     |             `-DeclRefExpr 0x7f9c55827660 <col:43> 'unsigned short *' lvalue Var 0x7f9c55826cd0 'd' 'unsigned short *'
+      |     |   | | | | |     `-ImplicitCastExpr 0x7f9c558278a0 <col:50, col:58> 'uint16_t':'unsigned short' <IntegralCast>
+      |     |   | | | | |       `-ImplicitCastExpr 0x7f9c55827888 <col:50, col:58> 'int' <LValueToRValue>
+      |     |   | | | | |         `-ParenExpr 0x7f9c55827868 <col:50, col:58> 'int' lvalue
+      |     |   | | | | |           `-ParenExpr 0x7f9c55827848 <col:51, col:57> 'int' lvalue
+      |     |   | | | | |             `-DeclRefExpr 0x7f9c55827820 <col:52> 'int' lvalue ParmVar 0x7f9c55826408 'color' 'int'
+      |     |   | | | | `-<<<NULL>>>
+      |     |   | | | `-ParenExpr 0x7f9c558279c0 <line:47:11, col:17> 'unsigned short *'
+      |     |   | | |   `-UnaryOperator 0x7f9c558279a0 <col:12, col:15> 'unsigned short *' postfix '++'
+      |     |   | | |     `-ParenExpr 0x7f9c55827980 <col:12, col:14> 'unsigned short *' lvalue
+      |     |   | | |       `-DeclRefExpr 0x7f9c55827958 <col:13> 'unsigned short *' lvalue Var 0x7f9c55826c40 's' 'unsigned short *'
+      |     |   | | `-BinaryOperator 0x7f9c55828a80 <line:49:16, col:25> 'int' '>'
+      |     |   | |   |-UnaryOperator 0x7f9c55828a40 <col:16, col:18> 'int' prefix '--'
+      |     |   | |   | `-DeclRefExpr 0x7f9c55828a18 <col:18> 'int' lvalue Var 0x7f9c558267d8 'curw' 'int'
+      |     |   | |   `-IntegerLiteral 0x7f9c55828a60 <col:25> 'int' 0
+      |     |   | |-BinaryOperator 0x7f9c55828b30 <line:50:9, col:13> 'unsigned short *' '='
+      |     |   | | |-DeclRefExpr 0x7f9c55828ac8 <col:9> 'unsigned short *' lvalue Var 0x7f9c55826c40 's' 'unsigned short *'
+      |     |   | | `-ImplicitCastExpr 0x7f9c55828b18 <col:13> 'unsigned short *' <LValueToRValue>
+      |     |   | |   `-DeclRefExpr 0x7f9c55828af0 <col:13> 'unsigned short *' lvalue Var 0x7f9c558268b0 'sline' 'unsigned short *'
+      |     |   | `-BinaryOperator 0x7f9c55828ea8 <line:51:9, line:54:53> 'int' '='
+      |     |   |   |-DeclRefExpr 0x7f9c55828b58 <line:51:9> 'int' lvalue Var 0x7f9c558267d8 'curw' 'int'
+      |     |   |   `-ParenExpr 0x7f9c55828e88 <line:52:11, line:54:53> 'int'
+      |     |   |     `-ConditionalOperator 0x7f9c55828e58 <line:52:12, line:54:52> 'int'
+      |     |   |       |-ParenExpr 0x7f9c55828cf0 <line:52:12, line:54:16> 'int'
+      |     |   |       | `-BinaryOperator 0x7f9c55828cc8 <line:52:13, line:54:15> 'int' '<'
+      |     |   |       |   |-ImplicitCastExpr 0x7f9c55828cb0 <line:52:13, col:15> 'int' <LValueToRValue>
+      |     |   |       |   | `-ParenExpr 0x7f9c55828ba8 <col:13, col:15> 'int' lvalue
+      |     |   |       |   |   `-DeclRefExpr 0x7f9c55828b80 <col:14> 'int' lvalue Var 0x7f9c55826648 'w' 'int'
+      |     |   |       |   `-ParenExpr 0x7f9c55828c90 <line:53:13, line:54:15> 'int'
+      |     |   |       |     `-BinaryOperator 0x7f9c55828c68 <line:53:14, line:54:14> 'int' '+'
+      |     |   |       |       |-CStyleCastExpr 0x7f9c55828c20 <line:53:14, col:20> 'int' <IntegralCast>
+      |     |   |       |       | `-ImplicitCastExpr 0x7f9c55828c08 <col:20> 'unsigned int' <LValueToRValue>
+      |     |   |       |       |   `-DeclRefExpr 0x7f9c55828bc8 <col:20> 'unsigned int' lvalue Var 0x7f9c55825ed8 '_drawing_x_mask' 'unsigned int'
+      |     |   |       |       `-IntegerLiteral 0x7f9c55828c48 <line:54:14> 'int' 1
+      |     |   |       |-ImplicitCastExpr 0x7f9c55828e40 <col:20, col:22> 'int' <LValueToRValue>
+      |     |   |       | `-ParenExpr 0x7f9c55828d38 <col:20, col:22> 'int' lvalue
+      |     |   |       |   `-DeclRefExpr 0x7f9c55828d10 <col:21> 'int' lvalue Var 0x7f9c55826648 'w' 'int'
+      |     |   |       `-ParenExpr 0x7f9c55828e20 <col:26, col:52> 'int'
+      |     |   |         `-BinaryOperator 0x7f9c55828df8 <col:27, col:51> 'int' '+'
+      |     |   |           |-CStyleCastExpr 0x7f9c55828db0 <col:27, col:33> 'int' <IntegralCast>
+      |     |   |           | `-ImplicitCastExpr 0x7f9c55828d98 <col:33> 'unsigned int' <LValueToRValue>
+      |     |   |           |   `-DeclRefExpr 0x7f9c55828d58 <col:33> 'unsigned int' lvalue Var 0x7f9c55825ed8 '_drawing_x_mask' 'unsigned int'
+      |     |   |           `-IntegerLiteral 0x7f9c55828dd8 <col:51> 'int' 1
+      |     |   `-BinaryOperator 0x7f9c55828f68 <line:56:14, col:21> 'int' '>'
+      |     |     |-ImplicitCastExpr 0x7f9c55828f50 <col:14> 'int' <LValueToRValue>
+      |     |     | `-DeclRefExpr 0x7f9c55828f08 <col:14> 'int' lvalue Var 0x7f9c558267d8 'curw' 'int'
+      |     |     `-IntegerLiteral 0x7f9c55828f30 <col:21> 'int' 0
+      |     `-<<<NULL>>>
+      `-<<<NULL>>>

@@ -1,0 +1,140 @@
+TranslationUnitDecl 0x7fe2b38264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe2b3826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe2b3826740 '__int128'
+|-TypedefDecl 0x7fe2b3826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe2b3826760 'unsigned __int128'
+|-TypedefDecl 0x7fe2b3826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe2b3826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe2b3826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe2b3826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe2b3826dc0 'char *'
+|   `-BuiltinType 0x7fe2b3826560 'char'
+|-TypedefDecl 0x7fe2b38270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe2b3827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe2b3826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe2b3826e58 '__va_list_tag'
+|-RecordDecl 0x7fe2b3827120 <c_files/pr34146-2.c:5:1, line:8:1> line:5:8 struct A definition
+| |-FieldDecl 0x7fe2b4025a00 <line:7:3, col:7> col:7 f1 'int'
+| |-FieldDecl 0x7fe2b4025a60 <col:3, col:11> col:11 f2 'int'
+| `-FieldDecl 0x7fe2b4025ac0 <col:3, col:15> col:15 f3 'int'
+|-RecordDecl 0x7fe2b4025b08 <line:10:1, line:13:1> line:10:8 struct B definition
+| |-FieldDecl 0x7fe2b4025c00 <line:12:3, col:12> col:12 g1 'struct A':'struct A'
+| `-FieldDecl 0x7fe2b4025c68 <col:3, col:16> col:16 g2 'struct A':'struct A'
+|-RecordDecl 0x7fe2b4025d08 <line:15:1, line:18:1> line:15:8 struct C definition
+| |-FieldDecl 0x7fe2b4025e00 <line:17:3, col:12> col:12 h1 'struct B':'struct B'
+| `-FieldDecl 0x7fe2b4025e68 <col:3, col:16> col:16 h2 'struct B':'struct B'
+|-RecordDecl 0x7fe2b4025f00 <line:20:9, line:25:1> line:20:9 union definition
+| |-FieldDecl 0x7fe2b4026000 <line:22:3, col:12> col:12 c 'struct C':'struct C'
+| |-FieldDecl 0x7fe2b40260c8 <line:23:3, col:11> col:8 s 'char [4]'
+| `-FieldDecl 0x7fe2b4026128 <line:24:3, col:12> col:12 a 'long'
+|-TypedefDecl 0x7fe2b4026210 <line:20:1, line:25:3> col:3 referenced T 'union T':'T'
+| `-ElaboratedType 0x7fe2b40261c0 'union T' sugar
+|   `-RecordType 0x7fe2b4025f90 'T'
+|     `-Record 0x7fe2b4025f00 ''
+|-FunctionDecl 0x7fe2b4026410 <line:27:1, col:15> col:6 used test 'void (T *)'
+| `-ParmVarDecl 0x7fe2b4026308 <col:12, col:14> col:15 'T *'
+|-FunctionDecl 0x7fe2b40265b0 <line:29:1, line:34:1> line:30:1 foo 'void (void)'
+| `-CompoundStmt 0x7fe2b4027ef0 <line:31:1, line:34:1>
+|   |-DeclStmt 0x7fe2b4027dc0 <line:32:3, col:79>
+|   | `-VarDecl 0x7fe2b4026658 <col:3, col:78> col:5 used t 'T':'T' cinit
+|   |   `-ImplicitCastExpr 0x7fe2b4027da8 <col:9, col:78> 'T':'T' <LValueToRValue>
+|   |     `-CompoundLiteralExpr 0x7fe2b4027d80 <col:9, col:78> 'T':'T' lvalue
+|   |       `-InitListExpr 0x7fe2b4027ae8 <col:13, col:78> 'T':'T' field Field 0x7fe2b4026000 'c' 'struct C':'struct C'
+|   |         `-InitListExpr 0x7fe2b4027b30 <col:15, col:76> 'struct C':'struct C'
+|   |           |-InitListExpr 0x7fe2b4027b80 <col:17, col:44> 'struct B':'struct B'
+|   |           | |-InitListExpr 0x7fe2b4027bd0 <col:19, col:29> 'struct A':'struct A'
+|   |           | | |-IntegerLiteral 0x7fe2b40266c8 <col:21> 'int' 0
+|   |           | | |-IntegerLiteral 0x7fe2b40266e8 <col:24> 'int' 0
+|   |           | | `-IntegerLiteral 0x7fe2b4026708 <col:27> 'int' 0
+|   |           | `-InitListExpr 0x7fe2b4027c28 <col:32, col:42> 'struct A':'struct A'
+|   |           |   |-IntegerLiteral 0x7fe2b4026780 <col:34> 'int' 0
+|   |           |   |-IntegerLiteral 0x7fe2b40267a0 <col:37> 'int' 0
+|   |           |   `-IntegerLiteral 0x7fe2b40267c0 <col:40> 'int' 0
+|   |           `-InitListExpr 0x7fe2b4027c80 <col:47, col:74> 'struct B':'struct B'
+|   |             |-InitListExpr 0x7fe2b4027cd0 <col:49, col:59> 'struct A':'struct A'
+|   |             | |-IntegerLiteral 0x7fe2b4026888 <col:51> 'int' 0
+|   |             | |-IntegerLiteral 0x7fe2b40268a8 <col:54> 'int' 0
+|   |             | `-IntegerLiteral 0x7fe2b40268c8 <col:57> 'int' 0
+|   |             `-InitListExpr 0x7fe2b4027d28 <col:62, col:72> 'struct A':'struct A'
+|   |               |-IntegerLiteral 0x7fe2b4026940 <col:64> 'int' 0
+|   |               |-IntegerLiteral 0x7fe2b4026960 <col:67> 'int' 0
+|   |               `-IntegerLiteral 0x7fe2b4026980 <col:70> 'int' 0
+|   `-CallExpr 0x7fe2b4027ec0 <line:33:3, col:11> 'void'
+|     |-ImplicitCastExpr 0x7fe2b4027ea8 <col:3> 'void (*)(T *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe2b4027dd8 <col:3> 'void (T *)' Function 0x7fe2b4026410 'test' 'void (T *)'
+|     `-UnaryOperator 0x7fe2b4027e28 <col:9, col:10> 'T *' prefix '&'
+|       `-DeclRefExpr 0x7fe2b4027e00 <col:10> 'T':'T' lvalue Var 0x7fe2b4026658 't' 'T':'T'
+|-FunctionDecl 0x7fe2b4027fa8 <line:36:1, line:42:1> line:37:1 bar 'void (void)'
+| `-CompoundStmt 0x7fe2b40289e8 <line:38:1, line:42:1>
+|   |-DeclStmt 0x7fe2b4028918 <line:39:3, line:40:62>
+|   | `-VarDecl 0x7fe2b4028050 <line:39:3, line:40:61> line:39:5 used t 'T':'T' cinit
+|   |   `-ImplicitCastExpr 0x7fe2b4028900 <col:9, line:40:61> 'T':'T' <LValueToRValue>
+|   |     `-CompoundLiteralExpr 0x7fe2b40288d8 <line:39:9, line:40:61> 'T':'T' lvalue
+|   |       `-InitListExpr 0x7fe2b4028768 <line:39:13, line:40:61> 'T':'T' field Field 0x7fe2b4026000 'c' 'struct C':'struct C'
+|   |         `-InitListExpr 0x7fe2b40287b0 <line:39:15, line:40:59> 'struct C':'struct C'
+|   |           |-InitListExpr 0x7fe2b4028800 <line:39:17, col:55> 'struct B':'struct B'
+|   |           | |-InitListExpr 0x7fe2b4028850 <col:19, col:29> 'struct A':'struct A'
+|   |           | | |-IntegerLiteral 0x7fe2b40280c0 <col:21> 'int' 0
+|   |           | | |-IntegerLiteral 0x7fe2b40280e0 <col:24> 'int' 0
+|   |           | | `-IntegerLiteral 0x7fe2b4028100 <col:27> 'int' 0
+|   |           | `-ImplicitCastExpr 0x7fe2b40288a8 <col:32, col:53> 'struct A':'struct A' <LValueToRValue>
+|   |           |   `-CompoundLiteralExpr 0x7fe2b40282a8 <col:32, col:53> 'struct A':'struct A' lvalue
+|   |           |     `-InitListExpr 0x7fe2b4028250 <col:43, col:53> 'struct A':'struct A'
+|   |           |       |-IntegerLiteral 0x7fe2b4028198 <col:45> 'int' 0
+|   |           |       |-IntegerLiteral 0x7fe2b40281b8 <col:48> 'int' 0
+|   |           |       `-IntegerLiteral 0x7fe2b40281d8 <col:51> 'int' 0
+|   |           `-ImplicitCastExpr 0x7fe2b40288c0 <line:40:8, col:57> 'struct B':'struct B' <LValueToRValue>
+|   |             `-CompoundLiteralExpr 0x7fe2b4028678 <col:8, col:57> 'struct B':'struct B' lvalue
+|   |               `-InitListExpr 0x7fe2b40285b8 <col:19, col:57> 'struct B':'struct B'
+|   |                 |-ImplicitCastExpr 0x7fe2b4028608 <col:21, col:42> 'struct A':'struct A' <LValueToRValue>
+|   |                 | `-CompoundLiteralExpr 0x7fe2b4028470 <col:21, col:42> 'struct A':'struct A' lvalue
+|   |                 |   `-InitListExpr 0x7fe2b4028418 <col:32, col:42> 'struct A':'struct A'
+|   |                 |     |-IntegerLiteral 0x7fe2b4028360 <col:34> 'int' 0
+|   |                 |     |-IntegerLiteral 0x7fe2b4028380 <col:37> 'int' 0
+|   |                 |     `-IntegerLiteral 0x7fe2b40283a0 <col:40> 'int' 0
+|   |                 `-InitListExpr 0x7fe2b4028620 <col:45, col:55> 'struct A':'struct A'
+|   |                   |-IntegerLiteral 0x7fe2b4028498 <col:47> 'int' 0
+|   |                   |-IntegerLiteral 0x7fe2b40284b8 <col:50> 'int' 0
+|   |                   `-IntegerLiteral 0x7fe2b40284d8 <col:53> 'int' 0
+|   `-CallExpr 0x7fe2b40289b8 <line:41:3, col:11> 'void'
+|     |-ImplicitCastExpr 0x7fe2b40289a0 <col:3> 'void (*)(T *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe2b4028930 <col:3> 'void (T *)' Function 0x7fe2b4026410 'test' 'void (T *)'
+|     `-UnaryOperator 0x7fe2b4028980 <col:9, col:10> 'T *' prefix '&'
+|       `-DeclRefExpr 0x7fe2b4028958 <col:10> 'T':'T' lvalue Var 0x7fe2b4028050 't' 'T':'T'
+`-FunctionDecl 0x7fe2b4028aa0 <line:44:1, line:50:1> line:45:1 baz 'void (void)'
+  `-CompoundStmt 0x7fe2b40294e0 <line:46:1, line:50:1>
+    |-DeclStmt 0x7fe2b4029410 <line:47:3, line:48:62>
+    | `-VarDecl 0x7fe2b4028b48 <line:47:3, line:48:61> line:47:5 used t 'T':'T' cinit
+    |   `-ImplicitCastExpr 0x7fe2b40293f8 <col:9, line:48:61> 'T':'T' <LValueToRValue>
+    |     `-CompoundLiteralExpr 0x7fe2b40293d0 <line:47:9, line:48:61> 'T':'T' lvalue
+    |       `-InitListExpr 0x7fe2b4029260 <line:47:13, line:48:61> 'T':'T' field Field 0x7fe2b4026000 'c' 'struct C':'struct C'
+    |         `-InitListExpr 0x7fe2b40292a8 <line:47:15, line:48:59> 'struct C':'struct C'
+    |           |-InitListExpr 0x7fe2b40292f8 <line:47:17, col:55> 'struct B':'struct B'
+    |           | |-InitListExpr 0x7fe2b4029348 <col:19, col:29> 'struct A':'struct A'
+    |           | | |-IntegerLiteral 0x7fe2b4028bb8 <col:21> 'int' 0
+    |           | | |-IntegerLiteral 0x7fe2b4028bd8 <col:24> 'int' 0
+    |           | | `-IntegerLiteral 0x7fe2b4028bf8 <col:27> 'int' 0
+    |           | `-ImplicitCastExpr 0x7fe2b40293a0 <col:32, col:53> 'struct A':'struct A' <LValueToRValue>
+    |           |   `-CompoundLiteralExpr 0x7fe2b4028da0 <col:32, col:53> 'struct A':'struct A' lvalue
+    |           |     `-InitListExpr 0x7fe2b4028d48 <col:43, col:53> 'struct A':'struct A'
+    |           |       |-IntegerLiteral 0x7fe2b4028c90 <col:45> 'int' 1
+    |           |       |-IntegerLiteral 0x7fe2b4028cb0 <col:48> 'int' 1
+    |           |       `-IntegerLiteral 0x7fe2b4028cd0 <col:51> 'int' 1
+    |           `-ImplicitCastExpr 0x7fe2b40293b8 <line:48:8, col:57> 'struct B':'struct B' <LValueToRValue>
+    |             `-CompoundLiteralExpr 0x7fe2b4029170 <col:8, col:57> 'struct B':'struct B' lvalue
+    |               `-InitListExpr 0x7fe2b40290b0 <col:19, col:57> 'struct B':'struct B'
+    |                 |-ImplicitCastExpr 0x7fe2b4029100 <col:21, col:42> 'struct A':'struct A' <LValueToRValue>
+    |                 | `-CompoundLiteralExpr 0x7fe2b4028f68 <col:21, col:42> 'struct A':'struct A' lvalue
+    |                 |   `-InitListExpr 0x7fe2b4028f10 <col:32, col:42> 'struct A':'struct A'
+    |                 |     |-IntegerLiteral 0x7fe2b4028e58 <col:34> 'int' 0
+    |                 |     |-IntegerLiteral 0x7fe2b4028e78 <col:37> 'int' 0
+    |                 |     `-IntegerLiteral 0x7fe2b4028e98 <col:40> 'int' 0
+    |                 `-InitListExpr 0x7fe2b4029118 <col:45, col:55> 'struct A':'struct A'
+    |                   |-IntegerLiteral 0x7fe2b4028f90 <col:47> 'int' 1
+    |                   |-IntegerLiteral 0x7fe2b4028fb0 <col:50> 'int' 1
+    |                   `-IntegerLiteral 0x7fe2b4028fd0 <col:53> 'int' 1
+    `-CallExpr 0x7fe2b40294b0 <line:49:3, col:11> 'void'
+      |-ImplicitCastExpr 0x7fe2b4029498 <col:3> 'void (*)(T *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe2b4029428 <col:3> 'void (T *)' Function 0x7fe2b4026410 'test' 'void (T *)'
+      `-UnaryOperator 0x7fe2b4029478 <col:9, col:10> 'T *' prefix '&'
+        `-DeclRefExpr 0x7fe2b4029450 <col:10> 'T':'T' lvalue Var 0x7fe2b4028b48 't' 'T':'T'

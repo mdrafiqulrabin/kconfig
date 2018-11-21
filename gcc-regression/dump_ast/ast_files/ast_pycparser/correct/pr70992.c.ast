@@ -1,0 +1,127 @@
+FileAST: 
+  Typedef: uint32_t, [], ['typedef']
+    TypeDecl: uint32_t, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: int32_t, [], ['typedef']
+    TypeDecl: int32_t, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: so, [], [], []
+            TypeDecl: so, []
+              IdentifierType: ['uint32_t']
+        TypeDecl: fn, []
+          IdentifierType: ['uint32_t']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          BinaryOp: +
+            ID: so
+            ID: so
+          BinaryOp: +
+            BinaryOp: /
+              Constant: int, 0x80000000
+              Constant: int, 0
+            Constant: int, 1
+  FuncDef: 
+    Decl: fn5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: so, [], [], []
+            TypeDecl: so, []
+              IdentifierType: ['uint32_t']
+        TypeDecl: fn5, []
+          IdentifierType: ['uint32_t']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          BinaryOp: +
+            BinaryOp: /
+              Constant: int, 0x80000000
+              Constant: int, 0
+            Constant: int, 1
+          BinaryOp: +
+            ID: so
+            ID: so
+  FuncDef: 
+    Decl: fn6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: so, [], [], []
+            TypeDecl: so, []
+              IdentifierType: ['uint32_t']
+        TypeDecl: fn6, []
+          IdentifierType: ['uint32_t']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          BinaryOp: -
+            BinaryOp: /
+              Constant: int, 0x80000000
+              Constant: int, 0
+            Constant: int, 1
+          BinaryOp: +
+            ID: so
+            ID: so
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: so, [], [], []
+            TypeDecl: so, []
+              IdentifierType: ['uint32_t']
+        TypeDecl: fn2, []
+          IdentifierType: ['uint32_t']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          BinaryOp: +
+            ID: so
+            ID: so
+          BinaryOp: -
+            BinaryOp: /
+              Constant: int, 0x80000000
+              Constant: int, 0
+            Constant: int, 1
+  FuncDef: 
+    Decl: fn3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: so, [], [], []
+            TypeDecl: so, []
+              IdentifierType: ['int32_t']
+        TypeDecl: fn3, []
+          IdentifierType: ['int32_t']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          BinaryOp: +
+            ID: so
+            ID: so
+          BinaryOp: +
+            BinaryOp: /
+              Constant: int, 0x80000000
+              Constant: int, 0
+            Constant: int, 1
+  FuncDef: 
+    Decl: fn4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: so, [], [], []
+            TypeDecl: so, []
+              IdentifierType: ['int32_t']
+        TypeDecl: fn4, []
+          IdentifierType: ['int32_t']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          BinaryOp: +
+            ID: so
+            ID: so
+          BinaryOp: -
+            BinaryOp: /
+              Constant: int, 0x80000000
+              Constant: int, 0
+            Constant: int, 1

@@ -1,0 +1,64 @@
+TranslationUnitDecl 0x7fc7810264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc781026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc781026740 '__int128'
+|-TypedefDecl 0x7fc781026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc781026760 'unsigned __int128'
+|-TypedefDecl 0x7fc781026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc781026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc781026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc781026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc781026dc0 'char *'
+|   `-BuiltinType 0x7fc781026560 'char'
+|-TypedefDecl 0x7fc7810270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc781027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc781026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc781026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc781825a30 <c_files/pr53663-2.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc781825ac8 prev 0x7fc781825a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fc781825b60 <line:5:1, line:9:1> line:5:7 union u definition
+| |-FieldDecl 0x7fc781825c28 <line:7:3, col:7> col:7 referenced i 'int'
+| `-FieldDecl 0x7fc781825c88 <line:8:3, col:9> col:9 referenced f 'short'
+|-VarDecl 0x7fc781825d20 <line:5:1, line:9:3> col:3 used v 'union u':'union u'
+|-FunctionDecl 0x7fc781825ee8 <line:11:1, line:17:1> line:11:7 used foo 'short (short *)'
+| |-ParmVarDecl 0x7fc781825e20 <col:12, col:19> col:19 used f 'short *'
+| `-CompoundStmt 0x7fc781826290 <line:12:1, line:17:1>
+|   |-BinaryOperator 0x7fc781826020 <line:13:3, col:8> 'short' '='
+|   | |-UnaryOperator 0x7fc781825fc8 <col:3, col:4> 'short' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7fc781825fb0 <col:4> 'short *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fc781825f88 <col:4> 'short *' lvalue ParmVar 0x7fc781825e20 'f' 'short *'
+|   | `-ImplicitCastExpr 0x7fc781826008 <col:8> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fc781825fe8 <col:8> 'int' 1
+|   |-BinaryOperator 0x7fc7818260c8 <line:14:3, col:9> 'int' '='
+|   | |-MemberExpr 0x7fc781826070 <col:3, col:5> 'int' lvalue .i 0x7fc781825c28
+|   | | `-DeclRefExpr 0x7fc781826048 <col:3> 'union u':'union u' lvalue Var 0x7fc781825d20 'v' 'union u':'union u'
+|   | `-IntegerLiteral 0x7fc7818260a8 <col:9> 'int' 0
+|   |-BinaryOperator 0x7fc7818261d8 <line:15:3, col:9> 'short' '='
+|   | |-MemberExpr 0x7fc781826168 <col:3, col:5> 'short' lvalue .f 0x7fc781825c88
+|   | | `-DeclRefExpr 0x7fc781826140 <col:3> 'union u':'union u' lvalue Var 0x7fc781825d20 'v' 'union u':'union u'
+|   | `-ImplicitCastExpr 0x7fc7818261c0 <col:9> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fc7818261a0 <col:9> 'int' 0
+|   `-ReturnStmt 0x7fc781826278 <line:16:3, col:11>
+|     `-ImplicitCastExpr 0x7fc781826260 <col:10, col:11> 'short' <LValueToRValue>
+|       `-UnaryOperator 0x7fc781826240 <col:10, col:11> 'short' lvalue prefix '*'
+|         `-ImplicitCastExpr 0x7fc781826228 <col:11> 'short *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fc781826200 <col:11> 'short *' lvalue ParmVar 0x7fc781825e20 'f' 'short *'
+`-FunctionDecl 0x7fc781826320 <line:19:1, line:24:1> line:19:5 main 'int ()'
+  `-CompoundStmt 0x7fc781826638 <line:20:1, line:24:1>
+    |-IfStmt 0x7fc7818265c8 <line:21:3, line:22:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc781826508 <line:21:7, col:21> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fc7818264f0 <col:7, col:16> 'int' <IntegralCast>
+    | | | `-CallExpr 0x7fc7818264a0 <col:7, col:16> 'short'
+    | | |   |-ImplicitCastExpr 0x7fc781826488 <col:7> 'short (*)(short *)' <FunctionToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7fc7818263b8 <col:7> 'short (short *)' Function 0x7fc781825ee8 'foo' 'short (short *)'
+    | | |   `-UnaryOperator 0x7fc781826440 <col:12, col:15> 'short *' prefix '&'
+    | | |     `-MemberExpr 0x7fc781826408 <col:13, col:15> 'short' lvalue .f 0x7fc781825c88
+    | | |       `-DeclRefExpr 0x7fc7818263e0 <col:13> 'union u':'union u' lvalue Var 0x7fc781825d20 'v' 'union u':'union u'
+    | | `-IntegerLiteral 0x7fc7818264d0 <col:21> 'int' 0
+    | |-CallExpr 0x7fc7818265a0 <line:22:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc781826588 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc781826530 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc781825ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc781826620 <line:23:3, col:10>
+      `-IntegerLiteral 0x7fc781826600 <col:10> 'int' 0

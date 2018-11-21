@@ -1,0 +1,51 @@
+FileAST: 
+  FuncDef: 
+    Decl: XdmcpUnwrap, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: output, [], [], []
+            PtrDecl: []
+              TypeDecl: output, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['int']
+        TypeDecl: XdmcpUnwrap, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: blocks, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: blocks, []
+              IdentifierType: ['unsigned', 'char']
+            Constant: int, 8
+          Constant: int, 2
+      Assignment: =
+        ID: k
+        TernaryOp: 
+          BinaryOp: ==
+            ID: k
+            Constant: int, 0
+          Constant: int, 1
+          Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 8
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: output
+            ID: i
+          ArrayRef: 
+            ArrayRef: 
+              ID: blocks
+              ID: k
+            ID: i

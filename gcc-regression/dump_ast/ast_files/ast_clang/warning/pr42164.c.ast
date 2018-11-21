@@ -1,0 +1,110 @@
+c_files/pr42164.c:22:43: warning: implicit declaration of function 'swp_offset' is invalid in C99 [-Wimplicit-function-declaration]
+  arch_entry = (swp_entry_t){mk_swap_pte (swp_offset (entry)).pte};
+                                          ^
+c_files/pr42164.c:23:3: warning: implicit declaration of function '__BUG_ON' is invalid in C99 [-Wimplicit-function-declaration]
+  __BUG_ON ((unsigned long) pte_file ((pte_t) {arch_entry.val}));
+  ^
+2 warnings generated.
+TranslationUnitDecl 0x7f86e98264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f86e9826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f86e9826740 '__int128'
+|-TypedefDecl 0x7f86e9826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f86e9826760 'unsigned __int128'
+|-TypedefDecl 0x7f86e9826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f86e9826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f86e9826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f86e9826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f86e9826dc0 'char *'
+|   `-BuiltinType 0x7f86e9826560 'char'
+|-TypedefDecl 0x7f86e98270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f86e9827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f86e9826ee0 'struct __va_list_tag'
+|     `-Record 0x7f86e9826e58 '__va_list_tag'
+|-RecordDecl 0x7f86e9827120 <c_files/pr42164.c:1:9, line:4:1> line:1:9 struct definition
+| `-FieldDecl 0x7f86ea025a00 <line:3:3, col:22> col:22 referenced pte 'unsigned long long'
+|-TypedefDecl 0x7f86ea025aa0 <line:1:1, line:4:3> col:3 referenced pte_t 'struct pte_t':'pte_t'
+| `-ElaboratedType 0x7f86ea025a50 'struct pte_t' sugar
+|   `-RecordType 0x7f86e98271b0 'pte_t'
+|     `-Record 0x7f86e9827120 ''
+|-FunctionDecl 0x7f86ea025c50 <line:5:1, line:10:1> line:5:7 used mk_swap_pte 'pte_t (unsigned long)'
+| |-ParmVarDecl 0x7f86ea025b48 <col:20, col:34> col:34 used offset 'unsigned long'
+| `-CompoundStmt 0x7f86ea025fa0 <line:6:1, line:10:1>
+|   |-DeclStmt 0x7f86ea025da0 <line:7:3, col:12>
+|   | `-VarDecl 0x7f86ea025d40 <col:3, col:9> col:9 used pte 'pte_t':'pte_t'
+|   |-BinaryOperator 0x7f86ea025ed8 <line:8:3, col:26> 'unsigned long long' '='
+|   | |-MemberExpr 0x7f86ea025de0 <col:3, col:7> 'unsigned long long' lvalue .pte 0x7f86ea025a00
+|   | | `-DeclRefExpr 0x7f86ea025db8 <col:3> 'pte_t':'pte_t' lvalue Var 0x7f86ea025d40 'pte' 'pte_t':'pte_t'
+|   | `-ImplicitCastExpr 0x7f86ea025ec0 <col:13, col:26> 'unsigned long long' <IntegralCast>
+|   |   `-ParenExpr 0x7f86ea025ea0 <col:13, col:26> 'unsigned long'
+|   |     `-BinaryOperator 0x7f86ea025e78 <col:14, col:24> 'unsigned long' '<<'
+|   |       |-ImplicitCastExpr 0x7f86ea025e60 <col:14> 'unsigned long' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7f86ea025e18 <col:14> 'unsigned long' lvalue ParmVar 0x7f86ea025b48 'offset' 'unsigned long'
+|   |       `-IntegerLiteral 0x7f86ea025e40 <col:24> 'int' 40
+|   `-ReturnStmt 0x7f86ea025f88 <line:9:3, col:10>
+|     `-ImplicitCastExpr 0x7f86ea025f70 <col:10> 'pte_t':'pte_t' <LValueToRValue>
+|       `-DeclRefExpr 0x7f86ea025f48 <col:10> 'pte_t':'pte_t' lvalue Var 0x7f86ea025d40 'pte' 'pte_t':'pte_t'
+|-FunctionDecl 0x7f86ea0260e8 <line:11:1, line:14:1> line:11:5 used pte_file 'int (pte_t)'
+| |-ParmVarDecl 0x7f86ea025fe0 <col:15, col:21> col:21 used pte 'pte_t':'pte_t'
+| `-CompoundStmt 0x7f86ea0262f8 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7f86ea0262e0 <line:13:3, col:27>
+|     `-ImplicitCastExpr 0x7f86ea0262c8 <col:10, col:27> 'int' <IntegralCast>
+|       `-BinaryOperator 0x7f86ea0262a0 <col:10, col:27> 'unsigned long long' '&'
+|         |-ImplicitCastExpr 0x7f86ea026270 <col:10, col:14> 'unsigned long long' <LValueToRValue>
+|         | `-MemberExpr 0x7f86ea0261b0 <col:10, col:14> 'unsigned long long' lvalue .pte 0x7f86ea025a00
+|         |   `-DeclRefExpr 0x7f86ea026188 <col:10> 'pte_t':'pte_t' lvalue ParmVar 0x7f86ea025fe0 'pte' 'pte_t':'pte_t'
+|         `-ImplicitCastExpr 0x7f86ea026288 <col:20, col:27> 'unsigned long long' <IntegralCast>
+|           `-ParenExpr 0x7f86ea026250 <col:20, col:27> 'int'
+|             `-BinaryOperator 0x7f86ea026228 <col:21, col:26> 'int' '<<'
+|               |-IntegerLiteral 0x7f86ea0261e8 <col:21> 'int' 1
+|               `-IntegerLiteral 0x7f86ea026208 <col:26> 'int' 4
+|-RecordDecl 0x7f86ea026318 <line:15:9, line:18:1> line:15:9 struct definition
+| `-FieldDecl 0x7f86ea0263d8 <line:17:3, col:17> col:17 referenced val 'unsigned long'
+|-TypedefDecl 0x7f86ea026470 <line:15:1, line:18:3> col:3 referenced swp_entry_t 'struct swp_entry_t':'swp_entry_t'
+| `-ElaboratedType 0x7f86ea026420 'struct swp_entry_t' sugar
+|   `-RecordType 0x7f86ea0263a0 'swp_entry_t'
+|     `-Record 0x7f86ea026318 ''
+|-FunctionDecl 0x7f86ea026610 <line:19:1, line:25:1> line:19:7 swp_entry_to_pte 'pte_t (swp_entry_t)'
+| |-ParmVarDecl 0x7f86ea026510 <col:25, col:37> col:37 used entry 'swp_entry_t':'swp_entry_t'
+| `-CompoundStmt 0x7f86ea0280f0 <line:20:1, line:25:1>
+|   |-DeclStmt 0x7f86ea026720 <line:21:3, col:25>
+|   | `-VarDecl 0x7f86ea0266c0 <col:3, col:15> col:15 used arch_entry 'swp_entry_t':'swp_entry_t'
+|   |-BinaryOperator 0x7f86ea027b48 <line:22:3, col:66> 'swp_entry_t':'swp_entry_t' '='
+|   | |-DeclRefExpr 0x7f86ea026738 <col:3> 'swp_entry_t':'swp_entry_t' lvalue Var 0x7f86ea0266c0 'arch_entry' 'swp_entry_t':'swp_entry_t'
+|   | `-ImplicitCastExpr 0x7f86ea027b30 <col:16, col:66> 'swp_entry_t':'swp_entry_t' <LValueToRValue>
+|   |   `-CompoundLiteralExpr 0x7f86ea027b08 <col:16, col:66> 'swp_entry_t':'swp_entry_t' lvalue
+|   |     `-InitListExpr 0x7f86ea027aa8 <col:29, col:66> 'swp_entry_t':'swp_entry_t'
+|   |       `-ImplicitCastExpr 0x7f86ea027af0 <col:30, col:63> 'unsigned long' <IntegralCast>
+|   |         `-MemberExpr 0x7f86ea027a28 <col:30, col:63> 'unsigned long long' .pte 0x7f86ea025a00
+|   |           `-CallExpr 0x7f86ea0269e0 <col:30, col:61> 'pte_t':'pte_t'
+|   |             |-ImplicitCastExpr 0x7f86ea0269c8 <col:30> 'pte_t (*)(unsigned long)' <FunctionToPointerDecay>
+|   |             | `-DeclRefExpr 0x7f86ea026770 <col:30> 'pte_t (unsigned long)' Function 0x7f86ea025c50 'mk_swap_pte' 'pte_t (unsigned long)'
+|   |             `-ImplicitCastExpr 0x7f86ea027a10 <col:43, col:60> 'unsigned long' <IntegralCast>
+|   |               `-CallExpr 0x7f86ea026920 <col:43, col:60> 'int'
+|   |                 |-ImplicitCastExpr 0x7f86ea026908 <col:43> 'int (*)()' <FunctionToPointerDecay>
+|   |                 | `-DeclRefExpr 0x7f86ea026888 <col:43> 'int ()' Function 0x7f86ea0267f0 'swp_offset' 'int ()'
+|   |                 `-ImplicitCastExpr 0x7f86ea026950 <col:55> 'swp_entry_t':'swp_entry_t' <LValueToRValue>
+|   |                   `-DeclRefExpr 0x7f86ea0268b0 <col:55> 'swp_entry_t':'swp_entry_t' lvalue ParmVar 0x7f86ea026510 'entry' 'swp_entry_t':'swp_entry_t'
+|   |-CallExpr 0x7f86ea027ef0 <line:23:3, col:64> 'int'
+|   | |-ImplicitCastExpr 0x7f86ea027ed8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f86ea027c30 <col:3> 'int ()' Function 0x7f86ea027b98 '__BUG_ON' 'int ()'
+|   | `-CStyleCastExpr 0x7f86ea027eb0 <col:13, col:63> 'unsigned long' <IntegralCast>
+|   |   `-CallExpr 0x7f86ea027e50 <col:29, col:63> 'int'
+|   |     |-ImplicitCastExpr 0x7f86ea027e38 <col:29> 'int (*)(pte_t)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f86ea027c58 <col:29> 'int (pte_t)' Function 0x7f86ea0260e8 'pte_file' 'int (pte_t)'
+|   |     `-ImplicitCastExpr 0x7f86ea027e80 <col:39, col:62> 'pte_t':'pte_t' <LValueToRValue>
+|   |       `-CompoundLiteralExpr 0x7f86ea027db0 <col:39, col:62> 'pte_t':'pte_t' lvalue
+|   |         `-InitListExpr 0x7f86ea027d38 <col:47, col:62> 'pte_t':'pte_t'
+|   |           `-ImplicitCastExpr 0x7f86ea027d98 <col:48, col:59> 'unsigned long long' <IntegralCast>
+|   |             `-ImplicitCastExpr 0x7f86ea027d80 <col:48, col:59> 'unsigned long' <LValueToRValue>
+|   |               `-MemberExpr 0x7f86ea027cb8 <col:48, col:59> 'unsigned long' lvalue .val 0x7f86ea0263d8
+|   |                 `-DeclRefExpr 0x7f86ea027c90 <col:48> 'swp_entry_t':'swp_entry_t' lvalue Var 0x7f86ea0266c0 'arch_entry' 'swp_entry_t':'swp_entry_t'
+|   `-ReturnStmt 0x7f86ea0280d8 <line:24:3, col:33>
+|     `-ImplicitCastExpr 0x7f86ea0280c0 <col:10, col:33> 'pte_t':'pte_t' <LValueToRValue>
+|       `-CompoundLiteralExpr 0x7f86ea028098 <col:10, col:33> 'pte_t':'pte_t' lvalue
+|         `-InitListExpr 0x7f86ea028020 <col:18, col:33> 'pte_t':'pte_t'
+|           `-ImplicitCastExpr 0x7f86ea028080 <col:19, col:30> 'unsigned long long' <IntegralCast>
+|             `-ImplicitCastExpr 0x7f86ea028068 <col:19, col:30> 'unsigned long' <LValueToRValue>
+|               `-MemberExpr 0x7f86ea027fa0 <col:19, col:30> 'unsigned long' lvalue .val 0x7f86ea0263d8
+|                 `-DeclRefExpr 0x7f86ea027f78 <col:19> 'swp_entry_t':'swp_entry_t' lvalue Var 0x7f86ea0266c0 'arch_entry' 'swp_entry_t':'swp_entry_t'
+|-FunctionDecl 0x7f86ea0267f0 <<invalid sloc>> line:22:43 implicit used swp_offset 'int ()'
+`-FunctionDecl 0x7f86ea027b98 <<invalid sloc>> line:23:3 implicit used __BUG_ON 'int ()'

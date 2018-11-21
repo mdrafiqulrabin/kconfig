@@ -1,0 +1,130 @@
+FileAST: 
+  Decl: colormap, [], [], []
+    ArrayDecl: []
+      TypeDecl: colormap, []
+        IdentifierType: ['int']
+      Constant: int, 10
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: img, [], [], []
+            PtrDecl: []
+              TypeDecl: img, []
+                IdentifierType: ['int']
+          Decl: fp, [], [], []
+            TypeDecl: fp, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+          Decl: ptr, [], [], []
+            PtrDecl: []
+              TypeDecl: ptr, []
+                IdentifierType: ['int']
+          Decl: depth, [], [], []
+            TypeDecl: depth, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: t, [], [], []
+            TypeDecl: t, []
+              IdentifierType: ['int']
+          Decl: xm, [], [], []
+            TypeDecl: xm, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Decl: color, [], [], []
+        TypeDecl: color, []
+          IdentifierType: ['int']
+      Decl: count, [], [], []
+        TypeDecl: count, []
+          IdentifierType: ['int']
+      For: 
+        ID: y
+        UnaryOp: p--
+          ID: y
+        Compound: 
+          If: 
+            ID: depth
+            Compound: 
+              Assignment: =
+                ID: count
+                FuncCall: 
+                  ID: bar
+              For: 
+                Assignment: =
+                  ID: x
+                  ID: xm
+                ID: x
+                UnaryOp: p--
+                  ID: x
+                Compound: 
+                  If: 
+                    BinaryOp: !=
+                      ID: c
+                      Constant: int, 1
+                    Assignment: =
+                      ID: count
+                      Assignment: =
+                        ID: color
+                        UnaryOp: -
+                          Constant: int, 1
+                  If: 
+                    BinaryOp: ==
+                      ID: count
+                      Constant: int, 0
+                    Assignment: =
+                      ID: color
+                      Assignment: =
+                        ID: count
+                        FuncCall: 
+                          ID: bar
+                  If: 
+                    ID: color
+                    Assignment: =
+                      ID: t
+                      FuncCall: 
+                        ID: bar
+                        ExprList: 
+                          ID: fp
+                  Assignment: =
+                    UnaryOp: *
+                      UnaryOp: p++
+                        ID: ptr
+                    ArrayRef: 
+                      ID: colormap
+                      ID: t
+          Switch: 
+            UnaryOp: *
+              ID: img
+            Compound: 
+              Case: 
+                Constant: int, 1
+                FuncCall: 
+                  ID: bar
+              Case: 
+                Constant: int, 3
+              Case: 
+                UnaryOp: -
+                  Constant: int, 1
+              Case: 
+                UnaryOp: -
+                  Constant: int, 3
+                FuncCall: 
+                  ID: bar
+              Case: 
+                UnaryOp: -
+                  Constant: int, 4
+                FuncCall: 
+                  ID: bar

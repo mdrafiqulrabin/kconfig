@@ -1,0 +1,85 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    PtrDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['int']
+    UnaryOp: &
+      ID: c
+  Decl: e, [], [], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+    UnaryOp: &
+      ID: d
+  Decl: g, [], [], []
+    PtrDecl: []
+      TypeDecl: g, []
+        IdentifierType: ['int']
+    UnaryOp: &
+      ID: a
+  Decl: b, [], ['static'], []
+    PtrDecl: []
+      PtrDecl: []
+        PtrDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+  Decl: f, [], ['static'], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    UnaryOp: &
+      ID: d
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          UnaryOp: *
+            ID: f
+        Constant: int, 0
+      Decl: h, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: h, []
+                  IdentifierType: ['int']
+        Constant: int, 0
+      If: 
+        ID: c
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              ID: h
+            UnaryOp: &
+              ID: e
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: *
+                UnaryOp: *
+                  ID: b
+            Constant: int, 0
+      Assignment: =
+        UnaryOp: *
+          ID: e
+        ID: g
+      If: 
+        BinaryOp: !=
+          ID: d
+          UnaryOp: &
+            ID: a
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

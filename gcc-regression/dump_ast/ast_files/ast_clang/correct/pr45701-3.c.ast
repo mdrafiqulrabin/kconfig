@@ -1,0 +1,92 @@
+TranslationUnitDecl 0x7fd216825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd216826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd216825d40 '__int128'
+|-TypedefDecl 0x7fd216826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd216825d60 'unsigned __int128'
+|-TypedefDecl 0x7fd216826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd216826170 'struct __NSConstantString_tag'
+|   `-Record 0x7fd2168260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd216826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd2168263c0 'char *'
+|   `-BuiltinType 0x7fd216825b60 'char'
+|-TypedefDecl 0x7fd2168266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd216826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd2168264e0 'struct __va_list_tag'
+|     `-Record 0x7fd216826458 '__va_list_tag'
+|-VarDecl 0x7fd216826738 <c_files/pr45701-3.c:7:1, col:12> col:12 used hist_verify 'int' extern
+|-FunctionDecl 0x7fd2160264c8 <line:8:1, col:37> col:14 used pre_process_line 'char *(char *)' extern
+| `-ParmVarDecl 0x7fd216026400 <col:32, col:36> col:37 'char *'
+|-FunctionDecl 0x7fd2160267e8 <line:9:1, col:49> col:14 used savestring1 'char *(char *, char *, int, int)' extern
+| |-ParmVarDecl 0x7fd216026580 <col:27, col:31> col:32 'char *'
+| |-ParmVarDecl 0x7fd2160265f8 <col:34, col:38> col:39 'char *'
+| |-ParmVarDecl 0x7fd216026670 <col:41> col:44 'int'
+| `-ParmVarDecl 0x7fd2160266e8 <col:46> col:49 'int'
+|-FunctionDecl 0x7fd216026a08 <line:10:1, col:35> col:14 used str_cpy 'char *(char *, char *)' extern
+| |-ParmVarDecl 0x7fd2160268b8 <col:23, col:27> col:28 'char *'
+| `-ParmVarDecl 0x7fd216026930 <col:30, col:34> col:35 'char *'
+|-FunctionDecl 0x7fd216026b98 <line:11:1, col:26> col:12 used str_len 'int (char *)' extern
+| `-ParmVarDecl 0x7fd216026ac8 <col:21, col:25> col:26 'char *'
+|-FunctionDecl 0x7fd216026d18 <line:12:1, col:27> col:14 used x_malloc 'char *(int)' extern
+| `-ParmVarDecl 0x7fd216026c50 <col:24> col:27 'int'
+`-FunctionDecl 0x7fd216026e60 <line:15:1, line:28:1> line:16:1 history_expand_line_internal 'char *(char *)'
+  |-ParmVarDecl 0x7fd216026dd0 <col:31, col:37> col:37 used line 'char *'
+  `-CompoundStmt 0x7fd217000598 <line:17:1, line:28:1>
+    |-DeclStmt 0x7fd216026f78 <line:18:3, col:17>
+    | `-VarDecl 0x7fd216026f18 <col:3, col:9> col:9 used new_line 'char *'
+    |-DeclStmt 0x7fd216027008 <line:19:3, col:17>
+    | `-VarDecl 0x7fd216026fa8 <col:3, col:7> col:7 used old_verify 'int'
+    |-BinaryOperator 0x7fd216027088 <line:21:3, col:16> 'int' '='
+    | |-DeclRefExpr 0x7fd216027020 <col:3> 'int' lvalue Var 0x7fd216026fa8 'old_verify' 'int'
+    | `-ImplicitCastExpr 0x7fd216027070 <col:16> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd216027048 <col:16> 'int' lvalue Var 0x7fd216826738 'hist_verify' 'int'
+    |-BinaryOperator 0x7fd2160270f8 <line:22:3, col:17> 'int' '='
+    | |-DeclRefExpr 0x7fd2160270b0 <col:3> 'int' lvalue Var 0x7fd216826738 'hist_verify' 'int'
+    | `-IntegerLiteral 0x7fd2160270d8 <col:17> 'int' 0
+    |-BinaryOperator 0x7fd216027228 <line:23:3, col:36> 'char *' '='
+    | |-DeclRefExpr 0x7fd216027120 <col:3> 'char *' lvalue Var 0x7fd216026f18 'new_line' 'char *'
+    | `-CallExpr 0x7fd2160271e0 <col:14, col:36> 'char *'
+    |   |-ImplicitCastExpr 0x7fd2160271c8 <col:14> 'char *(*)(char *)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fd216027148 <col:14> 'char *(char *)' Function 0x7fd2160264c8 'pre_process_line' 'char *(char *)'
+    |   `-ImplicitCastExpr 0x7fd216027210 <col:32> 'char *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fd216027170 <col:32> 'char *' lvalue ParmVar 0x7fd216026dd0 'line' 'char *'
+    |-BinaryOperator 0x7fd2160272b8 <line:24:3, col:17> 'int' '='
+    | |-DeclRefExpr 0x7fd216027250 <col:3> 'int' lvalue Var 0x7fd216826738 'hist_verify' 'int'
+    | `-ImplicitCastExpr 0x7fd2160272a0 <col:17> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd216027278 <col:17> 'int' lvalue Var 0x7fd216026fa8 'old_verify' 'int'
+    `-ReturnStmt 0x7fd217000580 <line:26:3, line:27:49>
+      `-ConditionalOperator 0x7fd217000550 <line:26:10, line:27:49> 'char *'
+        |-ParenExpr 0x7fd216027388 <line:26:10, col:27> 'int'
+        | `-BinaryOperator 0x7fd216027360 <col:11, col:23> 'int' '=='
+        |   |-ImplicitCastExpr 0x7fd216027330 <col:11> 'char *' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fd2160272e0 <col:11> 'char *' lvalue Var 0x7fd216026f18 'new_line' 'char *'
+        |   `-ImplicitCastExpr 0x7fd216027348 <col:23> 'char *' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd216027308 <col:23> 'char *' lvalue ParmVar 0x7fd216026dd0 'line' 'char *'
+        |-CStyleCastExpr 0x7fd217000288 <line:13:23, col:71> 'char *' <NoOp>
+        | `-CallExpr 0x7fd217000220 <col:31, col:71> 'char *'
+        |   |-ImplicitCastExpr 0x7fd217000208 <col:31> 'char *(*)(char *, char *)' <FunctionToPointerDecay>
+        |   | `-DeclRefExpr 0x7fd2160273a8 <col:31> 'char *(char *, char *)' Function 0x7fd216026a08 'str_cpy' 'char *(char *, char *)'
+        |   |-CallExpr 0x7fd217000160 <col:40, col:65> 'char *'
+        |   | |-ImplicitCastExpr 0x7fd217000148 <col:40> 'char *(*)(int)' <FunctionToPointerDecay>
+        |   | | `-DeclRefExpr 0x7fd2160273d0 <col:40> 'char *(int)' Function 0x7fd216026d18 'x_malloc' 'char *(int)'
+        |   | `-BinaryOperator 0x7fd2170000f8 <col:50, col:64> 'int' '+'
+        |   |   |-IntegerLiteral 0x7fd217000000 <col:50> 'int' 1
+        |   |   `-CallExpr 0x7fd2170000b0 <col:54, col:64> 'int'
+        |   |     |-ImplicitCastExpr 0x7fd217000098 <col:54> 'int (*)(char *)' <FunctionToPointerDecay>
+        |   |     | `-DeclRefExpr 0x7fd217000020 <col:54> 'int (char *)' Function 0x7fd216026b98 'str_len' 'int (char *)'
+        |   |     `-ImplicitCastExpr 0x7fd2170000e0 <line:26:43> 'char *' <LValueToRValue>
+        |   |       `-DeclRefExpr 0x7fd217000048 <col:43> 'char *' lvalue ParmVar 0x7fd216026dd0 'line' 'char *'
+        |   `-ImplicitCastExpr 0x7fd217000258 <line:13:68, col:70> 'char *' <LValueToRValue>
+        |     `-ParenExpr 0x7fd2170001b8 <col:68, col:70> 'char *' lvalue
+        |       `-DeclRefExpr 0x7fd217000190 <line:26:43> 'char *' lvalue ParmVar 0x7fd216026dd0 'line' 'char *'
+        `-CallExpr 0x7fd217000410 <line:27:5, col:49> 'char *'
+          |-ImplicitCastExpr 0x7fd2170003f8 <col:5> 'char *(*)(char *, char *, int, int)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fd2170002b0 <col:5> 'char *(char *, char *, int, int)' Function 0x7fd2160267e8 'savestring1' 'char *(char *, char *, int, int)'
+          |-ImplicitCastExpr 0x7fd217000458 <col:18> 'char *' <LValueToRValue>
+          | `-DeclRefExpr 0x7fd2170002d8 <col:18> 'char *' lvalue Var 0x7fd216026f18 'new_line' 'char *'
+          |-ImplicitCastExpr 0x7fd217000470 <col:28> 'char *' <LValueToRValue>
+          | `-DeclRefExpr 0x7fd217000300 <col:28> 'char *' lvalue ParmVar 0x7fd216026dd0 'line' 'char *'
+          |-IntegerLiteral 0x7fd217000328 <col:34> 'int' 0
+          `-BinaryOperator 0x7fd2170003a8 <col:37, col:48> 'int' '+'
+            |-ImplicitCastExpr 0x7fd217000390 <col:37> 'int' <LValueToRValue>
+            | `-DeclRefExpr 0x7fd217000348 <col:37> 'int' lvalue Var 0x7fd216026fa8 'old_verify' 'int'
+            `-IntegerLiteral 0x7fd217000370 <col:48> 'int' 1

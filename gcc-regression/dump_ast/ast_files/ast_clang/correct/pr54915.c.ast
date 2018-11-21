@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7fa33c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa33c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa33c826740 '__int128'
+|-TypedefDecl 0x7fa33c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa33c826760 'unsigned __int128'
+|-TypedefDecl 0x7fa33c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa33c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa33c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa33c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa33c826dc0 'char *'
+|   `-BuiltinType 0x7fa33c826560 'char'
+|-TypedefDecl 0x7fa33c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa33c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa33c826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa33c826e58 '__va_list_tag'
+|-TypedefDecl 0x7fa33c827178 <c_files/pr54915.c:4:1, col:16> col:16 referenced v2df '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7fa33c827140 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7fa33c8266e0 'double'
+|-TypedefDecl 0x7fa33d026a38 <line:5:1, col:16> col:16 referenced v4df '__attribute__((__vector_size__(4 * sizeof(double)))) double'
+| `-VectorType 0x7fa33d026a00 '__attribute__((__vector_size__(4 * sizeof(double)))) double' 4
+|   `-BuiltinType 0x7fa33c8266e0 'double'
+`-FunctionDecl 0x7fa33d026d20 <line:7:1, line:12:1> line:7:6 f 'void (v2df *, v4df *)'
+  |-ParmVarDecl 0x7fa33d026b18 <col:9, col:15> col:15 used ret 'v2df *'
+  |-ParmVarDecl 0x7fa33d026c08 <col:20, col:26> col:26 used xp 'v4df *'
+  `-CompoundStmt 0x7fa33d027208 <line:8:1, line:12:1>
+    |-DeclStmt 0x7fa33d026ef0 <line:9:3, col:15>
+    | `-VarDecl 0x7fa33d026e18 <col:3, col:13> col:8 used x 'v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double' cinit
+    |   `-ImplicitCastExpr 0x7fa33d026ed8 <col:12, col:13> 'v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double' <LValueToRValue>
+    |     `-UnaryOperator 0x7fa33d026eb8 <col:12, col:13> 'v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7fa33d026ea0 <col:13> 'v4df *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fa33d026e78 <col:13> 'v4df *' lvalue ParmVar 0x7fa33d026c08 'xp' 'v4df *'
+    |-DeclStmt 0x7fa33d027128 <line:10:3, col:27>
+    | `-VarDecl 0x7fa33d026f18 <col:3, col:26> col:8 used xx 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+    |   `-InitListExpr 0x7fa33d0270a8 <col:13, col:26> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |     |-ImplicitCastExpr 0x7fa33d0270f8 <col:15, col:18> 'double' <LValueToRValue>
+    |     | `-ArraySubscriptExpr 0x7fa33d026fc0 <col:15, col:18> 'double' lvalue vectorcomponent
+    |     |   |-DeclRefExpr 0x7fa33d026f78 <col:15> 'v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double' lvalue Var 0x7fa33d026e18 'x' 'v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+    |     |   `-IntegerLiteral 0x7fa33d026fa0 <col:17> 'int' 2
+    |     `-ImplicitCastExpr 0x7fa33d027110 <col:21, col:24> 'double' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7fa33d027030 <col:21, col:24> 'double' lvalue vectorcomponent
+    |         |-DeclRefExpr 0x7fa33d026fe8 <col:21> 'v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double' lvalue Var 0x7fa33d026e18 'x' 'v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+    |         `-IntegerLiteral 0x7fa33d027010 <col:23> 'int' 3
+    `-BinaryOperator 0x7fa33d0271e0 <line:11:3, col:10> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '='
+      |-UnaryOperator 0x7fa33d027180 <col:3, col:4> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fa33d027168 <col:4> 'v2df *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fa33d027140 <col:4> 'v2df *' lvalue ParmVar 0x7fa33d026b18 'ret' 'v2df *'
+      `-ImplicitCastExpr 0x7fa33d0271c8 <col:10> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+        `-DeclRefExpr 0x7fa33d0271a0 <col:10> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7fa33d026f18 'xx' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'

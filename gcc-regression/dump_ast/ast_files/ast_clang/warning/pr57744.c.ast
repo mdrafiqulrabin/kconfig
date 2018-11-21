@@ -1,0 +1,143 @@
+c_files/pr57744.c:23:17: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+  if (((smodel) == 0))
+       ~~~~~~~~~^~~~
+c_files/pr57744.c:23:17: note: remove extraneous parentheses around the comparison to silence this warning
+  if (((smodel) == 0))
+      ~         ^   ~
+c_files/pr57744.c:23:17: note: use '=' to turn this equality comparison into an assignment
+  if (((smodel) == 0))
+                ^~
+                =
+1 warning generated.
+TranslationUnitDecl 0x7f93918264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9391826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9391826740 '__int128'
+|-TypedefDecl 0x7f9391826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9391826760 'unsigned __int128'
+|-TypedefDecl 0x7f9391826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9391826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9391826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9391826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9391826dc0 'char *'
+|   `-BuiltinType 0x7f9391826560 'char'
+|-TypedefDecl 0x7f93918270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9391827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9391826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9391826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9392025a30 <c_files/pr57744.c:7:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9392025ac8 prev 0x7f9392025a30 <col:1, col:17> col:6 used abort 'void (void) __attribute__((noreturn))'
+|-TypedefDecl 0x7f9392025b88 <line:9:1, col:18> col:18 referenced U_16 'unsigned __int128'
+| |-BuiltinType 0x7f9391826760 'unsigned __int128'
+| `-ModeAttr 0x7f9392025bf0 <col:38, col:45> TI
+|-FunctionDecl 0x7f9392026008 <line:11:1, line:12:31> line:11:12 used libat_compare_exchange_16 'int (U_16 *, U_16 *, U_16, int, int)' extern
+| |-ParmVarDecl 0x7f9392025cc8 <col:39, col:44> col:45 'U_16 *'
+| |-ParmVarDecl 0x7f9392025d38 <col:47, col:52> col:53 'U_16 *'
+| |-ParmVarDecl 0x7f9392025da8 <col:55> col:59 'U_16':'unsigned __int128'
+| |-ParmVarDecl 0x7f9392025e20 <col:61> col:64 'int'
+| |-ParmVarDecl 0x7f9392025e98 <col:66> col:69 'int'
+| `-NoInlineAttr 0x7f93920260c8 <line:12:18>
+|-FunctionDecl 0x7f9392026428 prev 0x7f9392026008 <line:19:1, line:29:1> line:20:1 used libat_compare_exchange_16 'int (U_16 *, U_16 *, U_16, int, int)'
+| |-ParmVarDecl 0x7f9392026160 <col:28, col:34> col:34 used mptr 'U_16 *'
+| |-ParmVarDecl 0x7f93920261d0 <col:40, col:46> col:46 used eptr 'U_16 *'
+| |-ParmVarDecl 0x7f9392026240 <col:52, col:57> col:57 used newval 'U_16':'unsigned __int128'
+| |-ParmVarDecl 0x7f93920262b8 <line:21:10, col:14> col:14 used smodel 'int'
+| |-ParmVarDecl 0x7f9392026330 <col:22, col:26> col:26 fmodel 'int'
+| | `-UnusedAttr 0x7f9392026390 <col:48> unused
+| |-CompoundStmt 0x7f9392028f10 <line:22:1, line:29:1>
+| | `-IfStmt 0x7f9392028ed8 <line:23:3, line:28:68>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-ParenExpr 0x7f93920265d8 <line:23:7, col:21> 'int'
+| |   | `-BinaryOperator 0x7f93920265b0 <col:8, col:20> 'int' '=='
+| |   |   |-ImplicitCastExpr 0x7f9392026598 <col:8, col:15> 'int' <LValueToRValue>
+| |   |   | `-ParenExpr 0x7f9392026558 <col:8, col:15> 'int' lvalue
+| |   |   |   `-DeclRefExpr 0x7f9392026530 <col:9> 'int' lvalue ParmVar 0x7f93920262b8 'smodel' 'int'
+| |   |   `-IntegerLiteral 0x7f9392026578 <col:20> 'int' 0
+| |   |-ReturnStmt 0x7f9392026920 <line:24:5, col:68>
+| |   | `-ImplicitCastExpr 0x7f9392026908 <col:12, col:68> 'int' <IntegralCast>
+| |   |   `-AtomicExpr 0x7f93920268b8 <col:12, col:68> '_Bool'
+| |   |     |-ImplicitCastExpr 0x7f9392026858 <col:41> 'U_16 *' <LValueToRValue>
+| |   |     | `-DeclRefExpr 0x7f93920266e8 <col:41> 'U_16 *' lvalue ParmVar 0x7f9392026160 'mptr' 'U_16 *'
+| |   |     |-IntegerLiteral 0x7f9392026780 <col:64> 'int' 0
+| |   |     |-ImplicitCastExpr 0x7f9392026870 <col:47> 'U_16 *' <LValueToRValue>
+| |   |     | `-DeclRefExpr 0x7f9392026710 <col:47> 'U_16 *' lvalue ParmVar 0x7f93920261d0 'eptr' 'U_16 *'
+| |   |     |-IntegerLiteral 0x7f93920267a0 <col:67> 'int' 0
+| |   |     |-ImplicitCastExpr 0x7f9392026888 <col:53> 'U_16':'unsigned __int128' <LValueToRValue>
+| |   |     | `-DeclRefExpr 0x7f9392026738 <col:53> 'U_16':'unsigned __int128' lvalue ParmVar 0x7f9392026240 'newval' 'U_16':'unsigned __int128'
+| |   |     `-ImplicitCastExpr 0x7f93920268a0 <col:61> '_Bool' <IntegralToBoolean>
+| |   |       `-IntegerLiteral 0x7f9392026760 <col:61> 'int' 0
+| |   `-IfStmt 0x7f9392028ea0 <line:25:8, line:28:68>
+| |     |-<<<NULL>>>
+| |     |-<<<NULL>>>
+| |     |-ParenExpr 0x7f93920269e0 <line:25:12, col:26> 'int'
+| |     | `-BinaryOperator 0x7f93920269b8 <col:13, col:25> 'int' '!='
+| |     |   |-ImplicitCastExpr 0x7f93920269a0 <col:13, col:20> 'int' <LValueToRValue>
+| |     |   | `-ParenExpr 0x7f9392026960 <col:13, col:20> 'int' lvalue
+| |     |   |   `-DeclRefExpr 0x7f9392026938 <col:14> 'int' lvalue ParmVar 0x7f93920262b8 'smodel' 'int'
+| |     |   `-IntegerLiteral 0x7f9392026980 <col:25> 'int' 5
+| |     |-ReturnStmt 0x7f9392028c38 <line:26:5, col:68>
+| |     | `-ImplicitCastExpr 0x7f9392028c20 <col:12, col:68> 'int' <IntegralCast>
+| |     |   `-AtomicExpr 0x7f9392028bd0 <col:12, col:68> '_Bool'
+| |     |     |-ImplicitCastExpr 0x7f9392028b70 <col:41> 'U_16 *' <LValueToRValue>
+| |     |     | `-DeclRefExpr 0x7f9392028a28 <col:41> 'U_16 *' lvalue ParmVar 0x7f9392026160 'mptr' 'U_16 *'
+| |     |     |-IntegerLiteral 0x7f9392028ac0 <col:64> 'int' 4
+| |     |     |-ImplicitCastExpr 0x7f9392028b88 <col:47> 'U_16 *' <LValueToRValue>
+| |     |     | `-DeclRefExpr 0x7f9392028a50 <col:47> 'U_16 *' lvalue ParmVar 0x7f93920261d0 'eptr' 'U_16 *'
+| |     |     |-IntegerLiteral 0x7f9392028ae0 <col:67> 'int' 0
+| |     |     |-ImplicitCastExpr 0x7f9392028ba0 <col:53> 'U_16':'unsigned __int128' <LValueToRValue>
+| |     |     | `-DeclRefExpr 0x7f9392028a78 <col:53> 'U_16':'unsigned __int128' lvalue ParmVar 0x7f9392026240 'newval' 'U_16':'unsigned __int128'
+| |     |     `-ImplicitCastExpr 0x7f9392028bb8 <col:61> '_Bool' <IntegralToBoolean>
+| |     |       `-IntegerLiteral 0x7f9392028aa0 <col:61> 'int' 0
+| |     `-ReturnStmt 0x7f9392028e88 <line:28:5, col:68>
+| |       `-ImplicitCastExpr 0x7f9392028e70 <col:12, col:68> 'int' <IntegralCast>
+| |         `-AtomicExpr 0x7f9392028e20 <col:12, col:68> '_Bool'
+| |           |-ImplicitCastExpr 0x7f9392028dc0 <col:41> 'U_16 *' <LValueToRValue>
+| |           | `-DeclRefExpr 0x7f9392028c78 <col:41> 'U_16 *' lvalue ParmVar 0x7f9392026160 'mptr' 'U_16 *'
+| |           |-IntegerLiteral 0x7f9392028d10 <col:64> 'int' 5
+| |           |-ImplicitCastExpr 0x7f9392028dd8 <col:47> 'U_16 *' <LValueToRValue>
+| |           | `-DeclRefExpr 0x7f9392028ca0 <col:47> 'U_16 *' lvalue ParmVar 0x7f93920261d0 'eptr' 'U_16 *'
+| |           |-IntegerLiteral 0x7f9392028d30 <col:67> 'int' 0
+| |           |-ImplicitCastExpr 0x7f9392028df0 <col:53> 'U_16':'unsigned __int128' <LValueToRValue>
+| |           | `-DeclRefExpr 0x7f9392028cc8 <col:53> 'U_16':'unsigned __int128' lvalue ParmVar 0x7f9392026240 'newval' 'U_16':'unsigned __int128'
+| |           `-ImplicitCastExpr 0x7f9392028e08 <col:61> '_Bool' <IntegralToBoolean>
+| |             `-IntegerLiteral 0x7f9392028cf0 <col:61> 'int' 0
+| `-NoInlineAttr 0x7f9392026520 <line:12:18> Inherited
+|-FunctionDecl 0x7f9392026628 <line:24:12> col:12 implicit used __atomic_compare_exchange_n 'void ()' extern
+|-VarDecl 0x7f9392028f40 <line:31:1, col:10> col:6 used a 'U_16':'unsigned __int128' cinit
+| `-ImplicitCastExpr 0x7f9392028fc0 <col:10> 'U_16':'unsigned __int128' <IntegralCast>
+|   `-IntegerLiteral 0x7f9392028fa0 <col:10> 'int' 1
+|-VarDecl 0x7f9392028fe8 <col:1, col:17> col:13 used b 'U_16':'unsigned __int128' cinit
+| `-ImplicitCastExpr 0x7f9392029068 <col:17> 'U_16':'unsigned __int128' <IntegralCast>
+|   `-IntegerLiteral 0x7f9392029048 <col:17> 'int' 1
+|-VarDecl 0x7f9392029090 <col:1, col:25> col:20 used c 'U_16':'unsigned __int128' cinit
+| `-ImplicitCastExpr 0x7f9392029130 <col:24, col:25> 'U_16':'unsigned __int128' <IntegralCast>
+|   `-UnaryOperator 0x7f9392029110 <col:24, col:25> 'int' prefix '-'
+|     `-IntegerLiteral 0x7f93920290f0 <col:25> 'int' 2
+|-VarDecl 0x7f9392029180 <line:32:1, col:24> col:14 used do_test 'volatile int' cinit
+| `-IntegerLiteral 0x7f93920291e0 <col:24> 'int' 0
+`-FunctionDecl 0x7f93920292c8 <line:34:1, line:40:1> line:34:5 main 'int (void)'
+  `-CompoundStmt 0x7f9392029708 <line:35:1, line:40:1>
+    |-IfStmt 0x7f9392029698 <line:36:3, line:37:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f93920295e0 <line:36:7, col:61> 'int' '&&'
+    | | |-ImplicitCastExpr 0x7f93920295c8 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f9392029388 <col:7> 'volatile int' lvalue Var 0x7f9392029180 'do_test' 'volatile int'
+    | | `-UnaryOperator 0x7f93920295a8 <col:18, col:61> 'int' prefix '!'
+    | |   `-CallExpr 0x7f9392029540 <col:19, col:61> 'int'
+    | |     |-ImplicitCastExpr 0x7f9392029528 <col:19> 'int (*)(U_16 *, U_16 *, U_16, int, int)' <FunctionToPointerDecay>
+    | |     | `-DeclRefExpr 0x7f93920293b0 <col:19> 'int (U_16 *, U_16 *, U_16, int, int)' Function 0x7f9392026428 'libat_compare_exchange_16' 'int (U_16 *, U_16 *, U_16, int, int)'
+    | |     |-UnaryOperator 0x7f9392029400 <col:46, col:47> 'U_16 *' prefix '&'
+    | |     | `-DeclRefExpr 0x7f93920293d8 <col:47> 'U_16':'unsigned __int128' lvalue Var 0x7f9392028f40 'a' 'U_16':'unsigned __int128'
+    | |     |-UnaryOperator 0x7f9392029448 <col:50, col:51> 'U_16 *' prefix '&'
+    | |     | `-DeclRefExpr 0x7f9392029420 <col:51> 'U_16':'unsigned __int128' lvalue Var 0x7f9392028fe8 'b' 'U_16':'unsigned __int128'
+    | |     |-ImplicitCastExpr 0x7f9392029590 <col:54> 'U_16':'unsigned __int128' <LValueToRValue>
+    | |     | `-DeclRefExpr 0x7f9392029468 <col:54> 'U_16':'unsigned __int128' lvalue Var 0x7f9392029090 'c' 'U_16':'unsigned __int128'
+    | |     |-IntegerLiteral 0x7f9392029490 <col:57> 'int' 0
+    | |     `-IntegerLiteral 0x7f93920294b0 <col:60> 'int' 0
+    | |-CallExpr 0x7f9392029670 <line:37:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f9392029658 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f9392029608 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9392025ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f93920296f0 <line:39:3, col:10>
+      `-IntegerLiteral 0x7f93920296d0 <col:10> 'int' 0

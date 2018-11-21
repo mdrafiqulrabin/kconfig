@@ -1,0 +1,965 @@
+TranslationUnitDecl 0x7fa5c50264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa5c5026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa5c5026740 '__int128'
+|-TypedefDecl 0x7fa5c5026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa5c5026760 'unsigned __int128'
+|-TypedefDecl 0x7fa5c5026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa5c5026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa5c5026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa5c5026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa5c5026dc0 'char *'
+|   `-BuiltinType 0x7fa5c5026560 'char'
+|-TypedefDecl 0x7fa5c50270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa5c5027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa5c5026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa5c5026e58 '__va_list_tag'
+|-VarDecl 0x7fa5c5829400 <c_files/pr33848.c:19:1, col:22> col:14 used gv 'volatile int [30]'
+|-VarDecl 0x7fa5c58294b8 <line:20:1, col:16> col:16 used data 'void *volatile'
+`-FunctionDecl 0x7fa5c58295e8 <line:22:1, line:44:1> line:23:1 main 'int (void)'
+  `-CompoundStmt 0x7fa5c583a720 <line:24:1, line:44:1>
+    |-DeclStmt 0x7fa5c58296f0 <line:25:3, col:16>
+    | `-LabelDecl 0x7fa5c58296a8 <col:3, col:13> col:13 used foo
+    |-IfStmt 0x7fa5c5829830 <line:27:3, line:28:10>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa5c58297f0 <line:27:7, col:16> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fa5c58297d8 <col:7, col:11> 'int' <LValueToRValue>
+    | | | `-ArraySubscriptExpr 0x7fa5c5829790 <col:7, col:11> 'volatile int' lvalue
+    | | |   |-ImplicitCastExpr 0x7fa5c5829778 <col:7> 'volatile int *' <ArrayToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7fa5c5829708 <col:7> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | |   `-IntegerLiteral 0x7fa5c5829730 <col:10> 'int' 0
+    | | `-IntegerLiteral 0x7fa5c58297b8 <col:16> 'int' 1
+    | |-GotoStmt 0x7fa5c5829818 <line:28:5, col:10> 'foo' 0x7fa5c58296a8
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fa5c58298b0 <line:29:3, col:12> 'void *' '='
+    | |-DeclRefExpr 0x7fa5c5829868 <col:3> 'void *volatile' lvalue Var 0x7fa5c58294b8 'data' 'void *volatile'
+    | `-AddrLabelExpr 0x7fa5c5829890 <col:10, col:12> 'void *' foo 0x7fa5c58296a8
+    |-DoStmt 0x7fa5c583a6b0 <line:30:3, line:41:19>
+    | |-CompoundStmt 0x7fa5c583a588 <line:31:5, line:40:5>
+    | | |-DeclStmt 0x7fa5c58316c8 <line:32:7, col:26>
+    | | | |-VarDecl 0x7fa5c58298f0 <col:7, line:16:43> <scratch space>:2:1 used i0 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c58299d8 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c58299b0 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c5829998 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c5829950 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c5829978 <line:12:6> 'int' 0
+    | | | |-VarDecl 0x7fa5c5829a08 <line:32:7, line:16:43> <scratch space>:3:1 used i1 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c5829af0 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c5829ac8 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c5829ab0 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c5829a68 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c5829a90 <line:12:13> 'int' 1
+    | | | |-VarDecl 0x7fa5c5829b20 <line:32:7, line:16:43> <scratch space>:4:1 used i2 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c5829c08 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c5829be0 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c5829bc8 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c5829b80 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c5829ba8 <line:12:20> 'int' 2
+    | | | |-VarDecl 0x7fa5c5829c38 <line:32:7, line:16:43> <scratch space>:5:1 used i3 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c5829d20 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c5829cf8 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c5829ce0 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c5829c98 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c5829cc0 <line:12:27> 'int' 3
+    | | | |-VarDecl 0x7fa5c5829d50 <line:32:7, line:16:43> <scratch space>:6:1 used i4 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c5829e38 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c5829e10 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c5829df8 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c5829db0 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c5829dd8 <line:12:34> 'int' 4
+    | | | |-VarDecl 0x7fa5c5829e68 <line:32:7, line:16:43> <scratch space>:7:1 used i5 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c5829f50 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c5829f28 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c5829f10 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c5829ec8 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c5829ef0 <line:12:41> 'int' 5
+    | | | |-VarDecl 0x7fa5c5829f80 <line:32:7, line:16:43> <scratch space>:8:1 used i6 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582a068 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582a040 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582a028 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c5829fe0 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582a008 <line:12:48> 'int' 6
+    | | | |-VarDecl 0x7fa5c582a098 <line:32:7, line:16:43> <scratch space>:9:1 used i7 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582a180 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582a158 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582a140 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582a0f8 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582a120 <line:12:55> 'int' 7
+    | | | |-VarDecl 0x7fa5c582a1b0 <line:32:7, line:16:43> <scratch space>:10:1 used i8 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582a298 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582a270 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582a258 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582a210 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582a238 <line:12:62> 'int' 8
+    | | | |-VarDecl 0x7fa5c582a2c8 <line:32:7, line:16:43> <scratch space>:11:1 used i9 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582a3b0 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582a388 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582a370 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582a328 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582a350 <line:12:69> 'int' 9
+    | | | |-VarDecl 0x7fa5c582e800 <line:32:7, line:16:43> <scratch space>:12:1 used i10 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582e8e8 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582e8c0 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582e8a8 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582e860 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582e888 <line:13:5> 'int' 10
+    | | | |-VarDecl 0x7fa5c582e918 <line:32:7, line:16:43> <scratch space>:13:1 used i11 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582ea00 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582e9d8 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582e9c0 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582e978 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582e9a0 <line:13:12> 'int' 11
+    | | | |-VarDecl 0x7fa5c582ea30 <line:32:7, line:16:43> <scratch space>:14:1 used i12 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582eb18 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582eaf0 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582ead8 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582ea90 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582eab8 <line:13:19> 'int' 12
+    | | | |-VarDecl 0x7fa5c582eb48 <line:32:7, line:16:43> <scratch space>:15:1 used i13 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582ec30 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582ec08 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582ebf0 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582eba8 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582ebd0 <line:13:26> 'int' 13
+    | | | |-VarDecl 0x7fa5c582ec60 <line:32:7, line:16:43> <scratch space>:16:1 used i14 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582ed48 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582ed20 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582ed08 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582ecc0 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582ece8 <line:13:33> 'int' 14
+    | | | |-VarDecl 0x7fa5c582ed78 <line:32:7, line:16:43> <scratch space>:17:1 used i15 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582ee60 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582ee38 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582ee20 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582edd8 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582ee00 <line:13:40> 'int' 15
+    | | | |-VarDecl 0x7fa5c582ee90 <line:32:7, line:16:43> <scratch space>:18:1 used i16 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582ef78 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582ef50 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582ef38 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582eef0 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582ef18 <line:13:47> 'int' 16
+    | | | |-VarDecl 0x7fa5c582efa8 <line:32:7, line:16:43> <scratch space>:19:1 used i17 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582f090 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582f068 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582f050 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582f008 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582f030 <line:13:54> 'int' 17
+    | | | |-VarDecl 0x7fa5c582f0c0 <line:32:7, line:16:43> <scratch space>:20:1 used i18 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582f1a8 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582f180 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582f168 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582f120 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582f148 <line:13:61> 'int' 18
+    | | | |-VarDecl 0x7fa5c582f1d8 <line:32:7, line:16:43> <scratch space>:21:1 used i19 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582f2c0 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582f298 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582f280 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582f238 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582f260 <line:13:68> 'int' 19
+    | | | |-VarDecl 0x7fa5c582f2f0 <line:32:7, line:16:43> <scratch space>:22:1 used i20 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582f3d8 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582f3b0 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582f398 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582f350 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582f378 <line:14:5> 'int' 20
+    | | | |-VarDecl 0x7fa5c582f408 <line:32:7, line:16:43> <scratch space>:23:1 used i21 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582f4f0 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582f4c8 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582f4b0 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582f468 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582f490 <line:14:12> 'int' 21
+    | | | |-VarDecl 0x7fa5c582f520 <line:32:7, line:16:43> <scratch space>:24:1 used i22 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582f608 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582f5e0 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582f5c8 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582f580 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582f5a8 <line:14:19> 'int' 22
+    | | | |-VarDecl 0x7fa5c582f638 <line:32:7, line:16:43> <scratch space>:25:1 used i23 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c582f720 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c582f6f8 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c582f6e0 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582f698 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582f6c0 <line:14:26> 'int' 23
+    | | | |-VarDecl 0x7fa5c582f750 <line:32:7, line:16:43> <scratch space>:26:1 used i24 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c5831040 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c5831018 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c5831000 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c582f7b0 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c582f7d8 <line:14:33> 'int' 24
+    | | | |-VarDecl 0x7fa5c5831070 <line:32:7, line:16:43> <scratch space>:27:1 used i25 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c5831158 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c5831130 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c5831118 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c58310d0 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c58310f8 <line:14:40> 'int' 25
+    | | | |-VarDecl 0x7fa5c5831188 <line:32:7, line:16:43> <scratch space>:28:1 used i26 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c5831270 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c5831248 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c5831230 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c58311e8 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c5831210 <line:14:47> 'int' 26
+    | | | |-VarDecl 0x7fa5c58312a0 <line:32:7, line:16:43> <scratch space>:29:1 used i27 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c5831388 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c5831360 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c5831348 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c5831300 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c5831328 <line:14:54> 'int' 27
+    | | | |-VarDecl 0x7fa5c58313b8 <line:32:7, line:16:43> <scratch space>:30:1 used i28 'int' cinit
+    | | | | `-ImplicitCastExpr 0x7fa5c58314a0 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | | |   `-ArraySubscriptExpr 0x7fa5c5831478 <col:35, col:43> 'volatile int' lvalue
+    | | | |     |-ImplicitCastExpr 0x7fa5c5831460 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7fa5c5831418 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |     `-IntegerLiteral 0x7fa5c5831440 <line:14:61> 'int' 28
+    | | | `-VarDecl 0x7fa5c58314d0 <line:32:7, line:16:43> <scratch space>:31:1 used i29 'int' cinit
+    | | |   `-ImplicitCastExpr 0x7fa5c58315b8 <c_files/pr33848.c:16:35, col:43> 'int' <LValueToRValue>
+    | | |     `-ArraySubscriptExpr 0x7fa5c5831590 <col:35, col:43> 'volatile int' lvalue
+    | | |       |-ImplicitCastExpr 0x7fa5c5831578 <col:35> 'volatile int *' <ArrayToPointerDecay>
+    | | |       | `-DeclRefExpr 0x7fa5c5831530 <col:35> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | |       `-IntegerLiteral 0x7fa5c5831558 <line:14:68> 'int' 29
+    | | |-BinaryOperator 0x7fa5c5832780 <line:17:21, <scratch space>:61:1> 'int' ','
+    | | | |-BinaryOperator 0x7fa5c5832668 <c_files/pr33848.c:17:21, <scratch space>:60:1> 'int' ','
+    | | | | |-BinaryOperator 0x7fa5c5832550 <c_files/pr33848.c:17:21, <scratch space>:59:1> 'int' ','
+    | | | | | |-BinaryOperator 0x7fa5c5832438 <c_files/pr33848.c:17:21, <scratch space>:58:1> 'int' ','
+    | | | | | | |-BinaryOperator 0x7fa5c5832320 <c_files/pr33848.c:17:21, <scratch space>:57:1> 'int' ','
+    | | | | | | | |-BinaryOperator 0x7fa5c5832208 <c_files/pr33848.c:17:21, <scratch space>:56:1> 'int' ','
+    | | | | | | | | |-BinaryOperator 0x7fa5c58320f0 <c_files/pr33848.c:17:21, <scratch space>:55:1> 'int' ','
+    | | | | | | | | | |-BinaryOperator 0x7fa5c58349b8 <c_files/pr33848.c:17:21, <scratch space>:54:1> 'int' ','
+    | | | | | | | | | | |-BinaryOperator 0x7fa5c58348a0 <c_files/pr33848.c:17:21, <scratch space>:53:1> 'int' ','
+    | | | | | | | | | | | |-BinaryOperator 0x7fa5c5834788 <c_files/pr33848.c:17:21, <scratch space>:52:1> 'int' ','
+    | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5834670 <c_files/pr33848.c:17:21, <scratch space>:51:1> 'int' ','
+    | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5834558 <c_files/pr33848.c:17:21, <scratch space>:50:1> 'int' ','
+    | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5834440 <c_files/pr33848.c:17:21, <scratch space>:49:1> 'int' ','
+    | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5834328 <c_files/pr33848.c:17:21, <scratch space>:48:1> 'int' ','
+    | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5834210 <c_files/pr33848.c:17:21, <scratch space>:47:1> 'int' ','
+    | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c58340f8 <c_files/pr33848.c:17:21, <scratch space>:46:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5833fe0 <c_files/pr33848.c:17:21, <scratch space>:45:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5833ec8 <c_files/pr33848.c:17:21, <scratch space>:44:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5833db0 <c_files/pr33848.c:17:21, <scratch space>:43:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5833c98 <c_files/pr33848.c:17:21, <scratch space>:42:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5833b80 <c_files/pr33848.c:17:21, <scratch space>:41:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5833a68 <c_files/pr33848.c:17:21, <scratch space>:40:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5831f50 <c_files/pr33848.c:17:21, <scratch space>:39:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5831e38 <c_files/pr33848.c:17:21, <scratch space>:38:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5831d20 <c_files/pr33848.c:17:21, <scratch space>:37:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5831c08 <c_files/pr33848.c:17:21, <scratch space>:36:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5831af0 <c_files/pr33848.c:17:21, <scratch space>:35:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c58319d8 <c_files/pr33848.c:17:21, <scratch space>:34:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c58318c0 <c_files/pr33848.c:17:21, <scratch space>:33:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c58317a8 <c_files/pr33848.c:17:21, <scratch space>:32:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-ArraySubscriptExpr 0x7fa5c5831740 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-ImplicitCastExpr 0x7fa5c5831728 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-DeclRefExpr 0x7fa5c58316e0 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-IntegerLiteral 0x7fa5c5831708 <line:12:6> 'int' 0
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7fa5c5831790 <<scratch space>:32:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-DeclRefExpr 0x7fa5c5831768 <col:1> 'int' lvalue Var 0x7fa5c58298f0 'i0' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5831898 <c_files/pr33848.c:17:21, <scratch space>:33:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5831830 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5831818 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c58317d0 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c58317f8 <line:12:13> 'int' 1
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5831880 <<scratch space>:33:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5831858 <col:1> 'int' lvalue Var 0x7fa5c5829a08 'i1' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c58319b0 <c_files/pr33848.c:17:21, <scratch space>:34:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5831948 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5831930 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c58318e8 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5831910 <line:12:20> 'int' 2
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5831998 <<scratch space>:34:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5831970 <col:1> 'int' lvalue Var 0x7fa5c5829b20 'i2' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5831ac8 <c_files/pr33848.c:17:21, <scratch space>:35:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5831a60 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5831a48 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5831a00 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5831a28 <line:12:27> 'int' 3
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5831ab0 <<scratch space>:35:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5831a88 <col:1> 'int' lvalue Var 0x7fa5c5829c38 'i3' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5831be0 <c_files/pr33848.c:17:21, <scratch space>:36:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5831b78 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5831b60 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5831b18 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5831b40 <line:12:34> 'int' 4
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5831bc8 <<scratch space>:36:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5831ba0 <col:1> 'int' lvalue Var 0x7fa5c5829d50 'i4' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5831cf8 <c_files/pr33848.c:17:21, <scratch space>:37:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5831c90 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5831c78 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5831c30 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5831c58 <line:12:41> 'int' 5
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5831ce0 <<scratch space>:37:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5831cb8 <col:1> 'int' lvalue Var 0x7fa5c5829e68 'i5' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5831e10 <c_files/pr33848.c:17:21, <scratch space>:38:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5831da8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5831d90 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5831d48 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5831d70 <line:12:48> 'int' 6
+    | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5831df8 <<scratch space>:38:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5831dd0 <col:1> 'int' lvalue Var 0x7fa5c5829f80 'i6' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5831f28 <c_files/pr33848.c:17:21, <scratch space>:39:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5831ec0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5831ea8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5831e60 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5831e88 <line:12:55> 'int' 7
+    | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5831f10 <<scratch space>:39:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5831ee8 <col:1> 'int' lvalue Var 0x7fa5c582a098 'i7' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5833a40 <c_files/pr33848.c:17:21, <scratch space>:40:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5831fd8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5831fc0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5831f78 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5831fa0 <line:12:62> 'int' 8
+    | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5833a28 <<scratch space>:40:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5833a00 <col:1> 'int' lvalue Var 0x7fa5c582a1b0 'i8' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5833b58 <c_files/pr33848.c:17:21, <scratch space>:41:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5833af0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5833ad8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5833a90 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5833ab8 <line:12:69> 'int' 9
+    | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5833b40 <<scratch space>:41:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5833b18 <col:1> 'int' lvalue Var 0x7fa5c582a2c8 'i9' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5833c70 <c_files/pr33848.c:17:21, <scratch space>:42:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5833c08 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5833bf0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5833ba8 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5833bd0 <line:13:5> 'int' 10
+    | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5833c58 <<scratch space>:42:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5833c30 <col:1> 'int' lvalue Var 0x7fa5c582e800 'i10' 'int'
+    | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5833d88 <c_files/pr33848.c:17:21, <scratch space>:43:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5833d20 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5833d08 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5833cc0 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5833ce8 <line:13:12> 'int' 11
+    | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5833d70 <<scratch space>:43:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5833d48 <col:1> 'int' lvalue Var 0x7fa5c582e918 'i11' 'int'
+    | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5833ea0 <c_files/pr33848.c:17:21, <scratch space>:44:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5833e38 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5833e20 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5833dd8 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5833e00 <line:13:19> 'int' 12
+    | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5833e88 <<scratch space>:44:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5833e60 <col:1> 'int' lvalue Var 0x7fa5c582ea30 'i12' 'int'
+    | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5833fb8 <c_files/pr33848.c:17:21, <scratch space>:45:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5833f50 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5833f38 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5833ef0 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5833f18 <line:13:26> 'int' 13
+    | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5833fa0 <<scratch space>:45:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5833f78 <col:1> 'int' lvalue Var 0x7fa5c582eb48 'i13' 'int'
+    | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c58340d0 <c_files/pr33848.c:17:21, <scratch space>:46:1> 'int' '='
+    | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5834068 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5834050 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5834008 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5834030 <line:13:33> 'int' 14
+    | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c58340b8 <<scratch space>:46:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5834090 <col:1> 'int' lvalue Var 0x7fa5c582ec60 'i14' 'int'
+    | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c58341e8 <c_files/pr33848.c:17:21, <scratch space>:47:1> 'int' '='
+    | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5834180 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5834168 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5834120 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5834148 <line:13:40> 'int' 15
+    | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c58341d0 <<scratch space>:47:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c58341a8 <col:1> 'int' lvalue Var 0x7fa5c582ed78 'i15' 'int'
+    | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5834300 <c_files/pr33848.c:17:21, <scratch space>:48:1> 'int' '='
+    | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5834298 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5834280 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5834238 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5834260 <line:13:47> 'int' 16
+    | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c58342e8 <<scratch space>:48:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c58342c0 <col:1> 'int' lvalue Var 0x7fa5c582ee90 'i16' 'int'
+    | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5834418 <c_files/pr33848.c:17:21, <scratch space>:49:1> 'int' '='
+    | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c58343b0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5834398 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5834350 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5834378 <line:13:54> 'int' 17
+    | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5834400 <<scratch space>:49:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c58343d8 <col:1> 'int' lvalue Var 0x7fa5c582efa8 'i17' 'int'
+    | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5834530 <c_files/pr33848.c:17:21, <scratch space>:50:1> 'int' '='
+    | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c58344c8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c58344b0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5834468 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5834490 <line:13:61> 'int' 18
+    | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5834518 <<scratch space>:50:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c58344f0 <col:1> 'int' lvalue Var 0x7fa5c582f0c0 'i18' 'int'
+    | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5834648 <c_files/pr33848.c:17:21, <scratch space>:51:1> 'int' '='
+    | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c58345e0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c58345c8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5834580 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c58345a8 <line:13:68> 'int' 19
+    | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5834630 <<scratch space>:51:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5834608 <col:1> 'int' lvalue Var 0x7fa5c582f1d8 'i19' 'int'
+    | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5834760 <c_files/pr33848.c:17:21, <scratch space>:52:1> 'int' '='
+    | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c58346f8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c58346e0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5834698 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c58346c0 <line:14:5> 'int' 20
+    | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5834748 <<scratch space>:52:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5834720 <col:1> 'int' lvalue Var 0x7fa5c582f2f0 'i20' 'int'
+    | | | | | | | | | | | `-BinaryOperator 0x7fa5c5834878 <c_files/pr33848.c:17:21, <scratch space>:53:1> 'int' '='
+    | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5834810 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c58347f8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c58347b0 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c58347d8 <line:14:12> 'int' 21
+    | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5834860 <<scratch space>:53:1> 'int' <LValueToRValue>
+    | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5834838 <col:1> 'int' lvalue Var 0x7fa5c582f408 'i21' 'int'
+    | | | | | | | | | | `-BinaryOperator 0x7fa5c5834990 <c_files/pr33848.c:17:21, <scratch space>:54:1> 'int' '='
+    | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5834928 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5834910 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c58348c8 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c58348f0 <line:14:19> 'int' 22
+    | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5834978 <<scratch space>:54:1> 'int' <LValueToRValue>
+    | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5834950 <col:1> 'int' lvalue Var 0x7fa5c582f520 'i22' 'int'
+    | | | | | | | | | `-BinaryOperator 0x7fa5c58320c8 <c_files/pr33848.c:17:21, <scratch space>:55:1> 'int' '='
+    | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5832060 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5832048 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5832000 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5832028 <line:14:26> 'int' 23
+    | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c58320b0 <<scratch space>:55:1> 'int' <LValueToRValue>
+    | | | | | | | | |     `-DeclRefExpr 0x7fa5c5832088 <col:1> 'int' lvalue Var 0x7fa5c582f638 'i23' 'int'
+    | | | | | | | | `-BinaryOperator 0x7fa5c58321e0 <c_files/pr33848.c:17:21, <scratch space>:56:1> 'int' '='
+    | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5832178 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5832160 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5832118 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | |   | `-IntegerLiteral 0x7fa5c5832140 <line:14:33> 'int' 24
+    | | | | | | | |   `-ImplicitCastExpr 0x7fa5c58321c8 <<scratch space>:56:1> 'int' <LValueToRValue>
+    | | | | | | | |     `-DeclRefExpr 0x7fa5c58321a0 <col:1> 'int' lvalue Var 0x7fa5c582f750 'i24' 'int'
+    | | | | | | | `-BinaryOperator 0x7fa5c58322f8 <c_files/pr33848.c:17:21, <scratch space>:57:1> 'int' '='
+    | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5832290 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5832278 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | |   | | `-DeclRefExpr 0x7fa5c5832230 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | |   | `-IntegerLiteral 0x7fa5c5832258 <line:14:40> 'int' 25
+    | | | | | | |   `-ImplicitCastExpr 0x7fa5c58322e0 <<scratch space>:57:1> 'int' <LValueToRValue>
+    | | | | | | |     `-DeclRefExpr 0x7fa5c58322b8 <col:1> 'int' lvalue Var 0x7fa5c5831070 'i25' 'int'
+    | | | | | | `-BinaryOperator 0x7fa5c5832410 <c_files/pr33848.c:17:21, <scratch space>:58:1> 'int' '='
+    | | | | | |   |-ArraySubscriptExpr 0x7fa5c58323a8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | |   | |-ImplicitCastExpr 0x7fa5c5832390 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | |   | | `-DeclRefExpr 0x7fa5c5832348 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | |   | `-IntegerLiteral 0x7fa5c5832370 <line:14:47> 'int' 26
+    | | | | | |   `-ImplicitCastExpr 0x7fa5c58323f8 <<scratch space>:58:1> 'int' <LValueToRValue>
+    | | | | | |     `-DeclRefExpr 0x7fa5c58323d0 <col:1> 'int' lvalue Var 0x7fa5c5831188 'i26' 'int'
+    | | | | | `-BinaryOperator 0x7fa5c5832528 <c_files/pr33848.c:17:21, <scratch space>:59:1> 'int' '='
+    | | | | |   |-ArraySubscriptExpr 0x7fa5c58324c0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | |   | |-ImplicitCastExpr 0x7fa5c58324a8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | |   | | `-DeclRefExpr 0x7fa5c5832460 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | |   | `-IntegerLiteral 0x7fa5c5832488 <line:14:54> 'int' 27
+    | | | | |   `-ImplicitCastExpr 0x7fa5c5832510 <<scratch space>:59:1> 'int' <LValueToRValue>
+    | | | | |     `-DeclRefExpr 0x7fa5c58324e8 <col:1> 'int' lvalue Var 0x7fa5c58312a0 'i27' 'int'
+    | | | | `-BinaryOperator 0x7fa5c5832640 <c_files/pr33848.c:17:21, <scratch space>:60:1> 'int' '='
+    | | | |   |-ArraySubscriptExpr 0x7fa5c58325d8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | |   | |-ImplicitCastExpr 0x7fa5c58325c0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | |   | | `-DeclRefExpr 0x7fa5c5832578 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |   | `-IntegerLiteral 0x7fa5c58325a0 <line:14:61> 'int' 28
+    | | | |   `-ImplicitCastExpr 0x7fa5c5832628 <<scratch space>:60:1> 'int' <LValueToRValue>
+    | | | |     `-DeclRefExpr 0x7fa5c5832600 <col:1> 'int' lvalue Var 0x7fa5c58313b8 'i28' 'int'
+    | | | `-BinaryOperator 0x7fa5c5832758 <c_files/pr33848.c:17:21, <scratch space>:61:1> 'int' '='
+    | | |   |-ArraySubscriptExpr 0x7fa5c58326f0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | |   | |-ImplicitCastExpr 0x7fa5c58326d8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | |   | | `-DeclRefExpr 0x7fa5c5832690 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | |   | `-IntegerLiteral 0x7fa5c58326b8 <line:14:68> 'int' 29
+    | | |   `-ImplicitCastExpr 0x7fa5c5832740 <<scratch space>:61:1> 'int' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fa5c5832718 <col:1> 'int' lvalue Var 0x7fa5c58314d0 'i29' 'int'
+    | | |-BinaryOperator 0x7fa5c5838238 <c_files/pr33848.c:17:21, <scratch space>:91:1> 'int' ','
+    | | | |-BinaryOperator 0x7fa5c5838120 <c_files/pr33848.c:17:21, <scratch space>:90:1> 'int' ','
+    | | | | |-BinaryOperator 0x7fa5c5838008 <c_files/pr33848.c:17:21, <scratch space>:89:1> 'int' ','
+    | | | | | |-BinaryOperator 0x7fa5c5837ef0 <c_files/pr33848.c:17:21, <scratch space>:88:1> 'int' ','
+    | | | | | | |-BinaryOperator 0x7fa5c5837dd8 <c_files/pr33848.c:17:21, <scratch space>:87:1> 'int' ','
+    | | | | | | | |-BinaryOperator 0x7fa5c5837cc0 <c_files/pr33848.c:17:21, <scratch space>:86:1> 'int' ','
+    | | | | | | | | |-BinaryOperator 0x7fa5c5837ba8 <c_files/pr33848.c:17:21, <scratch space>:85:1> 'int' ','
+    | | | | | | | | | |-BinaryOperator 0x7fa5c5837a90 <c_files/pr33848.c:17:21, <scratch space>:84:1> 'int' ','
+    | | | | | | | | | | |-BinaryOperator 0x7fa5c5830778 <c_files/pr33848.c:17:21, <scratch space>:83:1> 'int' ','
+    | | | | | | | | | | | |-BinaryOperator 0x7fa5c5830660 <c_files/pr33848.c:17:21, <scratch space>:82:1> 'int' ','
+    | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5830548 <c_files/pr33848.c:17:21, <scratch space>:81:1> 'int' ','
+    | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5830430 <c_files/pr33848.c:17:21, <scratch space>:80:1> 'int' ','
+    | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5830318 <c_files/pr33848.c:17:21, <scratch space>:79:1> 'int' ','
+    | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5830200 <c_files/pr33848.c:17:21, <scratch space>:78:1> 'int' ','
+    | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c58300e8 <c_files/pr33848.c:17:21, <scratch space>:77:1> 'int' ','
+    | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c582ffd0 <c_files/pr33848.c:17:21, <scratch space>:76:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c582feb8 <c_files/pr33848.c:17:21, <scratch space>:75:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c582fda0 <c_files/pr33848.c:17:21, <scratch space>:74:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c582fc88 <c_files/pr33848.c:17:21, <scratch space>:73:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c582fb70 <c_files/pr33848.c:17:21, <scratch space>:72:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c582fa58 <c_files/pr33848.c:17:21, <scratch space>:71:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c582f940 <c_files/pr33848.c:17:21, <scratch space>:70:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c582f828 <c_files/pr33848.c:17:21, <scratch space>:69:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5832f00 <c_files/pr33848.c:17:21, <scratch space>:68:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5832de8 <c_files/pr33848.c:17:21, <scratch space>:67:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5832cd0 <c_files/pr33848.c:17:21, <scratch space>:66:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5832bb8 <c_files/pr33848.c:17:21, <scratch space>:65:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5832aa0 <c_files/pr33848.c:17:21, <scratch space>:64:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5832988 <c_files/pr33848.c:17:21, <scratch space>:63:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5832870 <c_files/pr33848.c:17:21, <scratch space>:62:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-ArraySubscriptExpr 0x7fa5c5832808 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-ImplicitCastExpr 0x7fa5c58327f0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-DeclRefExpr 0x7fa5c58327a8 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-IntegerLiteral 0x7fa5c58327d0 <line:12:6> 'int' 0
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7fa5c5832858 <<scratch space>:62:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-DeclRefExpr 0x7fa5c5832830 <col:1> 'int' lvalue Var 0x7fa5c58298f0 'i0' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5832960 <c_files/pr33848.c:17:21, <scratch space>:63:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c58328f8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c58328e0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5832898 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c58328c0 <line:12:13> 'int' 1
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5832948 <<scratch space>:63:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5832920 <col:1> 'int' lvalue Var 0x7fa5c5829a08 'i1' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5832a78 <c_files/pr33848.c:17:21, <scratch space>:64:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5832a10 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c58329f8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c58329b0 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c58329d8 <line:12:20> 'int' 2
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5832a60 <<scratch space>:64:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5832a38 <col:1> 'int' lvalue Var 0x7fa5c5829b20 'i2' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5832b90 <c_files/pr33848.c:17:21, <scratch space>:65:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5832b28 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5832b10 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5832ac8 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5832af0 <line:12:27> 'int' 3
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5832b78 <<scratch space>:65:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5832b50 <col:1> 'int' lvalue Var 0x7fa5c5829c38 'i3' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5832ca8 <c_files/pr33848.c:17:21, <scratch space>:66:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5832c40 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5832c28 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5832be0 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5832c08 <line:12:34> 'int' 4
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5832c90 <<scratch space>:66:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5832c68 <col:1> 'int' lvalue Var 0x7fa5c5829d50 'i4' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5832dc0 <c_files/pr33848.c:17:21, <scratch space>:67:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5832d58 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5832d40 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5832cf8 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5832d20 <line:12:41> 'int' 5
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5832da8 <<scratch space>:67:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5832d80 <col:1> 'int' lvalue Var 0x7fa5c5829e68 'i5' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5832ed8 <c_files/pr33848.c:17:21, <scratch space>:68:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5832e70 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5832e58 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5832e10 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5832e38 <line:12:48> 'int' 6
+    | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5832ec0 <<scratch space>:68:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5832e98 <col:1> 'int' lvalue Var 0x7fa5c5829f80 'i6' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c582f800 <c_files/pr33848.c:17:21, <scratch space>:69:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5832f88 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5832f70 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5832f28 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5832f50 <line:12:55> 'int' 7
+    | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5832fd8 <<scratch space>:69:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5832fb0 <col:1> 'int' lvalue Var 0x7fa5c582a098 'i7' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c582f918 <c_files/pr33848.c:17:21, <scratch space>:70:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c582f8b0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c582f898 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c582f850 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c582f878 <line:12:62> 'int' 8
+    | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c582f900 <<scratch space>:70:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c582f8d8 <col:1> 'int' lvalue Var 0x7fa5c582a1b0 'i8' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c582fa30 <c_files/pr33848.c:17:21, <scratch space>:71:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c582f9c8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c582f9b0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c582f968 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c582f990 <line:12:69> 'int' 9
+    | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c582fa18 <<scratch space>:71:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c582f9f0 <col:1> 'int' lvalue Var 0x7fa5c582a2c8 'i9' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c582fb48 <c_files/pr33848.c:17:21, <scratch space>:72:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c582fae0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c582fac8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c582fa80 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c582faa8 <line:13:5> 'int' 10
+    | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c582fb30 <<scratch space>:72:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c582fb08 <col:1> 'int' lvalue Var 0x7fa5c582e800 'i10' 'int'
+    | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c582fc60 <c_files/pr33848.c:17:21, <scratch space>:73:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c582fbf8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c582fbe0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c582fb98 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c582fbc0 <line:13:12> 'int' 11
+    | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c582fc48 <<scratch space>:73:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c582fc20 <col:1> 'int' lvalue Var 0x7fa5c582e918 'i11' 'int'
+    | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c582fd78 <c_files/pr33848.c:17:21, <scratch space>:74:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c582fd10 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c582fcf8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c582fcb0 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c582fcd8 <line:13:19> 'int' 12
+    | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c582fd60 <<scratch space>:74:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c582fd38 <col:1> 'int' lvalue Var 0x7fa5c582ea30 'i12' 'int'
+    | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c582fe90 <c_files/pr33848.c:17:21, <scratch space>:75:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c582fe28 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c582fe10 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c582fdc8 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c582fdf0 <line:13:26> 'int' 13
+    | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c582fe78 <<scratch space>:75:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c582fe50 <col:1> 'int' lvalue Var 0x7fa5c582eb48 'i13' 'int'
+    | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c582ffa8 <c_files/pr33848.c:17:21, <scratch space>:76:1> 'int' '='
+    | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c582ff40 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c582ff28 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c582fee0 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c582ff08 <line:13:33> 'int' 14
+    | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c582ff90 <<scratch space>:76:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c582ff68 <col:1> 'int' lvalue Var 0x7fa5c582ec60 'i14' 'int'
+    | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c58300c0 <c_files/pr33848.c:17:21, <scratch space>:77:1> 'int' '='
+    | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5830058 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5830040 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c582fff8 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5830020 <line:13:40> 'int' 15
+    | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c58300a8 <<scratch space>:77:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5830080 <col:1> 'int' lvalue Var 0x7fa5c582ed78 'i15' 'int'
+    | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c58301d8 <c_files/pr33848.c:17:21, <scratch space>:78:1> 'int' '='
+    | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5830170 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5830158 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5830110 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5830138 <line:13:47> 'int' 16
+    | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c58301c0 <<scratch space>:78:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5830198 <col:1> 'int' lvalue Var 0x7fa5c582ee90 'i16' 'int'
+    | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c58302f0 <c_files/pr33848.c:17:21, <scratch space>:79:1> 'int' '='
+    | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5830288 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5830270 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5830228 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5830250 <line:13:54> 'int' 17
+    | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c58302d8 <<scratch space>:79:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c58302b0 <col:1> 'int' lvalue Var 0x7fa5c582efa8 'i17' 'int'
+    | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5830408 <c_files/pr33848.c:17:21, <scratch space>:80:1> 'int' '='
+    | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c58303a0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5830388 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5830340 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5830368 <line:13:61> 'int' 18
+    | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c58303f0 <<scratch space>:80:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c58303c8 <col:1> 'int' lvalue Var 0x7fa5c582f0c0 'i18' 'int'
+    | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5830520 <c_files/pr33848.c:17:21, <scratch space>:81:1> 'int' '='
+    | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c58304b8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c58304a0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5830458 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5830480 <line:13:68> 'int' 19
+    | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5830508 <<scratch space>:81:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c58304e0 <col:1> 'int' lvalue Var 0x7fa5c582f1d8 'i19' 'int'
+    | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5830638 <c_files/pr33848.c:17:21, <scratch space>:82:1> 'int' '='
+    | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c58305d0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c58305b8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5830570 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5830598 <line:14:5> 'int' 20
+    | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5830620 <<scratch space>:82:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c58305f8 <col:1> 'int' lvalue Var 0x7fa5c582f2f0 'i20' 'int'
+    | | | | | | | | | | | `-BinaryOperator 0x7fa5c5830750 <c_files/pr33848.c:17:21, <scratch space>:83:1> 'int' '='
+    | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c58306e8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c58306d0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5830688 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c58306b0 <line:14:12> 'int' 21
+    | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5830738 <<scratch space>:83:1> 'int' <LValueToRValue>
+    | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5830710 <col:1> 'int' lvalue Var 0x7fa5c582f408 'i21' 'int'
+    | | | | | | | | | | `-BinaryOperator 0x7fa5c5837a68 <c_files/pr33848.c:17:21, <scratch space>:84:1> 'int' '='
+    | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5837a00 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c58307e8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c58307a0 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c58307c8 <line:14:19> 'int' 22
+    | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5837a50 <<scratch space>:84:1> 'int' <LValueToRValue>
+    | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5837a28 <col:1> 'int' lvalue Var 0x7fa5c582f520 'i22' 'int'
+    | | | | | | | | | `-BinaryOperator 0x7fa5c5837b80 <c_files/pr33848.c:17:21, <scratch space>:85:1> 'int' '='
+    | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5837b18 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5837b00 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5837ab8 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5837ae0 <line:14:26> 'int' 23
+    | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5837b68 <<scratch space>:85:1> 'int' <LValueToRValue>
+    | | | | | | | | |     `-DeclRefExpr 0x7fa5c5837b40 <col:1> 'int' lvalue Var 0x7fa5c582f638 'i23' 'int'
+    | | | | | | | | `-BinaryOperator 0x7fa5c5837c98 <c_files/pr33848.c:17:21, <scratch space>:86:1> 'int' '='
+    | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5837c30 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5837c18 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5837bd0 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | |   | `-IntegerLiteral 0x7fa5c5837bf8 <line:14:33> 'int' 24
+    | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5837c80 <<scratch space>:86:1> 'int' <LValueToRValue>
+    | | | | | | | |     `-DeclRefExpr 0x7fa5c5837c58 <col:1> 'int' lvalue Var 0x7fa5c582f750 'i24' 'int'
+    | | | | | | | `-BinaryOperator 0x7fa5c5837db0 <c_files/pr33848.c:17:21, <scratch space>:87:1> 'int' '='
+    | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5837d48 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5837d30 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | |   | | `-DeclRefExpr 0x7fa5c5837ce8 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | |   | `-IntegerLiteral 0x7fa5c5837d10 <line:14:40> 'int' 25
+    | | | | | | |   `-ImplicitCastExpr 0x7fa5c5837d98 <<scratch space>:87:1> 'int' <LValueToRValue>
+    | | | | | | |     `-DeclRefExpr 0x7fa5c5837d70 <col:1> 'int' lvalue Var 0x7fa5c5831070 'i25' 'int'
+    | | | | | | `-BinaryOperator 0x7fa5c5837ec8 <c_files/pr33848.c:17:21, <scratch space>:88:1> 'int' '='
+    | | | | | |   |-ArraySubscriptExpr 0x7fa5c5837e60 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | |   | |-ImplicitCastExpr 0x7fa5c5837e48 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | |   | | `-DeclRefExpr 0x7fa5c5837e00 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | |   | `-IntegerLiteral 0x7fa5c5837e28 <line:14:47> 'int' 26
+    | | | | | |   `-ImplicitCastExpr 0x7fa5c5837eb0 <<scratch space>:88:1> 'int' <LValueToRValue>
+    | | | | | |     `-DeclRefExpr 0x7fa5c5837e88 <col:1> 'int' lvalue Var 0x7fa5c5831188 'i26' 'int'
+    | | | | | `-BinaryOperator 0x7fa5c5837fe0 <c_files/pr33848.c:17:21, <scratch space>:89:1> 'int' '='
+    | | | | |   |-ArraySubscriptExpr 0x7fa5c5837f78 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | |   | |-ImplicitCastExpr 0x7fa5c5837f60 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | |   | | `-DeclRefExpr 0x7fa5c5837f18 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | |   | `-IntegerLiteral 0x7fa5c5837f40 <line:14:54> 'int' 27
+    | | | | |   `-ImplicitCastExpr 0x7fa5c5837fc8 <<scratch space>:89:1> 'int' <LValueToRValue>
+    | | | | |     `-DeclRefExpr 0x7fa5c5837fa0 <col:1> 'int' lvalue Var 0x7fa5c58312a0 'i27' 'int'
+    | | | | `-BinaryOperator 0x7fa5c58380f8 <c_files/pr33848.c:17:21, <scratch space>:90:1> 'int' '='
+    | | | |   |-ArraySubscriptExpr 0x7fa5c5838090 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | |   | |-ImplicitCastExpr 0x7fa5c5838078 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | |   | | `-DeclRefExpr 0x7fa5c5838030 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |   | `-IntegerLiteral 0x7fa5c5838058 <line:14:61> 'int' 28
+    | | | |   `-ImplicitCastExpr 0x7fa5c58380e0 <<scratch space>:90:1> 'int' <LValueToRValue>
+    | | | |     `-DeclRefExpr 0x7fa5c58380b8 <col:1> 'int' lvalue Var 0x7fa5c58313b8 'i28' 'int'
+    | | | `-BinaryOperator 0x7fa5c5838210 <c_files/pr33848.c:17:21, <scratch space>:91:1> 'int' '='
+    | | |   |-ArraySubscriptExpr 0x7fa5c58381a8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | |   | |-ImplicitCastExpr 0x7fa5c5838190 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | |   | | `-DeclRefExpr 0x7fa5c5838148 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | |   | `-IntegerLiteral 0x7fa5c5838170 <line:14:68> 'int' 29
+    | | |   `-ImplicitCastExpr 0x7fa5c58381f8 <<scratch space>:91:1> 'int' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fa5c58381d0 <col:1> 'int' lvalue Var 0x7fa5c58314d0 'i29' 'int'
+    | | |-BinaryOperator 0x7fa5c583a300 <c_files/pr33848.c:17:21, <scratch space>:121:1> 'int' ','
+    | | | |-BinaryOperator 0x7fa5c583a1e8 <c_files/pr33848.c:17:21, <scratch space>:120:1> 'int' ','
+    | | | | |-BinaryOperator 0x7fa5c583a0d0 <c_files/pr33848.c:17:21, <scratch space>:119:1> 'int' ','
+    | | | | | |-BinaryOperator 0x7fa5c5839fb8 <c_files/pr33848.c:17:21, <scratch space>:118:1> 'int' ','
+    | | | | | | |-BinaryOperator 0x7fa5c5839ea0 <c_files/pr33848.c:17:21, <scratch space>:117:1> 'int' ','
+    | | | | | | | |-BinaryOperator 0x7fa5c5839d88 <c_files/pr33848.c:17:21, <scratch space>:116:1> 'int' ','
+    | | | | | | | | |-BinaryOperator 0x7fa5c5839c70 <c_files/pr33848.c:17:21, <scratch space>:115:1> 'int' ','
+    | | | | | | | | | |-BinaryOperator 0x7fa5c5839b58 <c_files/pr33848.c:17:21, <scratch space>:114:1> 'int' ','
+    | | | | | | | | | | |-BinaryOperator 0x7fa5c5839a40 <c_files/pr33848.c:17:21, <scratch space>:113:1> 'int' ','
+    | | | | | | | | | | | |-BinaryOperator 0x7fa5c5839928 <c_files/pr33848.c:17:21, <scratch space>:112:1> 'int' ','
+    | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5839810 <c_files/pr33848.c:17:21, <scratch space>:111:1> 'int' ','
+    | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c58396f8 <c_files/pr33848.c:17:21, <scratch space>:110:1> 'int' ','
+    | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c58395e0 <c_files/pr33848.c:17:21, <scratch space>:109:1> 'int' ','
+    | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c58394c8 <c_files/pr33848.c:17:21, <scratch space>:108:1> 'int' ','
+    | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c58393b0 <c_files/pr33848.c:17:21, <scratch space>:107:1> 'int' ','
+    | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5839298 <c_files/pr33848.c:17:21, <scratch space>:106:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5839180 <c_files/pr33848.c:17:21, <scratch space>:105:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5839068 <c_files/pr33848.c:17:21, <scratch space>:104:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5838f50 <c_files/pr33848.c:17:21, <scratch space>:103:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5838e38 <c_files/pr33848.c:17:21, <scratch space>:102:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5838d20 <c_files/pr33848.c:17:21, <scratch space>:101:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5838c08 <c_files/pr33848.c:17:21, <scratch space>:100:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5838af0 <c_files/pr33848.c:17:21, <scratch space>:99:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c58389b8 <c_files/pr33848.c:17:21, <scratch space>:98:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c58388a0 <c_files/pr33848.c:17:21, <scratch space>:97:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5838788 <c_files/pr33848.c:17:21, <scratch space>:96:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5838670 <c_files/pr33848.c:17:21, <scratch space>:95:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5838558 <c_files/pr33848.c:17:21, <scratch space>:94:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5838440 <c_files/pr33848.c:17:21, <scratch space>:93:1> 'int' ','
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7fa5c5838328 <c_files/pr33848.c:17:21, <scratch space>:92:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-ArraySubscriptExpr 0x7fa5c58382c0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-ImplicitCastExpr 0x7fa5c58382a8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-DeclRefExpr 0x7fa5c5838260 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-IntegerLiteral 0x7fa5c5838288 <line:12:6> 'int' 0
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7fa5c5838310 <<scratch space>:92:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-DeclRefExpr 0x7fa5c58382e8 <col:1> 'int' lvalue Var 0x7fa5c58298f0 'i0' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5838418 <c_files/pr33848.c:17:21, <scratch space>:93:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c58383b0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5838398 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5838350 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5838378 <line:12:13> 'int' 1
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5838400 <<scratch space>:93:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c58383d8 <col:1> 'int' lvalue Var 0x7fa5c5829a08 'i1' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5838530 <c_files/pr33848.c:17:21, <scratch space>:94:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c58384c8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c58384b0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5838468 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5838490 <line:12:20> 'int' 2
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5838518 <<scratch space>:94:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c58384f0 <col:1> 'int' lvalue Var 0x7fa5c5829b20 'i2' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5838648 <c_files/pr33848.c:17:21, <scratch space>:95:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c58385e0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c58385c8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5838580 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c58385a8 <line:12:27> 'int' 3
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5838630 <<scratch space>:95:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5838608 <col:1> 'int' lvalue Var 0x7fa5c5829c38 'i3' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5838760 <c_files/pr33848.c:17:21, <scratch space>:96:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c58386f8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c58386e0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5838698 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c58386c0 <line:12:34> 'int' 4
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5838748 <<scratch space>:96:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5838720 <col:1> 'int' lvalue Var 0x7fa5c5829d50 'i4' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5838878 <c_files/pr33848.c:17:21, <scratch space>:97:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5838810 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c58387f8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c58387b0 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c58387d8 <line:12:41> 'int' 5
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5838860 <<scratch space>:97:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5838838 <col:1> 'int' lvalue Var 0x7fa5c5829e68 'i5' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5838990 <c_files/pr33848.c:17:21, <scratch space>:98:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5838928 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5838910 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c58388c8 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c58388f0 <line:12:48> 'int' 6
+    | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5838978 <<scratch space>:98:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5838950 <col:1> 'int' lvalue Var 0x7fa5c5829f80 'i6' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5838ac8 <c_files/pr33848.c:17:21, <scratch space>:99:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5838a60 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5838a48 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5838a00 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5838a28 <line:12:55> 'int' 7
+    | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5838ab0 <<scratch space>:99:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5838a88 <col:1> 'int' lvalue Var 0x7fa5c582a098 'i7' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5838be0 <c_files/pr33848.c:17:21, <scratch space>:100:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5838b78 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5838b60 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5838b18 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5838b40 <line:12:62> 'int' 8
+    | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5838bc8 <<scratch space>:100:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5838ba0 <col:1> 'int' lvalue Var 0x7fa5c582a1b0 'i8' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5838cf8 <c_files/pr33848.c:17:21, <scratch space>:101:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5838c90 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5838c78 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5838c30 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5838c58 <line:12:69> 'int' 9
+    | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5838ce0 <<scratch space>:101:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5838cb8 <col:1> 'int' lvalue Var 0x7fa5c582a2c8 'i9' 'int'
+    | | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5838e10 <c_files/pr33848.c:17:21, <scratch space>:102:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5838da8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5838d90 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5838d48 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5838d70 <line:13:5> 'int' 10
+    | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5838df8 <<scratch space>:102:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5838dd0 <col:1> 'int' lvalue Var 0x7fa5c582e800 'i10' 'int'
+    | | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5838f28 <c_files/pr33848.c:17:21, <scratch space>:103:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5838ec0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5838ea8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5838e60 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5838e88 <line:13:12> 'int' 11
+    | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5838f10 <<scratch space>:103:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5838ee8 <col:1> 'int' lvalue Var 0x7fa5c582e918 'i11' 'int'
+    | | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5839040 <c_files/pr33848.c:17:21, <scratch space>:104:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5838fd8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5838fc0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5838f78 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5838fa0 <line:13:19> 'int' 12
+    | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5839028 <<scratch space>:104:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5839000 <col:1> 'int' lvalue Var 0x7fa5c582ea30 'i12' 'int'
+    | | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5839158 <c_files/pr33848.c:17:21, <scratch space>:105:1> 'int' '='
+    | | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c58390f0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c58390d8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5839090 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c58390b8 <line:13:26> 'int' 13
+    | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5839140 <<scratch space>:105:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5839118 <col:1> 'int' lvalue Var 0x7fa5c582eb48 'i13' 'int'
+    | | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5839270 <c_files/pr33848.c:17:21, <scratch space>:106:1> 'int' '='
+    | | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5839208 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c58391f0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c58391a8 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c58391d0 <line:13:33> 'int' 14
+    | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5839258 <<scratch space>:106:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5839230 <col:1> 'int' lvalue Var 0x7fa5c582ec60 'i14' 'int'
+    | | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5839388 <c_files/pr33848.c:17:21, <scratch space>:107:1> 'int' '='
+    | | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5839320 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5839308 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c58392c0 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c58392e8 <line:13:40> 'int' 15
+    | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5839370 <<scratch space>:107:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5839348 <col:1> 'int' lvalue Var 0x7fa5c582ed78 'i15' 'int'
+    | | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c58394a0 <c_files/pr33848.c:17:21, <scratch space>:108:1> 'int' '='
+    | | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5839438 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5839420 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c58393d8 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5839400 <line:13:47> 'int' 16
+    | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5839488 <<scratch space>:108:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5839460 <col:1> 'int' lvalue Var 0x7fa5c582ee90 'i16' 'int'
+    | | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c58395b8 <c_files/pr33848.c:17:21, <scratch space>:109:1> 'int' '='
+    | | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5839550 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5839538 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c58394f0 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5839518 <line:13:54> 'int' 17
+    | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c58395a0 <<scratch space>:109:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5839578 <col:1> 'int' lvalue Var 0x7fa5c582efa8 'i17' 'int'
+    | | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c58396d0 <c_files/pr33848.c:17:21, <scratch space>:110:1> 'int' '='
+    | | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5839668 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5839650 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5839608 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5839630 <line:13:61> 'int' 18
+    | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c58396b8 <<scratch space>:110:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5839690 <col:1> 'int' lvalue Var 0x7fa5c582f0c0 'i18' 'int'
+    | | | | | | | | | | | | | `-BinaryOperator 0x7fa5c58397e8 <c_files/pr33848.c:17:21, <scratch space>:111:1> 'int' '='
+    | | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5839780 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5839768 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5839720 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5839748 <line:13:68> 'int' 19
+    | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c58397d0 <<scratch space>:111:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c58397a8 <col:1> 'int' lvalue Var 0x7fa5c582f1d8 'i19' 'int'
+    | | | | | | | | | | | | `-BinaryOperator 0x7fa5c5839900 <c_files/pr33848.c:17:21, <scratch space>:112:1> 'int' '='
+    | | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5839898 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5839880 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5839838 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5839860 <line:14:5> 'int' 20
+    | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c58398e8 <<scratch space>:112:1> 'int' <LValueToRValue>
+    | | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c58398c0 <col:1> 'int' lvalue Var 0x7fa5c582f2f0 'i20' 'int'
+    | | | | | | | | | | | `-BinaryOperator 0x7fa5c5839a18 <c_files/pr33848.c:17:21, <scratch space>:113:1> 'int' '='
+    | | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c58399b0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5839998 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5839950 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5839978 <line:14:12> 'int' 21
+    | | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5839a00 <<scratch space>:113:1> 'int' <LValueToRValue>
+    | | | | | | | | | | |     `-DeclRefExpr 0x7fa5c58399d8 <col:1> 'int' lvalue Var 0x7fa5c582f408 'i21' 'int'
+    | | | | | | | | | | `-BinaryOperator 0x7fa5c5839b30 <c_files/pr33848.c:17:21, <scratch space>:114:1> 'int' '='
+    | | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5839ac8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5839ab0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5839a68 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5839a90 <line:14:19> 'int' 22
+    | | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5839b18 <<scratch space>:114:1> 'int' <LValueToRValue>
+    | | | | | | | | | |     `-DeclRefExpr 0x7fa5c5839af0 <col:1> 'int' lvalue Var 0x7fa5c582f520 'i22' 'int'
+    | | | | | | | | | `-BinaryOperator 0x7fa5c5839c48 <c_files/pr33848.c:17:21, <scratch space>:115:1> 'int' '='
+    | | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5839be0 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5839bc8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5839b80 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | | |   | `-IntegerLiteral 0x7fa5c5839ba8 <line:14:26> 'int' 23
+    | | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5839c30 <<scratch space>:115:1> 'int' <LValueToRValue>
+    | | | | | | | | |     `-DeclRefExpr 0x7fa5c5839c08 <col:1> 'int' lvalue Var 0x7fa5c582f638 'i23' 'int'
+    | | | | | | | | `-BinaryOperator 0x7fa5c5839d60 <c_files/pr33848.c:17:21, <scratch space>:116:1> 'int' '='
+    | | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5839cf8 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5839ce0 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | | |   | | `-DeclRefExpr 0x7fa5c5839c98 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | | |   | `-IntegerLiteral 0x7fa5c5839cc0 <line:14:33> 'int' 24
+    | | | | | | | |   `-ImplicitCastExpr 0x7fa5c5839d48 <<scratch space>:116:1> 'int' <LValueToRValue>
+    | | | | | | | |     `-DeclRefExpr 0x7fa5c5839d20 <col:1> 'int' lvalue Var 0x7fa5c582f750 'i24' 'int'
+    | | | | | | | `-BinaryOperator 0x7fa5c5839e78 <c_files/pr33848.c:17:21, <scratch space>:117:1> 'int' '='
+    | | | | | | |   |-ArraySubscriptExpr 0x7fa5c5839e10 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | | |   | |-ImplicitCastExpr 0x7fa5c5839df8 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | | |   | | `-DeclRefExpr 0x7fa5c5839db0 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | | |   | `-IntegerLiteral 0x7fa5c5839dd8 <line:14:40> 'int' 25
+    | | | | | | |   `-ImplicitCastExpr 0x7fa5c5839e60 <<scratch space>:117:1> 'int' <LValueToRValue>
+    | | | | | | |     `-DeclRefExpr 0x7fa5c5839e38 <col:1> 'int' lvalue Var 0x7fa5c5831070 'i25' 'int'
+    | | | | | | `-BinaryOperator 0x7fa5c5839f90 <c_files/pr33848.c:17:21, <scratch space>:118:1> 'int' '='
+    | | | | | |   |-ArraySubscriptExpr 0x7fa5c5839f28 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | | |   | |-ImplicitCastExpr 0x7fa5c5839f10 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | | |   | | `-DeclRefExpr 0x7fa5c5839ec8 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | | |   | `-IntegerLiteral 0x7fa5c5839ef0 <line:14:47> 'int' 26
+    | | | | | |   `-ImplicitCastExpr 0x7fa5c5839f78 <<scratch space>:118:1> 'int' <LValueToRValue>
+    | | | | | |     `-DeclRefExpr 0x7fa5c5839f50 <col:1> 'int' lvalue Var 0x7fa5c5831188 'i26' 'int'
+    | | | | | `-BinaryOperator 0x7fa5c583a0a8 <c_files/pr33848.c:17:21, <scratch space>:119:1> 'int' '='
+    | | | | |   |-ArraySubscriptExpr 0x7fa5c583a040 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | | |   | |-ImplicitCastExpr 0x7fa5c583a028 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | | |   | | `-DeclRefExpr 0x7fa5c5839fe0 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | | |   | `-IntegerLiteral 0x7fa5c583a008 <line:14:54> 'int' 27
+    | | | | |   `-ImplicitCastExpr 0x7fa5c583a090 <<scratch space>:119:1> 'int' <LValueToRValue>
+    | | | | |     `-DeclRefExpr 0x7fa5c583a068 <col:1> 'int' lvalue Var 0x7fa5c58312a0 'i27' 'int'
+    | | | | `-BinaryOperator 0x7fa5c583a1c0 <c_files/pr33848.c:17:21, <scratch space>:120:1> 'int' '='
+    | | | |   |-ArraySubscriptExpr 0x7fa5c583a158 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | | |   | |-ImplicitCastExpr 0x7fa5c583a140 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | | |   | | `-DeclRefExpr 0x7fa5c583a0f8 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | | |   | `-IntegerLiteral 0x7fa5c583a120 <line:14:61> 'int' 28
+    | | | |   `-ImplicitCastExpr 0x7fa5c583a1a8 <<scratch space>:120:1> 'int' <LValueToRValue>
+    | | | |     `-DeclRefExpr 0x7fa5c583a180 <col:1> 'int' lvalue Var 0x7fa5c58313b8 'i28' 'int'
+    | | | `-BinaryOperator 0x7fa5c583a2d8 <c_files/pr33848.c:17:21, <scratch space>:121:1> 'int' '='
+    | | |   |-ArraySubscriptExpr 0x7fa5c583a270 <c_files/pr33848.c:17:21, col:29> 'volatile int' lvalue
+    | | |   | |-ImplicitCastExpr 0x7fa5c583a258 <col:21> 'volatile int *' <ArrayToPointerDecay>
+    | | |   | | `-DeclRefExpr 0x7fa5c583a210 <col:21> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | | |   | `-IntegerLiteral 0x7fa5c583a238 <line:14:68> 'int' 29
+    | | |   `-ImplicitCastExpr 0x7fa5c583a2c0 <<scratch space>:121:1> 'int' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fa5c583a298 <col:1> 'int' lvalue Var 0x7fa5c58314d0 'i29' 'int'
+    | | `-IfStmt 0x7fa5c583a550 <c_files/pr33848.c:36:7, line:39:10>
+    | |   |-<<<NULL>>>
+    | |   |-<<<NULL>>>
+    | |   |-BinaryOperator 0x7fa5c583a388 <line:36:11, col:21> 'int' '!='
+    | |   | |-ImplicitCastExpr 0x7fa5c583a370 <col:11> 'void *' <LValueToRValue>
+    | |   | | `-DeclRefExpr 0x7fa5c583a328 <col:11> 'void *volatile' lvalue Var 0x7fa5c58294b8 'data' 'void *volatile'
+    | |   | `-AddrLabelExpr 0x7fa5c583a350 <col:19, col:21> 'void *' foo 0x7fa5c58296a8
+    | |   |-BinaryOperator 0x7fa5c583a458 <line:37:2, col:10> 'int' '='
+    | |   | |-ArraySubscriptExpr 0x7fa5c583a410 <col:2, col:6> 'volatile int' lvalue
+    | |   | | |-ImplicitCastExpr 0x7fa5c583a3f8 <col:2> 'volatile int *' <ArrayToPointerDecay>
+    | |   | | | `-DeclRefExpr 0x7fa5c583a3b0 <col:2> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | |   | | `-IntegerLiteral 0x7fa5c583a3d8 <col:5> 'int' 0
+    | |   | `-IntegerLiteral 0x7fa5c583a438 <col:10> 'int' 1
+    | |   `-BinaryOperator 0x7fa5c583a528 <line:39:2, col:10> 'int' '='
+    | |     |-ArraySubscriptExpr 0x7fa5c583a4e0 <col:2, col:6> 'volatile int' lvalue
+    | |     | |-ImplicitCastExpr 0x7fa5c583a4c8 <col:2> 'volatile int *' <ArrayToPointerDecay>
+    | |     | | `-DeclRefExpr 0x7fa5c583a480 <col:2> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    | |     | `-IntegerLiteral 0x7fa5c583a4a8 <col:5> 'int' 1
+    | |     `-IntegerLiteral 0x7fa5c583a508 <col:10> 'int' 2
+    | `-BinaryOperator 0x7fa5c583a688 <line:41:10, col:18> 'int' '>'
+    |   |-ImplicitCastExpr 0x7fa5c583a670 <col:10, col:14> 'int' <LValueToRValue>
+    |   | `-ArraySubscriptExpr 0x7fa5c583a628 <col:10, col:14> 'volatile int' lvalue
+    |   |   |-ImplicitCastExpr 0x7fa5c583a610 <col:10> 'volatile int *' <ArrayToPointerDecay>
+    |   |   | `-DeclRefExpr 0x7fa5c583a5c8 <col:10> 'volatile int [30]' lvalue Var 0x7fa5c5829400 'gv' 'volatile int [30]'
+    |   |   `-IntegerLiteral 0x7fa5c583a5f0 <col:13> 'int' 0
+    |   `-IntegerLiteral 0x7fa5c583a650 <col:18> 'int' 0
+    `-LabelStmt 0x7fa5c583a708 <line:42:2, line:43:10> 'foo'
+      `-ReturnStmt 0x7fa5c583a6f0 <col:3, col:10>
+        `-IntegerLiteral 0x7fa5c583a6d0 <col:10> 'int' 0

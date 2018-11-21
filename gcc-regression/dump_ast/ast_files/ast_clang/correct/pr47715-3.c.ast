@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fb1fd0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb1fd026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb1fd026740 '__int128'
+|-TypedefDecl 0x7fb1fd026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb1fd026760 'unsigned __int128'
+|-TypedefDecl 0x7fb1fd026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb1fd026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb1fd026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb1fd026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb1fd026dc0 'char *'
+|   `-BuiltinType 0x7fb1fd026560 'char'
+|-TypedefDecl 0x7fb1fd0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb1fd027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb1fd026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb1fd026e58 '__va_list_tag'
+|-RecordDecl 0x7fb1fd027120 <c_files/pr47715-3.c:6:1, line:10:1> line:6:8 struct initial_sp definition
+| |-FieldDecl 0x7fb1fd825a00 <line:8:3, col:9> col:9 sp 'void *'
+| `-FieldDecl 0x7fb1fd825a60 <line:9:3, col:8> col:8 referenced len 'long'
+|-VarDecl 0x7fb1fd825b00 <line:11:1, line:12:19> col:19 used __morestack_initial_sp 'struct initial_sp':'struct initial_sp' tls
+|-FunctionDecl 0x7fb1fd825c80 <line:13:1, col:17> col:6 used bar 'void (void *)'
+| `-ParmVarDecl 0x7fb1fd825bb8 <col:11, col:16> col:17 'void *'
+`-FunctionDecl 0x7fb1fd825d68 <line:14:1, line:18:1> line:15:1 foo 'void ()'
+  `-CompoundStmt 0x7fb1fd825f68 <line:16:1, line:18:1>
+    `-CallExpr 0x7fb1fd825f20 <line:17:3, col:35> 'void'
+      |-ImplicitCastExpr 0x7fb1fd825f08 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb1fd825e00 <col:3> 'void (void *)' Function 0x7fb1fd825c80 'bar' 'void (void *)'
+      `-ImplicitCastExpr 0x7fb1fd825f50 <col:8, col:32> 'void *' <BitCast>
+        `-UnaryOperator 0x7fb1fd825eb8 <col:8, col:32> 'long *' prefix '&'
+          `-MemberExpr 0x7fb1fd825e50 <col:9, col:32> 'long' lvalue .len 0x7fb1fd825a60
+            `-DeclRefExpr 0x7fb1fd825e28 <col:9> 'struct initial_sp':'struct initial_sp' lvalue Var 0x7fb1fd825b00 '__morestack_initial_sp' 'struct initial_sp':'struct initial_sp'

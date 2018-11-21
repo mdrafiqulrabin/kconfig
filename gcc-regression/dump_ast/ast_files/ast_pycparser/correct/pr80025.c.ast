@@ -1,0 +1,72 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['long', 'int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['long', 'int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['long', 'int']
+    Compound: 
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['short', 'int']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['unsigned', 'short', 'int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: baz, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: -=
+        ID: a
+        ID: b
+      Assignment: =
+        ID: b
+        UnaryOp: !
+          FuncCall: 
+            ID: foo
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          Assignment: ^=
+            ID: b
+            TernaryOp: 
+              BinaryOp: ^
+                ID: c
+                Constant: int, 1
+              BinaryOp: ^
+                ID: c
+                Constant: int, 1
+              FuncCall: 
+                ID: foo
+          BinaryOp: &
+            ID: __INTPTR_TYPE__
+            ID: bar
+          ID: a

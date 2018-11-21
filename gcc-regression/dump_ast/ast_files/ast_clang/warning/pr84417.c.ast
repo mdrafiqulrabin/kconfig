@@ -1,0 +1,40 @@
+c_files/pr84417.c:8:6: warning: expression result unused [-Wunused-value]
+  *a + *(a + 8446744073709551615LL);
+  ~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+TranslationUnitDecl 0x7ffb4b0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffb4b026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffb4b026740 '__int128'
+|-TypedefDecl 0x7ffb4b026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffb4b026760 'unsigned __int128'
+|-TypedefDecl 0x7ffb4b026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffb4b026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffb4b026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffb4b026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffb4b026dc0 'char *'
+|   `-BuiltinType 0x7ffb4b026560 'char'
+|-TypedefDecl 0x7ffb4b0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffb4b027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffb4b026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffb4b026e58 '__va_list_tag'
+`-FunctionDecl 0x7ffb4b027168 <c_files/pr84417.c:4:1, line:9:1> line:4:6 fn1 'void ()'
+  `-CompoundStmt 0x7ffb4c025e20 <line:5:1, line:9:1>
+    |-DeclStmt 0x7ffb4c025b18 <line:6:3, col:60>
+    | `-VarDecl 0x7ffb4c025ab8 <col:3, col:59> col:59 used x '__attribute__((__vector_size__(1 * sizeof(double)))) double'
+    |-DeclStmt 0x7ffb4c025c88 <line:7:3, col:27>
+    | `-VarDecl 0x7ffb4c025b70 <col:3, col:26> col:11 used a 'double *' cinit
+    |   `-CStyleCastExpr 0x7ffb4c025c60 <col:15, col:26> 'double *' <BitCast>
+    |     `-UnaryOperator 0x7ffb4c025c28 <col:25, col:26> '__attribute__((__vector_size__(1 * sizeof(double)))) double *' prefix '&'
+    |       `-DeclRefExpr 0x7ffb4c025bd0 <col:26> '__attribute__((__vector_size__(1 * sizeof(double)))) double' lvalue Var 0x7ffb4c025ab8 'x' '__attribute__((__vector_size__(1 * sizeof(double)))) double'
+    `-BinaryOperator 0x7ffb4c025df8 <line:8:3, col:35> 'double' '+'
+      |-ImplicitCastExpr 0x7ffb4c025dc8 <col:3, col:4> 'double' <LValueToRValue>
+      | `-UnaryOperator 0x7ffb4c025ce0 <col:3, col:4> 'double' lvalue prefix '*'
+      |   `-ImplicitCastExpr 0x7ffb4c025cc8 <col:4> 'double *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7ffb4c025ca0 <col:4> 'double *' lvalue Var 0x7ffb4c025b70 'a' 'double *'
+      `-ImplicitCastExpr 0x7ffb4c025de0 <col:8, col:35> 'double' <LValueToRValue>
+        `-UnaryOperator 0x7ffb4c025da8 <col:8, col:35> 'double' lvalue prefix '*'
+          `-ParenExpr 0x7ffb4c025d88 <col:9, col:35> 'double *'
+            `-BinaryOperator 0x7ffb4c025d60 <col:10, col:14> 'double *' '+'
+              |-ImplicitCastExpr 0x7ffb4c025d48 <col:10> 'double *' <LValueToRValue>
+              | `-DeclRefExpr 0x7ffb4c025d00 <col:10> 'double *' lvalue Var 0x7ffb4c025b70 'a' 'double *'
+              `-IntegerLiteral 0x7ffb4c025d28 <col:14> 'long long' 8446744073709551615

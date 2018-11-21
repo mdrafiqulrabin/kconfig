@@ -1,0 +1,19 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo2, []
+          IdentifierType: ['long']
+    Compound: 
+      Return: 
+        UnaryOp: *
+          Cast: 
+            Typename: None, ['volatile']
+              PtrDecl: []
+                TypeDecl: None, ['volatile']
+                  IdentifierType: ['int']
+            Constant: int, 0xFEE00000

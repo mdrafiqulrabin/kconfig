@@ -1,0 +1,45 @@
+FileAST: 
+  Decl: outbuffer, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: outbuffer, []
+        IdentifierType: ['char']
+  Decl: buffer, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: buffer, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned']
+      Decl: fp, [], [], []
+        TypeDecl: fp, []
+          IdentifierType: ['unsigned']
+        ID: fp
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 6
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: buffer
+            UnaryOp: p++
+              ID: j
+          ArrayRef: 
+            ID: outbuffer
+            BinaryOp: -
+              ID: fp
+              ID: i

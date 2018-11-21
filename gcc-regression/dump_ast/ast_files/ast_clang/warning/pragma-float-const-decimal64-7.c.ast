@@ -1,0 +1,75 @@
+c_files/pragma-float-const-decimal64-7.c:14:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 OFF
+             ^
+c_files/pragma-float-const-decimal64-7.c:24:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 OFF
+             ^
+c_files/pragma-float-const-decimal64-7.c:25:21: error: invalid suffix 'dd' on floating constant
+  double a = 0x1.0p1dd;         /* { dg-error "with hex" } */
+                    ^
+c_files/pragma-float-const-decimal64-7.c:26:17: error: invalid suffix 'idd' on floating constant
+  double b = 1.0idd;            /* { dg-error "invalid suffix" } */
+                ^
+c_files/pragma-float-const-decimal64-7.c:34:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON
+             ^
+3 warnings and 2 errors generated.
+TranslationUnitDecl 0x7f872c0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f872c026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f872c026740 '__int128'
+|-TypedefDecl 0x7f872c026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f872c026760 'unsigned __int128'
+|-TypedefDecl 0x7f872c026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f872c026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f872c026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f872c026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f872c026dc0 'char *'
+|   `-BuiltinType 0x7f872c026560 'char'
+|-TypedefDecl 0x7f872c0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f872c027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f872c026ee0 'struct __va_list_tag'
+|     `-Record 0x7f872c026e58 '__va_list_tag'
+|-FunctionDecl 0x7f872c01dc00 <c_files/pragma-float-const-decimal64-7.c:11:1, line:19:1> line:12:1 f1 'double (void)'
+| `-CompoundStmt 0x7f872c01df28 <line:13:1, line:19:1>
+|   |-DeclStmt 0x7f872c01dd70 <line:15:3, col:21>
+|   | `-VarDecl 0x7f872c01dcf0 <col:3, col:14> col:10 used a 'double' cinit
+|   |   `-FloatingLiteral 0x7f872c01dd50 <col:14> 'double' 2.000000e+00
+|   |-DeclStmt 0x7f872c01de50 <line:16:3, col:18>
+|   | `-VarDecl 0x7f872c01dda0 <col:3, col:14> col:10 used b 'double' cinit
+|   |   `-ImplicitCastExpr 0x7f872c01de38 <col:14> 'double' <FloatingComplexToReal>
+|   |     `-ImaginaryLiteral 0x7f872c01de20 <col:14> '_Complex double'
+|   |       `-FloatingLiteral 0x7f872c01de00 <col:14> 'double' 1.000000e+00
+|   `-ReturnStmt 0x7f872c01df10 <line:18:3, col:14>
+|     `-BinaryOperator 0x7f872c01dee8 <col:10, col:14> 'double' '+'
+|       |-ImplicitCastExpr 0x7f872c01deb8 <col:10> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f872c01de68 <col:10> 'double' lvalue Var 0x7f872c01dcf0 'a' 'double'
+|       `-ImplicitCastExpr 0x7f872c01ded0 <col:14> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7f872c01de90 <col:14> 'double' lvalue Var 0x7f872c01dda0 'b' 'double'
+|-FunctionDecl 0x7f872c01dff0 <line:21:1, line:29:1> line:22:1 f2 'double (void)'
+| `-CompoundStmt 0x7f872c01e268 <line:23:1, line:29:1>
+|   |-DeclStmt 0x7f872c01e100 <line:25:3, col:23>
+|   | `-VarDecl 0x7f872c01e0a0 <col:3, col:10> col:10 used a 'double'
+|   |-DeclStmt 0x7f872c01e190 <line:26:3, col:20>
+|   | `-VarDecl 0x7f872c01e130 <col:3, col:10> col:10 used b 'double'
+|   `-ReturnStmt 0x7f872c01e250 <line:28:3, col:14>
+|     `-BinaryOperator 0x7f872c01e228 <col:10, col:14> 'double' '+'
+|       |-ImplicitCastExpr 0x7f872c01e1f8 <col:10> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f872c01e1a8 <col:10> 'double' lvalue Var 0x7f872c01e0a0 'a' 'double'
+|       `-ImplicitCastExpr 0x7f872c01e210 <col:14> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7f872c01e1d0 <col:14> 'double' lvalue Var 0x7f872c01e130 'b' 'double'
+`-FunctionDecl 0x7f872c01e330 <line:31:1, line:39:1> line:32:1 f3 'double (void)'
+  `-CompoundStmt 0x7f872c01e618 <line:33:1, line:39:1>
+    |-DeclStmt 0x7f872c01e460 <line:35:3, col:21>
+    | `-VarDecl 0x7f872c01e3e0 <col:3, col:14> col:10 used a 'double' cinit
+    |   `-FloatingLiteral 0x7f872c01e440 <col:14> 'double' 2.000000e+00
+    |-DeclStmt 0x7f872c01e540 <line:36:3, col:18>
+    | `-VarDecl 0x7f872c01e490 <col:3, col:14> col:10 used b 'double' cinit
+    |   `-ImplicitCastExpr 0x7f872c01e528 <col:14> 'double' <FloatingComplexToReal>
+    |     `-ImaginaryLiteral 0x7f872c01e510 <col:14> '_Complex double'
+    |       `-FloatingLiteral 0x7f872c01e4f0 <col:14> 'double' 1.000000e+00
+    `-ReturnStmt 0x7f872c01e600 <line:38:3, col:14>
+      `-BinaryOperator 0x7f872c01e5d8 <col:10, col:14> 'double' '+'
+        |-ImplicitCastExpr 0x7f872c01e5a8 <col:10> 'double' <LValueToRValue>
+        | `-DeclRefExpr 0x7f872c01e558 <col:10> 'double' lvalue Var 0x7f872c01e3e0 'a' 'double'
+        `-ImplicitCastExpr 0x7f872c01e5c0 <col:14> 'double' <LValueToRValue>
+          `-DeclRefExpr 0x7f872c01e580 <col:14> 'double' lvalue Var 0x7f872c01e490 'b' 'double'

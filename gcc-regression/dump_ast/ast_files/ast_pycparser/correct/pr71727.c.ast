@@ -1,0 +1,72 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: test_struct_s
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['long']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['long']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['long']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['long']
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['unsigned', 'long']
+  Decl: _a, [], [], []
+    TypeDecl: _a, []
+      IdentifierType: ['char']
+  Decl: xarray, [], [], []
+    ArrayDecl: []
+      TypeDecl: xarray, []
+        Struct: test_struct_s
+      Constant: int, 128
+  FuncDef: 
+    Decl: _start, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: _start, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: new_entry, [], [], []
+        PtrDecl: []
+          TypeDecl: new_entry, []
+            Struct: test_struct_s
+      Assignment: =
+        ID: new_entry
+        UnaryOp: &
+          ArrayRef: 
+            ID: xarray
+            Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: new_entry
+          ID: a
+        Constant: int, 1
+      Assignment: =
+        StructRef: ->
+          ID: new_entry
+          ID: b
+        Constant: int, 2
+      Assignment: =
+        StructRef: ->
+          ID: new_entry
+          ID: c
+        Constant: int, 3
+      Assignment: =
+        StructRef: ->
+          ID: new_entry
+          ID: d
+        Constant: int, 4
+      Assignment: =
+        StructRef: ->
+          ID: new_entry
+          ID: e
+        Constant: int, 5
+      Return: 

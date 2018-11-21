@@ -1,0 +1,48 @@
+FileAST: 
+  Typedef: u32, [], ['typedef']
+    TypeDecl: u32, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: testcarry_u32, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['u32']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['u32']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['u32']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['u32']
+        TypeDecl: testcarry_u32, []
+          IdentifierType: ['u32']
+    Compound: 
+      Decl: result0, [], [], []
+        TypeDecl: result0, []
+          IdentifierType: ['u32']
+      Decl: result1, [], [], []
+        TypeDecl: result1, []
+          IdentifierType: ['u32']
+      FuncCall: 
+        ID: __builtin_ia32_sbb_u32
+        ExprList: 
+          FuncCall: 
+            ID: __builtin_ia32_sbb_u32
+            ExprList: 
+              Constant: int, 0
+              ID: a
+              ID: c
+              UnaryOp: &
+                ID: result0
+          ID: b
+          ID: d
+          UnaryOp: &
+            ID: result1
+      Return: 
+        BinaryOp: ^
+          ID: result0
+          ID: result1

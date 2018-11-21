@@ -1,0 +1,75 @@
+FileAST: 
+  Decl: inbuf, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: inbuf, []
+        IdentifierType: ['char']
+  Decl: outbuf, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: outbuf, []
+        IdentifierType: ['char']
+  Decl: insize, [], ['extern'], []
+    TypeDecl: insize, []
+      IdentifierType: ['unsigned']
+  Decl: inptr, [], ['extern'], []
+    TypeDecl: inptr, []
+      IdentifierType: ['unsigned']
+  Decl: max_len, [], ['static'], []
+    TypeDecl: max_len, []
+      IdentifierType: ['int']
+  Decl: peek_bits, [], ['static'], []
+    TypeDecl: peek_bits, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: build_tree, [], [], []
+      FuncDecl: 
+        TypeDecl: build_tree, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: len, [], [], []
+        TypeDecl: len, []
+          IdentifierType: ['int']
+      Decl: prefixp, [], [], []
+        PtrDecl: []
+          TypeDecl: prefixp, []
+            IdentifierType: ['char']
+      Assignment: =
+        ID: max_len
+        ArrayRef: 
+          ID: inbuf
+          UnaryOp: p++
+            ID: inptr
+      Assignment: =
+        ID: peek_bits
+        TernaryOp: 
+          BinaryOp: <=
+            ID: max_len
+            Constant: int, 12
+          ID: max_len
+          Constant: int, 12
+      Assignment: =
+        ID: prefixp
+        UnaryOp: &
+          ArrayRef: 
+            ID: outbuf
+            BinaryOp: <<
+              Constant: int, 1
+              ID: peek_bits
+      For: 
+        Assignment: =
+          ID: len
+          Constant: int, 1
+        BinaryOp: <=
+          ID: len
+          ID: peek_bits
+        UnaryOp: p++
+          ID: len
+        Compound: 
+      While: 
+        BinaryOp: >
+          ID: prefixp
+          ID: outbuf
+        Assignment: =
+          UnaryOp: *
+            UnaryOp: --
+              ID: prefixp
+          Constant: int, 0

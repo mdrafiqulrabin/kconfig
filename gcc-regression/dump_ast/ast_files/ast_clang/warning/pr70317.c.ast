@@ -1,0 +1,79 @@
+c_files/pr70317.c:11:35: warning: unknown attribute 'optimize' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone, optimize ("finite-math-only"))) void
+                                  ^
+c_files/pr70317.c:11:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone, optimize ("finite-math-only"))) void
+                         ^
+c_files/pr70317.c:20:35: warning: unknown attribute 'optimize' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone, optimize ("no-finite-math-only"))) void
+                                  ^
+c_files/pr70317.c:20:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone, optimize ("no-finite-math-only"))) void
+                         ^
+4 warnings generated.
+TranslationUnitDecl 0x7fa925025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa925026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa925025d40 '__int128'
+|-TypedefDecl 0x7fa925026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa925025d60 'unsigned __int128'
+|-TypedefDecl 0x7fa925026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa925026170 'struct __NSConstantString_tag'
+|   `-Record 0x7fa9250260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa925026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa9250263c0 'char *'
+|   `-BuiltinType 0x7fa925025b60 'char'
+|-TypedefDecl 0x7fa9250266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa925026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa9250264e0 'struct __va_list_tag'
+|     `-Record 0x7fa925026458 '__va_list_tag'
+|-TypedefDecl 0x7fa925026778 <c_files/pr70317.c:7:1, col:16> col:16 referenced V '__attribute__((__vector_size__(32 * sizeof(double)))) double'
+| `-VectorType 0x7fa925026740 '__attribute__((__vector_size__(32 * sizeof(double)))) double' 32
+|   `-BuiltinType 0x7fa925025ce0 'double'
+|-TypedefDecl 0x7fa924028238 <line:8:1, col:36> col:36 referenced T 'typeof ((V){} < (V){})':'__attribute__((__vector_size__(32 * sizeof(long long)))) long long'
+| `-TypeOfExprType 0x7fa924028200 'typeof ((V){} < (V){})' sugar
+|   |-ParenExpr 0x7fa9240281e0 <col:18, col:34> '__attribute__((__vector_size__(32 * sizeof(long long)))) long long'
+|   | `-BinaryOperator 0x7fa9240281b8 <col:19, col:33> '__attribute__((__vector_size__(32 * sizeof(long long)))) long long' '<'
+|   |   |-ImplicitCastExpr 0x7fa924028160 <col:19, col:24> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' <LValueToRValue>
+|   |   | `-CompoundLiteralExpr 0x7fa924027d80 <col:19, col:24> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' lvalue
+|   |   |   `-InitListExpr 0x7fa924027a40 <col:23, col:24> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double'
+|   |   `-ImplicitCastExpr 0x7fa924028178 <col:28, col:33> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' <LValueToRValue>
+|   |     `-CompoundLiteralExpr 0x7fa924028138 <col:28, col:33> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' lvalue
+|   |       `-InitListExpr 0x7fa924027df8 <col:32, col:33> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double'
+|   `-VectorType 0x7fa924028190 '__attribute__((__vector_size__(32 * sizeof(long long)))) long long' 32
+|     `-BuiltinType 0x7fa925025c00 'long long'
+|-VarDecl 0x7fa9240282c0 <line:9:1, col:3> col:3 used a 'T':'__attribute__((__vector_size__(32 * sizeof(long long)))) long long'
+|-VarDecl 0x7fa924028370 <col:1, col:6> col:6 used b 'T':'__attribute__((__vector_size__(32 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fa9240285d0 <line:11:1, line:16:1> line:12:1 foo 'void (V *)'
+| |-ParmVarDecl 0x7fa9240284c8 <col:6, col:9> col:9 used x 'V *'
+| |-CompoundStmt 0x7fa9240288b0 <line:13:1, line:16:1>
+| | |-DeclStmt 0x7fa9240287a0 <line:14:3, col:11>
+| | | `-VarDecl 0x7fa9240286c8 <col:3, col:10> col:5 used z 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' cinit
+| | |   `-ImplicitCastExpr 0x7fa924028788 <col:9, col:10> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' <LValueToRValue>
+| | |     `-UnaryOperator 0x7fa924028768 <col:9, col:10> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' lvalue prefix '*'
+| | |       `-ImplicitCastExpr 0x7fa924028750 <col:10> 'V *' <LValueToRValue>
+| | |         `-DeclRefExpr 0x7fa924028728 <col:10> 'V *' lvalue ParmVar 0x7fa9240284c8 'x' 'V *'
+| | `-BinaryOperator 0x7fa924028888 <line:15:3, col:12> 'T':'__attribute__((__vector_size__(32 * sizeof(long long)))) long long' '='
+| |   |-DeclRefExpr 0x7fa9240287b8 <col:3> 'T':'__attribute__((__vector_size__(32 * sizeof(long long)))) long long' lvalue Var 0x7fa9240282c0 'a' 'T':'__attribute__((__vector_size__(32 * sizeof(long long)))) long long'
+| |   `-BinaryOperator 0x7fa924028860 <col:7, col:12> '__attribute__((__vector_size__(32 * sizeof(long long)))) long long' '<='
+| |     |-ImplicitCastExpr 0x7fa924028830 <col:7> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fa9240287e0 <col:7> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' lvalue Var 0x7fa9240286c8 'z' 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double'
+| |     `-ImplicitCastExpr 0x7fa924028848 <col:12> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fa924028808 <col:12> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' lvalue Var 0x7fa9240286c8 'z' 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double'
+| `-NoInlineAttr 0x7fa924028670 <line:11:16>
+`-FunctionDecl 0x7fa924029e00 <line:20:1, line:25:1> line:21:1 bar 'void (V *)'
+  |-ParmVarDecl 0x7fa924028968 <col:6, col:9> col:9 used x 'V *'
+  |-CompoundStmt 0x7fa92402a0e0 <line:22:1, line:25:1>
+  | |-DeclStmt 0x7fa924029fd0 <line:23:3, col:11>
+  | | `-VarDecl 0x7fa924029ef8 <col:3, col:10> col:5 used z 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' cinit
+  | |   `-ImplicitCastExpr 0x7fa924029fb8 <col:9, col:10> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' <LValueToRValue>
+  | |     `-UnaryOperator 0x7fa924029f98 <col:9, col:10> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' lvalue prefix '*'
+  | |       `-ImplicitCastExpr 0x7fa924029f80 <col:10> 'V *' <LValueToRValue>
+  | |         `-DeclRefExpr 0x7fa924029f58 <col:10> 'V *' lvalue ParmVar 0x7fa924028968 'x' 'V *'
+  | `-BinaryOperator 0x7fa92402a0b8 <line:24:3, col:12> 'T':'__attribute__((__vector_size__(32 * sizeof(long long)))) long long' '='
+  |   |-DeclRefExpr 0x7fa924029fe8 <col:3> 'T':'__attribute__((__vector_size__(32 * sizeof(long long)))) long long' lvalue Var 0x7fa924028370 'b' 'T':'__attribute__((__vector_size__(32 * sizeof(long long)))) long long'
+  |   `-BinaryOperator 0x7fa92402a090 <col:7, col:12> '__attribute__((__vector_size__(32 * sizeof(long long)))) long long' '<='
+  |     |-ImplicitCastExpr 0x7fa92402a060 <col:7> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' <LValueToRValue>
+  |     | `-DeclRefExpr 0x7fa92402a010 <col:7> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' lvalue Var 0x7fa924029ef8 'z' 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double'
+  |     `-ImplicitCastExpr 0x7fa92402a078 <col:12> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' <LValueToRValue>
+  |       `-DeclRefExpr 0x7fa92402a038 <col:12> 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double' lvalue Var 0x7fa924029ef8 'z' 'V':'__attribute__((__vector_size__(32 * sizeof(double)))) double'
+  `-NoInlineAttr 0x7fa924029ea0 <line:20:16>

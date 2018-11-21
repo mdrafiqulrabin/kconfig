@@ -1,0 +1,16 @@
+FileAST: 
+  FuncDef: 
+    Decl: retframe_short, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: rframe, [], [], []
+            PtrDecl: []
+              TypeDecl: rframe, []
+                IdentifierType: ['void']
+        TypeDecl: retframe_short, []
+          IdentifierType: ['short']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_return
+        ExprList: 
+          ID: rframe

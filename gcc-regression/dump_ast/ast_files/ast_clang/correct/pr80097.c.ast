@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7ffb890264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffb89026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffb89026740 '__int128'
+|-TypedefDecl 0x7ffb89026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffb89026760 'unsigned __int128'
+|-TypedefDecl 0x7ffb89026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffb89026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffb89026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffb89026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffb89026dc0 'char *'
+|   `-BuiltinType 0x7ffb89026560 'char'
+|-TypedefDecl 0x7ffb890270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffb89027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffb89026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffb89026e58 '__va_list_tag'
+`-FunctionDecl 0x7ffb89825a30 <c_files/pr80097.c:5:1, line:10:1> line:6:1 foo 'int (double)'
+  |-ParmVarDecl 0x7ffb89027138 <col:6, col:13> col:13 used a 'double'
+  `-CompoundStmt 0x7ffb89825d18 <line:7:1, line:10:1>
+    |-DeclStmt 0x7ffb89825ca8 <line:8:3, col:23>
+    | `-VarDecl 0x7ffb89825b28 <col:3, col:22> col:7 used b 'int' cinit
+    |   `-ParenExpr 0x7ffb89825c88 <col:11, col:22> 'int'
+    |     `-BinaryOperator 0x7ffb89825c60 <col:12, col:21> 'int' '>='
+    |       |-BinaryOperator 0x7ffb89825c00 <col:12, col:16> 'double' '/'
+    |       | |-ImplicitCastExpr 0x7ffb89825be8 <col:12> 'double' <IntegralToFloating>
+    |       | | `-IntegerLiteral 0x7ffb89825b88 <col:12> 'int' 1
+    |       | `-ImplicitCastExpr 0x7ffb89825bd0 <col:16> 'double' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7ffb89825ba8 <col:16> 'double' lvalue ParmVar 0x7ffb89027138 'a' 'double'
+    |       `-ImplicitCastExpr 0x7ffb89825c48 <col:21> 'double' <IntegralToFloating>
+    |         `-IntegerLiteral 0x7ffb89825c28 <col:21> 'int' 1
+    `-ReturnStmt 0x7ffb89825d00 <line:9:3, col:10>
+      `-ImplicitCastExpr 0x7ffb89825ce8 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7ffb89825cc0 <col:10> 'int' lvalue Var 0x7ffb89825b28 'b' 'int'

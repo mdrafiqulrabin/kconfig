@@ -1,0 +1,28 @@
+c_files/pr70830.c:10:1: error: x86-64 'interrupt' attribute only applies to functions that have only a pointer parameter optionally followed by an integer parameter
+void __attribute__ ((interrupt ("IRQ"))) dm3730_IRQHandler(void)
+^
+1 error generated.
+TranslationUnitDecl 0x7fe6348264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe634826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe634826740 '__int128'
+|-TypedefDecl 0x7fe634826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe634826760 'unsigned __int128'
+|-TypedefDecl 0x7fe634826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe634826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe634826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe634826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe634826dc0 'char *'
+|   `-BuiltinType 0x7fe634826560 'char'
+|-TypedefDecl 0x7fe6348270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe634827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe634826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe634826e58 '__va_list_tag'
+|-FunctionDecl 0x7fe635025a00 <c_files/pr70830.c:8:1, col:27> col:13 used prints 'void (char *)' extern
+| `-ParmVarDecl 0x7fe634827138 <col:21, col:26> col:27 'char *'
+`-FunctionDecl 0x7fe635025c10 <line:10:1, line:13:1> line:10:42 dm3730_IRQHandler 'void (void)'
+  `-CompoundStmt 0x7fe635025d88 <line:11:1, line:13:1>
+    `-CallExpr 0x7fe635025d40 <line:12:5, col:18> 'void'
+      |-ImplicitCastExpr 0x7fe635025d28 <col:5> 'void (*)(char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe635025ca8 <col:5> 'void (char *)' Function 0x7fe635025a00 'prints' 'void (char *)'
+      `-ImplicitCastExpr 0x7fe635025d70 <col:12> 'char *' <ArrayToPointerDecay>
+        `-StringLiteral 0x7fe635025cd0 <col:12> 'char [4]' lvalue "IRQ"

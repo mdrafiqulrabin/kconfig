@@ -1,0 +1,58 @@
+FileAST: 
+  FuncDef: 
+    Decl: regex_subst, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: regex_subst, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: subst, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: subst, ['const']
+            IdentifierType: ['void']
+        Constant: string, ""
+      FuncCall: 
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                FuncDecl: 
+                  ParamList: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['int']
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+            ID: subst
+        ExprList: 
+          Constant: int, 0
+  FuncDef: 
+    Decl: foobar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foobar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      FuncCall: 
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                FuncDecl: 
+                  ParamList: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['void']
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+            UnaryOp: &
+              ID: x

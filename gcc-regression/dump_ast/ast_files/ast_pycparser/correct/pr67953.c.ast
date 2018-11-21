@@ -1,0 +1,133 @@
+FileAST: 
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['signed', 'int']
+        TypeDecl: fn1, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'int']
+            ID: a
+          BinaryOp: *
+            BinaryOp: /
+              ID: a
+              Constant: int, 3
+            Constant: int, 3
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['signed', 'int']
+        TypeDecl: fn2, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        BinaryOp: -
+          ID: a
+          BinaryOp: *
+            BinaryOp: /
+              ID: a
+              Constant: int, 3
+            Constant: int, 3
+  FuncDef: 
+    Decl: fn3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: fn3, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        BinaryOp: -
+          ID: a
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned']
+            BinaryOp: *
+              BinaryOp: /
+                ID: a
+                Constant: int, 3
+              Constant: int, 3
+  FuncDef: 
+    Decl: fn4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: fn4, []
+          IdentifierType: ['signed', 'int']
+    Compound: 
+      Return: 
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned']
+            ID: a
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned']
+            BinaryOp: *
+              BinaryOp: /
+                ID: a
+                Constant: int, 3
+              Constant: int, 3
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: ||
+              BinaryOp: !=
+                FuncCall: 
+                  ID: fn1
+                  ExprList: 
+                    UnaryOp: -
+                      Constant: int, 5
+                UnaryOp: -
+                  Constant: int, 2
+              BinaryOp: !=
+                FuncCall: 
+                  ID: fn2
+                  ExprList: 
+                    UnaryOp: -
+                      Constant: int, 5
+                UnaryOp: -
+                  Constant: int, 2
+            BinaryOp: !=
+              FuncCall: 
+                ID: fn3
+                ExprList: 
+                  UnaryOp: -
+                    Constant: int, 5
+              UnaryOp: -
+                Constant: int, 2
+          BinaryOp: !=
+            FuncCall: 
+              ID: fn4
+              ExprList: 
+                UnaryOp: -
+                  Constant: int, 5
+            UnaryOp: -
+              Constant: int, 2
+        FuncCall: 
+          ID: __builtin_abort

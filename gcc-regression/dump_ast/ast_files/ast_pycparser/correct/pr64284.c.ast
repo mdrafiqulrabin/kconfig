@@ -1,0 +1,46 @@
+FileAST: 
+  Decl: a, [], [], []
+    PtrDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          Enum: None
+            EnumeratorList: 
+              Enumerator: QSTRING
+        Constant: int, 0
+      While: 
+        Constant: int, 1
+        Compound: 
+          Switch: 
+            UnaryOp: *
+              ID: a
+            Compound: 
+              Case: 
+                Constant: char, '\''
+                Assignment: =
+                  ID: c
+                  Constant: int, 0
+              Default: 
+                Switch: 
+                  ID: c
+                  Case: 
+                    Constant: int, 0
+                    If: 
+                      ID: b
+                      Return: 
+                        Constant: int, 0
+                Assignment: =
+                  ID: c
+                  Constant: int, 1
+          UnaryOp: p++
+            ID: a

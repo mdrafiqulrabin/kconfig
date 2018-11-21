@@ -1,0 +1,13 @@
+FileAST: 
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        TypeDecl: test, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: <
+          Constant: float, 5.0
+          BinaryOp: -
+            Constant: float, 5.0
+            Constant: float, 0.1

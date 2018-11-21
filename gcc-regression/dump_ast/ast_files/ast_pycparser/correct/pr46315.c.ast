@@ -1,0 +1,129 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: parse_ranged, ['const'], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: s, ['const']
+                IdentifierType: ['char']
+          Decl: digits, [], [], []
+            TypeDecl: digits, []
+              IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: parse_ranged, ['const']
+            IdentifierType: ['char']
+    Compound: 
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: lim, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: lim, ['const']
+            IdentifierType: ['char']
+        BinaryOp: +
+          ID: s
+          ID: digits
+      While: 
+        BinaryOp: <
+          ID: s
+          ID: lim
+        Compound: 
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['unsigned']
+            BinaryOp: -
+              UnaryOp: *
+                UnaryOp: p++
+                  ID: s
+              Constant: char, '0'
+          If: 
+            BinaryOp: <
+              Constant: int, 9
+              ID: d
+            Return: 
+              Constant: int, 0
+          Assignment: =
+            ID: n
+            BinaryOp: +
+              BinaryOp: *
+                Constant: int, 10
+                ID: n
+              ID: d
+      Return: 
+        TernaryOp: 
+          BinaryOp: &&
+            BinaryOp: &&
+              ID: s
+              BinaryOp: <=
+                Constant: int, 0
+                ID: n
+            BinaryOp: <=
+              ID: n
+              Constant: int, 59
+          ID: s
+          Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: s, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: s, ['const']
+            IdentifierType: ['char']
+        Constant: string, "10092240"
+      Assignment: =
+        ID: s
+        FuncCall: 
+          ID: parse_ranged
+          ExprList: 
+            ID: s
+            Constant: int, 2
+      Assignment: =
+        ID: s
+        FuncCall: 
+          ID: parse_ranged
+          ExprList: 
+            ID: s
+            Constant: int, 2
+      Assignment: =
+        ID: s
+        FuncCall: 
+          ID: parse_ranged
+          ExprList: 
+            ID: s
+            Constant: int, 2
+      Assignment: =
+        ID: s
+        FuncCall: 
+          ID: parse_ranged
+          ExprList: 
+            ID: s
+            Constant: int, 2
+      If: 
+        BinaryOp: ||
+          UnaryOp: !
+            ID: s
+          BinaryOp: !=
+            UnaryOp: *
+              ID: s
+            Constant: char, '\0'
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

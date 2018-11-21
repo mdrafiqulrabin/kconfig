@@ -1,0 +1,79 @@
+FileAST: 
+  Decl: winner, [], [], []
+    TypeDecl: winner, []
+      IdentifierType: ['int']
+  Decl: numf2s, [], [], []
+    TypeDecl: numf2s, []
+      IdentifierType: ['int']
+  Decl: tds, [], [], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: tds, []
+          IdentifierType: ['double']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['double']
+  Decl: tsum, [], [], []
+    TypeDecl: tsum, []
+      IdentifierType: ['double']
+  Typedef: xyz, [], ['typedef']
+    TypeDecl: xyz, []
+      Struct: None
+        Decl: y, [], [], []
+          TypeDecl: y, []
+            IdentifierType: ['double']
+  Decl: Y, [], [], []
+    PtrDecl: []
+      TypeDecl: Y, []
+        IdentifierType: ['xyz']
+  Decl: ti, [], [], []
+    TypeDecl: ti, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: match, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: match, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: tj, [], [], []
+        TypeDecl: tj, []
+          IdentifierType: ['int']
+      Decl: tresult, [], [], []
+        TypeDecl: tresult, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: tj
+          Constant: int, 0
+        BinaryOp: <
+          ID: tj
+          ID: numf2s
+        UnaryOp: p++
+          ID: tj
+        If: 
+          BinaryOp: &&
+            BinaryOp: ==
+              ID: tj
+              ID: winner
+            BinaryOp: >
+              StructRef: .
+                ArrayRef: 
+                  ID: Y
+                  ID: tj
+                ID: y
+              Constant: int, 0
+          Assignment: +=
+            ID: tsum
+            BinaryOp: *
+              ArrayRef: 
+                ArrayRef: 
+                  ID: tds
+                  ID: ti
+                ID: tj
+              ID: d
+      Return: 
+        ID: tsum

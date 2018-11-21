@@ -1,0 +1,22 @@
+c_files/pr84723-4.c:6:16: warning: unknown attribute 'target_clones' ignored [-Wunknown-attributes]
+__attribute__((target_clones ("avx", "default")))
+               ^
+1 warning generated.
+TranslationUnitDecl 0x7f9c128264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9c12826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9c12826740 '__int128'
+|-TypedefDecl 0x7f9c12826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9c12826760 'unsigned __int128'
+|-TypedefDecl 0x7f9c12826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9c12826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9c12826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9c12826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9c12826dc0 'char *'
+|   `-BuiltinType 0x7f9c12826560 'char'
+|-TypedefDecl 0x7f9c128270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9c12827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9c12826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9c12826e58 '__va_list_tag'
+`-FunctionDecl 0x7f9c1303f8c0 <c_files/pr84723-4.c:6:1, line:11:1> line:9:1 foo 'void (void)'
+  |-CompoundStmt 0x7f9c1303f9e0 <line:10:1, line:11:1>
+  `-NakedAttr 0x7f9c1303f958 <line:7:16>

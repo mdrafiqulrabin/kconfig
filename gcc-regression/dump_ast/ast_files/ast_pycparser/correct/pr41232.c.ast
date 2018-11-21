@@ -1,0 +1,67 @@
+FileAST: 
+  Decl: atoi, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      TypeDecl: atoi, []
+        IdentifierType: ['int']
+  Decl: sprintf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        EllipsisParam: 
+      TypeDecl: sprintf, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: malloc_init, [], [], []
+      FuncDecl: 
+        TypeDecl: malloc_init, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: cptr, [], [], []
+        PtrDecl: []
+          TypeDecl: cptr, []
+            IdentifierType: ['char']
+      Decl: buf, [], [], []
+        ArrayDecl: []
+          TypeDecl: buf, []
+            IdentifierType: ['char']
+          Constant: int, 1
+      Decl: tmbd, [], [], []
+        TypeDecl: tmbd, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: atoi
+          ExprList: 
+            ID: cptr
+      If: 
+        BinaryOp: >
+          ID: tmbd
+          Constant: int, 0
+        Assignment: =
+          ID: tmbd
+          TernaryOp: 
+            BinaryOp: <=
+              ID: tmbd
+              Constant: int, 124
+            ID: tmbd
+            Constant: int, 124
+        Assignment: =
+          ID: tmbd
+          Constant: int, 0
+      FuncCall: 
+        ID: sprintf
+        ExprList: 
+          ID: buf
+          Constant: string, "%d\n"
+          ID: tmbd

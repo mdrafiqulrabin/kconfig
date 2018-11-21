@@ -1,0 +1,10 @@
+FileAST: 
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+    Constant: int, 0LL
+  Pragma: GCC diagnostic error "-Wlong-long"
+  Decl: j, [], [], []
+    TypeDecl: j, []
+      IdentifierType: ['int']
+    Constant: int, 1LL

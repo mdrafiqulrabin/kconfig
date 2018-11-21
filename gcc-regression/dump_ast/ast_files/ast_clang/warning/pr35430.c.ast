@@ -1,0 +1,46 @@
+c_files/pr35430.c:8:5: warning: equality comparison result unused [-Wunused-comparison]
+  i == 0u;
+  ~~^~~~~
+c_files/pr35430.c:8:5: note: use '=' to turn this equality comparison into an assignment
+  i == 0u;
+    ^~
+    =
+c_files/pr35430.c:9:5: warning: equality comparison result unused [-Wunused-comparison]
+  i == ~1u;     /* { dg-warning "comparison of integer expressions of different signedness" } */
+  ~~^~~~~~
+c_files/pr35430.c:9:5: note: use '=' to turn this equality comparison into an assignment
+  i == ~1u;     /* { dg-warning "comparison of integer expressions of different signedness" } */
+    ^~
+    =
+2 warnings generated.
+TranslationUnitDecl 0x7f7f978244d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f7f97824a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f7f97824740 '__int128'
+|-TypedefDecl 0x7f7f97824a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f7f97824760 'unsigned __int128'
+|-TypedefDecl 0x7f7f97824d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f7f97824b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f7f97824ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f7f97824e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f7f97824dc0 'char *'
+|   `-BuiltinType 0x7f7f97824560 'char'
+|-TypedefDecl 0x7f7f978250c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f7f97825070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f7f97824ee0 'struct __va_list_tag'
+|     `-Record 0x7f7f97824e58 '__va_list_tag'
+`-FunctionDecl 0x7f7f98025a28 <c_files/pr35430.c:5:1, line:10:1> line:6:1 foo 'void (_Complex int)'
+  |-ParmVarDecl 0x7f7f97825158 <col:6, col:22> col:22 used i '_Complex int'
+  `-CompoundStmt 0x7f7f98025cc8 <line:7:1, line:10:1>
+    |-BinaryOperator 0x7f7f98025bc8 <line:8:3, col:8> 'int' '=='
+    | |-ImplicitCastExpr 0x7f7f98025b98 <col:3> '_Complex unsigned int' <IntegralComplexCast>
+    | | `-ImplicitCastExpr 0x7f7f98025b50 <col:3> '_Complex int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f7f98025b08 <col:3> '_Complex int' lvalue ParmVar 0x7f7f97825158 'i' '_Complex int'
+    | `-ImplicitCastExpr 0x7f7f98025bb0 <col:8> '_Complex unsigned int' <IntegralRealToComplex>
+    |   `-IntegerLiteral 0x7f7f98025b30 <col:8> 'unsigned int' 0
+    `-BinaryOperator 0x7f7f98025ca0 <line:9:3, col:9> 'int' '=='
+      |-ImplicitCastExpr 0x7f7f98025c70 <col:3> '_Complex unsigned int' <IntegralComplexCast>
+      | `-ImplicitCastExpr 0x7f7f98025c58 <col:3> '_Complex int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f7f98025bf0 <col:3> '_Complex int' lvalue ParmVar 0x7f7f97825158 'i' '_Complex int'
+      `-ImplicitCastExpr 0x7f7f98025c88 <col:8, col:9> '_Complex unsigned int' <IntegralRealToComplex>
+        `-UnaryOperator 0x7f7f98025c38 <col:8, col:9> 'unsigned int' prefix '~'
+          `-IntegerLiteral 0x7f7f98025c18 <col:9> 'unsigned int' 1

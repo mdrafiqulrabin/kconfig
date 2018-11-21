@@ -1,0 +1,34 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: integral, [], [], []
+            TypeDecl: integral, []
+              IdentifierType: ['int']
+          Decl: decimal, [], [], []
+            TypeDecl: decimal, []
+              IdentifierType: ['int']
+          Decl: power_ten, [], [], []
+            TypeDecl: power_ten, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      While: 
+        BinaryOp: >
+          ID: power_ten
+          Constant: int, 0
+        Compound: 
+          Assignment: *=
+            ID: integral
+            Constant: int, 10
+          Assignment: *=
+            ID: decimal
+            Constant: int, 10
+          UnaryOp: p--
+            ID: power_ten
+      Return: 
+        BinaryOp: +
+          ID: integral
+          ID: decimal

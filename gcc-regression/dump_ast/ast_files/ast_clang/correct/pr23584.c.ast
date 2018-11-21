@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fbf3c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbf3c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbf3c826740 '__int128'
+|-TypedefDecl 0x7fbf3c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbf3c826760 'unsigned __int128'
+|-TypedefDecl 0x7fbf3c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbf3c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbf3c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbf3c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbf3c826dc0 'char *'
+|   `-BuiltinType 0x7fbf3c826560 'char'
+|-TypedefDecl 0x7fbf3c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbf3c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbf3c826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbf3c826e58 '__va_list_tag'
+|-FunctionDecl 0x7fbf3d025a00 <c_files/pr23584.c:8:1, line:11:1> line:8:5 test1 'int (void)'
+| `-CompoundStmt 0x7fbf3d025bb8 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fbf3d025ba0 <line:10:3, col:29>
+|     `-ImplicitCastExpr 0x7fbf3d025b88 <col:10, col:29> 'int' <LValueToRValue>
+|       `-UnaryOperator 0x7fbf3d025b68 <col:10, col:29> 'volatile int' lvalue prefix '*'
+|         `-CStyleCastExpr 0x7fbf3d025b40 <col:12, col:29> 'volatile int *' <IntegralToPointer>
+|           `-IntegerLiteral 0x7fbf3d025ad8 <col:29> 'int' 4660
+`-FunctionDecl 0x7fbf3d025c70 <line:13:1, line:17:1> line:13:5 test2 'int (void)'
+  `-CompoundStmt 0x7fbf3d025e88 <line:14:1, line:17:1>
+    |-DeclStmt 0x7fbf3d025e18 <line:15:3, col:40>
+    | `-VarDecl 0x7fbf3d025d20 <col:3, col:34> col:7 used local 'int' cinit
+    |   `-ImplicitCastExpr 0x7fbf3d025e00 <col:15, col:34> 'int' <LValueToRValue>
+    |     `-UnaryOperator 0x7fbf3d025de0 <col:15, col:34> 'volatile int' lvalue prefix '*'
+    |       `-CStyleCastExpr 0x7fbf3d025db8 <col:17, col:34> 'volatile int *' <IntegralToPointer>
+    |         `-IntegerLiteral 0x7fbf3d025d80 <col:34> 'int' 4660
+    `-ReturnStmt 0x7fbf3d025e70 <line:16:3, col:10>
+      `-ImplicitCastExpr 0x7fbf3d025e58 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fbf3d025e30 <col:10> 'int' lvalue Var 0x7fbf3d025d20 'local' 'int'

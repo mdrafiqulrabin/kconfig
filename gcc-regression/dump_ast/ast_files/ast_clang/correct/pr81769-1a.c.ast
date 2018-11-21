@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7f9004818ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9004819020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9004818d40 '__int128'
+|-TypedefDecl 0x7f9004819090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9004818d60 'unsigned __int128'
+|-TypedefDecl 0x7f9004819368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9004819170 'struct __NSConstantString_tag'
+|   `-Record 0x7f90048190e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9004819400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f90048193c0 'char *'
+|   `-BuiltinType 0x7f9004818b60 'char'
+|-TypedefDecl 0x7f90048196c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9004819670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f90048194e0 'struct __va_list_tag'
+|     `-Record 0x7f9004819458 '__va_list_tag'
+|-TypedefDecl 0x7f9004819778 <c_files/pr81769-1a.c:4:1, col:13> col:13 referenced v8si '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7f9004819740 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7f9004818bc0 'int'
+|-TypedefDecl 0x7f9003835c18 <line:5:1, col:32> col:32 referenced u64 'unsigned long long'
+| |-BuiltinType 0x7f9004818ca0 'unsigned long long'
+| `-AlignedAttr 0x7f9003835c70 <col:52, col:62> aligned
+|   `-IntegerLiteral 0x7f90048197d0 <col:60> 'int' 64
+`-FunctionDecl 0x7f9003835fe0 <line:8:1, line:18:1> line:12:1 foo 'void (u64 *, v8si *, v8si *)'
+  |-ParmVarDecl 0x7f9003835d48 <col:6, col:11> col:11 used idx 'u64 *'
+  |-ParmVarDecl 0x7f9003835e38 <col:16, col:22> col:22 used out_start 'v8si *'
+  |-ParmVarDecl 0x7f9003835ea8 <col:33, col:39> col:39 used regions 'v8si *'
+  `-CompoundStmt 0x7f9003836450 <line:13:1, line:18:1>
+    `-IfStmt 0x7f9003836418 <line:14:3, line:17:3>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9003836180 <line:14:7, col:14> 'int' '<'
+      | |-ImplicitCastExpr 0x7f9003836150 <col:7, col:8> 'u64':'unsigned long long' <LValueToRValue>
+      | | `-UnaryOperator 0x7f9003836110 <col:7, col:8> 'u64':'unsigned long long' lvalue prefix '*'
+      | |   `-ImplicitCastExpr 0x7f90038360f8 <col:8> 'u64 *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7f90038360d0 <col:8> 'u64 *' lvalue ParmVar 0x7f9003835d48 'idx' 'u64 *'
+      | `-ImplicitCastExpr 0x7f9003836168 <col:14> 'unsigned long long' <IntegralCast>
+      |   `-IntegerLiteral 0x7f9003836130 <col:14> 'int' 20
+      |-CompoundStmt 0x7f90038363f0 <col:19, line:17:3>
+      | |-DeclStmt 0x7f9003836310 <line:15:5, col:30>
+      | | `-VarDecl 0x7f90038361b8 <col:5, col:29> col:10 used base 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' cinit
+      | |   `-ImplicitCastExpr 0x7f90038362f8 <col:17, col:29> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+      | |     `-ArraySubscriptExpr 0x7f90038362d0 <col:17, col:29> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+      | |       |-ImplicitCastExpr 0x7f90038362a0 <col:17> 'v8si *' <LValueToRValue>
+      | |       | `-DeclRefExpr 0x7f9003836218 <col:17> 'v8si *' lvalue ParmVar 0x7f9003835ea8 'regions' 'v8si *'
+      | |       `-ImplicitCastExpr 0x7f90038362b8 <col:25, col:26> 'u64':'unsigned long long' <LValueToRValue>
+      | |         `-UnaryOperator 0x7f9003836280 <col:25, col:26> 'u64':'unsigned long long' lvalue prefix '*'
+      | |           `-ImplicitCastExpr 0x7f9003836268 <col:26> 'u64 *' <LValueToRValue>
+      | |             `-DeclRefExpr 0x7f9003836240 <col:26> 'u64 *' lvalue ParmVar 0x7f9003835d48 'idx' 'u64 *'
+      | `-BinaryOperator 0x7f90038363c8 <line:16:5, col:18> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+      |   |-UnaryOperator 0x7f9003836368 <col:5, col:6> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+      |   | `-ImplicitCastExpr 0x7f9003836350 <col:6> 'v8si *' <LValueToRValue>
+      |   |   `-DeclRefExpr 0x7f9003836328 <col:6> 'v8si *' lvalue ParmVar 0x7f9003835e38 'out_start' 'v8si *'
+      |   `-ImplicitCastExpr 0x7f90038363b0 <col:18> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7f9003836388 <col:18> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7f90038361b8 'base' 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+      `-<<<NULL>>>

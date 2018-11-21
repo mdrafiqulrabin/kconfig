@@ -1,0 +1,152 @@
+c_files/pr56724-2.c:21:10: warning: implicit conversion from enumeration type 'enum E2' to different enumeration type 'enum E1' [-Wenum-conversion]
+  foo_E (B); /* { dg-warning "10:enum conversion when passing argument" } */
+  ~~~~~  ^
+c_files/pr56724-2.c:22:17: warning: passing 'unsigned char *' to parameter of type 'signed char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+  foo_sc (1, 2, uc); /* { dg-warning "17:pointer targets in passing argument" } */
+                ^~
+c_files/pr56724-2.c:9:44: note: passing argument to parameter here
+extern void foo_sc (int, int, signed char *);
+                                           ^
+c_files/pr56724-2.c:23:17: warning: incompatible pointer types passing 'float *' to parameter of type 'signed char *' [-Wincompatible-pointer-types]
+  foo_sc (1, 2, f); /* { dg-warning "17:passing argument" } */
+                ^
+c_files/pr56724-2.c:9:44: note: passing argument to parameter here
+extern void foo_sc (int, int, signed char *);
+                                           ^
+c_files/pr56724-2.c:24:17: warning: incompatible integer to pointer conversion passing 'signed char' to parameter of type 'signed char *'; take the address with & [-Wint-conversion]
+  foo_sc (1, 2, sc); /* { dg-warning "17:passing argument" } */
+                ^~
+                &
+c_files/pr56724-2.c:9:44: note: passing argument to parameter here
+extern void foo_sc (int, int, signed char *);
+                                           ^
+c_files/pr56724-2.c:25:11: warning: incompatible pointer to integer conversion passing 'unsigned char *' to parameter of type 'int' [-Wint-conversion]
+  foo_sc (uc, 2, &sc); /* { dg-warning "11:passing argument" } */
+          ^~
+c_files/pr56724-2.c:9:24: note: passing argument to parameter here
+extern void foo_sc (int, int, signed char *);
+                       ^
+c_files/pr56724-2.c:26:17: warning: passing 'const signed char *' to parameter of type 'signed char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  foo_sc (1, 2, csc); /* { dg-warning "17:passing argument" } */
+                ^~~
+c_files/pr56724-2.c:9:44: note: passing argument to parameter here
+extern void foo_sc (int, int, signed char *);
+                                           ^
+c_files/pr56724-2.c:31:38: warning: incompatible function pointer types passing 'fp' (aka 'void (*)(void)') to parameter of type 'nrfp' (aka 'void (*)(void) __attribute__((noreturn))') [-Wincompatible-function-pointer-types]
+void f1 (nrfp); void f2 (fp x) { f1 (x); } extern int e; /* { dg-warning "38:passing argument" } */
+                                     ^
+c_files/pr56724-2.c:31:14: note: passing argument to parameter here
+void f1 (nrfp); void f2 (fp x) { f1 (x); } extern int e; /* { dg-warning "38:passing argument" } */
+             ^
+7 warnings generated.
+TranslationUnitDecl 0x7f7f960264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f7f96026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f7f96026740 '__int128'
+|-TypedefDecl 0x7f7f96026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f7f96026760 'unsigned __int128'
+|-TypedefDecl 0x7f7f96026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f7f96026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f7f96026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f7f96026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f7f96026dc0 'char *'
+|   `-BuiltinType 0x7f7f96026560 'char'
+|-TypedefDecl 0x7f7f960270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f7f96027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f7f96026ee0 'struct __va_list_tag'
+|     `-Record 0x7f7f96026e58 '__va_list_tag'
+|-EnumDecl 0x7f7f96027120 <c_files/pr56724-2.c:5:1, col:13> col:6 E1
+| `-EnumConstantDecl 0x7f7f96825a00 <col:11> col:11 A 'int'
+|-EnumDecl 0x7f7f96825a48 <line:6:1, col:13> col:6 E2
+| `-EnumConstantDecl 0x7f7f96825b00 <col:11> col:11 referenced B 'int'
+|-FunctionDecl 0x7f7f96825ca0 <line:7:1, col:27> col:13 used foo_E 'void (enum E1)' extern
+| `-ParmVarDecl 0x7f7f96825ba0 <col:20, col:25> col:27 'enum E1':'enum E1'
+|-FunctionDecl 0x7f7f96825e60 <line:8:1, col:27> col:13 used foo_v 'void (void *)' extern
+| `-ParmVarDecl 0x7f7f96825d98 <col:20, col:26> col:26 p 'void *'
+|-FunctionDecl 0x7f7f96826110 <line:9:1, col:44> col:13 used foo_sc 'void (int, int, signed char *)' extern
+| |-ParmVarDecl 0x7f7f96825f18 <col:21> col:24 'int'
+| |-ParmVarDecl 0x7f7f96825f90 <col:26> col:29 'int'
+| `-ParmVarDecl 0x7f7f96826030 <col:31, col:43> col:44 'signed char *'
+|-VarDecl 0x7f7f96826200 <line:10:1, col:23> col:23 used uc 'unsigned char *' extern
+|-VarDecl 0x7f7f96826278 <line:11:1, col:20> col:20 used sc 'signed char' extern
+|-VarDecl 0x7f7f96826320 <line:12:1, col:27> col:27 used csc 'const signed char *' extern
+|-VarDecl 0x7f7f968263c0 <line:13:1, col:15> col:15 used f 'float *' extern
+|-FunctionDecl 0x7f7f968264e0 <line:15:1, line:27:1> line:16:1 foo 'void (void)'
+| `-CompoundStmt 0x7f7f968274b8 <line:17:1, line:27:1>
+|   |-DeclStmt 0x7f7f96826708 <line:18:3, col:19>
+|   | `-VarDecl 0x7f7f968266a8 <col:3, col:18> col:10 used fp 'void (*)(void)'
+|   |-DeclStmt 0x7f7f968268d8 <line:19:3, col:26>
+|   | `-VarDecl 0x7f7f96826878 <col:3, col:25> col:16 ffp 'const void (*)(void)'
+|   |-CallExpr 0x7f7f96826980 <line:20:3, col:12> 'void'
+|   | |-ImplicitCastExpr 0x7f7f96826968 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f7f968268f0 <col:3> 'void (void *)' Function 0x7f7f96825e60 'foo_v' 'void (void *)'
+|   | `-ImplicitCastExpr 0x7f7f968269c8 <col:10> 'void *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f7f968269b0 <col:10> 'void (*)(void)' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f7f96826918 <col:10> 'void (*)(void)' lvalue Var 0x7f7f968266a8 'fp' 'void (*)(void)'
+|   |-CallExpr 0x7f7f96826ac0 <line:21:3, col:11> 'void'
+|   | |-ImplicitCastExpr 0x7f7f96826aa8 <col:3> 'void (*)(enum E1)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f7f96826a00 <col:3> 'void (enum E1)' Function 0x7f7f96825ca0 'foo_E' 'void (enum E1)'
+|   | `-ImplicitCastExpr 0x7f7f96826af0 <col:10> 'enum E1':'enum E1' <IntegralCast>
+|   |   `-DeclRefExpr 0x7f7f96826a28 <col:10> 'int' EnumConstant 0x7f7f96825b00 'B' 'int'
+|   |-CallExpr 0x7f7f96826f90 <line:22:3, col:19> 'void'
+|   | |-ImplicitCastExpr 0x7f7f96826f78 <col:3> 'void (*)(int, int, signed char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f7f96826ec0 <col:3> 'void (int, int, signed char *)' Function 0x7f7f96826110 'foo_sc' 'void (int, int, signed char *)'
+|   | |-IntegerLiteral 0x7f7f96826ee8 <col:11> 'int' 1
+|   | |-IntegerLiteral 0x7f7f96826f08 <col:14> 'int' 2
+|   | `-ImplicitCastExpr 0x7f7f96826fe8 <col:17> 'signed char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f7f96826fd0 <col:17> 'unsigned char *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f7f96826f28 <col:17> 'unsigned char *' lvalue Var 0x7f7f96826200 'uc' 'unsigned char *'
+|   |-CallExpr 0x7f7f968270a8 <line:23:3, col:18> 'void'
+|   | |-ImplicitCastExpr 0x7f7f96827090 <col:3> 'void (*)(int, int, signed char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f7f96827000 <col:3> 'void (int, int, signed char *)' Function 0x7f7f96826110 'foo_sc' 'void (int, int, signed char *)'
+|   | |-IntegerLiteral 0x7f7f96827028 <col:11> 'int' 1
+|   | |-IntegerLiteral 0x7f7f96827048 <col:14> 'int' 2
+|   | `-ImplicitCastExpr 0x7f7f96827100 <col:17> 'signed char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f7f968270e8 <col:17> 'float *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f7f96827068 <col:17> 'float *' lvalue Var 0x7f7f968263c0 'f' 'float *'
+|   |-CallExpr 0x7f7f968271f0 <line:24:3, col:19> 'void'
+|   | |-ImplicitCastExpr 0x7f7f968271d8 <col:3> 'void (*)(int, int, signed char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f7f96827148 <col:3> 'void (int, int, signed char *)' Function 0x7f7f96826110 'foo_sc' 'void (int, int, signed char *)'
+|   | |-IntegerLiteral 0x7f7f96827170 <col:11> 'int' 1
+|   | |-IntegerLiteral 0x7f7f96827190 <col:14> 'int' 2
+|   | `-ImplicitCastExpr 0x7f7f96827248 <col:17> 'signed char *' <IntegralToPointer>
+|   |   `-ImplicitCastExpr 0x7f7f96827230 <col:17> 'signed char' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f7f968271b0 <col:17> 'signed char' lvalue Var 0x7f7f96826278 'sc' 'signed char'
+|   |-CallExpr 0x7f7f96827330 <line:25:3, col:21> 'void'
+|   | |-ImplicitCastExpr 0x7f7f96827318 <col:3> 'void (*)(int, int, signed char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f7f96827260 <col:3> 'void (int, int, signed char *)' Function 0x7f7f96826110 'foo_sc' 'void (int, int, signed char *)'
+|   | |-ImplicitCastExpr 0x7f7f96827388 <col:11> 'int' <PointerToIntegral>
+|   | | `-ImplicitCastExpr 0x7f7f96827370 <col:11> 'unsigned char *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f7f96827288 <col:11> 'unsigned char *' lvalue Var 0x7f7f96826200 'uc' 'unsigned char *'
+|   | |-IntegerLiteral 0x7f7f968272b0 <col:15> 'int' 2
+|   | `-UnaryOperator 0x7f7f968272f8 <col:18, col:19> 'signed char *' prefix '&'
+|   |   `-DeclRefExpr 0x7f7f968272d0 <col:19> 'signed char' lvalue Var 0x7f7f96826278 'sc' 'signed char'
+|   `-CallExpr 0x7f7f96827448 <line:26:3, col:20> 'void'
+|     |-ImplicitCastExpr 0x7f7f96827430 <col:3> 'void (*)(int, int, signed char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f7f968273a0 <col:3> 'void (int, int, signed char *)' Function 0x7f7f96826110 'foo_sc' 'void (int, int, signed char *)'
+|     |-IntegerLiteral 0x7f7f968273c8 <col:11> 'int' 1
+|     |-IntegerLiteral 0x7f7f968273e8 <col:14> 'int' 2
+|     `-ImplicitCastExpr 0x7f7f968274a0 <col:17> 'signed char *' <BitCast>
+|       `-ImplicitCastExpr 0x7f7f96827488 <col:17> 'const signed char *' <LValueToRValue>
+|         `-DeclRefExpr 0x7f7f96827408 <col:17> 'const signed char *' lvalue Var 0x7f7f96826320 'csc' 'const signed char *'
+|-TypedefDecl 0x7f7f968275b8 <line:29:1, col:24> col:16 referenced fp 'void (*)(void)'
+| `-PointerType 0x7f7f96826650 'void (*)(void)'
+|   `-ParenType 0x7f7f968265f0 'void (void)' sugar
+|     `-FunctionProtoType 0x7f7f96826490 'void (void)' cdecl
+|       `-BuiltinType 0x7f7f96026520 'void'
+|-TypedefDecl 0x7f7f96827768 <line:30:1, col:26> col:16 referenced nrfp 'void (*)(void) __attribute__((noreturn))'
+| `-PointerType 0x7f7f96827710 'void (*)(void) __attribute__((noreturn))'
+|   `-ParenType 0x7f7f968276b0 'void (void) __attribute__((noreturn))' sugar
+|     `-FunctionProtoType 0x7f7f96827680 'void (void) __attribute__((noreturn))' noreturn cdecl
+|       `-BuiltinType 0x7f7f96026520 'void'
+|-FunctionDecl 0x7f7f968278f0 <line:31:1, col:14> col:6 used f1 'void (nrfp)'
+| `-ParmVarDecl 0x7f7f968277f0 <col:10> col:14 'nrfp':'void (*)(void) __attribute__((noreturn))'
+|-FunctionDecl 0x7f7f96828b00 <col:17, col:42> col:22 f2 'void (fp)'
+| |-ParmVarDecl 0x7f7f96828a00 <col:26, col:29> col:29 used x 'fp':'void (*)(void)'
+| `-CompoundStmt 0x7f7f96828ce8 <col:32, col:42>
+|   `-CallExpr 0x7f7f96828c60 <col:34, col:39> 'void'
+|     |-ImplicitCastExpr 0x7f7f96828c48 <col:34> 'void (*)(nrfp)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f7f96828ba0 <col:34> 'void (nrfp)' Function 0x7f7f968278f0 'f1' 'void (nrfp)'
+|     `-ImplicitCastExpr 0x7f7f96828ca8 <col:38> 'nrfp':'void (*)(void) __attribute__((noreturn))' <BitCast>
+|       `-ImplicitCastExpr 0x7f7f96828c90 <col:38> 'fp':'void (*)(void)' <LValueToRValue>
+|         `-DeclRefExpr 0x7f7f96828bc8 <col:38> 'fp':'void (*)(void)' lvalue ParmVar 0x7f7f96828a00 'x' 'fp':'void (*)(void)'
+`-VarDecl 0x7f7f96828d20 <col:44, col:55> col:55 e 'int' extern

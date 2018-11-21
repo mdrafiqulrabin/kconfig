@@ -1,0 +1,37 @@
+FileAST: 
+  Decl: myvar, [], [], []
+    TypeDecl: myvar, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: mynum, [], [], []
+            TypeDecl: mynum, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+              Constant: int, 0
+            BinaryOp: &
+              ID: myvar
+              BinaryOp: <<
+                BinaryOp: <<
+                  Constant: int, 1U
+                  Constant: int, 0
+                ID: mynum
+          BinaryOp: >
+            ID: mynum
+            Constant: int, 0
+        Return: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0

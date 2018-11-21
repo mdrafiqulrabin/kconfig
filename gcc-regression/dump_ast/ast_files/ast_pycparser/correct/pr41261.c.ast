@@ -1,0 +1,22 @@
+FileAST: 
+  Decl: relocate_kernel, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: relocate_kernel, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: machine_kexec, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: control_page, [], [], []
+            PtrDecl: []
+              TypeDecl: control_page, []
+                IdentifierType: ['void']
+        TypeDecl: machine_kexec, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          ID: control_page
+          ID: relocate_kernel
+          Constant: int, 2048

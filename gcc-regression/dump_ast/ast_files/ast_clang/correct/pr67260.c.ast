@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7f85460264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8546026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8546026740 '__int128'
+|-TypedefDecl 0x7f8546026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8546026760 'unsigned __int128'
+|-TypedefDecl 0x7f8546026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8546026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8546026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8546026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8546026dc0 'char *'
+|   `-BuiltinType 0x7f8546026560 'char'
+|-TypedefDecl 0x7f85460270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8546027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8546026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8546026e58 '__va_list_tag'
+|-FunctionDecl 0x7f8546825a00 <c_files/pr67260.c:6:1, col:41> col:17 used foo '_Complex double (_Complex double)'
+| |-ParmVarDecl 0x7f8546027130 <col:22, col:38> col:38 arg '_Complex double'
+| `-VisibilityAttr 0x7f8546825ae0 <line:4:13> Implicit Hidden
+`-FunctionDecl 0x7f8546825bc0 <line:8:1, line:12:1> line:9:1 bar '_Complex double (_Complex double)'
+  |-ParmVarDecl 0x7f8546825b38 <col:6, col:22> col:22 used arg '_Complex double'
+  |-CompoundStmt 0x7f8546825da0 <line:10:1, line:12:1>
+  | `-ReturnStmt 0x7f8546825d88 <line:11:3, col:18>
+  |   `-CallExpr 0x7f8546825d40 <col:10, col:18> '_Complex double'
+  |     |-ImplicitCastExpr 0x7f8546825d28 <col:10> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x7f8546825ca8 <col:10> '_Complex double (_Complex double)' Function 0x7f8546825a00 'foo' '_Complex double (_Complex double)'
+  |     `-ImplicitCastExpr 0x7f8546825d70 <col:15> '_Complex double' <LValueToRValue>
+  |       `-DeclRefExpr 0x7f8546825cd0 <col:15> '_Complex double' lvalue ParmVar 0x7f8546825b38 'arg' '_Complex double'
+  `-VisibilityAttr 0x7f8546825c60 <line:4:13> Implicit Hidden

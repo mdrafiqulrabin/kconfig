@@ -1,0 +1,98 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: test_struct
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+          Constant: int, 10
+      Decl: c, [], [], []
+        ArrayDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+          Constant: int, 10
+      Decl: d, [], [], []
+        ArrayDecl: []
+          TypeDecl: d, []
+            IdentifierType: ['int']
+          Constant: int, 10
+  Decl: new_struct, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: new_struct, []
+        Struct: test_struct
+  FuncDef: 
+    Decl: testfunc, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: old_struct, [], [], []
+            PtrDecl: []
+              TypeDecl: old_struct, []
+                Struct: test_struct
+        TypeDecl: testfunc, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        UnaryOp: ++
+          ID: i
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              StructRef: ->
+                ID: new_struct
+                ID: b
+              ID: i
+            TernaryOp: 
+              ID: old_struct
+              ArrayRef: 
+                StructRef: ->
+                  ID: old_struct
+                  ID: b
+                ID: i
+              UnaryOp: -
+                Constant: int, 1
+          Assignment: =
+            ArrayRef: 
+              StructRef: ->
+                ID: new_struct
+                ID: c
+              ID: i
+            TernaryOp: 
+              ID: old_struct
+              ArrayRef: 
+                StructRef: ->
+                  ID: old_struct
+                  ID: c
+                ID: i
+              Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              StructRef: ->
+                ID: new_struct
+                ID: d
+              ID: i
+            TernaryOp: 
+              ID: old_struct
+              ArrayRef: 
+                StructRef: ->
+                  ID: old_struct
+                  ID: d
+                ID: i
+              Constant: int, 0
+      If: 
+        ID: old_struct
+        UnaryOp: p++
+          StructRef: ->
+            ID: old_struct
+            ID: a

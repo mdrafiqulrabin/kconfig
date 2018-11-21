@@ -1,0 +1,19 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['float']
+        TypeDecl: foo, []
+          IdentifierType: ['_Complex', 'float']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_copysign
+          ExprList: 
+            BinaryOp: !=
+              ID: a
+              ID: a
+            ID: a

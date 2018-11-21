@@ -1,0 +1,128 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: ptlrpcd_ctl
+      Decl: pc_name, [], [], []
+        ArrayDecl: []
+          TypeDecl: pc_name, []
+            IdentifierType: ['char']
+          Constant: int, 20
+  Decl: None, [], [], []
+    Struct: ptlrpcd
+      Decl: pd_threads, [], [], []
+        ArrayDecl: []
+          TypeDecl: pd_threads, []
+            Struct: ptlrpcd_ctl
+          Constant: int, 6
+  Decl: ptlrpcd_init_pd, [], [], []
+    PtrDecl: []
+      TypeDecl: ptlrpcd_init_pd, []
+        Struct: ptlrpcd
+  FuncDef: 
+    Decl: ptlrpcd_ctl_init, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: pc, [], [], []
+            PtrDecl: []
+              TypeDecl: pc, []
+                Struct: ptlrpcd_ctl
+          Decl: index, [], [], []
+            TypeDecl: index, []
+              IdentifierType: ['int']
+        TypeDecl: ptlrpcd_ctl_init, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: <
+          ID: index
+          Constant: int, 0
+        FuncCall: 
+          ID: __builtin_snprintf
+          ExprList: 
+            StructRef: ->
+              ID: pc
+              ID: pc_name
+            UnaryOp: sizeof
+              StructRef: ->
+                ID: pc
+                ID: pc_name
+            Constant: string, "ptlrpcd_rcv"
+        FuncCall: 
+          ID: __builtin_snprintf
+          ExprList: 
+            StructRef: ->
+              ID: pc
+              ID: pc_name
+            UnaryOp: sizeof
+              StructRef: ->
+                ID: pc
+                ID: pc_name
+            Constant: string, "ptlrpcd_%d"
+            ID: index
+  Decl: ptlrpcd_init_ncpts, [], [], []
+    TypeDecl: ptlrpcd_init_ncpts, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: ptlrpcd_init, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: nthreads, [], [], []
+            TypeDecl: nthreads, []
+              IdentifierType: ['int']
+        TypeDecl: ptlrpcd_init, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      If: 
+        ID: ptlrpcd_init_ncpts
+        Compound: 
+          FuncCall: 
+            ID: ptlrpcd_ctl_init
+            ExprList: 
+              UnaryOp: &
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ptlrpcd_init_pd
+                    ID: pd_threads
+                  Constant: int, 0
+              UnaryOp: -
+                Constant: int, 1
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 1
+            BinaryOp: <
+              ID: j
+              ID: nthreads
+            UnaryOp: p++
+              ID: j
+            FuncCall: 
+              ID: ptlrpcd_ctl_init
+              ExprList: 
+                UnaryOp: &
+                  ArrayRef: 
+                    StructRef: ->
+                      ID: ptlrpcd_init_pd
+                      ID: pd_threads
+                    ID: j
+                ID: j
+      Return: 
+        Constant: int, 0
+  Decl: ptlrpcd_init_groupsize, [], [], []
+    TypeDecl: ptlrpcd_init_groupsize, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: ptlrpcd_addref, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: ptlrpcd_addref, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: ptlrpcd_init
+        ExprList: 
+          ID: ptlrpcd_init_groupsize

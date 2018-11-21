@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f81460264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8146026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8146026740 '__int128'
+|-TypedefDecl 0x7f8146026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8146026760 'unsigned __int128'
+|-TypedefDecl 0x7f8146026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8146026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8146026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8146026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8146026dc0 'char *'
+|   `-BuiltinType 0x7f8146026560 'char'
+|-TypedefDecl 0x7f81460270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8146027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8146026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8146026e58 '__va_list_tag'
+|-TypedefDecl 0x7f8146027178 <c_files/pr80583.c:5:1, col:13> col:13 referenced V '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7f8146027140 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7f81460265c0 'int'
+|-RecordDecl 0x7f8146826a00 <line:6:1, col:17> col:8 struct S definition
+| `-FieldDecl 0x7f8146826ae0 <col:12, col:14> col:14 referenced a 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+`-FunctionDecl 0x7f8146826d50 <line:8:1, line:13:1> line:9:1 foo 'V (struct S *)'
+  |-ParmVarDecl 0x7f8146826c50 <col:6, col:16> col:16 used b 'struct S *'
+  |-CompoundStmt 0x7f8146826ff8 <line:10:1, line:13:1>
+  | |-DeclStmt 0x7f8146826f88 <line:11:3, col:13>
+  | | `-VarDecl 0x7f8146826e98 <col:3, col:12> col:5 used x 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' cinit
+  | |   `-ImplicitCastExpr 0x7f8146826f70 <col:9, col:12> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+  | |     `-MemberExpr 0x7f8146826f38 <col:9, col:12> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ->a 0x7f8146826ae0
+  | |       `-ImplicitCastExpr 0x7f8146826f20 <col:9> 'struct S *' <LValueToRValue>
+  | |         `-DeclRefExpr 0x7f8146826ef8 <col:9> 'struct S *' lvalue ParmVar 0x7f8146826c50 'b' 'struct S *'
+  | `-ReturnStmt 0x7f8146826fe0 <line:12:3, col:10>
+  |   `-ImplicitCastExpr 0x7f8146826fc8 <col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+  |     `-DeclRefExpr 0x7f8146826fa0 <col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7f8146826e98 'x' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+  `-TargetAttr 0x7f8146826df0 <line:8:18, col:31> "avx"

@@ -1,0 +1,20 @@
+FileAST: 
+  FuncDef: 
+    Decl: NoBarrier_AtomicExchange, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ptr, [], [], []
+            PtrDecl: []
+              TypeDecl: ptr, []
+                IdentifierType: ['long', 'long']
+        TypeDecl: NoBarrier_AtomicExchange, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        FuncCall: 
+          ID: __sync_val_compare_and_swap
+          ExprList: 
+            ID: ptr
+            Constant: int, 1
+            Constant: int, 0
+        EmptyStatement: 

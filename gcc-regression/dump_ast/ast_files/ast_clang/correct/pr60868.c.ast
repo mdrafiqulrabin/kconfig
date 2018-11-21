@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fbb4f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbb4f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbb4f026740 '__int128'
+|-TypedefDecl 0x7fbb4f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbb4f026760 'unsigned __int128'
+|-TypedefDecl 0x7fbb4f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbb4f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbb4f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbb4f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbb4f026dc0 'char *'
+|   `-BuiltinType 0x7fbb4f026560 'char'
+|-TypedefDecl 0x7fbb4f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbb4f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbb4f026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbb4f026e58 '__va_list_tag'
+|-FunctionDecl 0x7fbb4f077428 <c_files/pr60868.c:4:1, col:18> col:6 used bar 'void (float *)'
+| `-ParmVarDecl 0x7fbb4f027160 <col:11, col:17> col:18 'float *'
+`-FunctionDecl 0x7fbb4f0775d0 <line:6:1, line:10:1> line:6:6 foo 'void (void)'
+  `-CompoundStmt 0x7fbb4f077918 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fbb4f077828 <line:8:3, col:21>
+    | `-VarDecl 0x7fbb4f0776f0 <col:3, col:20> col:9 used b 'float [256]' cinit
+    |   `-InitListExpr 0x7fbb4f0777b8 <col:18, col:20> 'float [256]'
+    |     |-array filler
+    |     | `-ImplicitValueInitExpr 0x7fbb4f077818 <<invalid sloc>> 'float'
+    |     `-ImplicitCastExpr 0x7fbb4f0777f8 <col:19> 'float' <IntegralToFloating>
+    |       `-IntegerLiteral 0x7fbb4f077750 <col:19> 'int' 0
+    `-CallExpr 0x7fbb4f0778d0 <line:9:3, col:8> 'void'
+      |-ImplicitCastExpr 0x7fbb4f0778b8 <col:3> 'void (*)(float *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fbb4f077840 <col:3> 'void (float *)' Function 0x7fbb4f077428 'bar' 'void (float *)'
+      `-ImplicitCastExpr 0x7fbb4f077900 <col:7> 'float *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7fbb4f077868 <col:7> 'float [256]' lvalue Var 0x7fbb4f0776f0 'b' 'float [256]'

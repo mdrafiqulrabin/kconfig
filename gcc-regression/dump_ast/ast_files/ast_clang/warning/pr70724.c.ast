@@ -1,0 +1,139 @@
+c_files/pr70724.c:28:35: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+_PyTime_t __attribute__((noinline,noclone))
+                                  ^
+1 warning generated.
+TranslationUnitDecl 0x7fde7d8258d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fde7d825e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fde7d825b40 '__int128'
+|-TypedefDecl 0x7fde7d825e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fde7d825b60 'unsigned __int128'
+|-TypedefDecl 0x7fde7d826168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fde7d825f70 'struct __NSConstantString_tag'
+|   `-Record 0x7fde7d825ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fde7d826200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fde7d8261c0 'char *'
+|   `-BuiltinType 0x7fde7d825960 'char'
+|-TypedefDecl 0x7fde7d8264c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fde7d826470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fde7d8262e0 'struct __va_list_tag'
+|     `-Record 0x7fde7d826258 '__va_list_tag'
+|-FunctionDecl 0x7fde7e825a30 <c_files/pr70724.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fde7e825ac8 prev 0x7fde7e825a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-TypedefDecl 0x7fde7e825b78 <line:6:1, col:18> col:18 referenced _PyTime_t 'long'
+| `-BuiltinType 0x7fde7d8259e0 'long'
+|-EnumDecl 0x7fde7e825bd0 <line:7:9, col:67> col:9
+| |-EnumConstantDecl 0x7fde7e825cb0 <col:16, col:38> col:16 referenced _PyTime_ROUND_FLOOR 'int'
+| | `-IntegerLiteral 0x7fde7e825c90 <col:38> 'int' 0
+| `-EnumConstantDecl 0x7fde7e825d18 <col:41, col:65> col:41 referenced _PyTime_ROUND_CEILING 'int'
+|   `-IntegerLiteral 0x7fde7e825cf8 <col:65> 'int' 1
+|-TypedefDecl 0x7fde7e825db0 <col:1, line:8:3> col:3 referenced _PyTime_round_t 'enum _PyTime_round_t':'_PyTime_round_t'
+| `-ElaboratedType 0x7fde7e825d60 'enum _PyTime_round_t' sugar
+|   `-EnumType 0x7fde7e825c70 '_PyTime_round_t'
+|     `-Enum 0x7fde7e825bd0 ''
+|-FunctionDecl 0x7fde7e826080 <line:10:1, line:26:1> line:11:1 used _PyTime_Divide '_PyTime_t (const _PyTime_t, const _PyTime_t, const _PyTime_round_t)' static
+| |-ParmVarDecl 0x7fde7e825e50 <col:16, col:32> col:32 used t 'const _PyTime_t':'const long'
+| |-ParmVarDecl 0x7fde7e825ec0 <col:35, col:51> col:51 used k 'const _PyTime_t':'const long'
+| |-ParmVarDecl 0x7fde7e825f50 <line:12:9, col:31> col:31 used round 'const _PyTime_round_t':'const _PyTime_round_t'
+| `-CompoundStmt 0x7fde7e826948 <line:13:1, line:26:1>
+|   `-IfStmt 0x7fde7e826910 <line:14:3, line:25:3>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fde7e826208 <line:14:7, col:16> 'int' '=='
+|     | |-ImplicitCastExpr 0x7fde7e8261d8 <col:7> 'unsigned int' <IntegralCast>
+|     | | `-ImplicitCastExpr 0x7fde7e8261c0 <col:7> '_PyTime_round_t':'_PyTime_round_t' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7fde7e826170 <col:7> 'const _PyTime_round_t':'const _PyTime_round_t' lvalue ParmVar 0x7fde7e825f50 'round' 'const _PyTime_round_t':'const _PyTime_round_t'
+|     | `-ImplicitCastExpr 0x7fde7e8261f0 <col:16> 'unsigned int' <IntegralCast>
+|     |   `-DeclRefExpr 0x7fde7e826198 <col:16> 'int' EnumConstant 0x7fde7e825d18 '_PyTime_ROUND_CEILING' 'int'
+|     |-CompoundStmt 0x7fde7e826570 <col:39, line:19:3>
+|     | `-IfStmt 0x7fde7e826538 <line:15:7, line:18:13>
+|     |   |-<<<NULL>>>
+|     |   |-<<<NULL>>>
+|     |   |-BinaryOperator 0x7fde7e8262a8 <line:15:11, col:16> 'int' '>='
+|     |   | |-ImplicitCastExpr 0x7fde7e826278 <col:11> '_PyTime_t':'long' <LValueToRValue>
+|     |   | | `-DeclRefExpr 0x7fde7e826230 <col:11> 'const _PyTime_t':'const long' lvalue ParmVar 0x7fde7e825e50 't' 'const _PyTime_t':'const long'
+|     |   | `-ImplicitCastExpr 0x7fde7e826290 <col:16> 'long' <IntegralCast>
+|     |   |   `-IntegerLiteral 0x7fde7e826258 <col:16> 'int' 0
+|     |   |-ReturnStmt 0x7fde7e826460 <line:16:2, col:23>
+|     |   | `-BinaryOperator 0x7fde7e826438 <col:9, col:23> 'long' '/'
+|     |   |   |-ParenExpr 0x7fde7e8263d8 <col:9, col:19> 'long'
+|     |   |   | `-BinaryOperator 0x7fde7e8263b0 <col:10, col:18> 'long' '-'
+|     |   |   |   |-BinaryOperator 0x7fde7e826350 <col:10, col:14> 'long' '+'
+|     |   |   |   | |-ImplicitCastExpr 0x7fde7e826320 <col:10> '_PyTime_t':'long' <LValueToRValue>
+|     |   |   |   | | `-DeclRefExpr 0x7fde7e8262d0 <col:10> 'const _PyTime_t':'const long' lvalue ParmVar 0x7fde7e825e50 't' 'const _PyTime_t':'const long'
+|     |   |   |   | `-ImplicitCastExpr 0x7fde7e826338 <col:14> '_PyTime_t':'long' <LValueToRValue>
+|     |   |   |   |   `-DeclRefExpr 0x7fde7e8262f8 <col:14> 'const _PyTime_t':'const long' lvalue ParmVar 0x7fde7e825ec0 'k' 'const _PyTime_t':'const long'
+|     |   |   |   `-ImplicitCastExpr 0x7fde7e826398 <col:18> 'long' <IntegralCast>
+|     |   |   |     `-IntegerLiteral 0x7fde7e826378 <col:18> 'int' 1
+|     |   |   `-ImplicitCastExpr 0x7fde7e826420 <col:23> '_PyTime_t':'long' <LValueToRValue>
+|     |   |     `-DeclRefExpr 0x7fde7e8263f8 <col:23> 'const _PyTime_t':'const long' lvalue ParmVar 0x7fde7e825ec0 'k' 'const _PyTime_t':'const long'
+|     |   `-ReturnStmt 0x7fde7e826520 <line:18:2, col:13>
+|     |     `-BinaryOperator 0x7fde7e8264f8 <col:9, col:13> 'long' '/'
+|     |       |-ImplicitCastExpr 0x7fde7e8264c8 <col:9> '_PyTime_t':'long' <LValueToRValue>
+|     |       | `-DeclRefExpr 0x7fde7e826478 <col:9> 'const _PyTime_t':'const long' lvalue ParmVar 0x7fde7e825e50 't' 'const _PyTime_t':'const long'
+|     |       `-ImplicitCastExpr 0x7fde7e8264e0 <col:13> '_PyTime_t':'long' <LValueToRValue>
+|     |         `-DeclRefExpr 0x7fde7e8264a0 <col:13> 'const _PyTime_t':'const long' lvalue ParmVar 0x7fde7e825ec0 'k' 'const _PyTime_t':'const long'
+|     `-CompoundStmt 0x7fde7e8268f0 <line:20:8, line:25:3>
+|       `-IfStmt 0x7fde7e8268b8 <line:21:7, line:24:25>
+|         |-<<<NULL>>>
+|         |-<<<NULL>>>
+|         |-BinaryOperator 0x7fde7e826608 <line:21:11, col:16> 'int' '>='
+|         | |-ImplicitCastExpr 0x7fde7e8265d8 <col:11> '_PyTime_t':'long' <LValueToRValue>
+|         | | `-DeclRefExpr 0x7fde7e826590 <col:11> 'const _PyTime_t':'const long' lvalue ParmVar 0x7fde7e825e50 't' 'const _PyTime_t':'const long'
+|         | `-ImplicitCastExpr 0x7fde7e8265f0 <col:16> 'long' <IntegralCast>
+|         |   `-IntegerLiteral 0x7fde7e8265b8 <col:16> 'int' 0
+|         |-ReturnStmt 0x7fde7e8266d8 <line:22:2, col:13>
+|         | `-BinaryOperator 0x7fde7e8266b0 <col:9, col:13> 'long' '/'
+|         |   |-ImplicitCastExpr 0x7fde7e826680 <col:9> '_PyTime_t':'long' <LValueToRValue>
+|         |   | `-DeclRefExpr 0x7fde7e826630 <col:9> 'const _PyTime_t':'const long' lvalue ParmVar 0x7fde7e825e50 't' 'const _PyTime_t':'const long'
+|         |   `-ImplicitCastExpr 0x7fde7e826698 <col:13> '_PyTime_t':'long' <LValueToRValue>
+|         |     `-DeclRefExpr 0x7fde7e826658 <col:13> 'const _PyTime_t':'const long' lvalue ParmVar 0x7fde7e825ec0 'k' 'const _PyTime_t':'const long'
+|         `-ReturnStmt 0x7fde7e8268a0 <line:24:2, col:25>
+|           `-BinaryOperator 0x7fde7e826878 <col:9, col:25> 'long' '/'
+|             |-ParenExpr 0x7fde7e826818 <col:9, col:21> 'long'
+|             | `-BinaryOperator 0x7fde7e8267f0 <col:10, col:20> 'long' '-'
+|             |   |-ImplicitCastExpr 0x7fde7e8267d8 <col:10> '_PyTime_t':'long' <LValueToRValue>
+|             |   | `-DeclRefExpr 0x7fde7e8266f0 <col:10> 'const _PyTime_t':'const long' lvalue ParmVar 0x7fde7e825e50 't' 'const _PyTime_t':'const long'
+|             |   `-ParenExpr 0x7fde7e8267b8 <col:14, col:20> 'long'
+|             |     `-BinaryOperator 0x7fde7e826790 <col:15, col:19> 'long' '-'
+|             |       |-ImplicitCastExpr 0x7fde7e826760 <col:15> '_PyTime_t':'long' <LValueToRValue>
+|             |       | `-DeclRefExpr 0x7fde7e826718 <col:15> 'const _PyTime_t':'const long' lvalue ParmVar 0x7fde7e825ec0 'k' 'const _PyTime_t':'const long'
+|             |       `-ImplicitCastExpr 0x7fde7e826778 <col:19> 'long' <IntegralCast>
+|             |         `-IntegerLiteral 0x7fde7e826740 <col:19> 'int' 1
+|             `-ImplicitCastExpr 0x7fde7e826860 <col:25> '_PyTime_t':'long' <LValueToRValue>
+|               `-DeclRefExpr 0x7fde7e826838 <col:25> 'const _PyTime_t':'const long' lvalue ParmVar 0x7fde7e825ec0 'k' 'const _PyTime_t':'const long'
+|-FunctionDecl 0x7fde7e827b10 <line:28:1, line:32:1> line:29:1 used _PyTime_AsMicroseconds '_PyTime_t (_PyTime_t, _PyTime_round_t)'
+| |-ParmVarDecl 0x7fde7e826978 <col:24, col:34> col:34 used t '_PyTime_t':'long'
+| |-ParmVarDecl 0x7fde7e827a00 <col:37, col:53> col:53 used round '_PyTime_round_t':'_PyTime_round_t'
+| |-CompoundStmt 0x7fde7e827db0 <line:30:1, line:32:1>
+| | `-ReturnStmt 0x7fde7e827d98 <line:31:3, col:39>
+| |   `-CallExpr 0x7fde7e827d10 <col:10, col:39> '_PyTime_t':'long'
+| |     |-ImplicitCastExpr 0x7fde7e827cf8 <col:10> '_PyTime_t (*)(const _PyTime_t, const _PyTime_t, const _PyTime_round_t)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fde7e827c00 <col:10> '_PyTime_t (const _PyTime_t, const _PyTime_t, const _PyTime_round_t)' Function 0x7fde7e826080 '_PyTime_Divide' '_PyTime_t (const _PyTime_t, const _PyTime_t, const _PyTime_round_t)'
+| |     |-ImplicitCastExpr 0x7fde7e827d50 <col:25> '_PyTime_t':'long' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fde7e827c28 <col:25> '_PyTime_t':'long' lvalue ParmVar 0x7fde7e826978 't' '_PyTime_t':'long'
+| |     |-ImplicitCastExpr 0x7fde7e827d68 <col:28> '_PyTime_t':'long' <IntegralCast>
+| |     | `-IntegerLiteral 0x7fde7e827c50 <col:28> 'int' 1000
+| |     `-ImplicitCastExpr 0x7fde7e827d80 <col:34> '_PyTime_round_t':'_PyTime_round_t' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fde7e827c70 <col:34> '_PyTime_round_t':'_PyTime_round_t' lvalue ParmVar 0x7fde7e827a00 'round' '_PyTime_round_t':'_PyTime_round_t'
+| `-NoInlineAttr 0x7fde7e827bb8 <line:28:26>
+`-FunctionDecl 0x7fde7e827e20 <line:34:1, line:39:1> line:34:5 main 'int ()'
+  `-CompoundStmt 0x7fde7e828168 <line:35:1, line:39:1>
+    |-IfStmt 0x7fde7e8280f8 <line:36:3, line:37:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fde7e828040 <line:36:7, col:62> 'int' '!='
+    | | |-CallExpr 0x7fde7e827fa0 <col:7, col:57> '_PyTime_t':'long'
+    | | | |-ImplicitCastExpr 0x7fde7e827f88 <col:7> '_PyTime_t (*)(_PyTime_t, _PyTime_round_t)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fde7e827eb8 <col:7> '_PyTime_t (_PyTime_t, _PyTime_round_t)' Function 0x7fde7e827b10 '_PyTime_AsMicroseconds' '_PyTime_t (_PyTime_t, _PyTime_round_t)'
+    | | | |-ImplicitCastExpr 0x7fde7e827fd8 <col:31> '_PyTime_t':'long' <IntegralCast>
+    | | | | `-IntegerLiteral 0x7fde7e827ee0 <col:31> 'int' 10000
+    | | | `-ImplicitCastExpr 0x7fde7e827ff0 <col:38> '_PyTime_round_t':'_PyTime_round_t' <IntegralCast>
+    | | |   `-DeclRefExpr 0x7fde7e827f00 <col:38> 'int' EnumConstant 0x7fde7e825cb0 '_PyTime_ROUND_FLOOR' 'int'
+    | | `-ImplicitCastExpr 0x7fde7e828028 <col:62> 'long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fde7e828008 <col:62> 'int' 10
+    | |-CallExpr 0x7fde7e8280d0 <line:37:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fde7e8280b8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fde7e828068 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fde7e825ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fde7e828150 <line:38:3, col:10>
+      `-IntegerLiteral 0x7fde7e828130 <col:10> 'int' 0

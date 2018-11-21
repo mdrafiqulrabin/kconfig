@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fe56d815ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe56d816420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe56d816140 '__int128'
+|-TypedefDecl 0x7fe56d816490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe56d816160 'unsigned __int128'
+|-TypedefDecl 0x7fe56d816768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe56d816570 'struct __NSConstantString_tag'
+|   `-Record 0x7fe56d8164e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe56d816800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe56d8167c0 'char *'
+|   `-BuiltinType 0x7fe56d815f60 'char'
+|-TypedefDecl 0x7fe56d816ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe56d816a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe56d8168e0 'struct __va_list_tag'
+|     `-Record 0x7fe56d816858 '__va_list_tag'
+|-FunctionDecl 0x7fe56e03b800 <c_files/pr46088.c:5:1, col:22> col:13 used bar 'void (void)' extern
+`-FunctionDecl 0x7fe56e03b9b0 <line:7:1, line:12:1> line:8:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fe56e03b8f0 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7fe56e03bba0 <line:9:1, line:12:1>
+    `-IfStmt 0x7fe56e03bb68 <line:10:3, line:11:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe56e03bab0 <line:10:7, col:12> 'int' '>>'
+      | |-ImplicitCastExpr 0x7fe56e03ba98 <col:7> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe56e03ba50 <col:7> 'int' lvalue ParmVar 0x7fe56e03b8f0 'i' 'int'
+      | `-IntegerLiteral 0x7fe56e03ba78 <col:12> 'int' 3
+      |-CallExpr 0x7fe56e03bb40 <line:11:5, col:10> 'void'
+      | `-ImplicitCastExpr 0x7fe56e03bb28 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fe56e03bad8 <col:5> 'void (void)' Function 0x7fe56e03b800 'bar' 'void (void)'
+      `-<<<NULL>>>

@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7ff8448194d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff844819a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff844819740 '__int128'
+|-TypedefDecl 0x7ff844819a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff844819760 'unsigned __int128'
+|-TypedefDecl 0x7ff844819d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff844819b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff844819ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff844819e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff844819dc0 'char *'
+|   `-BuiltinType 0x7ff844819560 'char'
+|-TypedefDecl 0x7ff84481a0c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff84481a070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff844819ee0 'struct __va_list_tag'
+|     `-Record 0x7ff844819e58 '__va_list_tag'
+|-TypedefDecl 0x7ff84481a138 <c_files/pr78546-1.c:4:1, col:27> col:27 referenced u128 'unsigned __int128'
+| `-BuiltinType 0x7ff844819760 'unsigned __int128'
+|-VarDecl 0x7ff845025a00 <line:5:1, col:6> col:6 used b 'u128':'unsigned __int128'
+|-FunctionDecl 0x7ff845025bb0 <line:7:1, line:12:1> line:8:1 used foo 'u128 (u128)' static inline
+| |-ParmVarDecl 0x7ff845025ab0 <col:6, col:11> col:11 used p1 'u128':'unsigned __int128'
+| `-CompoundStmt 0x7ff845025d88 <line:9:1, line:12:1>
+|   |-CompoundAssignOperator 0x7ff845025cd8 <line:10:3, col:10> 'u128':'unsigned __int128' '+=' ComputeLHSTy='unsigned __int128' ComputeResultTy='unsigned __int128'
+|   | |-DeclRefExpr 0x7ff845025c50 <col:3> 'u128':'unsigned __int128' lvalue ParmVar 0x7ff845025ab0 'p1' 'u128':'unsigned __int128'
+|   | `-UnaryOperator 0x7ff845025cb8 <col:9, col:10> 'u128':'unsigned __int128' prefix '~'
+|   |   `-ImplicitCastExpr 0x7ff845025ca0 <col:10> 'u128':'unsigned __int128' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7ff845025c78 <col:10> 'u128':'unsigned __int128' lvalue Var 0x7ff845025a00 'b' 'u128':'unsigned __int128'
+|   `-ReturnStmt 0x7ff845025d70 <line:11:3, col:11>
+|     `-UnaryOperator 0x7ff845025d50 <col:10, col:11> 'u128':'unsigned __int128' prefix '-'
+|       `-ImplicitCastExpr 0x7ff845025d38 <col:11> 'u128':'unsigned __int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7ff845025d10 <col:11> 'u128':'unsigned __int128' lvalue ParmVar 0x7ff845025ab0 'p1' 'u128':'unsigned __int128'
+|-FunctionDecl 0x7ff845025e00 <line:14:1, line:22:1> line:15:1 main 'int ()'
+| `-CompoundStmt 0x7ff845026418 <line:16:1, line:22:1>
+|   |-GCCAsmStmt 0x7ff845025f68 <line:17:3, col:34>
+|   |-DeclStmt 0x7ff845026148 <line:18:3, col:39>
+|   | `-VarDecl 0x7ff845025fc8 <col:3, col:38> col:8 used x 'u128':'unsigned __int128' cinit
+|   |   `-CallExpr 0x7ff845026100 <col:12, col:38> 'u128':'unsigned __int128'
+|   |     |-ImplicitCastExpr 0x7ff8450260e8 <col:12> 'u128 (*)(u128)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7ff845026028 <col:12> 'u128 (u128)' Function 0x7ff845025bb0 'foo' 'u128 (u128)'
+|   |     `-ImplicitCastExpr 0x7ff845026130 <col:17, col:18> 'u128':'unsigned __int128' <IntegralCast>
+|   |       `-UnaryOperator 0x7ff845026070 <col:17, col:18> 'long long' prefix '~'
+|   |         `-IntegerLiteral 0x7ff845026050 <col:18> 'long long' 9223372036854775807
+|   |-IfStmt 0x7ff8450263a8 <line:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff8450261d8 <line:19:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7ff8450261a8 <col:7> 'u128':'unsigned __int128' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ff845026160 <col:7> 'u128':'unsigned __int128' lvalue Var 0x7ff845025fc8 'x' 'u128':'unsigned __int128'
+|   | | `-ImplicitCastExpr 0x7ff8450261c0 <col:12> 'unsigned __int128' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7ff845026188 <col:12> 'unsigned long long' 9223372036854775809
+|   | |-CallExpr 0x7ff845026380 <line:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7ff845026368 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7ff845026310 <col:5> '<builtin fn type>' Function 0x7ff845026230 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7ff845026400 <line:21:3, col:10>
+|     `-IntegerLiteral 0x7ff8450263e0 <col:10> 'int' 0
+`-FunctionDecl 0x7ff845026230 <line:20:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7ff8450262c8 <col:5> Implicit

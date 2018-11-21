@@ -1,0 +1,130 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['long', 'long']
+  Decl: c, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: c, []
+        IdentifierType: ['long', 'long']
+    UnaryOp: &
+      ID: b
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['short']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['long', 'long']
+          Decl: p2, [], [], []
+            TypeDecl: p2, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: fn2, []
+          IdentifierType: ['long', 'long']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: ||
+            BinaryOp: &&
+              ID: p1
+              BinaryOp: >
+                ID: p1
+                BinaryOp: -
+                  Constant: int, 26854775807LL
+                  ID: p2
+            BinaryOp: <
+              ID: p1
+              UnaryOp: -
+                ID: p2
+          ID: p1
+          BinaryOp: +
+            ID: p1
+            ID: p2
+  FuncDef: 
+    Decl: fn3, [], [], []
+      FuncDecl: 
+        TypeDecl: fn3, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['long', 'long']
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['int']
+        Constant: int, 3
+      Decl: h, [], [], []
+        PtrDecl: []
+          TypeDecl: h, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: a
+      For: 
+        Assignment: =
+          ID: e
+          Constant: int, 0
+        BinaryOp: <
+          ID: e
+          Constant: int, 2
+        UnaryOp: p++
+          ID: e
+        Compound: 
+          Decl: i, [], [], []
+            PtrDecl: []
+              TypeDecl: i, []
+                IdentifierType: ['int']
+            UnaryOp: &
+              ID: g
+          If: 
+            UnaryOp: !
+              FuncCall: 
+                ID: fn2
+                ExprList: 
+                  UnaryOp: *
+                    ID: c
+                  BinaryOp: <
+                    Constant: int, 7
+                    BinaryOp: %
+                      ID: d
+                      UnaryOp: p--
+                        UnaryOp: *
+                          ID: i
+            Assignment: =
+              ID: f
+              FuncCall: 
+                ID: fn2
+                ExprList: 
+                  BinaryOp: |
+                    BinaryOp: <=
+                      UnaryOp: *
+                        ID: h
+                      Constant: int, 0
+                    ID: b
+                  Constant: int, 5278350700LL
+          Assignment: =
+            UnaryOp: *
+              ID: h
+            ID: f
+          FuncCall: 
+            ID: fn1
+            ExprList: 
+              UnaryOp: *
+                ID: h

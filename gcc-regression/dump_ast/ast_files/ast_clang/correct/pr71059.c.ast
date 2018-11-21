@@ -1,0 +1,68 @@
+TranslationUnitDecl 0x7fe7180264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe718026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe718026740 '__int128'
+|-TypedefDecl 0x7fe718026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe718026760 'unsigned __int128'
+|-TypedefDecl 0x7fe718026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe718026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe718026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe718026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe718026dc0 'char *'
+|   `-BuiltinType 0x7fe718026560 'char'
+|-TypedefDecl 0x7fe7180270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe718027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe718026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe718026e58 '__va_list_tag'
+|-VarDecl 0x7fe718027138 <c_files/pr71059.c:3:1, col:7> col:7 used a 'short'
+|-VarDecl 0x7fe718077400 <col:1, col:10> col:10 used c 'short'
+|-RecordDecl 0x7fe718077478 <line:4:1, line:7:1> line:4:1 union definition
+| |-FieldDecl 0x7fe718077538 <line:5:5, col:14> col:14 referenced f0 'unsigned int'
+| `-FieldDecl 0x7fe718077598 <line:6:5, col:20> col:20 referenced f1 'unsigned short'
+|-VarDecl 0x7fe718077630 <line:4:1, line:7:3> col:3 used b 'union (anonymous union at c_files/pr71059.c:4:1)':'union (anonymous at c_files/pr71059.c:4:1)'
+|-VarDecl 0x7fe7180776c0 <line:8:1, col:14> col:14 used d 'volatile int'
+|-FunctionDecl 0x7fe718077808 <line:9:1, col:38> col:7 used fn1 'short (short)'
+| |-ParmVarDecl 0x7fe718077738 <col:11, col:17> col:17 used p1 'short'
+| `-CompoundStmt 0x7fe7180779b0 <col:21, col:38>
+|   `-ReturnStmt 0x7fe718077998 <col:23, col:35>
+|     `-ImplicitCastExpr 0x7fe718077980 <col:30, col:35> 'short' <IntegralCast>
+|       `-BinaryOperator 0x7fe718077958 <col:30, col:35> 'int' '+'
+|         |-ImplicitCastExpr 0x7fe718077910 <col:30> 'int' <IntegralCast>
+|         | `-ImplicitCastExpr 0x7fe7180778f8 <col:30> 'short' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fe7180778a8 <col:30> 'short' lvalue ParmVar 0x7fe718077738 'p1' 'short'
+|         `-ImplicitCastExpr 0x7fe718077940 <col:35> 'int' <IntegralCast>
+|           `-ImplicitCastExpr 0x7fe718077928 <col:35> 'short' <LValueToRValue>
+|             `-DeclRefExpr 0x7fe7180778d0 <col:35> 'short' lvalue Var 0x7fe718027138 'a' 'short'
+`-FunctionDecl 0x7fe718077a18 <line:10:1, line:15:1> line:10:6 fn2 'void ()'
+  `-CompoundStmt 0x7fe718077f60 <line:11:1, line:15:1>
+    |-BinaryOperator 0x7fe718077b48 <line:12:3, col:10> 'unsigned int' '='
+    | |-MemberExpr 0x7fe718077ad8 <col:3, col:5> 'unsigned int' lvalue .f0 0x7fe718077538
+    | | `-DeclRefExpr 0x7fe718077ab0 <col:3> 'union (anonymous union at c_files/pr71059.c:4:1)':'union (anonymous at c_files/pr71059.c:4:1)' lvalue Var 0x7fe718077630 'b' 'union (anonymous union at c_files/pr71059.c:4:1)':'union (anonymous at c_files/pr71059.c:4:1)'
+    | `-ImplicitCastExpr 0x7fe718077b30 <col:10> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe718077b10 <col:10> 'int' 0
+    `-ForStmt 0x7fe718077f28 <line:13:3, line:14:20>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe718077d68 <line:13:11, col:26> 'unsigned int' '='
+      | |-MemberExpr 0x7fe718077be8 <col:11, col:13> 'unsigned int' lvalue .f0 0x7fe718077538
+      | | `-DeclRefExpr 0x7fe718077bc0 <col:11> 'union (anonymous union at c_files/pr71059.c:4:1)':'union (anonymous at c_files/pr71059.c:4:1)' lvalue Var 0x7fe718077630 'b' 'union (anonymous union at c_files/pr71059.c:4:1)':'union (anonymous at c_files/pr71059.c:4:1)'
+      | `-ImplicitCastExpr 0x7fe718077d50 <col:18, col:26> 'unsigned int' <IntegralCast>
+      |   `-CallExpr 0x7fe718077cf0 <col:18, col:26> 'short'
+      |     |-ImplicitCastExpr 0x7fe718077cd8 <col:18> 'short (*)(short)' <FunctionToPointerDecay>
+      |     | `-DeclRefExpr 0x7fe718077c20 <col:18> 'short (short)' Function 0x7fe718077808 'fn1' 'short (short)'
+      |     `-ImplicitCastExpr 0x7fe718077d38 <col:22, col:24> 'short' <IntegralCast>
+      |       `-ImplicitCastExpr 0x7fe718077d20 <col:22, col:24> 'unsigned int' <LValueToRValue>
+      |         `-MemberExpr 0x7fe718077c70 <col:22, col:24> 'unsigned int' lvalue .f0 0x7fe718077538
+      |           `-DeclRefExpr 0x7fe718077c48 <col:22> 'union (anonymous union at c_files/pr71059.c:4:1)':'union (anonymous at c_files/pr71059.c:4:1)' lvalue Var 0x7fe718077630 'b' 'union (anonymous union at c_files/pr71059.c:4:1)':'union (anonymous at c_files/pr71059.c:4:1)'
+      `-BinaryOperator 0x7fe718077f00 <line:14:5, col:20> 'int' '||'
+        |-ParenExpr 0x7fe718077ea0 <col:5, col:15> 'int'
+        | `-BinaryOperator 0x7fe718077e78 <col:6, col:13> 'int' '&&'
+        |   |-ImplicitCastExpr 0x7fe718077e30 <col:6> 'int' <IntegralCast>
+        |   | `-ImplicitCastExpr 0x7fe718077e18 <col:6> 'short' <LValueToRValue>
+        |   |   `-DeclRefExpr 0x7fe718077d90 <col:6> 'short' lvalue Var 0x7fe718077400 'c' 'short'
+        |   `-ImplicitCastExpr 0x7fe718077e60 <col:11, col:13> 'int' <IntegralCast>
+        |     `-ImplicitCastExpr 0x7fe718077e48 <col:11, col:13> 'unsigned short' <LValueToRValue>
+        |       `-MemberExpr 0x7fe718077de0 <col:11, col:13> 'unsigned short' lvalue .f1 0x7fe718077598
+        |         `-DeclRefExpr 0x7fe718077db8 <col:11> 'union (anonymous union at c_files/pr71059.c:4:1)':'union (anonymous at c_files/pr71059.c:4:1)' lvalue Var 0x7fe718077630 'b' 'union (anonymous union at c_files/pr71059.c:4:1)':'union (anonymous at c_files/pr71059.c:4:1)'
+        `-ImplicitCastExpr 0x7fe718077ee8 <col:20> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fe718077ec0 <col:20> 'volatile int' lvalue Var 0x7fe7180776c0 'd' 'volatile int'

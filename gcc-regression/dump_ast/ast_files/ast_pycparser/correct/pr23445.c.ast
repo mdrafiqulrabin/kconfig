@@ -1,0 +1,44 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: buffer_head
+      Decl: b_data, [], [], []
+        PtrDecl: []
+          TypeDecl: b_data, []
+            IdentifierType: ['char']
+  FuncDef: 
+    Decl: asfs_deletebnode, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: bhsec, [], [], []
+            PtrDecl: []
+              TypeDecl: bhsec, []
+                Struct: buffer_head
+        TypeDecl: asfs_deletebnode, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          ID: bhsec
+          Constant: int, 0
+        Compound: 
+          Decl: bnc2, [], [], []
+            PtrDecl: []
+              TypeDecl: bnc2, []
+                IdentifierType: ['void']
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+              StructRef: ->
+                ID: bhsec
+                ID: b_data
+          If: 
+            ID: bnc2
+            Return: 
+          If: 
+            ID: bhsec
+            FuncCall: 
+              ID: __brelse
+              ExprList: 
+                ID: bhsec

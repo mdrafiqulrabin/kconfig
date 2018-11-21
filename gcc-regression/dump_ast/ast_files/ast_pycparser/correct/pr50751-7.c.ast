@@ -1,0 +1,98 @@
+FileAST: 
+  Typedef: X, [], ['typedef']
+    TypeDecl: X, []
+      Struct: None
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['char']
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['char']
+        Decl: d, [], [], []
+          TypeDecl: d, []
+            IdentifierType: ['char']
+        Decl: e, [], [], []
+          TypeDecl: e, []
+            IdentifierType: ['short']
+        Decl: f, [], [], []
+          TypeDecl: f, []
+            IdentifierType: ['short']
+        Decl: g, [], [], []
+          TypeDecl: g, []
+            IdentifierType: ['int']
+        Decl: h, [], [], []
+          TypeDecl: h, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: testfunc_00, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['X']
+        TypeDecl: testfunc_00, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: x
+          ID: g
+        BinaryOp: |
+          StructRef: ->
+            ID: x
+            ID: b
+          StructRef: ->
+            ID: x
+            ID: c
+      Assignment: =
+        StructRef: ->
+          ID: x
+          ID: h
+        BinaryOp: |
+          StructRef: ->
+            ID: x
+            ID: e
+          StructRef: ->
+            ID: x
+            ID: f
+      Assignment: =
+        StructRef: ->
+          ID: x
+          ID: d
+        StructRef: ->
+          ID: x
+          ID: g
+      Assignment: =
+        StructRef: ->
+          ID: x
+          ID: f
+        StructRef: ->
+          ID: x
+          ID: h
+  FuncDef: 
+    Decl: testfunc_01, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['X']
+        TypeDecl: testfunc_01, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: |
+            StructRef: ->
+              ID: x
+              ID: b
+            StructRef: ->
+              ID: x
+              ID: e
+          StructRef: ->
+            ID: x
+            ID: g

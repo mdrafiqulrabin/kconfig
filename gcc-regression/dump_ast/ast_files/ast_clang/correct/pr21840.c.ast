@@ -1,0 +1,52 @@
+TranslationUnitDecl 0x7f8df00264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8df0026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8df0026740 '__int128'
+|-TypedefDecl 0x7f8df0026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8df0026760 'unsigned __int128'
+|-TypedefDecl 0x7f8df0026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8df0026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8df0026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8df0026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8df0026dc0 'char *'
+|   `-BuiltinType 0x7f8df0026560 'char'
+|-TypedefDecl 0x7f8df00270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8df0027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8df0026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8df0026e58 '__va_list_tag'
+|-FunctionDecl 0x7f8df0077400 <c_files/pr21840.c:1:1, col:24> col:6 used fn_show_state 'void (void)'
+|-TypedefDecl 0x7f8df0077608 <line:2:1, col:35> col:16 referenced fn_handler_fn 'void (*)(void)'
+| `-PointerType 0x7f8df00775b0 'void (*)(void)'
+|   `-ParenType 0x7f8df0077550 'void (void)' sugar
+|     `-FunctionProtoType 0x7f8df0027190 'void (void)' cdecl
+|       `-BuiltinType 0x7f8df0026520 'void'
+|-VarDecl 0x7f8df0077738 <line:3:1, col:34> col:22 used fn_handler 'fn_handler_fn [1]' static
+`-FunctionDecl 0x7f8df0077870 <line:5:1, line:11:1> line:5:6 k_spec 'void (unsigned char)'
+  |-ParmVarDecl 0x7f8df00777b0 <col:13, col:27> col:27 used value 'unsigned char'
+  `-CompoundStmt 0x7f8df0077cd0 <line:6:1, line:11:1>
+    |-DeclStmt 0x7f8df0077ac0 <line:7:3, col:33>
+    | `-VarDecl 0x7f8df0077928 <col:3, col:32> col:9 used func 'void *' cinit
+    |   `-ImplicitCastExpr 0x7f8df0077aa8 <col:16, col:32> 'void *' <BitCast>
+    |     `-ImplicitCastExpr 0x7f8df0077a90 <col:16, col:32> 'fn_handler_fn':'void (*)(void)' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7f8df0077a68 <col:16, col:32> 'fn_handler_fn':'void (*)(void)' lvalue
+    |         |-ImplicitCastExpr 0x7f8df0077a38 <col:16> 'fn_handler_fn *' <ArrayToPointerDecay>
+    |         | `-DeclRefExpr 0x7f8df0077988 <col:16> 'fn_handler_fn [1]' lvalue Var 0x7f8df0077738 'fn_handler' 'fn_handler_fn [1]'
+    |         `-ImplicitCastExpr 0x7f8df0077a50 <col:27> 'unsigned char' <LValueToRValue>
+    |           `-DeclRefExpr 0x7f8df00779b0 <col:27> 'unsigned char' lvalue ParmVar 0x7f8df00777b0 'value' 'unsigned char'
+    |-IfStmt 0x7f8df0077bb0 <line:8:3, line:9:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8df0077b70 <line:8:7, col:15> 'int' '=='
+    | | |-ImplicitCastExpr 0x7f8df0077b28 <col:7> 'void *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f8df0077ad8 <col:7> 'void *' lvalue Var 0x7f8df0077928 'func' 'void *'
+    | | `-ImplicitCastExpr 0x7f8df0077b58 <col:15> 'void *' <BitCast>
+    | |   `-ImplicitCastExpr 0x7f8df0077b40 <col:15> 'void (*)(void)' <FunctionToPointerDecay>
+    | |     `-DeclRefExpr 0x7f8df0077b00 <col:15> 'void (void)' Function 0x7f8df0077400 'fn_show_state' 'void (void)'
+    | |-ReturnStmt 0x7f8df0077b98 <line:9:5>
+    | `-<<<NULL>>>
+    `-CallExpr 0x7f8df0077ca8 <line:10:3, col:21> 'void'
+      `-ImplicitCastExpr 0x7f8df0077c90 <col:3, col:19> 'fn_handler_fn':'void (*)(void)' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7f8df0077c68 <col:3, col:19> 'fn_handler_fn':'void (*)(void)' lvalue
+          |-ImplicitCastExpr 0x7f8df0077c38 <col:3> 'fn_handler_fn *' <ArrayToPointerDecay>
+          | `-DeclRefExpr 0x7f8df0077be8 <col:3> 'fn_handler_fn [1]' lvalue Var 0x7f8df0077738 'fn_handler' 'fn_handler_fn [1]'
+          `-ImplicitCastExpr 0x7f8df0077c50 <col:14> 'unsigned char' <LValueToRValue>
+            `-DeclRefExpr 0x7f8df0077c10 <col:14> 'unsigned char' lvalue ParmVar 0x7f8df00777b0 'value' 'unsigned char'

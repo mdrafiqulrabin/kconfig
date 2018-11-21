@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7f97170264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9717026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9717026740 '__int128'
+|-TypedefDecl 0x7f9717026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9717026760 'unsigned __int128'
+|-TypedefDecl 0x7f9717026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9717026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9717026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9717026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9717026dc0 'char *'
+|   `-BuiltinType 0x7f9717026560 'char'
+|-TypedefDecl 0x7f97170270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9717027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9717026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9717026e58 '__va_list_tag'
+|-RecordDecl 0x7f9717027120 <c_files/pr39545-1.c:6:1, line:10:1> line:6:8 struct flex definition
+| |-FieldDecl 0x7f9717077400 <line:8:3, col:7> col:7 referenced i 'int'
+| `-FieldDecl 0x7f97170774a0 <line:9:3, col:13> col:7 flex 'int []'
+|-FunctionDecl 0x7f9717077648 <line:12:1, line:16:1> line:13:1 foo 'int (struct flex)'
+| |-ParmVarDecl 0x7f9717077540 <col:6, col:18> col:18 used s 'struct flex':'struct flex'
+| `-CompoundStmt 0x7f97170777b8 <line:14:1, line:16:1>
+|   `-ReturnStmt 0x7f97170777a0 <line:15:3, col:12>
+|     `-ImplicitCastExpr 0x7f9717077788 <col:10, col:12> 'int' <LValueToRValue>
+|       `-MemberExpr 0x7f9717077750 <col:10, col:12> 'int' lvalue .i 0x7f9717077400
+|         `-DeclRefExpr 0x7f9717077728 <col:10> 'struct flex':'struct flex' lvalue ParmVar 0x7f9717077540 's' 'struct flex':'struct flex'
+`-FunctionDecl 0x7f9717077900 <line:18:1, line:24:1> line:19:1 bar 'struct flex (int)'
+  |-ParmVarDecl 0x7f97170777f0 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7f9717077ba8 <line:20:1, line:24:1>
+    |-DeclStmt 0x7f9717077a20 <line:21:3, col:16>
+    | `-VarDecl 0x7f97170779c0 <col:3, col:15> col:15 used s 'struct flex':'struct flex'
+    |-BinaryOperator 0x7f9717077ad8 <line:22:3, col:9> 'int' '='
+    | |-MemberExpr 0x7f9717077a60 <col:3, col:5> 'int' lvalue .i 0x7f9717077400
+    | | `-DeclRefExpr 0x7f9717077a38 <col:3> 'struct flex':'struct flex' lvalue Var 0x7f97170779c0 's' 'struct flex':'struct flex'
+    | `-ImplicitCastExpr 0x7f9717077ac0 <col:9> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f9717077a98 <col:9> 'int' lvalue ParmVar 0x7f97170777f0 'x' 'int'
+    `-ReturnStmt 0x7f9717077b90 <line:23:3, col:10>
+      `-ImplicitCastExpr 0x7f9717077b78 <col:10> 'struct flex':'struct flex' <LValueToRValue>
+        `-DeclRefExpr 0x7f9717077b50 <col:10> 'struct flex':'struct flex' lvalue Var 0x7f97170779c0 's' 'struct flex':'struct flex'

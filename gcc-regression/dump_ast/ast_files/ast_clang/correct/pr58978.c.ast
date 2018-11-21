@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7fb301825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb301826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb301825d40 '__int128'
+|-TypedefDecl 0x7fb301826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb301825d60 'unsigned __int128'
+|-TypedefDecl 0x7fb301826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb301826170 'struct __NSConstantString_tag'
+|   `-Record 0x7fb3018260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb301826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb3018263c0 'char *'
+|   `-BuiltinType 0x7fb301825b60 'char'
+|-TypedefDecl 0x7fb3018266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb301826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb3018264e0 'struct __va_list_tag'
+|     `-Record 0x7fb301826458 '__va_list_tag'
+|-FunctionDecl 0x7fb301876a30 <c_files/pr58978.c:3:1, line:16:1> line:4:1 foo 'int (int)'
+| |-ParmVarDecl 0x7fb301826738 <col:6, col:10> col:10 used x 'int'
+| `-CompoundStmt 0x7fb301876ed8 <line:5:1, line:16:1>
+|   |-SwitchStmt 0x7fb301876b50 <line:6:3, line:14:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fb301876b38 <line:6:11> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fb301876b10 <col:11> 'int' lvalue ParmVar 0x7fb301826738 'x' 'int'
+|   | `-CompoundStmt 0x7fb301876e58 <line:7:5, line:14:5>
+|   |   |-CaseStmt 0x7fb301876ba0 <line:8:5, line:11:7>
+|   |   | |-IntegerLiteral 0x7fb301876b80 <line:8:10> 'int' 0
+|   |   | |-<<<NULL>>>
+|   |   | `-CaseStmt 0x7fb301876bf8 <line:9:5, line:11:7>
+|   |   |   |-IntegerLiteral 0x7fb301876bd8 <line:9:10> 'int' 1
+|   |   |   |-<<<NULL>>>
+|   |   |   `-CaseStmt 0x7fb301876c50 <line:10:5, line:11:7>
+|   |   |     |-IntegerLiteral 0x7fb301876c30 <line:10:10> 'int' 9
+|   |   |     |-<<<NULL>>>
+|   |   |     `-BreakStmt 0x7fb301876c88 <line:11:7>
+|   |   `-DefaultStmt 0x7fb301876e38 <line:12:5, line:13:30>
+|   |     `-CallExpr 0x7fb301876e10 <col:7, col:30> 'void'
+|   |       `-ImplicitCastExpr 0x7fb301876df8 <col:7> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   |         `-DeclRefExpr 0x7fb301876da0 <col:7> '<builtin fn type>' Function 0x7fb301876cc0 '__builtin_unreachable' 'void (void) __attribute__((noreturn))'
+|   `-ReturnStmt 0x7fb301876ec0 <line:15:3, col:10>
+|     `-ImplicitCastExpr 0x7fb301876ea8 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb301876e80 <col:10> 'int' lvalue ParmVar 0x7fb301826738 'x' 'int'
+`-FunctionDecl 0x7fb301876cc0 <line:13:7> col:7 implicit used __builtin_unreachable 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fb301876d58 <col:7> Implicit

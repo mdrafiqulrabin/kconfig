@@ -1,0 +1,46 @@
+c_files/pr43562.c:7:17: warning: unknown attribute 'optimize' ignored [-Wunknown-attributes]
+__attribute__ ((optimize ("O2")))
+                ^
+1 warning generated.
+TranslationUnitDecl 0x7fa57d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa57d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa57d026740 '__int128'
+|-TypedefDecl 0x7fa57d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa57d026760 'unsigned __int128'
+|-TypedefDecl 0x7fa57d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa57d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa57d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa57d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa57d026dc0 'char *'
+|   `-BuiltinType 0x7fa57d026560 'char'
+|-TypedefDecl 0x7fa57d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa57d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa57d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa57d026e58 '__va_list_tag'
+|-FunctionDecl 0x7fa57d077400 <c_files/pr43562.c:4:1, col:26> col:17 used foo 'unsigned int (void)' extern
+|-FunctionDecl 0x7fa57d0775a0 <line:5:1, col:22> col:13 used bar 'void (void)' extern
+`-FunctionDecl 0x7fa57d0776f8 <line:7:1, line:20:1> line:8:6 bak 'void ()'
+  `-CompoundStmt 0x7fa57d077b18 <line:9:1, line:20:1>
+    |-DeclStmt 0x7fa57d077808 <line:10:3, col:13>
+    | `-VarDecl 0x7fa57d0777a8 <col:3, col:12> col:12 used a 'unsigned int'
+    `-WhileStmt 0x7fa57d077af8 <line:11:3, line:19:5>
+      |-<<<NULL>>>
+      |-IntegerLiteral 0x7fa57d077820 <line:11:10> 'int' 1
+      `-CompoundStmt 0x7fa57d077ad0 <line:12:5, line:19:5>
+        |-BinaryOperator 0x7fa57d0778f8 <line:13:7, col:16> 'unsigned int' '='
+        | |-DeclRefExpr 0x7fa57d077840 <col:7> 'unsigned int' lvalue Var 0x7fa57d0777a8 'a' 'unsigned int'
+        | `-CallExpr 0x7fa57d0778d0 <col:11, col:16> 'unsigned int'
+        |   `-ImplicitCastExpr 0x7fa57d0778b8 <col:11> 'unsigned int (*)(void)' <FunctionToPointerDecay>
+        |     `-DeclRefExpr 0x7fa57d077868 <col:11> 'unsigned int (void)' Function 0x7fa57d077400 'foo' 'unsigned int (void)'
+        `-WhileStmt 0x7fa57d077ab0 <line:14:7, line:18:2>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7fa57d077948 <line:14:14> 'unsigned int' <LValueToRValue>
+          | `-DeclRefExpr 0x7fa57d077920 <col:14> 'unsigned int' lvalue Var 0x7fa57d0777a8 'a' 'unsigned int'
+          `-CompoundStmt 0x7fa57d077a88 <line:15:2, line:18:2>
+            |-CompoundAssignOperator 0x7fa57d0779c0 <line:16:4, col:9> 'unsigned int' '&=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+            | |-DeclRefExpr 0x7fa57d077960 <col:4> 'unsigned int' lvalue Var 0x7fa57d0777a8 'a' 'unsigned int'
+            | `-ImplicitCastExpr 0x7fa57d0779a8 <col:9> 'unsigned int' <IntegralCast>
+            |   `-IntegerLiteral 0x7fa57d077988 <col:9> 'int' 1
+            `-CallExpr 0x7fa57d077a60 <line:17:4, col:9> 'void'
+              `-ImplicitCastExpr 0x7fa57d077a48 <col:4> 'void (*)(void)' <FunctionToPointerDecay>
+                `-DeclRefExpr 0x7fa57d0779f8 <col:4> 'void (void)' Function 0x7fa57d0775a0 'bar' 'void (void)'

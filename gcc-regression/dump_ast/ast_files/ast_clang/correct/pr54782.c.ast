@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fb54b0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb54b026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb54b026740 '__int128'
+|-TypedefDecl 0x7fb54b026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb54b026760 'unsigned __int128'
+|-TypedefDecl 0x7fb54b026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb54b026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb54b026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb54b026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb54b026dc0 'char *'
+|   `-BuiltinType 0x7fb54b026560 'char'
+|-TypedefDecl 0x7fb54b0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb54b027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb54b026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb54b026e58 '__va_list_tag'
+|-RecordDecl 0x7fb54b027120 <c_files/pr54782.c:5:1, line:9:1> line:5:8 struct S definition
+| |-FieldDecl 0x7fb54b825a00 <line:7:3, col:7> col:7 referenced n 'int'
+| `-FieldDecl 0x7fb54b825a90 <line:8:3, col:10> col:10 referenced a 'float *'
+`-FunctionDecl 0x7fb54b825c98 <line:11:1, line:19:1> line:12:1 foo 'int (struct S *)'
+  |-ParmVarDecl 0x7fb54b825b90 <col:6, col:16> col:16 used s 'struct S *'
+  `-CompoundStmt 0x7fb54b826298 <line:13:1, line:19:1>
+    |-DeclStmt 0x7fb54b825e28 <line:14:3, col:16>
+    | `-VarDecl 0x7fb54b825d90 <col:3, col:15> col:9 used sum 'float' cinit
+    |   `-ImplicitCastExpr 0x7fb54b825e10 <col:15> 'float' <IntegralToFloating>
+    |     `-IntegerLiteral 0x7fb54b825df0 <col:15> 'int' 0
+    |-DeclStmt 0x7fb54b825eb8 <line:15:3, col:8>
+    | `-VarDecl 0x7fb54b825e58 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7fb54b8261f0 <line:16:3, line:17:18>
+    | |-BinaryOperator 0x7fb54b825f18 <line:16:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fb54b825ed0 <col:8> 'int' lvalue Var 0x7fb54b825e58 'i' 'int'
+    | | `-IntegerLiteral 0x7fb54b825ef8 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb54b826010 <col:15, col:22> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fb54b825fe0 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fb54b825f40 <col:15> 'int' lvalue Var 0x7fb54b825e58 'i' 'int'
+    | | `-ImplicitCastExpr 0x7fb54b825ff8 <col:19, col:22> 'int' <LValueToRValue>
+    | |   `-MemberExpr 0x7fb54b825fa8 <col:19, col:22> 'int' lvalue ->n 0x7fb54b825a00
+    | |     `-ImplicitCastExpr 0x7fb54b825f90 <col:19> 'struct S *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fb54b825f68 <col:19> 'struct S *' lvalue ParmVar 0x7fb54b825b90 's' 'struct S *'
+    | |-UnaryOperator 0x7fb54b826060 <col:25, col:26> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fb54b826038 <col:25> 'int' lvalue Var 0x7fb54b825e58 'i' 'int'
+    | `-CompoundAssignOperator 0x7fb54b8261b8 <line:17:5, col:18> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+    |   |-DeclRefExpr 0x7fb54b826080 <col:5> 'float' lvalue Var 0x7fb54b825d90 'sum' 'float'
+    |   `-ImplicitCastExpr 0x7fb54b8261a0 <col:12, col:18> 'float' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7fb54b826178 <col:12, col:18> 'float' lvalue
+    |       |-ImplicitCastExpr 0x7fb54b826148 <col:12, col:15> 'float *' <LValueToRValue>
+    |       | `-MemberExpr 0x7fb54b8260e8 <col:12, col:15> 'float *' lvalue ->a 0x7fb54b825a90
+    |       |   `-ImplicitCastExpr 0x7fb54b8260d0 <col:12> 'struct S *' <LValueToRValue>
+    |       |     `-DeclRefExpr 0x7fb54b8260a8 <col:12> 'struct S *' lvalue ParmVar 0x7fb54b825b90 's' 'struct S *'
+    |       `-ImplicitCastExpr 0x7fb54b826160 <col:17> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fb54b826120 <col:17> 'int' lvalue Var 0x7fb54b825e58 'i' 'int'
+    `-ReturnStmt 0x7fb54b826280 <line:18:3, col:10>
+      `-ImplicitCastExpr 0x7fb54b826268 <col:10> 'int' <FloatingToIntegral>
+        `-ImplicitCastExpr 0x7fb54b826250 <col:10> 'float' <LValueToRValue>
+          `-DeclRefExpr 0x7fb54b826228 <col:10> 'float' lvalue Var 0x7fb54b825d90 'sum' 'float'

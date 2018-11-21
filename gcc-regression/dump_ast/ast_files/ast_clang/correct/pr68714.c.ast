@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7ff93b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff93b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff93b826740 '__int128'
+|-TypedefDecl 0x7ff93b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff93b826760 'unsigned __int128'
+|-TypedefDecl 0x7ff93b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff93b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff93b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff93b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff93b826dc0 'char *'
+|   `-BuiltinType 0x7ff93b826560 'char'
+|-TypedefDecl 0x7ff93b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff93b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff93b826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff93b826e58 '__va_list_tag'
+|-TypedefDecl 0x7ff93b827178 <c_files/pr68714.c:5:1, col:13> col:13 referenced vec '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7ff93b827140 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7ff93b8265c0 'int'
+`-FunctionDecl 0x7ff93c026b80 <line:6:1, line:8:1> line:6:5 f 'vec (vec, vec)'
+  |-ParmVarDecl 0x7ff93c026a00 <col:7, col:11> col:11 used x 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7ff93c026a70 <col:13, col:17> col:17 used y 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  `-CompoundStmt 0x7ff93c026df8 <col:19, line:8:1>
+    `-ReturnStmt 0x7ff93c026de0 <line:7:3, col:17>
+      `-BinaryOperator 0x7ff93c026db8 <col:10, col:17> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '|'
+        |-BinaryOperator 0x7ff93c026ce8 <col:10, col:12> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '<'
+        | |-ImplicitCastExpr 0x7ff93c026cb8 <col:10> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7ff93c026c68 <col:10> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7ff93c026a00 'x' 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+        | `-ImplicitCastExpr 0x7ff93c026cd0 <col:12> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7ff93c026c90 <col:12> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7ff93c026a70 'y' 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+        `-BinaryOperator 0x7ff93c026d90 <col:14, col:17> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '=='
+          |-ImplicitCastExpr 0x7ff93c026d60 <col:14> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+          | `-DeclRefExpr 0x7ff93c026d10 <col:14> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7ff93c026a00 'x' 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+          `-ImplicitCastExpr 0x7ff93c026d78 <col:17> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+            `-DeclRefExpr 0x7ff93c026d38 <col:17> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7ff93c026a70 'y' 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int'

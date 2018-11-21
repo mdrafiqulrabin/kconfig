@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7faa560264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faa56026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faa56026740 '__int128'
+|-TypedefDecl 0x7faa56026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faa56026760 'unsigned __int128'
+|-TypedefDecl 0x7faa56026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faa56026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faa56026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faa56026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faa56026dc0 'char *'
+|   `-BuiltinType 0x7faa56026560 'char'
+|-TypedefDecl 0x7faa560270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faa56027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faa56026ee0 'struct __va_list_tag'
+|     `-Record 0x7faa56026e58 '__va_list_tag'
+|-RecordDecl 0x7faa56027120 <c_files/pr40204.c:4:1, line:8:1> line:4:8 struct S definition
+| |-FieldDecl 0x7faa56077418 <line:6:3, col:20> col:16 referenced a 'unsigned int'
+| | `-IntegerLiteral 0x7faa560271d0 <col:20> 'int' 4
+| `-FieldDecl 0x7faa56077498 <line:7:3, col:20> col:16 b 'unsigned int'
+|   `-IntegerLiteral 0x7faa56077460 <col:20> 'int' 28
+|-VarDecl 0x7faa56077530 <line:4:1, line:8:3> col:3 used s 'struct S':'struct S'
+|-VarDecl 0x7faa560775f8 <line:9:1, col:6> col:6 used c 'char'
+`-FunctionDecl 0x7faa56077720 <line:11:1, line:15:1> line:12:1 f 'void (void)'
+  `-CompoundStmt 0x7faa56077a38 <line:13:1, line:15:1>
+    `-BinaryOperator 0x7faa560779c0 <line:14:3, col:28> 'unsigned int' '='
+      |-MemberExpr 0x7faa560777e0 <col:3, col:5> 'unsigned int' lvalue bitfield .a 0x7faa56077418
+      | `-DeclRefExpr 0x7faa560777b8 <col:3> 'struct S':'struct S' lvalue Var 0x7faa56077530 's' 'struct S':'struct S'
+      `-ImplicitCastExpr 0x7faa560779a8 <col:9, col:28> 'unsigned int' <IntegralCast>
+        `-BinaryOperator 0x7faa56077980 <col:9, col:28> 'int' '&'
+          |-ParenExpr 0x7faa560778b8 <col:9, col:16> 'int'
+          | `-BinaryOperator 0x7faa56077890 <col:10, col:15> 'int' '>>'
+          |   |-ImplicitCastExpr 0x7faa56077878 <col:10> 'int' <IntegralCast>
+          |   | `-ImplicitCastExpr 0x7faa56077860 <col:10> 'char' <LValueToRValue>
+          |   |   `-DeclRefExpr 0x7faa56077818 <col:10> 'char' lvalue Var 0x7faa560775f8 'c' 'char'
+          |   `-IntegerLiteral 0x7faa56077840 <col:15> 'int' 4
+          `-UnaryOperator 0x7faa56077960 <col:20, col:28> 'int' prefix '~'
+            `-ParenExpr 0x7faa56077940 <col:21, col:28> 'int'
+              `-BinaryOperator 0x7faa56077918 <col:22, col:27> 'int' '<<'
+                |-IntegerLiteral 0x7faa560778d8 <col:22> 'int' 1
+                `-IntegerLiteral 0x7faa560778f8 <col:27> 'int' 4

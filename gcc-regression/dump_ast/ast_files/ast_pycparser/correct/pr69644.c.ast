@@ -1,0 +1,26 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['unsigned', 'short']
+        Constant: int, 0x8000
+      If: 
+        BinaryOp: ||
+          UnaryOp: !
+            FuncCall: 
+              ID: __sync_bool_compare_and_swap
+              ExprList: 
+                UnaryOp: &
+                  ID: x
+                Constant: int, 0x8000
+                Constant: int, 0
+          ID: x
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

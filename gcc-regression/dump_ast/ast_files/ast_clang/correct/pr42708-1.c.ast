@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7f89a80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f89a8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f89a8026740 '__int128'
+|-TypedefDecl 0x7f89a8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f89a8026760 'unsigned __int128'
+|-TypedefDecl 0x7f89a8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f89a8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f89a8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f89a8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f89a8026dc0 'char *'
+|   `-BuiltinType 0x7f89a8026560 'char'
+|-TypedefDecl 0x7f89a80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f89a8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f89a8026ee0 'struct __va_list_tag'
+|     `-Record 0x7f89a8026e58 '__va_list_tag'
+|-TypedefDecl 0x7f89a8027138 <c_files/pr42708-1.c:1:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7f89a8026680 'unsigned long'
+|-FunctionDecl 0x7f89a8077508 <line:2:7> col:7 implicit used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7f89a80775a0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f89a8077608 prev 0x7f89a8077508 <col:1, col:20> col:7 used malloc 'void *(unsigned long)'
+| `-ParmVarDecl 0x7f89a8077400 <col:14> col:20 'size_t':'unsigned long'
+|-RecordDecl 0x7f89a80776a8 <line:3:9, line:5:1> line:3:15 union YYSTYPE definition
+| `-FieldDecl 0x7f89a8077768 <line:4:5, col:11> col:11 id 'char *'
+|-TypedefDecl 0x7f89a8077800 <line:3:1, line:5:4> col:4 referenced YYSTYPE 'union YYSTYPE':'union YYSTYPE'
+| `-ElaboratedType 0x7f89a80777b0 'union YYSTYPE' sugar
+|   `-RecordType 0x7f89a8077730 'union YYSTYPE'
+|     `-Record 0x7f89a80776a8 'YYSTYPE'
+|-VarDecl 0x7f89a80778a0 <line:6:1, col:16> col:16 used yylval 'YYSTYPE':'union YYSTYPE' extern
+`-FunctionDecl 0x7f89a8077a20 <line:7:1, line:10:1> line:7:6 yylex 'void (int)'
+  |-ParmVarDecl 0x7f89a8077958 <col:13, col:17> col:17 used b 'int'
+  `-CompoundStmt 0x7f89a8077d58 <line:8:1, line:10:1>
+    `-BinaryOperator 0x7f89a8077d30 <line:9:3, col:50> 'YYSTYPE':'union YYSTYPE' '='
+      |-DeclRefExpr 0x7f89a8077ac0 <col:3> 'YYSTYPE':'union YYSTYPE' lvalue Var 0x7f89a80778a0 'yylval' 'YYSTYPE':'union YYSTYPE'
+      `-CStyleCastExpr 0x7f89a8077d08 <col:12, col:50> 'YYSTYPE':'union YYSTYPE' <ToUnion>
+        `-ParenExpr 0x7f89a8077ce8 <col:22, col:50> 'char *'
+          `-ConditionalOperator 0x7f89a8077c78 <col:23, col:49> 'char *'
+            |-ImplicitCastExpr 0x7f89a8077c48 <col:23> 'int' <LValueToRValue>
+            | `-DeclRefExpr 0x7f89a8077ae8 <col:23> 'int' lvalue ParmVar 0x7f89a8077958 'b' 'int'
+            |-ImplicitCastExpr 0x7f89a8077c60 <col:27> 'char *' <NullToPointer>
+            | `-IntegerLiteral 0x7f89a8077b10 <col:27> 'int' 0
+            `-CStyleCastExpr 0x7f89a8077c20 <col:31, col:49> 'char *' <BitCast>
+              `-CallExpr 0x7f89a8077bc0 <col:40, col:49> 'void *'
+                |-ImplicitCastExpr 0x7f89a8077ba8 <col:40> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+                | `-DeclRefExpr 0x7f89a8077b30 <col:40> 'void *(unsigned long)' Function 0x7f89a8077608 'malloc' 'void *(unsigned long)'
+                `-ImplicitCastExpr 0x7f89a8077bf0 <col:48> 'unsigned long' <IntegralCast>
+                  `-IntegerLiteral 0x7f89a8077b58 <col:48> 'int' 4

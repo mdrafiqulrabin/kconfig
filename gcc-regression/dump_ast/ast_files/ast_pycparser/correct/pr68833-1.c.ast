@@ -1,0 +1,54 @@
+FileAST: 
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+      Constant: int, 131072
+  Decl: b, [], [], []
+    ArrayDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['int']
+      Constant: int, 1024
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fmt, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: fmt, ['const']
+                IdentifierType: ['char']
+        TypeDecl: f1, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_printf
+        ExprList: 
+          Constant: string, "%d\n"
+          Constant: float, 1.2
+      FuncCall: 
+        ID: __builtin_printf
+        ExprList: 
+          ID: fmt
+          Constant: float, 1.2
+  Decl: f2, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: f2, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f2, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_exit
+        ExprList: 
+          Constant: int, 0

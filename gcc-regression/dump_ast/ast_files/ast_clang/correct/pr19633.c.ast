@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7f92080264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9208026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9208026740 '__int128'
+|-TypedefDecl 0x7f9208026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9208026760 'unsigned __int128'
+|-TypedefDecl 0x7f9208026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9208026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9208026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9208026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9208026dc0 'char *'
+|   `-BuiltinType 0x7f9208026560 'char'
+|-TypedefDecl 0x7f92080270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9208027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9208026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9208026e58 '__va_list_tag'
+|-RecordDecl 0x7f9208027120 <c_files/pr19633.c:3:1, line:6:1> line:3:8 struct S definition
+| |-FieldDecl 0x7f9208077400 <line:5:3, col:7> col:7 w 'int'
+| |-FieldDecl 0x7f9208077460 <col:3, col:10> col:10 x 'int'
+| |-FieldDecl 0x7f92080774c0 <col:3, col:13> col:13 y 'int'
+| `-FieldDecl 0x7f9208077520 <col:3, col:16> col:16 z 'int'
+|-RecordDecl 0x7f9208077568 <line:7:1, line:11:1> line:7:8 struct T definition
+| |-FieldDecl 0x7f9208077628 <line:9:3, col:7> col:7 r 'int'
+| `-FieldDecl 0x7f92080776c0 <line:10:3, col:12> col:12 referenced s 'struct S':'struct S'
+|-FunctionDecl 0x7f92080778b0 <line:12:1, col:24> col:6 used bar 'void (struct S, int)'
+| |-ParmVarDecl 0x7f9208077728 <col:11, col:18> col:19 'struct S':'struct S'
+| `-ParmVarDecl 0x7f92080777a0 <col:21> col:24 'int'
+`-FunctionDecl 0x7f9208077b70 <line:13:1, line:21:1> line:14:1 foo 'void (int, struct T)'
+  |-ParmVarDecl 0x7f92080779b0 <col:6, col:10> col:10 used a 'int'
+  |-ParmVarDecl 0x7f9208077a60 <col:13, col:22> col:22 used b 'struct T':'struct T'
+  `-CompoundStmt 0x7f92080780c8 <line:15:1, line:21:1>
+    |-DeclStmt 0x7f9208077c98 <line:16:3, col:13>
+    | `-VarDecl 0x7f9208077c38 <col:3, col:12> col:12 used x 'struct S':'struct S'
+    |-DeclStmt 0x7f9208077dd8 <line:17:3, col:19>
+    | `-VarDecl 0x7f9208077d30 <col:3, col:18> col:13 used c 'struct S *' cinit
+    |   `-UnaryOperator 0x7f9208077db8 <col:17, col:18> 'struct S *' prefix '&'
+    |     `-DeclRefExpr 0x7f9208077d90 <col:18> 'struct S':'struct S' lvalue Var 0x7f9208077c38 'x' 'struct S':'struct S'
+    |-IfStmt 0x7f9208077f00 <line:18:3, line:19:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f9208077e18 <line:18:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f9208077df0 <col:7> 'int' lvalue ParmVar 0x7f92080779b0 'a' 'int'
+    | |-BinaryOperator 0x7f9208077ed8 <line:19:5, col:12> 'struct S *' '='
+    | | |-DeclRefExpr 0x7f9208077e30 <col:5> 'struct S *' lvalue Var 0x7f9208077d30 'c' 'struct S *'
+    | | `-UnaryOperator 0x7f9208077eb8 <col:9, col:12> 'struct S *' prefix '&'
+    | |   `-MemberExpr 0x7f9208077e80 <col:10, col:12> 'struct S':'struct S' lvalue .s 0x7f92080776c0
+    | |     `-DeclRefExpr 0x7f9208077e58 <col:10> 'struct T':'struct T' lvalue ParmVar 0x7f9208077a60 'b' 'struct T':'struct T'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7f9208078060 <line:20:3, col:13> 'void'
+      |-ImplicitCastExpr 0x7f9208078048 <col:3> 'void (*)(struct S, int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f9208077f38 <col:3> 'void (struct S, int)' Function 0x7f92080778b0 'bar' 'void (struct S, int)'
+      |-ImplicitCastExpr 0x7f9208078098 <col:8, col:9> 'struct S':'struct S' <LValueToRValue>
+      | `-UnaryOperator 0x7f9208077fa0 <col:8, col:9> 'struct S':'struct S' lvalue prefix '*'
+      |   `-ImplicitCastExpr 0x7f9208077f88 <col:9> 'struct S *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7f9208077f60 <col:9> 'struct S *' lvalue Var 0x7f9208077d30 'c' 'struct S *'
+      `-ImplicitCastExpr 0x7f92080780b0 <col:12> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f9208077fc0 <col:12> 'int' lvalue ParmVar 0x7f92080779b0 'a' 'int'

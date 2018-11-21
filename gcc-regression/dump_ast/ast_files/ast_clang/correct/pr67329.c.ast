@@ -1,0 +1,65 @@
+TranslationUnitDecl 0x7faa248264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faa24826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faa24826740 '__int128'
+|-TypedefDecl 0x7faa24826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faa24826760 'unsigned __int128'
+|-TypedefDecl 0x7faa24826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faa24826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faa24826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faa24826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faa24826dc0 'char *'
+|   `-BuiltinType 0x7faa24826560 'char'
+|-TypedefDecl 0x7faa248270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faa24827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faa24826ee0 'struct __va_list_tag'
+|     `-Record 0x7faa24826e58 '__va_list_tag'
+`-FunctionDecl 0x7faa25022200 <c_files/pr67329.c:4:1, line:15:1> line:5:1 foo 'int ()'
+  `-CompoundStmt 0x7faa25022bc0 <line:6:1, line:15:1>
+    |-DeclStmt 0x7faa25022600 <line:7:3, col:46>
+    | `-VarDecl 0x7faa250223a0 <col:3, col:45> col:13 used a 'const int [8]' cinit
+    |   `-InitListExpr 0x7faa25022580 <col:20, col:45> 'const int [8]'
+    |     |-IntegerLiteral 0x7faa25022400 <col:22> 'int' 0
+    |     |-IntegerLiteral 0x7faa25022420 <col:25> 'int' 1
+    |     |-IntegerLiteral 0x7faa25022440 <col:28> 'int' 2
+    |     |-IntegerLiteral 0x7faa25022460 <col:31> 'int' 3
+    |     |-IntegerLiteral 0x7faa25022480 <col:34> 'int' 4
+    |     |-IntegerLiteral 0x7faa250224a0 <col:37> 'int' 5
+    |     |-IntegerLiteral 0x7faa250224c0 <col:40> 'int' 6
+    |     `-IntegerLiteral 0x7faa250224e0 <col:43> 'int' 7
+    |-DeclStmt 0x7faa25022720 <line:8:3, col:13>
+    | |-VarDecl 0x7faa25022630 <col:3, col:7> col:7 used i 'int'
+    | `-VarDecl 0x7faa250226a8 <col:3, col:10> col:10 used sum 'int'
+    |-BinaryOperator 0x7faa25022780 <line:10:3, col:9> 'int' '='
+    | |-DeclRefExpr 0x7faa25022738 <col:3> 'int' lvalue Var 0x7faa250226a8 'sum' 'int'
+    | `-IntegerLiteral 0x7faa25022760 <col:9> 'int' 0
+    |-ForStmt 0x7faa25022b30 <line:11:3, line:12:15>
+    | |-BinaryOperator 0x7faa250227f0 <line:11:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7faa250227a8 <col:8> 'int' lvalue Var 0x7faa25022630 'i' 'int'
+    | | `-IntegerLiteral 0x7faa250227d0 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7faa250229a0 <col:15, col:42> 'int' '<'
+    | | |-ImplicitCastExpr 0x7faa25022988 <col:15> 'unsigned long' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7faa25022970 <col:15> 'int' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7faa25022818 <col:15> 'int' lvalue Var 0x7faa25022630 'i' 'int'
+    | | `-BinaryOperator 0x7faa25022948 <col:19, col:42> 'unsigned long' '/'
+    | |   |-UnaryExprOrTypeTraitExpr 0x7faa25022888 <col:19, col:28> 'unsigned long' sizeof
+    | |   | `-ParenExpr 0x7faa25022868 <col:26, col:28> 'const int [8]' lvalue
+    | |   |   `-DeclRefExpr 0x7faa25022840 <col:27> 'const int [8]' lvalue Var 0x7faa250223a0 'a' 'const int [8]'
+    | |   `-UnaryExprOrTypeTraitExpr 0x7faa25022928 <col:32, col:42> 'unsigned long' sizeof
+    | |     `-ParenExpr 0x7faa25022908 <col:39, col:42> 'const int' lvalue
+    | |       `-UnaryOperator 0x7faa250228e8 <col:40, col:41> 'const int' lvalue prefix '*'
+    | |         `-ImplicitCastExpr 0x7faa250228d0 <col:41> 'const int *' <ArrayToPointerDecay>
+    | |           `-DeclRefExpr 0x7faa250228a8 <col:41> 'const int [8]' lvalue Var 0x7faa250223a0 'a' 'const int [8]'
+    | |-UnaryOperator 0x7faa250229f0 <col:45, col:46> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7faa250229c8 <col:45> 'int' lvalue Var 0x7faa25022630 'i' 'int'
+    | `-CompoundAssignOperator 0x7faa25022af8 <line:12:5, col:15> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-DeclRefExpr 0x7faa25022a10 <col:5> 'int' lvalue Var 0x7faa250226a8 'sum' 'int'
+    |   `-ImplicitCastExpr 0x7faa25022ae0 <col:12, col:15> 'int' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7faa25022ab8 <col:12, col:15> 'const int' lvalue
+    |       |-ImplicitCastExpr 0x7faa25022a88 <col:12> 'const int *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7faa25022a38 <col:12> 'const int [8]' lvalue Var 0x7faa250223a0 'a' 'const int [8]'
+    |       `-ImplicitCastExpr 0x7faa25022aa0 <col:14> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7faa25022a60 <col:14> 'int' lvalue Var 0x7faa25022630 'i' 'int'
+    `-ReturnStmt 0x7faa25022ba8 <line:14:3, col:10>
+      `-ImplicitCastExpr 0x7faa25022b90 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7faa25022b68 <col:10> 'int' lvalue Var 0x7faa250226a8 'sum' 'int'

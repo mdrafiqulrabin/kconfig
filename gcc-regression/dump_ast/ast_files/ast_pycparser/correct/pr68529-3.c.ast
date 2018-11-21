@@ -1,0 +1,120 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: s, [], [], []
+          PtrDecl: []
+            TypeDecl: s, []
+              IdentifierType: ['char']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: l, [], [], []
+            TypeDecl: l, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: foo1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        ArrayDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['char']
+          Constant: int, 10000
+        InitList: 
+      Decl: nchar, [], [], []
+        TypeDecl: nchar, []
+          IdentifierType: ['unsigned', 'short']
+        Constant: int, 9999
+      While: 
+        BinaryOp: !=
+          UnaryOp: p--
+            ID: nchar
+          ID: l
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: c
+              ID: nchar
+            Constant: char, 'A'
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: c
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: foo2, [], [], []
+      FuncDecl: 
+        TypeDecl: foo2, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        ArrayDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['char']
+          Constant: int, 100000
+        InitList: 
+      Decl: nchar, [], [], []
+        TypeDecl: nchar, []
+          IdentifierType: ['unsigned', 'short']
+      For: 
+        Assignment: =
+          ID: nchar
+          Constant: int, 0
+        BinaryOp: !=
+          ID: nchar
+          Constant: int, 1000
+        UnaryOp: --
+          ID: nchar
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: c
+              ID: nchar
+            Constant: char, 'A'
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: c
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: foo3, [], [], []
+      FuncDecl: 
+        TypeDecl: foo3, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        ArrayDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['char']
+          Constant: int, 100000
+        InitList: 
+      Decl: nchar, [], [], []
+        TypeDecl: nchar, []
+          IdentifierType: ['unsigned', 'short']
+      For: 
+        Assignment: =
+          ID: nchar
+          Constant: int, 0
+        BinaryOp: !=
+          ID: nchar
+          Constant: int, 1000
+        Assignment: +=
+          ID: nchar
+          Constant: int, 3
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: c
+              ID: nchar
+            Constant: char, 'A'
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: c
+      Return: 
+        Constant: int, 0

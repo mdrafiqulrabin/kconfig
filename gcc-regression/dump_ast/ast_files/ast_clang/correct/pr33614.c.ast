@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7f90bf0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f90bf026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f90bf026740 '__int128'
+|-TypedefDecl 0x7f90bf026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f90bf026760 'unsigned __int128'
+|-TypedefDecl 0x7f90bf026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f90bf026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f90bf026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f90bf026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f90bf026dc0 'char *'
+|   `-BuiltinType 0x7f90bf026560 'char'
+|-TypedefDecl 0x7f90bf0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f90bf027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f90bf026ee0 'struct __va_list_tag'
+|     `-Record 0x7f90bf026e58 '__va_list_tag'
+|-TypedefDecl 0x7f90bf027178 <c_files/pr33614.c:1:1, col:15> col:15 referenced V2SF '__attribute__((__vector_size__(2 * sizeof(float)))) float'
+| `-VectorType 0x7f90bf027140 '__attribute__((__vector_size__(2 * sizeof(float)))) float' 2
+|   `-BuiltinType 0x7f90bf0266c0 'float'
+`-FunctionDecl 0x7f90bf826ba0 <line:3:1, line:9:1> line:4:1 foo 'V2SF (int, V2SF)'
+  |-ParmVarDecl 0x7f90bf826a18 <col:6, col:10> col:10 used x 'int'
+  |-ParmVarDecl 0x7f90bf826a88 <col:13, col:18> col:18 used a 'V2SF':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+  `-CompoundStmt 0x7f90bf827088 <line:5:1, line:9:1>
+    |-WhileStmt 0x7f90bf827010 <line:6:3, line:7:62>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7f90bf826cb0 <line:6:10, col:11> 'int' postfix '--'
+    | | `-DeclRefExpr 0x7f90bf826c88 <col:10> 'int' lvalue ParmVar 0x7f90bf826a18 'x' 'int'
+    | `-CompoundAssignOperator 0x7f90bf826fd8 <line:7:5, col:62> 'V2SF':'__attribute__((__vector_size__(2 * sizeof(float)))) float' '+=' ComputeLHSTy='V2SF':'__attribute__((__vector_size__(2 * sizeof(float)))) float' ComputeResultTy='V2SF':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+    |   |-DeclRefExpr 0x7f90bf826cd0 <col:5> 'V2SF':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue ParmVar 0x7f90bf826a88 'a' 'V2SF':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+    |   `-ImplicitCastExpr 0x7f90bf826fc0 <col:10, col:62> 'V2SF':'__attribute__((__vector_size__(2 * sizeof(float)))) float' <LValueToRValue>
+    |     `-CompoundLiteralExpr 0x7f90bf826f98 <col:10, col:62> 'V2SF':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue
+    |       `-InitListExpr 0x7f90bf826f48 <col:17, col:62> 'V2SF':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+    |         |-BinaryOperator 0x7f90bf826dd8 <col:18, col:35> 'float' '-'
+    |         | |-BinaryOperator 0x7f90bf826d48 <col:18, col:23> 'float' '/'
+    |         | | |-FloatingLiteral 0x7f90bf826d08 <col:18> 'float' 1.000000e+00
+    |         | | `-FloatingLiteral 0x7f90bf826d28 <col:23> 'float' 0.000000e+00
+    |         | `-BinaryOperator 0x7f90bf826db0 <col:30, col:35> 'float' '/'
+    |         |   |-FloatingLiteral 0x7f90bf826d70 <col:30> 'float' 1.000000e+00
+    |         |   `-FloatingLiteral 0x7f90bf826d90 <col:35> 'float' 0.000000e+00
+    |         `-BinaryOperator 0x7f90bf826ed0 <col:41, col:58> 'float' '-'
+    |           |-BinaryOperator 0x7f90bf826e40 <col:41, col:46> 'float' '/'
+    |           | |-FloatingLiteral 0x7f90bf826e00 <col:41> 'float' 1.000000e+00
+    |           | `-FloatingLiteral 0x7f90bf826e20 <col:46> 'float' 0.000000e+00
+    |           `-BinaryOperator 0x7f90bf826ea8 <col:53, col:58> 'float' '/'
+    |             |-FloatingLiteral 0x7f90bf826e68 <col:53> 'float' 1.000000e+00
+    |             `-FloatingLiteral 0x7f90bf826e88 <col:58> 'float' 0.000000e+00
+    `-ReturnStmt 0x7f90bf827070 <line:8:3, col:10>
+      `-ImplicitCastExpr 0x7f90bf827058 <col:10> 'V2SF':'__attribute__((__vector_size__(2 * sizeof(float)))) float' <LValueToRValue>
+        `-DeclRefExpr 0x7f90bf827030 <col:10> 'V2SF':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue ParmVar 0x7f90bf826a88 'a' 'V2SF':'__attribute__((__vector_size__(2 * sizeof(float)))) float'

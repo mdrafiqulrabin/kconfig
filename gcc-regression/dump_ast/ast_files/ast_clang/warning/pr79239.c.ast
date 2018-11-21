@@ -1,0 +1,40 @@
+c_files/pr79239.c:8:60: warning: control reaches end of non-void function [-Wreturn-type]
+extern __inline __attribute__((__gnu_inline__)) int fn1() {}
+                                                           ^
+1 warning generated.
+TranslationUnitDecl 0x7ffd148264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffd14826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffd14826740 '__int128'
+|-TypedefDecl 0x7ffd14826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffd14826760 'unsigned __int128'
+|-TypedefDecl 0x7ffd14826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffd14826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffd14826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffd14826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffd14826dc0 'char *'
+|   `-BuiltinType 0x7ffd14826560 'char'
+|-TypedefDecl 0x7ffd148270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffd14827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffd14826ee0 'struct __va_list_tag'
+|     `-Record 0x7ffd14826e58 '__va_list_tag'
+|-VarDecl 0x7ffd14827138 <c_files/pr79239.c:7:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7ffd15025a00 <col:1, col:8> col:8 used b 'int'
+|-FunctionDecl 0x7ffd15025ad0 <line:8:1, col:60> col:53 fn1 'int ()' extern inline
+| |-CompoundStmt 0x7ffd15025bb0 <col:59, col:60>
+| `-GNUInlineAttr 0x7ffd15025b68 <col:32>
+`-FunctionDecl 0x7ffd15025c18 <line:11:1, line:15:1> line:12:1 fn2 'void ()'
+  `-CompoundStmt 0x7ffd15025e40 <col:7, line:15:1>
+    `-IfStmt 0x7ffd15025e08 <line:13:3, line:14:9>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ffd15025d70 <line:13:7, col:18> 'double' '+'
+      | |-BinaryOperator 0x7ffd15025d28 <col:7, col:11> 'double' '*'
+      | | |-ImplicitCastExpr 0x7ffd15025d10 <col:7> 'double' <IntegralToFloating>
+      | | | `-ImplicitCastExpr 0x7ffd15025cf8 <col:7> 'int' <LValueToRValue>
+      | | |   `-DeclRefExpr 0x7ffd15025cb0 <col:7> 'int' lvalue Var 0x7ffd15025a00 'b' 'int'
+      | | `-FloatingLiteral 0x7ffd15025cd8 <col:11> 'double' 7.700000e-01
+      | `-FloatingLiteral 0x7ffd15025d50 <col:18> 'double' 5.000000e-01
+      |-BinaryOperator 0x7ffd15025de0 <line:14:5, col:9> 'int' '='
+      | |-DeclRefExpr 0x7ffd15025d98 <col:5> 'int' lvalue Var 0x7ffd14827138 'a' 'int'
+      | `-IntegerLiteral 0x7ffd15025dc0 <col:9> 'int' 0
+      `-<<<NULL>>>

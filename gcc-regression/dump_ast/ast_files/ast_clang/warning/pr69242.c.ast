@@ -1,0 +1,64 @@
+c_files/pr69242.c:7:6: warning: declaration of built-in function 'getcontext' requires inclusion of the header <ucontext.h> [-Wbuiltin-requires-header]
+void getcontext();
+     ^
+c_files/pr69242.c:9:14: warning: cast to 'int *' from smaller integer type 'int' [-Wint-to-pointer-cast]
+    int *b = (int *)smx_ctx_base_factory_create_context_sized();
+             ^
+2 warnings generated.
+TranslationUnitDecl 0x7fb0d60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb0d6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb0d6026740 '__int128'
+|-TypedefDecl 0x7fb0d6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb0d6026760 'unsigned __int128'
+|-TypedefDecl 0x7fb0d6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb0d6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb0d6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb0d6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb0d6026dc0 'char *'
+|   `-BuiltinType 0x7fb0d6026560 'char'
+|-TypedefDecl 0x7fb0d60270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb0d6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb0d6026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb0d6026e58 '__va_list_tag'
+|-VarDecl 0x7fb0d60271a0 <c_files/pr69242.c:4:1, col:8> col:5 used a 'int [1]'
+|-FunctionDecl 0x7fb0d6077508 <line:5:7> col:7 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fb0d60775a0 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fb0d6077600 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fb0d6077660 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fb0d60776d8 prev 0x7fb0d6077508 <col:1, col:14> col:7 used memcpy 'void *(void *, const void *, unsigned long)'
+| |-ParmVarDecl 0x7fb0d6077770 <<invalid sloc>> <invalid sloc> implicit 'void *'
+| |-ParmVarDecl 0x7fb0d60777d0 <<invalid sloc>> <invalid sloc> implicit 'const void *'
+| `-ParmVarDecl 0x7fb0d6077830 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
+|-FunctionDecl 0x7fb0d6077900 <line:6:1, col:47> col:5 used smx_ctx_base_factory_create_context_sized 'int ()'
+|-FunctionDecl 0x7fb0d60779e8 <line:7:1, col:17> col:6 used getcontext 'void ()'
+| `-ReturnsTwiceAttr 0x7fb0d6077a80 <col:6> Implicit
+`-FunctionDecl 0x7fb0d6077ae8 <line:8:1, line:14:1> line:8:6 smx_ctx_sysv_create_context 'void ()'
+  `-CompoundStmt 0x7fb0d6079440 <col:36, line:14:1>
+    |-DeclStmt 0x7fb0d60780a8 <line:9:5, col:64>
+    | `-VarDecl 0x7fb0d6077bc0 <col:5, col:63> col:10 used b 'int *' cinit
+    |   `-CStyleCastExpr 0x7fb0d6078080 <col:14, col:63> 'int *' <IntegralToPointer>
+    |     `-CallExpr 0x7fb0d6077c90 <col:21, col:63> 'int'
+    |       `-ImplicitCastExpr 0x7fb0d6077c78 <col:21> 'int (*)()' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x7fb0d6077c20 <col:21> 'int ()' Function 0x7fb0d6077900 'smx_ctx_base_factory_create_context_sized' 'int ()'
+    |-CallExpr 0x7fb0d6078130 <line:10:5, col:16> 'void'
+    | `-ImplicitCastExpr 0x7fb0d6078118 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fb0d60780c0 <col:5> 'void ()' Function 0x7fb0d60779e8 'getcontext' 'void ()'
+    |-CallExpr 0x7fb0d60782b0 <line:11:5, col:30> 'void *'
+    | |-ImplicitCastExpr 0x7fb0d6078298 <col:5> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fb0d6078158 <col:5> 'void *(void *, const void *, unsigned long)' Function 0x7fb0d60776d8 'memcpy' 'void *(void *, const void *, unsigned long)'
+    | |-ImplicitCastExpr 0x7fb0d6078308 <col:12> 'void *' <BitCast>
+    | | `-ImplicitCastExpr 0x7fb0d60782f0 <col:12> 'int *' <ArrayToPointerDecay>
+    | |   `-DeclRefExpr 0x7fb0d6078180 <col:12> 'int [1]' lvalue Var 0x7fb0d60271a0 'a' 'int [1]'
+    | |-ImplicitCastExpr 0x7fb0d6078320 <col:15, col:16> 'const void *' <BitCast>
+    | | `-UnaryOperator 0x7fb0d60781f8 <col:15, col:16> 'int **' prefix '&'
+    | |   `-DeclRefExpr 0x7fb0d60781a8 <col:16> 'int *' lvalue Var 0x7fb0d6077bc0 'b' 'int *'
+    | `-UnaryExprOrTypeTraitExpr 0x7fb0d6078230 <col:19, col:29> 'unsigned long' sizeof 'int'
+    `-SwitchStmt 0x7fb0d6079400 <line:12:5, line:13:7>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fb0d60783c0 <line:12:13, col:16> 'int' <LValueToRValue>
+      | `-ArraySubscriptExpr 0x7fb0d6078398 <col:13, col:16> 'int' lvalue
+      |   |-ImplicitCastExpr 0x7fb0d6078380 <col:13> 'int *' <ArrayToPointerDecay>
+      |   | `-DeclRefExpr 0x7fb0d6078338 <col:13> 'int [1]' lvalue Var 0x7fb0d60271a0 'a' 'int [1]'
+      |   `-IntegerLiteral 0x7fb0d6078360 <col:15> 'int' 0
+      `-NullStmt 0x7fb0d6079430 <line:13:7>

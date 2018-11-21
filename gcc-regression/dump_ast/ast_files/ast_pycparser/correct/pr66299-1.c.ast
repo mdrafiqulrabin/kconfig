@@ -1,0 +1,375 @@
+FileAST: 
+  FuncDef: 
+    Decl: test1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: test1, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: ||
+              BinaryOp: ||
+                BinaryOp: ||
+                  BinaryOp: ||
+                    BinaryOp: ||
+                      BinaryOp: ||
+                        BinaryOp: ||
+                          BinaryOp: ||
+                            BinaryOp: !=
+                              BinaryOp: <<
+                                Constant: int, 0
+                                ID: x
+                              Constant: int, 0
+                            BinaryOp: !=
+                              BinaryOp: <<
+                                Constant: int, 1
+                                ID: x
+                              Constant: int, 2
+                          BinaryOp: !=
+                            BinaryOp: <<
+                              Constant: int, 2
+                              ID: x
+                            Constant: int, 4
+                        BinaryOp: !=
+                          BinaryOp: <<
+                            Constant: int, 3
+                            ID: x
+                          Constant: int, 6
+                      BinaryOp: !=
+                        BinaryOp: <<
+                          Constant: int, 4
+                          ID: x
+                        Constant: int, 8
+                    BinaryOp: !=
+                      BinaryOp: <<
+                        Constant: int, 5
+                        ID: x
+                      Constant: int, 10
+                  BinaryOp: !=
+                    BinaryOp: <<
+                      Constant: int, 6
+                      ID: x
+                    Constant: int, 12
+                BinaryOp: !=
+                  BinaryOp: <<
+                    Constant: int, 7
+                    ID: x
+                  Constant: int, 14
+              BinaryOp: !=
+                BinaryOp: <<
+                  Constant: int, 8
+                  ID: x
+                Constant: int, 16
+            BinaryOp: !=
+              BinaryOp: <<
+                Constant: int, 9
+                ID: x
+              Constant: int, 18
+          BinaryOp: !=
+            BinaryOp: <<
+              Constant: int, 10
+              ID: x
+            Constant: int, 20
+        FuncCall: 
+          ID: __builtin_abort
+  FuncDef: 
+    Decl: test2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: test2, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        UnaryOp: !
+          BinaryOp: &&
+            BinaryOp: &&
+              BinaryOp: &&
+                BinaryOp: &&
+                  BinaryOp: &&
+                    BinaryOp: &&
+                      BinaryOp: &&
+                        BinaryOp: &&
+                          BinaryOp: &&
+                            BinaryOp: &&
+                              BinaryOp: ==
+                                BinaryOp: <<
+                                  Constant: int, 0
+                                  ID: x
+                                Constant: int, 0
+                              BinaryOp: ==
+                                BinaryOp: <<
+                                  Constant: int, 1
+                                  ID: x
+                                Constant: int, 4
+                            BinaryOp: ==
+                              BinaryOp: <<
+                                Constant: int, 2
+                                ID: x
+                              Constant: int, 8
+                          BinaryOp: ==
+                            BinaryOp: <<
+                              Constant: int, 3
+                              ID: x
+                            Constant: int, 12
+                        BinaryOp: ==
+                          BinaryOp: <<
+                            Constant: int, 4
+                            ID: x
+                          Constant: int, 16
+                      BinaryOp: ==
+                        BinaryOp: <<
+                          Constant: int, 5
+                          ID: x
+                        Constant: int, 20
+                    BinaryOp: ==
+                      BinaryOp: <<
+                        Constant: int, 6
+                        ID: x
+                      Constant: int, 24
+                  BinaryOp: ==
+                    BinaryOp: <<
+                      Constant: int, 7
+                      ID: x
+                    Constant: int, 28
+                BinaryOp: ==
+                  BinaryOp: <<
+                    Constant: int, 8
+                    ID: x
+                  Constant: int, 32
+              BinaryOp: ==
+                BinaryOp: <<
+                  Constant: int, 9
+                  ID: x
+                Constant: int, 36
+            BinaryOp: ==
+              BinaryOp: <<
+                Constant: int, 10
+                ID: x
+              Constant: int, 40
+        FuncCall: 
+          ID: __builtin_abort
+  FuncDef: 
+    Decl: test3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: test3, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: ||
+              BinaryOp: ||
+                BinaryOp: ||
+                  BinaryOp: ||
+                    BinaryOp: ||
+                      BinaryOp: ||
+                        BinaryOp: ||
+                          BinaryOp: ||
+                            BinaryOp: !=
+                              BinaryOp: <<
+                                Constant: int, 0U
+                                ID: x
+                              Constant: int, 0U
+                            BinaryOp: !=
+                              BinaryOp: <<
+                                Constant: int, 1U
+                                ID: x
+                              Constant: int, 16U
+                          BinaryOp: !=
+                            BinaryOp: <<
+                              Constant: int, 2U
+                              ID: x
+                            Constant: int, 32U
+                        BinaryOp: !=
+                          BinaryOp: <<
+                            Constant: int, 3U
+                            ID: x
+                          Constant: int, 48U
+                      BinaryOp: !=
+                        BinaryOp: <<
+                          Constant: int, 4U
+                          ID: x
+                        Constant: int, 64U
+                    BinaryOp: !=
+                      BinaryOp: <<
+                        Constant: int, 5U
+                        ID: x
+                      Constant: int, 80U
+                  BinaryOp: !=
+                    BinaryOp: <<
+                      Constant: int, 6U
+                      ID: x
+                    Constant: int, 96U
+                BinaryOp: !=
+                  BinaryOp: <<
+                    Constant: int, 7U
+                    ID: x
+                  Constant: int, 112U
+              BinaryOp: !=
+                BinaryOp: <<
+                  Constant: int, 8U
+                  ID: x
+                Constant: int, 128U
+            BinaryOp: !=
+              BinaryOp: <<
+                Constant: int, 9U
+                ID: x
+              Constant: int, 144U
+          BinaryOp: !=
+            BinaryOp: <<
+              Constant: int, 10U
+              ID: x
+            Constant: int, 160U
+        FuncCall: 
+          ID: __builtin_abort
+  FuncDef: 
+    Decl: test4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: test4, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        UnaryOp: !
+          BinaryOp: ||
+            BinaryOp: ||
+              BinaryOp: ||
+                BinaryOp: ||
+                  BinaryOp: ||
+                    BinaryOp: ||
+                      BinaryOp: ||
+                        BinaryOp: ||
+                          BinaryOp: ||
+                            BinaryOp: ||
+                              BinaryOp: ==
+                                BinaryOp: <<
+                                  Constant: int, 0U
+                                  ID: x
+                                Constant: int, 0U
+                              BinaryOp: ==
+                                BinaryOp: <<
+                                  Constant: int, 1U
+                                  ID: x
+                                Constant: int, 8U
+                            BinaryOp: ==
+                              BinaryOp: <<
+                                Constant: int, 2U
+                                ID: x
+                              Constant: int, 16U
+                          BinaryOp: ==
+                            BinaryOp: <<
+                              Constant: int, 3U
+                              ID: x
+                            Constant: int, 24U
+                        BinaryOp: ==
+                          BinaryOp: <<
+                            Constant: int, 4U
+                            ID: x
+                          Constant: int, 32U
+                      BinaryOp: ==
+                        BinaryOp: <<
+                          Constant: int, 5U
+                          ID: x
+                        Constant: int, 40U
+                    BinaryOp: ==
+                      BinaryOp: <<
+                        Constant: int, 6U
+                        ID: x
+                      Constant: int, 48U
+                  BinaryOp: ==
+                    BinaryOp: <<
+                      Constant: int, 7U
+                      ID: x
+                    Constant: int, 56U
+                BinaryOp: ==
+                  BinaryOp: <<
+                    Constant: int, 8U
+                    ID: x
+                  Constant: int, 64U
+              BinaryOp: ==
+                BinaryOp: <<
+                  Constant: int, 9U
+                  ID: x
+                Constant: int, 72U
+            BinaryOp: ==
+              BinaryOp: <<
+                Constant: int, 10U
+                ID: x
+              Constant: int, 80U
+        FuncCall: 
+          ID: __builtin_abort
+  FuncDef: 
+    Decl: test5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: test5, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: ==
+              BinaryOp: <<
+                Constant: int, 0
+                ID: x
+              Constant: int, 1
+            BinaryOp: !=
+              BinaryOp: <<
+                Constant: int, 0
+                ID: x
+              Constant: int, 0
+          BinaryOp: !=
+            BinaryOp: <<
+              Constant: int, 0x8001U
+              ID: x
+            Constant: int, 0x20000U
+        FuncCall: 
+          ID: __builtin_abort
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: test1
+        ExprList: 
+          Constant: int, 1
+      FuncCall: 
+        ID: test2
+        ExprList: 
+          Constant: int, 2
+      FuncCall: 
+        ID: test3
+        ExprList: 
+          Constant: int, 4U
+      FuncCall: 
+        ID: test4
+        ExprList: 
+          Constant: int, 3U
+      FuncCall: 
+        ID: test5
+        ExprList: 
+          Constant: int, 17

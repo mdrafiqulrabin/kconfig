@@ -1,0 +1,31 @@
+c_files/pr70496.c:7:1: warning: return type of 'main' is not 'int' [-Wmain-return-type]
+void
+^
+c_files/pr70496.c:7:1: note: change return type to 'int'
+void
+^~~~
+int
+1 warning generated.
+TranslationUnitDecl 0x7ff7b48166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff7b4816c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff7b4816940 '__int128'
+|-TypedefDecl 0x7ff7b4816c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff7b4816960 'unsigned __int128'
+|-TypedefDecl 0x7ff7b4816f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff7b4816d70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff7b4816ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff7b4817000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff7b4816fc0 'char *'
+|   `-BuiltinType 0x7ff7b4816760 'char'
+|-TypedefDecl 0x7ff7b48172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff7b4817270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff7b48170e0 'struct __va_list_tag'
+|     `-Record 0x7ff7b4817058 '__va_list_tag'
+|-VarDecl 0x7ff7b4817338 <c_files/pr70496.c:6:1, col:5> col:5 used i 'int'
+`-FunctionDecl 0x7ff7b4064cb0 <line:7:1, line:13:1> line:8:1 main 'void (void)'
+  `-CompoundStmt 0x7ff7b4064f58 <line:9:1, line:13:1>
+    |-GCCAsmStmt 0x7ff7b4064de8 <line:10:3, col:27>
+    |-BinaryOperator 0x7ff7b4064e78 <line:11:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7ff7b4064e30 <col:3> 'int' lvalue Var 0x7ff7b4817338 'i' 'int'
+    | `-IntegerLiteral 0x7ff7b4064e58 <col:7> 'int' 0
+    `-GCCAsmStmt 0x7ff7b4064f10 <line:12:3, col:40>

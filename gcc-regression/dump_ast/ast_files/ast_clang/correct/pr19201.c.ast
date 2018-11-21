@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f8a748264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8a74826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8a74826740 '__int128'
+|-TypedefDecl 0x7f8a74826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8a74826760 'unsigned __int128'
+|-TypedefDecl 0x7f8a74826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8a74826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8a74826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8a74826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8a74826dc0 'char *'
+|   `-BuiltinType 0x7f8a74826560 'char'
+|-TypedefDecl 0x7f8a748270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8a74827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8a74826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8a74826e58 '__va_list_tag'
+|-RecordDecl 0x7f8a74827120 <c_files/pr19201.c:4:1, line:8:1> line:4:8 struct X definition
+| |-FieldDecl 0x7f8a75025a00 <line:5:3, col:9> col:9 referenced a 'char *'
+| `-FieldDecl 0x7f8a75025a60 <line:7:3, col:7> col:7 referenced b 'int'
+`-FunctionDecl 0x7f8a75025c60 <line:10:1, line:13:1> line:10:6 f 'void (struct X *)'
+  |-ParmVarDecl 0x7f8a75025b60 <col:9, col:19> col:19 used x 'struct X *'
+  `-CompoundStmt 0x7f8a75025ee8 <line:11:1, line:13:1>
+    `-BinaryOperator 0x7f8a75025ec0 <line:12:3, col:16> 'char' '='
+      |-ArraySubscriptExpr 0x7f8a75025e60 <col:3, col:12> 'char' lvalue
+      | |-ImplicitCastExpr 0x7f8a75025e30 <col:3, col:6> 'char *' <LValueToRValue>
+      | | `-MemberExpr 0x7f8a75025d80 <col:3, col:6> 'char *' lvalue ->a 0x7f8a75025a00
+      | |   `-ImplicitCastExpr 0x7f8a75025d68 <col:3> 'struct X *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7f8a75025d40 <col:3> 'struct X *' lvalue ParmVar 0x7f8a75025b60 'x' 'struct X *'
+      | `-ImplicitCastExpr 0x7f8a75025e48 <col:8, col:11> 'int' <LValueToRValue>
+      |   `-MemberExpr 0x7f8a75025df8 <col:8, col:11> 'int' lvalue ->b 0x7f8a75025a60
+      |     `-ImplicitCastExpr 0x7f8a75025de0 <col:8> 'struct X *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7f8a75025db8 <col:8> 'struct X *' lvalue ParmVar 0x7f8a75025b60 'x' 'struct X *'
+      `-ImplicitCastExpr 0x7f8a75025ea8 <col:16> 'char' <IntegralCast>
+        `-IntegerLiteral 0x7f8a75025e88 <col:16> 'int' 0

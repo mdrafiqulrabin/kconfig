@@ -1,0 +1,60 @@
+TranslationUnitDecl 0x7fd0cf0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd0cf026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd0cf026740 '__int128'
+|-TypedefDecl 0x7fd0cf026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd0cf026760 'unsigned __int128'
+|-TypedefDecl 0x7fd0cf026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd0cf026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd0cf026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd0cf026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd0cf026dc0 'char *'
+|   `-BuiltinType 0x7fd0cf026560 'char'
+|-TypedefDecl 0x7fd0cf0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd0cf027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd0cf026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd0cf026e58 '__va_list_tag'
+|-RecordDecl 0x7fd0cf027120 <c_files/pr63995-2.c:4:1, line:7:1> line:4:8 struct ts definition
+| `-FieldDecl 0x7fd0cf077400 <line:6:3, col:7> col:7 referenced field 'int'
+|-FunctionDecl 0x7fd0cf077498 <line:9:1, col:20> col:13 used test1 'void ()' extern
+|-FunctionDecl 0x7fd0cf077720 <line:10:1, col:31> col:13 used test2 'void (struct ts *)' extern
+| `-ParmVarDecl 0x7fd0cf077620 <col:20, col:30> col:31 'struct ts *'
+|-FunctionDecl 0x7fd0cf077870 <line:12:1, line:16:1> line:13:1 used init 'void (struct ts *)' static
+| |-ParmVarDecl 0x7fd0cf0777e8 <col:7, col:18> col:18 used c 'struct ts *'
+| `-CompoundStmt 0x7fd0cf0779f0 <line:14:1, line:16:1>
+|   `-BinaryOperator 0x7fd0cf0779c8 <line:15:3, col:15> 'int' '='
+|     |-MemberExpr 0x7fd0cf077950 <col:3, col:6> 'int' lvalue ->field 0x7fd0cf077400
+|     | `-ImplicitCastExpr 0x7fd0cf077938 <col:3> 'struct ts *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd0cf077910 <col:3> 'struct ts *' lvalue ParmVar 0x7fd0cf0777e8 'c' 'struct ts *'
+|     `-UnaryOperator 0x7fd0cf0779a8 <col:14, col:15> 'int' prefix '-'
+|       `-IntegerLiteral 0x7fd0cf077988 <col:15> 'int' 1
+`-FunctionDecl 0x7fd0cf077ba0 <line:18:1, line:27:1> line:19:1 test3 'struct ts (const struct ts *)'
+  |-ParmVarDecl 0x7fd0cf077a90 <col:8, col:25> col:25 used other 'const struct ts *'
+  `-CompoundStmt 0x7fd0cf0780a0 <line:20:1, line:27:1>
+    |-DeclStmt 0x7fd0cf077cc0 <line:21:3, col:14>
+    | `-VarDecl 0x7fd0cf077c60 <col:3, col:13> col:13 used r 'struct ts':'struct ts'
+    |-IfStmt 0x7fd0cf077e48 <line:22:3, line:23:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd0cf077d88 <line:22:7, col:23> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fd0cf077d70 <col:7, col:14> 'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7fd0cf077d18 <col:7, col:14> 'const int' lvalue ->field 0x7fd0cf077400
+    | | |   `-ImplicitCastExpr 0x7fd0cf077d00 <col:7> 'const struct ts *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fd0cf077cd8 <col:7> 'const struct ts *' lvalue ParmVar 0x7fd0cf077a90 'other' 'const struct ts *'
+    | | `-IntegerLiteral 0x7fd0cf077d50 <col:23> 'int' 0
+    | |-CallExpr 0x7fd0cf077e20 <line:23:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fd0cf077e08 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd0cf077db0 <col:5> 'void ()' Function 0x7fd0cf077498 'test1' 'void ()'
+    | `-<<<NULL>>>
+    |-CallExpr 0x7fd0cf077f60 <line:24:3, col:11> 'void'
+    | |-ImplicitCastExpr 0x7fd0cf077f48 <col:3> 'void (*)(struct ts *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd0cf077e80 <col:3> 'void (struct ts *)' Function 0x7fd0cf077870 'init' 'void (struct ts *)'
+    | `-UnaryOperator 0x7fd0cf077ed0 <col:9, col:10> 'struct ts *' prefix '&'
+    |   `-DeclRefExpr 0x7fd0cf077ea8 <col:10> 'struct ts':'struct ts' lvalue Var 0x7fd0cf077c60 'r' 'struct ts':'struct ts'
+    |-CallExpr 0x7fd0cf078018 <line:25:3, col:12> 'void'
+    | |-ImplicitCastExpr 0x7fd0cf078000 <col:3> 'void (*)(struct ts *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd0cf077f90 <col:3> 'void (struct ts *)' Function 0x7fd0cf077720 'test2' 'void (struct ts *)'
+    | `-UnaryOperator 0x7fd0cf077fe0 <col:10, col:11> 'struct ts *' prefix '&'
+    |   `-DeclRefExpr 0x7fd0cf077fb8 <col:11> 'struct ts':'struct ts' lvalue Var 0x7fd0cf077c60 'r' 'struct ts':'struct ts'
+    `-ReturnStmt 0x7fd0cf078088 <line:26:3, col:10>
+      `-ImplicitCastExpr 0x7fd0cf078070 <col:10> 'struct ts':'struct ts' <LValueToRValue>
+        `-DeclRefExpr 0x7fd0cf078048 <col:10> 'struct ts':'struct ts' lvalue Var 0x7fd0cf077c60 'r' 'struct ts':'struct ts'

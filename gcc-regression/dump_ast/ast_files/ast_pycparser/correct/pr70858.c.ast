@@ -1,0 +1,132 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'long', 'long']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: f1, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_ia32_lwpval64
+        ExprList: 
+          ID: x
+          ID: y
+          Constant: int, 1
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'long', 'long']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: f2, []
+          IdentifierType: ['char']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_ia32_lwpins64
+          ExprList: 
+            ID: x
+            ID: y
+            Constant: int, 1
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'long', 'long']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: f3, []
+          IdentifierType: ['unsigned', 'long', 'long']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_ia32_bextr_u64
+          ExprList: 
+            ID: x
+            ID: y
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: f4, []
+          IdentifierType: ['unsigned', 'long', 'long']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_ia32_bextri_u64
+          ExprList: 
+            ID: x
+            Constant: int, 1
+  FuncDef: 
+    Decl: f5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'long', 'long']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: f5, []
+          IdentifierType: ['unsigned', 'long', 'long']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_ia32_bzhi_di
+          ExprList: 
+            ID: x
+            ID: y
+  FuncDef: 
+    Decl: f6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'long', 'long']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: f6, []
+          IdentifierType: ['unsigned', 'long', 'long']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_ia32_pdep_di
+          ExprList: 
+            ID: x
+            ID: y
+  FuncDef: 
+    Decl: f7, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'long', 'long']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: f7, []
+          IdentifierType: ['unsigned', 'long', 'long']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_ia32_pext_di
+          ExprList: 
+            ID: x
+            ID: y

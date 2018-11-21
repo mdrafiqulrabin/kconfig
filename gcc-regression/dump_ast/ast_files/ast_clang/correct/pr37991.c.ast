@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7f89cb8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f89cb826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f89cb826740 '__int128'
+|-TypedefDecl 0x7f89cb826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f89cb826760 'unsigned __int128'
+|-TypedefDecl 0x7f89cb826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f89cb826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f89cb826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f89cb826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f89cb826dc0 'char *'
+|   `-BuiltinType 0x7f89cb826560 'char'
+|-TypedefDecl 0x7f89cb8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f89cb827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f89cb826ee0 'struct __va_list_tag'
+|     `-Record 0x7f89cb826e58 '__va_list_tag'
+|-TypedefDecl 0x7f89cb827138 <c_files/pr37991.c:1:1, col:13> col:13 referenced Int32 'int'
+| `-BuiltinType 0x7f89cb8265c0 'int'
+|-FunctionDecl 0x7f89cb8774c0 <line:2:1, col:16> col:6 used use_it 'void (int)'
+| `-ParmVarDecl 0x7f89cb877400 <col:13> col:16 'int'
+`-FunctionDecl 0x7f89cb877640 <line:3:1, line:13:1> line:3:6 FindAndReadSignature 'void (int)'
+  |-ParmVarDecl 0x7f89cb8775b8 <col:27, col:31> col:31 used processedSize 'int'
+  `-CompoundStmt 0x7f89cb877c40 <line:4:1, line:13:1>
+    |-DeclStmt 0x7f89cb877778 <line:5:3, col:23>
+    | `-VarDecl 0x7f89cb8776f8 <col:3, col:22> col:7 used numPrevBytes 'int' cinit
+    |   `-IntegerLiteral 0x7f89cb877758 <col:22> 'int' 1
+    `-ForStmt 0x7f89cb877c08 <line:6:3, line:12:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7f89cb877bd0 <line:7:5, line:12:5>
+        |-DeclStmt 0x7f89cb8778b0 <line:8:7, col:58>
+        | `-VarDecl 0x7f89cb8777a8 <col:7, col:45> col:11 used numBytesInBuffer 'int' cinit
+        |   `-BinaryOperator 0x7f89cb877888 <col:30, col:45> 'int' '+'
+        |     |-ImplicitCastExpr 0x7f89cb877858 <col:30> 'int' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7f89cb877808 <col:30> 'int' lvalue Var 0x7f89cb8776f8 'numPrevBytes' 'int'
+        |     `-ImplicitCastExpr 0x7f89cb877870 <col:45> 'int' <LValueToRValue>
+        |       `-DeclRefExpr 0x7f89cb877830 <col:45> 'int' lvalue ParmVar 0x7f89cb8775b8 'processedSize' 'int'
+        |-DeclStmt 0x7f89cb8779e8 <line:9:7, col:44>
+        | `-VarDecl 0x7f89cb877900 <col:7, col:43> col:13 used numTests 'Int32':'int' cinit
+        |   `-BinaryOperator 0x7f89cb8779c0 <col:24, col:43> 'int' '-'
+        |     |-ImplicitCastExpr 0x7f89cb8779a8 <col:24> 'int' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7f89cb877960 <col:24> 'int' lvalue Var 0x7f89cb8777a8 'numBytesInBuffer' 'int'
+        |     `-IntegerLiteral 0x7f89cb877988 <col:43> 'int' 1
+        |-CallExpr 0x7f89cb877a90 <line:10:7, col:23> 'void'
+        | |-ImplicitCastExpr 0x7f89cb877a78 <col:7> 'void (*)(int)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7f89cb877a00 <col:7> 'void (int)' Function 0x7f89cb8774c0 'use_it' 'void (int)'
+        | `-ImplicitCastExpr 0x7f89cb877ac0 <col:15> 'Int32':'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f89cb877a28 <col:15> 'Int32':'int' lvalue Var 0x7f89cb877900 'numTests' 'Int32':'int'
+        `-BinaryOperator 0x7f89cb877ba8 <line:11:7, col:41> 'int' '='
+          |-DeclRefExpr 0x7f89cb877ad8 <col:7> 'int' lvalue Var 0x7f89cb8776f8 'numPrevBytes' 'int'
+          `-BinaryOperator 0x7f89cb877b80 <col:22, col:41> 'int' '-'
+            |-ImplicitCastExpr 0x7f89cb877b50 <col:22> 'int' <LValueToRValue>
+            | `-DeclRefExpr 0x7f89cb877b00 <col:22> 'int' lvalue Var 0x7f89cb8777a8 'numBytesInBuffer' 'int'
+            `-ImplicitCastExpr 0x7f89cb877b68 <col:41> 'Int32':'int' <LValueToRValue>
+              `-DeclRefExpr 0x7f89cb877b28 <col:41> 'Int32':'int' lvalue Var 0x7f89cb877900 'numTests' 'Int32':'int'

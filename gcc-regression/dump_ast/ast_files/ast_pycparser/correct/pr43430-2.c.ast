@@ -1,0 +1,84 @@
+FileAST: 
+  Typedef: uint8_t, [], ['typedef']
+    TypeDecl: uint8_t, []
+      IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: vsad16_c, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            PtrDecl: []
+              TypeDecl: c, []
+                IdentifierType: ['void']
+          Decl: s1, [], [], []
+            PtrDecl: []
+              TypeDecl: s1, []
+                IdentifierType: ['uint8_t']
+          Decl: s2, [], [], []
+            PtrDecl: []
+              TypeDecl: s2, []
+                IdentifierType: ['uint8_t']
+          Decl: stride, [], [], []
+            TypeDecl: stride, []
+              IdentifierType: ['int']
+          Decl: h, [], [], []
+            TypeDecl: h, []
+              IdentifierType: ['int']
+        TypeDecl: vsad16_c, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: score, [], [], []
+        TypeDecl: score, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: x
+          Constant: int, 0
+        BinaryOp: <
+          ID: x
+          Constant: int, 16
+        UnaryOp: p++
+          ID: x
+        Assignment: +=
+          ID: score
+          TernaryOp: 
+            BinaryOp: >=
+              BinaryOp: +
+                BinaryOp: -
+                  ArrayRef: 
+                    ID: s1
+                    ID: x
+                  ArrayRef: 
+                    ID: s1
+                    BinaryOp: +
+                      ID: x
+                      ID: stride
+                ArrayRef: 
+                  ID: s2
+                  BinaryOp: +
+                    ID: x
+                    ID: stride
+              Constant: int, 0
+            BinaryOp: +
+              ArrayRef: 
+                ID: s1
+                ID: x
+              ArrayRef: 
+                ID: s2
+                BinaryOp: +
+                  ID: x
+                  ID: stride
+            ArrayRef: 
+              ID: s2
+              BinaryOp: +
+                ID: x
+                ID: stride
+      Return: 
+        ID: score

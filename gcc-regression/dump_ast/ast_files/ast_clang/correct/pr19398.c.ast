@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7faa020264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faa02026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faa02026740 '__int128'
+|-TypedefDecl 0x7faa02026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faa02026760 'unsigned __int128'
+|-TypedefDecl 0x7faa02026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faa02026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faa02026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faa02026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faa02026dc0 'char *'
+|   `-BuiltinType 0x7faa02026560 'char'
+|-TypedefDecl 0x7faa020270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faa02027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faa02026ee0 'struct __va_list_tag'
+|     `-Record 0x7faa02026e58 '__va_list_tag'
+`-FunctionDecl 0x7faa02825a30 <c_files/pr19398.c:4:1, line:7:1> line:4:5 test 'int (float)'
+  |-ParmVarDecl 0x7faa02027138 <col:11, col:17> col:17 used a 'float'
+  `-CompoundStmt 0x7faa02825c08 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7faa02825bf0 <line:6:3, col:16>
+      `-ImplicitCastExpr 0x7faa02825bd8 <col:10, col:16> 'int' <FloatingToIntegral>
+        `-ParenExpr 0x7faa02825bb8 <col:10, col:16> 'float'
+          `-BinaryOperator 0x7faa02825b90 <col:11, col:15> 'float' '*'
+            |-ImplicitCastExpr 0x7faa02825b60 <col:11> 'float' <LValueToRValue>
+            | `-DeclRefExpr 0x7faa02825b10 <col:11> 'float' lvalue ParmVar 0x7faa02027138 'a' 'float'
+            `-ImplicitCastExpr 0x7faa02825b78 <col:15> 'float' <LValueToRValue>
+              `-DeclRefExpr 0x7faa02825b38 <col:15> 'float' lvalue ParmVar 0x7faa02027138 'a' 'float'

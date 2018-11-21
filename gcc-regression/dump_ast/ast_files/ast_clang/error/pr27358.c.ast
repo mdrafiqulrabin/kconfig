@@ -1,0 +1,22 @@
+c_files/pr27358.c:4:10: error: unknown type name 'error'
+void foo(error i)               /* { dg-error "" } */
+         ^
+1 error generated.
+TranslationUnitDecl 0x7fa08f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa08f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa08f026740 '__int128'
+|-TypedefDecl 0x7fa08f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa08f026760 'unsigned __int128'
+|-TypedefDecl 0x7fa08f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa08f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa08f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa08f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa08f026dc0 'char *'
+|   `-BuiltinType 0x7fa08f026560 'char'
+|-TypedefDecl 0x7fa08f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa08f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa08f026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa08f026e58 '__va_list_tag'
+`-FunctionDecl 0x7fa08f826a28 <c_files/pr27358.c:4:1, line:8:1> line:4:6 invalid foo 'void (int)'
+  |-ParmVarDecl 0x7fa08f027150 <col:10, col:16> col:16 invalid i 'int'
+  `-CompoundStmt 0x7fa08f826ae8 <line:5:1, line:8:1>

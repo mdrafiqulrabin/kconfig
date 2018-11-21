@@ -1,0 +1,86 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  Decl: j, [], [], []
+    TypeDecl: j, []
+      IdentifierType: ['int']
+  Decl: k, [], [], []
+    TypeDecl: k, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        UnaryOp: ++
+          ID: i
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: !=
+            ID: __CHAR_BIT__
+            Constant: int, 8
+          BinaryOp: !=
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+            Constant: int, 4
+        Return: 
+          Constant: int, 0
+      Assignment: =
+        ID: j
+        BinaryOp: <<
+          BinaryOp: <<
+            FuncCall: 
+              ID: foo
+            Constant: int, 30
+          Constant: int, 2
+      Assignment: =
+        ID: k
+        BinaryOp: >>
+          BinaryOp: >>
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned']
+              FuncCall: 
+                ID: foo
+            Constant: int, 16
+          Constant: int, 16
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: !=
+              ID: i
+              Constant: int, 2
+            BinaryOp: !=
+              ID: j
+              Constant: int, 0
+          BinaryOp: !=
+            ID: k
+            Constant: int, 0
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

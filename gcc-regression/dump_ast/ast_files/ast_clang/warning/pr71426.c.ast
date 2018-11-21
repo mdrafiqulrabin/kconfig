@@ -1,0 +1,25 @@
+c_files/pr71426.c:5:18: warning: implicit declaration of function 'x' is invalid in C99 [-Wimplicit-function-declaration]
+int f (int x[x - x ()]); /* { dg-error "undeclared" } */
+                 ^
+c_files/pr71426.c:5:14: error: use of undeclared identifier 'x'
+int f (int x[x - x ()]); /* { dg-error "undeclared" } */
+             ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fb85e81aed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb85e81b420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb85e81b140 '__int128'
+|-TypedefDecl 0x7fb85e81b490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb85e81b160 'unsigned __int128'
+|-TypedefDecl 0x7fb85e81b768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb85e81b570 'struct __NSConstantString_tag'
+|   `-Record 0x7fb85e81b4e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb85e81b800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb85e81b7c0 'char *'
+|   `-BuiltinType 0x7fb85e81af60 'char'
+|-TypedefDecl 0x7fb85e81bac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb85e81ba70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb85e81b8e0 'struct __va_list_tag'
+|     `-Record 0x7fb85e81b858 '__va_list_tag'
+|-FunctionDecl 0x7fb85f025e00 <<invalid sloc>> c_files/pr71426.c:5:18 implicit used x 'int ()'
+`-FunctionDecl 0x7fb85f026008 <col:1, col:23> col:5 invalid f 'int (int)'
+  `-ParmVarDecl 0x7fb85f025f40 <col:8, col:12> col:12 invalid x 'int'

@@ -1,0 +1,64 @@
+FileAST: 
+  Decl: abort, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: >
+          ID: i
+          BinaryOp: +
+            Constant: int, 4
+            BinaryOp: *
+              Constant: int, 3
+              Constant: int, 16
+        FuncCall: 
+          ID: abort
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: buflen, [], [], []
+        TypeDecl: buflen, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'int']
+      Assignment: =
+        ID: buflen
+        BinaryOp: +
+          Constant: int, 4
+          BinaryOp: *
+            Constant: int, 3
+            Constant: int, 16
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 4
+        BinaryOp: <
+          ID: i
+          ID: buflen
+        Assignment: +=
+          ID: i
+          Constant: int, 3
+        FuncCall: 
+          ID: f
+          ExprList: 
+            ID: i
+      Return: 
+        Constant: int, 0

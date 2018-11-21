@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7f87ad8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f87ad826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f87ad826740 '__int128'
+|-TypedefDecl 0x7f87ad826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f87ad826760 'unsigned __int128'
+|-TypedefDecl 0x7f87ad826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f87ad826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f87ad826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f87ad826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f87ad826dc0 'char *'
+|   `-BuiltinType 0x7f87ad826560 'char'
+|-TypedefDecl 0x7f87ad8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f87ad827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f87ad826ee0 'struct __va_list_tag'
+|     `-Record 0x7f87ad826e58 '__va_list_tag'
+|-RecordDecl 0x7f87ad827120 <c_files/pr16721.c:4:1, line:6:1> line:4:8 struct data definition
+| `-FieldDecl 0x7f87ae025a18 <line:5:2, col:26> col:26 referenced addr 'volatile unsigned long *'
+|-VarDecl 0x7f87ae025b10 <line:4:1, line:6:4> col:4 used p 'struct data *'
+`-FunctionDecl 0x7f87ae025c20 <line:8:1, line:12:1> line:8:5 test 'int ()'
+  `-CompoundStmt 0x7f87ae025db8 <line:9:1, line:12:1>
+    |-ImplicitCastExpr 0x7f87ae025d68 <line:10:2, col:6> 'unsigned long' <LValueToRValue>
+    | `-UnaryOperator 0x7f87ae025d48 <col:2, col:6> 'volatile unsigned long' lvalue prefix '*'
+    |   `-ImplicitCastExpr 0x7f87ae025d30 <col:3, col:6> 'volatile unsigned long *' <LValueToRValue>
+    |     `-MemberExpr 0x7f87ae025cf8 <col:3, col:6> 'volatile unsigned long *' lvalue ->addr 0x7f87ae025a18
+    |       `-ImplicitCastExpr 0x7f87ae025ce0 <col:3> 'struct data *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f87ae025cb8 <col:3> 'struct data *' lvalue Var 0x7f87ae025b10 'p' 'struct data *'
+    `-ReturnStmt 0x7f87ae025da0 <line:11:2, col:9>
+      `-IntegerLiteral 0x7f87ae025d80 <col:9> 'int' 0

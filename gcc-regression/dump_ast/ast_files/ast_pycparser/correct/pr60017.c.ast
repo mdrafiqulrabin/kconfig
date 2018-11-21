@@ -1,0 +1,95 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: S0
+      Decl: m0, [], [], []
+        TypeDecl: m0, []
+          IdentifierType: ['short']
+      Decl: m1, [], [], []
+        TypeDecl: m1, []
+          IdentifierType: ['short']
+  Decl: None, [], [], []
+    Struct: S1
+      Decl: m0, [], [], []
+        TypeDecl: m0, []
+          IdentifierType: ['unsigned']
+        Constant: int, 1
+      Decl: m1, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: m1, []
+              IdentifierType: ['char']
+            Constant: int, 2
+          Constant: int, 2
+      Decl: m2, [], [], []
+        ArrayDecl: []
+          TypeDecl: m2, []
+            Struct: S0
+          Constant: int, 2
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      Struct: S1
+    InitList: 
+      Constant: int, 1
+      InitList: 
+        InitList: 
+          Constant: int, 2
+          Constant: int, 3
+        InitList: 
+          Constant: int, 4
+          Constant: int, 5
+      InitList: 
+        InitList: 
+          Constant: int, 6
+          Constant: int, 7
+        InitList: 
+          Constant: int, 8
+          Constant: int, 9
+  FuncDef: 
+    Decl: func, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: func, []
+          Struct: S1
+    Compound: 
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: ret, [], [], []
+        TypeDecl: ret, []
+          Struct: S1
+        FuncCall: 
+          ID: func
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            ArrayRef: 
+              StructRef: .
+                ID: ret
+                ID: m2
+              Constant: int, 1
+            ID: m1
+          Constant: int, 9
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

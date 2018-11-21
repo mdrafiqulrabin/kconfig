@@ -1,0 +1,30 @@
+FileAST: 
+  Decl: g, [], [], []
+    PtrDecl: []
+      TypeDecl: g, []
+        IdentifierType: ['float']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['float']
+        TypeDecl: foo, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        ID: f
+  FuncDef: 
+    Decl: foo1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo1, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        UnaryOp: *
+          ID: g

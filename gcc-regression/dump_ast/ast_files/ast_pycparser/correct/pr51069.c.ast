@@ -1,0 +1,87 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        Compound: 
+          If: 
+            UnaryOp: !
+              ID: x
+            Compound: 
+              For: 
+                Assignment: =
+                  ID: d
+                  Constant: int, 6
+                BinaryOp: >=
+                  ID: d
+                  Constant: int, 0
+                UnaryOp: p--
+                  ID: d
+                Compound: 
+                  While: 
+                    UnaryOp: !
+                      ID: b
+                    EmptyStatement: 
+                  If: 
+                    ID: e
+                    Return: 
+                      FuncCall: 
+                        ID: foo
+                        ExprList: 
+                          ID: x
+                  If: 
+                    ID: f
+                    Compound: 
+                      Assignment: =
+                        ID: a
+                        Constant: int, 0
+                      Continue: 
+                  For: 
+                    ID: c
+                    UnaryOp: p--
+                      ID: c
+                    EmptyStatement: 
+          If: 
+            FuncCall: 
+              ID: bar
+            Break: 
+          Assignment: =
+            ID: e
+            Constant: int, 0
+          If: 
+            ID: x
+            For: 
+              EmptyStatement: 

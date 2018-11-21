@@ -1,0 +1,189 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: f1, [], [], []
+        TypeDecl: f1, []
+          IdentifierType: ['int']
+      Decl: f2, [], [], []
+        TypeDecl: f2, []
+          IdentifierType: ['int']
+      Decl: f3, [], [], []
+        TypeDecl: f3, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: B
+      Decl: g1, [], [], []
+        TypeDecl: g1, []
+          Struct: A
+      Decl: g2, [], [], []
+        TypeDecl: g2, []
+          Struct: A
+  Decl: None, [], [], []
+    Struct: C
+      Decl: h1, [], [], []
+        TypeDecl: h1, []
+          Struct: B
+      Decl: h2, [], [], []
+        TypeDecl: h2, []
+          Struct: B
+  Typedef: T, [], ['typedef']
+    TypeDecl: T, []
+      Union: None
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            Struct: C
+        Decl: s, [], [], []
+          ArrayDecl: []
+            TypeDecl: s, []
+              IdentifierType: ['char']
+            Constant: int, 4
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['long', 'int']
+  Decl: test, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['T']
+      TypeDecl: test, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['T']
+        InitList: 
+          InitList: 
+            InitList: 
+              InitList: 
+                Constant: int, 0
+                Constant: int, 0
+                Constant: int, 0
+              InitList: 
+                Constant: int, 0
+                Constant: int, 0
+                Constant: int, 0
+            InitList: 
+              InitList: 
+                Constant: int, 0
+                Constant: int, 0
+                Constant: int, 0
+              InitList: 
+                Constant: int, 0
+                Constant: int, 0
+                Constant: int, 0
+      FuncCall: 
+        ID: test
+        ExprList: 
+          UnaryOp: &
+            ID: t
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['T']
+        InitList: 
+          InitList: 
+            InitList: 
+              InitList: 
+                Constant: int, 0
+                Constant: int, 0
+                Constant: int, 0
+              CompoundLiteral: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    Struct: A
+                InitList: 
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+            CompoundLiteral: 
+              Typename: None, []
+                TypeDecl: None, []
+                  Struct: B
+              InitList: 
+                CompoundLiteral: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      Struct: A
+                  InitList: 
+                    Constant: int, 0
+                    Constant: int, 0
+                    Constant: int, 0
+                InitList: 
+                  Constant: int, 0
+                  Constant: int, 0
+                  Constant: int, 0
+      FuncCall: 
+        ID: test
+        ExprList: 
+          UnaryOp: &
+            ID: t
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['T']
+        InitList: 
+          InitList: 
+            InitList: 
+              InitList: 
+                Constant: int, 0
+                Constant: int, 0
+                Constant: int, 0
+              CompoundLiteral: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    Struct: A
+                InitList: 
+                  Constant: int, 1
+                  Constant: int, 1
+                  Constant: int, 1
+            CompoundLiteral: 
+              Typename: None, []
+                TypeDecl: None, []
+                  Struct: B
+              InitList: 
+                CompoundLiteral: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      Struct: A
+                  InitList: 
+                    Constant: int, 0
+                    Constant: int, 0
+                    Constant: int, 0
+                InitList: 
+                  Constant: int, 1
+                  Constant: int, 1
+                  Constant: int, 1
+      FuncCall: 
+        ID: test
+        ExprList: 
+          UnaryOp: &
+            ID: t

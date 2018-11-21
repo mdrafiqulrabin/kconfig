@@ -1,0 +1,44 @@
+FileAST: 
+  FuncDef: 
+    Decl: transport_sumexp, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: numexp, [], [], []
+            TypeDecl: numexp, []
+              IdentifierType: ['int']
+        TypeDecl: transport_sumexp, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: xk1, [], [], []
+        TypeDecl: xk1, []
+          IdentifierType: ['double']
+        Constant: float, 1.0
+      For: 
+        Assignment: =
+          ID: k
+          Constant: int, 1
+        BinaryOp: <=
+          ID: k
+          ID: numexp
+        UnaryOp: p++
+          ID: k
+        For: 
+          Assignment: =
+            ID: j
+            Constant: int, 1
+          BinaryOp: <=
+            ID: j
+            Constant: int, 3
+          UnaryOp: p++
+            ID: j
+          Assignment: +=
+            ID: xk1
+            Constant: float, 1.0
+      Return: 
+        ID: xk1

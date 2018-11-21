@@ -1,0 +1,60 @@
+FileAST: 
+  Decl: f, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['char']
+      TypeDecl: f, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: __memset_generic, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['char']
+        PtrDecl: []
+          TypeDecl: __memset_generic, []
+            IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: f
+        ExprList: 
+          ID: c
+  FuncDef: 
+    Decl: prepare_startup_playback_urb, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+        TypeDecl: prepare_startup_playback_urb, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['char']
+      If: 
+        ID: b
+        FuncCall: 
+          ID: __memset_generic
+          ExprList: 
+            TernaryOp: 
+              BinaryOp: ==
+                ID: c
+                Constant: int, 1
+              Constant: int, 0x80
+              Constant: int, 0
+        FuncCall: 
+          ID: __memset_generic
+          ExprList: 
+            TernaryOp: 
+              BinaryOp: ==
+                ID: c
+                Constant: int, 1
+              Constant: int, 0x80
+              Constant: int, 0

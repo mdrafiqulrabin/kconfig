@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7f9b630264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9b63026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9b63026740 '__int128'
+|-TypedefDecl 0x7f9b63026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9b63026760 'unsigned __int128'
+|-TypedefDecl 0x7f9b63026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9b63026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9b63026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9b63026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9b63026dc0 'char *'
+|   `-BuiltinType 0x7f9b63026560 'char'
+|-TypedefDecl 0x7f9b630270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9b63027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9b63026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9b63026e58 '__va_list_tag'
+|-FunctionDecl 0x7f9b63078460 <c_files/pr44974.c:5:1, col:72> col:13 foo 'void (int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7f9b63027138 <col:18, col:22> col:22 status 'int'
+| `-NoInlineAttr 0x7f9b63078500 <col:59>
+|-FunctionDecl 0x7f9b63078628 <line:6:1, col:72> col:13 used bar 'void (int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7f9b630785a0 <col:18, col:22> col:22 status 'int'
+| `-NoInlineAttr 0x7f9b630786c8 <col:59>
+|-FunctionDecl 0x7f9b630787b0 <line:7:13> col:13 implicit used _Exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7f9b63078848 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7f9b630788b0 prev 0x7f9b630787b0 <col:1, col:74> col:13 used _Exit 'void (int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7f9b63078728 <col:20, col:24> col:24 status 'int'
+| `-NoInlineAttr 0x7f9b63078950 <col:61>
+|-FunctionDecl 0x7f9b63078a38 prev 0x7f9b63078460 <line:9:1, line:13:1> line:10:1 foo 'void (int) __attribute__((noreturn))'
+| |-ParmVarDecl 0x7f9b630789b0 <col:6, col:10> col:10 used status 'int'
+| |-CompoundStmt 0x7f9b63078bf8 <line:11:1, line:13:1>
+| | `-CallExpr 0x7f9b63078bb0 <line:12:3, col:16> 'void'
+| |   |-ImplicitCastExpr 0x7f9b63078b98 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7f9b63078b20 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7f9b630788b0 '_Exit' 'void (int) __attribute__((noreturn))'
+| |   `-ImplicitCastExpr 0x7f9b63078be0 <col:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f9b63078b48 <col:10> 'int' lvalue ParmVar 0x7f9b630789b0 'status' 'int'
+| `-NoInlineAttr 0x7f9b63078b10 <line:5:59> Inherited
+`-FunctionDecl 0x7f9b63078cb8 prev 0x7f9b630788b0 <line:15:1, line:19:1> line:16:1 used _Exit 'void (int) __attribute__((noreturn))'
+  |-ParmVarDecl 0x7f9b63078c30 <col:8, col:12> col:12 used status 'int'
+  |-CompoundStmt 0x7f9b63078e50 <line:17:1, line:19:1>
+  | `-CallExpr 0x7f9b63078e08 <line:18:3, col:14> 'void'
+  |   |-ImplicitCastExpr 0x7f9b63078df0 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x7f9b63078da0 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7f9b63078628 'bar' 'void (int) __attribute__((noreturn))'
+  |   `-ImplicitCastExpr 0x7f9b63078e38 <col:8> 'int' <LValueToRValue>
+  |     `-DeclRefExpr 0x7f9b63078dc8 <col:8> 'int' lvalue ParmVar 0x7f9b63078c30 'status' 'int'
+  `-NoInlineAttr 0x7f9b63078d90 <line:7:61> Inherited

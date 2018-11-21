@@ -1,0 +1,89 @@
+c_files/pragma-darwin.c:15:17: warning: expected 'align' following '#pragma options' - ignored [-Wignored-pragmas]
+#pragma options 23  /* { dg-warning "malformed '#pragma options'" } */
+                ^
+c_files/pragma-darwin.c:16:74: warning: expected '=' following '#pragma options align' - ignored [-Wignored-pragmas]
+#pragma options align  /* { dg-warning "malformed '#pragma options'" } */
+                                                                         ^
+c_files/pragma-darwin.c:17:23: warning: expected '=' following '#pragma options align' - ignored [-Wignored-pragmas]
+#pragma options align natural /* { dg-warning "malformed '#pragma options'" } */
+                      ^
+c_files/pragma-darwin.c:18:23: warning: expected identifier in '#pragma options' - ignored [-Wignored-pragmas]
+#pragma options align=45 /* { dg-warning "malformed '#pragma options'" } */
+                      ^
+c_files/pragma-darwin.c:19:23: warning: invalid alignment option in '#pragma options align' - ignored [-Wignored-pragmas]
+#pragma options align=foo /* { dg-warning "malformed '#pragma options align" } */
+                      ^
+c_files/pragma-darwin.c:34:31: warning: extra tokens at end of '#pragma options' - ignored [-Wignored-pragmas]
+#pragma options align=natural foo /* { dg-warning "junk at end of '#pragma options'" } */
+                              ^
+c_files/pragma-darwin.c:45:11: warning: undeclared variable 'y' used as an argument for '#pragma unused' [-Wignored-pragmas]
+  #pragma unused (x, y)
+          ^          ~
+c_files/pragma-darwin.c:67:73: warning: missing '(' after '#pragma unused' - ignoring [-Wignored-pragmas]
+#pragma unused  /* { dg-warning "missing '.' after '#pragma unused" } */
+                                                                        ^
+c_files/pragma-darwin.c:68:76: warning: expected ')' or ',' in '#pragma unused' [-Wignored-pragmas]
+#pragma unused (a  /* { dg-warning "missing '.' after '#pragma unused" } */
+                                                                           ^
+c_files/pragma-darwin.c:69:20: warning: extra tokens at end of '#pragma unused' - ignored [-Wignored-pragmas]
+#pragma unused (b) foo /* { dg-warning "junk at end of '#pragma unused'" } */
+                   ^
+10 warnings generated.
+TranslationUnitDecl 0x7fb7ba8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb7ba826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb7ba826740 '__int128'
+|-TypedefDecl 0x7fb7ba826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb7ba826760 'unsigned __int128'
+|-TypedefDecl 0x7fb7ba826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb7ba826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb7ba826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb7ba826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb7ba826dc0 'char *'
+|   `-BuiltinType 0x7fb7ba826560 'char'
+|-TypedefDecl 0x7fb7ba8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb7ba827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb7ba826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb7ba826e58 '__va_list_tag'
+|-FunctionDecl 0x7fb7bb025a30 <c_files/pragma-darwin.c:8:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fb7bb025ac8 prev 0x7fb7bb025a30 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fb7bb025b60 <line:26:1, col:31> col:8 struct s2 definition
+| |-FieldDecl 0x7fb7bb025c28 <col:13, col:19> col:19 f1 'short'
+| `-FieldDecl 0x7fb7bb025c88 <col:23, col:27> col:27 f2 'int'
+|-RecordDecl 0x7fb7bb025cd0 <line:32:1, col:31> col:8 struct s4 definition
+| |-FieldDecl 0x7fb7bb025d98 <col:13, col:19> col:19 f1 'short'
+| `-FieldDecl 0x7fb7bb025df8 <col:23, col:27> col:27 f2 'int'
+|-FunctionDecl 0x7fb7bb025e90 <line:41:1, line:60:1> line:42:1 main 'int ()'
+| `-CompoundStmt 0x7fb7bb0264b8 <line:43:1, line:60:1>
+|   |-DeclStmt 0x7fb7bb026070 <line:44:3, col:11>
+|   | |-VarDecl 0x7fb7bb025f80 <col:3, col:7> col:7 x 'int'
+|   | | `-UnusedAttr 0x7fb7bb026088 <line:45:19> Implicit unused
+|   | `-VarDecl 0x7fb7bb025ff8 <line:44:3, col:10> col:10 z 'int'
+|   |-IfStmt 0x7fb7bb026288 <line:51:3, line:52:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fb7bb026178 <line:51:7, col:29> 'int' '!='
+|   | | |-UnaryExprOrTypeTraitExpr 0x7fb7bb026120 <col:7, col:24> 'unsigned long' sizeof 'struct s2':'struct s2'
+|   | | `-ImplicitCastExpr 0x7fb7bb026160 <col:29> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fb7bb026140 <col:29> 'int' 8
+|   | |-CallExpr 0x7fb7bb026260 <line:52:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7fb7bb026248 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fb7bb0261f0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fb7bb025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fb7bb026448 <line:57:3, line:58:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fb7bb026368 <line:57:7, col:29> 'int' '!='
+|   | | |-UnaryExprOrTypeTraitExpr 0x7fb7bb026310 <col:7, col:24> 'unsigned long' sizeof 'struct s4':'struct s4'
+|   | | `-ImplicitCastExpr 0x7fb7bb026350 <col:29> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fb7bb026330 <col:29> 'int' 8
+|   | |-CallExpr 0x7fb7bb026420 <line:58:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7fb7bb026408 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fb7bb0263e0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fb7bb025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fb7bb0264a0 <line:59:3, col:10>
+|     `-IntegerLiteral 0x7fb7bb026480 <col:10> 'int' 0
+`-FunctionDecl 0x7fb7bb026538 <line:62:1, line:70:1> line:63:1 unused_err_test 'void ()'
+  `-CompoundStmt 0x7fb7bb0266f0 <line:64:1, line:70:1>
+    `-DeclStmt 0x7fb7bb0266d8 <line:65:3, col:11>
+      |-VarDecl 0x7fb7bb0265e8 <col:3, col:7> col:7 a 'int'
+      `-VarDecl 0x7fb7bb026660 <col:3, col:10> col:10 b 'int'

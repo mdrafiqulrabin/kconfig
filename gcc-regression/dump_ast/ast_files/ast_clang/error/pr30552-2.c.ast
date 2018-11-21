@@ -1,0 +1,35 @@
+c_files/pr30552-2.c:12:12: error: a parameter list without types is only allowed in a function definition
+  void fun(a)
+           ^
+c_files/pr30552-2.c:12:14: error: expected ';' at end of declaration
+  void fun(a)
+             ^
+             ;
+2 errors generated.
+TranslationUnitDecl 0x7f90968264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9096826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9096826740 '__int128'
+|-TypedefDecl 0x7f9096826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9096826760 'unsigned __int128'
+|-TypedefDecl 0x7f9096826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9096826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9096826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9096826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9096826dc0 'char *'
+|   `-BuiltinType 0x7f9096826560 'char'
+|-TypedefDecl 0x7f90968270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9096827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9096826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9096826e58 '__va_list_tag'
+`-FunctionDecl 0x7f9097025a00 <c_files/pr30552-2.c:10:1, line:17:1> line:10:5 main 'int ()'
+  `-CompoundStmt 0x7f9097025e48 <line:11:1, line:17:1>
+    |-DeclStmt 0x7f9097025bd0 <line:12:3, line:13:5>
+    | `-FunctionDecl 0x7f9097025b28 parent 0x7f90968264d0 <line:12:3, col:13> col:8 invalid fun 'void ()'
+    |-DeclStmt 0x7f9097025de0 <line:13:5, col:27>
+    | `-VarDecl 0x7f9097025d80 <col:5, col:26> col:9 a 'int [({
+    int b = 2;
+    b;
+})]'
+    |-CompoundStmt 0x7f9097025df8 <line:14:3, line:15:3>
+    `-ReturnStmt 0x7f9097025e30 <line:16:3, col:10>
+      `-IntegerLiteral 0x7f9097025e10 <col:10> 'int' 0

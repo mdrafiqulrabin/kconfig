@@ -1,0 +1,121 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: data, [], [], []
+            PtrDecl: []
+              TypeDecl: data, []
+                IdentifierType: ['int']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['unsigned']
+          Decl: qlp_coeff, ['const'], [], []
+            ArrayDecl: []
+              TypeDecl: qlp_coeff, ['const']
+                IdentifierType: ['int']
+          Decl: order, [], [], []
+            TypeDecl: order, []
+              IdentifierType: ['unsigned']
+          Decl: lp, [], [], []
+            TypeDecl: lp, []
+              IdentifierType: ['int']
+          Decl: residual, [], [], []
+            ArrayDecl: []
+              TypeDecl: residual, []
+                IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: sum, [], [], []
+        TypeDecl: sum, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: ==
+          ID: order
+          Constant: int, 2
+        For: 
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          BinaryOp: <
+            ID: i
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+              ID: len
+          UnaryOp: p++
+            ID: i
+          Compound: 
+            Assignment: =
+              ID: sum
+              Constant: int, 0
+            Assignment: +=
+              ID: sum
+              BinaryOp: *
+                ArrayRef: 
+                  ID: qlp_coeff
+                  Constant: int, 1
+                ArrayRef: 
+                  ID: data
+                  BinaryOp: -
+                    ID: i
+                    Constant: int, 2
+            Assignment: +=
+              ID: sum
+              BinaryOp: *
+                ArrayRef: 
+                  ID: qlp_coeff
+                  Constant: int, 0
+                ArrayRef: 
+                  ID: data
+                  BinaryOp: -
+                    ID: i
+                    Constant: int, 1
+            Assignment: =
+              ArrayRef: 
+                ID: residual
+                ID: i
+              BinaryOp: -
+                ArrayRef: 
+                  ID: data
+                  ID: i
+                BinaryOp: >>
+                  ID: sum
+                  ID: lp
+        For: 
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          BinaryOp: <
+            ID: i
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+              ID: len
+          UnaryOp: p++
+            ID: i
+          Assignment: =
+            ArrayRef: 
+              ID: residual
+              ID: i
+            BinaryOp: -
+              ArrayRef: 
+                ID: data
+                ID: i
+              BinaryOp: >>
+                BinaryOp: *
+                  ArrayRef: 
+                    ID: qlp_coeff
+                    Constant: int, 0
+                  ArrayRef: 
+                    ID: data
+                    BinaryOp: -
+                      ID: i
+                      Constant: int, 1
+                ID: lp

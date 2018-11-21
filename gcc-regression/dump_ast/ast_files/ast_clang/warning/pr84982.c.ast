@@ -1,0 +1,149 @@
+c_files/pr84982.c:13:16: warning: unknown attribute 'noipa' ignored [-Wunknown-attributes]
+__attribute__((noipa)) void
+               ^
+c_files/pr84982.c:20:16: warning: unknown attribute 'noipa' ignored [-Wunknown-attributes]
+__attribute__((noipa)) void
+               ^
+2 warnings generated.
+TranslationUnitDecl 0x7f98c28264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f98c2826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f98c2826740 '__int128'
+|-TypedefDecl 0x7f98c2826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f98c2826760 'unsigned __int128'
+|-TypedefDecl 0x7f98c2826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f98c2826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f98c2826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f98c2826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f98c2826dc0 'char *'
+|   `-BuiltinType 0x7f98c2826560 'char'
+|-TypedefDecl 0x7f98c28270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f98c2827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f98c2826ee0 'struct __va_list_tag'
+|     `-Record 0x7f98c2826e58 '__va_list_tag'
+|-RecordDecl 0x7f98c2827120 <c_files/pr84982.c:11:1, col:29> col:8 struct S definition
+| |-FieldDecl 0x7f98c2878400 <line:6:14, line:11:17> col:17 referenced a '_Bool'
+| |-FieldDecl 0x7f98c2878458 <line:6:14, line:11:20> col:20 referenced b '_Bool'
+| |-FieldDecl 0x7f98c28784b0 <line:6:14, line:11:23> col:23 referenced c '_Bool'
+| `-FieldDecl 0x7f98c2878508 <line:6:14, line:11:26> col:26 referenced d '_Bool'
+|-FunctionDecl 0x7f98c2878650 <line:13:1, line:18:1> line:14:1 used bar 'void (_Bool *)'
+| |-ParmVarDecl 0x7f98c2878590 <line:6:14, line:14:12> col:12 used x '_Bool *'
+| `-CompoundStmt 0x7f98c2878c80 <line:15:1, line:18:1>
+|   `-IfStmt 0x7f98c2878c48 <line:16:3, line:17:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f98c2878a70 <line:16:7, col:36> 'int' '||'
+|     | |-BinaryOperator 0x7f98c2878990 <col:7, col:28> 'int' '||'
+|     | | |-BinaryOperator 0x7f98c28788a8 <col:7, col:19> 'int' '||'
+|     | | | |-ImplicitCastExpr 0x7f98c2878890 <col:7, col:10> 'int' <IntegralCast>
+|     | | | | `-ImplicitCastExpr 0x7f98c2878878 <col:7, col:10> '_Bool' <LValueToRValue>
+|     | | | |   `-ArraySubscriptExpr 0x7f98c2878790 <col:7, col:10> '_Bool' lvalue
+|     | | | |     |-ImplicitCastExpr 0x7f98c2878778 <col:7> '_Bool *' <LValueToRValue>
+|     | | | |     | `-DeclRefExpr 0x7f98c2878730 <col:7> '_Bool *' lvalue ParmVar 0x7f98c2878590 'x' '_Bool *'
+|     | | | |     `-IntegerLiteral 0x7f98c2878758 <col:9> 'int' 0
+|     | | | `-UnaryOperator 0x7f98c2878858 <col:15, col:19> 'int' prefix '!'
+|     | | |   `-ImplicitCastExpr 0x7f98c2878840 <col:16, col:19> '_Bool' <LValueToRValue>
+|     | | |     `-ArraySubscriptExpr 0x7f98c2878818 <col:16, col:19> '_Bool' lvalue
+|     | | |       |-ImplicitCastExpr 0x7f98c2878800 <col:16> '_Bool *' <LValueToRValue>
+|     | | |       | `-DeclRefExpr 0x7f98c28787b8 <col:16> '_Bool *' lvalue ParmVar 0x7f98c2878590 'x' '_Bool *'
+|     | | |       `-IntegerLiteral 0x7f98c28787e0 <col:18> 'int' 1
+|     | | `-UnaryOperator 0x7f98c2878970 <col:24, col:28> 'int' prefix '!'
+|     | |   `-ImplicitCastExpr 0x7f98c2878958 <col:25, col:28> '_Bool' <LValueToRValue>
+|     | |     `-ArraySubscriptExpr 0x7f98c2878930 <col:25, col:28> '_Bool' lvalue
+|     | |       |-ImplicitCastExpr 0x7f98c2878918 <col:25> '_Bool *' <LValueToRValue>
+|     | |       | `-DeclRefExpr 0x7f98c28788d0 <col:25> '_Bool *' lvalue ParmVar 0x7f98c2878590 'x' '_Bool *'
+|     | |       `-IntegerLiteral 0x7f98c28788f8 <col:27> 'int' 2
+|     | `-ImplicitCastExpr 0x7f98c2878a58 <col:33, col:36> 'int' <IntegralCast>
+|     |   `-ImplicitCastExpr 0x7f98c2878a40 <col:33, col:36> '_Bool' <LValueToRValue>
+|     |     `-ArraySubscriptExpr 0x7f98c2878a18 <col:33, col:36> '_Bool' lvalue
+|     |       |-ImplicitCastExpr 0x7f98c2878a00 <col:33> '_Bool *' <LValueToRValue>
+|     |       | `-DeclRefExpr 0x7f98c28789b8 <col:33> '_Bool *' lvalue ParmVar 0x7f98c2878590 'x' '_Bool *'
+|     |       `-IntegerLiteral 0x7f98c28789e0 <col:35> 'int' 3
+|     |-CallExpr 0x7f98c2878c20 <line:17:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7f98c2878c08 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7f98c2878bb0 <col:5> '<builtin fn type>' Function 0x7f98c2878ad0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f98c2878ad0 <col:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7f98c2878b68 <col:5> Implicit
+|-FunctionDecl 0x7f98c2878e50 <line:20:1, line:29:1> line:21:1 used foo 'void (struct S *)'
+| |-ParmVarDecl 0x7f98c2878d50 <col:6, col:16> col:16 used x 'struct S *'
+| `-CompoundStmt 0x7f98c287a678 <line:22:1, line:29:1>
+|   |-DeclStmt 0x7f98c2878fc8 <line:6:14, line:23:12>
+|   | `-VarDecl 0x7f98c2878f68 <line:6:14, line:23:11> col:8 used a '_Bool [4]'
+|   |-BinaryOperator 0x7f98c2879130 <line:24:3, col:14> '_Bool' '='
+|   | |-ArraySubscriptExpr 0x7f98c2879040 <col:3, col:6> '_Bool' lvalue
+|   | | |-ImplicitCastExpr 0x7f98c2879028 <col:3> '_Bool *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f98c2878fe0 <col:3> '_Bool [4]' lvalue Var 0x7f98c2878f68 'a' '_Bool [4]'
+|   | | `-IntegerLiteral 0x7f98c2879008 <col:5> 'int' 0
+|   | `-ImplicitCastExpr 0x7f98c2879118 <col:10, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-UnaryOperator 0x7f98c28790f8 <col:10, col:14> 'int' prefix '!'
+|   |     `-ImplicitCastExpr 0x7f98c28790e0 <col:11, col:14> '_Bool' <LValueToRValue>
+|   |       `-MemberExpr 0x7f98c28790a8 <col:11, col:14> '_Bool' lvalue ->a 0x7f98c2878400
+|   |         `-ImplicitCastExpr 0x7f98c2879090 <col:11> 'struct S *' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f98c2879068 <col:11> 'struct S *' lvalue ParmVar 0x7f98c2878d50 'x' 'struct S *'
+|   |-BinaryOperator 0x7f98c28792a8 <line:25:3, col:14> '_Bool' '='
+|   | |-ArraySubscriptExpr 0x7f98c28791b8 <col:3, col:6> '_Bool' lvalue
+|   | | |-ImplicitCastExpr 0x7f98c28791a0 <col:3> '_Bool *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f98c2879158 <col:3> '_Bool [4]' lvalue Var 0x7f98c2878f68 'a' '_Bool [4]'
+|   | | `-IntegerLiteral 0x7f98c2879180 <col:5> 'int' 1
+|   | `-ImplicitCastExpr 0x7f98c2879290 <col:10, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-UnaryOperator 0x7f98c2879270 <col:10, col:14> 'int' prefix '!'
+|   |     `-ImplicitCastExpr 0x7f98c2879258 <col:11, col:14> '_Bool' <LValueToRValue>
+|   |       `-MemberExpr 0x7f98c2879220 <col:11, col:14> '_Bool' lvalue ->b 0x7f98c2878458
+|   |         `-ImplicitCastExpr 0x7f98c2879208 <col:11> 'struct S *' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f98c28791e0 <col:11> 'struct S *' lvalue ParmVar 0x7f98c2878d50 'x' 'struct S *'
+|   |-BinaryOperator 0x7f98c287a400 <line:26:3, col:13> '_Bool' '='
+|   | |-ArraySubscriptExpr 0x7f98c2879330 <col:3, col:6> '_Bool' lvalue
+|   | | |-ImplicitCastExpr 0x7f98c2879318 <col:3> '_Bool *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f98c28792d0 <col:3> '_Bool [4]' lvalue Var 0x7f98c2878f68 'a' '_Bool [4]'
+|   | | `-IntegerLiteral 0x7f98c28792f8 <col:5> 'int' 2
+|   | `-ImplicitCastExpr 0x7f98c28793d0 <col:10, col:13> '_Bool' <LValueToRValue>
+|   |   `-MemberExpr 0x7f98c2879398 <col:10, col:13> '_Bool' lvalue ->c 0x7f98c28784b0
+|   |     `-ImplicitCastExpr 0x7f98c2879380 <col:10> 'struct S *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f98c2879358 <col:10> 'struct S *' lvalue ParmVar 0x7f98c2878d50 'x' 'struct S *'
+|   |-BinaryOperator 0x7f98c287a578 <line:27:3, col:14> '_Bool' '='
+|   | |-ArraySubscriptExpr 0x7f98c287a488 <col:3, col:6> '_Bool' lvalue
+|   | | |-ImplicitCastExpr 0x7f98c287a470 <col:3> '_Bool *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f98c287a428 <col:3> '_Bool [4]' lvalue Var 0x7f98c2878f68 'a' '_Bool [4]'
+|   | | `-IntegerLiteral 0x7f98c287a450 <col:5> 'int' 3
+|   | `-ImplicitCastExpr 0x7f98c287a560 <col:10, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-UnaryOperator 0x7f98c287a540 <col:10, col:14> 'int' prefix '!'
+|   |     `-ImplicitCastExpr 0x7f98c287a528 <col:11, col:14> '_Bool' <LValueToRValue>
+|   |       `-MemberExpr 0x7f98c287a4f0 <col:11, col:14> '_Bool' lvalue ->d 0x7f98c2878508
+|   |         `-ImplicitCastExpr 0x7f98c287a4d8 <col:11> 'struct S *' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f98c287a4b0 <col:11> 'struct S *' lvalue ParmVar 0x7f98c2878d50 'x' 'struct S *'
+|   `-CallExpr 0x7f98c287a630 <line:28:3, col:9> 'void'
+|     |-ImplicitCastExpr 0x7f98c287a618 <col:3> 'void (*)(_Bool *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f98c287a5a0 <col:3> 'void (_Bool *)' Function 0x7f98c2878650 'bar' 'void (_Bool *)'
+|     `-ImplicitCastExpr 0x7f98c287a660 <col:8> '_Bool *' <ArrayToPointerDecay>
+|       `-DeclRefExpr 0x7f98c287a5c8 <col:8> '_Bool [4]' lvalue Var 0x7f98c2878f68 'a' '_Bool [4]'
+`-FunctionDecl 0x7f98c287a710 <line:31:1, line:38:1> line:32:1 main 'int ()'
+  `-CompoundStmt 0x7f98c287ace8 <line:33:1, line:38:1>
+    |-DeclStmt 0x7f98c287a828 <line:34:3, col:13>
+    | `-VarDecl 0x7f98c287a7c8 <col:3, col:12> col:12 used s 'struct S':'struct S'
+    |-BinaryOperator 0x7f98c287a8d8 <line:35:3, line:7:14> '_Bool' '='
+    | |-MemberExpr 0x7f98c287a868 <line:35:3, col:5> '_Bool' lvalue .a 0x7f98c2878400
+    | | `-DeclRefExpr 0x7f98c287a840 <col:3> 'struct S':'struct S' lvalue Var 0x7f98c287a7c8 's' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7f98c287a8c0 <line:7:14> '_Bool' <IntegralToBoolean>
+    |   `-IntegerLiteral 0x7f98c287a8a0 <col:14> 'int' 1
+    |-BinaryOperator 0x7f98c287a9f8 <line:35:15, line:8:15> '_Bool' '='
+    | |-MemberExpr 0x7f98c287a988 <line:35:15, col:17> '_Bool' lvalue .b 0x7f98c2878458
+    | | `-DeclRefExpr 0x7f98c287a960 <col:15> 'struct S':'struct S' lvalue Var 0x7f98c287a7c8 's' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7f98c287a9e0 <line:8:15> '_Bool' <IntegralToBoolean>
+    |   `-IntegerLiteral 0x7f98c287a9c0 <col:15> 'int' 0
+    |-BinaryOperator 0x7f98c287aab8 <line:35:28, line:7:14> '_Bool' '='
+    | |-MemberExpr 0x7f98c287aa48 <line:35:28, col:30> '_Bool' lvalue .c 0x7f98c28784b0
+    | | `-DeclRefExpr 0x7f98c287aa20 <col:28> 'struct S':'struct S' lvalue Var 0x7f98c287a7c8 's' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7f98c287aaa0 <line:7:14> '_Bool' <IntegralToBoolean>
+    |   `-IntegerLiteral 0x7f98c287aa80 <col:14> 'int' 1
+    |-BinaryOperator 0x7f98c287ab78 <line:35:40, line:7:14> '_Bool' '='
+    | |-MemberExpr 0x7f98c287ab08 <line:35:40, col:42> '_Bool' lvalue .d 0x7f98c2878508
+    | | `-DeclRefExpr 0x7f98c287aae0 <col:40> 'struct S':'struct S' lvalue Var 0x7f98c287a7c8 's' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7f98c287ab60 <line:7:14> '_Bool' <IntegralToBoolean>
+    |   `-IntegerLiteral 0x7f98c287ab40 <col:14> 'int' 1
+    |-CallExpr 0x7f98c287ac80 <line:36:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f98c287ac68 <col:3> 'void (*)(struct S *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f98c287aba0 <col:3> 'void (struct S *)' Function 0x7f98c2878e50 'foo' 'void (struct S *)'
+    | `-UnaryOperator 0x7f98c287abf0 <col:8, col:9> 'struct S *' prefix '&'
+    |   `-DeclRefExpr 0x7f98c287abc8 <col:9> 'struct S':'struct S' lvalue Var 0x7f98c287a7c8 's' 'struct S':'struct S'
+    `-ReturnStmt 0x7f98c287acd0 <line:37:3, col:10>
+      `-IntegerLiteral 0x7f98c287acb0 <col:10> 'int' 0

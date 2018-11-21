@@ -1,0 +1,46 @@
+c_files/pr68657-1.c:15:10: warning: implicit conversion from 'float' to 'int' changes value from 3.0999999 to 3 [-Wliteral-conversion]
+  return 3.1f;  /* { dg-error "conversion from .float. to .int. changes value" } */
+  ~~~~~~ ^~~~
+1 warning generated.
+TranslationUnitDecl 0x7ffe410264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffe41026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffe41026740 '__int128'
+|-TypedefDecl 0x7ffe41026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffe41026760 'unsigned __int128'
+|-TypedefDecl 0x7ffe41026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffe41026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffe41026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffe41026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffe41026dc0 'char *'
+|   `-BuiltinType 0x7ffe41026560 'char'
+|-TypedefDecl 0x7ffe410270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffe41027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffe41026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffe41026e58 '__va_list_tag'
+|-FunctionDecl 0x7ffe41825a00 <c_files/pr68657-1.c:5:1, line:10:1> line:6:1 f1 'void (void)'
+| `-CompoundStmt 0x7ffe41825c38 <line:7:1, line:10:1>
+|   |-DeclStmt 0x7ffe41825ba8 <line:8:3, col:22>
+|   | `-VarDecl 0x7ffe41825af0 <col:3, col:21> col:16 used a 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7ffe41825b90 <col:20, col:21> 'unsigned int' <IntegralCast>
+|   |     `-UnaryOperator 0x7ffe41825b70 <col:20, col:21> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x7ffe41825b50 <col:21> 'int' 5
+|   `-CStyleCastExpr 0x7ffe41825c10 <line:9:3, col:10> 'void' <ToVoid>
+|     `-ImplicitCastExpr 0x7ffe41825bf8 <col:10> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7ffe41825bc0 <col:10> 'unsigned int' lvalue Var 0x7ffe41825af0 'a' 'unsigned int'
+|-FunctionDecl 0x7ffe41825d28 <line:12:1, line:16:1> line:13:1 f2 'int (void)'
+| `-CompoundStmt 0x7ffe418261c8 <line:14:1, line:16:1>
+|   `-ReturnStmt 0x7ffe418261b0 <line:15:3, col:10>
+|     `-ImplicitCastExpr 0x7ffe41825de0 <col:10> 'int' <FloatingToIntegral>
+|       `-FloatingLiteral 0x7ffe41825dc0 <col:10> 'float' 3.100000e+00
+|-FunctionDecl 0x7ffe418262c8 <line:18:1, col:15> col:5 used f3 'int (char *)'
+| `-ParmVarDecl 0x7ffe41826200 <col:9, col:14> col:15 'char *'
+`-FunctionDecl 0x7ffe41826400 <line:20:1, line:25:1> line:21:1 f4 'int (void)'
+  `-CompoundStmt 0x7ffe41826680 <line:22:1, line:25:1>
+    |-DeclStmt 0x7ffe41826578 <line:23:3, col:19>
+    | `-VarDecl 0x7ffe41826518 <col:3, col:18> col:8 used buf 'char [131072]'
+    `-ReturnStmt 0x7ffe41826668 <line:24:3, col:17>
+      `-CallExpr 0x7ffe41826620 <col:10, col:17> 'int'
+        |-ImplicitCastExpr 0x7ffe41826608 <col:10> 'int (*)(char *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7ffe41826590 <col:10> 'int (char *)' Function 0x7ffe418262c8 'f3' 'int (char *)'
+        `-ImplicitCastExpr 0x7ffe41826650 <col:14> 'char *' <ArrayToPointerDecay>
+          `-DeclRefExpr 0x7ffe418265b8 <col:14> 'char [131072]' lvalue Var 0x7ffe41826518 'buf' 'char [131072]'

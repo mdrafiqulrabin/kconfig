@@ -1,0 +1,38 @@
+c_files/pr66633-1.c:11:23: error: function definition is not allowed here
+  auto int bar (void) { return i; }
+                      ^
+c_files/pr66633-1.c:13:10: error: use of undeclared identifier 'bar'; did you mean 'baz'?
+    baz (bar);
+         ^~~
+         baz
+c_files/pr66633-1.c:5:6: note: 'baz' declared here
+void baz (int (*) ());
+     ^
+2 errors generated.
+TranslationUnitDecl 0x7ff8bd0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff8bd026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff8bd026740 '__int128'
+|-TypedefDecl 0x7ff8bd026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff8bd026760 'unsigned __int128'
+|-TypedefDecl 0x7ff8bd026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff8bd026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff8bd026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff8bd026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff8bd026dc0 'char *'
+|   `-BuiltinType 0x7ff8bd026560 'char'
+|-TypedefDecl 0x7ff8bd0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff8bd027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff8bd026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff8bd026e58 '__va_list_tag'
+|-FunctionDecl 0x7ff8bd825b40 <c_files/pr66633-1.c:5:1, col:21> col:6 used baz 'void (int (*)())'
+| `-ParmVarDecl 0x7ff8bd825a38 <col:11, col:20> col:17 'int (*)()'
+`-FunctionDecl 0x7ff8bd825ce0 <line:7:1, line:14:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7ff8bd826010 <line:9:1, line:14:1>
+    |-DeclStmt 0x7ff8bd825df0 <line:10:3, col:8>
+    | `-VarDecl 0x7ff8bd825d90 <col:3, col:7> col:7 i 'int'
+    `-CallExpr 0x7ff8bd825fb0 <line:13:5, col:13> 'void'
+      |-ImplicitCastExpr 0x7ff8bd825f98 <col:5> 'void (*)(int (*)())' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff8bd825e78 <col:5> 'void (int (*)())' Function 0x7ff8bd825b40 'baz' 'void (int (*)())'
+      `-ImplicitCastExpr 0x7ff8bd825ff8 <col:10> 'int (*)()' <BitCast>
+        `-ImplicitCastExpr 0x7ff8bd825fe0 <col:10> 'void (*)(int (*)())' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7ff8bd825f70 <col:10> 'void (int (*)())' Function 0x7ff8bd825b40 'baz' 'void (int (*)())'

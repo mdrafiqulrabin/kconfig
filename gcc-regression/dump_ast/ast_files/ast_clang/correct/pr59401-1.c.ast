@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fc5828264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc582826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc582826740 '__int128'
+|-TypedefDecl 0x7fc582826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc582826760 'unsigned __int128'
+|-TypedefDecl 0x7fc582826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc582826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc582826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc582826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc582826dc0 'char *'
+|   `-BuiltinType 0x7fc582826560 'char'
+|-TypedefDecl 0x7fc5828270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc582827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc582826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc582826e58 '__va_list_tag'
+|-RecordDecl 0x7fc582827120 <c_files/pr59401-1.c:9:9, line:12:1> line:9:9 struct definition
+| |-FieldDecl 0x7fc583025a00 <line:11:3, col:7> col:7 referenced x 'int'
+| |-FieldDecl 0x7fc583025a60 <col:3, col:10> col:10 y 'int'
+| |-FieldDecl 0x7fc583025ac0 <col:3, col:13> col:13 z 'int'
+| `-FieldDecl 0x7fc583025b20 <col:3, col:16> col:16 referenced w 'int'
+|-TypedefDecl 0x7fc583025bc0 <line:9:1, line:12:3> col:3 referenced tcb_t 'struct tcb_t':'tcb_t'
+| `-ElaboratedType 0x7fc583025b70 'struct tcb_t' sugar
+|   `-RecordType 0x7fc5828271b0 'tcb_t'
+|     `-Record 0x7fc582827120 ''
+|-FunctionDecl 0x7fc583025e58 <line:14:1, line:19:1> line:15:1 test_00 'int (int, tcb_t *)'
+| |-ParmVarDecl 0x7fc583025c48 <col:10, col:14> col:14 used a 'int'
+| |-ParmVarDecl 0x7fc583025d38 <col:17, col:24> col:24 used b 'tcb_t *'
+| `-CompoundStmt 0x7fc5830264f8 <line:16:1, line:19:1>
+|   |-DeclStmt 0x7fc583026380 <line:17:3, col:65>
+|   | `-VarDecl 0x7fc583025f50 <col:3, col:64> col:10 used tcb 'tcb_t *' cinit
+|   |   `-ConditionalOperator 0x7fc583026350 <col:16, col:64> 'tcb_t *'
+|   |     |-ParenExpr 0x7fc583026038 <col:16, col:22> 'int'
+|   |     | `-BinaryOperator 0x7fc583026010 <col:17, col:21> 'int' '&'
+|   |     |   |-ImplicitCastExpr 0x7fc583025ff8 <col:17> 'int' <LValueToRValue>
+|   |     |   | `-DeclRefExpr 0x7fc583025fb0 <col:17> 'int' lvalue ParmVar 0x7fc583025c48 'a' 'int'
+|   |     |   `-IntegerLiteral 0x7fc583025fd8 <col:21> 'int' 5
+|   |     |-CStyleCastExpr 0x7fc583026228 <col:26, col:60> 'tcb_t *' <BitCast>
+|   |     | `-CallExpr 0x7fc5830261f0 <col:34, col:60> 'void *'
+|   |     |   `-ImplicitCastExpr 0x7fc5830261d8 <col:34> 'void *(*)(void)' <BuiltinFnToFnPtr>
+|   |     |     `-DeclRefExpr 0x7fc583026180 <col:34> '<builtin fn type>' Function 0x7fc583026090 '__builtin_thread_pointer' 'void *(void)'
+|   |     `-ImplicitCastExpr 0x7fc583026278 <col:64> 'tcb_t *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fc583026250 <col:64> 'tcb_t *' lvalue ParmVar 0x7fc583025d38 'b' 'tcb_t *'
+|   `-ReturnStmt 0x7fc5830264e0 <line:18:3, col:24>
+|     `-BinaryOperator 0x7fc5830264b8 <col:10, col:24> 'int' '+'
+|       |-ImplicitCastExpr 0x7fc583026488 <col:10, col:15> 'int' <LValueToRValue>
+|       | `-MemberExpr 0x7fc5830263d8 <col:10, col:15> 'int' lvalue ->w 0x7fc583025b20
+|       |   `-ImplicitCastExpr 0x7fc5830263c0 <col:10> 'tcb_t *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fc583026398 <col:10> 'tcb_t *' lvalue Var 0x7fc583025f50 'tcb' 'tcb_t *'
+|       `-ImplicitCastExpr 0x7fc5830264a0 <col:19, col:24> 'int' <LValueToRValue>
+|         `-MemberExpr 0x7fc583026450 <col:19, col:24> 'int' lvalue ->x 0x7fc583025a00
+|           `-ImplicitCastExpr 0x7fc583026438 <col:19> 'tcb_t *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fc583026410 <col:19> 'tcb_t *' lvalue Var 0x7fc583025f50 'tcb' 'tcb_t *'
+`-FunctionDecl 0x7fc583026090 <line:17:34> col:34 implicit used __builtin_thread_pointer 'void *(void)' extern
+  |-NoThrowAttr 0x7fc583026128 <col:34> Implicit
+  `-ConstAttr 0x7fc583026170 <col:34> Implicit

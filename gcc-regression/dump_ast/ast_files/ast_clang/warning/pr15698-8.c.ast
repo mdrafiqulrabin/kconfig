@@ -1,0 +1,31 @@
+c_files/pr15698-8.c:10:30: warning: control reaches end of non-void function [-Wreturn-type]
+int g() { int f(int (*)[2]); } /* { dg-error "prototype declaration" } */
+                             ^
+1 warning generated.
+TranslationUnitDecl 0x7fbbdd8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbbdd826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbbdd826740 '__int128'
+|-TypedefDecl 0x7fbbdd826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbbdd826760 'unsigned __int128'
+|-TypedefDecl 0x7fbbdd826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbbdd826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbbdd826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbbdd826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbbdd826dc0 'char *'
+|   `-BuiltinType 0x7fbbdd826560 'char'
+|-TypedefDecl 0x7fbbdd8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbbdd827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbbdd826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbbdd826e58 '__va_list_tag'
+|-FunctionDecl 0x7fbbde025b48 <c_files/pr15698-8.c:9:1, col:16> col:5 f 'int (int (*)[])'
+| `-ParmVarDecl 0x7fbbde025a38 <col:7, col:15> col:13 'int (*)[]'
+|-FunctionDecl 0x7fbbde025c80 <line:10:1, col:30> col:5 g 'int ()'
+| `-CompoundStmt 0x7fbbde026010 <col:9, col:30>
+|   `-DeclStmt 0x7fbbde025ff8 <col:11, col:28>
+|     `-FunctionDecl 0x7fbbde025f48 parent 0x7fbbdd8264d0 prev 0x7fbbde025b48 <col:11, col:27> col:15 f 'int (int (*)[2])'
+|       `-ParmVarDecl 0x7fbbde025e40 <col:17, col:26> col:23 'int (*)[2]'
+`-FunctionDecl 0x7fbbde026258 prev 0x7fbbde025f48 <line:11:1, col:35> col:5 f 'int (int (*)[3])'
+  |-ParmVarDecl 0x7fbbde026150 <col:10, col:20> col:16 a 'int (*)[3]'
+  `-CompoundStmt 0x7fbbde026330 <col:23, col:35>
+    `-ReturnStmt 0x7fbbde026318 <col:25, col:32>
+      `-IntegerLiteral 0x7fbbde0262f8 <col:32> 'int' 0

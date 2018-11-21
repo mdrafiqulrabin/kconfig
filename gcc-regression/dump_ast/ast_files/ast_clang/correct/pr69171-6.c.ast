@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fd5dd8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd5dd826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd5dd826740 '__int128'
+|-TypedefDecl 0x7fd5dd826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd5dd826760 'unsigned __int128'
+|-TypedefDecl 0x7fd5dd826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd5dd826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd5dd826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd5dd826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd5dd826dc0 'char *'
+|   `-BuiltinType 0x7fd5dd826560 'char'
+|-TypedefDecl 0x7fd5dd8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd5dd827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd5dd826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd5dd826e58 '__va_list_tag'
+|-TypedefDecl 0x7fd5dd827138 <c_files/pr69171-6.c:4:15, col:40> col:40 referenced uintptr_t 'unsigned long'
+| `-BuiltinType 0x7fd5dd826680 'unsigned long'
+|-VarDecl 0x7fd5dd86f400 <line:6:1, col:12> col:12 used glob1 'int' extern
+`-FunctionDecl 0x7fd5dd86f568 <line:8:1, line:12:1> line:9:1 foo 'double (void)'
+  `-CompoundStmt 0x7fd5dd86f768 <line:10:1, line:12:1>
+    `-ReturnStmt 0x7fd5dd86f750 <line:11:3, col:44>
+      `-CStyleCastExpr 0x7fd5dd86f728 <col:10, col:44> 'double' <IntegralToFloating>
+        `-CStyleCastExpr 0x7fd5dd86f6e8 <col:19, col:44> 'long long' <IntegralCast>
+          `-CStyleCastExpr 0x7fd5dd86f6a8 <col:31, col:44> 'uintptr_t':'unsigned long' <PointerToIntegral>
+            `-UnaryOperator 0x7fd5dd86f678 <col:43, col:44> 'int *' prefix '&'
+              `-DeclRefExpr 0x7fd5dd86f620 <col:44> 'int' lvalue Var 0x7fd5dd86f400 'glob1' 'int'

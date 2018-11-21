@@ -1,0 +1,76 @@
+TranslationUnitDecl 0x7fc0bf8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc0bf826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc0bf826740 '__int128'
+|-TypedefDecl 0x7fc0bf826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc0bf826760 'unsigned __int128'
+|-TypedefDecl 0x7fc0bf826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc0bf826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc0bf826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc0bf826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc0bf826dc0 'char *'
+|   `-BuiltinType 0x7fc0bf826560 'char'
+|-TypedefDecl 0x7fc0bf8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc0bf827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc0bf826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc0bf826e58 '__va_list_tag'
+|-TypedefDecl 0x7fc0bf827138 <c_files/pr81913.c:3:1, col:24> col:24 referenced u8 'unsigned char'
+| `-BuiltinType 0x7fc0bf826620 'unsigned char'
+|-TypedefDecl 0x7fc0bf8271a8 <line:4:1, col:25> col:25 referenced u32 'unsigned int'
+| `-BuiltinType 0x7fc0bf826660 'unsigned int'
+|-FunctionDecl 0x7fc0bf877660 <line:6:1, line:17:1> line:7:1 used b 'u32 (u8, u32, u32)' static
+| |-ParmVarDecl 0x7fc0bf877450 <col:4, col:7> col:7 used d 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fc0bf8774c0 <col:10, col:14> col:14 used e 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fc0bf877530 <col:17, col:21> col:21 used g 'u32':'unsigned int'
+| `-CompoundStmt 0x7fc0bf877a48 <line:8:1, line:17:1>
+|   |-DoStmt 0x7fc0bf8779d0 <line:9:3, line:14:21>
+|   | |-CompoundStmt 0x7fc0bf877898 <line:10:5, line:13:5>
+|   | | |-CompoundAssignOperator 0x7fc0bf877818 <line:11:7, col:16> 'u32':'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|   | | | |-DeclRefExpr 0x7fc0bf877750 <col:7> 'u32':'unsigned int' lvalue ParmVar 0x7fc0bf8774c0 'e' 'u32':'unsigned int'
+|   | | | `-BinaryOperator 0x7fc0bf8777f0 <col:12, col:16> 'unsigned int' '+'
+|   | | |   |-ImplicitCastExpr 0x7fc0bf8777c0 <col:12> 'u32':'unsigned int' <LValueToRValue>
+|   | | |   | `-DeclRefExpr 0x7fc0bf877778 <col:12> 'u32':'unsigned int' lvalue ParmVar 0x7fc0bf877530 'g' 'u32':'unsigned int'
+|   | | |   `-ImplicitCastExpr 0x7fc0bf8777d8 <col:16> 'unsigned int' <IntegralCast>
+|   | | |     `-IntegerLiteral 0x7fc0bf8777a0 <col:16> 'int' 1
+|   | | `-UnaryOperator 0x7fc0bf877878 <line:12:7, col:8> 'u8':'unsigned char' postfix '--'
+|   | |   `-DeclRefExpr 0x7fc0bf877850 <col:7> 'u8':'unsigned char' lvalue ParmVar 0x7fc0bf877450 'd' 'u8':'unsigned char'
+|   | `-BinaryOperator 0x7fc0bf8779a8 <line:14:10, col:20> 'int' '>='
+|   |   |-ImplicitCastExpr 0x7fc0bf877978 <col:10> 'int' <IntegralCast>
+|   |   | `-ImplicitCastExpr 0x7fc0bf877960 <col:10> 'u8':'unsigned char' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fc0bf8778c0 <col:10> 'u8':'unsigned char' lvalue ParmVar 0x7fc0bf877450 'd' 'u8':'unsigned char'
+|   |   `-ImplicitCastExpr 0x7fc0bf877990 <col:15, col:20> 'int' <IntegralCast>
+|   |     `-CStyleCastExpr 0x7fc0bf877938 <col:15, col:20> 'u8':'unsigned char' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x7fc0bf877920 <col:20> 'u32':'unsigned int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fc0bf8778e8 <col:20> 'u32':'unsigned int' lvalue ParmVar 0x7fc0bf8774c0 'e' 'u32':'unsigned int'
+|   `-ReturnStmt 0x7fc0bf877a30 <line:16:3, col:10>
+|     `-ImplicitCastExpr 0x7fc0bf877a18 <col:10> 'u32':'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc0bf8779f0 <col:10> 'u32':'unsigned int' lvalue ParmVar 0x7fc0bf8774c0 'e' 'u32':'unsigned int'
+|-FunctionDecl 0x7fc0bf877b38 <line:19:1, line:26:1> line:20:1 main 'int (void)'
+| `-CompoundStmt 0x7fc0bf8780e8 <line:21:1, line:26:1>
+|   |-DeclStmt 0x7fc0bf877e28 <line:22:3, col:38>
+|   | `-VarDecl 0x7fc0bf877c08 <col:3, col:37> col:7 used x 'u32':'unsigned int' cinit
+|   |   `-CallExpr 0x7fc0bf877da0 <col:11, col:37> 'u32':'unsigned int'
+|   |     |-ImplicitCastExpr 0x7fc0bf877d88 <col:11> 'u32 (*)(u8, u32, u32)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fc0bf877c68 <col:11> 'u32 (u8, u32, u32)' Function 0x7fc0bf877660 'b' 'u32 (u8, u32, u32)'
+|   |     |-ImplicitCastExpr 0x7fc0bf877de0 <col:14> 'u8':'unsigned char' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc0bf877c90 <col:14> 'int' 1
+|   |     |-ImplicitCastExpr 0x7fc0bf877df8 <col:17, col:18> 'u32':'unsigned int' <IntegralCast>
+|   |     | `-UnaryOperator 0x7fc0bf877cd0 <col:17, col:18> 'int' prefix '-'
+|   |     |   `-IntegerLiteral 0x7fc0bf877cb0 <col:18> 'int' 3639044
+|   |     `-ImplicitCastExpr 0x7fc0bf877e10 <col:28, col:29> 'u32':'unsigned int' <IntegralCast>
+|   |       `-UnaryOperator 0x7fc0bf877d10 <col:28, col:29> 'int' prefix '~'
+|   |         `-IntegerLiteral 0x7fc0bf877cf0 <col:29> 'int' 12215548
+|   |-IfStmt 0x7fc0bf878078 <line:23:3, line:24:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc0bf877ea0 <line:23:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fc0bf877e88 <col:7> 'u32':'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc0bf877e40 <col:7> 'u32':'unsigned int' lvalue Var 0x7fc0bf877c08 'x' 'u32':'unsigned int'
+|   | | `-IntegerLiteral 0x7fc0bf877e68 <col:12> 'unsigned int' 3643904208
+|   | |-CallExpr 0x7fc0bf878050 <line:24:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fc0bf878038 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fc0bf877fe0 <col:5> '<builtin fn type>' Function 0x7fc0bf877f00 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fc0bf8780d0 <line:25:3, col:10>
+|     `-IntegerLiteral 0x7fc0bf8780b0 <col:10> 'int' 0
+`-FunctionDecl 0x7fc0bf877f00 <line:24:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fc0bf877f98 <col:5> Implicit

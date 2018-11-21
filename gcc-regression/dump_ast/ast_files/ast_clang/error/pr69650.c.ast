@@ -1,0 +1,23 @@
+c_files/pr69650.c:4:16: error: invalid line marker flag '2': cannot pop empty include stack
+# 9 "somefile" 2 /* { dg-warning "linemarker ignored due to incorrect nesting" } */
+               ^
+c_files/pr69650.c:5:1: error: unknown type name 'not_a_type'
+not_a_type a; /* { dg-error "unknown type" } */
+^
+2 errors generated.
+TranslationUnitDecl 0x7ff0708264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff070826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff070826740 '__int128'
+|-TypedefDecl 0x7ff070826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff070826760 'unsigned __int128'
+|-TypedefDecl 0x7ff070826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff070826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff070826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff070826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff070826dc0 'char *'
+|   `-BuiltinType 0x7ff070826560 'char'
+|-TypedefDecl 0x7ff0708270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff070827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff070826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff070826e58 '__va_list_tag'
+`-VarDecl 0x7ff070827150 <c_files/pr69650.c:5:1, col:12> col:12 invalid a 'int'

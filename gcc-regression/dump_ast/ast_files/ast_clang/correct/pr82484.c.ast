@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7febab8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7febab826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7febab826740 '__int128'
+|-TypedefDecl 0x7febab826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7febab826760 'unsigned __int128'
+|-TypedefDecl 0x7febab826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7febab826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7febab826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7febab826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7febab826dc0 'char *'
+|   `-BuiltinType 0x7febab826560 'char'
+|-TypedefDecl 0x7febab8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7febab827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7febab826ee0 'struct __va_list_tag'
+|     `-Record 0x7febab826e58 '__va_list_tag'
+|-FunctionDecl 0x7febab86c828 <c_files/pr82484.c:4:1, col:27> col:6 used foo 'void (volatile int *)'
+| `-ParmVarDecl 0x7febab827160 <col:10, col:24> col:24 ptr 'volatile int *'
+`-FunctionDecl 0x7febab86ca20 <line:5:1, col:36> col:6 a 'void (volatile int)'
+  |-ParmVarDecl 0x7febab86c920 <col:9, col:22> col:22 used b 'volatile int'
+  `-CompoundStmt 0x7febab86cba0 <col:25, col:36>
+    `-CallExpr 0x7febab86cb70 <col:27, col:33> 'void'
+      |-ImplicitCastExpr 0x7febab86cb58 <col:27> 'void (*)(volatile int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7febab86cac0 <col:27> 'void (volatile int *)' Function 0x7febab86c828 'foo' 'void (volatile int *)'
+      `-UnaryOperator 0x7febab86cb10 <col:31, col:32> 'volatile int *' prefix '&'
+        `-DeclRefExpr 0x7febab86cae8 <col:32> 'volatile int' lvalue ParmVar 0x7febab86c920 'b' 'volatile int'

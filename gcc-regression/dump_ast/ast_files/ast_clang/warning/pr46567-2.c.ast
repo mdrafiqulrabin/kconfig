@@ -1,0 +1,40 @@
+c_files/pr46567-2.c:12:16: warning: unknown attribute 'transaction_callable' ignored [-Wunknown-attributes]
+__attribute__((transaction_callable)) void readLoop()
+               ^
+1 warning generated.
+TranslationUnitDecl 0x7fef4b0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fef4b026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fef4b026740 '__int128'
+|-TypedefDecl 0x7fef4b026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fef4b026760 'unsigned __int128'
+|-TypedefDecl 0x7fef4b026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fef4b026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fef4b026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fef4b026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fef4b026dc0 'char *'
+|   `-BuiltinType 0x7fef4b026560 'char'
+|-TypedefDecl 0x7fef4b0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fef4b027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fef4b026ee0 'struct __va_list_tag'
+|     `-Record 0x7fef4b026e58 '__va_list_tag'
+|-FunctionDecl 0x7fef4b06a400 <c_files/pr46567-2.c:4:1, col:11> col:5 used funky 'int ()'
+|-VarDecl 0x7fef4b06a4f0 <line:5:1, col:5> col:5 used global 'int'
+|-FunctionDecl 0x7fef4b06a598 <line:7:1, line:10:1> line:7:6 used SeqfileGetLine 'void ()'
+| `-CompoundStmt 0x7fef4b06a6c8 <line:8:1, line:10:1>
+|   `-CallExpr 0x7fef4b06a6a0 <line:9:3, col:9> 'int'
+|     `-ImplicitCastExpr 0x7fef4b06a688 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fef4b06a630 <col:3> 'int ()' Function 0x7fef4b06a400 'funky' 'int ()'
+`-FunctionDecl 0x7fef4b06a708 <line:12:1, line:18:1> line:12:44 readLoop 'void ()'
+  `-CompoundStmt 0x7fef4b06a918 <line:13:1, line:18:1>
+    |-CallExpr 0x7fef4b06a810 <line:14:2, col:17> 'void'
+    | `-ImplicitCastExpr 0x7fef4b06a7f8 <col:2> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fef4b06a7a0 <col:2> 'void ()' Function 0x7fef4b06a598 'SeqfileGetLine' 'void ()'
+    `-IfStmt 0x7fef4b06a8e0 <line:15:2, line:16:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fef4b06a860 <line:15:6> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fef4b06a838 <col:6> 'int' lvalue Var 0x7fef4b06a4f0 'global' 'int'
+      |-CallExpr 0x7fef4b06a8b8 <line:16:4, col:10> 'int'
+      | `-ImplicitCastExpr 0x7fef4b06a8a0 <col:4> 'int (*)()' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fef4b06a878 <col:4> 'int ()' Function 0x7fef4b06a400 'funky' 'int ()'
+      `-<<<NULL>>>

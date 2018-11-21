@@ -1,0 +1,69 @@
+TranslationUnitDecl 0x7fdc288078d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdc28807e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdc28807b40 '__int128'
+|-TypedefDecl 0x7fdc28807e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdc28807b60 'unsigned __int128'
+|-TypedefDecl 0x7fdc28808168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdc28807f70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdc28807ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdc28808200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdc288081c0 'char *'
+|   `-BuiltinType 0x7fdc28807960 'char'
+|-TypedefDecl 0x7fdc288084c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdc28808470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdc288082e0 'struct __va_list_tag'
+|     `-Record 0x7fdc28808258 '__va_list_tag'
+|-VarDecl 0x7fdc28808560 <c_files/pr64284.c:3:1, col:6> col:6 used a 'int *'
+|-VarDecl 0x7fdc29025a18 <line:4:1, col:5> col:5 used b 'int'
+`-FunctionDecl 0x7fdc29025ad0 <line:5:1, line:21:1> line:6:1 fn1 'int ()'
+  `-CompoundStmt 0x7fdc29026238 <col:7, line:21:1>
+    |-DeclStmt 0x7fdc29025d70 <line:7:5, col:27>
+    | |-EnumDecl 0x7fdc29025b68 <col:5, col:20> col:5
+    | | `-EnumConstantDecl 0x7fdc29025c20 <col:12> col:12 QSTRING 'int'
+    | `-VarDecl 0x7fdc29025cc0 <col:5, col:26> col:22 used c 'enum (anonymous enum at c_files/pr64284.c:7:5)':'enum (anonymous at c_files/pr64284.c:7:5)' cinit
+    |   `-ImplicitCastExpr 0x7fdc29025d40 <col:26> 'enum (anonymous enum at c_files/pr64284.c:7:5)':'enum (anonymous at c_files/pr64284.c:7:5)' <IntegralCast>
+    |     `-IntegerLiteral 0x7fdc29025d20 <col:26> 'int' 0
+    `-WhileStmt 0x7fdc29026218 <line:8:5, line:20:5>
+      |-<<<NULL>>>
+      |-IntegerLiteral 0x7fdc29025d88 <line:8:12> 'int' 1
+      `-CompoundStmt 0x7fdc290261f0 <col:15, line:20:5>
+        |-SwitchStmt 0x7fdc29025e20 <line:9:2, line:18:2>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7fdc29025e08 <line:9:10, col:11> 'int' <LValueToRValue>
+        | | `-UnaryOperator 0x7fdc29025de8 <col:10, col:11> 'int' lvalue prefix '*'
+        | |   `-ImplicitCastExpr 0x7fdc29025dd0 <col:11> 'int *' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fdc29025da8 <col:11> 'int *' lvalue Var 0x7fdc28808560 'a' 'int *'
+        | `-CompoundStmt 0x7fdc29026178 <col:14, line:18:2>
+        |   |-CaseStmt 0x7fdc29025e68 <line:10:4, line:11:8>
+        |   | |-CharacterLiteral 0x7fdc29025e50 <line:10:9> 'int' 39
+        |   | |-<<<NULL>>>
+        |   | `-BinaryOperator 0x7fdc29025f00 <line:11:4, col:8> 'enum (anonymous enum at c_files/pr64284.c:7:5)':'enum (anonymous at c_files/pr64284.c:7:5)' '='
+        |   |   |-DeclRefExpr 0x7fdc29025ea0 <col:4> 'enum (anonymous enum at c_files/pr64284.c:7:5)':'enum (anonymous at c_files/pr64284.c:7:5)' lvalue Var 0x7fdc29025cc0 'c' 'enum (anonymous enum at c_files/pr64284.c:7:5)':'enum (anonymous at c_files/pr64284.c:7:5)'
+        |   |   `-ImplicitCastExpr 0x7fdc29025ee8 <col:8> 'enum (anonymous enum at c_files/pr64284.c:7:5)':'enum (anonymous at c_files/pr64284.c:7:5)' <IntegralCast>
+        |   |     `-IntegerLiteral 0x7fdc29025ec8 <col:8> 'int' 0
+        |   |-DefaultStmt 0x7fdc290260d0 <line:12:4, line:16:15>
+        |   | `-SwitchStmt 0x7fdc29025f80 <line:13:4, line:16:15>
+        |   |   |-<<<NULL>>>
+        |   |   |-<<<NULL>>>
+        |   |   |-ImplicitCastExpr 0x7fdc29025f68 <line:13:12> 'unsigned int' <IntegralCast>
+        |   |   | `-ImplicitCastExpr 0x7fdc29025f50 <col:12> 'enum (anonymous enum at c_files/pr64284.c:7:5)':'enum (anonymous at c_files/pr64284.c:7:5)' <LValueToRValue>
+        |   |   |   `-DeclRefExpr 0x7fdc29025f28 <col:12> 'enum (anonymous enum at c_files/pr64284.c:7:5)':'enum (anonymous at c_files/pr64284.c:7:5)' lvalue Var 0x7fdc29025cc0 'c' 'enum (anonymous enum at c_files/pr64284.c:7:5)':'enum (anonymous at c_files/pr64284.c:7:5)'
+        |   |   `-CaseStmt 0x7fdc29025fd0 <line:14:4, line:16:15>
+        |   |     |-ImplicitCastExpr 0x7fdc290260b8 <line:14:9> 'unsigned int' <IntegralCast>
+        |   |     | `-IntegerLiteral 0x7fdc29025fb0 <col:9> 'int' 0
+        |   |     |-<<<NULL>>>
+        |   |     `-IfStmt 0x7fdc29026080 <line:15:6, line:16:15>
+        |   |       |-<<<NULL>>>
+        |   |       |-<<<NULL>>>
+        |   |       |-ImplicitCastExpr 0x7fdc29026030 <line:15:10> 'int' <LValueToRValue>
+        |   |       | `-DeclRefExpr 0x7fdc29026008 <col:10> 'int' lvalue Var 0x7fdc29025a18 'b' 'int'
+        |   |       |-ReturnStmt 0x7fdc29026068 <line:16:8, col:15>
+        |   |       | `-IntegerLiteral 0x7fdc29026048 <col:15> 'int' 0
+        |   |       `-<<<NULL>>>
+        |   `-BinaryOperator 0x7fdc29026150 <line:17:6, col:10> 'enum (anonymous enum at c_files/pr64284.c:7:5)':'enum (anonymous at c_files/pr64284.c:7:5)' '='
+        |     |-DeclRefExpr 0x7fdc290260f0 <col:6> 'enum (anonymous enum at c_files/pr64284.c:7:5)':'enum (anonymous at c_files/pr64284.c:7:5)' lvalue Var 0x7fdc29025cc0 'c' 'enum (anonymous enum at c_files/pr64284.c:7:5)':'enum (anonymous at c_files/pr64284.c:7:5)'
+        |     `-ImplicitCastExpr 0x7fdc29026138 <col:10> 'enum (anonymous enum at c_files/pr64284.c:7:5)':'enum (anonymous at c_files/pr64284.c:7:5)' <IntegralCast>
+        |       `-IntegerLiteral 0x7fdc29026118 <col:10> 'int' 1
+        `-UnaryOperator 0x7fdc290261d0 <line:19:2, col:3> 'int *' postfix '++'
+          `-DeclRefExpr 0x7fdc290261a8 <col:2> 'int *' lvalue Var 0x7fdc28808560 'a' 'int *'

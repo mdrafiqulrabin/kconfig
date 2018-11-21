@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7f96f98264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f96f9826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f96f9826740 '__int128'
+|-TypedefDecl 0x7f96f9826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f96f9826760 'unsigned __int128'
+|-TypedefDecl 0x7f96f9826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f96f9826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f96f9826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f96f9826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f96f9826dc0 'char *'
+|   `-BuiltinType 0x7f96f9826560 'char'
+|-TypedefDecl 0x7f96f98270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f96f9827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f96f9826ee0 'struct __va_list_tag'
+|     `-Record 0x7f96f9826e58 '__va_list_tag'
+`-FunctionDecl 0x7f96fa025a00 <c_files/pr69032.c:4:1, line:11:1> line:4:6 foo 'void (long long)'
+  |-ParmVarDecl 0x7f96f9827138 <col:11, col:21> col:21 used i 'long long'
+  `-CompoundStmt 0x7f96fa025ce0 <line:5:1, line:11:1>
+    `-WhileStmt 0x7f96fa025cc0 <line:6:4, line:10:6>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f96fa025b78 <line:6:11, col:17> 'int' '!='
+      | |-ImplicitCastExpr 0x7f96fa025b48 <col:11> 'long long' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f96fa025ae0 <col:11> 'long long' lvalue ParmVar 0x7f96f9827138 'i' 'long long'
+      | `-ImplicitCastExpr 0x7f96fa025b60 <col:16, col:17> 'long long' <IntegralCast>
+      |   `-UnaryOperator 0x7f96fa025b28 <col:16, col:17> 'int' prefix '-'
+      |     `-IntegerLiteral 0x7f96fa025b08 <col:17> 'int' 1
+      `-CompoundStmt 0x7f96fa025c98 <line:7:6, line:10:6>
+        |-UnaryOperator 0x7f96fa025bc8 <line:8:2, col:4> 'long long' prefix '++'
+        | `-DeclRefExpr 0x7f96fa025ba0 <col:4> 'long long' lvalue ParmVar 0x7f96f9827138 'i' 'long long'
+        `-GCCAsmStmt 0x7f96fa025c50 <line:9:3, col:14>

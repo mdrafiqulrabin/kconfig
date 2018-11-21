@@ -1,0 +1,107 @@
+c_files/pr41935.c:9:23: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+  struct S { int a; T b[n]; };
+                      ^
+1 error generated.
+TranslationUnitDecl 0x7fb9640264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb964026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb964026740 '__int128'
+|-TypedefDecl 0x7fb964026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb964026760 'unsigned __int128'
+|-TypedefDecl 0x7fb964026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb964026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb964026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb964026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb964026dc0 'char *'
+|   `-BuiltinType 0x7fb964026560 'char'
+|-TypedefDecl 0x7fb9640270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb964027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb964026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb964026e58 '__va_list_tag'
+|-FunctionDecl 0x7fb964077430 <c_files/pr41935.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fb9640774c8 prev 0x7fb964077430 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fb964077758 <line:5:1, line:11:1> line:6:1 used foo 'long (int, int, int)'
+| |-ParmVarDecl 0x7fb964077578 <col:6, col:10> col:10 used n 'int'
+| |-ParmVarDecl 0x7fb9640775f0 <col:13, col:17> col:17 used i 'int'
+| |-ParmVarDecl 0x7fb964077668 <col:20, col:24> col:24 used j 'int'
+| `-CompoundStmt 0x7fb964077d38 <line:7:1, line:11:1>
+|   |-DeclStmt 0x7fb964077948 <line:8:3, col:19>
+|   | `-TypedefDecl 0x7fb9640778f0 <col:3, col:18> col:15 referenced T 'int [n]'
+|   |   `-VariableArrayType 0x7fb964077890 'int [n]' variably_modified  <col:16, col:18> 
+|   |     |-BuiltinType 0x7fb9640265c0 'int'
+|   |     `-ImplicitCastExpr 0x7fb964077870 <col:17> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fb964077848 <col:17> 'int' lvalue ParmVar 0x7fb964077578 'n' 'int'
+|   |-DeclStmt 0x7fb964077bb0 <line:9:3, col:30>
+|   | `-RecordDecl 0x7fb964077960 <col:3, col:29> col:10 invalid struct S definition
+|   |   |-FieldDecl 0x7fb964077a28 <col:14, col:18> col:18 a 'int'
+|   |   `-FieldDecl 0x7fb964077b68 <col:21, col:26> col:23 invalid b 'T [n]'
+|   `-ReturnStmt 0x7fb964077d20 <line:10:3, col:47>
+|     `-ImplicitCastExpr 0x7fb964077d08 <col:10, col:47> 'long' <IntegralCast>
+|       `-OffsetOfExpr 0x7fb964077ca0 <col:10, col:47> 'unsigned long'
+|         |-ImplicitCastExpr 0x7fb964077c70 <col:42> 'int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fb964077c20 <col:42> 'int' lvalue ParmVar 0x7fb9640775f0 'i' 'int'
+|         `-ImplicitCastExpr 0x7fb964077c88 <col:45> 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x7fb964077c48 <col:45> 'int' lvalue ParmVar 0x7fb964077668 'j' 'int'
+`-FunctionDecl 0x7fb964077e38 <line:13:1, line:25:1> line:14:1 main 'int (void)'
+  `-CompoundStmt 0x7fb964079a70 <line:15:1, line:25:1>
+    |-DeclStmt 0x7fb964077fd8 <line:16:3, col:19>
+    | `-TypedefDecl 0x7fb964077f80 <col:3, col:18> col:15 referenced T 'int [5]'
+    |   `-ConstantArrayType 0x7fb964077f20 'int [5]' 5 
+    |     `-BuiltinType 0x7fb9640265c0 'int'
+    |-DeclStmt 0x7fb964078220 <line:17:3, col:30>
+    | `-RecordDecl 0x7fb964077ff0 <col:3, col:29> col:10 struct S definition
+    |   |-FieldDecl 0x7fb9640780b8 <col:14, col:18> col:18 a 'int'
+    |   `-FieldDecl 0x7fb9640781d8 <col:21, col:26> col:23 b 'T [5]'
+    |-IfStmt 0x7fb964079678 <line:18:3, line:20:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb964079568 <line:18:7, line:19:70> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fb964079550 <line:18:7, col:19> 'unsigned long' <IntegralCast>
+    | | | `-CallExpr 0x7fb964078300 <col:7, col:19> 'long'
+    | | |   |-ImplicitCastExpr 0x7fb9640782e8 <col:7> 'long (*)(int, int, int)' <FunctionToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7fb964078238 <col:7> 'long (int, int, int)' Function 0x7fb964077758 'foo' 'long (int, int, int)'
+    | | |   |-IntegerLiteral 0x7fb964078260 <col:12> 'int' 5
+    | | |   |-IntegerLiteral 0x7fb964078280 <col:15> 'int' 2
+    | | |   `-IntegerLiteral 0x7fb9640782a0 <col:18> 'int' 3
+    | | `-BinaryOperator 0x7fb964079528 <line:19:10, col:70> 'unsigned long' '+'
+    | |   |-OffsetOfExpr 0x7fb964078390 <col:10, col:41> 'unsigned long'
+    | |   `-BinaryOperator 0x7fb964079500 <col:45, col:70> 'unsigned long' '*'
+    | |     |-ImplicitCastExpr 0x7fb9640794e8 <col:45, col:55> 'unsigned long' <IntegralCast>
+    | |     | `-ParenExpr 0x7fb964079490 <col:45, col:55> 'int'
+    | |     |   `-BinaryOperator 0x7fb964079468 <col:46, col:54> 'int' '+'
+    | |     |     |-BinaryOperator 0x7fb964079420 <col:46, col:50> 'int' '*'
+    | |     |     | |-IntegerLiteral 0x7fb9640783c8 <col:46> 'int' 5
+    | |     |     | `-IntegerLiteral 0x7fb964079400 <col:50> 'int' 2
+    | |     |     `-IntegerLiteral 0x7fb964079448 <col:54> 'int' 3
+    | |     `-UnaryExprOrTypeTraitExpr 0x7fb9640794c8 <col:59, col:70> 'unsigned long' sizeof 'int'
+    | |-CallExpr 0x7fb964079650 <line:20:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fb964079638 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fb9640795e0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fb9640774c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fb964079a00 <line:21:3, line:23:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb964079970 <line:21:7, line:22:70> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fb964079958 <line:21:7, col:19> 'unsigned long' <IntegralCast>
+    | | | `-CallExpr 0x7fb964079750 <col:7, col:19> 'long'
+    | | |   |-ImplicitCastExpr 0x7fb964079738 <col:7> 'long (*)(int, int, int)' <FunctionToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7fb9640796b0 <col:7> 'long (int, int, int)' Function 0x7fb964077758 'foo' 'long (int, int, int)'
+    | | |   |-IntegerLiteral 0x7fb9640796d8 <col:12> 'int' 5
+    | | |   |-IntegerLiteral 0x7fb9640796f8 <col:15> 'int' 5
+    | | |   `-IntegerLiteral 0x7fb964079718 <col:18> 'int' 5
+    | | `-BinaryOperator 0x7fb964079930 <line:22:10, col:70> 'unsigned long' '+'
+    | |   |-OffsetOfExpr 0x7fb9640797b0 <col:10, col:41> 'unsigned long'
+    | |   `-BinaryOperator 0x7fb964079908 <col:45, col:70> 'unsigned long' '*'
+    | |     |-ImplicitCastExpr 0x7fb9640798f0 <col:45, col:55> 'unsigned long' <IntegralCast>
+    | |     | `-ParenExpr 0x7fb964079898 <col:45, col:55> 'int'
+    | |     |   `-BinaryOperator 0x7fb964079870 <col:46, col:54> 'int' '+'
+    | |     |     |-BinaryOperator 0x7fb964079828 <col:46, col:50> 'int' '*'
+    | |     |     | |-IntegerLiteral 0x7fb9640797e8 <col:46> 'int' 5
+    | |     |     | `-IntegerLiteral 0x7fb964079808 <col:50> 'int' 5
+    | |     |     `-IntegerLiteral 0x7fb964079850 <col:54> 'int' 5
+    | |     `-UnaryExprOrTypeTraitExpr 0x7fb9640798d0 <col:59, col:70> 'unsigned long' sizeof 'int'
+    | |-CallExpr 0x7fb9640799d8 <line:23:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fb9640799c0 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fb964079998 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fb9640774c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fb964079a58 <line:24:3, col:10>
+      `-IntegerLiteral 0x7fb964079a38 <col:10> 'int' 0

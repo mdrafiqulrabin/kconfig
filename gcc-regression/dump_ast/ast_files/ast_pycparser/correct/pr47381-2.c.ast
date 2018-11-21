@@ -1,0 +1,78 @@
+FileAST: 
+  Typedef: ulg, [], ['typedef']
+    TypeDecl: ulg, []
+      IdentifierType: ['unsigned', 'long']
+  Decl: block_start, [], [], []
+    TypeDecl: block_start, []
+      IdentifierType: ['long']
+  Typedef: uch, [], ['typedef']
+    TypeDecl: uch, []
+      IdentifierType: ['unsigned', 'char']
+  Decl: window, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: window, []
+        IdentifierType: ['uch']
+  Decl: strstart, [], [], []
+    TypeDecl: strstart, []
+      IdentifierType: ['unsigned']
+  Decl: flush_block, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: buf, [], [], []
+          PtrDecl: []
+            TypeDecl: buf, []
+              IdentifierType: ['char']
+        Decl: stored_len, [], [], []
+          TypeDecl: stored_len, []
+            IdentifierType: ['ulg']
+        Decl: eof, [], [], []
+          TypeDecl: eof, []
+            IdentifierType: ['int']
+      TypeDecl: flush_block, []
+        IdentifierType: ['ulg']
+  FuncDef: 
+    Decl: deflate, [], [], []
+      FuncDecl: 
+        TypeDecl: deflate, []
+          IdentifierType: ['ulg']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: flush_block
+          ExprList: 
+            TernaryOp: 
+              BinaryOp: >=
+                ID: block_start
+                Constant: int, 0L
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['char']
+                UnaryOp: &
+                  ArrayRef: 
+                    ID: window
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['unsigned']
+                      ID: block_start
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['char']
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['void']
+                  Constant: int, 0
+            BinaryOp: -
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['long']
+                ID: strstart
+              ID: block_start
+            Constant: int, 1

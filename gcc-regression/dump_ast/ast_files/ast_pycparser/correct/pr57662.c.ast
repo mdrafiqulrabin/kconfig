@@ -1,0 +1,149 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: intC
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['short']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['short']
+  Decl: Get, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: Get, []
+        IdentifierType: ['void']
+  Decl: size_x, [], [], []
+    TypeDecl: size_x, []
+      IdentifierType: ['int']
+  Decl: dummy, [], [], []
+    TypeDecl: dummy, []
+      Struct: None
+        Decl: depot_table, [], [], []
+          PtrDecl: []
+            TypeDecl: depot_table, []
+              IdentifierType: ['int']
+        Decl: ti, [], [], []
+          PtrDecl: []
+            TypeDecl: ti, []
+              Struct: intC
+        Decl: size, [], [], []
+          TypeDecl: size, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: GetRotatedTileFromOffset, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: tidc, [], [], []
+            TypeDecl: tidc, []
+              Struct: intC
+        TypeDecl: GetRotatedTileFromOffset, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        UnaryOp: !
+          UnaryOp: *
+            ID: a
+        FuncCall: 
+          ID: Get
+      Switch: 
+        UnaryOp: *
+          ID: a
+        Compound: 
+          Case: 
+            Constant: int, 0
+            Return: 
+              BinaryOp: +
+                BinaryOp: <<
+                  StructRef: .
+                    ID: tidc
+                    ID: y
+                  ID: size_x
+                StructRef: .
+                  ID: tidc
+                  ID: x
+          Case: 
+            Constant: int, 1
+            Return: 
+              BinaryOp: +
+                StructRef: .
+                  ID: tidc
+                  ID: y
+                BinaryOp: *
+                  BinaryOp: -
+                    StructRef: .
+                      ID: dummy
+                      ID: size
+                    StructRef: .
+                      ID: tidc
+                      ID: x
+                  ID: size_x
+          Case: 
+            Constant: int, 2
+            Return: 
+              BinaryOp: +
+                StructRef: .
+                  ID: tidc
+                  ID: x
+                BinaryOp: *
+                  BinaryOp: -
+                    StructRef: .
+                      ID: dummy
+                      ID: size
+                    StructRef: .
+                      ID: tidc
+                      ID: y
+                  ID: size_x
+          Case: 
+            Constant: int, 3
+            Return: 
+              BinaryOp: -
+                StructRef: .
+                  ID: dummy
+                  ID: size
+                StructRef: .
+                  ID: tidc
+                  ID: x
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: GetHangarNum, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: GetHangarNum, []
+          IdentifierType: ['int']
+    Compound: 
+      While: 
+        StructRef: .
+          ID: dummy
+          ID: size
+        If: 
+          FuncCall: 
+            ID: GetRotatedTileFromOffset
+            ExprList: 
+              ID: a
+              ArrayRef: 
+                StructRef: .
+                  ID: dummy
+                  ID: ti
+                ID: i
+          Return: 
+            UnaryOp: *
+              StructRef: .
+                ID: dummy
+                ID: depot_table
+      Return: 
+        Constant: int, 0

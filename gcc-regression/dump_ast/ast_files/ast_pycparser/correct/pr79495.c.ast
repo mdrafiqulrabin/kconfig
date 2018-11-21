@@ -1,0 +1,32 @@
+FileAST: 
+  Decl: dnan, [], [], []
+    TypeDecl: dnan, []
+      IdentifierType: ['long', 'double']
+    BinaryOp: -
+      BinaryOp: /
+        Constant: float, 1.0l
+        Constant: float, 0.0l
+      BinaryOp: /
+        Constant: float, 1.0l
+        Constant: float, 0.0l
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      IdentifierType: ['long', 'double']
+    Constant: float, 1.0l
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: dnan
+          ID: x
+        Assignment: =
+          ID: x
+          Constant: float, 1.0

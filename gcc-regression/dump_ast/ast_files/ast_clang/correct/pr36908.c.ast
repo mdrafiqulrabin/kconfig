@@ -1,0 +1,186 @@
+TranslationUnitDecl 0x7fa27b0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa27b026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa27b026740 '__int128'
+|-TypedefDecl 0x7fa27b026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa27b026760 'unsigned __int128'
+|-TypedefDecl 0x7fa27b026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa27b026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa27b026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa27b026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa27b026dc0 'char *'
+|   `-BuiltinType 0x7fa27b026560 'char'
+|-TypedefDecl 0x7fa27b0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa27b027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa27b026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa27b026e58 '__va_list_tag'
+|-TypedefDecl 0x7fa27b027138 <c_files/pr36908.c:5:15, col:37> col:37 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fa27b026680 'unsigned long'
+|-FunctionDecl 0x7fa27b077b88 <line:6:1, col:45> col:14 used foo 'void *(size_t, size_t)' extern
+| |-ParmVarDecl 0x7fa27b077a00 <col:18, col:25> col:25 nelem 'size_t':'unsigned long'
+| `-ParmVarDecl 0x7fa27b077a70 <col:32, col:39> col:39 elsize 'size_t':'unsigned long'
+|-FunctionDecl 0x7fa27b077d50 <line:7:1, col:28> col:13 used bar 'void (char *, ...)' extern
+| `-ParmVarDecl 0x7fa27b077c88 <col:18, col:22> col:23 'char *'
+|-RecordDecl 0x7fa27b077df0 <line:9:9, col:16> col:16 struct alt_state
+|-TypedefDecl 0x7fa27b077f50 <col:1, col:27> col:27 referenced alt_state_t 'struct alt_state *'
+| `-PointerType 0x7fa27b077f00 'struct alt_state *'
+|   `-ElaboratedType 0x7fa27b077ea0 'struct alt_state' sugar
+|     `-RecordType 0x7fa27b077e80 'struct alt_state'
+|       `-Record 0x7fa27b078190 'alt_state'
+|-RecordDecl 0x7fa27b077fc0 <line:10:9, col:16> col:16 struct state
+|-TypedefDecl 0x7fa27b078120 <col:1, col:23> col:23 state_t 'struct state *'
+| `-PointerType 0x7fa27b0780d0 'struct state *'
+|   `-ElaboratedType 0x7fa27b078070 'struct state' sugar
+|     `-RecordType 0x7fa27b078050 'struct state'
+|       `-Record 0x7fa27b077fc0 'state'
+|-RecordDecl 0x7fa27b078190 prev 0x7fa27b077df0 <line:12:1, line:15:1> line:12:8 struct alt_state definition
+| `-FieldDecl 0x7fa27b078250 <line:14:3, col:15> col:15 referenced next_alt_state 'alt_state_t':'struct alt_state *'
+|-VarDecl 0x7fa27b0782a8 <line:17:1, line:3:24> line:17:20 used first_free_alt_state 'alt_state_t':'struct alt_state *' static cinit
+| `-ImplicitCastExpr 0x7fa27b078388 <line:3:14, col:24> 'alt_state_t':'struct alt_state *' <NullToPointer>
+|   `-ParenExpr 0x7fa27b078368 <col:14, col:24> 'void *'
+|     `-CStyleCastExpr 0x7fa27b078340 <col:15, col:23> 'void *' <NullToPointer>
+|       `-IntegerLiteral 0x7fa27b078308 <col:23> 'int' 0
+|-FunctionDecl 0x7fa27b0784b0 <line:19:1, line:26:1> line:20:1 used free_alt_state 'void (alt_state_t)' static
+| |-ParmVarDecl 0x7fa27b0783b0 <col:17, col:29> col:29 used alt_state 'alt_state_t':'struct alt_state *'
+| `-CompoundStmt 0x7fa27b078810 <line:21:1, line:26:1>
+|   |-IfStmt 0x7fa27b078668 <line:22:3, line:23:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa27b078628 <line:22:7, line:3:24> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7fa27b0785f8 <line:22:7> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa27b078550 <col:7> 'alt_state_t':'struct alt_state *' lvalue ParmVar 0x7fa27b0783b0 'alt_state' 'alt_state_t':'struct alt_state *'
+|   | | `-ImplicitCastExpr 0x7fa27b078610 <line:3:14, col:24> 'alt_state_t':'struct alt_state *' <BitCast>
+|   | |   `-ParenExpr 0x7fa27b0785d8 <col:14, col:24> 'void *'
+|   | |     `-CStyleCastExpr 0x7fa27b0785b0 <col:15, col:23> 'void *' <NullToPointer>
+|   | |       `-IntegerLiteral 0x7fa27b078578 <col:23> 'int' 0
+|   | |-ReturnStmt 0x7fa27b078650 <line:23:5>
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fa27b078758 <line:24:3, col:31> 'alt_state_t':'struct alt_state *' '='
+|   | |-MemberExpr 0x7fa27b0786e0 <col:3, col:14> 'alt_state_t':'struct alt_state *' lvalue ->next_alt_state 0x7fa27b078250
+|   | | `-ImplicitCastExpr 0x7fa27b0786c8 <col:3> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fa27b0786a0 <col:3> 'alt_state_t':'struct alt_state *' lvalue ParmVar 0x7fa27b0783b0 'alt_state' 'alt_state_t':'struct alt_state *'
+|   | `-ImplicitCastExpr 0x7fa27b078740 <col:31> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fa27b078718 <col:31> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b0782a8 'first_free_alt_state' 'alt_state_t':'struct alt_state *'
+|   `-BinaryOperator 0x7fa27b0787e8 <line:25:3, col:26> 'alt_state_t':'struct alt_state *' '='
+|     |-DeclRefExpr 0x7fa27b078780 <col:3> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b0782a8 'first_free_alt_state' 'alt_state_t':'struct alt_state *'
+|     `-ImplicitCastExpr 0x7fa27b0787d0 <col:26> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa27b0787a8 <col:26> 'alt_state_t':'struct alt_state *' lvalue ParmVar 0x7fa27b0783b0 'alt_state' 'alt_state_t':'struct alt_state *'
+|-FunctionDecl 0x7fa27b0788d8 <line:29:1, line:42:1> line:30:1 used free_alt_states 'void (alt_state_t)' static
+| |-ParmVarDecl 0x7fa27b078850 <col:18, col:30> col:30 used alt_states_list 'alt_state_t':'struct alt_state *'
+| `-CompoundStmt 0x7fa27b07f0f8 <line:31:1, line:42:1>
+|   |-DeclStmt 0x7fa27b0789e8 <line:32:3, col:29>
+|   | `-VarDecl 0x7fa27b078988 <col:3, col:15> col:15 used curr_alt_state 'alt_state_t':'struct alt_state *'
+|   |-DeclStmt 0x7fa27b07ec70 <line:33:3, col:29>
+|   | `-VarDecl 0x7fa27b07ec10 <col:3, col:15> col:15 used next_alt_state 'alt_state_t':'struct alt_state *'
+|   `-ForStmt 0x7fa27b07f0c0 <line:35:3, line:41:5>
+|     |-BinaryOperator 0x7fa27b07ecf0 <line:35:8, col:25> 'alt_state_t':'struct alt_state *' '='
+|     | |-DeclRefExpr 0x7fa27b07ec88 <col:8> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b078988 'curr_alt_state' 'alt_state_t':'struct alt_state *'
+|     | `-ImplicitCastExpr 0x7fa27b07ecd8 <col:25> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fa27b07ecb0 <col:25> 'alt_state_t':'struct alt_state *' lvalue ParmVar 0x7fa27b078850 'alt_states_list' 'alt_state_t':'struct alt_state *'
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fa27b07edf0 <line:36:8, line:3:24> 'int' '!='
+|     | |-ImplicitCastExpr 0x7fa27b07edc0 <line:36:8> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fa27b07ed18 <col:8> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b078988 'curr_alt_state' 'alt_state_t':'struct alt_state *'
+|     | `-ImplicitCastExpr 0x7fa27b07edd8 <line:3:14, col:24> 'alt_state_t':'struct alt_state *' <BitCast>
+|     |   `-ParenExpr 0x7fa27b07eda0 <col:14, col:24> 'void *'
+|     |     `-CStyleCastExpr 0x7fa27b07ed78 <col:15, col:23> 'void *' <NullToPointer>
+|     |       `-IntegerLiteral 0x7fa27b07ed40 <col:23> 'int' 0
+|     |-BinaryOperator 0x7fa27b07ee80 <line:37:8, col:25> 'alt_state_t':'struct alt_state *' '='
+|     | |-DeclRefExpr 0x7fa27b07ee18 <col:8> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b078988 'curr_alt_state' 'alt_state_t':'struct alt_state *'
+|     | `-ImplicitCastExpr 0x7fa27b07ee68 <col:25> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fa27b07ee40 <col:25> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b07ec10 'next_alt_state' 'alt_state_t':'struct alt_state *'
+|     `-CompoundStmt 0x7fa27b07f098 <line:38:5, line:41:5>
+|       |-BinaryOperator 0x7fa27b07ef60 <line:39:7, col:40> 'alt_state_t':'struct alt_state *' '='
+|       | |-DeclRefExpr 0x7fa27b07eea8 <col:7> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b07ec10 'next_alt_state' 'alt_state_t':'struct alt_state *'
+|       | `-ImplicitCastExpr 0x7fa27b07ef48 <col:24, col:40> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+|       |   `-MemberExpr 0x7fa27b07ef10 <col:24, col:40> 'alt_state_t':'struct alt_state *' lvalue ->next_alt_state 0x7fa27b078250
+|       |     `-ImplicitCastExpr 0x7fa27b07eef8 <col:24> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7fa27b07eed0 <col:24> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b078988 'curr_alt_state' 'alt_state_t':'struct alt_state *'
+|       `-CallExpr 0x7fa27b07f050 <line:40:7, col:37> 'void'
+|         |-ImplicitCastExpr 0x7fa27b07f038 <col:7> 'void (*)(alt_state_t)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fa27b07ef88 <col:7> 'void (alt_state_t)' Function 0x7fa27b0784b0 'free_alt_state' 'void (alt_state_t)'
+|         `-ImplicitCastExpr 0x7fa27b07f080 <col:23> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fa27b07efb0 <col:23> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b078988 'curr_alt_state' 'alt_state_t':'struct alt_state *'
+`-FunctionDecl 0x7fa27b07f1f8 <line:44:1, line:65:1> line:45:1 main 'int (void)'
+  `-CompoundStmt 0x7fa27b080038 <line:46:1, line:65:1>
+    |-DeclStmt 0x7fa27b07f330 <line:47:3, col:8>
+    | `-VarDecl 0x7fa27b07f2d0 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7fa27b07f440 <line:48:3, col:31>
+    | |-VarDecl 0x7fa27b07f358 <col:3, col:15> col:15 used state 'alt_state_t':'struct alt_state *'
+    | `-VarDecl 0x7fa27b07f3c8 <col:3, col:22> col:22 used act_state 'alt_state_t':'struct alt_state *'
+    |-BinaryOperator 0x7fa27b07f630 <line:50:3, col:56> 'alt_state_t':'struct alt_state *' '='
+    | |-DeclRefExpr 0x7fa27b07f458 <col:3> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b07f3c8 'act_state' 'alt_state_t':'struct alt_state *'
+    | `-BinaryOperator 0x7fa27b07f608 <col:15, col:56> 'alt_state_t':'struct alt_state *' '='
+    |   |-DeclRefExpr 0x7fa27b07f480 <col:15> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b07f358 'state' 'alt_state_t':'struct alt_state *'
+    |   `-ImplicitCastExpr 0x7fa27b07f5f0 <col:23, col:56> 'alt_state_t':'struct alt_state *' <BitCast>
+    |     `-CallExpr 0x7fa27b07f5a0 <col:23, col:56> 'void *'
+    |       |-ImplicitCastExpr 0x7fa27b07f588 <col:23> 'void *(*)(size_t, size_t)' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7fa27b07f4a8 <col:23> 'void *(size_t, size_t)' Function 0x7fa27b077b88 'foo' 'void *(size_t, size_t)'
+    |       |-ImplicitCastExpr 0x7fa27b07f5d8 <col:28> 'size_t':'unsigned long' <IntegralCast>
+    |       | `-IntegerLiteral 0x7fa27b07f4d0 <col:28> 'int' 1
+    |       `-UnaryExprOrTypeTraitExpr 0x7fa27b07f510 <col:31, col:55> 'unsigned long' sizeof 'struct alt_state':'struct alt_state'
+    |-ForStmt 0x7fa27b07fa48 <line:51:3, line:55:3>
+    | |-BinaryOperator 0x7fa27b07f6a0 <line:51:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fa27b07f658 <col:8> 'int' lvalue Var 0x7fa27b07f2d0 'i' 'int'
+    | | `-IntegerLiteral 0x7fa27b07f680 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa27b07f728 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fa27b07f710 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa27b07f6c8 <col:15> 'int' lvalue Var 0x7fa27b07f2d0 'i' 'int'
+    | | `-IntegerLiteral 0x7fa27b07f6f0 <col:19> 'int' 2
+    | |-UnaryOperator 0x7fa27b07f778 <col:22, col:24> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fa27b07f750 <col:22> 'int' lvalue Var 0x7fa27b07f2d0 'i' 'int'
+    | `-CompoundStmt 0x7fa27b07fa20 <line:52:3, line:55:3>
+    |   |-BinaryOperator 0x7fa27b07f918 <line:53:5, col:66> 'alt_state_t':'struct alt_state *' '='
+    |   | |-MemberExpr 0x7fa27b07f7d8 <col:5, col:16> 'alt_state_t':'struct alt_state *' lvalue ->next_alt_state 0x7fa27b078250
+    |   | | `-ImplicitCastExpr 0x7fa27b07f7c0 <col:5> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fa27b07f798 <col:5> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b07f3c8 'act_state' 'alt_state_t':'struct alt_state *'
+    |   | `-ImplicitCastExpr 0x7fa27b07f900 <col:33, col:66> 'alt_state_t':'struct alt_state *' <BitCast>
+    |   |   `-CallExpr 0x7fa27b07f8b0 <col:33, col:66> 'void *'
+    |   |     |-ImplicitCastExpr 0x7fa27b07f898 <col:33> 'void *(*)(size_t, size_t)' <FunctionToPointerDecay>
+    |   |     | `-DeclRefExpr 0x7fa27b07f810 <col:33> 'void *(size_t, size_t)' Function 0x7fa27b077b88 'foo' 'void *(size_t, size_t)'
+    |   |     |-ImplicitCastExpr 0x7fa27b07f8e8 <col:38> 'size_t':'unsigned long' <IntegralCast>
+    |   |     | `-IntegerLiteral 0x7fa27b07f838 <col:38> 'int' 1
+    |   |     `-UnaryExprOrTypeTraitExpr 0x7fa27b07f878 <col:41, col:65> 'unsigned long' sizeof 'struct alt_state':'struct alt_state'
+    |   `-BinaryOperator 0x7fa27b07f9f8 <line:54:5, col:28> 'alt_state_t':'struct alt_state *' '='
+    |     |-DeclRefExpr 0x7fa27b07f940 <col:5> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b07f3c8 'act_state' 'alt_state_t':'struct alt_state *'
+    |     `-ImplicitCastExpr 0x7fa27b07f9e0 <col:17, col:28> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+    |       `-MemberExpr 0x7fa27b07f9a8 <col:17, col:28> 'alt_state_t':'struct alt_state *' lvalue ->next_alt_state 0x7fa27b078250
+    |         `-ImplicitCastExpr 0x7fa27b07f990 <col:17> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fa27b07f968 <col:17> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b07f3c8 'act_state' 'alt_state_t':'struct alt_state *'
+    |-CallExpr 0x7fa27b07fae8 <line:57:3, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fa27b07fad0 <col:3> 'void (*)(alt_state_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa27b07fa80 <col:3> 'void (alt_state_t)' Function 0x7fa27b0788d8 'free_alt_states' 'void (alt_state_t)'
+    | `-ImplicitCastExpr 0x7fa27b07fb18 <col:20> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fa27b07faa8 <col:20> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b07f358 'state' 'alt_state_t':'struct alt_state *'
+    |-ForStmt 0x7fa27b07ffc8 <line:59:3, line:62:74>
+    | |-BinaryOperator 0x7fa27b07fb98 <line:59:8, col:20> 'alt_state_t':'struct alt_state *' '='
+    | | |-DeclRefExpr 0x7fa27b07fb30 <col:8> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b07f3c8 'act_state' 'alt_state_t':'struct alt_state *'
+    | | `-ImplicitCastExpr 0x7fa27b07fb80 <col:20> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fa27b07fb58 <col:20> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b0782a8 'first_free_alt_state' 'alt_state_t':'struct alt_state *'
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa27b07fcb0 <line:60:8, line:3:24> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fa27b07fc80 <line:60:8> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa27b07fbc0 <col:8> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b07f3c8 'act_state' 'alt_state_t':'struct alt_state *'
+    | | `-ImplicitCastExpr 0x7fa27b07fc98 <line:3:14, col:24> 'alt_state_t':'struct alt_state *' <BitCast>
+    | |   `-ParenExpr 0x7fa27b07fc60 <col:14, col:24> 'void *'
+    | |     `-CStyleCastExpr 0x7fa27b07fc38 <col:15, col:23> 'void *' <NullToPointer>
+    | |       `-IntegerLiteral 0x7fa27b07fc00 <col:23> 'int' 0
+    | |-BinaryOperator 0x7fa27b07fd90 <line:61:8, col:31> 'alt_state_t':'struct alt_state *' '='
+    | | |-DeclRefExpr 0x7fa27b07fcd8 <col:8> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b07f3c8 'act_state' 'alt_state_t':'struct alt_state *'
+    | | `-ImplicitCastExpr 0x7fa27b07fd78 <col:20, col:31> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+    | |   `-MemberExpr 0x7fa27b07fd40 <col:20, col:31> 'alt_state_t':'struct alt_state *' lvalue ->next_alt_state 0x7fa27b078250
+    | |     `-ImplicitCastExpr 0x7fa27b07fd28 <col:20> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fa27b07fd00 <col:20> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b07f3c8 'act_state' 'alt_state_t':'struct alt_state *'
+    | `-CallExpr 0x7fa27b07ff40 <line:62:8, col:74> 'void'
+    |   |-ImplicitCastExpr 0x7fa27b07ff28 <col:8> 'void (*)(char *, ...)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fa27b07fdb8 <col:8> 'void (char *, ...)' Function 0x7fa27b077d50 'bar' 'void (char *, ...)'
+    |   |-ImplicitCastExpr 0x7fa27b07ff80 <col:13> 'char *' <ArrayToPointerDecay>
+    |   | `-StringLiteral 0x7fa27b07fe18 <col:13> 'char [21]' lvalue "going from %p to %p\n"
+    |   |-ImplicitCastExpr 0x7fa27b07ff98 <col:38> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fa27b07fe58 <col:38> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b07f3c8 'act_state' 'alt_state_t':'struct alt_state *'
+    |   `-ImplicitCastExpr 0x7fa27b07ffb0 <col:49, col:60> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+    |     `-MemberExpr 0x7fa27b07fec0 <col:49, col:60> 'alt_state_t':'struct alt_state *' lvalue ->next_alt_state 0x7fa27b078250
+    |       `-ImplicitCastExpr 0x7fa27b07fea8 <col:49> 'alt_state_t':'struct alt_state *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fa27b07fe80 <col:49> 'alt_state_t':'struct alt_state *' lvalue Var 0x7fa27b07f3c8 'act_state' 'alt_state_t':'struct alt_state *'
+    `-ReturnStmt 0x7fa27b080020 <line:64:3, col:10>
+      `-IntegerLiteral 0x7fa27b080000 <col:10> 'int' 0

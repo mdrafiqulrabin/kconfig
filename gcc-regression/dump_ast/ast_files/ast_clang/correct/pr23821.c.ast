@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fb9730264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb973026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb973026740 '__int128'
+|-TypedefDecl 0x7fb973026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb973026760 'unsigned __int128'
+|-TypedefDecl 0x7fb973026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb973026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb973026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb973026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb973026dc0 'char *'
+|   `-BuiltinType 0x7fb973026560 'char'
+|-TypedefDecl 0x7fb9730270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb973027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb973026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb973026e58 '__va_list_tag'
+|-VarDecl 0x7fb9730271a0 <c_files/pr23821.c:8:1, col:10> col:5 used a 'int [199]'
+|-FunctionDecl 0x7fb973825b30 <line:10:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fb973825bc8 prev 0x7fb973825b30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fb973825cb0 <line:12:1, line:23:1> line:13:1 main 'int ()'
+  `-CompoundStmt 0x7fb9738262e8 <line:14:1, line:23:1>
+    |-DeclStmt 0x7fb973825e50 <line:15:3, col:11>
+    | |-VarDecl 0x7fb973825d60 <col:3, col:7> col:7 used i 'int'
+    | `-VarDecl 0x7fb973825dd8 <col:3, col:10> col:10 used x 'int'
+    |-ForStmt 0x7fb973826278 <line:16:3, line:21:5>
+    | |-BinaryOperator 0x7fb973825eb0 <line:16:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fb973825e68 <col:8> 'int' lvalue Var 0x7fb973825d60 'i' 'int'
+    | | `-IntegerLiteral 0x7fb973825e90 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb973825f38 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fb973825f20 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fb973825ed8 <col:15> 'int' lvalue Var 0x7fb973825d60 'i' 'int'
+    | | `-IntegerLiteral 0x7fb973825f00 <col:19> 'int' 199
+    | |-UnaryOperator 0x7fb973825f88 <col:24, col:25> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fb973825f60 <col:24> 'int' lvalue Var 0x7fb973825d60 'i' 'int'
+    | `-CompoundStmt 0x7fb973826250 <line:17:5, line:21:5>
+    |   |-BinaryOperator 0x7fb9738260b8 <line:18:7, col:14> 'int' '='
+    |   | |-DeclRefExpr 0x7fb973825fa8 <col:7> 'int' lvalue Var 0x7fb973825dd8 'x' 'int'
+    |   | `-ImplicitCastExpr 0x7fb9738260a0 <col:11, col:14> 'int' <LValueToRValue>
+    |   |   `-ArraySubscriptExpr 0x7fb973826078 <col:11, col:14> 'int' lvalue
+    |   |     |-ImplicitCastExpr 0x7fb973826048 <col:11> 'int *' <ArrayToPointerDecay>
+    |   |     | `-DeclRefExpr 0x7fb973825fd0 <col:11> 'int [199]' lvalue Var 0x7fb9730271a0 'a' 'int [199]'
+    |   |     `-ImplicitCastExpr 0x7fb973826060 <col:13> 'int' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7fb973825ff8 <col:13> 'int' lvalue Var 0x7fb973825d60 'i' 'int'
+    |   `-IfStmt 0x7fb973826218 <line:19:7, line:20:9>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7fb973826160 <line:19:11, col:16> 'int' '!='
+    |     | |-ImplicitCastExpr 0x7fb973826130 <col:11> 'int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fb9738260e0 <col:11> 'int' lvalue Var 0x7fb973825dd8 'x' 'int'
+    |     | `-ImplicitCastExpr 0x7fb973826148 <col:16> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fb973826108 <col:16> 'int' lvalue Var 0x7fb973825d60 'i' 'int'
+    |     |-CallExpr 0x7fb9738261f0 <line:20:2, col:9> 'void'
+    |     | `-ImplicitCastExpr 0x7fb9738261d8 <col:2> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |     |   `-DeclRefExpr 0x7fb973826188 <col:2> 'void (void) __attribute__((noreturn))' Function 0x7fb973825bc8 'abort' 'void (void) __attribute__((noreturn))'
+    |     `-<<<NULL>>>
+    `-ReturnStmt 0x7fb9738262d0 <line:22:3, col:10>
+      `-IntegerLiteral 0x7fb9738262b0 <col:10> 'int' 0

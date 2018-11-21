@@ -1,0 +1,123 @@
+TranslationUnitDecl 0x7fa2e10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa2e1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa2e1026740 '__int128'
+|-TypedefDecl 0x7fa2e1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa2e1026760 'unsigned __int128'
+|-TypedefDecl 0x7fa2e1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa2e1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa2e1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa2e1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa2e1026dc0 'char *'
+|   `-BuiltinType 0x7fa2e1026560 'char'
+|-TypedefDecl 0x7fa2e10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa2e1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa2e1026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa2e1026e58 '__va_list_tag'
+|-RecordDecl 0x7fa2e1027120 <c_files/pr70602.c:4:1, line:8:1> line:4:32 struct S definition
+| |-PackedAttr 0x7fa2e10271d0 <col:23>
+| |-FieldDecl 0x7fa2e1078470 <line:6:3, col:11> col:7 referenced s 'int'
+| | `-IntegerLiteral 0x7fa2e1078438 <col:11> 'int' 1
+| `-FieldDecl 0x7fa2e10784f0 <line:7:3, col:11> col:7 referenced t 'int'
+|   `-IntegerLiteral 0x7fa2e10784b8 <col:11> 'int' 20
+|-VarDecl 0x7fa2e1078550 <line:10:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fa2e1078608 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7fa2e1078680 <col:1, col:11> col:11 used c 'int'
+`-FunctionDecl 0x7fa2e1078750 <line:12:1, line:24:1> line:13:1 main 'int ()'
+  `-CompoundStmt 0x7fa2e107a400 <line:14:1, line:24:1>
+    |-ForStmt 0x7fa2e107a388 <line:15:3, line:22:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa2e1078848 <line:15:10, col:14> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fa2e1078830 <col:10> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa2e10787e8 <col:10> 'int' lvalue Var 0x7fa2e1078550 'a' 'int'
+    | | `-IntegerLiteral 0x7fa2e1078810 <col:14> 'int' 1
+    | |-UnaryOperator 0x7fa2e1078898 <col:17, col:18> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fa2e1078870 <col:17> 'int' lvalue Var 0x7fa2e1078550 'a' 'int'
+    | `-CompoundStmt 0x7fa2e107a358 <line:16:5, line:22:5>
+    |   |-DeclStmt 0x7fa2e1079fd8 <line:17:7, line:19:66>
+    |   | `-VarDecl 0x7fa2e1078978 <line:17:7, line:19:65> line:17:16 used e 'struct S [21]' cinit
+    |   |   `-InitListExpr 0x7fa2e1079698 <col:22, line:19:65> 'struct S [21]'
+    |   |     |-InitListExpr 0x7fa2e10796d8 <line:17:24, col:29> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e10789d8 <col:25> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e10789f8 <col:28> 'int' 9
+    |   |     |-InitListExpr 0x7fa2e1079730 <col:32, col:37> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1078a68 <col:33> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e1078a88 <col:36> 'int' 9
+    |   |     |-InitListExpr 0x7fa2e1079790 <col:40, col:45> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1078af8 <col:41> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e1078b18 <col:44> 'int' 9
+    |   |     |-InitListExpr 0x7fa2e1079800 <col:48, col:53> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1078b88 <col:49> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e1078ba8 <col:52> 'int' 0
+    |   |     |-InitListExpr 0x7fa2e1079850 <col:56, col:61> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1078c18 <col:57> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e1078c38 <col:60> 'int' 9
+    |   |     |-InitListExpr 0x7fa2e10798e0 <col:64, col:69> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1078ca8 <col:65> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e1078cc8 <col:68> 'int' 9
+    |   |     |-InitListExpr 0x7fa2e1079930 <col:72, col:77> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1078d38 <col:73> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e1078d58 <col:76> 'int' 9
+    |   |     |-InitListExpr 0x7fa2e1079980 <line:18:10, col:15> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1078dc8 <col:11> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e1078de8 <col:14> 'int' 0
+    |   |     |-InitListExpr 0x7fa2e10799d0 <col:18, col:23> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1078e58 <col:19> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e1078e78 <col:22> 'int' 9
+    |   |     |-InitListExpr 0x7fa2e1079aa0 <col:26, col:31> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1078ee8 <col:27> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e1078f08 <col:30> 'int' 9
+    |   |     |-InitListExpr 0x7fa2e1079af0 <col:34, col:39> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1078f78 <col:35> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e1078f98 <col:38> 'int' 9
+    |   |     |-InitListExpr 0x7fa2e1079b40 <col:42, col:47> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1079008 <col:43> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e1079028 <col:46> 'int' 0
+    |   |     |-InitListExpr 0x7fa2e1079b90 <col:50, col:55> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1079098 <col:51> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e10790b8 <col:54> 'int' 9
+    |   |     |-InitListExpr 0x7fa2e1079be0 <col:58, col:63> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1079128 <col:59> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e1079148 <col:62> 'int' 9
+    |   |     |-InitListExpr 0x7fa2e1079c30 <line:19:10, col:15> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e10791b8 <col:11> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e10791d8 <col:14> 'int' 9
+    |   |     |-InitListExpr 0x7fa2e1079c80 <col:18, col:23> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1079248 <col:19> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e1079268 <col:22> 'int' 0
+    |   |     |-InitListExpr 0x7fa2e1079cd0 <col:26, col:31> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e10792d8 <col:27> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e10792f8 <col:30> 'int' 9
+    |   |     |-InitListExpr 0x7fa2e1079e20 <col:34, col:39> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1079368 <col:35> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e1079388 <col:38> 'int' 9
+    |   |     |-InitListExpr 0x7fa2e1079e70 <col:42, col:47> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1079400 <col:43> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e1079420 <col:46> 'int' 9
+    |   |     |-InitListExpr 0x7fa2e1079ec0 <col:50, col:55> 'struct S':'struct S'
+    |   |     | |-IntegerLiteral 0x7fa2e1079490 <col:51> 'int' 0
+    |   |     | `-IntegerLiteral 0x7fa2e10794b0 <col:54> 'int' 0
+    |   |     `-InitListExpr 0x7fa2e1079f10 <col:58, col:63> 'struct S':'struct S'
+    |   |       |-IntegerLiteral 0x7fa2e1079520 <col:59> 'int' 0
+    |   |       `-IntegerLiteral 0x7fa2e1079540 <col:62> 'int' 9
+    |   |-BinaryOperator 0x7fa2e107a208 <line:20:7, col:21> 'int' '='
+    |   | |-DeclRefExpr 0x7fa2e1079ff0 <col:7> 'int' lvalue Var 0x7fa2e1078608 'b' 'int'
+    |   | `-BinaryOperator 0x7fa2e107a1e0 <col:11, col:21> 'int' '||'
+    |   |   |-ImplicitCastExpr 0x7fa2e107a1b0 <col:11> 'int' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x7fa2e107a018 <col:11> 'int' lvalue Var 0x7fa2e1078608 'b' 'int'
+    |   |   `-ImplicitCastExpr 0x7fa2e107a1c8 <col:16, col:21> 'int' <LValueToRValue>
+    |   |     `-MemberExpr 0x7fa2e107a128 <col:16, col:21> 'int' lvalue bitfield .s 0x7fa2e1078470
+    |   |       `-ArraySubscriptExpr 0x7fa2e107a100 <col:16, col:19> 'struct S':'struct S' lvalue
+    |   |         |-ImplicitCastExpr 0x7fa2e107a0e8 <col:16> 'struct S *' <ArrayToPointerDecay>
+    |   |         | `-DeclRefExpr 0x7fa2e107a040 <col:16> 'struct S [21]' lvalue Var 0x7fa2e1078978 'e' 'struct S [21]'
+    |   |         `-IntegerLiteral 0x7fa2e107a068 <col:18> 'int' 0
+    |   `-BinaryOperator 0x7fa2e107a330 <line:21:7, col:16> 'int' '='
+    |     |-DeclRefExpr 0x7fa2e107a230 <col:7> 'int' lvalue Var 0x7fa2e1078680 'c' 'int'
+    |     `-ImplicitCastExpr 0x7fa2e107a318 <col:11, col:16> 'int' <LValueToRValue>
+    |       `-MemberExpr 0x7fa2e107a2e0 <col:11, col:16> 'int' lvalue bitfield .t 0x7fa2e10784f0
+    |         `-ArraySubscriptExpr 0x7fa2e107a2b8 <col:11, col:14> 'struct S':'struct S' lvalue
+    |           |-ImplicitCastExpr 0x7fa2e107a2a0 <col:11> 'struct S *' <ArrayToPointerDecay>
+    |           | `-DeclRefExpr 0x7fa2e107a258 <col:11> 'struct S [21]' lvalue Var 0x7fa2e1078978 'e' 'struct S [21]'
+    |           `-IntegerLiteral 0x7fa2e107a280 <col:13> 'int' 0
+    `-ReturnStmt 0x7fa2e107a3e0 <line:23:3, col:10>
+      `-IntegerLiteral 0x7fa2e107a3c0 <col:10> 'int' 0

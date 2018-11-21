@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7ff5cd825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff5cd826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff5cd825d40 '__int128'
+|-TypedefDecl 0x7ff5cd826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff5cd825d60 'unsigned __int128'
+|-TypedefDecl 0x7ff5cd826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff5cd826170 'struct __NSConstantString_tag'
+|   `-Record 0x7ff5cd8260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff5cd826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff5cd8263c0 'char *'
+|   `-BuiltinType 0x7ff5cd825b60 'char'
+|-TypedefDecl 0x7ff5cd8266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff5cd826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff5cd8264e0 'struct __va_list_tag'
+|     `-Record 0x7ff5cd826458 '__va_list_tag'
+|-FunctionDecl 0x7ff5cd026430 <c_files/pr68680.c:5:1, col:16> col:5 used foo 'int (char *)'
+| `-ParmVarDecl 0x7ff5cd826738 <col:10, col:15> col:16 'char *'
+`-FunctionDecl 0x7ff5cd0265f8 <line:7:1, line:12:1> line:8:1 bar 'int (unsigned long)'
+  |-ParmVarDecl 0x7ff5cd026528 <col:6, col:20> col:20 used x 'unsigned long'
+  `-CompoundStmt 0x7ff5cd0268a0 <line:9:1, line:12:1>
+    |-DeclStmt 0x7ff5cd026798 <line:10:3, col:12>
+    | `-VarDecl 0x7ff5cd026738 <col:3, col:11> col:8 used a 'char [x]'
+    `-ReturnStmt 0x7ff5cd026888 <line:11:3, col:16>
+      `-CallExpr 0x7ff5cd026840 <col:10, col:16> 'int'
+        |-ImplicitCastExpr 0x7ff5cd026828 <col:10> 'int (*)(char *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7ff5cd0267b0 <col:10> 'int (char *)' Function 0x7ff5cd026430 'foo' 'int (char *)'
+        `-ImplicitCastExpr 0x7ff5cd026870 <col:15> 'char *' <ArrayToPointerDecay>
+          `-DeclRefExpr 0x7ff5cd0267d8 <col:15> 'char [x]' lvalue Var 0x7ff5cd026738 'a' 'char [x]'

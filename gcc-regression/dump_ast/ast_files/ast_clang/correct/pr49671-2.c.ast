@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7f9b778264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9b77826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9b77826740 '__int128'
+|-TypedefDecl 0x7f9b77826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9b77826760 'unsigned __int128'
+|-TypedefDecl 0x7f9b77826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9b77826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9b77826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9b77826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9b77826dc0 'char *'
+|   `-BuiltinType 0x7f9b77826560 'char'
+|-TypedefDecl 0x7f9b778270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9b77827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9b77826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9b77826e58 '__va_list_tag'
+|-VarDecl 0x7f9b77827138 <c_files/pr49671-2.c:3:1, col:5> col:5 used t 'int'
+|-FunctionDecl 0x7f9b78025b08 <line:4:1, line:7:1> line:4:19 used cvmx_atomic_get32 'int (int *)' static inline
+| |-ParmVarDecl 0x7f9b78025a40 <col:37, col:42> col:42 used ptr 'int *'
+| `-CompoundStmt 0x7f9b78025cd0 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7f9b78025cb8 <line:6:5, col:28>
+|     `-ImplicitCastExpr 0x7f9b78025ca0 <col:12, col:28> 'int' <LValueToRValue>
+|       `-UnaryOperator 0x7f9b78025c80 <col:12, col:28> 'volatile int' lvalue prefix '*'
+|         `-CStyleCastExpr 0x7f9b78025c58 <col:13, col:28> 'volatile int *' <BitCast>
+|           `-ImplicitCastExpr 0x7f9b78025c10 <col:28> 'int *' <LValueToRValue>
+|             `-DeclRefExpr 0x7f9b78025ba8 <col:28> 'int *' lvalue ParmVar 0x7f9b78025a40 'ptr' 'int *'
+`-FunctionDecl 0x7f9b78025db0 <line:8:1, line:12:1> line:8:6 f 'void (void)'
+  `-CompoundStmt 0x7f9b78025f80 <line:9:1, line:12:1>
+    `-WhileStmt 0x7f9b78025f60 <line:10:3, line:11:5>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7f9b78025f30 <line:10:10, col:31> 'int' prefix '!'
+      | `-CallExpr 0x7f9b78025f00 <col:11, col:31> 'int'
+      |   |-ImplicitCastExpr 0x7f9b78025ee8 <col:11> 'int (*)(int *)' <FunctionToPointerDecay>
+      |   | `-DeclRefExpr 0x7f9b78025e48 <col:11> 'int (int *)' Function 0x7f9b78025b08 'cvmx_atomic_get32' 'int (int *)'
+      |   `-UnaryOperator 0x7f9b78025e98 <col:29, col:30> 'int *' prefix '&'
+      |     `-DeclRefExpr 0x7f9b78025e70 <col:30> 'int' lvalue Var 0x7f9b77827138 't' 'int'
+      `-NullStmt 0x7f9b78025f50 <line:11:5>

@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fe8c28264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe8c2826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe8c2826740 '__int128'
+|-TypedefDecl 0x7fe8c2826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe8c2826760 'unsigned __int128'
+|-TypedefDecl 0x7fe8c2826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe8c2826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe8c2826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe8c2826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe8c2826dc0 'char *'
+|   `-BuiltinType 0x7fe8c2826560 'char'
+|-TypedefDecl 0x7fe8c28270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe8c2827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe8c2826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe8c2826e58 '__va_list_tag'
+`-FunctionDecl 0x7fe8c28774d0 <c_files/pr27773.c:3:1, line:6:1> line:3:16 f '_Complex float (_Complex float, float)'
+  |-ParmVarDecl 0x7fe8c2827130 <col:18, col:33> col:33 used a '_Complex float'
+  |-ParmVarDecl 0x7fe8c2877400 <col:36, col:42> col:42 used b 'float'
+  `-CompoundStmt 0x7fe8c28776e0 <line:4:1, line:6:1>
+    `-ReturnStmt 0x7fe8c28776c8 <line:5:3, col:16>
+      `-BinaryOperator 0x7fe8c28776a0 <col:10, col:16> '_Complex float' '-'
+        |-ImplicitCastExpr 0x7fe8c2877688 <col:10> '_Complex float' <LValueToRValue>
+        | `-DeclRefExpr 0x7fe8c28775b8 <col:10> '_Complex float' lvalue ParmVar 0x7fe8c2827130 'a' '_Complex float'
+        `-BinaryOperator 0x7fe8c2877660 <col:14, col:16> '_Complex float' '*'
+          |-ImplicitCastExpr 0x7fe8c2877630 <col:14> '_Complex float' <LValueToRValue>
+          | `-DeclRefExpr 0x7fe8c28775e0 <col:14> '_Complex float' lvalue ParmVar 0x7fe8c2827130 'a' '_Complex float'
+          `-ImplicitCastExpr 0x7fe8c2877648 <col:16> 'float' <LValueToRValue>
+            `-DeclRefExpr 0x7fe8c2877608 <col:16> 'float' lvalue ParmVar 0x7fe8c2877400 'b' 'float'

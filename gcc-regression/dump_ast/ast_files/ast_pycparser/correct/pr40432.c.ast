@@ -1,0 +1,39 @@
+FileAST: 
+  Decl: None, [], [], []
+    Union: U
+      Decl: sth, [], [], []
+        PtrDecl: []
+          TypeDecl: sth, []
+            Struct: something
+      Decl: nothing, [], [], []
+        PtrDecl: []
+          TypeDecl: nothing, []
+            IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: target, [], [], []
+            PtrDecl: []
+              TypeDecl: target, []
+                Union: U
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          Union: U
+      Assignment: =
+        StructRef: .
+          ID: u
+          ID: nothing
+        ID: p
+      Assignment: =
+        UnaryOp: *
+          ID: target
+        ID: u
+      Return: 

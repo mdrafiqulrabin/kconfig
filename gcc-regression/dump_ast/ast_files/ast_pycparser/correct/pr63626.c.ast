@@ -1,0 +1,9 @@
+FileAST: 
+  Decl: foo, [], [], ['inline']
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: foo, []
+        IdentifierType: ['int']

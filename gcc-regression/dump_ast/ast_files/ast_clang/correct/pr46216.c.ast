@@ -1,0 +1,71 @@
+TranslationUnitDecl 0x7ff5570264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff557026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff557026740 '__int128'
+|-TypedefDecl 0x7ff557026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff557026760 'unsigned __int128'
+|-TypedefDecl 0x7ff557026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff557026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff557026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff557026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff557026dc0 'char *'
+|   `-BuiltinType 0x7ff557026560 'char'
+|-TypedefDecl 0x7ff5570270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff557027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff557026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff557026e58 '__va_list_tag'
+|-TypedefDecl 0x7ff557027138 <c_files/pr46216.c:4:1, col:13> col:13 referenced Embryo_Cell 'int'
+| `-BuiltinType 0x7ff5570265c0 'int'
+`-FunctionDecl 0x7ff557825b48 <line:5:1, line:25:1> line:6:1 embryo_program_run 'int (Embryo_Cell *)'
+  |-ParmVarDecl 0x7ff557825a38 <col:20, col:33> col:33 used cip 'Embryo_Cell *'
+  `-CompoundStmt 0x7ff557826490 <line:7:1, line:25:1>
+    |-DeclStmt 0x7ff557825ca0 <line:8:5, col:21>
+    | `-VarDecl 0x7ff557825c40 <col:5, col:19> col:19 used op 'unsigned char'
+    |-DeclStmt 0x7ff557825d28 <line:9:5, col:21>
+    | `-VarDecl 0x7ff557825cc8 <col:5, col:17> col:17 used offs 'Embryo_Cell':'int'
+    |-DeclStmt 0x7ff557826008 <line:10:5, line:12:6>
+    | `-VarDecl 0x7ff557825df0 <line:10:5, line:12:5> line:10:24 used switchtable 'const void *[256]' static cinit
+    |   `-InitListExpr 0x7ff557825f70 <col:43, line:12:5> 'const void *[256]'
+    |     |-array filler
+    |     | `-ImplicitValueInitExpr 0x7ff557825ff8 <<invalid sloc>> 'const void *'
+    |     |-ImplicitCastExpr 0x7ff557825fb0 <line:11:2, col:4> 'const void *' <BitCast>
+    |     | `-AddrLabelExpr 0x7ff557825e98 <col:2, col:4> 'void *' SWITCHTABLE_EMBRYO_OP_NONE 0x7ff557825e50
+    |     `-ImplicitCastExpr 0x7ff557825fd0 <col:32, col:34> 'const void *' <BitCast>
+    |       `-AddrLabelExpr 0x7ff557825f00 <col:32, col:34> 'void *' SWITCHTABLE_EMBRYO_OP_LOAD_PRI 0x7ff557825eb8
+    |-ForStmt 0x7ff557826400 <line:13:5, line:23:7>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | `-CompoundStmt 0x7ff5578263d0 <line:14:7, line:23:7>
+    |   |-BinaryOperator 0x7ff5578260e0 <line:15:2, col:11> 'unsigned char' '='
+    |   | |-DeclRefExpr 0x7ff557826020 <col:2> 'unsigned char' lvalue Var 0x7ff557825c40 'op' 'unsigned char'
+    |   | `-ImplicitCastExpr 0x7ff5578260c8 <col:7, col:11> 'unsigned char' <IntegralCast>
+    |   |   `-ImplicitCastExpr 0x7ff5578260b0 <col:7, col:11> 'Embryo_Cell':'int' <LValueToRValue>
+    |   |     `-UnaryOperator 0x7ff557826090 <col:7, col:11> 'Embryo_Cell':'int' lvalue prefix '*'
+    |   |       `-UnaryOperator 0x7ff557826070 <col:8, col:11> 'Embryo_Cell *' postfix '++'
+    |   |         `-DeclRefExpr 0x7ff557826048 <col:8> 'Embryo_Cell *' lvalue ParmVar 0x7ff557825a38 'cip' 'Embryo_Cell *'
+    |   |-WhileStmt 0x7ff5578263a0 <line:16:2, line:22:2>
+    |   | |-<<<NULL>>>
+    |   | |-IntegerLiteral 0x7ff557826108 <line:16:9> 'int' 1
+    |   | `-CompoundStmt 0x7ff557826370 <col:12, line:22:2>
+    |   |   |-IndirectGotoStmt 0x7ff557826218 <line:17:6, col:26>
+    |   |   | `-ImplicitCastExpr 0x7ff557826200 <col:12, col:26> 'const void *' <LValueToRValue>
+    |   |   |   `-ArraySubscriptExpr 0x7ff5578261d8 <col:12, col:26> 'const void *' lvalue
+    |   |   |     |-ImplicitCastExpr 0x7ff5578261a8 <col:12> 'const void **' <ArrayToPointerDecay>
+    |   |   |     | `-DeclRefExpr 0x7ff557826128 <col:12> 'const void *[256]' lvalue Var 0x7ff557825df0 'switchtable' 'const void *[256]'
+    |   |   |     `-ImplicitCastExpr 0x7ff5578261c0 <col:24> 'unsigned char' <LValueToRValue>
+    |   |   |       `-DeclRefExpr 0x7ff557826150 <col:24> 'unsigned char' lvalue Var 0x7ff557825c40 'op' 'unsigned char'
+    |   |   |-LabelStmt 0x7ff557826338 <line:18:1, line:19:32> 'SWITCHTABLE_EMBRYO_OP_LOAD_PRI'
+    |   |   | `-BinaryOperator 0x7ff557826310 <col:6, col:32> 'Embryo_Cell':'int' '='
+    |   |   |   |-DeclRefExpr 0x7ff557826230 <col:6> 'Embryo_Cell':'int' lvalue Var 0x7ff557825cc8 'offs' 'Embryo_Cell':'int'
+    |   |   |   `-ImplicitCastExpr 0x7ff5578262f8 <col:13, col:32> 'Embryo_Cell':'int' <LValueToRValue>
+    |   |   |     `-UnaryOperator 0x7ff5578262d8 <col:13, col:32> 'Embryo_Cell':'int' lvalue prefix '*'
+    |   |   |       `-CStyleCastExpr 0x7ff5578262b0 <col:14, col:32> 'Embryo_Cell *' <NoOp>
+    |   |   |         `-UnaryOperator 0x7ff557826280 <col:29, col:32> 'Embryo_Cell *' postfix '++'
+    |   |   |           `-DeclRefExpr 0x7ff557826258 <col:29> 'Embryo_Cell *' lvalue ParmVar 0x7ff557825a38 'cip' 'Embryo_Cell *'
+    |   |   `-LabelStmt 0x7ff557826358 <line:20:1, line:21:6> 'SWITCHTABLE_EMBRYO_OP_NONE'
+    |   |     `-BreakStmt 0x7ff557826350 <col:6>
+    |   `-NullStmt 0x7ff5578263c0 <line:22:3>
+    `-ReturnStmt 0x7ff557826478 <line:24:5, col:12>
+      `-ImplicitCastExpr 0x7ff557826460 <col:12> 'Embryo_Cell':'int' <LValueToRValue>
+        `-DeclRefExpr 0x7ff557826438 <col:12> 'Embryo_Cell':'int' lvalue Var 0x7ff557825cc8 'offs' 'Embryo_Cell':'int'

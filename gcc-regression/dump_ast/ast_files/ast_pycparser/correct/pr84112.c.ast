@@ -1,0 +1,426 @@
+FileAST: 
+  Decl: b, [], [], []
+    PtrDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['char']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: h, [], [], []
+            PtrDecl: []
+              TypeDecl: h, []
+                IdentifierType: ['char']
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['int']
+          Decl: l, [], [], []
+            TypeDecl: l, []
+              IdentifierType: ['int']
+          Decl: m, [], [], []
+            TypeDecl: m, []
+              IdentifierType: ['int']
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+          Decl: q, [], [], []
+            TypeDecl: q, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        PtrDecl: []
+          TypeDecl: i, []
+            IdentifierType: ['char']
+        ID: b
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+        ID: d
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['int']
+        ID: e
+      While: 
+        ID: c
+        Compound: 
+          For: 
+            BinaryOp: <=
+              ID: j
+              Constant: int, 0
+            Assignment: +=
+              ID: j
+              Constant: int, 12
+            Compound: 
+              Assignment: =
+                ArrayRef: 
+                  ID: i
+                  ID: j
+                BinaryOp: |
+                  BinaryOp: &
+                    ID: n
+                    BinaryOp: >>
+                      BinaryOp: -
+                        ID: k
+                        ArrayRef: 
+                          ID: h
+                          ID: j
+                      Constant: int, 31
+                  BinaryOp: &
+                    ID: q
+                    UnaryOp: ~
+                      BinaryOp: >>
+                        BinaryOp: -
+                          ID: k
+                          ArrayRef: 
+                            ID: h
+                            ID: j
+                        Constant: int, 31
+              Assignment: =
+                ArrayRef: 
+                  ID: i
+                  BinaryOp: +
+                    ID: j
+                    Constant: int, 1
+                BinaryOp: |
+                  BinaryOp: &
+                    ID: n
+                    BinaryOp: >>
+                      BinaryOp: -
+                        ID: l
+                        ArrayRef: 
+                          ID: h
+                          BinaryOp: +
+                            ID: j
+                            Constant: int, 1
+                      Constant: int, 31
+                  BinaryOp: &
+                    ID: q
+                    UnaryOp: ~
+                      BinaryOp: >>
+                        BinaryOp: -
+                          ID: l
+                          ArrayRef: 
+                            ID: h
+                            BinaryOp: +
+                              ID: j
+                              Constant: int, 1
+                        Constant: int, 31
+              Assignment: =
+                ArrayRef: 
+                  ID: i
+                  BinaryOp: +
+                    ID: j
+                    Constant: int, 2
+                BinaryOp: |
+                  BinaryOp: &
+                    ID: n
+                    BinaryOp: >>
+                      BinaryOp: -
+                        ID: m
+                        ArrayRef: 
+                          ID: h
+                          BinaryOp: +
+                            ID: j
+                            Constant: int, 2
+                      Constant: int, 31
+                  BinaryOp: &
+                    ID: s
+                    UnaryOp: ~
+                      BinaryOp: >>
+                        BinaryOp: -
+                          ID: m
+                          ArrayRef: 
+                            ID: h
+                            BinaryOp: +
+                              ID: j
+                              Constant: int, 2
+                        Constant: int, 31
+              Assignment: =
+                ArrayRef: 
+                  ID: i
+                  BinaryOp: +
+                    ID: j
+                    Constant: int, 3
+                BinaryOp: |
+                  BinaryOp: &
+                    ID: n
+                    BinaryOp: >>
+                      BinaryOp: -
+                        ID: k
+                        ArrayRef: 
+                          ID: h
+                          BinaryOp: +
+                            ID: j
+                            Constant: int, 3
+                      Constant: int, 31
+                  BinaryOp: &
+                    ID: q
+                    UnaryOp: ~
+                      BinaryOp: >>
+                        BinaryOp: -
+                          ID: k
+                          ArrayRef: 
+                            ID: h
+                            BinaryOp: +
+                              ID: j
+                              Constant: int, 3
+                        Constant: int, 31
+              Assignment: =
+                ArrayRef: 
+                  ID: i
+                  BinaryOp: +
+                    ID: j
+                    Constant: int, 4
+                BinaryOp: |
+                  BinaryOp: &
+                    ID: n
+                    BinaryOp: >>
+                      BinaryOp: -
+                        ID: l
+                        ArrayRef: 
+                          ID: h
+                          BinaryOp: +
+                            ID: j
+                            Constant: int, 4
+                      Constant: int, 31
+                  BinaryOp: &
+                    ID: q
+                    UnaryOp: ~
+                      BinaryOp: >>
+                        BinaryOp: -
+                          ID: l
+                          ArrayRef: 
+                            ID: h
+                            BinaryOp: +
+                              ID: j
+                              Constant: int, 4
+                        Constant: int, 31
+              Assignment: =
+                ArrayRef: 
+                  ID: i
+                  BinaryOp: +
+                    ID: j
+                    Constant: int, 5
+                BinaryOp: |
+                  BinaryOp: &
+                    ID: n
+                    BinaryOp: >>
+                      BinaryOp: -
+                        ID: m
+                        ArrayRef: 
+                          ID: h
+                          BinaryOp: +
+                            ID: j
+                            Constant: int, 5
+                      Constant: int, 31
+                  BinaryOp: &
+                    ID: s
+                    UnaryOp: ~
+                      BinaryOp: >>
+                        BinaryOp: -
+                          ID: m
+                          ArrayRef: 
+                            ID: h
+                            BinaryOp: +
+                              ID: j
+                              Constant: int, 5
+                        Constant: int, 31
+              Assignment: =
+                ArrayRef: 
+                  ID: i
+                  BinaryOp: +
+                    ID: j
+                    Constant: int, 6
+                BinaryOp: |
+                  BinaryOp: &
+                    ID: n
+                    BinaryOp: >>
+                      BinaryOp: -
+                        ID: k
+                        ArrayRef: 
+                          ID: h
+                          BinaryOp: +
+                            ID: j
+                            Constant: int, 6
+                      Constant: int, 31
+                  BinaryOp: &
+                    ID: q
+                    UnaryOp: ~
+                      BinaryOp: >>
+                        BinaryOp: -
+                          ID: k
+                          ArrayRef: 
+                            ID: h
+                            BinaryOp: +
+                              ID: j
+                              Constant: int, 6
+                        Constant: int, 31
+              Assignment: =
+                ArrayRef: 
+                  ID: i
+                  BinaryOp: +
+                    ID: j
+                    Constant: int, 7
+                BinaryOp: |
+                  BinaryOp: &
+                    ID: n
+                    BinaryOp: >>
+                      BinaryOp: -
+                        ID: l
+                        ArrayRef: 
+                          ID: h
+                          BinaryOp: +
+                            ID: j
+                            Constant: int, 7
+                      Constant: int, 31
+                  BinaryOp: &
+                    ID: q
+                    UnaryOp: ~
+                      BinaryOp: >>
+                        BinaryOp: -
+                          ID: l
+                          ArrayRef: 
+                            ID: h
+                            BinaryOp: +
+                              ID: j
+                              Constant: int, 7
+                        Constant: int, 31
+              Assignment: =
+                ArrayRef: 
+                  ID: i
+                  BinaryOp: +
+                    ID: j
+                    Constant: int, 8
+                BinaryOp: |
+                  BinaryOp: &
+                    ID: n
+                    BinaryOp: >>
+                      BinaryOp: -
+                        ID: m
+                        ArrayRef: 
+                          ID: h
+                          BinaryOp: +
+                            ID: j
+                            Constant: int, 8
+                      Constant: int, 31
+                  BinaryOp: &
+                    ID: s
+                    UnaryOp: ~
+                      BinaryOp: >>
+                        BinaryOp: -
+                          ID: m
+                          ArrayRef: 
+                            ID: h
+                            BinaryOp: +
+                              ID: j
+                              Constant: int, 8
+                        Constant: int, 31
+              Assignment: =
+                ArrayRef: 
+                  ID: i
+                  BinaryOp: +
+                    ID: j
+                    Constant: int, 9
+                BinaryOp: |
+                  BinaryOp: &
+                    ID: n
+                    BinaryOp: >>
+                      BinaryOp: -
+                        ID: k
+                        ArrayRef: 
+                          ID: h
+                          BinaryOp: +
+                            ID: j
+                            Constant: int, 9
+                      Constant: int, 31
+                  BinaryOp: &
+                    ID: q
+                    UnaryOp: ~
+                      BinaryOp: >>
+                        BinaryOp: -
+                          ID: k
+                          ArrayRef: 
+                            ID: h
+                            BinaryOp: +
+                              ID: j
+                              Constant: int, 9
+                        Constant: int, 31
+              Assignment: =
+                ArrayRef: 
+                  ID: i
+                  BinaryOp: +
+                    ID: j
+                    Constant: int, 10
+                BinaryOp: |
+                  BinaryOp: &
+                    ID: n
+                    BinaryOp: >>
+                      BinaryOp: -
+                        ID: l
+                        ArrayRef: 
+                          ID: h
+                          BinaryOp: +
+                            ID: j
+                            Constant: int, 10
+                      Constant: int, 31
+                  BinaryOp: &
+                    ID: q
+                    UnaryOp: ~
+                      BinaryOp: >>
+                        BinaryOp: -
+                          ID: l
+                          ArrayRef: 
+                            ID: h
+                            BinaryOp: +
+                              ID: j
+                              Constant: int, 10
+                        Constant: int, 31
+              Assignment: =
+                ArrayRef: 
+                  ID: i
+                  BinaryOp: +
+                    ID: j
+                    Constant: int, 11
+                BinaryOp: |
+                  BinaryOp: &
+                    ID: n
+                    BinaryOp: >>
+                      BinaryOp: -
+                        ID: m
+                        ArrayRef: 
+                          ID: h
+                          BinaryOp: +
+                            ID: j
+                            Constant: int, 11
+                      Constant: int, 31
+                  BinaryOp: &
+                    ID: s
+                    UnaryOp: ~
+                      BinaryOp: >>
+                        BinaryOp: -
+                          ID: m
+                          ArrayRef: 
+                            ID: h
+                            BinaryOp: +
+                              ID: j
+                              Constant: int, 11
+                        Constant: int, 31
+          While: 
+            BinaryOp: <
+              ID: j
+              ID: f
+            EmptyStatement: 

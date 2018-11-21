@@ -1,0 +1,70 @@
+TranslationUnitDecl 0x7fc6930264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc693026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc693026740 '__int128'
+|-TypedefDecl 0x7fc693026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc693026760 'unsigned __int128'
+|-TypedefDecl 0x7fc693026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc693026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc693026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc693026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc693026dc0 'char *'
+|   `-BuiltinType 0x7fc693026560 'char'
+|-TypedefDecl 0x7fc6930270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc693027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc693026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc693026e58 '__va_list_tag'
+|-RecordDecl 0x7fc693027120 <c_files/pr42196-1.c:1:1, line:5:1> line:1:7 union U definition
+| |-FieldDecl 0x7fc693825a00 <line:3:3, col:10> col:10 referenced d 'double'
+| `-FieldDecl 0x7fc693825a88 <line:4:3, col:19> col:19 referenced c '_Complex int'
+|-VarDecl 0x7fc693825ae8 <line:7:1, col:8> col:8 gd 'double'
+|-FunctionDecl 0x7fc693825ce8 <line:8:1, col:27> col:15 used bar 'double (union U)' extern
+| `-ParmVarDecl 0x7fc693825be0 <col:20, col:26> col:27 'union U':'union U'
+`-FunctionDecl 0x7fc693826008 <line:10:1, line:28:1> line:10:8 foo 'double (int, double, int, int)'
+  |-ParmVarDecl 0x7fc693825da0 <col:13, col:17> col:17 used b 'int'
+  |-ParmVarDecl 0x7fc693825e18 <col:20, col:27> col:27 used d 'double'
+  |-ParmVarDecl 0x7fc693825e90 <col:30, col:34> col:34 used c1 'int'
+  |-ParmVarDecl 0x7fc693825f08 <col:38, col:42> col:42 used c2 'int'
+  `-CompoundStmt 0x7fc693826820 <line:11:1, line:28:1>
+    |-DeclStmt 0x7fc693826140 <line:12:3, col:12>
+    | `-VarDecl 0x7fc6938260e0 <col:3, col:11> col:11 used u 'union U':'union U'
+    |-DeclStmt 0x7fc6938261d0 <line:13:3, col:11>
+    | `-VarDecl 0x7fc693826170 <col:3, col:10> col:10 used r 'double'
+    |-IfStmt 0x7fc693826790 <line:15:3, line:25:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fc693826210 <line:15:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fc6938261e8 <col:7> 'int' lvalue ParmVar 0x7fc693825da0 'b' 'int'
+    | |-CompoundStmt 0x7fc6938263b8 <line:16:5, line:19:5>
+    | | |-BinaryOperator 0x7fc6938262c8 <line:17:7, col:13> 'double' '='
+    | | | |-MemberExpr 0x7fc693826250 <col:7, col:9> 'double' lvalue .d 0x7fc693825a00
+    | | | | `-DeclRefExpr 0x7fc693826228 <col:7> 'union U':'union U' lvalue Var 0x7fc6938260e0 'u' 'union U':'union U'
+    | | | `-ImplicitCastExpr 0x7fc6938262b0 <col:13> 'double' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fc693826288 <col:13> 'double' lvalue ParmVar 0x7fc693825e18 'd' 'double'
+    | | `-BinaryOperator 0x7fc693826390 <line:18:7, col:13> 'double' '='
+    | |   |-DeclRefExpr 0x7fc6938262f0 <col:7> 'double' lvalue Var 0x7fc693826170 'r' 'double'
+    | |   `-ImplicitCastExpr 0x7fc693826378 <col:11, col:13> 'double' <LValueToRValue>
+    | |     `-MemberExpr 0x7fc693826340 <col:11, col:13> 'double' lvalue .d 0x7fc693825a00
+    | |       `-DeclRefExpr 0x7fc693826318 <col:11> 'union U':'union U' lvalue Var 0x7fc6938260e0 'u' 'union U':'union U'
+    | `-CompoundStmt 0x7fc693826760 <line:21:5, line:25:5>
+    |   |-BinaryOperator 0x7fc6938264a0 <line:22:7, col:22> 'int' '='
+    |   | |-UnaryOperator 0x7fc693826440 <col:7, col:18> 'int' lvalue prefix '__real'
+    |   | | `-MemberExpr 0x7fc693826408 <col:16, col:18> '_Complex int' lvalue .c 0x7fc693825a88
+    |   | |   `-DeclRefExpr 0x7fc6938263e0 <col:16> 'union U':'union U' lvalue Var 0x7fc6938260e0 'u' 'union U':'union U'
+    |   | `-ImplicitCastExpr 0x7fc693826488 <col:22> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fc693826460 <col:22> 'int' lvalue ParmVar 0x7fc693825e90 'c1' 'int'
+    |   |-BinaryOperator 0x7fc6938265d8 <line:23:7, col:22> 'int' '='
+    |   | |-UnaryOperator 0x7fc693826578 <col:7, col:18> 'int' lvalue prefix '__imag'
+    |   | | `-MemberExpr 0x7fc693826540 <col:16, col:18> '_Complex int' lvalue .c 0x7fc693825a88
+    |   | |   `-DeclRefExpr 0x7fc693826518 <col:16> 'union U':'union U' lvalue Var 0x7fc6938260e0 'u' 'union U':'union U'
+    |   | `-ImplicitCastExpr 0x7fc6938265c0 <col:22> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fc693826598 <col:22> 'int' lvalue ParmVar 0x7fc693825f08 'c2' 'int'
+    |   `-BinaryOperator 0x7fc693826738 <line:24:7, col:17> 'double' '='
+    |     |-DeclRefExpr 0x7fc693826600 <col:7> 'double' lvalue Var 0x7fc693826170 'r' 'double'
+    |     `-CallExpr 0x7fc6938266f0 <col:11, col:17> 'double'
+    |       |-ImplicitCastExpr 0x7fc6938266d8 <col:11> 'double (*)(union U)' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7fc693826628 <col:11> 'double (union U)' Function 0x7fc693825ce8 'bar' 'double (union U)'
+    |       `-ImplicitCastExpr 0x7fc693826720 <col:16> 'union U':'union U' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fc693826650 <col:16> 'union U':'union U' lvalue Var 0x7fc6938260e0 'u' 'union U':'union U'
+    `-ReturnStmt 0x7fc693826808 <line:27:3, col:10>
+      `-ImplicitCastExpr 0x7fc6938267f0 <col:10> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7fc6938267c8 <col:10> 'double' lvalue Var 0x7fc693826170 'r' 'double'

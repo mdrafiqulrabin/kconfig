@@ -1,0 +1,78 @@
+TranslationUnitDecl 0x7f80f88264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f80f8826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f80f8826740 '__int128'
+|-TypedefDecl 0x7f80f8826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f80f8826760 'unsigned __int128'
+|-TypedefDecl 0x7f80f8826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f80f8826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f80f8826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f80f8826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f80f8826dc0 'char *'
+|   `-BuiltinType 0x7f80f8826560 'char'
+|-TypedefDecl 0x7f80f88270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f80f8827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f80f8826ee0 'struct __va_list_tag'
+|     `-Record 0x7f80f8826e58 '__va_list_tag'
+|-FunctionDecl 0x7f80f9025a30 <c_files/pr59990.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f80f9025ac8 prev 0x7f80f9025a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7f80f9025be0 <line:5:1, col:44> col:15 used value 'unsigned char [4]' cinit
+| `-InitListExpr 0x7f80f9025d60 <col:26, col:44> 'unsigned char [4]'
+|   |-ImplicitCastExpr 0x7f80f9025dc0 <col:28> 'unsigned char' <IntegralCast>
+|   | `-IntegerLiteral 0x7f80f9025c80 <col:28> 'int' 66
+|   |-ImplicitCastExpr 0x7f80f9025dd8 <col:32> 'unsigned char' <IntegralCast>
+|   | `-IntegerLiteral 0x7f80f9025ca0 <col:32> 'int' 9
+|   |-ImplicitCastExpr 0x7f80f9025df0 <col:35> 'unsigned char' <IntegralCast>
+|   | `-IntegerLiteral 0x7f80f9025cc0 <col:35> 'int' 160
+|   `-ImplicitCastExpr 0x7f80f9025e08 <col:40> 'unsigned char' <IntegralCast>
+|     `-IntegerLiteral 0x7f80f9025ce0 <col:40> 'int' 255
+|-FunctionDecl 0x7f80f9025ee8 <line:7:1, line:18:1> line:7:5 main 'int (void)'
+| `-CompoundStmt 0x7f80f90269b8 <line:8:1, line:18:1>
+|   |-DeclStmt 0x7f80f9026020 <line:9:3, col:19>
+|   | `-VarDecl 0x7f80f9025fc0 <col:3, col:18> col:18 used f 'volatile float'
+|   |-DeclStmt 0x7f80f90260e0 <line:10:3, col:21>
+|   | `-VarDecl 0x7f80f9026080 <col:3, col:20> col:17 used a 'unsigned char [4]'
+|   |-CallExpr 0x7f80f9026560 <line:12:3, col:41> 'void *'
+|   | |-ImplicitCastExpr 0x7f80f9026548 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f80f9026390 <col:3> '<builtin fn type>' Function 0x7f80f9026178 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-CStyleCastExpr 0x7f80f9026468 <col:21, col:30> 'void *' <BitCast>
+|   | | `-UnaryOperator 0x7f80f9026408 <col:29, col:30> 'volatile float *' prefix '&'
+|   | |   `-DeclRefExpr 0x7f80f90263b8 <col:30> 'volatile float' lvalue Var 0x7f80f9025fc0 'f' 'volatile float'
+|   | |-ImplicitCastExpr 0x7f80f90265b8 <col:33> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f80f90265a0 <col:33> 'unsigned char *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f80f9026490 <col:33> 'unsigned char [4]' lvalue Var 0x7f80f9025be0 'value' 'unsigned char [4]'
+|   | `-ImplicitCastExpr 0x7f80f90265d0 <col:40> 'unsigned long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f80f90264b8 <col:40> 'int' 4
+|   |-CallExpr 0x7f80f9026710 <line:13:3, col:37> 'void *'
+|   | |-ImplicitCastExpr 0x7f80f90266f8 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f80f90265e8 <col:3> '<builtin fn type>' Function 0x7f80f9026178 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f80f9026768 <col:21> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f80f9026750 <col:21> 'unsigned char *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f80f9026610 <col:21> 'unsigned char [4]' lvalue Var 0x7f80f9026080 'a' 'unsigned char [4]'
+|   | |-ImplicitCastExpr 0x7f80f9026780 <col:24, col:33> 'const void *' <BitCast>
+|   | | `-CStyleCastExpr 0x7f80f9026698 <col:24, col:33> 'void *' <BitCast>
+|   | |   `-UnaryOperator 0x7f80f9026660 <col:32, col:33> 'volatile float *' prefix '&'
+|   | |     `-DeclRefExpr 0x7f80f9026638 <col:33> 'volatile float' lvalue Var 0x7f80f9025fc0 'f' 'volatile float'
+|   | `-ImplicitCastExpr 0x7f80f9026798 <col:36> 'unsigned long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f80f90266c0 <col:36> 'int' 4
+|   |-IfStmt 0x7f80f9026948 <line:14:3, line:15:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f80f9026888 <line:14:7, col:15> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7f80f9026870 <col:7, col:10> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f80f9026858 <col:7, col:10> 'unsigned char' <LValueToRValue>
+|   | | |   `-ArraySubscriptExpr 0x7f80f9026810 <col:7, col:10> 'unsigned char' lvalue
+|   | | |     |-ImplicitCastExpr 0x7f80f90267f8 <col:7> 'unsigned char *' <ArrayToPointerDecay>
+|   | | |     | `-DeclRefExpr 0x7f80f90267b0 <col:7> 'unsigned char [4]' lvalue Var 0x7f80f9026080 'a' 'unsigned char [4]'
+|   | | |     `-IntegerLiteral 0x7f80f90267d8 <col:9> 'int' 2
+|   | | `-IntegerLiteral 0x7f80f9026838 <col:15> 'int' 160
+|   | |-CallExpr 0x7f80f9026920 <line:15:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7f80f9026908 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f80f90268b0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f80f9025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f80f90269a0 <line:17:3, col:10>
+|     `-IntegerLiteral 0x7f80f9026980 <col:10> 'int' 0
+`-FunctionDecl 0x7f80f9026178 <line:12:3> col:3 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7f80f9026210 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7f80f9026270 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7f80f90262d0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7f80f9026348 <col:3> Implicit

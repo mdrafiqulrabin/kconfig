@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7fcf0e00e4d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcf0e00ea20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcf0e00e740 '__int128'
+|-TypedefDecl 0x7fcf0e00ea90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcf0e00e760 'unsigned __int128'
+|-TypedefDecl 0x7fcf0e00ed68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcf0e00eb70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcf0e00eae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcf0e00ee00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcf0e00edc0 'char *'
+|   `-BuiltinType 0x7fcf0e00e560 'char'
+|-TypedefDecl 0x7fcf0e00f0c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcf0e00f070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcf0e00eee0 'struct __va_list_tag'
+|     `-Record 0x7fcf0e00ee58 '__va_list_tag'
+|-TypedefDecl 0x7fcf0e061a00 <c_files/pr56275.c:5:1, col:19> col:19 referenced v2tw '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-VectorType 0x7fcf0e00f1c0 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+|   `-BuiltinType 0x7fcf0e00e600 'long long'
+`-FunctionDecl 0x7fcf0e061c70 <line:7:1, line:12:1> line:7:6 tiger_block_v2 'void (long long, v2tw *)'
+  |-ParmVarDecl 0x7fcf0e061a70 <col:22, col:32> col:32 used in1 'long long'
+  |-ParmVarDecl 0x7fcf0e061b58 <col:37, col:43> col:43 used res 'v2tw *'
+  `-CompoundStmt 0x7fcf0e062050 <line:8:1, line:12:1>
+    |-DeclStmt 0x7fcf0e061ee8 <line:9:3, col:25>
+    | `-VarDecl 0x7fcf0e061d68 <col:3, col:24> col:8 used i1 'v2tw':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' cinit
+    |   `-InitListExpr 0x7fcf0e061e68 <col:13, col:24> 'v2tw':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+    |     |-ImplicitCastExpr 0x7fcf0e061eb8 <col:15> 'long long' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fcf0e061dc8 <col:15> 'long long' lvalue ParmVar 0x7fcf0e061a70 'in1' 'long long'
+    |     `-ImplicitCastExpr 0x7fcf0e061ed0 <col:20> 'long long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fcf0e061df0 <col:20> 'long long' lvalue ParmVar 0x7fcf0e061a70 'in1' 'long long'
+    `-BinaryOperator 0x7fcf0e062028 <line:11:3, col:16> 'v2tw':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' '='
+      |-UnaryOperator 0x7fcf0e061f40 <col:3, col:4> 'v2tw':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fcf0e061f28 <col:4> 'v2tw *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fcf0e061f00 <col:4> 'v2tw *' lvalue ParmVar 0x7fcf0e061b58 'res' 'v2tw *'
+      `-BinaryOperator 0x7fcf0e062000 <col:10, col:16> 'v2tw':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' '<<'
+        |-ImplicitCastExpr 0x7fcf0e061fa8 <col:10> 'v2tw':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7fcf0e061f60 <col:10> 'v2tw':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7fcf0e061d68 'i1' 'v2tw':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+        `-ImplicitCastExpr 0x7fcf0e061fe8 <col:16> 'int __attribute__((ext_vector_type(2)))' <VectorSplat>
+          `-IntegerLiteral 0x7fcf0e061f88 <col:16> 'int' 1

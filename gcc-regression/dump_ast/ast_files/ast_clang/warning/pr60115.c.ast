@@ -1,0 +1,46 @@
+c_files/pr60115.c:10:9: warning: array index 10000 is past the end of the array (which contains 2 elements) [-Warray-bounds]
+    if (b[10000])
+        ^ ~~~~~
+c_files/pr60115.c:3:1: note: array 'b' declared here
+int a, b[2];
+^
+1 warning generated.
+TranslationUnitDecl 0x7fa23a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa23a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa23a826740 '__int128'
+|-TypedefDecl 0x7fa23a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa23a826760 'unsigned __int128'
+|-TypedefDecl 0x7fa23a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa23a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa23a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa23a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa23a826dc0 'char *'
+|   `-BuiltinType 0x7fa23a826560 'char'
+|-TypedefDecl 0x7fa23a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa23a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa23a826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa23a826e58 '__va_list_tag'
+|-VarDecl 0x7fa23a827138 <c_files/pr60115.c:3:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fa23b80ba60 <col:1, col:11> col:8 used b 'int [2]'
+`-FunctionDecl 0x7fa23b80bb30 <line:5:1, line:14:1> line:6:1 main 'int ()'
+  `-CompoundStmt 0x7fa23b80be40 <line:7:1, line:14:1>
+    |-LabelStmt 0x7fa23b80bdf0 <line:8:1, line:11:12> 'lbl'
+    | `-ForStmt 0x7fa23b80bdb8 <line:9:3, line:11:12>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-ImplicitCastExpr 0x7fa23b80bbf0 <line:9:10> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fa23b80bbc8 <col:10> 'int' lvalue Var 0x7fa23a827138 'a' 'int'
+    |   |-UnaryOperator 0x7fa23b80bc30 <col:13, col:14> 'int' postfix '--'
+    |   | `-DeclRefExpr 0x7fa23b80bc08 <col:13> 'int' lvalue Var 0x7fa23a827138 'a' 'int'
+    |   `-IfStmt 0x7fa23b80bd80 <line:10:5, line:11:12>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-ImplicitCastExpr 0x7fa23b80bd08 <line:10:9, col:16> 'int' <LValueToRValue>
+    |     | `-ArraySubscriptExpr 0x7fa23b80bce0 <col:9, col:16> 'int' lvalue
+    |     |   |-ImplicitCastExpr 0x7fa23b80bcc8 <col:9> 'int *' <ArrayToPointerDecay>
+    |     |   | `-DeclRefExpr 0x7fa23b80bc50 <col:9> 'int [2]' lvalue Var 0x7fa23b80ba60 'b' 'int [2]'
+    |     |   `-IntegerLiteral 0x7fa23b80bc78 <col:11> 'int' 10000
+    |     |-GotoStmt 0x7fa23b80bd68 <line:11:7, col:12> 'lbl' 0x7fa23b80bd20
+    |     `-<<<NULL>>>
+    `-ReturnStmt 0x7fa23b80be28 <line:13:3, col:10>
+      `-IntegerLiteral 0x7fa23b80be08 <col:10> 'int' 0

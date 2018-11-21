@@ -1,0 +1,83 @@
+c_files/pr51949.c:7:13: error: use of unknown builtin '__builtin_malloc' [-Wimplicit-function-declaration]
+  void *q = __builtin_malloc (amount);
+            ^
+c_files/pr51949.c:7:9: warning: incompatible integer to pointer conversion initializing 'void *' with an expression of type 'int' [-Wint-conversion]
+  void *q = __builtin_malloc (amount);
+        ^   ~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr51949.c:10:7: error: use of unknown builtin '__builtin_exit' [-Wimplicit-function-declaration]
+      __builtin_exit(255);
+      ^
+c_files/pr51949.c:10:7: note: did you mean '__builtin_printf'?
+c_files/pr51949.c:9:7: note: '__builtin_printf' declared here
+      __builtin_printf("malloc");
+      ^
+1 warning and 2 errors generated.
+TranslationUnitDecl 0x7fdb290264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdb29026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdb29026740 '__int128'
+|-TypedefDecl 0x7fdb29026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdb29026760 'unsigned __int128'
+|-TypedefDecl 0x7fdb29026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdb29026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdb29026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdb29026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdb29026dc0 'char *'
+|   `-BuiltinType 0x7fdb29026560 'char'
+|-TypedefDecl 0x7fdb290270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdb29027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdb29026ee0 'struct __va_list_tag'
+|     `-Record 0x7fdb29026e58 '__va_list_tag'
+|-TypedefDecl 0x7fdb29027138 <c_files/pr51949.c:3:1, col:27> col:27 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fdb29026680 'unsigned long'
+|-FunctionDecl 0x7fdb29826b08 <line:4:1, col:55> col:39 used mem_alloc 'void *(size_t)' extern
+| |-ParmVarDecl 0x7fdb29826a00 <col:49> col:55 'size_t':'unsigned long'
+| `-RestrictAttr 0x7fdb29826ba8 <col:24> malloc
+|-FunctionDecl 0x7fdb29826cd0 prev 0x7fdb29826b08 <line:5:1, line:12:1> line:5:7 used mem_alloc 'void *(size_t)'
+| |-ParmVarDecl 0x7fdb29826c40 <col:17, col:24> col:24 used amount 'size_t':'unsigned long'
+| |-CompoundStmt 0x7fdb298278e0 <line:6:1, line:12:1>
+| | |-DeclStmt 0x7fdb298273e0 <line:7:3, col:38>
+| | | `-VarDecl 0x7fdb29826dd0 <col:3, col:37> col:9 used q 'void *' cinit
+| | |   `-ImplicitCastExpr 0x7fdb29827018 <col:13, col:37> 'void *' <IntegralToPointer>
+| | |     `-CallExpr 0x7fdb29826fd0 <col:13, col:37> 'int'
+| | |       |-ImplicitCastExpr 0x7fdb29826fb8 <col:13> 'int (*)()' <FunctionToPointerDecay>
+| | |       | `-DeclRefExpr 0x7fdb29826f38 <col:13> 'int ()' Function 0x7fdb29826ea0 '__builtin_malloc' 'int ()'
+| | |       `-ImplicitCastExpr 0x7fdb29827000 <col:31> 'size_t':'unsigned long' <LValueToRValue>
+| | |         `-DeclRefExpr 0x7fdb29826f60 <col:31> 'size_t':'unsigned long' lvalue ParmVar 0x7fdb29826c40 'amount' 'size_t':'unsigned long'
+| | `-IfStmt 0x7fdb298278a8 <line:8:3, line:11:3>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-UnaryOperator 0x7fdb29827438 <line:8:7, col:8> 'int' prefix '!'
+| |   | `-ImplicitCastExpr 0x7fdb29827420 <col:8> 'void *' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7fdb298273f8 <col:8> 'void *' lvalue Var 0x7fdb29826dd0 'q' 'void *'
+| |   |-CompoundStmt 0x7fdb29827880 <col:11, line:11:3>
+| |   | |-CallExpr 0x7fdb298276d0 <line:9:7, col:32> 'int'
+| |   | | |-ImplicitCastExpr 0x7fdb298276b8 <col:7> 'int (*)(const char *, ...)' <BuiltinFnToFnPtr>
+| |   | | | `-DeclRefExpr 0x7fdb298275f0 <col:7> '<builtin fn type>' Function 0x7fdb29827498 '__builtin_printf' 'int (const char *, ...)'
+| |   | | `-ImplicitCastExpr 0x7fdb29827718 <col:24> 'const char *' <BitCast>
+| |   | |   `-ImplicitCastExpr 0x7fdb29827700 <col:24> 'char *' <ArrayToPointerDecay>
+| |   | |     `-StringLiteral 0x7fdb29827658 <col:24> 'char [7]' lvalue "malloc"
+| |   | `-CallExpr 0x7fdb29827850 <line:10:7, col:25> 'int'
+| |   |   |-ImplicitCastExpr 0x7fdb29827838 <col:7> 'int (*)()' <FunctionToPointerDecay>
+| |   |   | `-DeclRefExpr 0x7fdb298277f0 <col:7> 'int ()' Function 0x7fdb29827758 '__builtin_exit' 'int ()'
+| |   |   `-IntegerLiteral 0x7fdb29827818 <col:22> 'int' 255
+| |   `-<<<NULL>>>
+| `-RestrictAttr 0x7fdb29826da8 <line:4:24> Inherited malloc
+|-FunctionDecl 0x7fdb29826ea0 <<invalid sloc>> line:7:13 implicit used __builtin_malloc 'int ()'
+|-FunctionDecl 0x7fdb29827498 <line:9:7> col:7 implicit used __builtin_printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fdb29827530 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fdb29827598 <col:7> Implicit printf 1 2
+|-FunctionDecl 0x7fdb29827758 <<invalid sloc>> line:10:7 implicit used __builtin_exit 'int ()'
+|-FunctionDecl 0x7fdb29827958 <line:13:1, line:16:1> line:13:6 mem_realloc 'void ()'
+| `-CompoundStmt 0x7fdb29828b08 <line:14:1, line:16:1>
+|   `-CallExpr 0x7fdb29828ac0 <line:15:3, col:14> 'void *'
+|     |-ImplicitCastExpr 0x7fdb29828aa8 <col:3> 'void *(*)(size_t)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fdb29828a00 <col:3> 'void *(size_t)' Function 0x7fdb29826cd0 'mem_alloc' 'void *(size_t)'
+|     `-ImplicitCastExpr 0x7fdb29828af0 <col:13> 'size_t':'unsigned long' <IntegralCast>
+|       `-IntegerLiteral 0x7fdb29828a28 <col:13> 'int' 1
+`-FunctionDecl 0x7fdb29828b48 <line:17:1, line:20:1> line:17:6 put_env_var 'void ()'
+  `-CompoundStmt 0x7fdb29828c88 <line:18:1, line:20:1>
+    `-CallExpr 0x7fdb29828c40 <line:19:3, col:14> 'void *'
+      |-ImplicitCastExpr 0x7fdb29828c28 <col:3> 'void *(*)(size_t)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fdb29828be0 <col:3> 'void *(size_t)' Function 0x7fdb29826cd0 'mem_alloc' 'void *(size_t)'
+      `-ImplicitCastExpr 0x7fdb29828c70 <col:13> 'size_t':'unsigned long' <IntegralCast>
+        `-IntegerLiteral 0x7fdb29828c08 <col:13> 'int' 1

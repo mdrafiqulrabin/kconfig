@@ -1,0 +1,32 @@
+c_files/pr81262.c:8:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : l1, l2);
+      ^
+1 error generated.
+TranslationUnitDecl 0x7fbe6d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbe6d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbe6d026740 '__int128'
+|-TypedefDecl 0x7fbe6d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbe6d026760 'unsigned __int128'
+|-TypedefDecl 0x7fbe6d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbe6d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbe6d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbe6d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbe6d026dc0 'char *'
+|   `-BuiltinType 0x7fbe6d026560 'char'
+|-TypedefDecl 0x7fbe6d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbe6d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbe6d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbe6d026e58 '__va_list_tag'
+|-FunctionDecl 0x7fbe6d826a20 <c_files/pr81262.c:3:1, col:47> col:6 used bar 'void (void) __attribute__((noreturn))'
+| `-ColdAttr 0x7fbe6d826ab8 <col:32>
+`-FunctionDecl 0x7fbe6d826c08 <line:5:1, line:14:1> line:6:1 foo 'int (void)'
+  `-CompoundStmt 0x7fbe6d826e68 <line:7:1, line:14:1>
+    |-CallExpr 0x7fbe6d826d10 <line:9:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7fbe6d826cf8 <col:3> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fbe6d826ca0 <col:3> 'void (void) __attribute__((noreturn))' Function 0x7fbe6d826a20 'bar' 'void (void) __attribute__((noreturn))'
+    |-LabelStmt 0x7fbe6d826db8 <line:10:2, line:11:10> 'l1'
+    | `-ReturnStmt 0x7fbe6d826d58 <col:3, col:10>
+    |   `-IntegerLiteral 0x7fbe6d826d38 <col:10> 'int' 1
+    `-LabelStmt 0x7fbe6d826e50 <line:12:2, line:13:10> 'l2'
+      `-ReturnStmt 0x7fbe6d826df0 <col:3, col:10>
+        `-IntegerLiteral 0x7fbe6d826dd0 <col:10> 'int' 0

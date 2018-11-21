@@ -1,0 +1,94 @@
+FileAST: 
+  Typedef: uint8_t, [], ['typedef']
+    TypeDecl: uint8_t, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: uint16_t, [], ['typedef']
+    TypeDecl: uint16_t, []
+      IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: rgb15to24_C, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: src, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: src, ['const']
+                IdentifierType: ['uint8_t']
+          Decl: dst, [], [], []
+            PtrDecl: []
+              TypeDecl: dst, []
+                IdentifierType: ['uint8_t']
+          Decl: src_size, [], [], []
+            TypeDecl: src_size, []
+              IdentifierType: ['long']
+        TypeDecl: rgb15to24_C, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: end, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: end, ['const']
+            IdentifierType: ['uint16_t']
+      Decl: s, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: s, ['const']
+            IdentifierType: ['uint16_t']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['uint16_t']
+          ID: src
+      Decl: d, [], [], []
+        PtrDecl: []
+          TypeDecl: d, []
+            IdentifierType: ['uint8_t']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['uint8_t']
+          ID: dst
+      Assignment: =
+        ID: end
+        BinaryOp: +
+          ID: s
+          BinaryOp: /
+            ID: src_size
+            Constant: int, 2
+      While: 
+        BinaryOp: <
+          ID: s
+          ID: end
+        Compound: 
+          Decl: bgr, [], [], []
+            TypeDecl: bgr, []
+              IdentifierType: ['uint16_t']
+            UnaryOp: *
+              UnaryOp: p++
+                ID: s
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: d
+            BinaryOp: <<
+              BinaryOp: &
+                ID: bgr
+                Constant: int, 0x1F
+              Constant: int, 3
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: d
+            BinaryOp: >>
+              BinaryOp: &
+                ID: bgr
+                Constant: int, 0x3E0
+              Constant: int, 2
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: d
+            BinaryOp: >>
+              BinaryOp: &
+                ID: bgr
+                Constant: int, 0x7C00
+              Constant: int, 7

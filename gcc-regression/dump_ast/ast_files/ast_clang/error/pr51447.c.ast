@@ -1,0 +1,54 @@
+c_files/pr51447.c:8:25: error: register 'rbx' unsuitable for global register variables on this target
+register void *ptr asm ("rbx");
+                        ^
+c_files/pr51447.c:19:7: error: function definition is not allowed here
+      {
+      ^
+c_files/pr51447.c:23:3: warning: implicit declaration of function 'bar' is invalid in C99 [-Wimplicit-function-declaration]
+  bar (&&nonlocal_lab);
+  ^
+1 warning and 2 errors generated.
+TranslationUnitDecl 0x7fdef70002d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdef7000820 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdef7000540 '__int128'
+|-TypedefDecl 0x7fdef7000890 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdef7000560 'unsigned __int128'
+|-TypedefDecl 0x7fdef7000b68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdef7000970 'struct __NSConstantString_tag'
+|   `-Record 0x7fdef70008e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdef7000c00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdef7000bc0 'char *'
+|   `-BuiltinType 0x7fdef7000360 'char'
+|-TypedefDecl 0x7fdef7000ec8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdef7000e70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdef7000ce0 'struct __va_list_tag'
+|     `-Record 0x7fdef7000c58 '__va_list_tag'
+|-FunctionDecl 0x7fdef7831830 <c_files/pr51447.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fdef78318c8 prev 0x7fdef7831830 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7fdef78319e0 <line:8:1, col:16> col:16 used ptr 'void *' register
+| `-AsmLabelAttr 0x7fdef7831a40 <col:25> "rbx"
+|-FunctionDecl 0x7fdef7831ba8 <line:13:1, line:29:1> line:14:1 main 'int (void)'
+| `-CompoundStmt 0x7fdef78320c0 <line:15:1, line:29:1>
+|   |-DeclStmt 0x7fdef7831cb0 <line:16:3, col:25>
+|   | `-LabelDecl 0x7fdef7831c68 <col:3, col:13> col:13 used nonlocal_lab
+|   |-CallExpr 0x7fdef7831eb0 <line:23:3, col:22> 'int'
+|   | |-ImplicitCastExpr 0x7fdef7831e98 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fdef7831e28 <col:3> 'int ()' Function 0x7fdef7831d90 'bar' 'int ()'
+|   | `-AddrLabelExpr 0x7fdef7831e50 <col:8, col:10> 'void *' nonlocal_lab 0x7fdef7831c68
+|   |-ReturnStmt 0x7fdef7831f00 <line:24:3, col:10>
+|   | `-IntegerLiteral 0x7fdef7831ee0 <col:10> 'int' 1
+|   |-LabelStmt 0x7fdef7832070 <line:25:1, line:27:12> 'nonlocal_lab'
+|   | `-IfStmt 0x7fdef7832038 <line:26:3, line:27:12>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7fdef7831f78 <line:26:7, col:16> 'int' '!='
+|   |   | |-ImplicitCastExpr 0x7fdef7831f60 <col:7> 'void *' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fdef7831f18 <col:7> 'void *' lvalue Var 0x7fdef78319e0 'ptr' 'void *'
+|   |   | `-AddrLabelExpr 0x7fdef7831f40 <col:14, col:16> 'void *' nonlocal_lab 0x7fdef7831c68
+|   |   |-CallExpr 0x7fdef7832010 <line:27:5, col:12> 'void'
+|   |   | `-ImplicitCastExpr 0x7fdef7831ff8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   |   `-DeclRefExpr 0x7fdef7831fa0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fdef78318c8 'abort' 'void (void) __attribute__((noreturn))'
+|   |   `-<<<NULL>>>
+|   `-ReturnStmt 0x7fdef78320a8 <line:28:3, col:10>
+|     `-IntegerLiteral 0x7fdef7832088 <col:10> 'int' 0
+`-FunctionDecl 0x7fdef7831d90 <<invalid sloc>> line:23:3 implicit used bar 'int ()'

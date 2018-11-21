@@ -1,0 +1,68 @@
+c_files/pr67964.c:7:39: warning: unknown attribute 'optimize' ignored [-Wunknown-attributes]
+extern int fn2 (void) __attribute__ ((optimize (0) const)); /* { dg-error "expected" } */
+                                      ^
+c_files/pr67964.c:8:39: warning: unknown attribute 'optimize' ignored [-Wunknown-attributes]
+extern int fn3 (void) __attribute__ ((optimize (0), const));
+                                      ^
+c_files/pr67964.c:16:58: warning: unknown attribute '__noclone__' ignored [-Wunknown-attributes]
+extern int fn10 (void) __attribute__ ((__cold__ __pure__ __noclone__)); /* { dg-error "expected" } */
+                                                         ^
+c_files/pr67964.c:17:59: warning: unknown attribute '__noclone__' ignored [-Wunknown-attributes]
+extern int fn11 (void) __attribute__ ((__cold__, __pure__ __noclone__)); /* { dg-error "expected" } */
+                                                          ^
+c_files/pr67964.c:20:30: error: aliases are not supported on darwin
+extern int a __attribute__ ((alias ("i") unused)); /* { dg-error "expected" } */
+                             ^
+c_files/pr67964.c:21:31: error: aliases are not supported on darwin
+extern int a2 __attribute__ ((alias ("i" "i")));
+                              ^
+4 warnings and 2 errors generated.
+TranslationUnitDecl 0x7f82510264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8251026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8251026740 '__int128'
+|-TypedefDecl 0x7f8251026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8251026760 'unsigned __int128'
+|-TypedefDecl 0x7f8251026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8251026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8251026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8251026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8251026dc0 'char *'
+|   `-BuiltinType 0x7f8251026560 'char'
+|-TypedefDecl 0x7f82510270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8251027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8251026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8251026e58 '__va_list_tag'
+|-FunctionDecl 0x7f8251826a00 <c_files/pr67964.c:5:1, col:51> col:12 fn0 'int (void)' extern
+| |-ConstAttr 0x7f8251826a98 <col:45>
+| `-ConstAttr 0x7f8251826ae0 <col:39>
+|-FunctionDecl 0x7f8251826bc8 <line:6:1, col:52> col:12 fn1 'int (void)' extern
+| |-ConstAttr 0x7f8251826c60 <col:46>
+| `-ConstAttr 0x7f8251826ca8 <col:39>
+|-FunctionDecl 0x7f8251826d70 <line:7:1, col:58> col:12 fn2 'int (void)' extern
+| `-ConstAttr 0x7f8251826e08 <col:52>
+|-FunctionDecl 0x7f8251826f08 <line:8:1, col:59> col:12 fn3 'int (void)' extern
+| `-ConstAttr 0x7f8251826fa0 <col:53>
+|-FunctionDecl 0x7f8251827080 <line:10:1, col:47> col:12 fn4 'int (void)' extern
+| `-ConstAttr 0x7f8251827118 <col:41>
+|-FunctionDecl 0x7f82518271f8 <line:11:1, col:47> col:12 fn5 'int (void)' extern
+| `-ConstAttr 0x7f8251827290 <col:39>
+|-FunctionDecl 0x7f8251827370 <line:12:1, col:56> col:12 fn6 'int (void)' extern
+| `-ConstAttr 0x7f8251827408 <col:44>
+|-FunctionDecl 0x7f82518274e8 <line:13:1, col:41> col:12 fn7 'int (void)' extern
+|-FunctionDecl 0x7f8251827648 <line:14:1, col:65> col:12 fn8 'int (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f8251827778 <line:15:1, col:66> col:12 fn9 'int (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f82518278a8 <line:16:1, col:70> col:12 fn10 'int (void)' extern
+| |-PureAttr 0x7f8251827940 <col:49>
+| `-ColdAttr 0x7f8251827988 <col:40>
+|-FunctionDecl 0x7f8251827a88 <line:17:1, col:71> col:12 fn11 'int (void)' extern
+| |-PureAttr 0x7f8251827b20 <col:50>
+| `-ColdAttr 0x7f8251827b68 <col:40>
+|-VarDecl 0x7f8251827b90 <line:18:1, col:5> col:5 i 'int'
+|-VarDecl 0x7f8251827c08 <line:19:1, col:5> col:5 ii 'int'
+|-VarDecl 0x7f8251827cf0 <line:20:1, col:12> col:12 a 'int' extern
+| `-UnusedAttr 0x7f8251827d50 <col:42> unused
+|-VarDecl 0x7f8251827e28 <line:21:1, col:12> col:12 a2 'int' extern
+`-RecordDecl 0x7f8251827e88 <line:22:1, col:23> col:8 struct A definition
+  |-PackedAttr 0x7f8251827ff0 <col:51>
+  |-PackedAttr 0x7f8251828038 <col:40>
+  `-FieldDecl 0x7f8251827fa8 <col:12, col:20> col:17 p 'char [6]'

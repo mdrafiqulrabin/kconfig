@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7f82938264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8293826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8293826740 '__int128'
+|-TypedefDecl 0x7f8293826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8293826760 'unsigned __int128'
+|-TypedefDecl 0x7f8293826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8293826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8293826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8293826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8293826dc0 'char *'
+|   `-BuiltinType 0x7f8293826560 'char'
+|-TypedefDecl 0x7f82938270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8293827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8293826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8293826e58 '__va_list_tag'
+`-FunctionDecl 0x7f8294025a00 <c_files/pr46893.c:5:1, line:13:1> line:6:1 foo 'void (void)'
+  `-CompoundStmt 0x7f82940260c8 <line:7:1, line:13:1>
+    |-DeclStmt 0x7f8294025db8 <line:8:3, col:74>
+    | |-RecordDecl 0x7f8294025ad8 <col:3, col:43> col:3 union definition
+    | | |-FieldDecl 0x7f8294025b98 <col:11, col:30> col:30 l 'unsigned long long'
+    | | `-FieldDecl 0x7f8294025bf8 <col:33, col:40> col:40 referenced d 'double'
+    | `-VarDecl 0x7f8294025c90 <col:3, col:73> col:45 used u 'union (anonymous union at c_files/pr46893.c:8:3)':'union (anonymous at c_files/pr46893.c:8:3)' cinit
+    |   `-InitListExpr 0x7f8294025d58 <col:49, col:73> 'union (anonymous union at c_files/pr46893.c:8:3)':'union (anonymous at c_files/pr46893.c:8:3)' field Field 0x7f8294025b98 'l' 'unsigned long long'
+    |     `-IntegerLiteral 0x7f8294025cf0 <col:51> 'unsigned long long' 9218868437227405312
+    |-DeclStmt 0x7f8294025fa8 <line:9:3, col:25>
+    | |-VarDecl 0x7f8294025de8 <col:3, col:14> col:10 used v 'double' cinit
+    | | `-ImplicitCastExpr 0x7f8294025e68 <col:14> 'double' <IntegralToFloating>
+    | |   `-IntegerLiteral 0x7f8294025e48 <col:14> 'int' 0
+    | `-VarDecl 0x7f8294025e98 <col:3, col:24> col:17 used w 'double' cinit
+    |   `-UnaryOperator 0x7f8294025f70 <col:21, col:24> 'double' prefix '-'
+    |     `-ImplicitCastExpr 0x7f8294025f58 <col:22, col:24> 'double' <LValueToRValue>
+    |       `-MemberExpr 0x7f8294025f20 <col:22, col:24> 'double' lvalue .d 0x7f8294025bf8
+    |         `-DeclRefExpr 0x7f8294025ef8 <col:22> 'union (anonymous union at c_files/pr46893.c:8:3)':'union (anonymous at c_files/pr46893.c:8:3)' lvalue Var 0x7f8294025c90 'u' 'union (anonymous union at c_files/pr46893.c:8:3)':'union (anonymous at c_files/pr46893.c:8:3)'
+    `-IfStmt 0x7f8294026090 <line:11:3, line:12:9>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f8294025fe8 <line:11:7> 'double' <LValueToRValue>
+      | `-DeclRefExpr 0x7f8294025fc0 <col:7> 'double' lvalue Var 0x7f8294025e98 'w' 'double'
+      |-BinaryOperator 0x7f8294026068 <line:12:5, col:9> 'double' '='
+      | |-DeclRefExpr 0x7f8294026000 <col:5> 'double' lvalue Var 0x7f8294025e98 'w' 'double'
+      | `-ImplicitCastExpr 0x7f8294026050 <col:9> 'double' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f8294026028 <col:9> 'double' lvalue Var 0x7f8294025de8 'v' 'double'
+      `-<<<NULL>>>

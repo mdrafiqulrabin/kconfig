@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7f923c0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f923c026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f923c026740 '__int128'
+|-TypedefDecl 0x7f923c026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f923c026760 'unsigned __int128'
+|-TypedefDecl 0x7f923c026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f923c026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f923c026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f923c026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f923c026dc0 'char *'
+|   `-BuiltinType 0x7f923c026560 'char'
+|-TypedefDecl 0x7f923c0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f923c027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f923c026ee0 'struct __va_list_tag'
+|     `-Record 0x7f923c026e58 '__va_list_tag'
+|-VarDecl 0x7f923c027160 <c_files/pr62024.c:6:1, col:6> col:6 used p 'int *'
+|-FunctionDecl 0x7f923c825a70 <line:7:17> col:17 implicit used __atomic_always_lock_free 'int (unsigned long, const volatile void *)' extern
+| |-ParmVarDecl 0x7f923c825b08 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7f923c825b68 <<invalid sloc>> <invalid sloc> 'const volatile void *'
+| `-NoThrowAttr 0x7f923c825bd8 <col:17> Implicit
+|-StaticAssertDecl 0x7f923c825de8 <col:1, col:53> col:1
+| |-CallExpr 0x7f923c825cf0 <col:17, col:48> 'int'
+| | |-ImplicitCastExpr 0x7f923c825cd8 <col:17> 'int (*)(unsigned long, const volatile void *)' <BuiltinFnToFnPtr>
+| | | `-DeclRefExpr 0x7f923c825c20 <col:17> '<builtin fn type>' Function 0x7f923c825a70 '__atomic_always_lock_free' 'int (unsigned long, const volatile void *)'
+| | |-ImplicitCastExpr 0x7f923c825d28 <col:44> 'unsigned long' <IntegralCast>
+| | | `-IntegerLiteral 0x7f923c825c48 <col:44> 'int' 1
+| | `-ImplicitCastExpr 0x7f923c825d58 <col:47> 'const volatile void *' <BitCast>
+| |   `-ImplicitCastExpr 0x7f923c825d40 <col:47> 'int *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f923c825c68 <col:47> 'int *' lvalue Var 0x7f923c027160 'p' 'int *'
+| `-StringLiteral 0x7f923c825da8 <col:51> 'char [1]' lvalue ""
+`-StaticAssertDecl 0x7f923c825f48 <line:8:1, col:53> col:1
+  |-CallExpr 0x7f923c825ea0 <col:17, col:48> 'int'
+  | |-ImplicitCastExpr 0x7f923c825e88 <col:17> 'int (*)(unsigned long, const volatile void *)' <BuiltinFnToFnPtr>
+  | | `-DeclRefExpr 0x7f923c825e20 <col:17> '<builtin fn type>' Function 0x7f923c825a70 '__atomic_always_lock_free' 'int (unsigned long, const volatile void *)'
+  | |-ImplicitCastExpr 0x7f923c825ed8 <col:44> 'unsigned long' <IntegralCast>
+  | | `-IntegerLiteral 0x7f923c825e48 <col:44> 'int' 1
+  | `-ImplicitCastExpr 0x7f923c825ef0 <col:47> 'const volatile void *' <NullToPointer>
+  |   `-IntegerLiteral 0x7f923c825e68 <col:47> 'int' 0
+  `-StringLiteral 0x7f923c825f08 <col:51> 'char [1]' lvalue ""

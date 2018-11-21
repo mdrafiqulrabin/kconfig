@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7fd5428194d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd542819a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd542819740 '__int128'
+|-TypedefDecl 0x7fd542819a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd542819760 'unsigned __int128'
+|-TypedefDecl 0x7fd542819d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd542819b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd542819ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd542819e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd542819dc0 'char *'
+|   `-BuiltinType 0x7fd542819560 'char'
+|-TypedefDecl 0x7fd54281a0c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd54281a070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd542819ee0 'struct __va_list_tag'
+|     `-Record 0x7fd542819e58 '__va_list_tag'
+|-TypedefDecl 0x7fd54281a158 <c_files/pr48493.c:3:1, col:19> col:19 referenced T 'long long'
+| |-BuiltinType 0x7fd542819600 'long long'
+| |-AlignedAttr 0x7fd54281a1b0 <col:47, col:57> aligned
+| | `-IntegerLiteral 0x7fd54281a120 <col:56> 'int' 1
+| `-MayAliasAttr 0x7fd542033c00 <col:36>
+|-RecordDecl 0x7fd542033c10 <line:5:1, line:8:1> line:5:8 struct S definition
+| `-FieldDecl 0x7fd542033cf0 <line:7:3, col:18> col:18 referenced d '_Complex float'
+|   `-AlignedAttr 0x7fd542033d38 <col:35, col:45> aligned
+|     `-IntegerLiteral 0x7fd542033cc0 <col:44> 'int' 8
+|-FunctionDecl 0x7fd542033ee0 <line:10:1, col:19> col:6 used bar 'void (struct S)'
+| `-ParmVarDecl 0x7fd542033de0 <col:11, col:18> col:19 'struct S':'struct S'
+`-FunctionDecl 0x7fd5420340f0 <line:12:1, line:18:1> line:13:1 f1 'void (T)'
+  |-ParmVarDecl 0x7fd542033ff0 <col:5, col:7> col:7 used x 'T':'long long'
+  `-CompoundStmt 0x7fd542034618 <line:14:1, line:18:1>
+    |-DeclStmt 0x7fd542034210 <line:15:3, col:13>
+    | `-VarDecl 0x7fd5420341b0 <col:3, col:12> col:12 used s 'struct S':'struct S'
+    |-BinaryOperator 0x7fd5420344a0 <line:16:3, col:32> 'T':'long long' '='
+    | |-UnaryOperator 0x7fd542034440 <col:3, col:28> 'T':'long long' lvalue prefix '*'
+    | | `-CStyleCastExpr 0x7fd542034418 <col:4, col:28> 'T *' <BitCast>
+    | |   `-ParenExpr 0x7fd5420343f8 <col:10, col:28> 'char *'
+    | |     `-BinaryOperator 0x7fd542034338 <col:11, col:27> 'char *' '+'
+    | |       |-CStyleCastExpr 0x7fd5420342f0 <col:11, col:23> 'char *' <BitCast>
+    | |       | `-UnaryOperator 0x7fd5420342b8 <col:20, col:23> '_Complex float *' prefix '&'
+    | |       |   `-MemberExpr 0x7fd542034250 <col:21, col:23> '_Complex float' lvalue .d 0x7fd542033cf0
+    | |       |     `-DeclRefExpr 0x7fd542034228 <col:21> 'struct S':'struct S' lvalue Var 0x7fd5420341b0 's' 'struct S':'struct S'
+    | |       `-IntegerLiteral 0x7fd542034318 <col:27> 'int' 1
+    | `-ImplicitCastExpr 0x7fd542034488 <col:32> 'T':'long long' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd542034460 <col:32> 'T':'long long' lvalue ParmVar 0x7fd542033ff0 'x' 'T':'long long'
+    `-CallExpr 0x7fd5420345d0 <line:17:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fd5420345b8 <col:3> 'void (*)(struct S)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd542034510 <col:3> 'void (struct S)' Function 0x7fd542033ee0 'bar' 'void (struct S)'
+      `-ImplicitCastExpr 0x7fd542034600 <col:8> 'struct S':'struct S' <LValueToRValue>
+        `-DeclRefExpr 0x7fd542034538 <col:8> 'struct S':'struct S' lvalue Var 0x7fd5420341b0 's' 'struct S':'struct S'

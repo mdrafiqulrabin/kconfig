@@ -1,0 +1,32 @@
+c_files/pr34965.c:10:16: error: called object type 'int' is not a function or function pointer
+  foo (i && j) ();      /* { dg-error "\\(i != 0 \\&\\& j != 0\\)" } */
+  ~~~~~~~~~~~~ ^
+c_files/pr34965.c:11:18: error: called object type 'int' is not a function or function pointer
+  foo (!i || !j) ();    /* { dg-error "\\(i == 0 \\|\\| j == 0\\)" } */
+  ~~~~~~~~~~~~~~ ^
+c_files/pr34965.c:12:18: error: called object type 'int' is not a function or function pointer
+  foo (!i == !j) ();    /* { dg-error "\\(i != 0 \\^ j == 0\\)" } */
+  ~~~~~~~~~~~~~~ ^
+3 errors generated.
+TranslationUnitDecl 0x7fc9610264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc961026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc961026740 '__int128'
+|-TypedefDecl 0x7fc961026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc961026760 'unsigned __int128'
+|-TypedefDecl 0x7fc961026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc961026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc961026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc961026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc961026dc0 'char *'
+|   `-BuiltinType 0x7fc961026560 'char'
+|-TypedefDecl 0x7fc9610270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc961027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc961026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc961026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc961825a30 <c_files/pr34965.c:5:1, col:13> col:5 used foo 'int (int)'
+| `-ParmVarDecl 0x7fc961027138 <col:10> col:13 'int'
+`-FunctionDecl 0x7fc961825d00 <line:7:1, line:13:1> line:8:1 bar 'void (int, int, double)'
+  |-ParmVarDecl 0x7fc961825b28 <col:6, col:10> col:10 used i 'int'
+  |-ParmVarDecl 0x7fc961825ba0 <col:13, col:17> col:17 used j 'int'
+  |-ParmVarDecl 0x7fc961825c18 <col:20, col:27> col:27 k 'double'
+  `-CompoundStmt 0x7fc9618265d0 <line:9:1, line:13:1>

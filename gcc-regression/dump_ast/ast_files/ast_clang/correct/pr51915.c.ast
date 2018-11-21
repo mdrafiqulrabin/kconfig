@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fbe8e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbe8e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbe8e826740 '__int128'
+|-TypedefDecl 0x7fbe8e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbe8e826760 'unsigned __int128'
+|-TypedefDecl 0x7fbe8e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbe8e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbe8e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbe8e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbe8e826dc0 'char *'
+|   `-BuiltinType 0x7fbe8e826560 'char'
+|-TypedefDecl 0x7fbe8e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbe8e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbe8e826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbe8e826e58 '__va_list_tag'
+|-RecordDecl 0x7fbe8e827120 <c_files/pr51915.c:7:1, col:30> col:8 struct S definition
+| |-FieldDecl 0x7fbe8f025a00 <col:12, col:16> col:16 s1 'int'
+| `-FieldDecl 0x7fbe8f025a60 <col:20, col:26> col:26 s2 'void *'
+|-RecordDecl 0x7fbe8f025aa8 <line:8:1, col:48> col:8 struct T definition
+| |-FieldDecl 0x7fbe8f025ba0 <col:12, col:21> col:21 t1 'struct S':'struct S'
+| `-FieldDecl 0x7fbe8f025c00 <col:25, col:44> col:44 referenced t2 'unsigned long long'
+|-FunctionDecl 0x7fbe8f025e28 <line:9:1, col:34> col:11 used foo 'struct S *(unsigned long long)'
+| `-ParmVarDecl 0x7fbe8f025cb0 <col:16, col:30> col:34 'unsigned long long'
+`-FunctionDecl 0x7fbe8f026048 <line:11:1, line:15:1> line:12:1 bar 'struct S *(struct S *)'
+  |-ParmVarDecl 0x7fbe8f025f30 <col:6, col:16> col:16 used x 'struct S *'
+  `-CompoundStmt 0x7fbe8f026360 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7fbe8f026348 <line:14:3, col:35>
+      `-CallExpr 0x7fbe8f026300 <col:10, col:35> 'struct S *'
+        |-ImplicitCastExpr 0x7fbe8f0262e8 <col:10> 'struct S *(*)(unsigned long long)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fbe8f0260e8 <col:10> 'struct S *(unsigned long long)' Function 0x7fbe8f025e28 'foo' 'struct S *(unsigned long long)'
+        `-ImplicitCastExpr 0x7fbe8f026330 <col:15, col:33> 'unsigned long long' <LValueToRValue>
+          `-MemberExpr 0x7fbe8f026250 <col:15, col:33> 'unsigned long long' lvalue ->t2 0x7fbe8f025c00
+            `-ParenExpr 0x7fbe8f026230 <col:15, col:30> 'struct T *'
+              `-CStyleCastExpr 0x7fbe8f026208 <col:16, col:29> 'struct T *' <BitCast>
+                `-ImplicitCastExpr 0x7fbe8f0261f0 <col:29> 'struct S *' <LValueToRValue>
+                  `-DeclRefExpr 0x7fbe8f026110 <col:29> 'struct S *' lvalue ParmVar 0x7fbe8f025f30 'x' 'struct S *'

@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7f979b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f979b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f979b826740 '__int128'
+|-TypedefDecl 0x7f979b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f979b826760 'unsigned __int128'
+|-TypedefDecl 0x7f979b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f979b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f979b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f979b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f979b826dc0 'char *'
+|   `-BuiltinType 0x7f979b826560 'char'
+|-TypedefDecl 0x7f979b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f979b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f979b826ee0 'struct __va_list_tag'
+|     `-Record 0x7f979b826e58 '__va_list_tag'
+|-FunctionDecl 0x7f979c025a28 <c_files/pr48517.c:5:1, col:33> col:6 used bar 'void (const unsigned short *)'
+| `-ParmVarDecl 0x7f979b827160 <col:11, col:32> col:33 'const unsigned short *'
+`-FunctionDecl 0x7f979c025bd0 <line:7:1, line:13:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7f979c0260a8 <line:9:1, line:13:1>
+    |-DeclStmt 0x7f979c025ee0 <line:10:3, col:77>
+    | `-VarDecl 0x7f979c025cf0 <col:3, col:76> col:31 used array 'const unsigned short [1]' static cinit
+    |   `-CompoundLiteralExpr 0x7f979c025eb8 <col:41, col:76> 'const unsigned short [1]' lvalue
+    |     `-InitListExpr 0x7f979c025de0 <col:67, col:76> 'const unsigned short [1]'
+    |       `-ImplicitCastExpr 0x7f979c025e20 <col:69> 'unsigned short' <IntegralCast>
+    |         `-IntegerLiteral 0x7f979c025d78 <col:69> 'int' 3371
+    |-DeclStmt 0x7f979c025fb0 <line:11:3, col:36>
+    | `-VarDecl 0x7f979c025f10 <col:3, col:31> col:25 used ptr 'const unsigned short *' cinit
+    |   `-ImplicitCastExpr 0x7f979c025f98 <col:31> 'const unsigned short *' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7f979c025f70 <col:31> 'const unsigned short [1]' lvalue Var 0x7f979c025cf0 'array' 'const unsigned short [1]'
+    `-CallExpr 0x7f979c026060 <line:12:3, col:11> 'void'
+      |-ImplicitCastExpr 0x7f979c026048 <col:3> 'void (*)(const unsigned short *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f979c025fc8 <col:3> 'void (const unsigned short *)' Function 0x7f979c025a28 'bar' 'void (const unsigned short *)'
+      `-ImplicitCastExpr 0x7f979c026090 <col:8> 'const unsigned short *' <LValueToRValue>
+        `-DeclRefExpr 0x7f979c025ff0 <col:8> 'const unsigned short *' lvalue Var 0x7f979c025f10 'ptr' 'const unsigned short *'

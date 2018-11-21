@@ -1,0 +1,35 @@
+c_files/pr17913.c:8:7: warning: expression result unused [-Wunused-value]
+  1 ? 1 : ({ a : 1; }); 
+      ^
+1 warning generated.
+TranslationUnitDecl 0x7fb58d8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb58d826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb58d826740 '__int128'
+|-TypedefDecl 0x7fb58d826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb58d826760 'unsigned __int128'
+|-TypedefDecl 0x7fb58d826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb58d826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb58d826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb58d826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb58d826dc0 'char *'
+|   `-BuiltinType 0x7fb58d826560 'char'
+|-TypedefDecl 0x7fb58d8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb58d827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb58d826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb58d826e58 '__va_list_tag'
+`-FunctionDecl 0x7fb58e025a00 <c_files/pr17913.c:5:1, line:10:1> line:5:6 f 'void (void)'
+  `-CompoundStmt 0x7fb58e025d50 <line:6:1, line:10:1>
+    |-DeclStmt 0x7fb58e025bb8 <line:7:3, col:16>
+    | `-VarDecl 0x7fb58e025af0 <col:3, col:15> col:9 used p 'void *' cinit
+    |   `-AddrLabelExpr 0x7fb58e025b98 <col:13, col:15> 'void *' a 0x7fb58e025b50
+    |-ConditionalOperator 0x7fb58e025c88 <line:8:3, col:22> 'int'
+    | |-IntegerLiteral 0x7fb58e025bd0 <col:3> 'int' 1
+    | |-IntegerLiteral 0x7fb58e025bf0 <col:7> 'int' 1
+    | `-StmtExpr 0x7fb58e025c68 <col:11, col:22> 'int'
+    |   `-CompoundStmt 0x7fb58e025c48 <col:12, col:21>
+    |     `-LabelStmt 0x7fb58e025c30 <col:14, col:18> 'a'
+    |       `-IntegerLiteral 0x7fb58e025c10 <col:18> 'int' 1
+    `-IndirectGotoStmt 0x7fb58e025d38 <line:9:3, col:9>
+      `-ImplicitCastExpr 0x7fb58e025d20 <col:9> 'const void *' <BitCast>
+        `-ImplicitCastExpr 0x7fb58e025d08 <col:9> 'void *' <LValueToRValue>
+          `-DeclRefExpr 0x7fb58e025cb8 <col:9> 'void *' lvalue Var 0x7fb58e025af0 'p' 'void *'

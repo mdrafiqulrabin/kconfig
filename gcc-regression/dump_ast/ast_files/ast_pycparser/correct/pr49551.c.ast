@@ -1,0 +1,8 @@
+FileAST: 
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      IdentifierType: ['int']

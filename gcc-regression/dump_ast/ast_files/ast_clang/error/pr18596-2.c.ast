@@ -1,0 +1,82 @@
+c_files/pr18596-2.c:6:3: error: function declared in block scope cannot have 'static' storage class
+  static int g(); /* { dg-error "invalid storage class" } */
+  ^
+c_files/pr18596-2.c:7:18: error: function definition is not allowed here
+  static int g() { return i; } /* { dg-error "invalid storage class" } */
+                 ^
+c_files/pr18596-2.c:13:3: error: function declared in block scope cannot have 'static' storage class
+  static int g (); /* { dg-error "invalid storage class" } */
+  ^
+c_files/pr18596-2.c:14:12: error: function definition is not allowed here
+  int g () {
+           ^
+c_files/pr18596-2.c:23:3: error: illegal storage class on function
+  auto int g ();
+  ^
+c_files/pr18596-2.c:24:19: error: function definition is not allowed here
+  static int g () { /* { dg-error "invalid storage class" } */
+                  ^
+c_files/pr18596-2.c:28:19: error: function definition is not allowed here
+  static int h () { /* { dg-error "invalid storage class" } */
+                  ^
+c_files/pr18596-2.c:31:17: warning: implicit declaration of function 'h' is invalid in C99 [-Wimplicit-function-declaration]
+  return g () + h ();
+                ^
+c_files/pr18596-2.c:36:10: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+  static g ();  /* { dg-error "invalid storage class" } */
+  ~~~~~~ ^
+c_files/pr18596-2.c:36:3: error: function declared in block scope cannot have 'static' storage class
+  static g ();  /* { dg-error "invalid storage class" } */
+  ^
+c_files/pr18596-2.c:37:15: error: function definition is not allowed here
+  static g () { return i; } /* { dg-error "invalid storage class" } */
+              ^
+2 warnings and 9 errors generated.
+TranslationUnitDecl 0x7f93958264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9395826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9395826740 '__int128'
+|-TypedefDecl 0x7f9395826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9395826760 'unsigned __int128'
+|-TypedefDecl 0x7f9395826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9395826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9395826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9395826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9395826dc0 'char *'
+|   `-BuiltinType 0x7f9395826560 'char'
+|-TypedefDecl 0x7f93958270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9395827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9395826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9395826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9395877430 <c_files/pr18596-2.c:4:1, line:9:1> line:4:5 f 'int (int)'
+| |-ParmVarDecl 0x7f9395827138 <col:7, col:11> col:11 i 'int'
+| `-CompoundStmt 0x7f93958776d0 <line:5:1, line:9:1>
+|   |-DeclStmt 0x7f9395877608 <line:6:3, col:17>
+|   | `-FunctionDecl 0x7f9395877560 parent 0x7f93958264d0 <col:3, col:16> col:14 used g 'int ()'
+|   `-ReturnStmt 0x7f93958776b8 <line:8:3, col:12>
+|     `-CallExpr 0x7f9395877690 <col:10, col:12> 'int'
+|       `-ImplicitCastExpr 0x7f9395877678 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f9395877620 <col:10> 'int ()' Function 0x7f9395877560 'g' 'int ()'
+|-FunctionDecl 0x7f93958777a0 <line:11:1, line:19:1> line:11:5 k 'int (int)'
+| |-ParmVarDecl 0x7f9395877710 <col:8, col:12> col:12 i 'int'
+| `-CompoundStmt 0x7f93958779a8 <line:12:1, line:19:1>
+|   |-DeclStmt 0x7f9395877910 <line:13:3, col:18>
+|   | `-FunctionDecl 0x7f9395877868 parent 0x7f93958264d0 prev 0x7f9395877560 <col:3, col:17> col:14 used g 'int ()'
+|   `-ReturnStmt 0x7f9395877990 <line:18:3, col:13>
+|     `-CallExpr 0x7f9395877968 <col:10, col:13> 'int'
+|       `-ImplicitCastExpr 0x7f9395877950 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f9395877928 <col:10> 'int ()' Function 0x7f9395877868 'g' 'int ()'
+|-FunctionDecl 0x7f9395877a78 <line:21:1, line:32:1> line:21:5 l 'int (int)'
+| |-ParmVarDecl 0x7f93958779e8 <col:8, col:12> col:12 i 'int'
+| `-CompoundStmt 0x7f9395877d28 <line:22:1, line:32:1>
+|   `-DeclStmt 0x7f9395877be8 <line:23:3, col:16>
+|     `-FunctionDecl 0x7f9395877b40 parent 0x7f93958264d0 <col:3, col:15> col:12 invalid g 'int ()'
+|-FunctionDecl 0x7f9395877c28 <<invalid sloc>> line:31:17 implicit used h 'int ()'
+`-FunctionDecl 0x7f9395877df0 <line:34:1, line:39:1> line:34:5 m 'int (int)'
+  |-ParmVarDecl 0x7f9395877d60 <col:8, col:12> col:12 i 'int'
+  `-CompoundStmt 0x7f9395877ff8 <line:35:1, line:39:1>
+    |-DeclStmt 0x7f9395877f60 <line:36:3, col:14>
+    | `-FunctionDecl 0x7f9395877eb8 parent 0x7f93958264d0 prev 0x7f9395877868 <col:3, col:13> col:10 used g 'int ()'
+    `-ReturnStmt 0x7f9395877fe0 <line:38:3, col:13>
+      `-CallExpr 0x7f9395877fb8 <col:10, col:13> 'int'
+        `-ImplicitCastExpr 0x7f9395877fa0 <col:10> 'int (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f9395877f78 <col:10> 'int ()' Function 0x7f9395877eb8 'g' 'int ()'

@@ -1,0 +1,1665 @@
+c_files/pr49706.c:27:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !i1 == i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^   ~~
+c_files/pr49706.c:27:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !i1 == i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (       )
+c_files/pr49706.c:27:7: note: add parentheses around left hand side expression to silence this warning
+  b = !i1 == i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      (  )
+c_files/pr49706.c:28:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !i1 != i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^   ~~
+c_files/pr49706.c:28:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !i1 != i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (       )
+c_files/pr49706.c:28:7: note: add parentheses around left hand side expression to silence this warning
+  b = !i1 != i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      (  )
+c_files/pr49706.c:29:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !i1 < i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^   ~
+c_files/pr49706.c:29:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !i1 < i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (      )
+c_files/pr49706.c:29:7: note: add parentheses around left hand side expression to silence this warning
+  b = !i1 < i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      (  )
+c_files/pr49706.c:30:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !i1 > i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^   ~
+c_files/pr49706.c:30:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !i1 > i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (      )
+c_files/pr49706.c:30:7: note: add parentheses around left hand side expression to silence this warning
+  b = !i1 > i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      (  )
+c_files/pr49706.c:31:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !i1 <= i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^   ~~
+c_files/pr49706.c:31:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !i1 <= i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (       )
+c_files/pr49706.c:31:7: note: add parentheses around left hand side expression to silence this warning
+  b = !i1 <= i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      (  )
+c_files/pr49706.c:32:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !i1 >= i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^   ~~
+c_files/pr49706.c:32:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !i1 >= i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (       )
+c_files/pr49706.c:32:7: note: add parentheses around left hand side expression to silence this warning
+  b = !i1 >= i2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      (  )
+c_files/pr49706.c:50:8: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = (!i1 == i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^   ~~
+c_files/pr49706.c:50:8: note: add parentheses after the '!' to evaluate the comparison first
+  b = (!i1 == i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+        (       )
+c_files/pr49706.c:50:8: note: add parentheses around left hand side expression to silence this warning
+  b = (!i1 == i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+       (  )
+c_files/pr49706.c:51:8: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = (!i1 != i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^   ~~
+c_files/pr49706.c:51:8: note: add parentheses after the '!' to evaluate the comparison first
+  b = (!i1 != i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+        (       )
+c_files/pr49706.c:51:8: note: add parentheses around left hand side expression to silence this warning
+  b = (!i1 != i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+       (  )
+c_files/pr49706.c:52:8: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = (!i1 < i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^   ~
+c_files/pr49706.c:52:8: note: add parentheses after the '!' to evaluate the comparison first
+  b = (!i1 < i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+        (      )
+c_files/pr49706.c:52:8: note: add parentheses around left hand side expression to silence this warning
+  b = (!i1 < i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+       (  )
+c_files/pr49706.c:53:8: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = (!i1 > i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^   ~
+c_files/pr49706.c:53:8: note: add parentheses after the '!' to evaluate the comparison first
+  b = (!i1 > i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+        (      )
+c_files/pr49706.c:53:8: note: add parentheses around left hand side expression to silence this warning
+  b = (!i1 > i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+       (  )
+c_files/pr49706.c:54:8: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = (!i1 <= i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^   ~~
+c_files/pr49706.c:54:8: note: add parentheses after the '!' to evaluate the comparison first
+  b = (!i1 <= i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+        (       )
+c_files/pr49706.c:54:8: note: add parentheses around left hand side expression to silence this warning
+  b = (!i1 <= i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+       (  )
+c_files/pr49706.c:55:8: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = (!i1 >= i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^   ~~
+c_files/pr49706.c:55:8: note: add parentheses after the '!' to evaluate the comparison first
+  b = (!i1 >= i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+        (       )
+c_files/pr49706.c:55:8: note: add parentheses around left hand side expression to silence this warning
+  b = (!i1 >= i2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+       (  )
+c_files/pr49706.c:71:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !foo_i () == i1; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^         ~~
+c_files/pr49706.c:71:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !foo_i () == i1; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (             )
+c_files/pr49706.c:71:7: note: add parentheses around left hand side expression to silence this warning
+  b = !foo_i () == i1; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      (        )
+c_files/pr49706.c:96:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !5 == 4; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^  ~~
+c_files/pr49706.c:96:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !5 == 4; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (     )
+c_files/pr49706.c:96:7: note: add parentheses around left hand side expression to silence this warning
+  b = !5 == 4; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      ( )
+c_files/pr49706.c:98:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !1 == 1; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^  ~~
+c_files/pr49706.c:98:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !1 == 1; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (     )
+c_files/pr49706.c:98:7: note: add parentheses around left hand side expression to silence this warning
+  b = !1 == 1; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      ( )
+c_files/pr49706.c:110:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !e == A;
+      ^  ~~
+c_files/pr49706.c:110:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !e == A;
+      ^
+       (     )
+c_files/pr49706.c:110:7: note: add parentheses around left hand side expression to silence this warning
+  b = !e == A;
+      ^
+      ( )
+c_files/pr49706.c:111:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !e == foo_e (); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^  ~~
+c_files/pr49706.c:111:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !e == foo_e (); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (            )
+c_files/pr49706.c:111:7: note: add parentheses around left hand side expression to silence this warning
+  b = !e == foo_e (); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      ( )
+c_files/pr49706.c:112:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !foo_e () == A;
+      ^         ~~
+c_files/pr49706.c:112:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !foo_e () == A;
+      ^
+       (            )
+c_files/pr49706.c:112:7: note: add parentheses around left hand side expression to silence this warning
+  b = !foo_e () == A;
+      ^
+      (        )
+c_files/pr49706.c:113:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !foo_e () == foo_e (); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^         ~~
+c_files/pr49706.c:113:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !foo_e () == foo_e (); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (                   )
+c_files/pr49706.c:113:7: note: add parentheses around left hand side expression to silence this warning
+  b = !foo_e () == foo_e (); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      (        )
+c_files/pr49706.c:129:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !i1 == f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^   ~~
+c_files/pr49706.c:129:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !i1 == f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (       )
+c_files/pr49706.c:129:7: note: add parentheses around left hand side expression to silence this warning
+  b = !i1 == f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      (  )
+c_files/pr49706.c:130:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !i1 != f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^   ~~
+c_files/pr49706.c:130:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !i1 != f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (       )
+c_files/pr49706.c:130:7: note: add parentheses around left hand side expression to silence this warning
+  b = !i1 != f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      (  )
+c_files/pr49706.c:131:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !i1 < f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^   ~
+c_files/pr49706.c:131:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !i1 < f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (      )
+c_files/pr49706.c:131:7: note: add parentheses around left hand side expression to silence this warning
+  b = !i1 < f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      (  )
+c_files/pr49706.c:132:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !i1 > f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^   ~
+c_files/pr49706.c:132:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !i1 > f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (      )
+c_files/pr49706.c:132:7: note: add parentheses around left hand side expression to silence this warning
+  b = !i1 > f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      (  )
+c_files/pr49706.c:133:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !i1 <= f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^   ~~
+c_files/pr49706.c:133:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !i1 <= f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (       )
+c_files/pr49706.c:133:7: note: add parentheses around left hand side expression to silence this warning
+  b = !i1 <= f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      (  )
+c_files/pr49706.c:134:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !i1 >= f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^   ~~
+c_files/pr49706.c:134:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !i1 >= f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (       )
+c_files/pr49706.c:134:7: note: add parentheses around left hand side expression to silence this warning
+  b = !i1 >= f2; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      (  )
+c_files/pr49706.c:152:8: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = (!i1 == f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^   ~~
+c_files/pr49706.c:152:8: note: add parentheses after the '!' to evaluate the comparison first
+  b = (!i1 == f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+        (       )
+c_files/pr49706.c:152:8: note: add parentheses around left hand side expression to silence this warning
+  b = (!i1 == f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+       (  )
+c_files/pr49706.c:153:8: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = (!i1 != f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^   ~~
+c_files/pr49706.c:153:8: note: add parentheses after the '!' to evaluate the comparison first
+  b = (!i1 != f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+        (       )
+c_files/pr49706.c:153:8: note: add parentheses around left hand side expression to silence this warning
+  b = (!i1 != f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+       (  )
+c_files/pr49706.c:154:8: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = (!i1 < f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^   ~
+c_files/pr49706.c:154:8: note: add parentheses after the '!' to evaluate the comparison first
+  b = (!i1 < f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+        (      )
+c_files/pr49706.c:154:8: note: add parentheses around left hand side expression to silence this warning
+  b = (!i1 < f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+       (  )
+c_files/pr49706.c:155:8: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = (!i1 > f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^   ~
+c_files/pr49706.c:155:8: note: add parentheses after the '!' to evaluate the comparison first
+  b = (!i1 > f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+        (      )
+c_files/pr49706.c:155:8: note: add parentheses around left hand side expression to silence this warning
+  b = (!i1 > f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+       (  )
+c_files/pr49706.c:156:8: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = (!i1 <= f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^   ~~
+c_files/pr49706.c:156:8: note: add parentheses after the '!' to evaluate the comparison first
+  b = (!i1 <= f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+        (       )
+c_files/pr49706.c:156:8: note: add parentheses around left hand side expression to silence this warning
+  b = (!i1 <= f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+       (  )
+c_files/pr49706.c:157:8: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = (!i1 >= f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^   ~~
+c_files/pr49706.c:157:8: note: add parentheses after the '!' to evaluate the comparison first
+  b = (!i1 >= f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+        (       )
+c_files/pr49706.c:157:8: note: add parentheses around left hand side expression to silence this warning
+  b = (!i1 >= f2); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+       ^
+       (  )
+c_files/pr49706.c:175:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !e == B; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^  ~~
+c_files/pr49706.c:175:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !e == B; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (     )
+c_files/pr49706.c:175:7: note: add parentheses around left hand side expression to silence this warning
+  b = !e == B; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      ( )
+c_files/pr49706.c:176:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !e == foo_e (); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^  ~~
+c_files/pr49706.c:176:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !e == foo_e (); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (            )
+c_files/pr49706.c:176:7: note: add parentheses around left hand side expression to silence this warning
+  b = !e == foo_e (); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      ( )
+c_files/pr49706.c:177:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !foo_e () == B; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^         ~~
+c_files/pr49706.c:177:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !foo_e () == B; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (            )
+c_files/pr49706.c:177:7: note: add parentheses around left hand side expression to silence this warning
+  b = !foo_e () == B; /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      (        )
+c_files/pr49706.c:178:7: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  b = !foo_e () == foo_e (); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^         ~~
+c_files/pr49706.c:178:7: note: add parentheses after the '!' to evaluate the comparison first
+  b = !foo_e () == foo_e (); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+       (                   )
+c_files/pr49706.c:178:7: note: add parentheses around left hand side expression to silence this warning
+  b = !foo_e () == foo_e (); /* { dg-warning "logical not is only applied to the left hand side of comparison" } */
+      ^
+      (        )
+35 warnings generated.
+TranslationUnitDecl 0x7ff9e80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff9e8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff9e8026740 '__int128'
+|-TypedefDecl 0x7ff9e8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff9e8026760 'unsigned __int128'
+|-TypedefDecl 0x7ff9e8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff9e8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff9e8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff9e8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff9e8026dc0 'char *'
+|   `-BuiltinType 0x7ff9e8026560 'char'
+|-TypedefDecl 0x7ff9e80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff9e8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff9e8026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff9e8026e58 '__va_list_tag'
+|-EnumDecl 0x7ff9e8027120 <c_files/pr49706.c:8:1, col:15> col:6 E
+| |-EnumConstantDecl 0x7ff9e8825a00 <col:10> col:10 referenced A 'int'
+| `-EnumConstantDecl 0x7ff9e8825a48 <col:13> col:13 referenced B 'int'
+|-VarDecl 0x7ff9e8825aa0 <line:6:14, line:9:6> col:6 used b '_Bool'
+|-FunctionDecl 0x7ff9e8825c70 <line:10:1, col:26> col:15 used foo_e 'enum E (void)' extern
+|-FunctionDecl 0x7ff9e8825dd0 <line:11:1, col:24> col:13 used foo_b '_Bool (void)' extern
+|-FunctionDecl 0x7ff9e8825f38 <line:12:1, col:23> col:12 used foo_i 'int (void)' extern
+|-FunctionDecl 0x7ff9e8826230 <line:24:1, line:100:1> line:25:1 fn1 'void (int, int, _Bool, _Bool)'
+| |-ParmVarDecl 0x7ff9e8825fe8 <col:6, col:10> col:10 used i1 'int'
+| |-ParmVarDecl 0x7ff9e8826060 <col:14, col:18> col:18 used i2 'int'
+| |-ParmVarDecl 0x7ff9e88260d0 <line:6:14, line:25:27> col:27 used b1 '_Bool'
+| |-ParmVarDecl 0x7ff9e8826140 <line:6:14, line:25:36> col:36 used b2 '_Bool'
+| `-CompoundStmt 0x7ff9e882ae88 <line:26:1, line:100:1>
+|   |-BinaryOperator 0x7ff9e88263f0 <line:27:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e88262e8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e88263d8 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e88263b0 <col:7, col:14> 'int' '=='
+|   |     |-UnaryOperator 0x7ff9e8826350 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e8826338 <col:8> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e8826310 <col:8> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e8826398 <col:14> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8826370 <col:14> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8826520 <line:28:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8826418 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8826508 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e88264e0 <col:7, col:14> 'int' '!='
+|   |     |-UnaryOperator 0x7ff9e8826480 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e8826468 <col:8> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e8826440 <col:8> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e88264c8 <col:14> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e88264a0 <col:14> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8826650 <line:29:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8826548 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8826638 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8826610 <col:7, col:13> 'int' '<'
+|   |     |-UnaryOperator 0x7ff9e88265b0 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e8826598 <col:8> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e8826570 <col:8> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e88265f8 <col:13> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e88265d0 <col:13> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8826780 <line:30:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8826678 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8826768 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8826740 <col:7, col:13> 'int' '>'
+|   |     |-UnaryOperator 0x7ff9e88266e0 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e88266c8 <col:8> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e88266a0 <col:8> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e8826728 <col:13> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8826700 <col:13> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e88268b0 <line:31:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e88267a8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8826898 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8826870 <col:7, col:14> 'int' '<='
+|   |     |-UnaryOperator 0x7ff9e8826810 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e88267f8 <col:8> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e88267d0 <col:8> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e8826858 <col:14> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8826830 <col:14> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8826a00 <line:32:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e88268d8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e88269c8 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e88269a0 <col:7, col:14> 'int' '>='
+|   |     |-UnaryOperator 0x7ff9e8826940 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e8826928 <col:8> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e8826900 <col:8> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e8826988 <col:14> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8826960 <col:14> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8826b10 <line:34:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8826a28 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8826af8 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8826ad0 <col:7, col:13> 'int' '=='
+|   |     |-ImplicitCastExpr 0x7ff9e8826aa0 <col:7> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7ff9e8826a50 <col:7> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e8826ab8 <col:13> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8826a78 <col:13> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8826c20 <line:35:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8826b38 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8826c08 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8826be0 <col:7, col:13> 'int' '!='
+|   |     |-ImplicitCastExpr 0x7ff9e8826bb0 <col:7> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7ff9e8826b60 <col:7> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e8826bc8 <col:13> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8826b88 <col:13> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8826d30 <line:36:3, col:12> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8826c48 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8826d18 <col:7, col:12> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8826cf0 <col:7, col:12> 'int' '<'
+|   |     |-ImplicitCastExpr 0x7ff9e8826cc0 <col:7> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7ff9e8826c70 <col:7> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e8826cd8 <col:12> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8826c98 <col:12> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8826e40 <line:37:3, col:12> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8826d58 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8826e28 <col:7, col:12> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8826e00 <col:7, col:12> 'int' '>'
+|   |     |-ImplicitCastExpr 0x7ff9e8826dd0 <col:7> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7ff9e8826d80 <col:7> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e8826de8 <col:12> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8826da8 <col:12> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8826f50 <line:38:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8826e68 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8826f38 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8826f10 <col:7, col:13> 'int' '<='
+|   |     |-ImplicitCastExpr 0x7ff9e8826ee0 <col:7> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7ff9e8826e90 <col:7> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e8826ef8 <col:13> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8826eb8 <col:13> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8827060 <line:39:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8826f78 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8827048 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8827020 <col:7, col:13> 'int' '>='
+|   |     |-ImplicitCastExpr 0x7ff9e8826ff0 <col:7> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7ff9e8826fa0 <col:7> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e8827008 <col:13> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8826fc8 <col:13> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e88271b0 <line:42:3, col:16> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8827088 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8827198 <col:7, col:16> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8827170 <col:7, col:16> 'int' '=='
+|   |     |-ParenExpr 0x7ff9e8827110 <col:7, col:11> 'int'
+|   |     | `-UnaryOperator 0x7ff9e88270f0 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e88270d8 <col:9> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e88270b0 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e8827158 <col:16> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8827130 <col:16> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8827300 <line:43:3, col:16> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e88271d8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e88272e8 <col:7, col:16> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e88272c0 <col:7, col:16> 'int' '!='
+|   |     |-ParenExpr 0x7ff9e8827260 <col:7, col:11> 'int'
+|   |     | `-UnaryOperator 0x7ff9e8827240 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e8827228 <col:9> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e8827200 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e88272a8 <col:16> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8827280 <col:16> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8827450 <line:44:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8827328 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8827438 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8827410 <col:7, col:15> 'int' '<'
+|   |     |-ParenExpr 0x7ff9e88273b0 <col:7, col:11> 'int'
+|   |     | `-UnaryOperator 0x7ff9e8827390 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e8827378 <col:9> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e8827350 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e88273f8 <col:15> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e88273d0 <col:15> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e88275a0 <line:45:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8827478 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8827588 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8827560 <col:7, col:15> 'int' '>'
+|   |     |-ParenExpr 0x7ff9e8827500 <col:7, col:11> 'int'
+|   |     | `-UnaryOperator 0x7ff9e88274e0 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e88274c8 <col:9> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e88274a0 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e8827548 <col:15> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8827520 <col:15> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e88276f0 <line:46:3, col:16> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e88275c8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e88276d8 <col:7, col:16> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e88276b0 <col:7, col:16> 'int' '<='
+|   |     |-ParenExpr 0x7ff9e8827650 <col:7, col:11> 'int'
+|   |     | `-UnaryOperator 0x7ff9e8827630 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e8827618 <col:9> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e88275f0 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e8827698 <col:16> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8827670 <col:16> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8827840 <line:47:3, col:16> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8827718 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8827828 <col:7, col:16> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8827800 <col:7, col:16> 'int' '>='
+|   |     |-ParenExpr 0x7ff9e88277a0 <col:7, col:11> 'int'
+|   |     | `-UnaryOperator 0x7ff9e8827780 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e8827768 <col:9> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e8827740 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e88277e8 <col:16> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e88277c0 <col:16> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8827990 <line:50:3, col:17> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8827868 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8827978 <col:7, col:17> '_Bool' <IntegralToBoolean>
+|   |   `-ParenExpr 0x7ff9e8827958 <col:7, col:17> 'int'
+|   |     `-BinaryOperator 0x7ff9e8827930 <col:8, col:15> 'int' '=='
+|   |       |-UnaryOperator 0x7ff9e88278d0 <col:8, col:9> 'int' prefix '!'
+|   |       | `-ImplicitCastExpr 0x7ff9e88278b8 <col:9> 'int' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7ff9e8827890 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |       `-ImplicitCastExpr 0x7ff9e8827918 <col:15> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e88278f0 <col:15> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8827b00 <line:51:3, col:17> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e88279b8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8827ae8 <col:7, col:17> '_Bool' <IntegralToBoolean>
+|   |   `-ParenExpr 0x7ff9e8827ac8 <col:7, col:17> 'int'
+|   |     `-BinaryOperator 0x7ff9e8827aa0 <col:8, col:15> 'int' '!='
+|   |       |-UnaryOperator 0x7ff9e8827a40 <col:8, col:9> 'int' prefix '!'
+|   |       | `-ImplicitCastExpr 0x7ff9e8827a28 <col:9> 'int' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7ff9e8827a00 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |       `-ImplicitCastExpr 0x7ff9e8827a88 <col:15> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e8827a60 <col:15> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8827c50 <line:52:3, col:16> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8827b28 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8827c38 <col:7, col:16> '_Bool' <IntegralToBoolean>
+|   |   `-ParenExpr 0x7ff9e8827c18 <col:7, col:16> 'int'
+|   |     `-BinaryOperator 0x7ff9e8827bf0 <col:8, col:14> 'int' '<'
+|   |       |-UnaryOperator 0x7ff9e8827b90 <col:8, col:9> 'int' prefix '!'
+|   |       | `-ImplicitCastExpr 0x7ff9e8827b78 <col:9> 'int' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7ff9e8827b50 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |       `-ImplicitCastExpr 0x7ff9e8827bd8 <col:14> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e8827bb0 <col:14> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8827da0 <line:53:3, col:16> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8827c78 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8827d88 <col:7, col:16> '_Bool' <IntegralToBoolean>
+|   |   `-ParenExpr 0x7ff9e8827d68 <col:7, col:16> 'int'
+|   |     `-BinaryOperator 0x7ff9e8827d40 <col:8, col:14> 'int' '>'
+|   |       |-UnaryOperator 0x7ff9e8827ce0 <col:8, col:9> 'int' prefix '!'
+|   |       | `-ImplicitCastExpr 0x7ff9e8827cc8 <col:9> 'int' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7ff9e8827ca0 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |       `-ImplicitCastExpr 0x7ff9e8827d28 <col:14> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e8827d00 <col:14> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8827ef0 <line:54:3, col:17> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8827dc8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8827ed8 <col:7, col:17> '_Bool' <IntegralToBoolean>
+|   |   `-ParenExpr 0x7ff9e8827eb8 <col:7, col:17> 'int'
+|   |     `-BinaryOperator 0x7ff9e8827e90 <col:8, col:15> 'int' '<='
+|   |       |-UnaryOperator 0x7ff9e8827e30 <col:8, col:9> 'int' prefix '!'
+|   |       | `-ImplicitCastExpr 0x7ff9e8827e18 <col:9> 'int' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7ff9e8827df0 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |       `-ImplicitCastExpr 0x7ff9e8827e78 <col:15> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e8827e50 <col:15> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8828040 <line:55:3, col:17> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8827f18 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8828028 <col:7, col:17> '_Bool' <IntegralToBoolean>
+|   |   `-ParenExpr 0x7ff9e8828008 <col:7, col:17> 'int'
+|   |     `-BinaryOperator 0x7ff9e8827fe0 <col:8, col:15> 'int' '>='
+|   |       |-UnaryOperator 0x7ff9e8827f80 <col:8, col:9> 'int' prefix '!'
+|   |       | `-ImplicitCastExpr 0x7ff9e8827f68 <col:9> 'int' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7ff9e8827f40 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |       `-ImplicitCastExpr 0x7ff9e8827fc8 <col:15> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e8827fa0 <col:15> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8828188 <line:57:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8828068 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8828170 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8828148 <col:7, col:14> 'int' '=='
+|   |     |-UnaryOperator 0x7ff9e88280d0 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e88280b8 <col:8> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e8828090 <col:8> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e8828130 <col:14> 'int' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x7ff9e8828118 <col:14> '_Bool' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e88280f0 <col:14> '_Bool' lvalue ParmVar 0x7ff9e8826140 'b2' '_Bool'
+|   |-BinaryOperator 0x7ff9e88282d0 <line:58:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e88281b0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e88282b8 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8828290 <col:7, col:14> 'int' '!='
+|   |     |-UnaryOperator 0x7ff9e8828218 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e8828200 <col:8> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e88281d8 <col:8> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e8828278 <col:14> 'int' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x7ff9e8828260 <col:14> '_Bool' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e8828238 <col:14> '_Bool' lvalue ParmVar 0x7ff9e8826140 'b2' '_Bool'
+|   |-BinaryOperator 0x7ff9e8828418 <line:59:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e88282f8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8828400 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e88283d8 <col:7, col:13> 'int' '<'
+|   |     |-UnaryOperator 0x7ff9e8828360 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e8828348 <col:8> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e8828320 <col:8> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e88283c0 <col:13> 'int' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x7ff9e88283a8 <col:13> '_Bool' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e8828380 <col:13> '_Bool' lvalue ParmVar 0x7ff9e8826140 'b2' '_Bool'
+|   |-BinaryOperator 0x7ff9e8828560 <line:60:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8828440 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8828548 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8828520 <col:7, col:13> 'int' '>'
+|   |     |-UnaryOperator 0x7ff9e88284a8 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e8828490 <col:8> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e8828468 <col:8> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e8828508 <col:13> 'int' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x7ff9e88284f0 <col:13> '_Bool' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e88284c8 <col:13> '_Bool' lvalue ParmVar 0x7ff9e8826140 'b2' '_Bool'
+|   |-BinaryOperator 0x7ff9e88286a8 <line:61:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8828588 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8828690 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8828668 <col:7, col:14> 'int' '<='
+|   |     |-UnaryOperator 0x7ff9e88285f0 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e88285d8 <col:8> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e88285b0 <col:8> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e8828650 <col:14> 'int' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x7ff9e8828638 <col:14> '_Bool' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e8828610 <col:14> '_Bool' lvalue ParmVar 0x7ff9e8826140 'b2' '_Bool'
+|   |-BinaryOperator 0x7ff9e88287f0 <line:62:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e88286d0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e88287d8 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e88287b0 <col:7, col:14> 'int' '>='
+|   |     |-UnaryOperator 0x7ff9e8828738 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e8828720 <col:8> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e88286f8 <col:8> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e8828798 <col:14> 'int' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x7ff9e8828780 <col:14> '_Bool' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e8828758 <col:14> '_Bool' lvalue ParmVar 0x7ff9e8826140 'b2' '_Bool'
+|   |-BinaryOperator 0x7ff9e8828920 <line:64:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8828818 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8828908 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e88288e0 <col:7, col:14> 'int' '=='
+|   |     |-UnaryOperator 0x7ff9e8828880 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e8828868 <col:8> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e8828840 <col:8> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e88288c8 <col:14> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e88288a0 <col:14> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8828a58 <line:65:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8828948 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8828a40 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8828a18 <col:7, col:14> 'int' '!='
+|   |     |-UnaryOperator 0x7ff9e88289b0 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e8828998 <col:8> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e8828970 <col:8> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e8828a00 <col:14> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e88289d0 <col:14> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8828b88 <line:66:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8828a80 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8828b70 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8828b48 <col:7, col:13> 'int' '<'
+|   |     |-UnaryOperator 0x7ff9e8828ae8 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e8828ad0 <col:8> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e8828aa8 <col:8> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e8828b30 <col:13> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8828b08 <col:13> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8828cb8 <line:67:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8828bb0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8828ca0 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8828c78 <col:7, col:13> 'int' '>'
+|   |     |-UnaryOperator 0x7ff9e8828c18 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e8828c00 <col:8> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e8828bd8 <col:8> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e8828c60 <col:13> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8828c38 <col:13> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8828de8 <line:68:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8828ce0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8828dd0 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8828da8 <col:7, col:14> 'int' '<='
+|   |     |-UnaryOperator 0x7ff9e8828d48 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e8828d30 <col:8> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e8828d08 <col:8> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e8828d90 <col:14> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8828d68 <col:14> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8828f18 <line:69:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8828e10 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8828f00 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8828ed8 <col:7, col:14> 'int' '>='
+|   |     |-UnaryOperator 0x7ff9e8828e78 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e8828e60 <col:8> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e8828e38 <col:8> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e8828ec0 <col:14> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8828e98 <col:14> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8829098 <line:71:3, col:20> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8828f40 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8829080 <col:7, col:20> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8829058 <col:7, col:20> 'int' '=='
+|   |     |-UnaryOperator 0x7ff9e8828ff8 <col:7, col:15> 'int' prefix '!'
+|   |     | `-CallExpr 0x7ff9e8828fd0 <col:8, col:15> 'int'
+|   |     |   `-ImplicitCastExpr 0x7ff9e8828fb8 <col:8> 'int (*)(void)' <FunctionToPointerDecay>
+|   |     |     `-DeclRefExpr 0x7ff9e8828f68 <col:8> 'int (void)' Function 0x7ff9e8825f38 'foo_i' 'int (void)'
+|   |     `-ImplicitCastExpr 0x7ff9e8829040 <col:20> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8829018 <col:20> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |-BinaryOperator 0x7ff9e8829210 <line:72:3, col:22> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e88290c0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e88291f8 <col:7, col:22> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e88291d0 <col:7, col:22> 'int' '=='
+|   |     |-ParenExpr 0x7ff9e8829170 <col:7, col:17> 'int'
+|   |     | `-UnaryOperator 0x7ff9e8829150 <col:8, col:16> 'int' prefix '!'
+|   |     |   `-CallExpr 0x7ff9e8829128 <col:9, col:16> 'int'
+|   |     |     `-ImplicitCastExpr 0x7ff9e8829110 <col:9> 'int (*)(void)' <FunctionToPointerDecay>
+|   |     |       `-DeclRefExpr 0x7ff9e88290e8 <col:9> 'int (void)' Function 0x7ff9e8825f38 'foo_i' 'int (void)'
+|   |     `-ImplicitCastExpr 0x7ff9e88291b8 <col:22> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8829190 <col:22> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |-BinaryOperator 0x7ff9e88293b0 <line:73:3, col:20> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8829238 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8829398 <col:7, col:20> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8829370 <col:7, col:20> 'int' '=='
+|   |     |-UnaryOperator 0x7ff9e88292f8 <col:7, col:15> 'int' prefix '!'
+|   |     | `-CallExpr 0x7ff9e88292d0 <col:8, col:15> '_Bool'
+|   |     |   `-ImplicitCastExpr 0x7ff9e88292b8 <col:8> '_Bool (*)(void)' <FunctionToPointerDecay>
+|   |     |     `-DeclRefExpr 0x7ff9e8829260 <col:8> '_Bool (void)' Function 0x7ff9e8825dd0 'foo_b' '_Bool (void)'
+|   |     `-ImplicitCastExpr 0x7ff9e8829358 <col:20> 'int' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x7ff9e8829340 <col:20> '_Bool' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e8829318 <col:20> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |-BinaryOperator 0x7ff9e8829500 <line:75:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e88293d8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e88294e8 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e88294c0 <col:7, col:15> 'int' '=='
+|   |     |-UnaryOperator 0x7ff9e8829460 <col:7, col:9> 'int' prefix '!'
+|   |     | `-UnaryOperator 0x7ff9e8829440 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e8829428 <col:9> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e8829400 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e88294a8 <col:15> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8829480 <col:15> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8829650 <line:76:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8829528 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8829638 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8829610 <col:7, col:15> 'int' '!='
+|   |     |-UnaryOperator 0x7ff9e88295b0 <col:7, col:9> 'int' prefix '!'
+|   |     | `-UnaryOperator 0x7ff9e8829590 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e8829578 <col:9> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e8829550 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e88295f8 <col:15> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e88295d0 <col:15> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e88297a0 <line:77:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8829678 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8829788 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8829760 <col:7, col:14> 'int' '<'
+|   |     |-UnaryOperator 0x7ff9e8829700 <col:7, col:9> 'int' prefix '!'
+|   |     | `-UnaryOperator 0x7ff9e88296e0 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e88296c8 <col:9> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e88296a0 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e8829748 <col:14> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8829720 <col:14> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e88298f0 <line:78:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e88297c8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e88298d8 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e88298b0 <col:7, col:14> 'int' '>'
+|   |     |-UnaryOperator 0x7ff9e8829850 <col:7, col:9> 'int' prefix '!'
+|   |     | `-UnaryOperator 0x7ff9e8829830 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e8829818 <col:9> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e88297f0 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e8829898 <col:14> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8829870 <col:14> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8829a40 <line:79:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8829918 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8829a28 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8829a00 <col:7, col:15> 'int' '<='
+|   |     |-UnaryOperator 0x7ff9e88299a0 <col:7, col:9> 'int' prefix '!'
+|   |     | `-UnaryOperator 0x7ff9e8829980 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e8829968 <col:9> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e8829940 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e88299e8 <col:15> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e88299c0 <col:15> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8829b90 <line:80:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8829a68 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8829b78 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8829b50 <col:7, col:15> 'int' '>='
+|   |     |-UnaryOperator 0x7ff9e8829af0 <col:7, col:9> 'int' prefix '!'
+|   |     | `-UnaryOperator 0x7ff9e8829ad0 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e8829ab8 <col:9> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e8829a90 <col:9> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e8829b38 <col:15> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8829b10 <col:15> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8829d08 <line:81:3, col:21> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8829bb8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8829cf0 <col:7, col:21> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8829cc8 <col:7, col:21> 'int' '=='
+|   |     |-UnaryOperator 0x7ff9e8829c68 <col:7, col:16> 'int' prefix '!'
+|   |     | `-UnaryOperator 0x7ff9e8829c48 <col:8, col:16> 'int' prefix '!'
+|   |     |   `-CallExpr 0x7ff9e8829c20 <col:9, col:16> 'int'
+|   |     |     `-ImplicitCastExpr 0x7ff9e8829c08 <col:9> 'int (*)(void)' <FunctionToPointerDecay>
+|   |     |       `-DeclRefExpr 0x7ff9e8829be0 <col:9> 'int (void)' Function 0x7ff9e8825f38 'foo_i' 'int (void)'
+|   |     `-ImplicitCastExpr 0x7ff9e8829cb0 <col:21> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8829c88 <col:21> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |-BinaryOperator 0x7ff9e8829e58 <line:83:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8829d30 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8829e40 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8829e18 <col:7, col:15> 'int' '=='
+|   |     |-UnaryOperator 0x7ff9e8829db8 <col:7, col:9> 'int' prefix '!'
+|   |     | `-UnaryOperator 0x7ff9e8829d98 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e8829d80 <col:9> '_Bool' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e8829d58 <col:9> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e8829e00 <col:15> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8829dd8 <col:15> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e8829fa8 <line:84:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8829e80 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e8829f90 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e8829f68 <col:7, col:15> 'int' '!='
+|   |     |-UnaryOperator 0x7ff9e8829f08 <col:7, col:9> 'int' prefix '!'
+|   |     | `-UnaryOperator 0x7ff9e8829ee8 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e8829ed0 <col:9> '_Bool' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e8829ea8 <col:9> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e8829f50 <col:15> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e8829f28 <col:15> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e882a0f8 <line:85:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e8829fd0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882a0e0 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882a0b8 <col:7, col:14> 'int' '<'
+|   |     |-UnaryOperator 0x7ff9e882a058 <col:7, col:9> 'int' prefix '!'
+|   |     | `-UnaryOperator 0x7ff9e882a038 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e882a020 <col:9> '_Bool' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e8829ff8 <col:9> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e882a0a0 <col:14> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882a078 <col:14> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e882a248 <line:86:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882a120 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882a230 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882a208 <col:7, col:14> 'int' '>'
+|   |     |-UnaryOperator 0x7ff9e882a1a8 <col:7, col:9> 'int' prefix '!'
+|   |     | `-UnaryOperator 0x7ff9e882a188 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e882a170 <col:9> '_Bool' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e882a148 <col:9> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e882a1f0 <col:14> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882a1c8 <col:14> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e882a398 <line:87:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882a270 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882a380 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882a358 <col:7, col:15> 'int' '<='
+|   |     |-UnaryOperator 0x7ff9e882a2f8 <col:7, col:9> 'int' prefix '!'
+|   |     | `-UnaryOperator 0x7ff9e882a2d8 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e882a2c0 <col:9> '_Bool' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e882a298 <col:9> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e882a340 <col:15> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882a318 <col:15> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e882a4e8 <line:88:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882a3c0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882a4d0 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882a4a8 <col:7, col:15> 'int' '>='
+|   |     |-UnaryOperator 0x7ff9e882a448 <col:7, col:9> 'int' prefix '!'
+|   |     | `-UnaryOperator 0x7ff9e882a428 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e882a410 <col:9> '_Bool' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e882a3e8 <col:9> '_Bool' lvalue ParmVar 0x7ff9e88260d0 'b1' '_Bool'
+|   |     `-ImplicitCastExpr 0x7ff9e882a490 <col:15> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882a468 <col:15> 'int' lvalue ParmVar 0x7ff9e8826060 'i2' 'int'
+|   |-BinaryOperator 0x7ff9e882a640 <line:91:3, col:20> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882a510 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882a628 <col:7, col:20> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882a600 <col:7, col:20> 'int' '!='
+|   |     |-ParenExpr 0x7ff9e882a5c0 <col:7, col:15> 'int'
+|   |     | `-BinaryOperator 0x7ff9e882a598 <col:8, col:14> 'int' '=='
+|   |     |   |-ImplicitCastExpr 0x7ff9e882a580 <col:8> 'int' <LValueToRValue>
+|   |     |   | `-DeclRefExpr 0x7ff9e882a538 <col:8> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     |   `-IntegerLiteral 0x7ff9e882a560 <col:14> 'int' 0
+|   |     `-IntegerLiteral 0x7ff9e882a5e0 <col:20> 'int' 0
+|   |-BinaryOperator 0x7ff9e882a798 <line:92:3, col:20> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882a668 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882a780 <col:7, col:20> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882a758 <col:7, col:20> 'int' '=='
+|   |     |-ParenExpr 0x7ff9e882a718 <col:7, col:15> 'int'
+|   |     | `-BinaryOperator 0x7ff9e882a6f0 <col:8, col:14> 'int' '=='
+|   |     |   |-ImplicitCastExpr 0x7ff9e882a6d8 <col:8> 'int' <LValueToRValue>
+|   |     |   | `-DeclRefExpr 0x7ff9e882a690 <col:8> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     |   `-IntegerLiteral 0x7ff9e882a6b8 <col:14> 'int' 0
+|   |     `-IntegerLiteral 0x7ff9e882a738 <col:20> 'int' 0
+|   |-BinaryOperator 0x7ff9e882a8f0 <line:93:3, col:20> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882a7c0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882a8d8 <col:7, col:20> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882a8b0 <col:7, col:20> 'int' '!='
+|   |     |-ParenExpr 0x7ff9e882a870 <col:7, col:15> 'int'
+|   |     | `-BinaryOperator 0x7ff9e882a848 <col:8, col:14> 'int' '!='
+|   |     |   |-ImplicitCastExpr 0x7ff9e882a830 <col:8> 'int' <LValueToRValue>
+|   |     |   | `-DeclRefExpr 0x7ff9e882a7e8 <col:8> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     |   `-IntegerLiteral 0x7ff9e882a810 <col:14> 'int' 0
+|   |     `-IntegerLiteral 0x7ff9e882a890 <col:20> 'int' 0
+|   |-BinaryOperator 0x7ff9e882aa60 <line:94:3, col:20> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882a918 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882aa48 <col:7, col:20> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882aa20 <col:7, col:20> 'int' '=='
+|   |     |-ParenExpr 0x7ff9e882a9c8 <col:7, col:15> 'int'
+|   |     | `-BinaryOperator 0x7ff9e882a9a0 <col:8, col:14> 'int' '!='
+|   |     |   |-ImplicitCastExpr 0x7ff9e882a988 <col:8> 'int' <LValueToRValue>
+|   |     |   | `-DeclRefExpr 0x7ff9e882a940 <col:8> 'int' lvalue ParmVar 0x7ff9e8825fe8 'i1' 'int'
+|   |     |   `-IntegerLiteral 0x7ff9e882a968 <col:14> 'int' 0
+|   |     `-IntegerLiteral 0x7ff9e882aa00 <col:20> 'int' 0
+|   |-BinaryOperator 0x7ff9e882ab50 <line:96:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882aa88 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882ab38 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882ab10 <col:7, col:13> 'int' '=='
+|   |     |-UnaryOperator 0x7ff9e882aad0 <col:7, col:8> 'int' prefix '!'
+|   |     | `-IntegerLiteral 0x7ff9e882aab0 <col:8> 'int' 5
+|   |     `-IntegerLiteral 0x7ff9e882aaf0 <col:13> 'int' 4
+|   |-BinaryOperator 0x7ff9e882ac60 <line:97:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882ab78 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882ac48 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882ac20 <col:7, col:14> 'int' '=='
+|   |     |-UnaryOperator 0x7ff9e882abe0 <col:7, col:9> 'int' prefix '!'
+|   |     | `-UnaryOperator 0x7ff9e882abc0 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-IntegerLiteral 0x7ff9e882aba0 <col:9> 'int' 5
+|   |     `-IntegerLiteral 0x7ff9e882ac00 <col:14> 'int' 4
+|   |-BinaryOperator 0x7ff9e882ad50 <line:98:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882ac88 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882ad38 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882ad10 <col:7, col:13> 'int' '=='
+|   |     |-UnaryOperator 0x7ff9e882acd0 <col:7, col:8> 'int' prefix '!'
+|   |     | `-IntegerLiteral 0x7ff9e882acb0 <col:8> 'int' 1
+|   |     `-IntegerLiteral 0x7ff9e882acf0 <col:13> 'int' 1
+|   `-BinaryOperator 0x7ff9e882ae60 <line:99:3, col:14> '_Bool' '='
+|     |-DeclRefExpr 0x7ff9e882ad78 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|     `-ImplicitCastExpr 0x7ff9e882ae48 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|       `-BinaryOperator 0x7ff9e882ae20 <col:7, col:14> 'int' '=='
+|         |-UnaryOperator 0x7ff9e882ade0 <col:7, col:9> 'int' prefix '!'
+|         | `-UnaryOperator 0x7ff9e882adc0 <col:8, col:9> 'int' prefix '!'
+|         |   `-IntegerLiteral 0x7ff9e882ada0 <col:9> 'int' 1
+|         `-IntegerLiteral 0x7ff9e882ae00 <col:14> 'int' 1
+|-FunctionDecl 0x7ff9e882b1a0 <line:102:1, line:124:1> line:103:1 fn2 'void (enum E)'
+| |-ParmVarDecl 0x7ff9e882b0a0 <col:6, col:13> col:13 used e 'enum E':'enum E'
+| `-CompoundStmt 0x7ff9e882ca40 <line:104:1, line:124:1>
+|   |-BinaryOperator 0x7ff9e882b340 <line:105:3, col:12> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882b240 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882b328 <col:7, col:12> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882b300 <col:7, col:12> 'int' '=='
+|   |     |-ImplicitCastExpr 0x7ff9e882b2d0 <col:7> 'unsigned int' <IntegralCast>
+|   |     | `-ImplicitCastExpr 0x7ff9e882b2b8 <col:7> 'enum E':'enum E' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e882b268 <col:7> 'enum E':'enum E' lvalue ParmVar 0x7ff9e882b0a0 'e' 'enum E':'enum E'
+|   |     `-ImplicitCastExpr 0x7ff9e882b2e8 <col:12> 'unsigned int' <IntegralCast>
+|   |       `-DeclRefExpr 0x7ff9e882b290 <col:12> 'int' EnumConstant 0x7ff9e8825a48 'B' 'int'
+|   |-BinaryOperator 0x7ff9e882b500 <line:106:3, col:19> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882b368 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882b4e8 <col:7, col:19> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882b4c0 <col:7, col:19> 'int' '=='
+|   |     |-ImplicitCastExpr 0x7ff9e882b490 <col:7> 'unsigned int' <IntegralCast>
+|   |     | `-ImplicitCastExpr 0x7ff9e882b478 <col:7> 'enum E':'enum E' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e882b390 <col:7> 'enum E':'enum E' lvalue ParmVar 0x7ff9e882b0a0 'e' 'enum E':'enum E'
+|   |     `-ImplicitCastExpr 0x7ff9e882b4a8 <col:12, col:19> 'unsigned int' <IntegralCast>
+|   |       `-CallExpr 0x7ff9e882b450 <col:12, col:19> 'enum E':'enum E'
+|   |         `-ImplicitCastExpr 0x7ff9e882b438 <col:12> 'enum E (*)(void)' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7ff9e882b3b8 <col:12> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+|   |-BinaryOperator 0x7ff9e882b650 <line:107:3, col:19> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882b528 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882b638 <col:7, col:19> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882b610 <col:7, col:19> 'int' '=='
+|   |     |-ImplicitCastExpr 0x7ff9e882b5e0 <col:7, col:14> 'unsigned int' <IntegralCast>
+|   |     | `-CallExpr 0x7ff9e882b590 <col:7, col:14> 'enum E':'enum E'
+|   |     |   `-ImplicitCastExpr 0x7ff9e882b578 <col:7> 'enum E (*)(void)' <FunctionToPointerDecay>
+|   |     |     `-DeclRefExpr 0x7ff9e882b550 <col:7> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+|   |     `-ImplicitCastExpr 0x7ff9e882b5f8 <col:19> 'unsigned int' <IntegralCast>
+|   |       `-DeclRefExpr 0x7ff9e882b5b8 <col:19> 'int' EnumConstant 0x7ff9e8825a00 'A' 'int'
+|   |-BinaryOperator 0x7ff9e882b7e0 <line:108:3, col:26> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882b678 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882b7c8 <col:7, col:26> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882b7a0 <col:7, col:26> 'int' '=='
+|   |     |-ImplicitCastExpr 0x7ff9e882b770 <col:7, col:14> 'unsigned int' <IntegralCast>
+|   |     | `-CallExpr 0x7ff9e882b6e0 <col:7, col:14> 'enum E':'enum E'
+|   |     |   `-ImplicitCastExpr 0x7ff9e882b6c8 <col:7> 'enum E (*)(void)' <FunctionToPointerDecay>
+|   |     |     `-DeclRefExpr 0x7ff9e882b6a0 <col:7> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+|   |     `-ImplicitCastExpr 0x7ff9e882b788 <col:19, col:26> 'unsigned int' <IntegralCast>
+|   |       `-CallExpr 0x7ff9e882b748 <col:19, col:26> 'enum E':'enum E'
+|   |         `-ImplicitCastExpr 0x7ff9e882b730 <col:19> 'enum E (*)(void)' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7ff9e882b708 <col:19> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+|   |-BinaryOperator 0x7ff9e882b8f8 <line:110:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882b808 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882b8e0 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882b8b8 <col:7, col:13> 'int' '=='
+|   |     |-UnaryOperator 0x7ff9e882b870 <col:7, col:8> 'int' prefix '!'
+|   |     | `-ImplicitCastExpr 0x7ff9e882b858 <col:8> 'enum E':'enum E' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e882b830 <col:8> 'enum E':'enum E' lvalue ParmVar 0x7ff9e882b0a0 'e' 'enum E':'enum E'
+|   |     `-DeclRefExpr 0x7ff9e882b890 <col:13> 'int' EnumConstant 0x7ff9e8825a00 'A' 'int'
+|   |-BinaryOperator 0x7ff9e882ba98 <line:111:3, col:20> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882b920 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882ba80 <col:7, col:20> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882ba58 <col:7, col:20> 'int' '=='
+|   |     |-ImplicitCastExpr 0x7ff9e882ba40 <col:7, col:8> 'unsigned int' <IntegralCast>
+|   |     | `-UnaryOperator 0x7ff9e882b988 <col:7, col:8> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e882b970 <col:8> 'enum E':'enum E' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e882b948 <col:8> 'enum E':'enum E' lvalue ParmVar 0x7ff9e882b0a0 'e' 'enum E':'enum E'
+|   |     `-ImplicitCastExpr 0x7ff9e882ba28 <col:13, col:20> 'unsigned int' <IntegralCast>
+|   |       `-CallExpr 0x7ff9e882ba00 <col:13, col:20> 'enum E':'enum E'
+|   |         `-ImplicitCastExpr 0x7ff9e882b9d0 <col:13> 'enum E (*)(void)' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7ff9e882b9a8 <col:13> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+|   |-BinaryOperator 0x7ff9e882bbd8 <line:112:3, col:20> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882bac0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882bbc0 <col:7, col:20> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882bb98 <col:7, col:20> 'int' '=='
+|   |     |-UnaryOperator 0x7ff9e882bb50 <col:7, col:15> 'int' prefix '!'
+|   |     | `-CallExpr 0x7ff9e882bb28 <col:8, col:15> 'enum E':'enum E'
+|   |     |   `-ImplicitCastExpr 0x7ff9e882bb10 <col:8> 'enum E (*)(void)' <FunctionToPointerDecay>
+|   |     |     `-DeclRefExpr 0x7ff9e882bae8 <col:8> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+|   |     `-DeclRefExpr 0x7ff9e882bb70 <col:20> 'int' EnumConstant 0x7ff9e8825a00 'A' 'int'
+|   |-BinaryOperator 0x7ff9e882bd88 <line:113:3, col:27> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882bc00 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882bd70 <col:7, col:27> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882bd48 <col:7, col:27> 'int' '=='
+|   |     |-ImplicitCastExpr 0x7ff9e882bd30 <col:7, col:15> 'unsigned int' <IntegralCast>
+|   |     | `-UnaryOperator 0x7ff9e882bc90 <col:7, col:15> 'int' prefix '!'
+|   |     |   `-CallExpr 0x7ff9e882bc68 <col:8, col:15> 'enum E':'enum E'
+|   |     |     `-ImplicitCastExpr 0x7ff9e882bc50 <col:8> 'enum E (*)(void)' <FunctionToPointerDecay>
+|   |     |       `-DeclRefExpr 0x7ff9e882bc28 <col:8> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+|   |     `-ImplicitCastExpr 0x7ff9e882bd18 <col:20, col:27> 'unsigned int' <IntegralCast>
+|   |       `-CallExpr 0x7ff9e882bcf0 <col:20, col:27> 'enum E':'enum E'
+|   |         `-ImplicitCastExpr 0x7ff9e882bcd8 <col:20> 'enum E (*)(void)' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7ff9e882bcb0 <col:20> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+|   |-BinaryOperator 0x7ff9e882bef0 <line:115:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882bdb0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882bed8 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-UnaryOperator 0x7ff9e882beb8 <col:7, col:15> 'int' prefix '!'
+|   |     `-ParenExpr 0x7ff9e882be98 <col:8, col:15> 'int'
+|   |       `-BinaryOperator 0x7ff9e882be70 <col:9, col:14> 'int' '=='
+|   |         |-ImplicitCastExpr 0x7ff9e882be40 <col:9> 'unsigned int' <IntegralCast>
+|   |         | `-ImplicitCastExpr 0x7ff9e882be28 <col:9> 'enum E':'enum E' <LValueToRValue>
+|   |         |   `-DeclRefExpr 0x7ff9e882bdd8 <col:9> 'enum E':'enum E' lvalue ParmVar 0x7ff9e882b0a0 'e' 'enum E':'enum E'
+|   |         `-ImplicitCastExpr 0x7ff9e882be58 <col:14> 'unsigned int' <IntegralCast>
+|   |           `-DeclRefExpr 0x7ff9e882be00 <col:14> 'int' EnumConstant 0x7ff9e8825a00 'A' 'int'
+|   |-BinaryOperator 0x7ff9e882c098 <line:116:3, col:22> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882bf18 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882c080 <col:7, col:22> '_Bool' <IntegralToBoolean>
+|   |   `-UnaryOperator 0x7ff9e882c060 <col:7, col:22> 'int' prefix '!'
+|   |     `-ParenExpr 0x7ff9e882c040 <col:8, col:22> 'int'
+|   |       `-BinaryOperator 0x7ff9e882c018 <col:9, col:21> 'int' '=='
+|   |         |-ImplicitCastExpr 0x7ff9e882bfe8 <col:9> 'unsigned int' <IntegralCast>
+|   |         | `-ImplicitCastExpr 0x7ff9e882bfd0 <col:9> 'enum E':'enum E' <LValueToRValue>
+|   |         |   `-DeclRefExpr 0x7ff9e882bf40 <col:9> 'enum E':'enum E' lvalue ParmVar 0x7ff9e882b0a0 'e' 'enum E':'enum E'
+|   |         `-ImplicitCastExpr 0x7ff9e882c000 <col:14, col:21> 'unsigned int' <IntegralCast>
+|   |           `-CallExpr 0x7ff9e882bfa8 <col:14, col:21> 'enum E':'enum E'
+|   |             `-ImplicitCastExpr 0x7ff9e882bf90 <col:14> 'enum E (*)(void)' <FunctionToPointerDecay>
+|   |               `-DeclRefExpr 0x7ff9e882bf68 <col:14> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+|   |-BinaryOperator 0x7ff9e882c228 <line:117:3, col:22> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882c0c0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882c210 <col:7, col:22> '_Bool' <IntegralToBoolean>
+|   |   `-UnaryOperator 0x7ff9e882c1f0 <col:7, col:22> 'int' prefix '!'
+|   |     `-ParenExpr 0x7ff9e882c1d0 <col:8, col:22> 'int'
+|   |       `-BinaryOperator 0x7ff9e882c1a8 <col:9, col:21> 'int' '=='
+|   |         |-ImplicitCastExpr 0x7ff9e882c178 <col:9, col:16> 'unsigned int' <IntegralCast>
+|   |         | `-CallExpr 0x7ff9e882c128 <col:9, col:16> 'enum E':'enum E'
+|   |         |   `-ImplicitCastExpr 0x7ff9e882c110 <col:9> 'enum E (*)(void)' <FunctionToPointerDecay>
+|   |         |     `-DeclRefExpr 0x7ff9e882c0e8 <col:9> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+|   |         `-ImplicitCastExpr 0x7ff9e882c190 <col:21> 'unsigned int' <IntegralCast>
+|   |           `-DeclRefExpr 0x7ff9e882c150 <col:21> 'int' EnumConstant 0x7ff9e8825a00 'A' 'int'
+|   |-BinaryOperator 0x7ff9e882c3f8 <line:118:3, col:29> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882c250 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882c3e0 <col:7, col:29> '_Bool' <IntegralToBoolean>
+|   |   `-UnaryOperator 0x7ff9e882c3c0 <col:7, col:29> 'int' prefix '!'
+|   |     `-ParenExpr 0x7ff9e882c3a0 <col:8, col:29> 'int'
+|   |       `-BinaryOperator 0x7ff9e882c378 <col:9, col:28> 'int' '=='
+|   |         |-ImplicitCastExpr 0x7ff9e882c348 <col:9, col:16> 'unsigned int' <IntegralCast>
+|   |         | `-CallExpr 0x7ff9e882c2b8 <col:9, col:16> 'enum E':'enum E'
+|   |         |   `-ImplicitCastExpr 0x7ff9e882c2a0 <col:9> 'enum E (*)(void)' <FunctionToPointerDecay>
+|   |         |     `-DeclRefExpr 0x7ff9e882c278 <col:9> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+|   |         `-ImplicitCastExpr 0x7ff9e882c360 <col:21, col:28> 'unsigned int' <IntegralCast>
+|   |           `-CallExpr 0x7ff9e882c320 <col:21, col:28> 'enum E':'enum E'
+|   |             `-ImplicitCastExpr 0x7ff9e882c308 <col:21> 'enum E (*)(void)' <FunctionToPointerDecay>
+|   |               `-DeclRefExpr 0x7ff9e882c2e0 <col:21> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+|   |-BinaryOperator 0x7ff9e882c530 <line:120:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882c420 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882c518 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882c4f0 <col:7, col:15> 'int' '=='
+|   |     |-ParenExpr 0x7ff9e882c4a8 <col:7, col:10> 'int'
+|   |     | `-UnaryOperator 0x7ff9e882c488 <col:8, col:9> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e882c470 <col:9> 'enum E':'enum E' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e882c448 <col:9> 'enum E':'enum E' lvalue ParmVar 0x7ff9e882b0a0 'e' 'enum E':'enum E'
+|   |     `-DeclRefExpr 0x7ff9e882c4c8 <col:15> 'int' EnumConstant 0x7ff9e8825a00 'A' 'int'
+|   |-BinaryOperator 0x7ff9e882c6d8 <line:121:3, col:22> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882c558 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882c6c0 <col:7, col:22> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882c698 <col:7, col:22> 'int' '=='
+|   |     |-ImplicitCastExpr 0x7ff9e882c680 <col:7, col:10> 'unsigned int' <IntegralCast>
+|   |     | `-ParenExpr 0x7ff9e882c5e0 <col:7, col:10> 'int'
+|   |     |   `-UnaryOperator 0x7ff9e882c5c0 <col:8, col:9> 'int' prefix '!'
+|   |     |     `-ImplicitCastExpr 0x7ff9e882c5a8 <col:9> 'enum E':'enum E' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7ff9e882c580 <col:9> 'enum E':'enum E' lvalue ParmVar 0x7ff9e882b0a0 'e' 'enum E':'enum E'
+|   |     `-ImplicitCastExpr 0x7ff9e882c668 <col:15, col:22> 'unsigned int' <IntegralCast>
+|   |       `-CallExpr 0x7ff9e882c640 <col:15, col:22> 'enum E':'enum E'
+|   |         `-ImplicitCastExpr 0x7ff9e882c628 <col:15> 'enum E (*)(void)' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7ff9e882c600 <col:15> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+|   |-BinaryOperator 0x7ff9e882c838 <line:122:3, col:22> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882c700 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882c820 <col:7, col:22> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882c7f8 <col:7, col:22> 'int' '=='
+|   |     |-ParenExpr 0x7ff9e882c7b0 <col:7, col:17> 'int'
+|   |     | `-UnaryOperator 0x7ff9e882c790 <col:8, col:16> 'int' prefix '!'
+|   |     |   `-CallExpr 0x7ff9e882c768 <col:9, col:16> 'enum E':'enum E'
+|   |     |     `-ImplicitCastExpr 0x7ff9e882c750 <col:9> 'enum E (*)(void)' <FunctionToPointerDecay>
+|   |     |       `-DeclRefExpr 0x7ff9e882c728 <col:9> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+|   |     `-DeclRefExpr 0x7ff9e882c7d0 <col:22> 'int' EnumConstant 0x7ff9e8825a00 'A' 'int'
+|   `-BinaryOperator 0x7ff9e882ca18 <line:123:3, col:29> '_Bool' '='
+|     |-DeclRefExpr 0x7ff9e882c860 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|     `-ImplicitCastExpr 0x7ff9e882ca00 <col:7, col:29> '_Bool' <IntegralToBoolean>
+|       `-BinaryOperator 0x7ff9e882c9c8 <col:7, col:29> 'int' '=='
+|         |-ImplicitCastExpr 0x7ff9e882c9b0 <col:7, col:17> 'unsigned int' <IntegralCast>
+|         | `-ParenExpr 0x7ff9e882c910 <col:7, col:17> 'int'
+|         |   `-UnaryOperator 0x7ff9e882c8f0 <col:8, col:16> 'int' prefix '!'
+|         |     `-CallExpr 0x7ff9e882c8c8 <col:9, col:16> 'enum E':'enum E'
+|         |       `-ImplicitCastExpr 0x7ff9e882c8b0 <col:9> 'enum E (*)(void)' <FunctionToPointerDecay>
+|         |         `-DeclRefExpr 0x7ff9e882c888 <col:9> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+|         `-ImplicitCastExpr 0x7ff9e882c998 <col:22, col:29> 'unsigned int' <IntegralCast>
+|           `-CallExpr 0x7ff9e882c970 <col:22, col:29> 'enum E':'enum E'
+|             `-ImplicitCastExpr 0x7ff9e882c958 <col:22> 'enum E (*)(void)' <FunctionToPointerDecay>
+|               `-DeclRefExpr 0x7ff9e882c930 <col:22> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+|-FunctionDecl 0x7ff9e882cc40 <line:126:1, line:165:1> line:127:1 fn3 'void (int, float)'
+| |-ParmVarDecl 0x7ff9e882caf0 <col:6, col:10> col:10 used i1 'int'
+| |-ParmVarDecl 0x7ff9e882cb68 <col:14, col:20> col:20 used f2 'float'
+| `-CompoundStmt 0x7ff9e882f4f0 <line:128:1, line:165:1>
+|   |-BinaryOperator 0x7ff9e882ce08 <line:129:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882cce8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882cdf0 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882cdc8 <col:7, col:14> 'int' '=='
+|   |     |-ImplicitCastExpr 0x7ff9e882cdb0 <col:7, col:8> 'float' <IntegralToFloating>
+|   |     | `-UnaryOperator 0x7ff9e882cd50 <col:7, col:8> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e882cd38 <col:8> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e882cd10 <col:8> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882cd98 <col:14> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882cd70 <col:14> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882cf50 <line:130:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882ce30 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882cf38 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882cf10 <col:7, col:14> 'int' '!='
+|   |     |-ImplicitCastExpr 0x7ff9e882cef8 <col:7, col:8> 'float' <IntegralToFloating>
+|   |     | `-UnaryOperator 0x7ff9e882ce98 <col:7, col:8> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e882ce80 <col:8> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e882ce58 <col:8> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882cee0 <col:14> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882ceb8 <col:14> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882d098 <line:131:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882cf78 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882d080 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882d058 <col:7, col:13> 'int' '<'
+|   |     |-ImplicitCastExpr 0x7ff9e882d040 <col:7, col:8> 'float' <IntegralToFloating>
+|   |     | `-UnaryOperator 0x7ff9e882cfe0 <col:7, col:8> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e882cfc8 <col:8> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e882cfa0 <col:8> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882d028 <col:13> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882d000 <col:13> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882d1e0 <line:132:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882d0c0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882d1c8 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882d1a0 <col:7, col:13> 'int' '>'
+|   |     |-ImplicitCastExpr 0x7ff9e882d188 <col:7, col:8> 'float' <IntegralToFloating>
+|   |     | `-UnaryOperator 0x7ff9e882d128 <col:7, col:8> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e882d110 <col:8> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e882d0e8 <col:8> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882d170 <col:13> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882d148 <col:13> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882d328 <line:133:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882d208 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882d310 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882d2e8 <col:7, col:14> 'int' '<='
+|   |     |-ImplicitCastExpr 0x7ff9e882d2d0 <col:7, col:8> 'float' <IntegralToFloating>
+|   |     | `-UnaryOperator 0x7ff9e882d270 <col:7, col:8> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e882d258 <col:8> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e882d230 <col:8> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882d2b8 <col:14> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882d290 <col:14> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882d470 <line:134:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882d350 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882d458 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882d430 <col:7, col:14> 'int' '>='
+|   |     |-ImplicitCastExpr 0x7ff9e882d418 <col:7, col:8> 'float' <IntegralToFloating>
+|   |     | `-UnaryOperator 0x7ff9e882d3b8 <col:7, col:8> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7ff9e882d3a0 <col:8> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff9e882d378 <col:8> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882d400 <col:14> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882d3d8 <col:14> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882d598 <line:136:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882d498 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882d580 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882d558 <col:7, col:13> 'int' '=='
+|   |     |-ImplicitCastExpr 0x7ff9e882d540 <col:7> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7ff9e882d510 <col:7> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e882d4c0 <col:7> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882d528 <col:13> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882d4e8 <col:13> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882d6c0 <line:137:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882d5c0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882d6a8 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882d680 <col:7, col:13> 'int' '!='
+|   |     |-ImplicitCastExpr 0x7ff9e882d668 <col:7> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7ff9e882d638 <col:7> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e882d5e8 <col:7> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882d650 <col:13> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882d610 <col:13> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882d7e8 <line:138:3, col:12> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882d6e8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882d7d0 <col:7, col:12> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882d7a8 <col:7, col:12> 'int' '<'
+|   |     |-ImplicitCastExpr 0x7ff9e882d790 <col:7> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7ff9e882d760 <col:7> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e882d710 <col:7> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882d778 <col:12> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882d738 <col:12> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882d910 <line:139:3, col:12> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882d810 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882d8f8 <col:7, col:12> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882d8d0 <col:7, col:12> 'int' '>'
+|   |     |-ImplicitCastExpr 0x7ff9e882d8b8 <col:7> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7ff9e882d888 <col:7> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e882d838 <col:7> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882d8a0 <col:12> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882d860 <col:12> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882da40 <line:140:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882d938 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882da28 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882da00 <col:7, col:13> 'int' '<='
+|   |     |-ImplicitCastExpr 0x7ff9e882d9e0 <col:7> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7ff9e882d9b0 <col:7> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e882d960 <col:7> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882d9c8 <col:13> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882d988 <col:13> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882db68 <line:141:3, col:13> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882da68 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882db50 <col:7, col:13> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882db28 <col:7, col:13> 'int' '>='
+|   |     |-ImplicitCastExpr 0x7ff9e882db10 <col:7> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7ff9e882dae0 <col:7> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff9e882da90 <col:7> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882daf8 <col:13> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882dab8 <col:13> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882dcd0 <line:144:3, col:16> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882db90 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882dcb8 <col:7, col:16> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882dc90 <col:7, col:16> 'int' '=='
+|   |     |-ImplicitCastExpr 0x7ff9e882dc78 <col:7, col:11> 'float' <IntegralToFloating>
+|   |     | `-ParenExpr 0x7ff9e882dc18 <col:7, col:11> 'int'
+|   |     |   `-UnaryOperator 0x7ff9e882dbf8 <col:8, col:9> 'int' prefix '!'
+|   |     |     `-ImplicitCastExpr 0x7ff9e882dbe0 <col:9> 'int' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7ff9e882dbb8 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882dc60 <col:16> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882dc38 <col:16> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882de38 <line:145:3, col:16> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882dcf8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882de20 <col:7, col:16> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882ddf8 <col:7, col:16> 'int' '!='
+|   |     |-ImplicitCastExpr 0x7ff9e882dde0 <col:7, col:11> 'float' <IntegralToFloating>
+|   |     | `-ParenExpr 0x7ff9e882dd80 <col:7, col:11> 'int'
+|   |     |   `-UnaryOperator 0x7ff9e882dd60 <col:8, col:9> 'int' prefix '!'
+|   |     |     `-ImplicitCastExpr 0x7ff9e882dd48 <col:9> 'int' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7ff9e882dd20 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882ddc8 <col:16> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882dda0 <col:16> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882dfa0 <line:146:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882de60 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882df88 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882df60 <col:7, col:15> 'int' '<'
+|   |     |-ImplicitCastExpr 0x7ff9e882df48 <col:7, col:11> 'float' <IntegralToFloating>
+|   |     | `-ParenExpr 0x7ff9e882dee8 <col:7, col:11> 'int'
+|   |     |   `-UnaryOperator 0x7ff9e882dec8 <col:8, col:9> 'int' prefix '!'
+|   |     |     `-ImplicitCastExpr 0x7ff9e882deb0 <col:9> 'int' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7ff9e882de88 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882df30 <col:15> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882df08 <col:15> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882e108 <line:147:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882dfc8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882e0f0 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882e0c8 <col:7, col:15> 'int' '>'
+|   |     |-ImplicitCastExpr 0x7ff9e882e0b0 <col:7, col:11> 'float' <IntegralToFloating>
+|   |     | `-ParenExpr 0x7ff9e882e050 <col:7, col:11> 'int'
+|   |     |   `-UnaryOperator 0x7ff9e882e030 <col:8, col:9> 'int' prefix '!'
+|   |     |     `-ImplicitCastExpr 0x7ff9e882e018 <col:9> 'int' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7ff9e882dff0 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882e098 <col:15> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882e070 <col:15> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882e270 <line:148:3, col:16> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882e130 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882e258 <col:7, col:16> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882e230 <col:7, col:16> 'int' '<='
+|   |     |-ImplicitCastExpr 0x7ff9e882e218 <col:7, col:11> 'float' <IntegralToFloating>
+|   |     | `-ParenExpr 0x7ff9e882e1b8 <col:7, col:11> 'int'
+|   |     |   `-UnaryOperator 0x7ff9e882e198 <col:8, col:9> 'int' prefix '!'
+|   |     |     `-ImplicitCastExpr 0x7ff9e882e180 <col:9> 'int' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7ff9e882e158 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882e200 <col:16> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882e1d8 <col:16> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882e3d8 <line:149:3, col:16> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882e298 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882e3c0 <col:7, col:16> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882e398 <col:7, col:16> 'int' '>='
+|   |     |-ImplicitCastExpr 0x7ff9e882e380 <col:7, col:11> 'float' <IntegralToFloating>
+|   |     | `-ParenExpr 0x7ff9e882e320 <col:7, col:11> 'int'
+|   |     |   `-UnaryOperator 0x7ff9e882e300 <col:8, col:9> 'int' prefix '!'
+|   |     |     `-ImplicitCastExpr 0x7ff9e882e2e8 <col:9> 'int' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7ff9e882e2c0 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882e368 <col:16> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882e340 <col:16> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882e540 <line:152:3, col:17> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882e400 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882e528 <col:7, col:17> '_Bool' <IntegralToBoolean>
+|   |   `-ParenExpr 0x7ff9e882e508 <col:7, col:17> 'int'
+|   |     `-BinaryOperator 0x7ff9e882e4e0 <col:8, col:15> 'int' '=='
+|   |       |-ImplicitCastExpr 0x7ff9e882e4c8 <col:8, col:9> 'float' <IntegralToFloating>
+|   |       | `-UnaryOperator 0x7ff9e882e468 <col:8, col:9> 'int' prefix '!'
+|   |       |   `-ImplicitCastExpr 0x7ff9e882e450 <col:9> 'int' <LValueToRValue>
+|   |       |     `-DeclRefExpr 0x7ff9e882e428 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |       `-ImplicitCastExpr 0x7ff9e882e4b0 <col:15> 'float' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e882e488 <col:15> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882e6a8 <line:153:3, col:17> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882e568 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882e690 <col:7, col:17> '_Bool' <IntegralToBoolean>
+|   |   `-ParenExpr 0x7ff9e882e670 <col:7, col:17> 'int'
+|   |     `-BinaryOperator 0x7ff9e882e648 <col:8, col:15> 'int' '!='
+|   |       |-ImplicitCastExpr 0x7ff9e882e630 <col:8, col:9> 'float' <IntegralToFloating>
+|   |       | `-UnaryOperator 0x7ff9e882e5d0 <col:8, col:9> 'int' prefix '!'
+|   |       |   `-ImplicitCastExpr 0x7ff9e882e5b8 <col:9> 'int' <LValueToRValue>
+|   |       |     `-DeclRefExpr 0x7ff9e882e590 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |       `-ImplicitCastExpr 0x7ff9e882e618 <col:15> 'float' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e882e5f0 <col:15> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882e810 <line:154:3, col:16> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882e6d0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882e7f8 <col:7, col:16> '_Bool' <IntegralToBoolean>
+|   |   `-ParenExpr 0x7ff9e882e7d8 <col:7, col:16> 'int'
+|   |     `-BinaryOperator 0x7ff9e882e7b0 <col:8, col:14> 'int' '<'
+|   |       |-ImplicitCastExpr 0x7ff9e882e798 <col:8, col:9> 'float' <IntegralToFloating>
+|   |       | `-UnaryOperator 0x7ff9e882e738 <col:8, col:9> 'int' prefix '!'
+|   |       |   `-ImplicitCastExpr 0x7ff9e882e720 <col:9> 'int' <LValueToRValue>
+|   |       |     `-DeclRefExpr 0x7ff9e882e6f8 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |       `-ImplicitCastExpr 0x7ff9e882e780 <col:14> 'float' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e882e758 <col:14> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882e978 <line:155:3, col:16> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882e838 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882e960 <col:7, col:16> '_Bool' <IntegralToBoolean>
+|   |   `-ParenExpr 0x7ff9e882e940 <col:7, col:16> 'int'
+|   |     `-BinaryOperator 0x7ff9e882e918 <col:8, col:14> 'int' '>'
+|   |       |-ImplicitCastExpr 0x7ff9e882e900 <col:8, col:9> 'float' <IntegralToFloating>
+|   |       | `-UnaryOperator 0x7ff9e882e8a0 <col:8, col:9> 'int' prefix '!'
+|   |       |   `-ImplicitCastExpr 0x7ff9e882e888 <col:9> 'int' <LValueToRValue>
+|   |       |     `-DeclRefExpr 0x7ff9e882e860 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |       `-ImplicitCastExpr 0x7ff9e882e8e8 <col:14> 'float' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e882e8c0 <col:14> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882eaf0 <line:156:3, col:17> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882e9a0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882ead8 <col:7, col:17> '_Bool' <IntegralToBoolean>
+|   |   `-ParenExpr 0x7ff9e882eab8 <col:7, col:17> 'int'
+|   |     `-BinaryOperator 0x7ff9e882ea90 <col:8, col:15> 'int' '<='
+|   |       |-ImplicitCastExpr 0x7ff9e882ea78 <col:8, col:9> 'float' <IntegralToFloating>
+|   |       | `-UnaryOperator 0x7ff9e882ea18 <col:8, col:9> 'int' prefix '!'
+|   |       |   `-ImplicitCastExpr 0x7ff9e882ea00 <col:9> 'int' <LValueToRValue>
+|   |       |     `-DeclRefExpr 0x7ff9e882e9c8 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |       `-ImplicitCastExpr 0x7ff9e882ea60 <col:15> 'float' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e882ea38 <col:15> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882ec58 <line:157:3, col:17> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882eb18 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882ec40 <col:7, col:17> '_Bool' <IntegralToBoolean>
+|   |   `-ParenExpr 0x7ff9e882ec20 <col:7, col:17> 'int'
+|   |     `-BinaryOperator 0x7ff9e882ebf8 <col:8, col:15> 'int' '>='
+|   |       |-ImplicitCastExpr 0x7ff9e882ebe0 <col:8, col:9> 'float' <IntegralToFloating>
+|   |       | `-UnaryOperator 0x7ff9e882eb80 <col:8, col:9> 'int' prefix '!'
+|   |       |   `-ImplicitCastExpr 0x7ff9e882eb68 <col:9> 'int' <LValueToRValue>
+|   |       |     `-DeclRefExpr 0x7ff9e882eb40 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |       `-ImplicitCastExpr 0x7ff9e882ebc8 <col:15> 'float' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff9e882eba0 <col:15> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882edc0 <line:159:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882ec80 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882eda8 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882ed80 <col:7, col:15> 'int' '=='
+|   |     |-ImplicitCastExpr 0x7ff9e882ed68 <col:7, col:9> 'float' <IntegralToFloating>
+|   |     | `-UnaryOperator 0x7ff9e882ed08 <col:7, col:9> 'int' prefix '!'
+|   |     |   `-UnaryOperator 0x7ff9e882ece8 <col:8, col:9> 'int' prefix '!'
+|   |     |     `-ImplicitCastExpr 0x7ff9e882ecd0 <col:9> 'int' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7ff9e882eca8 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882ed50 <col:15> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882ed28 <col:15> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882ef28 <line:160:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882ede8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882ef10 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882eee8 <col:7, col:15> 'int' '!='
+|   |     |-ImplicitCastExpr 0x7ff9e882eed0 <col:7, col:9> 'float' <IntegralToFloating>
+|   |     | `-UnaryOperator 0x7ff9e882ee70 <col:7, col:9> 'int' prefix '!'
+|   |     |   `-UnaryOperator 0x7ff9e882ee50 <col:8, col:9> 'int' prefix '!'
+|   |     |     `-ImplicitCastExpr 0x7ff9e882ee38 <col:9> 'int' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7ff9e882ee10 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882eeb8 <col:15> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882ee90 <col:15> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882f090 <line:161:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882ef50 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882f078 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882f050 <col:7, col:14> 'int' '<'
+|   |     |-ImplicitCastExpr 0x7ff9e882f038 <col:7, col:9> 'float' <IntegralToFloating>
+|   |     | `-UnaryOperator 0x7ff9e882efd8 <col:7, col:9> 'int' prefix '!'
+|   |     |   `-UnaryOperator 0x7ff9e882efb8 <col:8, col:9> 'int' prefix '!'
+|   |     |     `-ImplicitCastExpr 0x7ff9e882efa0 <col:9> 'int' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7ff9e882ef78 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882f020 <col:14> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882eff8 <col:14> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882f1f8 <line:162:3, col:14> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882f0b8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882f1e0 <col:7, col:14> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882f1b8 <col:7, col:14> 'int' '>'
+|   |     |-ImplicitCastExpr 0x7ff9e882f1a0 <col:7, col:9> 'float' <IntegralToFloating>
+|   |     | `-UnaryOperator 0x7ff9e882f140 <col:7, col:9> 'int' prefix '!'
+|   |     |   `-UnaryOperator 0x7ff9e882f120 <col:8, col:9> 'int' prefix '!'
+|   |     |     `-ImplicitCastExpr 0x7ff9e882f108 <col:9> 'int' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7ff9e882f0e0 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882f188 <col:14> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882f160 <col:14> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   |-BinaryOperator 0x7ff9e882f360 <line:163:3, col:15> '_Bool' '='
+|   | |-DeclRefExpr 0x7ff9e882f220 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|   | `-ImplicitCastExpr 0x7ff9e882f348 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|   |   `-BinaryOperator 0x7ff9e882f320 <col:7, col:15> 'int' '<='
+|   |     |-ImplicitCastExpr 0x7ff9e882f308 <col:7, col:9> 'float' <IntegralToFloating>
+|   |     | `-UnaryOperator 0x7ff9e882f2a8 <col:7, col:9> 'int' prefix '!'
+|   |     |   `-UnaryOperator 0x7ff9e882f288 <col:8, col:9> 'int' prefix '!'
+|   |     |     `-ImplicitCastExpr 0x7ff9e882f270 <col:9> 'int' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7ff9e882f248 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|   |     `-ImplicitCastExpr 0x7ff9e882f2f0 <col:15> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff9e882f2c8 <col:15> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+|   `-BinaryOperator 0x7ff9e882f4c8 <line:164:3, col:15> '_Bool' '='
+|     |-DeclRefExpr 0x7ff9e882f388 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+|     `-ImplicitCastExpr 0x7ff9e882f4b0 <col:7, col:15> '_Bool' <IntegralToBoolean>
+|       `-BinaryOperator 0x7ff9e882f488 <col:7, col:15> 'int' '>='
+|         |-ImplicitCastExpr 0x7ff9e882f470 <col:7, col:9> 'float' <IntegralToFloating>
+|         | `-UnaryOperator 0x7ff9e882f410 <col:7, col:9> 'int' prefix '!'
+|         |   `-UnaryOperator 0x7ff9e882f3f0 <col:8, col:9> 'int' prefix '!'
+|         |     `-ImplicitCastExpr 0x7ff9e882f3d8 <col:9> 'int' <LValueToRValue>
+|         |       `-DeclRefExpr 0x7ff9e882f3b0 <col:9> 'int' lvalue ParmVar 0x7ff9e882caf0 'i1' 'int'
+|         `-ImplicitCastExpr 0x7ff9e882f458 <col:15> 'float' <LValueToRValue>
+|           `-DeclRefExpr 0x7ff9e882f430 <col:15> 'float' lvalue ParmVar 0x7ff9e882cb68 'f2' 'float'
+`-FunctionDecl 0x7ff9e882f6a0 <line:167:1, line:189:1> line:168:1 fn4 'void (enum E)'
+  |-ParmVarDecl 0x7ff9e882f618 <col:6, col:13> col:13 used e 'enum E':'enum E'
+  `-CompoundStmt 0x7ff9e8830ed8 <line:169:1, line:189:1>
+    |-BinaryOperator 0x7ff9e882f840 <line:170:3, col:12> '_Bool' '='
+    | |-DeclRefExpr 0x7ff9e882f740 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+    | `-ImplicitCastExpr 0x7ff9e882f828 <col:7, col:12> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7ff9e882f800 <col:7, col:12> 'int' '=='
+    |     |-ImplicitCastExpr 0x7ff9e882f7d0 <col:7> 'unsigned int' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7ff9e882f7b8 <col:7> 'enum E':'enum E' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7ff9e882f768 <col:7> 'enum E':'enum E' lvalue ParmVar 0x7ff9e882f618 'e' 'enum E':'enum E'
+    |     `-ImplicitCastExpr 0x7ff9e882f7e8 <col:12> 'unsigned int' <IntegralCast>
+    |       `-DeclRefExpr 0x7ff9e882f790 <col:12> 'int' EnumConstant 0x7ff9e8825a00 'A' 'int'
+    |-BinaryOperator 0x7ff9e882f9a8 <line:171:3, col:19> '_Bool' '='
+    | |-DeclRefExpr 0x7ff9e882f868 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+    | `-ImplicitCastExpr 0x7ff9e882f990 <col:7, col:19> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7ff9e882f968 <col:7, col:19> 'int' '=='
+    |     |-ImplicitCastExpr 0x7ff9e882f938 <col:7> 'unsigned int' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7ff9e882f920 <col:7> 'enum E':'enum E' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7ff9e882f890 <col:7> 'enum E':'enum E' lvalue ParmVar 0x7ff9e882f618 'e' 'enum E':'enum E'
+    |     `-ImplicitCastExpr 0x7ff9e882f950 <col:12, col:19> 'unsigned int' <IntegralCast>
+    |       `-CallExpr 0x7ff9e882f8f8 <col:12, col:19> 'enum E':'enum E'
+    |         `-ImplicitCastExpr 0x7ff9e882f8e0 <col:12> 'enum E (*)(void)' <FunctionToPointerDecay>
+    |           `-DeclRefExpr 0x7ff9e882f8b8 <col:12> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+    |-BinaryOperator 0x7ff9e882fb00 <line:172:3, col:19> '_Bool' '='
+    | |-DeclRefExpr 0x7ff9e882f9d0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+    | `-ImplicitCastExpr 0x7ff9e882fae8 <col:7, col:19> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7ff9e882fac0 <col:7, col:19> 'int' '=='
+    |     |-ImplicitCastExpr 0x7ff9e882fa90 <col:7, col:14> 'unsigned int' <IntegralCast>
+    |     | `-CallExpr 0x7ff9e882fa40 <col:7, col:14> 'enum E':'enum E'
+    |     |   `-ImplicitCastExpr 0x7ff9e882fa28 <col:7> 'enum E (*)(void)' <FunctionToPointerDecay>
+    |     |     `-DeclRefExpr 0x7ff9e882fa00 <col:7> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+    |     `-ImplicitCastExpr 0x7ff9e882faa8 <col:19> 'unsigned int' <IntegralCast>
+    |       `-DeclRefExpr 0x7ff9e882fa68 <col:19> 'int' EnumConstant 0x7ff9e8825a48 'B' 'int'
+    |-BinaryOperator 0x7ff9e882fc90 <line:173:3, col:26> '_Bool' '='
+    | |-DeclRefExpr 0x7ff9e882fb28 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+    | `-ImplicitCastExpr 0x7ff9e882fc78 <col:7, col:26> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7ff9e882fc50 <col:7, col:26> 'int' '=='
+    |     |-ImplicitCastExpr 0x7ff9e882fc20 <col:7, col:14> 'unsigned int' <IntegralCast>
+    |     | `-CallExpr 0x7ff9e882fb90 <col:7, col:14> 'enum E':'enum E'
+    |     |   `-ImplicitCastExpr 0x7ff9e882fb78 <col:7> 'enum E (*)(void)' <FunctionToPointerDecay>
+    |     |     `-DeclRefExpr 0x7ff9e882fb50 <col:7> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+    |     `-ImplicitCastExpr 0x7ff9e882fc38 <col:19, col:26> 'unsigned int' <IntegralCast>
+    |       `-CallExpr 0x7ff9e882fbf8 <col:19, col:26> 'enum E':'enum E'
+    |         `-ImplicitCastExpr 0x7ff9e882fbe0 <col:19> 'enum E (*)(void)' <FunctionToPointerDecay>
+    |           `-DeclRefExpr 0x7ff9e882fbb8 <col:19> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+    |-BinaryOperator 0x7ff9e882fda8 <line:175:3, col:13> '_Bool' '='
+    | |-DeclRefExpr 0x7ff9e882fcb8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+    | `-ImplicitCastExpr 0x7ff9e882fd90 <col:7, col:13> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7ff9e882fd68 <col:7, col:13> 'int' '=='
+    |     |-UnaryOperator 0x7ff9e882fd20 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7ff9e882fd08 <col:8> 'enum E':'enum E' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7ff9e882fce0 <col:8> 'enum E':'enum E' lvalue ParmVar 0x7ff9e882f618 'e' 'enum E':'enum E'
+    |     `-DeclRefExpr 0x7ff9e882fd40 <col:13> 'int' EnumConstant 0x7ff9e8825a48 'B' 'int'
+    |-BinaryOperator 0x7ff9e882ff30 <line:176:3, col:20> '_Bool' '='
+    | |-DeclRefExpr 0x7ff9e882fdd0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+    | `-ImplicitCastExpr 0x7ff9e882ff18 <col:7, col:20> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7ff9e882fef0 <col:7, col:20> 'int' '=='
+    |     |-ImplicitCastExpr 0x7ff9e882fed8 <col:7, col:8> 'unsigned int' <IntegralCast>
+    |     | `-UnaryOperator 0x7ff9e882fe38 <col:7, col:8> 'int' prefix '!'
+    |     |   `-ImplicitCastExpr 0x7ff9e882fe20 <col:8> 'enum E':'enum E' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7ff9e882fdf8 <col:8> 'enum E':'enum E' lvalue ParmVar 0x7ff9e882f618 'e' 'enum E':'enum E'
+    |     `-ImplicitCastExpr 0x7ff9e882fec0 <col:13, col:20> 'unsigned int' <IntegralCast>
+    |       `-CallExpr 0x7ff9e882fe98 <col:13, col:20> 'enum E':'enum E'
+    |         `-ImplicitCastExpr 0x7ff9e882fe80 <col:13> 'enum E (*)(void)' <FunctionToPointerDecay>
+    |           `-DeclRefExpr 0x7ff9e882fe58 <col:13> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+    |-BinaryOperator 0x7ff9e8830070 <line:177:3, col:20> '_Bool' '='
+    | |-DeclRefExpr 0x7ff9e882ff58 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+    | `-ImplicitCastExpr 0x7ff9e8830058 <col:7, col:20> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7ff9e8830030 <col:7, col:20> 'int' '=='
+    |     |-UnaryOperator 0x7ff9e882ffe8 <col:7, col:15> 'int' prefix '!'
+    |     | `-CallExpr 0x7ff9e882ffc0 <col:8, col:15> 'enum E':'enum E'
+    |     |   `-ImplicitCastExpr 0x7ff9e882ffa8 <col:8> 'enum E (*)(void)' <FunctionToPointerDecay>
+    |     |     `-DeclRefExpr 0x7ff9e882ff80 <col:8> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+    |     `-DeclRefExpr 0x7ff9e8830008 <col:20> 'int' EnumConstant 0x7ff9e8825a48 'B' 'int'
+    |-BinaryOperator 0x7ff9e8830220 <line:178:3, col:27> '_Bool' '='
+    | |-DeclRefExpr 0x7ff9e8830098 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+    | `-ImplicitCastExpr 0x7ff9e8830208 <col:7, col:27> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7ff9e88301e0 <col:7, col:27> 'int' '=='
+    |     |-ImplicitCastExpr 0x7ff9e88301c8 <col:7, col:15> 'unsigned int' <IntegralCast>
+    |     | `-UnaryOperator 0x7ff9e8830128 <col:7, col:15> 'int' prefix '!'
+    |     |   `-CallExpr 0x7ff9e8830100 <col:8, col:15> 'enum E':'enum E'
+    |     |     `-ImplicitCastExpr 0x7ff9e88300e8 <col:8> 'enum E (*)(void)' <FunctionToPointerDecay>
+    |     |       `-DeclRefExpr 0x7ff9e88300c0 <col:8> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+    |     `-ImplicitCastExpr 0x7ff9e88301b0 <col:20, col:27> 'unsigned int' <IntegralCast>
+    |       `-CallExpr 0x7ff9e8830188 <col:20, col:27> 'enum E':'enum E'
+    |         `-ImplicitCastExpr 0x7ff9e8830170 <col:20> 'enum E (*)(void)' <FunctionToPointerDecay>
+    |           `-DeclRefExpr 0x7ff9e8830148 <col:20> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+    |-BinaryOperator 0x7ff9e8830388 <line:180:3, col:15> '_Bool' '='
+    | |-DeclRefExpr 0x7ff9e8830248 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+    | `-ImplicitCastExpr 0x7ff9e8830370 <col:7, col:15> '_Bool' <IntegralToBoolean>
+    |   `-UnaryOperator 0x7ff9e8830350 <col:7, col:15> 'int' prefix '!'
+    |     `-ParenExpr 0x7ff9e8830330 <col:8, col:15> 'int'
+    |       `-BinaryOperator 0x7ff9e8830308 <col:9, col:14> 'int' '=='
+    |         |-ImplicitCastExpr 0x7ff9e88302d8 <col:9> 'unsigned int' <IntegralCast>
+    |         | `-ImplicitCastExpr 0x7ff9e88302c0 <col:9> 'enum E':'enum E' <LValueToRValue>
+    |         |   `-DeclRefExpr 0x7ff9e8830270 <col:9> 'enum E':'enum E' lvalue ParmVar 0x7ff9e882f618 'e' 'enum E':'enum E'
+    |         `-ImplicitCastExpr 0x7ff9e88302f0 <col:14> 'unsigned int' <IntegralCast>
+    |           `-DeclRefExpr 0x7ff9e8830298 <col:14> 'int' EnumConstant 0x7ff9e8825a48 'B' 'int'
+    |-BinaryOperator 0x7ff9e8830530 <line:181:3, col:22> '_Bool' '='
+    | |-DeclRefExpr 0x7ff9e88303b0 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+    | `-ImplicitCastExpr 0x7ff9e8830518 <col:7, col:22> '_Bool' <IntegralToBoolean>
+    |   `-UnaryOperator 0x7ff9e88304f8 <col:7, col:22> 'int' prefix '!'
+    |     `-ParenExpr 0x7ff9e88304d8 <col:8, col:22> 'int'
+    |       `-BinaryOperator 0x7ff9e88304b0 <col:9, col:21> 'int' '=='
+    |         |-ImplicitCastExpr 0x7ff9e8830480 <col:9> 'unsigned int' <IntegralCast>
+    |         | `-ImplicitCastExpr 0x7ff9e8830468 <col:9> 'enum E':'enum E' <LValueToRValue>
+    |         |   `-DeclRefExpr 0x7ff9e88303d8 <col:9> 'enum E':'enum E' lvalue ParmVar 0x7ff9e882f618 'e' 'enum E':'enum E'
+    |         `-ImplicitCastExpr 0x7ff9e8830498 <col:14, col:21> 'unsigned int' <IntegralCast>
+    |           `-CallExpr 0x7ff9e8830440 <col:14, col:21> 'enum E':'enum E'
+    |             `-ImplicitCastExpr 0x7ff9e8830428 <col:14> 'enum E (*)(void)' <FunctionToPointerDecay>
+    |               `-DeclRefExpr 0x7ff9e8830400 <col:14> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+    |-BinaryOperator 0x7ff9e88306c0 <line:182:3, col:22> '_Bool' '='
+    | |-DeclRefExpr 0x7ff9e8830558 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+    | `-ImplicitCastExpr 0x7ff9e88306a8 <col:7, col:22> '_Bool' <IntegralToBoolean>
+    |   `-UnaryOperator 0x7ff9e8830688 <col:7, col:22> 'int' prefix '!'
+    |     `-ParenExpr 0x7ff9e8830668 <col:8, col:22> 'int'
+    |       `-BinaryOperator 0x7ff9e8830640 <col:9, col:21> 'int' '=='
+    |         |-ImplicitCastExpr 0x7ff9e8830610 <col:9, col:16> 'unsigned int' <IntegralCast>
+    |         | `-CallExpr 0x7ff9e88305c0 <col:9, col:16> 'enum E':'enum E'
+    |         |   `-ImplicitCastExpr 0x7ff9e88305a8 <col:9> 'enum E (*)(void)' <FunctionToPointerDecay>
+    |         |     `-DeclRefExpr 0x7ff9e8830580 <col:9> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+    |         `-ImplicitCastExpr 0x7ff9e8830628 <col:21> 'unsigned int' <IntegralCast>
+    |           `-DeclRefExpr 0x7ff9e88305e8 <col:21> 'int' EnumConstant 0x7ff9e8825a48 'B' 'int'
+    |-BinaryOperator 0x7ff9e8830890 <line:183:3, col:29> '_Bool' '='
+    | |-DeclRefExpr 0x7ff9e88306e8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+    | `-ImplicitCastExpr 0x7ff9e8830878 <col:7, col:29> '_Bool' <IntegralToBoolean>
+    |   `-UnaryOperator 0x7ff9e8830858 <col:7, col:29> 'int' prefix '!'
+    |     `-ParenExpr 0x7ff9e8830838 <col:8, col:29> 'int'
+    |       `-BinaryOperator 0x7ff9e8830810 <col:9, col:28> 'int' '=='
+    |         |-ImplicitCastExpr 0x7ff9e88307e0 <col:9, col:16> 'unsigned int' <IntegralCast>
+    |         | `-CallExpr 0x7ff9e8830750 <col:9, col:16> 'enum E':'enum E'
+    |         |   `-ImplicitCastExpr 0x7ff9e8830738 <col:9> 'enum E (*)(void)' <FunctionToPointerDecay>
+    |         |     `-DeclRefExpr 0x7ff9e8830710 <col:9> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+    |         `-ImplicitCastExpr 0x7ff9e88307f8 <col:21, col:28> 'unsigned int' <IntegralCast>
+    |           `-CallExpr 0x7ff9e88307b8 <col:21, col:28> 'enum E':'enum E'
+    |             `-ImplicitCastExpr 0x7ff9e88307a0 <col:21> 'enum E (*)(void)' <FunctionToPointerDecay>
+    |               `-DeclRefExpr 0x7ff9e8830778 <col:21> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+    |-BinaryOperator 0x7ff9e88309c8 <line:185:3, col:15> '_Bool' '='
+    | |-DeclRefExpr 0x7ff9e88308b8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+    | `-ImplicitCastExpr 0x7ff9e88309b0 <col:7, col:15> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7ff9e8830988 <col:7, col:15> 'int' '=='
+    |     |-ParenExpr 0x7ff9e8830940 <col:7, col:10> 'int'
+    |     | `-UnaryOperator 0x7ff9e8830920 <col:8, col:9> 'int' prefix '!'
+    |     |   `-ImplicitCastExpr 0x7ff9e8830908 <col:9> 'enum E':'enum E' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7ff9e88308e0 <col:9> 'enum E':'enum E' lvalue ParmVar 0x7ff9e882f618 'e' 'enum E':'enum E'
+    |     `-DeclRefExpr 0x7ff9e8830960 <col:15> 'int' EnumConstant 0x7ff9e8825a48 'B' 'int'
+    |-BinaryOperator 0x7ff9e8830b80 <line:186:3, col:22> '_Bool' '='
+    | |-DeclRefExpr 0x7ff9e8830a00 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+    | `-ImplicitCastExpr 0x7ff9e8830b68 <col:7, col:22> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7ff9e8830b40 <col:7, col:22> 'int' '=='
+    |     |-ImplicitCastExpr 0x7ff9e8830b28 <col:7, col:10> 'unsigned int' <IntegralCast>
+    |     | `-ParenExpr 0x7ff9e8830a88 <col:7, col:10> 'int'
+    |     |   `-UnaryOperator 0x7ff9e8830a68 <col:8, col:9> 'int' prefix '!'
+    |     |     `-ImplicitCastExpr 0x7ff9e8830a50 <col:9> 'enum E':'enum E' <LValueToRValue>
+    |     |       `-DeclRefExpr 0x7ff9e8830a28 <col:9> 'enum E':'enum E' lvalue ParmVar 0x7ff9e882f618 'e' 'enum E':'enum E'
+    |     `-ImplicitCastExpr 0x7ff9e8830b10 <col:15, col:22> 'unsigned int' <IntegralCast>
+    |       `-CallExpr 0x7ff9e8830ae8 <col:15, col:22> 'enum E':'enum E'
+    |         `-ImplicitCastExpr 0x7ff9e8830ad0 <col:15> 'enum E (*)(void)' <FunctionToPointerDecay>
+    |           `-DeclRefExpr 0x7ff9e8830aa8 <col:15> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+    |-BinaryOperator 0x7ff9e8830ce0 <line:187:3, col:22> '_Bool' '='
+    | |-DeclRefExpr 0x7ff9e8830ba8 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+    | `-ImplicitCastExpr 0x7ff9e8830cc8 <col:7, col:22> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7ff9e8830ca0 <col:7, col:22> 'int' '=='
+    |     |-ParenExpr 0x7ff9e8830c58 <col:7, col:17> 'int'
+    |     | `-UnaryOperator 0x7ff9e8830c38 <col:8, col:16> 'int' prefix '!'
+    |     |   `-CallExpr 0x7ff9e8830c10 <col:9, col:16> 'enum E':'enum E'
+    |     |     `-ImplicitCastExpr 0x7ff9e8830bf8 <col:9> 'enum E (*)(void)' <FunctionToPointerDecay>
+    |     |       `-DeclRefExpr 0x7ff9e8830bd0 <col:9> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+    |     `-DeclRefExpr 0x7ff9e8830c78 <col:22> 'int' EnumConstant 0x7ff9e8825a48 'B' 'int'
+    `-BinaryOperator 0x7ff9e8830eb0 <line:188:3, col:29> '_Bool' '='
+      |-DeclRefExpr 0x7ff9e8830d08 <col:3> '_Bool' lvalue Var 0x7ff9e8825aa0 'b' '_Bool'
+      `-ImplicitCastExpr 0x7ff9e8830e98 <col:7, col:29> '_Bool' <IntegralToBoolean>
+        `-BinaryOperator 0x7ff9e8830e70 <col:7, col:29> 'int' '=='
+          |-ImplicitCastExpr 0x7ff9e8830e58 <col:7, col:17> 'unsigned int' <IntegralCast>
+          | `-ParenExpr 0x7ff9e8830db8 <col:7, col:17> 'int'
+          |   `-UnaryOperator 0x7ff9e8830d98 <col:8, col:16> 'int' prefix '!'
+          |     `-CallExpr 0x7ff9e8830d70 <col:9, col:16> 'enum E':'enum E'
+          |       `-ImplicitCastExpr 0x7ff9e8830d58 <col:9> 'enum E (*)(void)' <FunctionToPointerDecay>
+          |         `-DeclRefExpr 0x7ff9e8830d30 <col:9> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'
+          `-ImplicitCastExpr 0x7ff9e8830e40 <col:22, col:29> 'unsigned int' <IntegralCast>
+            `-CallExpr 0x7ff9e8830e18 <col:22, col:29> 'enum E':'enum E'
+              `-ImplicitCastExpr 0x7ff9e8830e00 <col:22> 'enum E (*)(void)' <FunctionToPointerDecay>
+                `-DeclRefExpr 0x7ff9e8830dd8 <col:22> 'enum E (void)' Function 0x7ff9e8825c70 'foo_e' 'enum E (void)'

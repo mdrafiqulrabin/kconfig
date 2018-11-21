@@ -1,0 +1,24 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: var, [], [], []
+        TypeDecl: var, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      Pragma: omp parallel
+      If: 
+        BinaryOp: !=
+          ID: var
+          Constant: int, 1
+        FuncCall: 
+          ID: __builtin_abort
+      Pragma: omp task shared(var)
+      Assignment: =
+        ID: var
+        Constant: int, 2
+      Return: 
+        Constant: int, 0

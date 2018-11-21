@@ -1,0 +1,96 @@
+FileAST: 
+  Decl: a, ['volatile'], [], []
+    TypeDecl: a, ['volatile']
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: buf, [], [], []
+        ArrayDecl: []
+          TypeDecl: buf, []
+            IdentifierType: ['char']
+          Constant: int, 64
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: __builtin_sprintf
+            ExprList: 
+              ID: buf
+              Constant: string, "%#hho"
+              ID: a
+          Constant: int, 1
+        FuncCall: 
+          ID: __builtin_abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: __builtin_sprintf
+            ExprList: 
+              ID: buf
+              Constant: string, "%#hhx"
+              ID: a
+          Constant: int, 1
+        FuncCall: 
+          ID: __builtin_abort
+      Assignment: =
+        ID: a
+        Constant: int, 1
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: __builtin_sprintf
+            ExprList: 
+              ID: buf
+              Constant: string, "%#hho"
+              ID: a
+          Constant: int, 2
+        FuncCall: 
+          ID: __builtin_abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: __builtin_sprintf
+            ExprList: 
+              ID: buf
+              Constant: string, "%#hhx"
+              ID: a
+          Constant: int, 3
+        FuncCall: 
+          ID: __builtin_abort
+      Assignment: =
+        ID: a
+        Constant: int, 127
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: __builtin_sprintf
+            ExprList: 
+              ID: buf
+              Constant: string, "%#hho"
+              ID: a
+          Constant: int, 4
+        FuncCall: 
+          ID: __builtin_abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: __builtin_sprintf
+            ExprList: 
+              ID: buf
+              Constant: string, "%#hhx"
+              ID: a
+          Constant: int, 4
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,36 @@
+c_files/pr18903.c:9:3: warning: expression result unused [-Wunused-value]
+  &&ff;
+  ^~~~
+1 warning generated.
+TranslationUnitDecl 0x7fb47e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb47e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb47e826740 '__int128'
+|-TypedefDecl 0x7fb47e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb47e826760 'unsigned __int128'
+|-TypedefDecl 0x7fb47e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb47e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb47e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb47e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb47e826dc0 'char *'
+|   `-BuiltinType 0x7fb47e826560 'char'
+|-TypedefDecl 0x7fb47e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb47e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb47e826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb47e826e58 '__va_list_tag'
+`-FunctionDecl 0x7fb47f025ad0 <c_files/pr18903.c:7:1, line:15:1> line:7:6 g 'void (int, int)'
+  |-ParmVarDecl 0x7fb47e827138 <col:9, col:13> col:13 used s 'int'
+  |-ParmVarDecl 0x7fb47f025a00 <col:16, col:20> col:20 used f 'int'
+  `-CompoundStmt 0x7fb47f025de0 <line:8:1, line:15:1>
+    |-AddrLabelExpr 0x7fb47f025c00 <line:9:3, col:5> 'void *' ff 0x7fb47f025bb8
+    |-BinaryOperator 0x7fb47f025c88 <line:10:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7fb47f025c20 <col:3> 'int' lvalue ParmVar 0x7fb47e827138 's' 'int'
+    | `-ImplicitCastExpr 0x7fb47f025c70 <col:7> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb47f025c48 <col:7> 'int' lvalue ParmVar 0x7fb47f025a00 'f' 'int'
+    |-LabelStmt 0x7fb47f025d10 <line:11:3, line:12:8> 'ff'
+    | `-GotoStmt 0x7fb47f025cf8 <col:3, col:8> 'end' 0x7fb47f025cb0
+    |-BinaryOperator 0x7fb47f025d90 <line:13:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7fb47f025d28 <col:3> 'int' lvalue ParmVar 0x7fb47f025a00 'f' 'int'
+    | `-ImplicitCastExpr 0x7fb47f025d78 <col:7> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb47f025d50 <col:7> 'int' lvalue ParmVar 0x7fb47e827138 's' 'int'
+    `-LabelStmt 0x7fb47f025dc8 <line:14:3, col:7> 'end'
+      `-NullStmt 0x7fb47f025db8 <col:7>

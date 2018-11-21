@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fa44a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa44a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa44a826740 '__int128'
+|-TypedefDecl 0x7fa44a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa44a826760 'unsigned __int128'
+|-TypedefDecl 0x7fa44a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa44a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa44a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa44a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa44a826dc0 'char *'
+|   `-BuiltinType 0x7fa44a826560 'char'
+|-TypedefDecl 0x7fa44a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa44a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa44a826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa44a826e58 '__va_list_tag'
+|-FunctionDecl 0x7fa44b025a00 <c_files/pr80104.c:5:1, line:9:1> line:6:1 a 'float (_Complex float)'
+| |-ParmVarDecl 0x7fa44a827130 <col:4, col:19> col:19 used b '_Complex float'
+| `-CompoundStmt 0x7fa44b025bc0 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fa44b025ba8 <line:8:3, col:12>
+|     `-ImplicitCastExpr 0x7fa44b025b90 <col:10, col:12> 'float' <FloatingComplexToReal>
+|       `-ImplicitCastExpr 0x7fa44b025b78 <col:10, col:12> '_Complex float' <LValueToRValue>
+|         `-UnaryOperator 0x7fa44b025b58 <col:10, col:12> '_Complex float' lvalue prefix '*'
+|           `-UnaryOperator 0x7fa44b025b38 <col:11, col:12> '_Complex float *' prefix '&'
+|             `-DeclRefExpr 0x7fa44b025ae0 <col:12> '_Complex float' lvalue ParmVar 0x7fa44a827130 'b' '_Complex float'
+`-FunctionDecl 0x7fa44b025c80 <line:11:1, line:15:1> line:12:1 c 'float (_Complex float)'
+  |-ParmVarDecl 0x7fa44b025bf0 <col:4, col:19> col:19 used b '_Complex float'
+  `-CompoundStmt 0x7fa44b025e18 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7fa44b025e00 <line:14:3, col:16>
+      `-ImplicitCastExpr 0x7fa44b025de8 <col:10, col:16> 'float' <FloatingComplexToReal>
+        `-ImplicitCastExpr 0x7fa44b025dd0 <col:10, col:16> '_Complex float' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fa44b025da8 <col:10, col:16> '_Complex float' lvalue
+            |-ParenExpr 0x7fa44b025d68 <col:10, col:13> '_Complex float *'
+            | `-UnaryOperator 0x7fa44b025d48 <col:11, col:12> '_Complex float *' prefix '&'
+            |   `-DeclRefExpr 0x7fa44b025d20 <col:12> '_Complex float' lvalue ParmVar 0x7fa44b025bf0 'b' '_Complex float'
+            `-IntegerLiteral 0x7fa44b025d88 <col:15> 'int' 0

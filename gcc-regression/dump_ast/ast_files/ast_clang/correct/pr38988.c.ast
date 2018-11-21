@@ -1,0 +1,68 @@
+TranslationUnitDecl 0x7fded80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fded8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fded8026740 '__int128'
+|-TypedefDecl 0x7fded8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fded8026760 'unsigned __int128'
+|-TypedefDecl 0x7fded8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fded8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fded8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fded8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fded8026dc0 'char *'
+|   `-BuiltinType 0x7fded8026560 'char'
+|-TypedefDecl 0x7fded80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fded8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fded8026ee0 'struct __va_list_tag'
+|     `-Record 0x7fded8026e58 '__va_list_tag'
+|-TypedefDecl 0x7fded8027138 <c_files/pr38988.c:6:15, col:37> col:37 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fded8026680 'unsigned long'
+|-TypedefDecl 0x7fded8825ae8 <line:7:1, col:31> col:16 referenced func_ptr 'void (*)(void)'
+| `-PointerType 0x7fded8825a90 'void (*)(void)'
+|   `-ParenType 0x7fded8825a30 'void (void)' sugar
+|     `-FunctionProtoType 0x7fded8825a00 'void (void)' cdecl
+|       `-BuiltinType 0x7fded8026520 'void'
+|-VarDecl 0x7fded8825c18 <line:9:1, col:54> col:17 used __DTOR_LIST__ 'func_ptr [1]' static cinit
+| `-InitListExpr 0x7fded8825dc8 <col:36, col:54> 'func_ptr [1]'
+|   `-CStyleCastExpr 0x7fded8825d58 <col:38, col:52> 'func_ptr':'void (*)(void)' <IntegralToPointer>
+|     `-ParenExpr 0x7fded8825d38 <col:49, col:52> 'int'
+|       `-UnaryOperator 0x7fded8825cd8 <col:50, col:51> 'int' prefix '-'
+|         `-IntegerLiteral 0x7fded8825cb8 <col:51> 'int' 1
+`-FunctionDecl 0x7fded8825ea0 <line:11:1, line:24:1> line:12:1 __do_global_dtors_aux 'void (void)'
+  `-CompoundStmt 0x7fded8826670 <line:13:1, line:24:1>
+    |-DeclStmt 0x7fded8826028 <line:14:3, col:33>
+    | `-VarDecl 0x7fded8825fb8 parent 0x7fded80264d0 <col:3, col:32> col:19 used __DTOR_END__ 'func_ptr []' extern
+    |-DeclStmt 0x7fded8826108 <line:15:3, col:22>
+    | `-VarDecl 0x7fded8826070 <col:3, col:21> col:10 used dtor_idx 'size_t':'unsigned long' cinit
+    |   `-ImplicitCastExpr 0x7fded88260f0 <col:21> 'size_t':'unsigned long' <IntegralCast>
+    |     `-IntegerLiteral 0x7fded88260d0 <col:21> 'int' 0
+    |-DeclStmt 0x7fded8826308 <line:16:3, col:58>
+    | `-VarDecl 0x7fded8826130 <col:3, col:57> col:16 used max_idx 'const size_t':'const unsigned long' cinit
+    |   `-ImplicitCastExpr 0x7fded88262f0 <col:26, col:57> 'size_t':'unsigned long' <IntegralCast>
+    |     `-BinaryOperator 0x7fded88262c8 <col:26, col:57> 'long' '-'
+    |       |-BinaryOperator 0x7fded8826268 <col:26, col:41> 'long' '-'
+    |       | |-ImplicitCastExpr 0x7fded8826238 <col:26> 'func_ptr *' <ArrayToPointerDecay>
+    |       | | `-DeclRefExpr 0x7fded8826190 <col:26> 'func_ptr []' lvalue Var 0x7fded8825fb8 '__DTOR_END__' 'func_ptr []'
+    |       | `-ImplicitCastExpr 0x7fded8826250 <col:41> 'func_ptr *' <ArrayToPointerDecay>
+    |       |   `-DeclRefExpr 0x7fded88261b8 <col:41> 'func_ptr [1]' lvalue Var 0x7fded8825c18 '__DTOR_LIST__' 'func_ptr [1]'
+    |       `-ImplicitCastExpr 0x7fded88262b0 <col:57> 'long' <IntegralCast>
+    |         `-IntegerLiteral 0x7fded8826290 <col:57> 'int' 1
+    |-DeclStmt 0x7fded8826390 <line:17:3, col:13>
+    | `-VarDecl 0x7fded8826330 <col:3, col:12> col:12 used f 'func_ptr':'void (*)(void)'
+    `-WhileStmt 0x7fded8826650 <line:19:3, line:23:5>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fded8826428 <line:19:10, col:21> 'int' '<'
+      | |-ImplicitCastExpr 0x7fded88263f8 <col:10> 'size_t':'unsigned long' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fded88263a8 <col:10> 'size_t':'unsigned long' lvalue Var 0x7fded8826070 'dtor_idx' 'size_t':'unsigned long'
+      | `-ImplicitCastExpr 0x7fded8826410 <col:21> 'size_t':'unsigned long' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fded88263d0 <col:21> 'const size_t':'const unsigned long' lvalue Var 0x7fded8826130 'max_idx' 'const size_t':'const unsigned long'
+      `-CompoundStmt 0x7fded8826628 <line:20:5, line:23:5>
+        |-BinaryOperator 0x7fded8826598 <line:21:7, col:35> 'func_ptr':'void (*)(void)' '='
+        | |-DeclRefExpr 0x7fded88264a8 <col:7> 'func_ptr':'void (*)(void)' lvalue Var 0x7fded8826330 'f' 'func_ptr':'void (*)(void)'
+        | `-ImplicitCastExpr 0x7fded8826580 <col:11, col:35> 'func_ptr':'void (*)(void)' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7fded8826558 <col:11, col:35> 'func_ptr':'void (*)(void)' lvalue
+        |     |-ImplicitCastExpr 0x7fded8826540 <col:11> 'func_ptr *' <ArrayToPointerDecay>
+        |     | `-DeclRefExpr 0x7fded88264d0 <col:11> 'func_ptr [1]' lvalue Var 0x7fded8825c18 '__DTOR_LIST__' 'func_ptr [1]'
+        |     `-UnaryOperator 0x7fded8826520 <col:25, col:27> 'size_t':'unsigned long' prefix '++'
+        |       `-DeclRefExpr 0x7fded88264f8 <col:27> 'size_t':'unsigned long' lvalue Var 0x7fded8826070 'dtor_idx' 'size_t':'unsigned long'
+        `-CallExpr 0x7fded8826600 <line:22:7, col:10> 'void'
+          `-ImplicitCastExpr 0x7fded88265e8 <col:7> 'func_ptr':'void (*)(void)' <LValueToRValue>
+            `-DeclRefExpr 0x7fded88265c0 <col:7> 'func_ptr':'void (*)(void)' lvalue Var 0x7fded8826330 'f' 'func_ptr':'void (*)(void)'

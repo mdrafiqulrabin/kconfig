@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S1
+      Decl: f1, [], [], []
+        TypeDecl: f1, []
+          IdentifierType: ['int']
+        Constant: int, 1
+  Decl: b, ['volatile'], [], []
+    TypeDecl: b, ['volatile']
+      Struct: S1
+    InitList: 
+      Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['char']
+        StructRef: .
+          ID: b
+          ID: f1
+      Assignment: =
+        StructRef: .
+          ID: b
+          ID: f1
+        Constant: int, 1
+      If: 
+        BinaryOp: ||
+          BinaryOp: >
+            StructRef: .
+              ID: b
+              ID: f1
+            UnaryOp: -
+              Constant: int, 1
+          ID: c
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

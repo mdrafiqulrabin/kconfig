@@ -1,0 +1,60 @@
+FileAST: 
+  Decl: zend_block_interruptions, [], [], []
+    PtrDecl: []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: zend_block_interruptions, []
+          IdentifierType: ['void']
+  FuncDef: 
+    Decl: _zend_mm_alloc_int, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: heap, [], [], []
+            PtrDecl: []
+              TypeDecl: heap, []
+                IdentifierType: ['int']
+          Decl: size, [], [], []
+            TypeDecl: size, []
+              IdentifierType: ['long', 'int']
+        PtrDecl: []
+          TypeDecl: _zend_mm_alloc_int, []
+            IdentifierType: ['int']
+    Compound: 
+      Decl: best_fit, [], [], []
+        PtrDecl: []
+          TypeDecl: best_fit, []
+            IdentifierType: ['int']
+      Decl: true_size, [], [], []
+        TypeDecl: true_size, []
+          IdentifierType: ['long', 'int']
+        TernaryOp: 
+          BinaryOp: <
+            ID: size
+            Constant: int, 15
+          Constant: int, 32
+          ID: size
+      If: 
+        ID: zend_block_interruptions
+        FuncCall: 
+          ID: zend_block_interruptions
+      If: 
+        FuncCall: 
+          ID: __builtin_expect
+          ExprList: 
+            BinaryOp: <
+              ID: true_size
+              Constant: int, 543
+            Constant: int, 1
+        Assignment: =
+          ID: best_fit
+          BinaryOp: +
+            ID: heap
+            Constant: int, 2
+        Assignment: =
+          ID: best_fit
+          ID: heap
+      Return: 
+        ID: best_fit

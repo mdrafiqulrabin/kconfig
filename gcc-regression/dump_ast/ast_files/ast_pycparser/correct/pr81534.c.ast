@@ -1,0 +1,26 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Struct: None
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['short']
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['long']
+    InitList: 
+  FuncDef: 
+    Decl: d, [], [], []
+      FuncDecl: 
+        TypeDecl: d, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __atomic_fetch_add
+        ExprList: 
+          UnaryOp: &
+            StructRef: .
+              ID: a
+              ID: b
+          Constant: int, 0
+          Constant: int, 5

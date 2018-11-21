@@ -1,0 +1,75 @@
+c_files/pr24306.c:5:10: fatal error: 'sse-check.h' file not found
+#include "sse-check.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7f98320264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9832026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9832026740 '__int128'
+|-TypedefDecl 0x7f9832026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9832026760 'unsigned __int128'
+|-TypedefDecl 0x7f9832026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9832026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9832026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9832026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9832026dc0 'char *'
+|   `-BuiltinType 0x7f9832026560 'char'
+|-TypedefDecl 0x7f98320270c8 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9832027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9832026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9832026e58 '__va_list_tag'
+|-FunctionDecl 0x7f9832826a30 <c_files/pr24306.c:7:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9832826ac8 prev 0x7f9832826a30 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-TypedefDecl 0x7f9832826bb8 <line:8:1, col:48> col:48 referenced foo_t '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7f9832826b80 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7f98320265c0 'int'
+|-RecordDecl 0x7f9832826c10 <line:10:1, line:13:1> line:10:8 struct s definition
+| `-FieldDecl 0x7f9832826d98 <line:12:3, col:12> col:9 f 'foo_t [0]'
+|-VarDecl 0x7f9832826e30 <line:10:1, line:13:3> col:3 used s1 'struct s':'struct s'
+|-FunctionDecl 0x7f9832826fc0 <line:15:1, line:16:44> col:1 used check 'void (int, ...)'
+| |-ParmVarDecl 0x7f9832826f00 <col:8, col:12> col:12 x 'int'
+| `-NoInlineAttr 0x7f9832827060 <col:35>
+|-FunctionDecl 0x7f9832827148 prev 0x7f9832826fc0 <line:17:1, line:29:1> line:18:1 used check 'void (int, ...)'
+| |-ParmVarDecl 0x7f98328270c0 <col:8, col:12> col:12 used x 'int'
+| |-CompoundStmt 0x7f9832827900 <line:19:1, line:29:1>
+| | |-DeclStmt 0x7f98328272a8 <line:20:3, col:8>
+| | | `-VarDecl 0x7f9832827248 <col:3, col:7> col:7 used y 'int'
+| | |-DeclStmt 0x7f9832827350 <line:21:3, col:23>
+| | | `-VarDecl 0x7f98328272f0 <col:3, col:21> col:21 used ap '__builtin_va_list':'struct __va_list_tag [1]'
+| | |-CallExpr 0x7f98328275e0 <line:23:3, col:28> 'void'
+| | | |-ImplicitCastExpr 0x7f98328275c8 <col:3> 'void (*)(struct __va_list_tag *, ...)' <BuiltinFnToFnPtr>
+| | | | `-DeclRefExpr 0x7f9832827520 <col:3> '<builtin fn type>' Function 0x7f98328273d8 '__builtin_va_start' 'void (struct __va_list_tag *, ...)'
+| | | |-ImplicitCastExpr 0x7f9832827618 <col:23> 'struct __va_list_tag *' <ArrayToPointerDecay>
+| | | | `-DeclRefExpr 0x7f9832827548 <col:23> '__builtin_va_list':'struct __va_list_tag [1]' lvalue Var 0x7f98328272f0 'ap' '__builtin_va_list':'struct __va_list_tag [1]'
+| | | `-DeclRefExpr 0x7f9832827570 <col:27> 'int' lvalue ParmVar 0x7f98328270c0 'x' 'int'
+| | |-VAArgExpr 0x7f98328276b8 <line:24:3, col:33> 'struct s':'struct s'
+| | | `-ImplicitCastExpr 0x7f98328276a0 <col:21> 'struct __va_list_tag *' <ArrayToPointerDecay>
+| | |   `-DeclRefExpr 0x7f9832827630 <col:21> '__builtin_va_list':'struct __va_list_tag [1]' lvalue Var 0x7f98328272f0 'ap' '__builtin_va_list':'struct __va_list_tag [1]'
+| | |-BinaryOperator 0x7f9832827788 <line:25:3, col:32> 'int' '='
+| | | |-DeclRefExpr 0x7f98328276e0 <col:3> 'int' lvalue Var 0x7f9832827248 'y' 'int'
+| | | `-VAArgExpr 0x7f9832827760 <col:7, col:32> 'int'
+| | |   `-ImplicitCastExpr 0x7f9832827748 <col:25> 'struct __va_list_tag *' <ArrayToPointerDecay>
+| | |     `-DeclRefExpr 0x7f9832827708 <col:25> '__builtin_va_list':'struct __va_list_tag [1]' lvalue Var 0x7f98328272f0 'ap' '__builtin_va_list':'struct __va_list_tag [1]'
+| | `-IfStmt 0x7f98328278c8 <line:27:3, line:28:12>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7f9832827810 <line:27:7, col:12> 'int' '!='
+| |   | |-ImplicitCastExpr 0x7f98328277f8 <col:7> 'int' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7f98328277b0 <col:7> 'int' lvalue Var 0x7f9832827248 'y' 'int'
+| |   | `-IntegerLiteral 0x7f98328277d8 <col:12> 'int' 7
+| |   |-CallExpr 0x7f98328278a0 <line:28:5, col:12> 'void'
+| |   | `-ImplicitCastExpr 0x7f9832827888 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   |   `-DeclRefExpr 0x7f9832827838 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9832826ac8 'abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7f9832827220 <line:16:35> Inherited
+|-FunctionDecl 0x7f98328273d8 <line:23:3> col:3 implicit used __builtin_va_start 'void (struct __va_list_tag *, ...)' extern
+| |-ParmVarDecl 0x7f9832827470 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+| `-NoThrowAttr 0x7f98328274d8 <col:3> Implicit
+`-FunctionDecl 0x7f9832829a00 <line:31:1, line:35:1> line:32:1 sse_test 'void (void)' static
+  `-CompoundStmt 0x7f9832829bc8 <line:33:1, line:35:1>
+    `-CallExpr 0x7f9832829b70 <line:34:3, col:18> 'void'
+      |-ImplicitCastExpr 0x7f9832829b58 <col:3> 'void (*)(int, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f9832829a98 <col:3> 'void (int, ...)' Function 0x7f9832827148 'check' 'void (int, ...)'
+      |-IntegerLiteral 0x7f9832829ac0 <col:10> 'int' 3
+      |-ImplicitCastExpr 0x7f9832829bb0 <col:13> 'struct s':'struct s' <LValueToRValue>
+      | `-DeclRefExpr 0x7f9832829ae0 <col:13> 'struct s':'struct s' lvalue Var 0x7f9832826e30 's1' 'struct s':'struct s'
+      `-IntegerLiteral 0x7f9832829b08 <col:17> 'int' 7

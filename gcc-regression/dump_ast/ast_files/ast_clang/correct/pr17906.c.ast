@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fd28f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd28f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd28f026740 '__int128'
+|-TypedefDecl 0x7fd28f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd28f026760 'unsigned __int128'
+|-TypedefDecl 0x7fd28f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd28f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd28f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd28f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd28f026dc0 'char *'
+|   `-BuiltinType 0x7fd28f026560 'char'
+|-TypedefDecl 0x7fd28f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd28f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd28f026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd28f026e58 '__va_list_tag'
+|-RecordDecl 0x7fd28f027120 <c_files/pr17906.c:1:1, col:24> col:8 struct usc_bigstack_t definition
+`-FunctionDecl 0x7fd28f825c60 <line:3:1, line:7:1> line:4:1 referenced usc_recressive_func 'void (int, int, struct usc_bigstack_t)'
+  |-ParmVarDecl 0x7fd28f825a00 <col:21, col:25> col:25 used cnt 'int'
+  |-ParmVarDecl 0x7fd28f825a78 <col:30, col:34> col:34 used max 'int'
+  |-ParmVarDecl 0x7fd28f825b30 <col:39, col:61> col:61 used bstack 'struct usc_bigstack_t':'struct usc_bigstack_t'
+  `-CompoundStmt 0x7fd28f825f30 <line:5:1, line:7:1>
+    `-CallExpr 0x7fd28f825ec0 <line:6:3, col:41> 'void'
+      |-ImplicitCastExpr 0x7fd28f825ea8 <col:3> 'void (*)(int, int, struct usc_bigstack_t)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd28f825d50 <col:3> 'void (int, int, struct usc_bigstack_t)' Function 0x7fd28f825c60 'usc_recressive_func' 'void (int, int, struct usc_bigstack_t)'
+      |-BinaryOperator 0x7fd28f825dd8 <col:23, col:27> 'int' '+'
+      | |-ImplicitCastExpr 0x7fd28f825dc0 <col:23> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd28f825d78 <col:23> 'int' lvalue ParmVar 0x7fd28f825a00 'cnt' 'int'
+      | `-IntegerLiteral 0x7fd28f825da0 <col:27> 'int' 1
+      |-ImplicitCastExpr 0x7fd28f825f00 <col:30> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fd28f825e00 <col:30> 'int' lvalue ParmVar 0x7fd28f825a78 'max' 'int'
+      `-ImplicitCastExpr 0x7fd28f825f18 <col:35> 'struct usc_bigstack_t':'struct usc_bigstack_t' <LValueToRValue>
+        `-DeclRefExpr 0x7fd28f825e28 <col:35> 'struct usc_bigstack_t':'struct usc_bigstack_t' lvalue ParmVar 0x7fd28f825b30 'bstack' 'struct usc_bigstack_t':'struct usc_bigstack_t'

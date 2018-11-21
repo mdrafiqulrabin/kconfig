@@ -1,0 +1,946 @@
+c_files/pr57539.c:99:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr57539.c:108:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr57539.c:113:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr57539.c:118:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr57539.c:169:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr57539.c:177:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr57539.c:220:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+7 warnings generated.
+TranslationUnitDecl 0x7f87148264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8714826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8714826740 '__int128'
+|-TypedefDecl 0x7f8714826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8714826760 'unsigned __int128'
+|-TypedefDecl 0x7f8714826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8714826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8714826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8714826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8714826dc0 'char *'
+|   `-BuiltinType 0x7f8714826560 'char'
+|-TypedefDecl 0x7f87148270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8714827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8714826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8714826e58 '__va_list_tag'
+|-TypedefDecl 0x7f8714827138 <c_files/pr57539.c:4:1, col:27> col:27 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7f8714826680 'unsigned long'
+|-RecordDecl 0x7f8715025a00 <line:5:9, line:7:1> line:5:9 struct definition
+|-TypedefDecl 0x7f8715025b00 <col:1, line:8:1> col:1 referenced box 'struct box':'box'
+| `-ElaboratedType 0x7f8715025ab0 'struct box' sugar
+|   `-RecordType 0x7f8715025a90 'box'
+|     `-Record 0x7f8715025a00 ''
+|-RecordDecl 0x7f8715025b70 <line:9:9, line:11:1> line:9:9 struct definition
+|-TypedefDecl 0x7f8715025c70 <col:1, line:12:1> col:1 textpara_t 'struct textpara_t':'textpara_t'
+| `-ElaboratedType 0x7f8715025c20 'struct textpara_t' sugar
+|   `-RecordType 0x7f8715025c00 'textpara_t'
+|     `-Record 0x7f8715025b70 ''
+|-RecordDecl 0x7f8715025ce0 <line:13:9, col:16> col:16 struct _dtlink_s
+|-TypedefDecl 0x7f8715025de0 <col:1, col:26> col:26 referenced Dtlink_t 'struct _dtlink_s':'struct _dtlink_s'
+| `-ElaboratedType 0x7f8715025d90 'struct _dtlink_s' sugar
+|   `-RecordType 0x7f8715025d70 'struct _dtlink_s'
+|     `-Record 0x7f8715027b88 '_dtlink_s'
+|-RecordDecl 0x7f8715025e50 <line:14:9, col:16> col:16 struct _dtdisc_s
+|-TypedefDecl 0x7f8715025f50 <col:1, col:26> col:26 referenced Dtdisc_t 'struct _dtdisc_s':'struct _dtdisc_s'
+| `-ElaboratedType 0x7f8715025f00 'struct _dtdisc_s' sugar
+|   `-RecordType 0x7f8715025ee0 'struct _dtdisc_s'
+|     `-Record 0x7f8715027ce0 '_dtdisc_s'
+|-RecordDecl 0x7f8715025fc0 <line:15:9, col:16> col:16 struct _dtmethod_s
+|-TypedefDecl 0x7f87150260c0 <col:1, col:28> col:28 referenced Dtmethod_t 'struct _dtmethod_s':'struct _dtmethod_s'
+| `-ElaboratedType 0x7f8715026070 'struct _dtmethod_s' sugar
+|   `-RecordType 0x7f8715026050 'struct _dtmethod_s'
+|     `-Record 0x7f8715025fc0 '_dtmethod_s'
+|-RecordDecl 0x7f8715026130 <line:16:9, col:16> col:16 struct _dt_s
+|-TypedefDecl 0x7f8715026230 <col:1, col:22> col:22 referenced Dt_t 'struct _dt_s':'struct _dt_s'
+| `-ElaboratedType 0x7f87150261e0 'struct _dt_s' sugar
+|   `-RecordType 0x7f87150261c0 'struct _dt_s'
+|     `-Record 0x7f8715028188 '_dt_s'
+|-TypedefDecl 0x7f8715026700 <line:17:1, col:64> col:17 referenced Dtmemory_f 'void *(*)(Dt_t *, void *, size_t, Dtdisc_t *)'
+| `-PointerType 0x7f8715026680 'void *(*)(Dt_t *, void *, size_t, Dtdisc_t *)'
+|   `-ParenType 0x7f8715026620 'void *(Dt_t *, void *, size_t, Dtdisc_t *)' sugar
+|     `-FunctionProtoType 0x7f87150265d0 'void *(Dt_t *, void *, size_t, Dtdisc_t *)' cdecl
+|       |-PointerType 0x7f87148269a0 'void *'
+|       | `-BuiltinType 0x7f8714826520 'void'
+|       |-PointerType 0x7f87150262f0 'Dt_t *'
+|       | `-TypedefType 0x7f87150262a0 'Dt_t' sugar
+|       |   |-Typedef 0x7f8715026230 'Dt_t'
+|       |   `-ElaboratedType 0x7f87150261e0 'struct _dt_s' sugar
+|       |     `-RecordType 0x7f87150261c0 'struct _dt_s'
+|       |       `-Record 0x7f8715028188 '_dt_s'
+|       |-PointerType 0x7f87148269a0 'void *'
+|       | `-BuiltinType 0x7f8714826520 'void'
+|       |-TypedefType 0x7f8715026400 'size_t' sugar
+|       | |-Typedef 0x7f8714827138 'size_t'
+|       | `-BuiltinType 0x7f8714826680 'unsigned long'
+|       `-PointerType 0x7f87150264e0 'Dtdisc_t *'
+|         `-TypedefType 0x7f8715026490 'Dtdisc_t' sugar
+|           |-Typedef 0x7f8715025f50 'Dtdisc_t'
+|           `-ElaboratedType 0x7f8715025f00 'struct _dtdisc_s' sugar
+|             `-RecordType 0x7f8715025ee0 'struct _dtdisc_s'
+|               `-Record 0x7f8715027ce0 '_dtdisc_s'
+|-TypedefDecl 0x7f8715026a50 <line:18:1, col:49> col:17 referenced Dtsearch_f 'void *(*)(Dt_t *, void *, int)'
+| `-PointerType 0x7f87150269c0 'void *(*)(Dt_t *, void *, int)'
+|   `-ParenType 0x7f8715026960 'void *(Dt_t *, void *, int)' sugar
+|     `-FunctionProtoType 0x7f8715026910 'void *(Dt_t *, void *, int)' cdecl
+|       |-PointerType 0x7f87148269a0 'void *'
+|       | `-BuiltinType 0x7f8714826520 'void'
+|       |-PointerType 0x7f87150262f0 'Dt_t *'
+|       | `-TypedefType 0x7f87150262a0 'Dt_t' sugar
+|       |   |-Typedef 0x7f8715026230 'Dt_t'
+|       |   `-ElaboratedType 0x7f87150261e0 'struct _dt_s' sugar
+|       |     `-RecordType 0x7f87150261c0 'struct _dt_s'
+|       |       `-Record 0x7f8715028188 '_dt_s'
+|       |-PointerType 0x7f87148269a0 'void *'
+|       | `-BuiltinType 0x7f8714826520 'void'
+|       `-BuiltinType 0x7f87148265c0 'int'
+|-TypedefDecl 0x7f8715026d78 <line:19:1, col:54> col:17 referenced Dtmake_f 'void *(*)(Dt_t *, void *, Dtdisc_t *)'
+| `-PointerType 0x7f8715026d00 'void *(*)(Dt_t *, void *, Dtdisc_t *)'
+|   `-ParenType 0x7f8715026ca0 'void *(Dt_t *, void *, Dtdisc_t *)' sugar
+|     `-FunctionProtoType 0x7f8715026c50 'void *(Dt_t *, void *, Dtdisc_t *)' cdecl
+|       |-PointerType 0x7f87148269a0 'void *'
+|       | `-BuiltinType 0x7f8714826520 'void'
+|       |-PointerType 0x7f87150262f0 'Dt_t *'
+|       | `-TypedefType 0x7f87150262a0 'Dt_t' sugar
+|       |   |-Typedef 0x7f8715026230 'Dt_t'
+|       |   `-ElaboratedType 0x7f87150261e0 'struct _dt_s' sugar
+|       |     `-RecordType 0x7f87150261c0 'struct _dt_s'
+|       |       `-Record 0x7f8715028188 '_dt_s'
+|       |-PointerType 0x7f87148269a0 'void *'
+|       | `-BuiltinType 0x7f8714826520 'void'
+|       `-PointerType 0x7f87150264e0 'Dtdisc_t *'
+|         `-TypedefType 0x7f8715026490 'Dtdisc_t' sugar
+|           |-Typedef 0x7f8715025f50 'Dtdisc_t'
+|           `-ElaboratedType 0x7f8715025f00 'struct _dtdisc_s' sugar
+|             `-RecordType 0x7f8715025ee0 'struct _dtdisc_s'
+|               `-Record 0x7f8715027ce0 '_dtdisc_s'
+|-TypedefDecl 0x7f87150270a0 <line:20:1, col:53> col:16 referenced Dtfree_f 'void (*)(Dt_t *, void *, Dtdisc_t *)'
+| `-PointerType 0x7f8715027030 'void (*)(Dt_t *, void *, Dtdisc_t *)'
+|   `-ParenType 0x7f8715026fd0 'void (Dt_t *, void *, Dtdisc_t *)' sugar
+|     `-FunctionProtoType 0x7f8715026f80 'void (Dt_t *, void *, Dtdisc_t *)' cdecl
+|       |-BuiltinType 0x7f8714826520 'void'
+|       |-PointerType 0x7f87150262f0 'Dt_t *'
+|       | `-TypedefType 0x7f87150262a0 'Dt_t' sugar
+|       |   |-Typedef 0x7f8715026230 'Dt_t'
+|       |   `-ElaboratedType 0x7f87150261e0 'struct _dt_s' sugar
+|       |     `-RecordType 0x7f87150261c0 'struct _dt_s'
+|       |       `-Record 0x7f8715028188 '_dt_s'
+|       |-PointerType 0x7f87148269a0 'void *'
+|       | `-BuiltinType 0x7f8714826520 'void'
+|       `-PointerType 0x7f87150264e0 'Dtdisc_t *'
+|         `-TypedefType 0x7f8715026490 'Dtdisc_t' sugar
+|           |-Typedef 0x7f8715025f50 'Dtdisc_t'
+|           `-ElaboratedType 0x7f8715025f00 'struct _dtdisc_s' sugar
+|             `-RecordType 0x7f8715025ee0 'struct _dtdisc_s'
+|               `-Record 0x7f8715027ce0 '_dtdisc_s'
+|-TypedefDecl 0x7f8715027450 <line:21:1, col:62> col:15 referenced Dtcompar_f 'int (*)(Dt_t *, void *, void *, Dtdisc_t *)'
+| `-PointerType 0x7f87150273d0 'int (*)(Dt_t *, void *, void *, Dtdisc_t *)'
+|   `-ParenType 0x7f8715027370 'int (Dt_t *, void *, void *, Dtdisc_t *)' sugar
+|     `-FunctionProtoType 0x7f8715027320 'int (Dt_t *, void *, void *, Dtdisc_t *)' cdecl
+|       |-BuiltinType 0x7f87148265c0 'int'
+|       |-PointerType 0x7f87150262f0 'Dt_t *'
+|       | `-TypedefType 0x7f87150262a0 'Dt_t' sugar
+|       |   |-Typedef 0x7f8715026230 'Dt_t'
+|       |   `-ElaboratedType 0x7f87150261e0 'struct _dt_s' sugar
+|       |     `-RecordType 0x7f87150261c0 'struct _dt_s'
+|       |       `-Record 0x7f8715028188 '_dt_s'
+|       |-PointerType 0x7f87148269a0 'void *'
+|       | `-BuiltinType 0x7f8714826520 'void'
+|       |-PointerType 0x7f87148269a0 'void *'
+|       | `-BuiltinType 0x7f8714826520 'void'
+|       `-PointerType 0x7f87150264e0 'Dtdisc_t *'
+|         `-TypedefType 0x7f8715026490 'Dtdisc_t' sugar
+|           |-Typedef 0x7f8715025f50 'Dtdisc_t'
+|           `-ElaboratedType 0x7f8715025f00 'struct _dtdisc_s' sugar
+|             `-RecordType 0x7f8715025ee0 'struct _dtdisc_s'
+|               `-Record 0x7f8715027ce0 '_dtdisc_s'
+|-TypedefDecl 0x7f8715027778 <line:22:1, col:61> col:24 referenced Dthash_f 'unsigned int (*)(Dt_t *, void *, Dtdisc_t *)'
+| `-PointerType 0x7f8715027700 'unsigned int (*)(Dt_t *, void *, Dtdisc_t *)'
+|   `-ParenType 0x7f87150276a0 'unsigned int (Dt_t *, void *, Dtdisc_t *)' sugar
+|     `-FunctionProtoType 0x7f8715027650 'unsigned int (Dt_t *, void *, Dtdisc_t *)' cdecl
+|       |-BuiltinType 0x7f8714826660 'unsigned int'
+|       |-PointerType 0x7f87150262f0 'Dt_t *'
+|       | `-TypedefType 0x7f87150262a0 'Dt_t' sugar
+|       |   |-Typedef 0x7f8715026230 'Dt_t'
+|       |   `-ElaboratedType 0x7f87150261e0 'struct _dt_s' sugar
+|       |     `-RecordType 0x7f87150261c0 'struct _dt_s'
+|       |       `-Record 0x7f8715028188 '_dt_s'
+|       |-PointerType 0x7f87148269a0 'void *'
+|       | `-BuiltinType 0x7f8714826520 'void'
+|       `-PointerType 0x7f87150264e0 'Dtdisc_t *'
+|         `-TypedefType 0x7f8715026490 'Dtdisc_t' sugar
+|           |-Typedef 0x7f8715025f50 'Dtdisc_t'
+|           `-ElaboratedType 0x7f8715025f00 'struct _dtdisc_s' sugar
+|             `-RecordType 0x7f8715025ee0 'struct _dtdisc_s'
+|               `-Record 0x7f8715027ce0 '_dtdisc_s'
+|-TypedefDecl 0x7f8715027b30 <line:23:1, col:58> col:15 referenced Dtevent_f 'int (*)(Dt_t *, int, void *, Dtdisc_t *)'
+| `-PointerType 0x7f8715027ab0 'int (*)(Dt_t *, int, void *, Dtdisc_t *)'
+|   `-ParenType 0x7f8715027a50 'int (Dt_t *, int, void *, Dtdisc_t *)' sugar
+|     `-FunctionProtoType 0x7f8715027a00 'int (Dt_t *, int, void *, Dtdisc_t *)' cdecl
+|       |-BuiltinType 0x7f87148265c0 'int'
+|       |-PointerType 0x7f87150262f0 'Dt_t *'
+|       | `-TypedefType 0x7f87150262a0 'Dt_t' sugar
+|       |   |-Typedef 0x7f8715026230 'Dt_t'
+|       |   `-ElaboratedType 0x7f87150261e0 'struct _dt_s' sugar
+|       |     `-RecordType 0x7f87150261c0 'struct _dt_s'
+|       |       `-Record 0x7f8715028188 '_dt_s'
+|       |-BuiltinType 0x7f87148265c0 'int'
+|       |-PointerType 0x7f87148269a0 'void *'
+|       | `-BuiltinType 0x7f8714826520 'void'
+|       `-PointerType 0x7f87150264e0 'Dtdisc_t *'
+|         `-TypedefType 0x7f8715026490 'Dtdisc_t' sugar
+|           |-Typedef 0x7f8715025f50 'Dtdisc_t'
+|           `-ElaboratedType 0x7f8715025f00 'struct _dtdisc_s' sugar
+|             `-RecordType 0x7f8715025ee0 'struct _dtdisc_s'
+|               `-Record 0x7f8715027ce0 '_dtdisc_s'
+|-RecordDecl 0x7f8715027b88 prev 0x7f8715025ce0 <line:24:1, line:27:1> line:24:8 struct _dtlink_s definition
+| `-FieldDecl 0x7f8715027c98 <line:26:3, col:13> col:13 referenced right 'Dtlink_t *'
+|-RecordDecl 0x7f8715027ce0 prev 0x7f8715025e50 <line:28:1, line:39:1> line:28:8 struct _dtdisc_s definition
+| |-FieldDecl 0x7f8715027d80 <line:30:3, col:7> col:7 key 'int'
+| |-FieldDecl 0x7f8715027de0 <line:31:3, col:7> col:7 size 'int'
+| |-FieldDecl 0x7f8715027e40 <line:32:3, col:7> col:7 link 'int'
+| |-FieldDecl 0x7f8715027ec0 <line:33:3, col:12> col:12 makef 'Dtmake_f':'void *(*)(Dt_t *, void *, Dtdisc_t *)'
+| |-FieldDecl 0x7f8715027f40 <line:34:3, col:12> col:12 freef 'Dtfree_f':'void (*)(Dt_t *, void *, Dtdisc_t *)'
+| |-FieldDecl 0x7f8715027fc0 <line:35:3, col:14> col:14 comparf 'Dtcompar_f':'int (*)(Dt_t *, void *, void *, Dtdisc_t *)'
+| |-FieldDecl 0x7f8715028040 <line:36:3, col:12> col:12 hashf 'Dthash_f':'unsigned int (*)(Dt_t *, void *, Dtdisc_t *)'
+| |-FieldDecl 0x7f87150280c0 <line:37:3, col:14> col:14 memoryf 'Dtmemory_f':'void *(*)(Dt_t *, void *, size_t, Dtdisc_t *)'
+| `-FieldDecl 0x7f8715028140 <line:38:3, col:13> col:13 eventf 'Dtevent_f':'int (*)(Dt_t *, int, void *, Dtdisc_t *)'
+|-RecordDecl 0x7f8715028188 prev 0x7f8715026130 <line:40:1, line:43:1> line:40:8 struct _dt_s definition
+| `-FieldDecl 0x7f8715028240 <line:42:3, col:14> col:14 referenced searchf 'Dtsearch_f':'void *(*)(Dt_t *, void *, int)'
+|-VarDecl 0x7f8715028318 <line:44:1, col:20> col:20 used Dtobag 'Dtmethod_t *' extern
+|-FunctionDecl 0x7f8715028550 <line:45:1, col:46> col:14 used dtopen 'Dt_t *(Dtdisc_t *, Dtmethod_t *)' extern
+| |-ParmVarDecl 0x7f87150283c8 <col:22, col:31> col:32 'Dtdisc_t *'
+| `-ParmVarDecl 0x7f8715028438 <col:34, col:45> col:46 'Dtmethod_t *'
+|-FunctionDecl 0x7f8715028710 <line:46:1, col:35> col:18 used dtflatten 'Dtlink_t *(Dt_t *)' extern
+| `-ParmVarDecl 0x7f8715028608 <col:29, col:34> col:35 'Dt_t *'
+|-RecordDecl 0x7f87150287b0 <line:47:9, col:16> col:16 struct Agobj_s
+|-TypedefDecl 0x7f87150288b0 <col:1, col:24> col:24 referenced Agobj_t 'struct Agobj_s':'struct Agobj_s'
+| `-ElaboratedType 0x7f8715028860 'struct Agobj_s' sugar
+|   `-RecordType 0x7f8715028840 'struct Agobj_s'
+|     `-Record 0x7f87150291c0 'Agobj_s'
+|-RecordDecl 0x7f8715028920 <line:48:9, col:16> col:16 struct Agraph_s
+|-TypedefDecl 0x7f8715028a20 <col:1, col:25> col:25 referenced Agraph_t 'struct Agraph_s':'struct Agraph_s'
+| `-ElaboratedType 0x7f87150289d0 'struct Agraph_s' sugar
+|   `-RecordType 0x7f87150289b0 'struct Agraph_s'
+|     `-Record 0x7f8715028920 'Agraph_s'
+|-RecordDecl 0x7f8715028a90 <line:49:9, col:16> col:16 struct Agnode_s
+|-TypedefDecl 0x7f8715028b90 <col:1, col:25> col:25 referenced Agnode_t 'struct Agnode_s':'struct Agnode_s'
+| `-ElaboratedType 0x7f8715028b40 'struct Agnode_s' sugar
+|   `-RecordType 0x7f8715028b20 'struct Agnode_s'
+|     `-Record 0x7f8715028a90 'Agnode_s'
+|-RecordDecl 0x7f8715028c00 <line:50:9, col:16> col:16 struct Agedge_s
+|-TypedefDecl 0x7f8715028d00 <col:1, col:25> col:25 referenced Agedge_t 'struct Agedge_s':'struct Agedge_s'
+| `-ElaboratedType 0x7f8715028cb0 'struct Agedge_s' sugar
+|   `-RecordType 0x7f8715028c90 'struct Agedge_s'
+|     `-Record 0x7f8715028c00 'Agedge_s'
+|-RecordDecl 0x7f8715028d70 <line:51:9, col:16> col:16 struct Agdesc_s
+|-TypedefDecl 0x7f8715028e70 <col:1, col:25> col:25 referenced Agdesc_t 'struct Agdesc_s':'struct Agdesc_s'
+| `-ElaboratedType 0x7f8715028e20 'struct Agdesc_s' sugar
+|   `-RecordType 0x7f8715028e00 'struct Agdesc_s'
+|     `-Record 0x7f8715029320 'Agdesc_s'
+|-RecordDecl 0x7f8715028ee0 <line:52:9, col:16> col:16 struct Agdisc_s
+|-TypedefDecl 0x7f8715028fe0 <col:1, col:25> col:25 referenced Agdisc_t 'struct Agdisc_s':'struct Agdisc_s'
+| `-ElaboratedType 0x7f8715028f90 'struct Agdisc_s' sugar
+|   `-RecordType 0x7f8715028f70 'struct Agdisc_s'
+|     `-Record 0x7f8715028ee0 'Agdisc_s'
+|-RecordDecl 0x7f8715029050 <line:53:9, col:16> col:16 struct Agrec_s
+|-TypedefDecl 0x7f8715029150 <col:1, col:24> col:24 referenced Agrec_t 'struct Agrec_s':'struct Agrec_s'
+| `-ElaboratedType 0x7f8715029100 'struct Agrec_s' sugar
+|   `-RecordType 0x7f87150290e0 'struct Agrec_s'
+|     `-Record 0x7f8715029050 'Agrec_s'
+|-RecordDecl 0x7f87150291c0 prev 0x7f87150287b0 <line:54:1, line:57:1> line:54:8 struct Agobj_s definition
+| `-FieldDecl 0x7f87150292d8 <line:56:3, col:12> col:12 referenced data 'Agrec_t *'
+|-RecordDecl 0x7f8715029320 prev 0x7f8715028d70 <line:58:1, line:60:1> line:58:8 struct Agdesc_s definition
+|-FunctionDecl 0x7f8715029700 <line:61:1, col:68> col:18 used agopen 'Agraph_t *(char *, Agdesc_t, Agdisc_t *)' extern
+| |-ParmVarDecl 0x7f87150293e8 <col:26, col:32> col:32 name 'char *'
+| |-ParmVarDecl 0x7f8715029480 <col:38, col:47> col:47 desc 'Agdesc_t':'struct Agdesc_s'
+| `-ParmVarDecl 0x7f8715029568 <col:53, col:64> col:64 disc 'Agdisc_t *'
+|-FunctionDecl 0x7f8715029940 <line:62:1, col:41> col:18 used agfstnode 'Agnode_t *(Agraph_t *)' extern
+| `-ParmVarDecl 0x7f87150297e0 <col:29, col:40> col:40 g 'Agraph_t *'
+|-FunctionDecl 0x7f871502a380 <line:63:1, col:55> col:18 used agnxtnode 'Agnode_t *(Agraph_t *, Agnode_t *)' extern
+| |-ParmVarDecl 0x7f871502a200 <col:29, col:40> col:40 g 'Agraph_t *'
+| `-ParmVarDecl 0x7f871502a270 <col:43, col:54> col:54 n 'Agnode_t *'
+|-FunctionDecl 0x7f871502a7f0 <line:64:1, line:65:19> line:64:18 used agedge 'Agedge_t *(Agraph_t *, Agnode_t *, Agnode_t *, char *, int)' extern
+| |-ParmVarDecl 0x7f871502a460 <col:26, col:37> col:37 g 'Agraph_t *'
+| |-ParmVarDecl 0x7f871502a4d0 <col:40, col:51> col:51 t 'Agnode_t *'
+| |-ParmVarDecl 0x7f871502a540 <col:54, col:65> col:65 h 'Agnode_t *'
+| |-ParmVarDecl 0x7f871502a5b8 <col:68, col:74> col:74 name 'char *'
+| `-ParmVarDecl 0x7f871502a630 <line:65:5, col:9> col:9 createflag 'int'
+|-FunctionDecl 0x7f871502aa40 <line:66:1, col:54> col:18 used agfstout 'Agedge_t *(Agraph_t *, Agnode_t *)' extern
+| |-ParmVarDecl 0x7f871502a8c0 <col:28, col:39> col:39 g 'Agraph_t *'
+| `-ParmVarDecl 0x7f871502a930 <col:42, col:53> col:53 n 'Agnode_t *'
+|-FunctionDecl 0x7f871502ac80 <line:67:1, col:54> col:18 used agnxtout 'Agedge_t *(Agraph_t *, Agedge_t *)' extern
+| |-ParmVarDecl 0x7f871502aaf8 <col:28, col:39> col:39 g 'Agraph_t *'
+| `-ParmVarDecl 0x7f871502ab68 <col:42, col:53> col:53 e 'Agedge_t *'
+|-VarDecl 0x7f871502ad38 <line:68:1, col:17> col:17 Agdirected 'Agdesc_t':'struct Agdesc_s' extern
+|-VarDecl 0x7f871502ada8 <col:1, col:29> col:29 used Agstrictdirected 'Agdesc_t':'struct Agdesc_s' extern
+|-VarDecl 0x7f871502ae18 <col:1, col:47> col:47 Agundirected 'Agdesc_t':'struct Agdesc_s' extern
+|-VarDecl 0x7f871502ae88 <col:1, line:69:3> col:3 Agstrictundirected 'Agdesc_t':'struct Agdesc_s' extern
+|-TypedefDecl 0x7f871502af30 <line:70:1, col:25> col:25 referenced graph_t 'struct Agraph_s':'struct Agraph_s'
+| `-ElaboratedType 0x7f87150289d0 'struct Agraph_s' sugar
+|   `-RecordType 0x7f87150289b0 'struct Agraph_s'
+|     `-Record 0x7f8715028920 'Agraph_s'
+|-TypedefDecl 0x7f871502afa8 <line:71:1, col:25> col:25 referenced node_t 'struct Agnode_s':'struct Agnode_s'
+| `-ElaboratedType 0x7f8715028b40 'struct Agnode_s' sugar
+|   `-RecordType 0x7f8715028b20 'struct Agnode_s'
+|     `-Record 0x7f8715028a90 'Agnode_s'
+|-TypedefDecl 0x7f871502b020 <line:72:1, col:25> col:25 referenced edge_t 'struct Agedge_s':'struct Agedge_s'
+| `-ElaboratedType 0x7f8715028cb0 'struct Agedge_s' sugar
+|   `-RecordType 0x7f8715028c90 'struct Agedge_s'
+|     `-Record 0x7f8715028c00 'Agedge_s'
+|-RecordDecl 0x7f871502b078 <line:73:9, line:76:1> line:73:15 union inside_t definition
+| `-FieldDecl 0x7f871502b138 <line:75:3, col:18> col:18 referenced minlen 'unsigned short'
+|-TypedefDecl 0x7f871502c200 <line:73:1, line:77:1> col:1 referenced Agedgeinfo_t 'union inside_t':'union inside_t'
+| `-ElaboratedType 0x7f871502b180 'union inside_t' sugar
+|   `-RecordType 0x7f871502b100 'union inside_t'
+|     `-Record 0x7f871502b078 'inside_t'
+|-FunctionDecl 0x7f871502c388 <line:78:1, col:29> col:14 used gmalloc 'void *(size_t)' extern
+| `-ParmVarDecl 0x7f871502c280 <col:23> col:29 'size_t':'unsigned long'
+|-EnumDecl 0x7f871502c428 <line:79:9, line:82:72> line:79:9
+| |-EnumConstantDecl 0x7f871502c4e0 <line:80:3> col:3 AM_NONE 'int'
+| |-EnumConstantDecl 0x7f871502c528 <col:12> col:12 AM_VOR 'int'
+| |-EnumConstantDecl 0x7f871502c570 <col:20> col:20 AM_SCALE 'int'
+| |-EnumConstantDecl 0x7f871502c5b8 <col:30> col:30 AM_NSCALE 'int'
+| |-EnumConstantDecl 0x7f871502c600 <col:41> col:41 AM_SCALEXY 'int'
+| |-EnumConstantDecl 0x7f871502c648 <col:53> col:53 AM_PUSH 'int'
+| |-EnumConstantDecl 0x7f871502c690 <col:62> col:62 AM_PUSHPULL 'int'
+| |-EnumConstantDecl 0x7f871502c6d8 <line:81:5> col:5 referenced AM_ORTHO 'int'
+| |-EnumConstantDecl 0x7f871502c720 <col:15> col:15 AM_ORTHO_YX 'int'
+| |-EnumConstantDecl 0x7f871502c768 <col:28> col:28 referenced AM_ORTHOXY 'int'
+| |-EnumConstantDecl 0x7f871502c7b0 <col:40> col:40 AM_ORTHOYX 'int'
+| |-EnumConstantDecl 0x7f871502c7f8 <col:52> col:52 referenced AM_PORTHO 'int'
+| |-EnumConstantDecl 0x7f871502c840 <col:63> col:63 AM_PORTHO_YX 'int'
+| |-EnumConstantDecl 0x7f871502c888 <line:82:5> col:5 AM_PORTHOXY 'int'
+| |-EnumConstantDecl 0x7f871502c8d0 <col:18> col:18 AM_PORTHOYX 'int'
+| |-EnumConstantDecl 0x7f871502c918 <col:31> col:31 AM_COMPRESS 'int'
+| |-EnumConstantDecl 0x7f871502c960 <col:44> col:44 AM_VPSC 'int'
+| |-EnumConstantDecl 0x7f871502c9a8 <col:53> col:53 AM_IPSEP 'int'
+| `-EnumConstantDecl 0x7f871502c9f0 <col:63> col:63 AM_PRISM 'int'
+|-TypedefDecl 0x7f871502ca90 <line:79:1, line:83:1> col:1 referenced adjust_mode 'enum adjust_mode':'adjust_mode'
+| `-ElaboratedType 0x7f871502ca40 'enum adjust_mode' sugar
+|   `-EnumType 0x7f871502c4c0 'adjust_mode'
+|     `-Enum 0x7f871502c428 ''
+|-RecordDecl 0x7f871502cb00 <line:84:9, line:90:1> line:84:16 struct nitem definition
+| |-FieldDecl 0x7f871502cbc0 <line:86:3, col:12> col:12 link 'Dtlink_t':'struct _dtlink_s'
+| |-FieldDecl 0x7f871502cc20 <line:87:3, col:7> col:7 val 'int'
+| |-FieldDecl 0x7f871502ccc8 <line:88:3, col:11> col:11 referenced cnode 'node_t *'
+| `-FieldDecl 0x7f871502cd40 <line:89:3, col:7> col:7 referenced bb 'box':'box'
+|-TypedefDecl 0x7f871502ce20 <line:84:1, line:91:1> col:1 referenced nitem 'struct nitem':'struct nitem'
+| `-ElaboratedType 0x7f871502cdd0 'struct nitem' sugar
+|   `-RecordType 0x7f871502cb90 'struct nitem'
+|     `-Record 0x7f871502cb00 'nitem'
+|-TypedefDecl 0x7f871502d120 <line:92:1, col:36> col:15 referenced distfn 'int (*)(box *, box *)'
+| `-PointerType 0x7f871502d0b0 'int (*)(box *, box *)'
+|   `-ParenType 0x7f871502d050 'int (box *, box *)' sugar
+|     `-FunctionProtoType 0x7f871502d010 'int (box *, box *)' cdecl
+|       |-BuiltinType 0x7f87148265c0 'int'
+|       |-PointerType 0x7f871502cec0 'box *'
+|       | `-TypedefType 0x7f871502cd10 'box' sugar
+|       |   |-Typedef 0x7f8715025b00 'box'
+|       |   `-ElaboratedType 0x7f8715025ab0 'struct box' sugar
+|       |     `-RecordType 0x7f8715025a90 'box'
+|       |       `-Record 0x7f8715025a00 ''
+|       `-PointerType 0x7f871502cec0 'box *'
+|         `-TypedefType 0x7f871502cd10 'box' sugar
+|           |-Typedef 0x7f8715025b00 'box'
+|           `-ElaboratedType 0x7f8715025ab0 'struct box' sugar
+|             `-RecordType 0x7f8715025a90 'box'
+|               `-Record 0x7f8715025a00 ''
+|-TypedefDecl 0x7f8715032630 <line:93:1, col:45> col:15 referenced intersectfn 'int (*)(nitem *, nitem *)'
+| `-PointerType 0x7f87150325c0 'int (*)(nitem *, nitem *)'
+|   `-ParenType 0x7f8715032560 'int (nitem *, nitem *)' sugar
+|     `-FunctionProtoType 0x7f8715032520 'int (nitem *, nitem *)' cdecl
+|       |-BuiltinType 0x7f87148265c0 'int'
+|       |-PointerType 0x7f871502d1d0 'nitem *'
+|       | `-TypedefType 0x7f871502d180 'nitem' sugar
+|       |   |-Typedef 0x7f871502ce20 'nitem'
+|       |   `-ElaboratedType 0x7f871502cdd0 'struct nitem' sugar
+|       |     `-RecordType 0x7f871502cb90 'struct nitem'
+|       |       `-Record 0x7f871502cb00 'nitem'
+|       `-PointerType 0x7f871502d1d0 'nitem *'
+|         `-TypedefType 0x7f871502d180 'nitem' sugar
+|           |-Typedef 0x7f871502ce20 'nitem'
+|           `-ElaboratedType 0x7f871502cdd0 'struct nitem' sugar
+|             `-RecordType 0x7f871502cb90 'struct nitem'
+|               `-Record 0x7f871502cb00 'nitem'
+|-FunctionDecl 0x7f87150327f8 <line:94:1, col:24> col:5 used agnnodes 'int (graph_t *)'
+| `-ParmVarDecl 0x7f87150326e8 <col:15, col:23> col:24 'graph_t *'
+|-FunctionDecl 0x7f8715032a38 <line:95:1, col:27> col:5 used overlaps 'int (nitem *, int)'
+| |-ParmVarDecl 0x7f87150328a8 <col:15, col:21> col:22 'nitem *'
+| `-ParmVarDecl 0x7f8715032920 <col:24> col:27 'int'
+|-FunctionDecl 0x7f8715032dc8 <line:96:1, line:99:1> line:97:1 used cmpitem 'int (Dt_t *, int *, int *, Dtdisc_t *)' static
+| |-ParmVarDecl 0x7f8715032af0 <col:10, col:17> col:17 d 'Dt_t *'
+| |-ParmVarDecl 0x7f8715032b90 <col:20, col:25> col:25 p1 'int *'
+| |-ParmVarDecl 0x7f8715032c08 <col:29, col:34> col:34 p2 'int *'
+| |-ParmVarDecl 0x7f8715032c78 <col:38, col:49> col:49 disc 'Dtdisc_t *'
+| `-CompoundStmt 0x7f8715032e80 <line:98:1, line:99:1>
+|-VarDecl 0x7f8715032ea8 <line:100:1, line:104:17> line:100:17 used constr 'Dtdisc_t':'struct _dtdisc_s' static cinit
+| `-InitListExpr 0x7f8715033388 <line:101:3, line:104:17> 'Dtdisc_t':'struct _dtdisc_s'
+|   |-ImplicitCastExpr 0x7f8715034448 <line:101:5, col:35> 'int' <IntegralCast>
+|   | `-OffsetOfExpr 0x7f8715032f18 <col:5, col:35> 'unsigned long'
+|   |-ImplicitCastExpr 0x7f8715034460 <col:38, col:49> 'int' <IntegralCast>
+|   | `-UnaryExprOrTypeTraitExpr 0x7f8715032f68 <col:38, col:49> 'unsigned long' sizeof 'int'
+|   |-ImplicitCastExpr 0x7f8715034478 <col:52, line:102:20> 'int' <IntegralCast>
+|   | `-OffsetOfExpr 0x7f8715032f98 <line:101:52, line:102:20> 'unsigned long'
+|   |-ParenExpr 0x7f8715033028 <line:103:1, col:14> 'Dtmake_f':'void *(*)(Dt_t *, void *, Dtdisc_t *)'
+|   | `-CStyleCastExpr 0x7f8715033000 <col:2, col:13> 'Dtmake_f':'void *(*)(Dt_t *, void *, Dtdisc_t *)' <NullToPointer>
+|   |   `-IntegerLiteral 0x7f8715032fd0 <col:13> 'int' 0
+|   |-ParenExpr 0x7f87150330a0 <col:17, col:30> 'Dtfree_f':'void (*)(Dt_t *, void *, Dtdisc_t *)'
+|   | `-CStyleCastExpr 0x7f8715033078 <col:18, col:29> 'Dtfree_f':'void (*)(Dt_t *, void *, Dtdisc_t *)' <NullToPointer>
+|   |   `-IntegerLiteral 0x7f8715033048 <col:29> 'int' 0
+|   |-CStyleCastExpr 0x7f8715033170 <col:33, col:46> 'Dtcompar_f':'int (*)(Dt_t *, void *, void *, Dtdisc_t *)' <BitCast>
+|   | `-ImplicitCastExpr 0x7f8715033158 <col:46> 'int (*)(Dt_t *, int *, int *, Dtdisc_t *)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7f87150330c0 <col:46> 'int (Dt_t *, int *, int *, Dtdisc_t *)' Function 0x7f8715032dc8 'cmpitem' 'int (Dt_t *, int *, int *, Dtdisc_t *)'
+|   |-ParenExpr 0x7f87150331f0 <col:55, col:68> 'Dthash_f':'unsigned int (*)(Dt_t *, void *, Dtdisc_t *)'
+|   | `-CStyleCastExpr 0x7f87150331c8 <col:56, col:67> 'Dthash_f':'unsigned int (*)(Dt_t *, void *, Dtdisc_t *)' <NullToPointer>
+|   |   `-IntegerLiteral 0x7f8715033198 <col:67> 'int' 0
+|   |-ParenExpr 0x7f8715033268 <col:71, col:86> 'Dtmemory_f':'void *(*)(Dt_t *, void *, size_t, Dtdisc_t *)'
+|   | `-CStyleCastExpr 0x7f8715033240 <col:72, col:85> 'Dtmemory_f':'void *(*)(Dt_t *, void *, size_t, Dtdisc_t *)' <NullToPointer>
+|   |   `-IntegerLiteral 0x7f8715033210 <col:85> 'int' 0
+|   `-ParenExpr 0x7f87150332e0 <line:104:1, col:15> 'Dtevent_f':'int (*)(Dt_t *, int, void *, Dtdisc_t *)'
+|     `-CStyleCastExpr 0x7f87150332b8 <col:2, col:14> 'Dtevent_f':'int (*)(Dt_t *, int, void *, Dtdisc_t *)' <NullToPointer>
+|       `-IntegerLiteral 0x7f8715033288 <col:14> 'int' 0
+|-FunctionDecl 0x7f8715034648 <line:105:1, line:108:1> line:106:1 used distX 'int (box *, box *)' static
+| |-ParmVarDecl 0x7f8715034540 <col:8, col:14> col:14 b1 'box *'
+| |-ParmVarDecl 0x7f87150345b0 <col:18, col:24> col:24 b2 'box *'
+| `-CompoundStmt 0x7f87150346f0 <line:107:1, line:108:1>
+|-FunctionDecl 0x7f8715034820 <line:110:1, line:113:1> line:111:1 used intersectY0 'int (nitem *, nitem *)' static
+| |-ParmVarDecl 0x7f8715034718 <col:14, col:22> col:22 p 'nitem *'
+| |-ParmVarDecl 0x7f8715034788 <col:25, col:33> col:33 q 'nitem *'
+| `-CompoundStmt 0x7f87150348c8 <line:112:1, line:113:1>
+|-FunctionDecl 0x7f87150349f8 <line:115:1, line:118:1> line:116:1 used intersectY 'int (nitem *, nitem *)' static
+| |-ParmVarDecl 0x7f87150348f0 <col:13, col:21> col:21 p 'nitem *'
+| |-ParmVarDecl 0x7f8715034960 <col:24, col:32> col:32 q 'nitem *'
+| `-CompoundStmt 0x7f8715034aa0 <line:117:1, line:118:1>
+|-FunctionDecl 0x7f8715034d00 <line:120:1, line:146:1> line:121:1 used mapGraphs 'void (graph_t *, graph_t *, distfn)' static
+| |-ParmVarDecl 0x7f8715034ac8 <col:12, col:22> col:22 used g 'graph_t *'
+| |-ParmVarDecl 0x7f8715034b38 <col:25, col:35> col:35 used cg 'graph_t *'
+| |-ParmVarDecl 0x7f8715034bd0 <col:39, col:46> col:46 used dist 'distfn':'int (*)(box *, box *)'
+| `-CompoundStmt 0x7f87150365d8 <line:122:1, line:146:1>
+|   |-DeclStmt 0x7f8715034e20 <line:123:3, col:12>
+|   | `-VarDecl 0x7f8715034dc0 <col:3, col:11> col:11 used n 'node_t *'
+|   |-DeclStmt 0x7f8715034ef8 <line:124:3, col:12>
+|   | `-VarDecl 0x7f8715034e98 <col:3, col:11> col:11 used e 'edge_t *'
+|   |-DeclStmt 0x7f8715034f80 <line:125:3, col:13>
+|   | `-VarDecl 0x7f8715034f20 <col:3, col:11> col:11 used ce 'edge_t *'
+|   |-DeclStmt 0x7f8715035008 <line:126:3, col:12>
+|   | `-VarDecl 0x7f8715034fa8 <col:3, col:11> col:11 used t 'node_t *'
+|   |-DeclStmt 0x7f8715035090 <line:127:3, col:12>
+|   | `-VarDecl 0x7f8715035030 <col:3, col:11> col:11 used h 'node_t *'
+|   |-DeclStmt 0x7f8715035118 <line:128:3, col:12>
+|   | `-VarDecl 0x7f87150350b8 <col:3, col:10> col:10 used tp 'nitem *'
+|   |-DeclStmt 0x7f87150351a0 <line:129:3, col:12>
+|   | `-VarDecl 0x7f8715035140 <col:3, col:10> col:10 used hp 'nitem *'
+|   |-DeclStmt 0x7f8715035230 <line:130:3, col:12>
+|   | `-VarDecl 0x7f87150351d0 <col:3, col:7> col:7 used delta 'int'
+|   `-ForStmt 0x7f87150365a0 <line:131:3, line:145:5>
+|     |-BinaryOperator 0x7f8715035378 <line:131:8, col:24> 'node_t *' '='
+|     | |-DeclRefExpr 0x7f8715035248 <col:8> 'node_t *' lvalue Var 0x7f8715034dc0 'n' 'node_t *'
+|     | `-CallExpr 0x7f8715035330 <col:12, col:24> 'Agnode_t *'
+|     |   |-ImplicitCastExpr 0x7f8715035318 <col:12> 'Agnode_t *(*)(Agraph_t *)' <FunctionToPointerDecay>
+|     |   | `-DeclRefExpr 0x7f8715035270 <col:12> 'Agnode_t *(Agraph_t *)' Function 0x7f8715029940 'agfstnode' 'Agnode_t *(Agraph_t *)'
+|     |   `-ImplicitCastExpr 0x7f8715035360 <col:23> 'graph_t *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f8715035298 <col:23> 'graph_t *' lvalue ParmVar 0x7f8715034ac8 'g' 'graph_t *'
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7f87150353c8 <col:27> 'node_t *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f87150353a0 <col:27> 'node_t *' lvalue Var 0x7f8715034dc0 'n' 'node_t *'
+|     |-BinaryOperator 0x7f8715035578 <col:30, col:49> 'node_t *' '='
+|     | |-DeclRefExpr 0x7f8715035400 <col:30> 'node_t *' lvalue Var 0x7f8715034dc0 'n' 'node_t *'
+|     | `-CallExpr 0x7f8715035510 <col:34, col:49> 'Agnode_t *'
+|     |   |-ImplicitCastExpr 0x7f87150354f8 <col:34> 'Agnode_t *(*)(Agraph_t *, Agnode_t *)' <FunctionToPointerDecay>
+|     |   | `-DeclRefExpr 0x7f8715035428 <col:34> 'Agnode_t *(Agraph_t *, Agnode_t *)' Function 0x7f871502a380 'agnxtnode' 'Agnode_t *(Agraph_t *, Agnode_t *)'
+|     |   |-ImplicitCastExpr 0x7f8715035548 <col:45> 'graph_t *' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7f8715035450 <col:45> 'graph_t *' lvalue ParmVar 0x7f8715034ac8 'g' 'graph_t *'
+|     |   `-ImplicitCastExpr 0x7f8715035560 <col:48> 'node_t *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f8715035478 <col:48> 'node_t *' lvalue Var 0x7f8715034dc0 'n' 'node_t *'
+|     `-CompoundStmt 0x7f8715036580 <line:132:5, line:145:5>
+|       `-ForStmt 0x7f8715036548 <line:133:7, line:144:2>
+|         |-BinaryOperator 0x7f8715035718 <line:133:12, col:30> 'edge_t *' '='
+|         | |-DeclRefExpr 0x7f87150355a0 <col:12> 'edge_t *' lvalue Var 0x7f8715034e98 'e' 'edge_t *'
+|         | `-CallExpr 0x7f87150356b0 <col:16, col:30> 'Agedge_t *'
+|         |   |-ImplicitCastExpr 0x7f8715035698 <col:16> 'Agedge_t *(*)(Agraph_t *, Agnode_t *)' <FunctionToPointerDecay>
+|         |   | `-DeclRefExpr 0x7f87150355c8 <col:16> 'Agedge_t *(Agraph_t *, Agnode_t *)' Function 0x7f871502aa40 'agfstout' 'Agedge_t *(Agraph_t *, Agnode_t *)'
+|         |   |-ImplicitCastExpr 0x7f87150356e8 <col:26> 'graph_t *' <LValueToRValue>
+|         |   | `-DeclRefExpr 0x7f87150355f0 <col:26> 'graph_t *' lvalue ParmVar 0x7f8715034ac8 'g' 'graph_t *'
+|         |   `-ImplicitCastExpr 0x7f8715035700 <col:29> 'node_t *' <LValueToRValue>
+|         |     `-DeclRefExpr 0x7f8715035618 <col:29> 'node_t *' lvalue Var 0x7f8715034dc0 'n' 'node_t *'
+|         |-<<<NULL>>>
+|         |-ImplicitCastExpr 0x7f8715035768 <col:33> 'edge_t *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f8715035740 <col:33> 'edge_t *' lvalue Var 0x7f8715034e98 'e' 'edge_t *'
+|         |-BinaryOperator 0x7f87150358f8 <col:36, col:54> 'edge_t *' '='
+|         | |-DeclRefExpr 0x7f8715035780 <col:36> 'edge_t *' lvalue Var 0x7f8715034e98 'e' 'edge_t *'
+|         | `-CallExpr 0x7f8715035890 <col:40, col:54> 'Agedge_t *'
+|         |   |-ImplicitCastExpr 0x7f8715035878 <col:40> 'Agedge_t *(*)(Agraph_t *, Agedge_t *)' <FunctionToPointerDecay>
+|         |   | `-DeclRefExpr 0x7f87150357a8 <col:40> 'Agedge_t *(Agraph_t *, Agedge_t *)' Function 0x7f871502ac80 'agnxtout' 'Agedge_t *(Agraph_t *, Agedge_t *)'
+|         |   |-ImplicitCastExpr 0x7f87150358c8 <col:50> 'graph_t *' <LValueToRValue>
+|         |   | `-DeclRefExpr 0x7f87150357d0 <col:50> 'graph_t *' lvalue ParmVar 0x7f8715034ac8 'g' 'graph_t *'
+|         |   `-ImplicitCastExpr 0x7f87150358e0 <col:53> 'edge_t *' <LValueToRValue>
+|         |     `-DeclRefExpr 0x7f87150357f8 <col:53> 'edge_t *' lvalue Var 0x7f8715034e98 'e' 'edge_t *'
+|         `-CompoundStmt 0x7f8715036518 <line:134:2, line:144:2>
+|           |-BinaryOperator 0x7f8715035af0 <line:135:4, col:34> 'int' '='
+|           | |-DeclRefExpr 0x7f8715035920 <col:4> 'int' lvalue Var 0x7f87150351d0 'delta' 'int'
+|           | `-CallExpr 0x7f8715035ab8 <col:12, col:34> 'int'
+|           |   |-ImplicitCastExpr 0x7f8715035aa0 <col:12> 'distfn':'int (*)(box *, box *)' <LValueToRValue>
+|           |   | `-DeclRefExpr 0x7f8715035948 <col:12> 'distfn':'int (*)(box *, box *)' lvalue ParmVar 0x7f8715034bd0 'dist' 'distfn':'int (*)(box *, box *)'
+|           |   |-UnaryOperator 0x7f87150359e8 <col:18, col:23> 'box *' prefix '&'
+|           |   | `-MemberExpr 0x7f87150359b0 <col:19, col:23> 'box':'box' lvalue ->bb 0x7f871502cd40
+|           |   |   `-ImplicitCastExpr 0x7f8715035998 <col:19> 'nitem *' <LValueToRValue>
+|           |   |     `-DeclRefExpr 0x7f8715035970 <col:19> 'nitem *' lvalue Var 0x7f87150350b8 'tp' 'nitem *'
+|           |   `-UnaryOperator 0x7f8715035a80 <col:27, col:32> 'box *' prefix '&'
+|           |     `-MemberExpr 0x7f8715035a48 <col:28, col:32> 'box':'box' lvalue ->bb 0x7f871502cd40
+|           |       `-ImplicitCastExpr 0x7f8715035a30 <col:28> 'nitem *' <LValueToRValue>
+|           |         `-DeclRefExpr 0x7f8715035a08 <col:28> 'nitem *' lvalue Var 0x7f8715035140 'hp' 'nitem *'
+|           |-BinaryOperator 0x7f8715035da0 <line:136:4, col:42> 'edge_t *' '='
+|           | |-DeclRefExpr 0x7f8715035b18 <col:4> 'edge_t *' lvalue Var 0x7f8715034f20 'ce' 'edge_t *'
+|           | `-CallExpr 0x7f8715035cf0 <col:9, col:42> 'Agedge_t *'
+|           |   |-ImplicitCastExpr 0x7f8715035cd8 <col:9> 'Agedge_t *(*)(Agraph_t *, Agnode_t *, Agnode_t *, char *, int)' <FunctionToPointerDecay>
+|           |   | `-DeclRefExpr 0x7f8715035b40 <col:9> 'Agedge_t *(Agraph_t *, Agnode_t *, Agnode_t *, char *, int)' Function 0x7f871502a7f0 'agedge' 'Agedge_t *(Agraph_t *, Agnode_t *, Agnode_t *, char *, int)'
+|           |   |-ImplicitCastExpr 0x7f8715035d40 <col:17> 'graph_t *' <LValueToRValue>
+|           |   | `-DeclRefExpr 0x7f8715035b68 <col:17> 'graph_t *' lvalue ParmVar 0x7f8715034b38 'cg' 'graph_t *'
+|           |   |-ImplicitCastExpr 0x7f8715035d58 <col:21> 'node_t *' <LValueToRValue>
+|           |   | `-DeclRefExpr 0x7f8715035b90 <col:21> 'node_t *' lvalue Var 0x7f8715034fa8 't' 'node_t *'
+|           |   |-ImplicitCastExpr 0x7f8715035d70 <col:24> 'node_t *' <LValueToRValue>
+|           |   | `-DeclRefExpr 0x7f8715035bb8 <col:24> 'node_t *' lvalue Var 0x7f8715035030 'h' 'node_t *'
+|           |   |-ImplicitCastExpr 0x7f8715035d88 <col:27, col:38> 'char *' <NullToPointer>
+|           |   | `-ParenExpr 0x7f8715035c40 <col:27, col:38> 'void *'
+|           |   |   `-CStyleCastExpr 0x7f8715035c18 <col:28, col:37> 'void *' <NullToPointer>
+|           |   |     `-IntegerLiteral 0x7f8715035be0 <col:37> 'int' 0
+|           |   `-IntegerLiteral 0x7f8715035c60 <col:41> 'int' 1
+|           `-IfStmt 0x7f87150364e0 <line:137:4, line:143:6>
+|             |-<<<NULL>>>
+|             |-<<<NULL>>>
+|             |-BinaryOperator 0x7f8715036170 <line:137:8, col:66> 'int' '<'
+|             | |-ImplicitCastExpr 0x7f8715036140 <col:8, col:62> 'int' <IntegralCast>
+|             | | `-ImplicitCastExpr 0x7f8715036128 <col:8, col:62> 'unsigned short' <LValueToRValue>
+|             | |   `-ParenExpr 0x7f87150360e0 <col:8, col:62> 'unsigned short' lvalue
+|             | |     `-MemberExpr 0x7f87150360a8 <col:9, col:56> 'unsigned short' lvalue ->minlen 0x7f871502b138
+|             | |       `-ParenExpr 0x7f8715036088 <col:9, col:53> 'Agedgeinfo_t *'
+|             | |         `-CStyleCastExpr 0x7f8715036060 <col:10, col:52> 'Agedgeinfo_t *' <BitCast>
+|             | |           `-ImplicitCastExpr 0x7f8715036048 <col:27, col:52> 'Agrec_t *' <LValueToRValue>
+|             | |             `-ParenExpr 0x7f8715036028 <col:27, col:52> 'Agrec_t *' lvalue
+|             | |               `-MemberExpr 0x7f8715035f58 <col:28, col:48> 'Agrec_t *' lvalue ->data 0x7f87150292d8
+|             | |                 `-ParenExpr 0x7f8715035f38 <col:28, col:45> 'Agobj_t *'
+|             | |                   `-CStyleCastExpr 0x7f8715035f10 <col:29, col:44> 'Agobj_t *' <BitCast>
+|             | |                     `-ImplicitCastExpr 0x7f8715035ef8 <col:41, col:44> 'edge_t *' <LValueToRValue>
+|             | |                       `-ParenExpr 0x7f8715035ed8 <col:41, col:44> 'edge_t *' lvalue
+|             | |                         `-DeclRefExpr 0x7f8715035e10 <col:42> 'edge_t *' lvalue Var 0x7f8715034f20 'ce' 'edge_t *'
+|             | `-ImplicitCastExpr 0x7f8715036158 <col:66> 'int' <LValueToRValue>
+|             |   `-DeclRefExpr 0x7f8715036100 <col:66> 'int' lvalue Var 0x7f87150351d0 'delta' 'int'
+|             |-CompoundStmt 0x7f87150364c0 <line:138:6, line:143:6>
+|             | `-IfStmt 0x7f8715036488 <line:139:8, line:142:3>
+|             |   |-<<<NULL>>>
+|             |   |-<<<NULL>>>
+|             |   |-BinaryOperator 0x7f8715036448 <line:139:12, line:140:5> 'int' '=='
+|             |   | |-ImplicitCastExpr 0x7f8715036430 <line:139:12, col:66> 'double' <IntegralToFloating>
+|             |   | | `-ImplicitCastExpr 0x7f8715036418 <col:12, col:66> 'int' <IntegralCast>
+|             |   | |   `-ImplicitCastExpr 0x7f8715036400 <col:12, col:66> 'unsigned short' <LValueToRValue>
+|             |   | |     `-ParenExpr 0x7f87150363b0 <col:12, col:66> 'unsigned short' lvalue
+|             |   | |       `-MemberExpr 0x7f8715036378 <col:13, col:60> 'unsigned short' lvalue ->minlen 0x7f871502b138
+|             |   | |         `-ParenExpr 0x7f8715036358 <col:13, col:57> 'Agedgeinfo_t *'
+|             |   | |           `-CStyleCastExpr 0x7f8715036330 <col:14, col:56> 'Agedgeinfo_t *' <BitCast>
+|             |   | |             `-ImplicitCastExpr 0x7f8715036318 <col:31, col:56> 'Agrec_t *' <LValueToRValue>
+|             |   | |               `-ParenExpr 0x7f87150362f8 <col:31, col:56> 'Agrec_t *' lvalue
+|             |   | |                 `-MemberExpr 0x7f8715036280 <col:32, col:52> 'Agrec_t *' lvalue ->data 0x7f87150292d8
+|             |   | |                   `-ParenExpr 0x7f8715036260 <col:32, col:49> 'Agobj_t *'
+|             |   | |                     `-CStyleCastExpr 0x7f8715036238 <col:33, col:48> 'Agobj_t *' <BitCast>
+|             |   | |                       `-ImplicitCastExpr 0x7f8715036220 <col:45, col:48> 'edge_t *' <LValueToRValue>
+|             |   | |                         `-ParenExpr 0x7f8715036200 <col:45, col:48> 'edge_t *' lvalue
+|             |   | |                           `-DeclRefExpr 0x7f8715036198 <col:46> 'edge_t *' lvalue Var 0x7f8715034f20 'ce' 'edge_t *'
+|             |   | `-FloatingLiteral 0x7f87150363d0 <line:140:5> 'double' 0.000000e+00
+|             |   |-CompoundStmt 0x7f8715036470 <line:141:3, line:142:3>
+|             |   `-<<<NULL>>>
+|             `-<<<NULL>>>
+|-FunctionDecl 0x7f8715036900 <line:148:1, line:169:1> line:149:1 used mkNConstraintG 'graph_t *(graph_t *, Dt_t *, intersectfn, distfn)' static
+| |-ParmVarDecl 0x7f8715036648 <col:17, col:27> col:27 g 'graph_t *'
+| |-ParmVarDecl 0x7f87150366b8 <col:30, col:37> col:37 used list 'Dt_t *'
+| |-ParmVarDecl 0x7f8715036750 <col:43, col:55> col:55 used intersect 'intersectfn':'int (*)(nitem *, nitem *)'
+| |-ParmVarDecl 0x7f87150367c0 <col:66, col:73> col:73 dist 'distfn':'int (*)(box *, box *)'
+| `-CompoundStmt 0x7f8715037ff8 <line:150:1, line:169:1>
+|   |-DeclStmt 0x7f8715036a28 <line:151:3, col:11>
+|   | `-VarDecl 0x7f87150369c8 <col:3, col:10> col:10 used p 'nitem *'
+|   |-DeclStmt 0x7f8715036ab0 <line:152:3, col:13>
+|   | `-VarDecl 0x7f8715036a50 <col:3, col:10> col:10 used nxp 'nitem *'
+|   |-DeclStmt 0x7f8715036b38 <line:153:3, col:12>
+|   | `-VarDecl 0x7f8715036ad8 <col:3, col:11> col:11 used e 'edge_t *'
+|   |-DeclStmt 0x7f8715036de0 <line:154:3, col:66>
+|   | `-VarDecl 0x7f8715036b60 <col:3, col:65> col:12 used cg 'graph_t *' cinit
+|   |   `-CallExpr 0x7f8715036d70 <col:17, col:65> 'Agraph_t *'
+|   |     |-ImplicitCastExpr 0x7f8715036d58 <col:17> 'Agraph_t *(*)(char *, Agdesc_t, Agdisc_t *)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f8715036bc0 <col:17> 'Agraph_t *(char *, Agdesc_t, Agdisc_t *)' Function 0x7f8715029700 'agopen' 'Agraph_t *(char *, Agdesc_t, Agdisc_t *)'
+|   |     |-ImplicitCastExpr 0x7f8715036db0 <col:25> 'char *' <ArrayToPointerDecay>
+|   |     | `-StringLiteral 0x7f8715036c28 <col:25> 'char [3]' lvalue "cg"
+|   |     |-ImplicitCastExpr 0x7f8715036dc8 <col:31> 'Agdesc_t':'struct Agdesc_s' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f8715036c58 <col:31> 'Agdesc_t':'struct Agdesc_s' lvalue Var 0x7f871502ada8 'Agstrictdirected' 'Agdesc_t':'struct Agdesc_s'
+|   |     `-ParenExpr 0x7f8715036cd8 <col:49, col:64> 'Agdisc_t *'
+|   |       `-CStyleCastExpr 0x7f8715036cb0 <col:50, col:63> 'Agdisc_t *' <NullToPointer>
+|   |         `-IntegerLiteral 0x7f8715036c80 <col:63> 'int' 0
+|   |-ForStmt 0x7f8715037bb0 <line:155:3, line:165:4>
+|   | |-BinaryOperator 0x7f8715036f60 <line:155:8, col:37> 'nitem *' '='
+|   | | |-DeclRefExpr 0x7f8715036df8 <col:8> 'nitem *' lvalue Var 0x7f87150369c8 'p' 'nitem *'
+|   | | `-CStyleCastExpr 0x7f8715036f38 <col:12, col:37> 'nitem *' <BitCast>
+|   | |   `-CallExpr 0x7f8715036ee0 <col:22, col:37> 'Dtlink_t *'
+|   | |     |-ImplicitCastExpr 0x7f8715036ec8 <col:22> 'Dtlink_t *(*)(Dt_t *)' <FunctionToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7f8715036e20 <col:22> 'Dtlink_t *(Dt_t *)' Function 0x7f8715028710 'dtflatten' 'Dtlink_t *(Dt_t *)'
+|   | |     `-ImplicitCastExpr 0x7f8715036f10 <col:33> 'Dt_t *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8715036e48 <col:33> 'Dt_t *' lvalue ParmVar 0x7f87150366b8 'list' 'Dt_t *'
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f8715036fb0 <col:40> 'nitem *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f8715036f88 <col:40> 'nitem *' lvalue Var 0x7f87150369c8 'p' 'nitem *'
+|   | |-BinaryOperator 0x7f87150371e8 <line:156:8, col:61> 'nitem *' '='
+|   | | |-DeclRefExpr 0x7f8715036fc8 <col:8> 'nitem *' lvalue Var 0x7f87150369c8 'p' 'nitem *'
+|   | | `-CStyleCastExpr 0x7f87150371c0 <col:12, col:61> 'nitem *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f87150371a8 <col:22, col:61> 'Dtlink_t *' <LValueToRValue>
+|   | |     `-ParenExpr 0x7f8715037188 <col:22, col:61> 'Dtlink_t *' lvalue
+|   | |       `-MemberExpr 0x7f8715037110 <col:23, col:56> 'Dtlink_t *' lvalue ->right 0x7f8715027c98
+|   | |         `-ParenExpr 0x7f87150370f0 <col:23, col:53> 'Dtlink_t *'
+|   | |           `-CStyleCastExpr 0x7f87150370c8 <col:24, col:52> 'Dtlink_t *' <NoOp>
+|   | |             `-ParenExpr 0x7f87150370a8 <col:37, col:52> 'Dtlink_t *'
+|   | |               `-CStyleCastExpr 0x7f8715037040 <col:38, col:51> 'Dtlink_t *' <BitCast>
+|   | |                 `-ImplicitCastExpr 0x7f8715037028 <col:51> 'nitem *' <LValueToRValue>
+|   | |                   `-DeclRefExpr 0x7f8715036ff0 <col:51> 'nitem *' lvalue Var 0x7f87150369c8 'p' 'nitem *'
+|   | `-CompoundStmt 0x7f8715037b90 <line:157:5, line:165:4>
+|   |   `-ForStmt 0x7f8715037b58 <line:158:7, line:165:3>
+|   |     |-BinaryOperator 0x7f8715037440 <line:158:12, col:67> 'nitem *' '='
+|   |     | |-DeclRefExpr 0x7f8715037210 <col:12> 'nitem *' lvalue Var 0x7f8715036a50 'nxp' 'nitem *'
+|   |     | `-CStyleCastExpr 0x7f8715037418 <col:18, col:67> 'nitem *' <BitCast>
+|   |     |   `-ImplicitCastExpr 0x7f8715037400 <col:28, col:67> 'Dtlink_t *' <LValueToRValue>
+|   |     |     `-ParenExpr 0x7f87150373d0 <col:28, col:67> 'Dtlink_t *' lvalue
+|   |     |       `-MemberExpr 0x7f8715037358 <col:29, col:62> 'Dtlink_t *' lvalue ->right 0x7f8715027c98
+|   |     |         `-ParenExpr 0x7f8715037338 <col:29, col:59> 'Dtlink_t *'
+|   |     |           `-CStyleCastExpr 0x7f8715037310 <col:30, col:58> 'Dtlink_t *' <NoOp>
+|   |     |             `-ParenExpr 0x7f87150372f0 <col:43, col:58> 'Dtlink_t *'
+|   |     |               `-CStyleCastExpr 0x7f8715037288 <col:44, col:57> 'Dtlink_t *' <BitCast>
+|   |     |                 `-ImplicitCastExpr 0x7f8715037270 <col:57> 'nitem *' <LValueToRValue>
+|   |     |                   `-DeclRefExpr 0x7f8715037238 <col:57> 'nitem *' lvalue Var 0x7f87150369c8 'p' 'nitem *'
+|   |     |-<<<NULL>>>
+|   |     |-ImplicitCastExpr 0x7f8715037490 <col:70> 'nitem *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f8715037468 <col:70> 'nitem *' lvalue Var 0x7f8715036a50 'nxp' 'nitem *'
+|   |     |-BinaryOperator 0x7f87150376c8 <line:159:5, col:62> 'nitem *' '='
+|   |     | |-DeclRefExpr 0x7f87150374a8 <col:5> 'nitem *' lvalue Var 0x7f8715036a50 'nxp' 'nitem *'
+|   |     | `-CStyleCastExpr 0x7f87150376a0 <col:11, col:62> 'nitem *' <BitCast>
+|   |     |   `-ImplicitCastExpr 0x7f8715037688 <col:21, col:62> 'Dtlink_t *' <LValueToRValue>
+|   |     |     `-ParenExpr 0x7f8715037668 <col:21, col:62> 'Dtlink_t *' lvalue
+|   |     |       `-MemberExpr 0x7f87150375f0 <col:22, col:57> 'Dtlink_t *' lvalue ->right 0x7f8715027c98
+|   |     |         `-ParenExpr 0x7f87150375d0 <col:22, col:54> 'Dtlink_t *'
+|   |     |           `-CStyleCastExpr 0x7f87150375a8 <col:23, col:53> 'Dtlink_t *' <NoOp>
+|   |     |             `-ParenExpr 0x7f8715037588 <col:36, col:53> 'Dtlink_t *'
+|   |     |               `-CStyleCastExpr 0x7f8715037520 <col:37, col:50> 'Dtlink_t *' <BitCast>
+|   |     |                 `-ImplicitCastExpr 0x7f8715037508 <col:50> 'nitem *' <LValueToRValue>
+|   |     |                   `-DeclRefExpr 0x7f87150374d0 <col:50> 'nitem *' lvalue Var 0x7f8715036a50 'nxp' 'nitem *'
+|   |     `-CompoundStmt 0x7f8715037b38 <line:160:2, line:165:3>
+|   |       `-IfStmt 0x7f8715037b00 <line:161:4, line:164:6>
+|   |         |-<<<NULL>>>
+|   |         |-<<<NULL>>>
+|   |         |-CallExpr 0x7f8715037780 <line:161:8, col:25> 'int'
+|   |         | |-ImplicitCastExpr 0x7f8715037768 <col:8> 'intersectfn':'int (*)(nitem *, nitem *)' <LValueToRValue>
+|   |         | | `-DeclRefExpr 0x7f87150376f0 <col:8> 'intersectfn':'int (*)(nitem *, nitem *)' lvalue ParmVar 0x7f8715036750 'intersect' 'intersectfn':'int (*)(nitem *, nitem *)'
+|   |         | |-ImplicitCastExpr 0x7f87150377b8 <col:19> 'nitem *' <LValueToRValue>
+|   |         | | `-DeclRefExpr 0x7f8715037718 <col:19> 'nitem *' lvalue Var 0x7f87150369c8 'p' 'nitem *'
+|   |         | `-ImplicitCastExpr 0x7f87150377d0 <col:22> 'nitem *' <LValueToRValue>
+|   |         |   `-DeclRefExpr 0x7f8715037740 <col:22> 'nitem *' lvalue Var 0x7f8715036a50 'nxp' 'nitem *'
+|   |         |-CompoundStmt 0x7f8715037ae0 <line:162:6, line:164:6>
+|   |         | `-BinaryOperator 0x7f8715037ab8 <line:163:8, col:61> 'edge_t *' '='
+|   |         |   |-DeclRefExpr 0x7f87150377e8 <col:8> 'edge_t *' lvalue Var 0x7f8715036ad8 'e' 'edge_t *'
+|   |         |   `-CallExpr 0x7f8715037a08 <col:12, col:61> 'Agedge_t *'
+|   |         |     |-ImplicitCastExpr 0x7f87150379f0 <col:12> 'Agedge_t *(*)(Agraph_t *, Agnode_t *, Agnode_t *, char *, int)' <FunctionToPointerDecay>
+|   |         |     | `-DeclRefExpr 0x7f8715037810 <col:12> 'Agedge_t *(Agraph_t *, Agnode_t *, Agnode_t *, char *, int)' Function 0x7f871502a7f0 'agedge' 'Agedge_t *(Agraph_t *, Agnode_t *, Agnode_t *, char *, int)'
+|   |         |     |-ImplicitCastExpr 0x7f8715037a58 <col:20> 'graph_t *' <LValueToRValue>
+|   |         |     | `-DeclRefExpr 0x7f8715037838 <col:20> 'graph_t *' lvalue Var 0x7f8715036b60 'cg' 'graph_t *'
+|   |         |     |-ImplicitCastExpr 0x7f8715037a70 <col:24, col:27> 'node_t *' <LValueToRValue>
+|   |         |     | `-MemberExpr 0x7f87150378a0 <col:24, col:27> 'node_t *' lvalue ->cnode 0x7f871502ccc8
+|   |         |     |   `-ImplicitCastExpr 0x7f8715037888 <col:24> 'nitem *' <LValueToRValue>
+|   |         |     |     `-DeclRefExpr 0x7f8715037860 <col:24> 'nitem *' lvalue Var 0x7f87150369c8 'p' 'nitem *'
+|   |         |     |-ImplicitCastExpr 0x7f8715037a88 <col:34, col:39> 'node_t *' <LValueToRValue>
+|   |         |     | `-MemberExpr 0x7f8715037918 <col:34, col:39> 'node_t *' lvalue ->cnode 0x7f871502ccc8
+|   |         |     |   `-ImplicitCastExpr 0x7f8715037900 <col:34> 'nitem *' <LValueToRValue>
+|   |         |     |     `-DeclRefExpr 0x7f87150378d8 <col:34> 'nitem *' lvalue Var 0x7f8715036a50 'nxp' 'nitem *'
+|   |         |     |-ImplicitCastExpr 0x7f8715037aa0 <col:46, col:57> 'char *' <NullToPointer>
+|   |         |     | `-ParenExpr 0x7f87150379b0 <col:46, col:57> 'void *'
+|   |         |     |   `-CStyleCastExpr 0x7f8715037988 <col:47, col:56> 'void *' <NullToPointer>
+|   |         |     |     `-IntegerLiteral 0x7f8715037950 <col:56> 'int' 0
+|   |         |     `-IntegerLiteral 0x7f87150379d0 <col:60> 'int' 1
+|   |         `-<<<NULL>>>
+|   `-ForStmt 0x7f8715037fc0 <line:165:6, line:168:5>
+|     |-BinaryOperator 0x7f8715037cf8 <line:165:11, col:40> 'nitem *' '='
+|     | |-DeclRefExpr 0x7f8715037be8 <col:11> 'nitem *' lvalue Var 0x7f87150369c8 'p' 'nitem *'
+|     | `-CStyleCastExpr 0x7f8715037cd0 <col:15, col:40> 'nitem *' <BitCast>
+|     |   `-CallExpr 0x7f8715037c78 <col:25, col:40> 'Dtlink_t *'
+|     |     |-ImplicitCastExpr 0x7f8715037c60 <col:25> 'Dtlink_t *(*)(Dt_t *)' <FunctionToPointerDecay>
+|     |     | `-DeclRefExpr 0x7f8715037c10 <col:25> 'Dtlink_t *(Dt_t *)' Function 0x7f8715028710 'dtflatten' 'Dtlink_t *(Dt_t *)'
+|     |     `-ImplicitCastExpr 0x7f8715037ca8 <col:36> 'Dt_t *' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7f8715037c38 <col:36> 'Dt_t *' lvalue ParmVar 0x7f87150366b8 'list' 'Dt_t *'
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7f8715037d48 <col:43> 'nitem *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f8715037d20 <col:43> 'nitem *' lvalue Var 0x7f87150369c8 'p' 'nitem *'
+|     |-BinaryOperator 0x7f8715037f80 <line:166:6, col:59> 'nitem *' '='
+|     | |-DeclRefExpr 0x7f8715037d60 <col:6> 'nitem *' lvalue Var 0x7f87150369c8 'p' 'nitem *'
+|     | `-CStyleCastExpr 0x7f8715037f58 <col:10, col:59> 'nitem *' <BitCast>
+|     |   `-ImplicitCastExpr 0x7f8715037f40 <col:20, col:59> 'Dtlink_t *' <LValueToRValue>
+|     |     `-ParenExpr 0x7f8715037f20 <col:20, col:59> 'Dtlink_t *' lvalue
+|     |       `-MemberExpr 0x7f8715037ea8 <col:21, col:54> 'Dtlink_t *' lvalue ->right 0x7f8715027c98
+|     |         `-ParenExpr 0x7f8715037e88 <col:21, col:51> 'Dtlink_t *'
+|     |           `-CStyleCastExpr 0x7f8715037e60 <col:22, col:50> 'Dtlink_t *' <NoOp>
+|     |             `-ParenExpr 0x7f8715037e40 <col:35, col:50> 'Dtlink_t *'
+|     |               `-CStyleCastExpr 0x7f8715037dd8 <col:36, col:49> 'Dtlink_t *' <BitCast>
+|     |                 `-ImplicitCastExpr 0x7f8715037dc0 <col:49> 'nitem *' <LValueToRValue>
+|     |                   `-DeclRefExpr 0x7f8715037d88 <col:49> 'nitem *' lvalue Var 0x7f87150369c8 'p' 'nitem *'
+|     `-CompoundStmt 0x7f8715037fa8 <line:167:5, line:168:5>
+|-FunctionDecl 0x7f8715038240 <line:171:1, line:177:1> line:172:1 used mkConstraintG 'graph_t *(graph_t *, Dt_t *, intersectfn, distfn)' static
+| |-ParmVarDecl 0x7f8715038050 <col:16, col:26> col:26 g 'graph_t *'
+| |-ParmVarDecl 0x7f87150380c0 <col:29, col:36> col:36 list 'Dt_t *'
+| |-ParmVarDecl 0x7f8715038130 <col:42, col:54> col:54 intersect 'intersectfn':'int (*)(nitem *, nitem *)'
+| |-ParmVarDecl 0x7f87150381a0 <col:65, col:72> col:72 used dist 'distfn':'int (*)(box *, box *)'
+| `-CompoundStmt 0x7f8715039738 <line:173:1, line:177:1>
+|   |-DeclStmt 0x7f8715038368 <line:174:3, col:14>
+|   | `-VarDecl 0x7f8715038308 <col:3, col:12> col:12 used vg 'graph_t *'
+|   |-DeclStmt 0x7f8715039580 <line:175:3, col:66>
+|   | `-VarDecl 0x7f8715038390 <col:3, col:65> col:12 used cg 'graph_t *' cinit
+|   |   `-CallExpr 0x7f8715039510 <col:17, col:65> 'Agraph_t *'
+|   |     |-ImplicitCastExpr 0x7f87150394f8 <col:17> 'Agraph_t *(*)(char *, Agdesc_t, Agdisc_t *)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f8715039400 <col:17> 'Agraph_t *(char *, Agdesc_t, Agdisc_t *)' Function 0x7f8715029700 'agopen' 'Agraph_t *(char *, Agdesc_t, Agdisc_t *)'
+|   |     |-ImplicitCastExpr 0x7f8715039550 <col:25> 'char *' <ArrayToPointerDecay>
+|   |     | `-StringLiteral 0x7f8715039428 <col:25> 'char [3]' lvalue "cg"
+|   |     |-ImplicitCastExpr 0x7f8715039568 <col:31> 'Agdesc_t':'struct Agdesc_s' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f8715039458 <col:31> 'Agdesc_t':'struct Agdesc_s' lvalue Var 0x7f871502ada8 'Agstrictdirected' 'Agdesc_t':'struct Agdesc_s'
+|   |     `-ParenExpr 0x7f87150394d8 <col:49, col:64> 'Agdisc_t *'
+|   |       `-CStyleCastExpr 0x7f87150394b0 <col:50, col:63> 'Agdisc_t *' <NullToPointer>
+|   |         `-IntegerLiteral 0x7f8715039480 <col:63> 'int' 0
+|   `-CallExpr 0x7f87150396b0 <line:176:3, col:26> 'void'
+|     |-ImplicitCastExpr 0x7f8715039698 <col:3> 'void (*)(graph_t *, graph_t *, distfn)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f8715039598 <col:3> 'void (graph_t *, graph_t *, distfn)' Function 0x7f8715034d00 'mapGraphs' 'void (graph_t *, graph_t *, distfn)'
+|     |-ImplicitCastExpr 0x7f87150396f0 <col:14> 'graph_t *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f87150395c0 <col:14> 'graph_t *' lvalue Var 0x7f8715038308 'vg' 'graph_t *'
+|     |-ImplicitCastExpr 0x7f8715039708 <col:18> 'graph_t *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f87150395e8 <col:18> 'graph_t *' lvalue Var 0x7f8715038390 'cg' 'graph_t *'
+|     `-ImplicitCastExpr 0x7f8715039720 <col:22> 'distfn':'int (*)(box *, box *)' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8715039610 <col:22> 'distfn':'int (*)(box *, box *)' lvalue ParmVar 0x7f87150381a0 'dist' 'distfn':'int (*)(box *, box *)'
+|-FunctionDecl 0x7f8715039ab0 <line:179:1, line:195:1> line:180:1 used constrainX 'void (graph_t *, nitem *, int, intersectfn, int)' static
+| |-ParmVarDecl 0x7f8715039778 <col:13, col:23> col:23 used g 'graph_t *'
+| |-ParmVarDecl 0x7f87150397e8 <col:26, col:34> col:34 used nlist 'nitem *'
+| |-ParmVarDecl 0x7f8715039860 <col:41, col:45> col:45 used nnodes 'int'
+| |-ParmVarDecl 0x7f87150398d0 <col:53, col:65> col:65 used ifn 'intersectfn':'int (*)(nitem *, nitem *)'
+| |-ParmVarDecl 0x7f8715039948 <line:181:6, col:10> col:10 used ortho 'int'
+| `-CompoundStmt 0x7f8715038928 <line:182:1, line:195:1>
+|   |-DeclStmt 0x7f8715039d40 <line:183:3, col:40>
+|   | `-VarDecl 0x7f8715039b80 <col:3, col:39> col:9 used list 'Dt_t *' cinit
+|   |   `-CallExpr 0x7f8715039cf0 <col:16, col:39> 'Dt_t *'
+|   |     |-ImplicitCastExpr 0x7f8715039cd8 <col:16> 'Dt_t *(*)(Dtdisc_t *, Dtmethod_t *)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f8715039be0 <col:16> 'Dt_t *(Dtdisc_t *, Dtmethod_t *)' Function 0x7f8715028550 'dtopen' 'Dt_t *(Dtdisc_t *, Dtmethod_t *)'
+|   |     |-UnaryOperator 0x7f8715039c30 <col:24, col:25> 'Dtdisc_t *' prefix '&'
+|   |     | `-DeclRefExpr 0x7f8715039c08 <col:25> 'Dtdisc_t':'struct _dtdisc_s' lvalue Var 0x7f8715032ea8 'constr' 'Dtdisc_t':'struct _dtdisc_s'
+|   |     `-ImplicitCastExpr 0x7f8715039d28 <col:33> 'Dtmethod_t *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f8715039c50 <col:33> 'Dtmethod_t *' lvalue Var 0x7f8715028318 'Dtobag' 'Dtmethod_t *'
+|   |-DeclStmt 0x7f8715039e08 <line:184:3, col:19>
+|   | `-VarDecl 0x7f8715039d68 <col:3, col:14> col:10 used p 'nitem *' cinit
+|   |   `-ImplicitCastExpr 0x7f8715039df0 <col:14> 'nitem *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8715039dc8 <col:14> 'nitem *' lvalue ParmVar 0x7f87150397e8 'nlist' 'nitem *'
+|   |-DeclStmt 0x7f8715039e90 <line:185:3, col:14>
+|   | `-VarDecl 0x7f8715039e30 <col:3, col:12> col:12 used cg 'graph_t *'
+|   |-DeclStmt 0x7f8715039f20 <line:186:3, col:8>
+|   | `-VarDecl 0x7f8715039ec0 <col:3, col:7> col:7 used i 'int'
+|   |-ForStmt 0x7f8715038448 <line:187:3, line:191:3>
+|   | |-BinaryOperator 0x7f8715039f80 <line:187:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7f8715039f38 <col:8> 'int' lvalue Var 0x7f8715039ec0 'i' 'int'
+|   | | `-IntegerLiteral 0x7f8715039f60 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f871503a028 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f8715039ff8 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f8715039fa8 <col:15> 'int' lvalue Var 0x7f8715039ec0 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7f871503a010 <col:19> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8715039fd0 <col:19> 'int' lvalue ParmVar 0x7f8715039860 'nnodes' 'int'
+|   | |-UnaryOperator 0x7f871503a078 <col:27, col:28> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f871503a050 <col:27> 'int' lvalue Var 0x7f8715039ec0 'i' 'int'
+|   | `-CompoundStmt 0x7f8715038420 <line:188:5, line:191:3>
+|   |   |-CallExpr 0x7f871503a380 <line:189:7, col:69> 'void *'
+|   |   | |-ImplicitCastExpr 0x7f871503a368 <col:7, col:37> 'void *(*)(Dt_t *, void *, int)' <FunctionToPointerDecay>
+|   |   | | `-ParenExpr 0x7f871503a210 <col:7, col:37> 'void *(Dt_t *, void *, int)':'void *(Dt_t *, void *, int)'
+|   |   | |   `-UnaryOperator 0x7f871503a1f0 <col:8, col:36> 'void *(Dt_t *, void *, int)':'void *(Dt_t *, void *, int)' prefix '*'
+|   |   | |     `-ImplicitCastExpr 0x7f871503a1d8 <col:9, col:36> 'Dtsearch_f':'void *(*)(Dt_t *, void *, int)' <LValueToRValue>
+|   |   | |       `-ParenExpr 0x7f871503a1b8 <col:9, col:36> 'Dtsearch_f':'void *(*)(Dt_t *, void *, int)' lvalue
+|   |   | |         `-MemberExpr 0x7f871503a180 <col:10, col:29> 'Dtsearch_f':'void *(*)(Dt_t *, void *, int)' lvalue ->searchf 0x7f8715028240
+|   |   | |           `-ParenExpr 0x7f871503a160 <col:10, col:26> 'Dt_t *'
+|   |   | |             `-CStyleCastExpr 0x7f871503a138 <col:11, col:25> 'Dt_t *' <NoOp>
+|   |   | |               `-ImplicitCastExpr 0x7f871503a120 <col:20, col:25> 'Dt_t *' <LValueToRValue>
+|   |   | |                 `-ParenExpr 0x7f871503a100 <col:20, col:25> 'Dt_t *' lvalue
+|   |   | |                   `-DeclRefExpr 0x7f871503a098 <col:21> 'Dt_t *' lvalue Var 0x7f8715039b80 'list' 'Dt_t *'
+|   |   | |-ImplicitCastExpr 0x7f871503a3c0 <col:40, col:45> 'Dt_t *' <LValueToRValue>
+|   |   | | `-ParenExpr 0x7f871503a258 <col:40, col:45> 'Dt_t *' lvalue
+|   |   | |   `-DeclRefExpr 0x7f871503a230 <col:41> 'Dt_t *' lvalue Var 0x7f8715039b80 'list' 'Dt_t *'
+|   |   | |-CStyleCastExpr 0x7f871503a320 <col:48, col:59> 'void *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7f871503a308 <col:57, col:59> 'nitem *' <LValueToRValue>
+|   |   | |   `-ParenExpr 0x7f871503a2e8 <col:57, col:59> 'nitem *' lvalue
+|   |   | |     `-DeclRefExpr 0x7f871503a278 <col:58> 'nitem *' lvalue Var 0x7f8715039d68 'p' 'nitem *'
+|   |   | `-IntegerLiteral 0x7f871503a348 <col:62> 'int' 1
+|   |   `-UnaryOperator 0x7f8715038400 <line:190:7, col:8> 'nitem *' postfix '++'
+|   |     `-DeclRefExpr 0x7f871503a3d8 <col:7> 'nitem *' lvalue Var 0x7f8715039d68 'p' 'nitem *'
+|   `-IfStmt 0x7f87150388f0 <line:191:5, line:194:45>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7f87150384a8 <line:191:9> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f8715038480 <col:9> 'int' lvalue ParmVar 0x7f8715039948 'ortho' 'int'
+|     |-BinaryOperator 0x7f87150386f0 <line:192:5, col:44> 'graph_t *' '='
+|     | |-DeclRefExpr 0x7f87150384c0 <col:5> 'graph_t *' lvalue Var 0x7f8715039e30 'cg' 'graph_t *'
+|     | `-CallExpr 0x7f8715038620 <col:10, col:44> 'graph_t *'
+|     |   |-ImplicitCastExpr 0x7f8715038608 <col:10> 'graph_t *(*)(graph_t *, Dt_t *, intersectfn, distfn)' <FunctionToPointerDecay>
+|     |   | `-DeclRefExpr 0x7f87150384e8 <col:10> 'graph_t *(graph_t *, Dt_t *, intersectfn, distfn)' Function 0x7f8715038240 'mkConstraintG' 'graph_t *(graph_t *, Dt_t *, intersectfn, distfn)'
+|     |   |-ImplicitCastExpr 0x7f8715038668 <col:25> 'graph_t *' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7f8715038510 <col:25> 'graph_t *' lvalue ParmVar 0x7f8715039778 'g' 'graph_t *'
+|     |   |-ImplicitCastExpr 0x7f8715038680 <col:28> 'Dt_t *' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7f8715038538 <col:28> 'Dt_t *' lvalue Var 0x7f8715039b80 'list' 'Dt_t *'
+|     |   |-ImplicitCastExpr 0x7f8715038698 <col:34> 'intersectfn':'int (*)(nitem *, nitem *)' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7f8715038560 <col:34> 'intersectfn':'int (*)(nitem *, nitem *)' lvalue ParmVar 0x7f87150398d0 'ifn' 'intersectfn':'int (*)(nitem *, nitem *)'
+|     |   `-ImplicitCastExpr 0x7f87150386d8 <col:39> 'int (*)(box *, box *)' <FunctionToPointerDecay>
+|     |     `-DeclRefExpr 0x7f8715038588 <col:39> 'int (box *, box *)' Function 0x7f8715034648 'distX' 'int (box *, box *)'
+|     `-BinaryOperator 0x7f87150388c8 <line:194:5, col:45> 'graph_t *' '='
+|       |-DeclRefExpr 0x7f8715038718 <col:5> 'graph_t *' lvalue Var 0x7f8715039e30 'cg' 'graph_t *'
+|       `-CallExpr 0x7f8715038820 <col:10, col:45> 'graph_t *'
+|         |-ImplicitCastExpr 0x7f8715038808 <col:10> 'graph_t *(*)(graph_t *, Dt_t *, intersectfn, distfn)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7f8715038740 <col:10> 'graph_t *(graph_t *, Dt_t *, intersectfn, distfn)' Function 0x7f8715036900 'mkNConstraintG' 'graph_t *(graph_t *, Dt_t *, intersectfn, distfn)'
+|         |-ImplicitCastExpr 0x7f8715038868 <col:26> 'graph_t *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f8715038768 <col:26> 'graph_t *' lvalue ParmVar 0x7f8715039778 'g' 'graph_t *'
+|         |-ImplicitCastExpr 0x7f8715038880 <col:29> 'Dt_t *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f8715038790 <col:29> 'Dt_t *' lvalue Var 0x7f8715039b80 'list' 'Dt_t *'
+|         |-ImplicitCastExpr 0x7f8715038898 <col:35> 'intersectfn':'int (*)(nitem *, nitem *)' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f87150387b8 <col:35> 'intersectfn':'int (*)(nitem *, nitem *)' lvalue ParmVar 0x7f87150398d0 'ifn' 'intersectfn':'int (*)(nitem *, nitem *)'
+|         `-ImplicitCastExpr 0x7f87150388b0 <col:40> 'int (*)(box *, box *)' <FunctionToPointerDecay>
+|           `-DeclRefExpr 0x7f87150387e0 <col:40> 'int (box *, box *)' Function 0x7f8715034648 'distX' 'int (box *, box *)'
+`-FunctionDecl 0x7f8715038b18 <line:197:1, line:220:1> line:198:1 cAdjust 'int (graph_t *, int)'
+  |-ParmVarDecl 0x7f8715038980 <col:10, col:20> col:20 used g 'graph_t *'
+  |-ParmVarDecl 0x7f87150389f8 <col:23, col:27> col:27 used mode 'int'
+  `-CompoundStmt 0x7f871503afd8 <line:199:1, line:220:1>
+    |-DeclStmt 0x7f8715038e58 <line:200:3, col:36>
+    | |-VarDecl 0x7f8715038bd8 <col:3, col:7> col:7 ret 'int'
+    | |-VarDecl 0x7f8715038c50 <col:3, col:12> col:12 i 'int'
+    | `-VarDecl 0x7f8715038cc8 <col:3, col:35> col:15 used nnodes 'int' cinit
+    |   `-CallExpr 0x7f8715038df0 <col:24, col:35> 'int'
+    |     |-ImplicitCastExpr 0x7f8715038dd8 <col:24> 'int (*)(graph_t *)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f8715038d28 <col:24> 'int (graph_t *)' Function 0x7f87150327f8 'agnnodes' 'int (graph_t *)'
+    |     `-ImplicitCastExpr 0x7f8715038e20 <col:34> 'graph_t *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f8715038d50 <col:34> 'graph_t *' lvalue ParmVar 0x7f8715038980 'g' 'graph_t *'
+    |-DeclStmt 0x7f87150390b8 <line:201:3, col:63>
+    | `-VarDecl 0x7f8715038e80 <col:3, col:62> col:10 used nlist 'nitem *' cinit
+    |   `-CStyleCastExpr 0x7f8715039090 <col:18, col:62> 'nitem *' <BitCast>
+    |     `-CallExpr 0x7f8715039050 <col:28, col:62> 'void *'
+    |       |-ImplicitCastExpr 0x7f8715039038 <col:28> 'void *(*)(size_t)' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7f8715038ee0 <col:28> 'void *(size_t)' Function 0x7f871502c388 'gmalloc' 'void *(size_t)'
+    |       `-BinaryOperator 0x7f8715038fb0 <col:37, col:61> 'unsigned long' '*'
+    |         |-ImplicitCastExpr 0x7f8715038f98 <col:37, col:44> 'unsigned long' <IntegralCast>
+    |         | `-ImplicitCastExpr 0x7f8715038f80 <col:37, col:44> 'int' <LValueToRValue>
+    |         |   `-ParenExpr 0x7f8715038f30 <col:37, col:44> 'int' lvalue
+    |         |     `-DeclRefExpr 0x7f8715038f08 <col:38> 'int' lvalue Var 0x7f8715038cc8 'nnodes' 'int'
+    |         `-UnaryExprOrTypeTraitExpr 0x7f8715038f60 <col:48, col:61> 'unsigned long' sizeof 'nitem':'struct nitem'
+    |-DeclStmt 0x7f8715039140 <line:202:3, col:12>
+    | `-VarDecl 0x7f87150390e0 <col:3, col:11> col:11 used n 'node_t *'
+    |-ForStmt 0x7f871503a400 <line:203:3, line:205:5>
+    | |-BinaryOperator 0x7f8715039230 <line:203:8, col:24> 'node_t *' '='
+    | | |-DeclRefExpr 0x7f8715039158 <col:8> 'node_t *' lvalue Var 0x7f87150390e0 'n' 'node_t *'
+    | | `-CallExpr 0x7f87150391e8 <col:12, col:24> 'Agnode_t *'
+    | |   |-ImplicitCastExpr 0x7f87150391d0 <col:12> 'Agnode_t *(*)(Agraph_t *)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7f8715039180 <col:12> 'Agnode_t *(Agraph_t *)' Function 0x7f8715029940 'agfstnode' 'Agnode_t *(Agraph_t *)'
+    | |   `-ImplicitCastExpr 0x7f8715039218 <col:23> 'graph_t *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f87150391a8 <col:23> 'graph_t *' lvalue ParmVar 0x7f8715038980 'g' 'graph_t *'
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f8715039280 <col:27> 'node_t *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f8715039258 <col:27> 'node_t *' lvalue Var 0x7f87150390e0 'n' 'node_t *'
+    | |-BinaryOperator 0x7f87150393b8 <col:30, col:49> 'node_t *' '='
+    | | |-DeclRefExpr 0x7f8715039298 <col:30> 'node_t *' lvalue Var 0x7f87150390e0 'n' 'node_t *'
+    | | `-CallExpr 0x7f8715039350 <col:34, col:49> 'Agnode_t *'
+    | |   |-ImplicitCastExpr 0x7f8715039338 <col:34> 'Agnode_t *(*)(Agraph_t *, Agnode_t *)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7f87150392c0 <col:34> 'Agnode_t *(Agraph_t *, Agnode_t *)' Function 0x7f871502a380 'agnxtnode' 'Agnode_t *(Agraph_t *, Agnode_t *)'
+    | |   |-ImplicitCastExpr 0x7f8715039388 <col:45> 'graph_t *' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7f87150392e8 <col:45> 'graph_t *' lvalue ParmVar 0x7f8715038980 'g' 'graph_t *'
+    | |   `-ImplicitCastExpr 0x7f87150393a0 <col:48> 'node_t *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f8715039310 <col:48> 'node_t *' lvalue Var 0x7f87150390e0 'n' 'node_t *'
+    | `-CompoundStmt 0x7f87150393e0 <line:204:5, line:205:5>
+    `-IfStmt 0x7f871503afa0 <line:206:3, line:219:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-CallExpr 0x7f871503a520 <line:206:7, col:30> 'int'
+      | |-ImplicitCastExpr 0x7f871503a508 <col:7> 'int (*)(nitem *, int)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7f871503a438 <col:7> 'int (nitem *, int)' Function 0x7f8715032a38 'overlaps' 'int (nitem *, int)'
+      | |-ImplicitCastExpr 0x7f871503a558 <col:17> 'nitem *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f871503a460 <col:17> 'nitem *' lvalue Var 0x7f8715038e80 'nlist' 'nitem *'
+      | `-ImplicitCastExpr 0x7f871503a570 <col:24> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f871503a488 <col:24> 'int' lvalue Var 0x7f8715038cc8 'nnodes' 'int'
+      |-CompoundStmt 0x7f871503af80 <line:207:5, line:219:5>
+      | `-SwitchStmt 0x7f871503a640 <line:208:7, line:218:2>
+      |   |-<<<NULL>>>
+      |   |-<<<NULL>>>
+      |   |-ImplicitCastExpr 0x7f871503a628 <line:208:15, col:29> 'unsigned int' <IntegralCast>
+      |   | `-CStyleCastExpr 0x7f871503a600 <col:15, col:29> 'adjust_mode':'adjust_mode' <IntegralCast>
+      |   |   `-ImplicitCastExpr 0x7f871503a5e8 <col:29> 'int' <LValueToRValue>
+      |   |     `-DeclRefExpr 0x7f871503a5b0 <col:29> 'int' lvalue ParmVar 0x7f87150389f8 'mode' 'int'
+      |   `-CompoundStmt 0x7f871503af00 <line:209:2, line:218:2>
+      |     |-CaseStmt 0x7f871503a698 <line:210:2, line:211:47>
+      |     | |-ImplicitCastExpr 0x7f871503af68 <line:210:7> 'unsigned int' <IntegralCast>
+      |     | | `-DeclRefExpr 0x7f871503a670 <col:7> 'int' EnumConstant 0x7f871502c768 'AM_ORTHOXY' 'int'
+      |     | |-<<<NULL>>>
+      |     | `-CallExpr 0x7f871503a830 <line:211:4, col:47> 'void'
+      |     |   |-ImplicitCastExpr 0x7f871503a818 <col:4> 'void (*)(graph_t *, nitem *, int, intersectfn, int)' <FunctionToPointerDecay>
+      |     |   | `-DeclRefExpr 0x7f871503a6d0 <col:4> 'void (graph_t *, nitem *, int, intersectfn, int)' Function 0x7f8715039ab0 'constrainX' 'void (graph_t *, nitem *, int, intersectfn, int)'
+      |     |   |-ImplicitCastExpr 0x7f871503a880 <col:16> 'graph_t *' <LValueToRValue>
+      |     |   | `-DeclRefExpr 0x7f871503a6f8 <col:16> 'graph_t *' lvalue ParmVar 0x7f8715038980 'g' 'graph_t *'
+      |     |   |-ImplicitCastExpr 0x7f871503a898 <col:19> 'nitem *' <LValueToRValue>
+      |     |   | `-DeclRefExpr 0x7f871503a720 <col:19> 'nitem *' lvalue Var 0x7f8715038e80 'nlist' 'nitem *'
+      |     |   |-ImplicitCastExpr 0x7f871503a8b0 <col:26> 'int' <LValueToRValue>
+      |     |   | `-DeclRefExpr 0x7f871503a748 <col:26> 'int' lvalue Var 0x7f8715038cc8 'nnodes' 'int'
+      |     |   |-ImplicitCastExpr 0x7f871503a8f8 <col:34> 'int (*)(nitem *, nitem *)' <FunctionToPointerDecay>
+      |     |   | `-DeclRefExpr 0x7f871503a770 <col:34> 'int (nitem *, nitem *)' Function 0x7f87150349f8 'intersectY' 'int (nitem *, nitem *)'
+      |     |   `-IntegerLiteral 0x7f871503a798 <col:46> 'int' 1
+      |     |-CaseStmt 0x7f871503a938 <line:212:2, line:213:48>
+      |     | |-ImplicitCastExpr 0x7f871503af50 <line:212:7> 'unsigned int' <IntegralCast>
+      |     | | `-DeclRefExpr 0x7f871503a910 <col:7> 'int' EnumConstant 0x7f871502c6d8 'AM_ORTHO' 'int'
+      |     | |-<<<NULL>>>
+      |     | `-CallExpr 0x7f871503aa70 <line:213:4, col:48> 'void'
+      |     |   |-ImplicitCastExpr 0x7f871503aa58 <col:4> 'void (*)(graph_t *, nitem *, int, intersectfn, int)' <FunctionToPointerDecay>
+      |     |   | `-DeclRefExpr 0x7f871503a970 <col:4> 'void (graph_t *, nitem *, int, intersectfn, int)' Function 0x7f8715039ab0 'constrainX' 'void (graph_t *, nitem *, int, intersectfn, int)'
+      |     |   |-ImplicitCastExpr 0x7f871503aac0 <col:16> 'graph_t *' <LValueToRValue>
+      |     |   | `-DeclRefExpr 0x7f871503a998 <col:16> 'graph_t *' lvalue ParmVar 0x7f8715038980 'g' 'graph_t *'
+      |     |   |-ImplicitCastExpr 0x7f871503aad8 <col:19> 'nitem *' <LValueToRValue>
+      |     |   | `-DeclRefExpr 0x7f871503a9c0 <col:19> 'nitem *' lvalue Var 0x7f8715038e80 'nlist' 'nitem *'
+      |     |   |-ImplicitCastExpr 0x7f871503aaf0 <col:26> 'int' <LValueToRValue>
+      |     |   | `-DeclRefExpr 0x7f871503a9e8 <col:26> 'int' lvalue Var 0x7f8715038cc8 'nnodes' 'int'
+      |     |   |-ImplicitCastExpr 0x7f871503ab08 <col:34> 'int (*)(nitem *, nitem *)' <FunctionToPointerDecay>
+      |     |   | `-DeclRefExpr 0x7f871503aa10 <col:34> 'int (nitem *, nitem *)' Function 0x7f8715034820 'intersectY0' 'int (nitem *, nitem *)'
+      |     |   `-IntegerLiteral 0x7f871503aa38 <col:47> 'int' 1
+      |     |-CallExpr 0x7f871503ac20 <line:214:4, col:47> 'void'
+      |     | |-ImplicitCastExpr 0x7f871503ac08 <col:4> 'void (*)(graph_t *, nitem *, int, intersectfn, int)' <FunctionToPointerDecay>
+      |     | | `-DeclRefExpr 0x7f871503ab20 <col:4> 'void (graph_t *, nitem *, int, intersectfn, int)' Function 0x7f8715039ab0 'constrainX' 'void (graph_t *, nitem *, int, intersectfn, int)'
+      |     | |-ImplicitCastExpr 0x7f871503ac70 <col:16> 'graph_t *' <LValueToRValue>
+      |     | | `-DeclRefExpr 0x7f871503ab48 <col:16> 'graph_t *' lvalue ParmVar 0x7f8715038980 'g' 'graph_t *'
+      |     | |-ImplicitCastExpr 0x7f871503ac88 <col:19> 'nitem *' <LValueToRValue>
+      |     | | `-DeclRefExpr 0x7f871503ab70 <col:19> 'nitem *' lvalue Var 0x7f8715038e80 'nlist' 'nitem *'
+      |     | |-ImplicitCastExpr 0x7f871503aca0 <col:26> 'int' <LValueToRValue>
+      |     | | `-DeclRefExpr 0x7f871503ab98 <col:26> 'int' lvalue Var 0x7f8715038cc8 'nnodes' 'int'
+      |     | |-ImplicitCastExpr 0x7f871503acb8 <col:34> 'int (*)(nitem *, nitem *)' <FunctionToPointerDecay>
+      |     | | `-DeclRefExpr 0x7f871503abc0 <col:34> 'int (nitem *, nitem *)' Function 0x7f87150349f8 'intersectY' 'int (nitem *, nitem *)'
+      |     | `-IntegerLiteral 0x7f871503abe8 <col:46> 'int' 1
+      |     `-CaseStmt 0x7f871503acf8 <line:215:2, line:217:48>
+      |       |-ImplicitCastExpr 0x7f871503af38 <line:215:7> 'unsigned int' <IntegralCast>
+      |       | `-DeclRefExpr 0x7f871503acd0 <col:7> 'int' EnumConstant 0x7f871502c7f8 'AM_PORTHO' 'int'
+      |       |-<<<NULL>>>
+      |       `-DefaultStmt 0x7f871503aee0 <line:216:2, line:217:48>
+      |         `-CallExpr 0x7f871503ae30 <col:4, col:48> 'void'
+      |           |-ImplicitCastExpr 0x7f871503ae18 <col:4> 'void (*)(graph_t *, nitem *, int, intersectfn, int)' <FunctionToPointerDecay>
+      |           | `-DeclRefExpr 0x7f871503ad30 <col:4> 'void (graph_t *, nitem *, int, intersectfn, int)' Function 0x7f8715039ab0 'constrainX' 'void (graph_t *, nitem *, int, intersectfn, int)'
+      |           |-ImplicitCastExpr 0x7f871503ae80 <col:16> 'graph_t *' <LValueToRValue>
+      |           | `-DeclRefExpr 0x7f871503ad58 <col:16> 'graph_t *' lvalue ParmVar 0x7f8715038980 'g' 'graph_t *'
+      |           |-ImplicitCastExpr 0x7f871503ae98 <col:19> 'nitem *' <LValueToRValue>
+      |           | `-DeclRefExpr 0x7f871503ad80 <col:19> 'nitem *' lvalue Var 0x7f8715038e80 'nlist' 'nitem *'
+      |           |-ImplicitCastExpr 0x7f871503aeb0 <col:26> 'int' <LValueToRValue>
+      |           | `-DeclRefExpr 0x7f871503ada8 <col:26> 'int' lvalue Var 0x7f8715038cc8 'nnodes' 'int'
+      |           |-ImplicitCastExpr 0x7f871503aec8 <col:34> 'int (*)(nitem *, nitem *)' <FunctionToPointerDecay>
+      |           | `-DeclRefExpr 0x7f871503add0 <col:34> 'int (nitem *, nitem *)' Function 0x7f8715034820 'intersectY0' 'int (nitem *, nitem *)'
+      |           `-IntegerLiteral 0x7f871503adf8 <col:47> 'int' 0
+      `-<<<NULL>>>

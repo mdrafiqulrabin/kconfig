@@ -1,0 +1,92 @@
+TranslationUnitDecl 0x7fbcf08264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbcf0826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbcf0826740 '__int128'
+|-TypedefDecl 0x7fbcf0826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbcf0826760 'unsigned __int128'
+|-TypedefDecl 0x7fbcf0826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbcf0826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbcf0826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbcf0826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbcf0826dc0 'char *'
+|   `-BuiltinType 0x7fbcf0826560 'char'
+|-TypedefDecl 0x7fbcf08270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbcf0827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbcf0826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbcf0826e58 '__va_list_tag'
+|-RecordDecl 0x7fbcf0827120 <c_files/pr38125.c:3:9, col:16> col:16 struct sv
+|-TypedefDecl 0x7fbcf1025a20 <col:1, col:19> col:19 referenced TEST_SV 'struct sv':'struct sv'
+| `-ElaboratedType 0x7fbcf08271d0 'struct sv' sugar
+|   `-RecordType 0x7fbcf08271b0 'struct sv'
+|     `-Record 0x7fbcf1025ee0 'sv'
+|-RecordDecl 0x7fbcf1025a90 <line:4:9, col:16> col:16 struct av
+|-TypedefDecl 0x7fbcf1025b90 <col:1, col:19> col:19 referenced TEST_AV 'struct av':'struct av'
+| `-ElaboratedType 0x7fbcf1025b40 'struct av' sugar
+|   `-RecordType 0x7fbcf1025b20 'struct av'
+|     `-Record 0x7fbcf1025fc8 'av'
+|-RecordDecl 0x7fbcf1025c00 <line:5:9, col:16> col:16 struct magic
+|-TypedefDecl 0x7fbcf1025d00 <col:1, col:22> col:22 referenced TEST_MAGIC 'struct magic':'struct magic'
+| `-ElaboratedType 0x7fbcf1025cb0 'struct magic' sugar
+|   `-RecordType 0x7fbcf1025c90 'struct magic'
+|     `-Record 0x7fbcf10262c8 'magic'
+|-RecordDecl 0x7fbcf1025d70 <line:6:9, col:16> col:16 struct xpvav
+|-TypedefDecl 0x7fbcf1025e70 <col:1, col:22> col:22 referenced TEST_XPVAV 'struct xpvav':'struct xpvav'
+| `-ElaboratedType 0x7fbcf1025e20 'struct xpvav' sugar
+|   `-RecordType 0x7fbcf1025e00 'struct xpvav'
+|     `-Record 0x7fbcf1026120 'xpvav'
+|-RecordDecl 0x7fbcf1025ee0 prev 0x7fbcf0827120 <line:7:1, line:10:1> line:7:8 struct sv definition
+| `-FieldDecl 0x7fbcf1025f80 <line:9:5, col:11> col:11 sv_any 'void *'
+|-RecordDecl 0x7fbcf1025fc8 prev 0x7fbcf1025a90 <line:11:1, line:14:1> line:11:8 struct av definition
+| `-FieldDecl 0x7fbcf10260d8 <line:13:5, col:17> col:17 referenced sv_any 'TEST_XPVAV *'
+|-RecordDecl 0x7fbcf1026120 prev 0x7fbcf1025d70 <line:15:1, line:20:1> line:15:8 struct xpvav definition
+| |-FieldDecl 0x7fbcf10261c0 <line:17:5, col:11> col:11 referenced xav_array 'char *'
+| |-FieldDecl 0x7fbcf1026220 <line:18:5, col:14> col:14 referenced xav_fill 'long'
+| `-FieldDecl 0x7fbcf1026280 <line:19:5, col:14> col:14 xav_max 'long'
+|-RecordDecl 0x7fbcf10262c8 prev 0x7fbcf1025c00 <line:21:1, line:23:1> line:21:8 struct magic definition
+| `-FieldDecl 0x7fbcf10263d8 <line:22:5, col:14> col:14 mg_obj 'TEST_SV *'
+|-VarDecl 0x7fbcf1026430 <line:24:1, col:16> col:16 used PL_sv_undef 'TEST_SV':'struct sv' extern
+`-FunctionDecl 0x7fbcf10266e0 <line:25:1, line:33:1> line:26:1 Perl_av_fill 'void (TEST_AV *, int)'
+  |-ParmVarDecl 0x7fbcf1026558 <col:15, col:33> col:33 used av 'TEST_AV *' register
+  |-ParmVarDecl 0x7fbcf10265d0 <col:37, col:41> col:41 used fill 'int'
+  `-CompoundStmt 0x7fbcf102d1b8 <line:27:1, line:33:1>
+    |-DeclStmt 0x7fbcf1026878 <line:28:5, col:19>
+    | `-VarDecl 0x7fbcf1026818 <col:5, col:17> col:17 mg 'TEST_MAGIC *'
+    |-DeclStmt 0x7fbcf102ccb0 <line:29:5, col:53>
+    | `-VarDecl 0x7fbcf10268a8 <col:5, col:45> col:9 used key 'int' cinit
+    |   `-ImplicitCastExpr 0x7fbcf102cc98 <col:15, col:45> 'int' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7fbcf102cc80 <col:15, col:45> 'long' <LValueToRValue>
+    |       `-MemberExpr 0x7fbcf102cc48 <col:15, col:45> 'long' lvalue ->xav_fill 0x7fbcf1026220
+    |         `-ParenExpr 0x7fbcf102cc28 <col:15, col:42> 'TEST_XPVAV *'
+    |           `-CStyleCastExpr 0x7fbcf102cc00 <col:16, col:36> 'TEST_XPVAV *' <NoOp>
+    |             `-ImplicitCastExpr 0x7fbcf10269e0 <col:30, col:36> 'TEST_XPVAV *' <LValueToRValue>
+    |               `-MemberExpr 0x7fbcf1026998 <col:30, col:36> 'TEST_XPVAV *' lvalue ->sv_any 0x7fbcf10260d8
+    |                 `-ImplicitCastExpr 0x7fbcf1026980 <col:30, col:33> 'TEST_AV *' <LValueToRValue>
+    |                   `-ParenExpr 0x7fbcf1026960 <col:30, col:33> 'TEST_AV *' lvalue
+    |                     `-DeclRefExpr 0x7fbcf1026908 <col:31> 'TEST_AV *' lvalue ParmVar 0x7fbcf1026558 'av' 'TEST_AV *'
+    |-DeclStmt 0x7fbcf102cfb8 <line:30:5, col:73>
+    | `-VarDecl 0x7fbcf102cd40 <col:5, col:72> col:15 used ary 'TEST_SV **' cinit
+    |   `-ParenExpr 0x7fbcf102cf98 <col:21, col:72> 'TEST_SV **'
+    |     `-CStyleCastExpr 0x7fbcf102cf70 <col:22, col:63> 'TEST_SV **' <BitCast>
+    |       `-ImplicitCastExpr 0x7fbcf102cf58 <col:33, col:63> 'char *' <LValueToRValue>
+    |         `-MemberExpr 0x7fbcf102cf08 <col:33, col:63> 'char *' lvalue ->xav_array 0x7fbcf10261c0
+    |           `-ParenExpr 0x7fbcf102cee8 <col:33, col:60> 'TEST_XPVAV *'
+    |             `-CStyleCastExpr 0x7fbcf102ce90 <col:34, col:54> 'TEST_XPVAV *' <NoOp>
+    |               `-ImplicitCastExpr 0x7fbcf102ce78 <col:48, col:54> 'TEST_XPVAV *' <LValueToRValue>
+    |                 `-MemberExpr 0x7fbcf102ce30 <col:48, col:54> 'TEST_XPVAV *' lvalue ->sv_any 0x7fbcf10260d8
+    |                   `-ImplicitCastExpr 0x7fbcf102ce18 <col:48, col:51> 'TEST_AV *' <LValueToRValue>
+    |                     `-ParenExpr 0x7fbcf102cdf8 <col:48, col:51> 'TEST_AV *' lvalue
+    |                       `-DeclRefExpr 0x7fbcf102cda0 <col:49> 'TEST_AV *' lvalue ParmVar 0x7fbcf1026558 'av' 'TEST_AV *'
+    `-WhileStmt 0x7fbcf102d198 <line:31:5, line:32:25>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fbcf102d050 <line:31:12, col:18> 'int' '<'
+      | |-ImplicitCastExpr 0x7fbcf102d020 <col:12> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fbcf102cfd0 <col:12> 'int' lvalue Var 0x7fbcf10268a8 'key' 'int'
+      | `-ImplicitCastExpr 0x7fbcf102d038 <col:18> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fbcf102cff8 <col:18> 'int' lvalue ParmVar 0x7fbcf10265d0 'fill' 'int'
+      `-BinaryOperator 0x7fbcf102d170 <line:32:11, col:25> 'TEST_SV *' '='
+        |-ArraySubscriptExpr 0x7fbcf102d100 <col:11, col:20> 'TEST_SV *' lvalue
+        | |-ImplicitCastExpr 0x7fbcf102d0e8 <col:11> 'TEST_SV **' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fbcf102d078 <col:11> 'TEST_SV **' lvalue Var 0x7fbcf102cd40 'ary' 'TEST_SV **'
+        | `-UnaryOperator 0x7fbcf102d0c8 <col:15, col:17> 'int' prefix '++'
+        |   `-DeclRefExpr 0x7fbcf102d0a0 <col:17> 'int' lvalue Var 0x7fbcf10268a8 'key' 'int'
+        `-UnaryOperator 0x7fbcf102d150 <col:24, col:25> 'TEST_SV *' prefix '&'
+          `-DeclRefExpr 0x7fbcf102d128 <col:25> 'TEST_SV':'struct sv' lvalue Var 0x7fbcf1026430 'PL_sv_undef' 'TEST_SV':'struct sv'

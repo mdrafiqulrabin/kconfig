@@ -1,0 +1,45 @@
+FileAST: 
+  Typedef: D, [], ['typedef']
+    TypeDecl: D, []
+      Struct: None
+        Decl: i, [], [], []
+          TypeDecl: i, []
+            IdentifierType: ['int']
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['D']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['D']
+      Assignment: =
+        StructRef: .
+          ID: d
+          ID: i
+        Constant: int, 1
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: d
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,77 @@
+FileAST: 
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Struct: S3
+        Decl: f3, [], [], []
+          TypeDecl: f3, []
+            IdentifierType: ['int']
+        Decl: f5, [], [], []
+          TypeDecl: f5, []
+            IdentifierType: ['int']
+        Decl: f6, [], [], []
+          TypeDecl: f6, []
+            IdentifierType: ['char']
+        Decl: f7, [], [], []
+          TypeDecl: f7, []
+            IdentifierType: ['int']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: c, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: c, []
+        Struct: S3
+    UnaryOp: &
+      ID: b
+  Decl: d, [], [], []
+    PtrDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Compound: 
+          Assignment: =
+            ID: a
+            Constant: int, 0
+          Decl: e, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: e, []
+                  IdentifierType: ['int']
+            UnaryOp: &
+              ID: d
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          For: 
+            BinaryOp: <
+              ID: i
+              Constant: int, 2
+            UnaryOp: p++
+              ID: i
+            Assignment: =
+              ID: d
+              UnaryOp: &
+                StructRef: .
+                  UnaryOp: *
+                    ID: c
+                  ID: f5
+          Assignment: =
+            UnaryOp: *
+              ID: e
+            ID: d
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: *
+                ID: e
+            Constant: int, 3
+      Return: 
+        Constant: int, 0

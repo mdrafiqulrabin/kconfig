@@ -1,0 +1,77 @@
+FileAST: 
+  Decl: buf, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: buf, []
+              IdentifierType: ['int']
+            Constant: int, 2
+          Constant: int, 2
+        Constant: int, 2
+      Constant: int, 2
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        DeclList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+            Constant: int, 0
+        BinaryOp: <
+          ID: a
+          Constant: int, 2
+        UnaryOp: ++
+          ID: a
+        For: 
+          DeclList: 
+            Decl: b, [], [], []
+              TypeDecl: b, []
+                IdentifierType: ['int']
+              Constant: int, 0
+          BinaryOp: <
+            ID: b
+            Constant: int, 2
+          UnaryOp: ++
+            ID: b
+          For: 
+            DeclList: 
+              Decl: c, [], [], []
+                TypeDecl: c, []
+                  IdentifierType: ['int']
+                Constant: int, 0
+            BinaryOp: <
+              ID: c
+              Constant: int, 2
+            UnaryOp: ++
+              ID: c
+            For: 
+              DeclList: 
+                Decl: d, [], [], []
+                  TypeDecl: d, []
+                    IdentifierType: ['int']
+                  Constant: int, 0
+              BinaryOp: <
+                ID: d
+                Constant: int, 2
+              UnaryOp: ++
+                ID: d
+              Assignment: =
+                ArrayRef: 
+                  ArrayRef: 
+                    ArrayRef: 
+                      ArrayRef: 
+                        ID: buf
+                        ID: a
+                      ID: b
+                    ID: c
+                  ID: d
+                Constant: int, 0

@@ -1,0 +1,347 @@
+TranslationUnitDecl 0x7fb5638264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb563826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb563826740 '__int128'
+|-TypedefDecl 0x7fb563826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb563826760 'unsigned __int128'
+|-TypedefDecl 0x7fb563826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb563826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb563826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb563826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb563826dc0 'char *'
+|   `-BuiltinType 0x7fb563826560 'char'
+|-TypedefDecl 0x7fb5638270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb563827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb563826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb563826e58 '__va_list_tag'
+|-TypedefDecl 0x7fb563827138 <c_files/pr58314.c:4:1, col:24> col:24 referenced __u16 'unsigned short'
+| `-BuiltinType 0x7fb563826640 'unsigned short'
+|-TypedefDecl 0x7fb5638271a8 <line:5:1, col:22> col:22 __u32 'unsigned int'
+| `-BuiltinType 0x7fb563826660 'unsigned int'
+|-TypedefDecl 0x7fb564025a18 <line:6:1, col:22> col:22 s16 'short'
+| `-BuiltinType 0x7fb5638265a0 'short'
+|-FunctionDecl 0x7fb564025ba0 <line:9:1, line:19:1> line:12:7 used __arch_swab16 '__u16 (__u16)' static inline
+| |-ParmVarDecl 0x7fb564025aa0 <col:21, col:27> col:27 used x '__u16':'unsigned short'
+| |-CompoundStmt 0x7fb564025f58 <line:13:1, line:19:1>
+| | |-GCCAsmStmt 0x7fb564025e88 <line:14:2, line:17:12>
+| | | |-DeclRefExpr 0x7fb564025db8 <line:16:11> '__u16':'unsigned short' lvalue ParmVar 0x7fb564025aa0 'x' '__u16':'unsigned short'
+| | | `-ImplicitCastExpr 0x7fb564025e70 <line:17:10> '__u16':'unsigned short' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fb564025e48 <col:10> '__u16':'unsigned short' lvalue ParmVar 0x7fb564025aa0 'x' '__u16':'unsigned short'
+| | `-ReturnStmt 0x7fb564025f40 <line:18:2, col:9>
+| |   `-ImplicitCastExpr 0x7fb564025f28 <col:9> '__u16':'unsigned short' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fb564025f00 <col:9> '__u16':'unsigned short' lvalue ParmVar 0x7fb564025aa0 'x' '__u16':'unsigned short'
+| |-ConstAttr 0x7fb564025c40 <line:11:16>
+| `-AlwaysInlineAttr 0x7fb564025c88 <line:10:16> always_inline
+|-FunctionDecl 0x7fb5640260f0 <line:21:1, line:24:1> line:21:6 used u16_add_cpu 'void (__u16 *)'
+| |-ParmVarDecl 0x7fb564025fe8 <col:18, col:25> col:25 used var '__u16 *'
+| `-CompoundStmt 0x7fb564026360 <line:22:1, line:24:1>
+|   `-BinaryOperator 0x7fb564026338 <line:23:3, col:28> '__u16':'unsigned short' '='
+|     |-UnaryOperator 0x7fb5640261d0 <col:3, col:4> '__u16':'unsigned short' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fb5640261b8 <col:4> '__u16 *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fb564026190 <col:4> '__u16 *' lvalue ParmVar 0x7fb564025fe8 'var' '__u16 *'
+|     `-CallExpr 0x7fb5640262f0 <col:10, col:28> '__u16':'unsigned short'
+|       |-ImplicitCastExpr 0x7fb5640262d8 <col:10> '__u16 (*)(__u16)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fb5640261f0 <col:10> '__u16 (__u16)' Function 0x7fb564025ba0 '__arch_swab16' '__u16 (__u16)'
+|       `-ImplicitCastExpr 0x7fb564026320 <col:24, col:25> '__u16':'unsigned short' <LValueToRValue>
+|         `-UnaryOperator 0x7fb564026258 <col:24, col:25> '__u16':'unsigned short' lvalue prefix '*'
+|           `-ImplicitCastExpr 0x7fb564026240 <col:25> '__u16 *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fb564026218 <col:25> '__u16 *' lvalue ParmVar 0x7fb564025fe8 'var' '__u16 *'
+|-RecordDecl 0x7fb564026380 <line:26:9, line:28:1> line:26:16 struct xfs_mount definition
+| `-FieldDecl 0x7fb564026448 <line:27:2, col:6> col:6 referenced m_attr_magicpct 'int'
+|-TypedefDecl 0x7fb5640264e0 <line:26:1, line:28:3> col:3 referenced xfs_mount_t 'struct xfs_mount':'struct xfs_mount'
+| `-ElaboratedType 0x7fb564026490 'struct xfs_mount' sugar
+|   `-RecordType 0x7fb564026410 'struct xfs_mount'
+|     `-Record 0x7fb564026380 'xfs_mount'
+|-RecordDecl 0x7fb564026550 <line:30:9, line:33:1> line:30:16 struct xfs_da_args definition
+| |-FieldDecl 0x7fb564026680 <line:31:2, col:20> col:20 referenced t_mountp 'struct xfs_mount *'
+| `-FieldDecl 0x7fb5640266e0 <line:32:2, col:6> col:6 referenced index 'int'
+|-TypedefDecl 0x7fb564026780 <line:30:1, line:33:3> col:3 referenced xfs_da_args_t 'struct xfs_da_args':'struct xfs_da_args'
+| `-ElaboratedType 0x7fb564026730 'struct xfs_da_args' sugar
+|   `-RecordType 0x7fb5640265e0 'struct xfs_da_args'
+|     `-Record 0x7fb564026550 'xfs_da_args'
+|-RecordDecl 0x7fb5640267f0 <line:35:9, line:37:1> line:35:16 struct xfs_dabuf definition
+| `-FieldDecl 0x7fb5640268b8 <line:36:2, col:8> col:8 data 'void *'
+|-TypedefDecl 0x7fb564026950 <line:35:1, line:37:3> col:3 xfs_dabuf_t 'struct xfs_dabuf':'struct xfs_dabuf'
+| `-ElaboratedType 0x7fb564026900 'struct xfs_dabuf' sugar
+|   `-RecordType 0x7fb564026880 'struct xfs_dabuf'
+|     `-Record 0x7fb5640267f0 'xfs_dabuf'
+|-RecordDecl 0x7fb564027a00 <line:39:9, line:42:1> line:39:16 struct xfs_attr_leaf_map definition
+| |-FieldDecl 0x7fb564027ac0 <line:40:2, col:8> col:8 referenced base '__u16':'unsigned short'
+| `-FieldDecl 0x7fb564027b18 <line:41:2, col:8> col:8 referenced size '__u16':'unsigned short'
+|-TypedefDecl 0x7fb564027bb0 <line:39:1, line:42:3> col:3 referenced xfs_attr_leaf_map_t 'struct xfs_attr_leaf_map':'struct xfs_attr_leaf_map'
+| `-ElaboratedType 0x7fb564027b60 'struct xfs_attr_leaf_map' sugar
+|   `-RecordType 0x7fb564027a90 'struct xfs_attr_leaf_map'
+|     `-Record 0x7fb564027a00 'xfs_attr_leaf_map'
+|-RecordDecl 0x7fb564027c20 <line:43:9, line:46:1> line:43:16 struct xfs_attr_leaf_hdr definition
+| |-FieldDecl 0x7fb564027ce0 <line:44:2, col:8> col:8 referenced count '__u16':'unsigned short'
+| `-FieldDecl 0x7fb564027e58 <line:45:2, col:31> col:22 referenced freemap 'xfs_attr_leaf_map_t [3]'
+|-TypedefDecl 0x7fb564027ef0 <line:43:1, line:46:3> col:3 referenced xfs_attr_leaf_hdr_t 'struct xfs_attr_leaf_hdr':'struct xfs_attr_leaf_hdr'
+| `-ElaboratedType 0x7fb564027ea0 'struct xfs_attr_leaf_hdr' sugar
+|   `-RecordType 0x7fb564027cb0 'struct xfs_attr_leaf_hdr'
+|     `-Record 0x7fb564027c20 'xfs_attr_leaf_hdr'
+|-RecordDecl 0x7fb564027f60 <line:48:9, line:50:1> line:48:16 struct xfs_attr_leaf_entry definition
+| `-FieldDecl 0x7fb564028020 <line:49:3, col:9> col:9 referenced nameidx '__u16':'unsigned short'
+|-TypedefDecl 0x7fb5640280c0 <line:48:1, line:50:3> col:3 referenced xfs_attr_leaf_entry_t 'struct xfs_attr_leaf_entry':'struct xfs_attr_leaf_entry'
+| `-ElaboratedType 0x7fb564028070 'struct xfs_attr_leaf_entry' sugar
+|   `-RecordType 0x7fb564027ff0 'struct xfs_attr_leaf_entry'
+|     `-Record 0x7fb564027f60 'xfs_attr_leaf_entry'
+|-RecordDecl 0x7fb564028130 <line:52:9, line:55:1> line:52:16 struct xfs_attr_leafblock definition
+| |-FieldDecl 0x7fb564028210 <line:53:2, col:22> col:22 referenced hdr 'xfs_attr_leaf_hdr_t':'struct xfs_attr_leaf_hdr'
+| `-FieldDecl 0x7fb564028388 <line:54:2, col:33> col:24 referenced entries 'xfs_attr_leaf_entry_t [1]'
+|-TypedefDecl 0x7fb564028470 <line:52:1, line:55:3> col:3 referenced xfs_attr_leafblock_t 'struct xfs_attr_leafblock':'struct xfs_attr_leafblock'
+| `-ElaboratedType 0x7fb564028420 'struct xfs_attr_leafblock' sugar
+|   `-RecordType 0x7fb5640281c0 'struct xfs_attr_leafblock'
+|     `-Record 0x7fb564028130 'xfs_attr_leafblock'
+|-FunctionDecl 0x7fb5640286f8 <line:57:1, col:54> col:5 used xfs_attr_leaf_entsize 'int (xfs_attr_leafblock_t *, int)'
+| |-ParmVarDecl 0x7fb564028568 <col:28, col:48> col:49 'xfs_attr_leafblock_t *'
+| `-ParmVarDecl 0x7fb5640285e0 <col:51> col:54 'int'
+`-FunctionDecl 0x7fb564028a00 <line:59:1, line:106:1> line:60:1 xfs_attr_leaf_remove 'int (xfs_attr_leafblock_t *, xfs_da_args_t *)'
+  |-ParmVarDecl 0x7fb5640287b0 <col:22, col:44> col:44 used leaf 'xfs_attr_leafblock_t *'
+  |-ParmVarDecl 0x7fb564028898 <col:50, col:65> col:65 used args 'xfs_da_args_t *'
+  `-CompoundStmt 0x7fb56402b1b8 <line:61:1, line:106:1>
+    |-DeclStmt 0x7fb564028b78 <line:62:2, col:26>
+    | `-VarDecl 0x7fb564028b18 <col:2, col:23> col:23 used hdr 'xfs_attr_leaf_hdr_t *'
+    |-DeclStmt 0x7fb564028c58 <line:63:2, col:26>
+    | `-VarDecl 0x7fb564028bf8 <col:2, col:23> col:23 used map 'xfs_attr_leaf_map_t *'
+    |-DeclStmt 0x7fb564028d38 <line:64:2, col:30>
+    | `-VarDecl 0x7fb564028cd8 <col:2, col:25> col:25 used entry 'xfs_attr_leaf_entry_t *'
+    |-DeclStmt 0x7fb564028f58 <line:65:2, col:38>
+    | |-VarDecl 0x7fb564028d68 <col:2, col:6> col:6 used before 'int'
+    | |-VarDecl 0x7fb564028de0 <col:2, col:14> col:14 used after 'int'
+    | |-VarDecl 0x7fb564028e58 <col:2, col:21> col:21 used smallest 'int'
+    | `-VarDecl 0x7fb564028ed0 <col:2, col:31> col:31 used entsize 'int'
+    |-DeclStmt 0x7fb5640290f8 <line:66:2, col:23>
+    | |-VarDecl 0x7fb564028f88 <col:2, col:6> col:6 used tablesize 'int'
+    | |-VarDecl 0x7fb564029000 <col:2, col:17> col:17 used tmp 'int'
+    | `-VarDecl 0x7fb564029078 <col:2, col:22> col:22 used i 'int'
+    |-DeclStmt 0x7fb5640291c8 <line:67:2, col:17>
+    | `-VarDecl 0x7fb564029168 <col:2, col:15> col:15 used mp 'xfs_mount_t *'
+    |-BinaryOperator 0x7fb5640292a0 <line:68:2, col:15> 'xfs_attr_leaf_hdr_t *' '='
+    | |-DeclRefExpr 0x7fb5640291e0 <col:2> 'xfs_attr_leaf_hdr_t *' lvalue Var 0x7fb564028b18 'hdr' 'xfs_attr_leaf_hdr_t *'
+    | `-UnaryOperator 0x7fb564029280 <col:8, col:15> 'xfs_attr_leaf_hdr_t *' prefix '&'
+    |   `-MemberExpr 0x7fb564029248 <col:9, col:15> 'xfs_attr_leaf_hdr_t':'struct xfs_attr_leaf_hdr' lvalue ->hdr 0x7fb564028210
+    |     `-ImplicitCastExpr 0x7fb564029230 <col:9> 'xfs_attr_leafblock_t *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fb564029208 <col:9> 'xfs_attr_leafblock_t *' lvalue ParmVar 0x7fb5640287b0 'leaf' 'xfs_attr_leafblock_t *'
+    |-BinaryOperator 0x7fb564029380 <line:69:2, col:13> 'xfs_mount_t *' '='
+    | |-DeclRefExpr 0x7fb5640292c8 <col:2> 'xfs_mount_t *' lvalue Var 0x7fb564029168 'mp' 'xfs_mount_t *'
+    | `-ImplicitCastExpr 0x7fb564029368 <col:7, col:13> 'struct xfs_mount *' <LValueToRValue>
+    |   `-MemberExpr 0x7fb564029330 <col:7, col:13> 'struct xfs_mount *' lvalue ->t_mountp 0x7fb564026680
+    |     `-ImplicitCastExpr 0x7fb564029318 <col:7> 'xfs_da_args_t *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fb5640292f0 <col:7> 'xfs_da_args_t *' lvalue ParmVar 0x7fb564028898 'args' 'xfs_da_args_t *'
+    |-BinaryOperator 0x7fb564029538 <line:71:2, col:36> 'xfs_attr_leaf_entry_t *' '='
+    | |-DeclRefExpr 0x7fb5640293a8 <col:2> 'xfs_attr_leaf_entry_t *' lvalue Var 0x7fb564028cd8 'entry' 'xfs_attr_leaf_entry_t *'
+    | `-UnaryOperator 0x7fb564029518 <col:10, col:36> 'xfs_attr_leaf_entry_t *' prefix '&'
+    |   `-ArraySubscriptExpr 0x7fb5640294f0 <col:11, col:36> 'xfs_attr_leaf_entry_t':'struct xfs_attr_leaf_entry' lvalue
+    |     |-ImplicitCastExpr 0x7fb5640294c0 <col:11, col:17> 'xfs_attr_leaf_entry_t *' <ArrayToPointerDecay>
+    |     | `-MemberExpr 0x7fb564029410 <col:11, col:17> 'xfs_attr_leaf_entry_t [1]' lvalue ->entries 0x7fb564028388
+    |     |   `-ImplicitCastExpr 0x7fb5640293f8 <col:11> 'xfs_attr_leafblock_t *' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7fb5640293d0 <col:11> 'xfs_attr_leafblock_t *' lvalue ParmVar 0x7fb5640287b0 'leaf' 'xfs_attr_leafblock_t *'
+    |     `-ImplicitCastExpr 0x7fb5640294d8 <col:25, col:31> 'int' <LValueToRValue>
+    |       `-MemberExpr 0x7fb564029488 <col:25, col:31> 'int' lvalue ->index 0x7fb5640266e0
+    |         `-ImplicitCastExpr 0x7fb564029470 <col:25> 'xfs_da_args_t *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fb564029448 <col:25> 'xfs_da_args_t *' lvalue ParmVar 0x7fb564028898 'args' 'xfs_da_args_t *'
+    |-BinaryOperator 0x7fb5640296a0 <line:73:2, col:38> 'int' '='
+    | |-DeclRefExpr 0x7fb564029560 <col:2> 'int' lvalue Var 0x7fb564028f88 'tablesize' 'int'
+    | `-ImplicitCastExpr 0x7fb564029688 <col:14, col:38> 'int' <IntegralCast>
+    |   `-CallExpr 0x7fb564029640 <col:14, col:38> '__u16':'unsigned short'
+    |     |-ImplicitCastExpr 0x7fb564029628 <col:14> '__u16 (*)(__u16)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fb564029588 <col:14> '__u16 (__u16)' Function 0x7fb564025ba0 '__arch_swab16' '__u16 (__u16)'
+    |     `-ImplicitCastExpr 0x7fb564029670 <col:28, col:33> '__u16':'unsigned short' <LValueToRValue>
+    |       `-MemberExpr 0x7fb5640295f0 <col:28, col:33> '__u16':'unsigned short' lvalue ->count 0x7fb564027ce0
+    |         `-ImplicitCastExpr 0x7fb5640295d8 <col:28> 'xfs_attr_leaf_hdr_t *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fb5640295b0 <col:28> 'xfs_attr_leaf_hdr_t *' lvalue Var 0x7fb564028b18 'hdr' 'xfs_attr_leaf_hdr_t *'
+    |-BinaryOperator 0x7fb5640297e8 <line:75:2, col:23> 'xfs_attr_leaf_map_t *' '='
+    | |-DeclRefExpr 0x7fb5640296c8 <col:2> 'xfs_attr_leaf_map_t *' lvalue Var 0x7fb564028bf8 'map' 'xfs_attr_leaf_map_t *'
+    | `-UnaryOperator 0x7fb5640297c8 <col:8, col:23> 'xfs_attr_leaf_map_t *' prefix '&'
+    |   `-ArraySubscriptExpr 0x7fb5640297a0 <col:9, col:23> 'xfs_attr_leaf_map_t':'struct xfs_attr_leaf_map' lvalue
+    |     |-ImplicitCastExpr 0x7fb564029788 <col:9, col:14> 'xfs_attr_leaf_map_t *' <ArrayToPointerDecay>
+    |     | `-MemberExpr 0x7fb564029730 <col:9, col:14> 'xfs_attr_leaf_map_t [3]' lvalue ->freemap 0x7fb564027e58
+    |     |   `-ImplicitCastExpr 0x7fb564029718 <col:9> 'xfs_attr_leaf_hdr_t *' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7fb5640296f0 <col:9> 'xfs_attr_leaf_hdr_t *' lvalue Var 0x7fb564028b18 'hdr' 'xfs_attr_leaf_hdr_t *'
+    |     `-IntegerLiteral 0x7fb564029768 <col:22> 'int' 0
+    |-BinaryOperator 0x7fb5640298e0 <line:76:2, col:13> 'int' '='
+    | |-DeclRefExpr 0x7fb564029810 <col:2> 'int' lvalue Var 0x7fb564029000 'tmp' 'int'
+    | `-ImplicitCastExpr 0x7fb5640298c8 <col:8, col:13> 'int' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7fb5640298b0 <col:8, col:13> '__u16':'unsigned short' <LValueToRValue>
+    |     `-MemberExpr 0x7fb564029878 <col:8, col:13> '__u16':'unsigned short' lvalue ->size 0x7fb564027b18
+    |       `-ImplicitCastExpr 0x7fb564029860 <col:8> 'xfs_attr_leaf_map_t *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fb564029838 <col:8> 'xfs_attr_leaf_map_t *' lvalue Var 0x7fb564028bf8 'map' 'xfs_attr_leaf_map_t *'
+    |-BinaryOperator 0x7fb5640299c0 <line:77:2, col:20> 'int' '='
+    | |-DeclRefExpr 0x7fb564029908 <col:2> 'int' lvalue Var 0x7fb564028d68 'before' 'int'
+    | `-BinaryOperator 0x7fb564029998 <col:11, col:20> 'int' '='
+    |   |-DeclRefExpr 0x7fb564029930 <col:11> 'int' lvalue Var 0x7fb564028de0 'after' 'int'
+    |   `-UnaryOperator 0x7fb564029978 <col:19, col:20> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7fb564029958 <col:20> 'int' 1
+    |-BinaryOperator 0x7fb564029a90 <line:78:2, col:17> 'int' '='
+    | |-DeclRefExpr 0x7fb564029a00 <col:2> 'int' lvalue Var 0x7fb564028e58 'smallest' 'int'
+    | `-BinaryOperator 0x7fb564029a68 <col:13, col:17> 'int' '-'
+    |   |-IntegerLiteral 0x7fb564029a28 <col:13> 'int' 3
+    |   `-IntegerLiteral 0x7fb564029a48 <col:17> 'int' 1
+    |-BinaryOperator 0x7fb564029c88 <line:79:2, col:51> 'int' '='
+    | |-DeclRefExpr 0x7fb564029ab8 <col:2> 'int' lvalue Var 0x7fb564028ed0 'entsize' 'int'
+    | `-CallExpr 0x7fb564029c20 <col:12, col:51> 'int'
+    |   |-ImplicitCastExpr 0x7fb564029c08 <col:12> 'int (*)(xfs_attr_leafblock_t *, int)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fb564029ae0 <col:12> 'int (xfs_attr_leafblock_t *, int)' Function 0x7fb5640286f8 'xfs_attr_leaf_entsize' 'int (xfs_attr_leafblock_t *, int)'
+    |   |-ImplicitCastExpr 0x7fb564029c58 <col:34> 'xfs_attr_leafblock_t *' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fb564029b08 <col:34> 'xfs_attr_leafblock_t *' lvalue ParmVar 0x7fb5640287b0 'leaf' 'xfs_attr_leafblock_t *'
+    |   `-ImplicitCastExpr 0x7fb564029c70 <col:40, col:46> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7fb564029b70 <col:40, col:46> 'int' lvalue ->index 0x7fb5640266e0
+    |       `-ImplicitCastExpr 0x7fb564029b58 <col:40> 'xfs_da_args_t *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fb564029b30 <col:40> 'xfs_da_args_t *' lvalue ParmVar 0x7fb564028898 'args' 'xfs_da_args_t *'
+    |-ForStmt 0x7fb56402a9b0 <line:81:2, line:92:2>
+    | |-BinaryOperator 0x7fb564029cf8 <line:81:7, col:11> 'int' '='
+    | | |-DeclRefExpr 0x7fb564029cb0 <col:7> 'int' lvalue Var 0x7fb564029078 'i' 'int'
+    | | `-IntegerLiteral 0x7fb564029cd8 <col:11> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb564029d80 <col:14, col:18> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fb564029d68 <col:14> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fb564029d20 <col:14> 'int' lvalue Var 0x7fb564029078 'i' 'int'
+    | | `-IntegerLiteral 0x7fb564029d48 <col:18> 'int' 2
+    | |-BinaryOperator 0x7fb564029e38 <col:21, col:29> 'int' ','
+    | | |-UnaryOperator 0x7fb564029dd0 <col:21, col:24> 'xfs_attr_leaf_map_t *' postfix '++'
+    | | | `-DeclRefExpr 0x7fb564029da8 <col:21> 'xfs_attr_leaf_map_t *' lvalue Var 0x7fb564028bf8 'map' 'xfs_attr_leaf_map_t *'
+    | | `-UnaryOperator 0x7fb564029e18 <col:28, col:29> 'int' postfix '++'
+    | |   `-DeclRefExpr 0x7fb564029df0 <col:28> 'int' lvalue Var 0x7fb564029078 'i' 'int'
+    | `-CompoundStmt 0x7fb56402a988 <col:33, line:92:2>
+    |   |-IfStmt 0x7fb56402a0d0 <line:83:3, line:84:27>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fb564029f48 <line:83:7, col:20> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fb564029f18 <col:7, col:12> 'int' <IntegralCast>
+    |   | | | `-ImplicitCastExpr 0x7fb564029f00 <col:7, col:12> '__u16':'unsigned short' <LValueToRValue>
+    |   | | |   `-MemberExpr 0x7fb564029ea0 <col:7, col:12> '__u16':'unsigned short' lvalue ->base 0x7fb564027ac0
+    |   | | |     `-ImplicitCastExpr 0x7fb564029e88 <col:7> 'xfs_attr_leaf_map_t *' <LValueToRValue>
+    |   | | |       `-DeclRefExpr 0x7fb564029e60 <col:7> 'xfs_attr_leaf_map_t *' lvalue Var 0x7fb564028bf8 'map' 'xfs_attr_leaf_map_t *'
+    |   | | `-ImplicitCastExpr 0x7fb564029f30 <col:20> 'int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fb564029ed8 <col:20> 'int' lvalue Var 0x7fb564028f88 'tablesize' 'int'
+    |   | |-CallExpr 0x7fb56402a0a0 <line:84:5, col:27> 'void'
+    |   | | |-ImplicitCastExpr 0x7fb56402a088 <col:5> 'void (*)(__u16 *)' <FunctionToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fb564029f70 <col:5> 'void (__u16 *)' Function 0x7fb5640260f0 'u16_add_cpu' 'void (__u16 *)'
+    |   | | `-UnaryOperator 0x7fb56402a010 <col:17, col:23> '__u16 *' prefix '&'
+    |   | |   `-MemberExpr 0x7fb564029fd8 <col:18, col:23> '__u16':'unsigned short' lvalue ->base 0x7fb564027ac0
+    |   | |     `-ImplicitCastExpr 0x7fb564029fc0 <col:18> 'xfs_attr_leaf_map_t *' <LValueToRValue>
+    |   | |       `-DeclRefExpr 0x7fb564029f98 <col:18> 'xfs_attr_leaf_map_t *' lvalue Var 0x7fb564028bf8 'map' 'xfs_attr_leaf_map_t *'
+    |   | `-<<<NULL>>>
+    |   `-IfStmt 0x7fb56402a950 <line:86:3, line:91:15>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7fb56402a478 <line:86:7, col:92> 'int' '=='
+    |     | |-BinaryOperator 0x7fb56402a338 <col:7, col:58> 'int' '+'
+    |     | | |-ImplicitCastExpr 0x7fb56402a308 <col:7, col:30> 'int' <IntegralCast>
+    |     | | | `-CallExpr 0x7fb56402a1c0 <col:7, col:30> '__u16':'unsigned short'
+    |     | | |   |-ImplicitCastExpr 0x7fb56402a1a8 <col:7> '__u16 (*)(__u16)' <FunctionToPointerDecay>
+    |     | | |   | `-DeclRefExpr 0x7fb56402a108 <col:7> '__u16 (__u16)' Function 0x7fb564025ba0 '__arch_swab16' '__u16 (__u16)'
+    |     | | |   `-ImplicitCastExpr 0x7fb56402a1f0 <col:21, col:26> '__u16':'unsigned short' <LValueToRValue>
+    |     | | |     `-MemberExpr 0x7fb56402a170 <col:21, col:26> '__u16':'unsigned short' lvalue ->base 0x7fb564027ac0
+    |     | | |       `-ImplicitCastExpr 0x7fb56402a158 <col:21> 'xfs_attr_leaf_map_t *' <LValueToRValue>
+    |     | | |         `-DeclRefExpr 0x7fb56402a130 <col:21> 'xfs_attr_leaf_map_t *' lvalue Var 0x7fb564028bf8 'map' 'xfs_attr_leaf_map_t *'
+    |     | | `-ImplicitCastExpr 0x7fb56402a320 <col:35, col:58> 'int' <IntegralCast>
+    |     | |   `-CallExpr 0x7fb56402a2c0 <col:35, col:58> '__u16':'unsigned short'
+    |     | |     |-ImplicitCastExpr 0x7fb56402a2a8 <col:35> '__u16 (*)(__u16)' <FunctionToPointerDecay>
+    |     | |     | `-DeclRefExpr 0x7fb56402a208 <col:35> '__u16 (__u16)' Function 0x7fb564025ba0 '__arch_swab16' '__u16 (__u16)'
+    |     | |     `-ImplicitCastExpr 0x7fb56402a2f0 <col:49, col:54> '__u16':'unsigned short' <LValueToRValue>
+    |     | |       `-MemberExpr 0x7fb56402a270 <col:49, col:54> '__u16':'unsigned short' lvalue ->size 0x7fb564027b18
+    |     | |         `-ImplicitCastExpr 0x7fb56402a258 <col:49> 'xfs_attr_leaf_map_t *' <LValueToRValue>
+    |     | |           `-DeclRefExpr 0x7fb56402a230 <col:49> 'xfs_attr_leaf_map_t *' lvalue Var 0x7fb564028bf8 'map' 'xfs_attr_leaf_map_t *'
+    |     | `-ImplicitCastExpr 0x7fb56402a460 <col:64, col:92> 'int' <IntegralCast>
+    |     |   `-CallExpr 0x7fb56402a418 <col:64, col:92> '__u16':'unsigned short'
+    |     |     |-ImplicitCastExpr 0x7fb56402a400 <col:64> '__u16 (*)(__u16)' <FunctionToPointerDecay>
+    |     |     | `-DeclRefExpr 0x7fb56402a360 <col:64> '__u16 (__u16)' Function 0x7fb564025ba0 '__arch_swab16' '__u16 (__u16)'
+    |     |     `-ImplicitCastExpr 0x7fb56402a448 <col:78, col:85> '__u16':'unsigned short' <LValueToRValue>
+    |     |       `-MemberExpr 0x7fb56402a3c8 <col:78, col:85> '__u16':'unsigned short' lvalue ->nameidx 0x7fb564028020
+    |     |         `-ImplicitCastExpr 0x7fb56402a3b0 <col:78> 'xfs_attr_leaf_entry_t *' <LValueToRValue>
+    |     |           `-DeclRefExpr 0x7fb56402a388 <col:78> 'xfs_attr_leaf_entry_t *' lvalue Var 0x7fb564028cd8 'entry' 'xfs_attr_leaf_entry_t *'
+    |     |-BinaryOperator 0x7fb56402a508 <line:87:4, col:13> 'int' '='
+    |     | |-DeclRefExpr 0x7fb56402a4a0 <col:4> 'int' lvalue Var 0x7fb564028d68 'before' 'int'
+    |     | `-ImplicitCastExpr 0x7fb56402a4f0 <col:13> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fb56402a4c8 <col:13> 'int' lvalue Var 0x7fb564029078 'i' 'int'
+    |     `-IfStmt 0x7fb56402a918 <line:88:8, line:91:15>
+    |       |-<<<NULL>>>
+    |       |-<<<NULL>>>
+    |       |-BinaryOperator 0x7fb56402a618 <line:88:12, col:25> 'int' '=='
+    |       | |-ImplicitCastExpr 0x7fb56402a5e8 <col:12, col:17> 'int' <IntegralCast>
+    |       | | `-ImplicitCastExpr 0x7fb56402a5d0 <col:12, col:17> '__u16':'unsigned short' <LValueToRValue>
+    |       | |   `-MemberExpr 0x7fb56402a570 <col:12, col:17> '__u16':'unsigned short' lvalue ->base 0x7fb564027ac0
+    |       | |     `-ImplicitCastExpr 0x7fb56402a558 <col:12> 'xfs_attr_leaf_map_t *' <LValueToRValue>
+    |       | |       `-DeclRefExpr 0x7fb56402a530 <col:12> 'xfs_attr_leaf_map_t *' lvalue Var 0x7fb564028bf8 'map' 'xfs_attr_leaf_map_t *'
+    |       | `-ImplicitCastExpr 0x7fb56402a600 <col:25> 'int' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7fb56402a5a8 <col:25> 'int' lvalue Var 0x7fb564028ed0 'entsize' 'int'
+    |       |-BinaryOperator 0x7fb56402a6a8 <line:89:4, col:12> 'int' '='
+    |       | |-DeclRefExpr 0x7fb56402a640 <col:4> 'int' lvalue Var 0x7fb564028de0 'after' 'int'
+    |       | `-ImplicitCastExpr 0x7fb56402a690 <col:12> 'int' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7fb56402a668 <col:12> 'int' lvalue Var 0x7fb564029078 'i' 'int'
+    |       `-IfStmt 0x7fb56402a8e0 <line:90:8, line:91:15>
+    |         |-<<<NULL>>>
+    |         |-<<<NULL>>>
+    |         |-BinaryOperator 0x7fb56402a828 <line:90:12, col:39> 'int' '<'
+    |         | |-ImplicitCastExpr 0x7fb56402a7f8 <col:12, col:35> 'int' <IntegralCast>
+    |         | | `-CallExpr 0x7fb56402a788 <col:12, col:35> '__u16':'unsigned short'
+    |         | |   |-ImplicitCastExpr 0x7fb56402a770 <col:12> '__u16 (*)(__u16)' <FunctionToPointerDecay>
+    |         | |   | `-DeclRefExpr 0x7fb56402a6d0 <col:12> '__u16 (__u16)' Function 0x7fb564025ba0 '__arch_swab16' '__u16 (__u16)'
+    |         | |   `-ImplicitCastExpr 0x7fb56402a7b8 <col:26, col:31> '__u16':'unsigned short' <LValueToRValue>
+    |         | |     `-MemberExpr 0x7fb56402a738 <col:26, col:31> '__u16':'unsigned short' lvalue ->size 0x7fb564027b18
+    |         | |       `-ImplicitCastExpr 0x7fb56402a720 <col:26> 'xfs_attr_leaf_map_t *' <LValueToRValue>
+    |         | |         `-DeclRefExpr 0x7fb56402a6f8 <col:26> 'xfs_attr_leaf_map_t *' lvalue Var 0x7fb564028bf8 'map' 'xfs_attr_leaf_map_t *'
+    |         | `-ImplicitCastExpr 0x7fb56402a810 <col:39> 'int' <LValueToRValue>
+    |         |   `-DeclRefExpr 0x7fb56402a7d0 <col:39> 'int' lvalue Var 0x7fb564029000 'tmp' 'int'
+    |         |-BinaryOperator 0x7fb56402a8b8 <line:91:4, col:15> 'int' '='
+    |         | |-DeclRefExpr 0x7fb56402a850 <col:4> 'int' lvalue Var 0x7fb564028e58 'smallest' 'int'
+    |         | `-ImplicitCastExpr 0x7fb56402a8a0 <col:15> 'int' <LValueToRValue>
+    |         |   `-DeclRefExpr 0x7fb56402a878 <col:15> 'int' lvalue Var 0x7fb564029078 'i' 'int'
+    |         `-<<<NULL>>>
+    |-IfStmt 0x7fb56402ad48 <line:94:2, line:99:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb56402aa60 <line:94:6, col:16> 'int' '>='
+    | | |-ImplicitCastExpr 0x7fb56402aa48 <col:6> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fb56402aa00 <col:6> 'int' lvalue Var 0x7fb564028d68 'before' 'int'
+    | | `-IntegerLiteral 0x7fb56402aa28 <col:16> 'int' 0
+    | |-CompoundStmt 0x7fb56402ad20 <line:95:3, line:99:3>
+    | | |-BinaryOperator 0x7fb56402abc8 <line:96:4, col:29> 'xfs_attr_leaf_map_t *' '='
+    | | | |-DeclRefExpr 0x7fb56402aa88 <col:4> 'xfs_attr_leaf_map_t *' lvalue Var 0x7fb564028bf8 'map' 'xfs_attr_leaf_map_t *'
+    | | | `-UnaryOperator 0x7fb56402aba8 <col:10, col:29> 'xfs_attr_leaf_map_t *' prefix '&'
+    | | |   `-ArraySubscriptExpr 0x7fb56402ab80 <col:11, col:29> 'xfs_attr_leaf_map_t':'struct xfs_attr_leaf_map' lvalue
+    | | |     |-ImplicitCastExpr 0x7fb56402ab50 <col:11, col:16> 'xfs_attr_leaf_map_t *' <ArrayToPointerDecay>
+    | | |     | `-MemberExpr 0x7fb56402aaf0 <col:11, col:16> 'xfs_attr_leaf_map_t [3]' lvalue ->freemap 0x7fb564027e58
+    | | |     |   `-ImplicitCastExpr 0x7fb56402aad8 <col:11> 'xfs_attr_leaf_hdr_t *' <LValueToRValue>
+    | | |     |     `-DeclRefExpr 0x7fb56402aab0 <col:11> 'xfs_attr_leaf_hdr_t *' lvalue Var 0x7fb564028b18 'hdr' 'xfs_attr_leaf_hdr_t *'
+    | | |     `-ImplicitCastExpr 0x7fb56402ab68 <col:24> 'int' <LValueToRValue>
+    | | |       `-DeclRefExpr 0x7fb56402ab28 <col:24> 'int' lvalue Var 0x7fb564028de0 'after' 'int'
+    | | `-BinaryOperator 0x7fb56402acf8 <line:97:4, col:23> '__u16':'unsigned short' '='
+    | |   |-MemberExpr 0x7fb56402ac30 <col:4, col:9> '__u16':'unsigned short' lvalue ->base 0x7fb564027ac0
+    | |   | `-ImplicitCastExpr 0x7fb56402ac18 <col:4> 'xfs_attr_leaf_map_t *' <LValueToRValue>
+    | |   |   `-DeclRefExpr 0x7fb56402abf0 <col:4> 'xfs_attr_leaf_map_t *' lvalue Var 0x7fb564028bf8 'map' 'xfs_attr_leaf_map_t *'
+    | |   `-ImplicitCastExpr 0x7fb56402ace0 <col:16, col:23> '__u16':'unsigned short' <LValueToRValue>
+    | |     `-MemberExpr 0x7fb56402aca8 <col:16, col:23> '__u16':'unsigned short' lvalue ->nameidx 0x7fb564028020
+    | |       `-ImplicitCastExpr 0x7fb56402ac90 <col:16> 'xfs_attr_leaf_entry_t *' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fb56402ac68 <col:16> 'xfs_attr_leaf_entry_t *' lvalue Var 0x7fb564028cd8 'entry' 'xfs_attr_leaf_entry_t *'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fb56402aec0 <line:101:3, col:31> 'xfs_attr_leaf_map_t *' '='
+    | |-DeclRefExpr 0x7fb56402ad80 <col:3> 'xfs_attr_leaf_map_t *' lvalue Var 0x7fb564028bf8 'map' 'xfs_attr_leaf_map_t *'
+    | `-UnaryOperator 0x7fb56402aea0 <col:9, col:31> 'xfs_attr_leaf_map_t *' prefix '&'
+    |   `-ArraySubscriptExpr 0x7fb56402ae78 <col:10, col:31> 'xfs_attr_leaf_map_t':'struct xfs_attr_leaf_map' lvalue
+    |     |-ImplicitCastExpr 0x7fb56402ae48 <col:10, col:15> 'xfs_attr_leaf_map_t *' <ArrayToPointerDecay>
+    |     | `-MemberExpr 0x7fb56402ade8 <col:10, col:15> 'xfs_attr_leaf_map_t [3]' lvalue ->freemap 0x7fb564027e58
+    |     |   `-ImplicitCastExpr 0x7fb56402add0 <col:10> 'xfs_attr_leaf_hdr_t *' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7fb56402ada8 <col:10> 'xfs_attr_leaf_hdr_t *' lvalue Var 0x7fb564028b18 'hdr' 'xfs_attr_leaf_hdr_t *'
+    |     `-ImplicitCastExpr 0x7fb56402ae60 <col:23> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fb56402ae20 <col:23> 'int' lvalue Var 0x7fb564028e58 'smallest' 'int'
+    |-BinaryOperator 0x7fb56402b060 <line:103:3, col:43> '__u16':'unsigned short' '='
+    | |-MemberExpr 0x7fb56402af28 <col:3, col:8> '__u16':'unsigned short' lvalue ->base 0x7fb564027ac0
+    | | `-ImplicitCastExpr 0x7fb56402af10 <col:3> 'xfs_attr_leaf_map_t *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fb56402aee8 <col:3> 'xfs_attr_leaf_map_t *' lvalue Var 0x7fb564028bf8 'map' 'xfs_attr_leaf_map_t *'
+    | `-CallExpr 0x7fb56402b018 <col:15, col:43> '__u16':'unsigned short'
+    |   |-ImplicitCastExpr 0x7fb56402b000 <col:15> '__u16 (*)(__u16)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fb56402af60 <col:15> '__u16 (__u16)' Function 0x7fb564025ba0 '__arch_swab16' '__u16 (__u16)'
+    |   `-ImplicitCastExpr 0x7fb56402b048 <col:29, col:36> '__u16':'unsigned short' <LValueToRValue>
+    |     `-MemberExpr 0x7fb56402afc8 <col:29, col:36> '__u16':'unsigned short' lvalue ->nameidx 0x7fb564028020
+    |       `-ImplicitCastExpr 0x7fb56402afb0 <col:29> 'xfs_attr_leaf_entry_t *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fb56402af88 <col:29> 'xfs_attr_leaf_entry_t *' lvalue Var 0x7fb564028cd8 'entry' 'xfs_attr_leaf_entry_t *'
+    `-ReturnStmt 0x7fb56402b1a0 <line:105:2, col:34>
+      `-ParenExpr 0x7fb56402b180 <col:8, col:34> 'int'
+        `-BinaryOperator 0x7fb56402b158 <col:9, col:19> 'int' '<'
+          |-ImplicitCastExpr 0x7fb56402b128 <col:9> 'int' <LValueToRValue>
+          | `-DeclRefExpr 0x7fb56402b088 <col:9> 'int' lvalue Var 0x7fb564029000 'tmp' 'int'
+          `-ImplicitCastExpr 0x7fb56402b140 <col:15, col:19> 'int' <LValueToRValue>
+            `-MemberExpr 0x7fb56402b0f0 <col:15, col:19> 'int' lvalue ->m_attr_magicpct 0x7fb564026448
+              `-ImplicitCastExpr 0x7fb56402b0d8 <col:15> 'xfs_mount_t *' <LValueToRValue>
+                `-DeclRefExpr 0x7fb56402b0b0 <col:15> 'xfs_mount_t *' lvalue Var 0x7fb564029168 'mp' 'xfs_mount_t *'

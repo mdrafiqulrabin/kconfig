@@ -1,0 +1,149 @@
+FileAST: 
+  Decl: funcs, [], [], []
+    TypeDecl: funcs, []
+      Struct: displayfuncs
+        Decl: init, [], [], []
+          PtrDecl: []
+            FuncDecl: 
+              TypeDecl: init, []
+                IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: gpsdisplay
+      Decl: funcs, [], [], []
+        PtrDecl: []
+          TypeDecl: funcs, []
+            Struct: displayfuncs
+  Decl: PSDoArc, [], [], []
+    FuncDecl: 
+      TypeDecl: PSDoArc, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: PSMyArc, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: cx, [], [], []
+            TypeDecl: cx, []
+              IdentifierType: ['double']
+          Decl: cy, [], [], []
+            TypeDecl: cy, []
+              IdentifierType: ['double']
+          Decl: radx, [], [], []
+            TypeDecl: radx, []
+              IdentifierType: ['double']
+          Decl: rady, [], [], []
+            TypeDecl: rady, []
+              IdentifierType: ['double']
+          Decl: sa, [], [], []
+            TypeDecl: sa, []
+              IdentifierType: ['double']
+          Decl: ta, [], [], []
+            TypeDecl: ta, []
+              IdentifierType: ['double']
+        TypeDecl: PSMyArc, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: ea, [], [], []
+        TypeDecl: ea, []
+          IdentifierType: ['double']
+      Decl: temp, [], [], []
+        TypeDecl: temp, []
+          IdentifierType: ['double']
+      Assignment: =
+        ID: ea
+        BinaryOp: +
+          ID: sa
+          ID: ta
+      While: 
+        BinaryOp: <
+          ID: sa
+          ID: ea
+        Compound: 
+          Assignment: =
+            ID: temp
+            BinaryOp: *
+              BinaryOp: /
+                BinaryOp: +
+                  ID: sa
+                  Constant: int, 90
+                Constant: int, 90
+              Constant: int, 90
+          FuncCall: 
+            ID: PSDoArc
+            ExprList: 
+              ID: cx
+              ID: sa
+              TernaryOp: 
+                BinaryOp: <
+                  ID: ea
+                  ID: temp
+                ID: ea
+                ID: temp
+          Assignment: =
+            ID: sa
+            ID: temp
+  FuncDef: 
+    Decl: PSDrawElipse, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: PSDrawElipse, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: cx, [], [], []
+        TypeDecl: cx, []
+          IdentifierType: ['float']
+      Decl: cy, [], [], []
+        TypeDecl: cy, []
+          IdentifierType: ['float']
+      Decl: radx, [], [], []
+        TypeDecl: radx, []
+          IdentifierType: ['float']
+      Decl: rady, [], [], []
+        TypeDecl: rady, []
+          IdentifierType: ['float']
+      If: 
+        BinaryOp: !=
+          ID: radx
+          ID: rady
+        FuncCall: 
+          ID: PSMyArc
+          ExprList: 
+            ID: cx
+            ID: cy
+            ID: radx
+            ID: rady
+            Constant: int, 0
+            Constant: int, 360
+  FuncDef: 
+    Decl: PSDrawFillCircle, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: PSDrawFillCircle, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: PSDrawElipse
+  Decl: psfuncs, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: psfuncs, []
+        Struct: displayfuncs
+    InitList: 
+      ID: PSDrawFillCircle
+  FuncDef: 
+    Decl: _GPSDraw_CreateDisplay, [], [], []
+      FuncDecl: 
+        TypeDecl: _GPSDraw_CreateDisplay, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: gdisp, [], [], []
+        PtrDecl: []
+          TypeDecl: gdisp, []
+            Struct: gpsdisplay
+      Assignment: =
+        StructRef: ->
+          ID: gdisp
+          ID: funcs
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          UnaryOp: &
+            ID: psfuncs

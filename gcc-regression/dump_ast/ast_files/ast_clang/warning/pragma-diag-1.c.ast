@@ -1,0 +1,51 @@
+c_files/pragma-diag-1.c:22:24: warning: pragma diagnostic pop could not pop, no matching push [-Wunknown-pragmas]
+#pragma GCC diagnostic pop
+                       ^
+1 warning generated.
+TranslationUnitDecl 0x7fdfc40124d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdfc4012a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdfc4012740 '__int128'
+|-TypedefDecl 0x7fdfc4012a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdfc4012760 'unsigned __int128'
+|-TypedefDecl 0x7fdfc4012d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdfc4012b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdfc4012ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdfc4012e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdfc4012dc0 'char *'
+|   `-BuiltinType 0x7fdfc4012560 'char'
+|-TypedefDecl 0x7fdfc40130c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdfc4013070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdfc4012ee0 'struct __va_list_tag'
+|     `-Record 0x7fdfc4012e58 '__va_list_tag'
+|-FunctionDecl 0x7fdfc3814000 <c_files/pragma-diag-1.c:5:1, col:14> col:6 used foo 'void (int)'
+| `-ParmVarDecl 0x7fdfc4013138 <col:11> col:14 'int'
+`-FunctionDecl 0x7fdfc3814130 <line:7:1, line:24:1> line:8:1 main 'int ()'
+  `-CompoundStmt 0x7fdfc38146f8 <line:9:1, line:24:1>
+    |-DeclStmt 0x7fdfc3814240 <line:10:3, col:8>
+    | `-VarDecl 0x7fdfc38141e0 <col:3, col:7> col:7 used a 'int'
+    |-DeclStmt 0x7fdfc38142d0 <line:11:3, col:8>
+    | `-VarDecl 0x7fdfc3814270 <col:3, col:7> col:7 used b 'int'
+    |-DeclStmt 0x7fdfc3814360 <line:12:3, col:8>
+    | `-VarDecl 0x7fdfc3814300 <col:3, col:7> col:7 used c 'int'
+    |-DeclStmt 0x7fdfc38143f0 <line:13:3, col:8>
+    | `-VarDecl 0x7fdfc3814390 <col:3, col:7> col:7 used d 'int'
+    |-CallExpr 0x7fdfc38144a0 <line:16:3, col:8> 'void'
+    | |-ImplicitCastExpr 0x7fdfc3814488 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fdfc3814408 <col:3> 'void (int)' Function 0x7fdfc3814000 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fdfc38144d0 <col:7> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fdfc3814430 <col:7> 'int' lvalue Var 0x7fdfc38141e0 'a' 'int'
+    |-CallExpr 0x7fdfc3814550 <line:19:3, col:8> 'void'
+    | |-ImplicitCastExpr 0x7fdfc3814538 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fdfc38144e8 <col:3> 'void (int)' Function 0x7fdfc3814000 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fdfc3814580 <col:7> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fdfc3814510 <col:7> 'int' lvalue Var 0x7fdfc3814270 'b' 'int'
+    |-CallExpr 0x7fdfc3814600 <line:21:3, col:8> 'void'
+    | |-ImplicitCastExpr 0x7fdfc38145e8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fdfc3814598 <col:3> 'void (int)' Function 0x7fdfc3814000 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fdfc3814630 <col:7> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fdfc38145c0 <col:7> 'int' lvalue Var 0x7fdfc3814300 'c' 'int'
+    `-CallExpr 0x7fdfc38146b0 <line:23:3, col:8> 'void'
+      |-ImplicitCastExpr 0x7fdfc3814698 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fdfc3814648 <col:3> 'void (int)' Function 0x7fdfc3814000 'foo' 'void (int)'
+      `-ImplicitCastExpr 0x7fdfc38146e0 <col:7> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fdfc3814670 <col:7> 'int' lvalue Var 0x7fdfc3814390 'd' 'int'

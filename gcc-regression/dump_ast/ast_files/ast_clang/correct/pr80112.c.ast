@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7f92e10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f92e1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f92e1026740 '__int128'
+|-TypedefDecl 0x7f92e1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f92e1026760 'unsigned __int128'
+|-TypedefDecl 0x7f92e1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f92e1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f92e1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f92e1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f92e1026dc0 'char *'
+|   `-BuiltinType 0x7f92e1026560 'char'
+|-TypedefDecl 0x7f92e10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f92e1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f92e1026ee0 'struct __va_list_tag'
+|     `-Record 0x7f92e1026e58 '__va_list_tag'
+|-VarDecl 0x7f92e1027160 <c_files/pr80112.c:6:1, col:8> col:8 used a 'void **'
+`-FunctionDecl 0x7f92e1825ae0 <line:8:1, line:22:1> line:9:1 foo 'void (int)'
+  |-ParmVarDecl 0x7f92e1825a18 <col:6, col:10> col:10 used c 'int'
+  `-CompoundStmt 0x7f92e18260e0 <line:10:1, line:22:1>
+    |-DeclStmt 0x7f92e1825de8 <line:11:3, col:25>
+    | `-VarDecl 0x7f92e1825bd0 <col:3, col:24> col:9 used d 'void *[2]' cinit
+    |   `-InitListExpr 0x7f92e1825d50 <col:15, col:24> 'void *[2]'
+    |     |-AddrLabelExpr 0x7f92e1825c78 <col:16, col:18> 'void *' e 0x7f92e1825c30
+    |     `-AddrLabelExpr 0x7f92e1825ce0 <col:21, col:23> 'void *' f 0x7f92e1825c98
+    |-BinaryOperator 0x7f92e1825e68 <line:12:3, col:7> 'void **' '='
+    | |-DeclRefExpr 0x7f92e1825e00 <col:3> 'void **' lvalue Var 0x7f92e1027160 'a' 'void **'
+    | `-ImplicitCastExpr 0x7f92e1825e50 <col:7> 'void **' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7f92e1825e28 <col:7> 'void *[2]' lvalue Var 0x7f92e1825bd0 'd' 'void *[2]'
+    `-SwitchStmt 0x7f92e1825ed0 <line:13:3, line:21:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f92e1825eb8 <line:13:11> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f92e1825e90 <col:11> 'int' lvalue ParmVar 0x7f92e1825a18 'c' 'int'
+      `-CompoundStmt 0x7f92e18260b0 <line:14:5, line:21:5>
+        |-LabelStmt 0x7f92e1825f70 <line:15:5, line:16:11> 'f'
+        | `-BinaryOperator 0x7f92e1825f48 <col:7, col:11> 'int' '='
+        |   |-DeclRefExpr 0x7f92e1825f00 <col:7> 'int' lvalue ParmVar 0x7f92e1825a18 'c' 'int'
+        |   `-IntegerLiteral 0x7f92e1825f28 <col:11> 'int' 9
+        |-CaseStmt 0x7f92e1825fa8 <line:18:5, line:19:14>
+        | |-IntegerLiteral 0x7f92e1825f88 <line:18:10> 'int' 9
+        | |-<<<NULL>>>
+        | `-IndirectGotoStmt 0x7f92e1826070 <line:19:7, col:14>
+        |   `-ImplicitCastExpr 0x7f92e1826058 <col:13, col:14> 'const void *' <BitCast>
+        |     `-UnaryOperator 0x7f92e1826008 <col:13, col:14> 'void **' postfix '++'
+        |       `-DeclRefExpr 0x7f92e1825fe0 <col:13> 'void **' lvalue Var 0x7f92e1027160 'a' 'void **'
+        `-LabelStmt 0x7f92e1826098 <line:20:5, col:7> 'e'
+          `-NullStmt 0x7f92e1826088 <col:7>

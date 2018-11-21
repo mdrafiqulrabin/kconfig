@@ -1,0 +1,50 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: f1, [], [], []
+        TypeDecl: f1, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 3
+      Decl: f2, [], [], []
+        TypeDecl: f2, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 3
+      Decl: f3, [], [], []
+        TypeDecl: f3, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 1
+      Decl: f4, [], [], []
+        TypeDecl: f4, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 1
+  FuncDef: 
+    Decl: init_A, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: this, [], [], []
+            PtrDecl: []
+              TypeDecl: this, []
+                Struct: A
+        TypeDecl: init_A, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: this
+          ID: f1
+        Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: this
+          ID: f2
+        Constant: int, 1
+      Assignment: =
+        StructRef: ->
+          ID: this
+          ID: f3
+        Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: this
+          ID: f4
+        Constant: int, 0

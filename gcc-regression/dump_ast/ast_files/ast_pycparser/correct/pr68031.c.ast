@@ -1,0 +1,55 @@
+FileAST: 
+  FuncDef: 
+    Decl: _mktm_r, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: lcltime, [], [], []
+            TypeDecl: lcltime, []
+              IdentifierType: ['long']
+          Decl: res, [], [], []
+            PtrDecl: []
+              TypeDecl: res, []
+                IdentifierType: ['int']
+        TypeDecl: _mktm_r, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: rem, [], [], []
+        TypeDecl: rem, []
+          IdentifierType: ['long']
+        BinaryOp: %
+          ID: lcltime
+          BinaryOp: *
+            BinaryOp: *
+              Constant: int, 60L
+              Constant: int, 60L
+            Constant: int, 24L
+      If: 
+        BinaryOp: <
+          ID: rem
+          Constant: int, 0
+        Return: 
+      While: 
+        BinaryOp: >=
+          ID: rem
+          BinaryOp: *
+            BinaryOp: *
+              Constant: int, 60L
+              Constant: int, 60L
+            Constant: int, 24L
+        Assignment: -=
+          ID: rem
+          BinaryOp: *
+            BinaryOp: *
+              Constant: int, 60L
+              Constant: int, 60L
+            Constant: int, 24L
+      Assignment: =
+        UnaryOp: *
+          ID: res
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+          BinaryOp: %
+            ID: rem
+            Constant: int, 60L

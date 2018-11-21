@@ -1,0 +1,67 @@
+FileAST: 
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: input, [], [], []
+            PtrDecl: []
+              TypeDecl: input, []
+                IdentifierType: ['int']
+          Decl: out, [], [], []
+            PtrDecl: []
+              TypeDecl: out, []
+                IdentifierType: ['int']
+          Decl: x1, [], [], []
+            TypeDecl: x1, []
+              IdentifierType: ['unsigned']
+          Decl: x2, [], [], []
+            TypeDecl: x2, []
+              IdentifierType: ['unsigned']
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['unsigned']
+      Decl: end, [], [], []
+        TypeDecl: end, []
+          IdentifierType: ['unsigned']
+        ID: x1
+      For: 
+        Assignment: =
+          ID: i
+          Assignment: =
+            ID: j
+            Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 1000
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: sum, [], [], []
+            TypeDecl: sum, []
+              IdentifierType: ['int']
+            Constant: int, 0
+          Assignment: +=
+            ID: end
+            ID: x2
+          For: 
+            BinaryOp: <
+              ID: j
+              ID: end
+            UnaryOp: p++
+              ID: j
+            Assignment: +=
+              ID: sum
+              ArrayRef: 
+                ID: input
+                ID: j
+          Assignment: =
+            ArrayRef: 
+              ID: out
+              ID: i
+            ID: sum

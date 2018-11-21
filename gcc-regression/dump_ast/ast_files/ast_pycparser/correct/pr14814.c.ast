@@ -1,0 +1,78 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: YY
+      Decl: e, [], [], []
+        ArrayDecl: []
+          TypeDecl: e, []
+            IdentifierType: ['double']
+          Constant: int, 3
+  FuncDef: 
+    Decl: y, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: this_1, [], [], []
+            PtrDecl: []
+              TypeDecl: this_1, []
+                Struct: YY
+        PtrDecl: []
+          TypeDecl: y, []
+            IdentifierType: ['double']
+    Compound: 
+      Return: 
+        UnaryOp: &
+          ArrayRef: 
+            StructRef: ->
+              ID: this_1
+              ID: e
+            Constant: int, 1
+  Decl: None, [], [], []
+    Struct: XX
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          Struct: YY
+  FuncDef: 
+    Decl: direction, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: this_1, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: this_1, ['const']
+                Struct: XX
+        TypeDecl: direction, []
+          Struct: YY
+    Compound: 
+      Return: 
+        StructRef: ->
+          ID: this_1
+          ID: v
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: r, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: r, ['const']
+                Struct: XX
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          Struct: YY
+        FuncCall: 
+          ID: direction
+          ExprList: 
+            ID: r
+      If: 
+        BinaryOp: <
+          UnaryOp: *
+            FuncCall: 
+              ID: y
+              ExprList: 
+                UnaryOp: &
+                  ID: t
+          Constant: float, 0.000001
+        Return: 
+          Constant: int, 0
+      Return: 
+        Constant: int, 1

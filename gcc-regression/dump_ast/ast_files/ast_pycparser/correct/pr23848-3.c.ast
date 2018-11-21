@@ -1,0 +1,90 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: size, [], [], []
+            TypeDecl: size, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: size
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: temp, [], [], []
+            ArrayDecl: []
+              TypeDecl: temp, []
+                IdentifierType: ['char']
+              ID: size
+          Assignment: =
+            ArrayRef: 
+              ID: temp
+              BinaryOp: -
+                ID: size
+                Constant: int, 1
+            Constant: char, '\0'
+          Compound: 
+            Decl: temp2, [], [], []
+              ArrayDecl: []
+                TypeDecl: temp2, []
+                  IdentifierType: ['char']
+                ID: size
+            Compound: 
+              Decl: temp3, [], [], []
+                ArrayDecl: []
+                  TypeDecl: temp3, []
+                    IdentifierType: ['char']
+                  ID: size
+              Compound: 
+                Decl: temp4, [], [], []
+                  ArrayDecl: []
+                    TypeDecl: temp4, []
+                      IdentifierType: ['char']
+                    ID: size
+                FuncCall: 
+                  ID: bar
+                  ExprList: 
+                    ID: i
+                    ID: temp
+                    ID: temp2
+                    ID: temp3
+                    ID: temp4
+                    ID: size

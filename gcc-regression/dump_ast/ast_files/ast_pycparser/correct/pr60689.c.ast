@@ -1,0 +1,34 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: x, [], [], []
+        ArrayDecl: []
+          TypeDecl: x, []
+            IdentifierType: ['char']
+          Constant: int, 9
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: S
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                Struct: S
+          Decl: z, [], [], []
+            PtrDecl: []
+              TypeDecl: z, []
+                Struct: S
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __atomic_exchange
+        ExprList: 
+          ID: x
+          ID: y
+          ID: z
+          ID: __ATOMIC_SEQ_CST

@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7ff3c80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff3c8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff3c8026740 '__int128'
+|-TypedefDecl 0x7ff3c8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff3c8026760 'unsigned __int128'
+|-TypedefDecl 0x7ff3c8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff3c8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff3c8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff3c8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff3c8026dc0 'char *'
+|   `-BuiltinType 0x7ff3c8026560 'char'
+|-TypedefDecl 0x7ff3c80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff3c8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff3c8026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff3c8026e58 '__va_list_tag'
+|-RecordDecl 0x7ff3c8027120 <c_files/pr57184.c:5:1, col:11> col:8 struct S definition
+|-FunctionDecl 0x7ff3c8825b80 <line:6:1, col:26> col:6 used bar 'void (struct S *const)'
+| `-ParmVarDecl 0x7ff3c8825a80 <col:11, col:20> col:26 'struct S *const'
+|-VarDecl 0x7ff3c8825c88 <line:7:1, col:41> col:24 used c 'struct S *const' static cinit
+| `-UnaryOperator 0x7ff3c8825db0 <col:28, col:41> 'struct S *' prefix '&'
+|   `-CompoundLiteralExpr 0x7ff3c8825d88 <col:29, col:41> 'struct S':'struct S' lvalue
+|     `-InitListExpr 0x7ff3c8825d48 <col:40, col:41> 'struct S':'struct S'
+`-FunctionDecl 0x7ff3c8825e90 <line:9:1, line:13:1> line:10:1 foo 'void (void)'
+  `-CompoundStmt 0x7ff3c8826038 <line:11:1, line:13:1>
+    `-CallExpr 0x7ff3c8825ff0 <line:12:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7ff3c8825fd8 <col:3> 'void (*)(struct S *const)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff3c8825f28 <col:3> 'void (struct S *const)' Function 0x7ff3c8825b80 'bar' 'void (struct S *const)'
+      `-ImplicitCastExpr 0x7ff3c8826020 <col:8> 'struct S *' <LValueToRValue>
+        `-DeclRefExpr 0x7ff3c8825f50 <col:8> 'struct S *const' lvalue Var 0x7ff3c8825c88 'c' 'struct S *const'

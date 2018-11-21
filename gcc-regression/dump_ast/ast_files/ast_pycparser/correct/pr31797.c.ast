@@ -1,0 +1,94 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: GTeth_desc
+      Decl: ed_cmdsts, [], [], []
+        TypeDecl: ed_cmdsts, []
+          IdentifierType: ['unsigned']
+  Decl: None, [], [], []
+    Struct: GTeth_softc
+      Decl: txq_desc, [], [], []
+        ArrayDecl: []
+          TypeDecl: txq_desc, []
+            Struct: GTeth_desc
+          Constant: int, 32
+      Decl: txq_fi, [], [], []
+        TypeDecl: txq_fi, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: txq_nactive, [], [], []
+        TypeDecl: txq_nactive, []
+          IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: GTeth_txq_free, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: sc, [], [], []
+            PtrDecl: []
+              TypeDecl: sc, []
+                Struct: GTeth_softc
+        TypeDecl: GTeth_txq_free, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: txd, [], [], []
+        PtrDecl: []
+          TypeDecl: txd, []
+            Struct: GTeth_desc
+        UnaryOp: &
+          ArrayRef: 
+            StructRef: ->
+              ID: sc
+              ID: txq_desc
+            Constant: int, 0
+      Assignment: &=
+        StructRef: ->
+          ID: txd
+          ID: ed_cmdsts
+        UnaryOp: ~
+          BinaryOp: <<
+            Constant: int, 1U
+            Constant: int, 31
+  FuncDef: 
+    Decl: GTeth_txq_done, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: sc, [], [], []
+            PtrDecl: []
+              TypeDecl: sc, []
+                Struct: GTeth_softc
+        TypeDecl: GTeth_txq_done, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        BinaryOp: >
+          StructRef: ->
+            ID: sc
+            ID: txq_nactive
+          Constant: int, 0
+        Compound: 
+          Decl: txd, ['volatile'], [], []
+            PtrDecl: []
+              TypeDecl: txd, ['volatile']
+                Struct: GTeth_desc
+            UnaryOp: &
+              ArrayRef: 
+                StructRef: ->
+                  ID: sc
+                  ID: txq_desc
+                StructRef: ->
+                  ID: sc
+                  ID: txq_fi
+          If: 
+            StructRef: ->
+              ID: txd
+              ID: ed_cmdsts
+            Compound: 
+              If: 
+                BinaryOp: ==
+                  StructRef: ->
+                    ID: sc
+                    ID: txq_nactive
+                  Constant: int, 1
+                Return: 
+          FuncCall: 
+            ID: GTeth_txq_free
+            ExprList: 
+              ID: sc

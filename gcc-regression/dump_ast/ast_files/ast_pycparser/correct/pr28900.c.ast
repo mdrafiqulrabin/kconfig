@@ -1,0 +1,56 @@
+FileAST: 
+  FuncDef: 
+    Decl: synths_, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: rc, [], [], []
+            PtrDecl: []
+              TypeDecl: rc, []
+                IdentifierType: ['float']
+        TypeDecl: synths_, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: r1, [], [], []
+        TypeDecl: r1, []
+          IdentifierType: ['float']
+      Decl: r2, [], [], []
+        TypeDecl: r2, []
+          IdentifierType: ['float']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 128
+        UnaryOp: ++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: r2
+            ArrayRef: 
+              ID: rc
+              ID: i
+          Assignment: =
+            ID: r1
+            TernaryOp: 
+              BinaryOp: <=
+                ID: r2
+                Constant: float, .99f
+              ID: r2
+              Constant: float, .99f
+          Assignment: =
+            ArrayRef: 
+              ID: rc
+              ID: i
+            TernaryOp: 
+              BinaryOp: >=
+                ID: r1
+                UnaryOp: -
+                  Constant: float, .99f
+              ID: r1
+              UnaryOp: -
+                Constant: float, .99f

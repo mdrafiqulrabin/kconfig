@@ -1,0 +1,58 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: B
+      Decl: p, [], [], []
+        TypeDecl: p, []
+          IdentifierType: ['int']
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+  Decl: b, [], ['extern'], []
+    PtrDecl: []
+      PtrDecl: []
+        PtrDecl: []
+          TypeDecl: b, []
+            Struct: B
+  Decl: a, [], ['extern'], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: c
+          ID: d
+        BinaryOp: <=
+          ID: c
+          ID: e
+        UnaryOp: p++
+          ID: c
+        Assignment: =
+          StructRef: ->
+            ArrayRef: 
+              ArrayRef: 
+                ID: b
+                ID: a
+              ID: c
+            ID: n
+          StructRef: ->
+            ArrayRef: 
+              ArrayRef: 
+                ID: b
+                ID: a
+              ID: c
+            ID: p

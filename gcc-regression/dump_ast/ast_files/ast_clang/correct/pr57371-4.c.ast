@@ -1,0 +1,206 @@
+TranslationUnitDecl 0x7fea030264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fea03026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fea03026740 '__int128'
+|-TypedefDecl 0x7fea03026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fea03026760 'unsigned __int128'
+|-TypedefDecl 0x7fea03026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fea03026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fea03026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fea03026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fea03026dc0 'char *'
+|   `-BuiltinType 0x7fea03026560 'char'
+|-TypedefDecl 0x7fea030270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fea03027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fea03026ee0 'struct __va_list_tag'
+|     `-Record 0x7fea03026e58 '__va_list_tag'
+|-FunctionDecl 0x7fea03826a00 <c_files/pr57371-4.c:12:1, line:84:1> line:12:6 nonfinite 'void (unsigned short)'
+| |-ParmVarDecl 0x7fea03027138 <col:16, col:31> col:31 used x 'unsigned short'
+| `-CompoundStmt 0x7fea03829d70 <col:34, line:84:1>
+|   |-CompoundStmt 0x7fea03826f50 <line:13:3, line:17:3>
+|   | |-DeclStmt 0x7fea03826b58 <line:14:5, col:29>
+|   | | `-VarDecl 0x7fea03826af8 <col:5, col:18> col:18 used nonfinite_1 'volatile int'
+|   | `-BinaryOperator 0x7fea03826f28 <line:15:5, line:9:33> 'int' '='
+|   |   |-DeclRefExpr 0x7fea03826b70 <line:15:5> 'volatile int' lvalue Var 0x7fea03826af8 'nonfinite_1' 'volatile int'
+|   |   `-BinaryOperator 0x7fea03826f00 <col:19, line:9:33> 'int' '>'
+|   |     |-CStyleCastExpr 0x7fea03826bf0 <line:15:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fea03826bd8 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fea03826b98 <col:27> 'unsigned short' lvalue ParmVar 0x7fea03027138 'x' 'unsigned short'
+|   |     `-CallExpr 0x7fea03826ea0 <line:9:14, col:33> 'float'
+|   |       |-ImplicitCastExpr 0x7fea03826e88 <col:14> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fea03826db0 <col:14> '<builtin fn type>' Function 0x7fea03826c58 '__builtin_nanf' 'float (const char *)'
+|   |       `-ImplicitCastExpr 0x7fea03826ee8 <col:30> 'const char *' <BitCast>
+|   |         `-ImplicitCastExpr 0x7fea03826ed0 <col:30> 'char *' <ArrayToPointerDecay>
+|   |           `-StringLiteral 0x7fea03826e18 <col:30> 'char [2]' lvalue "0"
+|   |-CompoundStmt 0x7fea038271e8 <line:19:3, line:23:3>
+|   | |-DeclStmt 0x7fea03826ff0 <line:20:5, col:29>
+|   | | `-VarDecl 0x7fea03826f90 <col:5, col:18> col:18 used nonfinite_2 'volatile int'
+|   | `-BinaryOperator 0x7fea038271c0 <line:21:5, line:9:33> 'int' '='
+|   |   |-DeclRefExpr 0x7fea03827008 <line:21:5> 'volatile int' lvalue Var 0x7fea03826f90 'nonfinite_2' 'volatile int'
+|   |   `-BinaryOperator 0x7fea03827198 <col:19, line:9:33> 'int' '>='
+|   |     |-CStyleCastExpr 0x7fea03827088 <line:21:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fea03827070 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fea03827030 <col:27> 'unsigned short' lvalue ParmVar 0x7fea03027138 'x' 'unsigned short'
+|   |     `-CallExpr 0x7fea03827138 <line:9:14, col:33> 'float'
+|   |       |-ImplicitCastExpr 0x7fea03827120 <col:14> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fea038270b0 <col:14> '<builtin fn type>' Function 0x7fea03826c58 '__builtin_nanf' 'float (const char *)'
+|   |       `-ImplicitCastExpr 0x7fea03827180 <col:30> 'const char *' <BitCast>
+|   |         `-ImplicitCastExpr 0x7fea03827168 <col:30> 'char *' <ArrayToPointerDecay>
+|   |           `-StringLiteral 0x7fea038270d8 <col:30> 'char [2]' lvalue "0"
+|   |-CompoundStmt 0x7fea03827480 <line:25:3, line:29:3>
+|   | |-DeclStmt 0x7fea03827288 <line:26:5, col:29>
+|   | | `-VarDecl 0x7fea03827228 <col:5, col:18> col:18 used nonfinite_3 'volatile int'
+|   | `-BinaryOperator 0x7fea03827458 <line:27:5, line:9:33> 'int' '='
+|   |   |-DeclRefExpr 0x7fea038272a0 <line:27:5> 'volatile int' lvalue Var 0x7fea03827228 'nonfinite_3' 'volatile int'
+|   |   `-BinaryOperator 0x7fea03827430 <col:19, line:9:33> 'int' '<'
+|   |     |-CStyleCastExpr 0x7fea03827320 <line:27:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fea03827308 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fea038272c8 <col:27> 'unsigned short' lvalue ParmVar 0x7fea03027138 'x' 'unsigned short'
+|   |     `-CallExpr 0x7fea038273d0 <line:9:14, col:33> 'float'
+|   |       |-ImplicitCastExpr 0x7fea038273b8 <col:14> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fea03827348 <col:14> '<builtin fn type>' Function 0x7fea03826c58 '__builtin_nanf' 'float (const char *)'
+|   |       `-ImplicitCastExpr 0x7fea03827418 <col:30> 'const char *' <BitCast>
+|   |         `-ImplicitCastExpr 0x7fea03827400 <col:30> 'char *' <ArrayToPointerDecay>
+|   |           `-StringLiteral 0x7fea03827370 <col:30> 'char [2]' lvalue "0"
+|   |-CompoundStmt 0x7fea03827718 <line:31:3, line:35:3>
+|   | |-DeclStmt 0x7fea03827520 <line:32:5, col:29>
+|   | | `-VarDecl 0x7fea038274c0 <col:5, col:18> col:18 used nonfinite_4 'volatile int'
+|   | `-BinaryOperator 0x7fea038276f0 <line:33:5, line:9:33> 'int' '='
+|   |   |-DeclRefExpr 0x7fea03827538 <line:33:5> 'volatile int' lvalue Var 0x7fea038274c0 'nonfinite_4' 'volatile int'
+|   |   `-BinaryOperator 0x7fea038276c8 <col:19, line:9:33> 'int' '<='
+|   |     |-CStyleCastExpr 0x7fea038275b8 <line:33:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fea038275a0 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fea03827560 <col:27> 'unsigned short' lvalue ParmVar 0x7fea03027138 'x' 'unsigned short'
+|   |     `-CallExpr 0x7fea03827668 <line:9:14, col:33> 'float'
+|   |       |-ImplicitCastExpr 0x7fea03827650 <col:14> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fea038275e0 <col:14> '<builtin fn type>' Function 0x7fea03826c58 '__builtin_nanf' 'float (const char *)'
+|   |       `-ImplicitCastExpr 0x7fea038276b0 <col:30> 'const char *' <BitCast>
+|   |         `-ImplicitCastExpr 0x7fea03827698 <col:30> 'char *' <ArrayToPointerDecay>
+|   |           `-StringLiteral 0x7fea03827608 <col:30> 'char [2]' lvalue "0"
+|   |-CompoundStmt 0x7fea03828b10 <line:37:3, line:41:3>
+|   | |-DeclStmt 0x7fea038277b8 <line:38:5, col:29>
+|   | | `-VarDecl 0x7fea03827758 <col:5, col:18> col:18 used nonfinite_5 'volatile int'
+|   | `-BinaryOperator 0x7fea03828ae8 <line:39:5, line:10:34> 'int' '='
+|   |   |-DeclRefExpr 0x7fea038277d0 <line:39:5> 'volatile int' lvalue Var 0x7fea03827758 'nonfinite_5' 'volatile int'
+|   |   `-BinaryOperator 0x7fea03828ac0 <col:19, line:10:34> 'int' '>'
+|   |     |-CStyleCastExpr 0x7fea03827850 <line:39:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fea03827838 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fea038277f8 <col:27> 'unsigned short' lvalue ParmVar 0x7fea03027138 'x' 'unsigned short'
+|   |     `-CallExpr 0x7fea03828a60 <line:10:14, col:34> 'float'
+|   |       |-ImplicitCastExpr 0x7fea03828a48 <col:14> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fea038279d0 <col:14> '<builtin fn type>' Function 0x7fea03827878 '__builtin_nansf' 'float (const char *)'
+|   |       `-ImplicitCastExpr 0x7fea03828aa8 <col:31> 'const char *' <BitCast>
+|   |         `-ImplicitCastExpr 0x7fea03828a90 <col:31> 'char *' <ArrayToPointerDecay>
+|   |           `-StringLiteral 0x7fea03828a00 <col:31> 'char [2]' lvalue "0"
+|   |-CompoundStmt 0x7fea03828da8 <line:43:3, line:47:3>
+|   | |-DeclStmt 0x7fea03828bb0 <line:44:5, col:29>
+|   | | `-VarDecl 0x7fea03828b50 <col:5, col:18> col:18 used nonfinite_6 'volatile int'
+|   | `-BinaryOperator 0x7fea03828d80 <line:45:5, line:10:34> 'int' '='
+|   |   |-DeclRefExpr 0x7fea03828bc8 <line:45:5> 'volatile int' lvalue Var 0x7fea03828b50 'nonfinite_6' 'volatile int'
+|   |   `-BinaryOperator 0x7fea03828d58 <col:19, line:10:34> 'int' '>='
+|   |     |-CStyleCastExpr 0x7fea03828c48 <line:45:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fea03828c30 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fea03828bf0 <col:27> 'unsigned short' lvalue ParmVar 0x7fea03027138 'x' 'unsigned short'
+|   |     `-CallExpr 0x7fea03828cf8 <line:10:14, col:34> 'float'
+|   |       |-ImplicitCastExpr 0x7fea03828ce0 <col:14> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fea03828c70 <col:14> '<builtin fn type>' Function 0x7fea03827878 '__builtin_nansf' 'float (const char *)'
+|   |       `-ImplicitCastExpr 0x7fea03828d40 <col:31> 'const char *' <BitCast>
+|   |         `-ImplicitCastExpr 0x7fea03828d28 <col:31> 'char *' <ArrayToPointerDecay>
+|   |           `-StringLiteral 0x7fea03828c98 <col:31> 'char [2]' lvalue "0"
+|   |-CompoundStmt 0x7fea03829040 <line:49:3, line:53:3>
+|   | |-DeclStmt 0x7fea03828e48 <line:50:5, col:29>
+|   | | `-VarDecl 0x7fea03828de8 <col:5, col:18> col:18 used nonfinite_7 'volatile int'
+|   | `-BinaryOperator 0x7fea03829018 <line:51:5, line:10:34> 'int' '='
+|   |   |-DeclRefExpr 0x7fea03828e60 <line:51:5> 'volatile int' lvalue Var 0x7fea03828de8 'nonfinite_7' 'volatile int'
+|   |   `-BinaryOperator 0x7fea03828ff0 <col:19, line:10:34> 'int' '<'
+|   |     |-CStyleCastExpr 0x7fea03828ee0 <line:51:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fea03828ec8 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fea03828e88 <col:27> 'unsigned short' lvalue ParmVar 0x7fea03027138 'x' 'unsigned short'
+|   |     `-CallExpr 0x7fea03828f90 <line:10:14, col:34> 'float'
+|   |       |-ImplicitCastExpr 0x7fea03828f78 <col:14> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fea03828f08 <col:14> '<builtin fn type>' Function 0x7fea03827878 '__builtin_nansf' 'float (const char *)'
+|   |       `-ImplicitCastExpr 0x7fea03828fd8 <col:31> 'const char *' <BitCast>
+|   |         `-ImplicitCastExpr 0x7fea03828fc0 <col:31> 'char *' <ArrayToPointerDecay>
+|   |           `-StringLiteral 0x7fea03828f30 <col:31> 'char [2]' lvalue "0"
+|   |-CompoundStmt 0x7fea038292d8 <line:55:3, line:59:3>
+|   | |-DeclStmt 0x7fea038290e0 <line:56:5, col:29>
+|   | | `-VarDecl 0x7fea03829080 <col:5, col:18> col:18 used nonfinite_8 'volatile int'
+|   | `-BinaryOperator 0x7fea038292b0 <line:57:5, line:10:34> 'int' '='
+|   |   |-DeclRefExpr 0x7fea038290f8 <line:57:5> 'volatile int' lvalue Var 0x7fea03829080 'nonfinite_8' 'volatile int'
+|   |   `-BinaryOperator 0x7fea03829288 <col:19, line:10:34> 'int' '<='
+|   |     |-CStyleCastExpr 0x7fea03829178 <line:57:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fea03829160 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fea03829120 <col:27> 'unsigned short' lvalue ParmVar 0x7fea03027138 'x' 'unsigned short'
+|   |     `-CallExpr 0x7fea03829228 <line:10:14, col:34> 'float'
+|   |       |-ImplicitCastExpr 0x7fea03829210 <col:14> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fea038291a0 <col:14> '<builtin fn type>' Function 0x7fea03827878 '__builtin_nansf' 'float (const char *)'
+|   |       `-ImplicitCastExpr 0x7fea03829270 <col:31> 'const char *' <BitCast>
+|   |         `-ImplicitCastExpr 0x7fea03829258 <col:31> 'char *' <ArrayToPointerDecay>
+|   |           `-StringLiteral 0x7fea038291c8 <col:31> 'char [2]' lvalue "0"
+|   |-CompoundStmt 0x7fea03829570 <line:61:3, line:65:3>
+|   | |-DeclStmt 0x7fea03829378 <line:62:5, col:29>
+|   | | `-VarDecl 0x7fea03829318 <col:5, col:18> col:18 used nonfinite_9 'volatile int'
+|   | `-BinaryOperator 0x7fea03829548 <line:63:5, line:10:34> 'int' '='
+|   |   |-DeclRefExpr 0x7fea03829390 <line:63:5> 'volatile int' lvalue Var 0x7fea03829318 'nonfinite_9' 'volatile int'
+|   |   `-BinaryOperator 0x7fea03829520 <col:19, line:10:34> 'int' '=='
+|   |     |-CStyleCastExpr 0x7fea03829410 <line:63:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fea038293f8 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fea038293b8 <col:27> 'unsigned short' lvalue ParmVar 0x7fea03027138 'x' 'unsigned short'
+|   |     `-CallExpr 0x7fea038294c0 <line:10:14, col:34> 'float'
+|   |       |-ImplicitCastExpr 0x7fea038294a8 <col:14> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fea03829438 <col:14> '<builtin fn type>' Function 0x7fea03827878 '__builtin_nansf' 'float (const char *)'
+|   |       `-ImplicitCastExpr 0x7fea03829508 <col:31> 'const char *' <BitCast>
+|   |         `-ImplicitCastExpr 0x7fea038294f0 <col:31> 'char *' <ArrayToPointerDecay>
+|   |           `-StringLiteral 0x7fea03829460 <col:31> 'char [2]' lvalue "0"
+|   |-CompoundStmt 0x7fea03829808 <line:67:3, line:71:3>
+|   | |-DeclStmt 0x7fea03829610 <line:68:5, col:30>
+|   | | `-VarDecl 0x7fea038295b0 <col:5, col:18> col:18 used nonfinite_10 'volatile int'
+|   | `-BinaryOperator 0x7fea038297e0 <line:69:5, line:10:34> 'int' '='
+|   |   |-DeclRefExpr 0x7fea03829628 <line:69:5> 'volatile int' lvalue Var 0x7fea038295b0 'nonfinite_10' 'volatile int'
+|   |   `-BinaryOperator 0x7fea038297b8 <col:20, line:10:34> 'int' '!='
+|   |     |-CStyleCastExpr 0x7fea038296a8 <line:69:20, col:28> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fea03829690 <col:28> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fea03829650 <col:28> 'unsigned short' lvalue ParmVar 0x7fea03027138 'x' 'unsigned short'
+|   |     `-CallExpr 0x7fea03829758 <line:10:14, col:34> 'float'
+|   |       |-ImplicitCastExpr 0x7fea03829740 <col:14> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fea038296d0 <col:14> '<builtin fn type>' Function 0x7fea03827878 '__builtin_nansf' 'float (const char *)'
+|   |       `-ImplicitCastExpr 0x7fea038297a0 <col:31> 'const char *' <BitCast>
+|   |         `-ImplicitCastExpr 0x7fea03829788 <col:31> 'char *' <ArrayToPointerDecay>
+|   |           `-StringLiteral 0x7fea038296f8 <col:31> 'char [2]' lvalue "0"
+|   |-CompoundStmt 0x7fea03829ab0 <line:73:3, line:77:3>
+|   | |-DeclStmt 0x7fea038298a8 <line:74:5, col:30>
+|   | | `-VarDecl 0x7fea03829848 <col:5, col:18> col:18 used nonfinite_11 'volatile int'
+|   | `-BinaryOperator 0x7fea03829a88 <line:75:5, line:9:33> 'int' '='
+|   |   |-DeclRefExpr 0x7fea038298c0 <line:75:5> 'volatile int' lvalue Var 0x7fea03829848 'nonfinite_11' 'volatile int'
+|   |   `-BinaryOperator 0x7fea03829a60 <col:20, line:9:33> 'int' '=='
+|   |     |-CStyleCastExpr 0x7fea03829940 <line:75:20, col:28> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fea03829928 <col:28> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fea038298e8 <col:28> 'unsigned short' lvalue ParmVar 0x7fea03027138 'x' 'unsigned short'
+|   |     `-CallExpr 0x7fea03829a00 <line:9:14, col:33> 'float'
+|   |       |-ImplicitCastExpr 0x7fea038299d8 <col:14> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fea03829968 <col:14> '<builtin fn type>' Function 0x7fea03826c58 '__builtin_nanf' 'float (const char *)'
+|   |       `-ImplicitCastExpr 0x7fea03829a48 <col:30> 'const char *' <BitCast>
+|   |         `-ImplicitCastExpr 0x7fea03829a30 <col:30> 'char *' <ArrayToPointerDecay>
+|   |           `-StringLiteral 0x7fea03829990 <col:30> 'char [2]' lvalue "0"
+|   `-CompoundStmt 0x7fea03829d48 <line:79:3, line:83:3>
+|     |-DeclStmt 0x7fea03829b50 <line:80:5, col:30>
+|     | `-VarDecl 0x7fea03829af0 <col:5, col:18> col:18 used nonfinite_12 'volatile int'
+|     `-BinaryOperator 0x7fea03829d20 <line:81:5, line:9:33> 'int' '='
+|       |-DeclRefExpr 0x7fea03829b68 <line:81:5> 'volatile int' lvalue Var 0x7fea03829af0 'nonfinite_12' 'volatile int'
+|       `-BinaryOperator 0x7fea03829cf8 <col:20, line:9:33> 'int' '!='
+|         |-CStyleCastExpr 0x7fea03829be8 <line:81:20, col:28> 'float' <IntegralToFloating>
+|         | `-ImplicitCastExpr 0x7fea03829bd0 <col:28> 'unsigned short' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fea03829b90 <col:28> 'unsigned short' lvalue ParmVar 0x7fea03027138 'x' 'unsigned short'
+|         `-CallExpr 0x7fea03829c98 <line:9:14, col:33> 'float'
+|           |-ImplicitCastExpr 0x7fea03829c80 <col:14> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|           | `-DeclRefExpr 0x7fea03829c10 <col:14> '<builtin fn type>' Function 0x7fea03826c58 '__builtin_nanf' 'float (const char *)'
+|           `-ImplicitCastExpr 0x7fea03829ce0 <col:30> 'const char *' <BitCast>
+|             `-ImplicitCastExpr 0x7fea03829cc8 <col:30> 'char *' <ArrayToPointerDecay>
+|               `-StringLiteral 0x7fea03829c38 <col:30> 'char [2]' lvalue "0"
+|-FunctionDecl 0x7fea03826c58 <col:14> col:14 implicit used __builtin_nanf 'float (const char *)' extern
+| |-ParmVarDecl 0x7fea03826cf0 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-NoThrowAttr 0x7fea03826d58 <col:14> Implicit
+| `-ConstAttr 0x7fea03826da0 <col:14> Implicit
+`-FunctionDecl 0x7fea03827878 <line:10:14> col:14 implicit used __builtin_nansf 'float (const char *)' extern
+  |-ParmVarDecl 0x7fea03827910 <<invalid sloc>> <invalid sloc> 'const char *'
+  |-NoThrowAttr 0x7fea03827978 <col:14> Implicit
+  `-ConstAttr 0x7fea038279c0 <col:14> Implicit

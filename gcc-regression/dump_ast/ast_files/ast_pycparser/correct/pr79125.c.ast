@@ -1,0 +1,96 @@
+FileAST: 
+  Decl: za, [], [], []
+    TypeDecl: za, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: hl, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: hl, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: o8, [], [], []
+        TypeDecl: o8, []
+          IdentifierType: ['short', 'int']
+        Constant: int, 0
+      Decl: m6, [], [], []
+        TypeDecl: m6, []
+          IdentifierType: ['short', 'int']
+        Constant: int, 1
+      Decl: ni, [], [], []
+        PtrDecl: []
+          TypeDecl: ni, []
+            IdentifierType: ['short', 'int']
+        UnaryOp: &
+          ID: m6
+      For: 
+        Compound: 
+          Decl: af, [], [], []
+            TypeDecl: af, []
+              IdentifierType: ['int']
+          Decl: fd, [], [], []
+            PtrDecl: []
+              TypeDecl: fd, []
+                IdentifierType: ['short', 'int']
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['short', 'int']
+              UnaryOp: &
+                ID: ni
+          If: 
+            BinaryOp: !=
+              ID: ni
+              Constant: int, 0
+            Compound: 
+              If: 
+                BinaryOp: !=
+                  ID: m6
+                  Constant: int, 0
+                Assignment: =
+                  UnaryOp: *
+                    ID: ni
+                  Constant: int, 0
+                Assignment: =
+                  ID: za
+                  Constant: int, 0
+              Assignment: =
+                ID: af
+                BinaryOp: ||
+                  BinaryOp: *
+                    ID: o8
+                    ID: o8
+                  ID: o8
+              If: 
+                BinaryOp: ==
+                  ID: af
+                  Constant: int, 0
+                Assignment: /=
+                  ID: m6
+                  Constant: int, 0
+              While: 
+                BinaryOp: !=
+                  ID: za
+                  Constant: int, 0
+                Compound: 
+          Assignment: =
+            UnaryOp: *
+              ID: fd
+            UnaryOp: &
+              ID: o8
+          For: 
+            Assignment: =
+              ID: af
+              Constant: int, 0
+            BinaryOp: <
+              ID: af
+              Constant: int, 2
+            UnaryOp: ++
+              ID: af
+            Assignment: =
+              ID: af
+              ID: za

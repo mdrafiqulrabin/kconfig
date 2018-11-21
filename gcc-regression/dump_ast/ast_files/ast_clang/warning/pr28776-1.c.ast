@@ -1,0 +1,67 @@
+c_files/pr28776-1.c:14:7: warning: implicit declaration of function 'tree_contains_struct_check_failed' is invalid in C99 [-Wimplicit-function-declaration]
+      tree_contains_struct_check_failed (fde_table[i].decl);
+      ^
+1 warning generated.
+TranslationUnitDecl 0x7fbfdf8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbfdf826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbfdf826740 '__int128'
+|-TypedefDecl 0x7fbfdf826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbfdf826760 'unsigned __int128'
+|-TypedefDecl 0x7fbfdf826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbfdf826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbfdf826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbfdf826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbfdf826dc0 'char *'
+|   `-BuiltinType 0x7fbfdf826560 'char'
+|-TypedefDecl 0x7fbfdf8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbfdf827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbfdf826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbfdf826e58 '__va_list_tag'
+|-RecordDecl 0x7fbfdf827120 <c_files/pr28776-1.c:1:9, line:4:1> line:1:16 struct dw_fde_struct definition
+| `-FieldDecl 0x7fbfe0025a00 <line:3:3, col:7> col:7 referenced decl 'int'
+|-TypedefDecl 0x7fbfe0025b00 <line:1:1, line:4:4> col:4 referenced dw_fde_ref 'struct dw_fde_struct *'
+| `-PointerType 0x7fbfe0025ab0 'struct dw_fde_struct *'
+|   `-ElaboratedType 0x7fbfe0025a50 'struct dw_fde_struct' sugar
+|     `-RecordType 0x7fbfdf8271b0 'struct dw_fde_struct'
+|       `-Record 0x7fbfdf827120 'dw_fde_struct'
+|-VarDecl 0x7fbfe0025ba0 <line:5:1, col:12> col:12 used fde_table 'dw_fde_ref':'struct dw_fde_struct *'
+|-VarDecl 0x7fbfe0025c58 <line:6:1, col:10> col:10 used fde_table_in_use 'unsigned int'
+|-FunctionDecl 0x7fbfe0025d80 <line:7:1, line:16:1> line:7:6 output_call_frame_info 'void (void)'
+| `-CompoundStmt 0x7fbfe0026498 <line:8:1, line:16:1>
+|   |-DeclStmt 0x7fbfe0025e90 <line:9:3, col:17>
+|   | `-VarDecl 0x7fbfe0025e30 <col:3, col:16> col:16 used i 'unsigned int'
+|   |-DeclStmt 0x7fbfe0025f18 <line:10:3, col:17>
+|   | `-VarDecl 0x7fbfe0025eb8 <col:3, col:14> col:14 used fde 'dw_fde_ref':'struct dw_fde_struct *'
+|   `-ForStmt 0x7fbfe0026460 <line:11:3, line:15:5>
+|     |-BinaryOperator 0x7fbfe0025f90 <line:11:8, col:12> 'unsigned int' '='
+|     | |-DeclRefExpr 0x7fbfe0025f30 <col:8> 'unsigned int' lvalue Var 0x7fbfe0025e30 'i' 'unsigned int'
+|     | `-ImplicitCastExpr 0x7fbfe0025f78 <col:12> 'unsigned int' <IntegralCast>
+|     |   `-IntegerLiteral 0x7fbfe0025f58 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fbfe0026038 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7fbfe0026008 <col:15> 'unsigned int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fbfe0025fb8 <col:15> 'unsigned int' lvalue Var 0x7fbfe0025e30 'i' 'unsigned int'
+|     | `-ImplicitCastExpr 0x7fbfe0026020 <col:19> 'unsigned int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fbfe0025fe0 <col:19> 'unsigned int' lvalue Var 0x7fbfe0025c58 'fde_table_in_use' 'unsigned int'
+|     |-UnaryOperator 0x7fbfe0026088 <col:37, col:38> 'unsigned int' postfix '++'
+|     | `-DeclRefExpr 0x7fbfe0026060 <col:37> 'unsigned int' lvalue Var 0x7fbfe0025e30 'i' 'unsigned int'
+|     `-CompoundStmt 0x7fbfe0026438 <line:12:5, line:15:5>
+|       |-BinaryOperator 0x7fbfe0026198 <line:13:7, col:25> 'dw_fde_ref':'struct dw_fde_struct *' '='
+|       | |-DeclRefExpr 0x7fbfe00260a8 <col:7> 'dw_fde_ref':'struct dw_fde_struct *' lvalue Var 0x7fbfe0025eb8 'fde' 'dw_fde_ref':'struct dw_fde_struct *'
+|       | `-UnaryOperator 0x7fbfe0026178 <col:13, col:25> 'struct dw_fde_struct *' prefix '&'
+|       |   `-ArraySubscriptExpr 0x7fbfe0026150 <col:14, col:25> 'struct dw_fde_struct':'struct dw_fde_struct' lvalue
+|       |     |-ImplicitCastExpr 0x7fbfe0026120 <col:14> 'dw_fde_ref':'struct dw_fde_struct *' <LValueToRValue>
+|       |     | `-DeclRefExpr 0x7fbfe00260d0 <col:14> 'dw_fde_ref':'struct dw_fde_struct *' lvalue Var 0x7fbfe0025ba0 'fde_table' 'dw_fde_ref':'struct dw_fde_struct *'
+|       |     `-ImplicitCastExpr 0x7fbfe0026138 <col:24> 'unsigned int' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7fbfe00260f8 <col:24> 'unsigned int' lvalue Var 0x7fbfe0025e30 'i' 'unsigned int'
+|       `-CallExpr 0x7fbfe00263f0 <line:14:7, col:59> 'int'
+|         |-ImplicitCastExpr 0x7fbfe00263d8 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fbfe00262a8 <col:7> 'int ()' Function 0x7fbfe0026210 'tree_contains_struct_check_failed' 'int ()'
+|         `-ImplicitCastExpr 0x7fbfe0026420 <col:42, col:55> 'int' <LValueToRValue>
+|           `-MemberExpr 0x7fbfe0026378 <col:42, col:55> 'int' lvalue .decl 0x7fbfe0025a00
+|             `-ArraySubscriptExpr 0x7fbfe0026350 <col:42, col:53> 'struct dw_fde_struct':'struct dw_fde_struct' lvalue
+|               |-ImplicitCastExpr 0x7fbfe0026320 <col:42> 'dw_fde_ref':'struct dw_fde_struct *' <LValueToRValue>
+|               | `-DeclRefExpr 0x7fbfe00262d0 <col:42> 'dw_fde_ref':'struct dw_fde_struct *' lvalue Var 0x7fbfe0025ba0 'fde_table' 'dw_fde_ref':'struct dw_fde_struct *'
+|               `-ImplicitCastExpr 0x7fbfe0026338 <col:52> 'unsigned int' <LValueToRValue>
+|                 `-DeclRefExpr 0x7fbfe00262f8 <col:52> 'unsigned int' lvalue Var 0x7fbfe0025e30 'i' 'unsigned int'
+`-FunctionDecl 0x7fbfe0026210 <<invalid sloc>> col:7 implicit used tree_contains_struct_check_failed 'int ()'

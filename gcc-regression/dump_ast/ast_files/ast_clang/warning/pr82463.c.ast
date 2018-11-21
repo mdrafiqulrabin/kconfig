@@ -1,0 +1,47 @@
+In file included from c_files/pr82463.c:7:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/vecintrin.h:10468:2: error: "Use -fzvector to enable vector extensions"
+#error "Use -fzvector to enable vector extensions"
+ ^
+c_files/pr82463.c:9:9: error: unknown type name '__vector'
+typedef __vector float v4sf;
+        ^
+c_files/pr82463.c:9:18: error: expected identifier or '('
+typedef __vector float v4sf;
+                 ^
+c_files/pr82463.c:11:1: error: unknown type name 'v4sf'
+v4sf
+^
+c_files/pr82463.c:12:6: error: unknown type name 'v4sf'
+foo (v4sf a, v4sf b, v4sf c) {
+     ^
+c_files/pr82463.c:12:14: error: unknown type name 'v4sf'
+foo (v4sf a, v4sf b, v4sf c) {
+             ^
+c_files/pr82463.c:12:22: error: unknown type name 'v4sf'
+foo (v4sf a, v4sf b, v4sf c) {
+                     ^
+c_files/pr82463.c:13:10: warning: implicit declaration of function 'vec_madd' is invalid in C99 [-Wimplicit-function-declaration]
+  return vec_madd(a, b, c);
+         ^
+1 warning and 7 errors generated.
+TranslationUnitDecl 0x7ffde00264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffde0026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffde0026740 '__int128'
+|-TypedefDecl 0x7ffde0026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffde0026760 'unsigned __int128'
+|-TypedefDecl 0x7ffde0026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffde0026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffde0026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffde0026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffde0026dc0 'char *'
+|   `-BuiltinType 0x7ffde0026560 'char'
+|-TypedefDecl 0x7ffde00270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffde0027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffde0026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffde0026e58 '__va_list_tag'
+|-FunctionDecl 0x7ffde0079568 <c_files/pr82463.c:11:1, line:14:1> line:12:1 invalid foo 'int (int, int, int)'
+| |-ParmVarDecl 0x7ffde0027150 <col:6, col:11> col:11 invalid a 'int'
+| |-ParmVarDecl 0x7ffde0079400 <col:14, col:19> col:19 invalid b 'int'
+| |-ParmVarDecl 0x7ffde0079478 <col:22, col:27> col:27 invalid c 'int'
+| `-CompoundStmt 0x7ffde0079770 <col:30, line:14:1>
+`-FunctionDecl 0x7ffde00796b0 <<invalid sloc>> line:13:10 implicit used vec_madd 'int ()'

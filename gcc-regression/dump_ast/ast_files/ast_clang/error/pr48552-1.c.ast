@@ -1,0 +1,71 @@
+c_files/pr48552-1.c:10:31: error: invalid type 'void' in asm input for constraint 'r'
+  __asm volatile ("" : : "r" (*x));     /* { dg-warning "dereferencing" "deref" } */
+                              ^~
+c_files/pr48552-1.c:16:30: error: dereference of pointer to incomplete type 'void'
+  __asm volatile ("" : "=r" (*x));      /* { dg-warning "dereferencing" "deref" } */
+                             ^
+c_files/pr48552-1.c:22:31: error: invalid lvalue in asm input for constraint 'm'
+  __asm volatile ("" : : "m" (*x));     /* { dg-warning "dereferencing" } */
+                              ^~
+c_files/pr48552-1.c:28:30: error: dereference of pointer to incomplete type 'void'
+  __asm volatile ("" : "=m" (*x));      /* { dg-warning "dereferencing" } */
+                             ^
+c_files/pr48552-1.c:34:31: error: invalid type 'void' in asm input for constraint 'g'
+  __asm volatile ("" : : "g" (*x));     /* { dg-warning "dereferencing" "deref" } */
+                              ^~
+c_files/pr48552-1.c:40:30: error: dereference of pointer to incomplete type 'void'
+  __asm volatile ("" : "=g" (*x));      /* { dg-warning "dereferencing" "deref" } */
+                             ^
+c_files/pr48552-1.c:46:31: error: dereference of pointer to incomplete type 'struct S'
+  __asm volatile ("" : : "r" (*x));     /* { dg-error "dereferencing pointer to incomplete type" } */
+                              ^
+c_files/pr48552-1.c:5:8: note: forward declaration of 'struct S'
+struct S;
+       ^
+c_files/pr48552-1.c:52:30: error: dereference of pointer to incomplete type 'struct S'
+  __asm volatile ("" : "=r" (*x));      /* { dg-error "invalid lvalue in asm output 0" } */
+                             ^
+c_files/pr48552-1.c:5:8: note: forward declaration of 'struct S'
+struct S;
+       ^
+8 errors generated.
+TranslationUnitDecl 0x7fb8228264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb822826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb822826740 '__int128'
+|-TypedefDecl 0x7fb822826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb822826760 'unsigned __int128'
+|-TypedefDecl 0x7fb822826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb822826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb822826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb822826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb822826dc0 'char *'
+|   `-BuiltinType 0x7fb822826560 'char'
+|-TypedefDecl 0x7fb8228270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb822827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb822826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb822826e58 '__va_list_tag'
+|-RecordDecl 0x7fb822827120 <c_files/pr48552-1.c:5:1, col:8> col:8 struct S
+|-FunctionDecl 0x7fb823025ac0 <line:7:1, line:11:1> line:8:1 f1 'void (void *)'
+| |-ParmVarDecl 0x7fb823025a00 <col:5, col:11> col:11 used x 'void *'
+| `-CompoundStmt 0x7fb823026080 <line:9:1, line:11:1>
+|-FunctionDecl 0x7fb823026138 <line:13:1, line:17:1> line:14:1 f2 'void (void *)'
+| |-ParmVarDecl 0x7fb8230260b0 <col:5, col:11> col:11 used x 'void *'
+| `-CompoundStmt 0x7fb8230262c8 <line:15:1, line:17:1>
+|-FunctionDecl 0x7fb823026380 <line:19:1, line:23:1> line:20:1 f3 'void (void *)'
+| |-ParmVarDecl 0x7fb8230262f8 <col:5, col:11> col:11 used x 'void *'
+| `-CompoundStmt 0x7fb8230264d8 <line:21:1, line:23:1>
+|-FunctionDecl 0x7fb823026590 <line:25:1, line:29:1> line:26:1 f4 'void (void *)'
+| |-ParmVarDecl 0x7fb823026508 <col:5, col:11> col:11 used x 'void *'
+| `-CompoundStmt 0x7fb8230266e8 <line:27:1, line:29:1>
+|-FunctionDecl 0x7fb8230267a0 <line:31:1, line:35:1> line:32:1 f5 'void (void *)'
+| |-ParmVarDecl 0x7fb823026718 <col:5, col:11> col:11 used x 'void *'
+| `-CompoundStmt 0x7fb8230268f8 <line:33:1, line:35:1>
+|-FunctionDecl 0x7fb823026a00 <line:37:1, line:41:1> line:38:1 f6 'void (void *)'
+| |-ParmVarDecl 0x7fb823026928 <col:5, col:11> col:11 used x 'void *'
+| `-CompoundStmt 0x7fb823026b58 <line:39:1, line:41:1>
+|-FunctionDecl 0x7fb823026d20 <line:43:1, line:47:1> line:44:1 f7 'void (struct S *)'
+| |-ParmVarDecl 0x7fb823026c20 <col:5, col:15> col:15 used x 'struct S *'
+| `-CompoundStmt 0x7fb823026e90 <line:45:1, line:47:1>
+`-FunctionDecl 0x7fb823026f58 <line:49:1, line:53:1> line:50:1 f8 'void (struct S *)'
+  |-ParmVarDecl 0x7fb823026ed0 <col:5, col:15> col:15 used x 'struct S *'
+  `-CompoundStmt 0x7fb8230270b0 <line:51:1, line:53:1>

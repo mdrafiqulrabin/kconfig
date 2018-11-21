@@ -1,0 +1,42 @@
+c_files/pr7356-2.c:3:6: error: expected ';' after top level declarator
+int i /* { dg-error "6: expected ';' before 'int'" } */
+     ^
+     ;
+c_files/pr7356-2.c:16:8: error: expected ';' at end of declaration
+  int i /* { dg-error "8: expected ';' before 'int'" } */
+       ^
+       ;
+2 errors generated.
+TranslationUnitDecl 0x7fb5d78264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb5d7826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb5d7826740 '__int128'
+|-TypedefDecl 0x7fb5d7826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb5d7826760 'unsigned __int128'
+|-TypedefDecl 0x7fb5d7826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb5d7826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb5d7826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb5d7826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb5d7826dc0 'char *'
+|   `-BuiltinType 0x7fb5d7826560 'char'
+|-TypedefDecl 0x7fb5d78270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb5d7827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb5d7826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb5d7826e58 '__va_list_tag'
+|-VarDecl 0x7fb5d7827138 <c_files/pr7356-2.c:3:1, col:5> col:5 i 'int'
+|-VarDecl 0x7fb5d8025a00 <line:4:1, col:5> col:5 j 'int'
+|-FunctionDecl 0x7fb5d8025b20 <line:14:1, line:26:1> line:14:6 test 'void (void)'
+| `-CompoundStmt 0x7fb5d8025cd8 <line:15:1, line:26:1>
+|   |-DeclStmt 0x7fb5d8025c30 <line:16:3, line:17:3>
+|   | `-VarDecl 0x7fb5d8025bd0 <line:16:3, col:7> col:7 i 'int'
+|   `-DeclStmt 0x7fb5d8025cc0 <line:17:3, col:8>
+|     `-VarDecl 0x7fb5d8025c60 <col:3, col:7> col:7 j 'int'
+`-FunctionDecl 0x7fb5d8025e68 <line:28:1, line:33:1> line:28:5 old_style_params 'int (int, int)'
+  |-ParmVarDecl 0x7fb5d8025d18 <line:29:6, col:10> col:10 used first 'int'
+  |-ParmVarDecl 0x7fb5d8025d90 <line:30:6, col:10> col:10 used second 'int'
+  `-CompoundStmt 0x7fb5d8025fd0 <line:31:1, line:33:1>
+    `-ReturnStmt 0x7fb5d8025fb8 <line:32:3, col:18>
+      `-BinaryOperator 0x7fb5d8025f90 <col:10, col:18> 'int' '+'
+        |-ImplicitCastExpr 0x7fb5d8025f60 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fb5d8025f10 <col:10> 'int' lvalue ParmVar 0x7fb5d8025d18 'first' 'int'
+        `-ImplicitCastExpr 0x7fb5d8025f78 <col:18> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fb5d8025f38 <col:18> 'int' lvalue ParmVar 0x7fb5d8025d90 'second' 'int'

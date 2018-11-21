@@ -1,0 +1,68 @@
+c_files/pr52437.c:10:7: warning: implicit declaration of function 'fn2' is invalid in C99 [-Wimplicit-function-declaration]
+      fn2 ();
+      ^
+1 warning generated.
+TranslationUnitDecl 0x7fbbdd8234d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbbdd823a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbbdd823740 '__int128'
+|-TypedefDecl 0x7fbbdd823a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbbdd823760 'unsigned __int128'
+|-TypedefDecl 0x7fbbdd823d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbbdd823b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbbdd823ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbbdd823e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbbdd823dc0 'char *'
+|   `-BuiltinType 0x7fbbdd823560 'char'
+|-TypedefDecl 0x7fbbdd8240c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbbdd824070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbbdd823ee0 'struct __va_list_tag'
+|     `-Record 0x7fbbdd823e58 '__va_list_tag'
+|-VarDecl 0x7fbbdd824138 <c_files/pr52437.c:3:1, col:5> col:5 used f 'int'
+|-VarDecl 0x7fbbde025a00 <col:1, col:8> col:8 used g 'int'
+|-VarDecl 0x7fbbde025a78 <col:1, col:11> col:11 used i 'int'
+|-VarDecl 0x7fbbde025af0 <col:1, col:14> col:14 used j 'int'
+|-FunctionDecl 0x7fbbde025bc8 <line:5:1, line:18:1> line:6:1 fn1 'void ()'
+| `-CompoundStmt 0x7fbbde0262d8 <line:7:1, line:18:1>
+|   `-ForStmt 0x7fbbde0262a0 <line:8:3, line:17:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     `-CompoundStmt 0x7fbbde026270 <line:9:5, line:17:5>
+|       |-CallExpr 0x7fbbde025db0 <line:10:7, col:12> 'int'
+|       | `-ImplicitCastExpr 0x7fbbde025d98 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|       |   `-DeclRefExpr 0x7fbbde025d48 <col:7> 'int ()' Function 0x7fbbde025cb0 'fn2' 'int ()'
+|       |-BinaryOperator 0x7fbbde025e20 <line:11:7, col:11> 'int' '='
+|       | |-DeclRefExpr 0x7fbbde025dd8 <col:7> 'int' lvalue Var 0x7fbbde025af0 'j' 'int'
+|       | `-IntegerLiteral 0x7fbbde025e00 <col:11> 'int' 1
+|       `-ForStmt 0x7fbbde026238 <line:12:7, line:16:2>
+|         |-BinaryOperator 0x7fbbde025e90 <line:12:12, col:16> 'int' '='
+|         | |-DeclRefExpr 0x7fbbde025e48 <col:12> 'int' lvalue Var 0x7fbbde025a78 'i' 'int'
+|         | `-IntegerLiteral 0x7fbbde025e70 <col:16> 'int' 0
+|         |-<<<NULL>>>
+|         |-BinaryOperator 0x7fbbde025f18 <col:19, col:24> 'int' '<='
+|         | |-ImplicitCastExpr 0x7fbbde025f00 <col:19> 'int' <LValueToRValue>
+|         | | `-DeclRefExpr 0x7fbbde025eb8 <col:19> 'int' lvalue Var 0x7fbbde025a78 'i' 'int'
+|         | `-IntegerLiteral 0x7fbbde025ee0 <col:24> 'int' 3
+|         |-UnaryOperator 0x7fbbde025f68 <col:27, col:28> 'int' postfix '++'
+|         | `-DeclRefExpr 0x7fbbde025f40 <col:27> 'int' lvalue Var 0x7fbbde025a78 'i' 'int'
+|         `-CompoundStmt 0x7fbbde026218 <line:13:2, line:16:2>
+|           `-ForStmt 0x7fbbde0261e0 <line:14:4, line:15:18>
+|             |-BinaryOperator 0x7fbbde025fd0 <line:14:9, col:13> 'int' '='
+|             | |-DeclRefExpr 0x7fbbde025f88 <col:9> 'int' lvalue Var 0x7fbbde025a00 'g' 'int'
+|             | `-IntegerLiteral 0x7fbbde025fb0 <col:13> 'int' 1
+|             |-<<<NULL>>>
+|             |-BinaryOperator 0x7fbbde026058 <col:16, col:21> 'int' '>='
+|             | |-ImplicitCastExpr 0x7fbbde026040 <col:16> 'int' <LValueToRValue>
+|             | | `-DeclRefExpr 0x7fbbde025ff8 <col:16> 'int' lvalue Var 0x7fbbde025a00 'g' 'int'
+|             | `-IntegerLiteral 0x7fbbde026020 <col:21> 'int' 0
+|             |-UnaryOperator 0x7fbbde0260a8 <col:24, col:25> 'int' postfix '--'
+|             | `-DeclRefExpr 0x7fbbde026080 <col:24> 'int' lvalue Var 0x7fbbde025a00 'g' 'int'
+|             `-BinaryOperator 0x7fbbde0261b8 <line:15:6, col:18> 'int' ','
+|               |-BinaryOperator 0x7fbbde026110 <col:6, col:10> 'int' '='
+|               | |-DeclRefExpr 0x7fbbde0260c8 <col:6> 'int' lvalue Var 0x7fbbdd824138 'f' 'int'
+|               | `-IntegerLiteral 0x7fbbde0260f0 <col:10> 'int' 0
+|               `-CompoundAssignOperator 0x7fbbde026180 <col:13, col:18> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|                 |-DeclRefExpr 0x7fbbde026138 <col:13> 'int' lvalue Var 0x7fbbde025af0 'j' 'int'
+|                 `-IntegerLiteral 0x7fbbde026160 <col:18> 'int' 11
+`-FunctionDecl 0x7fbbde025cb0 <<invalid sloc>> line:10:7 implicit used fn2 'int ()'

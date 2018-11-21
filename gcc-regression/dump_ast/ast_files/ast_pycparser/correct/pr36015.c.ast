@@ -1,0 +1,95 @@
+FileAST: 
+  Decl: test, [], ['static'], []
+    FuncDecl: 
+      TypeDecl: test, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: test
+        ExprList: 
+          Constant: int, 0
+          Constant: int, 1
+          Constant: int, 2
+          Constant: int, 3
+          Constant: int, 4
+          Constant: int, 5
+          Constant: int, 6
+          Constant: int, 7
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: test, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+          Decl: g, [], [], []
+            TypeDecl: g, []
+              IdentifierType: ['int']
+          Decl: h, [], [], []
+            TypeDecl: h, []
+              IdentifierType: ['int']
+        TypeDecl: test, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: ||
+              BinaryOp: ||
+                BinaryOp: ||
+                  BinaryOp: ||
+                    BinaryOp: ||
+                      BinaryOp: !=
+                        ID: a
+                        Constant: int, 0
+                      BinaryOp: !=
+                        ID: b
+                        Constant: int, 1
+                    BinaryOp: !=
+                      ID: c
+                      Constant: int, 2
+                  BinaryOp: !=
+                    ID: d
+                    Constant: int, 3
+                BinaryOp: !=
+                  ID: e
+                  Constant: int, 4
+              BinaryOp: !=
+                ID: f
+                Constant: int, 5
+            BinaryOp: !=
+              ID: g
+              Constant: int, 6
+          BinaryOp: !=
+            ID: h
+            Constant: int, 7
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

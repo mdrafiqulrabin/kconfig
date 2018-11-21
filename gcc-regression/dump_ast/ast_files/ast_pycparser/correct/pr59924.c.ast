@@ -1,0 +1,115 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: a, [], [], []
+        PtrDecl: []
+          TypeDecl: a, []
+            Struct: T
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['double']
+      Decl: c, [], [], []
+        PtrDecl: []
+          TypeDecl: c, []
+            Struct: S
+  Decl: None, [], [], []
+    Struct: T
+      Decl: d, [], [], []
+        PtrDecl: []
+          TypeDecl: d, []
+            Struct: S
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: S
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['int']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+      Decl: f, [], [], []
+        PtrDecl: []
+          TypeDecl: f, []
+            Struct: S
+      For: 
+        Assignment: =
+          ID: f
+          StructRef: ->
+            StructRef: ->
+              ID: x
+              ID: a
+            ID: d
+        ID: f
+        Assignment: =
+          ID: f
+          StructRef: ->
+            ID: f
+            ID: c
+        Compound: 
+          If: 
+            BinaryOp: <
+              Constant: int, 5
+              ID: w
+            Compound: 
+              Assignment: =
+                ID: e
+                UnaryOp: -
+                  ID: w
+              Assignment: =
+                ID: z
+                ID: w
+      If: 
+        BinaryOp: ||
+          BinaryOp: !=
+            ID: y
+            Constant: int, 0
+          BinaryOp: !=
+            ID: z
+            Constant: int, 0
+        Compound: 
+          Decl: g, [], [], []
+            TypeDecl: g, []
+              IdentifierType: ['double']
+            BinaryOp: +
+              StructRef: ->
+                ID: x
+                ID: b
+              BinaryOp: *
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['double']
+                  ID: e
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['double']
+                  ID: y
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              BinaryOp: *
+                ID: g
+                ID: g

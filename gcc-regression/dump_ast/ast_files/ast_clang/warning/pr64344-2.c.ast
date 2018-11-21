@@ -1,0 +1,37 @@
+c_files/pr64344-2.c:8:24: warning: implicit conversion from 'double' to 'int' changes value from 0.5 to 0 [-Wliteral-conversion]
+  static const int a = 0.5;
+                   ~   ^~~
+1 warning generated.
+TranslationUnitDecl 0x7f952d0234d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f952d023a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f952d023740 '__int128'
+|-TypedefDecl 0x7f952d023a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f952d023760 'unsigned __int128'
+|-TypedefDecl 0x7f952d023d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f952d023b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f952d023ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f952d023e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f952d023dc0 'char *'
+|   `-BuiltinType 0x7f952d023560 'char'
+|-TypedefDecl 0x7f952d0240c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f952d024070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f952d023ee0 'struct __va_list_tag'
+|     `-Record 0x7f952d023e58 '__va_list_tag'
+`-FunctionDecl 0x7f952c828c00 <c_files/pr64344-2.c:5:1, line:11:1> line:6:1 foo 'int (void)'
+  `-CompoundStmt 0x7f952c829400 <line:7:1, line:11:1>
+    |-DeclStmt 0x7f952c829140 <line:8:3, col:27>
+    | `-VarDecl 0x7f952c828cf0 <col:3, col:24> col:20 used a 'const int' static cinit
+    |   `-ImplicitCastExpr 0x7f952c828d70 <col:24> 'int' <FloatingToIntegral>
+    |     `-FloatingLiteral 0x7f952c828d50 <col:24> 'double' 5.000000e-01
+    |-DeclStmt 0x7f952c829278 <line:9:3, col:38>
+    | `-VarDecl 0x7f952c829170 <col:3, col:37> col:20 used b 'const int' static cinit
+    |   `-BinaryOperator 0x7f952c829250 <col:24, col:37> 'int' '+'
+    |     |-CStyleCastExpr 0x7f952c829208 <col:24, col:30> 'int' <FloatingToIntegral>
+    |     | `-FloatingLiteral 0x7f952c8291d0 <col:30> 'double' 1.350000e+01
+    |     `-IntegerLiteral 0x7f952c829230 <col:37> 'int' 1
+    `-ReturnStmt 0x7f952c8293e8 <line:10:3, col:14>
+      `-BinaryOperator 0x7f952c829310 <col:10, col:14> 'int' '+'
+        |-ImplicitCastExpr 0x7f952c8292e0 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f952c829290 <col:10> 'const int' lvalue Var 0x7f952c828cf0 'a' 'const int'
+        `-ImplicitCastExpr 0x7f952c8292f8 <col:14> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f952c8292b8 <col:14> 'const int' lvalue Var 0x7f952c829170 'b' 'const int'

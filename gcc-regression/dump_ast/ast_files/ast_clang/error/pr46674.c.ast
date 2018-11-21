@@ -1,0 +1,32 @@
+c_files/pr46674.c:11:69: error: aliases are not supported on darwin
+extern void jelly (void) __asm__ (LABEL ("jelly2")) __attribute__ ((alias ("dessert"), weak));
+                                                                    ^
+c_files/pr46674.c:12:43: error: aliases are not supported on darwin
+extern void wobbly (void) __attribute__ ((alias ("jelly2"), weak));
+                                          ^
+2 errors generated.
+TranslationUnitDecl 0x7f88b28264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f88b2826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f88b2826740 '__int128'
+|-TypedefDecl 0x7f88b2826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f88b2826760 'unsigned __int128'
+|-TypedefDecl 0x7f88b2826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f88b2826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f88b2826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f88b2826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f88b2826dc0 'char *'
+|   `-BuiltinType 0x7f88b2826560 'char'
+|-TypedefDecl 0x7f88b28270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f88b2827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f88b2826ee0 'struct __va_list_tag'
+|     `-Record 0x7f88b2826e58 '__va_list_tag'
+|-VarDecl 0x7f88b2827138 <c_files/pr46674.c:9:1, col:5> col:5 used yum 'int'
+|-FunctionDecl 0x7f88b3026ab0 <line:10:1, col:30> col:6 dessert 'void (void)'
+| `-CompoundStmt 0x7f88b3026b90 <col:21, col:30>
+|   `-UnaryOperator 0x7f88b3026b70 <col:23, col:25> 'int' prefix '++'
+|     `-DeclRefExpr 0x7f88b3026b48 <col:25> 'int' lvalue Var 0x7f88b2827138 'yum' 'int'
+|-FunctionDecl 0x7f88b3026ce0 <line:11:1, col:93> col:13 jelly 'void (void)' extern
+| |-AsmLabelAttr 0x7f88b3026d78 <<scratch space>:2:1> "_jelly2"
+| `-WeakAttr 0x7f88b3026dd0 <c_files/pr46674.c:11:88>
+`-FunctionDecl 0x7f88b3026ed8 <line:12:1, col:66> col:13 wobbly 'void (void)' extern
+  `-WeakAttr 0x7f88b3026f70 <col:61>

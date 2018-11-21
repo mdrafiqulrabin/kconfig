@@ -1,0 +1,38 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: sum, [], [], []
+        TypeDecl: sum, []
+          IdentifierType: ['unsigned', 'short']
+        Constant: int, 0
+      For: 
+        DeclList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['short']
+            UnaryOp: -
+              BinaryOp: -
+                ID: __SHRT_MAX__
+                Constant: int, 1
+        BinaryOp: <=
+          ID: x
+          BinaryOp: -
+            ID: __SHRT_MAX__
+            Constant: int, 1
+        UnaryOp: p++
+          ID: x
+        Assignment: +=
+          ID: sum
+          ID: x
+      If: 
+        BinaryOp: !=
+          ID: sum
+          Constant: int, 0
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

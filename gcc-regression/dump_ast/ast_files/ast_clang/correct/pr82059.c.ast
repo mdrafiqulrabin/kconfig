@@ -1,0 +1,64 @@
+TranslationUnitDecl 0x7fae958264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fae95826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fae95826740 '__int128'
+|-TypedefDecl 0x7fae95826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fae95826760 'unsigned __int128'
+|-TypedefDecl 0x7fae95826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fae95826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fae95826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fae95826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fae95826dc0 'char *'
+|   `-BuiltinType 0x7fae95826560 'char'
+|-TypedefDecl 0x7fae958270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fae95827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fae95826ee0 'struct __va_list_tag'
+|     `-Record 0x7fae95826e58 '__va_list_tag'
+|-RecordDecl 0x7fae95827120 <c_files/pr82059.c:6:1, line:10:1> line:6:8 struct a definition
+| |-FieldDecl 0x7fae9601ae00 <line:8:3, col:8> col:8 referenced b 'char'
+| `-FieldDecl 0x7fae9601af00 <line:9:3, col:13> col:13 referenced c 'struct a *'
+|-FunctionDecl 0x7fae9601afd8 <line:6:1, line:10:6> col:3 used d 'struct a ()'
+|-VarDecl 0x7fae9601b0d0 <line:6:1, line:10:9> col:9 used f 'struct a':'struct a'
+|-VarDecl 0x7fae9601b168 <line:11:1, col:7> col:7 used e 'void *'
+|-VarDecl 0x7fae9601b1e0 <line:12:1, col:6> col:6 used g 'long'
+`-FunctionDecl 0x7fae9601b288 <line:13:1, line:23:1> line:14:1 referenced h 'void ()'
+  `-CompoundStmt 0x7fae9601b8d8 <line:15:1, line:23:1>
+    |-DeclStmt 0x7fae9601b3e0 <line:16:3, col:18>
+    | `-VarDecl 0x7fae9601b348 <col:3, col:17> col:13 used i 'struct a *' cinit
+    |   `-ImplicitCastExpr 0x7fae9601b3c8 <col:17> 'struct a *' <NullToPointer>
+    |     `-IntegerLiteral 0x7fae9601b3a8 <col:17> 'int' 0
+    |-IfStmt 0x7fae9601b4e0 <line:17:3, line:18:9>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fae9601b420 <line:17:7> 'long' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fae9601b3f8 <col:7> 'long' lvalue Var 0x7fae9601b1e0 'g' 'long'
+    | |-BinaryOperator 0x7fae9601b4b8 <line:18:5, col:9> 'struct a *' '='
+    | | |-DeclRefExpr 0x7fae9601b438 <col:5> 'struct a *' lvalue Var 0x7fae9601b348 'i' 'struct a *'
+    | | `-ImplicitCastExpr 0x7fae9601b4a0 <col:9> 'struct a *' <BitCast>
+    | |   `-ImplicitCastExpr 0x7fae9601b488 <col:9> 'void *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fae9601b460 <col:9> 'void *' lvalue Var 0x7fae9601b168 'e' 'void *'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fae9601b638 <line:19:3, line:20:8>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fae9601b558 <line:19:7, col:8> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7fae9601b540 <col:8> 'struct a *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fae9601b518 <col:8> 'struct a *' lvalue Var 0x7fae9601b348 'i' 'struct a *'
+    | |-CallExpr 0x7fae9601b610 <line:20:5, col:8> 'struct a':'struct a'
+    | | `-ImplicitCastExpr 0x7fae9601b5f8 <col:5> 'struct a (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fae9601b578 <col:5> 'struct a ()' Function 0x7fae9601afd8 'd' 'struct a ()'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fae9601b730 <line:21:3, col:11> 'struct a *' '='
+    | |-MemberExpr 0x7fae9601b6b0 <col:3, col:6> 'struct a *' lvalue ->c 0x7fae9601af00
+    | | `-ImplicitCastExpr 0x7fae9601b698 <col:3> 'struct a *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fae9601b670 <col:3> 'struct a *' lvalue Var 0x7fae9601b348 'i' 'struct a *'
+    | `-UnaryOperator 0x7fae9601b710 <col:10, col:11> 'struct a *' prefix '&'
+    |   `-DeclRefExpr 0x7fae9601b6e8 <col:11> 'struct a':'struct a' lvalue Var 0x7fae9601b0d0 'f' 'struct a':'struct a'
+    `-BinaryOperator 0x7fae9601b8b0 <line:22:3, col:20> 'char' '='
+      |-MemberExpr 0x7fae9601b798 <col:3, col:6> 'char' lvalue ->b 0x7fae9601ae00
+      | `-ImplicitCastExpr 0x7fae9601b780 <col:3> 'struct a *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fae9601b758 <col:3> 'struct a *' lvalue Var 0x7fae9601b348 'i' 'struct a *'
+      `-ImplicitCastExpr 0x7fae9601b898 <col:10, col:20> 'char' <LValueToRValue>
+        `-UnaryOperator 0x7fae9601b878 <col:10, col:20> 'char' lvalue prefix '*'
+          `-CStyleCastExpr 0x7fae9601b850 <col:11, col:20> 'char *' <BitCast>
+            `-ImplicitCastExpr 0x7fae9601b838 <col:20> 'void (*)()' <FunctionToPointerDecay>
+              `-DeclRefExpr 0x7fae9601b7d0 <col:20> 'void ()' Function 0x7fae9601b288 'h' 'void ()'

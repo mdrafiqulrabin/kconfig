@@ -1,0 +1,41 @@
+c_files/pr27953.c:3:17: warning: declaration of 'struct A' will not be visible outside of this function [-Wvisibility]
+void foo(struct A a) {} /* { dg-line foo_first } */
+                ^
+c_files/pr27953.c:3:19: error: variable has incomplete type 'struct A'
+void foo(struct A a) {} /* { dg-line foo_first } */
+                  ^
+c_files/pr27953.c:3:17: note: forward declaration of 'struct A'
+void foo(struct A a) {} /* { dg-line foo_first } */
+                ^
+c_files/pr27953.c:7:6: error: redefinition of 'foo'
+void foo() {}
+     ^
+c_files/pr27953.c:3:6: note: previous definition is here
+void foo(struct A a) {} /* { dg-line foo_first } */
+     ^
+error: variable has incomplete type 'struct A'
+c_files/pr27953.c:3:17: note: forward declaration of 'struct A'
+void foo(struct A a) {} /* { dg-line foo_first } */
+                ^
+1 warning and 3 errors generated.
+TranslationUnitDecl 0x7fe0938264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe093826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe093826740 '__int128'
+|-TypedefDecl 0x7fe093826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe093826760 'unsigned __int128'
+|-TypedefDecl 0x7fe093826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe093826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe093826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe093826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe093826dc0 'char *'
+|   `-BuiltinType 0x7fe093826560 'char'
+|-TypedefDecl 0x7fe0938270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe093827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe093826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe093826e58 '__va_list_tag'
+|-FunctionDecl 0x7fe094025ed0 <c_files/pr27953.c:3:1, col:23> col:6 foo 'void (struct A)'
+| |-ParmVarDecl 0x7fe094025dd0 <col:10, col:19> col:19 invalid a 'struct A':'struct A'
+| `-CompoundStmt 0x7fe094025fb0 <col:22, col:23>
+`-FunctionDecl 0x7fe094026018 prev 0x7fe094025ed0 <line:7:1, col:13> col:6 invalid foo 'void (struct A)'
+  |-ParmVarDecl 0x7fe0940260b0 <<invalid sloc>> <invalid sloc> implicit invalid 'struct A'
+  `-CompoundStmt 0x7fe094026118 <col:12, col:13>

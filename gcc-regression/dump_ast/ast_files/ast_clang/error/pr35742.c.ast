@@ -1,0 +1,24 @@
+c_files/pr35742.c:10:15: error: called object type 'void' is not a function or function pointer
+    ({break;})();       /* { dg-error "is not a function" } */
+    ~~~~~~~~~~^
+c_files/pr35742.c:12:18: error: called object type 'void' is not a function or function pointer
+    ({continue;})();    /* { dg-error "is not a function" } */
+    ~~~~~~~~~~~~~^
+2 errors generated.
+TranslationUnitDecl 0x7fc3278264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc327826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc327826740 '__int128'
+|-TypedefDecl 0x7fc327826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc327826760 'unsigned __int128'
+|-TypedefDecl 0x7fc327826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc327826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc327826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc327826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc327826dc0 'char *'
+|   `-BuiltinType 0x7fc327826560 'char'
+|-TypedefDecl 0x7fc3278270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc327827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc327826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc327826e58 '__va_list_tag'
+`-FunctionDecl 0x7fc327827168 <c_files/pr35742.c:6:1, line:13:1> line:7:1 foo 'void ()'
+  `-CompoundStmt 0x7fc328025ed0 <line:8:1, line:13:1>

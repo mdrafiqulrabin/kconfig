@@ -1,0 +1,43 @@
+c_files/pr78270-2.c:13:7: warning: expression result unused [-Wunused-value]
+      &b;
+      ^~
+c_files/pr78270-2.c:14:15: warning: no case matching constant switch condition '0'
+      switch (0)
+              ^
+2 warnings generated.
+TranslationUnitDecl 0x7f90d70264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f90d7026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f90d7026740 '__int128'
+|-TypedefDecl 0x7f90d7026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f90d7026760 'unsigned __int128'
+|-TypedefDecl 0x7f90d7026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f90d7026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f90d7026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f90d7026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f90d7026dc0 'char *'
+|   `-BuiltinType 0x7f90d7026560 'char'
+|-TypedefDecl 0x7f90d70270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f90d7027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f90d7026ee0 'struct __va_list_tag'
+|     `-Record 0x7f90d7026e58 '__va_list_tag'
+|-VarDecl 0x7f90d7027138 <c_files/pr78270-2.c:5:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7f90d7825a48 <line:6:1, line:17:1> line:7:1 fn1 'void ()'
+  `-CompoundStmt 0x7f90d7825d08 <line:8:1, line:17:1>
+    `-SwitchStmt 0x7f90d7825b20 <line:9:3, line:16:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f90d7825b08 <line:9:11> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f90d7825ae0 <col:11> 'int' lvalue Var 0x7f90d7027138 'a' 'int'
+      `-CompoundStmt 0x7f90d7825cd8 <line:10:5, line:16:5>
+        |-DeclStmt 0x7f90d7825bc0 <line:11:7, col:13>
+        | `-VarDecl 0x7f90d7825b60 <col:7, col:12> col:12 used b 'char'
+        |-CaseStmt 0x7f90d7825bf8 <line:12:5, line:13:8>
+        | |-IntegerLiteral 0x7f90d7825bd8 <line:12:10> 'int' 8
+        | |-<<<NULL>>>
+        | `-UnaryOperator 0x7f90d7825c58 <line:13:7, col:8> 'char *' prefix '&'
+        |   `-DeclRefExpr 0x7f90d7825c30 <col:8> 'char' lvalue Var 0x7f90d7825b60 'b' 'char'
+        `-SwitchStmt 0x7f90d7825c98 <line:14:7, line:15:2>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-IntegerLiteral 0x7f90d7825c78 <line:14:15> 'int' 0
+          `-NullStmt 0x7f90d7825cc8 <line:15:2>

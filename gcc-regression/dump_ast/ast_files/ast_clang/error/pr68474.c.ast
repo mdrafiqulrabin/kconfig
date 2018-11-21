@@ -1,0 +1,34 @@
+c_files/pr68474.c:6:16: error: use of unknown builtin '__builtin_significandl' [-Wimplicit-function-declaration]
+  return d1 || __builtin_significandl (d2);
+               ^
+1 error generated.
+TranslationUnitDecl 0x7fb7150264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb715026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb715026740 '__int128'
+|-TypedefDecl 0x7fb715026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb715026760 'unsigned __int128'
+|-TypedefDecl 0x7fb715026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb715026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb715026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb715026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb715026dc0 'char *'
+|   `-BuiltinType 0x7fb715026560 'char'
+|-TypedefDecl 0x7fb7150270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb715027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb715026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb715026e58 '__va_list_tag'
+|-FunctionDecl 0x7fb715825ad8 <c_files/pr68474.c:3:1, line:7:1> line:4:1 foo 'long double (long double, long double)'
+| |-ParmVarDecl 0x7fb715027138 <col:6, col:18> col:18 used d1 'long double'
+| |-ParmVarDecl 0x7fb715825a00 <col:22, col:34> col:34 used d2 'long double'
+| `-CompoundStmt 0x7fb715825e38 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7fb715825e20 <line:6:3, col:42>
+|     `-ImplicitCastExpr 0x7fb715825e08 <col:10, col:42> 'long double' <IntegralToFloating>
+|       `-BinaryOperator 0x7fb715825de0 <col:10, col:42> 'int' '||'
+|         |-ImplicitCastExpr 0x7fb715825dc8 <col:10> 'long double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fb715825bc0 <col:10> 'long double' lvalue ParmVar 0x7fb715027138 'd1' 'long double'
+|         `-CallExpr 0x7fb715825d80 <col:16, col:42> 'int'
+|           |-ImplicitCastExpr 0x7fb715825d68 <col:16> 'int (*)()' <FunctionToPointerDecay>
+|           | `-DeclRefExpr 0x7fb715825ce8 <col:16> 'int ()' Function 0x7fb715825c50 '__builtin_significandl' 'int ()'
+|           `-ImplicitCastExpr 0x7fb715825db0 <col:40> 'long double' <LValueToRValue>
+|             `-DeclRefExpr 0x7fb715825d10 <col:40> 'long double' lvalue ParmVar 0x7fb715825a00 'd2' 'long double'
+`-FunctionDecl 0x7fb715825c50 <<invalid sloc>> col:16 implicit used __builtin_significandl 'int ()'

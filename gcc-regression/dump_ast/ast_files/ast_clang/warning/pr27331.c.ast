@@ -1,0 +1,185 @@
+c_files/pr27331.c:39:42: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+      if ((((recog_operand[opno])->code) == 12))
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+c_files/pr27331.c:39:42: note: remove extraneous parentheses around the comparison to silence this warning
+      if ((((recog_operand[opno])->code) == 12))
+          ~                              ^    ~
+c_files/pr27331.c:39:42: note: use '=' to turn this equality comparison into an assignment
+      if ((((recog_operand[opno])->code) == 12))
+                                         ^~
+                                         =
+1 warning generated.
+TranslationUnitDecl 0x7fe9e90264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe9e9026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe9e9026740 '__int128'
+|-TypedefDecl 0x7fe9e9026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe9e9026760 'unsigned __int128'
+|-TypedefDecl 0x7fe9e9026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe9e9026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe9e9026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe9e9026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe9e9026dc0 'char *'
+|   `-BuiltinType 0x7fe9e9026560 'char'
+|-TypedefDecl 0x7fe9e90270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe9e9027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe9e9026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe9e9026e58 '__va_list_tag'
+|-RecordDecl 0x7fe9e9027120 <c_files/pr27331.c:4:1, line:7:1> line:4:8 struct funny_match definition
+| |-FieldDecl 0x7fe9e9825a00 <line:6:3, col:7> col:7 referenced this 'int'
+| `-FieldDecl 0x7fe9e9825a60 <col:3, col:13> col:13 referenced other 'int'
+|-RecordDecl 0x7fe9e9825aa8 <line:9:9, line:11:1> line:9:16 struct rtx definition
+| `-FieldDecl 0x7fe9e9825b68 <line:10:5, col:9> col:9 referenced code 'int'
+|-TypedefDecl 0x7fe9e9825c60 <line:9:1, line:11:4> col:4 referenced rtx 'struct rtx *'
+| `-PointerType 0x7fe9e9825c10 'struct rtx *'
+|   `-ElaboratedType 0x7fe9e9825bb0 'struct rtx' sugar
+|     `-RecordType 0x7fe9e9825b30 'struct rtx'
+|       `-Record 0x7fe9e9825aa8 'rtx'
+|-VarDecl 0x7fe9e9825d68 <line:13:1, col:26> col:12 used recog_operand 'rtx []' extern
+|-VarDecl 0x7fe9e9825e20 <line:14:1, col:12> col:12 used which_alternative 'int' extern
+|-VarDecl 0x7fe9e9825e98 <line:15:1, col:12> col:12 used nalternatives 'int' extern
+`-FunctionDecl 0x7fe9e9826068 <line:17:1, line:55:1> line:18:1 referenced constrain_operands 'int (int, int)'
+  |-ParmVarDecl 0x7fe9e9825f10 <line:19:6, col:10> col:10 used insn_code_num 'int'
+  |-ParmVarDecl 0x7fe9e9825f88 <line:20:6, col:10> col:10 used strict 'int'
+  `-CompoundStmt 0x7fe9e982c9c8 <line:21:1, line:55:1>
+    |-DeclStmt 0x7fe9e98261f0 <line:22:3, col:24>
+    | `-VarDecl 0x7fe9e9826190 <col:3, col:23> col:9 used constraints 'char *[10]'
+    |-DeclStmt 0x7fe9e98263b8 <line:23:3, col:37>
+    | `-VarDecl 0x7fe9e9826358 <col:3, col:36> col:22 used funny_match 'struct funny_match [10]'
+    |-DeclStmt 0x7fe9e9826448 <line:24:3, col:17>
+    | `-VarDecl 0x7fe9e98263e8 <col:3, col:16> col:16 used c 'int' register
+    |-DeclStmt 0x7fe9e98264d8 <line:25:3, col:24>
+    | `-VarDecl 0x7fe9e9826478 <col:3, col:7> col:7 used funny_match_index 'int'
+    |-BinaryOperator 0x7fe9e9826538 <line:27:3, col:23> 'int' '='
+    | |-DeclRefExpr 0x7fe9e98264f0 <col:3> 'int' lvalue Var 0x7fe9e9825e20 'which_alternative' 'int'
+    | `-IntegerLiteral 0x7fe9e9826518 <col:23> 'int' 0
+    |-WhileStmt 0x7fe9e982c740 <line:29:3, line:50:5>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe9e98265e0 <line:29:10, col:30> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fe9e98265b0 <col:10> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fe9e9826560 <col:10> 'int' lvalue Var 0x7fe9e9825e20 'which_alternative' 'int'
+    | | `-ImplicitCastExpr 0x7fe9e98265c8 <col:30> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe9e9826588 <col:30> 'int' lvalue Var 0x7fe9e9825e98 'nalternatives' 'int'
+    | `-CompoundStmt 0x7fe9e982c6e8 <line:30:5, line:50:5>
+    |   |-DeclStmt 0x7fe9e9826680 <line:31:7, col:24>
+    |   | `-VarDecl 0x7fe9e9826620 <col:7, col:20> col:20 used opno 'int' register
+    |   |-DeclStmt 0x7fe9e98267f8 <line:32:7, col:43>
+    |   | `-VarDecl 0x7fe9e98266b0 <col:7, col:42> col:22 used p 'char *' register cinit
+    |   |   `-ImplicitCastExpr 0x7fe9e98267e0 <col:26, col:42> 'char *' <LValueToRValue>
+    |   |     `-ArraySubscriptExpr 0x7fe9e98267b8 <col:26, col:42> 'char *' lvalue
+    |   |       |-ImplicitCastExpr 0x7fe9e9826788 <col:26> 'char **' <ArrayToPointerDecay>
+    |   |       | `-DeclRefExpr 0x7fe9e9826710 <col:26> 'char *[10]' lvalue Var 0x7fe9e9826190 'constraints' 'char *[10]'
+    |   |       `-ImplicitCastExpr 0x7fe9e98267a0 <col:38> 'int' <LValueToRValue>
+    |   |         `-DeclRefExpr 0x7fe9e9826738 <col:38> 'int' lvalue Var 0x7fe9e9826620 'opno' 'int'
+    |   |-DeclStmt 0x7fe9e98268a8 <line:33:7, col:19>
+    |   | `-VarDecl 0x7fe9e9826828 <col:7, col:18> col:11 used lose 'int' cinit
+    |   |   `-IntegerLiteral 0x7fe9e9826888 <col:18> 'int' 0
+    |   |-BinaryOperator 0x7fe9e9826908 <line:34:7, col:27> 'int' '='
+    |   | |-DeclRefExpr 0x7fe9e98268c0 <col:7> 'int' lvalue Var 0x7fe9e9826478 'funny_match_index' 'int'
+    |   | `-IntegerLiteral 0x7fe9e98268e8 <col:27> 'int' 0
+    |   |-WhileStmt 0x7fe9e982bf18 <line:36:7, line:37:47>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe9e982bd08 <line:36:14, col:34> 'int' '&&'
+    |   | | |-ImplicitCastExpr 0x7fe9e982bcf0 <col:14, col:15> 'int' <IntegralCast>
+    |   | | | `-ImplicitCastExpr 0x7fe9e982bcd8 <col:14, col:15> 'char' <LValueToRValue>
+    |   | | |   `-UnaryOperator 0x7fe9e9826970 <col:14, col:15> 'char' lvalue prefix '*'
+    |   | | |     `-ImplicitCastExpr 0x7fe9e9826958 <col:15> 'char *' <LValueToRValue>
+    |   | | |       `-DeclRefExpr 0x7fe9e9826930 <col:15> 'char *' lvalue Var 0x7fe9e98266b0 'p' 'char *'
+    |   | | `-BinaryOperator 0x7fe9e982bcb0 <col:20, col:34> 'int' '!='
+    |   | |   |-ParenExpr 0x7fe9e982bc78 <col:20, col:29> 'int'
+    |   | |   | `-BinaryOperator 0x7fe9e982bc50 <col:21, col:27> 'int' '='
+    |   | |   |   |-DeclRefExpr 0x7fe9e9826990 <col:21> 'int' lvalue Var 0x7fe9e98263e8 'c' 'int'
+    |   | |   |   `-ImplicitCastExpr 0x7fe9e982bc38 <col:25, col:27> 'int' <IntegralCast>
+    |   | |   |     `-ImplicitCastExpr 0x7fe9e982bc20 <col:25, col:27> 'char' <LValueToRValue>
+    |   | |   |       `-UnaryOperator 0x7fe9e982bc00 <col:25, col:27> 'char' lvalue prefix '*'
+    |   | |   |         `-UnaryOperator 0x7fe9e98269e0 <col:26, col:27> 'char *' postfix '++'
+    |   | |   |           `-DeclRefExpr 0x7fe9e98269b8 <col:26> 'char *' lvalue Var 0x7fe9e98266b0 'p' 'char *'
+    |   | |   `-CharacterLiteral 0x7fe9e982bc98 <col:34> 'int' 44
+    |   | `-BinaryOperator 0x7fe9e982bef0 <line:37:2, col:47> 'int' '='
+    |   |   |-MemberExpr 0x7fe9e982be38 <col:2, col:35> 'int' lvalue .other 0x7fe9e9825a60
+    |   |   | `-ArraySubscriptExpr 0x7fe9e982be10 <col:2, col:33> 'struct funny_match':'struct funny_match' lvalue
+    |   |   |   |-ImplicitCastExpr 0x7fe9e982bdf8 <col:2> 'struct funny_match *' <ArrayToPointerDecay>
+    |   |   |   | `-DeclRefExpr 0x7fe9e982bd30 <col:2> 'struct funny_match [10]' lvalue Var 0x7fe9e9826358 'funny_match' 'struct funny_match [10]'
+    |   |   |   `-UnaryOperator 0x7fe9e982bd80 <col:14, col:31> 'int' postfix '++'
+    |   |   |     `-DeclRefExpr 0x7fe9e982bd58 <col:14> 'int' lvalue Var 0x7fe9e9826478 'funny_match_index' 'int'
+    |   |   `-BinaryOperator 0x7fe9e982bec8 <col:43, col:47> 'int' '-'
+    |   |     |-ImplicitCastExpr 0x7fe9e982beb0 <col:43> 'int' <LValueToRValue>
+    |   |     | `-DeclRefExpr 0x7fe9e982be70 <col:43> 'int' lvalue Var 0x7fe9e98263e8 'c' 'int'
+    |   |     `-CharacterLiteral 0x7fe9e982be98 <col:47> 'int' 48
+    |   |-IfStmt 0x7fe9e982c1c0 <line:39:7, line:40:9>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-ParenExpr 0x7fe9e982c130 <line:39:11, col:47> 'int'
+    |   | | `-BinaryOperator 0x7fe9e982c108 <col:12, col:45> 'int' '=='
+    |   | |   |-ImplicitCastExpr 0x7fe9e982c0f0 <col:12, col:40> 'int' <LValueToRValue>
+    |   | |   | `-ParenExpr 0x7fe9e982c0b0 <col:12, col:40> 'int' lvalue
+    |   | |   |   `-MemberExpr 0x7fe9e982c078 <col:13, col:36> 'int' lvalue ->code 0x7fe9e9825b68
+    |   | |   |     `-ImplicitCastExpr 0x7fe9e982c060 <col:13, col:33> 'rtx':'struct rtx *' <LValueToRValue>
+    |   | |   |       `-ParenExpr 0x7fe9e982c040 <col:13, col:33> 'rtx':'struct rtx *' lvalue
+    |   | |   |         `-ArraySubscriptExpr 0x7fe9e982c018 <col:14, col:32> 'rtx':'struct rtx *' lvalue
+    |   | |   |           |-ImplicitCastExpr 0x7fe9e982bfe8 <col:14> 'rtx *' <ArrayToPointerDecay>
+    |   | |   |           | `-DeclRefExpr 0x7fe9e982bf38 <col:14> 'rtx []' lvalue Var 0x7fe9e9825d68 'recog_operand' 'rtx []'
+    |   | |   |           `-ImplicitCastExpr 0x7fe9e982c000 <col:28> 'int' <LValueToRValue>
+    |   | |   |             `-DeclRefExpr 0x7fe9e982bf60 <col:28> 'int' lvalue Var 0x7fe9e9826620 'opno' 'int'
+    |   | |   `-IntegerLiteral 0x7fe9e982c0d0 <col:45> 'int' 12
+    |   | |-BinaryOperator 0x7fe9e982c198 <line:40:2, col:9> 'int' '='
+    |   | | |-DeclRefExpr 0x7fe9e982c150 <col:2> 'int' lvalue Var 0x7fe9e9826828 'lose' 'int'
+    |   | | `-IntegerLiteral 0x7fe9e982c178 <col:9> 'int' 1
+    |   | `-<<<NULL>>>
+    |   |-IfStmt 0x7fe9e982c668 <line:42:7, line:48:2>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-UnaryOperator 0x7fe9e982c238 <line:42:11, col:12> 'int' prefix '!'
+    |   | | `-ImplicitCastExpr 0x7fe9e982c220 <col:12> 'int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fe9e982c1f8 <col:12> 'int' lvalue Var 0x7fe9e9826828 'lose' 'int'
+    |   | |-CompoundStmt 0x7fe9e982c640 <line:43:2, line:48:2>
+    |   | | |-WhileStmt 0x7fe9e982c5e8 <line:44:4, line:46:58>
+    |   | | | |-<<<NULL>>>
+    |   | | | |-BinaryOperator 0x7fe9e982c2c0 <line:44:11, col:34> 'int' '>='
+    |   | | | | |-UnaryOperator 0x7fe9e982c280 <col:11, col:13> 'int' prefix '--'
+    |   | | | | | `-DeclRefExpr 0x7fe9e982c258 <col:13> 'int' lvalue Var 0x7fe9e9826478 'funny_match_index' 'int'
+    |   | | | | `-IntegerLiteral 0x7fe9e982c2a0 <col:34> 'int' 0
+    |   | | | `-BinaryOperator 0x7fe9e982c5c0 <line:45:6, line:46:58> 'rtx':'struct rtx *' '='
+    |   | | |   |-ArraySubscriptExpr 0x7fe9e982c420 <line:45:6, col:56> 'rtx':'struct rtx *' lvalue
+    |   | | |   | |-ImplicitCastExpr 0x7fe9e982c3f0 <col:6> 'rtx *' <ArrayToPointerDecay>
+    |   | | |   | | `-DeclRefExpr 0x7fe9e982c2e8 <col:6> 'rtx []' lvalue Var 0x7fe9e9825d68 'recog_operand' 'rtx []'
+    |   | | |   | `-ImplicitCastExpr 0x7fe9e982c408 <col:20, col:51> 'int' <LValueToRValue>
+    |   | | |   |   `-MemberExpr 0x7fe9e982c3b8 <col:20, col:51> 'int' lvalue .other 0x7fe9e9825a60
+    |   | | |   |     `-ArraySubscriptExpr 0x7fe9e982c390 <col:20, col:49> 'struct funny_match':'struct funny_match' lvalue
+    |   | | |   |       |-ImplicitCastExpr 0x7fe9e982c360 <col:20> 'struct funny_match *' <ArrayToPointerDecay>
+    |   | | |   |       | `-DeclRefExpr 0x7fe9e982c310 <col:20> 'struct funny_match [10]' lvalue Var 0x7fe9e9826358 'funny_match' 'struct funny_match [10]'
+    |   | | |   |       `-ImplicitCastExpr 0x7fe9e982c378 <col:32> 'int' <LValueToRValue>
+    |   | | |   |         `-DeclRefExpr 0x7fe9e982c338 <col:32> 'int' lvalue Var 0x7fe9e9826478 'funny_match_index' 'int'
+    |   | | |   `-ImplicitCastExpr 0x7fe9e982c5a8 <line:46:9, col:58> 'rtx':'struct rtx *' <LValueToRValue>
+    |   | | |     `-ArraySubscriptExpr 0x7fe9e982c580 <col:9, col:58> 'rtx':'struct rtx *' lvalue
+    |   | | |       |-ImplicitCastExpr 0x7fe9e982c550 <col:9> 'rtx *' <ArrayToPointerDecay>
+    |   | | |       | `-DeclRefExpr 0x7fe9e982c448 <col:9> 'rtx []' lvalue Var 0x7fe9e9825d68 'recog_operand' 'rtx []'
+    |   | | |       `-ImplicitCastExpr 0x7fe9e982c568 <col:23, col:54> 'int' <LValueToRValue>
+    |   | | |         `-MemberExpr 0x7fe9e982c518 <col:23, col:54> 'int' lvalue .this 0x7fe9e9825a00
+    |   | | |           `-ArraySubscriptExpr 0x7fe9e982c4f0 <col:23, col:52> 'struct funny_match':'struct funny_match' lvalue
+    |   | | |             |-ImplicitCastExpr 0x7fe9e982c4c0 <col:23> 'struct funny_match *' <ArrayToPointerDecay>
+    |   | | |             | `-DeclRefExpr 0x7fe9e982c470 <col:23> 'struct funny_match [10]' lvalue Var 0x7fe9e9826358 'funny_match' 'struct funny_match [10]'
+    |   | | |             `-ImplicitCastExpr 0x7fe9e982c4d8 <col:35> 'int' <LValueToRValue>
+    |   | | |               `-DeclRefExpr 0x7fe9e982c498 <col:35> 'int' lvalue Var 0x7fe9e9826478 'funny_match_index' 'int'
+    |   | | `-ReturnStmt 0x7fe9e982c628 <line:47:4, col:11>
+    |   | |   `-IntegerLiteral 0x7fe9e982c608 <col:11> 'int' 1
+    |   | `-<<<NULL>>>
+    |   `-UnaryOperator 0x7fe9e982c6c8 <line:49:7, col:24> 'int' postfix '++'
+    |     `-DeclRefExpr 0x7fe9e982c6a0 <col:7> 'int' lvalue Var 0x7fe9e9825e20 'which_alternative' 'int'
+    |-IfStmt 0x7fe9e982c958 <line:52:3, line:53:49>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe9e982c7c0 <line:52:7, col:17> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fe9e982c7a8 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fe9e982c760 <col:7> 'int' lvalue ParmVar 0x7fe9e9825f88 'strict' 'int'
+    | | `-IntegerLiteral 0x7fe9e982c788 <col:17> 'int' 0
+    | |-ReturnStmt 0x7fe9e982c940 <line:53:5, col:49>
+    | | `-CallExpr 0x7fe9e982c8f0 <col:12, col:49> 'int'
+    | |   |-ImplicitCastExpr 0x7fe9e982c8d8 <col:12> 'int (*)()' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7fe9e982c818 <col:12> 'int ()' Function 0x7fe9e9826068 'constrain_operands' 'int (int, int)'
+    | |   |-ImplicitCastExpr 0x7fe9e982c928 <col:32> 'int' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7fe9e982c840 <col:32> 'int' lvalue ParmVar 0x7fe9e9825f10 'insn_code_num' 'int'
+    | |   `-UnaryOperator 0x7fe9e982c888 <col:47, col:48> 'int' prefix '-'
+    | |     `-IntegerLiteral 0x7fe9e982c868 <col:48> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe9e982c9b0 <line:54:3, col:10>
+      `-IntegerLiteral 0x7fe9e982c990 <col:10> 'int' 0

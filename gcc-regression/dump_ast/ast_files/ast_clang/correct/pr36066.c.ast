@@ -1,0 +1,268 @@
+TranslationUnitDecl 0x7fa3a20264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa3a2026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa3a2026740 '__int128'
+|-TypedefDecl 0x7fa3a2026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa3a2026760 'unsigned __int128'
+|-TypedefDecl 0x7fa3a2026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa3a2026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa3a2026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa3a2026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa3a2026dc0 'char *'
+|   `-BuiltinType 0x7fa3a2026560 'char'
+|-TypedefDecl 0x7fa3a20270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa3a2027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa3a2026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa3a2026e58 '__va_list_tag'
+|-TypedefDecl 0x7fa3a2027138 <c_files/pr36066.c:4:1, col:13> col:13 referenced FLAC__int32 'int'
+| `-BuiltinType 0x7fa3a20265c0 'int'
+|-TypedefDecl 0x7fa3a20271a8 <line:5:1, col:13> col:13 referenced FLAC__bool 'int'
+| `-BuiltinType 0x7fa3a20265c0 'int'
+|-RecordDecl 0x7fa3a2825a00 <line:6:9, col:18> col:9 struct definition
+|-TypedefDecl 0x7fa3a2825b00 <col:1, col:20> col:20 referenced FLAC__Subframe 'struct FLAC__Subframe':'FLAC__Subframe'
+| `-ElaboratedType 0x7fa3a2825ab0 'struct FLAC__Subframe' sugar
+|   `-RecordType 0x7fa3a2825a90 'FLAC__Subframe'
+|     `-Record 0x7fa3a2825a00 ''
+|-EnumDecl 0x7fa3a2825b70 <line:7:9, col:180> col:9
+| |-EnumConstantDecl 0x7fa3a2825c50 <col:16, col:55> col:16 referenced FLAC__CHANNEL_ASSIGNMENT_INDEPENDENT 'int'
+| | `-IntegerLiteral 0x7fa3a2825c30 <col:55> 'int' 0
+| |-EnumConstantDecl 0x7fa3a2825cb8 <col:59, col:96> col:59 referenced FLAC__CHANNEL_ASSIGNMENT_LEFT_SIDE 'int'
+| | `-IntegerLiteral 0x7fa3a2825c98 <col:96> 'int' 1
+| |-EnumConstantDecl 0x7fa3a2825d20 <col:100, col:138> col:100 referenced FLAC__CHANNEL_ASSIGNMENT_RIGHT_SIDE 'int'
+| | `-IntegerLiteral 0x7fa3a2825d00 <col:138> 'int' 2
+| `-EnumConstantDecl 0x7fa3a2825d88 <col:142, col:178> col:142 referenced FLAC__CHANNEL_ASSIGNMENT_MID_SIDE 'int'
+|   `-IntegerLiteral 0x7fa3a2825d68 <col:178> 'int' 3
+|-TypedefDecl 0x7fa3a2825e20 <col:1, col:182> col:182 referenced FLAC__ChannelAssignment 'enum FLAC__ChannelAssignment':'FLAC__ChannelAssignment'
+| `-ElaboratedType 0x7fa3a2825dd0 'enum FLAC__ChannelAssignment' sugar
+|   `-EnumType 0x7fa3a2825c10 'FLAC__ChannelAssignment'
+|     `-Enum 0x7fa3a2825b70 ''
+|-RecordDecl 0x7fa3a2825e90 <line:8:9, line:11:1> line:8:9 struct definition
+| |-RecordDecl 0x7fa3a2825f40 parent 0x7fa3a20264d0 <line:9:3, col:10> col:10 struct FLAC__StreamEncoderProtected
+| |-FieldDecl 0x7fa3a28260b0 <col:3, col:40> col:40 referenced protected_ 'struct FLAC__StreamEncoderProtected *'
+| |-RecordDecl 0x7fa3a28260f8 parent 0x7fa3a20264d0 <line:10:3, col:10> col:10 struct FLAC__StreamEncoderPrivate
+| `-FieldDecl 0x7fa3a2826260 <col:3, col:38> col:38 referenced private_ 'struct FLAC__StreamEncoderPrivate *'
+|-TypedefDecl 0x7fa3a2826300 <line:8:1, line:11:3> col:3 referenced FLAC__StreamEncoder 'struct FLAC__StreamEncoder':'FLAC__StreamEncoder'
+| `-ElaboratedType 0x7fa3a28262b0 'struct FLAC__StreamEncoder' sugar
+|   `-RecordType 0x7fa3a2825f20 'FLAC__StreamEncoder'
+|     `-Record 0x7fa3a2825e90 ''
+|-RecordDecl 0x7fa3a2826370 prev 0x7fa3a2825f40 <line:12:9, line:16:1> line:12:16 struct FLAC__StreamEncoderProtected definition
+| |-FieldDecl 0x7fa3a2826430 <line:13:3, col:14> col:14 referenced loose_mid_side_stereo 'FLAC__bool':'int'
+| |-FieldDecl 0x7fa3a2826490 <line:14:3, col:12> col:12 referenced channels 'unsigned int'
+| `-FieldDecl 0x7fa3a28264f0 <line:15:3, col:12> col:12 referenced blocksize 'unsigned int'
+|-TypedefDecl 0x7fa3a2826558 <line:12:1, line:16:3> col:3 FLAC__StreamEncoderProtected 'struct FLAC__StreamEncoderProtected':'struct FLAC__StreamEncoderProtected'
+| `-ElaboratedType 0x7fa3a2826000 'struct FLAC__StreamEncoderProtected' sugar
+|   `-RecordType 0x7fa3a2825fd0 'struct FLAC__StreamEncoderProtected'
+|     `-Record 0x7fa3a2826370 'FLAC__StreamEncoderProtected'
+|-RecordDecl 0x7fa3a28265c8 prev 0x7fa3a28260f8 <line:17:9, line:22:1> line:17:16 struct FLAC__StreamEncoderPrivate definition
+| |-FieldDecl 0x7fa3a28267a8 <line:18:3, col:35> col:16 referenced integer_signal 'FLAC__int32 *[8]'
+| |-FieldDecl 0x7fa3a28269b8 <line:19:3, col:50> col:18 referenced subframe_workspace_mid_side 'FLAC__Subframe [2][2]'
+| |-FieldDecl 0x7fa3a282bc80 <line:20:3, col:36> col:12 referenced best_subframe_mid_side 'unsigned int [2]'
+| `-FieldDecl 0x7fa3a282bce0 <line:21:3, col:12> col:12 referenced loose_mid_side_stereo_frame_count 'unsigned int'
+|-TypedefDecl 0x7fa3a282bd48 <line:17:1, line:22:3> col:3 FLAC__StreamEncoderPrivate 'struct FLAC__StreamEncoderPrivate':'struct FLAC__StreamEncoderPrivate'
+| `-ElaboratedType 0x7fa3a28261b0 'struct FLAC__StreamEncoderPrivate' sugar
+|   `-RecordType 0x7fa3a2826180 'struct FLAC__StreamEncoderPrivate'
+|     `-Record 0x7fa3a28265c8 'FLAC__StreamEncoderPrivate'
+|-FunctionDecl 0x7fa3a282c000 <line:23:1, line:29:1> line:23:13 used get_wasted_bits_ 'void (FLAC__int32 *, unsigned int)' static
+| |-ParmVarDecl 0x7fa3a282be70 <col:30, col:49> col:42 used signal 'FLAC__int32 *':'FLAC__int32 *'
+| |-ParmVarDecl 0x7fa3a282bee8 <col:52, col:61> col:61 used samples 'unsigned int'
+| `-CompoundStmt 0x7fa3a282c5e0 <line:24:1, line:29:1>
+|   |-DeclStmt 0x7fa3a282c160 <line:25:3, col:13>
+|   | `-VarDecl 0x7fa3a282c100 <col:3, col:12> col:12 used i 'unsigned int'
+|   |-DeclStmt 0x7fa3a282c208 <line:26:3, col:20>
+|   | `-VarDecl 0x7fa3a282c188 <col:3, col:19> col:15 used x 'FLAC__int32':'int' cinit
+|   |   `-IntegerLiteral 0x7fa3a282c1e8 <col:19> 'int' 0
+|   `-ForStmt 0x7fa3a282c5a8 <line:27:3, line:28:18>
+|     |-BinaryOperator 0x7fa3a282c280 <line:27:7, col:11> 'unsigned int' '='
+|     | |-DeclRefExpr 0x7fa3a282c220 <col:7> 'unsigned int' lvalue Var 0x7fa3a282c100 'i' 'unsigned int'
+|     | `-ImplicitCastExpr 0x7fa3a282c268 <col:11> 'unsigned int' <IntegralCast>
+|     |   `-IntegerLiteral 0x7fa3a282c248 <col:11> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fa3a282c418 <col:14, col:34> 'int' '&&'
+|     | |-BinaryOperator 0x7fa3a282c328 <col:14, col:18> 'int' '<'
+|     | | |-ImplicitCastExpr 0x7fa3a282c2f8 <col:14> 'unsigned int' <LValueToRValue>
+|     | | | `-DeclRefExpr 0x7fa3a282c2a8 <col:14> 'unsigned int' lvalue Var 0x7fa3a282c100 'i' 'unsigned int'
+|     | | `-ImplicitCastExpr 0x7fa3a282c310 <col:18> 'unsigned int' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7fa3a282c2d0 <col:18> 'unsigned int' lvalue ParmVar 0x7fa3a282bee8 'samples' 'unsigned int'
+|     | `-UnaryOperator 0x7fa3a282c3f8 <col:29, col:34> 'int' prefix '!'
+|     |   `-ParenExpr 0x7fa3a282c3d8 <col:30, col:34> 'int'
+|     |     `-BinaryOperator 0x7fa3a282c3b0 <col:31, col:33> 'int' '&'
+|     |       |-ImplicitCastExpr 0x7fa3a282c398 <col:31> 'FLAC__int32':'int' <LValueToRValue>
+|     |       | `-DeclRefExpr 0x7fa3a282c350 <col:31> 'FLAC__int32':'int' lvalue Var 0x7fa3a282c188 'x' 'FLAC__int32':'int'
+|     |       `-IntegerLiteral 0x7fa3a282c378 <col:33> 'int' 1
+|     |-UnaryOperator 0x7fa3a282c468 <col:37, col:38> 'unsigned int' postfix '++'
+|     | `-DeclRefExpr 0x7fa3a282c440 <col:37> 'unsigned int' lvalue Var 0x7fa3a282c100 'i' 'unsigned int'
+|     `-CompoundAssignOperator 0x7fa3a282c570 <line:28:5, col:18> 'FLAC__int32':'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|       |-DeclRefExpr 0x7fa3a282c488 <col:5> 'FLAC__int32':'int' lvalue Var 0x7fa3a282c188 'x' 'FLAC__int32':'int'
+|       `-ImplicitCastExpr 0x7fa3a282c558 <col:10, col:18> 'FLAC__int32':'int' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7fa3a282c530 <col:10, col:18> 'FLAC__int32':'int' lvalue
+|           |-ImplicitCastExpr 0x7fa3a282c500 <col:10> 'FLAC__int32 *':'FLAC__int32 *' <LValueToRValue>
+|           | `-DeclRefExpr 0x7fa3a282c4b0 <col:10> 'FLAC__int32 *':'FLAC__int32 *' lvalue ParmVar 0x7fa3a282be70 'signal' 'FLAC__int32 *':'FLAC__int32 *'
+|           `-ImplicitCastExpr 0x7fa3a282c518 <col:17> 'unsigned int' <LValueToRValue>
+|             `-DeclRefExpr 0x7fa3a282c4d8 <col:17> 'unsigned int' lvalue Var 0x7fa3a282c100 'i' 'unsigned int'
+`-FunctionDecl 0x7fa3a282c8b0 <line:30:1, line:54:1> line:30:18 process_subframes_ 'FLAC__Subframe *(FLAC__StreamEncoder *, unsigned int *)'
+  |-ParmVarDecl 0x7fa3a282c698 <col:37, col:58> col:58 used encoder 'FLAC__StreamEncoder *'
+  |-ParmVarDecl 0x7fa3a282c740 <col:67, col:77> col:77 used bits 'unsigned int *'
+  `-CompoundStmt 0x7fa3a282fa28 <line:31:1, line:54:1>
+    |-DeclStmt 0x7fa3a282c9d0 <line:32:3, col:19>
+    | `-VarDecl 0x7fa3a282c970 <col:3, col:12> col:12 used channel 'unsigned int'
+    |-DeclStmt 0x7fa3a282ca90 <line:33:3, col:36>
+    | `-VarDecl 0x7fa3a282c9f8 <col:3, col:35> col:19 used left_subframe 'FLAC__Subframe *' cinit
+    |   `-ImplicitCastExpr 0x7fa3a282ca78 <col:35> 'FLAC__Subframe *' <NullToPointer>
+    |     `-IntegerLiteral 0x7fa3a282ca58 <col:35> 'int' 0
+    |-DeclStmt 0x7fa3a282cb40 <line:34:3, col:45>
+    | `-VarDecl 0x7fa3a282cae0 <col:3, col:27> col:27 used channel_assignment 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment'
+    |-ForStmt 0x7fa3a282d108 <line:35:3, line:36:98>
+    | |-BinaryOperator 0x7fa3a282cbb8 <line:35:7, col:17> 'unsigned int' '='
+    | | |-DeclRefExpr 0x7fa3a282cb58 <col:7> 'unsigned int' lvalue Var 0x7fa3a282c970 'channel' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7fa3a282cba0 <col:17> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fa3a282cb80 <col:17> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa3a282cd20 <col:20, col:51> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fa3a282ccf0 <col:20> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa3a282cc00 <col:20> 'unsigned int' lvalue Var 0x7fa3a282c970 'channel' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7fa3a282cd08 <col:30, col:51> 'unsigned int' <LValueToRValue>
+    | |   `-MemberExpr 0x7fa3a282ccb8 <col:30, col:51> 'unsigned int' lvalue ->channels 0x7fa3a2826490
+    | |     `-ImplicitCastExpr 0x7fa3a282cca0 <col:30, col:39> 'struct FLAC__StreamEncoderProtected *' <LValueToRValue>
+    | |       `-MemberExpr 0x7fa3a282cc68 <col:30, col:39> 'struct FLAC__StreamEncoderProtected *' lvalue ->protected_ 0x7fa3a28260b0
+    | |         `-ImplicitCastExpr 0x7fa3a282cc50 <col:30> 'FLAC__StreamEncoder *' <LValueToRValue>
+    | |           `-DeclRefExpr 0x7fa3a282cc28 <col:30> 'FLAC__StreamEncoder *' lvalue ParmVar 0x7fa3a282c698 'encoder' 'FLAC__StreamEncoder *'
+    | |-UnaryOperator 0x7fa3a282cd70 <col:61, col:68> 'unsigned int' postfix '++'
+    | | `-DeclRefExpr 0x7fa3a282cd48 <col:61> 'unsigned int' lvalue Var 0x7fa3a282c970 'channel' 'unsigned int'
+    | `-CallExpr 0x7fa3a282d0a0 <line:36:7, col:98> 'void'
+    |   |-ImplicitCastExpr 0x7fa3a282d088 <col:7> 'void (*)(FLAC__int32 *, unsigned int)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fa3a282cd90 <col:7> 'void (FLAC__int32 *, unsigned int)' Function 0x7fa3a282c000 'get_wasted_bits_' 'void (FLAC__int32 *, unsigned int)'
+    |   |-ImplicitCastExpr 0x7fa3a282d0d8 <col:24, col:65> 'FLAC__int32 *' <LValueToRValue>
+    |   | `-ArraySubscriptExpr 0x7fa3a282cf38 <col:24, col:65> 'FLAC__int32 *' lvalue
+    |   |   |-ImplicitCastExpr 0x7fa3a282cf08 <col:24, col:43> 'FLAC__int32 **' <ArrayToPointerDecay>
+    |   |   | `-MemberExpr 0x7fa3a282ce48 <col:24, col:43> 'FLAC__int32 *[8]' lvalue ->integer_signal 0x7fa3a28267a8
+    |   |   |   `-ImplicitCastExpr 0x7fa3a282ce30 <col:24, col:33> 'struct FLAC__StreamEncoderPrivate *' <LValueToRValue>
+    |   |   |     `-MemberExpr 0x7fa3a282cdf8 <col:24, col:33> 'struct FLAC__StreamEncoderPrivate *' lvalue ->private_ 0x7fa3a2826260
+    |   |   |       `-ImplicitCastExpr 0x7fa3a282cde0 <col:24> 'FLAC__StreamEncoder *' <LValueToRValue>
+    |   |   |         `-DeclRefExpr 0x7fa3a282cdb8 <col:24> 'FLAC__StreamEncoder *' lvalue ParmVar 0x7fa3a282c698 'encoder' 'FLAC__StreamEncoder *'
+    |   |   `-ImplicitCastExpr 0x7fa3a282cf20 <col:58> 'unsigned int' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7fa3a282ce80 <col:58> 'unsigned int' lvalue Var 0x7fa3a282c970 'channel' 'unsigned int'
+    |   `-ImplicitCastExpr 0x7fa3a282d0f0 <col:68, col:89> 'unsigned int' <LValueToRValue>
+    |     `-MemberExpr 0x7fa3a282cff0 <col:68, col:89> 'unsigned int' lvalue ->blocksize 0x7fa3a28264f0
+    |       `-ImplicitCastExpr 0x7fa3a282cfd8 <col:68, col:77> 'struct FLAC__StreamEncoderProtected *' <LValueToRValue>
+    |         `-MemberExpr 0x7fa3a282cfa0 <col:68, col:77> 'struct FLAC__StreamEncoderProtected *' lvalue ->protected_ 0x7fa3a28260b0
+    |           `-ImplicitCastExpr 0x7fa3a282cf88 <col:68> 'FLAC__StreamEncoder *' <LValueToRValue>
+    |             `-DeclRefExpr 0x7fa3a282cf60 <col:68> 'FLAC__StreamEncoder *' lvalue ParmVar 0x7fa3a282c698 'encoder' 'FLAC__StreamEncoder *'
+    |-IfStmt 0x7fa3a282db90 <line:37:3, line:45:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa3a282d360 <line:37:6, col:107> 'int' '&&'
+    | | |-ImplicitCastExpr 0x7fa3a282d348 <col:6, col:27> 'FLAC__bool':'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7fa3a282d1d0 <col:6, col:27> 'FLAC__bool':'int' lvalue ->loose_mid_side_stereo 0x7fa3a2826430
+    | | |   `-ImplicitCastExpr 0x7fa3a282d1b8 <col:6, col:15> 'struct FLAC__StreamEncoderProtected *' <LValueToRValue>
+    | | |     `-MemberExpr 0x7fa3a282d180 <col:6, col:15> 'struct FLAC__StreamEncoderProtected *' lvalue ->protected_ 0x7fa3a28260b0
+    | | |       `-ImplicitCastExpr 0x7fa3a282d168 <col:6> 'FLAC__StreamEncoder *' <LValueToRValue>
+    | | |         `-DeclRefExpr 0x7fa3a282d140 <col:6> 'FLAC__StreamEncoder *' lvalue ParmVar 0x7fa3a282c698 'encoder' 'FLAC__StreamEncoder *'
+    | | `-BinaryOperator 0x7fa3a282d320 <col:52, col:107> 'int' '>'
+    | |   |-ImplicitCastExpr 0x7fa3a282d2f0 <col:52, col:71> 'unsigned int' <LValueToRValue>
+    | |   | `-MemberExpr 0x7fa3a282d298 <col:52, col:71> 'unsigned int' lvalue ->loose_mid_side_stereo_frame_count 0x7fa3a282bce0
+    | |   |   `-ImplicitCastExpr 0x7fa3a282d280 <col:52, col:61> 'struct FLAC__StreamEncoderPrivate *' <LValueToRValue>
+    | |   |     `-MemberExpr 0x7fa3a282d248 <col:52, col:61> 'struct FLAC__StreamEncoderPrivate *' lvalue ->private_ 0x7fa3a2826260
+    | |   |       `-ImplicitCastExpr 0x7fa3a282d230 <col:52> 'FLAC__StreamEncoder *' <LValueToRValue>
+    | |   |         `-DeclRefExpr 0x7fa3a282d208 <col:52> 'FLAC__StreamEncoder *' lvalue ParmVar 0x7fa3a282c698 'encoder' 'FLAC__StreamEncoder *'
+    | |   `-ImplicitCastExpr 0x7fa3a282d308 <col:107> 'unsigned int' <IntegralCast>
+    | |     `-IntegerLiteral 0x7fa3a282d2d0 <col:107> 'int' 0
+    | |-BinaryOperator 0x7fa3a282d3f0 <line:38:7, col:28> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' '='
+    | | |-DeclRefExpr 0x7fa3a282d388 <col:7> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' lvalue Var 0x7fa3a282cae0 'channel_assignment' 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment'
+    | | `-ImplicitCastExpr 0x7fa3a282d3d8 <col:28> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' <IntegralCast>
+    | |   `-DeclRefExpr 0x7fa3a282d3b0 <col:28> 'int' EnumConstant 0x7fa3a2825d88 'FLAC__CHANNEL_ASSIGNMENT_MID_SIDE' 'int'
+    | `-CompoundStmt 0x7fa3a282db60 <line:39:8, line:45:3>
+    |   |-DeclStmt 0x7fa3a282d4e0 <line:40:7, col:62>
+    |   | `-VarDecl 0x7fa3a282d428 <col:7, col:61> col:31 used ca 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' cinit
+    |   |   `-CStyleCastExpr 0x7fa3a282d4b8 <col:36, col:61> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' <IntegralCast>
+    |   |     `-IntegerLiteral 0x7fa3a282d488 <col:61> 'int' 1
+    |   |-DeclStmt 0x7fa3a282d610 <line:41:7, col:34>
+    |   | `-VarDecl 0x7fa3a282d510 <col:7, col:33> col:16 used min_bits 'unsigned int' cinit
+    |   |   `-ImplicitCastExpr 0x7fa3a282d5f8 <col:27, col:33> 'unsigned int' <LValueToRValue>
+    |   |     `-ArraySubscriptExpr 0x7fa3a282d5d0 <col:27, col:33> 'unsigned int' lvalue
+    |   |       |-ImplicitCastExpr 0x7fa3a282d5b8 <col:27> 'unsigned int *' <LValueToRValue>
+    |   |       | `-DeclRefExpr 0x7fa3a282d570 <col:27> 'unsigned int *' lvalue ParmVar 0x7fa3a282c740 'bits' 'unsigned int *'
+    |   |       `-IntegerLiteral 0x7fa3a282d598 <col:32> 'int' 0
+    |   `-ForStmt 0x7fa3a282db28 <line:42:7, line:44:29>
+    |     |-BinaryOperator 0x7fa3a282d6a8 <line:42:11, col:57> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' '='
+    |     | |-DeclRefExpr 0x7fa3a282d628 <col:11> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' lvalue Var 0x7fa3a282cae0 'channel_assignment' 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment'
+    |     | `-CStyleCastExpr 0x7fa3a282d680 <col:32, col:57> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7fa3a282d650 <col:57> 'int' 0
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7fa3a282d770 <col:60, col:71> 'int' '<='
+    |     | |-CStyleCastExpr 0x7fa3a282d728 <col:60, col:65> 'int' <IntegralCast>
+    |     | | `-ImplicitCastExpr 0x7fa3a282d710 <col:65> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' <LValueToRValue>
+    |     | |   `-DeclRefExpr 0x7fa3a282d6d0 <col:65> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' lvalue Var 0x7fa3a282d428 'ca' 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment'
+    |     | `-IntegerLiteral 0x7fa3a282d750 <col:71> 'int' 3
+    |     |-BinaryOperator 0x7fa3a282d910 <col:74, col:116> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' '='
+    |     | |-DeclRefExpr 0x7fa3a282d798 <col:74> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' lvalue Var 0x7fa3a282d428 'ca' 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment'
+    |     | `-CStyleCastExpr 0x7fa3a282d8e8 <col:79, col:116> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' <IntegralCast>
+    |     |   `-ParenExpr 0x7fa3a282d8c8 <col:104, col:116> 'int'
+    |     |     `-BinaryOperator 0x7fa3a282d860 <col:105, col:115> 'int' '+'
+    |     |       |-CStyleCastExpr 0x7fa3a282d818 <col:105, col:110> 'int' <IntegralCast>
+    |     |       | `-ImplicitCastExpr 0x7fa3a282d800 <col:110> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' <LValueToRValue>
+    |     |       |   `-DeclRefExpr 0x7fa3a282d7c0 <col:110> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' lvalue Var 0x7fa3a282d428 'ca' 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment'
+    |     |       `-IntegerLiteral 0x7fa3a282d840 <col:115> 'int' 1
+    |     `-IfStmt 0x7fa3a282daf0 <line:43:4, line:44:29>
+    |       |-<<<NULL>>>
+    |       |-<<<NULL>>>
+    |       |-BinaryOperator 0x7fa3a282da38 <line:43:7, col:18> 'int' '<'
+    |       | |-ImplicitCastExpr 0x7fa3a282da08 <col:7, col:14> 'unsigned int' <LValueToRValue>
+    |       | | `-ArraySubscriptExpr 0x7fa3a282d9b8 <col:7, col:14> 'unsigned int' lvalue
+    |       | |   |-ImplicitCastExpr 0x7fa3a282d988 <col:7> 'unsigned int *' <LValueToRValue>
+    |       | |   | `-DeclRefExpr 0x7fa3a282d938 <col:7> 'unsigned int *' lvalue ParmVar 0x7fa3a282c740 'bits' 'unsigned int *'
+    |       | |   `-ImplicitCastExpr 0x7fa3a282d9a0 <col:12> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' <LValueToRValue>
+    |       | |     `-DeclRefExpr 0x7fa3a282d960 <col:12> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' lvalue Var 0x7fa3a282d428 'ca' 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment'
+    |       | `-ImplicitCastExpr 0x7fa3a282da20 <col:18> 'unsigned int' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7fa3a282d9e0 <col:18> 'unsigned int' lvalue Var 0x7fa3a282d510 'min_bits' 'unsigned int'
+    |       |-BinaryOperator 0x7fa3a282dac8 <line:44:8, col:29> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' '='
+    |       | |-DeclRefExpr 0x7fa3a282da60 <col:8> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' lvalue Var 0x7fa3a282cae0 'channel_assignment' 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment'
+    |       | `-ImplicitCastExpr 0x7fa3a282dab0 <col:29> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7fa3a282da88 <col:29> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' lvalue Var 0x7fa3a282d428 'ca' 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment'
+    |       `-<<<NULL>>>
+    |-SwitchStmt 0x7fa3a282f430 <line:46:3, line:52:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fa3a282f418 <line:46:10> 'unsigned int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7fa3a282f400 <col:10> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fa3a282dbc8 <col:10> 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment' lvalue Var 0x7fa3a282cae0 'channel_assignment' 'FLAC__ChannelAssignment':'FLAC__ChannelAssignment'
+    | `-CompoundStmt 0x7fa3a282f950 <col:30, line:52:3>
+    |   `-CaseStmt 0x7fa3a282f488 <line:47:7, line:51:115>
+    |     |-ImplicitCastExpr 0x7fa3a282f9b8 <line:47:12> 'unsigned int' <IntegralCast>
+    |     | `-DeclRefExpr 0x7fa3a282f460 <col:12> 'int' EnumConstant 0x7fa3a2825c50 'FLAC__CHANNEL_ASSIGNMENT_INDEPENDENT' 'int'
+    |     |-<<<NULL>>>
+    |     `-CaseStmt 0x7fa3a282f4e8 <line:48:7, line:51:115>
+    |       |-ImplicitCastExpr 0x7fa3a282f9a0 <line:48:12> 'unsigned int' <IntegralCast>
+    |       | `-DeclRefExpr 0x7fa3a282f4c0 <col:12> 'int' EnumConstant 0x7fa3a2825cb8 'FLAC__CHANNEL_ASSIGNMENT_LEFT_SIDE' 'int'
+    |       |-<<<NULL>>>
+    |       `-CaseStmt 0x7fa3a282f548 <line:49:7, line:51:115>
+    |         |-ImplicitCastExpr 0x7fa3a282f988 <line:49:12> 'unsigned int' <IntegralCast>
+    |         | `-DeclRefExpr 0x7fa3a282f520 <col:12> 'int' EnumConstant 0x7fa3a2825d20 'FLAC__CHANNEL_ASSIGNMENT_RIGHT_SIDE' 'int'
+    |         |-<<<NULL>>>
+    |         `-CaseStmt 0x7fa3a282f5a8 <line:50:7, line:51:115>
+    |           |-ImplicitCastExpr 0x7fa3a282f970 <line:50:12> 'unsigned int' <IntegralCast>
+    |           | `-DeclRefExpr 0x7fa3a282f580 <col:12> 'int' EnumConstant 0x7fa3a2825d88 'FLAC__CHANNEL_ASSIGNMENT_MID_SIDE' 'int'
+    |           |-<<<NULL>>>
+    |           `-BinaryOperator 0x7fa3a282f928 <line:51:4, col:115> 'FLAC__Subframe *' '='
+    |             |-DeclRefExpr 0x7fa3a282f5e0 <col:4> 'FLAC__Subframe *' lvalue Var 0x7fa3a282c9f8 'left_subframe' 'FLAC__Subframe *'
+    |             `-UnaryOperator 0x7fa3a282f908 <col:20, col:115> 'FLAC__Subframe *' prefix '&'
+    |               `-ArraySubscriptExpr 0x7fa3a282f8e0 <col:21, col:115> 'FLAC__Subframe':'FLAC__Subframe' lvalue
+    |                 |-ImplicitCastExpr 0x7fa3a282f8b0 <col:21, col:69> 'FLAC__Subframe *' <ArrayToPointerDecay>
+    |                 | `-ArraySubscriptExpr 0x7fa3a282f760 <col:21, col:69> 'FLAC__Subframe [2]' lvalue
+    |                 |   |-ImplicitCastExpr 0x7fa3a282f748 <col:21, col:40> 'FLAC__Subframe (*)[2]' <ArrayToPointerDecay>
+    |                 |   | `-MemberExpr 0x7fa3a282f698 <col:21, col:40> 'FLAC__Subframe [2][2]' lvalue ->subframe_workspace_mid_side 0x7fa3a28269b8
+    |                 |   |   `-ImplicitCastExpr 0x7fa3a282f680 <col:21, col:30> 'struct FLAC__StreamEncoderPrivate *' <LValueToRValue>
+    |                 |   |     `-MemberExpr 0x7fa3a282f648 <col:21, col:30> 'struct FLAC__StreamEncoderPrivate *' lvalue ->private_ 0x7fa3a2826260
+    |                 |   |       `-ImplicitCastExpr 0x7fa3a282f630 <col:21> 'FLAC__StreamEncoder *' <LValueToRValue>
+    |                 |   |         `-DeclRefExpr 0x7fa3a282f608 <col:21> 'FLAC__StreamEncoder *' lvalue ParmVar 0x7fa3a282c698 'encoder' 'FLAC__StreamEncoder *'
+    |                 |   `-IntegerLiteral 0x7fa3a282f6d0 <col:68> 'int' 0
+    |                 `-ImplicitCastExpr 0x7fa3a282f8c8 <col:71, col:114> 'unsigned int' <LValueToRValue>
+    |                   `-ArraySubscriptExpr 0x7fa3a282f888 <col:71, col:114> 'unsigned int' lvalue
+    |                     |-ImplicitCastExpr 0x7fa3a282f870 <col:71, col:90> 'unsigned int *' <ArrayToPointerDecay>
+    |                     | `-MemberExpr 0x7fa3a282f818 <col:71, col:90> 'unsigned int [2]' lvalue ->best_subframe_mid_side 0x7fa3a282bc80
+    |                     |   `-ImplicitCastExpr 0x7fa3a282f800 <col:71, col:80> 'struct FLAC__StreamEncoderPrivate *' <LValueToRValue>
+    |                     |     `-MemberExpr 0x7fa3a282f7c8 <col:71, col:80> 'struct FLAC__StreamEncoderPrivate *' lvalue ->private_ 0x7fa3a2826260
+    |                     |       `-ImplicitCastExpr 0x7fa3a282f7b0 <col:71> 'FLAC__StreamEncoder *' <LValueToRValue>
+    |                     |         `-DeclRefExpr 0x7fa3a282f788 <col:71> 'FLAC__StreamEncoder *' lvalue ParmVar 0x7fa3a282c698 'encoder' 'FLAC__StreamEncoder *'
+    |                     `-IntegerLiteral 0x7fa3a282f850 <col:113> 'int' 0
+    `-ReturnStmt 0x7fa3a282fa10 <line:53:3, col:10>
+      `-ImplicitCastExpr 0x7fa3a282f9f8 <col:10> 'FLAC__Subframe *' <LValueToRValue>
+        `-DeclRefExpr 0x7fa3a282f9d0 <col:10> 'FLAC__Subframe *' lvalue Var 0x7fa3a282c9f8 'left_subframe' 'FLAC__Subframe *'

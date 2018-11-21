@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fc5a58264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc5a5826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc5a5826740 '__int128'
+|-TypedefDecl 0x7fc5a5826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc5a5826760 'unsigned __int128'
+|-TypedefDecl 0x7fc5a5826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc5a5826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc5a5826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc5a5826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc5a5826dc0 'char *'
+|   `-BuiltinType 0x7fc5a5826560 'char'
+|-TypedefDecl 0x7fc5a58270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc5a5827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc5a5826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc5a5826e58 '__va_list_tag'
+|-FunctionDecl 0x7fc5a5877400 <c_files/pr15347.c:4:1, col:29> col:13 used link_error 'void (void)' extern
+`-FunctionDecl 0x7fc5a5877530 <line:5:1, line:11:1> line:6:1 main 'int ()'
+  `-CompoundStmt 0x7fc5a58777f8 <line:7:1, line:11:1>
+    |-IfStmt 0x7fc5a5877788 <line:8:3, line:9:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc5a58776d0 <line:8:7, col:23> 'int' '=='
+    | | |-BinaryOperator 0x7fc5a5877670 <col:7, col:18> 'char *' '+'
+    | | | |-ImplicitCastExpr 0x7fc5a5877658 <col:7> 'char *' <ArrayToPointerDecay>
+    | | | | `-StringLiteral 0x7fc5a5877608 <col:7> 'char [7]' lvalue "<12ers"
+    | | | `-IntegerLiteral 0x7fc5a5877638 <col:18> 'int' 1
+    | | `-ImplicitCastExpr 0x7fc5a58776b8 <col:23> 'char *' <NullToPointer>
+    | |   `-IntegerLiteral 0x7fc5a5877698 <col:23> 'int' 0
+    | |-CallExpr 0x7fc5a5877760 <line:9:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7fc5a5877748 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc5a58776f8 <col:5> 'void (void)' Function 0x7fc5a5877400 'link_error' 'void (void)'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc5a58777e0 <line:10:3, col:10>
+      `-IntegerLiteral 0x7fc5a58777c0 <col:10> 'int' 0

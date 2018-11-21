@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: barstruct
+      Decl: some_string, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: some_string, ['const']
+            IdentifierType: ['char']
+  Decl: changethepointer, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            PtrDecl: []
+              TypeDecl: None, []
+                Struct: barstruct
+      TypeDecl: changethepointer, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: bar1, [], [], []
+        TypeDecl: bar1, []
+          Struct: barstruct
+      Decl: barptr, [], [], []
+        PtrDecl: []
+          TypeDecl: barptr, []
+            Struct: barstruct
+        UnaryOp: &
+          ID: bar1
+      FuncCall: 
+        ID: changethepointer
+        ExprList: 
+          UnaryOp: &
+            ID: barptr
+      Assignment: =
+        StructRef: ->
+          ID: barptr
+          ID: some_string
+        Constant: string, "Everything OK"

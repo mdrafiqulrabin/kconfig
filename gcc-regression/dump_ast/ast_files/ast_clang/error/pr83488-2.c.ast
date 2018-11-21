@@ -1,0 +1,32 @@
+c_files/pr83488-2.c:10:8: error: use of unknown builtin '__builtin_ia32_vpdpbusd_v16si' [-Wimplicit-function-declaration]
+  *a = __builtin_ia32_vpdpbusd_v16si (*b, *c, *d);
+       ^
+c_files/pr83488-2.c:10:6: error: assigning to '__v16si' (vector of 16 'int' values) from incompatible type 'int'
+  *a = __builtin_ia32_vpdpbusd_v16si (*b, *c, *d);
+     ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7ffb060244d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffb06024a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffb06024740 '__int128'
+|-TypedefDecl 0x7ffb06024a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffb06024760 'unsigned __int128'
+|-TypedefDecl 0x7ffb06024d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffb06024b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffb06024ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffb06024e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffb06024dc0 'char *'
+|   `-BuiltinType 0x7ffb06024560 'char'
+|-TypedefDecl 0x7ffb060250c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffb06025070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffb06024ee0 'struct __va_list_tag'
+|     `-Record 0x7ffb06024e58 '__va_list_tag'
+|-TypedefDecl 0x7ffb06025178 <c_files/pr83488-2.c:5:1, col:13> col:13 referenced __v16si '__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| `-VectorType 0x7ffb06025140 '__attribute__((__vector_size__(16 * sizeof(int)))) int' 16
+|   `-BuiltinType 0x7ffb060245c0 'int'
+|-FunctionDecl 0x7ffb06076700 <line:7:1, line:11:1> line:8:1 foo 'void (__v16si *, __v16si *, __v16si *, __v16si *)'
+| |-ParmVarDecl 0x7ffb06076468 <col:6, col:15> col:15 used a '__v16si *'
+| |-ParmVarDecl 0x7ffb060764d8 <col:18, col:27> col:27 used b '__v16si *'
+| |-ParmVarDecl 0x7ffb06076548 <col:30, col:39> col:39 used c '__v16si *'
+| |-ParmVarDecl 0x7ffb060765b8 <col:42, col:51> col:51 used d '__v16si *'
+| `-CompoundStmt 0x7ffb06076f20 <line:9:1, line:11:1>
+`-FunctionDecl 0x7ffb060768c0 <<invalid sloc>> line:10:8 implicit used __builtin_ia32_vpdpbusd_v16si 'int ()'

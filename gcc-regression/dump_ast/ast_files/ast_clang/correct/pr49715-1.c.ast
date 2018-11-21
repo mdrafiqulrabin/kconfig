@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fbfa80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbfa8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbfa8026740 '__int128'
+|-TypedefDecl 0x7fbfa8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbfa8026760 'unsigned __int128'
+|-TypedefDecl 0x7fbfa8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbfa8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbfa8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbfa8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbfa8026dc0 'char *'
+|   `-BuiltinType 0x7fbfa8026560 'char'
+|-TypedefDecl 0x7fbfa80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbfa8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbfa8026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbfa8026e58 '__va_list_tag'
+`-FunctionDecl 0x7fbfa8056430 <c_files/pr49715-1.c:4:1, line:7:1> line:4:7 func 'float (unsigned int)'
+  |-ParmVarDecl 0x7fbfa8027138 <col:12, col:21> col:21 used x 'unsigned int'
+  `-CompoundStmt 0x7fbfa8056648 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7fbfa8056630 <line:6:3, col:26>
+      `-BinaryOperator 0x7fbfa8056608 <col:10, col:26> 'float' '*'
+        |-ImplicitCastExpr 0x7fbfa80565f0 <col:10, col:22> 'float' <IntegralToFloating>
+        | `-ParenExpr 0x7fbfa80565b0 <col:10, col:22> 'unsigned int'
+        |   `-BinaryOperator 0x7fbfa8056588 <col:11, col:15> 'unsigned int' '&'
+        |     |-ImplicitCastExpr 0x7fbfa8056558 <col:11> 'unsigned int' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7fbfa8056510 <col:11> 'unsigned int' lvalue ParmVar 0x7fbfa8027138 'x' 'unsigned int'
+        |     `-ImplicitCastExpr 0x7fbfa8056570 <col:15> 'unsigned int' <IntegralCast>
+        |       `-IntegerLiteral 0x7fbfa8056538 <col:15> 'int' 1048575
+        `-FloatingLiteral 0x7fbfa80565d0 <col:26> 'float' 1.000000e-02

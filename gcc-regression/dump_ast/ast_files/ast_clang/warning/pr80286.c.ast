@@ -1,0 +1,102 @@
+c_files/pr80286.c:7:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone)) V
+                         ^
+1 warning generated.
+TranslationUnitDecl 0x7fa8720264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa872026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa872026740 '__int128'
+|-TypedefDecl 0x7fa872026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa872026760 'unsigned __int128'
+|-TypedefDecl 0x7fa872026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa872026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa872026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa872026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa872026dc0 'char *'
+|   `-BuiltinType 0x7fa872026560 'char'
+|-TypedefDecl 0x7fa8720270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa872027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa872026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa872026e58 '__va_list_tag'
+|-TypedefDecl 0x7fa872827a00 <c_files/pr80286.c:5:1, col:13> col:13 referenced V '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fa8720271c0 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fa8720265c0 'int'
+|-FunctionDecl 0x7fa872827c10 <line:7:1, line:11:1> line:8:1 used foo 'V (V, V)'
+| |-ParmVarDecl 0x7fa872827a90 <col:6, col:8> col:8 used x 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| |-ParmVarDecl 0x7fa872827b00 <col:11, col:13> col:13 used y 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| |-CompoundStmt 0x7fa872827e90 <line:9:1, line:11:1>
+| | `-ReturnStmt 0x7fa872827e78 <line:10:3, col:18>
+| |   `-BinaryOperator 0x7fa872827e50 <col:10, col:18> 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int' '<<'
+| |     |-ImplicitCastExpr 0x7fa872827dd8 <col:10> 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fa872827d40 <col:10> 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7fa872827a90 'x' 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| |     `-ImplicitCastExpr 0x7fa872827e38 <col:15, col:18> 'int __attribute__((ext_vector_type(4)))' <VectorSplat>
+| |       `-ImplicitCastExpr 0x7fa872827df0 <col:15, col:18> 'int' <LValueToRValue>
+| |         `-ArraySubscriptExpr 0x7fa872827db0 <col:15, col:18> 'int' lvalue vectorcomponent
+| |           |-DeclRefExpr 0x7fa872827d68 <col:15> 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7fa872827b00 'y' 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| |           `-IntegerLiteral 0x7fa872827d90 <col:17> 'int' 0
+| `-NoInlineAttr 0x7fa872827cb8 <line:7:16>
+|-FunctionDecl 0x7fa872827f00 <line:13:1, line:23:1> line:14:1 main 'int ()'
+| `-CompoundStmt 0x7fa872828ec8 <line:15:1, line:23:1>
+|   |-DeclStmt 0x7fa872828148 <line:16:3, col:23>
+|   | `-VarDecl 0x7fa872827fa8 <col:3, col:22> col:5 used x 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int' cinit
+|   |   `-InitListExpr 0x7fa8728280e8 <col:9, col:22> 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |     |-IntegerLiteral 0x7fa872828008 <col:11> 'int' 1
+|   |     |-IntegerLiteral 0x7fa872828028 <col:14> 'int' 2
+|   |     |-IntegerLiteral 0x7fa872828048 <col:17> 'int' 3
+|   |     `-IntegerLiteral 0x7fa872828068 <col:20> 'int' 4
+|   |-DeclStmt 0x7fa872828310 <line:17:3, col:23>
+|   | `-VarDecl 0x7fa872828170 <col:3, col:22> col:5 used y 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int' cinit
+|   |   `-InitListExpr 0x7fa8728282b0 <col:9, col:22> 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |     |-IntegerLiteral 0x7fa8728281d0 <col:11> 'int' 5
+|   |     |-IntegerLiteral 0x7fa8728281f0 <col:14> 'int' 6
+|   |     |-IntegerLiteral 0x7fa872828210 <col:17> 'int' 7
+|   |     `-IntegerLiteral 0x7fa872828230 <col:20> 'int' 8
+|   |-DeclStmt 0x7fa8728284e8 <line:18:3, col:19>
+|   | `-VarDecl 0x7fa872828338 <col:3, col:18> col:5 used z 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int' cinit
+|   |   `-CallExpr 0x7fa872828480 <col:9, col:18> 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |     |-ImplicitCastExpr 0x7fa872828468 <col:9> 'V (*)(V, V)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fa872828398 <col:9> 'V (V, V)' Function 0x7fa872827c10 'foo' 'V (V, V)'
+|   |     |-ImplicitCastExpr 0x7fa8728284b8 <col:14> 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fa8728283c0 <col:14> 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fa872827fa8 'x' 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |     `-ImplicitCastExpr 0x7fa8728284d0 <col:17> 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fa8728283e8 <col:17> 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fa872828170 'y' 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |-DeclStmt 0x7fa8728287d0 <line:19:3, col:43>
+|   | `-VarDecl 0x7fa872828510 <col:3, col:42> col:5 used e 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int' cinit
+|   |   `-InitListExpr 0x7fa872828770 <col:9, col:42> 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |     |-BinaryOperator 0x7fa8728285b0 <col:11, col:16> 'int' '<<'
+|   |     | |-IntegerLiteral 0x7fa872828570 <col:11> 'int' 1
+|   |     | `-IntegerLiteral 0x7fa872828590 <col:16> 'int' 5
+|   |     |-BinaryOperator 0x7fa872828618 <col:19, col:24> 'int' '<<'
+|   |     | |-IntegerLiteral 0x7fa8728285d8 <col:19> 'int' 2
+|   |     | `-IntegerLiteral 0x7fa8728285f8 <col:24> 'int' 5
+|   |     |-BinaryOperator 0x7fa872828680 <col:27, col:32> 'int' '<<'
+|   |     | |-IntegerLiteral 0x7fa872828640 <col:27> 'int' 3
+|   |     | `-IntegerLiteral 0x7fa872828660 <col:32> 'int' 5
+|   |     `-BinaryOperator 0x7fa8728286e8 <col:35, col:40> 'int' '<<'
+|   |       |-IntegerLiteral 0x7fa8728286a8 <col:35> 'int' 4
+|   |       `-IntegerLiteral 0x7fa8728286c8 <col:40> 'int' 5
+|   |-IfStmt 0x7fa872828e58 <line:20:3, line:21:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fa872828c40 <line:20:7, col:43> 'int'
+|   | | |-ImplicitCastExpr 0x7fa872828c28 <col:7> 'int (*)(const void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7fa872828ac0 <col:7> '<builtin fn type>' Function 0x7fa872828868 '__builtin_memcmp' 'int (const void *, const void *, unsigned long)'
+|   | | |-ImplicitCastExpr 0x7fa872828c80 <col:25, col:26> 'const void *' <BitCast>
+|   | | | `-UnaryOperator 0x7fa872828b68 <col:25, col:26> 'V *' prefix '&'
+|   | | |   `-DeclRefExpr 0x7fa872828ae8 <col:26> 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fa872828338 'z' 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   | | |-ImplicitCastExpr 0x7fa872828c98 <col:29, col:30> 'const void *' <BitCast>
+|   | | | `-UnaryOperator 0x7fa872828bb0 <col:29, col:30> 'V *' prefix '&'
+|   | | |   `-DeclRefExpr 0x7fa872828b88 <col:30> 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fa872828510 'e' 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   | | `-UnaryExprOrTypeTraitExpr 0x7fa872828be0 <col:33, col:42> 'unsigned long' sizeof 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   | |-CallExpr 0x7fa872828e30 <line:21:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fa872828e18 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fa872828dc0 <col:5> '<builtin fn type>' Function 0x7fa872828ce0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fa872828eb0 <line:22:3, col:10>
+|     `-IntegerLiteral 0x7fa872828e90 <col:10> 'int' 0
+|-FunctionDecl 0x7fa872828868 <line:20:7> col:7 implicit used __builtin_memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fa872828900 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fa872828960 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fa872828a00 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fa872828a78 <col:7> Implicit
+`-FunctionDecl 0x7fa872828ce0 <line:21:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fa872828d78 <col:5> Implicit

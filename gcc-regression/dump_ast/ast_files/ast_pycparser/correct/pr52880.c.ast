@@ -1,0 +1,75 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: B
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          Struct: A
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      Struct: B
+    InitList: 
+      NamedInitializer: 
+        Constant: int, 0
+        ID: c
+        ID: a
+      NamedInitializer: 
+        Constant: int, 1
+        ID: e
+      NamedInitializer: 
+        Constant: int, 2
+        ID: d
+      NamedInitializer: 
+        Constant: int, 3
+        ID: c
+        ID: b
+  Decl: None, [], [], []
+    Struct: C
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['int']
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: D
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          Struct: C
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+  Decl: l, [], [], []
+    TypeDecl: l, []
+      Struct: D
+    InitList: 
+      NamedInitializer: 
+        Constant: int, 0
+        ID: j
+        ID: g
+      NamedInitializer: 
+        Constant: int, 1
+        ID: k
+      NamedInitializer: 
+        Constant: int, 2
+        ID: i
+      NamedInitializer: 
+        Constant: int, 3
+        ID: j
+        ID: h

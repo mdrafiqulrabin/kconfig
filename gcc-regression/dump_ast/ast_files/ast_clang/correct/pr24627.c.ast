@@ -1,0 +1,290 @@
+TranslationUnitDecl 0x7fb6120264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb612026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb612026740 '__int128'
+|-TypedefDecl 0x7fb612026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb612026760 'unsigned __int128'
+|-TypedefDecl 0x7fb612026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb612026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb612026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb612026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb612026dc0 'char *'
+|   `-BuiltinType 0x7fb612026560 'char'
+|-TypedefDecl 0x7fb6120270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb612027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb612026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb612026e58 '__va_list_tag'
+|-FunctionDecl 0x7fb612077a30 <c_files/pr24627.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fb612077ac8 prev 0x7fb612077a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-TypedefDecl 0x7fb612077b78 <line:6:1, col:22> col:22 referenced u_int32 'unsigned int'
+| `-BuiltinType 0x7fb612026660 'unsigned int'
+|-RecordDecl 0x7fb612077bd0 <line:8:9, line:11:1> line:8:9 struct definition
+| |-RecordDecl 0x7fb612077c80 <line:9:3, col:24> col:3 union definition
+| | `-FieldDecl 0x7fb612077d60 <col:10, col:18> col:18 referenced Xl_ui 'u_int32':'unsigned int'
+| |-FieldDecl 0x7fb612077e00 <col:3, col:26> col:26 referenced Ul_i 'union (anonymous union at c_files/pr24627.c:9:3)':'union l_fp::(anonymous at c_files/pr24627.c:9:3)'
+| |-RecordDecl 0x7fb612077e48 <line:10:3, col:24> col:3 union definition
+| | `-FieldDecl 0x7fb612077f00 <col:10, col:18> col:18 referenced Xl_uf 'u_int32':'unsigned int'
+| `-FieldDecl 0x7fb612077fa0 <col:3, col:26> col:26 referenced Ul_f 'union (anonymous union at c_files/pr24627.c:10:3)':'union l_fp::(anonymous at c_files/pr24627.c:10:3)'
+|-TypedefDecl 0x7fb612078080 <line:8:1, line:11:3> col:3 referenced l_fp 'struct l_fp':'l_fp'
+| `-ElaboratedType 0x7fb612078030 'struct l_fp' sugar
+|   `-RecordType 0x7fb612077c60 'l_fp'
+|     `-Record 0x7fb612077bd0 ''
+|-FunctionDecl 0x7fb6120781d0 <line:13:1, line:61:1> line:14:1 used dolfptoa 'void (short)'
+| |-ParmVarDecl 0x7fb612078108 <col:11, col:17> col:17 used ndec 'short'
+| `-CompoundStmt 0x7fb61207a9e0 <line:15:1, line:61:1>
+|   |-DeclStmt 0x7fb6120783c8 <line:16:3, col:18>
+|   | |-VarDecl 0x7fb6120782e0 <col:3, col:8> col:8 used work 'l_fp':'l_fp'
+|   | `-VarDecl 0x7fb612078350 <col:3, col:14> col:14 used ftmp 'l_fp':'l_fp'
+|   |-BinaryOperator 0x7fb6120784b0 <line:18:3, col:21> 'u_int32':'unsigned int' '='
+|   | |-MemberExpr 0x7fb612078440 <col:3, col:13> 'u_int32':'unsigned int' lvalue .Xl_ui 0x7fb612077d60
+|   | | `-MemberExpr 0x7fb612078408 <col:3, col:8> 'union (anonymous union at c_files/pr24627.c:9:3)':'union l_fp::(anonymous at c_files/pr24627.c:9:3)' lvalue .Ul_i 0x7fb612077e00
+|   | |   `-DeclRefExpr 0x7fb6120783e0 <col:3> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|   | `-ImplicitCastExpr 0x7fb612078498 <col:21> 'u_int32':'unsigned int' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fb612078478 <col:21> 'int' 0
+|   |-BinaryOperator 0x7fb612078640 <line:19:3, col:21> 'u_int32':'unsigned int' '='
+|   | |-MemberExpr 0x7fb6120785d0 <col:3, col:13> 'u_int32':'unsigned int' lvalue .Xl_uf 0x7fb612077f00
+|   | | `-MemberExpr 0x7fb612078598 <col:3, col:8> 'union (anonymous union at c_files/pr24627.c:10:3)':'union l_fp::(anonymous at c_files/pr24627.c:10:3)' lvalue .Ul_f 0x7fb612077fa0
+|   | |   `-DeclRefExpr 0x7fb612078570 <col:3> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|   | `-ImplicitCastExpr 0x7fb612078628 <col:21> 'u_int32':'unsigned int' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fb612078608 <col:21> 'int' 87421912
+|   `-WhileStmt 0x7fb61207a9c0 <line:21:3, line:60:5>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fb6120786e0 <line:21:10, col:17> 'int' '>'
+|     | |-ImplicitCastExpr 0x7fb6120786c8 <col:10> 'int' <IntegralCast>
+|     | | `-ImplicitCastExpr 0x7fb6120786b0 <col:10> 'short' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7fb612078668 <col:10> 'short' lvalue ParmVar 0x7fb612078108 'ndec' 'short'
+|     | `-IntegerLiteral 0x7fb612078690 <col:17> 'int' 0
+|     `-CompoundStmt 0x7fb61207a900 <line:22:5, line:60:5>
+|       |-DeclStmt 0x7fb612078778 <line:23:7, col:21>
+|       | `-VarDecl 0x7fb612078718 <col:7, col:15> col:15 used lo_tmp 'u_int32':'unsigned int'
+|       |-DeclStmt 0x7fb612078800 <line:24:7, col:21>
+|       | `-VarDecl 0x7fb6120787a0 <col:7, col:15> col:15 used hi_tmp 'u_int32':'unsigned int'
+|       |-UnaryOperator 0x7fb612078840 <line:26:7, col:11> 'short' postfix '--'
+|       | `-DeclRefExpr 0x7fb612078818 <col:7> 'short' lvalue ParmVar 0x7fb612078108 'ndec' 'short'
+|       |-BinaryOperator 0x7fb612078930 <line:27:7, col:25> 'u_int32':'unsigned int' '='
+|       | |-MemberExpr 0x7fb6120788c0 <col:7, col:17> 'u_int32':'unsigned int' lvalue .Xl_ui 0x7fb612077d60
+|       | | `-MemberExpr 0x7fb612078888 <col:7, col:12> 'union (anonymous union at c_files/pr24627.c:9:3)':'union l_fp::(anonymous at c_files/pr24627.c:9:3)' lvalue .Ul_i 0x7fb612077e00
+|       | |   `-DeclRefExpr 0x7fb612078860 <col:7> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       | `-ImplicitCastExpr 0x7fb612078918 <col:25> 'u_int32':'unsigned int' <IntegralCast>
+|       |   `-IntegerLiteral 0x7fb6120788f8 <col:25> 'int' 0
+|       |-CompoundAssignOperator 0x7fb612078a38 <line:28:7, col:27> 'u_int32':'unsigned int' '<<=' ComputeLHSTy='u_int32':'unsigned int' ComputeResultTy='u_int32':'unsigned int'
+|       | |-MemberExpr 0x7fb6120789b8 <col:7, col:17> 'u_int32':'unsigned int' lvalue .Xl_ui 0x7fb612077d60
+|       | | `-MemberExpr 0x7fb612078980 <col:7, col:12> 'union (anonymous union at c_files/pr24627.c:9:3)':'union l_fp::(anonymous at c_files/pr24627.c:9:3)' lvalue .Ul_i 0x7fb612077e00
+|       | |   `-DeclRefExpr 0x7fb612078958 <col:7> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       | `-IntegerLiteral 0x7fb612078a00 <col:27> 'int' 1
+|       |-IfStmt 0x7fb612078cb0 <line:29:7, line:30:23>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7fb612078b60 <line:29:11, col:31> 'unsigned int' '&'
+|       | | |-ImplicitCastExpr 0x7fb612078b48 <col:11, col:27> 'u_int32':'unsigned int' <LValueToRValue>
+|       | | | `-ParenExpr 0x7fb612078b08 <col:11, col:27> 'u_int32':'unsigned int' lvalue
+|       | | |   `-MemberExpr 0x7fb612078ad0 <col:12, col:22> 'u_int32':'unsigned int' lvalue .Xl_uf 0x7fb612077f00
+|       | | |     `-MemberExpr 0x7fb612078a98 <col:12, col:17> 'union (anonymous union at c_files/pr24627.c:10:3)':'union l_fp::(anonymous at c_files/pr24627.c:10:3)' lvalue .Ul_f 0x7fb612077fa0
+|       | | |       `-DeclRefExpr 0x7fb612078a70 <col:12> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       | | `-IntegerLiteral 0x7fb612078b28 <col:31> 'unsigned int' 2147483648
+|       | |-CompoundAssignOperator 0x7fb612078c78 <line:30:2, col:23> 'u_int32':'unsigned int' '|=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|       | | |-ParenExpr 0x7fb612078c20 <col:2, col:18> 'u_int32':'unsigned int' lvalue
+|       | | | `-MemberExpr 0x7fb612078be8 <col:3, col:13> 'u_int32':'unsigned int' lvalue .Xl_ui 0x7fb612077d60
+|       | | |   `-MemberExpr 0x7fb612078bb0 <col:3, col:8> 'union (anonymous union at c_files/pr24627.c:9:3)':'union l_fp::(anonymous at c_files/pr24627.c:9:3)' lvalue .Ul_i 0x7fb612077e00
+|       | | |     `-DeclRefExpr 0x7fb612078b88 <col:3> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       | | `-ImplicitCastExpr 0x7fb612078c60 <col:23> 'unsigned int' <IntegralCast>
+|       | |   `-IntegerLiteral 0x7fb612078c40 <col:23> 'int' 1
+|       | `-<<<NULL>>>
+|       |-CompoundAssignOperator 0x7fb612078dd8 <line:31:7, col:29> 'u_int32':'unsigned int' '<<=' ComputeLHSTy='u_int32':'unsigned int' ComputeResultTy='u_int32':'unsigned int'
+|       | |-ParenExpr 0x7fb612078d80 <col:7, col:23> 'u_int32':'unsigned int' lvalue
+|       | | `-MemberExpr 0x7fb612078d48 <col:8, col:18> 'u_int32':'unsigned int' lvalue .Xl_uf 0x7fb612077f00
+|       | |   `-MemberExpr 0x7fb612078d10 <col:8, col:13> 'union (anonymous union at c_files/pr24627.c:10:3)':'union l_fp::(anonymous at c_files/pr24627.c:10:3)' lvalue .Ul_f 0x7fb612077fa0
+|       | |     `-DeclRefExpr 0x7fb612078ce8 <col:8> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       | `-IntegerLiteral 0x7fb612078da0 <col:29> 'int' 1
+|       |-BinaryOperator 0x7fb612078e78 <line:33:7, col:14> 'l_fp':'l_fp' '='
+|       | |-DeclRefExpr 0x7fb612078e10 <col:7> 'l_fp':'l_fp' lvalue Var 0x7fb612078350 'ftmp' 'l_fp':'l_fp'
+|       | `-ImplicitCastExpr 0x7fb612078e60 <col:14> 'l_fp':'l_fp' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fb612078e38 <col:14> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       |-CompoundAssignOperator 0x7fb612078f90 <line:34:7, col:29> 'u_int32':'unsigned int' '<<=' ComputeLHSTy='u_int32':'unsigned int' ComputeResultTy='u_int32':'unsigned int'
+|       | |-ParenExpr 0x7fb612078f38 <col:7, col:23> 'u_int32':'unsigned int' lvalue
+|       | | `-MemberExpr 0x7fb612078f00 <col:8, col:18> 'u_int32':'unsigned int' lvalue .Xl_ui 0x7fb612077d60
+|       | |   `-MemberExpr 0x7fb612078ec8 <col:8, col:13> 'union (anonymous union at c_files/pr24627.c:9:3)':'union l_fp::(anonymous at c_files/pr24627.c:9:3)' lvalue .Ul_i 0x7fb612077e00
+|       | |     `-DeclRefExpr 0x7fb612078ea0 <col:8> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       | `-IntegerLiteral 0x7fb612078f58 <col:29> 'int' 1
+|       |-IfStmt 0x7fb612079208 <line:35:7, line:36:23>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7fb6120790b8 <line:35:11, col:31> 'unsigned int' '&'
+|       | | |-ImplicitCastExpr 0x7fb6120790a0 <col:11, col:27> 'u_int32':'unsigned int' <LValueToRValue>
+|       | | | `-ParenExpr 0x7fb612079060 <col:11, col:27> 'u_int32':'unsigned int' lvalue
+|       | | |   `-MemberExpr 0x7fb612079028 <col:12, col:22> 'u_int32':'unsigned int' lvalue .Xl_uf 0x7fb612077f00
+|       | | |     `-MemberExpr 0x7fb612078ff0 <col:12, col:17> 'union (anonymous union at c_files/pr24627.c:10:3)':'union l_fp::(anonymous at c_files/pr24627.c:10:3)' lvalue .Ul_f 0x7fb612077fa0
+|       | | |       `-DeclRefExpr 0x7fb612078fc8 <col:12> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       | | `-IntegerLiteral 0x7fb612079080 <col:31> 'unsigned int' 2147483648
+|       | |-CompoundAssignOperator 0x7fb6120791d0 <line:36:2, col:23> 'u_int32':'unsigned int' '|=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|       | | |-ParenExpr 0x7fb612079178 <col:2, col:18> 'u_int32':'unsigned int' lvalue
+|       | | | `-MemberExpr 0x7fb612079140 <col:3, col:13> 'u_int32':'unsigned int' lvalue .Xl_ui 0x7fb612077d60
+|       | | |   `-MemberExpr 0x7fb612079108 <col:3, col:8> 'union (anonymous union at c_files/pr24627.c:9:3)':'union l_fp::(anonymous at c_files/pr24627.c:9:3)' lvalue .Ul_i 0x7fb612077e00
+|       | | |     `-DeclRefExpr 0x7fb6120790e0 <col:3> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       | | `-ImplicitCastExpr 0x7fb6120791b8 <col:23> 'unsigned int' <IntegralCast>
+|       | |   `-IntegerLiteral 0x7fb612079198 <col:23> 'int' 1
+|       | `-<<<NULL>>>
+|       |-CompoundAssignOperator 0x7fb612079330 <line:37:7, col:29> 'u_int32':'unsigned int' '<<=' ComputeLHSTy='u_int32':'unsigned int' ComputeResultTy='u_int32':'unsigned int'
+|       | |-ParenExpr 0x7fb6120792d8 <col:7, col:23> 'u_int32':'unsigned int' lvalue
+|       | | `-MemberExpr 0x7fb6120792a0 <col:8, col:18> 'u_int32':'unsigned int' lvalue .Xl_uf 0x7fb612077f00
+|       | |   `-MemberExpr 0x7fb612079268 <col:8, col:13> 'union (anonymous union at c_files/pr24627.c:10:3)':'union l_fp::(anonymous at c_files/pr24627.c:10:3)' lvalue .Ul_f 0x7fb612077fa0
+|       | |     `-DeclRefExpr 0x7fb612079240 <col:8> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       | `-IntegerLiteral 0x7fb6120792f8 <col:29> 'int' 1
+|       |-CompoundAssignOperator 0x7fb612079458 <line:39:7, col:29> 'u_int32':'unsigned int' '<<=' ComputeLHSTy='u_int32':'unsigned int' ComputeResultTy='u_int32':'unsigned int'
+|       | |-ParenExpr 0x7fb612079400 <col:7, col:23> 'u_int32':'unsigned int' lvalue
+|       | | `-MemberExpr 0x7fb6120793c8 <col:8, col:18> 'u_int32':'unsigned int' lvalue .Xl_ui 0x7fb612077d60
+|       | |   `-MemberExpr 0x7fb612079390 <col:8, col:13> 'union (anonymous union at c_files/pr24627.c:9:3)':'union l_fp::(anonymous at c_files/pr24627.c:9:3)' lvalue .Ul_i 0x7fb612077e00
+|       | |     `-DeclRefExpr 0x7fb612079368 <col:8> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       | `-IntegerLiteral 0x7fb612079420 <col:29> 'int' 1
+|       |-IfStmt 0x7fb6120796d0 <line:40:7, line:41:23>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7fb612079580 <line:40:11, col:31> 'unsigned int' '&'
+|       | | |-ImplicitCastExpr 0x7fb612079568 <col:11, col:27> 'u_int32':'unsigned int' <LValueToRValue>
+|       | | | `-ParenExpr 0x7fb612079528 <col:11, col:27> 'u_int32':'unsigned int' lvalue
+|       | | |   `-MemberExpr 0x7fb6120794f0 <col:12, col:22> 'u_int32':'unsigned int' lvalue .Xl_uf 0x7fb612077f00
+|       | | |     `-MemberExpr 0x7fb6120794b8 <col:12, col:17> 'union (anonymous union at c_files/pr24627.c:10:3)':'union l_fp::(anonymous at c_files/pr24627.c:10:3)' lvalue .Ul_f 0x7fb612077fa0
+|       | | |       `-DeclRefExpr 0x7fb612079490 <col:12> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       | | `-IntegerLiteral 0x7fb612079548 <col:31> 'unsigned int' 2147483648
+|       | |-CompoundAssignOperator 0x7fb612079698 <line:41:2, col:23> 'u_int32':'unsigned int' '|=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|       | | |-ParenExpr 0x7fb612079640 <col:2, col:18> 'u_int32':'unsigned int' lvalue
+|       | | | `-MemberExpr 0x7fb612079608 <col:3, col:13> 'u_int32':'unsigned int' lvalue .Xl_ui 0x7fb612077d60
+|       | | |   `-MemberExpr 0x7fb6120795d0 <col:3, col:8> 'union (anonymous union at c_files/pr24627.c:9:3)':'union l_fp::(anonymous at c_files/pr24627.c:9:3)' lvalue .Ul_i 0x7fb612077e00
+|       | | |     `-DeclRefExpr 0x7fb6120795a8 <col:3> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       | | `-ImplicitCastExpr 0x7fb612079680 <col:23> 'unsigned int' <IntegralCast>
+|       | |   `-IntegerLiteral 0x7fb612079660 <col:23> 'int' 1
+|       | `-<<<NULL>>>
+|       |-CompoundAssignOperator 0x7fb6120797f8 <line:42:7, col:29> 'u_int32':'unsigned int' '<<=' ComputeLHSTy='u_int32':'unsigned int' ComputeResultTy='u_int32':'unsigned int'
+|       | |-ParenExpr 0x7fb6120797a0 <col:7, col:23> 'u_int32':'unsigned int' lvalue
+|       | | `-MemberExpr 0x7fb612079768 <col:8, col:18> 'u_int32':'unsigned int' lvalue .Xl_uf 0x7fb612077f00
+|       | |   `-MemberExpr 0x7fb612079730 <col:8, col:13> 'union (anonymous union at c_files/pr24627.c:10:3)':'union l_fp::(anonymous at c_files/pr24627.c:10:3)' lvalue .Ul_f 0x7fb612077fa0
+|       | |     `-DeclRefExpr 0x7fb612079708 <col:8> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       | `-IntegerLiteral 0x7fb6120797c0 <col:29> 'int' 1
+|       |-BinaryOperator 0x7fb612079b50 <line:44:7, col:74> 'u_int32':'unsigned int' '='
+|       | |-DeclRefExpr 0x7fb612079830 <col:7> 'u_int32':'unsigned int' lvalue Var 0x7fb612078718 'lo_tmp' 'u_int32':'unsigned int'
+|       | `-BinaryOperator 0x7fb612079b28 <col:16, col:74> 'unsigned int' '+'
+|       |   |-ParenExpr 0x7fb612079988 <col:16, col:43> 'unsigned int'
+|       |   | `-BinaryOperator 0x7fb612079960 <col:17, col:37> 'unsigned int' '&'
+|       |   |   |-ImplicitCastExpr 0x7fb612079930 <col:17, col:33> 'u_int32':'unsigned int' <LValueToRValue>
+|       |   |   | `-ParenExpr 0x7fb6120798f0 <col:17, col:33> 'u_int32':'unsigned int' lvalue
+|       |   |   |   `-MemberExpr 0x7fb6120798b8 <col:18, col:28> 'u_int32':'unsigned int' lvalue .Xl_uf 0x7fb612077f00
+|       |   |   |     `-MemberExpr 0x7fb612079880 <col:18, col:23> 'union (anonymous union at c_files/pr24627.c:10:3)':'union l_fp::(anonymous at c_files/pr24627.c:10:3)' lvalue .Ul_f 0x7fb612077fa0
+|       |   |   |       `-DeclRefExpr 0x7fb612079858 <col:18> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       |   |   `-ImplicitCastExpr 0x7fb612079948 <col:37> 'unsigned int' <IntegralCast>
+|       |   |     `-IntegerLiteral 0x7fb612079910 <col:37> 'int' 65535
+|       |   `-ParenExpr 0x7fb612079b08 <col:47, col:74> 'unsigned int'
+|       |     `-BinaryOperator 0x7fb612079ae0 <col:48, col:68> 'unsigned int' '&'
+|       |       |-ImplicitCastExpr 0x7fb612079ab0 <col:48, col:64> 'u_int32':'unsigned int' <LValueToRValue>
+|       |       | `-ParenExpr 0x7fb612079a70 <col:48, col:64> 'u_int32':'unsigned int' lvalue
+|       |       |   `-MemberExpr 0x7fb612079a38 <col:49, col:59> 'u_int32':'unsigned int' lvalue .Xl_uf 0x7fb612077f00
+|       |       |     `-MemberExpr 0x7fb612079a00 <col:49, col:54> 'union (anonymous union at c_files/pr24627.c:10:3)':'union l_fp::(anonymous at c_files/pr24627.c:10:3)' lvalue .Ul_f 0x7fb612077fa0
+|       |       |       `-DeclRefExpr 0x7fb6120799a8 <col:49> 'l_fp':'l_fp' lvalue Var 0x7fb612078350 'ftmp' 'l_fp':'l_fp'
+|       |       `-ImplicitCastExpr 0x7fb612079ac8 <col:68> 'unsigned int' <IntegralCast>
+|       |         `-IntegerLiteral 0x7fb612079a90 <col:68> 'int' 65535
+|       |-BinaryOperator 0x7fb612079f38 <line:45:7, line:46:53> 'u_int32':'unsigned int' '='
+|       | |-DeclRefExpr 0x7fb612079b78 <line:45:7> 'u_int32':'unsigned int' lvalue Var 0x7fb6120787a0 'hi_tmp' 'u_int32':'unsigned int'
+|       | `-BinaryOperator 0x7fb612079f10 <col:16, line:46:53> 'unsigned int' '+'
+|       |   |-ParenExpr 0x7fb612079d38 <line:45:16, col:51> 'unsigned int'
+|       |   | `-BinaryOperator 0x7fb612079d10 <col:17, col:45> 'unsigned int' '&'
+|       |   |   |-ParenExpr 0x7fb612079cb8 <col:17, col:41> 'u_int32':'unsigned int'
+|       |   |   | `-BinaryOperator 0x7fb612079c90 <col:18, col:39> 'u_int32':'unsigned int' '>>'
+|       |   |   |   |-ImplicitCastExpr 0x7fb612079c78 <col:18, col:34> 'u_int32':'unsigned int' <LValueToRValue>
+|       |   |   |   | `-ParenExpr 0x7fb612079c38 <col:18, col:34> 'u_int32':'unsigned int' lvalue
+|       |   |   |   |   `-MemberExpr 0x7fb612079c00 <col:19, col:29> 'u_int32':'unsigned int' lvalue .Xl_uf 0x7fb612077f00
+|       |   |   |   |     `-MemberExpr 0x7fb612079bc8 <col:19, col:24> 'union (anonymous union at c_files/pr24627.c:10:3)':'union l_fp::(anonymous at c_files/pr24627.c:10:3)' lvalue .Ul_f 0x7fb612077fa0
+|       |   |   |   |       `-DeclRefExpr 0x7fb612079ba0 <col:19> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       |   |   |   `-IntegerLiteral 0x7fb612079c58 <col:39> 'int' 16
+|       |   |   `-ImplicitCastExpr 0x7fb612079cf8 <col:45> 'unsigned int' <IntegralCast>
+|       |   |     `-IntegerLiteral 0x7fb612079cd8 <col:45> 'int' 65535
+|       |   `-ParenExpr 0x7fb612079ef0 <line:46:18, col:53> 'unsigned int'
+|       |     `-BinaryOperator 0x7fb612079ec8 <col:19, col:47> 'unsigned int' '&'
+|       |       |-ParenExpr 0x7fb612079e70 <col:19, col:43> 'u_int32':'unsigned int'
+|       |       | `-BinaryOperator 0x7fb612079e48 <col:20, col:41> 'u_int32':'unsigned int' '>>'
+|       |       |   |-ImplicitCastExpr 0x7fb612079e30 <col:20, col:36> 'u_int32':'unsigned int' <LValueToRValue>
+|       |       |   | `-ParenExpr 0x7fb612079df0 <col:20, col:36> 'u_int32':'unsigned int' lvalue
+|       |       |   |   `-MemberExpr 0x7fb612079db8 <col:21, col:31> 'u_int32':'unsigned int' lvalue .Xl_uf 0x7fb612077f00
+|       |       |   |     `-MemberExpr 0x7fb612079d80 <col:21, col:26> 'union (anonymous union at c_files/pr24627.c:10:3)':'union l_fp::(anonymous at c_files/pr24627.c:10:3)' lvalue .Ul_f 0x7fb612077fa0
+|       |       |   |       `-DeclRefExpr 0x7fb612079d58 <col:21> 'l_fp':'l_fp' lvalue Var 0x7fb612078350 'ftmp' 'l_fp':'l_fp'
+|       |       |   `-IntegerLiteral 0x7fb612079e10 <col:41> 'int' 16
+|       |       `-ImplicitCastExpr 0x7fb612079eb0 <col:47> 'unsigned int' <IntegralCast>
+|       |         `-IntegerLiteral 0x7fb612079e90 <col:47> 'int' 65535
+|       |-IfStmt 0x7fb61207a048 <line:48:7, line:49:8>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7fb612079fd8 <line:48:11, col:20> 'unsigned int' '&'
+|       | | |-ImplicitCastExpr 0x7fb612079fa8 <col:11> 'u_int32':'unsigned int' <LValueToRValue>
+|       | | | `-DeclRefExpr 0x7fb612079f60 <col:11> 'u_int32':'unsigned int' lvalue Var 0x7fb612078718 'lo_tmp' 'u_int32':'unsigned int'
+|       | | `-ImplicitCastExpr 0x7fb612079fc0 <col:20> 'unsigned int' <IntegralCast>
+|       | |   `-IntegerLiteral 0x7fb612079f88 <col:20> 'int' 65536
+|       | |-UnaryOperator 0x7fb61207a028 <line:49:2, col:8> 'u_int32':'unsigned int' postfix '++'
+|       | | `-DeclRefExpr 0x7fb61207a000 <col:2> 'u_int32':'unsigned int' lvalue Var 0x7fb6120787a0 'hi_tmp' 'u_int32':'unsigned int'
+|       | `-<<<NULL>>>
+|       |-BinaryOperator 0x7fb61207a348 <line:51:7, col:71> 'u_int32':'unsigned int' '='
+|       | |-ParenExpr 0x7fb61207a118 <col:7, col:23> 'u_int32':'unsigned int' lvalue
+|       | | `-MemberExpr 0x7fb61207a0e0 <col:8, col:18> 'u_int32':'unsigned int' lvalue .Xl_uf 0x7fb612077f00
+|       | |   `-MemberExpr 0x7fb61207a0a8 <col:8, col:13> 'union (anonymous union at c_files/pr24627.c:10:3)':'union l_fp::(anonymous at c_files/pr24627.c:10:3)' lvalue .Ul_f 0x7fb612077fa0
+|       | |     `-DeclRefExpr 0x7fb61207a080 <col:8> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       | `-BinaryOperator 0x7fb61207a320 <col:27, col:71> 'unsigned int' '|'
+|       |   |-ParenExpr 0x7fb61207a240 <col:27, col:51> 'unsigned int'
+|       |   | `-BinaryOperator 0x7fb61207a218 <col:28, col:49> 'unsigned int' '<<'
+|       |   |   |-ParenExpr 0x7fb61207a1d8 <col:28, col:44> 'unsigned int'
+|       |   |   | `-BinaryOperator 0x7fb61207a1b0 <col:29, col:38> 'unsigned int' '&'
+|       |   |   |   |-ImplicitCastExpr 0x7fb61207a180 <col:29> 'u_int32':'unsigned int' <LValueToRValue>
+|       |   |   |   | `-DeclRefExpr 0x7fb61207a138 <col:29> 'u_int32':'unsigned int' lvalue Var 0x7fb6120787a0 'hi_tmp' 'u_int32':'unsigned int'
+|       |   |   |   `-ImplicitCastExpr 0x7fb61207a198 <col:38> 'unsigned int' <IntegralCast>
+|       |   |   |     `-IntegerLiteral 0x7fb61207a160 <col:38> 'int' 65535
+|       |   |   `-IntegerLiteral 0x7fb61207a1f8 <col:49> 'int' 16
+|       |   `-ParenExpr 0x7fb61207a300 <col:55, col:71> 'unsigned int'
+|       |     `-BinaryOperator 0x7fb61207a2d8 <col:56, col:65> 'unsigned int' '&'
+|       |       |-ImplicitCastExpr 0x7fb61207a2a8 <col:56> 'u_int32':'unsigned int' <LValueToRValue>
+|       |       | `-DeclRefExpr 0x7fb61207a260 <col:56> 'u_int32':'unsigned int' lvalue Var 0x7fb612078718 'lo_tmp' 'u_int32':'unsigned int'
+|       |       `-ImplicitCastExpr 0x7fb61207a2c0 <col:65> 'unsigned int' <IntegralCast>
+|       |         `-IntegerLiteral 0x7fb61207a288 <col:65> 'int' 65535
+|       |-CompoundAssignOperator 0x7fb61207a4f8 <line:52:7, col:44> 'u_int32':'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|       | |-ParenExpr 0x7fb61207a408 <col:7, col:23> 'u_int32':'unsigned int' lvalue
+|       | | `-MemberExpr 0x7fb61207a3d0 <col:8, col:18> 'u_int32':'unsigned int' lvalue .Xl_ui 0x7fb612077d60
+|       | |   `-MemberExpr 0x7fb61207a398 <col:8, col:13> 'union (anonymous union at c_files/pr24627.c:9:3)':'union l_fp::(anonymous at c_files/pr24627.c:9:3)' lvalue .Ul_i 0x7fb612077e00
+|       | |     `-DeclRefExpr 0x7fb61207a370 <col:8> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       | `-ImplicitCastExpr 0x7fb61207a4e0 <col:28, col:44> 'u_int32':'unsigned int' <LValueToRValue>
+|       |   `-ParenExpr 0x7fb61207a4c0 <col:28, col:44> 'u_int32':'unsigned int' lvalue
+|       |     `-MemberExpr 0x7fb61207a488 <col:29, col:39> 'u_int32':'unsigned int' lvalue .Xl_ui 0x7fb612077d60
+|       |       `-MemberExpr 0x7fb61207a450 <col:29, col:34> 'union (anonymous union at c_files/pr24627.c:9:3)':'union l_fp::(anonymous at c_files/pr24627.c:9:3)' lvalue .Ul_i 0x7fb612077e00
+|       |         `-DeclRefExpr 0x7fb61207a428 <col:29> 'l_fp':'l_fp' lvalue Var 0x7fb612078350 'ftmp' 'l_fp':'l_fp'
+|       |-IfStmt 0x7fb61207a6a8 <line:54:7, line:55:19>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7fb61207a5a8 <line:54:11, col:20> 'unsigned int' '&'
+|       | | |-ImplicitCastExpr 0x7fb61207a578 <col:11> 'u_int32':'unsigned int' <LValueToRValue>
+|       | | | `-DeclRefExpr 0x7fb61207a530 <col:11> 'u_int32':'unsigned int' lvalue Var 0x7fb6120787a0 'hi_tmp' 'u_int32':'unsigned int'
+|       | | `-ImplicitCastExpr 0x7fb61207a590 <col:20> 'unsigned int' <IntegralCast>
+|       | |   `-IntegerLiteral 0x7fb61207a558 <col:20> 'int' 65536
+|       | |-UnaryOperator 0x7fb61207a688 <line:55:2, col:19> 'u_int32':'unsigned int' postfix '++'
+|       | | `-ParenExpr 0x7fb61207a668 <col:2, col:18> 'u_int32':'unsigned int' lvalue
+|       | |   `-MemberExpr 0x7fb61207a630 <col:3, col:13> 'u_int32':'unsigned int' lvalue .Xl_ui 0x7fb612077d60
+|       | |     `-MemberExpr 0x7fb61207a5f8 <col:3, col:8> 'union (anonymous union at c_files/pr24627.c:9:3)':'union l_fp::(anonymous at c_files/pr24627.c:9:3)' lvalue .Ul_i 0x7fb612077e00
+|       | |       `-DeclRefExpr 0x7fb61207a5d0 <col:3> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|       | `-<<<NULL>>>
+|       `-IfStmt 0x7fb61207a8c8 <line:58:7, line:59:9>
+|         |-<<<NULL>>>
+|         |-<<<NULL>>>
+|         |-UnaryOperator 0x7fb61207a810 <line:58:11, col:33> 'int' prefix '!'
+|         | `-ParenExpr 0x7fb61207a7f0 <col:12, col:33> 'int'
+|         |   `-BinaryOperator 0x7fb61207a7c8 <col:13, col:31> 'int' '<'
+|         |     |-ImplicitCastExpr 0x7fb61207a798 <col:13, col:23> 'u_int32':'unsigned int' <LValueToRValue>
+|         |     | `-MemberExpr 0x7fb61207a740 <col:13, col:23> 'u_int32':'unsigned int' lvalue .Xl_ui 0x7fb612077d60
+|         |     |   `-MemberExpr 0x7fb61207a708 <col:13, col:18> 'union (anonymous union at c_files/pr24627.c:9:3)':'union l_fp::(anonymous at c_files/pr24627.c:9:3)' lvalue .Ul_i 0x7fb612077e00
+|         |     |     `-DeclRefExpr 0x7fb61207a6e0 <col:13> 'l_fp':'l_fp' lvalue Var 0x7fb6120782e0 'work' 'l_fp':'l_fp'
+|         |     `-ImplicitCastExpr 0x7fb61207a7b0 <col:31> 'unsigned int' <IntegralCast>
+|         |       `-IntegerLiteral 0x7fb61207a778 <col:31> 'int' 10
+|         |-CallExpr 0x7fb61207a8a0 <line:59:2, col:9> 'void'
+|         | `-ImplicitCastExpr 0x7fb61207a888 <col:2> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|         |   `-DeclRefExpr 0x7fb61207a830 <col:2> 'void (void) __attribute__((noreturn))' Function 0x7fb612077ac8 'abort' 'void (void) __attribute__((noreturn))'
+|         `-<<<NULL>>>
+`-FunctionDecl 0x7fb61207aa70 <line:63:1, line:67:1> line:63:5 main 'int ()'
+  `-CompoundStmt 0x7fb61207ac10 <line:64:1, line:67:1>
+    |-CallExpr 0x7fb61207ab90 <line:65:3, col:13> 'void'
+    | |-ImplicitCastExpr 0x7fb61207ab78 <col:3> 'void (*)(short)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fb61207ab08 <col:3> 'void (short)' Function 0x7fb6120781d0 'dolfptoa' 'void (short)'
+    | `-ImplicitCastExpr 0x7fb61207abc0 <col:12> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7fb61207ab30 <col:12> 'int' 6
+    `-ReturnStmt 0x7fb61207abf8 <line:66:3, col:10>
+      `-IntegerLiteral 0x7fb61207abd8 <col:10> 'int' 0

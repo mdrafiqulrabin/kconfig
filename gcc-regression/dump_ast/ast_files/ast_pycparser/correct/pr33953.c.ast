@@ -1,0 +1,126 @@
+FileAST: 
+  Typedef: UINT32, [], ['typedef']
+    TypeDecl: UINT32, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: blockmove_NtoN_blend_noremap32, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: srcdata, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: srcdata, ['const']
+                IdentifierType: ['UINT32']
+          Decl: srcwidth, [], [], []
+            TypeDecl: srcwidth, []
+              IdentifierType: ['int']
+          Decl: srcheight, [], [], []
+            TypeDecl: srcheight, []
+              IdentifierType: ['int']
+          Decl: srcmodulo, [], [], []
+            TypeDecl: srcmodulo, []
+              IdentifierType: ['int']
+          Decl: dstdata, [], [], []
+            PtrDecl: []
+              TypeDecl: dstdata, []
+                IdentifierType: ['UINT32']
+          Decl: dstmodulo, [], [], []
+            TypeDecl: dstmodulo, []
+              IdentifierType: ['int']
+          Decl: srcshift, [], [], []
+            TypeDecl: srcshift, []
+              IdentifierType: ['int']
+        TypeDecl: blockmove_NtoN_blend_noremap32, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: end, [], [], []
+        PtrDecl: []
+          TypeDecl: end, []
+            IdentifierType: ['UINT32']
+      While: 
+        ID: srcheight
+        Compound: 
+          While: 
+            BinaryOp: <=
+              ID: dstdata
+              BinaryOp: -
+                ID: end
+                Constant: int, 8
+            Compound: 
+              Assignment: |=
+                ArrayRef: 
+                  ID: dstdata
+                  Constant: int, 0
+                BinaryOp: <<
+                  ArrayRef: 
+                    ID: srcdata
+                    Constant: int, 0
+                  ID: srcshift
+              Assignment: |=
+                ArrayRef: 
+                  ID: dstdata
+                  Constant: int, 1
+                BinaryOp: <<
+                  ArrayRef: 
+                    ID: srcdata
+                    Constant: int, 1
+                  ID: srcshift
+              Assignment: |=
+                ArrayRef: 
+                  ID: dstdata
+                  Constant: int, 2
+                BinaryOp: <<
+                  ArrayRef: 
+                    ID: srcdata
+                    Constant: int, 2
+                  ID: srcshift
+              Assignment: |=
+                ArrayRef: 
+                  ID: dstdata
+                  Constant: int, 3
+                BinaryOp: <<
+                  ArrayRef: 
+                    ID: srcdata
+                    Constant: int, 3
+                  ID: srcshift
+              Assignment: |=
+                ArrayRef: 
+                  ID: dstdata
+                  Constant: int, 4
+                BinaryOp: <<
+                  ArrayRef: 
+                    ID: srcdata
+                    Constant: int, 4
+                  ID: srcshift
+              Assignment: |=
+                ArrayRef: 
+                  ID: dstdata
+                  Constant: int, 5
+                BinaryOp: <<
+                  ArrayRef: 
+                    ID: srcdata
+                    Constant: int, 5
+                  ID: srcshift
+              Assignment: |=
+                ArrayRef: 
+                  ID: dstdata
+                  Constant: int, 6
+                BinaryOp: <<
+                  ArrayRef: 
+                    ID: srcdata
+                    Constant: int, 6
+                  ID: srcshift
+              Assignment: |=
+                ArrayRef: 
+                  ID: dstdata
+                  Constant: int, 7
+                BinaryOp: <<
+                  ArrayRef: 
+                    ID: srcdata
+                    Constant: int, 7
+                  ID: srcshift
+              Assignment: +=
+                ID: dstdata
+                Constant: int, 8
+              Assignment: +=
+                ID: srcdata
+                Constant: int, 8

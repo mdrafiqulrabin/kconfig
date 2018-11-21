@@ -1,0 +1,30 @@
+FileAST: 
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['char']
+      Constant: int, 4
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_strcpy
+        ExprList: 
+          ID: a
+          Constant: string, "abc"
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: __builtin_strlen
+            ExprList: 
+              ID: a
+          Constant: int, 3
+        FuncCall: 
+          ID: __builtin_abort

@@ -1,0 +1,63 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d1, [], [], []
+            PtrDecl: []
+              TypeDecl: d1, []
+                IdentifierType: ['double']
+          Decl: u1, [], [], []
+            PtrDecl: []
+              TypeDecl: u1, []
+                IdentifierType: ['double']
+          Decl: u2, [], [], []
+            PtrDecl: []
+              TypeDecl: u2, []
+                IdentifierType: ['double']
+          Decl: d2, [], [], []
+            PtrDecl: []
+              TypeDecl: d2, []
+                IdentifierType: ['double']
+          Decl: s, [], [], []
+            TypeDecl: s, []
+              IdentifierType: ['int']
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+        BinaryOp: <<
+          Constant: int, 1
+          ID: s
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['double']
+        Constant: int, 0
+      For: 
+        BinaryOp: <
+          ID: j
+          ID: n
+        UnaryOp: p++
+          ID: j
+        Assignment: +=
+          ID: x
+          BinaryOp: *
+            ArrayRef: 
+              ID: d1
+              ID: j
+            ArrayRef: 
+              ID: d2
+              ID: i
+      Assignment: =
+        ArrayRef: 
+          ID: d1
+          ID: i
+        ID: x

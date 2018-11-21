@@ -1,0 +1,19 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['long', 'long']
+        Constant: int, 0
+      Pragma: omp target device (i)
+      EmptyStatement: 
+      Pragma: omp target update device (i) to (p[0])

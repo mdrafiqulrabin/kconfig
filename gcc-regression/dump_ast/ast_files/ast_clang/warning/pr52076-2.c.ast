@@ -1,0 +1,60 @@
+c_files/pr52076-2.c:1:23: warning: '/*' within block comment [-Wcomment]
+/* { dg-do assemble } /*
+                      ^
+c_files/pr52076-2.c:2:1: warning: '/*' within block comment [-Wcomment]
+/* { dg-options "-Os -fomit-frame-pointer -m68040" } */
+^
+2 warnings generated.
+TranslationUnitDecl 0x7fc6500058d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc650005e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc650005b40 '__int128'
+|-TypedefDecl 0x7fc650005e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc650005b60 'unsigned __int128'
+|-TypedefDecl 0x7fc650006168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc650005f70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc650005ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc650006200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc6500061c0 'char *'
+|   `-BuiltinType 0x7fc650005960 'char'
+|-TypedefDecl 0x7fc6500064c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc650006470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc6500062e0 'struct __va_list_tag'
+|     `-Record 0x7fc650006258 '__va_list_tag'
+|-RecordDecl 0x7fc650006520 <c_files/pr52076-2.c:5:1, line:12:1> line:5:8 struct kobject definition
+| |-FieldDecl 0x7fc65005ae18 <line:6:9, col:25> col:22 referenced b7 'unsigned int'
+| | `-IntegerLiteral 0x7fc6500065d0 <col:25> 'int' 1
+| |-FieldDecl 0x7fc65005ae98 <line:7:9, col:26> col:22 referenced b56 'unsigned int'
+| | `-IntegerLiteral 0x7fc65005ae60 <col:26> 'int' 2
+| |-FieldDecl 0x7fc65005af18 <line:8:9, col:28> col:22 referenced b1234 'unsigned int'
+| | `-IntegerLiteral 0x7fc65005aee0 <col:28> 'int' 4
+| |-FieldDecl 0x7fc65005af98 <line:9:9, col:25> col:22 b0 'unsigned int'
+| | `-IntegerLiteral 0x7fc65005af60 <col:25> 'int' 1
+| |-FieldDecl 0x7fc65005aff8 <line:10:9, col:23> col:23 x 'unsigned char'
+| `-FieldDecl 0x7fc65005b058 <line:11:9, col:22> col:22 f 'unsigned int'
+|-FunctionDecl 0x7fc65005b250 <line:14:1, line:17:1> line:14:6 b7 'void (struct kobject *)'
+| |-ParmVarDecl 0x7fc65005b150 <col:9, col:25> col:25 used kobj 'struct kobject *'
+| `-CompoundStmt 0x7fc65005b408 <line:15:1, line:17:1>
+|   `-BinaryOperator 0x7fc65005b3e0 <line:16:9, col:20> 'unsigned int' '='
+|     |-MemberExpr 0x7fc65005b370 <col:9, col:15> 'unsigned int' lvalue bitfield ->b7 0x7fc65005ae18
+|     | `-ImplicitCastExpr 0x7fc65005b358 <col:9> 'struct kobject *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fc65005b330 <col:9> 'struct kobject *' lvalue ParmVar 0x7fc65005b150 'kobj' 'struct kobject *'
+|     `-ImplicitCastExpr 0x7fc65005b3c8 <col:20> 'unsigned int' <IntegralCast>
+|       `-IntegerLiteral 0x7fc65005b3a8 <col:20> 'int' 1
+|-FunctionDecl 0x7fc65005b4d8 <line:19:1, line:22:1> line:19:6 b56 'void (struct kobject *)'
+| |-ParmVarDecl 0x7fc65005b450 <col:10, col:26> col:26 used kobj 'struct kobject *'
+| `-CompoundStmt 0x7fc65005b650 <line:20:1, line:22:1>
+|   `-BinaryOperator 0x7fc65005b628 <line:21:9, col:21> 'unsigned int' '='
+|     |-MemberExpr 0x7fc65005b5b8 <col:9, col:15> 'unsigned int' lvalue bitfield ->b56 0x7fc65005ae98
+|     | `-ImplicitCastExpr 0x7fc65005b5a0 <col:9> 'struct kobject *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fc65005b578 <col:9> 'struct kobject *' lvalue ParmVar 0x7fc65005b450 'kobj' 'struct kobject *'
+|     `-ImplicitCastExpr 0x7fc65005b610 <col:21> 'unsigned int' <IntegralCast>
+|       `-IntegerLiteral 0x7fc65005b5f0 <col:21> 'int' 3
+`-FunctionDecl 0x7fc65005b720 <line:24:1, line:27:1> line:24:6 b1234 'void (struct kobject *)'
+  |-ParmVarDecl 0x7fc65005b698 <col:12, col:28> col:28 used kobj 'struct kobject *'
+  `-CompoundStmt 0x7fc65005b898 <line:25:1, line:27:1>
+    `-BinaryOperator 0x7fc65005b870 <line:26:9, col:23> 'unsigned int' '='
+      |-MemberExpr 0x7fc65005b800 <col:9, col:15> 'unsigned int' lvalue bitfield ->b1234 0x7fc65005af18
+      | `-ImplicitCastExpr 0x7fc65005b7e8 <col:9> 'struct kobject *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc65005b7c0 <col:9> 'struct kobject *' lvalue ParmVar 0x7fc65005b698 'kobj' 'struct kobject *'
+      `-ImplicitCastExpr 0x7fc65005b858 <col:23> 'unsigned int' <IntegralCast>
+        `-IntegerLiteral 0x7fc65005b838 <col:23> 'int' 15

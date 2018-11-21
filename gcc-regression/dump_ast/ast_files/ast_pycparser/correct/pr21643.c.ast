@@ -1,0 +1,235 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: f1, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: ==
+              ID: c
+              Constant: int, 0x22
+            BinaryOp: ==
+              ID: c
+              Constant: int, 0x20
+          BinaryOp: <
+            ID: c
+            Constant: int, 0x20
+        Return: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: f2, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ==
+            ID: c
+            Constant: int, 0x22
+          BinaryOp: <=
+            ID: c
+            Constant: int, 0x20
+        Return: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: f3, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0x22
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0x20
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: <
+          ID: c
+          Constant: int, 0x20
+        Return: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: f4, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: ==
+              ID: c
+              Constant: int, 0x22
+            BinaryOp: ==
+              ID: c
+              Constant: int, 0x20
+          BinaryOp: <
+            ID: c
+            Constant: int, 0x20
+        Return: 
+          Constant: int, 2
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: f5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: f5, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ==
+            ID: c
+            Constant: int, 0x22
+          BinaryOp: <=
+            ID: c
+            Constant: int, 0x20
+        Return: 
+          Constant: int, 2
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: f6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: f6, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0x22
+        Return: 
+          Constant: int, 2
+      If: 
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0x20
+        Return: 
+          Constant: int, 2
+      If: 
+        BinaryOp: <
+          ID: c
+          Constant: int, 0x20
+        Return: 
+          Constant: int, 2
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: f7, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: f7, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: &&
+            BinaryOp: !=
+              ID: c
+              Constant: int, 0x22
+            BinaryOp: !=
+              ID: c
+              Constant: int, 0x20
+          BinaryOp: >=
+            ID: c
+            Constant: int, 0x20
+        Return: 
+          Constant: int, 0
+      Return: 
+        Constant: int, 1
+  FuncDef: 
+    Decl: f8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: f8, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            ID: c
+            Constant: int, 0x22
+          BinaryOp: <=
+            ID: c
+            Constant: int, 0x20
+        Return: 
+          Constant: int, 0
+      Return: 
+        Constant: int, 1
+  FuncDef: 
+    Decl: f9, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: f9, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0x22
+        Return: 
+          Constant: int, 0
+      If: 
+        BinaryOp: ==
+          ID: c
+          Constant: int, 0x20
+        Return: 
+          Constant: int, 0
+      If: 
+        BinaryOp: <
+          ID: c
+          Constant: int, 0x20
+        Return: 
+          Constant: int, 0
+      Return: 
+        Constant: int, 1

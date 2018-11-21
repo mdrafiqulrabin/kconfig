@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7f949b01d0d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f949b01d620 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f949b01d340 '__int128'
+|-TypedefDecl 0x7f949b01d690 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f949b01d360 'unsigned __int128'
+|-TypedefDecl 0x7f949b01d968 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f949b01d770 'struct __NSConstantString_tag'
+|   `-Record 0x7f949b01d6e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f949b01da00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f949b01d9c0 'char *'
+|   `-BuiltinType 0x7f949b01d160 'char'
+|-TypedefDecl 0x7f949b01dcc8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f949b01dc70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f949b01dae0 'struct __va_list_tag'
+|     `-Record 0x7f949b01da58 '__va_list_tag'
+|-VarDecl 0x7f949b01dd78 <c_files/pr83623.c:7:1, col:55> col:55 used x '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+`-FunctionDecl 0x7f949b06f100 <line:9:1, line:13:1> line:10:1 foo 'void (void)'
+  `-CompoundStmt 0x7f949b06f378 <line:11:1, line:13:1>
+    `-BinaryOperator 0x7f949b06f350 <line:12:3, col:21> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' '='
+      |-DeclRefExpr 0x7f949b06f198 <col:3> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue Var 0x7f949b01dd78 'x' '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+      `-BinaryOperator 0x7f949b06f328 <col:7, col:21> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' '|'
+        |-BinaryOperator 0x7f949b06f260 <col:7, col:12> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' '<<'
+        | |-ImplicitCastExpr 0x7f949b06f208 <col:7> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+        | | `-DeclRefExpr 0x7f949b06f1c0 <col:7> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue Var 0x7f949b01dd78 'x' '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+        | `-ImplicitCastExpr 0x7f949b06f248 <col:12> 'int __attribute__((ext_vector_type(8)))' <VectorSplat>
+        |   `-IntegerLiteral 0x7f949b06f1e8 <col:12> 'int' 8
+        `-BinaryOperator 0x7f949b06f300 <col:16, col:21> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' '>>'
+          |-ImplicitCastExpr 0x7f949b06f2d0 <col:16> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+          | `-DeclRefExpr 0x7f949b06f288 <col:16> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue Var 0x7f949b01dd78 'x' '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+          `-ImplicitCastExpr 0x7f949b06f2e8 <col:21> 'int __attribute__((ext_vector_type(8)))' <VectorSplat>
+            `-IntegerLiteral 0x7f949b06f2b0 <col:21> 'int' 8

@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7ff8c50264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff8c5026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff8c5026740 '__int128'
+|-TypedefDecl 0x7ff8c5026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff8c5026760 'unsigned __int128'
+|-TypedefDecl 0x7ff8c5026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff8c5026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff8c5026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff8c5026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff8c5026dc0 'char *'
+|   `-BuiltinType 0x7ff8c5026560 'char'
+|-TypedefDecl 0x7ff8c50270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff8c5027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff8c5026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff8c5026e58 '__va_list_tag'
+|-FunctionDecl 0x7ff8c5826a50 <c_files/pr45721_1.c:1:1, col:54> col:13 used bar 'void (void)' static
+| |-AliasAttr 0x7ff8c5826ae8 <col:39, col:52> "baz"
+| `-WeakRefAttr 0x7ff8c5826b40 <col:39, col:52> ""
+`-VarDecl 0x7ff8c5826bb0 <line:2:1, col:19> col:7 x 'void *' cinit
+  `-CStyleCastExpr 0x7ff8c5826c90 <col:11, col:19> 'void *' <BitCast>
+    `-ImplicitCastExpr 0x7ff8c5826c78 <col:19> 'void (*)(void)' <FunctionToPointerDecay>
+      `-DeclRefExpr 0x7ff8c5826c10 <col:19> 'void (void)' Function 0x7ff8c5826a50 'bar' 'void (void)'

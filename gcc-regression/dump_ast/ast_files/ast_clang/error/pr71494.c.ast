@@ -1,0 +1,57 @@
+c_files/pr71494.c:10:3: error: function definition is not allowed here
+  {
+  ^
+c_files/pr71494.c:19:3: warning: implicit declaration of function 'test' is invalid in C99 [-Wimplicit-function-declaration]
+  test ();
+  ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fd1008264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd100826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd100826740 '__int128'
+|-TypedefDecl 0x7fd100826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd100826760 'unsigned __int128'
+|-TypedefDecl 0x7fd100826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd100826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd100826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd100826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd100826dc0 'char *'
+|   `-BuiltinType 0x7fd100826560 'char'
+|-TypedefDecl 0x7fd1008270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd100827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd100826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd100826e58 '__va_list_tag'
+|-FunctionDecl 0x7fd100877400 <c_files/pr71494.c:4:1, line:23:1> line:5:1 main 'int ()'
+| `-CompoundStmt 0x7fd100877c18 <line:6:1, line:23:1>
+|   |-DeclStmt 0x7fd1008775b8 <line:7:3, col:22>
+|   | `-VarDecl 0x7fd1008774f0 <col:3, col:19> col:9 used label 'void *' cinit
+|   |   `-AddrLabelExpr 0x7fd100877598 <col:17, col:19> 'void *' out 0x7fd100877550
+|   |-DeclStmt 0x7fd100877668 <line:8:3, col:12>
+|   | `-VarDecl 0x7fd1008775e8 <col:3, col:11> col:7 used i 'int' cinit
+|   |   `-IntegerLiteral 0x7fd100877648 <col:11> 'int' 0
+|   |-IndirectGotoStmt 0x7fd100877778 <line:16:3, col:9>
+|   | `-ImplicitCastExpr 0x7fd100877760 <col:9> 'const void *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fd100877748 <col:9> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd1008776f0 <col:9> 'void *' lvalue Var 0x7fd1008774f0 'label' 'void *'
+|   |-LabelStmt 0x7fd100877810 <line:17:2, line:18:8> 'out'
+|   | `-CompoundAssignOperator 0x7fd1008777d8 <col:3, col:8> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   |   |-DeclRefExpr 0x7fd100877790 <col:3> 'int' lvalue Var 0x7fd1008775e8 'i' 'int'
+|   |   `-IntegerLiteral 0x7fd1008777b8 <col:8> 'int' 2
+|   |-CallExpr 0x7fd100877950 <line:19:3, col:9> 'int'
+|   | `-ImplicitCastExpr 0x7fd100877938 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fd1008778e8 <col:3> 'int ()' Function 0x7fd100877850 'test' 'int ()'
+|   |-IfStmt 0x7fd100877ba8 <line:20:3, line:21:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fd1008779d8 <line:20:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fd1008779c0 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fd100877978 <col:7> 'int' lvalue Var 0x7fd1008775e8 'i' 'int'
+|   | | `-IntegerLiteral 0x7fd1008779a0 <col:12> 'int' 3
+|   | |-CallExpr 0x7fd100877b80 <line:21:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd100877b68 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd100877b10 <col:5> '<builtin fn type>' Function 0x7fd100877a30 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fd100877c00 <line:22:3, col:10>
+|     `-IntegerLiteral 0x7fd100877be0 <col:10> 'int' 0
+|-FunctionDecl 0x7fd100877850 <<invalid sloc>> line:19:3 implicit used test 'int ()'
+`-FunctionDecl 0x7fd100877a30 <line:21:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fd100877ac8 <col:5> Implicit

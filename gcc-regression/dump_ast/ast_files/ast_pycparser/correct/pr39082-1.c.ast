@@ -1,0 +1,92 @@
+FileAST: 
+  Decl: None, [], [], []
+    Union: un
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['long', 'double']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+  Decl: bar1, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            Union: un
+      TypeDecl: bar1, []
+        IdentifierType: ['int']
+  Decl: bar2, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar2, []
+        Union: un
+  FuncDef: 
+    Decl: foo1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              Union: un
+        TypeDecl: foo1, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: bar1
+        ExprList: 
+          ID: u
+      Return: 
+        StructRef: .
+          ID: u
+          ID: i
+  FuncDef: 
+    Decl: foo2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo2, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          Union: un
+      Assignment: =
+        StructRef: .
+          ID: u
+          ID: i
+        Constant: int, 1
+      Return: 
+        BinaryOp: +
+          FuncCall: 
+            ID: foo1
+            ExprList: 
+              ID: u
+          FuncCall: 
+            ID: bar1
+            ExprList: 
+              ID: u
+  FuncDef: 
+    Decl: foo3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo3, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          Union: un
+        FuncCall: 
+          ID: bar2
+          ExprList: 
+            ID: x
+      Return: 
+        StructRef: .
+          ID: u
+          ID: i

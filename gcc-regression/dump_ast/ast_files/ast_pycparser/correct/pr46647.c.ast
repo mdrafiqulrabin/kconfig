@@ -1,0 +1,123 @@
+FileAST: 
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['char']
+      Constant: int, 5
+  FuncDef: 
+    Decl: func1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: func1, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_memset
+        ExprList: 
+          ID: a
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: sizeof
+            ID: a
+      Return: 
+        Constant: int, 0
+  Decl: a2, [], [], []
+    ArrayDecl: []
+      TypeDecl: a2, []
+        IdentifierType: ['int']
+      Constant: int, 5
+  FuncDef: 
+    Decl: func2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: func2, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_memset
+        ExprList: 
+          ID: a2
+          UnaryOp: -
+            Constant: int, 1
+          UnaryOp: sizeof
+            ID: a2
+      Return: 
+        Constant: int, 0
+  Decl: a3, [], [], []
+    ArrayDecl: []
+      TypeDecl: a3, []
+        IdentifierType: ['char']
+      Constant: int, 5
+  FuncDef: 
+    Decl: func3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: func3, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_memset
+        ExprList: 
+          ID: a3
+          Constant: int, 0x8fffffff
+          UnaryOp: sizeof
+            ID: a3
+      Return: 
+        Constant: int, 0
+  Decl: a4, [], [], []
+    ArrayDecl: []
+      TypeDecl: a4, []
+        IdentifierType: ['char']
+      Constant: int, 5
+  FuncDef: 
+    Decl: func4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: func4, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_memset
+        ExprList: 
+          ID: a4
+          Constant: int, 0x8fffff00
+          UnaryOp: sizeof
+            ID: a4
+      Return: 
+        Constant: int, 0
+  Decl: a5, [], [], []
+    ArrayDecl: []
+      TypeDecl: a5, []
+        IdentifierType: ['int']
+      Constant: int, 5
+  FuncDef: 
+    Decl: func5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: func5, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_memset
+        ExprList: 
+          ID: a5
+          Constant: int, 0x8fffffff
+          UnaryOp: sizeof
+            ID: a5
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,39 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Pragma: omp parallel default(none)
+      Compound: 
+        Decl: s, [], ['static'], []
+          TypeDecl: s, []
+            IdentifierType: ['int']
+        Decl: t, [], [], []
+          TypeDecl: t, []
+            IdentifierType: ['int']
+          Constant: int, 0
+        Pragma: omp atomic
+        UnaryOp: p++
+          ID: s
+        UnaryOp: p++
+          ID: t
+      Pragma: omp task default(none)
+      Compound: 
+        Decl: s, [], ['static'], []
+          TypeDecl: s, []
+            IdentifierType: ['int']
+        Decl: t, [], [], []
+          TypeDecl: t, []
+            IdentifierType: ['int']
+          Constant: int, 0
+        Pragma: omp atomic
+        UnaryOp: p++
+          ID: s
+        UnaryOp: p++
+          ID: t

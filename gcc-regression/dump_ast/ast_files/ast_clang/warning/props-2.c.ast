@@ -1,0 +1,27 @@
+c_files/props-2.c:9:35: warning: unknown attribute 'transaction_unsafe' ignored [-Wunknown-attributes]
+extern void crap() __attribute__((transaction_unsafe));
+                                  ^
+c_files/props-2.c:13:5: error: use of undeclared identifier '__transaction_relaxed'
+    __transaction_relaxed {
+    ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fc77180e4d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc77180ea20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc77180e740 '__int128'
+|-TypedefDecl 0x7fc77180ea90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc77180e760 'unsigned __int128'
+|-TypedefDecl 0x7fc77180ed68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc77180eb70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc77180eae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc77180ee00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc77180edc0 'char *'
+|   `-BuiltinType 0x7fc77180e560 'char'
+|-TypedefDecl 0x7fc77180f0c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc77180f070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc77180eee0 'struct __va_list_tag'
+|     `-Record 0x7fc77180ee58 '__va_list_tag'
+|-VarDecl 0x7fc77180f138 <c_files/props-2.c:6:1, col:5> col:5 global 'int'
+|-VarDecl 0x7fc77103d200 <line:7:1, col:5> col:5 george 'int'
+|-FunctionDecl 0x7fc77103d2a8 <line:9:1, col:54> col:13 crap 'void ()' extern
+`-FunctionDecl 0x7fc77103d360 <line:11:1, line:18:1> line:12:1 foo 'void ()'
+  `-CompoundStmt 0x7fc77103d410 <col:6, line:18:1>

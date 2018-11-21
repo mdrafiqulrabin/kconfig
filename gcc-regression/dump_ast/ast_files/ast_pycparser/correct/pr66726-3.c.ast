@@ -1,0 +1,34 @@
+FileAST: 
+  Decl: mode_size, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: mode_size, []
+        IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: oof, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: mode, [], [], []
+            TypeDecl: mode, []
+              IdentifierType: ['int']
+        TypeDecl: oof, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: tem, [], [], []
+        TypeDecl: tem, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: <
+          Constant: int, 64
+          ArrayRef: 
+            ID: mode_size
+            ID: mode
+        Assignment: =
+          ID: tem
+          Constant: int, 64
+        Assignment: =
+          ID: tem
+          ArrayRef: 
+            ID: mode_size
+            ID: mode
+      Return: 
+        ID: tem

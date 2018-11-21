@@ -1,0 +1,71 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: fooparam, [], [], []
+            TypeDecl: fooparam, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ID: fooparam
+  FuncDef: 
+    Decl: bar, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: barparam, [], [], []
+            TypeDecl: barparam, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            ID: barparam
+  FuncDef: 
+    Decl: foo2, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: foo2param, [], [], []
+            TypeDecl: foo2param, []
+              IdentifierType: ['double']
+        TypeDecl: foo2, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        ID: foo2param
+  FuncDef: 
+    Decl: bar2, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: bar2param, [], [], []
+            TypeDecl: bar2param, []
+              IdentifierType: ['double']
+        TypeDecl: bar2, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: foo2
+          ExprList: 
+            ID: bar2param
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              Constant: int, 0
+          FuncCall: 
+            ID: bar2
+            ExprList: 
+              Constant: float, 0.0

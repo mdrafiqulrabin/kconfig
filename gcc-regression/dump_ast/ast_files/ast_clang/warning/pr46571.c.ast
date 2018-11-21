@@ -1,0 +1,296 @@
+c_files/pr46571.c:84:45: warning: incompatible pointer types assigning to 'gfc_namelist *' from 'struct gfc_namelist *' [-Wincompatible-pointer-types]
+  for (; namelist != ((void *) 0); namelist = namelist->next)
+                                            ^ ~~~~~~~~~~~~~~
+c_files/pr46571.c:87:14: warning: implicit declaration of function 'build_omp_clause' is invalid in C99 [-Wimplicit-function-declaration]
+        tree node = build_omp_clause (where.lb->location);
+                    ^
+c_files/pr46571.c:87:7: warning: incompatible integer to pointer conversion initializing 'tree' (aka 'union tree_node *') with an expression of type 'int' [-Wint-conversion]
+        tree node = build_omp_clause (where.lb->location);
+             ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr46571.c:89:2: warning: implicit declaration of function 'gfc_trans_omp_array_reduction' is invalid in C99 [-Wimplicit-function-declaration]
+        gfc_trans_omp_array_reduction (namelist->sym, where);
+        ^
+c_files/pr46571.c:91:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr46571.c:115:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+6 warnings generated.
+TranslationUnitDecl 0x7fd6ec0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd6ec026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd6ec026740 '__int128'
+|-TypedefDecl 0x7fd6ec026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd6ec026760 'unsigned __int128'
+|-TypedefDecl 0x7fd6ec026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd6ec026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd6ec026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd6ec026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd6ec026dc0 'char *'
+|   `-BuiltinType 0x7fd6ec026560 'char'
+|-TypedefDecl 0x7fd6ec0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd6ec027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd6ec026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd6ec026e58 '__va_list_tag'
+|-RecordDecl 0x7fd6ec027120 <c_files/pr46571.c:4:9, col:15> col:15 union tree_node
+|-TypedefDecl 0x7fd6ec825a80 <col:1, col:26> col:26 referenced tree 'union tree_node *'
+| `-PointerType 0x7fd6ec825a30 'union tree_node *'
+|   `-ElaboratedType 0x7fd6ec0271d0 'union tree_node' sugar
+|     `-RecordType 0x7fd6ec0271b0 'union tree_node'
+|       `-Record 0x7fd6ec825fa0 'tree_node'
+|-TypedefDecl 0x7fd6ec825b08 <line:5:1, col:22> col:22 referenced source_location 'unsigned int'
+| `-BuiltinType 0x7fd6ec026660 'unsigned int'
+|-EnumDecl 0x7fd6ec825b60 <line:6:1, line:10:1> line:6:6 tree_code
+| |-EnumConstantDecl 0x7fd6ec825c20 <line:8:3> col:3 referenced MINUS_EXPR 'int'
+| `-EnumConstantDecl 0x7fd6ec825c68 <line:9:3> col:3 referenced MULT_EXPR 'int'
+|-RecordDecl 0x7fd6ec825cb0 <line:11:1, line:17:1> line:11:8 struct tree_omp_clause definition
+| |-RecordDecl 0x7fd6ec825d60 parent 0x7fd6ec0264d0 <line:13:3, line:16:3> line:13:9 union omp_clause_subcode definition
+| | `-FieldDecl 0x7fd6ec825e70 <line:15:5, col:20> col:20 referenced reduction_code 'enum tree_code':'enum tree_code'
+| `-FieldDecl 0x7fd6ec825f10 <line:13:3, line:16:5> col:5 referenced subcode 'union omp_clause_subcode':'union omp_clause_subcode'
+|-RecordDecl 0x7fd6ec825fa0 prev 0x7fd6ec027120 <line:18:1, line:21:1> line:18:7 union tree_node definition
+| `-FieldDecl 0x7fd6ec826080 <line:20:3, col:26> col:26 referenced omp_clause 'struct tree_omp_clause':'struct tree_omp_clause'
+|-EnumDecl 0x7fd6ec826110 <line:22:1, line:25:1> line:22:6 tree_index
+| `-EnumConstantDecl 0x7fd6ec8261d0 <line:24:3> col:3 TI_ERROR_MARK 'int'
+|-RecordDecl 0x7fd6ec826218 <line:26:9, line:36:1> line:26:9 struct definition
+| |-FieldDecl 0x7fd6ec8262f8 <line:28:3, col:24> col:12 allocatable 'unsigned int'
+| | `-IntegerLiteral 0x7fd6ec8262c0 <col:24> 'int' 1
+| |-FieldDecl 0x7fd6ec826378 <line:29:3, col:22> col:12 dimension 'unsigned int'
+| | `-IntegerLiteral 0x7fd6ec826340 <col:22> 'int' 1
+| |-FieldDecl 0x7fd6ec8263f8 <line:30:3, col:24> col:12 codimension 'unsigned int'
+| | `-IntegerLiteral 0x7fd6ec8263c0 <col:24> 'int' 1
+| |-FieldDecl 0x7fd6ec826478 <line:31:3, col:21> col:12 external 'unsigned int'
+| | `-IntegerLiteral 0x7fd6ec826440 <col:21> 'int' 1
+| |-FieldDecl 0x7fd6ec8264f8 <line:32:3, col:21> col:12 optional 'unsigned int'
+| | `-IntegerLiteral 0x7fd6ec8264c0 <col:21> 'int' 1
+| |-FieldDecl 0x7fd6ec826578 <line:33:3, col:20> col:12 pointer 'unsigned int'
+| | `-IntegerLiteral 0x7fd6ec826540 <col:20> 'int' 1
+| |-FieldDecl 0x7fd6ec8265f8 <line:34:3, col:23> col:12 contiguous 'unsigned int'
+| | `-IntegerLiteral 0x7fd6ec8265c0 <col:23> 'int' 1
+| `-FieldDecl 0x7fd6ec826678 <line:35:3, col:23> col:12 referenced referenced 'unsigned int'
+|   `-IntegerLiteral 0x7fd6ec826640 <col:23> 'int' 1
+|-TypedefDecl 0x7fd6ec826710 <line:26:1, line:36:3> col:3 referenced symbol_attribute 'struct symbol_attribute':'symbol_attribute'
+| `-ElaboratedType 0x7fd6ec8266c0 'struct symbol_attribute' sugar
+|   `-RecordType 0x7fd6ec8262a0 'symbol_attribute'
+|     `-Record 0x7fd6ec826218 ''
+|-TypedefDecl 0x7fd6ec826798 <line:37:1, col:22> col:22 referenced gfc_char_t 'unsigned int'
+| `-BuiltinType 0x7fd6ec026660 'unsigned int'
+|-RecordDecl 0x7fd6ec8267f0 <line:38:9, line:41:1> line:38:16 struct gfc_linebuf definition
+| `-FieldDecl 0x7fd6ec8268d0 <line:40:3, col:19> col:19 referenced location 'source_location':'unsigned int'
+|-TypedefDecl 0x7fd6ec826970 <line:38:1, line:41:3> col:3 referenced gfc_linebuf 'struct gfc_linebuf':'struct gfc_linebuf'
+| `-ElaboratedType 0x7fd6ec826920 'struct gfc_linebuf' sugar
+|   `-RecordType 0x7fd6ec826880 'struct gfc_linebuf'
+|     `-Record 0x7fd6ec8267f0 'gfc_linebuf'
+|-RecordDecl 0x7fd6ec82bc00 <line:42:9, line:46:1> line:42:9 struct definition
+| |-FieldDecl 0x7fd6ec82bd38 <line:44:3, col:15> col:15 nextc 'gfc_char_t *'
+| `-FieldDecl 0x7fd6ec82be08 <line:45:3, col:16> col:16 referenced lb 'gfc_linebuf *'
+|-TypedefDecl 0x7fd6ec82bea0 <line:42:1, line:46:3> col:3 referenced locus 'struct locus':'locus'
+| `-ElaboratedType 0x7fd6ec82be50 'struct locus' sugar
+|   `-RecordType 0x7fd6ec82bc90 'locus'
+|     `-Record 0x7fd6ec82bc00 ''
+|-RecordDecl 0x7fd6ec82bf10 <line:47:9, line:51:1> line:47:9 struct definition
+| |-RecordDecl 0x7fd6ec82bfc0 parent 0x7fd6ec0264d0 <line:49:3, col:10> col:10 struct gfc_symbol
+| |-FieldDecl 0x7fd6ec82c130 <col:3, col:22> col:22 referenced sym 'struct gfc_symbol *'
+| |-RecordDecl 0x7fd6ec82c178 parent 0x7fd6ec0264d0 <line:50:3, col:10> col:10 struct gfc_namelist
+| `-FieldDecl 0x7fd6ec82c2e0 <col:3, col:24> col:24 referenced next 'struct gfc_namelist *'
+|-TypedefDecl 0x7fd6ec82c380 <line:47:1, line:51:3> col:3 referenced gfc_namelist 'struct gfc_namelist':'gfc_namelist'
+| `-ElaboratedType 0x7fd6ec82c330 'struct gfc_namelist' sugar
+|   `-RecordType 0x7fd6ec82bfa0 'gfc_namelist'
+|     `-Record 0x7fd6ec82bf10 ''
+|-EnumDecl 0x7fd6ec82c3f0 <line:52:1, line:59:1> line:52:1
+| |-EnumConstantDecl 0x7fd6ec82c4b0 <line:54:3> col:3 referenced OMP_LIST_PLUS 'int'
+| |-EnumConstantDecl 0x7fd6ec82c520 <line:55:3, col:30> col:3 OMP_LIST_REDUCTION_FIRST 'int'
+| | `-DeclRefExpr 0x7fd6ec82c4f8 <col:30> 'int' EnumConstant 0x7fd6ec82c4b0 'OMP_LIST_PLUS' 'int'
+| |-EnumConstantDecl 0x7fd6ec82c568 <line:56:3> col:3 referenced OMP_LIST_MULT 'int'
+| |-EnumConstantDecl 0x7fd6ec82c5b0 <line:57:3> col:3 referenced OMP_LIST_SUB 'int'
+| `-EnumConstantDecl 0x7fd6ec82c5f8 <line:58:3> col:3 referenced OMP_LIST_NUM 'int'
+|-RecordDecl 0x7fd6ec82c640 <line:60:9, line:63:1> line:60:16 struct gfc_omp_clauses definition
+| `-FieldDecl 0x7fd6ec82c838 <line:62:3, col:35> col:17 referenced lists 'gfc_namelist *[3]'
+|-TypedefDecl 0x7fd6ec82c8d0 <line:60:1, line:63:3> col:3 referenced gfc_omp_clauses 'struct gfc_omp_clauses':'struct gfc_omp_clauses'
+| `-ElaboratedType 0x7fd6ec82c880 'struct gfc_omp_clauses' sugar
+|   `-RecordType 0x7fd6ec82c6d0 'struct gfc_omp_clauses'
+|     `-Record 0x7fd6ec82c640 'gfc_omp_clauses'
+|-RecordDecl 0x7fd6ec82c940 prev 0x7fd6ec82bfc0 <line:64:9, line:67:1> line:64:16 struct gfc_symbol definition
+| `-FieldDecl 0x7fd6ec82ca00 <line:66:3, col:20> col:20 referenced attr 'symbol_attribute':'symbol_attribute'
+|-TypedefDecl 0x7fd6ec82cae8 <line:64:1, line:67:3> col:3 gfc_symbol 'struct gfc_symbol':'struct gfc_symbol'
+| `-ElaboratedType 0x7fd6ec82c080 'struct gfc_symbol' sugar
+|   `-RecordType 0x7fd6ec82c050 'struct gfc_symbol'
+|     `-Record 0x7fd6ec82c940 'gfc_symbol'
+|-RecordDecl 0x7fd6ec82cb58 <line:68:9, line:75:1> line:68:16 struct gfc_code definition
+| |-FieldDecl 0x7fd6ec82cc30 <line:70:3, col:9> col:9 referenced loc 'locus':'locus'
+| |-RecordDecl 0x7fd6ec82cc78 <line:71:3, line:74:3> line:71:3 union definition
+| | `-FieldDecl 0x7fd6ec82cda8 <line:73:5, col:22> col:22 referenced omp_clauses 'gfc_omp_clauses *'
+| `-FieldDecl 0x7fd6ec82ce40 <line:71:3, line:74:5> col:5 referenced ext 'union (anonymous union at c_files/pr46571.c:71:3)':'union gfc_code::(anonymous at c_files/pr46571.c:71:3)'
+|-TypedefDecl 0x7fd6ec82cf30 <line:68:1, line:75:3> col:3 referenced gfc_code 'struct gfc_code':'struct gfc_code'
+| `-ElaboratedType 0x7fd6ec82cee0 'struct gfc_code' sugar
+|   `-RecordType 0x7fd6ec82cbe0 'struct gfc_code'
+|     `-Record 0x7fd6ec82cb58 'gfc_code'
+|-RecordDecl 0x7fd6ec82cfa0 <line:76:9, line:78:1> line:76:9 struct definition
+|-TypedefDecl 0x7fd6ec82d0a0 <col:1, line:78:3> col:3 referenced stmtblock_t 'struct stmtblock_t':'stmtblock_t'
+| `-ElaboratedType 0x7fd6ec82d050 'struct stmtblock_t' sugar
+|   `-RecordType 0x7fd6ec82d030 'stmtblock_t'
+|     `-Record 0x7fd6ec82cfa0 ''
+|-FunctionDecl 0x7fd6ec82d3e0 <line:80:1, line:91:1> line:81:1 used gfc_trans_omp_reduction_list 'tree (gfc_namelist *, tree, enum tree_code, locus)' static
+| |-ParmVarDecl 0x7fd6ec82d140 <col:31, col:46> col:46 used namelist 'gfc_namelist *'
+| |-ParmVarDecl 0x7fd6ec82d1b0 <col:56, col:61> col:61 list 'tree':'union tree_node *'
+| |-ParmVarDecl 0x7fd6ec82d230 <line:82:10, col:25> col:25 used reduction_code 'enum tree_code':'enum tree_code'
+| |-ParmVarDecl 0x7fd6ec82d2a0 <col:41, col:47> col:47 used where 'locus':'locus'
+| `-CompoundStmt 0x7fd6ec82fad0 <line:83:1, line:91:1>
+|   `-ForStmt 0x7fd6ec82fa98 <line:84:3, line:90:7>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fd6ec82d5b0 <line:84:10, col:33> 'int' '!='
+|     | |-ImplicitCastExpr 0x7fd6ec82d580 <col:10> 'gfc_namelist *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fd6ec82d4d8 <col:10> 'gfc_namelist *' lvalue ParmVar 0x7fd6ec82d140 'namelist' 'gfc_namelist *'
+|     | `-ImplicitCastExpr 0x7fd6ec82d598 <col:22, col:33> 'gfc_namelist *' <BitCast>
+|     |   `-ParenExpr 0x7fd6ec82d560 <col:22, col:33> 'void *'
+|     |     `-CStyleCastExpr 0x7fd6ec82d538 <col:23, col:32> 'void *' <NullToPointer>
+|     |       `-IntegerLiteral 0x7fd6ec82d500 <col:32> 'int' 0
+|     |-BinaryOperator 0x7fd6ec82da90 <col:36, col:57> 'gfc_namelist *' '='
+|     | |-DeclRefExpr 0x7fd6ec82d5d8 <col:36> 'gfc_namelist *' lvalue ParmVar 0x7fd6ec82d140 'namelist' 'gfc_namelist *'
+|     | `-ImplicitCastExpr 0x7fd6ec82d690 <col:47, col:57> 'gfc_namelist *' <BitCast>
+|     |   `-ImplicitCastExpr 0x7fd6ec82d678 <col:47, col:57> 'struct gfc_namelist *' <LValueToRValue>
+|     |     `-MemberExpr 0x7fd6ec82d640 <col:47, col:57> 'struct gfc_namelist *' lvalue ->next 0x7fd6ec82c2e0
+|     |       `-ImplicitCastExpr 0x7fd6ec82d628 <col:47> 'gfc_namelist *' <LValueToRValue>
+|     |         `-DeclRefExpr 0x7fd6ec82d600 <col:47> 'gfc_namelist *' lvalue ParmVar 0x7fd6ec82d140 'namelist' 'gfc_namelist *'
+|     `-IfStmt 0x7fd6ec82fa60 <line:85:5, line:90:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-ImplicitCastExpr 0x7fd6ec82dbb8 <line:85:9, col:29> 'unsigned int' <LValueToRValue>
+|       | `-MemberExpr 0x7fd6ec82db80 <col:9, col:29> 'unsigned int' lvalue bitfield .referenced 0x7fd6ec826678
+|       |   `-MemberExpr 0x7fd6ec82db48 <col:9, col:24> 'symbol_attribute':'symbol_attribute' lvalue ->attr 0x7fd6ec82ca00
+|       |     `-ImplicitCastExpr 0x7fd6ec82db30 <col:9, col:19> 'struct gfc_symbol *' <LValueToRValue>
+|       |       `-MemberExpr 0x7fd6ec82daf8 <col:9, col:19> 'struct gfc_symbol *' lvalue ->sym 0x7fd6ec82c130
+|       |         `-ImplicitCastExpr 0x7fd6ec82dae0 <col:9> 'gfc_namelist *' <LValueToRValue>
+|       |           `-DeclRefExpr 0x7fd6ec82dab8 <col:9> 'gfc_namelist *' lvalue ParmVar 0x7fd6ec82d140 'namelist' 'gfc_namelist *'
+|       |-CompoundStmt 0x7fd6ec82fa30 <line:86:7, line:90:7>
+|       | |-DeclStmt 0x7fd6ec82f6c0 <line:87:2, col:51>
+|       | | `-VarDecl 0x7fd6ec82f400 <col:2, col:50> col:7 used node 'tree':'union tree_node *' cinit
+|       | |   `-ImplicitCastExpr 0x7fd6ec82f6a8 <col:14, col:50> 'tree':'union tree_node *' <IntegralToPointer>
+|       | |     `-CallExpr 0x7fd6ec82f660 <col:14, col:50> 'int'
+|       | |       |-ImplicitCastExpr 0x7fd6ec82f648 <col:14> 'int (*)()' <FunctionToPointerDecay>
+|       | |       | `-DeclRefExpr 0x7fd6ec82f548 <col:14> 'int ()' Function 0x7fd6ec82f4b0 'build_omp_clause' 'int ()'
+|       | |       `-ImplicitCastExpr 0x7fd6ec82f690 <col:32, col:42> 'source_location':'unsigned int' <LValueToRValue>
+|       | |         `-MemberExpr 0x7fd6ec82f5e8 <col:32, col:42> 'source_location':'unsigned int' lvalue ->location 0x7fd6ec8268d0
+|       | |           `-ImplicitCastExpr 0x7fd6ec82f5d0 <col:32, col:38> 'gfc_linebuf *' <LValueToRValue>
+|       | |             `-MemberExpr 0x7fd6ec82f598 <col:32, col:38> 'gfc_linebuf *' lvalue .lb 0x7fd6ec82be08
+|       | |               `-DeclRefExpr 0x7fd6ec82f570 <col:32> 'locus':'locus' lvalue ParmVar 0x7fd6ec82d2a0 'where' 'locus':'locus'
+|       | |-BinaryOperator 0x7fd6ec82f800 <line:88:2, col:44> 'enum tree_code':'enum tree_code' '='
+|       | | |-MemberExpr 0x7fd6ec82f788 <col:2, col:27> 'enum tree_code':'enum tree_code' lvalue .reduction_code 0x7fd6ec825e70
+|       | | | `-MemberExpr 0x7fd6ec82f750 <col:2, col:19> 'union omp_clause_subcode':'union omp_clause_subcode' lvalue .subcode 0x7fd6ec825f10
+|       | | |   `-MemberExpr 0x7fd6ec82f718 <col:2, col:8> 'struct tree_omp_clause':'struct tree_omp_clause' lvalue ->omp_clause 0x7fd6ec826080
+|       | | |     `-ImplicitCastExpr 0x7fd6ec82f700 <col:2> 'tree':'union tree_node *' <LValueToRValue>
+|       | | |       `-DeclRefExpr 0x7fd6ec82f6d8 <col:2> 'tree':'union tree_node *' lvalue Var 0x7fd6ec82f400 'node' 'tree':'union tree_node *'
+|       | | `-ImplicitCastExpr 0x7fd6ec82f7e8 <col:44> 'enum tree_code':'enum tree_code' <LValueToRValue>
+|       | |   `-DeclRefExpr 0x7fd6ec82f7c0 <col:44> 'enum tree_code':'enum tree_code' lvalue ParmVar 0x7fd6ec82d230 'reduction_code' 'enum tree_code':'enum tree_code'
+|       | `-CallExpr 0x7fd6ec82f9c8 <line:89:2, col:53> 'int'
+|       |   |-ImplicitCastExpr 0x7fd6ec82f9b0 <col:2> 'int (*)()' <FunctionToPointerDecay>
+|       |   | `-DeclRefExpr 0x7fd6ec82f8e8 <col:2> 'int ()' Function 0x7fd6ec82f850 'gfc_trans_omp_array_reduction' 'int ()'
+|       |   |-ImplicitCastExpr 0x7fd6ec82fa00 <col:33, col:43> 'struct gfc_symbol *' <LValueToRValue>
+|       |   | `-MemberExpr 0x7fd6ec82f950 <col:33, col:43> 'struct gfc_symbol *' lvalue ->sym 0x7fd6ec82c130
+|       |   |   `-ImplicitCastExpr 0x7fd6ec82f938 <col:33> 'gfc_namelist *' <LValueToRValue>
+|       |   |     `-DeclRefExpr 0x7fd6ec82f910 <col:33> 'gfc_namelist *' lvalue ParmVar 0x7fd6ec82d140 'namelist' 'gfc_namelist *'
+|       |   `-ImplicitCastExpr 0x7fd6ec82fa18 <col:48> 'locus':'locus' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fd6ec82f988 <col:48> 'locus':'locus' lvalue ParmVar 0x7fd6ec82d2a0 'where' 'locus':'locus'
+|       `-<<<NULL>>>
+|-FunctionDecl 0x7fd6ec82f4b0 <<invalid sloc>> line:87:14 implicit used build_omp_clause 'int ()'
+|-FunctionDecl 0x7fd6ec82f850 <<invalid sloc>> line:89:2 implicit used gfc_trans_omp_array_reduction 'int ()'
+|-FunctionDecl 0x7fd6ec82fd90 <line:93:1, line:115:1> line:94:1 used gfc_trans_omp_clauses 'tree (stmtblock_t *, gfc_omp_clauses *, locus)' static
+| |-ParmVarDecl 0x7fd6ec82fb78 <col:24, col:38> col:38 block 'stmtblock_t *'
+| |-ParmVarDecl 0x7fd6ec82fbe8 <col:45, col:63> col:63 used clauses 'gfc_omp_clauses *'
+| |-ParmVarDecl 0x7fd6ec82fc58 <line:95:10, col:16> col:16 used where 'locus':'locus'
+| `-CompoundStmt 0x7fd6ec830a40 <line:96:1, line:115:1>
+|   |-DeclStmt 0x7fd6ec82ff98 <line:97:3, col:41>
+|   | `-VarDecl 0x7fd6ec82fe50 <col:3, col:40> col:8 used omp_clauses 'tree':'union tree_node *' cinit
+|   |   `-CStyleCastExpr 0x7fd6ec82ff70 <col:22, col:40> 'tree':'union tree_node *' <BitCast>
+|   |     `-ParenExpr 0x7fd6ec82ff50 <col:29, col:40> 'void *'
+|   |       `-CStyleCastExpr 0x7fd6ec82fee8 <col:30, col:39> 'void *' <NullToPointer>
+|   |         `-IntegerLiteral 0x7fd6ec82feb0 <col:39> 'int' 0
+|   |-DeclStmt 0x7fd6ec830028 <line:98:3, col:11>
+|   | `-VarDecl 0x7fd6ec82ffc8 <col:3, col:7> col:7 used list 'int'
+|   `-ForStmt 0x7fd6ec830a08 <line:99:3, line:114:5>
+|     |-BinaryOperator 0x7fd6ec830088 <line:99:8, col:15> 'int' '='
+|     | |-DeclRefExpr 0x7fd6ec830040 <col:8> 'int' lvalue Var 0x7fd6ec82ffc8 'list' 'int'
+|     | `-IntegerLiteral 0x7fd6ec830068 <col:15> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fd6ec830118 <col:18, col:25> 'int' '<'
+|     | |-ImplicitCastExpr 0x7fd6ec830100 <col:18> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fd6ec8300b0 <col:18> 'int' lvalue Var 0x7fd6ec82ffc8 'list' 'int'
+|     | `-DeclRefExpr 0x7fd6ec8300d8 <col:25> 'int' EnumConstant 0x7fd6ec82c5f8 'OMP_LIST_NUM' 'int'
+|     |-UnaryOperator 0x7fd6ec830168 <col:39, col:43> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7fd6ec830140 <col:39> 'int' lvalue Var 0x7fd6ec82ffc8 'list' 'int'
+|     `-CompoundStmt 0x7fd6ec8309c8 <line:100:5, line:114:5>
+|       |-DeclStmt 0x7fd6ec830368 <line:101:7, col:45>
+|       | `-VarDecl 0x7fd6ec830198 <col:7, col:44> col:21 used n 'gfc_namelist *' cinit
+|       |   `-ImplicitCastExpr 0x7fd6ec830350 <col:25, col:44> 'gfc_namelist *' <LValueToRValue>
+|       |     `-ArraySubscriptExpr 0x7fd6ec830328 <col:25, col:44> 'gfc_namelist *' lvalue
+|       |       |-ImplicitCastExpr 0x7fd6ec8302f8 <col:25, col:34> 'gfc_namelist **' <ArrayToPointerDecay>
+|       |       | `-MemberExpr 0x7fd6ec830238 <col:25, col:34> 'gfc_namelist *[3]' lvalue ->lists 0x7fd6ec82c838
+|       |       |   `-ImplicitCastExpr 0x7fd6ec830220 <col:25> 'gfc_omp_clauses *' <LValueToRValue>
+|       |       |     `-DeclRefExpr 0x7fd6ec8301f8 <col:25> 'gfc_omp_clauses *' lvalue ParmVar 0x7fd6ec82fbe8 'clauses' 'gfc_omp_clauses *'
+|       |       `-ImplicitCastExpr 0x7fd6ec830310 <col:40> 'int' <LValueToRValue>
+|       |         `-DeclRefExpr 0x7fd6ec830270 <col:40> 'int' lvalue Var 0x7fd6ec82ffc8 'list' 'int'
+|       |-DeclStmt 0x7fd6ec830400 <line:102:7, col:36>
+|       | `-VarDecl 0x7fd6ec8303a0 <col:7, col:22> col:22 used reduction_code 'enum tree_code':'enum tree_code'
+|       |-IfStmt 0x7fd6ec830520 <line:103:7, line:104:2>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7fd6ec8304f0 <line:103:11, col:27> 'int' '=='
+|       | | |-ImplicitCastExpr 0x7fd6ec8304c0 <col:11> 'gfc_namelist *' <LValueToRValue>
+|       | | | `-DeclRefExpr 0x7fd6ec830418 <col:11> 'gfc_namelist *' lvalue Var 0x7fd6ec830198 'n' 'gfc_namelist *'
+|       | | `-ImplicitCastExpr 0x7fd6ec8304d8 <col:16, col:27> 'gfc_namelist *' <BitCast>
+|       | |   `-ParenExpr 0x7fd6ec8304a0 <col:16, col:27> 'void *'
+|       | |     `-CStyleCastExpr 0x7fd6ec830478 <col:17, col:26> 'void *' <NullToPointer>
+|       | |       `-IntegerLiteral 0x7fd6ec830440 <col:26> 'int' 0
+|       | |-ContinueStmt 0x7fd6ec830518 <line:104:2>
+|       | `-<<<NULL>>>
+|       |-SwitchStmt 0x7fd6ec830598 <line:105:7, line:112:2>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-ImplicitCastExpr 0x7fd6ec830580 <line:105:15> 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fd6ec830558 <col:15> 'int' lvalue Var 0x7fd6ec82ffc8 'list' 'int'
+|       | `-CompoundStmt 0x7fd6ec8307b0 <line:106:2, line:112:2>
+|       |   |-CaseStmt 0x7fd6ec8305f0 <line:107:2, line:108:21>
+|       |   | |-DeclRefExpr 0x7fd6ec8305c8 <line:107:7> 'int' EnumConstant 0x7fd6ec82c568 'OMP_LIST_MULT' 'int'
+|       |   | |-<<<NULL>>>
+|       |   | `-BinaryOperator 0x7fd6ec830690 <line:108:4, col:21> 'enum tree_code':'enum tree_code' '='
+|       |   |   |-DeclRefExpr 0x7fd6ec830628 <col:4> 'enum tree_code':'enum tree_code' lvalue Var 0x7fd6ec8303a0 'reduction_code' 'enum tree_code':'enum tree_code'
+|       |   |   `-ImplicitCastExpr 0x7fd6ec830678 <col:21> 'enum tree_code':'enum tree_code' <IntegralCast>
+|       |   |     `-DeclRefExpr 0x7fd6ec830650 <col:21> 'int' EnumConstant 0x7fd6ec825c68 'MULT_EXPR' 'int'
+|       |   |-BreakStmt 0x7fd6ec8306b8 <line:109:4>
+|       |   `-CaseStmt 0x7fd6ec8306e8 <line:110:2, line:111:21>
+|       |     |-DeclRefExpr 0x7fd6ec8306c0 <line:110:7> 'int' EnumConstant 0x7fd6ec82c5b0 'OMP_LIST_SUB' 'int'
+|       |     |-<<<NULL>>>
+|       |     `-BinaryOperator 0x7fd6ec830788 <line:111:4, col:21> 'enum tree_code':'enum tree_code' '='
+|       |       |-DeclRefExpr 0x7fd6ec830720 <col:4> 'enum tree_code':'enum tree_code' lvalue Var 0x7fd6ec8303a0 'reduction_code' 'enum tree_code':'enum tree_code'
+|       |       `-ImplicitCastExpr 0x7fd6ec830770 <col:21> 'enum tree_code':'enum tree_code' <IntegralCast>
+|       |         `-DeclRefExpr 0x7fd6ec830748 <col:21> 'int' EnumConstant 0x7fd6ec825c20 'MINUS_EXPR' 'int'
+|       `-CallExpr 0x7fd6ec830920 <line:113:7, col:74> 'tree':'union tree_node *'
+|         |-ImplicitCastExpr 0x7fd6ec830908 <col:7> 'tree (*)(gfc_namelist *, tree, enum tree_code, locus)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fd6ec8307e0 <col:7> 'tree (gfc_namelist *, tree, enum tree_code, locus)' Function 0x7fd6ec82d3e0 'gfc_trans_omp_reduction_list' 'tree (gfc_namelist *, tree, enum tree_code, locus)'
+|         |-ImplicitCastExpr 0x7fd6ec830968 <col:37> 'gfc_namelist *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fd6ec830808 <col:37> 'gfc_namelist *' lvalue Var 0x7fd6ec830198 'n' 'gfc_namelist *'
+|         |-ImplicitCastExpr 0x7fd6ec830980 <col:40> 'tree':'union tree_node *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fd6ec830830 <col:40> 'tree':'union tree_node *' lvalue Var 0x7fd6ec82fe50 'omp_clauses' 'tree':'union tree_node *'
+|         |-ImplicitCastExpr 0x7fd6ec830998 <col:53> 'enum tree_code':'enum tree_code' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fd6ec830858 <col:53> 'enum tree_code':'enum tree_code' lvalue Var 0x7fd6ec8303a0 'reduction_code' 'enum tree_code':'enum tree_code'
+|         `-ImplicitCastExpr 0x7fd6ec8309b0 <col:69> 'locus':'locus' <LValueToRValue>
+|           `-DeclRefExpr 0x7fd6ec830880 <col:69> 'locus':'locus' lvalue ParmVar 0x7fd6ec82fc58 'where' 'locus':'locus'
+`-FunctionDecl 0x7fd6ec830c00 <line:117:1, line:122:1> line:118:1 gfc_trans_omp_parallel_workshare 'void (gfc_code *)'
+  |-ParmVarDecl 0x7fd6ec830af8 <col:35, col:46> col:46 used code 'gfc_code *'
+  `-CompoundStmt 0x7fd6ec830fa0 <line:119:1, line:122:1>
+    |-DeclStmt 0x7fd6ec830d10 <line:120:3, col:20>
+    | `-VarDecl 0x7fd6ec830cb0 <col:3, col:15> col:15 used block 'stmtblock_t':'stmtblock_t'
+    `-CallExpr 0x7fd6ec830f30 <line:121:3, col:66> 'tree':'union tree_node *'
+      |-ImplicitCastExpr 0x7fd6ec830f18 <col:3> 'tree (*)(stmtblock_t *, gfc_omp_clauses *, locus)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd6ec830d28 <col:3> 'tree (stmtblock_t *, gfc_omp_clauses *, locus)' Function 0x7fd6ec82fd90 'gfc_trans_omp_clauses' 'tree (stmtblock_t *, gfc_omp_clauses *, locus)'
+      |-UnaryOperator 0x7fd6ec830d78 <col:26, col:27> 'stmtblock_t *' prefix '&'
+      | `-DeclRefExpr 0x7fd6ec830d50 <col:27> 'stmtblock_t':'stmtblock_t' lvalue Var 0x7fd6ec830cb0 'block' 'stmtblock_t':'stmtblock_t'
+      |-ImplicitCastExpr 0x7fd6ec830f70 <col:34, col:44> 'gfc_omp_clauses *' <LValueToRValue>
+      | `-MemberExpr 0x7fd6ec830e10 <col:34, col:44> 'gfc_omp_clauses *' lvalue .omp_clauses 0x7fd6ec82cda8
+      |   `-MemberExpr 0x7fd6ec830dd8 <col:34, col:40> 'union (anonymous union at c_files/pr46571.c:71:3)':'union gfc_code::(anonymous at c_files/pr46571.c:71:3)' lvalue ->ext 0x7fd6ec82ce40
+      |     `-ImplicitCastExpr 0x7fd6ec830dc0 <col:34> 'gfc_code *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fd6ec830d98 <col:34> 'gfc_code *' lvalue ParmVar 0x7fd6ec830af8 'code' 'gfc_code *'
+      `-ImplicitCastExpr 0x7fd6ec830f88 <col:57, col:63> 'locus':'locus' <LValueToRValue>
+        `-MemberExpr 0x7fd6ec830e88 <col:57, col:63> 'locus':'locus' lvalue ->loc 0x7fd6ec82cc30
+          `-ImplicitCastExpr 0x7fd6ec830e70 <col:57> 'gfc_code *' <LValueToRValue>
+            `-DeclRefExpr 0x7fd6ec830e48 <col:57> 'gfc_code *' lvalue ParmVar 0x7fd6ec830af8 'code' 'gfc_code *'

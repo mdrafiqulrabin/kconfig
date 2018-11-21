@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7ffa758264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffa75826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffa75826740 '__int128'
+|-TypedefDecl 0x7ffa75826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffa75826760 'unsigned __int128'
+|-TypedefDecl 0x7ffa75826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffa75826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffa75826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffa75826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffa75826dc0 'char *'
+|   `-BuiltinType 0x7ffa75826560 'char'
+|-TypedefDecl 0x7ffa758270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffa75827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffa75826ee0 'struct __va_list_tag'
+|     `-Record 0x7ffa75826e58 '__va_list_tag'
+|-RecordDecl 0x7ffa75827120 <c_files/pr69454-1.c:4:9, col:36> col:9 struct definition
+| `-FieldDecl 0x7ffa75877460 <col:18, col:33> col:28 referenced w64 'long long [2]'
+|-TypedefDecl 0x7ffa75877500 <col:1, col:38> col:38 referenced V128 'struct V128':'V128'
+| `-ElaboratedType 0x7ffa758774b0 'struct V128' sugar
+|   `-RecordType 0x7ffa758271b0 'V128'
+|     `-Record 0x7ffa75827120 ''
+|-FunctionDecl 0x7ffa758776e0 <line:5:1, col:22> col:14 used fn2 'V128 *(void)' extern
+|-VarDecl 0x7ffa758777d0 <line:6:1, col:11> col:11 used a 'long long'
+|-VarDecl 0x7ffa75877840 <line:7:1, col:6> col:6 used b 'V128':'V128'
+`-FunctionDecl 0x7ffa758778e8 <line:8:1, line:11:1> line:8:6 fn1 'void ()'
+  `-CompoundStmt 0x7ffa75877d88 <col:12, line:11:1>
+    |-DeclStmt 0x7ffa75877ab8 <line:9:3, col:18>
+    | `-VarDecl 0x7ffa75877990 <col:3, col:17> col:9 used c 'V128 *' cinit
+    |   `-CallExpr 0x7ffa75877a90 <col:13, col:17> 'V128 *'
+    |     `-ImplicitCastExpr 0x7ffa75877a78 <col:13> 'V128 *(*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7ffa758779f0 <col:13> 'V128 *(void)' Function 0x7ffa758776e0 'fn2' 'V128 *(void)'
+    `-BinaryOperator 0x7ffa75877d18 <line:10:3, col:26> 'long long' '='
+      |-ArraySubscriptExpr 0x7ffa75877bb0 <col:3, col:11> 'long long' lvalue
+      | |-ImplicitCastExpr 0x7ffa75877b98 <col:3, col:6> 'long long *' <ArrayToPointerDecay>
+      | | `-MemberExpr 0x7ffa75877b10 <col:3, col:6> 'long long [2]' lvalue ->w64 0x7ffa75877460
+      | |   `-ImplicitCastExpr 0x7ffa75877af8 <col:3> 'V128 *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7ffa75877ad0 <col:3> 'V128 *' lvalue Var 0x7ffa75877990 'c' 'V128 *'
+      | `-IntegerLiteral 0x7ffa75877b48 <col:10> 'int' 0
+      `-BinaryOperator 0x7ffa75877cf0 <col:15, col:26> 'long long' '^'
+        |-ImplicitCastExpr 0x7ffa75877cc0 <col:15> 'long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7ffa75877bd8 <col:15> 'long long' lvalue Var 0x7ffa758777d0 'a' 'long long'
+        `-ImplicitCastExpr 0x7ffa75877cd8 <col:19, col:26> 'long long' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7ffa75877c98 <col:19, col:26> 'long long' lvalue
+            |-ImplicitCastExpr 0x7ffa75877c80 <col:19, col:21> 'long long *' <ArrayToPointerDecay>
+            | `-MemberExpr 0x7ffa75877c28 <col:19, col:21> 'long long [2]' lvalue .w64 0x7ffa75877460
+            |   `-DeclRefExpr 0x7ffa75877c00 <col:19> 'V128':'V128' lvalue Var 0x7ffa75877840 'b' 'V128':'V128'
+            `-IntegerLiteral 0x7ffa75877c60 <col:25> 'int' 0

@@ -1,0 +1,124 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: diff, [], [], []
+            PtrDecl: []
+              TypeDecl: diff, []
+                IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: deltay, [], [], []
+        TypeDecl: deltay, []
+          IdentifierType: ['double']
+        Constant: float, 0.0
+      Decl: Stangent, [], [], []
+        TypeDecl: Stangent, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: mindiff, [], [], []
+        TypeDecl: mindiff, []
+          IdentifierType: ['int']
+      Decl: Sflipped, [], [], []
+        TypeDecl: Sflipped, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: Sturn, [], [], []
+        TypeDecl: Sturn, []
+          IdentifierType: ['int']
+      Decl: Snofit, [], [], []
+        TypeDecl: Snofit, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: Sturn
+        Constant: int, 1
+      If: 
+        ID: Sturn
+        Assignment: =
+          ID: Stangent
+          Constant: int, 1
+      If: 
+        ID: Sturn
+        Compound: 
+          Assignment: =
+            ID: Sflipped
+            Constant: int, 0
+          Assignment: =
+            ID: Snofit
+            Constant: int, 1
+          While: 
+            ID: Snofit
+            Compound: 
+              Assignment: =
+                ID: Snofit
+                Constant: int, 0
+              Assignment: =
+                ID: mindiff
+                Constant: int, 0
+              For: 
+                Assignment: =
+                  ID: i
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: i
+                  Constant: int, 4
+                UnaryOp: p++
+                  ID: i
+                Assignment: =
+                  ID: mindiff
+                  ArrayRef: 
+                    ID: diff
+                    ID: i
+              While: 
+                BinaryOp: &&
+                  UnaryOp: !
+                    ID: Snofit
+                  BinaryOp: <
+                    ID: mindiff
+                    Constant: float, 0.0
+                Compound: 
+                  Assignment: =
+                    ID: deltay
+                    TernaryOp: 
+                      ID: Stangent
+                      ID: deltay
+                      Constant: float, 0.0
+                  If: 
+                    BinaryOp: <
+                      ID: deltay
+                      Constant: float, 0.0
+                    Assignment: =
+                      ID: Snofit
+                      Constant: int, 1
+                  For: 
+                    Assignment: =
+                      ID: i
+                      Constant: int, 0
+                    BinaryOp: <
+                      ID: i
+                      Constant: int, 4
+                    UnaryOp: p++
+                      ID: i
+                    Compound: 
+              If: 
+                ID: Snofit
+                If: 
+                  ID: Sflipped
+                  Break: 
+          If: 
+            ID: Snofit
+            FuncCall: 
+              ID: bar

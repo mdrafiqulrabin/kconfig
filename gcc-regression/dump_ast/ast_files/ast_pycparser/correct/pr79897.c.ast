@@ -1,0 +1,23 @@
+FileAST: 
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      Enum: E
+        EnumeratorList: 
+          Enumerator: A
+            Constant: int, 0
+          Enumerator: B
+            BinaryOp: +
+              UnaryOp: ~
+                Constant: int, 0U
+              Constant: int, 1LL
+    ID: A
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: !=
+          ID: x
+          ID: A

@@ -1,0 +1,39 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['unsigned']
+        Constant: int, 10
+      Typedef: T, [], ['typedef']
+        ArrayDecl: []
+          TypeDecl: T, []
+            IdentifierType: ['double']
+          ID: n
+      Cast: 
+        Typename: None, []
+          PtrDecl: []
+            ArrayDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['double']
+              ID: n
+        CompoundLiteral: 
+          Typename: None, []
+            PtrDecl: []
+              ArrayDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+                UnaryOp: sizeof
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['T']
+          InitList: 
+            Constant: int, 0

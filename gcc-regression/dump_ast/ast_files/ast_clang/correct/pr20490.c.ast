@@ -1,0 +1,58 @@
+TranslationUnitDecl 0x7fef070264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fef07026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fef07026740 '__int128'
+|-TypedefDecl 0x7fef07026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fef07026760 'unsigned __int128'
+|-TypedefDecl 0x7fef07026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fef07026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fef07026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fef07026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fef07026dc0 'char *'
+|   `-BuiltinType 0x7fef07026560 'char'
+|-TypedefDecl 0x7fef070270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fef07027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fef07026ee0 'struct __va_list_tag'
+|     `-Record 0x7fef07026e58 '__va_list_tag'
+|-VarDecl 0x7fef07027138 <c_files/pr20490.c:3:1, col:13> col:13 used a 'int' static
+|-VarDecl 0x7fef07825a00 <line:4:1, col:13> col:13 used b 'int' static
+|-TypedefDecl 0x7fef07825a78 <line:6:1, col:13> col:13 referenced gint 'int'
+| `-BuiltinType 0x7fef070265c0 'int'
+`-FunctionDecl 0x7fef07825b20 <line:8:1, line:18:1> line:8:5 blah 'int ()'
+  `-CompoundStmt 0x7fef07826180 <line:9:1, line:18:1>
+    |-DeclStmt 0x7fef07825c90 <line:10:2, col:12>
+    | `-VarDecl 0x7fef07825bf0 <col:2, col:11> col:7 used x 'gint':'int' cinit
+    |   `-ImplicitCastExpr 0x7fef07825c78 <col:11> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fef07825c50 <col:11> 'int' lvalue Var 0x7fef07027138 'a' 'int'
+    |-DeclStmt 0x7fef07825d58 <line:11:2, col:12>
+    | `-VarDecl 0x7fef07825cb8 <col:2, col:11> col:7 used y 'gint':'int' cinit
+    |   `-ImplicitCastExpr 0x7fef07825d40 <col:11> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fef07825d18 <col:11> 'int' lvalue Var 0x7fef07825a00 'b' 'int'
+    |-CompoundAssignOperator 0x7fef07825ed0 <line:13:2, col:22> 'gint':'int' '*=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fef07825d70 <col:2> 'gint':'int' lvalue Var 0x7fef07825bf0 'x' 'gint':'int'
+    | `-ConditionalOperator 0x7fef07825ea0 <col:7, col:22> 'int'
+    |   |-ParenExpr 0x7fef07825e20 <col:7, col:13> 'int'
+    |   | `-BinaryOperator 0x7fef07825df8 <col:8, col:12> 'int' '<'
+    |   |   |-ImplicitCastExpr 0x7fef07825de0 <col:8> 'gint':'int' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x7fef07825d98 <col:8> 'gint':'int' lvalue Var 0x7fef07825bf0 'x' 'gint':'int'
+    |   |   `-IntegerLiteral 0x7fef07825dc0 <col:12> 'int' 0
+    |   |-UnaryOperator 0x7fef07825e60 <col:17, col:18> 'int' prefix '-'
+    |   | `-IntegerLiteral 0x7fef07825e40 <col:18> 'int' 1
+    |   `-IntegerLiteral 0x7fef07825e80 <col:22> 'int' 0
+    |-CompoundAssignOperator 0x7fef07826068 <line:14:2, col:22> 'gint':'int' '*=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fef07825f08 <col:2> 'gint':'int' lvalue Var 0x7fef07825cb8 'y' 'gint':'int'
+    | `-ConditionalOperator 0x7fef07826038 <col:7, col:22> 'int'
+    |   |-ParenExpr 0x7fef07825fb8 <col:7, col:13> 'int'
+    |   | `-BinaryOperator 0x7fef07825f90 <col:8, col:12> 'int' '<'
+    |   |   |-ImplicitCastExpr 0x7fef07825f78 <col:8> 'gint':'int' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x7fef07825f30 <col:8> 'gint':'int' lvalue Var 0x7fef07825cb8 'y' 'gint':'int'
+    |   |   `-IntegerLiteral 0x7fef07825f58 <col:12> 'int' 0
+    |   |-UnaryOperator 0x7fef07825ff8 <col:17, col:18> 'int' prefix '-'
+    |   | `-IntegerLiteral 0x7fef07825fd8 <col:18> 'int' 1
+    |   `-IntegerLiteral 0x7fef07826018 <col:22> 'int' 0
+    `-ReturnStmt 0x7fef07826168 <line:16:2, col:15>
+      `-ParenExpr 0x7fef07826148 <col:9, col:15> 'int'
+        `-BinaryOperator 0x7fef07826120 <col:10, col:14> 'int' '*'
+          |-ImplicitCastExpr 0x7fef078260f0 <col:10> 'gint':'int' <LValueToRValue>
+          | `-DeclRefExpr 0x7fef078260a0 <col:10> 'gint':'int' lvalue Var 0x7fef07825cb8 'y' 'gint':'int'
+          `-ImplicitCastExpr 0x7fef07826108 <col:14> 'gint':'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fef078260c8 <col:14> 'gint':'int' lvalue Var 0x7fef07825bf0 'x' 'gint':'int'

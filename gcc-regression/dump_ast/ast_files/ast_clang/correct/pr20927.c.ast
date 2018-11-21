@@ -1,0 +1,71 @@
+TranslationUnitDecl 0x7fe75d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe75d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe75d026740 '__int128'
+|-TypedefDecl 0x7fe75d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe75d026760 'unsigned __int128'
+|-TypedefDecl 0x7fe75d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe75d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe75d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe75d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe75d026dc0 'char *'
+|   `-BuiltinType 0x7fe75d026560 'char'
+|-TypedefDecl 0x7fe75d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe75d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe75d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe75d026e58 '__va_list_tag'
+|-RecordDecl 0x7fe75d027120 <c_files/pr20927.c:6:1, col:29> col:8 struct point definition
+| |-FieldDecl 0x7fe75d077400 <col:16, col:23> col:23 referenced x 'double'
+| `-FieldDecl 0x7fe75d077460 <col:16, col:26> col:26 referenced y 'double'
+|-FunctionDecl 0x7fe75d077600 <line:7:1, col:30> col:13 used use 'void (struct point)' extern
+| `-ParmVarDecl 0x7fe75d077500 <col:18, col:25> col:30 'struct point':'struct point'
+`-FunctionDecl 0x7fe75d0778f0 <line:9:1, line:22:1> line:9:6 test 'void (struct point *, struct point)'
+  |-ParmVarDecl 0x7fe75d077760 <col:12, col:26> col:26 used pc 'struct point *'
+  |-ParmVarDecl 0x7fe75d0777e0 <col:30, col:43> col:43 used p1 'struct point':'struct point'
+  `-CompoundStmt 0x7fe75d078488 <line:10:1, line:22:1>
+    |-DeclStmt 0x7fe75d077a90 <line:11:3, col:24>
+    | `-VarDecl 0x7fe75d0779b8 <col:3, col:22> col:16 used p0 'struct point':'struct point' cinit
+    |   `-ImplicitCastExpr 0x7fe75d077a78 <col:21, col:22> 'struct point':'struct point' <LValueToRValue>
+    |     `-UnaryOperator 0x7fe75d077a58 <col:21, col:22> 'struct point':'struct point' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7fe75d077a40 <col:22> 'struct point *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fe75d077a18 <col:22> 'struct point *' lvalue ParmVar 0x7fe75d077760 'pc' 'struct point *'
+    |-IfStmt 0x7fe75d077e58 <line:13:3, line:14:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe75d077d28 <line:13:7, col:34> 'int' '&&'
+    | | |-BinaryOperator 0x7fe75d077b98 <col:7, col:18> 'int' '=='
+    | | | |-ImplicitCastExpr 0x7fe75d077b68 <col:7, col:10> 'double' <LValueToRValue>
+    | | | | `-MemberExpr 0x7fe75d077ad0 <col:7, col:10> 'double' lvalue .x 0x7fe75d077400
+    | | | |   `-DeclRefExpr 0x7fe75d077aa8 <col:7> 'struct point':'struct point' lvalue Var 0x7fe75d0779b8 'p0' 'struct point':'struct point'
+    | | | `-ImplicitCastExpr 0x7fe75d077b80 <col:15, col:18> 'double' <LValueToRValue>
+    | | |   `-MemberExpr 0x7fe75d077b30 <col:15, col:18> 'double' lvalue .x 0x7fe75d077400
+    | | |     `-DeclRefExpr 0x7fe75d077b08 <col:15> 'struct point':'struct point' lvalue ParmVar 0x7fe75d0777e0 'p1' 'struct point':'struct point'
+    | | `-BinaryOperator 0x7fe75d077cb0 <col:23, col:34> 'int' '=='
+    | |   |-ImplicitCastExpr 0x7fe75d077c80 <col:23, col:26> 'double' <LValueToRValue>
+    | |   | `-MemberExpr 0x7fe75d077be8 <col:23, col:26> 'double' lvalue .y 0x7fe75d077460
+    | |   |   `-DeclRefExpr 0x7fe75d077bc0 <col:23> 'struct point':'struct point' lvalue Var 0x7fe75d0779b8 'p0' 'struct point':'struct point'
+    | |   `-ImplicitCastExpr 0x7fe75d077c98 <col:31, col:34> 'double' <LValueToRValue>
+    | |     `-MemberExpr 0x7fe75d077c48 <col:31, col:34> 'double' lvalue .y 0x7fe75d077460
+    | |       `-DeclRefExpr 0x7fe75d077c20 <col:31> 'struct point':'struct point' lvalue ParmVar 0x7fe75d0777e0 'p1' 'struct point':'struct point'
+    | |-CallExpr 0x7fe75d077e10 <line:14:5, col:12> 'void'
+    | | |-ImplicitCastExpr 0x7fe75d077df8 <col:5> 'void (*)(struct point)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fe75d077d50 <col:5> 'void (struct point)' Function 0x7fe75d077600 'use' 'void (struct point)'
+    | | `-ImplicitCastExpr 0x7fe75d077e40 <col:10> 'struct point':'struct point' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe75d077d78 <col:10> 'struct point':'struct point' lvalue Var 0x7fe75d0779b8 'p0' 'struct point':'struct point'
+    | `-<<<NULL>>>
+    |-GCCAsmStmt 0x7fe75d078178 <line:16:3, col:71>
+    |-CompoundAssignOperator 0x7fe75d0782f0 <line:18:3, col:14> 'double' '-=' ComputeLHSTy='double' ComputeResultTy='double'
+    | |-MemberExpr 0x7fe75d078240 <col:3, col:6> 'double' lvalue .y 0x7fe75d077460
+    | | `-DeclRefExpr 0x7fe75d078218 <col:3> 'struct point':'struct point' lvalue ParmVar 0x7fe75d0777e0 'p1' 'struct point':'struct point'
+    | `-ImplicitCastExpr 0x7fe75d0782d8 <col:11, col:14> 'double' <LValueToRValue>
+    |   `-MemberExpr 0x7fe75d0782a0 <col:11, col:14> 'double' lvalue .y 0x7fe75d077460
+    |     `-DeclRefExpr 0x7fe75d078278 <col:11> 'struct point':'struct point' lvalue Var 0x7fe75d0779b8 'p0' 'struct point':'struct point'
+    |-CallExpr 0x7fe75d078390 <line:20:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fe75d078378 <col:3> 'void (*)(struct point)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe75d078328 <col:3> 'void (struct point)' Function 0x7fe75d077600 'use' 'void (struct point)'
+    | `-ImplicitCastExpr 0x7fe75d0783c0 <col:8> 'struct point':'struct point' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe75d078350 <col:8> 'struct point':'struct point' lvalue Var 0x7fe75d0779b8 'p0' 'struct point':'struct point'
+    `-CallExpr 0x7fe75d078440 <line:21:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fe75d078428 <col:3> 'void (*)(struct point)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe75d0783d8 <col:3> 'void (struct point)' Function 0x7fe75d077600 'use' 'void (struct point)'
+      `-ImplicitCastExpr 0x7fe75d078470 <col:8> 'struct point':'struct point' <LValueToRValue>
+        `-DeclRefExpr 0x7fe75d078400 <col:8> 'struct point':'struct point' lvalue ParmVar 0x7fe75d0777e0 'p1' 'struct point':'struct point'

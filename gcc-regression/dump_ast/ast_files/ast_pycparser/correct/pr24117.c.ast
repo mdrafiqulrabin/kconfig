@@ -1,0 +1,72 @@
+FileAST: 
+  Decl: link_error, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: link_error, []
+        IdentifierType: ['void']
+  Typedef: Foo_t, [], ['typedef']
+    TypeDecl: Foo_t, []
+      Struct: None
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['int']
+        Decl: z, [], [], []
+          TypeDecl: z, []
+            IdentifierType: ['int']
+  Decl: xm, [], [], []
+    PtrDecl: []
+      TypeDecl: xm, []
+        IdentifierType: ['char']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['Foo_t']
+      Assignment: =
+        StructRef: .
+          ID: x
+          ID: x
+        Constant: int, 1
+      Assignment: =
+        StructRef: .
+          ID: x
+          ID: z
+        Constant: int, 2
+      Assignment: =
+        ID: xm
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['char']
+          UnaryOp: &
+            ID: x
+      FuncCall: 
+        ID: bar
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            ID: x
+            ID: z
+          Constant: int, 2
+        FuncCall: 
+          ID: link_error

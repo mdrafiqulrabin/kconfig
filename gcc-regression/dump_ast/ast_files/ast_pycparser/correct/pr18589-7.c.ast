@@ -1,0 +1,30 @@
+FileAST: 
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['float']
+        TypeDecl: baz, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          BinaryOp: *
+            BinaryOp: *
+              BinaryOp: *
+                BinaryOp: *
+                  BinaryOp: *
+                    BinaryOp: *
+                      ID: x
+                      ID: x
+                    ID: x
+                  ID: x
+                ID: y
+              ID: y
+            ID: y
+          ID: y

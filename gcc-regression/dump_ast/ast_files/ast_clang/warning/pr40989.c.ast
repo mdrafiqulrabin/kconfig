@@ -1,0 +1,26 @@
+c_files/pr40989.c:4:10: warning: implicit declaration of function 'pippo' is invalid in C99 [-Wimplicit-function-declaration]
+  return pippo(); /* { dg-error "" } */
+         ^
+1 warning generated.
+TranslationUnitDecl 0x7f8f718264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8f71826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8f71826740 '__int128'
+|-TypedefDecl 0x7f8f71826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8f71826760 'unsigned __int128'
+|-TypedefDecl 0x7f8f71826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8f71826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8f71826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8f71826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8f71826dc0 'char *'
+|   `-BuiltinType 0x7f8f71826560 'char'
+|-TypedefDecl 0x7f8f718270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8f71827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8f71826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8f71826e58 '__va_list_tag'
+|-FunctionDecl 0x7f8f72025a00 <c_files/pr40989.c:3:1, line:5:1> line:3:5 main 'int ()'
+| `-CompoundStmt 0x7f8f72025c40 <col:12, line:5:1>
+|   `-ReturnStmt 0x7f8f72025c28 <line:4:3, col:16>
+|     `-CallExpr 0x7f8f72025c00 <col:10, col:16> 'int'
+|       `-ImplicitCastExpr 0x7f8f72025be8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f8f72025b98 <col:10> 'int ()' Function 0x7f8f72025b00 'pippo' 'int ()'
+`-FunctionDecl 0x7f8f72025b00 <<invalid sloc>> col:10 implicit used pippo 'int ()'

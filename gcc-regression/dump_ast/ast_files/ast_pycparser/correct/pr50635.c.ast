@@ -1,0 +1,74 @@
+FileAST: 
+  Typedef: int32_t, [], ['typedef']
+    TypeDecl: int32_t, []
+      IdentifierType: ['signed', 'long']
+  Typedef: int8_t, [], ['typedef']
+    TypeDecl: int8_t, []
+      IdentifierType: ['char']
+  FuncDef: 
+    Decl: f0a, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: result, [], [], []
+            PtrDecl: []
+              TypeDecl: result, []
+                IdentifierType: ['int32_t']
+          Decl: arg1, [], [], []
+            PtrDecl: []
+              TypeDecl: arg1, []
+                IdentifierType: ['int32_t']
+          Decl: arg2, [], [], []
+            PtrDecl: []
+              TypeDecl: arg2, []
+                IdentifierType: ['int8_t']
+          Decl: temp_3, [], [], []
+            TypeDecl: temp_3, []
+              IdentifierType: ['int32_t']
+        TypeDecl: f0a, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: idx, [], [], []
+        TypeDecl: idx, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: idx
+          Constant: int, 0
+        BinaryOp: <
+          ID: idx
+          Constant: int, 10
+        Assignment: +=
+          ID: idx
+          Constant: int, 1
+        Compound: 
+          Decl: temp_4, [], [], []
+            TypeDecl: temp_4, []
+              IdentifierType: ['int32_t']
+          Decl: temp_12, [], [], []
+            TypeDecl: temp_12, []
+              IdentifierType: ['int32_t']
+          Assignment: =
+            ID: temp_4
+            BinaryOp: +
+              BinaryOp: &
+                UnaryOp: -
+                  Constant: int, 2
+                ArrayRef: 
+                  ID: arg2
+                  ID: idx
+              ID: temp_3
+          Assignment: =
+            ID: temp_12
+            BinaryOp: +
+              BinaryOp: *
+                UnaryOp: -
+                  Constant: int, 2
+                ArrayRef: 
+                  ID: arg2
+                  ID: idx
+              ID: temp_4
+          Assignment: =
+            ArrayRef: 
+              ID: result
+              ID: idx
+            ID: temp_12

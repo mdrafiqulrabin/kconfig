@@ -1,0 +1,64 @@
+c_files/pr83317.c:11:12: warning: declaration of built-in function 'setjmp' requires inclusion of the header <setjmp.h> [-Wbuiltin-requires-header]
+extern int setjmp (void **);
+           ^
+1 warning generated.
+TranslationUnitDecl 0x7fb0998264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb099826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb099826740 '__int128'
+|-TypedefDecl 0x7fb099826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb099826760 'unsigned __int128'
+|-TypedefDecl 0x7fb099826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb099826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb099826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb099826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb099826dc0 'char *'
+|   `-BuiltinType 0x7fb099826560 'char'
+|-TypedefDecl 0x7fb0998270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb099827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb099826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb099826e58 '__va_list_tag'
+|-RecordDecl 0x7fb099827120 <c_files/pr83317.c:7:1, col:22> col:8 struct S definition
+| `-FieldDecl 0x7fb09a025a00 <col:12, col:19> col:19 referenced a 'double'
+|-VarDecl 0x7fb09a025aa0 <line:8:1, col:10> col:10 used c 'struct S':'struct S'
+|-VarDecl 0x7fb09a025b58 <line:9:1, col:5> col:5 used d 'int'
+|-VarDecl 0x7fb09a025bd0 <col:1, col:8> col:8 used e 'int'
+|-VarDecl 0x7fb09a025cd0 <line:10:1, col:13> col:7 used buf 'void *[64]'
+|-FunctionDecl 0x7fb09a025e38 <line:11:1, col:27> col:12 used setjmp 'int (void **)' extern
+| |-ParmVarDecl 0x7fb09a025d70 <col:20, col:26> col:27 'void **'
+| `-ReturnsTwiceAttr 0x7fb09a025ed8 <col:12> Implicit
+|-FunctionDecl 0x7fb09a025f68 <line:13:1, line:21:1> line:14:1 foo 'void ()'
+| `-CompoundStmt 0x7fb09a026658 <line:15:1, line:21:1>
+|   |-CallExpr 0x7fb09a026090 <line:16:3, col:14> 'int'
+|   | |-ImplicitCastExpr 0x7fb09a026078 <col:3> 'int (*)(void **)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fb09a026000 <col:3> 'int (void **)' Function 0x7fb09a025e38 'setjmp' 'int (void **)'
+|   | `-ImplicitCastExpr 0x7fb09a0260c0 <col:11> 'void **' <ArrayToPointerDecay>
+|   |   `-DeclRefExpr 0x7fb09a026028 <col:11> 'void *[64]' lvalue Var 0x7fb09a025cd0 'buf' 'void *[64]'
+|   |-DeclStmt 0x7fb09a026158 <line:17:3, col:13>
+|   | `-VarDecl 0x7fb09a0260f8 <col:3, col:12> col:12 used g 'struct S':'struct S'
+|   |-IfStmt 0x7fb09a026590 <line:18:3, line:19:35>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fb09a026198 <line:18:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fb09a026170 <col:7> 'int' lvalue Var 0x7fb09a025b58 'd' 'int'
+|   | |-BinaryOperator 0x7fb09a026568 <line:19:5, col:35> 'double' '='
+|   | | |-MemberExpr 0x7fb09a0261d8 <col:5, col:7> 'double' lvalue .a 0x7fb09a025a00
+|   | | | `-DeclRefExpr 0x7fb09a0261b0 <col:5> 'struct S':'struct S' lvalue Var 0x7fb09a0260f8 'g' 'struct S':'struct S'
+|   | | `-CallExpr 0x7fb09a0264d0 <col:11, col:35> 'double'
+|   | |   |-ImplicitCastExpr 0x7fb09a0264b8 <col:11> 'double (*)(double, double)' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7fb09a026410 <col:11> '<builtin fn type>' Function 0x7fb09a026250 '__builtin_copysign' 'double (double, double)'
+|   | |   |-ImplicitCastExpr 0x7fb09a026520 <col:31> 'double' <IntegralToFloating>
+|   | |   | `-ImplicitCastExpr 0x7fb09a026508 <col:31> 'int' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x7fb09a026438 <col:31> 'int' lvalue Var 0x7fb09a025bd0 'e' 'int'
+|   | |   `-ImplicitCastExpr 0x7fb09a026550 <col:34> 'double' <IntegralToFloating>
+|   | |     `-ImplicitCastExpr 0x7fb09a026538 <col:34> 'int' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7fb09a026460 <col:34> 'int' lvalue Var 0x7fb09a025b58 'd' 'int'
+|   | `-<<<NULL>>>
+|   `-BinaryOperator 0x7fb09a026630 <line:20:3, col:7> 'struct S':'struct S' '='
+|     |-DeclRefExpr 0x7fb09a0265c8 <col:3> 'struct S':'struct S' lvalue Var 0x7fb09a025aa0 'c' 'struct S':'struct S'
+|     `-ImplicitCastExpr 0x7fb09a026618 <col:7> 'struct S':'struct S' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb09a0265f0 <col:7> 'struct S':'struct S' lvalue Var 0x7fb09a0260f8 'g' 'struct S':'struct S'
+`-FunctionDecl 0x7fb09a026250 <line:19:11> col:11 implicit used __builtin_copysign 'double (double, double)' extern
+  |-ParmVarDecl 0x7fb09a0262e8 <<invalid sloc>> <invalid sloc> 'double'
+  |-ParmVarDecl 0x7fb09a026348 <<invalid sloc>> <invalid sloc> 'double'
+  |-NoThrowAttr 0x7fb09a0263b8 <col:11> Implicit
+  `-ConstAttr 0x7fb09a026400 <col:11> Implicit

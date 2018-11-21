@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fc1b50264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc1b5026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc1b5026740 '__int128'
+|-TypedefDecl 0x7fc1b5026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc1b5026760 'unsigned __int128'
+|-TypedefDecl 0x7fc1b5026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc1b5026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc1b5026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc1b5026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc1b5026dc0 'char *'
+|   `-BuiltinType 0x7fc1b5026560 'char'
+|-TypedefDecl 0x7fc1b50270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc1b5027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc1b5026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc1b5026e58 '__va_list_tag'
+|-VarDecl 0x7fc1b5027138 <c_files/pr70322-4.c:7:1, col:18> col:18 used z 'long long' extern
+`-FunctionDecl 0x7fc1b504f950 <line:9:1, line:13:1> line:10:1 foo 'void (long long, long long)'
+  |-ParmVarDecl 0x7fc1b504f800 <col:6, col:16> col:16 used x 'long long'
+  |-ParmVarDecl 0x7fc1b504f878 <col:19, col:29> col:29 used y 'long long'
+  `-CompoundStmt 0x7fc1b504fb10 <line:11:1, line:13:1>
+    `-BinaryOperator 0x7fc1b504fae8 <line:12:3, col:12> 'long long' '='
+      |-DeclRefExpr 0x7fc1b504f9f8 <col:3> 'long long' lvalue Var 0x7fc1b5027138 'z' 'long long'
+      `-BinaryOperator 0x7fc1b504fac0 <col:7, col:12> 'long long' '|'
+        |-UnaryOperator 0x7fc1b504fa60 <col:7, col:8> 'long long' prefix '-'
+        | `-ImplicitCastExpr 0x7fc1b504fa48 <col:8> 'long long' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fc1b504fa20 <col:8> 'long long' lvalue ParmVar 0x7fc1b504f800 'x' 'long long'
+        `-ImplicitCastExpr 0x7fc1b504faa8 <col:12> 'long long' <LValueToRValue>
+          `-DeclRefExpr 0x7fc1b504fa80 <col:12> 'long long' lvalue ParmVar 0x7fc1b504f878 'y' 'long long'

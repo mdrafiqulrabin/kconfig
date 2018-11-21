@@ -1,0 +1,39 @@
+c_files/pr70756.c:16:16: error: arithmetic on a pointer to an incomplete type 'int []'
+  1234 && &s.y + 1; /* { dg-error "16:invalid use of" } */
+          ~~~~ ^
+c_files/pr70756.c:22:11: error: arithmetic on a pointer to an incomplete type 'int []'
+  1234, A += 1; /* { dg-error "11:invalid use of array with unspecified bounds" } */
+        ~ ^
+c_files/pr70756.c:5:8: error: tentative definition has type 'enum E' that is never completed
+enum E e; /* { dg-error "storage size|use of enum" } */
+       ^
+c_files/pr70756.c:5:6: note: forward declaration of 'enum E'
+enum E e; /* { dg-error "storage size|use of enum" } */
+     ^
+3 errors generated.
+TranslationUnitDecl 0x7ff3178264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff317826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff317826740 '__int128'
+|-TypedefDecl 0x7ff317826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff317826760 'unsigned __int128'
+|-TypedefDecl 0x7ff317826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff317826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff317826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff317826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff317826dc0 'char *'
+|   `-BuiltinType 0x7ff317826560 'char'
+|-TypedefDecl 0x7ff3178270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff317827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff317826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff317826e58 '__va_list_tag'
+|-VarDecl 0x7ff318825a50 <c_files/pr70756.c:5:1, col:8> col:8 invalid e 'enum E':'enum E'
+|-VarDecl 0x7ff318825c00 <line:6:1, col:10> col:7 used A 'int (*)[]'
+|-FunctionDecl 0x7ff318825d20 <line:8:1, line:17:1> line:9:1 fn0 'void (void)'
+| `-CompoundStmt 0x7ff318826480 <line:10:1, line:17:1>
+|   `-DeclStmt 0x7ff318825ff8 <line:11:3, line:15:6>
+|     |-RecordDecl 0x7ff318825db8 <line:11:3, line:15:3> line:11:3 struct definition
+|     | |-FieldDecl 0x7ff318825e78 <line:13:5, col:9> col:9 x 'int'
+|     | `-FieldDecl 0x7ff318825ee8 <line:14:5, col:11> col:9 referenced y 'int []'
+|     `-VarDecl 0x7ff318825f80 <line:11:3, line:15:5> col:5 used s 'struct (anonymous struct at c_files/pr70756.c:11:3)':'struct (anonymous at c_files/pr70756.c:11:3)'
+`-FunctionDecl 0x7ff318826530 <line:19:1, line:23:1> line:20:1 fn1 'void (void)'
+  `-CompoundStmt 0x7ff318826630 <line:21:1, line:23:1>

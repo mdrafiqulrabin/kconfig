@@ -1,0 +1,46 @@
+c_files/pr58805.c:11:17: error: invalid output constraint '=&p' in asm
+  __asm__ ("" : "=&p" (t), "=p" (*r));
+                ^
+1 error generated.
+TranslationUnitDecl 0x7f920681a6d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f920681ac20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f920681a940 '__int128'
+|-TypedefDecl 0x7f920681ac90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f920681a960 'unsigned __int128'
+|-TypedefDecl 0x7f920681af68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f920681ad70 'struct __NSConstantString_tag'
+|   `-Record 0x7f920681ace8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f920681b000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f920681afc0 'char *'
+|   `-BuiltinType 0x7f920681a760 'char'
+|-TypedefDecl 0x7f920681b2c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f920681b270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f920681b0e0 'struct __va_list_tag'
+|     `-Record 0x7f920681b058 '__va_list_tag'
+|-FunctionDecl 0x7f9207025a28 <c_files/pr58805.c:7:1, line:12:1> line:8:6 used bar 'void (void **)' static inline
+| |-ParmVarDecl 0x7f920681b360 <line:5:14, line:8:17> col:17 used r 'void **'
+| `-CompoundStmt 0x7f9207025d58 <line:9:1, line:12:1>
+|   `-DeclStmt 0x7f9207025b80 <line:5:14, line:10:9>
+|     `-VarDecl 0x7f9207025b20 <line:5:14, line:10:8> col:8 used t 'void *'
+`-FunctionDecl 0x7f9207025f60 <line:14:1, line:21:1> line:15:1 foo 'void (int, void **, void **)'
+  |-ParmVarDecl 0x7f9207025d90 <col:6, col:10> col:10 used n 'int'
+  |-ParmVarDecl 0x7f9207025e08 <line:5:14, line:15:19> col:19 used x 'void **'
+  |-ParmVarDecl 0x7f9207025e80 <line:5:14, line:15:28> col:28 used y 'void **'
+  `-CompoundStmt 0x7f9207026260 <line:16:1, line:21:1>
+    `-IfStmt 0x7f9207026228 <line:17:3, line:20:11>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9207026070 <line:17:7, col:12> 'int' '=='
+      | |-ImplicitCastExpr 0x7f9207026058 <col:7> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f9207026010 <col:7> 'int' lvalue ParmVar 0x7f9207025d90 'n' 'int'
+      | `-IntegerLiteral 0x7f9207026038 <col:12> 'int' 0
+      |-CallExpr 0x7f9207026130 <line:18:5, col:11> 'void'
+      | |-ImplicitCastExpr 0x7f9207026118 <col:5> 'void (*)(void **)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7f9207026098 <col:5> 'void (void **)' Function 0x7f9207025a28 'bar' 'void (void **)'
+      | `-ImplicitCastExpr 0x7f9207026160 <col:10> 'void **' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f92070260c0 <col:10> 'void **' lvalue ParmVar 0x7f9207025e08 'x' 'void **'
+      `-CallExpr 0x7f92070261e0 <line:20:5, col:11> 'void'
+        |-ImplicitCastExpr 0x7f92070261c8 <col:5> 'void (*)(void **)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f9207026178 <col:5> 'void (void **)' Function 0x7f9207025a28 'bar' 'void (void **)'
+        `-ImplicitCastExpr 0x7f9207026210 <col:10> 'void **' <LValueToRValue>
+          `-DeclRefExpr 0x7f92070261a0 <col:10> 'void **' lvalue ParmVar 0x7f9207025e80 'y' 'void **'

@@ -1,0 +1,34 @@
+FileAST: 
+  Decl: bard, [], [], []
+    FuncDecl: 
+      TypeDecl: bard, []
+        IdentifierType: ['double']
+  Decl: barf, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+      TypeDecl: barf, []
+        IdentifierType: ['float']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['float']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: f
+        FuncCall: 
+          ID: barf
+          ExprList: 
+            ID: f
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']
+        FuncCall: 
+          ID: bard

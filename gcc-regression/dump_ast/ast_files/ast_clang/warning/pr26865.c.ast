@@ -1,0 +1,32 @@
+c_files/pr26865.c:7:13: warning: implicitly declaring library function 'alloca' with type 'void *(unsigned long)' [-Wimplicit-function-declaration]
+  char *e = alloca (100); /* { dg-warning "implicit declaration|initialization of 'char \\*' from 'int' makes" } */
+            ^
+c_files/pr26865.c:7:13: note: include the header <stdlib.h> or explicitly provide a declaration for 'alloca'
+1 warning generated.
+TranslationUnitDecl 0x7fd3a30264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd3a3026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd3a3026740 '__int128'
+|-TypedefDecl 0x7fd3a3026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd3a3026760 'unsigned __int128'
+|-TypedefDecl 0x7fd3a3026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd3a3026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd3a3026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd3a3026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd3a3026dc0 'char *'
+|   `-BuiltinType 0x7fd3a3026560 'char'
+|-TypedefDecl 0x7fd3a30270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd3a3027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd3a3026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd3a3026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd3a3825a00 <c_files/pr26865.c:4:1, line:8:1> line:5:1 foo 'void (void)'
+| `-CompoundStmt 0x7fd3a3826148 <line:6:1, line:8:1>
+|   `-DeclStmt 0x7fd3a3826130 <line:7:3, col:25>
+|     `-VarDecl 0x7fd3a3825af0 <col:3, col:24> col:9 e 'char *' cinit
+|       `-ImplicitCastExpr 0x7fd3a3826118 <col:13, col:24> 'char *' <BitCast>
+|         `-CallExpr 0x7fd3a38260d0 <col:13, col:24> 'void *'
+|           |-ImplicitCastExpr 0x7fd3a38260b8 <col:13> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+|           | `-DeclRefExpr 0x7fd3a3826040 <col:13> 'void *(unsigned long)' Function 0x7fd3a3825f40 'alloca' 'void *(unsigned long)'
+|           `-ImplicitCastExpr 0x7fd3a3826100 <col:21> 'unsigned long' <IntegralCast>
+|             `-IntegerLiteral 0x7fd3a3826068 <col:21> 'int' 100
+`-FunctionDecl 0x7fd3a3825f40 <col:13> col:13 implicit used alloca 'void *(unsigned long)' extern
+  `-ParmVarDecl 0x7fd3a3825fd8 <<invalid sloc>> <invalid sloc> 'unsigned long'

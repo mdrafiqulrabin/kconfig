@@ -1,0 +1,105 @@
+FileAST: 
+  Decl: ptrs, [], ['extern'], []
+    ArrayDecl: []
+      PtrDecl: []
+        TypeDecl: ptrs, []
+          IdentifierType: ['float']
+  Decl: incs, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: incs, []
+        IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: big
+      Decl: i, [], [], []
+        ArrayDecl: []
+          TypeDecl: i, []
+            IdentifierType: ['int']
+          Constant: int, 0x10000
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            Struct: big
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          Struct: big
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          Struct: big
+      Decl: inc14, [], [], []
+        TypeDecl: inc14, []
+          IdentifierType: ['int']
+        ArrayRef: 
+          ID: incs
+          Constant: int, 15
+      Decl: inc16, [], [], []
+        TypeDecl: inc16, []
+          IdentifierType: ['int']
+        ID: n
+      Decl: inc17, [], [], []
+        TypeDecl: inc17, []
+          IdentifierType: ['int']
+        ID: n
+      Decl: inc19, [], [], []
+        TypeDecl: inc19, []
+          IdentifierType: ['int']
+        ArrayRef: 
+          ID: incs
+          Constant: int, 3
+      Decl: ptr0, [], [], []
+        PtrDecl: []
+          TypeDecl: ptr0, []
+            IdentifierType: ['float']
+        ArrayRef: 
+          ID: ptrs
+          Constant: int, 1
+      Decl: ptr14, [], [], []
+        PtrDecl: []
+          TypeDecl: ptr14, []
+            IdentifierType: ['float']
+        ArrayRef: 
+          ID: ptrs
+          Constant: int, 14
+      Decl: ptr16, [], [], []
+        PtrDecl: []
+          TypeDecl: ptr16, []
+            IdentifierType: ['float']
+        ArrayRef: 
+          ID: ptrs
+          Constant: int, 16
+      While: 
+        UnaryOp: p--
+          ID: n
+        ExprList: 
+          Assignment: +=
+            UnaryOp: *
+              ID: ptr0
+            Assignment: +=
+              UnaryOp: *
+                ID: ptr14
+              Assignment: +=
+                ID: inc14
+                Assignment: +=
+                  UnaryOp: *
+                    ID: ptr16
+                  Assignment: +=
+                    ID: inc16
+                    Assignment: +=
+                      ID: inc17
+                      ID: inc19
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              ID: b
+      Return: 
+        ID: b

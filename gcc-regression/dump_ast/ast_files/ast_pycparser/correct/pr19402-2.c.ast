@@ -1,0 +1,287 @@
+FileAST: 
+  Decl: abort, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: powif, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: powif, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_powif
+          ExprList: 
+            ID: x
+            ID: n
+  FuncDef: 
+    Decl: powi, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: powi, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_powi
+          ExprList: 
+            ID: x
+            ID: n
+  FuncDef: 
+    Decl: powil, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['long', 'double']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: powil, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_powil
+          ExprList: 
+            ID: x
+            ID: n
+  FuncDef: 
+    Decl: powcif, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+        TypeDecl: powcif, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_powif
+          ExprList: 
+            ID: x
+            Constant: int, 5
+  FuncDef: 
+    Decl: powci, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+        TypeDecl: powci, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_powi
+          ExprList: 
+            ID: x
+            Constant: int, 5
+  FuncDef: 
+    Decl: powcil, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['long', 'double']
+        TypeDecl: powcil, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_powil
+          ExprList: 
+            ID: x
+            Constant: int, 5
+  FuncDef: 
+    Decl: powicf, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: powicf, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_powif
+          ExprList: 
+            Constant: float, 2.0
+            ID: n
+  FuncDef: 
+    Decl: powic, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: powic, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_powi
+          ExprList: 
+            Constant: float, 2.0
+            ID: n
+  FuncDef: 
+    Decl: powicl, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: powicl, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_powil
+          ExprList: 
+            Constant: float, 2.0
+            ID: n
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: __builtin_powi
+            ExprList: 
+              Constant: float, 1.0
+              Constant: int, 5
+          Constant: float, 1.0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: __builtin_powif
+            ExprList: 
+              Constant: float, 1.0
+              Constant: int, 5
+          Constant: float, 1.0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: __builtin_powil
+            ExprList: 
+              Constant: float, 1.0
+              Constant: int, 5
+          Constant: float, 1.0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: powci
+            ExprList: 
+              Constant: float, 1.0
+          Constant: float, 1.0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: powcif
+            ExprList: 
+              Constant: float, 1.0
+          Constant: float, 1.0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: powcil
+            ExprList: 
+              Constant: float, 1.0
+          Constant: float, 1.0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: powi
+            ExprList: 
+              Constant: float, 1.0
+              UnaryOp: -
+                Constant: int, 5
+          Constant: float, 1.0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: powif
+            ExprList: 
+              Constant: float, 1.0
+              UnaryOp: -
+                Constant: int, 5
+          Constant: float, 1.0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: powil
+            ExprList: 
+              Constant: float, 1.0
+              UnaryOp: -
+                Constant: int, 5
+          Constant: float, 1.0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: powic
+            ExprList: 
+              Constant: int, 1
+          Constant: float, 2.0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: powicf
+            ExprList: 
+              Constant: int, 1
+          Constant: float, 2.0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: powicl
+            ExprList: 
+              Constant: int, 1
+          Constant: float, 2.0
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

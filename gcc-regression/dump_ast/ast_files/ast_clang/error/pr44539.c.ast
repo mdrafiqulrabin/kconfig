@@ -1,0 +1,81 @@
+c_files/pr44539.c:11:3: error: use of unknown builtin '__builtin_exit' [-Wimplicit-function-declaration]
+  __builtin_exit (0);
+  ^
+c_files/pr44539.c:22:14: warning: too many arguments in call to 'noret1'
+    noret1 (i);
+    ~~~~~~   ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fb7450264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb745026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb745026740 '__int128'
+|-TypedefDecl 0x7fb745026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb745026760 'unsigned __int128'
+|-TypedefDecl 0x7fb745026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb745026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb745026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb745026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb745026dc0 'char *'
+|   `-BuiltinType 0x7fb745026560 'char'
+|-TypedefDecl 0x7fb7450270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb745027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb745026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb745026e58 '__va_list_tag'
+|-FunctionDecl 0x7fb745077400 <c_files/pr44539.c:5:1, col:19> col:6 used bar 'void (int)'
+| `-ParmVarDecl 0x7fb745027138 <col:11, col:15> col:15 file 'int'
+|-FunctionDecl 0x7fb7450775a8 <line:6:1, col:21> col:12 used baz 'int (void)' extern
+|-FunctionDecl 0x7fb745077688 <line:8:1, line:12:1> line:8:6 used noret1 'void ()'
+| `-CompoundStmt 0x7fb7450779a0 <line:9:1, line:12:1>
+|   |-CallExpr 0x7fb7450777b0 <line:10:3, col:9> 'void'
+|   | |-ImplicitCastExpr 0x7fb745077798 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fb745077720 <col:3> 'void (int)' Function 0x7fb745077400 'bar' 'void (int)'
+|   | `-IntegerLiteral 0x7fb745077748 <col:8> 'int' 0
+|   `-CallExpr 0x7fb745077970 <line:11:3, col:20> 'int'
+|     |-ImplicitCastExpr 0x7fb745077958 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fb7450778e8 <col:3> 'int ()' Function 0x7fb745077850 '__builtin_exit' 'int ()'
+|     `-IntegerLiteral 0x7fb745077910 <col:19> 'int' 0
+|-FunctionDecl 0x7fb745077850 <<invalid sloc>> col:3 implicit used __builtin_exit 'int ()'
+|-FunctionDecl 0x7fb7450779e8 <line:14:1, line:17:1> line:14:6 used noret2 'void ()'
+| `-CompoundStmt 0x7fb745077b10 <line:15:1, line:17:1>
+|   `-CallExpr 0x7fb745077ae0 <line:16:3, col:20> 'int'
+|     |-ImplicitCastExpr 0x7fb745077ac8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fb745077a80 <col:3> 'int ()' Function 0x7fb745077850 '__builtin_exit' 'int ()'
+|     `-IntegerLiteral 0x7fb745077aa8 <col:19> 'int' 0
+|-FunctionDecl 0x7fb745077bd0 prev 0x7fb745077400 <line:19:1, line:23:1> line:19:6 used bar 'void (int)'
+| |-ParmVarDecl 0x7fb745077b48 <col:11, col:15> col:15 used i 'int'
+| `-CompoundStmt 0x7fb745077e20 <line:20:1, line:23:1>
+|   `-IfStmt 0x7fb745077de8 <line:21:3, line:22:14>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-CallExpr 0x7fb745077ce0 <line:21:7, col:12> 'int'
+|     | `-ImplicitCastExpr 0x7fb745077cc8 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fb745077c70 <col:7> 'int (void)' Function 0x7fb7450775a8 'baz' 'int (void)'
+|     |-CallExpr 0x7fb745077da0 <line:22:5, col:14> 'void'
+|     | |-ImplicitCastExpr 0x7fb745077d88 <col:5> 'void (*)()' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7fb745077d08 <col:5> 'void ()' Function 0x7fb745077688 'noret1' 'void ()'
+|     | `-ImplicitCastExpr 0x7fb745077dd0 <col:13> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fb745077d30 <col:13> 'int' lvalue ParmVar 0x7fb745077b48 'i' 'int'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fb745077ee0 <line:25:1, line:29:1> line:25:6 foo 'void (int)'
+  |-ParmVarDecl 0x7fb745077e58 <col:11, col:15> col:15 used i 'int'
+  `-CompoundStmt 0x7fb745078208 <line:26:1, line:29:1>
+    |-IfStmt 0x7fb745078090 <line:27:3, col:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fb745077fc0 <col:7, col:8> 'int' prefix '~'
+    | | `-ImplicitCastExpr 0x7fb745077fa8 <col:8> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fb745077f80 <col:8> 'int' lvalue ParmVar 0x7fb745077e58 'i' 'int'
+    | |-CallExpr 0x7fb745078048 <col:11, col:17> 'void'
+    | | |-ImplicitCastExpr 0x7fb745078030 <col:11> 'void (*)(int)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fb745077fe0 <col:11> 'void (int)' Function 0x7fb745077bd0 'bar' 'void (int)'
+    | | `-ImplicitCastExpr 0x7fb745078078 <col:16> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fb745078008 <col:16> 'int' lvalue ParmVar 0x7fb745077e58 'i' 'int'
+    | `-<<<NULL>>>
+    `-ConditionalOperator 0x7fb7450781d8 <line:28:3, col:27> 'void'
+      |-ImplicitCastExpr 0x7fb7450781c0 <col:3> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fb7450780c8 <col:3> 'int' lvalue ParmVar 0x7fb745077e58 'i' 'int'
+      |-CallExpr 0x7fb745078130 <col:7, col:15> 'void'
+      | `-ImplicitCastExpr 0x7fb745078118 <col:7> 'void (*)()' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fb7450780f0 <col:7> 'void ()' Function 0x7fb745077688 'noret1' 'void ()'
+      `-CallExpr 0x7fb745078198 <col:19, col:27> 'void'
+        `-ImplicitCastExpr 0x7fb745078180 <col:19> 'void (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fb745078158 <col:19> 'void ()' Function 0x7fb7450779e8 'noret2' 'void ()'

@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fd36f01d2d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd36f01d820 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd36f01d540 '__int128'
+|-TypedefDecl 0x7fd36f01d890 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd36f01d560 'unsigned __int128'
+|-TypedefDecl 0x7fd36f01db68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd36f01d970 'struct __NSConstantString_tag'
+|   `-Record 0x7fd36f01d8e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd36f01dc00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd36f01dbc0 'char *'
+|   `-BuiltinType 0x7fd36f01d360 'char'
+|-TypedefDecl 0x7fd36f01dec8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd36f01de70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd36f01dce0 'struct __va_list_tag'
+|     `-Record 0x7fd36f01dc58 '__va_list_tag'
+|-RecordDecl 0x7fd36f01df20 <c_files/pr70155-2.c:4:1, line:7:1> line:4:8 struct foo definition
+| |-PackedAttr 0x7fd36f066248 <line:7:18>
+| `-FieldDecl 0x7fd36f066200 <line:6:3, col:12> col:12 i '__int128'
+|-VarDecl 0x7fd36f0662e0 <line:9:1, col:19> col:19 used x 'struct foo':'struct foo' extern
+|-VarDecl 0x7fd36f0663a0 <col:1, col:22> col:22 used y 'struct foo':'struct foo' extern
+`-FunctionDecl 0x7fd36f0664e0 <line:11:1, line:15:1> line:12:1 foo 'void (void)'
+  `-CompoundStmt 0x7fd36f066608 <line:13:1, line:15:1>
+    `-BinaryOperator 0x7fd36f0665e0 <line:14:3, col:7> 'struct foo':'struct foo' '='
+      |-DeclRefExpr 0x7fd36f066578 <col:3> 'struct foo':'struct foo' lvalue Var 0x7fd36f0662e0 'x' 'struct foo':'struct foo'
+      `-ImplicitCastExpr 0x7fd36f0665c8 <col:7> 'struct foo':'struct foo' <LValueToRValue>
+        `-DeclRefExpr 0x7fd36f0665a0 <col:7> 'struct foo':'struct foo' lvalue Var 0x7fd36f0663a0 'y' 'struct foo':'struct foo'

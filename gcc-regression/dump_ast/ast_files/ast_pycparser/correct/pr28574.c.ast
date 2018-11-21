@@ -1,0 +1,202 @@
+FileAST: 
+  Typedef: yasm_module_type, [], ['typedef']
+    TypeDecl: yasm_module_type, []
+      Enum: yasm_module_type
+        EnumeratorList: 
+          Enumerator: YASM_MODULE_ARCH
+            Constant: int, 0
+          Enumerator: YASM_MODULE_DBGFMT
+          Enumerator: YASM_MODULE_OBJFMT
+          Enumerator: YASM_MODULE_LISTFMT
+          Enumerator: YASM_MODULE_OPTIMIZER
+  Decl: None, [], [], []
+    Struct: yasm_module
+      Decl: name, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: name, ['const']
+            IdentifierType: ['char']
+  Typedef: yasm_arch_module, [], ['typedef']
+    TypeDecl: yasm_arch_module, []
+      Struct: yasm_module
+  Typedef: yasm_dbgfmt_module, [], ['typedef']
+    TypeDecl: yasm_dbgfmt_module, []
+      Struct: yasm_module
+  Typedef: yasm_objfmt_module, [], ['typedef']
+    TypeDecl: yasm_objfmt_module, []
+      Struct: yasm_module
+  Typedef: yasm_listfmt_module, [], ['typedef']
+    TypeDecl: yasm_listfmt_module, []
+      Struct: yasm_module
+  Typedef: yasm_optimizer_module, [], ['typedef']
+    TypeDecl: yasm_optimizer_module, []
+      Struct: yasm_module
+  Typedef: module, [], ['typedef']
+    TypeDecl: module, []
+      Struct: module
+        Decl: data, [], [], []
+          PtrDecl: []
+            TypeDecl: data, []
+              IdentifierType: ['void']
+  Decl: module_types, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: module_types, []
+        Struct: None
+          Decl: m, [], [], []
+            PtrDecl: []
+              TypeDecl: m, []
+                IdentifierType: ['module']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+    InitList: 
+      InitList: 
+  FuncDef: 
+    Decl: yasm_list_modules, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: type, [], [], []
+            TypeDecl: type, []
+              IdentifierType: ['yasm_module_type']
+          Decl: printfunc, [], [], []
+            PtrDecl: []
+              FuncDecl: 
+                ParamList: 
+                  Decl: name, ['const'], [], []
+                    PtrDecl: []
+                      TypeDecl: name, ['const']
+                        IdentifierType: ['char']
+                TypeDecl: printfunc, []
+                  IdentifierType: ['void']
+        TypeDecl: yasm_list_modules, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: modules, [], [], []
+        PtrDecl: []
+          TypeDecl: modules, []
+            IdentifierType: ['module']
+        StructRef: .
+          ArrayRef: 
+            ID: module_types
+            ID: type
+          ID: m
+      Decl: arch, [], [], []
+        PtrDecl: []
+          TypeDecl: arch, []
+            IdentifierType: ['yasm_arch_module']
+      Decl: dbgfmt, [], [], []
+        PtrDecl: []
+          TypeDecl: dbgfmt, []
+            IdentifierType: ['yasm_dbgfmt_module']
+      Decl: objfmt, [], [], []
+        PtrDecl: []
+          TypeDecl: objfmt, []
+            IdentifierType: ['yasm_objfmt_module']
+      Decl: listfmt, [], [], []
+        PtrDecl: []
+          TypeDecl: listfmt, []
+            IdentifierType: ['yasm_listfmt_module']
+      Decl: optimizer, [], [], []
+        PtrDecl: []
+          TypeDecl: optimizer, []
+            IdentifierType: ['yasm_optimizer_module']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 2
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Switch: 
+            ID: type
+            Compound: 
+              Case: 
+                ID: YASM_MODULE_ARCH
+                Assignment: =
+                  ID: arch
+                  StructRef: .
+                    ArrayRef: 
+                      ID: modules
+                      ID: i
+                    ID: data
+                FuncCall: 
+                  ID: printfunc
+                  ExprList: 
+                    StructRef: ->
+                      ID: arch
+                      ID: name
+                Break: 
+              Case: 
+                ID: YASM_MODULE_DBGFMT
+                Assignment: =
+                  ID: dbgfmt
+                  StructRef: .
+                    ArrayRef: 
+                      ID: modules
+                      ID: i
+                    ID: data
+                FuncCall: 
+                  ID: printfunc
+                  ExprList: 
+                    StructRef: ->
+                      ID: dbgfmt
+                      ID: name
+                Break: 
+              Case: 
+                ID: YASM_MODULE_OBJFMT
+                Assignment: =
+                  ID: objfmt
+                  StructRef: .
+                    ArrayRef: 
+                      ID: modules
+                      ID: i
+                    ID: data
+                FuncCall: 
+                  ID: printfunc
+                  ExprList: 
+                    StructRef: ->
+                      ID: objfmt
+                      ID: name
+                Break: 
+              Case: 
+                ID: YASM_MODULE_LISTFMT
+                Assignment: =
+                  ID: listfmt
+                  StructRef: .
+                    ArrayRef: 
+                      ID: modules
+                      ID: i
+                    ID: data
+                FuncCall: 
+                  ID: printfunc
+                  ExprList: 
+                    StructRef: ->
+                      ID: listfmt
+                      ID: name
+                Break: 
+              Case: 
+                ID: YASM_MODULE_OPTIMIZER
+                Assignment: =
+                  ID: optimizer
+                  StructRef: .
+                    ArrayRef: 
+                      ID: modules
+                      ID: i
+                    ID: data
+                FuncCall: 
+                  ID: printfunc
+                  ExprList: 
+                    StructRef: ->
+                      ID: optimizer
+                      ID: name
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 

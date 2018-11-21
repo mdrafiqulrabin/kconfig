@@ -1,0 +1,52 @@
+FileAST: 
+  Typedef: tick_t, [], ['typedef']
+    TypeDecl: tick_t, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: foo, []
+        IdentifierType: ['int']
+  Decl: tick, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: tick, []
+        IdentifierType: ['tick_t']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: st, [], [], []
+        TypeDecl: st, []
+          Struct: None
+            Decl: ticks, [], [], []
+              TypeDecl: ticks, []
+                IdentifierType: ['tick_t']
+      Assignment: =
+        StructRef: .
+          ID: st
+          ID: ticks
+        FuncCall: 
+          ID: tick
+      FuncCall: 
+        ID: foo
+      Return: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['double']
+          StructRef: .
+            ID: st
+            ID: ticks

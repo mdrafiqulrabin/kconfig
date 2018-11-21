@@ -1,0 +1,81 @@
+FileAST: 
+  Decl: F, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: ty, [], [], []
+          PtrDecl: []
+            TypeDecl: ty, []
+              IdentifierType: ['short']
+      TypeDecl: F, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: V, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: cmd, [], [], []
+            TypeDecl: cmd, []
+              IdentifierType: ['char']
+        TypeDecl: V, []
+          IdentifierType: ['short']
+    Compound: 
+      Decl: st256, [], ['static'], []
+        TypeDecl: st256, []
+          IdentifierType: ['short']
+      Decl: stc, [], ['static'], []
+        TypeDecl: stc, []
+          IdentifierType: ['short']
+      Decl: sc, [], [], []
+        TypeDecl: sc, []
+          IdentifierType: ['short']
+      Decl: scd, [], [], []
+        TypeDecl: scd, []
+          IdentifierType: ['short']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['short']
+      FuncCall: 
+        ID: F
+        ExprList: 
+          UnaryOp: &
+            ID: sc
+      If: 
+        BinaryOp: ==
+          ID: cmd
+          Constant: int, 4
+        Compound: 
+          Assignment: =
+            ID: st256
+            Constant: int, 0
+          Assignment: =
+            ID: d
+            Constant: int, 0
+        Compound: 
+          Assignment: =
+            ID: scd
+            BinaryOp: -
+              ID: sc
+              ID: stc
+          If: 
+            BinaryOp: <
+              ID: scd
+              UnaryOp: -
+                Constant: int, 128
+            Compound: 
+              Assignment: +=
+                ID: scd
+                Constant: int, 256
+          Assignment: =
+            ID: d
+            BinaryOp: >>
+              ID: st256
+              Constant: int, 8
+          Assignment: -=
+            ID: st256
+            BinaryOp: <<
+              ID: d
+              Constant: int, 8
+      Assignment: =
+        ID: stc
+        ID: sc
+      Return: 
+        ID: d

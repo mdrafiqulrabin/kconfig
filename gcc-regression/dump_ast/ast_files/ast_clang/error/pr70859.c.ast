@@ -1,0 +1,238 @@
+c_files/pr70859.c:12:7: error: requested alignment is not a power of 2
+  p = __builtin_alloca_with_align (n, 6); /* { dg-error "39:must be a constant integer" } */
+      ^                               ~
+c_files/pr70859.c:14:28: error: floating point classification requires argument of floating point type (passed in 'int')
+  r += __builtin_isfinite (0); /* { dg-error "28:non-floating-point argument in call" } */
+                           ^
+c_files/pr70859.c:15:25: error: floating point classification requires argument of floating point type (passed in 'int')
+  r += __builtin_isinf (0); /* { dg-error "25:non-floating-point argument in call" } */
+                        ^
+c_files/pr70859.c:16:30: error: floating point classification requires argument of floating point type (passed in 'int')
+  r += __builtin_isinf_sign (0); /* { dg-error "30:non-floating-point argument in call" } */
+                             ^
+c_files/pr70859.c:17:25: error: floating point classification requires argument of floating point type (passed in 'int')
+  r += __builtin_isnan (0); /* { dg-error "25:non-floating-point argument in call" } */
+                        ^
+c_files/pr70859.c:18:28: error: floating point classification requires argument of floating point type (passed in 'int')
+  r += __builtin_isnormal (0); /* { dg-error "28:non-floating-point argument in call" } */
+                           ^
+c_files/pr70859.c:21:29: error: ordered compare requires two args of floating point type ('int' and 'int')
+  r += __builtin_isgreater (0, 0); /* { dg-error "8:non-floating-point arguments in call to function" } */
+                            ^~~~
+c_files/pr70859.c:22:34: error: ordered compare requires two args of floating point type ('int' and 'int')
+  r += __builtin_isgreaterequal (0, 0); /* { dg-error "8:non-floating-point arguments in call to function" } */
+                                 ^~~~
+c_files/pr70859.c:23:26: error: ordered compare requires two args of floating point type ('int' and 'int')
+  r += __builtin_isless (0, 0); /* { dg-error "8:non-floating-point arguments in call to function" } */
+                         ^~~~
+c_files/pr70859.c:24:31: error: ordered compare requires two args of floating point type ('int' and 'int')
+  r += __builtin_islessequal (0, 0); /* { dg-error "8:non-floating-point arguments in call to function" } */
+                              ^~~~
+c_files/pr70859.c:25:33: error: ordered compare requires two args of floating point type ('int' and 'int')
+  r += __builtin_islessgreater (0, 0); /* { dg-error "8:non-floating-point arguments in call to function" } */
+                                ^~~~
+c_files/pr70859.c:26:31: error: ordered compare requires two args of floating point type ('int' and 'int')
+  r += __builtin_isunordered (0, 0); /* { dg-error "8:non-floating-point arguments in call to function" } */
+                              ^~~~
+c_files/pr70859.c:28:45: error: floating point classification requires argument of floating point type (passed in 'int')
+  r += __builtin_fpclassify (1, 2, n, 4, 5, n); /* { dg-error "36:non-const integer argument 3 in call" } */
+                                            ^
+c_files/pr70859.c:29:45: error: floating point classification requires argument of floating point type (passed in 'int')
+  r += __builtin_fpclassify (1, 2, 3, 4, 5, 6); /* { dg-error "45:non-floating-point argument in call" } */
+                                            ^
+c_files/pr70859.c:31:7: error: argument to '__builtin_assume_aligned' must be a constant integer
+  d = __builtin_assume_aligned (p, n, p); /* { dg-error "39:non-integer argument 3 in call" } */
+      ^                            ~
+c_files/pr70859.c:33:34: error: operand argument to overflow builtin must be an integer ('double' invalid)
+  b = __builtin_add_overflow (n, *d, &r); /* { dg-error "34:argument 2 in call to function" } */
+                                 ^~
+c_files/pr70859.c:34:37: error: result argument to overflow builtin must be a pointer to a non-const integer ('double *' invalid)
+  b = __builtin_add_overflow (n, 5, d); /* { dg-error "37:argument 3 in call" } */
+                                    ^
+c_files/pr70859.c:35:34: error: operand argument to overflow builtin must be an integer ('double' invalid)
+  b = __builtin_sub_overflow (n, *d, &r); /* { dg-error "34:argument 2 in call to function" } */
+                                 ^~
+c_files/pr70859.c:36:37: error: result argument to overflow builtin must be a pointer to a non-const integer ('double *' invalid)
+  b = __builtin_sub_overflow (n, 5, d); /* { dg-error "37:argument 3 in call" } */
+                                    ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+TranslationUnitDecl 0x7feb840264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feb84026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feb84026740 '__int128'
+|-TypedefDecl 0x7feb84026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feb84026760 'unsigned __int128'
+|-TypedefDecl 0x7feb84026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feb84026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7feb84026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feb84026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feb84026dc0 'char *'
+|   `-BuiltinType 0x7feb84026560 'char'
+|-TypedefDecl 0x7feb840270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feb84027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feb84026ee0 'struct __va_list_tag'
+|     `-Record 0x7feb84026e58 '__va_list_tag'
+|-VarDecl 0x7feb84027138 <c_files/pr70859.c:4:1, col:14> col:14 used p 'void *' static
+|-VarDecl 0x7feb84825a40 <line:5:1, col:16> col:16 used d 'double *' static
+|-VarDecl 0x7feb84825ab8 <line:6:1, col:12> col:12 used r 'int' static
+|-VarDecl 0x7feb84825b28 <line:7:15, col:28> col:28 used b '_Bool' static
+|-FunctionDecl 0x7feb84825c60 <line:9:1, line:39:1> line:10:1 fn0 'void (int)'
+| |-ParmVarDecl 0x7feb84825ba0 <col:6, col:10> col:10 used n 'int'
+| `-CompoundStmt 0x7feb85000588 <line:11:1, line:39:1>
+|   `-CompoundAssignOperator 0x7feb84826ed0 <line:19:3, col:28> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|     |-DeclRefExpr 0x7feb84826d28 <col:3> 'int' lvalue Var 0x7feb84825ab8 'r' 'int'
+|     `-CallExpr 0x7feb84826ea0 <col:8, col:28> 'int'
+|       |-ImplicitCastExpr 0x7feb84826e88 <col:8> 'int (*)()' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7feb84826e40 <col:8> '<builtin fn type>' Function 0x7feb84826d50 '__builtin_signbit' 'int ()'
+|       `-IntegerLiteral 0x7feb84826e68 <col:27> 'int' 0
+|-FunctionDecl 0x7feb84825d70 <line:12:7> col:7 implicit used __builtin_alloca_with_align 'void *(unsigned long, unsigned long)' extern
+| |-ParmVarDecl 0x7feb84825e08 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7feb84825e68 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7feb84825ed8 <col:7> Implicit
+|-FunctionDecl 0x7feb848260c8 <line:14:8> col:8 implicit used __builtin_isfinite 'int ()' extern
+| |-NoThrowAttr 0x7feb84826160 <col:8> Implicit
+| `-ConstAttr 0x7feb848261a8 <col:8> Implicit
+|-FunctionDecl 0x7feb84826648 <line:15:8> col:8 implicit used __builtin_isinf 'int ()' extern
+| |-NoThrowAttr 0x7feb848266e0 <col:8> Implicit
+| `-ConstAttr 0x7feb84826728 <col:8> Implicit
+|-FunctionDecl 0x7feb848267f0 <line:16:8> col:8 implicit used __builtin_isinf_sign 'int ()' extern
+| |-NoThrowAttr 0x7feb84826888 <col:8> Implicit
+| `-ConstAttr 0x7feb848268d0 <col:8> Implicit
+|-FunctionDecl 0x7feb84826a00 <line:17:8> col:8 implicit used __builtin_isnan 'int ()' extern
+| |-NoThrowAttr 0x7feb84826a98 <col:8> Implicit
+| `-ConstAttr 0x7feb84826ae0 <col:8> Implicit
+|-FunctionDecl 0x7feb84826ba8 <line:18:8> col:8 implicit used __builtin_isnormal 'int ()' extern
+| |-NoThrowAttr 0x7feb84826c40 <col:8> Implicit
+| `-ConstAttr 0x7feb84826c88 <col:8> Implicit
+|-FunctionDecl 0x7feb84826d50 <line:19:8> col:8 implicit used __builtin_signbit 'int ()' extern
+| |-NoThrowAttr 0x7feb84826de8 <col:8> Implicit
+| `-ConstAttr 0x7feb84826e30 <col:8> Implicit
+|-FunctionDecl 0x7feb84826f30 <line:21:8> col:8 implicit used __builtin_isgreater 'int ()' extern
+| |-NoThrowAttr 0x7feb84826fc8 <col:8> Implicit
+| `-ConstAttr 0x7feb84827010 <col:8> Implicit
+|-FunctionDecl 0x7feb84827100 <line:22:8> col:8 implicit used __builtin_isgreaterequal 'int ()' extern
+| |-NoThrowAttr 0x7feb84827198 <col:8> Implicit
+| `-ConstAttr 0x7feb848271e0 <col:8> Implicit
+|-FunctionDecl 0x7feb848272d0 <line:23:8> col:8 implicit used __builtin_isless 'int ()' extern
+| |-NoThrowAttr 0x7feb84827368 <col:8> Implicit
+| `-ConstAttr 0x7feb848273b0 <col:8> Implicit
+|-FunctionDecl 0x7feb848274a0 <line:24:8> col:8 implicit used __builtin_islessequal 'int ()' extern
+| |-NoThrowAttr 0x7feb84827538 <col:8> Implicit
+| `-ConstAttr 0x7feb84827580 <col:8> Implicit
+|-FunctionDecl 0x7feb84827670 <line:25:8> col:8 implicit used __builtin_islessgreater 'int ()' extern
+| |-NoThrowAttr 0x7feb84827708 <col:8> Implicit
+| `-ConstAttr 0x7feb84827750 <col:8> Implicit
+|-FunctionDecl 0x7feb84827840 <line:26:8> col:8 implicit used __builtin_isunordered 'int ()' extern
+| |-NoThrowAttr 0x7feb848278d8 <col:8> Implicit
+| `-ConstAttr 0x7feb84827920 <col:8> Implicit
+|-FunctionDecl 0x7feb8401b288 <line:28:8> col:8 implicit used __builtin_fpclassify 'int (int, int, int, int, int, ...)' extern
+| |-ParmVarDecl 0x7feb8401b320 <<invalid sloc>> <invalid sloc> 'int'
+| |-ParmVarDecl 0x7feb8401b380 <<invalid sloc>> <invalid sloc> 'int'
+| |-ParmVarDecl 0x7feb8401b3e0 <<invalid sloc>> <invalid sloc> 'int'
+| |-ParmVarDecl 0x7feb8401b440 <<invalid sloc>> <invalid sloc> 'int'
+| |-ParmVarDecl 0x7feb8401b4a0 <<invalid sloc>> <invalid sloc> 'int'
+| |-NoThrowAttr 0x7feb8401b528 <col:8> Implicit
+| `-ConstAttr 0x7feb8401b570 <col:8> Implicit
+|-FunctionDecl 0x7feb8401b960 <line:31:7> col:7 implicit used __builtin_assume_aligned 'void *(const void *, unsigned long, ...)' extern
+| |-ParmVarDecl 0x7feb8401b9f8 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7feb8401ba58 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-NoThrowAttr 0x7feb8401bac8 <col:7> Implicit
+| `-ConstAttr 0x7feb8401bb10 <col:7> Implicit
+|-FunctionDecl 0x7feb8401bd08 <line:33:7> col:7 implicit used __builtin_add_overflow 'void ()' extern
+| `-NoThrowAttr 0x7feb8401bda0 <col:7> Implicit
+|-FunctionDecl 0x7feb8401c0d0 <line:35:7> col:7 implicit used __builtin_sub_overflow 'void ()' extern
+| `-NoThrowAttr 0x7feb8401c168 <col:7> Implicit
+|-FunctionDecl 0x7feb85000240 <line:37:7> col:7 implicit used __builtin_mul_overflow 'void ()' extern
+| `-NoThrowAttr 0x7feb850002d8 <col:7> Implicit
+|-FunctionDecl 0x7feb85000678 <line:41:1, line:69:1> line:42:1 fn1 'int (void)'
+| `-CompoundStmt 0x7feb85001990 <line:43:1, line:69:1>
+|   |-IfStmt 0x7feb850008c0 <line:44:3, line:45:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7feb850008a0 <<invalid sloc>> '_Bool'
+|   | |-ReturnStmt 0x7feb85000888 <col:5, col:12>
+|   | | `-IntegerLiteral 0x7feb85000868 <col:12> 'int' 0
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7feb85000a08 <line:46:3, line:47:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7feb850009e8 <<invalid sloc>> '_Bool'
+|   | |-ReturnStmt 0x7feb850009d0 <col:5, col:12>
+|   | | `-IntegerLiteral 0x7feb850009b0 <col:12> 'int' 1
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7feb85000b00 <line:48:3, line:49:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7feb85000ae0 <<invalid sloc>> '_Bool'
+|   | |-ReturnStmt 0x7feb85000ac8 <col:5, col:12>
+|   | | `-IntegerLiteral 0x7feb85000aa8 <col:12> 'int' 3
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7feb85000c48 <line:50:3, line:51:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7feb85000c28 <<invalid sloc>> '_Bool'
+|   | |-ReturnStmt 0x7feb85000c10 <col:5, col:12>
+|   | | `-IntegerLiteral 0x7feb85000bf0 <col:12> 'int' 4
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7feb85000d68 <line:52:3, line:53:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7feb85000d48 <<invalid sloc>> '_Bool'
+|   | |-ReturnStmt 0x7feb85000d30 <col:5, col:12>
+|   | | `-IntegerLiteral 0x7feb85000d10 <col:12> 'int' 5
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7feb85000ed8 <line:54:3, line:55:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7feb85000eb8 <<invalid sloc>> '_Bool'
+|   | |-ReturnStmt 0x7feb85000ea0 <col:5, col:12>
+|   | | `-IntegerLiteral 0x7feb85000e80 <col:12> 'int' 6
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7feb850010a8 <line:56:3, line:57:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7feb85001088 <<invalid sloc>> '_Bool'
+|   | |-ReturnStmt 0x7feb85001070 <col:5, col:12>
+|   | | `-IntegerLiteral 0x7feb85001050 <col:12> 'int' 7
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7feb850012d8 <line:58:3, line:59:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7feb850012b8 <<invalid sloc>> '_Bool'
+|   | |-ReturnStmt 0x7feb850012a0 <col:5, col:12>
+|   | | `-IntegerLiteral 0x7feb85001280 <col:12> 'int' 8
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7feb85001400 <line:60:3, line:61:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7feb850013e0 <<invalid sloc>> '_Bool'
+|   | |-ReturnStmt 0x7feb850013c8 <col:5, col:12>
+|   | | `-IntegerLiteral 0x7feb850013a8 <col:12> 'int' 9
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7feb85001648 <line:62:3, line:63:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7feb85001628 <<invalid sloc>> '_Bool'
+|   | |-ReturnStmt 0x7feb85001610 <col:5, col:12>
+|   | | `-IntegerLiteral 0x7feb850015f0 <col:12> 'int' 10
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7feb85001740 <line:64:3, line:65:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7feb85001720 <<invalid sloc>> '_Bool'
+|   | |-ReturnStmt 0x7feb85001708 <col:5, col:12>
+|   | | `-IntegerLiteral 0x7feb850016e8 <col:12> 'int' 11
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7feb85001900 <line:66:3, line:67:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7feb850018e0 <<invalid sloc>> '_Bool'
+|   | |-ReturnStmt 0x7feb850018c8 <col:5, col:12>
+|   | | `-IntegerLiteral 0x7feb850018a8 <col:12> 'int' 12
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7feb85001978 <line:68:3, col:11>
+|     `-UnaryOperator 0x7feb85001958 <col:10, col:11> 'int' prefix '-'
+|       `-IntegerLiteral 0x7feb85001938 <col:11> 'int' 1
+`-FunctionDecl 0x7feb85000710 <line:44:7> col:7 implicit used __builtin_constant_p 'int ()' extern
+  |-NoThrowAttr 0x7feb850007a8 <col:7> Implicit
+  `-ConstAttr 0x7feb850007f0 <col:7> Implicit

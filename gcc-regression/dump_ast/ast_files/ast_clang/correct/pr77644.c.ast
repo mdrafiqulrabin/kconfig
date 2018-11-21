@@ -1,0 +1,585 @@
+TranslationUnitDecl 0x7f98cb0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f98cb026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f98cb026740 '__int128'
+|-TypedefDecl 0x7f98cb026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f98cb026760 'unsigned __int128'
+|-TypedefDecl 0x7f98cb026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f98cb026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f98cb026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f98cb026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f98cb026dc0 'char *'
+|   `-BuiltinType 0x7f98cb026560 'char'
+|-TypedefDecl 0x7f98cb0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f98cb027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f98cb026ee0 'struct __va_list_tag'
+|     `-Record 0x7f98cb026e58 '__va_list_tag'
+|-FunctionDecl 0x7f98cb82a0d8 <c_files/pr77644.c:5:37, line:11:23> <scratch space>:3:1 f_f1 'int (float, float)'
+| |-ParmVarDecl 0x7f98cb027138 <c_files/pr77644.c:22:9, line:6:17> col:17 x 'float'
+| |-ParmVarDecl 0x7f98cb82a000 <line:22:9, line:6:25> col:25 y 'float'
+| `-CompoundStmt 0x7f98cb82a8b0 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb82a2b8 <line:22:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb82a210 parent 0x7f98cb0264d0 <line:22:9, line:8:17> <scratch space>:4:1 used gen_f1 'float ()'
+|   |-DeclStmt 0x7f98cb82a630 <c_files/pr77644.c:22:9, line:9:49>
+|   | `-VarDecl 0x7f98cb82a2e8 <line:22:9, line:9:48> col:8 used xs 'float' cinit
+|   |   `-CallExpr 0x7f98cb82a600 <<scratch space>:5:1, c_files/pr77644.c:9:48> 'float'
+|   |     |-ImplicitCastExpr 0x7f98cb82a5e8 <<scratch space>:5:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82a4e0 <col:1> '<builtin fn type>' Function 0x7f98cb82a388 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7f98cb82a598 <c_files/pr77644.c:9:36, col:47> 'float'
+|   |       `-CallExpr 0x7f98cb82a570 <<scratch space>:6:1, c_files/pr77644.c:9:46> 'float'
+|   |         `-ImplicitCastExpr 0x7f98cb82a558 <<scratch space>:6:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82a508 <col:1> 'float ()' Function 0x7f98cb82a210 'gen_f1' 'float ()'
+|   |-DeclStmt 0x7f98cb82a7b8 <c_files/pr77644.c:22:9, line:10:49>
+|   | `-VarDecl 0x7f98cb82a660 <line:22:9, line:10:48> col:8 used xy 'float' cinit
+|   |   `-CallExpr 0x7f98cb82a788 <<scratch space>:7:1, c_files/pr77644.c:10:48> 'float'
+|   |     |-ImplicitCastExpr 0x7f98cb82a770 <<scratch space>:7:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82a6c0 <col:1> '<builtin fn type>' Function 0x7f98cb82a388 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7f98cb82a750 <c_files/pr77644.c:10:36, col:47> 'float'
+|   |       `-CallExpr 0x7f98cb82a728 <<scratch space>:8:1, c_files/pr77644.c:10:46> 'float'
+|   |         `-ImplicitCastExpr 0x7f98cb82a710 <<scratch space>:8:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82a6e8 <col:1> 'float ()' Function 0x7f98cb82a210 'gen_f1' 'float ()'
+|   `-ReturnStmt 0x7f98cb82a898 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb82a878 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb82a850 <col:11, col:18> 'int' '<'
+|         |-ImplicitCastExpr 0x7f98cb82a820 <col:11> 'float' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb82a7d0 <col:11> 'float' lvalue Var 0x7f98cb82a2e8 'xs' 'float'
+|         `-ImplicitCastExpr 0x7f98cb82a838 <col:18> 'float' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb82a7f8 <col:18> 'float' lvalue Var 0x7f98cb82a660 'xy' 'float'
+|-FunctionDecl 0x7f98cb82a388 <<scratch space>:5:1> col:1 implicit used __builtin_sqrtf 'float (float)' extern
+| |-ParmVarDecl 0x7f98cb82a420 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7f98cb82a488 <col:1> Implicit
+| `-ConstAttr 0x7f98cb82a4d0 <col:1> Implicit
+|-FunctionDecl 0x7f98cb82aa10 <c_files/pr77644.c:5:37, line:11:23> <scratch space>:10:1 f_f2 'int (float, float)'
+| |-ParmVarDecl 0x7f98cb82a900 <c_files/pr77644.c:22:9, line:6:17> col:17 x 'float'
+| |-ParmVarDecl 0x7f98cb82a978 <line:22:9, line:6:25> col:25 y 'float'
+| `-CompoundStmt 0x7f98cb82af90 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb82ab88 <line:22:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb82aae0 parent 0x7f98cb0264d0 <line:22:9, line:8:17> <scratch space>:11:1 used gen_f2 'float ()'
+|   |-DeclStmt 0x7f98cb82ad10 <c_files/pr77644.c:22:9, line:9:49>
+|   | `-VarDecl 0x7f98cb82abb8 <line:22:9, line:9:48> col:8 used xs 'float' cinit
+|   |   `-CallExpr 0x7f98cb82ace0 <<scratch space>:12:1, c_files/pr77644.c:9:48> 'float'
+|   |     |-ImplicitCastExpr 0x7f98cb82acc8 <<scratch space>:12:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82ac18 <col:1> '<builtin fn type>' Function 0x7f98cb82a388 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7f98cb82aca8 <c_files/pr77644.c:9:36, col:47> 'float'
+|   |       `-CallExpr 0x7f98cb82ac80 <<scratch space>:13:1, c_files/pr77644.c:9:46> 'float'
+|   |         `-ImplicitCastExpr 0x7f98cb82ac68 <<scratch space>:13:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82ac40 <col:1> 'float ()' Function 0x7f98cb82aae0 'gen_f2' 'float ()'
+|   |-DeclStmt 0x7f98cb82ae98 <c_files/pr77644.c:22:9, line:10:49>
+|   | `-VarDecl 0x7f98cb82ad40 <line:22:9, line:10:48> col:8 used xy 'float' cinit
+|   |   `-CallExpr 0x7f98cb82ae68 <<scratch space>:14:1, c_files/pr77644.c:10:48> 'float'
+|   |     |-ImplicitCastExpr 0x7f98cb82ae50 <<scratch space>:14:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82ada0 <col:1> '<builtin fn type>' Function 0x7f98cb82a388 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7f98cb82ae30 <c_files/pr77644.c:10:36, col:47> 'float'
+|   |       `-CallExpr 0x7f98cb82ae08 <<scratch space>:15:1, c_files/pr77644.c:10:46> 'float'
+|   |         `-ImplicitCastExpr 0x7f98cb82adf0 <<scratch space>:15:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82adc8 <col:1> 'float ()' Function 0x7f98cb82aae0 'gen_f2' 'float ()'
+|   `-ReturnStmt 0x7f98cb82af78 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb82af58 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb82af30 <col:11, col:18> 'int' '<='
+|         |-ImplicitCastExpr 0x7f98cb82af00 <col:11> 'float' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb82aeb0 <col:11> 'float' lvalue Var 0x7f98cb82abb8 'xs' 'float'
+|         `-ImplicitCastExpr 0x7f98cb82af18 <col:18> 'float' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb82aed8 <col:18> 'float' lvalue Var 0x7f98cb82ad40 'xy' 'float'
+|-FunctionDecl 0x7f98cb82b110 <line:5:37, line:11:23> <scratch space>:17:1 f_f3 'int (float, float)'
+| |-ParmVarDecl 0x7f98cb82b000 <c_files/pr77644.c:22:9, line:6:17> col:17 x 'float'
+| |-ParmVarDecl 0x7f98cb82b078 <line:22:9, line:6:25> col:25 y 'float'
+| `-CompoundStmt 0x7f98cb82b690 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb82b288 <line:22:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb82b1e0 parent 0x7f98cb0264d0 <line:22:9, line:8:17> <scratch space>:18:1 used gen_f3 'float ()'
+|   |-DeclStmt 0x7f98cb82b410 <c_files/pr77644.c:22:9, line:9:49>
+|   | `-VarDecl 0x7f98cb82b2b8 <line:22:9, line:9:48> col:8 used xs 'float' cinit
+|   |   `-CallExpr 0x7f98cb82b3e0 <<scratch space>:19:1, c_files/pr77644.c:9:48> 'float'
+|   |     |-ImplicitCastExpr 0x7f98cb82b3c8 <<scratch space>:19:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82b318 <col:1> '<builtin fn type>' Function 0x7f98cb82a388 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7f98cb82b3a8 <c_files/pr77644.c:9:36, col:47> 'float'
+|   |       `-CallExpr 0x7f98cb82b380 <<scratch space>:20:1, c_files/pr77644.c:9:46> 'float'
+|   |         `-ImplicitCastExpr 0x7f98cb82b368 <<scratch space>:20:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82b340 <col:1> 'float ()' Function 0x7f98cb82b1e0 'gen_f3' 'float ()'
+|   |-DeclStmt 0x7f98cb82b598 <c_files/pr77644.c:22:9, line:10:49>
+|   | `-VarDecl 0x7f98cb82b440 <line:22:9, line:10:48> col:8 used xy 'float' cinit
+|   |   `-CallExpr 0x7f98cb82b568 <<scratch space>:21:1, c_files/pr77644.c:10:48> 'float'
+|   |     |-ImplicitCastExpr 0x7f98cb82b550 <<scratch space>:21:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82b4a0 <col:1> '<builtin fn type>' Function 0x7f98cb82a388 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7f98cb82b530 <c_files/pr77644.c:10:36, col:47> 'float'
+|   |       `-CallExpr 0x7f98cb82b508 <<scratch space>:22:1, c_files/pr77644.c:10:46> 'float'
+|   |         `-ImplicitCastExpr 0x7f98cb82b4f0 <<scratch space>:22:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82b4c8 <col:1> 'float ()' Function 0x7f98cb82b1e0 'gen_f3' 'float ()'
+|   `-ReturnStmt 0x7f98cb82b678 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb82b658 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb82b630 <col:11, col:18> 'int' '>'
+|         |-ImplicitCastExpr 0x7f98cb82b600 <col:11> 'float' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb82b5b0 <col:11> 'float' lvalue Var 0x7f98cb82b2b8 'xs' 'float'
+|         `-ImplicitCastExpr 0x7f98cb82b618 <col:18> 'float' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb82b5d8 <col:18> 'float' lvalue Var 0x7f98cb82b440 'xy' 'float'
+|-FunctionDecl 0x7f98cb82b7f0 <line:5:37, line:11:23> <scratch space>:24:1 f_f4 'int (float, float)'
+| |-ParmVarDecl 0x7f98cb82b6e0 <c_files/pr77644.c:22:9, line:6:17> col:17 x 'float'
+| |-ParmVarDecl 0x7f98cb82b758 <line:22:9, line:6:25> col:25 y 'float'
+| `-CompoundStmt 0x7f98cb82bd70 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb82b968 <line:22:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb82b8c0 parent 0x7f98cb0264d0 <line:22:9, line:8:17> <scratch space>:25:1 used gen_f4 'float ()'
+|   |-DeclStmt 0x7f98cb82baf0 <c_files/pr77644.c:22:9, line:9:49>
+|   | `-VarDecl 0x7f98cb82b998 <line:22:9, line:9:48> col:8 used xs 'float' cinit
+|   |   `-CallExpr 0x7f98cb82bac0 <<scratch space>:26:1, c_files/pr77644.c:9:48> 'float'
+|   |     |-ImplicitCastExpr 0x7f98cb82baa8 <<scratch space>:26:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82b9f8 <col:1> '<builtin fn type>' Function 0x7f98cb82a388 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7f98cb82ba88 <c_files/pr77644.c:9:36, col:47> 'float'
+|   |       `-CallExpr 0x7f98cb82ba60 <<scratch space>:27:1, c_files/pr77644.c:9:46> 'float'
+|   |         `-ImplicitCastExpr 0x7f98cb82ba48 <<scratch space>:27:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82ba20 <col:1> 'float ()' Function 0x7f98cb82b8c0 'gen_f4' 'float ()'
+|   |-DeclStmt 0x7f98cb82bc78 <c_files/pr77644.c:22:9, line:10:49>
+|   | `-VarDecl 0x7f98cb82bb20 <line:22:9, line:10:48> col:8 used xy 'float' cinit
+|   |   `-CallExpr 0x7f98cb82bc48 <<scratch space>:28:1, c_files/pr77644.c:10:48> 'float'
+|   |     |-ImplicitCastExpr 0x7f98cb82bc30 <<scratch space>:28:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82bb80 <col:1> '<builtin fn type>' Function 0x7f98cb82a388 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7f98cb82bc10 <c_files/pr77644.c:10:36, col:47> 'float'
+|   |       `-CallExpr 0x7f98cb82bbe8 <<scratch space>:29:1, c_files/pr77644.c:10:46> 'float'
+|   |         `-ImplicitCastExpr 0x7f98cb82bbd0 <<scratch space>:29:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82bba8 <col:1> 'float ()' Function 0x7f98cb82b8c0 'gen_f4' 'float ()'
+|   `-ReturnStmt 0x7f98cb82bd58 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb82bd38 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb82bd10 <col:11, col:18> 'int' '>='
+|         |-ImplicitCastExpr 0x7f98cb82bce0 <col:11> 'float' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb82bc90 <col:11> 'float' lvalue Var 0x7f98cb82b998 'xs' 'float'
+|         `-ImplicitCastExpr 0x7f98cb82bcf8 <col:18> 'float' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb82bcb8 <col:18> 'float' lvalue Var 0x7f98cb82bb20 'xy' 'float'
+|-FunctionDecl 0x7f98cb82bed0 <line:5:37, line:11:23> <scratch space>:31:1 f_f5 'int (float, float)'
+| |-ParmVarDecl 0x7f98cb82bdc0 <c_files/pr77644.c:22:9, line:6:17> col:17 x 'float'
+| |-ParmVarDecl 0x7f98cb82be38 <line:22:9, line:6:25> col:25 y 'float'
+| `-CompoundStmt 0x7f98cb82d0b0 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb82cca8 <line:22:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb82cc00 parent 0x7f98cb0264d0 <line:22:9, line:8:17> <scratch space>:32:1 used gen_f5 'float ()'
+|   |-DeclStmt 0x7f98cb82ce30 <c_files/pr77644.c:22:9, line:9:49>
+|   | `-VarDecl 0x7f98cb82ccd8 <line:22:9, line:9:48> col:8 used xs 'float' cinit
+|   |   `-CallExpr 0x7f98cb82ce00 <<scratch space>:33:1, c_files/pr77644.c:9:48> 'float'
+|   |     |-ImplicitCastExpr 0x7f98cb82cde8 <<scratch space>:33:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82cd38 <col:1> '<builtin fn type>' Function 0x7f98cb82a388 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7f98cb82cdc8 <c_files/pr77644.c:9:36, col:47> 'float'
+|   |       `-CallExpr 0x7f98cb82cda0 <<scratch space>:34:1, c_files/pr77644.c:9:46> 'float'
+|   |         `-ImplicitCastExpr 0x7f98cb82cd88 <<scratch space>:34:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82cd60 <col:1> 'float ()' Function 0x7f98cb82cc00 'gen_f5' 'float ()'
+|   |-DeclStmt 0x7f98cb82cfb8 <c_files/pr77644.c:22:9, line:10:49>
+|   | `-VarDecl 0x7f98cb82ce60 <line:22:9, line:10:48> col:8 used xy 'float' cinit
+|   |   `-CallExpr 0x7f98cb82cf88 <<scratch space>:35:1, c_files/pr77644.c:10:48> 'float'
+|   |     |-ImplicitCastExpr 0x7f98cb82cf70 <<scratch space>:35:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82cec0 <col:1> '<builtin fn type>' Function 0x7f98cb82a388 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7f98cb82cf50 <c_files/pr77644.c:10:36, col:47> 'float'
+|   |       `-CallExpr 0x7f98cb82cf28 <<scratch space>:36:1, c_files/pr77644.c:10:46> 'float'
+|   |         `-ImplicitCastExpr 0x7f98cb82cf10 <<scratch space>:36:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82cee8 <col:1> 'float ()' Function 0x7f98cb82cc00 'gen_f5' 'float ()'
+|   `-ReturnStmt 0x7f98cb82d098 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb82d078 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb82d050 <col:11, col:18> 'int' '=='
+|         |-ImplicitCastExpr 0x7f98cb82d020 <col:11> 'float' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb82cfd0 <col:11> 'float' lvalue Var 0x7f98cb82ccd8 'xs' 'float'
+|         `-ImplicitCastExpr 0x7f98cb82d038 <col:18> 'float' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb82cff8 <col:18> 'float' lvalue Var 0x7f98cb82ce60 'xy' 'float'
+|-FunctionDecl 0x7f98cb82d210 <line:5:37, line:11:23> <scratch space>:38:1 f_f6 'int (float, float)'
+| |-ParmVarDecl 0x7f98cb82d100 <c_files/pr77644.c:22:9, line:6:17> col:17 x 'float'
+| |-ParmVarDecl 0x7f98cb82d178 <line:22:9, line:6:25> col:25 y 'float'
+| `-CompoundStmt 0x7f98cb82d790 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb82d388 <line:22:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb82d2e0 parent 0x7f98cb0264d0 <line:22:9, line:8:17> <scratch space>:39:1 used gen_f6 'float ()'
+|   |-DeclStmt 0x7f98cb82d510 <c_files/pr77644.c:22:9, line:9:49>
+|   | `-VarDecl 0x7f98cb82d3b8 <line:22:9, line:9:48> col:8 used xs 'float' cinit
+|   |   `-CallExpr 0x7f98cb82d4e0 <<scratch space>:40:1, c_files/pr77644.c:9:48> 'float'
+|   |     |-ImplicitCastExpr 0x7f98cb82d4c8 <<scratch space>:40:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82d418 <col:1> '<builtin fn type>' Function 0x7f98cb82a388 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7f98cb82d4a8 <c_files/pr77644.c:9:36, col:47> 'float'
+|   |       `-CallExpr 0x7f98cb82d480 <<scratch space>:41:1, c_files/pr77644.c:9:46> 'float'
+|   |         `-ImplicitCastExpr 0x7f98cb82d468 <<scratch space>:41:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82d440 <col:1> 'float ()' Function 0x7f98cb82d2e0 'gen_f6' 'float ()'
+|   |-DeclStmt 0x7f98cb82d698 <c_files/pr77644.c:22:9, line:10:49>
+|   | `-VarDecl 0x7f98cb82d540 <line:22:9, line:10:48> col:8 used xy 'float' cinit
+|   |   `-CallExpr 0x7f98cb82d668 <<scratch space>:42:1, c_files/pr77644.c:10:48> 'float'
+|   |     |-ImplicitCastExpr 0x7f98cb82d650 <<scratch space>:42:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82d5a0 <col:1> '<builtin fn type>' Function 0x7f98cb82a388 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7f98cb82d630 <c_files/pr77644.c:10:36, col:47> 'float'
+|   |       `-CallExpr 0x7f98cb82d608 <<scratch space>:43:1, c_files/pr77644.c:10:46> 'float'
+|   |         `-ImplicitCastExpr 0x7f98cb82d5f0 <<scratch space>:43:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82d5c8 <col:1> 'float ()' Function 0x7f98cb82d2e0 'gen_f6' 'float ()'
+|   `-ReturnStmt 0x7f98cb82d778 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb82d758 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb82d730 <col:11, col:18> 'int' '!='
+|         |-ImplicitCastExpr 0x7f98cb82d700 <col:11> 'float' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb82d6b0 <col:11> 'float' lvalue Var 0x7f98cb82d3b8 'xs' 'float'
+|         `-ImplicitCastExpr 0x7f98cb82d718 <col:18> 'float' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb82d6d8 <col:18> 'float' lvalue Var 0x7f98cb82d540 'xy' 'float'
+|-FunctionDecl 0x7f98cb82d938 <line:5:37, line:11:23> <scratch space>:44:1 f_1 'int (double, double)'
+| |-ParmVarDecl 0x7f98cb82d7e0 <c_files/pr77644.c:23:9, line:6:17> col:17 x 'double'
+| |-ParmVarDecl 0x7f98cb82d858 <line:23:9, line:6:25> col:25 y 'double'
+| `-CompoundStmt 0x7f98cb82f930 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb82dad8 <line:23:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb82da30 parent 0x7f98cb0264d0 <line:23:9, line:8:17> <scratch space>:45:1 used gen_1 'double ()'
+|   |-DeclStmt 0x7f98cb82f6b0 <c_files/pr77644.c:23:9, line:9:49>
+|   | `-VarDecl 0x7f98cb82db08 <line:23:9, line:9:48> col:8 used xs 'double' cinit
+|   |   `-CallExpr 0x7f98cb82f680 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7f98cb82f668 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82f558 <col:13> '<builtin fn type>' Function 0x7f98cb82f400 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7f98cb82f618 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7f98cb82f5f0 <<scratch space>:46:1, c_files/pr77644.c:9:46> 'double'
+|   |         `-ImplicitCastExpr 0x7f98cb82f5d8 <<scratch space>:46:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82f580 <col:1> 'double ()' Function 0x7f98cb82da30 'gen_1' 'double ()'
+|   |-DeclStmt 0x7f98cb82f838 <c_files/pr77644.c:23:9, line:10:49>
+|   | `-VarDecl 0x7f98cb82f6e0 <line:23:9, line:10:48> col:8 used xy 'double' cinit
+|   |   `-CallExpr 0x7f98cb82f808 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7f98cb82f7f0 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82f740 <col:13> '<builtin fn type>' Function 0x7f98cb82f400 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7f98cb82f7d0 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7f98cb82f7a8 <<scratch space>:47:1, c_files/pr77644.c:10:46> 'double'
+|   |         `-ImplicitCastExpr 0x7f98cb82f790 <<scratch space>:47:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82f768 <col:1> 'double ()' Function 0x7f98cb82da30 'gen_1' 'double ()'
+|   `-ReturnStmt 0x7f98cb82f918 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb82f8f8 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb82f8d0 <col:11, col:18> 'int' '<'
+|         |-ImplicitCastExpr 0x7f98cb82f8a0 <col:11> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb82f850 <col:11> 'double' lvalue Var 0x7f98cb82db08 'xs' 'double'
+|         `-ImplicitCastExpr 0x7f98cb82f8b8 <col:18> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb82f878 <col:18> 'double' lvalue Var 0x7f98cb82f6e0 'xy' 'double'
+|-FunctionDecl 0x7f98cb82f400 <line:9:13> col:13 implicit used __builtin_sqrt 'double (double)' extern
+| |-ParmVarDecl 0x7f98cb82f498 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f98cb82f500 <col:13> Implicit
+| `-ConstAttr 0x7f98cb82f548 <col:13> Implicit
+|-FunctionDecl 0x7f98cb82fa90 <line:5:37, line:11:23> <scratch space>:48:1 f_2 'int (double, double)'
+| |-ParmVarDecl 0x7f98cb82f980 <c_files/pr77644.c:23:9, line:6:17> col:17 x 'double'
+| |-ParmVarDecl 0x7f98cb82f9f8 <line:23:9, line:6:25> col:25 y 'double'
+| `-CompoundStmt 0x7f98cb830010 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb82fc08 <line:23:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb82fb60 parent 0x7f98cb0264d0 <line:23:9, line:8:17> <scratch space>:49:1 used gen_2 'double ()'
+|   |-DeclStmt 0x7f98cb82fd90 <c_files/pr77644.c:23:9, line:9:49>
+|   | `-VarDecl 0x7f98cb82fc38 <line:23:9, line:9:48> col:8 used xs 'double' cinit
+|   |   `-CallExpr 0x7f98cb82fd60 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7f98cb82fd48 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82fc98 <col:13> '<builtin fn type>' Function 0x7f98cb82f400 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7f98cb82fd28 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7f98cb82fd00 <<scratch space>:50:1, c_files/pr77644.c:9:46> 'double'
+|   |         `-ImplicitCastExpr 0x7f98cb82fce8 <<scratch space>:50:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82fcc0 <col:1> 'double ()' Function 0x7f98cb82fb60 'gen_2' 'double ()'
+|   |-DeclStmt 0x7f98cb82ff18 <c_files/pr77644.c:23:9, line:10:49>
+|   | `-VarDecl 0x7f98cb82fdc0 <line:23:9, line:10:48> col:8 used xy 'double' cinit
+|   |   `-CallExpr 0x7f98cb82fee8 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7f98cb82fed0 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82fe20 <col:13> '<builtin fn type>' Function 0x7f98cb82f400 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7f98cb82feb0 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7f98cb82fe88 <<scratch space>:51:1, c_files/pr77644.c:10:46> 'double'
+|   |         `-ImplicitCastExpr 0x7f98cb82fe70 <<scratch space>:51:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82fe48 <col:1> 'double ()' Function 0x7f98cb82fb60 'gen_2' 'double ()'
+|   `-ReturnStmt 0x7f98cb82fff8 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb82ffd8 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb82ffb0 <col:11, col:18> 'int' '<='
+|         |-ImplicitCastExpr 0x7f98cb82ff80 <col:11> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb82ff30 <col:11> 'double' lvalue Var 0x7f98cb82fc38 'xs' 'double'
+|         `-ImplicitCastExpr 0x7f98cb82ff98 <col:18> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb82ff58 <col:18> 'double' lvalue Var 0x7f98cb82fdc0 'xy' 'double'
+|-FunctionDecl 0x7f98cb830170 <line:5:37, line:11:23> <scratch space>:52:1 f_3 'int (double, double)'
+| |-ParmVarDecl 0x7f98cb830060 <c_files/pr77644.c:23:9, line:6:17> col:17 x 'double'
+| |-ParmVarDecl 0x7f98cb8300d8 <line:23:9, line:6:25> col:25 y 'double'
+| `-CompoundStmt 0x7f98cb8306f0 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb8302e8 <line:23:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb830240 parent 0x7f98cb0264d0 <line:23:9, line:8:17> <scratch space>:53:1 used gen_3 'double ()'
+|   |-DeclStmt 0x7f98cb830470 <c_files/pr77644.c:23:9, line:9:49>
+|   | `-VarDecl 0x7f98cb830318 <line:23:9, line:9:48> col:8 used xs 'double' cinit
+|   |   `-CallExpr 0x7f98cb830440 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7f98cb830428 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb830378 <col:13> '<builtin fn type>' Function 0x7f98cb82f400 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7f98cb830408 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7f98cb8303e0 <<scratch space>:54:1, c_files/pr77644.c:9:46> 'double'
+|   |         `-ImplicitCastExpr 0x7f98cb8303c8 <<scratch space>:54:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb8303a0 <col:1> 'double ()' Function 0x7f98cb830240 'gen_3' 'double ()'
+|   |-DeclStmt 0x7f98cb8305f8 <c_files/pr77644.c:23:9, line:10:49>
+|   | `-VarDecl 0x7f98cb8304a0 <line:23:9, line:10:48> col:8 used xy 'double' cinit
+|   |   `-CallExpr 0x7f98cb8305c8 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7f98cb8305b0 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb830500 <col:13> '<builtin fn type>' Function 0x7f98cb82f400 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7f98cb830590 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7f98cb830568 <<scratch space>:55:1, c_files/pr77644.c:10:46> 'double'
+|   |         `-ImplicitCastExpr 0x7f98cb830550 <<scratch space>:55:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb830528 <col:1> 'double ()' Function 0x7f98cb830240 'gen_3' 'double ()'
+|   `-ReturnStmt 0x7f98cb8306d8 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb8306b8 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb830690 <col:11, col:18> 'int' '>'
+|         |-ImplicitCastExpr 0x7f98cb830660 <col:11> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb830610 <col:11> 'double' lvalue Var 0x7f98cb830318 'xs' 'double'
+|         `-ImplicitCastExpr 0x7f98cb830678 <col:18> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb830638 <col:18> 'double' lvalue Var 0x7f98cb8304a0 'xy' 'double'
+|-FunctionDecl 0x7f98cb830850 <line:5:37, line:11:23> <scratch space>:56:1 f_4 'int (double, double)'
+| |-ParmVarDecl 0x7f98cb830740 <c_files/pr77644.c:23:9, line:6:17> col:17 x 'double'
+| |-ParmVarDecl 0x7f98cb8307b8 <line:23:9, line:6:25> col:25 y 'double'
+| `-CompoundStmt 0x7f98cb830dd0 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb8309c8 <line:23:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb830920 parent 0x7f98cb0264d0 <line:23:9, line:8:17> <scratch space>:57:1 used gen_4 'double ()'
+|   |-DeclStmt 0x7f98cb830b50 <c_files/pr77644.c:23:9, line:9:49>
+|   | `-VarDecl 0x7f98cb8309f8 <line:23:9, line:9:48> col:8 used xs 'double' cinit
+|   |   `-CallExpr 0x7f98cb830b20 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7f98cb830b08 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb830a58 <col:13> '<builtin fn type>' Function 0x7f98cb82f400 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7f98cb830ae8 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7f98cb830ac0 <<scratch space>:58:1, c_files/pr77644.c:9:46> 'double'
+|   |         `-ImplicitCastExpr 0x7f98cb830aa8 <<scratch space>:58:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb830a80 <col:1> 'double ()' Function 0x7f98cb830920 'gen_4' 'double ()'
+|   |-DeclStmt 0x7f98cb830cd8 <c_files/pr77644.c:23:9, line:10:49>
+|   | `-VarDecl 0x7f98cb830b80 <line:23:9, line:10:48> col:8 used xy 'double' cinit
+|   |   `-CallExpr 0x7f98cb830ca8 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7f98cb830c90 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb830be0 <col:13> '<builtin fn type>' Function 0x7f98cb82f400 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7f98cb830c70 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7f98cb830c48 <<scratch space>:59:1, c_files/pr77644.c:10:46> 'double'
+|   |         `-ImplicitCastExpr 0x7f98cb830c30 <<scratch space>:59:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb830c08 <col:1> 'double ()' Function 0x7f98cb830920 'gen_4' 'double ()'
+|   `-ReturnStmt 0x7f98cb830db8 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb830d98 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb830d70 <col:11, col:18> 'int' '>='
+|         |-ImplicitCastExpr 0x7f98cb830d40 <col:11> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb830cf0 <col:11> 'double' lvalue Var 0x7f98cb8309f8 'xs' 'double'
+|         `-ImplicitCastExpr 0x7f98cb830d58 <col:18> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb830d18 <col:18> 'double' lvalue Var 0x7f98cb830b80 'xy' 'double'
+|-FunctionDecl 0x7f98cb830f30 <line:5:37, line:11:23> <scratch space>:60:1 f_5 'int (double, double)'
+| |-ParmVarDecl 0x7f98cb830e20 <c_files/pr77644.c:23:9, line:6:17> col:17 x 'double'
+| |-ParmVarDecl 0x7f98cb830e98 <line:23:9, line:6:25> col:25 y 'double'
+| `-CompoundStmt 0x7f98cb8314b8 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb8310a8 <line:23:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb831000 parent 0x7f98cb0264d0 <line:23:9, line:8:17> <scratch space>:61:1 used gen_5 'double ()'
+|   |-DeclStmt 0x7f98cb831230 <c_files/pr77644.c:23:9, line:9:49>
+|   | `-VarDecl 0x7f98cb8310d8 <line:23:9, line:9:48> col:8 used xs 'double' cinit
+|   |   `-CallExpr 0x7f98cb831200 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7f98cb8311e8 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb831138 <col:13> '<builtin fn type>' Function 0x7f98cb82f400 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7f98cb8311c8 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7f98cb8311a0 <<scratch space>:62:1, c_files/pr77644.c:9:46> 'double'
+|   |         `-ImplicitCastExpr 0x7f98cb831188 <<scratch space>:62:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb831160 <col:1> 'double ()' Function 0x7f98cb831000 'gen_5' 'double ()'
+|   |-DeclStmt 0x7f98cb8313b8 <c_files/pr77644.c:23:9, line:10:49>
+|   | `-VarDecl 0x7f98cb831260 <line:23:9, line:10:48> col:8 used xy 'double' cinit
+|   |   `-CallExpr 0x7f98cb831388 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7f98cb831370 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb8312c0 <col:13> '<builtin fn type>' Function 0x7f98cb82f400 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7f98cb831350 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7f98cb831328 <<scratch space>:63:1, c_files/pr77644.c:10:46> 'double'
+|   |         `-ImplicitCastExpr 0x7f98cb831310 <<scratch space>:63:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb8312e8 <col:1> 'double ()' Function 0x7f98cb831000 'gen_5' 'double ()'
+|   `-ReturnStmt 0x7f98cb8314a0 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb831480 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb831458 <col:11, col:18> 'int' '=='
+|         |-ImplicitCastExpr 0x7f98cb831428 <col:11> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb8313d0 <col:11> 'double' lvalue Var 0x7f98cb8310d8 'xs' 'double'
+|         `-ImplicitCastExpr 0x7f98cb831440 <col:18> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb831400 <col:18> 'double' lvalue Var 0x7f98cb831260 'xy' 'double'
+|-FunctionDecl 0x7f98cb831618 <line:5:37, line:11:23> <scratch space>:64:1 f_6 'int (double, double)'
+| |-ParmVarDecl 0x7f98cb831508 <c_files/pr77644.c:23:9, line:6:17> col:17 x 'double'
+| |-ParmVarDecl 0x7f98cb831580 <line:23:9, line:6:25> col:25 y 'double'
+| `-CompoundStmt 0x7f98cb831b98 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb831790 <line:23:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb8316e8 parent 0x7f98cb0264d0 <line:23:9, line:8:17> <scratch space>:65:1 used gen_6 'double ()'
+|   |-DeclStmt 0x7f98cb831918 <c_files/pr77644.c:23:9, line:9:49>
+|   | `-VarDecl 0x7f98cb8317c0 <line:23:9, line:9:48> col:8 used xs 'double' cinit
+|   |   `-CallExpr 0x7f98cb8318e8 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7f98cb8318d0 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb831820 <col:13> '<builtin fn type>' Function 0x7f98cb82f400 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7f98cb8318b0 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7f98cb831888 <<scratch space>:66:1, c_files/pr77644.c:9:46> 'double'
+|   |         `-ImplicitCastExpr 0x7f98cb831870 <<scratch space>:66:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb831848 <col:1> 'double ()' Function 0x7f98cb8316e8 'gen_6' 'double ()'
+|   |-DeclStmt 0x7f98cb831aa0 <c_files/pr77644.c:23:9, line:10:49>
+|   | `-VarDecl 0x7f98cb831948 <line:23:9, line:10:48> col:8 used xy 'double' cinit
+|   |   `-CallExpr 0x7f98cb831a70 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7f98cb831a58 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb8319a8 <col:13> '<builtin fn type>' Function 0x7f98cb82f400 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7f98cb831a38 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7f98cb831a10 <<scratch space>:67:1, c_files/pr77644.c:10:46> 'double'
+|   |         `-ImplicitCastExpr 0x7f98cb8319f8 <<scratch space>:67:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb8319d0 <col:1> 'double ()' Function 0x7f98cb8316e8 'gen_6' 'double ()'
+|   `-ReturnStmt 0x7f98cb831b80 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb831b60 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb831b38 <col:11, col:18> 'int' '!='
+|         |-ImplicitCastExpr 0x7f98cb831b08 <col:11> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb831ab8 <col:11> 'double' lvalue Var 0x7f98cb8317c0 'xs' 'double'
+|         `-ImplicitCastExpr 0x7f98cb831b20 <col:18> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb831ae0 <col:18> 'double' lvalue Var 0x7f98cb831948 'xy' 'double'
+|-FunctionDecl 0x7f98cb831d38 <line:5:37, line:11:23> <scratch space>:69:1 f_l1 'int (long double, long double)'
+| |-ParmVarDecl 0x7f98cb831be8 <c_files/pr77644.c:24:9, line:6:17> col:17 x 'long double'
+| |-ParmVarDecl 0x7f98cb831c60 <line:24:9, line:6:25> col:25 y 'long double'
+| `-CompoundStmt 0x7f98cb8324e0 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb831ed8 <line:24:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb831e30 parent 0x7f98cb0264d0 <line:24:9, line:8:17> <scratch space>:70:1 used gen_l1 'long double ()'
+|   |-DeclStmt 0x7f98cb832250 <c_files/pr77644.c:24:9, line:9:49>
+|   | `-VarDecl 0x7f98cb831f08 <line:24:9, line:9:48> col:8 used xs 'long double' cinit
+|   |   `-CallExpr 0x7f98cb832220 <<scratch space>:71:1, c_files/pr77644.c:9:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7f98cb832208 <<scratch space>:71:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb832100 <col:1> '<builtin fn type>' Function 0x7f98cb831fa8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7f98cb8321b8 <c_files/pr77644.c:9:36, col:47> 'long double'
+|   |       `-CallExpr 0x7f98cb832190 <<scratch space>:72:1, c_files/pr77644.c:9:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7f98cb832178 <<scratch space>:72:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb832128 <col:1> 'long double ()' Function 0x7f98cb831e30 'gen_l1' 'long double ()'
+|   |-DeclStmt 0x7f98cb8323d8 <c_files/pr77644.c:24:9, line:10:49>
+|   | `-VarDecl 0x7f98cb832280 <line:24:9, line:10:48> col:8 used xy 'long double' cinit
+|   |   `-CallExpr 0x7f98cb8323a8 <<scratch space>:73:1, c_files/pr77644.c:10:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7f98cb832390 <<scratch space>:73:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb8322e0 <col:1> '<builtin fn type>' Function 0x7f98cb831fa8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7f98cb832370 <c_files/pr77644.c:10:36, col:47> 'long double'
+|   |       `-CallExpr 0x7f98cb832348 <<scratch space>:74:1, c_files/pr77644.c:10:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7f98cb832330 <<scratch space>:74:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb832308 <col:1> 'long double ()' Function 0x7f98cb831e30 'gen_l1' 'long double ()'
+|   `-ReturnStmt 0x7f98cb8324c8 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb8324a8 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb832480 <col:11, col:18> 'int' '<'
+|         |-ImplicitCastExpr 0x7f98cb832450 <col:11> 'long double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb832400 <col:11> 'long double' lvalue Var 0x7f98cb831f08 'xs' 'long double'
+|         `-ImplicitCastExpr 0x7f98cb832468 <col:18> 'long double' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb832428 <col:18> 'long double' lvalue Var 0x7f98cb832280 'xy' 'long double'
+|-FunctionDecl 0x7f98cb831fa8 <<scratch space>:71:1> col:1 implicit used __builtin_sqrtl 'long double (long double)' extern
+| |-ParmVarDecl 0x7f98cb832040 <<invalid sloc>> <invalid sloc> 'long double'
+| |-NoThrowAttr 0x7f98cb8320a8 <col:1> Implicit
+| `-ConstAttr 0x7f98cb8320f0 <col:1> Implicit
+|-FunctionDecl 0x7f98cb832640 <c_files/pr77644.c:5:37, line:11:23> <scratch space>:76:1 f_l2 'int (long double, long double)'
+| |-ParmVarDecl 0x7f98cb832530 <c_files/pr77644.c:24:9, line:6:17> col:17 x 'long double'
+| |-ParmVarDecl 0x7f98cb8325a8 <line:24:9, line:6:25> col:25 y 'long double'
+| `-CompoundStmt 0x7f98cb832bc0 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb8327b8 <line:24:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb832710 parent 0x7f98cb0264d0 <line:24:9, line:8:17> <scratch space>:77:1 used gen_l2 'long double ()'
+|   |-DeclStmt 0x7f98cb832940 <c_files/pr77644.c:24:9, line:9:49>
+|   | `-VarDecl 0x7f98cb8327e8 <line:24:9, line:9:48> col:8 used xs 'long double' cinit
+|   |   `-CallExpr 0x7f98cb832910 <<scratch space>:78:1, c_files/pr77644.c:9:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7f98cb8328f8 <<scratch space>:78:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb832848 <col:1> '<builtin fn type>' Function 0x7f98cb831fa8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7f98cb8328d8 <c_files/pr77644.c:9:36, col:47> 'long double'
+|   |       `-CallExpr 0x7f98cb8328b0 <<scratch space>:79:1, c_files/pr77644.c:9:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7f98cb832898 <<scratch space>:79:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb832870 <col:1> 'long double ()' Function 0x7f98cb832710 'gen_l2' 'long double ()'
+|   |-DeclStmt 0x7f98cb832ac8 <c_files/pr77644.c:24:9, line:10:49>
+|   | `-VarDecl 0x7f98cb832970 <line:24:9, line:10:48> col:8 used xy 'long double' cinit
+|   |   `-CallExpr 0x7f98cb832a98 <<scratch space>:80:1, c_files/pr77644.c:10:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7f98cb832a80 <<scratch space>:80:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb8329d0 <col:1> '<builtin fn type>' Function 0x7f98cb831fa8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7f98cb832a60 <c_files/pr77644.c:10:36, col:47> 'long double'
+|   |       `-CallExpr 0x7f98cb832a38 <<scratch space>:81:1, c_files/pr77644.c:10:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7f98cb832a20 <<scratch space>:81:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb8329f8 <col:1> 'long double ()' Function 0x7f98cb832710 'gen_l2' 'long double ()'
+|   `-ReturnStmt 0x7f98cb832ba8 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb832b88 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb832b60 <col:11, col:18> 'int' '<='
+|         |-ImplicitCastExpr 0x7f98cb832b30 <col:11> 'long double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb832ae0 <col:11> 'long double' lvalue Var 0x7f98cb8327e8 'xs' 'long double'
+|         `-ImplicitCastExpr 0x7f98cb832b48 <col:18> 'long double' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb832b08 <col:18> 'long double' lvalue Var 0x7f98cb832970 'xy' 'long double'
+|-FunctionDecl 0x7f98cb832d20 <line:5:37, line:11:23> <scratch space>:83:1 f_l3 'int (long double, long double)'
+| |-ParmVarDecl 0x7f98cb832c10 <c_files/pr77644.c:24:9, line:6:17> col:17 x 'long double'
+| |-ParmVarDecl 0x7f98cb832c88 <line:24:9, line:6:25> col:25 y 'long double'
+| `-CompoundStmt 0x7f98cb8332a0 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb832e98 <line:24:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb832df0 parent 0x7f98cb0264d0 <line:24:9, line:8:17> <scratch space>:84:1 used gen_l3 'long double ()'
+|   |-DeclStmt 0x7f98cb833020 <c_files/pr77644.c:24:9, line:9:49>
+|   | `-VarDecl 0x7f98cb832ec8 <line:24:9, line:9:48> col:8 used xs 'long double' cinit
+|   |   `-CallExpr 0x7f98cb832ff0 <<scratch space>:85:1, c_files/pr77644.c:9:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7f98cb832fd8 <<scratch space>:85:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb832f28 <col:1> '<builtin fn type>' Function 0x7f98cb831fa8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7f98cb832fb8 <c_files/pr77644.c:9:36, col:47> 'long double'
+|   |       `-CallExpr 0x7f98cb832f90 <<scratch space>:86:1, c_files/pr77644.c:9:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7f98cb832f78 <<scratch space>:86:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb832f50 <col:1> 'long double ()' Function 0x7f98cb832df0 'gen_l3' 'long double ()'
+|   |-DeclStmt 0x7f98cb8331a8 <c_files/pr77644.c:24:9, line:10:49>
+|   | `-VarDecl 0x7f98cb833050 <line:24:9, line:10:48> col:8 used xy 'long double' cinit
+|   |   `-CallExpr 0x7f98cb833178 <<scratch space>:87:1, c_files/pr77644.c:10:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7f98cb833160 <<scratch space>:87:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb8330b0 <col:1> '<builtin fn type>' Function 0x7f98cb831fa8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7f98cb833140 <c_files/pr77644.c:10:36, col:47> 'long double'
+|   |       `-CallExpr 0x7f98cb833118 <<scratch space>:88:1, c_files/pr77644.c:10:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7f98cb833100 <<scratch space>:88:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb8330d8 <col:1> 'long double ()' Function 0x7f98cb832df0 'gen_l3' 'long double ()'
+|   `-ReturnStmt 0x7f98cb833288 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb833268 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb833240 <col:11, col:18> 'int' '>'
+|         |-ImplicitCastExpr 0x7f98cb833210 <col:11> 'long double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb8331c0 <col:11> 'long double' lvalue Var 0x7f98cb832ec8 'xs' 'long double'
+|         `-ImplicitCastExpr 0x7f98cb833228 <col:18> 'long double' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb8331e8 <col:18> 'long double' lvalue Var 0x7f98cb833050 'xy' 'long double'
+|-FunctionDecl 0x7f98cb82dc00 <line:5:37, line:11:23> <scratch space>:90:1 f_l4 'int (long double, long double)'
+| |-ParmVarDecl 0x7f98cb8332f0 <c_files/pr77644.c:24:9, line:6:17> col:17 x 'long double'
+| |-ParmVarDecl 0x7f98cb833368 <line:24:9, line:6:25> col:25 y 'long double'
+| `-CompoundStmt 0x7f98cb82e180 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb82dd78 <line:24:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb82dcd0 parent 0x7f98cb0264d0 <line:24:9, line:8:17> <scratch space>:91:1 used gen_l4 'long double ()'
+|   |-DeclStmt 0x7f98cb82df00 <c_files/pr77644.c:24:9, line:9:49>
+|   | `-VarDecl 0x7f98cb82dda8 <line:24:9, line:9:48> col:8 used xs 'long double' cinit
+|   |   `-CallExpr 0x7f98cb82ded0 <<scratch space>:92:1, c_files/pr77644.c:9:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7f98cb82deb8 <<scratch space>:92:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82de08 <col:1> '<builtin fn type>' Function 0x7f98cb831fa8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7f98cb82de98 <c_files/pr77644.c:9:36, col:47> 'long double'
+|   |       `-CallExpr 0x7f98cb82de70 <<scratch space>:93:1, c_files/pr77644.c:9:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7f98cb82de58 <<scratch space>:93:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82de30 <col:1> 'long double ()' Function 0x7f98cb82dcd0 'gen_l4' 'long double ()'
+|   |-DeclStmt 0x7f98cb82e088 <c_files/pr77644.c:24:9, line:10:49>
+|   | `-VarDecl 0x7f98cb82df30 <line:24:9, line:10:48> col:8 used xy 'long double' cinit
+|   |   `-CallExpr 0x7f98cb82e058 <<scratch space>:94:1, c_files/pr77644.c:10:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7f98cb82e040 <<scratch space>:94:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82df90 <col:1> '<builtin fn type>' Function 0x7f98cb831fa8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7f98cb82e020 <c_files/pr77644.c:10:36, col:47> 'long double'
+|   |       `-CallExpr 0x7f98cb82dff8 <<scratch space>:95:1, c_files/pr77644.c:10:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7f98cb82dfe0 <<scratch space>:95:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82dfb8 <col:1> 'long double ()' Function 0x7f98cb82dcd0 'gen_l4' 'long double ()'
+|   `-ReturnStmt 0x7f98cb82e168 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb82e148 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb82e120 <col:11, col:18> 'int' '>='
+|         |-ImplicitCastExpr 0x7f98cb82e0f0 <col:11> 'long double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb82e0a0 <col:11> 'long double' lvalue Var 0x7f98cb82dda8 'xs' 'long double'
+|         `-ImplicitCastExpr 0x7f98cb82e108 <col:18> 'long double' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb82e0c8 <col:18> 'long double' lvalue Var 0x7f98cb82df30 'xy' 'long double'
+|-FunctionDecl 0x7f98cb82e2e0 <line:5:37, line:11:23> <scratch space>:97:1 f_l5 'int (long double, long double)'
+| |-ParmVarDecl 0x7f98cb82e1d0 <c_files/pr77644.c:24:9, line:6:17> col:17 x 'long double'
+| |-ParmVarDecl 0x7f98cb82e248 <line:24:9, line:6:25> col:25 y 'long double'
+| `-CompoundStmt 0x7f98cb82e860 <col:28, line:11:23>
+|   |-DeclStmt 0x7f98cb82e458 <line:24:9, line:8:18>
+|   | `-FunctionDecl 0x7f98cb82e3b0 parent 0x7f98cb0264d0 <line:24:9, line:8:17> <scratch space>:98:1 used gen_l5 'long double ()'
+|   |-DeclStmt 0x7f98cb82e5e0 <c_files/pr77644.c:24:9, line:9:49>
+|   | `-VarDecl 0x7f98cb82e488 <line:24:9, line:9:48> col:8 used xs 'long double' cinit
+|   |   `-CallExpr 0x7f98cb82e5b0 <<scratch space>:99:1, c_files/pr77644.c:9:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7f98cb82e598 <<scratch space>:99:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82e4e8 <col:1> '<builtin fn type>' Function 0x7f98cb831fa8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7f98cb82e578 <c_files/pr77644.c:9:36, col:47> 'long double'
+|   |       `-CallExpr 0x7f98cb82e550 <<scratch space>:100:1, c_files/pr77644.c:9:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7f98cb82e538 <<scratch space>:100:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82e510 <col:1> 'long double ()' Function 0x7f98cb82e3b0 'gen_l5' 'long double ()'
+|   |-DeclStmt 0x7f98cb82e768 <c_files/pr77644.c:24:9, line:10:49>
+|   | `-VarDecl 0x7f98cb82e610 <line:24:9, line:10:48> col:8 used xy 'long double' cinit
+|   |   `-CallExpr 0x7f98cb82e738 <<scratch space>:101:1, c_files/pr77644.c:10:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7f98cb82e720 <<scratch space>:101:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f98cb82e670 <col:1> '<builtin fn type>' Function 0x7f98cb831fa8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7f98cb82e700 <c_files/pr77644.c:10:36, col:47> 'long double'
+|   |       `-CallExpr 0x7f98cb82e6d8 <<scratch space>:102:1, c_files/pr77644.c:10:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7f98cb82e6c0 <<scratch space>:102:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7f98cb82e698 <col:1> 'long double ()' Function 0x7f98cb82e3b0 'gen_l5' 'long double ()'
+|   `-ReturnStmt 0x7f98cb82e848 <c_files/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7f98cb82e828 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7f98cb82e800 <col:11, col:18> 'int' '=='
+|         |-ImplicitCastExpr 0x7f98cb82e7d0 <col:11> 'long double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98cb82e780 <col:11> 'long double' lvalue Var 0x7f98cb82e488 'xs' 'long double'
+|         `-ImplicitCastExpr 0x7f98cb82e7e8 <col:18> 'long double' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98cb82e7a8 <col:18> 'long double' lvalue Var 0x7f98cb82e610 'xy' 'long double'
+`-FunctionDecl 0x7f98cb82e9c0 <line:5:37, line:11:23> <scratch space>:104:1 f_l6 'int (long double, long double)'
+  |-ParmVarDecl 0x7f98cb82e8b0 <c_files/pr77644.c:24:9, line:6:17> col:17 x 'long double'
+  |-ParmVarDecl 0x7f98cb82e928 <line:24:9, line:6:25> col:25 y 'long double'
+  `-CompoundStmt 0x7f98cb836750 <col:28, line:11:23>
+    |-DeclStmt 0x7f98cb82eb38 <line:24:9, line:8:18>
+    | `-FunctionDecl 0x7f98cb82ea90 parent 0x7f98cb0264d0 <line:24:9, line:8:17> <scratch space>:105:1 used gen_l6 'long double ()'
+    |-DeclStmt 0x7f98cb8364d0 <c_files/pr77644.c:24:9, line:9:49>
+    | `-VarDecl 0x7f98cb82eb68 <line:24:9, line:9:48> col:8 used xs 'long double' cinit
+    |   `-CallExpr 0x7f98cb8364a0 <<scratch space>:106:1, c_files/pr77644.c:9:48> 'long double'
+    |     |-ImplicitCastExpr 0x7f98cb836488 <<scratch space>:106:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+    |     | `-DeclRefExpr 0x7f98cb82ebc8 <col:1> '<builtin fn type>' Function 0x7f98cb831fa8 '__builtin_sqrtl' 'long double (long double)'
+    |     `-ParenExpr 0x7f98cb836468 <c_files/pr77644.c:9:36, col:47> 'long double'
+    |       `-CallExpr 0x7f98cb836440 <<scratch space>:107:1, c_files/pr77644.c:9:46> 'long double'
+    |         `-ImplicitCastExpr 0x7f98cb836428 <<scratch space>:107:1> 'long double (*)()' <FunctionToPointerDecay>
+    |           `-DeclRefExpr 0x7f98cb836400 <col:1> 'long double ()' Function 0x7f98cb82ea90 'gen_l6' 'long double ()'
+    |-DeclStmt 0x7f98cb836658 <c_files/pr77644.c:24:9, line:10:49>
+    | `-VarDecl 0x7f98cb836500 <line:24:9, line:10:48> col:8 used xy 'long double' cinit
+    |   `-CallExpr 0x7f98cb836628 <<scratch space>:108:1, c_files/pr77644.c:10:48> 'long double'
+    |     |-ImplicitCastExpr 0x7f98cb836610 <<scratch space>:108:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+    |     | `-DeclRefExpr 0x7f98cb836560 <col:1> '<builtin fn type>' Function 0x7f98cb831fa8 '__builtin_sqrtl' 'long double (long double)'
+    |     `-ParenExpr 0x7f98cb8365f0 <c_files/pr77644.c:10:36, col:47> 'long double'
+    |       `-CallExpr 0x7f98cb8365c8 <<scratch space>:109:1, c_files/pr77644.c:10:46> 'long double'
+    |         `-ImplicitCastExpr 0x7f98cb8365b0 <<scratch space>:109:1> 'long double (*)()' <FunctionToPointerDecay>
+    |           `-DeclRefExpr 0x7f98cb836588 <col:1> 'long double ()' Function 0x7f98cb82ea90 'gen_l6' 'long double ()'
+    `-ReturnStmt 0x7f98cb836738 <c_files/pr77644.c:11:3, col:20>
+      `-ParenExpr 0x7f98cb836718 <col:10, col:20> 'int'
+        `-BinaryOperator 0x7f98cb8366f0 <col:11, col:18> 'int' '!='
+          |-ImplicitCastExpr 0x7f98cb8366c0 <col:11> 'long double' <LValueToRValue>
+          | `-DeclRefExpr 0x7f98cb836670 <col:11> 'long double' lvalue Var 0x7f98cb82eb68 'xs' 'long double'
+          `-ImplicitCastExpr 0x7f98cb8366d8 <col:18> 'long double' <LValueToRValue>
+            `-DeclRefExpr 0x7f98cb836698 <col:18> 'long double' lvalue Var 0x7f98cb836500 'xy' 'long double'

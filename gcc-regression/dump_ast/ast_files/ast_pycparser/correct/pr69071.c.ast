@@ -1,0 +1,74 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: bf, [], [], []
+        ArrayDecl: []
+          TypeDecl: bf, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 65400
+      Decl: p2, [], [], []
+        PtrDecl: []
+          TypeDecl: p2, []
+            IdentifierType: ['unsigned', 'char']
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: bf
+      Decl: p3, [], [], []
+        PtrDecl: []
+          TypeDecl: p3, []
+            IdentifierType: ['unsigned', 'char']
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: bf
+      For: 
+        UnaryOp: *
+          ID: p2
+        ExprList: 
+          UnaryOp: p++
+            ID: p2
+          UnaryOp: p++
+            ID: c
+        Compound: 
+          If: 
+            ID: c
+            Compound: 
+              Decl: of, [], [], []
+                TypeDecl: of, []
+                  IdentifierType: ['short']
+                BinaryOp: -
+                  BinaryOp: -
+                    ID: p2
+                    ID: bf
+                  Constant: int, 6
+              Decl: ofu, [], [], []
+                TypeDecl: ofu, []
+                  IdentifierType: ['unsigned']
+                ID: of
+              FuncCall: 
+                ID: __builtin_memcpy
+                ExprList: 
+                  ID: p3
+                  UnaryOp: &
+                    ID: ofu
+                  UnaryOp: sizeof
+                    ID: ofu

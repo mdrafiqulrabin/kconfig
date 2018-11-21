@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7f9cdc0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9cdc026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9cdc026740 '__int128'
+|-TypedefDecl 0x7f9cdc026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9cdc026760 'unsigned __int128'
+|-TypedefDecl 0x7f9cdc026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9cdc026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9cdc026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9cdc026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9cdc026dc0 'char *'
+|   `-BuiltinType 0x7f9cdc026560 'char'
+|-TypedefDecl 0x7f9cdc0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9cdc027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9cdc026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9cdc026e58 '__va_list_tag'
+`-FunctionDecl 0x7f9cdc825a30 <c_files/pr83517.c:4:1, line:7:1> line:4:5 test 'int (int)'
+  |-ParmVarDecl 0x7f9cdc027138 <col:10, col:14> col:14 used x 'int'
+  `-CompoundStmt 0x7f9cdc825c58 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7f9cdc825c40 <line:6:3, col:16>
+      `-BinaryOperator 0x7f9cdc825c18 <col:10, col:16> 'int' '/'
+        |-ParenExpr 0x7f9cdc825bb8 <col:10, col:14> 'int'
+        | `-BinaryOperator 0x7f9cdc825b90 <col:11, col:13> 'int' '+'
+        |   |-ImplicitCastExpr 0x7f9cdc825b60 <col:11> 'int' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7f9cdc825b10 <col:11> 'int' lvalue ParmVar 0x7f9cdc027138 'x' 'int'
+        |   `-ImplicitCastExpr 0x7f9cdc825b78 <col:13> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7f9cdc825b38 <col:13> 'int' lvalue ParmVar 0x7f9cdc027138 'x' 'int'
+        `-ImplicitCastExpr 0x7f9cdc825c00 <col:16> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f9cdc825bd8 <col:16> 'int' lvalue ParmVar 0x7f9cdc027138 'x' 'int'

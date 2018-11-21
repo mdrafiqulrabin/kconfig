@@ -1,0 +1,49 @@
+FileAST: 
+  Decl: fn_show_state, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fn_show_state, []
+        IdentifierType: ['void']
+  Typedef: fn_handler_fn, [], ['typedef']
+    PtrDecl: []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fn_handler_fn, []
+          IdentifierType: ['void']
+  Decl: fn_handler, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: fn_handler, []
+        IdentifierType: ['fn_handler_fn']
+      Constant: int, 1
+  FuncDef: 
+    Decl: k_spec, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: value, [], [], []
+            TypeDecl: value, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: k_spec, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: func, [], [], []
+        PtrDecl: []
+          TypeDecl: func, []
+            IdentifierType: ['void']
+        ArrayRef: 
+          ID: fn_handler
+          ID: value
+      If: 
+        BinaryOp: ==
+          ID: func
+          ID: fn_show_state
+        Return: 
+      FuncCall: 
+        ArrayRef: 
+          ID: fn_handler
+          ID: value

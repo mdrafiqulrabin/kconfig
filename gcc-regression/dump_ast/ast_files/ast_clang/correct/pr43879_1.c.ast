@@ -1,0 +1,60 @@
+TranslationUnitDecl 0x7f938b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f938b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f938b826740 '__int128'
+|-TypedefDecl 0x7f938b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f938b826760 'unsigned __int128'
+|-TypedefDecl 0x7f938b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f938b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f938b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f938b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f938b826dc0 'char *'
+|   `-BuiltinType 0x7f938b826560 'char'
+|-TypedefDecl 0x7f938b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f938b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f938b826ee0 'struct __va_list_tag'
+|     `-Record 0x7f938b826e58 '__va_list_tag'
+|-FunctionDecl 0x7f938c025a00 <c_files/pr43879_1.c:5:1, line:10:1> line:5:6 bar 'void (int)'
+| |-ParmVarDecl 0x7f938b827138 <col:10, col:14> col:14 used c 'int'
+| `-CompoundStmt 0x7f938c025e68 <line:6:1, line:10:1>
+|   |-DeclStmt 0x7f938c025b78 <line:7:2, col:18>
+|   | `-VarDecl 0x7f938c025af8 <col:2, col:17> col:13 used x 'int' static cinit
+|   |   `-IntegerLiteral 0x7f938c025b58 <col:17> 'int' 1
+|   |-IfStmt 0x7f938c025de8 <line:8:2, col:30>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f938c025c10 <col:6, col:11> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7f938c025be0 <col:6> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f938c025b90 <col:6> 'int' lvalue ParmVar 0x7f938b827138 'c' 'int'
+|   | | `-ImplicitCastExpr 0x7f938c025bf8 <col:11> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f938c025bb8 <col:11> 'int' lvalue Var 0x7f938c025af8 'x' 'int'
+|   | |-CallExpr 0x7f938c025dc0 <col:14, col:30> 'void'
+|   | | `-ImplicitCastExpr 0x7f938c025da8 <col:14> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f938c025d50 <col:14> '<builtin fn type>' Function 0x7f938c025c70 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-UnaryOperator 0x7f938c025e48 <line:9:2, col:3> 'int' postfix '--'
+|     `-DeclRefExpr 0x7f938c025e20 <col:2> 'int' lvalue Var 0x7f938c025af8 'x' 'int'
+|-FunctionDecl 0x7f938c025c70 <line:8:14> col:14 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7f938c025d08 <col:14> Implicit
+|-FunctionDecl 0x7f938c025fa0 <line:12:1, line:15:1> line:12:6 baz 'void (int *)'
+| |-ParmVarDecl 0x7f938c025ee0 <col:10, col:15> col:15 used i 'int *'
+| `-CompoundStmt 0x7f938c0260e0 <line:13:1, line:15:1>
+|   `-UnaryOperator 0x7f938c0260c0 <line:14:2, col:6> 'int' postfix '--'
+|     `-ParenExpr 0x7f938c0260a0 <col:2, col:5> 'int' lvalue
+|       `-UnaryOperator 0x7f938c026080 <col:3, col:4> 'int' lvalue prefix '*'
+|         `-ImplicitCastExpr 0x7f938c026068 <col:4> 'int *' <LValueToRValue>
+|           `-DeclRefExpr 0x7f938c026040 <col:4> 'int *' lvalue ParmVar 0x7f938c025ee0 'i' 'int *'
+|-RecordDecl 0x7f938c026100 <line:17:1, line:19:1> line:17:8 struct TBL definition
+| `-FieldDecl 0x7f938c026338 <line:18:2, col:17> col:8 referenced p 'int (*)(int *)'
+|-VarDecl 0x7f938c0263d0 <line:20:1, col:19> col:19 used tbl 'struct TBL':'struct TBL' extern
+`-FunctionDecl 0x7f938c026480 <line:22:1, line:26:1> line:22:5 main 'int ()'
+  `-CompoundStmt 0x7f938c0266d0 <line:23:1, line:26:1>
+    |-DeclStmt 0x7f938c0265b0 <line:24:2, col:11>
+    | `-VarDecl 0x7f938c026530 <col:2, col:10> col:6 used c 'int' cinit
+    |   `-IntegerLiteral 0x7f938c026590 <col:10> 'int' 1
+    `-ReturnStmt 0x7f938c0266b8 <line:25:2, col:17>
+      `-CallExpr 0x7f938c026688 <col:9, col:17> 'int'
+        |-ImplicitCastExpr 0x7f938c026670 <col:9, col:13> 'int (*)(int *)' <LValueToRValue>
+        | `-MemberExpr 0x7f938c0265f0 <col:9, col:13> 'int (*)(int *)' lvalue .p 0x7f938c026338
+        |   `-DeclRefExpr 0x7f938c0265c8 <col:9> 'struct TBL':'struct TBL' lvalue Var 0x7f938c0263d0 'tbl' 'struct TBL':'struct TBL'
+        `-UnaryOperator 0x7f938c026650 <col:15, col:16> 'int *' prefix '&'
+          `-DeclRefExpr 0x7f938c026628 <col:16> 'int' lvalue Var 0x7f938c026530 'c' 'int'

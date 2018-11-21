@@ -1,0 +1,44 @@
+c_files/pr42898.c:17:12: warning: implicit truncation from 'int' to bit-field changes value from 13 to -3 [-Wbitfield-constant-conversion]
+    .parm2=13,
+           ^~
+1 warning generated.
+TranslationUnitDecl 0x7fa8448264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa844826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa844826740 '__int128'
+|-TypedefDecl 0x7fa844826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa844826760 'unsigned __int128'
+|-TypedefDecl 0x7fa844826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa844826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa844826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa844826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa844826dc0 'char *'
+|   `-BuiltinType 0x7fa844826560 'char'
+|-TypedefDecl 0x7fa8448270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa844827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa844826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa844826e58 '__va_list_tag'
+|-RecordDecl 0x7fa844827120 <c_files/pr42898.c:5:1, line:11:1> line:5:8 struct hardware definition
+| |-FieldDecl 0x7fa844877418 <line:6:3, col:13> col:7 parm1 'int'
+| | `-IntegerLiteral 0x7fa8448271d0 <col:13> 'int' 8
+| |-FieldDecl 0x7fa844877498 <line:7:3, col:8> col:3 'int'
+| | `-IntegerLiteral 0x7fa844877460 <col:8> 'int' 4
+| |-FieldDecl 0x7fa844877518 <line:8:3, col:13> col:7 parm2 'int'
+| | `-IntegerLiteral 0x7fa8448774e0 <col:13> 'int' 4
+| |-FieldDecl 0x7fa844877598 <line:9:3, col:13> col:7 parm3 'int'
+| | `-IntegerLiteral 0x7fa844877560 <col:13> 'int' 15
+| `-FieldDecl 0x7fa844877618 <line:10:3, col:13> col:7 parm4 'int'
+|   `-IntegerLiteral 0x7fa8448775e0 <col:13> 'int' 1
+`-FunctionDecl 0x7fa844877810 <line:13:1, line:21:1> line:13:6 f1 'void (volatile struct hardware *)'
+  |-ParmVarDecl 0x7fa844877710 <col:9, col:35> col:35 used ptr 'volatile struct hardware *'
+  `-CompoundStmt 0x7fa844877fd8 <line:14:1, line:21:1>
+    `-BinaryOperator 0x7fa844877fb0 <line:15:3, line:20:3> 'struct hardware':'struct hardware' '='
+      |-UnaryOperator 0x7fa844877930 <line:15:3, col:4> 'volatile struct hardware':'volatile struct hardware' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fa844877918 <col:4> 'volatile struct hardware *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fa8448778f0 <col:4> 'volatile struct hardware *' lvalue ParmVar 0x7fa844877710 'ptr' 'volatile struct hardware *'
+      `-ImplicitCastExpr 0x7fa844877f98 <col:8, line:20:3> 'struct hardware':'struct hardware' <LValueToRValue>
+        `-CompoundLiteralExpr 0x7fa844877f70 <line:15:8, line:20:3> 'struct hardware':'struct hardware' lvalue
+          `-InitListExpr 0x7fa844877b50 <line:15:26, line:20:3> 'struct hardware':'struct hardware'
+            |-IntegerLiteral 0x7fa844877970 <line:16:12> 'int' 42
+            |-IntegerLiteral 0x7fa8448779d0 <line:17:12> 'int' 13
+            |-IntegerLiteral 0x7fa844877a30 <line:18:12> 'int' 11850
+            `-IntegerLiteral 0x7fa844877a90 <line:19:12> 'int' 1

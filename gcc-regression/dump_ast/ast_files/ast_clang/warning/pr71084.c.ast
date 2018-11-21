@@ -1,0 +1,102 @@
+c_files/pr71084.c:9:5: warning: declaration of built-in function '_setjmp' requires inclusion of the header <setjmp.h> [-Wbuiltin-requires-header]
+int _setjmp (void);
+    ^
+c_files/pr71084.c:24:16: error: too few arguments to function call, expected 1, have 0
+  if (_setjmp ())
+      ~~~~~~~~~^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fd1170264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd117026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd117026740 '__int128'
+|-TypedefDecl 0x7fd117026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd117026760 'unsigned __int128'
+|-TypedefDecl 0x7fd117026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd117026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd117026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd117026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd117026dc0 'char *'
+|   `-BuiltinType 0x7fd117026560 'char'
+|-TypedefDecl 0x7fd1170270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd117027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd117026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd117026e58 '__va_list_tag'
+|-TypedefDecl 0x7fd117027138 <c_files/pr71084.c:5:15, col:39> col:39 referenced intptr_t 'long'
+| `-BuiltinType 0x7fd1170265e0 'long'
+|-FunctionDecl 0x7fd118803a50 <line:7:1, col:23> col:6 used babl_format 'void (void)'
+|-FunctionDecl 0x7fd118803bb8 <line:8:1, col:36> col:6 used gimp_drawable_get_format 'void (void)'
+|-FunctionDecl 0x7fd118803d18 <line:9:1, col:18> col:5 used _setjmp 'int (void)'
+| `-ReturnsTwiceAttr 0x7fd118803db0 <col:5> Implicit
+|-EnumDecl 0x7fd118803df8 <line:11:1, line:17:1> line:11:1
+| |-EnumConstantDecl 0x7fd118803eb0 <line:12:3> col:3 referenced GIMP_RGB_IMAGE 'int'
+| |-EnumConstantDecl 0x7fd118803ef8 <line:13:3> col:3 referenced GIMP_RGBA_IMAGE 'int'
+| |-EnumConstantDecl 0x7fd118803f40 <line:14:3> col:3 referenced GIMP_GRAY_IMAGE 'int'
+| |-EnumConstantDecl 0x7fd118803f88 <line:15:3> col:3 referenced GIMP_GRAYA_IMAGE 'int'
+| `-EnumConstantDecl 0x7fd118803fd0 <line:16:3> col:3 referenced GIMP_INDEXED_IMAGE 'int'
+|-VarDecl 0x7fd118804070 <line:11:1, line:17:3> col:3 used run_i 'enum (anonymous enum at c_files/pr71084.c:11:1)':'enum (anonymous at c_files/pr71084.c:11:1)'
+|-VarDecl 0x7fd118804100 <line:19:1, col:5> col:5 used run_height 'int'
+`-FunctionDecl 0x7fd1188041a8 <line:21:1, line:40:1> line:21:6 referenced fn1 'void ()'
+  `-CompoundStmt 0x7fd118805b40 <line:22:1, line:40:1>
+    |-DeclStmt 0x7fd118804348 <line:23:3, col:18>
+    | |-VarDecl 0x7fd118804258 <col:3, col:7> col:7 used type 'int'
+    | `-VarDecl 0x7fd1188042d0 <col:3, col:13> col:13 used width 'int'
+    |-IfStmt 0x7fd1188047f8 <line:24:3, line:35:7>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7fd1188047d8 <<invalid sloc>> '_Bool'
+    | |-SwitchStmt 0x7fd118804438 <line:25:5, line:35:7>
+    | | |-<<<NULL>>>
+    | | |-<<<NULL>>>
+    | | |-ImplicitCastExpr 0x7fd118804420 <line:25:13> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fd1188043f8 <col:13> 'int' lvalue Var 0x7fd118804258 'type' 'int'
+    | | `-CompoundStmt 0x7fd1188047a8 <line:26:7, line:35:7>
+    | |   |-CaseStmt 0x7fd118804490 <line:27:7, line:28:15>
+    | |   | |-DeclRefExpr 0x7fd118804468 <line:27:12> 'int' EnumConstant 0x7fd118803eb0 'GIMP_RGB_IMAGE' 'int'
+    | |   | |-<<<NULL>>>
+    | |   | `-CallExpr 0x7fd118804530 <line:28:2, col:15> 'void'
+    | |   |   `-ImplicitCastExpr 0x7fd118804518 <col:2> 'void (*)(void)' <FunctionToPointerDecay>
+    | |   |     `-DeclRefExpr 0x7fd1188044c8 <col:2> 'void (void)' Function 0x7fd118803a50 'babl_format' 'void (void)'
+    | |   |-CaseStmt 0x7fd118804580 <line:29:7, line:31:15>
+    | |   | |-DeclRefExpr 0x7fd118804558 <line:29:12> 'int' EnumConstant 0x7fd118803ef8 'GIMP_RGBA_IMAGE' 'int'
+    | |   | |-<<<NULL>>>
+    | |   | `-CaseStmt 0x7fd1188045e0 <line:30:7, line:31:15>
+    | |   |   |-DeclRefExpr 0x7fd1188045b8 <line:30:12> 'int' EnumConstant 0x7fd118803f40 'GIMP_GRAY_IMAGE' 'int'
+    | |   |   |-<<<NULL>>>
+    | |   |   `-CallExpr 0x7fd118804658 <line:31:2, col:15> 'void'
+    | |   |     `-ImplicitCastExpr 0x7fd118804640 <col:2> 'void (*)(void)' <FunctionToPointerDecay>
+    | |   |       `-DeclRefExpr 0x7fd118804618 <col:2> 'void (void)' Function 0x7fd118803a50 'babl_format' 'void (void)'
+    | |   `-CaseStmt 0x7fd1188046a8 <line:32:7, line:34:27>
+    | |     |-DeclRefExpr 0x7fd118804680 <line:32:12> 'int' EnumConstant 0x7fd118803f88 'GIMP_GRAYA_IMAGE' 'int'
+    | |     |-<<<NULL>>>
+    | |     `-CaseStmt 0x7fd118804708 <line:33:7, line:34:27>
+    | |       |-DeclRefExpr 0x7fd1188046e0 <line:33:12> 'int' EnumConstant 0x7fd118803fd0 'GIMP_INDEXED_IMAGE' 'int'
+    | |       |-<<<NULL>>>
+    | |       `-CallExpr 0x7fd118804780 <line:34:2, col:27> 'void'
+    | |         `-ImplicitCastExpr 0x7fd118804768 <col:2> 'void (*)(void)' <FunctionToPointerDecay>
+    | |           `-DeclRefExpr 0x7fd118804740 <col:2> 'void (void)' Function 0x7fd118803bb8 'gimp_drawable_get_format' 'void (void)'
+    | `-<<<NULL>>>
+    `-ForStmt 0x7fd118805b08 <line:36:3, line:39:9>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fd118804858 <line:36:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fd118804830 <col:10> 'int' lvalue Var 0x7fd118804100 'run_height' 'int'
+      |-<<<NULL>>>
+      `-ForStmt 0x7fd118805ad0 <line:37:5, line:39:9>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-BinaryOperator 0x7fd1188049d8 <line:37:12, col:36> 'int' '<'
+        | |-ImplicitCastExpr 0x7fd1188049c0 <col:12> 'long' <IntegralCast>
+        | | `-ImplicitCastExpr 0x7fd1188049a8 <col:12> 'enum (anonymous enum at c_files/pr71084.c:11:1)':'enum (anonymous at c_files/pr71084.c:11:1)' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fd118804870 <col:12> 'enum (anonymous enum at c_files/pr71084.c:11:1)':'enum (anonymous at c_files/pr71084.c:11:1)' lvalue Var 0x7fd118804070 'run_i' 'enum (anonymous enum at c_files/pr71084.c:11:1)':'enum (anonymous at c_files/pr71084.c:11:1)'
+        | `-CStyleCastExpr 0x7fd118804980 <col:20, col:36> 'long' <NoOp>
+        |   `-CStyleCastExpr 0x7fd118804940 <col:26, col:36> 'intptr_t':'long' <PointerToIntegral>
+        |     `-ImplicitCastExpr 0x7fd118804928 <col:36> 'void (*)()' <FunctionToPointerDecay>
+        |       `-DeclRefExpr 0x7fd1188048c0 <col:36> 'void ()' Function 0x7fd1188041a8 'fn1' 'void ()'
+        |-UnaryOperator 0x7fd118805a28 <col:41, col:43> 'enum (anonymous enum at c_files/pr71084.c:11:1)':'enum (anonymous at c_files/pr71084.c:11:1)' prefix '++'
+        | `-DeclRefExpr 0x7fd118805a00 <col:43> 'enum (anonymous enum at c_files/pr71084.c:11:1)':'enum (anonymous at c_files/pr71084.c:11:1)' lvalue Var 0x7fd118804070 'run_i' 'enum (anonymous enum at c_files/pr71084.c:11:1)':'enum (anonymous at c_files/pr71084.c:11:1)'
+        `-ForStmt 0x7fd118805a98 <line:38:7, line:39:9>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7fd118805a70 <line:38:14> 'int' <LValueToRValue>
+          | `-DeclRefExpr 0x7fd118805a48 <col:14> 'int' lvalue Var 0x7fd1188042d0 'width' 'int'
+          |-<<<NULL>>>
+          `-NullStmt 0x7fd118805a88 <line:39:9>

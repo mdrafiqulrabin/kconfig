@@ -1,0 +1,117 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 8
+        UnaryOp: p++
+          ID: i
+        Pragma: omp task
+      If: 
+        ArrayRef: 
+          ID: a
+          ID: i
+        FuncCall: 
+          ID: __builtin_abort
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 8
+        UnaryOp: p++
+          ID: i
+        Pragma: omp task
+      If: 
+        ArrayRef: 
+          ID: a
+          ID: i
+        Compound: 
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['int']
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              Constant: int, 10
+            UnaryOp: p++
+              ID: j
+            For: 
+              Assignment: =
+                ID: k
+                Constant: int, 0
+              BinaryOp: <
+                ID: k
+                Constant: int, 8
+              UnaryOp: p++
+                ID: k
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  ID: j
+                  ID: k
+          For: 
+            Assignment: =
+              ID: k
+              Constant: int, 0
+            BinaryOp: <
+              ID: k
+              Constant: int, 12
+            UnaryOp: p++
+              ID: k
+            FuncCall: 
+              ID: bar
+              ExprList: 
+                UnaryOp: -
+                  Constant: int, 1
+                ID: k
+          FuncCall: 
+            ID: __builtin_abort

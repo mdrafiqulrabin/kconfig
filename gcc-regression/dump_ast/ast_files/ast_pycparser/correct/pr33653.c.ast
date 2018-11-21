@@ -1,0 +1,18 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, ['volatile'], [], []
+            PtrDecl: []
+              TypeDecl: p, ['volatile']
+                IdentifierType: ['char']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['char']
+        ArrayRef: 
+          ID: p
+          Constant: int, 0

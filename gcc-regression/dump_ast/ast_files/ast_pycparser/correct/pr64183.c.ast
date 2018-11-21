@@ -1,0 +1,45 @@
+FileAST: 
+  Decl: bits, [], [], []
+    TypeDecl: bits, []
+      IdentifierType: ['int']
+  Decl: size, [], [], []
+    TypeDecl: size, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: max_code, [], [], []
+    TypeDecl: max_code, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: code, [], [], []
+        TypeDecl: code, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      While: 
+        BinaryOp: <
+          ID: code
+          ID: max_code
+        Assignment: |=
+          ID: code
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'int']
+            BinaryOp: >>
+              ID: size
+              UnaryOp: --
+                ID: bits
+      While: 
+        BinaryOp: <
+          ID: bits
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'int']
+            Constant: int, 25
+        Assignment: +=
+          ID: bits
+          Constant: int, 8

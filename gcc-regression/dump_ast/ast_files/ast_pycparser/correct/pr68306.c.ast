@@ -1,0 +1,32 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: powerpc_pmc_type
+      EnumeratorList: 
+        Enumerator: PPC_PMC_IBM
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Struct: None
+        Decl: num_pmcs, [], [], []
+          TypeDecl: num_pmcs, []
+            IdentifierType: ['unsigned']
+        Decl: pmc_type, [], [], []
+          TypeDecl: pmc_type, []
+            Enum: powerpc_pmc_type
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Enum: powerpc_pmc_type
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: a
+          ID: num_pmcs
+        Assignment: =
+          StructRef: .
+            ID: a
+            ID: pmc_type
+          ID: b

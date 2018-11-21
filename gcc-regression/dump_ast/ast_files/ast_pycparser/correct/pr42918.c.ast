@@ -1,0 +1,50 @@
+FileAST: 
+  Decl: fi, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fi, []
+        IdentifierType: ['int']
+  Decl: fv, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fv, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        UnaryOp: !
+          ID: j
+        Compound: 
+          FuncCall: 
+            ID: fv
+          Goto: lab
+      Assignment: =
+        ID: i
+        FuncCall: 
+          ID: fi
+      If: 
+        BinaryOp: ==
+          ID: i
+          ID: j
+        FuncCall: 
+          ID: fv
+      Label: lab
+        Return: 
+          ID: i

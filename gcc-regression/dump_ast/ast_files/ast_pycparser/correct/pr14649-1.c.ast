@@ -1,0 +1,44 @@
+FileAST: 
+  Decl: atan, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: atan, []
+        IdentifierType: ['double']
+  Decl: pi, ['const'], [], []
+    TypeDecl: pi, ['const']
+      IdentifierType: ['double']
+    BinaryOp: *
+      Constant: int, 4
+      FuncCall: 
+        ID: atan
+        ExprList: 
+          Constant: float, 1.0
+  Decl: ok, ['const'], [], []
+    TypeDecl: ok, ['const']
+      IdentifierType: ['double']
+    BinaryOp: *
+      Constant: int, 4
+      FuncCall: 
+        ID: __builtin_atan
+        ExprList: 
+          Constant: float, 1.0
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: ok2, [], [], []
+        TypeDecl: ok2, []
+          IdentifierType: ['double']
+        BinaryOp: *
+          Constant: int, 4
+          FuncCall: 
+            ID: atan
+            ExprList: 
+              Constant: float, 1.0
+      Return: 
+        ID: ok2

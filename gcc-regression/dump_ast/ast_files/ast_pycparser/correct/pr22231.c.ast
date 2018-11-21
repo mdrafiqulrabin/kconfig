@@ -1,0 +1,4 @@
+FileAST: 
+  Decl: anything, [], [], []
+    TypeDecl: anything, []
+      IdentifierType: ['int']

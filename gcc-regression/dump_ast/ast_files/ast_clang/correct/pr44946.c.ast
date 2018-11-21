@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7f85b60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f85b6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f85b6026740 '__int128'
+|-TypedefDecl 0x7f85b6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f85b6026760 'unsigned __int128'
+|-TypedefDecl 0x7f85b6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f85b6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f85b6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f85b6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f85b6026dc0 'char *'
+|   `-BuiltinType 0x7f85b6026560 'char'
+|-TypedefDecl 0x7f85b60270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f85b6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f85b6026ee0 'struct __va_list_tag'
+|     `-Record 0x7f85b6026e58 '__va_list_tag'
+|-RecordDecl 0x7f85b6027120 <c_files/pr44946.c:1:1, line:5:1> line:1:8 struct A definition
+| |-FieldDecl 0x7f85b6825a00 <line:3:3, col:7> col:7 i 'int'
+| `-FieldDecl 0x7f85b6825a60 <line:4:3, col:8> col:8 l 'long'
+|-RecordDecl 0x7f85b6825aa8 <line:7:1, line:10:1> line:7:8 struct B definition
+| `-FieldDecl 0x7f85b6825b68 <line:9:3, col:7> col:7 i 'int'
+|-RecordDecl 0x7f85b6825bb0 <line:12:1, line:16:1> line:12:8 struct C definition
+| |-FieldDecl 0x7f85b6825c78 <line:14:3, col:7> col:7 i 'int'
+| `-FieldDecl 0x7f85b6825d10 <line:15:3, col:12> col:12 referenced b 'struct B':'struct B'
+|-FunctionDecl 0x7f85b6825ec0 <line:18:1, line:22:1> line:18:10 foo 'struct B (struct A)'
+| |-ParmVarDecl 0x7f85b6825db0 <col:15, col:24> col:24 used a 'struct A':'struct A'
+| `-CompoundStmt 0x7f85b6826268 <line:19:1, line:22:1>
+|   |-DeclStmt 0x7f85b68261a8 <line:20:3, col:32>
+|   | `-VarDecl 0x7f85b6826050 <col:3, col:31> col:13 used c 'struct C *' cinit
+|   |   `-CStyleCastExpr 0x7f85b6826180 <col:17, col:31> 'struct C *' <BitCast>
+|   |     `-UnaryOperator 0x7f85b6826138 <col:30, col:31> 'struct A *' prefix '&'
+|   |       `-DeclRefExpr 0x7f85b68260b0 <col:31> 'struct A':'struct A' lvalue ParmVar 0x7f85b6825db0 'a' 'struct A':'struct A'
+|   `-ReturnStmt 0x7f85b6826250 <line:21:3, col:13>
+|     `-ImplicitCastExpr 0x7f85b6826238 <col:10, col:13> 'struct B':'struct B' <LValueToRValue>
+|       `-MemberExpr 0x7f85b6826200 <col:10, col:13> 'struct B':'struct B' lvalue ->b 0x7f85b6825d10
+|         `-ImplicitCastExpr 0x7f85b68261e8 <col:10> 'struct C *' <LValueToRValue>
+|           `-DeclRefExpr 0x7f85b68261c0 <col:10> 'struct C *' lvalue Var 0x7f85b6826050 'c' 'struct C *'
+`-FunctionDecl 0x7f85b6826440 <line:23:1, line:27:1> line:23:6 bar 'void (struct A, struct B)'
+  |-ParmVarDecl 0x7f85b68262b0 <col:11, col:20> col:20 used a 'struct A':'struct A'
+  |-ParmVarDecl 0x7f85b6826330 <col:23, col:32> col:32 used b 'struct B':'struct B'
+  `-CompoundStmt 0x7f85b6826700 <line:24:1, line:27:1>
+    |-DeclStmt 0x7f85b6826608 <line:25:3, col:32>
+    | `-VarDecl 0x7f85b6826510 <col:3, col:31> col:13 used c 'struct C *' cinit
+    |   `-CStyleCastExpr 0x7f85b68265e0 <col:17, col:31> 'struct C *' <BitCast>
+    |     `-UnaryOperator 0x7f85b6826598 <col:30, col:31> 'struct A *' prefix '&'
+    |       `-DeclRefExpr 0x7f85b6826570 <col:31> 'struct A':'struct A' lvalue ParmVar 0x7f85b68262b0 'a' 'struct A':'struct A'
+    `-BinaryOperator 0x7f85b68266d8 <line:26:3, col:10> 'struct B':'struct B' '='
+      |-MemberExpr 0x7f85b6826660 <col:3, col:6> 'struct B':'struct B' lvalue ->b 0x7f85b6825d10
+      | `-ImplicitCastExpr 0x7f85b6826648 <col:3> 'struct C *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f85b6826620 <col:3> 'struct C *' lvalue Var 0x7f85b6826510 'c' 'struct C *'
+      `-ImplicitCastExpr 0x7f85b68266c0 <col:10> 'struct B':'struct B' <LValueToRValue>
+        `-DeclRefExpr 0x7f85b6826698 <col:10> 'struct B':'struct B' lvalue ParmVar 0x7f85b6826330 'b' 'struct B':'struct B'

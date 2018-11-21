@@ -1,0 +1,93 @@
+TranslationUnitDecl 0x7fbc1d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbc1d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbc1d026740 '__int128'
+|-TypedefDecl 0x7fbc1d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbc1d026760 'unsigned __int128'
+|-TypedefDecl 0x7fbc1d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbc1d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbc1d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbc1d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbc1d026dc0 'char *'
+|   `-BuiltinType 0x7fbc1d026560 'char'
+|-TypedefDecl 0x7fbc1d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbc1d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbc1d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbc1d026e58 '__va_list_tag'
+|-TypedefDecl 0x7fbc1d027138 <c_files/pr33833.c:5:1, col:35> col:35 referenced uintptr_t 'unsigned long'
+| `-BuiltinType 0x7fbc1d026680 'unsigned long'
+|-RecordDecl 0x7fbc1d825a00 <line:8:1, line:11:1> line:8:8 struct list_head definition
+| `-FieldDecl 0x7fbc1d825b60 <line:10:3, col:21> col:21 referenced prev 'struct list_head *'
+|-RecordDecl 0x7fbc1d825ba8 <line:12:1, line:15:1> line:12:8 struct prio_array definition
+| `-FieldDecl 0x7fbc1d825d68 <line:14:3, col:29> col:20 referenced queue 'struct list_head [100]'
+|-RecordDecl 0x7fbc1d825db0 <line:16:1, line:19:1> line:16:8 struct rq definition
+| |-FieldDecl 0x7fbc1d825f10 <line:18:3, col:22> col:22 active 'struct prio_array *'
+| `-FieldDecl 0x7fbc1d826068 <col:3, col:38> col:30 referenced arrays 'struct prio_array [2]'
+|-VarDecl 0x7fbc1d826100 <line:16:1, line:19:3> col:3 referenced per_cpu__runqueues 'struct rq':'struct rq'
+`-FunctionDecl 0x7fbc1d8262f0 <line:21:1, line:33:1> line:21:6 sched_init 'void (uintptr_t)'
+  |-ParmVarDecl 0x7fbc1d8261f0 <col:18, col:28> col:28 used __ptr 'uintptr_t':'unsigned long'
+  `-CompoundStmt 0x7fbc1d82d128 <line:22:1, line:33:1>
+    |-DeclStmt 0x7fbc1d826498 <line:23:3, col:11>
+    | |-VarDecl 0x7fbc1d8263a8 <col:3, col:7> col:7 used j 'int'
+    | `-VarDecl 0x7fbc1d826420 <col:3, col:10> col:10 used k 'int'
+    |-DeclStmt 0x7fbc1d826538 <line:24:3, col:27>
+    | `-VarDecl 0x7fbc1d8264d8 <col:3, col:22> col:22 used array 'struct prio_array *'
+    |-DeclStmt 0x7fbc1d826630 <line:25:3, col:16>
+    | `-VarDecl 0x7fbc1d8265d0 <col:3, col:14> col:14 used rq 'struct rq *'
+    |-BinaryOperator 0x7fbc1d826888 <line:26:3, col:60> 'struct rq *' '='
+    | |-DeclRefExpr 0x7fbc1d826648 <col:3> 'struct rq *' lvalue Var 0x7fbc1d8265d0 'rq' 'struct rq *'
+    | `-ParenExpr 0x7fbc1d826868 <col:8, col:60> 'typeof (&per_cpu__runqueues)':'struct rq *'
+    |   `-UnaryOperator 0x7fbc1d826848 <col:9, col:59> 'typeof (&per_cpu__runqueues)':'struct rq *' prefix '&'
+    |     `-ParenExpr 0x7fbc1d826828 <col:10, col:59> 'struct rq':'struct rq' lvalue
+    |       `-UnaryOperator 0x7fbc1d826808 <col:11, col:58> 'struct rq':'struct rq' lvalue prefix '*'
+    |         `-StmtExpr 0x7fbc1d8267e8 <col:12, col:58> 'typeof (&per_cpu__runqueues)':'struct rq *'
+    |           `-CompoundStmt 0x7fbc1d8267c8 <col:14, col:56>
+    |             `-CStyleCastExpr 0x7fbc1d8267a0 <col:16, col:53> 'typeof (&per_cpu__runqueues)':'struct rq *' <IntegralToPointer>
+    |               `-ImplicitCastExpr 0x7fbc1d826788 <col:47, col:53> 'uintptr_t':'unsigned long' <LValueToRValue>
+    |                 `-ParenExpr 0x7fbc1d826768 <col:47, col:53> 'uintptr_t':'unsigned long' lvalue
+    |                   `-DeclRefExpr 0x7fbc1d8266d8 <col:48> 'uintptr_t':'unsigned long' lvalue ParmVar 0x7fbc1d8261f0 '__ptr' 'uintptr_t':'unsigned long'
+    `-ForStmt 0x7fbc1d82d0f0 <line:27:3, line:32:3>
+      |-BinaryOperator 0x7fbc1d8268f8 <line:27:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fbc1d8268b0 <col:8> 'int' lvalue Var 0x7fbc1d8263a8 'j' 'int'
+      | `-IntegerLiteral 0x7fbc1d8268d8 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fbc1d826980 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fbc1d826968 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fbc1d826920 <col:15> 'int' lvalue Var 0x7fbc1d8263a8 'j' 'int'
+      | `-IntegerLiteral 0x7fbc1d826948 <col:19> 'int' 2
+      |-UnaryOperator 0x7fbc1d8269d0 <col:22, col:23> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fbc1d8269a8 <col:22> 'int' lvalue Var 0x7fbc1d8263a8 'j' 'int'
+      `-CompoundStmt 0x7fbc1d82d0c8 <line:28:3, line:32:3>
+        |-BinaryOperator 0x7fbc1d82cd20 <line:29:5, col:26> 'struct prio_array *' '='
+        | |-DeclRefExpr 0x7fbc1d82cc00 <col:5> 'struct prio_array *' lvalue Var 0x7fbc1d8264d8 'array' 'struct prio_array *'
+        | `-BinaryOperator 0x7fbc1d82ccf8 <col:13, col:26> 'struct prio_array *' '+'
+        |   |-ImplicitCastExpr 0x7fbc1d82ccc8 <col:13, col:17> 'struct prio_array *' <ArrayToPointerDecay>
+        |   | `-MemberExpr 0x7fbc1d82cc68 <col:13, col:17> 'struct prio_array [2]' lvalue ->arrays 0x7fbc1d826068
+        |   |   `-ImplicitCastExpr 0x7fbc1d82cc50 <col:13> 'struct rq *' <LValueToRValue>
+        |   |     `-DeclRefExpr 0x7fbc1d82cc28 <col:13> 'struct rq *' lvalue Var 0x7fbc1d8265d0 'rq' 'struct rq *'
+        |   `-ImplicitCastExpr 0x7fbc1d82cce0 <col:26> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fbc1d82cca0 <col:26> 'int' lvalue Var 0x7fbc1d8263a8 'j' 'int'
+        `-ForStmt 0x7fbc1d82d090 <line:30:5, line:31:43>
+          |-BinaryOperator 0x7fbc1d82cd90 <line:30:10, col:14> 'int' '='
+          | |-DeclRefExpr 0x7fbc1d82cd48 <col:10> 'int' lvalue Var 0x7fbc1d826420 'k' 'int'
+          | `-IntegerLiteral 0x7fbc1d82cd70 <col:14> 'int' 0
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7fbc1d82ce18 <col:17, col:21> 'int' '<'
+          | |-ImplicitCastExpr 0x7fbc1d82ce00 <col:17> 'int' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fbc1d82cdb8 <col:17> 'int' lvalue Var 0x7fbc1d826420 'k' 'int'
+          | `-IntegerLiteral 0x7fbc1d82cde0 <col:21> 'int' 100
+          |-UnaryOperator 0x7fbc1d82ce68 <col:26, col:27> 'int' postfix '++'
+          | `-DeclRefExpr 0x7fbc1d82ce40 <col:26> 'int' lvalue Var 0x7fbc1d826420 'k' 'int'
+          `-BinaryOperator 0x7fbc1d82d068 <line:31:9, col:43> 'struct list_head *' '='
+            |-MemberExpr 0x7fbc1d82cfa0 <col:9, col:29> 'struct list_head *' lvalue ->prev 0x7fbc1d825b60
+            | `-ParenExpr 0x7fbc1d82cf80 <col:9, col:26> 'struct list_head *'
+            |   `-BinaryOperator 0x7fbc1d82cf58 <col:10, col:25> 'struct list_head *' '+'
+            |     |-ImplicitCastExpr 0x7fbc1d82cf28 <col:10, col:17> 'struct list_head *' <ArrayToPointerDecay>
+            |     | `-MemberExpr 0x7fbc1d82cec8 <col:10, col:17> 'struct list_head [100]' lvalue ->queue 0x7fbc1d825d68
+            |     |   `-ImplicitCastExpr 0x7fbc1d82ceb0 <col:10> 'struct prio_array *' <LValueToRValue>
+            |     |     `-DeclRefExpr 0x7fbc1d82ce88 <col:10> 'struct prio_array *' lvalue Var 0x7fbc1d8264d8 'array' 'struct prio_array *'
+            |     `-ImplicitCastExpr 0x7fbc1d82cf40 <col:25> 'int' <LValueToRValue>
+            |       `-DeclRefExpr 0x7fbc1d82cf00 <col:25> 'int' lvalue Var 0x7fbc1d826420 'k' 'int'
+            `-ImplicitCastExpr 0x7fbc1d82d050 <col:36, col:43> 'struct list_head *' <ArrayToPointerDecay>
+              `-MemberExpr 0x7fbc1d82d018 <col:36, col:43> 'struct list_head [100]' lvalue ->queue 0x7fbc1d825d68
+                `-ImplicitCastExpr 0x7fbc1d82d000 <col:36> 'struct prio_array *' <LValueToRValue>
+                  `-DeclRefExpr 0x7fbc1d82cfd8 <col:36> 'struct prio_array *' lvalue Var 0x7fbc1d8264d8 'array' 'struct prio_array *'

@@ -1,0 +1,31 @@
+c_files/pr27889.c:8:3: error: function definition is not allowed here
+  {
+  ^
+c_files/pr27889.c:11:5: error: use of undeclared identifier 'f'
+  h(f);
+    ^
+2 errors generated.
+TranslationUnitDecl 0x7fb8758264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb875826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb875826740 '__int128'
+|-TypedefDecl 0x7fb875826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb875826760 'unsigned __int128'
+|-TypedefDecl 0x7fb875826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb875826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb875826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb875826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb875826dc0 'char *'
+|   `-BuiltinType 0x7fb875826560 'char'
+|-TypedefDecl 0x7fb8758270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb875827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb875826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb875826e58 '__va_list_tag'
+|-FunctionDecl 0x7fb876800190 <c_files/pr27889.c:3:1, col:22> col:6 used h 'void (void (*)(void))'
+| `-ParmVarDecl 0x7fb876800088 <col:8, col:21> col:15 'void (*)(void)'
+`-FunctionDecl 0x7fb876800360 <line:4:1, line:13:1> line:4:14 g '_Complex int (void)'
+  `-CompoundStmt 0x7fb876800638 <line:5:1, line:13:1>
+    |-DeclStmt 0x7fb876800468 <line:6:3, col:17>
+    | `-VarDecl 0x7fb876800408 <col:3, col:16> col:16 used x '_Complex int'
+    `-ReturnStmt 0x7fb876800620 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7fb876800608 <col:10> '_Complex int' <LValueToRValue>
+        `-DeclRefExpr 0x7fb8768005e0 <col:10> '_Complex int' lvalue Var 0x7fb876800408 'x' '_Complex int'

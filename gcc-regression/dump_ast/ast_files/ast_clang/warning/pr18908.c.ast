@@ -1,0 +1,27 @@
+c_files/pr18908.c:4:31: warning: control reaches end of non-void function [-Wreturn-type]
+_Bool f3(_Bool *p) { *p ^= 1; }
+                              ^
+1 warning generated.
+TranslationUnitDecl 0x7fc2db8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc2db826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc2db826740 '__int128'
+|-TypedefDecl 0x7fc2db826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc2db826760 'unsigned __int128'
+|-TypedefDecl 0x7fc2db826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc2db826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc2db826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc2db826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc2db826dc0 'char *'
+|   `-BuiltinType 0x7fc2db826560 'char'
+|-TypedefDecl 0x7fc2db8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc2db827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc2db826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc2db826e58 '__va_list_tag'
+`-FunctionDecl 0x7fc2dc025a28 <c_files/pr18908.c:4:1, col:31> col:7 f3 '_Bool (_Bool *)'
+  |-ParmVarDecl 0x7fc2db827160 <col:10, col:17> col:17 used p '_Bool *'
+  `-CompoundStmt 0x7fc2dc025bc0 <col:20, col:31>
+    `-CompoundAssignOperator 0x7fc2dc025b88 <col:22, col:28> '_Bool' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+      |-UnaryOperator 0x7fc2dc025b48 <col:22, col:23> '_Bool' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fc2dc025b30 <col:23> '_Bool *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc2dc025b08 <col:23> '_Bool *' lvalue ParmVar 0x7fc2db827160 'p' '_Bool *'
+      `-IntegerLiteral 0x7fc2dc025b68 <col:28> 'int' 1

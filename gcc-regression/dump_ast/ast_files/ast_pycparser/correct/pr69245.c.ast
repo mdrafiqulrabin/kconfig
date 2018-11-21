@@ -1,0 +1,38 @@
+FileAST: 
+  Pragma: GCC target "fpu=vfp"
+  Pragma: GCC push_options
+  Pragma: GCC target "fpu=neon-vfpv4"
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['float']
+  FuncDef: 
+    Decl: fn1, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 0
+  Pragma: GCC pop_options
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        TypeDecl: fn2, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: d
+        BinaryOp: +
+          BinaryOp: *
+            ID: b
+            ID: c
+          ID: a

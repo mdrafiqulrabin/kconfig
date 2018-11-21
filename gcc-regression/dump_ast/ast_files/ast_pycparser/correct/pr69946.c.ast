@@ -1,0 +1,91 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+        Constant: int, 4
+      Decl: None, [], [], []
+        TypeDecl: None, []
+          IdentifierType: ['int']
+        Constant: int, 2
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+        Constant: int, 2
+      Decl: None, [], [], []
+        TypeDecl: None, []
+          IdentifierType: ['int']
+        Constant: int, 2
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        Constant: int, 2
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+  Decl: a, [], [], []
+    PtrDecl: []
+      TypeDecl: a, []
+        Struct: B
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+            Constant: int, 4
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            Struct: A
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          Struct: B
+        ArrayRef: 
+          ID: a
+          Constant: int, 0
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          Struct: A
+      Assignment: =
+        StructRef: .
+          ID: c
+          ID: a
+        StructRef: .
+          ID: b
+          ID: a
+      Assignment: =
+        StructRef: .
+          ID: c
+          ID: b
+        Constant: int, 1
+      Assignment: =
+        StructRef: .
+          ID: c
+          ID: c
+        Constant: int, 1
+      Assignment: =
+        StructRef: .
+          ID: c
+          ID: d
+        Constant: int, 0
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: c

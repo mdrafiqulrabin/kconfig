@@ -1,0 +1,76 @@
+FileAST: 
+  FuncDef: 
+    Decl: tester, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: bytes, [], [], []
+            PtrDecl: []
+              TypeDecl: bytes, []
+                IdentifierType: ['char']
+        TypeDecl: tester, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: ovl, [], [], []
+        TypeDecl: ovl, []
+          Union: None
+            Decl: fmt, [], [], []
+              TypeDecl: fmt, []
+                Struct: None
+                  Decl: r1, [], [], []
+                    TypeDecl: r1, []
+                      IdentifierType: ['unsigned', 'int']
+                    Constant: int, 4
+                  Decl: r2, [], [], []
+                    TypeDecl: r2, []
+                      IdentifierType: ['unsigned', 'int']
+                    Constant: int, 4
+            Decl: value, [], [], []
+              ArrayDecl: []
+                TypeDecl: value, []
+                  IdentifierType: ['char']
+                Constant: int, 1
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: ovl
+            ID: value
+          Constant: int, 0
+        ArrayRef: 
+          ID: bytes
+          Constant: int, 0
+      Return: 
+        StructRef: .
+          StructRef: .
+            ID: ovl
+            ID: fmt
+          ID: r1
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: buff, [], [], []
+        TypeDecl: buff, []
+          IdentifierType: ['char']
+        Constant: int, 0x2f
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: tester
+            ExprList: 
+              UnaryOp: &
+                ID: buff
+          Constant: int, 0x0f
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

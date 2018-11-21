@@ -1,0 +1,81 @@
+c_files/pr49220.c:18:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7fa5a38264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa5a3826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa5a3826740 '__int128'
+|-TypedefDecl 0x7fa5a3826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa5a3826760 'unsigned __int128'
+|-TypedefDecl 0x7fa5a3826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa5a3826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa5a3826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa5a3826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa5a3826dc0 'char *'
+|   `-BuiltinType 0x7fa5a3826560 'char'
+|-TypedefDecl 0x7fa5a38270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa5a3827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa5a3826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa5a3826e58 '__va_list_tag'
+|-VarDecl 0x7fa5a38271a0 <c_files/pr49220.c:1:1, col:12> col:5 used array 'int [2]'
+|-FunctionDecl 0x7fa5a3877528 <line:3:1, line:7:1> line:4:1 used func1 'int (int)' static
+| |-ParmVarDecl 0x7fa5a3877458 <col:8, col:12> col:12 used b 'int'
+| `-CompoundStmt 0x7fa5a3877620 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7fa5a3877608 <line:6:3, col:10>
+|     `-ImplicitCastExpr 0x7fa5a38775f0 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa5a38775c8 <col:10> 'int' lvalue ParmVar 0x7fa5a3877458 'b' 'int'
+|-FunctionDecl 0x7fa5a38777a8 <line:9:1, line:13:1> line:10:1 used func2 'int (int, int)' static
+| |-ParmVarDecl 0x7fa5a3877658 <col:8, col:12> col:12 used a 'int'
+| |-ParmVarDecl 0x7fa5a38776d0 <col:15, col:19> col:19 used b 'int'
+| `-CompoundStmt 0x7fa5a38779a0 <line:11:1, line:13:1>
+|   `-ReturnStmt 0x7fa5a3877988 <line:12:3, col:23>
+|     `-ConditionalOperator 0x7fa5a3877958 <col:10, col:23> 'int'
+|       |-BinaryOperator 0x7fa5a38778b0 <col:10, col:15> 'int' '=='
+|       | |-ImplicitCastExpr 0x7fa5a3877898 <col:10> 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fa5a3877850 <col:10> 'int' lvalue ParmVar 0x7fa5a38776d0 'b' 'int'
+|       | `-IntegerLiteral 0x7fa5a3877878 <col:15> 'int' 0
+|       |-ImplicitCastExpr 0x7fa5a3877928 <col:19> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fa5a38778d8 <col:19> 'int' lvalue ParmVar 0x7fa5a3877658 'a' 'int'
+|       `-ImplicitCastExpr 0x7fa5a3877940 <col:23> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fa5a3877900 <col:23> 'int' lvalue ParmVar 0x7fa5a38776d0 'b' 'int'
+|-FunctionDecl 0x7fa5a3877a68 <line:15:1, line:18:1> line:16:1 used func3 'int (int)'
+| |-ParmVarDecl 0x7fa5a38779d8 <col:8, col:12> col:12 a 'int'
+| `-CompoundStmt 0x7fa5a3877b08 <line:17:1, line:18:1>
+`-FunctionDecl 0x7fa5a3877c28 <line:20:1, line:25:1> line:21:1 func4 'int *(int *)'
+  |-ParmVarDecl 0x7fa5a3877b60 <col:8, col:13> col:13 used arg 'int *'
+  `-CompoundStmt 0x7fa5a38781c8 <line:22:1, line:25:1>
+    |-BinaryOperator 0x7fa5a38780e0 <line:23:3, col:60> 'int' '='
+    | |-UnaryOperator 0x7fa5a3877d08 <col:3, col:4> 'int' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fa5a3877cf0 <col:4> 'int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fa5a3877cc8 <col:4> 'int *' lvalue ParmVar 0x7fa5a3877b60 'arg' 'int *'
+    | `-CallExpr 0x7fa5a38780b0 <col:10, col:60> 'int'
+    |   |-ImplicitCastExpr 0x7fa5a3878098 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fa5a3877d28 <col:10> 'int (int)' Function 0x7fa5a3877528 'func1' 'int (int)'
+    |   `-BinaryOperator 0x7fa5a3878070 <col:17, col:59> 'int' '|'
+    |     |-ParenExpr 0x7fa5a3877fb0 <col:17, col:48> 'int'
+    |     | `-CallExpr 0x7fa5a3877f60 <col:18, col:47> 'int'
+    |     |   |-ImplicitCastExpr 0x7fa5a3877f48 <col:18> 'int (*)(int, int)' <FunctionToPointerDecay>
+    |     |   | `-DeclRefExpr 0x7fa5a3877d50 <col:18> 'int (int, int)' Function 0x7fa5a38777a8 'func2' 'int (int, int)'
+    |     |   |-CallExpr 0x7fa5a3877e70 <col:25, col:40> 'int'
+    |     |   | |-ImplicitCastExpr 0x7fa5a3877e58 <col:25> 'int (*)(int)' <FunctionToPointerDecay>
+    |     |   | | `-DeclRefExpr 0x7fa5a3877d78 <col:25> 'int (int)' Function 0x7fa5a3877a68 'func3' 'int (int)'
+    |     |   | `-ImplicitCastExpr 0x7fa5a3877ea0 <col:32, col:39> 'int' <LValueToRValue>
+    |     |   |   `-ArraySubscriptExpr 0x7fa5a3877e00 <col:32, col:39> 'int' lvalue
+    |     |   |     |-ImplicitCastExpr 0x7fa5a3877de8 <col:32> 'int *' <ArrayToPointerDecay>
+    |     |   |     | `-DeclRefExpr 0x7fa5a3877da0 <col:32> 'int [2]' lvalue Var 0x7fa5a38271a0 'array' 'int [2]'
+    |     |   |     `-IntegerLiteral 0x7fa5a3877dc8 <col:38> 'int' 0
+    |     |   `-ImplicitCastExpr 0x7fa5a3877f98 <col:43, col:44> 'int' <LValueToRValue>
+    |     |     `-UnaryOperator 0x7fa5a3877ef8 <col:43, col:44> 'int' lvalue prefix '*'
+    |     |       `-ImplicitCastExpr 0x7fa5a3877ee0 <col:44> 'int *' <LValueToRValue>
+    |     |         `-DeclRefExpr 0x7fa5a3877eb8 <col:44> 'int *' lvalue ParmVar 0x7fa5a3877b60 'arg' 'int *'
+    |     `-ImplicitCastExpr 0x7fa5a3878058 <col:52, col:59> 'int' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7fa5a3878030 <col:52, col:59> 'int' lvalue
+    |         |-ImplicitCastExpr 0x7fa5a3878018 <col:52> 'int *' <ArrayToPointerDecay>
+    |         | `-DeclRefExpr 0x7fa5a3877fd0 <col:52> 'int [2]' lvalue Var 0x7fa5a38271a0 'array' 'int [2]'
+    |         `-IntegerLiteral 0x7fa5a3877ff8 <col:58> 'int' 0
+    `-ReturnStmt 0x7fa5a38781b0 <line:24:3, col:18>
+      `-UnaryOperator 0x7fa5a3878190 <col:10, col:18> 'int *' prefix '&'
+        `-ArraySubscriptExpr 0x7fa5a3878168 <col:11, col:18> 'int' lvalue
+          |-ImplicitCastExpr 0x7fa5a3878150 <col:11> 'int *' <ArrayToPointerDecay>
+          | `-DeclRefExpr 0x7fa5a3878108 <col:11> 'int [2]' lvalue Var 0x7fa5a38271a0 'array' 'int [2]'
+          `-IntegerLiteral 0x7fa5a3878130 <col:17> 'int' 1

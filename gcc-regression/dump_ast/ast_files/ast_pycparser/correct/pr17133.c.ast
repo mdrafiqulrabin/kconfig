@@ -1,0 +1,80 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: foo, [], [], []
+    TypeDecl: foo, []
+      IdentifierType: ['int']
+    Constant: int, 0
+  Decl: bar, [], [], []
+    PtrDecl: []
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+    Constant: int, 0
+  Decl: baz, [], [], []
+    TypeDecl: baz, []
+      IdentifierType: ['unsigned', 'int']
+    Constant: int, 100
+  FuncDef: 
+    Decl: pure_alloc, [], [], []
+      FuncDecl: 
+        PtrDecl: []
+          TypeDecl: pure_alloc, []
+            IdentifierType: ['void']
+    Compound: 
+      Decl: res, [], [], []
+        PtrDecl: []
+          TypeDecl: res, []
+            IdentifierType: ['void']
+      While: 
+        Constant: int, 1
+        Compound: 
+          Assignment: =
+            ID: res
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+              BinaryOp: &
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned', 'int']
+                  BinaryOp: +
+                    ID: foo
+                    ID: bar
+                UnaryOp: ~
+                  Constant: int, 1
+          Assignment: +=
+            ID: foo
+            Constant: int, 2
+          If: 
+            BinaryOp: <
+              ID: foo
+              ID: baz
+            Return: 
+              ID: res
+          Assignment: =
+            ID: foo
+            Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: pure_alloc
+      If: 
+        UnaryOp: !
+          ID: foo
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

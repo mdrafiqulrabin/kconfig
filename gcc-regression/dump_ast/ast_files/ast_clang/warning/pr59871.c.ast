@@ -1,0 +1,267 @@
+c_files/pr59871.c:10:19: warning: expression result unused [-Wunused-value]
+  p[0] = (bar (), 1, bar ()); /* { dg-warning "right-hand operand of comma expression has no effect" } */
+                  ^
+c_files/pr59871.c:11:11: warning: expression result unused [-Wunused-value]
+  p[1] = (1, bar ()); /* { dg-warning "left-hand operand of comma expression has no effect" } */
+          ^
+c_files/pr59871.c:12:11: warning: expression result unused [-Wunused-value]
+  bar (), 1, bar (); /* { dg-warning "right-hand operand of comma expression has no effect" } */
+          ^
+c_files/pr59871.c:14:3: warning: expression result unused [-Wunused-value]
+  1, bar (); /* { dg-warning "left-hand operand of comma expression has no effect" } */
+  ^
+c_files/pr59871.c:20:57: warning: expression result unused [-Wunused-value]
+  bar (), (bar (), (bar (), (bar (), (bar (), (bar (), (7, bar ())))))); /* { dg-warning "left-hand operand of comma expression has no effect" } */
+                                                        ^
+c_files/pr59871.c:21:58: warning: expression result unused [-Wunused-value]
+  (bar (), (bar (), (bar (), (bar (), (bar (), (bar (), (7, bar ()))))))); /* { dg-warning "left-hand operand of comma expression has no effect" } */
+                                                         ^
+c_files/pr59871.c:13:11: warning: expression result unused [-Wunused-value]
+  bar (), 1; /* { dg-warning "right-hand operand of comma expression has no effect" } */
+          ^
+c_files/pr59871.c:15:12: warning: expression result unused [-Wunused-value]
+  (bar (), 1); /* { dg-warning "right-hand operand of comma expression has no effect" } */
+           ^
+c_files/pr59871.c:16:13: warning: expression result unused [-Wunused-value]
+  bar (), 5 * i; /* { dg-warning "right-hand operand of comma expression has no effect" } */
+          ~ ^ ~
+c_files/pr59871.c:17:14: warning: expression result unused [-Wunused-value]
+  (bar (), 5 * i); /* { dg-warning "right-hand operand of comma expression has no effect" } */
+           ~ ^ ~
+c_files/pr59871.c:18:66: warning: expression result unused [-Wunused-value]
+  (bar (), (bar (), (bar (), (bar (), (bar (), (bar (), (bar (), 7))))))); /* { dg-warning "right-hand operand of comma expression has no effect" } */
+                                                                 ^
+c_files/pr59871.c:19:65: warning: expression result unused [-Wunused-value]
+  bar (), (bar (), (bar (), (bar (), (bar (), (bar (), (bar (), 7)))))); /* { dg-warning "right-hand operand of comma expression has no effect" } */
+                                                                ^
+12 warnings generated.
+TranslationUnitDecl 0x7feb9c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feb9c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feb9c826740 '__int128'
+|-TypedefDecl 0x7feb9c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feb9c826760 'unsigned __int128'
+|-TypedefDecl 0x7feb9c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feb9c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7feb9c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feb9c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feb9c826dc0 'char *'
+|   `-BuiltinType 0x7feb9c826560 'char'
+|-TypedefDecl 0x7feb9c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feb9c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feb9c826ee0 'struct __va_list_tag'
+|     `-Record 0x7feb9c826e58 '__va_list_tag'
+|-FunctionDecl 0x7feb9c877a00 <c_files/pr59871.c:5:1, col:17> col:12 used bar 'int ()' extern
+`-FunctionDecl 0x7feb9c877c70 <line:7:1, line:22:1> line:8:1 foo 'void (int *, int)'
+  |-ParmVarDecl 0x7feb9c877b20 <col:6, col:11> col:11 used p 'int *'
+  |-ParmVarDecl 0x7feb9c877b98 <col:14, col:18> col:18 used i 'int'
+  `-CompoundStmt 0x7feb9c879a20 <line:9:1, line:22:1>
+    |-BinaryOperator 0x7feb9c877f30 <line:10:3, col:28> 'int' '='
+    | |-ArraySubscriptExpr 0x7feb9c877d78 <col:3, col:6> 'int' lvalue
+    | | |-ImplicitCastExpr 0x7feb9c877d60 <col:3> 'int *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7feb9c877d18 <col:3> 'int *' lvalue ParmVar 0x7feb9c877b20 'p' 'int *'
+    | | `-IntegerLiteral 0x7feb9c877d40 <col:5> 'int' 0
+    | `-ParenExpr 0x7feb9c877f10 <col:10, col:28> 'int'
+    |   `-BinaryOperator 0x7feb9c877ee8 <col:11, col:27> 'int' ','
+    |     |-BinaryOperator 0x7feb9c877e58 <col:11, col:19> 'int' ','
+    |     | |-CallExpr 0x7feb9c877e10 <col:11, col:16> 'int'
+    |     | | `-ImplicitCastExpr 0x7feb9c877df8 <col:11> 'int (*)()' <FunctionToPointerDecay>
+    |     | |   `-DeclRefExpr 0x7feb9c877da0 <col:11> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |     | `-IntegerLiteral 0x7feb9c877e38 <col:19> 'int' 1
+    |     `-CallExpr 0x7feb9c877ec0 <col:22, col:27> 'int'
+    |       `-ImplicitCastExpr 0x7feb9c877ea8 <col:22> 'int (*)()' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x7feb9c877e80 <col:22> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |-BinaryOperator 0x7feb9c8780b0 <line:11:3, col:20> 'int' '='
+    | |-ArraySubscriptExpr 0x7feb9c877fb8 <col:3, col:6> 'int' lvalue
+    | | |-ImplicitCastExpr 0x7feb9c877fa0 <col:3> 'int *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7feb9c877f58 <col:3> 'int *' lvalue ParmVar 0x7feb9c877b20 'p' 'int *'
+    | | `-IntegerLiteral 0x7feb9c877f80 <col:5> 'int' 1
+    | `-ParenExpr 0x7feb9c878090 <col:10, col:20> 'int'
+    |   `-BinaryOperator 0x7feb9c878068 <col:11, col:19> 'int' ','
+    |     |-IntegerLiteral 0x7feb9c877fe0 <col:11> 'int' 1
+    |     `-CallExpr 0x7feb9c878040 <col:14, col:19> 'int'
+    |       `-ImplicitCastExpr 0x7feb9c878028 <col:14> 'int (*)()' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x7feb9c878000 <col:14> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |-BinaryOperator 0x7feb9c8781f0 <line:12:3, col:19> 'int' ','
+    | |-BinaryOperator 0x7feb9c878160 <col:3, col:11> 'int' ','
+    | | |-CallExpr 0x7feb9c878118 <col:3, col:8> 'int'
+    | | | `-ImplicitCastExpr 0x7feb9c878100 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | |   `-DeclRefExpr 0x7feb9c8780d8 <col:3> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    | | `-IntegerLiteral 0x7feb9c878140 <col:11> 'int' 1
+    | `-CallExpr 0x7feb9c8781c8 <col:14, col:19> 'int'
+    |   `-ImplicitCastExpr 0x7feb9c8781b0 <col:14> 'int (*)()' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7feb9c878188 <col:14> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |-BinaryOperator 0x7feb9c8782a0 <line:13:3, col:11> 'int' ','
+    | |-CallExpr 0x7feb9c878258 <col:3, col:8> 'int'
+    | | `-ImplicitCastExpr 0x7feb9c878240 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7feb9c878218 <col:3> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    | `-IntegerLiteral 0x7feb9c878280 <col:11> 'int' 1
+    |-BinaryOperator 0x7feb9c878350 <line:14:3, col:11> 'int' ','
+    | |-IntegerLiteral 0x7feb9c8782c8 <col:3> 'int' 1
+    | `-CallExpr 0x7feb9c878328 <col:6, col:11> 'int'
+    |   `-ImplicitCastExpr 0x7feb9c878310 <col:6> 'int (*)()' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7feb9c8782e8 <col:6> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |-ParenExpr 0x7feb9c878428 <line:15:3, col:13> 'int'
+    | `-BinaryOperator 0x7feb9c878400 <col:4, col:12> 'int' ','
+    |   |-CallExpr 0x7feb9c8783b8 <col:4, col:9> 'int'
+    |   | `-ImplicitCastExpr 0x7feb9c8783a0 <col:4> 'int (*)()' <FunctionToPointerDecay>
+    |   |   `-DeclRefExpr 0x7feb9c878378 <col:4> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |   `-IntegerLiteral 0x7feb9c8783e0 <col:12> 'int' 1
+    |-BinaryOperator 0x7feb9c878538 <line:16:3, col:15> 'int' ','
+    | |-CallExpr 0x7feb9c878488 <col:3, col:8> 'int'
+    | | `-ImplicitCastExpr 0x7feb9c878470 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7feb9c878448 <col:3> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    | `-BinaryOperator 0x7feb9c878510 <col:11, col:15> 'int' '*'
+    |   |-IntegerLiteral 0x7feb9c8784b0 <col:11> 'int' 5
+    |   `-ImplicitCastExpr 0x7feb9c8784f8 <col:15> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7feb9c8784d0 <col:15> 'int' lvalue ParmVar 0x7feb9c877b98 'i' 'int'
+    |-ParenExpr 0x7feb9c878678 <line:17:3, col:17> 'int'
+    | `-BinaryOperator 0x7feb9c878650 <col:4, col:16> 'int' ','
+    |   |-CallExpr 0x7feb9c8785a0 <col:4, col:9> 'int'
+    |   | `-ImplicitCastExpr 0x7feb9c878588 <col:4> 'int (*)()' <FunctionToPointerDecay>
+    |   |   `-DeclRefExpr 0x7feb9c878560 <col:4> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |   `-BinaryOperator 0x7feb9c878628 <col:12, col:16> 'int' '*'
+    |     |-IntegerLiteral 0x7feb9c8785c8 <col:12> 'int' 5
+    |     `-ImplicitCastExpr 0x7feb9c878610 <col:16> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7feb9c8785e8 <col:16> 'int' lvalue ParmVar 0x7feb9c877b98 'i' 'int'
+    |-ParenExpr 0x7feb9c878b68 <line:18:3, col:73> 'int'
+    | `-BinaryOperator 0x7feb9c878b40 <col:4, col:72> 'int' ','
+    |   |-CallExpr 0x7feb9c8786d8 <col:4, col:9> 'int'
+    |   | `-ImplicitCastExpr 0x7feb9c8786c0 <col:4> 'int (*)()' <FunctionToPointerDecay>
+    |   |   `-DeclRefExpr 0x7feb9c878698 <col:4> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |   `-ParenExpr 0x7feb9c878b20 <col:12, col:72> 'int'
+    |     `-BinaryOperator 0x7feb9c878af8 <col:13, col:71> 'int' ','
+    |       |-CallExpr 0x7feb9c878740 <col:13, col:18> 'int'
+    |       | `-ImplicitCastExpr 0x7feb9c878728 <col:13> 'int (*)()' <FunctionToPointerDecay>
+    |       |   `-DeclRefExpr 0x7feb9c878700 <col:13> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |       `-ParenExpr 0x7feb9c878ad8 <col:21, col:71> 'int'
+    |         `-BinaryOperator 0x7feb9c878ab0 <col:22, col:70> 'int' ','
+    |           |-CallExpr 0x7feb9c8787a8 <col:22, col:27> 'int'
+    |           | `-ImplicitCastExpr 0x7feb9c878790 <col:22> 'int (*)()' <FunctionToPointerDecay>
+    |           |   `-DeclRefExpr 0x7feb9c878768 <col:22> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |           `-ParenExpr 0x7feb9c878a90 <col:30, col:70> 'int'
+    |             `-BinaryOperator 0x7feb9c878a68 <col:31, col:69> 'int' ','
+    |               |-CallExpr 0x7feb9c878810 <col:31, col:36> 'int'
+    |               | `-ImplicitCastExpr 0x7feb9c8787f8 <col:31> 'int (*)()' <FunctionToPointerDecay>
+    |               |   `-DeclRefExpr 0x7feb9c8787d0 <col:31> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |               `-ParenExpr 0x7feb9c878a48 <col:39, col:69> 'int'
+    |                 `-BinaryOperator 0x7feb9c878a20 <col:40, col:68> 'int' ','
+    |                   |-CallExpr 0x7feb9c878878 <col:40, col:45> 'int'
+    |                   | `-ImplicitCastExpr 0x7feb9c878860 <col:40> 'int (*)()' <FunctionToPointerDecay>
+    |                   |   `-DeclRefExpr 0x7feb9c878838 <col:40> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |                   `-ParenExpr 0x7feb9c878a00 <col:48, col:68> 'int'
+    |                     `-BinaryOperator 0x7feb9c8789d8 <col:49, col:67> 'int' ','
+    |                       |-CallExpr 0x7feb9c8788e0 <col:49, col:54> 'int'
+    |                       | `-ImplicitCastExpr 0x7feb9c8788c8 <col:49> 'int (*)()' <FunctionToPointerDecay>
+    |                       |   `-DeclRefExpr 0x7feb9c8788a0 <col:49> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |                       `-ParenExpr 0x7feb9c8789b8 <col:57, col:67> 'int'
+    |                         `-BinaryOperator 0x7feb9c878990 <col:58, col:66> 'int' ','
+    |                           |-CallExpr 0x7feb9c878948 <col:58, col:63> 'int'
+    |                           | `-ImplicitCastExpr 0x7feb9c878930 <col:58> 'int (*)()' <FunctionToPointerDecay>
+    |                           |   `-DeclRefExpr 0x7feb9c878908 <col:58> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |                           `-IntegerLiteral 0x7feb9c878970 <col:66> 'int' 7
+    |-BinaryOperator 0x7feb9c879030 <line:19:3, col:71> 'int' ','
+    | |-CallExpr 0x7feb9c878bc8 <col:3, col:8> 'int'
+    | | `-ImplicitCastExpr 0x7feb9c878bb0 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7feb9c878b88 <col:3> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    | `-ParenExpr 0x7feb9c879010 <col:11, col:71> 'int'
+    |   `-BinaryOperator 0x7feb9c878fe8 <col:12, col:70> 'int' ','
+    |     |-CallExpr 0x7feb9c878c30 <col:12, col:17> 'int'
+    |     | `-ImplicitCastExpr 0x7feb9c878c18 <col:12> 'int (*)()' <FunctionToPointerDecay>
+    |     |   `-DeclRefExpr 0x7feb9c878bf0 <col:12> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |     `-ParenExpr 0x7feb9c878fc8 <col:20, col:70> 'int'
+    |       `-BinaryOperator 0x7feb9c878fa0 <col:21, col:69> 'int' ','
+    |         |-CallExpr 0x7feb9c878c98 <col:21, col:26> 'int'
+    |         | `-ImplicitCastExpr 0x7feb9c878c80 <col:21> 'int (*)()' <FunctionToPointerDecay>
+    |         |   `-DeclRefExpr 0x7feb9c878c58 <col:21> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |         `-ParenExpr 0x7feb9c878f80 <col:29, col:69> 'int'
+    |           `-BinaryOperator 0x7feb9c878f58 <col:30, col:68> 'int' ','
+    |             |-CallExpr 0x7feb9c878d00 <col:30, col:35> 'int'
+    |             | `-ImplicitCastExpr 0x7feb9c878ce8 <col:30> 'int (*)()' <FunctionToPointerDecay>
+    |             |   `-DeclRefExpr 0x7feb9c878cc0 <col:30> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |             `-ParenExpr 0x7feb9c878f38 <col:38, col:68> 'int'
+    |               `-BinaryOperator 0x7feb9c878f10 <col:39, col:67> 'int' ','
+    |                 |-CallExpr 0x7feb9c878d68 <col:39, col:44> 'int'
+    |                 | `-ImplicitCastExpr 0x7feb9c878d50 <col:39> 'int (*)()' <FunctionToPointerDecay>
+    |                 |   `-DeclRefExpr 0x7feb9c878d28 <col:39> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |                 `-ParenExpr 0x7feb9c878ef0 <col:47, col:67> 'int'
+    |                   `-BinaryOperator 0x7feb9c878ec8 <col:48, col:66> 'int' ','
+    |                     |-CallExpr 0x7feb9c878dd0 <col:48, col:53> 'int'
+    |                     | `-ImplicitCastExpr 0x7feb9c878db8 <col:48> 'int (*)()' <FunctionToPointerDecay>
+    |                     |   `-DeclRefExpr 0x7feb9c878d90 <col:48> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |                     `-ParenExpr 0x7feb9c878ea8 <col:56, col:66> 'int'
+    |                       `-BinaryOperator 0x7feb9c878e80 <col:57, col:65> 'int' ','
+    |                         |-CallExpr 0x7feb9c878e38 <col:57, col:62> 'int'
+    |                         | `-ImplicitCastExpr 0x7feb9c878e20 <col:57> 'int (*)()' <FunctionToPointerDecay>
+    |                         |   `-DeclRefExpr 0x7feb9c878df8 <col:57> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |                         `-IntegerLiteral 0x7feb9c878e60 <col:65> 'int' 7
+    |-BinaryOperator 0x7feb9c879500 <line:20:3, col:71> 'int' ','
+    | |-CallExpr 0x7feb9c879098 <col:3, col:8> 'int'
+    | | `-ImplicitCastExpr 0x7feb9c879080 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7feb9c879058 <col:3> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    | `-ParenExpr 0x7feb9c8794e0 <col:11, col:71> 'int'
+    |   `-BinaryOperator 0x7feb9c8794b8 <col:12, col:70> 'int' ','
+    |     |-CallExpr 0x7feb9c879100 <col:12, col:17> 'int'
+    |     | `-ImplicitCastExpr 0x7feb9c8790e8 <col:12> 'int (*)()' <FunctionToPointerDecay>
+    |     |   `-DeclRefExpr 0x7feb9c8790c0 <col:12> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |     `-ParenExpr 0x7feb9c879498 <col:20, col:70> 'int'
+    |       `-BinaryOperator 0x7feb9c879470 <col:21, col:69> 'int' ','
+    |         |-CallExpr 0x7feb9c879168 <col:21, col:26> 'int'
+    |         | `-ImplicitCastExpr 0x7feb9c879150 <col:21> 'int (*)()' <FunctionToPointerDecay>
+    |         |   `-DeclRefExpr 0x7feb9c879128 <col:21> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |         `-ParenExpr 0x7feb9c879450 <col:29, col:69> 'int'
+    |           `-BinaryOperator 0x7feb9c879428 <col:30, col:68> 'int' ','
+    |             |-CallExpr 0x7feb9c8791d0 <col:30, col:35> 'int'
+    |             | `-ImplicitCastExpr 0x7feb9c8791b8 <col:30> 'int (*)()' <FunctionToPointerDecay>
+    |             |   `-DeclRefExpr 0x7feb9c879190 <col:30> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |             `-ParenExpr 0x7feb9c879408 <col:38, col:68> 'int'
+    |               `-BinaryOperator 0x7feb9c8793e0 <col:39, col:67> 'int' ','
+    |                 |-CallExpr 0x7feb9c879238 <col:39, col:44> 'int'
+    |                 | `-ImplicitCastExpr 0x7feb9c879220 <col:39> 'int (*)()' <FunctionToPointerDecay>
+    |                 |   `-DeclRefExpr 0x7feb9c8791f8 <col:39> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |                 `-ParenExpr 0x7feb9c8793c0 <col:47, col:67> 'int'
+    |                   `-BinaryOperator 0x7feb9c879398 <col:48, col:66> 'int' ','
+    |                     |-CallExpr 0x7feb9c8792a0 <col:48, col:53> 'int'
+    |                     | `-ImplicitCastExpr 0x7feb9c879288 <col:48> 'int (*)()' <FunctionToPointerDecay>
+    |                     |   `-DeclRefExpr 0x7feb9c879260 <col:48> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    |                     `-ParenExpr 0x7feb9c879378 <col:56, col:66> 'int'
+    |                       `-BinaryOperator 0x7feb9c879350 <col:57, col:65> 'int' ','
+    |                         |-IntegerLiteral 0x7feb9c8792c8 <col:57> 'int' 7
+    |                         `-CallExpr 0x7feb9c879328 <col:60, col:65> 'int'
+    |                           `-ImplicitCastExpr 0x7feb9c879310 <col:60> 'int (*)()' <FunctionToPointerDecay>
+    |                             `-DeclRefExpr 0x7feb9c8792e8 <col:60> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+    `-ParenExpr 0x7feb9c879a00 <line:21:3, col:73> 'int'
+      `-BinaryOperator 0x7feb9c8799d0 <col:4, col:72> 'int' ','
+        |-CallExpr 0x7feb9c879568 <col:4, col:9> 'int'
+        | `-ImplicitCastExpr 0x7feb9c879550 <col:4> 'int (*)()' <FunctionToPointerDecay>
+        |   `-DeclRefExpr 0x7feb9c879528 <col:4> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+        `-ParenExpr 0x7feb9c8799b0 <col:12, col:72> 'int'
+          `-BinaryOperator 0x7feb9c879988 <col:13, col:71> 'int' ','
+            |-CallExpr 0x7feb9c8795d0 <col:13, col:18> 'int'
+            | `-ImplicitCastExpr 0x7feb9c8795b8 <col:13> 'int (*)()' <FunctionToPointerDecay>
+            |   `-DeclRefExpr 0x7feb9c879590 <col:13> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+            `-ParenExpr 0x7feb9c879968 <col:21, col:71> 'int'
+              `-BinaryOperator 0x7feb9c879940 <col:22, col:70> 'int' ','
+                |-CallExpr 0x7feb9c879638 <col:22, col:27> 'int'
+                | `-ImplicitCastExpr 0x7feb9c879620 <col:22> 'int (*)()' <FunctionToPointerDecay>
+                |   `-DeclRefExpr 0x7feb9c8795f8 <col:22> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+                `-ParenExpr 0x7feb9c879920 <col:30, col:70> 'int'
+                  `-BinaryOperator 0x7feb9c8798f8 <col:31, col:69> 'int' ','
+                    |-CallExpr 0x7feb9c8796a0 <col:31, col:36> 'int'
+                    | `-ImplicitCastExpr 0x7feb9c879688 <col:31> 'int (*)()' <FunctionToPointerDecay>
+                    |   `-DeclRefExpr 0x7feb9c879660 <col:31> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+                    `-ParenExpr 0x7feb9c8798d8 <col:39, col:69> 'int'
+                      `-BinaryOperator 0x7feb9c8798b0 <col:40, col:68> 'int' ','
+                        |-CallExpr 0x7feb9c879708 <col:40, col:45> 'int'
+                        | `-ImplicitCastExpr 0x7feb9c8796f0 <col:40> 'int (*)()' <FunctionToPointerDecay>
+                        |   `-DeclRefExpr 0x7feb9c8796c8 <col:40> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+                        `-ParenExpr 0x7feb9c879890 <col:48, col:68> 'int'
+                          `-BinaryOperator 0x7feb9c879868 <col:49, col:67> 'int' ','
+                            |-CallExpr 0x7feb9c879770 <col:49, col:54> 'int'
+                            | `-ImplicitCastExpr 0x7feb9c879758 <col:49> 'int (*)()' <FunctionToPointerDecay>
+                            |   `-DeclRefExpr 0x7feb9c879730 <col:49> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'
+                            `-ParenExpr 0x7feb9c879848 <col:57, col:67> 'int'
+                              `-BinaryOperator 0x7feb9c879820 <col:58, col:66> 'int' ','
+                                |-IntegerLiteral 0x7feb9c879798 <col:58> 'int' 7
+                                `-CallExpr 0x7feb9c8797f8 <col:61, col:66> 'int'
+                                  `-ImplicitCastExpr 0x7feb9c8797e0 <col:61> 'int (*)()' <FunctionToPointerDecay>
+                                    `-DeclRefExpr 0x7feb9c8797b8 <col:61> 'int ()' Function 0x7feb9c877a00 'bar' 'int ()'

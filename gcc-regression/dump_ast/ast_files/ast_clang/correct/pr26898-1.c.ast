@@ -1,0 +1,78 @@
+TranslationUnitDecl 0x7fb0c60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb0c6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb0c6026740 '__int128'
+|-TypedefDecl 0x7fb0c6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb0c6026760 'unsigned __int128'
+|-TypedefDecl 0x7fb0c6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb0c6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb0c6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb0c6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb0c6026dc0 'char *'
+|   `-BuiltinType 0x7fb0c6026560 'char'
+|-TypedefDecl 0x7fb0c60270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb0c6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb0c6026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb0c6026e58 '__va_list_tag'
+|-FunctionDecl 0x7fb0c684f000 <c_files/pr26898-1.c:6:1, col:28> col:13 used link_error 'void (void)' extern
+`-FunctionDecl 0x7fb0c684f130 <line:7:1, line:15:1> line:7:5 main 'int ()'
+  `-CompoundStmt 0x7fb0c684fa10 <line:8:1, line:15:1>
+    |-DeclStmt 0x7fb0c684f2d0 <line:9:3, col:13>
+    | |-VarDecl 0x7fb0c684f1e0 <col:3, col:7> col:7 used i0 'int'
+    | `-VarDecl 0x7fb0c684f258 <col:3, col:11> col:11 used i1 'int'
+    |-IfStmt 0x7fb0c684f5c8 <line:10:3, line:11:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fb0c684f510 <line:10:7, col:35> 'int' prefix '!'
+    | | `-ParenExpr 0x7fb0c684f4f0 <col:8, col:35> 'int'
+    | |   `-BinaryOperator 0x7fb0c684f4c8 <col:9, col:33> 'int' '=='
+    | |     |-BinaryOperator 0x7fb0c684f3f8 <col:9, col:23> 'int' '<'
+    | |     | |-BinaryOperator 0x7fb0c684f348 <col:9, col:14> 'int' '+'
+    | |     | | |-ImplicitCastExpr 0x7fb0c684f330 <col:9> 'int' <LValueToRValue>
+    | |     | | | `-DeclRefExpr 0x7fb0c684f2e8 <col:9> 'int' lvalue Var 0x7fb0c684f1e0 'i0' 'int'
+    | |     | | `-IntegerLiteral 0x7fb0c684f310 <col:14> 'int' 1
+    | |     | `-BinaryOperator 0x7fb0c684f3d0 <col:18, col:23> 'int' '+'
+    | |     |   |-ImplicitCastExpr 0x7fb0c684f3b8 <col:18> 'int' <LValueToRValue>
+    | |     |   | `-DeclRefExpr 0x7fb0c684f370 <col:18> 'int' lvalue Var 0x7fb0c684f258 'i1' 'int'
+    | |     |   `-IntegerLiteral 0x7fb0c684f398 <col:23> 'int' 1
+    | |     `-BinaryOperator 0x7fb0c684f4a0 <col:28, col:33> 'int' '<'
+    | |       |-ImplicitCastExpr 0x7fb0c684f470 <col:28> 'int' <LValueToRValue>
+    | |       | `-DeclRefExpr 0x7fb0c684f420 <col:28> 'int' lvalue Var 0x7fb0c684f1e0 'i0' 'int'
+    | |       `-ImplicitCastExpr 0x7fb0c684f488 <col:33> 'int' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fb0c684f448 <col:33> 'int' lvalue Var 0x7fb0c684f258 'i1' 'int'
+    | |-CallExpr 0x7fb0c684f5a0 <line:11:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7fb0c684f588 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fb0c684f530 <col:5> 'void (void)' Function 0x7fb0c684f000 'link_error' 'void (void)'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fb0c684f9a0 <line:12:3, line:13:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fb0c684f918 <line:12:7, col:52> 'int' prefix '!'
+    | | `-ParenExpr 0x7fb0c684f8f8 <col:8, col:52> 'int'
+    | |   `-BinaryOperator 0x7fb0c684f8d0 <col:9, col:51> 'int' '=='
+    | |     |-BinaryOperator 0x7fb0c684f798 <col:9, <built-in>:33:21> 'int' '<'
+    | |     | |-BinaryOperator 0x7fb0c684f6e8 <c_files/pr26898-1.c:12:9, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/limits.h:67:36> 'int' '+'
+    | |     | | |-ImplicitCastExpr 0x7fb0c684f6d0 <c_files/pr26898-1.c:12:9> 'int' <LValueToRValue>
+    | |     | | | `-DeclRefExpr 0x7fb0c684f600 <col:9> 'int' lvalue Var 0x7fb0c684f1e0 'i0' 'int'
+    | |     | | `-ParenExpr 0x7fb0c684f6b0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/limits.h:67:19, col:36> 'int'
+    | |     | |   `-BinaryOperator 0x7fb0c684f688 <col:20, col:35> 'int' '-'
+    | |     | |     |-UnaryOperator 0x7fb0c684f648 <col:20, <built-in>:33:21> 'int' prefix '-'
+    | |     | |     | `-IntegerLiteral 0x7fb0c684f628 <col:21> 'int' 2147483647
+    | |     | |     `-IntegerLiteral 0x7fb0c684f668 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/limits.h:67:35> 'int' 1
+    | |     | `-BinaryOperator 0x7fb0c684f770 <c_files/pr26898-1.c:12:24, <built-in>:33:21> 'int' '-'
+    | |     |   |-ImplicitCastExpr 0x7fb0c684f758 <c_files/pr26898-1.c:12:24> 'int' <LValueToRValue>
+    | |     |   | `-DeclRefExpr 0x7fb0c684f710 <col:24> 'int' lvalue Var 0x7fb0c684f258 'i1' 'int'
+    | |     |   `-IntegerLiteral 0x7fb0c684f738 <<built-in>:33:21> 'int' 2147483647
+    | |     `-BinaryOperator 0x7fb0c684f8a8 <c_files/pr26898-1.c:12:40, col:51> 'int' '<'
+    | |       |-ImplicitCastExpr 0x7fb0c684f890 <col:40> 'int' <LValueToRValue>
+    | |       | `-DeclRefExpr 0x7fb0c684f7c0 <col:40> 'int' lvalue Var 0x7fb0c684f1e0 'i0' 'int'
+    | |       `-BinaryOperator 0x7fb0c684f868 <col:45, col:51> 'int' '-'
+    | |         |-ImplicitCastExpr 0x7fb0c684f850 <col:45> 'int' <LValueToRValue>
+    | |         | `-DeclRefExpr 0x7fb0c684f7e8 <col:45> 'int' lvalue Var 0x7fb0c684f258 'i1' 'int'
+    | |         `-UnaryOperator 0x7fb0c684f830 <col:50, col:51> 'int' prefix '-'
+    | |           `-IntegerLiteral 0x7fb0c684f810 <col:51> 'int' 1
+    | |-CallExpr 0x7fb0c684f978 <line:13:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7fb0c684f960 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fb0c684f938 <col:5> 'void (void)' Function 0x7fb0c684f000 'link_error' 'void (void)'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fb0c684f9f8 <line:14:3, col:10>
+      `-IntegerLiteral 0x7fb0c684f9d8 <col:10> 'int' 0

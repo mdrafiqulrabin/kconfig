@@ -1,0 +1,17 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: foo, []
+            IdentifierType: ['void']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_malloc
+          ExprList: 
+            Constant: int, 5

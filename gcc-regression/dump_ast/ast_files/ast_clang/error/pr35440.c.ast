@@ -1,0 +1,28 @@
+c_files/pr35440.c:10:15: error: called object type 'struct A' is not a function or function pointer
+  (struct A){}();                       /* { dg-error "called object" } */
+  ~~~~~~~~~~~~^
+c_files/pr35440.c:11:34: error: called object type 'struct B' is not a function or function pointer
+  (struct B){ .i = 2, .j[1] = 1 }();    /* { dg-error "called object" } */
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+2 errors generated.
+TranslationUnitDecl 0x7fd5bf8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd5bf826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd5bf826740 '__int128'
+|-TypedefDecl 0x7fd5bf826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd5bf826760 'unsigned __int128'
+|-TypedefDecl 0x7fd5bf826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd5bf826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd5bf826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd5bf826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd5bf826dc0 'char *'
+|   `-BuiltinType 0x7fd5bf826560 'char'
+|-TypedefDecl 0x7fd5bf8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd5bf827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd5bf826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd5bf826e58 '__va_list_tag'
+|-RecordDecl 0x7fd5bf827120 <c_files/pr35440.c:5:1, col:11> col:8 struct A definition
+|-RecordDecl 0x7fd5c0025a00 <line:6:1, col:30> col:8 struct B definition
+| |-FieldDecl 0x7fd5c0025ac8 <col:12, col:16> col:16 i 'int'
+| `-FieldDecl 0x7fd5c0025b88 <col:19, col:27> col:24 j 'char [2]'
+`-FunctionDecl 0x7fd5c0025c90 <line:8:1, line:12:1> line:8:6 foo 'void (void)'
+  `-CompoundStmt 0x7fd5c0026530 <line:9:1, line:12:1>

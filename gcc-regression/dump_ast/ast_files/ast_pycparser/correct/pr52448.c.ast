@@ -1,0 +1,98 @@
+FileAST: 
+  Decl: perhaps_free_something, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: perhaps_free_something, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: cond, [], [], []
+            TypeDecl: cond, []
+              IdentifierType: ['int']
+          Decl: cond2, [], [], []
+            TypeDecl: cond2, []
+              IdentifierType: ['int']
+        TypeDecl: f1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: p
+        ID: a
+      If: 
+        ID: cond
+        FuncCall: 
+          ID: perhaps_free_something
+      If: 
+        ID: cond2
+        Assignment: =
+          UnaryOp: *
+            ID: p
+          ID: b
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: cond, [], [], []
+            PtrDecl: []
+              TypeDecl: cond, []
+                IdentifierType: ['int']
+          Decl: cond2, [], [], []
+            PtrDecl: []
+              TypeDecl: cond2, []
+                IdentifierType: ['int']
+        TypeDecl: f2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Assignment: =
+        UnaryOp: *
+          ID: p
+        ID: a
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        ArrayRef: 
+          ID: cond
+          ID: i
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          If: 
+            ArrayRef: 
+              ID: cond2
+              ID: i
+            Assignment: =
+              UnaryOp: *
+                ID: p
+              ID: b
+          FuncCall: 
+            ID: perhaps_free_something

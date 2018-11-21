@@ -1,0 +1,49 @@
+FileAST: 
+  Decl: global, [], ['extern'], []
+    TypeDecl: global, []
+      IdentifierType: ['int']
+  Decl: global2, [], ['extern'], []
+    TypeDecl: global2, []
+      IdentifierType: ['int']
+  Decl: global3, [], ['extern'], []
+    TypeDecl: global3, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: base, [], [], []
+            TypeDecl: base, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      While: 
+        BinaryOp: <
+          ID: global
+          Constant: int, 10
+        Compound: 
+          If: 
+            BinaryOp: ||
+              BinaryOp: ||
+                ID: global
+                ID: global2
+              ID: global3
+            Return: 
+          For: 
+            Assignment: =
+              ID: i
+              ID: base
+            BinaryOp: <
+              ID: i
+              Constant: int, 10
+            UnaryOp: p++
+              ID: i
+            If: 
+              BinaryOp: >
+                ID: i
+                Constant: int, 123
+              Return: 

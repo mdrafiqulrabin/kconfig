@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fb30c0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb30c026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb30c026740 '__int128'
+|-TypedefDecl 0x7fb30c026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb30c026760 'unsigned __int128'
+|-TypedefDecl 0x7fb30c026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb30c026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb30c026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb30c026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb30c026dc0 'char *'
+|   `-BuiltinType 0x7fb30c026560 'char'
+|-TypedefDecl 0x7fb30c0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb30c027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb30c026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb30c026e58 '__va_list_tag'
+|-FunctionDecl 0x7fb30c825a00 <c_files/pr37433-1.c:1:1, line:5:1> line:1:6 regex_subst 'void (void)'
+| `-CompoundStmt 0x7fb30c825eb8 <line:2:1, line:5:1>
+|   |-DeclStmt 0x7fb30c825c10 <line:3:3, col:25>
+|   | `-VarDecl 0x7fb30c825b20 <col:3, col:23> col:15 used subst 'const void *' cinit
+|   |   `-ImplicitCastExpr 0x7fb30c825bf8 <col:23> 'const void *' <BitCast>
+|   |     `-ImplicitCastExpr 0x7fb30c825be0 <col:23> 'char *' <ArrayToPointerDecay>
+|   |       `-StringLiteral 0x7fb30c825bb8 <col:23> 'char [1]' lvalue ""
+|   `-CallExpr 0x7fb30c825e88 <line:4:3, col:29> 'void'
+|     |-ImplicitCastExpr 0x7fb30c825e70 <col:3, col:25> 'void (*)(int)' <FunctionToPointerDecay>
+|     | `-ParenExpr 0x7fb30c825e30 <col:3, col:25> 'void (int)':'void (int)'
+|     |   `-UnaryOperator 0x7fb30c825e10 <col:4, col:20> 'void (int)':'void (int)' prefix '*'
+|     |     `-CStyleCastExpr 0x7fb30c825de8 <col:5, col:20> 'void (*)(int)' <BitCast>
+|     |       `-ImplicitCastExpr 0x7fb30c825dd0 <col:20> 'const void *' <LValueToRValue>
+|     |         `-DeclRefExpr 0x7fb30c825ca0 <col:20> 'const void *' lvalue Var 0x7fb30c825b20 'subst' 'const void *'
+|     `-IntegerLiteral 0x7fb30c825e50 <col:28> 'int' 0
+`-FunctionDecl 0x7fb30c825f70 <line:7:1, line:11:1> line:7:6 foobar 'void (void)'
+  `-CompoundStmt 0x7fb30c8262e0 <line:8:1, line:11:1>
+    |-DeclStmt 0x7fb30c826080 <line:9:3, col:8>
+    | `-VarDecl 0x7fb30c826020 <col:3, col:7> col:7 used x 'int'
+    `-CallExpr 0x7fb30c8262b8 <line:10:3, col:26> 'void'
+      `-ImplicitCastExpr 0x7fb30c8262a0 <col:3, col:23> 'void (*)(void)' <FunctionToPointerDecay>
+        `-ParenExpr 0x7fb30c826280 <col:3, col:23> 'void (void)':'void (void)'
+          `-UnaryOperator 0x7fb30c826260 <col:4, col:22> 'void (void)':'void (void)' prefix '*'
+            `-CStyleCastExpr 0x7fb30c826238 <col:5, col:22> 'void (*)(void)' <BitCast>
+              `-UnaryOperator 0x7fb30c826158 <col:21, col:22> 'int *' prefix '&'
+                `-DeclRefExpr 0x7fb30c826108 <col:22> 'int' lvalue Var 0x7fb30c826020 'x' 'int'

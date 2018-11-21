@@ -1,0 +1,36 @@
+c_files/pr18809-1.c:6:15: warning: declaration of 'enum E' will not be visible outside of this function [-Wvisibility]
+void foo(enum E e) {}   /* { dg-error "forward ref" "forward" } */
+              ^
+c_files/pr18809-1.c:6:17: error: variable has incomplete type 'enum E'
+void foo(enum E e) {}   /* { dg-error "forward ref" "forward" } */
+                ^
+c_files/pr18809-1.c:6:15: note: forward declaration of 'enum E'
+void foo(enum E e) {}   /* { dg-error "forward ref" "forward" } */
+              ^
+c_files/pr18809-1.c:9:18: error: argument type 'enum E' is incomplete
+void bar() { foo(0); }
+                 ^
+c_files/pr18809-1.c:6:15: note: forward declaration of 'enum E'
+void foo(enum E e) {}   /* { dg-error "forward ref" "forward" } */
+              ^
+1 warning and 2 errors generated.
+TranslationUnitDecl 0x7f82b20264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f82b2026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f82b2026740 '__int128'
+|-TypedefDecl 0x7f82b2026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f82b2026760 'unsigned __int128'
+|-TypedefDecl 0x7f82b2026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f82b2026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f82b2026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f82b2026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f82b2026dc0 'char *'
+|   `-BuiltinType 0x7f82b2026560 'char'
+|-TypedefDecl 0x7f82b20270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f82b2027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f82b2026ee0 'struct __va_list_tag'
+|     `-Record 0x7f82b2026e58 '__va_list_tag'
+|-FunctionDecl 0x7f82b2077900 <c_files/pr18809-1.c:6:1, col:21> col:6 used foo 'void (enum E)'
+| |-ParmVarDecl 0x7f82b2077800 <col:10, col:17> col:17 invalid e 'enum E':'enum E'
+| `-CompoundStmt 0x7f82b20779e0 <col:20, col:21>
+`-FunctionDecl 0x7f82b2077a48 <line:9:1, col:22> col:6 bar 'void ()'
+  `-CompoundStmt 0x7f82b2077bd0 <col:12, col:22>

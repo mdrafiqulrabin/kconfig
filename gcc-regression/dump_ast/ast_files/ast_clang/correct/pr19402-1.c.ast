@@ -1,0 +1,126 @@
+TranslationUnitDecl 0x7fdccc8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdccc826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdccc826740 '__int128'
+|-TypedefDecl 0x7fdccc826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdccc826760 'unsigned __int128'
+|-TypedefDecl 0x7fdccc826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdccc826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdccc826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdccc826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdccc826dc0 'char *'
+|   `-BuiltinType 0x7fdccc826560 'char'
+|-TypedefDecl 0x7fdccc8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdccc827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdccc826ee0 'struct __va_list_tag'
+|     `-Record 0x7fdccc826e58 '__va_list_tag'
+|-FunctionDecl 0x7fdccd025a30 <c_files/pr19402-1.c:4:1, line:10:1> line:4:7 test_powif 'float (float)'
+| |-ParmVarDecl 0x7fdccc827138 <col:18, col:24> col:24 used x 'float'
+| `-CompoundStmt 0x7fdccd026148 <line:5:1, line:10:1>
+|   `-ReturnStmt 0x7fdccd026130 <line:6:3, line:9:25>
+|     `-BinaryOperator 0x7fdccd026108 <line:6:10, line:9:25> 'float' '+'
+|       |-BinaryOperator 0x7fdccd026008 <line:6:10, line:8:25> 'float' '+'
+|       | |-BinaryOperator 0x7fdccd025f08 <line:6:10, line:7:25> 'float' '+'
+|       | | |-CallExpr 0x7fdccd025de0 <line:6:10, col:31> 'float'
+|       | | | |-ImplicitCastExpr 0x7fdccd025dc8 <col:10> 'float (*)(float, int)' <BuiltinFnToFnPtr>
+|       | | | | `-DeclRefExpr 0x7fdccd025d10 <col:10> '<builtin fn type>' Function 0x7fdccd025b50 '__builtin_powif' 'float (float, int)'
+|       | | | |-ImplicitCastExpr 0x7fdccd025e18 <col:26> 'float' <LValueToRValue>
+|       | | | | `-DeclRefExpr 0x7fdccd025d38 <col:26> 'float' lvalue ParmVar 0x7fdccc827138 'x' 'float'
+|       | | | `-UnaryOperator 0x7fdccd025d80 <col:29, col:30> 'int' prefix '-'
+|       | | |   `-IntegerLiteral 0x7fdccd025d60 <col:30> 'int' 1
+|       | | `-CallExpr 0x7fdccd025eb8 <line:7:5, col:25> 'float'
+|       | |   |-ImplicitCastExpr 0x7fdccd025ea0 <col:5> 'float (*)(float, int)' <BuiltinFnToFnPtr>
+|       | |   | `-DeclRefExpr 0x7fdccd025e30 <col:5> '<builtin fn type>' Function 0x7fdccd025b50 '__builtin_powif' 'float (float, int)'
+|       | |   |-ImplicitCastExpr 0x7fdccd025ef0 <col:21> 'float' <LValueToRValue>
+|       | |   | `-DeclRefExpr 0x7fdccd025e58 <col:21> 'float' lvalue ParmVar 0x7fdccc827138 'x' 'float'
+|       | |   `-IntegerLiteral 0x7fdccd025e80 <col:24> 'int' 0
+|       | `-CallExpr 0x7fdccd025fb8 <line:8:5, col:25> 'float'
+|       |   |-ImplicitCastExpr 0x7fdccd025fa0 <col:5> 'float (*)(float, int)' <BuiltinFnToFnPtr>
+|       |   | `-DeclRefExpr 0x7fdccd025f30 <col:5> '<builtin fn type>' Function 0x7fdccd025b50 '__builtin_powif' 'float (float, int)'
+|       |   |-ImplicitCastExpr 0x7fdccd025ff0 <col:21> 'float' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7fdccd025f58 <col:21> 'float' lvalue ParmVar 0x7fdccc827138 'x' 'float'
+|       |   `-IntegerLiteral 0x7fdccd025f80 <col:24> 'int' 1
+|       `-CallExpr 0x7fdccd0260b8 <line:9:5, col:25> 'float'
+|         |-ImplicitCastExpr 0x7fdccd0260a0 <col:5> 'float (*)(float, int)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fdccd026030 <col:5> '<builtin fn type>' Function 0x7fdccd025b50 '__builtin_powif' 'float (float, int)'
+|         |-ImplicitCastExpr 0x7fdccd0260f0 <col:21> 'float' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fdccd026058 <col:21> 'float' lvalue ParmVar 0x7fdccc827138 'x' 'float'
+|         `-IntegerLiteral 0x7fdccd026080 <col:24> 'int' 2
+|-FunctionDecl 0x7fdccd025b50 <line:6:10> col:10 implicit used __builtin_powif 'float (float, int)' extern
+| |-ParmVarDecl 0x7fdccd025be8 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7fdccd025c48 <<invalid sloc>> <invalid sloc> 'int'
+| |-NoThrowAttr 0x7fdccd025cb8 <col:10> Implicit
+| `-ConstAttr 0x7fdccd025d00 <col:10> Implicit
+|-FunctionDecl 0x7fdccd026248 <line:12:1, line:18:1> line:12:8 test_powi 'double (double)'
+| |-ParmVarDecl 0x7fdccd026180 <col:18, col:25> col:25 used x 'double'
+| `-CompoundStmt 0x7fdccd026928 <line:13:1, line:18:1>
+|   `-ReturnStmt 0x7fdccd026910 <line:14:3, line:17:24>
+|     `-BinaryOperator 0x7fdccd0268e8 <line:14:10, line:17:24> 'double' '+'
+|       |-BinaryOperator 0x7fdccd0267e8 <line:14:10, line:16:24> 'double' '+'
+|       | |-BinaryOperator 0x7fdccd0266e8 <line:14:10, line:15:24> 'double' '+'
+|       | | |-CallExpr 0x7fdccd0265c0 <line:14:10, col:30> 'double'
+|       | | | |-ImplicitCastExpr 0x7fdccd0265a8 <col:10> 'double (*)(double, int)' <BuiltinFnToFnPtr>
+|       | | | | `-DeclRefExpr 0x7fdccd0264f0 <col:10> '<builtin fn type>' Function 0x7fdccd026330 '__builtin_powi' 'double (double, int)'
+|       | | | |-ImplicitCastExpr 0x7fdccd0265f8 <col:25> 'double' <LValueToRValue>
+|       | | | | `-DeclRefExpr 0x7fdccd026518 <col:25> 'double' lvalue ParmVar 0x7fdccd026180 'x' 'double'
+|       | | | `-UnaryOperator 0x7fdccd026560 <col:28, col:29> 'int' prefix '-'
+|       | | |   `-IntegerLiteral 0x7fdccd026540 <col:29> 'int' 1
+|       | | `-CallExpr 0x7fdccd026698 <line:15:5, col:24> 'double'
+|       | |   |-ImplicitCastExpr 0x7fdccd026680 <col:5> 'double (*)(double, int)' <BuiltinFnToFnPtr>
+|       | |   | `-DeclRefExpr 0x7fdccd026610 <col:5> '<builtin fn type>' Function 0x7fdccd026330 '__builtin_powi' 'double (double, int)'
+|       | |   |-ImplicitCastExpr 0x7fdccd0266d0 <col:20> 'double' <LValueToRValue>
+|       | |   | `-DeclRefExpr 0x7fdccd026638 <col:20> 'double' lvalue ParmVar 0x7fdccd026180 'x' 'double'
+|       | |   `-IntegerLiteral 0x7fdccd026660 <col:23> 'int' 0
+|       | `-CallExpr 0x7fdccd026798 <line:16:5, col:24> 'double'
+|       |   |-ImplicitCastExpr 0x7fdccd026780 <col:5> 'double (*)(double, int)' <BuiltinFnToFnPtr>
+|       |   | `-DeclRefExpr 0x7fdccd026710 <col:5> '<builtin fn type>' Function 0x7fdccd026330 '__builtin_powi' 'double (double, int)'
+|       |   |-ImplicitCastExpr 0x7fdccd0267d0 <col:20> 'double' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7fdccd026738 <col:20> 'double' lvalue ParmVar 0x7fdccd026180 'x' 'double'
+|       |   `-IntegerLiteral 0x7fdccd026760 <col:23> 'int' 1
+|       `-CallExpr 0x7fdccd026898 <line:17:5, col:24> 'double'
+|         |-ImplicitCastExpr 0x7fdccd026880 <col:5> 'double (*)(double, int)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fdccd026810 <col:5> '<builtin fn type>' Function 0x7fdccd026330 '__builtin_powi' 'double (double, int)'
+|         |-ImplicitCastExpr 0x7fdccd0268d0 <col:20> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fdccd026838 <col:20> 'double' lvalue ParmVar 0x7fdccd026180 'x' 'double'
+|         `-IntegerLiteral 0x7fdccd026860 <col:23> 'int' 2
+|-FunctionDecl 0x7fdccd026330 <line:14:10> col:10 implicit used __builtin_powi 'double (double, int)' extern
+| |-ParmVarDecl 0x7fdccd0263c8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7fdccd026428 <<invalid sloc>> <invalid sloc> 'int'
+| |-NoThrowAttr 0x7fdccd026498 <col:10> Implicit
+| `-ConstAttr 0x7fdccd0264e0 <col:10> Implicit
+|-FunctionDecl 0x7fdccd026a30 <line:20:1, line:26:1> line:20:13 test_powil 'long double (long double)'
+| |-ParmVarDecl 0x7fdccd026960 <col:24, col:36> col:36 used x 'long double'
+| `-CompoundStmt 0x7fdccd027108 <line:21:1, line:26:1>
+|   `-ReturnStmt 0x7fdccd0270f0 <line:22:3, line:25:25>
+|     `-BinaryOperator 0x7fdccd0270c8 <line:22:10, line:25:25> 'long double' '+'
+|       |-BinaryOperator 0x7fdccd026fc8 <line:22:10, line:24:25> 'long double' '+'
+|       | |-BinaryOperator 0x7fdccd026ec8 <line:22:10, line:23:25> 'long double' '+'
+|       | | |-CallExpr 0x7fdccd026da0 <line:22:10, col:31> 'long double'
+|       | | | |-ImplicitCastExpr 0x7fdccd026d88 <col:10> 'long double (*)(long double, int)' <BuiltinFnToFnPtr>
+|       | | | | `-DeclRefExpr 0x7fdccd026cd0 <col:10> '<builtin fn type>' Function 0x7fdccd026b10 '__builtin_powil' 'long double (long double, int)'
+|       | | | |-ImplicitCastExpr 0x7fdccd026dd8 <col:26> 'long double' <LValueToRValue>
+|       | | | | `-DeclRefExpr 0x7fdccd026cf8 <col:26> 'long double' lvalue ParmVar 0x7fdccd026960 'x' 'long double'
+|       | | | `-UnaryOperator 0x7fdccd026d40 <col:29, col:30> 'int' prefix '-'
+|       | | |   `-IntegerLiteral 0x7fdccd026d20 <col:30> 'int' 1
+|       | | `-CallExpr 0x7fdccd026e78 <line:23:5, col:25> 'long double'
+|       | |   |-ImplicitCastExpr 0x7fdccd026e60 <col:5> 'long double (*)(long double, int)' <BuiltinFnToFnPtr>
+|       | |   | `-DeclRefExpr 0x7fdccd026df0 <col:5> '<builtin fn type>' Function 0x7fdccd026b10 '__builtin_powil' 'long double (long double, int)'
+|       | |   |-ImplicitCastExpr 0x7fdccd026eb0 <col:21> 'long double' <LValueToRValue>
+|       | |   | `-DeclRefExpr 0x7fdccd026e18 <col:21> 'long double' lvalue ParmVar 0x7fdccd026960 'x' 'long double'
+|       | |   `-IntegerLiteral 0x7fdccd026e40 <col:24> 'int' 0
+|       | `-CallExpr 0x7fdccd026f78 <line:24:5, col:25> 'long double'
+|       |   |-ImplicitCastExpr 0x7fdccd026f60 <col:5> 'long double (*)(long double, int)' <BuiltinFnToFnPtr>
+|       |   | `-DeclRefExpr 0x7fdccd026ef0 <col:5> '<builtin fn type>' Function 0x7fdccd026b10 '__builtin_powil' 'long double (long double, int)'
+|       |   |-ImplicitCastExpr 0x7fdccd026fb0 <col:21> 'long double' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7fdccd026f18 <col:21> 'long double' lvalue ParmVar 0x7fdccd026960 'x' 'long double'
+|       |   `-IntegerLiteral 0x7fdccd026f40 <col:24> 'int' 1
+|       `-CallExpr 0x7fdccd027078 <line:25:5, col:25> 'long double'
+|         |-ImplicitCastExpr 0x7fdccd027060 <col:5> 'long double (*)(long double, int)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fdccd026ff0 <col:5> '<builtin fn type>' Function 0x7fdccd026b10 '__builtin_powil' 'long double (long double, int)'
+|         |-ImplicitCastExpr 0x7fdccd0270b0 <col:21> 'long double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fdccd027018 <col:21> 'long double' lvalue ParmVar 0x7fdccd026960 'x' 'long double'
+|         `-IntegerLiteral 0x7fdccd027040 <col:24> 'int' 2
+`-FunctionDecl 0x7fdccd026b10 <line:22:10> col:10 implicit used __builtin_powil 'long double (long double, int)' extern
+  |-ParmVarDecl 0x7fdccd026ba8 <<invalid sloc>> <invalid sloc> 'long double'
+  |-ParmVarDecl 0x7fdccd026c08 <<invalid sloc>> <invalid sloc> 'int'
+  |-NoThrowAttr 0x7fdccd026c78 <col:10> Implicit
+  `-ConstAttr 0x7fdccd026cc0 <col:10> Implicit

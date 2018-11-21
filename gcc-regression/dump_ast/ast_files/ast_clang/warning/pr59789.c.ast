@@ -1,0 +1,58 @@
+c_files/pr59789.c:10:75: warning: unknown attribute '__artificial__' ignored [-Wunknown-attributes]
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+                                                                          ^
+1 warning generated.
+TranslationUnitDecl 0x7fb1ad8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb1ad826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb1ad826740 '__int128'
+|-TypedefDecl 0x7fb1ad826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb1ad826760 'unsigned __int128'
+|-TypedefDecl 0x7fb1ad826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb1ad826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb1ad826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb1ad826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb1ad826dc0 'char *'
+|   `-BuiltinType 0x7fb1ad826560 'char'
+|-TypedefDecl 0x7fb1ad8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb1ad827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb1ad826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb1ad826e58 '__va_list_tag'
+|-TypedefDecl 0x7fb1ad827178 <c_files/pr59789.c:7:1, col:13> col:13 referenced __v4si '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fb1ad827140 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fb1ad8265c0 'int'
+|-TypedefDecl 0x7fb1ae026a38 <line:8:1, col:19> col:19 referenced __m128i '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| |-VectorType 0x7fb1ae026a00 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+| | `-BuiltinType 0x7fb1ad826600 'long long'
+| `-MayAliasAttr 0x7fb1ae026a90 <col:65>
+|-FunctionDecl 0x7fb1ae026dc0 <line:10:1, line:14:1> line:11:1 used _mm_set_epi32 '__m128i (int, int, int, int)' extern inline
+| |-ParmVarDecl 0x7fb1ae026b18 <col:16, col:20> col:20 used __q3 'int'
+| |-ParmVarDecl 0x7fb1ae026b90 <col:26, col:30> col:30 used __q2 'int'
+| |-ParmVarDecl 0x7fb1ae026c08 <col:36, col:40> col:40 used __q1 'int'
+| |-ParmVarDecl 0x7fb1ae026c80 <col:46, col:50> col:50 used __q0 'int'
+| |-CompoundStmt 0x7fb1ae0271b0 <line:12:1, line:14:1>
+| | `-ReturnStmt 0x7fb1ae027198 <line:13:3, col:66>
+| |   `-UnaryOperator 0x7fb1ae027178 <col:10, col:66> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' prefix '__extension__'
+| |     `-CStyleCastExpr 0x7fb1ae027150 <col:24, col:66> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <BitCast>
+| |       `-ImplicitCastExpr 0x7fb1ae027138 <col:33, col:66> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+| |         `-CompoundLiteralExpr 0x7fb1ae027100 <col:33, col:66> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+| |           `-InitListExpr 0x7fb1ae027040 <col:41, col:66> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| |             |-ImplicitCastExpr 0x7fb1ae0270a0 <col:43> 'int' <LValueToRValue>
+| |             | `-DeclRefExpr 0x7fb1ae026f40 <col:43> 'int' lvalue ParmVar 0x7fb1ae026c80 '__q0' 'int'
+| |             |-ImplicitCastExpr 0x7fb1ae0270b8 <col:49> 'int' <LValueToRValue>
+| |             | `-DeclRefExpr 0x7fb1ae026f68 <col:49> 'int' lvalue ParmVar 0x7fb1ae026c08 '__q1' 'int'
+| |             |-ImplicitCastExpr 0x7fb1ae0270d0 <col:55> 'int' <LValueToRValue>
+| |             | `-DeclRefExpr 0x7fb1ae026f90 <col:55> 'int' lvalue ParmVar 0x7fb1ae026b90 '__q2' 'int'
+| |             `-ImplicitCastExpr 0x7fb1ae0270e8 <col:61> 'int' <LValueToRValue>
+| |               `-DeclRefExpr 0x7fb1ae026fb8 <col:61> 'int' lvalue ParmVar 0x7fb1ae026b18 '__q3' 'int'
+| |-AlwaysInlineAttr 0x7fb1ae026e78 <line:10:56> always_inline
+| `-GNUInlineAttr 0x7fb1ae026ec0 <col:40>
+`-FunctionDecl 0x7fb1ae0272c0 <line:18:1, line:22:1> line:19:1 f1 '__m128i (void)'
+  `-CompoundStmt 0x7fb1ae0274d0 <line:20:1, line:22:1>
+    `-ReturnStmt 0x7fb1ae0274b8 <line:21:3, col:35>
+      `-CallExpr 0x7fb1ae027470 <col:10, col:35> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+        |-ImplicitCastExpr 0x7fb1ae027458 <col:10> '__m128i (*)(int, int, int, int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fb1ae027358 <col:10> '__m128i (int, int, int, int)' Function 0x7fb1ae026dc0 '_mm_set_epi32' '__m128i (int, int, int, int)'
+        |-IntegerLiteral 0x7fb1ae027380 <col:25> 'int' 0
+        |-IntegerLiteral 0x7fb1ae0273a0 <col:28> 'int' 0
+        |-IntegerLiteral 0x7fb1ae0273c0 <col:31> 'int' 0
+        `-IntegerLiteral 0x7fb1ae0273e0 <col:34> 'int' 0

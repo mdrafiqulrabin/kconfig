@@ -1,0 +1,154 @@
+TranslationUnitDecl 0x7ff6e80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff6e8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff6e8026740 '__int128'
+|-TypedefDecl 0x7ff6e8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff6e8026760 'unsigned __int128'
+|-TypedefDecl 0x7ff6e8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff6e8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff6e8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff6e8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff6e8026dc0 'char *'
+|   `-BuiltinType 0x7ff6e8026560 'char'
+|-TypedefDecl 0x7ff6e80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff6e8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff6e8026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff6e8026e58 '__va_list_tag'
+|-RecordDecl 0x7ff6e8027120 <c_files/pr2480.c:7:1, line:12:1> line:7:8 struct example definition
+| |-FieldDecl 0x7ff6e8077400 <line:9:3, col:8> col:8 referenced a 'char'
+| |-FieldDecl 0x7ff6e8077460 <line:10:3, col:7> col:7 referenced b 'int'
+| `-FieldDecl 0x7ff6e80774b8 <line:11:3, col:8> col:8 referenced c 'char'
+|-VarDecl 0x7ff6e80775b0 <line:7:1, line:12:4> col:4 used ex1 'struct example *'
+|-FunctionDecl 0x7ff6e8077730 <line:14:1, col:28> col:13 used link_error 'void (void)' extern
+|-FunctionDecl 0x7ff6e8077858 <line:16:1, line:30:1> line:17:1 used bar 'void (void)'
+| `-CompoundStmt 0x7ff6e8078028 <line:18:1, line:30:1>
+|   |-BinaryOperator 0x7ff6e80779a0 <line:19:3, col:12> 'char' '='
+|   | |-MemberExpr 0x7ff6e8077930 <col:3, col:8> 'char' lvalue ->a 0x7ff6e8077400
+|   | | `-ImplicitCastExpr 0x7ff6e8077918 <col:3> 'struct example *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7ff6e80778f0 <col:3> 'struct example *' lvalue Var 0x7ff6e80775b0 'ex1' 'struct example *'
+|   | `-ImplicitCastExpr 0x7ff6e8077988 <col:12> 'char' <IntegralCast>
+|   |   `-IntegerLiteral 0x7ff6e8077968 <col:12> 'int' 1
+|   |-BinaryOperator 0x7ff6e8077a60 <line:20:3, col:12> 'int' '='
+|   | |-MemberExpr 0x7ff6e8077a08 <col:3, col:8> 'int' lvalue ->b 0x7ff6e8077460
+|   | | `-ImplicitCastExpr 0x7ff6e80779f0 <col:3> 'struct example *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7ff6e80779c8 <col:3> 'struct example *' lvalue Var 0x7ff6e80775b0 'ex1' 'struct example *'
+|   | `-IntegerLiteral 0x7ff6e8077a40 <col:12> 'int' 2
+|   |-BinaryOperator 0x7ff6e8077b38 <line:21:3, col:12> 'char' '='
+|   | |-MemberExpr 0x7ff6e8077ac8 <col:3, col:8> 'char' lvalue ->c 0x7ff6e80774b8
+|   | | `-ImplicitCastExpr 0x7ff6e8077ab0 <col:3> 'struct example *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7ff6e8077a88 <col:3> 'struct example *' lvalue Var 0x7ff6e80775b0 'ex1' 'struct example *'
+|   | `-ImplicitCastExpr 0x7ff6e8077b20 <col:12> 'char' <IntegralCast>
+|   |   `-IntegerLiteral 0x7ff6e8077b00 <col:12> 'int' 3
+|   |-IfStmt 0x7ff6e8077ce8 <line:23:3, line:24:17>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff6e8077c28 <line:23:7, col:17> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7ff6e8077c10 <col:7, col:12> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7ff6e8077bf8 <col:7, col:12> 'char' <LValueToRValue>
+|   | | |   `-MemberExpr 0x7ff6e8077ba0 <col:7, col:12> 'char' lvalue ->a 0x7ff6e8077400
+|   | | |     `-ImplicitCastExpr 0x7ff6e8077b88 <col:7> 'struct example *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7ff6e8077b60 <col:7> 'struct example *' lvalue Var 0x7ff6e80775b0 'ex1' 'struct example *'
+|   | | `-IntegerLiteral 0x7ff6e8077bd8 <col:17> 'int' 1
+|   | |-CallExpr 0x7ff6e8077cc0 <line:24:5, col:17> 'void'
+|   | | `-ImplicitCastExpr 0x7ff6e8077ca8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7ff6e8077c50 <col:5> 'void (void)' Function 0x7ff6e8077730 'link_error' 'void (void)'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7ff6e8077e60 <line:25:3, line:26:17>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff6e8077dd0 <line:25:7, col:17> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7ff6e8077db8 <col:7, col:12> 'int' <LValueToRValue>
+|   | | | `-MemberExpr 0x7ff6e8077d60 <col:7, col:12> 'int' lvalue ->b 0x7ff6e8077460
+|   | | |   `-ImplicitCastExpr 0x7ff6e8077d48 <col:7> 'struct example *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7ff6e8077d20 <col:7> 'struct example *' lvalue Var 0x7ff6e80775b0 'ex1' 'struct example *'
+|   | | `-IntegerLiteral 0x7ff6e8077d98 <col:17> 'int' 2
+|   | |-CallExpr 0x7ff6e8077e38 <line:26:5, col:17> 'void'
+|   | | `-ImplicitCastExpr 0x7ff6e8077e20 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7ff6e8077df8 <col:5> 'void (void)' Function 0x7ff6e8077730 'link_error' 'void (void)'
+|   | `-<<<NULL>>>
+|   `-IfStmt 0x7ff6e8077ff0 <line:27:3, line:28:17>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ff6e8077f60 <line:27:7, col:17> 'int' '!='
+|     | |-ImplicitCastExpr 0x7ff6e8077f48 <col:7, col:12> 'int' <IntegralCast>
+|     | | `-ImplicitCastExpr 0x7ff6e8077f30 <col:7, col:12> 'char' <LValueToRValue>
+|     | |   `-MemberExpr 0x7ff6e8077ed8 <col:7, col:12> 'char' lvalue ->c 0x7ff6e80774b8
+|     | |     `-ImplicitCastExpr 0x7ff6e8077ec0 <col:7> 'struct example *' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7ff6e8077e98 <col:7> 'struct example *' lvalue Var 0x7ff6e80775b0 'ex1' 'struct example *'
+|     | `-IntegerLiteral 0x7ff6e8077f10 <col:17> 'int' 3
+|     |-CallExpr 0x7ff6e8077fc8 <line:28:5, col:17> 'void'
+|     | `-ImplicitCastExpr 0x7ff6e8077fb0 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7ff6e8077f88 <col:5> 'void (void)' Function 0x7ff6e8077730 'link_error' 'void (void)'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7ff6e80781a0 <line:32:1, line:46:1> line:33:1 used foo 'void (struct example *)'
+| |-ParmVarDecl 0x7ff6e8078098 <col:6, col:22> col:22 used ex2 'struct example *'
+| `-CompoundStmt 0x7ff6e8078948 <line:34:1, line:46:1>
+|   |-BinaryOperator 0x7ff6e80782f0 <line:35:3, col:12> 'char' '='
+|   | |-MemberExpr 0x7ff6e8078280 <col:3, col:8> 'char' lvalue ->a 0x7ff6e8077400
+|   | | `-ImplicitCastExpr 0x7ff6e8078268 <col:3> 'struct example *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7ff6e8078240 <col:3> 'struct example *' lvalue ParmVar 0x7ff6e8078098 'ex2' 'struct example *'
+|   | `-ImplicitCastExpr 0x7ff6e80782d8 <col:12> 'char' <IntegralCast>
+|   |   `-IntegerLiteral 0x7ff6e80782b8 <col:12> 'int' 1
+|   |-BinaryOperator 0x7ff6e80783b0 <line:36:3, col:12> 'int' '='
+|   | |-MemberExpr 0x7ff6e8078358 <col:3, col:8> 'int' lvalue ->b 0x7ff6e8077460
+|   | | `-ImplicitCastExpr 0x7ff6e8078340 <col:3> 'struct example *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7ff6e8078318 <col:3> 'struct example *' lvalue ParmVar 0x7ff6e8078098 'ex2' 'struct example *'
+|   | `-IntegerLiteral 0x7ff6e8078390 <col:12> 'int' 2
+|   |-BinaryOperator 0x7ff6e8078488 <line:37:3, col:12> 'char' '='
+|   | |-MemberExpr 0x7ff6e8078418 <col:3, col:8> 'char' lvalue ->c 0x7ff6e80774b8
+|   | | `-ImplicitCastExpr 0x7ff6e8078400 <col:3> 'struct example *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7ff6e80783d8 <col:3> 'struct example *' lvalue ParmVar 0x7ff6e8078098 'ex2' 'struct example *'
+|   | `-ImplicitCastExpr 0x7ff6e8078470 <col:12> 'char' <IntegralCast>
+|   |   `-IntegerLiteral 0x7ff6e8078450 <col:12> 'int' 3
+|   |-IfStmt 0x7ff6e8078608 <line:39:3, line:40:17>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff6e8078578 <line:39:7, col:17> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7ff6e8078560 <col:7, col:12> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7ff6e8078548 <col:7, col:12> 'char' <LValueToRValue>
+|   | | |   `-MemberExpr 0x7ff6e80784f0 <col:7, col:12> 'char' lvalue ->a 0x7ff6e8077400
+|   | | |     `-ImplicitCastExpr 0x7ff6e80784d8 <col:7> 'struct example *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7ff6e80784b0 <col:7> 'struct example *' lvalue ParmVar 0x7ff6e8078098 'ex2' 'struct example *'
+|   | | `-IntegerLiteral 0x7ff6e8078528 <col:17> 'int' 1
+|   | |-CallExpr 0x7ff6e80785e0 <line:40:5, col:17> 'void'
+|   | | `-ImplicitCastExpr 0x7ff6e80785c8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7ff6e80785a0 <col:5> 'void (void)' Function 0x7ff6e8077730 'link_error' 'void (void)'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7ff6e8078780 <line:41:3, line:42:17>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff6e80786f0 <line:41:7, col:17> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7ff6e80786d8 <col:7, col:12> 'int' <LValueToRValue>
+|   | | | `-MemberExpr 0x7ff6e8078680 <col:7, col:12> 'int' lvalue ->b 0x7ff6e8077460
+|   | | |   `-ImplicitCastExpr 0x7ff6e8078668 <col:7> 'struct example *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7ff6e8078640 <col:7> 'struct example *' lvalue ParmVar 0x7ff6e8078098 'ex2' 'struct example *'
+|   | | `-IntegerLiteral 0x7ff6e80786b8 <col:17> 'int' 2
+|   | |-CallExpr 0x7ff6e8078758 <line:42:5, col:17> 'void'
+|   | | `-ImplicitCastExpr 0x7ff6e8078740 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7ff6e8078718 <col:5> 'void (void)' Function 0x7ff6e8077730 'link_error' 'void (void)'
+|   | `-<<<NULL>>>
+|   `-IfStmt 0x7ff6e8078910 <line:43:3, line:44:17>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ff6e8078880 <line:43:7, col:17> 'int' '!='
+|     | |-ImplicitCastExpr 0x7ff6e8078868 <col:7, col:12> 'int' <IntegralCast>
+|     | | `-ImplicitCastExpr 0x7ff6e8078850 <col:7, col:12> 'char' <LValueToRValue>
+|     | |   `-MemberExpr 0x7ff6e80787f8 <col:7, col:12> 'char' lvalue ->c 0x7ff6e80774b8
+|     | |     `-ImplicitCastExpr 0x7ff6e80787e0 <col:7> 'struct example *' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7ff6e80787b8 <col:7> 'struct example *' lvalue ParmVar 0x7ff6e8078098 'ex2' 'struct example *'
+|     | `-IntegerLiteral 0x7ff6e8078830 <col:17> 'int' 3
+|     |-CallExpr 0x7ff6e80788e8 <line:44:5, col:17> 'void'
+|     | `-ImplicitCastExpr 0x7ff6e80788d0 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7ff6e80788a8 <col:5> 'void (void)' Function 0x7ff6e8077730 'link_error' 'void (void)'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7ff6e8078a58 <line:48:1, line:53:1> line:48:5 main 'int (void)'
+  `-CompoundStmt 0x7ff6e8078cc0 <line:49:1, line:53:1>
+    |-CallExpr 0x7ff6e8078b58 <line:50:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7ff6e8078b40 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7ff6e8078b18 <col:3> 'void (void)' Function 0x7ff6e8077858 'bar' 'void (void)'
+    |-CallExpr 0x7ff6e8078c40 <line:51:3, col:11> 'void'
+    | |-ImplicitCastExpr 0x7ff6e8078c28 <col:3> 'void (*)(struct example *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff6e8078b80 <col:3> 'void (struct example *)' Function 0x7ff6e80781a0 'foo' 'void (struct example *)'
+    | `-ImplicitCastExpr 0x7ff6e8078c70 <col:8> 'struct example *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff6e8078ba8 <col:8> 'struct example *' lvalue Var 0x7ff6e80775b0 'ex1' 'struct example *'
+    `-ReturnStmt 0x7ff6e8078ca8 <line:52:3, col:10>
+      `-IntegerLiteral 0x7ff6e8078c88 <col:10> 'int' 0

@@ -1,0 +1,19 @@
+c_files/pr23484-chk-lib.c:1:10: fatal error: 'lib/chk.c' file not found
+#include "lib/chk.c"
+         ^~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fbc6b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbc6b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbc6b826740 '__int128'
+|-TypedefDecl 0x7fbc6b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbc6b826760 'unsigned __int128'
+|-TypedefDecl 0x7fbc6b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbc6b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbc6b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbc6b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbc6b826dc0 'char *'
+|   `-BuiltinType 0x7fbc6b826560 'char'
+`-TypedefDecl 0x7fbc6b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fbc6b827070 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fbc6b826ee0 'struct __va_list_tag'
+      `-Record 0x7fbc6b826e58 '__va_list_tag'

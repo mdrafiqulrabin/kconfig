@@ -1,0 +1,24 @@
+c_files/pr77521.c:7:51: error: invalid input constraint '
+' in asm
+  __asm__ ("combine %2, %0" : "=r" (a) : "0" (a), "\n" (b));   /* { dg-error "invalid punctuation .\\\\x0a. in constraint" } */
+                                                  ^
+1 error generated.
+TranslationUnitDecl 0x7fe5fc0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe5fc026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe5fc026740 '__int128'
+|-TypedefDecl 0x7fe5fc026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe5fc026760 'unsigned __int128'
+|-TypedefDecl 0x7fe5fc026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe5fc026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe5fc026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe5fc026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe5fc026dc0 'char *'
+|   `-BuiltinType 0x7fe5fc026560 'char'
+|-TypedefDecl 0x7fe5fc0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe5fc027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe5fc026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe5fc026e58 '__va_list_tag'
+`-FunctionDecl 0x7fe5fc825ad0 <c_files/pr77521.c:5:1, line:8:1> line:5:6 f 'void (int, int)'
+  |-ParmVarDecl 0x7fe5fc027138 <col:9, col:13> col:13 used a 'int'
+  |-ParmVarDecl 0x7fe5fc825a00 <col:16, col:20> col:20 used b 'int'
+  `-CompoundStmt 0x7fe5fc825dc0 <line:6:1, line:8:1>

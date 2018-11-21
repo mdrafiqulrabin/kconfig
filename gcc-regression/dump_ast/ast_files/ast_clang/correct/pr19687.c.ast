@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7f975981a0d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f975981a620 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f975981a340 '__int128'
+|-TypedefDecl 0x7f975981a690 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f975981a360 'unsigned __int128'
+|-TypedefDecl 0x7f975981a968 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f975981a770 'struct __NSConstantString_tag'
+|   `-Record 0x7f975981a6e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f975981aa00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f975981a9c0 'char *'
+|   `-BuiltinType 0x7f975981a160 'char'
+|-TypedefDecl 0x7f975981acc8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f975981ac70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f975981aae0 'struct __va_list_tag'
+|     `-Record 0x7f975981aa58 '__va_list_tag'
+|-FunctionDecl 0x7f975986b030 <c_files/pr19687.c:1:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f975986b0c8 prev 0x7f975986b030 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7f975986b160 <line:3:1, line:6:1> line:3:7 union U definition
+| |-FieldDecl 0x7f975986b228 <line:5:3, col:7> col:7 i 'int'
+| `-FieldDecl 0x7f975986b2f0 <col:3, col:13> col:10 referenced j 'int [4]'
+`-FunctionDecl 0x7f975986b390 <line:8:1, line:18:1> line:8:5 main 'int ()'
+  `-CompoundStmt 0x7f975986baa0 <line:9:1, line:18:1>
+    |-DeclStmt 0x7f975986b5b8 <line:10:3, col:17>
+    | `-VarDecl 0x7f975986b4c0 <col:3, col:16> col:11 used t 'union U':'union U' cinit
+    |   `-InitListExpr 0x7f975986b560 <col:15, col:16> 'union U':'union U' field Field 0x7f975986b228 'i' 'int'
+    |-DeclStmt 0x7f975986b648 <line:11:3, col:8>
+    | `-VarDecl 0x7f975986b5e8 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7f975986ba30 <line:13:3, line:15:14>
+    | |-BinaryOperator 0x7f975986b6a8 <line:13:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7f975986b660 <col:8> 'int' lvalue Var 0x7f975986b5e8 'i' 'int'
+    | | `-IntegerLiteral 0x7f975986b688 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f975986b730 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f975986b718 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f975986b6d0 <col:15> 'int' lvalue Var 0x7f975986b5e8 'i' 'int'
+    | | `-IntegerLiteral 0x7f975986b6f8 <col:19> 'int' 4
+    | |-UnaryOperator 0x7f975986b780 <col:22, col:24> 'int' prefix '++'
+    | | `-DeclRefExpr 0x7f975986b758 <col:24> 'int' lvalue Var 0x7f975986b5e8 'i' 'int'
+    | `-IfStmt 0x7f975986b9f8 <line:14:5, line:15:14>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7f975986b8e8 <line:14:9, col:19> 'int' '!='
+    |   | |-ImplicitCastExpr 0x7f975986b8d0 <col:9, col:14> 'int' <LValueToRValue>
+    |   | | `-ArraySubscriptExpr 0x7f975986b888 <col:9, col:14> 'int' lvalue
+    |   | |   |-ImplicitCastExpr 0x7f975986b858 <col:9, col:11> 'int *' <ArrayToPointerDecay>
+    |   | |   | `-MemberExpr 0x7f975986b7c8 <col:9, col:11> 'int [4]' lvalue .j 0x7f975986b2f0
+    |   | |   |   `-DeclRefExpr 0x7f975986b7a0 <col:9> 'union U':'union U' lvalue Var 0x7f975986b4c0 't' 'union U':'union U'
+    |   | |   `-ImplicitCastExpr 0x7f975986b870 <col:13> 'int' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7f975986b800 <col:13> 'int' lvalue Var 0x7f975986b5e8 'i' 'int'
+    |   | `-IntegerLiteral 0x7f975986b8b0 <col:19> 'int' 0
+    |   |-CallExpr 0x7f975986b9d0 <line:15:7, col:14> 'void'
+    |   | `-ImplicitCastExpr 0x7f975986b9b8 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |   |   `-DeclRefExpr 0x7f975986b960 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7f975986b0c8 'abort' 'void (void) __attribute__((noreturn))'
+    |   `-<<<NULL>>>
+    `-ReturnStmt 0x7f975986ba88 <line:17:3, col:10>
+      `-IntegerLiteral 0x7f975986ba68 <col:10> 'int' 0

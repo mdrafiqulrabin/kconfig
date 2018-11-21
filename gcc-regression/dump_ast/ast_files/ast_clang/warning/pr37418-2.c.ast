@@ -1,0 +1,36 @@
+c_files/pr37418-2.c:2:1: warning: 'volatile' qualifier on function type 'ft' (aka 'void (int)') has unspecified behavior
+volatile ft f;
+^~~~~~~~~
+c_files/pr37418-2.c:5:5: warning: incompatible pointer types assigning to 'void (*)(int) __attribute__((noreturn))' from 'ft' (aka 'void (int)') [-Wincompatible-pointer-types]
+  p = f;
+    ^ ~
+2 warnings generated.
+TranslationUnitDecl 0x7faedb8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faedb826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faedb826740 '__int128'
+|-TypedefDecl 0x7faedb826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faedb826760 'unsigned __int128'
+|-TypedefDecl 0x7faedb826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faedb826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faedb826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faedb826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faedb826dc0 'char *'
+|   `-BuiltinType 0x7faedb826560 'char'
+|-TypedefDecl 0x7faedb8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faedb827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faedb826ee0 'struct __va_list_tag'
+|     `-Record 0x7faedb826e58 '__va_list_tag'
+|-TypedefDecl 0x7faedc025a00 <c_files/pr37418-2.c:1:1, col:20> col:14 referenced ft 'void (int)'
+| `-FunctionProtoType 0x7faedb8271a0 'void (int)' cdecl
+|   |-BuiltinType 0x7faedb826520 'void'
+|   `-BuiltinType 0x7faedb8265c0 'int'
+|-FunctionDecl 0x7faedc025e40 <line:2:1, col:13> col:13 used f 'ft':'void (int)'
+| `-ParmVarDecl 0x7faedc025ef0 <col:13> col:13 implicit 'int'
+`-FunctionDecl 0x7faedc026100 <line:3:1, line:6:1> line:3:6 f2 'void (void (*)(int) __attribute__((noreturn)))'
+  |-ParmVarDecl 0x7faedc026038 <col:9> col:13 used p 'void (*)(int) __attribute__((noreturn))'
+  `-CompoundStmt 0x7faedc0262a0 <line:4:1, line:6:1>
+    `-BinaryOperator 0x7faedc026278 <line:5:3, col:7> 'void (*)(int) __attribute__((noreturn))' '='
+      |-DeclRefExpr 0x7faedc0261a0 <col:3> 'void (*)(int) __attribute__((noreturn))' lvalue ParmVar 0x7faedc026038 'p' 'void (*)(int) __attribute__((noreturn))'
+      `-ImplicitCastExpr 0x7faedc026260 <col:7> 'void (*)(int) __attribute__((noreturn))' <BitCast>
+        `-ImplicitCastExpr 0x7faedc026248 <col:7> 'ft *' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7faedc0261c8 <col:7> 'ft':'void (int)' Function 0x7faedc025e40 'f' 'ft':'void (int)'

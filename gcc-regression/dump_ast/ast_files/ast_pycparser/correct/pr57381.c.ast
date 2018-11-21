@@ -1,0 +1,254 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S0
+      Decl: f0, [], [], []
+        TypeDecl: f0, []
+          IdentifierType: ['int']
+      Decl: f1, [], [], []
+        TypeDecl: f1, []
+          IdentifierType: ['int']
+      Decl: f2, [], [], []
+        TypeDecl: f2, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: S1
+      Decl: f0, [], [], []
+        TypeDecl: f0, []
+          IdentifierType: ['int']
+      Decl: f2, ['volatile'], [], []
+        TypeDecl: f2, ['volatile']
+          Struct: S0
+  Decl: s, [], ['static'], []
+    TypeDecl: s, []
+      Struct: S1
+    InitList: 
+      Constant: int, 0x47BED265
+      InitList: 
+        Constant: int, 0x06D4EB3E
+        Constant: int, 5
+        Constant: int, 0U
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              Struct: S0
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      For: 
+        Assignment: =
+          StructRef: .
+            StructRef: .
+              ID: s
+              ID: f2
+            ID: f2
+          Constant: int, 0
+        BinaryOp: <=
+          StructRef: .
+            StructRef: .
+              ID: s
+              ID: f2
+            ID: f2
+          Constant: int, 12
+        UnaryOp: p++
+          StructRef: .
+            StructRef: .
+              ID: s
+              ID: f2
+            ID: f2
+        Compound: 
+          Decl: l_61, ['volatile'], [], []
+            ArrayDecl: []
+              ArrayDecl: []
+                ArrayDecl: []
+                  PtrDecl: []
+                    TypeDecl: l_61, ['volatile']
+                      IdentifierType: ['int']
+                  Constant: int, 2
+                Constant: int, 2
+              Constant: int, 5
+            InitList: 
+              InitList: 
+                InitList: 
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+                InitList: 
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+              InitList: 
+                InitList: 
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+                InitList: 
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+              InitList: 
+                InitList: 
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['void']
+                    Constant: int, 0
+                InitList: 
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+              InitList: 
+                InitList: 
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+                InitList: 
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+              InitList: 
+                InitList: 
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+                InitList: 
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['void']
+                    Constant: int, 0
+                  UnaryOp: &
+                    StructRef: .
+                      StructRef: .
+                        ID: s
+                        ID: f2
+                      ID: f0
+          Decl: l_68, ['volatile'], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: l_68, ['volatile']
+                  IdentifierType: ['int']
+            UnaryOp: &
+              ArrayRef: 
+                ArrayRef: 
+                  ArrayRef: 
+                    ID: l_61
+                    Constant: int, 0
+                  Constant: int, 0
+                Constant: int, 1
+          Decl: l_76, ['volatile'], [], []
+            PtrDecl: []
+              TypeDecl: l_76, ['volatile']
+                IdentifierType: ['int']
+            UnaryOp: &
+              StructRef: .
+                StructRef: .
+                  ID: s
+                  ID: f2
+                ID: f0
+          Assignment: =
+            UnaryOp: *
+              ID: l_68
+            ArrayRef: 
+              ArrayRef: 
+                ArrayRef: 
+                  ID: l_61
+                  Constant: int, 0
+                Constant: int, 0
+              Constant: int, 0
+          If: 
+            Assignment: =
+              UnaryOp: *
+                ID: l_76
+              BinaryOp: %
+                StructRef: .
+                  ID: p
+                  ID: f2
+                Constant: int, 5
+            EmptyStatement: 
+      Return: 
+        StructRef: .
+          ID: p
+          ID: f0

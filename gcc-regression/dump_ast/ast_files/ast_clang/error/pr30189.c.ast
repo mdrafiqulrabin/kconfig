@@ -1,0 +1,46 @@
+c_files/pr30189.c:11:14: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+  struct { A b; } *x = 0;
+             ^
+1 error generated.
+TranslationUnitDecl 0x7fd2d88264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd2d8826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd2d8826740 '__int128'
+|-TypedefDecl 0x7fd2d8826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd2d8826760 'unsigned __int128'
+|-TypedefDecl 0x7fd2d8826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd2d8826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd2d8826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd2d8826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd2d8826dc0 'char *'
+|   `-BuiltinType 0x7fd2d8826560 'char'
+|-TypedefDecl 0x7fd2d88270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd2d8827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd2d8826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd2d8826e58 '__va_list_tag'
+|-FunctionDecl 0x7fd2d9025a00 <c_files/pr30189.c:4:1, col:22> col:13 used foo 'void (void)' extern
+|-FunctionDecl 0x7fd2d9025bb0 <line:6:1, line:12:1> line:7:6 used baz 'void (int)' static
+| |-ParmVarDecl 0x7fd2d9025af0 <col:11, col:15> col:15 used i 'int'
+| `-CompoundStmt 0x7fd2d9026098 <line:8:1, line:12:1>
+|   |-CallExpr 0x7fd2d9025cc0 <line:9:3, col:8> 'void'
+|   | `-ImplicitCastExpr 0x7fd2d9025ca8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fd2d9025c50 <col:3> 'void (void)' Function 0x7fd2d9025a00 'foo' 'void (void)'
+|   |-DeclStmt 0x7fd2d9025de0 <line:10:3, col:20>
+|   | `-TypedefDecl 0x7fd2d9025d88 <col:3, col:19> col:16 referenced A 'char [i]'
+|   |   `-VariableArrayType 0x7fd2d9025d30 'char [i]' variably_modified  <col:17, col:19> 
+|   |     |-BuiltinType 0x7fd2d8826560 'char'
+|   |     `-ImplicitCastExpr 0x7fd2d9025d10 <col:18> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd2d9025ce8 <col:18> 'int' lvalue ParmVar 0x7fd2d9025af0 'i' 'int'
+|   `-DeclStmt 0x7fd2d9026080 <line:11:3, col:25>
+|     |-RecordDecl 0x7fd2d9025df8 <col:3, col:17> col:3 invalid struct definition
+|     | `-FieldDecl 0x7fd2d9025ed0 <col:12, col:14> col:14 invalid b 'A':'char [i]'
+|     `-VarDecl 0x7fd2d9025fd0 <col:3, col:24> col:20 x 'struct (anonymous struct at c_files/pr30189.c:11:3) *' cinit
+|       `-ImplicitCastExpr 0x7fd2d9026050 <col:24> 'struct (anonymous struct at c_files/pr30189.c:11:3) *' <NullToPointer>
+|         `-IntegerLiteral 0x7fd2d9026030 <col:24> 'int' 0
+`-FunctionDecl 0x7fd2d9026168 <line:14:1, line:18:1> line:15:1 bar 'void (int)'
+  |-ParmVarDecl 0x7fd2d90260e0 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7fd2d90262e8 <line:16:1, line:18:1>
+    `-CallExpr 0x7fd2d90262a0 <line:17:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fd2d9026288 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd2d9026208 <col:3> 'void (int)' Function 0x7fd2d9025bb0 'baz' 'void (int)'
+      `-ImplicitCastExpr 0x7fd2d90262d0 <col:8> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fd2d9026230 <col:8> 'int' lvalue ParmVar 0x7fd2d90260e0 'i' 'int'

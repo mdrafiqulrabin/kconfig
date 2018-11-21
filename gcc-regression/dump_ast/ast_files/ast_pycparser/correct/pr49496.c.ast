@@ -1,0 +1,76 @@
+FileAST: 
+  Decl: u, [], [], []
+    ArrayDecl: []
+      TypeDecl: u, []
+        IdentifierType: ['unsigned', 'short']
+      Constant: int, 8
+  Decl: s1, [], [], []
+    ArrayDecl: []
+      TypeDecl: s1, []
+        IdentifierType: ['unsigned', 'short']
+      Constant: int, 8
+  Decl: s2, [], [], []
+    ArrayDecl: []
+      TypeDecl: s2, []
+        IdentifierType: ['unsigned', 'short']
+      Constant: int, 8
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'short']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: e, [], [], []
+        ArrayDecl: []
+          TypeDecl: e, []
+            IdentifierType: ['unsigned', 'short']
+          Constant: int, 8
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 8
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: tmp, [], [], []
+            TypeDecl: tmp, []
+              IdentifierType: ['int']
+            BinaryOp: *
+              ArrayRef: 
+                ID: s1
+                ID: i
+              ArrayRef: 
+                ID: s2
+                ID: i
+          Assignment: =
+            ArrayRef: 
+              ID: e
+              ID: i
+            BinaryOp: >>
+              BinaryOp: &
+                ID: tmp
+                Constant: int, 0xffff0000
+              Constant: int, 16
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: e

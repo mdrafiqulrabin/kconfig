@@ -1,0 +1,148 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: tail0
+      Decl: xxx, [], [], []
+        TypeDecl: xxx, []
+          IdentifierType: ['int']
+      Decl: yyy, [], [], []
+        ArrayDecl: []
+          TypeDecl: yyy, []
+            IdentifierType: ['int']
+          Constant: int, 0
+  FuncDef: 
+    Decl: loop0, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: tail0
+        TypeDecl: loop0, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: n
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: s
+          ArrayRef: 
+            StructRef: ->
+              ID: x
+              ID: yyy
+            ID: i
+      Return: 
+        ID: s
+  Decl: None, [], [], []
+    Struct: tail1
+      Decl: xxx, [], [], []
+        TypeDecl: xxx, []
+          IdentifierType: ['int']
+      Decl: yyy, [], [], []
+        ArrayDecl: []
+          TypeDecl: yyy, []
+            IdentifierType: ['int']
+          Constant: int, 1
+  FuncDef: 
+    Decl: loop1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: tail1
+        TypeDecl: loop1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: n
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: s
+          ArrayRef: 
+            StructRef: ->
+              ID: x
+              ID: yyy
+            ID: i
+      Return: 
+        ID: s
+  Decl: None, [], [], []
+    Struct: tail5
+      Decl: xxx, [], [], []
+        TypeDecl: xxx, []
+          IdentifierType: ['int']
+      Decl: yyy, [], [], []
+        ArrayDecl: []
+          TypeDecl: yyy, []
+            IdentifierType: ['int']
+          Constant: int, 5
+  FuncDef: 
+    Decl: loop5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: tail5
+        TypeDecl: loop5, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: n
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: s
+          ArrayRef: 
+            StructRef: ->
+              ID: x
+              ID: yyy
+            ID: i
+      Return: 
+        ID: s

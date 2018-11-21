@@ -1,0 +1,117 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: inv_J, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            ArrayDecl: []
+              ArrayDecl: []
+                TypeDecl: a, []
+                  IdentifierType: ['int']
+                Constant: int, 2
+        TypeDecl: inv_J, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: det, [], [], []
+        TypeDecl: det, []
+          IdentifierType: ['int']
+        Constant: float, 0.0
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: <
+          ID: j
+          Constant: int, 2
+        UnaryOp: ++
+          ID: j
+        Assignment: +=
+          ID: det
+          BinaryOp: +
+            ArrayRef: 
+              ArrayRef: 
+                ID: a
+                ID: j
+              Constant: int, 0
+            ArrayRef: 
+              ArrayRef: 
+                ID: a
+                ID: j
+              Constant: int, 1
+      Return: 
+        ID: det
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: mat, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: mat, []
+              IdentifierType: ['int']
+            Constant: int, 2
+          Constant: int, 2
+      Assignment: =
+        ArrayRef: 
+          ArrayRef: 
+            ID: mat
+            Constant: int, 0
+          Constant: int, 0
+        Constant: int, 1
+      Assignment: =
+        ArrayRef: 
+          ArrayRef: 
+            ID: mat
+            Constant: int, 0
+          Constant: int, 1
+        Constant: int, 2
+      Assignment: =
+        ArrayRef: 
+          ArrayRef: 
+            ID: mat
+            Constant: int, 1
+          Constant: int, 0
+        Constant: int, 4
+      Assignment: =
+        ArrayRef: 
+          ArrayRef: 
+            ID: mat
+            Constant: int, 1
+          Constant: int, 1
+        Constant: int, 8
+      Return: 
+        FuncCall: 
+          ID: inv_J
+          ExprList: 
+            ID: mat
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+          Constant: int, 15
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fc1798264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc179826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc179826740 '__int128'
+|-TypedefDecl 0x7fc179826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc179826760 'unsigned __int128'
+|-TypedefDecl 0x7fc179826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc179826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc179826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc179826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc179826dc0 'char *'
+|   `-BuiltinType 0x7fc179826560 'char'
+|-TypedefDecl 0x7fc1798270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc179827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc179826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc179826e58 '__va_list_tag'
+`-FunctionDecl 0x7fc17a025b68 <c_files/pr53513-1.c:7:1, line:11:1> line:8:1 foo 'double (float, float, double)'
+  |-ParmVarDecl 0x7fc179827138 <col:6, col:12> col:12 used a 'float'
+  |-ParmVarDecl 0x7fc17a025a00 <col:15, col:21> col:21 used b 'float'
+  |-ParmVarDecl 0x7fc17a025a78 <col:24, col:31> col:31 used c 'double'
+  `-CompoundStmt 0x7fc17a025db8 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fc17a025da0 <line:10:3, col:20>
+      `-BinaryOperator 0x7fc17a025d78 <col:10, col:20> 'double' '+'
+        |-ImplicitCastExpr 0x7fc17a025d60 <col:10, col:16> 'double' <FloatingCast>
+        | `-ParenExpr 0x7fc17a025d00 <col:10, col:16> 'float'
+        |   `-BinaryOperator 0x7fc17a025cd8 <col:11, col:15> 'float' '*'
+        |     |-ImplicitCastExpr 0x7fc17a025ca8 <col:11> 'float' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7fc17a025c58 <col:11> 'float' lvalue ParmVar 0x7fc179827138 'a' 'float'
+        |     `-ImplicitCastExpr 0x7fc17a025cc0 <col:15> 'float' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fc17a025c80 <col:15> 'float' lvalue ParmVar 0x7fc17a025a00 'b' 'float'
+        `-ImplicitCastExpr 0x7fc17a025d48 <col:20> 'double' <LValueToRValue>
+          `-DeclRefExpr 0x7fc17a025d20 <col:20> 'double' lvalue ParmVar 0x7fc17a025a78 'c' 'double'

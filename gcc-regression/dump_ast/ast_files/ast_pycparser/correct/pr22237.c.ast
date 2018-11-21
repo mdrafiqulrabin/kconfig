@@ -1,0 +1,229 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: exit, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: exit, []
+        IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: s
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 256
+  Decl: None, [], [], []
+    Union: u
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          Struct: None
+            Decl: b, [], [], []
+              TypeDecl: b, []
+                Struct: s
+            Decl: c, [], [], []
+              TypeDecl: c, []
+                IdentifierType: ['int']
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          Struct: None
+            Decl: c, [], [], []
+              TypeDecl: c, []
+                IdentifierType: ['int']
+            Decl: b, [], [], []
+              TypeDecl: b, []
+                Struct: s
+  Decl: v, [], ['static'], []
+    TypeDecl: v, []
+      Union: u
+  Decl: v0, [], ['static'], []
+    TypeDecl: v0, []
+      Union: u
+  Decl: p, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: p, []
+        Struct: s
+    UnaryOp: &
+      StructRef: .
+        StructRef: .
+          ID: v
+          ID: d
+        ID: b
+  Decl: q, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: q, []
+        Struct: s
+    UnaryOp: &
+      StructRef: .
+        StructRef: .
+          ID: v
+          ID: e
+        ID: b
+  FuncDef: 
+    Decl: rp, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: rp, []
+          Struct: s
+    Compound: 
+      Return: 
+        UnaryOp: *
+          ID: p
+  FuncDef: 
+    Decl: rq, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: rq, []
+          Struct: s
+    Compound: 
+      Return: 
+        UnaryOp: *
+          ID: q
+  FuncDef: 
+    Decl: pq, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: pq, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: p
+        FuncCall: 
+          ID: rq
+  FuncDef: 
+    Decl: qp, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: qp, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: q
+        FuncCall: 
+          ID: rp
+  FuncDef: 
+    Decl: init, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: sp, [], [], []
+            PtrDecl: []
+              TypeDecl: sp, []
+                Struct: s
+        TypeDecl: init, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 256
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            StructRef: ->
+              ID: sp
+              ID: a
+            ID: i
+          ID: i
+  FuncDef: 
+    Decl: check, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: sp, [], [], []
+            PtrDecl: []
+              TypeDecl: sp, []
+                Struct: s
+        TypeDecl: check, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 256
+        UnaryOp: p++
+          ID: i
+        If: 
+          BinaryOp: !=
+            ArrayRef: 
+              StructRef: ->
+                ID: sp
+                ID: a
+              ID: i
+            ID: i
+          FuncCall: 
+            ID: abort
+  FuncDef: 
+    Decl: main_test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main_test, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: v
+        ID: v0
+      FuncCall: 
+        ID: init
+        ExprList: 
+          ID: p
+      FuncCall: 
+        ID: qp
+      FuncCall: 
+        ID: check
+        ExprList: 
+          ID: q
+      Assignment: =
+        ID: v
+        ID: v0
+      FuncCall: 
+        ID: init
+        ExprList: 
+          ID: q
+      FuncCall: 
+        ID: pq
+      FuncCall: 
+        ID: check
+        ExprList: 
+          ID: p
+      FuncCall: 
+        ID: exit
+        ExprList: 
+          Constant: int, 0

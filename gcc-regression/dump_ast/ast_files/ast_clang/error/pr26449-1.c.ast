@@ -1,0 +1,84 @@
+c_files/pr26449-1.c:21:19: error: use of unknown builtin '__builtin_ia32_vec_set_v8hi' [-Wimplicit-function-declaration]
+        (__m128i) __builtin_ia32_vec_set_v8hi ((__v8hi) val1.x, ins[i], 0);
+                  ^
+c_files/pr26449-1.c:21:9: error: invalid conversion between vector type '__m128i' (vector of 2 'long long' values) and integer type 'int' of different size
+        (__m128i) __builtin_ia32_vec_set_v8hi ((__v8hi) val1.x, ins[i], 0);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7fe1770264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe177026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe177026740 '__int128'
+|-TypedefDecl 0x7fe177026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe177026760 'unsigned __int128'
+|-TypedefDecl 0x7fe177026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe177026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe177026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe177026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe177026dc0 'char *'
+|   `-BuiltinType 0x7fe177026560 'char'
+|-TypedefDecl 0x7fe1770270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe177027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe177026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe177026e58 '__va_list_tag'
+|-TypedefDecl 0x7fe177027178 <c_files/pr26449-1.c:4:1, col:15> col:15 referenced __v8hi '__attribute__((__vector_size__(8 * sizeof(short)))) short'
+| `-VectorType 0x7fe177027140 '__attribute__((__vector_size__(8 * sizeof(short)))) short' 8
+|   `-BuiltinType 0x7fe1770265a0 'short'
+|-TypedefDecl 0x7fe177826a38 <line:5:1, col:19> col:19 referenced __m128i '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-VectorType 0x7fe177826a00 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+|   `-BuiltinType 0x7fe177026600 'long long'
+|-FunctionDecl 0x7fe177826ca8 <line:6:12> col:12 implicit used memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fe177826d40 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fe177826da0 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fe177826e00 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fe177826e78 prev 0x7fe177826ca8 <col:1, col:61> col:12 used memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fe177826ad0 <col:20, col:31> col:32 'const void *'
+| |-ParmVarDecl 0x7fe177826b48 <col:34, col:45> col:46 'const void *'
+| `-ParmVarDecl 0x7fe177826bc0 <<built-in>:75:23, col:37> c_files/pr26449-1.c:6:61 'unsigned long'
+|-FunctionDecl 0x7fe177826ff0 <line:8:1, line:23:1> line:8:6 sse2_test 'void (void)'
+| `-CompoundStmt 0x7fe1778285d8 <line:9:1, line:23:1>
+|   |-DeclStmt 0x7fe1778274c0 <line:10:3, line:13:22>
+|   | |-RecordDecl 0x7fe1778270c8 <line:10:3, line:13:3> line:10:3 union definition
+|   | | `-FieldDecl 0x7fe1778271a0 <line:12:5, col:13> col:13 referenced x '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   | |-VarDecl 0x7fe177827240 <line:10:3, line:13:5> col:5 used val1 'union (anonymous union at c_files/pr26449-1.c:10:3)':'union (anonymous at c_files/pr26449-1.c:10:3)'
+|   | |-VarDecl 0x7fe1778273b8 <line:10:3, line:13:16> col:11 used res 'union (anonymous union at c_files/pr26449-1.c:10:3) [8]'
+|   | `-VarDecl 0x7fe177827438 <line:10:3, line:13:19> col:19 used tmp 'union (anonymous union at c_files/pr26449-1.c:10:3)':'union (anonymous at c_files/pr26449-1.c:10:3)'
+|   |-DeclStmt 0x7fe177827880 <line:14:3, col:45>
+|   | `-VarDecl 0x7fe177827560 <col:3, col:44> col:9 used ins 'short [8]' cinit
+|   |   `-InitListExpr 0x7fe177827740 <col:18, col:44> 'short [8]'
+|   |     |-ImplicitCastExpr 0x7fe1778277c0 <col:20> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fe1778275c0 <col:20> 'int' 8
+|   |     |-ImplicitCastExpr 0x7fe1778277d8 <col:23> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fe1778275e0 <col:23> 'int' 5
+|   |     |-ImplicitCastExpr 0x7fe1778277f0 <col:26> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fe177827600 <col:26> 'int' 9
+|   |     |-ImplicitCastExpr 0x7fe177827808 <col:29> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fe177827620 <col:29> 'int' 4
+|   |     |-ImplicitCastExpr 0x7fe177827820 <col:32> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fe177827640 <col:32> 'int' 2
+|   |     |-ImplicitCastExpr 0x7fe177827838 <col:35> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fe177827660 <col:35> 'int' 6
+|   |     |-ImplicitCastExpr 0x7fe177827850 <col:38> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fe177827680 <col:38> 'int' 1
+|   |     `-ImplicitCastExpr 0x7fe177827868 <col:41> 'short' <IntegralCast>
+|   |       `-IntegerLiteral 0x7fe1778276a0 <col:41> 'int' 20
+|   |-DeclStmt 0x7fe177827910 <line:15:3, col:8>
+|   | `-VarDecl 0x7fe1778278b0 <col:3, col:7> col:7 used i 'int'
+|   `-ForStmt 0x7fe1778285a0 <line:17:3, line:22:5>
+|     |-BinaryOperator 0x7fe177827970 <line:17:8, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7fe177827928 <col:8> 'int' lvalue Var 0x7fe1778278b0 'i' 'int'
+|     | `-IntegerLiteral 0x7fe177827950 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fe177827a00 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7fe1778279e0 <col:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fe177827998 <col:15> 'int' lvalue Var 0x7fe1778278b0 'i' 'int'
+|     | `-IntegerLiteral 0x7fe1778279c0 <col:19> 'int' 8
+|     |-UnaryOperator 0x7fe177827a50 <col:22, col:23> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7fe177827a28 <col:22> 'int' lvalue Var 0x7fe1778278b0 'i' 'int'
+|     `-CompoundStmt 0x7fe177828580 <line:18:5, line:22:5>
+|       `-BinaryOperator 0x7fe177827b48 <line:19:7, col:20> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' '='
+|         |-MemberExpr 0x7fe177827a98 <col:7, col:11> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue .x 0x7fe1778271a0
+|         | `-DeclRefExpr 0x7fe177827a70 <col:7> 'union (anonymous union at c_files/pr26449-1.c:10:3)':'union (anonymous at c_files/pr26449-1.c:10:3)' lvalue Var 0x7fe177827438 'tmp' 'union (anonymous union at c_files/pr26449-1.c:10:3)':'union (anonymous at c_files/pr26449-1.c:10:3)'
+|         `-ImplicitCastExpr 0x7fe177827b30 <col:15, col:20> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|           `-MemberExpr 0x7fe177827af8 <col:15, col:20> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue .x 0x7fe1778271a0
+|             `-DeclRefExpr 0x7fe177827ad0 <col:15> 'union (anonymous union at c_files/pr26449-1.c:10:3)':'union (anonymous at c_files/pr26449-1.c:10:3)' lvalue Var 0x7fe177827240 'val1' 'union (anonymous union at c_files/pr26449-1.c:10:3)':'union (anonymous at c_files/pr26449-1.c:10:3)'
+`-FunctionDecl 0x7fe177827e90 <<invalid sloc>> line:21:19 implicit used __builtin_ia32_vec_set_v8hi 'int ()'

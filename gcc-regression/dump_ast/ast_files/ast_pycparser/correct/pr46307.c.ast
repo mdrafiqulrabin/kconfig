@@ -1,0 +1,63 @@
+FileAST: 
+  Decl: fma, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: fma, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['double']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['double']
+        TypeDecl: foo, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['double']
+        BinaryOp: +
+          BinaryOp: *
+            ID: x
+            ID: y
+          ID: z
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['double']
+        FuncCall: 
+          ID: __builtin_fma
+          ExprList: 
+            ID: x
+            ID: y
+            ID: z
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['double']
+        FuncCall: 
+          ID: fma
+          ExprList: 
+            ID: x
+            ID: y
+            ID: z
+      Return: 
+        BinaryOp: /
+          BinaryOp: /
+            ID: x
+            ID: y
+          ID: z

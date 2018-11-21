@@ -1,0 +1,47 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: s, [], [], []
+        ArrayDecl: []
+          TypeDecl: s, []
+            Struct: S
+              Decl: i, [], [], []
+                ArrayDecl: []
+                  TypeDecl: i, []
+                    IdentifierType: ['int']
+                  ID: n
+              Decl: value, [], [], []
+                TypeDecl: value, []
+                  IdentifierType: ['int']
+          Constant: int, 2
+      Return: 
+        Assignment: =
+          StructRef: .
+            ArrayRef: 
+              ID: s
+              ID: k
+            ID: value
+          Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            Constant: int, 2
+            Constant: int, 0

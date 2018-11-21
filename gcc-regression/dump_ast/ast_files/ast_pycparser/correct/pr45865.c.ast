@@ -1,0 +1,93 @@
+FileAST: 
+  Typedef: tree, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: tree, []
+        Union: tree_node
+  Decl: None, [], [], []
+    Enum: ix86_builtin_type
+      EnumeratorList: 
+        Enumerator: IX86_BT_LAST_VECT
+        Enumerator: IX86_BT_LAST_PTR
+  Decl: ix86_builtin_type_ptr_base, ['const'], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: ix86_builtin_type_ptr_base, ['const']
+        Enum: ix86_builtin_type
+  Decl: build_qualified_type, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['tree']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: build_qualified_type, []
+        IdentifierType: ['tree']
+  Decl: build_pointer_type, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['tree']
+      TypeDecl: build_pointer_type, []
+        IdentifierType: ['tree']
+  FuncDef: 
+    Decl: ix86_get_builtin_type, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: tcode, [], [], []
+            TypeDecl: tcode, []
+              Enum: ix86_builtin_type
+          Decl: index, [], [], []
+            TypeDecl: index, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: ix86_get_builtin_type, []
+          IdentifierType: ['tree']
+    Compound: 
+      Decl: type, [], [], []
+        TypeDecl: type, []
+          IdentifierType: ['tree']
+      Decl: itype, [], [], []
+        TypeDecl: itype, []
+          IdentifierType: ['tree']
+      Decl: quals, [], [], []
+        TypeDecl: quals, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: <=
+          ID: tcode
+          ID: IX86_BT_LAST_PTR
+        Assignment: =
+          ID: quals
+          Constant: int, 0x0
+        Assignment: =
+          ID: quals
+          Constant: int, 0x1
+      Assignment: =
+        ID: itype
+        FuncCall: 
+          ID: ix86_get_builtin_type
+          ExprList: 
+            ArrayRef: 
+              ID: ix86_builtin_type_ptr_base
+              ID: index
+            ID: index
+      If: 
+        BinaryOp: !=
+          ID: quals
+          Constant: int, 0x0
+        Assignment: =
+          ID: itype
+          FuncCall: 
+            ID: build_qualified_type
+            ExprList: 
+              ID: itype
+              ID: quals
+      Assignment: =
+        ID: type
+        FuncCall: 
+          ID: build_pointer_type
+          ExprList: 
+            ID: itype
+      Return: 
+        ID: type

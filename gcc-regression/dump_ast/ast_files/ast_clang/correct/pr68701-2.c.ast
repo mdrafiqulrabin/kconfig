@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7ff2f68264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff2f6826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff2f6826740 '__int128'
+|-TypedefDecl 0x7ff2f6826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff2f6826760 'unsigned __int128'
+|-TypedefDecl 0x7ff2f6826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff2f6826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff2f6826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff2f6826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff2f6826dc0 'char *'
+|   `-BuiltinType 0x7ff2f6826560 'char'
+|-TypedefDecl 0x7ff2f68270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff2f6827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff2f6826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff2f6826e58 '__va_list_tag'
+|-TypedefDecl 0x7ff2f6827178 <c_files/pr68701-2.c:6:1, col:15> col:15 referenced V '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7ff2f6827140 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7ff2f68266c0 'float'
+`-FunctionDecl 0x7ff2f6878500 <line:8:1, line:11:1> line:8:6 bar 'void (V)'
+  |-ParmVarDecl 0x7ff2f6878400 <col:11, col:13> col:13 used a 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+  `-CompoundStmt 0x7ff2f68786a8 <line:9:1, line:11:1>
+    `-DeclStmt 0x7ff2f6878690 <line:10:3, col:19>
+      `-VarDecl 0x7ff2f68785f0 <col:3, col:18> col:14 b 'volatile V':'__attribute__((__vector_size__(4 * sizeof(float)))) float volatile' cinit
+        `-ImplicitCastExpr 0x7ff2f6878678 <col:18> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+          `-DeclRefExpr 0x7ff2f6878650 <col:18> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue ParmVar 0x7ff2f6878400 'a' 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'

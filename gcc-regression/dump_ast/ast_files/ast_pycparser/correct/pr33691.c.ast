@@ -1,0 +1,17 @@
+FileAST: 
+  FuncDef: 
+    Decl: mgaSetTexImages, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: mgaSetTexImages, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        BinaryOp: &
+          BinaryOp: |
+            ID: i
+            Constant: int, 0x40
+          Constant: int, 0xffffffc0

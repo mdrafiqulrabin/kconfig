@@ -1,0 +1,576 @@
+TranslationUnitDecl 0x7fb6008264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb600826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb600826740 '__int128'
+|-TypedefDecl 0x7fb600826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb600826760 'unsigned __int128'
+|-TypedefDecl 0x7fb600826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb600826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb600826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb600826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb600826dc0 'char *'
+|   `-BuiltinType 0x7fb600826560 'char'
+|-TypedefDecl 0x7fb6008270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb600827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb600826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb600826e58 '__va_list_tag'
+|-TypedefDecl 0x7fb600827138 <c_files/pr44699.c:3:1, col:27> col:27 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fb600826680 'unsigned long'
+|-TypedefDecl 0x7fb6008271a8 <line:4:1, col:18> col:18 intmax_t 'long'
+| `-BuiltinType 0x7fb6008265e0 'long'
+|-TypedefDecl 0x7fb600878618 <line:5:1, col:27> col:27 uintmax_t 'unsigned long'
+| `-BuiltinType 0x7fb600826680 'unsigned long'
+|-FunctionDecl 0x7fb6008787a8 <line:6:1, col:58> col:14 used xmalloc 'void *(size_t)' extern
+| |-ParmVarDecl 0x7fb6008786a0 <col:23> col:29 'size_t':'unsigned long'
+| `-RestrictAttr 0x7fb600878848 <col:47> malloc
+|-FunctionDecl 0x7fb6008789b8 <line:7:1, col:47> col:20 used trim_filename 'const char *(const char *)' extern
+| `-ParmVarDecl 0x7fb6008788e8 <col:35, col:46> col:47 'const char *'
+|-FunctionDecl 0x7fb600878b30 <line:8:1, col:37> col:13 used error 'void (const char *, ...)' extern
+| `-ParmVarDecl 0x7fb600878a70 <col:20, col:31> col:32 'const char *'
+|-FunctionDecl 0x7fb600878e38 <line:10:1, line:14:1> line:11:1 used __inline_memcpy_chk 'void *(void *, const void *, size_t)' static inline
+| |-ParmVarDecl 0x7fb600878be8 <col:22, col:28> col:28 used __dest 'void *'
+| |-ParmVarDecl 0x7fb600878c90 <col:36, col:48> col:48 used __src 'const void *'
+| |-ParmVarDecl 0x7fb600878d00 <col:55, col:62> col:62 used __len 'size_t':'unsigned long'
+| `-CompoundStmt 0x7fb60087a6c0 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7fb60087a6a8 <line:13:3, col:89>
+|     `-CallExpr 0x7fb60087a618 <col:10, col:89> 'void *'
+|       |-ImplicitCastExpr 0x7fb60087a600 <col:10> 'void *(*)(void *, const void *, unsigned long, unsigned long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fb6008791c0 <col:10> '<builtin fn type>' Function 0x7fb600878f40 '__builtin___memcpy_chk' 'void *(void *, const void *, unsigned long, unsigned long)'
+|       |-ImplicitCastExpr 0x7fb60087a660 <col:34> 'void *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fb6008791e8 <col:34> 'void *' lvalue ParmVar 0x7fb600878be8 '__dest' 'void *'
+|       |-ImplicitCastExpr 0x7fb60087a678 <col:42> 'const void *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fb600879210 <col:42> 'const void *' lvalue ParmVar 0x7fb600878c90 '__src' 'const void *'
+|       |-ImplicitCastExpr 0x7fb60087a690 <col:49> 'size_t':'unsigned long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fb600879238 <col:49> 'size_t':'unsigned long' lvalue ParmVar 0x7fb600878d00 '__len' 'size_t':'unsigned long'
+|       `-CallExpr 0x7fb600879520 <col:56, col:88> 'unsigned long'
+|         |-ImplicitCastExpr 0x7fb600879508 <col:56> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fb600879450 <col:56> '<builtin fn type>' Function 0x7fb6008792a0 '__builtin_object_size' 'unsigned long (const void *, int)'
+|         |-ImplicitCastExpr 0x7fb600879570 <col:79> 'const void *' <BitCast>
+|         | `-ImplicitCastExpr 0x7fb600879558 <col:79> 'void *' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fb600879478 <col:79> 'void *' lvalue ParmVar 0x7fb600878be8 '__dest' 'void *'
+|         `-IntegerLiteral 0x7fb6008794a0 <col:87> 'int' 0
+|-FunctionDecl 0x7fb600878f40 <col:10> col:10 implicit used __builtin___memcpy_chk 'void *(void *, const void *, unsigned long, unsigned long)' extern
+| |-ParmVarDecl 0x7fb600878fd8 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fb600879038 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fb600879098 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7fb6008790f8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fb600879178 <col:10> Implicit
+|-FunctionDecl 0x7fb6008792a0 <col:56> col:56 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+| |-ParmVarDecl 0x7fb600879338 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fb600879398 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7fb600879408 <col:56> Implicit
+|-TypedefDecl 0x7fb60087a6f8 <line:16:1, col:22> col:22 referenced hashval_t 'unsigned int'
+| `-BuiltinType 0x7fb600826660 'unsigned int'
+|-TypedefDecl 0x7fb60087a930 <line:17:1, col:45> col:21 referenced htab_hash 'hashval_t (*)(const void *)'
+| `-PointerType 0x7fb60087a8d0 'hashval_t (*)(const void *)'
+|   `-ParenType 0x7fb60087a870 'hashval_t (const void *)' sugar
+|     `-FunctionProtoType 0x7fb60087a830 'hashval_t (const void *)' cdecl
+|       |-TypedefType 0x7fb60087a750 'hashval_t' sugar
+|       | |-Typedef 0x7fb60087a6f8 'hashval_t'
+|       | `-BuiltinType 0x7fb600826660 'unsigned int'
+|       `-PointerType 0x7fb600878c50 'const void *'
+|         `-QualType 0x7fb600826521 'const void' const
+|           `-BuiltinType 0x7fb600826520 'void'
+|-TypedefDecl 0x7fb60087ab90 <line:18:1, col:51> col:15 referenced htab_eq 'int (*)(const void *, const void *)'
+| `-PointerType 0x7fb60087ab20 'int (*)(const void *, const void *)'
+|   `-ParenType 0x7fb60087aac0 'int (const void *, const void *)' sugar
+|     `-FunctionProtoType 0x7fb60087aa80 'int (const void *, const void *)' cdecl
+|       |-BuiltinType 0x7fb6008265c0 'int'
+|       |-PointerType 0x7fb600878c50 'const void *'
+|       | `-QualType 0x7fb600826521 'const void' const
+|       |   `-BuiltinType 0x7fb600826520 'void'
+|       `-PointerType 0x7fb600878c50 'const void *'
+|         `-QualType 0x7fb600826521 'const void' const
+|           `-BuiltinType 0x7fb600826520 'void'
+|-TypedefDecl 0x7fb60087ad60 <line:19:1, col:33> col:16 referenced htab_del 'void (*)(void *)'
+| `-PointerType 0x7fb60087ad00 'void (*)(void *)'
+|   `-ParenType 0x7fb60087aca0 'void (void *)' sugar
+|     `-FunctionProtoType 0x7fb60087ac60 'void (void *)' cdecl
+|       |-BuiltinType 0x7fb600826520 'void'
+|       `-PointerType 0x7fb6008269a0 'void *'
+|         `-BuiltinType 0x7fb600826520 'void'
+|-TypedefDecl 0x7fb60087aff0 <line:20:1, col:42> col:15 htab_trav 'int (*)(void **, void *)'
+| `-PointerType 0x7fb60087af80 'int (*)(void **, void *)'
+|   `-ParenType 0x7fb60087af20 'int (void **, void *)' sugar
+|     `-FunctionProtoType 0x7fb60087aee0 'int (void **, void *)' cdecl
+|       |-BuiltinType 0x7fb6008265c0 'int'
+|       |-PointerType 0x7fb60087adc0 'void **'
+|       | `-PointerType 0x7fb6008269a0 'void *'
+|       |   `-BuiltinType 0x7fb600826520 'void'
+|       `-PointerType 0x7fb6008269a0 'void *'
+|         `-BuiltinType 0x7fb600826520 'void'
+|-TypedefDecl 0x7fb60087b280 <line:21:1, col:44> col:17 referenced htab_alloc 'void *(*)(size_t, size_t)'
+| `-PointerType 0x7fb60087b210 'void *(*)(size_t, size_t)'
+|   `-ParenType 0x7fb60087b1b0 'void *(size_t, size_t)' sugar
+|     `-FunctionProtoType 0x7fb60087b170 'void *(size_t, size_t)' cdecl
+|       |-PointerType 0x7fb6008269a0 'void *'
+|       | `-BuiltinType 0x7fb600826520 'void'
+|       |-TypedefType 0x7fb600878670 'size_t' sugar
+|       | |-Typedef 0x7fb600827138 'size_t'
+|       | `-BuiltinType 0x7fb600826680 'unsigned long'
+|       `-TypedefType 0x7fb600878670 'size_t' sugar
+|         |-Typedef 0x7fb600827138 'size_t'
+|         `-BuiltinType 0x7fb600826680 'unsigned long'
+|-TypedefDecl 0x7fb60087b388 <line:22:1, col:34> col:16 referenced htab_free 'void (*)(void *)'
+| `-PointerType 0x7fb60087ad00 'void (*)(void *)'
+|   `-ParenType 0x7fb60087aca0 'void (void *)' sugar
+|     `-FunctionProtoType 0x7fb60087ac60 'void (void *)' cdecl
+|       |-BuiltinType 0x7fb600826520 'void'
+|       `-PointerType 0x7fb6008269a0 'void *'
+|         `-BuiltinType 0x7fb600826520 'void'
+|-TypedefDecl 0x7fb60087b6d8 <line:24:1, col:61> col:17 referenced htab_alloc_with_arg 'void *(*)(void *, size_t, size_t)'
+| `-PointerType 0x7fb60087b660 'void *(*)(void *, size_t, size_t)'
+|   `-ParenType 0x7fb60087b600 'void *(void *, size_t, size_t)' sugar
+|     `-FunctionProtoType 0x7fb60087b590 'void *(void *, size_t, size_t)' cdecl
+|       |-PointerType 0x7fb6008269a0 'void *'
+|       | `-BuiltinType 0x7fb600826520 'void'
+|       |-PointerType 0x7fb6008269a0 'void *'
+|       | `-BuiltinType 0x7fb600826520 'void'
+|       |-TypedefType 0x7fb600878670 'size_t' sugar
+|       | |-Typedef 0x7fb600827138 'size_t'
+|       | `-BuiltinType 0x7fb600826680 'unsigned long'
+|       `-TypedefType 0x7fb600878670 'size_t' sugar
+|         |-Typedef 0x7fb600827138 'size_t'
+|         `-BuiltinType 0x7fb600826680 'unsigned long'
+|-TypedefDecl 0x7fb60087b928 <line:25:1, col:51> col:16 referenced htab_free_with_arg 'void (*)(void *, void *)'
+| `-PointerType 0x7fb60087b8c0 'void (*)(void *, void *)'
+|   `-ParenType 0x7fb60087b860 'void (void *, void *)' sugar
+|     `-FunctionProtoType 0x7fb60087b820 'void (void *, void *)' cdecl
+|       |-BuiltinType 0x7fb600826520 'void'
+|       |-PointerType 0x7fb6008269a0 'void *'
+|       | `-BuiltinType 0x7fb600826520 'void'
+|       `-PointerType 0x7fb6008269a0 'void *'
+|         `-BuiltinType 0x7fb600826520 'void'
+|-RecordDecl 0x7fb60087b980 <line:26:1, line:42:1> line:26:8 struct htab definition
+| |-FieldDecl 0x7fb60087ba60 <line:27:3, col:13> col:13 hash_f 'htab_hash':'hashval_t (*)(const void *)'
+| |-FieldDecl 0x7fb60087bae0 <line:28:3, col:11> col:11 eq_f 'htab_eq':'int (*)(const void *, const void *)'
+| |-FieldDecl 0x7fb60087bb60 <line:29:3, col:12> col:12 del_f 'htab_del':'void (*)(void *)'
+| |-FieldDecl 0x7fb60087bbc0 <line:30:3, col:11> col:11 entries 'void **'
+| |-FieldDecl 0x7fb60087bc18 <line:31:3, col:10> col:10 size 'size_t':'unsigned long'
+| |-FieldDecl 0x7fb60087bc70 <line:32:3, col:10> col:10 n_elements 'size_t':'unsigned long'
+| |-FieldDecl 0x7fb60087bcc8 <line:33:3, col:10> col:10 n_deleted 'size_t':'unsigned long'
+| |-FieldDecl 0x7fb60087bd28 <line:34:3, col:16> col:16 searches 'unsigned int'
+| |-FieldDecl 0x7fb60087bd88 <line:35:3, col:16> col:16 collisions 'unsigned int'
+| |-FieldDecl 0x7fb60087be00 <line:36:3, col:14> col:14 alloc_f 'htab_alloc':'void *(*)(size_t, size_t)'
+| |-FieldDecl 0x7fb60087be80 <line:37:3, col:13> col:13 free_f 'htab_free':'void (*)(void *)'
+| |-FieldDecl 0x7fb60087bee0 <line:38:3, col:10> col:10 alloc_arg 'void *'
+| |-FieldDecl 0x7fb60087bf60 <line:39:3, col:23> col:23 alloc_with_arg_f 'htab_alloc_with_arg':'void *(*)(void *, size_t, size_t)'
+| |-FieldDecl 0x7fb60087bfe0 <line:40:3, col:22> col:22 free_with_arg_f 'htab_free_with_arg':'void (*)(void *, void *)'
+| `-FieldDecl 0x7fb60087c040 <line:41:3, col:16> col:16 size_prime_index 'unsigned int'
+|-TypedefDecl 0x7fb60087c140 <line:44:1, col:22> col:22 referenced htab_t 'struct htab *'
+| `-PointerType 0x7fb60087c0f0 'struct htab *'
+|   `-ElaboratedType 0x7fb60087c090 'struct htab' sugar
+|     `-RecordType 0x7fb60087ba10 'struct htab'
+|       `-Record 0x7fb60087b980 'htab'
+|-EnumDecl 0x7fb60087c198 <line:45:1, col:38> col:6 insert_option
+| |-EnumConstantDecl 0x7fb60087c250 <col:21> col:21 NO_INSERT 'int'
+| `-EnumConstantDecl 0x7fb60087c298 <col:32> col:32 referenced INSERT 'int'
+|-FunctionDecl 0x7fb60087c4a8 <line:46:1, col:46> col:15 used htab_find 'void *(htab_t, const void *)' extern
+| |-ParmVarDecl 0x7fb60087c310 <col:26> col:32 'htab_t':'struct htab *'
+| `-ParmVarDecl 0x7fb60087c388 <col:34, col:45> col:46 'const void *'
+|-FunctionDecl 0x7fb60087c7e8 <line:47:1, col:72> col:16 used htab_find_slot 'void **(htab_t, const void *, enum insert_option)' extern
+| |-ParmVarDecl 0x7fb60087c560 <col:32> col:38 'htab_t':'struct htab *'
+| |-ParmVarDecl 0x7fb60087c600 <col:40, col:51> col:52 'const void *'
+| `-ParmVarDecl 0x7fb60087c6b0 <col:54, col:59> col:72 'enum insert_option':'enum insert_option'
+|-EnumDecl 0x7fb60087c898 <line:49:1, col:318> col:6 mode_class
+| |-EnumConstantDecl 0x7fb60087c950 <col:19> col:19 MODE_RANDOM 'int'
+| |-EnumConstantDecl 0x7fb60087c998 <col:32> col:32 MODE_CC 'int'
+| |-EnumConstantDecl 0x7fb60087c9e0 <col:41> col:41 referenced MODE_INT 'int'
+| |-EnumConstantDecl 0x7fb60087ca28 <col:51> col:51 MODE_PARTIAL_INT 'int'
+| |-EnumConstantDecl 0x7fb60087ca70 <col:69> col:69 MODE_FRACT 'int'
+| |-EnumConstantDecl 0x7fb60087cab8 <col:81> col:81 MODE_UFRACT 'int'
+| |-EnumConstantDecl 0x7fb60087cb00 <col:94> col:94 MODE_ACCUM 'int'
+| |-EnumConstantDecl 0x7fb60087cb48 <col:106> col:106 MODE_UACCUM 'int'
+| |-EnumConstantDecl 0x7fb60087cb90 <col:119> col:119 MODE_FLOAT 'int'
+| |-EnumConstantDecl 0x7fb60087cbd8 <col:131> col:131 MODE_DECIMAL_FLOAT 'int'
+| |-EnumConstantDecl 0x7fb60087cc20 <col:151> col:151 MODE_COMPLEX_INT 'int'
+| |-EnumConstantDecl 0x7fb60087cc68 <col:169> col:169 MODE_COMPLEX_FLOAT 'int'
+| |-EnumConstantDecl 0x7fb60087ccb0 <col:189> col:189 MODE_VECTOR_INT 'int'
+| |-EnumConstantDecl 0x7fb60087ccf8 <col:206> col:206 MODE_VECTOR_FRACT 'int'
+| |-EnumConstantDecl 0x7fb60087cd40 <col:225> col:225 MODE_VECTOR_UFRACT 'int'
+| |-EnumConstantDecl 0x7fb60087cd88 <col:245> col:245 MODE_VECTOR_ACCUM 'int'
+| |-EnumConstantDecl 0x7fb60087cdd0 <col:264> col:264 MODE_VECTOR_UACCUM 'int'
+| |-EnumConstantDecl 0x7fb60087ce18 <col:284> col:284 MODE_VECTOR_FLOAT 'int'
+| `-EnumConstantDecl 0x7fb60087ce60 <col:303> col:303 referenced MAX_MODE_CLASS 'int'
+|-VarDecl 0x7fb60087cf70 <line:51:1, line:54:1> line:51:26 mode_class_names 'const char *const [18]' static cinit
+| `-InitListExpr 0x7fb60087e690 <line:52:1, line:54:1> 'const char *const [18]'
+|   |-ImplicitCastExpr 0x7fb60087e778 <line:53:3> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087e760 <col:3> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d008 <col:3> 'char [12]' lvalue "MODE_RANDOM"
+|   |-ImplicitCastExpr 0x7fb60087e7a8 <col:18> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087e790 <col:18> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d078 <col:18> 'char [8]' lvalue "MODE_CC"
+|   |-ImplicitCastExpr 0x7fb60087e7d8 <col:29> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087e7c0 <col:29> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d0e8 <col:29> 'char [9]' lvalue "MODE_INT"
+|   |-ImplicitCastExpr 0x7fb60087e808 <col:41> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087e7f0 <col:41> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d158 <col:41> 'char [17]' lvalue "MODE_PARTIAL_INT"
+|   |-ImplicitCastExpr 0x7fb60087e838 <col:61> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087e820 <col:61> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d1c8 <col:61> 'char [11]' lvalue "MODE_FRACT"
+|   |-ImplicitCastExpr 0x7fb60087e868 <col:75> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087e850 <col:75> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d200 <col:75> 'char [12]' lvalue "MODE_UFRACT"
+|   |-ImplicitCastExpr 0x7fb60087e898 <col:90> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087e880 <col:90> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d238 <col:90> 'char [11]' lvalue "MODE_ACCUM"
+|   |-ImplicitCastExpr 0x7fb60087e8c8 <col:104> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087e8b0 <col:104> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d270 <col:104> 'char [12]' lvalue "MODE_UACCUM"
+|   |-ImplicitCastExpr 0x7fb60087e8f8 <col:119> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087e8e0 <col:119> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d2a8 <col:119> 'char [11]' lvalue "MODE_FLOAT"
+|   |-ImplicitCastExpr 0x7fb60087e928 <col:133> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087e910 <col:133> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d318 <col:133> 'char [19]' lvalue "MODE_DECIMAL_FLOAT"
+|   |-ImplicitCastExpr 0x7fb60087e958 <col:155> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087e940 <col:155> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d358 <col:155> 'char [17]' lvalue "MODE_COMPLEX_INT"
+|   |-ImplicitCastExpr 0x7fb60087e988 <col:175> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087e970 <col:175> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d390 <col:175> 'char [19]' lvalue "MODE_COMPLEX_FLOAT"
+|   |-ImplicitCastExpr 0x7fb60087e9b8 <col:197> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087e9a0 <col:197> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d408 <col:197> 'char [16]' lvalue "MODE_VECTOR_INT"
+|   |-ImplicitCastExpr 0x7fb60087e9e8 <col:216> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087e9d0 <col:216> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d478 <col:216> 'char [18]' lvalue "MODE_VECTOR_FRACT"
+|   |-ImplicitCastExpr 0x7fb60087ea18 <col:237> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087ea00 <col:237> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d4b8 <col:237> 'char [19]' lvalue "MODE_VECTOR_UFRACT"
+|   |-ImplicitCastExpr 0x7fb60087ea48 <col:259> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087ea30 <col:259> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d4f8 <col:259> 'char [18]' lvalue "MODE_VECTOR_ACCUM"
+|   |-ImplicitCastExpr 0x7fb60087ea78 <col:280> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087ea60 <col:280> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087d538 <col:280> 'char [19]' lvalue "MODE_VECTOR_UACCUM"
+|   `-ImplicitCastExpr 0x7fb60087eaa8 <col:302> 'const char *' <BitCast>
+|     `-ImplicitCastExpr 0x7fb60087ea90 <col:302> 'char *' <ArrayToPointerDecay>
+|       `-StringLiteral 0x7fb60087d578 <col:302> 'char [18]' lvalue "MODE_VECTOR_FLOAT"
+|-RecordDecl 0x7fb60087eac0 <line:55:1, line:80:1> line:55:8 struct mode_data definition
+| |-FieldDecl 0x7fb60087ec20 <line:57:3, col:21> col:21 referenced next 'struct mode_data *'
+| |-FieldDecl 0x7fb60087ec80 <line:59:3, col:15> col:15 referenced name 'const char *'
+| |-FieldDecl 0x7fb60087ed20 <line:60:3, col:19> col:19 referenced cl 'enum mode_class':'enum mode_class'
+| |-FieldDecl 0x7fb60087ed80 <line:61:3, col:16> col:16 referenced precision 'unsigned int'
+| |-FieldDecl 0x7fb60087ede0 <line:62:3, col:16> col:16 referenced bytesize 'unsigned int'
+| |-FieldDecl 0x7fb60087ee40 <line:63:3, col:16> col:16 ncomponents 'unsigned int'
+| |-FieldDecl 0x7fb60087eea0 <line:64:3, col:16> col:16 alignment 'unsigned int'
+| |-FieldDecl 0x7fb60087ef00 <line:65:3, col:15> col:15 format 'const char *'
+| |-FieldDecl 0x7fb60087ef70 <line:67:3, col:21> col:21 component 'struct mode_data *'
+| |-FieldDecl 0x7fb60087efe0 <line:68:3, col:21> col:21 wider 'struct mode_data *'
+| |-FieldDecl 0x7fb60087f050 <line:69:3, col:21> col:21 wider_2x 'struct mode_data *'
+| |-FieldDecl 0x7fb60087f0c0 <line:71:3, col:21> col:21 contained 'struct mode_data *'
+| |-FieldDecl 0x7fb60087f130 <line:73:3, col:21> col:21 next_cont 'struct mode_data *'
+| |-FieldDecl 0x7fb60087f190 <line:75:3, col:15> col:15 referenced file 'const char *'
+| |-FieldDecl 0x7fb60087f1f0 <line:76:3, col:16> col:16 referenced line 'unsigned int'
+| |-FieldDecl 0x7fb60087f250 <line:77:3, col:16> col:16 referenced counter 'unsigned int'
+| |-FieldDecl 0x7fb60087f2b0 <line:78:3, col:16> col:16 ibit 'unsigned int'
+| `-FieldDecl 0x7fb60087f310 <line:79:3, col:16> col:16 fbit 'unsigned int'
+|-VarDecl 0x7fb60087f430 <line:82:1, col:46> col:26 used modes 'struct mode_data *[18]' static
+|-VarDecl 0x7fb60087f520 <line:83:1, col:43> col:21 used n_modes 'unsigned int [18]' static
+|-VarDecl 0x7fb60087f600 <line:84:1, col:26> col:26 void_mode 'struct mode_data *' static
+|-VarDecl 0x7fb60087f680 <line:86:1, line:91:1> line:86:31 used blank_mode 'const struct mode_data':'const struct mode_data' static cinit
+| `-InitListExpr 0x7fb60087fae0 <col:44, line:91:1> 'struct mode_data':'struct mode_data'
+|   |-ImplicitCastExpr 0x7fb60087fbb0 <line:87:3> 'struct mode_data *' <NullToPointer>
+|   | `-IntegerLiteral 0x7fb60087f6e0 <col:3> 'int' 0
+|   |-ImplicitCastExpr 0x7fb60087fbe0 <col:6> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087fbc8 <col:6> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087f738 <col:6> 'char [10]' lvalue "<unknown>"
+|   |-ImplicitCastExpr 0x7fb60087fbf8 <col:19> 'enum mode_class':'enum mode_class' <IntegralCast>
+|   | `-DeclRefExpr 0x7fb60087f770 <col:19> 'int' EnumConstant 0x7fb60087ce60 'MAX_MODE_CLASS' 'int'
+|   |-UnaryOperator 0x7fb60087f7b8 <line:88:3, col:4> 'unsigned int' prefix '-'
+|   | `-IntegerLiteral 0x7fb60087f798 <col:4> 'unsigned int' 1
+|   |-UnaryOperator 0x7fb60087f7f8 <col:8, col:9> 'unsigned int' prefix '-'
+|   | `-IntegerLiteral 0x7fb60087f7d8 <col:9> 'unsigned int' 1
+|   |-UnaryOperator 0x7fb60087f838 <col:13, col:14> 'unsigned int' prefix '-'
+|   | `-IntegerLiteral 0x7fb60087f818 <col:14> 'unsigned int' 1
+|   |-UnaryOperator 0x7fb60087f878 <col:18, col:19> 'unsigned int' prefix '-'
+|   | `-IntegerLiteral 0x7fb60087f858 <col:19> 'unsigned int' 1
+|   |-ImplicitCastExpr 0x7fb60087fc10 <line:89:3> 'const char *' <NullToPointer>
+|   | `-IntegerLiteral 0x7fb60087f898 <col:3> 'int' 0
+|   |-ImplicitCastExpr 0x7fb60087fc28 <col:6> 'struct mode_data *' <NullToPointer>
+|   | `-IntegerLiteral 0x7fb60087f8b8 <col:6> 'int' 0
+|   |-ImplicitCastExpr 0x7fb60087fc40 <col:9> 'struct mode_data *' <NullToPointer>
+|   | `-IntegerLiteral 0x7fb60087f8d8 <col:9> 'int' 0
+|   |-ImplicitCastExpr 0x7fb60087fc58 <col:12> 'struct mode_data *' <NullToPointer>
+|   | `-IntegerLiteral 0x7fb60087f8f8 <col:12> 'int' 0
+|   |-ImplicitCastExpr 0x7fb60087fc70 <col:15> 'struct mode_data *' <NullToPointer>
+|   | `-IntegerLiteral 0x7fb60087f918 <col:15> 'int' 0
+|   |-ImplicitCastExpr 0x7fb60087fc88 <col:18> 'struct mode_data *' <NullToPointer>
+|   | `-IntegerLiteral 0x7fb60087f938 <col:18> 'int' 0
+|   |-ImplicitCastExpr 0x7fb60087fcb8 <line:90:3> 'const char *' <BitCast>
+|   | `-ImplicitCastExpr 0x7fb60087fca0 <col:3> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fb60087f958 <col:3> 'char [10]' lvalue "<unknown>"
+|   |-ImplicitCastExpr 0x7fb60087fcd0 <col:16> 'unsigned int' <IntegralCast>
+|   | `-IntegerLiteral 0x7fb60087f990 <col:16> 'int' 0
+|   |-ImplicitCastExpr 0x7fb60087fce8 <col:19> 'unsigned int' <IntegralCast>
+|   | `-IntegerLiteral 0x7fb60087f9b0 <col:19> 'int' 0
+|   |-ImplicitCastExpr 0x7fb60087fd00 <col:22> 'unsigned int' <IntegralCast>
+|   | `-IntegerLiteral 0x7fb60087f9d0 <col:22> 'int' 0
+|   `-ImplicitCastExpr 0x7fb60087fd18 <col:25> 'unsigned int' <IntegralCast>
+|     `-IntegerLiteral 0x7fb60087f9f0 <col:25> 'int' 0
+|-VarDecl 0x7fb60087fd40 <line:93:1, col:15> col:15 used modes_by_name 'htab_t':'struct htab *' static
+|-FunctionDecl 0x7fb60087fed8 <line:95:1, line:102:1> line:96:1 used find_mode 'struct mode_data *(const char *)' static inline
+| |-ParmVarDecl 0x7fb60087fdb8 <col:12, col:24> col:24 used name 'const char *'
+| `-CompoundStmt 0x7fb6008802b0 <line:97:1, line:102:1>
+|   |-DeclStmt 0x7fb60087fff8 <line:98:3, col:23>
+|   | `-VarDecl 0x7fb60087ff98 <col:3, col:20> col:20 used key 'struct mode_data':'struct mode_data'
+|   |-BinaryOperator 0x7fb6008800b0 <line:100:3, col:14> 'const char *' '='
+|   | |-MemberExpr 0x7fb600880038 <col:3, col:7> 'const char *' lvalue .name 0x7fb60087ec80
+|   | | `-DeclRefExpr 0x7fb600880010 <col:3> 'struct mode_data':'struct mode_data' lvalue Var 0x7fb60087ff98 'key' 'struct mode_data':'struct mode_data'
+|   | `-ImplicitCastExpr 0x7fb600880098 <col:14> 'const char *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fb600880070 <col:14> 'const char *' lvalue ParmVar 0x7fb60087fdb8 'name' 'const char *'
+|   `-ReturnStmt 0x7fb600880298 <line:101:3, col:61>
+|     `-CStyleCastExpr 0x7fb600880270 <col:10, col:61> 'struct mode_data *' <BitCast>
+|       `-CallExpr 0x7fb6008801e0 <col:31, col:61> 'void *'
+|         |-ImplicitCastExpr 0x7fb6008801c8 <col:31> 'void *(*)(htab_t, const void *)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fb6008800d8 <col:31> 'void *(htab_t, const void *)' Function 0x7fb60087c4a8 'htab_find' 'void *(htab_t, const void *)'
+|         |-ImplicitCastExpr 0x7fb600880218 <col:42> 'htab_t':'struct htab *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fb600880100 <col:42> 'htab_t':'struct htab *' lvalue Var 0x7fb60087fd40 'modes_by_name' 'htab_t':'struct htab *'
+|         `-ImplicitCastExpr 0x7fb600880230 <col:57, col:58> 'const void *' <BitCast>
+|           `-UnaryOperator 0x7fb600880150 <col:57, col:58> 'struct mode_data *' prefix '&'
+|             `-DeclRefExpr 0x7fb600880128 <col:58> 'struct mode_data':'struct mode_data' lvalue Var 0x7fb60087ff98 'key' 'struct mode_data':'struct mode_data'
+|-FunctionDecl 0x7fb600881600 <line:104:1, line:136:1> line:105:1 used new_mode 'struct mode_data *(enum mode_class, const char *, const char *, unsigned int)' static
+| |-ParmVarDecl 0x7fb600880300 <col:11, col:27> col:27 used cl 'enum mode_class':'enum mode_class'
+| |-ParmVarDecl 0x7fb600880378 <col:31, col:43> col:43 used name 'const char *'
+| |-ParmVarDecl 0x7fb6008803f0 <line:106:4, col:16> col:16 used file 'const char *'
+| |-ParmVarDecl 0x7fb600880468 <col:22, col:35> col:35 used line 'unsigned int'
+| `-CompoundStmt 0x7fb6008835b8 <line:107:1, line:136:1>
+|   |-DeclStmt 0x7fb600881740 <line:108:3, col:22>
+|   | `-VarDecl 0x7fb6008816e0 <col:3, col:21> col:21 used m 'struct mode_data *'
+|   |-DeclStmt 0x7fb600881808 <line:109:3, col:32>
+|   | `-VarDecl 0x7fb600881770 <col:3, col:31> col:23 used count 'unsigned int' static cinit
+|   |   `-ImplicitCastExpr 0x7fb6008817f0 <col:31> 'unsigned int' <IntegralCast>
+|   |     `-IntegerLiteral 0x7fb6008817d0 <col:31> 'int' 0
+|   |-BinaryOperator 0x7fb600881958 <line:111:3, col:22> 'struct mode_data *' '='
+|   | |-DeclRefExpr 0x7fb600881820 <col:3> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   | `-CallExpr 0x7fb600881910 <col:7, col:22> 'struct mode_data *'
+|   |   |-ImplicitCastExpr 0x7fb6008818f8 <col:7> 'struct mode_data *(*)(const char *)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fb600881848 <col:7> 'struct mode_data *(const char *)' Function 0x7fb60087fed8 'find_mode' 'struct mode_data *(const char *)'
+|   |   `-ImplicitCastExpr 0x7fb600881940 <col:18> 'const char *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fb600881870 <col:18> 'const char *' lvalue ParmVar 0x7fb600880378 'name' 'const char *'
+|   |-IfStmt 0x7fb600881f70 <line:112:3, line:118:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fb6008819a8 <line:112:7> 'struct mode_data *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fb600881980 <col:7> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   | |-CompoundStmt 0x7fb600881f40 <line:113:5, line:118:5>
+|   | | |-CallExpr 0x7fb600881bf0 <line:114:7, line:115:39> 'void'
+|   | | | |-ImplicitCastExpr 0x7fb600881bd8 <line:114:7> 'void (*)(const char *, ...)' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7fb6008819c0 <col:7> 'void (const char *, ...)' Function 0x7fb600878b30 'error' 'void (const char *, ...)'
+|   | | | |-ImplicitCastExpr 0x7fb600881c50 <col:14> 'const char *' <BitCast>
+|   | | | | `-ImplicitCastExpr 0x7fb600881c38 <col:14> 'char *' <ArrayToPointerDecay>
+|   | | | |   `-StringLiteral 0x7fb600881a28 <col:14> 'char [41]' lvalue "%s:%d: duplicate definition of mode \"%s\""
+|   | | | |-CallExpr 0x7fb600881b10 <line:115:7, col:26> 'const char *'
+|   | | | | |-ImplicitCastExpr 0x7fb600881af8 <col:7> 'const char *(*)(const char *)' <FunctionToPointerDecay>
+|   | | | | | `-DeclRefExpr 0x7fb600881a78 <col:7> 'const char *(const char *)' Function 0x7fb6008789b8 'trim_filename' 'const char *(const char *)'
+|   | | | | `-ImplicitCastExpr 0x7fb600881b40 <col:22> 'const char *' <LValueToRValue>
+|   | | | |   `-DeclRefExpr 0x7fb600881aa0 <col:22> 'const char *' lvalue ParmVar 0x7fb6008803f0 'file' 'const char *'
+|   | | | |-ImplicitCastExpr 0x7fb600881c68 <col:29> 'unsigned int' <LValueToRValue>
+|   | | | | `-DeclRefExpr 0x7fb600881b58 <col:29> 'unsigned int' lvalue ParmVar 0x7fb600880468 'line' 'unsigned int'
+|   | | | `-ImplicitCastExpr 0x7fb600881c80 <col:35> 'const char *' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7fb600881b80 <col:35> 'const char *' lvalue ParmVar 0x7fb600880378 'name' 'const char *'
+|   | | |-CallExpr 0x7fb600881e48 <line:116:7, col:65> 'void'
+|   | | | |-ImplicitCastExpr 0x7fb600881e30 <col:7> 'void (*)(const char *, ...)' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7fb600881c98 <col:7> 'void (const char *, ...)' Function 0x7fb600878b30 'error' 'void (const char *, ...)'
+|   | | | |-ImplicitCastExpr 0x7fb600881ea0 <col:14> 'const char *' <BitCast>
+|   | | | | `-ImplicitCastExpr 0x7fb600881e88 <col:14> 'char *' <ArrayToPointerDecay>
+|   | | | |   `-StringLiteral 0x7fb600881cf8 <col:14> 'char [32]' lvalue "%s:%d: previous definition here"
+|   | | | |-ImplicitCastExpr 0x7fb600881eb8 <col:49, col:52> 'const char *' <LValueToRValue>
+|   | | | | `-MemberExpr 0x7fb600881d80 <col:49, col:52> 'const char *' lvalue ->file 0x7fb60087f190
+|   | | | |   `-ImplicitCastExpr 0x7fb600881d68 <col:49> 'struct mode_data *' <LValueToRValue>
+|   | | | |     `-DeclRefExpr 0x7fb600881d40 <col:49> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   | | | `-ImplicitCastExpr 0x7fb600881ed0 <col:58, col:61> 'unsigned int' <LValueToRValue>
+|   | | |   `-MemberExpr 0x7fb600881df8 <col:58, col:61> 'unsigned int' lvalue ->line 0x7fb60087f1f0
+|   | | |     `-ImplicitCastExpr 0x7fb600881de0 <col:58> 'struct mode_data *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7fb600881db8 <col:58> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   | | `-ReturnStmt 0x7fb600881f28 <line:117:7, col:14>
+|   | |   `-ImplicitCastExpr 0x7fb600881f10 <col:14> 'struct mode_data *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fb600881ee8 <col:14> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fb600882150 <line:120:3, col:64> 'struct mode_data *' '='
+|   | |-DeclRefExpr 0x7fb600881fa8 <col:3> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   | `-ParenExpr 0x7fb600882130 <col:7, col:64> 'struct mode_data *'
+|   |   `-CStyleCastExpr 0x7fb600882108 <col:8, col:63> 'struct mode_data *' <BitCast>
+|   |     `-CallExpr 0x7fb6008820b0 <col:29, col:63> 'void *'
+|   |       |-ImplicitCastExpr 0x7fb600882098 <col:29> 'void *(*)(size_t)' <FunctionToPointerDecay>
+|   |       | `-DeclRefExpr 0x7fb600881fd0 <col:29> 'void *(size_t)' Function 0x7fb6008787a8 'xmalloc' 'void *(size_t)'
+|   |       `-UnaryExprOrTypeTraitExpr 0x7fb600882018 <col:38, col:62> 'unsigned long' sizeof 'struct mode_data':'struct mode_data'
+|   |-ParenExpr 0x7fb6008829e0 <line:121:3, col:214> 'void *'
+|   | `-ConditionalOperator 0x7fb6008829b0 <col:4, col:213> 'void *'
+|   |   |-ParenExpr 0x7fb600882320 <col:4, col:48> 'int'
+|   |   | `-BinaryOperator 0x7fb6008822f8 <col:5, col:47> 'int' '!='
+|   |   |   |-CallExpr 0x7fb600882218 <col:5, col:32> 'unsigned long'
+|   |   |   | |-ImplicitCastExpr 0x7fb600882200 <col:5> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+|   |   |   | | `-DeclRefExpr 0x7fb600882178 <col:5> '<builtin fn type>' Function 0x7fb6008792a0 '__builtin_object_size' 'unsigned long (const void *, int)'
+|   |   |   | |-ImplicitCastExpr 0x7fb600882268 <col:28> 'const void *' <BitCast>
+|   |   |   | | `-ImplicitCastExpr 0x7fb600882250 <col:28> 'struct mode_data *' <LValueToRValue>
+|   |   |   | |   `-DeclRefExpr 0x7fb6008821a0 <col:28> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   |   |   | `-IntegerLiteral 0x7fb6008821c8 <col:31> 'int' 0
+|   |   |   `-CStyleCastExpr 0x7fb6008822d0 <col:37, col:47> 'size_t':'unsigned long' <IntegralCast>
+|   |   |     `-UnaryOperator 0x7fb6008822a0 <col:46, col:47> 'int' prefix '-'
+|   |   |       `-IntegerLiteral 0x7fb600882280 <col:47> 'int' 1
+|   |   |-CallExpr 0x7fb6008825b0 <col:52, col:147> 'void *'
+|   |   | |-ImplicitCastExpr 0x7fb600882598 <col:52> 'void *(*)(void *, const void *, unsigned long, unsigned long)' <BuiltinFnToFnPtr>
+|   |   | | `-DeclRefExpr 0x7fb600882340 <col:52> '<builtin fn type>' Function 0x7fb600878f40 '__builtin___memcpy_chk' 'void *(void *, const void *, unsigned long, unsigned long)'
+|   |   | |-ImplicitCastExpr 0x7fb600882618 <col:76> 'void *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7fb600882600 <col:76> 'struct mode_data *' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7fb600882368 <col:76> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   |   | |-ImplicitCastExpr 0x7fb600882630 <col:79, col:80> 'const void *' <BitCast>
+|   |   | | `-UnaryOperator 0x7fb600882418 <col:79, col:80> 'const struct mode_data *' prefix '&'
+|   |   | |   `-DeclRefExpr 0x7fb600882390 <col:80> 'const struct mode_data':'const struct mode_data' lvalue Var 0x7fb60087f680 'blank_mode' 'const struct mode_data':'const struct mode_data'
+|   |   | |-UnaryExprOrTypeTraitExpr 0x7fb600882458 <col:92, col:116> 'unsigned long' sizeof 'struct mode_data':'struct mode_data'
+|   |   | `-CallExpr 0x7fb600882518 <col:119, col:146> 'unsigned long'
+|   |   |   |-ImplicitCastExpr 0x7fb600882500 <col:119> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+|   |   |   | `-DeclRefExpr 0x7fb600882478 <col:119> '<builtin fn type>' Function 0x7fb6008792a0 '__builtin_object_size' 'unsigned long (const void *, int)'
+|   |   |   |-ImplicitCastExpr 0x7fb600882568 <col:142> 'const void *' <BitCast>
+|   |   |   | `-ImplicitCastExpr 0x7fb600882550 <col:142> 'struct mode_data *' <LValueToRValue>
+|   |   |   |   `-DeclRefExpr 0x7fb6008824a0 <col:142> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   |   |   `-IntegerLiteral 0x7fb6008824c8 <col:145> 'int' 0
+|   |   `-CallExpr 0x7fb600882860 <col:151, col:213> 'void *'
+|   |     |-ImplicitCastExpr 0x7fb600882848 <col:151> 'void *(*)(void *, const void *, size_t)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fb600882718 <col:151> 'void *(void *, const void *, size_t)' Function 0x7fb600878e38 '__inline_memcpy_chk' 'void *(void *, const void *, size_t)'
+|   |     |-ImplicitCastExpr 0x7fb6008828b8 <col:172> 'void *' <BitCast>
+|   |     | `-ImplicitCastExpr 0x7fb6008828a0 <col:172> 'struct mode_data *' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fb600882740 <col:172> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   |     |-ImplicitCastExpr 0x7fb6008828d0 <col:175, col:176> 'const void *' <BitCast>
+|   |     | `-UnaryOperator 0x7fb600882790 <col:175, col:176> 'const struct mode_data *' prefix '&'
+|   |     |   `-DeclRefExpr 0x7fb600882768 <col:176> 'const struct mode_data':'const struct mode_data' lvalue Var 0x7fb60087f680 'blank_mode' 'const struct mode_data':'const struct mode_data'
+|   |     `-UnaryExprOrTypeTraitExpr 0x7fb6008827d0 <col:188, col:212> 'unsigned long' sizeof 'struct mode_data':'struct mode_data'
+|   |-BinaryOperator 0x7fb600882ab8 <line:122:3, col:11> 'enum mode_class':'enum mode_class' '='
+|   | |-MemberExpr 0x7fb600882a40 <col:3, col:6> 'enum mode_class':'enum mode_class' lvalue ->cl 0x7fb60087ed20
+|   | | `-ImplicitCastExpr 0x7fb600882a28 <col:3> 'struct mode_data *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fb600882a00 <col:3> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   | `-ImplicitCastExpr 0x7fb600882aa0 <col:11> 'enum mode_class':'enum mode_class' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fb600882a78 <col:11> 'enum mode_class':'enum mode_class' lvalue ParmVar 0x7fb600880300 'cl' 'enum mode_class':'enum mode_class'
+|   |-BinaryOperator 0x7fb600882b98 <line:123:3, col:13> 'const char *' '='
+|   | |-MemberExpr 0x7fb600882b20 <col:3, col:6> 'const char *' lvalue ->name 0x7fb60087ec80
+|   | | `-ImplicitCastExpr 0x7fb600882b08 <col:3> 'struct mode_data *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fb600882ae0 <col:3> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   | `-ImplicitCastExpr 0x7fb600882b80 <col:13> 'const char *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fb600882b58 <col:13> 'const char *' lvalue ParmVar 0x7fb600880378 'name' 'const char *'
+|   |-IfStmt 0x7fb600882d50 <line:124:3, line:125:34>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fb600882be8 <line:124:7> 'const char *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fb600882bc0 <col:7> 'const char *' lvalue ParmVar 0x7fb6008803f0 'file' 'const char *'
+|   | |-BinaryOperator 0x7fb600882d28 <line:125:5, col:34> 'const char *' '='
+|   | | |-MemberExpr 0x7fb600882c40 <col:5, col:8> 'const char *' lvalue ->file 0x7fb60087f190
+|   | | | `-ImplicitCastExpr 0x7fb600882c28 <col:5> 'struct mode_data *' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7fb600882c00 <col:5> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   | | `-CallExpr 0x7fb600882ce0 <col:15, col:34> 'const char *'
+|   | |   |-ImplicitCastExpr 0x7fb600882cc8 <col:15> 'const char *(*)(const char *)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fb600882c78 <col:15> 'const char *(const char *)' Function 0x7fb6008789b8 'trim_filename' 'const char *(const char *)'
+|   | |   `-ImplicitCastExpr 0x7fb600882d10 <col:30> 'const char *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fb600882ca0 <col:30> 'const char *' lvalue ParmVar 0x7fb6008803f0 'file' 'const char *'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fb600882e40 <line:126:3, col:13> 'unsigned int' '='
+|   | |-MemberExpr 0x7fb600882dc8 <col:3, col:6> 'unsigned int' lvalue ->line 0x7fb60087f1f0
+|   | | `-ImplicitCastExpr 0x7fb600882db0 <col:3> 'struct mode_data *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fb600882d88 <col:3> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   | `-ImplicitCastExpr 0x7fb600882e28 <col:13> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fb600882e00 <col:13> 'unsigned int' lvalue ParmVar 0x7fb600880468 'line' 'unsigned int'
+|   |-BinaryOperator 0x7fb600882f28 <line:127:3, col:21> 'unsigned int' '='
+|   | |-MemberExpr 0x7fb600882ea8 <col:3, col:6> 'unsigned int' lvalue ->counter 0x7fb60087f250
+|   | | `-ImplicitCastExpr 0x7fb600882e90 <col:3> 'struct mode_data *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fb600882e68 <col:3> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   | `-UnaryOperator 0x7fb600882f08 <col:16, col:21> 'unsigned int' postfix '++'
+|   |   `-DeclRefExpr 0x7fb600882ee0 <col:16> 'unsigned int' lvalue Var 0x7fb600881770 'count' 'unsigned int'
+|   |-BinaryOperator 0x7fb6008830e8 <line:129:3, col:21> 'struct mode_data *' '='
+|   | |-MemberExpr 0x7fb600882f90 <col:3, col:6> 'struct mode_data *' lvalue ->next 0x7fb60087ec20
+|   | | `-ImplicitCastExpr 0x7fb600882f78 <col:3> 'struct mode_data *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fb600882f50 <col:3> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   | `-ImplicitCastExpr 0x7fb6008830d0 <col:13, col:21> 'struct mode_data *' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7fb6008830a8 <col:13, col:21> 'struct mode_data *' lvalue
+|   |     |-ImplicitCastExpr 0x7fb600883078 <col:13> 'struct mode_data **' <ArrayToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fb600882fc8 <col:13> 'struct mode_data *[18]' lvalue Var 0x7fb60087f430 'modes' 'struct mode_data *[18]'
+|   |     `-ImplicitCastExpr 0x7fb600883090 <col:19> 'enum mode_class':'enum mode_class' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fb600882ff0 <col:19> 'enum mode_class':'enum mode_class' lvalue ParmVar 0x7fb600880300 'cl' 'enum mode_class':'enum mode_class'
+|   |-BinaryOperator 0x7fb6008831f8 <line:130:3, col:15> 'struct mode_data *' '='
+|   | |-ArraySubscriptExpr 0x7fb600883190 <col:3, col:11> 'struct mode_data *' lvalue
+|   | | |-ImplicitCastExpr 0x7fb600883160 <col:3> 'struct mode_data **' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fb600883110 <col:3> 'struct mode_data *[18]' lvalue Var 0x7fb60087f430 'modes' 'struct mode_data *[18]'
+|   | | `-ImplicitCastExpr 0x7fb600883178 <col:9> 'enum mode_class':'enum mode_class' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fb600883138 <col:9> 'enum mode_class':'enum mode_class' lvalue ParmVar 0x7fb600880300 'cl' 'enum mode_class':'enum mode_class'
+|   | `-ImplicitCastExpr 0x7fb6008831e0 <col:15> 'struct mode_data *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fb6008831b8 <col:15> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   |-UnaryOperator 0x7fb6008832f0 <line:131:3, col:14> 'unsigned int' postfix '++'
+|   | `-ArraySubscriptExpr 0x7fb6008832c8 <col:3, col:13> 'unsigned int' lvalue
+|   |   |-ImplicitCastExpr 0x7fb600883298 <col:3> 'unsigned int *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fb600883220 <col:3> 'unsigned int [18]' lvalue Var 0x7fb60087f520 'n_modes' 'unsigned int [18]'
+|   |   `-ImplicitCastExpr 0x7fb6008832b0 <col:11> 'enum mode_class':'enum mode_class' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fb600883248 <col:11> 'enum mode_class':'enum mode_class' lvalue ParmVar 0x7fb600880300 'cl' 'enum mode_class':'enum mode_class'
+|   |-BinaryOperator 0x7fb600883538 <line:133:3, col:48> 'void *' '='
+|   | |-UnaryOperator 0x7fb6008834c0 <col:3, col:44> 'void *' lvalue prefix '*'
+|   | | `-CallExpr 0x7fb600883420 <col:4, col:44> 'void **'
+|   | |   |-ImplicitCastExpr 0x7fb600883408 <col:4> 'void **(*)(htab_t, const void *, enum insert_option)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fb600883310 <col:4> 'void **(htab_t, const void *, enum insert_option)' Function 0x7fb60087c7e8 'htab_find_slot' 'void **(htab_t, const void *, enum insert_option)'
+|   | |   |-ImplicitCastExpr 0x7fb600883460 <col:20> 'htab_t':'struct htab *' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7fb600883338 <col:20> 'htab_t':'struct htab *' lvalue Var 0x7fb60087fd40 'modes_by_name' 'htab_t':'struct htab *'
+|   | |   |-ImplicitCastExpr 0x7fb600883490 <col:35> 'const void *' <BitCast>
+|   | |   | `-ImplicitCastExpr 0x7fb600883478 <col:35> 'struct mode_data *' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x7fb600883360 <col:35> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   | |   `-ImplicitCastExpr 0x7fb6008834a8 <col:38> 'enum insert_option':'enum insert_option' <IntegralCast>
+|   | |     `-DeclRefExpr 0x7fb600883388 <col:38> 'int' EnumConstant 0x7fb60087c298 'INSERT' 'int'
+|   | `-ImplicitCastExpr 0x7fb600883520 <col:48> 'void *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fb600883508 <col:48> 'struct mode_data *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fb6008834e0 <col:48> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|   `-ReturnStmt 0x7fb6008835a0 <line:135:3, col:10>
+|     `-ImplicitCastExpr 0x7fb600883588 <col:10> 'struct mode_data *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb600883560 <col:10> 'struct mode_data *' lvalue Var 0x7fb6008816e0 'm' 'struct mode_data *'
+|-FunctionDecl 0x7fb600883980 <line:138:1, line:146:1> line:139:1 used make_int_mode 'void (const char *, unsigned int, unsigned int, const char *, unsigned int)' static
+| |-ParmVarDecl 0x7fb600883698 <col:16, col:28> col:28 used name 'const char *'
+| |-ParmVarDecl 0x7fb600883710 <line:140:9, col:22> col:22 used precision 'unsigned int'
+| |-ParmVarDecl 0x7fb600883788 <col:33, col:46> col:46 used bytesize 'unsigned int'
+| |-ParmVarDecl 0x7fb600883800 <line:141:9, col:21> col:21 used file 'const char *'
+| |-ParmVarDecl 0x7fb600883878 <col:27, col:40> col:40 used line 'unsigned int'
+| `-CompoundStmt 0x7fb600883e80 <line:142:1, line:146:1>
+|   |-DeclStmt 0x7fb600883ca8 <line:143:3, col:62>
+|   | `-VarDecl 0x7fb600883a68 <col:3, col:61> col:21 used m 'struct mode_data *' cinit
+|   |   `-CallExpr 0x7fb600883c00 <col:25, col:61> 'struct mode_data *'
+|   |     |-ImplicitCastExpr 0x7fb600883be8 <col:25> 'struct mode_data *(*)(enum mode_class, const char *, const char *, unsigned int)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fb600883ac8 <col:25> 'struct mode_data *(enum mode_class, const char *, const char *, unsigned int)' Function 0x7fb600881600 'new_mode' 'struct mode_data *(enum mode_class, const char *, const char *, unsigned int)'
+|   |     |-ImplicitCastExpr 0x7fb600883c48 <col:35> 'enum mode_class':'enum mode_class' <IntegralCast>
+|   |     | `-DeclRefExpr 0x7fb600883af0 <col:35> 'int' EnumConstant 0x7fb60087c9e0 'MODE_INT' 'int'
+|   |     |-ImplicitCastExpr 0x7fb600883c60 <col:45> 'const char *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fb600883b18 <col:45> 'const char *' lvalue ParmVar 0x7fb600883698 'name' 'const char *'
+|   |     |-ImplicitCastExpr 0x7fb600883c78 <col:51> 'const char *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fb600883b40 <col:51> 'const char *' lvalue ParmVar 0x7fb600883800 'file' 'const char *'
+|   |     `-ImplicitCastExpr 0x7fb600883c90 <col:57> 'unsigned int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fb600883b68 <col:57> 'unsigned int' lvalue ParmVar 0x7fb600883878 'line' 'unsigned int'
+|   |-BinaryOperator 0x7fb600883d78 <line:144:3, col:17> 'unsigned int' '='
+|   | |-MemberExpr 0x7fb600883d00 <col:3, col:6> 'unsigned int' lvalue ->bytesize 0x7fb60087ede0
+|   | | `-ImplicitCastExpr 0x7fb600883ce8 <col:3> 'struct mode_data *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fb600883cc0 <col:3> 'struct mode_data *' lvalue Var 0x7fb600883a68 'm' 'struct mode_data *'
+|   | `-ImplicitCastExpr 0x7fb600883d60 <col:17> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fb600883d38 <col:17> 'unsigned int' lvalue ParmVar 0x7fb600883788 'bytesize' 'unsigned int'
+|   `-BinaryOperator 0x7fb600883e58 <line:145:3, col:18> 'unsigned int' '='
+|     |-MemberExpr 0x7fb600883de0 <col:3, col:6> 'unsigned int' lvalue ->precision 0x7fb60087ed80
+|     | `-ImplicitCastExpr 0x7fb600883dc8 <col:3> 'struct mode_data *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fb600883da0 <col:3> 'struct mode_data *' lvalue Var 0x7fb600883a68 'm' 'struct mode_data *'
+|     `-ImplicitCastExpr 0x7fb600883e40 <col:18> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb600883e18 <col:18> 'unsigned int' lvalue ParmVar 0x7fb600883710 'precision' 'unsigned int'
+|-FunctionDecl 0x7fb600883f70 <line:148:1, line:152:1> line:149:1 used create_modes 'void (void)' static
+| `-CompoundStmt 0x7fb6008842c0 <line:150:1, line:152:1>
+|   `-CallExpr 0x7fb6008841e0 <line:151:1, col:64> 'void'
+|     |-ImplicitCastExpr 0x7fb6008841c8 <col:1> 'void (*)(const char *, unsigned int, unsigned int, const char *, unsigned int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fb600884008 <col:1> 'void (const char *, unsigned int, unsigned int, const char *, unsigned int)' Function 0x7fb600883980 'make_int_mode' 'void (const char *, unsigned int, unsigned int, const char *, unsigned int)'
+|     |-ImplicitCastExpr 0x7fb600884248 <col:16> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7fb600884230 <col:16> 'char *' <ArrayToPointerDecay>
+|     |   `-StringLiteral 0x7fb600884068 <col:16> 'char [3]' lvalue "HI"
+|     |-UnaryOperator 0x7fb6008840b8 <col:22, col:23> 'unsigned int' prefix '-'
+|     | `-IntegerLiteral 0x7fb600884098 <col:23> 'unsigned int' 1
+|     |-ImplicitCastExpr 0x7fb600884260 <col:27> 'unsigned int' <IntegralCast>
+|     | `-IntegerLiteral 0x7fb6008840d8 <col:27> 'int' 2
+|     |-ImplicitCastExpr 0x7fb600884290 <col:30> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7fb600884278 <col:30> 'char *' <ArrayToPointerDecay>
+|     |   `-StringLiteral 0x7fb600884138 <col:30> 'char [28]' lvalue "../../work/gcc/machmode.def"
+|     `-ImplicitCastExpr 0x7fb6008842a8 <col:61> 'unsigned int' <IntegralCast>
+|       `-IntegerLiteral 0x7fb600884180 <col:61> 'int' 182
+`-FunctionDecl 0x7fb600884478 <line:154:1, line:158:1> line:155:1 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fb6008842f8 <col:7, col:11> col:11 argc 'int'
+  |-ParmVarDecl 0x7fb6008843a0 <col:17, col:24> col:24 argv 'char **'
+  `-CompoundStmt 0x7fb6008845b8 <line:156:1, line:158:1>
+    `-CallExpr 0x7fb600884590 <line:157:3, col:17> 'void'
+      `-ImplicitCastExpr 0x7fb600884578 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fb600884520 <col:3> 'void (void)' Function 0x7fb600883f70 'create_modes' 'void (void)'

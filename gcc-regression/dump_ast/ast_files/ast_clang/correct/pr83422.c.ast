@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7f9ef18264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9ef1826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9ef1826740 '__int128'
+|-TypedefDecl 0x7f9ef1826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9ef1826760 'unsigned __int128'
+|-TypedefDecl 0x7f9ef1826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9ef1826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9ef1826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9ef1826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9ef1826dc0 'char *'
+|   `-BuiltinType 0x7f9ef1826560 'char'
+|-TypedefDecl 0x7f9ef18270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9ef1827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9ef1826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9ef1826e58 '__va_list_tag'
+`-FunctionDecl 0x7f9ef2025b68 <c_files/pr83422.c:5:1, line:9:1> line:6:1 foo 'int (int, int, int)'
+  |-ParmVarDecl 0x7f9ef1827138 <col:5, col:9> col:9 used i 'int'
+  |-ParmVarDecl 0x7f9ef2025a00 <col:12, col:16> col:16 used j 'int'
+  |-ParmVarDecl 0x7f9ef2025a78 <col:19, col:23> col:23 used k 'int'
+  `-CompoundStmt 0x7f9ef2025d80 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7f9ef2025d68 <line:8:4, col:19>
+      `-BinaryOperator 0x7f9ef2025d40 <col:11, col:19> 'int' '+'
+        |-BinaryOperator 0x7f9ef2025cd8 <col:11, col:15> 'int' '+'
+        | |-ImplicitCastExpr 0x7f9ef2025ca8 <col:11> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7f9ef2025c58 <col:11> 'int' lvalue ParmVar 0x7f9ef1827138 'i' 'int'
+        | `-ImplicitCastExpr 0x7f9ef2025cc0 <col:15> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f9ef2025c80 <col:15> 'int' lvalue ParmVar 0x7f9ef2025a00 'j' 'int'
+        `-ImplicitCastExpr 0x7f9ef2025d28 <col:19> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f9ef2025d00 <col:19> 'int' lvalue ParmVar 0x7f9ef2025a78 'k' 'int'

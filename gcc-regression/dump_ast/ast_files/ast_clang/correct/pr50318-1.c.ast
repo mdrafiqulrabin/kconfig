@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fa3fb0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa3fb026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa3fb026740 '__int128'
+|-TypedefDecl 0x7fa3fb026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa3fb026760 'unsigned __int128'
+|-TypedefDecl 0x7fa3fb026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa3fb026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa3fb026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa3fb026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa3fb026dc0 'char *'
+|   `-BuiltinType 0x7fa3fb026560 'char'
+|-TypedefDecl 0x7fa3fb0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa3fb027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa3fb026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa3fb026e58 '__va_list_tag'
+`-FunctionDecl 0x7fa3fb0774d8 <c_files/pr50318-1.c:5:1, line:9:1> line:5:11 test 'long long (unsigned int, unsigned long long)'
+  |-ParmVarDecl 0x7fa3fb027138 <col:17, col:30> col:30 used sec 'unsigned int'
+  |-ParmVarDecl 0x7fa3fb077400 <col:35, col:54> col:54 used nsecs 'unsigned long long'
+  `-CompoundStmt 0x7fa3fb0777e0 <line:6:1, line:9:1>
+    `-ReturnStmt 0x7fa3fb0777c8 <line:7:4, line:8:9>
+      `-BinaryOperator 0x7fa3fb0777a0 <line:7:11, line:8:9> 'long long' '+'
+        |-BinaryOperator 0x7fa3fb0776b8 <line:7:11, col:34> 'long long' '*'
+        | |-CStyleCastExpr 0x7fa3fb077658 <col:11, col:28> 'long long' <IntegralCast>
+        | | `-CStyleCastExpr 0x7fa3fb077618 <col:22, col:28> 'long' <IntegralCast>
+        | |   `-ImplicitCastExpr 0x7fa3fb077600 <col:28> 'unsigned int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fa3fb0775c0 <col:28> 'unsigned int' lvalue ParmVar 0x7fa3fb027138 'sec' 'unsigned int'
+        | `-ImplicitCastExpr 0x7fa3fb0776a0 <col:34> 'long long' <IntegralCast>
+        |   `-IntegerLiteral 0x7fa3fb077680 <col:34> 'long' 1000000000
+        `-CStyleCastExpr 0x7fa3fb077778 <col:48, line:8:9> 'long long' <IntegralCast>
+          `-CStyleCastExpr 0x7fa3fb077738 <line:7:59, line:8:9> 'unsigned long' <IntegralCast>
+            `-ImplicitCastExpr 0x7fa3fb077720 <col:9> 'unsigned long long' <LValueToRValue>
+              `-DeclRefExpr 0x7fa3fb0776e0 <col:9> 'unsigned long long' lvalue ParmVar 0x7fa3fb077400 'nsecs' 'unsigned long long'

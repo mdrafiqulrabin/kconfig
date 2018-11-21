@@ -1,0 +1,82 @@
+c_files/pr49603.c:18:10: warning: passing 'unsigned char [1600]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    foo( alpha);
+         ^~~~~
+c_files/pr49603.c:9:17: note: passing argument to parameter here
+void foo (char *);
+                ^
+1 warning generated.
+TranslationUnitDecl 0x7fd2740264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd274026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd274026740 '__int128'
+|-TypedefDecl 0x7fd274026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd274026760 'unsigned __int128'
+|-TypedefDecl 0x7fd274026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd274026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd274026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd274026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd274026dc0 'char *'
+|   `-BuiltinType 0x7fd274026560 'char'
+|-TypedefDecl 0x7fd2740270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd274027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd274026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd274026e58 '__va_list_tag'
+|-RecordDecl 0x7fd274027120 <c_files/pr49603.c:3:1, line:5:1> line:3:8 struct gl_visual definition
+| `-FieldDecl 0x7fd274825a00 <line:4:5, col:11> col:11 referenced AlphaScale 'float'
+|-RecordDecl 0x7fd274825a48 <line:6:1, line:8:1> line:6:8 struct gl_context definition
+| `-FieldDecl 0x7fd274825ba0 <line:7:5, col:23> col:23 referenced Visual 'struct gl_visual *'
+|-FunctionDecl 0x7fd274825cc0 <line:9:1, col:17> col:6 used foo 'void (char *)'
+| `-ParmVarDecl 0x7fd274825c00 <col:11, col:16> col:17 'char *'
+`-FunctionDecl 0x7fd274826070 <line:10:1, line:19:1> line:10:6 quickdraw_rgb 'void (struct gl_context *, int, int)'
+  |-ParmVarDecl 0x7fd274825e50 <col:21, col:41> col:41 used ctx 'struct gl_context *'
+  |-ParmVarDecl 0x7fd274825ec8 <line:11:7, col:11> col:11 used width 'int'
+  |-ParmVarDecl 0x7fd274825f40 <col:18, col:22> col:22 used height 'int'
+  `-CompoundStmt 0x7fd274827d68 <line:12:1, line:19:1>
+    |-DeclStmt 0x7fd274826228 <line:13:3, col:11>
+    | |-VarDecl 0x7fd274826138 <col:3, col:7> col:7 used i 'int'
+    | `-VarDecl 0x7fd2748261b0 <col:3, col:10> col:10 used j 'int'
+    |-DeclStmt 0x7fd274826320 <line:14:3, col:28>
+    | `-VarDecl 0x7fd2748262c0 <col:3, col:27> col:17 used alpha 'unsigned char [1600]'
+    |-ForStmt 0x7fd2748266d0 <line:15:3, line:16:35>
+    | |-BinaryOperator 0x7fd274826380 <line:15:8, col:10> 'int' '='
+    | | |-DeclRefExpr 0x7fd274826338 <col:8> 'int' lvalue Var 0x7fd2748261b0 'j' 'int'
+    | | `-IntegerLiteral 0x7fd274826360 <col:10> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd274826428 <col:13, col:15> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fd2748263f8 <col:13> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fd2748263a8 <col:13> 'int' lvalue Var 0x7fd2748261b0 'j' 'int'
+    | | `-ImplicitCastExpr 0x7fd274826410 <col:15> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fd2748263d0 <col:15> 'int' lvalue ParmVar 0x7fd274825ec8 'width' 'int'
+    | |-UnaryOperator 0x7fd274826478 <col:22, col:23> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fd274826450 <col:22> 'int' lvalue Var 0x7fd2748261b0 'j' 'int'
+    | `-BinaryOperator 0x7fd2748266a8 <line:16:5, col:35> 'unsigned char' '='
+    |   |-ArraySubscriptExpr 0x7fd274826548 <col:5, col:12> 'unsigned char' lvalue
+    |   | |-ImplicitCastExpr 0x7fd274826518 <col:5> 'unsigned char *' <ArrayToPointerDecay>
+    |   | | `-DeclRefExpr 0x7fd274826498 <col:5> 'unsigned char [1600]' lvalue Var 0x7fd2748262c0 'alpha' 'unsigned char [1600]'
+    |   | `-ImplicitCastExpr 0x7fd274826530 <col:11> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fd2748264c0 <col:11> 'int' lvalue Var 0x7fd2748261b0 'j' 'int'
+    |   `-ImplicitCastExpr 0x7fd274826690 <col:16, col:35> 'unsigned char' <IntegralCast>
+    |     `-CStyleCastExpr 0x7fd274826668 <col:16, col:35> 'int' <FloatingToIntegral>
+    |       `-ImplicitCastExpr 0x7fd274826650 <col:22, col:35> 'float' <LValueToRValue>
+    |         `-MemberExpr 0x7fd274826600 <col:22, col:35> 'float' lvalue ->AlphaScale 0x7fd274825a00
+    |           `-ImplicitCastExpr 0x7fd2748265e8 <col:22, col:27> 'struct gl_visual *' <LValueToRValue>
+    |             `-MemberExpr 0x7fd2748265b0 <col:22, col:27> 'struct gl_visual *' lvalue ->Visual 0x7fd274825ba0
+    |               `-ImplicitCastExpr 0x7fd274826598 <col:22> 'struct gl_context *' <LValueToRValue>
+    |                 `-DeclRefExpr 0x7fd274826570 <col:22> 'struct gl_context *' lvalue ParmVar 0x7fd274825e50 'ctx' 'struct gl_context *'
+    `-ForStmt 0x7fd274827d30 <line:17:3, line:18:15>
+      |-BinaryOperator 0x7fd274826750 <line:17:8, col:10> 'int' '='
+      | |-DeclRefExpr 0x7fd274826708 <col:8> 'int' lvalue Var 0x7fd274826138 'i' 'int'
+      | `-IntegerLiteral 0x7fd274826730 <col:10> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd2748267f8 <col:13, col:15> 'int' '<'
+      | |-ImplicitCastExpr 0x7fd2748267c8 <col:13> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd274826778 <col:13> 'int' lvalue Var 0x7fd274826138 'i' 'int'
+      | `-ImplicitCastExpr 0x7fd2748267e0 <col:15> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fd2748267a0 <col:15> 'int' lvalue ParmVar 0x7fd274825f40 'height' 'int'
+      |-UnaryOperator 0x7fd274826848 <col:23, col:24> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fd274826820 <col:23> 'int' lvalue Var 0x7fd274826138 'i' 'int'
+      `-CallExpr 0x7fd274826900 <line:18:5, col:15> 'void'
+        |-ImplicitCastExpr 0x7fd2748268e8 <col:5> 'void (*)(char *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fd274826868 <col:5> 'void (char *)' Function 0x7fd274825cc0 'foo' 'void (char *)'
+        `-ImplicitCastExpr 0x7fd274826948 <col:10> 'char *' <BitCast>
+          `-ImplicitCastExpr 0x7fd274826930 <col:10> 'unsigned char *' <ArrayToPointerDecay>
+            `-DeclRefExpr 0x7fd274826890 <col:10> 'unsigned char [1600]' lvalue Var 0x7fd2748262c0 'alpha' 'unsigned char [1600]'

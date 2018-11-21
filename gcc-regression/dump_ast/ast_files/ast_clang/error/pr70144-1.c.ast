@@ -1,0 +1,35 @@
+c_files/pr70144-1.c:7:25: error: builtin functions must be directly called
+  __builtin_constant_p (__builtin_constant_p) ?: ({ unsigned t = 0; t; });      /* { dg-error "must be directly called" } */
+                        ^
+c_files/pr70144-1.c:8:28: error: builtin functions must be directly called
+  __builtin_classify_type (__builtin_expect);   /* { dg-error "must be directly called" } */
+                           ^
+2 errors generated.
+TranslationUnitDecl 0x7f86b70002d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f86b7000820 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f86b7000540 '__int128'
+|-TypedefDecl 0x7f86b7000890 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f86b7000560 'unsigned __int128'
+|-TypedefDecl 0x7f86b7000b68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f86b7000970 'struct __NSConstantString_tag'
+|   `-Record 0x7f86b70008e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f86b7000c00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f86b7000bc0 'char *'
+|   `-BuiltinType 0x7f86b7000360 'char'
+|-TypedefDecl 0x7f86b7000ec8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f86b7000e70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f86b7000ce0 'struct __va_list_tag'
+|     `-Record 0x7f86b7000c58 '__va_list_tag'
+|-FunctionDecl 0x7f86b7000f68 <c_files/pr70144-1.c:4:1, line:9:1> line:5:1 foo 'void ()'
+| `-CompoundStmt 0x7f86b6043238 <line:6:1, line:9:1>
+|-FunctionDecl 0x7f86b6042c68 <line:7:3> col:3 implicit used __builtin_constant_p 'int ()' extern
+| |-NoThrowAttr 0x7f86b6042d00 <col:3> Implicit
+| `-ConstAttr 0x7f86b6042d48 <col:3> Implicit
+|-FunctionDecl 0x7f86b6042ef8 <line:8:3> col:3 implicit used __builtin_classify_type 'int ()' extern
+| |-NoThrowAttr 0x7f86b6042f90 <col:3> Implicit
+| `-ConstAttr 0x7f86b6042fd8 <col:3> Implicit
+`-FunctionDecl 0x7f86b6043050 <col:28> col:28 implicit used __builtin_expect 'long (long, long)' extern
+  |-ParmVarDecl 0x7f86b60430e8 <<invalid sloc>> <invalid sloc> 'long'
+  |-ParmVarDecl 0x7f86b6043148 <<invalid sloc>> <invalid sloc> 'long'
+  |-NoThrowAttr 0x7f86b60431b8 <col:28> Implicit
+  `-ConstAttr 0x7f86b6043200 <col:28> Implicit

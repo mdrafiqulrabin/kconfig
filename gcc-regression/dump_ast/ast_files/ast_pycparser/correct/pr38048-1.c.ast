@@ -1,0 +1,83 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: mat, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: mat, []
+              IdentifierType: ['int']
+            Constant: int, 1
+          Constant: int, 2
+      Decl: a, [], [], []
+        PtrDecl: []
+          ArrayDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+            Constant: int, 1
+        ID: mat
+      Decl: det, [], [], []
+        TypeDecl: det, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Assignment: =
+        ArrayRef: 
+          ArrayRef: 
+            ID: mat
+            Constant: int, 0
+          Constant: int, 0
+        Constant: int, 1
+      Assignment: =
+        ArrayRef: 
+          ArrayRef: 
+            ID: mat
+            Constant: int, 1
+          Constant: int, 0
+        Constant: int, 2
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 2
+        UnaryOp: ++
+          ID: i
+        Assignment: +=
+          ID: det
+          ArrayRef: 
+            ArrayRef: 
+              ID: a
+              ID: i
+            Constant: int, 0
+      Return: 
+        ID: det
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+          Constant: int, 3
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

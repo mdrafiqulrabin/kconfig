@@ -1,0 +1,85 @@
+c_files/pr60062.c:19:16: warning: unknown attribute 'optimize' ignored [-Wunknown-attributes]
+__attribute__((optimize (0))) int
+               ^
+1 warning generated.
+TranslationUnitDecl 0x7f97350264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9735026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9735026740 '__int128'
+|-TypedefDecl 0x7f9735026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9735026760 'unsigned __int128'
+|-TypedefDecl 0x7f9735026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9735026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9735026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9735026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9735026dc0 'char *'
+|   `-BuiltinType 0x7f9735026560 'char'
+|-TypedefDecl 0x7f97350270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9735027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9735026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9735026e58 '__va_list_tag'
+|-VarDecl 0x7f9735027138 <c_files/pr60062.c:3:1, col:5> col:5 used a 'int'
+|-FunctionDecl 0x7f9735825b50 <line:5:1, line:10:1> line:6:1 used foo 'void (const char *, int)' static
+| |-ParmVarDecl 0x7f9735825a00 <col:6, col:18> col:18 used p1 'const char *'
+| |-ParmVarDecl 0x7f9735825a78 <col:22, col:26> col:26 p2 'int'
+| `-CompoundStmt 0x7f97358261d0 <line:7:1, line:10:1>
+|   `-IfStmt 0x7f9735826198 <line:8:3, line:9:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9735825fc0 <line:8:7, col:41> 'int' '!='
+|     | |-CallExpr 0x7f9735825f20 <col:7, col:36> 'int'
+|     | | |-ImplicitCastExpr 0x7f9735825f08 <col:7> 'int (*)(const char *, const char *)' <BuiltinFnToFnPtr>
+|     | | | `-DeclRefExpr 0x7f9735825df0 <col:7> '<builtin fn type>' Function 0x7f9735825c40 '__builtin_strcmp' 'int (const char *, const char *)'
+|     | | |-ImplicitCastExpr 0x7f9735825f58 <col:25> 'const char *' <LValueToRValue>
+|     | | | `-DeclRefExpr 0x7f9735825e18 <col:25> 'const char *' lvalue ParmVar 0x7f9735825a00 'p1' 'const char *'
+|     | | `-ImplicitCastExpr 0x7f9735825f88 <col:29> 'const char *' <BitCast>
+|     | |   `-ImplicitCastExpr 0x7f9735825f70 <col:29> 'char *' <ArrayToPointerDecay>
+|     | |     `-StringLiteral 0x7f9735825e78 <col:29> 'char [6]' lvalue "hello"
+|     | `-IntegerLiteral 0x7f9735825fa0 <col:41> 'int' 0
+|     |-CallExpr 0x7f9735826170 <line:9:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7f9735826158 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7f9735826100 <col:5> '<builtin fn type>' Function 0x7f9735826020 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9735825c40 <line:8:7> col:7 implicit used __builtin_strcmp 'int (const char *, const char *)' extern
+| |-ParmVarDecl 0x7f9735825cd8 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x7f9735825d38 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-NoThrowAttr 0x7f9735825da8 <col:7> Implicit
+|-FunctionDecl 0x7f9735826020 <line:9:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7f97358260b8 <col:5> Implicit
+|-FunctionDecl 0x7f97358262d0 <line:12:1, line:17:1> line:13:1 used bar 'void (const char *)' static
+| |-ParmVarDecl 0x7f9735826208 <col:6, col:18> col:18 used p1 'const char *'
+| `-CompoundStmt 0x7f97358265a0 <line:14:1, line:17:1>
+|   `-IfStmt 0x7f9735826568 <line:15:3, line:16:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f97358264d8 <line:15:7, col:41> 'int' '!='
+|     | |-CallExpr 0x7f9735826438 <col:7, col:36> 'int'
+|     | | |-ImplicitCastExpr 0x7f9735826420 <col:7> 'int (*)(const char *, const char *)' <BuiltinFnToFnPtr>
+|     | | | `-DeclRefExpr 0x7f9735826370 <col:7> '<builtin fn type>' Function 0x7f9735825c40 '__builtin_strcmp' 'int (const char *, const char *)'
+|     | | |-ImplicitCastExpr 0x7f9735826470 <col:25> 'const char *' <LValueToRValue>
+|     | | | `-DeclRefExpr 0x7f9735826398 <col:25> 'const char *' lvalue ParmVar 0x7f9735826208 'p1' 'const char *'
+|     | | `-ImplicitCastExpr 0x7f97358264a0 <col:29> 'const char *' <BitCast>
+|     | |   `-ImplicitCastExpr 0x7f9735826488 <col:29> 'char *' <ArrayToPointerDecay>
+|     | |     `-StringLiteral 0x7f97358263c0 <col:29> 'char [6]' lvalue "hello"
+|     | `-IntegerLiteral 0x7f97358264b8 <col:41> 'int' 0
+|     |-CallExpr 0x7f9735826540 <line:16:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7f9735826528 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7f9735826500 <col:5> '<builtin fn type>' Function 0x7f9735826020 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f9735826630 <line:19:1, line:25:1> line:20:1 main 'int ()'
+  `-CompoundStmt 0x7f9735826948 <line:21:1, line:25:1>
+    |-CallExpr 0x7f9735826790 <line:22:3, col:18> 'void'
+    | |-ImplicitCastExpr 0x7f9735826778 <col:3> 'void (*)(const char *, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f97358266c8 <col:3> 'void (const char *, int)' Function 0x7f9735825b50 'foo' 'void (const char *, int)'
+    | |-ImplicitCastExpr 0x7f97358267e0 <col:8> 'const char *' <BitCast>
+    | | `-ImplicitCastExpr 0x7f97358267c8 <col:8> 'char *' <ArrayToPointerDecay>
+    | |   `-StringLiteral 0x7f97358266f0 <col:8> 'char [6]' lvalue "hello"
+    | `-ImplicitCastExpr 0x7f97358267f8 <col:17> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f9735826720 <col:17> 'int' lvalue Var 0x7f9735027138 'a' 'int'
+    |-CallExpr 0x7f97358268b0 <line:23:3, col:15> 'void'
+    | |-ImplicitCastExpr 0x7f9735826898 <col:3> 'void (*)(const char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f9735826810 <col:3> 'void (const char *)' Function 0x7f97358262d0 'bar' 'void (const char *)'
+    | `-ImplicitCastExpr 0x7f97358268f8 <col:8> 'const char *' <BitCast>
+    |   `-ImplicitCastExpr 0x7f97358268e0 <col:8> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7f9735826838 <col:8> 'char [6]' lvalue "hello"
+    `-ReturnStmt 0x7f9735826930 <line:24:3, col:10>
+      `-IntegerLiteral 0x7f9735826910 <col:10> 'int' 0

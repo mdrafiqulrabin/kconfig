@@ -1,0 +1,62 @@
+TranslationUnitDecl 0x7fad650264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fad65026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fad65026740 '__int128'
+|-TypedefDecl 0x7fad65026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fad65026760 'unsigned __int128'
+|-TypedefDecl 0x7fad65026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fad65026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fad65026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fad65026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fad65026dc0 'char *'
+|   `-BuiltinType 0x7fad65026560 'char'
+|-TypedefDecl 0x7fad650270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fad65027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fad65026ee0 'struct __va_list_tag'
+|     `-Record 0x7fad65026e58 '__va_list_tag'
+`-FunctionDecl 0x7fad65825af8 <c_files/pr38359.c:1:1, line:16:1> line:1:10 _ov_64_seek_lap 'unsigned int (_Bool, _Bool, _Bool)'
+  |-ParmVarDecl 0x7fad65027130 <col:27, col:33> col:33 used x1 '_Bool'
+  |-ParmVarDecl 0x7fad650271a0 <col:37, col:43> col:43 used x2 '_Bool'
+  |-ParmVarDecl 0x7fad65825a10 <col:47, col:53> col:53 used x3 '_Bool'
+  `-CompoundStmt 0x7fad65826150 <line:2:1, line:16:1>
+    |-DeclStmt 0x7fad65825c60 <line:3:3, col:38>
+    | `-VarDecl 0x7fad65825c00 <col:3, col:12> col:12 used ltmp_3978_7__PHI_TEMPORARY 'unsigned int'
+    |-DeclStmt 0x7fad65825cf0 <line:4:3, col:21>
+    | `-VarDecl 0x7fad65825c90 <col:3, col:10> col:10 used ltmp_4011_7 'int'
+    |-IfStmt 0x7fad65825e40 <line:6:3, line:7:15>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fad65825dc8 <line:6:7, col:15> 'int' '||'
+    | | |-UnaryOperator 0x7fad65825d48 <col:7, col:8> 'int' prefix '!'
+    | | | `-ImplicitCastExpr 0x7fad65825d30 <col:8> '_Bool' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fad65825d08 <col:8> '_Bool' lvalue ParmVar 0x7fad65027130 'x1' '_Bool'
+    | | `-UnaryOperator 0x7fad65825da8 <col:14, col:15> 'int' prefix '!'
+    | |   `-ImplicitCastExpr 0x7fad65825d90 <col:15> '_Bool' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fad65825d68 <col:15> '_Bool' lvalue ParmVar 0x7fad650271a0 'x2' '_Bool'
+    | |-WhileStmt 0x7fad65825e20 <line:7:5, col:15>
+    | | |-<<<NULL>>>
+    | | |-IntegerLiteral 0x7fad65825df0 <col:12> 'int' 1
+    | | `-NullStmt 0x7fad65825e10 <col:15>
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fad65825fb0 <line:9:3, line:12:34>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fad65825ea0 <line:9:7> '_Bool' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fad65825e78 <col:7> '_Bool' lvalue ParmVar 0x7fad65825a10 'x3' '_Bool'
+    | |-BinaryOperator 0x7fad65825f00 <line:10:5, col:34> 'unsigned int' '='
+    | | |-DeclRefExpr 0x7fad65825eb8 <col:5> 'unsigned int' lvalue Var 0x7fad65825c00 'ltmp_3978_7__PHI_TEMPORARY' 'unsigned int'
+    | | `-IntegerLiteral 0x7fad65825ee0 <col:34> 'unsigned int' 4294967166
+    | `-BinaryOperator 0x7fad65825f88 <line:12:5, col:34> 'unsigned int' '='
+    |   |-DeclRefExpr 0x7fad65825f28 <col:5> 'unsigned int' lvalue Var 0x7fad65825c00 'ltmp_3978_7__PHI_TEMPORARY' 'unsigned int'
+    |   `-ImplicitCastExpr 0x7fad65825f70 <col:34> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7fad65825f50 <col:34> 'int' 1
+    |-BinaryOperator 0x7fad65826050 <line:14:3, col:18> 'int' '='
+    | |-DeclRefExpr 0x7fad65825fe8 <col:3> 'int' lvalue Var 0x7fad65825c90 'ltmp_4011_7' 'int'
+    | `-UnaryOperator 0x7fad65826030 <col:17, col:18> 'int' prefix '-'
+    |   `-IntegerLiteral 0x7fad65826010 <col:18> 'int' 1
+    `-ReturnStmt 0x7fad65826138 <line:15:3, col:25>
+      `-ImplicitCastExpr 0x7fad65826120 <col:10, col:25> 'unsigned int' <IntegralCast>
+        `-BinaryOperator 0x7fad658260f8 <col:10, col:25> 'int' '>>'
+          |-ImplicitCastExpr 0x7fad658260c8 <col:10> 'int' <LValueToRValue>
+          | `-DeclRefExpr 0x7fad65826078 <col:10> 'int' lvalue Var 0x7fad65825c90 'ltmp_4011_7' 'int'
+          `-ImplicitCastExpr 0x7fad658260e0 <col:25> 'unsigned int' <LValueToRValue>
+            `-DeclRefExpr 0x7fad658260a0 <col:25> 'unsigned int' lvalue Var 0x7fad65825c00 'ltmp_3978_7__PHI_TEMPORARY' 'unsigned int'

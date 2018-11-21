@@ -1,0 +1,32 @@
+c_files/pr83488.c:8:8: error: use of unknown builtin '__builtin_ia32_vpshldv_v8di' [-Wimplicit-function-declaration]
+  *d = __builtin_ia32_vpshldv_v8di (*a, *b, *c); /* { dg-warning "implicit" } */
+       ^
+c_files/pr83488.c:8:6: error: assigning to '__v8di' (vector of 8 'long long' values) from incompatible type 'int'
+  *d = __builtin_ia32_vpshldv_v8di (*a, *b, *c); /* { dg-warning "implicit" } */
+     ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7ffa8c025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffa8c026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffa8c025d40 '__int128'
+|-TypedefDecl 0x7ffa8c026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffa8c025d60 'unsigned __int128'
+|-TypedefDecl 0x7ffa8c026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffa8c026170 'struct __NSConstantString_tag'
+|   `-Record 0x7ffa8c0260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffa8c026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffa8c0263c0 'char *'
+|   `-BuiltinType 0x7ffa8c025b60 'char'
+|-TypedefDecl 0x7ffa8c0266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffa8c026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffa8c0264e0 'struct __va_list_tag'
+|     `-Record 0x7ffa8c026458 '__va_list_tag'
+|-TypedefDecl 0x7ffa8c026778 <c_files/pr83488.c:4:1, col:19> col:19 referenced __v8di '__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+| `-VectorType 0x7ffa8c026740 '__attribute__((__vector_size__(8 * sizeof(long long)))) long long' 8
+|   `-BuiltinType 0x7ffa8c025c00 'long long'
+|-FunctionDecl 0x7ffa8b827700 <line:5:1, line:9:1> line:6:1 foo 'void (__v8di *, __v8di *, __v8di *, __v8di *)'
+| |-ParmVarDecl 0x7ffa8b827468 <col:6, col:14> col:14 used a '__v8di *'
+| |-ParmVarDecl 0x7ffa8b8274d8 <col:17, col:25> col:25 used b '__v8di *'
+| |-ParmVarDecl 0x7ffa8b827548 <col:28, col:36> col:36 used c '__v8di *'
+| |-ParmVarDecl 0x7ffa8b8275b8 <col:39, col:47> col:47 used d '__v8di *'
+| `-CompoundStmt 0x7ffa8b827f20 <line:7:1, line:9:1>
+`-FunctionDecl 0x7ffa8b8278c0 <<invalid sloc>> line:8:8 implicit used __builtin_ia32_vpshldv_v8di 'int ()'

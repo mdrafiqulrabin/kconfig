@@ -1,0 +1,36 @@
+c_files/pr61162.c:11:3: warning: expression result unused [-Wunused-value]
+  1; return 0; /* { dg-warning "13:enum conversion from 'int' to 'enum e' in return is invalid" } */
+  ^
+1 warning generated.
+TranslationUnitDecl 0x7ffc1c025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffc1c026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffc1c025d40 '__int128'
+|-TypedefDecl 0x7ffc1c026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffc1c025d60 'unsigned __int128'
+|-TypedefDecl 0x7ffc1c026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffc1c026170 'struct __NSConstantString_tag'
+|   `-Record 0x7ffc1c0260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffc1c026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffc1c0263c0 'char *'
+|   `-BuiltinType 0x7ffc1c025b60 'char'
+|-TypedefDecl 0x7ffc1c0266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffc1c026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffc1c0264e0 'struct __va_list_tag'
+|     `-Record 0x7ffc1c026458 '__va_list_tag'
+|-EnumDecl 0x7ffc1c026720 <c_files/pr61162.c:5:1, col:12> col:6 e
+| `-EnumConstantDecl 0x7ffc1c825a00 <col:10> col:10 A 'int'
+`-FunctionDecl 0x7ffc1c825b80 <line:6:1, line:12:1> line:7:1 fn1 'enum e (void)'
+  `-CompoundStmt 0x7ffc1c825eb8 <line:8:1, line:12:1>
+    |-DeclStmt 0x7ffc1c825da8 <line:9:3, col:18>
+    | |-VarDecl 0x7ffc1c825c78 <col:3, col:10> col:10 used e 'enum e':'enum e'
+    | `-VarDecl 0x7ffc1c825cf8 <col:3, col:17> col:13 q 'enum e':'enum e' cinit
+    |   `-ImplicitCastExpr 0x7ffc1c825d78 <col:17> 'enum e':'enum e' <IntegralCast>
+    |     `-IntegerLiteral 0x7ffc1c825d58 <col:17> 'int' 0
+    |-BinaryOperator 0x7ffc1c825e20 <line:10:3, col:7> 'enum e':'enum e' '='
+    | |-DeclRefExpr 0x7ffc1c825dc0 <col:3> 'enum e':'enum e' lvalue Var 0x7ffc1c825c78 'e' 'enum e':'enum e'
+    | `-ImplicitCastExpr 0x7ffc1c825e08 <col:7> 'enum e':'enum e' <IntegralCast>
+    |   `-IntegerLiteral 0x7ffc1c825de8 <col:7> 'int' 0
+    |-IntegerLiteral 0x7ffc1c825e48 <line:11:3> 'int' 1
+    `-ReturnStmt 0x7ffc1c825ea0 <col:6, col:13>
+      `-ImplicitCastExpr 0x7ffc1c825e88 <col:13> 'enum e':'enum e' <IntegralCast>
+        `-IntegerLiteral 0x7ffc1c825e68 <col:13> 'int' 0

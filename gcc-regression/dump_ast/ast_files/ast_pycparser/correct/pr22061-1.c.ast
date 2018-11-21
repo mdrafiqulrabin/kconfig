@@ -1,0 +1,86 @@
+FileAST: 
+  Decl: N, [], [], []
+    TypeDecl: N, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            ArrayDecl: []
+              ArrayDecl: []
+                TypeDecl: a, []
+                  IdentifierType: ['char']
+                ID: N
+              Constant: int, 2
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ArrayRef: 
+            ID: a
+            Constant: int, 1
+          Constant: int, 0
+        ID: N
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        PtrDecl: []
+          TypeDecl: x, []
+            IdentifierType: ['void']
+      Assignment: =
+        ID: N
+        Constant: int, 4
+      Assignment: =
+        ID: x
+        FuncCall: 
+          ID: alloca
+          ExprList: 
+            BinaryOp: *
+              Constant: int, 2
+              ID: N
+      FuncCall: 
+        ID: memset
+        ExprList: 
+          ID: x
+          Constant: int, 0
+          BinaryOp: *
+            Constant: int, 2
+            ID: N
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: x
+      If: 
+        BinaryOp: !=
+          ArrayRef: 
+            ID: N
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+              ID: x
+          ID: N
+        FuncCall: 
+          ID: abort
+      FuncCall: 
+        ID: exit
+        ExprList: 
+          Constant: int, 0

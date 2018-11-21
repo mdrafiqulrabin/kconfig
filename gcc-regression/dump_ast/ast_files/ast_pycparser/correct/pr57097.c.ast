@@ -1,0 +1,128 @@
+FileAST: 
+  Decl: ad, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: ad, []
+        IdentifierType: ['double']
+  Decl: bd, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: bd, []
+        IdentifierType: ['double']
+  Decl: cd, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: cd, []
+        IdentifierType: ['double']
+  Decl: dd, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: dd, []
+        IdentifierType: ['double']
+  Decl: all, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: all, []
+        IdentifierType: ['long', 'long']
+  Decl: bll, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: bll, []
+        IdentifierType: ['long', 'long']
+  Decl: cll, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: cll, []
+        IdentifierType: ['long', 'long']
+  Decl: dll, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: dll, []
+        IdentifierType: ['long', 'long']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: a, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: a, []
+                  IdentifierType: ['char']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: bd
+          ID: i
+        BinaryOp: +
+          ID: i
+          Constant: int, 64
+      If: 
+        BinaryOp: ==
+          BinaryOp: %
+            ID: i
+            Constant: int, 3
+          Constant: int, 0
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: cd
+              ID: i
+            ID: i
+      Assignment: =
+        ArrayRef: 
+          ID: dd
+          ID: i
+        BinaryOp: /
+          ID: i
+          Constant: int, 2
+      Assignment: =
+        ArrayRef: 
+          ID: ad
+          ID: i
+        BinaryOp: *
+          ID: i
+          Constant: int, 2
+      If: 
+        BinaryOp: ==
+          BinaryOp: %
+            ID: i
+            Constant: int, 3
+          Constant: int, 1
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: dll
+              ID: i
+            Constant: int, 127
+      Assignment: =
+        ArrayRef: 
+          ID: dll
+          ID: i
+        ID: i
+      Assignment: =
+        ArrayRef: 
+          ID: cll
+          ID: i
+        BinaryOp: *
+          ID: i
+          Constant: int, 2
+      Switch: 
+        BinaryOp: %
+          ID: i
+          Constant: int, 3
+        Compound: 
+          Case: 
+            Constant: int, 0
+            Assignment: =
+              ArrayRef: 
+                ID: bll
+                ID: i
+              BinaryOp: +
+                ID: i
+                Constant: int, 64
+      Assignment: =
+        ArrayRef: 
+          ID: all
+          ID: i
+        BinaryOp: /
+          ID: i
+          Constant: int, 2
+      Return: 
+        Constant: int, 0

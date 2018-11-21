@@ -1,0 +1,78 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['long']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['long']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['long']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  Decl: fn2, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: fn2, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['unsigned', 'long', 'long']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        ID: i
+        If: 
+          ID: e
+          Assignment: =
+            ID: g
+            ID: c
+      If: 
+        ID: a
+        Assignment: =
+          ID: f
+          ID: p1
+      If: 
+        BinaryOp: &&
+          UnaryOp: !
+            ID: f
+          UnaryOp: !
+            ID: g
+        FuncCall: 
+          ID: fn2
+          ExprList: 
+            Constant: string, ""
+            ID: b
+            ID: d
+            ID: d

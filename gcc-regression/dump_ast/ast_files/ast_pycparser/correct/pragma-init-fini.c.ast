@@ -1,0 +1,85 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Pragma: init		 
+  Pragma: init ()		 
+  Pragma: init init_func	 
+  Pragma: fini		 
+  Pragma: fini ()		 
+  Pragma: fini fini_func	 
+  Pragma: init (init_func, init_static_func)
+  Decl: glob_1, [], [], []
+    TypeDecl: glob_1, []
+      IdentifierType: ['int']
+  Decl: glob_2, [], [], []
+    TypeDecl: glob_2, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: init_func, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: init_func, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: glob_1
+        Constant: int, 1
+  FuncDef: 
+    Decl: init_static_func, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: init_static_func, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: glob_2
+        Constant: int, 2
+  Pragma: fini (fini_func, fini_static_func)
+  FuncDef: 
+    Decl: fini_func, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fini_func, []
+          IdentifierType: ['void']
+    Compound: 
+  FuncDef: 
+    Decl: fini_static_func, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fini_static_func, []
+          IdentifierType: ['void']
+    Compound: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: glob_1
+          Constant: int, 1
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          ID: glob_2
+          Constant: int, 2
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

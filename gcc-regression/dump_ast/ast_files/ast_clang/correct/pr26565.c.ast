@@ -1,0 +1,67 @@
+TranslationUnitDecl 0x7fa5b20264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa5b2026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa5b2026740 '__int128'
+|-TypedefDecl 0x7fa5b2026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa5b2026760 'unsigned __int128'
+|-TypedefDecl 0x7fa5b2026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa5b2026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa5b2026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa5b2026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa5b2026dc0 'char *'
+|   `-BuiltinType 0x7fa5b2026560 'char'
+|-TypedefDecl 0x7fa5b20270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa5b2027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa5b2026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa5b2026e58 '__va_list_tag'
+|-FunctionDecl 0x7fa5b2077568 <c_files/pr26565.c:5:7> col:7 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fa5b2077600 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fa5b2077660 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fa5b20776c0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fa5b2077738 prev 0x7fa5b2077568 <col:1, col:58> col:7 used memcpy 'void *(void *, const void *, unsigned long)'
+| |-ParmVarDecl 0x7fa5b2027138 <col:14, col:20> col:20 dest 'void *'
+| |-ParmVarDecl 0x7fa5b2077400 <col:26, col:38> col:38 src 'const void *'
+| `-ParmVarDecl 0x7fa5b2077478 <<built-in>:75:23, c_files/pr26565.c:5:57> col:57 n 'unsigned long'
+|-RecordDecl 0x7fa5b20777e8 <line:7:1, line:9:1> line:7:8 struct timeval definition
+| `-FieldDecl 0x7fa5b20778a8 <line:8:5, col:10> col:10 tv_sec 'long'
+|-RecordDecl 0x7fa5b20778f0 <line:11:1, line:15:1> line:11:8 struct outdata definition
+| |-FieldDecl 0x7fa5b20779b8 <line:12:5, col:10> col:10 align 'long'
+| |-FieldDecl 0x7fa5b2077a10 <line:13:5, col:10> col:10 seq 'char'
+| `-FieldDecl 0x7fa5b2077ab0 <line:14:5, col:20> col:20 referenced tv 'struct timeval':'struct timeval'
+|   `-PackedAttr 0x7fa5b2077af8 <col:38>
+|-FunctionDecl 0x7fa5b2077de0 <line:17:1, col:86> col:6 used send_probe 'void (struct outdata *, struct timeval *)'
+| |-ParmVarDecl 0x7fa5b2077bf0 <col:17, col:33> col:33 outdata 'struct outdata *'
+| |-ParmVarDecl 0x7fa5b2077cd0 <col:42, col:58> col:58 tp 'struct timeval *'
+| `-NoInlineAttr 0x7fa5b2077e88 <col:77>
+|-FunctionDecl 0x7fa5b2078050 prev 0x7fa5b2077de0 <line:18:1, line:21:1> line:18:6 used send_probe 'void (struct outdata *, struct timeval *)'
+| |-ParmVarDecl 0x7fa5b2077f38 <col:17, col:33> col:33 used outdata 'struct outdata *'
+| |-ParmVarDecl 0x7fa5b2077fc0 <col:42, col:58> col:58 used tp 'struct timeval *'
+| |-CompoundStmt 0x7fa5b207e648 <line:19:1, line:21:1>
+| | `-CallExpr 0x7fa5b20783c0 <line:20:5, col:48> 'void *'
+| |   |-ImplicitCastExpr 0x7fa5b20783a8 <col:5> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7fa5b2078140 <col:5> 'void *(void *, const void *, unsigned long)' Function 0x7fa5b2077738 'memcpy' 'void *(void *, const void *, unsigned long)'
+| |   |-ImplicitCastExpr 0x7fa5b207e600 <col:12, col:22> 'void *' <BitCast>
+| |   | `-UnaryOperator 0x7fa5b2078280 <col:12, col:22> 'struct timeval *' prefix '&'
+| |   |   `-MemberExpr 0x7fa5b20781a8 <col:13, col:22> 'struct timeval':'struct timeval' lvalue ->tv 0x7fa5b2077ab0
+| |   |     `-ImplicitCastExpr 0x7fa5b2078190 <col:13> 'struct outdata *' <LValueToRValue>
+| |   |       `-DeclRefExpr 0x7fa5b2078168 <col:13> 'struct outdata *' lvalue ParmVar 0x7fa5b2077f38 'outdata' 'struct outdata *'
+| |   |-ImplicitCastExpr 0x7fa5b207e630 <col:26> 'const void *' <BitCast>
+| |   | `-ImplicitCastExpr 0x7fa5b207e618 <col:26> 'struct timeval *' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7fa5b20782a0 <col:26> 'struct timeval *' lvalue ParmVar 0x7fa5b2077fc0 'tp' 'struct timeval *'
+| |   `-UnaryExprOrTypeTraitExpr 0x7fa5b2078340 <col:30, col:46> 'unsigned long' sizeof
+| |     `-MemberExpr 0x7fa5b2078308 <col:37, col:46> 'struct timeval':'struct timeval' lvalue ->tv 0x7fa5b2077ab0
+| |       `-ImplicitCastExpr 0x7fa5b20782f0 <col:37> 'struct outdata *' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fa5b20782c8 <col:37> 'struct outdata *' lvalue ParmVar 0x7fa5b2077f38 'outdata' 'struct outdata *'
+| `-NoInlineAttr 0x7fa5b2078130 <line:17:77> Inherited
+|-VarDecl 0x7fa5b207e688 <line:23:1, col:16> col:16 used t 'struct timeval':'struct timeval'
+|-VarDecl 0x7fa5b207e708 <line:24:1, col:16> col:16 used outdata 'struct outdata':'struct outdata'
+`-FunctionDecl 0x7fa5b207e7c0 <line:26:1, line:30:1> line:26:5 main 'int ()'
+  `-CompoundStmt 0x7fa5b207e9f0 <line:27:1, line:30:1>
+    |-CallExpr 0x7fa5b207e980 <line:28:3, col:26> 'void'
+    | |-ImplicitCastExpr 0x7fa5b207e968 <col:3> 'void (*)(struct outdata *, struct timeval *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa5b207e858 <col:3> 'void (struct outdata *, struct timeval *)' Function 0x7fa5b2078050 'send_probe' 'void (struct outdata *, struct timeval *)'
+    | |-UnaryOperator 0x7fa5b207e8a8 <col:14, col:15> 'struct outdata *' prefix '&'
+    | | `-DeclRefExpr 0x7fa5b207e880 <col:15> 'struct outdata':'struct outdata' lvalue Var 0x7fa5b207e708 'outdata' 'struct outdata':'struct outdata'
+    | `-UnaryOperator 0x7fa5b207e8f0 <col:24, col:25> 'struct timeval *' prefix '&'
+    |   `-DeclRefExpr 0x7fa5b207e8c8 <col:25> 'struct timeval':'struct timeval' lvalue Var 0x7fa5b207e688 't' 'struct timeval':'struct timeval'
+    `-ReturnStmt 0x7fa5b207e9d8 <line:29:3, col:10>
+      `-IntegerLiteral 0x7fa5b207e9b8 <col:10> 'int' 0

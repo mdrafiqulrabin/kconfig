@@ -1,0 +1,23 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Struct: foo
+        Decl: head, [], [], []
+          TypeDecl: head, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: !=
+          StructRef: .
+            ID: a
+            ID: head
+          Constant: int, 0

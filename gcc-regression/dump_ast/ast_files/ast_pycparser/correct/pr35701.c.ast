@@ -1,0 +1,100 @@
+FileAST: 
+  Typedef: my_struct_t, [], ['typedef']
+    TypeDecl: my_struct_t, []
+      Struct: _my_struct_t
+        Decl: small, [], [], []
+          TypeDecl: small, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 1
+        Decl: big, [], [], []
+          TypeDecl: big, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 31
+  Typedef: my_struct_p_t, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: my_struct_p_t, []
+        Struct: _my_struct_t
+          Decl: small, [], [], []
+            TypeDecl: small, []
+              IdentifierType: ['unsigned', 'int']
+            Constant: int, 1
+          Decl: big, [], [], []
+            TypeDecl: big, []
+              IdentifierType: ['unsigned', 'int']
+            Constant: int, 31
+  FuncDef: 
+    Decl: my_func1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: sm, [], [], []
+            TypeDecl: sm, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: bi, [], [], []
+            TypeDecl: bi, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: msp, [], [], []
+            TypeDecl: msp, []
+              IdentifierType: ['my_struct_p_t']
+        TypeDecl: my_func1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: msp
+          ID: small
+        ID: sm
+      Assignment: =
+        StructRef: ->
+          ID: msp
+          ID: big
+        ID: bi
+  FuncDef: 
+    Decl: my_func2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: sm, [], [], []
+            TypeDecl: sm, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: bi, [], [], []
+            TypeDecl: bi, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: msp, [], [], []
+            TypeDecl: msp, []
+              IdentifierType: ['my_struct_p_t']
+        TypeDecl: my_func2, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: msp
+          ID: small
+        BinaryOp: &
+          ID: sm
+          Constant: int, 1U
+      Assignment: =
+        StructRef: ->
+          ID: msp
+          ID: big
+        BinaryOp: &
+          ID: bi
+          Constant: int, 0x7fffffffU
+  FuncDef: 
+    Decl: my_func3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: sm, [], [], []
+            TypeDecl: sm, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: my_func3, []
+          IdentifierType: ['unsigned', 'short']
+    Compound: 
+      Decl: res, [], [], []
+        TypeDecl: res, []
+          IdentifierType: ['unsigned', 'short']
+      Assignment: =
+        ID: res
+        BinaryOp: &
+          ID: sm
+          Constant: int, 0xff20U
+      Return: 
+        ID: res

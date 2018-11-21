@@ -1,0 +1,77 @@
+FileAST: 
+  Typedef: GLenum, [], ['typedef']
+    TypeDecl: GLenum, []
+      Enum: None
+        EnumeratorList: 
+          Enumerator: GL_FALSE
+  Typedef: GLboolean, [], ['typedef']
+    TypeDecl: GLboolean, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: GLint, [], ['typedef']
+    TypeDecl: GLint, []
+      IdentifierType: ['int']
+  Typedef: GLuint, [], ['typedef']
+    TypeDecl: GLuint, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: GLfloat, [], ['typedef']
+    TypeDecl: GLfloat, []
+      IdentifierType: ['float']
+  Typedef: GLdouble, [], ['typedef']
+    TypeDecl: GLdouble, []
+      IdentifierType: ['double']
+  Typedef: GLcontext, [], ['typedef']
+    TypeDecl: GLcontext, []
+      Struct: gl_context
+  Decl: None, [], [], []
+    Struct: gl_context
+      Decl: TextureMatrix, [], [], []
+        ArrayDecl: []
+          TypeDecl: TextureMatrix, []
+            IdentifierType: ['GLfloat']
+          Constant: int, 16
+      Decl: Primitive, [], [], []
+        TypeDecl: Primitive, []
+          IdentifierType: ['GLenum']
+  FuncDef: 
+    Decl: gl_GetDoublev, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ctx, [], [], []
+            PtrDecl: []
+              TypeDecl: ctx, []
+                IdentifierType: ['GLcontext']
+          Decl: pname, [], [], []
+            TypeDecl: pname, []
+              IdentifierType: ['GLenum']
+          Decl: params, [], [], []
+            PtrDecl: []
+              TypeDecl: params, []
+                IdentifierType: ['GLdouble']
+        TypeDecl: gl_GetDoublev, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['GLuint']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: params
+            ID: i
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['GLint']
+            ArrayRef: 
+              StructRef: ->
+                ID: ctx
+                ID: TextureMatrix
+              ID: i

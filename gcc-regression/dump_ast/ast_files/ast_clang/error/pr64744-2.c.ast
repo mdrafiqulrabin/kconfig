@@ -1,0 +1,33 @@
+c_files/pr64744-2.c:12:3: error: non-ASM statement in naked function is not supported
+  struct s x = {}; /* { dg-error "cannot allocate stack for variable" } */
+  ^
+c_files/pr64744-2.c:10:16: note: attribute is here
+__attribute__((naked))
+               ^
+1 error generated.
+TranslationUnitDecl 0x7f931a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f931a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f931a026740 '__int128'
+|-TypedefDecl 0x7f931a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f931a026760 'unsigned __int128'
+|-TypedefDecl 0x7f931a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f931a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f931a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f931a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f931a026dc0 'char *'
+|   `-BuiltinType 0x7f931a026560 'char'
+|-TypedefDecl 0x7f931a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f931a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f931a026ee0 'struct __va_list_tag'
+|     `-Record 0x7f931a026e58 '__va_list_tag'
+|-RecordDecl 0x7f931a027120 <c_files/pr64744-2.c:5:1, line:8:1> line:5:8 struct s definition
+| |-FieldDecl 0x7f931b025a00 <line:6:3, col:8> col:8 a 'char'
+| `-FieldDecl 0x7f931b025a60 <line:7:5, col:9> col:9 b 'int'
+`-FunctionDecl 0x7f931b025af8 <line:10:1, line:13:1> line:11:6 invalid foo 'void ()'
+  |-CompoundStmt 0x7f931b025d98 <col:13, line:13:1>
+  | `-DeclStmt 0x7f931b025d80 <line:12:3, col:18>
+  |   `-VarDecl 0x7f931b025c70 <col:3, col:17> col:12 x 'struct s':'struct s' cinit
+  |     `-InitListExpr 0x7f931b025d10 <col:16, col:17> 'struct s':'struct s'
+  |       |-ImplicitValueInitExpr 0x7f931b025d60 <<invalid sloc>> 'char'
+  |       `-ImplicitValueInitExpr 0x7f931b025d70 <<invalid sloc>> 'int'
+  `-NakedAttr 0x7f931b025b90 <line:10:16>

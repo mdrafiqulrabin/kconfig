@@ -1,0 +1,89 @@
+FileAST: 
+  Decl: _c30, ['const'], ['static'], []
+    ArrayDecl: []
+      TypeDecl: _c30, ['const']
+        IdentifierType: ['unsigned', 'char']
+    Constant: string, "statistic of allocated integer registers:"
+  Decl: Out__LongInt, [], [], []
+    FuncDecl: 
+      TypeDecl: Out__LongInt, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: Allocate__WriteStats, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: Allocate__WriteStats, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i0, [], ['register'], []
+        TypeDecl: i0, []
+          IdentifierType: ['int']
+      Decl: i1, [], ['register'], []
+        TypeDecl: i1, []
+          IdentifierType: ['int']
+      Decl: i2, [], ['register'], []
+        TypeDecl: i2, []
+          IdentifierType: ['int']
+      Decl: i3, [], ['register'], []
+        TypeDecl: i3, []
+          IdentifierType: ['int']
+      Decl: i4, [], ['register'], []
+        TypeDecl: i4, []
+          IdentifierType: ['int']
+      Decl: i5, [], ['register'], []
+        TypeDecl: i5, []
+          IdentifierType: ['int']
+      Label: l0
+        Assignment: =
+          ID: i1
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            BinaryOp: <<
+              ID: i5
+              Constant: int, 2
+      If: 
+        ID: i0
+        Assignment: =
+          ID: i4
+          ID: i5
+      Label: l1
+        Assignment: +=
+          ID: i2
+          ID: i1
+      If: 
+        ID: i1
+        Goto: l0
+      Label: l3
+        Assignment: =
+          ID: i0
+          BinaryOp: ==
+            ID: i1
+            Constant: int, 255
+      UnaryOp: p++
+        ID: i1
+      FuncCall: 
+        ID: Out__LongInt
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            ID: i0
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            Constant: int, 0
+      Assignment: =
+        ID: i0
+        BinaryOp: >=
+          ID: i4
+          ID: i1
+      If: 
+        ID: i0
+        Goto: l3

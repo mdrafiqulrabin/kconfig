@@ -1,0 +1,150 @@
+c_files/pr65647-2.c:10:24: error: initializer element is not a compile-time constant
+int a, c, d, f, h, i = (int)&c;
+                       ^~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fddba8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fddba826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fddba826740 '__int128'
+|-TypedefDecl 0x7fddba826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fddba826760 'unsigned __int128'
+|-TypedefDecl 0x7fddba826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fddba826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fddba826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fddba826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fddba826dc0 'char *'
+|   `-BuiltinType 0x7fddba826560 'char'
+|-TypedefDecl 0x7fddba8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fddba827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fddba826ee0 'struct __va_list_tag'
+|     `-Record 0x7fddba826e58 '__va_list_tag'
+|-RecordDecl 0x7fddba827120 <c_files/pr65647-2.c:4:9, line:6:1> line:4:9 struct definition
+| `-FieldDecl 0x7fddba876a00 <line:5:3, col:7> col:7 referenced i 'int'
+|-TypedefDecl 0x7fddba876aa0 <line:4:1, line:6:3> col:3 referenced x264_union32_t 'struct x264_union32_t':'x264_union32_t'
+| `-ElaboratedType 0x7fddba876a50 'struct x264_union32_t' sugar
+|   `-RecordType 0x7fddba8271b0 'x264_union32_t'
+|     `-Record 0x7fddba827120 ''
+|-RecordDecl 0x7fddba876b10 <line:7:9, line:9:1> line:7:9 struct definition
+| `-FieldDecl 0x7fddba876bd8 <line:8:3, col:7> col:7 referenced level_idx 'int'
+|-TypedefDecl 0x7fddba876c70 <line:7:1, line:9:3> col:3 referenced trellis_node_t 'struct trellis_node_t':'trellis_node_t'
+| `-ElaboratedType 0x7fddba876c20 'struct trellis_node_t' sugar
+|   `-RecordType 0x7fddba876ba0 'trellis_node_t'
+|     `-Record 0x7fddba876b10 ''
+|-VarDecl 0x7fddba876cf8 <line:10:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fddba876db0 <col:1, col:8> col:8 used c 'int'
+|-VarDecl 0x7fddba876e28 <col:1, col:11> col:11 used d 'int'
+|-VarDecl 0x7fddba876ea0 <col:1, col:14> col:14 used f 'int'
+|-VarDecl 0x7fddba876f18 <col:1, col:17> col:17 used h 'int'
+|-VarDecl 0x7fddba876f90 <col:1, col:30> col:20 used i 'int' cinit
+| `-CStyleCastExpr 0x7fddba877080 <col:24, col:30> 'int' <PointerToIntegral>
+|   `-UnaryOperator 0x7fddba877048 <col:29, col:30> 'int *' prefix '&'
+|     `-DeclRefExpr 0x7fddba876ff0 <col:30> 'int' lvalue Var 0x7fddba876db0 'c' 'int'
+|-VarDecl 0x7fddba8772b8 <line:11:1, col:22> col:16 used b 'trellis_node_t [1][1]'
+|-VarDecl 0x7fddba877360 <line:12:1, col:12> col:8 used e 'short *' cinit
+| `-ImplicitCastExpr 0x7fddba8773e0 <col:12> 'short *' <NullToPointer>
+|   `-IntegerLiteral 0x7fddba8773c0 <col:12> 'int' 0
+|-VarDecl 0x7fddba877410 <line:13:1, col:7> col:7 used g 'short'
+`-FunctionDecl 0x7fddba8774b8 <line:14:1, line:32:1> line:14:6 fn1 'void ()'
+  `-CompoundStmt 0x7fddba879690 <col:12, line:32:1>
+    |-DeclStmt 0x7fddba8776c0 <line:15:3, col:20>
+    | `-VarDecl 0x7fddba877660 <col:3, col:19> col:7 used k 'int [1024]'
+    |-DeclStmt 0x7fddba8778a0 <line:16:3, col:27>
+    | `-VarDecl 0x7fddba877748 <col:3, col:26> col:19 used l 'trellis_node_t *' cinit
+    |   `-ImplicitCastExpr 0x7fddba877888 <col:23, col:26> 'trellis_node_t *' <ArrayToPointerDecay>
+    |     `-ArraySubscriptExpr 0x7fddba877860 <col:23, col:26> 'trellis_node_t [1]' lvalue
+    |       |-ImplicitCastExpr 0x7fddba877848 <col:23> 'trellis_node_t (*)[1]' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7fddba8777a8 <col:23> 'trellis_node_t [1][1]' lvalue Var 0x7fddba8772b8 'b' 'trellis_node_t [1][1]'
+    |       `-IntegerLiteral 0x7fddba8777d0 <col:25> 'int' 0
+    |-ForStmt 0x7fddba879290 <line:17:3, line:28:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fddba877938 <line:17:10, col:15> 'int' '>='
+    | | |-ImplicitCastExpr 0x7fddba877908 <col:10> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fddba8778b8 <col:10> 'int' lvalue Var 0x7fddba876f90 'i' 'int'
+    | | `-ImplicitCastExpr 0x7fddba877920 <col:15> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fddba8778e0 <col:15> 'int' lvalue Var 0x7fddba876e28 'd' 'int'
+    | |-UnaryOperator 0x7fddba877988 <col:18, col:19> 'int' postfix '--'
+    | | `-DeclRefExpr 0x7fddba877960 <col:18> 'int' lvalue Var 0x7fddba876f90 'i' 'int'
+    | `-CompoundStmt 0x7fddba879268 <col:23, line:28:3>
+    |   |-IfStmt 0x7fddba879110 <line:18:5, line:25:5>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-ImplicitCastExpr 0x7fddba878a58 <line:18:9, col:12> 'short' <LValueToRValue>
+    |   | | `-ArraySubscriptExpr 0x7fddba878a30 <col:9, col:12> 'short' lvalue
+    |   | |   |-ImplicitCastExpr 0x7fddba878a00 <col:9> 'short *' <LValueToRValue>
+    |   | |   | `-DeclRefExpr 0x7fddba8779a8 <col:9> 'short *' lvalue Var 0x7fddba877360 'e' 'short *'
+    |   | |   `-ImplicitCastExpr 0x7fddba878a18 <col:11> 'int' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7fddba8779d0 <col:11> 'int' lvalue Var 0x7fddba876f90 'i' 'int'
+    |   | |-CompoundStmt 0x7fddba8790e8 <col:15, line:25:5>
+    |   | | |-ForStmt 0x7fddba8790a8 <line:19:7, line:23:7>
+    |   | | | |-DeclStmt 0x7fddba878b08 <line:19:12, col:21>
+    |   | | | | `-VarDecl 0x7fddba878a88 <col:12, col:20> col:16 used j 'int' cinit
+    |   | | | |   `-IntegerLiteral 0x7fddba878ae8 <col:20> 'int' 1
+    |   | | | |-<<<NULL>>>
+    |   | | | |-BinaryOperator 0x7fddba878b80 <col:23, col:27> 'int' '<'
+    |   | | | | |-ImplicitCastExpr 0x7fddba878b68 <col:23> 'int' <LValueToRValue>
+    |   | | | | | `-DeclRefExpr 0x7fddba878b20 <col:23> 'int' lvalue Var 0x7fddba878a88 'j' 'int'
+    |   | | | | `-IntegerLiteral 0x7fddba878b48 <col:27> 'int' 8
+    |   | | | |-UnaryOperator 0x7fddba878bd0 <col:30, col:31> 'int' postfix '++'
+    |   | | | | `-DeclRefExpr 0x7fddba878ba8 <col:30> 'int' lvalue Var 0x7fddba878a88 'j' 'int'
+    |   | | | `-CompoundStmt 0x7fddba879078 <col:35, line:23:7>
+    |   | | |   |-BinaryOperator 0x7fddba878ec0 <line:20:9, col:45> 'int' '='
+    |   | | |   | |-MemberExpr 0x7fddba878d90 <col:9, col:36> 'int' lvalue ->i 0x7fddba876a00
+    |   | | |   | | `-ParenExpr 0x7fddba878d70 <col:9, col:33> 'x264_union32_t *'
+    |   | | |   | |   `-CStyleCastExpr 0x7fddba878d48 <col:10, col:32> 'x264_union32_t *' <BitCast>
+    |   | | |   | |     `-UnaryOperator 0x7fddba878cb8 <col:28, col:32> 'int *' prefix '&'
+    |   | | |   | |       `-ArraySubscriptExpr 0x7fddba878c90 <col:29, col:32> 'int' lvalue
+    |   | | |   | |         |-ImplicitCastExpr 0x7fddba878c60 <col:29> 'int *' <ArrayToPointerDecay>
+    |   | | |   | |         | `-DeclRefExpr 0x7fddba878c10 <col:29> 'int [1024]' lvalue Var 0x7fddba877660 'k' 'int [1024]'
+    |   | | |   | |         `-ImplicitCastExpr 0x7fddba878c78 <col:31> 'int' <LValueToRValue>
+    |   | | |   | |           `-DeclRefExpr 0x7fddba878c38 <col:31> 'int' lvalue Var 0x7fddba876cf8 'a' 'int'
+    |   | | |   | `-ImplicitCastExpr 0x7fddba878ea8 <col:40, col:45> 'int' <LValueToRValue>
+    |   | | |   |   `-MemberExpr 0x7fddba878e70 <col:40, col:45> 'int' lvalue .level_idx 0x7fddba876bd8
+    |   | | |   |     `-ArraySubscriptExpr 0x7fddba878e48 <col:40, col:43> 'trellis_node_t':'trellis_node_t' lvalue
+    |   | | |   |       |-ImplicitCastExpr 0x7fddba878e18 <col:40> 'trellis_node_t *' <LValueToRValue>
+    |   | | |   |       | `-DeclRefExpr 0x7fddba878dc8 <col:40> 'trellis_node_t *' lvalue Var 0x7fddba877748 'l' 'trellis_node_t *'
+    |   | | |   |       `-ImplicitCastExpr 0x7fddba878e30 <col:42> 'int' <LValueToRValue>
+    |   | | |   |         `-DeclRefExpr 0x7fddba878df0 <col:42> 'int' lvalue Var 0x7fddba878a88 'j' 'int'
+    |   | | |   |-BinaryOperator 0x7fddba879008 <line:21:9, col:26> 'int' '='
+    |   | | |   | |-MemberExpr 0x7fddba878f90 <col:9, col:14> 'int' lvalue .level_idx 0x7fddba876bd8
+    |   | | |   | | `-ArraySubscriptExpr 0x7fddba878f68 <col:9, col:12> 'trellis_node_t':'trellis_node_t' lvalue
+    |   | | |   | |   |-ImplicitCastExpr 0x7fddba878f38 <col:9> 'trellis_node_t *' <LValueToRValue>
+    |   | | |   | |   | `-DeclRefExpr 0x7fddba878ee8 <col:9> 'trellis_node_t *' lvalue Var 0x7fddba877748 'l' 'trellis_node_t *'
+    |   | | |   | |   `-ImplicitCastExpr 0x7fddba878f50 <col:11> 'int' <LValueToRValue>
+    |   | | |   | |     `-DeclRefExpr 0x7fddba878f10 <col:11> 'int' lvalue Var 0x7fddba878a88 'j' 'int'
+    |   | | |   | `-ImplicitCastExpr 0x7fddba878ff0 <col:26> 'int' <LValueToRValue>
+    |   | | |   |   `-DeclRefExpr 0x7fddba878fc8 <col:26> 'int' lvalue Var 0x7fddba876cf8 'a' 'int'
+    |   | | |   `-UnaryOperator 0x7fddba879058 <line:22:9, col:10> 'int' postfix '++'
+    |   | | |     `-DeclRefExpr 0x7fddba879030 <col:9> 'int' lvalue Var 0x7fddba876cf8 'a' 'int'
+    |   | | `-ContinueStmt 0x7fddba8790e0 <line:24:7>
+    |   | `-<<<NULL>>>
+    |   `-ForStmt 0x7fddba879230 <line:26:5, line:27:7>
+    |     |-DeclStmt 0x7fddba8791c0 <line:26:10, col:15>
+    |     | `-VarDecl 0x7fddba879160 <col:10, col:14> col:14 used j 'int'
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-UnaryOperator 0x7fddba879200 <col:18, col:19> 'int' postfix '++'
+    |     | `-DeclRefExpr 0x7fddba8791d8 <col:18> 'int' lvalue Var 0x7fddba879160 'j' 'int'
+    |     `-NullStmt 0x7fddba879220 <line:27:7>
+    |-DeclStmt 0x7fddba879420 <line:29:3, col:40>
+    | `-VarDecl 0x7fddba879370 <col:3, col:10> col:7 used m 'int [6]'
+    |   `-AlignedAttr 0x7fddba8793d0 <col:27, col:37> aligned
+    |     `-IntegerLiteral 0x7fddba8792e8 <col:35> 'int' 16
+    `-ForStmt 0x7fddba879658 <line:30:3, line:31:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fddba879460 <line:30:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fddba879438 <col:10> 'int' lvalue Var 0x7fddba876f18 'h' 'int'
+      |-BinaryOperator 0x7fddba879508 <col:13, col:19> 'int' ','
+      | |-UnaryOperator 0x7fddba8794a0 <col:13, col:14> 'int' postfix '++'
+      | | `-DeclRefExpr 0x7fddba879478 <col:13> 'int' lvalue Var 0x7fddba876f18 'h' 'int'
+      | `-UnaryOperator 0x7fddba8794e8 <col:18, col:19> 'int' postfix '++'
+      |   `-DeclRefExpr 0x7fddba8794c0 <col:18> 'int' lvalue Var 0x7fddba876ea0 'f' 'int'
+      `-BinaryOperator 0x7fddba879630 <line:31:5, col:12> 'short' '='
+        |-DeclRefExpr 0x7fddba879530 <col:5> 'short' lvalue Var 0x7fddba877410 'g' 'short'
+        `-ImplicitCastExpr 0x7fddba879618 <col:9, col:12> 'short' <IntegralCast>
+          `-ImplicitCastExpr 0x7fddba879600 <col:9, col:12> 'int' <LValueToRValue>
+            `-ArraySubscriptExpr 0x7fddba8795d8 <col:9, col:12> 'int' lvalue
+              |-ImplicitCastExpr 0x7fddba8795a8 <col:9> 'int *' <ArrayToPointerDecay>
+              | `-DeclRefExpr 0x7fddba879558 <col:9> 'int [6]' lvalue Var 0x7fddba879370 'm' 'int [6]'
+              `-ImplicitCastExpr 0x7fddba8795c0 <col:11> 'int' <LValueToRValue>
+                `-DeclRefExpr 0x7fddba879580 <col:11> 'int' lvalue Var 0x7fddba876f18 'h' 'int'

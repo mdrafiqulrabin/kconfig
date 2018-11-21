@@ -1,0 +1,83 @@
+FileAST: 
+  Typedef: uint8_t, [], ['typedef']
+    TypeDecl: uint8_t, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: uint16_t, [], ['typedef']
+    TypeDecl: uint16_t, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: f1, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['uint8_t']
+      TypeDecl: f1, []
+        IdentifierType: ['uint8_t']
+  Decl: f2, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['uint8_t']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['uint8_t']
+      TypeDecl: f2, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: func, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: parameter, [], [], []
+            TypeDecl: parameter, []
+              IdentifierType: ['uint16_t']
+          Decl: addr, [], [], []
+            PtrDecl: []
+              TypeDecl: addr, []
+                IdentifierType: ['uint8_t']
+          Decl: data, [], [], []
+            TypeDecl: data, []
+              IdentifierType: ['uint8_t']
+        TypeDecl: func, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: status, [], [], []
+        TypeDecl: status, []
+          IdentifierType: ['uint8_t']
+      Assignment: =
+        ID: status
+        FuncCall: 
+          ID: f1
+          ExprList: 
+            BinaryOp: +
+              ID: addr
+              Constant: int, 8
+      UnaryOp: p++
+        ID: addr
+      If: 
+        BinaryOp: ==
+          UnaryOp: *
+            ID: addr
+          BinaryOp: +
+            ID: parameter
+            Constant: int, 8
+        Assignment: =
+          UnaryOp: *
+            ID: addr
+          ID: parameter
+      FuncCall: 
+        ID: f2
+        ExprList: 
+          ID: addr
+          ID: data
+      FuncCall: 
+        ID: f2
+        ExprList: 
+          BinaryOp: +
+            ID: addr
+            Constant: int, 8
+          BinaryOp: +
+            ID: status
+            Constant: int, 1

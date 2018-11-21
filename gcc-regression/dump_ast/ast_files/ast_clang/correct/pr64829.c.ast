@@ -1,0 +1,177 @@
+TranslationUnitDecl 0x7f96860264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9686026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9686026740 '__int128'
+|-TypedefDecl 0x7f9686026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9686026760 'unsigned __int128'
+|-TypedefDecl 0x7f9686026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9686026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9686026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9686026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9686026dc0 'char *'
+|   `-BuiltinType 0x7f9686026560 'char'
+|-TypedefDecl 0x7f96860270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9686027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9686026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9686026e58 '__va_list_tag'
+|-TypedefDecl 0x7f9686027138 <c_files/pr64829.c:3:1, col:23> col:23 referenced Uint8 'unsigned char'
+| `-BuiltinType 0x7f9686026620 'unsigned char'
+|-TypedefDecl 0x7f96860271a8 <line:4:1, col:13> col:13 referenced Sint32 'int'
+| `-BuiltinType 0x7f96860265c0 'int'
+|-TypedefDecl 0x7f9686825a18 <line:5:1, col:22> col:22 referenced Uint32 'unsigned int'
+| `-BuiltinType 0x7f9686026660 'unsigned int'
+|-RecordDecl 0x7f9686825a70 <line:7:9, line:10:1> line:7:15 union RMColorDataRef definition
+| `-FieldDecl 0x7f9686825ba8 <line:9:3, col:10> col:10 referenced data8 'Uint8 *'
+|-TypedefDecl 0x7f9686825c40 <line:7:1, line:10:3> col:3 referenced RMColorDataRef 'union RMColorDataRef':'union RMColorDataRef'
+| `-ElaboratedType 0x7f9686825bf0 'union RMColorDataRef' sugar
+|   `-RecordType 0x7f9686825b00 'union RMColorDataRef'
+|     `-Record 0x7f9686825a70 'RMColorDataRef'
+|-RecordDecl 0x7f9686825cb0 <line:12:9, line:16:1> line:12:16 struct RMColorData definition
+| |-FieldDecl 0x7f9686825d90 <line:14:3, col:10> col:10 dataCount 'Uint32':'unsigned int'
+| `-FieldDecl 0x7f9686825e10 <line:15:3, col:18> col:18 referenced dataRef 'RMColorDataRef':'union RMColorDataRef'
+|-TypedefDecl 0x7f9686825eb0 <line:12:1, line:16:3> col:3 referenced RMColorData 'struct RMColorData':'struct RMColorData'
+| `-ElaboratedType 0x7f9686825e60 'struct RMColorData' sugar
+|   `-RecordType 0x7f9686825d40 'struct RMColorData'
+|     `-Record 0x7f9686825cb0 'RMColorData'
+|-RecordDecl 0x7f9686825f20 <line:18:9, line:22:1> line:18:16 struct RMColorTable definition
+| |-FieldDecl 0x7f9686825fe0 <line:20:3, col:9> col:9 referenced dataCompsOut 'Uint8':'unsigned char'
+| `-FieldDecl 0x7f9686826038 <line:21:3, col:18> col:18 referenced dataRef 'RMColorDataRef':'union RMColorDataRef'
+|-TypedefDecl 0x7f96868260d0 <line:18:1, line:22:3> col:3 referenced RMColorTable 'struct RMColorTable':'struct RMColorTable'
+| `-ElaboratedType 0x7f9686826080 'struct RMColorTable' sugar
+|   `-RecordType 0x7f9686825fb0 'struct RMColorTable'
+|     `-Record 0x7f9686825f20 'RMColorTable'
+`-FunctionDecl 0x7f96868264c8 <line:24:1, line:64:1> line:24:5 fail 'int (const RMColorData *, RMColorData *, const RMColorTable *)'
+  |-ParmVarDecl 0x7f96868261c8 <col:12, col:32> col:32 pInColor 'const RMColorData *'
+  |-ParmVarDecl 0x7f9686826298 <line:25:5, col:19> col:19 used pOutColor 'RMColorData *'
+  |-ParmVarDecl 0x7f9686826388 <line:26:5, col:26> col:26 used pColorTable 'const RMColorTable *'
+  `-CompoundStmt 0x7f968682d0f0 <line:27:1, line:64:1>
+    |-DeclStmt 0x7f9686826628 <line:28:3, col:14>
+    | `-VarDecl 0x7f96868265c8 <col:3, col:10> col:10 used comp 'Uint32':'unsigned int'
+    |-DeclStmt 0x7f96868266b0 <line:29:3, col:17>
+    | `-VarDecl 0x7f9686826650 <col:3, col:9> col:9 used nCompOut 'Uint8':'unsigned char'
+    |-DeclStmt 0x7f9686826760 <line:31:3, col:16>
+    | `-VarDecl 0x7f9686826700 <col:3, col:10> col:10 used result 'Sint32':'int'
+    |-DeclStmt 0x7f96868268e8 <line:33:3, col:47>
+    | |-VarDecl 0x7f9686826788 <col:3, col:10> col:10 used interpFrac1 'Uint32':'unsigned int'
+    | |-VarDecl 0x7f96868267f8 <col:3, col:23> col:23 used interpFrac2 'Uint32':'unsigned int'
+    | `-VarDecl 0x7f9686826868 <col:3, col:36> col:36 used interpFrac3 'Uint32':'unsigned int'
+    |-DeclStmt 0x7f968682bcf8 <line:34:3, col:32>
+    | |-VarDecl 0x7f9686826910 <col:3, col:10> col:10 used val0 'Sint32':'int'
+    | |-VarDecl 0x7f9686826980 <col:3, col:16> col:16 used val1 'Sint32':'int'
+    | |-VarDecl 0x7f968682bc00 <col:3, col:22> col:22 used val2 'Sint32':'int'
+    | `-VarDecl 0x7f968682bc70 <col:3, col:28> col:28 used val3 'Sint32':'int'
+    |-DeclStmt 0x7f968682bd80 <line:36:3, col:15>
+    | `-VarDecl 0x7f968682bd20 <col:3, col:11> col:11 used pOut 'Uint8 *'
+    |-DeclStmt 0x7f968682be68 <line:38:3, col:26>
+    | `-VarDecl 0x7f968682be08 <col:3, col:17> col:17 used pClutData 'const Uint8 *'
+    |-DeclStmt 0x7f968682bef0 <line:39:3, col:30>
+    | `-VarDecl 0x7f968682be90 <col:3, col:17> col:17 used pCornerPoint0 'const Uint8 *'
+    |-DeclStmt 0x7f968682c178 <line:41:3, col:41>
+    | `-VarDecl 0x7f968682c118 <col:3, col:40> col:9 used lastOut 'Uint8 [8]'
+    |-BinaryOperator 0x7f968682c280 <line:43:3, col:29> 'Uint8 *' '='
+    | |-DeclRefExpr 0x7f968682c190 <col:3> 'Uint8 *' lvalue Var 0x7f968682bd20 'pOut' 'Uint8 *'
+    | `-ImplicitCastExpr 0x7f968682c268 <col:10, col:29> 'Uint8 *' <LValueToRValue>
+    |   `-MemberExpr 0x7f968682c230 <col:10, col:29> 'Uint8 *' lvalue .data8 0x7f9686825ba8
+    |     `-MemberExpr 0x7f968682c1f8 <col:10, col:21> 'RMColorDataRef':'union RMColorDataRef' lvalue ->dataRef 0x7f9686825e10
+    |       `-ImplicitCastExpr 0x7f968682c1e0 <col:10> 'RMColorData *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f968682c1b8 <col:10> 'RMColorData *' lvalue ParmVar 0x7f9686826298 'pOutColor' 'RMColorData *'
+    |-BinaryOperator 0x7f968682c3b0 <line:44:3, col:36> 'const Uint8 *' '='
+    | |-DeclRefExpr 0x7f968682c2a8 <col:3> 'const Uint8 *' lvalue Var 0x7f968682be08 'pClutData' 'const Uint8 *'
+    | `-ImplicitCastExpr 0x7f968682c398 <col:15, col:36> 'const Uint8 *' <BitCast>
+    |   `-ImplicitCastExpr 0x7f968682c380 <col:15, col:36> 'Uint8 *' <LValueToRValue>
+    |     `-MemberExpr 0x7f968682c348 <col:15, col:36> 'Uint8 *const' lvalue .data8 0x7f9686825ba8
+    |       `-MemberExpr 0x7f968682c310 <col:15, col:28> 'const RMColorDataRef':'const union RMColorDataRef' lvalue ->dataRef 0x7f9686826038
+    |         `-ImplicitCastExpr 0x7f968682c2f8 <col:15> 'const RMColorTable *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7f968682c2d0 <col:15> 'const RMColorTable *' lvalue ParmVar 0x7f9686826388 'pColorTable' 'const RMColorTable *'
+    |-BinaryOperator 0x7f968682c490 <line:46:3, col:27> 'Uint8':'unsigned char' '='
+    | |-DeclRefExpr 0x7f968682c3d8 <col:3> 'Uint8':'unsigned char' lvalue Var 0x7f9686826650 'nCompOut' 'Uint8':'unsigned char'
+    | `-ImplicitCastExpr 0x7f968682c478 <col:14, col:27> 'Uint8':'unsigned char' <LValueToRValue>
+    |   `-MemberExpr 0x7f968682c440 <col:14, col:27> 'const Uint8':'const unsigned char' lvalue ->dataCompsOut 0x7f9686825fe0
+    |     `-ImplicitCastExpr 0x7f968682c428 <col:14> 'const RMColorTable *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f968682c400 <col:14> 'const RMColorTable *' lvalue ParmVar 0x7f9686826388 'pColorTable' 'const RMColorTable *'
+    |-BinaryOperator 0x7f968682c520 <line:48:3, col:19> 'const Uint8 *' '='
+    | |-DeclRefExpr 0x7f968682c4b8 <col:3> 'const Uint8 *' lvalue Var 0x7f968682be90 'pCornerPoint0' 'const Uint8 *'
+    | `-ImplicitCastExpr 0x7f968682c508 <col:19> 'const Uint8 *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f968682c4e0 <col:19> 'const Uint8 *' lvalue Var 0x7f968682be08 'pClutData' 'const Uint8 *'
+    |-ForStmt 0x7f968682d060 <line:50:3, line:61:5>
+    | |-BinaryOperator 0x7f968682c5a8 <line:50:8, col:15> 'Uint32':'unsigned int' '='
+    | | |-DeclRefExpr 0x7f968682c548 <col:8> 'Uint32':'unsigned int' lvalue Var 0x7f96868265c8 'comp' 'Uint32':'unsigned int'
+    | | `-ImplicitCastExpr 0x7f968682c590 <col:15> 'Uint32':'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f968682c570 <col:15> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f968682c668 <col:18, col:25> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f968682c620 <col:18> 'Uint32':'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f968682c5d0 <col:18> 'Uint32':'unsigned int' lvalue Var 0x7f96868265c8 'comp' 'Uint32':'unsigned int'
+    | | `-ImplicitCastExpr 0x7f968682c650 <col:25> 'unsigned int' <IntegralCast>
+    | |   `-ImplicitCastExpr 0x7f968682c638 <col:25> 'Uint8':'unsigned char' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f968682c5f8 <col:25> 'Uint8':'unsigned char' lvalue Var 0x7f9686826650 'nCompOut' 'Uint8':'unsigned char'
+    | |-UnaryOperator 0x7f968682c6b8 <col:35, col:39> 'Uint32':'unsigned int' postfix '++'
+    | | `-DeclRefExpr 0x7f968682c690 <col:35> 'Uint32':'unsigned int' lvalue Var 0x7f96868265c8 'comp' 'Uint32':'unsigned int'
+    | `-CompoundStmt 0x7f968682d018 <line:51:5, line:61:5>
+    |   |-BinaryOperator 0x7f968682c798 <line:52:7, col:28> 'Sint32':'int' '='
+    |   | |-DeclRefExpr 0x7f968682c6d8 <col:7> 'Sint32':'int' lvalue Var 0x7f9686826910 'val0' 'Sint32':'int'
+    |   | `-ImplicitCastExpr 0x7f968682c780 <col:14, col:28> 'Sint32':'int' <IntegralCast>
+    |   |   `-ImplicitCastExpr 0x7f968682c768 <col:14, col:28> 'Uint8':'unsigned char' <LValueToRValue>
+    |   |     `-UnaryOperator 0x7f968682c748 <col:14, col:28> 'const Uint8':'const unsigned char' lvalue prefix '*'
+    |   |       `-UnaryOperator 0x7f968682c728 <col:15, col:28> 'const Uint8 *' postfix '++'
+    |   |         `-DeclRefExpr 0x7f968682c700 <col:15> 'const Uint8 *' lvalue Var 0x7f968682be90 'pCornerPoint0' 'const Uint8 *'
+    |   |-BinaryOperator 0x7f968682c870 <line:54:7, col:24> 'Sint32':'int' '='
+    |   | |-DeclRefExpr 0x7f968682c7c0 <col:7> 'Sint32':'int' lvalue Var 0x7f9686826700 'result' 'Sint32':'int'
+    |   | `-BinaryOperator 0x7f968682c848 <col:16, col:24> 'Sint32':'int' '<<'
+    |   |   |-ImplicitCastExpr 0x7f968682c830 <col:16> 'Sint32':'int' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x7f968682c7e8 <col:16> 'Sint32':'int' lvalue Var 0x7f9686826910 'val0' 'Sint32':'int'
+    |   |   `-IntegerLiteral 0x7f968682c810 <col:24> 'int' 4
+    |   |-CompoundAssignOperator 0x7f968682ca08 <line:56:7, col:33> 'Sint32':'int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    |   | |-DeclRefExpr 0x7f968682c898 <col:7> 'Sint32':'int' lvalue Var 0x7f9686826700 'result' 'Sint32':'int'
+    |   | `-BinaryOperator 0x7f968682c9e0 <col:17, col:33> 'unsigned int' '*'
+    |   |   |-ImplicitCastExpr 0x7f968682c9c8 <col:17, col:29> 'unsigned int' <IntegralCast>
+    |   |   | `-ParenExpr 0x7f968682c968 <col:17, col:29> 'int'
+    |   |   |   `-BinaryOperator 0x7f968682c940 <col:18, col:25> 'int' '-'
+    |   |   |     |-ImplicitCastExpr 0x7f968682c910 <col:18> 'Sint32':'int' <LValueToRValue>
+    |   |   |     | `-DeclRefExpr 0x7f968682c8c0 <col:18> 'Sint32':'int' lvalue Var 0x7f9686826980 'val1' 'Sint32':'int'
+    |   |   |     `-ImplicitCastExpr 0x7f968682c928 <col:25> 'Sint32':'int' <LValueToRValue>
+    |   |   |       `-DeclRefExpr 0x7f968682c8e8 <col:25> 'Sint32':'int' lvalue Var 0x7f9686826910 'val0' 'Sint32':'int'
+    |   |   `-ImplicitCastExpr 0x7f968682c9b0 <col:33> 'Uint32':'unsigned int' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7f968682c988 <col:33> 'Uint32':'unsigned int' lvalue Var 0x7f9686826788 'interpFrac1' 'Uint32':'unsigned int'
+    |   |-CompoundAssignOperator 0x7f968682cbb0 <line:57:7, col:33> 'Sint32':'int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    |   | |-DeclRefExpr 0x7f968682ca40 <col:7> 'Sint32':'int' lvalue Var 0x7f9686826700 'result' 'Sint32':'int'
+    |   | `-BinaryOperator 0x7f968682cb88 <col:17, col:33> 'unsigned int' '*'
+    |   |   |-ImplicitCastExpr 0x7f968682cb70 <col:17, col:29> 'unsigned int' <IntegralCast>
+    |   |   | `-ParenExpr 0x7f968682cb10 <col:17, col:29> 'int'
+    |   |   |   `-BinaryOperator 0x7f968682cae8 <col:18, col:25> 'int' '-'
+    |   |   |     |-ImplicitCastExpr 0x7f968682cab8 <col:18> 'Sint32':'int' <LValueToRValue>
+    |   |   |     | `-DeclRefExpr 0x7f968682ca68 <col:18> 'Sint32':'int' lvalue Var 0x7f968682bc00 'val2' 'Sint32':'int'
+    |   |   |     `-ImplicitCastExpr 0x7f968682cad0 <col:25> 'Sint32':'int' <LValueToRValue>
+    |   |   |       `-DeclRefExpr 0x7f968682ca90 <col:25> 'Sint32':'int' lvalue Var 0x7f9686826980 'val1' 'Sint32':'int'
+    |   |   `-ImplicitCastExpr 0x7f968682cb58 <col:33> 'Uint32':'unsigned int' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7f968682cb30 <col:33> 'Uint32':'unsigned int' lvalue Var 0x7f96868267f8 'interpFrac2' 'Uint32':'unsigned int'
+    |   |-CompoundAssignOperator 0x7f968682cd70 <line:58:7, col:33> 'Sint32':'int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    |   | |-DeclRefExpr 0x7f968682cc00 <col:7> 'Sint32':'int' lvalue Var 0x7f9686826700 'result' 'Sint32':'int'
+    |   | `-BinaryOperator 0x7f968682cd48 <col:17, col:33> 'unsigned int' '*'
+    |   |   |-ImplicitCastExpr 0x7f968682cd30 <col:17, col:29> 'unsigned int' <IntegralCast>
+    |   |   | `-ParenExpr 0x7f968682ccd0 <col:17, col:29> 'int'
+    |   |   |   `-BinaryOperator 0x7f968682cca8 <col:18, col:25> 'int' '-'
+    |   |   |     |-ImplicitCastExpr 0x7f968682cc78 <col:18> 'Sint32':'int' <LValueToRValue>
+    |   |   |     | `-DeclRefExpr 0x7f968682cc28 <col:18> 'Sint32':'int' lvalue Var 0x7f968682bc70 'val3' 'Sint32':'int'
+    |   |   |     `-ImplicitCastExpr 0x7f968682cc90 <col:25> 'Sint32':'int' <LValueToRValue>
+    |   |   |       `-DeclRefExpr 0x7f968682cc50 <col:25> 'Sint32':'int' lvalue Var 0x7f968682bc00 'val2' 'Sint32':'int'
+    |   |   `-ImplicitCastExpr 0x7f968682cd18 <col:33> 'Uint32':'unsigned int' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7f968682ccf0 <col:33> 'Uint32':'unsigned int' lvalue Var 0x7f9686826868 'interpFrac3' 'Uint32':'unsigned int'
+    |   `-BinaryOperator 0x7f968682cff0 <line:60:7, col:52> 'Uint8':'unsigned char' '='
+    |     |-UnaryOperator 0x7f968682cdf0 <col:7, col:12> 'Uint8':'unsigned char' lvalue prefix '*'
+    |     | `-UnaryOperator 0x7f968682cdd0 <col:8, col:12> 'Uint8 *' postfix '++'
+    |     |   `-DeclRefExpr 0x7f968682cda8 <col:8> 'Uint8 *' lvalue Var 0x7f968682bd20 'pOut' 'Uint8 *'
+    |     `-BinaryOperator 0x7f968682cfc8 <col:17, col:52> 'Uint8':'unsigned char' '='
+    |       |-ArraySubscriptExpr 0x7f968682ce90 <col:17, col:29> 'Uint8':'unsigned char' lvalue
+    |       | |-ImplicitCastExpr 0x7f968682ce60 <col:17> 'Uint8 *' <ArrayToPointerDecay>
+    |       | | `-DeclRefExpr 0x7f968682ce10 <col:17> 'Uint8 [8]' lvalue Var 0x7f968682c118 'lastOut' 'Uint8 [8]'
+    |       | `-ImplicitCastExpr 0x7f968682ce78 <col:25> 'Uint32':'unsigned int' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7f968682ce38 <col:25> 'Uint32':'unsigned int' lvalue Var 0x7f96868265c8 'comp' 'Uint32':'unsigned int'
+    |       `-CStyleCastExpr 0x7f968682cfa0 <col:33, col:52> 'Uint8':'unsigned char' <IntegralCast>
+    |         `-ParenExpr 0x7f968682cf80 <col:40, col:52> 'Sint32':'int'
+    |           `-BinaryOperator 0x7f968682cf18 <col:41, col:51> 'Sint32':'int' '>>'
+    |             |-ImplicitCastExpr 0x7f968682cf00 <col:41> 'Sint32':'int' <LValueToRValue>
+    |             | `-DeclRefExpr 0x7f968682ceb8 <col:41> 'Sint32':'int' lvalue Var 0x7f9686826700 'result' 'Sint32':'int'
+    |             `-IntegerLiteral 0x7f968682cee0 <col:51> 'int' 4
+    `-ReturnStmt 0x7f968682d0d8 <line:63:3, col:12>
+      `-ParenExpr 0x7f968682d0b8 <col:10, col:12> 'int'
+        `-IntegerLiteral 0x7f968682d098 <col:11> 'int' 0

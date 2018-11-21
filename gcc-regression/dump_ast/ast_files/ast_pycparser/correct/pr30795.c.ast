@@ -1,0 +1,46 @@
+FileAST: 
+  Decl: bigDone, [], [], []
+    ArrayDecl: []
+      TypeDecl: bigDone, []
+        IdentifierType: ['char']
+      Constant: int, 260
+  Decl: runningOrder, [], [], []
+    ArrayDecl: []
+      TypeDecl: runningOrder, []
+        IdentifierType: ['int']
+      Constant: int, 260
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <=
+          ID: i
+          Constant: int, 255
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: bigDone
+              ID: i
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['char']
+              Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ID: runningOrder
+              ID: i
+            ID: i
+      Return: 
+        Constant: int, 0

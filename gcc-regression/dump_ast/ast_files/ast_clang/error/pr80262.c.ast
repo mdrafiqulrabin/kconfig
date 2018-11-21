@@ -1,0 +1,69 @@
+c_files/pr80262.c:12:15: error: unknown type name '__seg_gs'
+void clearS2 (__seg_gs S2* p, int n) {
+              ^
+c_files/pr80262.c:12:26: error: expected ')'
+void clearS2 (__seg_gs S2* p, int n) {
+                         ^
+c_files/pr80262.c:12:14: note: to match this '('
+void clearS2 (__seg_gs S2* p, int n) {
+             ^
+c_files/pr80262.c:13:23: error: use of undeclared identifier 'n'
+  for (int i = 0; i < n; ++i)
+                      ^
+c_files/pr80262.c:14:5: error: use of undeclared identifier 'p'
+    p->s1[i] = clearS1 ();
+    ^
+c_files/pr80262.c:25:16: error: use of undeclared identifier '__seg_gs'
+  clearS2 (&(((__seg_gs S3*)(BASE))->s2), n);
+               ^
+5 errors generated.
+TranslationUnitDecl 0x7f8682023ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8682024420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8682024140 '__int128'
+|-TypedefDecl 0x7f8682024490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8682024160 'unsigned __int128'
+|-TypedefDecl 0x7f8682024768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8682024570 'struct __NSConstantString_tag'
+|   `-Record 0x7f86820244e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8682024800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f86820247c0 'char *'
+|   `-BuiltinType 0x7f8682023f60 'char'
+|-TypedefDecl 0x7f8682024ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8682024a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f86820248e0 'struct __va_list_tag'
+|     `-Record 0x7f8682024858 '__va_list_tag'
+|-RecordDecl 0x7f8682024b20 <c_files/pr80262.c:4:9, line:6:1> line:4:9 struct definition
+| `-FieldDecl 0x7f8682825a00 <line:5:3, col:7> col:7 v 'int'
+|-TypedefDecl 0x7f8682825aa0 <line:4:1, line:6:3> col:3 referenced S1 'struct S1':'S1'
+| `-ElaboratedType 0x7f8682825a50 'struct S1' sugar
+|   `-RecordType 0x7f8682024bb0 'S1'
+|     `-Record 0x7f8682024b20 ''
+|-FunctionDecl 0x7f8682825ba8 <line:7:1, col:43> col:4 used clearS1 'S1 ()'
+| `-CompoundStmt 0x7f8682825e10 <col:15, col:43>
+|   |-DeclStmt 0x7f8682825da0 <col:17, col:30>
+|   | `-VarDecl 0x7f8682825c90 <col:17, col:29> col:20 used s1 'S1':'S1' cinit
+|   |   `-InitListExpr 0x7f8682825d58 <col:25, col:29> 'S1':'S1'
+|   |     `-IntegerLiteral 0x7f8682825cf0 <col:27> 'int' 0
+|   `-ReturnStmt 0x7f8682825df8 <col:32, col:39>
+|     `-ImplicitCastExpr 0x7f8682825de0 <col:39> 'S1':'S1' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8682825db8 <col:39> 'S1':'S1' lvalue Var 0x7f8682825c90 's1' 'S1':'S1'
+|-RecordDecl 0x7f8682825e38 <line:9:9, line:11:1> line:9:9 struct definition
+| `-FieldDecl 0x7f8682825fe8 <line:10:3, col:10> col:6 s1 'S1 [4]'
+|-TypedefDecl 0x7f8682826080 <line:9:1, line:11:3> col:3 referenced S2 'struct S2':'S2'
+| `-ElaboratedType 0x7f8682826030 'struct S2' sugar
+|   `-RecordType 0x7f8682825ec0 'S2'
+|     `-Record 0x7f8682825e38 ''
+|-FunctionDecl 0x7f86828261e0 <line:12:1, line:15:1> line:12:6 invalid clearS2 'void (int)'
+| |-ParmVarDecl 0x7f8682826120 <col:15, col:24> col:24 invalid S2 'int'
+| `-CompoundStmt 0x7f8682826498 <col:38, line:15:1>
+|-RecordDecl 0x7f86828264b0 <line:17:9, line:20:1> line:17:9 struct definition
+| |-FieldDecl 0x7f8682826578 <line:18:3, col:7> col:7 pad 'int'
+| `-FieldDecl 0x7f86828265f0 <line:19:3, col:6> col:6 s2 'S2':'S2'
+|-TypedefDecl 0x7f8682826690 <line:17:1, line:20:3> col:3 S3 'struct S3':'S3'
+| `-ElaboratedType 0x7f8682826640 'struct S3' sugar
+|   `-RecordType 0x7f8682826540 'S3'
+|     `-Record 0x7f86828264b0 ''
+|-VarDecl 0x7f8682826718 <line:22:1, col:10> col:10 used BASE 'long'
+`-FunctionDecl 0x7f8682826818 <line:24:1, line:26:1> line:24:6 fn1 'void (int)'
+  |-ParmVarDecl 0x7f8682826790 <col:10, col:14> col:14 used n 'int'
+  `-CompoundStmt 0x7f8682826918 <col:17, line:26:1>

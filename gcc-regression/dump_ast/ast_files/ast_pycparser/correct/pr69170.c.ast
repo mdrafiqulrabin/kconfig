@@ -1,0 +1,87 @@
+FileAST: 
+  Typedef: sha2_word_t, [], ['typedef']
+    TypeDecl: sha2_word_t, []
+      IdentifierType: ['long']
+  Typedef: hash_state, [], ['typedef']
+    TypeDecl: hash_state, []
+      Struct: None
+        Decl: length_upper, [], [], []
+          TypeDecl: length_upper, []
+            IdentifierType: ['sha2_word_t']
+        Decl: length_lower, [], [], []
+          TypeDecl: length_lower, []
+            IdentifierType: ['sha2_word_t']
+        Decl: buf, [], [], []
+          ArrayDecl: []
+            TypeDecl: buf, []
+              IdentifierType: ['char']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['hash_state']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: a
+        Constant: int, 0
+      For: 
+        BinaryOp: <
+          ID: a
+          Constant: int, 8
+        UnaryOp: p++
+          ID: a
+        Assignment: =
+          ArrayRef: 
+            StructRef: .
+              ID: b
+              ID: buf
+            BinaryOp: +
+              ID: a
+              BinaryOp: /
+                Constant: int, 1024
+                Constant: int, 8
+          BinaryOp: >>
+            StructRef: .
+              ID: b
+              ID: length_upper
+            BinaryOp: *
+              BinaryOp: -
+                Constant: int, 1
+                ID: a
+              Constant: int, 5
+      Assignment: =
+        ID: a
+        Constant: int, 0
+      For: 
+        BinaryOp: <
+          ID: a
+          Constant: int, 8
+        UnaryOp: p++
+          ID: a
+        Assignment: =
+          ArrayRef: 
+            StructRef: .
+              ID: b
+              ID: buf
+            BinaryOp: +
+              BinaryOp: +
+                ID: a
+                BinaryOp: /
+                  Constant: int, 1024
+                  Constant: int, 8
+              Constant: int, 8
+          BinaryOp: >>
+            StructRef: .
+              ID: b
+              ID: length_lower
+            BinaryOp: *
+              BinaryOp: -
+                Constant: int, 1
+                ID: a
+              Constant: int, 5

@@ -1,0 +1,56 @@
+c_files/pr34030.c:5:20: warning: comparison between pointer and integer ('void *' and 'unsigned int')
+  if ((((void *)0) == (myvar & ((1U<<0) << mynum))) && (mynum > 0))
+       ~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+TranslationUnitDecl 0x7fb9eb0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb9eb026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb9eb026740 '__int128'
+|-TypedefDecl 0x7fb9eb026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb9eb026760 'unsigned __int128'
+|-TypedefDecl 0x7fb9eb026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb9eb026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb9eb026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb9eb026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb9eb026dc0 'char *'
+|   `-BuiltinType 0x7fb9eb026560 'char'
+|-TypedefDecl 0x7fb9eb0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb9eb027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb9eb026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb9eb026e58 '__va_list_tag'
+|-VarDecl 0x7fb9eb027138 <c_files/pr34030.c:1:1, col:5> col:5 used myvar 'int'
+`-FunctionDecl 0x7fb9eb0774c8 <line:3:1, line:8:1> line:3:5 foo 'int (int)'
+  |-ParmVarDecl 0x7fb9eb077400 <col:9, col:13> col:13 used mynum 'int'
+  `-CompoundStmt 0x7fb9eb077d28 <line:4:1, line:8:1>
+    |-IfStmt 0x7fb9eb077cb8 <line:5:3, line:6:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb9eb077c58 <line:5:7, col:66> 'int' '&&'
+    | | |-ParenExpr 0x7fb9eb077b90 <col:7, col:51> 'int'
+    | | | `-BinaryOperator 0x7fb9eb077b68 <col:8, col:50> 'int' '=='
+    | | |   |-ParenExpr 0x7fb9eb0775c8 <col:8, col:18> 'void *'
+    | | |   | `-CStyleCastExpr 0x7fb9eb0775a0 <col:9, col:17> 'void *' <NullToPointer>
+    | | |   |   `-IntegerLiteral 0x7fb9eb077568 <col:17> 'int' 0
+    | | |   `-ImplicitCastExpr 0x7fb9eb077b50 <col:23, col:50> 'void *' <IntegralToPointer>
+    | | |     `-ParenExpr 0x7fb9eb077778 <col:23, col:50> 'unsigned int'
+    | | |       `-BinaryOperator 0x7fb9eb077750 <col:24, col:49> 'unsigned int' '&'
+    | | |         |-ImplicitCastExpr 0x7fb9eb077738 <col:24> 'unsigned int' <IntegralCast>
+    | | |         | `-ImplicitCastExpr 0x7fb9eb077720 <col:24> 'int' <LValueToRValue>
+    | | |         |   `-DeclRefExpr 0x7fb9eb0775e8 <col:24> 'int' lvalue Var 0x7fb9eb027138 'myvar' 'int'
+    | | |         `-ParenExpr 0x7fb9eb077700 <col:32, col:49> 'unsigned int'
+    | | |           `-BinaryOperator 0x7fb9eb0776d8 <col:33, col:44> 'unsigned int' '<<'
+    | | |             |-ParenExpr 0x7fb9eb077678 <col:33, col:39> 'unsigned int'
+    | | |             | `-BinaryOperator 0x7fb9eb077650 <col:34, col:38> 'unsigned int' '<<'
+    | | |             |   |-IntegerLiteral 0x7fb9eb077610 <col:34> 'unsigned int' 1
+    | | |             |   `-IntegerLiteral 0x7fb9eb077630 <col:38> 'int' 0
+    | | |             `-ImplicitCastExpr 0x7fb9eb0776c0 <col:44> 'int' <LValueToRValue>
+    | | |               `-DeclRefExpr 0x7fb9eb077698 <col:44> 'int' lvalue ParmVar 0x7fb9eb077400 'mynum' 'int'
+    | | `-ParenExpr 0x7fb9eb077c38 <col:56, col:66> 'int'
+    | |   `-BinaryOperator 0x7fb9eb077c10 <col:57, col:65> 'int' '>'
+    | |     |-ImplicitCastExpr 0x7fb9eb077bf8 <col:57> 'int' <LValueToRValue>
+    | |     | `-DeclRefExpr 0x7fb9eb077bb0 <col:57> 'int' lvalue ParmVar 0x7fb9eb077400 'mynum' 'int'
+    | |     `-IntegerLiteral 0x7fb9eb077bd8 <col:65> 'int' 0
+    | |-ReturnStmt 0x7fb9eb077ca0 <line:6:5, col:12>
+    | | `-IntegerLiteral 0x7fb9eb077c80 <col:12> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fb9eb077d10 <line:7:3, col:10>
+      `-IntegerLiteral 0x7fb9eb077cf0 <col:10> 'int' 0

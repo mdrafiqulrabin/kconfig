@@ -1,0 +1,83 @@
+FileAST: 
+  Decl: var1, [], ['extern'], []
+    TypeDecl: var1, []
+      IdentifierType: ['unsigned', 'short']
+  Decl: var2, [], ['extern'], []
+    TypeDecl: var2, []
+      IdentifierType: ['int']
+  Decl: my_table, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: my_table, []
+        Struct: None
+          Decl: f1, [], [], []
+            TypeDecl: f1, []
+              IdentifierType: ['int']
+          Decl: f2, [], [], []
+            PtrDecl: []
+              TypeDecl: f2, []
+                IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: local_vec, [], [], []
+        PtrDecl: []
+          TypeDecl: local_vec, []
+            IdentifierType: ['unsigned', 'short']
+        FuncCall: 
+          ID: __builtin_malloc
+          ExprList: 
+            BinaryOp: *
+              BinaryOp: *
+                ID: var1
+                ID: var2
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'short']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'short']
+      Assignment: =
+        StructRef: .
+          ArrayRef: 
+            ID: my_table
+            Constant: int, 0
+          ID: f2
+        FuncCall: 
+          ID: __builtin_malloc
+          ExprList: 
+            BinaryOp: *
+              ID: var1
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'short']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: var1
+        UnaryOp: ++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            StructRef: .
+              ArrayRef: 
+                ID: my_table
+                Constant: int, 0
+              ID: f2
+            ID: i
+          ArrayRef: 
+            ID: local_vec
+            BinaryOp: *
+              ID: i
+              ID: var2

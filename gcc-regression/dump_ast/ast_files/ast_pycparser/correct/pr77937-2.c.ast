@@ -1,0 +1,113 @@
+FileAST: 
+  Decl: fn2, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: fn2, []
+        IdentifierType: ['int']
+  Decl: fn3, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: fn3, []
+        IdentifierType: ['int']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['long']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        PtrDecl: []
+          TypeDecl: d, []
+            IdentifierType: ['char']
+      For: 
+        Assignment: +=
+          ID: d
+          ID: p1
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: d
+              Constant: int, 0
+            FuncCall: 
+              ID: fn2
+              ExprList: 
+                BinaryOp: >>
+                  Constant: int, 1
+                  ID: a
+          FuncCall: 
+            ID: fn3
+            ExprList: 
+              Constant: int, 0
+          FuncCall: 
+            ID: fn3
+            ExprList: 
+              BinaryOp: >>
+                ID: c
+                ID: a
+          Assignment: =
+            ArrayRef: 
+              ID: d
+              Constant: int, 1
+            FuncCall: 
+              ID: fn3
+              ExprList: 
+                BinaryOp: >>
+                  BinaryOp: +
+                    BinaryOp: *
+                      ArrayRef: 
+                        ID: d
+                        Constant: int, 1
+                      ID: b
+                    ID: c
+                  ID: a
+          Assignment: =
+            ArrayRef: 
+              ID: d
+              Constant: int, 4
+            FuncCall: 
+              ID: fn3
+              ExprList: 
+                BinaryOp: >>
+                  BinaryOp: +
+                    BinaryOp: *
+                      ArrayRef: 
+                        ID: d
+                        Constant: int, 4
+                      ID: b
+                    ID: c
+                  ID: a
+          Assignment: =
+            ArrayRef: 
+              ID: d
+              Constant: int, 5
+            FuncCall: 
+              ID: fn3
+              ExprList: 
+                BinaryOp: >>
+                  BinaryOp: +
+                    BinaryOp: *
+                      ArrayRef: 
+                        ID: d
+                        Constant: int, 5
+                      ID: b
+                    ID: c
+                  ID: a

@@ -1,0 +1,33 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['long', 'double']
+        TypeDecl: f1, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_fmodl
+          ExprList: 
+            ID: x
+            ID: x
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['long', 'double']
+        TypeDecl: f2, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_remainderl
+          ExprList: 
+            ID: x
+            ID: x

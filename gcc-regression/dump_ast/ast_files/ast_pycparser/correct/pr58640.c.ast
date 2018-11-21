@@ -1,0 +1,101 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['signed', 'char']
+    Compound: 
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['int']
+        ID: a
+      For: 
+        Assignment: =
+          ID: f
+          Constant: int, 1
+        BinaryOp: <
+          ID: f
+          Constant: int, 3
+        UnaryOp: p++
+          ID: f
+        For: 
+          BinaryOp: <
+            ID: b
+            Constant: int, 1
+          UnaryOp: p++
+            ID: b
+          Compound: 
+            If: 
+              ID: d
+              For: 
+                Assignment: =
+                  ID: c
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: c
+                  Constant: int, 4
+                UnaryOp: p++
+                  ID: c
+                For: 
+                  Assignment: =
+                    ID: f
+                    Constant: int, 0
+                  BinaryOp: <
+                    ID: f
+                    Constant: int, 3
+                  UnaryOp: p++
+                    ID: f
+                  Compound: 
+                    For: 
+                      Assignment: =
+                        ID: e
+                        Constant: int, 0
+                      BinaryOp: <
+                        ID: e
+                        Constant: int, 1
+                      UnaryOp: p++
+                        ID: e
+                      Assignment: =
+                        ID: a
+                        ID: g
+                    If: 
+                      ID: f
+                      Break: 
+              If: 
+                ID: f
+                Continue: 
+            Return: 
+              Constant: int, 0
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo
+      FuncCall: 
+        ID: exit
+        ExprList: 
+          Constant: int, 0

@@ -1,0 +1,97 @@
+TranslationUnitDecl 0x7fb7678264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb767826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb767826740 '__int128'
+|-TypedefDecl 0x7fb767826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb767826760 'unsigned __int128'
+|-TypedefDecl 0x7fb767826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb767826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb767826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb767826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb767826dc0 'char *'
+|   `-BuiltinType 0x7fb767826560 'char'
+|-TypedefDecl 0x7fb7678270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb767827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb767826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb767826e58 '__va_list_tag'
+|-TypedefDecl 0x7fb767827138 <c_files/pr23943.c:7:15, col:37> col:37 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fb767826680 'unsigned long'
+|-FunctionDecl 0x7fb768025b20 <line:9:15> col:15 implicit used strlen 'unsigned long (const char *)' extern
+| `-ParmVarDecl 0x7fb768025bb8 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7fb768025c20 prev 0x7fb768025b20 <col:1, line:10:94> line:9:15 used strlen 'unsigned long (const char *)' extern
+| |-ParmVarDecl 0x7fb768025a00 <col:23, col:37> col:37 __s 'const char *'
+| |-NonNullAttr 0x7fb768025cc0 <line:10:78, col:92> 0
+| |-PureAttr 0x7fb768025d20 <col:51>
+| `-NoThrowAttr 0x7fb768025d30 <col:21>
+|-VarDecl 0x7fb768025db8 <line:12:1, col:32> col:13 used savecallsin 'char [256]' static cinit
+| `-StringLiteral 0x7fb768025e98 <col:32> 'char [256]' lvalue ""
+|-FunctionDecl 0x7fb768025f88 <line:14:1, line:21:1> line:14:5 read_agent_config 'int (void)'
+| `-CompoundStmt 0x7fb768027e10 <line:15:1, line:21:1>
+|   |-BinaryOperator 0x7fb7680260d8 <line:16:3, col:20> 'char' '='
+|   | |-ArraySubscriptExpr 0x7fb768026080 <col:3, col:16> 'char' lvalue
+|   | | |-ImplicitCastExpr 0x7fb768026068 <col:3> 'char *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fb768026020 <col:3> 'char [256]' lvalue Var 0x7fb768025db8 'savecallsin' 'char [256]'
+|   | | `-IntegerLiteral 0x7fb768026048 <col:15> 'int' 0
+|   | `-ImplicitCastExpr 0x7fb7680260c0 <col:20> 'char' <IntegralCast>
+|   |   `-CharacterLiteral 0x7fb7680260a8 <col:20> 'int' 0
+|   |-IfStmt 0x7fb768027da0 <line:18:3, line:19:137>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fb768026318 <line:18:7, col:47> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fb768026300 <col:7, col:42> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7fb7680262e8 <col:7, col:42> 'char' <LValueToRValue>
+|   | | |   `-ArraySubscriptExpr 0x7fb7680262a8 <col:7, col:42> 'char' lvalue
+|   | | |     |-ImplicitCastExpr 0x7fb768026290 <col:7> 'char *' <ArrayToPointerDecay>
+|   | | |     | `-DeclRefExpr 0x7fb768026100 <col:7> 'char [256]' lvalue Var 0x7fb768025db8 'savecallsin' 'char [256]'
+|   | | |     `-BinaryOperator 0x7fb768026268 <col:19, col:41> 'unsigned long' '-'
+|   | | |       |-CallExpr 0x7fb7680261d0 <col:19, col:37> 'unsigned long'
+|   | | |       | |-ImplicitCastExpr 0x7fb7680261b8 <col:19> 'unsigned long (*)(const char *)' <FunctionToPointerDecay>
+|   | | |       | | `-DeclRefExpr 0x7fb768026128 <col:19> 'unsigned long (const char *)' Function 0x7fb768025c20 'strlen' 'unsigned long (const char *)'
+|   | | |       | `-ImplicitCastExpr 0x7fb768026218 <col:26> 'const char *' <BitCast>
+|   | | |       |   `-ImplicitCastExpr 0x7fb768026200 <col:26> 'char *' <ArrayToPointerDecay>
+|   | | |       |     `-DeclRefExpr 0x7fb768026150 <col:26> 'char [256]' lvalue Var 0x7fb768025db8 'savecallsin' 'char [256]'
+|   | | |       `-ImplicitCastExpr 0x7fb768026250 <col:41> 'unsigned long' <IntegralCast>
+|   | | |         `-IntegerLiteral 0x7fb768026230 <col:41> 'int' 1
+|   | | `-CharacterLiteral 0x7fb7680262d0 <col:47> 'int' 47
+|   | |-CallExpr 0x7fb768027d10 <line:19:5, col:137> 'char *'
+|   | | |-ImplicitCastExpr 0x7fb768027cf8 <col:5> 'char *(*)(char *, const char *, unsigned long, unsigned long)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7fb768026610 <col:5> '<builtin fn type>' Function 0x7fb768026390 '__builtin___strncat_chk' 'char *(char *, const char *, unsigned long, unsigned long)'
+|   | | |-ImplicitCastExpr 0x7fb768027d58 <col:30> 'char *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fb768026638 <col:30> 'char [256]' lvalue Var 0x7fb768025db8 'savecallsin' 'char [256]'
+|   | | |-ImplicitCastExpr 0x7fb768027d88 <col:43> 'const char *' <BitCast>
+|   | | | `-ImplicitCastExpr 0x7fb768027d70 <col:43> 'char *' <ArrayToPointerDecay>
+|   | | |   `-StringLiteral 0x7fb768026698 <col:43> 'char [2]' lvalue "/"
+|   | | |-BinaryOperator 0x7fb768026870 <col:48, col:92> 'unsigned long' '-'
+|   | | | |-BinaryOperator 0x7fb768026810 <col:48, col:88> 'unsigned long' '-'
+|   | | | | |-UnaryExprOrTypeTraitExpr 0x7fb768026710 <col:48, col:66> 'unsigned long' sizeof
+|   | | | | | `-ParenExpr 0x7fb7680266f0 <col:54, col:66> 'char [256]' lvalue
+|   | | | | |   `-DeclRefExpr 0x7fb7680266c8 <col:55> 'char [256]' lvalue Var 0x7fb768025db8 'savecallsin' 'char [256]'
+|   | | | | `-CallExpr 0x7fb7680267b0 <col:70, col:88> 'unsigned long'
+|   | | | |   |-ImplicitCastExpr 0x7fb768026798 <col:70> 'unsigned long (*)(const char *)' <FunctionToPointerDecay>
+|   | | | |   | `-DeclRefExpr 0x7fb768026730 <col:70> 'unsigned long (const char *)' Function 0x7fb768025c20 'strlen' 'unsigned long (const char *)'
+|   | | | |   `-ImplicitCastExpr 0x7fb7680267f8 <col:77> 'const char *' <BitCast>
+|   | | | |     `-ImplicitCastExpr 0x7fb7680267e0 <col:77> 'char *' <ArrayToPointerDecay>
+|   | | | |       `-DeclRefExpr 0x7fb768026758 <col:77> 'char [256]' lvalue Var 0x7fb768025db8 'savecallsin' 'char [256]'
+|   | | | `-ImplicitCastExpr 0x7fb768026858 <col:92> 'unsigned long' <IntegralCast>
+|   | | |   `-IntegerLiteral 0x7fb768026838 <col:92> 'int' 1
+|   | | `-CallExpr 0x7fb768027c30 <col:95, col:136> 'unsigned long'
+|   | |   |-ImplicitCastExpr 0x7fb768027c18 <col:95> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7fb768027b18 <col:95> '<builtin fn type>' Function 0x7fb768026910 '__builtin_object_size' 'unsigned long (const void *, int)'
+|   | |   |-ImplicitCastExpr 0x7fb768027c80 <col:118> 'const void *' <BitCast>
+|   | |   | `-ImplicitCastExpr 0x7fb768027c68 <col:118> 'char *' <ArrayToPointerDecay>
+|   | |   |   `-DeclRefExpr 0x7fb768027b40 <col:118> 'char [256]' lvalue Var 0x7fb768025db8 'savecallsin' 'char [256]'
+|   | |   `-BinaryOperator 0x7fb768027ba8 <col:131, col:135> 'int' '>'
+|   | |     |-IntegerLiteral 0x7fb768027b68 <col:131> 'int' 2
+|   | |     `-IntegerLiteral 0x7fb768027b88 <col:135> 'int' 1
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fb768027df8 <line:20:3, col:10>
+|     `-IntegerLiteral 0x7fb768027dd8 <col:10> 'int' 0
+|-FunctionDecl 0x7fb768026390 <line:19:5> col:5 implicit used __builtin___strncat_chk 'char *(char *, const char *, unsigned long, unsigned long)' extern
+| |-ParmVarDecl 0x7fb768026428 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7fb768026488 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x7fb7680264e8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7fb768026548 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fb7680265c8 <col:5> Implicit
+`-FunctionDecl 0x7fb768026910 <col:95> col:95 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+  |-ParmVarDecl 0x7fb768027a00 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fb768027a60 <<invalid sloc>> <invalid sloc> 'int'
+  `-NoThrowAttr 0x7fb768027ad0 <col:95> Implicit

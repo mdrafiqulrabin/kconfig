@@ -1,0 +1,179 @@
+TranslationUnitDecl 0x7f969e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f969e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f969e826740 '__int128'
+|-TypedefDecl 0x7f969e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f969e826760 'unsigned __int128'
+|-TypedefDecl 0x7f969e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f969e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f969e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f969e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f969e826dc0 'char *'
+|   `-BuiltinType 0x7f969e826560 'char'
+|-TypedefDecl 0x7f969e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f969e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f969e826ee0 'struct __va_list_tag'
+|     `-Record 0x7f969e826e58 '__va_list_tag'
+|-FunctionDecl 0x7f969e877c30 <c_files/pr52483-2.c:13:1, line:17:1> line:14:1 test_00 'int (volatile char *)'
+| |-ParmVarDecl 0x7f969e827160 <col:10, col:25> col:25 used x 'volatile char *'
+| `-CompoundStmt 0x7f969e877de0 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7f969e877dc8 <line:16:3, col:13>
+|     `-ImplicitCastExpr 0x7f969e877db0 <col:10, col:13> 'int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7f969e877d98 <col:10, col:13> 'char' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7f969e877d70 <col:10, col:13> 'volatile char' lvalue
+|           |-ImplicitCastExpr 0x7f969e877d58 <col:10> 'volatile char *' <LValueToRValue>
+|           | `-DeclRefExpr 0x7f969e877d10 <col:10> 'volatile char *' lvalue ParmVar 0x7f969e827160 'x' 'volatile char *'
+|           `-IntegerLiteral 0x7f969e877d38 <col:12> 'int' 5
+|-FunctionDecl 0x7f969e877f60 <line:19:1, line:23:1> line:20:1 test_100 'void (volatile char *, char)'
+| |-ParmVarDecl 0x7f969e877e18 <col:11, col:26> col:26 used x 'volatile char *'
+| |-ParmVarDecl 0x7f969e877e88 <col:29, col:34> col:34 used y 'char'
+| `-CompoundStmt 0x7f969e8780f8 <line:21:1, line:23:1>
+|   `-BinaryOperator 0x7f969e8780d0 <line:22:3, col:10> 'char' '='
+|     |-ArraySubscriptExpr 0x7f969e878068 <col:3, col:6> 'volatile char' lvalue
+|     | |-ImplicitCastExpr 0x7f969e878050 <col:3> 'volatile char *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f969e878008 <col:3> 'volatile char *' lvalue ParmVar 0x7f969e877e18 'x' 'volatile char *'
+|     | `-IntegerLiteral 0x7f969e878030 <col:5> 'int' 5
+|     `-ImplicitCastExpr 0x7f969e8780b8 <col:10> 'char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f969e878090 <col:10> 'char' lvalue ParmVar 0x7f969e877e88 'y' 'char'
+|-FunctionDecl 0x7f969e878228 <line:25:1, line:29:1> line:26:1 test_01 'int (volatile short *)'
+| |-ParmVarDecl 0x7f969e878160 <col:10, col:26> col:26 used x 'volatile short *'
+| `-CompoundStmt 0x7f969e878398 <line:27:1, line:29:1>
+|   `-ReturnStmt 0x7f969e878380 <line:28:3, col:13>
+|     `-ImplicitCastExpr 0x7f969e878368 <col:10, col:13> 'int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7f969e878350 <col:10, col:13> 'short' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7f969e878328 <col:10, col:13> 'volatile short' lvalue
+|           |-ImplicitCastExpr 0x7f969e878310 <col:10> 'volatile short *' <LValueToRValue>
+|           | `-DeclRefExpr 0x7f969e8782c8 <col:10> 'volatile short *' lvalue ParmVar 0x7f969e878160 'x' 'volatile short *'
+|           `-IntegerLiteral 0x7f969e8782f0 <col:12> 'int' 5
+|-FunctionDecl 0x7f969e878520 <line:31:1, line:35:1> line:32:1 test_101 'void (volatile short *, short)'
+| |-ParmVarDecl 0x7f969e8783d0 <col:11, col:27> col:27 used x 'volatile short *'
+| |-ParmVarDecl 0x7f969e878448 <col:30, col:36> col:36 used y 'short'
+| `-CompoundStmt 0x7f969e8786b8 <line:33:1, line:35:1>
+|   `-BinaryOperator 0x7f969e878690 <line:34:3, col:10> 'short' '='
+|     |-ArraySubscriptExpr 0x7f969e878628 <col:3, col:6> 'volatile short' lvalue
+|     | |-ImplicitCastExpr 0x7f969e878610 <col:3> 'volatile short *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f969e8785c8 <col:3> 'volatile short *' lvalue ParmVar 0x7f969e8783d0 'x' 'volatile short *'
+|     | `-IntegerLiteral 0x7f969e8785f0 <col:5> 'int' 5
+|     `-ImplicitCastExpr 0x7f969e878678 <col:10> 'short' <LValueToRValue>
+|       `-DeclRefExpr 0x7f969e878650 <col:10> 'short' lvalue ParmVar 0x7f969e878448 'y' 'short'
+|-FunctionDecl 0x7f969e8787e8 <line:37:1, line:41:1> line:38:1 test_02 'int (volatile int *)'
+| |-ParmVarDecl 0x7f969e878720 <col:10, col:24> col:24 used x 'volatile int *'
+| `-CompoundStmt 0x7f969e878940 <line:39:1, line:41:1>
+|   `-ReturnStmt 0x7f969e878928 <line:40:3, col:13>
+|     `-ImplicitCastExpr 0x7f969e878910 <col:10, col:13> 'int' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7f969e8788e8 <col:10, col:13> 'volatile int' lvalue
+|         |-ImplicitCastExpr 0x7f969e8788d0 <col:10> 'volatile int *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f969e878888 <col:10> 'volatile int *' lvalue ParmVar 0x7f969e878720 'x' 'volatile int *'
+|         `-IntegerLiteral 0x7f969e8788b0 <col:12> 'int' 5
+|-FunctionDecl 0x7f969e878ac0 <line:43:1, line:47:1> line:44:1 test_102 'void (volatile int *, int)'
+| |-ParmVarDecl 0x7f969e878978 <col:11, col:25> col:25 used x 'volatile int *'
+| |-ParmVarDecl 0x7f969e8789f0 <col:28, col:32> col:32 used y 'int'
+| `-CompoundStmt 0x7f969e878c68 <line:45:1, line:47:1>
+|   `-BinaryOperator 0x7f969e878c40 <line:46:3, col:10> 'int' '='
+|     |-ArraySubscriptExpr 0x7f969e878bc8 <col:3, col:6> 'volatile int' lvalue
+|     | |-ImplicitCastExpr 0x7f969e878bb0 <col:3> 'volatile int *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f969e878b68 <col:3> 'volatile int *' lvalue ParmVar 0x7f969e878978 'x' 'volatile int *'
+|     | `-IntegerLiteral 0x7f969e878b90 <col:5> 'int' 5
+|     `-ImplicitCastExpr 0x7f969e878c28 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f969e878c00 <col:10> 'int' lvalue ParmVar 0x7f969e8789f0 'y' 'int'
+|-FunctionDecl 0x7f969e878d98 <line:49:1, line:53:1> line:50:1 test_03 'long long (volatile long long *)'
+| |-ParmVarDecl 0x7f969e878cd0 <col:10, col:30> col:30 used x 'volatile long long *'
+| `-CompoundStmt 0x7f969e878ef0 <line:51:1, line:53:1>
+|   `-ReturnStmt 0x7f969e878ed8 <line:52:3, col:13>
+|     `-ImplicitCastExpr 0x7f969e878ec0 <col:10, col:13> 'long long' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7f969e878e98 <col:10, col:13> 'volatile long long' lvalue
+|         |-ImplicitCastExpr 0x7f969e878e80 <col:10> 'volatile long long *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f969e878e38 <col:10> 'volatile long long *' lvalue ParmVar 0x7f969e878cd0 'x' 'volatile long long *'
+|         `-IntegerLiteral 0x7f969e878e60 <col:12> 'int' 5
+|-FunctionDecl 0x7f969e879070 <line:55:1, line:59:1> line:56:1 test_103 'void (volatile long long *, long long)'
+| |-ParmVarDecl 0x7f969e878f28 <col:11, col:31> col:31 used x 'volatile long long *'
+| |-ParmVarDecl 0x7f969e878fa0 <col:34, col:44> col:44 used y 'long long'
+| `-CompoundStmt 0x7f969e879208 <line:57:1, line:59:1>
+|   `-BinaryOperator 0x7f969e8791e0 <line:58:3, col:10> 'long long' '='
+|     |-ArraySubscriptExpr 0x7f969e879178 <col:3, col:6> 'volatile long long' lvalue
+|     | |-ImplicitCastExpr 0x7f969e879160 <col:3> 'volatile long long *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f969e879118 <col:3> 'volatile long long *' lvalue ParmVar 0x7f969e878f28 'x' 'volatile long long *'
+|     | `-IntegerLiteral 0x7f969e879140 <col:5> 'int' 5
+|     `-ImplicitCastExpr 0x7f969e8791c8 <col:10> 'long long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f969e8791a0 <col:10> 'long long' lvalue ParmVar 0x7f969e878fa0 'y' 'long long'
+|-FunctionDecl 0x7f969e879338 <line:61:1, line:66:1> line:62:1 test_04 'unsigned int (volatile unsigned char *)'
+| |-ParmVarDecl 0x7f969e879270 <col:10, col:34> col:34 used x 'volatile unsigned char *'
+| `-CompoundStmt 0x7f969e8794a8 <line:63:1, line:66:1>
+|   `-ReturnStmt 0x7f969e879490 <line:65:3, col:13>
+|     `-ImplicitCastExpr 0x7f969e879478 <col:10, col:13> 'unsigned int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7f969e879460 <col:10, col:13> 'unsigned char' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7f969e879438 <col:10, col:13> 'volatile unsigned char' lvalue
+|           |-ImplicitCastExpr 0x7f969e879420 <col:10> 'volatile unsigned char *' <LValueToRValue>
+|           | `-DeclRefExpr 0x7f969e8793d8 <col:10> 'volatile unsigned char *' lvalue ParmVar 0x7f969e879270 'x' 'volatile unsigned char *'
+|           `-IntegerLiteral 0x7f969e879400 <col:12> 'int' 5
+|-FunctionDecl 0x7f969e879630 <line:68:1, line:72:1> line:69:1 test_104 'void (volatile unsigned char *, unsigned char)'
+| |-ParmVarDecl 0x7f969e8794e0 <col:11, col:35> col:35 used x 'volatile unsigned char *'
+| |-ParmVarDecl 0x7f969e879558 <col:38, col:52> col:52 used y 'unsigned char'
+| `-CompoundStmt 0x7f969e8797c8 <line:70:1, line:72:1>
+|   `-BinaryOperator 0x7f969e8797a0 <line:71:3, col:10> 'unsigned char' '='
+|     |-ArraySubscriptExpr 0x7f969e879738 <col:3, col:6> 'volatile unsigned char' lvalue
+|     | |-ImplicitCastExpr 0x7f969e879720 <col:3> 'volatile unsigned char *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f969e8796d8 <col:3> 'volatile unsigned char *' lvalue ParmVar 0x7f969e8794e0 'x' 'volatile unsigned char *'
+|     | `-IntegerLiteral 0x7f969e879700 <col:5> 'int' 5
+|     `-ImplicitCastExpr 0x7f969e879788 <col:10> 'unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f969e879760 <col:10> 'unsigned char' lvalue ParmVar 0x7f969e879558 'y' 'unsigned char'
+|-FunctionDecl 0x7f969e8798f8 <line:74:1, line:79:1> line:75:1 test_05 'unsigned int (volatile unsigned short *)'
+| |-ParmVarDecl 0x7f969e879830 <col:10, col:35> col:35 used x 'volatile unsigned short *'
+| `-CompoundStmt 0x7f969e879a68 <line:76:1, line:79:1>
+|   `-ReturnStmt 0x7f969e879a50 <line:78:3, col:13>
+|     `-ImplicitCastExpr 0x7f969e879a38 <col:10, col:13> 'unsigned int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7f969e879a20 <col:10, col:13> 'unsigned short' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7f969e8799f8 <col:10, col:13> 'volatile unsigned short' lvalue
+|           |-ImplicitCastExpr 0x7f969e8799e0 <col:10> 'volatile unsigned short *' <LValueToRValue>
+|           | `-DeclRefExpr 0x7f969e879998 <col:10> 'volatile unsigned short *' lvalue ParmVar 0x7f969e879830 'x' 'volatile unsigned short *'
+|           `-IntegerLiteral 0x7f969e8799c0 <col:12> 'int' 5
+|-FunctionDecl 0x7f969e879c00 <line:81:1, line:85:1> line:82:1 test_105 'void (volatile unsigned short *, unsigned short)'
+| |-ParmVarDecl 0x7f969e879aa0 <col:11, col:36> col:36 used x 'volatile unsigned short *'
+| |-ParmVarDecl 0x7f969e879b18 <col:39, col:54> col:54 used y 'unsigned short'
+| `-CompoundStmt 0x7f969e879d98 <line:83:1, line:85:1>
+|   `-BinaryOperator 0x7f969e879d70 <line:84:3, col:10> 'unsigned short' '='
+|     |-ArraySubscriptExpr 0x7f969e879d08 <col:3, col:6> 'volatile unsigned short' lvalue
+|     | |-ImplicitCastExpr 0x7f969e879cf0 <col:3> 'volatile unsigned short *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f969e879ca8 <col:3> 'volatile unsigned short *' lvalue ParmVar 0x7f969e879aa0 'x' 'volatile unsigned short *'
+|     | `-IntegerLiteral 0x7f969e879cd0 <col:5> 'int' 5
+|     `-ImplicitCastExpr 0x7f969e879d58 <col:10> 'unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7f969e879d30 <col:10> 'unsigned short' lvalue ParmVar 0x7f969e879b18 'y' 'unsigned short'
+|-FunctionDecl 0x7f969e879ec8 <line:87:1, line:91:1> line:88:1 test_06 'unsigned int (volatile unsigned int *)'
+| |-ParmVarDecl 0x7f969e879e00 <col:10, col:33> col:33 used x 'volatile unsigned int *'
+| `-CompoundStmt 0x7f969e87a020 <line:89:1, line:91:1>
+|   `-ReturnStmt 0x7f969e87a008 <line:90:3, col:13>
+|     `-ImplicitCastExpr 0x7f969e879ff0 <col:10, col:13> 'unsigned int' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7f969e879fc8 <col:10, col:13> 'volatile unsigned int' lvalue
+|         |-ImplicitCastExpr 0x7f969e879fb0 <col:10> 'volatile unsigned int *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f969e879f68 <col:10> 'volatile unsigned int *' lvalue ParmVar 0x7f969e879e00 'x' 'volatile unsigned int *'
+|         `-IntegerLiteral 0x7f969e879f90 <col:12> 'int' 5
+|-FunctionDecl 0x7f969e87a1a0 <line:93:1, line:97:1> line:94:1 test_106 'void (volatile unsigned int *, unsigned int)'
+| |-ParmVarDecl 0x7f969e87a058 <col:11, col:34> col:34 used x 'volatile unsigned int *'
+| |-ParmVarDecl 0x7f969e87a0d0 <col:37, col:50> col:50 used y 'unsigned int'
+| `-CompoundStmt 0x7f969e87a338 <line:95:1, line:97:1>
+|   `-BinaryOperator 0x7f969e87a310 <line:96:3, col:10> 'unsigned int' '='
+|     |-ArraySubscriptExpr 0x7f969e87a2a8 <col:3, col:6> 'volatile unsigned int' lvalue
+|     | |-ImplicitCastExpr 0x7f969e87a290 <col:3> 'volatile unsigned int *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f969e87a248 <col:3> 'volatile unsigned int *' lvalue ParmVar 0x7f969e87a058 'x' 'volatile unsigned int *'
+|     | `-IntegerLiteral 0x7f969e87a270 <col:5> 'int' 5
+|     `-ImplicitCastExpr 0x7f969e87a2f8 <col:10> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f969e87a2d0 <col:10> 'unsigned int' lvalue ParmVar 0x7f969e87a0d0 'y' 'unsigned int'
+|-FunctionDecl 0x7f969e87a468 <line:99:1, line:103:1> line:100:1 test_07 'unsigned long long (volatile unsigned long long *)'
+| |-ParmVarDecl 0x7f969e87a3a0 <col:10, col:39> col:39 used x 'volatile unsigned long long *'
+| `-CompoundStmt 0x7f969e87a5c0 <line:101:1, line:103:1>
+|   `-ReturnStmt 0x7f969e87a5a8 <line:102:3, col:13>
+|     `-ImplicitCastExpr 0x7f969e87a590 <col:10, col:13> 'unsigned long long' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7f969e87a568 <col:10, col:13> 'volatile unsigned long long' lvalue
+|         |-ImplicitCastExpr 0x7f969e87a550 <col:10> 'volatile unsigned long long *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f969e87a508 <col:10> 'volatile unsigned long long *' lvalue ParmVar 0x7f969e87a3a0 'x' 'volatile unsigned long long *'
+|         `-IntegerLiteral 0x7f969e87a530 <col:12> 'int' 5
+`-FunctionDecl 0x7f969e87a740 <line:105:1, line:109:1> line:106:1 test_107 'void (volatile unsigned long long *, unsigned long long)'
+  |-ParmVarDecl 0x7f969e87a5f8 <col:11, col:40> col:40 used x 'volatile unsigned long long *'
+  |-ParmVarDecl 0x7f969e87a670 <col:43, col:62> col:62 used y 'unsigned long long'
+  `-CompoundStmt 0x7f969e87a8d8 <line:107:1, line:109:1>
+    `-BinaryOperator 0x7f969e87a8b0 <line:108:3, col:10> 'unsigned long long' '='
+      |-ArraySubscriptExpr 0x7f969e87a848 <col:3, col:6> 'volatile unsigned long long' lvalue
+      | |-ImplicitCastExpr 0x7f969e87a830 <col:3> 'volatile unsigned long long *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f969e87a7e8 <col:3> 'volatile unsigned long long *' lvalue ParmVar 0x7f969e87a5f8 'x' 'volatile unsigned long long *'
+      | `-IntegerLiteral 0x7f969e87a810 <col:5> 'int' 5
+      `-ImplicitCastExpr 0x7f969e87a898 <col:10> 'unsigned long long' <LValueToRValue>
+        `-DeclRefExpr 0x7f969e87a870 <col:10> 'unsigned long long' lvalue ParmVar 0x7f969e87a670 'y' 'unsigned long long'

@@ -1,0 +1,35 @@
+c_files/pr59073.c:10:23: warning: expression result unused [-Wunused-value]
+  for (i = 0; i < 10; i)        /* { dg-error "invalid increment expression" } */
+                      ^
+1 warning generated.
+TranslationUnitDecl 0x7faf6d8134d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faf6d813a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faf6d813740 '__int128'
+|-TypedefDecl 0x7faf6d813a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faf6d813760 'unsigned __int128'
+|-TypedefDecl 0x7faf6d813d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faf6d813b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faf6d813ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faf6d813e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faf6d813dc0 'char *'
+|   `-BuiltinType 0x7faf6d813560 'char'
+|-TypedefDecl 0x7faf6d8140c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faf6d814070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faf6d813ee0 'struct __va_list_tag'
+|     `-Record 0x7faf6d813e58 '__va_list_tag'
+`-FunctionDecl 0x7faf6d814168 <c_files/pr59073.c:5:1, line:12:1> line:6:1 foo 'void ()'
+  `-CompoundStmt 0x7faf6d864650 <line:7:1, line:12:1>
+    |-DeclStmt 0x7faf6d8644b8 <line:8:3, col:8>
+    | `-VarDecl 0x7faf6d864458 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7faf6d864618 <line:10:3, line:11:5>
+      |-BinaryOperator 0x7faf6d864518 <line:10:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7faf6d8644d0 <col:8> 'int' lvalue Var 0x7faf6d864458 'i' 'int'
+      | `-IntegerLiteral 0x7faf6d8644f8 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7faf6d8645a0 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7faf6d864588 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7faf6d864540 <col:15> 'int' lvalue Var 0x7faf6d864458 'i' 'int'
+      | `-IntegerLiteral 0x7faf6d864568 <col:19> 'int' 10
+      |-ImplicitCastExpr 0x7faf6d8645f0 <col:23> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7faf6d8645c8 <col:23> 'int' lvalue Var 0x7faf6d864458 'i' 'int'
+      `-NullStmt 0x7faf6d864608 <line:11:5>

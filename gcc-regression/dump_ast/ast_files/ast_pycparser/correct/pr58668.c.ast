@@ -1,0 +1,113 @@
+FileAST: 
+  Decl: fn1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+  Decl: fn2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      PtrDecl: []
+        TypeDecl: fn2, []
+          IdentifierType: ['void']
+  Decl: fn3, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: fn3, []
+        IdentifierType: ['void']
+  Decl: fn4, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: fn4, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: test, []
+            IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        PtrDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['void']
+      Decl: b, [], [], []
+        PtrDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['void']
+      If: 
+        UnaryOp: !
+          Assignment: =
+            ID: a
+            FuncCall: 
+              ID: fn1
+              ExprList: 
+                ID: x
+        Return: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+      If: 
+        UnaryOp: !
+          Assignment: =
+            ID: b
+            FuncCall: 
+              ID: fn2
+              ExprList: 
+                ID: a
+                Constant: string, "w"
+        Compound: 
+          FuncCall: 
+            ID: fn3
+            ExprList: 
+              ID: a
+          Return: 
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+              Constant: int, 0
+      FuncCall: 
+        ID: fn3
+        ExprList: 
+          ID: a
+      FuncCall: 
+        ID: fn4
+        ExprList: 
+          ID: b
+          Constant: int, 1
+      Return: 
+        ID: b

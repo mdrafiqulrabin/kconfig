@@ -1,0 +1,59 @@
+c_files/pr40001.c:8:23: warning: unknown attribute '__spu_vector__' ignored [-Wunknown-attributes]
+      __attribute__ ((__spu_vector__)) unsigned int sp_r1 __asm__ ("1");
+                      ^
+c_files/pr40001.c:11:9: error: use of unknown builtin '__builtin_spu_extract' [-Wimplicit-function-declaration]
+  sps = __builtin_spu_extract (sp_r1, 0);
+        ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7f936a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f936a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f936a026740 '__int128'
+|-TypedefDecl 0x7f936a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f936a026760 'unsigned __int128'
+|-TypedefDecl 0x7f936a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f936a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f936a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f936a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f936a026dc0 'char *'
+|   `-BuiltinType 0x7f936a026560 'char'
+|-TypedefDecl 0x7f936a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f936a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f936a026ee0 'struct __va_list_tag'
+|     `-Record 0x7f936a026e58 '__va_list_tag'
+|-FunctionDecl 0x7f936a825a30 <c_files/pr40001.c:4:1, line:16:1> line:5:1 sbrk 'void *(unsigned int)'
+| |-ParmVarDecl 0x7f936a027138 <col:7, col:20> col:20 used increment 'unsigned int'
+| `-CompoundStmt 0x7f936a8261a8 <line:6:1, line:16:1>
+|   |-DeclStmt 0x7f936a825c48 <line:7:3, line:8:72>
+|   | `-VarDecl 0x7f936a825b90 <line:7:3, line:8:53> col:53 used sp_r1 'volatile unsigned int' register
+|   |   `-AsmLabelAttr 0x7f936a825bf0 <col:68> "1"
+|   |-DeclStmt 0x7f936a825cd8 <line:9:3, col:19>
+|   | `-VarDecl 0x7f936a825c78 <col:3, col:16> col:16 used sps 'unsigned int'
+|   |-BinaryOperator 0x7f936a825f38 <line:11:3, col:40> 'unsigned int' '='
+|   | |-DeclRefExpr 0x7f936a825cf0 <col:3> 'unsigned int' lvalue Var 0x7f936a825c78 'sps' 'unsigned int'
+|   | `-ImplicitCastExpr 0x7f936a825f20 <col:9, col:40> 'unsigned int' <IntegralCast>
+|   |   `-CallExpr 0x7f936a825ed0 <col:9, col:40> 'int'
+|   |     |-ImplicitCastExpr 0x7f936a825eb8 <col:9> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f936a825e18 <col:9> 'int ()' Function 0x7f936a825d80 '__builtin_spu_extract' 'int ()'
+|   |     |-ImplicitCastExpr 0x7f936a825f08 <col:32> 'unsigned int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f936a825e40 <col:32> 'volatile unsigned int' lvalue Var 0x7f936a825b90 'sp_r1' 'volatile unsigned int'
+|   |     `-IntegerLiteral 0x7f936a825e68 <col:39> 'int' 0
+|   `-IfStmt 0x7f936a826170 <line:12:3, line:15:24>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f936a826040 <line:12:7, col:21> 'int' '>='
+|     | |-BinaryOperator 0x7f936a825fd8 <col:7, col:13> 'unsigned int' '-'
+|     | | |-ImplicitCastExpr 0x7f936a825fa8 <col:7> 'unsigned int' <LValueToRValue>
+|     | | | `-DeclRefExpr 0x7f936a825f60 <col:7> 'unsigned int' lvalue Var 0x7f936a825c78 'sps' 'unsigned int'
+|     | | `-ImplicitCastExpr 0x7f936a825fc0 <col:13> 'unsigned int' <IntegralCast>
+|     | |   `-IntegerLiteral 0x7f936a825f88 <col:13> 'int' 4096
+|     | `-ImplicitCastExpr 0x7f936a826028 <col:21> 'unsigned int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f936a826000 <col:21> 'unsigned int' lvalue ParmVar 0x7f936a027138 'increment' 'unsigned int'
+|     |-ReturnStmt 0x7f936a8260a0 <line:13:5, col:12>
+|     | `-ImplicitCastExpr 0x7f936a826088 <col:12> 'void *' <NullToPointer>
+|     |   `-IntegerLiteral 0x7f936a826068 <col:12> 'int' 0
+|     `-ReturnStmt 0x7f936a826158 <line:15:5, col:24>
+|       `-ParenExpr 0x7f936a826138 <col:12, col:24> 'void *'
+|         `-CStyleCastExpr 0x7f936a826110 <col:13, col:23> 'void *' <IntegralToPointer>
+|           `-UnaryOperator 0x7f936a8260d8 <col:22, col:23> 'int' prefix '-'
+|             `-IntegerLiteral 0x7f936a8260b8 <col:23> 'int' 1
+`-FunctionDecl 0x7f936a825d80 <<invalid sloc>> line:11:9 implicit used __builtin_spu_extract 'int ()'

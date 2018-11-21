@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7fa77e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa77e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa77e826740 '__int128'
+|-TypedefDecl 0x7fa77e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa77e826760 'unsigned __int128'
+|-TypedefDecl 0x7fa77e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa77e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa77e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa77e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa77e826dc0 'char *'
+|   `-BuiltinType 0x7fa77e826560 'char'
+|-TypedefDecl 0x7fa77e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa77e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa77e826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa77e826e58 '__va_list_tag'
+|-RecordDecl 0x7fa77e827140 <c_files/pr53037-2.c:6:1, col:54> col:38 struct S8 definition
+| |-AlignedAttr 0x7fa77e878400 <col:24, col:34> aligned
+| | `-IntegerLiteral 0x7fa77e827120 <col:33> 'int' 8
+| `-FieldDecl 0x7fa77e8784c8 <col:43, col:51> col:48 a 'char [8]'
+|-RecordDecl 0x7fa77e878510 <line:7:1, line:9:1> line:7:33 struct S1 definition
+| |-PackedAttr 0x7fa77e8785c0 <col:24>
+| `-FieldDecl 0x7fa77e878660 <line:8:3, col:13> col:13 s8 'struct S8':'struct S8'
+|-RecordDecl 0x7fa77e878710 <line:11:1, line:13:1> line:11:46 struct S2 definition
+| |-AlignedAttr 0x7fa77e8787c0 <col:32, col:42> aligned
+| | `-IntegerLiteral 0x7fa77e8786f0 <col:41> 'int' 8
+| |-PackedAttr 0x7fa77e878810 <col:24>
+| `-FieldDecl 0x7fa77e878840 <line:12:3, col:13> col:13 s8 'struct S8':'struct S8'
+|-RecordDecl 0x7fa77e8788a8 <line:15:1, line:18:1> line:15:46 struct S3 definition
+| |-AlignedAttr 0x7fa77e878950 <col:32, col:42> aligned
+| | `-IntegerLiteral 0x7fa77e878888 <col:41> 'int' 8
+| |-PackedAttr 0x7fa77e8789a0 <col:24>
+| |-FieldDecl 0x7fa77e8789c8 <line:16:3, col:7> col:7 i1 'int'
+| `-FieldDecl 0x7fa77e878a30 <line:17:3, col:13> col:13 s8 'struct S8':'struct S8'
+|-RecordDecl 0x7fa77e878a98 <line:20:1, line:24:1> line:20:46 struct S4 definition
+| |-AlignedAttr 0x7fa77e878b40 <col:32, col:42> aligned
+| | `-IntegerLiteral 0x7fa77e878a78 <col:41> 'int' 8
+| |-PackedAttr 0x7fa77e878b90 <col:24>
+| |-FieldDecl 0x7fa77e878bb8 <line:21:3, col:7> col:7 i1 'int'
+| |-FieldDecl 0x7fa77e878c18 <line:22:3, col:7> col:7 i2 'int'
+| `-FieldDecl 0x7fa77e878c80 <line:23:3, col:13> col:13 s8 'struct S8':'struct S8'
+|-RecordDecl 0x7fa77e878cc8 <line:26:1, line:28:1> line:26:33 struct S5 definition
+| |-PackedAttr 0x7fa77e878d70 <col:24>
+| `-FieldDecl 0x7fa77e878dd0 <line:27:4, col:14> col:14 ll 'long long'
+|-RecordDecl 0x7fa77e878e18 <line:30:1, line:33:1> line:30:32 union U1 definition
+| |-PackedAttr 0x7fa77e878ec0 <col:23>
+| |-FieldDecl 0x7fa77e878f20 <line:31:3, col:7> col:7 i1 'int'
+| `-FieldDecl 0x7fa77e878f88 <line:32:3, col:13> col:13 s8 'struct S8':'struct S8'
+`-RecordDecl 0x7fa77e878ff0 <line:35:1, line:38:1> line:35:45 union U2 definition
+  |-AlignedAttr 0x7fa77e8790a0 <col:31, col:41> aligned
+  | `-IntegerLiteral 0x7fa77e878fd0 <col:40> 'int' 8
+  |-PackedAttr 0x7fa77e8790f0 <col:23>
+  |-FieldDecl 0x7fa77e879118 <line:36:3, col:7> col:7 i1 'int'
+  `-FieldDecl 0x7fa77e879180 <line:37:3, col:13> col:13 s8 'struct S8':'struct S8'

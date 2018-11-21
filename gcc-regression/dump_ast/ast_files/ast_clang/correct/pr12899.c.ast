@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7fdae48264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdae4826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdae4826740 '__int128'
+|-TypedefDecl 0x7fdae4826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdae4826760 'unsigned __int128'
+|-TypedefDecl 0x7fdae4826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdae4826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdae4826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdae4826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdae4826dc0 'char *'
+|   `-BuiltinType 0x7fdae4826560 'char'
+|-TypedefDecl 0x7fdae48270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdae4827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdae4826ee0 'struct __va_list_tag'
+|     `-Record 0x7fdae4826e58 '__va_list_tag'
+`-FunctionDecl 0x7fdae4877400 <c_files/pr12899.c:3:1, line:11:1> line:4:1 bb_getopt_ulflags 'void (char *)'
+  |-ParmVarDecl 0x7fdae4827138 <col:20, col:26> col:26 used s 'char *'
+  `-CompoundStmt 0x7fdae48776d0 <line:5:1, line:11:1>
+    `-ForStmt 0x7fdae4877698 <line:6:3, line:10:16>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-IfStmt 0x7fdae4877660 <line:7:5, line:10:16>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-ImplicitCastExpr 0x7fdae4877568 <line:7:9, col:12> 'char' <LValueToRValue>
+        | `-ArraySubscriptExpr 0x7fdae4877540 <col:9, col:12> 'char' lvalue
+        |   |-ImplicitCastExpr 0x7fdae4877528 <col:9> 'char *' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fdae48774e0 <col:9> 'char *' lvalue ParmVar 0x7fdae4827138 's' 'char *'
+        |   `-IntegerLiteral 0x7fdae4877508 <col:11> 'int' 1
+        |-DoStmt 0x7fdae4877640 <line:8:7, line:10:16>
+        | |-UnaryOperator 0x7fdae48775a8 <line:9:2, col:3> 'char *' postfix '++'
+        | | `-DeclRefExpr 0x7fdae4877580 <col:2> 'char *' lvalue ParmVar 0x7fdae4827138 's' 'char *'
+        | `-ImplicitCastExpr 0x7fdae4877628 <line:10:14, col:15> 'char' <LValueToRValue>
+        |   `-UnaryOperator 0x7fdae4877608 <col:14, col:15> 'char' lvalue prefix '*'
+        |     `-ImplicitCastExpr 0x7fdae48775f0 <col:15> 'char *' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fdae48775c8 <col:15> 'char *' lvalue ParmVar 0x7fdae4827138 's' 'char *'
+        `-<<<NULL>>>

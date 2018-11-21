@@ -1,0 +1,7 @@
+FileAST: 
+  Pragma: GCC diagnostic error "-Wnoexcept"  
+  Pragma: GCC diagnostic error "-fstrict-aliasing"  
+  Pragma: GCC diagnostic error "-Werror"  
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']

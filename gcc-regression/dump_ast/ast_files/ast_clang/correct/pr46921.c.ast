@@ -1,0 +1,82 @@
+TranslationUnitDecl 0x7fe3a30264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe3a3026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe3a3026740 '__int128'
+|-TypedefDecl 0x7fe3a3026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe3a3026760 'unsigned __int128'
+|-TypedefDecl 0x7fe3a3026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe3a3026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe3a3026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe3a3026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe3a3026dc0 'char *'
+|   `-BuiltinType 0x7fe3a3026560 'char'
+|-TypedefDecl 0x7fe3a30270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe3a3027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe3a3026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe3a3026e58 '__va_list_tag'
+|-FunctionDecl 0x7fe3a3825a30 <c_files/pr46921.c:7:12> col:12 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fe3a3825ac8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fe3a3825b30 <col:12> Implicit printf 1 2
+|-FunctionDecl 0x7fe3a3825b88 prev 0x7fe3a3825a30 <col:1, col:36> col:12 used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fe3a3027138 <col:19, col:30> col:31 'const char *'
+| `-FormatAttr 0x7fe3a3825c60 <col:12> Inherited printf 1 2
+|-FunctionDecl 0x7fe3a3825d70 <line:8:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe3a3825e08 prev 0x7fe3a3825d70 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fe3a3825ea0 <line:10:9, col:26> col:16 struct __uws_0 definition
+|-TypedefDecl 0x7fe3a3825fa0 <col:1, col:28> col:28 referenced uw_unit 'struct __uws_0':'struct __uws_0'
+| `-ElaboratedType 0x7fe3a3825f50 'struct __uws_0' sugar
+|   `-RecordType 0x7fe3a3825f30 'struct __uws_0'
+|     `-Record 0x7fe3a3825ea0 '__uws_0'
+|-VarDecl 0x7fe3a3826040 <line:11:1, col:22> col:9 used uw_unit_v 'uw_unit':'struct __uws_0' cinit
+| `-InitListExpr 0x7fe3a3826120 <col:21, col:22> 'uw_unit':'struct __uws_0'
+|-RecordDecl 0x7fe3a3826160 <line:13:1, line:17:1> line:13:8 struct __uws_1 definition
+| |-FieldDecl 0x7fe3a3826230 <line:15:3, col:18> col:18 __uwf_1 'struct __uws_0':'struct __uws_0'
+| `-FieldDecl 0x7fe3a3826330 <line:16:3, col:19> col:19 __uwf_2 'struct __uws_1 *'
+|-VarDecl 0x7fe3a38263d0 <line:19:1, col:29> col:12 used left_hand_eval 'int' static cinit
+| `-IntegerLiteral 0x7fe3a3826430 <col:29> 'int' 0
+|-FunctionDecl 0x7fe3a3826530 <line:21:1, line:26:1> line:22:1 used foo 'void (const char *)' static
+| |-ParmVarDecl 0x7fe3a3826468 <col:6, col:18> col:18 used s 'const char *'
+| `-CompoundStmt 0x7fe3a3826790 <line:23:1, line:26:1>
+|   |-UnaryOperator 0x7fe3a38265f8 <line:24:3, col:5> 'int' prefix '++'
+|   | `-DeclRefExpr 0x7fe3a38265d0 <col:5> 'int' lvalue Var 0x7fe3a38263d0 'left_hand_eval' 'int'
+|   `-CallExpr 0x7fe3a3826710 <line:25:3, col:17> 'int'
+|     |-ImplicitCastExpr 0x7fe3a38266f8 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe3a3826618 <col:3> 'int (const char *, ...)' Function 0x7fe3a3825b88 'printf' 'int (const char *, ...)'
+|     |-ImplicitCastExpr 0x7fe3a3826760 <col:10> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7fe3a3826748 <col:10> 'char *' <ArrayToPointerDecay>
+|     |   `-StringLiteral 0x7fe3a3826678 <col:10> 'char [3]' lvalue "%s"
+|     `-ImplicitCastExpr 0x7fe3a3826778 <col:16> 'const char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fe3a38266a8 <col:16> 'const char *' lvalue ParmVar 0x7fe3a3826468 's' 'const char *'
+`-FunctionDecl 0x7fe3a3826810 <line:28:1, line:40:1> line:29:1 main 'int ()'
+  `-CompoundStmt 0x7fe3a3826dd8 <line:30:1, line:40:1>
+    |-DeclStmt 0x7fe3a3826b90 <line:31:3, col:53>
+    | `-VarDecl 0x7fe3a38268c8 <col:3, col:52> col:18 tmp 'struct __uws_1':'struct __uws_1' cinit
+    |   `-InitListExpr 0x7fe3a3826b30 <col:24, col:52> 'struct __uws_1':'struct __uws_1'
+    |     |-ParenExpr 0x7fe3a3826ac8 <col:25, col:51> 'uw_unit':'struct __uws_0'
+    |     | `-BinaryOperator 0x7fe3a3826aa0 <col:26, col:42> 'uw_unit':'struct __uws_0' ','
+    |     |   |-CallExpr 0x7fe3a3826a00 <col:26, col:39> 'void'
+    |     |   | |-ImplicitCastExpr 0x7fe3a38269e8 <col:26> 'void (*)(const char *)' <FunctionToPointerDecay>
+    |     |   | | `-DeclRefExpr 0x7fe3a3826928 <col:26> 'void (const char *)' Function 0x7fe3a3826530 'foo' 'void (const char *)'
+    |     |   | `-ImplicitCastExpr 0x7fe3a3826a48 <col:30> 'const char *' <BitCast>
+    |     |   |   `-ImplicitCastExpr 0x7fe3a3826a30 <col:30> 'char *' <ArrayToPointerDecay>
+    |     |   |     `-StringLiteral 0x7fe3a3826988 <col:30> 'char [7]' lvalue "Inner\n"
+    |     |   `-ImplicitCastExpr 0x7fe3a3826a88 <col:42> 'uw_unit':'struct __uws_0' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7fe3a3826a60 <col:42> 'uw_unit':'struct __uws_0' lvalue Var 0x7fe3a3826040 'uw_unit_v' 'uw_unit':'struct __uws_0'
+    |     `-ImplicitValueInitExpr 0x7fe3a3826b80 <<invalid sloc>> 'struct __uws_1 *'
+    |-CallExpr 0x7fe3a3826c18 <line:33:3, col:19> 'int'
+    | |-ImplicitCastExpr 0x7fe3a3826c00 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe3a3826ba8 <col:3> 'int (const char *, ...)' Function 0x7fe3a3825b88 'printf' 'int (const char *, ...)'
+    | `-ImplicitCastExpr 0x7fe3a3826c60 <col:10> 'const char *' <BitCast>
+    |   `-ImplicitCastExpr 0x7fe3a3826c48 <col:10> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fe3a3826bd0 <col:10> 'char [7]' lvalue "Outer\n"
+    |-IfStmt 0x7fe3a3826d68 <line:36:3, line:37:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fe3a3826cb8 <line:36:7, col:8> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7fe3a3826ca0 <col:8> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe3a3826c78 <col:8> 'int' lvalue Var 0x7fe3a38263d0 'left_hand_eval' 'int'
+    | |-CallExpr 0x7fe3a3826d40 <line:37:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fe3a3826d28 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe3a3826cd8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fe3a3825e08 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe3a3826dc0 <line:39:3, col:10>
+      `-IntegerLiteral 0x7fe3a3826da0 <col:10> 'int' 0

@@ -1,0 +1,119 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['long', 'double']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          Struct: None
+            Decl: a, [], [], []
+              ArrayDecl: []
+                TypeDecl: a, []
+                  IdentifierType: ['char']
+                Constant: int, 8
+            Decl: b, [], [], []
+              TypeDecl: b, []
+                IdentifierType: ['unsigned', 'int']
+              Constant: int, 7
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          UnaryOp: &
+            ID: c
+          UnaryOp: &
+            ID: x
+          UnaryOp: sizeof
+            ID: c
+      Return: 
+        StructRef: .
+          ID: c
+          ID: b
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['long', 'double']
+        TypeDecl: bar, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          Union: None
+            Decl: c, [], [], []
+              TypeDecl: c, []
+                Struct: None
+                  Decl: a, [], [], []
+                    ArrayDecl: []
+                      TypeDecl: a, []
+                        IdentifierType: ['char']
+                      Constant: int, 8
+                  Decl: b, [], [], []
+                    TypeDecl: b, []
+                      IdentifierType: ['unsigned', 'int']
+                    Constant: int, 7
+            Decl: d, [], [], []
+              TypeDecl: d, []
+                IdentifierType: ['long', 'double']
+      Assignment: =
+        StructRef: .
+          ID: u
+          ID: d
+        ID: x
+      Return: 
+        StructRef: .
+          StructRef: .
+            ID: u
+            ID: c
+          ID: b
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: !=
+              FuncCall: 
+                ID: foo
+                ExprList: 
+                  Constant: float, 1.245L
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  Constant: float, 1.245L
+            BinaryOp: !=
+              FuncCall: 
+                ID: foo
+                ExprList: 
+                  Constant: float, 245.67L
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  Constant: float, 245.67L
+          BinaryOp: !=
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                Constant: float, 0.00567L
+            FuncCall: 
+              ID: bar
+              ExprList: 
+                Constant: float, 0.00567L
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

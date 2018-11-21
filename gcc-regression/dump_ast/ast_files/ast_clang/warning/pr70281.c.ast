@@ -1,0 +1,29 @@
+c_files/pr70281.c:4:10: warning: incompatible pointer to integer conversion returning 'char *' from a function with result type 'int' [-Wint-conversion]
+  return __builtin_types_compatible_p (unsigned, int) ? "" : "";  /* { dg-warning "cast" } */
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+TranslationUnitDecl 0x7f9e15806ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9e15807020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9e15806d40 '__int128'
+|-TypedefDecl 0x7f9e15807090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9e15806d60 'unsigned __int128'
+|-TypedefDecl 0x7f9e15807368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9e15807170 'struct __NSConstantString_tag'
+|   `-Record 0x7f9e158070e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9e15807400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9e158073c0 'char *'
+|   `-BuiltinType 0x7f9e15806b60 'char'
+|-TypedefDecl 0x7f9e158076c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9e15807670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9e158074e0 'struct __va_list_tag'
+|     `-Record 0x7f9e15807458 '__va_list_tag'
+`-FunctionDecl 0x7f9e14835a00 <c_files/pr70281.c:2:1, line:9:1> line:2:5 bch_stats_show 'int ()'
+  `-CompoundStmt 0x7f9e14836008 <line:3:1, line:9:1>
+    `-ReturnStmt 0x7f9e14835ff0 <line:4:3, col:62>
+      `-ImplicitCastExpr 0x7f9e14835ce0 <col:10, col:62> 'int' <PointerToIntegral>
+        `-ConditionalOperator 0x7f9e14835cb0 <col:10, col:62> 'char *'
+          |-TypeTraitExpr 0x7f9e14835b08 <col:10, col:53> 'int'
+          |-ImplicitCastExpr 0x7f9e14835bb8 <col:57> 'char *' <ArrayToPointerDecay>
+          | `-StringLiteral 0x7f9e14835b68 <col:57> 'char [1]' lvalue ""
+          `-ImplicitCastExpr 0x7f9e14835bd0 <col:62> 'char *' <ArrayToPointerDecay>
+            `-StringLiteral 0x7f9e14835b90 <col:62> 'char [1]' lvalue ""

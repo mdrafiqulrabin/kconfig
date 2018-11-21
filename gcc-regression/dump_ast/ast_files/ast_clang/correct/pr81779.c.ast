@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fa2c80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa2c8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa2c8026740 '__int128'
+|-TypedefDecl 0x7fa2c8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa2c8026760 'unsigned __int128'
+|-TypedefDecl 0x7fa2c8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa2c8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa2c8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa2c8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa2c8026dc0 'char *'
+|   `-BuiltinType 0x7fa2c8026560 'char'
+|-TypedefDecl 0x7fa2c80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa2c8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa2c8026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa2c8026e58 '__va_list_tag'
+`-FunctionDecl 0x7fa2c9823200 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdbool.h:31:14, c_files/pr81779.c:15:1> line:8:1 f2 '_Bool (char *)'
+  |-ParmVarDecl 0x7fa2c8027138 <col:5, col:11> col:11 used p 'char *'
+  `-CompoundStmt 0x7fa2c98234e0 <line:9:1, line:15:1>
+    |-IfStmt 0x7fa2c9823390 <line:10:3, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdbool.h:33:15>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fa2c9823320 <c_files/pr81779.c:10:7, col:8> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7fa2c9823308 <col:8> 'char *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fa2c98232e0 <col:8> 'char *' lvalue ParmVar 0x7fa2c8027138 'p' 'char *'
+    | |-ReturnStmt 0x7fa2c9823378 <line:11:5, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdbool.h:33:15>
+    | | `-ImplicitCastExpr 0x7fa2c9823360 <col:15> '_Bool' <IntegralToBoolean>
+    | |   `-IntegerLiteral 0x7fa2c9823340 <col:15> 'int' 0
+    | `-<<<NULL>>>
+    |-DeclStmt 0x7fa2c9823470 <line:31:14, c_files/pr81779.c:13:18>
+    | `-VarDecl 0x7fa2c98233d8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdbool.h:31:14, line:32:14> c_files/pr81779.c:13:8 used ret '_Bool' cinit
+    |   `-ImplicitCastExpr 0x7fa2c9823458 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdbool.h:32:14> '_Bool' <IntegralToBoolean>
+    |     `-IntegerLiteral 0x7fa2c9823438 <col:14> 'int' 1
+    `-ReturnStmt 0x7fa2c98234c8 <c_files/pr81779.c:14:3, col:10>
+      `-ImplicitCastExpr 0x7fa2c98234b0 <col:10> '_Bool' <LValueToRValue>
+        `-DeclRefExpr 0x7fa2c9823488 <col:10> '_Bool' lvalue Var 0x7fa2c98233d8 'ret' '_Bool'

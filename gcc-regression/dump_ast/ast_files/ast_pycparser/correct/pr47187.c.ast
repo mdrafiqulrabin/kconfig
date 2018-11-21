@@ -1,0 +1,77 @@
+FileAST: 
+  Decl: buf, [], [], []
+    ArrayDecl: []
+      TypeDecl: buf, []
+        IdentifierType: ['char']
+      Constant: int, 64
+  Decl: buf2, [], [], []
+    ArrayDecl: []
+      TypeDecl: buf2, []
+        IdentifierType: ['char']
+      Constant: int, 64
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['char']
+          Decl: size, [], [], []
+            TypeDecl: size, []
+              IdentifierType: ['long']
+        PtrDecl: []
+          TypeDecl: foo, []
+            IdentifierType: ['void']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_memcpy
+          ExprList: 
+            ID: buf
+            ID: p
+            ID: size
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['long']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 65536
+        UnaryOp: p++
+          ID: i
+        If: 
+          BinaryOp: !=
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                Constant: string, "abcdefghijkl"
+                Constant: int, 12
+            ID: buf
+          FuncCall: 
+            ID: __builtin_abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              ID: buf2
+              Constant: int, 64
+          ID: buf
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

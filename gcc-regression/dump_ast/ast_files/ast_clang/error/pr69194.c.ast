@@ -1,0 +1,39 @@
+c_files/pr69194.c:7:9: error: unknown type name '__simd128_float32_t'
+typedef __simd128_float32_t float32x4_t;
+        ^
+c_files/pr69194.c:12:10: error: use of unknown builtin '__builtin_neon_vld1v4sf' [-Wimplicit-function-declaration]
+  return __builtin_neon_vld1v4sf((const float *)&e);
+         ^
+2 errors generated.
+TranslationUnitDecl 0x7f9a460264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9a46026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9a46026740 '__int128'
+|-TypedefDecl 0x7f9a46026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9a46026760 'unsigned __int128'
+|-TypedefDecl 0x7f9a46026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9a46026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9a46026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9a46026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9a46026dc0 'char *'
+|   `-BuiltinType 0x7f9a46026560 'char'
+|-TypedefDecl 0x7f9a460270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9a46027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9a46026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9a46026e58 '__va_list_tag'
+|-TypedefDecl 0x7f9a46027150 <c_files/pr69194.c:7:1, col:29> col:29 referenced invalid float32x4_t 'int'
+| `-BuiltinType 0x7f9a460265c0 'int'
+|-FunctionDecl 0x7f9a46826d20 <line:9:1, line:13:1> line:10:1 sub 'float32x4_t (float32x4_t, float32x4_t, float32x4_t, float32x4_t, float32x4_t)'
+| |-ParmVarDecl 0x7f9a46826a00 <col:6, col:18> col:18 a 'float32x4_t':'int'
+| |-ParmVarDecl 0x7f9a46826a70 <col:21, col:33> col:33 b 'float32x4_t':'int'
+| |-ParmVarDecl 0x7f9a46826ae0 <col:36, col:48> col:48 c 'float32x4_t':'int'
+| |-ParmVarDecl 0x7f9a46826b50 <col:51, col:63> col:63 d 'float32x4_t':'int'
+| |-ParmVarDecl 0x7f9a46826bc0 <col:66, col:78> col:78 used e 'float32x4_t':'int'
+| `-CompoundStmt 0x7f9a468270f8 <line:11:1, line:13:1>
+|   `-ReturnStmt 0x7f9a468270e0 <line:12:3, col:51>
+|     `-CallExpr 0x7f9a468270b0 <col:10, col:51> 'int'
+|       |-ImplicitCastExpr 0x7f9a46827098 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f9a46826f08 <col:10> 'int ()' Function 0x7f9a46826e70 '__builtin_neon_vld1v4sf' 'int ()'
+|       `-CStyleCastExpr 0x7f9a46827048 <col:34, col:50> 'const float *' <BitCast>
+|         `-UnaryOperator 0x7f9a46826fb8 <col:49, col:50> 'float32x4_t *' prefix '&'
+|           `-DeclRefExpr 0x7f9a46826f30 <col:50> 'float32x4_t':'int' lvalue ParmVar 0x7f9a46826bc0 'e' 'float32x4_t':'int'
+`-FunctionDecl 0x7f9a46826e70 <<invalid sloc>> col:10 implicit used __builtin_neon_vld1v4sf 'int ()'

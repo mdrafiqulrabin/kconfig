@@ -1,0 +1,14 @@
+FileAST: 
+  Decl: s, [], [], []
+    TypeDecl: s, []
+      Struct: S
+        Decl: a, [], [], []
+          ArrayDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['char']
+            BinaryOp: <<
+              Constant: int, 1
+              Constant: int, 16
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['int']

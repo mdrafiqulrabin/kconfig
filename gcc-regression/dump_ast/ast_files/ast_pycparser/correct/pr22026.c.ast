@@ -1,0 +1,109 @@
+FileAST: 
+  FuncDef: 
+    Decl: plus, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: plus, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: x
+          Constant: int, 0
+        If: 
+          BinaryOp: !=
+            ID: y
+            Constant: int, 0
+          Compound: 
+            Decl: z, [], [], []
+              TypeDecl: z, []
+                IdentifierType: ['int']
+              BinaryOp: +
+                ID: x
+                ID: y
+            If: 
+              BinaryOp: !=
+                ID: z
+                Constant: int, 0
+              Return: 
+                Constant: int, 1
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: minus, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: minus, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: x
+          Constant: int, 0
+        If: 
+          BinaryOp: !=
+            ID: y
+            Constant: int, 0
+          Compound: 
+            Decl: z, [], [], []
+              TypeDecl: z, []
+                IdentifierType: ['int']
+              BinaryOp: -
+                ID: x
+                ID: y
+            If: 
+              BinaryOp: !=
+                ID: z
+                Constant: int, 0
+              Return: 
+                Constant: int, 1
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: mult, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned']
+        TypeDecl: mult, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: x
+          Constant: int, 0
+        If: 
+          BinaryOp: !=
+            ID: y
+            Constant: int, 0
+          Compound: 
+            Decl: z, [], [], []
+              TypeDecl: z, []
+                IdentifierType: ['unsigned']
+              BinaryOp: *
+                ID: x
+                ID: y
+            If: 
+              BinaryOp: !=
+                ID: z
+                Constant: int, 0
+              Return: 
+                Constant: int, 1
+      Return: 
+        Constant: int, 0

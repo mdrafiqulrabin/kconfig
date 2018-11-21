@@ -1,0 +1,48 @@
+FileAST: 
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: pp, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: pp, []
+                  IdentifierType: ['int']
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        ID: x
+        Compound: 
+          Decl: ip, [], [], []
+            PtrDecl: []
+              TypeDecl: ip, []
+                IdentifierType: ['int']
+            UnaryOp: *
+              ID: pp
+          Decl: op, [], [], []
+            PtrDecl: []
+              TypeDecl: op, []
+                IdentifierType: ['int']
+            UnaryOp: *
+              ID: pp
+          While: 
+            UnaryOp: *
+              ID: ip
+            Compound: 
+              Decl: v, [], [], []
+                TypeDecl: v, []
+                  IdentifierType: ['int']
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: ip
+              Assignment: =
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: op
+                BinaryOp: +
+                  ID: v
+                  Constant: int, 1

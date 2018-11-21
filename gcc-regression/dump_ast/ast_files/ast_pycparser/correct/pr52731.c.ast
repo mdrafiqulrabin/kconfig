@@ -1,0 +1,65 @@
+FileAST: 
+  Decl: area, [], [], []
+    PtrDecl: []
+      TypeDecl: area, []
+        IdentifierType: ['char']
+  Decl: area_size, [], [], []
+    TypeDecl: area_size, []
+      IdentifierType: ['long', 'int']
+  Decl: base, [], [], []
+    PtrDecl: []
+      TypeDecl: base, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: fun, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: addr, [], [], []
+            TypeDecl: addr, []
+              IdentifierType: ['unsigned', 'long', 'int']
+        TypeDecl: fun, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: size32, [], [], []
+        TypeDecl: size32, []
+          IdentifierType: ['unsigned', 'long', 'int']
+        BinaryOp: &
+          BinaryOp: -
+            BinaryOp: +
+              ID: addr
+              Constant: int, 4096
+            Constant: int, 1
+          UnaryOp: ~
+            BinaryOp: -
+              Constant: int, 4096
+              Constant: int, 1
+      Decl: size, [], [], []
+        TypeDecl: size, []
+          IdentifierType: ['unsigned', 'long', 'int']
+        BinaryOp: *
+          ID: size32
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'int']
+      If: 
+        BinaryOp: >
+          ID: size
+          Constant: int, 0
+        Compound: 
+          Assignment: =
+            ID: size
+            BinaryOp: &
+              BinaryOp: +
+                ID: size
+                Constant: int, 1
+              UnaryOp: ~
+                Constant: int, 1
+      Assignment: =
+        ID: area_size
+        ID: size
+      Assignment: =
+        ID: area
+        BinaryOp: +
+          ID: base
+          ID: size

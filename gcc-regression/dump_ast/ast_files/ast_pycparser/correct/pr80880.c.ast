@@ -1,0 +1,25 @@
+FileAST: 
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        PtrDecl: []
+          TypeDecl: fn1, []
+            IdentifierType: ['int']
+    Compound: 
+      Decl: r, [], [], []
+        PtrDecl: []
+          TypeDecl: r, []
+            IdentifierType: ['int']
+        FuncCall: 
+          ID: fn1
+      If: 
+        BinaryOp: ==
+          ID: r
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+        Return: 
+          ID: r

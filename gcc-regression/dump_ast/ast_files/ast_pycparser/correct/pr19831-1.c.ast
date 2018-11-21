@@ -1,0 +1,113 @@
+FileAST: 
+  FuncDef: 
+    Decl: test1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['int']
+        FuncCall: 
+          ID: __builtin_malloc
+          ExprList: 
+            BinaryOp: *
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+              Constant: int, 4
+      Decl: q, [], [], []
+        PtrDecl: []
+          TypeDecl: q, []
+            IdentifierType: ['int']
+        ID: p
+      Assignment: =
+        UnaryOp: *
+          UnaryOp: p++
+            ID: q
+        Constant: int, 4
+      Assignment: =
+        UnaryOp: *
+          UnaryOp: p++
+            ID: q
+        Constant: int, 4
+      FuncCall: 
+        ID: __builtin_free
+        ExprList: 
+          ID: p
+  FuncDef: 
+    Decl: test3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: test3, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['int']
+        FuncCall: 
+          ID: __builtin_malloc
+          ExprList: 
+            BinaryOp: *
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+              Constant: int, 4
+      If: 
+        ID: b
+        FuncCall: 
+          ID: __builtin_free
+          ExprList: 
+            ID: p
+      Assignment: =
+        UnaryOp: *
+          ID: p
+        Constant: int, 5
+  FuncDef: 
+    Decl: test4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: test4, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['int']
+        FuncCall: 
+          ID: __builtin_malloc
+          ExprList: 
+            BinaryOp: *
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+              Constant: int, 4
+      If: 
+        ID: b
+        FuncCall: 
+          ID: __builtin_free
+          ExprList: 
+            ID: p
+      Assignment: =
+        UnaryOp: *
+          ID: p
+        Constant: int, 5
+      FuncCall: 
+        ID: __builtin_free
+        ExprList: 
+          ID: p

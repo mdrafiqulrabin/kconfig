@@ -1,0 +1,43 @@
+c_files/pr65901.c:12:25: error: second argument to 'va_arg' is of incomplete type 'void'
+  __builtin_va_arg (ap, void);  /* { dg-error "second argument to .va_arg. is of incomplete type .void." } */
+                        ^~~~
+c_files/pr65901.c:13:25: error: second argument to 'va_arg' is of incomplete type 'struct S'
+  __builtin_va_arg (ap, struct S);  /* { dg-error "second argument to .va_arg. is of incomplete type .struct S." } */
+                        ^~~~~~~~
+c_files/pr65901.c:5:8: note: forward declaration of 'struct S'
+struct S;
+       ^
+c_files/pr65901.c:14:25: error: second argument to 'va_arg' is of incomplete type 'enum E'
+  __builtin_va_arg (ap, enum E);  /* { dg-error "second argument to .va_arg. is of incomplete type .enum E." } */
+                        ^~~~~~
+c_files/pr65901.c:6:6: note: forward declaration of 'enum E'
+enum E;
+     ^
+c_files/pr65901.c:15:25: error: second argument to 'va_arg' is of incomplete type 'union U'
+  __builtin_va_arg (ap, union U);  /* { dg-error "second argument to .va_arg. is of incomplete type .union U." } */
+                        ^~~~~~~
+c_files/pr65901.c:7:7: note: forward declaration of 'union U'
+union U;
+      ^
+4 errors generated.
+TranslationUnitDecl 0x7fa1120264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa112026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa112026740 '__int128'
+|-TypedefDecl 0x7fa112026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa112026760 'unsigned __int128'
+|-TypedefDecl 0x7fa112026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa112026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa112026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa112026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa112026dc0 'char *'
+|   `-BuiltinType 0x7fa112026560 'char'
+|-TypedefDecl 0x7fa1120270c8 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa112027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa112026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa112026e58 '__va_list_tag'
+|-RecordDecl 0x7fa112027120 <c_files/pr65901.c:5:1, col:8> col:8 struct S
+|-EnumDecl 0x7fa112077400 <line:6:1, col:6> col:6 E
+|-RecordDecl 0x7fa1120774c0 <line:7:1, col:7> col:7 union U
+`-FunctionDecl 0x7fa112077700 <line:9:1, line:16:1> line:10:1 foo 'void (struct __va_list_tag *)'
+  |-ParmVarDecl 0x7fa112077600 <col:6, col:24> col:24 used ap 'struct __va_list_tag *':'struct __va_list_tag *'
+  `-CompoundStmt 0x7fa112077d88 <line:11:1, line:16:1>

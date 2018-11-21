@@ -1,0 +1,84 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: delay_block
+      Decl: succ, [], [], []
+        PtrDecl: []
+          TypeDecl: succ, []
+            Struct: delay_block
+  Decl: Timer_Queue, [], ['static'], []
+    TypeDecl: Timer_Queue, []
+      Struct: delay_block
+  FuncDef: 
+    Decl: time_enqueue, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d, [], [], []
+            PtrDecl: []
+              TypeDecl: d, []
+                Struct: delay_block
+        PtrDecl: []
+          TypeDecl: time_enqueue, []
+            Struct: delay_block
+    Compound: 
+      Decl: q, [], [], []
+        PtrDecl: []
+          TypeDecl: q, []
+            Struct: delay_block
+        StructRef: .
+          ID: Timer_Queue
+          ID: succ
+      Assignment: =
+        StructRef: ->
+          ID: d
+          ID: succ
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          Constant: int, 0
+      Return: 
+        StructRef: .
+          ID: Timer_Queue
+          ID: succ
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: Timer_Queue
+          ID: succ
+        UnaryOp: &
+          ID: Timer_Queue
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: time_enqueue
+            ExprList: 
+              UnaryOp: &
+                ID: Timer_Queue
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

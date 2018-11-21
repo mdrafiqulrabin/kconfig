@@ -1,0 +1,76 @@
+FileAST: 
+  Decl: sy, [], [], []
+    TypeDecl: sy, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: o5, [], [], []
+            TypeDecl: o5, []
+              IdentifierType: ['char']
+        TypeDecl: fo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: yh, [], [], []
+        TypeDecl: yh, []
+          IdentifierType: ['char']
+        Constant: int, 0
+      If: 
+        BinaryOp: ==
+          ID: o5
+          Constant: int, 0
+        Return: 
+      While: 
+        BinaryOp: !=
+          ID: o5
+          Constant: int, 0
+        If: 
+          Constant: int, 0
+          Compound: 
+            While: 
+              BinaryOp: !=
+                ID: yh
+                Constant: int, 0
+              Compound: 
+                Assignment: =
+                  ID: o5
+                  Constant: int, 0
+                While: 
+                  BinaryOp: <
+                    ID: o5
+                    Constant: int, 2
+                  Compound: 
+                    Assignment: &=
+                      ID: sy
+                      ID: yh
+                    If: 
+                      BinaryOp: !=
+                        ID: sy
+                        Constant: int, 0
+                      Compound: 
+                        Label: km
+                          Assignment: =
+                            ID: sy
+                            ID: yh
+                UnaryOp: ++
+                  ID: yh
+          Compound: 
+            Assignment: =
+              ID: o5
+              ID: sy
+            Goto: km
+  FuncDef: 
+    Decl: on, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: on, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: fo
+        ExprList: 
+          ID: sy

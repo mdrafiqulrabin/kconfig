@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f86a3018ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f86a3019420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f86a3019140 '__int128'
+|-TypedefDecl 0x7f86a3019490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f86a3019160 'unsigned __int128'
+|-TypedefDecl 0x7f86a3019768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f86a3019570 'struct __NSConstantString_tag'
+|   `-Record 0x7f86a30194e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f86a3019800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f86a30197c0 'char *'
+|   `-BuiltinType 0x7f86a3018f60 'char'
+|-TypedefDecl 0x7f86a3019ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f86a3019a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f86a30198e0 'struct __va_list_tag'
+|     `-Record 0x7f86a3019858 '__va_list_tag'
+|-VarDecl 0x7f86a3019b38 <c_files/pr46254.c:6:1, col:10> col:10 used i '__int128'
+|-FunctionDecl 0x7f86a2833248 <line:8:1, line:11:1> line:8:6 test 'void ()'
+| `-CompoundStmt 0x7f86a2833820 <line:9:1, line:11:1>
+|   `-CallExpr 0x7f86a28334b0 <line:10:3, col:40> '__int128'
+|     |-ImplicitCastExpr 0x7f86a2833808 <col:3> '__int128 (*)(volatile __int128 *, __int128, __int128, ...)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7f86a28337b0 <col:3> '<builtin fn type>' Function 0x7f86a2833568 '__sync_val_compare_and_swap_16' '__int128 (volatile __int128 *, __int128, __int128, ...)'
+|     |-UnaryOperator 0x7f86a28333f8 <col:32, col:33> '__int128 *' prefix '&'
+|     | `-DeclRefExpr 0x7f86a28333a0 <col:33> '__int128' lvalue Var 0x7f86a3019b38 'i' '__int128'
+|     |-ImplicitCastExpr 0x7f86a2833780 <col:36> '__int128' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f86a2833418 <col:36> '__int128' lvalue Var 0x7f86a3019b38 'i' '__int128'
+|     `-ImplicitCastExpr 0x7f86a2833798 <col:39> '__int128' <LValueToRValue>
+|       `-DeclRefExpr 0x7f86a2833440 <col:39> '__int128' lvalue Var 0x7f86a3019b38 'i' '__int128'
+|-FunctionDecl 0x7f86a28332e0 <col:3> col:3 implicit used __sync_val_compare_and_swap 'void ()' extern
+`-FunctionDecl 0x7f86a2833568 <col:3> col:3 implicit __sync_val_compare_and_swap_16 '__int128 (volatile __int128 *, __int128, __int128, ...)' extern
+  |-ParmVarDecl 0x7f86a2833600 <<invalid sloc>> <invalid sloc> 'volatile __int128 *'
+  |-ParmVarDecl 0x7f86a2833660 <<invalid sloc>> <invalid sloc> '__int128'
+  |-ParmVarDecl 0x7f86a28336c0 <<invalid sloc>> <invalid sloc> '__int128'
+  `-NoThrowAttr 0x7f86a2833738 <col:3> Implicit

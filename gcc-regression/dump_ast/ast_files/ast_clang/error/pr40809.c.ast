@@ -1,0 +1,86 @@
+c_files/pr40809.c:5:10: fatal error: 'sse2-check.h' file not found
+#include "sse2-check.h"
+         ^~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fa2b60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa2b6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa2b6026740 '__int128'
+|-TypedefDecl 0x7fa2b6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa2b6026760 'unsigned __int128'
+|-TypedefDecl 0x7fa2b6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa2b6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa2b6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa2b6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa2b6026dc0 'char *'
+|   `-BuiltinType 0x7fa2b6026560 'char'
+|-TypedefDecl 0x7fa2b60270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa2b6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa2b6026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa2b6026e58 '__va_list_tag'
+|-VarDecl 0x7fa2b60271a0 <c_files/pr40809.c:9:1, col:127> col:14 used u4 'unsigned int [8]' cinit
+| `-InitListExpr 0x7fa2b6826bc0 <col:22, col:127> 'unsigned int [8]'
+|   |-IntegerLiteral 0x7fa2b6826a40 <col:24> 'unsigned int' 4000000000
+|   |-IntegerLiteral 0x7fa2b6826a60 <col:37> 'unsigned int' 4000000000
+|   |-IntegerLiteral 0x7fa2b6826a80 <col:50> 'unsigned int' 4000000000
+|   |-IntegerLiteral 0x7fa2b6826aa0 <col:63> 'unsigned int' 4000000000
+|   |-IntegerLiteral 0x7fa2b6826ac0 <col:76> 'unsigned int' 4000000000
+|   |-IntegerLiteral 0x7fa2b6826ae0 <col:89> 'unsigned int' 4000000000
+|   |-IntegerLiteral 0x7fa2b6826b00 <col:102> 'unsigned int' 4000000000
+|   `-IntegerLiteral 0x7fa2b6826b20 <col:115> 'unsigned int' 4000000000
+|-VarDecl 0x7fa2b6826cc0 <line:10:1, col:11> col:7 used f4 'float [8]'
+|-FunctionDecl 0x7fa2b6826de0 <line:12:1, line:24:1> line:13:1 sse2_test 'void (void)' static
+| `-CompoundStmt 0x7fa2b68276a8 <line:14:1, line:24:1>
+|   |-DeclStmt 0x7fa2b6826ef0 <line:15:3, col:8>
+|   | `-VarDecl 0x7fa2b6826e90 <col:3, col:7> col:7 used j 'int'
+|   |-ForStmt 0x7fa2b6827248 <line:17:3, line:18:17>
+|   | |-BinaryOperator 0x7fa2b6826f50 <line:17:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7fa2b6826f08 <col:8> 'int' lvalue Var 0x7fa2b6826e90 'j' 'int'
+|   | | `-IntegerLiteral 0x7fa2b6826f30 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa2b6826fd8 <col:15, line:7:11> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fa2b6826fc0 <line:17:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa2b6826f78 <col:15> 'int' lvalue Var 0x7fa2b6826e90 'j' 'int'
+|   | | `-IntegerLiteral 0x7fa2b6826fa0 <line:7:11> 'int' 8
+|   | |-UnaryOperator 0x7fa2b6827028 <line:17:22, col:23> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fa2b6827000 <col:22> 'int' lvalue Var 0x7fa2b6826e90 'j' 'int'
+|   | `-BinaryOperator 0x7fa2b6827220 <line:18:5, col:17> 'float' '='
+|   |   |-ArraySubscriptExpr 0x7fa2b68270f8 <col:5, col:9> 'float' lvalue
+|   |   | |-ImplicitCastExpr 0x7fa2b68270c8 <col:5> 'float *' <ArrayToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fa2b6827048 <col:5> 'float [8]' lvalue Var 0x7fa2b6826cc0 'f4' 'float [8]'
+|   |   | `-ImplicitCastExpr 0x7fa2b68270e0 <col:8> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fa2b6827070 <col:8> 'int' lvalue Var 0x7fa2b6826e90 'j' 'int'
+|   |   `-ImplicitCastExpr 0x7fa2b6827208 <col:13, col:17> 'float' <IntegralToFloating>
+|   |     `-ImplicitCastExpr 0x7fa2b68271f0 <col:13, col:17> 'unsigned int' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7fa2b68271c8 <col:13, col:17> 'unsigned int' lvalue
+|   |         |-ImplicitCastExpr 0x7fa2b6827198 <col:13> 'unsigned int *' <ArrayToPointerDecay>
+|   |         | `-DeclRefExpr 0x7fa2b6827120 <col:13> 'unsigned int [8]' lvalue Var 0x7fa2b60271a0 'u4' 'unsigned int [8]'
+|   |         `-ImplicitCastExpr 0x7fa2b68271b0 <col:16> 'int' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fa2b6827148 <col:16> 'int' lvalue Var 0x7fa2b6826e90 'j' 'int'
+|   `-ForStmt 0x7fa2b6827670 <line:21:3, line:23:14>
+|     |-BinaryOperator 0x7fa2b68272c8 <line:21:8, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7fa2b6827280 <col:8> 'int' lvalue Var 0x7fa2b6826e90 'j' 'int'
+|     | `-IntegerLiteral 0x7fa2b68272a8 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fa2b6827350 <col:15, line:7:11> 'int' '<'
+|     | |-ImplicitCastExpr 0x7fa2b6827338 <line:21:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fa2b68272f0 <col:15> 'int' lvalue Var 0x7fa2b6826e90 'j' 'int'
+|     | `-IntegerLiteral 0x7fa2b6827318 <line:7:11> 'int' 8
+|     |-UnaryOperator 0x7fa2b68273a0 <line:21:22, col:23> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7fa2b6827378 <col:22> 'int' lvalue Var 0x7fa2b6826e90 'j' 'int'
+|     `-IfStmt 0x7fa2b6827638 <line:22:5, line:23:14>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-BinaryOperator 0x7fa2b68274b8 <line:22:9, col:18> 'int' '!='
+|       | |-ImplicitCastExpr 0x7fa2b68274a0 <col:9, col:13> 'double' <FloatingCast>
+|       | | `-ImplicitCastExpr 0x7fa2b6827488 <col:9, col:13> 'float' <LValueToRValue>
+|       | |   `-ArraySubscriptExpr 0x7fa2b6827440 <col:9, col:13> 'float' lvalue
+|       | |     |-ImplicitCastExpr 0x7fa2b6827410 <col:9> 'float *' <ArrayToPointerDecay>
+|       | |     | `-DeclRefExpr 0x7fa2b68273c0 <col:9> 'float [8]' lvalue Var 0x7fa2b6826cc0 'f4' 'float [8]'
+|       | |     `-ImplicitCastExpr 0x7fa2b6827428 <col:12> 'int' <LValueToRValue>
+|       | |       `-DeclRefExpr 0x7fa2b68273e8 <col:12> 'int' lvalue Var 0x7fa2b6826e90 'j' 'int'
+|       | `-FloatingLiteral 0x7fa2b6827468 <col:18> 'double' 4.000000e+09
+|       |-CallExpr 0x7fa2b6827610 <line:23:7, col:14> 'void'
+|       | `-ImplicitCastExpr 0x7fa2b68275f8 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|       |   `-DeclRefExpr 0x7fa2b68275a8 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7fa2b6827510 'abort' 'void (void) __attribute__((noreturn))'
+|       `-<<<NULL>>>
+`-FunctionDecl 0x7fa2b6827510 <col:7> col:7 implicit used abort 'void (void) __attribute__((noreturn))' extern

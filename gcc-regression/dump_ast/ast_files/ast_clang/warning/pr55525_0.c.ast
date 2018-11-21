@@ -1,0 +1,39 @@
+c_files/pr55525_0.c:7:10: warning: implicitly declaring library function 'strcmp' with type 'int (const char *, const char *)' [-Wimplicit-function-declaration]
+  return strcmp(&s[1], "foo");
+         ^
+c_files/pr55525_0.c:7:10: note: include the header <string.h> or explicitly provide a declaration for 'strcmp'
+1 warning generated.
+TranslationUnitDecl 0x7fb2480264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb248026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb248026740 '__int128'
+|-TypedefDecl 0x7fb248026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb248026760 'unsigned __int128'
+|-TypedefDecl 0x7fb248026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb248026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb248026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb248026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb248026dc0 'char *'
+|   `-BuiltinType 0x7fb248026560 'char'
+|-TypedefDecl 0x7fb2480270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb248027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb248026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb248026e58 '__va_list_tag'
+|-VarDecl 0x7fb248826a00 <c_files/pr55525_0.c:4:1, col:23> col:6 used s 'char [8]'
+|-FunctionDecl 0x7fb248826b68 <line:5:1, line:8:1> line:5:5 main 'int (void)'
+| `-CompoundStmt 0x7fb2488273b8 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7fb2488273a0 <line:7:3, col:29>
+|     `-CallExpr 0x7fb248827320 <col:10, col:29> 'int'
+|       |-ImplicitCastExpr 0x7fb248827308 <col:10> 'int (*)(const char *, const char *)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fb248827188 <col:10> 'int (const char *, const char *)' Function 0x7fb248827020 'strcmp' 'int (const char *, const char *)'
+|       |-ImplicitCastExpr 0x7fb248827358 <col:17, col:21> 'const char *' <BitCast>
+|       | `-UnaryOperator 0x7fb248827238 <col:17, col:21> 'char *' prefix '&'
+|       |   `-ArraySubscriptExpr 0x7fb248827210 <col:18, col:21> 'char' lvalue
+|       |     |-ImplicitCastExpr 0x7fb2488271f8 <col:18> 'char *' <ArrayToPointerDecay>
+|       |     | `-DeclRefExpr 0x7fb2488271b0 <col:18> 'char [8]' lvalue Var 0x7fb248826a00 's' 'char [8]'
+|       |     `-IntegerLiteral 0x7fb2488271d8 <col:20> 'int' 1
+|       `-ImplicitCastExpr 0x7fb248827388 <col:24> 'const char *' <BitCast>
+|         `-ImplicitCastExpr 0x7fb248827370 <col:24> 'char *' <ArrayToPointerDecay>
+|           `-StringLiteral 0x7fb248827298 <col:24> 'char [4]' lvalue "foo"
+`-FunctionDecl 0x7fb248827020 <col:10> col:10 implicit used strcmp 'int (const char *, const char *)' extern
+  |-ParmVarDecl 0x7fb2488270b8 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-ParmVarDecl 0x7fb248827118 <<invalid sloc>> <invalid sloc> 'const char *'

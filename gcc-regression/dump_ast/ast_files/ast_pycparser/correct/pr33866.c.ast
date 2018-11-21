@@ -1,0 +1,114 @@
+FileAST: 
+  Typedef: fill_iter_info, [], ['typedef']
+    TypeDecl: fill_iter_info, []
+      Struct: None
+        Decl: coords, [], [], []
+          PtrDecl: []
+            TypeDecl: coords, []
+              IdentifierType: ['long']
+  Decl: H5Diterate, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['fill_iter_info']
+      TypeDecl: H5Diterate, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: test_select_fill_hyper_simple, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: offset, [], [], []
+            PtrDecl: []
+              TypeDecl: offset, []
+                IdentifierType: ['long']
+        TypeDecl: test_select_fill_hyper_simple, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: start, [], [], []
+        ArrayDecl: []
+          TypeDecl: start, []
+            IdentifierType: ['long']
+          Constant: int, 2
+      Decl: num_points, [], [], []
+        TypeDecl: num_points, []
+          IdentifierType: ['int']
+      Decl: points, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: points, []
+              IdentifierType: ['long']
+            Constant: int, 2
+          Constant: int, 16
+      Decl: iter_info, [], [], []
+        TypeDecl: iter_info, []
+          IdentifierType: ['fill_iter_info']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Assignment: =
+        StructRef: .
+          ID: iter_info
+          ID: coords
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['long']
+          ID: points
+      For: 
+        ExprList: 
+          Assignment: =
+            ID: j
+            Assignment: =
+              ID: i
+              Constant: int, 0
+          Assignment: =
+            ID: num_points
+            Constant: int, 0
+        BinaryOp: <
+          ID: j
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            ArrayRef: 
+              ID: start
+              Constant: int, 1
+        ExprList: 
+          UnaryOp: p++
+            ID: j
+          UnaryOp: p++
+            ID: num_points
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                ID: points
+                ID: num_points
+              Constant: int, 0
+            BinaryOp: +
+              ID: i
+              ArrayRef: 
+                ID: start
+                Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                ID: points
+                ID: num_points
+              Constant: int, 1
+            BinaryOp: +
+              ID: j
+              ArrayRef: 
+                ID: start
+                Constant: int, 1
+      FuncCall: 
+        ID: H5Diterate
+        ExprList: 
+          UnaryOp: &
+            ID: iter_info

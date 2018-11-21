@@ -1,0 +1,83 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['char']
+      For: 
+        BinaryOp: >
+          ID: c
+          Constant: int, 0
+        Compound: 
+          For: 
+            Assignment: =
+              ID: d
+              Constant: int, 0
+            BinaryOp: <
+              ID: d
+              Constant: int, 2
+            UnaryOp: p++
+              ID: d
+            Compound: 
+              Assignment: =
+                ID: i
+                BinaryOp: <<
+                  Constant: int, 1
+                  ID: d
+              If: 
+                BinaryOp: -
+                  ID: i
+                  ID: a
+                Compound: 
+                  Assignment: =
+                    ID: e
+                    Assignment: =
+                      ID: b
+                      Constant: int, 0
+                  For: 
+                    ID: c
+                    UnaryOp: p--
+                      ID: c
+                    Assignment: =
+                      ID: d
+                      Constant: int, 127
+          Assignment: =
+            ID: h
+            UnaryOp: ~
+              ID: d
+          If: 
+            BinaryOp: >
+              ID: h
+              ID: c
+            For: 
+              EmptyStatement: 
+          Return: 
+            Constant: int, 0
+      Return: 
+        Constant: int, 0

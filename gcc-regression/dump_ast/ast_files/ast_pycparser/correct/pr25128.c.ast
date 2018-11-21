@@ -1,0 +1,93 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: foo1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned', 'int']
+        FuncCall: 
+          ID: bar
+      If: 
+        BinaryOp: <=
+          Constant: int, 0x10000
+          ID: a
+        FuncCall: 
+          ID: bar
+  FuncDef: 
+    Decl: foo2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned', 'int']
+        FuncCall: 
+          ID: bar
+      If: 
+        BinaryOp: >
+          Constant: int, 0x10000
+          ID: a
+        FuncCall: 
+          ID: bar
+  FuncDef: 
+    Decl: foo3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo3, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: bar
+      If: 
+        BinaryOp: <=
+          Constant: int, 0x10000
+          ID: a
+        FuncCall: 
+          ID: bar
+  FuncDef: 
+    Decl: foo4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo4, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: bar
+      If: 
+        BinaryOp: >
+          Constant: int, 0x10000
+          ID: a
+        FuncCall: 
+          ID: bar

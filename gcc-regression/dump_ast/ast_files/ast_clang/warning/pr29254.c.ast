@@ -1,0 +1,67 @@
+c_files/pr29254.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr29254.c:13:21: warning: control reaches end of non-void function [-Wreturn-type]
+int func1 (int * f){}
+                    ^
+c_files/pr29254.c:20:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr29254.c:26:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+4 warnings generated.
+TranslationUnitDecl 0x7fac508264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fac50826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fac50826740 '__int128'
+|-TypedefDecl 0x7fac50826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fac50826760 'unsigned __int128'
+|-TypedefDecl 0x7fac50826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fac50826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fac50826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fac50826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fac50826dc0 'char *'
+|   `-BuiltinType 0x7fac50826560 'char'
+|-TypedefDecl 0x7fac508270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fac50827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fac50826ee0 'struct __va_list_tag'
+|     `-Record 0x7fac50826e58 '__va_list_tag'
+|-FunctionDecl 0x7fac51025a00 <c_files/pr29254.c:4:1, col:20> col:5 used value_compare 'int ()'
+|-FunctionDecl 0x7fac51025be8 <line:6:1, line:11:1> line:7:1 used list_compare 'int (int *)'
+| |-ParmVarDecl 0x7fac51025b20 <col:15, col:21> col:21 used list1 'int *'
+| `-CompoundStmt 0x7fac51025d90 <line:8:1, line:11:1>
+|   `-IfStmt 0x7fac51025d58 <line:9:3, line:10:20>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fac51025cb0 <line:9:7> 'int *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fac51025c88 <col:7> 'int *' lvalue ParmVar 0x7fac51025b20 'list1' 'int *'
+|     |-CallExpr 0x7fac51025d30 <line:10:5, col:20> 'int'
+|     | `-ImplicitCastExpr 0x7fac51025d18 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fac51025cc8 <col:5> 'int ()' Function 0x7fac51025a00 'value_compare' 'int ()'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fac51025e58 <line:13:1, col:21> col:5 used func1 'int (int *)'
+| |-ParmVarDecl 0x7fac51025dc8 <col:12, col:18> col:18 f 'int *'
+| `-CompoundStmt 0x7fac51025ef8 <col:20, col:21>
+|-FunctionDecl 0x7fac51025fb8 prev 0x7fac51025a00 <line:15:1, line:20:1> line:16:1 used value_compare 'int (int *)'
+| |-ParmVarDecl 0x7fac51025f28 <col:16, col:22> col:22 used a 'int *'
+| `-CompoundStmt 0x7fac510261b0 <line:17:1, line:20:1>
+|   `-IfStmt 0x7fac51026178 <line:18:5, line:19:24>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fac51026080 <line:18:9> 'int *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fac51026058 <col:9> 'int *' lvalue ParmVar 0x7fac51025f28 'a' 'int *'
+|     |-CallExpr 0x7fac51026130 <line:19:9, col:24> 'int'
+|     | |-ImplicitCastExpr 0x7fac51026118 <col:9> 'int (*)(int *)' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7fac51026098 <col:9> 'int (int *)' Function 0x7fac51025be8 'list_compare' 'int (int *)'
+|     | `-ImplicitCastExpr 0x7fac51026160 <col:23> 'int *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fac510260c0 <col:23> 'int *' lvalue ParmVar 0x7fac51025f28 'a' 'int *'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fac510262b8 <line:22:1, line:26:1> line:23:1 func2 'int (const int *)'
+  |-ParmVarDecl 0x7fac510261e8 <col:8, col:20> col:20 used fb 'const int *'
+  `-CompoundStmt 0x7fac51026478 <line:24:1, line:26:1>
+    `-CallExpr 0x7fac51026448 <line:25:3, col:20> 'int'
+      |-ImplicitCastExpr 0x7fac51026430 <col:3> 'int (*)(int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fac51026358 <col:3> 'int (int *)' Function 0x7fac51025e58 'func1' 'int (int *)'
+      `-CStyleCastExpr 0x7fac51026408 <col:10, col:18> 'int *' <BitCast>
+        `-ImplicitCastExpr 0x7fac510263c0 <col:18> 'const int *' <LValueToRValue>
+          `-DeclRefExpr 0x7fac51026380 <col:18> 'const int *' lvalue ParmVar 0x7fac510261e8 'fb' 'const int *'

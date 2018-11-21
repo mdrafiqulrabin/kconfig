@@ -1,0 +1,29 @@
+c_files/pr30551-6.c:5:1: warning: return type of 'main' is not 'int' [-Wmain-return-type]
+void main(char a) {} /* { dg-warning "first argument of .main. should be .int." "int" } */
+^
+c_files/pr30551-6.c:5:1: note: change return type to 'int'
+void main(char a) {} /* { dg-warning "first argument of .main. should be .int." "int" } */
+^~~~
+int
+c_files/pr30551-6.c:5:6: error: first parameter of 'main' (argument count) must be of type 'int'
+void main(char a) {} /* { dg-warning "first argument of .main. should be .int." "int" } */
+     ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7ffa4f8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffa4f826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffa4f826740 '__int128'
+|-TypedefDecl 0x7ffa4f826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffa4f826760 'unsigned __int128'
+|-TypedefDecl 0x7ffa4f826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffa4f826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffa4f826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffa4f826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffa4f826dc0 'char *'
+|   `-BuiltinType 0x7ffa4f826560 'char'
+|-TypedefDecl 0x7ffa4f8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffa4f827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffa4f826ee0 'struct __va_list_tag'
+|     `-Record 0x7ffa4f826e58 '__va_list_tag'
+`-FunctionDecl 0x7ffa50025a00 <c_files/pr30551-6.c:5:1, col:20> col:6 invalid main 'void (char)'
+  |-ParmVarDecl 0x7ffa4f827130 <col:11, col:16> col:16 a 'char'
+  `-CompoundStmt 0x7ffa50025e80 <col:19, col:20>

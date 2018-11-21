@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7f83b68264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f83b6826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f83b6826740 '__int128'
+|-TypedefDecl 0x7f83b6826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f83b6826760 'unsigned __int128'
+|-TypedefDecl 0x7f83b6826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f83b6826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f83b6826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f83b6826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f83b6826dc0 'char *'
+|   `-BuiltinType 0x7f83b6826560 'char'
+|-TypedefDecl 0x7f83b68270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f83b6827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f83b6826ee0 'struct __va_list_tag'
+|     `-Record 0x7f83b6826e58 '__va_list_tag'
+|-FunctionDecl 0x7f83b7025ad8 <c_files/pr57848.c:4:21> col:21 implicit __builtin_ia32_crc32si 'unsigned int (unsigned int, unsigned int)' extern
+| |-ParmVarDecl 0x7f83b7025b70 <<invalid sloc>> <invalid sloc> 'unsigned int'
+| `-ParmVarDecl 0x7f83b7025bd0 <<invalid sloc>> <invalid sloc> 'unsigned int'
+`-FunctionDecl 0x7f83b7025c40 prev 0x7f83b7025ad8 <col:1, col:71> col:21 __builtin_ia32_crc32si 'unsigned int (unsigned int, unsigned int)' extern
+  |-ParmVarDecl 0x7f83b6827138 <col:45, col:54> col:57 'unsigned int'
+  `-ParmVarDecl 0x7f83b7025a00 <col:59, col:68> col:71 'unsigned int'

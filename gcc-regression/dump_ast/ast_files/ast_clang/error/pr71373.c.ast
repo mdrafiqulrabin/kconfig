@@ -1,0 +1,39 @@
+c_files/pr71373.c:16:1: error: function definition is not allowed here
+{
+^
+c_files/pr71373.c:31:1: error: function definition is not allowed here
+{
+^
+2 errors generated.
+TranslationUnitDecl 0x7fe5de8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe5de826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe5de826740 '__int128'
+|-TypedefDecl 0x7fe5de826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe5de826760 'unsigned __int128'
+|-TypedefDecl 0x7fe5de826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe5de826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe5de826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe5de826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe5de826dc0 'char *'
+|   `-BuiltinType 0x7fe5de826560 'char'
+|-TypedefDecl 0x7fe5de8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe5de827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe5de826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe5de826e58 '__va_list_tag'
+|-FunctionDecl 0x7fe5de877400 <c_files/pr71373.c:5:1, line:20:1> line:5:6 foo 'void (void)'
+| `-CompoundStmt 0x7fe5de877730 <line:6:1, line:20:1>
+|   `-CompoundStmt 0x7fe5de8776a0 <line:8:3, line:14:1>
+|     `-ForStmt 0x7fe5de877668 <line:10:5, line:11:7>
+|       |-DeclStmt 0x7fe5de877570 <line:10:10, col:19>
+|       | `-VarDecl 0x7fe5de8774f0 <col:10, col:18> col:14 used i 'int' cinit
+|       |   `-IntegerLiteral 0x7fe5de877550 <col:18> 'int' 0
+|       |-<<<NULL>>>
+|       |-BinaryOperator 0x7fe5de8775e8 <col:21, col:25> 'int' '<'
+|       | |-ImplicitCastExpr 0x7fe5de8775d0 <col:21> 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fe5de877588 <col:21> 'int' lvalue Var 0x7fe5de8774f0 'i' 'int'
+|       | `-IntegerLiteral 0x7fe5de8775b0 <col:25> 'int' 16
+|       |-UnaryOperator 0x7fe5de877638 <col:29, col:30> 'int' postfix '++'
+|       | `-DeclRefExpr 0x7fe5de877610 <col:29> 'int' lvalue Var 0x7fe5de8774f0 'i' 'int'
+|       `-NullStmt 0x7fe5de877658 <line:11:7>
+`-FunctionDecl 0x7fe5de8777e0 <line:25:1, line:41:1> line:25:6 BAR 'void (void)'
+  `-CompoundStmt 0x7fe5de8778e8 <line:26:1, line:41:1>

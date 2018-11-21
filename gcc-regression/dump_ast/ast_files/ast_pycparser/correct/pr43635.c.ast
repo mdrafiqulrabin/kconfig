@@ -1,0 +1,45 @@
+FileAST: 
+  Decl: d, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: d, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          FuncDecl: 
+            ParamList: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['float']
+            TypeDecl: foo, []
+              IdentifierType: ['void']
+    Compound: 
+      Decl: x, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            ParamList: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            PtrDecl: []
+              FuncDecl: 
+                ParamList: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['float']
+                TypeDecl: x, []
+                  IdentifierType: ['void']
+        ID: d
+      Return: 
+        FuncCall: 
+          UnaryOp: *
+            ID: x

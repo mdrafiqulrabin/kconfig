@@ -1,0 +1,33 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: color
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+  Decl: col, ['const'], ['static'], []
+    TypeDecl: col, ['const']
+      Struct: color
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: f, []
+            Struct: color
+    Compound: 
+      Return: 
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                Struct: color
+          UnaryOp: &
+            ID: col
+  Decl: None, [], [], []
+    Struct: color
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']

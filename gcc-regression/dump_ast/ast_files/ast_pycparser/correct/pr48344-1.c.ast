@@ -1,0 +1,16 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: N, [], [], []
+        TypeDecl: N, []
+          IdentifierType: ['int']
+        Constant: int, 2
+      Decl: slots, [], [], []
+        ArrayDecl: []
+          TypeDecl: slots, []
+            IdentifierType: ['int']
+          ID: N

@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f9e3d025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9e3d026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9e3d025d40 '__int128'
+|-TypedefDecl 0x7f9e3d026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9e3d025d60 'unsigned __int128'
+|-TypedefDecl 0x7f9e3d026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9e3d026170 'struct __NSConstantString_tag'
+|   `-Record 0x7f9e3d0260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9e3d026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9e3d0263c0 'char *'
+|   `-BuiltinType 0x7f9e3d025b60 'char'
+|-TypedefDecl 0x7f9e3d0266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9e3d026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9e3d0264e0 'struct __va_list_tag'
+|     `-Record 0x7f9e3d026458 '__va_list_tag'
+|-RecordDecl 0x7f9e3d026720 <c_files/pr36111.c:4:9, line:7:1> line:4:9 struct definition
+| |-FieldDecl 0x7f9e3c826400 <line:5:3, col:7> col:7 referenced lock 'int'
+| `-FieldDecl 0x7f9e3c826460 <line:6:3, col:7> col:7 pad0_ 'int'
+|-TypedefDecl 0x7f9e3c826500 <line:4:1, line:7:3> col:3 referenced mutex_t 'struct mutex_t':'mutex_t'
+| `-ElaboratedType 0x7f9e3c8264b0 'struct mutex_t' sugar
+|   `-RecordType 0x7f9e3d0267b0 'mutex_t'
+|     `-Record 0x7f9e3d026720 ''
+|-VarDecl 0x7f9e3c8265a0 <line:9:1, col:16> col:16 used main_arena 'mutex_t':'mutex_t' static
+`-FunctionDecl 0x7f9e3c826688 <line:11:1, line:15:1> line:11:6 __malloc_check_init 'void ()'
+  `-CompoundStmt 0x7f9e3c8268e0 <line:12:1, line:15:1>
+    `-ForStmt 0x7f9e3c8268a8 <line:13:3, line:14:53>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-GCCAsmStmt 0x7f9e3c826848 <col:5, col:53>
+        `-MemberExpr 0x7f9e3c826810 <col:36, col:47> 'int' lvalue .lock 0x7f9e3c826400
+          `-DeclRefExpr 0x7f9e3c8267e8 <col:36> 'mutex_t':'mutex_t' lvalue Var 0x7f9e3c8265a0 'main_arena' 'mutex_t':'mutex_t'

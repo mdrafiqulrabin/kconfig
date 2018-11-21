@@ -1,0 +1,73 @@
+c_files/pr37168.c:10:6: warning: unknown attribute 'altivec' ignored [-Wunknown-attributes]
+foo (vector float a)
+     ^
+c_files/pr37168.c:7:32: note: expanded from macro 'vector'
+#define vector __attribute__ ((altivec (vector__)))
+                               ^
+c_files/pr37168.c:9:1: warning: unknown attribute 'altivec' ignored [-Wunknown-attributes]
+vector float
+^
+c_files/pr37168.c:7:32: note: expanded from macro 'vector'
+#define vector __attribute__ ((altivec (vector__)))
+                               ^
+c_files/pr37168.c:12:3: warning: unknown attribute 'altivec' ignored [-Wunknown-attributes]
+  vector float b = __builtin_vec_madd (b, a, (vector float) { C, C, C, C });
+  ^
+c_files/pr37168.c:7:32: note: expanded from macro 'vector'
+#define vector __attribute__ ((altivec (vector__)))
+                               ^
+c_files/pr37168.c:12:20: error: use of unknown builtin '__builtin_vec_madd' [-Wimplicit-function-declaration]
+  vector float b = __builtin_vec_madd (b, a, (vector float) { C, C, C, C });
+                   ^
+c_files/pr37168.c:12:47: warning: unknown attribute 'altivec' ignored [-Wunknown-attributes]
+  vector float b = __builtin_vec_madd (b, a, (vector float) { C, C, C, C });
+                                              ^~~~~~
+c_files/pr37168.c:7:32: note: expanded from macro 'vector'
+#define vector __attribute__ ((altivec (vector__)))
+                               ^~~~~~~~~~~~~~~~~~
+c_files/pr37168.c:12:66: warning: excess elements in scalar initializer
+  vector float b = __builtin_vec_madd (b, a, (vector float) { C, C, C, C });
+                                                                 ^
+c_files/pr37168.c:6:11: note: expanded from macro 'C'
+#define C 3.68249351546114573519399405666776E-44f
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5 warnings and 1 error generated.
+TranslationUnitDecl 0x7f8ebd0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8ebd026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8ebd026740 '__int128'
+|-TypedefDecl 0x7f8ebd026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8ebd026760 'unsigned __int128'
+|-TypedefDecl 0x7f8ebd026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8ebd026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8ebd026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8ebd026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8ebd026dc0 'char *'
+|   `-BuiltinType 0x7f8ebd026560 'char'
+|-TypedefDecl 0x7f8ebd0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8ebd027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8ebd026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8ebd026e58 '__va_list_tag'
+|-FunctionDecl 0x7f8ebd827a30 <c_files/pr37168.c:7:16, line:14:1> line:10:1 foo 'float (float)'
+| |-ParmVarDecl 0x7f8ebd027158 <line:7:16, line:10:19> col:19 used a 'float'
+| `-CompoundStmt 0x7f8ebd828028 <line:11:1, line:14:1>
+|   |-DeclStmt 0x7f8ebd827fb8 <line:7:16, line:12:76>
+|   | `-VarDecl 0x7f8ebd827b38 <line:7:16, line:12:75> col:16 used b 'float' cinit
+|   |   `-ImplicitCastExpr 0x7f8ebd827fa0 <col:20, col:75> 'float' <IntegralToFloating>
+|   |     `-CallExpr 0x7f8ebd827ed0 <col:20, col:75> 'int'
+|   |       |-ImplicitCastExpr 0x7f8ebd827eb8 <col:20> 'int (*)()' <FunctionToPointerDecay>
+|   |       | `-DeclRefExpr 0x7f8ebd827c98 <col:20> 'int ()' Function 0x7f8ebd827c00 '__builtin_vec_madd' 'int ()'
+|   |       |-ImplicitCastExpr 0x7f8ebd827f28 <col:40> 'double' <FloatingCast>
+|   |       | `-ImplicitCastExpr 0x7f8ebd827f10 <col:40> 'float' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f8ebd827cc0 <col:40> 'float' lvalue Var 0x7f8ebd827b38 'b' 'float'
+|   |       |-ImplicitCastExpr 0x7f8ebd827f58 <col:43> 'double' <FloatingCast>
+|   |       | `-ImplicitCastExpr 0x7f8ebd827f40 <col:43> 'float' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f8ebd827ce8 <col:43> 'float' lvalue ParmVar 0x7f8ebd027158 'a' 'float'
+|   |       `-ImplicitCastExpr 0x7f8ebd827f88 <col:46, col:74> 'double' <FloatingCast>
+|   |         `-ImplicitCastExpr 0x7f8ebd827f70 <col:46, col:74> 'float' <LValueToRValue>
+|   |           `-CompoundLiteralExpr 0x7f8ebd827e60 <col:46, col:74> 'float' lvalue
+|   |             `-InitListExpr 0x7f8ebd827e18 <col:61, col:74> 'float'
+|   |               `-FloatingLiteral 0x7f8ebd827d38 <line:6:11> 'float' 3.643376e-44
+|   `-ReturnStmt 0x7f8ebd828010 <line:13:3, col:10>
+|     `-ImplicitCastExpr 0x7f8ebd827ff8 <col:10> 'float' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8ebd827fd0 <col:10> 'float' lvalue Var 0x7f8ebd827b38 'b' 'float'
+`-FunctionDecl 0x7f8ebd827c00 <<invalid sloc>> line:12:20 implicit used __builtin_vec_madd 'int ()'

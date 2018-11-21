@@ -1,0 +1,26 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: s
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['long']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Decl: tab, [], [], []
+        ArrayDecl: []
+          TypeDecl: tab, []
+            IdentifierType: ['int']
+  Decl: idx, [], [], []
+    TypeDecl: idx, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  Decl: val, ['const'], [], []
+    TypeDecl: val, ['const']
+      Struct: s
+    InitList: 
+      Constant: int, 0
+      Constant: int, 0
+      InitList: 
+        Constant: int, 42
+        Constant: int, 1337

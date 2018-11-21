@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7fa6bc8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa6bc826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa6bc826740 '__int128'
+|-TypedefDecl 0x7fa6bc826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa6bc826760 'unsigned __int128'
+|-TypedefDecl 0x7fa6bc826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa6bc826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa6bc826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa6bc826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa6bc826dc0 'char *'
+|   `-BuiltinType 0x7fa6bc826560 'char'
+|-TypedefDecl 0x7fa6bc8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa6bc827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa6bc826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa6bc826e58 '__va_list_tag'
+|-VarDecl 0x7fa6bc827138 <c_files/pr50092.c:4:1, col:14> col:14 used v 'volatile int'
+|-FunctionDecl 0x7fa6bd025ac0 <line:6:1, col:22> col:6 used bar 'void (long double)'
+| `-ParmVarDecl 0x7fa6bd025a00 <col:11, col:16> col:22 'long double'
+|-FunctionDecl 0x7fa6bd025c60 <line:7:1, col:33> col:6 used baz 'void (_Complex long double *)'
+| `-ParmVarDecl 0x7fa6bd025b98 <col:11, col:32> col:33 '_Complex long double *'
+`-FunctionDecl 0x7fa6bd025dc0 <line:9:1, line:15:1> line:10:1 foo 'void (void)'
+  `-CompoundStmt 0x7fa6bd0261a8 <line:11:1, line:15:1>
+    |-DeclStmt 0x7fa6bd025f38 <line:12:3, col:36>
+    | `-VarDecl 0x7fa6bd025ed8 <col:3, col:35> col:24 used w '_Complex long double [100000000]'
+    |-CallExpr 0x7fa6bd0260a0 <line:13:3, col:38> 'void'
+    | |-ImplicitCastExpr 0x7fa6bd026088 <col:3> 'void (*)(long double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa6bd025f50 <col:3> 'void (long double)' Function 0x7fa6bd025ac0 'bar' 'void (long double)'
+    | `-BinaryOperator 0x7fa6bd026030 <col:8, col:26> 'long double' '/'
+    |   |-CStyleCastExpr 0x7fa6bd025fd0 <col:8, col:22> 'long double' <IntegralToFloating>
+    |   | `-ImplicitCastExpr 0x7fa6bd025fb8 <col:22> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fa6bd025f78 <col:22> 'volatile int' lvalue Var 0x7fa6bc827138 'v' 'volatile int'
+    |   `-ImplicitCastExpr 0x7fa6bd026018 <col:26> 'long double' <FloatingCast>
+    |     `-FloatingLiteral 0x7fa6bd025ff8 <col:26> 'double' 2.147484e+09
+    `-CallExpr 0x7fa6bd026160 <line:14:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fa6bd026148 <col:3> 'void (*)(_Complex long double *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa6bd0260d0 <col:3> 'void (_Complex long double *)' Function 0x7fa6bd025c60 'baz' 'void (_Complex long double *)'
+      `-ImplicitCastExpr 0x7fa6bd026190 <col:8> '_Complex long double *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7fa6bd0260f8 <col:8> '_Complex long double [100000000]' lvalue Var 0x7fa6bd025ed8 'w' '_Complex long double [100000000]'

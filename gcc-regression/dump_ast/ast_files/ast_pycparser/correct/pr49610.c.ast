@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: g_7, [], ['extern'], []
+    TypeDecl: g_7, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: func_13, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p_17, [], [], []
+            TypeDecl: p_17, []
+              IdentifierType: ['int']
+        TypeDecl: func_13, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        Assignment: =
+          ID: i
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['signed', 'char']
+            BinaryOp: +
+              ID: i
+              Constant: int, 1
+        Compound: 
+          Assignment: &=
+            ID: g_7
+            ID: p_17
+          Assignment: &=
+            ID: g_7
+            BinaryOp: >
+              ID: p_17
+              Constant: int, 1

@@ -1,0 +1,103 @@
+c_files/pr30020.c:7:30: warning: overflow converting case value to switch condition type (-1 to 255) [-Wswitch]
+  switch (c) { case 42: case -1: return -1; }; /* { dg-warning "25:case label value" } */
+                             ^
+c_files/pr30020.c:8:30: warning: overflow converting case value to switch condition type (300 to 44) [-Wswitch]
+  switch (c) { case 42: case 300: return -1; }; /* { dg-warning "25:case label value" } */
+                             ^
+c_files/pr30020.c:9:30: warning: overflow converting case value to switch condition type (-1 to 255) [-Wswitch]
+  switch (c) { case 42: case -1 ... 2: return -1; }; /* { dg-warning "25:lower value in case" } */
+                             ^
+c_files/pr30020.c:10:38: warning: overflow converting case value to switch condition type (300 to 44) [-Wswitch]
+  switch (c) { case 42: case 250 ... 300: return -1; }; /* { dg-warning "25:upper value in case" } */
+                                     ^
+4 warnings generated.
+TranslationUnitDecl 0x7f9e728264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9e72826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9e72826740 '__int128'
+|-TypedefDecl 0x7f9e72826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9e72826760 'unsigned __int128'
+|-TypedefDecl 0x7f9e72826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9e72826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9e72826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9e72826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9e72826dc0 'char *'
+|   `-BuiltinType 0x7f9e72826560 'char'
+|-TypedefDecl 0x7f9e728270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9e72827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9e72826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9e72826e58 '__va_list_tag'
+`-FunctionDecl 0x7f9e72877430 <c_files/pr30020.c:4:1, line:12:1> line:5:1 foo 'int (unsigned char)'
+  |-ParmVarDecl 0x7f9e72827138 <col:6, col:20> col:20 used c 'unsigned char'
+  `-CompoundStmt 0x7f9e72877cc8 <line:6:1, line:12:1>
+    |-SwitchStmt 0x7f9e72877568 <line:7:3, col:45>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f9e72877550 <col:11> 'int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7f9e72877538 <col:11> 'unsigned char' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9e72877510 <col:11> 'unsigned char' lvalue ParmVar 0x7f9e72827138 'c' 'unsigned char'
+    | `-CompoundStmt 0x7f9e728776c0 <col:14, col:45>
+    |   `-CaseStmt 0x7f9e728775b8 <col:16, col:42>
+    |     |-IntegerLiteral 0x7f9e72877598 <col:21> 'int' 42
+    |     |-<<<NULL>>>
+    |     `-CaseStmt 0x7f9e72877630 <col:25, col:42>
+    |       |-UnaryOperator 0x7f9e72877610 <col:30, col:31> 'int' prefix '-'
+    |       | `-IntegerLiteral 0x7f9e728775f0 <col:31> 'int' 1
+    |       |-<<<NULL>>>
+    |       `-ReturnStmt 0x7f9e728776a8 <col:34, col:42>
+    |         `-UnaryOperator 0x7f9e72877688 <col:41, col:42> 'int' prefix '-'
+    |           `-IntegerLiteral 0x7f9e72877668 <col:42> 'int' 1
+    |-NullStmt 0x7f9e728776e0 <col:46>
+    |-SwitchStmt 0x7f9e72877748 <line:8:3, col:46>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f9e72877730 <col:11> 'int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7f9e72877718 <col:11> 'unsigned char' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9e728776f0 <col:11> 'unsigned char' lvalue ParmVar 0x7f9e72827138 'c' 'unsigned char'
+    | `-CompoundStmt 0x7f9e72877880 <col:14, col:46>
+    |   `-CaseStmt 0x7f9e72877798 <col:16, col:43>
+    |     |-IntegerLiteral 0x7f9e72877778 <col:21> 'int' 42
+    |     |-<<<NULL>>>
+    |     `-CaseStmt 0x7f9e728777f0 <col:25, col:43>
+    |       |-IntegerLiteral 0x7f9e728777d0 <col:30> 'int' 300
+    |       |-<<<NULL>>>
+    |       `-ReturnStmt 0x7f9e72877868 <col:35, col:43>
+    |         `-UnaryOperator 0x7f9e72877848 <col:42, col:43> 'int' prefix '-'
+    |           `-IntegerLiteral 0x7f9e72877828 <col:43> 'int' 1
+    |-NullStmt 0x7f9e728778a0 <col:47>
+    |-SwitchStmt 0x7f9e72877908 <line:9:3, col:51>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f9e728778f0 <col:11> 'int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7f9e728778d8 <col:11> 'unsigned char' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9e728778b0 <col:11> 'unsigned char' lvalue ParmVar 0x7f9e72827138 'c' 'unsigned char'
+    | `-CompoundStmt 0x7f9e72877a80 <col:14, col:51>
+    |   `-CaseStmt 0x7f9e72877958 <col:16, col:48>
+    |     |-IntegerLiteral 0x7f9e72877938 <col:21> 'int' 42
+    |     |-<<<NULL>>>
+    |     `-CaseStmt 0x7f9e728779f0 <col:25, col:48>
+    |       |-UnaryOperator 0x7f9e728779b0 <col:30, col:31> 'int' prefix '-'
+    |       | `-IntegerLiteral 0x7f9e72877990 <col:31> 'int' 1
+    |       |-IntegerLiteral 0x7f9e728779d0 <col:37> 'int' 2
+    |       `-ReturnStmt 0x7f9e72877a68 <col:40, col:48>
+    |         `-UnaryOperator 0x7f9e72877a48 <col:47, col:48> 'int' prefix '-'
+    |           `-IntegerLiteral 0x7f9e72877a28 <col:48> 'int' 1
+    |-NullStmt 0x7f9e72877aa0 <col:52>
+    |-SwitchStmt 0x7f9e72877b08 <line:10:3, col:54>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f9e72877af0 <col:11> 'int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7f9e72877ad8 <col:11> 'unsigned char' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9e72877ab0 <col:11> 'unsigned char' lvalue ParmVar 0x7f9e72827138 'c' 'unsigned char'
+    | `-CompoundStmt 0x7f9e72877c60 <col:14, col:54>
+    |   `-CaseStmt 0x7f9e72877b58 <col:16, col:51>
+    |     |-IntegerLiteral 0x7f9e72877b38 <col:21> 'int' 42
+    |     |-<<<NULL>>>
+    |     `-CaseStmt 0x7f9e72877bd0 <col:25, col:51>
+    |       |-IntegerLiteral 0x7f9e72877b90 <col:30> 'int' 250
+    |       |-IntegerLiteral 0x7f9e72877bb0 <col:38> 'int' 300
+    |       `-ReturnStmt 0x7f9e72877c48 <col:43, col:51>
+    |         `-UnaryOperator 0x7f9e72877c28 <col:50, col:51> 'int' prefix '-'
+    |           `-IntegerLiteral 0x7f9e72877c08 <col:51> 'int' 1
+    |-NullStmt 0x7f9e72877c80 <col:55>
+    `-ReturnStmt 0x7f9e72877cb0 <line:11:3, col:10>
+      `-IntegerLiteral 0x7f9e72877c90 <col:10> 'int' 0

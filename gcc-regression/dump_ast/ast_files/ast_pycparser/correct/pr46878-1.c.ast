@@ -1,0 +1,73 @@
+FileAST: 
+  Decl: __foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: __foo, []
+        IdentifierType: ['int']
+  Decl: __bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: __bar, []
+        IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: baz
+      Decl: newp, [], [], []
+        PtrDecl: []
+          TypeDecl: newp, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: get_ice, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: op, [], [], []
+            PtrDecl: []
+              TypeDecl: op, []
+                IdentifierType: ['int']
+          Decl: ret, [], [], []
+            PtrDecl: []
+              TypeDecl: ret, []
+                Struct: baz
+        TypeDecl: get_ice, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: tmpp, [], [], []
+        PtrDecl: []
+          TypeDecl: tmpp, []
+            IdentifierType: ['int']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: c
+        BinaryOp: !=
+          FuncCall: 
+            ID: __foo
+          Constant: int, 1
+      If: 
+        FuncCall: 
+          ID: __bar
+        Compound: 
+          Return: 
+            Constant: int, 1
+      If: 
+        ID: c
+        Assignment: =
+          ID: tmpp
+          ID: op
+      If: 
+        ID: tmpp
+        Compound: 
+        If: 
+          ID: c
+          Compound: 
+            Assignment: =
+              StructRef: ->
+                ID: ret
+                ID: newp
+              ID: tmpp

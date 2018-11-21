@@ -1,0 +1,50 @@
+TranslationUnitDecl 0x7f8b2b0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8b2b026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8b2b026740 '__int128'
+|-TypedefDecl 0x7f8b2b026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8b2b026760 'unsigned __int128'
+|-TypedefDecl 0x7f8b2b026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8b2b026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8b2b026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8b2b026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8b2b026dc0 'char *'
+|   `-BuiltinType 0x7f8b2b026560 'char'
+|-TypedefDecl 0x7f8b2b0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8b2b027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8b2b026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8b2b026e58 '__va_list_tag'
+|-RecordDecl 0x7f8b2b027120 <c_files/pr41442.c:4:9, col:16> col:16 struct LINK
+|-TypedefDecl 0x7f8b2b077420 <col:1, col:21> col:21 referenced link 'struct LINK':'struct LINK'
+| `-ElaboratedType 0x7f8b2b0271d0 'struct LINK' sugar
+|   `-RecordType 0x7f8b2b0271b0 'struct LINK'
+|     `-Record 0x7f8b2b077490 'LINK'
+|-RecordDecl 0x7f8b2b077490 prev 0x7f8b2b027120 <line:5:1, line:8:1> line:5:8 struct LINK definition
+| `-FieldDecl 0x7f8b2b0775a8 <line:7:5, col:11> col:11 referenced next 'link *'
+`-FunctionDecl 0x7f8b2b077788 <line:10:1, line:16:1> line:10:5 haha 'int (link *, link *)'
+  |-ParmVarDecl 0x7f8b2b077600 <col:10, col:16> col:16 used p1 'link *'
+  |-ParmVarDecl 0x7f8b2b077670 <col:20, col:26> col:26 used p2 'link *'
+  `-CompoundStmt 0x7f8b2b077b58 <line:11:1, line:16:1>
+    |-IfStmt 0x7f8b2b077ae8 <line:12:3, line:13:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8b2b077a88 <line:12:7, col:38> 'int' '||'
+    | | |-ParenExpr 0x7f8b2b0779d8 <col:7, col:29> 'int'
+    | | | `-BinaryOperator 0x7f8b2b0779b0 <col:8, col:25> 'int' '&&'
+    | | |   |-ImplicitCastExpr 0x7f8b2b077998 <col:8, col:12> 'link *' <LValueToRValue>
+    | | |   | `-MemberExpr 0x7f8b2b0778b0 <col:8, col:12> 'link *' lvalue ->next 0x7f8b2b0775a8
+    | | |   |   `-ImplicitCastExpr 0x7f8b2b077898 <col:8> 'link *' <LValueToRValue>
+    | | |   |     `-DeclRefExpr 0x7f8b2b077870 <col:8> 'link *' lvalue ParmVar 0x7f8b2b077600 'p1' 'link *'
+    | | |   `-UnaryOperator 0x7f8b2b077978 <col:20, col:25> 'int' prefix '!'
+    | | |     `-ImplicitCastExpr 0x7f8b2b077960 <col:21, col:25> 'link *' <LValueToRValue>
+    | | |       `-MemberExpr 0x7f8b2b077928 <col:21, col:25> 'link *' lvalue ->next 0x7f8b2b0775a8
+    | | |         `-ImplicitCastExpr 0x7f8b2b077910 <col:21> 'link *' <LValueToRValue>
+    | | |           `-DeclRefExpr 0x7f8b2b0778e8 <col:21> 'link *' lvalue ParmVar 0x7f8b2b077670 'p2' 'link *'
+    | | `-ImplicitCastExpr 0x7f8b2b077a70 <col:34, col:38> 'link *' <LValueToRValue>
+    | |   `-MemberExpr 0x7f8b2b077a38 <col:34, col:38> 'link *' lvalue ->next 0x7f8b2b0775a8
+    | |     `-ImplicitCastExpr 0x7f8b2b077a20 <col:34> 'link *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f8b2b0779f8 <col:34> 'link *' lvalue ParmVar 0x7f8b2b077670 'p2' 'link *'
+    | |-ReturnStmt 0x7f8b2b077ad0 <line:13:5, col:12>
+    | | `-IntegerLiteral 0x7f8b2b077ab0 <col:12> 'int' 0
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f8b2b077b40 <line:15:3, col:10>
+      `-IntegerLiteral 0x7f8b2b077b20 <col:10> 'int' 1

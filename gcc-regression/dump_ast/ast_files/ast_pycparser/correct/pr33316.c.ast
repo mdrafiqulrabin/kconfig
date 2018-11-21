@@ -1,0 +1,65 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['void']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: a, ['const']
+            Struct: None
+              Decl: d, [], [], []
+                ArrayDecl: []
+                  TypeDecl: d, []
+                    IdentifierType: ['int']
+                  ID: y
+        ID: x
+      Return: 
+        ArrayRef: 
+          StructRef: .
+            ArrayRef: 
+              ID: a
+              Constant: int, 0
+            ID: d
+          Constant: int, 0
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['void']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: a, ['const']
+            Struct: S
+              Decl: d, [], [], []
+                ArrayDecl: []
+                  TypeDecl: d, []
+                    IdentifierType: ['int']
+                  ID: y
+        ID: x
+      Return: 
+        ArrayRef: 
+          StructRef: .
+            ArrayRef: 
+              ID: a
+              Constant: int, 0
+            ID: d
+          Constant: int, 0

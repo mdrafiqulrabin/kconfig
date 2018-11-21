@@ -1,0 +1,102 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: E1
+      EnumeratorList: 
+        Enumerator: A
+  Decl: None, [], [], []
+    Enum: E2
+      EnumeratorList: 
+        Enumerator: B
+  Decl: None, [], [], []
+    Struct: S
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          Enum: E1
+        Constant: int, 3
+  Decl: s, [], [], []
+    ArrayDecl: []
+      TypeDecl: s, []
+        Struct: S
+    InitList: 
+      InitList: 
+        ID: B
+  Decl: None, [], [], []
+    Union: U
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['long', 'long', 'int']
+  Decl: None, [], [], []
+    Struct: R
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          Union: U
+        InitList: 
+          NamedInitializer: 
+            UnaryOp: ++
+              ID: i
+            ID: i
+          NamedInitializer: 
+            Constant: int, 1
+            ID: l
+      Decl: u2, [], [], []
+        TypeDecl: u2, []
+          Union: U
+        InitList: 
+          NamedInitializer: 
+            Constant: int, 1
+            ID: i
+          NamedInitializer: 
+            Constant: int, 3
+            ID: l
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['int']
+        InitList: 
+          UnaryOp: p++
+            ID: i
+          NamedInitializer: 
+            Constant: int, 1
+            Constant: int, 0
+      Decl: a2, [], [], []
+        ArrayDecl: []
+          TypeDecl: a2, []
+            IdentifierType: ['int']
+        InitList: 
+          ID: i
+          NamedInitializer: 
+            Constant: int, 1
+            Constant: int, 0
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          Struct: R
+        InitList: 
+          Constant: int, 1
+          NamedInitializer: 
+            Constant: int, 2
+            ID: a
+      Decl: r2, [], [], []
+        TypeDecl: r2, []
+          Struct: R
+        InitList: 
+          UnaryOp: ++
+            ID: i
+          NamedInitializer: 
+            Constant: int, 2
+            ID: a

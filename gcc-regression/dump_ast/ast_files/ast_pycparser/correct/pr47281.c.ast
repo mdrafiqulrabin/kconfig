@@ -1,0 +1,75 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: T
+  Typedef: F, [], ['typedef']
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: F, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: aux, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              FuncDecl: 
+                TypeDecl: x, []
+                  IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: aux, []
+            IdentifierType: ['F']
+    Compound: 
+      Return: 
+        ID: x
+  Decl: make_mess, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: make_mess, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: get_funloc, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              FuncDecl: 
+                ParamList: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+                TypeDecl: x, []
+                  IdentifierType: ['void']
+          Decl: y, [], [], []
+            PtrDecl: []
+              FuncDecl: 
+                PtrDecl: []
+                  TypeDecl: y, []
+                    IdentifierType: ['F']
+        PtrDecl: []
+          TypeDecl: get_funloc, []
+            IdentifierType: ['F']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: y
+          ExprList: 
+            ID: x
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        PtrDecl: []
+          TypeDecl: foo, []
+            IdentifierType: ['F']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: get_funloc
+          ExprList: 
+            ID: make_mess
+            ID: aux

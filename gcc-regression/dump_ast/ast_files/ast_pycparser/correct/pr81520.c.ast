@@ -1,0 +1,17 @@
+FileAST: 
+  FuncDef: 
+    Decl: a, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: a, []
+          IdentifierType: ['char']
+    Compound: 
+      FuncCall: 
+        ID: a
+        ExprList: 
+          ID: b
+      Return: 
+        Constant: int, 0

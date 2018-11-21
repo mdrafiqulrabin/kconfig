@@ -1,0 +1,56 @@
+c_files/pr68833-1.c:12:29: warning: format specifies type 'int' but the argument has type 'double' [-Wformat]
+  __builtin_printf ("%d\n", 1.2);       /* { dg-error "expects argument of type" } */
+                     ~~     ^~~
+                     %f
+c_files/pr68833-1.c:20:3: error: use of unknown builtin '__builtin_exit' [-Wimplicit-function-declaration]
+  __builtin_exit (0);
+  ^
+c_files/pr68833-1.c:20:3: note: did you mean '__builtin_printf'?
+c_files/pr68833-1.c:12:3: note: '__builtin_printf' declared here
+  __builtin_printf ("%d\n", 1.2);       /* { dg-error "expects argument of type" } */
+  ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fc4c48264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc4c4826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc4c4826740 '__int128'
+|-TypedefDecl 0x7fc4c4826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc4c4826760 'unsigned __int128'
+|-TypedefDecl 0x7fc4c4826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc4c4826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc4c4826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc4c4826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc4c4826dc0 'char *'
+|   `-BuiltinType 0x7fc4c4826560 'char'
+|-TypedefDecl 0x7fc4c48270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc4c4827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc4c4826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc4c4826e58 '__va_list_tag'
+|-VarDecl 0x7fc4c48271a0 <c_files/pr68833-1.c:6:1, col:13> col:5 a 'int [131072]'
+|-VarDecl 0x7fc4c48774c0 <line:7:1, col:11> col:5 b 'int [1024]'
+|-FunctionDecl 0x7fc4c4877600 <line:9:1, line:14:1> line:10:1 f1 'void (const char *)'
+| |-ParmVarDecl 0x7fc4c4877538 <col:5, col:17> col:17 used fmt 'const char *'
+| `-CompoundStmt 0x7fc4c4877e28 <line:11:1, line:14:1>
+|   |-CallExpr 0x7fc4c4877930 <line:12:3, col:32> 'int'
+|   | |-ImplicitCastExpr 0x7fc4c4877918 <col:3> 'int (*)(const char *, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fc4c4877830 <col:3> '<builtin fn type>' Function 0x7fc4c48776d8 '__builtin_printf' 'int (const char *, ...)'
+|   | |-ImplicitCastExpr 0x7fc4c4877980 <col:21> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7fc4c4877968 <col:21> 'char *' <ArrayToPointerDecay>
+|   | |   `-StringLiteral 0x7fc4c4877898 <col:21> 'char [4]' lvalue "%d\n"
+|   | `-FloatingLiteral 0x7fc4c48778c8 <col:29> 'double' 1.200000e+00
+|   `-CallExpr 0x7fc4c4877dd8 <line:13:3, col:29> 'int'
+|     |-ImplicitCastExpr 0x7fc4c4877dc0 <col:3> 'int (*)(const char *, ...)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fc4c4877d50 <col:3> '<builtin fn type>' Function 0x7fc4c48776d8 '__builtin_printf' 'int (const char *, ...)'
+|     |-ImplicitCastExpr 0x7fc4c4877e10 <col:21> 'const char *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fc4c4877d78 <col:21> 'const char *' lvalue ParmVar 0x7fc4c4877538 'fmt' 'const char *'
+|     `-FloatingLiteral 0x7fc4c4877da0 <col:26> 'double' 1.200000e+00
+|-FunctionDecl 0x7fc4c48776d8 <line:12:3> col:3 implicit used __builtin_printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fc4c4877770 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fc4c48777d8 <col:3> Implicit printf 1 2
+|-FunctionDecl 0x7fc4c4877f10 <line:16:1, col:21> col:13 f2 'void (void)' extern
+|-FunctionDecl 0x7fc4c4878038 prev 0x7fc4c4877f10 <line:17:1, line:21:1> line:18:1 f2 'void (void)'
+| `-CompoundStmt 0x7fc4c4878290 <line:19:1, line:21:1>
+|   `-CallExpr 0x7fc4c4878260 <line:20:3, col:20> 'int'
+|     |-ImplicitCastExpr 0x7fc4c4878248 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fc4c48781d8 <col:3> 'int ()' Function 0x7fc4c4878140 '__builtin_exit' 'int ()'
+|     `-IntegerLiteral 0x7fc4c4878200 <col:19> 'int' 0
+`-FunctionDecl 0x7fc4c4878140 <<invalid sloc>> col:3 implicit used __builtin_exit 'int ()'

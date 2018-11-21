@@ -1,0 +1,31 @@
+FileAST: 
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          ArrayDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+            UnaryOp: -
+              Constant: int, 1
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      BinaryOp: +
+        Constant: int, 123
+        UnaryOp: sizeof
+          Typename: None, []
+            ArrayDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+              UnaryOp: -
+                Constant: int, 1

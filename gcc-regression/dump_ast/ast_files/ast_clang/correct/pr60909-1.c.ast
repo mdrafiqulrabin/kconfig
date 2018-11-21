@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fbd228264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbd22826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbd22826740 '__int128'
+|-TypedefDecl 0x7fbd22826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbd22826760 'unsigned __int128'
+|-TypedefDecl 0x7fbd22826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbd22826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbd22826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbd22826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbd22826dc0 'char *'
+|   `-BuiltinType 0x7fbd22826560 'char'
+|-TypedefDecl 0x7fbd228270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbd22827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbd22826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbd22826e58 '__va_list_tag'
+|-FunctionDecl 0x7fbd23025a00 <c_files/pr60909-1.c:4:1, col:21> col:13 used bar 'void (int)' extern
+| `-ParmVarDecl 0x7fbd22827138 <col:18> col:21 'int'
+|-FunctionDecl 0x7fbd23025be0 <line:6:1, line:11:1> line:7:1 foo 'void (unsigned int *)'
+| |-ParmVarDecl 0x7fbd23025b20 <col:6, col:16> col:16 used u 'unsigned int *'
+| `-CompoundStmt 0x7fbd23026038 <line:8:1, line:11:1>
+|   |-DeclStmt 0x7fbd23025f40 <line:9:3, col:43>
+|   | `-VarDecl 0x7fbd23025c98 <col:3, col:42> col:7 used i 'int' cinit
+|   |   `-ImplicitCastExpr 0x7fbd23025f28 <col:11, col:42> 'int' <IntegralCast>
+|   |     `-CallExpr 0x7fbd23025ee0 <col:11, col:42> 'unsigned int'
+|   |       |-ImplicitCastExpr 0x7fbd23025ec8 <col:11> 'unsigned int (*)(unsigned int *)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fbd23025e38 <col:11> '<builtin fn type>' Function 0x7fbd23025d38 '__builtin_ia32_rdrand32_step' 'unsigned int (unsigned int *)'
+|   |       `-ImplicitCastExpr 0x7fbd23025f10 <col:41> 'unsigned int *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fbd23025e60 <col:41> 'unsigned int *' lvalue ParmVar 0x7fbd23025b20 'u' 'unsigned int *'
+|   `-CallExpr 0x7fbd23025ff0 <line:10:3, col:9> 'void'
+|     |-ImplicitCastExpr 0x7fbd23025fd8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fbd23025f58 <col:3> 'void (int)' Function 0x7fbd23025a00 'bar' 'void (int)'
+|     `-ImplicitCastExpr 0x7fbd23026020 <col:8> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fbd23025f80 <col:8> 'int' lvalue Var 0x7fbd23025c98 'i' 'int'
+`-FunctionDecl 0x7fbd23025d38 <line:9:11> col:11 implicit used __builtin_ia32_rdrand32_step 'unsigned int (unsigned int *)' extern
+  `-ParmVarDecl 0x7fbd23025dd0 <<invalid sloc>> <invalid sloc> 'unsigned int *'

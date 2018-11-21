@@ -1,0 +1,29 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: pdf_object
+      Decl: val, [], [], []
+        TypeDecl: val, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: pdf_count_size_object, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p_obj, [], [], []
+            PtrDecl: []
+              TypeDecl: p_obj, []
+                Struct: pdf_object
+        TypeDecl: pdf_count_size_object, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          FuncCall: 
+            ID: pdf_count_size_object
+            ExprList: 
+              ID: p_obj
+          BinaryOp: *
+            Constant: int, 2
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  Struct: pdf_object

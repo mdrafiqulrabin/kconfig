@@ -1,0 +1,91 @@
+TranslationUnitDecl 0x7fa0bd01ccd0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa0bd01d220 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa0bd01cf40 '__int128'
+|-TypedefDecl 0x7fa0bd01d290 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa0bd01cf60 'unsigned __int128'
+|-TypedefDecl 0x7fa0bd01d568 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa0bd01d370 'struct __NSConstantString_tag'
+|   `-Record 0x7fa0bd01d2e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa0bd01d600 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa0bd01d5c0 'char *'
+|   `-BuiltinType 0x7fa0bd01cd60 'char'
+|-TypedefDecl 0x7fa0bd01d8c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa0bd01d870 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa0bd01d6e0 'struct __va_list_tag'
+|     `-Record 0x7fa0bd01d658 '__va_list_tag'
+|-VarDecl 0x7fa0bd01d938 <c_files/pr79131-1.c:4:1, col:11> col:11 used a 'long long'
+|-EnumDecl 0x7fa0bd06dc00 <line:5:1, col:62> col:1
+| |-EnumConstantDecl 0x7fa0bd06dcc0 <col:8> col:8 NILFS_SEGMENT_USAGE_ACTIVE 'int'
+| `-EnumConstantDecl 0x7fa0bd06dd08 <col:36> col:36 referenced NILFS_SEGMENT_USAGE_DIRTY 'int'
+|-VarDecl 0x7fa0bd06dda0 <col:1, col:64> col:64 used b 'enum (anonymous enum at c_files/pr79131-1.c:5:1)':'enum (anonymous at c_files/pr79131-1.c:5:1)'
+|-FunctionDecl 0x7fa0bd06def0 <line:6:1, line:10:1> line:6:6 used nilfs_sufile_mod_counter 'void (long long)'
+| |-ParmVarDecl 0x7fa0bd06de30 <col:31, col:41> col:41 used p1 'long long'
+| `-CompoundStmt 0x7fa0bd06e550 <col:45, line:10:1>
+|   |-DeclStmt 0x7fa0bd06e060 <line:7:3, col:14>
+|   | `-VarDecl 0x7fa0bd06dfa8 <col:3, col:12> col:8 used c 'long' cinit
+|   |   `-ImplicitCastExpr 0x7fa0bd06e048 <col:12> 'long' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fa0bd06e030 <col:12> 'long long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fa0bd06e008 <col:12> 'long long' lvalue ParmVar 0x7fa0bd06de30 'p1' 'long long'
+|   |-DeclStmt 0x7fa0bd06e388 <line:8:3, col:36>
+|   | `-VarDecl 0x7fa0bd06e090 <col:3, col:35> col:12 used d 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fa0bd06e370 <col:16, col:35> 'unsigned int' <IntegralCast>
+|   |     `-CallExpr 0x7fa0bd06e310 <col:16, col:35> 'unsigned long long'
+|   |       |-ImplicitCastExpr 0x7fa0bd06e2f8 <col:16> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fa0bd06e280 <col:16> '<builtin fn type>' Function 0x7fa0bd06e128 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+|   |       `-ImplicitCastExpr 0x7fa0bd06e358 <col:34> 'unsigned long long' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7fa0bd06e340 <col:34> 'long long' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fa0bd06e2a8 <col:34> 'long long' lvalue Var 0x7fa0bd01d938 'a' 'long long'
+|   `-BinaryOperator 0x7fa0bd06e528 <line:9:3, col:30> 'long long' '='
+|     |-DeclRefExpr 0x7fa0bd06e3a0 <col:3> 'long long' lvalue Var 0x7fa0bd01d938 'a' 'long long'
+|     `-ImplicitCastExpr 0x7fa0bd06e510 <col:7, col:30> 'long long' <IntegralCast>
+|       `-CallExpr 0x7fa0bd06e4c8 <col:7, col:30> 'unsigned long long'
+|         |-ImplicitCastExpr 0x7fa0bd06e4b0 <col:7> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fa0bd06e3c8 <col:7> '<builtin fn type>' Function 0x7fa0bd06e128 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+|         `-ImplicitCastExpr 0x7fa0bd06e4f8 <col:25, col:29> 'unsigned long long' <IntegralCast>
+|           `-BinaryOperator 0x7fa0bd06e488 <col:25, col:29> 'long' '+'
+|             |-ImplicitCastExpr 0x7fa0bd06e470 <col:25> 'long' <IntegralCast>
+|             | `-ImplicitCastExpr 0x7fa0bd06e440 <col:25> 'unsigned int' <LValueToRValue>
+|             |   `-DeclRefExpr 0x7fa0bd06e3f0 <col:25> 'unsigned int' lvalue Var 0x7fa0bd06e090 'd' 'unsigned int'
+|             `-ImplicitCastExpr 0x7fa0bd06e458 <col:29> 'long' <LValueToRValue>
+|               `-DeclRefExpr 0x7fa0bd06e418 <col:29> 'long' lvalue Var 0x7fa0bd06dfa8 'c' 'long'
+|-FunctionDecl 0x7fa0bd06e128 <line:8:16> col:16 implicit used __builtin_bswap64 'unsigned long long (unsigned long long)' extern
+| |-ParmVarDecl 0x7fa0bd06e1c0 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| |-NoThrowAttr 0x7fa0bd06e228 <col:16> Implicit
+| `-ConstAttr 0x7fa0bd06e270 <col:16> Implicit
+|-FunctionDecl 0x7fa0bd06e5c8 <line:11:1, line:16:1> line:11:6 nilfs_sufile_do_free 'void ()'
+| `-CompoundStmt 0x7fa0bd06ed38 <col:29, line:16:1>
+|   |-DeclStmt 0x7fa0bd06e768 <line:12:3, col:11>
+|   | |-VarDecl 0x7fa0bd06e678 <col:3, col:7> col:7 used e 'int'
+|   | `-VarDecl 0x7fa0bd06e6f0 <col:3, col:10> col:10 used f 'int'
+|   |-BinaryOperator 0x7fa0bd06eaf8 <line:13:3, col:35> 'int' '='
+|   | |-DeclRefExpr 0x7fa0bd06e780 <col:3> 'int' lvalue Var 0x7fa0bd06e678 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fa0bd06eae0 <col:7, col:35> 'int' <IntegralCast>
+|   |   `-BinaryOperator 0x7fa0bd06eab8 <col:7, col:35> 'unsigned int' '&'
+|   |     |-CallExpr 0x7fa0bd06e9d0 <col:7, col:26> 'unsigned int'
+|   |     | |-ImplicitCastExpr 0x7fa0bd06e9b8 <col:7> 'unsigned int (*)(unsigned int)' <BuiltinFnToFnPtr>
+|   |     | | `-DeclRefExpr 0x7fa0bd06e940 <col:7> '<builtin fn type>' Function 0x7fa0bd06e7e8 '__builtin_bswap32' 'unsigned int (unsigned int)'
+|   |     | `-ImplicitCastExpr 0x7fa0bd06ea18 <col:25> 'unsigned int' <IntegralCast>
+|   |     |   `-ImplicitCastExpr 0x7fa0bd06ea00 <col:25> 'enum (anonymous enum at c_files/pr79131-1.c:5:1)':'enum (anonymous at c_files/pr79131-1.c:5:1)' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7fa0bd06e968 <col:25> 'enum (anonymous enum at c_files/pr79131-1.c:5:1)':'enum (anonymous at c_files/pr79131-1.c:5:1)' lvalue Var 0x7fa0bd06dda0 'b' 'enum (anonymous enum at c_files/pr79131-1.c:5:1)':'enum (anonymous at c_files/pr79131-1.c:5:1)'
+|   |     `-ImplicitCastExpr 0x7fa0bd06eaa0 <col:30, col:35> 'unsigned int' <IntegralCast>
+|   |       `-BinaryOperator 0x7fa0bd06ea78 <col:30, col:35> 'int' '<<'
+|   |         |-IntegerLiteral 0x7fa0bd06ea30 <col:30> 'int' 1
+|   |         `-DeclRefExpr 0x7fa0bd06ea50 <col:35> 'int' EnumConstant 0x7fa0bd06dd08 'NILFS_SEGMENT_USAGE_DIRTY' 'int'
+|   |-BinaryOperator 0x7fa0bd06eb88 <line:14:3, col:7> 'int' '='
+|   | |-DeclRefExpr 0x7fa0bd06eb20 <col:3> 'int' lvalue Var 0x7fa0bd06e6f0 'f' 'int'
+|   | `-ImplicitCastExpr 0x7fa0bd06eb70 <col:7> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fa0bd06eb48 <col:7> 'int' lvalue Var 0x7fa0bd06e678 'e' 'int'
+|   `-CallExpr 0x7fa0bd06ecf0 <line:15:3, col:38> 'void'
+|     |-ImplicitCastExpr 0x7fa0bd06ecd8 <col:3> 'void (*)(long long)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fa0bd06ebb0 <col:3> 'void (long long)' Function 0x7fa0bd06def0 'nilfs_sufile_mod_counter' 'void (long long)'
+|     `-ImplicitCastExpr 0x7fa0bd06ed20 <col:28, col:37> 'long long' <IntegralCast>
+|       `-ConditionalOperator 0x7fa0bd06ec78 <col:28, col:37> 'int'
+|         |-ImplicitCastExpr 0x7fa0bd06ec60 <col:28> 'int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fa0bd06ebd8 <col:28> 'int' lvalue Var 0x7fa0bd06e6f0 'f' 'int'
+|         |-UnaryOperator 0x7fa0bd06ec20 <col:32, col:33> 'int' prefix '-'
+|         | `-IntegerLiteral 0x7fa0bd06ec00 <col:33> 'int' 1
+|         `-IntegerLiteral 0x7fa0bd06ec40 <col:37> 'int' 0
+`-FunctionDecl 0x7fa0bd06e7e8 <line:13:7> col:7 implicit used __builtin_bswap32 'unsigned int (unsigned int)' extern
+  |-ParmVarDecl 0x7fa0bd06e880 <<invalid sloc>> <invalid sloc> 'unsigned int'
+  |-NoThrowAttr 0x7fa0bd06e8e8 <col:7> Implicit
+  `-ConstAttr 0x7fa0bd06e930 <col:7> Implicit

@@ -1,0 +1,137 @@
+TranslationUnitDecl 0x7fb9328264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb932826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb932826740 '__int128'
+|-TypedefDecl 0x7fb932826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb932826760 'unsigned __int128'
+|-TypedefDecl 0x7fb932826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb932826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb932826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb932826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb932826dc0 'char *'
+|   `-BuiltinType 0x7fb932826560 'char'
+|-TypedefDecl 0x7fb9328270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb932827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb932826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb932826e58 '__va_list_tag'
+|-VarDecl 0x7fb932827138 <c_files/pr81863.c:6:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fb933025a00 <col:1, col:8> col:8 used d 'int'
+|-VarDecl 0x7fb933025a78 <col:1, col:11> col:11 used f 'int'
+|-VarDecl 0x7fb933025b10 <line:7:1, col:6> col:6 used b 'long'
+|-RecordDecl 0x7fb933025b70 <line:8:1, line:10:1> line:8:8 struct ww_class definition
+| `-FieldDecl 0x7fb933025c38 <line:9:3, col:7> col:7 referenced stamp 'int'
+|-VarDecl 0x7fb933025cd0 <line:8:1, line:10:3> col:3 used c 'struct ww_class':'struct ww_class'
+|-RecordDecl 0x7fb933025d48 <line:11:1, line:14:1> line:11:8 struct stress definition
+| |-FieldDecl 0x7fb933025e08 <line:12:3, col:7> col:7 referenced locks 'int'
+| `-FieldDecl 0x7fb933025e68 <line:13:3, col:7> col:7 referenced nlocks 'int'
+|-VarDecl 0x7fb933025ec8 <line:15:1, col:7> col:7 used e 'void *'
+|-FunctionDecl 0x7fb933026038 <line:16:1, line:19:1> line:16:5 used atomic_add_return_relaxed 'int (int *)'
+| |-ParmVarDecl 0x7fb933025f70 <col:31, col:36> col:36 used p1 'int *'
+| `-CompoundStmt 0x7fb9330263e8 <col:40, line:19:1>
+|   |-CallExpr 0x7fb933026330 <line:17:3, col:24> 'void'
+|   | |-ImplicitCastExpr 0x7fb933026318 <col:3> 'void (*)(const void *, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fb9330262a0 <col:3> '<builtin fn type>' Function 0x7fb933026148 '__builtin_prefetch' 'void (const void *, ...)'
+|   | `-ImplicitCastExpr 0x7fb933026378 <col:22> 'const void *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fb933026360 <col:22> 'int *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fb9330262c8 <col:22> 'int *' lvalue ParmVar 0x7fb933025f70 'p1' 'int *'
+|   `-ReturnStmt 0x7fb9330263d0 <line:18:3, col:10>
+|     `-ImplicitCastExpr 0x7fb9330263b8 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb933026390 <col:10> 'int' lvalue Var 0x7fb932827138 'a' 'int'
+|-FunctionDecl 0x7fb933026148 <line:17:3> col:3 implicit used __builtin_prefetch 'void (const void *, ...)' extern
+| |-ParmVarDecl 0x7fb9330261e0 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-NoThrowAttr 0x7fb933026248 <col:3> Implicit
+| `-ConstAttr 0x7fb933026290 <col:3> Implicit
+|-FunctionDecl 0x7fb9330264f0 <line:20:1, line:23:1> line:20:6 used atomic_long_inc_return_relaxed 'void (int *)'
+| |-ParmVarDecl 0x7fb933026428 <col:37, col:42> col:42 used p1 'int *'
+| `-CompoundStmt 0x7fb933026738 <col:46, line:23:1>
+|   |-DeclStmt 0x7fb933026648 <line:21:3, col:14>
+|   | `-VarDecl 0x7fb9330265a8 <col:3, col:12> col:8 used v 'int *' cinit
+|   |   `-ImplicitCastExpr 0x7fb933026630 <col:12> 'int *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fb933026608 <col:12> 'int *' lvalue ParmVar 0x7fb933026428 'p1' 'int *'
+|   `-CallExpr 0x7fb9330266f0 <line:22:3, col:30> 'int'
+|     |-ImplicitCastExpr 0x7fb9330266d8 <col:3> 'int (*)(int *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fb933026660 <col:3> 'int (int *)' Function 0x7fb933026038 'atomic_add_return_relaxed' 'int (int *)'
+|     `-ImplicitCastExpr 0x7fb933026720 <col:29> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb933026688 <col:29> 'int *' lvalue Var 0x7fb9330265a8 'v' 'int *'
+|-FunctionDecl 0x7fb9330268e0 <line:24:1, line:26:1> line:24:6 used ww_acquire_init 'void (struct ww_class *)'
+| |-ParmVarDecl 0x7fb9330267e0 <col:22, col:39> col:39 used p1 'struct ww_class *'
+| `-CompoundStmt 0x7fb933026ad0 <col:43, line:26:1>
+|   `-CallExpr 0x7fb933026aa0 <line:25:3, col:44> 'void'
+|     |-ImplicitCastExpr 0x7fb933026a88 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fb933026980 <col:3> 'void (int *)' Function 0x7fb9330264f0 'atomic_long_inc_return_relaxed' 'void (int *)'
+|     `-UnaryOperator 0x7fb933026a38 <col:34, col:39> 'int *' prefix '&'
+|       `-MemberExpr 0x7fb933026a00 <col:35, col:39> 'int' lvalue ->stamp 0x7fb933025c38
+|         `-ImplicitCastExpr 0x7fb9330269d0 <col:35> 'struct ww_class *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fb9330269a8 <col:35> 'struct ww_class *' lvalue ParmVar 0x7fb9330267e0 'p1' 'struct ww_class *'
+|-FunctionDecl 0x7fb933026b38 <line:27:1, col:20> col:6 used ww_mutex_lock 'void ()'
+|-FunctionDecl 0x7fb933026c20 <line:28:1, col:23> col:6 used get_random_order 'int *()'
+`-FunctionDecl 0x7fb933026cd8 <line:29:1, line:43:1> line:29:6 stress_inorder_work 'void ()'
+  `-CompoundStmt 0x7fb933027990 <col:28, line:43:1>
+    |-DeclStmt 0x7fb933026ed8 <line:30:3, col:23>
+    | `-VarDecl 0x7fb933026e20 <col:3, col:22> col:18 used g 'struct stress *' cinit
+    |   `-ImplicitCastExpr 0x7fb933026ec0 <col:22> 'struct stress *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fb933026ea8 <col:22> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fb933026e80 <col:22> 'void *' lvalue Var 0x7fb933025ec8 'e' 'void *'
+    |-DeclStmt 0x7fb933026ff8 <line:31:3, col:20>
+    | `-VarDecl 0x7fb933026f08 <col:3, col:14> col:7 used h 'int' cinit
+    |   `-ImplicitCastExpr 0x7fb933026fe0 <col:11, col:14> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7fb933026fa8 <col:11, col:14> 'int' lvalue ->nlocks 0x7fb933025e68
+    |       `-ImplicitCastExpr 0x7fb933026f90 <col:11> 'struct stress *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fb933026f68 <col:11> 'struct stress *' lvalue Var 0x7fb933026e20 'g' 'struct stress *'
+    |-DeclStmt 0x7fb933027240 <line:32:3, col:46>
+    | |-VarDecl 0x7fb933027028 <col:3, col:16> col:8 used i 'int *' cinit
+    | | `-UnaryOperator 0x7fb933027100 <col:12, col:16> 'int *' prefix '&'
+    | |   `-MemberExpr 0x7fb9330270c8 <col:13, col:16> 'int' lvalue ->locks 0x7fb933025e08
+    | |     `-ImplicitCastExpr 0x7fb9330270b0 <col:13> 'struct stress *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fb933027088 <col:13> 'struct stress *' lvalue Var 0x7fb933026e20 'g' 'struct stress *'
+    | `-VarDecl 0x7fb933027138 <col:3, col:45> col:24 used j 'int *' cinit
+    |   `-CallExpr 0x7fb933027200 <col:28, col:45> 'int *'
+    |     `-ImplicitCastExpr 0x7fb9330271e8 <col:28> 'int *(*)()' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fb933027198 <col:28> 'int *()' Function 0x7fb933026c20 'get_random_order' 'int *()'
+    `-DoStmt 0x7fb933027970 <line:33:3, line:42:13>
+      |-CompoundStmt 0x7fb9330278f0 <line:33:6, line:42:3>
+      | |-DeclStmt 0x7fb9330272d0 <line:34:5, col:10>
+      | | `-VarDecl 0x7fb933027270 <col:5, col:9> col:9 used n 'int'
+      | |-CallExpr 0x7fb9330273d0 <line:35:5, col:23> 'void'
+      | | |-ImplicitCastExpr 0x7fb9330273b8 <col:5> 'void (*)(struct ww_class *)' <FunctionToPointerDecay>
+      | | | `-DeclRefExpr 0x7fb9330272e8 <col:5> 'void (struct ww_class *)' Function 0x7fb9330268e0 'ww_acquire_init' 'void (struct ww_class *)'
+      | | `-UnaryOperator 0x7fb933027338 <col:21, col:22> 'struct ww_class *' prefix '&'
+      | |   `-DeclRefExpr 0x7fb933027310 <col:22> 'struct ww_class':'struct ww_class' lvalue Var 0x7fb933025cd0 'c' 'struct ww_class':'struct ww_class'
+      | |-LabelStmt 0x7fb9330277b8 <line:36:3, line:38:28> 'retry'
+      | | `-ForStmt 0x7fb933027738 <line:37:5, line:38:28>
+      | |   |-BinaryOperator 0x7fb933027448 <line:37:10, col:14> 'int' '='
+      | |   | |-DeclRefExpr 0x7fb933027400 <col:10> 'int' lvalue Var 0x7fb933027270 'n' 'int'
+      | |   | `-IntegerLiteral 0x7fb933027428 <col:14> 'int' 0
+      | |   |-<<<NULL>>>
+      | |   |-BinaryOperator 0x7fb9330274f0 <col:17, col:21> 'int' '<'
+      | |   | |-ImplicitCastExpr 0x7fb9330274c0 <col:17> 'int' <LValueToRValue>
+      | |   | | `-DeclRefExpr 0x7fb933027470 <col:17> 'int' lvalue Var 0x7fb933027270 'n' 'int'
+      | |   | `-ImplicitCastExpr 0x7fb9330274d8 <col:21> 'int' <LValueToRValue>
+      | |   |   `-DeclRefExpr 0x7fb933027498 <col:21> 'int' lvalue Var 0x7fb933026f08 'h' 'int'
+      | |   |-UnaryOperator 0x7fb933027540 <col:24, col:25> 'int' postfix '++'
+      | |   | `-DeclRefExpr 0x7fb933027518 <col:24> 'int' lvalue Var 0x7fb933027270 'n' 'int'
+      | |   `-CallExpr 0x7fb9330276f0 <line:38:7, col:28> 'void'
+      | |     |-ImplicitCastExpr 0x7fb9330276d8 <col:7> 'void (*)()' <FunctionToPointerDecay>
+      | |     | `-DeclRefExpr 0x7fb933027560 <col:7> 'void ()' Function 0x7fb933026b38 'ww_mutex_lock' 'void ()'
+      | |     `-ImplicitCastExpr 0x7fb933027720 <col:21, col:27> 'int' <LValueToRValue>
+      | |       `-ArraySubscriptExpr 0x7fb933027688 <col:21, col:27> 'int' lvalue
+      | |         |-ImplicitCastExpr 0x7fb933027658 <col:21> 'int *' <LValueToRValue>
+      | |         | `-DeclRefExpr 0x7fb933027588 <col:21> 'int *' lvalue Var 0x7fb933027028 'i' 'int *'
+      | |         `-ImplicitCastExpr 0x7fb933027670 <col:23, col:26> 'int' <LValueToRValue>
+      | |           `-ArraySubscriptExpr 0x7fb933027630 <col:23, col:26> 'int' lvalue
+      | |             |-ImplicitCastExpr 0x7fb933027600 <col:23> 'int *' <LValueToRValue>
+      | |             | `-DeclRefExpr 0x7fb9330275b0 <col:23> 'int *' lvalue Var 0x7fb933027138 'j' 'int *'
+      | |             `-ImplicitCastExpr 0x7fb933027618 <col:25> 'int' <LValueToRValue>
+      | |               `-DeclRefExpr 0x7fb9330275d8 <col:25> 'int' lvalue Var 0x7fb933027270 'n' 'int'
+      | |-BinaryOperator 0x7fb933027838 <line:39:5, col:9> 'int' '='
+      | | |-DeclRefExpr 0x7fb9330277d0 <col:5> 'int' lvalue Var 0x7fb933025a78 'f' 'int'
+      | | `-ImplicitCastExpr 0x7fb933027820 <col:9> 'int' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fb9330277f8 <col:9> 'int' lvalue Var 0x7fb933027270 'n' 'int'
+      | `-IfStmt 0x7fb9330278b8 <line:40:5, line:41:12>
+      |   |-<<<NULL>>>
+      |   |-<<<NULL>>>
+      |   |-ImplicitCastExpr 0x7fb933027888 <line:40:9> 'int' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fb933027860 <col:9> 'int' lvalue Var 0x7fb933025a00 'd' 'int'
+      |   |-GotoStmt 0x7fb9330278a0 <line:41:7, col:12> 'retry' 0x7fb933027770
+      |   `-<<<NULL>>>
+      `-ImplicitCastExpr 0x7fb933027958 <line:42:12> 'long' <LValueToRValue>
+        `-DeclRefExpr 0x7fb933027930 <col:12> 'long' lvalue Var 0x7fb933025b10 'b' 'long'

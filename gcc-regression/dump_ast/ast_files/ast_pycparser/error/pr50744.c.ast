@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "show_ast_pycparser.py", line 13, in <module>
+    ast = parser.parse(text_code, filename='<none>')
+  File "/Library/Python/2.7/site-packages/pycparser/c_parser.py", line 152, in parse
+    debug=debuglevel)
+  File "/Library/Python/2.7/site-packages/pycparser/ply/yacc.py", line 331, in parse
+    return self.parseopt_notrack(input, lexer, debug, tracking, tokenfunc)
+  File "/Library/Python/2.7/site-packages/pycparser/ply/yacc.py", line 1118, in parseopt_notrack
+    p.callable(pslice)
+  File "/Library/Python/2.7/site-packages/pycparser/c_parser.py", line 566, in p_pp_directive
+    self._token_coord(p, 1))
+  File "/Library/Python/2.7/site-packages/pycparser/plyparser.py", line 66, in _parse_error
+    raise ParseError("%s: %s" % (coord, msg))
+pycparser.plyparser.ParseError: <none>:22:1: Directives not supported yet

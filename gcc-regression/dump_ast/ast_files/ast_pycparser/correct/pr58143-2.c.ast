@@ -1,0 +1,109 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: g, [], [], []
+    PtrDecl: []
+      TypeDecl: g, []
+        IdentifierType: ['int']
+  Decl: h, [], [], []
+    TypeDecl: h, []
+      IdentifierType: ['int']
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  Decl: c, ['volatile'], [], []
+    TypeDecl: c, ['volatile']
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: foo, []
+          IdentifierType: ['char']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          ID: p
+          Constant: int, 1
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      For: 
+        Assignment: =
+          ID: h
+          Constant: int, 0
+        BinaryOp: <
+          ID: h
+          Constant: int, 3
+        Assignment: =
+          ID: h
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              ID: h
+        Compound: 
+          ID: c
+          For: 
+            Assignment: =
+              ID: f
+              Constant: int, 0
+            BinaryOp: <
+              ID: f
+              Constant: int, 1
+            UnaryOp: p++
+              ID: f
+            Compound: 
+              Assignment: =
+                ID: i
+                TernaryOp: 
+                  BinaryOp: &&
+                    ID: a
+                    BinaryOp: <
+                      Constant: int, 0
+                      BinaryOp: -
+                        UnaryOp: -
+                          ID: __INT_MAX__
+                        ID: h
+                  Constant: int, 0
+                  Constant: int, 1
+              If: 
+                ID: e
+                For: 
+                  ID: d
+                  Assignment: =
+                    ID: b
+                    Constant: int, 0
+                Assignment: =
+                  ID: g
+                  Constant: int, 0
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: bar
+      Return: 
+        Constant: int, 0

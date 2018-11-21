@@ -1,0 +1,14 @@
+FileAST: 
+  Decl: shortv2, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: shortv2, []
+        IdentifierType: ['short']
+  FuncDef: 
+    Decl: shortv1, [], [], []
+      FuncDecl: 
+        TypeDecl: shortv1, []
+          IdentifierType: ['short']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: shortv2

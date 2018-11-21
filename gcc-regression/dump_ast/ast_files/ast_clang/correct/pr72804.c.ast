@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fba8e018ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fba8e019020 <<invalid sloc>> <invalid sloc> implicit referenced __int128_t '__int128'
+| `-BuiltinType 0x7fba8e018d40 '__int128'
+|-TypedefDecl 0x7fba8e019090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fba8e018d60 'unsigned __int128'
+|-TypedefDecl 0x7fba8e019368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fba8e019170 'struct __NSConstantString_tag'
+|   `-Record 0x7fba8e0190e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fba8e019400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fba8e0193c0 'char *'
+|   `-BuiltinType 0x7fba8e018b60 'char'
+|-TypedefDecl 0x7fba8e0196c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fba8e019670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fba8e0194e0 'struct __va_list_tag'
+|     `-Record 0x7fba8e019458 '__va_list_tag'
+|-FunctionDecl 0x7fba8e069b00 <c_files/pr72804.c:6:1, line:10:1> line:7:1 foo '__int128_t (__int128_t *)'
+| |-ParmVarDecl 0x7fba8e069a00 <col:6, col:18> col:18 used src '__int128_t *'
+| `-CompoundStmt 0x7fba8e069c90 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7fba8e069c78 <line:9:3, col:12>
+|     `-UnaryOperator 0x7fba8e069c58 <col:10, col:12> '__int128_t':'__int128' prefix '~'
+|       `-ImplicitCastExpr 0x7fba8e069c40 <col:11, col:12> '__int128_t':'__int128' <LValueToRValue>
+|         `-UnaryOperator 0x7fba8e069c20 <col:11, col:12> '__int128_t':'__int128' lvalue prefix '*'
+|           `-ImplicitCastExpr 0x7fba8e069c08 <col:12> '__int128_t *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fba8e069be0 <col:12> '__int128_t *' lvalue ParmVar 0x7fba8e069a00 'src' '__int128_t *'
+`-FunctionDecl 0x7fba8e069e40 <line:12:1, line:16:1> line:13:1 bar 'void (__int128_t *, __int128_t)'
+  |-ParmVarDecl 0x7fba8e069cc0 <col:6, col:18> col:18 used dst '__int128_t *'
+  |-ParmVarDecl 0x7fba8e069d30 <col:23, col:34> col:34 used src '__int128_t':'__int128'
+  `-CompoundStmt 0x7fba8e069fd0 <line:14:1, line:16:1>
+    `-BinaryOperator 0x7fba8e069fa8 <line:15:3, col:12> '__int128_t':'__int128' '='
+      |-UnaryOperator 0x7fba8e069f28 <col:3, col:4> '__int128_t':'__int128' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fba8e069f10 <col:4> '__int128_t *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fba8e069ee8 <col:4> '__int128_t *' lvalue ParmVar 0x7fba8e069cc0 'dst' '__int128_t *'
+      `-UnaryOperator 0x7fba8e069f88 <col:11, col:12> '__int128_t':'__int128' prefix '~'
+        `-ImplicitCastExpr 0x7fba8e069f70 <col:12> '__int128_t':'__int128' <LValueToRValue>
+          `-DeclRefExpr 0x7fba8e069f48 <col:12> '__int128_t':'__int128' lvalue ParmVar 0x7fba8e069d30 'src' '__int128_t':'__int128'

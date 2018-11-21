@@ -1,0 +1,84 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: a, ['const'], ['static'], []
+    ArrayDecl: []
+      TypeDecl: a, ['const']
+        IdentifierType: ['int']
+    InitList: 
+      Constant: int, 1
+      Constant: int, 2
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: y
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+            ArrayRef: 
+              ID: x
+              ID: i
+          If: 
+            BinaryOp: ==
+              ID: d
+              Constant: int, 0
+            Break: 
+          If: 
+            BinaryOp: &&
+              ID: b
+              BinaryOp: <=
+                ID: d
+                ID: c
+            FuncCall: 
+              ID: abort
+          Assignment: =
+            ID: c
+            ID: d
+          Assignment: =
+            ID: b
+            Constant: int, 1
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: a
+          Constant: int, 2
+      Return: 
+        Constant: int, 0

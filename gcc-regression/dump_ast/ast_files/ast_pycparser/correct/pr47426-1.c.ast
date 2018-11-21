@@ -1,0 +1,56 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: i, [], [], []
+          PtrDecl: []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            PtrDecl: []
+              TypeDecl: i, []
+                IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        UnaryOp: *
+          ID: i
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: i
+      If: 
+        UnaryOp: *
+          ID: i
+        FuncCall: 
+          ID: __builtin_abort
+  Typedef: tfoo, [], ['typedef']
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: tfoo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: getfoo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: getfoo, []
+            IdentifierType: ['tfoo']
+    Compound: 
+      Return: 
+        UnaryOp: &
+          ID: foo

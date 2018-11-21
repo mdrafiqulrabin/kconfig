@@ -1,0 +1,84 @@
+FileAST: 
+  Typedef: mpz_t, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: mpz_t, []
+        Struct: None
+          Decl: _mp_size, [], [], []
+            TypeDecl: _mp_size, []
+              IdentifierType: ['int']
+      Constant: int, 1
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['mpz_t']
+            ID: b
+          Constant: int, 1
+      For: 
+        Compound: 
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+            TernaryOp: 
+              BinaryOp: >=
+                Constant: int, 0
+                Constant: int, 0
+              TernaryOp: 
+                BinaryOp: ==
+                  Constant: int, 0
+                  Constant: int, 0
+                TernaryOp: 
+                  StructRef: ->
+                    ArrayRef: 
+                      ArrayRef: 
+                        ID: c
+                        Constant: int, 0
+                      Constant: int, 0
+                    ID: _mp_size
+                  UnaryOp: -
+                    Constant: int, 1
+                  Constant: int, 0
+                Constant: int, 0
+              Constant: int, 0
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+            TernaryOp: 
+              BinaryOp: >=
+                Constant: int, 0
+                Constant: int, 0
+              TernaryOp: 
+                BinaryOp: ==
+                  Constant: int, 0
+                  Constant: int, 0
+                TernaryOp: 
+                  StructRef: ->
+                    ArrayRef: 
+                      ArrayRef: 
+                        ID: c
+                        Constant: int, 1
+                      Constant: int, 1
+                    ID: _mp_size
+                  UnaryOp: -
+                    Constant: int, 1
+                  Constant: int, 0
+                Constant: int, 0
+              Constant: int, 0
+          If: 
+            BinaryOp: !=
+              ID: d
+              ID: e
+            UnaryOp: p++
+              ID: a

@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7fd02b0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd02b026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd02b026740 '__int128'
+|-TypedefDecl 0x7fd02b026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd02b026760 'unsigned __int128'
+|-TypedefDecl 0x7fd02b026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd02b026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd02b026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd02b026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd02b026dc0 'char *'
+|   `-BuiltinType 0x7fd02b026560 'char'
+|-TypedefDecl 0x7fd02b0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd02b027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd02b026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd02b026e58 '__va_list_tag'
+|-RecordDecl 0x7fd02b027120 <c_files/pr33122.c:1:1, line:3:1> line:1:8 struct dis386 definition
+| `-FieldDecl 0x7fd02b825a00 <line:2:3, col:15> col:15 x 'const char *'
+|-VarDecl 0x7fd02b825c08 <line:5:1, line:7:1> line:5:28 used float_reg 'const struct dis386 [1][2]' static cinit
+| `-InitListExpr 0x7fd02b825e70 <col:45, line:7:1> 'const struct dis386 [1][2]'
+|   `-InitListExpr 0x7fd02b825eb0 <line:6:3, col:28> 'const struct dis386 [2]'
+|     |-InitListExpr 0x7fd02b825f08 <col:5, col:14> 'struct dis386':'struct dis386'
+|     | `-ImplicitCastExpr 0x7fd02b825f68 <col:7> 'const char *' <BitCast>
+|     |   `-ImplicitCastExpr 0x7fd02b825f50 <col:7> 'char *' <ArrayToPointerDecay>
+|     |     `-StringLiteral 0x7fd02b825ce8 <col:7> 'char [5]' lvalue "fadd"
+|     `-InitListExpr 0x7fd02b825f80 <col:17, col:26> 'struct dis386':'struct dis386'
+|       `-ImplicitCastExpr 0x7fd02b825fe0 <col:19> 'const char *' <BitCast>
+|         `-ImplicitCastExpr 0x7fd02b825fc8 <col:19> 'char *' <ArrayToPointerDecay>
+|           `-StringLiteral 0x7fd02b825d60 <col:19> 'char [5]' lvalue "fadd"
+`-FunctionDecl 0x7fd02b8261e0 <line:9:1, line:14:1> line:9:6 foo 'void (int, int)'
+  |-ParmVarDecl 0x7fd02b826090 <col:10, col:14> col:14 used i 'int'
+  |-ParmVarDecl 0x7fd02b826108 <col:17, col:21> col:21 used j 'int'
+  `-CompoundStmt 0x7fd02b8265c0 <line:10:1, line:14:1>
+    |-DeclStmt 0x7fd02b826370 <line:11:3, col:26>
+    | `-VarDecl 0x7fd02b826310 <col:3, col:24> col:24 used dp 'const struct dis386 *'
+    `-BinaryOperator 0x7fd02b826598 <line:13:3, col:27> 'const struct dis386 *' '='
+      |-DeclRefExpr 0x7fd02b826388 <col:3> 'const struct dis386 *' lvalue Var 0x7fd02b826310 'dp' 'const struct dis386 *'
+      `-UnaryOperator 0x7fd02b826578 <col:8, col:27> 'const struct dis386 *' prefix '&'
+        `-ArraySubscriptExpr 0x7fd02b826550 <col:9, col:27> 'const struct dis386':'const struct dis386' lvalue
+          |-ImplicitCastExpr 0x7fd02b826520 <col:9, col:24> 'const struct dis386 *' <ArrayToPointerDecay>
+          | `-ArraySubscriptExpr 0x7fd02b8264d0 <col:9, col:24> 'const struct dis386 [2]' lvalue
+          |   |-ImplicitCastExpr 0x7fd02b8264b8 <col:9> 'const struct dis386 (*)[2]' <ArrayToPointerDecay>
+          |   | `-DeclRefExpr 0x7fd02b8263b0 <col:9> 'const struct dis386 [1][2]' lvalue Var 0x7fd02b825c08 'float_reg' 'const struct dis386 [1][2]'
+          |   `-BinaryOperator 0x7fd02b826438 <col:19, col:23> 'int' '-'
+          |     |-ImplicitCastExpr 0x7fd02b826420 <col:19> 'int' <LValueToRValue>
+          |     | `-DeclRefExpr 0x7fd02b8263d8 <col:19> 'int' lvalue ParmVar 0x7fd02b826090 'i' 'int'
+          |     `-IntegerLiteral 0x7fd02b826400 <col:23> 'int' 1
+          `-ImplicitCastExpr 0x7fd02b826538 <col:26> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fd02b8264f8 <col:26> 'int' lvalue ParmVar 0x7fd02b826108 'j' 'int'

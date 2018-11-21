@@ -1,0 +1,52 @@
+TranslationUnitDecl 0x7fdea40264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdea4026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdea4026740 '__int128'
+|-TypedefDecl 0x7fdea4026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdea4026760 'unsigned __int128'
+|-TypedefDecl 0x7fdea4026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdea4026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdea4026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdea4026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdea4026dc0 'char *'
+|   `-BuiltinType 0x7fdea4026560 'char'
+|-TypedefDecl 0x7fdea40270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdea4027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdea4026ee0 'struct __va_list_tag'
+|     `-Record 0x7fdea4026e58 '__va_list_tag'
+|-RecordDecl 0x7fdea4027120 <c_files/pr35400.c:4:1, line:7:1> line:4:8 struct A definition
+| `-FieldDecl 0x7fdea4825a80 <line:6:3, col:13> col:13 referenced p 'struct A *'
+|-FunctionDecl 0x7fdea4825c58 <line:9:1, line:12:1> line:9:5 used foo 'int (const struct A *)'
+| |-ParmVarDecl 0x7fdea4825b50 <col:9, col:25> col:25 used q 'const struct A *'
+| `-CompoundStmt 0x7fdea4825e60 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7fdea4825e48 <line:11:3, col:18>
+|     `-BinaryOperator 0x7fdea4825e20 <col:10, col:18> 'int' '=='
+|       |-ImplicitCastExpr 0x7fdea4825dd8 <col:10, col:13> 'struct A *' <LValueToRValue>
+|       | `-MemberExpr 0x7fdea4825d78 <col:10, col:13> 'struct A *const' lvalue ->p 0x7fdea4825a80
+|       |   `-ImplicitCastExpr 0x7fdea4825d60 <col:10> 'const struct A *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fdea4825d38 <col:10> 'const struct A *' lvalue ParmVar 0x7fdea4825b50 'q' 'const struct A *'
+|       `-ImplicitCastExpr 0x7fdea4825e08 <col:18> 'struct A *' <BitCast>
+|         `-ImplicitCastExpr 0x7fdea4825df0 <col:18> 'const struct A *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fdea4825db0 <col:18> 'const struct A *' lvalue ParmVar 0x7fdea4825b50 'q' 'const struct A *'
+|-FunctionDecl 0x7fdea4825f60 <line:14:1, col:13> col:6 used bar 'void (int)'
+| `-ParmVarDecl 0x7fdea4825e98 <col:10> col:13 'int'
+`-FunctionDecl 0x7fdea4826048 <line:16:1, line:22:1> line:16:6 baz 'void ()'
+  `-CompoundStmt 0x7fdea4826430 <line:17:1, line:22:1>
+    |-DeclStmt 0x7fdea4826160 <line:18:3, col:13>
+    | `-VarDecl 0x7fdea4826100 <col:3, col:12> col:12 used a 'struct A':'struct A'
+    `-WhileStmt 0x7fdea4826410 <line:20:3, line:21:16>
+      |-<<<NULL>>>
+      |-CallExpr 0x7fdea4826260 <line:20:10, col:16> 'int'
+      | |-ImplicitCastExpr 0x7fdea4826248 <col:10> 'int (*)(const struct A *)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7fdea4826178 <col:10> 'int (const struct A *)' Function 0x7fdea4825c58 'foo' 'int (const struct A *)'
+      | `-ImplicitCastExpr 0x7fdea4826290 <col:14, col:15> 'const struct A *' <BitCast>
+      |   `-UnaryOperator 0x7fdea48261c8 <col:14, col:15> 'struct A *' prefix '&'
+      |     `-DeclRefExpr 0x7fdea48261a0 <col:15> 'struct A':'struct A' lvalue Var 0x7fdea4826100 'a' 'struct A':'struct A'
+      `-CallExpr 0x7fdea48263e0 <line:21:5, col:16> 'void'
+        |-ImplicitCastExpr 0x7fdea48263c8 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fdea48262a8 <col:5> 'void (int)' Function 0x7fdea4825f60 'bar' 'void (int)'
+        `-CallExpr 0x7fdea4826358 <col:9, col:15> 'int'
+          |-ImplicitCastExpr 0x7fdea4826340 <col:9> 'int (*)(const struct A *)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fdea48262d0 <col:9> 'int (const struct A *)' Function 0x7fdea4825c58 'foo' 'int (const struct A *)'
+          `-ImplicitCastExpr 0x7fdea4826388 <col:13, col:14> 'const struct A *' <BitCast>
+            `-UnaryOperator 0x7fdea4826320 <col:13, col:14> 'struct A *' prefix '&'
+              `-DeclRefExpr 0x7fdea48262f8 <col:14> 'struct A':'struct A' lvalue Var 0x7fdea4826100 'a' 'struct A':'struct A'

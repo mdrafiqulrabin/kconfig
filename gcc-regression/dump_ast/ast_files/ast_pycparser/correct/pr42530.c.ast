@@ -1,0 +1,69 @@
+FileAST: 
+  Decl: array, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: array, []
+          IdentifierType: ['int']
+        Constant: int, 2
+      Constant: int, 2
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: sum, [], [], []
+        TypeDecl: sum, []
+          IdentifierType: ['int']
+      Decl: tmp, [], [], []
+        TypeDecl: tmp, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 2
+        UnaryOp: p++
+          ID: i
+        For: 
+          Assignment: =
+            ID: j
+            Constant: int, 0
+          BinaryOp: <
+            ID: j
+            Constant: int, 2
+          UnaryOp: p++
+            ID: j
+          Assignment: +=
+            ID: sum
+            ArrayRef: 
+              ArrayRef: 
+                ID: array
+                ID: i
+              ID: j
+      If: 
+        BinaryOp: >
+          ID: sum
+          Constant: int, 0
+        Compound: 
+          Assignment: =
+            ID: tmp
+            ID: sum
+          Assignment: =
+            UnaryOp: *
+              ID: a
+            ID: tmp

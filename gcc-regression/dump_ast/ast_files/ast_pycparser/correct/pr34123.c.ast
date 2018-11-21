@@ -1,0 +1,60 @@
+FileAST: 
+  Decl: sbox, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: sbox, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 256
+    InitList: 
+  FuncDef: 
+    Decl: MD2Transform, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: state, [], [], []
+            ArrayDecl: []
+              TypeDecl: state, []
+                IdentifierType: ['unsigned', 'char']
+              Constant: int, 16
+        TypeDecl: MD2Transform, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['unsigned', 'char']
+        Constant: int, 0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              Constant: int, 2
+            UnaryOp: p++
+              ID: j
+            Assignment: =
+              ID: t
+              Assignment: ^=
+                ArrayRef: 
+                  ID: state
+                  ID: j
+                ArrayRef: 
+                  ID: sbox
+                  ID: t
+          Assignment: +=
+            ID: t
+            ID: i

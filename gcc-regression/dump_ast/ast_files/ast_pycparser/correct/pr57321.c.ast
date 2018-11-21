@@ -1,0 +1,89 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  Decl: b, [], [], []
+    PtrDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['int']
+  Decl: c, [], [], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          UnaryOp: *
+            ID: p
+          ID: a
+        Compound: 
+          Decl: i, [], [], []
+            ArrayDecl: []
+              ArrayDecl: []
+                PtrDecl: []
+                  TypeDecl: i, []
+                    IdentifierType: ['int']
+                Constant: int, 5
+              Constant: int, 7
+            InitList: 
+              InitList: 
+                Constant: int, 0
+          Decl: j, [], [], []
+            ArrayDecl: []
+              ArrayDecl: []
+                PtrDecl: []
+                  PtrDecl: []
+                    TypeDecl: j, []
+                      IdentifierType: ['int']
+                Constant: int, 1
+              Constant: int, 1
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                ID: j
+                Constant: int, 0
+              Constant: int, 0
+            UnaryOp: &
+              ArrayRef: 
+                ArrayRef: 
+                  ID: i
+                  Constant: int, 0
+                Constant: int, 0
+          Assignment: =
+            UnaryOp: *
+              ID: b
+            BinaryOp: !=
+              UnaryOp: &
+                ID: p
+              ID: c
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: i
+      Return: 
+        Constant: int, 0

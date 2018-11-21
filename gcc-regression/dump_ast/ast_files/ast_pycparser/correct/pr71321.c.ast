@@ -1,0 +1,52 @@
+FileAST: 
+  Typedef: uint8_t, [], ['typedef']
+    TypeDecl: uint8_t, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: uint32_t, [], ['typedef']
+    TypeDecl: uint32_t, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: cvt_to_2digit, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['uint8_t']
+          Decl: base, [], [], []
+            TypeDecl: base, []
+              IdentifierType: ['uint8_t']
+        TypeDecl: cvt_to_2digit, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: /
+            ID: i
+            ID: base
+          BinaryOp: <<
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['uint32_t']
+              BinaryOp: %
+                ID: i
+                ID: base
+            Constant: int, 8
+  FuncDef: 
+    Decl: cvt_to_2digit_ascii, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['uint8_t']
+        TypeDecl: cvt_to_2digit_ascii, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          FuncCall: 
+            ID: cvt_to_2digit
+            ExprList: 
+              ID: i
+              Constant: int, 10
+          Constant: int, 0x0a3030

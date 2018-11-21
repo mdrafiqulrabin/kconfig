@@ -1,0 +1,29 @@
+c_files/pr78458.c:11:17: error: unknown register name 'r16' in asm
+                "r14", "r15", "r16", "r17", "r18", "r19",
+                              ^
+1 error generated.
+TranslationUnitDecl 0x7fc2d40264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc2d4026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc2d4026740 '__int128'
+|-TypedefDecl 0x7fc2d4026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc2d4026760 'unsigned __int128'
+|-TypedefDecl 0x7fc2d4026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc2d4026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc2d4026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc2d4026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc2d4026dc0 'char *'
+|   `-BuiltinType 0x7fc2d4026560 'char'
+|-TypedefDecl 0x7fc2d40270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc2d4027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc2d4026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc2d4026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc2d4825a00 <c_files/pr78458.c:5:1, col:22> col:13 used bar 'void (void)' extern
+`-FunctionDecl 0x7fc2d4825bb8 <line:6:1, line:15:1> line:7:1 pr78458 'long double (long double)'
+  |-ParmVarDecl 0x7fc2d4825af0 <col:10, col:22> col:22 used p1 'long double'
+  `-CompoundStmt 0x7fc2d4826150 <line:8:1, line:15:1>
+    |-CallExpr 0x7fc2d4825cc0 <line:9:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7fc2d4825ca8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc2d4825c58 <col:3> 'void (void)' Function 0x7fc2d4825a00 'bar' 'void (void)'
+    `-ReturnStmt 0x7fc2d4826138 <line:14:3, col:10>
+      `-ImplicitCastExpr 0x7fc2d4826120 <col:10> 'long double' <LValueToRValue>
+        `-DeclRefExpr 0x7fc2d48260f8 <col:10> 'long double' lvalue ParmVar 0x7fc2d4825af0 'p1' 'long double'

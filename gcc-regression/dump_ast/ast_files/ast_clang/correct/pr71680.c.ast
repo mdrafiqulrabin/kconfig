@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fc7d28226d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc7d2822c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc7d2822940 '__int128'
+|-TypedefDecl 0x7fc7d2822c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc7d2822960 'unsigned __int128'
+|-TypedefDecl 0x7fc7d2822f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc7d2822d70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc7d2822ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc7d2823000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc7d2822fc0 'char *'
+|   `-BuiltinType 0x7fc7d2822760 'char'
+|-TypedefDecl 0x7fc7d28232c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc7d2823270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc7d28230e0 'struct __va_list_tag'
+|     `-Record 0x7fc7d2823058 '__va_list_tag'
+|-RecordDecl 0x7fc7d2823340 <c_files/pr71680.c:7:1, line:10:1> line:7:1 struct definition
+| |-MaxFieldAlignmentAttr 0x7fc7d28233f0 <<invalid sloc>> Implicit 8
+| `-FieldDecl 0x7fc7d2026450 <line:9:3, col:9> col:9 referenced f0 'float'
+|-VarDecl 0x7fc7d20264f0 <line:7:1, line:10:3> col:3 used a 'struct (anonymous struct at c_files/pr71680.c:7:1)':'struct (anonymous at c_files/pr71680.c:7:1)'
+|-FunctionDecl 0x7fc7d2026680 <line:12:1, col:21> col:13 used foo 'void (int)' extern
+| `-ParmVarDecl 0x7fc7d20265c0 <col:18> col:21 'int'
+`-FunctionDecl 0x7fc7d20267e8 <line:14:1, line:19:1> line:15:1 main 'int (void)'
+  `-CompoundStmt 0x7fc7d2026a38 <line:16:1, line:19:1>
+    `-ForStmt 0x7fc7d2026a00 <line:17:3, line:18:20>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CallExpr 0x7fc7d20269d0 <col:5, col:20> 'void'
+        |-ImplicitCastExpr 0x7fc7d20269b8 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fc7d20268a8 <col:5> 'void (int)' Function 0x7fc7d2026680 'foo' 'void (int)'
+        `-CStyleCastExpr 0x7fc7d2026960 <col:10, col:18> 'int' <FloatingToIntegral>
+          `-ImplicitCastExpr 0x7fc7d2026948 <col:16, col:18> 'float' <LValueToRValue>
+            `-MemberExpr 0x7fc7d20268f8 <col:16, col:18> 'float' lvalue .f0 0x7fc7d2026450
+              `-DeclRefExpr 0x7fc7d20268d0 <col:16> 'struct (anonymous struct at c_files/pr71680.c:7:1)':'struct (anonymous at c_files/pr71680.c:7:1)' lvalue Var 0x7fc7d20264f0 'a' 'struct (anonymous struct at c_files/pr71680.c:7:1)':'struct (anonymous at c_files/pr71680.c:7:1)'

@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7ffed20264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffed2026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffed2026740 '__int128'
+|-TypedefDecl 0x7ffed2026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffed2026760 'unsigned __int128'
+|-TypedefDecl 0x7ffed2026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffed2026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffed2026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffed2026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffed2026dc0 'char *'
+|   `-BuiltinType 0x7ffed2026560 'char'
+|-TypedefDecl 0x7ffed20270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffed2027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffed2026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffed2026e58 '__va_list_tag'
+`-FunctionDecl 0x7ffed2825a00 <c_files/pr39648.c:1:1, line:12:1> line:2:1 yysyntax_error 'void (char *)'
+  |-ParmVarDecl 0x7ffed2027138 <col:17, col:23> col:23 used yyp 'char *'
+  `-CompoundStmt 0x7ffed2826070 <line:3:1, line:12:1>
+    |-DeclStmt 0x7ffed2825b58 <line:4:9, col:24>
+    | `-VarDecl 0x7ffed2825af8 <col:9, col:21> col:21 used yyf 'const char *'
+    |-DeclStmt 0x7ffed2825c48 <line:5:9, col:25>
+    | `-VarDecl 0x7ffed2825be8 <col:9, col:24> col:14 used yyformat 'char [5]'
+    |-BinaryOperator 0x7ffed2825ce0 <line:7:9, col:15> 'const char *' '='
+    | |-DeclRefExpr 0x7ffed2825c60 <col:9> 'const char *' lvalue Var 0x7ffed2825af8 'yyf' 'const char *'
+    | `-ImplicitCastExpr 0x7ffed2825cc8 <col:15> 'const char *' <BitCast>
+    |   `-ImplicitCastExpr 0x7ffed2825cb0 <col:15> 'char *' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7ffed2825c88 <col:15> 'char [5]' lvalue Var 0x7ffed2825be8 'yyformat' 'char [5]'
+    `-WhileStmt 0x7ffed2826050 <line:8:9, line:11:9>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ffed2825e58 <line:8:16, col:33> 'int' '!='
+      | |-ImplicitCastExpr 0x7ffed2825e40 <col:16, col:28> 'int' <IntegralCast>
+      | | `-ParenExpr 0x7ffed2825e08 <col:16, col:28> 'char'
+      | |   `-BinaryOperator 0x7ffed2825de0 <col:17, col:25> 'char' '='
+      | |     |-UnaryOperator 0x7ffed2825d48 <col:17, col:18> 'char' lvalue prefix '*'
+      | |     | `-ImplicitCastExpr 0x7ffed2825d30 <col:18> 'char *' <LValueToRValue>
+      | |     |   `-DeclRefExpr 0x7ffed2825d08 <col:18> 'char *' lvalue ParmVar 0x7ffed2027138 'yyp' 'char *'
+      | |     `-ImplicitCastExpr 0x7ffed2825dc8 <col:24, col:25> 'char' <LValueToRValue>
+      | |       `-UnaryOperator 0x7ffed2825da8 <col:24, col:25> 'const char' lvalue prefix '*'
+      | |         `-ImplicitCastExpr 0x7ffed2825d90 <col:25> 'const char *' <LValueToRValue>
+      | |           `-DeclRefExpr 0x7ffed2825d68 <col:25> 'const char *' lvalue Var 0x7ffed2825af8 'yyf' 'const char *'
+      | `-CharacterLiteral 0x7ffed2825e28 <col:33> 'int' 0
+      `-CompoundStmt 0x7ffed2826030 <col:39, line:11:9>
+        `-IfStmt 0x7ffed2825ff8 <line:9:17, line:10:32>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7ffed2825f50 <line:9:21, col:31> 'int' '=='
+          | |-ImplicitCastExpr 0x7ffed2825f38 <col:21, col:26> 'int' <IntegralCast>
+          | | `-ImplicitCastExpr 0x7ffed2825f20 <col:21, col:26> 'char' <LValueToRValue>
+          | |   `-ArraySubscriptExpr 0x7ffed2825ee0 <col:21, col:26> 'const char' lvalue
+          | |     |-ImplicitCastExpr 0x7ffed2825ec8 <col:21> 'const char *' <LValueToRValue>
+          | |     | `-DeclRefExpr 0x7ffed2825e80 <col:21> 'const char *' lvalue Var 0x7ffed2825af8 'yyf' 'const char *'
+          | |     `-IntegerLiteral 0x7ffed2825ea8 <col:25> 'int' 1
+          | `-CharacterLiteral 0x7ffed2825f08 <col:31> 'int' 115
+          |-CompoundAssignOperator 0x7ffed2825fc0 <line:10:25, col:32> 'const char *' '+=' ComputeLHSTy='const char *' ComputeResultTy='const char *'
+          | |-DeclRefExpr 0x7ffed2825f78 <col:25> 'const char *' lvalue Var 0x7ffed2825af8 'yyf' 'const char *'
+          | `-IntegerLiteral 0x7ffed2825fa0 <col:32> 'int' 2
+          `-<<<NULL>>>

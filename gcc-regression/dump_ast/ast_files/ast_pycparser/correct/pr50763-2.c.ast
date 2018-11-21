@@ -1,0 +1,89 @@
+FileAST: 
+  Typedef: tree, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: tree, []
+        Union: tree_node
+  Decl: None, [], [], []
+    Struct: tree_base
+      Decl: code, [], [], []
+        TypeDecl: code, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: tree_typed
+      Decl: base, [], [], []
+        TypeDecl: base, []
+          Struct: tree_base
+      Decl: type, [], [], []
+        TypeDecl: type, []
+          IdentifierType: ['tree']
+  Decl: None, [], [], []
+    Struct: tree_common
+      Decl: typed, [], [], []
+        TypeDecl: typed, []
+          Struct: tree_typed
+  Decl: None, [], [], []
+    Struct: tree_type_common
+      Decl: main_variant, [], [], []
+        TypeDecl: main_variant, []
+          IdentifierType: ['tree']
+  Decl: None, [], [], []
+    Union: tree_node
+      Decl: base, [], [], []
+        TypeDecl: base, []
+          Struct: tree_base
+      Decl: typed, [], [], []
+        TypeDecl: typed, []
+          Struct: tree_typed
+      Decl: type_common, [], [], []
+        TypeDecl: type_common, []
+          Struct: tree_type_common
+  FuncDef: 
+    Decl: std_canonical_va_list_type, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: type, [], [], []
+            TypeDecl: type, []
+              IdentifierType: ['tree']
+        TypeDecl: std_canonical_va_list_type, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        StructRef: .
+          StructRef: ->
+            ID: type
+            ID: base
+          ID: code
+        Assignment: =
+          ID: type
+          StructRef: .
+            StructRef: ->
+              ID: type
+              ID: typed
+            ID: type
+        If: 
+          StructRef: .
+            StructRef: ->
+              StructRef: .
+                StructRef: ->
+                  ID: type
+                  ID: typed
+                ID: type
+              ID: base
+            ID: code
+          Assignment: =
+            ID: type
+            StructRef: .
+              StructRef: ->
+                ID: type
+                ID: typed
+              ID: type
+      If: 
+        StructRef: .
+          StructRef: ->
+            ID: type
+            ID: type_common
+          ID: main_variant
+        Return: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0

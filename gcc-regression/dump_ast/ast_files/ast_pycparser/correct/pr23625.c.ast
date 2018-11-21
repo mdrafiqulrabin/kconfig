@@ -1,0 +1,92 @@
+FileAST: 
+  Typedef: INT32, [], ['typedef']
+    TypeDecl: INT32, []
+      IdentifierType: ['long']
+  FuncDef: 
+    Decl: find_best_colors, [], [], []
+      FuncDecl: 
+        TypeDecl: find_best_colors, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: ic0, [], [], []
+        TypeDecl: ic0, []
+          IdentifierType: ['int']
+      Decl: ic1, [], [], []
+        TypeDecl: ic1, []
+          IdentifierType: ['int']
+      Decl: ic2, [], [], []
+        TypeDecl: ic2, []
+          IdentifierType: ['int']
+      Decl: bptr, [], [], []
+        PtrDecl: []
+          TypeDecl: bptr, []
+            IdentifierType: ['INT32']
+      Decl: dist1, [], [], []
+        TypeDecl: dist1, []
+          IdentifierType: ['INT32']
+      Decl: dist2, [], [], []
+        TypeDecl: dist2, []
+          IdentifierType: ['INT32']
+      Decl: xx1, [], [], []
+        TypeDecl: xx1, []
+          IdentifierType: ['INT32']
+      For: 
+        Assignment: =
+          ID: ic0
+          BinaryOp: -
+            BinaryOp: <<
+              Constant: int, 1
+              BinaryOp: -
+                Constant: int, 5
+                Constant: int, 3
+            Constant: int, 1
+        BinaryOp: >=
+          ID: ic0
+          Constant: int, 0
+        UnaryOp: p--
+          ID: ic0
+        Compound: 
+          For: 
+            Assignment: =
+              ID: ic1
+              BinaryOp: -
+                BinaryOp: <<
+                  Constant: int, 1
+                  BinaryOp: -
+                    Constant: int, 6
+                    Constant: int, 3
+                Constant: int, 1
+            BinaryOp: >=
+              ID: ic1
+              Constant: int, 0
+            UnaryOp: p--
+              ID: ic1
+            Compound: 
+              Assignment: =
+                ID: dist2
+                ID: dist1
+              For: 
+                Assignment: =
+                  ID: ic2
+                  BinaryOp: -
+                    BinaryOp: <<
+                      Constant: int, 1
+                      BinaryOp: -
+                        Constant: int, 5
+                        Constant: int, 3
+                    Constant: int, 1
+                BinaryOp: >=
+                  ID: ic2
+                  Constant: int, 0
+                UnaryOp: p--
+                  ID: ic2
+                Compound: 
+                  Assignment: =
+                    UnaryOp: *
+                      ID: bptr
+                    ID: dist2
+                  UnaryOp: p++
+                    ID: bptr
+              Assignment: +=
+                ID: dist1
+                ID: xx1

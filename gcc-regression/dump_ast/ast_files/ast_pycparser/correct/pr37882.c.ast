@@ -1,0 +1,35 @@
+FileAST: 
+  Decl: s, [], [], []
+    TypeDecl: s, []
+      Struct: S
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 3
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: s
+          ID: b
+        Constant: int, 4
+      If: 
+        BinaryOp: &&
+          BinaryOp: >
+            StructRef: .
+              ID: s
+              ID: b
+            Constant: int, 0
+          BinaryOp: <
+            StructRef: .
+              ID: s
+              ID: b
+            Constant: int, 4
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

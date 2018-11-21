@@ -1,0 +1,16 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['long', 'double']
+        TypeDecl: foo, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_ilogbl
+          ExprList: 
+            ID: x

@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fad9a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fad9a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fad9a826740 '__int128'
+|-TypedefDecl 0x7fad9a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fad9a826760 'unsigned __int128'
+|-TypedefDecl 0x7fad9a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fad9a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fad9a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fad9a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fad9a826dc0 'char *'
+|   `-BuiltinType 0x7fad9a826560 'char'
+|-TypedefDecl 0x7fad9a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fad9a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fad9a826ee0 'struct __va_list_tag'
+|     `-Record 0x7fad9a826e58 '__va_list_tag'
+|-RecordDecl 0x7fad9a827120 <c_files/pr37248-1.c:5:1, line:10:1> line:5:8 struct S definition
+| |-FieldDecl 0x7fad9a877418 <line:7:3, col:21> col:17 referenced a 'unsigned char'
+| | `-IntegerLiteral 0x7fad9a8271d0 <col:21> 'int' 1
+| |-FieldDecl 0x7fad9a877498 <line:8:3, col:21> col:17 referenced b 'unsigned char'
+| | `-IntegerLiteral 0x7fad9a877460 <col:21> 'int' 1
+| `-FieldDecl 0x7fad9a877518 <line:9:3, col:21> col:17 referenced c 'unsigned char'
+|   `-IntegerLiteral 0x7fad9a8774e0 <col:21> 'int' 1
+|-VarDecl 0x7fad9a8775b0 <line:5:1, line:10:3> col:3 s 'struct S':'struct S'
+`-FunctionDecl 0x7fad9a877798 <line:12:1, line:16:1> line:13:1 foo 'int (struct S)'
+  |-ParmVarDecl 0x7fad9a877688 <col:6, col:15> col:15 used x 'struct S':'struct S'
+  `-CompoundStmt 0x7fad9a877aa8 <line:14:1, line:16:1>
+    `-ReturnStmt 0x7fad9a877a90 <line:15:3, col:26>
+      `-BinaryOperator 0x7fad9a877a68 <col:10, col:26> 'int' '&&'
+        |-BinaryOperator 0x7fad9a8779b0 <col:10, col:19> 'int' '&&'
+        | |-ImplicitCastExpr 0x7fad9a877968 <col:10, col:12> 'int' <IntegralCast>
+        | | `-ImplicitCastExpr 0x7fad9a877950 <col:10, col:12> 'unsigned char' <LValueToRValue>
+        | |   `-MemberExpr 0x7fad9a877860 <col:10, col:12> 'unsigned char' lvalue bitfield .a 0x7fad9a877418
+        | |     `-DeclRefExpr 0x7fad9a877838 <col:10> 'struct S':'struct S' lvalue ParmVar 0x7fad9a877688 'x' 'struct S':'struct S'
+        | `-ImplicitCastExpr 0x7fad9a877998 <col:17, col:19> 'int' <IntegralCast>
+        |   `-ImplicitCastExpr 0x7fad9a877980 <col:17, col:19> 'unsigned char' <LValueToRValue>
+        |     `-MemberExpr 0x7fad9a8778c0 <col:17, col:19> 'unsigned char' lvalue bitfield .b 0x7fad9a877498
+        |       `-DeclRefExpr 0x7fad9a877898 <col:17> 'struct S':'struct S' lvalue ParmVar 0x7fad9a877688 'x' 'struct S':'struct S'
+        `-ImplicitCastExpr 0x7fad9a877a50 <col:24, col:26> 'int' <IntegralCast>
+          `-ImplicitCastExpr 0x7fad9a877a38 <col:24, col:26> 'unsigned char' <LValueToRValue>
+            `-MemberExpr 0x7fad9a877a00 <col:24, col:26> 'unsigned char' lvalue bitfield .c 0x7fad9a877518
+              `-DeclRefExpr 0x7fad9a8779d8 <col:24> 'struct S':'struct S' lvalue ParmVar 0x7fad9a877688 'x' 'struct S':'struct S'

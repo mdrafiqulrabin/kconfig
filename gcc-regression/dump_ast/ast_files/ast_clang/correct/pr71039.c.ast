@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7fd1b58264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd1b5826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd1b5826740 '__int128'
+|-TypedefDecl 0x7fd1b5826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd1b5826760 'unsigned __int128'
+|-TypedefDecl 0x7fd1b5826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd1b5826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd1b5826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd1b5826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd1b5826dc0 'char *'
+|   `-BuiltinType 0x7fd1b5826560 'char'
+|-TypedefDecl 0x7fd1b58270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd1b5827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd1b5826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd1b5826e58 '__va_list_tag'
+|-RecordDecl 0x7fd1b5827120 <c_files/pr71039.c:3:1, line:6:1> line:3:8 struct wv definition
+| `-FieldDecl 0x7fd1b6025a00 <line:5:3, col:7> col:7 qi 'int'
+|-VarDecl 0x7fd1b6025aa0 <line:3:1, line:6:3> col:3 used qp 'struct wv':'struct wv'
+|-VarDecl 0x7fd1b6025bc0 <line:3:1, line:6:8> col:8 used ft 'struct wv *'
+|-VarDecl 0x7fd1b6025c58 <line:7:1, col:7> col:7 used pb 'void *'
+`-FunctionDecl 0x7fd1b6025d80 <line:9:1, line:14:1> line:10:1 wz 'void (void)'
+  `-CompoundStmt 0x7fd1b60261f8 <line:11:1, line:14:1>
+    |-DeclStmt 0x7fd1b60260e0 <line:12:3, col:46>
+    | `-VarDecl 0x7fd1b6025e40 <col:3, col:44> col:14 used vf 'struct wv *' cinit
+    |   `-ConditionalOperator 0x7fd1b60260b0 <col:19, col:44> 'struct wv *'
+    |     |-ImplicitCastExpr 0x7fd1b6025fd0 <col:19> 'void *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd1b6025ea0 <col:19> 'void *' lvalue Var 0x7fd1b6025c58 'pb' 'void *'
+    |     |-CStyleCastExpr 0x7fd1b6025f60 <col:24, col:38> 'struct wv *' <BitCast>
+    |     | `-UnaryOperator 0x7fd1b6025f18 <col:37, col:38> 'void **' prefix '&'
+    |     |   `-DeclRefExpr 0x7fd1b6025ec8 <col:38> 'void *' lvalue Var 0x7fd1b6025c58 'pb' 'void *'
+    |     `-UnaryOperator 0x7fd1b6025fb0 <col:43, col:44> 'struct wv *' prefix '&'
+    |       `-DeclRefExpr 0x7fd1b6025f88 <col:44> 'struct wv':'struct wv' lvalue Var 0x7fd1b6025aa0 'qp' 'struct wv':'struct wv'
+    `-BinaryOperator 0x7fd1b60261d0 <line:13:3, col:10> 'struct wv':'struct wv' '='
+      |-UnaryOperator 0x7fd1b6026138 <col:3, col:4> 'struct wv':'struct wv' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fd1b6026120 <col:4> 'struct wv *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fd1b60260f8 <col:4> 'struct wv *' lvalue Var 0x7fd1b6025bc0 'ft' 'struct wv *'
+      `-ImplicitCastExpr 0x7fd1b60261b8 <col:9, col:10> 'struct wv':'struct wv' <LValueToRValue>
+        `-UnaryOperator 0x7fd1b6026198 <col:9, col:10> 'struct wv':'struct wv' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fd1b6026180 <col:10> 'struct wv *' <LValueToRValue>
+            `-DeclRefExpr 0x7fd1b6026158 <col:10> 'struct wv *' lvalue Var 0x7fd1b6025e40 'vf' 'struct wv *'

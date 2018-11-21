@@ -1,0 +1,56 @@
+c_files/pr70747.c:8:7: error: use of unknown builtin '__builtin_malloc' [-Wimplicit-function-declaration]
+  a = __builtin_malloc (sizeof(int)*2); 
+      ^
+c_files/pr70747.c:8:5: warning: incompatible integer to pointer conversion assigning to 'int *' from 'int' [-Wint-conversion]
+  a = __builtin_malloc (sizeof(int)*2); 
+    ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr70747.c:9:17: warning: expression result unused [-Wunused-value]
+  b = &a[1] == (0, 0); /* { dg-warning "comparison between pointer and integer" } */
+                ^
+c_files/pr70747.c:9:13: warning: comparison between pointer and integer ('int *' and 'int')
+  b = &a[1] == (0, 0); /* { dg-warning "comparison between pointer and integer" } */
+      ~~~~~ ^  ~~~~~~
+3 warnings and 1 error generated.
+TranslationUnitDecl 0x7fa8980264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa898026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa898026740 '__int128'
+|-TypedefDecl 0x7fa898026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa898026760 'unsigned __int128'
+|-TypedefDecl 0x7fa898026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa898026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa898026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa898026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa898026dc0 'char *'
+|   `-BuiltinType 0x7fa898026560 'char'
+|-TypedefDecl 0x7fa8980270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa898027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa898026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa898026e58 '__va_list_tag'
+|-VarDecl 0x7fa898027160 <c_files/pr70747.c:4:1, col:6> col:6 used a 'int *'
+|-VarDecl 0x7fa898825a18 <col:1, col:9> col:9 used b 'int'
+|-FunctionDecl 0x7fa898825ad8 <line:6:1, line:10:1> line:6:6 fn1 'void ()'
+| `-CompoundStmt 0x7fa898826388 <line:7:1, line:10:1>
+|   |-BinaryOperator 0x7fa8988261a0 <line:8:3, col:38> 'int *' '='
+|   | |-DeclRefExpr 0x7fa898825b70 <col:3> 'int *' lvalue Var 0x7fa898027160 'a' 'int *'
+|   | `-ImplicitCastExpr 0x7fa898825dd0 <col:7, col:38> 'int *' <IntegralToPointer>
+|   |   `-CallExpr 0x7fa898825da0 <col:7, col:38> 'int'
+|   |     |-ImplicitCastExpr 0x7fa898825d88 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fa898825c98 <col:7> 'int ()' Function 0x7fa898825c00 '__builtin_malloc' 'int ()'
+|   |     `-BinaryOperator 0x7fa898825d30 <col:25, col:37> 'unsigned long' '*'
+|   |       |-UnaryExprOrTypeTraitExpr 0x7fa898825cd8 <col:25, col:35> 'unsigned long' sizeof 'int'
+|   |       `-ImplicitCastExpr 0x7fa898825d18 <col:37> 'unsigned long' <IntegralCast>
+|   |         `-IntegerLiteral 0x7fa898825cf8 <col:37> 'int' 2
+|   `-BinaryOperator 0x7fa898826360 <line:9:3, col:21> 'int' '='
+|     |-DeclRefExpr 0x7fa8988261c8 <col:3> 'int' lvalue Var 0x7fa898825a18 'b' 'int'
+|     `-BinaryOperator 0x7fa898826338 <col:7, col:21> 'int' '=='
+|       |-UnaryOperator 0x7fa898826278 <col:7, col:11> 'int *' prefix '&'
+|       | `-ArraySubscriptExpr 0x7fa898826250 <col:8, col:11> 'int' lvalue
+|       |   |-ImplicitCastExpr 0x7fa898826238 <col:8> 'int *' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7fa8988261f0 <col:8> 'int *' lvalue Var 0x7fa898027160 'a' 'int *'
+|       |   `-IntegerLiteral 0x7fa898826218 <col:10> 'int' 1
+|       `-ImplicitCastExpr 0x7fa898826320 <col:16, col:21> 'int *' <IntegralToPointer>
+|         `-ParenExpr 0x7fa898826300 <col:16, col:21> 'int'
+|           `-BinaryOperator 0x7fa8988262d8 <col:17, col:20> 'int' ','
+|             |-IntegerLiteral 0x7fa898826298 <col:17> 'int' 0
+|             `-IntegerLiteral 0x7fa8988262b8 <col:20> 'int' 0
+`-FunctionDecl 0x7fa898825c00 <<invalid sloc>> line:8:7 implicit used __builtin_malloc 'int ()'

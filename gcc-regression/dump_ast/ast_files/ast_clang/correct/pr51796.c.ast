@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7ffa8b80fed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffa8b810420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffa8b810140 '__int128'
+|-TypedefDecl 0x7ffa8b810490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffa8b810160 'unsigned __int128'
+|-TypedefDecl 0x7ffa8b810768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffa8b810570 'struct __NSConstantString_tag'
+|   `-Record 0x7ffa8b8104e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffa8b810800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffa8b8107c0 'char *'
+|   `-BuiltinType 0x7ffa8b80ff60 'char'
+|-TypedefDecl 0x7ffa8b810ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffa8b810a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffa8b8108e0 'struct __va_list_tag'
+|     `-Record 0x7ffa8b810858 '__va_list_tag'
+|-FunctionDecl 0x7ffa8b865400 <c_files/pr51796.c:5:1, col:16> col:6 used stop 'void (void)'
+|-TypedefDecl 0x7ffa8b865638 <line:6:1, col:33> col:16 referenced entry_func 'void (*)(void) __attribute__((noreturn))'
+| `-PointerType 0x7ffa8b8655e0 'void (*)(void) __attribute__((noreturn))'
+|   `-ParenType 0x7ffa8b865580 'void (void) __attribute__((noreturn))' sugar
+|     `-FunctionProtoType 0x7ffa8b865550 'void (void) __attribute__((noreturn))' noreturn cdecl
+|       `-BuiltinType 0x7ffa8b80ff20 'void'
+|-VarDecl 0x7ffa8b8656c0 <line:7:1, col:19> col:19 used entry_addr 'entry_func':'void (*)(void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ffa8b8657b0 <line:8:1, line:11:1> line:8:13 used bsd_boot_entry 'void (void)' static
+| `-CompoundStmt 0x7ffa8b8658d8 <line:9:1, line:11:1>
+|   `-CallExpr 0x7ffa8b8658b0 <line:10:3, col:9> 'void'
+|     `-ImplicitCastExpr 0x7ffa8b865898 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7ffa8b865848 <col:3> 'void (void)' Function 0x7ffa8b865400 'stop' 'void (void)'
+`-FunctionDecl 0x7ffa8b865988 <line:12:1, line:16:1> line:12:6 bsd_boot 'void (void)'
+  `-CompoundStmt 0x7ffa8b865ba8 <line:13:1, line:16:1>
+    |-BinaryOperator 0x7ffa8b865ac0 <line:14:3, col:29> 'entry_func':'void (*)(void) __attribute__((noreturn))' '='
+    | |-DeclRefExpr 0x7ffa8b865a20 <col:3> 'entry_func':'void (*)(void) __attribute__((noreturn))' lvalue Var 0x7ffa8b8656c0 'entry_addr' 'entry_func':'void (*)(void) __attribute__((noreturn))'
+    | `-CStyleCastExpr 0x7ffa8b865a98 <col:16, col:29> 'entry_func':'void (*)(void) __attribute__((noreturn))' <BitCast>
+    |   `-ImplicitCastExpr 0x7ffa8b865a80 <col:29> 'void (*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7ffa8b865a48 <col:29> 'void (void)' Function 0x7ffa8b8657b0 'bsd_boot_entry' 'void (void)'
+    `-CallExpr 0x7ffa8b865b80 <line:15:3, col:18> 'void'
+      `-ImplicitCastExpr 0x7ffa8b865b68 <col:3, col:15> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+        `-ParenExpr 0x7ffa8b865b48 <col:3, col:15> 'void (void) __attribute__((noreturn))':'void (void) __attribute__((noreturn))'
+          `-UnaryOperator 0x7ffa8b865b28 <col:4, col:5> 'void (void) __attribute__((noreturn))':'void (void) __attribute__((noreturn))' prefix '*'
+            `-ImplicitCastExpr 0x7ffa8b865b10 <col:5> 'entry_func':'void (*)(void) __attribute__((noreturn))' <LValueToRValue>
+              `-DeclRefExpr 0x7ffa8b865ae8 <col:5> 'entry_func':'void (*)(void) __attribute__((noreturn))' lvalue Var 0x7ffa8b8656c0 'entry_addr' 'entry_func':'void (*)(void) __attribute__((noreturn))'

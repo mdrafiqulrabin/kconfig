@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7ff5d40264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff5d4026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff5d4026740 '__int128'
+|-TypedefDecl 0x7ff5d4026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff5d4026760 'unsigned __int128'
+|-TypedefDecl 0x7ff5d4026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff5d4026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff5d4026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff5d4026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff5d4026dc0 'char *'
+|   `-BuiltinType 0x7ff5d4026560 'char'
+|-TypedefDecl 0x7ff5d40270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff5d4027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff5d4026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff5d4026e58 '__va_list_tag'
+|-VarDecl 0x7ff5d4027138 <c_files/pr83491.c:4:1, col:7> col:7 used a 'float'
+|-VarDecl 0x7ff5d4825a00 <line:5:1, col:7> col:7 used b 'float'
+|-FunctionDecl 0x7ff5d4825aa8 <line:6:1, line:10:1> line:6:6 bar 'void ()'
+| `-CompoundStmt 0x7ff5d48261c8 <line:7:1, line:10:1>
+|   |-BinaryOperator 0x7ff5d4825e50 <line:8:3, col:25> 'float' '='
+|   | |-DeclRefExpr 0x7ff5d4825b40 <col:3> 'float' lvalue Var 0x7ff5d4027138 'a' 'float'
+|   | `-CallExpr 0x7ff5d4825df0 <col:7, col:25> 'float'
+|   |   |-ImplicitCastExpr 0x7ff5d4825dd8 <col:7> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7ff5d4825d00 <col:7> '<builtin fn type>' Function 0x7ff5d4825ba8 '__builtin_nanf' 'float (const char *)'
+|   |   `-ImplicitCastExpr 0x7ff5d4825e38 <col:23> 'const char *' <BitCast>
+|   |     `-ImplicitCastExpr 0x7ff5d4825e20 <col:23> 'char *' <ArrayToPointerDecay>
+|   |       `-StringLiteral 0x7ff5d4825d68 <col:23> 'char [1]' lvalue ""
+|   `-BinaryOperator 0x7ff5d48261a0 <line:9:3, col:30> 'float' '='
+|     |-DeclRefExpr 0x7ff5d4825e78 <col:3> 'float' lvalue Var 0x7ff5d4825a00 'b' 'float'
+|     `-CallExpr 0x7ff5d4826150 <col:7, col:30> 'float'
+|       |-ImplicitCastExpr 0x7ff5d4826138 <col:7> 'float (*)(float, float)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7ff5d48260a0 <col:7> '<builtin fn type>' Function 0x7ff5d4825ee0 '__builtin_powf' 'float (float, float)'
+|       |-ImplicitCastExpr 0x7ff5d4826188 <col:23> 'float' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff5d48260c8 <col:23> 'float' lvalue Var 0x7ff5d4027138 'a' 'float'
+|       `-FloatingLiteral 0x7ff5d48260f0 <col:26> 'float' 2.500000e+00
+|-FunctionDecl 0x7ff5d4825ba8 <line:8:7> col:7 implicit used __builtin_nanf 'float (const char *)' extern
+| |-ParmVarDecl 0x7ff5d4825c40 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-NoThrowAttr 0x7ff5d4825ca8 <col:7> Implicit
+| `-ConstAttr 0x7ff5d4825cf0 <col:7> Implicit
+`-FunctionDecl 0x7ff5d4825ee0 <line:9:7> col:7 implicit used __builtin_powf 'float (float, float)' extern
+  |-ParmVarDecl 0x7ff5d4825f78 <<invalid sloc>> <invalid sloc> 'float'
+  |-ParmVarDecl 0x7ff5d4825fd8 <<invalid sloc>> <invalid sloc> 'float'
+  |-NoThrowAttr 0x7ff5d4826048 <col:7> Implicit
+  `-ConstAttr 0x7ff5d4826090 <col:7> Implicit

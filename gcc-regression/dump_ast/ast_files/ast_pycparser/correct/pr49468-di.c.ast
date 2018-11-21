@@ -1,0 +1,37 @@
+FileAST: 
+  FuncDef: 
+    Decl: abs_0, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: abs_0, []
+          IdentifierType: ['long', 'long']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: <
+            ID: i
+            Constant: int, 0
+          UnaryOp: -
+            ID: i
+          ID: i
+  FuncDef: 
+    Decl: abs_1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: abs_1, []
+          IdentifierType: ['long', 'long']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: >
+            ID: i
+            Constant: int, 0
+          UnaryOp: -
+            ID: i
+          ID: i

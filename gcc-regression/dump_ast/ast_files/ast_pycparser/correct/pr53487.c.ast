@@ -1,0 +1,125 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: phylo_s
+      Decl: left, [], [], []
+        TypeDecl: left, []
+          IdentifierType: ['int']
+  Decl: Free2DArray, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: Free2DArray, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: Cluster, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dmx, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: dmx, []
+                  IdentifierType: ['float']
+          Decl: N, [], [], []
+            TypeDecl: N, []
+              IdentifierType: ['int']
+          Decl: tree, [], [], []
+            PtrDecl: []
+              TypeDecl: tree, []
+                Struct: phylo_s
+        TypeDecl: Cluster, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: mx, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: mx, []
+              IdentifierType: ['float']
+      Decl: coord, [], [], []
+        PtrDecl: []
+          TypeDecl: coord, []
+            IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: Np, [], [], []
+        TypeDecl: Np, []
+          IdentifierType: ['int']
+      Decl: row, [], [], []
+        TypeDecl: row, []
+          IdentifierType: ['int']
+      Decl: col, [], [], []
+        TypeDecl: col, []
+          IdentifierType: ['int']
+      Decl: min, [], [], []
+        TypeDecl: min, []
+          IdentifierType: ['float']
+      For: 
+        Assignment: =
+          ID: col
+          Constant: int, 0
+        BinaryOp: <
+          ID: col
+          ID: N
+        UnaryOp: p--
+          ID: Np
+        Compound: 
+          For: 
+            Assignment: =
+              ID: row
+              Constant: int, 0
+            BinaryOp: <
+              ID: row
+              ID: Np
+            UnaryOp: p++
+              ID: row
+            For: 
+              Assignment: =
+                ID: col
+                BinaryOp: +
+                  ID: row
+                  Constant: int, 1
+              BinaryOp: <
+                ID: col
+                ID: Np
+              UnaryOp: p++
+                ID: col
+              If: 
+                BinaryOp: <
+                  ArrayRef: 
+                    ArrayRef: 
+                      ID: mx
+                      ID: row
+                    ID: col
+                  ID: min
+                Assignment: =
+                  ID: i
+                  ID: row
+          Assignment: =
+            StructRef: .
+              ArrayRef: 
+                ID: tree
+                BinaryOp: -
+                  ID: Np
+                  Constant: int, 2
+              ID: left
+            ArrayRef: 
+              ID: coord
+              ID: i
+      FuncCall: 
+        ID: Free2DArray
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+            ID: mx
+          ID: N

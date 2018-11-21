@@ -1,0 +1,123 @@
+FileAST: 
+  Typedef: st, [], ['typedef']
+    TypeDecl: st, []
+      Struct: _st
+        Decl: iIndex, [], [], []
+          TypeDecl: iIndex, []
+            IdentifierType: ['long', 'int']
+          Constant: int, 24
+        Decl: iIndex1, [], [], []
+          TypeDecl: iIndex1, []
+            IdentifierType: ['long', 'int']
+          Constant: int, 24
+  Decl: next, [], [], []
+    PtrDecl: []
+      TypeDecl: next, []
+        IdentifierType: ['st']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: next, [], [], []
+        PtrDecl: []
+          TypeDecl: next, []
+            IdentifierType: ['st']
+        Constant: int, 0
+      Decl: nIndx, [], [], []
+        TypeDecl: nIndx, []
+          IdentifierType: ['int']
+      Decl: constreg, ['const'], ['static'], []
+        ArrayDecl: []
+          TypeDecl: constreg, ['const']
+            IdentifierType: ['int']
+        InitList: 
+          Constant: int, 0
+      Assignment: =
+        ID: nIndx
+        Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: next
+          ID: iIndex
+        ArrayRef: 
+          ID: constreg
+          ID: nIndx
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: nIndx, [], [], []
+        TypeDecl: nIndx, []
+          IdentifierType: ['int']
+      Decl: constreg, ['const'], ['static'], []
+        ArrayDecl: []
+          TypeDecl: constreg, ['const']
+            IdentifierType: ['long', 'int']
+        InitList: 
+          Constant: int, 0xFEFEFEFE
+      Assignment: =
+        ID: nIndx
+        Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: next
+          ID: iIndex
+        ArrayRef: 
+          ID: constreg
+          ID: nIndx
+      Assignment: =
+        StructRef: ->
+          ID: next
+          ID: iIndex1
+        ArrayRef: 
+          ID: constreg
+          ID: nIndx
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['st']
+      Assignment: =
+        ID: next
+        UnaryOp: &
+          ID: a
+      FuncCall: 
+        ID: f
+      If: 
+        BinaryOp: !=
+          StructRef: ->
+            ID: next
+            ID: iIndex
+          Constant: int, 0xFFFEFEFE
+        FuncCall: 
+          ID: __builtin_abort
+      If: 
+        BinaryOp: !=
+          StructRef: ->
+            ID: next
+            ID: iIndex1
+          Constant: int, 0xFFFEFEFE
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

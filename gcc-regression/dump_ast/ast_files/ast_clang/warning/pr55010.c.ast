@@ -1,0 +1,57 @@
+c_files/pr55010.c:12:21: warning: unsequenced modification and access to 'a' [-Wunsequenced]
+  a = (a < 0) / ((a -= b) ? b >= ((b = a) || 0) : 0);
+       ~            ^
+c_files/pr55010.c:12:38: warning: unsequenced modification and access to 'b' [-Wunsequenced]
+  a = (a < 0) / ((a -= b) ? b >= ((b = a) || 0) : 0);
+                            ~        ^
+2 warnings generated.
+TranslationUnitDecl 0x7fe8ac8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe8ac826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe8ac826740 '__int128'
+|-TypedefDecl 0x7fe8ac826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe8ac826760 'unsigned __int128'
+|-TypedefDecl 0x7fe8ac826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe8ac826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe8ac826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe8ac826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe8ac826dc0 'char *'
+|   `-BuiltinType 0x7fe8ac826560 'char'
+|-TypedefDecl 0x7fe8ac8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe8ac827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe8ac826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe8ac826e58 '__va_list_tag'
+|-VarDecl 0x7fe8ac827138 <c_files/pr55010.c:6:1, col:15> col:15 used a 'long long'
+|-VarDecl 0x7fe8ac877400 <line:7:1, col:24> col:24 used b 'unsigned long long'
+`-FunctionDecl 0x7fe8ac877520 <line:9:1, line:13:1> line:10:1 foo 'void (void)'
+  `-CompoundStmt 0x7fe8ac8779e8 <line:11:1, line:13:1>
+    `-BinaryOperator 0x7fe8ac8779c0 <line:12:3, col:52> 'long long' '='
+      |-DeclRefExpr 0x7fe8ac8775b8 <col:3> 'long long' lvalue Var 0x7fe8ac827138 'a' 'long long'
+      `-ImplicitCastExpr 0x7fe8ac8779a8 <col:7, col:52> 'long long' <IntegralCast>
+        `-BinaryOperator 0x7fe8ac877980 <col:7, col:52> 'int' '/'
+          |-ParenExpr 0x7fe8ac877680 <col:7, col:13> 'int'
+          | `-BinaryOperator 0x7fe8ac877658 <col:8, col:12> 'int' '<'
+          |   |-ImplicitCastExpr 0x7fe8ac877628 <col:8> 'long long' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7fe8ac8775e0 <col:8> 'long long' lvalue Var 0x7fe8ac827138 'a' 'long long'
+          |   `-ImplicitCastExpr 0x7fe8ac877640 <col:12> 'long long' <IntegralCast>
+          |     `-IntegerLiteral 0x7fe8ac877608 <col:12> 'int' 0
+          `-ParenExpr 0x7fe8ac877960 <col:17, col:52> 'int'
+            `-ConditionalOperator 0x7fe8ac877930 <col:18, col:51> 'int'
+              |-ParenExpr 0x7fe8ac877740 <col:18, col:25> 'long long'
+              | `-CompoundAssignOperator 0x7fe8ac877708 <col:19, col:24> 'long long' '-=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+              |   |-DeclRefExpr 0x7fe8ac8776a0 <col:19> 'long long' lvalue Var 0x7fe8ac827138 'a' 'long long'
+              |   `-ImplicitCastExpr 0x7fe8ac8776f0 <col:24> 'unsigned long long' <LValueToRValue>
+              |     `-DeclRefExpr 0x7fe8ac8776c8 <col:24> 'unsigned long long' lvalue Var 0x7fe8ac877400 'b' 'unsigned long long'
+              |-BinaryOperator 0x7fe8ac8778e8 <col:29, col:47> 'int' '>='
+              | |-ImplicitCastExpr 0x7fe8ac8778b8 <col:29> 'unsigned long long' <LValueToRValue>
+              | | `-DeclRefExpr 0x7fe8ac877760 <col:29> 'unsigned long long' lvalue Var 0x7fe8ac877400 'b' 'unsigned long long'
+              | `-ImplicitCastExpr 0x7fe8ac8778d0 <col:34, col:47> 'unsigned long long' <IntegralCast>
+              |   `-ParenExpr 0x7fe8ac877898 <col:34, col:47> 'int'
+              |     `-BinaryOperator 0x7fe8ac877870 <col:35, col:46> 'int' '||'
+              |       |-ParenExpr 0x7fe8ac877830 <col:35, col:41> 'unsigned long long'
+              |       | `-BinaryOperator 0x7fe8ac877808 <col:36, col:40> 'unsigned long long' '='
+              |       |   |-DeclRefExpr 0x7fe8ac877788 <col:36> 'unsigned long long' lvalue Var 0x7fe8ac877400 'b' 'unsigned long long'
+              |       |   `-ImplicitCastExpr 0x7fe8ac8777f0 <col:40> 'unsigned long long' <IntegralCast>
+              |       |     `-ImplicitCastExpr 0x7fe8ac8777d8 <col:40> 'long long' <LValueToRValue>
+              |       |       `-DeclRefExpr 0x7fe8ac8777b0 <col:40> 'long long' lvalue Var 0x7fe8ac827138 'a' 'long long'
+              |       `-IntegerLiteral 0x7fe8ac877850 <col:46> 'int' 0
+              `-IntegerLiteral 0x7fe8ac877910 <col:51> 'int' 0

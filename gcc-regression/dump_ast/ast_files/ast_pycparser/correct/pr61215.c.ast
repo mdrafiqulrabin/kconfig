@@ -1,0 +1,37 @@
+FileAST: 
+  Decl: fn1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+        EllipsisParam: 
+      TypeDecl: fn1, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['int']
+        TypeDecl: fn2, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: fn1
+        ExprList: 
+          Constant: int, 0
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['short']
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+              UnaryOp: &
+                ID: p1
+      Return: 
+        Constant: int, 0

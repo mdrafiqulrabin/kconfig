@@ -1,0 +1,23 @@
+FileAST: 
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fn, [], [], []
+            PtrDecl: []
+              FuncDecl: 
+                ParamList: 
+                  Typename: None, ['const']
+                    PtrDecl: []
+                      TypeDecl: None, ['const']
+                        IdentifierType: ['char']
+                TypeDecl: fn, []
+                  IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: fn
+          ExprList: 
+            Constant: string, "0"

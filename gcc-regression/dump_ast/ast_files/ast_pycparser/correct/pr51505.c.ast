@@ -1,0 +1,68 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+          Constant: int, 256
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            Struct: S
+        Typename: None, []
+          ArrayDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+            Constant: int, 16
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          Struct: S
+      Decl: s1, [], [], []
+        TypeDecl: s1, []
+          Struct: S
+      Decl: s2, [], [], []
+        TypeDecl: s2, []
+          Struct: S
+      Decl: e, [], [], []
+        ArrayDecl: []
+          TypeDecl: e, []
+            IdentifierType: ['char']
+          Constant: int, 256
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['char']
+      Assignment: =
+        ArrayRef: 
+          ID: e
+          ID: i
+        BinaryOp: &
+          UnaryOp: ~
+            ArrayRef: 
+              StructRef: .
+                ID: s1
+                ID: a
+              ID: i
+          ArrayRef: 
+            StructRef: .
+              ID: s2
+              ID: a
+            ID: i
+      If: 
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: u
+            ID: e
+        FuncCall: 
+          ID: __builtin_abort

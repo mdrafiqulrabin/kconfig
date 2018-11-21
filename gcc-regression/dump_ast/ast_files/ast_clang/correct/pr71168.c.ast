@@ -1,0 +1,62 @@
+TranslationUnitDecl 0x7fe6ba8244d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe6ba824a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe6ba824740 '__int128'
+|-TypedefDecl 0x7fe6ba824a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe6ba824760 'unsigned __int128'
+|-TypedefDecl 0x7fe6ba824d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe6ba824b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe6ba824ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe6ba824e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe6ba824dc0 'char *'
+|   `-BuiltinType 0x7fe6ba824560 'char'
+|-TypedefDecl 0x7fe6ba8250c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe6ba825070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe6ba824ee0 'struct __va_list_tag'
+|     `-Record 0x7fe6ba824e58 '__va_list_tag'
+|-VarDecl 0x7fe6ba825138 <c_files/pr71168.c:3:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fe6ba027e00 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7fe6ba027e78 <col:1, col:11> col:11 used c 'int'
+|-VarDecl 0x7fe6ba027f40 <line:4:1, col:7> col:7 used d 'long *'
+|-FunctionDecl 0x7fe6ba027fe8 <line:5:1, line:9:1> line:5:6 used fn1 'void ()'
+| `-CompoundStmt 0x7fe6ba028188 <line:6:1, line:9:1>
+|   `-ForStmt 0x7fe6ba028150 <line:7:3, line:8:6>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fe6ba0280e0 <line:7:10, col:14> 'int' '<'
+|     | |-IntegerLiteral 0x7fe6ba028080 <col:10> 'int' 0
+|     | `-ImplicitCastExpr 0x7fe6ba0280c8 <col:14> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fe6ba0280a0 <col:14> 'int' lvalue Var 0x7fe6ba825138 'a' 'int'
+|     |-<<<NULL>>>
+|     `-UnaryOperator 0x7fe6ba028130 <line:8:5, col:6> 'int' postfix '++'
+|       `-DeclRefExpr 0x7fe6ba028108 <col:5> 'int' lvalue Var 0x7fe6ba825138 'a' 'int'
+|-FunctionDecl 0x7fe6ba0281c8 <line:10:1, line:14:1> line:10:6 used fn3 'void ()'
+| `-CompoundStmt 0x7fe6ba028428 <line:11:1, line:14:1>
+|   `-ForStmt 0x7fe6ba0283f0 <line:12:3, line:13:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fe6ba028288 <line:12:10> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fe6ba028260 <col:10> 'int' lvalue Var 0x7fe6ba027e78 'c' 'int'
+|     |-UnaryOperator 0x7fe6ba0282c8 <col:13, col:14> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7fe6ba0282a0 <col:13> 'int' lvalue Var 0x7fe6ba027e78 'c' 'int'
+|     `-BinaryOperator 0x7fe6ba0283c8 <line:13:5, col:12> 'long' '='
+|       |-ArraySubscriptExpr 0x7fe6ba028368 <col:5, col:8> 'long' lvalue
+|       | |-ImplicitCastExpr 0x7fe6ba028338 <col:5> 'long *' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fe6ba0282e8 <col:5> 'long *' lvalue Var 0x7fe6ba027f40 'd' 'long *'
+|       | `-ImplicitCastExpr 0x7fe6ba028350 <col:7> 'int' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fe6ba028310 <col:7> 'int' lvalue Var 0x7fe6ba027e78 'c' 'int'
+|       `-ImplicitCastExpr 0x7fe6ba0283b0 <col:12> 'long' <IntegralCast>
+|         `-IntegerLiteral 0x7fe6ba028390 <col:12> 'int' 0
+`-FunctionDecl 0x7fe6ba028468 <line:15:1, line:20:1> line:15:6 fn2 'void ()'
+  `-CompoundStmt 0x7fe6ba028678 <line:16:1, line:20:1>
+    |-IfStmt 0x7fe6ba0285d8 <line:17:3, line:18:9>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fe6ba028528 <line:17:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe6ba028500 <col:7> 'int' lvalue Var 0x7fe6ba027e00 'b' 'int'
+    | |-CallExpr 0x7fe6ba0285b0 <line:18:5, col:9> 'void'
+    | | `-ImplicitCastExpr 0x7fe6ba028598 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe6ba028540 <col:5> 'void ()' Function 0x7fe6ba0281c8 'fn3' 'void ()'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fe6ba028650 <line:19:3, col:7> 'void'
+      `-ImplicitCastExpr 0x7fe6ba028638 <col:3> 'void (*)()' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fe6ba028610 <col:3> 'void ()' Function 0x7fe6ba027fe8 'fn1' 'void ()'

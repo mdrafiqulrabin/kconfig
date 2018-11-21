@@ -1,0 +1,24 @@
+c_files/pr14475.c:6:18: error: field has incomplete type 'enum tree_code'
+  enum tree_code code : 8; /* { dg-error "ISO C forbids forward references to" "forward ref" } */
+                 ^
+c_files/pr14475.c:6:8: note: forward declaration of 'enum tree_code'
+  enum tree_code code : 8; /* { dg-error "ISO C forbids forward references to" "forward ref" } */
+       ^
+1 error generated.
+TranslationUnitDecl 0x7f8b688166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8b68816c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8b68816940 '__int128'
+|-TypedefDecl 0x7f8b68816c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8b68816960 'unsigned __int128'
+|-TypedefDecl 0x7f8b68816f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8b68816d70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8b68816ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8b68817000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8b68816fc0 'char *'
+|   `-BuiltinType 0x7f8b68816760 'char'
+|-TypedefDecl 0x7f8b688172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8b68817270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8b688170e0 'struct __va_list_tag'
+|     `-Record 0x7f8b68817058 '__va_list_tag'
+`-RecordDecl 0x7f8b68817320 <c_files/pr14475.c:4:1, line:10:1> line:4:8 invalid struct tree_common definition
+  `-FieldDecl 0x7f8b69025ef0 <line:6:3, col:18> col:18 invalid code 'enum tree_code':'enum tree_code'

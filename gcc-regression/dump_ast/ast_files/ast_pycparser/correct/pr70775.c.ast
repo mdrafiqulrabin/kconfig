@@ -1,0 +1,91 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Struct: S
+        Decl: f1, [], [], []
+          TypeDecl: f1, []
+            IdentifierType: ['int']
+        Decl: f2, [], [], []
+          TypeDecl: f2, []
+            IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['short']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['int']
+          Decl: p2, [], [], []
+            TypeDecl: p2, []
+              IdentifierType: ['unsigned']
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          ID: p1
+          ID: p2
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        TypeDecl: fn2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          Struct: S
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['int']
+      For: 
+        ID: c
+        UnaryOp: p++
+          ID: c
+        For: 
+          Assignment: =
+            ID: f
+            UnaryOp: -
+              Constant: int, 3
+          BinaryOp: <
+            ID: f
+            Constant: int, 3
+          Assignment: =
+            ID: f
+            FuncCall: 
+              ID: fn1
+              ExprList: 
+                ID: f
+                Constant: int, 8
+          Compound: 
+            Assignment: =
+              StructRef: .
+                ID: a
+                ID: f1
+              ID: e
+            If: 
+              ID: b
+              Assignment: =
+                ID: a
+                ID: g
+              For: 
+                ID: h
+                UnaryOp: p++
+                  ID: h
+                Assignment: =
+                  ID: d
+                  ID: b

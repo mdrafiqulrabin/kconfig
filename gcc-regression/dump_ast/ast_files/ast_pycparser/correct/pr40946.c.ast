@@ -1,0 +1,214 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: a1, [], [], []
+        ArrayDecl: []
+          TypeDecl: a1, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 8
+      Decl: a2, [], [], []
+        TypeDecl: a2, []
+          IdentifierType: ['unsigned', 'short']
+      Decl: a3, [], [], []
+        TypeDecl: a3, []
+          IdentifierType: ['unsigned', 'short']
+      Decl: a4, [], [], []
+        TypeDecl: a4, []
+          IdentifierType: ['unsigned', 'short']
+      Decl: a5, [], [], []
+        TypeDecl: a5, []
+          IdentifierType: ['unsigned', 'short']
+      Decl: a6, [], [], []
+        TypeDecl: a6, []
+          IdentifierType: ['unsigned', 'short']
+      Decl: a7, [], [], []
+        TypeDecl: a7, []
+          IdentifierType: ['unsigned', 'short']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      PtrDecl: []
+        TypeDecl: foo, []
+          IdentifierType: ['char']
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['char']
+          Decl: y, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: y, ['const']
+                IdentifierType: ['char']
+        PtrDecl: []
+          TypeDecl: baz, []
+            IdentifierType: ['char']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+        BinaryOp: +
+          BinaryOp: +
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  Struct: A
+            BinaryOp: *
+              Constant: int, 2
+              BinaryOp: +
+                BinaryOp: +
+                  FuncCall: 
+                    ID: __builtin_strlen
+                    ExprList: 
+                      ID: y
+                  FuncCall: 
+                    ID: __builtin_strlen
+                    ExprList: 
+                      ID: x
+                Constant: int, 24
+          Constant: int, 16
+      Decl: b, [], [], []
+        PtrDecl: []
+          TypeDecl: b, []
+            Struct: A
+        FuncCall: 
+          ID: __builtin_malloc
+          ExprList: 
+            ID: a
+      Decl: c, [], [], []
+        PtrDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['char']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      Assignment: =
+        StructRef: ->
+          ID: b
+          ID: a4
+        UnaryOp: sizeof
+          Typename: None, []
+            TypeDecl: None, []
+              Struct: A
+      Assignment: =
+        ID: c
+        BinaryOp: +
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['char']
+            ID: b
+          StructRef: ->
+            ID: b
+            ID: a4
+      Assignment: =
+        ID: d
+        BinaryOp: -
+          BinaryOp: +
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+              ID: b
+            ID: a
+          ID: c
+      Assignment: =
+        StructRef: ->
+          ID: b
+          ID: a2
+        Assignment: =
+          StructRef: ->
+            ID: b
+            ID: a3
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'short']
+            FuncCall: 
+              ID: bar
+              ExprList: 
+                ID: c
+                ID: y
+                ID: d
+      Assignment: +=
+        ID: c
+        StructRef: ->
+          ID: b
+          ID: a2
+      Assignment: =
+        ID: d
+        BinaryOp: -
+          BinaryOp: +
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+              ID: b
+            ID: a
+          ID: c
+      Assignment: =
+        StructRef: ->
+          ID: b
+          ID: a7
+        BinaryOp: +
+          StructRef: ->
+            ID: b
+            ID: a4
+          StructRef: ->
+            ID: b
+            ID: a2
+      Assignment: =
+        StructRef: ->
+          ID: b
+          ID: a5
+        Assignment: =
+          StructRef: ->
+            ID: b
+            ID: a6
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'short']
+            FuncCall: 
+              ID: bar
+              ExprList: 
+                ID: c
+                ID: x
+                ID: d
+      Assignment: =
+        ID: c
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            ID: b
+            ID: a
+      Return: 
+        ID: c

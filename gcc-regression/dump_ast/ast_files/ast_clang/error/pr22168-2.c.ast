@@ -1,0 +1,26 @@
+c_files/pr22168-2.c:6:5: error: invalid token at start of a preprocessor expression
+#if #foo(bar)    /* { dg-warning "deprecated" } */
+    ^
+c_files/pr22168-2.c:11:2: error: invalid preprocessing directive
+#assert zzz(a)   /* { dg-warning "deprecated" } */
+ ^
+c_files/pr22168-2.c:12:2: error: invalid preprocessing directive
+#unassert yyy    /* { dg-warning "deprecated" } */
+ ^
+3 errors generated.
+TranslationUnitDecl 0x7fb9d88264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb9d8826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb9d8826740 '__int128'
+|-TypedefDecl 0x7fb9d8826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb9d8826760 'unsigned __int128'
+|-TypedefDecl 0x7fb9d8826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb9d8826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb9d8826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb9d8826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb9d8826dc0 'char *'
+|   `-BuiltinType 0x7fb9d8826560 'char'
+|-TypedefDecl 0x7fb9d88270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb9d8827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb9d8826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb9d8826e58 '__va_list_tag'
+`-VarDecl 0x7fb9d8827138 <c_files/pr22168-2.c:9:1, col:5> col:5 y 'int'

@@ -1,0 +1,24 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: T
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: S
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          Struct: T
+  Decl: s, [], [], []
+    TypeDecl: s, []
+      Struct: S
+    InitList: 
+      NamedInitializer: 
+        InitList: 
+          CompoundLiteral: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            InitList: 
+              Constant: int, 1
+        ID: t

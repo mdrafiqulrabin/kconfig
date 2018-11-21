@@ -1,0 +1,41 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: shared_ptr_struct
+      Decl: phase, [], [], []
+        TypeDecl: phase, []
+          IdentifierType: ['unsigned', 'long', 'long']
+        Constant: int, 48
+      Decl: thread, [], [], []
+        TypeDecl: thread, []
+          IdentifierType: ['unsigned', 'short']
+        Constant: int, 16
+      Decl: None, [], [], []
+        Union: None
+          Decl: addr, [], [], []
+            PtrDecl: []
+              TypeDecl: addr, []
+                IdentifierType: ['void']
+          Decl: pad, [], [], []
+            TypeDecl: pad, []
+              IdentifierType: ['unsigned', 'long', 'long']
+  Typedef: sptr_t, [], ['typedef']
+    TypeDecl: sptr_t, []
+      Struct: shared_ptr_struct
+  FuncDef: 
+    Decl: copy_sptr, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dest, [], [], []
+            PtrDecl: []
+              TypeDecl: dest, []
+                IdentifierType: ['sptr_t']
+          Decl: src, [], [], []
+            TypeDecl: src, []
+              IdentifierType: ['sptr_t']
+        TypeDecl: copy_sptr, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: dest
+        ID: src

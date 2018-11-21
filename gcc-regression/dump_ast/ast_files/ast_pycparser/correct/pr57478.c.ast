@@ -1,0 +1,54 @@
+FileAST: 
+  Typedef: Node, [], ['typedef']
+    TypeDecl: Node, []
+      Struct: Node
+  Decl: None, [], [], []
+    Struct: Node
+      Decl: Pred, [], [], []
+        PtrDecl: []
+          TypeDecl: Pred, []
+            IdentifierType: ['Node']
+      Decl: Suc, [], [], []
+        PtrDecl: []
+          TypeDecl: Suc, []
+            IdentifierType: ['Node']
+      Decl: SubBestPred, [], [], []
+        PtrDecl: []
+          TypeDecl: SubBestPred, []
+            IdentifierType: ['Node']
+      Decl: SubBestSuc, [], [], []
+        PtrDecl: []
+          TypeDecl: SubBestSuc, []
+            IdentifierType: ['Node']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: N, [], [], []
+            PtrDecl: []
+              TypeDecl: N, []
+                IdentifierType: ['Node']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      DoWhile: 
+        Assignment: =
+          ID: N
+          StructRef: ->
+            ID: N
+            ID: Suc
+        Compound: 
+          Assignment: =
+            StructRef: ->
+              ID: N
+              ID: SubBestPred
+            StructRef: ->
+              ID: N
+              ID: Pred
+          Assignment: =
+            StructRef: ->
+              ID: N
+              ID: SubBestSuc
+            StructRef: ->
+              ID: N
+              ID: Suc

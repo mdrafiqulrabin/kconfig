@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7fd1640264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd164026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd164026740 '__int128'
+|-TypedefDecl 0x7fd164026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd164026760 'unsigned __int128'
+|-TypedefDecl 0x7fd164026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd164026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd164026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd164026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd164026dc0 'char *'
+|   `-BuiltinType 0x7fd164026560 'char'
+|-TypedefDecl 0x7fd1640270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd164027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd164026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd164026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd164825a00 <c_files/pr78305.c:4:1, line:14:1> line:4:5 main 'int ()'
+| `-CompoundStmt 0x7fd1648261f8 <line:5:1, line:14:1>
+|   |-DeclStmt 0x7fd164825b70 <line:6:3, col:12>
+|   | `-VarDecl 0x7fd164825af0 <col:3, col:11> col:7 used a 'int' cinit
+|   |   `-IntegerLiteral 0x7fd164825b50 <col:11> 'int' 2
+|   |-DeclStmt 0x7fd164825c20 <line:7:3, col:12>
+|   | `-VarDecl 0x7fd164825ba0 <col:3, col:11> col:7 used b 'int' cinit
+|   |   `-IntegerLiteral 0x7fd164825c00 <col:11> 'int' 1
+|   |-DeclStmt 0x7fd164825f38 <line:9:3, col:63>
+|   | `-VarDecl 0x7fd164825c50 <col:3, col:62> col:7 used t 'int' cinit
+|   |   `-BinaryOperator 0x7fd164825f10 <col:11, col:62> 'int' '/'
+|   |     |-BinaryOperator 0x7fd164825ea8 <col:11, col:56> 'int' '*'
+|   |     | |-UnaryOperator 0x7fd164825cd0 <col:11, col:12> 'int' prefix '-'
+|   |     | | `-IntegerLiteral 0x7fd164825cb0 <col:12> 'int' 1
+|   |     | `-ParenExpr 0x7fd164825e88 <col:16, col:56> 'int'
+|   |     |   `-BinaryOperator 0x7fd164825e60 <col:18, col:54> 'int' '/'
+|   |     |     |-BinaryOperator 0x7fd164825d70 <col:18, col:32> 'int' '*'
+|   |     |     | |-UnaryOperator 0x7fd164825d10 <col:18, col:19> 'int' prefix '-'
+|   |     |     | | `-IntegerLiteral 0x7fd164825cf0 <col:19> 'int' 1073741824
+|   |     |     | `-ImplicitCastExpr 0x7fd164825d58 <col:32> 'int' <LValueToRValue>
+|   |     |     |   `-DeclRefExpr 0x7fd164825d30 <col:32> 'int' lvalue Var 0x7fd164825af0 'a' 'int'
+|   |     |     `-ParenExpr 0x7fd164825e40 <col:36, col:54> 'int'
+|   |     |       `-BinaryOperator 0x7fd164825e18 <col:38, col:52> 'int' '+'
+|   |     |         |-UnaryOperator 0x7fd164825db8 <col:38, col:39> 'int' prefix '-'
+|   |     |         | `-IntegerLiteral 0x7fd164825d98 <col:39> 'int' 536870912
+|   |     |         `-ImplicitCastExpr 0x7fd164825e00 <col:52> 'int' <LValueToRValue>
+|   |     |           `-DeclRefExpr 0x7fd164825dd8 <col:52> 'int' lvalue Var 0x7fd164825ba0 'b' 'int'
+|   |     `-UnaryOperator 0x7fd164825ef0 <col:61, col:62> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x7fd164825ed0 <col:62> 'int' 1
+|   |-IfStmt 0x7fd164826188 <line:11:3, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fd164825fb0 <col:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fd164825f98 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fd164825f50 <col:7> 'int' lvalue Var 0x7fd164825c50 't' 'int'
+|   | | `-IntegerLiteral 0x7fd164825f78 <col:12> 'int' 4
+|   | |-CallExpr 0x7fd164826160 <col:15, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7fd164826148 <col:15> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd1648260f0 <col:15> '<builtin fn type>' Function 0x7fd164826010 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fd1648261e0 <line:13:3, col:10>
+|     `-IntegerLiteral 0x7fd1648261c0 <col:10> 'int' 0
+`-FunctionDecl 0x7fd164826010 <line:11:15> col:15 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fd1648260a8 <col:15> Implicit

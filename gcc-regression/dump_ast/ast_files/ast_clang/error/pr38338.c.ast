@@ -1,0 +1,65 @@
+c_files/pr38338.c:17:16: error: use of unknown builtin '__builtin_apply_args' [-Wimplicit-function-declaration]
+  void *args = __builtin_apply_args ();
+               ^
+c_files/pr38338.c:17:9: warning: incompatible integer to pointer conversion initializing 'void *' with an expression of type 'int' [-Wint-conversion]
+  void *args = __builtin_apply_args ();
+        ^      ~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr38338.c:18:10: error: use of unknown builtin '__builtin_apply' [-Wimplicit-function-declaration]
+  return __builtin_apply ((fnp) foo, args, sizeof (void *));
+         ^
+c_files/pr38338.c:18:10: note: did you mean '__builtin_apply_args'?
+c_files/pr38338.c:17:16: note: '__builtin_apply_args' declared here
+  void *args = __builtin_apply_args ();
+               ^
+c_files/pr38338.c:18:10: warning: incompatible integer to pointer conversion returning 'int' from a function with result type 'void *' [-Wint-conversion]
+  return __builtin_apply ((fnp) foo, args, sizeof (void *));
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings and 2 errors generated.
+TranslationUnitDecl 0x7f9e690264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9e69026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9e69026740 '__int128'
+|-TypedefDecl 0x7f9e69026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9e69026760 'unsigned __int128'
+|-TypedefDecl 0x7f9e69026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9e69026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9e69026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9e69026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9e69026dc0 'char *'
+|   `-BuiltinType 0x7f9e69026560 'char'
+|-TypedefDecl 0x7f9e690270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9e69027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9e69026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9e69026e58 '__va_list_tag'
+|-TypedefDecl 0x7f9e69077488 <c_files/pr38338.c:6:1, col:26> col:16 referenced fnp 'void (*)(void)'
+| `-PointerType 0x7f9e69077430 'void (*)(void)'
+|   `-ParenType 0x7f9e690271c0 'void (void)' sugar
+|     `-FunctionProtoType 0x7f9e69027190 'void (void)' cdecl
+|       `-BuiltinType 0x7f9e69026520 'void'
+|-FunctionDecl 0x7f9e690775b0 <line:8:1, line:12:1> line:9:1 used foo 'char (char)' static
+| |-ParmVarDecl 0x7f9e690774f0 <col:6, col:11> col:11 used x 'char'
+| `-CompoundStmt 0x7f9e690776e8 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7f9e690776d0 <line:11:3, col:10>
+|     `-ImplicitCastExpr 0x7f9e690776b8 <col:10> 'char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9e69077690 <col:10> 'char' lvalue ParmVar 0x7f9e690774f0 'x' 'char'
+|-FunctionDecl 0x7f9e690777e8 <line:14:1, line:19:1> line:15:1 bar 'void *(char)' static
+| |-ParmVarDecl 0x7f9e69077718 <col:6, col:11> col:11 x 'char'
+| `-CompoundStmt 0x7f9e69078128 <line:16:1, line:19:1>
+|   |-DeclStmt 0x7f9e69077e60 <line:17:3, col:39>
+|   | `-VarDecl 0x7f9e690778a0 <col:3, col:38> col:9 used args 'void *' cinit
+|   |   `-ImplicitCastExpr 0x7f9e69077a98 <col:16, col:38> 'void *' <IntegralToPointer>
+|   |     `-CallExpr 0x7f9e69077a70 <col:16, col:38> 'int'
+|   |       `-ImplicitCastExpr 0x7f9e69077a58 <col:16> 'int (*)()' <FunctionToPointerDecay>
+|   |         `-DeclRefExpr 0x7f9e69077a08 <col:16> 'int ()' Function 0x7f9e69077970 '__builtin_apply_args' 'int ()'
+|   `-ReturnStmt 0x7f9e69078110 <line:18:3, col:59>
+|     `-ImplicitCastExpr 0x7f9e690780f8 <col:10, col:59> 'void *' <IntegralToPointer>
+|       `-CallExpr 0x7f9e690780a0 <col:10, col:59> 'int'
+|         |-ImplicitCastExpr 0x7f9e69078088 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7f9e69077f38 <col:10> 'int ()' Function 0x7f9e69077ea0 '__builtin_apply' 'int ()'
+|         |-CStyleCastExpr 0x7f9e69078000 <col:27, col:33> 'fnp':'void (*)(void)' <BitCast>
+|         | `-ImplicitCastExpr 0x7f9e69077fe8 <col:33> 'char (*)(char)' <FunctionToPointerDecay>
+|         |   `-DeclRefExpr 0x7f9e69077f80 <col:33> 'char (char)' Function 0x7f9e690775b0 'foo' 'char (char)'
+|         |-ImplicitCastExpr 0x7f9e690780e0 <col:38> 'void *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f9e69078028 <col:38> 'void *' lvalue Var 0x7f9e690778a0 'args' 'void *'
+|         `-UnaryExprOrTypeTraitExpr 0x7f9e69078068 <col:44, col:58> 'unsigned long' sizeof 'void *'
+|-FunctionDecl 0x7f9e69077970 <<invalid sloc>> line:17:16 implicit used __builtin_apply_args 'int ()'
+`-FunctionDecl 0x7f9e69077ea0 <<invalid sloc>> line:18:10 implicit used __builtin_apply 'int ()'

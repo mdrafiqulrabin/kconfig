@@ -1,0 +1,22 @@
+FileAST: 
+  FuncDef: 
+    Decl: func, ['const'], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: func, ['const']
+            IdentifierType: ['char']
+    Compound: 
+      Switch: 
+        ID: val
+        Compound: 
+          Case: 
+            ID: __INT_MAX__
+            Return: 
+              Constant: string, "foo"
+          Default: 
+            Return: 
+              Constant: string, ""

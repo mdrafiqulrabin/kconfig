@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fc73a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc73a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc73a826740 '__int128'
+|-TypedefDecl 0x7fc73a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc73a826760 'unsigned __int128'
+|-TypedefDecl 0x7fc73a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc73a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc73a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc73a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc73a826dc0 'char *'
+|   `-BuiltinType 0x7fc73a826560 'char'
+|-TypedefDecl 0x7fc73a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc73a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc73a826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc73a826e58 '__va_list_tag'
+|-TypedefDecl 0x7fc73a827178 <c_files/pr80819-1.c:5:1, col:28> col:28 referenced V '__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long'
+| `-VectorType 0x7fc73a827140 '__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long' 2
+|   `-BuiltinType 0x7fc73a8266a0 'unsigned long long'
+`-FunctionDecl 0x7fc73b026ba0 <line:7:1, line:11:1> line:8:1 foo 'V (unsigned long long, unsigned long long)'
+  |-ParmVarDecl 0x7fc73b026a18 <col:6, col:25> col:25 used x 'unsigned long long'
+  |-ParmVarDecl 0x7fc73b026a90 <col:28, col:47> col:47 used y 'unsigned long long'
+  `-CompoundStmt 0x7fc73b026e10 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fc73b026df8 <line:10:3, col:21>
+      `-ImplicitCastExpr 0x7fc73b026de0 <col:10, col:21> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long' <LValueToRValue>
+        `-CompoundLiteralExpr 0x7fc73b026db8 <col:10, col:21> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long' lvalue
+          `-InitListExpr 0x7fc73b026d38 <col:14, col:21> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long'
+            |-ImplicitCastExpr 0x7fc73b026d88 <col:16> 'unsigned long long' <LValueToRValue>
+            | `-DeclRefExpr 0x7fc73b026c98 <col:16> 'unsigned long long' lvalue ParmVar 0x7fc73b026a18 'x' 'unsigned long long'
+            `-ImplicitCastExpr 0x7fc73b026da0 <col:19> 'unsigned long long' <LValueToRValue>
+              `-DeclRefExpr 0x7fc73b026cc0 <col:19> 'unsigned long long' lvalue ParmVar 0x7fc73b026a90 'y' 'unsigned long long'

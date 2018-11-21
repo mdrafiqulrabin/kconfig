@@ -1,0 +1,21 @@
+FileAST: 
+  FuncDef: 
+    Decl: ud_x_641_mul, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+        TypeDecl: ud_x_641_mul, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: >>
+          BinaryOp: *
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'long', 'long']
+              ID: x
+            Constant: int, 0x663d81
+          Constant: int, 32

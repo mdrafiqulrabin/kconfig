@@ -1,0 +1,43 @@
+FileAST: 
+  Decl: host_frametime, [], ['extern'], []
+    TypeDecl: host_frametime, []
+      IdentifierType: ['double']
+  Decl: pitchvel, [], ['extern'], []
+    TypeDecl: pitchvel, []
+      IdentifierType: ['float']
+  FuncDef: 
+    Decl: V_DriftPitch, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: delta, [], [], []
+            TypeDecl: delta, []
+              IdentifierType: ['float']
+          Decl: move, [], [], []
+            TypeDecl: move, []
+              IdentifierType: ['float']
+        TypeDecl: V_DriftPitch, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        UnaryOp: !
+          ID: delta
+        Assignment: =
+          ID: move
+          ID: host_frametime
+      If: 
+        BinaryOp: >
+          ID: delta
+          Constant: int, 0
+        EmptyStatement: 
+        If: 
+          BinaryOp: &&
+            BinaryOp: <
+              ID: delta
+              Constant: int, 0
+            BinaryOp: >
+              ID: move
+              UnaryOp: -
+                ID: delta
+          Assignment: =
+            ID: pitchvel
+            Constant: int, 0

@@ -1,0 +1,32 @@
+FileAST: 
+  Decl: is_table, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: is_table, []
+          IdentifierType: ['int']
+        Constant: int, 16
+      Constant: int, 2
+  Decl: is_table_lsf, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        ArrayDecl: []
+          TypeDecl: is_table_lsf, []
+            IdentifierType: ['int']
+          Constant: int, 16
+        Constant: int, 2
+      Constant: int, 2
+  FuncDef: 
+    Decl: compute_stereo, [], [], []
+      FuncDecl: 
+        TypeDecl: compute_stereo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: is_tab, [], [], []
+        PtrDecl: []
+          ArrayDecl: []
+            TypeDecl: is_tab, []
+              IdentifierType: ['int']
+            Constant: int, 16
+      Assignment: =
+        ID: is_tab
+        ID: is_table

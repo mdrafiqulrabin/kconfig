@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fa8fe0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa8fe026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa8fe026740 '__int128'
+|-TypedefDecl 0x7fa8fe026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa8fe026760 'unsigned __int128'
+|-TypedefDecl 0x7fa8fe026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa8fe026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa8fe026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa8fe026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa8fe026dc0 'char *'
+|   `-BuiltinType 0x7fa8fe026560 'char'
+|-TypedefDecl 0x7fa8fe0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa8fe027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa8fe026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa8fe026e58 '__va_list_tag'
+|-TypedefDecl 0x7fa8fe027138 <c_files/pr67317-1.c:5:1, col:22> col:22 referenced u32 'unsigned int'
+| `-BuiltinType 0x7fa8fe026660 'unsigned int'
+|-FunctionDecl 0x7fa8fe077690 <line:7:1, line:15:1> line:7:5 testcarry_u32 'u32 (u32, u32, u32, u32)'
+| |-ParmVarDecl 0x7fa8fe077400 <col:20, col:24> col:24 used a 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fa8fe077470 <col:27, col:31> col:31 used b 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fa8fe0774e0 <col:34, col:38> col:38 used c 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fa8fe077550 <col:41, col:45> col:45 used d 'u32':'unsigned int'
+| `-CompoundStmt 0x7fa8fe077fa8 <line:8:1, line:15:1>
+|   |-DeclStmt 0x7fa8fe077880 <line:9:3, col:23>
+|   | |-VarDecl 0x7fa8fe077798 <col:3, col:7> col:7 used result0 'u32':'unsigned int'
+|   | `-VarDecl 0x7fa8fe077808 <col:3, col:16> col:16 used result1 'u32':'unsigned int'
+|   |-CallExpr 0x7fa8fe077e70 <line:11:3, line:12:70> 'unsigned char'
+|   | |-ImplicitCastExpr 0x7fa8fe077e58 <line:11:3> 'unsigned char (*)(unsigned char, unsigned int, unsigned int, unsigned int *)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fa8fe077b58 <col:3> '<builtin fn type>' Function 0x7fa8fe077920 '__builtin_ia32_addcarryx_u32' 'unsigned char (unsigned char, unsigned int, unsigned int, unsigned int *)'
+|   | |-CallExpr 0x7fa8fe077d00 <line:12:6, col:53> 'unsigned char'
+|   | | |-ImplicitCastExpr 0x7fa8fe077ce8 <col:6> 'unsigned char (*)(unsigned char, unsigned int, unsigned int, unsigned int *)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7fa8fe077b80 <col:6> '<builtin fn type>' Function 0x7fa8fe077920 '__builtin_ia32_addcarryx_u32' 'unsigned char (unsigned char, unsigned int, unsigned int, unsigned int *)'
+|   | | |-ImplicitCastExpr 0x7fa8fe077d48 <col:36> 'unsigned char' <IntegralCast>
+|   | | | `-IntegerLiteral 0x7fa8fe077ba8 <col:36> 'int' 0
+|   | | |-ImplicitCastExpr 0x7fa8fe077d60 <col:39> 'u32':'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa8fe077bc8 <col:39> 'u32':'unsigned int' lvalue ParmVar 0x7fa8fe077400 'a' 'u32':'unsigned int'
+|   | | |-ImplicitCastExpr 0x7fa8fe077d78 <col:42> 'u32':'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa8fe077bf0 <col:42> 'u32':'unsigned int' lvalue ParmVar 0x7fa8fe0774e0 'c' 'u32':'unsigned int'
+|   | | `-UnaryOperator 0x7fa8fe077c68 <col:45, col:46> 'u32 *' prefix '&'
+|   | |   `-DeclRefExpr 0x7fa8fe077c18 <col:46> 'u32':'unsigned int' lvalue Var 0x7fa8fe077798 'result0' 'u32':'unsigned int'
+|   | |-ImplicitCastExpr 0x7fa8fe077eb8 <col:56> 'u32':'unsigned int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fa8fe077d90 <col:56> 'u32':'unsigned int' lvalue ParmVar 0x7fa8fe077470 'b' 'u32':'unsigned int'
+|   | |-ImplicitCastExpr 0x7fa8fe077ed0 <col:59> 'u32':'unsigned int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fa8fe077db8 <col:59> 'u32':'unsigned int' lvalue ParmVar 0x7fa8fe077550 'd' 'u32':'unsigned int'
+|   | `-UnaryOperator 0x7fa8fe077e08 <col:62, col:63> 'u32 *' prefix '&'
+|   |   `-DeclRefExpr 0x7fa8fe077de0 <col:63> 'u32':'unsigned int' lvalue Var 0x7fa8fe077808 'result1' 'u32':'unsigned int'
+|   `-ReturnStmt 0x7fa8fe077f90 <line:14:3, col:20>
+|     `-BinaryOperator 0x7fa8fe077f68 <col:10, col:20> 'unsigned int' '^'
+|       |-ImplicitCastExpr 0x7fa8fe077f38 <col:10> 'u32':'unsigned int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fa8fe077ee8 <col:10> 'u32':'unsigned int' lvalue Var 0x7fa8fe077798 'result0' 'u32':'unsigned int'
+|       `-ImplicitCastExpr 0x7fa8fe077f50 <col:20> 'u32':'unsigned int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fa8fe077f10 <col:20> 'u32':'unsigned int' lvalue Var 0x7fa8fe077808 'result1' 'u32':'unsigned int'
+`-FunctionDecl 0x7fa8fe077920 <line:11:3> col:3 implicit used __builtin_ia32_addcarryx_u32 'unsigned char (unsigned char, unsigned int, unsigned int, unsigned int *)' extern
+  |-ParmVarDecl 0x7fa8fe0779b8 <<invalid sloc>> <invalid sloc> 'unsigned char'
+  |-ParmVarDecl 0x7fa8fe077a18 <<invalid sloc>> <invalid sloc> 'unsigned int'
+  |-ParmVarDecl 0x7fa8fe077a78 <<invalid sloc>> <invalid sloc> 'unsigned int'
+  `-ParmVarDecl 0x7fa8fe077ad8 <<invalid sloc>> <invalid sloc> 'unsigned int *'

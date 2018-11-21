@@ -1,0 +1,56 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: _Unwind_Context
+      Decl: reg, [], [], []
+        ArrayDecl: []
+          PtrDecl: []
+            TypeDecl: reg, []
+              IdentifierType: ['void']
+          Constant: int, 17
+      Decl: ra, [], [], []
+        PtrDecl: []
+          TypeDecl: ra, []
+            IdentifierType: ['void']
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: _Unwind_Context
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: __frame_state_for, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: pc_target, [], [], []
+            PtrDecl: []
+              TypeDecl: pc_target, []
+                IdentifierType: ['void']
+        TypeDecl: __frame_state_for, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: context, [], [], []
+        TypeDecl: context, []
+          Struct: _Unwind_Context
+      FuncCall: 
+        ID: __builtin_memset
+        ExprList: 
+          UnaryOp: &
+            ID: context
+          Constant: int, 0
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                Struct: _Unwind_Context
+      Assignment: =
+        StructRef: .
+          ID: context
+          ID: ra
+        ID: pc_target
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          UnaryOp: &
+            ID: context

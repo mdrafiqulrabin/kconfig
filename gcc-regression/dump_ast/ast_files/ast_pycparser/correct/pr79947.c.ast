@@ -1,0 +1,19 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['float']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['float']
+  FuncDef: 
+    Decl: c, [], [], []
+      FuncDecl: 
+        TypeDecl: c, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: a
+        FuncCall: 
+          ID: __builtin_sqrtf
+          ExprList: 
+            ID: b

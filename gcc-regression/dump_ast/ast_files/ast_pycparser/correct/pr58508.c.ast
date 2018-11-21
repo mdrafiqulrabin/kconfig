@@ -1,0 +1,212 @@
+FileAST: 
+  FuncDef: 
+    Decl: test1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['int']
+        TypeDecl: test1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 100000
+        UnaryOp: ++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: a
+            ID: i
+          BinaryOp: +
+            UnaryOp: *
+              ID: b
+            Constant: int, 1
+  FuncDef: 
+    Decl: test2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['int']
+        TypeDecl: test2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: <
+          ID: j
+          Constant: int, 100000
+        UnaryOp: ++
+          ID: j
+        For: 
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          BinaryOp: <
+            ID: i
+            Constant: int, 100000
+          UnaryOp: ++
+            ID: i
+          Assignment: =
+            ArrayRef: 
+              ID: a
+              ID: i
+            BinaryOp: +
+              ArrayRef: 
+                ID: b
+                BinaryOp: +
+                  ID: j
+                  Constant: int, 1
+              Constant: int, 1
+  FuncDef: 
+    Decl: test3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['int']
+        TypeDecl: test3, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10000
+        UnaryOp: ++
+          ID: i
+        Compound: 
+          If: 
+            BinaryOp: >
+              UnaryOp: *
+                ID: b
+              Constant: int, 0
+            Assignment: =
+              ID: t
+              BinaryOp: *
+                UnaryOp: *
+                  ID: b
+                Constant: int, 2
+            Assignment: =
+              ID: t
+              BinaryOp: /
+                UnaryOp: *
+                  ID: b
+                Constant: int, 2
+          Assignment: =
+            ArrayRef: 
+              ID: a
+              ID: i
+            ID: t
+  FuncDef: 
+    Decl: test4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['int']
+        TypeDecl: test4, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 100000
+        UnaryOp: ++
+          ID: i
+        Assignment: +=
+          UnaryOp: *
+            ID: a
+          ArrayRef: 
+            ID: b
+            ID: i
+  FuncDef: 
+    Decl: test5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['int']
+        TypeDecl: test5, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 100000
+        UnaryOp: ++
+          ID: i
+        Compound: 
+          Assignment: +=
+            UnaryOp: *
+              ID: b
+            ArrayRef: 
+              ID: a
+              ID: i
+          Assignment: =
+            ArrayRef: 
+              ID: a
+              ID: i
+            UnaryOp: *
+              ID: b

@@ -1,0 +1,76 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: s, ['const']
+                IdentifierType: ['char']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['unsigned']
+        BinaryOp: +
+          FuncCall: 
+            ID: __builtin_strlen
+            ExprList: 
+              ID: s
+          Constant: int, 1
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+        FuncCall: 
+          ID: __builtin_malloc
+          ExprList: 
+            ID: n
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          ID: p
+          ID: s
+          ID: n
+      FuncCall: 
+        ID: __builtin_free
+        ExprList: 
+          ID: p
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: s, ['const']
+                IdentifierType: ['char']
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['unsigned']
+        BinaryOp: +
+          FuncCall: 
+            ID: __builtin_strlen
+            ExprList: 
+              ID: s
+          Constant: int, 1
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+        FuncCall: 
+          ID: __builtin_malloc
+          ExprList: 
+            ID: n
+      FuncCall: 
+        ID: __builtin_strcpy
+        ExprList: 
+          ID: p
+          ID: s
+      FuncCall: 
+        ID: __builtin_free
+        ExprList: 
+          ID: p

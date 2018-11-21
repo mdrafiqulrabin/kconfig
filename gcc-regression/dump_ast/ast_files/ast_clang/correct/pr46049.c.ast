@@ -1,0 +1,77 @@
+TranslationUnitDecl 0x7f8f018264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8f01826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8f01826740 '__int128'
+|-TypedefDecl 0x7f8f01826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8f01826760 'unsigned __int128'
+|-TypedefDecl 0x7f8f01826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8f01826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8f01826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8f01826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8f01826dc0 'char *'
+|   `-BuiltinType 0x7f8f01826560 'char'
+|-TypedefDecl 0x7f8f018270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8f01827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8f01826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8f01826e58 '__va_list_tag'
+|-TypedefDecl 0x7f8f01827138 <c_files/pr46049.c:3:1, col:24> col:24 referenced int16_t 'short'
+| `-BuiltinType 0x7f8f018265a0 'short'
+|-TypedefDecl 0x7f8f018271a8 <line:4:1, col:24> col:24 referenced int32_t 'int'
+| `-BuiltinType 0x7f8f018265c0 'int'
+|-FunctionDecl 0x7f8f02025bd0 <line:6:1, line:9:1> line:6:23 used bar 'int32_t (int16_t, int16_t)' static inline
+| |-ParmVarDecl 0x7f8f02025a50 <col:28, col:36> col:36 used x 'int16_t':'short'
+| |-ParmVarDecl 0x7f8f02025ac0 <col:39, col:47> col:47 used y 'int16_t':'short'
+| `-CompoundStmt 0x7f8f02025da8 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7f8f02025d90 <line:8:3, col:14>
+|     `-BinaryOperator 0x7f8f02025d68 <col:10, col:14> 'int' '*'
+|       |-ImplicitCastExpr 0x7f8f02025d20 <col:10> 'int' <IntegralCast>
+|       | `-ImplicitCastExpr 0x7f8f02025d08 <col:10> 'int16_t':'short' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7f8f02025cb8 <col:10> 'int16_t':'short' lvalue ParmVar 0x7f8f02025a50 'x' 'int16_t':'short'
+|       `-ImplicitCastExpr 0x7f8f02025d50 <col:14> 'int' <IntegralCast>
+|         `-ImplicitCastExpr 0x7f8f02025d38 <col:14> 'int16_t':'short' <LValueToRValue>
+|           `-DeclRefExpr 0x7f8f02025ce0 <col:14> 'int16_t':'short' lvalue ParmVar 0x7f8f02025ac0 'y' 'int16_t':'short'
+`-FunctionDecl 0x7f8f02026050 <line:11:1, line:20:1> line:11:6 foo 'void (int16_t, int16_t *, int16_t)'
+  |-ParmVarDecl 0x7f8f02025dd8 <col:11, col:19> col:19 used i 'int16_t':'short'
+  |-ParmVarDecl 0x7f8f02025ea8 <col:22, col:31> col:31 used p 'int16_t *'
+  |-ParmVarDecl 0x7f8f02025f18 <col:34, col:42> col:42 used x 'int16_t':'short'
+  `-CompoundStmt 0x7f8f020266c0 <line:12:1, line:20:1>
+    `-WhileStmt 0x7f8f020266a0 <line:13:3, line:19:5>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7f8f02026128 <line:13:10, col:11> 'int16_t':'short' postfix '--'
+      | `-DeclRefExpr 0x7f8f02026100 <col:10> 'int16_t':'short' lvalue ParmVar 0x7f8f02025dd8 'i' 'int16_t':'short'
+      `-CompoundStmt 0x7f8f02026668 <line:14:5, line:19:5>
+        |-BinaryOperator 0x7f8f02026398 <line:15:7, col:27> 'int16_t':'short' '='
+        | |-UnaryOperator 0x7f8f02026188 <col:7, col:8> 'int16_t':'short' lvalue prefix '*'
+        | | `-ImplicitCastExpr 0x7f8f02026170 <col:8> 'int16_t *' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7f8f02026148 <col:8> 'int16_t *' lvalue ParmVar 0x7f8f02025ea8 'p' 'int16_t *'
+        | `-ImplicitCastExpr 0x7f8f02026380 <col:12, col:27> 'int16_t':'short' <IntegralCast>
+        |   `-BinaryOperator 0x7f8f02026358 <col:12, col:27> 'int32_t':'int' '>>'
+        |     |-CallExpr 0x7f8f020262d0 <col:12, col:22> 'int32_t':'int'
+        |     | |-ImplicitCastExpr 0x7f8f020262b8 <col:12> 'int32_t (*)(int16_t, int16_t)' <FunctionToPointerDecay>
+        |     | | `-DeclRefExpr 0x7f8f020261a8 <col:12> 'int32_t (int16_t, int16_t)' Function 0x7f8f02025bd0 'bar' 'int32_t (int16_t, int16_t)'
+        |     | |-ImplicitCastExpr 0x7f8f02026308 <col:17, col:18> 'int16_t':'short' <LValueToRValue>
+        |     | | `-UnaryOperator 0x7f8f02026210 <col:17, col:18> 'int16_t':'short' lvalue prefix '*'
+        |     | |   `-ImplicitCastExpr 0x7f8f020261f8 <col:18> 'int16_t *' <LValueToRValue>
+        |     | |     `-DeclRefExpr 0x7f8f020261d0 <col:18> 'int16_t *' lvalue ParmVar 0x7f8f02025ea8 'p' 'int16_t *'
+        |     | `-ImplicitCastExpr 0x7f8f02026320 <col:21> 'int16_t':'short' <LValueToRValue>
+        |     |   `-DeclRefExpr 0x7f8f02026230 <col:21> 'int16_t':'short' lvalue ParmVar 0x7f8f02025f18 'x' 'int16_t':'short'
+        |     `-IntegerLiteral 0x7f8f02026338 <col:27> 'int' 15
+        |-UnaryOperator 0x7f8f020263e8 <line:16:7, col:8> 'int16_t *' postfix '++'
+        | `-DeclRefExpr 0x7f8f020263c0 <col:7> 'int16_t *' lvalue ParmVar 0x7f8f02025ea8 'p' 'int16_t *'
+        |-BinaryOperator 0x7f8f020265f8 <line:17:7, col:27> 'int16_t':'short' '='
+        | |-UnaryOperator 0x7f8f02026448 <col:7, col:8> 'int16_t':'short' lvalue prefix '*'
+        | | `-ImplicitCastExpr 0x7f8f02026430 <col:8> 'int16_t *' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7f8f02026408 <col:8> 'int16_t *' lvalue ParmVar 0x7f8f02025ea8 'p' 'int16_t *'
+        | `-ImplicitCastExpr 0x7f8f020265e0 <col:12, col:27> 'int16_t':'short' <IntegralCast>
+        |   `-BinaryOperator 0x7f8f020265b8 <col:12, col:27> 'int32_t':'int' '>>'
+        |     |-CallExpr 0x7f8f02026530 <col:12, col:22> 'int32_t':'int'
+        |     | |-ImplicitCastExpr 0x7f8f02026518 <col:12> 'int32_t (*)(int16_t, int16_t)' <FunctionToPointerDecay>
+        |     | | `-DeclRefExpr 0x7f8f02026468 <col:12> 'int32_t (int16_t, int16_t)' Function 0x7f8f02025bd0 'bar' 'int32_t (int16_t, int16_t)'
+        |     | |-ImplicitCastExpr 0x7f8f02026568 <col:17, col:18> 'int16_t':'short' <LValueToRValue>
+        |     | | `-UnaryOperator 0x7f8f020264d0 <col:17, col:18> 'int16_t':'short' lvalue prefix '*'
+        |     | |   `-ImplicitCastExpr 0x7f8f020264b8 <col:18> 'int16_t *' <LValueToRValue>
+        |     | |     `-DeclRefExpr 0x7f8f02026490 <col:18> 'int16_t *' lvalue ParmVar 0x7f8f02025ea8 'p' 'int16_t *'
+        |     | `-ImplicitCastExpr 0x7f8f02026580 <col:21> 'int16_t':'short' <LValueToRValue>
+        |     |   `-DeclRefExpr 0x7f8f020264f0 <col:21> 'int16_t':'short' lvalue ParmVar 0x7f8f02025f18 'x' 'int16_t':'short'
+        |     `-IntegerLiteral 0x7f8f02026598 <col:27> 'int' 15
+        `-UnaryOperator 0x7f8f02026648 <line:18:7, col:8> 'int16_t *' postfix '++'
+          `-DeclRefExpr 0x7f8f02026620 <col:7> 'int16_t *' lvalue ParmVar 0x7f8f02025ea8 'p' 'int16_t *'

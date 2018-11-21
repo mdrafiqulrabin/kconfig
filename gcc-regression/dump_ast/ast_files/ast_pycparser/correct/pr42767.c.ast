@@ -1,0 +1,55 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: lineno_cache_entry
+      Decl: size, [], [], []
+        TypeDecl: size, []
+          IdentifierType: ['unsigned', 'long']
+  FuncDef: 
+    Decl: _bfd_link_section_stabs, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: stabsec, [], [], []
+            PtrDecl: []
+              TypeDecl: stabsec, []
+                Struct: lineno_cache_entry
+        TypeDecl: _bfd_link_section_stabs, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: count, [], [], []
+        TypeDecl: count, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: sym, [], [], []
+        PtrDecl: []
+          TypeDecl: sym, []
+            IdentifierType: ['unsigned', 'char']
+      Decl: symend, [], [], []
+        PtrDecl: []
+          TypeDecl: symend, []
+            IdentifierType: ['unsigned', 'char']
+      Decl: skip, [], [], []
+        TypeDecl: skip, []
+          IdentifierType: ['unsigned', 'long']
+      Assignment: =
+        ID: count
+        BinaryOp: /
+          StructRef: ->
+            ID: stabsec
+            ID: size
+          Constant: int, 12
+      For: 
+        BinaryOp: <
+          ID: sym
+          ID: symend
+        Assignment: +=
+          ID: sym
+          Constant: int, 1
+        EmptyStatement: 
+      Assignment: =
+        StructRef: ->
+          ID: stabsec
+          ID: size
+        BinaryOp: *
+          BinaryOp: -
+            ID: count
+            ID: skip
+          Constant: int, 12

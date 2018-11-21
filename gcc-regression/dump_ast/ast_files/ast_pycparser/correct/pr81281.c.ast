@@ -1,0 +1,128 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['unsigned']
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: q, [], [], []
+        TypeDecl: q, []
+          IdentifierType: ['unsigned']
+        BinaryOp: +
+          ID: p
+          Constant: int, 7
+      If: 
+        BinaryOp: >=
+          BinaryOp: -
+            ID: a
+            BinaryOp: +
+              Constant: int, 1U
+              ID: __INT_MAX__
+          Constant: int, 2
+        FuncCall: 
+          ID: __builtin_unreachable
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+        BinaryOp: +
+          ID: p
+          ID: b
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        BinaryOp: +
+          ID: p
+          ID: a
+      If: 
+        BinaryOp: !=
+          BinaryOp: -
+            ID: c
+            ID: d
+          ID: __INT_MAX__
+        FuncCall: 
+          ID: __builtin_abort
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['unsigned']
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: q, [], [], []
+        TypeDecl: q, []
+          IdentifierType: ['unsigned']
+        BinaryOp: +
+          ID: p
+          Constant: int, 7
+      If: 
+        BinaryOp: >=
+          BinaryOp: -
+            ID: a
+            BinaryOp: +
+              Constant: int, 1U
+              ID: __INT_MAX__
+          Constant: int, 2
+        FuncCall: 
+          ID: __builtin_unreachable
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        ID: p
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+        BinaryOp: +
+          ID: p
+          ID: a
+      If: 
+        BinaryOp: !=
+          BinaryOp: -
+            ID: c
+            ID: d
+          BinaryOp: -
+            UnaryOp: -
+              ID: __INT_MAX__
+            Constant: int, 1
+        FuncCall: 
+          ID: __builtin_abort
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: -
+            Constant: int, 1U
+          BinaryOp: +
+            Constant: int, 1U
+            ID: __INT_MAX__
+          Constant: int, 1U
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          UnaryOp: -
+            Constant: int, 1U
+          BinaryOp: +
+            Constant: int, 1U
+            ID: __INT_MAX__
+      Return: 
+        Constant: int, 0

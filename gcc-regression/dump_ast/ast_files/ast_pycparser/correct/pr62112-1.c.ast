@@ -1,0 +1,86 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+        FuncCall: 
+          ID: __builtin_malloc
+          ExprList: 
+            Constant: int, 42
+      FuncCall: 
+        ID: __builtin_memset
+        ExprList: 
+          ID: p
+          Constant: int, 3
+          Constant: int, 10
+      FuncCall: 
+        ID: __builtin_memset
+        ExprList: 
+          ID: p
+          Constant: int, 7
+          Constant: int, 33
+  Decl: g, [], [], []
+    PtrDecl: []
+      TypeDecl: g, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: h, [], [], []
+      FuncDecl: 
+        TypeDecl: h, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+        FuncCall: 
+          ID: __builtin_malloc
+          ExprList: 
+            Constant: int, 42
+      Assignment: =
+        ID: g
+        FuncCall: 
+          ID: __builtin_memset
+          ExprList: 
+            ID: p
+            Constant: int, 3
+            Constant: int, 10
+      FuncCall: 
+        ID: __builtin_free
+        ExprList: 
+          ID: p
+  FuncDef: 
+    Decl: i, [], [], []
+      FuncDecl: 
+        PtrDecl: []
+          TypeDecl: i, []
+            IdentifierType: ['char']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+        FuncCall: 
+          ID: __builtin_malloc
+          ExprList: 
+            Constant: int, 42
+      FuncCall: 
+        ID: __builtin_memset
+        ExprList: 
+          ID: p
+          Constant: int, 3
+          Constant: int, 10
+      FuncCall: 
+        ID: __builtin_memset
+        ExprList: 
+          ID: p
+          Constant: int, 7
+          Constant: int, 33
+      Return: 
+        ID: p

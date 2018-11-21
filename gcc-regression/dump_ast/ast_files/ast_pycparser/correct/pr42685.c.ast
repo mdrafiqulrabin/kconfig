@@ -1,0 +1,83 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+  Decl: baz, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: baz, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: bar, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                Struct: S
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          StructRef: ->
+            ID: s
+            ID: i
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: w, [], [], []
+            PtrDecl: []
+              TypeDecl: w, []
+                IdentifierType: ['int']
+          Decl: cond, [], [], []
+            TypeDecl: cond, []
+              IdentifierType: ['int']
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                Struct: S
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      While: 
+        BinaryOp: !=
+          UnaryOp: *
+            UnaryOp: p++
+              ID: w
+          Constant: int, 0
+        UnaryOp: p++
+          ID: n
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: n
+        UnaryOp: p++
+          ID: i
+        If: 
+          BinaryOp: ==
+            ID: cond
+            Constant: int, 0
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              BinaryOp: +
+                ID: s
+                ID: i

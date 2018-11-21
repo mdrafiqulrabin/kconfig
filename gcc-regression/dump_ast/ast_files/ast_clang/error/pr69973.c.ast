@@ -1,0 +1,21 @@
+c_files/pr69973.c:3:34: error: zero vector size
+typedef int v4si __attribute__ ((vector_size (1 << 29)));
+                                 ^            ~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fdfad0244d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdfad024a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdfad024740 '__int128'
+|-TypedefDecl 0x7fdfad024a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdfad024760 'unsigned __int128'
+|-TypedefDecl 0x7fdfad024d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdfad024b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdfad024ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdfad024e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdfad024dc0 'char *'
+|   `-BuiltinType 0x7fdfad024560 'char'
+|-TypedefDecl 0x7fdfad0250c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdfad025070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdfad024ee0 'struct __va_list_tag'
+|     `-Record 0x7fdfad024e58 '__va_list_tag'
+`-TypedefDecl 0x7fdfad0251a0 <c_files/pr69973.c:3:1, col:13> col:13 v4si 'int'
+  `-BuiltinType 0x7fdfad0245c0 'int'

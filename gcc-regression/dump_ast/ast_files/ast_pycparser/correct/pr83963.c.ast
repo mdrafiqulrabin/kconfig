@@ -1,0 +1,49 @@
+FileAST: 
+  Decl: mg, [], [], []
+    TypeDecl: mg, []
+      IdentifierType: ['int']
+  Decl: et, [], [], []
+    TypeDecl: et, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: s5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: is, [], [], []
+            TypeDecl: is, []
+              IdentifierType: ['int']
+        TypeDecl: s5, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          ID: is
+          Constant: int, 0
+        Compound: 
+          Label: g6
+            UnaryOp: ++
+              ID: is
+      While: 
+        BinaryOp: <
+          ID: mg
+          Constant: int, 1
+        Compound: 
+          While: 
+            BinaryOp: <
+              ID: et
+              Constant: int, 1
+            Compound: 
+              If: 
+                BinaryOp: ==
+                  ID: is
+                  Constant: int, 0
+                Return: 
+              UnaryOp: ++
+                ID: et
+          While: 
+            BinaryOp: <
+              ID: mg
+              Constant: int, 1
+            UnaryOp: ++
+              ID: mg
+      Goto: g6

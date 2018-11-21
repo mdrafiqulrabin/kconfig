@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7f9f8a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9f8a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9f8a826740 '__int128'
+|-TypedefDecl 0x7f9f8a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9f8a826760 'unsigned __int128'
+|-TypedefDecl 0x7f9f8a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9f8a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9f8a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9f8a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9f8a826dc0 'char *'
+|   `-BuiltinType 0x7f9f8a826560 'char'
+|-TypedefDecl 0x7f9f8a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9f8a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9f8a826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9f8a826e58 '__va_list_tag'
+`-FunctionDecl 0x7f9f8b025a00 <c_files/pr26781-2.c:1:1, line:10:1> line:1:6 zconfdump 'void (unsigned long)'
+  |-ParmVarDecl 0x7f9f8a827138 <<built-in>:75:23, c_files/pr26781-2.c:1:30> col:30 used i 'unsigned long'
+  `-CompoundStmt 0x7f9f8b025dd0 <line:2:1, line:10:1>
+    `-ForStmt 0x7f9f8b025d98 <line:3:3, line:9:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7f9f8b025d68 <line:4:5, line:9:5>
+        |-DeclStmt 0x7f9f8b025b50 <line:5:7, col:16>
+        | `-VarDecl 0x7f9f8b025af0 <col:7, col:12> col:12 used __a0 'char'
+        |-BinaryOperator 0x7f9f8b025cb0 <line:6:7, col:24> 'char' '='
+        | |-DeclRefExpr 0x7f9f8b025b68 <col:7> 'char' lvalue Var 0x7f9f8b025af0 '__a0' 'char'
+        | `-ImplicitCastExpr 0x7f9f8b025c98 <col:14, col:24> 'char' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7f9f8b025c70 <col:14, col:24> 'char' lvalue
+        |     |-ImplicitCastExpr 0x7f9f8b025c40 <col:14, col:21> 'char *' <ArrayToPointerDecay>
+        |     | `-ParenExpr 0x7f9f8b025bf8 <col:14, col:21> 'char [3]' lvalue
+        |     |   `-StringLiteral 0x7f9f8b025bc8 <col:15> 'char [3]' lvalue "\"\\"
+        |     `-ImplicitCastExpr 0x7f9f8b025c58 <col:23> 'unsigned long' <LValueToRValue>
+        |       `-DeclRefExpr 0x7f9f8b025c18 <col:23> 'unsigned long' lvalue ParmVar 0x7f9f8a827138 'i' 'unsigned long'
+        `-IfStmt 0x7f9f8b025d30 <line:7:7, line:8:9>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7f9f8b025d00 <line:7:11> 'char' <LValueToRValue>
+          | `-DeclRefExpr 0x7f9f8b025cd8 <col:11> 'char' lvalue Var 0x7f9f8b025af0 '__a0' 'char'
+          |-ReturnStmt 0x7f9f8b025d18 <line:8:9>
+          `-<<<NULL>>>

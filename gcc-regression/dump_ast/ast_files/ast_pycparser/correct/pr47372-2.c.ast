@@ -1,0 +1,87 @@
+FileAST: 
+  Typedef: ush, [], ['typedef']
+    TypeDecl: ush, []
+      IdentifierType: ['unsigned', 'short']
+  Typedef: Pos, [], ['typedef']
+    TypeDecl: Pos, []
+      IdentifierType: ['ush']
+  Decl: prev, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: prev, []
+        IdentifierType: ['ush']
+  FuncDef: 
+    Decl: fill_window, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: more, [], [], []
+            TypeDecl: more, []
+              IdentifierType: ['unsigned']
+          Decl: m, [], [], []
+            TypeDecl: m, []
+              IdentifierType: ['unsigned']
+        TypeDecl: fill_window, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['unsigned']
+      For: 
+        Assignment: =
+          ID: n
+          Constant: int, 0
+        BinaryOp: <
+          ID: n
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned']
+            BinaryOp: <<
+              Constant: int, 1
+              Constant: int, 15
+        UnaryOp: p++
+          ID: n
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              BinaryOp: +
+                ID: prev
+                Constant: int, 0x8000
+              ID: n
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['Pos']
+              TernaryOp: 
+                BinaryOp: >=
+                  ID: m
+                  Constant: int, 0x8000
+                BinaryOp: -
+                  ID: m
+                  Constant: int, 0x8000
+                Constant: int, 0
+      For: 
+        Assignment: =
+          ID: n
+          Constant: int, 0
+        BinaryOp: <
+          ID: n
+          Constant: int, 0x8000
+        UnaryOp: p++
+          ID: n
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: prev
+              ID: n
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['Pos']
+              TernaryOp: 
+                BinaryOp: >=
+                  ID: m
+                  Constant: int, 0x8000
+                BinaryOp: -
+                  ID: m
+                  Constant: int, 0x8000
+                Constant: int, 0

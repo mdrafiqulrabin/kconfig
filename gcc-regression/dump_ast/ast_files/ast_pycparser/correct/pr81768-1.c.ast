@@ -1,0 +1,143 @@
+FileAST: 
+  Decl: b, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        ArrayDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['float']
+          Constant: int, 10
+        Constant: int, 15
+      Constant: int, 10
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        PtrDecl: []
+          TypeDecl: i, []
+            IdentifierType: ['float']
+      Pragma: omp target parallel for simd schedule(static, 32) collapse(3)
+      For: 
+        Assignment: =
+          ID: i
+          UnaryOp: &
+            ArrayRef: 
+              ArrayRef: 
+                ArrayRef: 
+                  ID: b
+                  Constant: int, 0
+                Constant: int, 0
+              Constant: int, 0
+        BinaryOp: <
+          ID: i
+          UnaryOp: &
+            ArrayRef: 
+              ArrayRef: 
+                ArrayRef: 
+                  ID: b
+                  Constant: int, 0
+                Constant: int, 0
+              Constant: int, 10
+        UnaryOp: p++
+          ID: i
+        For: 
+          DeclList: 
+            Decl: j, [], [], []
+              PtrDecl: []
+                TypeDecl: j, []
+                  IdentifierType: ['float']
+              UnaryOp: &
+                ArrayRef: 
+                  ArrayRef: 
+                    ArrayRef: 
+                      ID: b
+                      Constant: int, 0
+                    Constant: int, 15
+                  Constant: int, 0
+          BinaryOp: >
+            ID: j
+            UnaryOp: &
+              ArrayRef: 
+                ArrayRef: 
+                  ArrayRef: 
+                    ID: b
+                    Constant: int, 0
+                  Constant: int, 0
+                Constant: int, 0
+          Assignment: -=
+            ID: j
+            Constant: int, 10
+          For: 
+            DeclList: 
+              Decl: k, [], [], []
+                PtrDecl: []
+                  TypeDecl: k, []
+                    IdentifierType: ['float']
+                UnaryOp: &
+                  ArrayRef: 
+                    ArrayRef: 
+                      ArrayRef: 
+                        ID: b
+                        Constant: int, 0
+                      Constant: int, 0
+                    Constant: int, 10
+            BinaryOp: >
+              ID: k
+              UnaryOp: &
+                ArrayRef: 
+                  ArrayRef: 
+                    ArrayRef: 
+                      ID: b
+                      Constant: int, 0
+                    Constant: int, 0
+                  Constant: int, 0
+            UnaryOp: --
+              ID: k
+            Assignment: -=
+              ArrayRef: 
+                ArrayRef: 
+                  ArrayRef: 
+                    ID: b
+                    BinaryOp: -
+                      ID: i
+                      UnaryOp: &
+                        ArrayRef: 
+                          ArrayRef: 
+                            ArrayRef: 
+                              ID: b
+                              Constant: int, 0
+                            Constant: int, 0
+                          Constant: int, 0
+                  BinaryOp: -
+                    BinaryOp: /
+                      BinaryOp: -
+                        ID: j
+                        UnaryOp: &
+                          ArrayRef: 
+                            ArrayRef: 
+                              ArrayRef: 
+                                ID: b
+                                Constant: int, 0
+                              Constant: int, 0
+                            Constant: int, 0
+                      Constant: int, 10
+                    Constant: int, 1
+                BinaryOp: -
+                  BinaryOp: -
+                    ID: k
+                    UnaryOp: &
+                      ArrayRef: 
+                        ArrayRef: 
+                          ArrayRef: 
+                            ID: b
+                            Constant: int, 0
+                          Constant: int, 0
+                        Constant: int, 0
+                  Constant: int, 1
+              Constant: float, 3.5

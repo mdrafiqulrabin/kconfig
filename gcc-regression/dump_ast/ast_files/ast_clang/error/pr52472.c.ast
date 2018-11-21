@@ -1,0 +1,29 @@
+c_files/pr52472.c:9:14: error: unknown type name '__memx'
+extern const __memx unsigned data[][10];
+             ^
+c_files/pr52472.c:9:21: error: expected identifier or '('
+extern const __memx unsigned data[][10];
+                    ^
+c_files/pr52472.c:15:36: error: use of undeclared identifier 'data'
+  return addr32 = ((unsigned long) data);
+                                   ^
+3 errors generated.
+TranslationUnitDecl 0x7f92048264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9204826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9204826740 '__int128'
+|-TypedefDecl 0x7f9204826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9204826760 'unsigned __int128'
+|-TypedefDecl 0x7f9204826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9204826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9204826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9204826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9204826dc0 'char *'
+|   `-BuiltinType 0x7f9204826560 'char'
+|-TypedefDecl 0x7f92048270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9204827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9204826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9204826e58 '__va_list_tag'
+`-FunctionDecl 0x7f9204878428 <c_files/pr52472.c:11:1, line:16:1> line:11:15 ice 'unsigned long (void)'
+  `-CompoundStmt 0x7f92048785e0 <line:12:1, line:16:1>
+    `-DeclStmt 0x7f9204878578 <line:13:3, col:23>
+      `-VarDecl 0x7f9204878518 <col:3, col:17> col:17 used addr32 'unsigned long'

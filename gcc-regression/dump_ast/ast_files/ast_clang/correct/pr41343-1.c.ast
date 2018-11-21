@@ -1,0 +1,210 @@
+TranslationUnitDecl 0x7f9fbd0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9fbd026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9fbd026740 '__int128'
+|-TypedefDecl 0x7f9fbd026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9fbd026760 'unsigned __int128'
+|-TypedefDecl 0x7f9fbd026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9fbd026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9fbd026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9fbd026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9fbd026dc0 'char *'
+|   `-BuiltinType 0x7f9fbd026560 'char'
+|-TypedefDecl 0x7f9fbd0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9fbd027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9fbd026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9fbd026e58 '__va_list_tag'
+`-FunctionDecl 0x7f9fbd827800 <c_files/pr41343-1.c:14:1, line:20:1> line:14:6 foo 'void (int)'
+  |-ParmVarDecl 0x7f9fbd027138 <col:11, col:15> col:15 used i1 'int'
+  `-CompoundStmt 0x7f9fbd831338 <line:15:1, line:20:1>
+    |-DeclStmt 0x7f9fbd827a00 <line:3:20, col:54>
+    | `-VarDecl 0x7f9fbd8278f8 <col:20, <scratch space>:5:1> line:3:1 used i11 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd8279d8 <line:4:1, line:5:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd8279a8 <line:4:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd827958 <col:1> 'int' lvalue ParmVar 0x7f9fbd027138 'i1' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd8279c0 <line:5:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd827980 <col:1> 'int' lvalue ParmVar 0x7f9fbd027138 'i1' 'int'
+    |-DeclStmt 0x7f9fbd827b38 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd827a30 <col:20, <scratch space>:10:1> line:8:1 used i12 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd827b10 <line:9:1, line:10:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd827ae0 <line:9:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd827a90 <col:1> 'int' lvalue Var 0x7f9fbd8278f8 'i11' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd827af8 <line:10:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd827ab8 <col:1> 'int' lvalue Var 0x7f9fbd8278f8 'i11' 'int'
+    |-DeclStmt 0x7f9fbd827c70 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd827b68 <col:20, <scratch space>:15:1> line:13:1 used i13 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd827c48 <line:14:1, line:15:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd827c18 <line:14:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd827bc8 <col:1> 'int' lvalue Var 0x7f9fbd827a30 'i12' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd827c30 <line:15:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd827bf0 <col:1> 'int' lvalue Var 0x7f9fbd827a30 'i12' 'int'
+    |-DeclStmt 0x7f9fbd827da8 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd827ca0 <col:20, <scratch space>:20:1> line:18:1 used i14 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd827d80 <line:19:1, line:20:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd827d50 <line:19:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd827d00 <col:1> 'int' lvalue Var 0x7f9fbd827b68 'i13' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd827d68 <line:20:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd827d28 <col:1> 'int' lvalue Var 0x7f9fbd827b68 'i13' 'int'
+    |-DeclStmt 0x7f9fbd827ee0 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd827dd8 <col:20, <scratch space>:25:1> line:23:1 used i15 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd827eb8 <line:24:1, line:25:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd827e88 <line:24:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd827e38 <col:1> 'int' lvalue Var 0x7f9fbd827ca0 'i14' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd827ea0 <line:25:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd827e60 <col:1> 'int' lvalue Var 0x7f9fbd827ca0 'i14' 'int'
+    |-DeclStmt 0x7f9fbd828018 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd827f10 <col:20, <scratch space>:30:1> line:28:1 used i16 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd827ff0 <line:29:1, line:30:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd827fc0 <line:29:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd827f70 <col:1> 'int' lvalue Var 0x7f9fbd827dd8 'i15' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd827fd8 <line:30:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd827f98 <col:1> 'int' lvalue Var 0x7f9fbd827dd8 'i15' 'int'
+    |-DeclStmt 0x7f9fbd828150 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd828048 <col:20, <scratch space>:35:1> line:33:1 used i17 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd828128 <line:34:1, line:35:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd8280f8 <line:34:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd8280a8 <col:1> 'int' lvalue Var 0x7f9fbd827f10 'i16' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd828110 <line:35:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd8280d0 <col:1> 'int' lvalue Var 0x7f9fbd827f10 'i16' 'int'
+    |-DeclStmt 0x7f9fbd828288 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd828180 <col:20, <scratch space>:40:1> line:38:1 used i18 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd828260 <line:39:1, line:40:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd828230 <line:39:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd8281e0 <col:1> 'int' lvalue Var 0x7f9fbd828048 'i17' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd828248 <line:40:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd828208 <col:1> 'int' lvalue Var 0x7f9fbd828048 'i17' 'int'
+    |-DeclStmt 0x7f9fbd8283c0 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd8282b8 <col:20, <scratch space>:45:1> line:43:1 i19 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd828398 <line:44:1, line:45:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd828368 <line:44:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd828318 <col:1> 'int' lvalue Var 0x7f9fbd828180 'i18' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd828380 <line:45:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd828340 <col:1> 'int' lvalue Var 0x7f9fbd828180 'i18' 'int'
+    |-DeclStmt 0x7f9fbd8284f8 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd8283f0 <col:20, <scratch space>:49:1> line:47:1 used i111 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd8284d0 <line:48:1, line:49:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd8284a0 <line:48:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd828450 <col:1> 'int' lvalue Var 0x7f9fbd8278f8 'i11' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd8284b8 <line:49:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd828478 <col:1> 'int' lvalue Var 0x7f9fbd8278f8 'i11' 'int'
+    |-DeclStmt 0x7f9fbd828630 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd828528 <col:20, <scratch space>:54:1> line:52:1 used i112 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd828608 <line:53:1, line:54:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd8285d8 <line:53:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd828588 <col:1> 'int' lvalue Var 0x7f9fbd8283f0 'i111' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd8285f0 <line:54:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd8285b0 <col:1> 'int' lvalue Var 0x7f9fbd8283f0 'i111' 'int'
+    |-DeclStmt 0x7f9fbd828768 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd828660 <col:20, <scratch space>:59:1> line:57:1 used i113 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd828740 <line:58:1, line:59:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd828710 <line:58:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd8286c0 <col:1> 'int' lvalue Var 0x7f9fbd828528 'i112' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd828728 <line:59:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd8286e8 <col:1> 'int' lvalue Var 0x7f9fbd828528 'i112' 'int'
+    |-DeclStmt 0x7f9fbd82d0a8 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd828798 <col:20, <scratch space>:64:1> line:62:1 used i114 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd82d080 <line:63:1, line:64:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd82d050 <line:63:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd82d000 <col:1> 'int' lvalue Var 0x7f9fbd828660 'i113' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd82d068 <line:64:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd82d028 <col:1> 'int' lvalue Var 0x7f9fbd828660 'i113' 'int'
+    |-DeclStmt 0x7f9fbd82d1e0 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd82d0d8 <col:20, <scratch space>:69:1> line:67:1 used i115 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd82d1b8 <line:68:1, line:69:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd82d188 <line:68:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd82d138 <col:1> 'int' lvalue Var 0x7f9fbd828798 'i114' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd82d1a0 <line:69:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd82d160 <col:1> 'int' lvalue Var 0x7f9fbd828798 'i114' 'int'
+    |-DeclStmt 0x7f9fbd82d318 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd82d210 <col:20, <scratch space>:74:1> line:72:1 used i116 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd82d2f0 <line:73:1, line:74:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd82d2c0 <line:73:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd82d270 <col:1> 'int' lvalue Var 0x7f9fbd82d0d8 'i115' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd82d2d8 <line:74:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd82d298 <col:1> 'int' lvalue Var 0x7f9fbd82d0d8 'i115' 'int'
+    |-DeclStmt 0x7f9fbd82d450 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd82d348 <col:20, <scratch space>:79:1> line:77:1 used i117 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd82d428 <line:78:1, line:79:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd82d3f8 <line:78:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd82d3a8 <col:1> 'int' lvalue Var 0x7f9fbd82d210 'i116' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd82d410 <line:79:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd82d3d0 <col:1> 'int' lvalue Var 0x7f9fbd82d210 'i116' 'int'
+    |-DeclStmt 0x7f9fbd82d588 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd82d480 <col:20, <scratch space>:84:1> line:82:1 used i118 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd82d560 <line:83:1, line:84:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd82d530 <line:83:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd82d4e0 <col:1> 'int' lvalue Var 0x7f9fbd82d348 'i117' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd82d548 <line:84:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd82d508 <col:1> 'int' lvalue Var 0x7f9fbd82d348 'i117' 'int'
+    |-DeclStmt 0x7f9fbd82d6c0 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd82d5b8 <col:20, <scratch space>:89:1> line:87:1 i119 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd82d698 <line:88:1, line:89:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd82d668 <line:88:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd82d618 <col:1> 'int' lvalue Var 0x7f9fbd82d480 'i118' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd82d680 <line:89:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd82d640 <col:1> 'int' lvalue Var 0x7f9fbd82d480 'i118' 'int'
+    |-DeclStmt 0x7f9fbd82d7f8 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd82d6f0 <col:20, <scratch space>:93:1> line:91:1 used i1111 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd82d7d0 <line:92:1, line:93:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd82d7a0 <line:92:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd82d750 <col:1> 'int' lvalue Var 0x7f9fbd8283f0 'i111' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd82d7b8 <line:93:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd82d778 <col:1> 'int' lvalue Var 0x7f9fbd8283f0 'i111' 'int'
+    |-DeclStmt 0x7f9fbd82d930 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd82d828 <col:20, <scratch space>:98:1> line:96:1 used i1112 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd82d908 <line:97:1, line:98:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd82d8d8 <line:97:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd82d888 <col:1> 'int' lvalue Var 0x7f9fbd82d6f0 'i1111' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd82d8f0 <line:98:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd82d8b0 <col:1> 'int' lvalue Var 0x7f9fbd82d6f0 'i1111' 'int'
+    |-DeclStmt 0x7f9fbd82da68 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd82d960 <col:20, <scratch space>:103:1> line:101:1 used i1113 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd82da40 <line:102:1, line:103:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd82da10 <line:102:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd82d9c0 <col:1> 'int' lvalue Var 0x7f9fbd82d828 'i1112' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd82da28 <line:103:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd82d9e8 <col:1> 'int' lvalue Var 0x7f9fbd82d828 'i1112' 'int'
+    |-DeclStmt 0x7f9fbd82dba0 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd82da98 <col:20, <scratch space>:108:1> line:106:1 used i1114 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd82db78 <line:107:1, line:108:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd82db48 <line:107:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd82daf8 <col:1> 'int' lvalue Var 0x7f9fbd82d960 'i1113' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd82db60 <line:108:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd82db20 <col:1> 'int' lvalue Var 0x7f9fbd82d960 'i1113' 'int'
+    |-DeclStmt 0x7f9fbd82dcd8 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd82dbd0 <col:20, <scratch space>:113:1> line:111:1 used i1115 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd82dcb0 <line:112:1, line:113:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd82dc80 <line:112:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd82dc30 <col:1> 'int' lvalue Var 0x7f9fbd82da98 'i1114' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd82dc98 <line:113:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd82dc58 <col:1> 'int' lvalue Var 0x7f9fbd82da98 'i1114' 'int'
+    |-DeclStmt 0x7f9fbd82de10 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd82dd08 <col:20, <scratch space>:118:1> line:116:1 used i1116 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd82dde8 <line:117:1, line:118:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd82ddb8 <line:117:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd82dd68 <col:1> 'int' lvalue Var 0x7f9fbd82dbd0 'i1115' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd82ddd0 <line:118:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd82dd90 <col:1> 'int' lvalue Var 0x7f9fbd82dbd0 'i1115' 'int'
+    |-DeclStmt 0x7f9fbd82df48 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd82de40 <col:20, <scratch space>:123:1> line:121:1 used i1117 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd82df20 <line:122:1, line:123:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd82def0 <line:122:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd82dea0 <col:1> 'int' lvalue Var 0x7f9fbd82dd08 'i1116' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd82df08 <line:123:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd82dec8 <col:1> 'int' lvalue Var 0x7f9fbd82dd08 'i1116' 'int'
+    |-DeclStmt 0x7f9fbd831080 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd82df78 <col:20, <scratch space>:128:1> line:126:1 used i1118 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd831058 <line:127:1, line:128:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd831028 <line:127:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd82dfd8 <col:1> 'int' lvalue Var 0x7f9fbd82de40 'i1117' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd831040 <line:128:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd831000 <col:1> 'int' lvalue Var 0x7f9fbd82de40 'i1117' 'int'
+    |-DeclStmt 0x7f9fbd8311b8 <c_files/pr41343-1.c:3:20, col:54>
+    | `-VarDecl 0x7f9fbd8310b0 <col:20, <scratch space>:133:1> line:131:1 i1119 'int' cinit
+    |   `-BinaryOperator 0x7f9fbd831190 <line:132:1, line:133:1> 'int' '+'
+    |     |-ImplicitCastExpr 0x7f9fbd831160 <line:132:1> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9fbd831110 <col:1> 'int' lvalue Var 0x7f9fbd82df78 'i1118' 'int'
+    |     `-ImplicitCastExpr 0x7f9fbd831178 <line:133:1> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9fbd831138 <col:1> 'int' lvalue Var 0x7f9fbd82df78 'i1118' 'int'
+    `-GCCAsmStmt 0x7f9fbd8312d8 <c_files/pr41343-1.c:19:3, col:23>
+      `-ImplicitCastExpr 0x7f9fbd8312c0 <col:20> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f9fbd831298 <col:20> 'int' lvalue ParmVar 0x7f9fbd027138 'i1' 'int'

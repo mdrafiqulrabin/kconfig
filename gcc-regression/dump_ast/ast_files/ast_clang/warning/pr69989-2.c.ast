@@ -1,0 +1,85 @@
+c_files/pr69989-2.c:2:14: warning: implicit conversion from 'long' to 'short' changes value from 4073709551611 to -16389 [-Wconstant-conversion]
+short c[] = {4073709551611, 1, 4, 4};
+            ~^~~~~~~~~~~~~
+1 warning generated.
+TranslationUnitDecl 0x7ffbfd8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffbfd826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffbfd826740 '__int128'
+|-TypedefDecl 0x7ffbfd826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffbfd826760 'unsigned __int128'
+|-TypedefDecl 0x7ffbfd826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffbfd826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffbfd826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffbfd826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffbfd826dc0 'char *'
+|   `-BuiltinType 0x7ffbfd826560 'char'
+|-TypedefDecl 0x7ffbfd8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffbfd827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffbfd826ee0 'struct __va_list_tag'
+|     `-Record 0x7ffbfd826e58 '__va_list_tag'
+|-VarDecl 0x7ffbfd827138 <c_files/pr69989-2.c:1:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7ffbfe025a00 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7ffbfe025a78 <col:1, col:11> col:11 used d 'int'
+|-VarDecl 0x7ffbfe025b50 <line:2:1, col:36> col:7 used c 'short [4]' cinit
+| `-InitListExpr 0x7ffbfe025c90 <col:13, col:36> 'short [4]'
+|   |-ImplicitCastExpr 0x7ffbfe025cd0 <col:14> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7ffbfe025bb0 <col:14> 'long' 4073709551611
+|   |-ImplicitCastExpr 0x7ffbfe025cf0 <col:29> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7ffbfe025bd0 <col:29> 'int' 1
+|   |-ImplicitCastExpr 0x7ffbfe025d18 <col:32> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7ffbfe025bf0 <col:32> 'int' 4
+|   `-ImplicitCastExpr 0x7ffbfe025d50 <col:35> 'short' <IntegralCast>
+|     `-IntegerLiteral 0x7ffbfe025c10 <col:35> 'int' 4
+|-FunctionDecl 0x7ffbfe0261a8 <line:4:1, line:14:1> line:4:6 fn1 'void ()'
+| `-CompoundStmt 0x7ffbfe026770 <col:12, line:14:1>
+|   |-IfStmt 0x7ffbfe0262e0 <line:5:3, line:6:10>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7ffbfe026268 <line:5:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7ffbfe026240 <col:7> 'int' lvalue Var 0x7ffbfd827138 'a' 'int'
+|   | |-GotoStmt 0x7ffbfe0262c8 <line:6:5, col:10> 'LABEL_vhvhP' 0x7ffbfe026280
+|   | `-<<<NULL>>>
+|   `-ForStmt 0x7ffbfe026738 <line:7:3, line:13:3>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     `-CompoundStmt 0x7ffbfe026710 <line:7:12, line:13:3>
+|       |-ForStmt 0x7ffbfe026640 <line:8:5, line:9:25>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-ImplicitCastExpr 0x7ffbfe026340 <line:8:12> 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7ffbfe026318 <col:12> 'int' lvalue Var 0x7ffbfe025a00 'b' 'int'
+|       | |-UnaryOperator 0x7ffbfe026380 <col:15, col:16> 'int' postfix '++'
+|       | | `-DeclRefExpr 0x7ffbfe026358 <col:15> 'int' lvalue Var 0x7ffbfe025a00 'b' 'int'
+|       | `-BinaryOperator 0x7ffbfe026618 <line:9:7, col:25> 'int' '='
+|       |   |-DeclRefExpr 0x7ffbfe0263a0 <col:7> 'int' lvalue Var 0x7ffbfe025a78 'd' 'int'
+|       |   `-BinaryOperator 0x7ffbfe0265f0 <col:11, col:25> 'int' '|'
+|       |     |-ImplicitCastExpr 0x7ffbfe0265a8 <col:11, col:18> 'int' <IntegralCast>
+|       |     | `-ImplicitCastExpr 0x7ffbfe026590 <col:11, col:18> 'short' <LValueToRValue>
+|       |     |   `-ArraySubscriptExpr 0x7ffbfe0264c0 <col:11, col:18> 'short' lvalue
+|       |     |     |-ImplicitCastExpr 0x7ffbfe0264a8 <col:11> 'short *' <ArrayToPointerDecay>
+|       |     |     | `-DeclRefExpr 0x7ffbfe0263c8 <col:11> 'short [4]' lvalue Var 0x7ffbfe025b50 'c' 'short [4]'
+|       |     |     `-BinaryOperator 0x7ffbfe026450 <col:13, col:17> 'int' '+'
+|       |     |       |-ImplicitCastExpr 0x7ffbfe026438 <col:13> 'int' <LValueToRValue>
+|       |     |       | `-DeclRefExpr 0x7ffbfe0263f0 <col:13> 'int' lvalue Var 0x7ffbfe025a00 'b' 'int'
+|       |     |       `-IntegerLiteral 0x7ffbfe026418 <col:17> 'int' 3
+|       |     `-ImplicitCastExpr 0x7ffbfe0265d8 <col:22, col:25> 'int' <IntegralCast>
+|       |       `-ImplicitCastExpr 0x7ffbfe0265c0 <col:22, col:25> 'short' <LValueToRValue>
+|       |         `-ArraySubscriptExpr 0x7ffbfe026568 <col:22, col:25> 'short' lvalue
+|       |           |-ImplicitCastExpr 0x7ffbfe026538 <col:22> 'short *' <ArrayToPointerDecay>
+|       |           | `-DeclRefExpr 0x7ffbfe0264e8 <col:22> 'short [4]' lvalue Var 0x7ffbfe025b50 'c' 'short [4]'
+|       |           `-ImplicitCastExpr 0x7ffbfe026550 <col:24> 'int' <LValueToRValue>
+|       |             `-DeclRefExpr 0x7ffbfe026510 <col:24> 'int' lvalue Var 0x7ffbfe025a00 'b' 'int'
+|       `-LabelStmt 0x7ffbfe0266f8 <line:10:3, line:12:7> 'LABEL_vhvhP'
+|         `-IfStmt 0x7ffbfe0266c0 <line:11:5, line:12:7>
+|           |-<<<NULL>>>
+|           |-<<<NULL>>>
+|           |-ImplicitCastExpr 0x7ffbfe0266a0 <line:11:9> 'int' <LValueToRValue>
+|           | `-DeclRefExpr 0x7ffbfe026678 <col:9> 'int' lvalue Var 0x7ffbfe025a78 'd' 'int'
+|           |-BreakStmt 0x7ffbfe0266b8 <line:12:7>
+|           `-<<<NULL>>>
+`-FunctionDecl 0x7ffbfe0267f0 <line:16:1, col:24> col:5 main 'int ()'
+  `-CompoundStmt 0x7ffbfe0268c0 <col:12, col:24>
+    `-ReturnStmt 0x7ffbfe0268a8 <col:14, col:21>
+      `-IntegerLiteral 0x7ffbfe026888 <col:21> 'int' 0

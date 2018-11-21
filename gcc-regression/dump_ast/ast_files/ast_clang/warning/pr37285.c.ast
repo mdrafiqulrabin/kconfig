@@ -1,0 +1,63 @@
+c_files/pr37285.c:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+_bfd_xcoff_canonicalize_dynamic_reloc (unsigned long long l_symndx)
+^
+c_files/pr37285.c:11:10: warning: implicit declaration of function '_bfd_abort' is invalid in C99 [-Wimplicit-function-declaration]
+         _bfd_abort ("HI");
+         ^
+c_files/pr37285.c:14:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+3 warnings generated.
+TranslationUnitDecl 0x7f9b280264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9b28026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9b28026740 '__int128'
+|-TypedefDecl 0x7f9b28026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9b28026760 'unsigned __int128'
+|-TypedefDecl 0x7f9b28026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9b28026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9b28026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9b28026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9b28026dc0 'char *'
+|   `-BuiltinType 0x7f9b28026560 'char'
+|-TypedefDecl 0x7f9b280270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9b28027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9b28026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9b28026e58 '__va_list_tag'
+|-FunctionDecl 0x7f9b28077430 <c_files/pr37285.c:1:1, line:14:1> line:1:1 _bfd_xcoff_canonicalize_dynamic_reloc 'int (unsigned long long)'
+| |-ParmVarDecl 0x7f9b28027138 <col:40, col:59> col:59 used l_symndx 'unsigned long long'
+| `-CompoundStmt 0x7f9b28077a00 <line:2:1, line:14:1>
+|   `-IfStmt 0x7f9b280779c8 <line:3:3, line:13:3>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9b28077588 <line:3:7, col:18> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f9b28077558 <col:7> 'unsigned long long' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f9b28077510 <col:7> 'unsigned long long' lvalue ParmVar 0x7f9b28027138 'l_symndx' 'unsigned long long'
+|     | `-ImplicitCastExpr 0x7f9b28077570 <col:18> 'unsigned long long' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f9b28077538 <col:18> 'int' 3
+|     |-CompoundStmt 0x7f9b280779a8 <line:4:5, line:13:3>
+|     | `-SwitchStmt 0x7f9b280775f0 <line:5:7, line:12:5>
+|     |   |-<<<NULL>>>
+|     |   |-<<<NULL>>>
+|     |   |-ImplicitCastExpr 0x7f9b280775d8 <line:5:15> 'unsigned long long' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7f9b280775b0 <col:15> 'unsigned long long' lvalue ParmVar 0x7f9b28027138 'l_symndx' 'unsigned long long'
+|     |   `-CompoundStmt 0x7f9b28077938 <line:6:7, line:12:5>
+|     |     |-CaseStmt 0x7f9b28077640 <line:7:9, line:9:10>
+|     |     | |-ImplicitCastExpr 0x7f9b28077990 <line:7:14> 'unsigned long long' <IntegralCast>
+|     |     | | `-IntegerLiteral 0x7f9b28077620 <col:14> 'int' 0
+|     |     | |-<<<NULL>>>
+|     |     | `-CaseStmt 0x7f9b28077698 <line:8:9, line:9:10>
+|     |     |   |-ImplicitCastExpr 0x7f9b28077978 <line:8:14> 'unsigned long long' <IntegralCast>
+|     |     |   | `-IntegerLiteral 0x7f9b28077678 <col:14> 'int' 1
+|     |     |   |-<<<NULL>>>
+|     |     |   `-BreakStmt 0x7f9b280776d0 <line:9:10>
+|     |     `-CaseStmt 0x7f9b280776f8 <line:10:9, line:11:26>
+|     |       |-ImplicitCastExpr 0x7f9b28077960 <line:10:14> 'unsigned long long' <IntegralCast>
+|     |       | `-IntegerLiteral 0x7f9b280776d8 <col:14> 'int' 2
+|     |       |-<<<NULL>>>
+|     |       `-CallExpr 0x7f9b280778f0 <line:11:10, col:26> 'int'
+|     |         |-ImplicitCastExpr 0x7f9b280778d8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|     |         | `-DeclRefExpr 0x7f9b28077818 <col:10> 'int ()' Function 0x7f9b28077780 '_bfd_abort' 'int ()'
+|     |         `-ImplicitCastExpr 0x7f9b28077920 <col:22> 'char *' <ArrayToPointerDecay>
+|     |           `-StringLiteral 0x7f9b28077878 <col:22> 'char [3]' lvalue "HI"
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f9b28077780 <<invalid sloc>> col:10 implicit used _bfd_abort 'int ()'

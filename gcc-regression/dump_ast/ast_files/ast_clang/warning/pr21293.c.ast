@@ -1,0 +1,66 @@
+c_files/pr21293.c:10:8: warning: array index -1 is before the beginning of the array [-Warray-bounds]
+    k(&g.x[ + -1],&g.x[ Tmp8 + -1]);
+       ^    ~~~~
+c_files/pr21293.c:3:1: note: array 'x' declared here
+double x[1];
+^
+1 warning generated.
+TranslationUnitDecl 0x7ff4570264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff457026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff457026740 '__int128'
+|-TypedefDecl 0x7ff457026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff457026760 'unsigned __int128'
+|-TypedefDecl 0x7ff457026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff457026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff457026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff457026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff457026dc0 'char *'
+|   `-BuiltinType 0x7ff457026560 'char'
+|-TypedefDecl 0x7ff4570270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff457027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff457026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff457026e58 '__va_list_tag'
+|-RecordDecl 0x7ff457027120 <c_files/pr21293.c:2:1, line:4:1> line:2:1 struct definition
+| `-FieldDecl 0x7ff457825a60 <line:3:1, col:11> col:8 referenced x 'double [1]'
+|-VarDecl 0x7ff457825b00 <line:2:1, line:4:3> col:3 used g 'struct (anonymous struct at c_files/pr21293.c:2:1)':'struct (anonymous at c_files/pr21293.c:2:1)'
+|-FunctionDecl 0x7ff457825d50 <line:5:1, col:26> col:6 used k 'void (double *, double *)'
+| |-ParmVarDecl 0x7ff457825c00 <col:9, col:16> col:17 'double *'
+| `-ParmVarDecl 0x7ff457825c78 <col:19, col:25> col:26 'double *'
+`-FunctionDecl 0x7ff457825ed0 <line:6:1, line:11:1> line:6:6 h 'void (int)'
+  |-ParmVarDecl 0x7ff457825e10 <col:8, col:12> col:12 used Tmp8 'int'
+  `-CompoundStmt 0x7ff4578264c0 <line:7:1, line:11:1>
+    |-DeclStmt 0x7ff457825fe8 <line:8:3, col:8>
+    | `-VarDecl 0x7ff457825f88 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7ff457826488 <line:9:3, line:10:35>
+      |-BinaryOperator 0x7ff457826048 <line:9:7, col:11> 'int' '='
+      | |-DeclRefExpr 0x7ff457826000 <col:7> 'int' lvalue Var 0x7ff457825f88 'i' 'int'
+      | `-IntegerLiteral 0x7ff457826028 <col:11> 'int' 1
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff4578260f0 <col:13, col:18> 'int' '<='
+      | |-ImplicitCastExpr 0x7ff4578260c0 <col:13> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff457826070 <col:13> 'int' lvalue Var 0x7ff457825f88 'i' 'int'
+      | `-ImplicitCastExpr 0x7ff4578260d8 <col:18> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ff457826098 <col:18> 'int' lvalue ParmVar 0x7ff457825e10 'Tmp8' 'int'
+      |-UnaryOperator 0x7ff457826140 <col:23, col:24> 'int' postfix '++'
+      | `-DeclRefExpr 0x7ff457826118 <col:23> 'int' lvalue Var 0x7ff457825f88 'i' 'int'
+      `-CallExpr 0x7ff457826450 <line:10:5, col:35> 'void'
+        |-ImplicitCastExpr 0x7ff457826438 <col:5> 'void (*)(double *, double *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7ff457826160 <col:5> 'void (double *, double *)' Function 0x7ff457825d50 'k' 'void (double *, double *)'
+        |-UnaryOperator 0x7ff457826288 <col:7, col:17> 'double *' prefix '&'
+        | `-ArraySubscriptExpr 0x7ff457826260 <col:8, col:17> 'double' lvalue
+        |   |-ImplicitCastExpr 0x7ff457826248 <col:8, col:10> 'double *' <ArrayToPointerDecay>
+        |   | `-MemberExpr 0x7ff4578261b0 <col:8, col:10> 'double [1]' lvalue .x 0x7ff457825a60
+        |   |   `-DeclRefExpr 0x7ff457826188 <col:8> 'struct (anonymous struct at c_files/pr21293.c:2:1)':'struct (anonymous at c_files/pr21293.c:2:1)' lvalue Var 0x7ff457825b00 'g' 'struct (anonymous struct at c_files/pr21293.c:2:1)':'struct (anonymous at c_files/pr21293.c:2:1)'
+        |   `-UnaryOperator 0x7ff457826228 <col:13, col:16> 'int' prefix '+'
+        |     `-UnaryOperator 0x7ff457826208 <col:15, col:16> 'int' prefix '-'
+        |       `-IntegerLiteral 0x7ff4578261e8 <col:16> 'int' 1
+        `-UnaryOperator 0x7ff4578263f0 <col:19, col:34> 'double *' prefix '&'
+          `-ArraySubscriptExpr 0x7ff4578263c8 <col:20, col:34> 'double' lvalue
+            |-ImplicitCastExpr 0x7ff4578263b0 <col:20, col:22> 'double *' <ArrayToPointerDecay>
+            | `-MemberExpr 0x7ff4578262d0 <col:20, col:22> 'double [1]' lvalue .x 0x7ff457825a60
+            |   `-DeclRefExpr 0x7ff4578262a8 <col:20> 'struct (anonymous struct at c_files/pr21293.c:2:1)':'struct (anonymous at c_files/pr21293.c:2:1)' lvalue Var 0x7ff457825b00 'g' 'struct (anonymous struct at c_files/pr21293.c:2:1)':'struct (anonymous at c_files/pr21293.c:2:1)'
+            `-BinaryOperator 0x7ff457826388 <col:25, col:33> 'int' '+'
+              |-ImplicitCastExpr 0x7ff457826370 <col:25> 'int' <LValueToRValue>
+              | `-DeclRefExpr 0x7ff457826308 <col:25> 'int' lvalue ParmVar 0x7ff457825e10 'Tmp8' 'int'
+              `-UnaryOperator 0x7ff457826350 <col:32, col:33> 'int' prefix '-'
+                `-IntegerLiteral 0x7ff457826330 <col:33> 'int' 1

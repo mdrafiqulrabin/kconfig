@@ -1,0 +1,80 @@
+FileAST: 
+  Typedef: A, [], ['typedef']
+    TypeDecl: A, []
+      Struct: A
+        Decl: buf, [], [], []
+          TypeDecl: buf, []
+            IdentifierType: ['int']
+        Decl: left, [], [], []
+          TypeDecl: left, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: flush, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['A']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: flush, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: <<=
+        StructRef: ->
+          ID: s
+          ID: buf
+        ID: n
+      While: 
+        BinaryOp: <
+          StructRef: ->
+            ID: s
+            ID: left
+          Constant: int, 32
+        Compound: 
+          Assignment: <<=
+            StructRef: ->
+              ID: s
+              ID: buf
+            Constant: int, 8
+          Assignment: +=
+            StructRef: ->
+              ID: s
+              ID: left
+            Constant: int, 8
+      Assignment: =
+        StructRef: ->
+          ID: s
+          ID: buf
+        Constant: int, 0
+  FuncDef: 
+    Decl: oof, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['A']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: oof, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: s
+          ID: buf
+        ID: n
+      Assignment: =
+        StructRef: ->
+          ID: s
+          ID: left
+        ID: n
+      FuncCall: 
+        ID: flush
+        ExprList: 
+          ID: s
+          ID: n

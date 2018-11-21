@@ -1,0 +1,94 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: B
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['float']
+  Decl: X, [], [], []
+    TypeDecl: X, []
+      IdentifierType: ['float']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              Struct: B
+          Decl: q, [], [], []
+            PtrDecl: []
+              TypeDecl: q, []
+                Struct: A
+          Decl: h, [], [], []
+            PtrDecl: []
+              TypeDecl: h, []
+                IdentifierType: ['float']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: +=
+        ID: X
+        UnaryOp: *
+          ID: h
+      Assignment: =
+        UnaryOp: *
+          StructRef: .
+            ID: b
+            ID: p
+        Constant: int, 3
+      Assignment: =
+        StructRef: ->
+          ID: q
+          ID: t
+        Constant: int, 2
+      Return: 
+        UnaryOp: *
+          StructRef: .
+            ID: b
+            ID: p
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          Struct: A
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          Struct: B
+      Assignment: =
+        StructRef: .
+          ID: b
+          ID: p
+        UnaryOp: &
+          StructRef: .
+            ID: a
+            ID: t
+      If: 
+        BinaryOp: ==
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              ID: b
+              UnaryOp: &
+                ID: a
+              UnaryOp: &
+                ID: X
+          Constant: int, 3
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

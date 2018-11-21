@@ -1,0 +1,33 @@
+FileAST: 
+  Decl: foo, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: foo, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 256
+  FuncDef: 
+    Decl: arc4_init, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: arc4_init, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: n
+          Constant: int, 0
+        BinaryOp: <
+          ID: n
+          Constant: int, 256
+        UnaryOp: p++
+          ID: n
+        Assignment: =
+          ArrayRef: 
+            ID: foo
+            ID: n
+          ID: n

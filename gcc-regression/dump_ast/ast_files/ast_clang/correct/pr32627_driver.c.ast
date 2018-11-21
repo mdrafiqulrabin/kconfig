@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fd3490264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd349026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd349026740 '__int128'
+|-TypedefDecl 0x7fd349026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd349026760 'unsigned __int128'
+|-TypedefDecl 0x7fd349026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd349026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd349026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd349026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd349026dc0 'char *'
+|   `-BuiltinType 0x7fd349026560 'char'
+|-TypedefDecl 0x7fd3490270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd349027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd349026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd349026e58 '__va_list_tag'
+`-FunctionDecl 0x7fd349825a00 <c_files/pr32627_driver.c:1:1, line:4:1> line:1:7 get_c_string 'char *()'
+  `-CompoundStmt 0x7fd349825b78 <line:2:1, line:4:1>
+    `-ReturnStmt 0x7fd349825b60 <line:3:3, col:10>
+      `-ImplicitCastExpr 0x7fd349825b48 <col:10> 'char *' <ArrayToPointerDecay>
+        `-StringLiteral 0x7fd349825b18 <col:10> 'char [9]' lvalue "c_string"

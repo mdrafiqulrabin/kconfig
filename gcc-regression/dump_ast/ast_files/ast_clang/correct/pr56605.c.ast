@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7fbb708264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbb70826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbb70826740 '__int128'
+|-TypedefDecl 0x7fbb70826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbb70826760 'unsigned __int128'
+|-TypedefDecl 0x7fbb70826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbb70826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbb70826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbb70826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbb70826dc0 'char *'
+|   `-BuiltinType 0x7fbb70826560 'char'
+|-TypedefDecl 0x7fbb708270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbb70827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbb70826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbb70826e58 '__va_list_tag'
+`-FunctionDecl 0x7fbb70877510 <c_files/pr56605.c:8:1, line:13:1> line:8:6 foo 'void (short *__restrict, int *__restrict)'
+  |-ParmVarDecl 0x7fbb70827160 <col:11, col:29> col:29 used sb 'short *__restrict'
+  |-ParmVarDecl 0x7fbb70877400 <col:33, col:49> col:49 used ia 'int *__restrict'
+  `-CompoundStmt 0x7fbb708779d0 <line:9:1, line:13:1>
+    |-DeclStmt 0x7fbb70877670 <line:10:3, col:8>
+    | `-VarDecl 0x7fbb70877610 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fbb70877998 <line:11:3, line:12:23>
+      |-BinaryOperator 0x7fbb708776d0 <line:11:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fbb70877688 <col:8> 'int' lvalue Var 0x7fbb70877610 'i' 'int'
+      | `-IntegerLiteral 0x7fbb708776b0 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fbb70877758 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fbb70877740 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fbb708776f8 <col:15> 'int' lvalue Var 0x7fbb70877610 'i' 'int'
+      | `-IntegerLiteral 0x7fbb70877720 <col:19> 'int' 4000
+      |-UnaryOperator 0x7fbb708777a8 <col:25, col:26> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fbb70877780 <col:25> 'int' lvalue Var 0x7fbb70877610 'i' 'int'
+      `-BinaryOperator 0x7fbb70877970 <line:12:5, col:23> 'int' '='
+        |-ArraySubscriptExpr 0x7fbb70877848 <col:5, col:9> 'int' lvalue
+        | |-ImplicitCastExpr 0x7fbb70877818 <col:5> 'int *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fbb708777c8 <col:5> 'int *__restrict' lvalue ParmVar 0x7fbb70877400 'ia' 'int *__restrict'
+        | `-ImplicitCastExpr 0x7fbb70877830 <col:8> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fbb708777f0 <col:8> 'int' lvalue Var 0x7fbb70877610 'i' 'int'
+        `-CStyleCastExpr 0x7fbb70877948 <col:13, col:23> 'int' <IntegralCast>
+          `-ImplicitCastExpr 0x7fbb70877930 <col:19, col:23> 'short' <LValueToRValue>
+            `-ArraySubscriptExpr 0x7fbb708778f0 <col:19, col:23> 'short' lvalue
+              |-ImplicitCastExpr 0x7fbb708778c0 <col:19> 'short *' <LValueToRValue>
+              | `-DeclRefExpr 0x7fbb70877870 <col:19> 'short *__restrict' lvalue ParmVar 0x7fbb70827160 'sb' 'short *__restrict'
+              `-ImplicitCastExpr 0x7fbb708778d8 <col:22> 'int' <LValueToRValue>
+                `-DeclRefExpr 0x7fbb70877898 <col:22> 'int' lvalue Var 0x7fbb70877610 'i' 'int'

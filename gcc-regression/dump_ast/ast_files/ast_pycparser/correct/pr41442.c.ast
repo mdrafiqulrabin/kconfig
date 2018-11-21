@@ -1,0 +1,42 @@
+FileAST: 
+  Typedef: link, [], ['typedef']
+    TypeDecl: link, []
+      Struct: LINK
+  Decl: None, [], [], []
+    Struct: LINK
+      Decl: next, [], [], []
+        PtrDecl: []
+          TypeDecl: next, []
+            IdentifierType: ['link']
+  FuncDef: 
+    Decl: haha, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            PtrDecl: []
+              TypeDecl: p1, []
+                IdentifierType: ['link']
+          Decl: p2, [], [], []
+            PtrDecl: []
+              TypeDecl: p2, []
+                IdentifierType: ['link']
+        TypeDecl: haha, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: &&
+            StructRef: ->
+              ID: p1
+              ID: next
+            UnaryOp: !
+              StructRef: ->
+                ID: p2
+                ID: next
+          StructRef: ->
+            ID: p2
+            ID: next
+        Return: 
+          Constant: int, 0
+      Return: 
+        Constant: int, 1

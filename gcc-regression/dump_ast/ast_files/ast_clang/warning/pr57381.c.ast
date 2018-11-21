@@ -1,0 +1,208 @@
+c_files/pr57381.c:22:33: warning: if statement has empty body [-Wempty-body]
+      if ((*l_76 = (p.f2 % 5))) ;
+                                ^
+c_files/pr57381.c:22:33: note: put the semicolon on a separate line to silence this warning
+1 warning generated.
+TranslationUnitDecl 0x7fddde8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fddde826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fddde826740 '__int128'
+|-TypedefDecl 0x7fddde826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fddde826760 'unsigned __int128'
+|-TypedefDecl 0x7fddde826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fddde826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fddde826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fddde826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fddde826dc0 'char *'
+|   `-BuiltinType 0x7fddde826560 'char'
+|-TypedefDecl 0x7fddde8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fddde827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fddde826ee0 'struct __va_list_tag'
+|     `-Record 0x7fddde826e58 '__va_list_tag'
+|-RecordDecl 0x7fddde827120 <c_files/pr57381.c:4:1, col:30> col:8 struct S0 definition
+| |-FieldDecl 0x7fdddf047800 <col:13, col:18> col:18 referenced f0 'int'
+| |-FieldDecl 0x7fdddf047860 <col:13, col:22> col:22 f1 'int'
+| `-FieldDecl 0x7fdddf0478c0 <col:13, col:26> col:26 referenced f2 'int'
+|-RecordDecl 0x7fdddf047908 <line:6:1, line:9:1> line:6:8 struct S1 definition
+| |-FieldDecl 0x7fdddf0479c8 <line:7:5, col:10> col:10 f0 'int'
+| `-FieldDecl 0x7fdddf047a60 <line:8:5, col:24> col:24 referenced f2 'volatile struct S0':'volatile struct S0'
+|-VarDecl 0x7fdddf047b00 <line:11:1, col:51> col:18 used s 'struct S1':'struct S1' static cinit
+| `-InitListExpr 0x7fdddf047cc8 <col:22, col:51> 'struct S1':'struct S1'
+|   |-IntegerLiteral 0x7fdddf047ba0 <col:23> 'int' 1203688037
+|   `-InitListExpr 0x7fdddf047d18 <col:34, col:50> 'struct S0':'struct S0'
+|     |-IntegerLiteral 0x7fdddf047bc0 <col:35> 'int' 114617150
+|     |-IntegerLiteral 0x7fdddf047be0 <col:46> 'int' 5
+|     `-ImplicitCastExpr 0x7fdddf047d70 <col:48> 'int' <IntegralCast>
+|       `-IntegerLiteral 0x7fdddf047c00 <col:48> 'unsigned int' 0
+`-FunctionDecl 0x7fdddf047eb8 <line:13:1, line:25:1> line:13:5 foo 'int (struct S0)'
+  |-ParmVarDecl 0x7fdddf047da8 <col:9, col:19> col:19 used p 'struct S0':'struct S0'
+  `-CompoundStmt 0x7fdddf04b5a8 <line:14:1, line:25:1>
+    |-ForStmt 0x7fdddf04b4e0 <line:15:3, line:23:5>
+    | |-BinaryOperator 0x7fdddf048010 <line:15:8, col:18> 'int' '='
+    | | |-MemberExpr 0x7fdddf047fb8 <col:8, col:13> 'volatile int' lvalue .f2 0x7fdddf0478c0
+    | | | `-MemberExpr 0x7fdddf047f80 <col:8, col:10> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    | | |   `-DeclRefExpr 0x7fdddf047f58 <col:8> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    | | `-IntegerLiteral 0x7fdddf047ff0 <col:18> 'int' 0
+    | |-<<<NULL>>>
+    | |-ParenExpr 0x7fdddf0481d8 <col:21, col:35> 'int'
+    | | `-BinaryOperator 0x7fdddf0481b0 <col:22, col:33> 'int' '<='
+    | |   |-ImplicitCastExpr 0x7fdddf048198 <col:22, col:27> 'int' <LValueToRValue>
+    | |   | `-MemberExpr 0x7fdddf048140 <col:22, col:27> 'volatile int' lvalue .f2 0x7fdddf0478c0
+    | |   |   `-MemberExpr 0x7fdddf048108 <col:22, col:24> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    | |   |     `-DeclRefExpr 0x7fdddf0480e0 <col:22> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    | |   `-IntegerLiteral 0x7fdddf048178 <col:33> 'int' 12
+    | |-UnaryOperator 0x7fdddf048290 <col:38, col:45> 'int' postfix '++'
+    | | `-MemberExpr 0x7fdddf048258 <col:38, col:43> 'volatile int' lvalue .f2 0x7fdddf0478c0
+    | |   `-MemberExpr 0x7fdddf048220 <col:38, col:40> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    | |     `-DeclRefExpr 0x7fdddf0481f8 <col:38> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    | `-CompoundStmt 0x7fdddf04b4a0 <line:16:5, line:23:5>
+    |   |-DeclStmt 0x7fdddf04ace0 <line:17:7, col:248>
+    |   | `-VarDecl 0x7fdddf048440 <col:7, col:247> col:21 used l_61 'volatile int *[5][2][2]' cinit
+    |   |   `-InitListExpr 0x7fdddf049798 <col:37, col:247> 'volatile int *[5][2][2]'
+    |   |     |-InitListExpr 0x7fdddf04a800 <col:38, col:78> 'volatile int *[2][2]'
+    |   |     | |-InitListExpr 0x7fdddf04a850 <col:39, col:57> 'volatile int *[2]'
+    |   |     | | |-UnaryOperator 0x7fdddf048538 <col:40, col:46> 'volatile int *' prefix '&'
+    |   |     | | | `-MemberExpr 0x7fdddf048500 <col:41, col:46> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |     | | |   `-MemberExpr 0x7fdddf0484c8 <col:41, col:43> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |     | | |     `-DeclRefExpr 0x7fdddf0484a0 <col:41> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |     | | `-UnaryOperator 0x7fdddf0485f0 <col:49, col:55> 'volatile int *' prefix '&'
+    |   |     | |   `-MemberExpr 0x7fdddf0485b8 <col:50, col:55> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |     | |     `-MemberExpr 0x7fdddf048580 <col:50, col:52> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |     | |       `-DeclRefExpr 0x7fdddf048558 <col:50> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |     | `-InitListExpr 0x7fdddf04a8a0 <col:59, col:77> 'volatile int *[2]'
+    |   |     |   |-UnaryOperator 0x7fdddf0486f8 <col:60, col:66> 'volatile int *' prefix '&'
+    |   |     |   | `-MemberExpr 0x7fdddf0486c0 <col:61, col:66> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |     |   |   `-MemberExpr 0x7fdddf048688 <col:61, col:63> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |     |   |     `-DeclRefExpr 0x7fdddf048660 <col:61> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |     |   `-UnaryOperator 0x7fdddf0487b0 <col:69, col:75> 'volatile int *' prefix '&'
+    |   |     |     `-MemberExpr 0x7fdddf048778 <col:70, col:75> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |     |       `-MemberExpr 0x7fdddf048740 <col:70, col:72> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |     |         `-DeclRefExpr 0x7fdddf048718 <col:70> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |     |-InitListExpr 0x7fdddf04a8f0 <col:80, col:120> 'volatile int *[2][2]'
+    |   |     | |-InitListExpr 0x7fdddf04a940 <col:81, col:99> 'volatile int *[2]'
+    |   |     | | |-UnaryOperator 0x7fdddf048938 <col:82, col:88> 'volatile int *' prefix '&'
+    |   |     | | | `-MemberExpr 0x7fdddf048900 <col:83, col:88> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |     | | |   `-MemberExpr 0x7fdddf0488c8 <col:83, col:85> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |     | | |     `-DeclRefExpr 0x7fdddf0488a0 <col:83> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |     | | `-UnaryOperator 0x7fdddf0489f0 <col:91, col:97> 'volatile int *' prefix '&'
+    |   |     | |   `-MemberExpr 0x7fdddf0489b8 <col:92, col:97> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |     | |     `-MemberExpr 0x7fdddf048980 <col:92, col:94> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |     | |       `-DeclRefExpr 0x7fdddf048958 <col:92> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |     | `-InitListExpr 0x7fdddf04a990 <col:101, col:119> 'volatile int *[2]'
+    |   |     |   |-UnaryOperator 0x7fdddf048af8 <col:102, col:108> 'volatile int *' prefix '&'
+    |   |     |   | `-MemberExpr 0x7fdddf048ac0 <col:103, col:108> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |     |   |   `-MemberExpr 0x7fdddf048a88 <col:103, col:105> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |     |   |     `-DeclRefExpr 0x7fdddf048a60 <col:103> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |     |   `-UnaryOperator 0x7fdddf048bb0 <col:111, col:117> 'volatile int *' prefix '&'
+    |   |     |     `-MemberExpr 0x7fdddf048b78 <col:112, col:117> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |     |       `-MemberExpr 0x7fdddf048b40 <col:112, col:114> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |     |         `-DeclRefExpr 0x7fdddf048b18 <col:112> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |     |-InitListExpr 0x7fdddf04a9e0 <col:122, col:162> 'volatile int *[2][2]'
+    |   |     | |-InitListExpr 0x7fdddf04aa30 <col:123, col:141> 'volatile int *[2]'
+    |   |     | | |-UnaryOperator 0x7fdddf048d08 <col:124, col:130> 'volatile int *' prefix '&'
+    |   |     | | | `-MemberExpr 0x7fdddf048cd0 <col:125, col:130> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |     | | |   `-MemberExpr 0x7fdddf048c98 <col:125, col:127> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |     | | |     `-DeclRefExpr 0x7fdddf048c70 <col:125> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |     | | `-ImplicitCastExpr 0x7fdddf04aa80 <col:133, col:140> 'volatile int *' <NullToPointer>
+    |   |     | |   `-CStyleCastExpr 0x7fdddf048d60 <col:133, col:140> 'void *' <NullToPointer>
+    |   |     | |     `-IntegerLiteral 0x7fdddf048d28 <col:140> 'int' 0
+    |   |     | `-InitListExpr 0x7fdddf04aa98 <col:143, col:161> 'volatile int *[2]'
+    |   |     |   |-UnaryOperator 0x7fdddf048e70 <col:144, col:150> 'volatile int *' prefix '&'
+    |   |     |   | `-MemberExpr 0x7fdddf048e38 <col:145, col:150> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |     |   |   `-MemberExpr 0x7fdddf048e00 <col:145, col:147> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |     |   |     `-DeclRefExpr 0x7fdddf048dd8 <col:145> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |     |   `-UnaryOperator 0x7fdddf048f28 <col:153, col:159> 'volatile int *' prefix '&'
+    |   |     |     `-MemberExpr 0x7fdddf048ef0 <col:154, col:159> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |     |       `-MemberExpr 0x7fdddf048eb8 <col:154, col:156> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |     |         `-DeclRefExpr 0x7fdddf048e90 <col:154> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |     |-InitListExpr 0x7fdddf04aae8 <col:164, col:204> 'volatile int *[2][2]'
+    |   |     | |-InitListExpr 0x7fdddf04ab38 <col:165, col:183> 'volatile int *[2]'
+    |   |     | | |-UnaryOperator 0x7fdddf049080 <col:166, col:172> 'volatile int *' prefix '&'
+    |   |     | | | `-MemberExpr 0x7fdddf049048 <col:167, col:172> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |     | | |   `-MemberExpr 0x7fdddf049010 <col:167, col:169> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |     | | |     `-DeclRefExpr 0x7fdddf048fe8 <col:167> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |     | | `-UnaryOperator 0x7fdddf049138 <col:175, col:181> 'volatile int *' prefix '&'
+    |   |     | |   `-MemberExpr 0x7fdddf049100 <col:176, col:181> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |     | |     `-MemberExpr 0x7fdddf0490c8 <col:176, col:178> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |     | |       `-DeclRefExpr 0x7fdddf0490a0 <col:176> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |     | `-InitListExpr 0x7fdddf04ab88 <col:185, col:203> 'volatile int *[2]'
+    |   |     |   |-UnaryOperator 0x7fdddf049240 <col:186, col:192> 'volatile int *' prefix '&'
+    |   |     |   | `-MemberExpr 0x7fdddf049208 <col:187, col:192> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |     |   |   `-MemberExpr 0x7fdddf0491d0 <col:187, col:189> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |     |   |     `-DeclRefExpr 0x7fdddf0491a8 <col:187> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |     |   `-UnaryOperator 0x7fdddf0492f8 <col:195, col:201> 'volatile int *' prefix '&'
+    |   |     |     `-MemberExpr 0x7fdddf0492c0 <col:196, col:201> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |     |       `-MemberExpr 0x7fdddf049288 <col:196, col:198> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |     |         `-DeclRefExpr 0x7fdddf049260 <col:196> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |     `-InitListExpr 0x7fdddf04abd8 <col:206, col:246> 'volatile int *[2][2]'
+    |   |       |-InitListExpr 0x7fdddf04ac28 <col:207, col:225> 'volatile int *[2]'
+    |   |       | |-UnaryOperator 0x7fdddf049450 <col:208, col:214> 'volatile int *' prefix '&'
+    |   |       | | `-MemberExpr 0x7fdddf049418 <col:209, col:214> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |       | |   `-MemberExpr 0x7fdddf0493e0 <col:209, col:211> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |       | |     `-DeclRefExpr 0x7fdddf0493b8 <col:209> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |       | `-UnaryOperator 0x7fdddf049508 <col:217, col:223> 'volatile int *' prefix '&'
+    |   |       |   `-MemberExpr 0x7fdddf0494d0 <col:218, col:223> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |       |     `-MemberExpr 0x7fdddf049498 <col:218, col:220> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |       |       `-DeclRefExpr 0x7fdddf049470 <col:218> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |       `-InitListExpr 0x7fdddf04ac78 <col:227, col:245> 'volatile int *[2]'
+    |   |         |-ImplicitCastExpr 0x7fdddf04acc8 <col:228, col:235> 'volatile int *' <NullToPointer>
+    |   |         | `-CStyleCastExpr 0x7fdddf0495b0 <col:228, col:235> 'void *' <NullToPointer>
+    |   |         |   `-IntegerLiteral 0x7fdddf049578 <col:235> 'int' 0
+    |   |         `-UnaryOperator 0x7fdddf049670 <col:237, col:243> 'volatile int *' prefix '&'
+    |   |           `-MemberExpr 0x7fdddf049638 <col:238, col:243> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |             `-MemberExpr 0x7fdddf049600 <col:238, col:240> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |               `-DeclRefExpr 0x7fdddf0495d8 <col:238> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |-DeclStmt 0x7fdddf04af68 <line:19:7, col:43>
+    |   | `-VarDecl 0x7fdddf04ad48 <col:7, col:42> col:22 used l_68 'volatile int **' cinit
+    |   |   `-UnaryOperator 0x7fdddf04af48 <col:29, col:42> 'volatile int **' prefix '&'
+    |   |     `-ArraySubscriptExpr 0x7fdddf04af20 <col:30, col:42> 'volatile int *' lvalue
+    |   |       |-ImplicitCastExpr 0x7fdddf04af08 <col:30, col:39> 'volatile int **' <ArrayToPointerDecay>
+    |   |       | `-ArraySubscriptExpr 0x7fdddf04aec0 <col:30, col:39> 'volatile int *[2]' lvalue
+    |   |       |   |-ImplicitCastExpr 0x7fdddf04aea8 <col:30, col:36> 'volatile int *(*)[2]' <ArrayToPointerDecay>
+    |   |       |   | `-ArraySubscriptExpr 0x7fdddf04ae30 <col:30, col:36> 'volatile int *[2][2]' lvalue
+    |   |       |   |   |-ImplicitCastExpr 0x7fdddf04ae18 <col:30> 'volatile int *(*)[2][2]' <ArrayToPointerDecay>
+    |   |       |   |   | `-DeclRefExpr 0x7fdddf04ada8 <col:30> 'volatile int *[5][2][2]' lvalue Var 0x7fdddf048440 'l_61' 'volatile int *[5][2][2]'
+    |   |       |   |   `-IntegerLiteral 0x7fdddf04add0 <col:35> 'int' 0
+    |   |       |   `-IntegerLiteral 0x7fdddf04ae58 <col:38> 'int' 0
+    |   |       `-IntegerLiteral 0x7fdddf04aee8 <col:41> 'int' 1
+    |   |-DeclStmt 0x7fdddf04b0b0 <line:20:7, col:36>
+    |   | `-VarDecl 0x7fdddf04af98 <col:7, col:34> col:21 used l_76 'volatile int *' cinit
+    |   |   `-UnaryOperator 0x7fdddf04b090 <col:28, col:34> 'volatile int *' prefix '&'
+    |   |     `-MemberExpr 0x7fdddf04b058 <col:29, col:34> 'volatile int' lvalue .f0 0x7fdddf047800
+    |   |       `-MemberExpr 0x7fdddf04b020 <col:29, col:31> 'volatile struct S0':'volatile struct S0' lvalue .f2 0x7fdddf047a60
+    |   |         `-DeclRefExpr 0x7fdddf04aff8 <col:29> 'struct S1':'struct S1' lvalue Var 0x7fdddf047b00 's' 'struct S1':'struct S1'
+    |   |-BinaryOperator 0x7fdddf04b2a8 <line:21:7, col:29> 'volatile int *' '='
+    |   | |-ParenExpr 0x7fdddf04b128 <col:7, col:13> 'volatile int *' lvalue
+    |   | | `-UnaryOperator 0x7fdddf04b108 <col:8, col:9> 'volatile int *' lvalue prefix '*'
+    |   | |   `-ImplicitCastExpr 0x7fdddf04b0f0 <col:9> 'volatile int **' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7fdddf04b0c8 <col:9> 'volatile int **' lvalue Var 0x7fdddf04ad48 'l_68' 'volatile int **'
+    |   | `-ImplicitCastExpr 0x7fdddf04b290 <col:17, col:29> 'volatile int *' <LValueToRValue>
+    |   |   `-ArraySubscriptExpr 0x7fdddf04b268 <col:17, col:29> 'volatile int *' lvalue
+    |   |     |-ImplicitCastExpr 0x7fdddf04b250 <col:17, col:26> 'volatile int **' <ArrayToPointerDecay>
+    |   |     | `-ArraySubscriptExpr 0x7fdddf04b208 <col:17, col:26> 'volatile int *[2]' lvalue
+    |   |     |   |-ImplicitCastExpr 0x7fdddf04b1f0 <col:17, col:23> 'volatile int *(*)[2]' <ArrayToPointerDecay>
+    |   |     |   | `-ArraySubscriptExpr 0x7fdddf04b1a8 <col:17, col:23> 'volatile int *[2][2]' lvalue
+    |   |     |   |   |-ImplicitCastExpr 0x7fdddf04b190 <col:17> 'volatile int *(*)[2][2]' <ArrayToPointerDecay>
+    |   |     |   |   | `-DeclRefExpr 0x7fdddf04b148 <col:17> 'volatile int *[5][2][2]' lvalue Var 0x7fdddf048440 'l_61' 'volatile int *[5][2][2]'
+    |   |     |   |   `-IntegerLiteral 0x7fdddf04b170 <col:22> 'int' 0
+    |   |     |   `-IntegerLiteral 0x7fdddf04b1d0 <col:25> 'int' 0
+    |   |     `-IntegerLiteral 0x7fdddf04b230 <col:28> 'int' 0
+    |   `-IfStmt 0x7fdddf04b468 <line:22:7, col:33>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-ParenExpr 0x7fdddf04b438 <col:11, col:30> 'int'
+    |     | `-BinaryOperator 0x7fdddf04b410 <col:12, col:29> 'int' '='
+    |     |   |-UnaryOperator 0x7fdddf04b310 <col:12, col:13> 'volatile int' lvalue prefix '*'
+    |     |   | `-ImplicitCastExpr 0x7fdddf04b2f8 <col:13> 'volatile int *' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fdddf04b2d0 <col:13> 'volatile int *' lvalue Var 0x7fdddf04af98 'l_76' 'volatile int *'
+    |     |   `-ParenExpr 0x7fdddf04b3f0 <col:20, col:29> 'int'
+    |     |     `-BinaryOperator 0x7fdddf04b3c8 <col:21, col:28> 'int' '%'
+    |     |       |-ImplicitCastExpr 0x7fdddf04b3b0 <col:21, col:23> 'int' <LValueToRValue>
+    |     |       | `-MemberExpr 0x7fdddf04b358 <col:21, col:23> 'int' lvalue .f2 0x7fdddf0478c0
+    |     |       |   `-DeclRefExpr 0x7fdddf04b330 <col:21> 'struct S0':'struct S0' lvalue ParmVar 0x7fdddf047da8 'p' 'struct S0':'struct S0'
+    |     |       `-IntegerLiteral 0x7fdddf04b390 <col:28> 'int' 5
+    |     |-NullStmt 0x7fdddf04b458 <col:33>
+    |     `-<<<NULL>>>
+    `-ReturnStmt 0x7fdddf04b590 <line:24:3, col:12>
+      `-ImplicitCastExpr 0x7fdddf04b578 <col:10, col:12> 'int' <LValueToRValue>
+        `-MemberExpr 0x7fdddf04b540 <col:10, col:12> 'int' lvalue .f0 0x7fdddf047800
+          `-DeclRefExpr 0x7fdddf04b518 <col:10> 'struct S0':'struct S0' lvalue ParmVar 0x7fdddf047da8 'p' 'struct S0':'struct S0'

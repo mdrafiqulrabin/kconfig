@@ -1,0 +1,52 @@
+FileAST: 
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      Enum: E
+  Decl: A, [], [], []
+    PtrDecl: []
+      ArrayDecl: []
+        TypeDecl: A, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn0, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fn0, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          Struct: None
+            Decl: x, [], [], []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+            Decl: y, [], [], []
+              ArrayDecl: []
+                TypeDecl: y, []
+                  IdentifierType: ['int']
+      BinaryOp: &&
+        Constant: int, 1234
+        BinaryOp: +
+          UnaryOp: &
+            StructRef: .
+              ID: s
+              ID: y
+          Constant: int, 1
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      ExprList: 
+        Constant: int, 1234
+        Assignment: +=
+          ID: A
+          Constant: int, 1

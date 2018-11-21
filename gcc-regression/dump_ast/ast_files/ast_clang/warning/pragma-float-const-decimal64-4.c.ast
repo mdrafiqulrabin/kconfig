@@ -1,0 +1,74 @@
+c_files/pragma-float-const-decimal64-4.c:13:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64      /* { dg-warning "malformed" } */
+             ^
+c_files/pragma-float-const-decimal64-4.c:19:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 DFP  /* { dg-warning "malformed" } */
+             ^
+c_files/pragma-float-const-decimal64-4.c:25:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON DFP /* { dg-warning "junk at end" } */
+             ^
+c_files/pragma-float-const-decimal64-4.c:31:3: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+  _Pragma ( "STDC FLOAT_CONST_DECIMAL64" )      /* { dg-warning "malformed" } */
+  ^
+<scratch space>:2:7: note: expanded from here
+ STDC FLOAT_CONST_DECIMAL64
+      ^
+c_files/pragma-float-const-decimal64-4.c:37:3: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+  _Pragma ( "STDC FLOAT_CONST_DECIMAL64 DFP" )  /* { dg-warning "malformed" } */
+  ^
+<scratch space>:4:7: note: expanded from here
+ STDC FLOAT_CONST_DECIMAL64 DFP
+      ^
+c_files/pragma-float-const-decimal64-4.c:43:3: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+  _Pragma ( "STDC FLOAT_CONST_DECIMAL64 ON DFP" ) /* { dg-warning "junk at end" } */
+  ^
+<scratch space>:6:7: note: expanded from here
+ STDC FLOAT_CONST_DECIMAL64 ON DFP
+      ^
+6 warnings generated.
+TranslationUnitDecl 0x7f95d60068d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f95d6006e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f95d6006b40 '__int128'
+|-TypedefDecl 0x7f95d6006e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f95d6006b60 'unsigned __int128'
+|-TypedefDecl 0x7f95d6007168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f95d6006f70 'struct __NSConstantString_tag'
+|   `-Record 0x7f95d6006ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f95d6007200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f95d60071c0 'char *'
+|   `-BuiltinType 0x7f95d6006960 'char'
+|-TypedefDecl 0x7f95d60074c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f95d6007470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f95d60072e0 'struct __va_list_tag'
+|     `-Record 0x7f95d6007258 '__va_list_tag'
+|-VarDecl 0x7f95d6007538 <c_files/pragma-float-const-decimal64-4.c:9:1, col:8> col:8 used a 'double'
+|-FunctionDecl 0x7f95d605beb0 <line:11:1, line:15:1> line:11:6 f1 'void (void)'
+| `-CompoundStmt 0x7f95d605bfb8 <line:12:1, line:15:1>
+|   `-BinaryOperator 0x7f95d605bf90 <line:14:3, col:7> 'double' '='
+|     |-DeclRefExpr 0x7f95d605bf48 <col:3> 'double' lvalue Var 0x7f95d6007538 'a' 'double'
+|     `-FloatingLiteral 0x7f95d605bf70 <col:7> 'double' 1.000000e+00
+|-FunctionDecl 0x7f95d605c068 <line:17:1, line:21:1> line:17:6 f2 'void (void)'
+| `-CompoundStmt 0x7f95d605c170 <line:18:1, line:21:1>
+|   `-BinaryOperator 0x7f95d605c148 <line:20:3, col:7> 'double' '='
+|     |-DeclRefExpr 0x7f95d605c100 <col:3> 'double' lvalue Var 0x7f95d6007538 'a' 'double'
+|     `-FloatingLiteral 0x7f95d605c128 <col:7> 'double' 2.000000e+00
+|-FunctionDecl 0x7f95d605c220 <line:23:1, line:27:1> line:23:6 f3 'void (void)'
+| `-CompoundStmt 0x7f95d605c328 <line:24:1, line:27:1>
+|   `-BinaryOperator 0x7f95d605c300 <line:26:3, col:7> 'double' '='
+|     |-DeclRefExpr 0x7f95d605c2b8 <col:3> 'double' lvalue Var 0x7f95d6007538 'a' 'double'
+|     `-FloatingLiteral 0x7f95d605c2e0 <col:7> 'double' 3.000000e+00
+|-FunctionDecl 0x7f95d605c3d8 <line:29:1, line:33:1> line:29:6 f4 'void (void)'
+| `-CompoundStmt 0x7f95d605c4e0 <line:30:1, line:33:1>
+|   `-BinaryOperator 0x7f95d605c4b8 <line:32:3, col:7> 'double' '='
+|     |-DeclRefExpr 0x7f95d605c470 <col:3> 'double' lvalue Var 0x7f95d6007538 'a' 'double'
+|     `-FloatingLiteral 0x7f95d605c498 <col:7> 'double' 1.000000e+00
+|-FunctionDecl 0x7f95d605c590 <line:35:1, line:39:1> line:35:6 f5 'void (void)'
+| `-CompoundStmt 0x7f95d605c698 <line:36:1, line:39:1>
+|   `-BinaryOperator 0x7f95d605c670 <line:38:3, col:7> 'double' '='
+|     |-DeclRefExpr 0x7f95d605c628 <col:3> 'double' lvalue Var 0x7f95d6007538 'a' 'double'
+|     `-FloatingLiteral 0x7f95d605c650 <col:7> 'double' 2.000000e+00
+`-FunctionDecl 0x7f95d605c748 <line:41:1, line:45:1> line:41:6 f6 'void (void)'
+  `-CompoundStmt 0x7f95d605c850 <line:42:1, line:45:1>
+    `-BinaryOperator 0x7f95d605c828 <line:44:3, col:7> 'double' '='
+      |-DeclRefExpr 0x7f95d605c7e0 <col:3> 'double' lvalue Var 0x7f95d6007538 'a' 'double'
+      `-FloatingLiteral 0x7f95d605c808 <col:7> 'double' 3.000000e+00

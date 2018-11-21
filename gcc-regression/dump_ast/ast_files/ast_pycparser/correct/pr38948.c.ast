@@ -1,0 +1,468 @@
+FileAST: 
+  Typedef: byte, [], ['typedef']
+    TypeDecl: byte, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: uint, [], ['typedef']
+    TypeDecl: uint, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: bool, [], ['typedef']
+    TypeDecl: bool, []
+      IdentifierType: ['int']
+  Typedef: gs_const_string, [], ['typedef']
+    TypeDecl: gs_const_string, []
+      Struct: gs_const_string_s
+        Decl: data, ['const'], [], []
+          PtrDecl: []
+            TypeDecl: data, ['const']
+              IdentifierType: ['byte']
+  Decl: None, [], [], []
+    Struct: gs_matrix_s
+      Decl: xx, [], [], []
+        TypeDecl: xx, []
+          IdentifierType: ['float']
+      Decl: xy, [], [], []
+        TypeDecl: xy, []
+          IdentifierType: ['float']
+      Decl: yx, [], [], []
+        TypeDecl: yx, []
+          IdentifierType: ['float']
+      Decl: yy, [], [], []
+        TypeDecl: yy, []
+          IdentifierType: ['float']
+      Decl: tx, [], [], []
+        TypeDecl: tx, []
+          IdentifierType: ['float']
+      Decl: ty, [], [], []
+        TypeDecl: ty, []
+          IdentifierType: ['float']
+  Typedef: gs_matrix, [], ['typedef']
+    TypeDecl: gs_matrix, []
+      Struct: gs_matrix_s
+  Typedef: fixed, [], ['typedef']
+    TypeDecl: fixed, []
+      IdentifierType: ['long']
+  Typedef: gs_fixed_point, [], ['typedef']
+    TypeDecl: gs_fixed_point, []
+      Struct: gs_fixed_point_s
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['fixed']
+        Decl: y, [], [], []
+          TypeDecl: y, []
+            IdentifierType: ['fixed']
+  Typedef: gs_matrix_fixed, [], ['typedef']
+    TypeDecl: gs_matrix_fixed, []
+      Struct: gs_matrix_fixed_s
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['int']
+  Decl: gx_path_add_curve_notes, [], [], []
+    FuncDecl: 
+      TypeDecl: gx_path_add_curve_notes, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: append_simple, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: glyph, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: glyph, ['const']
+                IdentifierType: ['byte']
+          Decl: pmat, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: pmat, ['const']
+                IdentifierType: ['gs_matrix_fixed']
+          Decl: ppath, [], [], []
+            PtrDecl: []
+              TypeDecl: ppath, []
+                IdentifierType: ['void']
+        TypeDecl: append_simple, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: numContours, [], [], []
+        TypeDecl: numContours, []
+          IdentifierType: ['int']
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+          BinaryOp: -
+            BinaryOp: ^
+              BinaryOp: +
+                BinaryOp: <<
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['uint']
+                    ArrayRef: 
+                      ID: glyph
+                      Constant: int, 0
+                  Constant: int, 8
+                ArrayRef: 
+                  ID: glyph
+                  Constant: int, 1
+              Constant: int, 0x8000
+            Constant: int, 0x8000
+      Decl: pends, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: pends, ['const']
+            IdentifierType: ['byte']
+        BinaryOp: +
+          ID: glyph
+          Constant: int, 10
+      Decl: code, [], [], []
+        TypeDecl: code, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Compound: 
+        Decl: i, [], [], []
+          TypeDecl: i, []
+            IdentifierType: ['uint']
+          Constant: int, 0
+        Decl: np, [], [], []
+          TypeDecl: np, []
+            IdentifierType: ['uint']
+          Constant: int, 0
+        Decl: pt, [], [], []
+          TypeDecl: pt, []
+            IdentifierType: ['gs_fixed_point']
+          InitList: 
+            Constant: int, 0
+        Decl: reps, [], [], []
+          TypeDecl: reps, []
+            IdentifierType: ['uint']
+          Constant: int, 0
+        For: 
+          ExprList: 
+            Assignment: =
+              ID: i
+              Constant: int, 0
+            Assignment: =
+              ID: np
+              Constant: int, 0
+          BinaryOp: <
+            ID: i
+            ID: numContours
+          UnaryOp: ++
+            ID: i
+          Compound: 
+            Decl: move, [], [], []
+              TypeDecl: move, []
+                IdentifierType: ['bool']
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['bool']
+                Constant: int, 1
+            Decl: last_point, [], [], []
+              TypeDecl: last_point, []
+                IdentifierType: ['uint']
+              BinaryOp: +
+                BinaryOp: <<
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['uint']
+                    ArrayRef: 
+                      BinaryOp: +
+                        ID: pends
+                        BinaryOp: *
+                          ID: i
+                          Constant: int, 2
+                      Constant: int, 0
+                  Constant: int, 8
+                ArrayRef: 
+                  BinaryOp: +
+                    ID: pends
+                    BinaryOp: *
+                      ID: i
+                      Constant: int, 2
+                  Constant: int, 1
+            Decl: off_curve, [], [], []
+              TypeDecl: off_curve, []
+                IdentifierType: ['int']
+              Constant: int, 0
+            Decl: cpoints, [], [], []
+              ArrayDecl: []
+                TypeDecl: cpoints, []
+                  IdentifierType: ['gs_fixed_point']
+                Constant: int, 3
+            For: 
+              BinaryOp: <=
+                ID: np
+                ID: last_point
+              ExprList: 
+                UnaryOp: --
+                  ID: reps
+                UnaryOp: ++
+                  ID: np
+              Compound: 
+                If: 
+                  ID: move
+                  Compound: 
+                    Assignment: =
+                      ArrayRef: 
+                        ID: cpoints
+                        Constant: int, 0
+                      ID: pt
+                    Assignment: =
+                      ID: move
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['bool']
+                        Constant: int, 0
+                  Compound: 
+                    Switch: 
+                      UnaryOp: p++
+                        ID: off_curve
+                      Compound: 
+                        Default: 
+                          Assignment: =
+                            StructRef: .
+                              ArrayRef: 
+                                ID: cpoints
+                                Constant: int, 2
+                              ID: x
+                            BinaryOp: /
+                              BinaryOp: +
+                                StructRef: .
+                                  ArrayRef: 
+                                    ID: cpoints
+                                    Constant: int, 1
+                                  ID: x
+                                StructRef: .
+                                  ID: pt
+                                  ID: x
+                              Constant: int, 2
+                          Assignment: =
+                            StructRef: .
+                              ArrayRef: 
+                                ID: cpoints
+                                Constant: int, 2
+                              ID: y
+                            BinaryOp: /
+                              BinaryOp: +
+                                StructRef: .
+                                  ArrayRef: 
+                                    ID: cpoints
+                                    Constant: int, 1
+                                  ID: y
+                                StructRef: .
+                                  ID: pt
+                                  ID: y
+                              Constant: int, 2
+                          Assignment: =
+                            ID: code
+                            FuncCall: 
+                              ID: gx_path_add_curve_notes
+                              ExprList: 
+                                ID: ppath
+                                BinaryOp: /
+                                  BinaryOp: +
+                                    StructRef: .
+                                      ArrayRef: 
+                                        ID: cpoints
+                                        Constant: int, 0
+                                      ID: x
+                                    BinaryOp: *
+                                      Constant: int, 2
+                                      StructRef: .
+                                        ArrayRef: 
+                                          ID: cpoints
+                                          Constant: int, 1
+                                        ID: x
+                                  Constant: int, 3
+                                BinaryOp: /
+                                  BinaryOp: +
+                                    StructRef: .
+                                      ArrayRef: 
+                                        ID: cpoints
+                                        Constant: int, 0
+                                      ID: y
+                                    BinaryOp: *
+                                      Constant: int, 2
+                                      StructRef: .
+                                        ArrayRef: 
+                                          ID: cpoints
+                                          Constant: int, 1
+                                        ID: y
+                                  Constant: int, 3
+                                BinaryOp: /
+                                  BinaryOp: +
+                                    BinaryOp: *
+                                      Constant: int, 2
+                                      StructRef: .
+                                        ArrayRef: 
+                                          ID: cpoints
+                                          Constant: int, 1
+                                        ID: x
+                                    StructRef: .
+                                      ArrayRef: 
+                                        ID: cpoints
+                                        Constant: int, 2
+                                      ID: x
+                                  Constant: int, 3
+                                BinaryOp: /
+                                  BinaryOp: +
+                                    BinaryOp: *
+                                      Constant: int, 2
+                                      StructRef: .
+                                        ArrayRef: 
+                                          ID: cpoints
+                                          Constant: int, 1
+                                        ID: y
+                                    StructRef: .
+                                      ArrayRef: 
+                                        ID: cpoints
+                                        Constant: int, 2
+                                      ID: y
+                                  Constant: int, 3
+                                StructRef: .
+                                  ArrayRef: 
+                                    ID: cpoints
+                                    Constant: int, 2
+                                  ID: x
+                                StructRef: .
+                                  ArrayRef: 
+                                    ID: cpoints
+                                    Constant: int, 2
+                                  ID: y
+                                Constant: int, 0
+                          Assignment: =
+                            ArrayRef: 
+                              ID: cpoints
+                              Constant: int, 0
+                            ArrayRef: 
+                              ID: cpoints
+                              Constant: int, 2
+                        Case: 
+                          Constant: int, 0
+                          Assignment: =
+                            ArrayRef: 
+                              ID: cpoints
+                              Constant: int, 1
+                            ID: pt
+  Decl: gs_matrix_multiply, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['gs_matrix']
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['gs_matrix']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['gs_matrix']
+      TypeDecl: gs_matrix_multiply, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: append_outline, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: glyph_index, [], [], []
+            TypeDecl: glyph_index, []
+              IdentifierType: ['uint']
+          Decl: pmat, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: pmat, ['const']
+                IdentifierType: ['gs_matrix_fixed']
+          Decl: ppath, [], [], []
+            PtrDecl: []
+              TypeDecl: ppath, []
+                IdentifierType: ['void']
+        TypeDecl: append_outline, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: glyph_string, [], [], []
+        TypeDecl: glyph_string, []
+          IdentifierType: ['gs_const_string']
+        InitList: 
+          Constant: int, 0
+      Decl: numContours, [], [], []
+        TypeDecl: numContours, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Assignment: =
+        ID: numContours
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+          BinaryOp: -
+            BinaryOp: ^
+              BinaryOp: +
+                BinaryOp: <<
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['uint']
+                    ArrayRef: 
+                      StructRef: .
+                        ID: glyph_string
+                        ID: data
+                      Constant: int, 0
+                  Constant: int, 8
+                ArrayRef: 
+                  StructRef: .
+                    ID: glyph_string
+                    ID: data
+                  Constant: int, 1
+              Constant: int, 0x8000
+            Constant: int, 0x8000
+      If: 
+        BinaryOp: >=
+          ID: numContours
+          Constant: int, 0
+        Return: 
+          FuncCall: 
+            ID: append_simple
+            ExprList: 
+              StructRef: .
+                ID: glyph_string
+                ID: data
+              ID: pmat
+              ID: ppath
+      Compound: 
+        Decl: flags, [], [], []
+          TypeDecl: flags, []
+            IdentifierType: ['uint']
+          Constant: int, 0
+        DoWhile: 
+          BinaryOp: &
+            ID: flags
+            Constant: int, 32
+          Compound: 
+            Decl: mat, [], [], []
+              TypeDecl: mat, []
+                IdentifierType: ['gs_matrix_fixed']
+              InitList: 
+                Constant: int, 0
+            Decl: scale_mat, [], [], []
+              TypeDecl: scale_mat, []
+                IdentifierType: ['gs_matrix']
+              InitList: 
+                Constant: int, 0
+            FuncCall: 
+              ID: gs_matrix_multiply
+              ExprList: 
+                UnaryOp: &
+                  ID: scale_mat
+                Cast: 
+                  Typename: None, ['const']
+                    PtrDecl: []
+                      TypeDecl: None, ['const']
+                        IdentifierType: ['gs_matrix']
+                  UnaryOp: &
+                    ID: mat
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['gs_matrix']
+                  UnaryOp: &
+                    ID: mat

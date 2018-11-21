@@ -1,0 +1,119 @@
+FileAST: 
+  Typedef: ieee854_long_double_shape_type, [], ['typedef']
+    TypeDecl: ieee854_long_double_shape_type, []
+      Union: None
+        Decl: value, [], [], []
+          TypeDecl: value, []
+            IdentifierType: ['long', 'double']
+        Decl: parts64, [], [], []
+          TypeDecl: parts64, []
+            Struct: None
+              Decl: msw, [], [], []
+                TypeDecl: msw, []
+                  IdentifierType: ['unsigned', 'long', 'long']
+              Decl: lsw, [], [], []
+                TypeDecl: lsw, []
+                  IdentifierType: ['unsigned', 'long', 'long']
+        Decl: parts32, [], [], []
+          TypeDecl: parts32, []
+            Struct: None
+              Decl: w0, [], [], []
+                TypeDecl: w0, []
+                  IdentifierType: ['unsigned', 'int']
+              Decl: w1, [], [], []
+                TypeDecl: w1, []
+                  IdentifierType: ['unsigned', 'int']
+              Decl: w2, [], [], []
+                TypeDecl: w2, []
+                  IdentifierType: ['unsigned', 'int']
+              Decl: w3, [], [], []
+                TypeDecl: w3, []
+                  IdentifierType: ['unsigned', 'int']
+  Decl: twolm54, ['const'], ['static'], []
+    TypeDecl: twolm54, ['const']
+      IdentifierType: ['long', 'double']
+    Constant: float, 5.55111512312578270212e-17
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['long', 'double']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['long', 'long']
+      Decl: hx, [], [], []
+        TypeDecl: hx, []
+          IdentifierType: ['long', 'long']
+      Decl: lx, [], [], []
+        TypeDecl: lx, []
+          IdentifierType: ['long', 'long']
+      Decl: qw_u, [], [], []
+        TypeDecl: qw_u, []
+          IdentifierType: ['ieee854_long_double_shape_type']
+      Assignment: =
+        StructRef: .
+          ID: qw_u
+          ID: value
+        ID: x
+      Assignment: =
+        ID: hx
+        StructRef: .
+          StructRef: .
+            ID: qw_u
+            ID: parts64
+          ID: msw
+      Assignment: =
+        ID: lx
+        StructRef: .
+          StructRef: .
+            ID: qw_u
+            ID: parts64
+          ID: lsw
+      Assignment: =
+        ID: k
+        BinaryOp: +
+          BinaryOp: +
+            BinaryOp: &
+              BinaryOp: >>
+                ID: hx
+                Constant: int, 52
+              Constant: int, 0x7ff
+            ID: n
+          Constant: int, 54
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: qw_u
+            ID: parts64
+          ID: msw
+        BinaryOp: |
+          BinaryOp: &
+            ID: hx
+            Constant: int, 0x800fffffffffffffULL
+          BinaryOp: <<
+            ID: k
+            Constant: int, 52
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: qw_u
+            ID: parts64
+          ID: lsw
+        ID: lx
+      Assignment: =
+        ID: x
+        StructRef: .
+          ID: qw_u
+          ID: value
+      Return: 
+        BinaryOp: *
+          ID: x
+          ID: twolm54

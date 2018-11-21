@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fce868264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fce86826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fce86826740 '__int128'
+|-TypedefDecl 0x7fce86826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fce86826760 'unsigned __int128'
+|-TypedefDecl 0x7fce86826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fce86826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fce86826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fce86826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fce86826dc0 'char *'
+|   `-BuiltinType 0x7fce86826560 'char'
+|-TypedefDecl 0x7fce868270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fce86827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fce86826ee0 'struct __va_list_tag'
+|     `-Record 0x7fce86826e58 '__va_list_tag'
+|-RecordDecl 0x7fce86827120 <c_files/pr61096-2.c:4:1, col:23> col:8 struct s definition
+| `-FieldDecl 0x7fce86877458 <col:12, col:20> col:17 referenced c 'char [1]'
+|-FunctionDecl 0x7fce868775d0 <line:5:1, col:26> col:17 used foo 'struct s (void)' extern
+`-FunctionDecl 0x7fce86877770 <line:6:1, line:10:1> line:7:1 bar 'void (void)'
+  `-CompoundStmt 0x7fce868779d0 <line:8:1, line:10:1>
+    `-DeclStmt 0x7fce868779b8 <line:9:3, col:23>
+      `-VarDecl 0x7fce86877820 <col:3, col:22> col:9 t 'char *' cinit
+        `-ImplicitCastExpr 0x7fce868779a0 <col:13, col:22> 'char *' <ArrayToPointerDecay>
+          `-MemberExpr 0x7fce86877968 <col:13, col:22> 'char [1]' .c 0x7fce86877458
+            `-ParenExpr 0x7fce86877948 <col:13, col:20> 'struct s':'struct s'
+              `-CallExpr 0x7fce86877920 <col:14, col:19> 'struct s':'struct s'
+                `-ImplicitCastExpr 0x7fce86877908 <col:14> 'struct s (*)(void)' <FunctionToPointerDecay>
+                  `-DeclRefExpr 0x7fce86877880 <col:14> 'struct s (void)' Function 0x7fce868775d0 'foo' 'struct s (void)'

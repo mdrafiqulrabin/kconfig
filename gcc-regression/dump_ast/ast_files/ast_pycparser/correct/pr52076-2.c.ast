@@ -1,0 +1,73 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: kobject
+      Decl: b7, [], [], []
+        TypeDecl: b7, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 1
+      Decl: b56, [], [], []
+        TypeDecl: b56, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 2
+      Decl: b1234, [], [], []
+        TypeDecl: b1234, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 4
+      Decl: b0, [], [], []
+        TypeDecl: b0, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 1
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['unsigned', 'char']
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: b7, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: kobj, [], [], []
+            PtrDecl: []
+              TypeDecl: kobj, []
+                Struct: kobject
+        TypeDecl: b7, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: kobj
+          ID: b7
+        Constant: int, 1
+  FuncDef: 
+    Decl: b56, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: kobj, [], [], []
+            PtrDecl: []
+              TypeDecl: kobj, []
+                Struct: kobject
+        TypeDecl: b56, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: kobj
+          ID: b56
+        Constant: int, 3
+  FuncDef: 
+    Decl: b1234, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: kobj, [], [], []
+            PtrDecl: []
+              TypeDecl: kobj, []
+                Struct: kobject
+        TypeDecl: b1234, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: kobj
+          ID: b1234
+        Constant: int, 15

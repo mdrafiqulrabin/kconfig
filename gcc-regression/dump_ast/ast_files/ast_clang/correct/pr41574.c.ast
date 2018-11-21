@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fde2d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fde2d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fde2d026740 '__int128'
+|-TypedefDecl 0x7fde2d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fde2d026760 'unsigned __int128'
+|-TypedefDecl 0x7fde2d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fde2d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fde2d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fde2d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fde2d026dc0 'char *'
+|   `-BuiltinType 0x7fde2d026560 'char'
+|-TypedefDecl 0x7fde2d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fde2d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fde2d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fde2d026e58 '__va_list_tag'
+|-VarDecl 0x7fde2d027138 <c_files/pr41574.c:6:1, col:25> col:21 used one 'const double' static cinit
+| `-FloatingLiteral 0x7fde2d0271d8 <col:25> 'double' 1.000000e+00
+`-FunctionDecl 0x7fde2d825ae8 <line:8:1, line:12:1> line:9:1 f 'double (double)'
+  |-ParmVarDecl 0x7fde2d825a18 <col:3, col:10> col:10 used x 'double'
+  `-CompoundStmt 0x7fde2d825d28 <line:10:1, line:12:1>
+    `-ReturnStmt 0x7fde2d825d10 <line:11:3, col:18>
+      `-BinaryOperator 0x7fde2d825c90 <col:10, col:18> 'double' '*'
+        |-ImplicitCastExpr 0x7fde2d825c78 <col:10> 'double' <LValueToRValue>
+        | `-DeclRefExpr 0x7fde2d825b88 <col:10> 'double' lvalue ParmVar 0x7fde2d825a18 'x' 'double'
+        `-ParenExpr 0x7fde2d825c58 <col:12, col:18> 'double'
+          `-BinaryOperator 0x7fde2d825c30 <col:13, col:17> 'double' '+'
+            |-ImplicitCastExpr 0x7fde2d825c00 <col:13> 'double' <LValueToRValue>
+            | `-DeclRefExpr 0x7fde2d825bb0 <col:13> 'const double' lvalue Var 0x7fde2d027138 'one' 'const double'
+            `-ImplicitCastExpr 0x7fde2d825c18 <col:17> 'double' <LValueToRValue>
+              `-DeclRefExpr 0x7fde2d825bd8 <col:17> 'double' lvalue ParmVar 0x7fde2d825a18 'x' 'double'

@@ -1,0 +1,65 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: s0
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Union: u0
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['long']
+  Typedef: S0, [], ['typedef']
+    TypeDecl: S0, []
+      Struct: s0
+  Typedef: U0, [], ['typedef']
+    TypeDecl: U0, []
+      Union: u0
+  Decl: x0, [], [], []
+    TypeDecl: x0, []
+      Struct: s0
+  Decl: x1, [], [], []
+    TypeDecl: x1, []
+      IdentifierType: ['S0']
+  Decl: x2, [], [], []
+    TypeDecl: x2, []
+      Union: u0
+  Decl: x3, [], [], []
+    TypeDecl: x3, []
+      IdentifierType: ['U0']
+  Decl: x4, [], [], []
+    PtrDecl: []
+      TypeDecl: x4, []
+        Struct: s0
+  Decl: x5, [], [], []
+    PtrDecl: []
+      TypeDecl: x5, []
+        Union: u0
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      StructRef: .
+        ID: x0
+        ID: c
+      StructRef: .
+        ID: x1
+        ID: c
+      StructRef: .
+        ID: x2
+        ID: c
+      StructRef: .
+        ID: x3
+        ID: c
+      StructRef: ->
+        ID: x4
+        ID: c
+      StructRef: ->
+        ID: x5
+        ID: c

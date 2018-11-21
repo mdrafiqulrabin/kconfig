@@ -1,0 +1,23 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S1
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['float']
+  FuncDef: 
+    Decl: foo1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo1, []
+          Struct: S1
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          Struct: S1
+        InitList: 
+          Constant: float, 1.0f
+      Return: 
+        ID: s

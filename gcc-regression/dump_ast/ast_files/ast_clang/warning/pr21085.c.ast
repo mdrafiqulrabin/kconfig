@@ -1,0 +1,41 @@
+c_files/pr21085.c:8:46: warning: overflow in expression; result is -2147483648 with type 'int' [-Winteger-overflow]
+  maxblockrem = (maxstringlen) % (2147483647 + 1); /* { dg-warning "overflow" } */
+                                             ^
+1 warning generated.
+TranslationUnitDecl 0x7fa57b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa57b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa57b826740 '__int128'
+|-TypedefDecl 0x7fa57b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa57b826760 'unsigned __int128'
+|-TypedefDecl 0x7fa57b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa57b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa57b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa57b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa57b826dc0 'char *'
+|   `-BuiltinType 0x7fa57b826560 'char'
+|-TypedefDecl 0x7fa57b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa57b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa57b826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa57b826e58 '__va_list_tag'
+`-FunctionDecl 0x7fa57c025a00 <c_files/pr21085.c:4:1, line:9:1> line:4:6 foo 'void (void)'
+  `-CompoundStmt 0x7fa57c0262a0 <line:5:1, line:9:1>
+    |-DeclStmt 0x7fa57c025b70 <line:6:3, col:23>
+    | `-VarDecl 0x7fa57c025af0 <col:3, col:22> col:7 used maxstringlen 'int' cinit
+    |   `-IntegerLiteral 0x7fa57c025b50 <col:22> 'int' 1
+    |-DeclStmt 0x7fa57c025d70 <line:7:3, col:47>
+    | |-VarDecl 0x7fa57c025ba0 <col:3, col:15> col:7 limit 'int' cinit
+    | | `-IntegerLiteral 0x7fa57c025c00 <col:15> 'int' 0
+    | |-VarDecl 0x7fa57c025c38 <col:3, col:29> col:18 maxblock 'int' cinit
+    | | `-IntegerLiteral 0x7fa57c025c98 <col:29> 'int' 0
+    | `-VarDecl 0x7fa57c025cd0 <col:3, col:46> col:32 used maxblockrem 'int' cinit
+    |   `-IntegerLiteral 0x7fa57c025d30 <col:46> 'int' 0
+    `-BinaryOperator 0x7fa57c025ec0 <line:8:3, col:49> 'int' '='
+      |-DeclRefExpr 0x7fa57c025d88 <col:3> 'int' lvalue Var 0x7fa57c025cd0 'maxblockrem' 'int'
+      `-BinaryOperator 0x7fa57c025e98 <col:17, col:49> 'int' '%'
+        |-ImplicitCastExpr 0x7fa57c025e80 <col:17, col:30> 'int' <LValueToRValue>
+        | `-ParenExpr 0x7fa57c025dd8 <col:17, col:30> 'int' lvalue
+        |   `-DeclRefExpr 0x7fa57c025db0 <col:18> 'int' lvalue Var 0x7fa57c025af0 'maxstringlen' 'int'
+        `-ParenExpr 0x7fa57c025e60 <col:34, col:49> 'int'
+          `-BinaryOperator 0x7fa57c025e38 <col:35, col:48> 'int' '+'
+            |-IntegerLiteral 0x7fa57c025df8 <col:35> 'int' 2147483647
+            `-IntegerLiteral 0x7fa57c025e18 <col:48> 'int' 1

@@ -1,0 +1,78 @@
+c_files/pr37387.c:9:5: warning: implicit declaration of function 'ErrorQuit' is invalid in C99 [-Wimplicit-function-declaration]
+    ErrorQuit ();
+    ^
+1 warning generated.
+TranslationUnitDecl 0x7f9e428264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9e42826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9e42826740 '__int128'
+|-TypedefDecl 0x7f9e42826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9e42826760 'unsigned __int128'
+|-TypedefDecl 0x7f9e42826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9e42826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9e42826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9e42826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9e42826dc0 'char *'
+|   `-BuiltinType 0x7f9e42826560 'char'
+|-TypedefDecl 0x7f9e428270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9e42827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9e42826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9e42826e58 '__va_list_tag'
+|-TypedefDecl 0x7f9e42827138 <c_files/pr37387.c:1:1, col:18> col:18 Int 'long'
+| `-BuiltinType 0x7f9e428265e0 'long'
+|-FunctionDecl 0x7f9e43025ac0 <line:2:1, line:10:1> line:2:6 FuncMakeConsequencesPres 'void (long *)'
+| |-ParmVarDecl 0x7f9e43025a00 <col:32, col:38> col:38 used objDefs1 'long *'
+| `-CompoundStmt 0x7f9e43026460 <line:3:1, line:10:1>
+|   |-DeclStmt 0x7f9e43025c98 <line:4:3, col:26>
+|   | `-VarDecl 0x7f9e43025bb8 <col:3, col:18> col:8 used a 'long' cinit
+|   |   `-CStyleCastExpr 0x7f9e43025c70 <col:12, col:18> 'long' <PointerToIntegral>
+|   |     `-ImplicitCastExpr 0x7f9e43025c58 <col:18> 'long *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9e43025c18 <col:18> 'long *' lvalue ParmVar 0x7f9e43025a00 'objDefs1' 'long *'
+|   |-DeclStmt 0x7f9e43025de0 <line:5:3, col:19>
+|   | `-VarDecl 0x7f9e43025cc8 <col:3, col:15> col:7 used c 'int' cinit
+|   |   `-ImplicitCastExpr 0x7f9e43025dc8 <col:11, col:15> 'int' <IntegralCast>
+|   |     `-BinaryOperator 0x7f9e43025da0 <col:11, col:15> 'long' '&'
+|   |       |-ImplicitCastExpr 0x7f9e43025d70 <col:11> 'long' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7f9e43025d28 <col:11> 'long' lvalue Var 0x7f9e43025bb8 'a' 'long'
+|   |       `-ImplicitCastExpr 0x7f9e43025d88 <col:15> 'long' <IntegralCast>
+|   |         `-IntegerLiteral 0x7f9e43025d50 <col:15> 'int' 1
+|   |-DeclStmt 0x7f9e43025e90 <line:6:3, col:12>
+|   | `-VarDecl 0x7f9e43025e10 <col:3, col:11> col:7 used b 'int' cinit
+|   |   `-IntegerLiteral 0x7f9e43025e70 <col:11> 'int' 0
+|   `-IfStmt 0x7f9e43026428 <line:7:3, line:9:16>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-UnaryOperator 0x7f9e43026288 <line:7:7, line:8:21> 'int' prefix '!'
+|     | `-ParenExpr 0x7f9e43026268 <line:7:10, line:8:21> 'int'
+|     |   `-BinaryOperator 0x7f9e43026240 <line:7:12, line:8:20> 'int' '&&'
+|     |     |-BinaryOperator 0x7f9e43026190 <line:7:12, col:71> 'int' '<='
+|     |     | |-ImplicitCastExpr 0x7f9e43026178 <col:12> 'long' <IntegralCast>
+|     |     | | `-IntegerLiteral 0x7f9e43025ea8 <col:12> 'int' 13
+|     |     | `-ParenExpr 0x7f9e43026158 <col:18, col:71> 'long'
+|     |     |   `-ConditionalOperator 0x7f9e43026128 <col:20, col:70> 'long'
+|     |     |     |-ImplicitCastExpr 0x7f9e430260f8 <col:20> 'int' <LValueToRValue>
+|     |     |     | `-DeclRefExpr 0x7f9e43025ec8 <col:20> 'int' lvalue Var 0x7f9e43025cc8 'c' 'int'
+|     |     |     |-ImplicitCastExpr 0x7f9e43026110 <col:24> 'long' <IntegralCast>
+|     |     |     | `-IntegerLiteral 0x7f9e43025ef0 <col:24> 'int' 0
+|     |     |     `-ParenExpr 0x7f9e430260d8 <col:28, col:70> 'long'
+|     |     |       `-ConditionalOperator 0x7f9e430260a8 <col:29, col:60> 'long'
+|     |     |         |-ParenExpr 0x7f9e43025fd8 <col:29, col:51> 'int'
+|     |     |         | `-BinaryOperator 0x7f9e43025fb0 <col:30, col:47> 'int' '&'
+|     |     |         |   |-CStyleCastExpr 0x7f9e43025f68 <col:30, col:36> 'int' <PointerToIntegral>
+|     |     |         |   | `-ImplicitCastExpr 0x7f9e43025f50 <col:36> 'long *' <LValueToRValue>
+|     |     |         |   |   `-DeclRefExpr 0x7f9e43025f10 <col:36> 'long *' lvalue ParmVar 0x7f9e43025a00 'objDefs1' 'long *'
+|     |     |         |   `-IntegerLiteral 0x7f9e43025f90 <col:47> 'int' 2
+|     |     |         |-ImplicitCastExpr 0x7f9e43026090 <col:55> 'long' <IntegralCast>
+|     |     |         | `-IntegerLiteral 0x7f9e43025ff8 <col:55> 'int' 0
+|     |     |         `-ImplicitCastExpr 0x7f9e43026078 <col:59, col:60> 'long' <LValueToRValue>
+|     |     |           `-UnaryOperator 0x7f9e43026058 <col:59, col:60> 'long' lvalue prefix '*'
+|     |     |             `-ImplicitCastExpr 0x7f9e43026040 <col:60> 'long *' <LValueToRValue>
+|     |     |               `-DeclRefExpr 0x7f9e43026018 <col:60> 'long *' lvalue ParmVar 0x7f9e43025a00 'objDefs1' 'long *'
+|     |     `-BinaryOperator 0x7f9e43026218 <line:8:15, col:20> 'int' '<='
+|     |       |-ImplicitCastExpr 0x7f9e43026200 <col:15> 'int' <LValueToRValue>
+|     |       | `-DeclRefExpr 0x7f9e430261b8 <col:15> 'int' lvalue Var 0x7f9e43025e10 'b' 'int'
+|     |       `-IntegerLiteral 0x7f9e430261e0 <col:20> 'int' 0
+|     |-CallExpr 0x7f9e43026400 <line:9:5, col:16> 'int'
+|     | `-ImplicitCastExpr 0x7f9e430263e8 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f9e43026398 <col:5> 'int ()' Function 0x7f9e43026300 'ErrorQuit' 'int ()'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f9e43026300 <<invalid sloc>> col:5 implicit used ErrorQuit 'int ()'

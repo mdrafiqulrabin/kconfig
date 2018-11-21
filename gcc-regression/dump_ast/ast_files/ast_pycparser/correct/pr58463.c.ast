@@ -1,0 +1,33 @@
+FileAST: 
+  Typedef: list_data, [], ['typedef']
+    TypeDecl: list_data, []
+      Struct: None
+        Decl: data16, [], [], []
+          TypeDecl: data16, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            PtrDecl: []
+              TypeDecl: p1, []
+                IdentifierType: ['list_data']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: p1
+          ID: data16
+        BinaryOp: &
+          BinaryOp: &
+            StructRef: ->
+              ID: p1
+              ID: data16
+            Constant: int, 1
+          BinaryOp: >>
+            StructRef: ->
+              ID: p1
+              ID: data16
+            Constant: int, 1

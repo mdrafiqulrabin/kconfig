@@ -1,0 +1,42 @@
+FileAST: 
+  FuncDef: 
+    Decl: yysyntax_error, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: yyp, [], [], []
+            PtrDecl: []
+              TypeDecl: yyp, []
+                IdentifierType: ['char']
+        TypeDecl: yysyntax_error, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: yyf, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: yyf, ['const']
+            IdentifierType: ['char']
+      Decl: yyformat, [], [], []
+        ArrayDecl: []
+          TypeDecl: yyformat, []
+            IdentifierType: ['char']
+          Constant: int, 5
+      Assignment: =
+        ID: yyf
+        ID: yyformat
+      While: 
+        BinaryOp: !=
+          Assignment: =
+            UnaryOp: *
+              ID: yyp
+            UnaryOp: *
+              ID: yyf
+          Constant: char, '\0'
+        Compound: 
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                ID: yyf
+                Constant: int, 1
+              Constant: char, 's'
+            Assignment: +=
+              ID: yyf
+              Constant: int, 2

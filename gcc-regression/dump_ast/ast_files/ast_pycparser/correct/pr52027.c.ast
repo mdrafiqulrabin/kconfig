@@ -1,0 +1,46 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: array, [], [], []
+        ArrayDecl: []
+          TypeDecl: array, []
+            IdentifierType: ['char']
+          Constant: int, 1000
+      FuncCall: 
+        ID: __builtin_memset
+        ExprList: 
+          ID: array
+          Constant: int, 0
+          ID: len
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 1000
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            Constant: int, 8
+      Return: 
+        Constant: int, 0

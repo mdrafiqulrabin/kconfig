@@ -1,0 +1,90 @@
+FileAST: 
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+      Constant: int, 1
+  Decl: c, [], [], []
+    ArrayDecl: []
+      TypeDecl: c, []
+        IdentifierType: ['int']
+      Constant: int, 1
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['int']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        EmptyStatement: 
+  FuncDef: 
+    Decl: fn3, [], [], []
+      FuncDecl: 
+        TypeDecl: fn3, []
+          IdentifierType: ['int']
+    Compound: 
+      For: 
+        ID: e
+        UnaryOp: p++
+          ID: e
+        Assignment: =
+          ArrayRef: 
+            ID: c
+            ID: e
+          Constant: int, 2
+      For: 
+        ID: d
+        UnaryOp: p--
+          ID: d
+        Assignment: =
+          ArrayRef: 
+            ID: a
+            ID: d
+          Constant: int, 8
+      Return: 
+        Constant: int, 0
+  Decl: fn5, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: fn5, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        TypeDecl: fn2, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: fn3
+  FuncDef: 
+    Decl: fn4, [], [], []
+      FuncDecl: 
+        TypeDecl: fn4, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: fn1
+        ExprList: 
+          BinaryOp: ||
+            ID: b
+            FuncCall: 
+              ID: fn5
+              ExprList: 
+                FuncCall: 
+                  ID: fn2

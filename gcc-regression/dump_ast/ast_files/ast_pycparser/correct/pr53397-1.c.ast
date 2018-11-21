@@ -1,0 +1,84 @@
+FileAST: 
+  Decl: data, [], [], []
+    ArrayDecl: []
+      TypeDecl: data, []
+        IdentifierType: ['double']
+      Constant: int, 16384
+  FuncDef: 
+    Decl: prefetch_when_non_constant_step_is_invariant, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: step, [], [], []
+            TypeDecl: step, []
+              IdentifierType: ['int']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: prefetch_when_non_constant_step_is_invariant, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: a
+          Constant: int, 1
+        BinaryOp: <
+          ID: a
+          ID: step
+        UnaryOp: p++
+          ID: a
+        Compound: 
+          For: 
+            Assignment: =
+              ID: b
+              Constant: int, 0
+            BinaryOp: <
+              ID: b
+              ID: n
+            Assignment: +=
+              ID: b
+              BinaryOp: *
+                Constant: int, 2
+                ID: step
+            Compound: 
+              Decl: i, [], [], []
+                TypeDecl: i, []
+                  IdentifierType: ['int']
+                BinaryOp: *
+                  Constant: int, 2
+                  BinaryOp: +
+                    ID: b
+                    ID: a
+              Decl: j, [], [], []
+                TypeDecl: j, []
+                  IdentifierType: ['int']
+                BinaryOp: *
+                  Constant: int, 2
+                  BinaryOp: +
+                    BinaryOp: +
+                      ID: b
+                      ID: a
+                    ID: step
+              Assignment: =
+                ArrayRef: 
+                  ID: data
+                  ID: j
+                ArrayRef: 
+                  ID: data
+                  ID: i
+              Assignment: =
+                ArrayRef: 
+                  ID: data
+                  BinaryOp: +
+                    ID: j
+                    Constant: int, 1
+                ArrayRef: 
+                  ID: data
+                  BinaryOp: +
+                    ID: i
+                    Constant: int, 1

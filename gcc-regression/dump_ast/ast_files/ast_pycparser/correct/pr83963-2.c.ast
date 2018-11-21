@@ -1,0 +1,102 @@
+FileAST: 
+  FuncDef: 
+    Decl: Chv_countBigEntries, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: npivot, [], [], []
+            TypeDecl: npivot, []
+              IdentifierType: ['int']
+          Decl: pivotsizes, [], [], []
+            ArrayDecl: []
+              TypeDecl: pivotsizes, []
+                IdentifierType: ['int']
+          Decl: countflag, [], [], []
+            TypeDecl: countflag, []
+              IdentifierType: ['int']
+          Decl: droptol, [], [], []
+            TypeDecl: droptol, []
+              IdentifierType: ['double']
+          Decl: nD, [], [], []
+            TypeDecl: nD, []
+              IdentifierType: ['int']
+        TypeDecl: Chv_countBigEntries, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: absval, [], [], []
+        TypeDecl: absval, []
+          IdentifierType: ['double']
+      Decl: entries, [], [], []
+        PtrDecl: []
+          TypeDecl: entries, []
+            IdentifierType: ['double']
+      Decl: count, [], [], []
+        TypeDecl: count, []
+          IdentifierType: ['int']
+      Decl: ii, [], [], []
+        TypeDecl: ii, []
+          IdentifierType: ['int']
+      Decl: jj, [], [], []
+        TypeDecl: jj, []
+          IdentifierType: ['int']
+      Decl: kinc, [], [], []
+        TypeDecl: kinc, []
+          IdentifierType: ['int']
+      Decl: kk, [], [], []
+        TypeDecl: kk, []
+          IdentifierType: ['int']
+      Decl: kstart, [], [], []
+        TypeDecl: kstart, []
+          IdentifierType: ['int']
+      Decl: stride, [], [], []
+        TypeDecl: stride, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: ii
+          Constant: int, 0
+        BinaryOp: <
+          ID: ii
+          ID: nD
+        UnaryOp: p++
+          ID: ii
+        Compound: 
+          Assignment: =
+            ID: kk
+            ID: kstart
+          Assignment: =
+            ID: kinc
+            ID: stride
+          For: 
+            Assignment: =
+              ID: jj
+              Constant: int, 0
+            BinaryOp: <
+              ID: jj
+              ID: ii
+            UnaryOp: p++
+              ID: jj
+            Compound: 
+              Assignment: =
+                ID: absval
+                FuncCall: 
+                  ID: __builtin_fabs
+                  ExprList: 
+                    ArrayRef: 
+                      ID: entries
+                      ID: kk
+              If: 
+                BinaryOp: >=
+                  ID: absval
+                  ID: droptol
+                UnaryOp: p++
+                  ID: count
+              Assignment: +=
+                ID: kk
+                ID: kinc
+              Assignment: -=
+                ID: kinc
+                Constant: int, 2
+          UnaryOp: p--
+            ID: kstart
+      Return: 
+        ID: count

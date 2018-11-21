@@ -1,0 +1,78 @@
+FileAST: 
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d, [], [], []
+            PtrDecl: []
+              TypeDecl: d, []
+                IdentifierType: ['int']
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['long', 'int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['long', 'int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['long', 'int']
+      For: 
+        ExprList: 
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          Assignment: =
+            ID: j
+            Constant: int, 0
+          Assignment: =
+            ID: k
+            Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 512
+        ExprList: 
+          Assignment: =
+            ID: i
+            BinaryOp: +
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                ID: i
+              Constant: int, 1
+          Assignment: =
+            ID: j
+            BinaryOp: +
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                ID: j
+              Constant: int, 1
+          Assignment: =
+            ID: k
+            BinaryOp: +
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                ID: k
+              Constant: int, 3
+        Assignment: =
+          ArrayRef: 
+            ID: d
+            ID: i
+          BinaryOp: ^
+            BinaryOp: ^
+              ID: j
+              BinaryOp: *
+                ID: i
+                Constant: int, 3
+            BinaryOp: +
+              BinaryOp: *
+                Constant: int, 2
+                ID: k
+              Constant: int, 2

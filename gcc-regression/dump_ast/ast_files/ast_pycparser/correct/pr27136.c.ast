@@ -1,0 +1,21 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['double']
+      For: 
+        Assignment: =
+          ID: x
+          Constant: int, 2
+        BinaryOp: <
+          ID: x
+          Constant: int, 10
+        Assignment: *=
+          ID: x
+          ID: x
+        EmptyStatement: 

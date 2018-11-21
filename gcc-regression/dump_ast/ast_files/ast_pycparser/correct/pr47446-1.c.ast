@@ -1,0 +1,71 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: None, [], [], []
+    Enum: None
+      EnumeratorList: 
+        Enumerator: __GCONV_OK
+          Constant: int, 0
+        Enumerator: __GCONV_NOCONV
+        Enumerator: __GCONV_NODB
+        Enumerator: __GCONV_NOMEM
+        Enumerator: __GCONV_EMPTY_INPUT
+        Enumerator: __GCONV_FULL_OUTPUT
+        Enumerator: __GCONV_ILLEGAL_INPUT
+        Enumerator: __GCONV_INCOMPLETE_INPUT
+        Enumerator: __GCONV_ILLEGAL_DESCRIPTOR
+        Enumerator: __GCONV_INTERNAL_ERROR
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: result, [], [], []
+            TypeDecl: result, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: irreversible, [], [], []
+        TypeDecl: irreversible, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Switch: 
+        ID: result
+        Compound: 
+          Case: 
+            ID: __GCONV_ILLEGAL_INPUT
+            Assignment: =
+              ID: irreversible
+              UnaryOp: -
+                Constant: int, 1L
+            Break: 
+          Case: 
+            ID: __GCONV_FULL_OUTPUT
+            Assignment: =
+              ID: irreversible
+              UnaryOp: -
+                Constant: int, 2L
+            Break: 
+          Case: 
+            ID: __GCONV_INCOMPLETE_INPUT
+            Assignment: =
+              ID: irreversible
+              UnaryOp: -
+                Constant: int, 3L
+            Break: 
+          Case: 
+            ID: __GCONV_EMPTY_INPUT
+          Case: 
+            ID: __GCONV_OK
+            Break: 
+          Default: 
+            FuncCall: 
+              ID: abort
+      Return: 
+        ID: irreversible

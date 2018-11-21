@@ -1,0 +1,139 @@
+FileAST: 
+  FuncDef: 
+    Decl: test_1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: p, ['const']
+                IdentifierType: ['char']
+          Decl: q, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: q, ['const']
+                IdentifierType: ['char']
+        TypeDecl: test_1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            ID: p
+            Constant: int, 1
+          BinaryOp: +
+            ID: q
+            Constant: int, 1
+  FuncDef: 
+    Decl: test_2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: p, ['const']
+                IdentifierType: ['char']
+          Decl: q, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: q, ['const']
+                IdentifierType: ['char']
+        TypeDecl: test_2, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            ID: p
+            Constant: int, 1
+          BinaryOp: +
+            ID: q
+            Constant: int, 1
+  FuncDef: 
+    Decl: test_3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: p, ['const']
+                IdentifierType: ['char']
+          Decl: q, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: q, ['const']
+                IdentifierType: ['char']
+        TypeDecl: test_3, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            ID: p
+            Constant: int, 1
+          BinaryOp: +
+            ID: q
+            Constant: int, 1
+  FuncDef: 
+    Decl: test_4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: p, ['const']
+                IdentifierType: ['char']
+          Decl: q, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: q, ['const']
+                IdentifierType: ['char']
+        TypeDecl: test_4, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            ID: p
+            Constant: int, 1
+          BinaryOp: +
+            ID: q
+            Constant: int, 1
+  FuncDef: 
+    Decl: test_5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: p, ['const']
+                IdentifierType: ['char']
+          Decl: q, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: q, ['const']
+                IdentifierType: ['char']
+        TypeDecl: test_5, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            ID: p
+            Constant: int, 1
+          BinaryOp: +
+            ID: q
+            Constant: int, 1
+  FuncDef: 
+    Decl: test_6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: p, ['const']
+                IdentifierType: ['char']
+          Decl: q, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: q, ['const']
+                IdentifierType: ['char']
+        TypeDecl: test_6, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            ID: p
+            Constant: int, 1
+          BinaryOp: +
+            ID: q
+            Constant: int, 1

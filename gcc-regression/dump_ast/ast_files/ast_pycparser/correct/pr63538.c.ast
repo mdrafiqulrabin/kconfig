@@ -1,0 +1,15 @@
+FileAST: 
+  Decl: str, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: str, []
+        IdentifierType: ['char']
+    Constant: string, "Hello World"
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        PtrDecl: []
+          TypeDecl: foo, []
+            IdentifierType: ['char']
+    Compound: 
+      Return: 
+        ID: str

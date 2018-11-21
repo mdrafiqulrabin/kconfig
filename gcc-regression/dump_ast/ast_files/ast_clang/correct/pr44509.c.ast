@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7ff1240264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff124026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff124026740 '__int128'
+|-TypedefDecl 0x7ff124026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff124026760 'unsigned __int128'
+|-TypedefDecl 0x7ff124026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff124026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff124026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff124026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff124026dc0 'char *'
+|   `-BuiltinType 0x7ff124026560 'char'
+|-TypedefDecl 0x7ff1240270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff124027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff124026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff124026e58 '__va_list_tag'
+`-FunctionDecl 0x7ff124825a00 <c_files/pr44509.c:5:1, line:9:1> line:6:1 foo 'double (void)'
+  `-CompoundStmt 0x7ff124825b70 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7ff124825b58 <line:8:3, <built-in>:106:21>
+      `-BinaryOperator 0x7ff124825b30 <line:120:21, line:106:21> 'double' '-'
+        |-FloatingLiteral 0x7ff124825ad8 <line:120:21> 'double' 1.797693e+308
+        `-ImplicitCastExpr 0x7ff124825b18 <line:106:21> 'double' <FloatingCast>
+          `-FloatingLiteral 0x7ff124825af8 <col:21> 'float' 3.402823e+38

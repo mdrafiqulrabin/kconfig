@@ -1,0 +1,241 @@
+FileAST: 
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: foo, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: avi_parse_comments, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fd, [], [], []
+            TypeDecl: fd, []
+              IdentifierType: ['int']
+          Decl: buf, [], [], []
+            PtrDecl: []
+              TypeDecl: buf, []
+                IdentifierType: ['char']
+          Decl: space_left, [], [], []
+            TypeDecl: space_left, []
+              IdentifierType: ['int']
+        TypeDecl: avi_parse_comments, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: len, [], [], []
+        TypeDecl: len, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: readlen, [], [], []
+        TypeDecl: readlen, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Decl: data, [], [], []
+        PtrDecl: []
+          TypeDecl: data, []
+            IdentifierType: ['char']
+      Decl: c, [], [], []
+        PtrDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['char']
+      Decl: d, [], [], []
+        PtrDecl: []
+          TypeDecl: d, []
+            IdentifierType: ['char']
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: <=
+              ID: fd
+              Constant: int, 0
+            UnaryOp: !
+              ID: buf
+          BinaryOp: <=
+            ID: space_left
+            Constant: int, 0
+        Return: 
+          UnaryOp: -
+            Constant: int, 1
+      FuncCall: 
+        ID: memset
+        ExprList: 
+          ID: buf
+          Constant: int, 0
+          ID: space_left
+      Assignment: =
+        ID: readlen
+        FuncCall: 
+          ID: foo
+      If: 
+        UnaryOp: !
+          Assignment: =
+            ID: data
+            FuncCall: 
+              ID: malloc
+              ExprList: 
+                BinaryOp: +
+                  BinaryOp: *
+                    ID: readlen
+                    UnaryOp: sizeof
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['char']
+                  Constant: int, 1
+        Return: 
+          UnaryOp: -
+            Constant: int, 1
+      Assignment: =
+        ID: c
+        ID: data
+      UnaryOp: p--
+        ID: space_left
+      While: 
+        BinaryOp: <
+          ID: len
+          ID: space_left
+        Compound: 
+          If: 
+            BinaryOp: ||
+              UnaryOp: !
+                ID: c
+              BinaryOp: ==
+                UnaryOp: *
+                  ID: c
+                Constant: char, '\0'
+            Break: 
+            If: 
+              BinaryOp: ==
+                UnaryOp: *
+                  ID: c
+                Constant: char, 'I'
+              Compound: 
+                Assignment: =
+                  ID: d
+                  BinaryOp: +
+                    ID: c
+                    Constant: int, 4
+                Assignment: =
+                  ID: k
+                  Constant: int, 0
+                While: 
+                  BinaryOp: &&
+                    BinaryOp: &&
+                      BinaryOp: !=
+                        ArrayRef: 
+                          ID: d
+                          ID: k
+                        Constant: char, '\r'
+                      BinaryOp: !=
+                        ArrayRef: 
+                          ID: d
+                          ID: k
+                        Constant: char, '\n'
+                    BinaryOp: !=
+                      ArrayRef: 
+                        ID: d
+                        ID: k
+                      Constant: char, '\0'
+                  UnaryOp: ++
+                    ID: k
+                If: 
+                  BinaryOp: >=
+                    ID: k
+                    ID: space_left
+                  Return: 
+                    ID: len
+                FuncCall: 
+                  ID: memcpy
+                  ExprList: 
+                    BinaryOp: +
+                      ID: buf
+                      ID: len
+                    ID: c
+                    Constant: int, 4
+                Assignment: +=
+                  ID: len
+                  Constant: int, 4
+                FuncCall: 
+                  ID: long2str
+                  ExprList: 
+                    BinaryOp: +
+                      ID: buf
+                      ID: len
+                    BinaryOp: +
+                      ID: k
+                      Constant: int, 1
+                Assignment: +=
+                  ID: len
+                  Constant: int, 4
+                FuncCall: 
+                  ID: memcpy
+                  ExprList: 
+                    BinaryOp: +
+                      ID: buf
+                      ID: len
+                    ID: d
+                    ID: k
+                Assignment: =
+                  UnaryOp: *
+                    BinaryOp: +
+                      BinaryOp: +
+                        BinaryOp: +
+                          ID: buf
+                          ID: len
+                        ID: k
+                      Constant: int, 1
+                  Constant: char, '\0'
+                If: 
+                  BinaryOp: &
+                    BinaryOp: +
+                      ID: k
+                      Constant: int, 1
+                    Constant: int, 1
+                  Compound: 
+                    UnaryOp: p++
+                      ID: k
+                    Assignment: =
+                      UnaryOp: *
+                        BinaryOp: +
+                          BinaryOp: +
+                            BinaryOp: +
+                              ID: buf
+                              ID: len
+                            ID: k
+                          Constant: int, 1
+                      Constant: char, '\0'
+                Assignment: +=
+                  ID: len
+                  BinaryOp: +
+                    ID: k
+                    Constant: int, 1
+                While: 
+                  BinaryOp: &&
+                    BinaryOp: !=
+                      UnaryOp: *
+                        ID: c
+                      Constant: char, '\n'
+                    BinaryOp: !=
+                      UnaryOp: *
+                        ID: c
+                      Constant: char, '\0'
+                  UnaryOp: ++
+                    ID: c
+                If: 
+                  BinaryOp: !=
+                    UnaryOp: *
+                      ID: c
+                    Constant: char, '\0'
+                  UnaryOp: ++
+                    ID: c
+                  Break: 
+      FuncCall: 
+        ID: free
+        ExprList: 
+          ID: data
+      Return: 
+        ID: len

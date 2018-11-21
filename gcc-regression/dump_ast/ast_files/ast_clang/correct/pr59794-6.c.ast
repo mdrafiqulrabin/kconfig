@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7f85a30264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f85a3026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f85a3026740 '__int128'
+|-TypedefDecl 0x7f85a3026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f85a3026760 'unsigned __int128'
+|-TypedefDecl 0x7f85a3026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f85a3026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f85a3026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f85a3026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f85a3026dc0 'char *'
+|   `-BuiltinType 0x7f85a3026560 'char'
+|-TypedefDecl 0x7f85a30270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f85a3027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f85a3026ee0 'struct __va_list_tag'
+|     `-Record 0x7f85a3026e58 '__va_list_tag'
+|-TypedefDecl 0x7f85a3027178 <c_files/pr59794-6.c:6:1, col:13> col:13 referenced __v4si '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7f85a3027140 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7f85a30265c0 'int'
+|-VarDecl 0x7f85a3078400 <line:8:1, col:15> col:15 used x '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' extern
+`-FunctionDecl 0x7f85a3078590 <line:10:1, line:14:1> line:11:1 foo '__v4si (void)'
+  `-CompoundStmt 0x7f85a3078680 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7f85a3078668 <line:13:3, col:10>
+      `-ImplicitCastExpr 0x7f85a3078650 <col:10> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+        `-DeclRefExpr 0x7f85a3078628 <col:10> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7f85a3078400 'x' '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'

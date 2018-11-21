@@ -1,0 +1,91 @@
+FileAST: 
+  Decl: b, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['char']
+      Constant: int, 100
+  Decl: c, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: c, []
+        IdentifierType: ['int']
+  Decl: e, [], [], []
+    PtrDecl: []
+      TypeDecl: e, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: a, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            PtrDecl: []
+              TypeDecl: f, []
+                IdentifierType: ['char']
+          Decl: i, [], [], []
+            PtrDecl: []
+              TypeDecl: i, []
+                IdentifierType: ['char']
+        TypeDecl: a, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: __builtin_object_size
+          ExprList: 
+            ID: f
+            Constant: int, 1
+      FuncCall: 
+        ID: __builtin___strcpy_chk
+        ExprList: 
+          ID: f
+          ID: i
+          ID: d
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['int']
+      Switch: 
+        UnaryOp: *
+          ID: c
+        Compound: 
+          Case: 
+            Constant: int, 8
+            Assignment: =
+              ID: e
+              Constant: string, "swapgs"
+            Break: 
+          Case: 
+            Constant: int, 9
+            Assignment: =
+              ID: e
+              Constant: string, "rdtscp"
+            Break: 
+          Default: 
+            Return: 
+      Assignment: =
+        ID: h
+        FuncCall: 
+          ID: __builtin_strlen
+          ExprList: 
+            ID: b
+      FuncCall: 
+        ID: a
+        ExprList: 
+          BinaryOp: -
+            BinaryOp: +
+              ID: b
+              ID: h
+            Constant: int, 6
+          ID: e
+      UnaryOp: p++
+        ID: c

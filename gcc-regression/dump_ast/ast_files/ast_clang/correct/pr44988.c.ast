@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fae7d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fae7d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fae7d026740 '__int128'
+|-TypedefDecl 0x7fae7d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fae7d026760 'unsigned __int128'
+|-TypedefDecl 0x7fae7d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fae7d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fae7d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fae7d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fae7d026dc0 'char *'
+|   `-BuiltinType 0x7fae7d026560 'char'
+|-TypedefDecl 0x7fae7d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fae7d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fae7d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fae7d026e58 '__va_list_tag'
+|-RecordDecl 0x7fae7d027120 <c_files/pr44988.c:1:1, line:4:1> line:1:8 struct S definition
+| `-FieldDecl 0x7fae7d077400 <line:3:3, col:7> col:7 i 'int'
+|-FunctionDecl 0x7fae7d0775a0 <line:6:1, col:26> col:13 used bar 'void (struct S)' extern
+| `-ParmVarDecl 0x7fae7d0774a0 <col:18, col:25> col:26 'struct S':'struct S'
+`-FunctionDecl 0x7fae7d077740 <line:8:1, line:13:1> line:9:1 foo 'void (void)'
+  `-CompoundStmt 0x7fae7d077ab8 <line:10:1, line:13:1>
+    |-DeclStmt 0x7fae7d077870 <line:11:3, col:12>
+    | `-VarDecl 0x7fae7d0777f0 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x7fae7d077850 <col:11> 'int' 0
+    `-CallExpr 0x7fae7d077a70 <line:12:3, col:24> 'void'
+      |-ImplicitCastExpr 0x7fae7d077a58 <col:3> 'void (*)(struct S)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fae7d077888 <col:3> 'void (struct S)' Function 0x7fae7d0775a0 'bar' 'void (struct S)'
+      `-ImplicitCastExpr 0x7fae7d077aa0 <col:8, col:23> 'struct S':'struct S' <LValueToRValue>
+        `-UnaryOperator 0x7fae7d0779d8 <col:8, col:23> 'struct S':'struct S' lvalue prefix '*'
+          `-CStyleCastExpr 0x7fae7d0779b0 <col:9, col:23> 'struct S *' <BitCast>
+            `-UnaryOperator 0x7fae7d077908 <col:22, col:23> 'int *' prefix '&'
+              `-DeclRefExpr 0x7fae7d0778b0 <col:23> 'int' lvalue Var 0x7fae7d0777f0 'i' 'int'

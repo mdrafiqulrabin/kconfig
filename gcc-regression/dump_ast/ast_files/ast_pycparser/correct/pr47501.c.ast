@@ -1,0 +1,24 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: numlen, [], [], []
+        TypeDecl: numlen, []
+          IdentifierType: ['unsigned']
+      Decl: foldlen, [], [], []
+        TypeDecl: foldlen, []
+          IdentifierType: ['unsigned']
+      For: 
+        ID: foldlen
+        Assignment: -=
+          ID: foldlen
+          ID: numlen
+        FuncCall: 
+          ID: foo

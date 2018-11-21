@@ -1,0 +1,221 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'long']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'long']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned', 'long']
+        BinaryOp: &
+          ID: x
+          Constant: int, 0xffff
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned', 'long']
+        BinaryOp: &
+          BinaryOp: >>
+            ID: x
+            Constant: int, 16
+          Constant: int, 0xffff
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: ==
+          ID: y
+          Constant: int, 0
+        Return: 
+          Constant: int, 1L
+      While: 
+        BinaryOp: >
+          ID: z
+          Constant: int, 0
+        Compound: 
+          Assignment: =
+            ID: k
+            TernaryOp: 
+              BinaryOp: <
+                ID: z
+                Constant: int, 5552
+              ID: z
+              Constant: int, 5552
+          Assignment: -=
+            ID: z
+            ID: k
+          While: 
+            BinaryOp: >=
+              ID: k
+              Constant: int, 16
+            Compound: 
+              Assignment: +=
+                ID: a
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: y
+              Assignment: +=
+                ID: b
+                ID: a
+              Assignment: +=
+                ID: a
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: y
+              Assignment: +=
+                ID: b
+                ID: a
+              Assignment: +=
+                ID: a
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: y
+              Assignment: +=
+                ID: b
+                ID: a
+              Assignment: +=
+                ID: a
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: y
+              Assignment: +=
+                ID: b
+                ID: a
+              Assignment: +=
+                ID: a
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: y
+              Assignment: +=
+                ID: b
+                ID: a
+              Assignment: +=
+                ID: a
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: y
+              Assignment: +=
+                ID: b
+                ID: a
+              Assignment: +=
+                ID: a
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: y
+              Assignment: +=
+                ID: b
+                ID: a
+              Assignment: +=
+                ID: a
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: y
+              Assignment: +=
+                ID: b
+                ID: a
+              Assignment: +=
+                ID: a
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: y
+              Assignment: +=
+                ID: b
+                ID: a
+              Assignment: +=
+                ID: a
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: y
+              Assignment: +=
+                ID: b
+                ID: a
+              Assignment: +=
+                ID: a
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: y
+              Assignment: +=
+                ID: b
+                ID: a
+              Assignment: +=
+                ID: a
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: y
+              Assignment: +=
+                ID: b
+                ID: a
+              Assignment: +=
+                ID: a
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: y
+              Assignment: +=
+                ID: b
+                ID: a
+              Assignment: +=
+                ID: a
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: y
+              Assignment: +=
+                ID: b
+                ID: a
+              Assignment: +=
+                ID: a
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: y
+              Assignment: +=
+                ID: b
+                ID: a
+              Assignment: +=
+                ID: a
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: y
+              Assignment: +=
+                ID: b
+                ID: a
+              Assignment: -=
+                ID: k
+                Constant: int, 16
+          If: 
+            BinaryOp: !=
+              ID: k
+              Constant: int, 0
+            DoWhile: 
+              UnaryOp: --
+                ID: k
+              Compound: 
+                Assignment: +=
+                  ID: a
+                  UnaryOp: *
+                    UnaryOp: p++
+                      ID: y
+                Assignment: +=
+                  ID: b
+                  ID: a
+          Assignment: %=
+            ID: a
+            Constant: int, 65521L
+          Assignment: %=
+            ID: b
+            Constant: int, 65521L
+      Return: 
+        BinaryOp: |
+          BinaryOp: <<
+            ID: b
+            Constant: int, 16
+          ID: a

@@ -1,0 +1,32 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: s, [], [], []
+        ArrayDecl: []
+          TypeDecl: s, []
+            IdentifierType: ['char']
+          Constant: int, 10
+        Constant: string, "%s"
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: s
+      FuncCall: 
+        ID: __builtin_printf
+        ExprList: 
+          ID: s
+      Return: 
+        Constant: int, 0

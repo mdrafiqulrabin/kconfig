@@ -1,0 +1,29 @@
+FileAST: 
+  Decl: __ctype_ptr, ['const'], ['extern'], []
+    PtrDecl: []
+      TypeDecl: __ctype_ptr, ['const']
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: parse_real, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: parse_real, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: &
+            ArrayRef: 
+              ID: __ctype_ptr
+              ID: c
+            Constant: int, 04
+          BinaryOp: !=
+            ID: c
+            Constant: char, '.'
+        FuncCall: 
+          ID: unget_char
+          ExprList: 
+            ID: c

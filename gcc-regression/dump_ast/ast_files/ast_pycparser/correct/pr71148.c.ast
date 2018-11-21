@@ -1,0 +1,147 @@
+FileAST: 
+  Decl: rh, [], [], []
+    TypeDecl: rh, []
+      IdentifierType: ['int']
+  Decl: ok, [], [], []
+    TypeDecl: ok, []
+      IdentifierType: ['int']
+  Decl: kq, [], [], []
+    TypeDecl: kq, []
+      IdentifierType: ['int']
+  Decl: fu, [], [], []
+    TypeDecl: fu, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: js, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: cs, [], [], []
+            TypeDecl: cs, []
+              IdentifierType: ['int']
+        TypeDecl: js, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: rh
+        ID: fu
+      If: 
+        BinaryOp: !=
+          ID: fu
+          Constant: int, 0
+        Compound: 
+          Assignment: /=
+            ID: cs
+            Constant: int, 3
+          If: 
+            BinaryOp: <=
+              ID: cs
+              Constant: int, 0
+            Compound: 
+              Decl: z9, [], [], []
+                TypeDecl: z9, []
+                  IdentifierType: ['int']
+              For: 
+                Assignment: =
+                  ID: z9
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: z9
+                  Constant: int, 2
+                UnaryOp: ++
+                  ID: z9
+                Compound: 
+                  Assignment: +=
+                    ID: z9
+                    ID: cs
+                  Assignment: +=
+                    ID: ok
+                    ID: z9
+                  Assignment: +=
+                    ID: fu
+                    ID: ok
+  FuncDef: 
+    Decl: vy, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s3, [], [], []
+            TypeDecl: s3, []
+              IdentifierType: ['int']
+        TypeDecl: vy, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: yo, [], [], []
+        TypeDecl: yo, []
+          IdentifierType: ['int']
+      Decl: g2, [], [], []
+        TypeDecl: g2, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Label: sd
+        FuncCall: 
+          ID: js
+          ExprList: 
+            ID: g2
+      For: 
+        Assignment: =
+          ID: yo
+          Constant: int, 0
+        BinaryOp: <
+          ID: yo
+          Constant: int, 2
+        UnaryOp: ++
+          ID: yo
+        Compound: 
+          If: 
+            BinaryOp: !=
+              ID: fu
+              Constant: int, 0
+            Goto: sd
+          Assignment: +=
+            ID: kq
+            BinaryOp: !=
+              ID: s3
+              TernaryOp: 
+                ID: g2
+                ID: s3
+                Constant: int, 0
+          For: 
+            Assignment: =
+              ID: s3
+              Constant: int, 0
+            BinaryOp: <
+              ID: s3
+              Constant: int, 72
+            UnaryOp: ++
+              ID: s3
+            Assignment: *=
+              ID: g2
+              BinaryOp: -
+                UnaryOp: ~
+                  Constant: int, 0
+                Constant: int, 1
+          Assignment: -=
+            ID: g2
+            ID: yo
+      For: 
+        Assignment: =
+          ID: fu
+          Constant: int, 0
+        BinaryOp: <
+          ID: fu
+          Constant: int, 18
+        UnaryOp: ++
+          ID: fu
+        For: 
+          Assignment: =
+            ID: yo
+            Constant: int, 0
+          BinaryOp: <
+            ID: yo
+            Constant: int, 17
+          UnaryOp: ++
+            ID: yo
+          If: 
+            BinaryOp: <
+              ID: g2
+              Constant: int, 0
+            Goto: sd

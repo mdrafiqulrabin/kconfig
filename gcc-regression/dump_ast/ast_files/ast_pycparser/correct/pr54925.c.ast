@@ -1,0 +1,110 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    TypeDecl: bar, []
+      IdentifierType: ['int']
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  Decl: nr_memcpy, [], ['static'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'short']
+      PtrDecl: []
+        TypeDecl: nr_memcpy, []
+          IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: buf, [], [], []
+            PtrDecl: []
+              TypeDecl: buf, []
+                IdentifierType: ['char']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: data, [], [], []
+        ArrayDecl: []
+          TypeDecl: data, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 10
+      If: 
+        BinaryOp: ==
+          ID: len
+          Constant: int, 0
+        Return: 
+      FuncCall: 
+        ID: nr_memcpy
+        ExprList: 
+          ID: data
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            ID: buf
+          ID: len
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: bar
+  FuncDef: 
+    Decl: nr_memcpy, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: to, [], [], []
+            PtrDecl: []
+              TypeDecl: to, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: from, [], [], []
+            PtrDecl: []
+              TypeDecl: from, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['unsigned', 'short']
+        PtrDecl: []
+          TypeDecl: nr_memcpy, []
+            IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['unsigned', 'char']
+        ID: to
+      While: 
+        BinaryOp: >
+          ID: len
+          Constant: int, 0
+        Compound: 
+          UnaryOp: p--
+            ID: len
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: to
+            UnaryOp: *
+              UnaryOp: p++
+                ID: from
+      Return: 
+        ID: p

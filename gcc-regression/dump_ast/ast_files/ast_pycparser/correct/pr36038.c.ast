@@ -1,0 +1,172 @@
+FileAST: 
+  Decl: list, [], [], []
+    ArrayDecl: []
+      TypeDecl: list, []
+        IdentifierType: ['long', 'long']
+      Constant: int, 10
+  Decl: expect, [], [], []
+    ArrayDecl: []
+      TypeDecl: expect, []
+        IdentifierType: ['long', 'long']
+      Constant: int, 10
+    InitList: 
+      Constant: int, 0
+      Constant: int, 1
+      Constant: int, 2
+      Constant: int, 3
+      Constant: int, 4
+      Constant: int, 4
+      Constant: int, 5
+      Constant: int, 6
+      Constant: int, 7
+      Constant: int, 9
+  Decl: stack_base, [], [], []
+    PtrDecl: []
+      TypeDecl: stack_base, []
+        IdentifierType: ['long', 'long']
+  Decl: indices, [], [], []
+    ArrayDecl: []
+      TypeDecl: indices, []
+        IdentifierType: ['int']
+      Constant: int, 10
+  Decl: markstack_ptr, [], [], []
+    PtrDecl: []
+      TypeDecl: markstack_ptr, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: doit, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: doit, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: src, [], [], []
+        PtrDecl: []
+          TypeDecl: src, []
+            IdentifierType: ['long', 'long']
+      Decl: dst, [], [], []
+        PtrDecl: []
+          TypeDecl: dst, []
+            IdentifierType: ['long', 'long']
+      Decl: sp, [], [], []
+        PtrDecl: []
+          TypeDecl: sp, []
+            IdentifierType: ['long', 'long']
+        BinaryOp: +
+          ID: stack_base
+          Constant: int, 5
+      Decl: diff, [], [], []
+        TypeDecl: diff, []
+          IdentifierType: ['int']
+        Constant: int, 2
+      Decl: shift, [], [], []
+        TypeDecl: shift, []
+          IdentifierType: ['int']
+      Decl: count, [], [], []
+        TypeDecl: count, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: shift
+        BinaryOp: -
+          ID: diff
+          BinaryOp: -
+            ArrayRef: 
+              ID: markstack_ptr
+              UnaryOp: -
+                Constant: int, 1
+            ArrayRef: 
+              ID: markstack_ptr
+              UnaryOp: -
+                Constant: int, 2
+      Assignment: =
+        ID: count
+        BinaryOp: +
+          BinaryOp: -
+            BinaryOp: -
+              ID: sp
+              ID: stack_base
+            ArrayRef: 
+              ID: markstack_ptr
+              UnaryOp: -
+                Constant: int, 1
+          Constant: int, 2
+      Assignment: =
+        ID: src
+        ID: sp
+      Assignment: =
+        ID: dst
+        Assignment: +=
+          ID: sp
+          ID: shift
+      While: 
+        UnaryOp: --
+          ID: count
+        Assignment: =
+          UnaryOp: *
+            UnaryOp: p--
+              ID: dst
+          UnaryOp: *
+            UnaryOp: p--
+              ID: src
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: list
+            ID: i
+          ID: i
+      Assignment: =
+        ID: markstack_ptr
+        BinaryOp: +
+          ID: indices
+          Constant: int, 9
+      Assignment: =
+        ArrayRef: 
+          ID: markstack_ptr
+          UnaryOp: -
+            Constant: int, 1
+        Constant: int, 2
+      Assignment: =
+        ArrayRef: 
+          ID: markstack_ptr
+          UnaryOp: -
+            Constant: int, 2
+        Constant: int, 1
+      Assignment: =
+        ID: stack_base
+        BinaryOp: +
+          ID: list
+          Constant: int, 2
+      FuncCall: 
+        ID: doit
+      If: 
+        FuncCall: 
+          ID: __builtin_memcmp
+          ExprList: 
+            ID: expect
+            ID: list
+            UnaryOp: sizeof
+              ID: list
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

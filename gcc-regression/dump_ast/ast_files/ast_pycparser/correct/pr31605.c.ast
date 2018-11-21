@@ -1,0 +1,46 @@
+FileAST: 
+  FuncDef: 
+    Decl: put_field, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: start, [], [], []
+            TypeDecl: start, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: put_field, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: cur_bitshift, [], [], []
+        TypeDecl: cur_bitshift, []
+          IdentifierType: ['int']
+        BinaryOp: -
+          BinaryOp: %
+            BinaryOp: +
+              ID: start
+              ID: len
+            Constant: int, 8
+          Constant: int, 8
+      If: 
+        BinaryOp: >
+          ID: cur_bitshift
+          UnaryOp: -
+            Constant: int, 8
+        FuncCall: 
+          ID: exit
+          ExprList: 
+            Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: put_field
+        ExprList: 
+          Constant: int, 0
+          Constant: int, 1
+      FuncCall: 
+        ID: abort

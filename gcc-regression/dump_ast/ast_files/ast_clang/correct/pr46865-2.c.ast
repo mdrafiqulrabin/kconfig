@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7ffd640264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffd64026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffd64026740 '__int128'
+|-TypedefDecl 0x7ffd64026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffd64026760 'unsigned __int128'
+|-TypedefDecl 0x7ffd64026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffd64026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffd64026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffd64026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffd64026dc0 'char *'
+|   `-BuiltinType 0x7ffd64026560 'char'
+|-TypedefDecl 0x7ffd640270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffd64027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffd64026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffd64026e58 '__va_list_tag'
+|-VarDecl 0x7ffd64027138 <c_files/pr46865-2.c:5:1, col:22> col:22 used f 'unsigned long' extern
+|-FunctionDecl 0x7ffd64826ab0 <line:19:1, line:23:1> line:20:1 foo 'void (void)'
+| `-CompoundStmt 0x7ffd64826d80 <line:21:1, line:23:1>
+|   |-IfStmt 0x7ffd64826d38 <line:8:3, line:11:39>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ffd64826bc0 <line:22:7, line:8:11> 'unsigned long' '&'
+|   | | |-ImplicitCastExpr 0x7ffd64826b90 <line:22:7> 'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ffd64826b48 <col:7> 'unsigned long' lvalue Var 0x7ffd64027138 'f' 'unsigned long'
+|   | | `-ImplicitCastExpr 0x7ffd64826ba8 <line:8:11> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7ffd64826b70 <col:11> 'int' 1
+|   | |-GCCAsmStmt 0x7ffd64826c68 <line:9:5, col:39>
+|   | `-GCCAsmStmt 0x7ffd64826cf0 <line:11:5, col:39>
+|   `-NullStmt 0x7ffd64826d70 <line:22:9>
+`-FunctionDecl 0x7ffd64826e38 <line:25:1, line:29:1> line:26:1 bar 'void (void)'
+  `-CompoundStmt 0x7ffd64827280 <line:27:1, line:29:1>
+    |-IfStmt 0x7ffd64827238 <line:14:3, line:17:58>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ffd64826f48 <line:28:7, line:14:11> 'unsigned long' '&'
+    | | |-ImplicitCastExpr 0x7ffd64826f18 <line:28:7> 'unsigned long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ffd64826ed0 <col:7> 'unsigned long' lvalue Var 0x7ffd64027138 'f' 'unsigned long'
+    | | `-ImplicitCastExpr 0x7ffd64826f30 <line:14:11> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7ffd64826ef8 <col:11> 'int' 1
+    | |-GCCAsmStmt 0x7ffd648270a8 <line:15:5, col:58>
+    | | `-IntegerLiteral 0x7ffd64827018 <col:49> 'int' 6
+    | `-GCCAsmStmt 0x7ffd648271d0 <line:17:5, col:58>
+    |   `-IntegerLiteral 0x7ffd64827180 <col:49> 'int' 6
+    `-NullStmt 0x7ffd64827270 <line:28:9>

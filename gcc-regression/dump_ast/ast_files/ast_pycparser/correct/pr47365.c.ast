@@ -1,0 +1,104 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: B
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            Struct: A
+          Constant: int, 2
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Struct: B
+    InitList: 
+      Constant: int, 0
+      Constant: int, 3
+  FuncDef: 
+    Decl: test, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            ArrayRef: 
+              StructRef: .
+                ID: b
+                ID: a
+              Constant: int, 0
+            ID: i
+          ID: i
+        Compound: 
+          Decl: t, [], [], []
+            TypeDecl: t, []
+              IdentifierType: ['int']
+            StructRef: .
+              ArrayRef: 
+                StructRef: .
+                  ID: b
+                  ID: a
+                Constant: int, 0
+              ID: i
+          Assignment: =
+            ArrayRef: 
+              StructRef: .
+                ID: b
+                ID: a
+              Constant: int, 0
+            ArrayRef: 
+              StructRef: .
+                ID: b
+                ID: a
+              Constant: int, 1
+          Assignment: =
+            StructRef: .
+              ArrayRef: 
+                StructRef: .
+                  ID: b
+                  ID: a
+                Constant: int, 1
+              ID: i
+            ID: t
+      If: 
+        BinaryOp: ==
+          StructRef: .
+            ArrayRef: 
+              StructRef: .
+                ID: b
+                ID: a
+              Constant: int, 1
+            ID: i
+          ID: i
+        FuncCall: 
+          ID: __builtin_abort
+      If: 
+        BinaryOp: ==
+          StructRef: .
+            ArrayRef: 
+              StructRef: .
+                ID: b
+                ID: a
+              Constant: int, 0
+            ID: i
+          Constant: int, 0
+        FuncCall: 
+          ID: __builtin_abort
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: test
+      Return: 
+        Constant: int, 0

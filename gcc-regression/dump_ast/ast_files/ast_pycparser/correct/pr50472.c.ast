@@ -1,0 +1,24 @@
+FileAST: 
+  Decl: foo, ['const'], ['static'], []
+    TypeDecl: foo, ['const']
+      IdentifierType: ['unsigned', 'int']
+    Constant: int, 1
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: bar, ['const', 'volatile'], [], []
+        PtrDecl: []
+          TypeDecl: bar, ['const', 'volatile']
+            IdentifierType: ['unsigned', 'int']
+        UnaryOp: &
+          ID: foo
+      Return: 
+        UnaryOp: *
+          ID: bar

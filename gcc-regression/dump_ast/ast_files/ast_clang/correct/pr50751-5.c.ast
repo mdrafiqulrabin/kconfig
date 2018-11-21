@@ -1,0 +1,103 @@
+TranslationUnitDecl 0x7fa3978264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa397826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa397826740 '__int128'
+|-TypedefDecl 0x7fa397826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa397826760 'unsigned __int128'
+|-TypedefDecl 0x7fa397826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa397826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa397826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa397826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa397826dc0 'char *'
+|   `-BuiltinType 0x7fa397826560 'char'
+|-TypedefDecl 0x7fa3978270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa397827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa397826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa397826e58 '__va_list_tag'
+|-FunctionDecl 0x7fa398025ad0 <c_files/pr50751-5.c:9:1, line:16:1> line:10:1 testfunc_00 'void (const short *, short *)'
+| |-ParmVarDecl 0x7fa397827160 <col:14, col:27> col:27 used ap 'const short *'
+| |-ParmVarDecl 0x7fa398025a00 <col:31, col:38> col:38 used bp 'short *'
+| `-CompoundStmt 0x7fa3980260f8 <line:11:1, line:16:1>
+|   |-BinaryOperator 0x7fa398025ce0 <line:12:3, col:16> 'short' '='
+|   | |-ArraySubscriptExpr 0x7fa398025c18 <col:3, col:7> 'short' lvalue
+|   | | |-ImplicitCastExpr 0x7fa398025c00 <col:3> 'short *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa398025bb8 <col:3> 'short *' lvalue ParmVar 0x7fa398025a00 'bp' 'short *'
+|   | | `-IntegerLiteral 0x7fa398025be0 <col:6> 'int' 0
+|   | `-ImplicitCastExpr 0x7fa398025cc8 <col:11, col:16> 'short' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7fa398025ca0 <col:11, col:16> 'const short' lvalue
+|   |     |-ImplicitCastExpr 0x7fa398025c88 <col:11> 'const short *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fa398025c40 <col:11> 'const short *' lvalue ParmVar 0x7fa397827160 'ap' 'const short *'
+|   |     `-IntegerLiteral 0x7fa398025c68 <col:14> 'int' 15
+|   |-BinaryOperator 0x7fa398025e30 <line:13:3, col:15> 'short' '='
+|   | |-ArraySubscriptExpr 0x7fa398025d68 <col:3, col:7> 'short' lvalue
+|   | | |-ImplicitCastExpr 0x7fa398025d50 <col:3> 'short *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa398025d08 <col:3> 'short *' lvalue ParmVar 0x7fa398025a00 'bp' 'short *'
+|   | | `-IntegerLiteral 0x7fa398025d30 <col:6> 'int' 2
+|   | `-ImplicitCastExpr 0x7fa398025e18 <col:11, col:15> 'short' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7fa398025df0 <col:11, col:15> 'const short' lvalue
+|   |     |-ImplicitCastExpr 0x7fa398025dd8 <col:11> 'const short *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fa398025d90 <col:11> 'const short *' lvalue ParmVar 0x7fa397827160 'ap' 'const short *'
+|   |     `-IntegerLiteral 0x7fa398025db8 <col:14> 'int' 5
+|   |-BinaryOperator 0x7fa398025f80 <line:14:3, col:15> 'short' '='
+|   | |-ArraySubscriptExpr 0x7fa398025eb8 <col:3, col:7> 'short' lvalue
+|   | | |-ImplicitCastExpr 0x7fa398025ea0 <col:3> 'short *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa398025e58 <col:3> 'short *' lvalue ParmVar 0x7fa398025a00 'bp' 'short *'
+|   | | `-IntegerLiteral 0x7fa398025e80 <col:6> 'int' 9
+|   | `-ImplicitCastExpr 0x7fa398025f68 <col:11, col:15> 'short' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7fa398025f40 <col:11, col:15> 'const short' lvalue
+|   |     |-ImplicitCastExpr 0x7fa398025f28 <col:11> 'const short *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fa398025ee0 <col:11> 'const short *' lvalue ParmVar 0x7fa397827160 'ap' 'const short *'
+|   |     `-IntegerLiteral 0x7fa398025f08 <col:14> 'int' 7
+|   `-BinaryOperator 0x7fa3980260d0 <line:15:3, col:16> 'short' '='
+|     |-ArraySubscriptExpr 0x7fa398026008 <col:3, col:7> 'short' lvalue
+|     | |-ImplicitCastExpr 0x7fa398025ff0 <col:3> 'short *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fa398025fa8 <col:3> 'short *' lvalue ParmVar 0x7fa398025a00 'bp' 'short *'
+|     | `-IntegerLiteral 0x7fa398025fd0 <col:6> 'int' 0
+|     `-ImplicitCastExpr 0x7fa3980260b8 <col:11, col:16> 'short' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fa398026090 <col:11, col:16> 'const short' lvalue
+|         |-ImplicitCastExpr 0x7fa398026078 <col:11> 'const short *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fa398026030 <col:11> 'const short *' lvalue ParmVar 0x7fa397827160 'ap' 'const short *'
+|         `-IntegerLiteral 0x7fa398026058 <col:14> 'int' 25
+`-FunctionDecl 0x7fa3980262e0 <line:18:1, line:25:1> line:19:1 testfunc_01 'void (const volatile short *, volatile short *)'
+  |-ParmVarDecl 0x7fa398026170 <col:14, col:36> col:36 used ap 'const volatile short *'
+  |-ParmVarDecl 0x7fa398026210 <col:40, col:56> col:56 used bp 'volatile short *'
+  `-CompoundStmt 0x7fa3980268c8 <line:20:1, line:25:1>
+    |-BinaryOperator 0x7fa3980264b0 <line:21:3, col:16> 'short' '='
+    | |-ArraySubscriptExpr 0x7fa3980263e8 <col:3, col:7> 'volatile short' lvalue
+    | | |-ImplicitCastExpr 0x7fa3980263d0 <col:3> 'volatile short *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa398026388 <col:3> 'volatile short *' lvalue ParmVar 0x7fa398026210 'bp' 'volatile short *'
+    | | `-IntegerLiteral 0x7fa3980263b0 <col:6> 'int' 0
+    | `-ImplicitCastExpr 0x7fa398026498 <col:11, col:16> 'short' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fa398026470 <col:11, col:16> 'const volatile short' lvalue
+    |     |-ImplicitCastExpr 0x7fa398026458 <col:11> 'const volatile short *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fa398026410 <col:11> 'const volatile short *' lvalue ParmVar 0x7fa398026170 'ap' 'const volatile short *'
+    |     `-IntegerLiteral 0x7fa398026438 <col:14> 'int' 15
+    |-BinaryOperator 0x7fa398026600 <line:22:3, col:15> 'short' '='
+    | |-ArraySubscriptExpr 0x7fa398026538 <col:3, col:7> 'volatile short' lvalue
+    | | |-ImplicitCastExpr 0x7fa398026520 <col:3> 'volatile short *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa3980264d8 <col:3> 'volatile short *' lvalue ParmVar 0x7fa398026210 'bp' 'volatile short *'
+    | | `-IntegerLiteral 0x7fa398026500 <col:6> 'int' 2
+    | `-ImplicitCastExpr 0x7fa3980265e8 <col:11, col:15> 'short' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fa3980265c0 <col:11, col:15> 'const volatile short' lvalue
+    |     |-ImplicitCastExpr 0x7fa3980265a8 <col:11> 'const volatile short *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fa398026560 <col:11> 'const volatile short *' lvalue ParmVar 0x7fa398026170 'ap' 'const volatile short *'
+    |     `-IntegerLiteral 0x7fa398026588 <col:14> 'int' 5
+    |-BinaryOperator 0x7fa398026750 <line:23:3, col:15> 'short' '='
+    | |-ArraySubscriptExpr 0x7fa398026688 <col:3, col:7> 'volatile short' lvalue
+    | | |-ImplicitCastExpr 0x7fa398026670 <col:3> 'volatile short *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa398026628 <col:3> 'volatile short *' lvalue ParmVar 0x7fa398026210 'bp' 'volatile short *'
+    | | `-IntegerLiteral 0x7fa398026650 <col:6> 'int' 9
+    | `-ImplicitCastExpr 0x7fa398026738 <col:11, col:15> 'short' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fa398026710 <col:11, col:15> 'const volatile short' lvalue
+    |     |-ImplicitCastExpr 0x7fa3980266f8 <col:11> 'const volatile short *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fa3980266b0 <col:11> 'const volatile short *' lvalue ParmVar 0x7fa398026170 'ap' 'const volatile short *'
+    |     `-IntegerLiteral 0x7fa3980266d8 <col:14> 'int' 7
+    `-BinaryOperator 0x7fa3980268a0 <line:24:3, col:16> 'short' '='
+      |-ArraySubscriptExpr 0x7fa3980267d8 <col:3, col:7> 'volatile short' lvalue
+      | |-ImplicitCastExpr 0x7fa3980267c0 <col:3> 'volatile short *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fa398026778 <col:3> 'volatile short *' lvalue ParmVar 0x7fa398026210 'bp' 'volatile short *'
+      | `-IntegerLiteral 0x7fa3980267a0 <col:6> 'int' 0
+      `-ImplicitCastExpr 0x7fa398026888 <col:11, col:16> 'short' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7fa398026860 <col:11, col:16> 'const volatile short' lvalue
+          |-ImplicitCastExpr 0x7fa398026848 <col:11> 'const volatile short *' <LValueToRValue>
+          | `-DeclRefExpr 0x7fa398026800 <col:11> 'const volatile short *' lvalue ParmVar 0x7fa398026170 'ap' 'const volatile short *'
+          `-IntegerLiteral 0x7fa398026828 <col:14> 'int' 25

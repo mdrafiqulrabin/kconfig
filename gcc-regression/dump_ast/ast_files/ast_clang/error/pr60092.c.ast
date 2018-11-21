@@ -1,0 +1,96 @@
+c_files/pr60092.c:8:12: error: use of unknown builtin '__builtin_aligned_alloc' [-Wimplicit-function-declaration]
+  int *p = __builtin_aligned_alloc (256, n * sizeof (int));
+           ^
+c_files/pr60092.c:8:8: warning: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int' [-Wint-conversion]
+  int *p = __builtin_aligned_alloc (256, n * sizeof (int));
+       ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr60092.c:9:8: warning: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int' [-Wint-conversion]
+  int *q = __builtin_aligned_alloc (256, n * sizeof (int));
+       ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings and 1 error generated.
+TranslationUnitDecl 0x7ffed28264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffed2826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffed2826740 '__int128'
+|-TypedefDecl 0x7ffed2826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffed2826760 'unsigned __int128'
+|-TypedefDecl 0x7ffed2826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffed2826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffed2826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffed2826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffed2826dc0 'char *'
+|   `-BuiltinType 0x7ffed2826560 'char'
+|-TypedefDecl 0x7ffed28270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffed2827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffed2826ee0 'struct __va_list_tag'
+|     `-Record 0x7ffed2826e58 '__va_list_tag'
+|-FunctionDecl 0x7ffed2877428 <c_files/pr60092.c:4:1, col:16> col:6 used bar 'void (int *)'
+| `-ParmVarDecl 0x7ffed2827160 <col:11, col:15> col:16 'int *'
+|-FunctionDecl 0x7ffed28775e8 <line:6:1, line:15:1> line:6:6 foo 'int *(int)'
+| |-ParmVarDecl 0x7ffed2877520 <col:11, col:15> col:15 used n 'int'
+| `-CompoundStmt 0x7ffed287a538 <line:7:1, line:15:1>
+|   |-DeclStmt 0x7ffed2877d50 <line:8:3, col:59>
+|   | `-VarDecl 0x7ffed28776a0 <col:3, col:58> col:8 used p 'int *' cinit
+|   |   `-ImplicitCastExpr 0x7ffed2877988 <col:12, col:58> 'int *' <IntegralToPointer>
+|   |     `-CallExpr 0x7ffed2877950 <col:12, col:58> 'int'
+|   |       |-ImplicitCastExpr 0x7ffed2877938 <col:12> 'int (*)()' <FunctionToPointerDecay>
+|   |       | `-DeclRefExpr 0x7ffed2877808 <col:12> 'int ()' Function 0x7ffed2877770 '__builtin_aligned_alloc' 'int ()'
+|   |       |-IntegerLiteral 0x7ffed2877830 <col:37> 'int' 256
+|   |       `-BinaryOperator 0x7ffed28778e0 <col:42, col:57> 'unsigned long' '*'
+|   |         |-ImplicitCastExpr 0x7ffed28778c8 <col:42> 'unsigned long' <IntegralCast>
+|   |         | `-ImplicitCastExpr 0x7ffed28778b0 <col:42> 'int' <LValueToRValue>
+|   |         |   `-DeclRefExpr 0x7ffed2877850 <col:42> 'int' lvalue ParmVar 0x7ffed2877520 'n' 'int'
+|   |         `-UnaryExprOrTypeTraitExpr 0x7ffed2877890 <col:46, col:57> 'unsigned long' sizeof 'int'
+|   |-DeclStmt 0x7ffed2877f48 <line:9:3, col:59>
+|   | `-VarDecl 0x7ffed2877d80 <col:3, col:58> col:8 used q 'int *' cinit
+|   |   `-ImplicitCastExpr 0x7ffed2877f30 <col:12, col:58> 'int *' <IntegralToPointer>
+|   |     `-CallExpr 0x7ffed2877ef8 <col:12, col:58> 'int'
+|   |       |-ImplicitCastExpr 0x7ffed2877ee0 <col:12> 'int (*)()' <FunctionToPointerDecay>
+|   |       | `-DeclRefExpr 0x7ffed2877de0 <col:12> 'int ()' Function 0x7ffed2877770 '__builtin_aligned_alloc' 'int ()'
+|   |       |-IntegerLiteral 0x7ffed2877e08 <col:37> 'int' 256
+|   |       `-BinaryOperator 0x7ffed2877eb8 <col:42, col:57> 'unsigned long' '*'
+|   |         |-ImplicitCastExpr 0x7ffed2877ea0 <col:42> 'unsigned long' <IntegralCast>
+|   |         | `-ImplicitCastExpr 0x7ffed2877e88 <col:42> 'int' <LValueToRValue>
+|   |         |   `-DeclRefExpr 0x7ffed2877e28 <col:42> 'int' lvalue ParmVar 0x7ffed2877520 'n' 'int'
+|   |         `-UnaryExprOrTypeTraitExpr 0x7ffed2877e68 <col:46, col:57> 'unsigned long' sizeof 'int'
+|   |-CallExpr 0x7ffed2877ff0 <line:10:3, col:9> 'void'
+|   | |-ImplicitCastExpr 0x7ffed2877fd8 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ffed2877f60 <col:3> 'void (int *)' Function 0x7ffed2877428 'bar' 'void (int *)'
+|   | `-ImplicitCastExpr 0x7ffed2878020 <col:8> 'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7ffed2877f88 <col:8> 'int *' lvalue Var 0x7ffed2877d80 'q' 'int *'
+|   |-DeclStmt 0x7ffed28780b0 <line:11:3, col:8>
+|   | `-VarDecl 0x7ffed2878050 <col:3, col:7> col:7 used i 'int'
+|   |-ForStmt 0x7ffed287a4a8 <line:12:3, line:13:22>
+|   | |-BinaryOperator 0x7ffed2878110 <line:12:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7ffed28780c8 <col:8> 'int' lvalue Var 0x7ffed2878050 'i' 'int'
+|   | | `-IntegerLiteral 0x7ffed28780f0 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ffed28781b8 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7ffed2878188 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ffed2878138 <col:15> 'int' lvalue Var 0x7ffed2878050 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7ffed28781a0 <col:19> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7ffed2878160 <col:19> 'int' lvalue ParmVar 0x7ffed2877520 'n' 'int'
+|   | |-UnaryOperator 0x7ffed2878208 <col:22, col:24> 'int' prefix '++'
+|   | | `-DeclRefExpr 0x7ffed28781e0 <col:24> 'int' lvalue Var 0x7ffed2878050 'i' 'int'
+|   | `-BinaryOperator 0x7ffed287a480 <line:13:5, col:22> 'int' '='
+|   |   |-ArraySubscriptExpr 0x7ffed28782a8 <col:5, col:8> 'int' lvalue
+|   |   | |-ImplicitCastExpr 0x7ffed2878278 <col:5> 'int *' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7ffed2878228 <col:5> 'int *' lvalue Var 0x7ffed28776a0 'p' 'int *'
+|   |   | `-ImplicitCastExpr 0x7ffed2878290 <col:7> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7ffed2878250 <col:7> 'int' lvalue Var 0x7ffed2878050 'i' 'int'
+|   |   `-BinaryOperator 0x7ffed287a458 <col:12, col:22> 'int' '+'
+|   |     |-ImplicitCastExpr 0x7ffed287a428 <col:12, col:15> 'int' <LValueToRValue>
+|   |     | `-ArraySubscriptExpr 0x7ffed2878350 <col:12, col:15> 'int' lvalue
+|   |     |   |-ImplicitCastExpr 0x7ffed2878320 <col:12> 'int *' <LValueToRValue>
+|   |     |   | `-DeclRefExpr 0x7ffed28782d0 <col:12> 'int *' lvalue Var 0x7ffed2877d80 'q' 'int *'
+|   |     |   `-ImplicitCastExpr 0x7ffed2878338 <col:14> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ffed28782f8 <col:14> 'int' lvalue Var 0x7ffed2878050 'i' 'int'
+|   |     `-ImplicitCastExpr 0x7ffed287a440 <col:19, col:22> 'int' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7ffed287a400 <col:19, col:22> 'int' lvalue
+|   |         |-ImplicitCastExpr 0x7ffed28783c8 <col:19> 'int *' <LValueToRValue>
+|   |         | `-DeclRefExpr 0x7ffed2878378 <col:19> 'int *' lvalue Var 0x7ffed2877d80 'q' 'int *'
+|   |         `-ImplicitCastExpr 0x7ffed28783e0 <col:21> 'int' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7ffed28783a0 <col:21> 'int' lvalue Var 0x7ffed2878050 'i' 'int'
+|   `-ReturnStmt 0x7ffed287a520 <line:14:3, col:10>
+|     `-ImplicitCastExpr 0x7ffed287a508 <col:10> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7ffed287a4e0 <col:10> 'int *' lvalue Var 0x7ffed28776a0 'p' 'int *'
+`-FunctionDecl 0x7ffed2877770 <<invalid sloc>> line:8:12 implicit used __builtin_aligned_alloc 'int ()'

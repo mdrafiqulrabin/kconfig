@@ -1,0 +1,45 @@
+FileAST: 
+  Typedef: mytype, [], ['typedef']
+    TypeDecl: mytype, []
+      IdentifierType: ['unsigned']
+  Decl: None, [], [], []
+    Struct: S
+      Decl: pu, [], [], []
+        PtrDecl: []
+          TypeDecl: pu, []
+            IdentifierType: ['mytype']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: e, [], [], []
+            PtrDecl: []
+              TypeDecl: e, []
+                Struct: S
+        TypeDecl: f, []
+          IdentifierType: ['mytype']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['mytype']
+      If: 
+        BinaryOp: !=
+          UnaryOp: &
+            ID: x
+          StructRef: ->
+            ID: e
+            ID: pu
+        FuncCall: 
+          ID: __builtin_memcpy
+          ExprList: 
+            UnaryOp: &
+              ID: x
+            StructRef: ->
+              ID: e
+              ID: pu
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned']
+      Return: 
+        ID: x

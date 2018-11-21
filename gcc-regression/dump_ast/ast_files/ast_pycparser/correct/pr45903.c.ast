@@ -1,0 +1,121 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: c
+        BinaryOp: +
+          BinaryOp: >>
+            ID: a
+            Constant: int, 8
+          BinaryOp: >>
+            ID: b
+            Constant: int, 8
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f2, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: c
+        BinaryOp: |
+          BinaryOp: >>
+            ID: a
+            Constant: int, 8
+          BinaryOp: >>
+            ID: b
+            Constant: int, 8
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f3, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: c
+        BinaryOp: ^
+          BinaryOp: >>
+            ID: a
+            Constant: int, 16
+          BinaryOp: >>
+            ID: b
+            Constant: int, 56
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f4, []
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: >>
+            ID: a
+            Constant: int, 48
+          BinaryOp: >>
+            ID: b
+            Constant: int, 40
+  FuncDef: 
+    Decl: f5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f5, []
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: >>
+            ID: a
+            Constant: int, 32
+          BinaryOp: >>
+            ID: b
+            Constant: int, 16
+  FuncDef: 
+    Decl: f6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f6, []
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Return: 
+        BinaryOp: ^
+          BinaryOp: >>
+            ID: a
+            Constant: int, 24
+          BinaryOp: >>
+            ID: b
+            Constant: int, 32

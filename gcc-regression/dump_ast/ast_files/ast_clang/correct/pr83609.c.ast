@@ -1,0 +1,58 @@
+TranslationUnitDecl 0x7f8b49025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8b49026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8b49025d40 '__int128'
+|-TypedefDecl 0x7f8b49026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8b49025d60 'unsigned __int128'
+|-TypedefDecl 0x7f8b49026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8b49026170 'struct __NSConstantString_tag'
+|   `-Record 0x7f8b490260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8b49026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8b490263c0 'char *'
+|   `-BuiltinType 0x7f8b49025b60 'char'
+|-TypedefDecl 0x7f8b490266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8b49026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8b490264e0 'struct __va_list_tag'
+|     `-Record 0x7f8b49026458 '__va_list_tag'
+|-FunctionDecl 0x7f8b48826400 <c_files/pr83609.c:6:1, line:12:1> line:7:1 used foo '_Complex float (void)'
+| `-CompoundStmt 0x7f8b48826728 <line:8:1, line:12:1>
+|   |-DeclStmt 0x7f8b48826548 <line:9:3, col:19>
+|   | `-VarDecl 0x7f8b488264e8 <col:3, col:18> col:18 used c '_Complex float'
+|   |-BinaryOperator 0x7f8b488266a8 <line:10:3, col:33> 'unsigned long long' '='
+|   | |-UnaryOperator 0x7f8b48826668 <col:3, col:29> 'unsigned long long' lvalue prefix '*'
+|   | | `-ParenExpr 0x7f8b48826648 <col:4, col:29> 'unsigned long long *'
+|   | |   `-CStyleCastExpr 0x7f8b48826620 <col:5, col:28> 'unsigned long long *' <BitCast>
+|   | |     `-UnaryOperator 0x7f8b488265b8 <col:27, col:28> '_Complex float *' prefix '&'
+|   | |       `-DeclRefExpr 0x7f8b48826560 <col:28> '_Complex float' lvalue Var 0x7f8b488264e8 'c' '_Complex float'
+|   | `-IntegerLiteral 0x7f8b48826688 <col:33> 'unsigned long long' 1311768467463790320
+|   `-ReturnStmt 0x7f8b48826710 <line:11:3, col:10>
+|     `-ImplicitCastExpr 0x7f8b488266f8 <col:10> '_Complex float' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8b488266d0 <col:10> '_Complex float' lvalue Var 0x7f8b488264e8 'c' '_Complex float'
+|-FunctionDecl 0x7f8b488267b0 <line:14:1, line:22:1> line:15:1 main 'int ()'
+| `-CompoundStmt 0x7f8b48826ed8 <line:16:1, line:22:1>
+|   |-DeclStmt 0x7f8b48826a78 <line:17:3, col:54>
+|   | |-RecordDecl 0x7f8b48826848 <col:3, col:51> col:3 union definition
+|   | | |-FieldDecl 0x7f8b48826900 <col:11, col:26> col:26 referenced c '_Complex float'
+|   | | `-FieldDecl 0x7f8b48826960 <col:29, col:48> col:48 referenced l 'unsigned long long'
+|   | `-VarDecl 0x7f8b48826a00 <col:3, col:53> col:53 used u 'union (anonymous union at c_files/pr83609.c:17:3)':'union (anonymous at c_files/pr83609.c:17:3)'
+|   |-BinaryOperator 0x7f8b48826b88 <line:18:3, col:14> '_Complex float' '='
+|   | |-MemberExpr 0x7f8b48826ab8 <col:3, col:5> '_Complex float' lvalue .c 0x7f8b48826900
+|   | | `-DeclRefExpr 0x7f8b48826a90 <col:3> 'union (anonymous union at c_files/pr83609.c:17:3)':'union (anonymous at c_files/pr83609.c:17:3)' lvalue Var 0x7f8b48826a00 'u' 'union (anonymous union at c_files/pr83609.c:17:3)':'union (anonymous at c_files/pr83609.c:17:3)'
+|   | `-CallExpr 0x7f8b48826b60 <col:9, col:14> '_Complex float'
+|   |   `-ImplicitCastExpr 0x7f8b48826b48 <col:9> '_Complex float (*)(void)' <FunctionToPointerDecay>
+|   |     `-DeclRefExpr 0x7f8b48826af0 <col:9> '_Complex float (void)' Function 0x7f8b48826400 'foo' '_Complex float (void)'
+|   |-IfStmt 0x7f8b48826e68 <line:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8b48826c48 <line:19:7, col:14> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7f8b48826c30 <col:7, col:9> 'unsigned long long' <LValueToRValue>
+|   | | | `-MemberExpr 0x7f8b48826bd8 <col:7, col:9> 'unsigned long long' lvalue .l 0x7f8b48826960
+|   | | |   `-DeclRefExpr 0x7f8b48826bb0 <col:7> 'union (anonymous union at c_files/pr83609.c:17:3)':'union (anonymous at c_files/pr83609.c:17:3)' lvalue Var 0x7f8b48826a00 'u' 'union (anonymous union at c_files/pr83609.c:17:3)':'union (anonymous at c_files/pr83609.c:17:3)'
+|   | | `-IntegerLiteral 0x7f8b48826c10 <col:14> 'unsigned long long' 1311768467463790320
+|   | |-CallExpr 0x7f8b48826e40 <line:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8b48826e28 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8b48826dd0 <col:5> '<builtin fn type>' Function 0x7f8b48826cf0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8b48826ec0 <line:21:3, col:10>
+|     `-IntegerLiteral 0x7f8b48826ea0 <col:10> 'int' 0
+`-FunctionDecl 0x7f8b48826cf0 <line:20:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f8b48826d88 <col:5> Implicit

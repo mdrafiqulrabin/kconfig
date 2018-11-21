@@ -1,0 +1,51 @@
+c_files/pr79909.c:6:33: error: unknown machine mode 'TD'
+typedef float T __attribute__ ((mode (TD)));
+                                ^
+1 error generated.
+TranslationUnitDecl 0x7f9c8b0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9c8b026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9c8b026740 '__int128'
+|-TypedefDecl 0x7f9c8b026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9c8b026760 'unsigned __int128'
+|-TypedefDecl 0x7f9c8b026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9c8b026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9c8b026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9c8b026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9c8b026dc0 'char *'
+|   `-BuiltinType 0x7f9c8b026560 'char'
+|-TypedefDecl 0x7f9c8b0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9c8b027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9c8b026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9c8b026e58 '__va_list_tag'
+|-TypedefDecl 0x7f9c8b027148 <c_files/pr79909.c:6:1, col:15> col:15 referenced T 'float'
+| `-BuiltinType 0x7f9c8b0266c0 'float'
+|-VarDecl 0x7f9c8b826a00 <line:7:1, col:3> col:3 used b 'T':'float'
+|-VarDecl 0x7f9c8b826ab0 <col:1, col:6> col:6 used c 'T':'float'
+|-VarDecl 0x7f9c8b826b20 <col:1, col:9> col:9 used d 'T':'float'
+|-VarDecl 0x7f9c8b826b90 <col:1, col:12> col:12 used e 'T':'float'
+|-VarDecl 0x7f9c8b826c00 <col:1, col:15> col:15 used f 'T':'float'
+|-VarDecl 0x7f9c8b826c70 <col:1, col:18> col:18 used g 'T':'float'
+|-FunctionDecl 0x7f9c8b8270c0 <line:8:1, col:27> col:6 used bar 'void (T, T, T, T, T, T)'
+| |-ParmVarDecl 0x7f9c8b826d18 <col:11> col:12 'T':'float'
+| |-ParmVarDecl 0x7f9c8b826d88 <col:14> col:15 'T':'float'
+| |-ParmVarDecl 0x7f9c8b826df8 <col:17> col:18 'T':'float'
+| |-ParmVarDecl 0x7f9c8b826e68 <col:20> col:21 'T':'float'
+| |-ParmVarDecl 0x7f9c8b826ed8 <col:23> col:24 'T':'float'
+| `-ParmVarDecl 0x7f9c8b826f48 <col:26> col:27 'T':'float'
+`-FunctionDecl 0x7f9c8b827250 <line:10:1, line:14:1> line:11:1 foo 'void (void)'
+  `-CompoundStmt 0x7f9c8b827558 <line:12:1, line:14:1>
+    `-CallExpr 0x7f9c8b827470 <line:13:3, col:24> 'void'
+      |-ImplicitCastExpr 0x7f9c8b827458 <col:3> 'void (*)(T, T, T, T, T, T)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f9c8b8272e8 <col:3> 'void (T, T, T, T, T, T)' Function 0x7f9c8b8270c0 'bar' 'void (T, T, T, T, T, T)'
+      |-ImplicitCastExpr 0x7f9c8b8274c8 <col:8> 'T':'float' <LValueToRValue>
+      | `-DeclRefExpr 0x7f9c8b827310 <col:8> 'T':'float' lvalue Var 0x7f9c8b826b90 'e' 'T':'float'
+      |-ImplicitCastExpr 0x7f9c8b8274e0 <col:11> 'T':'float' <LValueToRValue>
+      | `-DeclRefExpr 0x7f9c8b827338 <col:11> 'T':'float' lvalue Var 0x7f9c8b826a00 'b' 'T':'float'
+      |-ImplicitCastExpr 0x7f9c8b8274f8 <col:14> 'T':'float' <LValueToRValue>
+      | `-DeclRefExpr 0x7f9c8b827360 <col:14> 'T':'float' lvalue Var 0x7f9c8b826c00 'f' 'T':'float'
+      |-ImplicitCastExpr 0x7f9c8b827510 <col:17> 'T':'float' <LValueToRValue>
+      | `-DeclRefExpr 0x7f9c8b827388 <col:17> 'T':'float' lvalue Var 0x7f9c8b826ab0 'c' 'T':'float'
+      |-ImplicitCastExpr 0x7f9c8b827528 <col:20> 'T':'float' <LValueToRValue>
+      | `-DeclRefExpr 0x7f9c8b8273b0 <col:20> 'T':'float' lvalue Var 0x7f9c8b826c70 'g' 'T':'float'
+      `-ImplicitCastExpr 0x7f9c8b827540 <col:23> 'T':'float' <LValueToRValue>
+        `-DeclRefExpr 0x7f9c8b8273d8 <col:23> 'T':'float' lvalue Var 0x7f9c8b826b20 'd' 'T':'float'

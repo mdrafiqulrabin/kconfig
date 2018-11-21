@@ -1,0 +1,92 @@
+c_files/pr49923.c:45:27: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__ ((noinline, noclone))
+                          ^
+1 warning generated.
+TranslationUnitDecl 0x7fe1990264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe199026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe199026740 '__int128'
+|-TypedefDecl 0x7fe199026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe199026760 'unsigned __int128'
+|-TypedefDecl 0x7fe199026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe199026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe199026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe199026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe199026dc0 'char *'
+|   `-BuiltinType 0x7fe199026560 'char'
+|-TypedefDecl 0x7fe1990270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe199027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe199026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe199026e58 '__va_list_tag'
+|-RecordDecl 0x7fe199027120 <c_files/pr49923.c:6:1, line:9:1> line:6:15 struct aostk_point_u8 definition
+| |-PackedAttr 0x7fe1990271d0 <line:4:32>
+| |-FieldDecl 0x7fe199826a50 <line:7:3, col:17> col:17 x 'unsigned char'
+| `-FieldDecl 0x7fe199826ab0 <line:8:3, col:17> col:17 y 'unsigned char'
+|-RecordDecl 0x7fe199826af8 <line:11:1, line:14:1> line:11:15 struct aostk_size_u8 definition
+| |-PackedAttr 0x7fe199826ba0 <line:4:32>
+| |-FieldDecl 0x7fe199826c00 <line:12:3, col:17> col:17 width 'unsigned char'
+| `-FieldDecl 0x7fe199826c60 <line:13:3, col:17> col:17 height 'unsigned char'
+|-RecordDecl 0x7fe199826ca8 <line:16:1, line:24:1> line:16:15 struct aostk_glyph definition
+| |-PackedAttr 0x7fe199826d50 <line:4:32>
+| |-FieldDecl 0x7fe199826db0 <line:17:2, col:17> col:17 i 'unsigned short'
+| |-FieldDecl 0x7fe199826e50 <line:18:2, col:23> col:23 size 'struct aostk_size_u8':'struct aostk_size_u8'
+| |-FieldDecl 0x7fe199826ea8 <line:19:2, col:7> col:7 top 'char'
+| |-FieldDecl 0x7fe199826f40 <line:20:2, col:24> col:24 advance 'struct aostk_point_u8':'struct aostk_point_u8'
+| |-FieldDecl 0x7fe199826fa0 <line:21:2, col:16> col:16 pitch 'unsigned char'
+| |-FieldDecl 0x7fe199827030 <line:22:2, col:17> col:17 data 'unsigned char *'
+| `-FieldDecl 0x7fe199827088 <line:23:2, col:7> col:7 left 'char'
+|-RecordDecl 0x7fe1998270d0 <line:27:1, line:31:1> line:27:15 struct aostk_font definition
+| |-PackedAttr 0x7fe199827180 <line:4:32>
+| |-FieldDecl 0x7fe1998271e0 <line:28:2, col:17> col:17 numglyphs 'unsigned short'
+| |-FieldDecl 0x7fe199827240 <line:29:2, col:16> col:16 height 'unsigned char'
+| `-FieldDecl 0x7fe199827340 <line:30:2, col:22> col:22 referenced glyphs 'struct aostk_glyph *'
+|-VarDecl 0x7fe1998273e0 <line:33:1, col:19> col:19 used glob_font 'struct aostk_font':'struct aostk_font'
+|-FunctionDecl 0x7fe1998276a8 <line:35:1, line:37:1> line:35:28 used aostk_get_glyph 'struct aostk_glyph *(struct aostk_font *, unsigned int)' static
+| |-ParmVarDecl 0x7fe199827500 <col:44, col:63> col:63 used f 'struct aostk_font *'
+| |-ParmVarDecl 0x7fe199827578 <col:66, col:79> col:79 c 'unsigned int'
+| `-CompoundStmt 0x7fe1998277f8 <col:82, line:37:1>
+|   `-ReturnStmt 0x7fe1998277e0 <line:36:2, col:12>
+|     `-ImplicitCastExpr 0x7fe1998277c8 <col:9, col:12> 'struct aostk_glyph *' <LValueToRValue>
+|       `-MemberExpr 0x7fe199827790 <col:9, col:12> 'struct aostk_glyph *' lvalue ->glyphs 0x7fe199827340
+|         `-ImplicitCastExpr 0x7fe199827778 <col:9> 'struct aostk_font *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fe199827750 <col:9> 'struct aostk_font *' lvalue ParmVar 0x7fe199827500 'f' 'struct aostk_font *'
+|-FunctionDecl 0x7fe199827a00 <line:39:1, line:42:1> line:39:5 used aostk_font_strwidth 'int (struct aostk_font *, const char *)'
+| |-ParmVarDecl 0x7fe199827840 <col:25, col:44> col:44 used font 'struct aostk_font *'
+| |-ParmVarDecl 0x7fe1998278b8 <col:50, col:62> col:62 str 'const char *'
+| `-CompoundStmt 0x7fe199827d68 <col:67, line:42:1>
+|   |-DeclStmt 0x7fe199827c78 <line:40:2, col:50>
+|   | `-VarDecl 0x7fe199827ad0 <col:2, col:49> col:22 used g 'struct aostk_glyph *' cinit
+|   |   `-CallExpr 0x7fe199827c10 <col:26, col:49> 'struct aostk_glyph *'
+|   |     |-ImplicitCastExpr 0x7fe199827bf8 <col:26> 'struct aostk_glyph *(*)(struct aostk_font *, unsigned int)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fe199827b30 <col:26> 'struct aostk_glyph *(struct aostk_font *, unsigned int)' Function 0x7fe1998276a8 'aostk_get_glyph' 'struct aostk_glyph *(struct aostk_font *, unsigned int)'
+|   |     |-ImplicitCastExpr 0x7fe199827c48 <col:42> 'struct aostk_font *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fe199827b58 <col:42> 'struct aostk_font *' lvalue ParmVar 0x7fe199827840 'font' 'struct aostk_font *'
+|   |     `-ImplicitCastExpr 0x7fe199827c60 <col:48> 'unsigned int' <IntegralCast>
+|   |       `-IntegerLiteral 0x7fe199827b80 <col:48> 'int' 0
+|   `-ReturnStmt 0x7fe199827d50 <line:41:2, col:16>
+|     `-ParenExpr 0x7fe199827d30 <col:9, col:16> 'int'
+|       `-BinaryOperator 0x7fe199827d08 <col:10, col:15> 'int' '!='
+|         |-ImplicitCastExpr 0x7fe199827cd8 <col:10> 'struct aostk_glyph *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fe199827c90 <col:10> 'struct aostk_glyph *' lvalue Var 0x7fe199827ad0 'g' 'struct aostk_glyph *'
+|         `-ImplicitCastExpr 0x7fe199827cf0 <col:15> 'struct aostk_glyph *' <NullToPointer>
+|           `-IntegerLiteral 0x7fe199827cb8 <col:15> 'int' 0
+|-FunctionDecl 0x7fe199827e98 <line:44:1, line:49:1> line:46:1 used get_some_font 'struct aostk_font *(void)'
+| |-CompoundStmt 0x7fe199827fd8 <line:47:1, line:49:1>
+| | `-ReturnStmt 0x7fe199827fc0 <line:48:3, col:11>
+| |   `-UnaryOperator 0x7fe199827fa0 <col:10, col:11> 'struct aostk_font *' prefix '&'
+| |     `-DeclRefExpr 0x7fe199827f78 <col:11> 'struct aostk_font':'struct aostk_font' lvalue Var 0x7fe1998273e0 'glob_font' 'struct aostk_font':'struct aostk_font'
+| `-NoInlineAttr 0x7fe199827f30 <line:45:17>
+`-FunctionDecl 0x7fe199828238 <line:51:1, line:55:1> line:51:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fe199828010 <col:11, col:15> col:15 argc 'int'
+  |-ParmVarDecl 0x7fe199828120 <col:21, col:32> col:27 argv 'char **':'char **'
+  `-CompoundStmt 0x7fe199828570 <line:52:1, line:55:1>
+    `-ReturnStmt 0x7fe199828558 <line:53:3, col:60>
+      `-CStyleCastExpr 0x7fe199828530 <col:10, col:60> 'int' <NoOp>
+        `-CallExpr 0x7fe1998284b0 <col:16, col:60> 'int'
+          |-ImplicitCastExpr 0x7fe199828498 <col:16> 'int (*)(struct aostk_font *, const char *)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fe1998282e0 <col:16> 'int (struct aostk_font *, const char *)' Function 0x7fe199827a00 'aostk_font_strwidth' 'int (struct aostk_font *, const char *)'
+          |-CallExpr 0x7fe1998283a0 <col:37, col:52> 'struct aostk_font *'
+          | `-ImplicitCastExpr 0x7fe199828388 <col:37> 'struct aostk_font *(*)(void)' <FunctionToPointerDecay>
+          |   `-DeclRefExpr 0x7fe199828308 <col:37> 'struct aostk_font *(void)' Function 0x7fe199827e98 'get_some_font' 'struct aostk_font *(void)'
+          `-ImplicitCastExpr 0x7fe199828500 <col:55> 'const char *' <BitCast>
+            `-ImplicitCastExpr 0x7fe1998284e8 <col:55> 'char *' <ArrayToPointerDecay>
+              `-StringLiteral 0x7fe199828408 <col:55> 'char [4]' lvalue "sth"

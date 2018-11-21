@@ -1,0 +1,176 @@
+c_files/pr68320.c:8:20: error: declaration of non-local variable in 'for' loop
+  for (typedef int T;;) /* { dg-error "declaration of non-variable" } */
+                   ^
+c_files/pr68320.c:11:3: error: use of undeclared identifier 'T'
+  T x; /* { dg-error "unknown type name" } */
+  ^
+c_files/pr68320.c:17:20: error: declaration of non-local variable in 'for' loop
+  for (typedef int T;;) /* { dg-error "declaration of non-variable" } */
+                   ^
+c_files/pr68320.c:20:3: error: use of undeclared identifier 'T'
+  T x; /* { dg-error "unknown type name" } */
+  ^
+c_files/pr68320.c:26:20: error: declaration of non-local variable in 'for' loop
+  for (typedef int T;;) /* { dg-error "declaration of non-variable" } */
+                   ^
+c_files/pr68320.c:30:3: error: use of undeclared identifier 'T'
+  T *x; /* { dg-error "unknown type name" } */
+  ^
+c_files/pr68320.c:30:6: error: use of undeclared identifier 'x'
+  T *x; /* { dg-error "unknown type name" } */
+     ^
+c_files/pr68320.c:36:20: error: declaration of non-local variable in 'for' loop
+  for (typedef int T;;) /* { dg-error "declaration of non-variable" } */
+                   ^
+c_files/pr68320.c:39:3: error: use of undeclared identifier 'T'
+  T, T; /* { dg-error "undeclared" } */
+  ^
+c_files/pr68320.c:39:6: error: use of undeclared identifier 'T'
+  T, T; /* { dg-error "undeclared" } */
+     ^
+c_files/pr68320.c:45:20: error: declaration of non-local variable in 'for' loop
+  for (typedef int T;;) /* { dg-error "declaration of non-variable" } */
+                   ^
+c_files/pr68320.c:48:3: error: use of undeclared identifier 'T'
+  T = 10; /* { dg-error "undeclared" } */
+  ^
+c_files/pr68320.c:54:20: error: declaration of non-local variable in 'for' loop
+  for (typedef int T;;) /* { dg-error "declaration of non-variable" } */
+                   ^
+c_files/pr68320.c:57:3: error: use of undeclared identifier 'T'
+  T[0]; /* { dg-error "undeclared" } */
+  ^
+c_files/pr68320.c:63:20: error: declaration of non-local variable in 'for' loop
+  for (typedef int T;;) /* { dg-error "declaration of non-variable" } */
+                   ^
+c_files/pr68320.c:66:3: warning: implicit declaration of function 'T' is invalid in C99 [-Wimplicit-function-declaration]
+  T (); /* { dg-warning "implicit declaration" } */
+  ^
+1 warning and 15 errors generated.
+TranslationUnitDecl 0x7f9a9b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9a9b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9a9b826740 '__int128'
+|-TypedefDecl 0x7f9a9b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9a9b826760 'unsigned __int128'
+|-TypedefDecl 0x7f9a9b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9a9b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9a9b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9a9b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9a9b826dc0 'char *'
+|   `-BuiltinType 0x7f9a9b826560 'char'
+|-TypedefDecl 0x7f9a9b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9a9b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9a9b826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9a9b826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9a9b877a00 <c_files/pr68320.c:5:1, line:12:1> line:6:1 fn1 'void (void)'
+| `-CompoundStmt 0x7f9a9b877c18 <line:7:1, line:12:1>
+|   `-ForStmt 0x7f9a9b877bc8 <line:8:3, line:10:7>
+|     |-DeclStmt 0x7f9a9b877b48 <line:8:8, col:21>
+|     | `-TypedefDecl 0x7f9a9b877af0 <col:8, col:20> col:20 invalid T 'int'
+|     |   `-BuiltinType 0x7f9a9b8265c0 'int'
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     `-IfStmt 0x7f9a9b877b90 <line:9:5, line:10:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-IntegerLiteral 0x7f9a9b877b60 <line:9:9> 'int' 1
+|       |-NullStmt 0x7f9a9b877b80 <line:10:7>
+|       `-<<<NULL>>>
+|-FunctionDecl 0x7f9a9b877d10 <line:14:1, line:21:1> line:15:1 fn2 'void (int)'
+| |-ParmVarDecl 0x7f9a9b877c50 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7f9a9b877f38 <line:16:1, line:21:1>
+|   `-ForStmt 0x7f9a9b877f00 <line:17:3, line:19:11>
+|     |-DeclStmt 0x7f9a9b877e20 <line:17:8, col:21>
+|     | `-TypedefDecl 0x7f9a9b877dc8 <col:8, col:20> col:20 invalid T 'int'
+|     |   `-BuiltinType 0x7f9a9b8265c0 'int'
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     `-IfStmt 0x7f9a9b877ec8 <line:18:5, line:19:11>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-IntegerLiteral 0x7f9a9b877e38 <line:18:9> 'int' 1
+|       |-BinaryOperator 0x7f9a9b877ea0 <line:19:7, col:11> 'int' '='
+|       | |-DeclRefExpr 0x7f9a9b877e58 <col:7> 'int' lvalue ParmVar 0x7f9a9b877c50 'i' 'int'
+|       | `-IntegerLiteral 0x7f9a9b877e80 <col:11> 'int' 5
+|       `-<<<NULL>>>
+|-FunctionDecl 0x7f9a9b877fe8 <line:23:1, line:31:1> line:24:1 fn3 'void (void)'
+| `-CompoundStmt 0x7f9a9b8781c0 <line:25:1, line:31:1>
+|   `-ForStmt 0x7f9a9b878178 <line:26:3, line:29:7>
+|     |-DeclStmt 0x7f9a9b8780f0 <line:26:8, col:21>
+|     | `-TypedefDecl 0x7f9a9b878098 <col:8, col:20> col:20 invalid T 'int'
+|     |   `-BuiltinType 0x7f9a9b8265c0 'int'
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     `-IfStmt 0x7f9a9b878140 <line:27:5, line:29:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-IntegerLiteral 0x7f9a9b878108 <line:27:9> 'int' 1
+|       |-CompoundStmt 0x7f9a9b878128 <line:28:7, line:29:7>
+|       `-<<<NULL>>>
+|-FunctionDecl 0x7f9a9b878270 <line:33:1, line:40:1> line:34:1 fn4 'void (void)'
+| `-CompoundStmt 0x7f9a9b878440 <line:35:1, line:40:1>
+|   `-ForStmt 0x7f9a9b8783f8 <line:36:3, line:38:7>
+|     |-DeclStmt 0x7f9a9b878378 <line:36:8, col:21>
+|     | `-TypedefDecl 0x7f9a9b878320 <col:8, col:20> col:20 invalid T 'int'
+|     |   `-BuiltinType 0x7f9a9b8265c0 'int'
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     `-IfStmt 0x7f9a9b8783c0 <line:37:5, line:38:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-IntegerLiteral 0x7f9a9b878390 <line:37:9> 'int' 1
+|       |-NullStmt 0x7f9a9b8783b0 <line:38:7>
+|       `-<<<NULL>>>
+|-FunctionDecl 0x7f9a9b8784f0 <line:42:1, line:49:1> line:43:1 fn5 'void (void)'
+| `-CompoundStmt 0x7f9a9b8786d0 <line:44:1, line:49:1>
+|   `-ForStmt 0x7f9a9b878678 <line:45:3, line:47:7>
+|     |-DeclStmt 0x7f9a9b8785f8 <line:45:8, col:21>
+|     | `-TypedefDecl 0x7f9a9b8785a0 <col:8, col:20> col:20 invalid T 'int'
+|     |   `-BuiltinType 0x7f9a9b8265c0 'int'
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     `-IfStmt 0x7f9a9b878640 <line:46:5, line:47:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-IntegerLiteral 0x7f9a9b878610 <line:46:9> 'int' 1
+|       |-NullStmt 0x7f9a9b878630 <line:47:7>
+|       `-<<<NULL>>>
+|-FunctionDecl 0x7f9a9b878780 <line:51:1, line:58:1> line:52:1 fn6 'void (void)'
+| `-CompoundStmt 0x7f9a9b878960 <line:53:1, line:58:1>
+|   `-ForStmt 0x7f9a9b878908 <line:54:3, line:56:7>
+|     |-DeclStmt 0x7f9a9b878888 <line:54:8, col:21>
+|     | `-TypedefDecl 0x7f9a9b878830 <col:8, col:20> col:20 invalid T 'int'
+|     |   `-BuiltinType 0x7f9a9b8265c0 'int'
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     `-IfStmt 0x7f9a9b8788d0 <line:55:5, line:56:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-IntegerLiteral 0x7f9a9b8788a0 <line:55:9> 'int' 1
+|       |-NullStmt 0x7f9a9b8788c0 <line:56:7>
+|       `-<<<NULL>>>
+|-FunctionDecl 0x7f9a9b879a20 <line:60:1, line:67:1> line:61:1 fn7 'void (void)'
+| `-CompoundStmt 0x7f9a9b879d58 <line:62:1, line:67:1>
+|   |-ForStmt 0x7f9a9b879ba8 <line:63:3, line:65:7>
+|   | |-DeclStmt 0x7f9a9b879b28 <line:63:8, col:21>
+|   | | `-TypedefDecl 0x7f9a9b879ad0 <col:8, col:20> col:20 invalid T 'int'
+|   | |   `-BuiltinType 0x7f9a9b8265c0 'int'
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | `-IfStmt 0x7f9a9b879b70 <line:64:5, line:65:7>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-IntegerLiteral 0x7f9a9b879b40 <line:64:9> 'int' 1
+|   |   |-NullStmt 0x7f9a9b879b60 <line:65:7>
+|   |   `-<<<NULL>>>
+|   `-CallExpr 0x7f9a9b879d30 <line:66:3, col:6> 'int'
+|     `-ImplicitCastExpr 0x7f9a9b879d18 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f9a9b879cc8 <col:3> 'int ()' Function 0x7f9a9b879c30 'T' 'int ()'
+`-FunctionDecl 0x7f9a9b879c30 <<invalid sloc>> col:3 implicit used T 'int ()'

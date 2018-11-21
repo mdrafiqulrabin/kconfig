@@ -1,0 +1,37 @@
+FileAST: 
+  Typedef: HARD_REG_ELT_TYPE, [], ['typedef']
+    TypeDecl: HARD_REG_ELT_TYPE, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  Typedef: HARD_REG_SET, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: HARD_REG_SET, []
+        IdentifierType: ['HARD_REG_ELT_TYPE']
+      Constant: int, 2
+  Decl: newpat_used_regs, [], ['static'], []
+    TypeDecl: newpat_used_regs, []
+      IdentifierType: ['HARD_REG_SET']
+  FuncDef: 
+    Decl: try_combine, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: try_combine, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: scan_tp_, [], [], []
+        PtrDecl: []
+          TypeDecl: scan_tp_, []
+            IdentifierType: ['HARD_REG_ELT_TYPE']
+        ID: newpat_used_regs
+      Assignment: =
+        ArrayRef: 
+          ID: scan_tp_
+          Constant: int, 0
+        Constant: int, 0
+      Assignment: =
+        ArrayRef: 
+          ID: scan_tp_
+          Constant: int, 1
+        Constant: int, 0

@@ -1,0 +1,26 @@
+c_files/pr67730-1.c:5:10: fatal error: 'pr67730.h' file not found
+#include "pr67730.h"
+         ^~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fe790025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe790026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe790025d40 '__int128'
+|-TypedefDecl 0x7fe790026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe790025d60 'unsigned __int128'
+|-TypedefDecl 0x7fe790026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe790026170 'struct __NSConstantString_tag'
+|   `-Record 0x7fe7900260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe790026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe7900263c0 'char *'
+|   `-BuiltinType 0x7fe790025b60 'char'
+|-TypedefDecl 0x7fe7900266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe790026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe7900264e0 'struct __va_list_tag'
+|     `-Record 0x7fe790026458 '__va_list_tag'
+|-FunctionDecl 0x7fe790826a28 <c_files/pr67730-1.c:7:1, col:33> col:13 used bar 'void (unsigned char *)' extern
+| `-ParmVarDecl 0x7fe790026760 <col:18, col:32> col:33 'unsigned char *'
+`-FunctionDecl 0x7fe790826be8 <line:9:1, line:16:1> line:10:1 f 'unsigned char *(void *)'
+  |-ParmVarDecl 0x7fe790826b20 <col:4, col:10> col:10 p 'void *'
+  `-CompoundStmt 0x7fe790826d68 <line:11:1, line:16:1>
+    `-DeclStmt 0x7fe790826d28 <line:12:4, col:28>
+      `-VarDecl 0x7fe790826ca0 <col:4, col:19> col:19 invalid uc 'unsigned char *'

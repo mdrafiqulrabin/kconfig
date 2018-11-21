@@ -1,0 +1,56 @@
+c_files/pr24227.c:3:8: warning: cast to 'struct buffer *' from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+  if (((struct buffer *) ((unsigned int) buffer)) ==
+       ^
+c_files/pr24227.c:4:10: warning: cast to 'struct buffer *' from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+      (0,(struct buffer *) ((unsigned int) ((buffer) & 1))))
+         ^
+c_files/pr24227.c:4:8: warning: expression result unused [-Wunused-value]
+      (0,(struct buffer *) ((unsigned int) ((buffer) & 1))))
+       ^
+c_files/pr24227.c:6:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+4 warnings generated.
+TranslationUnitDecl 0x7f90b98264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f90b9826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f90b9826740 '__int128'
+|-TypedefDecl 0x7f90b9826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f90b9826760 'unsigned __int128'
+|-TypedefDecl 0x7f90b9826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f90b9826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f90b9826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f90b9826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f90b9826dc0 'char *'
+|   `-BuiltinType 0x7f90b9826560 'char'
+|-TypedefDecl 0x7f90b98270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f90b9827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f90b9826ee0 'struct __va_list_tag'
+|     `-Record 0x7f90b9826e58 '__va_list_tag'
+`-FunctionDecl 0x7f90ba025a30 <c_files/pr24227.c:1:1, line:6:1> line:1:5 Fdisplay_buffer 'int (int)'
+  |-ParmVarDecl 0x7f90b9827138 <col:24, col:28> col:28 used buffer 'int'
+  `-CompoundStmt 0x7f90ba026410 <line:2:1, line:6:1>
+    `-IfStmt 0x7f90ba0263d8 <line:3:3, line:5:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f90ba026378 <line:3:7, line:4:59> 'int' '=='
+      | |-ParenExpr 0x7f90ba026118 <line:3:7, col:49> 'struct buffer *'
+      | | `-CStyleCastExpr 0x7f90ba0260f0 <col:8, col:48> 'struct buffer *' <IntegralToPointer>
+      | |   `-ParenExpr 0x7f90ba025d20 <col:26, col:48> 'unsigned int'
+      | |     `-CStyleCastExpr 0x7f90ba025c18 <col:27, col:42> 'unsigned int' <IntegralCast>
+      | |       `-ImplicitCastExpr 0x7f90ba025c00 <col:42> 'int' <LValueToRValue>
+      | |         `-DeclRefExpr 0x7f90ba025bc0 <col:42> 'int' lvalue ParmVar 0x7f90b9827138 'buffer' 'int'
+      | `-ParenExpr 0x7f90ba026358 <line:4:7, col:59> 'struct buffer *'
+      |   `-BinaryOperator 0x7f90ba026330 <col:8, col:58> 'struct buffer *' ','
+      |     |-IntegerLiteral 0x7f90ba026138 <col:8> 'int' 0
+      |     `-CStyleCastExpr 0x7f90ba026308 <col:10, col:58> 'struct buffer *' <IntegralToPointer>
+      |       `-ParenExpr 0x7f90ba0262e8 <col:28, col:58> 'unsigned int'
+      |         `-CStyleCastExpr 0x7f90ba026268 <col:29, col:57> 'unsigned int' <IntegralCast>
+      |           `-ParenExpr 0x7f90ba026248 <col:44, col:57> 'int'
+      |             `-BinaryOperator 0x7f90ba0261d8 <col:45, col:56> 'int' '&'
+      |               |-ImplicitCastExpr 0x7f90ba0261c0 <col:45, col:52> 'int' <LValueToRValue>
+      |               | `-ParenExpr 0x7f90ba026180 <col:45, col:52> 'int' lvalue
+      |               |   `-DeclRefExpr 0x7f90ba026158 <col:46> 'int' lvalue ParmVar 0x7f90b9827138 'buffer' 'int'
+      |               `-IntegerLiteral 0x7f90ba0261a0 <col:56> 'int' 1
+      |-ReturnStmt 0x7f90ba0263c0 <line:5:5, col:12>
+      | `-IntegerLiteral 0x7f90ba0263a0 <col:12> 'int' 1
+      `-<<<NULL>>>

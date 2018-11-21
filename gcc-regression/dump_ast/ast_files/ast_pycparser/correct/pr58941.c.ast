@@ -1,0 +1,111 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Typedef: SMsg, [], ['typedef']
+    TypeDecl: SMsg, []
+      Struct: None
+        Decl: msgLength, [], [], []
+          TypeDecl: msgLength, []
+            IdentifierType: ['int']
+        Decl: data, [], [], []
+          ArrayDecl: []
+            TypeDecl: data, []
+              IdentifierType: ['unsigned', 'char']
+            Constant: int, 1000
+  Typedef: SData, [], ['typedef']
+    TypeDecl: SData, []
+      Struct: None
+        Decl: dummy, [], [], []
+          TypeDecl: dummy, []
+            IdentifierType: ['int']
+        Decl: d, [], [], []
+          ArrayDecl: []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+            Constant: int, 0
+  Decl: condition, [], [], []
+    TypeDecl: condition, []
+      IdentifierType: ['int']
+    Constant: int, 3
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: msg, [], [], []
+        TypeDecl: msg, []
+          IdentifierType: ['SMsg']
+      Decl: pData, [], [], []
+        PtrDecl: []
+          TypeDecl: pData, []
+            IdentifierType: ['SData']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['SData']
+          StructRef: .
+            ID: msg
+            ID: data
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 1
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              StructRef: ->
+                ID: pData
+                ID: d
+              ID: i
+            Constant: int, 0
+          If: 
+            BinaryOp: &
+              ID: condition
+              Constant: int, 1
+            Assignment: |=
+              ArrayRef: 
+                StructRef: ->
+                  ID: pData
+                  ID: d
+                ID: i
+              Constant: int, 0x55
+          If: 
+            BinaryOp: &
+              ID: condition
+              Constant: int, 2
+            Assignment: |=
+              ArrayRef: 
+                StructRef: ->
+                  ID: pData
+                  ID: d
+                ID: i
+              Constant: int, 0xaa
+      If: 
+        BinaryOp: !=
+          ArrayRef: 
+            StructRef: ->
+              ID: pData
+              ID: d
+            Constant: int, 0
+          Constant: int, 0xff
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

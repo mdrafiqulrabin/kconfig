@@ -1,0 +1,142 @@
+FileAST: 
+  FuncDef: 
+    Decl: test_func_00, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['char']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: test_func_00, []
+            IdentifierType: ['char']
+    Compound: 
+      DoWhile: 
+        UnaryOp: --
+          ID: c
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: --
+                ID: p
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['char']
+              ID: x
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: --
+                ID: p
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['char']
+              ID: x
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: --
+                ID: p
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['char']
+              ID: x
+      Return: 
+        ID: p
+  FuncDef: 
+    Decl: test_func_01, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['short']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: test_func_01, []
+            IdentifierType: ['short']
+    Compound: 
+      DoWhile: 
+        UnaryOp: --
+          ID: c
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: --
+                ID: p
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['short']
+              ID: x
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: --
+                ID: p
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['short']
+              ID: x
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: --
+                ID: p
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['short']
+              ID: x
+      Return: 
+        ID: p
+  FuncDef: 
+    Decl: test_func_02, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: test_func_02, []
+            IdentifierType: ['int']
+    Compound: 
+      DoWhile: 
+        UnaryOp: --
+          ID: c
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: --
+                ID: p
+            ID: x
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: --
+                ID: p
+            ID: x
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: --
+                ID: p
+            ID: x
+      Return: 
+        ID: p

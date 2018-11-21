@@ -1,0 +1,39 @@
+FileAST: 
+  Decl: b, [], [], []
+    PtrDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['char']
+  Decl: d, [], [], []
+    ArrayDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['char']
+      Constant: int, 100
+  Decl: a, [], [], []
+    FuncDecl: 
+      TypeDecl: a, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: c, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: c, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_strcat
+        ExprList: 
+          ID: d
+          Constant: string, "12345"
+      If: 
+        BinaryOp: ==
+          FuncCall: 
+            ID: __builtin_strstr
+            ExprList: 
+              ID: b
+              ID: d
+          ID: b
+        FuncCall: 
+          ID: a

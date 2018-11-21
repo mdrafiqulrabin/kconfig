@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7febf30264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7febf3026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7febf3026740 '__int128'
+|-TypedefDecl 0x7febf3026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7febf3026760 'unsigned __int128'
+|-TypedefDecl 0x7febf3026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7febf3026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7febf3026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7febf3026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7febf3026dc0 'char *'
+|   `-BuiltinType 0x7febf3026560 'char'
+|-TypedefDecl 0x7febf30270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7febf3027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7febf3026ee0 'struct __va_list_tag'
+|     `-Record 0x7febf3026e58 '__va_list_tag'
+`-FunctionDecl 0x7febf30774d8 <c_files/pr33555.c:5:1, line:8:1> line:5:5 test 'int (unsigned long, unsigned long)'
+  |-ParmVarDecl 0x7febf3027138 <col:10, col:24> col:24 used a 'unsigned long'
+  |-ParmVarDecl 0x7febf3077400 <col:27, col:41> col:41 used b 'unsigned long'
+  `-CompoundStmt 0x7febf30776c0 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7febf30776a8 <line:7:3, col:17>
+      `-UnaryOperator 0x7febf3077688 <col:10, col:17> 'int' prefix '-'
+        `-ParenExpr 0x7febf3077668 <col:11, col:17> 'int'
+          `-BinaryOperator 0x7febf3077640 <col:12, col:16> 'int' '<'
+            |-ImplicitCastExpr 0x7febf3077610 <col:12> 'unsigned long' <LValueToRValue>
+            | `-DeclRefExpr 0x7febf30775c0 <col:12> 'unsigned long' lvalue ParmVar 0x7febf3027138 'a' 'unsigned long'
+            `-ImplicitCastExpr 0x7febf3077628 <col:16> 'unsigned long' <LValueToRValue>
+              `-DeclRefExpr 0x7febf30775e8 <col:16> 'unsigned long' lvalue ParmVar 0x7febf3077400 'b' 'unsigned long'

@@ -1,0 +1,161 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+          Constant: int, 3
+  Decl: None, [], [], []
+    Union: B
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+          Constant: int, 3
+  Decl: t1, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: t1, []
+          IdentifierType: ['int']
+        Constant: int, 10
+      Constant: int, 10
+    InitList: 
+      NamedInitializer: 
+        Constant: int, 11
+        Constant: int, 1
+        Constant: int, 2
+      NamedInitializer: 
+        Constant: int, 12
+        Constant: int, 1
+        Constant: int, 3
+  Decl: t2, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: t2, []
+          IdentifierType: ['int']
+        Constant: int, 10
+      Constant: int, 10
+    InitList: 
+      NamedInitializer: 
+        Constant: int, 11
+        Constant: int, 1
+        Constant: int, 2
+      NamedInitializer: 
+        InitList: 
+          NamedInitializer: 
+            Constant: int, 12
+            Constant: int, 3
+        Constant: int, 1
+  Decl: t3, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: t3, []
+          IdentifierType: ['int']
+        Constant: int, 10
+      Constant: int, 10
+    InitList: 
+      NamedInitializer: 
+        Constant: int, 11
+        Constant: int, 1
+        Constant: int, 2
+      NamedInitializer: 
+        Constant: int, 12
+        Constant: int, 1
+        Constant: int, 2
+  Decl: t4, [], [], []
+    ArrayDecl: []
+      TypeDecl: t4, []
+        Struct: A
+      Constant: int, 2
+    InitList: 
+      NamedInitializer: 
+        Constant: int, 1
+        Constant: int, 0
+        ID: b
+        Constant: int, 0
+      NamedInitializer: 
+        Constant: int, 2
+        Constant: int, 0
+        ID: b
+        Constant: int, 1
+      NamedInitializer: 
+        Constant: int, 3
+        Constant: int, 0
+        ID: b
+        Constant: int, 2
+  Decl: t5, [], [], []
+    ArrayDecl: []
+      TypeDecl: t5, []
+        Struct: A
+      Constant: int, 2
+    InitList: 
+      NamedInitializer: 
+        Constant: int, 1
+        Constant: int, 0
+        ID: b
+        Constant: int, 0
+      NamedInitializer: 
+        Constant: int, 2
+        Constant: int, 0
+        ID: b
+        Constant: int, 1
+      NamedInitializer: 
+        InitList: 
+          Constant: int, 3
+        Constant: int, 0
+        ID: b
+  Decl: t6, [], [], []
+    TypeDecl: t6, []
+      Union: B
+    InitList: 
+      NamedInitializer: 
+        Constant: int, 1
+        ID: b
+        Constant: int, 0
+      NamedInitializer: 
+        Constant: int, 2
+        ID: b
+        Constant: int, 1
+      NamedInitializer: 
+        Constant: int, 3
+        ID: b
+        Constant: int, 2
+  Decl: t7, [], [], []
+    TypeDecl: t7, []
+      Union: B
+    InitList: 
+      NamedInitializer: 
+        Constant: int, 1
+        ID: b
+        Constant: int, 0
+      NamedInitializer: 
+        Constant: int, 2
+        ID: b
+        Constant: int, 1
+      NamedInitializer: 
+        InitList: 
+          Constant: int, 2
+        ID: b
+  Decl: t8, [], [], []
+    TypeDecl: t8, []
+      Union: B
+    InitList: 
+      NamedInitializer: 
+        Constant: int, 1
+        ID: b
+        Constant: int, 0
+      NamedInitializer: 
+        Constant: int, 2
+        ID: b
+        Constant: int, 1
+      NamedInitializer: 
+        Constant: int, 3
+        ID: b
+        Constant: int, 1

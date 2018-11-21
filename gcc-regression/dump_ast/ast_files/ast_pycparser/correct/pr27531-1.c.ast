@@ -1,0 +1,393 @@
+FileAST: 
+  Typedef: FILE, [], ['typedef']
+    TypeDecl: FILE, []
+      Struct: _IO_FILE
+  Decl: RCSname, ['const'], [], []
+    PtrDecl: []
+      TypeDecl: RCSname, ['const']
+        IdentifierType: ['char']
+  Decl: Locks, [], [], []
+    PtrDecl: []
+      TypeDecl: Locks, []
+        IdentifierType: ['void']
+  Decl: Head, [], [], []
+    PtrDecl: []
+      TypeDecl: Head, []
+        IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: Revpairs
+      Decl: rnext, [], [], []
+        PtrDecl: []
+          TypeDecl: rnext, []
+            Struct: Revpairs
+  Decl: strchr, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: s, ['const'], [], []
+          PtrDecl: []
+            TypeDecl: s, ['const']
+              IdentifierType: ['char']
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+      PtrDecl: []
+        TypeDecl: strchr, []
+          IdentifierType: ['char']
+  Decl: fprintf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['FILE']
+        Decl: format, ['const'], [], []
+          PtrDecl: []
+            TypeDecl: format, ['const']
+              IdentifierType: ['char']
+        EllipsisParam: 
+      TypeDecl: fprintf, []
+        IdentifierType: ['int']
+  Decl: getrevpairs, [], ['static'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: getrevpairs, []
+        IdentifierType: ['void']
+  Decl: branchflag, [], ['static'], []
+    TypeDecl: branchflag, []
+      IdentifierType: ['int']
+  Decl: revlist, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: revlist, []
+        Struct: Revpairs
+  Decl: Revlst, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: Revlst, []
+        Struct: Revpairs
+  Decl: warn, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: msg, ['const'], [], []
+          PtrDecl: []
+            TypeDecl: msg, ['const']
+              IdentifierType: ['char']
+        Decl: argv, [], [], []
+          PtrDecl: []
+            TypeDecl: argv, []
+              IdentifierType: ['char']
+      TypeDecl: warn, []
+        IdentifierType: ['int']
+  Decl: error, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: msg, ['const'], [], []
+          PtrDecl: []
+            TypeDecl: msg, ['const']
+              IdentifierType: ['char']
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+        Decl: argv, [], [], []
+          PtrDecl: []
+            TypeDecl: argv, []
+              IdentifierType: ['char']
+      TypeDecl: error, []
+        IdentifierType: ['int']
+  Decl: recentdate, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: foo, [], [], []
+          PtrDecl: []
+            TypeDecl: foo, []
+              IdentifierType: ['void']
+        Decl: bar, [], [], []
+          PtrDecl: []
+            TypeDecl: bar, []
+              IdentifierType: ['void']
+      TypeDecl: recentdate, []
+        IdentifierType: ['int']
+  Decl: t, [], [], []
+    PtrDecl: []
+      TypeDecl: t, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argc, [], [], []
+            TypeDecl: argc, []
+              IdentifierType: ['int']
+          Decl: argv, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: argv, []
+                  IdentifierType: ['char']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: out, [], [], []
+        PtrDecl: []
+          TypeDecl: out, []
+            IdentifierType: ['FILE']
+      Decl: a, [], [], []
+        PtrDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+      Decl: newargv, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: newargv, []
+              IdentifierType: ['char']
+      Decl: currdate, [], [], []
+        PtrDecl: []
+          TypeDecl: currdate, []
+            IdentifierType: ['void']
+      Decl: descflag, [], [], []
+        TypeDecl: descflag, []
+          IdentifierType: ['int']
+      Decl: selectflag, [], [], []
+        TypeDecl: selectflag, []
+          IdentifierType: ['int']
+      Decl: onlylockflag, [], [], []
+        TypeDecl: onlylockflag, []
+          IdentifierType: ['int']
+      Decl: onlyRCSflag, [], [], []
+        TypeDecl: onlyRCSflag, []
+          IdentifierType: ['int']
+      Decl: shownames, [], [], []
+        TypeDecl: shownames, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: descflag
+        Assignment: =
+          ID: selectflag
+          Assignment: =
+            ID: shownames
+            Constant: int, 1
+      Assignment: =
+        ID: onlylockflag
+        Assignment: =
+          ID: onlyRCSflag
+          Constant: int, 0
+      While: 
+        ExprList: 
+          Assignment: =
+            ID: a
+            UnaryOp: *
+              UnaryOp: ++
+                ID: argv
+          BinaryOp: <
+            Constant: int, 0
+            UnaryOp: --
+              ID: argc
+        Compound: 
+          Switch: 
+            UnaryOp: *
+              UnaryOp: p++
+                ID: a
+            Compound: 
+              Case: 
+                Constant: char, 'L'
+                Assignment: =
+                  ID: onlylockflag
+                  Constant: int, 1
+              Case: 
+                Constant: char, 'N'
+                Assignment: =
+                  ID: shownames
+                  Constant: int, 0
+              Case: 
+                Constant: char, 'R'
+                Assignment: =
+                  ID: t
+                  ID: a
+              Case: 
+                Constant: char, 'b'
+                Assignment: =
+                  ID: branchflag
+                  Constant: int, 1
+              Case: 
+                Constant: char, 'r'
+                FuncCall: 
+                  ID: getrevpairs
+                  ExprList: 
+                    ID: a
+          If: 
+            BinaryOp: &&
+              ID: onlylockflag
+              UnaryOp: !
+                ID: Locks
+            FuncCall: 
+              ID: fprintf
+              ExprList: 
+                ID: out
+                Constant: string, "%s\n"
+                ID: RCSname
+          If: 
+            ID: shownames
+            While: 
+              ID: currdate
+              FuncCall: 
+                ID: recentdate
+                ExprList: 
+                  ID: Head
+                  ID: currdate
+  FuncDef: 
+    Decl: getrevpairs, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argv, [], [], []
+            PtrDecl: []
+              TypeDecl: argv, []
+                IdentifierType: ['char']
+        TypeDecl: getrevpairs, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['char']
+      Decl: nextrevpair, [], [], []
+        PtrDecl: []
+          TypeDecl: nextrevpair, []
+            Struct: Revpairs
+      Decl: separator, [], [], []
+        TypeDecl: separator, []
+          IdentifierType: ['int']
+      If: 
+        FuncCall: 
+          ID: strchr
+          ExprList: 
+            ID: argv
+            Constant: char, ':'
+        Assignment: =
+          ID: separator
+          Constant: char, ':'
+        Compound: 
+          If: 
+            FuncCall: 
+              ID: strchr
+              ExprList: 
+                ID: argv
+                Constant: char, '-'
+            FuncCall: 
+              ID: warn
+              ExprList: 
+                Constant: string, "`-' is obsolete in `-r%s'; use `:' instead"
+                ID: argv
+          Assignment: =
+            ID: separator
+            Constant: char, '-'
+      For: 
+        Compound: 
+          Assignment: =
+            StructRef: ->
+              ID: nextrevpair
+              ID: rnext
+            ID: revlist
+          For: 
+            Assignment: =
+              ID: c
+              UnaryOp: *
+                UnaryOp: ++
+                  ID: argv
+            Compound: 
+              Switch: 
+                ID: c
+                Compound: 
+                  Default: 
+                    Continue: 
+                  Case: 
+                    Constant: char, ' '
+                  Case: 
+                    Constant: char, '\t'
+                  Case: 
+                    Constant: char, '\n'
+                    Break: 
+                  Case: 
+                    Constant: char, ':'
+                  Case: 
+                    Constant: char, '-'
+                    If: 
+                      BinaryOp: ==
+                        ID: c
+                        ID: separator
+                      Continue: 
+              Break: 
+          If: 
+            UnaryOp: !
+              ID: c
+            Break: 
+          FuncCall: 
+            ID: error
+            ExprList: 
+              Constant: string, "missing `,' near `%c%s'"
+              ID: c
+              BinaryOp: +
+                ID: argv
+                Constant: int, 1
+  FuncDef: 
+    Decl: warn, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: msg, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: msg, ['const']
+                IdentifierType: ['char']
+          Decl: argv, [], [], []
+            PtrDecl: []
+              TypeDecl: argv, []
+                IdentifierType: ['char']
+        TypeDecl: warn, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: t
+        Constant: int, 0
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: error, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: msg, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: msg, ['const']
+                IdentifierType: ['char']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: argv, [], [], []
+            PtrDecl: []
+              TypeDecl: argv, []
+                IdentifierType: ['char']
+        TypeDecl: error, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: t
+        Constant: int, 0
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: recentdate, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: foo, [], [], []
+            PtrDecl: []
+              TypeDecl: foo, []
+                IdentifierType: ['void']
+          Decl: bar, [], [], []
+            PtrDecl: []
+              TypeDecl: bar, []
+                IdentifierType: ['void']
+        TypeDecl: recentdate, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: t
+        Constant: int, 0
+      Return: 
+        Constant: int, 0

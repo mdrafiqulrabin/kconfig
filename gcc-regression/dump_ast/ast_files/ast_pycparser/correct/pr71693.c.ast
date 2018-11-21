@@ -1,0 +1,47 @@
+FileAST: 
+  Decl: v, [], [], []
+    TypeDecl: v, []
+      IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: v
+        BinaryOp: |
+          BinaryOp: <<
+            BinaryOp: &
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'short']
+                BinaryOp: |
+                  BinaryOp: |
+                    Constant: int, 0x0001
+                    BinaryOp: &
+                      ID: x
+                      Constant: int, 0x0070
+                  Constant: int, 0x0100
+              Constant: int, 0x00ffU
+            Constant: int, 8
+          BinaryOp: &
+            BinaryOp: >>
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'short']
+                BinaryOp: |
+                  BinaryOp: |
+                    Constant: int, 0x0001
+                    BinaryOp: &
+                      ID: x
+                      Constant: int, 0x0070
+                  Constant: int, 0x0100
+              Constant: int, 8
+            Constant: int, 0x00ffU

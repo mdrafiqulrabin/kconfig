@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7f80148264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8014826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8014826740 '__int128'
+|-TypedefDecl 0x7f8014826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8014826760 'unsigned __int128'
+|-TypedefDecl 0x7f8014826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8014826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8014826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8014826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8014826dc0 'char *'
+|   `-BuiltinType 0x7f8014826560 'char'
+|-TypedefDecl 0x7f80148270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8014827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8014826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8014826e58 '__va_list_tag'
+|-RecordDecl 0x7f8014827120 <c_files/pr48237.c:4:1, line:8:1> line:4:7 union double_union definition
+| |-FieldDecl 0x7f8015025a00 <line:6:3, col:10> col:10 referenced d 'double'
+| `-FieldDecl 0x7f8015025ad0 <line:7:3, col:10> col:7 referenced i 'int [2]'
+|-FunctionDecl 0x7f8015025bf0 <line:10:1, col:19> col:6 used bar 'void (int, ...)'
+| `-ParmVarDecl 0x7f8015025b30 <col:11> col:14 'int'
+`-FunctionDecl 0x7f8015025db0 <line:12:1, line:22:1> line:13:1 foo 'void (double)'
+  |-ParmVarDecl 0x7f8015025ce8 <col:6, col:13> col:13 used d 'double'
+  `-CompoundStmt 0x7f8015026408 <line:14:1, line:22:1>
+    |-DeclStmt 0x7f8015025fd0 <line:15:3, col:32>
+    | `-VarDecl 0x7f8015025ea0 <col:3, col:31> col:22 used du 'union double_union':'union double_union' cinit
+    |   `-InitListExpr 0x7f8015025f70 <col:27, col:31> 'union double_union':'union double_union' field Field 0x7f8015025a00 'd' 'double'
+    |     `-ImplicitCastExpr 0x7f8015025fb8 <col:29> 'double' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f8015025f00 <col:29> 'double' lvalue ParmVar 0x7f8015025ce8 'd' 'double'
+    `-WhileStmt 0x7f80150263e8 <line:16:3, line:21:5>
+      |-<<<NULL>>>
+      |-IntegerLiteral 0x7f8015025fe8 <line:16:10> 'int' 1
+      `-CompoundStmt 0x7f80150263b8 <line:17:5, line:21:5>
+        |-CompoundAssignOperator 0x7f8015026118 <line:18:7, col:18> 'int' '-=' ComputeLHSTy='long' ComputeResultTy='long'
+        | |-ArraySubscriptExpr 0x7f80150260d0 <col:7, col:13> 'int' lvalue
+        | | |-ImplicitCastExpr 0x7f80150260b8 <col:7, col:10> 'int *' <ArrayToPointerDecay>
+        | | | `-MemberExpr 0x7f8015026030 <col:7, col:10> 'int [2]' lvalue .i 0x7f8015025ad0
+        | | |   `-DeclRefExpr 0x7f8015026008 <col:7> 'union double_union':'union double_union' lvalue Var 0x7f8015025ea0 'du' 'union double_union':'union double_union'
+        | | `-IntegerLiteral 0x7f8015026068 <col:12> 'int' 1
+        | `-IntegerLiteral 0x7f80150260f8 <col:18> 'long' 1048576
+        |-CallExpr 0x7f8015026290 <line:19:7, col:19> 'void'
+        | |-ImplicitCastExpr 0x7f8015026278 <col:7> 'void (*)(int, ...)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7f80150261a0 <col:7> 'void (int, ...)' Function 0x7f8015025bf0 'bar' 'void (int, ...)'
+        | |-IntegerLiteral 0x7f80150261c8 <col:12> 'int' 0
+        | `-ImplicitCastExpr 0x7f80150262c8 <col:15, col:18> 'double' <LValueToRValue>
+        |   `-MemberExpr 0x7f8015026210 <col:15, col:18> 'double' lvalue .d 0x7f8015025a00
+        |     `-DeclRefExpr 0x7f80150261e8 <col:15> 'union double_union':'union double_union' lvalue Var 0x7f8015025ea0 'du' 'union double_union':'union double_union'
+        `-CompoundAssignOperator 0x7f8015026380 <line:20:7, col:15> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+          |-MemberExpr 0x7f8015026308 <col:7, col:10> 'double' lvalue .d 0x7f8015025a00
+          | `-DeclRefExpr 0x7f80150262e0 <col:7> 'union double_union':'union double_union' lvalue Var 0x7f8015025ea0 'du' 'union double_union':'union double_union'
+          `-ImplicitCastExpr 0x7f8015026368 <col:15> 'double' <LValueToRValue>
+            `-DeclRefExpr 0x7f8015026340 <col:15> 'double' lvalue ParmVar 0x7f8015025ce8 'd' 'double'

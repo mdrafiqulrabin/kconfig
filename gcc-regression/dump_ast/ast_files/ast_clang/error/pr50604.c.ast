@@ -1,0 +1,72 @@
+c_files/pr50604.c:5:10: fatal error: 'strlenopt.h' file not found
+#include "strlenopt.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fb440819ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb44081a420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb44081a140 '__int128'
+|-TypedefDecl 0x7fb44081a490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb44081a160 'unsigned __int128'
+|-TypedefDecl 0x7fb44081a768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb44081a570 'struct __NSConstantString_tag'
+|   `-Record 0x7fb44081a4e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb44081a800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb44081a7c0 'char *'
+|   `-BuiltinType 0x7fb440819f60 'char'
+|-TypedefDecl 0x7fb44081aac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb44081aa70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb44081a8e0 'struct __va_list_tag'
+|     `-Record 0x7fb44081a858 '__va_list_tag'
+|-TypedefDecl 0x7fb44081ab30 <c_files/pr50604.c:7:1, col:14> col:14 referenced T 'char'
+| `-BuiltinType 0x7fb440819f60 'char'
+|-VarDecl 0x7fb440846c48 <line:8:1, col:18> col:16 used s 'const T []' extern
+|-FunctionDecl 0x7fb440846e30 <line:10:1, line:17:1> line:11:1 foo 'void (T *)'
+| |-ParmVarDecl 0x7fb440846d28 <col:6, col:9> col:9 used x 'T *'
+| `-CompoundStmt 0x7fb440847ae0 <line:12:1, line:17:1>
+|   |-DeclStmt 0x7fb440847378 <line:13:3, col:32>
+|   | `-VarDecl 0x7fb440846ee8 <col:3, col:31> col:9 used r 'char *' cinit
+|   |   `-ImplicitCastExpr 0x7fb440847360 <col:13, col:31> 'char *' <BitCast>
+|   |     `-CallExpr 0x7fb440847330 <col:13, col:31> 'void *'
+|   |       |-ImplicitCastExpr 0x7fb440847318 <col:13> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+|   |       | `-DeclRefExpr 0x7fb440847088 <col:13> 'void *(unsigned long)' Function 0x7fb440846f88 'malloc' 'void *(unsigned long)'
+|   |       `-CallExpr 0x7fb440847290 <col:21, col:30> 'unsigned long'
+|   |         |-ImplicitCastExpr 0x7fb440847278 <col:21> 'unsigned long (*)(const char *)' <FunctionToPointerDecay>
+|   |         | `-DeclRefExpr 0x7fb4408471e8 <col:21> 'unsigned long (const char *)' Function 0x7fb4408470e8 'strlen' 'unsigned long (const char *)'
+|   |         `-ImplicitCastExpr 0x7fb4408472d8 <col:29> 'const char *' <BitCast>
+|   |           `-ImplicitCastExpr 0x7fb4408472c0 <col:29> 'T *' <LValueToRValue>
+|   |             `-DeclRefExpr 0x7fb440847210 <col:29> 'T *' lvalue ParmVar 0x7fb440846d28 'x' 'T *'
+|   |-CallExpr 0x7fb440847650 <line:14:3, col:15> 'char *'
+|   | |-ImplicitCastExpr 0x7fb440847638 <col:3> 'char *(*)(char *, const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fb440847538 <col:3> 'char *(char *, const char *)' Function 0x7fb4408473d0 'strcpy' 'char *(char *, const char *)'
+|   | |-ImplicitCastExpr 0x7fb440847688 <col:11> 'char *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fb440847560 <col:11> 'char *' lvalue Var 0x7fb440846ee8 'r' 'char *'
+|   | `-ImplicitCastExpr 0x7fb4408476a0 <col:14> 'const T *' <ArrayToPointerDecay>
+|   |   `-DeclRefExpr 0x7fb440847588 <col:14> 'const T []' lvalue Var 0x7fb440846c48 's' 'const T []'
+|   |-CallExpr 0x7fb4408478e0 <line:15:3, col:15> 'char *'
+|   | |-ImplicitCastExpr 0x7fb4408478c8 <col:3> 'char *(*)(char *, const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fb440847820 <col:3> 'char *(char *, const char *)' Function 0x7fb4408476b8 'strcat' 'char *(char *, const char *)'
+|   | |-ImplicitCastExpr 0x7fb440847918 <col:11> 'char *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fb440847848 <col:11> 'char *' lvalue Var 0x7fb440846ee8 'r' 'char *'
+|   | `-ImplicitCastExpr 0x7fb440847948 <col:14> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fb440847930 <col:14> 'T *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fb440847870 <col:14> 'T *' lvalue ParmVar 0x7fb440846d28 'x' 'T *'
+|   `-CallExpr 0x7fb440847a60 <line:16:3, col:17> 'char *'
+|     |-ImplicitCastExpr 0x7fb440847a48 <col:3> 'char *(*)(char *, const char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fb440847960 <col:3> 'char *(char *, const char *)' Function 0x7fb4408476b8 'strcat' 'char *(char *, const char *)'
+|     |-ImplicitCastExpr 0x7fb440847a98 <col:11> 'char *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fb440847988 <col:11> 'char *' lvalue Var 0x7fb440846ee8 'r' 'char *'
+|     `-ImplicitCastExpr 0x7fb440847ac8 <col:14> 'const char *' <BitCast>
+|       `-ImplicitCastExpr 0x7fb440847ab0 <col:14> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7fb4408479e8 <col:14> 'char [2]' lvalue "/"
+|-FunctionDecl 0x7fb440846f88 <line:13:13> col:13 implicit used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7fb440847020 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fb4408470e8 <col:21> col:21 implicit used strlen 'unsigned long (const char *)' extern
+| `-ParmVarDecl 0x7fb440847180 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7fb4408473d0 <line:14:3> col:3 implicit used strcpy 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x7fb440847468 <<invalid sloc>> <invalid sloc> 'char *'
+| `-ParmVarDecl 0x7fb4408474c8 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7fb4408476b8 <line:15:3> col:3 implicit used strcat 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x7fb440847750 <<invalid sloc>> <invalid sloc> 'char *'
+| `-ParmVarDecl 0x7fb4408477b0 <<invalid sloc>> <invalid sloc> 'const char *'
+`-VarDecl 0x7fb440847b38 prev 0x7fb440846c48 <line:19:1, col:15> col:9 used s 'const T [18]' cinit
+  `-StringLiteral 0x7fb440847bd8 <col:15> 'const T [18]' lvalue "abcdefghijklmnopq"

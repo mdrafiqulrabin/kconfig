@@ -1,0 +1,62 @@
+c_files/pr61060.c:7:58: warning: unknown attribute 'artificial' ignored [-Wunknown-attributes]
+extern inline __attribute__ ((gnu_inline, always_inline, artificial))
+                                                         ^
+1 warning generated.
+TranslationUnitDecl 0x7fc0798264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc079826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc079826740 '__int128'
+|-TypedefDecl 0x7fc079826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc079826760 'unsigned __int128'
+|-TypedefDecl 0x7fc079826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc079826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc079826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc079826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc079826dc0 'char *'
+|   `-BuiltinType 0x7fc079826560 'char'
+|-TypedefDecl 0x7fc0798270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc079827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc079826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc079826e58 '__va_list_tag'
+|-TypedefDecl 0x7fc079827138 <c_files/pr61060.c:5:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fc079826680 'unsigned long'
+|-FunctionDecl 0x7fc07a026c48 <line:8:7> col:7 implicit used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fc07a026ce0 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fc07a026d40 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7fc07a026da0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fc07a026e18 prev 0x7fc07a026c48 <line:7:1, line:11:1> line:8:7 used memset 'void *(void *, int, unsigned long)' extern inline
+| |-ParmVarDecl 0x7fc07a026a00 <col:15, col:21> col:21 used dest 'void *'
+| |-ParmVarDecl 0x7fc07a026a78 <col:27, col:31> col:31 used ch 'int'
+| |-ParmVarDecl 0x7fc07a026b10 <col:35, col:42> col:42 used len 'size_t':'unsigned long'
+| |-CompoundStmt 0x7fc07a027300 <line:9:1, line:11:1>
+| | `-ReturnStmt 0x7fc07a0272e8 <line:10:3, col:41>
+| |   `-CallExpr 0x7fc07a027260 <col:10, col:41> 'void *'
+| |     |-ImplicitCastExpr 0x7fc07a027248 <col:10> 'void *(*)(void *, int, unsigned long)' <BuiltinFnToFnPtr>
+| |     | `-DeclRefExpr 0x7fc07a027138 <col:10> '<builtin fn type>' Function 0x7fc07a026f20 '__builtin_memset' 'void *(void *, int, unsigned long)'
+| |     |-ImplicitCastExpr 0x7fc07a0272a0 <col:28> 'void *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fc07a027160 <col:28> 'void *' lvalue ParmVar 0x7fc07a026a00 'dest' 'void *'
+| |     |-ImplicitCastExpr 0x7fc07a0272b8 <col:34> 'int' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fc07a027188 <col:34> 'int' lvalue ParmVar 0x7fc07a026a78 'ch' 'int'
+| |     `-ImplicitCastExpr 0x7fc07a0272d0 <col:38> 'size_t':'unsigned long' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fc07a0271b0 <col:38> 'size_t':'unsigned long' lvalue ParmVar 0x7fc07a026b10 'len' 'size_t':'unsigned long'
+| |-AlwaysInlineAttr 0x7fc07a026ec8 <line:7:43> always_inline
+| `-GNUInlineAttr 0x7fc07a026f10 <col:31>
+|-FunctionDecl 0x7fc07a026f20 <line:10:10> col:10 implicit used __builtin_memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fc07a026fb8 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fc07a027018 <<invalid sloc>> <invalid sloc> 'int'
+| |-ParmVarDecl 0x7fc07a027078 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fc07a0270f0 <col:10> Implicit
+|-VarDecl 0x7fc07a027398 <line:13:1, col:12> col:6 used buf 'char [10]'
+`-FunctionDecl 0x7fc07a027500 <line:15:1, line:19:1> line:16:1 foo 'void (void)'
+  `-CompoundStmt 0x7fc07a027740 <line:17:1, line:19:1>
+    `-CallExpr 0x7fc07a0276a0 <line:18:3, col:31> 'void *'
+      |-ImplicitCastExpr 0x7fc07a027688 <col:3> 'void *(*)(void *, int, unsigned long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc07a027598 <col:3> 'void *(void *, int, unsigned long)' Function 0x7fc07a026e18 'memset' 'void *(void *, int, unsigned long)'
+      |-ImplicitCastExpr 0x7fc07a0276f8 <col:11> 'void *' <BitCast>
+      | `-ImplicitCastExpr 0x7fc07a0276e0 <col:11> 'char *' <ArrayToPointerDecay>
+      |   `-DeclRefExpr 0x7fc07a0275c0 <col:11> 'char [10]' lvalue Var 0x7fc07a027398 'buf' 'char [10]'
+      |-ImplicitCastExpr 0x7fc07a027710 <col:16, col:27> 'int' <IntegralCast>
+      | `-UnaryExprOrTypeTraitExpr 0x7fc07a027630 <col:16, col:27> 'unsigned long' sizeof
+      |   `-ParenExpr 0x7fc07a027610 <col:23, col:27> 'char [10]' lvalue
+      |     `-DeclRefExpr 0x7fc07a0275e8 <col:24> 'char [10]' lvalue Var 0x7fc07a027398 'buf' 'char [10]'
+      `-ImplicitCastExpr 0x7fc07a027728 <col:30> 'unsigned long' <IntegralCast>
+        `-IntegerLiteral 0x7fc07a027650 <col:30> 'int' 0

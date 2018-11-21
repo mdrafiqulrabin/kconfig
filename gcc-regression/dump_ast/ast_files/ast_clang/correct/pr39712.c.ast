@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f8ed18264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8ed1826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8ed1826740 '__int128'
+|-TypedefDecl 0x7f8ed1826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8ed1826760 'unsigned __int128'
+|-TypedefDecl 0x7f8ed1826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8ed1826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8ed1826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8ed1826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8ed1826dc0 'char *'
+|   `-BuiltinType 0x7f8ed1826560 'char'
+|-TypedefDecl 0x7f8ed18270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8ed1827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8ed1826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8ed1826e58 '__va_list_tag'
+|-VarDecl 0x7f8ed1877438 <c_files/pr39712.c:3:1, col:19> col:5 used is_table 'int [2][16]'
+|-VarDecl 0x7f8ed18775c0 <line:4:1, col:26> col:5 is_table_lsf 'int [2][2][16]'
+`-FunctionDecl 0x7f8ed1877668 <line:5:1, line:9:1> line:5:6 compute_stereo 'void ()'
+  `-CompoundStmt 0x7f8ed18778e8 <line:6:1, line:9:1>
+    |-DeclStmt 0x7f8ed1877840 <line:7:3, col:20>
+    | `-VarDecl 0x7f8ed18777e0 <col:3, col:19> col:9 used is_tab 'int (*)[16]'
+    `-BinaryOperator 0x7f8ed18778c0 <line:8:3, col:12> 'int (*)[16]' '='
+      |-DeclRefExpr 0x7f8ed1877858 <col:3> 'int (*)[16]' lvalue Var 0x7f8ed18777e0 'is_tab' 'int (*)[16]'
+      `-ImplicitCastExpr 0x7f8ed18778a8 <col:12> 'int (*)[16]' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7f8ed1877880 <col:12> 'int [2][16]' lvalue Var 0x7f8ed1877438 'is_table' 'int [2][16]'

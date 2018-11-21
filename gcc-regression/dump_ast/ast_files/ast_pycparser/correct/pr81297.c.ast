@@ -1,0 +1,44 @@
+FileAST: 
+  FuncDef: 
+    Decl: nf, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: gy, [], [], []
+            TypeDecl: gy, []
+              IdentifierType: ['int']
+          Decl: x0, [], [], []
+            TypeDecl: x0, []
+              IdentifierType: ['int']
+        TypeDecl: nf, []
+          IdentifierType: ['int']
+    Compound: 
+      While: 
+        BinaryOp: <
+          ID: gy
+          Constant: int, 1
+        UnaryOp: ++
+          ID: x0
+      Assignment: +=
+        ID: gy
+        UnaryOp: !
+          UnaryOp: !
+            ID: gy
+      If: 
+        BinaryOp: <
+          ID: gy
+          Constant: int, 0
+        Compound: 
+          Assignment: +=
+            ID: x0
+            ID: gy
+          Return: 
+            TernaryOp: 
+              BinaryOp: >
+                ID: x0
+                BinaryOp: +
+                  ID: gy
+                  ID: x0
+              BinaryOp: /
+                Constant: int, 1
+                Constant: int, 0
+              Constant: int, 1

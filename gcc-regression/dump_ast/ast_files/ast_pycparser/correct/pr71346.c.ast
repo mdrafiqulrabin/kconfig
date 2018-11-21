@@ -1,0 +1,124 @@
+FileAST: 
+  Typedef: rvec, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: rvec, []
+        IdentifierType: ['int']
+      Constant: int, 3
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['float']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['float']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['float']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['float']
+  Decl: e, [], [], []
+    PtrDecl: []
+      TypeDecl: e, []
+        IdentifierType: ['rvec']
+  Decl: f, [], [], []
+    PtrDecl: []
+      TypeDecl: f, []
+        IdentifierType: ['rvec']
+  Decl: fn2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: h, [], [], []
+          TypeDecl: h, []
+            IdentifierType: ['float']
+        Decl: g, [], [], []
+          TypeDecl: g, []
+            IdentifierType: ['float']
+      TypeDecl: fn2, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['float']
+      For: 
+        ID: a
+        UnaryOp: p++
+          ID: a
+        Compound: 
+          Assignment: +=
+            ID: h
+            BinaryOp: *
+              ArrayRef: 
+                ArrayRef: 
+                  ID: e
+                  ID: a
+                Constant: int, 0
+              ArrayRef: 
+                ArrayRef: 
+                  ID: f
+                  ID: a
+                Constant: int, 0
+          Assignment: +=
+            ID: b
+            BinaryOp: *
+              ArrayRef: 
+                ArrayRef: 
+                  ID: e
+                  ID: a
+                Constant: int, 0
+              ArrayRef: 
+                ArrayRef: 
+                  ID: f
+                  ID: a
+                Constant: int, 1
+          Assignment: +=
+            ID: c
+            BinaryOp: *
+              ArrayRef: 
+                ArrayRef: 
+                  ID: e
+                  ID: a
+                Constant: int, 2
+              ArrayRef: 
+                ArrayRef: 
+                  ID: f
+                  ID: a
+                Constant: int, 0
+          Assignment: +=
+            ID: d
+            BinaryOp: *
+              ArrayRef: 
+                ArrayRef: 
+                  ID: e
+                  ID: a
+                Constant: int, 2
+              ArrayRef: 
+                ArrayRef: 
+                  ID: f
+                  ID: a
+                Constant: int, 1
+          Assignment: +=
+            ID: g
+            BinaryOp: *
+              ArrayRef: 
+                ArrayRef: 
+                  ID: e
+                  ID: a
+                Constant: int, 2
+              ArrayRef: 
+                ArrayRef: 
+                  ID: f
+                  ID: a
+                Constant: int, 2
+      FuncCall: 
+        ID: fn2
+        ExprList: 
+          ID: h
+          ID: g

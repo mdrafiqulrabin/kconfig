@@ -1,0 +1,147 @@
+TranslationUnitDecl 0x7fb60a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb60a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb60a026740 '__int128'
+|-TypedefDecl 0x7fb60a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb60a026760 'unsigned __int128'
+|-TypedefDecl 0x7fb60a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb60a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb60a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb60a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb60a026dc0 'char *'
+|   `-BuiltinType 0x7fb60a026560 'char'
+|-TypedefDecl 0x7fb60a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb60a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb60a026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb60a026e58 '__va_list_tag'
+|-TypedefDecl 0x7fb60a027138 <c_files/pr36902.c:4:1, col:23> col:23 __u8 'unsigned char'
+| `-BuiltinType 0x7fb60a026620 'unsigned char'
+|-TypedefDecl 0x7fb60a0271a8 <line:5:1, col:24> col:24 __u16 'unsigned short'
+| `-BuiltinType 0x7fb60a026640 'unsigned short'
+|-FunctionDecl 0x7fb60a077c48 <line:7:1, line:20:1> line:8:1 used foo 'unsigned char *(unsigned char *, const unsigned char *, int)' static inline
+| |-ParmVarDecl 0x7fb60a077a40 <col:5, col:21> col:21 used to 'unsigned char *'
+| |-ParmVarDecl 0x7fb60a077ae0 <col:25, col:47> col:47 used from 'const unsigned char *'
+| |-ParmVarDecl 0x7fb60a077b58 <col:53, col:57> col:57 used n 'int'
+| `-CompoundStmt 0x7fb60a078148 <line:9:1, line:20:1>
+|   |-SwitchStmt 0x7fb60a077d78 <line:10:3, line:18:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fb60a077d60 <line:10:12> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fb60a077d38 <col:12> 'int' lvalue ParmVar 0x7fb60a077b58 'n' 'int'
+|   | `-CompoundStmt 0x7fb60a0780b8 <line:11:5, line:18:5>
+|   |   |-CaseStmt 0x7fb60a077dc8 <line:12:5, line:13:14>
+|   |   | |-IntegerLiteral 0x7fb60a077da8 <line:12:10> 'int' 3
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7fb60a077ed8 <line:13:7, col:14> 'unsigned char' '='
+|   |   |   |-UnaryOperator 0x7fb60a077e40 <col:7, col:8> 'unsigned char' lvalue prefix '*'
+|   |   |   | `-ImplicitCastExpr 0x7fb60a077e28 <col:8> 'unsigned char *' <LValueToRValue>
+|   |   |   |   `-DeclRefExpr 0x7fb60a077e00 <col:8> 'unsigned char *' lvalue ParmVar 0x7fb60a077a40 'to' 'unsigned char *'
+|   |   |   `-ImplicitCastExpr 0x7fb60a077ec0 <col:13, col:14> 'unsigned char' <LValueToRValue>
+|   |   |     `-UnaryOperator 0x7fb60a077ea0 <col:13, col:14> 'const unsigned char' lvalue prefix '*'
+|   |   |       `-ImplicitCastExpr 0x7fb60a077e88 <col:14> 'const unsigned char *' <LValueToRValue>
+|   |   |         `-DeclRefExpr 0x7fb60a077e60 <col:14> 'const unsigned char *' lvalue ParmVar 0x7fb60a077ae0 'from' 'const unsigned char *'
+|   |   |-BreakStmt 0x7fb60a077f00 <line:14:7>
+|   |   |-CaseStmt 0x7fb60a077f28 <line:15:5, line:16:22>
+|   |   | |-IntegerLiteral 0x7fb60a077f08 <line:15:10> 'int' 5
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7fb60a078088 <line:16:7, col:22> 'unsigned char' '='
+|   |   |   |-ArraySubscriptExpr 0x7fb60a077fc0 <col:7, col:11> 'unsigned char' lvalue
+|   |   |   | |-ImplicitCastExpr 0x7fb60a077fa8 <col:7> 'unsigned char *' <LValueToRValue>
+|   |   |   | | `-DeclRefExpr 0x7fb60a077f60 <col:7> 'unsigned char *' lvalue ParmVar 0x7fb60a077a40 'to' 'unsigned char *'
+|   |   |   | `-IntegerLiteral 0x7fb60a077f88 <col:10> 'int' 4
+|   |   |   `-ImplicitCastExpr 0x7fb60a078070 <col:15, col:22> 'unsigned char' <LValueToRValue>
+|   |   |     `-ArraySubscriptExpr 0x7fb60a078048 <col:15, col:22> 'const unsigned char' lvalue
+|   |   |       |-ImplicitCastExpr 0x7fb60a078030 <col:15> 'const unsigned char *' <LValueToRValue>
+|   |   |       | `-DeclRefExpr 0x7fb60a077fe8 <col:15> 'const unsigned char *' lvalue ParmVar 0x7fb60a077ae0 'from' 'const unsigned char *'
+|   |   |       `-IntegerLiteral 0x7fb60a078010 <col:21> 'int' 4
+|   |   `-BreakStmt 0x7fb60a0780b0 <line:17:7>
+|   `-ReturnStmt 0x7fb60a078130 <line:19:3, col:10>
+|     `-ImplicitCastExpr 0x7fb60a078118 <col:10> 'unsigned char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb60a0780f0 <col:10> 'unsigned char *' lvalue ParmVar 0x7fb60a077a40 'to' 'unsigned char *'
+|-RecordDecl 0x7fb60a078170 <line:22:1, line:25:1> line:22:1 struct definition
+| |-FieldDecl 0x7fb60a078238 <line:23:3, col:10> col:10 referenced size_of_select 'int'
+| `-FieldDecl 0x7fb60a078300 <line:24:3, col:29> col:17 referenced pcr_select 'unsigned char [4]'
+|-VarDecl 0x7fb60a0783a0 <line:22:1, line:25:3> col:3 used sel 'struct (anonymous struct at c_files/pr36902.c:22:1)':'struct (anonymous at c_files/pr36902.c:22:1)'
+|-FunctionDecl 0x7fb60a0784e8 <line:27:1, line:35:1> line:27:5 bar 'int (void)'
+| `-CompoundStmt 0x7fb60a078998 <line:28:1, line:35:1>
+|   |-DeclStmt 0x7fb60a078660 <line:29:3, col:31>
+|   | `-VarDecl 0x7fb60a078600 <col:3, col:30> col:24 used buf 'unsigned char [64]' static
+|   |-BinaryOperator 0x7fb60a0786f8 <line:31:3, col:24> 'int' '='
+|   | |-MemberExpr 0x7fb60a0786a0 <col:3, col:7> 'int' lvalue .size_of_select 0x7fb60a078238
+|   | | `-DeclRefExpr 0x7fb60a078678 <col:3> 'struct (anonymous struct at c_files/pr36902.c:22:1)':'struct (anonymous at c_files/pr36902.c:22:1)' lvalue Var 0x7fb60a0783a0 'sel' 'struct (anonymous struct at c_files/pr36902.c:22:1)':'struct (anonymous at c_files/pr36902.c:22:1)'
+|   | `-IntegerLiteral 0x7fb60a0786d8 <col:24> 'int' 3
+|   |-CallExpr 0x7fb60a0788c0 <line:32:3, col:46> 'unsigned char *'
+|   | |-ImplicitCastExpr 0x7fb60a0788a8 <col:3> 'unsigned char *(*)(unsigned char *, const unsigned char *, int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fb60a078770 <col:3> 'unsigned char *(unsigned char *, const unsigned char *, int)' Function 0x7fb60a077c48 'foo' 'unsigned char *(unsigned char *, const unsigned char *, int)'
+|   | |-ImplicitCastExpr 0x7fb60a078900 <col:7> 'unsigned char *' <ArrayToPointerDecay>
+|   | | `-DeclRefExpr 0x7fb60a078798 <col:7> 'unsigned char [64]' lvalue Var 0x7fb60a078600 'buf' 'unsigned char [64]'
+|   | |-ImplicitCastExpr 0x7fb60a078930 <col:12, col:16> 'const unsigned char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7fb60a078918 <col:12, col:16> 'unsigned char *' <ArrayToPointerDecay>
+|   | |   `-MemberExpr 0x7fb60a0787e8 <col:12, col:16> 'unsigned char [4]' lvalue .pcr_select 0x7fb60a078300
+|   | |     `-DeclRefExpr 0x7fb60a0787c0 <col:12> 'struct (anonymous struct at c_files/pr36902.c:22:1)':'struct (anonymous at c_files/pr36902.c:22:1)' lvalue Var 0x7fb60a0783a0 'sel' 'struct (anonymous struct at c_files/pr36902.c:22:1)':'struct (anonymous at c_files/pr36902.c:22:1)'
+|   | `-ImplicitCastExpr 0x7fb60a078948 <col:28, col:32> 'int' <LValueToRValue>
+|   |   `-MemberExpr 0x7fb60a078848 <col:28, col:32> 'int' lvalue .size_of_select 0x7fb60a078238
+|   |     `-DeclRefExpr 0x7fb60a078820 <col:28> 'struct (anonymous struct at c_files/pr36902.c:22:1)':'struct (anonymous at c_files/pr36902.c:22:1)' lvalue Var 0x7fb60a0783a0 'sel' 'struct (anonymous struct at c_files/pr36902.c:22:1)':'struct (anonymous at c_files/pr36902.c:22:1)'
+|   `-ReturnStmt 0x7fb60a078980 <line:34:3, col:10>
+|     `-IntegerLiteral 0x7fb60a078960 <col:10> 'int' 1
+|-FunctionDecl 0x7fb60a078b90 <line:38:1, line:51:1> line:39:1 used foo2 'unsigned char *(unsigned char *, const unsigned char *, int)' static inline
+| |-ParmVarDecl 0x7fb60a078a00 <col:6, col:22> col:22 used to 'unsigned char *'
+| |-ParmVarDecl 0x7fb60a078a78 <col:26, col:48> col:48 used from 'const unsigned char *'
+| |-ParmVarDecl 0x7fb60a078af0 <col:54, col:58> col:58 used n 'int'
+| `-CompoundStmt 0x7fb60a079050 <line:40:1, line:51:1>
+|   |-SwitchStmt 0x7fb60a078c80 <line:41:3, line:49:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fb60a078c68 <line:41:12> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fb60a078c40 <col:12> 'int' lvalue ParmVar 0x7fb60a078af0 'n' 'int'
+|   | `-CompoundStmt 0x7fb60a078fc0 <line:42:5, line:49:5>
+|   |   |-CaseStmt 0x7fb60a078cd0 <line:43:5, line:44:14>
+|   |   | |-IntegerLiteral 0x7fb60a078cb0 <line:43:10> 'int' 3
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7fb60a078de0 <line:44:7, col:14> 'unsigned char' '='
+|   |   |   |-UnaryOperator 0x7fb60a078d48 <col:7, col:8> 'unsigned char' lvalue prefix '*'
+|   |   |   | `-ImplicitCastExpr 0x7fb60a078d30 <col:8> 'unsigned char *' <LValueToRValue>
+|   |   |   |   `-DeclRefExpr 0x7fb60a078d08 <col:8> 'unsigned char *' lvalue ParmVar 0x7fb60a078a00 'to' 'unsigned char *'
+|   |   |   `-ImplicitCastExpr 0x7fb60a078dc8 <col:13, col:14> 'unsigned char' <LValueToRValue>
+|   |   |     `-UnaryOperator 0x7fb60a078da8 <col:13, col:14> 'const unsigned char' lvalue prefix '*'
+|   |   |       `-ImplicitCastExpr 0x7fb60a078d90 <col:14> 'const unsigned char *' <LValueToRValue>
+|   |   |         `-DeclRefExpr 0x7fb60a078d68 <col:14> 'const unsigned char *' lvalue ParmVar 0x7fb60a078a78 'from' 'const unsigned char *'
+|   |   |-BreakStmt 0x7fb60a078e08 <line:45:7>
+|   |   |-CaseStmt 0x7fb60a078e30 <line:46:5, line:47:22>
+|   |   | |-IntegerLiteral 0x7fb60a078e10 <line:46:10> 'int' 5
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7fb60a078f90 <line:47:7, col:22> 'unsigned char' '='
+|   |   |   |-ArraySubscriptExpr 0x7fb60a078ec8 <col:7, col:11> 'unsigned char' lvalue
+|   |   |   | |-ImplicitCastExpr 0x7fb60a078eb0 <col:7> 'unsigned char *' <LValueToRValue>
+|   |   |   | | `-DeclRefExpr 0x7fb60a078e68 <col:7> 'unsigned char *' lvalue ParmVar 0x7fb60a078a00 'to' 'unsigned char *'
+|   |   |   | `-IntegerLiteral 0x7fb60a078e90 <col:10> 'int' 4
+|   |   |   `-ImplicitCastExpr 0x7fb60a078f78 <col:15, col:22> 'unsigned char' <LValueToRValue>
+|   |   |     `-ArraySubscriptExpr 0x7fb60a078f50 <col:15, col:22> 'const unsigned char' lvalue
+|   |   |       |-ImplicitCastExpr 0x7fb60a078f38 <col:15> 'const unsigned char *' <LValueToRValue>
+|   |   |       | `-DeclRefExpr 0x7fb60a078ef0 <col:15> 'const unsigned char *' lvalue ParmVar 0x7fb60a078a78 'from' 'const unsigned char *'
+|   |   |       `-IntegerLiteral 0x7fb60a078f18 <col:21> 'int' 4
+|   |   `-BreakStmt 0x7fb60a078fb8 <line:48:7>
+|   `-ReturnStmt 0x7fb60a079038 <line:50:3, col:10>
+|     `-ImplicitCastExpr 0x7fb60a079020 <col:10> 'unsigned char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb60a078ff8 <col:10> 'unsigned char *' lvalue ParmVar 0x7fb60a078a00 'to' 'unsigned char *'
+`-FunctionDecl 0x7fb60a079110 <line:53:1, line:61:1> line:53:5 baz 'int (void)'
+  `-CompoundStmt 0x7fb60a079510 <line:54:1, line:61:1>
+    |-DeclStmt 0x7fb60a079250 <line:55:3, col:31>
+    | `-VarDecl 0x7fb60a0791f0 <col:3, col:30> col:24 used buf 'unsigned char [64]' static
+    |-BinaryOperator 0x7fb60a0792e8 <line:57:3, col:24> 'int' '='
+    | |-MemberExpr 0x7fb60a079290 <col:3, col:7> 'int' lvalue .size_of_select 0x7fb60a078238
+    | | `-DeclRefExpr 0x7fb60a079268 <col:3> 'struct (anonymous struct at c_files/pr36902.c:22:1)':'struct (anonymous at c_files/pr36902.c:22:1)' lvalue Var 0x7fb60a0783a0 'sel' 'struct (anonymous struct at c_files/pr36902.c:22:1)':'struct (anonymous at c_files/pr36902.c:22:1)'
+    | `-IntegerLiteral 0x7fb60a0792c8 <col:24> 'int' 5
+    |-CallExpr 0x7fb60a079438 <line:58:3, col:47> 'unsigned char *'
+    | |-ImplicitCastExpr 0x7fb60a079420 <col:3> 'unsigned char *(*)(unsigned char *, const unsigned char *, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fb60a079310 <col:3> 'unsigned char *(unsigned char *, const unsigned char *, int)' Function 0x7fb60a078b90 'foo2' 'unsigned char *(unsigned char *, const unsigned char *, int)'
+    | |-ImplicitCastExpr 0x7fb60a079478 <col:8> 'unsigned char *' <ArrayToPointerDecay>
+    | | `-DeclRefExpr 0x7fb60a079338 <col:8> 'unsigned char [64]' lvalue Var 0x7fb60a0791f0 'buf' 'unsigned char [64]'
+    | |-ImplicitCastExpr 0x7fb60a0794a8 <col:13, col:17> 'const unsigned char *' <BitCast>
+    | | `-ImplicitCastExpr 0x7fb60a079490 <col:13, col:17> 'unsigned char *' <ArrayToPointerDecay>
+    | |   `-MemberExpr 0x7fb60a079388 <col:13, col:17> 'unsigned char [4]' lvalue .pcr_select 0x7fb60a078300
+    | |     `-DeclRefExpr 0x7fb60a079360 <col:13> 'struct (anonymous struct at c_files/pr36902.c:22:1)':'struct (anonymous at c_files/pr36902.c:22:1)' lvalue Var 0x7fb60a0783a0 'sel' 'struct (anonymous struct at c_files/pr36902.c:22:1)':'struct (anonymous at c_files/pr36902.c:22:1)'
+    | `-ImplicitCastExpr 0x7fb60a0794c0 <col:29, col:33> 'int' <LValueToRValue>
+    |   `-MemberExpr 0x7fb60a0793e8 <col:29, col:33> 'int' lvalue .size_of_select 0x7fb60a078238
+    |     `-DeclRefExpr 0x7fb60a0793c0 <col:29> 'struct (anonymous struct at c_files/pr36902.c:22:1)':'struct (anonymous at c_files/pr36902.c:22:1)' lvalue Var 0x7fb60a0783a0 'sel' 'struct (anonymous struct at c_files/pr36902.c:22:1)':'struct (anonymous at c_files/pr36902.c:22:1)'
+    `-ReturnStmt 0x7fb60a0794f8 <line:60:3, col:10>
+      `-IntegerLiteral 0x7fb60a0794d8 <col:10> 'int' 1

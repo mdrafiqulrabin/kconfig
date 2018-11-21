@@ -1,0 +1,84 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['int']
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['char']
+        Constant: int, 0
+      Assignment: =
+        ID: b
+        Constant: int, 0
+      For: 
+        BinaryOp: <
+          ID: b
+          Constant: int, 32
+        UnaryOp: p++
+          ID: b
+        Compound: 
+          Assignment: =
+            ID: g
+            TernaryOp: 
+              BinaryOp: >
+                ID: h
+                ID: e
+              ID: h
+              BinaryOp: <<
+                ID: h
+                Constant: int, 1
+          Assignment: =
+            ID: f
+            TernaryOp: 
+              BinaryOp: &&
+                ID: g
+                ID: a
+              Constant: int, 0
+              Constant: int, 1
+          Assignment: =
+            ID: h
+            Constant: int, 1
+          For: 
+            BinaryOp: >
+              ID: h
+              Constant: int, 0
+            Assignment: =
+              ID: h
+              BinaryOp: +
+                ID: h
+                Constant: int, 1
+            Assignment: =
+              ID: c
+              BinaryOp: |
+                BinaryOp: <
+                  Constant: int, 0
+                  ID: h
+                ID: f
+      If: 
+        ID: h
+        Assignment: =
+          ID: d
+          Constant: int, 0

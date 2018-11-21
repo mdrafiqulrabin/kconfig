@@ -1,0 +1,79 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['unsigned']
+  FuncDef: 
+    Decl: b, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['short']
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['long']
+          Decl: g, [], [], []
+            TypeDecl: g, []
+              IdentifierType: ['unsigned', '__int128']
+          Decl: h, [], [], []
+            TypeDecl: h, []
+              IdentifierType: ['char']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['__int128']
+        TypeDecl: b, []
+          IdentifierType: ['__int128']
+    Compound: 
+      Assignment: %=
+        ID: j
+        Constant: int, 5
+      Assignment: *=
+        ID: c
+        ID: i
+      Assignment: =
+        ID: e
+        BinaryOp: >>
+          ID: e
+          BinaryOp: &
+            ID: g
+            Constant: int, 31
+      Assignment: &=
+        ID: h
+        Assignment: /=
+          ID: e
+          ID: d
+      Assignment: <<=
+        ID: g
+        BinaryOp: <=
+          Constant: int, 0
+          Constant: int, 0
+      Assignment: &=
+        ID: g
+        BinaryOp: <
+          ID: h
+          ID: j
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            BinaryOp: +
+              BinaryOp: +
+                BinaryOp: +
+                  BinaryOp: +
+                    BinaryOp: +
+                      ID: c
+                      ID: d
+                    ID: f
+                  ID: g
+                ID: h
+              ID: i
+            ID: a
+          ID: j

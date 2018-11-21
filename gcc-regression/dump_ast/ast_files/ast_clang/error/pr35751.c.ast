@@ -1,0 +1,33 @@
+c_files/pr35751.c:8:14: error: variable length array declaration cannot have 'extern' linkage
+  extern int a[i];      /* { dg-error "must have no linkage|storage size of" } */
+             ^ ~
+c_files/pr35751.c:9:14: error: variable length array declaration cannot have 'static' storage duration
+  static int b[i];      /* { dg-error "storage size of" } */
+             ^ ~
+2 errors generated.
+TranslationUnitDecl 0x7fd5520264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd552026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd552026740 '__int128'
+|-TypedefDecl 0x7fd552026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd552026760 'unsigned __int128'
+|-TypedefDecl 0x7fd552026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd552026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd552026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd552026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd552026dc0 'char *'
+|   `-BuiltinType 0x7fd552026560 'char'
+|-TypedefDecl 0x7fd5520270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd552027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd552026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd552026e58 '__va_list_tag'
+`-FunctionDecl 0x7fd552825a00 <c_files/pr35751.c:5:1, line:34:1> line:6:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fd552027138 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7fd552825f88 <line:7:1, line:34:1>
+    |-DeclStmt 0x7fd552825bf0 <line:8:3, col:18>
+    | `-VarDecl 0x7fd552825b80 parent 0x7fd5520264d0 <col:3, col:17> col:14 invalid a 'int [i]' extern
+    |-DeclStmt 0x7fd552825d10 <line:9:3, col:18>
+    | `-VarDecl 0x7fd552825cb0 <col:3, col:17> col:14 invalid b 'int [i]' static
+    |-CompoundStmt 0x7fd552825da8 <line:12:3, line:15:3>
+    |-CompoundStmt 0x7fd552825e40 <line:18:3, line:21:3>
+    |-CompoundStmt 0x7fd552825ed8 <line:24:3, line:27:3>
+    `-CompoundStmt 0x7fd552825f70 <line:30:3, line:33:3>

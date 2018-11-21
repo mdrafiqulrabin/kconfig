@@ -1,0 +1,102 @@
+FileAST: 
+  Typedef: d, [], ['typedef']
+    TypeDecl: d, []
+      Struct: None
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['short']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['short']
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['short']
+  Decl: e, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: e, []
+        IdentifierType: ['d']
+  Decl: f, [], [], []
+    ArrayDecl: []
+      TypeDecl: f, []
+        IdentifierType: ['int']
+      Constant: int, 8
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            PtrDecl: []
+              TypeDecl: i, []
+                IdentifierType: ['d']
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        BinaryOp: <
+          ID: h
+          Constant: int, 28
+        UnaryOp: p++
+          ID: h
+        Assignment: =
+          StructRef: .
+            ArrayRef: 
+              ID: e
+              ID: h
+            ID: a
+          Assignment: =
+            StructRef: .
+              ArrayRef: 
+                ID: e
+                ID: h
+              ID: b
+            StructRef: .
+              ArrayRef: 
+                ID: i
+                ID: h
+              ID: a
+      Assignment: =
+        ID: h
+        Constant: int, 0
+      For: 
+        BinaryOp: <
+          ID: h
+          Constant: int, 8
+        UnaryOp: p++
+          ID: h
+        Assignment: =
+          ArrayRef: 
+            ID: f
+            ID: h
+          BinaryOp: +
+            StructRef: .
+              ArrayRef: 
+                ID: i
+                ID: h
+              ID: b
+            StructRef: .
+              ArrayRef: 
+                ID: i
+                ID: h
+              ID: c
+      Assignment: =
+        ID: h
+        Constant: int, 0
+      For: 
+        BinaryOp: <
+          ID: h
+          Constant: int, 8
+        UnaryOp: p++
+          ID: h
+        Assignment: =
+          ArrayRef: 
+            ID: f
+            ID: h
+          StructRef: .
+            ArrayRef: 
+              ID: i
+              ID: h
+            ID: b

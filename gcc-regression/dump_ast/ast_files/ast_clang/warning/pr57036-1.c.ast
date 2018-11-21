@@ -1,0 +1,58 @@
+c_files/pr57036-1.c:4:5: warning: declaration of built-in function '_setjmp' requires inclusion of the header <setjmp.h> [-Wbuiltin-requires-header]
+int _setjmp();
+    ^
+c_files/pr57036-1.c:6:51: warning: unknown attribute '__leaf__' ignored [-Wunknown-attributes]
+extern __inline __attribute__ ((__always_inline__,__leaf__))
+                                                  ^
+2 warnings generated.
+TranslationUnitDecl 0x7f924a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f924a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f924a826740 '__int128'
+|-TypedefDecl 0x7f924a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f924a826760 'unsigned __int128'
+|-TypedefDecl 0x7f924a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f924a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f924a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f924a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f924a826dc0 'char *'
+|   `-BuiltinType 0x7f924a826560 'char'
+|-TypedefDecl 0x7f924a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f924a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f924a826ee0 'struct __va_list_tag'
+|     `-Record 0x7f924a826e58 '__va_list_tag'
+|-FunctionDecl 0x7f924b025a00 <c_files/pr57036-1.c:3:1, col:20> col:13 used g 'void (void)' extern
+|-FunctionDecl 0x7f924b025b30 <line:4:1, col:13> col:5 used _setjmp 'int ()'
+| `-ReturnsTwiceAttr 0x7f924b025bc8 <col:5> Implicit
+|-FunctionDecl 0x7f924b025cd8 <line:5:1, col:24> col:5 used read_buf_open 'int (void)'
+|-FunctionDecl 0x7f924b025db8 <line:6:1, line:11:1> line:8:1 used f 'void ()' extern inline
+| |-CompoundStmt 0x7f924b025f28 <line:9:1, line:11:1>
+| | `-CallExpr 0x7f924b025f00 <line:10:3, col:6> 'void'
+| |   `-ImplicitCastExpr 0x7f924b025ee8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7f924b025e98 <col:3> 'void (void)' Function 0x7f924b025a00 'g' 'void (void)'
+| `-AlwaysInlineAttr 0x7f924b025e50 <line:6:33> always_inline
+|-RecordDecl 0x7f924b025f48 <line:12:1, col:8> col:8 struct __jmp_buf_tag
+|-VarDecl 0x7f924b0260a0 <col:1, col:23> col:23 used b 'struct __jmp_buf_tag *'
+`-FunctionDecl 0x7f924b0261f8 <line:13:1, line:19:1> line:13:5 jpgDecode_convert 'int (unsigned int)'
+  |-ParmVarDecl 0x7f924b026130 <col:24, col:33> col:33 used i 'unsigned int'
+  `-CompoundStmt 0x7f924b026590 <line:14:1, line:19:1>
+    |-IfStmt 0x7f924b0263c8 <line:15:3, line:16:8>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f924b026310 <line:15:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f924b0262e0 <col:7> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f924b026298 <col:7> 'unsigned int' lvalue ParmVar 0x7f924b026130 'i' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7f924b0262f8 <col:12> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f924b0262c0 <col:12> 'int' 0
+    | |-CallExpr 0x7f924b0263a0 <line:16:5, col:8> 'void'
+    | | `-ImplicitCastExpr 0x7f924b026388 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f924b026338 <col:5> 'void ()' Function 0x7f924b025db8 'f' 'void ()'
+    | `-<<<NULL>>>
+    |-CallExpr 0x7f924b026470 <line:17:3, col:18> 'int'
+    | `-ImplicitCastExpr 0x7f924b026458 <col:3> 'int (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f924b026400 <col:3> 'int (void)' Function 0x7f924b025cd8 'read_buf_open' 'int (void)'
+    `-ReturnStmt 0x7f924b026578 <line:18:3, col:20>
+      `-CallExpr 0x7f924b026530 <col:10, col:20> 'int'
+        |-ImplicitCastExpr 0x7f924b026518 <col:10> 'int (*)()' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f924b026498 <col:10> 'int ()' Function 0x7f924b025b30 '_setjmp' 'int ()'
+        `-ImplicitCastExpr 0x7f924b026560 <col:19> 'struct __jmp_buf_tag *' <LValueToRValue>
+          `-DeclRefExpr 0x7f924b0264c0 <col:19> 'struct __jmp_buf_tag *' lvalue Var 0x7f924b0260a0 'b' 'struct __jmp_buf_tag *'

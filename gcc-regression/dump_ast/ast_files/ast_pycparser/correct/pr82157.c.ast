@@ -1,0 +1,200 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  Decl: h, [], [], []
+    TypeDecl: h, []
+      IdentifierType: ['int']
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  Decl: j, [], [], []
+    TypeDecl: j, []
+      IdentifierType: ['int']
+  Decl: k, [], [], []
+    TypeDecl: k, []
+      IdentifierType: ['int']
+  Decl: l, [], [], []
+    TypeDecl: l, []
+      IdentifierType: ['int']
+  Decl: m, [], [], []
+    TypeDecl: m, []
+      IdentifierType: ['int']
+  Decl: n, [], [], []
+    TypeDecl: n, []
+      IdentifierType: ['int']
+  Decl: o, [], [], []
+    TypeDecl: o, []
+      IdentifierType: ['int']
+  Decl: p, [], [], []
+    TypeDecl: p, []
+      IdentifierType: ['int']
+  Decl: q, [], [], []
+    TypeDecl: q, []
+      IdentifierType: ['int']
+  Decl: r, [], [], []
+    TypeDecl: r, []
+      IdentifierType: ['int']
+  Decl: s, [], [], []
+    TypeDecl: s, []
+      IdentifierType: ['int']
+  Decl: t, [], [], []
+    TypeDecl: t, []
+      IdentifierType: ['int']
+  Decl: u, [], [], []
+    TypeDecl: u, []
+      IdentifierType: ['int']
+  Decl: v, [], [], []
+    TypeDecl: v, []
+      IdentifierType: ['int']
+  Decl: w, [], [], []
+    TypeDecl: w, []
+      IdentifierType: ['int']
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      IdentifierType: ['int']
+  Decl: y, [], [], []
+    TypeDecl: y, []
+      IdentifierType: ['int']
+  Decl: z, [], [], []
+    TypeDecl: z, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: aa, [], [], []
+      FuncDecl: 
+        TypeDecl: aa, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: w
+        BinaryOp: ||
+          BinaryOp: <
+            ID: f
+            Constant: int, 0
+          BinaryOp: >>
+            ID: e
+            ID: f
+      While: 
+        ID: z
+        Assignment: =
+          ID: h
+          BinaryOp: &&
+            ID: i
+            BinaryOp: |
+              BinaryOp: &&
+                ID: r
+                ID: p
+              BinaryOp: ==
+                Assignment: =
+                  ID: l
+                  ID: p
+                BinaryOp: %
+                  ID: c
+                  ID: d
+      Assignment: =
+        ID: k
+        BinaryOp: <
+          BinaryOp: +
+            ID: v
+            Constant: int, 1
+          ID: a
+      Assignment: =
+        ID: t
+        BinaryOp: *
+          UnaryOp: -
+            BinaryOp: <
+              ID: j
+              Constant: int, 1
+          ID: q
+      Return: 
+        ID: u
+  FuncDef: 
+    Decl: ab, [], [], []
+      FuncDecl: 
+        TypeDecl: ab, []
+          IdentifierType: ['int']
+    Compound: 
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        Constant: int, 1
+        Assignment: =
+          ID: j
+          Constant: int, 5
+        If: 
+          UnaryOp: !
+            ID: s
+          Return: 
+            ID: d
+  FuncDef: 
+    Decl: ac, [], [], []
+      FuncDecl: 
+        TypeDecl: ac, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: ad, [], [], []
+        TypeDecl: ad, []
+          IdentifierType: ['char']
+        FuncCall: 
+          ID: aa
+      FuncCall: 
+        ID: ab
+      If: 
+        ID: x
+        Compound: 
+          For: 
+            Assignment: =
+              ID: m
+              Constant: int, 0
+            BinaryOp: <
+              ID: m
+              Constant: int, 3
+            Assignment: =
+              ID: m
+              ID: a
+            Compound: 
+              Assignment: =
+                ID: y
+                BinaryOp: &&
+                  ID: a
+                  ID: b
+              If: 
+                ID: g
+                Break: 
+          Assignment: =
+            ID: n
+            ID: j
+      Assignment: =
+        ID: o
+        BinaryOp: &
+          ID: j
+          ID: ad
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: ac
+      Return: 
+        Constant: int, 0

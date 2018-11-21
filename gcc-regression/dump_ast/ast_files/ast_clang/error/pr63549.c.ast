@@ -1,0 +1,28 @@
+c_files/pr63549.c:7:10: error: array subscript is not an integer
+int i = a[e]; /* { dg-error "has an incomplete type" } */
+         ^~
+c_files/pr63549.c:5:8: error: tentative definition has type 'enum E' that is never completed
+enum E e;  /* { dg-error "storage size of 'e' isn't known" } */
+       ^
+c_files/pr63549.c:5:6: note: forward declaration of 'enum E'
+enum E e;  /* { dg-error "storage size of 'e' isn't known" } */
+     ^
+2 errors generated.
+TranslationUnitDecl 0x7f931c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f931c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f931c826740 '__int128'
+|-TypedefDecl 0x7f931c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f931c826760 'unsigned __int128'
+|-TypedefDecl 0x7f931c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f931c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f931c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f931c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f931c826dc0 'char *'
+|   `-BuiltinType 0x7f931c826560 'char'
+|-TypedefDecl 0x7f931c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f931c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f931c826ee0 'struct __va_list_tag'
+|     `-Record 0x7f931c826e58 '__va_list_tag'
+|-VarDecl 0x7f931c81dc50 <c_files/pr63549.c:5:1, col:8> col:8 used invalid e 'enum E':'enum E'
+|-VarDecl 0x7f931c81dd90 <line:6:1, col:9> col:5 used a 'int [10]'
+`-VarDecl 0x7f931c81de08 <line:7:1, col:5> col:5 i 'int'

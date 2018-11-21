@@ -1,0 +1,29 @@
+c_files/pragma-isr-trap-exit.c:7:33: warning: unknown attribute 'trap_exit' ignored [-Wunknown-attributes]
+void isr (void) __attribute__ ((trap_exit (4)));
+                                ^
+1 warning generated.
+TranslationUnitDecl 0x7fd9020264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd902026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd902026740 '__int128'
+|-TypedefDecl 0x7fd902026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd902026760 'unsigned __int128'
+|-TypedefDecl 0x7fd902026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd902026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd902026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd902026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd902026dc0 'char *'
+|   `-BuiltinType 0x7fd902026560 'char'
+|-TypedefDecl 0x7fd9020270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd902027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd902026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd902026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd902826a00 <c_files/pragma-isr-trap-exit.c:7:1, col:47> col:6 isr 'void (void)'
+|-FunctionDecl 0x7fd902826b68 prev 0x7fd902826a00 <line:9:1, line:12:1> line:10:1 isr 'void (void)'
+| `-CompoundStmt 0x7fd902826c00 <line:11:1, line:12:1>
+|-FunctionDecl 0x7fd902826cf0 <line:14:1, line:17:1> line:15:1 delay 'void (int)'
+| |-ParmVarDecl 0x7fd902826c30 <col:8, col:12> col:12 a 'int'
+| `-CompoundStmt 0x7fd902826d90 <line:16:1, line:17:1>
+`-FunctionDecl 0x7fd902826e78 <line:19:1, line:23:1> line:20:1 main 'int (void)'
+  `-CompoundStmt 0x7fd902826f70 <line:21:1, line:23:1>
+    `-ReturnStmt 0x7fd902826f58 <line:22:3, col:10>
+      `-IntegerLiteral 0x7fd902826f38 <col:10> 'int' 0

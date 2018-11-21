@@ -1,0 +1,89 @@
+FileAST: 
+  Decl: a1, [], [], []
+    TypeDecl: a1, []
+      IdentifierType: ['int']
+  Decl: c1, [], [], []
+    TypeDecl: c1, []
+      IdentifierType: ['int']
+  Decl: cr, [], [], []
+    TypeDecl: cr, []
+      IdentifierType: ['int']
+  Decl: kt, [], [], []
+    TypeDecl: kt, []
+      IdentifierType: ['int']
+  Decl: aa, [], [], []
+    ArrayDecl: []
+      TypeDecl: aa, []
+        IdentifierType: ['int']
+      Constant: int, 2
+  FuncDef: 
+    Decl: ce, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: ce, []
+          IdentifierType: ['int']
+    Compound: 
+      While: 
+        BinaryOp: <
+          ID: a1
+          Constant: int, 1
+        Compound: 
+          Decl: g8, [], [], []
+            TypeDecl: g8, []
+              IdentifierType: ['int']
+          For: 
+            Assignment: =
+              ID: g8
+              Constant: int, 0
+            BinaryOp: <
+              ID: g8
+              Constant: int, 3
+            UnaryOp: ++
+              ID: g8
+            If: 
+              BinaryOp: !=
+                ID: c1
+                Constant: int, 0
+              Assignment: =
+                ID: cr
+                Assignment: =
+                  ArrayRef: 
+                    ID: aa
+                    BinaryOp: *
+                      ID: a1
+                      Constant: int, 2
+                  ID: kt
+          For: 
+            Assignment: =
+              ID: c1
+              Constant: int, 0
+            BinaryOp: <
+              ID: c1
+              Constant: int, 2
+            UnaryOp: ++
+              ID: c1
+            Assignment: =
+              ArrayRef: 
+                ID: aa
+                ID: c1
+              ID: cr
+          UnaryOp: ++
+            ID: a1
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: ce

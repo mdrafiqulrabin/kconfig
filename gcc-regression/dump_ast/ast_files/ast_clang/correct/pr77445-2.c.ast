@@ -1,0 +1,445 @@
+TranslationUnitDecl 0x7fee72019ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fee7201a020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fee72019d40 '__int128'
+|-TypedefDecl 0x7fee7201a090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fee72019d60 'unsigned __int128'
+|-TypedefDecl 0x7fee7201a368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fee7201a170 'struct __NSConstantString_tag'
+|   `-Record 0x7fee7201a0e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fee7201a400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fee7201a3c0 'char *'
+|   `-BuiltinType 0x7fee72019b60 'char'
+|-TypedefDecl 0x7fee7201a6c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fee7201a670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fee7201a4e0 'struct __va_list_tag'
+|     `-Record 0x7fee7201a458 '__va_list_tag'
+|-EnumDecl 0x7fee7201a720 <c_files/pr77445-2.c:3:9, line:13:1> line:3:14 STATES
+| |-EnumConstantDecl 0x7fee71832600 <line:4:2, col:8> col:2 referenced START 'int'
+| | `-IntegerLiteral 0x7fee7201a7e0 <col:8> 'int' 0
+| |-EnumConstantDecl 0x7fee71832648 <line:5:2> col:2 referenced INVALID 'int'
+| |-EnumConstantDecl 0x7fee71832690 <line:6:2> col:2 referenced S1 'int'
+| |-EnumConstantDecl 0x7fee718326d8 <line:7:2> col:2 referenced S2 'int'
+| |-EnumConstantDecl 0x7fee71832720 <line:8:2> col:2 referenced INT 'int'
+| |-EnumConstantDecl 0x7fee71832768 <line:9:2> col:2 referenced FLOAT 'int'
+| |-EnumConstantDecl 0x7fee718327b0 <line:10:2> col:2 referenced EXPONENT 'int'
+| |-EnumConstantDecl 0x7fee718327f8 <line:11:2> col:2 referenced SCIENTIFIC 'int'
+| `-EnumConstantDecl 0x7fee71832840 <line:12:2> col:2 NUM_STATES 'int'
+|-TypedefDecl 0x7fee718328e0 <line:3:1, line:13:3> col:3 state_e 'enum STATES':'enum STATES'
+| `-ElaboratedType 0x7fee71832890 'enum STATES' sugar
+|   `-EnumType 0x7fee7201a7c0 'enum STATES'
+|     `-Enum 0x7fee7201a720 'STATES'
+|-TypedefDecl 0x7fee71832968 <line:15:1, col:23> col:23 referenced u8 'unsigned char'
+| `-BuiltinType 0x7fee72019c20 'unsigned char'
+|-TypedefDecl 0x7fee718329d8 <line:16:1, col:23> col:23 referenced u32 'unsigned int'
+| `-BuiltinType 0x7fee72019c60 'unsigned int'
+|-FunctionDecl 0x7fee71832b60 <line:18:1, line:20:1> line:18:11 used is_digit 'u8 (u8)' static
+| |-ParmVarDecl 0x7fee71832a60 <col:20, col:23> col:23 used c 'u8':'unsigned char'
+| `-CompoundStmt 0x7fee71832f18 <col:26, line:20:1>
+|   `-ReturnStmt 0x7fee71832f00 <line:19:2, col:41>
+|     `-ImplicitCastExpr 0x7fee71832ee8 <col:9, col:41> 'u8':'unsigned char' <IntegralCast>
+|       `-ConditionalOperator 0x7fee71832eb8 <col:9, col:41> 'int'
+|         |-ImplicitCastExpr 0x7fee71832ea0 <col:9, col:33> 'int' <IntegralCast>
+|         | `-CStyleCastExpr 0x7fee71832e38 <col:9, col:33> 'u8':'unsigned char' <IntegralCast>
+|         |   `-ParenExpr 0x7fee71832e18 <col:13, col:33> 'int'
+|         |     `-BinaryOperator 0x7fee71832db0 <col:14, col:32> 'int' '&'
+|         |       |-ParenExpr 0x7fee71832cd8 <col:14, col:21> 'int'
+|         |       | `-BinaryOperator 0x7fee71832cb0 <col:15, col:18> 'int' '>='
+|         |       |   |-ImplicitCastExpr 0x7fee71832c98 <col:15> 'int' <IntegralCast>
+|         |       |   | `-ImplicitCastExpr 0x7fee71832c80 <col:15> 'u8':'unsigned char' <LValueToRValue>
+|         |       |   |   `-DeclRefExpr 0x7fee71832c40 <col:15> 'u8':'unsigned char' lvalue ParmVar 0x7fee71832a60 'c' 'u8':'unsigned char'
+|         |       |   `-CharacterLiteral 0x7fee71832c68 <col:18> 'int' 48
+|         |       `-ParenExpr 0x7fee71832d90 <col:25, col:32> 'int'
+|         |         `-BinaryOperator 0x7fee71832d68 <col:26, col:29> 'int' '<='
+|         |           |-ImplicitCastExpr 0x7fee71832d50 <col:26> 'int' <IntegralCast>
+|         |           | `-ImplicitCastExpr 0x7fee71832d38 <col:26> 'u8':'unsigned char' <LValueToRValue>
+|         |           |   `-DeclRefExpr 0x7fee71832cf8 <col:26> 'u8':'unsigned char' lvalue ParmVar 0x7fee71832a60 'c' 'u8':'unsigned char'
+|         |           `-CharacterLiteral 0x7fee71832d20 <col:29> 'int' 57
+|         |-IntegerLiteral 0x7fee71832e60 <col:37> 'int' 1
+|         `-IntegerLiteral 0x7fee71832e80 <col:41> 'int' 0
+`-FunctionDecl 0x7fee71833220 <line:22:1, line:117:1> line:22:13 FMS 'enum STATES (u8 **, u32 *)'
+  |-ParmVarDecl 0x7fee71833010 <col:18, col:23> col:23 used in 'u8 **'
+  |-ParmVarDecl 0x7fee718330f8 <col:28, col:33> col:33 used transitions 'u32 *'
+  `-CompoundStmt 0x7fee718372f0 <col:46, line:117:1>
+    |-DeclStmt 0x7fee718333b0 <line:23:2, col:15>
+    | `-VarDecl 0x7fee718332d8 <col:2, col:13> col:6 used str 'u8 *' cinit
+    |   `-ImplicitCastExpr 0x7fee71833398 <col:12, col:13> 'u8 *' <LValueToRValue>
+    |     `-UnaryOperator 0x7fee71833378 <col:12, col:13> 'u8 *' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7fee71833360 <col:13> 'u8 **' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fee71833338 <col:13> 'u8 **' lvalue ParmVar 0x7fee71833010 'in' 'u8 **'
+    |-DeclStmt 0x7fee71833438 <line:24:2, col:16>
+    | `-VarDecl 0x7fee718333d8 <col:2, col:5> col:5 used NEXT_SYMBOL 'u8':'unsigned char'
+    |-DeclStmt 0x7fee71833510 <line:25:2, col:25>
+    | `-VarDecl 0x7fee71833470 <col:2, col:20> col:14 used state 'enum STATES':'enum STATES' cinit
+    |   `-ImplicitCastExpr 0x7fee718334f8 <col:20> 'enum STATES':'enum STATES' <IntegralCast>
+    |     `-DeclRefExpr 0x7fee718334d0 <col:20> 'int' EnumConstant 0x7fee71832600 'START' 'int'
+    |-ForStmt 0x7fee71836ff0 <line:26:2, line:111:2>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fee71834688 <line:26:9, col:26> 'int' '&&'
+    | | |-ImplicitCastExpr 0x7fee71834670 <col:9, col:10> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fee71834658 <col:9, col:10> 'u8':'unsigned char' <LValueToRValue>
+    | | |   `-UnaryOperator 0x7fee71833568 <col:9, col:10> 'u8':'unsigned char' lvalue prefix '*'
+    | | |     `-ImplicitCastExpr 0x7fee71833550 <col:10> 'u8 *' <LValueToRValue>
+    | | |       `-DeclRefExpr 0x7fee71833528 <col:10> 'u8 *' lvalue Var 0x7fee718332d8 'str' 'u8 *'
+    | | `-BinaryOperator 0x7fee71834630 <col:17, col:26> 'int' '!='
+    | |   |-ImplicitCastExpr 0x7fee71834600 <col:17> 'unsigned int' <IntegralCast>
+    | |   | `-ImplicitCastExpr 0x7fee718335d8 <col:17> 'enum STATES':'enum STATES' <LValueToRValue>
+    | |   |   `-DeclRefExpr 0x7fee71833588 <col:17> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    | |   `-ImplicitCastExpr 0x7fee71834618 <col:26> 'unsigned int' <IntegralCast>
+    | |     `-DeclRefExpr 0x7fee718335b0 <col:26> 'int' EnumConstant 0x7fee71832648 'INVALID' 'int'
+    | |-UnaryOperator 0x7fee718346d8 <col:35, col:38> 'u8 *' postfix '++'
+    | | `-DeclRefExpr 0x7fee718346b0 <col:35> 'u8 *' lvalue Var 0x7fee718332d8 'str' 'u8 *'
+    | `-CompoundStmt 0x7fee71836fc0 <col:43, line:111:2>
+    |   |-BinaryOperator 0x7fee71834798 <line:27:3, col:18> 'u8':'unsigned char' '='
+    |   | |-DeclRefExpr 0x7fee718346f8 <col:3> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |   | `-ImplicitCastExpr 0x7fee71834780 <col:17, col:18> 'u8':'unsigned char' <LValueToRValue>
+    |   |   `-UnaryOperator 0x7fee71834760 <col:17, col:18> 'u8':'unsigned char' lvalue prefix '*'
+    |   |     `-ImplicitCastExpr 0x7fee71834748 <col:18> 'u8 *' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7fee71834720 <col:18> 'u8 *' lvalue Var 0x7fee718332d8 'str' 'u8 *'
+    |   |-IfStmt 0x7fee718349a0 <line:28:3, line:32:3>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fee71834830 <line:28:7, col:20> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fee71834818 <col:7> 'int' <IntegralCast>
+    |   | | | `-ImplicitCastExpr 0x7fee71834800 <col:7> 'u8':'unsigned char' <LValueToRValue>
+    |   | | |   `-DeclRefExpr 0x7fee718347c0 <col:7> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |   | | `-CharacterLiteral 0x7fee718347e8 <col:20> 'int' 44
+    |   | |-CompoundStmt 0x7fee71834970 <col:49, line:32:3>
+    |   | | |-UnaryOperator 0x7fee71834900 <line:29:4, col:22> 'u32':'unsigned int' postfix '++'
+    |   | | | `-ArraySubscriptExpr 0x7fee718348d8 <col:4, col:21> 'u32':'unsigned int' lvalue
+    |   | | |   |-ImplicitCastExpr 0x7fee718348a8 <col:4> 'u32 *' <LValueToRValue>
+    |   | | |   | `-DeclRefExpr 0x7fee71834858 <col:4> 'u32 *' lvalue ParmVar 0x7fee718330f8 'transitions' 'u32 *'
+    |   | | |   `-ImplicitCastExpr 0x7fee718348c0 <col:16> 'enum STATES':'enum STATES' <LValueToRValue>
+    |   | | |     `-DeclRefExpr 0x7fee71834880 <col:16> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |   | | |-UnaryOperator 0x7fee71834948 <line:30:4, col:7> 'u8 *' postfix '++'
+    |   | | | `-DeclRefExpr 0x7fee71834920 <col:4> 'u8 *' lvalue Var 0x7fee718332d8 'str' 'u8 *'
+    |   | | `-BreakStmt 0x7fee71834968 <line:31:4>
+    |   | `-<<<NULL>>>
+    |   `-SwitchStmt 0x7fee71834a30 <line:33:3, line:110:3>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-ImplicitCastExpr 0x7fee71834a18 <line:33:10> 'unsigned int' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fee71834a00 <col:10> 'enum STATES':'enum STATES' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fee718349d8 <col:10> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |     `-CompoundStmt 0x7fee71836e80 <col:17, line:110:3>
+    |       |-CaseStmt 0x7fee71834a88 <line:34:3, line:46:4>
+    |       | |-ImplicitCastExpr 0x7fee71836fa8 <line:34:8> 'unsigned int' <IntegralCast>
+    |       | | `-DeclRefExpr 0x7fee71834a60 <col:8> 'int' EnumConstant 0x7fee71832600 'START' 'int'
+    |       | |-<<<NULL>>>
+    |       | `-IfStmt 0x7fee718350e8 <line:35:4, line:46:4>
+    |       |   |-<<<NULL>>>
+    |       |   |-<<<NULL>>>
+    |       |   |-CallExpr 0x7fee71834b80 <line:35:7, col:27> 'u8':'unsigned char'
+    |       |   | |-ImplicitCastExpr 0x7fee71834b68 <col:7> 'u8 (*)(u8)' <FunctionToPointerDecay>
+    |       |   | | `-DeclRefExpr 0x7fee71834ac0 <col:7> 'u8 (u8)' Function 0x7fee71832b60 'is_digit' 'u8 (u8)'
+    |       |   | `-ImplicitCastExpr 0x7fee71834bb0 <col:16> 'u8':'unsigned char' <LValueToRValue>
+    |       |   |   `-DeclRefExpr 0x7fee71834ae8 <col:16> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |       |   |-CompoundStmt 0x7fee71834c58 <col:30, line:37:4>
+    |       |   | `-BinaryOperator 0x7fee71834c30 <line:36:5, col:13> 'enum STATES':'enum STATES' '='
+    |       |   |   |-DeclRefExpr 0x7fee71834bc8 <col:5> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |       |   |   `-ImplicitCastExpr 0x7fee71834c18 <col:13> 'enum STATES':'enum STATES' <IntegralCast>
+    |       |   |     `-DeclRefExpr 0x7fee71834bf0 <col:13> 'int' EnumConstant 0x7fee71832720 'INT' 'int'
+    |       |   `-IfStmt 0x7fee718350b0 <line:38:9, line:46:4>
+    |       |     |-<<<NULL>>>
+    |       |     |-<<<NULL>>>
+    |       |     |-BinaryOperator 0x7fee71834da8 <line:38:13, col:50> 'int' '||'
+    |       |     | |-BinaryOperator 0x7fee71834ce8 <col:13, col:28> 'int' '=='
+    |       |     | | |-ImplicitCastExpr 0x7fee71834cd0 <col:13> 'int' <IntegralCast>
+    |       |     | | | `-ImplicitCastExpr 0x7fee71834cb8 <col:13> 'u8':'unsigned char' <LValueToRValue>
+    |       |     | | |   `-DeclRefExpr 0x7fee71834c78 <col:13> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |       |     | | `-CharacterLiteral 0x7fee71834ca0 <col:28> 'int' 43
+    |       |     | `-BinaryOperator 0x7fee71834d80 <col:35, col:50> 'int' '=='
+    |       |     |   |-ImplicitCastExpr 0x7fee71834d68 <col:35> 'int' <IntegralCast>
+    |       |     |   | `-ImplicitCastExpr 0x7fee71834d50 <col:35> 'u8':'unsigned char' <LValueToRValue>
+    |       |     |   |   `-DeclRefExpr 0x7fee71834d10 <col:35> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |       |     |   `-CharacterLiteral 0x7fee71834d38 <col:50> 'int' 45
+    |       |     |-CompoundStmt 0x7fee71834e60 <col:56, line:40:4>
+    |       |     | `-BinaryOperator 0x7fee71834e38 <line:39:5, col:13> 'enum STATES':'enum STATES' '='
+    |       |     |   |-DeclRefExpr 0x7fee71834dd0 <col:5> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |       |     |   `-ImplicitCastExpr 0x7fee71834e20 <col:13> 'enum STATES':'enum STATES' <IntegralCast>
+    |       |     |     `-DeclRefExpr 0x7fee71834df8 <col:13> 'int' EnumConstant 0x7fee71832690 'S1' 'int'
+    |       |     `-IfStmt 0x7fee71835078 <line:41:9, line:46:4>
+    |       |       |-<<<NULL>>>
+    |       |       |-<<<NULL>>>
+    |       |       |-BinaryOperator 0x7fee71834ef0 <line:41:13, col:28> 'int' '=='
+    |       |       | |-ImplicitCastExpr 0x7fee71834ed8 <col:13> 'int' <IntegralCast>
+    |       |       | | `-ImplicitCastExpr 0x7fee71834ec0 <col:13> 'u8':'unsigned char' <LValueToRValue>
+    |       |       | |   `-DeclRefExpr 0x7fee71834e80 <col:13> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |       |       | `-CharacterLiteral 0x7fee71834ea8 <col:28> 'int' 46
+    |       |       |-CompoundStmt 0x7fee71834fa8 <col:34, line:43:4>
+    |       |       | `-BinaryOperator 0x7fee71834f80 <line:42:5, col:13> 'enum STATES':'enum STATES' '='
+    |       |       |   |-DeclRefExpr 0x7fee71834f18 <col:5> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |       |       |   `-ImplicitCastExpr 0x7fee71834f68 <col:13> 'enum STATES':'enum STATES' <IntegralCast>
+    |       |       |     `-DeclRefExpr 0x7fee71834f40 <col:13> 'int' EnumConstant 0x7fee71832768 'FLOAT' 'int'
+    |       |       `-CompoundStmt 0x7fee71835058 <line:44:9, line:46:4>
+    |       |         `-BinaryOperator 0x7fee71835030 <line:45:5, col:13> 'enum STATES':'enum STATES' '='
+    |       |           |-DeclRefExpr 0x7fee71834fc8 <col:5> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |       |           `-ImplicitCastExpr 0x7fee71835018 <col:13> 'enum STATES':'enum STATES' <IntegralCast>
+    |       |             `-DeclRefExpr 0x7fee71834ff0 <col:13> 'int' EnumConstant 0x7fee71832648 'INVALID' 'int'
+    |       |-UnaryOperator 0x7fee718351b0 <line:47:4, col:22> 'u32':'unsigned int' postfix '++'
+    |       | `-ArraySubscriptExpr 0x7fee71835188 <col:4, col:21> 'u32':'unsigned int' lvalue
+    |       |   |-ImplicitCastExpr 0x7fee71835170 <col:4> 'u32 *' <LValueToRValue>
+    |       |   | `-DeclRefExpr 0x7fee71835120 <col:4> 'u32 *' lvalue ParmVar 0x7fee718330f8 'transitions' 'u32 *'
+    |       |   `-DeclRefExpr 0x7fee71835148 <col:16> 'int' EnumConstant 0x7fee71832600 'START' 'int'
+    |       |-BreakStmt 0x7fee718351d0 <line:48:4>
+    |       |-CaseStmt 0x7fee71835200 <line:49:3, line:61:4>
+    |       | |-ImplicitCastExpr 0x7fee71836f90 <line:49:8> 'unsigned int' <IntegralCast>
+    |       | | `-DeclRefExpr 0x7fee718351d8 <col:8> 'int' EnumConstant 0x7fee71832690 'S1' 'int'
+    |       | |-<<<NULL>>>
+    |       | `-IfStmt 0x7fee71835810 <line:50:4, line:61:4>
+    |       |   |-<<<NULL>>>
+    |       |   |-<<<NULL>>>
+    |       |   |-CallExpr 0x7fee718352a0 <line:50:7, col:27> 'u8':'unsigned char'
+    |       |   | |-ImplicitCastExpr 0x7fee71835288 <col:7> 'u8 (*)(u8)' <FunctionToPointerDecay>
+    |       |   | | `-DeclRefExpr 0x7fee71835238 <col:7> 'u8 (u8)' Function 0x7fee71832b60 'is_digit' 'u8 (u8)'
+    |       |   | `-ImplicitCastExpr 0x7fee718352d0 <col:16> 'u8':'unsigned char' <LValueToRValue>
+    |       |   |   `-DeclRefExpr 0x7fee71835260 <col:16> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |       |   |-CompoundStmt 0x7fee71835428 <col:30, line:53:4>
+    |       |   | |-BinaryOperator 0x7fee71835350 <line:51:5, col:13> 'enum STATES':'enum STATES' '='
+    |       |   | | |-DeclRefExpr 0x7fee718352e8 <col:5> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |       |   | | `-ImplicitCastExpr 0x7fee71835338 <col:13> 'enum STATES':'enum STATES' <IntegralCast>
+    |       |   | |   `-DeclRefExpr 0x7fee71835310 <col:13> 'int' EnumConstant 0x7fee71832720 'INT' 'int'
+    |       |   | `-UnaryOperator 0x7fee71835408 <line:52:5, col:20> 'u32':'unsigned int' postfix '++'
+    |       |   |   `-ArraySubscriptExpr 0x7fee718353e0 <col:5, col:19> 'u32':'unsigned int' lvalue
+    |       |   |     |-ImplicitCastExpr 0x7fee718353c8 <col:5> 'u32 *' <LValueToRValue>
+    |       |   |     | `-DeclRefExpr 0x7fee71835378 <col:5> 'u32 *' lvalue ParmVar 0x7fee718330f8 'transitions' 'u32 *'
+    |       |   |     `-DeclRefExpr 0x7fee718353a0 <col:17> 'int' EnumConstant 0x7fee71832690 'S1' 'int'
+    |       |   `-IfStmt 0x7fee718357d8 <line:54:9, line:61:4>
+    |       |     |-<<<NULL>>>
+    |       |     |-<<<NULL>>>
+    |       |     |-BinaryOperator 0x7fee718354c0 <line:54:13, col:28> 'int' '=='
+    |       |     | |-ImplicitCastExpr 0x7fee718354a8 <col:13> 'int' <IntegralCast>
+    |       |     | | `-ImplicitCastExpr 0x7fee71835490 <col:13> 'u8':'unsigned char' <LValueToRValue>
+    |       |     | |   `-DeclRefExpr 0x7fee71835450 <col:13> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |       |     | `-CharacterLiteral 0x7fee71835478 <col:28> 'int' 46
+    |       |     |-CompoundStmt 0x7fee71835648 <col:34, line:57:4>
+    |       |     | |-BinaryOperator 0x7fee71835550 <line:55:5, col:13> 'enum STATES':'enum STATES' '='
+    |       |     | | |-DeclRefExpr 0x7fee718354e8 <col:5> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |       |     | | `-ImplicitCastExpr 0x7fee71835538 <col:13> 'enum STATES':'enum STATES' <IntegralCast>
+    |       |     | |   `-DeclRefExpr 0x7fee71835510 <col:13> 'int' EnumConstant 0x7fee71832768 'FLOAT' 'int'
+    |       |     | `-UnaryOperator 0x7fee71835628 <line:56:5, col:20> 'u32':'unsigned int' postfix '++'
+    |       |     |   `-ArraySubscriptExpr 0x7fee71835600 <col:5, col:19> 'u32':'unsigned int' lvalue
+    |       |     |     |-ImplicitCastExpr 0x7fee718355c8 <col:5> 'u32 *' <LValueToRValue>
+    |       |     |     | `-DeclRefExpr 0x7fee71835578 <col:5> 'u32 *' lvalue ParmVar 0x7fee718330f8 'transitions' 'u32 *'
+    |       |     |     `-DeclRefExpr 0x7fee718355a0 <col:17> 'int' EnumConstant 0x7fee71832690 'S1' 'int'
+    |       |     `-CompoundStmt 0x7fee718357b0 <line:58:9, line:61:4>
+    |       |       |-BinaryOperator 0x7fee718356d8 <line:59:5, col:13> 'enum STATES':'enum STATES' '='
+    |       |       | |-DeclRefExpr 0x7fee71835670 <col:5> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |       |       | `-ImplicitCastExpr 0x7fee718356c0 <col:13> 'enum STATES':'enum STATES' <IntegralCast>
+    |       |       |   `-DeclRefExpr 0x7fee71835698 <col:13> 'int' EnumConstant 0x7fee71832648 'INVALID' 'int'
+    |       |       `-UnaryOperator 0x7fee71835790 <line:60:5, col:20> 'u32':'unsigned int' postfix '++'
+    |       |         `-ArraySubscriptExpr 0x7fee71835768 <col:5, col:19> 'u32':'unsigned int' lvalue
+    |       |           |-ImplicitCastExpr 0x7fee71835750 <col:5> 'u32 *' <LValueToRValue>
+    |       |           | `-DeclRefExpr 0x7fee71835700 <col:5> 'u32 *' lvalue ParmVar 0x7fee718330f8 'transitions' 'u32 *'
+    |       |           `-DeclRefExpr 0x7fee71835728 <col:17> 'int' EnumConstant 0x7fee71832690 'S1' 'int'
+    |       |-BreakStmt 0x7fee71835848 <line:62:4>
+    |       |-CaseStmt 0x7fee71835878 <line:63:3, line:71:4>
+    |       | |-ImplicitCastExpr 0x7fee71836f78 <line:63:8> 'unsigned int' <IntegralCast>
+    |       | | `-DeclRefExpr 0x7fee71835850 <col:8> 'int' EnumConstant 0x7fee71832720 'INT' 'int'
+    |       | |-<<<NULL>>>
+    |       | `-IfStmt 0x7fee71835d20 <line:64:4, line:71:4>
+    |       |   |-<<<NULL>>>
+    |       |   |-<<<NULL>>>
+    |       |   |-BinaryOperator 0x7fee71835920 <line:64:8, col:23> 'int' '=='
+    |       |   | |-ImplicitCastExpr 0x7fee71835908 <col:8> 'int' <IntegralCast>
+    |       |   | | `-ImplicitCastExpr 0x7fee718358f0 <col:8> 'u8':'unsigned char' <LValueToRValue>
+    |       |   | |   `-DeclRefExpr 0x7fee718358b0 <col:8> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |       |   | `-CharacterLiteral 0x7fee718358d8 <col:23> 'int' 46
+    |       |   |-CompoundStmt 0x7fee71835a88 <col:29, line:67:4>
+    |       |   | |-BinaryOperator 0x7fee718359b0 <line:65:5, col:13> 'enum STATES':'enum STATES' '='
+    |       |   | | |-DeclRefExpr 0x7fee71835948 <col:5> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |       |   | | `-ImplicitCastExpr 0x7fee71835998 <col:13> 'enum STATES':'enum STATES' <IntegralCast>
+    |       |   | |   `-DeclRefExpr 0x7fee71835970 <col:13> 'int' EnumConstant 0x7fee71832768 'FLOAT' 'int'
+    |       |   | `-UnaryOperator 0x7fee71835a68 <line:66:5, col:21> 'u32':'unsigned int' postfix '++'
+    |       |   |   `-ArraySubscriptExpr 0x7fee71835a40 <col:5, col:20> 'u32':'unsigned int' lvalue
+    |       |   |     |-ImplicitCastExpr 0x7fee71835a28 <col:5> 'u32 *' <LValueToRValue>
+    |       |   |     | `-DeclRefExpr 0x7fee718359d8 <col:5> 'u32 *' lvalue ParmVar 0x7fee718330f8 'transitions' 'u32 *'
+    |       |   |     `-DeclRefExpr 0x7fee71835a00 <col:17> 'int' EnumConstant 0x7fee71832720 'INT' 'int'
+    |       |   `-IfStmt 0x7fee71835ce8 <line:68:9, line:71:4>
+    |       |     |-<<<NULL>>>
+    |       |     |-<<<NULL>>>
+    |       |     |-UnaryOperator 0x7fee71835b60 <line:68:12, col:33> 'int' prefix '!'
+    |       |     | `-CallExpr 0x7fee71835b18 <col:13, col:33> 'u8':'unsigned char'
+    |       |     |   |-ImplicitCastExpr 0x7fee71835b00 <col:13> 'u8 (*)(u8)' <FunctionToPointerDecay>
+    |       |     |   | `-DeclRefExpr 0x7fee71835ab0 <col:13> 'u8 (u8)' Function 0x7fee71832b60 'is_digit' 'u8 (u8)'
+    |       |     |   `-ImplicitCastExpr 0x7fee71835b48 <col:22> 'u8':'unsigned char' <LValueToRValue>
+    |       |     |     `-DeclRefExpr 0x7fee71835ad8 <col:22> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |       |     |-CompoundStmt 0x7fee71835cc0 <col:36, line:71:4>
+    |       |     | |-BinaryOperator 0x7fee71835be8 <line:69:5, col:13> 'enum STATES':'enum STATES' '='
+    |       |     | | |-DeclRefExpr 0x7fee71835b80 <col:5> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |       |     | | `-ImplicitCastExpr 0x7fee71835bd0 <col:13> 'enum STATES':'enum STATES' <IntegralCast>
+    |       |     | |   `-DeclRefExpr 0x7fee71835ba8 <col:13> 'int' EnumConstant 0x7fee71832648 'INVALID' 'int'
+    |       |     | `-UnaryOperator 0x7fee71835ca0 <line:70:5, col:21> 'u32':'unsigned int' postfix '++'
+    |       |     |   `-ArraySubscriptExpr 0x7fee71835c78 <col:5, col:20> 'u32':'unsigned int' lvalue
+    |       |     |     |-ImplicitCastExpr 0x7fee71835c60 <col:5> 'u32 *' <LValueToRValue>
+    |       |     |     | `-DeclRefExpr 0x7fee71835c10 <col:5> 'u32 *' lvalue ParmVar 0x7fee718330f8 'transitions' 'u32 *'
+    |       |     |     `-DeclRefExpr 0x7fee71835c38 <col:17> 'int' EnumConstant 0x7fee71832720 'INT' 'int'
+    |       |     `-<<<NULL>>>
+    |       |-BreakStmt 0x7fee71835d58 <line:72:4>
+    |       |-CaseStmt 0x7fee71835d88 <line:73:3, line:81:4>
+    |       | |-ImplicitCastExpr 0x7fee71836f60 <line:73:8> 'unsigned int' <IntegralCast>
+    |       | | `-DeclRefExpr 0x7fee71835d60 <col:8> 'int' EnumConstant 0x7fee71832768 'FLOAT' 'int'
+    |       | |-<<<NULL>>>
+    |       | `-IfStmt 0x7fee718362f0 <line:74:4, line:81:4>
+    |       |   |-<<<NULL>>>
+    |       |   |-<<<NULL>>>
+    |       |   |-BinaryOperator 0x7fee71835ef0 <line:74:8, col:45> 'int' '||'
+    |       |   | |-BinaryOperator 0x7fee71835e30 <col:8, col:23> 'int' '=='
+    |       |   | | |-ImplicitCastExpr 0x7fee71835e18 <col:8> 'int' <IntegralCast>
+    |       |   | | | `-ImplicitCastExpr 0x7fee71835e00 <col:8> 'u8':'unsigned char' <LValueToRValue>
+    |       |   | | |   `-DeclRefExpr 0x7fee71835dc0 <col:8> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |       |   | | `-CharacterLiteral 0x7fee71835de8 <col:23> 'int' 69
+    |       |   | `-BinaryOperator 0x7fee71835ec8 <col:30, col:45> 'int' '=='
+    |       |   |   |-ImplicitCastExpr 0x7fee71835eb0 <col:30> 'int' <IntegralCast>
+    |       |   |   | `-ImplicitCastExpr 0x7fee71835e98 <col:30> 'u8':'unsigned char' <LValueToRValue>
+    |       |   |   |   `-DeclRefExpr 0x7fee71835e58 <col:30> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |       |   |   `-CharacterLiteral 0x7fee71835e80 <col:45> 'int' 101
+    |       |   |-CompoundStmt 0x7fee71836058 <col:51, line:77:4>
+    |       |   | |-BinaryOperator 0x7fee71835f80 <line:75:5, col:13> 'enum STATES':'enum STATES' '='
+    |       |   | | |-DeclRefExpr 0x7fee71835f18 <col:5> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |       |   | | `-ImplicitCastExpr 0x7fee71835f68 <col:13> 'enum STATES':'enum STATES' <IntegralCast>
+    |       |   | |   `-DeclRefExpr 0x7fee71835f40 <col:13> 'int' EnumConstant 0x7fee718326d8 'S2' 'int'
+    |       |   | `-UnaryOperator 0x7fee71836038 <line:76:5, col:24> 'u32':'unsigned int' postfix '++'
+    |       |   |   `-ArraySubscriptExpr 0x7fee71836010 <col:5, col:23> 'u32':'unsigned int' lvalue
+    |       |   |     |-ImplicitCastExpr 0x7fee71835ff8 <col:5> 'u32 *' <LValueToRValue>
+    |       |   |     | `-DeclRefExpr 0x7fee71835fa8 <col:5> 'u32 *' lvalue ParmVar 0x7fee718330f8 'transitions' 'u32 *'
+    |       |   |     `-DeclRefExpr 0x7fee71835fd0 <col:17> 'int' EnumConstant 0x7fee71832768 'FLOAT' 'int'
+    |       |   `-IfStmt 0x7fee718362b8 <line:78:9, line:81:4>
+    |       |     |-<<<NULL>>>
+    |       |     |-<<<NULL>>>
+    |       |     |-UnaryOperator 0x7fee71836130 <line:78:12, col:33> 'int' prefix '!'
+    |       |     | `-CallExpr 0x7fee718360e8 <col:13, col:33> 'u8':'unsigned char'
+    |       |     |   |-ImplicitCastExpr 0x7fee718360d0 <col:13> 'u8 (*)(u8)' <FunctionToPointerDecay>
+    |       |     |   | `-DeclRefExpr 0x7fee71836080 <col:13> 'u8 (u8)' Function 0x7fee71832b60 'is_digit' 'u8 (u8)'
+    |       |     |   `-ImplicitCastExpr 0x7fee71836118 <col:22> 'u8':'unsigned char' <LValueToRValue>
+    |       |     |     `-DeclRefExpr 0x7fee718360a8 <col:22> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |       |     |-CompoundStmt 0x7fee71836290 <col:36, line:81:4>
+    |       |     | |-BinaryOperator 0x7fee718361b8 <line:79:5, col:13> 'enum STATES':'enum STATES' '='
+    |       |     | | |-DeclRefExpr 0x7fee71836150 <col:5> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |       |     | | `-ImplicitCastExpr 0x7fee718361a0 <col:13> 'enum STATES':'enum STATES' <IntegralCast>
+    |       |     | |   `-DeclRefExpr 0x7fee71836178 <col:13> 'int' EnumConstant 0x7fee71832648 'INVALID' 'int'
+    |       |     | `-UnaryOperator 0x7fee71836270 <line:80:5, col:24> 'u32':'unsigned int' postfix '++'
+    |       |     |   `-ArraySubscriptExpr 0x7fee71836248 <col:5, col:23> 'u32':'unsigned int' lvalue
+    |       |     |     |-ImplicitCastExpr 0x7fee71836230 <col:5> 'u32 *' <LValueToRValue>
+    |       |     |     | `-DeclRefExpr 0x7fee718361e0 <col:5> 'u32 *' lvalue ParmVar 0x7fee718330f8 'transitions' 'u32 *'
+    |       |     |     `-DeclRefExpr 0x7fee71836208 <col:17> 'int' EnumConstant 0x7fee71832768 'FLOAT' 'int'
+    |       |     `-<<<NULL>>>
+    |       |-BreakStmt 0x7fee71836328 <line:82:4>
+    |       |-CaseStmt 0x7fee71836358 <line:83:3, line:91:4>
+    |       | |-ImplicitCastExpr 0x7fee71836f48 <line:83:8> 'unsigned int' <IntegralCast>
+    |       | | `-DeclRefExpr 0x7fee71836330 <col:8> 'int' EnumConstant 0x7fee718326d8 'S2' 'int'
+    |       | |-<<<NULL>>>
+    |       | `-IfStmt 0x7fee718367d8 <line:84:4, line:91:4>
+    |       |   |-<<<NULL>>>
+    |       |   |-<<<NULL>>>
+    |       |   |-BinaryOperator 0x7fee718364c0 <line:84:8, col:45> 'int' '||'
+    |       |   | |-BinaryOperator 0x7fee71836400 <col:8, col:23> 'int' '=='
+    |       |   | | |-ImplicitCastExpr 0x7fee718363e8 <col:8> 'int' <IntegralCast>
+    |       |   | | | `-ImplicitCastExpr 0x7fee718363d0 <col:8> 'u8':'unsigned char' <LValueToRValue>
+    |       |   | | |   `-DeclRefExpr 0x7fee71836390 <col:8> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |       |   | | `-CharacterLiteral 0x7fee718363b8 <col:23> 'int' 43
+    |       |   | `-BinaryOperator 0x7fee71836498 <col:30, col:45> 'int' '=='
+    |       |   |   |-ImplicitCastExpr 0x7fee71836480 <col:30> 'int' <IntegralCast>
+    |       |   |   | `-ImplicitCastExpr 0x7fee71836468 <col:30> 'u8':'unsigned char' <LValueToRValue>
+    |       |   |   |   `-DeclRefExpr 0x7fee71836428 <col:30> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |       |   |   `-CharacterLiteral 0x7fee71836450 <col:45> 'int' 45
+    |       |   |-CompoundStmt 0x7fee71836648 <col:51, line:87:4>
+    |       |   | |-BinaryOperator 0x7fee71836550 <line:85:5, col:13> 'enum STATES':'enum STATES' '='
+    |       |   | | |-DeclRefExpr 0x7fee718364e8 <col:5> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |       |   | | `-ImplicitCastExpr 0x7fee71836538 <col:13> 'enum STATES':'enum STATES' <IntegralCast>
+    |       |   | |   `-DeclRefExpr 0x7fee71836510 <col:13> 'int' EnumConstant 0x7fee718327b0 'EXPONENT' 'int'
+    |       |   | `-UnaryOperator 0x7fee71836628 <line:86:5, col:20> 'u32':'unsigned int' postfix '++'
+    |       |   |   `-ArraySubscriptExpr 0x7fee71836600 <col:5, col:19> 'u32':'unsigned int' lvalue
+    |       |   |     |-ImplicitCastExpr 0x7fee718365c8 <col:5> 'u32 *' <LValueToRValue>
+    |       |   |     | `-DeclRefExpr 0x7fee71836578 <col:5> 'u32 *' lvalue ParmVar 0x7fee718330f8 'transitions' 'u32 *'
+    |       |   |     `-DeclRefExpr 0x7fee718365a0 <col:17> 'int' EnumConstant 0x7fee718326d8 'S2' 'int'
+    |       |   `-CompoundStmt 0x7fee718367b0 <line:88:9, line:91:4>
+    |       |     |-BinaryOperator 0x7fee718366d8 <line:89:5, col:13> 'enum STATES':'enum STATES' '='
+    |       |     | |-DeclRefExpr 0x7fee71836670 <col:5> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |       |     | `-ImplicitCastExpr 0x7fee718366c0 <col:13> 'enum STATES':'enum STATES' <IntegralCast>
+    |       |     |   `-DeclRefExpr 0x7fee71836698 <col:13> 'int' EnumConstant 0x7fee71832648 'INVALID' 'int'
+    |       |     `-UnaryOperator 0x7fee71836790 <line:90:5, col:20> 'u32':'unsigned int' postfix '++'
+    |       |       `-ArraySubscriptExpr 0x7fee71836768 <col:5, col:19> 'u32':'unsigned int' lvalue
+    |       |         |-ImplicitCastExpr 0x7fee71836750 <col:5> 'u32 *' <LValueToRValue>
+    |       |         | `-DeclRefExpr 0x7fee71836700 <col:5> 'u32 *' lvalue ParmVar 0x7fee718330f8 'transitions' 'u32 *'
+    |       |         `-DeclRefExpr 0x7fee71836728 <col:17> 'int' EnumConstant 0x7fee718326d8 'S2' 'int'
+    |       |-BreakStmt 0x7fee71836810 <line:92:4>
+    |       |-CaseStmt 0x7fee71836840 <line:93:3, line:101:4>
+    |       | |-ImplicitCastExpr 0x7fee71836f30 <line:93:8> 'unsigned int' <IntegralCast>
+    |       | | `-DeclRefExpr 0x7fee71836818 <col:8> 'int' EnumConstant 0x7fee718327b0 'EXPONENT' 'int'
+    |       | |-<<<NULL>>>
+    |       | `-IfStmt 0x7fee71836bf8 <line:94:4, line:101:4>
+    |       |   |-<<<NULL>>>
+    |       |   |-<<<NULL>>>
+    |       |   |-CallExpr 0x7fee718368e0 <line:94:7, col:27> 'u8':'unsigned char'
+    |       |   | |-ImplicitCastExpr 0x7fee718368c8 <col:7> 'u8 (*)(u8)' <FunctionToPointerDecay>
+    |       |   | | `-DeclRefExpr 0x7fee71836878 <col:7> 'u8 (u8)' Function 0x7fee71832b60 'is_digit' 'u8 (u8)'
+    |       |   | `-ImplicitCastExpr 0x7fee71836910 <col:16> 'u8':'unsigned char' <LValueToRValue>
+    |       |   |   `-DeclRefExpr 0x7fee718368a0 <col:16> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |       |   |-CompoundStmt 0x7fee71836a68 <col:30, line:97:4>
+    |       |   | |-BinaryOperator 0x7fee71836990 <line:95:5, col:13> 'enum STATES':'enum STATES' '='
+    |       |   | | |-DeclRefExpr 0x7fee71836928 <col:5> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |       |   | | `-ImplicitCastExpr 0x7fee71836978 <col:13> 'enum STATES':'enum STATES' <IntegralCast>
+    |       |   | |   `-DeclRefExpr 0x7fee71836950 <col:13> 'int' EnumConstant 0x7fee718327f8 'SCIENTIFIC' 'int'
+    |       |   | `-UnaryOperator 0x7fee71836a48 <line:96:5, col:26> 'u32':'unsigned int' postfix '++'
+    |       |   |   `-ArraySubscriptExpr 0x7fee71836a20 <col:5, col:25> 'u32':'unsigned int' lvalue
+    |       |   |     |-ImplicitCastExpr 0x7fee71836a08 <col:5> 'u32 *' <LValueToRValue>
+    |       |   |     | `-DeclRefExpr 0x7fee718369b8 <col:5> 'u32 *' lvalue ParmVar 0x7fee718330f8 'transitions' 'u32 *'
+    |       |   |     `-DeclRefExpr 0x7fee718369e0 <col:17> 'int' EnumConstant 0x7fee718327b0 'EXPONENT' 'int'
+    |       |   `-CompoundStmt 0x7fee71836bd0 <line:98:9, line:101:4>
+    |       |     |-BinaryOperator 0x7fee71836af8 <line:99:5, col:13> 'enum STATES':'enum STATES' '='
+    |       |     | |-DeclRefExpr 0x7fee71836a90 <col:5> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |       |     | `-ImplicitCastExpr 0x7fee71836ae0 <col:13> 'enum STATES':'enum STATES' <IntegralCast>
+    |       |     |   `-DeclRefExpr 0x7fee71836ab8 <col:13> 'int' EnumConstant 0x7fee71832648 'INVALID' 'int'
+    |       |     `-UnaryOperator 0x7fee71836bb0 <line:100:5, col:26> 'u32':'unsigned int' postfix '++'
+    |       |       `-ArraySubscriptExpr 0x7fee71836b88 <col:5, col:25> 'u32':'unsigned int' lvalue
+    |       |         |-ImplicitCastExpr 0x7fee71836b70 <col:5> 'u32 *' <LValueToRValue>
+    |       |         | `-DeclRefExpr 0x7fee71836b20 <col:5> 'u32 *' lvalue ParmVar 0x7fee718330f8 'transitions' 'u32 *'
+    |       |         `-DeclRefExpr 0x7fee71836b48 <col:17> 'int' EnumConstant 0x7fee718327b0 'EXPONENT' 'int'
+    |       |-BreakStmt 0x7fee71836c30 <line:102:4>
+    |       |-CaseStmt 0x7fee71836c60 <line:103:3, line:106:4>
+    |       | |-ImplicitCastExpr 0x7fee71836f18 <line:103:8> 'unsigned int' <IntegralCast>
+    |       | | `-DeclRefExpr 0x7fee71836c38 <col:8> 'int' EnumConstant 0x7fee718327f8 'SCIENTIFIC' 'int'
+    |       | |-<<<NULL>>>
+    |       | `-IfStmt 0x7fee71836e18 <line:104:4, line:106:4>
+    |       |   |-<<<NULL>>>
+    |       |   |-<<<NULL>>>
+    |       |   |-UnaryOperator 0x7fee71836d48 <line:104:7, col:28> 'int' prefix '!'
+    |       |   | `-CallExpr 0x7fee71836d00 <col:8, col:28> 'u8':'unsigned char'
+    |       |   |   |-ImplicitCastExpr 0x7fee71836ce8 <col:8> 'u8 (*)(u8)' <FunctionToPointerDecay>
+    |       |   |   | `-DeclRefExpr 0x7fee71836c98 <col:8> 'u8 (u8)' Function 0x7fee71832b60 'is_digit' 'u8 (u8)'
+    |       |   |   `-ImplicitCastExpr 0x7fee71836d30 <col:17> 'u8':'unsigned char' <LValueToRValue>
+    |       |   |     `-DeclRefExpr 0x7fee71836cc0 <col:17> 'u8':'unsigned char' lvalue Var 0x7fee718333d8 'NEXT_SYMBOL' 'u8':'unsigned char'
+    |       |   |-CompoundStmt 0x7fee71836df8 <col:31, line:106:4>
+    |       |   | `-BinaryOperator 0x7fee71836dd0 <line:105:5, col:13> 'enum STATES':'enum STATES' '='
+    |       |   |   |-DeclRefExpr 0x7fee71836d68 <col:5> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    |       |   |   `-ImplicitCastExpr 0x7fee71836db8 <col:13> 'enum STATES':'enum STATES' <IntegralCast>
+    |       |   |     `-DeclRefExpr 0x7fee71836d90 <col:13> 'int' EnumConstant 0x7fee71832648 'INVALID' 'int'
+    |       |   `-<<<NULL>>>
+    |       |-BreakStmt 0x7fee71836e50 <line:107:4>
+    |       `-DefaultStmt 0x7fee71836e60 <line:108:3, line:109:4>
+    |         `-BreakStmt 0x7fee71836e58 <col:4>
+    |-IfStmt 0x7fee71837198 <line:112:2, line:113:23>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fee718370c0 <line:112:6, col:13> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fee71837090 <col:6> 'unsigned int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fee71837078 <col:6> 'enum STATES':'enum STATES' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fee71837028 <col:6> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'
+    | | `-ImplicitCastExpr 0x7fee718370a8 <col:13> 'unsigned int' <IntegralCast>
+    | |   `-DeclRefExpr 0x7fee71837050 <col:13> 'int' EnumConstant 0x7fee71832648 'INVALID' 'int'
+    | |-UnaryOperator 0x7fee71837178 <line:113:3, col:23> 'u32':'unsigned int' postfix '++'
+    | | `-ArraySubscriptExpr 0x7fee71837150 <col:3, col:22> 'u32':'unsigned int' lvalue
+    | |   |-ImplicitCastExpr 0x7fee71837138 <col:3> 'u32 *' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7fee718370e8 <col:3> 'u32 *' lvalue ParmVar 0x7fee718330f8 'transitions' 'u32 *'
+    | |   `-DeclRefExpr 0x7fee71837110 <col:15> 'int' EnumConstant 0x7fee71832648 'INVALID' 'int'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fee71837270 <line:115:2, col:8> 'u8 *' '='
+    | |-UnaryOperator 0x7fee71837210 <col:2, col:3> 'u8 *' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fee718371f8 <col:3> 'u8 **' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fee718371d0 <col:3> 'u8 **' lvalue ParmVar 0x7fee71833010 'in' 'u8 **'
+    | `-ImplicitCastExpr 0x7fee71837258 <col:8> 'u8 *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fee71837230 <col:8> 'u8 *' lvalue Var 0x7fee718332d8 'str' 'u8 *'
+    `-ReturnStmt 0x7fee718372d8 <line:116:2, col:9>
+      `-ImplicitCastExpr 0x7fee718372c0 <col:9> 'enum STATES':'enum STATES' <LValueToRValue>
+        `-DeclRefExpr 0x7fee71837298 <col:9> 'enum STATES':'enum STATES' lvalue Var 0x7fee71833470 'state' 'enum STATES':'enum STATES'

@@ -1,0 +1,45 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Pragma: omp parallel
+      Pragma: omp for
+      For: 
+        Assignment: =
+          ID: x
+          Constant: int, 0
+        BinaryOp: <
+          ID: x
+          Constant: int, 10
+        UnaryOp: p++
+          ID: x
+        Compound: 
+          Pragma: omp for reduction(+: v)	 
+          For: 
+            Assignment: =
+              ID: y
+              Constant: int, 0
+            BinaryOp: <
+              ID: y
+              Constant: int, 10
+            UnaryOp: p++
+              ID: y
+            UnaryOp: p++
+              ID: v
+      Return: 
+        BinaryOp: -
+          ID: v
+          Constant: int, 100

@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7f8bb181b0d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8bb181b620 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8bb181b340 '__int128'
+|-TypedefDecl 0x7f8bb181b690 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8bb181b360 'unsigned __int128'
+|-TypedefDecl 0x7f8bb181b968 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8bb181b770 'struct __NSConstantString_tag'
+|   `-Record 0x7f8bb181b6e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8bb181ba00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8bb181b9c0 'char *'
+|   `-BuiltinType 0x7f8bb181b160 'char'
+|-TypedefDecl 0x7f8bb181bcc8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8bb181bc70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8bb181bae0 'struct __va_list_tag'
+|     `-Record 0x7f8bb181ba58 '__va_list_tag'
+|-TypedefDecl 0x7f8bb181bd78 <c_files/pr70327.c:6:1, col:27> col:27 referenced v4ti '__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+| `-VectorType 0x7f8bb181bd40 '__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' 4
+|   `-BuiltinType 0x7f8bb181b360 'unsigned __int128'
+`-FunctionDecl 0x7f8bb3029f00 <line:8:1, line:12:1> line:9:1 referenced foo 'void (v4ti)'
+  |-ParmVarDecl 0x7f8bb3029e00 <col:6, col:11> col:11 used v 'v4ti':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+  `-CompoundStmt 0x7f8bb302a0e8 <line:10:1, line:12:1>
+    `-CallExpr 0x7f8bb302a0a0 <line:11:3, col:8> 'void'
+      |-ImplicitCastExpr 0x7f8bb302a088 <col:3> 'void (*)(v4ti)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8bb3029fe0 <col:3> 'void (v4ti)' Function 0x7f8bb3029f00 'foo' 'void (v4ti)'
+      `-ImplicitCastExpr 0x7f8bb302a0d0 <col:7> 'v4ti':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' <LValueToRValue>
+        `-DeclRefExpr 0x7f8bb302a008 <col:7> 'v4ti':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' lvalue ParmVar 0x7f8bb3029e00 'v' 'v4ti':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'

@@ -1,0 +1,741 @@
+TranslationUnitDecl 0x7fbbdb0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbbdb026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbbdb026740 '__int128'
+|-TypedefDecl 0x7fbbdb026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbbdb026760 'unsigned __int128'
+|-TypedefDecl 0x7fbbdb026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbbdb026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbbdb026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbbdb026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbbdb026dc0 'char *'
+|   `-BuiltinType 0x7fbbdb026560 'char'
+|-TypedefDecl 0x7fbbdb0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbbdb027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbbdb026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbbdb026e58 '__va_list_tag'
+|-TypedefDecl 0x7fbbdb027138 <c_files/pr42833.c:1:1, col:29> col:29 referenced int8_t 'signed char'
+| `-BuiltinType 0x7fbbdb026580 'signed char'
+|-TypedefDecl 0x7fbbdb0271a8 <line:2:1, col:31> col:31 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7fbbdb026660 'unsigned int'
+|-TypedefDecl 0x7fbbdb825a18 <line:3:1, col:13> col:13 referenced ssize_t 'int'
+| `-BuiltinType 0x7fbbdb0265c0 'int'
+|-RecordDecl 0x7fbbdb825a70 <line:4:9, col:62> col:9 struct definition
+| |-FieldDecl 0x7fbbdb825b50 <col:18, col:25> col:25 referenced v1 'int8_t':'signed char'
+| |-FieldDecl 0x7fbbdb825ba8 <col:29, col:36> col:36 referenced v2 'int8_t':'signed char'
+| |-FieldDecl 0x7fbbdb825c00 <col:40, col:47> col:47 referenced v3 'int8_t':'signed char'
+| `-FieldDecl 0x7fbbdb825c58 <col:51, col:58> col:58 referenced v4 'int8_t':'signed char'
+|-TypedefDecl 0x7fbbdb825cf0 <col:1, col:64> col:64 referenced neon_s8 'struct neon_s8':'neon_s8'
+| `-ElaboratedType 0x7fbbdb825ca0 'struct neon_s8' sugar
+|   `-RecordType 0x7fbbdb825b00 'neon_s8'
+|     `-Record 0x7fbbdb825a70 ''
+|-FunctionDecl 0x7fbbdb825f10 <line:6:1, col:59> col:10 used helper_neon_rshl_s8 'uint32_t (uint32_t, uint32_t)'
+| |-ParmVarDecl 0x7fbbdb825d90 <col:31, col:40> col:40 arg1 'uint32_t':'unsigned int'
+| `-ParmVarDecl 0x7fbbdb825e00 <col:46, col:55> col:55 arg2 'uint32_t':'unsigned int'
+|-FunctionDecl 0x7fbbdb826108 prev 0x7fbbdb825f10 <line:8:1, line:161:1> line:9:1 used helper_neon_rshl_s8 'uint32_t (uint32_t, uint32_t)'
+| |-ParmVarDecl 0x7fbbdb826008 <col:22, col:31> col:31 used arg1 'uint32_t':'unsigned int'
+| |-ParmVarDecl 0x7fbbdb826078 <col:37, col:46> col:46 used arg2 'uint32_t':'unsigned int'
+| `-CompoundStmt 0x7fbbdb82d918 <line:10:1, line:161:1>
+|   |-DeclStmt 0x7fbbdb826220 <line:11:3, col:15>
+|   | `-VarDecl 0x7fbbdb8261c0 <col:3, col:12> col:12 used res 'uint32_t':'unsigned int'
+|   |-DeclStmt 0x7fbbdb8262d0 <line:12:3, col:16>
+|   | `-VarDecl 0x7fbbdb826270 <col:3, col:11> col:11 used vsrc1 'neon_s8':'neon_s8'
+|   |-DeclStmt 0x7fbbdb826358 <line:13:3, col:16>
+|   | `-VarDecl 0x7fbbdb8262f8 <col:3, col:11> col:11 used vsrc2 'neon_s8':'neon_s8'
+|   |-DeclStmt 0x7fbbdb8263e0 <line:14:3, col:16>
+|   | `-VarDecl 0x7fbbdb826380 <col:3, col:11> col:11 used vdest 'neon_s8':'neon_s8'
+|   |-DoStmt 0x7fbbdb8268e0 <line:15:3, line:25:11>
+|   | |-CompoundStmt 0x7fbbdb826890 <line:16:5, line:24:5>
+|   | | |-DeclStmt 0x7fbbdb826678 <line:17:7, line:21:15>
+|   | | | |-RecordDecl 0x7fbbdb8263f8 <line:17:7, line:21:7> line:17:7 union definition
+|   | | | | |-FieldDecl 0x7fbbdb8264b0 <line:19:2, col:10> col:10 referenced v 'neon_s8':'neon_s8'
+|   | | | | `-FieldDecl 0x7fbbdb826508 <line:20:2, col:11> col:11 referenced i 'uint32_t':'unsigned int'
+|   | | | `-VarDecl 0x7fbbdb826600 <line:17:7, line:21:9> col:9 used conv_u 'union (anonymous union at c_files/pr42833.c:17:7)':'union (anonymous at c_files/pr42833.c:17:7)'
+|   | | |-BinaryOperator 0x7fbbdb826750 <line:22:7, col:23> 'uint32_t':'unsigned int' '='
+|   | | | |-MemberExpr 0x7fbbdb8266b8 <col:7, col:14> 'uint32_t':'unsigned int' lvalue .i 0x7fbbdb826508
+|   | | | | `-DeclRefExpr 0x7fbbdb826690 <col:7> 'union (anonymous union at c_files/pr42833.c:17:7)':'union (anonymous at c_files/pr42833.c:17:7)' lvalue Var 0x7fbbdb826600 'conv_u' 'union (anonymous union at c_files/pr42833.c:17:7)':'union (anonymous at c_files/pr42833.c:17:7)'
+|   | | | `-ImplicitCastExpr 0x7fbbdb826738 <col:18, col:23> 'uint32_t':'unsigned int' <LValueToRValue>
+|   | | |   `-ParenExpr 0x7fbbdb826718 <col:18, col:23> 'uint32_t':'unsigned int' lvalue
+|   | | |     `-DeclRefExpr 0x7fbbdb8266f0 <col:19> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fbbdb826008 'arg1' 'uint32_t':'unsigned int'
+|   | | `-BinaryOperator 0x7fbbdb826868 <line:23:7, col:22> 'neon_s8':'neon_s8' '='
+|   | |   |-DeclRefExpr 0x7fbbdb8267c8 <col:7> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |   `-ImplicitCastExpr 0x7fbbdb826850 <col:15, col:22> 'neon_s8':'neon_s8' <LValueToRValue>
+|   | |     `-MemberExpr 0x7fbbdb826818 <col:15, col:22> 'neon_s8':'neon_s8' lvalue .v 0x7fbbdb8264b0
+|   | |       `-DeclRefExpr 0x7fbbdb8267f0 <col:15> 'union (anonymous union at c_files/pr42833.c:17:7)':'union (anonymous at c_files/pr42833.c:17:7)' lvalue Var 0x7fbbdb826600 'conv_u' 'union (anonymous union at c_files/pr42833.c:17:7)':'union (anonymous at c_files/pr42833.c:17:7)'
+|   | `-IntegerLiteral 0x7fbbdb8268c0 <line:25:10> 'int' 0
+|   |-DoStmt 0x7fbbdb826dd0 <line:26:3, line:36:11>
+|   | |-CompoundStmt 0x7fbbdb826d80 <line:27:5, line:35:5>
+|   | | |-DeclStmt 0x7fbbdb826b68 <line:28:7, line:32:15>
+|   | | | |-RecordDecl 0x7fbbdb826900 <line:28:7, line:32:7> line:28:7 union definition
+|   | | | | |-FieldDecl 0x7fbbdb826a00 <line:30:2, col:10> col:10 referenced v 'neon_s8':'neon_s8'
+|   | | | | `-FieldDecl 0x7fbbdb826a58 <line:31:2, col:11> col:11 referenced i 'uint32_t':'unsigned int'
+|   | | | `-VarDecl 0x7fbbdb826af0 <line:28:7, line:32:9> col:9 used conv_u 'union (anonymous union at c_files/pr42833.c:28:7)':'union (anonymous at c_files/pr42833.c:28:7)'
+|   | | |-BinaryOperator 0x7fbbdb826c40 <line:33:7, col:23> 'uint32_t':'unsigned int' '='
+|   | | | |-MemberExpr 0x7fbbdb826ba8 <col:7, col:14> 'uint32_t':'unsigned int' lvalue .i 0x7fbbdb826a58
+|   | | | | `-DeclRefExpr 0x7fbbdb826b80 <col:7> 'union (anonymous union at c_files/pr42833.c:28:7)':'union (anonymous at c_files/pr42833.c:28:7)' lvalue Var 0x7fbbdb826af0 'conv_u' 'union (anonymous union at c_files/pr42833.c:28:7)':'union (anonymous at c_files/pr42833.c:28:7)'
+|   | | | `-ImplicitCastExpr 0x7fbbdb826c28 <col:18, col:23> 'uint32_t':'unsigned int' <LValueToRValue>
+|   | | |   `-ParenExpr 0x7fbbdb826c08 <col:18, col:23> 'uint32_t':'unsigned int' lvalue
+|   | | |     `-DeclRefExpr 0x7fbbdb826be0 <col:19> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fbbdb826078 'arg2' 'uint32_t':'unsigned int'
+|   | | `-BinaryOperator 0x7fbbdb826d58 <line:34:7, col:22> 'neon_s8':'neon_s8' '='
+|   | |   |-DeclRefExpr 0x7fbbdb826cb8 <col:7> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb8262f8 'vsrc2' 'neon_s8':'neon_s8'
+|   | |   `-ImplicitCastExpr 0x7fbbdb826d40 <col:15, col:22> 'neon_s8':'neon_s8' <LValueToRValue>
+|   | |     `-MemberExpr 0x7fbbdb826d08 <col:15, col:22> 'neon_s8':'neon_s8' lvalue .v 0x7fbbdb826a00
+|   | |       `-DeclRefExpr 0x7fbbdb826ce0 <col:15> 'union (anonymous union at c_files/pr42833.c:28:7)':'union (anonymous at c_files/pr42833.c:28:7)' lvalue Var 0x7fbbdb826af0 'conv_u' 'union (anonymous union at c_files/pr42833.c:28:7)':'union (anonymous at c_files/pr42833.c:28:7)'
+|   | `-IntegerLiteral 0x7fbbdb826db0 <line:36:10> 'int' 0
+|   |-DoStmt 0x7fbbdb829370 <line:37:3, line:64:11>
+|   | |-CompoundStmt 0x7fbbdb829320 <line:38:5, line:63:5>
+|   | | |-DeclStmt 0x7fbbdb826e60 <line:39:7, col:17>
+|   | | | `-VarDecl 0x7fbbdb826e00 <col:7, col:14> col:14 used tmp 'int8_t':'signed char'
+|   | | |-BinaryOperator 0x7fbbdb826f50 <line:40:7, col:28> 'int8_t':'signed char' '='
+|   | | | |-DeclRefExpr 0x7fbbdb826e78 <col:7> 'int8_t':'signed char' lvalue Var 0x7fbbdb826e00 'tmp' 'int8_t':'signed char'
+|   | | | `-CStyleCastExpr 0x7fbbdb826f28 <col:13, col:28> 'int8_t':'signed char' <NoOp>
+|   | | |   `-ImplicitCastExpr 0x7fbbdb826f10 <col:22, col:28> 'int8_t':'signed char' <LValueToRValue>
+|   | | |     `-MemberExpr 0x7fbbdb826ec8 <col:22, col:28> 'int8_t':'signed char' lvalue .v1 0x7fbbdb825b50
+|   | | |       `-DeclRefExpr 0x7fbbdb826ea0 <col:22> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb8262f8 'vsrc2' 'neon_s8':'neon_s8'
+|   | | `-IfStmt 0x7fbbdb8292e8 <line:41:7, line:62:2>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-BinaryOperator 0x7fbbdb827110 <line:41:11, col:48> 'int' '>='
+|   | |   | |-ImplicitCastExpr 0x7fbbdb8270f8 <col:11> 'int' <IntegralCast>
+|   | |   | | `-ImplicitCastExpr 0x7fbbdb8270e0 <col:11> 'int8_t':'signed char' <LValueToRValue>
+|   | |   | |   `-DeclRefExpr 0x7fbbdb826f78 <col:11> 'int8_t':'signed char' lvalue Var 0x7fbbdb826e00 'tmp' 'int8_t':'signed char'
+|   | |   | `-BinaryOperator 0x7fbbdb8270b8 <col:18, col:48> 'int' '*'
+|   | |   |   |-CStyleCastExpr 0x7fbbdb827070 <col:18, col:44> 'ssize_t':'int' <IntegralCast>
+|   | |   |   | `-UnaryExprOrTypeTraitExpr 0x7fbbdb827040 <col:28, col:44> 'unsigned long' sizeof
+|   | |   |   |   `-ParenExpr 0x7fbbdb827020 <col:35, col:44> 'int8_t':'signed char' lvalue
+|   | |   |   |     `-MemberExpr 0x7fbbdb826fe8 <col:36, col:42> 'int8_t':'signed char' lvalue .v1 0x7fbbdb825b50
+|   | |   |   |       `-DeclRefExpr 0x7fbbdb826fc0 <col:36> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |   |   `-IntegerLiteral 0x7fbbdb827098 <col:48> 'int' 8
+|   | |   |-CompoundStmt 0x7fbbdb8271f8 <line:42:2, line:44:2>
+|   | |   | `-BinaryOperator 0x7fbbdb8271d0 <line:43:4, col:15> 'int8_t':'signed char' '='
+|   | |   |   |-MemberExpr 0x7fbbdb827160 <col:4, col:10> 'int8_t':'signed char' lvalue .v1 0x7fbbdb825b50
+|   | |   |   | `-DeclRefExpr 0x7fbbdb827138 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |   |   `-ImplicitCastExpr 0x7fbbdb8271b8 <col:15> 'int8_t':'signed char' <IntegralCast>
+|   | |   |     `-IntegerLiteral 0x7fbbdb827198 <col:15> 'int' 0
+|   | |   `-IfStmt 0x7fbbdb8292b0 <line:45:12, line:62:2>
+|   | |     |-<<<NULL>>>
+|   | |     |-<<<NULL>>>
+|   | |     |-BinaryOperator 0x7fbbdb8273b0 <line:45:16, col:53> 'int' '<'
+|   | |     | |-ImplicitCastExpr 0x7fbbdb827398 <col:16> 'int' <IntegralCast>
+|   | |     | | `-ImplicitCastExpr 0x7fbbdb827380 <col:16> 'int8_t':'signed char' <LValueToRValue>
+|   | |     | |   `-DeclRefExpr 0x7fbbdb827218 <col:16> 'int8_t':'signed char' lvalue Var 0x7fbbdb826e00 'tmp' 'int8_t':'signed char'
+|   | |     | `-BinaryOperator 0x7fbbdb827358 <col:22, col:53> 'int' '*'
+|   | |     |   |-UnaryOperator 0x7fbbdb827318 <col:22, col:49> 'ssize_t':'int' prefix '-'
+|   | |     |   | `-CStyleCastExpr 0x7fbbdb8272f0 <col:23, col:49> 'ssize_t':'int' <IntegralCast>
+|   | |     |   |   `-UnaryExprOrTypeTraitExpr 0x7fbbdb8272c0 <col:33, col:49> 'unsigned long' sizeof
+|   | |     |   |     `-ParenExpr 0x7fbbdb8272a0 <col:40, col:49> 'int8_t':'signed char' lvalue
+|   | |     |   |       `-MemberExpr 0x7fbbdb827268 <col:41, col:47> 'int8_t':'signed char' lvalue .v1 0x7fbbdb825b50
+|   | |     |   |         `-DeclRefExpr 0x7fbbdb827240 <col:41> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |     |   `-IntegerLiteral 0x7fbbdb827338 <col:53> 'int' 8
+|   | |     |-CompoundStmt 0x7fbbdb8276b0 <line:46:2, line:48:2>
+|   | |     | `-BinaryOperator 0x7fbbdb827688 <line:47:4, col:53> 'int8_t':'signed char' '='
+|   | |     |   |-MemberExpr 0x7fbbdb827400 <col:4, col:10> 'int8_t':'signed char' lvalue .v1 0x7fbbdb825b50
+|   | |     |   | `-DeclRefExpr 0x7fbbdb8273d8 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |     |   `-ImplicitCastExpr 0x7fbbdb827670 <col:15, col:53> 'int8_t':'signed char' <IntegralCast>
+|   | |     |     `-BinaryOperator 0x7fbbdb827648 <col:15, col:53> 'int' '>>'
+|   | |     |       |-ImplicitCastExpr 0x7fbbdb827630 <col:15, col:21> 'int' <IntegralCast>
+|   | |     |       | `-ImplicitCastExpr 0x7fbbdb827618 <col:15, col:21> 'int8_t':'signed char' <LValueToRValue>
+|   | |     |       |   `-MemberExpr 0x7fbbdb827460 <col:15, col:21> 'int8_t':'signed char' lvalue .v1 0x7fbbdb825b50
+|   | |     |       |     `-DeclRefExpr 0x7fbbdb827438 <col:15> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |     |       `-ParenExpr 0x7fbbdb8275f8 <col:27, col:53> 'unsigned long'
+|   | |     |         `-BinaryOperator 0x7fbbdb8275d0 <col:28, col:52> 'unsigned long' '-'
+|   | |     |           |-BinaryOperator 0x7fbbdb827570 <col:28, col:48> 'unsigned long' '*'
+|   | |     |           | |-UnaryExprOrTypeTraitExpr 0x7fbbdb827518 <col:28, col:44> 'unsigned long' sizeof
+|   | |     |           | | `-ParenExpr 0x7fbbdb8274f8 <col:35, col:44> 'int8_t':'signed char' lvalue
+|   | |     |           | |   `-MemberExpr 0x7fbbdb8274c0 <col:36, col:42> 'int8_t':'signed char' lvalue .v1 0x7fbbdb825b50
+|   | |     |           | |     `-DeclRefExpr 0x7fbbdb827498 <col:36> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |     |           | `-ImplicitCastExpr 0x7fbbdb827558 <col:48> 'unsigned long' <IntegralCast>
+|   | |     |           |   `-IntegerLiteral 0x7fbbdb827538 <col:48> 'int' 8
+|   | |     |           `-ImplicitCastExpr 0x7fbbdb8275b8 <col:52> 'unsigned long' <IntegralCast>
+|   | |     |             `-IntegerLiteral 0x7fbbdb827598 <col:52> 'int' 1
+|   | |     `-IfStmt 0x7fbbdb829278 <line:49:12, line:62:2>
+|   | |       |-<<<NULL>>>
+|   | |       |-<<<NULL>>>
+|   | |       |-BinaryOperator 0x7fbbdb827868 <line:49:16, col:54> 'int' '=='
+|   | |       | |-ImplicitCastExpr 0x7fbbdb827850 <col:16> 'int' <IntegralCast>
+|   | |       | | `-ImplicitCastExpr 0x7fbbdb827838 <col:16> 'int8_t':'signed char' <LValueToRValue>
+|   | |       | |   `-DeclRefExpr 0x7fbbdb8276d0 <col:16> 'int8_t':'signed char' lvalue Var 0x7fbbdb826e00 'tmp' 'int8_t':'signed char'
+|   | |       | `-BinaryOperator 0x7fbbdb827810 <col:23, col:54> 'int' '*'
+|   | |       |   |-UnaryOperator 0x7fbbdb8277d0 <col:23, col:50> 'ssize_t':'int' prefix '-'
+|   | |       |   | `-CStyleCastExpr 0x7fbbdb8277a8 <col:24, col:50> 'ssize_t':'int' <IntegralCast>
+|   | |       |   |   `-UnaryExprOrTypeTraitExpr 0x7fbbdb827778 <col:34, col:50> 'unsigned long' sizeof
+|   | |       |   |     `-ParenExpr 0x7fbbdb827758 <col:41, col:50> 'int8_t':'signed char' lvalue
+|   | |       |   |       `-MemberExpr 0x7fbbdb827720 <col:42, col:48> 'int8_t':'signed char' lvalue .v1 0x7fbbdb825b50
+|   | |       |   |         `-DeclRefExpr 0x7fbbdb8276f8 <col:42> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |       |   `-IntegerLiteral 0x7fbbdb8277f0 <col:54> 'int' 8
+|   | |       |-CompoundStmt 0x7fbbdb828c20 <line:50:2, line:54:2>
+|   | |       | |-BinaryOperator 0x7fbbdb828a90 <line:51:4, col:35> 'int8_t':'signed char' '='
+|   | |       | | |-MemberExpr 0x7fbbdb8278b8 <col:4, col:10> 'int8_t':'signed char' lvalue .v1 0x7fbbdb825b50
+|   | |       | | | `-DeclRefExpr 0x7fbbdb827890 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |       | | `-ImplicitCastExpr 0x7fbbdb828a78 <col:15, col:35> 'int8_t':'signed char' <IntegralCast>
+|   | |       | |   `-BinaryOperator 0x7fbbdb828a50 <col:15, col:35> 'int' '>>'
+|   | |       | |     |-ImplicitCastExpr 0x7fbbdb828a38 <col:15, col:21> 'int' <IntegralCast>
+|   | |       | |     | `-ImplicitCastExpr 0x7fbbdb828a20 <col:15, col:21> 'int8_t':'signed char' <LValueToRValue>
+|   | |       | |     |   `-MemberExpr 0x7fbbdb827918 <col:15, col:21> 'int8_t':'signed char' lvalue .v1 0x7fbbdb825b50
+|   | |       | |     |     `-DeclRefExpr 0x7fbbdb8278f0 <col:15> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |       | |     `-ParenExpr 0x7fbbdb828a00 <col:27, col:35> 'int'
+|   | |       | |       `-BinaryOperator 0x7fbbdb8279c8 <col:28, col:34> 'int' '-'
+|   | |       | |         |-ImplicitCastExpr 0x7fbbdb8279b0 <col:28> 'int' <IntegralCast>
+|   | |       | |         | `-ImplicitCastExpr 0x7fbbdb827998 <col:28> 'int8_t':'signed char' <LValueToRValue>
+|   | |       | |         |   `-DeclRefExpr 0x7fbbdb827950 <col:28> 'int8_t':'signed char' lvalue Var 0x7fbbdb826e00 'tmp' 'int8_t':'signed char'
+|   | |       | |         `-IntegerLiteral 0x7fbbdb827978 <col:34> 'int' 1
+|   | |       | |-UnaryOperator 0x7fbbdb828b18 <line:52:4, col:12> 'int8_t':'signed char' postfix '++'
+|   | |       | | `-MemberExpr 0x7fbbdb828ae0 <col:4, col:10> 'int8_t':'signed char' lvalue .v1 0x7fbbdb825b50
+|   | |       | |   `-DeclRefExpr 0x7fbbdb828ab8 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |       | `-CompoundAssignOperator 0x7fbbdb828be8 <line:53:4, col:17> 'int8_t':'signed char' '>>=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |       |   |-MemberExpr 0x7fbbdb828b60 <col:4, col:10> 'int8_t':'signed char' lvalue .v1 0x7fbbdb825b50
+|   | |       |   | `-DeclRefExpr 0x7fbbdb828b38 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |       |   `-IntegerLiteral 0x7fbbdb828b98 <col:17> 'int' 1
+|   | |       `-IfStmt 0x7fbbdb829240 <line:55:12, line:62:2>
+|   | |         |-<<<NULL>>>
+|   | |         |-<<<NULL>>>
+|   | |         |-BinaryOperator 0x7fbbdb828cc8 <line:55:16, col:22> 'int' '<'
+|   | |         | |-ImplicitCastExpr 0x7fbbdb828cb0 <col:16> 'int' <IntegralCast>
+|   | |         | | `-ImplicitCastExpr 0x7fbbdb828c98 <col:16> 'int8_t':'signed char' <LValueToRValue>
+|   | |         | |   `-DeclRefExpr 0x7fbbdb828c50 <col:16> 'int8_t':'signed char' lvalue Var 0x7fbbdb826e00 'tmp' 'int8_t':'signed char'
+|   | |         | `-IntegerLiteral 0x7fbbdb828c78 <col:22> 'int' 0
+|   | |         |-CompoundStmt 0x7fbbdb829050 <line:56:2, line:58:2>
+|   | |         | `-BinaryOperator 0x7fbbdb829028 <line:57:4, col:50> 'int8_t':'signed char' '='
+|   | |         |   |-MemberExpr 0x7fbbdb828d18 <col:4, col:10> 'int8_t':'signed char' lvalue .v1 0x7fbbdb825b50
+|   | |         |   | `-DeclRefExpr 0x7fbbdb828cf0 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |         |   `-ImplicitCastExpr 0x7fbbdb829010 <col:15, col:50> 'int8_t':'signed char' <IntegralCast>
+|   | |         |     `-BinaryOperator 0x7fbbdb828fe8 <col:15, col:50> 'int' '>>'
+|   | |         |       |-ParenExpr 0x7fbbdb828f50 <col:15, col:44> 'int'
+|   | |         |       | `-BinaryOperator 0x7fbbdb828f28 <col:16, col:43> 'int' '+'
+|   | |         |       |   |-ImplicitCastExpr 0x7fbbdb828f10 <col:16, col:22> 'int' <IntegralCast>
+|   | |         |       |   | `-ImplicitCastExpr 0x7fbbdb828ef8 <col:16, col:22> 'int8_t':'signed char' <LValueToRValue>
+|   | |         |       |   |   `-MemberExpr 0x7fbbdb828d78 <col:16, col:22> 'int8_t':'signed char' lvalue .v1 0x7fbbdb825b50
+|   | |         |       |   |     `-DeclRefExpr 0x7fbbdb828d50 <col:16> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |         |       |   `-ParenExpr 0x7fbbdb828ed8 <col:27, col:43> 'int'
+|   | |         |       |     `-BinaryOperator 0x7fbbdb828eb0 <col:28, col:42> 'int' '<<'
+|   | |         |       |       |-IntegerLiteral 0x7fbbdb828db0 <col:28> 'int' 1
+|   | |         |       |       `-ParenExpr 0x7fbbdb828e90 <col:33, col:42> 'int'
+|   | |         |       |         `-BinaryOperator 0x7fbbdb828e68 <col:34, col:39> 'int' '-'
+|   | |         |       |           |-UnaryOperator 0x7fbbdb828df0 <col:34, col:35> 'int' prefix '-'
+|   | |         |       |           | `-IntegerLiteral 0x7fbbdb828dd0 <col:35> 'int' 1
+|   | |         |       |           `-ImplicitCastExpr 0x7fbbdb828e50 <col:39> 'int' <IntegralCast>
+|   | |         |       |             `-ImplicitCastExpr 0x7fbbdb828e38 <col:39> 'int8_t':'signed char' <LValueToRValue>
+|   | |         |       |               `-DeclRefExpr 0x7fbbdb828e10 <col:39> 'int8_t':'signed char' lvalue Var 0x7fbbdb826e00 'tmp' 'int8_t':'signed char'
+|   | |         |       `-UnaryOperator 0x7fbbdb828fc8 <col:49, col:50> 'int' prefix '-'
+|   | |         |         `-ImplicitCastExpr 0x7fbbdb828fb0 <col:50> 'int' <IntegralCast>
+|   | |         |           `-ImplicitCastExpr 0x7fbbdb828f98 <col:50> 'int8_t':'signed char' <LValueToRValue>
+|   | |         |             `-DeclRefExpr 0x7fbbdb828f70 <col:50> 'int8_t':'signed char' lvalue Var 0x7fbbdb826e00 'tmp' 'int8_t':'signed char'
+|   | |         `-CompoundStmt 0x7fbbdb829220 <line:60:2, line:62:2>
+|   | |           `-BinaryOperator 0x7fbbdb8291f8 <line:61:4, col:27> 'int8_t':'signed char' '='
+|   | |             |-MemberExpr 0x7fbbdb829098 <col:4, col:10> 'int8_t':'signed char' lvalue .v1 0x7fbbdb825b50
+|   | |             | `-DeclRefExpr 0x7fbbdb829070 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |             `-ImplicitCastExpr 0x7fbbdb8291e0 <col:15, col:27> 'int8_t':'signed char' <IntegralCast>
+|   | |               `-BinaryOperator 0x7fbbdb8291b8 <col:15, col:27> 'int' '<<'
+|   | |                 |-ImplicitCastExpr 0x7fbbdb829170 <col:15, col:21> 'int' <IntegralCast>
+|   | |                 | `-ImplicitCastExpr 0x7fbbdb829158 <col:15, col:21> 'int8_t':'signed char' <LValueToRValue>
+|   | |                 |   `-MemberExpr 0x7fbbdb8290f8 <col:15, col:21> 'int8_t':'signed char' lvalue .v1 0x7fbbdb825b50
+|   | |                 |     `-DeclRefExpr 0x7fbbdb8290d0 <col:15> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |                 `-ImplicitCastExpr 0x7fbbdb8291a0 <col:27> 'int' <IntegralCast>
+|   | |                   `-ImplicitCastExpr 0x7fbbdb829188 <col:27> 'int8_t':'signed char' <LValueToRValue>
+|   | |                     `-DeclRefExpr 0x7fbbdb829130 <col:27> 'int8_t':'signed char' lvalue Var 0x7fbbdb826e00 'tmp' 'int8_t':'signed char'
+|   | `-IntegerLiteral 0x7fbbdb829350 <line:64:10> 'int' 0
+|   |-DoStmt 0x7fbbdb82a900 <line:65:3, line:92:11>
+|   | |-CompoundStmt 0x7fbbdb82a8b0 <line:66:5, line:91:5>
+|   | | |-DeclStmt 0x7fbbdb829400 <line:67:7, col:17>
+|   | | | `-VarDecl 0x7fbbdb8293a0 <col:7, col:14> col:14 used tmp 'int8_t':'signed char'
+|   | | |-BinaryOperator 0x7fbbdb8294f0 <line:68:7, col:28> 'int8_t':'signed char' '='
+|   | | | |-DeclRefExpr 0x7fbbdb829418 <col:7> 'int8_t':'signed char' lvalue Var 0x7fbbdb8293a0 'tmp' 'int8_t':'signed char'
+|   | | | `-CStyleCastExpr 0x7fbbdb8294c8 <col:13, col:28> 'int8_t':'signed char' <NoOp>
+|   | | |   `-ImplicitCastExpr 0x7fbbdb8294b0 <col:22, col:28> 'int8_t':'signed char' <LValueToRValue>
+|   | | |     `-MemberExpr 0x7fbbdb829468 <col:22, col:28> 'int8_t':'signed char' lvalue .v2 0x7fbbdb825ba8
+|   | | |       `-DeclRefExpr 0x7fbbdb829440 <col:22> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb8262f8 'vsrc2' 'neon_s8':'neon_s8'
+|   | | `-IfStmt 0x7fbbdb82a878 <line:69:7, line:90:2>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-BinaryOperator 0x7fbbdb829690 <line:69:11, col:48> 'int' '>='
+|   | |   | |-ImplicitCastExpr 0x7fbbdb829678 <col:11> 'int' <IntegralCast>
+|   | |   | | `-ImplicitCastExpr 0x7fbbdb829660 <col:11> 'int8_t':'signed char' <LValueToRValue>
+|   | |   | |   `-DeclRefExpr 0x7fbbdb829518 <col:11> 'int8_t':'signed char' lvalue Var 0x7fbbdb8293a0 'tmp' 'int8_t':'signed char'
+|   | |   | `-BinaryOperator 0x7fbbdb829638 <col:18, col:48> 'int' '*'
+|   | |   |   |-CStyleCastExpr 0x7fbbdb8295f0 <col:18, col:44> 'ssize_t':'int' <IntegralCast>
+|   | |   |   | `-UnaryExprOrTypeTraitExpr 0x7fbbdb8295c0 <col:28, col:44> 'unsigned long' sizeof
+|   | |   |   |   `-ParenExpr 0x7fbbdb8295a0 <col:35, col:44> 'int8_t':'signed char' lvalue
+|   | |   |   |     `-MemberExpr 0x7fbbdb829568 <col:36, col:42> 'int8_t':'signed char' lvalue .v2 0x7fbbdb825ba8
+|   | |   |   |       `-DeclRefExpr 0x7fbbdb829540 <col:36> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |   |   `-IntegerLiteral 0x7fbbdb829618 <col:48> 'int' 8
+|   | |   |-CompoundStmt 0x7fbbdb829778 <line:70:2, line:72:2>
+|   | |   | `-BinaryOperator 0x7fbbdb829750 <line:71:4, col:15> 'int8_t':'signed char' '='
+|   | |   |   |-MemberExpr 0x7fbbdb8296e0 <col:4, col:10> 'int8_t':'signed char' lvalue .v2 0x7fbbdb825ba8
+|   | |   |   | `-DeclRefExpr 0x7fbbdb8296b8 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |   |   `-ImplicitCastExpr 0x7fbbdb829738 <col:15> 'int8_t':'signed char' <IntegralCast>
+|   | |   |     `-IntegerLiteral 0x7fbbdb829718 <col:15> 'int' 0
+|   | |   `-IfStmt 0x7fbbdb82a840 <line:73:12, line:90:2>
+|   | |     |-<<<NULL>>>
+|   | |     |-<<<NULL>>>
+|   | |     |-BinaryOperator 0x7fbbdb829930 <line:73:16, col:53> 'int' '<'
+|   | |     | |-ImplicitCastExpr 0x7fbbdb829918 <col:16> 'int' <IntegralCast>
+|   | |     | | `-ImplicitCastExpr 0x7fbbdb829900 <col:16> 'int8_t':'signed char' <LValueToRValue>
+|   | |     | |   `-DeclRefExpr 0x7fbbdb829798 <col:16> 'int8_t':'signed char' lvalue Var 0x7fbbdb8293a0 'tmp' 'int8_t':'signed char'
+|   | |     | `-BinaryOperator 0x7fbbdb8298d8 <col:22, col:53> 'int' '*'
+|   | |     |   |-UnaryOperator 0x7fbbdb829898 <col:22, col:49> 'ssize_t':'int' prefix '-'
+|   | |     |   | `-CStyleCastExpr 0x7fbbdb829870 <col:23, col:49> 'ssize_t':'int' <IntegralCast>
+|   | |     |   |   `-UnaryExprOrTypeTraitExpr 0x7fbbdb829840 <col:33, col:49> 'unsigned long' sizeof
+|   | |     |   |     `-ParenExpr 0x7fbbdb829820 <col:40, col:49> 'int8_t':'signed char' lvalue
+|   | |     |   |       `-MemberExpr 0x7fbbdb8297e8 <col:41, col:47> 'int8_t':'signed char' lvalue .v2 0x7fbbdb825ba8
+|   | |     |   |         `-DeclRefExpr 0x7fbbdb8297c0 <col:41> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |     |   `-IntegerLiteral 0x7fbbdb8298b8 <col:53> 'int' 8
+|   | |     |-CompoundStmt 0x7fbbdb829c50 <line:74:2, line:76:2>
+|   | |     | `-BinaryOperator 0x7fbbdb829c28 <line:75:4, col:53> 'int8_t':'signed char' '='
+|   | |     |   |-MemberExpr 0x7fbbdb829980 <col:4, col:10> 'int8_t':'signed char' lvalue .v2 0x7fbbdb825ba8
+|   | |     |   | `-DeclRefExpr 0x7fbbdb829958 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |     |   `-ImplicitCastExpr 0x7fbbdb829c10 <col:15, col:53> 'int8_t':'signed char' <IntegralCast>
+|   | |     |     `-BinaryOperator 0x7fbbdb829be8 <col:15, col:53> 'int' '>>'
+|   | |     |       |-ImplicitCastExpr 0x7fbbdb829bd0 <col:15, col:21> 'int' <IntegralCast>
+|   | |     |       | `-ImplicitCastExpr 0x7fbbdb829bb8 <col:15, col:21> 'int8_t':'signed char' <LValueToRValue>
+|   | |     |       |   `-MemberExpr 0x7fbbdb829a00 <col:15, col:21> 'int8_t':'signed char' lvalue .v2 0x7fbbdb825ba8
+|   | |     |       |     `-DeclRefExpr 0x7fbbdb8299b8 <col:15> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |     |       `-ParenExpr 0x7fbbdb829b98 <col:27, col:53> 'unsigned long'
+|   | |     |         `-BinaryOperator 0x7fbbdb829b70 <col:28, col:52> 'unsigned long' '-'
+|   | |     |           |-BinaryOperator 0x7fbbdb829b10 <col:28, col:48> 'unsigned long' '*'
+|   | |     |           | |-UnaryExprOrTypeTraitExpr 0x7fbbdb829ab8 <col:28, col:44> 'unsigned long' sizeof
+|   | |     |           | | `-ParenExpr 0x7fbbdb829a98 <col:35, col:44> 'int8_t':'signed char' lvalue
+|   | |     |           | |   `-MemberExpr 0x7fbbdb829a60 <col:36, col:42> 'int8_t':'signed char' lvalue .v2 0x7fbbdb825ba8
+|   | |     |           | |     `-DeclRefExpr 0x7fbbdb829a38 <col:36> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |     |           | `-ImplicitCastExpr 0x7fbbdb829af8 <col:48> 'unsigned long' <IntegralCast>
+|   | |     |           |   `-IntegerLiteral 0x7fbbdb829ad8 <col:48> 'int' 8
+|   | |     |           `-ImplicitCastExpr 0x7fbbdb829b58 <col:52> 'unsigned long' <IntegralCast>
+|   | |     |             `-IntegerLiteral 0x7fbbdb829b38 <col:52> 'int' 1
+|   | |     `-IfStmt 0x7fbbdb82a808 <line:77:12, line:90:2>
+|   | |       |-<<<NULL>>>
+|   | |       |-<<<NULL>>>
+|   | |       |-BinaryOperator 0x7fbbdb829e08 <line:77:16, col:54> 'int' '=='
+|   | |       | |-ImplicitCastExpr 0x7fbbdb829df0 <col:16> 'int' <IntegralCast>
+|   | |       | | `-ImplicitCastExpr 0x7fbbdb829dd8 <col:16> 'int8_t':'signed char' <LValueToRValue>
+|   | |       | |   `-DeclRefExpr 0x7fbbdb829c70 <col:16> 'int8_t':'signed char' lvalue Var 0x7fbbdb8293a0 'tmp' 'int8_t':'signed char'
+|   | |       | `-BinaryOperator 0x7fbbdb829db0 <col:23, col:54> 'int' '*'
+|   | |       |   |-UnaryOperator 0x7fbbdb829d70 <col:23, col:50> 'ssize_t':'int' prefix '-'
+|   | |       |   | `-CStyleCastExpr 0x7fbbdb829d48 <col:24, col:50> 'ssize_t':'int' <IntegralCast>
+|   | |       |   |   `-UnaryExprOrTypeTraitExpr 0x7fbbdb829d18 <col:34, col:50> 'unsigned long' sizeof
+|   | |       |   |     `-ParenExpr 0x7fbbdb829cf8 <col:41, col:50> 'int8_t':'signed char' lvalue
+|   | |       |   |       `-MemberExpr 0x7fbbdb829cc0 <col:42, col:48> 'int8_t':'signed char' lvalue .v2 0x7fbbdb825ba8
+|   | |       |   |         `-DeclRefExpr 0x7fbbdb829c98 <col:42> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |       |   `-IntegerLiteral 0x7fbbdb829d90 <col:54> 'int' 8
+|   | |       |-CompoundStmt 0x7fbbdb82a1b0 <line:78:2, line:82:2>
+|   | |       | |-BinaryOperator 0x7fbbdb82a020 <line:79:4, col:35> 'int8_t':'signed char' '='
+|   | |       | | |-MemberExpr 0x7fbbdb829e58 <col:4, col:10> 'int8_t':'signed char' lvalue .v2 0x7fbbdb825ba8
+|   | |       | | | `-DeclRefExpr 0x7fbbdb829e30 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |       | | `-ImplicitCastExpr 0x7fbbdb82a008 <col:15, col:35> 'int8_t':'signed char' <IntegralCast>
+|   | |       | |   `-BinaryOperator 0x7fbbdb829fe0 <col:15, col:35> 'int' '>>'
+|   | |       | |     |-ImplicitCastExpr 0x7fbbdb829fc8 <col:15, col:21> 'int' <IntegralCast>
+|   | |       | |     | `-ImplicitCastExpr 0x7fbbdb829fb0 <col:15, col:21> 'int8_t':'signed char' <LValueToRValue>
+|   | |       | |     |   `-MemberExpr 0x7fbbdb829eb8 <col:15, col:21> 'int8_t':'signed char' lvalue .v2 0x7fbbdb825ba8
+|   | |       | |     |     `-DeclRefExpr 0x7fbbdb829e90 <col:15> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |       | |     `-ParenExpr 0x7fbbdb829f90 <col:27, col:35> 'int'
+|   | |       | |       `-BinaryOperator 0x7fbbdb829f68 <col:28, col:34> 'int' '-'
+|   | |       | |         |-ImplicitCastExpr 0x7fbbdb829f50 <col:28> 'int' <IntegralCast>
+|   | |       | |         | `-ImplicitCastExpr 0x7fbbdb829f38 <col:28> 'int8_t':'signed char' <LValueToRValue>
+|   | |       | |         |   `-DeclRefExpr 0x7fbbdb829ef0 <col:28> 'int8_t':'signed char' lvalue Var 0x7fbbdb8293a0 'tmp' 'int8_t':'signed char'
+|   | |       | |         `-IntegerLiteral 0x7fbbdb829f18 <col:34> 'int' 1
+|   | |       | |-UnaryOperator 0x7fbbdb82a0a8 <line:80:4, col:12> 'int8_t':'signed char' postfix '++'
+|   | |       | | `-MemberExpr 0x7fbbdb82a070 <col:4, col:10> 'int8_t':'signed char' lvalue .v2 0x7fbbdb825ba8
+|   | |       | |   `-DeclRefExpr 0x7fbbdb82a048 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |       | `-CompoundAssignOperator 0x7fbbdb82a178 <line:81:4, col:17> 'int8_t':'signed char' '>>=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |       |   |-MemberExpr 0x7fbbdb82a0f0 <col:4, col:10> 'int8_t':'signed char' lvalue .v2 0x7fbbdb825ba8
+|   | |       |   | `-DeclRefExpr 0x7fbbdb82a0c8 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |       |   `-IntegerLiteral 0x7fbbdb82a128 <col:17> 'int' 1
+|   | |       `-IfStmt 0x7fbbdb82a7d0 <line:83:12, line:90:2>
+|   | |         |-<<<NULL>>>
+|   | |         |-<<<NULL>>>
+|   | |         |-BinaryOperator 0x7fbbdb82a258 <line:83:16, col:22> 'int' '<'
+|   | |         | |-ImplicitCastExpr 0x7fbbdb82a240 <col:16> 'int' <IntegralCast>
+|   | |         | | `-ImplicitCastExpr 0x7fbbdb82a228 <col:16> 'int8_t':'signed char' <LValueToRValue>
+|   | |         | |   `-DeclRefExpr 0x7fbbdb82a1e0 <col:16> 'int8_t':'signed char' lvalue Var 0x7fbbdb8293a0 'tmp' 'int8_t':'signed char'
+|   | |         | `-IntegerLiteral 0x7fbbdb82a208 <col:22> 'int' 0
+|   | |         |-CompoundStmt 0x7fbbdb82a5e0 <line:84:2, line:86:2>
+|   | |         | `-BinaryOperator 0x7fbbdb82a5b8 <line:85:4, col:50> 'int8_t':'signed char' '='
+|   | |         |   |-MemberExpr 0x7fbbdb82a2a8 <col:4, col:10> 'int8_t':'signed char' lvalue .v2 0x7fbbdb825ba8
+|   | |         |   | `-DeclRefExpr 0x7fbbdb82a280 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |         |   `-ImplicitCastExpr 0x7fbbdb82a5a0 <col:15, col:50> 'int8_t':'signed char' <IntegralCast>
+|   | |         |     `-BinaryOperator 0x7fbbdb82a578 <col:15, col:50> 'int' '>>'
+|   | |         |       |-ParenExpr 0x7fbbdb82a4e0 <col:15, col:44> 'int'
+|   | |         |       | `-BinaryOperator 0x7fbbdb82a4b8 <col:16, col:43> 'int' '+'
+|   | |         |       |   |-ImplicitCastExpr 0x7fbbdb82a4a0 <col:16, col:22> 'int' <IntegralCast>
+|   | |         |       |   | `-ImplicitCastExpr 0x7fbbdb82a488 <col:16, col:22> 'int8_t':'signed char' <LValueToRValue>
+|   | |         |       |   |   `-MemberExpr 0x7fbbdb82a308 <col:16, col:22> 'int8_t':'signed char' lvalue .v2 0x7fbbdb825ba8
+|   | |         |       |   |     `-DeclRefExpr 0x7fbbdb82a2e0 <col:16> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |         |       |   `-ParenExpr 0x7fbbdb82a468 <col:27, col:43> 'int'
+|   | |         |       |     `-BinaryOperator 0x7fbbdb82a440 <col:28, col:42> 'int' '<<'
+|   | |         |       |       |-IntegerLiteral 0x7fbbdb82a340 <col:28> 'int' 1
+|   | |         |       |       `-ParenExpr 0x7fbbdb82a420 <col:33, col:42> 'int'
+|   | |         |       |         `-BinaryOperator 0x7fbbdb82a3f8 <col:34, col:39> 'int' '-'
+|   | |         |       |           |-UnaryOperator 0x7fbbdb82a380 <col:34, col:35> 'int' prefix '-'
+|   | |         |       |           | `-IntegerLiteral 0x7fbbdb82a360 <col:35> 'int' 1
+|   | |         |       |           `-ImplicitCastExpr 0x7fbbdb82a3e0 <col:39> 'int' <IntegralCast>
+|   | |         |       |             `-ImplicitCastExpr 0x7fbbdb82a3c8 <col:39> 'int8_t':'signed char' <LValueToRValue>
+|   | |         |       |               `-DeclRefExpr 0x7fbbdb82a3a0 <col:39> 'int8_t':'signed char' lvalue Var 0x7fbbdb8293a0 'tmp' 'int8_t':'signed char'
+|   | |         |       `-UnaryOperator 0x7fbbdb82a558 <col:49, col:50> 'int' prefix '-'
+|   | |         |         `-ImplicitCastExpr 0x7fbbdb82a540 <col:50> 'int' <IntegralCast>
+|   | |         |           `-ImplicitCastExpr 0x7fbbdb82a528 <col:50> 'int8_t':'signed char' <LValueToRValue>
+|   | |         |             `-DeclRefExpr 0x7fbbdb82a500 <col:50> 'int8_t':'signed char' lvalue Var 0x7fbbdb8293a0 'tmp' 'int8_t':'signed char'
+|   | |         `-CompoundStmt 0x7fbbdb82a7b0 <line:88:2, line:90:2>
+|   | |           `-BinaryOperator 0x7fbbdb82a788 <line:89:4, col:27> 'int8_t':'signed char' '='
+|   | |             |-MemberExpr 0x7fbbdb82a628 <col:4, col:10> 'int8_t':'signed char' lvalue .v2 0x7fbbdb825ba8
+|   | |             | `-DeclRefExpr 0x7fbbdb82a600 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |             `-ImplicitCastExpr 0x7fbbdb82a770 <col:15, col:27> 'int8_t':'signed char' <IntegralCast>
+|   | |               `-BinaryOperator 0x7fbbdb82a748 <col:15, col:27> 'int' '<<'
+|   | |                 |-ImplicitCastExpr 0x7fbbdb82a700 <col:15, col:21> 'int' <IntegralCast>
+|   | |                 | `-ImplicitCastExpr 0x7fbbdb82a6e8 <col:15, col:21> 'int8_t':'signed char' <LValueToRValue>
+|   | |                 |   `-MemberExpr 0x7fbbdb82a688 <col:15, col:21> 'int8_t':'signed char' lvalue .v2 0x7fbbdb825ba8
+|   | |                 |     `-DeclRefExpr 0x7fbbdb82a660 <col:15> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |                 `-ImplicitCastExpr 0x7fbbdb82a730 <col:27> 'int' <IntegralCast>
+|   | |                   `-ImplicitCastExpr 0x7fbbdb82a718 <col:27> 'int8_t':'signed char' <LValueToRValue>
+|   | |                     `-DeclRefExpr 0x7fbbdb82a6c0 <col:27> 'int8_t':'signed char' lvalue Var 0x7fbbdb8293a0 'tmp' 'int8_t':'signed char'
+|   | `-IntegerLiteral 0x7fbbdb82a8e0 <line:92:10> 'int' 0
+|   |-DoStmt 0x7fbbdb82be78 <line:93:3, line:120:11>
+|   | |-CompoundStmt 0x7fbbdb82be28 <line:94:5, line:119:5>
+|   | | |-DeclStmt 0x7fbbdb82a990 <line:95:7, col:17>
+|   | | | `-VarDecl 0x7fbbdb82a930 <col:7, col:14> col:14 used tmp 'int8_t':'signed char'
+|   | | |-BinaryOperator 0x7fbbdb82aa88 <line:96:7, col:28> 'int8_t':'signed char' '='
+|   | | | |-DeclRefExpr 0x7fbbdb82a9a8 <col:7> 'int8_t':'signed char' lvalue Var 0x7fbbdb82a930 'tmp' 'int8_t':'signed char'
+|   | | | `-CStyleCastExpr 0x7fbbdb82aa60 <col:13, col:28> 'int8_t':'signed char' <NoOp>
+|   | | |   `-ImplicitCastExpr 0x7fbbdb82aa48 <col:22, col:28> 'int8_t':'signed char' <LValueToRValue>
+|   | | |     `-MemberExpr 0x7fbbdb82aa00 <col:22, col:28> 'int8_t':'signed char' lvalue .v3 0x7fbbdb825c00
+|   | | |       `-DeclRefExpr 0x7fbbdb82a9d0 <col:22> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb8262f8 'vsrc2' 'neon_s8':'neon_s8'
+|   | | `-IfStmt 0x7fbbdb82bdf0 <line:97:7, line:118:2>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-BinaryOperator 0x7fbbdb82ac28 <line:97:11, col:48> 'int' '>='
+|   | |   | |-ImplicitCastExpr 0x7fbbdb82ac10 <col:11> 'int' <IntegralCast>
+|   | |   | | `-ImplicitCastExpr 0x7fbbdb82abf8 <col:11> 'int8_t':'signed char' <LValueToRValue>
+|   | |   | |   `-DeclRefExpr 0x7fbbdb82aab0 <col:11> 'int8_t':'signed char' lvalue Var 0x7fbbdb82a930 'tmp' 'int8_t':'signed char'
+|   | |   | `-BinaryOperator 0x7fbbdb82abd0 <col:18, col:48> 'int' '*'
+|   | |   |   |-CStyleCastExpr 0x7fbbdb82ab88 <col:18, col:44> 'ssize_t':'int' <IntegralCast>
+|   | |   |   | `-UnaryExprOrTypeTraitExpr 0x7fbbdb82ab58 <col:28, col:44> 'unsigned long' sizeof
+|   | |   |   |   `-ParenExpr 0x7fbbdb82ab38 <col:35, col:44> 'int8_t':'signed char' lvalue
+|   | |   |   |     `-MemberExpr 0x7fbbdb82ab00 <col:36, col:42> 'int8_t':'signed char' lvalue .v3 0x7fbbdb825c00
+|   | |   |   |       `-DeclRefExpr 0x7fbbdb82aad8 <col:36> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |   |   `-IntegerLiteral 0x7fbbdb82abb0 <col:48> 'int' 8
+|   | |   |-CompoundStmt 0x7fbbdb82ad10 <line:98:2, line:100:2>
+|   | |   | `-BinaryOperator 0x7fbbdb82ace8 <line:99:4, col:15> 'int8_t':'signed char' '='
+|   | |   |   |-MemberExpr 0x7fbbdb82ac78 <col:4, col:10> 'int8_t':'signed char' lvalue .v3 0x7fbbdb825c00
+|   | |   |   | `-DeclRefExpr 0x7fbbdb82ac50 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |   |   `-ImplicitCastExpr 0x7fbbdb82acd0 <col:15> 'int8_t':'signed char' <IntegralCast>
+|   | |   |     `-IntegerLiteral 0x7fbbdb82acb0 <col:15> 'int' 0
+|   | |   `-IfStmt 0x7fbbdb82bdb8 <line:101:12, line:118:2>
+|   | |     |-<<<NULL>>>
+|   | |     |-<<<NULL>>>
+|   | |     |-BinaryOperator 0x7fbbdb82aec8 <line:101:16, col:53> 'int' '<'
+|   | |     | |-ImplicitCastExpr 0x7fbbdb82aeb0 <col:16> 'int' <IntegralCast>
+|   | |     | | `-ImplicitCastExpr 0x7fbbdb82ae98 <col:16> 'int8_t':'signed char' <LValueToRValue>
+|   | |     | |   `-DeclRefExpr 0x7fbbdb82ad30 <col:16> 'int8_t':'signed char' lvalue Var 0x7fbbdb82a930 'tmp' 'int8_t':'signed char'
+|   | |     | `-BinaryOperator 0x7fbbdb82ae70 <col:22, col:53> 'int' '*'
+|   | |     |   |-UnaryOperator 0x7fbbdb82ae30 <col:22, col:49> 'ssize_t':'int' prefix '-'
+|   | |     |   | `-CStyleCastExpr 0x7fbbdb82ae08 <col:23, col:49> 'ssize_t':'int' <IntegralCast>
+|   | |     |   |   `-UnaryExprOrTypeTraitExpr 0x7fbbdb82add8 <col:33, col:49> 'unsigned long' sizeof
+|   | |     |   |     `-ParenExpr 0x7fbbdb82adb8 <col:40, col:49> 'int8_t':'signed char' lvalue
+|   | |     |   |       `-MemberExpr 0x7fbbdb82ad80 <col:41, col:47> 'int8_t':'signed char' lvalue .v3 0x7fbbdb825c00
+|   | |     |   |         `-DeclRefExpr 0x7fbbdb82ad58 <col:41> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |     |   `-IntegerLiteral 0x7fbbdb82ae50 <col:53> 'int' 8
+|   | |     |-CompoundStmt 0x7fbbdb82b1c8 <line:102:2, line:104:2>
+|   | |     | `-BinaryOperator 0x7fbbdb82b1a0 <line:103:4, col:53> 'int8_t':'signed char' '='
+|   | |     |   |-MemberExpr 0x7fbbdb82af18 <col:4, col:10> 'int8_t':'signed char' lvalue .v3 0x7fbbdb825c00
+|   | |     |   | `-DeclRefExpr 0x7fbbdb82aef0 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |     |   `-ImplicitCastExpr 0x7fbbdb82b188 <col:15, col:53> 'int8_t':'signed char' <IntegralCast>
+|   | |     |     `-BinaryOperator 0x7fbbdb82b160 <col:15, col:53> 'int' '>>'
+|   | |     |       |-ImplicitCastExpr 0x7fbbdb82b148 <col:15, col:21> 'int' <IntegralCast>
+|   | |     |       | `-ImplicitCastExpr 0x7fbbdb82b130 <col:15, col:21> 'int8_t':'signed char' <LValueToRValue>
+|   | |     |       |   `-MemberExpr 0x7fbbdb82af78 <col:15, col:21> 'int8_t':'signed char' lvalue .v3 0x7fbbdb825c00
+|   | |     |       |     `-DeclRefExpr 0x7fbbdb82af50 <col:15> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |     |       `-ParenExpr 0x7fbbdb82b110 <col:27, col:53> 'unsigned long'
+|   | |     |         `-BinaryOperator 0x7fbbdb82b0e8 <col:28, col:52> 'unsigned long' '-'
+|   | |     |           |-BinaryOperator 0x7fbbdb82b088 <col:28, col:48> 'unsigned long' '*'
+|   | |     |           | |-UnaryExprOrTypeTraitExpr 0x7fbbdb82b030 <col:28, col:44> 'unsigned long' sizeof
+|   | |     |           | | `-ParenExpr 0x7fbbdb82b010 <col:35, col:44> 'int8_t':'signed char' lvalue
+|   | |     |           | |   `-MemberExpr 0x7fbbdb82afd8 <col:36, col:42> 'int8_t':'signed char' lvalue .v3 0x7fbbdb825c00
+|   | |     |           | |     `-DeclRefExpr 0x7fbbdb82afb0 <col:36> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |     |           | `-ImplicitCastExpr 0x7fbbdb82b070 <col:48> 'unsigned long' <IntegralCast>
+|   | |     |           |   `-IntegerLiteral 0x7fbbdb82b050 <col:48> 'int' 8
+|   | |     |           `-ImplicitCastExpr 0x7fbbdb82b0d0 <col:52> 'unsigned long' <IntegralCast>
+|   | |     |             `-IntegerLiteral 0x7fbbdb82b0b0 <col:52> 'int' 1
+|   | |     `-IfStmt 0x7fbbdb82bd80 <line:105:12, line:118:2>
+|   | |       |-<<<NULL>>>
+|   | |       |-<<<NULL>>>
+|   | |       |-BinaryOperator 0x7fbbdb82b380 <line:105:16, col:54> 'int' '=='
+|   | |       | |-ImplicitCastExpr 0x7fbbdb82b368 <col:16> 'int' <IntegralCast>
+|   | |       | | `-ImplicitCastExpr 0x7fbbdb82b350 <col:16> 'int8_t':'signed char' <LValueToRValue>
+|   | |       | |   `-DeclRefExpr 0x7fbbdb82b1e8 <col:16> 'int8_t':'signed char' lvalue Var 0x7fbbdb82a930 'tmp' 'int8_t':'signed char'
+|   | |       | `-BinaryOperator 0x7fbbdb82b328 <col:23, col:54> 'int' '*'
+|   | |       |   |-UnaryOperator 0x7fbbdb82b2e8 <col:23, col:50> 'ssize_t':'int' prefix '-'
+|   | |       |   | `-CStyleCastExpr 0x7fbbdb82b2c0 <col:24, col:50> 'ssize_t':'int' <IntegralCast>
+|   | |       |   |   `-UnaryExprOrTypeTraitExpr 0x7fbbdb82b290 <col:34, col:50> 'unsigned long' sizeof
+|   | |       |   |     `-ParenExpr 0x7fbbdb82b270 <col:41, col:50> 'int8_t':'signed char' lvalue
+|   | |       |   |       `-MemberExpr 0x7fbbdb82b238 <col:42, col:48> 'int8_t':'signed char' lvalue .v3 0x7fbbdb825c00
+|   | |       |   |         `-DeclRefExpr 0x7fbbdb82b210 <col:42> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |       |   `-IntegerLiteral 0x7fbbdb82b308 <col:54> 'int' 8
+|   | |       |-CompoundStmt 0x7fbbdb82b728 <line:106:2, line:110:2>
+|   | |       | |-BinaryOperator 0x7fbbdb82b598 <line:107:4, col:35> 'int8_t':'signed char' '='
+|   | |       | | |-MemberExpr 0x7fbbdb82b3d0 <col:4, col:10> 'int8_t':'signed char' lvalue .v3 0x7fbbdb825c00
+|   | |       | | | `-DeclRefExpr 0x7fbbdb82b3a8 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |       | | `-ImplicitCastExpr 0x7fbbdb82b580 <col:15, col:35> 'int8_t':'signed char' <IntegralCast>
+|   | |       | |   `-BinaryOperator 0x7fbbdb82b558 <col:15, col:35> 'int' '>>'
+|   | |       | |     |-ImplicitCastExpr 0x7fbbdb82b540 <col:15, col:21> 'int' <IntegralCast>
+|   | |       | |     | `-ImplicitCastExpr 0x7fbbdb82b528 <col:15, col:21> 'int8_t':'signed char' <LValueToRValue>
+|   | |       | |     |   `-MemberExpr 0x7fbbdb82b430 <col:15, col:21> 'int8_t':'signed char' lvalue .v3 0x7fbbdb825c00
+|   | |       | |     |     `-DeclRefExpr 0x7fbbdb82b408 <col:15> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |       | |     `-ParenExpr 0x7fbbdb82b508 <col:27, col:35> 'int'
+|   | |       | |       `-BinaryOperator 0x7fbbdb82b4e0 <col:28, col:34> 'int' '-'
+|   | |       | |         |-ImplicitCastExpr 0x7fbbdb82b4c8 <col:28> 'int' <IntegralCast>
+|   | |       | |         | `-ImplicitCastExpr 0x7fbbdb82b4b0 <col:28> 'int8_t':'signed char' <LValueToRValue>
+|   | |       | |         |   `-DeclRefExpr 0x7fbbdb82b468 <col:28> 'int8_t':'signed char' lvalue Var 0x7fbbdb82a930 'tmp' 'int8_t':'signed char'
+|   | |       | |         `-IntegerLiteral 0x7fbbdb82b490 <col:34> 'int' 1
+|   | |       | |-UnaryOperator 0x7fbbdb82b620 <line:108:4, col:12> 'int8_t':'signed char' postfix '++'
+|   | |       | | `-MemberExpr 0x7fbbdb82b5e8 <col:4, col:10> 'int8_t':'signed char' lvalue .v3 0x7fbbdb825c00
+|   | |       | |   `-DeclRefExpr 0x7fbbdb82b5c0 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |       | `-CompoundAssignOperator 0x7fbbdb82b6f0 <line:109:4, col:17> 'int8_t':'signed char' '>>=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |       |   |-MemberExpr 0x7fbbdb82b668 <col:4, col:10> 'int8_t':'signed char' lvalue .v3 0x7fbbdb825c00
+|   | |       |   | `-DeclRefExpr 0x7fbbdb82b640 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |       |   `-IntegerLiteral 0x7fbbdb82b6a0 <col:17> 'int' 1
+|   | |       `-IfStmt 0x7fbbdb82bd48 <line:111:12, line:118:2>
+|   | |         |-<<<NULL>>>
+|   | |         |-<<<NULL>>>
+|   | |         |-BinaryOperator 0x7fbbdb82b7d0 <line:111:16, col:22> 'int' '<'
+|   | |         | |-ImplicitCastExpr 0x7fbbdb82b7b8 <col:16> 'int' <IntegralCast>
+|   | |         | | `-ImplicitCastExpr 0x7fbbdb82b7a0 <col:16> 'int8_t':'signed char' <LValueToRValue>
+|   | |         | |   `-DeclRefExpr 0x7fbbdb82b758 <col:16> 'int8_t':'signed char' lvalue Var 0x7fbbdb82a930 'tmp' 'int8_t':'signed char'
+|   | |         | `-IntegerLiteral 0x7fbbdb82b780 <col:22> 'int' 0
+|   | |         |-CompoundStmt 0x7fbbdb82bb58 <line:112:2, line:114:2>
+|   | |         | `-BinaryOperator 0x7fbbdb82bb30 <line:113:4, col:50> 'int8_t':'signed char' '='
+|   | |         |   |-MemberExpr 0x7fbbdb82b820 <col:4, col:10> 'int8_t':'signed char' lvalue .v3 0x7fbbdb825c00
+|   | |         |   | `-DeclRefExpr 0x7fbbdb82b7f8 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |         |   `-ImplicitCastExpr 0x7fbbdb82bb18 <col:15, col:50> 'int8_t':'signed char' <IntegralCast>
+|   | |         |     `-BinaryOperator 0x7fbbdb82baf0 <col:15, col:50> 'int' '>>'
+|   | |         |       |-ParenExpr 0x7fbbdb82ba58 <col:15, col:44> 'int'
+|   | |         |       | `-BinaryOperator 0x7fbbdb82ba30 <col:16, col:43> 'int' '+'
+|   | |         |       |   |-ImplicitCastExpr 0x7fbbdb82ba18 <col:16, col:22> 'int' <IntegralCast>
+|   | |         |       |   | `-ImplicitCastExpr 0x7fbbdb82ba00 <col:16, col:22> 'int8_t':'signed char' <LValueToRValue>
+|   | |         |       |   |   `-MemberExpr 0x7fbbdb82b880 <col:16, col:22> 'int8_t':'signed char' lvalue .v3 0x7fbbdb825c00
+|   | |         |       |   |     `-DeclRefExpr 0x7fbbdb82b858 <col:16> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |         |       |   `-ParenExpr 0x7fbbdb82b9e0 <col:27, col:43> 'int'
+|   | |         |       |     `-BinaryOperator 0x7fbbdb82b9b8 <col:28, col:42> 'int' '<<'
+|   | |         |       |       |-IntegerLiteral 0x7fbbdb82b8b8 <col:28> 'int' 1
+|   | |         |       |       `-ParenExpr 0x7fbbdb82b998 <col:33, col:42> 'int'
+|   | |         |       |         `-BinaryOperator 0x7fbbdb82b970 <col:34, col:39> 'int' '-'
+|   | |         |       |           |-UnaryOperator 0x7fbbdb82b8f8 <col:34, col:35> 'int' prefix '-'
+|   | |         |       |           | `-IntegerLiteral 0x7fbbdb82b8d8 <col:35> 'int' 1
+|   | |         |       |           `-ImplicitCastExpr 0x7fbbdb82b958 <col:39> 'int' <IntegralCast>
+|   | |         |       |             `-ImplicitCastExpr 0x7fbbdb82b940 <col:39> 'int8_t':'signed char' <LValueToRValue>
+|   | |         |       |               `-DeclRefExpr 0x7fbbdb82b918 <col:39> 'int8_t':'signed char' lvalue Var 0x7fbbdb82a930 'tmp' 'int8_t':'signed char'
+|   | |         |       `-UnaryOperator 0x7fbbdb82bad0 <col:49, col:50> 'int' prefix '-'
+|   | |         |         `-ImplicitCastExpr 0x7fbbdb82bab8 <col:50> 'int' <IntegralCast>
+|   | |         |           `-ImplicitCastExpr 0x7fbbdb82baa0 <col:50> 'int8_t':'signed char' <LValueToRValue>
+|   | |         |             `-DeclRefExpr 0x7fbbdb82ba78 <col:50> 'int8_t':'signed char' lvalue Var 0x7fbbdb82a930 'tmp' 'int8_t':'signed char'
+|   | |         `-CompoundStmt 0x7fbbdb82bd28 <line:116:2, line:118:2>
+|   | |           `-BinaryOperator 0x7fbbdb82bd00 <line:117:4, col:27> 'int8_t':'signed char' '='
+|   | |             |-MemberExpr 0x7fbbdb82bba0 <col:4, col:10> 'int8_t':'signed char' lvalue .v3 0x7fbbdb825c00
+|   | |             | `-DeclRefExpr 0x7fbbdb82bb78 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |             `-ImplicitCastExpr 0x7fbbdb82bce8 <col:15, col:27> 'int8_t':'signed char' <IntegralCast>
+|   | |               `-BinaryOperator 0x7fbbdb82bcc0 <col:15, col:27> 'int' '<<'
+|   | |                 |-ImplicitCastExpr 0x7fbbdb82bc78 <col:15, col:21> 'int' <IntegralCast>
+|   | |                 | `-ImplicitCastExpr 0x7fbbdb82bc60 <col:15, col:21> 'int8_t':'signed char' <LValueToRValue>
+|   | |                 |   `-MemberExpr 0x7fbbdb82bc00 <col:15, col:21> 'int8_t':'signed char' lvalue .v3 0x7fbbdb825c00
+|   | |                 |     `-DeclRefExpr 0x7fbbdb82bbd8 <col:15> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |                 `-ImplicitCastExpr 0x7fbbdb82bca8 <col:27> 'int' <IntegralCast>
+|   | |                   `-ImplicitCastExpr 0x7fbbdb82bc90 <col:27> 'int8_t':'signed char' <LValueToRValue>
+|   | |                     `-DeclRefExpr 0x7fbbdb82bc38 <col:27> 'int8_t':'signed char' lvalue Var 0x7fbbdb82a930 'tmp' 'int8_t':'signed char'
+|   | `-IntegerLiteral 0x7fbbdb82be58 <line:120:10> 'int' 0
+|   |-DoStmt 0x7fbbdb82d3e8 <line:121:3, line:148:11>
+|   | |-CompoundStmt 0x7fbbdb82d398 <line:122:5, line:147:5>
+|   | | |-DeclStmt 0x7fbbdb82bf08 <line:123:7, col:17>
+|   | | | `-VarDecl 0x7fbbdb82bea8 <col:7, col:14> col:14 used tmp 'int8_t':'signed char'
+|   | | |-BinaryOperator 0x7fbbdb82bff8 <line:124:7, col:28> 'int8_t':'signed char' '='
+|   | | | |-DeclRefExpr 0x7fbbdb82bf20 <col:7> 'int8_t':'signed char' lvalue Var 0x7fbbdb82bea8 'tmp' 'int8_t':'signed char'
+|   | | | `-CStyleCastExpr 0x7fbbdb82bfd0 <col:13, col:28> 'int8_t':'signed char' <NoOp>
+|   | | |   `-ImplicitCastExpr 0x7fbbdb82bfb8 <col:22, col:28> 'int8_t':'signed char' <LValueToRValue>
+|   | | |     `-MemberExpr 0x7fbbdb82bf70 <col:22, col:28> 'int8_t':'signed char' lvalue .v4 0x7fbbdb825c58
+|   | | |       `-DeclRefExpr 0x7fbbdb82bf48 <col:22> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb8262f8 'vsrc2' 'neon_s8':'neon_s8'
+|   | | `-IfStmt 0x7fbbdb82d360 <line:125:7, line:146:2>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-BinaryOperator 0x7fbbdb82c198 <line:125:11, col:48> 'int' '>='
+|   | |   | |-ImplicitCastExpr 0x7fbbdb82c180 <col:11> 'int' <IntegralCast>
+|   | |   | | `-ImplicitCastExpr 0x7fbbdb82c168 <col:11> 'int8_t':'signed char' <LValueToRValue>
+|   | |   | |   `-DeclRefExpr 0x7fbbdb82c020 <col:11> 'int8_t':'signed char' lvalue Var 0x7fbbdb82bea8 'tmp' 'int8_t':'signed char'
+|   | |   | `-BinaryOperator 0x7fbbdb82c140 <col:18, col:48> 'int' '*'
+|   | |   |   |-CStyleCastExpr 0x7fbbdb82c0f8 <col:18, col:44> 'ssize_t':'int' <IntegralCast>
+|   | |   |   | `-UnaryExprOrTypeTraitExpr 0x7fbbdb82c0c8 <col:28, col:44> 'unsigned long' sizeof
+|   | |   |   |   `-ParenExpr 0x7fbbdb82c0a8 <col:35, col:44> 'int8_t':'signed char' lvalue
+|   | |   |   |     `-MemberExpr 0x7fbbdb82c070 <col:36, col:42> 'int8_t':'signed char' lvalue .v4 0x7fbbdb825c58
+|   | |   |   |       `-DeclRefExpr 0x7fbbdb82c048 <col:36> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |   |   `-IntegerLiteral 0x7fbbdb82c120 <col:48> 'int' 8
+|   | |   |-CompoundStmt 0x7fbbdb82c280 <line:126:2, line:128:2>
+|   | |   | `-BinaryOperator 0x7fbbdb82c258 <line:127:4, col:15> 'int8_t':'signed char' '='
+|   | |   |   |-MemberExpr 0x7fbbdb82c1e8 <col:4, col:10> 'int8_t':'signed char' lvalue .v4 0x7fbbdb825c58
+|   | |   |   | `-DeclRefExpr 0x7fbbdb82c1c0 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |   |   `-ImplicitCastExpr 0x7fbbdb82c240 <col:15> 'int8_t':'signed char' <IntegralCast>
+|   | |   |     `-IntegerLiteral 0x7fbbdb82c220 <col:15> 'int' 0
+|   | |   `-IfStmt 0x7fbbdb82d328 <line:129:12, line:146:2>
+|   | |     |-<<<NULL>>>
+|   | |     |-<<<NULL>>>
+|   | |     |-BinaryOperator 0x7fbbdb82c438 <line:129:16, col:53> 'int' '<'
+|   | |     | |-ImplicitCastExpr 0x7fbbdb82c420 <col:16> 'int' <IntegralCast>
+|   | |     | | `-ImplicitCastExpr 0x7fbbdb82c408 <col:16> 'int8_t':'signed char' <LValueToRValue>
+|   | |     | |   `-DeclRefExpr 0x7fbbdb82c2a0 <col:16> 'int8_t':'signed char' lvalue Var 0x7fbbdb82bea8 'tmp' 'int8_t':'signed char'
+|   | |     | `-BinaryOperator 0x7fbbdb82c3e0 <col:22, col:53> 'int' '*'
+|   | |     |   |-UnaryOperator 0x7fbbdb82c3a0 <col:22, col:49> 'ssize_t':'int' prefix '-'
+|   | |     |   | `-CStyleCastExpr 0x7fbbdb82c378 <col:23, col:49> 'ssize_t':'int' <IntegralCast>
+|   | |     |   |   `-UnaryExprOrTypeTraitExpr 0x7fbbdb82c348 <col:33, col:49> 'unsigned long' sizeof
+|   | |     |   |     `-ParenExpr 0x7fbbdb82c328 <col:40, col:49> 'int8_t':'signed char' lvalue
+|   | |     |   |       `-MemberExpr 0x7fbbdb82c2f0 <col:41, col:47> 'int8_t':'signed char' lvalue .v4 0x7fbbdb825c58
+|   | |     |   |         `-DeclRefExpr 0x7fbbdb82c2c8 <col:41> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |     |   `-IntegerLiteral 0x7fbbdb82c3c0 <col:53> 'int' 8
+|   | |     |-CompoundStmt 0x7fbbdb82c738 <line:130:2, line:132:2>
+|   | |     | `-BinaryOperator 0x7fbbdb82c710 <line:131:4, col:53> 'int8_t':'signed char' '='
+|   | |     |   |-MemberExpr 0x7fbbdb82c488 <col:4, col:10> 'int8_t':'signed char' lvalue .v4 0x7fbbdb825c58
+|   | |     |   | `-DeclRefExpr 0x7fbbdb82c460 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |     |   `-ImplicitCastExpr 0x7fbbdb82c6f8 <col:15, col:53> 'int8_t':'signed char' <IntegralCast>
+|   | |     |     `-BinaryOperator 0x7fbbdb82c6d0 <col:15, col:53> 'int' '>>'
+|   | |     |       |-ImplicitCastExpr 0x7fbbdb82c6b8 <col:15, col:21> 'int' <IntegralCast>
+|   | |     |       | `-ImplicitCastExpr 0x7fbbdb82c6a0 <col:15, col:21> 'int8_t':'signed char' <LValueToRValue>
+|   | |     |       |   `-MemberExpr 0x7fbbdb82c4e8 <col:15, col:21> 'int8_t':'signed char' lvalue .v4 0x7fbbdb825c58
+|   | |     |       |     `-DeclRefExpr 0x7fbbdb82c4c0 <col:15> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |     |       `-ParenExpr 0x7fbbdb82c680 <col:27, col:53> 'unsigned long'
+|   | |     |         `-BinaryOperator 0x7fbbdb82c658 <col:28, col:52> 'unsigned long' '-'
+|   | |     |           |-BinaryOperator 0x7fbbdb82c5f8 <col:28, col:48> 'unsigned long' '*'
+|   | |     |           | |-UnaryExprOrTypeTraitExpr 0x7fbbdb82c5a0 <col:28, col:44> 'unsigned long' sizeof
+|   | |     |           | | `-ParenExpr 0x7fbbdb82c580 <col:35, col:44> 'int8_t':'signed char' lvalue
+|   | |     |           | |   `-MemberExpr 0x7fbbdb82c548 <col:36, col:42> 'int8_t':'signed char' lvalue .v4 0x7fbbdb825c58
+|   | |     |           | |     `-DeclRefExpr 0x7fbbdb82c520 <col:36> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |     |           | `-ImplicitCastExpr 0x7fbbdb82c5e0 <col:48> 'unsigned long' <IntegralCast>
+|   | |     |           |   `-IntegerLiteral 0x7fbbdb82c5c0 <col:48> 'int' 8
+|   | |     |           `-ImplicitCastExpr 0x7fbbdb82c640 <col:52> 'unsigned long' <IntegralCast>
+|   | |     |             `-IntegerLiteral 0x7fbbdb82c620 <col:52> 'int' 1
+|   | |     `-IfStmt 0x7fbbdb82d2f0 <line:133:12, line:146:2>
+|   | |       |-<<<NULL>>>
+|   | |       |-<<<NULL>>>
+|   | |       |-BinaryOperator 0x7fbbdb82c8f0 <line:133:16, col:54> 'int' '=='
+|   | |       | |-ImplicitCastExpr 0x7fbbdb82c8d8 <col:16> 'int' <IntegralCast>
+|   | |       | | `-ImplicitCastExpr 0x7fbbdb82c8c0 <col:16> 'int8_t':'signed char' <LValueToRValue>
+|   | |       | |   `-DeclRefExpr 0x7fbbdb82c758 <col:16> 'int8_t':'signed char' lvalue Var 0x7fbbdb82bea8 'tmp' 'int8_t':'signed char'
+|   | |       | `-BinaryOperator 0x7fbbdb82c898 <col:23, col:54> 'int' '*'
+|   | |       |   |-UnaryOperator 0x7fbbdb82c858 <col:23, col:50> 'ssize_t':'int' prefix '-'
+|   | |       |   | `-CStyleCastExpr 0x7fbbdb82c830 <col:24, col:50> 'ssize_t':'int' <IntegralCast>
+|   | |       |   |   `-UnaryExprOrTypeTraitExpr 0x7fbbdb82c800 <col:34, col:50> 'unsigned long' sizeof
+|   | |       |   |     `-ParenExpr 0x7fbbdb82c7e0 <col:41, col:50> 'int8_t':'signed char' lvalue
+|   | |       |   |       `-MemberExpr 0x7fbbdb82c7a8 <col:42, col:48> 'int8_t':'signed char' lvalue .v4 0x7fbbdb825c58
+|   | |       |   |         `-DeclRefExpr 0x7fbbdb82c780 <col:42> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |       |   `-IntegerLiteral 0x7fbbdb82c878 <col:54> 'int' 8
+|   | |       |-CompoundStmt 0x7fbbdb82cc98 <line:134:2, line:138:2>
+|   | |       | |-BinaryOperator 0x7fbbdb82cb08 <line:135:4, col:35> 'int8_t':'signed char' '='
+|   | |       | | |-MemberExpr 0x7fbbdb82c940 <col:4, col:10> 'int8_t':'signed char' lvalue .v4 0x7fbbdb825c58
+|   | |       | | | `-DeclRefExpr 0x7fbbdb82c918 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |       | | `-ImplicitCastExpr 0x7fbbdb82caf0 <col:15, col:35> 'int8_t':'signed char' <IntegralCast>
+|   | |       | |   `-BinaryOperator 0x7fbbdb82cac8 <col:15, col:35> 'int' '>>'
+|   | |       | |     |-ImplicitCastExpr 0x7fbbdb82cab0 <col:15, col:21> 'int' <IntegralCast>
+|   | |       | |     | `-ImplicitCastExpr 0x7fbbdb82ca98 <col:15, col:21> 'int8_t':'signed char' <LValueToRValue>
+|   | |       | |     |   `-MemberExpr 0x7fbbdb82c9a0 <col:15, col:21> 'int8_t':'signed char' lvalue .v4 0x7fbbdb825c58
+|   | |       | |     |     `-DeclRefExpr 0x7fbbdb82c978 <col:15> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |       | |     `-ParenExpr 0x7fbbdb82ca78 <col:27, col:35> 'int'
+|   | |       | |       `-BinaryOperator 0x7fbbdb82ca50 <col:28, col:34> 'int' '-'
+|   | |       | |         |-ImplicitCastExpr 0x7fbbdb82ca38 <col:28> 'int' <IntegralCast>
+|   | |       | |         | `-ImplicitCastExpr 0x7fbbdb82ca20 <col:28> 'int8_t':'signed char' <LValueToRValue>
+|   | |       | |         |   `-DeclRefExpr 0x7fbbdb82c9d8 <col:28> 'int8_t':'signed char' lvalue Var 0x7fbbdb82bea8 'tmp' 'int8_t':'signed char'
+|   | |       | |         `-IntegerLiteral 0x7fbbdb82ca00 <col:34> 'int' 1
+|   | |       | |-UnaryOperator 0x7fbbdb82cb90 <line:136:4, col:12> 'int8_t':'signed char' postfix '++'
+|   | |       | | `-MemberExpr 0x7fbbdb82cb58 <col:4, col:10> 'int8_t':'signed char' lvalue .v4 0x7fbbdb825c58
+|   | |       | |   `-DeclRefExpr 0x7fbbdb82cb30 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |       | `-CompoundAssignOperator 0x7fbbdb82cc60 <line:137:4, col:17> 'int8_t':'signed char' '>>=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |       |   |-MemberExpr 0x7fbbdb82cbd8 <col:4, col:10> 'int8_t':'signed char' lvalue .v4 0x7fbbdb825c58
+|   | |       |   | `-DeclRefExpr 0x7fbbdb82cbb0 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |       |   `-IntegerLiteral 0x7fbbdb82cc10 <col:17> 'int' 1
+|   | |       `-IfStmt 0x7fbbdb82d2b8 <line:139:12, line:146:2>
+|   | |         |-<<<NULL>>>
+|   | |         |-<<<NULL>>>
+|   | |         |-BinaryOperator 0x7fbbdb82cd40 <line:139:16, col:22> 'int' '<'
+|   | |         | |-ImplicitCastExpr 0x7fbbdb82cd28 <col:16> 'int' <IntegralCast>
+|   | |         | | `-ImplicitCastExpr 0x7fbbdb82cd10 <col:16> 'int8_t':'signed char' <LValueToRValue>
+|   | |         | |   `-DeclRefExpr 0x7fbbdb82ccc8 <col:16> 'int8_t':'signed char' lvalue Var 0x7fbbdb82bea8 'tmp' 'int8_t':'signed char'
+|   | |         | `-IntegerLiteral 0x7fbbdb82ccf0 <col:22> 'int' 0
+|   | |         |-CompoundStmt 0x7fbbdb82d0c8 <line:140:2, line:142:2>
+|   | |         | `-BinaryOperator 0x7fbbdb82d0a0 <line:141:4, col:50> 'int8_t':'signed char' '='
+|   | |         |   |-MemberExpr 0x7fbbdb82cd90 <col:4, col:10> 'int8_t':'signed char' lvalue .v4 0x7fbbdb825c58
+|   | |         |   | `-DeclRefExpr 0x7fbbdb82cd68 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |         |   `-ImplicitCastExpr 0x7fbbdb82d088 <col:15, col:50> 'int8_t':'signed char' <IntegralCast>
+|   | |         |     `-BinaryOperator 0x7fbbdb82d060 <col:15, col:50> 'int' '>>'
+|   | |         |       |-ParenExpr 0x7fbbdb82cfc8 <col:15, col:44> 'int'
+|   | |         |       | `-BinaryOperator 0x7fbbdb82cfa0 <col:16, col:43> 'int' '+'
+|   | |         |       |   |-ImplicitCastExpr 0x7fbbdb82cf88 <col:16, col:22> 'int' <IntegralCast>
+|   | |         |       |   | `-ImplicitCastExpr 0x7fbbdb82cf70 <col:16, col:22> 'int8_t':'signed char' <LValueToRValue>
+|   | |         |       |   |   `-MemberExpr 0x7fbbdb82cdf0 <col:16, col:22> 'int8_t':'signed char' lvalue .v4 0x7fbbdb825c58
+|   | |         |       |   |     `-DeclRefExpr 0x7fbbdb82cdc8 <col:16> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |         |       |   `-ParenExpr 0x7fbbdb82cf50 <col:27, col:43> 'int'
+|   | |         |       |     `-BinaryOperator 0x7fbbdb82cf28 <col:28, col:42> 'int' '<<'
+|   | |         |       |       |-IntegerLiteral 0x7fbbdb82ce28 <col:28> 'int' 1
+|   | |         |       |       `-ParenExpr 0x7fbbdb82cf08 <col:33, col:42> 'int'
+|   | |         |       |         `-BinaryOperator 0x7fbbdb82cee0 <col:34, col:39> 'int' '-'
+|   | |         |       |           |-UnaryOperator 0x7fbbdb82ce68 <col:34, col:35> 'int' prefix '-'
+|   | |         |       |           | `-IntegerLiteral 0x7fbbdb82ce48 <col:35> 'int' 1
+|   | |         |       |           `-ImplicitCastExpr 0x7fbbdb82cec8 <col:39> 'int' <IntegralCast>
+|   | |         |       |             `-ImplicitCastExpr 0x7fbbdb82ceb0 <col:39> 'int8_t':'signed char' <LValueToRValue>
+|   | |         |       |               `-DeclRefExpr 0x7fbbdb82ce88 <col:39> 'int8_t':'signed char' lvalue Var 0x7fbbdb82bea8 'tmp' 'int8_t':'signed char'
+|   | |         |       `-UnaryOperator 0x7fbbdb82d040 <col:49, col:50> 'int' prefix '-'
+|   | |         |         `-ImplicitCastExpr 0x7fbbdb82d028 <col:50> 'int' <IntegralCast>
+|   | |         |           `-ImplicitCastExpr 0x7fbbdb82d010 <col:50> 'int8_t':'signed char' <LValueToRValue>
+|   | |         |             `-DeclRefExpr 0x7fbbdb82cfe8 <col:50> 'int8_t':'signed char' lvalue Var 0x7fbbdb82bea8 'tmp' 'int8_t':'signed char'
+|   | |         `-CompoundStmt 0x7fbbdb82d298 <line:144:2, line:146:2>
+|   | |           `-BinaryOperator 0x7fbbdb82d270 <line:145:4, col:27> 'int8_t':'signed char' '='
+|   | |             |-MemberExpr 0x7fbbdb82d110 <col:4, col:10> 'int8_t':'signed char' lvalue .v4 0x7fbbdb825c58
+|   | |             | `-DeclRefExpr 0x7fbbdb82d0e8 <col:4> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | |             `-ImplicitCastExpr 0x7fbbdb82d258 <col:15, col:27> 'int8_t':'signed char' <IntegralCast>
+|   | |               `-BinaryOperator 0x7fbbdb82d230 <col:15, col:27> 'int' '<<'
+|   | |                 |-ImplicitCastExpr 0x7fbbdb82d1e8 <col:15, col:21> 'int' <IntegralCast>
+|   | |                 | `-ImplicitCastExpr 0x7fbbdb82d1d0 <col:15, col:21> 'int8_t':'signed char' <LValueToRValue>
+|   | |                 |   `-MemberExpr 0x7fbbdb82d170 <col:15, col:21> 'int8_t':'signed char' lvalue .v4 0x7fbbdb825c58
+|   | |                 |     `-DeclRefExpr 0x7fbbdb82d148 <col:15> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826270 'vsrc1' 'neon_s8':'neon_s8'
+|   | |                 `-ImplicitCastExpr 0x7fbbdb82d218 <col:27> 'int' <IntegralCast>
+|   | |                   `-ImplicitCastExpr 0x7fbbdb82d200 <col:27> 'int8_t':'signed char' <LValueToRValue>
+|   | |                     `-DeclRefExpr 0x7fbbdb82d1a8 <col:27> 'int8_t':'signed char' lvalue Var 0x7fbbdb82bea8 'tmp' 'int8_t':'signed char'
+|   | `-IntegerLiteral 0x7fbbdb82d3c8 <line:148:10> 'int' 0
+|   |-NullStmt 0x7fbbdb82d408 <col:13>
+|   |-DoStmt 0x7fbbdb82d8a0 <line:149:3, line:159:11>
+|   | |-CompoundStmt 0x7fbbdb82d850 <line:150:5, line:158:5>
+|   | | |-DeclStmt 0x7fbbdb82d638 <line:151:7, line:155:15>
+|   | | | |-RecordDecl 0x7fbbdb82d418 <line:151:7, line:155:7> line:151:7 union definition
+|   | | | | |-FieldDecl 0x7fbbdb82d4d0 <line:153:2, col:10> col:10 referenced v 'neon_s8':'neon_s8'
+|   | | | | `-FieldDecl 0x7fbbdb82d528 <line:154:2, col:11> col:11 referenced i 'uint32_t':'unsigned int'
+|   | | | `-VarDecl 0x7fbbdb82d5c0 <line:151:7, line:155:9> col:9 used conv_u 'union (anonymous union at c_files/pr42833.c:151:7)':'union (anonymous at c_files/pr42833.c:151:7)'
+|   | | |-BinaryOperator 0x7fbbdb82d710 <line:156:7, col:24> 'neon_s8':'neon_s8' '='
+|   | | | |-MemberExpr 0x7fbbdb82d678 <col:7, col:14> 'neon_s8':'neon_s8' lvalue .v 0x7fbbdb82d4d0
+|   | | | | `-DeclRefExpr 0x7fbbdb82d650 <col:7> 'union (anonymous union at c_files/pr42833.c:151:7)':'union (anonymous at c_files/pr42833.c:151:7)' lvalue Var 0x7fbbdb82d5c0 'conv_u' 'union (anonymous union at c_files/pr42833.c:151:7)':'union (anonymous at c_files/pr42833.c:151:7)'
+|   | | | `-ImplicitCastExpr 0x7fbbdb82d6f8 <col:18, col:24> 'neon_s8':'neon_s8' <LValueToRValue>
+|   | | |   `-ParenExpr 0x7fbbdb82d6d8 <col:18, col:24> 'neon_s8':'neon_s8' lvalue
+|   | | |     `-DeclRefExpr 0x7fbbdb82d6b0 <col:19> 'neon_s8':'neon_s8' lvalue Var 0x7fbbdb826380 'vdest' 'neon_s8':'neon_s8'
+|   | | `-BinaryOperator 0x7fbbdb82d7d8 <line:157:7, col:20> 'uint32_t':'unsigned int' '='
+|   | |   |-DeclRefExpr 0x7fbbdb82d738 <col:7> 'uint32_t':'unsigned int' lvalue Var 0x7fbbdb8261c0 'res' 'uint32_t':'unsigned int'
+|   | |   `-ImplicitCastExpr 0x7fbbdb82d7c0 <col:13, col:20> 'uint32_t':'unsigned int' <LValueToRValue>
+|   | |     `-MemberExpr 0x7fbbdb82d788 <col:13, col:20> 'uint32_t':'unsigned int' lvalue .i 0x7fbbdb82d528
+|   | |       `-DeclRefExpr 0x7fbbdb82d760 <col:13> 'union (anonymous union at c_files/pr42833.c:151:7)':'union (anonymous at c_files/pr42833.c:151:7)' lvalue Var 0x7fbbdb82d5c0 'conv_u' 'union (anonymous union at c_files/pr42833.c:151:7)':'union (anonymous at c_files/pr42833.c:151:7)'
+|   | `-IntegerLiteral 0x7fbbdb82d880 <line:159:10> 'int' 0
+|   `-ReturnStmt 0x7fbbdb82d900 <line:160:3, col:10>
+|     `-ImplicitCastExpr 0x7fbbdb82d8e8 <col:10> 'uint32_t':'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fbbdb82d8c0 <col:10> 'uint32_t':'unsigned int' lvalue Var 0x7fbbdb8261c0 'res' 'uint32_t':'unsigned int'
+|-FunctionDecl 0x7fbbdb833ee0 <line:163:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbbdb833f78 prev 0x7fbbdb833ee0 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fbbdb834060 <line:165:1, line:171:1> line:165:5 main 'int ()'
+  `-CompoundStmt 0x7fbbdb834468 <line:166:1, line:171:1>
+    |-DeclStmt 0x7fbbdb8342a8 <line:167:3, col:60>
+    | `-VarDecl 0x7fbbdb834108 <col:3, col:59> col:12 used r 'uint32_t':'unsigned int' cinit
+    |   `-CallExpr 0x7fbbdb834240 <col:16, col:59> 'uint32_t':'unsigned int'
+    |     |-ImplicitCastExpr 0x7fbbdb834228 <col:16> 'uint32_t (*)(uint32_t, uint32_t)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fbbdb834168 <col:16> 'uint32_t (uint32_t, uint32_t)' Function 0x7fbbdb826108 'helper_neon_rshl_s8' 'uint32_t (uint32_t, uint32_t)'
+    |     |-ImplicitCastExpr 0x7fbbdb834278 <col:37> 'uint32_t':'unsigned int' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fbbdb834190 <col:37> 'int' 84215045
+    |     `-ImplicitCastExpr 0x7fbbdb834290 <col:49> 'uint32_t':'unsigned int' <IntegralCast>
+    |       `-IntegerLiteral 0x7fbbdb8341b0 <col:49> 'int' 16843009
+    |-IfStmt 0x7fbbdb8343f8 <line:168:3, line:169:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbbdb834338 <line:168:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fbbdb834308 <col:7> 'uint32_t':'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fbbdb8342c0 <col:7> 'uint32_t':'unsigned int' lvalue Var 0x7fbbdb834108 'r' 'uint32_t':'unsigned int'
+    | | `-ImplicitCastExpr 0x7fbbdb834320 <col:12> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fbbdb8342e8 <col:12> 'int' 168430090
+    | |-CallExpr 0x7fbbdb8343d0 <line:169:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fbbdb8343b8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbbdb834360 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbbdb833f78 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fbbdb834450 <line:170:3, col:10>
+      `-IntegerLiteral 0x7fbbdb834430 <col:10> 'int' 0

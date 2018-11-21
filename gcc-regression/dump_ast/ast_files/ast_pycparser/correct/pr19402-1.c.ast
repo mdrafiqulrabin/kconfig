@@ -1,0 +1,106 @@
+FileAST: 
+  FuncDef: 
+    Decl: test_powif, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+        TypeDecl: test_powif, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            BinaryOp: +
+              FuncCall: 
+                ID: __builtin_powif
+                ExprList: 
+                  ID: x
+                  UnaryOp: -
+                    Constant: int, 1
+              FuncCall: 
+                ID: __builtin_powif
+                ExprList: 
+                  ID: x
+                  Constant: int, 0
+            FuncCall: 
+              ID: __builtin_powif
+              ExprList: 
+                ID: x
+                Constant: int, 1
+          FuncCall: 
+            ID: __builtin_powif
+            ExprList: 
+              ID: x
+              Constant: int, 2
+  FuncDef: 
+    Decl: test_powi, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+        TypeDecl: test_powi, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            BinaryOp: +
+              FuncCall: 
+                ID: __builtin_powi
+                ExprList: 
+                  ID: x
+                  UnaryOp: -
+                    Constant: int, 1
+              FuncCall: 
+                ID: __builtin_powi
+                ExprList: 
+                  ID: x
+                  Constant: int, 0
+            FuncCall: 
+              ID: __builtin_powi
+              ExprList: 
+                ID: x
+                Constant: int, 1
+          FuncCall: 
+            ID: __builtin_powi
+            ExprList: 
+              ID: x
+              Constant: int, 2
+  FuncDef: 
+    Decl: test_powil, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['long', 'double']
+        TypeDecl: test_powil, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            BinaryOp: +
+              FuncCall: 
+                ID: __builtin_powil
+                ExprList: 
+                  ID: x
+                  UnaryOp: -
+                    Constant: int, 1
+              FuncCall: 
+                ID: __builtin_powil
+                ExprList: 
+                  ID: x
+                  Constant: int, 0
+            FuncCall: 
+              ID: __builtin_powil
+              ExprList: 
+                ID: x
+                Constant: int, 1
+          FuncCall: 
+            ID: __builtin_powil
+            ExprList: 
+              ID: x
+              Constant: int, 2

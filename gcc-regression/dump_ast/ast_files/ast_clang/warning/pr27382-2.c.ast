@@ -1,0 +1,26 @@
+c_files/pr27382-2.c:6:9: warning: inequality comparison result unused [-Wunused-comparison]
+    &&L != 0;
+    ~~~~^~~~
+1 warning generated.
+TranslationUnitDecl 0x7faed90264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faed9026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faed9026740 '__int128'
+|-TypedefDecl 0x7faed9026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faed9026760 'unsigned __int128'
+|-TypedefDecl 0x7faed9026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faed9026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faed9026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faed9026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faed9026dc0 'char *'
+|   `-BuiltinType 0x7faed9026560 'char'
+|-TypedefDecl 0x7faed90270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faed9027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faed9026ee0 'struct __va_list_tag'
+|     `-Record 0x7faed9026e58 '__va_list_tag'
+`-FunctionDecl 0x7faed9027168 <c_files/pr27382-2.c:3:1, line:7:1> line:3:6 foo 'void ()'
+  `-CompoundStmt 0x7faed9825b20 <line:4:1, line:7:1>
+    `-LabelStmt 0x7faed9825b08 <line:5:5, line:6:12> 'L'
+      `-BinaryOperator 0x7faed9825ae0 <col:5, col:12> 'int' '!='
+        |-AddrLabelExpr 0x7faed9825a88 <col:5, col:7> 'void *' L 0x7faed9825a40
+        `-ImplicitCastExpr 0x7faed9825ac8 <col:12> 'void *' <NullToPointer>
+          `-IntegerLiteral 0x7faed9825aa8 <col:12> 'int' 0

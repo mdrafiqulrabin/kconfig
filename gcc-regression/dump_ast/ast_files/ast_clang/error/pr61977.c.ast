@@ -1,0 +1,22 @@
+c_files/pr61977.c:4:1: error: unknown type name 'vector'
+vector
+^
+c_files/pr61977.c:4:7: error: expected identifier or '('
+vector
+      ^
+2 errors generated.
+TranslationUnitDecl 0x7fac0b025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fac0b026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fac0b025d40 '__int128'
+|-TypedefDecl 0x7fac0b026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fac0b025d60 'unsigned __int128'
+|-TypedefDecl 0x7fac0b026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fac0b026170 'struct __NSConstantString_tag'
+|   `-Record 0x7fac0b0260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fac0b026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fac0b0263c0 'char *'
+|   `-BuiltinType 0x7fac0b025b60 'char'
+`-TypedefDecl 0x7fac0b0266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fac0b026670 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fac0b0264e0 'struct __va_list_tag'
+      `-Record 0x7fac0b026458 '__va_list_tag'

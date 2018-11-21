@@ -1,0 +1,105 @@
+FileAST: 
+  Typedef: udwords, [], ['typedef']
+    TypeDecl: udwords, []
+      Union: None
+        Decl: all, [], [], []
+          TypeDecl: all, []
+            IdentifierType: ['long']
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            Struct: None
+              Decl: low, [], [], []
+                TypeDecl: low, []
+                  IdentifierType: ['int']
+              Decl: high, [], [], []
+                TypeDecl: high, []
+                  IdentifierType: ['int']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: __udivmoddi4, [], [], []
+      FuncDecl: 
+        TypeDecl: __udivmoddi4, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['udwords']
+      Assignment: =
+        ID: d
+        FuncCall: 
+          ID: __builtin_clz
+          ExprList: 
+            Constant: int, 0
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: r
+            ID: s
+          ID: low
+        Constant: int, 0
+      For: 
+        ID: d
+        UnaryOp: --
+          ID: d
+        Compound: 
+          Assignment: =
+            StructRef: .
+              StructRef: .
+                ID: r
+                ID: s
+              ID: high
+            BinaryOp: |
+              BinaryOp: <<
+                StructRef: .
+                  StructRef: .
+                    ID: r
+                    ID: s
+                  ID: high
+                Constant: int, 1
+              BinaryOp: >>
+                StructRef: .
+                  StructRef: .
+                    ID: r
+                    ID: s
+                  ID: low
+                ID: a
+          Assignment: =
+            StructRef: .
+              StructRef: .
+                ID: r
+                ID: s
+              ID: low
+            BinaryOp: >>
+              BinaryOp: <<
+                StructRef: .
+                  StructRef: .
+                    ID: r
+                    ID: s
+                  ID: low
+                ID: b
+              Constant: int, 1
+          Decl: s, [], [], []
+            TypeDecl: s, []
+              IdentifierType: ['int']
+            UnaryOp: -
+              StructRef: .
+                ID: r
+                ID: all
+          Assignment: =
+            ID: c
+            ID: s
+          UnaryOp: p--
+            StructRef: .
+              ID: r
+              ID: all

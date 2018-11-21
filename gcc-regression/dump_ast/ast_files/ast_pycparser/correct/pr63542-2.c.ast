@@ -1,0 +1,205 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: B
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: d, [], [], []
+        PtrDecl: []
+          TypeDecl: d, []
+            IdentifierType: ['unsigned', 'char']
+  Decl: f, [], ['extern'], []
+    ArrayDecl: []
+      PtrDecl: []
+        TypeDecl: f, []
+          Struct: A
+            Decl: e, [], [], []
+              ArrayDecl: []
+                PtrDecl: []
+                  TypeDecl: e, []
+                    Struct: B
+                Constant: int, 0x400
+      Constant: int, 128
+  Decl: bar, [], ['extern'], []
+    PtrDecl: []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['char']
+          Decl: q, [], [], []
+            PtrDecl: []
+              TypeDecl: q, []
+                IdentifierType: ['char']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['char']
+          Decl: q, [], [], []
+            PtrDecl: []
+              TypeDecl: q, []
+                IdentifierType: ['char']
+        PtrDecl: []
+          TypeDecl: foo, []
+            IdentifierType: ['char']
+    Compound: 
+      Decl: g, [], [], []
+        PtrDecl: []
+          TypeDecl: g, []
+            Struct: B
+      Decl: b, [], [], []
+        PtrDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['char']
+      Decl: l, [], [], []
+        PtrDecl: []
+          TypeDecl: l, []
+            IdentifierType: ['char']
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['unsigned', 'long']
+      Assignment: =
+        ID: g
+        ArrayRef: 
+          StructRef: ->
+            ArrayRef: 
+              ID: f
+              BinaryOp: >>
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned', 'long']
+                  ID: p
+                Constant: int, 22
+            ID: e
+          BinaryOp: &
+            BinaryOp: >>
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'long']
+                ID: p
+              Constant: int, 12
+            Constant: int, 0x3ff
+      Assignment: =
+        ID: s
+        BinaryOp: <<
+          StructRef: ->
+            ID: g
+            ID: c
+          Constant: int, 2
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'long']
+            ID: p
+          Constant: int, 0xfff
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          IdentifierType: ['int']
+        ArrayRef: 
+          StructRef: ->
+            ID: g
+            ID: d
+          ID: r
+      If: 
+        BinaryOp: >
+          ID: m
+          Constant: int, 0xfd
+        Compound: 
+          Assignment: =
+            ID: m
+            BinaryOp: %
+              BinaryOp: >>
+                ID: r
+                Constant: int, 2
+              BinaryOp: >>
+                ID: s
+                Constant: int, 2
+          If: 
+            BinaryOp: !=
+              BinaryOp: &
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned', 'long']
+                  ID: p
+                UnaryOp: ~
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned', 'long']
+                    Constant: int, 0xfff
+              BinaryOp: &
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned', 'long']
+                  ID: q
+                UnaryOp: ~
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned', 'long']
+                    Constant: int, 0xfff
+            Goto: fail
+      Assignment: =
+        ID: b
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['char']
+          BinaryOp: &
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'long']
+              ID: p
+            UnaryOp: ~
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'long']
+                Constant: int, 3
+      Assignment: -=
+        ID: b
+        BinaryOp: <<
+          ID: m
+          Constant: int, 2
+      Assignment: =
+        ID: l
+        BinaryOp: +
+          ID: b
+          ID: s
+      If: 
+        BinaryOp: ||
+          BinaryOp: >=
+            ID: q
+            ID: l
+          BinaryOp: <
+            ID: q
+            ID: b
+        Goto: fail
+      Return: 
+        ID: p
+      Label: fail
+        FuncCall: 
+          UnaryOp: *
+            ID: bar
+          ExprList: 
+            ID: p
+            ID: q
+      Return: 
+        ID: p

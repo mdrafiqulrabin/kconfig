@@ -1,0 +1,46 @@
+FileAST: 
+  Decl: om, [], [], []
+    TypeDecl: om, []
+      IdentifierType: ['int']
+  Decl: h6, [], [], []
+    TypeDecl: h6, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: eo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: eo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: tl, ['const'], [], []
+        TypeDecl: tl, ['const']
+          IdentifierType: ['int']
+        Constant: int, 1
+      Decl: ln, [], [], []
+        TypeDecl: ln, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: h6
+        BinaryOp: >
+          BinaryOp: +
+            ID: om
+            ID: tl
+          Constant: int, 0
+      Assignment: =
+        ID: ln
+        BinaryOp: &&
+          ID: om
+          BinaryOp: &
+            ID: om
+            ID: h6
+      Assignment: =
+        ID: h6
+        ID: om
+      Assignment: =
+        ID: om
+        BinaryOp: <
+          ID: ln
+          ID: h6

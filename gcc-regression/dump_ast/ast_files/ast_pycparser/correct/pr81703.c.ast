@@ -1,0 +1,33 @@
+FileAST: 
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: g, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Decl: d, [], [], []
+        ArrayDecl: []
+          TypeDecl: d, []
+            IdentifierType: ['char']
+          Constant: int, 8
+      Decl: s, ['const'], [], []
+        ArrayDecl: []
+          TypeDecl: s, ['const']
+            IdentifierType: ['char']
+        Constant: string, "0123"
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          ID: d
+          ID: s
+          UnaryOp: sizeof
+            ID: s
+      Return: 
+        FuncCall: 
+          ID: __builtin_strlen
+          ExprList: 
+            ID: d

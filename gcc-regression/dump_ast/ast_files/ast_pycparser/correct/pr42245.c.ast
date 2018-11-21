@@ -1,0 +1,86 @@
+FileAST: 
+  Decl: N_words, [], ['extern'], []
+    TypeDecl: N_words, []
+      IdentifierType: ['int']
+  Typedef: DIS_node, [], ['typedef']
+    TypeDecl: DIS_node, []
+      Struct: DIS_node_struct
+  Typedef: CON_list, [], ['typedef']
+    TypeDecl: CON_list, []
+      Struct: CON_list_struct
+  Decl: None, [], [], []
+    Struct: DIS_node_struct
+      Decl: cl, [], [], []
+        PtrDecl: []
+          TypeDecl: cl, []
+            IdentifierType: ['CON_list']
+  FuncDef: 
+    Decl: build_DIS_CON_tree, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: build_DIS_CON_tree, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: w, [], [], []
+        TypeDecl: w, []
+          IdentifierType: ['int']
+      Decl: dnroot, [], [], []
+        PtrDecl: []
+          TypeDecl: dnroot, []
+            IdentifierType: ['DIS_node']
+      Decl: dn, [], [], []
+        PtrDecl: []
+          TypeDecl: dn, []
+            IdentifierType: ['DIS_node']
+      Decl: child, [], [], []
+        PtrDecl: []
+          TypeDecl: child, []
+            IdentifierType: ['CON_list']
+      Decl: xchild, [], [], []
+        PtrDecl: []
+          TypeDecl: xchild, []
+            IdentifierType: ['CON_list']
+      For: 
+        Assignment: =
+          ID: w
+          Constant: int, 0
+        BinaryOp: <
+          ID: w
+          ID: N_words
+        UnaryOp: p++
+          ID: w
+        Compound: 
+          If: 
+            BinaryOp: ==
+              ID: dnroot
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+                Constant: int, 0
+            Compound: 
+              Assignment: =
+                ID: dnroot
+                ID: dn
+              For: 
+                Assignment: =
+                  ID: child
+                  StructRef: ->
+                    ID: dn
+                    ID: cl
+                BinaryOp: !=
+                  ID: child
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['void']
+                    Constant: int, 0
+                Assignment: =
+                  ID: child
+                  ID: xchild
+                Compound: 

@@ -1,0 +1,26 @@
+FileAST: 
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['double']
+        TypeDecl: baz, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          FuncCall: 
+            ID: __builtin_pow
+            ExprList: 
+              ID: x
+              Constant: float, 3.0
+          FuncCall: 
+            ID: __builtin_pow
+            ExprList: 
+              ID: y
+              Constant: float, 4.0

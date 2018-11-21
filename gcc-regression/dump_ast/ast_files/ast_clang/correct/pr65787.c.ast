@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7f89780264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8978026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8978026740 '__int128'
+|-TypedefDecl 0x7f8978026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8978026760 'unsigned __int128'
+|-TypedefDecl 0x7f8978026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8978026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8978026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8978026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8978026dc0 'char *'
+|   `-BuiltinType 0x7f8978026560 'char'
+|-TypedefDecl 0x7f89780270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8978027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8978026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8978026e58 '__va_list_tag'
+|-TypedefDecl 0x7f8978027178 <c_files/pr65787.c:13:1, col:16> col:16 referenced v4f32 '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7f8978027140 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7f89780266c0 'float'
+|-FunctionDecl 0x7f89780784c0 <line:15:1, col:16> col:6 used foo 'void (float)'
+| `-ParmVarDecl 0x7f8978078400 <col:11> col:16 'float'
+|-VarDecl 0x7f89780785d0 <line:16:1, col:14> col:14 used x 'v4f32':'__attribute__((__vector_size__(4 * sizeof(float)))) float' extern
+|-VarDecl 0x7f8978078640 <col:1, col:17> col:17 used y 'v4f32':'__attribute__((__vector_size__(4 * sizeof(float)))) float' extern
+`-FunctionDecl 0x7f8978078710 <line:18:1, line:21:1> line:18:5 main 'int ()'
+  `-CompoundStmt 0x7f89780789f8 <col:12, line:21:1>
+    |-DeclStmt 0x7f89780788c0 <line:19:3, col:18>
+    | `-VarDecl 0x7f89780787b8 <col:3, col:17> col:9 used z 'v4f32':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+    |   `-BinaryOperator 0x7f8978078898 <col:13, col:17> 'v4f32':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '+'
+    |     |-ImplicitCastExpr 0x7f8978078868 <col:13> 'v4f32':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f8978078818 <col:13> 'v4f32':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7f89780785d0 'x' 'v4f32':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    |     `-ImplicitCastExpr 0x7f8978078880 <col:17> 'v4f32':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f8978078840 <col:17> 'v4f32':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7f8978078640 'y' 'v4f32':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    `-CallExpr 0x7f89780789b0 <line:20:3, col:12> 'void'
+      |-ImplicitCastExpr 0x7f8978078998 <col:3> 'void (*)(float)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f89780788d8 <col:3> 'void (float)' Function 0x7f89780784c0 'foo' 'void (float)'
+      `-ImplicitCastExpr 0x7f89780789e0 <col:8, col:11> 'float' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7f8978078948 <col:8, col:11> 'float' lvalue vectorcomponent
+          |-DeclRefExpr 0x7f8978078900 <col:8> 'v4f32':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7f89780787b8 'z' 'v4f32':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+          `-IntegerLiteral 0x7f8978078928 <col:10> 'int' 2

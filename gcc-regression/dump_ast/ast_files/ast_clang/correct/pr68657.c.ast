@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fa4898264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa489826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa489826740 '__int128'
+|-TypedefDecl 0x7fa489826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa489826760 'unsigned __int128'
+|-TypedefDecl 0x7fa489826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa489826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa489826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa489826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa489826dc0 'char *'
+|   `-BuiltinType 0x7fa489826560 'char'
+|-TypedefDecl 0x7fa4898270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa489827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa489826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa489826e58 '__va_list_tag'
+|-TypedefDecl 0x7fa489827178 <c_files/pr68657.c:4:1, col:13> col:13 referenced V '__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| `-VectorType 0x7fa489827140 '__attribute__((__vector_size__(16 * sizeof(int)))) int' 16
+|   `-BuiltinType 0x7fa4898265c0 'int'
+|-FunctionDecl 0x7fa48a026be0 <line:6:1, line:9:1> line:6:6 foo 'void (V, V *)'
+| |-ParmVarDecl 0x7fa48a026a00 <col:11, col:13> col:13 used x 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| |-ParmVarDecl 0x7fa48a026ac8 <col:16, col:19> col:19 used y 'V *'
+| `-CompoundStmt 0x7fa48a026d90 <col:22, line:9:1>
+|   `-BinaryOperator 0x7fa48a026d68 <line:8:3, col:8> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' '='
+|     |-UnaryOperator 0x7fa48a026d08 <col:3, col:4> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fa48a026cf0 <col:4> 'V *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fa48a026cc8 <col:4> 'V *' lvalue ParmVar 0x7fa48a026ac8 'y' 'V *'
+|     `-ImplicitCastExpr 0x7fa48a026d50 <col:8> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa48a026d28 <col:8> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue ParmVar 0x7fa48a026a00 'x' 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+`-FunctionDecl 0x7fa48a026ec0 <line:11:1, line:13:1> line:11:3 bar 'V (V *)'
+  |-ParmVarDecl 0x7fa48a026dc0 <col:8, col:11> col:11 used x 'V *'
+  `-CompoundStmt 0x7fa48a026ff0 <col:14, line:13:1>
+    `-ReturnStmt 0x7fa48a026fd8 <line:12:3, col:11>
+      `-ImplicitCastExpr 0x7fa48a026fc0 <col:10, col:11> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <LValueToRValue>
+        `-UnaryOperator 0x7fa48a026fa0 <col:10, col:11> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fa48a026f88 <col:11> 'V *' <LValueToRValue>
+            `-DeclRefExpr 0x7fa48a026f60 <col:11> 'V *' lvalue ParmVar 0x7fa48a026dc0 'x' 'V *'

@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7ffd5e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffd5e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffd5e826740 '__int128'
+|-TypedefDecl 0x7ffd5e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffd5e826760 'unsigned __int128'
+|-TypedefDecl 0x7ffd5e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffd5e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffd5e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffd5e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffd5e826dc0 'char *'
+|   `-BuiltinType 0x7ffd5e826560 'char'
+|-TypedefDecl 0x7ffd5e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffd5e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffd5e826ee0 'struct __va_list_tag'
+|     `-Record 0x7ffd5e826e58 '__va_list_tag'
+|-RecordDecl 0x7ffd5e827120 <c_files/pr41488.c:4:1, line:7:1> line:4:8 struct struct_t definition
+| `-FieldDecl 0x7ffd5f025a18 <line:6:3, col:8> col:8 referenced data 'int *'
+`-FunctionDecl 0x7ffd5f025d30 <line:9:1, line:15:1> line:9:6 foo 'void (struct struct_t *, int, int)'
+  |-ParmVarDecl 0x7ffd5f025b10 <col:11, col:28> col:28 used sp 'struct struct_t *'
+  |-ParmVarDecl 0x7ffd5f025b88 <col:32, col:36> col:36 used start 'int'
+  |-ParmVarDecl 0x7ffd5f025c00 <col:43, col:47> col:47 used end 'int'
+  `-CompoundStmt 0x7ffd5f026258 <line:10:1, line:15:1>
+    |-DeclStmt 0x7ffd5f025e98 <line:11:3, col:8>
+    | `-VarDecl 0x7ffd5f025e38 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7ffd5f026220 <line:13:3, line:14:25>
+      |-BinaryOperator 0x7ffd5f025ef8 <line:13:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7ffd5f025eb0 <col:8> 'int' lvalue Var 0x7ffd5f025e38 'i' 'int'
+      | `-IntegerLiteral 0x7ffd5f025ed8 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ffd5f026008 <col:15, col:25> 'int' '<'
+      | |-BinaryOperator 0x7ffd5f025fa0 <col:15, col:17> 'int' '+'
+      | | |-ImplicitCastExpr 0x7ffd5f025f70 <col:15> 'int' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7ffd5f025f20 <col:15> 'int' lvalue Var 0x7ffd5f025e38 'i' 'int'
+      | | `-ImplicitCastExpr 0x7ffd5f025f88 <col:17> 'int' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7ffd5f025f48 <col:17> 'int' lvalue ParmVar 0x7ffd5f025b88 'start' 'int'
+      | `-ImplicitCastExpr 0x7ffd5f025ff0 <col:25> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ffd5f025fc8 <col:25> 'int' lvalue ParmVar 0x7ffd5f025c00 'end' 'int'
+      |-UnaryOperator 0x7ffd5f026058 <col:30, col:31> 'int' postfix '++'
+      | `-DeclRefExpr 0x7ffd5f026030 <col:30> 'int' lvalue Var 0x7ffd5f025e38 'i' 'int'
+      `-BinaryOperator 0x7ffd5f0261f8 <line:14:5, col:25> 'int' '='
+        |-ArraySubscriptExpr 0x7ffd5f0261b0 <col:5, col:21> 'int' lvalue
+        | |-ImplicitCastExpr 0x7ffd5f026198 <col:5, col:9> 'int *' <LValueToRValue>
+        | | `-MemberExpr 0x7ffd5f0260b8 <col:5, col:9> 'int *' lvalue ->data 0x7ffd5f025a18
+        | |   `-ImplicitCastExpr 0x7ffd5f0260a0 <col:5> 'struct struct_t *' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7ffd5f026078 <col:5> 'struct struct_t *' lvalue ParmVar 0x7ffd5f025b10 'sp' 'struct struct_t *'
+        | `-BinaryOperator 0x7ffd5f026170 <col:14, col:16> 'int' '+'
+        |   |-ImplicitCastExpr 0x7ffd5f026140 <col:14> 'int' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7ffd5f0260f0 <col:14> 'int' lvalue Var 0x7ffd5f025e38 'i' 'int'
+        |   `-ImplicitCastExpr 0x7ffd5f026158 <col:16> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7ffd5f026118 <col:16> 'int' lvalue ParmVar 0x7ffd5f025b88 'start' 'int'
+        `-IntegerLiteral 0x7ffd5f0261d8 <col:25> 'int' 0

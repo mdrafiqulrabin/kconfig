@@ -1,0 +1,44 @@
+FileAST: 
+  Decl: byte, [], [], []
+    TypeDecl: byte, []
+      IdentifierType: ['unsigned', 'char']
+    Constant: int, 0
+  FuncDef: 
+    Decl: set_bit, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: bit, [], [], []
+            TypeDecl: bit, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: value, [], [], []
+            TypeDecl: value, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: set_bit, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: mask, [], [], []
+        TypeDecl: mask, []
+          IdentifierType: ['unsigned', 'char']
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+          BinaryOp: <<
+            Constant: int, 1
+            BinaryOp: &
+              ID: bit
+              Constant: int, 7
+      If: 
+        UnaryOp: !
+          ID: value
+        Assignment: &=
+          ID: byte
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'char']
+            UnaryOp: ~
+              ID: mask
+        Assignment: |=
+          ID: byte
+          ID: mask

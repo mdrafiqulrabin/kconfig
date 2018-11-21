@@ -1,0 +1,77 @@
+FileAST: 
+  Decl: lh, [], [], []
+    TypeDecl: lh, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: ny, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: t3, [], [], []
+            TypeDecl: t3, []
+              IdentifierType: ['int']
+          Decl: ys, [], [], []
+            TypeDecl: ys, []
+              IdentifierType: ['int']
+          Decl: rt, [], [], []
+            TypeDecl: rt, []
+              IdentifierType: ['int']
+          Decl: p8, [], [], []
+            TypeDecl: p8, []
+              IdentifierType: ['int']
+        TypeDecl: ny, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: lh
+          Constant: int, 0
+        Compound: 
+          If: 
+            Constant: int, 0
+            Compound: 
+              Label: oo
+                DoWhile: 
+                  BinaryOp: <=
+                    ID: t3
+                    Constant: int, 0
+                  Compound: 
+                    Assignment: =
+                      ID: rt
+                      TernaryOp: 
+                        BinaryOp: !=
+                          ID: p8
+                          Constant: int, 0
+                        ID: t3
+                        Constant: int, 0
+                    Assignment: =
+                      ID: rt
+                      BinaryOp: ||
+                        BinaryOp: !=
+                          ID: rt
+                          Constant: int, 0
+                        BinaryOp: !=
+                          ID: lh
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['unsigned', 'int']
+                            ID: ys
+                    Assignment: +=
+                      ID: rt
+                      BinaryOp: +
+                        ID: lh
+                        ID: ys
+              Assignment: =
+                ID: lh
+                ID: ys
+              Assignment: =
+                ID: ys
+                ID: rt
+          If: 
+            BinaryOp: !=
+              ID: lh
+              Constant: int, 0
+            Assignment: =
+              ID: p8
+              ID: lh
+      Goto: oo

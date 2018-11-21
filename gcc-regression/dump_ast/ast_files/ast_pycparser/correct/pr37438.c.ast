@@ -1,0 +1,93 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long', 'long', 'int']
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  Decl: baz, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'short']
+      TypeDecl: baz, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'long', 'long', 'int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: &
+            ID: x
+            Constant: int, 0xff
+          BinaryOp: &
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'int']
+              BinaryOp: >>
+                ID: x
+                Constant: int, 12
+            UnaryOp: ~
+              Constant: int, 0xff
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: v, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: v, ['const']
+                IdentifierType: ['char']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'long', 'long', 'int']
+        TypeDecl: test, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['unsigned', 'short']
+      Assignment: =
+        ID: k
+        BinaryOp: |
+          BinaryOp: <<
+            BinaryOp: &
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  ID: x
+              Constant: int, 0xff
+            Constant: int, 8
+          BinaryOp: &
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                ID: x
+            Constant: int, 0xff
+      Return: 
+        FuncCall: 
+          ID: baz
+          ExprList: 
+            ID: v
+            ID: w
+            ID: k

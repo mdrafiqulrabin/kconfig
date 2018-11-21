@@ -1,0 +1,102 @@
+c_files/pr42709.c:5:10: fatal error: 'tree-vect.h' file not found
+#include "tree-vect.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fc3f70264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc3f7026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc3f7026740 '__int128'
+|-TypedefDecl 0x7fc3f7026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc3f7026760 'unsigned __int128'
+|-TypedefDecl 0x7fc3f7026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc3f7026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc3f7026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc3f7026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc3f7026dc0 'char *'
+|   `-BuiltinType 0x7fc3f7026560 'char'
+|-TypedefDecl 0x7fc3f70270c8 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc3f7027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc3f7026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc3f7026e58 '__va_list_tag'
+|-TypedefDecl 0x7fc3f7027150 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:30:1, col:27> col:27 va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7fc3f7027120 '__builtin_va_list' sugar
+|   |-Typedef 0x7fc3f70270c8 '__builtin_va_list'
+|   `-ConstantArrayType 0x7fc3f7027070 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7fc3f7026ee0 'struct __va_list_tag'
+|       `-Record 0x7fc3f7026e58 '__va_list_tag'
+|-TypedefDecl 0x7fc3f7827a00 <line:48:1, col:27> col:27 __gnuc_va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7fc3f7027120 '__builtin_va_list' sugar
+|   |-Typedef 0x7fc3f70270c8 '__builtin_va_list'
+|   `-ConstantArrayType 0x7fc3f7027070 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7fc3f7026ee0 'struct __va_list_tag'
+|       `-Record 0x7fc3f7026e58 '__va_list_tag'
+|-VarDecl 0x7fc3f7827b10 <c_files/pr42709.c:9:1, col:11> col:6 used res 'int *[128]'
+`-FunctionDecl 0x7fc3f7827e28 <line:11:1, line:24:1> line:12:1 main1 'int (int *, int *, int *, int *)'
+  |-ParmVarDecl 0x7fc3f7827bc8 <col:8, col:13> col:13 used a 'int *'
+  |-ParmVarDecl 0x7fc3f7827c40 <col:16, col:21> col:21 used b 'int *'
+  |-ParmVarDecl 0x7fc3f7827cb8 <col:24, col:29> col:29 used c 'int *'
+  |-ParmVarDecl 0x7fc3f7827d30 <col:32, col:37> col:37 used d 'int *'
+  `-CompoundStmt 0x7fc3f7828920 <line:13:1, line:24:1>
+    |-DeclStmt 0x7fc3f7827f58 <line:14:3, col:8>
+    | `-VarDecl 0x7fc3f7827ef8 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fc3f78288e8 <line:16:3, line:23:5>
+      |-BinaryOperator 0x7fc3f7827fb8 <line:16:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fc3f7827f70 <col:8> 'int' lvalue Var 0x7fc3f7827ef8 'i' 'int'
+      | `-IntegerLiteral 0x7fc3f7827f98 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc3f7828088 <col:15, col:21> 'int' '<'
+      | |-ImplicitCastExpr 0x7fc3f7828070 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fc3f7827fe0 <col:15> 'int' lvalue Var 0x7fc3f7827ef8 'i' 'int'
+      | `-BinaryOperator 0x7fc3f7828048 <line:7:11, line:16:21> 'int' '/'
+      |   |-IntegerLiteral 0x7fc3f7828008 <line:7:11> 'int' 128
+      |   `-IntegerLiteral 0x7fc3f7828028 <line:16:21> 'int' 2
+      |-CompoundAssignOperator 0x7fc3f78280f8 <col:24, col:27> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+      | |-DeclRefExpr 0x7fc3f78280b0 <col:24> 'int' lvalue Var 0x7fc3f7827ef8 'i' 'int'
+      | `-IntegerLiteral 0x7fc3f78280d8 <col:27> 'int' 4
+      `-CompoundStmt 0x7fc3f78288a8 <line:17:5, line:23:5>
+        |-BinaryOperator 0x7fc3f7828288 <line:18:7, col:20> 'int *' '='
+        | |-ArraySubscriptExpr 0x7fc3f78281d8 <col:7, col:12> 'int *' lvalue
+        | | |-ImplicitCastExpr 0x7fc3f78281a8 <col:7> 'int **' <ArrayToPointerDecay>
+        | | | `-DeclRefExpr 0x7fc3f7828130 <col:7> 'int *[128]' lvalue Var 0x7fc3f7827b10 'res' 'int *[128]'
+        | | `-ImplicitCastExpr 0x7fc3f78281c0 <col:11> 'int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fc3f7828158 <col:11> 'int' lvalue Var 0x7fc3f7827ef8 'i' 'int'
+        | `-BinaryOperator 0x7fc3f7828260 <col:16, col:20> 'int *' '+'
+        |   |-ImplicitCastExpr 0x7fc3f7828248 <col:16> 'int *' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fc3f7828200 <col:16> 'int *' lvalue ParmVar 0x7fc3f7827bc8 'a' 'int *'
+        |   `-IntegerLiteral 0x7fc3f7828228 <col:20> 'int' 16
+        |-BinaryOperator 0x7fc3f7828428 <line:19:7, col:22> 'int *' '='
+        | |-ArraySubscriptExpr 0x7fc3f7828378 <col:7, col:14> 'int *' lvalue
+        | | |-ImplicitCastExpr 0x7fc3f7828360 <col:7> 'int **' <ArrayToPointerDecay>
+        | | | `-DeclRefExpr 0x7fc3f78282b0 <col:7> 'int *[128]' lvalue Var 0x7fc3f7827b10 'res' 'int *[128]'
+        | | `-BinaryOperator 0x7fc3f7828338 <col:11, col:13> 'int' '+'
+        | |   |-ImplicitCastExpr 0x7fc3f7828320 <col:11> 'int' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7fc3f78282d8 <col:11> 'int' lvalue Var 0x7fc3f7827ef8 'i' 'int'
+        | |   `-IntegerLiteral 0x7fc3f7828300 <col:13> 'int' 1
+        | `-BinaryOperator 0x7fc3f7828400 <col:18, col:22> 'int *' '+'
+        |   |-ImplicitCastExpr 0x7fc3f78283e8 <col:18> 'int *' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fc3f78283a0 <col:18> 'int *' lvalue ParmVar 0x7fc3f7827c40 'b' 'int *'
+        |   `-IntegerLiteral 0x7fc3f78283c8 <col:22> 'int' 16
+        |-BinaryOperator 0x7fc3f78285c8 <line:20:7, col:22> 'int *' '='
+        | |-ArraySubscriptExpr 0x7fc3f7828518 <col:7, col:14> 'int *' lvalue
+        | | |-ImplicitCastExpr 0x7fc3f7828500 <col:7> 'int **' <ArrayToPointerDecay>
+        | | | `-DeclRefExpr 0x7fc3f7828450 <col:7> 'int *[128]' lvalue Var 0x7fc3f7827b10 'res' 'int *[128]'
+        | | `-BinaryOperator 0x7fc3f78284d8 <col:11, col:13> 'int' '+'
+        | |   |-ImplicitCastExpr 0x7fc3f78284c0 <col:11> 'int' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7fc3f7828478 <col:11> 'int' lvalue Var 0x7fc3f7827ef8 'i' 'int'
+        | |   `-IntegerLiteral 0x7fc3f78284a0 <col:13> 'int' 2
+        | `-BinaryOperator 0x7fc3f78285a0 <col:18, col:22> 'int *' '+'
+        |   |-ImplicitCastExpr 0x7fc3f7828588 <col:18> 'int *' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fc3f7828540 <col:18> 'int *' lvalue ParmVar 0x7fc3f7827cb8 'c' 'int *'
+        |   `-IntegerLiteral 0x7fc3f7828568 <col:22> 'int' 16
+        |-BinaryOperator 0x7fc3f7828768 <line:21:7, col:22> 'int *' '='
+        | |-ArraySubscriptExpr 0x7fc3f78286b8 <col:7, col:14> 'int *' lvalue
+        | | |-ImplicitCastExpr 0x7fc3f78286a0 <col:7> 'int **' <ArrayToPointerDecay>
+        | | | `-DeclRefExpr 0x7fc3f78285f0 <col:7> 'int *[128]' lvalue Var 0x7fc3f7827b10 'res' 'int *[128]'
+        | | `-BinaryOperator 0x7fc3f7828678 <col:11, col:13> 'int' '+'
+        | |   |-ImplicitCastExpr 0x7fc3f7828660 <col:11> 'int' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7fc3f7828618 <col:11> 'int' lvalue Var 0x7fc3f7827ef8 'i' 'int'
+        | |   `-IntegerLiteral 0x7fc3f7828640 <col:13> 'int' 3
+        | `-BinaryOperator 0x7fc3f7828740 <col:18, col:22> 'int *' '+'
+        |   |-ImplicitCastExpr 0x7fc3f7828728 <col:18> 'int *' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fc3f78286e0 <col:18> 'int *' lvalue ParmVar 0x7fc3f7827d30 'd' 'int *'
+        |   `-IntegerLiteral 0x7fc3f7828708 <col:22> 'int' 16
+        `-GCCAsmStmt 0x7fc3f7828858 <line:22:7, col:36>

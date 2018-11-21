@@ -1,0 +1,60 @@
+FileAST: 
+  FuncDef: 
+    Decl: h8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: cv, [], [], []
+            TypeDecl: cv, []
+              IdentifierType: ['int']
+          Decl: od, [], [], []
+            TypeDecl: od, []
+              IdentifierType: ['int']
+        TypeDecl: h8, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        Compound: 
+          Decl: ih, [], [], []
+            TypeDecl: ih, []
+              IdentifierType: ['int']
+            BinaryOp: &
+              ID: __UINTPTR_TYPE__
+              ID: od
+          If: 
+            BinaryOp: ==
+              ID: cv
+              Constant: int, 0
+            While: 
+              BinaryOp: <
+                ID: od
+                Constant: int, 1
+              Compound: 
+                Decl: lq, [], [], []
+                  TypeDecl: lq, []
+                    IdentifierType: ['int']
+                For: 
+                  Assignment: =
+                    ID: lq
+                    Constant: int, 0
+                  BinaryOp: <
+                    ID: lq
+                    Constant: int, 3
+                  UnaryOp: ++
+                    ID: lq
+                  For: 
+                    Assignment: =
+                      ID: ih
+                      Constant: int, 0
+                    BinaryOp: <
+                      ID: ih
+                      Constant: int, 4
+                    UnaryOp: ++
+                      ID: ih
+                    Assignment: +=
+                      ID: od
+                      ID: lq
+          While: 
+            BinaryOp: <
+              ID: ih
+              Constant: int, 1
+            Compound: 

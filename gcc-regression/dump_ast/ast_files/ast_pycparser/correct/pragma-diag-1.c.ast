@@ -1,0 +1,48 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      Pragma: GCC diagnostic error "-Wuninitialized"
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: a
+      Pragma: GCC diagnostic push
+      Pragma: GCC diagnostic ignored "-Wuninitialized"
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: b
+      Pragma: GCC diagnostic pop
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: c
+      Pragma: GCC diagnostic pop
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: d

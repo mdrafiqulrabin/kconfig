@@ -1,0 +1,35 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: sum, [], [], []
+        TypeDecl: sum, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: data, [], [], []
+        ArrayDecl: []
+          TypeDecl: data, []
+            IdentifierType: ['int']
+          Constant: int, 1024
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 1024
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: sum
+          ArrayRef: 
+            ID: data
+            ID: i
+      Return: 
+        ID: sum

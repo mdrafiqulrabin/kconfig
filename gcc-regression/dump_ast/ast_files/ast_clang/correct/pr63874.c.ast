@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7ff5480264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff548026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff548026740 '__int128'
+|-TypedefDecl 0x7ff548026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff548026760 'unsigned __int128'
+|-TypedefDecl 0x7ff548026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff548026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff548026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff548026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff548026dc0 'char *'
+|   `-BuiltinType 0x7ff548026560 'char'
+|-TypedefDecl 0x7ff5480270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff548027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff548026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff548026e58 '__va_list_tag'
+|-FunctionDecl 0x7ff548826a00 <c_files/pr63874.c:5:1, col:52> col:35 used foo_weakref 'void (void)' extern
+| `-WeakAttr 0x7ff548826a98 <col:28>
+|-FunctionDecl 0x7ff548826bb0 <line:6:1, line:9:1> line:6:38 used bar 'void (void)'
+| |-CompoundStmt 0x7ff548826cb8 <line:7:1, line:9:1>
+| | `-ReturnStmt 0x7ff548826ca0 <line:8:2>
+| |-NoInlineAttr 0x7ff548826c48 <line:6:27>
+| `-WeakAttr 0x7ff548826c90 <col:21>
+|-VarDecl 0x7ff548826e08 <line:10:1, col:16> col:8 used f 'void (*)(void)'
+|-VarDecl 0x7ff548826f08 <line:11:1, col:16> col:8 used g 'void (*)(void)'
+`-FunctionDecl 0x7ff548827038 <line:13:1, line:19:1> line:14:1 main 'int (void)'
+  `-CompoundStmt 0x7ff548827260 <line:15:1, line:19:1>
+    |-BinaryOperator 0x7ff548827168 <line:16:2, col:7> 'void (*)(void)' '='
+    | |-DeclRefExpr 0x7ff5488270f8 <col:2> 'void (*)(void)' lvalue Var 0x7ff548826e08 'f' 'void (*)(void)'
+    | `-UnaryOperator 0x7ff548827148 <col:6, col:7> 'void (*)(void)' prefix '&'
+    |   `-DeclRefExpr 0x7ff548827120 <col:7> 'void (void)' Function 0x7ff548826a00 'foo_weakref' 'void (void)'
+    |-BinaryOperator 0x7ff548827200 <line:17:2, col:7> 'void (*)(void)' '='
+    | |-DeclRefExpr 0x7ff548827190 <col:2> 'void (*)(void)' lvalue Var 0x7ff548826f08 'g' 'void (*)(void)'
+    | `-UnaryOperator 0x7ff5488271e0 <col:6, col:7> 'void (*)(void)' prefix '&'
+    |   `-DeclRefExpr 0x7ff5488271b8 <col:7> 'void (void)' Function 0x7ff548826bb0 'bar' 'void (void)'
+    `-ReturnStmt 0x7ff548827248 <line:18:2, col:9>
+      `-IntegerLiteral 0x7ff548827228 <col:9> 'int' 0

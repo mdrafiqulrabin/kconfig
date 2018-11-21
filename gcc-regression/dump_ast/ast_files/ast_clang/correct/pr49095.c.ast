@@ -1,0 +1,2066 @@
+TranslationUnitDecl 0x7f81538264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8153826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8153826740 '__int128'
+|-TypedefDecl 0x7f8153826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8153826760 'unsigned __int128'
+|-TypedefDecl 0x7f8153826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8153826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8153826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8153826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8153826dc0 'char *'
+|   `-BuiltinType 0x7f8153826560 'char'
+|-TypedefDecl 0x7f81538270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8153827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8153826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8153826e58 '__va_list_tag'
+|-FunctionDecl 0x7f8154025a00 <c_files/pr49095.c:6:1, col:17> col:6 used foo 'void (void *)'
+| `-ParmVarDecl 0x7f8153827138 <col:11, col:16> col:17 'void *'
+|-FunctionDecl 0x7f8154025be8 <line:8:1, line:14:1> line:9:1 f1 'int *(int *)'
+| |-ParmVarDecl 0x7f8154025b20 <col:5, col:10> col:10 used x 'int *'
+| `-CompoundStmt 0x7f8154025eb0 <line:10:1, line:14:1>
+|   |-IfStmt 0x7f8154025e20 <line:11:3, line:12:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154025d08 <line:11:7, col:11> 'int' prefix '!'
+|   | | `-UnaryOperator 0x7f8154025ce8 <col:8, col:11> 'int' prefix '--'
+|   | |   `-UnaryOperator 0x7f8154025cc8 <col:10, col:11> 'int' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154025cb0 <col:11> 'int *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154025c88 <col:11> 'int *' lvalue ParmVar 0x7f8154025b20 'x' 'int *'
+|   | |-CallExpr 0x7f8154025dc0 <line:12:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154025da8 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154025d28 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154025e08 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154025df0 <col:10> 'int *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154025d50 <col:10> 'int *' lvalue ParmVar 0x7f8154025b20 'x' 'int *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154025e98 <line:13:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154025e80 <col:10> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154025e58 <col:10> 'int *' lvalue ParmVar 0x7f8154025b20 'x' 'int *'
+|-FunctionDecl 0x7f8154025fb8 <line:16:1, line:22:1> line:17:1 g1 'int (int)'
+| |-ParmVarDecl 0x7f8154025ef0 <col:5, col:9> col:9 used x 'int'
+| `-CompoundStmt 0x7f8154026220 <line:18:1, line:22:1>
+|   |-IfStmt 0x7f8154026190 <line:19:3, line:20:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f81540260a0 <line:19:7, col:10> 'int' prefix '!'
+|   | | `-UnaryOperator 0x7f8154026080 <col:8, col:10> 'int' prefix '--'
+|   | |   `-DeclRefExpr 0x7f8154026058 <col:10> 'int' lvalue ParmVar 0x7f8154025ef0 'x' 'int'
+|   | |-CallExpr 0x7f8154026160 <line:20:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154026148 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f81540260c0 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154026120 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f81540260e8 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154026208 <line:21:3, col:10>
+|     `-ImplicitCastExpr 0x7f81540261f0 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f81540261c8 <col:10> 'int' lvalue ParmVar 0x7f8154025ef0 'x' 'int'
+|-FunctionDecl 0x7f81540263a8 <line:68:4, line:31:14> <scratch space>:3:1 fcharplus 'char *(char *, char)'
+| |-ParmVarDecl 0x7f8154026260 <c_files/pr49095.c:68:4, line:26:15> col:15 used x 'char *'
+| |-ParmVarDecl 0x7f81540262d0 <line:68:4, line:26:20> col:20 used y 'char'
+| `-CompoundStmt 0x7f8154026730 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f8154026508 <line:28:3, col:9> 'char' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154026490 <col:3, col:4> 'char' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154026478 <col:4> 'char *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154026450 <col:4> 'char *' lvalue ParmVar 0x7f8154026260 'x' 'char *'
+|   | `-ImplicitCastExpr 0x7f81540264f0 <col:9> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f81540264d8 <col:9> 'char' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f81540264b0 <col:9> 'char' lvalue ParmVar 0x7f81540262d0 'y' 'char'
+|   |-IfStmt 0x7f81540266a0 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f81540265b8 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f81540265a0 <col:8, col:9> 'char' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154026580 <col:8, col:9> 'char' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154026568 <col:9> 'char *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154026540 <col:9> 'char *' lvalue ParmVar 0x7f8154026260 'x' 'char *'
+|   | |-CallExpr 0x7f8154026640 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154026628 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f81540265d8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154026688 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154026670 <col:10> 'char *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154026600 <col:10> 'char *' lvalue ParmVar 0x7f8154026260 'x' 'char *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154026718 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154026700 <col:10> 'char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f81540266d8 <col:10> 'char *' lvalue ParmVar 0x7f8154026260 'x' 'char *'
+|-FunctionDecl 0x7f81540268b0 <line:68:4, line:40:14> <scratch space>:5:1 gcharplus 'char (char, char)'
+| |-ParmVarDecl 0x7f8154026770 <c_files/pr49095.c:68:4, line:35:14> col:14 used x 'char'
+| |-ParmVarDecl 0x7f81540267e0 <line:68:4, line:35:19> col:19 used y 'char'
+| `-CompoundStmt 0x7f815402c5f8 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f815402c400 <line:37:3, col:8> 'char' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154026958 <col:3> 'char' lvalue ParmVar 0x7f8154026770 'x' 'char'
+|   | `-ImplicitCastExpr 0x7f81540269c0 <col:8> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f81540269a8 <col:8> 'char' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8154026980 <col:8> 'char' lvalue ParmVar 0x7f81540267e0 'y' 'char'
+|   |-IfStmt 0x7f815402c568 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815402c478 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815402c460 <col:8> 'char' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815402c438 <col:8> 'char' lvalue ParmVar 0x7f8154026770 'x' 'char'
+|   | |-CallExpr 0x7f815402c538 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f815402c520 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815402c498 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f815402c4f8 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f815402c4c0 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815402c5e0 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f815402c5c8 <col:10> 'char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815402c5a0 <col:10> 'char' lvalue ParmVar 0x7f8154026770 'x' 'char'
+|-FunctionDecl 0x7f815402c708 <line:68:4, line:49:14> <scratch space>:7:1 hcharplus 'char *(char *)'
+| |-ParmVarDecl 0x7f815402c640 <c_files/pr49095.c:68:4, line:44:15> col:15 used x 'char *'
+| `-CompoundStmt 0x7f815402ca50 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f815402c828 <line:46:3, col:9> 'char' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f815402c7e8 <col:3, col:4> 'char' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f815402c7d0 <col:4> 'char *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815402c7a8 <col:4> 'char *' lvalue ParmVar 0x7f815402c640 'x' 'char *'
+|   | `-IntegerLiteral 0x7f815402c808 <col:9> 'int' 24
+|   |-IfStmt 0x7f815402c9c0 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815402c8d8 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815402c8c0 <col:8, col:9> 'char' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f815402c8a0 <col:8, col:9> 'char' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f815402c888 <col:9> 'char *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f815402c860 <col:9> 'char *' lvalue ParmVar 0x7f815402c640 'x' 'char *'
+|   | |-CallExpr 0x7f815402c960 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f815402c948 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815402c8f8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f815402c9a8 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f815402c990 <col:10> 'char *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f815402c920 <col:10> 'char *' lvalue ParmVar 0x7f815402c640 'x' 'char *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815402ca38 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f815402ca20 <col:10> 'char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815402c9f8 <col:10> 'char *' lvalue ParmVar 0x7f815402c640 'x' 'char *'
+|-FunctionDecl 0x7f815402cb90 <line:68:4, line:58:14> <scratch space>:9:1 icharplus 'char (char, char)'
+| |-ParmVarDecl 0x7f815402ca90 <c_files/pr49095.c:68:4, line:53:14> col:14 used x 'char'
+| |-ParmVarDecl 0x7f815402cb00 <line:68:4, line:53:19> col:19 y 'char'
+| `-CompoundStmt 0x7f815402ce78 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f815402cc80 <line:55:3, col:8> 'char' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f815402cc38 <col:3> 'char' lvalue ParmVar 0x7f815402ca90 'x' 'char'
+|   | `-IntegerLiteral 0x7f815402cc60 <col:8> 'int' 24
+|   |-IfStmt 0x7f815402cde8 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815402ccf8 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815402cce0 <col:8> 'char' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815402ccb8 <col:8> 'char' lvalue ParmVar 0x7f815402ca90 'x' 'char'
+|   | |-CallExpr 0x7f815402cdb8 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f815402cda0 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815402cd18 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f815402cd78 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f815402cd40 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815402ce60 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f815402ce48 <col:10> 'char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815402ce20 <col:10> 'char' lvalue ParmVar 0x7f815402ca90 'x' 'char'
+|-FunctionDecl 0x7f815402cfc8 <line:68:4, line:31:14> <scratch space>:11:1 fcharminus 'char *(char *, char)'
+| |-ParmVarDecl 0x7f815402cec0 <c_files/pr49095.c:68:4, line:26:15> col:15 used x 'char *'
+| |-ParmVarDecl 0x7f815402cf30 <line:68:4, line:26:20> col:20 used y 'char'
+| `-CompoundStmt 0x7f815402d350 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f815402d128 <line:28:3, col:9> 'char' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f815402d0b0 <col:3, col:4> 'char' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f815402d098 <col:4> 'char *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815402d070 <col:4> 'char *' lvalue ParmVar 0x7f815402cec0 'x' 'char *'
+|   | `-ImplicitCastExpr 0x7f815402d110 <col:9> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f815402d0f8 <col:9> 'char' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f815402d0d0 <col:9> 'char' lvalue ParmVar 0x7f815402cf30 'y' 'char'
+|   |-IfStmt 0x7f815402d2c0 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815402d1d8 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815402d1c0 <col:8, col:9> 'char' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f815402d1a0 <col:8, col:9> 'char' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f815402d188 <col:9> 'char *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f815402d160 <col:9> 'char *' lvalue ParmVar 0x7f815402cec0 'x' 'char *'
+|   | |-CallExpr 0x7f815402d260 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f815402d248 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815402d1f8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f815402d2a8 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f815402d290 <col:10> 'char *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f815402d220 <col:10> 'char *' lvalue ParmVar 0x7f815402cec0 'x' 'char *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815402d338 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f815402d320 <col:10> 'char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815402d2f8 <col:10> 'char *' lvalue ParmVar 0x7f815402cec0 'x' 'char *'
+|-FunctionDecl 0x7f815402d490 <line:68:4, line:40:14> <scratch space>:13:1 gcharminus 'char (char, char)'
+| |-ParmVarDecl 0x7f815402d390 <c_files/pr49095.c:68:4, line:35:14> col:14 used x 'char'
+| |-ParmVarDecl 0x7f815402d400 <line:68:4, line:35:19> col:19 used y 'char'
+| `-CompoundStmt 0x7f815402d7b0 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f815402d5b8 <line:37:3, col:8> 'char' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f815402d538 <col:3> 'char' lvalue ParmVar 0x7f815402d390 'x' 'char'
+|   | `-ImplicitCastExpr 0x7f815402d5a0 <col:8> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f815402d588 <col:8> 'char' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f815402d560 <col:8> 'char' lvalue ParmVar 0x7f815402d400 'y' 'char'
+|   |-IfStmt 0x7f815402d720 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815402d630 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815402d618 <col:8> 'char' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815402d5f0 <col:8> 'char' lvalue ParmVar 0x7f815402d390 'x' 'char'
+|   | |-CallExpr 0x7f815402d6f0 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f815402d6d8 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815402d650 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f815402d6b0 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f815402d678 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815402d798 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f815402d780 <col:10> 'char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815402d758 <col:10> 'char' lvalue ParmVar 0x7f815402d390 'x' 'char'
+|-FunctionDecl 0x7f815402d888 <line:68:4, line:49:14> <scratch space>:15:1 hcharminus 'char *(char *)'
+| |-ParmVarDecl 0x7f815402d7f8 <c_files/pr49095.c:68:4, line:44:15> col:15 used x 'char *'
+| `-CompoundStmt 0x7f815402dbd0 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f815402d9a8 <line:46:3, col:9> 'char' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f815402d968 <col:3, col:4> 'char' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f815402d950 <col:4> 'char *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815402d928 <col:4> 'char *' lvalue ParmVar 0x7f815402d7f8 'x' 'char *'
+|   | `-IntegerLiteral 0x7f815402d988 <col:9> 'int' 24
+|   |-IfStmt 0x7f815402db40 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815402da58 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815402da40 <col:8, col:9> 'char' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f815402da20 <col:8, col:9> 'char' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f815402da08 <col:9> 'char *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f815402d9e0 <col:9> 'char *' lvalue ParmVar 0x7f815402d7f8 'x' 'char *'
+|   | |-CallExpr 0x7f815402dae0 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f815402dac8 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815402da78 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f815402db28 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f815402db10 <col:10> 'char *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f815402daa0 <col:10> 'char *' lvalue ParmVar 0x7f815402d7f8 'x' 'char *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815402dbb8 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f815402dba0 <col:10> 'char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815402db78 <col:10> 'char *' lvalue ParmVar 0x7f815402d7f8 'x' 'char *'
+|-FunctionDecl 0x7f815402dd10 <line:68:4, line:58:14> <scratch space>:17:1 icharminus 'char (char, char)'
+| |-ParmVarDecl 0x7f815402dc10 <c_files/pr49095.c:68:4, line:53:14> col:14 used x 'char'
+| |-ParmVarDecl 0x7f815402dc80 <line:68:4, line:53:19> col:19 y 'char'
+| `-CompoundStmt 0x7f815402dff8 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f815402de00 <line:55:3, col:8> 'char' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f815402ddb8 <col:3> 'char' lvalue ParmVar 0x7f815402dc10 'x' 'char'
+|   | `-IntegerLiteral 0x7f815402dde0 <col:8> 'int' 24
+|   |-IfStmt 0x7f815402df68 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815402de78 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815402de60 <col:8> 'char' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815402de38 <col:8> 'char' lvalue ParmVar 0x7f815402dc10 'x' 'char'
+|   | |-CallExpr 0x7f815402df38 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f815402df20 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815402de98 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f815402def8 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f815402dec0 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815402dfe0 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f815402dfc8 <col:10> 'char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815402dfa0 <col:10> 'char' lvalue ParmVar 0x7f815402dc10 'x' 'char'
+|-FunctionDecl 0x7f815402e148 <line:68:4, line:31:14> <scratch space>:19:1 fcharand 'char *(char *, char)'
+| |-ParmVarDecl 0x7f815402e040 <c_files/pr49095.c:68:4, line:26:15> col:15 used x 'char *'
+| |-ParmVarDecl 0x7f815402e0b0 <line:68:4, line:26:20> col:20 used y 'char'
+| `-CompoundStmt 0x7f815402f0d0 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f815402e2a8 <line:28:3, col:9> 'char' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f815402e230 <col:3, col:4> 'char' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f815402e218 <col:4> 'char *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815402e1f0 <col:4> 'char *' lvalue ParmVar 0x7f815402e040 'x' 'char *'
+|   | `-ImplicitCastExpr 0x7f815402e290 <col:9> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f815402e278 <col:9> 'char' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f815402e250 <col:9> 'char' lvalue ParmVar 0x7f815402e0b0 'y' 'char'
+|   |-IfStmt 0x7f815402f040 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815402e358 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815402e340 <col:8, col:9> 'char' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f815402e320 <col:8, col:9> 'char' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f815402e308 <col:9> 'char *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f815402e2e0 <col:9> 'char *' lvalue ParmVar 0x7f815402e040 'x' 'char *'
+|   | |-CallExpr 0x7f815402e3e0 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f815402e3c8 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815402e378 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f815402f028 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f815402f010 <col:10> 'char *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f815402e3a0 <col:10> 'char *' lvalue ParmVar 0x7f815402e040 'x' 'char *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815402f0b8 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f815402f0a0 <col:10> 'char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815402f078 <col:10> 'char *' lvalue ParmVar 0x7f815402e040 'x' 'char *'
+|-FunctionDecl 0x7f815402f210 <line:68:4, line:40:14> <scratch space>:21:1 gcharand 'char (char, char)'
+| |-ParmVarDecl 0x7f815402f110 <c_files/pr49095.c:68:4, line:35:14> col:14 used x 'char'
+| |-ParmVarDecl 0x7f815402f180 <line:68:4, line:35:19> col:19 used y 'char'
+| `-CompoundStmt 0x7f815402f530 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f815402f338 <line:37:3, col:8> 'char' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f815402f2b8 <col:3> 'char' lvalue ParmVar 0x7f815402f110 'x' 'char'
+|   | `-ImplicitCastExpr 0x7f815402f320 <col:8> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f815402f308 <col:8> 'char' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f815402f2e0 <col:8> 'char' lvalue ParmVar 0x7f815402f180 'y' 'char'
+|   |-IfStmt 0x7f815402f4a0 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815402f3b0 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815402f398 <col:8> 'char' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815402f370 <col:8> 'char' lvalue ParmVar 0x7f815402f110 'x' 'char'
+|   | |-CallExpr 0x7f815402f470 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f815402f458 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815402f3d0 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f815402f430 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f815402f3f8 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815402f518 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f815402f500 <col:10> 'char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815402f4d8 <col:10> 'char' lvalue ParmVar 0x7f815402f110 'x' 'char'
+|-FunctionDecl 0x7f815402f608 <line:68:4, line:49:14> <scratch space>:23:1 hcharand 'char *(char *)'
+| |-ParmVarDecl 0x7f815402f578 <c_files/pr49095.c:68:4, line:44:15> col:15 used x 'char *'
+| `-CompoundStmt 0x7f815402f950 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f815402f728 <line:46:3, col:9> 'char' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f815402f6e8 <col:3, col:4> 'char' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f815402f6d0 <col:4> 'char *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815402f6a8 <col:4> 'char *' lvalue ParmVar 0x7f815402f578 'x' 'char *'
+|   | `-IntegerLiteral 0x7f815402f708 <col:9> 'int' 24
+|   |-IfStmt 0x7f815402f8c0 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815402f7d8 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815402f7c0 <col:8, col:9> 'char' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f815402f7a0 <col:8, col:9> 'char' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f815402f788 <col:9> 'char *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f815402f760 <col:9> 'char *' lvalue ParmVar 0x7f815402f578 'x' 'char *'
+|   | |-CallExpr 0x7f815402f860 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f815402f848 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815402f7f8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f815402f8a8 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f815402f890 <col:10> 'char *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f815402f820 <col:10> 'char *' lvalue ParmVar 0x7f815402f578 'x' 'char *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815402f938 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f815402f920 <col:10> 'char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815402f8f8 <col:10> 'char *' lvalue ParmVar 0x7f815402f578 'x' 'char *'
+|-FunctionDecl 0x7f815402fa90 <line:68:4, line:58:14> <scratch space>:25:1 icharand 'char (char, char)'
+| |-ParmVarDecl 0x7f815402f990 <c_files/pr49095.c:68:4, line:53:14> col:14 used x 'char'
+| |-ParmVarDecl 0x7f815402fa00 <line:68:4, line:53:19> col:19 y 'char'
+| `-CompoundStmt 0x7f815402fd78 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f815402fb80 <line:55:3, col:8> 'char' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f815402fb38 <col:3> 'char' lvalue ParmVar 0x7f815402f990 'x' 'char'
+|   | `-IntegerLiteral 0x7f815402fb60 <col:8> 'int' 24
+|   |-IfStmt 0x7f815402fce8 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815402fbf8 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815402fbe0 <col:8> 'char' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815402fbb8 <col:8> 'char' lvalue ParmVar 0x7f815402f990 'x' 'char'
+|   | |-CallExpr 0x7f815402fcb8 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f815402fca0 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815402fc18 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f815402fc78 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f815402fc40 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815402fd60 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f815402fd48 <col:10> 'char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815402fd20 <col:10> 'char' lvalue ParmVar 0x7f815402f990 'x' 'char'
+|-FunctionDecl 0x7f815402fec8 <line:68:4, line:31:14> <scratch space>:27:1 fcharor 'char *(char *, char)'
+| |-ParmVarDecl 0x7f815402fdc0 <c_files/pr49095.c:68:4, line:26:15> col:15 used x 'char *'
+| |-ParmVarDecl 0x7f815402fe30 <line:68:4, line:26:20> col:20 used y 'char'
+| `-CompoundStmt 0x7f8154030258 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f8154030030 <line:28:3, col:9> 'char' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f815402ffb0 <col:3, col:4> 'char' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f815402ff98 <col:4> 'char *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815402ff70 <col:4> 'char *' lvalue ParmVar 0x7f815402fdc0 'x' 'char *'
+|   | `-ImplicitCastExpr 0x7f8154030018 <col:9> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f8154030000 <col:9> 'char' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f815402ffd0 <col:9> 'char' lvalue ParmVar 0x7f815402fe30 'y' 'char'
+|   |-IfStmt 0x7f81540301c8 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f81540300e0 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f81540300c8 <col:8, col:9> 'char' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f81540300a8 <col:8, col:9> 'char' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154030090 <col:9> 'char *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154030068 <col:9> 'char *' lvalue ParmVar 0x7f815402fdc0 'x' 'char *'
+|   | |-CallExpr 0x7f8154030168 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154030150 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154030100 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f81540301b0 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154030198 <col:10> 'char *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154030128 <col:10> 'char *' lvalue ParmVar 0x7f815402fdc0 'x' 'char *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154030240 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154030228 <col:10> 'char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154030200 <col:10> 'char *' lvalue ParmVar 0x7f815402fdc0 'x' 'char *'
+|-FunctionDecl 0x7f8154030398 <line:68:4, line:40:14> <scratch space>:29:1 gcharor 'char (char, char)'
+| |-ParmVarDecl 0x7f8154030298 <c_files/pr49095.c:68:4, line:35:14> col:14 used x 'char'
+| |-ParmVarDecl 0x7f8154030308 <line:68:4, line:35:19> col:19 used y 'char'
+| `-CompoundStmt 0x7f81540306b8 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f81540304c0 <line:37:3, col:8> 'char' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154030440 <col:3> 'char' lvalue ParmVar 0x7f8154030298 'x' 'char'
+|   | `-ImplicitCastExpr 0x7f81540304a8 <col:8> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f8154030490 <col:8> 'char' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8154030468 <col:8> 'char' lvalue ParmVar 0x7f8154030308 'y' 'char'
+|   |-IfStmt 0x7f8154030628 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154030538 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154030520 <col:8> 'char' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f81540304f8 <col:8> 'char' lvalue ParmVar 0x7f8154030298 'x' 'char'
+|   | |-CallExpr 0x7f81540305f8 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f81540305e0 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154030558 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f81540305b8 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154030580 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f81540306a0 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154030688 <col:10> 'char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154030660 <col:10> 'char' lvalue ParmVar 0x7f8154030298 'x' 'char'
+|-FunctionDecl 0x7f8154030790 <line:68:4, line:49:14> <scratch space>:31:1 hcharor 'char *(char *)'
+| |-ParmVarDecl 0x7f8154030700 <c_files/pr49095.c:68:4, line:44:15> col:15 used x 'char *'
+| `-CompoundStmt 0x7f8154030ad8 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f81540308b0 <line:46:3, col:9> 'char' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154030870 <col:3, col:4> 'char' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154030858 <col:4> 'char *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154030830 <col:4> 'char *' lvalue ParmVar 0x7f8154030700 'x' 'char *'
+|   | `-IntegerLiteral 0x7f8154030890 <col:9> 'int' 24
+|   |-IfStmt 0x7f8154030a48 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154030960 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154030948 <col:8, col:9> 'char' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154030928 <col:8, col:9> 'char' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154030910 <col:9> 'char *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f81540308e8 <col:9> 'char *' lvalue ParmVar 0x7f8154030700 'x' 'char *'
+|   | |-CallExpr 0x7f81540309e8 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f81540309d0 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154030980 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154030a30 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154030a18 <col:10> 'char *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f81540309a8 <col:10> 'char *' lvalue ParmVar 0x7f8154030700 'x' 'char *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154030ac0 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154030aa8 <col:10> 'char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154030a80 <col:10> 'char *' lvalue ParmVar 0x7f8154030700 'x' 'char *'
+|-FunctionDecl 0x7f8154030c18 <line:68:4, line:58:14> <scratch space>:33:1 icharor 'char (char, char)'
+| |-ParmVarDecl 0x7f8154030b18 <c_files/pr49095.c:68:4, line:53:14> col:14 used x 'char'
+| |-ParmVarDecl 0x7f8154030b88 <line:68:4, line:53:19> col:19 y 'char'
+| `-CompoundStmt 0x7f8154030f00 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f8154030d08 <line:55:3, col:8> 'char' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154030cc0 <col:3> 'char' lvalue ParmVar 0x7f8154030b18 'x' 'char'
+|   | `-IntegerLiteral 0x7f8154030ce8 <col:8> 'int' 24
+|   |-IfStmt 0x7f8154030e70 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154030d80 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154030d68 <col:8> 'char' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154030d40 <col:8> 'char' lvalue ParmVar 0x7f8154030b18 'x' 'char'
+|   | |-CallExpr 0x7f8154030e40 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154030e28 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154030da0 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154030e00 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154030dc8 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154030ee8 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154030ed0 <col:10> 'char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154030ea8 <col:10> 'char' lvalue ParmVar 0x7f8154030b18 'x' 'char'
+|-FunctionDecl 0x7f8154031098 <line:68:4, line:31:14> <scratch space>:35:1 fcharxor 'char *(char *, char)'
+| |-ParmVarDecl 0x7f8154030f48 <c_files/pr49095.c:68:4, line:26:15> col:15 used x 'char *'
+| |-ParmVarDecl 0x7f8154031000 <line:68:4, line:26:20> col:20 used y 'char'
+| `-CompoundStmt 0x7f8154031420 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f81540311f8 <line:28:3, col:9> 'char' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154031180 <col:3, col:4> 'char' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154031168 <col:4> 'char *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154031140 <col:4> 'char *' lvalue ParmVar 0x7f8154030f48 'x' 'char *'
+|   | `-ImplicitCastExpr 0x7f81540311e0 <col:9> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f81540311c8 <col:9> 'char' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f81540311a0 <col:9> 'char' lvalue ParmVar 0x7f8154031000 'y' 'char'
+|   |-IfStmt 0x7f8154031390 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f81540312a8 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154031290 <col:8, col:9> 'char' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154031270 <col:8, col:9> 'char' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154031258 <col:9> 'char *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154031230 <col:9> 'char *' lvalue ParmVar 0x7f8154030f48 'x' 'char *'
+|   | |-CallExpr 0x7f8154031330 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154031318 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f81540312c8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154031378 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154031360 <col:10> 'char *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f81540312f0 <col:10> 'char *' lvalue ParmVar 0x7f8154030f48 'x' 'char *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154031408 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f81540313f0 <col:10> 'char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f81540313c8 <col:10> 'char *' lvalue ParmVar 0x7f8154030f48 'x' 'char *'
+|-FunctionDecl 0x7f8154031560 <line:68:4, line:40:14> <scratch space>:37:1 gcharxor 'char (char, char)'
+| |-ParmVarDecl 0x7f8154031460 <c_files/pr49095.c:68:4, line:35:14> col:14 used x 'char'
+| |-ParmVarDecl 0x7f81540314d0 <line:68:4, line:35:19> col:19 used y 'char'
+| `-CompoundStmt 0x7f8154031880 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f8154031688 <line:37:3, col:8> 'char' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154031608 <col:3> 'char' lvalue ParmVar 0x7f8154031460 'x' 'char'
+|   | `-ImplicitCastExpr 0x7f8154031670 <col:8> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f8154031658 <col:8> 'char' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8154031630 <col:8> 'char' lvalue ParmVar 0x7f81540314d0 'y' 'char'
+|   |-IfStmt 0x7f81540317f0 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154031700 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f81540316e8 <col:8> 'char' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f81540316c0 <col:8> 'char' lvalue ParmVar 0x7f8154031460 'x' 'char'
+|   | |-CallExpr 0x7f81540317c0 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f81540317a8 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154031720 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154031780 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154031748 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154031868 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154031850 <col:10> 'char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154031828 <col:10> 'char' lvalue ParmVar 0x7f8154031460 'x' 'char'
+|-FunctionDecl 0x7f8154031958 <line:68:4, line:49:14> <scratch space>:39:1 hcharxor 'char *(char *)'
+| |-ParmVarDecl 0x7f81540318c8 <c_files/pr49095.c:68:4, line:44:15> col:15 used x 'char *'
+| `-CompoundStmt 0x7f8154031ca0 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f8154031a78 <line:46:3, col:9> 'char' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154031a38 <col:3, col:4> 'char' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154031a20 <col:4> 'char *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f81540319f8 <col:4> 'char *' lvalue ParmVar 0x7f81540318c8 'x' 'char *'
+|   | `-IntegerLiteral 0x7f8154031a58 <col:9> 'int' 24
+|   |-IfStmt 0x7f8154031c10 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154031b28 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154031b10 <col:8, col:9> 'char' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154031af0 <col:8, col:9> 'char' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154031ad8 <col:9> 'char *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154031ab0 <col:9> 'char *' lvalue ParmVar 0x7f81540318c8 'x' 'char *'
+|   | |-CallExpr 0x7f8154031bb0 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154031b98 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154031b48 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154031bf8 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154031be0 <col:10> 'char *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154031b70 <col:10> 'char *' lvalue ParmVar 0x7f81540318c8 'x' 'char *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154031c88 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154031c70 <col:10> 'char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154031c48 <col:10> 'char *' lvalue ParmVar 0x7f81540318c8 'x' 'char *'
+|-FunctionDecl 0x7f8154031de0 <line:68:4, line:58:14> <scratch space>:41:1 icharxor 'char (char, char)'
+| |-ParmVarDecl 0x7f8154031ce0 <c_files/pr49095.c:68:4, line:53:14> col:14 used x 'char'
+| |-ParmVarDecl 0x7f8154031d50 <line:68:4, line:53:19> col:19 y 'char'
+| `-CompoundStmt 0x7f81540338d8 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f8154031ed0 <line:55:3, col:8> 'char' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154031e88 <col:3> 'char' lvalue ParmVar 0x7f8154031ce0 'x' 'char'
+|   | `-IntegerLiteral 0x7f8154031eb0 <col:8> 'int' 24
+|   |-IfStmt 0x7f8154033848 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154031f48 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154031f30 <col:8> 'char' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154031f08 <col:8> 'char' lvalue ParmVar 0x7f8154031ce0 'x' 'char'
+|   | |-CallExpr 0x7f8154033818 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154033800 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154031f68 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154031fc8 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154031f90 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f81540338c0 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f81540338a8 <col:10> 'char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154033880 <col:10> 'char' lvalue ParmVar 0x7f8154031ce0 'x' 'char'
+|-FunctionDecl 0x7f8154033aa8 <line:69:4, line:31:14> <scratch space>:43:1 fshortplus 'short *(short *, short)'
+| |-ParmVarDecl 0x7f8154033950 <c_files/pr49095.c:69:4, line:26:15> col:15 used x 'short *'
+| |-ParmVarDecl 0x7f81540339c8 <line:69:4, line:26:20> col:20 used y 'short'
+| `-CompoundStmt 0x7f8154033e30 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f8154033c08 <line:28:3, col:9> 'short' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154033b90 <col:3, col:4> 'short' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154033b78 <col:4> 'short *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154033b50 <col:4> 'short *' lvalue ParmVar 0x7f8154033950 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f8154033bf0 <col:9> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f8154033bd8 <col:9> 'short' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8154033bb0 <col:9> 'short' lvalue ParmVar 0x7f81540339c8 'y' 'short'
+|   |-IfStmt 0x7f8154033da0 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154033cb8 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154033ca0 <col:8, col:9> 'short' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154033c80 <col:8, col:9> 'short' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154033c68 <col:9> 'short *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154033c40 <col:9> 'short *' lvalue ParmVar 0x7f8154033950 'x' 'short *'
+|   | |-CallExpr 0x7f8154033d40 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154033d28 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154033cd8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154033d88 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154033d70 <col:10> 'short *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154033d00 <col:10> 'short *' lvalue ParmVar 0x7f8154033950 'x' 'short *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154033e18 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154033e00 <col:10> 'short *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154033dd8 <col:10> 'short *' lvalue ParmVar 0x7f8154033950 'x' 'short *'
+|-FunctionDecl 0x7f8154033fc8 <line:69:4, line:40:14> <scratch space>:45:1 gshortplus 'short (short, short)'
+| |-ParmVarDecl 0x7f8154033e78 <c_files/pr49095.c:69:4, line:35:14> col:14 used x 'short'
+| |-ParmVarDecl 0x7f8154033ef0 <line:69:4, line:35:19> col:19 used y 'short'
+| `-CompoundStmt 0x7f81540342e8 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f81540340f0 <line:37:3, col:8> 'short' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154034070 <col:3> 'short' lvalue ParmVar 0x7f8154033e78 'x' 'short'
+|   | `-ImplicitCastExpr 0x7f81540340d8 <col:8> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f81540340c0 <col:8> 'short' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8154034098 <col:8> 'short' lvalue ParmVar 0x7f8154033ef0 'y' 'short'
+|   |-IfStmt 0x7f8154034258 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154034168 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154034150 <col:8> 'short' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154034128 <col:8> 'short' lvalue ParmVar 0x7f8154033e78 'x' 'short'
+|   | |-CallExpr 0x7f8154034228 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154034210 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154034188 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f81540341e8 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f81540341b0 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f81540342d0 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f81540342b8 <col:10> 'short' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154034290 <col:10> 'short' lvalue ParmVar 0x7f8154033e78 'x' 'short'
+|-FunctionDecl 0x7f81540343f8 <line:69:4, line:49:14> <scratch space>:47:1 hshortplus 'short *(short *)'
+| |-ParmVarDecl 0x7f8154034330 <c_files/pr49095.c:69:4, line:44:15> col:15 used x 'short *'
+| `-CompoundStmt 0x7f8154034740 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f8154034518 <line:46:3, col:9> 'short' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f81540344d8 <col:3, col:4> 'short' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f81540344c0 <col:4> 'short *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154034498 <col:4> 'short *' lvalue ParmVar 0x7f8154034330 'x' 'short *'
+|   | `-IntegerLiteral 0x7f81540344f8 <col:9> 'int' 24
+|   |-IfStmt 0x7f81540346b0 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f81540345c8 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f81540345b0 <col:8, col:9> 'short' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154034590 <col:8, col:9> 'short' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154034578 <col:9> 'short *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154034550 <col:9> 'short *' lvalue ParmVar 0x7f8154034330 'x' 'short *'
+|   | |-CallExpr 0x7f8154034650 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154034638 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f81540345e8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154034698 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154034680 <col:10> 'short *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154034610 <col:10> 'short *' lvalue ParmVar 0x7f8154034330 'x' 'short *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154034728 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154034710 <col:10> 'short *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f81540346e8 <col:10> 'short *' lvalue ParmVar 0x7f8154034330 'x' 'short *'
+|-FunctionDecl 0x7f8154034898 <line:69:4, line:58:14> <scratch space>:49:1 ishortplus 'short (short, short)'
+| |-ParmVarDecl 0x7f8154034788 <c_files/pr49095.c:69:4, line:53:14> col:14 used x 'short'
+| |-ParmVarDecl 0x7f8154034800 <line:69:4, line:53:19> col:19 y 'short'
+| `-CompoundStmt 0x7f8154034b80 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f8154034988 <line:55:3, col:8> 'short' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154034940 <col:3> 'short' lvalue ParmVar 0x7f8154034788 'x' 'short'
+|   | `-IntegerLiteral 0x7f8154034968 <col:8> 'int' 24
+|   |-IfStmt 0x7f8154034af0 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154034a00 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f81540349e8 <col:8> 'short' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f81540349c0 <col:8> 'short' lvalue ParmVar 0x7f8154034788 'x' 'short'
+|   | |-CallExpr 0x7f8154034ac0 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154034aa8 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154034a20 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154034a80 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154034a48 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154034b68 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154034b50 <col:10> 'short' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154034b28 <col:10> 'short' lvalue ParmVar 0x7f8154034788 'x' 'short'
+|-FunctionDecl 0x7f8154034cd8 <line:69:4, line:31:14> <scratch space>:51:1 fshortminus 'short *(short *, short)'
+| |-ParmVarDecl 0x7f8154034bc8 <c_files/pr49095.c:69:4, line:26:15> col:15 used x 'short *'
+| |-ParmVarDecl 0x7f8154034c40 <line:69:4, line:26:20> col:20 used y 'short'
+| `-CompoundStmt 0x7f8154035060 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f8154034e38 <line:28:3, col:9> 'short' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154034dc0 <col:3, col:4> 'short' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154034da8 <col:4> 'short *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154034d80 <col:4> 'short *' lvalue ParmVar 0x7f8154034bc8 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f8154034e20 <col:9> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f8154034e08 <col:9> 'short' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8154034de0 <col:9> 'short' lvalue ParmVar 0x7f8154034c40 'y' 'short'
+|   |-IfStmt 0x7f8154034fd0 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154034ee8 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154034ed0 <col:8, col:9> 'short' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154034eb0 <col:8, col:9> 'short' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154034e98 <col:9> 'short *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154034e70 <col:9> 'short *' lvalue ParmVar 0x7f8154034bc8 'x' 'short *'
+|   | |-CallExpr 0x7f8154034f70 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154034f58 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154034f08 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154034fb8 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154034fa0 <col:10> 'short *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154034f30 <col:10> 'short *' lvalue ParmVar 0x7f8154034bc8 'x' 'short *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154035048 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154035030 <col:10> 'short *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154035008 <col:10> 'short *' lvalue ParmVar 0x7f8154034bc8 'x' 'short *'
+|-FunctionDecl 0x7f81540351b8 <line:69:4, line:40:14> <scratch space>:53:1 gshortminus 'short (short, short)'
+| |-ParmVarDecl 0x7f81540350a8 <c_files/pr49095.c:69:4, line:35:14> col:14 used x 'short'
+| |-ParmVarDecl 0x7f8154035120 <line:69:4, line:35:19> col:19 used y 'short'
+| `-CompoundStmt 0x7f81540354d8 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f81540352e0 <line:37:3, col:8> 'short' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154035260 <col:3> 'short' lvalue ParmVar 0x7f81540350a8 'x' 'short'
+|   | `-ImplicitCastExpr 0x7f81540352c8 <col:8> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f81540352b0 <col:8> 'short' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8154035288 <col:8> 'short' lvalue ParmVar 0x7f8154035120 'y' 'short'
+|   |-IfStmt 0x7f8154035448 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154035358 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154035340 <col:8> 'short' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154035318 <col:8> 'short' lvalue ParmVar 0x7f81540350a8 'x' 'short'
+|   | |-CallExpr 0x7f8154035418 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154035400 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154035378 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f81540353d8 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f81540353a0 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f81540354c0 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f81540354a8 <col:10> 'short' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154035480 <col:10> 'short' lvalue ParmVar 0x7f81540350a8 'x' 'short'
+|-FunctionDecl 0x7f81540355b0 <line:69:4, line:49:14> <scratch space>:55:1 hshortminus 'short *(short *)'
+| |-ParmVarDecl 0x7f8154035520 <c_files/pr49095.c:69:4, line:44:15> col:15 used x 'short *'
+| `-CompoundStmt 0x7f8154037708 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f81540356d0 <line:46:3, col:9> 'short' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154035690 <col:3, col:4> 'short' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154035678 <col:4> 'short *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154035650 <col:4> 'short *' lvalue ParmVar 0x7f8154035520 'x' 'short *'
+|   | `-IntegerLiteral 0x7f81540356b0 <col:9> 'int' 24
+|   |-IfStmt 0x7f8154037678 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154035780 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154035768 <col:8, col:9> 'short' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154035748 <col:8, col:9> 'short' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154035730 <col:9> 'short *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154035708 <col:9> 'short *' lvalue ParmVar 0x7f8154035520 'x' 'short *'
+|   | |-CallExpr 0x7f8154037618 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154037600 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f81540357a0 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154037660 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154037648 <col:10> 'short *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f81540357c8 <col:10> 'short *' lvalue ParmVar 0x7f8154035520 'x' 'short *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f81540376f0 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f81540376d8 <col:10> 'short *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f81540376b0 <col:10> 'short *' lvalue ParmVar 0x7f8154035520 'x' 'short *'
+|-FunctionDecl 0x7f8154037860 <line:69:4, line:58:14> <scratch space>:57:1 ishortminus 'short (short, short)'
+| |-ParmVarDecl 0x7f8154037750 <c_files/pr49095.c:69:4, line:53:14> col:14 used x 'short'
+| |-ParmVarDecl 0x7f81540377c8 <line:69:4, line:53:19> col:19 y 'short'
+| `-CompoundStmt 0x7f8154037b48 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f8154037950 <line:55:3, col:8> 'short' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154037908 <col:3> 'short' lvalue ParmVar 0x7f8154037750 'x' 'short'
+|   | `-IntegerLiteral 0x7f8154037930 <col:8> 'int' 24
+|   |-IfStmt 0x7f8154037ab8 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f81540379c8 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f81540379b0 <col:8> 'short' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154037988 <col:8> 'short' lvalue ParmVar 0x7f8154037750 'x' 'short'
+|   | |-CallExpr 0x7f8154037a88 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154037a70 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f81540379e8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154037a48 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154037a10 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154037b30 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154037b18 <col:10> 'short' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154037af0 <col:10> 'short' lvalue ParmVar 0x7f8154037750 'x' 'short'
+|-FunctionDecl 0x7f8154037ca0 <line:69:4, line:31:14> <scratch space>:59:1 fshortand 'short *(short *, short)'
+| |-ParmVarDecl 0x7f8154037b90 <c_files/pr49095.c:69:4, line:26:15> col:15 used x 'short *'
+| |-ParmVarDecl 0x7f8154037c08 <line:69:4, line:26:20> col:20 used y 'short'
+| `-CompoundStmt 0x7f8154038028 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f8154037e00 <line:28:3, col:9> 'short' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154037d88 <col:3, col:4> 'short' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154037d70 <col:4> 'short *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154037d48 <col:4> 'short *' lvalue ParmVar 0x7f8154037b90 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f8154037de8 <col:9> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f8154037dd0 <col:9> 'short' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8154037da8 <col:9> 'short' lvalue ParmVar 0x7f8154037c08 'y' 'short'
+|   |-IfStmt 0x7f8154037f98 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154037eb0 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154037e98 <col:8, col:9> 'short' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154037e78 <col:8, col:9> 'short' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154037e60 <col:9> 'short *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154037e38 <col:9> 'short *' lvalue ParmVar 0x7f8154037b90 'x' 'short *'
+|   | |-CallExpr 0x7f8154037f38 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154037f20 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154037ed0 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154037f80 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154037f68 <col:10> 'short *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154037ef8 <col:10> 'short *' lvalue ParmVar 0x7f8154037b90 'x' 'short *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154038010 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154037ff8 <col:10> 'short *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154037fd0 <col:10> 'short *' lvalue ParmVar 0x7f8154037b90 'x' 'short *'
+|-FunctionDecl 0x7f8154038180 <line:69:4, line:40:14> <scratch space>:61:1 gshortand 'short (short, short)'
+| |-ParmVarDecl 0x7f8154038070 <c_files/pr49095.c:69:4, line:35:14> col:14 used x 'short'
+| |-ParmVarDecl 0x7f81540380e8 <line:69:4, line:35:19> col:19 used y 'short'
+| `-CompoundStmt 0x7f81540384a0 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f81540382a8 <line:37:3, col:8> 'short' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154038228 <col:3> 'short' lvalue ParmVar 0x7f8154038070 'x' 'short'
+|   | `-ImplicitCastExpr 0x7f8154038290 <col:8> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f8154038278 <col:8> 'short' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8154038250 <col:8> 'short' lvalue ParmVar 0x7f81540380e8 'y' 'short'
+|   |-IfStmt 0x7f8154038410 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154038320 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154038308 <col:8> 'short' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f81540382e0 <col:8> 'short' lvalue ParmVar 0x7f8154038070 'x' 'short'
+|   | |-CallExpr 0x7f81540383e0 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f81540383c8 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154038340 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f81540383a0 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154038368 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154038488 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154038470 <col:10> 'short' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154038448 <col:10> 'short' lvalue ParmVar 0x7f8154038070 'x' 'short'
+|-FunctionDecl 0x7f8154035800 <line:69:4, line:49:14> <scratch space>:63:1 hshortand 'short *(short *)'
+| |-ParmVarDecl 0x7f81540384e8 <c_files/pr49095.c:69:4, line:44:15> col:15 used x 'short *'
+| `-CompoundStmt 0x7f8154035b48 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f8154035920 <line:46:3, col:9> 'short' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f81540358e0 <col:3, col:4> 'short' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f81540358c8 <col:4> 'short *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f81540358a0 <col:4> 'short *' lvalue ParmVar 0x7f81540384e8 'x' 'short *'
+|   | `-IntegerLiteral 0x7f8154035900 <col:9> 'int' 24
+|   |-IfStmt 0x7f8154035ab8 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f81540359d0 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f81540359b8 <col:8, col:9> 'short' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154035998 <col:8, col:9> 'short' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154035980 <col:9> 'short *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154035958 <col:9> 'short *' lvalue ParmVar 0x7f81540384e8 'x' 'short *'
+|   | |-CallExpr 0x7f8154035a58 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154035a40 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f81540359f0 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154035aa0 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154035a88 <col:10> 'short *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154035a18 <col:10> 'short *' lvalue ParmVar 0x7f81540384e8 'x' 'short *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154035b30 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154035b18 <col:10> 'short *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154035af0 <col:10> 'short *' lvalue ParmVar 0x7f81540384e8 'x' 'short *'
+|-FunctionDecl 0x7f8154035ca0 <line:69:4, line:58:14> <scratch space>:65:1 ishortand 'short (short, short)'
+| |-ParmVarDecl 0x7f8154035b90 <c_files/pr49095.c:69:4, line:53:14> col:14 used x 'short'
+| |-ParmVarDecl 0x7f8154035c08 <line:69:4, line:53:19> col:19 y 'short'
+| `-CompoundStmt 0x7f8154035f88 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f8154035d90 <line:55:3, col:8> 'short' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154035d48 <col:3> 'short' lvalue ParmVar 0x7f8154035b90 'x' 'short'
+|   | `-IntegerLiteral 0x7f8154035d70 <col:8> 'int' 24
+|   |-IfStmt 0x7f8154035ef8 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154035e08 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154035df0 <col:8> 'short' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154035dc8 <col:8> 'short' lvalue ParmVar 0x7f8154035b90 'x' 'short'
+|   | |-CallExpr 0x7f8154035ec8 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154035eb0 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154035e28 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154035e88 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154035e50 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154035f70 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154035f58 <col:10> 'short' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154035f30 <col:10> 'short' lvalue ParmVar 0x7f8154035b90 'x' 'short'
+|-FunctionDecl 0x7f81540360e0 <line:69:4, line:31:14> <scratch space>:67:1 fshortor 'short *(short *, short)'
+| |-ParmVarDecl 0x7f8154035fd0 <c_files/pr49095.c:69:4, line:26:15> col:15 used x 'short *'
+| |-ParmVarDecl 0x7f8154036048 <line:69:4, line:26:20> col:20 used y 'short'
+| `-CompoundStmt 0x7f8154036468 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f8154036240 <line:28:3, col:9> 'short' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f81540361c8 <col:3, col:4> 'short' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f81540361b0 <col:4> 'short *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154036188 <col:4> 'short *' lvalue ParmVar 0x7f8154035fd0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f8154036228 <col:9> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f8154036210 <col:9> 'short' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f81540361e8 <col:9> 'short' lvalue ParmVar 0x7f8154036048 'y' 'short'
+|   |-IfStmt 0x7f81540363d8 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f81540362f0 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f81540362d8 <col:8, col:9> 'short' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f81540362b8 <col:8, col:9> 'short' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f81540362a0 <col:9> 'short *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154036278 <col:9> 'short *' lvalue ParmVar 0x7f8154035fd0 'x' 'short *'
+|   | |-CallExpr 0x7f8154036378 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154036360 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154036310 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f81540363c0 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f81540363a8 <col:10> 'short *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154036338 <col:10> 'short *' lvalue ParmVar 0x7f8154035fd0 'x' 'short *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154036450 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154036438 <col:10> 'short *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154036410 <col:10> 'short *' lvalue ParmVar 0x7f8154035fd0 'x' 'short *'
+|-FunctionDecl 0x7f81540365c0 <line:69:4, line:40:14> <scratch space>:69:1 gshortor 'short (short, short)'
+| |-ParmVarDecl 0x7f81540364b0 <c_files/pr49095.c:69:4, line:35:14> col:14 used x 'short'
+| |-ParmVarDecl 0x7f8154036528 <line:69:4, line:35:19> col:19 used y 'short'
+| `-CompoundStmt 0x7f8154032100 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f81540366e8 <line:37:3, col:8> 'short' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154036668 <col:3> 'short' lvalue ParmVar 0x7f81540364b0 'x' 'short'
+|   | `-ImplicitCastExpr 0x7f81540366d0 <col:8> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f81540366b8 <col:8> 'short' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8154036690 <col:8> 'short' lvalue ParmVar 0x7f8154036528 'y' 'short'
+|   |-IfStmt 0x7f8154032070 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154036760 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154036748 <col:8> 'short' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154036720 <col:8> 'short' lvalue ParmVar 0x7f81540364b0 'x' 'short'
+|   | |-CallExpr 0x7f8154032040 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154032028 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154036780 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154032000 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f81540367a8 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f81540320e8 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f81540320d0 <col:10> 'short' <LValueToRValue>
+|       `-DeclRefExpr 0x7f81540320a8 <col:10> 'short' lvalue ParmVar 0x7f81540364b0 'x' 'short'
+|-FunctionDecl 0x7f81540321d8 <line:69:4, line:49:14> <scratch space>:71:1 hshortor 'short *(short *)'
+| |-ParmVarDecl 0x7f8154032148 <c_files/pr49095.c:69:4, line:44:15> col:15 used x 'short *'
+| `-CompoundStmt 0x7f8154032520 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f81540322f8 <line:46:3, col:9> 'short' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f81540322b8 <col:3, col:4> 'short' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f81540322a0 <col:4> 'short *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154032278 <col:4> 'short *' lvalue ParmVar 0x7f8154032148 'x' 'short *'
+|   | `-IntegerLiteral 0x7f81540322d8 <col:9> 'int' 24
+|   |-IfStmt 0x7f8154032490 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f81540323a8 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154032390 <col:8, col:9> 'short' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154032370 <col:8, col:9> 'short' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154032358 <col:9> 'short *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154032330 <col:9> 'short *' lvalue ParmVar 0x7f8154032148 'x' 'short *'
+|   | |-CallExpr 0x7f8154032430 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154032418 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f81540323c8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154032478 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154032460 <col:10> 'short *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f81540323f0 <col:10> 'short *' lvalue ParmVar 0x7f8154032148 'x' 'short *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154032508 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f81540324f0 <col:10> 'short *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f81540324c8 <col:10> 'short *' lvalue ParmVar 0x7f8154032148 'x' 'short *'
+|-FunctionDecl 0x7f8154032678 <line:69:4, line:58:14> <scratch space>:73:1 ishortor 'short (short, short)'
+| |-ParmVarDecl 0x7f8154032568 <c_files/pr49095.c:69:4, line:53:14> col:14 used x 'short'
+| |-ParmVarDecl 0x7f81540325e0 <line:69:4, line:53:19> col:19 y 'short'
+| `-CompoundStmt 0x7f8154032960 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f8154032768 <line:55:3, col:8> 'short' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154032720 <col:3> 'short' lvalue ParmVar 0x7f8154032568 'x' 'short'
+|   | `-IntegerLiteral 0x7f8154032748 <col:8> 'int' 24
+|   |-IfStmt 0x7f81540328d0 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f81540327e0 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f81540327c8 <col:8> 'short' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f81540327a0 <col:8> 'short' lvalue ParmVar 0x7f8154032568 'x' 'short'
+|   | |-CallExpr 0x7f81540328a0 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154032888 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154032800 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154032860 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154032828 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154032948 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154032930 <col:10> 'short' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154032908 <col:10> 'short' lvalue ParmVar 0x7f8154032568 'x' 'short'
+|-FunctionDecl 0x7f8154032ab8 <line:69:4, line:31:14> <scratch space>:75:1 fshortxor 'short *(short *, short)'
+| |-ParmVarDecl 0x7f81540329a8 <c_files/pr49095.c:69:4, line:26:15> col:15 used x 'short *'
+| |-ParmVarDecl 0x7f8154032a20 <line:69:4, line:26:20> col:20 used y 'short'
+| `-CompoundStmt 0x7f8154032e40 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f8154032c18 <line:28:3, col:9> 'short' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154032ba0 <col:3, col:4> 'short' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154032b88 <col:4> 'short *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154032b60 <col:4> 'short *' lvalue ParmVar 0x7f81540329a8 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f8154032c00 <col:9> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f8154032be8 <col:9> 'short' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8154032bc0 <col:9> 'short' lvalue ParmVar 0x7f8154032a20 'y' 'short'
+|   |-IfStmt 0x7f8154032db0 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154032cc8 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154032cb0 <col:8, col:9> 'short' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154032c90 <col:8, col:9> 'short' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154032c78 <col:9> 'short *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154032c50 <col:9> 'short *' lvalue ParmVar 0x7f81540329a8 'x' 'short *'
+|   | |-CallExpr 0x7f8154032d50 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154032d38 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154032ce8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154032d98 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154032d80 <col:10> 'short *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154032d10 <col:10> 'short *' lvalue ParmVar 0x7f81540329a8 'x' 'short *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154032e28 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154032e10 <col:10> 'short *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154032de8 <col:10> 'short *' lvalue ParmVar 0x7f81540329a8 'x' 'short *'
+|-FunctionDecl 0x7f8154038600 <line:69:4, line:40:14> <scratch space>:77:1 gshortxor 'short (short, short)'
+| |-ParmVarDecl 0x7f8154032e88 <c_files/pr49095.c:69:4, line:35:14> col:14 used x 'short'
+| |-ParmVarDecl 0x7f8154032f00 <line:69:4, line:35:19> col:19 used y 'short'
+| `-CompoundStmt 0x7f8154038920 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f8154038728 <line:37:3, col:8> 'short' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f81540386a8 <col:3> 'short' lvalue ParmVar 0x7f8154032e88 'x' 'short'
+|   | `-ImplicitCastExpr 0x7f8154038710 <col:8> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f81540386f8 <col:8> 'short' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f81540386d0 <col:8> 'short' lvalue ParmVar 0x7f8154032f00 'y' 'short'
+|   |-IfStmt 0x7f8154038890 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f81540387a0 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154038788 <col:8> 'short' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154038760 <col:8> 'short' lvalue ParmVar 0x7f8154032e88 'x' 'short'
+|   | |-CallExpr 0x7f8154038860 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154038848 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f81540387c0 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154038820 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f81540387e8 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154038908 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f81540388f0 <col:10> 'short' <LValueToRValue>
+|       `-DeclRefExpr 0x7f81540388c8 <col:10> 'short' lvalue ParmVar 0x7f8154032e88 'x' 'short'
+|-FunctionDecl 0x7f81540389f8 <line:69:4, line:49:14> <scratch space>:79:1 hshortxor 'short *(short *)'
+| |-ParmVarDecl 0x7f8154038968 <c_files/pr49095.c:69:4, line:44:15> col:15 used x 'short *'
+| `-CompoundStmt 0x7f8154038d40 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f8154038b18 <line:46:3, col:9> 'short' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154038ad8 <col:3, col:4> 'short' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154038ac0 <col:4> 'short *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154038a98 <col:4> 'short *' lvalue ParmVar 0x7f8154038968 'x' 'short *'
+|   | `-IntegerLiteral 0x7f8154038af8 <col:9> 'int' 24
+|   |-IfStmt 0x7f8154038cb0 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154038bc8 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154038bb0 <col:8, col:9> 'short' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154038b90 <col:8, col:9> 'short' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154038b78 <col:9> 'short *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154038b50 <col:9> 'short *' lvalue ParmVar 0x7f8154038968 'x' 'short *'
+|   | |-CallExpr 0x7f8154038c50 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154038c38 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154038be8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154038c98 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154038c80 <col:10> 'short *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154038c10 <col:10> 'short *' lvalue ParmVar 0x7f8154038968 'x' 'short *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154038d28 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154038d10 <col:10> 'short *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154038ce8 <col:10> 'short *' lvalue ParmVar 0x7f8154038968 'x' 'short *'
+|-FunctionDecl 0x7f8154038e98 <line:69:4, line:58:14> <scratch space>:81:1 ishortxor 'short (short, short)'
+| |-ParmVarDecl 0x7f8154038d88 <c_files/pr49095.c:69:4, line:53:14> col:14 used x 'short'
+| |-ParmVarDecl 0x7f8154038e00 <line:69:4, line:53:19> col:19 y 'short'
+| `-CompoundStmt 0x7f8154039180 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f8154038f88 <line:55:3, col:8> 'short' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154038f40 <col:3> 'short' lvalue ParmVar 0x7f8154038d88 'x' 'short'
+|   | `-IntegerLiteral 0x7f8154038f68 <col:8> 'int' 24
+|   |-IfStmt 0x7f81540390f0 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154039000 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154038fe8 <col:8> 'short' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154038fc0 <col:8> 'short' lvalue ParmVar 0x7f8154038d88 'x' 'short'
+|   | |-CallExpr 0x7f81540390c0 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f81540390a8 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154039020 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154039080 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154039048 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154039168 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154039150 <col:10> 'short' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154039128 <col:10> 'short' lvalue ParmVar 0x7f8154038d88 'x' 'short'
+|-FunctionDecl 0x7f8154039318 <line:70:4, line:31:14> <scratch space>:83:1 fintplus 'int *(int *, int)'
+| |-ParmVarDecl 0x7f81540391c8 <c_files/pr49095.c:70:4, line:26:15> col:15 used x 'int *'
+| |-ParmVarDecl 0x7f8154039240 <line:70:4, line:26:20> col:20 used y 'int'
+| `-CompoundStmt 0x7f815403d090 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f8154039460 <line:28:3, col:9> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154039400 <col:3, col:4> 'int' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f81540393e8 <col:4> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f81540393c0 <col:4> 'int *' lvalue ParmVar 0x7f81540391c8 'x' 'int *'
+|   | `-ImplicitCastExpr 0x7f8154039448 <col:9> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8154039420 <col:9> 'int' lvalue ParmVar 0x7f8154039240 'y' 'int'
+|   |-IfStmt 0x7f815403d000 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154039510 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f81540394f8 <col:8, col:9> 'int' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f81540394d8 <col:8, col:9> 'int' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f81540394c0 <col:9> 'int *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154039498 <col:9> 'int *' lvalue ParmVar 0x7f81540391c8 'x' 'int *'
+|   | |-CallExpr 0x7f8154039598 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154039580 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154039530 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f81540395e0 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f81540395c8 <col:10> 'int *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154039558 <col:10> 'int *' lvalue ParmVar 0x7f81540391c8 'x' 'int *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815403d078 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f815403d060 <col:10> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815403d038 <col:10> 'int *' lvalue ParmVar 0x7f81540391c8 'x' 'int *'
+|-FunctionDecl 0x7f815403d228 <line:70:4, line:40:14> <scratch space>:85:1 gintplus 'int (int, int)'
+| |-ParmVarDecl 0x7f815403d0d8 <c_files/pr49095.c:70:4, line:35:14> col:14 used x 'int'
+| |-ParmVarDecl 0x7f815403d150 <line:70:4, line:35:19> col:19 used y 'int'
+| `-CompoundStmt 0x7f815403d530 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f815403d338 <line:37:3, col:8> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f815403d2d0 <col:3> 'int' lvalue ParmVar 0x7f815403d0d8 'x' 'int'
+|   | `-ImplicitCastExpr 0x7f815403d320 <col:8> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f815403d2f8 <col:8> 'int' lvalue ParmVar 0x7f815403d150 'y' 'int'
+|   |-IfStmt 0x7f815403d4a0 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815403d3b0 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815403d398 <col:8> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815403d370 <col:8> 'int' lvalue ParmVar 0x7f815403d0d8 'x' 'int'
+|   | |-CallExpr 0x7f815403d470 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f815403d458 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815403d3d0 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f815403d430 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f815403d3f8 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815403d518 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f815403d500 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815403d4d8 <col:10> 'int' lvalue ParmVar 0x7f815403d0d8 'x' 'int'
+|-FunctionDecl 0x7f815403d608 <line:70:4, line:49:14> <scratch space>:87:1 hintplus 'int *(int *)'
+| |-ParmVarDecl 0x7f815403d578 <c_files/pr49095.c:70:4, line:44:15> col:15 used x 'int *'
+| `-CompoundStmt 0x7f815403d950 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f815403d728 <line:46:3, col:9> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f815403d6e8 <col:3, col:4> 'int' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f815403d6d0 <col:4> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815403d6a8 <col:4> 'int *' lvalue ParmVar 0x7f815403d578 'x' 'int *'
+|   | `-IntegerLiteral 0x7f815403d708 <col:9> 'int' 24
+|   |-IfStmt 0x7f815403d8c0 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815403d7d8 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815403d7c0 <col:8, col:9> 'int' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f815403d7a0 <col:8, col:9> 'int' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f815403d788 <col:9> 'int *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f815403d760 <col:9> 'int *' lvalue ParmVar 0x7f815403d578 'x' 'int *'
+|   | |-CallExpr 0x7f815403d860 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f815403d848 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815403d7f8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f815403d8a8 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f815403d890 <col:10> 'int *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f815403d820 <col:10> 'int *' lvalue ParmVar 0x7f815403d578 'x' 'int *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815403d938 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f815403d920 <col:10> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815403d8f8 <col:10> 'int *' lvalue ParmVar 0x7f815403d578 'x' 'int *'
+|-FunctionDecl 0x7f815403daa8 <line:70:4, line:58:14> <scratch space>:89:1 iintplus 'int (int, int)'
+| |-ParmVarDecl 0x7f815403d998 <c_files/pr49095.c:70:4, line:53:14> col:14 used x 'int'
+| |-ParmVarDecl 0x7f815403da10 <line:70:4, line:53:19> col:19 y 'int'
+| `-CompoundStmt 0x7f815403dd90 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f815403db98 <line:55:3, col:8> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f815403db50 <col:3> 'int' lvalue ParmVar 0x7f815403d998 'x' 'int'
+|   | `-IntegerLiteral 0x7f815403db78 <col:8> 'int' 24
+|   |-IfStmt 0x7f815403dd00 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815403dc10 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815403dbf8 <col:8> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815403dbd0 <col:8> 'int' lvalue ParmVar 0x7f815403d998 'x' 'int'
+|   | |-CallExpr 0x7f815403dcd0 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f815403dcb8 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815403dc30 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f815403dc90 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f815403dc58 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815403dd78 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f815403dd60 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815403dd38 <col:10> 'int' lvalue ParmVar 0x7f815403d998 'x' 'int'
+|-FunctionDecl 0x7f815403dee8 <line:70:4, line:31:14> <scratch space>:91:1 fintminus 'int *(int *, int)'
+| |-ParmVarDecl 0x7f815403ddd8 <c_files/pr49095.c:70:4, line:26:15> col:15 used x 'int *'
+| |-ParmVarDecl 0x7f815403de50 <line:70:4, line:26:20> col:20 used y 'int'
+| `-CompoundStmt 0x7f815403e268 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f815403e040 <line:28:3, col:9> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f815403dfd0 <col:3, col:4> 'int' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f815403dfb8 <col:4> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815403df90 <col:4> 'int *' lvalue ParmVar 0x7f815403ddd8 'x' 'int *'
+|   | `-ImplicitCastExpr 0x7f815403e028 <col:9> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f815403e000 <col:9> 'int' lvalue ParmVar 0x7f815403de50 'y' 'int'
+|   |-IfStmt 0x7f815403e1d8 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815403e0f0 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815403e0d8 <col:8, col:9> 'int' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f815403e0b8 <col:8, col:9> 'int' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f815403e0a0 <col:9> 'int *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f815403e078 <col:9> 'int *' lvalue ParmVar 0x7f815403ddd8 'x' 'int *'
+|   | |-CallExpr 0x7f815403e178 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f815403e160 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815403e110 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f815403e1c0 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f815403e1a8 <col:10> 'int *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f815403e138 <col:10> 'int *' lvalue ParmVar 0x7f815403ddd8 'x' 'int *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815403e250 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f815403e238 <col:10> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815403e210 <col:10> 'int *' lvalue ParmVar 0x7f815403ddd8 'x' 'int *'
+|-FunctionDecl 0x7f815403e3c0 <line:70:4, line:40:14> <scratch space>:93:1 gintminus 'int (int, int)'
+| |-ParmVarDecl 0x7f815403e2b0 <c_files/pr49095.c:70:4, line:35:14> col:14 used x 'int'
+| |-ParmVarDecl 0x7f815403e328 <line:70:4, line:35:19> col:19 used y 'int'
+| `-CompoundStmt 0x7f815403e6c8 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f815403e4d0 <line:37:3, col:8> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f815403e468 <col:3> 'int' lvalue ParmVar 0x7f815403e2b0 'x' 'int'
+|   | `-ImplicitCastExpr 0x7f815403e4b8 <col:8> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f815403e490 <col:8> 'int' lvalue ParmVar 0x7f815403e328 'y' 'int'
+|   |-IfStmt 0x7f815403e638 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815403e548 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815403e530 <col:8> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815403e508 <col:8> 'int' lvalue ParmVar 0x7f815403e2b0 'x' 'int'
+|   | |-CallExpr 0x7f815403e608 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f815403e5f0 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815403e568 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f815403e5c8 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f815403e590 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815403e6b0 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f815403e698 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815403e670 <col:10> 'int' lvalue ParmVar 0x7f815403e2b0 'x' 'int'
+|-FunctionDecl 0x7f815403e7a0 <line:70:4, line:49:14> <scratch space>:95:1 hintminus 'int *(int *)'
+| |-ParmVarDecl 0x7f815403e710 <c_files/pr49095.c:70:4, line:44:15> col:15 used x 'int *'
+| `-CompoundStmt 0x7f815403eae8 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f815403e8c0 <line:46:3, col:9> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f815403e880 <col:3, col:4> 'int' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f815403e868 <col:4> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815403e840 <col:4> 'int *' lvalue ParmVar 0x7f815403e710 'x' 'int *'
+|   | `-IntegerLiteral 0x7f815403e8a0 <col:9> 'int' 24
+|   |-IfStmt 0x7f815403ea58 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815403e970 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815403e958 <col:8, col:9> 'int' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f815403e938 <col:8, col:9> 'int' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f815403e920 <col:9> 'int *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f815403e8f8 <col:9> 'int *' lvalue ParmVar 0x7f815403e710 'x' 'int *'
+|   | |-CallExpr 0x7f815403e9f8 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f815403e9e0 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815403e990 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f815403ea40 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f815403ea28 <col:10> 'int *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f815403e9b8 <col:10> 'int *' lvalue ParmVar 0x7f815403e710 'x' 'int *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815403ead0 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f815403eab8 <col:10> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815403ea90 <col:10> 'int *' lvalue ParmVar 0x7f815403e710 'x' 'int *'
+|-FunctionDecl 0x7f815403ec40 <line:70:4, line:58:14> <scratch space>:97:1 iintminus 'int (int, int)'
+| |-ParmVarDecl 0x7f815403eb30 <c_files/pr49095.c:70:4, line:53:14> col:14 used x 'int'
+| |-ParmVarDecl 0x7f815403eba8 <line:70:4, line:53:19> col:19 y 'int'
+| `-CompoundStmt 0x7f815403ef28 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f815403ed30 <line:55:3, col:8> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f815403ece8 <col:3> 'int' lvalue ParmVar 0x7f815403eb30 'x' 'int'
+|   | `-IntegerLiteral 0x7f815403ed10 <col:8> 'int' 24
+|   |-IfStmt 0x7f815403ee98 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815403eda8 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815403ed90 <col:8> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815403ed68 <col:8> 'int' lvalue ParmVar 0x7f815403eb30 'x' 'int'
+|   | |-CallExpr 0x7f815403ee68 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f815403ee50 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815403edc8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f815403ee28 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f815403edf0 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815403ef10 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f815403eef8 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815403eed0 <col:10> 'int' lvalue ParmVar 0x7f815403eb30 'x' 'int'
+|-FunctionDecl 0x7f8154040098 <line:70:4, line:31:14> <scratch space>:99:1 fintand 'int *(int *, int)'
+| |-ParmVarDecl 0x7f815403ef70 <c_files/pr49095.c:70:4, line:26:15> col:15 used x 'int *'
+| |-ParmVarDecl 0x7f8154040000 <line:70:4, line:26:20> col:20 used y 'int'
+| `-CompoundStmt 0x7f8154040408 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f81540401e0 <line:28:3, col:9> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154040180 <col:3, col:4> 'int' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154040168 <col:4> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154040140 <col:4> 'int *' lvalue ParmVar 0x7f815403ef70 'x' 'int *'
+|   | `-ImplicitCastExpr 0x7f81540401c8 <col:9> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f81540401a0 <col:9> 'int' lvalue ParmVar 0x7f8154040000 'y' 'int'
+|   |-IfStmt 0x7f8154040378 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154040290 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154040278 <col:8, col:9> 'int' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154040258 <col:8, col:9> 'int' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154040240 <col:9> 'int *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154040218 <col:9> 'int *' lvalue ParmVar 0x7f815403ef70 'x' 'int *'
+|   | |-CallExpr 0x7f8154040318 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154040300 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f81540402b0 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154040360 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154040348 <col:10> 'int *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f81540402d8 <col:10> 'int *' lvalue ParmVar 0x7f815403ef70 'x' 'int *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f81540403f0 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f81540403d8 <col:10> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f81540403b0 <col:10> 'int *' lvalue ParmVar 0x7f815403ef70 'x' 'int *'
+|-FunctionDecl 0x7f8154040560 <line:70:4, line:40:14> <scratch space>:101:1 gintand 'int (int, int)'
+| |-ParmVarDecl 0x7f8154040450 <c_files/pr49095.c:70:4, line:35:14> col:14 used x 'int'
+| |-ParmVarDecl 0x7f81540404c8 <line:70:4, line:35:19> col:19 used y 'int'
+| `-CompoundStmt 0x7f8154040868 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f8154040670 <line:37:3, col:8> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154040608 <col:3> 'int' lvalue ParmVar 0x7f8154040450 'x' 'int'
+|   | `-ImplicitCastExpr 0x7f8154040658 <col:8> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8154040630 <col:8> 'int' lvalue ParmVar 0x7f81540404c8 'y' 'int'
+|   |-IfStmt 0x7f81540407d8 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f81540406e8 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f81540406d0 <col:8> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f81540406a8 <col:8> 'int' lvalue ParmVar 0x7f8154040450 'x' 'int'
+|   | |-CallExpr 0x7f81540407a8 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154040790 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154040708 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154040768 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154040730 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154040850 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154040838 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154040810 <col:10> 'int' lvalue ParmVar 0x7f8154040450 'x' 'int'
+|-FunctionDecl 0x7f8154040940 <line:70:4, line:49:14> <scratch space>:103:1 hintand 'int *(int *)'
+| |-ParmVarDecl 0x7f81540408b0 <c_files/pr49095.c:70:4, line:44:15> col:15 used x 'int *'
+| `-CompoundStmt 0x7f8154040c88 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f8154040a60 <line:46:3, col:9> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154040a20 <col:3, col:4> 'int' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154040a08 <col:4> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f81540409e0 <col:4> 'int *' lvalue ParmVar 0x7f81540408b0 'x' 'int *'
+|   | `-IntegerLiteral 0x7f8154040a40 <col:9> 'int' 24
+|   |-IfStmt 0x7f8154040bf8 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154040b10 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154040af8 <col:8, col:9> 'int' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154040ad8 <col:8, col:9> 'int' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154040ac0 <col:9> 'int *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154040a98 <col:9> 'int *' lvalue ParmVar 0x7f81540408b0 'x' 'int *'
+|   | |-CallExpr 0x7f8154040b98 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154040b80 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154040b30 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154040be0 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154040bc8 <col:10> 'int *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154040b58 <col:10> 'int *' lvalue ParmVar 0x7f81540408b0 'x' 'int *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154040c70 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154040c58 <col:10> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154040c30 <col:10> 'int *' lvalue ParmVar 0x7f81540408b0 'x' 'int *'
+|-FunctionDecl 0x7f8154040de0 <line:70:4, line:58:14> <scratch space>:105:1 iintand 'int (int, int)'
+| |-ParmVarDecl 0x7f8154040cd0 <c_files/pr49095.c:70:4, line:53:14> col:14 used x 'int'
+| |-ParmVarDecl 0x7f8154040d48 <line:70:4, line:53:19> col:19 y 'int'
+| `-CompoundStmt 0x7f81540410d8 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f8154040ed0 <line:55:3, col:8> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154040e88 <col:3> 'int' lvalue ParmVar 0x7f8154040cd0 'x' 'int'
+|   | `-IntegerLiteral 0x7f8154040eb0 <col:8> 'int' 24
+|   |-IfStmt 0x7f8154041048 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154040f48 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154040f30 <col:8> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154040f08 <col:8> 'int' lvalue ParmVar 0x7f8154040cd0 'x' 'int'
+|   | |-CallExpr 0x7f8154041018 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154041000 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154040f68 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154040fc8 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154040f90 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f81540410c0 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f81540410a8 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154041080 <col:10> 'int' lvalue ParmVar 0x7f8154040cd0 'x' 'int'
+|-FunctionDecl 0x7f8154041230 <line:70:4, line:31:14> <scratch space>:107:1 fintor 'int *(int *, int)'
+| |-ParmVarDecl 0x7f8154041120 <c_files/pr49095.c:70:4, line:26:15> col:15 used x 'int *'
+| |-ParmVarDecl 0x7f8154041198 <line:70:4, line:26:20> col:20 used y 'int'
+| `-CompoundStmt 0x7f81540415a0 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f8154041378 <line:28:3, col:9> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154041318 <col:3, col:4> 'int' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154041300 <col:4> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f81540412d8 <col:4> 'int *' lvalue ParmVar 0x7f8154041120 'x' 'int *'
+|   | `-ImplicitCastExpr 0x7f8154041360 <col:9> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8154041338 <col:9> 'int' lvalue ParmVar 0x7f8154041198 'y' 'int'
+|   |-IfStmt 0x7f8154041510 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154041428 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154041410 <col:8, col:9> 'int' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f81540413f0 <col:8, col:9> 'int' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f81540413d8 <col:9> 'int *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f81540413b0 <col:9> 'int *' lvalue ParmVar 0x7f8154041120 'x' 'int *'
+|   | |-CallExpr 0x7f81540414b0 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154041498 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154041448 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f81540414f8 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f81540414e0 <col:10> 'int *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154041470 <col:10> 'int *' lvalue ParmVar 0x7f8154041120 'x' 'int *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154041588 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154041570 <col:10> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154041548 <col:10> 'int *' lvalue ParmVar 0x7f8154041120 'x' 'int *'
+|-FunctionDecl 0x7f81540416f8 <line:70:4, line:40:14> <scratch space>:109:1 gintor 'int (int, int)'
+| |-ParmVarDecl 0x7f81540415e8 <c_files/pr49095.c:70:4, line:35:14> col:14 used x 'int'
+| |-ParmVarDecl 0x7f8154041660 <line:70:4, line:35:19> col:19 used y 'int'
+| `-CompoundStmt 0x7f8154041a00 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f8154041808 <line:37:3, col:8> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f81540417a0 <col:3> 'int' lvalue ParmVar 0x7f81540415e8 'x' 'int'
+|   | `-ImplicitCastExpr 0x7f81540417f0 <col:8> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f81540417c8 <col:8> 'int' lvalue ParmVar 0x7f8154041660 'y' 'int'
+|   |-IfStmt 0x7f8154041970 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154041880 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154041868 <col:8> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154041840 <col:8> 'int' lvalue ParmVar 0x7f81540415e8 'x' 'int'
+|   | |-CallExpr 0x7f8154041940 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154041928 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f81540418a0 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154041900 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f81540418c8 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f81540419e8 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f81540419d0 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f81540419a8 <col:10> 'int' lvalue ParmVar 0x7f81540415e8 'x' 'int'
+|-FunctionDecl 0x7f8154041ad8 <line:70:4, line:49:14> <scratch space>:111:1 hintor 'int *(int *)'
+| |-ParmVarDecl 0x7f8154041a48 <c_files/pr49095.c:70:4, line:44:15> col:15 used x 'int *'
+| `-CompoundStmt 0x7f8154041e20 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f8154041bf8 <line:46:3, col:9> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154041bb8 <col:3, col:4> 'int' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154041ba0 <col:4> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154041b78 <col:4> 'int *' lvalue ParmVar 0x7f8154041a48 'x' 'int *'
+|   | `-IntegerLiteral 0x7f8154041bd8 <col:9> 'int' 24
+|   |-IfStmt 0x7f8154041d90 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154041ca8 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154041c90 <col:8, col:9> 'int' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154041c70 <col:8, col:9> 'int' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154041c58 <col:9> 'int *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154041c30 <col:9> 'int *' lvalue ParmVar 0x7f8154041a48 'x' 'int *'
+|   | |-CallExpr 0x7f8154041d30 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154041d18 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154041cc8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154041d78 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154041d60 <col:10> 'int *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154041cf0 <col:10> 'int *' lvalue ParmVar 0x7f8154041a48 'x' 'int *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154041e08 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154041df0 <col:10> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154041dc8 <col:10> 'int *' lvalue ParmVar 0x7f8154041a48 'x' 'int *'
+|-FunctionDecl 0x7f8154042000 <line:70:4, line:58:14> <scratch space>:113:1 iintor 'int (int, int)'
+| |-ParmVarDecl 0x7f8154041e68 <c_files/pr49095.c:70:4, line:53:14> col:14 used x 'int'
+| |-ParmVarDecl 0x7f8154041ee0 <line:70:4, line:53:19> col:19 y 'int'
+| `-CompoundStmt 0x7f81540422e8 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f81540420f0 <line:55:3, col:8> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f81540420a8 <col:3> 'int' lvalue ParmVar 0x7f8154041e68 'x' 'int'
+|   | `-IntegerLiteral 0x7f81540420d0 <col:8> 'int' 24
+|   |-IfStmt 0x7f8154042258 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154042168 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154042150 <col:8> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154042128 <col:8> 'int' lvalue ParmVar 0x7f8154041e68 'x' 'int'
+|   | |-CallExpr 0x7f8154042228 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154042210 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154042188 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f81540421e8 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f81540421b0 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f81540422d0 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f81540422b8 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154042290 <col:10> 'int' lvalue ParmVar 0x7f8154041e68 'x' 'int'
+|-FunctionDecl 0x7f8154042440 <line:70:4, line:31:14> <scratch space>:115:1 fintxor 'int *(int *, int)'
+| |-ParmVarDecl 0x7f8154042330 <c_files/pr49095.c:70:4, line:26:15> col:15 used x 'int *'
+| |-ParmVarDecl 0x7f81540423a8 <line:70:4, line:26:20> col:20 used y 'int'
+| `-CompoundStmt 0x7f81540427b0 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f8154042588 <line:28:3, col:9> 'int' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154042528 <col:3, col:4> 'int' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154042510 <col:4> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f81540424e8 <col:4> 'int *' lvalue ParmVar 0x7f8154042330 'x' 'int *'
+|   | `-ImplicitCastExpr 0x7f8154042570 <col:9> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8154042548 <col:9> 'int' lvalue ParmVar 0x7f81540423a8 'y' 'int'
+|   |-IfStmt 0x7f8154042720 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154042638 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154042620 <col:8, col:9> 'int' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154042600 <col:8, col:9> 'int' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f81540425e8 <col:9> 'int *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f81540425c0 <col:9> 'int *' lvalue ParmVar 0x7f8154042330 'x' 'int *'
+|   | |-CallExpr 0x7f81540426c0 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f81540426a8 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154042658 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154042708 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f81540426f0 <col:10> 'int *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154042680 <col:10> 'int *' lvalue ParmVar 0x7f8154042330 'x' 'int *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154042798 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154042780 <col:10> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154042758 <col:10> 'int *' lvalue ParmVar 0x7f8154042330 'x' 'int *'
+|-FunctionDecl 0x7f8154042908 <line:70:4, line:40:14> <scratch space>:117:1 gintxor 'int (int, int)'
+| |-ParmVarDecl 0x7f81540427f8 <c_files/pr49095.c:70:4, line:35:14> col:14 used x 'int'
+| |-ParmVarDecl 0x7f8154042870 <line:70:4, line:35:19> col:19 used y 'int'
+| `-CompoundStmt 0x7f8154042c10 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f8154042a18 <line:37:3, col:8> 'int' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f81540429b0 <col:3> 'int' lvalue ParmVar 0x7f81540427f8 'x' 'int'
+|   | `-ImplicitCastExpr 0x7f8154042a00 <col:8> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f81540429d8 <col:8> 'int' lvalue ParmVar 0x7f8154042870 'y' 'int'
+|   |-IfStmt 0x7f8154042b80 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154042a90 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154042a78 <col:8> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154042a50 <col:8> 'int' lvalue ParmVar 0x7f81540427f8 'x' 'int'
+|   | |-CallExpr 0x7f8154042b50 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154042b38 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154042ab0 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154042b10 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154042ad8 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154042bf8 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154042be0 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154042bb8 <col:10> 'int' lvalue ParmVar 0x7f81540427f8 'x' 'int'
+|-FunctionDecl 0x7f8154042ce8 <line:70:4, line:49:14> <scratch space>:119:1 hintxor 'int *(int *)'
+| |-ParmVarDecl 0x7f8154042c58 <c_files/pr49095.c:70:4, line:44:15> col:15 used x 'int *'
+| `-CompoundStmt 0x7f8154045230 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f8154042e08 <line:46:3, col:9> 'int' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-UnaryOperator 0x7f8154042dc8 <col:3, col:4> 'int' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154042db0 <col:4> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154042d88 <col:4> 'int *' lvalue ParmVar 0x7f8154042c58 'x' 'int *'
+|   | `-IntegerLiteral 0x7f8154042de8 <col:9> 'int' 24
+|   |-IfStmt 0x7f8154042fa0 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154042eb8 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154042ea0 <col:8, col:9> 'int' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154042e80 <col:8, col:9> 'int' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154042e68 <col:9> 'int *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154042e40 <col:9> 'int *' lvalue ParmVar 0x7f8154042c58 'x' 'int *'
+|   | |-CallExpr 0x7f8154042f40 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154042f28 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154042ed8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154042f88 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154042f70 <col:10> 'int *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154042f00 <col:10> 'int *' lvalue ParmVar 0x7f8154042c58 'x' 'int *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154045218 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154045200 <col:10> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154042fd8 <col:10> 'int *' lvalue ParmVar 0x7f8154042c58 'x' 'int *'
+|-FunctionDecl 0x7f8154045388 <line:70:4, line:58:14> <scratch space>:121:1 iintxor 'int (int, int)'
+| |-ParmVarDecl 0x7f8154045278 <c_files/pr49095.c:70:4, line:53:14> col:14 used x 'int'
+| |-ParmVarDecl 0x7f81540452f0 <line:70:4, line:53:19> col:19 y 'int'
+| `-CompoundStmt 0x7f8154045670 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f8154045478 <line:55:3, col:8> 'int' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8154045430 <col:3> 'int' lvalue ParmVar 0x7f8154045278 'x' 'int'
+|   | `-IntegerLiteral 0x7f8154045458 <col:8> 'int' 24
+|   |-IfStmt 0x7f81540455e0 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f81540454f0 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f81540454d8 <col:8> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f81540454b0 <col:8> 'int' lvalue ParmVar 0x7f8154045278 'x' 'int'
+|   | |-CallExpr 0x7f81540455b0 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154045598 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154045510 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154045570 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154045538 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154045658 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154045640 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154045618 <col:10> 'int' lvalue ParmVar 0x7f8154045278 'x' 'int'
+|-FunctionDecl 0x7f8154045838 <line:71:4, line:31:14> <scratch space>:123:1 flongplus 'long *(long *, long)'
+| |-ParmVarDecl 0x7f81540456e0 <c_files/pr49095.c:71:4, line:26:15> col:15 used x 'long *'
+| |-ParmVarDecl 0x7f8154045758 <line:71:4, line:26:20> col:20 used y 'long'
+| `-CompoundStmt 0x7f8154045ba8 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f8154045980 <line:28:3, col:9> 'long' '+=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-UnaryOperator 0x7f8154045920 <col:3, col:4> 'long' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154045908 <col:4> 'long *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f81540458e0 <col:4> 'long *' lvalue ParmVar 0x7f81540456e0 'x' 'long *'
+|   | `-ImplicitCastExpr 0x7f8154045968 <col:9> 'long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8154045940 <col:9> 'long' lvalue ParmVar 0x7f8154045758 'y' 'long'
+|   |-IfStmt 0x7f8154045b18 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154045a30 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154045a18 <col:8, col:9> 'long' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f81540459f8 <col:8, col:9> 'long' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f81540459e0 <col:9> 'long *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f81540459b8 <col:9> 'long *' lvalue ParmVar 0x7f81540456e0 'x' 'long *'
+|   | |-CallExpr 0x7f8154045ab8 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154045aa0 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154045a50 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154045b00 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154045ae8 <col:10> 'long *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154045a78 <col:10> 'long *' lvalue ParmVar 0x7f81540456e0 'x' 'long *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154045b90 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154045b78 <col:10> 'long *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154045b50 <col:10> 'long *' lvalue ParmVar 0x7f81540456e0 'x' 'long *'
+|-FunctionDecl 0x7f8154045d48 <line:71:4, line:40:14> <scratch space>:125:1 glongplus 'long (long, long)'
+| |-ParmVarDecl 0x7f8154045bf0 <c_files/pr49095.c:71:4, line:35:14> col:14 used x 'long'
+| |-ParmVarDecl 0x7f8154045c68 <line:71:4, line:35:19> col:19 used y 'long'
+| `-CompoundStmt 0x7f8154046050 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f8154045e58 <line:37:3, col:8> 'long' '+=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-DeclRefExpr 0x7f8154045df0 <col:3> 'long' lvalue ParmVar 0x7f8154045bf0 'x' 'long'
+|   | `-ImplicitCastExpr 0x7f8154045e40 <col:8> 'long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8154045e18 <col:8> 'long' lvalue ParmVar 0x7f8154045c68 'y' 'long'
+|   |-IfStmt 0x7f8154045fc0 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154045ed0 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154045eb8 <col:8> 'long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154045e90 <col:8> 'long' lvalue ParmVar 0x7f8154045bf0 'x' 'long'
+|   | |-CallExpr 0x7f8154045f90 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154045f78 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154045ef0 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154045f50 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154045f18 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154046038 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154046020 <col:10> 'long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154045ff8 <col:10> 'long' lvalue ParmVar 0x7f8154045bf0 'x' 'long'
+|-FunctionDecl 0x7f8154046168 <line:71:4, line:49:14> <scratch space>:127:1 hlongplus 'long *(long *)'
+| |-ParmVarDecl 0x7f8154046098 <c_files/pr49095.c:71:4, line:44:15> col:15 used x 'long *'
+| `-CompoundStmt 0x7f81540432c8 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f81540430a0 <line:46:3, col:9> 'long' '+=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-UnaryOperator 0x7f8154043048 <col:3, col:4> 'long' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154043030 <col:4> 'long *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154043008 <col:4> 'long *' lvalue ParmVar 0x7f8154046098 'x' 'long *'
+|   | `-ImplicitCastExpr 0x7f8154043088 <col:9> 'long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f8154043068 <col:9> 'int' 24
+|   |-IfStmt 0x7f8154043238 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154043150 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154043138 <col:8, col:9> 'long' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154043118 <col:8, col:9> 'long' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154043100 <col:9> 'long *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f81540430d8 <col:9> 'long *' lvalue ParmVar 0x7f8154046098 'x' 'long *'
+|   | |-CallExpr 0x7f81540431d8 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f81540431c0 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154043170 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154043220 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154043208 <col:10> 'long *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154043198 <col:10> 'long *' lvalue ParmVar 0x7f8154046098 'x' 'long *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f81540432b0 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154043298 <col:10> 'long *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154043270 <col:10> 'long *' lvalue ParmVar 0x7f8154046098 'x' 'long *'
+|-FunctionDecl 0x7f8154043420 <line:71:4, line:58:14> <scratch space>:129:1 ilongplus 'long (long, long)'
+| |-ParmVarDecl 0x7f8154043310 <c_files/pr49095.c:71:4, line:53:14> col:14 used x 'long'
+| |-ParmVarDecl 0x7f8154043388 <line:71:4, line:53:19> col:19 y 'long'
+| `-CompoundStmt 0x7f8154043720 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f8154043528 <line:55:3, col:8> 'long' '+=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-DeclRefExpr 0x7f81540434c8 <col:3> 'long' lvalue ParmVar 0x7f8154043310 'x' 'long'
+|   | `-ImplicitCastExpr 0x7f8154043510 <col:8> 'long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f81540434f0 <col:8> 'int' 24
+|   |-IfStmt 0x7f8154043690 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f81540435a0 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154043588 <col:8> 'long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154043560 <col:8> 'long' lvalue ParmVar 0x7f8154043310 'x' 'long'
+|   | |-CallExpr 0x7f8154043660 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154043648 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f81540435c0 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154043620 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f81540435e8 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154043708 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f81540436f0 <col:10> 'long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f81540436c8 <col:10> 'long' lvalue ParmVar 0x7f8154043310 'x' 'long'
+|-FunctionDecl 0x7f8154043878 <line:71:4, line:31:14> <scratch space>:131:1 flongminus 'long *(long *, long)'
+| |-ParmVarDecl 0x7f8154043768 <c_files/pr49095.c:71:4, line:26:15> col:15 used x 'long *'
+| |-ParmVarDecl 0x7f81540437e0 <line:71:4, line:26:20> col:20 used y 'long'
+| `-CompoundStmt 0x7f8154043be8 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f81540439c0 <line:28:3, col:9> 'long' '-=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-UnaryOperator 0x7f8154043960 <col:3, col:4> 'long' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154043948 <col:4> 'long *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154043920 <col:4> 'long *' lvalue ParmVar 0x7f8154043768 'x' 'long *'
+|   | `-ImplicitCastExpr 0x7f81540439a8 <col:9> 'long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8154043980 <col:9> 'long' lvalue ParmVar 0x7f81540437e0 'y' 'long'
+|   |-IfStmt 0x7f8154043b58 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154043a70 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154043a58 <col:8, col:9> 'long' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154043a38 <col:8, col:9> 'long' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154043a20 <col:9> 'long *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f81540439f8 <col:9> 'long *' lvalue ParmVar 0x7f8154043768 'x' 'long *'
+|   | |-CallExpr 0x7f8154043af8 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154043ae0 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154043a90 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154043b40 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154043b28 <col:10> 'long *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154043ab8 <col:10> 'long *' lvalue ParmVar 0x7f8154043768 'x' 'long *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154043bd0 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154043bb8 <col:10> 'long *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154043b90 <col:10> 'long *' lvalue ParmVar 0x7f8154043768 'x' 'long *'
+|-FunctionDecl 0x7f8154043d40 <line:71:4, line:40:14> <scratch space>:133:1 glongminus 'long (long, long)'
+| |-ParmVarDecl 0x7f8154043c30 <c_files/pr49095.c:71:4, line:35:14> col:14 used x 'long'
+| |-ParmVarDecl 0x7f8154043ca8 <line:71:4, line:35:19> col:19 used y 'long'
+| `-CompoundStmt 0x7f8154044058 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f8154043e50 <line:37:3, col:8> 'long' '-=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-DeclRefExpr 0x7f8154043de8 <col:3> 'long' lvalue ParmVar 0x7f8154043c30 'x' 'long'
+|   | `-ImplicitCastExpr 0x7f8154043e38 <col:8> 'long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8154043e10 <col:8> 'long' lvalue ParmVar 0x7f8154043ca8 'y' 'long'
+|   |-IfStmt 0x7f8154043fb8 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154043ec8 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154043eb0 <col:8> 'long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154043e88 <col:8> 'long' lvalue ParmVar 0x7f8154043c30 'x' 'long'
+|   | |-CallExpr 0x7f8154043f88 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154043f70 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154043ee8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154043f48 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154043f10 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154044040 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154044028 <col:10> 'long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154044000 <col:10> 'long' lvalue ParmVar 0x7f8154043c30 'x' 'long'
+|-FunctionDecl 0x7f8154044130 <line:71:4, line:49:14> <scratch space>:135:1 hlongminus 'long *(long *)'
+| |-ParmVarDecl 0x7f81540440a0 <c_files/pr49095.c:71:4, line:44:15> col:15 used x 'long *'
+| `-CompoundStmt 0x7f8154044490 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f8154044268 <line:46:3, col:9> 'long' '-=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-UnaryOperator 0x7f8154044210 <col:3, col:4> 'long' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f81540441f8 <col:4> 'long *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f81540441d0 <col:4> 'long *' lvalue ParmVar 0x7f81540440a0 'x' 'long *'
+|   | `-ImplicitCastExpr 0x7f8154044250 <col:9> 'long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f8154044230 <col:9> 'int' 24
+|   |-IfStmt 0x7f8154044400 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154044318 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154044300 <col:8, col:9> 'long' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f81540442e0 <col:8, col:9> 'long' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f81540442c8 <col:9> 'long *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f81540442a0 <col:9> 'long *' lvalue ParmVar 0x7f81540440a0 'x' 'long *'
+|   | |-CallExpr 0x7f81540443a0 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154044388 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154044338 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f81540443e8 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f81540443d0 <col:10> 'long *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154044360 <col:10> 'long *' lvalue ParmVar 0x7f81540440a0 'x' 'long *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154044478 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154044460 <col:10> 'long *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154044438 <col:10> 'long *' lvalue ParmVar 0x7f81540440a0 'x' 'long *'
+|-FunctionDecl 0x7f81540445e8 <line:71:4, line:58:14> <scratch space>:137:1 ilongminus 'long (long, long)'
+| |-ParmVarDecl 0x7f81540444d8 <c_files/pr49095.c:71:4, line:53:14> col:14 used x 'long'
+| |-ParmVarDecl 0x7f8154044550 <line:71:4, line:53:19> col:19 y 'long'
+| `-CompoundStmt 0x7f81540448e8 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f81540446f0 <line:55:3, col:8> 'long' '-=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-DeclRefExpr 0x7f8154044690 <col:3> 'long' lvalue ParmVar 0x7f81540444d8 'x' 'long'
+|   | `-ImplicitCastExpr 0x7f81540446d8 <col:8> 'long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f81540446b8 <col:8> 'int' 24
+|   |-IfStmt 0x7f8154044858 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154044768 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154044750 <col:8> 'long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154044728 <col:8> 'long' lvalue ParmVar 0x7f81540444d8 'x' 'long'
+|   | |-CallExpr 0x7f8154044828 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154044810 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154044788 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f81540447e8 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f81540447b0 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f81540448d0 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f81540448b8 <col:10> 'long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154044890 <col:10> 'long' lvalue ParmVar 0x7f81540444d8 'x' 'long'
+|-FunctionDecl 0x7f8154044a40 <line:71:4, line:31:14> <scratch space>:139:1 flongand 'long *(long *, long)'
+| |-ParmVarDecl 0x7f8154044930 <c_files/pr49095.c:71:4, line:26:15> col:15 used x 'long *'
+| |-ParmVarDecl 0x7f81540449a8 <line:71:4, line:26:20> col:20 used y 'long'
+| `-CompoundStmt 0x7f8154044db0 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f8154044b88 <line:28:3, col:9> 'long' '&=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-UnaryOperator 0x7f8154044b28 <col:3, col:4> 'long' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f8154044b10 <col:4> 'long *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154044ae8 <col:4> 'long *' lvalue ParmVar 0x7f8154044930 'x' 'long *'
+|   | `-ImplicitCastExpr 0x7f8154044b70 <col:9> 'long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8154044b48 <col:9> 'long' lvalue ParmVar 0x7f81540449a8 'y' 'long'
+|   |-IfStmt 0x7f8154044d20 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154044c38 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154044c20 <col:8, col:9> 'long' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154044c00 <col:8, col:9> 'long' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154044be8 <col:9> 'long *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154044bc0 <col:9> 'long *' lvalue ParmVar 0x7f8154044930 'x' 'long *'
+|   | |-CallExpr 0x7f8154044cc0 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154044ca8 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154044c58 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154044d08 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154044cf0 <col:10> 'long *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154044c80 <col:10> 'long *' lvalue ParmVar 0x7f8154044930 'x' 'long *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154044d98 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154044d80 <col:10> 'long *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154044d58 <col:10> 'long *' lvalue ParmVar 0x7f8154044930 'x' 'long *'
+|-FunctionDecl 0x7f8154044f08 <line:71:4, line:40:14> <scratch space>:141:1 glongand 'long (long, long)'
+| |-ParmVarDecl 0x7f8154044df8 <c_files/pr49095.c:71:4, line:35:14> col:14 used x 'long'
+| |-ParmVarDecl 0x7f8154044e70 <line:71:4, line:35:19> col:19 used y 'long'
+| `-CompoundStmt 0x7f8154039810 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f8154039618 <line:37:3, col:8> 'long' '&=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-DeclRefExpr 0x7f8154044fb0 <col:3> 'long' lvalue ParmVar 0x7f8154044df8 'x' 'long'
+|   | `-ImplicitCastExpr 0x7f8154039600 <col:8> 'long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8154044fd8 <col:8> 'long' lvalue ParmVar 0x7f8154044e70 'y' 'long'
+|   |-IfStmt 0x7f8154039780 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154039690 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154039678 <col:8> 'long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154039650 <col:8> 'long' lvalue ParmVar 0x7f8154044df8 'x' 'long'
+|   | |-CallExpr 0x7f8154039750 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154039738 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f81540396b0 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154039710 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f81540396d8 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f81540397f8 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f81540397e0 <col:10> 'long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f81540397b8 <col:10> 'long' lvalue ParmVar 0x7f8154044df8 'x' 'long'
+|-FunctionDecl 0x7f81540398e8 <line:71:4, line:49:14> <scratch space>:143:1 hlongand 'long *(long *)'
+| |-ParmVarDecl 0x7f8154039858 <c_files/pr49095.c:71:4, line:44:15> col:15 used x 'long *'
+| `-CompoundStmt 0x7f8154039c48 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f8154039a20 <line:46:3, col:9> 'long' '&=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-UnaryOperator 0x7f81540399c8 <col:3, col:4> 'long' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f81540399b0 <col:4> 'long *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154039988 <col:4> 'long *' lvalue ParmVar 0x7f8154039858 'x' 'long *'
+|   | `-ImplicitCastExpr 0x7f8154039a08 <col:9> 'long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f81540399e8 <col:9> 'int' 24
+|   |-IfStmt 0x7f8154039bb8 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154039ad0 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154039ab8 <col:8, col:9> 'long' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f8154039a98 <col:8, col:9> 'long' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f8154039a80 <col:9> 'long *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f8154039a58 <col:9> 'long *' lvalue ParmVar 0x7f8154039858 'x' 'long *'
+|   | |-CallExpr 0x7f8154039b58 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154039b40 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154039af0 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f8154039ba0 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f8154039b88 <col:10> 'long *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8154039b18 <col:10> 'long *' lvalue ParmVar 0x7f8154039858 'x' 'long *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8154039c30 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f8154039c18 <col:10> 'long *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8154039bf0 <col:10> 'long *' lvalue ParmVar 0x7f8154039858 'x' 'long *'
+|-FunctionDecl 0x7f8154039da0 <line:71:4, line:58:14> <scratch space>:145:1 ilongand 'long (long, long)'
+| |-ParmVarDecl 0x7f8154039c90 <c_files/pr49095.c:71:4, line:53:14> col:14 used x 'long'
+| |-ParmVarDecl 0x7f8154039d08 <line:71:4, line:53:19> col:19 y 'long'
+| `-CompoundStmt 0x7f815403a0a0 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f8154039ea8 <line:55:3, col:8> 'long' '&=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-DeclRefExpr 0x7f8154039e48 <col:3> 'long' lvalue ParmVar 0x7f8154039c90 'x' 'long'
+|   | `-ImplicitCastExpr 0x7f8154039e90 <col:8> 'long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f8154039e70 <col:8> 'int' 24
+|   |-IfStmt 0x7f815403a010 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8154039f20 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f8154039f08 <col:8> 'long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8154039ee0 <col:8> 'long' lvalue ParmVar 0x7f8154039c90 'x' 'long'
+|   | |-CallExpr 0x7f8154039fe0 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f8154039fc8 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8154039f40 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f8154039fa0 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8154039f68 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815403a088 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f815403a070 <col:10> 'long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815403a048 <col:10> 'long' lvalue ParmVar 0x7f8154039c90 'x' 'long'
+|-FunctionDecl 0x7f815403a1f8 <line:71:4, line:31:14> <scratch space>:147:1 flongor 'long *(long *, long)'
+| |-ParmVarDecl 0x7f815403a0e8 <c_files/pr49095.c:71:4, line:26:15> col:15 used x 'long *'
+| |-ParmVarDecl 0x7f815403a160 <line:71:4, line:26:20> col:20 used y 'long'
+| `-CompoundStmt 0x7f815403a568 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f815403a340 <line:28:3, col:9> 'long' '|=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-UnaryOperator 0x7f815403a2e0 <col:3, col:4> 'long' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f815403a2c8 <col:4> 'long *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815403a2a0 <col:4> 'long *' lvalue ParmVar 0x7f815403a0e8 'x' 'long *'
+|   | `-ImplicitCastExpr 0x7f815403a328 <col:9> 'long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f815403a300 <col:9> 'long' lvalue ParmVar 0x7f815403a160 'y' 'long'
+|   |-IfStmt 0x7f815403a4d8 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815403a3f0 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815403a3d8 <col:8, col:9> 'long' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f815403a3b8 <col:8, col:9> 'long' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f815403a3a0 <col:9> 'long *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f815403a378 <col:9> 'long *' lvalue ParmVar 0x7f815403a0e8 'x' 'long *'
+|   | |-CallExpr 0x7f815403a478 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f815403a460 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815403a410 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f815403a4c0 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f815403a4a8 <col:10> 'long *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f815403a438 <col:10> 'long *' lvalue ParmVar 0x7f815403a0e8 'x' 'long *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815403a550 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f815403a538 <col:10> 'long *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815403a510 <col:10> 'long *' lvalue ParmVar 0x7f815403a0e8 'x' 'long *'
+|-FunctionDecl 0x7f815403c110 <line:71:4, line:40:14> <scratch space>:149:1 glongor 'long (long, long)'
+| |-ParmVarDecl 0x7f815403c000 <c_files/pr49095.c:71:4, line:35:14> col:14 used x 'long'
+| |-ParmVarDecl 0x7f815403c078 <line:71:4, line:35:19> col:19 used y 'long'
+| `-CompoundStmt 0x7f815403c418 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f815403c220 <line:37:3, col:8> 'long' '|=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-DeclRefExpr 0x7f815403c1b8 <col:3> 'long' lvalue ParmVar 0x7f815403c000 'x' 'long'
+|   | `-ImplicitCastExpr 0x7f815403c208 <col:8> 'long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f815403c1e0 <col:8> 'long' lvalue ParmVar 0x7f815403c078 'y' 'long'
+|   |-IfStmt 0x7f815403c388 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815403c298 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815403c280 <col:8> 'long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815403c258 <col:8> 'long' lvalue ParmVar 0x7f815403c000 'x' 'long'
+|   | |-CallExpr 0x7f815403c358 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f815403c340 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815403c2b8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f815403c318 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f815403c2e0 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815403c400 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f815403c3e8 <col:10> 'long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815403c3c0 <col:10> 'long' lvalue ParmVar 0x7f815403c000 'x' 'long'
+|-FunctionDecl 0x7f815403c4f0 <line:71:4, line:49:14> <scratch space>:151:1 hlongor 'long *(long *)'
+| |-ParmVarDecl 0x7f815403c460 <c_files/pr49095.c:71:4, line:44:15> col:15 used x 'long *'
+| `-CompoundStmt 0x7f815403c850 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f815403c628 <line:46:3, col:9> 'long' '|=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-UnaryOperator 0x7f815403c5d0 <col:3, col:4> 'long' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f815403c5b8 <col:4> 'long *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815403c590 <col:4> 'long *' lvalue ParmVar 0x7f815403c460 'x' 'long *'
+|   | `-ImplicitCastExpr 0x7f815403c610 <col:9> 'long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f815403c5f0 <col:9> 'int' 24
+|   |-IfStmt 0x7f815403c7c0 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815403c6d8 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815403c6c0 <col:8, col:9> 'long' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f815403c6a0 <col:8, col:9> 'long' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f815403c688 <col:9> 'long *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f815403c660 <col:9> 'long *' lvalue ParmVar 0x7f815403c460 'x' 'long *'
+|   | |-CallExpr 0x7f815403c760 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f815403c748 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815403c6f8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f815403c7a8 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f815403c790 <col:10> 'long *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f815403c720 <col:10> 'long *' lvalue ParmVar 0x7f815403c460 'x' 'long *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815403c838 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f815403c820 <col:10> 'long *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815403c7f8 <col:10> 'long *' lvalue ParmVar 0x7f815403c460 'x' 'long *'
+|-FunctionDecl 0x7f815403c9a8 <line:71:4, line:58:14> <scratch space>:153:1 ilongor 'long (long, long)'
+| |-ParmVarDecl 0x7f815403c898 <c_files/pr49095.c:71:4, line:53:14> col:14 used x 'long'
+| |-ParmVarDecl 0x7f815403c910 <line:71:4, line:53:19> col:19 y 'long'
+| `-CompoundStmt 0x7f815403cca8 <col:22, line:58:14>
+|   |-CompoundAssignOperator 0x7f815403cab0 <line:55:3, col:8> 'long' '|=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-DeclRefExpr 0x7f815403ca50 <col:3> 'long' lvalue ParmVar 0x7f815403c898 'x' 'long'
+|   | `-ImplicitCastExpr 0x7f815403ca98 <col:8> 'long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f815403ca78 <col:8> 'int' 24
+|   |-IfStmt 0x7f815403cc18 <line:56:3, line:57:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815403cb28 <line:56:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815403cb10 <col:8> 'long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815403cae8 <col:8> 'long' lvalue ParmVar 0x7f815403c898 'x' 'long'
+|   | |-CallExpr 0x7f815403cbe8 <line:57:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f815403cbd0 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815403cb48 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f815403cba8 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f815403cb70 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815403cc90 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f815403cc78 <col:10> 'long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815403cc50 <col:10> 'long' lvalue ParmVar 0x7f815403c898 'x' 'long'
+|-FunctionDecl 0x7f815403ce00 <line:71:4, line:31:14> <scratch space>:155:1 flongxor 'long *(long *, long)'
+| |-ParmVarDecl 0x7f815403ccf0 <c_files/pr49095.c:71:4, line:26:15> col:15 used x 'long *'
+| |-ParmVarDecl 0x7f815403cd68 <line:71:4, line:26:20> col:20 used y 'long'
+| `-CompoundStmt 0x7f815403a778 <col:23, line:31:14>
+|   |-CompoundAssignOperator 0x7f815403cf48 <line:28:3, col:9> 'long' '^=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-UnaryOperator 0x7f815403cee8 <col:3, col:4> 'long' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f815403ced0 <col:4> 'long *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815403cea8 <col:4> 'long *' lvalue ParmVar 0x7f815403ccf0 'x' 'long *'
+|   | `-ImplicitCastExpr 0x7f815403cf30 <col:9> 'long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f815403cf08 <col:9> 'long' lvalue ParmVar 0x7f815403cd68 'y' 'long'
+|   |-IfStmt 0x7f815403a6e8 <line:29:3, line:30:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815403a600 <line:29:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815403cfe0 <col:8, col:9> 'long' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f815403cfc0 <col:8, col:9> 'long' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f815403cfa8 <col:9> 'long *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f815403cf80 <col:9> 'long *' lvalue ParmVar 0x7f815403ccf0 'x' 'long *'
+|   | |-CallExpr 0x7f815403a688 <line:30:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f815403a670 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815403a620 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f815403a6d0 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f815403a6b8 <col:10> 'long *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f815403a648 <col:10> 'long *' lvalue ParmVar 0x7f815403ccf0 'x' 'long *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815403a760 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f815403a748 <col:10> 'long *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815403a720 <col:10> 'long *' lvalue ParmVar 0x7f815403ccf0 'x' 'long *'
+|-FunctionDecl 0x7f815403a8d0 <line:71:4, line:40:14> <scratch space>:157:1 glongxor 'long (long, long)'
+| |-ParmVarDecl 0x7f815403a7c0 <c_files/pr49095.c:71:4, line:35:14> col:14 used x 'long'
+| |-ParmVarDecl 0x7f815403a838 <line:71:4, line:35:19> col:19 used y 'long'
+| `-CompoundStmt 0x7f815403abd8 <col:22, line:40:14>
+|   |-CompoundAssignOperator 0x7f815403a9e0 <line:37:3, col:8> 'long' '^=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-DeclRefExpr 0x7f815403a978 <col:3> 'long' lvalue ParmVar 0x7f815403a7c0 'x' 'long'
+|   | `-ImplicitCastExpr 0x7f815403a9c8 <col:8> 'long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f815403a9a0 <col:8> 'long' lvalue ParmVar 0x7f815403a838 'y' 'long'
+|   |-IfStmt 0x7f815403ab48 <line:38:3, line:39:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815403aa58 <line:38:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815403aa40 <col:8> 'long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815403aa18 <col:8> 'long' lvalue ParmVar 0x7f815403a7c0 'x' 'long'
+|   | |-CallExpr 0x7f815403ab18 <line:39:5, col:20> 'void'
+|   | | |-ImplicitCastExpr 0x7f815403ab00 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815403aa78 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-CStyleCastExpr 0x7f815403aad8 <col:10, col:19> 'void *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f815403aaa0 <col:19> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815403abc0 <line:40:3, col:10>
+|     `-ImplicitCastExpr 0x7f815403aba8 <col:10> 'long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815403ab80 <col:10> 'long' lvalue ParmVar 0x7f815403a7c0 'x' 'long'
+|-FunctionDecl 0x7f815403acb0 <line:71:4, line:49:14> <scratch space>:159:1 hlongxor 'long *(long *)'
+| |-ParmVarDecl 0x7f815403ac20 <c_files/pr49095.c:71:4, line:44:15> col:15 used x 'long *'
+| `-CompoundStmt 0x7f815403b010 <col:18, line:49:14>
+|   |-CompoundAssignOperator 0x7f815403ade8 <line:46:3, col:9> 'long' '^=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-UnaryOperator 0x7f815403ad90 <col:3, col:4> 'long' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f815403ad78 <col:4> 'long *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f815403ad50 <col:4> 'long *' lvalue ParmVar 0x7f815403ac20 'x' 'long *'
+|   | `-ImplicitCastExpr 0x7f815403add0 <col:9> 'long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f815403adb0 <col:9> 'int' 24
+|   |-IfStmt 0x7f815403af80 <line:47:3, line:48:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f815403ae98 <line:47:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f815403ae80 <col:8, col:9> 'long' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f815403ae60 <col:8, col:9> 'long' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f815403ae48 <col:9> 'long *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f815403ae20 <col:9> 'long *' lvalue ParmVar 0x7f815403ac20 'x' 'long *'
+|   | |-CallExpr 0x7f815403af20 <line:48:5, col:11> 'void'
+|   | | |-ImplicitCastExpr 0x7f815403af08 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f815403aeb8 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+|   | | `-ImplicitCastExpr 0x7f815403af68 <col:10> 'void *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7f815403af50 <col:10> 'long *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f815403aee0 <col:10> 'long *' lvalue ParmVar 0x7f815403ac20 'x' 'long *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f815403aff8 <line:49:3, col:10>
+|     `-ImplicitCastExpr 0x7f815403afe0 <col:10> 'long *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f815403afb8 <col:10> 'long *' lvalue ParmVar 0x7f815403ac20 'x' 'long *'
+`-FunctionDecl 0x7f815403b168 <line:71:4, line:58:14> <scratch space>:161:1 ilongxor 'long (long, long)'
+  |-ParmVarDecl 0x7f815403b058 <c_files/pr49095.c:71:4, line:53:14> col:14 used x 'long'
+  |-ParmVarDecl 0x7f815403b0d0 <line:71:4, line:53:19> col:19 y 'long'
+  `-CompoundStmt 0x7f815403b468 <col:22, line:58:14>
+    |-CompoundAssignOperator 0x7f815403b270 <line:55:3, col:8> 'long' '^=' ComputeLHSTy='long' ComputeResultTy='long'
+    | |-DeclRefExpr 0x7f815403b210 <col:3> 'long' lvalue ParmVar 0x7f815403b058 'x' 'long'
+    | `-ImplicitCastExpr 0x7f815403b258 <col:8> 'long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f815403b238 <col:8> 'int' 24
+    |-IfStmt 0x7f815403b3d8 <line:56:3, line:57:20>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7f815403b2e8 <line:56:7, col:8> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7f815403b2d0 <col:8> 'long' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f815403b2a8 <col:8> 'long' lvalue ParmVar 0x7f815403b058 'x' 'long'
+    | |-CallExpr 0x7f815403b3a8 <line:57:5, col:20> 'void'
+    | | |-ImplicitCastExpr 0x7f815403b390 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7f815403b308 <col:5> 'void (void *)' Function 0x7f8154025a00 'foo' 'void (void *)'
+    | | `-CStyleCastExpr 0x7f815403b368 <col:10, col:19> 'void *' <NullToPointer>
+    | |   `-IntegerLiteral 0x7f815403b330 <col:19> 'int' 0
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f815403b450 <line:58:3, col:10>
+      `-ImplicitCastExpr 0x7f815403b438 <col:10> 'long' <LValueToRValue>
+        `-DeclRefExpr 0x7f815403b410 <col:10> 'long' lvalue ParmVar 0x7f815403b058 'x' 'long'

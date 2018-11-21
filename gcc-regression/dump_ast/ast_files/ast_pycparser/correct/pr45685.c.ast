@@ -1,0 +1,143 @@
+FileAST: 
+  Typedef: uint64_t, [], ['typedef']
+    TypeDecl: uint64_t, []
+      IdentifierType: ['unsigned', 'long', 'long', 'int']
+  Typedef: int64_t, [], ['typedef']
+    TypeDecl: int64_t, []
+      IdentifierType: ['long', 'long', 'int']
+  FuncDef: 
+    Decl: summation_helper_1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: products, [], [], []
+            PtrDecl: []
+              TypeDecl: products, []
+                IdentifierType: ['int64_t']
+          Decl: count, [], [], []
+            TypeDecl: count, []
+              IdentifierType: ['uint64_t']
+        TypeDecl: summation_helper_1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['uint64_t']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: count
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['int64_t']
+            TernaryOp: 
+              BinaryOp: >
+                ArrayRef: 
+                  ID: products
+                  ID: i
+                Constant: int, 0
+              Constant: int, 1
+              UnaryOp: -
+                Constant: int, 1
+          Assignment: *=
+            ArrayRef: 
+              ID: products
+              ID: i
+            ID: val
+          If: 
+            BinaryOp: !=
+              ArrayRef: 
+                ID: products
+                ID: i
+              ID: i
+            Assignment: =
+              ID: val
+              UnaryOp: -
+                ID: val
+          Assignment: =
+            ArrayRef: 
+              ID: products
+              ID: i
+            ID: val
+          Assignment: +=
+            ID: s
+            ID: val
+      Return: 
+        ID: s
+  FuncDef: 
+    Decl: summation_helper_2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: products, [], [], []
+            PtrDecl: []
+              TypeDecl: products, []
+                IdentifierType: ['int64_t']
+          Decl: count, [], [], []
+            TypeDecl: count, []
+              IdentifierType: ['uint64_t']
+        TypeDecl: summation_helper_2, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['uint64_t']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: count
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['int']
+            TernaryOp: 
+              BinaryOp: >
+                ArrayRef: 
+                  ID: products
+                  ID: i
+                Constant: int, 0
+              Constant: int, 1
+              UnaryOp: -
+                Constant: int, 1
+          Assignment: *=
+            ArrayRef: 
+              ID: products
+              ID: i
+            ID: val
+          If: 
+            BinaryOp: !=
+              ArrayRef: 
+                ID: products
+                ID: i
+              ID: i
+            Assignment: =
+              ID: val
+              UnaryOp: -
+                ID: val
+          Assignment: =
+            ArrayRef: 
+              ID: products
+              ID: i
+            ID: val
+          Assignment: +=
+            ID: s
+            ID: val
+      Return: 
+        ID: s

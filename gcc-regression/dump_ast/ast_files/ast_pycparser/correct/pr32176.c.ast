@@ -1,0 +1,72 @@
+FileAST: 
+  Decl: _gfortran_abort, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: _gfortran_abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          IdentifierType: ['int']
+      Decl: xa, [], [], []
+        ArrayDecl: []
+          TypeDecl: xa, []
+            IdentifierType: ['float']
+          Constant: int, 21
+      Assignment: =
+        ID: m
+        Constant: int, 0
+      While: 
+        Constant: int, 1
+        Compound: 
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          While: 
+            Constant: int, 1
+            Compound: 
+              If: 
+                BinaryOp: ==
+                  ArrayRef: 
+                    ID: xa
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['long', 'int']
+                      ID: i
+                  ArrayRef: 
+                    ID: xa
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['long', 'int']
+                      BinaryOp: +
+                        ID: i
+                        ID: m
+                FuncCall: 
+                  ID: _gfortran_abort
+              If: 
+                BinaryOp: ==
+                  ID: i
+                  Constant: int, 10
+                Break: 
+              UnaryOp: p++
+                ID: i
+          If: 
+            BinaryOp: ==
+              ID: m
+              Constant: int, 10
+            Break: 
+          UnaryOp: p++
+            ID: m

@@ -1,0 +1,190 @@
+FileAST: 
+  FuncDef: 
+    Decl: metric_carttosphere, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: cctk_lsh, [], [], []
+            PtrDecl: []
+              TypeDecl: cctk_lsh, []
+                IdentifierType: ['int']
+          Decl: txz, [], [], []
+            TypeDecl: txz, []
+              IdentifierType: ['double']
+          Decl: tyz, [], [], []
+            TypeDecl: tyz, []
+              IdentifierType: ['double']
+          Decl: txx, [], [], []
+            TypeDecl: txx, []
+              IdentifierType: ['double']
+          Decl: tzz, [], [], []
+            TypeDecl: tzz, []
+              IdentifierType: ['double']
+          Decl: sint, [], [], []
+            TypeDecl: sint, []
+              IdentifierType: ['double']
+          Decl: cosp, [], [], []
+            TypeDecl: cosp, []
+              IdentifierType: ['double']
+          Decl: cost, [], [], []
+            TypeDecl: cost, []
+              IdentifierType: ['double']
+          Decl: tyy, [], [], []
+            TypeDecl: tyy, []
+              IdentifierType: ['double']
+          Decl: sinp, [], [], []
+            TypeDecl: sinp, []
+              IdentifierType: ['double']
+          Decl: txy, [], [], []
+            TypeDecl: txy, []
+              IdentifierType: ['double']
+          Decl: grp, [], [], []
+            PtrDecl: []
+              TypeDecl: grp, []
+                IdentifierType: ['double']
+          Decl: grq, [], [], []
+            PtrDecl: []
+              TypeDecl: grq, []
+                IdentifierType: ['double']
+          Decl: r, [], [], []
+            PtrDecl: []
+              TypeDecl: r, []
+                IdentifierType: ['double']
+        TypeDecl: metric_carttosphere, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          BinaryOp: *
+            BinaryOp: *
+              ArrayRef: 
+                ID: cctk_lsh
+                Constant: int, 0
+              ArrayRef: 
+                ID: cctk_lsh
+                Constant: int, 1
+            ArrayRef: 
+              ID: cctk_lsh
+              Constant: int, 2
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: grq
+              ID: i
+            BinaryOp: *
+              BinaryOp: -
+                BinaryOp: +
+                  BinaryOp: -
+                    BinaryOp: +
+                      BinaryOp: +
+                        BinaryOp: -
+                          BinaryOp: +
+                            BinaryOp: *
+                              BinaryOp: *
+                                BinaryOp: *
+                                  ID: cost
+                                  ID: tyy
+                                BinaryOp: *
+                                  ID: sinp
+                                  ID: sinp
+                              ID: sint
+                            BinaryOp: *
+                              BinaryOp: *
+                                BinaryOp: *
+                                  BinaryOp: *
+                                    BinaryOp: *
+                                      Constant: int, 2
+                                      ID: cosp
+                                    ID: cost
+                                  ID: txy
+                                ID: sinp
+                              ID: sint
+                          BinaryOp: *
+                            BinaryOp: *
+                              ID: cost
+                              ID: tzz
+                            ID: sint
+                        BinaryOp: *
+                          BinaryOp: *
+                            BinaryOp: *
+                              BinaryOp: *
+                                ID: cosp
+                                ID: cosp
+                              ID: cost
+                            ID: txx
+                          ID: sint
+                      BinaryOp: *
+                        BinaryOp: *
+                          BinaryOp: *
+                            Constant: int, 2
+                            BinaryOp: *
+                              ID: cost
+                              ID: cost
+                          ID: tyz
+                        ID: sinp
+                    BinaryOp: *
+                      ID: tyz
+                      ID: sinp
+                  BinaryOp: *
+                    BinaryOp: *
+                      BinaryOp: *
+                        Constant: int, 2
+                        ID: cosp
+                      BinaryOp: *
+                        ID: cost
+                        ID: cost
+                    ID: txz
+                BinaryOp: *
+                  ID: cosp
+                  ID: txz
+              ArrayRef: 
+                ID: r
+                ID: i
+          Assignment: =
+            ArrayRef: 
+              ID: grp
+              ID: i
+            BinaryOp: +
+              BinaryOp: -
+                BinaryOp: *
+                  BinaryOp: +
+                    BinaryOp: +
+                      BinaryOp: *
+                        UnaryOp: -
+                          ID: txy
+                        BinaryOp: *
+                          ID: sinp
+                          ID: sinp
+                      BinaryOp: *
+                        BinaryOp: -
+                          BinaryOp: *
+                            ID: cosp
+                            ID: tyy
+                          BinaryOp: *
+                            ID: cosp
+                            ID: txx
+                        ID: sinp
+                    BinaryOp: *
+                      BinaryOp: *
+                        ID: cosp
+                        ID: cosp
+                      ID: txy
+                  ID: sint
+                BinaryOp: *
+                  BinaryOp: *
+                    ID: cost
+                    ID: txz
+                  ID: sinp
+              BinaryOp: *
+                BinaryOp: *
+                  ID: cosp
+                  ID: cost
+                ID: tyz

@@ -1,0 +1,42 @@
+c_files/pr40291.c:6:10: warning: implicitly declaring library function 'memcmp' with type 'int (const void *, const void *, unsigned long)' [-Wimplicit-function-declaration]
+  return memcmp (x, y, z);
+         ^
+c_files/pr40291.c:6:10: note: include the header <string.h> or explicitly provide a declaration for 'memcmp'
+1 warning generated.
+TranslationUnitDecl 0x7fe3f48264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe3f4826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe3f4826740 '__int128'
+|-TypedefDecl 0x7fe3f4826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe3f4826760 'unsigned __int128'
+|-TypedefDecl 0x7fe3f4826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe3f4826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe3f4826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe3f4826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe3f4826dc0 'char *'
+|   `-BuiltinType 0x7fe3f4826560 'char'
+|-TypedefDecl 0x7fe3f48270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe3f4827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe3f4826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe3f4826e58 '__va_list_tag'
+|-FunctionDecl 0x7fe3f4877568 <c_files/pr40291.c:3:1, line:7:1> line:4:1 foo 'int (void *, char *, unsigned long long)'
+| |-ParmVarDecl 0x7fe3f4827138 <col:6, col:12> col:12 used x 'void *'
+| |-ParmVarDecl 0x7fe3f4877400 <col:15, col:21> col:21 used y 'char *'
+| |-ParmVarDecl 0x7fe3f4877478 <col:24, col:43> col:43 used z 'unsigned long long'
+| `-CompoundStmt 0x7fe3f4877e78 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7fe3f4877e60 <line:6:3, col:25>
+|     `-CallExpr 0x7fe3f4877d90 <col:10, col:25> 'int'
+|       |-ImplicitCastExpr 0x7fe3f4877d78 <col:10> 'int (*)(const void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe3f4877c60 <col:10> 'int (const void *, const void *, unsigned long)' Function 0x7fe3f4877a90 'memcmp' 'int (const void *, const void *, unsigned long)'
+|       |-ImplicitCastExpr 0x7fe3f4877de8 <col:18> 'const void *' <BitCast>
+|       | `-ImplicitCastExpr 0x7fe3f4877dd0 <col:18> 'void *' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fe3f4877c88 <col:18> 'void *' lvalue ParmVar 0x7fe3f4827138 'x' 'void *'
+|       |-ImplicitCastExpr 0x7fe3f4877e18 <col:21> 'const void *' <BitCast>
+|       | `-ImplicitCastExpr 0x7fe3f4877e00 <col:21> 'char *' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fe3f4877cb0 <col:21> 'char *' lvalue ParmVar 0x7fe3f4877400 'y' 'char *'
+|       `-ImplicitCastExpr 0x7fe3f4877e48 <col:24> 'unsigned long' <IntegralCast>
+|         `-ImplicitCastExpr 0x7fe3f4877e30 <col:24> 'unsigned long long' <LValueToRValue>
+|           `-DeclRefExpr 0x7fe3f4877cd8 <col:24> 'unsigned long long' lvalue ParmVar 0x7fe3f4877478 'z' 'unsigned long long'
+`-FunctionDecl 0x7fe3f4877a90 <col:10> col:10 implicit used memcmp 'int (const void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7fe3f4877b28 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fe3f4877b88 <<invalid sloc>> <invalid sloc> 'const void *'
+  `-ParmVarDecl 0x7fe3f4877be8 <<invalid sloc>> <invalid sloc> 'unsigned long'

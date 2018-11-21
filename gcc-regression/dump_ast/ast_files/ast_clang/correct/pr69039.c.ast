@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7fa9008264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa900826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa900826740 '__int128'
+|-TypedefDecl 0x7fa900826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa900826760 'unsigned __int128'
+|-TypedefDecl 0x7fa900826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa900826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa900826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa900826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa900826dc0 'char *'
+|   `-BuiltinType 0x7fa900826560 'char'
+|-TypedefDecl 0x7fa9008270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa900827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa900826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa900826e58 '__va_list_tag'
+|-VarDecl 0x7fa900827138 <c_files/pr69039.c:4:1, col:14> col:14 used b 'unsigned int'
+`-FunctionDecl 0x7fa901025ac8 <line:6:1, line:15:1> line:7:1 fn1 'unsigned int (unsigned int)'
+  |-ParmVarDecl 0x7fa901025a00 <col:6, col:19> col:19 used d 'unsigned int'
+  `-CompoundStmt 0x7fa901025e68 <line:8:1, line:15:1>
+    |-DeclStmt 0x7fa901025be0 <line:9:3, col:8>
+    | `-VarDecl 0x7fa901025b80 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7fa901025dd8 <line:11:3, line:12:10>
+    | |-BinaryOperator 0x7fa901025c40 <line:11:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fa901025bf8 <col:8> 'int' lvalue Var 0x7fa901025b80 'i' 'int'
+    | | `-IntegerLiteral 0x7fa901025c20 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa901025cc8 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fa901025cb0 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa901025c68 <col:15> 'int' lvalue Var 0x7fa901025b80 'i' 'int'
+    | | `-IntegerLiteral 0x7fa901025c90 <col:19> 'int' 1000
+    | |-UnaryOperator 0x7fa901025d18 <col:25, col:26> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fa901025cf0 <col:25> 'int' lvalue Var 0x7fa901025b80 'i' 'int'
+    | `-CompoundAssignOperator 0x7fa901025da0 <line:12:5, col:10> 'unsigned int' '|=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    |   |-DeclRefExpr 0x7fa901025d38 <col:5> 'unsigned int' lvalue Var 0x7fa900827138 'b' 'unsigned int'
+    |   `-ImplicitCastExpr 0x7fa901025d88 <col:10> 'unsigned int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fa901025d60 <col:10> 'unsigned int' lvalue ParmVar 0x7fa901025a00 'd' 'unsigned int'
+    `-ReturnStmt 0x7fa901025e50 <line:14:3, col:10>
+      `-ImplicitCastExpr 0x7fa901025e38 <col:10> 'unsigned int' <LValueToRValue>
+        `-DeclRefExpr 0x7fa901025e10 <col:10> 'unsigned int' lvalue Var 0x7fa900827138 'b' 'unsigned int'

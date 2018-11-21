@@ -1,0 +1,130 @@
+FileAST: 
+  Decl: global, [], [], []
+    TypeDecl: global, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: lceil_float, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: lceil_float, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: b
+        Assignment: =
+          ID: global
+          FuncCall: 
+            ID: __builtin_lceilf
+            ExprList: 
+              ID: x
+  FuncDef: 
+    Decl: lceil_double, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: lceil_double, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: b
+        Assignment: =
+          ID: global
+          FuncCall: 
+            ID: __builtin_lceil
+            ExprList: 
+              ID: x
+  FuncDef: 
+    Decl: lfloor_float, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: lfloor_float, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: b
+        Assignment: =
+          ID: global
+          FuncCall: 
+            ID: __builtin_lfloorf
+            ExprList: 
+              ID: x
+  FuncDef: 
+    Decl: lfloor_double, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: lfloor_double, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: b
+        Assignment: =
+          ID: global
+          FuncCall: 
+            ID: __builtin_lfloor
+            ExprList: 
+              ID: x
+  FuncDef: 
+    Decl: lround_float, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: lround_float, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: b
+        Assignment: =
+          ID: global
+          FuncCall: 
+            ID: __builtin_lroundf
+            ExprList: 
+              ID: x
+  FuncDef: 
+    Decl: lround_double, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: lround_double, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: b
+        Assignment: =
+          ID: global
+          FuncCall: 
+            ID: __builtin_lround
+            ExprList: 
+              ID: x

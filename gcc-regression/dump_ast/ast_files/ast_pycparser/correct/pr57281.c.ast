@@ -1,0 +1,89 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    PtrDecl: []
+      TypeDecl: e, []
+        IdentifierType: ['int']
+    UnaryOp: &
+      ID: d
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['long', 'long']
+  Decl: g, [], [], []
+    PtrDecl: []
+      TypeDecl: g, []
+        IdentifierType: ['long', 'long']
+    UnaryOp: &
+      ID: c
+  Decl: f, ['volatile'], [], []
+    TypeDecl: f, ['volatile']
+      IdentifierType: ['long', 'long']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: h, [], [], []
+            TypeDecl: h, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+        Assignment: =
+          UnaryOp: *
+            ID: g
+          ID: b
+      Return: 
+        TernaryOp: 
+          BinaryOp: ==
+            ID: h
+            Constant: int, 0
+          ID: j
+          Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['int']
+        ID: a
+      For: 
+        BinaryOp: !=
+          ID: b
+          UnaryOp: -
+            Constant: int, 20
+        UnaryOp: p--
+          ID: b
+        Compound: 
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            ID: f
+          Assignment: =
+            UnaryOp: *
+              ID: e
+            Constant: int, 0
+          Assignment: =
+            UnaryOp: *
+              ID: e
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                ID: h
+      Return: 
+        Constant: int, 0

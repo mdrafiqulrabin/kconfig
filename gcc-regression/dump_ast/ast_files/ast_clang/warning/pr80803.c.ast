@@ -1,0 +1,144 @@
+c_files/pr80803.c:30:30: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+int __attribute__((noinline, noclone))
+                             ^
+c_files/pr80803.c:39:30: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+int __attribute__((noinline, noclone))
+                             ^
+c_files/pr80803.c:45:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+3 warnings generated.
+TranslationUnitDecl 0x7ff93281d8d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff93281de20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff93281db40 '__int128'
+|-TypedefDecl 0x7ff93281de90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff93281db60 'unsigned __int128'
+|-TypedefDecl 0x7ff93281e168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff93281df70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff93281dee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff93281e200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff93281e1c0 'char *'
+|   `-BuiltinType 0x7ff93281d960 'char'
+|-TypedefDecl 0x7ff93281e4c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff93281e470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff93281e2e0 'struct __va_list_tag'
+|     `-Record 0x7ff93281e258 '__va_list_tag'
+|-RecordDecl 0x7ff93281e520 <c_files/pr80803.c:4:1, line:9:1> line:4:8 struct S0 definition
+| |-FieldDecl 0x7ff93286e818 <line:6:3, col:16> col:12 referenced a 'unsigned int'
+| | `-IntegerLiteral 0x7ff93281e5d0 <col:16> 'int' 15
+| |-FieldDecl 0x7ff93286e878 <line:7:3, col:7> col:7 referenced b 'int'
+| `-FieldDecl 0x7ff93286e8d8 <line:8:3, col:7> col:7 referenced c 'int'
+|-RecordDecl 0x7ff93286e920 <line:11:1, line:15:1> line:11:8 struct S1 definition
+| |-FieldDecl 0x7ff93286ea20 <line:13:3, col:13> col:13 referenced s0 'struct S0':'struct S0'
+| `-FieldDecl 0x7ff93286ea80 <line:14:3, col:7> col:7 referenced e 'int'
+|-RecordDecl 0x7ff93286eb20 <line:17:1, line:21:1> line:17:8 struct Z definition
+| |-PackedAttr 0x7ff93286ec88 <line:21:18>
+| |-FieldDecl 0x7ff93286ebe0 <line:19:3, col:8> col:8 c 'char'
+| `-FieldDecl 0x7ff93286ec40 <line:20:3, col:7> col:7 referenced z 'int'
+|-RecordDecl 0x7ff93286ecd0 <line:23:1, line:27:1> line:23:7 union U definition
+| |-FieldDecl 0x7ff93286edd0 <line:25:3, col:13> col:13 referenced s1 'struct S1':'struct S1'
+| `-FieldDecl 0x7ff93286ee70 <line:26:3, col:12> col:12 referenced z 'struct Z':'struct Z'
+|-FunctionDecl 0x7ff93286efd8 <line:30:1, line:34:1> line:31:1 used return_zero 'int (void)'
+| |-CompoundStmt 0x7ff93286f130 <line:32:1, line:34:1>
+| | `-ReturnStmt 0x7ff93286f118 <line:33:3, col:10>
+| |   `-IntegerLiteral 0x7ff93286f0f8 <col:10> 'int' 0
+| `-NoInlineAttr 0x7ff93286f070 <line:30:20>
+|-VarDecl 0x7ff93286f1a0 <line:36:1, col:18> col:18 used gu 'volatile union U':'volatile union U'
+|-VarDecl 0x7ff93286f220 <line:37:1, col:11> col:11 used gs 'struct S0':'struct S0'
+|-FunctionDecl 0x7ff93286f2d0 <line:39:1, line:45:1> line:40:1 used check_outcome 'int ()'
+| |-CompoundStmt 0x7ff93286f750 <line:41:1, line:45:1>
+| | `-IfStmt 0x7ff93286f718 <line:42:3, line:44:22>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7ff93286f548 <line:42:7, line:43:18> 'int' '||'
+| |   | |-BinaryOperator 0x7ff93286f460 <line:42:7, col:15> 'int' '!='
+| |   | | |-ImplicitCastExpr 0x7ff93286f448 <col:7, col:10> 'int' <IntegralCast>
+| |   | | | `-ImplicitCastExpr 0x7ff93286f430 <col:7, col:10> 'unsigned int' <LValueToRValue>
+| |   | | |   `-MemberExpr 0x7ff93286f3d8 <col:7, col:10> 'unsigned int' lvalue bitfield .a 0x7ff93286e818
+| |   | | |     `-DeclRefExpr 0x7ff93286f3b0 <col:7> 'struct S0':'struct S0' lvalue Var 0x7ff93286f220 'gs' 'struct S0':'struct S0'
+| |   | | `-IntegerLiteral 0x7ff93286f410 <col:15> 'int' 6
+| |   | `-BinaryOperator 0x7ff93286f520 <line:43:10, col:18> 'int' '!='
+| |   |   |-ImplicitCastExpr 0x7ff93286f508 <col:10, col:13> 'int' <LValueToRValue>
+| |   |   | `-MemberExpr 0x7ff93286f4b0 <col:10, col:13> 'int' lvalue .b 0x7ff93286e878
+| |   |   |   `-DeclRefExpr 0x7ff93286f488 <col:10> 'struct S0':'struct S0' lvalue Var 0x7ff93286f220 'gs' 'struct S0':'struct S0'
+| |   |   `-IntegerLiteral 0x7ff93286f4e8 <col:18> 'int' 80000
+| |   |-CallExpr 0x7ff93286f6f0 <line:44:5, col:22> 'void'
+| |   | `-ImplicitCastExpr 0x7ff93286f6d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| |   |   `-DeclRefExpr 0x7ff93286f680 <col:5> '<builtin fn type>' Function 0x7ff93286f5a0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7ff93286f368 <line:39:20>
+|-FunctionDecl 0x7ff93286f5a0 <line:44:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7ff93286f638 <col:5> Implicit
+`-FunctionDecl 0x7ff9328709c8 <line:47:1, line:72:1> line:48:1 main 'int (int, char **)'
+  |-ParmVarDecl 0x7ff93286f788 <col:7, col:11> col:11 argc 'int'
+  |-ParmVarDecl 0x7ff9328708b0 <col:17, col:28> col:23 argv 'char **':'char **'
+  `-CompoundStmt 0x7ff932871790 <line:49:1, line:72:1>
+    |-DeclStmt 0x7ff932870af0 <line:50:3, col:12>
+    | `-VarDecl 0x7ff932870a90 <col:3, col:11> col:11 used u 'union U':'union U'
+    |-DeclStmt 0x7ff932870c20 <line:51:3, col:16>
+    | |-VarDecl 0x7ff932870b28 <col:3, col:13> col:13 used m 'struct S1':'struct S1'
+    | `-VarDecl 0x7ff932870ba8 <col:3, col:15> col:15 used n 'struct S1':'struct S1'
+    |-DeclStmt 0x7ff932870cb8 <line:52:3, col:14>
+    | `-VarDecl 0x7ff932870c58 <col:3, col:13> col:13 used l 'struct S0':'struct S0'
+    |-IfStmt 0x7ff9328715f8 <line:54:3, line:67:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7ff932870d40 <line:54:7, col:20> 'int'
+    | | `-ImplicitCastExpr 0x7ff932870d28 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff932870cd0 <col:7> 'int (void)' Function 0x7ff93286efd8 'return_zero' 'int (void)'
+    | |-BinaryOperator 0x7ff932870e20 <line:55:5, col:13> 'int' '='
+    | | |-MemberExpr 0x7ff932870dc8 <col:5, col:9> 'int' lvalue .z 0x7ff93286ec40
+    | | | `-MemberExpr 0x7ff932870d90 <col:5, col:7> 'struct Z':'struct Z' lvalue .z 0x7ff93286ee70
+    | | |   `-DeclRefExpr 0x7ff932870d68 <col:5> 'union U':'union U' lvalue Var 0x7ff932870a90 'u' 'union U':'union U'
+    | | `-IntegerLiteral 0x7ff932870e00 <col:13> 'int' 20000
+    | `-CompoundStmt 0x7ff9328715a0 <line:57:5, line:67:5>
+    |   |-BinaryOperator 0x7ff932870ff0 <line:58:7, col:19> 'unsigned int' '='
+    |   | |-MemberExpr 0x7ff932870f80 <col:7, col:15> 'unsigned int' lvalue bitfield .a 0x7ff93286e818
+    |   | | `-MemberExpr 0x7ff932870f48 <col:7, col:12> 'struct S0':'struct S0' lvalue .s0 0x7ff93286ea20
+    |   | |   `-MemberExpr 0x7ff932870f10 <col:7, col:9> 'struct S1':'struct S1' lvalue .s1 0x7ff93286edd0
+    |   | |     `-DeclRefExpr 0x7ff932870ee8 <col:7> 'union U':'union U' lvalue Var 0x7ff932870a90 'u' 'union U':'union U'
+    |   | `-ImplicitCastExpr 0x7ff932870fd8 <col:19> 'unsigned int' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7ff932870fb8 <col:19> 'int' 6
+    |   |-BinaryOperator 0x7ff932871108 <line:59:7, col:19> 'int' '='
+    |   | |-MemberExpr 0x7ff9328710b0 <col:7, col:15> 'int' lvalue .b 0x7ff93286e878
+    |   | | `-MemberExpr 0x7ff932871078 <col:7, col:12> 'struct S0':'struct S0' lvalue .s0 0x7ff93286ea20
+    |   | |   `-MemberExpr 0x7ff932871040 <col:7, col:9> 'struct S1':'struct S1' lvalue .s1 0x7ff93286edd0
+    |   | |     `-DeclRefExpr 0x7ff932871018 <col:7> 'union U':'union U' lvalue Var 0x7ff932870a90 'u' 'union U':'union U'
+    |   | `-IntegerLiteral 0x7ff9328710e8 <col:19> 'int' 80000
+    |   |-BinaryOperator 0x7ff9328711e8 <line:60:7, col:16> 'int' '='
+    |   | |-MemberExpr 0x7ff932871190 <col:7, col:12> 'int' lvalue .e 0x7ff93286ea80
+    |   | | `-MemberExpr 0x7ff932871158 <col:7, col:9> 'struct S1':'struct S1' lvalue .s1 0x7ff93286edd0
+    |   | |   `-DeclRefExpr 0x7ff932871130 <col:7> 'union U':'union U' lvalue Var 0x7ff932870a90 'u' 'union U':'union U'
+    |   | `-IntegerLiteral 0x7ff9328711c8 <col:16> 'int' 2
+    |   |-BinaryOperator 0x7ff9328712b0 <line:62:7, col:13> 'struct S1':'struct S1' '='
+    |   | |-DeclRefExpr 0x7ff932871210 <col:7> 'struct S1':'struct S1' lvalue Var 0x7ff932870ba8 'n' 'struct S1':'struct S1'
+    |   | `-ImplicitCastExpr 0x7ff932871298 <col:11, col:13> 'struct S1':'struct S1' <LValueToRValue>
+    |   |   `-MemberExpr 0x7ff932871260 <col:11, col:13> 'struct S1':'struct S1' lvalue .s1 0x7ff93286edd0
+    |   |     `-DeclRefExpr 0x7ff932871238 <col:11> 'union U':'union U' lvalue Var 0x7ff932870a90 'u' 'union U':'union U'
+    |   |-BinaryOperator 0x7ff932871340 <line:63:7, col:11> 'struct S1':'struct S1' '='
+    |   | |-DeclRefExpr 0x7ff9328712d8 <col:7> 'struct S1':'struct S1' lvalue Var 0x7ff932870b28 'm' 'struct S1':'struct S1'
+    |   | `-ImplicitCastExpr 0x7ff932871328 <col:11> 'struct S1':'struct S1' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7ff932871300 <col:11> 'struct S1':'struct S1' lvalue Var 0x7ff932870ba8 'n' 'struct S1':'struct S1'
+    |   |-BinaryOperator 0x7ff932871420 <line:64:7, col:16> 'int' '='
+    |   | |-MemberExpr 0x7ff9328713c8 <col:7, col:12> 'int' lvalue .c 0x7ff93286e8d8
+    |   | | `-MemberExpr 0x7ff932871390 <col:7, col:9> 'struct S0':'struct S0' lvalue .s0 0x7ff93286ea20
+    |   | |   `-DeclRefExpr 0x7ff932871368 <col:7> 'struct S1':'struct S1' lvalue Var 0x7ff932870b28 'm' 'struct S1':'struct S1'
+    |   | `-IntegerLiteral 0x7ff932871400 <col:16> 'int' 0
+    |   |-BinaryOperator 0x7ff9328714e8 <line:65:7, col:13> 'struct S0':'struct S0' '='
+    |   | |-DeclRefExpr 0x7ff932871448 <col:7> 'struct S0':'struct S0' lvalue Var 0x7ff932870c58 'l' 'struct S0':'struct S0'
+    |   | `-ImplicitCastExpr 0x7ff9328714d0 <col:11, col:13> 'struct S0':'struct S0' <LValueToRValue>
+    |   |   `-MemberExpr 0x7ff932871498 <col:11, col:13> 'struct S0':'struct S0' lvalue .s0 0x7ff93286ea20
+    |   |     `-DeclRefExpr 0x7ff932871470 <col:11> 'struct S1':'struct S1' lvalue Var 0x7ff932870b28 'm' 'struct S1':'struct S1'
+    |   `-BinaryOperator 0x7ff932871578 <line:66:7, col:12> 'struct S0':'struct S0' '='
+    |     |-DeclRefExpr 0x7ff932871510 <col:7> 'struct S0':'struct S0' lvalue Var 0x7ff93286f220 'gs' 'struct S0':'struct S0'
+    |     `-ImplicitCastExpr 0x7ff932871560 <col:12> 'struct S0':'struct S0' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ff932871538 <col:12> 'struct S0':'struct S0' lvalue Var 0x7ff932870c58 'l' 'struct S0':'struct S0'
+    |-BinaryOperator 0x7ff932871698 <line:69:3, col:8> 'union U':'union U' '='
+    | |-DeclRefExpr 0x7ff932871630 <col:3> 'volatile union U':'volatile union U' lvalue Var 0x7ff93286f1a0 'gu' 'volatile union U':'volatile union U'
+    | `-ImplicitCastExpr 0x7ff932871680 <col:8> 'union U':'union U' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff932871658 <col:8> 'union U':'union U' lvalue Var 0x7ff932870a90 'u' 'union U':'union U'
+    |-CallExpr 0x7ff932871730 <line:70:3, col:18> 'int'
+    | `-ImplicitCastExpr 0x7ff932871718 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7ff9328716c0 <col:3> 'int ()' Function 0x7ff93286f2d0 'check_outcome' 'int ()'
+    `-ReturnStmt 0x7ff932871778 <line:71:3, col:10>
+      `-IntegerLiteral 0x7ff932871758 <col:10> 'int' 0

@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7fcc800264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcc80026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcc80026740 '__int128'
+|-TypedefDecl 0x7fcc80026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcc80026760 'unsigned __int128'
+|-TypedefDecl 0x7fcc80026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcc80026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcc80026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcc80026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcc80026dc0 'char *'
+|   `-BuiltinType 0x7fcc80026560 'char'
+|-TypedefDecl 0x7fcc800270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcc80027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcc80026ee0 'struct __va_list_tag'
+|     `-Record 0x7fcc80026e58 '__va_list_tag'
+|-RecordDecl 0x7fcc80027120 <c_files/pr70700.c:4:1, line:7:1> line:4:8 struct S definition
+| `-FieldDecl 0x7fcc80077400 <line:6:3, col:8> col:8 referenced m 'long'
+`-FunctionDecl 0x7fcc80077610 <line:9:1, line:15:1> line:10:1 fn1 'struct S (struct S *)'
+  |-ParmVarDecl 0x7fcc80077500 <col:6, col:16> col:16 used a 'struct S *'
+  `-CompoundStmt 0x7fcc80077930 <line:11:1, line:15:1>
+    |-IfStmt 0x7fcc80077868 <line:12:3, line:13:13>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fcc80077768 <line:12:7, col:10> 'long' <LValueToRValue>
+    | | `-MemberExpr 0x7fcc80077730 <col:7, col:10> 'long' lvalue ->m 0x7fcc80077400
+    | |   `-ImplicitCastExpr 0x7fcc80077718 <col:7> 'struct S *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fcc800776f0 <col:7> 'struct S *' lvalue ParmVar 0x7fcc80077500 'a' 'struct S *'
+    | |-CompoundAssignOperator 0x7fcc80077830 <line:13:5, col:13> 'long' '|=' ComputeLHSTy='long' ComputeResultTy='long'
+    | | |-MemberExpr 0x7fcc800777c0 <col:5, col:8> 'long' lvalue ->m 0x7fcc80077400
+    | | | `-ImplicitCastExpr 0x7fcc800777a8 <col:5> 'struct S *' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fcc80077780 <col:5> 'struct S *' lvalue ParmVar 0x7fcc80077500 'a' 'struct S *'
+    | | `-ImplicitCastExpr 0x7fcc80077818 <col:13> 'long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fcc800777f8 <col:13> 'int' 2
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fcc80077918 <line:14:3, col:11>
+      `-ImplicitCastExpr 0x7fcc80077900 <col:10, col:11> 'struct S':'struct S' <LValueToRValue>
+        `-UnaryOperator 0x7fcc800778e0 <col:10, col:11> 'struct S':'struct S' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fcc800778c8 <col:11> 'struct S *' <LValueToRValue>
+            `-DeclRefExpr 0x7fcc800778a0 <col:11> 'struct S *' lvalue ParmVar 0x7fcc80077500 'a' 'struct S *'

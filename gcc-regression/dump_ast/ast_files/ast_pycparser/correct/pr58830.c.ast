@@ -1,0 +1,233 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  Decl: h, [], [], []
+    TypeDecl: h, []
+      IdentifierType: ['int']
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  Decl: j, [], [], []
+    ArrayDecl: []
+      TypeDecl: j, []
+        IdentifierType: ['int']
+      Constant: int, 6
+  Decl: l, [], [], []
+    PtrDecl: []
+      TypeDecl: l, []
+        IdentifierType: ['int']
+    UnaryOp: &
+      ID: b
+  Decl: m, [], [], []
+    PtrDecl: []
+      TypeDecl: m, []
+        IdentifierType: ['int']
+  Decl: n, [], [], []
+    TypeDecl: n, []
+      IdentifierType: ['int']
+  Decl: o, [], [], []
+    PtrDecl: []
+      TypeDecl: o, []
+        IdentifierType: ['int']
+  Decl: r, [], [], []
+    TypeDecl: r, []
+      IdentifierType: ['int']
+  Decl: k, [], [], []
+    TypeDecl: k, []
+      IdentifierType: ['char']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+        UnaryOp: &
+          ID: k
+      For: 
+        ID: d
+        UnaryOp: p++
+          ID: d
+        If: 
+          ID: i
+          Assignment: =
+            ID: h
+            Constant: int, 0
+          Assignment: =
+            ID: h
+            BinaryOp: ||
+              ID: c
+              Assignment: =
+                ID: r
+                Constant: int, 0
+      For: 
+        Assignment: =
+          ID: f
+          Constant: int, 0
+        BinaryOp: <
+          ID: f
+          Constant: int, 2
+        UnaryOp: p++
+          ID: f
+        Compound: 
+          Decl: q, [], [], []
+            TypeDecl: q, []
+              IdentifierType: ['unsigned', 'int']
+          Assignment: =
+            UnaryOp: *
+              ID: l
+            Constant: int, 0
+          If: 
+            ID: n
+            Assignment: =
+              UnaryOp: *
+                ID: m
+              ID: g
+          If: 
+            ID: g
+            Assignment: =
+              ID: o
+              Constant: int, 0
+          For: 
+            Assignment: =
+              ID: q
+              UnaryOp: -
+                Constant: int, 8
+            BinaryOp: >=
+              ID: q
+              Constant: int, 5
+            UnaryOp: p++
+              ID: q
+            UnaryOp: p--
+              UnaryOp: *
+                ID: p
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo
+      If: 
+        BinaryOp: !=
+          ArrayRef: 
+            ID: j
+            BinaryOp: ^
+              ArrayRef: 
+                ID: j
+                ArrayRef: 
+                  ID: j
+                  ArrayRef: 
+                    ID: j
+                    ArrayRef: 
+                      ID: j
+                      ArrayRef: 
+                        ID: j
+                        ArrayRef: 
+                          ID: j
+                          ArrayRef: 
+                            ID: j
+                            ArrayRef: 
+                              ID: j
+                              ArrayRef: 
+                                ID: j
+                                ArrayRef: 
+                                  ID: j
+                                  ArrayRef: 
+                                    ID: j
+                                    ArrayRef: 
+                                      ID: j
+                                      ArrayRef: 
+                                        ID: j
+                                        ArrayRef: 
+                                          ID: j
+                                          ArrayRef: 
+                                            ID: j
+                                            ArrayRef: 
+                                              ID: j
+                                              ArrayRef: 
+                                                ID: j
+                                                ArrayRef: 
+                                                  ID: j
+                                                  ArrayRef: 
+                                                    ID: j
+                                                    ArrayRef: 
+                                                      ID: j
+                                                      ArrayRef: 
+                                                        ID: j
+                                                        ArrayRef: 
+                                                          ID: j
+                                                          ArrayRef: 
+                                                            ID: j
+                                                            ArrayRef: 
+                                                              ID: j
+                                                              ArrayRef: 
+                                                                ID: j
+                                                                ArrayRef: 
+                                                                  ID: j
+                                                                  ArrayRef: 
+                                                                    ID: j
+                                                                    ArrayRef: 
+                                                                      ID: j
+                                                                      ArrayRef: 
+                                                                        ID: j
+                                                                        ArrayRef: 
+                                                                          ID: j
+                                                                          ArrayRef: 
+                                                                            ID: j
+                                                                            ArrayRef: 
+                                                                              ID: j
+                                                                              ArrayRef: 
+                                                                                ID: j
+                                                                                ArrayRef: 
+                                                                                  ID: j
+                                                                                  ArrayRef: 
+                                                                                    ID: j
+                                                                                    ArrayRef: 
+                                                                                      ID: j
+                                                                                      ArrayRef: 
+                                                                                        ID: j
+                                                                                        ArrayRef: 
+                                                                                          ID: j
+                                                                                          ArrayRef: 
+                                                                                            ID: j
+                                                                                            ArrayRef: 
+                                                                                              ID: j
+                                                                                              ArrayRef: 
+                                                                                                ID: j
+                                                                                                Constant: int, 0
+              BinaryOp: &
+                ID: k
+                Constant: int, 15
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

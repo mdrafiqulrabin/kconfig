@@ -1,0 +1,140 @@
+FileAST: 
+  Decl: temp, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: temp, []
+        IdentifierType: ['char']
+  Decl: ansi_value, [], [], []
+    ArrayDecl: []
+      TypeDecl: ansi_value, []
+        IdentifierType: ['short']
+      Constant: int, 256
+  FuncDef: 
+    Decl: terminal_state, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: terminal_state, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: puc, ['const'], ['static'], []
+        ArrayDecl: []
+          PtrDecl: []
+            TypeDecl: puc, ['const']
+              IdentifierType: ['char']
+        InitList: 
+          Constant: string, ""
+          Constant: string, "<"
+          Constant: string, "="
+          Constant: string, ">"
+          Constant: string, "?"
+          Constant: int, 0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['int']
+      Decl: modes_found, [], [], []
+        TypeDecl: modes_found, []
+          IdentifierType: ['int']
+      Decl: buf, [], [], []
+        ArrayDecl: []
+          TypeDecl: buf, []
+            IdentifierType: ['char']
+          Constant: int, 256
+      Assignment: =
+        ID: k
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+          FuncCall: 
+            ID: __builtin_strlen
+            ExprList: 
+              ID: temp
+      For: 
+        Assignment: =
+          ID: j
+          Assignment: =
+            ID: l
+            Constant: int, 0
+        BinaryOp: &&
+          BinaryOp: <
+            ID: j
+            Constant: int, 255
+          BinaryOp: <
+            BinaryOp: -
+              ID: j
+              ID: l
+            Constant: int, 50
+        UnaryOp: p++
+          ID: j
+        Compound: 
+          FuncCall: 
+            ID: __builtin_sprintf
+            ExprList: 
+              ID: temp
+              Constant: string, "\033[%s%d$p"
+              ArrayRef: 
+                ID: puc
+                ID: i
+              ID: j
+          If: 
+            ArrayRef: 
+              ID: ansi_value
+              Constant: int, 1
+            Compound: 
+              Assignment: =
+                ID: l
+                ID: j
+              Assignment: =
+                ArrayRef: 
+                  ID: buf
+                  ID: k
+                Constant: char, '\0'
+              FuncCall: 
+                ID: put_crlf
+              FuncCall: 
+                ID: ptextln
+                ExprList: 
+                  ID: buf
+              Assignment: =
+                ArrayRef: 
+                  ID: buf
+                  UnaryOp: p++
+                    ID: k
+                Constant: char, ' '
+              Assignment: =
+                ID: k
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+                  FuncCall: 
+                    ID: __builtin_strlen
+                    ExprList: 
+                      ID: temp
+      For: 
+        Assignment: =
+          ID: i
+          Assignment: =
+            ID: j
+            Constant: int, 0
+        BinaryOp: <
+          ID: j
+          ID: modes_found
+        Assignment: =
+          ID: j
+          BinaryOp: >>
+            UnaryOp: ++
+              ID: i
+            Constant: int, 1
+        EmptyStatement: 

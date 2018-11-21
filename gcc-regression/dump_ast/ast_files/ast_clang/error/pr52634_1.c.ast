@@ -1,0 +1,28 @@
+c_files/pr52634_1.c:2:48: error: aliases are not supported on darwin
+extern int cfliteValueCallBacks __attribute__((alias("cfliteKeyCallBacks")));
+                                               ^
+1 error generated.
+TranslationUnitDecl 0x7fa61d8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa61d826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa61d826740 '__int128'
+|-TypedefDecl 0x7fa61d826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa61d826760 'unsigned __int128'
+|-TypedefDecl 0x7fa61d826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa61d826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa61d826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa61d826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa61d826dc0 'char *'
+|   `-BuiltinType 0x7fa61d826560 'char'
+|-TypedefDecl 0x7fa61d8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa61d827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa61d826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa61d826e58 '__va_list_tag'
+|-VarDecl 0x7fa61d827138 <c_files/pr52634_1.c:1:1, col:26> col:5 cfliteKeyCallBacks 'int' cinit
+| `-IntegerLiteral 0x7fa61d8271d8 <col:26> 'int' 5
+|-VarDecl 0x7fa61d877490 <line:2:1, col:12> col:12 cfliteValueCallBacks 'int' extern
+`-FunctionDecl 0x7fa61d8775d0 <line:3:1, line:6:1> line:3:6 baz 'void (void *)'
+  |-ParmVarDecl 0x7fa61d877508 <col:10, col:16> col:16 used ptr 'void *'
+  `-CompoundStmt 0x7fa61d8777d8 <line:4:1, line:6:1>
+    `-GCCAsmStmt 0x7fa61d877778 <line:5:3, col:29>
+      `-ImplicitCastExpr 0x7fa61d877760 <col:25> 'void *' <LValueToRValue>
+        `-DeclRefExpr 0x7fa61d877738 <col:25> 'void *' lvalue ParmVar 0x7fa61d877508 'ptr' 'void *'

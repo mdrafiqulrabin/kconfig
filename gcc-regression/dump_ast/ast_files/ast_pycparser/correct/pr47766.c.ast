@@ -1,0 +1,21 @@
+FileAST: 
+  FuncDef: 
+    Decl: parse_opt, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: key, [], [], []
+            TypeDecl: key, []
+              IdentifierType: ['int']
+        TypeDecl: parse_opt, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: reqdata, [], [], []
+        TypeDecl: reqdata, []
+          Struct: None
+            Decl: arg, [], [], []
+              ArrayDecl: []
+                TypeDecl: arg, []
+                  IdentifierType: ['int']
+                ID: key
+      Return: 
+        Constant: int, 0

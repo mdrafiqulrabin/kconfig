@@ -1,0 +1,60 @@
+TranslationUnitDecl 0x7fecae8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fecae826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fecae826740 '__int128'
+|-TypedefDecl 0x7fecae826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fecae826760 'unsigned __int128'
+|-TypedefDecl 0x7fecae826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fecae826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fecae826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fecae826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fecae826dc0 'char *'
+|   `-BuiltinType 0x7fecae826560 'char'
+|-TypedefDecl 0x7fecae8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fecae827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fecae826ee0 'struct __va_list_tag'
+|     `-Record 0x7fecae826e58 '__va_list_tag'
+|-TypedefDecl 0x7fecae827178 <c_files/pr36991.c:5:1, col:15> col:15 referenced V '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7fecae827140 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7fecae8266c0 'float'
+|-RecordDecl 0x7fecaf026a00 <line:6:9, col:28> col:9 union definition
+| `-FieldDecl 0x7fecaf026c38 <col:17, col:25> col:19 referenced v 'V [4][4]'
+|-TypedefDecl 0x7fecaf026cd0 <col:1, col:30> col:30 referenced U 'union U':'U'
+| `-ElaboratedType 0x7fecaf026c80 'union U' sugar
+|   `-RecordType 0x7fecaf026a90 'U'
+|     `-Record 0x7fecaf026a00 ''
+`-FunctionDecl 0x7fecaf026ff0 <line:8:1, line:12:1> line:9:1 foo 'void (float, float, U *)'
+  |-ParmVarDecl 0x7fecaf026d58 <col:6, col:12> col:12 used x 'float'
+  |-ParmVarDecl 0x7fecaf026dd0 <col:15, col:21> col:21 used y 'float'
+  |-ParmVarDecl 0x7fecaf026eb8 <col:24, col:27> col:27 used z 'U *'
+  `-CompoundStmt 0x7fecaf027660 <line:10:1, line:12:1>
+    `-BinaryOperator 0x7fecaf027638 <line:11:3, col:46> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+      |-ArraySubscriptExpr 0x7fecaf0272b0 <col:3, col:12> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue
+      | |-ImplicitCastExpr 0x7fecaf027298 <col:3, col:9> 'V *' <ArrayToPointerDecay>
+      | | `-ArraySubscriptExpr 0x7fecaf0271f0 <col:3, col:9> 'V [4]' lvalue
+      | |   |-ImplicitCastExpr 0x7fecaf0271d8 <col:3, col:6> 'V (*)[4]' <ArrayToPointerDecay>
+      | |   | `-MemberExpr 0x7fecaf027120 <col:3, col:6> 'V [4][4]' lvalue ->v 0x7fecaf026c38
+      | |   |   `-ImplicitCastExpr 0x7fecaf027108 <col:3> 'U *' <LValueToRValue>
+      | |   |     `-DeclRefExpr 0x7fecaf0270e0 <col:3> 'U *' lvalue ParmVar 0x7fecaf026eb8 'z' 'U *'
+      | |   `-IntegerLiteral 0x7fecaf027158 <col:8> 'int' 1
+      | `-IntegerLiteral 0x7fecaf027218 <col:11> 'int' 0
+      `-BinaryOperator 0x7fecaf027610 <col:16, col:46> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+        |-ArraySubscriptExpr 0x7fecaf0273e8 <col:16, col:25> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue
+        | |-ImplicitCastExpr 0x7fecaf0273d0 <col:16, col:22> 'V *' <ArrayToPointerDecay>
+        | | `-ArraySubscriptExpr 0x7fecaf027388 <col:16, col:22> 'V [4]' lvalue
+        | |   |-ImplicitCastExpr 0x7fecaf027370 <col:16, col:19> 'V (*)[4]' <ArrayToPointerDecay>
+        | |   | `-MemberExpr 0x7fecaf027318 <col:16, col:19> 'V [4][4]' lvalue ->v 0x7fecaf026c38
+        | |   |   `-ImplicitCastExpr 0x7fecaf027300 <col:16> 'U *' <LValueToRValue>
+        | |   |     `-DeclRefExpr 0x7fecaf0272d8 <col:16> 'U *' lvalue ParmVar 0x7fecaf026eb8 'z' 'U *'
+        | |   `-IntegerLiteral 0x7fecaf027350 <col:21> 'int' 0
+        | `-IntegerLiteral 0x7fecaf0273b0 <col:24> 'int' 1
+        `-ImplicitCastExpr 0x7fecaf0275f8 <col:29, col:46> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+          `-CompoundLiteralExpr 0x7fecaf0275d0 <col:29, col:46> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue
+            `-InitListExpr 0x7fecaf027510 <col:33, col:46> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+              |-ImplicitCastExpr 0x7fecaf027570 <col:35> 'float' <LValueToRValue>
+              | `-DeclRefExpr 0x7fecaf027420 <col:35> 'float' lvalue ParmVar 0x7fecaf026d58 'x' 'float'
+              |-ImplicitCastExpr 0x7fecaf027588 <col:38> 'float' <LValueToRValue>
+              | `-DeclRefExpr 0x7fecaf027448 <col:38> 'float' lvalue ParmVar 0x7fecaf026dd0 'y' 'float'
+              |-ImplicitCastExpr 0x7fecaf0275a0 <col:41> 'float' <IntegralToFloating>
+              | `-IntegerLiteral 0x7fecaf027470 <col:41> 'int' 0
+              `-ImplicitCastExpr 0x7fecaf0275b8 <col:44> 'float' <IntegralToFloating>
+                `-IntegerLiteral 0x7fecaf027490 <col:44> 'int' 0

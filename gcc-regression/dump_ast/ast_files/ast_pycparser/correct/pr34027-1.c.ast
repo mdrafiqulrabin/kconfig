@@ -1,0 +1,20 @@
+FileAST: 
+  FuncDef: 
+    Decl: foobar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ns, [], [], []
+            TypeDecl: ns, []
+              IdentifierType: ['unsigned', 'long']
+        TypeDecl: foobar, []
+          IdentifierType: ['unsigned', 'long']
+    Compound: 
+      While: 
+        BinaryOp: >=
+          ID: ns
+          Constant: int, 10000L
+        Assignment: -=
+          ID: ns
+          Constant: int, 10000L
+      Return: 
+        ID: ns

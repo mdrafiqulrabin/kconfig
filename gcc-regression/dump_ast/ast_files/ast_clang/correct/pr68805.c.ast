@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fe1920264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe192026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe192026740 '__int128'
+|-TypedefDecl 0x7fe192026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe192026760 'unsigned __int128'
+|-TypedefDecl 0x7fe192026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe192026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe192026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe192026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe192026dc0 'char *'
+|   `-BuiltinType 0x7fe192026560 'char'
+|-TypedefDecl 0x7fe1920270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe192027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe192026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe192026e58 '__va_list_tag'
+|-RecordDecl 0x7fe192027120 <c_files/pr68805.c:5:9, line:8:1> line:5:16 struct bar definition
+| |-FieldDecl 0x7fe192077400 <line:6:3, col:9> col:9 a 'void *'
+| `-FieldDecl 0x7fe192077460 <line:7:3, col:9> col:9 b 'void *'
+|-TypedefDecl 0x7fe192077500 <line:5:1, line:8:3> col:3 referenced TYPE 'struct bar':'struct bar'
+| `-ElaboratedType 0x7fe1920774b0 'struct bar' sugar
+|   `-RecordType 0x7fe1920271b0 'struct bar'
+|     `-Record 0x7fe192027120 'bar'
+`-FunctionDecl 0x7fe192077780 <line:10:1, col:40> col:6 foo 'void (TYPE *, TYPE *)'
+  |-ParmVarDecl 0x7fe1920775f8 <col:11, col:17> col:17 used p 'TYPE *'
+  |-ParmVarDecl 0x7fe192077668 <col:20, col:26> col:26 used q 'TYPE *'
+  `-CompoundStmt 0x7fe192077968 <col:29, col:40>
+    `-BinaryOperator 0x7fe192077940 <col:31, col:37> 'TYPE':'struct bar' '='
+      |-UnaryOperator 0x7fe1920778a8 <col:31, col:32> 'TYPE':'struct bar' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fe192077890 <col:32> 'TYPE *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe192077868 <col:32> 'TYPE *' lvalue ParmVar 0x7fe1920775f8 'p' 'TYPE *'
+      `-ImplicitCastExpr 0x7fe192077928 <col:36, col:37> 'TYPE':'struct bar' <LValueToRValue>
+        `-UnaryOperator 0x7fe192077908 <col:36, col:37> 'TYPE':'struct bar' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fe1920778f0 <col:37> 'TYPE *' <LValueToRValue>
+            `-DeclRefExpr 0x7fe1920778c8 <col:37> 'TYPE *' lvalue ParmVar 0x7fe192077668 'q' 'TYPE *'

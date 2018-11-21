@@ -1,0 +1,62 @@
+TranslationUnitDecl 0x7fbdcc8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbdcc826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbdcc826740 '__int128'
+|-TypedefDecl 0x7fbdcc826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbdcc826760 'unsigned __int128'
+|-TypedefDecl 0x7fbdcc826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbdcc826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbdcc826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbdcc826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbdcc826dc0 'char *'
+|   `-BuiltinType 0x7fbdcc826560 'char'
+|-TypedefDecl 0x7fbdcc8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbdcc827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbdcc826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbdcc826e58 '__va_list_tag'
+|-RecordDecl 0x7fbdcc827120 <c_files/pr63527.c:5:1, line:9:1> line:5:8 struct cache_file definition
+| |-FieldDecl 0x7fbdcd025b48 <line:7:3, col:38> col:8 magic 'char [11]'
+| `-FieldDecl 0x7fbdcd025ba8 <line:8:3, col:16> col:16 nlibs 'unsigned int'
+|-TypedefDecl 0x7fbdcd025c08 <line:10:1, col:22> col:22 referenced size_t 'unsigned int'
+| `-BuiltinType 0x7fbdcc826660 'unsigned int'
+|-VarDecl 0x7fbdcd025cf8 <line:11:1, col:8> col:8 used cachesize 'size_t':'unsigned int'
+| `-VisibilityAttr 0x7fbdcd025d58 <col:34, col:54> Hidden
+|-VarDecl 0x7fbdcd025ec0 <line:12:1, col:20> col:20 used cache 'struct cache_file *'
+| `-VisibilityAttr 0x7fbdcd025f20 <col:42, col:62> Hidden
+|-FunctionDecl 0x7fbdcd026108 <line:13:1, col:48> col:12 used __munmap 'int (void *, size_t)' extern
+| |-ParmVarDecl 0x7fbdcd025f80 <col:22, col:28> col:28 __addr 'void *'
+| `-ParmVarDecl 0x7fbdcd025ff0 <col:36, col:43> col:43 __len 'size_t':'unsigned int'
+`-FunctionDecl 0x7fbdcd026270 <line:14:1, line:22:1> line:15:1 _dl_unload_cache 'void (void)'
+  `-CompoundStmt 0x7fbdcd0267d8 <line:16:1, line:22:1>
+    `-IfStmt 0x7fbdcd0267a0 <line:17:3, line:21:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fbdcd026500 <line:17:7, col:63> 'int' '&&'
+      | |-BinaryOperator 0x7fbdcd0263e0 <col:7, col:26> 'int' '!='
+      | | |-ImplicitCastExpr 0x7fbdcd0263b0 <col:7> 'struct cache_file *' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7fbdcd026308 <col:7> 'struct cache_file *' lvalue Var 0x7fbdcd025ec0 'cache' 'struct cache_file *'
+      | | `-ImplicitCastExpr 0x7fbdcd0263c8 <col:16, col:26> 'struct cache_file *' <BitCast>
+      | |   `-ParenExpr 0x7fbdcd026390 <col:16, col:26> 'void *'
+      | |     `-CStyleCastExpr 0x7fbdcd026368 <col:17, col:25> 'void *' <NullToPointer>
+      | |       `-IntegerLiteral 0x7fbdcd026330 <col:25> 'int' 0
+      | `-BinaryOperator 0x7fbdcd0264d8 <col:31, col:63> 'int' '!='
+      |   |-ImplicitCastExpr 0x7fbdcd0264c0 <col:31> 'struct cache_file *' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fbdcd026408 <col:31> 'struct cache_file *' lvalue Var 0x7fbdcd025ec0 'cache' 'struct cache_file *'
+      |   `-CStyleCastExpr 0x7fbdcd026498 <col:40, col:63> 'struct cache_file *' <IntegralToPointer>
+      |     `-UnaryOperator 0x7fbdcd026450 <col:62, col:63> 'int' prefix '-'
+      |       `-IntegerLiteral 0x7fbdcd026430 <col:63> 'int' 1
+      |-CompoundStmt 0x7fbdcd026778 <line:18:5, line:21:5>
+      | |-CallExpr 0x7fbdcd026610 <line:19:7, col:33> 'int'
+      | | |-ImplicitCastExpr 0x7fbdcd0265f8 <col:7> 'int (*)(void *, size_t)' <FunctionToPointerDecay>
+      | | | `-DeclRefExpr 0x7fbdcd026528 <col:7> 'int (void *, size_t)' Function 0x7fbdcd026108 '__munmap' 'int (void *, size_t)'
+      | | |-ImplicitCastExpr 0x7fbdcd026660 <col:17> 'void *' <BitCast>
+      | | | `-ImplicitCastExpr 0x7fbdcd026648 <col:17> 'struct cache_file *' <LValueToRValue>
+      | | |   `-DeclRefExpr 0x7fbdcd026550 <col:17> 'struct cache_file *' lvalue Var 0x7fbdcd025ec0 'cache' 'struct cache_file *'
+      | | `-ImplicitCastExpr 0x7fbdcd026678 <col:24> 'size_t':'unsigned int' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fbdcd026578 <col:24> 'size_t':'unsigned int' lvalue Var 0x7fbdcd025cf8 'cachesize' 'size_t':'unsigned int'
+      | `-BinaryOperator 0x7fbdcd026750 <line:20:7, col:25> 'struct cache_file *' '='
+      |   |-DeclRefExpr 0x7fbdcd026690 <col:7> 'struct cache_file *' lvalue Var 0x7fbdcd025ec0 'cache' 'struct cache_file *'
+      |   `-ImplicitCastExpr 0x7fbdcd026738 <col:15, col:25> 'struct cache_file *' <NullToPointer>
+      |     `-ParenExpr 0x7fbdcd026718 <col:15, col:25> 'void *'
+      |       `-CStyleCastExpr 0x7fbdcd0266f0 <col:16, col:24> 'void *' <NullToPointer>
+      |         `-IntegerLiteral 0x7fbdcd0266b8 <col:24> 'int' 0
+      `-<<<NULL>>>

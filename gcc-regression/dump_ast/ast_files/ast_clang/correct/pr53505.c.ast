@@ -1,0 +1,146 @@
+TranslationUnitDecl 0x7fc70f817ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc70f818420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc70f818140 '__int128'
+|-TypedefDecl 0x7fc70f818490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc70f818160 'unsigned __int128'
+|-TypedefDecl 0x7fc70f818768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc70f818570 'struct __NSConstantString_tag'
+|   `-Record 0x7fc70f8184e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc70f818800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc70f8187c0 'char *'
+|   `-BuiltinType 0x7fc70f817f60 'char'
+|-TypedefDecl 0x7fc70f818ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc70f818a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc70f8188e0 'struct __va_list_tag'
+|     `-Record 0x7fc70f818858 '__va_list_tag'
+|-RecordDecl 0x7fc70f818b20 <c_files/pr53505.c:6:1, line:13:1> line:6:8 struct A definition
+| |-FieldDecl 0x7fc70e835000 <line:8:3, col:16> col:16 a 'unsigned int'
+| |-FieldDecl 0x7fc70e835060 <line:9:3, col:17> col:17 c1 'unsigned char'
+| |-FieldDecl 0x7fc70e8350c0 <col:3, col:21> col:21 c2 'unsigned char'
+| |-FieldDecl 0x7fc70e835138 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdbool.h:31:14, c_files/pr53505.c:10:13> col:8 referenced b1 '_Bool'
+| | `-IntegerLiteral 0x7fc70e835108 <col:13> 'int' 1
+| |-FieldDecl 0x7fc70e8351b0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdbool.h:31:14, c_files/pr53505.c:11:13> col:8 referenced b2 '_Bool'
+| | `-IntegerLiteral 0x7fc70e835180 <col:13> 'int' 1
+| `-FieldDecl 0x7fc70e835228 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdbool.h:31:14, c_files/pr53505.c:12:13> col:8 referenced b3 '_Bool'
+|   `-IntegerLiteral 0x7fc70e8351f8 <col:13> 'int' 1
+|-FunctionDecl 0x7fc70e8354b0 <line:15:1, line:26:1> line:16:1 used foo 'void (const struct A *, int)'
+| |-ParmVarDecl 0x7fc70e835320 <col:6, col:22> col:22 used x 'const struct A *'
+| |-ParmVarDecl 0x7fc70e835398 <col:25, col:29> col:29 used y 'int'
+| `-CompoundStmt 0x7fc70e835e80 <line:17:1, line:26:1>
+|   |-DeclStmt 0x7fc70e8356c0 <line:18:3, col:15>
+|   | |-VarDecl 0x7fc70e8355b0 <col:3, col:11> col:7 used s 'int' cinit
+|   | | `-IntegerLiteral 0x7fc70e835610 <col:11> 'int' 0
+|   | `-VarDecl 0x7fc70e835648 <col:3, col:14> col:14 used i 'int'
+|   |-ForStmt 0x7fc70e835be0 <line:19:3, line:23:5>
+|   | |-BinaryOperator 0x7fc70e835720 <line:19:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7fc70e8356d8 <col:8> 'int' lvalue Var 0x7fc70e835648 'i' 'int'
+|   | | `-IntegerLiteral 0x7fc70e835700 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc70e8357c8 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fc70e835798 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc70e835748 <col:15> 'int' lvalue Var 0x7fc70e835648 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7fc70e8357b0 <col:19> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fc70e835770 <col:19> 'int' lvalue ParmVar 0x7fc70e835398 'y' 'int'
+|   | |-UnaryOperator 0x7fc70e835818 <col:22, col:24> 'int' prefix '++'
+|   | | `-DeclRefExpr 0x7fc70e8357f0 <col:24> 'int' lvalue Var 0x7fc70e835648 'i' 'int'
+|   | `-CompoundStmt 0x7fc70e835bb8 <line:20:5, line:23:5>
+|   |   |-DeclStmt 0x7fc70e835978 <line:21:7, col:30>
+|   |   | `-VarDecl 0x7fc70e835858 <col:7, col:29> col:22 used a 'const struct A':'const struct A' cinit
+|   |   |   `-ImplicitCastExpr 0x7fc70e835960 <col:26, col:29> 'struct A':'struct A' <LValueToRValue>
+|   |   |     `-ArraySubscriptExpr 0x7fc70e835938 <col:26, col:29> 'const struct A':'const struct A' lvalue
+|   |   |       |-ImplicitCastExpr 0x7fc70e835908 <col:26> 'const struct A *' <LValueToRValue>
+|   |   |       | `-DeclRefExpr 0x7fc70e8358b8 <col:26> 'const struct A *' lvalue ParmVar 0x7fc70e835320 'x' 'const struct A *'
+|   |   |       `-ImplicitCastExpr 0x7fc70e835920 <col:28> 'int' <LValueToRValue>
+|   |   |         `-DeclRefExpr 0x7fc70e8358e0 <col:28> 'int' lvalue Var 0x7fc70e835648 'i' 'int'
+|   |   `-CompoundAssignOperator 0x7fc70e835ab8 <line:22:7, col:23> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   |     |-DeclRefExpr 0x7fc70e835990 <col:7> 'int' lvalue Var 0x7fc70e8355b0 's' 'int'
+|   |     `-ConditionalOperator 0x7fc70e835a88 <col:12, col:23> 'int'
+|   |       |-ImplicitCastExpr 0x7fc70e835a70 <col:12, col:14> 'int' <IntegralCast>
+|   |       | `-ImplicitCastExpr 0x7fc70e835a58 <col:12, col:14> '_Bool' <LValueToRValue>
+|   |       |   `-MemberExpr 0x7fc70e8359e0 <col:12, col:14> 'const _Bool' lvalue bitfield .b1 0x7fc70e835138
+|   |       |     `-DeclRefExpr 0x7fc70e8359b8 <col:12> 'const struct A':'const struct A' lvalue Var 0x7fc70e835858 'a' 'const struct A':'const struct A'
+|   |       |-IntegerLiteral 0x7fc70e835a18 <col:19> 'int' 1
+|   |       `-IntegerLiteral 0x7fc70e835a38 <col:23> 'int' 0
+|   `-IfStmt 0x7fc70e835e48 <line:24:3, line:25:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fc70e835c78 <line:24:7, col:12> 'int' '!='
+|     | |-ImplicitCastExpr 0x7fc70e835c60 <col:7> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fc70e835c18 <col:7> 'int' lvalue Var 0x7fc70e8355b0 's' 'int'
+|     | `-IntegerLiteral 0x7fc70e835c40 <col:12> 'int' 0
+|     |-CallExpr 0x7fc70e835e20 <line:25:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7fc70e835e08 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7fc70e835db0 <col:5> '<builtin fn type>' Function 0x7fc70e835cd0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fc70e835cd0 <col:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fc70e835d68 <col:5> Implicit
+|-FunctionDecl 0x7fc70e835f00 <line:28:1, line:42:1> line:29:1 main 'int ()'
+| `-CompoundStmt 0x7fc70e8370e0 <line:30:1, line:42:1>
+|   |-DeclStmt 0x7fc70e8364c8 <line:31:3, col:18>
+|   | `-VarDecl 0x7fc70e836468 <col:3, col:17> col:12 used x 'struct A [100]'
+|   |-DeclStmt 0x7fc70e836558 <line:32:3, col:8>
+|   | `-VarDecl 0x7fc70e8364f8 <col:3, col:7> col:7 used i 'int'
+|   |-CallExpr 0x7fc70e836980 <line:33:3, col:38> 'void *'
+|   | |-ImplicitCastExpr 0x7fc70e836968 <col:3> 'void *(*)(void *, int, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fc70e8367d0 <col:3> '<builtin fn type>' Function 0x7fc70e8365b8 '__builtin_memset' 'void *(void *, int, unsigned long)'
+|   | |-ImplicitCastExpr 0x7fc70e8369d8 <col:21> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7fc70e8369c0 <col:21> 'struct A *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fc70e8367f8 <col:21> 'struct A [100]' lvalue Var 0x7fc70e836468 'x' 'struct A [100]'
+|   | |-UnaryOperator 0x7fc70e836840 <col:24, col:25> 'int' prefix '-'
+|   | | `-IntegerLiteral 0x7fc70e836820 <col:25> 'int' 1
+|   | `-UnaryExprOrTypeTraitExpr 0x7fc70e8368a8 <col:28, col:37> 'unsigned long' sizeof
+|   |   `-ParenExpr 0x7fc70e836888 <col:35, col:37> 'struct A [100]' lvalue
+|   |     `-DeclRefExpr 0x7fc70e836860 <col:36> 'struct A [100]' lvalue Var 0x7fc70e836468 'x' 'struct A [100]'
+|   |-ForStmt 0x7fc70e836f20 <line:34:3, line:39:5>
+|   | |-BinaryOperator 0x7fc70e836a38 <line:34:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7fc70e8369f0 <col:8> 'int' lvalue Var 0x7fc70e8364f8 'i' 'int'
+|   | | `-IntegerLiteral 0x7fc70e836a18 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc70e836ac0 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fc70e836aa8 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc70e836a60 <col:15> 'int' lvalue Var 0x7fc70e8364f8 'i' 'int'
+|   | | `-IntegerLiteral 0x7fc70e836a88 <col:19> 'int' 100
+|   | |-UnaryOperator 0x7fc70e836b10 <col:24, col:25> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fc70e836ae8 <col:24> 'int' lvalue Var 0x7fc70e8364f8 'i' 'int'
+|   | `-CompoundStmt 0x7fc70e836ef0 <line:35:5, line:39:5>
+|   |   |-BinaryOperator 0x7fc70e836c48 <line:36:7, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdbool.h:33:15> '_Bool' '='
+|   |   | |-MemberExpr 0x7fc70e836bd8 <c_files/pr53505.c:36:7, col:12> '_Bool' lvalue bitfield .b1 0x7fc70e835138
+|   |   | | `-ArraySubscriptExpr 0x7fc70e836bb0 <col:7, col:10> 'struct A':'struct A' lvalue
+|   |   | |   |-ImplicitCastExpr 0x7fc70e836b80 <col:7> 'struct A *' <ArrayToPointerDecay>
+|   |   | |   | `-DeclRefExpr 0x7fc70e836b30 <col:7> 'struct A [100]' lvalue Var 0x7fc70e836468 'x' 'struct A [100]'
+|   |   | |   `-ImplicitCastExpr 0x7fc70e836b98 <col:9> 'int' <LValueToRValue>
+|   |   | |     `-DeclRefExpr 0x7fc70e836b58 <col:9> 'int' lvalue Var 0x7fc70e8364f8 'i' 'int'
+|   |   | `-ImplicitCastExpr 0x7fc70e836c30 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdbool.h:33:15> '_Bool' <IntegralToBoolean>
+|   |   |   `-IntegerLiteral 0x7fc70e836c10 <col:15> 'int' 0
+|   |   |-BinaryOperator 0x7fc70e836d88 <c_files/pr53505.c:37:7, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdbool.h:33:15> '_Bool' '='
+|   |   | |-MemberExpr 0x7fc70e836d18 <c_files/pr53505.c:37:7, col:12> '_Bool' lvalue bitfield .b2 0x7fc70e8351b0
+|   |   | | `-ArraySubscriptExpr 0x7fc70e836cf0 <col:7, col:10> 'struct A':'struct A' lvalue
+|   |   | |   |-ImplicitCastExpr 0x7fc70e836cc0 <col:7> 'struct A *' <ArrayToPointerDecay>
+|   |   | |   | `-DeclRefExpr 0x7fc70e836c70 <col:7> 'struct A [100]' lvalue Var 0x7fc70e836468 'x' 'struct A [100]'
+|   |   | |   `-ImplicitCastExpr 0x7fc70e836cd8 <col:9> 'int' <LValueToRValue>
+|   |   | |     `-DeclRefExpr 0x7fc70e836c98 <col:9> 'int' lvalue Var 0x7fc70e8364f8 'i' 'int'
+|   |   | `-ImplicitCastExpr 0x7fc70e836d70 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdbool.h:33:15> '_Bool' <IntegralToBoolean>
+|   |   |   `-IntegerLiteral 0x7fc70e836d50 <col:15> 'int' 0
+|   |   `-BinaryOperator 0x7fc70e836ec8 <c_files/pr53505.c:38:7, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdbool.h:33:15> '_Bool' '='
+|   |     |-MemberExpr 0x7fc70e836e58 <c_files/pr53505.c:38:7, col:12> '_Bool' lvalue bitfield .b3 0x7fc70e835228
+|   |     | `-ArraySubscriptExpr 0x7fc70e836e30 <col:7, col:10> 'struct A':'struct A' lvalue
+|   |     |   |-ImplicitCastExpr 0x7fc70e836e00 <col:7> 'struct A *' <ArrayToPointerDecay>
+|   |     |   | `-DeclRefExpr 0x7fc70e836db0 <col:7> 'struct A [100]' lvalue Var 0x7fc70e836468 'x' 'struct A [100]'
+|   |     |   `-ImplicitCastExpr 0x7fc70e836e18 <col:9> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7fc70e836dd8 <col:9> 'int' lvalue Var 0x7fc70e8364f8 'i' 'int'
+|   |     `-ImplicitCastExpr 0x7fc70e836eb0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdbool.h:33:15> '_Bool' <IntegralToBoolean>
+|   |       `-IntegerLiteral 0x7fc70e836e90 <col:15> 'int' 0
+|   |-CallExpr 0x7fc70e837040 <c_files/pr53505.c:40:3, col:14> 'void'
+|   | |-ImplicitCastExpr 0x7fc70e837028 <col:3> 'void (*)(const struct A *, int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fc70e836f58 <col:3> 'void (const struct A *, int)' Function 0x7fc70e8354b0 'foo' 'void (const struct A *, int)'
+|   | |-ImplicitCastExpr 0x7fc70e837090 <col:8> 'const struct A *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7fc70e837078 <col:8> 'struct A *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fc70e836f80 <col:8> 'struct A [100]' lvalue Var 0x7fc70e836468 'x' 'struct A [100]'
+|   | `-IntegerLiteral 0x7fc70e836fa8 <col:11> 'int' 100
+|   `-ReturnStmt 0x7fc70e8370c8 <line:41:3, col:10>
+|     `-IntegerLiteral 0x7fc70e8370a8 <col:10> 'int' 0
+`-FunctionDecl 0x7fc70e8365b8 <line:33:3> col:3 implicit used __builtin_memset 'void *(void *, int, unsigned long)' extern
+  |-ParmVarDecl 0x7fc70e836650 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fc70e8366b0 <<invalid sloc>> <invalid sloc> 'int'
+  |-ParmVarDecl 0x7fc70e836710 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fc70e836788 <col:3> Implicit

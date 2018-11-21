@@ -1,0 +1,28 @@
+FileAST: 
+  Decl: test, [], [], []
+    TypeDecl: test, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        ID: test
+      FuncCall: 
+        ID: asm
+        ExprList: 
+          Constant: string, "movl $1,test"
+      If: 
+        BinaryOp: !=
+          BinaryOp: +
+            ID: x
+            ID: test
+          Constant: int, 1
+        FuncCall: 
+          ID: __builtin_trap
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,22 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        ArrayDecl: []
+          TypeDecl: x, []
+            IdentifierType: ['int']
+          Constant: int, 8
+      If: 
+        BinaryOp: !=
+          ArrayRef: 
+            ID: x
+            Constant: int, 0
+          Constant: int, 4
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,265 @@
+TranslationUnitDecl 0x7ff3fd8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff3fd826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff3fd826740 '__int128'
+|-TypedefDecl 0x7ff3fd826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff3fd826760 'unsigned __int128'
+|-TypedefDecl 0x7ff3fd826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff3fd826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff3fd826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff3fd826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff3fd826dc0 'char *'
+|   `-BuiltinType 0x7ff3fd826560 'char'
+|-TypedefDecl 0x7ff3fd8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff3fd827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff3fd826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff3fd826e58 '__va_list_tag'
+|-TypedefDecl 0x7ff3fd827138 <c_files/pr37101.c:4:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7ff3fd826680 'unsigned long'
+|-FunctionDecl 0x7ff3fe025b08 <line:5:14> col:14 implicit used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7ff3fe025ba0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7ff3fe025c08 prev 0x7ff3fe025b08 <col:1, col:28> col:14 used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7ff3fe025a00 <col:22> col:28 'size_t':'unsigned long'
+|-FunctionDecl 0x7ff3fe025d80 <line:6:1, col:25> col:13 used free 'void (void *)' extern
+| `-ParmVarDecl 0x7ff3fe025cc0 <col:19, col:24> col:25 'void *'
+|-RecordDecl 0x7ff3fe025e60 <line:8:9, line:12:1> line:8:16 struct _Resource definition
+| |-FieldDecl 0x7ff3fe025fc0 <line:10:3, col:21> col:21 referenced next 'struct _Resource *'
+| `-FieldDecl 0x7ff3fe026020 <line:11:3, col:16> col:16 referenced id 'unsigned int'
+|-TypedefDecl 0x7ff3fe026088 <line:8:1, line:12:3> col:3 ResourceRec 'struct _Resource':'struct _Resource'
+| `-ElaboratedType 0x7ff3fe025f10 'struct _Resource' sugar
+|   `-RecordType 0x7ff3fe025ef0 'struct _Resource'
+|     `-Record 0x7ff3fe025e60 '_Resource'
+|-TypedefDecl 0x7ff3fe026108 <line:8:1, line:12:17> col:17 referenced ResourcePtr 'struct _Resource *'
+| `-PointerType 0x7ff3fe025f70 'struct _Resource *'
+|   `-ElaboratedType 0x7ff3fe025f10 'struct _Resource' sugar
+|     `-RecordType 0x7ff3fe025ef0 'struct _Resource'
+|       `-Record 0x7ff3fe025e60 '_Resource'
+|-RecordDecl 0x7ff3fe026180 <line:14:9, line:20:1> line:14:16 struct _ClientResource definition
+| |-FieldDecl 0x7ff3fe0262b8 <line:16:3, col:16> col:16 referenced resources 'ResourcePtr *'
+| |-FieldDecl 0x7ff3fe026318 <line:17:3, col:7> col:7 elements 'int'
+| |-FieldDecl 0x7ff3fe026378 <line:18:3, col:7> col:7 referenced buckets 'int'
+| `-FieldDecl 0x7ff3fe0263d8 <line:19:3, col:7> col:7 referenced hashsize 'int'
+|-TypedefDecl 0x7ff3fe026470 <line:14:1, line:20:3> col:3 referenced ClientResourceRec 'struct _ClientResource':'struct _ClientResource'
+| `-ElaboratedType 0x7ff3fe026420 'struct _ClientResource' sugar
+|   `-RecordType 0x7ff3fe026210 'struct _ClientResource'
+|     `-Record 0x7ff3fe026180 '_ClientResource'
+|-VarDecl 0x7ff3fe026618 <line:22:1, col:41> col:26 used clientTable 'ClientResourceRec [256]' static
+|-FunctionDecl 0x7ff3fe0267e8 <line:23:1, col:28> col:5 used Hash 'int (int, unsigned int)'
+| |-ParmVarDecl 0x7ff3fe026690 <col:11> col:14 'int'
+| `-ParmVarDecl 0x7ff3fe026708 <col:16, col:25> col:28 'unsigned int'
+`-FunctionDecl 0x7ff3fe026a00 <line:25:1, line:63:1> line:26:1 RebuildTable 'void (int)'
+  |-ParmVarDecl 0x7ff3fe0268a8 <col:15, col:19> col:19 used client 'int'
+  `-CompoundStmt 0x7ff3fe02a228 <line:27:1, line:63:1>
+    |-DeclStmt 0x7ff3fe026b18 <line:28:3, col:8>
+    | `-VarDecl 0x7ff3fe026ab8 <col:3, col:7> col:7 used j 'int'
+    |-DeclStmt 0x7ff3fe026c28 <line:29:3, col:24>
+    | |-VarDecl 0x7ff3fe026b40 <col:3, col:15> col:15 used res 'ResourcePtr':'struct _Resource *'
+    | `-VarDecl 0x7ff3fe026bb0 <col:3, col:20> col:20 used next 'ResourcePtr':'struct _Resource *'
+    |-DeclStmt 0x7ff3fe026d98 <line:30:3, col:34>
+    | |-VarDecl 0x7ff3fe026cb0 <col:3, col:17> col:17 used tails 'ResourcePtr **'
+    | `-VarDecl 0x7ff3fe026d20 <col:3, col:25> col:25 used resources 'ResourcePtr *'
+    |-DeclStmt 0x7ff3fe026eb0 <line:31:3, col:28>
+    | |-VarDecl 0x7ff3fe026dc8 <col:3, col:17> col:17 used tptr 'ResourcePtr **'
+    | `-VarDecl 0x7ff3fe026e38 <col:3, col:24> col:24 used rptr 'ResourcePtr *'
+    |-BinaryOperator 0x7ff3fe027088 <line:33:3, col:31> 'int' '='
+    | |-DeclRefExpr 0x7ff3fe026ec8 <col:3> 'int' lvalue Var 0x7ff3fe026ab8 'j' 'int'
+    | `-BinaryOperator 0x7ff3fe027060 <col:7, col:31> 'int' '*'
+    |   |-IntegerLiteral 0x7ff3fe026ef0 <col:7> 'int' 2
+    |   `-ImplicitCastExpr 0x7ff3fe027048 <col:11, col:31> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7ff3fe027010 <col:11, col:31> 'int' lvalue .buckets 0x7ff3fe026378
+    |       `-ArraySubscriptExpr 0x7ff3fe026fe8 <col:11, col:29> 'ClientResourceRec':'struct _ClientResource' lvalue
+    |         |-ImplicitCastExpr 0x7ff3fe026fb8 <col:11> 'ClientResourceRec *' <ArrayToPointerDecay>
+    |         | `-DeclRefExpr 0x7ff3fe026f10 <col:11> 'ClientResourceRec [256]' lvalue Var 0x7ff3fe026618 'clientTable' 'ClientResourceRec [256]'
+    |         `-ImplicitCastExpr 0x7ff3fe026fd0 <col:23> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x7ff3fe026f38 <col:23> 'int' lvalue ParmVar 0x7ff3fe0268a8 'client' 'int'
+    |-BinaryOperator 0x7ff3fe0272f0 <line:35:3, line:36:74> 'ResourcePtr **' '='
+    | |-DeclRefExpr 0x7ff3fe0270b0 <line:35:3> 'ResourcePtr **' lvalue Var 0x7ff3fe026cb0 'tails' 'ResourcePtr **'
+    | `-CStyleCastExpr 0x7ff3fe0272c8 <line:36:5, col:74> 'ResourcePtr **' <BitCast>
+    |   `-CallExpr 0x7ff3fe027280 <col:22, col:74> 'void *'
+    |     |-ImplicitCastExpr 0x7ff3fe027268 <col:22> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7ff3fe0270d8 <col:22> 'void *(unsigned long)' Function 0x7ff3fe025c08 'malloc' 'void *(unsigned long)'
+    |     `-CStyleCastExpr 0x7ff3fe027218 <col:30, col:73> 'unsigned long' <NoOp>
+    |       `-ParenExpr 0x7ff3fe0271f8 <col:46, col:73> 'unsigned long'
+    |         `-BinaryOperator 0x7ff3fe027188 <col:47, col:72> 'unsigned long' '*'
+    |           |-ImplicitCastExpr 0x7ff3fe027170 <col:47> 'unsigned long' <IntegralCast>
+    |           | `-ImplicitCastExpr 0x7ff3fe027158 <col:47> 'int' <LValueToRValue>
+    |           |   `-DeclRefExpr 0x7ff3fe027100 <col:47> 'int' lvalue Var 0x7ff3fe026ab8 'j' 'int'
+    |           `-UnaryExprOrTypeTraitExpr 0x7ff3fe027138 <col:51, col:72> 'unsigned long' sizeof 'ResourcePtr *'
+    |-BinaryOperator 0x7ff3fe027528 <line:37:3, line:38:71> 'ResourcePtr *' '='
+    | |-DeclRefExpr 0x7ff3fe027318 <line:37:3> 'ResourcePtr *' lvalue Var 0x7ff3fe026d20 'resources' 'ResourcePtr *'
+    | `-CStyleCastExpr 0x7ff3fe027500 <line:38:5, col:71> 'ResourcePtr *' <BitCast>
+    |   `-CallExpr 0x7ff3fe0274c0 <col:21, col:71> 'void *'
+    |     |-ImplicitCastExpr 0x7ff3fe0274a8 <col:21> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7ff3fe027340 <col:21> 'void *(unsigned long)' Function 0x7ff3fe025c08 'malloc' 'void *(unsigned long)'
+    |     `-CStyleCastExpr 0x7ff3fe027480 <col:29, col:70> 'unsigned long' <NoOp>
+    |       `-ParenExpr 0x7ff3fe027460 <col:45, col:70> 'unsigned long'
+    |         `-BinaryOperator 0x7ff3fe0273f0 <col:46, col:69> 'unsigned long' '*'
+    |           |-ImplicitCastExpr 0x7ff3fe0273d8 <col:46> 'unsigned long' <IntegralCast>
+    |           | `-ImplicitCastExpr 0x7ff3fe0273c0 <col:46> 'int' <LValueToRValue>
+    |           |   `-DeclRefExpr 0x7ff3fe027368 <col:46> 'int' lvalue Var 0x7ff3fe026ab8 'j' 'int'
+    |           `-UnaryExprOrTypeTraitExpr 0x7ff3fe0273a0 <col:50, col:69> 'unsigned long' sizeof 'ResourcePtr':'struct _Resource *'
+    |-ForStmt 0x7ff3fe028e68 <line:40:3, line:44:5>
+    | |-BinaryOperator 0x7ff3fe027670 <line:40:8, col:33> 'ResourcePtr **' ','
+    | | |-BinaryOperator 0x7ff3fe0275b8 <col:8, col:15> 'ResourcePtr *' '='
+    | | | |-DeclRefExpr 0x7ff3fe027550 <col:8> 'ResourcePtr *' lvalue Var 0x7ff3fe026e38 'rptr' 'ResourcePtr *'
+    | | | `-ImplicitCastExpr 0x7ff3fe0275a0 <col:15> 'ResourcePtr *' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7ff3fe027578 <col:15> 'ResourcePtr *' lvalue Var 0x7ff3fe026d20 'resources' 'ResourcePtr *'
+    | | `-BinaryOperator 0x7ff3fe027648 <col:26, col:33> 'ResourcePtr **' '='
+    | |   |-DeclRefExpr 0x7ff3fe0275e0 <col:26> 'ResourcePtr **' lvalue Var 0x7ff3fe026dc8 'tptr' 'ResourcePtr **'
+    | |   `-ImplicitCastExpr 0x7ff3fe027630 <col:33> 'ResourcePtr **' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7ff3fe027608 <col:33> 'ResourcePtr **' lvalue Var 0x7ff3fe026cb0 'tails' 'ResourcePtr **'
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff3fe027700 <col:40, col:47> 'int' '>='
+    | | |-UnaryOperator 0x7ff3fe0276c0 <col:40, col:42> 'int' prefix '--'
+    | | | `-DeclRefExpr 0x7ff3fe027698 <col:42> 'int' lvalue Var 0x7ff3fe026ab8 'j' 'int'
+    | | `-IntegerLiteral 0x7ff3fe0276e0 <col:47> 'int' 0
+    | |-BinaryOperator 0x7ff3fe0277b8 <col:50, col:62> 'ResourcePtr **' ','
+    | | |-UnaryOperator 0x7ff3fe027750 <col:50, col:54> 'ResourcePtr *' postfix '++'
+    | | | `-DeclRefExpr 0x7ff3fe027728 <col:50> 'ResourcePtr *' lvalue Var 0x7ff3fe026e38 'rptr' 'ResourcePtr *'
+    | | `-UnaryOperator 0x7ff3fe027798 <col:58, col:62> 'ResourcePtr **' postfix '++'
+    | |   `-DeclRefExpr 0x7ff3fe027770 <col:58> 'ResourcePtr **' lvalue Var 0x7ff3fe026dc8 'tptr' 'ResourcePtr **'
+    | `-CompoundStmt 0x7ff3fe028e40 <line:41:5, line:44:5>
+    |   |-BinaryOperator 0x7ff3fe027948 <line:42:7, col:42> 'ResourcePtr':'struct _Resource *' '='
+    |   | |-UnaryOperator 0x7ff3fe027820 <col:7, col:8> 'ResourcePtr':'struct _Resource *' lvalue prefix '*'
+    |   | | `-ImplicitCastExpr 0x7ff3fe027808 <col:8> 'ResourcePtr *' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7ff3fe0277e0 <col:8> 'ResourcePtr *' lvalue Var 0x7ff3fe026e38 'rptr' 'ResourcePtr *'
+    |   | `-ParenExpr 0x7ff3fe027928 <col:15, col:42> 'ResourcePtr':'struct _Resource *'
+    |   |   `-CStyleCastExpr 0x7ff3fe027900 <col:16, col:41> 'ResourcePtr':'struct _Resource *' <BitCast>
+    |   |     `-ParenExpr 0x7ff3fe0278e0 <col:30, col:41> 'void *'
+    |   |       `-CStyleCastExpr 0x7ff3fe027878 <col:31, col:40> 'void *' <NullToPointer>
+    |   |         `-IntegerLiteral 0x7ff3fe027840 <col:40> 'int' 0
+    |   `-BinaryOperator 0x7ff3fe028e18 <line:43:7, col:15> 'ResourcePtr *' '='
+    |     |-UnaryOperator 0x7ff3fe0279b0 <col:7, col:8> 'ResourcePtr *' lvalue prefix '*'
+    |     | `-ImplicitCastExpr 0x7ff3fe027998 <col:8> 'ResourcePtr **' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7ff3fe027970 <col:8> 'ResourcePtr **' lvalue Var 0x7ff3fe026dc8 'tptr' 'ResourcePtr **'
+    |     `-ImplicitCastExpr 0x7ff3fe028e00 <col:15> 'ResourcePtr *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ff3fe0279d0 <col:15> 'ResourcePtr *' lvalue Var 0x7ff3fe026e38 'rptr' 'ResourcePtr *'
+    |-UnaryOperator 0x7ff3fe028f80 <line:46:3, col:31> 'int' postfix '++'
+    | `-MemberExpr 0x7ff3fe028f48 <col:3, col:23> 'int' lvalue .hashsize 0x7ff3fe0263d8
+    |   `-ArraySubscriptExpr 0x7ff3fe028f20 <col:3, col:21> 'ClientResourceRec':'struct _ClientResource' lvalue
+    |     |-ImplicitCastExpr 0x7ff3fe028ef0 <col:3> 'ClientResourceRec *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7ff3fe028ea0 <col:3> 'ClientResourceRec [256]' lvalue Var 0x7ff3fe026618 'clientTable' 'ClientResourceRec [256]'
+    |     `-ImplicitCastExpr 0x7ff3fe028f08 <col:15> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ff3fe028ec8 <col:15> 'int' lvalue ParmVar 0x7ff3fe0268a8 'client' 'int'
+    |-ForStmt 0x7ff3fe029c88 <line:47:3, line:58:5>
+    | |-BinaryOperator 0x7ff3fe029230 <line:47:8, line:48:35> 'ResourcePtr *' ','
+    | | |-BinaryOperator 0x7ff3fe0290c0 <line:47:8, col:32> 'int' '='
+    | | | |-DeclRefExpr 0x7ff3fe028fa0 <col:8> 'int' lvalue Var 0x7ff3fe026ab8 'j' 'int'
+    | | | `-ImplicitCastExpr 0x7ff3fe0290a8 <col:12, col:32> 'int' <LValueToRValue>
+    | | |   `-MemberExpr 0x7ff3fe029070 <col:12, col:32> 'int' lvalue .buckets 0x7ff3fe026378
+    | | |     `-ArraySubscriptExpr 0x7ff3fe029048 <col:12, col:30> 'ClientResourceRec':'struct _ClientResource' lvalue
+    | | |       |-ImplicitCastExpr 0x7ff3fe029018 <col:12> 'ClientResourceRec *' <ArrayToPointerDecay>
+    | | |       | `-DeclRefExpr 0x7ff3fe028fc8 <col:12> 'ClientResourceRec [256]' lvalue Var 0x7ff3fe026618 'clientTable' 'ClientResourceRec [256]'
+    | | |       `-ImplicitCastExpr 0x7ff3fe029030 <col:24> 'int' <LValueToRValue>
+    | | |         `-DeclRefExpr 0x7ff3fe028ff0 <col:24> 'int' lvalue ParmVar 0x7ff3fe0268a8 'client' 'int'
+    | | `-BinaryOperator 0x7ff3fe029208 <line:48:8, col:35> 'ResourcePtr *' '='
+    | |   |-DeclRefExpr 0x7ff3fe0290e8 <col:8> 'ResourcePtr *' lvalue Var 0x7ff3fe026e38 'rptr' 'ResourcePtr *'
+    | |   `-ImplicitCastExpr 0x7ff3fe0291f0 <col:15, col:35> 'ResourcePtr *' <LValueToRValue>
+    | |     `-MemberExpr 0x7ff3fe0291b8 <col:15, col:35> 'ResourcePtr *' lvalue .resources 0x7ff3fe0262b8
+    | |       `-ArraySubscriptExpr 0x7ff3fe029190 <col:15, col:33> 'ClientResourceRec':'struct _ClientResource' lvalue
+    | |         |-ImplicitCastExpr 0x7ff3fe029160 <col:15> 'ClientResourceRec *' <ArrayToPointerDecay>
+    | |         | `-DeclRefExpr 0x7ff3fe029110 <col:15> 'ClientResourceRec [256]' lvalue Var 0x7ff3fe026618 'clientTable' 'ClientResourceRec [256]'
+    | |         `-ImplicitCastExpr 0x7ff3fe029178 <col:27> 'int' <LValueToRValue>
+    | |           `-DeclRefExpr 0x7ff3fe029138 <col:27> 'int' lvalue ParmVar 0x7ff3fe0268a8 'client' 'int'
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff3fe0292c0 <col:46, col:53> 'int' '>='
+    | | |-UnaryOperator 0x7ff3fe029280 <col:46, col:48> 'int' prefix '--'
+    | | | `-DeclRefExpr 0x7ff3fe029258 <col:48> 'int' lvalue Var 0x7ff3fe026ab8 'j' 'int'
+    | | `-IntegerLiteral 0x7ff3fe0292a0 <col:53> 'int' 0
+    | |-UnaryOperator 0x7ff3fe029310 <col:56, col:60> 'ResourcePtr *' postfix '++'
+    | | `-DeclRefExpr 0x7ff3fe0292e8 <col:56> 'ResourcePtr *' lvalue Var 0x7ff3fe026e38 'rptr' 'ResourcePtr *'
+    | `-CompoundStmt 0x7ff3fe029c68 <line:49:5, line:58:5>
+    |   `-ForStmt 0x7ff3fe029c30 <line:50:7, line:57:2>
+    |     |-BinaryOperator 0x7ff3fe0293d0 <line:50:12, col:19> 'ResourcePtr':'struct _Resource *' '='
+    |     | |-DeclRefExpr 0x7ff3fe029330 <col:12> 'ResourcePtr':'struct _Resource *' lvalue Var 0x7ff3fe026b40 'res' 'ResourcePtr':'struct _Resource *'
+    |     | `-ImplicitCastExpr 0x7ff3fe0293b8 <col:18, col:19> 'ResourcePtr':'struct _Resource *' <LValueToRValue>
+    |     |   `-UnaryOperator 0x7ff3fe029398 <col:18, col:19> 'ResourcePtr':'struct _Resource *' lvalue prefix '*'
+    |     |     `-ImplicitCastExpr 0x7ff3fe029380 <col:19> 'ResourcePtr *' <LValueToRValue>
+    |     |       `-DeclRefExpr 0x7ff3fe029358 <col:19> 'ResourcePtr *' lvalue Var 0x7ff3fe026e38 'rptr' 'ResourcePtr *'
+    |     |-<<<NULL>>>
+    |     |-ImplicitCastExpr 0x7ff3fe029420 <col:25> 'ResourcePtr':'struct _Resource *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ff3fe0293f8 <col:25> 'ResourcePtr':'struct _Resource *' lvalue Var 0x7ff3fe026b40 'res' 'ResourcePtr':'struct _Resource *'
+    |     |-BinaryOperator 0x7ff3fe0294a0 <col:30, col:36> 'ResourcePtr':'struct _Resource *' '='
+    |     | |-DeclRefExpr 0x7ff3fe029438 <col:30> 'ResourcePtr':'struct _Resource *' lvalue Var 0x7ff3fe026b40 'res' 'ResourcePtr':'struct _Resource *'
+    |     | `-ImplicitCastExpr 0x7ff3fe029488 <col:36> 'ResourcePtr':'struct _Resource *' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7ff3fe029460 <col:36> 'ResourcePtr':'struct _Resource *' lvalue Var 0x7ff3fe026bb0 'next' 'ResourcePtr':'struct _Resource *'
+    |     `-CompoundStmt 0x7ff3fe029bf0 <line:51:2, line:57:2>
+    |       |-BinaryOperator 0x7ff3fe029580 <line:52:4, col:16> 'ResourcePtr':'struct _Resource *' '='
+    |       | |-DeclRefExpr 0x7ff3fe0294c8 <col:4> 'ResourcePtr':'struct _Resource *' lvalue Var 0x7ff3fe026bb0 'next' 'ResourcePtr':'struct _Resource *'
+    |       | `-ImplicitCastExpr 0x7ff3fe029568 <col:11, col:16> 'struct _Resource *' <LValueToRValue>
+    |       |   `-MemberExpr 0x7ff3fe029530 <col:11, col:16> 'struct _Resource *' lvalue ->next 0x7ff3fe025fc0
+    |       |     `-ImplicitCastExpr 0x7ff3fe029518 <col:11> 'ResourcePtr':'struct _Resource *' <LValueToRValue>
+    |       |       `-DeclRefExpr 0x7ff3fe0294f0 <col:11> 'ResourcePtr':'struct _Resource *' lvalue Var 0x7ff3fe026b40 'res' 'ResourcePtr':'struct _Resource *'
+    |       |-BinaryOperator 0x7ff3fe029728 <line:53:4, col:43> 'struct _Resource *' '='
+    |       | |-MemberExpr 0x7ff3fe0295e8 <col:4, col:9> 'struct _Resource *' lvalue ->next 0x7ff3fe025fc0
+    |       | | `-ImplicitCastExpr 0x7ff3fe0295d0 <col:4> 'ResourcePtr':'struct _Resource *' <LValueToRValue>
+    |       | |   `-DeclRefExpr 0x7ff3fe0295a8 <col:4> 'ResourcePtr':'struct _Resource *' lvalue Var 0x7ff3fe026b40 'res' 'ResourcePtr':'struct _Resource *'
+    |       | `-ParenExpr 0x7ff3fe029708 <col:16, col:43> 'ResourcePtr':'struct _Resource *'
+    |       |   `-CStyleCastExpr 0x7ff3fe0296e0 <col:17, col:42> 'ResourcePtr':'struct _Resource *' <BitCast>
+    |       |     `-ParenExpr 0x7ff3fe0296c0 <col:31, col:42> 'void *'
+    |       |       `-CStyleCastExpr 0x7ff3fe029658 <col:32, col:41> 'void *' <NullToPointer>
+    |       |         `-IntegerLiteral 0x7ff3fe029620 <col:41> 'int' 0
+    |       |-BinaryOperator 0x7ff3fe029978 <line:54:4, col:40> 'ResourcePtr **' '='
+    |       | |-DeclRefExpr 0x7ff3fe029750 <col:4> 'ResourcePtr **' lvalue Var 0x7ff3fe026dc8 'tptr' 'ResourcePtr **'
+    |       | `-UnaryOperator 0x7ff3fe029958 <col:11, col:40> 'ResourcePtr **' prefix '&'
+    |       |   `-ArraySubscriptExpr 0x7ff3fe029930 <col:12, col:40> 'ResourcePtr *' lvalue
+    |       |     |-ImplicitCastExpr 0x7ff3fe029918 <col:12> 'ResourcePtr **' <LValueToRValue>
+    |       |     | `-DeclRefExpr 0x7ff3fe029778 <col:12> 'ResourcePtr **' lvalue Var 0x7ff3fe026cb0 'tails' 'ResourcePtr **'
+    |       |     `-CallExpr 0x7ff3fe0298b0 <col:18, col:39> 'int'
+    |       |       |-ImplicitCastExpr 0x7ff3fe029898 <col:18> 'int (*)(int, unsigned int)' <FunctionToPointerDecay>
+    |       |       | `-DeclRefExpr 0x7ff3fe0297a0 <col:18> 'int (int, unsigned int)' Function 0x7ff3fe0267e8 'Hash' 'int (int, unsigned int)'
+    |       |       |-ImplicitCastExpr 0x7ff3fe0298e8 <col:24> 'int' <LValueToRValue>
+    |       |       | `-DeclRefExpr 0x7ff3fe0297c8 <col:24> 'int' lvalue ParmVar 0x7ff3fe0268a8 'client' 'int'
+    |       |       `-ImplicitCastExpr 0x7ff3fe029900 <col:32, col:37> 'unsigned int' <LValueToRValue>
+    |       |         `-MemberExpr 0x7ff3fe029830 <col:32, col:37> 'unsigned int' lvalue ->id 0x7ff3fe026020
+    |       |           `-ImplicitCastExpr 0x7ff3fe029818 <col:32> 'ResourcePtr':'struct _Resource *' <LValueToRValue>
+    |       |             `-DeclRefExpr 0x7ff3fe0297f0 <col:32> 'ResourcePtr':'struct _Resource *' lvalue Var 0x7ff3fe026b40 'res' 'ResourcePtr':'struct _Resource *'
+    |       |-BinaryOperator 0x7ff3fe029a78 <line:55:4, col:13> 'ResourcePtr':'struct _Resource *' '='
+    |       | |-UnaryOperator 0x7ff3fe029a18 <col:4, col:6> 'ResourcePtr':'struct _Resource *' lvalue prefix '*'
+    |       | | `-ImplicitCastExpr 0x7ff3fe029a00 <col:5, col:6> 'ResourcePtr *' <LValueToRValue>
+    |       | |   `-UnaryOperator 0x7ff3fe0299e0 <col:5, col:6> 'ResourcePtr *' lvalue prefix '*'
+    |       | |     `-ImplicitCastExpr 0x7ff3fe0299c8 <col:6> 'ResourcePtr **' <LValueToRValue>
+    |       | |       `-DeclRefExpr 0x7ff3fe0299a0 <col:6> 'ResourcePtr **' lvalue Var 0x7ff3fe026dc8 'tptr' 'ResourcePtr **'
+    |       | `-ImplicitCastExpr 0x7ff3fe029a60 <col:13> 'ResourcePtr':'struct _Resource *' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7ff3fe029a38 <col:13> 'ResourcePtr':'struct _Resource *' lvalue Var 0x7ff3fe026b40 'res' 'ResourcePtr':'struct _Resource *'
+    |       `-BinaryOperator 0x7ff3fe029bc8 <line:56:4, col:18> 'ResourcePtr *' '='
+    |         |-UnaryOperator 0x7ff3fe029ae0 <col:4, col:5> 'ResourcePtr *' lvalue prefix '*'
+    |         | `-ImplicitCastExpr 0x7ff3fe029ac8 <col:5> 'ResourcePtr **' <LValueToRValue>
+    |         |   `-DeclRefExpr 0x7ff3fe029aa0 <col:5> 'ResourcePtr **' lvalue Var 0x7ff3fe026dc8 'tptr' 'ResourcePtr **'
+    |         `-UnaryOperator 0x7ff3fe029ba8 <col:12, col:18> 'struct _Resource **' prefix '&'
+    |           `-MemberExpr 0x7ff3fe029b40 <col:13, col:18> 'struct _Resource *' lvalue ->next 0x7ff3fe025fc0
+    |             `-ImplicitCastExpr 0x7ff3fe029b28 <col:13> 'ResourcePtr':'struct _Resource *' <LValueToRValue>
+    |               `-DeclRefExpr 0x7ff3fe029b00 <col:13> 'ResourcePtr':'struct _Resource *' lvalue Var 0x7ff3fe026b40 'res' 'ResourcePtr':'struct _Resource *'
+    |-CallExpr 0x7ff3fe029db0 <line:59:3, col:23> 'void'
+    | |-ImplicitCastExpr 0x7ff3fe029d98 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff3fe029cc0 <col:3> 'void (void *)' Function 0x7ff3fe025d80 'free' 'void (void *)'
+    | `-CStyleCastExpr 0x7ff3fe029d40 <col:9, col:18> 'void *' <BitCast>
+    |   `-ImplicitCastExpr 0x7ff3fe029d28 <col:18> 'ResourcePtr **' <LValueToRValue>
+    |     `-DeclRefExpr 0x7ff3fe029ce8 <col:18> 'ResourcePtr **' lvalue Var 0x7ff3fe026cb0 'tails' 'ResourcePtr **'
+    |-CompoundAssignOperator 0x7ff3fe029f00 <line:60:3, col:34> 'int' '*=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-MemberExpr 0x7ff3fe029ea8 <col:3, col:23> 'int' lvalue .buckets 0x7ff3fe026378
+    | | `-ArraySubscriptExpr 0x7ff3fe029e80 <col:3, col:21> 'ClientResourceRec':'struct _ClientResource' lvalue
+    | |   |-ImplicitCastExpr 0x7ff3fe029e50 <col:3> 'ClientResourceRec *' <ArrayToPointerDecay>
+    | |   | `-DeclRefExpr 0x7ff3fe029e00 <col:3> 'ClientResourceRec [256]' lvalue Var 0x7ff3fe026618 'clientTable' 'ClientResourceRec [256]'
+    | |   `-ImplicitCastExpr 0x7ff3fe029e68 <col:15> 'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7ff3fe029e28 <col:15> 'int' lvalue ParmVar 0x7ff3fe0268a8 'client' 'int'
+    | `-IntegerLiteral 0x7ff3fe029ee0 <col:34> 'int' 2
+    |-CallExpr 0x7ff3fe02a0b0 <line:61:3, col:47> 'void'
+    | |-ImplicitCastExpr 0x7ff3fe02a098 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff3fe029f38 <col:3> 'void (void *)' Function 0x7ff3fe025d80 'free' 'void (void *)'
+    | `-CStyleCastExpr 0x7ff3fe02a070 <col:9, col:38> 'void *' <BitCast>
+    |   `-ImplicitCastExpr 0x7ff3fe02a058 <col:18, col:38> 'ResourcePtr *' <LValueToRValue>
+    |     `-MemberExpr 0x7ff3fe02a008 <col:18, col:38> 'ResourcePtr *' lvalue .resources 0x7ff3fe0262b8
+    |       `-ArraySubscriptExpr 0x7ff3fe029fe0 <col:18, col:36> 'ClientResourceRec':'struct _ClientResource' lvalue
+    |         |-ImplicitCastExpr 0x7ff3fe029fb0 <col:18> 'ClientResourceRec *' <ArrayToPointerDecay>
+    |         | `-DeclRefExpr 0x7ff3fe029f60 <col:18> 'ClientResourceRec [256]' lvalue Var 0x7ff3fe026618 'clientTable' 'ClientResourceRec [256]'
+    |         `-ImplicitCastExpr 0x7ff3fe029fc8 <col:30> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x7ff3fe029f88 <col:30> 'int' lvalue ParmVar 0x7ff3fe0268a8 'client' 'int'
+    `-BinaryOperator 0x7ff3fe02a200 <line:62:3, col:35> 'ResourcePtr *' '='
+      |-MemberExpr 0x7ff3fe02a188 <col:3, col:23> 'ResourcePtr *' lvalue .resources 0x7ff3fe0262b8
+      | `-ArraySubscriptExpr 0x7ff3fe02a160 <col:3, col:21> 'ClientResourceRec':'struct _ClientResource' lvalue
+      |   |-ImplicitCastExpr 0x7ff3fe02a130 <col:3> 'ClientResourceRec *' <ArrayToPointerDecay>
+      |   | `-DeclRefExpr 0x7ff3fe02a0e0 <col:3> 'ClientResourceRec [256]' lvalue Var 0x7ff3fe026618 'clientTable' 'ClientResourceRec [256]'
+      |   `-ImplicitCastExpr 0x7ff3fe02a148 <col:15> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7ff3fe02a108 <col:15> 'int' lvalue ParmVar 0x7ff3fe0268a8 'client' 'int'
+      `-ImplicitCastExpr 0x7ff3fe02a1e8 <col:35> 'ResourcePtr *' <LValueToRValue>
+        `-DeclRefExpr 0x7ff3fe02a1c0 <col:35> 'ResourcePtr *' lvalue Var 0x7ff3fe026d20 'resources' 'ResourcePtr *'

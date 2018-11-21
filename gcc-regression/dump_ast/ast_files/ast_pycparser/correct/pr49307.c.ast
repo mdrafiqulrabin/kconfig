@@ -1,0 +1,65 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: pp, [], [], []
+          PtrDecl: []
+            PtrDecl: []
+              TypeDecl: pp, []
+                IdentifierType: ['char']
+        Decl: vp, [], [], []
+          PtrDecl: []
+            TypeDecl: vp, []
+              IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  Decl: free, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: p, [], [], []
+          PtrDecl: []
+            TypeDecl: p, []
+              IdentifierType: ['void']
+      TypeDecl: free, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+      Decl: fext, [], [], []
+        ArrayDecl: []
+          TypeDecl: fext, []
+            IdentifierType: ['char']
+          Constant: int, 128
+      Assignment: =
+        ID: p
+        ID: fext
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          UnaryOp: &
+            ID: p
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+      If: 
+        ID: p
+        FuncCall: 
+          ID: free
+          ExprList: 
+            ID: p
+      Return: 
+        Constant: int, 0

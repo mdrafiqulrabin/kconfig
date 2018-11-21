@@ -1,0 +1,47 @@
+FileAST: 
+  Decl: debug_threads, [], ['extern'], []
+    TypeDecl: debug_threads, []
+      IdentifierType: ['int']
+  Decl: sigsuspend, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: sigsuspend, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: my_waitpid, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: flags, [], [], []
+            TypeDecl: flags, []
+              IdentifierType: ['int']
+          Decl: wnohang, [], [], []
+            TypeDecl: wnohang, []
+              IdentifierType: ['int']
+        TypeDecl: my_waitpid, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        Constant: int, 1
+        Compound: 
+          If: 
+            BinaryOp: &
+              ID: flags
+              Constant: int, 0x80000000
+            Compound: 
+              If: 
+                ID: wnohang
+                Break: 
+              If: 
+                ID: debug_threads
+                FuncCall: 
+                  ID: __builtin_puts
+                  ExprList: 
+                    Constant: string, "blocking\n"
+              FuncCall: 
+                ID: sigsuspend
+          Assignment: ^=
+            ID: flags
+            Constant: int, 0x80000000

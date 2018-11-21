@@ -1,0 +1,35 @@
+FileAST: 
+  FuncDef: 
+    Decl: volarr_cpy, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d, [], [], []
+            PtrDecl: []
+              TypeDecl: d, []
+                IdentifierType: ['char']
+          Decl: s, ['volatile'], [], []
+            PtrDecl: []
+              TypeDecl: s, ['volatile']
+                IdentifierType: ['char']
+        TypeDecl: volarr_cpy, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: d
+            ID: i
+          ArrayRef: 
+            ID: s
+            ID: i

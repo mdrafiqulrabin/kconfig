@@ -1,0 +1,46 @@
+FileAST: 
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        Struct: None
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+      Constant: int, 8
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 1
+        BinaryOp: <
+          ID: i
+          Constant: int, 8
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: __builtin_memcpy
+          ExprList: 
+            UnaryOp: &
+              ArrayRef: 
+                ID: a
+                ID: i
+            UnaryOp: &
+              ArrayRef: 
+                ID: a
+                Constant: int, 0
+            UnaryOp: sizeof
+              ArrayRef: 
+                ID: a
+                Constant: int, 0

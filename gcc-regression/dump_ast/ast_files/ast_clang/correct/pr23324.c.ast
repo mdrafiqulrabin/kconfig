@@ -1,0 +1,746 @@
+TranslationUnitDecl 0x7f9eb28264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9eb2826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9eb2826740 '__int128'
+|-TypedefDecl 0x7f9eb2826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9eb2826760 'unsigned __int128'
+|-TypedefDecl 0x7f9eb2826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9eb2826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9eb2826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9eb2826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9eb2826dc0 'char *'
+|   `-BuiltinType 0x7f9eb2826560 'char'
+|-TypedefDecl 0x7f9eb28270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9eb2827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9eb2826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9eb2826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9eb3025a30 <c_files/pr23324.c:1:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9eb3025ac8 prev 0x7f9eb3025a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7f9eb3025b60 <line:4:8, col:19> col:14 union at6 definition
+|-VarDecl 0x7f9eb3025c60 <col:1, col:28> col:21 used vv6 'union at6':'union at6' static cinit
+| `-InitListExpr 0x7f9eb3025d40 <col:27, col:28> 'union at6':'union at6'
+|-RecordDecl 0x7f9eb3025da0 <line:5:8, line:25:1> line:5:15 struct et6 definition
+| |-RecordDecl 0x7f9eb3025e50 parent 0x7f9eb28264d0 <line:7:3, line:16:3> line:7:10 struct bt6 definition
+| | |-FieldDecl 0x7f9eb3025f48 <line:9:5, col:16> col:12 referenced av6 'int'
+| | | `-IntegerLiteral 0x7f9eb3025f10 <col:16> 'int' 6
+| | |-FieldDecl 0x7f9eb3025fc8 <line:10:5, col:16> col:12 referenced bv6 'int'
+| | | `-IntegerLiteral 0x7f9eb3025f90 <col:16> 'int' 7
+| | |-FieldDecl 0x7f9eb3026048 <line:11:5, col:16> col:12 referenced cv6 'int'
+| | | `-IntegerLiteral 0x7f9eb3026010 <col:16> 'int' 6
+| | |-FieldDecl 0x7f9eb30260c8 <line:12:5, col:16> col:12 referenced dv6 'int'
+| | | `-IntegerLiteral 0x7f9eb3026090 <col:16> 'int' 5
+| | |-FieldDecl 0x7f9eb3026128 <line:13:5, col:19> col:19 referenced ev6 'unsigned char'
+| | |-FieldDecl 0x7f9eb3026188 <line:14:5, col:18> col:18 referenced fv6 'unsigned int'
+| | `-FieldDecl 0x7f9eb30261e8 <line:15:5, col:14> col:14 referenced gv6 'long'
+| |-FieldDecl 0x7f9eb3026280 <line:7:3, line:16:5> col:5 referenced mv6 'struct bt6':'struct bt6'
+| |-FieldDecl 0x7f9eb30262e0 <line:17:3, col:21> col:21 referenced nv6 'unsigned long'
+| |-FieldDecl 0x7f9eb3026360 <line:18:3, col:14> col:10 referenced ov6 'int'
+| | `-IntegerLiteral 0x7f9eb3026328 <col:14> 'int' 12
+| |-FieldDecl 0x7f9eb30263e0 <line:19:3, col:14> col:10 referenced pv6 'int'
+| | `-IntegerLiteral 0x7f9eb30263a8 <col:14> 'int' 3
+| |-FieldDecl 0x7f9eb3026460 <line:20:3, col:14> col:10 referenced qv6 'int'
+| | `-IntegerLiteral 0x7f9eb3026428 <col:14> 'int' 2
+| |-FieldDecl 0x7f9eb30264e0 <line:21:3, col:14> col:10 referenced rv6 'int'
+| | `-IntegerLiteral 0x7f9eb30264a8 <col:14> 'int' 10
+| |-RecordDecl 0x7f9eb3026528 parent 0x7f9eb28264d0 <line:22:3, col:51> col:9 union ct6 definition
+| | |-FieldDecl 0x7f9eb30265f8 <col:15, col:24> col:24 referenced hv6 'long'
+| | |-FieldDecl 0x7f9eb3026658 <col:29, col:35> col:35 iv6 'float'
+| | `-FieldDecl 0x7f9eb30266b8 <col:40, col:46> col:46 jv6 'float'
+| |-FieldDecl 0x7f9eb3026750 <col:3, col:53> col:53 referenced sv6 'union ct6':'union ct6'
+| |-FieldDecl 0x7f9eb30267e0 <line:23:3, col:8> col:8 referenced tv6 'int *'
+| |-RecordDecl 0x7f9eb3026828 parent 0x7f9eb28264d0 <line:24:3, col:38> col:9 union dt6 definition
+| | |-FieldDecl 0x7f9eb30268f8 <col:15, col:22> col:22 referenced kv6 'double'
+| | `-FieldDecl 0x7f9eb3026958 <col:27, col:33> col:33 lv6 'float'
+| `-FieldDecl 0x7f9eb3026a00 <col:3, col:40> col:40 referenced uv6 'union dt6':'union dt6'
+|-VarDecl 0x7f9eb3026b10 <line:5:1, line:30:1> line:25:3 used wv6 'struct et6':'struct et6' static cinit
+| `-InitListExpr 0x7f9eb3026f18 <col:9, line:30:1> 'struct et6':'struct et6'
+|   |-InitListExpr 0x7f9eb3026fa0 <line:26:3, col:48> 'struct bt6':'struct bt6'
+|   | |-IntegerLiteral 0x7f9eb3026b70 <col:5> 'int' 8
+|   | |-IntegerLiteral 0x7f9eb3026b90 <col:8> 'int' 9
+|   | |-IntegerLiteral 0x7f9eb3026bb0 <col:11> 'int' 2
+|   | |-IntegerLiteral 0x7f9eb3026bd0 <col:14> 'int' 4
+|   | |-ImplicitCastExpr 0x7f9eb3027018 <col:17> 'unsigned char' <IntegralCast>
+|   | | `-CharacterLiteral 0x7f9eb3026bf0 <col:17> 'int' 16
+|   | |-IntegerLiteral 0x7f9eb3026c08 <col:25> 'unsigned int' 67426805
+|   | `-IntegerLiteral 0x7f9eb3026c28 <col:36> 'long' 1047191860
+|   |-IntegerLiteral 0x7f9eb3026cc0 <line:27:3> 'unsigned long' 1366022414
+|   |-IntegerLiteral 0x7f9eb3026ce0 <col:17> 'int' 858
+|   |-IntegerLiteral 0x7f9eb3026d00 <col:22> 'int' 1
+|   |-IntegerLiteral 0x7f9eb3026d20 <col:25> 'int' 1
+|   |-IntegerLiteral 0x7f9eb3026d40 <col:28> 'int' 305
+|   |-InitListExpr 0x7f9eb3027030 <line:28:3, col:17> 'union ct6':'union ct6' field Field 0x7f9eb30265f8 'hv6' 'long'
+|   | `-IntegerLiteral 0x7f9eb3026d60 <col:5> 'long' 1069379046
+|   |-CStyleCastExpr 0x7f9eb3026e00 <col:20, col:28> 'int *' <IntegralToPointer>
+|   | `-IntegerLiteral 0x7f9eb3026dc8 <col:28> 'unsigned int' 358273621
+|   `-InitListExpr 0x7f9eb3027078 <line:29:3, col:17> 'union dt6':'union dt6' field Field 0x7f9eb30268f8 'kv6' 'double'
+|     `-FloatingLiteral 0x7f9eb3026e28 <col:5> 'double' 3.318042e+03
+|-VarDecl 0x7f9eb30270f0 <line:31:1, col:21> col:15 used xv6 'double' static cinit
+| `-FloatingLiteral 0x7f9eb3027150 <col:21> 'double' 1.923910e+04
+|-VarDecl 0x7f9eb3027188 <line:32:1, col:28> col:22 used yv6 'long long' static cinit
+| `-ImplicitCastExpr 0x7f9eb3027208 <col:28> 'long long' <IntegralCast>
+|   `-IntegerLiteral 0x7f9eb30271e8 <col:28> 'long' 1207859169
+|-VarDecl 0x7f9eb3027238 <line:33:1, col:18> col:12 used zv6 'int' static cinit
+| `-IntegerLiteral 0x7f9eb3027298 <col:18> 'int' 660195606
+|-FunctionDecl 0x7f9eb3027590 <line:35:1, line:57:1> line:36:1 used callee_af6 'union at6 (struct et6, double, long long, int)' static
+| |-ParmVarDecl 0x7f9eb30272d8 <col:13, col:24> col:24 used ap6 'struct et6':'struct et6'
+| |-ParmVarDecl 0x7f9eb3027350 <col:29, col:36> col:36 used bp6 'double'
+| |-ParmVarDecl 0x7f9eb30273c8 <col:41, col:55> col:55 used cp6 'long long'
+| |-ParmVarDecl 0x7f9eb3027440 <col:60, col:64> col:64 used dp6 'int'
+| `-CompoundStmt 0x7f9eb302b488 <line:37:1, line:57:1>
+|   |-IfStmt 0x7f9eb30278a8 <line:2:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb30277f0 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb30277d0 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb30277a8 <line:38:6, col:29> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb3027778 <col:6, col:14> 'int' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb30276a8 <col:6, col:14> 'int' lvalue bitfield .av6 0x7f9eb3025f48
+|   | |     |   `-MemberExpr 0x7f9eb3027670 <col:6, col:10> 'struct bt6':'struct bt6' lvalue .mv6 0x7f9eb3026280
+|   | |     |     `-DeclRefExpr 0x7f9eb3027648 <col:6> 'struct et6':'struct et6' lvalue Var 0x7f9eb3026b10 'wv6' 'struct et6':'struct et6'
+|   | |     `-ImplicitCastExpr 0x7f9eb3027790 <col:21, col:29> 'int' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb3027740 <col:21, col:29> 'int' lvalue bitfield .av6 0x7f9eb3025f48
+|   | |         `-MemberExpr 0x7f9eb3027708 <col:21, col:25> 'struct bt6':'struct bt6' lvalue .mv6 0x7f9eb3026280
+|   | |           `-DeclRefExpr 0x7f9eb30276e0 <col:21> 'struct et6':'struct et6' lvalue ParmVar 0x7f9eb30272d8 'ap6' 'struct et6':'struct et6'
+|   | |-CallExpr 0x7f9eb3027880 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3027868 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3027810 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb3028b38 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3028ab0 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb3028a90 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb3028a68 <line:39:6, col:29> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb3028a38 <col:6, col:14> 'int' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb3027940 <col:6, col:14> 'int' lvalue bitfield .bv6 0x7f9eb3025fc8
+|   | |     |   `-MemberExpr 0x7f9eb3027908 <col:6, col:10> 'struct bt6':'struct bt6' lvalue .mv6 0x7f9eb3026280
+|   | |     |     `-DeclRefExpr 0x7f9eb30278e0 <col:6> 'struct et6':'struct et6' lvalue Var 0x7f9eb3026b10 'wv6' 'struct et6':'struct et6'
+|   | |     `-ImplicitCastExpr 0x7f9eb3028a50 <col:21, col:29> 'int' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb3028a00 <col:21, col:29> 'int' lvalue bitfield .bv6 0x7f9eb3025fc8
+|   | |         `-MemberExpr 0x7f9eb30279a0 <col:21, col:25> 'struct bt6':'struct bt6' lvalue .mv6 0x7f9eb3026280
+|   | |           `-DeclRefExpr 0x7f9eb3027978 <col:21> 'struct et6':'struct et6' lvalue ParmVar 0x7f9eb30272d8 'ap6' 'struct et6':'struct et6'
+|   | |-CallExpr 0x7f9eb3028b10 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3028af8 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3028ad0 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb3028da0 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3028d18 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb3028cf8 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb3028cd0 <line:40:6, col:29> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb3028ca0 <col:6, col:14> 'int' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb3028bd0 <col:6, col:14> 'int' lvalue bitfield .cv6 0x7f9eb3026048
+|   | |     |   `-MemberExpr 0x7f9eb3028b98 <col:6, col:10> 'struct bt6':'struct bt6' lvalue .mv6 0x7f9eb3026280
+|   | |     |     `-DeclRefExpr 0x7f9eb3028b70 <col:6> 'struct et6':'struct et6' lvalue Var 0x7f9eb3026b10 'wv6' 'struct et6':'struct et6'
+|   | |     `-ImplicitCastExpr 0x7f9eb3028cb8 <col:21, col:29> 'int' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb3028c68 <col:21, col:29> 'int' lvalue bitfield .cv6 0x7f9eb3026048
+|   | |         `-MemberExpr 0x7f9eb3028c30 <col:21, col:25> 'struct bt6':'struct bt6' lvalue .mv6 0x7f9eb3026280
+|   | |           `-DeclRefExpr 0x7f9eb3028c08 <col:21> 'struct et6':'struct et6' lvalue ParmVar 0x7f9eb30272d8 'ap6' 'struct et6':'struct et6'
+|   | |-CallExpr 0x7f9eb3028d78 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3028d60 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3028d38 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb3029008 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3028f80 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb3028f60 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb3028f38 <line:41:6, col:29> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb3028f08 <col:6, col:14> 'int' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb3028e38 <col:6, col:14> 'int' lvalue bitfield .dv6 0x7f9eb30260c8
+|   | |     |   `-MemberExpr 0x7f9eb3028e00 <col:6, col:10> 'struct bt6':'struct bt6' lvalue .mv6 0x7f9eb3026280
+|   | |     |     `-DeclRefExpr 0x7f9eb3028dd8 <col:6> 'struct et6':'struct et6' lvalue Var 0x7f9eb3026b10 'wv6' 'struct et6':'struct et6'
+|   | |     `-ImplicitCastExpr 0x7f9eb3028f20 <col:21, col:29> 'int' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb3028ed0 <col:21, col:29> 'int' lvalue bitfield .dv6 0x7f9eb30260c8
+|   | |         `-MemberExpr 0x7f9eb3028e98 <col:21, col:25> 'struct bt6':'struct bt6' lvalue .mv6 0x7f9eb3026280
+|   | |           `-DeclRefExpr 0x7f9eb3028e70 <col:21> 'struct et6':'struct et6' lvalue ParmVar 0x7f9eb30272d8 'ap6' 'struct et6':'struct et6'
+|   | |-CallExpr 0x7f9eb3028fe0 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3028fc8 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3028fa0 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb30293d0 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3029218 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb30291f8 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb30291d0 <line:42:6, col:29> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb3029188 <col:6, col:14> 'int' <IntegralCast>
+|   | |     | `-ImplicitCastExpr 0x7f9eb3029170 <col:6, col:14> 'unsigned char' <LValueToRValue>
+|   | |     |   `-MemberExpr 0x7f9eb30290a0 <col:6, col:14> 'unsigned char' lvalue .ev6 0x7f9eb3026128
+|   | |     |     `-MemberExpr 0x7f9eb3029068 <col:6, col:10> 'struct bt6':'struct bt6' lvalue .mv6 0x7f9eb3026280
+|   | |     |       `-DeclRefExpr 0x7f9eb3029040 <col:6> 'struct et6':'struct et6' lvalue Var 0x7f9eb3026b10 'wv6' 'struct et6':'struct et6'
+|   | |     `-ImplicitCastExpr 0x7f9eb30291b8 <col:21, col:29> 'int' <IntegralCast>
+|   | |       `-ImplicitCastExpr 0x7f9eb30291a0 <col:21, col:29> 'unsigned char' <LValueToRValue>
+|   | |         `-MemberExpr 0x7f9eb3029138 <col:21, col:29> 'unsigned char' lvalue .ev6 0x7f9eb3026128
+|   | |           `-MemberExpr 0x7f9eb3029100 <col:21, col:25> 'struct bt6':'struct bt6' lvalue .mv6 0x7f9eb3026280
+|   | |             `-DeclRefExpr 0x7f9eb30290d8 <col:21> 'struct et6':'struct et6' lvalue ParmVar 0x7f9eb30272d8 'ap6' 'struct et6':'struct et6'
+|   | |-CallExpr 0x7f9eb30293a8 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3029390 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3029368 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb3029638 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb30295b0 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb3029590 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb3029568 <line:43:6, col:29> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb3029538 <col:6, col:14> 'unsigned int' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb3029468 <col:6, col:14> 'unsigned int' lvalue .fv6 0x7f9eb3026188
+|   | |     |   `-MemberExpr 0x7f9eb3029430 <col:6, col:10> 'struct bt6':'struct bt6' lvalue .mv6 0x7f9eb3026280
+|   | |     |     `-DeclRefExpr 0x7f9eb3029408 <col:6> 'struct et6':'struct et6' lvalue Var 0x7f9eb3026b10 'wv6' 'struct et6':'struct et6'
+|   | |     `-ImplicitCastExpr 0x7f9eb3029550 <col:21, col:29> 'unsigned int' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb3029500 <col:21, col:29> 'unsigned int' lvalue .fv6 0x7f9eb3026188
+|   | |         `-MemberExpr 0x7f9eb30294c8 <col:21, col:25> 'struct bt6':'struct bt6' lvalue .mv6 0x7f9eb3026280
+|   | |           `-DeclRefExpr 0x7f9eb30294a0 <col:21> 'struct et6':'struct et6' lvalue ParmVar 0x7f9eb30272d8 'ap6' 'struct et6':'struct et6'
+|   | |-CallExpr 0x7f9eb3029610 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb30295f8 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb30295d0 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb30298a0 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3029818 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb30297f8 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb30297d0 <line:44:6, col:29> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb30297a0 <col:6, col:14> 'long' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb30296d0 <col:6, col:14> 'long' lvalue .gv6 0x7f9eb30261e8
+|   | |     |   `-MemberExpr 0x7f9eb3029698 <col:6, col:10> 'struct bt6':'struct bt6' lvalue .mv6 0x7f9eb3026280
+|   | |     |     `-DeclRefExpr 0x7f9eb3029670 <col:6> 'struct et6':'struct et6' lvalue Var 0x7f9eb3026b10 'wv6' 'struct et6':'struct et6'
+|   | |     `-ImplicitCastExpr 0x7f9eb30297b8 <col:21, col:29> 'long' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb3029768 <col:21, col:29> 'long' lvalue .gv6 0x7f9eb30261e8
+|   | |         `-MemberExpr 0x7f9eb3029730 <col:21, col:25> 'struct bt6':'struct bt6' lvalue .mv6 0x7f9eb3026280
+|   | |           `-DeclRefExpr 0x7f9eb3029708 <col:21> 'struct et6':'struct et6' lvalue ParmVar 0x7f9eb30272d8 'ap6' 'struct et6':'struct et6'
+|   | |-CallExpr 0x7f9eb3029878 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3029860 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3029838 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb3029aa8 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3029a20 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb3029a00 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb30299c8 <line:45:6, col:21> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb3029998 <col:6, col:10> 'unsigned long' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb3029900 <col:6, col:10> 'unsigned long' lvalue .nv6 0x7f9eb30262e0
+|   | |     |   `-DeclRefExpr 0x7f9eb30298d8 <col:6> 'struct et6':'struct et6' lvalue Var 0x7f9eb3026b10 'wv6' 'struct et6':'struct et6'
+|   | |     `-ImplicitCastExpr 0x7f9eb30299b0 <col:17, col:21> 'unsigned long' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb3029960 <col:17, col:21> 'unsigned long' lvalue .nv6 0x7f9eb30262e0
+|   | |         `-DeclRefExpr 0x7f9eb3029938 <col:17> 'struct et6':'struct et6' lvalue ParmVar 0x7f9eb30272d8 'ap6' 'struct et6':'struct et6'
+|   | |-CallExpr 0x7f9eb3029a80 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3029a68 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3029a40 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb3029ca0 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3029c18 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb3029bf8 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb3029bd0 <line:46:6, col:21> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb3029ba0 <col:6, col:10> 'int' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb3029b08 <col:6, col:10> 'int' lvalue bitfield .ov6 0x7f9eb3026360
+|   | |     |   `-DeclRefExpr 0x7f9eb3029ae0 <col:6> 'struct et6':'struct et6' lvalue Var 0x7f9eb3026b10 'wv6' 'struct et6':'struct et6'
+|   | |     `-ImplicitCastExpr 0x7f9eb3029bb8 <col:17, col:21> 'int' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb3029b68 <col:17, col:21> 'int' lvalue bitfield .ov6 0x7f9eb3026360
+|   | |         `-DeclRefExpr 0x7f9eb3029b40 <col:17> 'struct et6':'struct et6' lvalue ParmVar 0x7f9eb30272d8 'ap6' 'struct et6':'struct et6'
+|   | |-CallExpr 0x7f9eb3029c78 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3029c60 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3029c38 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb3029e98 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3029e10 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb3029df0 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb3029dc8 <line:47:6, col:21> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb3029d98 <col:6, col:10> 'int' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb3029d00 <col:6, col:10> 'int' lvalue bitfield .pv6 0x7f9eb30263e0
+|   | |     |   `-DeclRefExpr 0x7f9eb3029cd8 <col:6> 'struct et6':'struct et6' lvalue Var 0x7f9eb3026b10 'wv6' 'struct et6':'struct et6'
+|   | |     `-ImplicitCastExpr 0x7f9eb3029db0 <col:17, col:21> 'int' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb3029d60 <col:17, col:21> 'int' lvalue bitfield .pv6 0x7f9eb30263e0
+|   | |         `-DeclRefExpr 0x7f9eb3029d38 <col:17> 'struct et6':'struct et6' lvalue ParmVar 0x7f9eb30272d8 'ap6' 'struct et6':'struct et6'
+|   | |-CallExpr 0x7f9eb3029e70 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3029e58 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3029e30 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb302a090 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb302a008 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb3029fe8 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb3029fc0 <line:48:6, col:21> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb3029f90 <col:6, col:10> 'int' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb3029ef8 <col:6, col:10> 'int' lvalue bitfield .qv6 0x7f9eb3026460
+|   | |     |   `-DeclRefExpr 0x7f9eb3029ed0 <col:6> 'struct et6':'struct et6' lvalue Var 0x7f9eb3026b10 'wv6' 'struct et6':'struct et6'
+|   | |     `-ImplicitCastExpr 0x7f9eb3029fa8 <col:17, col:21> 'int' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb3029f58 <col:17, col:21> 'int' lvalue bitfield .qv6 0x7f9eb3026460
+|   | |         `-DeclRefExpr 0x7f9eb3029f30 <col:17> 'struct et6':'struct et6' lvalue ParmVar 0x7f9eb30272d8 'ap6' 'struct et6':'struct et6'
+|   | |-CallExpr 0x7f9eb302a068 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb302a050 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb302a028 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb302a288 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb302a200 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb302a1e0 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb302a1b8 <line:49:6, col:21> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb302a188 <col:6, col:10> 'int' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb302a0f0 <col:6, col:10> 'int' lvalue bitfield .rv6 0x7f9eb30264e0
+|   | |     |   `-DeclRefExpr 0x7f9eb302a0c8 <col:6> 'struct et6':'struct et6' lvalue Var 0x7f9eb3026b10 'wv6' 'struct et6':'struct et6'
+|   | |     `-ImplicitCastExpr 0x7f9eb302a1a0 <col:17, col:21> 'int' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb302a150 <col:17, col:21> 'int' lvalue bitfield .rv6 0x7f9eb30264e0
+|   | |         `-DeclRefExpr 0x7f9eb302a128 <col:17> 'struct et6':'struct et6' lvalue ParmVar 0x7f9eb30272d8 'ap6' 'struct et6':'struct et6'
+|   | |-CallExpr 0x7f9eb302a260 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb302a248 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb302a220 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb302a4f0 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb302a468 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb302a448 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb302a420 <line:50:6, col:29> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb302a3f0 <col:6, col:14> 'long' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb302a320 <col:6, col:14> 'long' lvalue .hv6 0x7f9eb30265f8
+|   | |     |   `-MemberExpr 0x7f9eb302a2e8 <col:6, col:10> 'union ct6':'union ct6' lvalue .sv6 0x7f9eb3026750
+|   | |     |     `-DeclRefExpr 0x7f9eb302a2c0 <col:6> 'struct et6':'struct et6' lvalue Var 0x7f9eb3026b10 'wv6' 'struct et6':'struct et6'
+|   | |     `-ImplicitCastExpr 0x7f9eb302a408 <col:21, col:29> 'long' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb302a3b8 <col:21, col:29> 'long' lvalue .hv6 0x7f9eb30265f8
+|   | |         `-MemberExpr 0x7f9eb302a380 <col:21, col:25> 'union ct6':'union ct6' lvalue .sv6 0x7f9eb3026750
+|   | |           `-DeclRefExpr 0x7f9eb302a358 <col:21> 'struct et6':'struct et6' lvalue ParmVar 0x7f9eb30272d8 'ap6' 'struct et6':'struct et6'
+|   | |-CallExpr 0x7f9eb302a4c8 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb302a4b0 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb302a488 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb302a6e8 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb302a660 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb302a640 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb302a618 <line:51:6, col:21> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb302a5e8 <col:6, col:10> 'int *' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb302a550 <col:6, col:10> 'int *' lvalue .tv6 0x7f9eb30267e0
+|   | |     |   `-DeclRefExpr 0x7f9eb302a528 <col:6> 'struct et6':'struct et6' lvalue Var 0x7f9eb3026b10 'wv6' 'struct et6':'struct et6'
+|   | |     `-ImplicitCastExpr 0x7f9eb302a600 <col:17, col:21> 'int *' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb302a5b0 <col:17, col:21> 'int *' lvalue .tv6 0x7f9eb30267e0
+|   | |         `-DeclRefExpr 0x7f9eb302a588 <col:17> 'struct et6':'struct et6' lvalue ParmVar 0x7f9eb30272d8 'ap6' 'struct et6':'struct et6'
+|   | |-CallExpr 0x7f9eb302a6c0 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb302a6a8 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb302a680 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb302a950 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb302a8c8 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb302a8a8 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb302a880 <line:52:6, col:29> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb302a850 <col:6, col:14> 'double' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb302a780 <col:6, col:14> 'double' lvalue .kv6 0x7f9eb30268f8
+|   | |     |   `-MemberExpr 0x7f9eb302a748 <col:6, col:10> 'union dt6':'union dt6' lvalue .uv6 0x7f9eb3026a00
+|   | |     |     `-DeclRefExpr 0x7f9eb302a720 <col:6> 'struct et6':'struct et6' lvalue Var 0x7f9eb3026b10 'wv6' 'struct et6':'struct et6'
+|   | |     `-ImplicitCastExpr 0x7f9eb302a868 <col:21, col:29> 'double' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb302a818 <col:21, col:29> 'double' lvalue .kv6 0x7f9eb30268f8
+|   | |         `-MemberExpr 0x7f9eb302a7e0 <col:21, col:25> 'union dt6':'union dt6' lvalue .uv6 0x7f9eb3026a00
+|   | |           `-DeclRefExpr 0x7f9eb302a7b8 <col:21> 'struct et6':'struct et6' lvalue ParmVar 0x7f9eb30272d8 'ap6' 'struct et6':'struct et6'
+|   | |-CallExpr 0x7f9eb302a928 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb302a910 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb302a8e8 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb302b0e8 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb302b060 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb302b040 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb302b018 <line:53:6, col:13> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb302a9d8 <col:6> 'double' <LValueToRValue>
+|   | |     | `-DeclRefExpr 0x7f9eb302a988 <col:6> 'double' lvalue Var 0x7f9eb30270f0 'xv6' 'double'
+|   | |     `-ImplicitCastExpr 0x7f9eb302b000 <col:13> 'double' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f9eb302a9b0 <col:13> 'double' lvalue ParmVar 0x7f9eb3027350 'bp6' 'double'
+|   | |-CallExpr 0x7f9eb302b0c0 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb302b0a8 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb302b080 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb302b270 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb302b1e8 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb302b1c8 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb302b1a0 <line:54:6, col:13> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb302b170 <col:6> 'long long' <LValueToRValue>
+|   | |     | `-DeclRefExpr 0x7f9eb302b120 <col:6> 'long long' lvalue Var 0x7f9eb3027188 'yv6' 'long long'
+|   | |     `-ImplicitCastExpr 0x7f9eb302b188 <col:13> 'long long' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f9eb302b148 <col:13> 'long long' lvalue ParmVar 0x7f9eb30273c8 'cp6' 'long long'
+|   | |-CallExpr 0x7f9eb302b248 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb302b230 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb302b208 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb302b3f8 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb302b370 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb302b350 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb302b328 <line:55:6, col:13> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb302b2f8 <col:6> 'int' <LValueToRValue>
+|   | |     | `-DeclRefExpr 0x7f9eb302b2a8 <col:6> 'int' lvalue Var 0x7f9eb3027238 'zv6' 'int'
+|   | |     `-ImplicitCastExpr 0x7f9eb302b310 <col:13> 'int' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f9eb302b2d0 <col:13> 'int' lvalue ParmVar 0x7f9eb3027440 'dp6' 'int'
+|   | |-CallExpr 0x7f9eb302b3d0 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb302b3b8 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb302b390 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9eb302b470 <line:56:3, col:10>
+|     `-ImplicitCastExpr 0x7f9eb302b458 <col:10> 'union at6':'union at6' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9eb302b430 <col:10> 'union at6':'union at6' lvalue Var 0x7f9eb3025c60 'vv6' 'union at6':'union at6'
+|-FunctionDecl 0x7f9eb302b5c8 <line:59:1, line:64:1> line:60:1 used caller_bf6 'void (void)' static
+| `-CompoundStmt 0x7f9eb302b930 <line:61:1, line:64:1>
+|   |-DeclStmt 0x7f9eb302b6e0 <line:62:3, col:17>
+|   | `-VarDecl 0x7f9eb302b680 <col:3, col:13> col:13 used bav6 'union at6':'union at6'
+|   `-BinaryOperator 0x7f9eb302b908 <line:63:3, col:40> 'union at6':'union at6' '='
+|     |-DeclRefExpr 0x7f9eb302b6f8 <col:3> 'union at6':'union at6' lvalue Var 0x7f9eb302b680 'bav6' 'union at6':'union at6'
+|     `-CallExpr 0x7f9eb302b860 <col:10, col:40> 'union at6':'union at6'
+|       |-ImplicitCastExpr 0x7f9eb302b848 <col:10> 'union at6 (*)(struct et6, double, long long, int)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f9eb302b720 <col:10> 'union at6 (struct et6, double, long long, int)' Function 0x7f9eb3027590 'callee_af6' 'union at6 (struct et6, double, long long, int)'
+|       |-ImplicitCastExpr 0x7f9eb302b8a8 <col:22> 'struct et6':'struct et6' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f9eb302b748 <col:22> 'struct et6':'struct et6' lvalue Var 0x7f9eb3026b10 'wv6' 'struct et6':'struct et6'
+|       |-ImplicitCastExpr 0x7f9eb302b8c0 <col:27> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f9eb302b770 <col:27> 'double' lvalue Var 0x7f9eb30270f0 'xv6' 'double'
+|       |-ImplicitCastExpr 0x7f9eb302b8d8 <col:32> 'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f9eb302b798 <col:32> 'long long' lvalue Var 0x7f9eb3027188 'yv6' 'long long'
+|       `-ImplicitCastExpr 0x7f9eb302b8f0 <col:37> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f9eb302b7c0 <col:37> 'int' lvalue Var 0x7f9eb3027238 'zv6' 'int'
+|-VarDecl 0x7f9eb302b970 <line:66:1, col:28> col:22 used uv7 'unsigned char' static cinit
+| `-ImplicitCastExpr 0x7f9eb302b9e8 <col:28> 'unsigned char' <IntegralCast>
+|   `-CharacterLiteral 0x7f9eb302b9d0 <col:28> 'int' 70
+|-VarDecl 0x7f9eb302ba18 <line:67:1, col:20> col:14 used vv7 'float' static cinit
+| `-ImplicitCastExpr 0x7f9eb302ba98 <col:20> 'float' <FloatingCast>
+|   `-FloatingLiteral 0x7f9eb302ba78 <col:20> 'double' 9.663698e+04
+|-VarDecl 0x7f9eb302bac8 <line:68:1, col:21> col:15 used wv7 'double' static cinit
+| `-FloatingLiteral 0x7f9eb302bb28 <col:21> 'double' 2.845071e+04
+|-RecordDecl 0x7f9eb302bb48 <line:69:8, col:19> col:14 union ct7 definition
+|-VarDecl 0x7f9eb302bc40 <col:1, col:28> col:21 used xv7 'union ct7':'union ct7' static cinit
+| `-InitListExpr 0x7f9eb302bce0 <col:27, col:28> 'union ct7':'union ct7'
+|-RecordDecl 0x7f9eb302bd40 <line:70:8, line:82:1> line:70:15 struct et7 definition
+| |-RecordDecl 0x7f9eb302bdf0 parent 0x7f9eb28264d0 <line:72:3, line:76:3> line:72:10 struct dt7 definition
+| | |-FieldDecl 0x7f9eb302bec8 <line:74:5, col:11> col:11 referenced iv7 'float'
+| | `-FieldDecl 0x7f9eb302bf28 <line:75:5, col:24> col:24 referenced jv7 'unsigned short'
+| |-FieldDecl 0x7f9eb302c400 <line:72:3, line:76:5> col:5 referenced kv7 'struct dt7':'struct dt7'
+| |-FieldDecl 0x7f9eb302c4d0 <line:77:3, col:14> col:9 lv7 'float [0]'
+| |-FieldDecl 0x7f9eb302c550 <line:78:3, col:14> col:10 referenced mv7 'int'
+| | `-IntegerLiteral 0x7f9eb302c518 <col:14> 'int' 9
+| |-FieldDecl 0x7f9eb302c5b0 <line:79:3, col:13> col:13 referenced nv7 'short'
+| |-FieldDecl 0x7f9eb302c610 <line:80:3, col:10> col:10 referenced ov7 'double'
+| `-FieldDecl 0x7f9eb302c670 <line:81:3, col:9> col:9 referenced pv7 'float'
+|-VarDecl 0x7f9eb302c760 <line:70:1, line:85:1> line:82:3 used yv7 'struct et7':'struct et7' static cinit
+| `-InitListExpr 0x7f9eb302c980 <col:9, line:85:1> 'struct et7':'struct et7'
+|   |-InitListExpr 0x7f9eb302c9f0 <line:83:3, col:25> 'struct dt7':'struct dt7'
+|   | |-ImplicitCastExpr 0x7f9eb302ca40 <col:5> 'float' <FloatingCast>
+|   | | `-FloatingLiteral 0x7f9eb302c7c0 <col:5> 'double' 3.013600e+04
+|   | `-ImplicitCastExpr 0x7f9eb302ca58 <col:19> 'unsigned short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f9eb302c7e0 <col:19> 'int' 42435
+|   |-InitListExpr 0x7f9eb302ca70 <line:84:3, col:4> 'float [0]'
+|   |-IntegerLiteral 0x7f9eb302c890 <col:7> 'int' 170
+|   |-ImplicitCastExpr 0x7f9eb302cab0 <col:12> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7f9eb302c8b0 <col:12> 'int' 22116
+|   |-FloatingLiteral 0x7f9eb302c8d0 <col:19> 'double' 2.647963e+04
+|   `-ImplicitCastExpr 0x7f9eb302cac8 <col:33> 'float' <FloatingCast>
+|     `-FloatingLiteral 0x7f9eb302c8f0 <col:33> 'double' 4.082961e+03
+|-RecordDecl 0x7f9eb302caf8 <line:86:8, line:91:1> line:86:14 union ft7 definition
+| |-FieldDecl 0x7f9eb302cbb8 <line:88:3, col:9> col:9 referenced qv7 'float'
+| |-FieldDecl 0x7f9eb302cc40 <line:89:3, col:10> col:10 rv7 'float *'
+| `-FieldDecl 0x7f9eb302ccd0 <line:90:3, col:17> col:17 sv7 'unsigned int *'
+|-VarDecl 0x7f9eb302cd70 <line:86:1, line:91:23> col:3 used zv7 'union ft7':'union ft7' static cinit
+| `-InitListExpr 0x7f9eb302ce38 <col:9, col:23> 'union ft7':'union ft7' field Field 0x7f9eb302cbb8 'qv7' 'float'
+|   `-ImplicitCastExpr 0x7f9eb302ce80 <col:11> 'float' <FloatingCast>
+|     `-FloatingLiteral 0x7f9eb302cdd0 <col:11> 'double' 5.042228e+03
+|-VarDecl 0x7f9eb302cec8 <line:92:1, col:19> col:12 used bav7 'int' static cinit
+| `-IntegerLiteral 0x7f9eb302cf28 <col:19> 'int' 1345451862
+|-RecordDecl 0x7f9eb302cf48 <line:93:8, col:33> col:15 struct gt7 definition
+| `-FieldDecl 0x7f9eb302d008 <col:21, col:28> col:28 referenced tv7 'double'
+|-VarDecl 0x7f9eb302d0a0 <col:1, col:57> col:35 used bbv7 'struct gt7':'struct gt7' static cinit
+| `-InitListExpr 0x7f9eb302d168 <col:42, col:57> 'struct gt7':'struct gt7'
+|   `-FloatingLiteral 0x7f9eb302d100 <col:44> 'double' 4.787549e+04
+|-VarDecl 0x7f9eb302d250 <line:94:1, col:41> col:17 used bcv7 'long [1]' static cinit
+| `-InitListExpr 0x7f9eb302d318 <col:27, col:41> 'long [1]'
+|   `-IntegerLiteral 0x7f9eb302d2b0 <col:29> 'long' 1732133482
+|-VarDecl 0x7f9eb302d378 <line:95:1, col:29> col:22 used bdv7 'long long' static cinit
+| `-ImplicitCastExpr 0x7f9eb302d800 <col:29> 'long long' <IntegralCast>
+|   `-IntegerLiteral 0x7f9eb302d3d8 <col:29> 'long' 381678602
+|-FunctionDecl 0x7f9eb302de78 <line:97:1, line:116:1> line:98:1 used callee_af7 'unsigned char (float, double, union ct7, struct et7, union ft7, int, struct gt7, long *, long long)' static
+| |-ParmVarDecl 0x7f9eb302d830 <col:13, col:19> col:19 used ap7 'float'
+| |-ParmVarDecl 0x7f9eb302d8a8 <col:24, col:31> col:31 used bp7 'double'
+| |-ParmVarDecl 0x7f9eb302d928 <col:36, col:46> col:46 cp7 'union ct7':'union ct7'
+| |-ParmVarDecl 0x7f9eb302d9a8 <col:51, col:62> col:62 used dp7 'struct et7':'struct et7'
+| |-ParmVarDecl 0x7f9eb302da28 <line:99:13, col:23> col:23 used ep7 'union ft7':'union ft7'
+| |-ParmVarDecl 0x7f9eb302daa0 <col:28, col:32> col:32 used fp7 'int'
+| |-ParmVarDecl 0x7f9eb302db20 <col:37, col:48> col:48 used gp7 'struct gt7':'struct gt7'
+| |-ParmVarDecl 0x7f9eb302dc30 <col:53, col:67> col:62 used hp7 'long *':'long *'
+| |-ParmVarDecl 0x7f9eb302dca8 <line:100:13, col:27> col:27 used ip7 'long long'
+| `-CompoundStmt 0x7f9eb3031d90 <line:101:1, line:116:1>
+|   |-IfStmt 0x7f9eb302e0a8 <line:2:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb302e020 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb302e000 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb302dfd8 <line:102:6, col:13> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb302dfa8 <col:6> 'float' <LValueToRValue>
+|   | |     | `-DeclRefExpr 0x7f9eb302df58 <col:6> 'float' lvalue Var 0x7f9eb302ba18 'vv7' 'float'
+|   | |     `-ImplicitCastExpr 0x7f9eb302dfc0 <col:13> 'float' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f9eb302df80 <col:13> 'float' lvalue ParmVar 0x7f9eb302d830 'ap7' 'float'
+|   | |-CallExpr 0x7f9eb302e080 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb302e068 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb302e040 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb302e230 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb302e1a8 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb302e188 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb302e160 <line:103:6, col:13> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb302e130 <col:6> 'double' <LValueToRValue>
+|   | |     | `-DeclRefExpr 0x7f9eb302e0e0 <col:6> 'double' lvalue Var 0x7f9eb302bac8 'wv7' 'double'
+|   | |     `-ImplicitCastExpr 0x7f9eb302e148 <col:13> 'double' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f9eb302e108 <col:13> 'double' lvalue ParmVar 0x7f9eb302d8a8 'bp7' 'double'
+|   | |-CallExpr 0x7f9eb302e208 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb302e1f0 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb302e1c8 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb302e498 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb302e410 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb302e3f0 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb302e3c8 <line:104:6, col:29> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb302e398 <col:6, col:14> 'float' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb302e2c8 <col:6, col:14> 'float' lvalue .iv7 0x7f9eb302bec8
+|   | |     |   `-MemberExpr 0x7f9eb302e290 <col:6, col:10> 'struct dt7':'struct dt7' lvalue .kv7 0x7f9eb302c400
+|   | |     |     `-DeclRefExpr 0x7f9eb302e268 <col:6> 'struct et7':'struct et7' lvalue Var 0x7f9eb302c760 'yv7' 'struct et7':'struct et7'
+|   | |     `-ImplicitCastExpr 0x7f9eb302e3b0 <col:21, col:29> 'float' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb302e360 <col:21, col:29> 'float' lvalue .iv7 0x7f9eb302bec8
+|   | |         `-MemberExpr 0x7f9eb302e328 <col:21, col:25> 'struct dt7':'struct dt7' lvalue .kv7 0x7f9eb302c400
+|   | |           `-DeclRefExpr 0x7f9eb302e300 <col:21> 'struct et7':'struct et7' lvalue ParmVar 0x7f9eb302d9a8 'dp7' 'struct et7':'struct et7'
+|   | |-CallExpr 0x7f9eb302e470 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb302e458 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb302e430 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb302e7a0 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb302e6a8 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb302e688 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb302e660 <line:105:6, col:29> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb302e618 <col:6, col:14> 'int' <IntegralCast>
+|   | |     | `-ImplicitCastExpr 0x7f9eb302e600 <col:6, col:14> 'unsigned short' <LValueToRValue>
+|   | |     |   `-MemberExpr 0x7f9eb302e530 <col:6, col:14> 'unsigned short' lvalue .jv7 0x7f9eb302bf28
+|   | |     |     `-MemberExpr 0x7f9eb302e4f8 <col:6, col:10> 'struct dt7':'struct dt7' lvalue .kv7 0x7f9eb302c400
+|   | |     |       `-DeclRefExpr 0x7f9eb302e4d0 <col:6> 'struct et7':'struct et7' lvalue Var 0x7f9eb302c760 'yv7' 'struct et7':'struct et7'
+|   | |     `-ImplicitCastExpr 0x7f9eb302e648 <col:21, col:29> 'int' <IntegralCast>
+|   | |       `-ImplicitCastExpr 0x7f9eb302e630 <col:21, col:29> 'unsigned short' <LValueToRValue>
+|   | |         `-MemberExpr 0x7f9eb302e5c8 <col:21, col:29> 'unsigned short' lvalue .jv7 0x7f9eb302bf28
+|   | |           `-MemberExpr 0x7f9eb302e590 <col:21, col:25> 'struct dt7':'struct dt7' lvalue .kv7 0x7f9eb302c400
+|   | |             `-DeclRefExpr 0x7f9eb302e568 <col:21> 'struct et7':'struct et7' lvalue ParmVar 0x7f9eb302d9a8 'dp7' 'struct et7':'struct et7'
+|   | |-CallExpr 0x7f9eb302e778 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb302e760 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb302e738 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb3030198 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3030110 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb30300f0 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb30300c8 <line:106:6, col:21> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb3030098 <col:6, col:10> 'int' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb3030000 <col:6, col:10> 'int' lvalue bitfield .mv7 0x7f9eb302c550
+|   | |     |   `-DeclRefExpr 0x7f9eb302e7d8 <col:6> 'struct et7':'struct et7' lvalue Var 0x7f9eb302c760 'yv7' 'struct et7':'struct et7'
+|   | |     `-ImplicitCastExpr 0x7f9eb30300b0 <col:17, col:21> 'int' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb3030060 <col:17, col:21> 'int' lvalue bitfield .mv7 0x7f9eb302c550
+|   | |         `-DeclRefExpr 0x7f9eb3030038 <col:17> 'struct et7':'struct et7' lvalue ParmVar 0x7f9eb302d9a8 'dp7' 'struct et7':'struct et7'
+|   | |-CallExpr 0x7f9eb3030170 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3030158 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3030130 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb30303c0 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3030338 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb3030318 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb30302f0 <line:107:6, col:21> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb30302a8 <col:6, col:10> 'int' <IntegralCast>
+|   | |     | `-ImplicitCastExpr 0x7f9eb3030290 <col:6, col:10> 'short' <LValueToRValue>
+|   | |     |   `-MemberExpr 0x7f9eb30301f8 <col:6, col:10> 'short' lvalue .nv7 0x7f9eb302c5b0
+|   | |     |     `-DeclRefExpr 0x7f9eb30301d0 <col:6> 'struct et7':'struct et7' lvalue Var 0x7f9eb302c760 'yv7' 'struct et7':'struct et7'
+|   | |     `-ImplicitCastExpr 0x7f9eb30302d8 <col:17, col:21> 'int' <IntegralCast>
+|   | |       `-ImplicitCastExpr 0x7f9eb30302c0 <col:17, col:21> 'short' <LValueToRValue>
+|   | |         `-MemberExpr 0x7f9eb3030258 <col:17, col:21> 'short' lvalue .nv7 0x7f9eb302c5b0
+|   | |           `-DeclRefExpr 0x7f9eb3030230 <col:17> 'struct et7':'struct et7' lvalue ParmVar 0x7f9eb302d9a8 'dp7' 'struct et7':'struct et7'
+|   | |-CallExpr 0x7f9eb3030398 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3030380 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3030358 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb30305b8 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3030530 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb3030510 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb30304e8 <line:108:6, col:21> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb30304b8 <col:6, col:10> 'double' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb3030420 <col:6, col:10> 'double' lvalue .ov7 0x7f9eb302c610
+|   | |     |   `-DeclRefExpr 0x7f9eb30303f8 <col:6> 'struct et7':'struct et7' lvalue Var 0x7f9eb302c760 'yv7' 'struct et7':'struct et7'
+|   | |     `-ImplicitCastExpr 0x7f9eb30304d0 <col:17, col:21> 'double' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb3030480 <col:17, col:21> 'double' lvalue .ov7 0x7f9eb302c610
+|   | |         `-DeclRefExpr 0x7f9eb3030458 <col:17> 'struct et7':'struct et7' lvalue ParmVar 0x7f9eb302d9a8 'dp7' 'struct et7':'struct et7'
+|   | |-CallExpr 0x7f9eb3030590 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3030578 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3030550 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb30307b0 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3030728 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb3030708 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb30306e0 <line:109:6, col:21> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb30306b0 <col:6, col:10> 'float' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb3030618 <col:6, col:10> 'float' lvalue .pv7 0x7f9eb302c670
+|   | |     |   `-DeclRefExpr 0x7f9eb30305f0 <col:6> 'struct et7':'struct et7' lvalue Var 0x7f9eb302c760 'yv7' 'struct et7':'struct et7'
+|   | |     `-ImplicitCastExpr 0x7f9eb30306c8 <col:17, col:21> 'float' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb3030678 <col:17, col:21> 'float' lvalue .pv7 0x7f9eb302c670
+|   | |         `-DeclRefExpr 0x7f9eb3030650 <col:17> 'struct et7':'struct et7' lvalue ParmVar 0x7f9eb302d9a8 'dp7' 'struct et7':'struct et7'
+|   | |-CallExpr 0x7f9eb3030788 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3030770 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3030748 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb30309a8 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3030920 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb3030900 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb30308d8 <line:110:6, col:21> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb30308a8 <col:6, col:10> 'float' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb3030810 <col:6, col:10> 'float' lvalue .qv7 0x7f9eb302cbb8
+|   | |     |   `-DeclRefExpr 0x7f9eb30307e8 <col:6> 'union ft7':'union ft7' lvalue Var 0x7f9eb302cd70 'zv7' 'union ft7':'union ft7'
+|   | |     `-ImplicitCastExpr 0x7f9eb30308c0 <col:17, col:21> 'float' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb3030870 <col:17, col:21> 'float' lvalue .qv7 0x7f9eb302cbb8
+|   | |         `-DeclRefExpr 0x7f9eb3030848 <col:17> 'union ft7':'union ft7' lvalue ParmVar 0x7f9eb302da28 'ep7' 'union ft7':'union ft7'
+|   | |-CallExpr 0x7f9eb3030980 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3030968 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3030940 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb3030b30 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3030aa8 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb3030a88 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb3030a60 <line:111:6, col:14> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb3030a30 <col:6> 'int' <LValueToRValue>
+|   | |     | `-DeclRefExpr 0x7f9eb30309e0 <col:6> 'int' lvalue Var 0x7f9eb302cec8 'bav7' 'int'
+|   | |     `-ImplicitCastExpr 0x7f9eb3030a48 <col:14> 'int' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f9eb3030a08 <col:14> 'int' lvalue ParmVar 0x7f9eb302daa0 'fp7' 'int'
+|   | |-CallExpr 0x7f9eb3030b08 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3030af0 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3030ac8 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb3030d28 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3030ca0 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb3030c80 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb3030c58 <line:112:6, col:22> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb3030c28 <col:6, col:11> 'double' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f9eb3030b90 <col:6, col:11> 'double' lvalue .tv7 0x7f9eb302d008
+|   | |     |   `-DeclRefExpr 0x7f9eb3030b68 <col:6> 'struct gt7':'struct gt7' lvalue Var 0x7f9eb302d0a0 'bbv7' 'struct gt7':'struct gt7'
+|   | |     `-ImplicitCastExpr 0x7f9eb3030c40 <col:18, col:22> 'double' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f9eb3030bf0 <col:18, col:22> 'double' lvalue .tv7 0x7f9eb302d008
+|   | |         `-DeclRefExpr 0x7f9eb3030bc8 <col:18> 'struct gt7':'struct gt7' lvalue ParmVar 0x7f9eb302db20 'gp7' 'struct gt7':'struct gt7'
+|   | |-CallExpr 0x7f9eb3030d00 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3030ce8 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3030cc0 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb3030f70 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3030ee8 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb3030ec8 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb3030ea0 <line:113:6, col:22> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb3030e70 <col:6, col:12> 'long' <LValueToRValue>
+|   | |     | `-ArraySubscriptExpr 0x7f9eb3030dc0 <col:6, col:12> 'long' lvalue
+|   | |     |   |-ImplicitCastExpr 0x7f9eb3030da8 <col:6> 'long *' <ArrayToPointerDecay>
+|   | |     |   | `-DeclRefExpr 0x7f9eb3030d60 <col:6> 'long [1]' lvalue Var 0x7f9eb302d250 'bcv7' 'long [1]'
+|   | |     |   `-IntegerLiteral 0x7f9eb3030d88 <col:11> 'int' 0
+|   | |     `-ImplicitCastExpr 0x7f9eb3030e88 <col:17, col:22> 'long' <LValueToRValue>
+|   | |       `-ArraySubscriptExpr 0x7f9eb3030e48 <col:17, col:22> 'long' lvalue
+|   | |         |-ImplicitCastExpr 0x7f9eb3030e30 <col:17> 'long *':'long *' <LValueToRValue>
+|   | |         | `-DeclRefExpr 0x7f9eb3030de8 <col:17> 'long *':'long *' lvalue ParmVar 0x7f9eb302dc30 'hp7' 'long *':'long *'
+|   | |         `-IntegerLiteral 0x7f9eb3030e10 <col:21> 'int' 0
+|   | |-CallExpr 0x7f9eb3030f48 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3030f30 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3030f08 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9eb3031d00 <col:14, col:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f9eb3031c78 <col:18, col:21> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f9eb3031c58 <col:19, col:21> 'int'
+|   | |   `-BinaryOperator 0x7f9eb3031c30 <line:114:6, col:14> 'int' '=='
+|   | |     |-ImplicitCastExpr 0x7f9eb3031c00 <col:6> 'long long' <LValueToRValue>
+|   | |     | `-DeclRefExpr 0x7f9eb3030fa8 <col:6> 'long long' lvalue Var 0x7f9eb302d378 'bdv7' 'long long'
+|   | |     `-ImplicitCastExpr 0x7f9eb3031c18 <col:14> 'long long' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f9eb3030fd0 <col:14> 'long long' lvalue ParmVar 0x7f9eb302dca8 'ip7' 'long long'
+|   | |-CallExpr 0x7f9eb3031cd8 <line:2:24, col:31> 'void'
+|   | | `-ImplicitCastExpr 0x7f9eb3031cc0 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9eb3031c98 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9eb3031d78 <line:115:3, col:10>
+|     `-ImplicitCastExpr 0x7f9eb3031d60 <col:10> 'unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9eb3031d38 <col:10> 'unsigned char' lvalue Var 0x7f9eb302b970 'uv7' 'unsigned char'
+|-FunctionDecl 0x7f9eb3031f48 <line:118:1, line:125:1> line:119:1 used caller_bf7 'void (void)' static
+| `-CompoundStmt 0x7f9eb30325c8 <line:120:1, line:125:1>
+|   |-DeclStmt 0x7f9eb3032058 <line:121:3, col:21>
+|   | `-VarDecl 0x7f9eb3031ff8 <col:3, col:17> col:17 used bev7 'unsigned char'
+|   |-BinaryOperator 0x7f9eb30323e8 <line:123:3, col:69> 'unsigned char' '='
+|   | |-DeclRefExpr 0x7f9eb3032070 <col:3> 'unsigned char' lvalue Var 0x7f9eb3031ff8 'bev7' 'unsigned char'
+|   | `-CallExpr 0x7f9eb30322a0 <col:10, col:69> 'unsigned char'
+|   |   |-ImplicitCastExpr 0x7f9eb3032288 <col:10> 'unsigned char (*)(float, double, union ct7, struct et7, union ft7, int, struct gt7, long *, long long)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7f9eb3032098 <col:10> 'unsigned char (float, double, union ct7, struct et7, union ft7, int, struct gt7, long *, long long)' Function 0x7f9eb302de78 'callee_af7' 'unsigned char (float, double, union ct7, struct et7, union ft7, int, struct gt7, long *, long long)'
+|   |   |-ImplicitCastExpr 0x7f9eb3032310 <col:22> 'float' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f9eb30320c0 <col:22> 'float' lvalue Var 0x7f9eb302ba18 'vv7' 'float'
+|   |   |-ImplicitCastExpr 0x7f9eb3032328 <col:27> 'double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f9eb30320e8 <col:27> 'double' lvalue Var 0x7f9eb302bac8 'wv7' 'double'
+|   |   |-ImplicitCastExpr 0x7f9eb3032340 <col:32> 'union ct7':'union ct7' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f9eb3032110 <col:32> 'union ct7':'union ct7' lvalue Var 0x7f9eb302bc40 'xv7' 'union ct7':'union ct7'
+|   |   |-ImplicitCastExpr 0x7f9eb3032358 <col:37> 'struct et7':'struct et7' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f9eb3032138 <col:37> 'struct et7':'struct et7' lvalue Var 0x7f9eb302c760 'yv7' 'struct et7':'struct et7'
+|   |   |-ImplicitCastExpr 0x7f9eb3032370 <col:42> 'union ft7':'union ft7' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f9eb3032160 <col:42> 'union ft7':'union ft7' lvalue Var 0x7f9eb302cd70 'zv7' 'union ft7':'union ft7'
+|   |   |-ImplicitCastExpr 0x7f9eb3032388 <col:47> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f9eb3032188 <col:47> 'int' lvalue Var 0x7f9eb302cec8 'bav7' 'int'
+|   |   |-ImplicitCastExpr 0x7f9eb30323a0 <col:53> 'struct gt7':'struct gt7' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f9eb30321b0 <col:53> 'struct gt7':'struct gt7' lvalue Var 0x7f9eb302d0a0 'bbv7' 'struct gt7':'struct gt7'
+|   |   |-ImplicitCastExpr 0x7f9eb30323b8 <col:59> 'long *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7f9eb30321d8 <col:59> 'long [1]' lvalue Var 0x7f9eb302d250 'bcv7' 'long [1]'
+|   |   `-ImplicitCastExpr 0x7f9eb30323d0 <col:65> 'long long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f9eb3032200 <col:65> 'long long' lvalue Var 0x7f9eb302d378 'bdv7' 'long long'
+|   `-IfStmt 0x7f9eb3032590 <line:2:14, col:31>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-UnaryOperator 0x7f9eb3032508 <col:18, col:21> 'int' prefix '!'
+|     | `-ParenExpr 0x7f9eb30324e8 <col:19, col:21> 'int'
+|     |   `-BinaryOperator 0x7f9eb30324c0 <line:124:6, col:13> 'int' '=='
+|     |     |-ImplicitCastExpr 0x7f9eb3032478 <col:6> 'int' <IntegralCast>
+|     |     | `-ImplicitCastExpr 0x7f9eb3032460 <col:6> 'unsigned char' <LValueToRValue>
+|     |     |   `-DeclRefExpr 0x7f9eb3032410 <col:6> 'unsigned char' lvalue Var 0x7f9eb302b970 'uv7' 'unsigned char'
+|     |     `-ImplicitCastExpr 0x7f9eb30324a8 <col:13> 'int' <IntegralCast>
+|     |       `-ImplicitCastExpr 0x7f9eb3032490 <col:13> 'unsigned char' <LValueToRValue>
+|     |         `-DeclRefExpr 0x7f9eb3032438 <col:13> 'unsigned char' lvalue Var 0x7f9eb3031ff8 'bev7' 'unsigned char'
+|     |-CallExpr 0x7f9eb3032568 <line:2:24, col:31> 'void'
+|     | `-ImplicitCastExpr 0x7f9eb3032550 <col:24> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f9eb3032528 <col:24> 'void (void) __attribute__((noreturn))' Function 0x7f9eb3025ac8 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f9eb3032650 <line:127:1, line:133:1> line:128:1 main 'int ()'
+  `-CompoundStmt 0x7f9eb3032818 <line:129:1, line:133:1>
+    |-CallExpr 0x7f9eb3032750 <line:130:3, col:15> 'void'
+    | `-ImplicitCastExpr 0x7f9eb3032738 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f9eb30326e8 <col:3> 'void (void)' Function 0x7f9eb302b5c8 'caller_bf6' 'void (void)'
+    |-CallExpr 0x7f9eb30327b8 <line:131:3, col:15> 'void'
+    | `-ImplicitCastExpr 0x7f9eb30327a0 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f9eb3032778 <col:3> 'void (void)' Function 0x7f9eb3031f48 'caller_bf7' 'void (void)'
+    `-ReturnStmt 0x7f9eb3032800 <line:132:3, col:10>
+      `-IntegerLiteral 0x7f9eb30327e0 <col:10> 'int' 0

@@ -1,0 +1,22 @@
+c_files/pr68833-3.c:5:1: error: unknown type name 'གྷ'
+\u0F43  // { dg-error "`.U00000f43' is not in NFC .-Werror=normalized=." }
+^
+c_files/pr68833-3.c:7:46: error: expected identifier or '('
+/* { dg-prune-output "treated as errors" } */
+                                             ^
+2 errors generated.
+TranslationUnitDecl 0x7f83bc8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f83bc826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f83bc826740 '__int128'
+|-TypedefDecl 0x7f83bc826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f83bc826760 'unsigned __int128'
+|-TypedefDecl 0x7f83bc826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f83bc826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f83bc826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f83bc826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f83bc826dc0 'char *'
+|   `-BuiltinType 0x7f83bc826560 'char'
+`-TypedefDecl 0x7f83bc8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7f83bc827070 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7f83bc826ee0 'struct __va_list_tag'
+      `-Record 0x7f83bc826e58 '__va_list_tag'

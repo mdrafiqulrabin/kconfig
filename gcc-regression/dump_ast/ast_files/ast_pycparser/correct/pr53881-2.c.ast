@@ -1,0 +1,31 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Switch: 
+        ID: a
+        Compound: 
+          Case: 
+            Constant: int, 0
+          Case: 
+            Constant: int, 10
+            Assignment: =
+              ID: b
+              ID: c
+            Label: out_bcon
+              Break: 
+          Case: 
+            Constant: int, 3
+            Goto: out_bcon

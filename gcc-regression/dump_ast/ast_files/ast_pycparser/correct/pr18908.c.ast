@@ -1,0 +1,16 @@
+FileAST: 
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['_Bool']
+        TypeDecl: f3, []
+          IdentifierType: ['_Bool']
+    Compound: 
+      Assignment: ^=
+        UnaryOp: *
+          ID: p
+        Constant: int, 1

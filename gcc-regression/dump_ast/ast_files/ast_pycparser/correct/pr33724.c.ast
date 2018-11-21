@@ -1,0 +1,60 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: xt_entry_target
+      Decl: name, [], [], []
+        ArrayDecl: []
+          TypeDecl: name, []
+            IdentifierType: ['char']
+          Constant: int, 1
+  Decl: None, [], [], []
+    Struct: ipt_entry
+      Decl: elems, [], [], []
+        ArrayDecl: []
+          TypeDecl: elems, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 1
+  Decl: match_different, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['unsigned', 'char']
+      TypeDecl: match_different, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: dump_entry, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: t, [], [], []
+            PtrDecl: []
+              TypeDecl: t, []
+                Struct: xt_entry_target
+        TypeDecl: dump_entry, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_strcmp
+          ExprList: 
+            StructRef: ->
+              ID: t
+              ID: name
+            Constant: string, ""
+  FuncDef: 
+    Decl: is_same, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: a, ['const']
+                Struct: ipt_entry
+        TypeDecl: is_same, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: match_different
+        ExprList: 
+          StructRef: ->
+            ID: a
+            ID: elems

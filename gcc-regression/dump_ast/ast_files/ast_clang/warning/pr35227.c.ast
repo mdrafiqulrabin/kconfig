@@ -1,0 +1,47 @@
+c_files/pr35227.c:9:10: warning: implicitly declaring library function 'cabs' with type 'double (_Complex double)' [-Wimplicit-function-declaration]
+  return cabs(C);  /* { dg-warning "incompatible" } */
+         ^
+c_files/pr35227.c:9:10: note: include the header <complex.h> or explicitly provide a declaration for 'cabs'
+1 warning generated.
+TranslationUnitDecl 0x7fa8d90264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa8d9026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa8d9026740 '__int128'
+|-TypedefDecl 0x7fa8d9026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa8d9026760 'unsigned __int128'
+|-TypedefDecl 0x7fa8d9026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa8d9026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa8d9026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa8d9026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa8d9026dc0 'char *'
+|   `-BuiltinType 0x7fa8d9026560 'char'
+|-TypedefDecl 0x7fa8d90270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa8d9027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa8d9026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa8d9026e58 '__va_list_tag'
+|-FunctionDecl 0x7fa8d9825a00 <c_files/pr35227.c:4:1, line:10:1> line:5:1 mandel 'int (_Complex double)'
+| |-ParmVarDecl 0x7fa8d9027130 <col:8, col:24> col:24 used C '_Complex double'
+| `-CompoundStmt 0x7fa8d9826358 <line:6:1, line:10:1>
+|   |-DeclStmt 0x7fa8d9825b58 <line:7:3, col:9>
+|   | `-VarDecl 0x7fa8d9825af8 <col:3, col:7> col:7 used py 'int'
+|   |-BinaryOperator 0x7fa8d9825cd0 <line:8:3, col:39> '_Complex double' '='
+|   | |-DeclRefExpr 0x7fa8d9825b70 <col:3> '_Complex double' lvalue ParmVar 0x7fa8d9027130 'C' '_Complex double'
+|   | `-BinaryOperator 0x7fa8d9825ca8 <col:7, col:39> '_Complex double' '*'
+|   |   |-ImplicitCastExpr 0x7fa8d9825c90 <col:7, col:27> '_Complex double' <FloatingComplexCast>
+|   |   | `-ParenExpr 0x7fa8d9825bf0 <col:7, col:27> '_Complex float'
+|   |   |   `-UnaryOperator 0x7fa8d9825bd0 <col:8, col:22> '_Complex float' prefix '__extension__'
+|   |   |     `-ImaginaryLiteral 0x7fa8d9825bb8 <col:22> '_Complex float'
+|   |   |       `-FloatingLiteral 0x7fa8d9825b98 <col:22> 'float' 1.000000e+00
+|   |   `-CStyleCastExpr 0x7fa8d9825c68 <col:31, col:39> 'double' <IntegralToFloating>
+|   |     `-ImplicitCastExpr 0x7fa8d9825c50 <col:39> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fa8d9825c10 <col:39> 'int' lvalue Var 0x7fa8d9825af8 'py' 'int'
+|   `-ReturnStmt 0x7fa8d9826340 <line:9:3, col:16>
+|     `-ImplicitCastExpr 0x7fa8d9826328 <col:10, col:16> 'int' <FloatingToIntegral>
+|       `-CallExpr 0x7fa8d98262e0 <col:10, col:16> 'double'
+|         |-ImplicitCastExpr 0x7fa8d98262c8 <col:10> 'double (*)(_Complex double)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fa8d9826248 <col:10> 'double (_Complex double)' Function 0x7fa8d98260f0 'cabs' 'double (_Complex double)'
+|         `-ImplicitCastExpr 0x7fa8d9826310 <col:15> '_Complex double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fa8d9826270 <col:15> '_Complex double' lvalue ParmVar 0x7fa8d9027130 'C' '_Complex double'
+`-FunctionDecl 0x7fa8d98260f0 <col:10> col:10 implicit used cabs 'double (_Complex double)' extern
+  |-ParmVarDecl 0x7fa8d9826188 <<invalid sloc>> <invalid sloc> '_Complex double'
+  |-NoThrowAttr 0x7fa8d98261f0 <col:10> Implicit
+  `-ConstAttr 0x7fa8d9826238 <col:10> Implicit

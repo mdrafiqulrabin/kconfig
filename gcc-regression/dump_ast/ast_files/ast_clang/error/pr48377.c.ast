@@ -1,0 +1,91 @@
+c_files/pr48377.c:4:10: fatal error: 'tree-vect.h' file not found
+#include "tree-vect.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fd1738264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd173826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd173826740 '__int128'
+|-TypedefDecl 0x7fd173826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd173826760 'unsigned __int128'
+|-TypedefDecl 0x7fd173826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd173826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd173826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd173826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd173826dc0 'char *'
+|   `-BuiltinType 0x7fd173826560 'char'
+|-TypedefDecl 0x7fd1738270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd173827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd173826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd173826e58 '__va_list_tag'
+|-TypedefDecl 0x7fd173827158 <c_files/pr48377.c:6:1, col:22> col:22 referenced U 'unsigned int'
+| |-BuiltinType 0x7fd173826660 'unsigned int'
+| |-MayAliasAttr 0x7fd1738271b0 <col:56>
+| `-AlignedAttr 0x7fd173879400 <col:39, col:53> aligned
+|   `-IntegerLiteral 0x7fd173827120 <col:52> 'int' 1
+|-FunctionDecl 0x7fd173879588 <line:8:1, line:17:1> line:9:1 used foo 'unsigned int (const char *, int)'
+| |-ParmVarDecl 0x7fd173879430 <col:6, col:18> col:18 used s 'const char *'
+| |-ParmVarDecl 0x7fd1738794a8 <col:21, col:25> col:25 used len 'int'
+| |-CompoundStmt 0x7fd173879e18 <line:10:1, line:17:1>
+| | |-DeclStmt 0x7fd173879850 <line:11:3, col:29>
+| | | `-VarDecl 0x7fd173879748 <col:3, col:28> col:12 used p 'const U *' cinit
+| | |   `-CStyleCastExpr 0x7fd173879828 <col:16, col:28> 'const U *' <BitCast>
+| | |     `-ImplicitCastExpr 0x7fd1738797e0 <col:28> 'const char *' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7fd1738797a8 <col:28> 'const char *' lvalue ParmVar 0x7fd173879430 's' 'const char *'
+| | |-DeclStmt 0x7fd173879b18 <line:12:3, col:62>
+| | | |-VarDecl 0x7fd173879880 <col:3, col:46> col:16 used f 'unsigned int' cinit
+| | | | `-ImplicitCastExpr 0x7fd173879998 <col:20, col:46> 'unsigned int' <IntegralCast>
+| | | |   `-BinaryOperator 0x7fd173879970 <col:20, col:46> 'unsigned long' '/'
+| | | |     |-ImplicitCastExpr 0x7fd173879958 <col:20> 'unsigned long' <IntegralCast>
+| | | |     | `-ImplicitCastExpr 0x7fd173879940 <col:20> 'int' <LValueToRValue>
+| | | |     |   `-DeclRefExpr 0x7fd1738798e0 <col:20> 'int' lvalue ParmVar 0x7fd1738794a8 'len' 'int'
+| | | |     `-UnaryExprOrTypeTraitExpr 0x7fd173879920 <col:26, col:46> 'unsigned long' sizeof 'unsigned int'
+| | | |-VarDecl 0x7fd1738799c8 <col:3, col:56> col:49 used hash 'unsigned int' cinit
+| | | | `-ImplicitCastExpr 0x7fd173879a68 <col:56> 'unsigned int' <IntegralCast>
+| | | |   `-ImplicitCastExpr 0x7fd173879a50 <col:56> 'int' <LValueToRValue>
+| | | |     `-DeclRefExpr 0x7fd173879a28 <col:56> 'int' lvalue ParmVar 0x7fd1738794a8 'len' 'int'
+| | | `-VarDecl 0x7fd173879a98 <col:3, col:61> col:61 used i 'unsigned int'
+| | |-ForStmt 0x7fd173879d88 <line:14:3, line:15:15>
+| | | |-BinaryOperator 0x7fd173879b90 <line:14:8, col:12> 'unsigned int' '='
+| | | | |-DeclRefExpr 0x7fd173879b30 <col:8> 'unsigned int' lvalue Var 0x7fd173879a98 'i' 'unsigned int'
+| | | | `-ImplicitCastExpr 0x7fd173879b78 <col:12> 'unsigned int' <IntegralCast>
+| | | |   `-IntegerLiteral 0x7fd173879b58 <col:12> 'int' 0
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fd173879c38 <col:15, col:19> 'int' '<'
+| | | | |-ImplicitCastExpr 0x7fd173879c08 <col:15> 'unsigned int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fd173879bb8 <col:15> 'unsigned int' lvalue Var 0x7fd173879a98 'i' 'unsigned int'
+| | | | `-ImplicitCastExpr 0x7fd173879c20 <col:19> 'unsigned int' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fd173879be0 <col:19> 'unsigned int' lvalue Var 0x7fd173879880 'f' 'unsigned int'
+| | | |-UnaryOperator 0x7fd173879c88 <col:22, col:24> 'unsigned int' prefix '++'
+| | | | `-DeclRefExpr 0x7fd173879c60 <col:24> 'unsigned int' lvalue Var 0x7fd173879a98 'i' 'unsigned int'
+| | | `-CompoundAssignOperator 0x7fd173879d50 <line:15:5, col:15> 'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | |   |-DeclRefExpr 0x7fd173879ca8 <col:5> 'unsigned int' lvalue Var 0x7fd1738799c8 'hash' 'unsigned int'
+| | |   `-ImplicitCastExpr 0x7fd173879d38 <col:13, col:15> 'U':'unsigned int' <LValueToRValue>
+| | |     `-UnaryOperator 0x7fd173879d18 <col:13, col:15> 'const U':'const unsigned int' lvalue prefix '*'
+| | |       `-UnaryOperator 0x7fd173879cf8 <col:14, col:15> 'const U *' postfix '++'
+| | |         `-DeclRefExpr 0x7fd173879cd0 <col:14> 'const U *' lvalue Var 0x7fd173879748 'p' 'const U *'
+| | `-ReturnStmt 0x7fd173879e00 <line:16:3, col:10>
+| |   `-ImplicitCastExpr 0x7fd173879de8 <col:10> 'unsigned int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fd173879dc0 <col:10> 'unsigned int' lvalue Var 0x7fd1738799c8 'hash' 'unsigned int'
+| `-NoInlineAttr 0x7fd173879630 <line:8:16>
+|-VarDecl 0x7fd173879ee8 <line:19:1, col:12> col:6 used buf 'char [64]'
+| `-AlignedAttr 0x7fd173879f48 <col:29, col:40> aligned
+|   `-IntegerLiteral 0x7fd173879e70 <col:38> 'int' 32
+|-FunctionDecl 0x7fd17387a068 <line:21:1, line:26:1> line:22:1 main 'int (void)'
+| `-CompoundStmt 0x7fd17387b490 <line:23:1, line:26:1>
+|   |-CallExpr 0x7fd17387a280 <line:24:3, col:15> 'int'
+|   | `-ImplicitCastExpr 0x7fd17387a268 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fd17387a218 <col:3> 'int ()' Function 0x7fd17387a180 'check_vect' 'int ()'
+|   `-ReturnStmt 0x7fd17387b478 <line:25:3, col:31>
+|     `-BinaryOperator 0x7fd17387b450 <col:10, col:31> 'int' '!='
+|       |-CallExpr 0x7fd17387a3c0 <col:10, col:26> 'unsigned int'
+|       | |-ImplicitCastExpr 0x7fd17387a3a8 <col:10> 'unsigned int (*)(const char *, int)' <FunctionToPointerDecay>
+|       | | `-DeclRefExpr 0x7fd17387a2a8 <col:10> 'unsigned int (const char *, int)' Function 0x7fd173879588 'foo' 'unsigned int (const char *, int)'
+|       | |-ImplicitCastExpr 0x7fd17387b400 <col:15, col:21> 'const char *' <BitCast>
+|       | | `-BinaryOperator 0x7fd17387a330 <col:15, col:21> 'char *' '+'
+|       | |   |-ImplicitCastExpr 0x7fd17387a318 <col:15> 'char *' <ArrayToPointerDecay>
+|       | |   | `-DeclRefExpr 0x7fd17387a2d0 <col:15> 'char [64]' lvalue Var 0x7fd173879ee8 'buf' 'char [64]'
+|       | |   `-IntegerLiteral 0x7fd17387a2f8 <col:21> 'int' 1
+|       | `-IntegerLiteral 0x7fd17387a358 <col:24> 'int' 26
+|       `-ImplicitCastExpr 0x7fd17387b438 <col:31> 'unsigned int' <IntegralCast>
+|         `-IntegerLiteral 0x7fd17387b418 <col:31> 'int' 26
+`-FunctionDecl 0x7fd17387a180 <<invalid sloc>> line:24:3 implicit used check_vect 'int ()'

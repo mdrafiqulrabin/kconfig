@@ -1,0 +1,29 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: s1
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: s2
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          Struct: s1
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            TypeDecl: s, []
+              Struct: s2
+          EllipsisParam: 
+        TypeDecl: test, []
+          IdentifierType: ['int']
+    Compound: 

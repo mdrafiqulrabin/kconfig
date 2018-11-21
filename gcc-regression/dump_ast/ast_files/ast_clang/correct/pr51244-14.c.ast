@@ -1,0 +1,278 @@
+TranslationUnitDecl 0x7facd98264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7facd9826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7facd9826740 '__int128'
+|-TypedefDecl 0x7facd9826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7facd9826760 'unsigned __int128'
+|-TypedefDecl 0x7facd9826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7facd9826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7facd9826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7facd9826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7facd9826dc0 'char *'
+|   `-BuiltinType 0x7facd9826560 'char'
+|-TypedefDecl 0x7facd98270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7facd9827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7facd9826ee0 'struct __va_list_tag'
+|     `-Record 0x7facd9826e58 '__va_list_tag'
+|-RecordDecl 0x7facd9827120 <c_files/pr51244-14.c:17:9, col:16> col:16 struct transaction_s
+|-TypedefDecl 0x7facda025a20 <col:1, col:30> col:30 referenced transaction_t 'struct transaction_s':'struct transaction_s'
+| `-ElaboratedType 0x7facd98271d0 'struct transaction_s' sugar
+|   `-RecordType 0x7facd98271b0 'struct transaction_s'
+|     `-Record 0x7facda025d78 'transaction_s'
+|-RecordDecl 0x7facda025a90 <line:19:1, line:23:1> line:19:8 struct journal_head definition
+| |-FieldDecl 0x7facda025bc8 <line:21:3, col:19> col:19 b_transaction 'transaction_t *'
+| |-FieldDecl 0x7facda025cc0 <line:22:3, col:24> col:24 referenced b_cpnext 'struct journal_head *'
+| `-FieldDecl 0x7facda025d30 <col:3, col:35> col:35 referenced b_cpprev 'struct journal_head *'
+|-RecordDecl 0x7facda025d78 prev 0x7facd9827120 <line:25:1, line:29:1> line:25:8 struct transaction_s definition
+| |-FieldDecl 0x7facda025e28 <line:27:3, col:25> col:25 referenced t_checkpoint_list 'struct journal_head *'
+| |-FieldDecl 0x7facda025e80 <line:28:3, col:18> col:18 referenced t_cpnext 'transaction_t *'
+| `-FieldDecl 0x7facda025ed8 <col:3, col:29> col:29 referenced t_cpprev 'transaction_t *'
+|-RecordDecl 0x7facda025f20 <line:31:1, line:35:1> line:31:8 struct journal_s definition
+| |-FieldDecl 0x7facda025fe0 <line:33:3, col:19> col:19 referenced j_checkpoint_transactions 'transaction_t *'
+| |-FieldDecl 0x7facda026040 <line:34:3, col:17> col:17 j_first 'unsigned long'
+| `-FieldDecl 0x7facda0260a0 <col:3, col:26> col:26 j_last 'unsigned long'
+|-TypedefDecl 0x7facda026140 <line:37:1, col:26> col:26 referenced journal_t 'struct journal_s':'struct journal_s'
+| `-ElaboratedType 0x7facda0260f0 'struct journal_s' sugar
+|   `-RecordType 0x7facda025fb0 'struct journal_s'
+|     `-Record 0x7facda025f20 'journal_s'
+|-FunctionDecl 0x7facda0262c8 <line:39:1, col:57> col:12 used __try_to_free_cp_buf 'int (struct journal_head *)' extern
+| `-ParmVarDecl 0x7facda0261c0 <col:34, col:55> col:55 jh 'struct journal_head *'
+|-FunctionDecl 0x7facda0265c8 <line:40:1, col:81> col:12 used __cleanup_transaction 'int (journal_t *, transaction_t *)' extern
+| |-ParmVarDecl 0x7facda026438 <col:35, col:46> col:46 journal 'journal_t *'
+| `-ParmVarDecl 0x7facda0264a8 <col:55, col:70> col:70 transaction 'transaction_t *'
+|-FunctionDecl 0x7facda026820 <line:41:1, col:56> col:13 __flush_batch 'void (void **, int *)' extern
+| |-ParmVarDecl 0x7facda0266b0 <col:28, col:35> col:35 bhs 'void **'
+| `-ParmVarDecl 0x7facda026750 <col:40, col:45> col:45 batch_count 'int *'
+|-FunctionDecl 0x7facda026a00 <line:42:1, col:26> col:14 used jh2bh 'void *(void *)' extern
+| `-ParmVarDecl 0x7facda0268e0 <col:21, col:25> col:26 'void *'
+|-FunctionDecl 0x7facda026e08 <line:44:1, line:69:1> line:45:1 used __flush_buffer 'int (journal_t *, struct journal_head *, void **, int *, int *)' static
+| |-ParmVarDecl 0x7facda026ab0 <col:17, col:28> col:28 journal 'journal_t *'
+| |-ParmVarDecl 0x7facda026b38 <col:37, col:58> col:58 used jh 'struct journal_head *'
+| |-ParmVarDecl 0x7facda026bb0 <line:46:3, col:10> col:10 used bhs 'void **'
+| |-ParmVarDecl 0x7facda026c28 <col:15, col:20> col:20 used batch_count 'int *'
+| |-ParmVarDecl 0x7facda026ca0 <col:33, col:38> col:38 used drop_count 'int *'
+| `-CompoundStmt 0x7facda027a90 <line:47:1, line:69:1>
+|   |-DeclStmt 0x7facda027030 <line:48:3, col:24>
+|   | `-VarDecl 0x7facda026ee0 <col:3, col:23> col:9 used bh 'void *' cinit
+|   |   `-CallExpr 0x7facda026fd0 <col:14, col:23> 'void *'
+|   |     |-ImplicitCastExpr 0x7facda026fb8 <col:14> 'void *(*)(void *)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7facda026f40 <col:14> 'void *(void *)' Function 0x7facda026a00 'jh2bh' 'void *(void *)'
+|   |     `-ImplicitCastExpr 0x7facda027018 <col:21> 'void *' <BitCast>
+|   |       `-ImplicitCastExpr 0x7facda027000 <col:21> 'struct journal_head *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facda026f68 <col:21> 'struct journal_head *' lvalue ParmVar 0x7facda026b38 'jh' 'struct journal_head *'
+|   |-DeclStmt 0x7facda0270e0 <line:49:3, col:14>
+|   | `-VarDecl 0x7facda027060 <col:3, col:13> col:7 used ret 'int' cinit
+|   |   `-IntegerLiteral 0x7facda0270c0 <col:13> 'int' 0
+|   |-IfStmt 0x7facda027a00 <line:50:3, line:67:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7facda027120 <line:50:7> 'void *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7facda0270f8 <col:7> 'void *' lvalue Var 0x7facda026ee0 'bh' 'void *'
+|   | |-CompoundStmt 0x7facda027488 <line:51:5, line:56:5>
+|   | | |-BinaryOperator 0x7facda027258 <line:52:7, col:27> 'void *' '='
+|   | | | |-ArraySubscriptExpr 0x7facda0271f0 <col:7, col:23> 'void *' lvalue
+|   | | | | |-ImplicitCastExpr 0x7facda0271c0 <col:7> 'void **' <LValueToRValue>
+|   | | | | | `-DeclRefExpr 0x7facda027138 <col:7> 'void **' lvalue ParmVar 0x7facda026bb0 'bhs' 'void **'
+|   | | | | `-ImplicitCastExpr 0x7facda0271d8 <col:11, col:12> 'int' <LValueToRValue>
+|   | | | |   `-UnaryOperator 0x7facda0271a0 <col:11, col:12> 'int' lvalue prefix '*'
+|   | | | |     `-ImplicitCastExpr 0x7facda027188 <col:12> 'int *' <LValueToRValue>
+|   | | | |       `-DeclRefExpr 0x7facda027160 <col:12> 'int *' lvalue ParmVar 0x7facda026c28 'batch_count' 'int *'
+|   | | | `-ImplicitCastExpr 0x7facda027240 <col:27> 'void *' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7facda027218 <col:27> 'void *' lvalue Var 0x7facda026ee0 'bh' 'void *'
+|   | | |-UnaryOperator 0x7facda027300 <line:53:7, col:21> 'int' postfix '++'
+|   | | | `-ParenExpr 0x7facda0272e0 <col:7, col:20> 'int' lvalue
+|   | | |   `-UnaryOperator 0x7facda0272c0 <col:8, col:9> 'int' lvalue prefix '*'
+|   | | |     `-ImplicitCastExpr 0x7facda0272a8 <col:9> 'int *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7facda027280 <col:9> 'int *' lvalue ParmVar 0x7facda026c28 'batch_count' 'int *'
+|   | | `-IfStmt 0x7facda027450 <line:54:7, line:55:10>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-BinaryOperator 0x7facda0273b8 <line:54:11, col:27> 'int' '=='
+|   | |   | |-ImplicitCastExpr 0x7facda0273a0 <col:11, col:12> 'int' <LValueToRValue>
+|   | |   | | `-UnaryOperator 0x7facda027360 <col:11, col:12> 'int' lvalue prefix '*'
+|   | |   | |   `-ImplicitCastExpr 0x7facda027348 <col:12> 'int *' <LValueToRValue>
+|   | |   | |     `-DeclRefExpr 0x7facda027320 <col:12> 'int *' lvalue ParmVar 0x7facda026c28 'batch_count' 'int *'
+|   | |   | `-IntegerLiteral 0x7facda027380 <col:27> 'int' 64
+|   | |   |-BinaryOperator 0x7facda027428 <line:55:4, col:10> 'int' '='
+|   | |   | |-DeclRefExpr 0x7facda0273e0 <col:4> 'int' lvalue Var 0x7facda027060 'ret' 'int'
+|   | |   | `-IntegerLiteral 0x7facda027408 <col:10> 'int' 1
+|   | |   `-<<<NULL>>>
+|   | `-CompoundStmt 0x7facda0279a8 <line:58:5, line:67:5>
+|   |   |-DeclStmt 0x7facda027550 <line:59:7, col:26>
+|   |   | `-VarDecl 0x7facda0274d0 <col:7, col:25> col:11 used last_buffer 'int' cinit
+|   |   |   `-IntegerLiteral 0x7facda027530 <col:25> 'int' 0
+|   |   |-IfStmt 0x7facda0276d0 <line:60:7, line:61:16>
+|   |   | |-<<<NULL>>>
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7facda027638 <line:60:11, col:27> 'int' '=='
+|   |   | | |-ImplicitCastExpr 0x7facda027608 <col:11, col:15> 'struct journal_head *' <LValueToRValue>
+|   |   | | | `-MemberExpr 0x7facda0275a8 <col:11, col:15> 'struct journal_head *' lvalue ->b_cpnext 0x7facda025cc0
+|   |   | | |   `-ImplicitCastExpr 0x7facda027590 <col:11> 'struct journal_head *' <LValueToRValue>
+|   |   | | |     `-DeclRefExpr 0x7facda027568 <col:11> 'struct journal_head *' lvalue ParmVar 0x7facda026b38 'jh' 'struct journal_head *'
+|   |   | | `-ImplicitCastExpr 0x7facda027620 <col:27> 'struct journal_head *' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7facda0275e0 <col:27> 'struct journal_head *' lvalue ParmVar 0x7facda026b38 'jh' 'struct journal_head *'
+|   |   | |-BinaryOperator 0x7facda0276a8 <line:61:2, col:16> 'int' '='
+|   |   | | |-DeclRefExpr 0x7facda027660 <col:2> 'int' lvalue Var 0x7facda0274d0 'last_buffer' 'int'
+|   |   | | `-IntegerLiteral 0x7facda027688 <col:16> 'int' 1
+|   |   | `-<<<NULL>>>
+|   |   `-IfStmt 0x7facda027970 <line:62:7, line:66:2>
+|   |     |-<<<NULL>>>
+|   |     |-<<<NULL>>>
+|   |     |-CallExpr 0x7facda0277d0 <line:62:11, col:35> 'int'
+|   |     | |-ImplicitCastExpr 0x7facda0277b8 <col:11> 'int (*)(struct journal_head *)' <FunctionToPointerDecay>
+|   |     | | `-DeclRefExpr 0x7facda027708 <col:11> 'int (struct journal_head *)' Function 0x7facda0262c8 '__try_to_free_cp_buf' 'int (struct journal_head *)'
+|   |     | `-ImplicitCastExpr 0x7facda027800 <col:33> 'struct journal_head *' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7facda027730 <col:33> 'struct journal_head *' lvalue ParmVar 0x7facda026b38 'jh' 'struct journal_head *'
+|   |     |-CompoundStmt 0x7facda027948 <line:63:2, line:66:2>
+|   |     | |-UnaryOperator 0x7facda027898 <line:64:4, col:17> 'int' postfix '++'
+|   |     | | `-ParenExpr 0x7facda027878 <col:4, col:16> 'int' lvalue
+|   |     | |   `-UnaryOperator 0x7facda027858 <col:5, col:6> 'int' lvalue prefix '*'
+|   |     | |     `-ImplicitCastExpr 0x7facda027840 <col:6> 'int *' <LValueToRValue>
+|   |     | |       `-DeclRefExpr 0x7facda027818 <col:6> 'int *' lvalue ParmVar 0x7facda026ca0 'drop_count' 'int *'
+|   |     | `-BinaryOperator 0x7facda027920 <line:65:4, col:10> 'int' '='
+|   |     |   |-DeclRefExpr 0x7facda0278b8 <col:4> 'int' lvalue Var 0x7facda027060 'ret' 'int'
+|   |     |   `-ImplicitCastExpr 0x7facda027908 <col:10> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7facda0278e0 <col:10> 'int' lvalue Var 0x7facda0274d0 'last_buffer' 'int'
+|   |     `-<<<NULL>>>
+|   `-ReturnStmt 0x7facda027a78 <line:68:3, col:10>
+|     `-ImplicitCastExpr 0x7facda027a60 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7facda027a38 <col:10> 'int' lvalue Var 0x7facda027060 'ret' 'int'
+`-FunctionDecl 0x7facda027c68 <line:71:1, line:107:1> line:72:1 log_do_checkpoint 'int (journal_t *, int)'
+  |-ParmVarDecl 0x7facda027ad8 <col:20, col:31> col:31 used journal 'journal_t *'
+  |-ParmVarDecl 0x7facda027b50 <col:40, col:44> col:44 nblocks 'int'
+  `-CompoundStmt 0x7facda0294e8 <line:73:1, line:107:1>
+    |-DeclStmt 0x7facda027e80 <line:74:3, col:67>
+    | |-VarDecl 0x7facda027d20 <col:3, col:18> col:18 used transaction 'transaction_t *'
+    | |-VarDecl 0x7facda027d90 <col:3, col:32> col:32 used last_transaction 'transaction_t *'
+    | `-VarDecl 0x7facda027e00 <col:3, col:51> col:51 used next_transaction 'transaction_t *'
+    |-DeclStmt 0x7facda027f30 <line:75:3, col:22>
+    | `-VarDecl 0x7facda027eb0 <col:3, col:21> col:7 used batch_count 'int' cinit
+    |   `-IntegerLiteral 0x7facda027f10 <col:21> 'int' 0
+    |-DeclStmt 0x7facda028030 <line:76:3, col:16>
+    | `-VarDecl 0x7facda027fd0 <col:3, col:15> col:9 used bhs 'void *[64]'
+    |-LabelStmt 0x7facda028170 <line:78:1, line:79:26> 'repeat'
+    | `-BinaryOperator 0x7facda028100 <col:3, col:26> 'transaction_t *' '='
+    |   |-DeclRefExpr 0x7facda028048 <col:3> 'transaction_t *' lvalue Var 0x7facda027d20 'transaction' 'transaction_t *'
+    |   `-ImplicitCastExpr 0x7facda0280e8 <col:17, col:26> 'transaction_t *' <LValueToRValue>
+    |     `-MemberExpr 0x7facda0280b0 <col:17, col:26> 'transaction_t *' lvalue ->j_checkpoint_transactions 0x7facda025fe0
+    |       `-ImplicitCastExpr 0x7facda028098 <col:17> 'journal_t *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7facda028070 <col:17> 'journal_t *' lvalue ParmVar 0x7facda027ad8 'journal' 'journal_t *'
+    |-IfStmt 0x7facda0282c0 <line:80:3, line:81:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7facda028260 <line:80:7, col:32> 'int' '=='
+    | | |-ImplicitCastExpr 0x7facda028230 <col:7> 'transaction_t *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7facda028188 <col:7> 'transaction_t *' lvalue Var 0x7facda027d20 'transaction' 'transaction_t *'
+    | | `-ImplicitCastExpr 0x7facda028248 <col:22, col:32> 'transaction_t *' <BitCast>
+    | |   `-ParenExpr 0x7facda028210 <col:22, col:32> 'void *'
+    | |     `-CStyleCastExpr 0x7facda0281e8 <col:23, col:31> 'void *' <NullToPointer>
+    | |       `-IntegerLiteral 0x7facda0281b0 <col:31> 'int' 0
+    | |-ReturnStmt 0x7facda0282a8 <line:81:5, col:12>
+    | | `-IntegerLiteral 0x7facda028288 <col:12> 'int' 0
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7facda0283b0 <line:82:3, col:35> 'transaction_t *' '='
+    | |-DeclRefExpr 0x7facda0282f8 <col:3> 'transaction_t *' lvalue Var 0x7facda027d90 'last_transaction' 'transaction_t *'
+    | `-ImplicitCastExpr 0x7facda028398 <col:22, col:35> 'transaction_t *' <LValueToRValue>
+    |   `-MemberExpr 0x7facda028360 <col:22, col:35> 'transaction_t *' lvalue ->t_cpprev 0x7facda025ed8
+    |     `-ImplicitCastExpr 0x7facda028348 <col:22> 'transaction_t *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7facda028320 <col:22> 'transaction_t *' lvalue Var 0x7facda027d20 'transaction' 'transaction_t *'
+    |-BinaryOperator 0x7facda028440 <line:83:3, col:22> 'transaction_t *' '='
+    | |-DeclRefExpr 0x7facda0283d8 <col:3> 'transaction_t *' lvalue Var 0x7facda027e00 'next_transaction' 'transaction_t *'
+    | `-ImplicitCastExpr 0x7facda028428 <col:22> 'transaction_t *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7facda028400 <col:22> 'transaction_t *' lvalue Var 0x7facda027d20 'transaction' 'transaction_t *'
+    `-DoStmt 0x7facda0294c8 <line:84:3, line:106:45>
+      |-CompoundStmt 0x7facda0293a8 <line:85:5, line:106:5>
+      | |-DeclStmt 0x7facda028620 <line:86:7, col:50>
+      | | |-VarDecl 0x7facda028490 <col:7, col:28> col:28 used jh 'struct journal_head *'
+      | | |-VarDecl 0x7facda028518 <col:7, col:33> col:33 used last_jh 'struct journal_head *'
+      | | `-VarDecl 0x7facda0285a0 <col:7, col:43> col:43 used next_jh 'struct journal_head *'
+      | |-DeclStmt 0x7facda0286d0 <line:87:7, col:25>
+      | | `-VarDecl 0x7facda028650 <col:7, col:24> col:11 used drop_count 'int' cinit
+      | |   `-IntegerLiteral 0x7facda0286b0 <col:24> 'int' 0
+      | |-DeclStmt 0x7facda028810 <line:88:7, col:33>
+      | | |-VarDecl 0x7facda028700 <col:7, col:11> col:11 used cleanup_ret 'int'
+      | | `-VarDecl 0x7facda028778 <col:7, col:32> col:24 used retry 'int' cinit
+      | |   `-IntegerLiteral 0x7facda0287d8 <col:32> 'int' 0
+      | |-BinaryOperator 0x7facda028890 <line:89:7, col:21> 'transaction_t *' '='
+      | | |-DeclRefExpr 0x7facda028828 <col:7> 'transaction_t *' lvalue Var 0x7facda027d20 'transaction' 'transaction_t *'
+      | | `-ImplicitCastExpr 0x7facda028878 <col:21> 'transaction_t *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7facda028850 <col:21> 'transaction_t *' lvalue Var 0x7facda027e00 'next_transaction' 'transaction_t *'
+      | |-BinaryOperator 0x7facda028970 <line:90:7, col:39> 'transaction_t *' '='
+      | | |-DeclRefExpr 0x7facda0288b8 <col:7> 'transaction_t *' lvalue Var 0x7facda027e00 'next_transaction' 'transaction_t *'
+      | | `-ImplicitCastExpr 0x7facda028958 <col:26, col:39> 'transaction_t *' <LValueToRValue>
+      | |   `-MemberExpr 0x7facda028920 <col:26, col:39> 'transaction_t *' lvalue ->t_cpnext 0x7facda025e80
+      | |     `-ImplicitCastExpr 0x7facda028908 <col:26> 'transaction_t *' <LValueToRValue>
+      | |       `-DeclRefExpr 0x7facda0288e0 <col:26> 'transaction_t *' lvalue Var 0x7facda027d20 'transaction' 'transaction_t *'
+      | |-BinaryOperator 0x7facda028a50 <line:91:7, col:25> 'struct journal_head *' '='
+      | | |-DeclRefExpr 0x7facda028998 <col:7> 'struct journal_head *' lvalue Var 0x7facda028490 'jh' 'struct journal_head *'
+      | | `-ImplicitCastExpr 0x7facda028a38 <col:12, col:25> 'struct journal_head *' <LValueToRValue>
+      | |   `-MemberExpr 0x7facda028a00 <col:12, col:25> 'struct journal_head *' lvalue ->t_checkpoint_list 0x7facda025e28
+      | |     `-ImplicitCastExpr 0x7facda0289e8 <col:12> 'transaction_t *' <LValueToRValue>
+      | |       `-DeclRefExpr 0x7facda0289c0 <col:12> 'transaction_t *' lvalue Var 0x7facda027d20 'transaction' 'transaction_t *'
+      | |-BinaryOperator 0x7facda028b30 <line:92:7, col:21> 'struct journal_head *' '='
+      | | |-DeclRefExpr 0x7facda028a78 <col:7> 'struct journal_head *' lvalue Var 0x7facda028518 'last_jh' 'struct journal_head *'
+      | | `-ImplicitCastExpr 0x7facda028b18 <col:17, col:21> 'struct journal_head *' <LValueToRValue>
+      | |   `-MemberExpr 0x7facda028ae0 <col:17, col:21> 'struct journal_head *' lvalue ->b_cpprev 0x7facda025d30
+      | |     `-ImplicitCastExpr 0x7facda028ac8 <col:17> 'struct journal_head *' <LValueToRValue>
+      | |       `-DeclRefExpr 0x7facda028aa0 <col:17> 'struct journal_head *' lvalue Var 0x7facda028490 'jh' 'struct journal_head *'
+      | |-BinaryOperator 0x7facda028bc0 <line:93:7, col:17> 'struct journal_head *' '='
+      | | |-DeclRefExpr 0x7facda028b58 <col:7> 'struct journal_head *' lvalue Var 0x7facda0285a0 'next_jh' 'struct journal_head *'
+      | | `-ImplicitCastExpr 0x7facda028ba8 <col:17> 'struct journal_head *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7facda028b80 <col:17> 'struct journal_head *' lvalue Var 0x7facda028490 'jh' 'struct journal_head *'
+      | |-DoStmt 0x7facda029140 <line:94:7, line:99:34>
+      | | |-CompoundStmt 0x7facda028fe0 <line:95:2, line:99:2>
+      | | | |-BinaryOperator 0x7facda028c50 <line:96:4, col:9> 'struct journal_head *' '='
+      | | | | |-DeclRefExpr 0x7facda028be8 <col:4> 'struct journal_head *' lvalue Var 0x7facda028490 'jh' 'struct journal_head *'
+      | | | | `-ImplicitCastExpr 0x7facda028c38 <col:9> 'struct journal_head *' <LValueToRValue>
+      | | | |   `-DeclRefExpr 0x7facda028c10 <col:9> 'struct journal_head *' lvalue Var 0x7facda0285a0 'next_jh' 'struct journal_head *'
+      | | | |-BinaryOperator 0x7facda028d30 <line:97:4, col:18> 'struct journal_head *' '='
+      | | | | |-DeclRefExpr 0x7facda028c78 <col:4> 'struct journal_head *' lvalue Var 0x7facda0285a0 'next_jh' 'struct journal_head *'
+      | | | | `-ImplicitCastExpr 0x7facda028d18 <col:14, col:18> 'struct journal_head *' <LValueToRValue>
+      | | | |   `-MemberExpr 0x7facda028ce0 <col:14, col:18> 'struct journal_head *' lvalue ->b_cpnext 0x7facda025cc0
+      | | | |     `-ImplicitCastExpr 0x7facda028cc8 <col:14> 'struct journal_head *' <LValueToRValue>
+      | | | |       `-DeclRefExpr 0x7facda028ca0 <col:14> 'struct journal_head *' lvalue Var 0x7facda028490 'jh' 'struct journal_head *'
+      | | | `-BinaryOperator 0x7facda028fb8 <line:98:4, col:70> 'int' '='
+      | | |   |-DeclRefExpr 0x7facda028d58 <col:4> 'int' lvalue Var 0x7facda028778 'retry' 'int'
+      | | |   `-CallExpr 0x7facda028f20 <col:12, col:70> 'int'
+      | | |     |-ImplicitCastExpr 0x7facda028f08 <col:12> 'int (*)(journal_t *, struct journal_head *, void **, int *, int *)' <FunctionToPointerDecay>
+      | | |     | `-DeclRefExpr 0x7facda028d80 <col:12> 'int (journal_t *, struct journal_head *, void **, int *, int *)' Function 0x7facda026e08 '__flush_buffer' 'int (journal_t *, struct journal_head *, void **, int *, int *)'
+      | | |     |-ImplicitCastExpr 0x7facda028f70 <col:27> 'journal_t *' <LValueToRValue>
+      | | |     | `-DeclRefExpr 0x7facda028da8 <col:27> 'journal_t *' lvalue ParmVar 0x7facda027ad8 'journal' 'journal_t *'
+      | | |     |-ImplicitCastExpr 0x7facda028f88 <col:36> 'struct journal_head *' <LValueToRValue>
+      | | |     | `-DeclRefExpr 0x7facda028dd0 <col:36> 'struct journal_head *' lvalue Var 0x7facda028490 'jh' 'struct journal_head *'
+      | | |     |-ImplicitCastExpr 0x7facda028fa0 <col:40> 'void **' <ArrayToPointerDecay>
+      | | |     | `-DeclRefExpr 0x7facda028df8 <col:40> 'void *[64]' lvalue Var 0x7facda027fd0 'bhs' 'void *[64]'
+      | | |     |-UnaryOperator 0x7facda028e48 <col:45, col:46> 'int *' prefix '&'
+      | | |     | `-DeclRefExpr 0x7facda028e20 <col:46> 'int' lvalue Var 0x7facda027eb0 'batch_count' 'int'
+      | | |     `-UnaryOperator 0x7facda028e90 <col:59, col:60> 'int *' prefix '&'
+      | | |       `-DeclRefExpr 0x7facda028e68 <col:60> 'int' lvalue Var 0x7facda028650 'drop_count' 'int'
+      | | `-BinaryOperator 0x7facda029118 <line:99:11, col:29> 'int' '&&'
+      | |   |-BinaryOperator 0x7facda029090 <col:11, col:17> 'int' '!='
+      | |   | |-ImplicitCastExpr 0x7facda029060 <col:11> 'struct journal_head *' <LValueToRValue>
+      | |   | | `-DeclRefExpr 0x7facda029010 <col:11> 'struct journal_head *' lvalue Var 0x7facda028490 'jh' 'struct journal_head *'
+      | |   | `-ImplicitCastExpr 0x7facda029078 <col:17> 'struct journal_head *' <LValueToRValue>
+      | |   |   `-DeclRefExpr 0x7facda029038 <col:17> 'struct journal_head *' lvalue Var 0x7facda028518 'last_jh' 'struct journal_head *'
+      | |   `-UnaryOperator 0x7facda0290f8 <col:28, col:29> 'int' prefix '!'
+      | |     `-ImplicitCastExpr 0x7facda0290e0 <col:29> 'int' <LValueToRValue>
+      | |       `-DeclRefExpr 0x7facda0290b8 <col:29> 'int' lvalue Var 0x7facda028778 'retry' 'int'
+      | |-IfStmt 0x7facda0291b8 <line:101:7, line:102:7>
+      | | |-<<<NULL>>>
+      | | |-<<<NULL>>>
+      | | |-ImplicitCastExpr 0x7facda029188 <line:101:11> 'int' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7facda029160 <col:11> 'int' lvalue Var 0x7facda028778 'retry' 'int'
+      | | |-GotoStmt 0x7facda0291a0 <line:102:2, col:7> 'repeat' 0x7facda028128
+      | | `-<<<NULL>>>
+      | |-BinaryOperator 0x7facda029368 <line:104:7, col:63> 'int' '='
+      | | |-DeclRefExpr 0x7facda0291f0 <col:7> 'int' lvalue Var 0x7facda028700 'cleanup_ret' 'int'
+      | | `-CallExpr 0x7facda029300 <col:21, col:63> 'int'
+      | |   |-ImplicitCastExpr 0x7facda0292e8 <col:21> 'int (*)(journal_t *, transaction_t *)' <FunctionToPointerDecay>
+      | |   | `-DeclRefExpr 0x7facda029218 <col:21> 'int (journal_t *, transaction_t *)' Function 0x7facda0265c8 '__cleanup_transaction' 'int (journal_t *, transaction_t *)'
+      | |   |-ImplicitCastExpr 0x7facda029338 <col:43> 'journal_t *' <LValueToRValue>
+      | |   | `-DeclRefExpr 0x7facda029240 <col:43> 'journal_t *' lvalue ParmVar 0x7facda027ad8 'journal' 'journal_t *'
+      | |   `-ImplicitCastExpr 0x7facda029350 <col:52> 'transaction_t *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7facda029268 <col:52> 'transaction_t *' lvalue Var 0x7facda027d20 'transaction' 'transaction_t *'
+      | `-GotoStmt 0x7facda029390 <line:105:7, col:12> 'repeat' 0x7facda028128
+      `-BinaryOperator 0x7facda0294a0 <line:106:14, col:29> 'int' '!='
+        |-ImplicitCastExpr 0x7facda029470 <col:14> 'transaction_t *' <LValueToRValue>
+        | `-DeclRefExpr 0x7facda029420 <col:14> 'transaction_t *' lvalue Var 0x7facda027d20 'transaction' 'transaction_t *'
+        `-ImplicitCastExpr 0x7facda029488 <col:29> 'transaction_t *' <LValueToRValue>
+          `-DeclRefExpr 0x7facda029448 <col:29> 'transaction_t *' lvalue Var 0x7facda027d90 'last_transaction' 'transaction_t *'

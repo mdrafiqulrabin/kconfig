@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fcc2f8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcc2f826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcc2f826740 '__int128'
+|-TypedefDecl 0x7fcc2f826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcc2f826760 'unsigned __int128'
+|-TypedefDecl 0x7fcc2f826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcc2f826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcc2f826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcc2f826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcc2f826dc0 'char *'
+|   `-BuiltinType 0x7fcc2f826560 'char'
+|-TypedefDecl 0x7fcc2f8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcc2f827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcc2f826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcc2f826e58 '__va_list_tag'
+|-FunctionDecl 0x7fcc2f877400 <c_files/pr70756-2.c:5:1, col:22> col:13 used bar 'void (void)' extern
+`-FunctionDecl 0x7fcc2f8775b0 <line:7:1, line:12:1> line:8:1 fn 'void (void *)'
+  |-ParmVarDecl 0x7fcc2f8774f0 <col:5, col:11> col:11 used p 'void *'
+  `-CompoundStmt 0x7fcc2f8779a0 <line:9:1, line:12:1>
+    |-DeclStmt 0x7fcc2f877750 <line:10:3, col:18>
+    | `-VarDecl 0x7fcc2f877668 <col:3, col:17> col:9 a 'void *' cinit
+    |   `-BinaryOperator 0x7fcc2f877728 <col:13, col:17> 'void *' '+'
+    |     |-ImplicitCastExpr 0x7fcc2f877710 <col:13> 'void *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fcc2f8776c8 <col:13> 'void *' lvalue ParmVar 0x7fcc2f8774f0 'p' 'void *'
+    |     `-IntegerLiteral 0x7fcc2f8776f0 <col:17> 'int' 1
+    `-DeclStmt 0x7fcc2f877988 <line:11:3, col:30>
+      `-VarDecl 0x7fcc2f877898 <col:3, col:29> col:10 a2 'void (*)(void)' cinit
+        `-BinaryOperator 0x7fcc2f877960 <col:22, col:29> 'void (*)(void)' '+'
+          |-UnaryOperator 0x7fcc2f877920 <col:22, col:23> 'void (*)(void)' prefix '&'
+          | `-DeclRefExpr 0x7fcc2f8778f8 <col:23> 'void (void)' Function 0x7fcc2f877400 'bar' 'void (void)'
+          `-IntegerLiteral 0x7fcc2f877940 <col:29> 'int' 1

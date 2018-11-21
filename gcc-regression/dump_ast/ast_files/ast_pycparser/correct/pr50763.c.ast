@@ -1,0 +1,39 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: i, [], [], []
+          TypeDecl: i, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: c
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: c
+      Assignment: =
+        ID: d
+        Constant: int, 33
+      While: 
+        BinaryOp: ==
+          ID: c
+          ID: d
+        EmptyStatement: 

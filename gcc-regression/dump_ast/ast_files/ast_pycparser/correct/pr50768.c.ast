@@ -1,0 +1,59 @@
+FileAST: 
+  Decl: data, [], [], []
+    ArrayDecl: []
+      TypeDecl: data, []
+        IdentifierType: ['char']
+      Constant: int, 8
+  Decl: l1, [], [], []
+    TypeDecl: l1, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: test1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: buf, [], [], []
+        ArrayDecl: []
+          TypeDecl: buf, []
+            IdentifierType: ['char']
+          Constant: int, 8
+      FuncCall: 
+        ID: __builtin___mempcpy_chk
+        ExprList: 
+          ID: buf
+          ID: data
+          TernaryOp: 
+            ID: l1
+            UnaryOp: sizeof
+              ID: buf
+            Constant: int, 4
+          FuncCall: 
+            ID: __builtin_object_size
+            ExprList: 
+              ID: buf
+              Constant: int, 0
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: __builtin___memmove_chk
+            ExprList: 
+              ID: buf
+              ID: data
+              TernaryOp: 
+                ID: l1
+                UnaryOp: sizeof
+                  ID: buf
+                Constant: int, 4
+              FuncCall: 
+                ID: __builtin_object_size
+                ExprList: 
+                  ID: buf
+                  Constant: int, 0
+          ID: buf
+        FuncCall: 
+          ID: __builtin_abort

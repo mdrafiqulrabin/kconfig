@@ -1,0 +1,93 @@
+c_files/pr31385.c:4:35: error: unknown machine mode 'SD'
+typedef float fp_t __attribute__((mode(SD)));
+                                  ^
+c_files/pr31385.c:16:11: error: invalid suffix 'DF' on floating constant
+    y = 1.DF;
+          ^
+c_files/pr31385.c:19:15: error: invalid suffix 'DF' on floating constant
+    if (f < 0.DF)
+              ^
+c_files/pr31385.c:22:12: error: invalid suffix 'DF' on floating constant
+    f3 = 2.DF;
+           ^
+c_files/pr31385.c:25:22: error: invalid suffix 'DF' on floating constant
+    y = (z + z) / (9.DF) + f3 / (z * z);
+                     ^
+5 errors generated.
+TranslationUnitDecl 0x7fa4868264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa486826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa486826740 '__int128'
+|-TypedefDecl 0x7fa486826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa486826760 'unsigned __int128'
+|-TypedefDecl 0x7fa486826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa486826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa486826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa486826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa486826dc0 'char *'
+|   `-BuiltinType 0x7fa486826560 'char'
+|-TypedefDecl 0x7fa4868270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa486827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa486826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa486826e58 '__va_list_tag'
+|-TypedefDecl 0x7fa486827148 <c_files/pr31385.c:4:1, col:15> col:15 referenced fp_t 'float'
+| `-BuiltinType 0x7fa4868266c0 'float'
+|-FunctionDecl 0x7fa487026b00 <line:6:1, col:19> col:13 used g 'fp_t (fp_t)' extern
+| `-ParmVarDecl 0x7fa487026a00 <col:15> col:19 'fp_t':'float'
+`-FunctionDecl 0x7fa487026c78 <line:8:1, line:30:1> line:9:1 bug 'fp_t (fp_t)'
+  |-ParmVarDecl 0x7fa487026bf0 <col:5, col:10> col:10 used x 'fp_t':'float'
+  `-CompoundStmt 0x7fa487027910 <line:10:1, line:30:1>
+    |-DeclStmt 0x7fa487026d88 <line:11:5, col:16>
+    | `-VarDecl 0x7fa487026d28 <col:5, col:10> col:10 used result 'fp_t':'float'
+    |-DeclStmt 0x7fa487026e18 <line:12:5, col:10>
+    | `-VarDecl 0x7fa487026db8 <col:5, col:9> col:9 used n 'int'
+    |-DeclStmt 0x7fa487027018 <line:13:5, col:21>
+    | |-VarDecl 0x7fa487026e40 <col:5, col:10> col:10 used f 'fp_t':'float'
+    | |-VarDecl 0x7fa487026eb0 <col:5, col:13> col:13 used f3 'fp_t':'float'
+    | |-VarDecl 0x7fa487026f20 <col:5, col:17> col:17 used y 'fp_t':'float'
+    | `-VarDecl 0x7fa487026f90 <col:5, col:20> col:20 used z 'fp_t':'float'
+    |-BinaryOperator 0x7fa487027078 <line:15:5, col:9> 'int' '='
+    | |-DeclRefExpr 0x7fa487027030 <col:5> 'int' lvalue Var 0x7fa487026db8 'n' 'int'
+    | `-IntegerLiteral 0x7fa487027058 <col:9> 'int' 0
+    |-BinaryOperator 0x7fa4870271f8 <line:17:5, col:12> 'fp_t':'float' '='
+    | |-DeclRefExpr 0x7fa4870270c8 <col:5> 'fp_t':'float' lvalue Var 0x7fa487026e40 'f' 'fp_t':'float'
+    | `-CallExpr 0x7fa4870271b0 <col:9, col:12> 'fp_t':'float'
+    |   |-ImplicitCastExpr 0x7fa487027198 <col:9> 'fp_t (*)(fp_t)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fa4870270f0 <col:9> 'fp_t (fp_t)' Function 0x7fa487026b00 'g' 'fp_t (fp_t)'
+    |   `-ImplicitCastExpr 0x7fa4870271e0 <col:11> 'fp_t':'float' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fa487027118 <col:11> 'fp_t':'float' lvalue ParmVar 0x7fa487026bf0 'x' 'fp_t':'float'
+    |-IfStmt 0x7fa487027318 <line:19:5, line:20:14>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7fa4870272f8 <<invalid sloc>> '_Bool'
+    | |-BinaryOperator 0x7fa4870272d0 <col:9, col:14> 'fp_t':'float' '='
+    | | |-DeclRefExpr 0x7fa487027248 <col:9> 'fp_t':'float' lvalue Var 0x7fa487026e40 'f' 'fp_t':'float'
+    | | `-UnaryOperator 0x7fa4870272b0 <col:13, col:14> 'fp_t':'float' prefix '-'
+    | |   `-ImplicitCastExpr 0x7fa487027298 <col:14> 'fp_t':'float' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fa487027270 <col:14> 'fp_t':'float' lvalue Var 0x7fa487026e40 'f' 'fp_t':'float'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fa4870275c0 <line:24:5, col:29> 'fp_t':'float' '='
+    | |-DeclRefExpr 0x7fa487027378 <col:5> 'fp_t':'float' lvalue Var 0x7fa487026f90 'z' 'fp_t':'float'
+    | `-ParenExpr 0x7fa4870275a0 <col:9, col:29> 'float'
+    |   `-BinaryOperator 0x7fa487027578 <col:10, col:28> 'float' '+'
+    |     |-BinaryOperator 0x7fa487027420 <col:10, col:14> 'float' '+'
+    |     | |-ImplicitCastExpr 0x7fa4870273f0 <col:10> 'fp_t':'float' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fa4870273a0 <col:10> 'fp_t':'float' lvalue Var 0x7fa487026f20 'y' 'fp_t':'float'
+    |     | `-ImplicitCastExpr 0x7fa487027408 <col:14> 'fp_t':'float' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fa4870273c8 <col:14> 'fp_t':'float' lvalue Var 0x7fa487026f20 'y' 'fp_t':'float'
+    |     `-BinaryOperator 0x7fa487027550 <col:18, col:28> 'float' '/'
+    |       |-ImplicitCastExpr 0x7fa487027538 <col:18> 'fp_t':'float' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7fa487027448 <col:18> 'fp_t':'float' lvalue Var 0x7fa487026e40 'f' 'fp_t':'float'
+    |       `-ParenExpr 0x7fa487027518 <col:22, col:28> 'float'
+    |         `-BinaryOperator 0x7fa4870274f0 <col:23, col:27> 'float' '*'
+    |           |-ImplicitCastExpr 0x7fa4870274c0 <col:23> 'fp_t':'float' <LValueToRValue>
+    |           | `-DeclRefExpr 0x7fa487027470 <col:23> 'fp_t':'float' lvalue Var 0x7fa487026f20 'y' 'fp_t':'float'
+    |           `-ImplicitCastExpr 0x7fa4870274d8 <col:27> 'fp_t':'float' <LValueToRValue>
+    |             `-DeclRefExpr 0x7fa487027498 <col:27> 'fp_t':'float' lvalue Var 0x7fa487026f20 'y' 'fp_t':'float'
+    |-BinaryOperator 0x7fa487027870 <line:27:5, col:14> 'fp_t':'float' '='
+    | |-DeclRefExpr 0x7fa487027808 <col:5> 'fp_t':'float' lvalue Var 0x7fa487026d28 'result' 'fp_t':'float'
+    | `-ImplicitCastExpr 0x7fa487027858 <col:14> 'fp_t':'float' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fa487027830 <col:14> 'fp_t':'float' lvalue Var 0x7fa487026f20 'y' 'fp_t':'float'
+    `-ReturnStmt 0x7fa4870278f8 <line:29:5, col:19>
+      `-ImplicitCastExpr 0x7fa4870278e0 <col:12, col:19> 'fp_t':'float' <LValueToRValue>
+        `-ParenExpr 0x7fa4870278c0 <col:12, col:19> 'fp_t':'float' lvalue
+          `-DeclRefExpr 0x7fa487027898 <col:13> 'fp_t':'float' lvalue Var 0x7fa487026d28 'result' 'fp_t':'float'

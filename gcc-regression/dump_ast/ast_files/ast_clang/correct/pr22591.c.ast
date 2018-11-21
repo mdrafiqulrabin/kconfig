@@ -1,0 +1,187 @@
+TranslationUnitDecl 0x7f961a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f961a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f961a026740 '__int128'
+|-TypedefDecl 0x7f961a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f961a026760 'unsigned __int128'
+|-TypedefDecl 0x7f961a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f961a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f961a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f961a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f961a026dc0 'char *'
+|   `-BuiltinType 0x7f961a026560 'char'
+|-TypedefDecl 0x7f961a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f961a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f961a026ee0 'struct __va_list_tag'
+|     `-Record 0x7f961a026e58 '__va_list_tag'
+|-FunctionDecl 0x7f961a825a00 <c_files/pr22591.c:4:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f961a825a98 prev 0x7f961a825a00 <col:1, col:13> col:6 used abort 'void (void) __attribute__((noreturn))'
+|-RecordDecl 0x7f961a825b58 <line:6:9, line:9:1> line:6:16 struct _Node definition
+| |-FieldDecl 0x7f961a825cb0 <line:8:3, col:17> col:17 referenced next 'struct _Node *'
+| `-FieldDecl 0x7f961a825d20 <col:3, col:24> col:24 referenced prev 'struct _Node *'
+|-TypedefDecl 0x7f961a825d88 <line:6:1, line:9:3> col:3 referenced Node 'struct _Node':'struct _Node'
+| `-ElaboratedType 0x7f961a825c00 'struct _Node' sugar
+|   `-RecordType 0x7f961a825be0 'struct _Node'
+|     `-Record 0x7f961a825b58 '_Node'
+|-FunctionDecl 0x7f961a825fe0 <line:11:1, line:17:1> line:11:33 used append 'void (Node *, Node *)'
+| |-ParmVarDecl 0x7f961a825e58 <col:41, col:48> col:48 used q 'Node *'
+| |-ParmVarDecl 0x7f961a825ec8 <col:51, col:58> col:58 used p 'Node *'
+| |-CompoundStmt 0x7f961a826490 <line:12:1, line:17:1>
+| | |-BinaryOperator 0x7f961a8261c8 <line:13:3, col:13> 'struct _Node *' '='
+| | | |-MemberExpr 0x7f961a826150 <col:3, col:6> 'struct _Node *' lvalue ->next 0x7f961a825cb0
+| | | | `-ImplicitCastExpr 0x7f961a826138 <col:3> 'Node *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7f961a826110 <col:3> 'Node *' lvalue ParmVar 0x7f961a825ec8 'p' 'Node *'
+| | | `-ImplicitCastExpr 0x7f961a8261b0 <col:13> 'Node *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7f961a826188 <col:13> 'Node *' lvalue ParmVar 0x7f961a825e58 'q' 'Node *'
+| | |-BinaryOperator 0x7f961a8262a8 <line:14:3, col:13> 'struct _Node *' '='
+| | | |-MemberExpr 0x7f961a826230 <col:3, col:6> 'struct _Node *' lvalue ->prev 0x7f961a825d20
+| | | | `-ImplicitCastExpr 0x7f961a826218 <col:3> 'Node *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7f961a8261f0 <col:3> 'Node *' lvalue ParmVar 0x7f961a825ec8 'p' 'Node *'
+| | | `-ImplicitCastExpr 0x7f961a826290 <col:13> 'Node *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7f961a826268 <col:13> 'Node *' lvalue ParmVar 0x7f961a825e58 'q' 'Node *'
+| | |-BinaryOperator 0x7f961a826388 <line:15:3, col:13> 'struct _Node *' '='
+| | | |-MemberExpr 0x7f961a826310 <col:3, col:6> 'struct _Node *' lvalue ->next 0x7f961a825cb0
+| | | | `-ImplicitCastExpr 0x7f961a8262f8 <col:3> 'Node *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7f961a8262d0 <col:3> 'Node *' lvalue ParmVar 0x7f961a825e58 'q' 'Node *'
+| | | `-ImplicitCastExpr 0x7f961a826370 <col:13> 'Node *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7f961a826348 <col:13> 'Node *' lvalue ParmVar 0x7f961a825ec8 'p' 'Node *'
+| | `-BinaryOperator 0x7f961a826468 <line:16:3, col:13> 'struct _Node *' '='
+| |   |-MemberExpr 0x7f961a8263f0 <col:3, col:6> 'struct _Node *' lvalue ->prev 0x7f961a825d20
+| |   | `-ImplicitCastExpr 0x7f961a8263d8 <col:3> 'Node *' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7f961a8263b0 <col:3> 'Node *' lvalue ParmVar 0x7f961a825e58 'q' 'Node *'
+| |   `-ImplicitCastExpr 0x7f961a826450 <col:13> 'Node *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f961a826428 <col:13> 'Node *' lvalue ParmVar 0x7f961a825ec8 'p' 'Node *'
+| `-NoInlineAttr 0x7f961a826088 <line:11:22>
+|-FunctionDecl 0x7f961a8266d0 <line:19:1, line:25:1> line:20:1 used swap 'void (Node **, Node **)' inline
+| |-ParmVarDecl 0x7f961a826540 <col:7, col:15> col:15 used a 'Node **'
+| |-ParmVarDecl 0x7f961a8265b8 <col:18, col:26> col:26 used b 'Node **'
+| `-CompoundStmt 0x7f961a827a40 <line:21:1, line:25:1>
+|   |-DeclStmt 0x7f961a826860 <line:22:3, col:17>
+|   | `-VarDecl 0x7f961a826788 <col:3, col:16> col:9 used tmp 'Node *' cinit
+|   |   `-ImplicitCastExpr 0x7f961a826848 <col:15, col:16> 'Node *' <LValueToRValue>
+|   |     `-UnaryOperator 0x7f961a826828 <col:15, col:16> 'Node *' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7f961a826810 <col:16> 'Node **' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7f961a8267e8 <col:16> 'Node **' lvalue ParmVar 0x7f961a826540 'a' 'Node **'
+|   |-BinaryOperator 0x7f961a826950 <line:23:3, col:9> 'Node *' '='
+|   | |-UnaryOperator 0x7f961a8268b8 <col:3, col:4> 'Node *' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f961a8268a0 <col:4> 'Node **' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f961a826878 <col:4> 'Node **' lvalue ParmVar 0x7f961a826540 'a' 'Node **'
+|   | `-ImplicitCastExpr 0x7f961a826938 <col:8, col:9> 'Node *' <LValueToRValue>
+|   |   `-UnaryOperator 0x7f961a826918 <col:8, col:9> 'Node *' lvalue prefix '*'
+|   |     `-ImplicitCastExpr 0x7f961a826900 <col:9> 'Node **' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f961a8268d8 <col:9> 'Node **' lvalue ParmVar 0x7f961a8265b8 'b' 'Node **'
+|   `-BinaryOperator 0x7f961a827a18 <line:24:3, col:8> 'Node *' '='
+|     |-UnaryOperator 0x7f961a8269b8 <col:3, col:4> 'Node *' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7f961a8269a0 <col:4> 'Node **' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f961a826978 <col:4> 'Node **' lvalue ParmVar 0x7f961a8265b8 'b' 'Node **'
+|     `-ImplicitCastExpr 0x7f961a827a00 <col:8> 'Node *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f961a8269d8 <col:8> 'Node *' lvalue Var 0x7f961a826788 'tmp' 'Node *'
+|-FunctionDecl 0x7f961a827b80 <line:29:1, line:40:1> line:30:1 used ListSwap 'void (Node *, Node *)'
+| |-ParmVarDecl 0x7f961a827a80 <col:11, col:18> col:18 used x 'Node *'
+| |-ParmVarDecl 0x7f961a827af0 <col:21, col:28> col:28 used y 'Node *'
+| `-CompoundStmt 0x7f961a8285c0 <line:31:1, line:40:1>
+|   |-DeclStmt 0x7f961a827c98 <line:32:3, col:12>
+|   | `-VarDecl 0x7f961a827c38 <col:3, col:9> col:9 tmp 'Node *'
+|   `-IfStmt 0x7f961a828588 <line:33:3, line:39:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7f961a827d28 <line:33:7, col:10> 'struct _Node *' <LValueToRValue>
+|     | `-MemberExpr 0x7f961a827cf0 <col:7, col:10> 'struct _Node *' lvalue ->next 0x7f961a825cb0
+|     |   `-ImplicitCastExpr 0x7f961a827cd8 <col:7> 'Node *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f961a827cb0 <col:7> 'Node *' lvalue ParmVar 0x7f961a827a80 'x' 'Node *'
+|     |-CompoundStmt 0x7f961a828550 <line:34:5, line:39:5>
+|     | |-CallExpr 0x7f961a827f30 <line:35:7, col:31> 'void'
+|     | | |-ImplicitCastExpr 0x7f961a827f18 <col:7> 'void (*)(Node **, Node **)' <FunctionToPointerDecay>
+|     | | | `-DeclRefExpr 0x7f961a827d40 <col:7> 'void (Node **, Node **)' Function 0x7f961a8266d0 'swap' 'void (Node **, Node **)'
+|     | | |-UnaryOperator 0x7f961a827e08 <col:13, col:17> 'struct _Node **' prefix '&'
+|     | | | `-MemberExpr 0x7f961a827da8 <col:14, col:17> 'struct _Node *' lvalue ->next 0x7f961a825cb0
+|     | | |   `-ImplicitCastExpr 0x7f961a827d90 <col:14> 'Node *' <LValueToRValue>
+|     | | |     `-DeclRefExpr 0x7f961a827d68 <col:14> 'Node *' lvalue ParmVar 0x7f961a827a80 'x' 'Node *'
+|     | | `-UnaryOperator 0x7f961a827ea0 <col:23, col:27> 'struct _Node **' prefix '&'
+|     | |   `-MemberExpr 0x7f961a827e68 <col:24, col:27> 'struct _Node *' lvalue ->next 0x7f961a825cb0
+|     | |     `-ImplicitCastExpr 0x7f961a827e50 <col:24> 'Node *' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7f961a827e28 <col:24> 'Node *' lvalue ParmVar 0x7f961a827af0 'y' 'Node *'
+|     | |-CallExpr 0x7f961a8280d8 <line:36:7, col:31> 'void'
+|     | | |-ImplicitCastExpr 0x7f961a8280c0 <col:7> 'void (*)(Node **, Node **)' <FunctionToPointerDecay>
+|     | | | `-DeclRefExpr 0x7f961a827f68 <col:7> 'void (Node **, Node **)' Function 0x7f961a8266d0 'swap' 'void (Node **, Node **)'
+|     | | |-UnaryOperator 0x7f961a828008 <col:13, col:17> 'struct _Node **' prefix '&'
+|     | | | `-MemberExpr 0x7f961a827fd0 <col:14, col:17> 'struct _Node *' lvalue ->prev 0x7f961a825d20
+|     | | |   `-ImplicitCastExpr 0x7f961a827fb8 <col:14> 'Node *' <LValueToRValue>
+|     | | |     `-DeclRefExpr 0x7f961a827f90 <col:14> 'Node *' lvalue ParmVar 0x7f961a827a80 'x' 'Node *'
+|     | | `-UnaryOperator 0x7f961a8280a0 <col:23, col:27> 'struct _Node **' prefix '&'
+|     | |   `-MemberExpr 0x7f961a828068 <col:24, col:27> 'struct _Node *' lvalue ->prev 0x7f961a825d20
+|     | |     `-ImplicitCastExpr 0x7f961a828050 <col:24> 'Node *' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7f961a828028 <col:24> 'Node *' lvalue ParmVar 0x7f961a827af0 'y' 'Node *'
+|     | |-BinaryOperator 0x7f961a828308 <line:37:7, col:39> 'struct _Node *' '='
+|     | | |-MemberExpr 0x7f961a8281a0 <col:7, col:16> 'struct _Node *' lvalue ->prev 0x7f961a825d20
+|     | | | `-ImplicitCastExpr 0x7f961a828188 <col:7, col:10> 'struct _Node *' <LValueToRValue>
+|     | | |   `-MemberExpr 0x7f961a828150 <col:7, col:10> 'struct _Node *' lvalue ->next 0x7f961a825cb0
+|     | | |     `-ImplicitCastExpr 0x7f961a828138 <col:7> 'Node *' <LValueToRValue>
+|     | | |       `-DeclRefExpr 0x7f961a828110 <col:7> 'Node *' lvalue ParmVar 0x7f961a827a80 'x' 'Node *'
+|     | | `-BinaryOperator 0x7f961a8282e0 <col:23, col:39> 'struct _Node *' '='
+|     | |   |-MemberExpr 0x7f961a828268 <col:23, col:32> 'struct _Node *' lvalue ->next 0x7f961a825cb0
+|     | |   | `-ImplicitCastExpr 0x7f961a828250 <col:23, col:26> 'struct _Node *' <LValueToRValue>
+|     | |   |   `-MemberExpr 0x7f961a828218 <col:23, col:26> 'struct _Node *' lvalue ->prev 0x7f961a825d20
+|     | |   |     `-ImplicitCastExpr 0x7f961a828200 <col:23> 'Node *' <LValueToRValue>
+|     | |   |       `-DeclRefExpr 0x7f961a8281d8 <col:23> 'Node *' lvalue ParmVar 0x7f961a827a80 'x' 'Node *'
+|     | |   `-ImplicitCastExpr 0x7f961a8282c8 <col:39> 'Node *' <LValueToRValue>
+|     | |     `-DeclRefExpr 0x7f961a8282a0 <col:39> 'Node *' lvalue ParmVar 0x7f961a827a80 'x' 'Node *'
+|     | `-BinaryOperator 0x7f961a828528 <line:38:7, col:39> 'struct _Node *' '='
+|     |   |-MemberExpr 0x7f961a8283c0 <col:7, col:16> 'struct _Node *' lvalue ->prev 0x7f961a825d20
+|     |   | `-ImplicitCastExpr 0x7f961a8283a8 <col:7, col:10> 'struct _Node *' <LValueToRValue>
+|     |   |   `-MemberExpr 0x7f961a828370 <col:7, col:10> 'struct _Node *' lvalue ->next 0x7f961a825cb0
+|     |   |     `-ImplicitCastExpr 0x7f961a828358 <col:7> 'Node *' <LValueToRValue>
+|     |   |       `-DeclRefExpr 0x7f961a828330 <col:7> 'Node *' lvalue ParmVar 0x7f961a827af0 'y' 'Node *'
+|     |   `-BinaryOperator 0x7f961a828500 <col:23, col:39> 'struct _Node *' '='
+|     |     |-MemberExpr 0x7f961a828488 <col:23, col:32> 'struct _Node *' lvalue ->next 0x7f961a825cb0
+|     |     | `-ImplicitCastExpr 0x7f961a828470 <col:23, col:26> 'struct _Node *' <LValueToRValue>
+|     |     |   `-MemberExpr 0x7f961a828438 <col:23, col:26> 'struct _Node *' lvalue ->prev 0x7f961a825d20
+|     |     |     `-ImplicitCastExpr 0x7f961a828420 <col:23> 'Node *' <LValueToRValue>
+|     |     |       `-DeclRefExpr 0x7f961a8283f8 <col:23> 'Node *' lvalue ParmVar 0x7f961a827af0 'y' 'Node *'
+|     |     `-ImplicitCastExpr 0x7f961a8284e8 <col:39> 'Node *' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7f961a8284c0 <col:39> 'Node *' lvalue ParmVar 0x7f961a827af0 'y' 'Node *'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f961a828640 <line:42:1, line:56:1> line:43:1 main 'int ()'
+  `-CompoundStmt 0x7f961a828ed8 <line:44:1, line:56:1>
+    |-DeclStmt 0x7f961a8288c0 <line:45:3, col:20>
+    | |-VarDecl 0x7f961a8286e8 <col:3, col:8> col:8 used A 'Node':'struct _Node'
+    | |-VarDecl 0x7f961a828758 <col:3, col:11> col:11 used A1 'Node':'struct _Node'
+    | |-VarDecl 0x7f961a8287c8 <col:3, col:15> col:15 used B 'Node':'struct _Node'
+    | `-VarDecl 0x7f961a828838 <col:3, col:18> col:18 used B1 'Node':'struct _Node'
+    |-CallExpr 0x7f961a828a00 <line:47:3, col:18> 'void'
+    | |-ImplicitCastExpr 0x7f961a8289e8 <col:3> 'void (*)(Node *, Node *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f961a8288d8 <col:3> 'void (Node *, Node *)' Function 0x7f961a825fe0 'append' 'void (Node *, Node *)'
+    | |-UnaryOperator 0x7f961a828928 <col:11, col:12> 'Node *' prefix '&'
+    | | `-DeclRefExpr 0x7f961a828900 <col:12> 'Node':'struct _Node' lvalue Var 0x7f961a8286e8 'A' 'Node':'struct _Node'
+    | `-UnaryOperator 0x7f961a828970 <col:15, col:16> 'Node *' prefix '&'
+    |   `-DeclRefExpr 0x7f961a828948 <col:16> 'Node':'struct _Node' lvalue Var 0x7f961a828758 'A1' 'Node':'struct _Node'
+    |-CallExpr 0x7f961a828b08 <line:48:3, col:18> 'void'
+    | |-ImplicitCastExpr 0x7f961a828af0 <col:3> 'void (*)(Node *, Node *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f961a828a38 <col:3> 'void (Node *, Node *)' Function 0x7f961a825fe0 'append' 'void (Node *, Node *)'
+    | |-UnaryOperator 0x7f961a828a88 <col:11, col:12> 'Node *' prefix '&'
+    | | `-DeclRefExpr 0x7f961a828a60 <col:12> 'Node':'struct _Node' lvalue Var 0x7f961a8287c8 'B' 'Node':'struct _Node'
+    | `-UnaryOperator 0x7f961a828ad0 <col:15, col:16> 'Node *' prefix '&'
+    |   `-DeclRefExpr 0x7f961a828aa8 <col:16> 'Node':'struct _Node' lvalue Var 0x7f961a828838 'B1' 'Node':'struct _Node'
+    |-CallExpr 0x7f961a828c10 <line:50:3, col:19> 'void'
+    | |-ImplicitCastExpr 0x7f961a828bf8 <col:3> 'void (*)(Node *, Node *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f961a828b40 <col:3> 'void (Node *, Node *)' Function 0x7f961a827b80 'ListSwap' 'void (Node *, Node *)'
+    | |-UnaryOperator 0x7f961a828b90 <col:13, col:14> 'Node *' prefix '&'
+    | | `-DeclRefExpr 0x7f961a828b68 <col:14> 'Node':'struct _Node' lvalue Var 0x7f961a8286e8 'A' 'Node':'struct _Node'
+    | `-UnaryOperator 0x7f961a828bd8 <col:17, col:18> 'Node *' prefix '&'
+    |   `-DeclRefExpr 0x7f961a828bb0 <col:18> 'Node':'struct _Node' lvalue Var 0x7f961a8287c8 'B' 'Node':'struct _Node'
+    |-IfStmt 0x7f961a828e68 <line:52:3, line:53:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f961a828d58 <line:52:7, col:21> 'int' '!='
+    | | |-UnaryOperator 0x7f961a828c70 <col:7, col:8> 'Node *' prefix '&'
+    | | | `-DeclRefExpr 0x7f961a828c48 <col:8> 'Node':'struct _Node' lvalue Var 0x7f961a8286e8 'A' 'Node':'struct _Node'
+    | | `-ImplicitCastExpr 0x7f961a828d40 <col:13, col:21> 'struct _Node *' <LValueToRValue>
+    | |   `-MemberExpr 0x7f961a828d08 <col:13, col:21> 'struct _Node *' lvalue ->prev 0x7f961a825d20
+    | |     `-ImplicitCastExpr 0x7f961a828cf0 <col:13, col:15> 'struct _Node *' <LValueToRValue>
+    | |       `-MemberExpr 0x7f961a828cb8 <col:13, col:15> 'struct _Node *' lvalue .next 0x7f961a825cb0
+    | |         `-DeclRefExpr 0x7f961a828c90 <col:13> 'Node':'struct _Node' lvalue Var 0x7f961a8286e8 'A' 'Node':'struct _Node'
+    | |-CallExpr 0x7f961a828e40 <line:53:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f961a828e28 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f961a828dd0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f961a825a98 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f961a828ec0 <line:55:3, col:10>
+      `-IntegerLiteral 0x7f961a828ea0 <col:10> 'int' 0

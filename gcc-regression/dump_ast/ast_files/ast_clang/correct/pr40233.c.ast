@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fb5460264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb546026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb546026740 '__int128'
+|-TypedefDecl 0x7fb546026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb546026760 'unsigned __int128'
+|-TypedefDecl 0x7fb546026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb546026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb546026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb546026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb546026dc0 'char *'
+|   `-BuiltinType 0x7fb546026560 'char'
+|-TypedefDecl 0x7fb5460270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb546027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb546026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb546026e58 '__va_list_tag'
+|-TypedefDecl 0x7fb546027158 <c_files/pr40233.c:1:1, col:13> col:13 referenced aligned 'int'
+| |-BuiltinType 0x7fb5460265c0 'int'
+| `-AlignedAttr 0x7fb5460271b0 <col:36, col:46> aligned
+|   `-IntegerLiteral 0x7fb546027120 <col:44> 'int' 64
+|-RecordDecl 0x7fb546826a00 <line:2:1, line:4:1> line:2:8 struct Frame definition
+| `-FieldDecl 0x7fb546826ae0 <line:3:3, col:11> col:11 referenced i 'aligned':'int'
+`-FunctionDecl 0x7fb546826ce0 <line:6:1, line:10:1> line:6:6 foo 'void (struct Frame *)'
+  |-ParmVarDecl 0x7fb546826be0 <col:10, col:24> col:24 used p 'struct Frame *'
+  `-CompoundStmt 0x7fb546826fe0 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fb546826f20 <line:8:3, col:21>
+    | `-VarDecl 0x7fb546826e28 <col:3, col:20> col:12 used q 'aligned *' cinit
+    |   `-UnaryOperator 0x7fb546826f00 <col:16, col:20> 'aligned *' prefix '&'
+    |     `-MemberExpr 0x7fb546826ec8 <col:17, col:20> 'aligned':'int' lvalue ->i 0x7fb546826ae0
+    |       `-ImplicitCastExpr 0x7fb546826eb0 <col:17> 'struct Frame *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fb546826e88 <col:17> 'struct Frame *' lvalue ParmVar 0x7fb546826be0 'p' 'struct Frame *'
+    `-BinaryOperator 0x7fb546826fb8 <line:9:3, col:8> 'aligned':'int' '='
+      |-UnaryOperator 0x7fb546826f78 <col:3, col:4> 'aligned':'int' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fb546826f60 <col:4> 'aligned *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb546826f38 <col:4> 'aligned *' lvalue Var 0x7fb546826e28 'q' 'aligned *'
+      `-IntegerLiteral 0x7fb546826f98 <col:8> 'int' 0

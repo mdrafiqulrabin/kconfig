@@ -1,0 +1,26 @@
+c_files/pragma-diag-6.c:2:30: warning: unknown warning group '-Wnoexcept', ignored [-Wunknown-warning-option]
+#pragma GCC diagnostic error "-Wnoexcept" /* { dg-warning "is valid for C../ObjC.. but not for C" } */
+                             ^
+c_files/pragma-diag-6.c:3:30: warning: pragma diagnostic expected option name (e.g. "-Wundef") [-Wunknown-pragmas]
+#pragma GCC diagnostic error "-fstrict-aliasing" /* { dg-warning "not an option that controls warnings" } */
+                             ^
+c_files/pragma-diag-6.c:4:30: warning: unknown warning group '-Werror', ignored [-Wunknown-warning-option]
+#pragma GCC diagnostic error "-Werror" /* { dg-warning "not an option that controls warnings" } */
+                             ^
+3 warnings generated.
+TranslationUnitDecl 0x7fe7330264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe733026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe733026740 '__int128'
+|-TypedefDecl 0x7fe733026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe733026760 'unsigned __int128'
+|-TypedefDecl 0x7fe733026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe733026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe733026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe733026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe733026dc0 'char *'
+|   `-BuiltinType 0x7fe733026560 'char'
+|-TypedefDecl 0x7fe7330270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe733027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe733026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe733026e58 '__va_list_tag'
+`-VarDecl 0x7fe733027138 <c_files/pragma-diag-6.c:5:1, col:5> col:5 i 'int'

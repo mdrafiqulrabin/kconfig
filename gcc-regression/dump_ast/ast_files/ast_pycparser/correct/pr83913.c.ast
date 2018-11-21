@@ -1,0 +1,77 @@
+FileAST: 
+  Decl: jo, [], [], []
+    TypeDecl: jo, []
+      IdentifierType: ['int']
+  Decl: z4, [], [], []
+    TypeDecl: z4, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: be, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: l7, [], [], []
+            TypeDecl: l7, []
+              IdentifierType: ['long', 'unsigned', 'int']
+          Decl: nt, [], [], []
+            TypeDecl: nt, []
+              IdentifierType: ['int']
+        TypeDecl: be, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: en, [], [], []
+        TypeDecl: en, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: jo
+        ID: l7
+      For: 
+        Assignment: =
+          ID: en
+          Constant: int, 0
+        BinaryOp: <
+          ID: en
+          Constant: int, 24
+        UnaryOp: ++
+          ID: en
+        Compound: 
+          Assignment: =
+            ID: jo
+            BinaryOp: *
+              BinaryOp: /
+                ID: jo
+                ID: z4
+              BinaryOp: >=
+                UnaryOp: !
+                  UnaryOp: !
+                    ID: jo
+                BinaryOp: &
+                  UnaryOp: !
+                    UnaryOp: !
+                      ID: nt
+                  Constant: int, 2
+          If: 
+            BinaryOp: ==
+              ID: jo
+              Constant: int, 0
+            Assignment: =
+              ID: nt
+              Constant: int, 0
+            Compound: 
+              Assignment: =
+                ID: nt
+                ID: z4
+              UnaryOp: ++
+                ID: z4
+              Assignment: =
+                ID: nt
+                BinaryOp: ==
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['long', 'unsigned', 'int']
+                    ID: nt
+                  BinaryOp: +
+                    ID: l7
+                    Constant: int, 1
+      Return: 
+        ID: nt

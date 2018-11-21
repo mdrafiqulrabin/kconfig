@@ -1,0 +1,71 @@
+FileAST: 
+  Typedef: TypHandle, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: TypHandle, []
+        Struct: TypHeader
+          Decl: ptr, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: ptr, []
+                  Struct: TypHeader
+  FuncDef: 
+    Decl: PlainRange, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: hdList, [], [], []
+            TypeDecl: hdList, []
+              IdentifierType: ['TypHandle']
+          Decl: lenList, [], [], []
+            TypeDecl: lenList, []
+              IdentifierType: ['long']
+          Decl: low, [], [], []
+            TypeDecl: low, []
+              IdentifierType: ['long']
+          Decl: inc, [], [], []
+            TypeDecl: inc, []
+              IdentifierType: ['long']
+        TypeDecl: PlainRange, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['long']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 1
+        BinaryOp: <=
+          ID: i
+          ID: lenList
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['TypHandle']
+              StructRef: ->
+                ID: hdList
+                ID: ptr
+            ID: i
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['TypHandle']
+            BinaryOp: +
+              BinaryOp: <<
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['long']
+                  BinaryOp: +
+                    ID: low
+                    BinaryOp: *
+                      BinaryOp: -
+                        ID: i
+                        Constant: int, 1
+                      ID: inc
+                Constant: int, 2
+              Constant: int, 1

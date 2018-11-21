@@ -1,0 +1,161 @@
+FileAST: 
+  Decl: f1, [], [], []
+    FuncDecl: 
+      PtrDecl: []
+        TypeDecl: f1, []
+          Struct: None
+            Decl: b1, [], [], []
+              PtrDecl: []
+                TypeDecl: b1, []
+                  IdentifierType: ['int']
+  Decl: v1, [], [], []
+    ArrayDecl: []
+      TypeDecl: v1, []
+        IdentifierType: ['short']
+      Constant: int, 1
+  Decl: None, [], [], []
+    Struct: S
+      Decl: b2, [], [], []
+        TypeDecl: b2, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a1, [], [], []
+            PtrDecl: []
+              TypeDecl: a1, []
+                Struct: S
+          Decl: a2, [], [], []
+            PtrDecl: []
+              TypeDecl: a2, []
+                Union: None
+                  Decl: b3, [], [], []
+                    PtrDecl: []
+                      TypeDecl: b3, []
+                        IdentifierType: ['char']
+                  Decl: b4, [], [], []
+                    PtrDecl: []
+                      TypeDecl: b4, []
+                        IdentifierType: ['unsigned']
+                  Decl: b5, [], [], []
+                    PtrDecl: []
+                      TypeDecl: b5, []
+                        IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      Switch: 
+        ID: d
+        Compound: 
+          Case: 
+            Constant: int, 0
+            Compound: 
+              Decl: c, [], [], []
+                TypeDecl: c, []
+                  IdentifierType: ['int']
+                StructRef: ->
+                  ID: a1
+                  ID: b2
+              Decl: i, [], [], []
+                TypeDecl: i, []
+                  IdentifierType: ['int']
+              If: 
+                BinaryOp: ==
+                  FuncCall: 
+                    ID: f1
+                  Constant: int, 0
+                Assignment: =
+                  UnaryOp: *
+                    UnaryOp: p++
+                      StructRef: ->
+                        ID: a2
+                        ID: b3
+                  Constant: int, 2
+                If: 
+                  BinaryOp: ^
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['long']
+                      BinaryOp: -
+                        FuncCall: 
+                          ID: f1
+                        FuncCall: 
+                          ID: f1
+                    BinaryOp: -
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['long']
+                        StructRef: ->
+                          FuncCall: 
+                            ID: f1
+                          ID: b1
+                      BinaryOp: &
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['long']
+                          FuncCall: 
+                            ID: f1
+                        Constant: int, 8
+                  Assignment: =
+                    UnaryOp: *
+                      UnaryOp: p++
+                        StructRef: ->
+                          ID: a2
+                          ID: b3
+                    BinaryOp: -
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['long']
+                        ID: f1
+                      BinaryOp: &
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['long']
+                          FuncCall: 
+                            ID: f1
+                        Constant: int, 0xff
+                  Assignment: =
+                    UnaryOp: *
+                      UnaryOp: p++
+                        StructRef: ->
+                          ID: a2
+                          ID: b4
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['long']
+                      ID: f1
+              For: 
+                Assignment: =
+                  ID: i
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: i
+                  ID: c
+                UnaryOp: p++
+                  ID: i
+                Assignment: =
+                  UnaryOp: *
+                    UnaryOp: p++
+                      StructRef: ->
+                        ID: a2
+                        ID: b5
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['long']
+                    ID: v1
+              FuncCall: 
+                ID: foo
+                ExprList: 
+                  ID: a1
+                  ID: a2

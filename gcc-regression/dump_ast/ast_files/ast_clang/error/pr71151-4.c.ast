@@ -1,0 +1,59 @@
+c_files/pr71151-4.c:16:10: fatal error: 'exit-abort.h' file not found
+#include "exit-abort.h"
+         ^~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fb0bf0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb0bf026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb0bf026740 '__int128'
+|-TypedefDecl 0x7fb0bf026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb0bf026760 'unsigned __int128'
+|-TypedefDecl 0x7fb0bf026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb0bf026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb0bf026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb0bf026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb0bf026dc0 'char *'
+|   `-BuiltinType 0x7fb0bf026560 'char'
+|-TypedefDecl 0x7fb0bf0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb0bf027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb0bf026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb0bf026e58 '__va_list_tag'
+|-FunctionDecl 0x7fb0be826a00 <c_files/pr71151-4.c:19:1, line:32:1> line:19:5 main 'int ()'
+| `-CompoundStmt 0x7fb0be827100 <line:20:1, line:32:1>
+|   |-CallExpr 0x7fb0be826c20 <line:21:2, col:7> 'int'
+|   | |-ImplicitCastExpr 0x7fb0be826c08 <col:2> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fb0be826b98 <col:2> 'int ()' Function 0x7fb0be826b00 'foo' 'int ()'
+|   | `-IntegerLiteral 0x7fb0be826bc0 <col:6> 'int' 5
+|   |-IfStmt 0x7fb0be826de8 <line:22:2, line:23:9>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7fb0be826dc8 <<invalid sloc>> '_Bool'
+|   | |-CallExpr 0x7fb0be826da0 <col:3, col:9> 'void'
+|   | | `-ImplicitCastExpr 0x7fb0be826d88 <col:3> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fb0be826d38 <col:3> 'void (void) __attribute__((noreturn))' Function 0x7fb0be826ca0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fb0be826e80 <line:25:2, col:7> 'int'
+|   | |-ImplicitCastExpr 0x7fb0be826e68 <col:2> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fb0be826e20 <col:2> 'int ()' Function 0x7fb0be826b00 'foo' 'int ()'
+|   | `-IntegerLiteral 0x7fb0be826e48 <col:6> 'int' 0
+|   |-IfStmt 0x7fb0be826f58 <line:26:2, line:27:9>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7fb0be826f38 <<invalid sloc>> '_Bool'
+|   | |-CallExpr 0x7fb0be826f10 <col:3, col:9> 'void'
+|   | | `-ImplicitCastExpr 0x7fb0be826ef8 <col:3> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fb0be826ed0 <col:3> 'void (void) __attribute__((noreturn))' Function 0x7fb0be826ca0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fb0be826ff0 <line:29:2, col:7> 'int'
+|   | |-ImplicitCastExpr 0x7fb0be826fd8 <col:2> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fb0be826f90 <col:2> 'int ()' Function 0x7fb0be826b00 'foo' 'int ()'
+|   | `-IntegerLiteral 0x7fb0be826fb8 <col:6> 'int' 7
+|   `-IfStmt 0x7fb0be8270c8 <line:30:2, line:31:9>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-OpaqueValueExpr 0x7fb0be8270a8 <<invalid sloc>> '_Bool'
+|     |-CallExpr 0x7fb0be827080 <col:3, col:9> 'void'
+|     | `-ImplicitCastExpr 0x7fb0be827068 <col:3> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fb0be827040 <col:3> 'void (void) __attribute__((noreturn))' Function 0x7fb0be826ca0 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fb0be826b00 <<invalid sloc>> line:21:2 implicit used foo 'int ()'
+`-FunctionDecl 0x7fb0be826ca0 <line:23:3> col:3 implicit used abort 'void (void) __attribute__((noreturn))' extern

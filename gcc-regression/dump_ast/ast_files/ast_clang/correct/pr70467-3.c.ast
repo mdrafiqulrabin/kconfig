@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7f97a5012cd0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f97a5013220 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f97a5012f40 '__int128'
+|-TypedefDecl 0x7f97a5013290 <<invalid sloc>> <invalid sloc> implicit referenced __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f97a5012f60 'unsigned __int128'
+|-TypedefDecl 0x7f97a5013568 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f97a5013370 'struct __NSConstantString_tag'
+|   `-Record 0x7f97a50132e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f97a5013600 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f97a50135c0 'char *'
+|   `-BuiltinType 0x7f97a5012d60 'char'
+|-TypedefDecl 0x7f97a50138c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f97a5013870 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f97a50136e0 'struct __va_list_tag'
+|     `-Record 0x7f97a5013658 '__va_list_tag'
+|-FunctionDecl 0x7f97a6018060 <c_files/pr70467-3.c:5:1, line:9:1> line:6:1 foo '__uint128_t (__uint128_t)'
+| |-ParmVarDecl 0x7f97a5013950 <col:6, col:18> col:18 used x '__uint128_t':'unsigned __int128'
+| `-CompoundStmt 0x7f97a6018280 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7f97a6018268 <line:8:3, col:41>
+|     `-BinaryOperator 0x7f97a6018240 <col:10, col:41> 'unsigned __int128' '+'
+|       |-ImplicitCastExpr 0x7f97a6018228 <col:10> '__uint128_t':'unsigned __int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f97a6018140 <col:10> '__uint128_t':'unsigned __int128' lvalue ParmVar 0x7f97a5013950 'x' '__uint128_t':'unsigned __int128'
+|       `-ParenExpr 0x7f97a6018208 <col:14, col:41> '__uint128_t':'unsigned __int128'
+|         `-BinaryOperator 0x7f97a60181e0 <col:15, col:39> '__uint128_t':'unsigned __int128' '<<'
+|           |-CStyleCastExpr 0x7f97a6018198 <col:15, col:29> '__uint128_t':'unsigned __int128' <IntegralCast>
+|           | `-IntegerLiteral 0x7f97a6018168 <col:29> 'int' 123456
+|           `-IntegerLiteral 0x7f97a60181c0 <col:39> 'int' 64
+`-FunctionDecl 0x7f97a6018338 <line:11:1, line:15:1> line:12:1 bar '__uint128_t (__uint128_t)'
+  |-ParmVarDecl 0x7f97a60182b0 <col:6, col:18> col:18 used x '__uint128_t':'unsigned __int128'
+  `-CompoundStmt 0x7f97a6018518 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7f97a6018500 <line:14:3, col:41>
+      `-BinaryOperator 0x7f97a60184d8 <col:10, col:41> 'unsigned __int128' '-'
+        |-ImplicitCastExpr 0x7f97a60184c0 <col:10> '__uint128_t':'unsigned __int128' <LValueToRValue>
+        | `-DeclRefExpr 0x7f97a60183d8 <col:10> '__uint128_t':'unsigned __int128' lvalue ParmVar 0x7f97a60182b0 'x' '__uint128_t':'unsigned __int128'
+        `-ParenExpr 0x7f97a60184a0 <col:14, col:41> '__uint128_t':'unsigned __int128'
+          `-BinaryOperator 0x7f97a6018478 <col:15, col:39> '__uint128_t':'unsigned __int128' '<<'
+            |-CStyleCastExpr 0x7f97a6018430 <col:15, col:29> '__uint128_t':'unsigned __int128' <IntegralCast>
+            | `-IntegerLiteral 0x7f97a6018400 <col:29> 'int' 123456
+            `-IntegerLiteral 0x7f97a6018458 <col:39> 'int' 64

@@ -1,0 +1,58 @@
+TranslationUnitDecl 0x7faaba0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faaba026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faaba026740 '__int128'
+|-TypedefDecl 0x7faaba026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faaba026760 'unsigned __int128'
+|-TypedefDecl 0x7faaba026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faaba026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faaba026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faaba026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faaba026dc0 'char *'
+|   `-BuiltinType 0x7faaba026560 'char'
+|-TypedefDecl 0x7faaba0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faaba027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faaba026ee0 'struct __va_list_tag'
+|     `-Record 0x7faaba026e58 '__va_list_tag'
+|-FunctionDecl 0x7faaba077430 <c_files/pr16461.c:3:1, col:22> col:5 used DVDinput_read 'int (int)'
+| `-ParmVarDecl 0x7faaba027138 <col:19> col:22 'int'
+`-FunctionDecl 0x7faaba077678 <line:4:1, line:14:1> line:4:5 DVDReadBlocksPath 'int (int, int)'
+  |-ParmVarDecl 0x7faaba077528 <col:23, col:27> col:27 used offset 'int'
+  |-ParmVarDecl 0x7faaba0775a0 <col:35, col:39> col:39 used block_count 'int'
+  `-CompoundStmt 0x7faaba077c50 <col:52, line:14:1>
+    |-DeclStmt 0x7faaba077868 <line:5:5, col:26>
+    | |-VarDecl 0x7faaba077738 <col:5, col:15> col:9 used ret 'int' cinit
+    | | `-IntegerLiteral 0x7faaba077798 <col:15> 'int' 0
+    | `-VarDecl 0x7faaba0777d0 <col:5, col:25> col:18 used ret2 'int' cinit
+    |   `-IntegerLiteral 0x7faaba077830 <col:25> 'int' 0
+    |-ForStmt 0x7faaba077b58 <line:6:5, line:12:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | `-CompoundStmt 0x7faaba077b30 <line:6:14, line:12:5>
+    |   |-IfStmt 0x7faaba077af0 <line:7:2, line:10:38>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-ImplicitCastExpr 0x7faaba0778a8 <line:7:6> 'int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7faaba077880 <col:6> 'int' lvalue ParmVar 0x7faaba077528 'offset' 'int'
+    |   | |-BinaryOperator 0x7faaba0779c8 <line:8:6, col:37> 'int' '='
+    |   | | |-DeclRefExpr 0x7faaba0778c0 <col:6> 'int' lvalue Var 0x7faaba077738 'ret' 'int'
+    |   | | `-CallExpr 0x7faaba077980 <col:12, col:37> 'int'
+    |   | |   |-ImplicitCastExpr 0x7faaba077968 <col:12> 'int (*)(int)' <FunctionToPointerDecay>
+    |   | |   | `-DeclRefExpr 0x7faaba0778e8 <col:12> 'int (int)' Function 0x7faaba077430 'DVDinput_read' 'int (int)'
+    |   | |   `-ImplicitCastExpr 0x7faaba0779b0 <col:26> 'int' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7faaba077910 <col:26> 'int' lvalue ParmVar 0x7faaba0775a0 'block_count' 'int'
+    |   | `-BinaryOperator 0x7faaba077ac8 <line:10:6, col:38> 'int' '='
+    |   |   |-DeclRefExpr 0x7faaba0779f0 <col:6> 'int' lvalue Var 0x7faaba0777d0 'ret2' 'int'
+    |   |   `-CallExpr 0x7faaba077a80 <col:13, col:38> 'int'
+    |   |     |-ImplicitCastExpr 0x7faaba077a68 <col:13> 'int (*)(int)' <FunctionToPointerDecay>
+    |   |     | `-DeclRefExpr 0x7faaba077a18 <col:13> 'int (int)' Function 0x7faaba077430 'DVDinput_read' 'int (int)'
+    |   |     `-ImplicitCastExpr 0x7faaba077ab0 <col:27> 'int' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7faaba077a40 <col:27> 'int' lvalue ParmVar 0x7faaba0775a0 'block_count' 'int'
+    |   `-BreakStmt 0x7faaba077b28 <line:11:2>
+    `-ReturnStmt 0x7faaba077c38 <line:13:5, col:18>
+      `-BinaryOperator 0x7faaba077c10 <col:12, col:18> 'int' '+'
+        |-ImplicitCastExpr 0x7faaba077be0 <col:12> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7faaba077b90 <col:12> 'int' lvalue Var 0x7faaba077738 'ret' 'int'
+        `-ImplicitCastExpr 0x7faaba077bf8 <col:18> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7faaba077bb8 <col:18> 'int' lvalue Var 0x7faaba0777d0 'ret2' 'int'

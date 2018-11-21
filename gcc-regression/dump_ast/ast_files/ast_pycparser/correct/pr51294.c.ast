@@ -1,0 +1,35 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: haveBar, [], [], []
+            TypeDecl: haveBar, []
+              IdentifierType: ['int']
+          Decl: bar_, [], [], []
+            TypeDecl: bar_, []
+              IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: zuul, [], [], []
+        TypeDecl: zuul, []
+          IdentifierType: ['char']
+        TernaryOp: 
+          ID: haveBar
+          ID: bar_
+          Constant: int, 0
+      Decl: zuul2, [], [], []
+        TypeDecl: zuul2, []
+          IdentifierType: ['char']
+        TernaryOp: 
+          ID: haveBar
+          ID: bar_
+          ID: bar_
+      Decl: zuul3, [], [], []
+        TypeDecl: zuul3, []
+          IdentifierType: ['char']
+        TernaryOp: 
+          ID: haveBar
+          Constant: int, 0
+          ID: bar_

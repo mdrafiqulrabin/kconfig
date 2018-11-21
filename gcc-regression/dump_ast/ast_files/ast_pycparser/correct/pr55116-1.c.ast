@@ -1,0 +1,28 @@
+FileAST: 
+  Decl: glob_int_arr, [], [], []
+    ArrayDecl: []
+      TypeDecl: glob_int_arr, []
+        IdentifierType: ['int']
+      Constant: int, 100
+  Decl: glob_int, [], [], []
+    TypeDecl: glob_int, []
+      IdentifierType: ['int']
+    Constant: int, 4
+  FuncDef: 
+    Decl: expr_global, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: expr_global, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_prefetch
+        ExprList: 
+          BinaryOp: +
+            ID: glob_int_arr
+            ID: glob_int
+          Constant: int, 0
+          Constant: int, 0

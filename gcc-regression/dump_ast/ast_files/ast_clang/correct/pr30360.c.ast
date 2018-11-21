@@ -1,0 +1,116 @@
+TranslationUnitDecl 0x7fcf838264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcf83826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcf83826740 '__int128'
+|-TypedefDecl 0x7fcf83826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcf83826760 'unsigned __int128'
+|-TypedefDecl 0x7fcf83826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcf83826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcf83826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcf83826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcf83826dc0 'char *'
+|   `-BuiltinType 0x7fcf83826560 'char'
+|-TypedefDecl 0x7fcf838270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcf83827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcf83826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcf83826e58 '__va_list_tag'
+|-FunctionDecl 0x7fcf83878430 <c_files/pr30360.c:7:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fcf838784c8 prev 0x7fcf83878430 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fcf83878628 <line:9:1, line:25:1> line:10:1 main 'int (void)'
+| `-CompoundStmt 0x7fcf83879a90 <line:11:1, line:25:1>
+|   |-DeclStmt 0x7fcf838789f0 <line:12:3, col:48>
+|   | |-VarDecl 0x7fcf83878738 <col:3, line:5:31> line:12:19 used a '_Complex double' cinit
+|   | | `-BinaryOperator 0x7fcf83878890 <col:23, line:5:31> '_Complex double' '+'
+|   | |   |-FloatingLiteral 0x7fcf83878798 <line:12:23> 'double' 1.000000e+00
+|   | |   `-BinaryOperator 0x7fcf83878868 <col:29, line:5:31> '_Complex double' '*'
+|   | |     |-FloatingLiteral 0x7fcf838787b8 <line:12:29> 'double' 1.000000e+00
+|   | |     `-ImplicitCastExpr 0x7fcf83878850 <line:5:11, col:31> '_Complex double' <FloatingComplexCast>
+|   | |       `-ParenExpr 0x7fcf83878830 <col:11, col:31> '_Complex float'
+|   | |         `-UnaryOperator 0x7fcf83878810 <col:12, col:26> '_Complex float' prefix '__extension__'
+|   | |           `-ImaginaryLiteral 0x7fcf838787f8 <col:26> '_Complex float'
+|   | |             `-FloatingLiteral 0x7fcf838787d8 <col:26> 'float' 1.000000e+00
+|   | |-VarDecl 0x7fcf838788c8 <line:12:3, col:42> col:38 used b '_Complex double' cinit
+|   | | `-ImplicitCastExpr 0x7fcf83878948 <col:42> '_Complex double' <FloatingRealToComplex>
+|   | |   `-FloatingLiteral 0x7fcf83878928 <col:42> 'double' 0.000000e+00
+|   | `-VarDecl 0x7fcf83878970 <col:3, col:47> col:47 used c '_Complex double'
+|   |-GCCAsmStmt 0x7fcf83878b90 <line:6:14, col:42>
+|   | |-DeclRefExpr 0x7fcf83878ad8 <line:13:6> '_Complex double' lvalue Var 0x7fcf83878738 'a' '_Complex double'
+|   | `-DeclRefExpr 0x7fcf83878b68 <col:6> '_Complex double' lvalue Var 0x7fcf83878738 'a' '_Complex double'
+|   |-GCCAsmStmt 0x7fcf83878ce0 <line:6:14, col:42>
+|   | |-DeclRefExpr 0x7fcf83878c60 <line:14:6> '_Complex double' lvalue Var 0x7fcf838788c8 'b' '_Complex double'
+|   | `-DeclRefExpr 0x7fcf83878cb8 <col:6> '_Complex double' lvalue Var 0x7fcf838788c8 'b' '_Complex double'
+|   |-BinaryOperator 0x7fcf83878e28 <line:15:3, col:11> '_Complex double' '='
+|   | |-DeclRefExpr 0x7fcf83878d58 <col:3> '_Complex double' lvalue Var 0x7fcf83878970 'c' '_Complex double'
+|   | `-BinaryOperator 0x7fcf83878e00 <col:7, col:11> '_Complex double' '/'
+|   |   |-ImplicitCastExpr 0x7fcf83878dd0 <col:7> '_Complex double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fcf83878d80 <col:7> '_Complex double' lvalue Var 0x7fcf83878738 'a' '_Complex double'
+|   |   `-ImplicitCastExpr 0x7fcf83878de8 <col:11> '_Complex double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fcf83878da8 <col:11> '_Complex double' lvalue Var 0x7fcf838788c8 'b' '_Complex double'
+|   |-IfStmt 0x7fcf83879238 <line:16:3, line:17:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fcf83879178 <line:16:7, col:68> 'int' '&&'
+|   | | |-UnaryOperator 0x7fcf83879068 <col:7, col:35> 'int' prefix '!'
+|   | | | `-CallExpr 0x7fcf83879020 <col:8, col:35> 'int'
+|   | | |   |-ImplicitCastExpr 0x7fcf83879008 <col:8> 'int (*)()' <BuiltinFnToFnPtr>
+|   | | |   | `-DeclRefExpr 0x7fcf83878f68 <col:8> '<builtin fn type>' Function 0x7fcf83878e78 '__builtin_isinf' 'int ()'
+|   | | |   `-ImplicitCastExpr 0x7fcf83879050 <col:25, col:34> 'double' <LValueToRValue>
+|   | | |     `-UnaryOperator 0x7fcf83878fb8 <col:25, col:34> 'double' lvalue prefix '__real'
+|   | | |       `-DeclRefExpr 0x7fcf83878f90 <col:34> '_Complex double' lvalue Var 0x7fcf83878970 'c' '_Complex double'
+|   | | `-UnaryOperator 0x7fcf83879158 <col:40, col:68> 'int' prefix '!'
+|   | |   `-CallExpr 0x7fcf83879110 <col:41, col:68> 'int'
+|   | |     |-ImplicitCastExpr 0x7fcf838790f8 <col:41> 'int (*)()' <BuiltinFnToFnPtr>
+|   | |     | `-DeclRefExpr 0x7fcf83879088 <col:41> '<builtin fn type>' Function 0x7fcf83878e78 '__builtin_isinf' 'int ()'
+|   | |     `-ImplicitCastExpr 0x7fcf83879140 <col:58, col:67> 'double' <LValueToRValue>
+|   | |       `-UnaryOperator 0x7fcf838790d8 <col:58, col:67> 'double' lvalue prefix '__imag'
+|   | |         `-DeclRefExpr 0x7fcf838790b0 <col:67> '_Complex double' lvalue Var 0x7fcf83878970 'c' '_Complex double'
+|   | |-CallExpr 0x7fcf83879210 <line:17:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7fcf838791f8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fcf838791a0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fcf838784c8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fcf838792d0 <line:18:3, col:7> '_Complex double' '='
+|   | |-DeclRefExpr 0x7fcf83879270 <col:3> '_Complex double' lvalue Var 0x7fcf83878738 'a' '_Complex double'
+|   | `-ImplicitCastExpr 0x7fcf838792b8 <col:7> '_Complex double' <FloatingRealToComplex>
+|   |   `-FloatingLiteral 0x7fcf83879298 <col:7> 'double' 0.000000e+00
+|   |-GCCAsmStmt 0x7fcf83879400 <line:6:14, col:42>
+|   | |-DeclRefExpr 0x7fcf83879350 <line:19:6> '_Complex double' lvalue Var 0x7fcf83878738 'a' '_Complex double'
+|   | `-DeclRefExpr 0x7fcf838793a8 <col:6> '_Complex double' lvalue Var 0x7fcf83878738 'a' '_Complex double'
+|   |-GCCAsmStmt 0x7fcf83879550 <line:6:14, col:42>
+|   | |-DeclRefExpr 0x7fcf838794d0 <line:20:6> '_Complex double' lvalue Var 0x7fcf838788c8 'b' '_Complex double'
+|   | `-DeclRefExpr 0x7fcf83879528 <col:6> '_Complex double' lvalue Var 0x7fcf838788c8 'b' '_Complex double'
+|   |-BinaryOperator 0x7fcf83879698 <line:21:3, col:11> '_Complex double' '='
+|   | |-DeclRefExpr 0x7fcf838795c8 <col:3> '_Complex double' lvalue Var 0x7fcf83878970 'c' '_Complex double'
+|   | `-BinaryOperator 0x7fcf83879670 <col:7, col:11> '_Complex double' '/'
+|   |   |-ImplicitCastExpr 0x7fcf83879640 <col:7> '_Complex double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fcf838795f0 <col:7> '_Complex double' lvalue Var 0x7fcf83878738 'a' '_Complex double'
+|   |   `-ImplicitCastExpr 0x7fcf83879658 <col:11> '_Complex double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fcf83879618 <col:11> '_Complex double' lvalue Var 0x7fcf838788c8 'b' '_Complex double'
+|   |-IfStmt 0x7fcf83879a20 <line:22:3, line:23:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fcf83879990 <line:22:7, col:68> 'int' '||'
+|   | | |-UnaryOperator 0x7fcf83879880 <col:7, col:35> 'int' prefix '!'
+|   | | | `-CallExpr 0x7fcf83879838 <col:8, col:35> 'int'
+|   | | |   |-ImplicitCastExpr 0x7fcf83879820 <col:8> 'int (*)()' <BuiltinFnToFnPtr>
+|   | | |   | `-DeclRefExpr 0x7fcf838797b0 <col:8> '<builtin fn type>' Function 0x7fcf838796c0 '__builtin_isnan' 'int ()'
+|   | | |   `-ImplicitCastExpr 0x7fcf83879868 <col:25, col:34> 'double' <LValueToRValue>
+|   | | |     `-UnaryOperator 0x7fcf83879800 <col:25, col:34> 'double' lvalue prefix '__real'
+|   | | |       `-DeclRefExpr 0x7fcf838797d8 <col:34> '_Complex double' lvalue Var 0x7fcf83878970 'c' '_Complex double'
+|   | | `-UnaryOperator 0x7fcf83879970 <col:40, col:68> 'int' prefix '!'
+|   | |   `-CallExpr 0x7fcf83879928 <col:41, col:68> 'int'
+|   | |     |-ImplicitCastExpr 0x7fcf83879910 <col:41> 'int (*)()' <BuiltinFnToFnPtr>
+|   | |     | `-DeclRefExpr 0x7fcf838798a0 <col:41> '<builtin fn type>' Function 0x7fcf838796c0 '__builtin_isnan' 'int ()'
+|   | |     `-ImplicitCastExpr 0x7fcf83879958 <col:58, col:67> 'double' <LValueToRValue>
+|   | |       `-UnaryOperator 0x7fcf838798f0 <col:58, col:67> 'double' lvalue prefix '__imag'
+|   | |         `-DeclRefExpr 0x7fcf838798c8 <col:67> '_Complex double' lvalue Var 0x7fcf83878970 'c' '_Complex double'
+|   | |-CallExpr 0x7fcf838799f8 <line:23:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7fcf838799e0 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fcf838799b8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fcf838784c8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fcf83879a78 <line:24:3, col:10>
+|     `-IntegerLiteral 0x7fcf83879a58 <col:10> 'int' 0
+|-FunctionDecl 0x7fcf83878e78 <line:16:8> col:8 implicit used __builtin_isinf 'int ()' extern
+| |-NoThrowAttr 0x7fcf83878f10 <col:8> Implicit
+| `-ConstAttr 0x7fcf83878f58 <col:8> Implicit
+`-FunctionDecl 0x7fcf838796c0 <line:22:8> col:8 implicit used __builtin_isnan 'int ()' extern
+  |-NoThrowAttr 0x7fcf83879758 <col:8> Implicit
+  `-ConstAttr 0x7fcf838797a0 <col:8> Implicit

@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fada28264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fada2826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fada2826740 '__int128'
+|-TypedefDecl 0x7fada2826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fada2826760 'unsigned __int128'
+|-TypedefDecl 0x7fada2826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fada2826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fada2826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fada2826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fada2826dc0 'char *'
+|   `-BuiltinType 0x7fada2826560 'char'
+|-TypedefDecl 0x7fada28270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fada2827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fada2826ee0 'struct __va_list_tag'
+|     `-Record 0x7fada2826e58 '__va_list_tag'
+|-RecordDecl 0x7fada2827120 <c_files/pr38736_x.c:4:1, line:7:1> line:4:8 struct alignment_test_struct definition
+| `-FieldDecl 0x7fada3026a58 <line:6:3, col:15> col:8 space 'char [4]'
+|   `-AlignedAttr 0x7fada3026aa0 <col:32> aligned
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fada3026bb8 <line:9:1, col:27> c_files/pr38736_y.c:4:19 aligned_y_avx 'int (void)' extern
+`-FunctionDecl 0x7fada3026d28 prev 0x7fada3026bb8 <c_files/pr38736_x.c:11:1, line:15:1> c_files/pr38736_y.c:4:19 aligned_y_avx 'int (void)'
+  `-CompoundStmt 0x7fada3026ea8 <c_files/pr38736_x.c:13:1, line:15:1>
+    `-ReturnStmt 0x7fada3026e90 <line:14:3, col:50>
+      `-ImplicitCastExpr 0x7fada3026e30 <col:10, col:50> 'int' <IntegralCast>
+        `-UnaryExprOrTypeTraitExpr 0x7fada3026e10 <col:10, col:50> 'unsigned long' alignof 'struct alignment_test_struct':'struct alignment_test_struct'

@@ -1,0 +1,34 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: maxstringlen, [], [], []
+        TypeDecl: maxstringlen, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      Decl: limit, [], [], []
+        TypeDecl: limit, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: maxblock, [], [], []
+        TypeDecl: maxblock, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: maxblockrem, [], [], []
+        TypeDecl: maxblockrem, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Assignment: =
+        ID: maxblockrem
+        BinaryOp: %
+          ID: maxstringlen
+          BinaryOp: +
+            Constant: int, 2147483647
+            Constant: int, 1

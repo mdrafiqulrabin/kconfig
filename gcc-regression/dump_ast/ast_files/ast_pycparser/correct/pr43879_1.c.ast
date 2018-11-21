@@ -1,0 +1,70 @@
+FileAST: 
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: x, [], ['static'], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      If: 
+        BinaryOp: !=
+          ID: c
+          ID: x
+        FuncCall: 
+          ID: __builtin_abort
+      UnaryOp: p--
+        ID: x
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            PtrDecl: []
+              TypeDecl: i, []
+                IdentifierType: ['int']
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      UnaryOp: p--
+        UnaryOp: *
+          ID: i
+  Decl: None, [], [], []
+    Struct: TBL
+      Decl: p, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            ParamList: 
+              Decl: i, [], [], []
+                PtrDecl: []
+                  TypeDecl: i, []
+                    IdentifierType: ['int']
+            TypeDecl: p, []
+              IdentifierType: ['int']
+  Decl: tbl, [], ['extern'], []
+    TypeDecl: tbl, []
+      Struct: TBL
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      Return: 
+        FuncCall: 
+          StructRef: .
+            ID: tbl
+            ID: p
+          ExprList: 
+            UnaryOp: &
+              ID: c

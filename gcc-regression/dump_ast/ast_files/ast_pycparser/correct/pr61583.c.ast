@@ -1,0 +1,49 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: f1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: f2, [], ['extern'], []
+        FuncDecl: 
+          ParamList: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+          TypeDecl: f2, []
+            IdentifierType: ['void']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      If: 
+        ID: b
+        Assignment: =
+          ID: n
+          Constant: int, 1
+      If: 
+        BinaryOp: <
+          ID: n
+          Constant: int, 1
+        FuncCall: 
+          ID: __builtin_unreachable
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: <
+          ID: j
+          ID: n
+        UnaryOp: p++
+          ID: j
+        FuncCall: 
+          ID: f2
+          ExprList: 
+            ID: j

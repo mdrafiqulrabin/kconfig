@@ -1,0 +1,55 @@
+c_files/pr63764-1.c:11:14: error: expression is not assignable
+  ((V) a)[0] = 0;       /* { dg-error "lvalue required as left operand of assignment" } */
+  ~~~~~~~~~~ ^
+c_files/pr63764-1.c:19:20: error: expression is not assignable
+  ((float A) a)[0] = 0; /* { dg-error "lvalue required as left operand of assignment" } */
+  ~~~~~~~~~~~~~~~~ ^
+2 errors generated.
+TranslationUnitDecl 0x7faf538022d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faf53802820 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faf53802540 '__int128'
+|-TypedefDecl 0x7faf53802890 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faf53802560 'unsigned __int128'
+|-TypedefDecl 0x7faf53802b68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faf53802970 'struct __NSConstantString_tag'
+|   `-Record 0x7faf538028e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faf53802c00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faf53802bc0 'char *'
+|   `-BuiltinType 0x7faf53802360 'char'
+|-TypedefDecl 0x7faf53802ec8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faf53802e70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faf53802ce0 'struct __va_list_tag'
+|     `-Record 0x7faf53802c58 '__va_list_tag'
+|-TypedefDecl 0x7faf53051a00 <c_files/pr63764-1.c:5:1, col:15> col:15 referenced V '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7faf53802fc0 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7faf538024c0 'float'
+|-FunctionDecl 0x7faf53051bf0 <line:7:1, line:13:1> line:8:1 fn1 'void (V *)'
+| |-ParmVarDecl 0x7faf53051ae8 <col:6, col:9> col:9 used x 'V *'
+| `-CompoundStmt 0x7faf53051f98 <line:9:1, line:13:1>
+|   |-DeclStmt 0x7faf53051db8 <line:10:3, col:11>
+|   | `-VarDecl 0x7faf53051ce0 <col:3, col:10> col:5 used a 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+|   |   `-ImplicitCastExpr 0x7faf53051da0 <col:9, col:10> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|   |     `-UnaryOperator 0x7faf53051d80 <col:9, col:10> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7faf53051d68 <col:10> 'V *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7faf53051d40 <col:10> 'V *' lvalue ParmVar 0x7faf53051ae8 'x' 'V *'
+|   `-BinaryOperator 0x7faf53051f70 <line:12:3, col:8> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+|     |-UnaryOperator 0x7faf53051f10 <col:3, col:4> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7faf53051ef8 <col:4> 'V *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7faf53051ed0 <col:4> 'V *' lvalue ParmVar 0x7faf53051ae8 'x' 'V *'
+|     `-ImplicitCastExpr 0x7faf53051f58 <col:8> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7faf53051f30 <col:8> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7faf53051ce0 'a' 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+`-FunctionDecl 0x7faf53052058 <line:15:1, line:21:1> line:16:1 fn2 'void (V *)'
+  |-ParmVarDecl 0x7faf53051fd0 <col:6, col:9> col:9 used x 'V *'
+  `-CompoundStmt 0x7faf530524f0 <line:17:1, line:21:1>
+    |-DeclStmt 0x7faf53052278 <line:18:3, col:17>
+    | `-VarDecl 0x7faf530521a0 <col:3, col:16> col:11 used a '__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+    |   `-ImplicitCastExpr 0x7faf53052260 <col:15, col:16> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+    |     `-UnaryOperator 0x7faf53052240 <col:15, col:16> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7faf53052228 <col:16> 'V *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7faf53052200 <col:16> 'V *' lvalue ParmVar 0x7faf53051fd0 'x' 'V *'
+    `-BinaryOperator 0x7faf530524c8 <line:20:3, col:8> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+      |-UnaryOperator 0x7faf53052468 <col:3, col:4> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7faf53052450 <col:4> 'V *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7faf53052428 <col:4> 'V *' lvalue ParmVar 0x7faf53051fd0 'x' 'V *'
+      `-ImplicitCastExpr 0x7faf530524b0 <col:8> '__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+        `-DeclRefExpr 0x7faf53052488 <col:8> '__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7faf530521a0 'a' '__attribute__((__vector_size__(4 * sizeof(float)))) float'

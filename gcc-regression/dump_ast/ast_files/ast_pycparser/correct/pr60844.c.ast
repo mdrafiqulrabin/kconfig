@@ -1,0 +1,80 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        ArrayRef: 
+          ID: x
+          Constant: int, 0
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+        ArrayRef: 
+          ID: x
+          Constant: int, 1
+      For: 
+        Assignment: =
+          ID: b
+          Constant: int, 0
+        BinaryOp: <
+          ID: b
+          Constant: int, 1
+        UnaryOp: p++
+          ID: b
+        Compound: 
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+            BinaryOp: |
+              BinaryOp: |
+                TernaryOp: 
+                  ID: y
+                  Constant: int, 1
+                  Constant: int, 0
+                TernaryOp: 
+                  ID: d
+                  Constant: int, 2
+                  Constant: int, 0
+              TernaryOp: 
+                ID: z
+                Constant: int, 1
+                Constant: int, 0
+          Assignment: |=
+            ID: e
+            BinaryOp: |
+              TernaryOp: 
+                ID: c
+                Constant: int, 2
+                Constant: int, 0
+              TernaryOp: 
+                BinaryOp: >>
+                  Constant: int, 1
+                  ID: b
+                Constant: int, 1
+                Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ID: x
+              BinaryOp: +
+                Constant: int, 2
+                ID: b
+            ID: e

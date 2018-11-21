@@ -1,0 +1,322 @@
+FileAST: 
+  Typedef: state_e, [], ['typedef']
+    TypeDecl: state_e, []
+      Enum: STATES
+        EnumeratorList: 
+          Enumerator: START
+            Constant: int, 0
+          Enumerator: INVALID
+          Enumerator: S1
+          Enumerator: S2
+          Enumerator: INT
+          Enumerator: FLOAT
+          Enumerator: EXPONENT
+          Enumerator: SCIENTIFIC
+          Enumerator: NUM_STATES
+  Typedef: u8, [], ['typedef']
+    TypeDecl: u8, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: u32, [], ['typedef']
+    TypeDecl: u32, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: is_digit, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['u8']
+        TypeDecl: is_digit, []
+          IdentifierType: ['u8']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['u8']
+            BinaryOp: &
+              BinaryOp: >=
+                ID: c
+                Constant: char, '0'
+              BinaryOp: <=
+                ID: c
+                Constant: char, '9'
+          Constant: int, 1
+          Constant: int, 0
+  FuncDef: 
+    Decl: FMS, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: in, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: in, []
+                  IdentifierType: ['u8']
+          Decl: transitions, [], [], []
+            PtrDecl: []
+              TypeDecl: transitions, []
+                IdentifierType: ['u32']
+        TypeDecl: FMS, []
+          Enum: STATES
+    Compound: 
+      Decl: str, [], [], []
+        PtrDecl: []
+          TypeDecl: str, []
+            IdentifierType: ['u8']
+        UnaryOp: *
+          ID: in
+      Decl: NEXT_SYMBOL, [], [], []
+        TypeDecl: NEXT_SYMBOL, []
+          IdentifierType: ['u8']
+      Decl: state, [], [], []
+        TypeDecl: state, []
+          Enum: STATES
+        ID: START
+      For: 
+        BinaryOp: &&
+          UnaryOp: *
+            ID: str
+          BinaryOp: !=
+            ID: state
+            ID: INVALID
+        UnaryOp: p++
+          ID: str
+        Compound: 
+          Assignment: =
+            ID: NEXT_SYMBOL
+            UnaryOp: *
+              ID: str
+          If: 
+            BinaryOp: ==
+              ID: NEXT_SYMBOL
+              Constant: char, ','
+            Compound: 
+              UnaryOp: p++
+                ArrayRef: 
+                  ID: transitions
+                  ID: state
+              UnaryOp: p++
+                ID: str
+              Break: 
+          Switch: 
+            ID: state
+            Compound: 
+              Case: 
+                ID: START
+                If: 
+                  FuncCall: 
+                    ID: is_digit
+                    ExprList: 
+                      ID: NEXT_SYMBOL
+                  Compound: 
+                    Assignment: =
+                      ID: state
+                      ID: INT
+                  If: 
+                    BinaryOp: ||
+                      BinaryOp: ==
+                        ID: NEXT_SYMBOL
+                        Constant: char, '+'
+                      BinaryOp: ==
+                        ID: NEXT_SYMBOL
+                        Constant: char, '-'
+                    Compound: 
+                      Assignment: =
+                        ID: state
+                        ID: S1
+                    If: 
+                      BinaryOp: ==
+                        ID: NEXT_SYMBOL
+                        Constant: char, '.'
+                      Compound: 
+                        Assignment: =
+                          ID: state
+                          ID: FLOAT
+                      Compound: 
+                        Assignment: =
+                          ID: state
+                          ID: INVALID
+                UnaryOp: p++
+                  ArrayRef: 
+                    ID: transitions
+                    ID: START
+                Break: 
+              Case: 
+                ID: S1
+                If: 
+                  FuncCall: 
+                    ID: is_digit
+                    ExprList: 
+                      ID: NEXT_SYMBOL
+                  Compound: 
+                    Assignment: =
+                      ID: state
+                      ID: INT
+                    UnaryOp: p++
+                      ArrayRef: 
+                        ID: transitions
+                        ID: S1
+                  If: 
+                    BinaryOp: ==
+                      ID: NEXT_SYMBOL
+                      Constant: char, '.'
+                    Compound: 
+                      Assignment: =
+                        ID: state
+                        ID: FLOAT
+                      UnaryOp: p++
+                        ArrayRef: 
+                          ID: transitions
+                          ID: S1
+                    Compound: 
+                      Assignment: =
+                        ID: state
+                        ID: INVALID
+                      UnaryOp: p++
+                        ArrayRef: 
+                          ID: transitions
+                          ID: S1
+                Break: 
+              Case: 
+                ID: INT
+                If: 
+                  BinaryOp: ==
+                    ID: NEXT_SYMBOL
+                    Constant: char, '.'
+                  Compound: 
+                    Assignment: =
+                      ID: state
+                      ID: FLOAT
+                    UnaryOp: p++
+                      ArrayRef: 
+                        ID: transitions
+                        ID: INT
+                  If: 
+                    UnaryOp: !
+                      FuncCall: 
+                        ID: is_digit
+                        ExprList: 
+                          ID: NEXT_SYMBOL
+                    Compound: 
+                      Assignment: =
+                        ID: state
+                        ID: INVALID
+                      UnaryOp: p++
+                        ArrayRef: 
+                          ID: transitions
+                          ID: INT
+                Break: 
+              Case: 
+                ID: FLOAT
+                If: 
+                  BinaryOp: ||
+                    BinaryOp: ==
+                      ID: NEXT_SYMBOL
+                      Constant: char, 'E'
+                    BinaryOp: ==
+                      ID: NEXT_SYMBOL
+                      Constant: char, 'e'
+                  Compound: 
+                    Assignment: =
+                      ID: state
+                      ID: S2
+                    UnaryOp: p++
+                      ArrayRef: 
+                        ID: transitions
+                        ID: FLOAT
+                  If: 
+                    UnaryOp: !
+                      FuncCall: 
+                        ID: is_digit
+                        ExprList: 
+                          ID: NEXT_SYMBOL
+                    Compound: 
+                      Assignment: =
+                        ID: state
+                        ID: INVALID
+                      UnaryOp: p++
+                        ArrayRef: 
+                          ID: transitions
+                          ID: FLOAT
+                Break: 
+              Case: 
+                ID: S2
+                If: 
+                  BinaryOp: ||
+                    BinaryOp: ==
+                      ID: NEXT_SYMBOL
+                      Constant: char, '+'
+                    BinaryOp: ==
+                      ID: NEXT_SYMBOL
+                      Constant: char, '-'
+                  Compound: 
+                    Assignment: =
+                      ID: state
+                      ID: EXPONENT
+                    UnaryOp: p++
+                      ArrayRef: 
+                        ID: transitions
+                        ID: S2
+                  Compound: 
+                    Assignment: =
+                      ID: state
+                      ID: INVALID
+                    UnaryOp: p++
+                      ArrayRef: 
+                        ID: transitions
+                        ID: S2
+                Break: 
+              Case: 
+                ID: EXPONENT
+                If: 
+                  FuncCall: 
+                    ID: is_digit
+                    ExprList: 
+                      ID: NEXT_SYMBOL
+                  Compound: 
+                    Assignment: =
+                      ID: state
+                      ID: SCIENTIFIC
+                    UnaryOp: p++
+                      ArrayRef: 
+                        ID: transitions
+                        ID: EXPONENT
+                  Compound: 
+                    Assignment: =
+                      ID: state
+                      ID: INVALID
+                    UnaryOp: p++
+                      ArrayRef: 
+                        ID: transitions
+                        ID: EXPONENT
+                Break: 
+              Case: 
+                ID: SCIENTIFIC
+                If: 
+                  UnaryOp: !
+                    FuncCall: 
+                      ID: is_digit
+                      ExprList: 
+                        ID: NEXT_SYMBOL
+                  Compound: 
+                    Assignment: =
+                      ID: state
+                      ID: INVALID
+                Break: 
+              Default: 
+                Break: 
+      If: 
+        BinaryOp: ==
+          ID: state
+          ID: INVALID
+        UnaryOp: p++
+          ArrayRef: 
+            ID: transitions
+            ID: INVALID
+      Assignment: =
+        UnaryOp: *
+          ID: in
+        ID: str
+      Return: 
+        ID: state

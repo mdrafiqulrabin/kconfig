@@ -1,0 +1,14 @@
+FileAST: 
+  Decl: master, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: master, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        PtrDecl: []
+          TypeDecl: foo, []
+            IdentifierType: ['void']
+    Compound: 
+      Return: 
+        ID: master

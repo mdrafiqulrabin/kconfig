@@ -1,0 +1,281 @@
+TranslationUnitDecl 0x7ff0de8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff0de826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff0de826740 '__int128'
+|-TypedefDecl 0x7ff0de826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff0de826760 'unsigned __int128'
+|-TypedefDecl 0x7ff0de826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff0de826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff0de826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff0de826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff0de826dc0 'char *'
+|   `-BuiltinType 0x7ff0de826560 'char'
+|-TypedefDecl 0x7ff0de8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff0de827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff0de826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff0de826e58 '__va_list_tag'
+|-TypedefDecl 0x7ff0de827148 <c_files/pr42927.c:1:1, col:22> col:22 referenced u_int8_t 'unsigned char'
+| |-BuiltinType 0x7ff0de826620 'unsigned char'
+| `-ModeAttr 0x7ff0de8271b0 <col:47, col:63> __QI__
+|-TypedefDecl 0x7ff0de878a28 <line:2:1, col:22> col:22 referenced u_int32_t 'unsigned int'
+| |-BuiltinType 0x7ff0de826660 'unsigned int'
+| `-ModeAttr 0x7ff0de878a90 <col:48, col:64> __SI__
+|-EnumDecl 0x7ff0de878ae0 <line:3:9, line:4:46> line:3:9
+| |-EnumConstantDecl 0x7ff0de878bc0 <col:16, col:30> col:16 READ_SHARED 'int'
+| | `-IntegerLiteral 0x7ff0de878ba0 <col:30> 'int' 0
+| |-EnumConstantDecl 0x7ff0de878c28 <col:33, col:51> col:33 WRITE_EXCLUSIVE 'int'
+| | `-IntegerLiteral 0x7ff0de878c08 <col:51> 'int' 1
+| |-EnumConstantDecl 0x7ff0de878c90 <line:4:5, col:22> col:5 READ_EXCLUSIVE 'int'
+| | `-IntegerLiteral 0x7ff0de878c70 <col:22> 'int' 2
+| `-EnumConstantDecl 0x7ff0de878cf8 <col:25, col:44> col:25 EXCLUSIVE_ACCESS 'int'
+|   `-IntegerLiteral 0x7ff0de878cd8 <col:44> 'int' 3
+|-TypedefDecl 0x7ff0de878d90 <line:3:1, line:4:48> col:48 referenced scsires_access_mode 'enum scsires_access_mode':'scsires_access_mode'
+| `-ElaboratedType 0x7ff0de878d40 'enum scsires_access_mode' sugar
+|   `-EnumType 0x7ff0de878b80 'scsires_access_mode'
+|     `-Enum 0x7ff0de878ae0 ''
+|-RecordDecl 0x7ff0de878e00 <line:5:1, line:10:1> line:5:8 struct scsires_extent_elem definition
+| |-FieldDecl 0x7ff0de878ee0 <line:6:5, col:25> col:25 referenced mode 'scsires_access_mode':'scsires_access_mode'
+| |-FieldDecl 0x7ff0de878f40 <line:7:5, col:14> col:14 relative_address 'unsigned int'
+| |-FieldDecl 0x7ff0de878fc0 <line:8:5, col:15> col:15 referenced first_block 'u_int32_t':'unsigned int'
+| `-FieldDecl 0x7ff0de879018 <line:9:5, col:15> col:15 referenced length 'u_int32_t':'unsigned int'
+|-TypedefDecl 0x7ff0de8790b0 <line:11:1, col:36> col:36 referenced scsires_extent_elem_t 'struct scsires_extent_elem':'struct scsires_extent_elem'
+| `-ElaboratedType 0x7ff0de879060 'struct scsires_extent_elem' sugar
+|   `-RecordType 0x7ff0de878e90 'struct scsires_extent_elem'
+|     `-Record 0x7ff0de878e00 'scsires_extent_elem'
+|-RecordDecl 0x7ff0de879108 <line:12:1, line:15:1> line:12:8 struct scsires_extent definition
+| |-FieldDecl 0x7ff0de8791e0 <line:13:5, col:14> col:14 referenced num_elements 'u_int8_t':'unsigned char'
+| `-FieldDecl 0x7ff0de8792b8 <line:14:5, col:28> col:28 referenced elements 'scsires_extent_elem_t *'
+|-TypedefDecl 0x7ff0de879350 <line:16:1, col:31> col:31 referenced scsires_extent_t 'struct scsires_extent':'struct scsires_extent'
+| `-ElaboratedType 0x7ff0de879300 'struct scsires_extent' sugar
+|   `-RecordType 0x7ff0de879190 'struct scsires_extent'
+|     `-Record 0x7ff0de879108 'scsires_extent'
+|-VarDecl 0x7ff0de879430 <line:17:1, col:22> col:15 used buf 'unsigned char [512]'
+`-FunctionDecl 0x7ff0de879660 <line:18:1, line:32:1> line:18:6 scsires_issue_reservation 'void (scsires_extent_t *)'
+  |-ParmVarDecl 0x7ff0de879558 <col:32, col:51> col:51 used new_extent 'scsires_extent_t *'
+  `-CompoundStmt 0x7ff0de87b688 <line:19:1, line:32:1>
+    |-DeclStmt 0x7ff0de879778 <line:20:3, col:8>
+    | `-VarDecl 0x7ff0de879718 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7ff0de87b650 <line:21:3, line:31:5>
+      |-BinaryOperator 0x7ff0de8797d8 <line:21:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7ff0de879790 <col:8> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+      | `-IntegerLiteral 0x7ff0de8797b8 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff0de8798e8 <col:15, col:31> 'int' '<'
+      | |-ImplicitCastExpr 0x7ff0de8798a0 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff0de879800 <col:15> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+      | `-ImplicitCastExpr 0x7ff0de8798d0 <col:19, col:31> 'int' <IntegralCast>
+      |   `-ImplicitCastExpr 0x7ff0de8798b8 <col:19, col:31> 'u_int8_t':'unsigned char' <LValueToRValue>
+      |     `-MemberExpr 0x7ff0de879868 <col:19, col:31> 'u_int8_t':'unsigned char' lvalue ->num_elements 0x7ff0de8791e0
+      |       `-ImplicitCastExpr 0x7ff0de879850 <col:19> 'scsires_extent_t *' <LValueToRValue>
+      |         `-DeclRefExpr 0x7ff0de879828 <col:19> 'scsires_extent_t *' lvalue ParmVar 0x7ff0de879558 'new_extent' 'scsires_extent_t *'
+      |-UnaryOperator 0x7ff0de879938 <col:45, col:46> 'int' postfix '++'
+      | `-DeclRefExpr 0x7ff0de879910 <col:45> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+      `-CompoundStmt 0x7ff0de87b5f8 <line:22:5, line:31:5>
+        |-BinaryOperator 0x7ff0de879c18 <line:23:7, col:46> 'unsigned char' '='
+        | |-ArraySubscriptExpr 0x7ff0de879a90 <col:7, col:18> 'unsigned char' lvalue
+        | | |-ImplicitCastExpr 0x7ff0de879a78 <col:7> 'unsigned char *' <ArrayToPointerDecay>
+        | | | `-DeclRefExpr 0x7ff0de879958 <col:7> 'unsigned char [512]' lvalue Var 0x7ff0de879430 'buf' 'unsigned char [512]'
+        | | `-ParenExpr 0x7ff0de879a28 <col:11, col:17> 'int'
+        | |   `-BinaryOperator 0x7ff0de879a00 <col:12, col:16> 'int' '*'
+        | |     |-ImplicitCastExpr 0x7ff0de8799c8 <col:12> 'int' <LValueToRValue>
+        | |     | `-DeclRefExpr 0x7ff0de879980 <col:12> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+        | |     `-IntegerLiteral 0x7ff0de8799a8 <col:16> 'int' 8
+        | `-ImplicitCastExpr 0x7ff0de879c00 <col:22, col:46> 'unsigned char' <IntegralCast>
+        |   `-ImplicitCastExpr 0x7ff0de879be8 <col:22, col:46> 'scsires_access_mode':'scsires_access_mode' <LValueToRValue>
+        |     `-MemberExpr 0x7ff0de879bb0 <col:22, col:46> 'scsires_access_mode':'scsires_access_mode' lvalue .mode 0x7ff0de878ee0
+        |       `-ArraySubscriptExpr 0x7ff0de879b88 <col:22, col:44> 'scsires_extent_elem_t':'struct scsires_extent_elem' lvalue
+        |         |-ImplicitCastExpr 0x7ff0de879b58 <col:22, col:34> 'scsires_extent_elem_t *' <LValueToRValue>
+        |         | `-MemberExpr 0x7ff0de879af8 <col:22, col:34> 'scsires_extent_elem_t *' lvalue ->elements 0x7ff0de8792b8
+        |         |   `-ImplicitCastExpr 0x7ff0de879ae0 <col:22> 'scsires_extent_t *' <LValueToRValue>
+        |         |     `-DeclRefExpr 0x7ff0de879ab8 <col:22> 'scsires_extent_t *' lvalue ParmVar 0x7ff0de879558 'new_extent' 'scsires_extent_t *'
+        |         `-ImplicitCastExpr 0x7ff0de879b70 <col:43> 'int' <LValueToRValue>
+        |           `-DeclRefExpr 0x7ff0de879b30 <col:43> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+        |-BinaryOperator 0x7ff0de879fe0 <line:24:7, col:72> 'unsigned char' '='
+        | |-ArraySubscriptExpr 0x7ff0de879d70 <col:7, col:22> 'unsigned char' lvalue
+        | | |-ImplicitCastExpr 0x7ff0de879d58 <col:7> 'unsigned char *' <ArrayToPointerDecay>
+        | | | `-DeclRefExpr 0x7ff0de879c40 <col:7> 'unsigned char [512]' lvalue Var 0x7ff0de879430 'buf' 'unsigned char [512]'
+        | | `-BinaryOperator 0x7ff0de879d30 <col:11, col:21> 'int' '+'
+        | |   |-ParenExpr 0x7ff0de879cf0 <col:11, col:17> 'int'
+        | |   | `-BinaryOperator 0x7ff0de879cc8 <col:12, col:16> 'int' '*'
+        | |   |   |-ImplicitCastExpr 0x7ff0de879cb0 <col:12> 'int' <LValueToRValue>
+        | |   |   | `-DeclRefExpr 0x7ff0de879c68 <col:12> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+        | |   |   `-IntegerLiteral 0x7ff0de879c90 <col:16> 'int' 8
+        | |   `-IntegerLiteral 0x7ff0de879d10 <col:21> 'int' 1
+        | `-ImplicitCastExpr 0x7ff0de879fc8 <col:26, col:72> 'unsigned char' <IntegralCast>
+        |   `-ParenExpr 0x7ff0de879fa8 <col:26, col:72> 'unsigned int'
+        |     `-BinaryOperator 0x7ff0de879f80 <col:27, col:68> 'unsigned int' '&'
+        |       |-ParenExpr 0x7ff0de879f28 <col:27, col:64> 'u_int32_t':'unsigned int'
+        |       | `-BinaryOperator 0x7ff0de879f00 <col:28, col:62> 'u_int32_t':'unsigned int' '>>'
+        |       |   |-ImplicitCastExpr 0x7ff0de879ee8 <col:28, col:52> 'u_int32_t':'unsigned int' <LValueToRValue>
+        |       |   | `-MemberExpr 0x7ff0de879e90 <col:28, col:52> 'u_int32_t':'unsigned int' lvalue .length 0x7ff0de879018
+        |       |   |   `-ArraySubscriptExpr 0x7ff0de879e68 <col:28, col:50> 'scsires_extent_elem_t':'struct scsires_extent_elem' lvalue
+        |       |   |     |-ImplicitCastExpr 0x7ff0de879e38 <col:28, col:40> 'scsires_extent_elem_t *' <LValueToRValue>
+        |       |   |     | `-MemberExpr 0x7ff0de879dd8 <col:28, col:40> 'scsires_extent_elem_t *' lvalue ->elements 0x7ff0de8792b8
+        |       |   |     |   `-ImplicitCastExpr 0x7ff0de879dc0 <col:28> 'scsires_extent_t *' <LValueToRValue>
+        |       |   |     |     `-DeclRefExpr 0x7ff0de879d98 <col:28> 'scsires_extent_t *' lvalue ParmVar 0x7ff0de879558 'new_extent' 'scsires_extent_t *'
+        |       |   |     `-ImplicitCastExpr 0x7ff0de879e50 <col:49> 'int' <LValueToRValue>
+        |       |   |       `-DeclRefExpr 0x7ff0de879e10 <col:49> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+        |       |   `-IntegerLiteral 0x7ff0de879ec8 <col:62> 'int' 16
+        |       `-ImplicitCastExpr 0x7ff0de879f68 <col:68> 'unsigned int' <IntegralCast>
+        |         `-IntegerLiteral 0x7ff0de879f48 <col:68> 'int' 255
+        |-BinaryOperator 0x7ff0de87a3a8 <line:25:7, col:71> 'unsigned char' '='
+        | |-ArraySubscriptExpr 0x7ff0de87a138 <col:7, col:22> 'unsigned char' lvalue
+        | | |-ImplicitCastExpr 0x7ff0de87a120 <col:7> 'unsigned char *' <ArrayToPointerDecay>
+        | | | `-DeclRefExpr 0x7ff0de87a008 <col:7> 'unsigned char [512]' lvalue Var 0x7ff0de879430 'buf' 'unsigned char [512]'
+        | | `-BinaryOperator 0x7ff0de87a0f8 <col:11, col:21> 'int' '+'
+        | |   |-ParenExpr 0x7ff0de87a0b8 <col:11, col:17> 'int'
+        | |   | `-BinaryOperator 0x7ff0de87a090 <col:12, col:16> 'int' '*'
+        | |   |   |-ImplicitCastExpr 0x7ff0de87a078 <col:12> 'int' <LValueToRValue>
+        | |   |   | `-DeclRefExpr 0x7ff0de87a030 <col:12> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+        | |   |   `-IntegerLiteral 0x7ff0de87a058 <col:16> 'int' 8
+        | |   `-IntegerLiteral 0x7ff0de87a0d8 <col:21> 'int' 2
+        | `-ImplicitCastExpr 0x7ff0de87a390 <col:26, col:71> 'unsigned char' <IntegralCast>
+        |   `-ParenExpr 0x7ff0de87a370 <col:26, col:71> 'unsigned int'
+        |     `-BinaryOperator 0x7ff0de87a348 <col:27, col:67> 'unsigned int' '&'
+        |       |-ParenExpr 0x7ff0de87a2f0 <col:27, col:63> 'u_int32_t':'unsigned int'
+        |       | `-BinaryOperator 0x7ff0de87a2c8 <col:28, col:62> 'u_int32_t':'unsigned int' '>>'
+        |       |   |-ImplicitCastExpr 0x7ff0de87a2b0 <col:28, col:52> 'u_int32_t':'unsigned int' <LValueToRValue>
+        |       |   | `-MemberExpr 0x7ff0de87a258 <col:28, col:52> 'u_int32_t':'unsigned int' lvalue .length 0x7ff0de879018
+        |       |   |   `-ArraySubscriptExpr 0x7ff0de87a230 <col:28, col:50> 'scsires_extent_elem_t':'struct scsires_extent_elem' lvalue
+        |       |   |     |-ImplicitCastExpr 0x7ff0de87a200 <col:28, col:40> 'scsires_extent_elem_t *' <LValueToRValue>
+        |       |   |     | `-MemberExpr 0x7ff0de87a1a0 <col:28, col:40> 'scsires_extent_elem_t *' lvalue ->elements 0x7ff0de8792b8
+        |       |   |     |   `-ImplicitCastExpr 0x7ff0de87a188 <col:28> 'scsires_extent_t *' <LValueToRValue>
+        |       |   |     |     `-DeclRefExpr 0x7ff0de87a160 <col:28> 'scsires_extent_t *' lvalue ParmVar 0x7ff0de879558 'new_extent' 'scsires_extent_t *'
+        |       |   |     `-ImplicitCastExpr 0x7ff0de87a218 <col:49> 'int' <LValueToRValue>
+        |       |   |       `-DeclRefExpr 0x7ff0de87a1d8 <col:49> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+        |       |   `-IntegerLiteral 0x7ff0de87a290 <col:62> 'int' 8
+        |       `-ImplicitCastExpr 0x7ff0de87a330 <col:67> 'unsigned int' <IntegralCast>
+        |         `-IntegerLiteral 0x7ff0de87a310 <col:67> 'int' 255
+        |-BinaryOperator 0x7ff0de87a708 <line:26:7, col:64> 'unsigned char' '='
+        | |-ArraySubscriptExpr 0x7ff0de87a500 <col:7, col:22> 'unsigned char' lvalue
+        | | |-ImplicitCastExpr 0x7ff0de87a4e8 <col:7> 'unsigned char *' <ArrayToPointerDecay>
+        | | | `-DeclRefExpr 0x7ff0de87a3d0 <col:7> 'unsigned char [512]' lvalue Var 0x7ff0de879430 'buf' 'unsigned char [512]'
+        | | `-BinaryOperator 0x7ff0de87a4c0 <col:11, col:21> 'int' '+'
+        | |   |-ParenExpr 0x7ff0de87a480 <col:11, col:17> 'int'
+        | |   | `-BinaryOperator 0x7ff0de87a458 <col:12, col:16> 'int' '*'
+        | |   |   |-ImplicitCastExpr 0x7ff0de87a440 <col:12> 'int' <LValueToRValue>
+        | |   |   | `-DeclRefExpr 0x7ff0de87a3f8 <col:12> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+        | |   |   `-IntegerLiteral 0x7ff0de87a420 <col:16> 'int' 8
+        | |   `-IntegerLiteral 0x7ff0de87a4a0 <col:21> 'int' 3
+        | `-ImplicitCastExpr 0x7ff0de87a6f0 <col:26, col:64> 'unsigned char' <IntegralCast>
+        |   `-ParenExpr 0x7ff0de87a6d0 <col:26, col:64> 'unsigned int'
+        |     `-BinaryOperator 0x7ff0de87a6a8 <col:27, col:60> 'unsigned int' '&'
+        |       |-ImplicitCastExpr 0x7ff0de87a678 <col:27, col:51> 'u_int32_t':'unsigned int' <LValueToRValue>
+        |       | `-MemberExpr 0x7ff0de87a620 <col:27, col:51> 'u_int32_t':'unsigned int' lvalue .length 0x7ff0de879018
+        |       |   `-ArraySubscriptExpr 0x7ff0de87a5f8 <col:27, col:49> 'scsires_extent_elem_t':'struct scsires_extent_elem' lvalue
+        |       |     |-ImplicitCastExpr 0x7ff0de87a5c8 <col:27, col:39> 'scsires_extent_elem_t *' <LValueToRValue>
+        |       |     | `-MemberExpr 0x7ff0de87a568 <col:27, col:39> 'scsires_extent_elem_t *' lvalue ->elements 0x7ff0de8792b8
+        |       |     |   `-ImplicitCastExpr 0x7ff0de87a550 <col:27> 'scsires_extent_t *' <LValueToRValue>
+        |       |     |     `-DeclRefExpr 0x7ff0de87a528 <col:27> 'scsires_extent_t *' lvalue ParmVar 0x7ff0de879558 'new_extent' 'scsires_extent_t *'
+        |       |     `-ImplicitCastExpr 0x7ff0de87a5e0 <col:48> 'int' <LValueToRValue>
+        |       |       `-DeclRefExpr 0x7ff0de87a5a0 <col:48> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+        |       `-ImplicitCastExpr 0x7ff0de87a690 <col:60> 'unsigned int' <IntegralCast>
+        |         `-IntegerLiteral 0x7ff0de87a658 <col:60> 'int' 255
+        |-BinaryOperator 0x7ff0de87aae0 <line:27:7, col:77> 'unsigned char' '='
+        | |-ArraySubscriptExpr 0x7ff0de87a860 <col:7, col:22> 'unsigned char' lvalue
+        | | |-ImplicitCastExpr 0x7ff0de87a848 <col:7> 'unsigned char *' <ArrayToPointerDecay>
+        | | | `-DeclRefExpr 0x7ff0de87a730 <col:7> 'unsigned char [512]' lvalue Var 0x7ff0de879430 'buf' 'unsigned char [512]'
+        | | `-BinaryOperator 0x7ff0de87a820 <col:11, col:21> 'int' '+'
+        | |   |-ParenExpr 0x7ff0de87a7e0 <col:11, col:17> 'int'
+        | |   | `-BinaryOperator 0x7ff0de87a7b8 <col:12, col:16> 'int' '*'
+        | |   |   |-ImplicitCastExpr 0x7ff0de87a7a0 <col:12> 'int' <LValueToRValue>
+        | |   |   | `-DeclRefExpr 0x7ff0de87a758 <col:12> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+        | |   |   `-IntegerLiteral 0x7ff0de87a780 <col:16> 'int' 8
+        | |   `-IntegerLiteral 0x7ff0de87a800 <col:21> 'int' 4
+        | `-ImplicitCastExpr 0x7ff0de87aac8 <col:26, col:77> 'unsigned char' <IntegralCast>
+        |   `-ParenExpr 0x7ff0de87aaa8 <col:26, col:77> 'unsigned int'
+        |     `-BinaryOperator 0x7ff0de87aa80 <col:27, col:73> 'unsigned int' '&'
+        |       |-ParenExpr 0x7ff0de87aa28 <col:27, col:69> 'u_int32_t':'unsigned int'
+        |       | `-BinaryOperator 0x7ff0de87aa00 <col:28, col:67> 'u_int32_t':'unsigned int' '>>'
+        |       |   |-ImplicitCastExpr 0x7ff0de87a9d8 <col:28, col:52> 'u_int32_t':'unsigned int' <LValueToRValue>
+        |       |   | `-MemberExpr 0x7ff0de87a980 <col:28, col:52> 'u_int32_t':'unsigned int' lvalue .first_block 0x7ff0de878fc0
+        |       |   |   `-ArraySubscriptExpr 0x7ff0de87a958 <col:28, col:50> 'scsires_extent_elem_t':'struct scsires_extent_elem' lvalue
+        |       |   |     |-ImplicitCastExpr 0x7ff0de87a928 <col:28, col:40> 'scsires_extent_elem_t *' <LValueToRValue>
+        |       |   |     | `-MemberExpr 0x7ff0de87a8c8 <col:28, col:40> 'scsires_extent_elem_t *' lvalue ->elements 0x7ff0de8792b8
+        |       |   |     |   `-ImplicitCastExpr 0x7ff0de87a8b0 <col:28> 'scsires_extent_t *' <LValueToRValue>
+        |       |   |     |     `-DeclRefExpr 0x7ff0de87a888 <col:28> 'scsires_extent_t *' lvalue ParmVar 0x7ff0de879558 'new_extent' 'scsires_extent_t *'
+        |       |   |     `-ImplicitCastExpr 0x7ff0de87a940 <col:49> 'int' <LValueToRValue>
+        |       |   |       `-DeclRefExpr 0x7ff0de87a900 <col:49> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+        |       |   `-IntegerLiteral 0x7ff0de87a9b8 <col:67> 'int' 24
+        |       `-ImplicitCastExpr 0x7ff0de87aa68 <col:73> 'unsigned int' <IntegralCast>
+        |         `-IntegerLiteral 0x7ff0de87aa48 <col:73> 'int' 255
+        |-BinaryOperator 0x7ff0de87aea8 <line:28:7, col:77> 'unsigned char' '='
+        | |-ArraySubscriptExpr 0x7ff0de87ac38 <col:7, col:22> 'unsigned char' lvalue
+        | | |-ImplicitCastExpr 0x7ff0de87ac20 <col:7> 'unsigned char *' <ArrayToPointerDecay>
+        | | | `-DeclRefExpr 0x7ff0de87ab08 <col:7> 'unsigned char [512]' lvalue Var 0x7ff0de879430 'buf' 'unsigned char [512]'
+        | | `-BinaryOperator 0x7ff0de87abf8 <col:11, col:21> 'int' '+'
+        | |   |-ParenExpr 0x7ff0de87abb8 <col:11, col:17> 'int'
+        | |   | `-BinaryOperator 0x7ff0de87ab90 <col:12, col:16> 'int' '*'
+        | |   |   |-ImplicitCastExpr 0x7ff0de87ab78 <col:12> 'int' <LValueToRValue>
+        | |   |   | `-DeclRefExpr 0x7ff0de87ab30 <col:12> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+        | |   |   `-IntegerLiteral 0x7ff0de87ab58 <col:16> 'int' 8
+        | |   `-IntegerLiteral 0x7ff0de87abd8 <col:21> 'int' 5
+        | `-ImplicitCastExpr 0x7ff0de87ae90 <col:26, col:77> 'unsigned char' <IntegralCast>
+        |   `-ParenExpr 0x7ff0de87ae70 <col:26, col:77> 'unsigned int'
+        |     `-BinaryOperator 0x7ff0de87ae48 <col:27, col:73> 'unsigned int' '&'
+        |       |-ParenExpr 0x7ff0de87adf0 <col:27, col:69> 'u_int32_t':'unsigned int'
+        |       | `-BinaryOperator 0x7ff0de87adc8 <col:28, col:67> 'u_int32_t':'unsigned int' '>>'
+        |       |   |-ImplicitCastExpr 0x7ff0de87adb0 <col:28, col:52> 'u_int32_t':'unsigned int' <LValueToRValue>
+        |       |   | `-MemberExpr 0x7ff0de87ad58 <col:28, col:52> 'u_int32_t':'unsigned int' lvalue .first_block 0x7ff0de878fc0
+        |       |   |   `-ArraySubscriptExpr 0x7ff0de87ad30 <col:28, col:50> 'scsires_extent_elem_t':'struct scsires_extent_elem' lvalue
+        |       |   |     |-ImplicitCastExpr 0x7ff0de87ad00 <col:28, col:40> 'scsires_extent_elem_t *' <LValueToRValue>
+        |       |   |     | `-MemberExpr 0x7ff0de87aca0 <col:28, col:40> 'scsires_extent_elem_t *' lvalue ->elements 0x7ff0de8792b8
+        |       |   |     |   `-ImplicitCastExpr 0x7ff0de87ac88 <col:28> 'scsires_extent_t *' <LValueToRValue>
+        |       |   |     |     `-DeclRefExpr 0x7ff0de87ac60 <col:28> 'scsires_extent_t *' lvalue ParmVar 0x7ff0de879558 'new_extent' 'scsires_extent_t *'
+        |       |   |     `-ImplicitCastExpr 0x7ff0de87ad18 <col:49> 'int' <LValueToRValue>
+        |       |   |       `-DeclRefExpr 0x7ff0de87acd8 <col:49> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+        |       |   `-IntegerLiteral 0x7ff0de87ad90 <col:67> 'int' 16
+        |       `-ImplicitCastExpr 0x7ff0de87ae30 <col:73> 'unsigned int' <IntegralCast>
+        |         `-IntegerLiteral 0x7ff0de87ae10 <col:73> 'int' 255
+        |-BinaryOperator 0x7ff0de87b270 <line:29:7, col:76> 'unsigned char' '='
+        | |-ArraySubscriptExpr 0x7ff0de87b000 <col:7, col:22> 'unsigned char' lvalue
+        | | |-ImplicitCastExpr 0x7ff0de87afe8 <col:7> 'unsigned char *' <ArrayToPointerDecay>
+        | | | `-DeclRefExpr 0x7ff0de87aed0 <col:7> 'unsigned char [512]' lvalue Var 0x7ff0de879430 'buf' 'unsigned char [512]'
+        | | `-BinaryOperator 0x7ff0de87afc0 <col:11, col:21> 'int' '+'
+        | |   |-ParenExpr 0x7ff0de87af80 <col:11, col:17> 'int'
+        | |   | `-BinaryOperator 0x7ff0de87af58 <col:12, col:16> 'int' '*'
+        | |   |   |-ImplicitCastExpr 0x7ff0de87af40 <col:12> 'int' <LValueToRValue>
+        | |   |   | `-DeclRefExpr 0x7ff0de87aef8 <col:12> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+        | |   |   `-IntegerLiteral 0x7ff0de87af20 <col:16> 'int' 8
+        | |   `-IntegerLiteral 0x7ff0de87afa0 <col:21> 'int' 6
+        | `-ImplicitCastExpr 0x7ff0de87b258 <col:26, col:76> 'unsigned char' <IntegralCast>
+        |   `-ParenExpr 0x7ff0de87b238 <col:26, col:76> 'unsigned int'
+        |     `-BinaryOperator 0x7ff0de87b210 <col:27, col:72> 'unsigned int' '&'
+        |       |-ParenExpr 0x7ff0de87b1b8 <col:27, col:68> 'u_int32_t':'unsigned int'
+        |       | `-BinaryOperator 0x7ff0de87b190 <col:28, col:67> 'u_int32_t':'unsigned int' '>>'
+        |       |   |-ImplicitCastExpr 0x7ff0de87b178 <col:28, col:52> 'u_int32_t':'unsigned int' <LValueToRValue>
+        |       |   | `-MemberExpr 0x7ff0de87b120 <col:28, col:52> 'u_int32_t':'unsigned int' lvalue .first_block 0x7ff0de878fc0
+        |       |   |   `-ArraySubscriptExpr 0x7ff0de87b0f8 <col:28, col:50> 'scsires_extent_elem_t':'struct scsires_extent_elem' lvalue
+        |       |   |     |-ImplicitCastExpr 0x7ff0de87b0c8 <col:28, col:40> 'scsires_extent_elem_t *' <LValueToRValue>
+        |       |   |     | `-MemberExpr 0x7ff0de87b068 <col:28, col:40> 'scsires_extent_elem_t *' lvalue ->elements 0x7ff0de8792b8
+        |       |   |     |   `-ImplicitCastExpr 0x7ff0de87b050 <col:28> 'scsires_extent_t *' <LValueToRValue>
+        |       |   |     |     `-DeclRefExpr 0x7ff0de87b028 <col:28> 'scsires_extent_t *' lvalue ParmVar 0x7ff0de879558 'new_extent' 'scsires_extent_t *'
+        |       |   |     `-ImplicitCastExpr 0x7ff0de87b0e0 <col:49> 'int' <LValueToRValue>
+        |       |   |       `-DeclRefExpr 0x7ff0de87b0a0 <col:49> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+        |       |   `-IntegerLiteral 0x7ff0de87b158 <col:67> 'int' 8
+        |       `-ImplicitCastExpr 0x7ff0de87b1f8 <col:72> 'unsigned int' <IntegralCast>
+        |         `-IntegerLiteral 0x7ff0de87b1d8 <col:72> 'int' 255
+        `-BinaryOperator 0x7ff0de87b5d0 <line:30:7, col:69> 'unsigned char' '='
+          |-ArraySubscriptExpr 0x7ff0de87b3c8 <col:7, col:22> 'unsigned char' lvalue
+          | |-ImplicitCastExpr 0x7ff0de87b3b0 <col:7> 'unsigned char *' <ArrayToPointerDecay>
+          | | `-DeclRefExpr 0x7ff0de87b298 <col:7> 'unsigned char [512]' lvalue Var 0x7ff0de879430 'buf' 'unsigned char [512]'
+          | `-BinaryOperator 0x7ff0de87b388 <col:11, col:21> 'int' '+'
+          |   |-ParenExpr 0x7ff0de87b348 <col:11, col:17> 'int'
+          |   | `-BinaryOperator 0x7ff0de87b320 <col:12, col:16> 'int' '*'
+          |   |   |-ImplicitCastExpr 0x7ff0de87b308 <col:12> 'int' <LValueToRValue>
+          |   |   | `-DeclRefExpr 0x7ff0de87b2c0 <col:12> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+          |   |   `-IntegerLiteral 0x7ff0de87b2e8 <col:16> 'int' 8
+          |   `-IntegerLiteral 0x7ff0de87b368 <col:21> 'int' 7
+          `-ImplicitCastExpr 0x7ff0de87b5b8 <col:26, col:69> 'unsigned char' <IntegralCast>
+            `-ParenExpr 0x7ff0de87b598 <col:26, col:69> 'unsigned int'
+              `-BinaryOperator 0x7ff0de87b570 <col:27, col:65> 'unsigned int' '&'
+                |-ImplicitCastExpr 0x7ff0de87b540 <col:27, col:51> 'u_int32_t':'unsigned int' <LValueToRValue>
+                | `-MemberExpr 0x7ff0de87b4e8 <col:27, col:51> 'u_int32_t':'unsigned int' lvalue .first_block 0x7ff0de878fc0
+                |   `-ArraySubscriptExpr 0x7ff0de87b4c0 <col:27, col:49> 'scsires_extent_elem_t':'struct scsires_extent_elem' lvalue
+                |     |-ImplicitCastExpr 0x7ff0de87b490 <col:27, col:39> 'scsires_extent_elem_t *' <LValueToRValue>
+                |     | `-MemberExpr 0x7ff0de87b430 <col:27, col:39> 'scsires_extent_elem_t *' lvalue ->elements 0x7ff0de8792b8
+                |     |   `-ImplicitCastExpr 0x7ff0de87b418 <col:27> 'scsires_extent_t *' <LValueToRValue>
+                |     |     `-DeclRefExpr 0x7ff0de87b3f0 <col:27> 'scsires_extent_t *' lvalue ParmVar 0x7ff0de879558 'new_extent' 'scsires_extent_t *'
+                |     `-ImplicitCastExpr 0x7ff0de87b4a8 <col:48> 'int' <LValueToRValue>
+                |       `-DeclRefExpr 0x7ff0de87b468 <col:48> 'int' lvalue Var 0x7ff0de879718 'i' 'int'
+                `-ImplicitCastExpr 0x7ff0de87b558 <col:65> 'unsigned int' <IntegralCast>
+                  `-IntegerLiteral 0x7ff0de87b520 <col:65> 'int' 255

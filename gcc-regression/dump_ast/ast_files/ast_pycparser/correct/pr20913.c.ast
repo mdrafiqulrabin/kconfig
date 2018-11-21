@@ -1,0 +1,74 @@
+FileAST: 
+  Decl: link_error, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: link_error, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: b
+        ID: a
+      If: 
+        BinaryOp: ==
+          ID: a
+          ID: b
+        Assignment: =
+          ID: x
+          ID: c
+        Compound: 
+          FuncCall: 
+            ID: link_error
+          Assignment: =
+            ID: x
+            ID: d
+      If: 
+        BinaryOp: ==
+          ID: x
+          ID: c
+        Return: 
+          ID: a
+        Compound: 
+          FuncCall: 
+            ID: link_error
+          Return: 
+            ID: b
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Constant: int, 1
+          Constant: int, 2
+          Constant: int, 3
+          Constant: int, 4

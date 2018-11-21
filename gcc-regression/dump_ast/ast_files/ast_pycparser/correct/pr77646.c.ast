@@ -1,0 +1,90 @@
+FileAST: 
+  Decl: c, [], [], []
+    PtrDecl: []
+      TypeDecl: c, []
+        Struct: e
+          Decl: f, [], [], []
+            PtrDecl: []
+              FuncDecl: 
+                TypeDecl: f, []
+                  IdentifierType: ['int']
+          Decl: g, [], [], []
+            PtrDecl: []
+              FuncDecl: 
+                TypeDecl: g, []
+                  IdentifierType: ['void']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: h, [], [], []
+    FuncDecl: 
+      PtrDecl: []
+        TypeDecl: h, []
+          IdentifierType: ['void']
+  Typedef: k, [], ['typedef']
+    TypeDecl: k, []
+      Struct: None
+        Decl: j, [], [], []
+          TypeDecl: j, []
+            Struct: e
+  FuncDef: 
+    Decl: l, [], [], []
+      FuncDecl: 
+        TypeDecl: l, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ID: a
+  Decl: b, ['const'], [], []
+    TypeDecl: b, ['const']
+      Struct: e
+    InitList: 
+      ID: l
+  FuncDef: 
+    Decl: m, [], [], []
+      FuncDecl: 
+        TypeDecl: m, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        PtrDecl: []
+          TypeDecl: d, []
+            IdentifierType: ['k']
+        FuncCall: 
+          ID: h
+      Assignment: =
+        StructRef: ->
+          ID: d
+          ID: j
+        ID: b
+      Assignment: =
+        ID: c
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                Struct: e
+          ID: d
+      Decl: i, [], [], []
+        PtrDecl: []
+          TypeDecl: i, []
+            Struct: e
+        ID: c
+      If: 
+        FuncCall: 
+          StructRef: ->
+            ID: i
+            ID: f
+          ExprList: 
+            ID: c
+        While: 
+          FuncCall: 
+            StructRef: ->
+              ID: i
+              ID: f
+            ExprList: 
+              ID: c
+          FuncCall: 
+            StructRef: ->
+              ID: i
+              ID: g

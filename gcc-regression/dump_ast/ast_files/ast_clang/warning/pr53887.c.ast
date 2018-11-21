@@ -1,0 +1,67 @@
+c_files/pr53887.c:12:11: warning: expression result unused [-Wunused-value]
+        a << 1;
+        ~ ^  ~
+c_files/pr53887.c:16:11: warning: expression result unused [-Wunused-value]
+        a << 1;
+        ~ ^  ~
+2 warnings generated.
+TranslationUnitDecl 0x7f88e30264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f88e3026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f88e3026740 '__int128'
+|-TypedefDecl 0x7f88e3026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f88e3026760 'unsigned __int128'
+|-TypedefDecl 0x7f88e3026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f88e3026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f88e3026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f88e3026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f88e3026dc0 'char *'
+|   `-BuiltinType 0x7f88e3026560 'char'
+|-TypedefDecl 0x7f88e30270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f88e3027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f88e3026ee0 'struct __va_list_tag'
+|     `-Record 0x7f88e3026e58 '__va_list_tag'
+|-EnumDecl 0x7f88e3027120 <c_files/pr53887.c:4:1, line:5:31> line:4:1
+| |-EnumConstantDecl 0x7f88e3825a00 <line:5:3> col:3 Failed 'int'
+| |-EnumConstantDecl 0x7f88e3825a48 <col:11> col:11 NoError 'int'
+| `-EnumConstantDecl 0x7f88e3825a90 <col:20> col:20 referenced NoDiskette 'int'
+|-VarDecl 0x7f88e3825b30 <line:4:1, line:6:1> col:1 used a 'enum (anonymous enum at c_files/pr53887.c:4:1)':'enum (anonymous at c_files/pr53887.c:4:1)'
+|-VarDecl 0x7f88e3825c00 <line:7:1, col:5> col:5 used b 'int'
+|-VarDecl 0x7f88e3825c78 <col:1, col:8> col:8 used c 'int'
+`-FunctionDecl 0x7f88e3825d38 <line:8:1, line:23:1> line:9:1 fn1 'void ()'
+  `-CompoundStmt 0x7f88e38261d8 <line:10:1, line:23:1>
+    |-IfStmt 0x7f88e3825eb0 <line:11:5, line:12:14>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f88e3825df8 <line:11:9> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f88e3825dd0 <col:9> 'int' lvalue Var 0x7f88e3825c78 'c' 'int'
+    | |-BinaryOperator 0x7f88e3825e88 <line:12:9, col:14> 'unsigned int' '<<'
+    | | |-ImplicitCastExpr 0x7f88e3825e70 <col:9> 'unsigned int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7f88e3825e58 <col:9> 'enum (anonymous enum at c_files/pr53887.c:4:1)':'enum (anonymous at c_files/pr53887.c:4:1)' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7f88e3825e10 <col:9> 'enum (anonymous enum at c_files/pr53887.c:4:1)':'enum (anonymous at c_files/pr53887.c:4:1)' lvalue Var 0x7f88e3825b30 'a' 'enum (anonymous enum at c_files/pr53887.c:4:1)':'enum (anonymous at c_files/pr53887.c:4:1)'
+    | | `-IntegerLiteral 0x7f88e3825e38 <col:14> 'int' 1
+    | `-<<<NULL>>>
+    `-SwitchStmt 0x7f88e3825f28 <line:13:5, line:22:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f88e3825f10 <line:13:13> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f88e3825ee8 <col:13> 'int' lvalue Var 0x7f88e3825c00 'b' 'int'
+      `-CompoundStmt 0x7f88e38261a8 <line:14:5, line:22:5>
+        |-DefaultStmt 0x7f88e3825ff8 <line:15:5, line:16:14>
+        | `-BinaryOperator 0x7f88e3825fd0 <col:9, col:14> 'unsigned int' '<<'
+        |   |-ImplicitCastExpr 0x7f88e3825fb8 <col:9> 'unsigned int' <IntegralCast>
+        |   | `-ImplicitCastExpr 0x7f88e3825fa0 <col:9> 'enum (anonymous enum at c_files/pr53887.c:4:1)':'enum (anonymous at c_files/pr53887.c:4:1)' <LValueToRValue>
+        |   |   `-DeclRefExpr 0x7f88e3825f58 <col:9> 'enum (anonymous enum at c_files/pr53887.c:4:1)':'enum (anonymous at c_files/pr53887.c:4:1)' lvalue Var 0x7f88e3825b30 'a' 'enum (anonymous enum at c_files/pr53887.c:4:1)':'enum (anonymous at c_files/pr53887.c:4:1)'
+        |   `-IntegerLiteral 0x7f88e3825f80 <col:14> 'int' 1
+        |-CaseStmt 0x7f88e3826038 <line:17:5, line:18:13>
+        | |-IntegerLiteral 0x7f88e3826018 <line:17:10> 'int' 0
+        | |-<<<NULL>>>
+        | `-BinaryOperator 0x7f88e38260b8 <line:18:9, col:13> 'int' '='
+        |   |-DeclRefExpr 0x7f88e3826070 <col:9> 'int' lvalue Var 0x7f88e3825c00 'b' 'int'
+        |   `-IntegerLiteral 0x7f88e3826098 <col:13> 'int' 0
+        `-CaseStmt 0x7f88e3826100 <line:19:5, line:21:9>
+          |-IntegerLiteral 0x7f88e38260e0 <line:19:10> 'int' 1
+          |-<<<NULL>>>
+          `-CaseStmt 0x7f88e3826160 <line:20:5, line:21:9>
+            |-DeclRefExpr 0x7f88e3826138 <line:20:10> 'int' EnumConstant 0x7f88e3825a90 'NoDiskette' 'int'
+            |-<<<NULL>>>
+            `-NullStmt 0x7f88e3826198 <line:21:9>

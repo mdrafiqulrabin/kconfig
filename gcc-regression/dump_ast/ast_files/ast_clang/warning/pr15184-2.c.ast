@@ -1,0 +1,57 @@
+c_files/pr15184-2.c:2:1: warning: '/*' within block comment [-Wcomment]
+/* { dg-do compile { target ia32 } } */
+^
+1 warning generated.
+TranslationUnitDecl 0x7f8b860264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8b86026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8b86026740 '__int128'
+|-TypedefDecl 0x7f8b86026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8b86026760 'unsigned __int128'
+|-TypedefDecl 0x7f8b86026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8b86026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8b86026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8b86026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8b86026dc0 'char *'
+|   `-BuiltinType 0x7f8b86026560 'char'
+|-TypedefDecl 0x7f8b860270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8b86027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8b86026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8b86026e58 '__va_list_tag'
+|-VarDecl 0x7f8b86027138 <c_files/pr15184-2.c:7:1, col:23> col:23 used y 'unsigned short' extern
+|-FunctionDecl 0x7f8b86826b20 <line:9:1, line:12:1> line:9:14 g0 'void (unsigned char) __attribute__((regparm (1)))'
+| |-ParmVarDecl 0x7f8b86826a18 <col:17, col:31> col:31 used c 'unsigned char'
+| `-CompoundStmt 0x7f8b86826da8 <line:10:1, line:12:1>
+|   `-BinaryOperator 0x7f8b86826d80 <line:11:9, col:44> 'unsigned short' '='
+|     |-DeclRefExpr 0x7f8b86826bc0 <col:9> 'unsigned short' lvalue Var 0x7f8b86027138 'y' 'unsigned short'
+|     `-ImplicitCastExpr 0x7f8b86826d68 <col:13, col:44> 'unsigned short' <IntegralCast>
+|       `-BinaryOperator 0x7f8b86826d40 <col:13, col:44> 'int' '|'
+|         |-ParenExpr 0x7f8b86826c88 <col:13, col:24> 'int'
+|         | `-BinaryOperator 0x7f8b86826c60 <col:14, col:18> 'int' '&'
+|         |   |-ImplicitCastExpr 0x7f8b86826c48 <col:14> 'int' <IntegralCast>
+|         |   | `-ImplicitCastExpr 0x7f8b86826c30 <col:14> 'unsigned short' <LValueToRValue>
+|         |   |   `-DeclRefExpr 0x7f8b86826be8 <col:14> 'unsigned short' lvalue Var 0x7f8b86027138 'y' 'unsigned short'
+|         |   `-IntegerLiteral 0x7f8b86826c10 <col:18> 'int' 65280
+|         `-ImplicitCastExpr 0x7f8b86826d28 <col:28, col:44> 'int' <IntegralCast>
+|           `-CStyleCastExpr 0x7f8b86826d00 <col:28, col:44> 'unsigned short' <IntegralCast>
+|             `-ImplicitCastExpr 0x7f8b86826ce8 <col:44> 'unsigned char' <LValueToRValue>
+|               `-DeclRefExpr 0x7f8b86826ca8 <col:44> 'unsigned char' lvalue ParmVar 0x7f8b86826a18 'c' 'unsigned char'
+`-FunctionDecl 0x7f8b86826e88 <line:14:1, line:17:1> line:14:14 g1 'void (unsigned char) __attribute__((regparm (1)))'
+  |-ParmVarDecl 0x7f8b86826e00 <col:17, col:31> col:31 used c 'unsigned char'
+  `-CompoundStmt 0x7f8b86827178 <line:15:1, line:17:1>
+    `-BinaryOperator 0x7f8b86827150 <line:16:9, col:51> 'unsigned short' '='
+      |-DeclRefExpr 0x7f8b86826f28 <col:9> 'unsigned short' lvalue Var 0x7f8b86027138 'y' 'unsigned short'
+      `-ImplicitCastExpr 0x7f8b86827138 <col:13, col:51> 'unsigned short' <IntegralCast>
+        `-BinaryOperator 0x7f8b86827110 <col:13, col:51> 'int' '|'
+          |-ParenExpr 0x7f8b86826ff0 <col:13, col:24> 'int'
+          | `-BinaryOperator 0x7f8b86826fc8 <col:14, col:18> 'int' '&'
+          |   |-ImplicitCastExpr 0x7f8b86826fb0 <col:14> 'int' <IntegralCast>
+          |   | `-ImplicitCastExpr 0x7f8b86826f98 <col:14> 'unsigned short' <LValueToRValue>
+          |   |   `-DeclRefExpr 0x7f8b86826f50 <col:14> 'unsigned short' lvalue Var 0x7f8b86027138 'y' 'unsigned short'
+          |   `-IntegerLiteral 0x7f8b86826f78 <col:18> 'int' 255
+          `-ParenExpr 0x7f8b868270f0 <col:28, col:51> 'int'
+            `-BinaryOperator 0x7f8b868270c8 <col:29, col:50> 'int' '<<'
+              |-ImplicitCastExpr 0x7f8b868270b0 <col:29, col:45> 'int' <IntegralCast>
+              | `-CStyleCastExpr 0x7f8b86827068 <col:29, col:45> 'unsigned short' <IntegralCast>
+              |   `-ImplicitCastExpr 0x7f8b86827050 <col:45> 'unsigned char' <LValueToRValue>
+              |     `-DeclRefExpr 0x7f8b86827010 <col:45> 'unsigned char' lvalue ParmVar 0x7f8b86826e00 'c' 'unsigned char'
+              `-IntegerLiteral 0x7f8b86827090 <col:50> 'int' 8

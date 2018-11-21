@@ -1,0 +1,46 @@
+c_files/pr67896.c:1:9: error: unknown type name '__Poly8_t'
+typedef __Poly8_t A;
+        ^
+c_files/pr67896.c:2:9: error: unknown type name '__Poly16_t'
+typedef __Poly16_t A; /* { dg-error "conflicting types" } */
+        ^
+c_files/pr67896.c:3:9: error: unknown type name '__Poly64_t'
+typedef __Poly64_t A; /* { dg-error "conflicting types" } */
+        ^
+c_files/pr67896.c:4:9: error: unknown type name '__Poly128_t'
+typedef __Poly128_t A; /* { dg-error "conflicting types" } */
+        ^
+c_files/pr67896.c:6:9: error: unknown type name '__Poly8x8_t'
+typedef __Poly8x8_t B;
+        ^
+c_files/pr67896.c:7:9: error: unknown type name '__Poly16x8_t'
+typedef __Poly16x8_t B; /* { dg-error "conflicting types" } */
+        ^
+6 errors generated.
+TranslationUnitDecl 0x7fe617818ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe617819020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe617818d40 '__int128'
+|-TypedefDecl 0x7fe617819090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe617818d60 'unsigned __int128'
+|-TypedefDecl 0x7fe617819368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe617819170 'struct __NSConstantString_tag'
+|   `-Record 0x7fe6178190e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe617819400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe6178193c0 'char *'
+|   `-BuiltinType 0x7fe617818b60 'char'
+|-TypedefDecl 0x7fe6178196c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe617819670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe6178194e0 'struct __va_list_tag'
+|     `-Record 0x7fe617819458 '__va_list_tag'
+|-TypedefDecl 0x7fe617819750 <c_files/pr67896.c:1:1, col:19> col:19 invalid A 'int'
+| `-BuiltinType 0x7fe617818bc0 'int'
+|-TypedefDecl 0x7fe618026a00 <line:2:1, col:20> col:20 invalid A 'int'
+| `-BuiltinType 0x7fe617818bc0 'int'
+|-TypedefDecl 0x7fe618026a90 <line:3:1, col:20> col:20 invalid A 'int'
+| `-BuiltinType 0x7fe617818bc0 'int'
+|-TypedefDecl 0x7fe618026b20 <line:4:1, col:21> col:21 invalid A 'int'
+| `-BuiltinType 0x7fe617818bc0 'int'
+|-TypedefDecl 0x7fe618026b90 <line:6:1, col:21> col:21 invalid B 'int'
+| `-BuiltinType 0x7fe617818bc0 'int'
+`-TypedefDecl 0x7fe618026c00 <line:7:1, col:22> col:22 invalid B 'int'
+  `-BuiltinType 0x7fe617818bc0 'int'

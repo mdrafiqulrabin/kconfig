@@ -1,0 +1,120 @@
+c_files/pr60454.c:18:27: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__ ((noinline, noclone)) uint32_t
+                          ^
+1 warning generated.
+TranslationUnitDecl 0x7fdf150264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdf15026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdf15026740 '__int128'
+|-TypedefDecl 0x7fdf15026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdf15026760 'unsigned __int128'
+|-TypedefDecl 0x7fdf15026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdf15026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdf15026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdf15026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdf15026dc0 'char *'
+|   `-BuiltinType 0x7fdf15026560 'char'
+|-TypedefDecl 0x7fdf150270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdf15027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdf15026ee0 'struct __va_list_tag'
+|     `-Record 0x7fdf15026e58 '__va_list_tag'
+|-TypedefDecl 0x7fdf15027138 <c_files/pr60454.c:2:1, col:25> col:25 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7fdf15026660 'unsigned int'
+|-FunctionDecl 0x7fdf15827900 <line:18:1, line:22:1> line:19:1 used fake_swap32 'uint32_t (uint32_t)'
+| |-ParmVarDecl 0x7fdf15827800 <col:14, col:23> col:23 used in 'uint32_t':'unsigned int'
+| |-CompoundStmt 0x7fdf15828450 <line:20:1, line:22:1>
+| | `-ReturnStmt 0x7fdf15828438 <line:21:3, line:12:58>
+| |   `-ParenExpr 0x7fdf15828418 <line:7:32, line:12:58> 'uint32_t':'unsigned int'
+| |     `-CStyleCastExpr 0x7fdf158283f0 <line:7:33, line:12:57> 'uint32_t':'unsigned int' <NoOp>
+| |       `-ParenExpr 0x7fdf158283d0 <line:7:43, line:12:57> 'unsigned int'
+| |         `-BinaryOperator 0x7fdf15828368 <line:8:9, line:12:56> 'unsigned int' '|'
+| |           |-BinaryOperator 0x7fdf15828170 <line:8:9, line:11:56> 'unsigned int' '|'
+| |           | |-BinaryOperator 0x7fdf15827fc0 <line:8:9, line:10:56> 'unsigned int' '|'
+| |           | | |-BinaryOperator 0x7fdf15827dc8 <line:8:9, line:9:56> 'unsigned int' '|'
+| |           | | | |-ParenExpr 0x7fdf15827bd8 <line:8:9, col:56> 'unsigned int'
+| |           | | | | `-BinaryOperator 0x7fdf15827bb0 <col:10, col:54> 'unsigned int' '<<'
+| |           | | | |   |-ParenExpr 0x7fdf15827b70 <col:10, col:49> 'unsigned int'
+| |           | | | |   | `-BinaryOperator 0x7fdf15827b48 <col:11, col:37> 'unsigned int' '&'
+| |           | | | |   |   |-CStyleCastExpr 0x7fdf15827ac8 <col:11, col:23> 'uint32_t':'unsigned int' <NoOp>
+| |           | | | |   |   | `-ImplicitCastExpr 0x7fdf15827ab0 <col:21, col:23> 'uint32_t':'unsigned int' <LValueToRValue>
+| |           | | | |   |   |   `-ParenExpr 0x7fdf15827a90 <col:21, col:23> 'uint32_t':'unsigned int' lvalue
+| |           | | | |   |   |     `-DeclRefExpr 0x7fdf15827a28 <line:21:31> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fdf15827800 'in' 'uint32_t':'unsigned int'
+| |           | | | |   |   `-CStyleCastExpr 0x7fdf15827b20 <line:8:27, col:37> 'uint32_t':'unsigned int' <IntegralCast>
+| |           | | | |   |     `-IntegerLiteral 0x7fdf15827af0 <col:37> 'unsigned long' 255
+| |           | | | |   `-IntegerLiteral 0x7fdf15827b90 <col:54> 'int' 24
+| |           | | | `-ParenExpr 0x7fdf15827da8 <line:9:9, col:56> 'unsigned int'
+| |           | | |   `-BinaryOperator 0x7fdf15827d80 <col:10, col:55> 'unsigned int' '<<'
+| |           | | |     |-ParenExpr 0x7fdf15827d40 <col:10, col:49> 'unsigned int'
+| |           | | |     | `-BinaryOperator 0x7fdf15827d18 <col:11, col:37> 'unsigned int' '&'
+| |           | | |     |   |-CStyleCastExpr 0x7fdf15827c98 <col:11, col:23> 'uint32_t':'unsigned int' <NoOp>
+| |           | | |     |   | `-ImplicitCastExpr 0x7fdf15827c80 <col:21, col:23> 'uint32_t':'unsigned int' <LValueToRValue>
+| |           | | |     |   |   `-ParenExpr 0x7fdf15827c60 <col:21, col:23> 'uint32_t':'unsigned int' lvalue
+| |           | | |     |   |     `-DeclRefExpr 0x7fdf15827bf8 <line:21:31> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fdf15827800 'in' 'uint32_t':'unsigned int'
+| |           | | |     |   `-CStyleCastExpr 0x7fdf15827cf0 <line:9:27, col:37> 'uint32_t':'unsigned int' <IntegralCast>
+| |           | | |     |     `-IntegerLiteral 0x7fdf15827cc0 <col:37> 'unsigned long' 65280
+| |           | | |     `-IntegerLiteral 0x7fdf15827d60 <col:55> 'int' 8
+| |           | | `-ParenExpr 0x7fdf15827fa0 <line:10:9, col:56> 'unsigned int'
+| |           | |   `-BinaryOperator 0x7fdf15827f78 <col:10, col:55> 'unsigned int' '<<'
+| |           | |     |-ParenExpr 0x7fdf15827f38 <col:10, col:49> 'unsigned int'
+| |           | |     | `-BinaryOperator 0x7fdf15827f10 <col:11, col:37> 'unsigned int' '&'
+| |           | |     |   |-CStyleCastExpr 0x7fdf15827e90 <col:11, col:23> 'uint32_t':'unsigned int' <NoOp>
+| |           | |     |   | `-ImplicitCastExpr 0x7fdf15827e78 <col:21, col:23> 'uint32_t':'unsigned int' <LValueToRValue>
+| |           | |     |   |   `-ParenExpr 0x7fdf15827e58 <col:21, col:23> 'uint32_t':'unsigned int' lvalue
+| |           | |     |   |     `-DeclRefExpr 0x7fdf15827df0 <line:21:31> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fdf15827800 'in' 'uint32_t':'unsigned int'
+| |           | |     |   `-CStyleCastExpr 0x7fdf15827ee8 <line:10:27, col:37> 'uint32_t':'unsigned int' <IntegralCast>
+| |           | |     |     `-IntegerLiteral 0x7fdf15827eb8 <col:37> 'unsigned long' 255
+| |           | |     `-IntegerLiteral 0x7fdf15827f58 <col:55> 'int' 8
+| |           | `-ParenExpr 0x7fdf15828150 <line:11:9, col:56> 'unsigned int'
+| |           |   `-ParenExpr 0x7fdf15828130 <col:10, col:49> 'unsigned int'
+| |           |     `-BinaryOperator 0x7fdf15828108 <col:11, col:37> 'unsigned int' '&'
+| |           |       |-CStyleCastExpr 0x7fdf15828088 <col:11, col:23> 'uint32_t':'unsigned int' <NoOp>
+| |           |       | `-ImplicitCastExpr 0x7fdf15828070 <col:21, col:23> 'uint32_t':'unsigned int' <LValueToRValue>
+| |           |       |   `-ParenExpr 0x7fdf15828050 <col:21, col:23> 'uint32_t':'unsigned int' lvalue
+| |           |       |     `-DeclRefExpr 0x7fdf15827fe8 <line:21:31> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fdf15827800 'in' 'uint32_t':'unsigned int'
+| |           |       `-CStyleCastExpr 0x7fdf158280e0 <line:11:27, col:37> 'uint32_t':'unsigned int' <IntegralCast>
+| |           |         `-IntegerLiteral 0x7fdf158280b0 <col:37> 'unsigned long' 65280
+| |           `-ParenExpr 0x7fdf15828348 <line:12:9, col:56> 'unsigned int'
+| |             `-BinaryOperator 0x7fdf15828320 <col:10, col:54> 'unsigned int' '>>'
+| |               |-ParenExpr 0x7fdf158282e0 <col:10, col:49> 'unsigned int'
+| |               | `-BinaryOperator 0x7fdf158282b8 <col:11, col:37> 'unsigned int' '&'
+| |               |   |-CStyleCastExpr 0x7fdf15828238 <col:11, col:23> 'uint32_t':'unsigned int' <NoOp>
+| |               |   | `-ImplicitCastExpr 0x7fdf15828220 <col:21, col:23> 'uint32_t':'unsigned int' <LValueToRValue>
+| |               |   |   `-ParenExpr 0x7fdf15828200 <col:21, col:23> 'uint32_t':'unsigned int' lvalue
+| |               |   |     `-DeclRefExpr 0x7fdf15828198 <line:21:31> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fdf15827800 'in' 'uint32_t':'unsigned int'
+| |               |   `-CStyleCastExpr 0x7fdf15828290 <line:12:27, col:37> 'uint32_t':'unsigned int' <IntegralCast>
+| |               |     `-IntegerLiteral 0x7fdf15828260 <col:37> 'unsigned long' 4278190080
+| |               `-IntegerLiteral 0x7fdf15828300 <col:54> 'int' 24
+| `-NoInlineAttr 0x7fdf158279a0 <line:18:17>
+|-FunctionDecl 0x7fdf15828538 <line:24:1, line:31:1> line:24:5 main 'int (void)'
+| `-CompoundStmt 0x7fdf15829ad8 <line:25:1, line:31:1>
+|   |-IfStmt 0x7fdf15828720 <line:26:3, line:27:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fdf158286c0 <line:26:7, col:43> 'int' '!='
+|   | | |-BinaryOperator 0x7fdf15828660 <col:7, <built-in>:30:22> 'unsigned long' '*'
+|   | | | |-UnaryExprOrTypeTraitExpr 0x7fdf15828608 <c_files/pr60454.c:26:7, col:23> 'unsigned long' sizeof 'uint32_t':'unsigned int'
+|   | | | `-ImplicitCastExpr 0x7fdf15828648 <<built-in>:30:22> 'unsigned long' <IntegralCast>
+|   | | |   `-IntegerLiteral 0x7fdf15828628 <col:22> 'int' 8
+|   | | `-ImplicitCastExpr 0x7fdf158286a8 <c_files/pr60454.c:26:43> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fdf15828688 <col:43> 'int' 32
+|   | |-ReturnStmt 0x7fdf15828708 <line:27:5, col:12>
+|   | | `-IntegerLiteral 0x7fdf158286e8 <col:12> 'int' 0
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fdf15829a68 <line:28:3, line:29:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fdf15829898 <line:28:7, col:37> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fdf15829880 <col:7, col:32> 'unsigned long' <IntegralCast>
+|   | | | `-CallExpr 0x7fdf15829818 <col:7, col:32> 'uint32_t':'unsigned int'
+|   | | |   |-ImplicitCastExpr 0x7fdf15829800 <col:7> 'uint32_t (*)(uint32_t)' <FunctionToPointerDecay>
+|   | | |   | `-DeclRefExpr 0x7fdf15828758 <col:7> 'uint32_t (uint32_t)' Function 0x7fdf15827900 'fake_swap32' 'uint32_t (uint32_t)'
+|   | | |   `-ImplicitCastExpr 0x7fdf15829848 <col:20> 'uint32_t':'unsigned int' <IntegralCast>
+|   | | |     `-IntegerLiteral 0x7fdf15828780 <col:20> 'unsigned long' 305419896
+|   | | `-IntegerLiteral 0x7fdf15829860 <col:37> 'unsigned long' 2018934290
+|   | |-CallExpr 0x7fdf15829a40 <line:29:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fdf15829a28 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fdf158299d0 <col:5> '<builtin fn type>' Function 0x7fdf158298f0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fdf15829ac0 <line:30:3, col:10>
+|     `-IntegerLiteral 0x7fdf15829aa0 <col:10> 'int' 0
+`-FunctionDecl 0x7fdf158298f0 <line:29:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fdf15829988 <col:5> Implicit

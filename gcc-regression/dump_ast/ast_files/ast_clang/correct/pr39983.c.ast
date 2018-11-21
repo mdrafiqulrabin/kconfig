@@ -1,0 +1,52 @@
+TranslationUnitDecl 0x7fc6be8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc6be826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc6be826740 '__int128'
+|-TypedefDecl 0x7fc6be826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc6be826760 'unsigned __int128'
+|-TypedefDecl 0x7fc6be826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc6be826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc6be826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc6be826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc6be826dc0 'char *'
+|   `-BuiltinType 0x7fc6be826560 'char'
+|-TypedefDecl 0x7fc6be8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc6be827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc6be826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc6be826e58 '__va_list_tag'
+|-RecordDecl 0x7fc6be827120 <c_files/pr39983.c:1:9, line:3:1> line:1:9 struct definition
+| `-FieldDecl 0x7fc6bf025a18 <line:2:5, col:10> col:10 referenced p 'int *'
+|-TypedefDecl 0x7fc6bf025b10 <line:1:1, line:3:4> col:4 referenced A 'struct (anonymous struct at c_files/pr39983.c:1:9) *'
+| `-PointerType 0x7fc6bf025ac0 'struct (anonymous struct at c_files/pr39983.c:1:9) *'
+|   `-ElaboratedType 0x7fc6bf025a60 'struct (anonymous struct at c_files/pr39983.c:1:9)' sugar
+|     `-RecordType 0x7fc6be8271b0 'struct (anonymous at c_files/pr39983.c:1:9)'
+|       `-Record 0x7fc6be827120 ''
+|-VarDecl 0x7fc6bf025c40 <line:5:1, col:21> col:18 used a 'const int [1]' extern
+|-VarDecl 0x7fc6bf025d28 <line:6:1, col:21> col:18 used b 'const int [1]' extern
+`-FunctionDecl 0x7fc6bf025dd8 <line:8:1, line:16:1> line:8:6 foo 'void ()'
+  `-CompoundStmt 0x7fc6bf0264d8 <line:9:1, line:16:1>
+    |-DeclStmt 0x7fc6bf025f00 <line:10:3, col:6>
+    | `-VarDecl 0x7fc6bf025ea0 <col:3, col:5> col:5 used x 'A':'struct (anonymous struct at c_files/pr39983.c:1:9) *'
+    |-DeclStmt 0x7fc6bf025f88 <line:11:3, col:6>
+    | `-VarDecl 0x7fc6bf025f28 <col:3, col:5> col:5 used y 'A':'struct (anonymous struct at c_files/pr39983.c:1:9) *'
+    |-DeclStmt 0x7fc6bf0261c8 <line:12:3, col:39>
+    | `-VarDecl 0x7fc6bf026020 <col:3, col:38> col:28 used c 'const int *const [1]' static cinit
+    |   `-InitListExpr 0x7fc6bf0260f0 <col:34, col:38> 'const int *const [1]'
+    |     `-ImplicitCastExpr 0x7fc6bf026130 <col:36> 'const int *' <ArrayToPointerDecay>
+    |       `-DeclRefExpr 0x7fc6bf026080 <col:36> 'const int [1]' lvalue Var 0x7fc6bf025d28 'b' 'const int [1]'
+    |-BinaryOperator 0x7fc6bf026390 <line:14:3, col:19> 'int *' '='
+    | |-MemberExpr 0x7fc6bf026220 <col:3, col:6> 'int *' lvalue ->p 0x7fc6bf025a18
+    | | `-ImplicitCastExpr 0x7fc6bf026208 <col:3> 'A':'struct (anonymous struct at c_files/pr39983.c:1:9) *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fc6bf0261e0 <col:3> 'A':'struct (anonymous struct at c_files/pr39983.c:1:9) *' lvalue Var 0x7fc6bf025ea0 'x' 'A':'struct (anonymous struct at c_files/pr39983.c:1:9) *'
+    | `-CStyleCastExpr 0x7fc6bf026368 <col:10, col:19> 'int *' <BitCast>
+    |   `-ImplicitCastExpr 0x7fc6bf026320 <col:16, col:19> 'const int *' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7fc6bf0262e0 <col:16, col:19> 'const int *const' lvalue
+    |       |-ImplicitCastExpr 0x7fc6bf0262c8 <col:16> 'const int *const *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7fc6bf026258 <col:16> 'const int *const [1]' lvalue Var 0x7fc6bf026020 'c' 'const int *const [1]'
+    |       `-IntegerLiteral 0x7fc6bf026280 <col:18> 'int' 0
+    `-BinaryOperator 0x7fc6bf0264b0 <line:15:3, col:16> 'int *' '='
+      |-MemberExpr 0x7fc6bf0263f8 <col:3, col:6> 'int *' lvalue ->p 0x7fc6bf025a18
+      | `-ImplicitCastExpr 0x7fc6bf0263e0 <col:3> 'A':'struct (anonymous struct at c_files/pr39983.c:1:9) *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc6bf0263b8 <col:3> 'A':'struct (anonymous struct at c_files/pr39983.c:1:9) *' lvalue Var 0x7fc6bf025f28 'y' 'A':'struct (anonymous struct at c_files/pr39983.c:1:9) *'
+      `-CStyleCastExpr 0x7fc6bf026488 <col:10, col:16> 'int *' <BitCast>
+        `-ImplicitCastExpr 0x7fc6bf026470 <col:16> 'const int *' <ArrayToPointerDecay>
+          `-DeclRefExpr 0x7fc6bf026430 <col:16> 'const int [1]' lvalue Var 0x7fc6bf025c40 'a' 'const int [1]'

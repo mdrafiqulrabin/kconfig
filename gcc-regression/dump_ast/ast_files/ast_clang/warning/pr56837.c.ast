@@ -1,0 +1,84 @@
+c_files/pr56837.c:4:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone)) void
+                         ^
+1 warning generated.
+TranslationUnitDecl 0x7f9c898264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9c89826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9c89826740 '__int128'
+|-TypedefDecl 0x7f9c89826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9c89826760 'unsigned __int128'
+|-TypedefDecl 0x7f9c89826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9c89826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9c89826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9c89826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9c89826dc0 'char *'
+|   `-BuiltinType 0x7f9c89826560 'char'
+|-TypedefDecl 0x7f9c898270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9c89827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9c89826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9c89826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9c8a025a30 <c_files/pr56837.c:1:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9c8a025ac8 prev 0x7f9c8a025a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7f9c8a025c08 <line:2:1, col:20> col:14 used a '_Complex int [1024]'
+|-FunctionDecl 0x7f9c8a025d38 <line:4:1, line:10:1> line:5:1 used foo 'void (void)'
+| |-CompoundStmt 0x7f9c8a026178 <line:6:1, line:10:1>
+| | |-DeclStmt 0x7f9c8a025e90 <line:7:3, col:8>
+| | | `-VarDecl 0x7f9c8a025e30 <col:3, col:7> col:7 used i 'int'
+| | `-ForStmt 0x7f9c8a026140 <line:8:3, line:9:13>
+| |   |-BinaryOperator 0x7f9c8a025ef0 <line:8:8, col:12> 'int' '='
+| |   | |-DeclRefExpr 0x7f9c8a025ea8 <col:8> 'int' lvalue Var 0x7f9c8a025e30 'i' 'int'
+| |   | `-IntegerLiteral 0x7f9c8a025ed0 <col:12> 'int' 0
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7f9c8a025f78 <col:15, col:19> 'int' '<'
+| |   | |-ImplicitCastExpr 0x7f9c8a025f60 <col:15> 'int' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7f9c8a025f18 <col:15> 'int' lvalue Var 0x7f9c8a025e30 'i' 'int'
+| |   | `-IntegerLiteral 0x7f9c8a025f40 <col:19> 'int' 1024
+| |   |-UnaryOperator 0x7f9c8a025fc8 <col:25, col:26> 'int' postfix '++'
+| |   | `-DeclRefExpr 0x7f9c8a025fa0 <col:25> 'int' lvalue Var 0x7f9c8a025e30 'i' 'int'
+| |   `-BinaryOperator 0x7f9c8a026118 <line:9:5, col:13> '_Complex int' '='
+| |     |-ArraySubscriptExpr 0x7f9c8a026098 <col:5, col:8> '_Complex int' lvalue
+| |     | |-ImplicitCastExpr 0x7f9c8a026068 <col:5> '_Complex int *' <ArrayToPointerDecay>
+| |     | | `-DeclRefExpr 0x7f9c8a025fe8 <col:5> '_Complex int [1024]' lvalue Var 0x7f9c8a025c08 'a' '_Complex int [1024]'
+| |     | `-ImplicitCastExpr 0x7f9c8a026080 <col:7> 'int' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7f9c8a026010 <col:7> 'int' lvalue Var 0x7f9c8a025e30 'i' 'int'
+| |     `-ImplicitCastExpr 0x7f9c8a026100 <col:12, col:13> '_Complex int' <IntegralRealToComplex>
+| |       `-UnaryOperator 0x7f9c8a0260e0 <col:12, col:13> 'int' prefix '-'
+| |         `-IntegerLiteral 0x7f9c8a0260c0 <col:13> 'int' 1
+| `-NoInlineAttr 0x7f9c8a025dd0 <line:4:16>
+`-FunctionDecl 0x7f9c8a0261f0 <line:12:1, line:21:1> line:13:1 main 'int ()'
+  `-CompoundStmt 0x7f9c8a026760 <line:14:1, line:21:1>
+    |-DeclStmt 0x7f9c8a026300 <line:15:3, col:8>
+    | `-VarDecl 0x7f9c8a0262a0 <col:3, col:7> col:7 used i 'int'
+    |-CallExpr 0x7f9c8a026380 <line:16:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7f9c8a026368 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f9c8a026318 <col:3> 'void (void)' Function 0x7f9c8a025d38 'foo' 'void (void)'
+    |-ForStmt 0x7f9c8a0266f0 <line:17:3, line:19:14>
+    | |-BinaryOperator 0x7f9c8a0263f0 <line:17:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7f9c8a0263a8 <col:8> 'int' lvalue Var 0x7f9c8a0262a0 'i' 'int'
+    | | `-IntegerLiteral 0x7f9c8a0263d0 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9c8a026478 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f9c8a026460 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f9c8a026418 <col:15> 'int' lvalue Var 0x7f9c8a0262a0 'i' 'int'
+    | | `-IntegerLiteral 0x7f9c8a026440 <col:19> 'int' 1024
+    | |-UnaryOperator 0x7f9c8a0264c8 <col:25, col:26> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7f9c8a0264a0 <col:25> 'int' lvalue Var 0x7f9c8a0262a0 'i' 'int'
+    | `-IfStmt 0x7f9c8a0266b8 <line:18:5, line:19:14>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7f9c8a026600 <line:18:9, col:18> 'int' '!='
+    |   | |-ImplicitCastExpr 0x7f9c8a0265d0 <col:9, col:12> '_Complex int' <LValueToRValue>
+    |   | | `-ArraySubscriptExpr 0x7f9c8a026568 <col:9, col:12> '_Complex int' lvalue
+    |   | |   |-ImplicitCastExpr 0x7f9c8a026538 <col:9> '_Complex int *' <ArrayToPointerDecay>
+    |   | |   | `-DeclRefExpr 0x7f9c8a0264e8 <col:9> '_Complex int [1024]' lvalue Var 0x7f9c8a025c08 'a' '_Complex int [1024]'
+    |   | |   `-ImplicitCastExpr 0x7f9c8a026550 <col:11> 'int' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7f9c8a026510 <col:11> 'int' lvalue Var 0x7f9c8a0262a0 'i' 'int'
+    |   | `-ImplicitCastExpr 0x7f9c8a0265e8 <col:17, col:18> '_Complex int' <IntegralRealToComplex>
+    |   |   `-UnaryOperator 0x7f9c8a0265b0 <col:17, col:18> 'int' prefix '-'
+    |   |     `-IntegerLiteral 0x7f9c8a026590 <col:18> 'int' 1
+    |   |-CallExpr 0x7f9c8a026690 <line:19:7, col:14> 'void'
+    |   | `-ImplicitCastExpr 0x7f9c8a026678 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |   |   `-DeclRefExpr 0x7f9c8a026628 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7f9c8a025ac8 'abort' 'void (void) __attribute__((noreturn))'
+    |   `-<<<NULL>>>
+    `-ReturnStmt 0x7f9c8a026748 <line:20:3, col:10>
+      `-IntegerLiteral 0x7f9c8a026728 <col:10> 'int' 0

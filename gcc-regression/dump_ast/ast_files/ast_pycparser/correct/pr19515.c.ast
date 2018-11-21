@@ -1,0 +1,45 @@
+FileAST: 
+  Typedef: aun, [], ['typedef']
+    TypeDecl: aun, []
+      Union: None
+        Decl: a2, [], [], []
+          ArrayDecl: []
+            TypeDecl: a2, []
+              IdentifierType: ['char']
+            Constant: int, 8
+  Decl: abort, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['aun']
+        InitList: 
+          InitList: 
+            Constant: int, 0
+      If: 
+        BinaryOp: !=
+          ArrayRef: 
+            StructRef: .
+              ID: a
+              ID: a2
+            Constant: int, 2
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

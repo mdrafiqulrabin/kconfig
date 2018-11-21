@@ -1,0 +1,202 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: s1, [], [], []
+        PtrDecl: []
+          TypeDecl: s1, []
+            IdentifierType: ['char']
+      Decl: s2, [], [], []
+        TypeDecl: s2, []
+          IdentifierType: ['long']
+  Decl: None, [], [], []
+    Struct: T
+      Decl: t1, [], [], []
+        TypeDecl: t1, []
+          IdentifierType: ['int']
+      Decl: t2, [], [], []
+        TypeDecl: t2, []
+          IdentifierType: ['long']
+      Decl: t3, [], [], []
+        TypeDecl: t3, []
+          IdentifierType: ['long']
+  Decl: fn2, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fn2, []
+        IdentifierType: ['int']
+  Decl: fn3, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            Struct: T
+      TypeDecl: fn3, []
+        IdentifierType: ['int']
+  Decl: fn4, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: fn4, []
+        Struct: T
+  Decl: fn5, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['long']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: fn5, []
+        IdentifierType: ['int']
+  Decl: fn6, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fn6, []
+        IdentifierType: ['void']
+  Decl: fn7, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: fn7, []
+        IdentifierType: ['void']
+  Decl: fn10, [], [], []
+    FuncDecl: 
+      PtrDecl: []
+        TypeDecl: fn10, []
+          Struct: S
+  Decl: p, [], ['static'], []
+    TypeDecl: p, []
+      IdentifierType: ['int']
+  Decl: q, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: q, []
+        IdentifierType: ['void']
+  Decl: r, [], ['extern'], []
+    TypeDecl: r, []
+      Struct: T
+  FuncDef: 
+    Decl: fn8, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              Struct: T
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: fn8, []
+          Struct: T
+    Compound: 
+      Decl: u, [], [], []
+        PtrDecl: []
+          TypeDecl: u, []
+            Struct: S
+        FuncCall: 
+          ID: fn10
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: fn5
+          ExprList: 
+            UnaryOp: &
+              StructRef: ->
+                ID: u
+                ID: s1
+            UnaryOp: &
+              StructRef: ->
+                ID: u
+                ID: s2
+            Constant: int, 0
+      While: 
+        Constant: int, 1
+        Compound: 
+          If: 
+            ID: p
+            FuncCall: 
+              ID: fn6
+          If: 
+            FuncCall: 
+              ID: fn3
+              ExprList: 
+                ID: x
+            Return: 
+              FuncCall: 
+                ID: fn4
+          If: 
+            BinaryOp: &
+              ID: y
+              Constant: int, 1
+            Return: 
+              ID: r
+          Assignment: =
+            ID: v
+            FuncCall: 
+              ID: fn5
+              ExprList: 
+                UnaryOp: &
+                  StructRef: ->
+                    ID: u
+                    ID: s1
+                UnaryOp: &
+                  StructRef: ->
+                    ID: u
+                    ID: s2
+                Constant: int, 1
+  FuncDef: 
+    Decl: fn9, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              Struct: T
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: fn9, []
+          Struct: T
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          Struct: T
+        FuncCall: 
+          ID: fn8
+          ExprList: 
+            ID: x
+            ID: y
+      If: 
+        FuncCall: 
+          ID: fn2
+        FuncCall: 
+          ID: fn7
+          ExprList: 
+            ID: q
+      Return: 
+        ID: t
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: fn1, []
+            IdentifierType: ['void']
+    Compound: 
+      Return: 
+        ID: fn9

@@ -1,0 +1,50 @@
+c_files/pr36141.c:2:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+ffi_prep_closure_loc (void)
+^
+c_files/pr36141.c:17:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+TranslationUnitDecl 0x7fb7780264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb778026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb778026740 '__int128'
+|-TypedefDecl 0x7fb778026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb778026760 'unsigned __int128'
+|-TypedefDecl 0x7fb778026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb778026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb778026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb778026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb778026dc0 'char *'
+|   `-BuiltinType 0x7fb778026560 'char'
+|-TypedefDecl 0x7fb7780270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb778027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb778026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb778026e58 '__va_list_tag'
+|-FunctionDecl 0x7fb778825a00 <c_files/pr36141.c:1:1, col:35> col:13 used ffi_closure_unix 'void (void)' extern
+`-FunctionDecl 0x7fb778825ba8 <line:2:1, line:17:1> line:2:1 ffi_prep_closure_loc 'int (void)'
+  `-CompoundStmt 0x7fb7788263c0 <line:3:1, line:17:1>
+    |-DeclStmt 0x7fb778825db0 <line:4:3, line:8:4>
+    | `-RecordDecl 0x7fb778825c40 <line:4:3, line:8:3> line:4:10 struct ia64_fd definition
+    |   |-FieldDecl 0x7fb778825d08 <line:6:5, col:24> col:24 referenced code_pointer 'unsigned long long'
+    |   `-FieldDecl 0x7fb778825d68 <line:7:5, col:24> col:24 gp 'unsigned long long'
+    |-DeclStmt 0x7fb778825ed0 <line:9:3, line:12:4>
+    | `-RecordDecl 0x7fb778825dc8 <line:9:3, line:12:3> line:9:10 struct ffi_ia64_trampoline_struct definition
+    |   `-FieldDecl 0x7fb778825e88 <line:11:5, col:24> col:24 referenced code_pointer 'unsigned long long'
+    |-DeclStmt 0x7fb778826000 <line:13:3, col:43>
+    | `-VarDecl 0x7fb778825fa0 <col:3, col:38> col:38 used tramp 'struct ffi_ia64_trampoline_struct *'
+    |-DeclStmt 0x7fb778826130 <line:14:3, col:21>
+    | `-VarDecl 0x7fb7788260d0 <col:3, col:19> col:19 used fd 'struct ia64_fd *'
+    |-BinaryOperator 0x7fb778826268 <line:15:3, col:34> 'struct ia64_fd *' '='
+    | |-DeclRefExpr 0x7fb778826148 <col:3> 'struct ia64_fd *' lvalue Var 0x7fb7788260d0 'fd' 'struct ia64_fd *'
+    | `-CStyleCastExpr 0x7fb778826240 <col:8, col:34> 'struct ia64_fd *' <BitCast>
+    |   `-CStyleCastExpr 0x7fb7788261f0 <col:26, col:34> 'void *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fb7788261d8 <col:34> 'void (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fb778826170 <col:34> 'void (void)' Function 0x7fb778825a00 'ffi_closure_unix' 'void (void)'
+    `-BinaryOperator 0x7fb778826398 <line:16:3, col:29> 'unsigned long long' '='
+      |-MemberExpr 0x7fb7788262d0 <col:3, col:10> 'unsigned long long' lvalue ->code_pointer 0x7fb778825e88
+      | `-ImplicitCastExpr 0x7fb7788262b8 <col:3> 'struct ffi_ia64_trampoline_struct *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb778826290 <col:3> 'struct ffi_ia64_trampoline_struct *' lvalue Var 0x7fb778825fa0 'tramp' 'struct ffi_ia64_trampoline_struct *'
+      `-ImplicitCastExpr 0x7fb778826380 <col:25, col:29> 'unsigned long long' <LValueToRValue>
+        `-MemberExpr 0x7fb778826348 <col:25, col:29> 'unsigned long long' lvalue ->code_pointer 0x7fb778825d08
+          `-ImplicitCastExpr 0x7fb778826330 <col:25> 'struct ia64_fd *' <LValueToRValue>
+            `-DeclRefExpr 0x7fb778826308 <col:25> 'struct ia64_fd *' lvalue Var 0x7fb7788260d0 'fd' 'struct ia64_fd *'

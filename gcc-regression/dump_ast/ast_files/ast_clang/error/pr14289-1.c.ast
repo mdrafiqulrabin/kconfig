@@ -1,0 +1,29 @@
+c_files/pr14289-1.c:5:23: error: register 'ebx' unsuitable for global register variables on this target
+register int a[2] asm("ebx");
+                      ^
+c_files/pr14289-1.c:5:1: error: bad type for named register variable
+register int a[2] asm("ebx");
+^
+2 errors generated.
+TranslationUnitDecl 0x7fccd58264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fccd5826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fccd5826740 '__int128'
+|-TypedefDecl 0x7fccd5826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fccd5826760 'unsigned __int128'
+|-TypedefDecl 0x7fccd5826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fccd5826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fccd5826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fccd5826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fccd5826dc0 'char *'
+|   `-BuiltinType 0x7fccd5826560 'char'
+|-TypedefDecl 0x7fccd58270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fccd5827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fccd5826ee0 'struct __va_list_tag'
+|     `-Record 0x7fccd5826e58 '__va_list_tag'
+|-VarDecl 0x7fccd5877428 <c_files/pr14289-1.c:5:1, col:17> col:14 invalid a 'int [2]' register
+| `-AsmLabelAttr 0x7fccd5877488 <col:23> "ebx"
+`-FunctionDecl 0x7fccd58775a0 <line:7:1, line:11:1> line:7:6 Nase 'void (void)'
+  `-CompoundStmt 0x7fccd5877770 <line:8:1, line:11:1>
+    `-DeclStmt 0x7fccd5877710 <line:9:3, col:10>
+      `-VarDecl 0x7fccd5877690 <col:3, col:9> col:7 used i 'int' cinit
+        `-IntegerLiteral 0x7fccd58776f0 <col:9> 'int' 6

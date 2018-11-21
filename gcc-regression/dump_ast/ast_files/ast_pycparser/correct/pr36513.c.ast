@@ -1,0 +1,62 @@
+FileAST: 
+  Decl: __rawmemchr, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: __s, ['const'], [], []
+          PtrDecl: []
+            TypeDecl: __s, ['const']
+              IdentifierType: ['void']
+        Decl: __c, [], [], []
+          TypeDecl: __c, []
+            IdentifierType: ['int']
+      PtrDecl: []
+        TypeDecl: __rawmemchr, []
+          IdentifierType: ['void']
+  FuncDef: 
+    Decl: main1, [], [], []
+      FuncDecl: 
+        TypeDecl: main1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: s, [], [], []
+        PtrDecl: []
+          TypeDecl: s, []
+            IdentifierType: ['char']
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['char']
+      FuncCall: 
+        ID: __extension__
+        ExprList: 
+          TernaryOp: 
+            BinaryOp: &&
+              BinaryOp: &&
+                FuncCall: 
+                  ID: __builtin_constant_p
+                  ExprList: 
+                    ID: t
+                UnaryOp: !
+                  FuncCall: 
+                    ID: __builtin_constant_p
+                    ExprList: 
+                      ID: s
+              BinaryOp: ==
+                ID: t
+                Constant: char, '\0'
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+              FuncCall: 
+                ID: __rawmemchr
+                ExprList: 
+                  ID: s
+                  ID: t
+            FuncCall: 
+              ID: __builtin_strchr
+              ExprList: 
+                ID: s
+                ID: t
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,48 @@
+c_files/pr82123.c:10:3: error: use of unknown builtin '__builtin_sprintf' [-Wimplicit-function-declaration]
+                __builtin_sprintf(name, "%02X", pin);
+                ^
+1 error generated.
+TranslationUnitDecl 0x7ff2dc018ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff2dc019420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff2dc019140 '__int128'
+|-TypedefDecl 0x7ff2dc019490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff2dc019160 'unsigned __int128'
+|-TypedefDecl 0x7ff2dc019768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff2dc019570 'struct __NSConstantString_tag'
+|   `-Record 0x7ff2dc0194e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff2dc019800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff2dc0197c0 'char *'
+|   `-BuiltinType 0x7ff2dc018f60 'char'
+|-TypedefDecl 0x7ff2dc019ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff2dc019a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff2dc0198e0 'struct __va_list_tag'
+|     `-Record 0x7ff2dc019858 '__va_list_tag'
+|-FunctionDecl 0x7ff2db833200 <c_files/pr82123.c:4:1, line:11:1> line:4:6 acpi_gpiochip_request_interrupt 'void (unsigned short)'
+| |-ParmVarDecl 0x7ff2dc019b38 <col:38, col:53> col:53 used s 'unsigned short'
+| `-CompoundStmt 0x7ff2db833840 <line:5:1, line:11:1>
+|   |-DeclStmt 0x7ff2db8333b8 <line:6:9, col:21>
+|   | `-VarDecl 0x7ff2db833358 <col:9, col:20> col:14 used name 'char [3]'
+|   |-DeclStmt 0x7ff2db8334a0 <line:7:2, col:22>
+|   | `-VarDecl 0x7ff2db8333e8 <col:2, col:21> col:15 used pin 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7ff2db833488 <col:21> 'unsigned int' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7ff2db833470 <col:21> 'unsigned short' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff2db833448 <col:21> 'unsigned short' lvalue ParmVar 0x7ff2dc019b38 's' 'unsigned short'
+|   `-IfStmt 0x7ff2db833808 <line:9:2, line:10:38>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ff2db833530 <line:9:6, col:13> 'int' '<='
+|     | |-ImplicitCastExpr 0x7ff2db833500 <col:6> 'unsigned int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7ff2db8334b8 <col:6> 'unsigned int' lvalue Var 0x7ff2db8333e8 'pin' 'unsigned int'
+|     | `-ImplicitCastExpr 0x7ff2db833518 <col:13> 'unsigned int' <IntegralCast>
+|     |   `-IntegerLiteral 0x7ff2db8334e0 <col:13> 'int' 255
+|     |-CallExpr 0x7ff2db833780 <line:10:3, col:38> 'int'
+|     | |-ImplicitCastExpr 0x7ff2db833768 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7ff2db833658 <col:3> 'int ()' Function 0x7ff2db8335c0 '__builtin_sprintf' 'int ()'
+|     | |-ImplicitCastExpr 0x7ff2db8337c0 <col:21> 'char *' <ArrayToPointerDecay>
+|     | | `-DeclRefExpr 0x7ff2db833680 <col:21> 'char [3]' lvalue Var 0x7ff2db833358 'name' 'char [3]'
+|     | |-ImplicitCastExpr 0x7ff2db8337d8 <col:27> 'char *' <ArrayToPointerDecay>
+|     | | `-StringLiteral 0x7ff2db8336e8 <col:27> 'char [5]' lvalue "%02X"
+|     | `-ImplicitCastExpr 0x7ff2db8337f0 <col:35> 'unsigned int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7ff2db833718 <col:35> 'unsigned int' lvalue Var 0x7ff2db8333e8 'pin' 'unsigned int'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7ff2db8335c0 <<invalid sloc>> col:3 implicit used __builtin_sprintf 'int ()'

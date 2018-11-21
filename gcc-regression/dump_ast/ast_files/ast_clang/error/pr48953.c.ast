@@ -1,0 +1,45 @@
+c_files/pr48953.c:9:9: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+    int i[n];
+        ^
+1 error generated.
+TranslationUnitDecl 0x7fccb18264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fccb1826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fccb1826740 '__int128'
+|-TypedefDecl 0x7fccb1826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fccb1826760 'unsigned __int128'
+|-TypedefDecl 0x7fccb1826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fccb1826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fccb1826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fccb1826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fccb1826dc0 'char *'
+|   `-BuiltinType 0x7fccb1826560 'char'
+|-TypedefDecl 0x7fccb18270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fccb1827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fccb1826ee0 'struct __va_list_tag'
+|     `-Record 0x7fccb1826e58 '__va_list_tag'
+|-FunctionDecl 0x7fccb2025ad8 <c_files/pr48953.c:5:1, line:13:1> line:5:19 used foo 'int (int, int)' static inline
+| |-ParmVarDecl 0x7fccb1827138 <col:24, col:28> col:28 used n 'int'
+| |-ParmVarDecl 0x7fccb2025a00 <col:31, col:35> col:35 used k 'int'
+| `-CompoundStmt 0x7fccb20260e8 <line:6:1, line:13:1>
+|   |-DeclStmt 0x7fccb2025f30 <line:7:3, line:11:9>
+|   | |-RecordDecl 0x7fccb2025bc0 <line:7:3, line:11:3> line:7:10 invalid struct S definition
+|   | | |-FieldDecl 0x7fccb2025d10 <line:9:5, col:12> col:9 invalid i 'int [n]'
+|   | | `-FieldDecl 0x7fccb2025d70 <line:10:5, col:9> col:9 referenced value 'int'
+|   | `-VarDecl 0x7fccb2025eb8 <line:7:3, line:11:8> col:5 used s 'struct S [2]'
+|   `-ReturnStmt 0x7fccb20260d0 <line:12:3, col:23>
+|     `-BinaryOperator 0x7fccb20260a8 <col:10, col:23> 'int' '='
+|       |-MemberExpr 0x7fccb2026050 <col:10, col:15> 'int' lvalue .value 0x7fccb2025d70
+|       | `-ArraySubscriptExpr 0x7fccb2026028 <col:10, col:13> 'struct S':'struct S' lvalue
+|       |   |-ImplicitCastExpr 0x7fccb2025ff8 <col:10> 'struct S *' <ArrayToPointerDecay>
+|       |   | `-DeclRefExpr 0x7fccb2025f48 <col:10> 'struct S [2]' lvalue Var 0x7fccb2025eb8 's' 'struct S [2]'
+|       |   `-ImplicitCastExpr 0x7fccb2026010 <col:12> 'int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fccb2025f70 <col:12> 'int' lvalue ParmVar 0x7fccb2025a00 'k' 'int'
+|       `-IntegerLiteral 0x7fccb2026088 <col:23> 'int' 0
+`-FunctionDecl 0x7fccb2026160 <line:15:1, line:18:1> line:15:5 main 'int ()'
+  `-CompoundStmt 0x7fccb20262f0 <line:16:1, line:18:1>
+    `-ReturnStmt 0x7fccb20262d8 <line:17:3, col:19>
+      `-CallExpr 0x7fccb20262a0 <col:10, col:19> 'int'
+        |-ImplicitCastExpr 0x7fccb2026288 <col:10> 'int (*)(int, int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fccb20261f8 <col:10> 'int (int, int)' Function 0x7fccb2025ad8 'foo' 'int (int, int)'
+        |-IntegerLiteral 0x7fccb2026220 <col:15> 'int' 2
+        `-IntegerLiteral 0x7fccb2026240 <col:18> 'int' 0

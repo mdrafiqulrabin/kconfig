@@ -1,0 +1,23 @@
+FileAST: 
+  Typedef: E, [], ['typedef']
+    TypeDecl: E, []
+      Enum: None
+        EnumeratorList: 
+          Enumerator: A
+            Constant: int, 1
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['E']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: |=
+        ID: c
+        ID: e

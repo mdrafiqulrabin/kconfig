@@ -1,0 +1,47 @@
+c_files/pr17319.c:12:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7fefd58264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fefd5826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fefd5826740 '__int128'
+|-TypedefDecl 0x7fefd5826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fefd5826760 'unsigned __int128'
+|-TypedefDecl 0x7fefd5826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fefd5826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fefd5826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fefd5826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fefd5826dc0 'char *'
+|   `-BuiltinType 0x7fefd5826560 'char'
+|-TypedefDecl 0x7fefd58270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fefd5827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fefd5826ee0 'struct __va_list_tag'
+|     `-Record 0x7fefd5826e58 '__va_list_tag'
+|-TypedefDecl 0x7fefd5827138 <c_files/pr17319.c:4:1, col:28> col:28 referenced HARD_REG_ELT_TYPE 'unsigned long long'
+| `-BuiltinType 0x7fefd58266a0 'unsigned long long'
+|-TypedefDecl 0x7fefd6025a98 <line:5:1, col:41> col:27 referenced HARD_REG_SET 'HARD_REG_ELT_TYPE [2]'
+| `-ConstantArrayType 0x7fefd6025a40 'HARD_REG_ELT_TYPE [2]' 2 
+|   `-TypedefType 0x7fefd5827190 'HARD_REG_ELT_TYPE' sugar
+|     |-Typedef 0x7fefd5827138 'HARD_REG_ELT_TYPE'
+|     `-BuiltinType 0x7fefd58266a0 'unsigned long long'
+|-VarDecl 0x7fefd6025b20 <line:6:1, col:21> col:21 used newpat_used_regs 'HARD_REG_SET':'HARD_REG_ELT_TYPE [2]' static
+`-FunctionDecl 0x7fefd6025c88 <line:7:1, line:12:1> line:7:5 try_combine 'int (void)'
+  `-CompoundStmt 0x7fefd6026010 <line:8:1, line:12:1>
+    |-DeclStmt 0x7fefd6025e28 <line:9:2, col:48>
+    | `-VarDecl 0x7fefd6025d88 <col:2, col:32> col:21 used scan_tp_ 'HARD_REG_ELT_TYPE *' cinit
+    |   `-ImplicitCastExpr 0x7fefd6025e10 <col:32> 'HARD_REG_ELT_TYPE *' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7fefd6025de8 <col:32> 'HARD_REG_SET':'HARD_REG_ELT_TYPE [2]' lvalue Var 0x7fefd6025b20 'newpat_used_regs' 'HARD_REG_SET':'HARD_REG_ELT_TYPE [2]'
+    |-BinaryOperator 0x7fefd6025f00 <line:10:2, col:16> 'HARD_REG_ELT_TYPE':'unsigned long long' '='
+    | |-ArraySubscriptExpr 0x7fefd6025ea0 <col:2, col:12> 'HARD_REG_ELT_TYPE':'unsigned long long' lvalue
+    | | |-ImplicitCastExpr 0x7fefd6025e88 <col:2> 'HARD_REG_ELT_TYPE *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fefd6025e40 <col:2> 'HARD_REG_ELT_TYPE *' lvalue Var 0x7fefd6025d88 'scan_tp_' 'HARD_REG_ELT_TYPE *'
+    | | `-IntegerLiteral 0x7fefd6025e68 <col:11> 'int' 0
+    | `-ImplicitCastExpr 0x7fefd6025ee8 <col:16> 'HARD_REG_ELT_TYPE':'unsigned long long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fefd6025ec8 <col:16> 'int' 0
+    `-BinaryOperator 0x7fefd6025fe8 <line:11:2, col:16> 'HARD_REG_ELT_TYPE':'unsigned long long' '='
+      |-ArraySubscriptExpr 0x7fefd6025f88 <col:2, col:12> 'HARD_REG_ELT_TYPE':'unsigned long long' lvalue
+      | |-ImplicitCastExpr 0x7fefd6025f70 <col:2> 'HARD_REG_ELT_TYPE *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fefd6025f28 <col:2> 'HARD_REG_ELT_TYPE *' lvalue Var 0x7fefd6025d88 'scan_tp_' 'HARD_REG_ELT_TYPE *'
+      | `-IntegerLiteral 0x7fefd6025f50 <col:11> 'int' 1
+      `-ImplicitCastExpr 0x7fefd6025fd0 <col:16> 'HARD_REG_ELT_TYPE':'unsigned long long' <IntegralCast>
+        `-IntegerLiteral 0x7fefd6025fb0 <col:16> 'int' 0

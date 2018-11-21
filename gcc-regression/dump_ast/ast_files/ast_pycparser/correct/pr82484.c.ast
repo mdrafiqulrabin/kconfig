@@ -1,0 +1,25 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: ptr, ['volatile'], [], []
+          PtrDecl: []
+            TypeDecl: ptr, ['volatile']
+              IdentifierType: ['int']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: a, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, ['volatile'], [], []
+            TypeDecl: b, ['volatile']
+              IdentifierType: ['int']
+        TypeDecl: a, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: b

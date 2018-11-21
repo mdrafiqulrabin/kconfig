@@ -1,0 +1,53 @@
+FileAST: 
+  Decl: var, [], [], []
+    TypeDecl: var, []
+      Enum: None
+        EnumeratorList: 
+          Enumerator: A
+            Constant: int, 1UL
+          Enumerator: B
+            UnaryOp: -
+              Constant: int, 1UL
+    ID: A
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: vla, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: vla, []
+              IdentifierType: ['char']
+            ID: var
+          Constant: int, 1
+      Assignment: =
+        ArrayRef: 
+          ArrayRef: 
+            ID: vla
+            Constant: int, 0
+          Constant: int, 0
+        Constant: int, 1
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ArrayRef: 
+              ArrayRef: 
+                ID: vla
+                Constant: int, 0
+              Constant: int, 0

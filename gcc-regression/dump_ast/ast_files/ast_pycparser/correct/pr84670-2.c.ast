@@ -1,0 +1,86 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: b
+      EnumeratorList: 
+        Enumerator: c
+        Enumerator: d
+  Decl: None, [], [], []
+    Struct: e
+      Decl: code, [], [], []
+        TypeDecl: code, []
+          Enum: b
+  Decl: None, [], [], []
+    Struct: f
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['unsigned']
+  Decl: h, [], [], []
+    TypeDecl: h, []
+      IdentifierType: ['int']
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: a
+      Decl: common, [], [], []
+        TypeDecl: common, []
+          Struct: e
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          Struct: f
+  FuncDef: 
+    Decl: k, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: k, []
+          Struct: a
+    Compound: 
+      Decl: l, [], [], []
+        PtrDecl: []
+          TypeDecl: l, []
+            Struct: a
+      DoWhile: 
+        BinaryOp: &&
+          ID: h
+          BinaryOp: ==
+            StructRef: .
+              StructRef: ->
+                ID: l
+                ID: common
+              ID: code
+            ID: c
+        If: 
+          BinaryOp: &&
+            BinaryOp: ==
+              StructRef: .
+                StructRef: ->
+                  ID: l
+                  ID: common
+                ID: code
+              ID: d
+            BinaryOp: *
+              StructRef: .
+                StructRef: ->
+                  ID: l
+                  ID: j
+                ID: g
+              Constant: int, 4
+          EmptyStatement: 
+          Assignment: =
+            ID: i
+            BinaryOp: |
+              StructRef: .
+                StructRef: ->
+                  ID: l
+                  ID: j
+                ID: g
+              BinaryOp: &&
+                StructRef: .
+                  StructRef: ->
+                    ID: l
+                    ID: common
+                  ID: code
+                ID: l

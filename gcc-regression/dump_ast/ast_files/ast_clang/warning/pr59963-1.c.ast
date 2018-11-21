@@ -1,0 +1,45 @@
+c_files/pr59963-1.c:11:3: warning: implicit declaration of function 'bar' is invalid in C99 [-Wimplicit-function-declaration]
+  bar (f); /* { dg-warning "8:implicit conversion" } */
+  ^
+1 warning generated.
+TranslationUnitDecl 0x7ff57a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff57a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff57a826740 '__int128'
+|-TypedefDecl 0x7ff57a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff57a826760 'unsigned __int128'
+|-TypedefDecl 0x7ff57a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff57a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff57a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff57a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff57a826dc0 'char *'
+|   `-BuiltinType 0x7ff57a826560 'char'
+|-TypedefDecl 0x7ff57a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff57a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff57a826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff57a826e58 '__va_list_tag'
+|-FunctionDecl 0x7ff57a827168 <c_files/pr59963-1.c:5:1, col:18> col:13 used baz 'void ()' extern
+|-FunctionDecl 0x7ff57b025b20 <line:6:1, col:26> col:13 used qux 'void (int, ...)' extern
+| `-ParmVarDecl 0x7ff57b025a58 <col:18> col:21 'int'
+|-FunctionDecl 0x7ff57b025ca0 <line:8:1, line:14:1> line:9:1 foo 'void (float)'
+| |-ParmVarDecl 0x7ff57b025bd8 <col:6, col:12> col:12 used f 'float'
+| `-CompoundStmt 0x7ff57b026128 <line:10:1, line:14:1>
+|   |-CallExpr 0x7ff57b025ec0 <line:11:3, col:9> 'int'
+|   | |-ImplicitCastExpr 0x7ff57b025ea8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ff57b025e28 <col:3> 'int ()' Function 0x7ff57b025d90 'bar' 'int ()'
+|   | `-ImplicitCastExpr 0x7ff57b025f08 <col:8> 'double' <FloatingCast>
+|   |   `-ImplicitCastExpr 0x7ff57b025ef0 <col:8> 'float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7ff57b025e50 <col:8> 'float' lvalue ParmVar 0x7ff57b025bd8 'f' 'float'
+|   |-CallExpr 0x7ff57b025fb0 <line:12:3, col:9> 'void'
+|   | |-ImplicitCastExpr 0x7ff57b025f98 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ff57b025f20 <col:3> 'void ()' Function 0x7ff57a827168 'baz' 'void ()'
+|   | `-ImplicitCastExpr 0x7ff57b025ff8 <col:8> 'double' <FloatingCast>
+|   |   `-ImplicitCastExpr 0x7ff57b025fe0 <col:8> 'float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7ff57b025f48 <col:8> 'float' lvalue ParmVar 0x7ff57b025bd8 'f' 'float'
+|   `-CallExpr 0x7ff57b0260c0 <line:13:3, col:13> 'void'
+|     |-ImplicitCastExpr 0x7ff57b0260a8 <col:3> 'void (*)(int, ...)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7ff57b026010 <col:3> 'void (int, ...)' Function 0x7ff57b025b20 'qux' 'void (int, ...)'
+|     |-IntegerLiteral 0x7ff57b026038 <col:8> 'int' 42
+|     `-ImplicitCastExpr 0x7ff57b026110 <col:12> 'double' <FloatingCast>
+|       `-ImplicitCastExpr 0x7ff57b0260f8 <col:12> 'float' <LValueToRValue>
+|         `-DeclRefExpr 0x7ff57b026058 <col:12> 'float' lvalue ParmVar 0x7ff57b025bd8 'f' 'float'
+`-FunctionDecl 0x7ff57b025d90 <<invalid sloc>> line:11:3 implicit used bar 'int ()'

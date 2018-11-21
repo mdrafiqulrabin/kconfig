@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fc7de0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc7de026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc7de026740 '__int128'
+|-TypedefDecl 0x7fc7de026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc7de026760 'unsigned __int128'
+|-TypedefDecl 0x7fc7de026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc7de026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc7de026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc7de026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc7de026dc0 'char *'
+|   `-BuiltinType 0x7fc7de026560 'char'
+|-TypedefDecl 0x7fc7de0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc7de027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc7de026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc7de026e58 '__va_list_tag'
+|-VarDecl 0x7fc7de0774c8 <c_files/proc_ptr_8.c:4:1, col:22> col:7 used funpointer 'int (*)(int)'
+|-FunctionDecl 0x7fc7de077610 <line:6:1, line:9:1> line:6:5 used f 'int (int)'
+| |-ParmVarDecl 0x7fc7de077580 <col:7, col:11> col:11 used t 'int'
+| `-CompoundStmt 0x7fc7de077750 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fc7de077738 <line:8:3, col:12>
+|     `-BinaryOperator 0x7fc7de077710 <col:10, col:12> 'int' '*'
+|       |-ImplicitCastExpr 0x7fc7de0776f8 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fc7de0776b0 <col:10> 'int' lvalue ParmVar 0x7fc7de077580 't' 'int'
+|       `-IntegerLiteral 0x7fc7de0776d8 <col:12> 'int' 3
+`-FunctionDecl 0x7fc7de0777b8 <line:11:1, line:14:1> line:11:6 init 'void ()'
+  `-CompoundStmt 0x7fc7de0778e0 <line:12:1, line:14:1>
+    `-BinaryOperator 0x7fc7de0778b8 <line:13:2, col:13> 'int (*)(int)' '='
+      |-DeclRefExpr 0x7fc7de077850 <col:2> 'int (*)(int)' lvalue Var 0x7fc7de0774c8 'funpointer' 'int (*)(int)'
+      `-ImplicitCastExpr 0x7fc7de0778a0 <col:13> 'int (*)(int)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fc7de077878 <col:13> 'int (int)' Function 0x7fc7de077610 'f' 'int (int)'

@@ -1,0 +1,20 @@
+FileAST: 
+  Decl: v, [], ['extern'], []
+    TypeDecl: v, []
+      Struct: S
+  Decl: s, [], ['extern'], []
+    TypeDecl: s, []
+      Struct: S
+  Decl: v, [], [], []
+    TypeDecl: v, []
+      Struct: S
+        Decl: t, [], [], []
+          TypeDecl: t, []
+            IdentifierType: ['int']
+        Decl: p, [], [], []
+          ArrayDecl: []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+    InitList: 
+      Constant: int, 4
+      Constant: int, 0

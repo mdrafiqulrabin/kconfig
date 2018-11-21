@@ -1,0 +1,62 @@
+FileAST: 
+  Decl: d, [], [], []
+    ArrayDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['double']
+      Constant: int, 65536
+  Decl: e, [], [], []
+    ArrayDecl: []
+      TypeDecl: e, []
+        IdentifierType: ['double']
+      Constant: int, 65536
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['double']
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['double']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 65536
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: f
+            ArrayRef: 
+              ID: e
+              ID: i
+          Goto: lab1
+          Label: lab2
+            Assignment: =
+              ArrayRef: 
+                ID: d
+                ID: i
+              BinaryOp: *
+                ID: f
+                ID: g
+          Continue: 
+          Label: lab1
+            Assignment: =
+              ID: g
+              ArrayRef: 
+                ID: d
+                ID: i
+          Goto: lab2

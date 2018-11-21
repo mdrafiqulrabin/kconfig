@@ -1,0 +1,107 @@
+FileAST: 
+  Decl: cnt, [], [], []
+    TypeDecl: cnt, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: +=
+        ID: cnt
+        ID: i
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: j
+        Compound: 
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              BinaryOp: +
+                ID: i
+                Constant: int, 1
+          Goto: f1
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: +
+            ID: i
+            Constant: int, 2
+      Goto: f2
+      Label: f1
+        If: 
+          BinaryOp: >
+            ID: i
+            Constant: int, 10
+          Goto: f3
+      Label: f2
+        If: 
+          BinaryOp: >
+            ID: i
+            Constant: int, 40
+          Goto: f4
+          Goto: f5
+      Label: f3
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: i
+      Label: f4
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: i
+      Label: f5
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: i
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Constant: int, 0
+          Constant: int, 1
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Constant: int, 11
+          Constant: int, 1
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Constant: int, 21
+          Constant: int, 0
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Constant: int, 41
+          Constant: int, 0
+      Return: 
+        Constant: int, 0

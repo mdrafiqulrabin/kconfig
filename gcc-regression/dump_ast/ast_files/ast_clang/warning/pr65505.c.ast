@@ -1,0 +1,322 @@
+c_files/pr65505.c:62:22: warning: cast to 'struct file *' from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+  return (struct fd){(struct file *)(fd & ~3),fd & 3};
+                     ^
+1 warning generated.
+TranslationUnitDecl 0x7f86b80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f86b8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f86b8026740 '__int128'
+|-TypedefDecl 0x7f86b8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f86b8026760 'unsigned __int128'
+|-TypedefDecl 0x7f86b8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f86b8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f86b8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f86b8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f86b8026dc0 'char *'
+|   `-BuiltinType 0x7f86b8026560 'char'
+|-TypedefDecl 0x7f86b80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f86b8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f86b8026ee0 'struct __va_list_tag'
+|     `-Record 0x7f86b8026e58 '__va_list_tag'
+|-RecordDecl 0x7f86b8027120 <c_files/pr65505.c:4:1, line:6:1> line:4:8 struct thread_info definition
+| |-RecordDecl 0x7f86b8825a00 parent 0x7f86b80264d0 <line:5:2, col:9> col:9 struct task_struct
+| `-FieldDecl 0x7f86b8825b70 <col:2, col:22> col:22 referenced task 'struct task_struct *'
+|-FunctionDecl 0x7f86b8825d58 <line:8:1, line:24:1> line:10:21 used current_thread_info 'struct thread_info *(void)' static inline
+| |-CompoundStmt 0x7f86b8826448 <line:11:1, line:24:1>
+| | |-DeclStmt 0x7f86b8825f10 <line:12:2, col:24>
+| | | `-VarDecl 0x7f86b8825eb0 <col:2, col:22> col:22 used ti 'struct thread_info *'
+| | |-DeclStmt 0x7f86b8825fa0 <line:14:2, col:23>
+| | | `-VarDecl 0x7f86b8825f40 <col:2, col:16> col:16 used __dummy 'unsigned long'
+| | |-GCCAsmStmt 0x7f86b8826358 <line:16:2, line:21:13>
+| | | |-DeclRefExpr 0x7f86b88260b8 <line:19:12> 'struct thread_info *' lvalue Var 0x7f86b8825eb0 'ti' 'struct thread_info *'
+| | | |-DeclRefExpr 0x7f86b8826148 <col:23> 'unsigned long' lvalue Var 0x7f86b8825f40 '__dummy' 'unsigned long'
+| | | `-UnaryOperator 0x7f86b88262c8 <line:20:10, col:25> 'int' prefix '~'
+| | |   `-ParenExpr 0x7f86b88262a8 <col:11, col:25> 'int'
+| | |     `-BinaryOperator 0x7f86b8826280 <col:12, col:24> 'int' '-'
+| | |       |-ParenExpr 0x7f86b8826240 <col:12, col:20> 'int'
+| | |       | `-BinaryOperator 0x7f86b8826218 <col:13, col:18> 'int' '<<'
+| | |       |   |-IntegerLiteral 0x7f86b88261d8 <col:13> 'int' 1
+| | |       |   `-IntegerLiteral 0x7f86b88261f8 <col:18> 'int' 13
+| | |       `-IntegerLiteral 0x7f86b8826260 <col:24> 'int' 1
+| | `-ReturnStmt 0x7f86b8826430 <line:23:2, col:9>
+| |   `-ImplicitCastExpr 0x7f86b8826418 <col:9> 'struct thread_info *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f86b88263f0 <col:9> 'struct thread_info *' lvalue Var 0x7f86b8825eb0 'ti' 'struct thread_info *'
+| |-NoInstrumentFunctionAttr 0x7f86b8825df0 <line:9:30>
+| `-AlwaysInlineAttr 0x7f86b8825e38 <line:8:30> always_inline
+|-RecordDecl 0x7f86b8826480 <line:26:9, line:28:1> line:26:16 struct seqcount definition
+| `-FieldDecl 0x7f86b8826548 <line:27:2, col:11> col:11 sequence 'unsigned int'
+|-TypedefDecl 0x7f86b88265e0 <line:26:1, line:28:3> col:3 referenced seqcount_t 'struct seqcount':'struct seqcount'
+| `-ElaboratedType 0x7f86b8826590 'struct seqcount' sugar
+|   `-RecordType 0x7f86b8826510 'struct seqcount'
+|     `-Record 0x7f86b8826480 'seqcount'
+|-RecordDecl 0x7f86b8826650 <line:30:1, col:8> col:8 struct inode
+|-RecordDecl 0x7f86b8826700 <line:32:1, line:35:1> line:32:8 struct dentry definition
+| |-FieldDecl 0x7f86b88267e0 <line:33:2, col:13> col:13 referenced d_seq 'seqcount_t':'struct seqcount'
+| `-FieldDecl 0x7f86b88268e0 <line:34:2, col:16> col:16 referenced d_inode 'struct inode *'
+|-RecordDecl 0x7f86b8826970 <line:37:1, line:40:1> line:37:8 struct path definition
+| |-RecordDecl 0x7f86b8827a20 parent 0x7f86b80264d0 <line:38:2, col:9> col:9 struct vfsmount
+| |-FieldDecl 0x7f86b8827b90 <col:2, col:19> col:19 referenced mnt 'struct vfsmount *'
+| `-FieldDecl 0x7f86b8827c90 <line:39:2, col:17> col:17 referenced dentry 'struct dentry *'
+|-RecordDecl 0x7f86b8827cd8 <line:42:1, line:44:1> line:42:8 struct file definition
+| |-AlignedAttr 0x7f86b8827e88 <line:44:18, col:27> aligned
+| | `-IntegerLiteral 0x7f86b8827e18 <col:26> 'int' 4
+| `-FieldDecl 0x7f86b8827dd0 <line:43:2, col:14> col:14 referenced f_path 'struct path':'struct path'
+|-RecordDecl 0x7f86b8827ed8 prev 0x7f86b8825a00 <line:46:1, line:50:1> line:46:8 struct task_struct definition
+| |-FieldDecl 0x7f86b8827f78 <line:48:2, col:6> col:6 link_count 'int'
+| |-FieldDecl 0x7f86b8827fd8 <col:2, col:18> col:18 referenced total_link_count 'int'
+| |-RecordDecl 0x7f86b8828020 parent 0x7f86b80264d0 <line:49:2, col:9> col:9 struct fs_struct
+| `-FieldDecl 0x7f86b8828190 <col:2, col:20> col:20 referenced fs 'struct fs_struct *'
+|-RecordDecl 0x7f86b88281d8 <line:52:1, line:55:1> line:52:8 struct fd definition
+| |-FieldDecl 0x7f86b8828330 <line:53:2, col:15> col:15 referenced file 'struct file *'
+| `-FieldDecl 0x7f86b8828390 <line:54:2, col:15> col:15 referenced flags 'unsigned int'
+|-FunctionDecl 0x7f86b8828530 <line:57:1, line:63:1> line:60:1 used fdget_raw 'struct fd (unsigned int)' static inline
+| |-ParmVarDecl 0x7f86b88283f0 <col:11, col:24> col:24 used fd 'unsigned int'
+| |-CompoundStmt 0x7f86b882ef30 <line:61:1, line:63:1>
+| | `-ReturnStmt 0x7f86b882ef18 <line:62:3, col:53>
+| |   `-ImplicitCastExpr 0x7f86b882ef00 <col:10, col:53> 'struct fd':'struct fd' <LValueToRValue>
+| |     `-CompoundLiteralExpr 0x7f86b882eed8 <col:10, col:53> 'struct fd':'struct fd' lvalue
+| |       `-InitListExpr 0x7f86b882ee88 <col:21, col:53> 'struct fd':'struct fd'
+| |         |-CStyleCastExpr 0x7f86b882ed70 <col:22, col:45> 'struct file *' <IntegralToPointer>
+| |         | `-ParenExpr 0x7f86b8828760 <col:37, col:45> 'unsigned int'
+| |         |   `-BinaryOperator 0x7f86b88286e0 <col:38, col:44> 'unsigned int' '&'
+| |         |     |-ImplicitCastExpr 0x7f86b88286b0 <col:38> 'unsigned int' <LValueToRValue>
+| |         |     | `-DeclRefExpr 0x7f86b8828648 <col:38> 'unsigned int' lvalue ParmVar 0x7f86b88283f0 'fd' 'unsigned int'
+| |         |     `-ImplicitCastExpr 0x7f86b88286c8 <col:43, col:44> 'unsigned int' <IntegralCast>
+| |         |       `-UnaryOperator 0x7f86b8828690 <col:43, col:44> 'int' prefix '~'
+| |         |         `-IntegerLiteral 0x7f86b8828670 <col:44> 'int' 3
+| |         `-BinaryOperator 0x7f86b882ee10 <col:47, col:52> 'unsigned int' '&'
+| |           |-ImplicitCastExpr 0x7f86b882ede0 <col:47> 'unsigned int' <LValueToRValue>
+| |           | `-DeclRefExpr 0x7f86b882ed98 <col:47> 'unsigned int' lvalue ParmVar 0x7f86b88283f0 'fd' 'unsigned int'
+| |           `-ImplicitCastExpr 0x7f86b882edf8 <col:52> 'unsigned int' <IntegralCast>
+| |             `-IntegerLiteral 0x7f86b882edc0 <col:52> 'int' 3
+| |-NoInstrumentFunctionAttr 0x7f86b88285d0 <line:58:30>
+| `-AlwaysInlineAttr 0x7f86b8828618 <line:57:30> always_inline
+|-RecordDecl 0x7f86b882ef50 prev 0x7f86b8828020 <line:66:1, col:8> col:8 struct fs_struct
+|-RecordDecl 0x7f86b882efd8 <line:68:1, line:75:1> line:68:8 struct nameidata definition
+| |-FieldDecl 0x7f86b882f0a0 <line:69:2, col:14> col:14 referenced path 'struct path':'struct path'
+| |-FieldDecl 0x7f86b882f108 <line:70:2, col:14> col:14 referenced root 'struct path':'struct path'
+| |-FieldDecl 0x7f86b882f178 <line:71:2, col:16> col:16 referenced inode 'struct inode *'
+| |-FieldDecl 0x7f86b882f1d8 <line:72:2, col:15> col:15 referenced flags 'unsigned int'
+| |-FieldDecl 0x7f86b882f238 <line:73:2, col:11> col:11 referenced seq 'unsigned int'
+| |-FieldDecl 0x7f86b882f298 <col:2, col:16> col:16 m_seq 'unsigned int'
+| `-FieldDecl 0x7f86b882f308 <line:74:2, col:15> col:15 referenced base 'struct file *'
+|-FunctionDecl 0x7f86b882f548 <line:77:1, col:60> col:5 used read_seqcount_retry 'int (const seqcount_t *, unsigned int)'
+| |-ParmVarDecl 0x7f86b882f3b8 <col:25, col:43> col:43 s 'const seqcount_t *'
+| `-ParmVarDecl 0x7f86b882f430 <col:46, col:55> col:55 start 'unsigned int'
+|-FunctionDecl 0x7f86b882f958 <line:79:1, line:121:1> line:80:1 path_init 'int (int, const char *, unsigned int, struct nameidata *)'
+| |-ParmVarDecl 0x7f86b882f608 <col:11, col:15> col:15 used dfd 'int'
+| |-ParmVarDecl 0x7f86b882f680 <col:20, col:32> col:32 used name 'const char *'
+| |-ParmVarDecl 0x7f86b882f6f8 <col:38, col:51> col:51 used flags 'unsigned int'
+| |-ParmVarDecl 0x7f86b882f810 <line:81:11, col:29> col:29 used nd 'struct nameidata *'
+| `-CompoundStmt 0x7f86b8831a20 <line:82:1, line:121:1>
+|   |-DeclStmt 0x7f86b882faa8 <line:83:2, col:16>
+|   | `-VarDecl 0x7f86b882fa28 <col:2, col:15> col:6 retval 'int' cinit
+|   |   `-IntegerLiteral 0x7f86b882fa88 <col:15> 'int' 0
+|   |-IfStmt 0x7f86b8830b28 <line:85:2, line:107:2>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f86b882fb68 <line:85:6, col:13> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7f86b882fb50 <col:6, col:7> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f86b882fb38 <col:6, col:7> 'char' <LValueToRValue>
+|   | | |   `-UnaryOperator 0x7f86b882fb00 <col:6, col:7> 'const char' lvalue prefix '*'
+|   | | |     `-ImplicitCastExpr 0x7f86b882fae8 <col:7> 'const char *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7f86b882fac0 <col:7> 'const char *' lvalue ParmVar 0x7f86b882f680 'name' 'const char *'
+|   | | `-CharacterLiteral 0x7f86b882fb20 <col:13> 'int' 47
+|   | |-CompoundStmt 0x7f86b882fcf0 <col:18, line:87:2>
+|   | | `-BinaryOperator 0x7f86b882fcc8 <line:86:3, col:18> 'struct path':'struct path' '='
+|   | |   |-MemberExpr 0x7f86b882fc00 <col:3, col:7> 'struct path':'struct path' lvalue ->path 0x7f86b882f0a0
+|   | |   | `-ImplicitCastExpr 0x7f86b882fbb8 <col:3> 'struct nameidata *' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x7f86b882fb90 <col:3> 'struct nameidata *' lvalue ParmVar 0x7f86b882f810 'nd' 'struct nameidata *'
+|   | |   `-ImplicitCastExpr 0x7f86b882fcb0 <col:14, col:18> 'struct path':'struct path' <LValueToRValue>
+|   | |     `-MemberExpr 0x7f86b882fc78 <col:14, col:18> 'struct path':'struct path' lvalue ->root 0x7f86b882f108
+|   | |       `-ImplicitCastExpr 0x7f86b882fc60 <col:14> 'struct nameidata *' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x7f86b882fc38 <col:14> 'struct nameidata *' lvalue ParmVar 0x7f86b882f810 'nd' 'struct nameidata *'
+|   | `-IfStmt 0x7f86b8830af0 <line:87:9, line:107:2>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7f86b882fd90 <line:87:13, col:21> 'int' '=='
+|   |   | |-ImplicitCastExpr 0x7f86b882fd78 <col:13> 'int' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7f86b882fd10 <col:13> 'int' lvalue ParmVar 0x7f86b882f608 'dfd' 'int'
+|   |   | `-UnaryOperator 0x7f86b882fd58 <col:20, col:21> 'int' prefix '-'
+|   |   |   `-IntegerLiteral 0x7f86b882fd38 <col:21> 'int' 100
+|   |   |-CompoundStmt 0x7f86b88300d8 <col:26, line:92:2>
+|   |   | `-IfStmt 0x7f86b88300a0 <line:89:3, line:91:3>
+|   |   |   |-<<<NULL>>>
+|   |   |   |-<<<NULL>>>
+|   |   |   |-BinaryOperator 0x7f86b882fe30 <line:89:7, col:15> 'unsigned int' '&'
+|   |   |   | |-ImplicitCastExpr 0x7f86b882fe00 <col:7> 'unsigned int' <LValueToRValue>
+|   |   |   | | `-DeclRefExpr 0x7f86b882fdb8 <col:7> 'unsigned int' lvalue ParmVar 0x7f86b882f6f8 'flags' 'unsigned int'
+|   |   |   | `-ImplicitCastExpr 0x7f86b882fe18 <col:15> 'unsigned int' <IntegralCast>
+|   |   |   |   `-IntegerLiteral 0x7f86b882fde0 <col:15> 'int' 64
+|   |   |   |-CompoundStmt 0x7f86b8830080 <col:23, line:91:3>
+|   |   |   | `-DeclStmt 0x7f86b8830068 <line:90:4, col:60>
+|   |   |   |   `-VarDecl 0x7f86b882fe80 <col:4, col:58> col:22 fs 'struct fs_struct *' cinit
+|   |   |   |     `-ImplicitCastExpr 0x7f86b8830050 <col:27, col:58> 'struct fs_struct *' <LValueToRValue>
+|   |   |   |       `-MemberExpr 0x7f86b8830018 <col:27, col:58> 'struct fs_struct *' lvalue ->fs 0x7f86b8828190
+|   |   |   |         `-ImplicitCastExpr 0x7f86b8830000 <col:27, col:55> 'struct task_struct *' <LValueToRValue>
+|   |   |   |           `-ParenExpr 0x7f86b882ffe0 <col:27, col:55> 'struct task_struct *' lvalue
+|   |   |   |             `-MemberExpr 0x7f86b882ffa8 <col:28, col:51> 'struct task_struct *' lvalue ->task 0x7f86b8825b70
+|   |   |   |               `-CallExpr 0x7f86b882ff80 <col:28, col:48> 'struct thread_info *'
+|   |   |   |                 `-ImplicitCastExpr 0x7f86b882ff68 <col:28> 'struct thread_info *(*)(void)' <FunctionToPointerDecay>
+|   |   |   |                   `-DeclRefExpr 0x7f86b882fee0 <col:28> 'struct thread_info *(void)' Function 0x7f86b8825d58 'current_thread_info' 'struct thread_info *(void)'
+|   |   |   `-<<<NULL>>>
+|   |   `-CompoundStmt 0x7f86b8830aa8 <line:92:9, line:107:2>
+|   |     |-DeclStmt 0x7f86b88302a0 <line:94:3, col:31>
+|   |     | `-VarDecl 0x7f86b8830118 <col:3, col:30> col:13 used f 'struct fd':'struct fd' cinit
+|   |     |   `-CallExpr 0x7f86b8830240 <col:17, col:30> 'struct fd':'struct fd'
+|   |     |     |-ImplicitCastExpr 0x7f86b8830228 <col:17> 'struct fd (*)(unsigned int)' <FunctionToPointerDecay>
+|   |     |     | `-DeclRefExpr 0x7f86b8830178 <col:17> 'struct fd (unsigned int)' Function 0x7f86b8828530 'fdget_raw' 'struct fd (unsigned int)'
+|   |     |     `-ImplicitCastExpr 0x7f86b8830288 <col:27> 'unsigned int' <IntegralCast>
+|   |     |       `-ImplicitCastExpr 0x7f86b8830270 <col:27> 'int' <LValueToRValue>
+|   |     |         `-DeclRefExpr 0x7f86b88301a0 <col:27> 'int' lvalue ParmVar 0x7f86b882f608 'dfd' 'int'
+|   |     |-DeclStmt 0x7f86b8830340 <line:95:3, col:24>
+|   |     | `-VarDecl 0x7f86b88302e0 <col:3, col:18> col:18 used dentry 'struct dentry *'
+|   |     |-IfStmt 0x7f86b8830448 <line:97:3, line:98:12>
+|   |     | |-<<<NULL>>>
+|   |     | |-<<<NULL>>>
+|   |     | |-UnaryOperator 0x7f86b88303d0 <line:97:7, col:10> 'int' prefix '!'
+|   |     | | `-ImplicitCastExpr 0x7f86b88303b8 <col:8, col:10> 'struct file *' <LValueToRValue>
+|   |     | |   `-MemberExpr 0x7f86b8830380 <col:8, col:10> 'struct file *' lvalue .file 0x7f86b8828330
+|   |     | |     `-DeclRefExpr 0x7f86b8830358 <col:8> 'struct fd':'struct fd' lvalue Var 0x7f86b8830118 'f' 'struct fd':'struct fd'
+|   |     | |-ReturnStmt 0x7f86b8830430 <line:98:4, col:12>
+|   |     | | `-UnaryOperator 0x7f86b8830410 <col:11, col:12> 'int' prefix '-'
+|   |     | |   `-IntegerLiteral 0x7f86b88303f0 <col:12> 'int' 9
+|   |     | `-<<<NULL>>>
+|   |     |-BinaryOperator 0x7f86b88305a8 <line:100:3, col:27> 'struct dentry *' '='
+|   |     | |-DeclRefExpr 0x7f86b8830480 <col:3> 'struct dentry *' lvalue Var 0x7f86b88302e0 'dentry' 'struct dentry *'
+|   |     | `-ImplicitCastExpr 0x7f86b8830590 <col:12, col:27> 'struct dentry *' <LValueToRValue>
+|   |     |   `-MemberExpr 0x7f86b8830558 <col:12, col:27> 'struct dentry *' lvalue .dentry 0x7f86b8827c90
+|   |     |     `-MemberExpr 0x7f86b8830520 <col:12, col:20> 'struct path':'struct path' lvalue ->f_path 0x7f86b8827dd0
+|   |     |       `-ImplicitCastExpr 0x7f86b8830508 <col:12, col:14> 'struct file *' <LValueToRValue>
+|   |     |         `-MemberExpr 0x7f86b88304d0 <col:12, col:14> 'struct file *' lvalue .file 0x7f86b8828330
+|   |     |           `-DeclRefExpr 0x7f86b88304a8 <col:12> 'struct fd':'struct fd' lvalue Var 0x7f86b8830118 'f' 'struct fd':'struct fd'
+|   |     |-BinaryOperator 0x7f86b8830710 <line:102:3, col:22> 'struct path':'struct path' '='
+|   |     | |-MemberExpr 0x7f86b8830610 <col:3, col:7> 'struct path':'struct path' lvalue ->path 0x7f86b882f0a0
+|   |     | | `-ImplicitCastExpr 0x7f86b88305f8 <col:3> 'struct nameidata *' <LValueToRValue>
+|   |     | |   `-DeclRefExpr 0x7f86b88305d0 <col:3> 'struct nameidata *' lvalue ParmVar 0x7f86b882f810 'nd' 'struct nameidata *'
+|   |     | `-ImplicitCastExpr 0x7f86b88306f8 <col:14, col:22> 'struct path':'struct path' <LValueToRValue>
+|   |     |   `-MemberExpr 0x7f86b88306c0 <col:14, col:22> 'struct path':'struct path' lvalue ->f_path 0x7f86b8827dd0
+|   |     |     `-ImplicitCastExpr 0x7f86b88306a8 <col:14, col:16> 'struct file *' <LValueToRValue>
+|   |     |       `-MemberExpr 0x7f86b8830670 <col:14, col:16> 'struct file *' lvalue .file 0x7f86b8828330
+|   |     |         `-DeclRefExpr 0x7f86b8830648 <col:14> 'struct fd':'struct fd' lvalue Var 0x7f86b8830118 'f' 'struct fd':'struct fd'
+|   |     `-IfStmt 0x7f86b8830a70 <line:103:3, line:106:3>
+|   |       |-<<<NULL>>>
+|   |       |-<<<NULL>>>
+|   |       |-BinaryOperator 0x7f86b88307b0 <line:103:7, col:15> 'unsigned int' '&'
+|   |       | |-ImplicitCastExpr 0x7f86b8830780 <col:7> 'unsigned int' <LValueToRValue>
+|   |       | | `-DeclRefExpr 0x7f86b8830738 <col:7> 'unsigned int' lvalue ParmVar 0x7f86b882f6f8 'flags' 'unsigned int'
+|   |       | `-ImplicitCastExpr 0x7f86b8830798 <col:15> 'unsigned int' <IntegralCast>
+|   |       |   `-IntegerLiteral 0x7f86b8830760 <col:15> 'int' 64
+|   |       |-CompoundStmt 0x7f86b8830a50 <col:23, line:106:3>
+|   |       | `-IfStmt 0x7f86b8830a18 <line:104:4, line:105:18>
+|   |       |   |-<<<NULL>>>
+|   |       |   |-<<<NULL>>>
+|   |       |   |-BinaryOperator 0x7f86b8830888 <line:104:8, col:18> 'unsigned int' '&'
+|   |       |   | |-ImplicitCastExpr 0x7f86b8830858 <col:8, col:10> 'unsigned int' <LValueToRValue>
+|   |       |   | | `-MemberExpr 0x7f86b8830800 <col:8, col:10> 'unsigned int' lvalue .flags 0x7f86b8828390
+|   |       |   | |   `-DeclRefExpr 0x7f86b88307d8 <col:8> 'struct fd':'struct fd' lvalue Var 0x7f86b8830118 'f' 'struct fd':'struct fd'
+|   |       |   | `-ImplicitCastExpr 0x7f86b8830870 <col:18> 'unsigned int' <IntegralCast>
+|   |       |   |   `-IntegerLiteral 0x7f86b8830838 <col:18> 'int' 1
+|   |       |   |-BinaryOperator 0x7f86b88309f0 <line:105:5, col:18> 'struct file *' '='
+|   |       |   | |-MemberExpr 0x7f86b8830940 <col:5, col:9> 'struct file *' lvalue ->base 0x7f86b882f308
+|   |       |   | | `-ImplicitCastExpr 0x7f86b8830928 <col:5> 'struct nameidata *' <LValueToRValue>
+|   |       |   | |   `-DeclRefExpr 0x7f86b8830900 <col:5> 'struct nameidata *' lvalue ParmVar 0x7f86b882f810 'nd' 'struct nameidata *'
+|   |       |   | `-ImplicitCastExpr 0x7f86b88309d8 <col:16, col:18> 'struct file *' <LValueToRValue>
+|   |       |   |   `-MemberExpr 0x7f86b88309a0 <col:16, col:18> 'struct file *' lvalue .file 0x7f86b8828330
+|   |       |   |     `-DeclRefExpr 0x7f86b8830978 <col:16> 'struct fd':'struct fd' lvalue Var 0x7f86b8830118 'f' 'struct fd':'struct fd'
+|   |       |   `-<<<NULL>>>
+|   |       `-<<<NULL>>>
+|   |-BinaryOperator 0x7f86b8830cf0 <line:109:2, col:31> 'struct inode *' '='
+|   | |-MemberExpr 0x7f86b8830ba0 <col:2, col:6> 'struct inode *' lvalue ->inode 0x7f86b882f178
+|   | | `-ImplicitCastExpr 0x7f86b8830b88 <col:2> 'struct nameidata *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f86b8830b60 <col:2> 'struct nameidata *' lvalue ParmVar 0x7f86b882f810 'nd' 'struct nameidata *'
+|   | `-ImplicitCastExpr 0x7f86b8830cd8 <col:14, col:31> 'struct inode *' <LValueToRValue>
+|   |   `-MemberExpr 0x7f86b8830ca0 <col:14, col:31> 'struct inode *' lvalue ->d_inode 0x7f86b88268e0
+|   |     `-ImplicitCastExpr 0x7f86b8830c88 <col:14, col:23> 'struct dentry *' <LValueToRValue>
+|   |       `-MemberExpr 0x7f86b8830c50 <col:14, col:23> 'struct dentry *' lvalue .dentry 0x7f86b8827c90
+|   |         `-MemberExpr 0x7f86b8830c18 <col:14, col:18> 'struct path':'struct path' lvalue ->path 0x7f86b882f0a0
+|   |           `-ImplicitCastExpr 0x7f86b8830c00 <col:14> 'struct nameidata *' <LValueToRValue>
+|   |             `-DeclRefExpr 0x7f86b8830bd8 <col:14> 'struct nameidata *' lvalue ParmVar 0x7f86b882f810 'nd' 'struct nameidata *'
+|   |-IfStmt 0x7f86b8830e58 <line:110:2, line:111:8>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f86b8830dd8 <line:110:6, col:22> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f86b8830db8 <col:7, col:22> 'unsigned int'
+|   | |   `-BinaryOperator 0x7f86b8830d90 <col:8, col:16> 'unsigned int' '&'
+|   | |     |-ImplicitCastExpr 0x7f86b8830d60 <col:8> 'unsigned int' <LValueToRValue>
+|   | |     | `-DeclRefExpr 0x7f86b8830d18 <col:8> 'unsigned int' lvalue ParmVar 0x7f86b882f6f8 'flags' 'unsigned int'
+|   | |     `-ImplicitCastExpr 0x7f86b8830d78 <col:16> 'unsigned int' <IntegralCast>
+|   | |       `-IntegerLiteral 0x7f86b8830d40 <col:16> 'int' 64
+|   | |-GotoStmt 0x7f86b8830e40 <line:111:3, col:8> 'done' 0x7f86b8830df8
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f86b8831510 <line:112:2, line:113:8>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f86b8831490 <line:112:6, col:84> 'long'
+|   | | |-ImplicitCastExpr 0x7f86b8831478 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7f86b8831090 <col:6> '<builtin fn type>' Function 0x7f86b8830ed0 '__builtin_expect' 'long (long, long)'
+|   | | |-ImplicitCastExpr 0x7f86b88314c8 <col:23, col:80> 'long' <IntegralCast>
+|   | | | `-UnaryOperator 0x7f86b8831408 <col:23, col:80> 'int' prefix '!'
+|   | | |   `-UnaryOperator 0x7f86b88313e8 <col:24, col:80> 'int' prefix '!'
+|   | | |     `-ParenExpr 0x7f86b88313c8 <col:25, col:80> 'int'
+|   | | |       `-UnaryOperator 0x7f86b88313a8 <col:26, col:79> 'int' prefix '!'
+|   | | |         `-CallExpr 0x7f86b8831340 <col:27, col:79> 'int'
+|   | | |           |-ImplicitCastExpr 0x7f86b8831328 <col:27> 'int (*)(const seqcount_t *, unsigned int)' <FunctionToPointerDecay>
+|   | | |           | `-DeclRefExpr 0x7f86b88310b8 <col:27> 'int (const seqcount_t *, unsigned int)' Function 0x7f86b882f548 'read_seqcount_retry' 'int (const seqcount_t *, unsigned int)'
+|   | | |           |-ImplicitCastExpr 0x7f86b8831378 <col:47, col:65> 'const seqcount_t *' <BitCast>
+|   | | |           | `-UnaryOperator 0x7f86b8831238 <col:47, col:65> 'seqcount_t *' prefix '&'
+|   | | |           |   `-MemberExpr 0x7f86b88311a8 <col:48, col:65> 'seqcount_t':'struct seqcount' lvalue ->d_seq 0x7f86b88267e0
+|   | | |           |     `-ImplicitCastExpr 0x7f86b8831190 <col:48, col:57> 'struct dentry *' <LValueToRValue>
+|   | | |           |       `-MemberExpr 0x7f86b8831158 <col:48, col:57> 'struct dentry *' lvalue .dentry 0x7f86b8827c90
+|   | | |           |         `-MemberExpr 0x7f86b8831120 <col:48, col:52> 'struct path':'struct path' lvalue ->path 0x7f86b882f0a0
+|   | | |           |           `-ImplicitCastExpr 0x7f86b8831108 <col:48> 'struct nameidata *' <LValueToRValue>
+|   | | |           |             `-DeclRefExpr 0x7f86b88310e0 <col:48> 'struct nameidata *' lvalue ParmVar 0x7f86b882f810 'nd' 'struct nameidata *'
+|   | | |           `-ImplicitCastExpr 0x7f86b8831390 <col:72, col:76> 'unsigned int' <LValueToRValue>
+|   | | |             `-MemberExpr 0x7f86b8831298 <col:72, col:76> 'unsigned int' lvalue ->seq 0x7f86b882f238
+|   | | |               `-ImplicitCastExpr 0x7f86b8831280 <col:72> 'struct nameidata *' <LValueToRValue>
+|   | | |                 `-DeclRefExpr 0x7f86b8831258 <col:72> 'struct nameidata *' lvalue ParmVar 0x7f86b882f810 'nd' 'struct nameidata *'
+|   | | `-ImplicitCastExpr 0x7f86b88314e0 <col:83> 'long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f86b8831428 <col:83> 'int' 1
+|   | |-GotoStmt 0x7f86b88314f8 <line:113:3, col:8> 'done' 0x7f86b8830df8
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f86b88317e8 <line:114:2, line:115:28>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f86b8831658 <line:114:6, col:26> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f86b8831638 <col:7, col:26> 'unsigned int'
+|   | |   `-BinaryOperator 0x7f86b8831610 <col:8, col:20> 'unsigned int' '&'
+|   | |     |-ImplicitCastExpr 0x7f86b88315e0 <col:8, col:12> 'unsigned int' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f86b8831588 <col:8, col:12> 'unsigned int' lvalue ->flags 0x7f86b882f1d8
+|   | |     |   `-ImplicitCastExpr 0x7f86b8831570 <col:8> 'struct nameidata *' <LValueToRValue>
+|   | |     |     `-DeclRefExpr 0x7f86b8831548 <col:8> 'struct nameidata *' lvalue ParmVar 0x7f86b882f810 'nd' 'struct nameidata *'
+|   | |     `-ImplicitCastExpr 0x7f86b88315f8 <col:20> 'unsigned int' <IntegralCast>
+|   | |       `-IntegerLiteral 0x7f86b88315c0 <col:20> 'int' 8192
+|   | |-BinaryOperator 0x7f86b88317c0 <line:115:3, col:28> 'struct vfsmount *' '='
+|   | | |-MemberExpr 0x7f86b88316f0 <col:3, col:12> 'struct vfsmount *' lvalue .mnt 0x7f86b8827b90
+|   | | | `-MemberExpr 0x7f86b88316b8 <col:3, col:7> 'struct path':'struct path' lvalue ->root 0x7f86b882f108
+|   | | |   `-ImplicitCastExpr 0x7f86b88316a0 <col:3> 'struct nameidata *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7f86b8831678 <col:3> 'struct nameidata *' lvalue ParmVar 0x7f86b882f810 'nd' 'struct nameidata *'
+|   | | `-ImplicitCastExpr 0x7f86b88317a8 <col:18, col:28> 'struct vfsmount *' <NullToPointer>
+|   | |   `-ParenExpr 0x7f86b8831788 <col:18, col:28> 'void *'
+|   | |     `-CStyleCastExpr 0x7f86b8831760 <col:19, col:27> 'void *' <NullToPointer>
+|   | |       `-IntegerLiteral 0x7f86b8831728 <col:27> 'int' 0
+|   | `-<<<NULL>>>
+|   |-ReturnStmt 0x7f86b8831860 <line:117:2, col:10>
+|   | `-UnaryOperator 0x7f86b8831840 <col:9, col:10> 'int' prefix '-'
+|   |   `-IntegerLiteral 0x7f86b8831820 <col:10> 'int' 10
+|   |-LabelStmt 0x7f86b88319d0 <line:118:1, line:119:52> 'done'
+|   | `-BinaryOperator 0x7f86b88319a8 <col:2, col:52> 'int' '='
+|   |   |-MemberExpr 0x7f86b8831950 <col:2, col:33> 'int' lvalue ->total_link_count 0x7f86b8827fd8
+|   |   | `-ImplicitCastExpr 0x7f86b8831938 <col:2, col:30> 'struct task_struct *' <LValueToRValue>
+|   |   |   `-ParenExpr 0x7f86b8831918 <col:2, col:30> 'struct task_struct *' lvalue
+|   |   |     `-MemberExpr 0x7f86b88318e0 <col:3, col:26> 'struct task_struct *' lvalue ->task 0x7f86b8825b70
+|   |   |       `-CallExpr 0x7f86b88318b8 <col:3, col:23> 'struct thread_info *'
+|   |   |         `-ImplicitCastExpr 0x7f86b88318a0 <col:3> 'struct thread_info *(*)(void)' <FunctionToPointerDecay>
+|   |   |           `-DeclRefExpr 0x7f86b8831878 <col:3> 'struct thread_info *(void)' Function 0x7f86b8825d58 'current_thread_info' 'struct thread_info *(void)'
+|   |   `-IntegerLiteral 0x7f86b8831988 <col:52> 'int' 0
+|   `-ReturnStmt 0x7f86b8831a08 <line:120:2, col:9>
+|     `-IntegerLiteral 0x7f86b88319e8 <col:9> 'int' 0
+`-FunctionDecl 0x7f86b8830ed0 <line:112:6> col:6 implicit used __builtin_expect 'long (long, long)' extern
+  |-ParmVarDecl 0x7f86b8830f68 <<invalid sloc>> <invalid sloc> 'long'
+  |-ParmVarDecl 0x7f86b8830fc8 <<invalid sloc>> <invalid sloc> 'long'
+  |-NoThrowAttr 0x7f86b8831038 <col:6> Implicit
+  `-ConstAttr 0x7f86b8831080 <col:6> Implicit

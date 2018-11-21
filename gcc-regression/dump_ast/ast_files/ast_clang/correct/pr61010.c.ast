@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7f8b018264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8b01826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8b01826740 '__int128'
+|-TypedefDecl 0x7f8b01826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8b01826760 'unsigned __int128'
+|-TypedefDecl 0x7f8b01826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8b01826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8b01826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8b01826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8b01826dc0 'char *'
+|   `-BuiltinType 0x7f8b01826560 'char'
+|-TypedefDecl 0x7f8b018270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8b01827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8b01826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8b01826e58 '__va_list_tag'
+`-FunctionDecl 0x7f8b02025a00 <c_files/pr61010.c:3:1, line:8:1> line:3:5 main 'int (void)'
+  `-CompoundStmt 0x7f8b02025dd0 <line:4:1, line:8:1>
+    |-DeclStmt 0x7f8b02025ba0 <line:5:3, col:12>
+    | `-VarDecl 0x7f8b02025b20 <col:3, col:11> col:7 used a 'int' cinit
+    |   `-IntegerLiteral 0x7f8b02025b80 <col:11> 'int' 0
+    |-DeclStmt 0x7f8b02025d80 <line:6:3, col:36>
+    | `-VarDecl 0x7f8b02025bd0 <col:3, col:33> col:12 b 'unsigned int' cinit
+    |   `-BinaryOperator 0x7f8b02025d58 <col:16, col:33> 'unsigned int' '|'
+    |     |-ImplicitCastExpr 0x7f8b02025d40 <col:16, col:29> 'unsigned int' <IntegralCast>
+    |     | `-ParenExpr 0x7f8b02025d00 <col:16, col:29> 'int'
+    |     |   `-BinaryOperator 0x7f8b02025cd8 <col:17, col:26> 'int' '&'
+    |     |     |-BinaryOperator 0x7f8b02025c90 <col:17, col:21> 'int' '*'
+    |     |     | |-ImplicitCastExpr 0x7f8b02025c78 <col:17> 'int' <LValueToRValue>
+    |     |     | | `-DeclRefExpr 0x7f8b02025c30 <col:17> 'int' lvalue Var 0x7f8b02025b20 'a' 'int'
+    |     |     | `-IntegerLiteral 0x7f8b02025c58 <col:21> 'int' 64
+    |     |     `-IntegerLiteral 0x7f8b02025cb8 <col:26> 'int' 192
+    |     `-IntegerLiteral 0x7f8b02025d20 <col:33> 'unsigned int' 63
+    `-ReturnStmt 0x7f8b02025db8 <line:7:3, col:10>
+      `-IntegerLiteral 0x7f8b02025d98 <col:10> 'int' 0

@@ -1,0 +1,43 @@
+FileAST: 
+  FuncDef: 
+    Decl: ol, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ku, [], [], []
+            TypeDecl: ku, []
+              IdentifierType: ['int']
+        TypeDecl: ol, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: zq, [], [], []
+        TypeDecl: zq, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      While: 
+        BinaryOp: <
+          ID: ku
+          Constant: int, 1
+        Compound: 
+          Decl: y6, [], [], []
+            TypeDecl: y6, []
+              IdentifierType: ['int']
+          For: 
+            Assignment: =
+              ID: y6
+              Constant: int, 0
+            BinaryOp: <
+              ID: y6
+              Constant: int, 3
+            UnaryOp: ++
+              ID: y6
+            Assignment: +=
+              ID: zq
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+                ID: ku
+          UnaryOp: ++
+            ID: ku
+      Return: 
+        ID: zq

@@ -1,0 +1,124 @@
+c_files/pr56078.c:10:40: error: designator into flexible array member subobject
+struct T t1 = { .a = 1, .b = "abcd", .b[0] = '2' };
+                                       ^~~~~~~~~
+c_files/pr56078.c:9:24: note: initialized flexible array member 'b' is here
+struct T { int a; char b[]; };
+                       ^
+c_files/pr56078.c:10:46: error: flexible array requires brace-enclosed initializer
+struct T t1 = { .a = 1, .b = "abcd", .b[0] = '2' };
+                                             ^~~
+c_files/pr56078.c:9:24: note: initialized flexible array member 'b' is here
+struct T { int a; char b[]; };
+                       ^
+c_files/pr56078.c:12:27: error: designator into flexible array member subobject
+struct T t3 = { .a = 1, .b[2] = 'a' };
+                          ^~~~~~~~~
+c_files/pr56078.c:9:24: note: initialized flexible array member 'b' is here
+struct T { int a; char b[]; };
+                       ^
+c_files/pr56078.c:12:33: error: flexible array requires brace-enclosed initializer
+struct T t3 = { .a = 1, .b[2] = 'a' };
+                                ^~~
+c_files/pr56078.c:9:24: note: initialized flexible array member 'b' is here
+struct T { int a; char b[]; };
+                       ^
+c_files/pr56078.c:15:27: error: designator into flexible array member subobject
+struct T t6 = { .a = 1, .b[2] = 'c', .b[1] = 'x', .b[0] = 'a', .b[1] = 'b' };
+                          ^~~~~~~~~
+c_files/pr56078.c:9:24: note: initialized flexible array member 'b' is here
+struct T { int a; char b[]; };
+                       ^
+c_files/pr56078.c:15:33: error: flexible array requires brace-enclosed initializer
+struct T t6 = { .a = 1, .b[2] = 'c', .b[1] = 'x', .b[0] = 'a', .b[1] = 'b' };
+                                ^~~
+c_files/pr56078.c:9:24: note: initialized flexible array member 'b' is here
+struct T { int a; char b[]; };
+                       ^
+c_files/pr56078.c:15:40: error: designator into flexible array member subobject
+struct T t6 = { .a = 1, .b[2] = 'c', .b[1] = 'x', .b[0] = 'a', .b[1] = 'b' };
+                                       ^~~~~~~~~
+c_files/pr56078.c:9:24: note: initialized flexible array member 'b' is here
+struct T { int a; char b[]; };
+                       ^
+c_files/pr56078.c:15:53: error: designator into flexible array member subobject
+struct T t6 = { .a = 1, .b[2] = 'c', .b[1] = 'x', .b[0] = 'a', .b[1] = 'b' };
+                                                    ^~~~~~~~~
+c_files/pr56078.c:9:24: note: initialized flexible array member 'b' is here
+struct T { int a; char b[]; };
+                       ^
+c_files/pr56078.c:15:66: error: designator into flexible array member subobject
+struct T t6 = { .a = 1, .b[2] = 'c', .b[1] = 'x', .b[0] = 'a', .b[1] = 'b' };
+                                                                 ^~~~~~~~~
+c_files/pr56078.c:9:24: note: initialized flexible array member 'b' is here
+struct T { int a; char b[]; };
+                       ^
+9 errors generated.
+TranslationUnitDecl 0x7fecf7024cd0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fecf7025220 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fecf7024f40 '__int128'
+|-TypedefDecl 0x7fecf7025290 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fecf7024f60 'unsigned __int128'
+|-TypedefDecl 0x7fecf7025568 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fecf7025370 'struct __NSConstantString_tag'
+|   `-Record 0x7fecf70252e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fecf7025600 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fecf70255c0 'char *'
+|   `-BuiltinType 0x7fecf7024d60 'char'
+|-TypedefDecl 0x7fecf70258c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fecf7025870 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fecf70256e0 'struct __va_list_tag'
+|     `-Record 0x7fecf7025658 '__va_list_tag'
+|-TypedefDecl 0x7fecf7025938 <c_files/pr56078.c:5:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fecf7024e80 'unsigned long'
+|-FunctionDecl 0x7fecf6827248 <line:6:12> col:12 implicit used memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fecf68272e0 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fecf6827340 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fecf68273a0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fecf6827418 prev 0x7fecf6827248 <col:1, col:54> col:12 used memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fecf6827000 <col:20, col:31> col:32 'const void *'
+| |-ParmVarDecl 0x7fecf6827078 <col:34, col:45> col:46 'const void *'
+| `-ParmVarDecl 0x7fecf6827110 <col:48> col:54 'size_t':'unsigned long'
+|-FunctionDecl 0x7fecf68275c0 <line:7:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fecf6827658 prev 0x7fecf68275c0 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fecf68276f0 <line:9:1, col:29> col:8 struct T definition
+| |-FieldDecl 0x7fecf68277b8 <col:12, col:16> col:16 a 'int'
+| `-FieldDecl 0x7fecf6827848 <col:19, col:26> col:24 referenced b 'char []'
+|-VarDecl 0x7fecf68278e0 <line:10:1, col:10> col:10 invalid t1 'struct T':'struct T'
+|-VarDecl 0x7fecf6827be8 <line:11:1, col:37> col:10 used t2 'struct T':'struct T' cinit
+| `-InitListExpr 0x7fecf6827d68 <col:15, col:37> 'struct T':'struct T'
+|   |-IntegerLiteral 0x7fecf6827c48 <col:22> 'int' 1
+|   `-StringLiteral 0x7fecf6827ca8 <col:30> 'char [5]' lvalue "2bcd"
+|-VarDecl 0x7fecf6827dd8 <line:12:1, col:10> col:10 invalid t3 'struct T':'struct T'
+|-VarDecl 0x7fecf6828000 <line:13:1, col:50> col:10 used t4 'struct T':'struct T' cinit
+| `-InitListExpr 0x7fecf68281f0 <col:15, col:50> 'struct T':'struct T'
+|   |-IntegerLiteral 0x7fecf6828060 <col:22> 'int' 1
+|   `-InitListExpr 0x7fecf6828240 <col:30, col:48> 'char [3]'
+|     |-ImplicitCastExpr 0x7fecf6828280 <col:32> 'char' <IntegralCast>
+|     | `-CharacterLiteral 0x7fecf68280c0 <col:32> 'int' 0
+|     |-ImplicitCastExpr 0x7fecf68282a0 <col:38> 'char' <IntegralCast>
+|     | `-CharacterLiteral 0x7fecf68280d8 <col:38> 'int' 0
+|     `-ImplicitCastExpr 0x7fecf68282c8 <col:44> 'char' <IntegralCast>
+|       `-CharacterLiteral 0x7fecf68280f0 <col:44> 'int' 97
+|-VarDecl 0x7fecf6828358 <line:14:1, col:66> col:10 used t5 'struct T':'struct T' cinit
+| `-InitListExpr 0x7fecf6828680 <col:15, col:66> 'struct T':'struct T'
+|   |-IntegerLiteral 0x7fecf68283b8 <col:22> 'int' 1
+|   `-InitListExpr 0x7fecf68286d0 <col:30, col:64> 'char [3]'
+|     |-ImplicitCastExpr 0x7fecf6828718 <col:38> 'char' <IntegralCast>
+|     | `-CharacterLiteral 0x7fecf6828438 <col:38> 'int' 97
+|     |-ImplicitCastExpr 0x7fecf6828740 <col:49> 'char' <IntegralCast>
+|     | `-CharacterLiteral 0x7fecf68284b8 <col:49> 'int' 98
+|     `-ImplicitCastExpr 0x7fecf6828778 <col:60> 'char' <IntegralCast>
+|       `-CharacterLiteral 0x7fecf6828538 <col:60> 'int' 99
+|-VarDecl 0x7fecf68287b0 <line:15:1, col:10> col:10 invalid t6 'struct T':'struct T'
+`-FunctionDecl 0x7fecf6828be0 <line:17:1, line:25:1> line:18:1 main 'int ()'
+  `-CompoundStmt 0x7fecf6829070 <line:19:1, line:25:1>
+    |-IfStmt 0x7fecf6829000 <line:20:3, line:23:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7fecf6828fb8 <<invalid sloc>> '_Bool'
+    | |-CallExpr 0x7fecf6828f90 <col:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fecf6828f78 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fecf6828f20 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fecf6827658 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fecf6829058 <line:24:3, col:10>
+      `-IntegerLiteral 0x7fecf6829038 <col:10> 'int' 0

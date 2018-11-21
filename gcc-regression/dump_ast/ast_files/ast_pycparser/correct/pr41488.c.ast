@@ -1,0 +1,47 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: struct_t
+      Decl: data, [], [], []
+        PtrDecl: []
+          TypeDecl: data, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: sp, [], [], []
+            PtrDecl: []
+              TypeDecl: sp, []
+                Struct: struct_t
+          Decl: start, [], [], []
+            TypeDecl: start, []
+              IdentifierType: ['int']
+          Decl: end, [], [], []
+            TypeDecl: end, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          BinaryOp: +
+            ID: i
+            ID: start
+          ID: end
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            StructRef: ->
+              ID: sp
+              ID: data
+            BinaryOp: +
+              ID: i
+              ID: start
+          Constant: int, 0

@@ -1,0 +1,126 @@
+TranslationUnitDecl 0x7ff0c5024cd0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff0c5025220 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff0c5024f40 '__int128'
+|-TypedefDecl 0x7ff0c5025290 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff0c5024f60 'unsigned __int128'
+|-TypedefDecl 0x7ff0c5025568 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff0c5025370 'struct __NSConstantString_tag'
+|   `-Record 0x7ff0c50252e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff0c5025600 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff0c50255c0 'char *'
+|   `-BuiltinType 0x7ff0c5024d60 'char'
+|-TypedefDecl 0x7ff0c50258c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff0c5025870 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff0c50256e0 'struct __va_list_tag'
+|     `-Record 0x7ff0c5025658 '__va_list_tag'
+|-RecordDecl 0x7ff0c5025920 <c_files/pr55260.c:4:9, line:7:1> line:4:9 struct definition
+| |-FieldDecl 0x7ff0c5075c18 <line:5:3, col:8> col:8 ptr 'int *'
+| `-FieldDecl 0x7ff0c5075c78 <line:6:3, col:7> col:7 len 'int'
+|-TypedefDecl 0x7ff0c5075d10 <line:4:1, line:7:3> col:3 referenced string 'struct string':'string'
+| `-ElaboratedType 0x7ff0c5075cc0 'struct string' sugar
+|   `-RecordType 0x7ff0c50259b0 'string'
+|     `-Record 0x7ff0c5025920 ''
+|-RecordDecl 0x7ff0c5075d80 <line:8:9, line:11:1> line:8:9 struct definition
+| |-FieldDecl 0x7ff0c5075e60 <line:9:3, col:10> col:10 referenced nantstr 'string':'string'
+| `-FieldDecl 0x7ff0c5075ec0 <line:10:3, col:8> col:8 referenced nant 'int *'
+|-TypedefDecl 0x7ff0c5075fb0 <line:8:1, line:11:3> col:3 referenced malv 'struct malv':'malv'
+| `-ElaboratedType 0x7ff0c5075f60 'struct malv' sugar
+|   `-RecordType 0x7ff0c5075e10 'malv'
+|     `-Record 0x7ff0c5075d80 ''
+|-RecordDecl 0x7ff0c5076020 <line:12:9, line:14:1> line:12:9 struct definition
+| `-FieldDecl 0x7ff0c50760e8 <line:13:3, col:8> col:8 referenced nor 'int *'
+|-TypedefDecl 0x7ff0c5076180 <line:12:1, line:14:3> col:3 referenced list_heads 'struct list_heads':'list_heads'
+| `-ElaboratedType 0x7ff0c5076130 'struct list_heads' sugar
+|   `-RecordType 0x7ff0c50760b0 'list_heads'
+|     `-Record 0x7ff0c5076020 ''
+|-VarDecl 0x7ff0c5076208 <line:15:1, col:5> col:5 used b 'int'
+|-FunctionDecl 0x7ff0c5076560 <line:16:1, col:40> col:13 used fn1 'list_heads *(string, int *, unsigned int)'
+| |-ParmVarDecl 0x7ff0c50762e0 <col:17> col:23 'string':'string'
+| |-ParmVarDecl 0x7ff0c5076358 <col:25, col:29> col:30 'int *'
+| `-ParmVarDecl 0x7ff0c50763d0 <col:32> col:40 'unsigned int'
+|-FunctionDecl 0x7ff0c50768b0 <line:17:1, line:20:1> line:17:6 used fn2 'void (malv *, list_heads *, unsigned int)'
+| |-ParmVarDecl 0x7ff0c5076698 <col:10, col:16> col:16 used p1 'malv *'
+| |-ParmVarDecl 0x7ff0c5076708 <col:20, col:32> col:32 p2 'list_heads *'
+| |-ParmVarDecl 0x7ff0c5076780 <col:36, col:45> col:45 used p3 'unsigned int'
+| `-CompoundStmt 0x7ff0c5076c68 <col:49, line:20:1>
+|   |-DeclStmt 0x7ff0c5076a60 <line:18:3, col:25>
+|   | `-VarDecl 0x7ff0c5076970 <col:3, col:18> col:10 used a 'string':'string' cinit
+|   |   `-ImplicitCastExpr 0x7ff0c5076a48 <col:14, col:18> 'string':'string' <LValueToRValue>
+|   |     `-MemberExpr 0x7ff0c5076a10 <col:14, col:18> 'string':'string' lvalue ->nantstr 0x7ff0c5075e60
+|   |       `-ImplicitCastExpr 0x7ff0c50769f8 <col:14> 'malv *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff0c50769d0 <col:14> 'malv *' lvalue ParmVar 0x7ff0c5076698 'p1' 'malv *'
+|   `-CallExpr 0x7ff0c5076be0 <line:19:3, col:22> 'list_heads *'
+|     |-ImplicitCastExpr 0x7ff0c5076bc8 <col:3> 'list_heads *(*)(string, int *, unsigned int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7ff0c5076a78 <col:3> 'list_heads *(string, int *, unsigned int)' Function 0x7ff0c5076560 'fn1' 'list_heads *(string, int *, unsigned int)'
+|     |-ImplicitCastExpr 0x7ff0c5076c20 <col:7> 'string':'string' <LValueToRValue>
+|     | `-DeclRefExpr 0x7ff0c5076aa0 <col:7> 'string':'string' lvalue Var 0x7ff0c5076970 'a' 'string':'string'
+|     |-ImplicitCastExpr 0x7ff0c5076c38 <col:10, col:14> 'int *' <LValueToRValue>
+|     | `-MemberExpr 0x7ff0c5076b08 <col:10, col:14> 'int *' lvalue ->nant 0x7ff0c5075ec0
+|     |   `-ImplicitCastExpr 0x7ff0c5076af0 <col:10> 'malv *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7ff0c5076ac8 <col:10> 'malv *' lvalue ParmVar 0x7ff0c5076698 'p1' 'malv *'
+|     `-ImplicitCastExpr 0x7ff0c5076c50 <col:20> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7ff0c5076b40 <col:20> 'unsigned int' lvalue ParmVar 0x7ff0c5076780 'p3' 'unsigned int'
+|-FunctionDecl 0x7ff0c5076d70 <line:22:1, col:40> col:6 used fn3 'void (unsigned int)'
+| |-ParmVarDecl 0x7ff0c5076ca8 <col:10, col:19> col:19 used p1 'unsigned int'
+| `-CompoundStmt 0x7ff0c5076f98 <col:23, col:40>
+|   `-CallExpr 0x7ff0c5076f10 <col:25, col:37> 'void'
+|     |-ImplicitCastExpr 0x7ff0c5076ef8 <col:25> 'void (*)(malv *, list_heads *, unsigned int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7ff0c5076e10 <col:25> 'void (malv *, list_heads *, unsigned int)' Function 0x7ff0c50768b0 'fn2' 'void (malv *, list_heads *, unsigned int)'
+|     |-ImplicitCastExpr 0x7ff0c5076f50 <col:29> 'malv *' <NullToPointer>
+|     | `-IntegerLiteral 0x7ff0c5076e38 <col:29> 'int' 0
+|     |-ImplicitCastExpr 0x7ff0c5076f68 <col:32> 'list_heads *' <NullToPointer>
+|     | `-IntegerLiteral 0x7ff0c5076e58 <col:32> 'int' 0
+|     `-ImplicitCastExpr 0x7ff0c5076f80 <col:35> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7ff0c5076e78 <col:35> 'unsigned int' lvalue ParmVar 0x7ff0c5076ca8 'p1' 'unsigned int'
+|-FunctionDecl 0x7ff0c5077150 prev 0x7ff0c5076560 <line:24:1, line:32:1> line:24:13 used fn1 'list_heads *(string, int *, unsigned int)'
+| |-ParmVarDecl 0x7ff0c5076fc8 <col:17, col:24> col:24 p1 'string':'string'
+| |-ParmVarDecl 0x7ff0c5077040 <col:28, col:33> col:33 p2 'int *'
+| |-ParmVarDecl 0x7ff0c50770b8 <col:37, col:46> col:46 used p3 'unsigned int'
+| `-CompoundStmt 0x7ff0c5077530 <col:50, line:32:1>
+|   `-WhileStmt 0x7ff0c5077510 <line:25:3, line:31:3>
+|     |-<<<NULL>>>
+|     |-IntegerLiteral 0x7ff0c5077200 <line:25:10> 'int' 1
+|     `-CompoundStmt 0x7ff0c50774e0 <col:13, line:31:3>
+|       |-IfStmt 0x7ff0c5077338 <line:26:5, line:27:12>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-ImplicitCastExpr 0x7ff0c5077248 <line:26:9> 'unsigned int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7ff0c5077220 <col:9> 'unsigned int' lvalue ParmVar 0x7ff0c50770b8 'p3' 'unsigned int'
+|       | |-CallExpr 0x7ff0c50772f0 <line:27:7, col:12> 'void'
+|       | | |-ImplicitCastExpr 0x7ff0c50772d8 <col:7> 'void (*)(unsigned int)' <FunctionToPointerDecay>
+|       | | | `-DeclRefExpr 0x7ff0c5077260 <col:7> 'void (unsigned int)' Function 0x7ff0c5076d70 'fn3' 'void (unsigned int)'
+|       | | `-ImplicitCastExpr 0x7ff0c5077320 <col:11> 'unsigned int' <IntegralCast>
+|       | |   `-IntegerLiteral 0x7ff0c5077288 <col:11> 'int' 1
+|       | `-<<<NULL>>>
+|       |-IfStmt 0x7ff0c5077400 <line:28:5, line:29:14>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-ImplicitCastExpr 0x7ff0c5077398 <line:28:9> 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7ff0c5077370 <col:9> 'int' lvalue Var 0x7ff0c5076208 'b' 'int'
+|       | |-ReturnStmt 0x7ff0c50773e8 <line:29:7, col:14>
+|       | | `-ImplicitCastExpr 0x7ff0c50773d0 <col:14> 'list_heads *' <NullToPointer>
+|       | |   `-IntegerLiteral 0x7ff0c50773b0 <col:14> 'int' 0
+|       | `-<<<NULL>>>
+|       `-CallExpr 0x7ff0c5077498 <line:30:5, col:10> 'void'
+|         |-ImplicitCastExpr 0x7ff0c5077480 <col:5> 'void (*)(unsigned int)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7ff0c5077438 <col:5> 'void (unsigned int)' Function 0x7ff0c5076d70 'fn3' 'void (unsigned int)'
+|         `-ImplicitCastExpr 0x7ff0c50774c8 <col:9> 'unsigned int' <IntegralCast>
+|           `-IntegerLiteral 0x7ff0c5077460 <col:9> 'int' 1
+`-FunctionDecl 0x7ff0c5077598 <line:34:1, line:38:1> line:34:6 fn5 'void ()'
+  `-CompoundStmt 0x7ff0c50778b0 <col:12, line:38:1>
+    |-DeclStmt 0x7ff0c50776a0 <line:35:3, col:15>
+    | `-VarDecl 0x7ff0c5077640 <col:3, col:14> col:14 used c 'list_heads':'list_heads'
+    |-BinaryOperator 0x7ff0c5077750 <line:36:3, col:11> 'int *' '='
+    | |-MemberExpr 0x7ff0c50776e0 <col:3, col:5> 'int *' lvalue .nor 0x7ff0c50760e8
+    | | `-DeclRefExpr 0x7ff0c50776b8 <col:3> 'list_heads':'list_heads' lvalue Var 0x7ff0c5077640 'c' 'list_heads':'list_heads'
+    | `-ImplicitCastExpr 0x7ff0c5077738 <col:11> 'int *' <NullToPointer>
+    |   `-IntegerLiteral 0x7ff0c5077718 <col:11> 'int' 0
+    `-CallExpr 0x7ff0c5077840 <line:37:3, col:15> 'void'
+      |-ImplicitCastExpr 0x7ff0c5077828 <col:3> 'void (*)(malv *, list_heads *, unsigned int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff0c5077778 <col:3> 'void (malv *, list_heads *, unsigned int)' Function 0x7ff0c50768b0 'fn2' 'void (malv *, list_heads *, unsigned int)'
+      |-ImplicitCastExpr 0x7ff0c5077880 <col:7> 'malv *' <NullToPointer>
+      | `-IntegerLiteral 0x7ff0c50777a0 <col:7> 'int' 0
+      |-UnaryOperator 0x7ff0c50777e8 <col:10, col:11> 'list_heads *' prefix '&'
+      | `-DeclRefExpr 0x7ff0c50777c0 <col:11> 'list_heads':'list_heads' lvalue Var 0x7ff0c5077640 'c' 'list_heads':'list_heads'
+      `-ImplicitCastExpr 0x7ff0c5077898 <col:14> 'unsigned int' <IntegralCast>
+        `-IntegerLiteral 0x7ff0c5077808 <col:14> 'int' 1

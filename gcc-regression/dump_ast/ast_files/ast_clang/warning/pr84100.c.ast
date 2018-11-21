@@ -1,0 +1,36 @@
+c_files/pr84100.c:7:16: warning: unknown attribute 'optimize' ignored [-Wunknown-attributes]
+__attribute__((optimize ("align-loops=16", "align-jumps=16",
+               ^
+1 warning generated.
+TranslationUnitDecl 0x7f8c210264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8c21026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8c21026740 '__int128'
+|-TypedefDecl 0x7f8c21026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8c21026760 'unsigned __int128'
+|-TypedefDecl 0x7f8c21026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8c21026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8c21026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8c21026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8c21026dc0 'char *'
+|   `-BuiltinType 0x7f8c21026560 'char'
+|-TypedefDecl 0x7f8c210270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8c21027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8c21026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8c21026e58 '__va_list_tag'
+|-FunctionDecl 0x7f8c21825a00 <c_files/pr84100.c:5:1, col:15> col:6 used bar 'void (void)'
+`-FunctionDecl 0x7f8c21825d08 <line:7:1, line:14:1> line:10:1 foo 'void (void)'
+  `-CompoundStmt 0x7f8c21825ff0 <line:11:1, line:14:1>
+    `-ForStmt 0x7f8c21825fb8 <line:12:3, line:13:10>
+      |-DeclStmt 0x7f8c21825e38 <line:12:8, col:17>
+      | `-VarDecl 0x7f8c21825db8 <col:8, col:16> col:12 used i 'int' cinit
+      |   `-IntegerLiteral 0x7f8c21825e18 <col:16> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8c21825eb0 <col:19, col:23> 'int' '<'
+      | |-ImplicitCastExpr 0x7f8c21825e98 <col:19> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f8c21825e50 <col:19> 'int' lvalue Var 0x7f8c21825db8 'i' 'int'
+      | `-IntegerLiteral 0x7f8c21825e78 <col:23> 'int' 1024
+      |-UnaryOperator 0x7f8c21825f00 <col:29, col:31> 'int' prefix '++'
+      | `-DeclRefExpr 0x7f8c21825ed8 <col:31> 'int' lvalue Var 0x7f8c21825db8 'i' 'int'
+      `-CallExpr 0x7f8c21825f90 <line:13:5, col:10> 'void'
+        `-ImplicitCastExpr 0x7f8c21825f78 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f8c21825f20 <col:5> 'void (void)' Function 0x7f8c21825a00 'bar' 'void (void)'

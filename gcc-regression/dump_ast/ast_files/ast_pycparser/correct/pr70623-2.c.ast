@@ -1,0 +1,124 @@
+FileAST: 
+  Decl: b8, [], [], []
+    TypeDecl: b8, []
+      IdentifierType: ['int']
+  Decl: il, [], [], []
+    TypeDecl: il, []
+      IdentifierType: ['int']
+  Decl: rc, [], [], []
+    TypeDecl: rc, []
+      IdentifierType: ['int']
+  Decl: nm, [], [], []
+    TypeDecl: nm, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: h9, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: h9, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: av, [], [], []
+        PtrDecl: []
+          TypeDecl: av, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: b8
+      Label: is
+        For: 
+          Compound: 
+            Decl: vj, [], [], []
+              TypeDecl: vj, []
+                IdentifierType: ['int']
+            Decl: wk, [], [], []
+              TypeDecl: wk, []
+                IdentifierType: ['int']
+            Decl: m9, [], [], []
+              PtrDecl: []
+                TypeDecl: m9, []
+                  IdentifierType: ['int']
+              UnaryOp: &
+                ID: b8
+            If: 
+              BinaryOp: ==
+                UnaryOp: *
+                  ID: m9
+                UnaryOp: *
+                  ID: av
+              Compound: 
+                If: 
+                  BinaryOp: ==
+                    ID: il
+                    Constant: int, 0
+                  Goto: is
+                Label: di
+                  Continue: 
+                For: 
+                  Assignment: =
+                    ID: vj
+                    Constant: int, 0
+                  BinaryOp: <
+                    ID: vj
+                    Constant: int, 1
+                  UnaryOp: ++
+                    ID: vj
+                  Compound: 
+                    Goto: di
+                    Label: kz
+                      EmptyStatement: 
+            For: 
+              Assignment: =
+                ID: rc
+                Constant: int, 0
+              BinaryOp: <
+                ID: rc
+                Constant: int, 2
+              UnaryOp: ++
+                ID: rc
+              Compound: 
+                Decl: bc, [], [], []
+                  TypeDecl: bc, []
+                    IdentifierType: ['int']
+                  TernaryOp: 
+                    ID: rc
+                    ID: rc
+                    ID: nm
+                Decl: ud, [], [], []
+                  TypeDecl: ud, []
+                    IdentifierType: ['int']
+                  TernaryOp: 
+                    ID: bc
+                    TernaryOp: 
+                      UnaryOp: *
+                        ID: av
+                      Constant: int, 0
+                      ID: rc
+                    Constant: int, 1
+                If: 
+                  BinaryOp: !=
+                    ID: ud
+                    Constant: int, 0
+                  If: 
+                    BinaryOp: !=
+                      UnaryOp: *
+                        ID: av
+                      Constant: int, 0
+                    Goto: kz
+            For: 
+              Assignment: =
+                ID: wk
+                Constant: int, 0
+              BinaryOp: <
+                ID: wk
+                Constant: int, 3
+              UnaryOp: ++
+                ID: wk
+              UnaryOp: ++
+                UnaryOp: *
+                  ID: av
+            Assignment: =
+              ID: av
+              Constant: int, 0

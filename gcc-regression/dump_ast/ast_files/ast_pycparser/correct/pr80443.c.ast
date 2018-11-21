@@ -1,0 +1,84 @@
+FileAST: 
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Struct: S
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['int']
+          Constant: int, 1
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      Struct: S
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['int']
+          Constant: int, 1
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['signed', 'char']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['signed', 'char']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['signed', 'char']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        ID: f
+        Compound: 
+          Decl: g, [], [], []
+            TypeDecl: g, []
+              IdentifierType: ['signed', 'char']
+            StructRef: .
+              ID: b
+              ID: a
+          If: 
+            ID: g
+            Assignment: =
+              StructRef: .
+                ID: b
+                ID: a
+              UnaryOp: ~
+                BinaryOp: +
+                  Constant: int, 1
+                  BinaryOp: ||
+                    ID: d
+                    StructRef: .
+                      ID: c
+                      ID: a
+          If: 
+            BinaryOp: &&
+              BinaryOp: <
+                StructRef: .
+                  ID: b
+                  ID: a
+                ID: g
+              StructRef: .
+                ID: b
+                ID: a
+            Assignment: =
+              ID: g
+              Constant: int, 0
+          If: 
+            BinaryOp: >
+              StructRef: .
+                ID: b
+                ID: a
+              StructRef: .
+                ID: c
+                ID: a
+            Assignment: =
+              StructRef: .
+                ID: b
+                ID: a
+              ID: g
+          Assignment: =
+            StructRef: .
+              ID: c
+              ID: a
+            ID: e

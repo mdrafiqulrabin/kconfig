@@ -1,0 +1,46 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: b, [], [], []
+    ArrayDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['int']
+      Constant: int, 5
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      For: 
+        Assignment: =
+          ID: c
+          Constant: int, 0
+        BinaryOp: <
+          ID: c
+          Constant: int, 4
+        UnaryOp: p++
+          ID: c
+        Assignment: =
+          ArrayRef: 
+            ID: b
+            ID: c
+          BinaryOp: >
+            ArrayRef: 
+              ID: b
+              BinaryOp: +
+                ID: c
+                Constant: int, 1
+            BinaryOp: >
+              BinaryOp: >
+                ArrayRef: 
+                  ID: b
+                  Constant: int, 0
+                Constant: int, 0
+              ID: a
+      Return: 
+        Constant: int, 0

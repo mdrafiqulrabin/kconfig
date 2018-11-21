@@ -1,0 +1,42 @@
+FileAST: 
+  Typedef: s_t, [], ['typedef']
+    TypeDecl: s_t, []
+      Struct: s
+        Decl: value, [], [], []
+          TypeDecl: value, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: read, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: var, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: var, ['const']
+                IdentifierType: ['s_t']
+        TypeDecl: read, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        StructRef: ->
+          ID: var
+          ID: value
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: extern_var, [], ['extern'], []
+        TypeDecl: extern_var, []
+          Union: u
+      Return: 
+        FuncCall: 
+          ID: read
+          ExprList: 
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['s_t']
+              UnaryOp: &
+                ID: extern_var

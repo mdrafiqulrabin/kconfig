@@ -1,0 +1,85 @@
+FileAST: 
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+      Constant: int, 200
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['char']
+  Decl: abort, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: b
+        Constant: int, 100
+      For: 
+        ID: b
+        UnaryOp: p--
+          ID: b
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: a
+              ID: b
+            Constant: int, 2
+          Assignment: =
+            ArrayRef: 
+              ID: a
+              BinaryOp: +
+                ID: b
+                Constant: int, 2
+            Constant: int, 1
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: !=
+              ArrayRef: 
+                ID: a
+                Constant: int, 0
+              Constant: int, 0
+            BinaryOp: !=
+              ArrayRef: 
+                ID: a
+                Constant: int, 1
+              Constant: int, 2
+          BinaryOp: !=
+            ArrayRef: 
+              ID: a
+              Constant: int, 2
+            Constant: int, 2
+        FuncCall: 
+          ID: abort
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 3
+        BinaryOp: <
+          ID: i
+          Constant: int, 103
+        UnaryOp: p++
+          ID: i
+        If: 
+          BinaryOp: !=
+            ArrayRef: 
+              ID: a
+              ID: i
+            Constant: int, 1
+          FuncCall: 
+            ID: abort
+      Return: 
+        Constant: int, 0

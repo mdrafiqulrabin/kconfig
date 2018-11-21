@@ -1,0 +1,44 @@
+c_files/pr83014.c:10:3: warning: array index 5 is past the end of the array (which contains 5 elements) [-Warray-bounds]
+  data[5] = 0;
+  ^    ~
+c_files/pr83014.c:8:3: note: array 'data' declared here
+  int data[5];
+  ^
+1 warning generated.
+TranslationUnitDecl 0x7fb81800a4d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb81800aa20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb81800a740 '__int128'
+|-TypedefDecl 0x7fb81800aa90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb81800a760 'unsigned __int128'
+|-TypedefDecl 0x7fb81800ad68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb81800ab70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb81800aae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb81800ae00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb81800adc0 'char *'
+|   `-BuiltinType 0x7fb81800a560 'char'
+|-TypedefDecl 0x7fb81800b0c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb81800b070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb81800aee0 'struct __va_list_tag'
+|     `-Record 0x7fb81800ae58 '__va_list_tag'
+`-FunctionDecl 0x7fb81805fa00 <c_files/pr83014.c:5:1, line:12:1> line:6:1 foo 'int (void)'
+  `-CompoundStmt 0x7fb81805fe58 <line:7:1, line:12:1>
+    |-DeclStmt 0x7fb81805fbc0 <line:8:3, col:14>
+    | `-VarDecl 0x7fb81805fb60 <col:3, col:13> col:7 used data 'int [5]'
+    |-BinaryOperator 0x7fb81805fca8 <line:9:3, col:13> 'int' '='
+    | |-ArraySubscriptExpr 0x7fb81805fc60 <col:3, col:9> 'int' lvalue
+    | | |-ImplicitCastExpr 0x7fb81805fc48 <col:3> 'int *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fb81805fbd8 <col:3> 'int [5]' lvalue Var 0x7fb81805fb60 'data' 'int [5]'
+    | | `-IntegerLiteral 0x7fb81805fc00 <col:8> 'int' 0
+    | `-IntegerLiteral 0x7fb81805fc88 <col:13> 'int' 0
+    |-BinaryOperator 0x7fb81805fd78 <line:10:3, col:13> 'int' '='
+    | |-ArraySubscriptExpr 0x7fb81805fd30 <col:3, col:9> 'int' lvalue
+    | | |-ImplicitCastExpr 0x7fb81805fd18 <col:3> 'int *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fb81805fcd0 <col:3> 'int [5]' lvalue Var 0x7fb81805fb60 'data' 'int [5]'
+    | | `-IntegerLiteral 0x7fb81805fcf8 <col:8> 'int' 5
+    | `-IntegerLiteral 0x7fb81805fd58 <col:13> 'int' 0
+    `-ReturnStmt 0x7fb81805fe40 <line:11:3, col:16>
+      `-ImplicitCastExpr 0x7fb81805fe28 <col:10, col:16> 'int' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7fb81805fe00 <col:10, col:16> 'int' lvalue
+          |-ImplicitCastExpr 0x7fb81805fde8 <col:10> 'int *' <ArrayToPointerDecay>
+          | `-DeclRefExpr 0x7fb81805fda0 <col:10> 'int [5]' lvalue Var 0x7fb81805fb60 'data' 'int [5]'
+          `-IntegerLiteral 0x7fb81805fdc8 <col:15> 'int' 0

@@ -1,0 +1,14 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: cp, [], [], []
+            PtrDecl: []
+              TypeDecl: cp, []
+                IdentifierType: ['char']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Pragma: acc parallel present(cp[7:9])
+      EmptyStatement: 

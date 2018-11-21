@@ -1,0 +1,22 @@
+FileAST: 
+  FuncDef: 
+    Decl: p, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: p, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_prefetch
+        ExprList: 
+          UnaryOp: &
+            ArrayRef: 
+              ID: a
+              ID: i

@@ -1,0 +1,135 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: node
+      Decl: next, [], [], []
+        PtrDecl: []
+          TypeDecl: next, []
+            Struct: node
+      Decl: prev, [], [], []
+        PtrDecl: []
+          TypeDecl: prev, []
+            Struct: node
+  Decl: node, [], [], []
+    TypeDecl: node, []
+      Struct: node
+  Decl: None, [], [], []
+    Struct: head
+      Decl: first, [], [], []
+        PtrDecl: []
+          TypeDecl: first, []
+            Struct: node
+  Decl: heads, [], [], []
+    ArrayDecl: []
+      TypeDecl: heads, []
+        Struct: head
+      Constant: int, 5
+  Decl: k, [], [], []
+    TypeDecl: k, []
+      IdentifierType: ['int']
+    Constant: int, 2
+  Decl: head, [], [], []
+    PtrDecl: []
+      TypeDecl: head, []
+        Struct: head
+    UnaryOp: &
+      ArrayRef: 
+        ID: heads
+        Constant: int, 2
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            Struct: node
+      Assignment: =
+        StructRef: .
+          ID: node
+          ID: next
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: node
+          ID: prev
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          ID: head
+      Assignment: =
+        StructRef: ->
+          ID: head
+          ID: first
+        UnaryOp: &
+          ID: node
+      Decl: n, [], [], []
+        PtrDecl: []
+          TypeDecl: n, []
+            Struct: node
+        StructRef: ->
+          ID: head
+          ID: first
+      Decl: h, [], [], []
+        PtrDecl: []
+          TypeDecl: h, []
+            Struct: head
+        UnaryOp: &
+          ArrayRef: 
+            ID: heads
+            ID: k
+      Assignment: =
+        StructRef: .
+          ArrayRef: 
+            ID: heads
+            Constant: int, 2
+          ID: first
+        StructRef: ->
+          ID: n
+          ID: next
+      If: 
+        BinaryOp: ==
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            StructRef: ->
+              ID: n
+              ID: prev
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            ID: h
+        Assignment: =
+          ID: p
+          StructRef: ->
+            ID: h
+            ID: first
+        Assignment: =
+          ID: p
+          StructRef: ->
+            StructRef: ->
+              ID: n
+              ID: prev
+            ID: next
+      Return: 
+        UnaryOp: !
+          BinaryOp: ==
+            ID: p
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+              Constant: int, 0

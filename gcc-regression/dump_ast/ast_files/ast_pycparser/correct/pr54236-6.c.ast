@@ -1,0 +1,142 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: inode
+      Decl: i_gid, [], [], []
+        TypeDecl: i_gid, []
+          IdentifierType: ['unsigned', 'int']
+  Decl: None, [], [], []
+    Struct: iattr
+      Decl: ia_valid, [], [], []
+        TypeDecl: ia_valid, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: ia_gid, [], [], []
+        TypeDecl: ia_gid, []
+          IdentifierType: ['unsigned', 'int']
+  Decl: None, [], [], []
+    Struct: task_struct
+      Decl: flags, [], [], []
+        TypeDecl: flags, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: cap_effective, [], [], []
+        TypeDecl: cap_effective, []
+          IdentifierType: ['unsigned', 'int']
+  Decl: in_group_p, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'int']
+      TypeDecl: in_group_p, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: get_current, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: get_current, []
+            Struct: task_struct
+    Compound: 
+      Decl: current, [], [], []
+        PtrDecl: []
+          TypeDecl: current, []
+            Struct: task_struct
+      Return: 
+        ID: current
+  FuncDef: 
+    Decl: capable, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: cap, [], [], []
+            TypeDecl: cap, []
+              IdentifierType: ['int']
+        TypeDecl: capable, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &
+          StructRef: ->
+            FuncCall: 
+              ID: get_current
+            ID: cap_effective
+          BinaryOp: <<
+            Constant: int, 1
+            ID: cap
+        Compound: 
+          Assignment: |=
+            StructRef: ->
+              FuncCall: 
+                ID: get_current
+              ID: flags
+            Constant: int, 0x00000100
+          Return: 
+            Constant: int, 1
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: inode_change_ok, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: inode, [], [], []
+            PtrDecl: []
+              TypeDecl: inode, []
+                Struct: inode
+          Decl: attr, [], [], []
+            PtrDecl: []
+              TypeDecl: attr, []
+                Struct: iattr
+        TypeDecl: inode_change_ok, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: retval, [], [], []
+        TypeDecl: retval, []
+          IdentifierType: ['int']
+        UnaryOp: -
+          Constant: int, 1
+      Decl: ia_valid, [], [], []
+        TypeDecl: ia_valid, []
+          IdentifierType: ['unsigned', 'int']
+        StructRef: ->
+          ID: attr
+          ID: ia_valid
+      If: 
+        BinaryOp: &
+          ID: ia_valid
+          Constant: int, 512
+        Goto: fine
+      If: 
+        BinaryOp: &&
+          BinaryOp: &&
+            BinaryOp: &
+              ID: ia_valid
+              Constant: int, 4
+            BinaryOp: &&
+              UnaryOp: !
+                FuncCall: 
+                  ID: in_group_p
+                  ExprList: 
+                    StructRef: ->
+                      ID: attr
+                      ID: ia_gid
+              BinaryOp: !=
+                StructRef: ->
+                  ID: attr
+                  ID: ia_gid
+                StructRef: ->
+                  ID: inode
+                  ID: i_gid
+          UnaryOp: !
+            FuncCall: 
+              ID: capable
+              ExprList: 
+                Constant: int, 0
+        Goto: error
+      Label: fine
+        Assignment: =
+          ID: retval
+          Constant: int, 0
+      Label: error
+        Return: 
+          ID: retval

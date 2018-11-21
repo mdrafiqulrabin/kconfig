@@ -1,0 +1,108 @@
+c_files/pr63618.c:7:14: error: __float128 is not supported on this target
+static const __float128 cf = 0.1E+10Q;
+             ^
+c_files/pr63618.c:10:13: error: __float128 is not supported on this target
+f128_square(__float128 x)
+            ^
+c_files/pr63618.c:9:1: error: __float128 is not supported on this target
+__float128
+^
+c_files/pr63618.c:16:9: error: __float128 is not supported on this target
+f128_p3(__float128 x)
+        ^
+c_files/pr63618.c:15:1: error: __float128 is not supported on this target
+__float128
+^
+c_files/pr63618.c:22:19: error: __float128 is not supported on this target
+cond_f128_square (__float128 x, int p)
+                  ^
+c_files/pr63618.c:21:1: error: __float128 is not supported on this target
+__float128
+^
+c_files/pr63618.c:32:3: error: __float128 is not supported on this target
+  __float128 x = cond_f128_square (cf, 1);
+  ^
+8 errors generated.
+TranslationUnitDecl 0x7fa3740264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa374026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa374026740 '__int128'
+|-TypedefDecl 0x7fa374026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa374026760 'unsigned __int128'
+|-TypedefDecl 0x7fa374026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa374026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa374026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa374026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa374026dc0 'char *'
+|   `-BuiltinType 0x7fa374026560 'char'
+|-TypedefDecl 0x7fa3740270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa374027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa374026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa374026e58 '__va_list_tag'
+|-VarDecl 0x7fa374027138 <c_files/pr63618.c:7:1, col:30> col:25 used cf 'const __float128' static cinit
+| `-FloatingLiteral 0x7fa3740271d8 <col:30> '__float128' 1.000000e+09
+|-FunctionDecl 0x7fa374825af8 <line:9:1, line:13:1> line:10:1 used f128_square '__float128 (__float128)'
+| |-ParmVarDecl 0x7fa374825a28 <col:13, col:24> col:24 used x '__float128'
+| `-CompoundStmt 0x7fa374825c58 <line:11:1, line:13:1>
+|   `-ReturnStmt 0x7fa374825c40 <line:12:3, col:14>
+|     `-BinaryOperator 0x7fa374825c18 <col:10, col:14> '__float128' '*'
+|       |-ImplicitCastExpr 0x7fa374825be8 <col:10> '__float128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fa374825b98 <col:10> '__float128' lvalue ParmVar 0x7fa374825a28 'x' '__float128'
+|       `-ImplicitCastExpr 0x7fa374825c00 <col:14> '__float128' <LValueToRValue>
+|         `-DeclRefExpr 0x7fa374825bc0 <col:14> '__float128' lvalue ParmVar 0x7fa374825a28 'x' '__float128'
+|-FunctionDecl 0x7fa374825d20 <line:15:1, line:19:1> line:16:1 used f128_p3 '__float128 (__float128)'
+| |-ParmVarDecl 0x7fa374825c90 <col:9, col:20> col:20 used x '__float128'
+| `-CompoundStmt 0x7fa374825ee8 <line:17:1, line:19:1>
+|   `-ReturnStmt 0x7fa374825ed0 <line:18:3, col:18>
+|     `-BinaryOperator 0x7fa374825ea8 <col:10, col:18> '__float128' '*'
+|       |-BinaryOperator 0x7fa374825e40 <col:10, col:14> '__float128' '*'
+|       | |-ImplicitCastExpr 0x7fa374825e10 <col:10> '__float128' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fa374825dc0 <col:10> '__float128' lvalue ParmVar 0x7fa374825c90 'x' '__float128'
+|       | `-ImplicitCastExpr 0x7fa374825e28 <col:14> '__float128' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fa374825de8 <col:14> '__float128' lvalue ParmVar 0x7fa374825c90 'x' '__float128'
+|       `-ImplicitCastExpr 0x7fa374825e90 <col:18> '__float128' <LValueToRValue>
+|         `-DeclRefExpr 0x7fa374825e68 <col:18> '__float128' lvalue ParmVar 0x7fa374825c90 'x' '__float128'
+|-FunctionDecl 0x7fa374826078 <line:21:1, line:28:1> line:22:1 used cond_f128_square '__float128 (__float128, int)'
+| |-ParmVarDecl 0x7fa374825f20 <col:19, col:30> col:30 used x '__float128'
+| |-ParmVarDecl 0x7fa374825f98 <col:33, col:37> col:37 used p 'int'
+| `-CompoundStmt 0x7fa374826420 <line:23:1, line:28:1>
+|   |-BinaryOperator 0x7fa374826228 <line:24:3, col:17> '__float128' '='
+|   | |-DeclRefExpr 0x7fa374826120 <col:3> '__float128' lvalue ParmVar 0x7fa374825f20 'x' '__float128'
+|   | `-CallExpr 0x7fa3748261e0 <col:7, col:17> '__float128'
+|   |   |-ImplicitCastExpr 0x7fa3748261c8 <col:7> '__float128 (*)(__float128)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fa374826148 <col:7> '__float128 (__float128)' Function 0x7fa374825d20 'f128_p3' '__float128 (__float128)'
+|   |   `-ImplicitCastExpr 0x7fa374826210 <col:16> '__float128' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fa374826170 <col:16> '__float128' lvalue ParmVar 0x7fa374825f20 'x' '__float128'
+|   |-IfStmt 0x7fa374826390 <line:25:3, line:26:23>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fa374826278 <line:25:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fa374826250 <col:7> 'int' lvalue ParmVar 0x7fa374825f98 'p' 'int'
+|   | |-BinaryOperator 0x7fa374826368 <line:26:5, col:23> '__float128' '='
+|   | | |-DeclRefExpr 0x7fa374826290 <col:5> '__float128' lvalue ParmVar 0x7fa374825f20 'x' '__float128'
+|   | | `-CallExpr 0x7fa374826320 <col:9, col:23> '__float128'
+|   | |   |-ImplicitCastExpr 0x7fa374826308 <col:9> '__float128 (*)(__float128)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fa3748262b8 <col:9> '__float128 (__float128)' Function 0x7fa374825af8 'f128_square' '__float128 (__float128)'
+|   | |   `-ImplicitCastExpr 0x7fa374826350 <col:21> '__float128' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fa3748262e0 <col:21> 'const __float128' lvalue Var 0x7fa374027138 'cf' 'const __float128'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fa374826408 <line:27:3, col:10>
+|     `-ImplicitCastExpr 0x7fa3748263f0 <col:10> '__float128' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa3748263c8 <col:10> '__float128' lvalue ParmVar 0x7fa374825f20 'x' '__float128'
+`-FunctionDecl 0x7fa3748264a0 <line:30:1, line:34:1> line:30:5 main 'int ()'
+  `-CompoundStmt 0x7fa374826870 <line:31:1, line:34:1>
+    |-DeclStmt 0x7fa3748266b0 <line:32:3, col:42>
+    | `-VarDecl 0x7fa374826550 <col:3, col:41> col:14 used x '__float128' cinit
+    |   `-CallExpr 0x7fa374826660 <col:18, col:41> '__float128'
+    |     |-ImplicitCastExpr 0x7fa374826648 <col:18> '__float128 (*)(__float128, int)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fa3748265b0 <col:18> '__float128 (__float128, int)' Function 0x7fa374826078 'cond_f128_square' '__float128 (__float128, int)'
+    |     |-ImplicitCastExpr 0x7fa374826698 <col:36> '__float128' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fa3748265d8 <col:36> 'const __float128' lvalue Var 0x7fa374027138 'cf' 'const __float128'
+    |     `-IntegerLiteral 0x7fa374826600 <col:40> 'int' 1
+    `-ReturnStmt 0x7fa374826858 <line:33:3, col:22>
+      `-CStyleCastExpr 0x7fa3748267d8 <col:10, col:22> 'int' <NoOp>
+        `-ParenExpr 0x7fa3748267b8 <col:15, col:22> 'int'
+          `-BinaryOperator 0x7fa374826748 <col:16, col:20> 'int' '<'
+            |-ImplicitCastExpr 0x7fa374826718 <col:16> '__float128' <LValueToRValue>
+            | `-DeclRefExpr 0x7fa3748266c8 <col:16> '__float128' lvalue Var 0x7fa374826550 'x' '__float128'
+            `-ImplicitCastExpr 0x7fa374826730 <col:20> '__float128' <LValueToRValue>
+              `-DeclRefExpr 0x7fa3748266f0 <col:20> 'const __float128' lvalue Var 0x7fa374027138 'cf' 'const __float128'

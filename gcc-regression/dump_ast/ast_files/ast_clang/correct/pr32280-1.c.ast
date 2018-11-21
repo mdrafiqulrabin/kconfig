@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7f9a520264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9a52026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9a52026740 '__int128'
+|-TypedefDecl 0x7f9a52026a90 <<invalid sloc>> <invalid sloc> implicit referenced __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9a52026760 'unsigned __int128'
+|-TypedefDecl 0x7f9a52026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9a52026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9a52026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9a52026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9a52026dc0 'char *'
+|   `-BuiltinType 0x7f9a52026560 'char'
+|-TypedefDecl 0x7f9a520270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9a52027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9a52026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9a52026e58 '__va_list_tag'
+|-FunctionDecl 0x7f9a52077460 <c_files/pr32280-1.c:5:1, line:9:1> line:6:1 t1 '__uint128_t (__uint128_t)'
+| |-ParmVarDecl 0x7f9a52027150 <col:5, col:17> col:17 used a '__uint128_t':'unsigned __int128'
+| `-CompoundStmt 0x7f9a520775e0 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7f9a520775c8 <line:8:3, col:15>
+|     `-BinaryOperator 0x7f9a520775a0 <col:10, col:15> '__uint128_t':'unsigned __int128' '<<'
+|       |-ImplicitCastExpr 0x7f9a52077588 <col:10> '__uint128_t':'unsigned __int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f9a52077540 <col:10> '__uint128_t':'unsigned __int128' lvalue ParmVar 0x7f9a52027150 'a' '__uint128_t':'unsigned __int128'
+|       `-IntegerLiteral 0x7f9a52077568 <col:15> 'int' 8
+`-FunctionDecl 0x7f9a52077698 <line:11:1, line:15:1> line:12:1 t2 '__uint128_t (__uint128_t)'
+  |-ParmVarDecl 0x7f9a52077610 <col:5, col:17> col:17 used a '__uint128_t':'unsigned __int128'
+  `-CompoundStmt 0x7f9a520777d8 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7f9a520777c0 <line:14:3, col:15>
+      `-BinaryOperator 0x7f9a52077798 <col:10, col:15> '__uint128_t':'unsigned __int128' '>>'
+        |-ImplicitCastExpr 0x7f9a52077780 <col:10> '__uint128_t':'unsigned __int128' <LValueToRValue>
+        | `-DeclRefExpr 0x7f9a52077738 <col:10> '__uint128_t':'unsigned __int128' lvalue ParmVar 0x7f9a52077610 'a' '__uint128_t':'unsigned __int128'
+        `-IntegerLiteral 0x7f9a52077760 <col:15> 'int' 8

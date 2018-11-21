@@ -1,0 +1,42 @@
+c_files/pr81921.c:5:72: warning: unknown attribute '__artificial__' ignored [-Wunknown-attributes]
+extern __inline int  __attribute__((__gnu_inline__, __always_inline__, __artificial__, target("sse2")))
+                                                                       ^
+1 warning generated.
+TranslationUnitDecl 0x7f9aab8238d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9aab823e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9aab823b40 '__int128'
+|-TypedefDecl 0x7f9aab823e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9aab823b60 'unsigned __int128'
+|-TypedefDecl 0x7f9aab824168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9aab823f70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9aab823ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9aab824200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9aab8241c0 'char *'
+|   `-BuiltinType 0x7f9aab823960 'char'
+|-TypedefDecl 0x7f9aab8244c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9aab824470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9aab8242e0 'struct __va_list_tag'
+|     `-Record 0x7f9aab824258 '__va_list_tag'
+|-FunctionDecl 0x7f9aac026a68 <c_files/pr81921.c:5:1, line:9:1> line:6:1 used _mm_loadu_si128 'int (const int *)' extern inline
+| |-ParmVarDecl 0x7f9aab8245a0 <col:18, col:29> col:29 used __P 'const int *'
+| |-CompoundStmt 0x7f9aac026c50 <line:7:1, line:9:1>
+| | `-ReturnStmt 0x7f9aac026c38 <line:8:5, col:13>
+| |   `-ImplicitCastExpr 0x7f9aac026c20 <col:12, col:13> 'int' <LValueToRValue>
+| |     `-UnaryOperator 0x7f9aac026c00 <col:12, col:13> 'const int' lvalue prefix '*'
+| |       `-ImplicitCastExpr 0x7f9aac026be8 <col:13> 'const int *' <LValueToRValue>
+| |         `-DeclRefExpr 0x7f9aac026bc0 <col:13> 'const int *' lvalue ParmVar 0x7f9aab8245a0 '__P' 'const int *'
+| |-TargetAttr 0x7f9aac026b08 <line:5:88, col:101> "sse2"
+| |-AlwaysInlineAttr 0x7f9aac026b60 <col:53> always_inline
+| `-GNUInlineAttr 0x7f9aac026b70 <col:37>
+`-FunctionDecl 0x7f9aac026db0 <line:11:1, line:14:1> line:11:39 foo 'void (void *)'
+  |-ParmVarDecl 0x7f9aac026cf0 <col:44, col:50> col:50 used p 'void *'
+  |-CompoundStmt 0x7f9aac027028 <line:12:1, line:14:1>
+  | `-DeclStmt 0x7f9aac027010 <line:13:3, col:39>
+  |   `-VarDecl 0x7f9aac026ec0 <col:3, col:38> col:16 x 'volatile int' cinit
+  |     `-CallExpr 0x7f9aac026fb0 <col:20, col:38> 'int'
+  |       |-ImplicitCastExpr 0x7f9aac026f98 <col:20> 'int (*)(const int *)' <FunctionToPointerDecay>
+  |       | `-DeclRefExpr 0x7f9aac026f20 <col:20> 'int (const int *)' Function 0x7f9aac026a68 '_mm_loadu_si128' 'int (const int *)'
+  |       `-ImplicitCastExpr 0x7f9aac026ff8 <col:37> 'const int *' <BitCast>
+  |         `-ImplicitCastExpr 0x7f9aac026fe0 <col:37> 'void *' <LValueToRValue>
+  |           `-DeclRefExpr 0x7f9aac026f48 <col:37> 'void *' lvalue ParmVar 0x7f9aac026cf0 'p' 'void *'
+  `-TargetAttr 0x7f9aac026e50 <line:11:21, col:35> "ssse3"

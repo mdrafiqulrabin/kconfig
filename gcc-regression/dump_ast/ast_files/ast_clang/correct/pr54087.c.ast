@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7f81c28264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f81c2826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f81c2826740 '__int128'
+|-TypedefDecl 0x7f81c2826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f81c2826760 'unsigned __int128'
+|-TypedefDecl 0x7f81c2826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f81c2826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f81c2826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f81c2826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f81c2826dc0 'char *'
+|   `-BuiltinType 0x7f81c2826560 'char'
+|-TypedefDecl 0x7f81c28270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f81c2827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f81c2826ee0 'struct __va_list_tag'
+|     `-Record 0x7f81c2826e58 '__va_list_tag'
+|-VarDecl 0x7f81c2827138 <c_files/pr54087.c:8:1, col:5> col:5 used a 'int'
+|-FunctionDecl 0x7f81c3025ac8 <line:10:1, line:13:1> line:10:5 f1 'int (int)'
+| |-ParmVarDecl 0x7f81c3025a00 <col:8, col:12> col:12 used p 'int'
+| `-CompoundStmt 0x7f81c3025e58 <line:11:1, line:13:1>
+|   `-ReturnStmt 0x7f81c3025e40 <line:12:3, col:57>
+|     `-BinaryOperator 0x7f81c3025e18 <col:10, col:57> 'int' '=='
+|       |-AtomicExpr 0x7f81c3025da8 <col:10, col:52> 'int'
+|       | |-UnaryOperator 0x7f81c3025ca8 <col:29, col:30> 'int *' prefix '&'
+|       | | `-DeclRefExpr 0x7f81c3025c58 <col:30> 'int' lvalue Var 0x7f81c2827138 'a' 'int'
+|       | |-IntegerLiteral 0x7f81c3025cf0 <<built-in>:16:26> 'int' 5
+|       | `-ImplicitCastExpr 0x7f81c3025d90 <c_files/pr54087.c:12:33> 'int' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7f81c3025cc8 <col:33> 'int' lvalue ParmVar 0x7f81c3025a00 'p' 'int'
+|       `-IntegerLiteral 0x7f81c3025df8 <col:57> 'int' 0
+|-FunctionDecl 0x7f81c3025b98 <col:10> col:10 implicit used __atomic_sub_fetch 'void ()' extern
+|-FunctionDecl 0x7f81c3025f20 <line:15:1, line:18:1> line:15:5 f2 'int (int)'
+| |-ParmVarDecl 0x7f81c3025e90 <col:8, col:12> col:12 used p 'int'
+| `-CompoundStmt 0x7f81c3026298 <line:16:1, line:18:1>
+|   `-ReturnStmt 0x7f81c3026280 <line:17:3, col:61>
+|     `-BinaryOperator 0x7f81c3026258 <col:10, col:61> 'int' '=='
+|       |-BinaryOperator 0x7f81c3026210 <col:10, col:56> 'int' '-'
+|       | |-AtomicExpr 0x7f81c3026180 <col:10, col:52> 'int'
+|       | | |-UnaryOperator 0x7f81c30260a8 <col:29, col:30> 'int *' prefix '&'
+|       | | | `-DeclRefExpr 0x7f81c3026080 <col:30> 'int' lvalue Var 0x7f81c2827138 'a' 'int'
+|       | | |-IntegerLiteral 0x7f81c30260f0 <<built-in>:16:26> 'int' 5
+|       | | `-ImplicitCastExpr 0x7f81c3026168 <c_files/pr54087.c:17:33> 'int' <LValueToRValue>
+|       | |   `-DeclRefExpr 0x7f81c30260c8 <col:33> 'int' lvalue ParmVar 0x7f81c3025e90 'p' 'int'
+|       | `-ImplicitCastExpr 0x7f81c30261f8 <col:56> 'int' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7f81c30261d0 <col:56> 'int' lvalue ParmVar 0x7f81c3025e90 'p' 'int'
+|       `-IntegerLiteral 0x7f81c3026238 <col:61> 'int' 0
+`-FunctionDecl 0x7f81c3025fc0 <col:10> col:10 implicit used __atomic_fetch_sub 'void ()' extern

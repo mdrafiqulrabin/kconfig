@@ -1,0 +1,1121 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Struct: S
+        Decl: f1, [], [], []
+          TypeDecl: f1, []
+            IdentifierType: ['int']
+        Decl: f2, [], [], []
+          TypeDecl: f2, []
+            IdentifierType: ['int']
+        Decl: f3, [], [], []
+          TypeDecl: f3, []
+            IdentifierType: ['int']
+        Decl: f4, [], [], []
+          TypeDecl: f4, []
+            IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: T
+      Decl: f3, [], [], []
+        TypeDecl: f3, []
+          IdentifierType: ['short']
+      Decl: f2, [], [], []
+        TypeDecl: f2, []
+          IdentifierType: ['short']
+      Decl: f1, [], [], []
+        TypeDecl: f1, []
+          IdentifierType: ['short']
+      Decl: f4, [], [], []
+        TypeDecl: f4, []
+          IdentifierType: ['short']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  Decl: z, [], [], []
+    TypeDecl: z, []
+      IdentifierType: ['unsigned', 'long']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                Struct: T
+          Decl: q, [], [], []
+            PtrDecl: []
+              TypeDecl: q, []
+                Struct: T
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        ID: x
+        UnaryOp: p++
+          ID: x
+        Compound: 
+          Decl: h, [], [], []
+            TypeDecl: h, []
+              Struct: S
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              Struct: T
+          Decl: r, [], [], []
+            PtrDecl: []
+              TypeDecl: r, []
+                Struct: T
+          Assignment: =
+            ID: h
+            ID: a
+          Assignment: =
+            ID: g
+            Constant: int, 0
+          Assignment: =
+            ID: r
+            BinaryOp: +
+              BinaryOp: +
+                ID: p
+                BinaryOp: *
+                  Constant: int, 2
+                  BinaryOp: +
+                    ID: c
+                    Constant: int, 4
+              Constant: int, 1
+          Assignment: =
+            ID: j
+            UnaryOp: *
+              ID: r
+          Assignment: =
+            ID: r
+            ID: p
+          Assignment: =
+            ID: f
+            BinaryOp: -
+              StructRef: ->
+                ID: r
+                ID: f1
+              Constant: int, 1
+          Assignment: =
+            ID: b
+            BinaryOp: +
+              UnaryOp: +
+                Constant: float, 1.0
+              BinaryOp: *
+                ID: f
+                ID: f
+          Assignment: =
+            ID: i
+            BinaryOp: /
+              BinaryOp: +
+                StructRef: ->
+                  ID: r
+                  ID: f2
+                StructRef: .
+                  ID: j
+                  ID: f2
+              Constant: int, 2
+          Assignment: =
+            ID: f
+            BinaryOp: -
+              StructRef: ->
+                ID: r
+                ID: f3
+              Constant: int, 1
+          Assignment: +=
+            ID: b
+            BinaryOp: -
+              Constant: float, 1.0
+              BinaryOp: *
+                BinaryOp: *
+                  ID: i
+                  ID: f
+                ID: f
+          Assignment: =
+            ID: f
+            BinaryOp: -
+              StructRef: ->
+                ID: r
+                ID: f4
+              Constant: int, 1
+          If: 
+            ID: b
+            Assignment: +=
+              ID: b
+              BinaryOp: -
+                UnaryOp: -
+                  Constant: float, 1.0
+                BinaryOp: *
+                  ID: i
+                  ID: f
+          If: 
+            BinaryOp: /
+              ID: b
+              ID: w
+            Compound: 
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f1
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f1
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f2
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f2
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f3
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f3
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f4
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f4
+              Assignment: =
+                ID: g
+                Constant: int, 1
+          UnaryOp: p++
+            ID: r
+          Assignment: =
+            ID: f
+            StructRef: ->
+              ID: r
+              ID: f1
+          Assignment: =
+            ID: i
+            BinaryOp: /
+              BinaryOp: +
+                StructRef: ->
+                  ID: r
+                  ID: f2
+                StructRef: .
+                  ID: j
+                  ID: f2
+              Constant: int, 2
+          Assignment: =
+            ID: f
+            BinaryOp: -
+              StructRef: ->
+                ID: r
+                ID: f3
+              Constant: int, 1
+          Assignment: +=
+            ID: b
+            BinaryOp: -
+              Constant: float, 1.0
+              BinaryOp: *
+                BinaryOp: *
+                  ID: i
+                  ID: f
+                ID: f
+          Assignment: =
+            ID: i
+            StructRef: ->
+              ID: r
+              ID: f4
+          If: 
+            BinaryOp: /
+              BinaryOp: *
+                ID: b
+                Constant: int, 65535UL
+              ID: w
+            Compound: 
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f1
+                BinaryOp: *
+                  Constant: float, 10.0
+                  StructRef: ->
+                    ID: r
+                    ID: f1
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f2
+                BinaryOp: *
+                  Constant: float, 10.0
+                  StructRef: ->
+                    ID: r
+                    ID: f2
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f3
+                BinaryOp: *
+                  Constant: float, 10.0
+                  StructRef: ->
+                    ID: r
+                    ID: f3
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f4
+                BinaryOp: *
+                  Constant: float, 10.0
+                  StructRef: ->
+                    ID: r
+                    ID: f4
+              Assignment: +=
+                ID: g
+                Constant: float, 10.0
+          UnaryOp: p++
+            ID: r
+          Assignment: =
+            ID: f
+            StructRef: ->
+              ID: r
+              ID: f1
+          Assignment: =
+            ID: z
+            BinaryOp: *
+              Constant: int, 5UL
+              ID: i
+          Assignment: =
+            ID: f
+            StructRef: ->
+              ID: r
+              ID: f2
+          Assignment: =
+            ID: i
+            BinaryOp: /
+              BinaryOp: +
+                StructRef: ->
+                  ID: r
+                  ID: f3
+                StructRef: .
+                  ID: j
+                  ID: f3
+              Constant: int, 2
+          Assignment: =
+            ID: b
+            BinaryOp: *
+              BinaryOp: *
+                UnaryOp: -
+                  ID: i
+                ID: f
+              ID: f
+          Assignment: =
+            ID: i
+            BinaryOp: /
+              BinaryOp: +
+                StructRef: ->
+                  ID: r
+                  ID: f4
+                StructRef: .
+                  ID: j
+                  ID: f4
+              Constant: int, 2
+          If: 
+            BinaryOp: /
+              BinaryOp: *
+                ID: b
+                Constant: int, 65535UL
+              Constant: float, 25.0f
+            Compound: 
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f1
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f1
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f2
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f2
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f3
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f3
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f4
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f4
+              Assignment: +=
+                ID: g
+                Constant: float, 8.0
+          UnaryOp: p++
+            ID: r
+          Assignment: =
+            ID: f
+            BinaryOp: -
+              StructRef: ->
+                ID: r
+                ID: f1
+              StructRef: .
+                ID: j
+                ID: f1
+          Assignment: =
+            ID: b
+            BinaryOp: *
+              BinaryOp: *
+                BinaryOp: *
+                  BinaryOp: *
+                    Constant: int, 1
+                    Constant: float, 2.0
+                  ID: i
+                ID: f
+              ID: f
+          Assignment: =
+            ID: f
+            StructRef: ->
+              ID: r
+              ID: f2
+          Assignment: +=
+            ID: b
+            BinaryOp: *
+              Constant: float, 4.0
+              ID: f
+          Assignment: =
+            ID: i
+            BinaryOp: /
+              StructRef: ->
+                ID: r
+                ID: f3
+              Constant: int, 2
+          Assignment: =
+            ID: f
+            BinaryOp: -
+              StructRef: ->
+                ID: r
+                ID: f4
+              Constant: int, 1
+          If: 
+            BinaryOp: *
+              ID: b
+              Constant: int, 1
+            Compound: 
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f1
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f1
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f2
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f2
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f3
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f3
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f4
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f4
+              Assignment: +=
+                ID: g
+                Constant: float, 8.0
+          Assignment: =
+            ID: b
+            BinaryOp: *
+              BinaryOp: *
+                Constant: float, 4.0
+                Constant: int, 1
+              ID: f
+          If: 
+            BinaryOp: /
+              BinaryOp: *
+                ID: b
+                Constant: int, 65535UL
+              Constant: float, 25.0f
+            Compound: 
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f1
+                BinaryOp: *
+                  Constant: float, 20.0
+                  StructRef: ->
+                    ID: r
+                    ID: f1
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f2
+                BinaryOp: *
+                  Constant: float, 20.0
+                  StructRef: ->
+                    ID: r
+                    ID: f2
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f3
+                BinaryOp: *
+                  Constant: float, 20.0
+                  StructRef: ->
+                    ID: r
+                    ID: f3
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f4
+                BinaryOp: *
+                  Constant: float, 20.0
+                  StructRef: ->
+                    ID: r
+                    ID: f4
+              Assignment: +=
+                ID: g
+                Constant: float, 20.0
+          Assignment: =
+            ID: b
+            BinaryOp: *
+              Constant: int, 5
+              BinaryOp: -
+                Constant: float, 0.0
+                ID: i
+          If: 
+            BinaryOp: <
+              ID: b
+              Constant: int, 0
+            Compound: 
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f1
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f1
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f2
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f2
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f3
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f3
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f4
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f4
+              Assignment: +=
+                ID: g
+                Constant: float, 8.0
+          Assignment: =
+            ID: r
+            BinaryOp: +
+              ID: p
+              BinaryOp: *
+                Constant: int, 2
+                BinaryOp: +
+                  ID: c
+                  Constant: int, 4
+          Assignment: =
+            ID: i
+            BinaryOp: +
+              StructRef: ->
+                ID: r
+                ID: f1
+              StructRef: .
+                ID: j
+                ID: f1
+          Assignment: =
+            ID: b
+            BinaryOp: *
+              BinaryOp: *
+                BinaryOp: *
+                  Constant: int, 1
+                  Constant: float, 2.0
+                ID: i
+              Constant: int, 1
+          Assignment: =
+            ID: f
+            BinaryOp: -
+              StructRef: ->
+                ID: r
+                ID: f2
+              Constant: int, 1
+          Assignment: =
+            ID: i
+            BinaryOp: /
+              BinaryOp: +
+                StructRef: ->
+                  ID: r
+                  ID: f3
+                StructRef: .
+                  ID: j
+                  ID: f3
+              Constant: int, 2
+          Assignment: =
+            ID: b
+            BinaryOp: *
+              BinaryOp: *
+                BinaryOp: *
+                  Constant: int, 5
+                  BinaryOp: -
+                    Constant: float, 0.0
+                    ID: i
+                ID: f
+              ID: f
+          Assignment: =
+            ID: i
+            BinaryOp: /
+              BinaryOp: +
+                StructRef: ->
+                  ID: r
+                  ID: f4
+                StructRef: .
+                  ID: j
+                  ID: f4
+              Constant: int, 2
+          If: 
+            BinaryOp: /
+              BinaryOp: *
+                ID: b
+                Constant: int, 65535UL
+              Constant: float, 25.0f
+            Compound: 
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f1
+                BinaryOp: *
+                  Constant: float, 10.0
+                  StructRef: ->
+                    ID: r
+                    ID: f1
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f2
+                BinaryOp: *
+                  Constant: float, 10.0
+                  StructRef: ->
+                    ID: r
+                    ID: f2
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f3
+                BinaryOp: *
+                  Constant: float, 10.0
+                  StructRef: ->
+                    ID: r
+                    ID: f3
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f4
+                BinaryOp: *
+                  Constant: float, 10.0
+                  StructRef: ->
+                    ID: r
+                    ID: f4
+              Assignment: +=
+                ID: g
+                Constant: float, 10.0
+          UnaryOp: p++
+            ID: r
+          Assignment: =
+            ID: f
+            StructRef: ->
+              ID: r
+              ID: f1
+          Assignment: =
+            ID: b
+            BinaryOp: *
+              BinaryOp: *
+                Constant: int, 5UL
+                ID: i
+              ID: f
+          Assignment: =
+            ID: i
+            BinaryOp: /
+              BinaryOp: +
+                StructRef: ->
+                  ID: r
+                  ID: f2
+                StructRef: .
+                  ID: j
+                  ID: f2
+              Constant: int, 2
+          Assignment: =
+            ID: f
+            BinaryOp: -
+              StructRef: ->
+                ID: r
+                ID: f3
+              Constant: int, 1
+          Assignment: =
+            ID: b
+            BinaryOp: *
+              BinaryOp: *
+                BinaryOp: *
+                  Constant: int, 5
+                  BinaryOp: -
+                    Constant: float, 0.0
+                    ID: i
+                ID: f
+              ID: f
+          Assignment: =
+            ID: f
+            BinaryOp: -
+              StructRef: ->
+                ID: r
+                ID: f4
+              Constant: int, 1
+          If: 
+            BinaryOp: /
+              BinaryOp: *
+                ID: b
+                Constant: int, 65535UL
+              Constant: float, 25.0f
+            Compound: 
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f1
+                BinaryOp: *
+                  Constant: float, 40.0
+                  StructRef: ->
+                    ID: r
+                    ID: f1
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f2
+                BinaryOp: *
+                  Constant: float, 40.0
+                  StructRef: ->
+                    ID: r
+                    ID: f2
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f3
+                BinaryOp: *
+                  Constant: float, 40.0
+                  StructRef: ->
+                    ID: r
+                    ID: f3
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f4
+                BinaryOp: *
+                  Constant: float, 40.0
+                  StructRef: ->
+                    ID: r
+                    ID: f4
+              Assignment: +=
+                ID: g
+                Constant: float, 40.0
+          UnaryOp: p++
+            ID: r
+          Assignment: =
+            ID: i
+            BinaryOp: +
+              StructRef: ->
+                ID: r
+                ID: f1
+              StructRef: .
+                ID: j
+                ID: f1
+          Assignment: =
+            ID: b
+            BinaryOp: *
+              BinaryOp: *
+                Constant: int, 5
+                ID: i
+              ID: f
+          Assignment: =
+            ID: f
+            StructRef: ->
+              ID: r
+              ID: f2
+          Assignment: =
+            ID: b
+            BinaryOp: *
+              BinaryOp: *
+                Constant: float, 4.0
+                ID: f
+              ID: f
+          Assignment: =
+            ID: f
+            StructRef: ->
+              ID: r
+              ID: f3
+          Assignment: =
+            ID: i
+            BinaryOp: /
+              BinaryOp: +
+                StructRef: ->
+                  ID: r
+                  ID: f4
+                StructRef: .
+                  ID: j
+                  ID: f4
+              Constant: int, 2
+          Assignment: =
+            ID: b
+            BinaryOp: *
+              BinaryOp: *
+                BinaryOp: *
+                  Constant: int, 5
+                  BinaryOp: -
+                    Constant: float, 0.0
+                    ID: i
+                ID: f
+              ID: f
+          If: 
+            BinaryOp: *
+              ID: b
+              Constant: float, 25.0f
+            Compound: 
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f1
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f1
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f2
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f2
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f3
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f3
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f4
+                BinaryOp: *
+                  Constant: float, 8.0
+                  StructRef: ->
+                    ID: r
+                    ID: f4
+              Assignment: +=
+                ID: g
+                Constant: float, 8.0
+          Assignment: =
+            ID: r
+            BinaryOp: +
+              ID: p
+              BinaryOp: *
+                Constant: int, 4
+                BinaryOp: +
+                  ID: c
+                  Constant: int, 4
+          Assignment: =
+            ID: i
+            BinaryOp: /
+              StructRef: ->
+                ID: r
+                ID: f1
+              Constant: int, 2
+          Assignment: =
+            ID: b
+            BinaryOp: *
+              Constant: int, 5
+              BinaryOp: +
+                Constant: float, 1.0
+                ID: i
+          Assignment: =
+            ID: i
+            BinaryOp: +
+              StructRef: ->
+                ID: r
+                ID: f2
+              StructRef: .
+                ID: j
+                ID: f2
+          Assignment: =
+            ID: f
+            BinaryOp: -
+              StructRef: ->
+                ID: r
+                ID: f3
+              Constant: int, 1
+          Assignment: =
+            ID: b
+            BinaryOp: *
+              BinaryOp: *
+                BinaryOp: *
+                  Constant: int, 5
+                  BinaryOp: -
+                    Constant: float, 0.0
+                    ID: i
+                ID: f
+              ID: f
+          Assignment: =
+            ID: i
+            BinaryOp: /
+              BinaryOp: +
+                StructRef: ->
+                  ID: r
+                  ID: f4
+                StructRef: .
+                  ID: j
+                  ID: f4
+              Constant: int, 2
+          If: 
+            BinaryOp: /
+              BinaryOp: *
+                ID: b
+                Constant: int, 65535UL
+              Constant: float, 25.0f
+            Compound: 
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f1
+                BinaryOp: *
+                  Constant: float, 5.0
+                  StructRef: ->
+                    ID: r
+                    ID: f1
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f2
+                BinaryOp: *
+                  Constant: float, 5.0
+                  StructRef: ->
+                    ID: r
+                    ID: f2
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f3
+                BinaryOp: *
+                  Constant: float, 5.0
+                  StructRef: ->
+                    ID: r
+                    ID: f3
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f4
+                BinaryOp: *
+                  Constant: float, 5.0
+                  StructRef: ->
+                    ID: r
+                    ID: f4
+              Assignment: +=
+                ID: g
+                Constant: float, 5.0
+          Assignment: =
+            ID: b
+            BinaryOp: *
+              Constant: int, 5
+              BinaryOp: +
+                Constant: float, 1.0
+                ID: i
+          If: 
+            BinaryOp: <
+              ID: b
+              Constant: int, 0
+            Compound: 
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f1
+                BinaryOp: *
+                  Constant: float, 5.0
+                  StructRef: ->
+                    ID: r
+                    ID: f1
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f2
+                BinaryOp: *
+                  Constant: float, 5.0
+                  StructRef: ->
+                    ID: r
+                    ID: f2
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f3
+                BinaryOp: *
+                  Constant: float, 5.0
+                  StructRef: ->
+                    ID: r
+                    ID: f3
+              Assignment: +=
+                StructRef: .
+                  ID: h
+                  ID: f4
+                BinaryOp: *
+                  Constant: float, 5.0
+                  StructRef: ->
+                    ID: r
+                    ID: f4
+              Assignment: +=
+                ID: g
+                Constant: float, 5.0
+          Assignment: =
+            StructRef: ->
+              ID: q
+              ID: f1
+            BinaryOp: /
+              BinaryOp: -
+                BinaryOp: +
+                  StructRef: .
+                    ID: h
+                    ID: f1
+                  BinaryOp: /
+                    ID: g
+                    Constant: int, 2
+                Constant: int, 1
+              ID: g
+          Assignment: =
+            StructRef: ->
+              ID: q
+              ID: f2
+            BinaryOp: /
+              BinaryOp: -
+                BinaryOp: +
+                  StructRef: .
+                    ID: h
+                    ID: f2
+                  BinaryOp: /
+                    ID: g
+                    Constant: int, 2
+                Constant: int, 1
+              ID: g
+          Assignment: =
+            StructRef: ->
+              ID: q
+              ID: f3
+            BinaryOp: /
+              BinaryOp: -
+                BinaryOp: +
+                  StructRef: .
+                    ID: h
+                    ID: f3
+                  BinaryOp: /
+                    ID: g
+                    Constant: int, 2
+                Constant: int, 1
+              ID: g
+          Assignment: =
+            StructRef: ->
+              ID: q
+              ID: f4
+            BinaryOp: /
+              BinaryOp: -
+                BinaryOp: +
+                  StructRef: .
+                    ID: h
+                    ID: f4
+                  BinaryOp: /
+                    ID: g
+                    Constant: int, 2
+                Constant: int, 1
+              ID: g
+          UnaryOp: p++
+            ID: p
+          UnaryOp: p++
+            ID: q

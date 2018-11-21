@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7f94a20264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f94a2026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f94a2026740 '__int128'
+|-TypedefDecl 0x7f94a2026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f94a2026760 'unsigned __int128'
+|-TypedefDecl 0x7f94a2026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f94a2026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f94a2026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f94a2026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f94a2026dc0 'char *'
+|   `-BuiltinType 0x7f94a2026560 'char'
+|-TypedefDecl 0x7f94a20270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f94a2027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f94a2026ee0 'struct __va_list_tag'
+|     `-Record 0x7f94a2026e58 '__va_list_tag'
+|-TypedefDecl 0x7f94a20271a0 <c_files/pr72816.c:5:1, col:21> col:19 referenced A 'const int []'
+| `-IncompleteArrayType 0x7f94a2027150 'const int []' 
+|   `-QualType 0x7f94a20265c1 'const int' const
+|     `-BuiltinType 0x7f94a20265c0 'int'
+`-RecordDecl 0x7f94a2077400 <line:6:1, line:9:1> line:6:8 struct S definition
+  |-FieldDecl 0x7f94a20774c8 <line:7:3, col:7> col:7 a 'int'
+  `-FieldDecl 0x7f94a2077540 <line:8:3, col:5> col:5 b 'A':'const int []'

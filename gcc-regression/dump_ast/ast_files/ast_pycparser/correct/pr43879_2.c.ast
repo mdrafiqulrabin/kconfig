@@ -1,0 +1,63 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: TBL
+      Decl: p, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            ParamList: 
+              Decl: i, [], [], []
+                PtrDecl: []
+                  TypeDecl: i, []
+                    IdentifierType: ['int']
+            TypeDecl: p, []
+              IdentifierType: ['int']
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: i, [], [], []
+          TypeDecl: i, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  Decl: baz, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: i, [], [], []
+          PtrDecl: []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+      TypeDecl: baz, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            PtrDecl: []
+              TypeDecl: i, []
+                IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          UnaryOp: *
+            ID: i
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: i
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          UnaryOp: *
+            ID: i
+      Return: 
+        UnaryOp: *
+          ID: i
+  Decl: tbl, [], [], []
+    TypeDecl: tbl, []
+      Struct: TBL
+    InitList: 
+      ID: foo

@@ -1,0 +1,107 @@
+TranslationUnitDecl 0x7f81310264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8131026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8131026740 '__int128'
+|-TypedefDecl 0x7f8131026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8131026760 'unsigned __int128'
+|-TypedefDecl 0x7f8131026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8131026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8131026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8131026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8131026dc0 'char *'
+|   `-BuiltinType 0x7f8131026560 'char'
+|-TypedefDecl 0x7f81310270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8131027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8131026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8131026e58 '__va_list_tag'
+|-FunctionDecl 0x7f8131825a00 <c_files/pr40676.c:1:1, col:15> col:12 used f1 'int ()' extern
+|-FunctionDecl 0x7f8131825bb8 <line:2:1, col:20> col:12 used f2 'int (void *)' extern
+| `-ParmVarDecl 0x7f8131825af0 <col:15, col:19> col:20 'void *'
+|-FunctionDecl 0x7f8131825d38 <line:3:1, col:20> col:14 used f3 'void *(int)' extern
+| `-ParmVarDecl 0x7f8131825c70 <col:17> col:20 'int'
+|-VarDecl 0x7f8131825df0 <line:4:1, col:5> col:5 used xmsih 'int'
+|-TypedefDecl 0x7f8131825e68 <line:5:1, col:24> col:24 referenced XWCHAR 'unsigned short'
+| `-BuiltinType 0x7f8131026640 'unsigned short'
+|-FunctionDecl 0x7f8131826058 <line:7:1, line:12:1> line:7:21 used xstrlenW 'unsigned int (const XWCHAR *)' inline
+| |-ParmVarDecl 0x7f8131825f48 <col:31, col:45> col:45 used str 'const XWCHAR *'
+| `-CompoundStmt 0x7f8131826378 <line:8:1, line:12:1>
+|   |-DeclStmt 0x7f81318261a8 <line:9:5, col:26>
+|   | `-VarDecl 0x7f8131826108 <col:5, col:23> col:19 used s 'const XWCHAR *' cinit
+|   |   `-ImplicitCastExpr 0x7f8131826190 <col:23> 'const XWCHAR *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8131826168 <col:23> 'const XWCHAR *' lvalue ParmVar 0x7f8131825f48 'str' 'const XWCHAR *'
+|   |-WhileStmt 0x7f8131826280 <line:10:5, col:17>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f8131826220 <col:12, col:13> 'XWCHAR':'unsigned short' <LValueToRValue>
+|   | | `-UnaryOperator 0x7f8131826200 <col:12, col:13> 'const XWCHAR':'const unsigned short' lvalue prefix '*'
+|   | |   `-ImplicitCastExpr 0x7f81318261e8 <col:13> 'const XWCHAR *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f81318261c0 <col:13> 'const XWCHAR *' lvalue Var 0x7f8131826108 's' 'const XWCHAR *'
+|   | `-UnaryOperator 0x7f8131826260 <col:16, col:17> 'const XWCHAR *' postfix '++'
+|   |   `-DeclRefExpr 0x7f8131826238 <col:16> 'const XWCHAR *' lvalue Var 0x7f8131826108 's' 'const XWCHAR *'
+|   `-ReturnStmt 0x7f8131826360 <line:11:5, col:16>
+|     `-ImplicitCastExpr 0x7f8131826348 <col:12, col:16> 'unsigned int' <IntegralCast>
+|       `-BinaryOperator 0x7f8131826320 <col:12, col:16> 'long' '-'
+|         |-ImplicitCastExpr 0x7f81318262f0 <col:12> 'const XWCHAR *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f81318262a0 <col:12> 'const XWCHAR *' lvalue Var 0x7f8131826108 's' 'const XWCHAR *'
+|         `-ImplicitCastExpr 0x7f8131826308 <col:16> 'const XWCHAR *' <LValueToRValue>
+|           `-DeclRefExpr 0x7f81318262c8 <col:16> 'const XWCHAR *' lvalue ParmVar 0x7f8131825f48 'str' 'const XWCHAR *'
+|-FunctionDecl 0x7f8131826478 <line:15:1, line:27:1> line:15:12 used msi_dialog_register_class 'int (void)' static
+| `-CompoundStmt 0x7f8131826aa8 <line:16:1, line:27:1>
+|   |-DeclStmt 0x7f8131826588 <line:17:5, col:12>
+|   | `-VarDecl 0x7f8131826528 <col:5, col:9> col:9 used cls 'int'
+|   |-IfStmt 0x7f8131826720 <line:19:5, line:20:16>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f81318266c8 <line:19:9, col:19> 'int' prefix '!'
+|   | | `-CallExpr 0x7f8131826680 <col:10, col:19> 'int'
+|   | |   |-ImplicitCastExpr 0x7f8131826668 <col:10> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7f81318265a0 <col:10> 'int (void *)' Function 0x7f8131825bb8 'f2' 'int (void *)'
+|   | |   `-ImplicitCastExpr 0x7f81318266b0 <col:14, col:15> 'void *' <BitCast>
+|   | |     `-UnaryOperator 0x7f8131826618 <col:14, col:15> 'int *' prefix '&'
+|   | |       `-DeclRefExpr 0x7f81318265c8 <col:15> 'int' lvalue Var 0x7f8131826528 'cls' 'int'
+|   | |-ReturnStmt 0x7f8131826708 <line:20:9, col:16>
+|   | | `-IntegerLiteral 0x7f81318266e8 <col:16> 'int' 0
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f8131826880 <line:21:5, line:22:16>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8131826828 <line:21:9, col:19> 'int' prefix '!'
+|   | | `-CallExpr 0x7f81318267e0 <col:10, col:19> 'int'
+|   | |   |-ImplicitCastExpr 0x7f81318267c8 <col:10> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7f8131826758 <col:10> 'int (void *)' Function 0x7f8131825bb8 'f2' 'int (void *)'
+|   | |   `-ImplicitCastExpr 0x7f8131826810 <col:14, col:15> 'void *' <BitCast>
+|   | |     `-UnaryOperator 0x7f81318267a8 <col:14, col:15> 'int *' prefix '&'
+|   | |       `-DeclRefExpr 0x7f8131826780 <col:15> 'int' lvalue Var 0x7f8131826528 'cls' 'int'
+|   | |-ReturnStmt 0x7f8131826868 <line:22:9, col:16>
+|   | | `-IntegerLiteral 0x7f8131826848 <col:16> 'int' 0
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8131826978 <line:23:5, col:16> 'int' '='
+|   | |-DeclRefExpr 0x7f81318268b8 <col:5> 'int' lvalue Var 0x7f8131825df0 'xmsih' 'int'
+|   | `-CallExpr 0x7f8131826950 <col:13, col:16> 'int'
+|   |   `-ImplicitCastExpr 0x7f8131826938 <col:13> 'int (*)()' <FunctionToPointerDecay>
+|   |     `-DeclRefExpr 0x7f81318268e0 <col:13> 'int ()' Function 0x7f8131825a00 'f1' 'int ()'
+|   |-IfStmt 0x7f8131826a38 <line:24:5, line:25:16>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f81318269e0 <line:24:9, col:10> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f81318269c8 <col:10> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f81318269a0 <col:10> 'int' lvalue Var 0x7f8131825df0 'xmsih' 'int'
+|   | |-ReturnStmt 0x7f8131826a20 <line:25:9, col:16>
+|   | | `-IntegerLiteral 0x7f8131826a00 <col:16> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8131826a90 <line:26:5, col:12>
+|     `-IntegerLiteral 0x7f8131826a70 <col:12> 'int' 1
+`-FunctionDecl 0x7f8131826c08 <line:29:1, line:33:1> line:29:7 xmsi_dialog_create 'void *(const XWCHAR *)'
+  |-ParmVarDecl 0x7f8131826b00 <col:26, col:40> col:40 used szDialogName 'const XWCHAR *'
+  `-CompoundStmt 0x7f8131826f10 <line:30:1, line:33:1>
+    |-CallExpr 0x7f8131826d10 <line:31:5, col:31> 'int'
+    | `-ImplicitCastExpr 0x7f8131826cf8 <col:5> 'int (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f8131826ca8 <col:5> 'int (void)' Function 0x7f8131826478 'msi_dialog_register_class' 'int (void)'
+    `-ReturnStmt 0x7f8131826ef8 <line:32:5, col:37>
+      `-CallExpr 0x7f8131826eb0 <col:12, col:37> 'void *'
+        |-ImplicitCastExpr 0x7f8131826e98 <col:12> 'void *(*)(int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f8131826d38 <col:12> 'void *(int)' Function 0x7f8131825d38 'f3' 'void *(int)'
+        `-ImplicitCastExpr 0x7f8131826ee0 <col:15, col:36> 'int' <IntegralCast>
+          `-CallExpr 0x7f8131826e20 <col:15, col:36> 'unsigned int'
+            |-ImplicitCastExpr 0x7f8131826e08 <col:15> 'unsigned int (*)(const XWCHAR *)' <FunctionToPointerDecay>
+            | `-DeclRefExpr 0x7f8131826d60 <col:15> 'unsigned int (const XWCHAR *)' Function 0x7f8131826058 'xstrlenW' 'unsigned int (const XWCHAR *)'
+            `-ImplicitCastExpr 0x7f8131826e50 <col:24> 'const XWCHAR *' <LValueToRValue>
+              `-DeclRefExpr 0x7f8131826d88 <col:24> 'const XWCHAR *' lvalue ParmVar 0x7f8131826b00 'szDialogName' 'const XWCHAR *'

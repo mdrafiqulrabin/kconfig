@@ -1,0 +1,38 @@
+c_files/pr70878.c:8:27: warning: cast to 'char *' from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+ return __builtin_strcat ((char*)sp_r1, 0); /* { dg-warning "cast to pointer from integer of different size" } */
+                          ^
+1 warning generated.
+TranslationUnitDecl 0x7f9c9a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9c9a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9c9a026740 '__int128'
+|-TypedefDecl 0x7f9c9a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9c9a026760 'unsigned __int128'
+|-TypedefDecl 0x7f9c9a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9c9a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9c9a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9c9a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9c9a026dc0 'char *'
+|   `-BuiltinType 0x7f9c9a026560 'char'
+|-TypedefDecl 0x7f9c9a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9c9a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9c9a026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9c9a026e58 '__va_list_tag'
+|-FunctionDecl 0x7f9c9a825a00 <c_files/pr70878.c:5:1, line:9:1> line:5:8 sbrk 'void *()'
+| `-CompoundStmt 0x7f9c9a826360 <line:6:1, line:9:1>
+|   |-DeclStmt 0x7f9c9a825c18 <line:7:2, col:54>
+|   | `-VarDecl 0x7f9c9a825b60 <col:2, col:33> col:33 used sp_r1 'volatile unsigned int' register
+|   |   `-AsmLabelAttr 0x7f9c9a825bc0 <col:48> "ebx"
+|   `-ReturnStmt 0x7f9c9a826348 <line:8:2, col:42>
+|     `-ImplicitCastExpr 0x7f9c9a826330 <col:9, col:42> 'void *' <BitCast>
+|       `-CallExpr 0x7f9c9a8262e0 <col:9, col:42> 'char *'
+|         |-ImplicitCastExpr 0x7f9c9a8262c8 <col:9> 'char *(*)(char *, const char *)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7f9c9a825e20 <col:9> '<builtin fn type>' Function 0x7f9c9a825c70 '__builtin_strcat' 'char *(char *, const char *)'
+|         |-CStyleCastExpr 0x7f9c9a826250 <col:27, col:34> 'char *' <IntegralToPointer>
+|         | `-ImplicitCastExpr 0x7f9c9a825e88 <col:34> 'unsigned int' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7f9c9a825e48 <col:34> 'volatile unsigned int' lvalue Var 0x7f9c9a825b60 'sp_r1' 'volatile unsigned int'
+|         `-ImplicitCastExpr 0x7f9c9a826318 <col:41> 'const char *' <NullToPointer>
+|           `-IntegerLiteral 0x7f9c9a826278 <col:41> 'int' 0
+`-FunctionDecl 0x7f9c9a825c70 <col:9> col:9 implicit used __builtin_strcat 'char *(char *, const char *)' extern
+  |-ParmVarDecl 0x7f9c9a825d08 <<invalid sloc>> <invalid sloc> 'char *'
+  |-ParmVarDecl 0x7f9c9a825d68 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-NoThrowAttr 0x7f9c9a825dd8 <col:9> Implicit

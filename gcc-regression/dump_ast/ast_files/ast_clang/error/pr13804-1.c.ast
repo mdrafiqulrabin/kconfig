@@ -1,0 +1,54 @@
+c_files/pr13804-1.c:22:6: error: no member named 'c' in 'struct s0'
+  x0.c; /* { dg-error "'struct s0' has no member named 'c'" } */
+  ~~ ^
+c_files/pr13804-1.c:23:6: error: no member named 'c' in 'struct s0'
+  x1.c; /* { dg-error "'S0' {aka 'struct s0'} has no member named 'c'" } */
+  ~~ ^
+c_files/pr13804-1.c:24:6: error: no member named 'c' in 'union u0'
+  x2.c; /* { dg-error "'union u0' has no member named 'c'" } */
+  ~~ ^
+c_files/pr13804-1.c:25:6: error: no member named 'c' in 'union u0'
+  x3.c; /* { dg-error "'U0' {aka 'union u0'} has no member named 'c'" } */
+  ~~ ^
+c_files/pr13804-1.c:26:7: error: no member named 'c' in 'struct s0'
+  x4->c; /* { dg-error "'struct s0' has no member named 'c'" } */
+  ~~  ^
+c_files/pr13804-1.c:27:7: error: no member named 'c' in 'union u0'
+  x5->c; /* { dg-error "'union u0' has no member named 'c'" } */
+  ~~  ^
+6 errors generated.
+TranslationUnitDecl 0x7fc0028264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc002826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc002826740 '__int128'
+|-TypedefDecl 0x7fc002826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc002826760 'unsigned __int128'
+|-TypedefDecl 0x7fc002826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc002826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc002826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc002826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc002826dc0 'char *'
+|   `-BuiltinType 0x7fc002826560 'char'
+|-TypedefDecl 0x7fc0028270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc002827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc002826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc002826e58 '__va_list_tag'
+|-RecordDecl 0x7fc002827120 <c_files/pr13804-1.c:7:1, col:20> col:8 struct s0 definition
+| `-FieldDecl 0x7fc002877400 <col:13, col:17> col:17 a 'int'
+|-RecordDecl 0x7fc002877448 <line:8:1, col:20> col:7 union u0 definition
+| `-FieldDecl 0x7fc002877508 <col:12, col:17> col:17 b 'long'
+|-TypedefDecl 0x7fc0028775a0 <line:9:1, col:19> col:19 referenced S0 'struct s0':'struct s0'
+| `-ElaboratedType 0x7fc002877550 'struct s0' sugar
+|   `-RecordType 0x7fc0028271b0 'struct s0'
+|     `-Record 0x7fc002827120 's0'
+|-TypedefDecl 0x7fc002877650 <line:10:1, col:18> col:18 referenced U0 'union u0':'union u0'
+| `-ElaboratedType 0x7fc002877600 'union u0' sugar
+|   `-RecordType 0x7fc0028774d0 'union u0'
+|     `-Record 0x7fc002877448 'u0'
+|-VarDecl 0x7fc0028776c8 <line:12:1, col:11> col:11 used x0 'struct s0':'struct s0'
+|-VarDecl 0x7fc0028777a0 <line:13:1, col:4> col:4 used x1 'S0':'struct s0'
+|-VarDecl 0x7fc002877820 <line:14:1, col:10> col:10 used x2 'union u0':'union u0'
+|-VarDecl 0x7fc0028778b0 <line:15:1, col:4> col:4 used x3 'U0':'union u0'
+|-VarDecl 0x7fc002877990 <line:16:1, col:12> col:12 used x4 'struct s0 *'
+|-VarDecl 0x7fc002877a70 <line:17:1, col:11> col:11 used x5 'union u0 *'
+`-FunctionDecl 0x7fc002877b90 <line:19:1, line:28:1> line:20:1 f 'void (void)'
+  `-CompoundStmt 0x7fc002878118 <line:21:1, line:28:1>

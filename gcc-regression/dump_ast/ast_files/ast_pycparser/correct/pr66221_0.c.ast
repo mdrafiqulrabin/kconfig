@@ -1,0 +1,32 @@
+FileAST: 
+  Decl: test1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      TypeDecl: test1, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argc, [], [], []
+            TypeDecl: argc, []
+              IdentifierType: ['int']
+          Decl: argv, ['const'], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: argv, ['const']
+                  IdentifierType: ['char']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: test1
+          ExprList: 
+            ArrayRef: 
+              ID: argv
+              Constant: int, 0

@@ -1,0 +1,128 @@
+FileAST: 
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  Decl: mysprintf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: mysprintf, []
+        IdentifierType: ['void']
+  Decl: myfree, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: myfree, []
+        IdentifierType: ['void']
+  Decl: access, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: access, []
+        IdentifierType: ['int']
+  Decl: fopen, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: fopen, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: hprofStartupp, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: outputFileName, [], [], []
+            PtrDecl: []
+              TypeDecl: outputFileName, []
+                IdentifierType: ['char']
+          Decl: ctx, [], [], []
+            PtrDecl: []
+              TypeDecl: ctx, []
+                IdentifierType: ['char']
+        PtrDecl: []
+          TypeDecl: hprofStartupp, []
+            IdentifierType: ['char']
+    Compound: 
+      Decl: fileName, [], [], []
+        ArrayDecl: []
+          TypeDecl: fileName, []
+            IdentifierType: ['char']
+          Constant: int, 1000
+      Decl: fp, [], [], []
+        TypeDecl: fp, []
+          IdentifierType: ['int']
+      FuncCall: 
+        ID: mysprintf
+        ExprList: 
+          ID: fileName
+          ID: outputFileName
+      If: 
+        BinaryOp: ==
+          FuncCall: 
+            ID: access
+            ExprList: 
+              ID: fileName
+              Constant: int, 1
+          Constant: int, 0
+        Compound: 
+          FuncCall: 
+            ID: myfree
+            ExprList: 
+              ID: ctx
+          Return: 
+            Constant: int, 0
+      Assignment: =
+        ID: fp
+        FuncCall: 
+          ID: fopen
+          ExprList: 
+            ID: fileName
+            Constant: int, 0
+      If: 
+        BinaryOp: ==
+          ID: fp
+          Constant: int, 0
+        Compound: 
+          FuncCall: 
+            ID: myfree
+            ExprList: 
+              ID: ctx
+          Return: 
+            Constant: int, 0
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: outputFileName
+          ID: fp
+      Return: 
+        ID: ctx

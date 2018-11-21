@@ -1,0 +1,73 @@
+FileAST: 
+  Decl: kRecoveryInstallString, ['const'], [], []
+    ArrayDecl: []
+      TypeDecl: kRecoveryInstallString, ['const']
+        IdentifierType: ['char']
+    Constant: string, "NEW"
+  Decl: kRecoveryUpdateString, ['const'], [], []
+    ArrayDecl: []
+      TypeDecl: kRecoveryUpdateString, ['const']
+        IdentifierType: ['char']
+    Constant: string, "UPDATE"
+  Decl: kRecoveryUninstallationString1, ['const'], [], []
+    ArrayDecl: []
+      TypeDecl: kRecoveryUninstallationString1, ['const']
+        IdentifierType: ['char']
+    Constant: string, "INSTALL"
+  Decl: kRecoveryUninstallationString2, ['const'], [], []
+    ArrayDecl: []
+      TypeDecl: kRecoveryUninstallationString2, ['const']
+        IdentifierType: ['char']
+    Constant: string, "UNINSTALL"
+  Decl: zero, ['volatile', 'const'], [], []
+    TypeDecl: zero, ['volatile', 'const']
+      IdentifierType: ['int']
+    Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x1, [], [], []
+        TypeDecl: x1, []
+          IdentifierType: ['char']
+        ArrayRef: 
+          ID: kRecoveryInstallString
+          BinaryOp: +
+            ID: zero
+            Constant: int, 0
+      Decl: x2, [], [], []
+        TypeDecl: x2, []
+          IdentifierType: ['char']
+        ArrayRef: 
+          ID: kRecoveryUpdateString
+          BinaryOp: +
+            ID: zero
+            Constant: int, 0
+      Decl: x3, [], [], []
+        TypeDecl: x3, []
+          IdentifierType: ['char']
+        ArrayRef: 
+          ID: kRecoveryUninstallationString1
+          BinaryOp: +
+            ID: zero
+            Constant: int, 0
+      Decl: x4, [], [], []
+        TypeDecl: x4, []
+          IdentifierType: ['char']
+        ArrayRef: 
+          ID: kRecoveryUninstallationString2
+          BinaryOp: +
+            ID: zero
+            Constant: int, 0
+      Return: 
+        BinaryOp: ==
+          BinaryOp: +
+            BinaryOp: +
+              BinaryOp: +
+                ID: x1
+                ID: x2
+              ID: x3
+            ID: x4
+          Constant: int, 0

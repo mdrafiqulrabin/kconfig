@@ -1,0 +1,28 @@
+FileAST: 
+  FuncDef: 
+    Decl: write_reverse, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: addr, [], [], []
+            PtrDecl: []
+              TypeDecl: addr, []
+                IdentifierType: ['unsigned', 'long']
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['unsigned', 'long']
+        TypeDecl: write_reverse, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: reverse, [], [], []
+        TypeDecl: reverse, []
+          IdentifierType: ['unsigned', 'long']
+        FuncCall: 
+          ID: __builtin_bswap64
+          ExprList: 
+            ID: val
+      FuncCall: 
+        ID: __atomic_store_n
+        ExprList: 
+          ID: addr
+          ID: reverse
+          ID: __ATOMIC_RELAXED

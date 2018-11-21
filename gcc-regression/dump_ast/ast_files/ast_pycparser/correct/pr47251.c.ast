@@ -1,0 +1,45 @@
+FileAST: 
+  FuncDef: 
+    Decl: func, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['float']
+        TypeDecl: func, []
+          IdentifierType: ['unsigned', 'long', 'long']
+    Compound: 
+      Decl: dfa, ['const'], [], []
+        TypeDecl: dfa, ['const']
+          IdentifierType: ['float']
+        ID: a
+      Decl: hi, ['const'], [], []
+        TypeDecl: hi, ['const']
+          IdentifierType: ['unsigned', 'int']
+        BinaryOp: /
+          ID: dfa
+          Constant: float, 0x1p32f
+      Decl: lo, ['const'], [], []
+        TypeDecl: lo, ['const']
+          IdentifierType: ['unsigned', 'int']
+        BinaryOp: -
+          ID: dfa
+          BinaryOp: *
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['float']
+              ID: hi
+            Constant: float, 0x1p32f
+      Return: 
+        BinaryOp: |
+          BinaryOp: <<
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'long', 'long']
+              ID: hi
+            BinaryOp: *
+              Constant: int, 4
+              Constant: int, 8
+          ID: lo

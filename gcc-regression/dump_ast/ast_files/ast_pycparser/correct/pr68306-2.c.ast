@@ -1,0 +1,39 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Struct: None
+        Decl: tz_minuteswest, [], [], []
+          TypeDecl: tz_minuteswest, []
+            IdentifierType: ['int']
+        Decl: tz_dsttime, [], [], []
+          TypeDecl: tz_dsttime, []
+            IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Struct: None
+        Decl: tz_minuteswest, [], [], []
+          TypeDecl: tz_minuteswest, []
+            IdentifierType: ['int']
+        Decl: tz_dsttime, [], [], []
+          TypeDecl: tz_dsttime, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: b
+          ID: tz_minuteswest
+        StructRef: .
+          ID: a
+          ID: tz_minuteswest
+      Assignment: =
+        StructRef: .
+          ID: b
+          ID: tz_dsttime
+        StructRef: .
+          ID: a
+          ID: tz_dsttime

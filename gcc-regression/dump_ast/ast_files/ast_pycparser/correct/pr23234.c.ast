@@ -1,0 +1,150 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['double']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['double']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['double']
+        TypeDecl: f1, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: y0, [], [], []
+        TypeDecl: y0, []
+          IdentifierType: ['double']
+      Decl: y1, [], [], []
+        TypeDecl: y1, []
+          IdentifierType: ['double']
+      If: 
+        BinaryOp: ==
+          ID: a
+          Constant: float, 0.0
+        Compound: 
+          Assignment: =
+            ID: y0
+            BinaryOp: /
+              UnaryOp: -
+                ID: c
+              ID: b
+          Return: 
+            ID: y0
+      Assignment: =
+        ID: y0
+        BinaryOp: /
+          ID: c
+          ID: b
+      Assignment: =
+        ID: y1
+        BinaryOp: /
+          ID: a
+          ID: b
+      Return: 
+        BinaryOp: *
+          ID: y0
+          ID: y1
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['double']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['double']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['double']
+        TypeDecl: f2, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: y0, [], [], []
+        TypeDecl: y0, []
+          IdentifierType: ['double']
+      Decl: y1, [], [], []
+        TypeDecl: y1, []
+          IdentifierType: ['double']
+      Label: a_label
+        Label: another_label
+          If: 
+            BinaryOp: ==
+              ID: a
+              Constant: float, 0.0
+            Compound: 
+              Assignment: =
+                ID: y0
+                BinaryOp: /
+                  UnaryOp: -
+                    ID: c
+                  ID: b
+              Return: 
+                ID: y0
+      Assignment: =
+        ID: y0
+        BinaryOp: /
+          ID: c
+          ID: b
+      Assignment: =
+        ID: y1
+        BinaryOp: /
+          ID: a
+          ID: b
+      Return: 
+        BinaryOp: *
+          ID: y0
+          ID: y1
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['double']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['double']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['double']
+        TypeDecl: f3, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: y0, [], [], []
+        TypeDecl: y0, []
+          IdentifierType: ['double']
+      Decl: y1, [], [], []
+        TypeDecl: y1, []
+          IdentifierType: ['double']
+      Assignment: =
+        ID: y0
+        BinaryOp: /
+          UnaryOp: -
+            ID: c
+          ID: b
+      If: 
+        BinaryOp: ==
+          ID: a
+          Constant: float, 0.0
+        Compound: 
+          Return: 
+            ID: y0
+      Assignment: =
+        ID: y0
+        BinaryOp: /
+          ID: c
+          ID: b
+      Assignment: =
+        ID: y1
+        BinaryOp: /
+          ID: a
+          ID: b
+      Return: 
+        BinaryOp: *
+          ID: y0
+          ID: y1

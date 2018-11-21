@@ -1,0 +1,4 @@
+FileAST: 
+  Pragma: GCC diagnostic error "-Wunreachable-code"	 
+  Pragma: GCC diagnostic warning "-Wunreachable-code"	 
+  Pragma: GCC diagnostic ignored "-Wunreachable-code"	 

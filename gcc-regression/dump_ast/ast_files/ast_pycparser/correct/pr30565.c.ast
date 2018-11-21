@@ -1,0 +1,56 @@
+FileAST: 
+  Decl: snrdef, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: snrdef, []
+        IdentifierType: ['double']
+      Constant: int, 32
+  FuncDef: 
+    Decl: psycho_n1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ltmin, [], [], []
+            ArrayDecl: []
+              ArrayDecl: []
+                TypeDecl: ltmin, []
+                  IdentifierType: ['double']
+                Constant: int, 32
+              Constant: int, 2
+          Decl: stereo, [], [], []
+            TypeDecl: stereo, []
+              IdentifierType: ['int']
+        TypeDecl: psycho_n1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: k
+          Constant: int, 0
+        BinaryOp: <
+          ID: k
+          ID: stereo
+        UnaryOp: p++
+          ID: k
+        For: 
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          BinaryOp: <
+            ID: i
+            Constant: int, 32
+          UnaryOp: p++
+            ID: i
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                ID: ltmin
+                ID: k
+              ID: i
+            ArrayRef: 
+              ID: snrdef
+              ID: i

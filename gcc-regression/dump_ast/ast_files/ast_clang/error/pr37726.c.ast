@@ -1,0 +1,46 @@
+c_files/pr37726.c:9:3: error: function definition is not allowed here
+  {
+  ^
+c_files/pr37726.c:14:10: warning: implicit declaration of function 'bar' is invalid in C99 [-Wimplicit-function-declaration]
+  return bar ();
+         ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fd66b0058d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd66b005e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd66b005b40 '__int128'
+|-TypedefDecl 0x7fd66b005e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd66b005b60 'unsigned __int128'
+|-TypedefDecl 0x7fd66b006168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd66b005f70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd66b005ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd66b006200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd66b0061c0 'char *'
+|   `-BuiltinType 0x7fd66b005960 'char'
+|-TypedefDecl 0x7fd66b0064c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd66b006470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd66b0062e0 'struct __va_list_tag'
+|     `-Record 0x7fd66b006258 '__va_list_tag'
+|-FunctionDecl 0x7fd66a842030 <c_files/pr37726.c:5:1, line:15:1> line:5:5 used foo 'int (int)'
+| |-ParmVarDecl 0x7fd66b006538 <col:10, col:14> col:14 used parm 'int'
+| `-CompoundStmt 0x7fd66a842450 <line:6:1, line:15:1>
+|   |-DeclStmt 0x7fd66a8421a8 <line:7:3, col:14>
+|   | `-VarDecl 0x7fd66a842128 <col:3, col:13> col:7 used var 'int' cinit
+|   |   `-IntegerLiteral 0x7fd66a842188 <col:13> 'int' 0
+|   |-UnaryOperator 0x7fd66a842258 <line:12:3, col:7> 'int' postfix '++'
+|   | `-DeclRefExpr 0x7fd66a842230 <col:3> 'int' lvalue ParmVar 0x7fd66b006538 'parm' 'int'
+|   |-UnaryOperator 0x7fd66a8422a0 <line:13:3, col:6> 'int' postfix '++'
+|   | `-DeclRefExpr 0x7fd66a842278 <col:3> 'int' lvalue Var 0x7fd66a842128 'var' 'int'
+|   `-ReturnStmt 0x7fd66a842438 <line:14:3, col:15>
+|     `-CallExpr 0x7fd66a842410 <col:10, col:15> 'int'
+|       `-ImplicitCastExpr 0x7fd66a8423f8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7fd66a8423a8 <col:10> 'int ()' Function 0x7fd66a842310 'bar' 'int ()'
+|-FunctionDecl 0x7fd66a842310 <<invalid sloc>> col:10 implicit used bar 'int ()'
+`-FunctionDecl 0x7fd66a842558 <line:17:1, line:21:1> line:18:1 main 'int (void)'
+  `-CompoundStmt 0x7fd66a842730 <line:19:1, line:21:1>
+    `-ReturnStmt 0x7fd66a842718 <line:20:3, col:20>
+      `-BinaryOperator 0x7fd66a8426f0 <col:10, col:20> 'int' '-'
+        |-CallExpr 0x7fd66a8426a0 <col:10, col:16> 'int'
+        | |-ImplicitCastExpr 0x7fd66a842688 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fd66a842618 <col:10> 'int (int)' Function 0x7fd66a842030 'foo' 'int (int)'
+        | `-IntegerLiteral 0x7fd66a842640 <col:15> 'int' 4
+        `-IntegerLiteral 0x7fd66a8426d0 <col:20> 'int' 6

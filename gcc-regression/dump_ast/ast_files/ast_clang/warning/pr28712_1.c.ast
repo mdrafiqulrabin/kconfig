@@ -1,0 +1,28 @@
+c_files/pr28712_1.c:8:25: warning: attribute 'aligned' is ignored, place it after "struct" to apply attribute to type declaration [-Wignored-attributes]
+struct B __attribute__((aligned (sizeof (int))));
+                        ^
+1 warning generated.
+TranslationUnitDecl 0x7fc7588264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc758826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc758826740 '__int128'
+|-TypedefDecl 0x7fc758826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc758826760 'unsigned __int128'
+|-TypedefDecl 0x7fc758826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc758826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc758826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc758826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc758826dc0 'char *'
+|   `-BuiltinType 0x7fc758826560 'char'
+|-TypedefDecl 0x7fc7588270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc758827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc758826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc758826e58 '__va_list_tag'
+|-RecordDecl 0x7fc758827120 <c_files/pr28712_1.c:2:1, col:8> col:8 struct A
+|-VarDecl 0x7fc759025a80 <line:4:1, col:18> col:18 a 'struct A *' extern
+|-RecordDecl 0x7fc759025b20 prev 0x7fc758827120 <line:6:1, col:12> col:8 struct A definition
+| `-PackedAttr 0x7fc759025ba8 <col:29>
+|-RecordDecl 0x7fc759025bf0 <line:8:1, col:8> col:8 struct B
+|-VarDecl 0x7fc759025d90 <line:10:1, col:18> col:18 b 'struct B *' extern
+`-RecordDecl 0x7fc759025df0 prev 0x7fc759025bf0 <line:12:1, col:19> col:8 struct B definition
+  |-PackedAttr 0x7fc759025ed8 <col:36>
+  `-FieldDecl 0x7fc759025e90 <col:12, col:16> col:16 i 'int'

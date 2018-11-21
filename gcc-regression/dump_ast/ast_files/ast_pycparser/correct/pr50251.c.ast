@@ -1,0 +1,43 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  Decl: p, [], [], []
+    PtrDecl: []
+      TypeDecl: p, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: q, [], [], []
+        TypeDecl: q, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: p
+        FuncCall: 
+          ID: __builtin_stack_save
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          UnaryOp: &
+            ID: q
+      FuncCall: 
+        ID: __builtin_stack_restore
+        ExprList: 
+          ID: p
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          UnaryOp: &
+            ID: q
+      Return: 
+        Constant: int, 0

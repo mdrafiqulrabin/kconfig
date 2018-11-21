@@ -1,0 +1,76 @@
+FileAST: 
+  Decl: a, [], [], []
+    PtrDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['char']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        ID: c
+        Compound: 
+          Assignment: =
+            ID: b
+            Constant: int, 0
+          For: 
+            BinaryOp: <=
+              ID: b
+              Constant: int, 2
+            UnaryOp: p++
+              ID: b
+            Compound: 
+              Decl: h, [], [], []
+                PtrDecl: []
+                  PtrDecl: []
+                    TypeDecl: h, []
+                      IdentifierType: ['unsigned']
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['unsigned']
+                  UnaryOp: &
+                    ArrayRef: 
+                      ID: a
+                      ID: b
+              Assignment: =
+                UnaryOp: *
+                  ID: h
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned']
+                  FuncCall: 
+                    ID: __UINTPTR_TYPE__
+                    ExprList: 
+                      BinaryOp: !=
+                        BinaryOp: &&
+                          ID: g
+                          Assignment: =
+                            ID: e
+                            ID: d
+                        UnaryOp: p++
+                          ID: f

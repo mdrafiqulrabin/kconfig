@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7f88b10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f88b1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f88b1026740 '__int128'
+|-TypedefDecl 0x7f88b1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f88b1026760 'unsigned __int128'
+|-TypedefDecl 0x7f88b1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f88b1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f88b1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f88b1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f88b1026dc0 'char *'
+|   `-BuiltinType 0x7f88b1026560 'char'
+|-TypedefDecl 0x7f88b10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f88b1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f88b1026ee0 'struct __va_list_tag'
+|     `-Record 0x7f88b1026e58 '__va_list_tag'
+|-VarDecl 0x7f88b1027138 <c_files/pr69771.c:5:1, col:19> col:15 used a 'unsigned char' cinit
+| `-ImplicitCastExpr 0x7f88b1077400 <col:19> 'unsigned char' <IntegralCast>
+|   `-IntegerLiteral 0x7f88b10271d8 <col:19> 'int' 5
+|-VarDecl 0x7f88b1077430 <col:1, col:22> col:22 used c 'unsigned char'
+|-VarDecl 0x7f88b10774c0 <line:6:1, col:20> col:16 used b 'unsigned short' cinit
+| `-ImplicitCastExpr 0x7f88b1077540 <col:20> 'unsigned short' <IntegralCast>
+|   `-IntegerLiteral 0x7f88b1077520 <col:20> 'int' 0
+|-VarDecl 0x7f88b1077570 <line:7:1, col:14> col:10 used d 'unsigned int' cinit
+| `-ImplicitCastExpr 0x7f88b10775f0 <col:14> 'unsigned int' <IntegralCast>
+|   `-IntegerLiteral 0x7f88b10775d0 <col:14> 'int' 1985229328
+`-FunctionDecl 0x7f88b10776d0 <line:9:1, line:13:1> line:10:1 foo 'void (void)'
+  `-CompoundStmt 0x7f88b1077970 <line:11:1, line:13:1>
+    `-BinaryOperator 0x7f88b1077948 <line:12:3, col:21> 'unsigned char' '='
+      |-DeclRefExpr 0x7f88b1077768 <col:3> 'unsigned char' lvalue Var 0x7f88b1077430 'c' 'unsigned char'
+      `-ImplicitCastExpr 0x7f88b1077930 <col:7, col:21> 'unsigned char' <IntegralCast>
+        `-BinaryOperator 0x7f88b1077908 <col:7, col:21> 'unsigned int' '>>'
+          |-ImplicitCastExpr 0x7f88b10778f0 <col:7> 'unsigned int' <LValueToRValue>
+          | `-DeclRefExpr 0x7f88b1077790 <col:7> 'unsigned int' lvalue Var 0x7f88b1077570 'd' 'unsigned int'
+          `-UnaryOperator 0x7f88b10778d0 <col:12, col:21> 'int' prefix '~'
+            `-ParenExpr 0x7f88b10778b0 <col:13, col:21> 'int'
+              `-BinaryOperator 0x7f88b1077888 <col:14, col:20> 'int' '||'
+                |-ImplicitCastExpr 0x7f88b1077870 <col:14> 'int' <IntegralCast>
+                | `-ImplicitCastExpr 0x7f88b1077858 <col:14> 'unsigned char' <LValueToRValue>
+                |   `-DeclRefExpr 0x7f88b10777b8 <col:14> 'unsigned char' lvalue Var 0x7f88b1027138 'a' 'unsigned char'
+                `-UnaryOperator 0x7f88b1077838 <col:19, col:20> 'int' prefix '~'
+                  `-ImplicitCastExpr 0x7f88b1077820 <col:20> 'int' <IntegralCast>
+                    `-ImplicitCastExpr 0x7f88b1077808 <col:20> 'unsigned short' <LValueToRValue>
+                      `-DeclRefExpr 0x7f88b10777e0 <col:20> 'unsigned short' lvalue Var 0x7f88b10774c0 'b' 'unsigned short'

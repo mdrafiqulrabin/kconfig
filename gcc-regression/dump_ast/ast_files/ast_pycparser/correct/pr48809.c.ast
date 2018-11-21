@@ -1,0 +1,319 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Switch: 
+        ID: x
+        Compound: 
+          Case: 
+            Constant: int, 0
+            Assignment: =
+              ID: y
+              Constant: int, 1
+            Break: 
+          Case: 
+            Constant: int, 1
+            Assignment: =
+              ID: y
+              Constant: int, 7
+            Break: 
+          Case: 
+            Constant: int, 2
+            Assignment: =
+              ID: y
+              Constant: int, 2
+            Break: 
+          Case: 
+            Constant: int, 3
+            Assignment: =
+              ID: y
+              Constant: int, 19
+            Break: 
+          Case: 
+            Constant: int, 4
+            Assignment: =
+              ID: y
+              Constant: int, 5
+            Break: 
+          Case: 
+            Constant: int, 5
+            Assignment: =
+              ID: y
+              Constant: int, 17
+            Break: 
+          Case: 
+            Constant: int, 6
+            Assignment: =
+              ID: y
+              Constant: int, 31
+            Break: 
+          Case: 
+            Constant: int, 7
+            Assignment: =
+              ID: y
+              Constant: int, 8
+            Break: 
+          Case: 
+            Constant: int, 8
+            Assignment: =
+              ID: y
+              Constant: int, 28
+            Break: 
+          Case: 
+            Constant: int, 9
+            Assignment: =
+              ID: y
+              Constant: int, 16
+            Break: 
+          Case: 
+            Constant: int, 10
+            Assignment: =
+              ID: y
+              Constant: int, 31
+            Break: 
+          Case: 
+            Constant: int, 11
+            Assignment: =
+              ID: y
+              Constant: int, 12
+            Break: 
+          Case: 
+            Constant: int, 12
+            Assignment: =
+              ID: y
+              Constant: int, 15
+            Break: 
+          Case: 
+            Constant: int, 13
+            Assignment: =
+              ID: y
+              Constant: int, 111
+            Break: 
+          Case: 
+            Constant: int, 14
+            Assignment: =
+              ID: y
+              Constant: int, 17
+            Break: 
+          Case: 
+            Constant: int, 15
+            Assignment: =
+              ID: y
+              Constant: int, 10
+            Break: 
+          Case: 
+            Constant: int, 16
+            Assignment: =
+              ID: y
+              Constant: int, 31
+            Break: 
+          Case: 
+            Constant: int, 17
+            Assignment: =
+              ID: y
+              Constant: int, 7
+            Break: 
+          Case: 
+            Constant: int, 18
+            Assignment: =
+              ID: y
+              Constant: int, 2
+            Break: 
+          Case: 
+            Constant: int, 19
+            Assignment: =
+              ID: y
+              Constant: int, 19
+            Break: 
+          Case: 
+            Constant: int, 20
+            Assignment: =
+              ID: y
+              Constant: int, 5
+            Break: 
+          Case: 
+            Constant: int, 21
+            Assignment: =
+              ID: y
+              Constant: int, 107
+            Break: 
+          Case: 
+            Constant: int, 22
+            Assignment: =
+              ID: y
+              Constant: int, 31
+            Break: 
+          Case: 
+            Constant: int, 23
+            Assignment: =
+              ID: y
+              Constant: int, 8
+            Break: 
+          Case: 
+            Constant: int, 24
+            Assignment: =
+              ID: y
+              Constant: int, 28
+            Break: 
+          Case: 
+            Constant: int, 25
+            Assignment: =
+              ID: y
+              Constant: int, 106
+            Break: 
+          Case: 
+            Constant: int, 26
+            Assignment: =
+              ID: y
+              Constant: int, 31
+            Break: 
+          Case: 
+            Constant: int, 27
+            Assignment: =
+              ID: y
+              Constant: int, 102
+            Break: 
+          Case: 
+            Constant: int, 28
+            Assignment: =
+              ID: y
+              Constant: int, 105
+            Break: 
+          Case: 
+            Constant: int, 29
+            Assignment: =
+              ID: y
+              Constant: int, 111
+            Break: 
+          Case: 
+            Constant: int, 30
+            Assignment: =
+              ID: y
+              Constant: int, 17
+            Break: 
+          Case: 
+            Constant: int, 31
+            Assignment: =
+              ID: y
+              Constant: int, 10
+            Break: 
+          Case: 
+            Constant: int, 32
+            Assignment: =
+              ID: y
+              Constant: int, 31
+            Break: 
+          Case: 
+            Constant: int, 98
+            Assignment: =
+              ID: y
+              Constant: int, 18
+            Break: 
+          Case: 
+            UnaryOp: -
+              Constant: int, 62
+            Assignment: =
+              ID: y
+              Constant: int, 19
+            Break: 
+      Return: 
+        ID: y
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: !=
+              FuncCall: 
+                ID: foo
+                ExprList: 
+                  Constant: int, 98
+              Constant: int, 18
+            BinaryOp: !=
+              FuncCall: 
+                ID: foo
+                ExprList: 
+                  Constant: int, 97
+              Constant: int, 0
+          BinaryOp: !=
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                Constant: int, 99
+            Constant: int, 0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: !=
+              FuncCall: 
+                ID: foo
+                ExprList: 
+                  UnaryOp: -
+                    Constant: int, 62
+              Constant: int, 19
+            BinaryOp: !=
+              FuncCall: 
+                ID: foo
+                ExprList: 
+                  UnaryOp: -
+                    Constant: int, 63
+              Constant: int, 0
+          BinaryOp: !=
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                UnaryOp: -
+                  Constant: int, 61
+            Constant: int, 0
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: !=
+              FuncCall: 
+                ID: foo
+                ExprList: 
+                  Constant: int, 28
+              Constant: int, 105
+            BinaryOp: !=
+              FuncCall: 
+                ID: foo
+                ExprList: 
+                  Constant: int, 27
+              Constant: int, 102
+          BinaryOp: !=
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                Constant: int, 29
+            Constant: int, 111
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,50 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_strlen
+          ExprList: 
+            ID: x
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['char']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['unsigned', 'int']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['unsigned', 'int']
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            ID: x
+      If: 
+        BinaryOp: >
+          ID: l
+          Constant: int, 15
+        Assignment: =
+          ID: l
+          Constant: int, 15
+      Assignment: =
+        UnaryOp: *
+          ID: y
+        ID: l

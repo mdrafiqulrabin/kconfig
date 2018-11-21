@@ -1,0 +1,126 @@
+c_files/pr53487.c:29:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7f9b8b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9b8b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9b8b826740 '__int128'
+|-TypedefDecl 0x7f9b8b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9b8b826760 'unsigned __int128'
+|-TypedefDecl 0x7f9b8b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9b8b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9b8b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9b8b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9b8b826dc0 'char *'
+|   `-BuiltinType 0x7f9b8b826560 'char'
+|-TypedefDecl 0x7f9b8b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9b8b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9b8b826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9b8b826e58 '__va_list_tag'
+|-RecordDecl 0x7f9b8b827120 <c_files/pr53487.c:7:1, line:9:1> line:7:8 struct phylo_s definition
+| `-FieldDecl 0x7f9b8b877400 <line:8:3, col:7> col:7 referenced left 'int'
+|-FunctionDecl 0x7f9b8b8775e0 <line:10:1, col:31> col:6 used Free2DArray 'void (void **, int)'
+| |-ParmVarDecl 0x7f9b8b877490 <col:19, col:25> col:26 'void **'
+| `-ParmVarDecl 0x7f9b8b877508 <col:28> col:31 'int'
+`-FunctionDecl 0x7f9b8b877a08 <line:12:1, line:29:1> line:12:5 Cluster 'int (float **, int, struct phylo_s *)'
+  |-ParmVarDecl 0x7f9b8b877748 <col:13, col:21> col:21 dmx 'float **'
+  |-ParmVarDecl 0x7f9b8b8777c0 <col:26, col:30> col:30 used N 'int'
+  |-ParmVarDecl 0x7f9b8b8778d0 <col:33, col:49> col:49 used tree 'struct phylo_s *'
+  `-CompoundStmt 0x7f9b8b878a30 <line:13:1, line:29:1>
+    |-DeclStmt 0x7f9b8b877b38 <line:14:3, col:13>
+    | `-VarDecl 0x7f9b8b877ad8 <col:3, col:11> col:11 used mx 'float **'
+    |-DeclStmt 0x7f9b8b877bf0 <line:15:3, col:13>
+    | `-VarDecl 0x7f9b8b877b90 <col:3, col:8> col:8 used coord 'int *'
+    |-DeclStmt 0x7f9b8b877c80 <line:16:3, col:8>
+    | `-VarDecl 0x7f9b8b877c20 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7f9b8b877d10 <line:17:3, col:9>
+    | `-VarDecl 0x7f9b8b877cb0 <col:3, col:7> col:7 used Np 'int'
+    |-DeclStmt 0x7f9b8b877e30 <line:18:3, col:15>
+    | |-VarDecl 0x7f9b8b877d40 <col:3, col:7> col:7 used row 'int'
+    | `-VarDecl 0x7f9b8b877db8 <col:3, col:12> col:12 used col 'int'
+    |-DeclStmt 0x7f9b8b877ec0 <line:19:3, col:12>
+    | `-VarDecl 0x7f9b8b877e60 <col:3, col:9> col:9 used min 'float'
+    |-ForStmt 0x7f9b8b878898 <line:20:3, line:27:5>
+    | |-BinaryOperator 0x7f9b8b877f20 <line:20:8, col:14> 'int' '='
+    | | |-DeclRefExpr 0x7f9b8b877ed8 <col:8> 'int' lvalue Var 0x7f9b8b877db8 'col' 'int'
+    | | `-IntegerLiteral 0x7f9b8b877f00 <col:14> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9b8b877fc8 <col:17, col:23> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f9b8b877f98 <col:17> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f9b8b877f48 <col:17> 'int' lvalue Var 0x7f9b8b877db8 'col' 'int'
+    | | `-ImplicitCastExpr 0x7f9b8b877fb0 <col:23> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9b8b877f70 <col:23> 'int' lvalue ParmVar 0x7f9b8b8777c0 'N' 'int'
+    | |-UnaryOperator 0x7f9b8b878018 <col:26, col:28> 'int' postfix '--'
+    | | `-DeclRefExpr 0x7f9b8b877ff0 <col:26> 'int' lvalue Var 0x7f9b8b877cb0 'Np' 'int'
+    | `-CompoundStmt 0x7f9b8b878870 <line:21:5, line:27:5>
+    |   |-ForStmt 0x7f9b8b878628 <line:22:7, line:25:10>
+    |   | |-BinaryOperator 0x7f9b8b878080 <line:22:12, col:18> 'int' '='
+    |   | | |-DeclRefExpr 0x7f9b8b878038 <col:12> 'int' lvalue Var 0x7f9b8b877d40 'row' 'int'
+    |   | | `-IntegerLiteral 0x7f9b8b878060 <col:18> 'int' 0
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7f9b8b878128 <col:21, col:27> 'int' '<'
+    |   | | |-ImplicitCastExpr 0x7f9b8b8780f8 <col:21> 'int' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x7f9b8b8780a8 <col:21> 'int' lvalue Var 0x7f9b8b877d40 'row' 'int'
+    |   | | `-ImplicitCastExpr 0x7f9b8b878110 <col:27> 'int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7f9b8b8780d0 <col:27> 'int' lvalue Var 0x7f9b8b877cb0 'Np' 'int'
+    |   | |-UnaryOperator 0x7f9b8b878178 <col:31, col:34> 'int' postfix '++'
+    |   | | `-DeclRefExpr 0x7f9b8b878150 <col:31> 'int' lvalue Var 0x7f9b8b877d40 'row' 'int'
+    |   | `-ForStmt 0x7f9b8b8785f0 <line:23:2, line:25:10>
+    |   |   |-BinaryOperator 0x7f9b8b878248 <line:23:7, col:17> 'int' '='
+    |   |   | |-DeclRefExpr 0x7f9b8b878198 <col:7> 'int' lvalue Var 0x7f9b8b877db8 'col' 'int'
+    |   |   | `-BinaryOperator 0x7f9b8b878220 <col:13, col:17> 'int' '+'
+    |   |   |   |-ImplicitCastExpr 0x7f9b8b878208 <col:13> 'int' <LValueToRValue>
+    |   |   |   | `-DeclRefExpr 0x7f9b8b8781c0 <col:13> 'int' lvalue Var 0x7f9b8b877d40 'row' 'int'
+    |   |   |   `-IntegerLiteral 0x7f9b8b8781e8 <col:17> 'int' 1
+    |   |   |-<<<NULL>>>
+    |   |   |-BinaryOperator 0x7f9b8b8782f0 <col:20, col:26> 'int' '<'
+    |   |   | |-ImplicitCastExpr 0x7f9b8b8782c0 <col:20> 'int' <LValueToRValue>
+    |   |   | | `-DeclRefExpr 0x7f9b8b878270 <col:20> 'int' lvalue Var 0x7f9b8b877db8 'col' 'int'
+    |   |   | `-ImplicitCastExpr 0x7f9b8b8782d8 <col:26> 'int' <LValueToRValue>
+    |   |   |   `-DeclRefExpr 0x7f9b8b878298 <col:26> 'int' lvalue Var 0x7f9b8b877cb0 'Np' 'int'
+    |   |   |-UnaryOperator 0x7f9b8b878340 <col:30, col:33> 'int' postfix '++'
+    |   |   | `-DeclRefExpr 0x7f9b8b878318 <col:30> 'int' lvalue Var 0x7f9b8b877db8 'col' 'int'
+    |   |   `-IfStmt 0x7f9b8b8785b8 <line:24:4, line:25:10>
+    |   |     |-<<<NULL>>>
+    |   |     |-<<<NULL>>>
+    |   |     |-BinaryOperator 0x7f9b8b878500 <line:24:8, col:23> 'int' '<'
+    |   |     | |-ImplicitCastExpr 0x7f9b8b8784d0 <col:8, col:19> 'float' <LValueToRValue>
+    |   |     | | `-ArraySubscriptExpr 0x7f9b8b878480 <col:8, col:19> 'float' lvalue
+    |   |     | |   |-ImplicitCastExpr 0x7f9b8b878450 <col:8, col:14> 'float *' <LValueToRValue>
+    |   |     | |   | `-ArraySubscriptExpr 0x7f9b8b878400 <col:8, col:14> 'float *' lvalue
+    |   |     | |   |   |-ImplicitCastExpr 0x7f9b8b8783b0 <col:8> 'float **' <LValueToRValue>
+    |   |     | |   |   | `-DeclRefExpr 0x7f9b8b878360 <col:8> 'float **' lvalue Var 0x7f9b8b877ad8 'mx' 'float **'
+    |   |     | |   |   `-ImplicitCastExpr 0x7f9b8b8783c8 <col:11> 'int' <LValueToRValue>
+    |   |     | |   |     `-DeclRefExpr 0x7f9b8b878388 <col:11> 'int' lvalue Var 0x7f9b8b877d40 'row' 'int'
+    |   |     | |   `-ImplicitCastExpr 0x7f9b8b878468 <col:16> 'int' <LValueToRValue>
+    |   |     | |     `-DeclRefExpr 0x7f9b8b878428 <col:16> 'int' lvalue Var 0x7f9b8b877db8 'col' 'int'
+    |   |     | `-ImplicitCastExpr 0x7f9b8b8784e8 <col:23> 'float' <LValueToRValue>
+    |   |     |   `-DeclRefExpr 0x7f9b8b8784a8 <col:23> 'float' lvalue Var 0x7f9b8b877e60 'min' 'float'
+    |   |     |-BinaryOperator 0x7f9b8b878590 <line:25:6, col:10> 'int' '='
+    |   |     | |-DeclRefExpr 0x7f9b8b878528 <col:6> 'int' lvalue Var 0x7f9b8b877c20 'i' 'int'
+    |   |     | `-ImplicitCastExpr 0x7f9b8b878578 <col:10> 'int' <LValueToRValue>
+    |   |     |   `-DeclRefExpr 0x7f9b8b878550 <col:10> 'int' lvalue Var 0x7f9b8b877d40 'row' 'int'
+    |   |     `-<<<NULL>>>
+    |   `-BinaryOperator 0x7f9b8b878848 <line:26:7, col:32> 'int' '='
+    |     |-MemberExpr 0x7f9b8b878750 <col:7, col:18> 'int' lvalue .left 0x7f9b8b877400
+    |     | `-ArraySubscriptExpr 0x7f9b8b878728 <col:7, col:16> 'struct phylo_s':'struct phylo_s' lvalue
+    |     |   |-ImplicitCastExpr 0x7f9b8b878710 <col:7> 'struct phylo_s *' <LValueToRValue>
+    |     |   | `-DeclRefExpr 0x7f9b8b878660 <col:7> 'struct phylo_s *' lvalue ParmVar 0x7f9b8b8778d0 'tree' 'struct phylo_s *'
+    |     |   `-BinaryOperator 0x7f9b8b8786e8 <col:12, col:15> 'int' '-'
+    |     |     |-ImplicitCastExpr 0x7f9b8b8786d0 <col:12> 'int' <LValueToRValue>
+    |     |     | `-DeclRefExpr 0x7f9b8b878688 <col:12> 'int' lvalue Var 0x7f9b8b877cb0 'Np' 'int'
+    |     |     `-IntegerLiteral 0x7f9b8b8786b0 <col:15> 'int' 2
+    |     `-ImplicitCastExpr 0x7f9b8b878830 <col:25, col:32> 'int' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7f9b8b878808 <col:25, col:32> 'int' lvalue
+    |         |-ImplicitCastExpr 0x7f9b8b8787d8 <col:25> 'int *' <LValueToRValue>
+    |         | `-DeclRefExpr 0x7f9b8b878788 <col:25> 'int *' lvalue Var 0x7f9b8b877b90 'coord' 'int *'
+    |         `-ImplicitCastExpr 0x7f9b8b8787f0 <col:31> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x7f9b8b8787b0 <col:31> 'int' lvalue Var 0x7f9b8b877c20 'i' 'int'
+    `-CallExpr 0x7f9b8b8789e0 <line:28:3, col:30> 'void'
+      |-ImplicitCastExpr 0x7f9b8b8789c8 <col:3> 'void (*)(void **, int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f9b8b8788d0 <col:3> 'void (void **, int)' Function 0x7f9b8b8775e0 'Free2DArray' 'void (void **, int)'
+      |-CStyleCastExpr 0x7f9b8b878950 <col:15, col:25> 'void **' <BitCast>
+      | `-ImplicitCastExpr 0x7f9b8b878938 <col:25> 'float **' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f9b8b8788f8 <col:25> 'float **' lvalue Var 0x7f9b8b877ad8 'mx' 'float **'
+      `-ImplicitCastExpr 0x7f9b8b878a18 <col:29> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f9b8b878978 <col:29> 'int' lvalue ParmVar 0x7f9b8b8777c0 'N' 'int'

@@ -1,0 +1,57 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: CreateDefaultTexture, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: mnMinimum, [], [], []
+            TypeDecl: mnMinimum, []
+              IdentifierType: ['double']
+          Decl: mnMaximum, [], [], []
+            TypeDecl: mnMaximum, []
+              IdentifierType: ['double']
+          Decl: nCreateWhat, [], [], []
+            TypeDecl: nCreateWhat, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: CreateDefaultTexture, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']
+        Constant: float, 0.0
+      For: 
+        Compound: 
+          If: 
+            BinaryOp: &&
+              BinaryOp: &
+                ID: nCreateWhat
+                Constant: int, 0x0001
+              BinaryOp: !=
+                ID: mnMinimum
+                Constant: float, 0.0
+            Assignment: =
+              ID: d
+              ID: mnMinimum
+          If: 
+            BinaryOp: &&
+              BinaryOp: &
+                ID: nCreateWhat
+                Constant: int, 0x0002
+              BinaryOp: !=
+                ID: mnMaximum
+                Constant: float, 0.0
+            Assignment: =
+              ID: d
+              ID: mnMaximum
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              ID: d

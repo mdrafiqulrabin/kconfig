@@ -1,0 +1,48 @@
+c_files/pr83977-3.c:21:36: warning: attribute declaration must precede definition [-Wignored-attributes]
+int foo (int, int)  __attribute__((unused));
+                                   ^
+c_files/pr83977-3.c:9:1: note: previous definition is here
+foo (int a, int b)
+^
+1 warning generated.
+TranslationUnitDecl 0x7fdd210264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdd21026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdd21026740 '__int128'
+|-TypedefDecl 0x7fdd21026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdd21026760 'unsigned __int128'
+|-TypedefDecl 0x7fdd21026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdd21026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdd21026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdd21026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdd21026dc0 'char *'
+|   `-BuiltinType 0x7fdd21026560 'char'
+|-TypedefDecl 0x7fdd210270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdd21027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdd21026ee0 'struct __va_list_tag'
+|     `-Record 0x7fdd21026e58 '__va_list_tag'
+|-FunctionDecl 0x7fdd21077400 <c_files/pr83977-3.c:4:1, col:15> col:6 used bar 'void (void)'
+|-FunctionDecl 0x7fdd21077648 <line:5:1, col:40> col:5 used foo 'int (int, int)'
+| |-ParmVarDecl 0x7fdd210774f0 <col:10> col:13 'int'
+| |-ParmVarDecl 0x7fdd21077568 <col:15> col:18 'int'
+| `-UsedAttr 0x7fdd210776f0 <col:35>
+|-FunctionDecl 0x7fdd21077860 prev 0x7fdd21077648 <line:8:1, line:19:1> line:9:1 used foo 'int (int, int)'
+| |-ParmVarDecl 0x7fdd21077750 <col:6, col:10> col:10 used a 'int'
+| |-ParmVarDecl 0x7fdd210777c8 <col:13, col:17> col:17 b 'int'
+| |-CompoundStmt 0x7fdd21077b10 <line:10:1, line:19:1>
+| | |-BinaryOperator 0x7fdd21077a00 <line:11:3, col:11> 'int' '='
+| | | |-DeclRefExpr 0x7fdd21077950 <col:3> 'int' lvalue ParmVar 0x7fdd21077750 'a' 'int'
+| | | `-BinaryOperator 0x7fdd210779d8 <col:7, col:11> 'int' '+'
+| | |   |-ImplicitCastExpr 0x7fdd210779c0 <col:7> 'int' <LValueToRValue>
+| | |   | `-DeclRefExpr 0x7fdd21077978 <col:7> 'int' lvalue ParmVar 0x7fdd21077750 'a' 'int'
+| | |   `-IntegerLiteral 0x7fdd210779a0 <col:11> 'int' 1
+| | |-CallExpr 0x7fdd21077a90 <line:17:3, col:8> 'void'
+| | | `-ImplicitCastExpr 0x7fdd21077a78 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+| | |   `-DeclRefExpr 0x7fdd21077a28 <col:3> 'void (void)' Function 0x7fdd21077400 'bar' 'void (void)'
+| | `-ReturnStmt 0x7fdd21077af8 <line:18:3, col:10>
+| |   `-ImplicitCastExpr 0x7fdd21077ae0 <col:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fdd21077ab8 <col:10> 'int' lvalue ParmVar 0x7fdd21077750 'a' 'int'
+| `-UsedAttr 0x7fdd21077908 <line:5:35> Inherited
+`-FunctionDecl 0x7fdd21077c68 prev 0x7fdd21077860 <line:21:1, col:43> col:5 used foo 'int (int, int)'
+  |-ParmVarDecl 0x7fdd21077b58 <col:10> col:13 'int'
+  |-ParmVarDecl 0x7fdd21077bd0 <col:15> col:18 'int'
+  `-UsedAttr 0x7fdd21077d58 <line:5:35> Inherited

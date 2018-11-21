@@ -1,0 +1,52 @@
+FileAST: 
+  Typedef: my_union, [], ['typedef']
+    TypeDecl: my_union, []
+      Union: None
+        Decl: u_32_value, [], [], []
+          TypeDecl: u_32_value, []
+            IdentifierType: ['unsigned', 'long', 'int']
+        Decl: u_16_values, [], [], []
+          TypeDecl: u_16_values, []
+            Struct: None
+              Decl: u_16_value_0, [], [], []
+                TypeDecl: u_16_value_0, []
+                  IdentifierType: ['unsigned', 'short', 'int']
+              Decl: u_16_value_1, [], [], []
+                TypeDecl: u_16_value_1, []
+                  IdentifierType: ['unsigned', 'short', 'int']
+  FuncDef: 
+    Decl: Test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: wXe, ['const'], [], []
+            TypeDecl: wXe, ['const']
+              IdentifierType: ['unsigned', 'short', 'int']
+        TypeDecl: Test, []
+          IdentifierType: ['unsigned', 'long', 'int']
+    Compound: 
+      Decl: dwCalcVal, [], [], []
+        TypeDecl: dwCalcVal, []
+          IdentifierType: ['my_union']
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: dwCalcVal
+            ID: u_16_values
+          ID: u_16_value_0
+        ID: wXe
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: dwCalcVal
+            ID: u_16_values
+          ID: u_16_value_1
+        Constant: int, 0x8000u
+      Assignment: /=
+        StructRef: .
+          ID: dwCalcVal
+          ID: u_32_value
+        Constant: int, 3
+      Return: 
+        StructRef: .
+          ID: dwCalcVal
+          ID: u_32_value

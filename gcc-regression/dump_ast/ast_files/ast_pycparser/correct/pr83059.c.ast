@@ -1,0 +1,30 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+          Decl: q, [], [], []
+            PtrDecl: []
+              TypeDecl: q, []
+                IdentifierType: ['int']
+          Decl: r, [], [], []
+            PtrDecl: []
+              TypeDecl: r, []
+                IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __atomic_compare_exchange
+        ExprList: 
+          ID: p
+          ID: q
+          ID: r
+          Constant: int, 0
+          Constant: int, 0
+          UnaryOp: -
+            Constant: int, 1

@@ -1,0 +1,35 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: a, [], [], []
+        PtrDecl: []
+          TypeDecl: a, []
+            Struct: S
+      Decl: b, [], [], []
+        PtrDecl: []
+          TypeDecl: b, []
+            Struct: S
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: S
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      DoWhile: 
+        Assignment: =
+          ID: x
+          StructRef: ->
+            ID: x
+            ID: a
+        Assignment: =
+          StructRef: ->
+            ID: x
+            ID: b
+          StructRef: ->
+            ID: x
+            ID: a

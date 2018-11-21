@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7ff15f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff15f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff15f026740 '__int128'
+|-TypedefDecl 0x7ff15f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff15f026760 'unsigned __int128'
+|-TypedefDecl 0x7ff15f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff15f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff15f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff15f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff15f026dc0 'char *'
+|   `-BuiltinType 0x7ff15f026560 'char'
+|-TypedefDecl 0x7ff15f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff15f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff15f026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff15f026e58 '__va_list_tag'
+|-VarDecl 0x7ff15f027170 <c_files/pr60720_0.c:12:1, col:14> col:12 used x 'int []' extern
+|-VarDecl 0x7ff15f0774c0 <line:13:1, col:22> col:6 used foo 'int *[1]' cinit
+| `-InitListExpr 0x7ff15f077610 <col:14, col:22> 'int *[1]'
+|   `-UnaryOperator 0x7ff15f0775a8 <col:16, col:20> 'int *' prefix '&'
+|     `-ArraySubscriptExpr 0x7ff15f077580 <col:17, col:20> 'int' lvalue
+|       |-ImplicitCastExpr 0x7ff15f077568 <col:17> 'int *' <ArrayToPointerDecay>
+|       | `-DeclRefExpr 0x7ff15f077520 <col:17> 'int []' lvalue Var 0x7ff15f027170 'x' 'int []'
+|       `-IntegerLiteral 0x7ff15f077548 <col:19> 'int' 0
+`-FunctionDecl 0x7ff15f0776f0 <line:15:1, col:30> col:5 main 'int ()'
+  `-CompoundStmt 0x7ff15f0778a0 <col:12, col:30>
+    `-ReturnStmt 0x7ff15f077888 <col:14, col:27>
+      `-ImplicitCastExpr 0x7ff15f077870 <col:21, col:27> 'int' <LValueToRValue>
+        `-UnaryOperator 0x7ff15f077850 <col:21, col:27> 'int' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7ff15f077838 <col:22, col:27> 'int *' <LValueToRValue>
+            `-ArraySubscriptExpr 0x7ff15f077810 <col:22, col:27> 'int *' lvalue
+              |-ImplicitCastExpr 0x7ff15f0777f8 <col:22> 'int **' <ArrayToPointerDecay>
+              | `-DeclRefExpr 0x7ff15f077788 <col:22> 'int *[1]' lvalue Var 0x7ff15f0774c0 'foo' 'int *[1]'
+              `-IntegerLiteral 0x7ff15f0777b0 <col:26> 'int' 0

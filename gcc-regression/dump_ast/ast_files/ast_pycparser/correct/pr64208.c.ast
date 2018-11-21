@@ -1,0 +1,75 @@
+FileAST: 
+  Decl: x6, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: x6, []
+        IdentifierType: ['long', 'long']
+  Decl: x7, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['long', 'long']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['long', 'long']
+      TypeDecl: x7, []
+        IdentifierType: ['void']
+  Decl: x8, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['long', 'long']
+      TypeDecl: x8, []
+        IdentifierType: ['void']
+  Decl: x0, [], [], []
+    TypeDecl: x0, []
+      IdentifierType: ['int']
+  Decl: x1, [], [], []
+    PtrDecl: []
+      TypeDecl: x1, []
+        IdentifierType: ['long', 'long']
+  FuncDef: 
+    Decl: x2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: x2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: x3, [], [], []
+        PtrDecl: []
+          TypeDecl: x3, []
+            IdentifierType: ['long', 'long']
+        ID: x1
+      While: 
+        ID: x1
+        Compound: 
+          Decl: x4, [], [], []
+            TypeDecl: x4, []
+              IdentifierType: ['long', 'long']
+            ID: x0
+          Decl: x5, [], [], []
+            TypeDecl: x5, []
+              IdentifierType: ['long', 'long']
+            FuncCall: 
+              ID: x6
+          FuncCall: 
+            ID: x7
+            ExprList: 
+              ID: x4
+              ID: x5
+          FuncCall: 
+            ID: x8
+            ExprList: 
+              ID: x5
+          Assignment: =
+            UnaryOp: *
+              ID: x3
+            Constant: int, 0

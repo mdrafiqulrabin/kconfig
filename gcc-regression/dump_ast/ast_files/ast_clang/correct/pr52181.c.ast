@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7fae960264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fae96026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fae96026740 '__int128'
+|-TypedefDecl 0x7fae96026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fae96026760 'unsigned __int128'
+|-TypedefDecl 0x7fae96026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fae96026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fae96026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fae96026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fae96026dc0 'char *'
+|   `-BuiltinType 0x7fae96026560 'char'
+|-TypedefDecl 0x7fae960270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fae96027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fae96026ee0 'struct __va_list_tag'
+|     `-Record 0x7fae96026e58 '__va_list_tag'
+|-VarDecl 0x7fae960271a0 <c_files/pr52181.c:4:1, col:21> col:18 v1 'const int []' extern
+|-VarDecl 0x7fae96077488 prev 0x7fae960271a0 <line:5:1, col:51> col:40 referenced v1 'const int [1]' cinit
+| |-InitListExpr 0x7fae960775a0 <col:47, col:51> 'const int [1]'
+| | `-IntegerLiteral 0x7fae96077538 <col:49> 'int' 1
+| `-AlignedAttr 0x7fae960774e8 <col:26, col:36> aligned
+|   `-IntegerLiteral 0x7fae96077440 <col:34> 'int' 16
+|-VarDecl 0x7fae960776b0 <line:6:1, col:50> col:47 v2 'const int []' extern
+| `-AlignedAttr 0x7fae96077710 <col:33, col:43> aligned
+|   `-IntegerLiteral 0x7fae96077668 <col:41> 'int' 16
+|-VarDecl 0x7fae96077788 prev 0x7fae960776b0 <line:7:1, col:22> col:11 referenced v2 'const int [1]' cinit
+| |-InitListExpr 0x7fae960778a0 <col:18, col:22> 'const int [1]'
+| | `-IntegerLiteral 0x7fae96077838 <col:20> 'int' 1
+| `-AlignedAttr 0x7fae96077820 <line:6:33> Inherited aligned
+|   `-IntegerLiteral 0x7fae96077668 <col:41> 'int' 16
+|-VarDecl 0x7fae96077930 <line:8:1, col:50> col:47 v3 'const int []' extern
+| `-AlignedAttr 0x7fae96077990 <col:33, col:43> aligned
+|   `-IntegerLiteral 0x7fae960778e8 <col:41> 'int' 16
+|-VarDecl 0x7fae96077a28 prev 0x7fae96077930 <line:9:1, col:51> col:40 referenced v3 'const int [1]' cinit
+| |-InitListExpr 0x7fae96077b40 <col:47, col:51> 'const int [1]'
+| | `-IntegerLiteral 0x7fae96077ad8 <col:49> 'int' 1
+| `-AlignedAttr 0x7fae96077a88 <col:26, col:36> aligned
+|   `-IntegerLiteral 0x7fae960779e0 <col:34> 'int' 16
+|-VarDecl 0x7fae96077bd0 <line:10:1, col:51> col:40 referenced v4 'const int [1]' cinit
+| |-InitListExpr 0x7fae96077ce8 <col:47, col:51> 'const int [1]'
+| | `-IntegerLiteral 0x7fae96077c80 <col:49> 'int' 1
+| `-AlignedAttr 0x7fae96077c30 <col:26, col:36> aligned
+|   `-IntegerLiteral 0x7fae96077b88 <col:34> 'int' 16
+`-VarDecl 0x7fae96078180 <line:11:1, line:13:52> line:11:5 test 'int [0]'

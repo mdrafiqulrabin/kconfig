@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7fcc678264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcc67826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcc67826740 '__int128'
+|-TypedefDecl 0x7fcc67826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcc67826760 'unsigned __int128'
+|-TypedefDecl 0x7fcc67826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcc67826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcc67826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcc67826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcc67826dc0 'char *'
+|   `-BuiltinType 0x7fcc67826560 'char'
+|-TypedefDecl 0x7fcc678270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcc67827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcc67826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcc67826e58 '__va_list_tag'
+`-FunctionDecl 0x7fcc68025ad0 <c_files/pr27790.c:4:1, line:9:1> line:4:6 binarize 'void (int, unsigned char *)'
+  |-ParmVarDecl 0x7fcc67827138 <col:16, col:20> col:20 used npixels 'int'
+  |-ParmVarDecl 0x7fcc68025a00 <col:29, col:44> col:44 used b 'unsigned char *'
+  `-CompoundStmt 0x7fcc68026078 <line:5:1, line:9:1>
+    |-DeclStmt 0x7fcc68025c30 <line:6:3, col:8>
+    | `-VarDecl 0x7fcc68025bd0 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fcc68026040 <line:7:3, line:8:34>
+      |-BinaryOperator 0x7fcc68025c90 <line:7:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fcc68025c48 <col:8> 'int' lvalue Var 0x7fcc68025bd0 'i' 'int'
+      | `-IntegerLiteral 0x7fcc68025c70 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fcc68025d38 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fcc68025d08 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fcc68025cb8 <col:15> 'int' lvalue Var 0x7fcc68025bd0 'i' 'int'
+      | `-ImplicitCastExpr 0x7fcc68025d20 <col:19> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fcc68025ce0 <col:19> 'int' lvalue ParmVar 0x7fcc67827138 'npixels' 'int'
+      |-UnaryOperator 0x7fcc68025d88 <col:28, col:29> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fcc68025d60 <col:28> 'int' lvalue Var 0x7fcc68025bd0 'i' 'int'
+      `-BinaryOperator 0x7fcc68026018 <line:8:5, col:34> 'unsigned char' '='
+        |-ArraySubscriptExpr 0x7fcc68025e28 <col:5, col:8> 'unsigned char' lvalue
+        | |-ImplicitCastExpr 0x7fcc68025df8 <col:5> 'unsigned char *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fcc68025da8 <col:5> 'unsigned char *' lvalue ParmVar 0x7fcc68025a00 'b' 'unsigned char *'
+        | `-ImplicitCastExpr 0x7fcc68025e10 <col:7> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fcc68025dd0 <col:7> 'int' lvalue Var 0x7fcc68025bd0 'i' 'int'
+        `-ImplicitCastExpr 0x7fcc68026000 <col:12, col:34> 'unsigned char' <IntegralCast>
+          `-ParenExpr 0x7fcc68025fe0 <col:12, col:34> 'int'
+            `-ConditionalOperator 0x7fcc68025fb0 <col:13, col:33> 'int'
+              |-BinaryOperator 0x7fcc68025f48 <col:13, col:20> 'int' '>'
+              | |-ImplicitCastExpr 0x7fcc68025f30 <col:13, col:16> 'int' <IntegralCast>
+              | | `-ImplicitCastExpr 0x7fcc68025f18 <col:13, col:16> 'unsigned char' <LValueToRValue>
+              | |   `-ArraySubscriptExpr 0x7fcc68025ed0 <col:13, col:16> 'unsigned char' lvalue
+              | |     |-ImplicitCastExpr 0x7fcc68025ea0 <col:13> 'unsigned char *' <LValueToRValue>
+              | |     | `-DeclRefExpr 0x7fcc68025e50 <col:13> 'unsigned char *' lvalue ParmVar 0x7fcc68025a00 'b' 'unsigned char *'
+              | |     `-ImplicitCastExpr 0x7fcc68025eb8 <col:15> 'int' <LValueToRValue>
+              | |       `-DeclRefExpr 0x7fcc68025e78 <col:15> 'int' lvalue Var 0x7fcc68025bd0 'i' 'int'
+              | `-IntegerLiteral 0x7fcc68025ef8 <col:20> 'int' 225
+              |-IntegerLiteral 0x7fcc68025f70 <col:26> 'int' 255
+              `-IntegerLiteral 0x7fcc68025f90 <col:33> 'int' 0

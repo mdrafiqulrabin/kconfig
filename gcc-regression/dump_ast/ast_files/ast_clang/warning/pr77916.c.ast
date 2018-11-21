@@ -1,0 +1,46 @@
+c_files/pr77916.c:19:11: warning: incompatible integer to pointer conversion assigning to 'void *' from 'int' [-Wint-conversion]
+    a->f1 = b;
+          ^ ~
+1 warning generated.
+TranslationUnitDecl 0x7feed481c0d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feed481c620 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feed481c340 '__int128'
+|-TypedefDecl 0x7feed481c690 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feed481c360 'unsigned __int128'
+|-TypedefDecl 0x7feed481c968 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feed481c770 'struct __NSConstantString_tag'
+|   `-Record 0x7feed481c6e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feed481ca00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feed481c9c0 'char *'
+|   `-BuiltinType 0x7feed481c160 'char'
+|-TypedefDecl 0x7feed481ccc8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feed481cc70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feed481cae0 'struct __va_list_tag'
+|     `-Record 0x7feed481ca58 '__va_list_tag'
+|-RecordDecl 0x7feed481cd20 <c_files/pr77916.c:7:9, line:10:1> line:7:9 struct definition
+| `-FieldDecl 0x7feed5025a00 <line:9:3, col:9> col:9 referenced f1 'void *'
+|-TypedefDecl 0x7feed5025aa0 <line:7:1, line:10:3> col:3 referenced S 'struct S':'S'
+| `-ElaboratedType 0x7feed5025a50 'struct S' sugar
+|   `-RecordType 0x7feed481cdb0 'S'
+|     `-Record 0x7feed481cd20 ''
+|-VarDecl 0x7feed5025b98 <line:12:1, col:4> col:4 used a 'S *'
+|-VarDecl 0x7feed5025c50 <line:13:1, col:5> col:5 used b 'int'
+`-FunctionDecl 0x7feed5025d70 <line:15:1, line:20:1> line:16:1 fn1 'void (void)'
+  `-CompoundStmt 0x7feed5026410 <line:17:1, line:20:1>
+    `-ForStmt 0x7feed50263d8 <line:18:3, line:19:13>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7feed5025e30 <line:18:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7feed5025e08 <col:10> 'int' lvalue Var 0x7feed5025c50 'b' 'int'
+      |-BinaryOperator 0x7feed5025ed8 <col:13, col:19> 'S *' ','
+      | |-UnaryOperator 0x7feed5025e70 <col:13, col:14> 'int' postfix '++'
+      | | `-DeclRefExpr 0x7feed5025e48 <col:13> 'int' lvalue Var 0x7feed5025c50 'b' 'int'
+      | `-UnaryOperator 0x7feed5025eb8 <col:18, col:19> 'S *' postfix '++'
+      |   `-DeclRefExpr 0x7feed5025e90 <col:18> 'S *' lvalue Var 0x7feed5025b98 'a' 'S *'
+      `-BinaryOperator 0x7feed50263b0 <line:19:5, col:13> 'void *' '='
+        |-MemberExpr 0x7feed5025f40 <col:5, col:8> 'void *' lvalue ->f1 0x7feed5025a00
+        | `-ImplicitCastExpr 0x7feed5025f28 <col:5> 'S *' <LValueToRValue>
+        |   `-DeclRefExpr 0x7feed5025f00 <col:5> 'S *' lvalue Var 0x7feed5025b98 'a' 'S *'
+        `-ImplicitCastExpr 0x7feed5025fb8 <col:13> 'void *' <IntegralToPointer>
+          `-ImplicitCastExpr 0x7feed5025fa0 <col:13> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7feed5025f78 <col:13> 'int' lvalue Var 0x7feed5025c50 'b' 'int'

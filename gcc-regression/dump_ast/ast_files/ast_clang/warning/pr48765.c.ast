@@ -1,0 +1,326 @@
+c_files/pr48765.c:83:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7f815a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f815a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f815a826740 '__int128'
+|-TypedefDecl 0x7f815a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f815a826760 'unsigned __int128'
+|-TypedefDecl 0x7f815a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f815a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f815a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f815a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f815a826dc0 'char *'
+|   `-BuiltinType 0x7f815a826560 'char'
+|-TypedefDecl 0x7f815a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f815a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f815a826ee0 'struct __va_list_tag'
+|     `-Record 0x7f815a826e58 '__va_list_tag'
+|-EnumDecl 0x7f815a827120 <c_files/pr48765.c:5:1, line:9:1> line:5:6 reg_class
+| |-EnumConstantDecl 0x7f815b025a00 <line:7:3> col:3 NO_REGS 'int'
+| |-EnumConstantDecl 0x7f815b025a48 <col:12> col:12 AP_REG 'int'
+| |-EnumConstantDecl 0x7f815b025a90 <col:20> col:20 XRF_REGS 'int'
+| |-EnumConstantDecl 0x7f815b025ad8 <col:30> col:30 GENERAL_REGS 'int'
+| |-EnumConstantDecl 0x7f815b025b20 <col:44> col:44 AGRF_REGS 'int'
+| |-EnumConstantDecl 0x7f815b025b68 <col:55> col:55 XGRF_REGS 'int'
+| |-EnumConstantDecl 0x7f815b025bb0 <col:66> col:66 ALL_REGS 'int'
+| `-EnumConstantDecl 0x7f815b025bf8 <line:8:5> col:5 referenced LIM_REG_CLASSES 'int'
+|-EnumDecl 0x7f815b025c40 <line:10:1, line:16:1> line:10:6 machine_mode
+| |-EnumConstantDecl 0x7f815b025d00 <line:12:3> col:3 VOIDmode 'int'
+| |-EnumConstantDecl 0x7f815b025d48 <col:13> col:13 QImode 'int'
+| |-EnumConstantDecl 0x7f815b025d90 <col:21> col:21 HImode 'int'
+| |-EnumConstantDecl 0x7f815b025dd8 <col:29> col:29 PSImode 'int'
+| |-EnumConstantDecl 0x7f815b025e20 <col:38> col:38 SImode 'int'
+| |-EnumConstantDecl 0x7f815b025e68 <col:46> col:46 PDImode 'int'
+| |-EnumConstantDecl 0x7f815b025eb0 <col:55> col:55 DImode 'int'
+| |-EnumConstantDecl 0x7f815b025ef8 <col:63> col:63 TImode 'int'
+| |-EnumConstantDecl 0x7f815b025f40 <col:71> col:71 OImode 'int'
+| |-EnumConstantDecl 0x7f815b025f88 <line:13:5> col:5 QFmode 'int'
+| |-EnumConstantDecl 0x7f815b025fd0 <col:13> col:13 HFmode 'int'
+| |-EnumConstantDecl 0x7f815b026018 <col:21> col:21 TQFmode 'int'
+| |-EnumConstantDecl 0x7f815b026060 <col:30> col:30 SFmode 'int'
+| |-EnumConstantDecl 0x7f815b0260a8 <col:38> col:38 DFmode 'int'
+| |-EnumConstantDecl 0x7f815b0260f0 <col:46> col:46 XFmode 'int'
+| |-EnumConstantDecl 0x7f815b026138 <col:54> col:54 TFmode 'int'
+| |-EnumConstantDecl 0x7f815b026180 <col:62> col:62 SCmode 'int'
+| |-EnumConstantDecl 0x7f815b0261c8 <col:70> col:70 DCmode 'int'
+| |-EnumConstantDecl 0x7f815b026210 <line:14:5> col:5 XCmode 'int'
+| |-EnumConstantDecl 0x7f815b026258 <col:13> col:13 TCmode 'int'
+| |-EnumConstantDecl 0x7f815b0262a0 <col:21> col:21 CQImode 'int'
+| |-EnumConstantDecl 0x7f815b0262e8 <col:30> col:30 CHImode 'int'
+| |-EnumConstantDecl 0x7f815b026330 <col:39> col:39 CSImode 'int'
+| |-EnumConstantDecl 0x7f815b026378 <col:48> col:48 CDImode 'int'
+| |-EnumConstantDecl 0x7f815b0263c0 <col:57> col:57 CTImode 'int'
+| |-EnumConstantDecl 0x7f815b026408 <col:66> col:66 COImode 'int'
+| |-EnumConstantDecl 0x7f815b026450 <line:15:5> col:5 BLKmode 'int'
+| |-EnumConstantDecl 0x7f815b026498 <col:14> col:14 CCmode 'int'
+| |-EnumConstantDecl 0x7f815b0264e0 <col:22> col:22 CCEVENmode 'int'
+| `-EnumConstantDecl 0x7f815b026528 <col:34> col:34 MAX_MACHINE_MODE 'int'
+|-RecordDecl 0x7f815b026570 <line:17:9, line:20:1> line:17:16 struct rtx_def definition
+| `-FieldDecl 0x7f815b026658 <line:19:3, col:12> col:7 referenced mode 'int'
+|   `-IntegerLiteral 0x7f815b026620 <col:12> 'int' 8
+|-TypedefDecl 0x7f815b026750 <line:17:1, line:21:3> col:3 referenced rtx 'struct rtx_def *'
+| `-PointerType 0x7f815b026700 'struct rtx_def *'
+|   `-ElaboratedType 0x7f815b0266a0 'struct rtx_def' sugar
+|     `-RecordType 0x7f815b026600 'struct rtx_def'
+|       `-Record 0x7f815b026570 'rtx_def'
+|-VarDecl 0x7f815b026848 <line:22:1, col:13> col:13 used regno_reg_rtx 'rtx *' extern
+|-TypedefDecl 0x7f815b026900 <line:23:1, col:22> col:22 referenced HARD_REG_ELT_TYPE 'unsigned int'
+| `-BuiltinType 0x7f815a826660 'unsigned int'
+|-TypedefDecl 0x7f815b026b68 <line:24:1, col:60> col:27 referenced HARD_REG_SET 'HARD_REG_ELT_TYPE [2]'
+| `-ConstantArrayType 0x7f815b026b10 'HARD_REG_ELT_TYPE [2]' 2 
+|   `-TypedefType 0x7f815b026960 'HARD_REG_ELT_TYPE' sugar
+|     |-Typedef 0x7f815b026900 'HARD_REG_ELT_TYPE'
+|     `-BuiltinType 0x7f815a826660 'unsigned int'
+|-VarDecl 0x7f815b026c40 <line:25:1, col:30> col:12 used reg_alloc_order 'int [64]' extern
+|-VarDecl 0x7f815b026cb8 <line:26:1, col:12> col:12 used max_regno 'int' extern
+|-VarDecl 0x7f815b026d60 <line:27:1, col:13> col:13 used reg_n_calls_crossed 'int *' extern
+|-VarDecl 0x7f815b026e00 <line:28:1, col:15> col:15 used reg_renumber 'short *' extern
+|-VarDecl 0x7f815b026e78 <line:29:1, col:13> col:13 used reg_where_dead 'int *' static
+|-VarDecl 0x7f815b026ef0 <line:30:1, col:13> col:13 used reg_where_born 'int *' static
+|-VarDecl 0x7f815b026f68 <line:31:1, col:13> col:13 used reg_order 'int *' static
+|-VarDecl 0x7f815b026fe0 <line:32:1, col:14> col:14 used regs_change_size 'char *' static
+|-VarDecl 0x7f815b0270c8 <line:33:1, col:22> col:22 used after_insn_hard_regs 'HARD_REG_SET *' static
+|-FunctionDecl 0x7f815b027588 <line:34:1, line:35:11> line:34:12 used stupid_find_reg 'int (int, enum reg_class, enum machine_mode, int, int, int)' static
+| |-ParmVarDecl 0x7f815b027140 <col:29> col:32 'int'
+| |-ParmVarDecl 0x7f815b0271f0 <col:34, col:39> col:48 'enum reg_class':'enum reg_class'
+| |-ParmVarDecl 0x7f815b0272a0 <col:50, col:55> col:67 'enum machine_mode':'enum machine_mode'
+| |-ParmVarDecl 0x7f815b027318 <col:69> col:72 'int'
+| |-ParmVarDecl 0x7f815b027390 <col:74> col:77 'int'
+| `-ParmVarDecl 0x7f815b027408 <line:35:8> col:11 'int'
+|-FunctionDecl 0x7f815b027780 <line:36:1, col:40> col:16 used reg_preferred_class 'enum reg_class (int)'
+| `-ParmVarDecl 0x7f815b027668 <col:37> col:40 'int'
+|-FunctionDecl 0x7f815b027a80 <line:37:1, line:52:1> line:38:1 stupid_life_analysis 'void (rtx, int, int)'
+| |-ParmVarDecl 0x7f815b027920 <line:40:6, col:10> col:10 f 'rtx':'struct rtx_def *'
+| |-ParmVarDecl 0x7f815b027838 <line:39:6, col:10> col:10 nregs 'int'
+| |-ParmVarDecl 0x7f815b0278b0 <col:6, col:17> col:17 file 'int'
+| `-CompoundStmt 0x7f815b028818 <line:41:1, line:52:1>
+|   |-DeclStmt 0x7f815b027ba8 <line:42:3, col:17>
+|   | `-VarDecl 0x7f815b027b48 <col:3, col:16> col:16 used i 'int' register
+|   `-ForStmt 0x7f815b0287e0 <line:43:3, line:51:5>
+|     |-BinaryOperator 0x7f815b027cf8 <line:43:8, col:27> 'int' '='
+|     | |-DeclRefExpr 0x7f815b027bc0 <col:8> 'int' lvalue Var 0x7f815b027b48 'i' 'int'
+|     | `-BinaryOperator 0x7f815b027cd0 <col:12, col:27> 'int' '+'
+|     |   |-ParenExpr 0x7f815b027c90 <col:12, col:23> 'int'
+|     |   | `-BinaryOperator 0x7f815b027c68 <col:13, col:22> 'int' '+'
+|     |   |   |-ParenExpr 0x7f815b027c28 <col:13, col:18> 'int'
+|     |   |   | `-ParenExpr 0x7f815b027c08 <col:14, col:17> 'int'
+|     |   |   |   `-IntegerLiteral 0x7f815b027be8 <col:15> 'int' 64
+|     |   |   `-IntegerLiteral 0x7f815b027c48 <col:22> 'int' 3
+|     |   `-IntegerLiteral 0x7f815b027cb0 <col:27> 'int' 1
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f815b027da0 <col:30, col:34> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f815b027d70 <col:30> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f815b027d20 <col:30> 'int' lvalue Var 0x7f815b027b48 'i' 'int'
+|     | `-ImplicitCastExpr 0x7f815b027d88 <col:34> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f815b027d48 <col:34> 'int' lvalue Var 0x7f815b026cb8 'max_regno' 'int'
+|     |-UnaryOperator 0x7f815b027df0 <col:45, col:46> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7f815b027dc8 <col:45> 'int' lvalue Var 0x7f815b027b48 'i' 'int'
+|     `-CompoundStmt 0x7f815b0287b8 <line:44:5, line:51:5>
+|       |-DeclStmt 0x7f815b027f48 <line:45:7, col:36>
+|       | `-VarDecl 0x7f815b027e28 <col:7, col:35> col:20 used r 'int' register cinit
+|       |   `-ImplicitCastExpr 0x7f815b027f30 <col:24, col:35> 'int' <LValueToRValue>
+|       |     `-ArraySubscriptExpr 0x7f815b027f08 <col:24, col:35> 'int' lvalue
+|       |       |-ImplicitCastExpr 0x7f815b027ed8 <col:24> 'int *' <LValueToRValue>
+|       |       | `-DeclRefExpr 0x7f815b027e88 <col:24> 'int *' lvalue Var 0x7f815b026f68 'reg_order' 'int *'
+|       |       `-ImplicitCastExpr 0x7f815b027ef0 <col:34> 'int' <LValueToRValue>
+|       |         `-DeclRefExpr 0x7f815b027eb0 <col:34> 'int' lvalue Var 0x7f815b027b48 'i' 'int'
+|       `-IfStmt 0x7f815b028780 <line:46:7, line:50:45>
+|         |-<<<NULL>>>
+|         |-<<<NULL>>>
+|         |-BinaryOperator 0x7f815b027fe8 <line:46:11, col:35> 'int' '>'
+|         | |-CStyleCastExpr 0x7f815b027fa0 <col:11, col:17> 'int' <NoOp>
+|         | | `-DeclRefExpr 0x7f815b027f60 <col:17> 'int' EnumConstant 0x7f815b025bf8 'LIM_REG_CLASSES' 'int'
+|         | `-IntegerLiteral 0x7f815b027fc8 <col:35> 'int' 1
+|         |-BinaryOperator 0x7f815b028758 <line:47:2, line:50:45> 'short' '='
+|         | |-ArraySubscriptExpr 0x7f815b028090 <line:47:2, col:16> 'short' lvalue
+|         | | |-ImplicitCastExpr 0x7f815b028060 <col:2> 'short *' <LValueToRValue>
+|         | | | `-DeclRefExpr 0x7f815b028010 <col:2> 'short *' lvalue Var 0x7f815b026e00 'reg_renumber' 'short *'
+|         | | `-ImplicitCastExpr 0x7f815b028078 <col:15> 'int' <LValueToRValue>
+|         | |   `-DeclRefExpr 0x7f815b028038 <col:15> 'int' lvalue Var 0x7f815b027e28 'r' 'int'
+|         | `-ImplicitCastExpr 0x7f815b028740 <line:48:4, line:50:45> 'short' <IntegralCast>
+|         |   `-CallExpr 0x7f815b028640 <line:48:4, line:50:45> 'int'
+|         |     |-ImplicitCastExpr 0x7f815b028628 <line:48:4> 'int (*)(int, enum reg_class, enum machine_mode, int, int, int)' <FunctionToPointerDecay>
+|         |     | `-DeclRefExpr 0x7f815b0280b8 <col:4> 'int (int, enum reg_class, enum machine_mode, int, int, int)' Function 0x7f815b027588 'stupid_find_reg' 'int (int, enum reg_class, enum machine_mode, int, int, int)'
+|         |     |-ImplicitCastExpr 0x7f815b028698 <col:21, col:42> 'int' <LValueToRValue>
+|         |     | `-ArraySubscriptExpr 0x7f815b028160 <col:21, col:42> 'int' lvalue
+|         |     |   |-ImplicitCastExpr 0x7f815b028130 <col:21> 'int *' <LValueToRValue>
+|         |     |   | `-DeclRefExpr 0x7f815b0280e0 <col:21> 'int *' lvalue Var 0x7f815b026d60 'reg_n_calls_crossed' 'int *'
+|         |     |   `-ImplicitCastExpr 0x7f815b028148 <col:41> 'int' <LValueToRValue>
+|         |     |     `-DeclRefExpr 0x7f815b028108 <col:41> 'int' lvalue Var 0x7f815b027e28 'r' 'int'
+|         |     |-CallExpr 0x7f815b028250 <col:45, col:67> 'enum reg_class':'enum reg_class'
+|         |     | |-ImplicitCastExpr 0x7f815b028238 <col:45> 'enum reg_class (*)(int)' <FunctionToPointerDecay>
+|         |     | | `-DeclRefExpr 0x7f815b028188 <col:45> 'enum reg_class (int)' Function 0x7f815b027780 'reg_preferred_class' 'enum reg_class (int)'
+|         |     | `-ImplicitCastExpr 0x7f815b028280 <col:66> 'int' <LValueToRValue>
+|         |     |   `-DeclRefExpr 0x7f815b0281b0 <col:66> 'int' lvalue Var 0x7f815b027e28 'r' 'int'
+|         |     |-ImplicitCastExpr 0x7f815b0286c8 <line:49:7, col:32> 'enum machine_mode':'enum machine_mode' <IntegralCast>
+|         |     | `-ImplicitCastExpr 0x7f815b0286b0 <col:7, col:32> 'int' <LValueToRValue>
+|         |     |   `-ParenExpr 0x7f815b0283b0 <col:7, col:32> 'int' lvalue bitfield
+|         |     |     `-MemberExpr 0x7f815b028378 <col:8, col:28> 'int' lvalue bitfield ->mode 0x7f815b026658
+|         |     |       `-ImplicitCastExpr 0x7f815b028360 <col:8, col:25> 'rtx':'struct rtx_def *' <LValueToRValue>
+|         |     |         `-ParenExpr 0x7f815b028340 <col:8, col:25> 'rtx':'struct rtx_def *' lvalue
+|         |     |           `-ArraySubscriptExpr 0x7f815b028318 <col:9, col:24> 'rtx':'struct rtx_def *' lvalue
+|         |     |             |-ImplicitCastExpr 0x7f815b0282e8 <col:9> 'rtx *' <LValueToRValue>
+|         |     |             | `-DeclRefExpr 0x7f815b028298 <col:9> 'rtx *' lvalue Var 0x7f815b026848 'regno_reg_rtx' 'rtx *'
+|         |     |             `-ImplicitCastExpr 0x7f815b028300 <col:23> 'int' <LValueToRValue>
+|         |     |               `-DeclRefExpr 0x7f815b0282c0 <col:23> 'int' lvalue Var 0x7f815b027e28 'r' 'int'
+|         |     |-ImplicitCastExpr 0x7f815b0286e0 <col:35, col:51> 'int' <LValueToRValue>
+|         |     | `-ArraySubscriptExpr 0x7f815b028450 <col:35, col:51> 'int' lvalue
+|         |     |   |-ImplicitCastExpr 0x7f815b028420 <col:35> 'int *' <LValueToRValue>
+|         |     |   | `-DeclRefExpr 0x7f815b0283d0 <col:35> 'int *' lvalue Var 0x7f815b026ef0 'reg_where_born' 'int *'
+|         |     |   `-ImplicitCastExpr 0x7f815b028438 <col:50> 'int' <LValueToRValue>
+|         |     |     `-DeclRefExpr 0x7f815b0283f8 <col:50> 'int' lvalue Var 0x7f815b027e28 'r' 'int'
+|         |     |-ImplicitCastExpr 0x7f815b0286f8 <line:50:7, col:23> 'int' <LValueToRValue>
+|         |     | `-ArraySubscriptExpr 0x7f815b0284f8 <col:7, col:23> 'int' lvalue
+|         |     |   |-ImplicitCastExpr 0x7f815b0284c8 <col:7> 'int *' <LValueToRValue>
+|         |     |   | `-DeclRefExpr 0x7f815b028478 <col:7> 'int *' lvalue Var 0x7f815b026e78 'reg_where_dead' 'int *'
+|         |     |   `-ImplicitCastExpr 0x7f815b0284e0 <col:22> 'int' <LValueToRValue>
+|         |     |     `-DeclRefExpr 0x7f815b0284a0 <col:22> 'int' lvalue Var 0x7f815b027e28 'r' 'int'
+|         |     `-ImplicitCastExpr 0x7f815b028728 <col:26, col:44> 'int' <IntegralCast>
+|         |       `-ImplicitCastExpr 0x7f815b028710 <col:26, col:44> 'char' <LValueToRValue>
+|         |         `-ArraySubscriptExpr 0x7f815b0285a0 <col:26, col:44> 'char' lvalue
+|         |           |-ImplicitCastExpr 0x7f815b028570 <col:26> 'char *' <LValueToRValue>
+|         |           | `-DeclRefExpr 0x7f815b028520 <col:26> 'char *' lvalue Var 0x7f815b026fe0 'regs_change_size' 'char *'
+|         |           `-ImplicitCastExpr 0x7f815b028588 <col:43> 'int' <LValueToRValue>
+|         |             `-DeclRefExpr 0x7f815b028548 <col:43> 'int' lvalue Var 0x7f815b027e28 'r' 'int'
+|         `-<<<NULL>>>
+`-FunctionDecl 0x7f815b02b018 prev 0x7f815b027588 <line:54:1, line:83:1> line:55:1 used stupid_find_reg 'int (int, unsigned int, unsigned int, int, int, int)' static
+  |-ParmVarDecl 0x7f815b028858 <line:57:6, col:10> col:10 call_preserved 'int'
+  |-ParmVarDecl 0x7f815b02ae80 <line:58:6, col:21> col:21 class 'enum reg_class':'enum reg_class'
+  |-ParmVarDecl 0x7f815b02af00 <line:59:6, col:24> col:24 mode 'enum machine_mode':'enum machine_mode'
+  |-ParmVarDecl 0x7f815b0288d0 <line:57:6, col:26> col:26 used born_insn 'int'
+  |-ParmVarDecl 0x7f815b028948 <col:6, col:37> col:37 used dead_insn 'int'
+  |-ParmVarDecl 0x7f815b02ae00 <col:6, col:48> col:48 changes_size 'int'
+  `-CompoundStmt 0x7f815b02c4f8 <line:60:1, line:83:1>
+    |-DeclStmt 0x7f815b02b1e8 <line:61:3, col:22>
+    | |-VarDecl 0x7f815b02b0f8 <col:3, col:16> col:16 used i 'int' register
+    | `-VarDecl 0x7f815b02b170 <col:3, col:19> col:19 used ins 'int' register
+    |-DeclStmt 0x7f815b02b2f8 <line:62:3, col:30>
+    | |-VarDecl 0x7f815b02b210 <col:3, col:16> col:16 used used 'HARD_REG_SET':'HARD_REG_ELT_TYPE [2]'
+    | `-VarDecl 0x7f815b02b280 <col:3, col:22> col:22 this_reg 'HARD_REG_SET':'HARD_REG_ELT_TYPE [2]'
+    |-ForStmt 0x7f815b02bb50 <line:63:3, line:71:13>
+    | |-BinaryOperator 0x7f815b02b378 <line:63:8, col:14> 'int' '='
+    | | |-DeclRefExpr 0x7f815b02b310 <col:8> 'int' lvalue Var 0x7f815b02b170 'ins' 'int'
+    | | `-ImplicitCastExpr 0x7f815b02b360 <col:14> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f815b02b338 <col:14> 'int' lvalue ParmVar 0x7f815b0288d0 'born_insn' 'int'
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f815b02b420 <col:25, col:31> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f815b02b3f0 <col:25> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f815b02b3a0 <col:25> 'int' lvalue Var 0x7f815b02b170 'ins' 'int'
+    | | `-ImplicitCastExpr 0x7f815b02b408 <col:31> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f815b02b3c8 <col:31> 'int' lvalue ParmVar 0x7f815b028948 'dead_insn' 'int'
+    | |-UnaryOperator 0x7f815b02b470 <col:42, col:45> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7f815b02b448 <col:42> 'int' lvalue Var 0x7f815b02b170 'ins' 'int'
+    | `-DoStmt 0x7f815b02bb30 <line:64:5, line:71:13>
+    |   |-CompoundStmt 0x7f815b02bae8 <line:65:7, line:70:7>
+    |   | |-DeclStmt 0x7f815b02b720 <line:66:2, line:67:31>
+    |   | | |-VarDecl 0x7f815b02b4f8 <line:66:2, col:46> col:30 used scan_tp_ 'HARD_REG_ELT_TYPE *' register cinit
+    |   | | | `-ImplicitCastExpr 0x7f815b02b5a0 <col:41, col:46> 'HARD_REG_ELT_TYPE *' <ArrayToPointerDecay>
+    |   | | |   `-ParenExpr 0x7f815b02b580 <col:41, col:46> 'HARD_REG_SET':'HARD_REG_ELT_TYPE [2]' lvalue
+    |   | | |     `-DeclRefExpr 0x7f815b02b558 <col:42> 'HARD_REG_SET':'HARD_REG_ELT_TYPE [2]' lvalue Var 0x7f815b02b210 'used' 'HARD_REG_SET':'HARD_REG_ELT_TYPE [2]'
+    |   | | `-VarDecl 0x7f815b02b5c8 <col:2, line:67:30> line:66:50 used scan_fp_ 'HARD_REG_ELT_TYPE *' register cinit
+    |   | |   `-ImplicitCastExpr 0x7f815b02b6f0 <line:67:4, col:30> 'HARD_REG_ELT_TYPE *' <ArrayToPointerDecay>
+    |   | |     `-ParenExpr 0x7f815b02b6d0 <col:4, col:30> 'HARD_REG_SET':'HARD_REG_ELT_TYPE [2]' lvalue
+    |   | |       `-ArraySubscriptExpr 0x7f815b02b6a8 <col:5, col:29> 'HARD_REG_SET':'HARD_REG_ELT_TYPE [2]' lvalue
+    |   | |         |-ImplicitCastExpr 0x7f815b02b678 <col:5> 'HARD_REG_SET *' <LValueToRValue>
+    |   | |         | `-DeclRefExpr 0x7f815b02b628 <col:5> 'HARD_REG_SET *' lvalue Var 0x7f815b0270c8 'after_insn_hard_regs' 'HARD_REG_SET *'
+    |   | |         `-ImplicitCastExpr 0x7f815b02b690 <col:26> 'int' <LValueToRValue>
+    |   | |           `-DeclRefExpr 0x7f815b02b650 <col:26> 'int' lvalue Var 0x7f815b02b170 'ins' 'int'
+    |   | `-ForStmt 0x7f815b02bab0 <line:68:2, line:69:28>
+    |   |   |-BinaryOperator 0x7f815b02b780 <line:68:7, col:11> 'int' '='
+    |   |   | |-DeclRefExpr 0x7f815b02b738 <col:7> 'int' lvalue Var 0x7f815b02b0f8 'i' 'int'
+    |   |   | `-IntegerLiteral 0x7f815b02b760 <col:11> 'int' 0
+    |   |   |-<<<NULL>>>
+    |   |   |-BinaryOperator 0x7f815b02b920 <col:14, col:37> 'int' '<'
+    |   |   | |-ImplicitCastExpr 0x7f815b02b908 <col:14> 'int' <LValueToRValue>
+    |   |   | | `-DeclRefExpr 0x7f815b02b7a8 <col:14> 'int' lvalue Var 0x7f815b02b0f8 'i' 'int'
+    |   |   | `-ParenExpr 0x7f815b02b8e8 <col:18, col:37> 'int'
+    |   |   |   `-BinaryOperator 0x7f815b02b8c0 <col:19, col:35> 'int' '/'
+    |   |   |     |-ParenExpr 0x7f815b02b880 <col:19, col:31> 'int'
+    |   |   |     | `-BinaryOperator 0x7f815b02b858 <col:20, col:30> 'int' '-'
+    |   |   |     |   |-BinaryOperator 0x7f815b02b810 <col:20, col:25> 'int' '+'
+    |   |   |     |   | |-IntegerLiteral 0x7f815b02b7d0 <col:20> 'int' 64
+    |   |   |     |   | `-IntegerLiteral 0x7f815b02b7f0 <col:25> 'int' 32
+    |   |   |     |   `-IntegerLiteral 0x7f815b02b838 <col:30> 'int' 1
+    |   |   |     `-IntegerLiteral 0x7f815b02b8a0 <col:35> 'int' 32
+    |   |   |-UnaryOperator 0x7f815b02b970 <col:40, col:41> 'int' postfix '++'
+    |   |   | `-DeclRefExpr 0x7f815b02b948 <col:40> 'int' lvalue Var 0x7f815b02b0f8 'i' 'int'
+    |   |   `-CompoundAssignOperator 0x7f815b02ba78 <line:69:4, col:28> 'HARD_REG_ELT_TYPE':'unsigned int' '|=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    |   |     |-UnaryOperator 0x7f815b02b9d8 <col:4, col:13> 'HARD_REG_ELT_TYPE':'unsigned int' lvalue prefix '*'
+    |   |     | `-UnaryOperator 0x7f815b02b9b8 <col:5, col:13> 'HARD_REG_ELT_TYPE *' postfix '++'
+    |   |     |   `-DeclRefExpr 0x7f815b02b990 <col:5> 'HARD_REG_ELT_TYPE *' lvalue Var 0x7f815b02b4f8 'scan_tp_' 'HARD_REG_ELT_TYPE *'
+    |   |     `-ImplicitCastExpr 0x7f815b02ba60 <col:19, col:28> 'HARD_REG_ELT_TYPE':'unsigned int' <LValueToRValue>
+    |   |       `-UnaryOperator 0x7f815b02ba40 <col:19, col:28> 'HARD_REG_ELT_TYPE':'unsigned int' lvalue prefix '*'
+    |   |         `-UnaryOperator 0x7f815b02ba20 <col:20, col:28> 'HARD_REG_ELT_TYPE *' postfix '++'
+    |   |           `-DeclRefExpr 0x7f815b02b9f8 <col:20> 'HARD_REG_ELT_TYPE *' lvalue Var 0x7f815b02b5c8 'scan_fp_' 'HARD_REG_ELT_TYPE *'
+    |   `-IntegerLiteral 0x7f815b02bb10 <line:71:12> 'int' 0
+    `-ForStmt 0x7f815b02c4c0 <line:72:3, line:82:5>
+      |-BinaryOperator 0x7f815b02bbd0 <line:72:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f815b02bb88 <col:8> 'int' lvalue Var 0x7f815b02b0f8 'i' 'int'
+      | `-IntegerLiteral 0x7f815b02bbb0 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f815b02bc58 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7f815b02bc40 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f815b02bbf8 <col:15> 'int' lvalue Var 0x7f815b02b0f8 'i' 'int'
+      | `-IntegerLiteral 0x7f815b02bc20 <col:19> 'int' 64
+      |-UnaryOperator 0x7f815b02bca8 <col:23, col:24> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f815b02bc80 <col:23> 'int' lvalue Var 0x7f815b02b0f8 'i' 'int'
+      `-CompoundStmt 0x7f815b02c498 <line:73:5, line:82:5>
+        |-DeclStmt 0x7f815b02be00 <line:74:7, col:37>
+        | `-VarDecl 0x7f815b02bce0 <col:7, col:36> col:11 used regno 'int' cinit
+        |   `-ImplicitCastExpr 0x7f815b02bde8 <col:19, col:36> 'int' <LValueToRValue>
+        |     `-ArraySubscriptExpr 0x7f815b02bdc0 <col:19, col:36> 'int' lvalue
+        |       |-ImplicitCastExpr 0x7f815b02bd90 <col:19> 'int *' <ArrayToPointerDecay>
+        |       | `-DeclRefExpr 0x7f815b02bd40 <col:19> 'int [64]' lvalue Var 0x7f815b026c40 'reg_alloc_order' 'int [64]'
+        |       `-ImplicitCastExpr 0x7f815b02bda8 <col:35> 'int' <LValueToRValue>
+        |         `-DeclRefExpr 0x7f815b02bd68 <col:35> 'int' lvalue Var 0x7f815b02b0f8 'i' 'int'
+        `-IfStmt 0x7f815b02c460 <line:75:7, line:81:2>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-ParenExpr 0x7f815b02c250 <line:75:11, line:76:63> 'unsigned int'
+          | `-BinaryOperator 0x7f815b02c228 <line:75:12, line:76:62> 'unsigned int' '&'
+          |   |-ImplicitCastExpr 0x7f815b02c210 <line:75:12, col:44> 'HARD_REG_ELT_TYPE':'unsigned int' <LValueToRValue>
+          |   | `-ArraySubscriptExpr 0x7f815b02bf98 <col:12, col:44> 'HARD_REG_ELT_TYPE':'unsigned int' lvalue
+          |   |   |-ImplicitCastExpr 0x7f815b02bf80 <col:12, col:17> 'HARD_REG_ELT_TYPE *' <ArrayToPointerDecay>
+          |   |   | `-ParenExpr 0x7f815b02be40 <col:12, col:17> 'HARD_REG_SET':'HARD_REG_ELT_TYPE [2]' lvalue
+          |   |   |   `-DeclRefExpr 0x7f815b02be18 <col:13> 'HARD_REG_SET':'HARD_REG_ELT_TYPE [2]' lvalue Var 0x7f815b02b210 'used' 'HARD_REG_SET':'HARD_REG_ELT_TYPE [2]'
+          |   |   `-BinaryOperator 0x7f815b02bf58 <col:19, col:43> 'unsigned int' '/'
+          |   |     |-ImplicitCastExpr 0x7f815b02bf40 <col:19, col:25> 'unsigned int' <IntegralCast>
+          |   |     | `-ImplicitCastExpr 0x7f815b02bf28 <col:19, col:25> 'int' <LValueToRValue>
+          |   |     |   `-ParenExpr 0x7f815b02be88 <col:19, col:25> 'int' lvalue
+          |   |     |     `-DeclRefExpr 0x7f815b02be60 <col:20> 'int' lvalue Var 0x7f815b02bce0 'regno' 'int'
+          |   |     `-ParenExpr 0x7f815b02bf08 <col:29, col:43> 'unsigned int'
+          |   |       `-CStyleCastExpr 0x7f815b02bee0 <col:30, col:41> 'unsigned int' <IntegralCast>
+          |   |         `-IntegerLiteral 0x7f815b02bea8 <col:41> 'int' 32
+          |   `-ParenExpr 0x7f815b02c1f0 <line:76:5, col:62> 'HARD_REG_ELT_TYPE':'unsigned int'
+          |     `-BinaryOperator 0x7f815b02c1c8 <col:6, col:61> 'HARD_REG_ELT_TYPE':'unsigned int' '<<'
+          |       |-ParenExpr 0x7f815b02c068 <col:6, col:30> 'HARD_REG_ELT_TYPE':'unsigned int'
+          |       | `-CStyleCastExpr 0x7f815b02c040 <col:7, col:29> 'HARD_REG_ELT_TYPE':'unsigned int' <IntegralCast>
+          |       |   `-ParenExpr 0x7f815b02c020 <col:27, col:29> 'int'
+          |       |     `-IntegerLiteral 0x7f815b02bfc0 <col:28> 'int' 1
+          |       `-ParenExpr 0x7f815b02c1a8 <col:35, col:61> 'unsigned int'
+          |         `-BinaryOperator 0x7f815b02c180 <col:36, col:60> 'unsigned int' '%'
+          |           |-ImplicitCastExpr 0x7f815b02c168 <col:36, col:42> 'unsigned int' <IntegralCast>
+          |           | `-ImplicitCastExpr 0x7f815b02c150 <col:36, col:42> 'int' <LValueToRValue>
+          |           |   `-ParenExpr 0x7f815b02c0b0 <col:36, col:42> 'int' lvalue
+          |           |     `-DeclRefExpr 0x7f815b02c088 <col:37> 'int' lvalue Var 0x7f815b02bce0 'regno' 'int'
+          |           `-ParenExpr 0x7f815b02c130 <col:46, col:60> 'unsigned int'
+          |             `-CStyleCastExpr 0x7f815b02c108 <col:47, col:58> 'unsigned int' <IntegralCast>
+          |               `-IntegerLiteral 0x7f815b02c0d0 <col:58> 'int' 32
+          |-CompoundStmt 0x7f815b02c438 <line:77:2, line:81:2>
+          | |-DeclStmt 0x7f815b02c2e8 <line:78:4, col:18>
+          | | `-VarDecl 0x7f815b02c288 <col:4, col:17> col:17 used j 'int' register
+          | `-IfStmt 0x7f815b02c400 <line:79:4, line:80:13>
+          |   |-<<<NULL>>>
+          |   |-<<<NULL>>>
+          |   |-BinaryOperator 0x7f815b02c380 <line:79:8, col:13> 'int' '=='
+          |   | |-ImplicitCastExpr 0x7f815b02c350 <col:8> 'int' <LValueToRValue>
+          |   | | `-DeclRefExpr 0x7f815b02c300 <col:8> 'int' lvalue Var 0x7f815b02c288 'j' 'int'
+          |   | `-ImplicitCastExpr 0x7f815b02c368 <col:13> 'int' <LValueToRValue>
+          |   |   `-DeclRefExpr 0x7f815b02c328 <col:13> 'int' lvalue Var 0x7f815b02bce0 'regno' 'int'
+          |   |-ReturnStmt 0x7f815b02c3e8 <line:80:6, col:13>
+          |   | `-ImplicitCastExpr 0x7f815b02c3d0 <col:13> 'int' <LValueToRValue>
+          |   |   `-DeclRefExpr 0x7f815b02c3a8 <col:13> 'int' lvalue Var 0x7f815b02bce0 'regno' 'int'
+          |   `-<<<NULL>>>
+          `-<<<NULL>>>

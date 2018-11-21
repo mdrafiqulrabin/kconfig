@@ -1,0 +1,76 @@
+c_files/pr46934.c:6:19: warning: implicit declaration of function 'foo' is invalid in C99 [-Wimplicit-function-declaration]
+      return (int)foo();
+                  ^
+c_files/pr46934.c:9:20: warning: implicit declaration of function 'bar' is invalid in C99 [-Wimplicit-function-declaration]
+      return (int) bar();
+                   ^
+c_files/pr46934.c:12:20: warning: implicit declaration of function 'baz' is invalid in C99 [-Wimplicit-function-declaration]
+      return (int) baz();
+                   ^
+c_files/pr46934.c:15:20: warning: implicit declaration of function 'fooz' is invalid in C99 [-Wimplicit-function-declaration]
+      return (int) fooz();
+                   ^
+c_files/pr46934.c:17:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+5 warnings generated.
+TranslationUnitDecl 0x7fc0e20264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc0e2026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc0e2026740 '__int128'
+|-TypedefDecl 0x7fc0e2026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc0e2026760 'unsigned __int128'
+|-TypedefDecl 0x7fc0e2026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc0e2026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc0e2026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc0e2026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc0e2026dc0 'char *'
+|   `-BuiltinType 0x7fc0e2026560 'char'
+|-TypedefDecl 0x7fc0e20270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc0e2027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc0e2026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc0e2026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc0e2077430 <c_files/pr46934.c:1:1, line:17:1> line:1:5 caller 'int (unsigned int)'
+| |-ParmVarDecl 0x7fc0e2027138 <col:13, col:26> col:26 used reg_type 'unsigned int'
+| `-CompoundStmt 0x7fc0e2077d70 <line:2:1, line:17:1>
+|   `-SwitchStmt 0x7fc0e2077550 <line:3:3, line:16:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fc0e2077538 <line:3:11> 'unsigned int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fc0e2077510 <col:11> 'unsigned int' lvalue ParmVar 0x7fc0e2027138 'reg_type' 'unsigned int'
+|     `-CompoundStmt 0x7fc0e2077d38 <line:4:5, line:16:5>
+|       |-CaseStmt 0x7fc0e20775a0 <line:5:5, line:6:23>
+|       | |-IntegerLiteral 0x7fc0e2077580 <line:5:10> 'unsigned int' 2147483648
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7fc0e2077798 <line:6:7, col:23>
+|       |   `-CStyleCastExpr 0x7fc0e2077770 <col:14, col:23> 'int' <NoOp>
+|       |     `-CallExpr 0x7fc0e2077730 <col:19, col:23> 'int'
+|       |       `-ImplicitCastExpr 0x7fc0e2077718 <col:19> 'int (*)()' <FunctionToPointerDecay>
+|       |         `-DeclRefExpr 0x7fc0e20776c8 <col:19> 'int ()' Function 0x7fc0e2077630 'foo' 'int ()'
+|       |-CaseStmt 0x7fc0e20777d0 <line:8:5, line:9:24>
+|       | |-IntegerLiteral 0x7fc0e20777b0 <line:8:10> 'unsigned int' 2147483651
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7fc0e2077970 <line:9:7, col:24>
+|       |   `-CStyleCastExpr 0x7fc0e2077948 <col:14, col:24> 'int' <NoOp>
+|       |     `-CallExpr 0x7fc0e2077908 <col:20, col:24> 'int'
+|       |       `-ImplicitCastExpr 0x7fc0e20778f0 <col:20> 'int (*)()' <FunctionToPointerDecay>
+|       |         `-DeclRefExpr 0x7fc0e20778c8 <col:20> 'int ()' Function 0x7fc0e2077830 'bar' 'int ()'
+|       |-CaseStmt 0x7fc0e20779a8 <line:11:5, line:12:24>
+|       | |-IntegerLiteral 0x7fc0e2077988 <line:11:10> 'unsigned int' 2147483649
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7fc0e2077b48 <line:12:7, col:24>
+|       |   `-CStyleCastExpr 0x7fc0e2077b20 <col:14, col:24> 'int' <NoOp>
+|       |     `-CallExpr 0x7fc0e2077ae0 <col:20, col:24> 'int'
+|       |       `-ImplicitCastExpr 0x7fc0e2077ac8 <col:20> 'int (*)()' <FunctionToPointerDecay>
+|       |         `-DeclRefExpr 0x7fc0e2077aa0 <col:20> 'int ()' Function 0x7fc0e2077a08 'baz' 'int ()'
+|       `-CaseStmt 0x7fc0e2077b80 <line:14:5, line:15:25>
+|         |-IntegerLiteral 0x7fc0e2077b60 <line:14:10> 'unsigned int' 2147483652
+|         |-<<<NULL>>>
+|         `-ReturnStmt 0x7fc0e2077d20 <line:15:7, col:25>
+|           `-CStyleCastExpr 0x7fc0e2077cf8 <col:14, col:25> 'int' <NoOp>
+|             `-CallExpr 0x7fc0e2077cb8 <col:20, col:25> 'int'
+|               `-ImplicitCastExpr 0x7fc0e2077ca0 <col:20> 'int (*)()' <FunctionToPointerDecay>
+|                 `-DeclRefExpr 0x7fc0e2077c78 <col:20> 'int ()' Function 0x7fc0e2077be0 'fooz' 'int ()'
+|-FunctionDecl 0x7fc0e2077630 <<invalid sloc>> line:6:19 implicit used foo 'int ()'
+|-FunctionDecl 0x7fc0e2077830 <<invalid sloc>> line:9:20 implicit used bar 'int ()'
+|-FunctionDecl 0x7fc0e2077a08 <<invalid sloc>> line:12:20 implicit used baz 'int ()'
+`-FunctionDecl 0x7fc0e2077be0 <<invalid sloc>> line:15:20 implicit used fooz 'int ()'

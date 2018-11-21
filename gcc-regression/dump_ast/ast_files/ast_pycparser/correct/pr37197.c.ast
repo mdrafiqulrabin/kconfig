@@ -1,0 +1,24 @@
+FileAST: 
+  FuncDef: 
+    Decl: testl, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['unsigned', 'long']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: testl, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          ID: b
+          Constant: int, 1
+          FuncCall: 
+            ID: __builtin_parityl
+            ExprList: 
+              UnaryOp: *
+                ID: a

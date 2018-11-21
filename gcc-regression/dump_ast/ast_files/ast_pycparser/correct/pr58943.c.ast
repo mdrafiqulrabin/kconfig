@@ -1,0 +1,47 @@
+FileAST: 
+  Decl: x, [], [], []
+    ArrayDecl: []
+      TypeDecl: x, []
+        IdentifierType: ['unsigned', 'int']
+      Constant: int, 1
+    InitList: 
+      Constant: int, 2
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Assignment: |=
+        ArrayRef: 
+          ID: x
+          Constant: int, 0
+        Constant: int, 128
+      Return: 
+        Constant: int, 1
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: |=
+        ArrayRef: 
+          ID: x
+          Constant: int, 0
+        FuncCall: 
+          ID: foo
+      If: 
+        BinaryOp: !=
+          ArrayRef: 
+            ID: x
+            Constant: int, 0
+          Constant: int, 131
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

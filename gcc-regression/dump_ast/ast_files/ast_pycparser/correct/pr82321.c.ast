@@ -1,0 +1,78 @@
+FileAST: 
+  Decl: y8, [], [], []
+    TypeDecl: y8, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: dm, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: io, [], [], []
+            TypeDecl: io, []
+              IdentifierType: ['int']
+        TypeDecl: dm, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: y8
+          Constant: int, 0
+        Compound: 
+          Decl: pu, [], [], []
+            TypeDecl: pu, []
+              IdentifierType: ['int']
+            Constant: int, 1
+          While: 
+            BinaryOp: <
+              ID: io
+              Constant: int, 2
+            Compound: 
+              Decl: xo, [], [], []
+                TypeDecl: xo, []
+                  IdentifierType: ['int']
+                TernaryOp: 
+                  BinaryOp: !=
+                    ID: pu
+                    Constant: int, 0
+                  ID: y8
+                  Constant: int, 0
+              While: 
+                BinaryOp: !=
+                  ID: y8
+                  Constant: int, 0
+                If: 
+                  BinaryOp: !=
+                    ID: xo
+                    Constant: int, 0
+                  Compound: 
+                    Label: gi
+                      Assignment: =
+                        ID: xo
+                        BinaryOp: &
+                          ID: __INTPTR_TYPE__
+                          ID: io
+                    Assignment: =
+                      ID: pu
+                      Constant: int, 0
+      If: 
+        BinaryOp: !=
+          ID: io
+          Constant: int, 0
+        Compound: 
+          Assignment: =
+            ID: y8
+            Constant: int, 1
+          While: 
+            BinaryOp: !=
+              ID: y8
+              Constant: int, 0
+            If: 
+              BinaryOp: !=
+                BinaryOp: /
+                  ID: io
+                  UnaryOp: !
+                    ID: y8
+                Constant: int, 0
+              Assignment: =
+                ID: y8
+                Constant: int, 0
+          Goto: gi

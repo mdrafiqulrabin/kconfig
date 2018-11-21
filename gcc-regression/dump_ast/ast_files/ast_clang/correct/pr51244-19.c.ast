@@ -1,0 +1,123 @@
+TranslationUnitDecl 0x7fc8c501c0d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc8c501c620 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc8c501c340 '__int128'
+|-TypedefDecl 0x7fc8c501c690 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc8c501c360 'unsigned __int128'
+|-TypedefDecl 0x7fc8c501c968 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc8c501c770 'struct __NSConstantString_tag'
+|   `-Record 0x7fc8c501c6e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc8c501ca00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc8c501c9c0 'char *'
+|   `-BuiltinType 0x7fc8c501c160 'char'
+|-TypedefDecl 0x7fc8c501ccc8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc8c501cc70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc8c501cae0 'struct __va_list_tag'
+|     `-Record 0x7fc8c501ca58 '__va_list_tag'
+|-RecordDecl 0x7fc8c501cd20 <c_files/pr51244-19.c:30:1, line:33:1> line:30:8 struct request definition
+| `-FieldDecl 0x7fc8c482b600 <line:32:2, col:16> col:16 nr_sectors 'unsigned long'
+|-RecordDecl 0x7fc8c482b648 <line:35:1, line:38:1> line:35:8 struct request_list definition
+| `-FieldDecl 0x7fc8c482b708 <line:37:2, col:6> col:6 referenced count 'int'
+|-RecordDecl 0x7fc8c482b750 <line:40:1, line:47:1> line:40:8 struct request_queue definition
+| |-FieldDecl 0x7fc8c482b850 <line:42:2, col:22> col:22 referenced rq 'struct request_list':'struct request_list'
+| |-FieldDecl 0x7fc8c482b8b0 <line:43:2, col:15> col:15 referenced nr_sectors 'volatile int'
+| |-FieldDecl 0x7fc8c482b910 <line:44:2, col:6> col:6 referenced max_queue_sectors 'int'
+| |-FieldDecl 0x7fc8c482b970 <line:45:2, col:6> col:6 referenced can_throttle 'int'
+| `-FieldDecl 0x7fc8c482b9d0 <line:46:2, col:16> col:16 bounce_pfn 'unsigned long'
+|-TypedefDecl 0x7fc8c482bab0 <line:49:1, col:30> col:30 referenced request_queue_t 'struct request_queue':'struct request_queue'
+| `-ElaboratedType 0x7fc8c482ba60 'struct request_queue' sugar
+|   `-RecordType 0x7fc8c482b7e0 'struct request_queue'
+|     `-Record 0x7fc8c482b750 'request_queue'
+|-FunctionDecl 0x7fc8c482bca8 <line:51:1, line:57:1> line:52:1 used blk_oversized_queue 'int (request_queue_t *)' static inline
+| |-ParmVarDecl 0x7fc8c482bb98 <col:22, col:39> col:39 used q 'request_queue_t *'
+| `-CompoundStmt 0x7fc8c482c0d8 <line:53:1, line:57:1>
+|   |-IfStmt 0x7fc8c482bf78 <line:54:3, line:55:31>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fc8c482be00 <line:54:7, col:10> 'int' <LValueToRValue>
+|   | | `-MemberExpr 0x7fc8c482bdc8 <col:7, col:10> 'int' lvalue ->can_throttle 0x7fc8c482b970
+|   | |   `-ImplicitCastExpr 0x7fc8c482bdb0 <col:7> 'request_queue_t *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fc8c482bd88 <col:7> 'request_queue_t *' lvalue ParmVar 0x7fc8c482bb98 'q' 'request_queue_t *'
+|   | |-ReturnStmt 0x7fc8c482bf60 <line:55:5, col:31>
+|   | | `-BinaryOperator 0x7fc8c482bf38 <col:12, col:31> 'int' '>'
+|   | |   |-ImplicitCastExpr 0x7fc8c482bf08 <col:12, col:15> 'int' <LValueToRValue>
+|   | |   | `-MemberExpr 0x7fc8c482be58 <col:12, col:15> 'volatile int' lvalue ->nr_sectors 0x7fc8c482b8b0
+|   | |   |   `-ImplicitCastExpr 0x7fc8c482be40 <col:12> 'request_queue_t *' <LValueToRValue>
+|   | |   |     `-DeclRefExpr 0x7fc8c482be18 <col:12> 'request_queue_t *' lvalue ParmVar 0x7fc8c482bb98 'q' 'request_queue_t *'
+|   | |   `-ImplicitCastExpr 0x7fc8c482bf20 <col:28, col:31> 'int' <LValueToRValue>
+|   | |     `-MemberExpr 0x7fc8c482bed0 <col:28, col:31> 'int' lvalue ->max_queue_sectors 0x7fc8c482b910
+|   | |       `-ImplicitCastExpr 0x7fc8c482beb8 <col:28> 'request_queue_t *' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x7fc8c482be90 <col:28> 'request_queue_t *' lvalue ParmVar 0x7fc8c482bb98 'q' 'request_queue_t *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fc8c482c0c0 <line:56:3, col:25>
+|     `-BinaryOperator 0x7fc8c482c098 <col:10, col:25> 'int' '=='
+|       |-ImplicitCastExpr 0x7fc8c482c080 <col:10, col:16> 'int' <LValueToRValue>
+|       | `-MemberExpr 0x7fc8c482c028 <col:10, col:16> 'int' lvalue .count 0x7fc8c482b708
+|       |   `-MemberExpr 0x7fc8c482bff0 <col:10, col:13> 'struct request_list':'struct request_list' lvalue ->rq 0x7fc8c482b850
+|       |     `-ImplicitCastExpr 0x7fc8c482bfd8 <col:10> 'request_queue_t *' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7fc8c482bfb0 <col:10> 'request_queue_t *' lvalue ParmVar 0x7fc8c482bb98 'q' 'request_queue_t *'
+|       `-IntegerLiteral 0x7fc8c482c060 <col:25> 'int' 0
+`-FunctionDecl 0x7fc8c482c348 <line:59:1, line:74:1> line:60:1 get_request 'struct request *(request_queue_t *, int)'
+  |-ParmVarDecl 0x7fc8c482c110 <col:14, col:31> col:31 used q 'request_queue_t *'
+  |-ParmVarDecl 0x7fc8c482c188 <col:34, col:38> col:38 used rw 'int'
+  `-CompoundStmt 0x7fc8c482dd20 <line:61:1, line:74:1>
+    |-DeclStmt 0x7fc8c482c510 <line:62:3, col:34>
+    | `-VarDecl 0x7fc8c482c418 <col:3, col:33> col:19 rq 'struct request *' cinit
+    |   `-ImplicitCastExpr 0x7fc8c482c4f8 <col:24, col:33> 'struct request *' <NullToPointer>
+    |     `-ParenExpr 0x7fc8c482c4d8 <col:24, col:33> 'void *'
+    |       `-CStyleCastExpr 0x7fc8c482c4b0 <col:25, col:32> 'void *' <NullToPointer>
+    |         `-IntegerLiteral 0x7fc8c482c478 <col:32> 'int' 0
+    |-DeclStmt 0x7fc8c482d6f8 <line:63:3, col:35>
+    | `-VarDecl 0x7fc8c482d600 <col:3, col:33> col:24 rl 'struct request_list *' cinit
+    |   `-UnaryOperator 0x7fc8c482d6d8 <col:29, col:33> 'struct request_list *' prefix '&'
+    |     `-MemberExpr 0x7fc8c482d6a0 <col:30, col:33> 'struct request_list':'struct request_list' lvalue ->rq 0x7fc8c482b850
+    |       `-ImplicitCastExpr 0x7fc8c482d688 <col:30> 'request_queue_t *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fc8c482d660 <col:30> 'request_queue_t *' lvalue ParmVar 0x7fc8c482c110 'q' 'request_queue_t *'
+    |-IfStmt 0x7fc8c482dc38 <line:65:3, line:71:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7fc8c482d7d0 <line:65:7, col:29> 'int'
+    | | |-ImplicitCastExpr 0x7fc8c482d7b8 <col:7> 'int (*)(request_queue_t *)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fc8c482d710 <col:7> 'int (request_queue_t *)' Function 0x7fc8c482bca8 'blk_oversized_queue' 'int (request_queue_t *)'
+    | | `-ImplicitCastExpr 0x7fc8c482d800 <col:28> 'request_queue_t *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fc8c482d738 <col:28> 'request_queue_t *' lvalue ParmVar 0x7fc8c482c110 'q' 'request_queue_t *'
+    | |-CompoundStmt 0x7fc8c482dc10 <line:66:5, line:71:5>
+    | | |-IfStmt 0x7fc8c482da40 <line:67:7, line:68:18>
+    | | | |-<<<NULL>>>
+    | | | |-<<<NULL>>>
+    | | | |-BinaryOperator 0x7fc8c482d968 <line:67:11, col:32> 'int' '||'
+    | | | | |-ParenExpr 0x7fc8c482d8a0 <col:11, col:19> 'int'
+    | | | | | `-BinaryOperator 0x7fc8c482d878 <col:12, col:18> 'int' '=='
+    | | | | |   |-ImplicitCastExpr 0x7fc8c482d860 <col:12> 'int' <LValueToRValue>
+    | | | | |   | `-DeclRefExpr 0x7fc8c482d818 <col:12> 'int' lvalue ParmVar 0x7fc8c482c188 'rw' 'int'
+    | | | | |   `-IntegerLiteral 0x7fc8c482d840 <col:18> 'int' 1
+    | | | | `-ParenExpr 0x7fc8c482d948 <col:24, col:32> 'int'
+    | | | |   `-BinaryOperator 0x7fc8c482d920 <col:25, col:31> 'int' '=='
+    | | | |     |-ImplicitCastExpr 0x7fc8c482d908 <col:25> 'int' <LValueToRValue>
+    | | | |     | `-DeclRefExpr 0x7fc8c482d8c0 <col:25> 'int' lvalue ParmVar 0x7fc8c482c188 'rw' 'int'
+    | | | |     `-IntegerLiteral 0x7fc8c482d8e8 <col:31> 'int' 0
+    | | | |-ReturnStmt 0x7fc8c482da28 <line:68:2, col:18>
+    | | | | `-ImplicitCastExpr 0x7fc8c482da10 <col:9, col:18> 'struct request *' <NullToPointer>
+    | | | |   `-ParenExpr 0x7fc8c482d9f0 <col:9, col:18> 'void *'
+    | | | |     `-CStyleCastExpr 0x7fc8c482d9c8 <col:10, col:17> 'void *' <NullToPointer>
+    | | | |       `-IntegerLiteral 0x7fc8c482d990 <col:17> 'int' 0
+    | | | `-<<<NULL>>>
+    | | `-IfStmt 0x7fc8c482dbd8 <line:69:7, line:70:18>
+    | |   |-<<<NULL>>>
+    | |   |-<<<NULL>>>
+    | |   |-CallExpr 0x7fc8c482dae0 <line:69:11, col:33> 'int'
+    | |   | |-ImplicitCastExpr 0x7fc8c482dac8 <col:11> 'int (*)(request_queue_t *)' <FunctionToPointerDecay>
+    | |   | | `-DeclRefExpr 0x7fc8c482da78 <col:11> 'int (request_queue_t *)' Function 0x7fc8c482bca8 'blk_oversized_queue' 'int (request_queue_t *)'
+    | |   | `-ImplicitCastExpr 0x7fc8c482db10 <col:32> 'request_queue_t *' <LValueToRValue>
+    | |   |   `-DeclRefExpr 0x7fc8c482daa0 <col:32> 'request_queue_t *' lvalue ParmVar 0x7fc8c482c110 'q' 'request_queue_t *'
+    | |   |-ReturnStmt 0x7fc8c482dbc0 <line:70:2, col:18>
+    | |   | `-ImplicitCastExpr 0x7fc8c482dba8 <col:9, col:18> 'struct request *' <NullToPointer>
+    | |   |   `-ParenExpr 0x7fc8c482db88 <col:9, col:18> 'void *'
+    | |   |     `-CStyleCastExpr 0x7fc8c482db60 <col:10, col:17> 'void *' <NullToPointer>
+    | |   |       `-IntegerLiteral 0x7fc8c482db28 <col:17> 'int' 0
+    | |   `-<<<NULL>>>
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc8c482dd08 <line:73:3, col:18>
+      `-ImplicitCastExpr 0x7fc8c482dcf0 <col:10, col:18> 'struct request *' <BitCast>
+        `-CStyleCastExpr 0x7fc8c482dcc8 <col:10, col:18> 'void *' <IntegralToPointer>
+          `-UnaryOperator 0x7fc8c482dc90 <col:17, col:18> 'int' prefix '-'
+            `-IntegerLiteral 0x7fc8c482dc70 <col:18> 'int' 100

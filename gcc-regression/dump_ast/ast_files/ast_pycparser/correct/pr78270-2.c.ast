@@ -1,0 +1,23 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Switch: 
+        ID: a
+        Compound: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['char']
+          Case: 
+            Constant: int, 8
+            UnaryOp: &
+              ID: b
+            Switch: 
+              Constant: int, 0
+              EmptyStatement: 

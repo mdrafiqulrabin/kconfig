@@ -1,0 +1,57 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: abc
+      Decl: abc_call, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            ParamList: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            TypeDecl: abc_call, []
+              IdentifierType: ['void']
+  FuncDef: 
+    Decl: do_register, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: xyz, [], [], []
+            PtrDecl: []
+              TypeDecl: xyz, []
+                Struct: abc
+        TypeDecl: do_register, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: call_func, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: call_func, []
+          IdentifierType: ['void']
+    Compound: 
+  Decl: xyz, [], ['static'], []
+    TypeDecl: xyz, []
+      Struct: abc
+    InitList: 
+      NamedInitializer: 
+        ID: call_func
+        ID: abc_call
+  FuncDef: 
+    Decl: func, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: func, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: do_register
+        ExprList: 
+          UnaryOp: &
+            ID: xyz

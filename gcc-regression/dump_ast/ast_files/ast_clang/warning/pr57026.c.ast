@@ -1,0 +1,145 @@
+c_files/pr57026.c:20:15: warning: '&&' within '||' [-Wlogical-op-parentheses]
+  if ((!x->c3 && !x->c4 || *y == 0) && !e && bar (z))
+       ~~~~~~~^~~~~~~~~ ~~
+c_files/pr57026.c:20:15: note: place parentheses around the '&&' expression to silence this warning
+  if ((!x->c3 && !x->c4 || *y == 0) && !e && bar (z))
+              ^
+       (               )
+1 warning generated.
+TranslationUnitDecl 0x7fc2960264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc296026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc296026740 '__int128'
+|-TypedefDecl 0x7fc296026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc296026760 'unsigned __int128'
+|-TypedefDecl 0x7fc296026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc296026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc296026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc296026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc296026dc0 'char *'
+|   `-BuiltinType 0x7fc296026560 'char'
+|-TypedefDecl 0x7fc2960270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc296027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc296026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc296026e58 '__va_list_tag'
+|-RecordDecl 0x7fc296027120 <c_files/pr57026.c:3:9, col:48> col:16 struct __jmp_buf_tag definition
+| `-FieldDecl 0x7fc296077458 <col:32, col:45> col:37 buf 'char [1024]'
+|-TypedefDecl 0x7fc2960775e8 <col:1, col:59> col:50 referenced jmp_buf 'struct __jmp_buf_tag [1]'
+| `-ConstantArrayType 0x7fc296077580 'struct __jmp_buf_tag [1]' 1 
+|   `-ElaboratedType 0x7fc2960774c0 'struct __jmp_buf_tag' sugar
+|     `-RecordType 0x7fc2960271b0 'struct __jmp_buf_tag'
+|       `-Record 0x7fc296027120 '__jmp_buf_tag'
+|-FunctionDecl 0x7fc296077868 <line:4:12> col:12 implicit used setjmp 'int (struct __jmp_buf_tag *)' extern
+| |-ParmVarDecl 0x7fc296077900 <<invalid sloc>> <invalid sloc> 'struct __jmp_buf_tag *'
+| `-ReturnsTwiceAttr 0x7fc296077968 <col:12> Implicit
+|-FunctionDecl 0x7fc2960779b0 prev 0x7fc296077868 <col:1, col:27> col:12 used setjmp 'int (struct __jmp_buf_tag *)' extern
+| |-ParmVarDecl 0x7fc296077720 <col:20> col:27 'struct __jmp_buf_tag *':'struct __jmp_buf_tag *'
+| `-ReturnsTwiceAttr 0x7fc296077a88 <col:12> Inherited Implicit
+|-FunctionDecl 0x7fc296077ba8 <line:5:1, col:31> col:12 used bar 'int (unsigned int *)' extern
+| `-ParmVarDecl 0x7fc296077ae0 <col:17, col:30> col:31 'unsigned int *'
+|-FunctionDecl 0x7fc296077de0 <line:6:1, col:26> col:17 used baz 'jmp_buf *(void)' extern
+|-RecordDecl 0x7fc296077e78 <line:7:1, col:45> col:8 struct C definition
+| |-FieldDecl 0x7fc296077f38 <col:12, col:16> col:16 referenced c1 'int'
+| |-FieldDecl 0x7fc296077f98 <col:20, col:33> col:33 referenced c2 'unsigned int'
+| |-FieldDecl 0x7fc296077ff8 <col:20, col:37> col:37 referenced c3 'unsigned int'
+| `-FieldDecl 0x7fc296078058 <col:20, col:41> col:41 referenced c4 'unsigned int'
+`-FunctionDecl 0x7fc2960784a0 <line:9:1, line:22:1> line:10:1 foo 'void (struct C *, const int *, unsigned int *, unsigned int, unsigned int)'
+  |-ParmVarDecl 0x7fc296078150 <col:6, col:16> col:16 used x 'struct C *'
+  |-ParmVarDecl 0x7fc2960781c8 <col:19, col:30> col:30 used y 'const int *'
+  |-ParmVarDecl 0x7fc296078240 <col:33, col:47> col:47 used z 'unsigned int *'
+  |-ParmVarDecl 0x7fc2960782b8 <col:50, col:63> col:63 used e 'unsigned int'
+  |-ParmVarDecl 0x7fc296078330 <col:66, col:79> col:79 used g 'unsigned int'
+  `-CompoundStmt 0x7fc2960792e8 <line:11:1, line:22:1>
+    |-DeclStmt 0x7fc296078610 <line:12:3, col:21>
+    | `-VarDecl 0x7fc296078578 <col:3, col:20> col:16 used d 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7fc2960785f8 <col:20> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7fc2960785d8 <col:20> 'int' 0
+    |-DeclStmt 0x7fc2960786a0 <line:13:3, col:18>
+    | `-VarDecl 0x7fc296078640 <col:3, col:17> col:17 used f 'unsigned long'
+    |-CallExpr 0x7fc296078840 <line:14:3, col:18> 'int'
+    | |-ImplicitCastExpr 0x7fc296078828 <col:3> 'int (*)(struct __jmp_buf_tag *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc2960786b8 <col:3> 'int (struct __jmp_buf_tag *)' Function 0x7fc2960779b0 'setjmp' 'int (struct __jmp_buf_tag *)'
+    | `-ImplicitCastExpr 0x7fc296078870 <col:11, col:17> 'struct __jmp_buf_tag *' <ArrayToPointerDecay>
+    |   `-UnaryOperator 0x7fc2960787a8 <col:11, col:17> 'jmp_buf':'struct __jmp_buf_tag [1]' lvalue prefix '*'
+    |     `-CallExpr 0x7fc296078780 <col:12, col:17> 'jmp_buf *'
+    |       `-ImplicitCastExpr 0x7fc296078768 <col:12> 'jmp_buf *(*)(void)' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x7fc2960786e0 <col:12> 'jmp_buf *(void)' Function 0x7fc296077de0 'baz' 'jmp_buf *(void)'
+    |-BinaryOperator 0x7fc296078908 <line:15:3, col:7> 'unsigned long' '='
+    | |-DeclRefExpr 0x7fc296078888 <col:3> 'unsigned long' lvalue Var 0x7fc296078640 'f' 'unsigned long'
+    | `-ImplicitCastExpr 0x7fc2960788f0 <col:7> 'unsigned long' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7fc2960788d8 <col:7> 'unsigned int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fc2960788b0 <col:7> 'unsigned int' lvalue Var 0x7fc296078578 'd' 'unsigned int'
+    |-IfStmt 0x7fc296078d80 <line:16:3, line:19:9>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc296078c48 <line:16:7, col:45> 'int' '&&'
+    | | |-BinaryOperator 0x7fc296078ad8 <col:7, col:27> 'int' '&&'
+    | | | |-ParenExpr 0x7fc296078a78 <col:7, col:22> 'int'
+    | | | | `-BinaryOperator 0x7fc296078a50 <col:8, col:20> 'int' '||'
+    | | | |   |-ImplicitCastExpr 0x7fc296078a20 <col:8, col:11> 'int' <LValueToRValue>
+    | | | |   | `-MemberExpr 0x7fc296078970 <col:8, col:11> 'int' lvalue ->c1 0x7fc296077f38
+    | | | |   |   `-ImplicitCastExpr 0x7fc296078958 <col:8> 'struct C *' <LValueToRValue>
+    | | | |   |     `-DeclRefExpr 0x7fc296078930 <col:8> 'struct C *' lvalue ParmVar 0x7fc296078150 'x' 'struct C *'
+    | | | |   `-ImplicitCastExpr 0x7fc296078a38 <col:17, col:20> 'unsigned int' <LValueToRValue>
+    | | | |     `-MemberExpr 0x7fc2960789e8 <col:17, col:20> 'unsigned int' lvalue ->c2 0x7fc296077f98
+    | | | |       `-ImplicitCastExpr 0x7fc2960789d0 <col:17> 'struct C *' <LValueToRValue>
+    | | | |         `-DeclRefExpr 0x7fc2960789a8 <col:17> 'struct C *' lvalue ParmVar 0x7fc296078150 'x' 'struct C *'
+    | | | `-ImplicitCastExpr 0x7fc296078ac0 <col:27> 'unsigned int' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fc296078a98 <col:27> 'unsigned int' lvalue ParmVar 0x7fc296078330 'g' 'unsigned int'
+    | | `-ParenExpr 0x7fc296078c28 <col:32, col:45> 'int'
+    | |   `-BinaryOperator 0x7fc296078c00 <col:33, col:44> 'int' '||'
+    | |     |-UnaryOperator 0x7fc296078b40 <col:33, col:34> 'int' prefix '!'
+    | |     | `-ImplicitCastExpr 0x7fc296078b28 <col:34> 'unsigned int' <LValueToRValue>
+    | |     |   `-DeclRefExpr 0x7fc296078b00 <col:34> 'unsigned int' lvalue ParmVar 0x7fc2960782b8 'e' 'unsigned int'
+    | |     `-BinaryOperator 0x7fc296078bd8 <col:39, col:44> 'int' '>='
+    | |       |-ImplicitCastExpr 0x7fc296078ba8 <col:39> 'unsigned int' <LValueToRValue>
+    | |       | `-DeclRefExpr 0x7fc296078b60 <col:39> 'unsigned int' lvalue Var 0x7fc296078578 'd' 'unsigned int'
+    | |       `-ImplicitCastExpr 0x7fc296078bc0 <col:44> 'unsigned int' <IntegralCast>
+    | |         `-IntegerLiteral 0x7fc296078b88 <col:44> 'int' 8
+    | |-BinaryOperator 0x7fc296078cd0 <line:17:5, col:9> 'unsigned int' '='
+    | | |-DeclRefExpr 0x7fc296078c70 <col:5> 'unsigned int' lvalue Var 0x7fc296078578 'd' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7fc296078cb8 <col:9> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fc296078c98 <col:9> 'int' 16
+    | `-BinaryOperator 0x7fc296078d58 <line:19:5, col:9> 'unsigned int' '='
+    |   |-DeclRefExpr 0x7fc296078cf8 <col:5> 'unsigned int' lvalue Var 0x7fc296078578 'd' 'unsigned int'
+    |   `-ImplicitCastExpr 0x7fc296078d40 <col:9> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7fc296078d20 <col:9> 'int' 8
+    `-IfStmt 0x7fc2960792b0 <line:20:3, line:21:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc2960791a8 <line:20:7, col:52> 'int' '&&'
+      | |-BinaryOperator 0x7fc2960790a8 <col:7, col:41> 'int' '&&'
+      | | |-ParenExpr 0x7fc296079028 <col:7, col:35> 'int'
+      | | | `-BinaryOperator 0x7fc296079000 <col:8, col:34> 'int' '||'
+      | | |   |-BinaryOperator 0x7fc296078f18 <col:8, col:22> 'int' '&&'
+      | | |   | |-UnaryOperator 0x7fc296078e48 <col:8, col:12> 'int' prefix '!'
+      | | |   | | `-ImplicitCastExpr 0x7fc296078e30 <col:9, col:12> 'unsigned int' <LValueToRValue>
+      | | |   | |   `-MemberExpr 0x7fc296078df8 <col:9, col:12> 'unsigned int' lvalue ->c3 0x7fc296077ff8
+      | | |   | |     `-ImplicitCastExpr 0x7fc296078de0 <col:9> 'struct C *' <LValueToRValue>
+      | | |   | |       `-DeclRefExpr 0x7fc296078db8 <col:9> 'struct C *' lvalue ParmVar 0x7fc296078150 'x' 'struct C *'
+      | | |   | `-UnaryOperator 0x7fc296078ef8 <col:18, col:22> 'int' prefix '!'
+      | | |   |   `-ImplicitCastExpr 0x7fc296078ee0 <col:19, col:22> 'unsigned int' <LValueToRValue>
+      | | |   |     `-MemberExpr 0x7fc296078ea8 <col:19, col:22> 'unsigned int' lvalue ->c4 0x7fc296078058
+      | | |   |       `-ImplicitCastExpr 0x7fc296078e90 <col:19> 'struct C *' <LValueToRValue>
+      | | |   |         `-DeclRefExpr 0x7fc296078e68 <col:19> 'struct C *' lvalue ParmVar 0x7fc296078150 'x' 'struct C *'
+      | | |   `-BinaryOperator 0x7fc296078fd8 <col:28, col:34> 'int' '=='
+      | | |     |-ImplicitCastExpr 0x7fc296078fc0 <col:28, col:29> 'int' <LValueToRValue>
+      | | |     | `-UnaryOperator 0x7fc296078f80 <col:28, col:29> 'const int' lvalue prefix '*'
+      | | |     |   `-ImplicitCastExpr 0x7fc296078f68 <col:29> 'const int *' <LValueToRValue>
+      | | |     |     `-DeclRefExpr 0x7fc296078f40 <col:29> 'const int *' lvalue ParmVar 0x7fc2960781c8 'y' 'const int *'
+      | | |     `-IntegerLiteral 0x7fc296078fa0 <col:34> 'int' 0
+      | | `-UnaryOperator 0x7fc296079088 <col:40, col:41> 'int' prefix '!'
+      | |   `-ImplicitCastExpr 0x7fc296079070 <col:41> 'unsigned int' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7fc296079048 <col:41> 'unsigned int' lvalue ParmVar 0x7fc2960782b8 'e' 'unsigned int'
+      | `-CallExpr 0x7fc296079160 <col:46, col:52> 'int'
+      |   |-ImplicitCastExpr 0x7fc296079148 <col:46> 'int (*)(unsigned int *)' <FunctionToPointerDecay>
+      |   | `-DeclRefExpr 0x7fc2960790d0 <col:46> 'int (unsigned int *)' Function 0x7fc296077ba8 'bar' 'int (unsigned int *)'
+      |   `-ImplicitCastExpr 0x7fc296079190 <col:51> 'unsigned int *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fc2960790f8 <col:51> 'unsigned int *' lvalue ParmVar 0x7fc296078240 'z' 'unsigned int *'
+      |-BinaryOperator 0x7fc296079288 <line:21:5, col:10> 'unsigned int' '='
+      | |-UnaryOperator 0x7fc296079210 <col:5, col:6> 'unsigned int' lvalue prefix '*'
+      | | `-ImplicitCastExpr 0x7fc2960791f8 <col:6> 'unsigned int *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fc2960791d0 <col:6> 'unsigned int *' lvalue ParmVar 0x7fc296078240 'z' 'unsigned int *'
+      | `-ImplicitCastExpr 0x7fc296079270 <col:10> 'unsigned int' <IntegralCast>
+      |   `-ImplicitCastExpr 0x7fc296079258 <col:10> 'unsigned long' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fc296079230 <col:10> 'unsigned long' lvalue Var 0x7fc296078640 'f' 'unsigned long'
+      `-<<<NULL>>>

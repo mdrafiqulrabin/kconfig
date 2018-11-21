@@ -1,0 +1,121 @@
+FileAST: 
+  Pragma: GCC optimize ("-O2")
+  Decl: None, [], [], []
+    Struct: itrm
+      Decl: std_in, [], [], []
+        TypeDecl: std_in, []
+          IdentifierType: ['int']
+      Decl: std_out, [], [], []
+        TypeDecl: std_out, []
+          IdentifierType: ['int']
+      Decl: sock_in, [], [], []
+        TypeDecl: sock_in, []
+          IdentifierType: ['int']
+      Decl: sock_out, [], [], []
+        TypeDecl: sock_out, []
+          IdentifierType: ['int']
+  Decl: alloc, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: alloc, []
+          Struct: itrm
+  Decl: queue_event, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: itrm, [], [], []
+          PtrDecl: []
+            TypeDecl: itrm, []
+              Struct: itrm
+        Decl: data, [], [], []
+          PtrDecl: []
+            TypeDecl: data, []
+              IdentifierType: ['unsigned', 'char']
+        Decl: len, [], [], []
+          TypeDecl: len, []
+            IdentifierType: ['int']
+      TypeDecl: queue_event, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: handle_trm, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: std_in, [], [], []
+            TypeDecl: std_in, []
+              IdentifierType: ['int']
+          Decl: std_out, [], [], []
+            TypeDecl: std_out, []
+              IdentifierType: ['int']
+          Decl: sock_in, [], [], []
+            TypeDecl: sock_in, []
+              IdentifierType: ['int']
+          Decl: sock_out, [], [], []
+            TypeDecl: sock_out, []
+              IdentifierType: ['int']
+          Decl: ctl_in, [], [], []
+            TypeDecl: ctl_in, []
+              IdentifierType: ['int']
+          Decl: init_string, [], [], []
+            PtrDecl: []
+              TypeDecl: init_string, []
+                IdentifierType: ['void']
+          Decl: init_len, [], [], []
+            TypeDecl: init_len, []
+              IdentifierType: ['int']
+        TypeDecl: handle_trm, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: itrm, [], [], []
+        PtrDecl: []
+          TypeDecl: itrm, []
+            Struct: itrm
+      Decl: ev, [], [], []
+        TypeDecl: ev, []
+          Struct: itrm
+        InitList: 
+          Constant: int, 0
+          Constant: int, 80
+          Constant: int, 24
+          Constant: int, 0
+      Assignment: =
+        ID: itrm
+        FuncCall: 
+          ID: alloc
+      Assignment: =
+        StructRef: ->
+          ID: itrm
+          ID: std_in
+        ID: std_in
+      Assignment: =
+        StructRef: ->
+          ID: itrm
+          ID: std_out
+        ID: std_out
+      Assignment: =
+        StructRef: ->
+          ID: itrm
+          ID: sock_in
+        ID: sock_in
+      Assignment: =
+        StructRef: ->
+          ID: itrm
+          ID: sock_out
+        ID: sock_out
+      FuncCall: 
+        ID: queue_event
+        ExprList: 
+          ID: itrm
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            UnaryOp: &
+              ID: ev
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                Struct: itrm

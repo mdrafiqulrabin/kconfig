@@ -1,0 +1,106 @@
+FileAST: 
+  Decl: x0, [], [], []
+    TypeDecl: x0, []
+      IdentifierType: ['short']
+    Constant: int, 15
+  FuncDef: 
+    Decl: func, [], [], []
+      FuncDecl: 
+        TypeDecl: func, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: x1, ['volatile'], [], []
+        TypeDecl: x1, ['volatile']
+          IdentifierType: ['int']
+        Constant: int, 1U
+      Decl: x2, ['volatile'], [], []
+        TypeDecl: x2, ['volatile']
+          IdentifierType: ['char']
+        Constant: int, 0
+      Decl: t0, [], [], []
+        TypeDecl: t0, []
+          IdentifierType: ['char']
+        Constant: int, 0
+      Decl: t1, [], [], []
+        TypeDecl: t1, []
+          IdentifierType: ['unsigned', 'long']
+        Constant: int, 2LU
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      If: 
+        BinaryOp: >>
+          Constant: int, 1
+          ID: x2
+        Compound: 
+          Assignment: =
+            ID: t0
+            UnaryOp: -
+              Constant: int, 1
+          Assignment: =
+            ID: t1
+            BinaryOp: -
+              BinaryOp: &
+                Constant: int, 1
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['short']
+                  BinaryOp: ^
+                    ID: x1
+                    Constant: int, 8U
+              Constant: int, 1
+      While: 
+        BinaryOp: >
+          ID: i
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            BinaryOp: +
+              BinaryOp: >>
+                Constant: int, 1U
+                ID: t1
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+                BinaryOp: %
+                  Constant: int, 128
+                  BinaryOp: *
+                    Constant: int, 10
+                    BinaryOp: &
+                      Constant: int, 25LU
+                      BinaryOp: %
+                        Constant: int, 29
+                        ID: x0
+        Compound: 
+          Assignment: +=
+            ID: i
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+              BinaryOp: /
+                Constant: int, 12L
+                BinaryOp: !=
+                  Constant: int, 1
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['int']
+                    ID: t1
+      If: 
+        BinaryOp: !=
+          ID: t0
+          UnaryOp: -
+            Constant: int, 1
+        FuncCall: 
+          ID: __builtin_abort
+      If: 
+        BinaryOp: !=
+          ID: t1
+          Constant: int, 0L
+        FuncCall: 
+          ID: __builtin_abort

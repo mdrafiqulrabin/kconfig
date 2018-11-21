@@ -1,0 +1,23 @@
+FileAST: 
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  Pragma: interrupt
+  Pragma: nosave_low_regs
+  FuncDef: 
+    Decl: isr, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: isr, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: foo

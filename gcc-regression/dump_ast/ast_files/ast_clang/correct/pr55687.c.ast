@@ -1,0 +1,136 @@
+TranslationUnitDecl 0x7f83db0058d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f83db005e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f83db005b40 '__int128'
+|-TypedefDecl 0x7f83db005e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f83db005b60 'unsigned __int128'
+|-TypedefDecl 0x7f83db006168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f83db005f70 'struct __NSConstantString_tag'
+|   `-Record 0x7f83db005ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f83db006200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f83db0061c0 'char *'
+|   `-BuiltinType 0x7f83db005960 'char'
+|-TypedefDecl 0x7f83db0064c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f83db006470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f83db0062e0 'struct __va_list_tag'
+|     `-Record 0x7f83db006258 '__va_list_tag'
+|-RecordDecl 0x7f83db006520 <c_files/pr55687.c:3:9, col:16> col:16 struct _IO_FILE
+|-TypedefDecl 0x7f83db05ae20 <col:1, col:25> col:25 referenced FILE 'struct _IO_FILE':'struct _IO_FILE'
+| `-ElaboratedType 0x7f83db0065d0 'struct _IO_FILE' sugar
+|   `-RecordType 0x7f83db0065b0 'struct _IO_FILE'
+|     `-Record 0x7f83db006520 '_IO_FILE'
+|-TypedefDecl 0x7f83db05aea8 <line:4:1, col:15> col:15 referenced gshort 'short'
+| `-BuiltinType 0x7f83db0059a0 'short'
+|-RecordDecl 0x7f83db05af00 <line:5:9, col:16> col:16 struct _GString
+|-TypedefDecl 0x7f83db05b000 <col:1, col:25> col:25 referenced GString 'struct _GString':'struct _GString'
+| `-ElaboratedType 0x7f83db05afb0 'struct _GString' sugar
+|   `-RecordType 0x7f83db05af90 'struct _GString'
+|     `-Record 0x7f83db05af00 '_GString'
+|-FunctionDecl 0x7f83db05b328 <line:7:1, col:39> col:14 used fgets 'char *(char *, int, FILE *)' extern
+| |-ParmVarDecl 0x7f83db05b088 <col:20, col:25> col:26 'char *'
+| |-ParmVarDecl 0x7f83db05b100 <col:28> col:31 'int'
+| `-ParmVarDecl 0x7f83db05b1e8 <col:33, col:38> col:39 'FILE *'
+|-FunctionDecl 0x7f83db05b630 <line:8:1, col:54> col:13 used g_string_append_c_inline 'void (GString *, char)' extern
+| |-ParmVarDecl 0x7f83db05b4a8 <col:39, col:47> col:48 'GString *'
+| `-ParmVarDecl 0x7f83db05b518 <col:50> col:54 'char'
+|-FunctionDecl 0x7f83db05b7b0 <line:10:1, line:30:1> line:10:6 verbose_text_loop 'void (void *)'
+| |-ParmVarDecl 0x7f83db05b6f0 <col:25, col:31> col:31 data 'void *'
+| `-CompoundStmt 0x7f83db05c8b0 <line:11:1, line:30:1>
+|   |-DeclStmt 0x7f83db05b8c0 <line:12:3, col:16>
+|   | `-VarDecl 0x7f83db05b860 <col:3, col:9> col:9 used dev_vcs 'FILE *'
+|   |-DeclStmt 0x7f83db05b9b8 <line:13:3, col:15>
+|   | `-VarDecl 0x7f83db05b958 <col:3, col:14> col:8 used buf 'char [81]'
+|   |-DeclStmt 0x7f83db05ba40 <line:14:3, col:19>
+|   | `-VarDecl 0x7f83db05b9e0 <col:3, col:12> col:12 used buf_str 'GString *'
+|   |-DeclStmt 0x7f83db05bb78 <line:15:3, col:14>
+|   | |-VarDecl 0x7f83db05ba90 <col:3, col:10> col:10 used i 'gshort':'short'
+|   | `-VarDecl 0x7f83db05bb00 <col:3, col:13> col:13 used j 'gshort':'short'
+|   `-WhileStmt 0x7f83db05c890 <line:16:3, line:29:5>
+|     |-<<<NULL>>>
+|     |-IntegerLiteral 0x7f83db05bb90 <line:16:10> 'int' 1
+|     `-CompoundStmt 0x7f83db05c870 <line:17:5, line:29:5>
+|       `-ForStmt 0x7f83db05c838 <line:18:7, line:28:2>
+|         |-BinaryOperator 0x7f83db05bc10 <line:18:12, col:16> 'gshort':'short' '='
+|         | |-DeclRefExpr 0x7f83db05bbb0 <col:12> 'gshort':'short' lvalue Var 0x7f83db05ba90 'i' 'gshort':'short'
+|         | `-ImplicitCastExpr 0x7f83db05bbf8 <col:16> 'gshort':'short' <IntegralCast>
+|         |   `-IntegerLiteral 0x7f83db05bbd8 <col:16> 'int' 1
+|         |-<<<NULL>>>
+|         |-BinaryOperator 0x7f83db05bcb0 <col:19, col:24> 'int' '<='
+|         | |-ImplicitCastExpr 0x7f83db05bc98 <col:19> 'int' <IntegralCast>
+|         | | `-ImplicitCastExpr 0x7f83db05bc80 <col:19> 'gshort':'short' <LValueToRValue>
+|         | |   `-DeclRefExpr 0x7f83db05bc38 <col:19> 'gshort':'short' lvalue Var 0x7f83db05ba90 'i' 'gshort':'short'
+|         | `-IntegerLiteral 0x7f83db05bc60 <col:24> 'int' 7
+|         |-UnaryOperator 0x7f83db05bd00 <col:27, col:28> 'gshort':'short' postfix '++'
+|         | `-DeclRefExpr 0x7f83db05bcd8 <col:27> 'gshort':'short' lvalue Var 0x7f83db05ba90 'i' 'gshort':'short'
+|         `-CompoundStmt 0x7f83db05c818 <line:19:2, line:28:2>
+|           `-WhileStmt 0x7f83db05c7f8 <line:20:4, line:27:6>
+|             |-<<<NULL>>>
+|             |-CallExpr 0x7f83db05be40 <line:20:11, col:34> 'char *'
+|             | |-ImplicitCastExpr 0x7f83db05be28 <col:11> 'char *(*)(char *, int, FILE *)' <FunctionToPointerDecay>
+|             | | `-DeclRefExpr 0x7f83db05bd20 <col:11> 'char *(char *, int, FILE *)' Function 0x7f83db05b328 'fgets' 'char *(char *, int, FILE *)'
+|             | |-ImplicitCastExpr 0x7f83db05be80 <col:18> 'char *' <ArrayToPointerDecay>
+|             | | `-DeclRefExpr 0x7f83db05bd48 <col:18> 'char [81]' lvalue Var 0x7f83db05b958 'buf' 'char [81]'
+|             | |-IntegerLiteral 0x7f83db05bd70 <col:23> 'int' 81
+|             | `-ImplicitCastExpr 0x7f83db05be98 <col:27> 'FILE *' <LValueToRValue>
+|             |   `-DeclRefExpr 0x7f83db05bd90 <col:27> 'FILE *' lvalue Var 0x7f83db05b860 'dev_vcs' 'FILE *'
+|             `-CompoundStmt 0x7f83db05c7d0 <line:21:6, line:27:6>
+|               |-ForStmt 0x7f83db05c3e8 <line:22:8, line:24:5>
+|               | |-BinaryOperator 0x7f83db05bf10 <line:22:13, col:17> 'gshort':'short' '='
+|               | | |-DeclRefExpr 0x7f83db05beb0 <col:13> 'gshort':'short' lvalue Var 0x7f83db05bb00 'j' 'gshort':'short'
+|               | | `-ImplicitCastExpr 0x7f83db05bef8 <col:17> 'gshort':'short' <IntegralCast>
+|               | |   `-IntegerLiteral 0x7f83db05bed8 <col:17> 'int' 0
+|               | |-<<<NULL>>>
+|               | |-BinaryOperator 0x7f83db05c220 <col:22, col:47> 'int' '<'
+|               | | |-ImplicitCastExpr 0x7f83db05c208 <col:22> 'unsigned long' <IntegralCast>
+|               | | | `-ImplicitCastExpr 0x7f83db05c1f0 <col:22> 'gshort':'short' <LValueToRValue>
+|               | | |   `-DeclRefExpr 0x7f83db05bf38 <col:22> 'gshort':'short' lvalue Var 0x7f83db05bb00 'j' 'gshort':'short'
+|               | | `-CallExpr 0x7f83db05c190 <col:26, col:47> 'unsigned long'
+|               | |   |-ImplicitCastExpr 0x7f83db05c178 <col:26> 'unsigned long (*)(const char *)' <BuiltinFnToFnPtr>
+|               | |   | `-DeclRefExpr 0x7f83db05c0e0 <col:26> '<builtin fn type>' Function 0x7f83db05bf98 '__builtin_strlen' 'unsigned long (const char *)'
+|               | |   `-ImplicitCastExpr 0x7f83db05c1d8 <col:44> 'const char *' <BitCast>
+|               | |     `-ImplicitCastExpr 0x7f83db05c1c0 <col:44> 'char *' <ArrayToPointerDecay>
+|               | |       `-DeclRefExpr 0x7f83db05c108 <col:44> 'char [81]' lvalue Var 0x7f83db05b958 'buf' 'char [81]'
+|               | |-UnaryOperator 0x7f83db05c270 <col:52, col:53> 'gshort':'short' postfix '++'
+|               | | `-DeclRefExpr 0x7f83db05c248 <col:52> 'gshort':'short' lvalue Var 0x7f83db05bb00 'j' 'gshort':'short'
+|               | `-IfStmt 0x7f83db05c3b0 <line:23:3, line:24:5>
+|               |   |-<<<NULL>>>
+|               |   |-<<<NULL>>>
+|               |   |-BinaryOperator 0x7f83db05c380 <line:23:7, col:17> 'int' '!='
+|               |   | |-ImplicitCastExpr 0x7f83db05c368 <col:7, col:12> 'int' <IntegralCast>
+|               |   | | `-ImplicitCastExpr 0x7f83db05c350 <col:7, col:12> 'char' <LValueToRValue>
+|               |   | |   `-ArraySubscriptExpr 0x7f83db05c310 <col:7, col:12> 'char' lvalue
+|               |   | |     |-ImplicitCastExpr 0x7f83db05c2e0 <col:7> 'char *' <ArrayToPointerDecay>
+|               |   | |     | `-DeclRefExpr 0x7f83db05c290 <col:7> 'char [81]' lvalue Var 0x7f83db05b958 'buf' 'char [81]'
+|               |   | |     `-ImplicitCastExpr 0x7f83db05c2f8 <col:11> 'gshort':'short' <LValueToRValue>
+|               |   | |       `-DeclRefExpr 0x7f83db05c2b8 <col:11> 'gshort':'short' lvalue Var 0x7f83db05bb00 'j' 'gshort':'short'
+|               |   | `-CharacterLiteral 0x7f83db05c338 <col:17> 'int' 32
+|               |   |-BreakStmt 0x7f83db05c3a8 <line:24:5>
+|               |   `-<<<NULL>>>
+|               `-ForStmt 0x7f83db05c798 <line:25:8, line:26:44>
+|                 |-<<<NULL>>>
+|                 |-<<<NULL>>>
+|                 |-BinaryOperator 0x7f83db05c558 <line:25:17, col:42> 'int' '<'
+|                 | |-ImplicitCastExpr 0x7f83db05c540 <col:17> 'unsigned long' <IntegralCast>
+|                 | | `-ImplicitCastExpr 0x7f83db05c528 <col:17> 'gshort':'short' <LValueToRValue>
+|                 | |   `-DeclRefExpr 0x7f83db05c420 <col:17> 'gshort':'short' lvalue Var 0x7f83db05bb00 'j' 'gshort':'short'
+|                 | `-CallExpr 0x7f83db05c4c8 <col:21, col:42> 'unsigned long'
+|                 |   |-ImplicitCastExpr 0x7f83db05c4b0 <col:21> 'unsigned long (*)(const char *)' <BuiltinFnToFnPtr>
+|                 |   | `-DeclRefExpr 0x7f83db05c448 <col:21> '<builtin fn type>' Function 0x7f83db05bf98 '__builtin_strlen' 'unsigned long (const char *)'
+|                 |   `-ImplicitCastExpr 0x7f83db05c510 <col:39> 'const char *' <BitCast>
+|                 |     `-ImplicitCastExpr 0x7f83db05c4f8 <col:39> 'char *' <ArrayToPointerDecay>
+|                 |       `-DeclRefExpr 0x7f83db05c470 <col:39> 'char [81]' lvalue Var 0x7f83db05b958 'buf' 'char [81]'
+|                 |-UnaryOperator 0x7f83db05c5a8 <col:47, col:48> 'gshort':'short' postfix '++'
+|                 | `-DeclRefExpr 0x7f83db05c580 <col:47> 'gshort':'short' lvalue Var 0x7f83db05bb00 'j' 'gshort':'short'
+|                 `-CallExpr 0x7f83db05c730 <line:26:3, col:44> 'void'
+|                   |-ImplicitCastExpr 0x7f83db05c718 <col:3> 'void (*)(GString *, char)' <FunctionToPointerDecay>
+|                   | `-DeclRefExpr 0x7f83db05c5c8 <col:3> 'void (GString *, char)' Function 0x7f83db05b630 'g_string_append_c_inline' 'void (GString *, char)'
+|                   |-ImplicitCastExpr 0x7f83db05c768 <col:29> 'GString *' <LValueToRValue>
+|                   | `-DeclRefExpr 0x7f83db05c5f0 <col:29> 'GString *' lvalue Var 0x7f83db05b9e0 'buf_str' 'GString *'
+|                   `-ImplicitCastExpr 0x7f83db05c780 <col:38, col:43> 'char' <LValueToRValue>
+|                     `-ArraySubscriptExpr 0x7f83db05c698 <col:38, col:43> 'char' lvalue
+|                       |-ImplicitCastExpr 0x7f83db05c668 <col:38> 'char *' <ArrayToPointerDecay>
+|                       | `-DeclRefExpr 0x7f83db05c618 <col:38> 'char [81]' lvalue Var 0x7f83db05b958 'buf' 'char [81]'
+|                       `-ImplicitCastExpr 0x7f83db05c680 <col:42> 'gshort':'short' <LValueToRValue>
+|                         `-DeclRefExpr 0x7f83db05c640 <col:42> 'gshort':'short' lvalue Var 0x7f83db05bb00 'j' 'gshort':'short'
+`-FunctionDecl 0x7f83db05bf98 <line:22:26> col:26 implicit used __builtin_strlen 'unsigned long (const char *)' extern
+  |-ParmVarDecl 0x7f83db05c030 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-NoThrowAttr 0x7f83db05c098 <col:26> Implicit

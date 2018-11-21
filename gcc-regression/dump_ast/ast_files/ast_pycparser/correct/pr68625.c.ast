@@ -1,0 +1,175 @@
+FileAST: 
+  Decl: dp, [], [], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: dp, []
+          IdentifierType: ['int']
+  Decl: sg, [], [], []
+    TypeDecl: sg, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: z9, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: z9, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: pz, [], [], []
+        TypeDecl: pz, []
+          IdentifierType: ['int']
+      Decl: oi, [], [], []
+        TypeDecl: oi, []
+          IdentifierType: ['int']
+      Decl: vz, [], [], []
+        TypeDecl: vz, []
+          IdentifierType: ['int']
+      Decl: yp, [], [], []
+        TypeDecl: yp, []
+          IdentifierType: ['int']
+      Decl: zi, [], [], []
+        TypeDecl: zi, []
+          IdentifierType: ['int']
+      Decl: hd, [], [], []
+        TypeDecl: hd, []
+          IdentifierType: ['int']
+      Decl: pw, [], [], []
+        TypeDecl: pw, []
+          IdentifierType: ['int']
+      Decl: gr, [], [], []
+        TypeDecl: gr, []
+          IdentifierType: ['int']
+      Decl: w9, [], [], []
+        TypeDecl: w9, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: j0, [], [], []
+        TypeDecl: j0, []
+          IdentifierType: ['int']
+        UnaryOp: -
+          Constant: int, 1
+      Decl: rb, [], [], []
+        TypeDecl: rb, []
+          IdentifierType: ['int']
+        UnaryOp: &
+          ID: w9
+      Decl: lr, [], [], []
+        PtrDecl: []
+          TypeDecl: lr, []
+            IdentifierType: ['int']
+      While: 
+        BinaryOp: <
+          ID: w9
+          Constant: int, 1
+        Compound: 
+          UnaryOp: p++
+            ID: lr
+          Assignment: =
+            UnaryOp: *
+              ID: lr
+            Constant: int, 1
+          If: 
+            BinaryOp: <
+              UnaryOp: *
+                ID: lr
+              Constant: int, 1
+            For: 
+              If: 
+                BinaryOp: &&
+                  ID: pz
+                  UnaryOp: *
+                    ID: lr
+                Compound: 
+                  Label: ee
+                    Assignment: =
+                      UnaryOp: *
+                        UnaryOp: *
+                          ID: dp
+                      Constant: int, 0
+          Assignment: =
+            ID: pz
+            Assignment: =
+              ID: zi
+              ID: vz
+          If: 
+            BinaryOp: ^
+              ID: j0
+              BinaryOp: >
+                ID: vz
+                Constant: int, 0
+            Continue: 
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: *
+                ID: dp
+            Constant: int, 1
+          While: 
+            UnaryOp: *
+              UnaryOp: *
+                ID: dp
+            If: 
+              UnaryOp: ++
+                ID: oi
+              Compound: 
+                Decl: mq, [], [], []
+                  TypeDecl: mq, []
+                    IdentifierType: ['int']
+                  ID: dp
+                Assignment: =
+                  ID: j0
+                  Constant: int, 1
+                While: 
+                  BinaryOp: <
+                    ID: pw
+                    Constant: int, 1
+                  Compound: 
+                    If: 
+                      BinaryOp: &&
+                        UnaryOp: ++
+                          ID: rb
+                        ID: mq
+                      Label: xq
+                        Assignment: =
+                          ID: hd
+                          ID: sg
+                    UnaryOp: ++
+                      ID: pw
+                Assignment: =
+                  ID: sg
+                  Constant: int, 0
+                While: 
+                  UnaryOp: !
+                    ID: sg
+                  Compound: 
+                    Goto: ee
+                    While: 
+                      BinaryOp: &&
+                        UnaryOp: ++
+                          ID: yp
+                        UnaryOp: p++
+                          ID: gr
+                      Compound: 
+                        Decl: i9, [], [], []
+                          TypeDecl: i9, []
+                            IdentifierType: ['int']
+                        Decl: xa, [], [], []
+                          TypeDecl: xa, []
+                            IdentifierType: ['int']
+                        While: 
+                          BinaryOp: &&
+                            UnaryOp: ++
+                              ID: i9
+                            UnaryOp: ++
+                              ID: xa
+                          Label: fb
+                            EmptyStatement: 
+      UnaryOp: ++
+        ID: vz
+      If: 
+        BinaryOp: >
+          ID: zi
+          ID: hd
+        Goto: xq
+      Goto: fb

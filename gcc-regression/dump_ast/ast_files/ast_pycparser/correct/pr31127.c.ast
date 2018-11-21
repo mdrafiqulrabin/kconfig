@@ -1,0 +1,48 @@
+FileAST: 
+  FuncDef: 
+    Decl: ParseStringSidToSid, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['char']
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+        TypeDecl: ParseStringSidToSid, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      While: 
+        UnaryOp: *
+          ID: s
+        Compound: 
+          While: 
+            BinaryOp: &&
+              UnaryOp: *
+                ID: s
+              BinaryOp: !=
+                UnaryOp: *
+                  ID: s
+                Constant: char, '-'
+            UnaryOp: p++
+              ID: s
+          If: 
+            BinaryOp: ==
+              UnaryOp: *
+                ID: s
+              Constant: char, '-'
+            UnaryOp: p++
+              ID: s
+          Assignment: =
+            ArrayRef: 
+              ID: p
+              UnaryOp: p++
+                ID: i
+            UnaryOp: *
+              ID: s

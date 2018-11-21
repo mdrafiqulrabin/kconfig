@@ -1,0 +1,72 @@
+FileAST: 
+  Decl: a, [], [], []
+    PtrDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['long', 'long']
+  Decl: b, [], [], []
+    PtrDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['long', 'long']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['long', 'long']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: baz, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: baz, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['long', 'long']
+        TypeDecl: foo, []
+          IdentifierType: ['long', 'long']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __sync_val_compare_and_swap
+          ExprList: 
+            ID: x
+            Constant: int, 0
+            Constant: int, 0
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: baz
+      Assignment: =
+        ID: c
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            UnaryOp: &
+              ArrayRef: 
+                ID: a
+                ID: f
+      If: 
+        ID: c
+        Assignment: =
+          ID: e
+          ID: d
+      Assignment: =
+        ID: a
+        ID: b

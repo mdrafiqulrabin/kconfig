@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fd4ce8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd4ce826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd4ce826740 '__int128'
+|-TypedefDecl 0x7fd4ce826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd4ce826760 'unsigned __int128'
+|-TypedefDecl 0x7fd4ce826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd4ce826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd4ce826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd4ce826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd4ce826dc0 'char *'
+|   `-BuiltinType 0x7fd4ce826560 'char'
+|-TypedefDecl 0x7fd4ce8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd4ce827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd4ce826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd4ce826e58 '__va_list_tag'
+|-TypedefDecl 0x7fd4ce827178 <c_files/pr77450.c:4:1, col:13> col:13 referenced V '__attribute__((__vector_size__(1 * sizeof(int)))) int'
+| `-VectorType 0x7fd4ce827140 '__attribute__((__vector_size__(1 * sizeof(int)))) int' 1
+|   `-BuiltinType 0x7fd4ce8265c0 'int'
+`-FunctionDecl 0x7fd4cf026ab0 <line:6:1, line:10:1> line:7:1 foo 'void (void)'
+  `-CompoundStmt 0x7fd4cf026d28 <line:8:1, line:10:1>
+    `-BinaryOperator 0x7fd4cf026d00 <line:9:3, col:17> 'int' '='
+      |-ArraySubscriptExpr 0x7fd4cf026cb8 <col:3, col:13> 'int' lvalue vectorcomponent
+      | |-CompoundLiteralExpr 0x7fd4cf026c70 <col:3, col:10> 'V':'__attribute__((__vector_size__(1 * sizeof(int)))) int' lvalue
+      | | `-InitListExpr 0x7fd4cf026c28 <col:6, col:10> 'V':'__attribute__((__vector_size__(1 * sizeof(int)))) int'
+      | |   `-IntegerLiteral 0x7fd4cf026bc0 <col:8> 'int' 0
+      | `-IntegerLiteral 0x7fd4cf026c98 <col:12> 'int' 0
+      `-IntegerLiteral 0x7fd4cf026ce0 <col:17> 'int' 0

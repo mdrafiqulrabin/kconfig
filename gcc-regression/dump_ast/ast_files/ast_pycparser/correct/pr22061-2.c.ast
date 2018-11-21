@@ -1,0 +1,35 @@
+FileAST: 
+  Decl: x, [], [], []
+    PtrDecl: []
+      TypeDecl: x, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: bar, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            ArrayDecl: []
+              ArrayDecl: []
+                TypeDecl: a, []
+                  IdentifierType: ['char']
+                UnaryOp: p++
+                  UnaryOp: *
+                    ID: x
+              Constant: int, 2
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: exit
+        ExprList: 
+          Constant: int, 0

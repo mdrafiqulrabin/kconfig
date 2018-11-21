@@ -1,0 +1,30 @@
+c_files/pr57098.c:10:8: error: use of unknown builtin '__builtin_shuffle' [-Wimplicit-function-declaration]
+  *p = __builtin_shuffle (*p, *mask);
+       ^
+c_files/pr57098.c:10:6: error: assigning to 'V' (vector of 4 'int' values) from incompatible type 'int'
+  *p = __builtin_shuffle (*p, *mask);
+     ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7fcfe68264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcfe6826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcfe6826740 '__int128'
+|-TypedefDecl 0x7fcfe6826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcfe6826760 'unsigned __int128'
+|-TypedefDecl 0x7fcfe6826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcfe6826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcfe6826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcfe6826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcfe6826dc0 'char *'
+|   `-BuiltinType 0x7fcfe6826560 'char'
+|-TypedefDecl 0x7fcfe68270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcfe6827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcfe6826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcfe6826e58 '__va_list_tag'
+|-TypedefDecl 0x7fcfe6827178 <c_files/pr57098.c:5:1, col:13> col:13 referenced V '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fcfe6827140 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fcfe68265c0 'int'
+|-FunctionDecl 0x7fcfe68785f0 <line:7:1, line:11:1> line:8:1 foo 'void (V *, V *)'
+| |-ParmVarDecl 0x7fcfe6878468 <col:6, col:9> col:9 used p 'V *'
+| |-ParmVarDecl 0x7fcfe68784d8 <col:12, col:15> col:15 used mask 'V *'
+| `-CompoundStmt 0x7fcfe6878d80 <line:9:1, line:11:1>
+`-FunctionDecl 0x7fcfe68787a0 <<invalid sloc>> line:10:8 implicit used __builtin_shuffle 'int ()'

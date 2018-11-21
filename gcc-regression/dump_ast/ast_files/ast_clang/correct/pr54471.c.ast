@@ -1,0 +1,77 @@
+TranslationUnitDecl 0x7fd0bc0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd0bc026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd0bc026740 '__int128'
+|-TypedefDecl 0x7fd0bc026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd0bc026760 'unsigned __int128'
+|-TypedefDecl 0x7fd0bc026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd0bc026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd0bc026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd0bc026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd0bc026dc0 'char *'
+|   `-BuiltinType 0x7fd0bc026560 'char'
+|-TypedefDecl 0x7fd0bc0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd0bc027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd0bc026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd0bc026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd0bc825a30 <c_files/pr54471.c:9:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd0bc825ac8 prev 0x7fd0bc825a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd0bc825cc8 <line:11:1, line:27:1> line:13:1 used foo 'unsigned __int128 (__int128, unsigned int)'
+| |-ParmVarDecl 0x7fd0bc825b78 <line:4:11, line:13:8> col:8 used ixi '__int128'
+| |-ParmVarDecl 0x7fd0bc825bf0 <col:13, col:22> col:22 used ctr 'unsigned int'
+| |-CompoundStmt 0x7fd0bc826398 <line:14:1, line:27:1>
+| | |-DeclStmt 0x7fd0bc825ea8 <line:15:3, col:23>
+| | | `-VarDecl 0x7fd0bc825e10 <col:3, col:22> col:14 used irslt 'unsigned __int128' cinit
+| | |   `-ImplicitCastExpr 0x7fd0bc825e90 <col:22> 'unsigned __int128' <IntegralCast>
+| | |     `-IntegerLiteral 0x7fd0bc825e70 <col:22> 'int' 1
+| | |-DeclStmt 0x7fd0bc825f78 <line:4:11, line:16:13>
+| | | `-VarDecl 0x7fd0bc825ed8 <line:4:11, line:16:10> col:5 used ix '__int128' cinit
+| | |   `-ImplicitCastExpr 0x7fd0bc825f60 <col:10> '__int128' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7fd0bc825f38 <col:10> '__int128' lvalue ParmVar 0x7fd0bc825b78 'ixi' '__int128'
+| | |-ForStmt 0x7fd0bc826198 <line:18:3, line:22:5>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-ImplicitCastExpr 0x7fd0bc825fb8 <line:18:10> 'unsigned int' <LValueToRValue>
+| | | | `-DeclRefExpr 0x7fd0bc825f90 <col:10> 'unsigned int' lvalue ParmVar 0x7fd0bc825bf0 'ctr' 'unsigned int'
+| | | |-UnaryOperator 0x7fd0bc825ff8 <col:15, col:18> 'unsigned int' postfix '--'
+| | | | `-DeclRefExpr 0x7fd0bc825fd0 <col:15> 'unsigned int' lvalue ParmVar 0x7fd0bc825bf0 'ctr' 'unsigned int'
+| | | `-CompoundStmt 0x7fd0bc826170 <line:19:5, line:22:5>
+| | |   |-CompoundAssignOperator 0x7fd0bc826098 <line:20:7, col:16> 'unsigned __int128' '*=' ComputeLHSTy='unsigned __int128' ComputeResultTy='unsigned __int128'
+| | |   | |-DeclRefExpr 0x7fd0bc826018 <col:7> 'unsigned __int128' lvalue Var 0x7fd0bc825e10 'irslt' 'unsigned __int128'
+| | |   | `-ImplicitCastExpr 0x7fd0bc826080 <col:16> 'unsigned __int128' <IntegralCast>
+| | |   |   `-ImplicitCastExpr 0x7fd0bc826068 <col:16> '__int128' <LValueToRValue>
+| | |   |     `-DeclRefExpr 0x7fd0bc826040 <col:16> '__int128' lvalue Var 0x7fd0bc825ed8 'ix' '__int128'
+| | |   `-CompoundAssignOperator 0x7fd0bc826138 <line:21:7, col:13> '__int128' '*=' ComputeLHSTy='__int128' ComputeResultTy='__int128'
+| | |     |-DeclRefExpr 0x7fd0bc8260d0 <col:7> '__int128' lvalue Var 0x7fd0bc825ed8 'ix' '__int128'
+| | |     `-ImplicitCastExpr 0x7fd0bc826120 <col:13> '__int128' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7fd0bc8260f8 <col:13> '__int128' lvalue Var 0x7fd0bc825ed8 'ix' '__int128'
+| | |-IfStmt 0x7fd0bc826308 <line:24:3, line:25:12>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fd0bc826248 <line:24:7, col:16> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7fd0bc826218 <col:7> 'unsigned __int128' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fd0bc8261d0 <col:7> 'unsigned __int128' lvalue Var 0x7fd0bc825e10 'irslt' 'unsigned __int128'
+| | | | `-ImplicitCastExpr 0x7fd0bc826230 <col:16> 'unsigned __int128' <IntegralCast>
+| | | |   `-IntegerLiteral 0x7fd0bc8261f8 <col:16> 'int' 14348907
+| | | |-CallExpr 0x7fd0bc8262e0 <line:25:5, col:12> 'void'
+| | | | `-ImplicitCastExpr 0x7fd0bc8262c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| | | |   `-DeclRefExpr 0x7fd0bc826270 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fd0bc825ac8 'abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7fd0bc826380 <line:26:3, col:10>
+| |   `-ImplicitCastExpr 0x7fd0bc826368 <col:10> 'unsigned __int128' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fd0bc826340 <col:10> 'unsigned __int128' lvalue Var 0x7fd0bc825e10 'irslt' 'unsigned __int128'
+| `-NoInlineAttr 0x7fd0bc825d70 <line:11:17>
+`-FunctionDecl 0x7fd0bc826430 <line:29:1, line:36:1> line:30:1 main 'int ()'
+  `-CompoundStmt 0x7fd0bc8266f8 <line:31:1, line:36:1>
+    |-DeclStmt 0x7fd0bc826540 <line:32:3, col:17>
+    | `-VarDecl 0x7fd0bc8264e0 <col:3, col:14> col:14 used res 'unsigned __int128'
+    |-BinaryOperator 0x7fd0bc826698 <line:34:3, col:18> 'unsigned __int128' '='
+    | |-DeclRefExpr 0x7fd0bc826558 <col:3> 'unsigned __int128' lvalue Var 0x7fd0bc8264e0 'res' 'unsigned __int128'
+    | `-CallExpr 0x7fd0bc826630 <col:9, col:18> 'unsigned __int128'
+    |   |-ImplicitCastExpr 0x7fd0bc826618 <col:9> 'unsigned __int128 (*)(__int128, unsigned int)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fd0bc826580 <col:9> 'unsigned __int128 (__int128, unsigned int)' Function 0x7fd0bc825cc8 'foo' 'unsigned __int128 (__int128, unsigned int)'
+    |   |-ImplicitCastExpr 0x7fd0bc826668 <col:14> '__int128' <IntegralCast>
+    |   | `-IntegerLiteral 0x7fd0bc8265a8 <col:14> 'int' 3
+    |   `-ImplicitCastExpr 0x7fd0bc826680 <col:17> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7fd0bc8265c8 <col:17> 'int' 4
+    `-ReturnStmt 0x7fd0bc8266e0 <line:35:3, col:10>
+      `-IntegerLiteral 0x7fd0bc8266c0 <col:10> 'int' 0

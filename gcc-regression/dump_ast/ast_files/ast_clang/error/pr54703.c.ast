@@ -1,0 +1,118 @@
+c_files/pr54703.c:17:9: error: use of unknown builtin '__builtin_ia32_andpd' [-Wimplicit-function-declaration]
+  V y = __builtin_ia32_andpd (x, u.v);
+        ^
+c_files/pr54703.c:17:5: error: initializing 'V' (vector of 2 'double' values) with an expression of incompatible type 'int'
+  V y = __builtin_ia32_andpd (x, u.v);
+    ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr54703.c:18:9: error: use of unknown builtin '__builtin_ia32_subpd' [-Wimplicit-function-declaration]
+  V z = __builtin_ia32_subpd (x, y);
+        ^
+c_files/pr54703.c:18:9: note: did you mean '__builtin_ia32_andpd'?
+c_files/pr54703.c:17:9: note: '__builtin_ia32_andpd' declared here
+  V y = __builtin_ia32_andpd (x, u.v);
+        ^
+c_files/pr54703.c:19:10: error: use of unknown builtin '__builtin_ia32_mulpd' [-Wimplicit-function-declaration]
+  return __builtin_ia32_mulpd (y, z);
+         ^
+c_files/pr54703.c:19:10: note: did you mean '__builtin_ia32_subpd'?
+c_files/pr54703.c:18:9: note: '__builtin_ia32_subpd' declared here
+  V z = __builtin_ia32_subpd (x, y);
+        ^
+4 errors generated.
+TranslationUnitDecl 0x7fd8920264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd892026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd892026740 '__int128'
+|-TypedefDecl 0x7fd892026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd892026760 'unsigned __int128'
+|-TypedefDecl 0x7fd892026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd892026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd892026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd892026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd892026dc0 'char *'
+|   `-BuiltinType 0x7fd892026560 'char'
+|-TypedefDecl 0x7fd8920270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd892027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd892026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd892026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd892825a30 <c_files/pr54703.c:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd892825ac8 prev 0x7fd892825a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-TypedefDecl 0x7fd892825bb8 <line:7:1, col:16> col:16 referenced V '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7fd892825b80 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7fd8920266e0 'double'
+|-RecordDecl 0x7fd892825c10 <line:9:1, line:12:1> line:9:1 union definition
+| |-FieldDecl 0x7fd892825d40 <line:10:3, col:25> col:22 referenced m 'unsigned long long [2]'
+| `-FieldDecl 0x7fd892825dc0 <line:11:3, col:5> col:5 referenced v 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-VarDecl 0x7fd892825e60 <line:9:1, line:12:58> col:3 used u 'union (anonymous union at c_files/pr54703.c:9:1)':'union (anonymous at c_files/pr54703.c:9:1)' cinit
+| `-InitListExpr 0x7fd892825fd8 <col:7, col:58> 'union (anonymous union at c_files/pr54703.c:9:1)':'union (anonymous at c_files/pr54703.c:9:1)' field Field 0x7fd892825d40 'm' 'unsigned long long [2]'
+|   `-InitListExpr 0x7fd892826020 <col:9, col:56> 'unsigned long long [2]'
+|     |-IntegerLiteral 0x7fd892825f00 <col:11> 'unsigned long long' 18446744073692774400
+|     `-IntegerLiteral 0x7fd892825f20 <col:34> 'unsigned long long' 18446744073692774400
+|-FunctionDecl 0x7fd8928261a0 <line:14:1, line:20:1> line:15:1 used foo 'V (V)' static inline
+| |-ParmVarDecl 0x7fd892826098 <col:6, col:8> col:8 used x 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-CompoundStmt 0x7fd893000610 <line:16:1, line:20:1>
+|   |-DeclStmt 0x7fd8928268d0 <line:17:3, col:38>
+|   | `-VarDecl 0x7fd892826250 <col:3, col:5> col:5 invalid y 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   `-DeclStmt 0x7fd8930004e8 <line:18:3, col:36>
+|     `-VarDecl 0x7fd8928268f8 <col:3, col:5> col:5 used z 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-FunctionDecl 0x7fd892826320 <<invalid sloc>> line:17:9 implicit used __builtin_ia32_andpd 'int ()'
+|-FunctionDecl 0x7fd893000400 <<invalid sloc>> line:18:9 implicit used __builtin_ia32_subpd 'int ()'
+|-FunctionDecl 0x7fd893000528 <<invalid sloc>> line:19:10 implicit used __builtin_ia32_mulpd 'int ()'
+|-FunctionDecl 0x7fd8930007b0 <line:22:1, line:27:1> line:23:1 used test 'void (V *)'
+| |-ParmVarDecl 0x7fd8930006a8 <col:7, col:10> col:10 used x 'V *'
+| `-CompoundStmt 0x7fd893000bb8 <line:24:1, line:27:1>
+|   |-DeclStmt 0x7fd8930009a0 <line:25:3, col:21>
+|   | `-VarDecl 0x7fd893000860 <col:3, col:20> col:5 used a 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|   |   `-InitListExpr 0x7fd893000950 <col:9, col:20> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     |-FloatingLiteral 0x7fd8930008c0 <col:11> 'double' 2.100000e+00
+|   |     `-FloatingLiteral 0x7fd8930008e0 <col:16> 'double' 2.100000e+00
+|   `-BinaryOperator 0x7fd893000b90 <line:26:3, col:20> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '='
+|     |-UnaryOperator 0x7fd8930009f8 <col:3, col:4> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fd8930009e0 <col:4> 'V *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd8930009b8 <col:4> 'V *' lvalue ParmVar 0x7fd8930006a8 'x' 'V *'
+|     `-CallExpr 0x7fd893000b60 <col:8, col:20> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|       |-ImplicitCastExpr 0x7fd893000b48 <col:8> 'V (*)(V)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fd893000a18 <col:8> 'V (V)' Function 0x7fd8928261a0 'foo' 'V (V)'
+|       `-CallExpr 0x7fd893000b00 <col:13, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|         |-ImplicitCastExpr 0x7fd893000ae8 <col:13> 'V (*)(V)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fd893000a40 <col:13> 'V (V)' Function 0x7fd8928261a0 'foo' 'V (V)'
+|         `-ImplicitCastExpr 0x7fd893000b30 <col:18> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fd893000a68 <col:18> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7fd893000860 'a' 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+`-FunctionDecl 0x7fd893000c08 <line:29:1, line:36:1> line:30:1 main 'int ()'
+  `-CompoundStmt 0x7fd893001288 <line:31:1, line:36:1>
+    |-CallExpr 0x7fd893000dc0 <line:32:3, col:13> 'void'
+    | |-ImplicitCastExpr 0x7fd893000da8 <col:3> 'void (*)(V *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd893000ca0 <col:3> 'void (V *)' Function 0x7fd8930007b0 'test' 'void (V *)'
+    | `-UnaryOperator 0x7fd893000d28 <col:9, col:12> 'V *' prefix '&'
+    |   `-MemberExpr 0x7fd893000cf0 <col:10, col:12> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue .v 0x7fd892825dc0
+    |     `-DeclRefExpr 0x7fd893000cc8 <col:10> 'union (anonymous union at c_files/pr54703.c:9:1)':'union (anonymous at c_files/pr54703.c:9:1)' lvalue Var 0x7fd892825e60 'u' 'union (anonymous union at c_files/pr54703.c:9:1)':'union (anonymous at c_files/pr54703.c:9:1)'
+    |-IfStmt 0x7fd893001218 <line:33:3, line:34:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd893001160 <line:33:7, col:57> 'int' '||'
+    | | |-BinaryOperator 0x7fd893000f10 <col:7, col:17> 'int' '!='
+    | | | |-ImplicitCastExpr 0x7fd893000ef8 <col:7, col:12> 'unsigned long long' <LValueToRValue>
+    | | | | `-ArraySubscriptExpr 0x7fd893000eb0 <col:7, col:12> 'unsigned long long' lvalue
+    | | | |   |-ImplicitCastExpr 0x7fd893000e98 <col:7, col:9> 'unsigned long long *' <ArrayToPointerDecay>
+    | | | |   | `-MemberExpr 0x7fd893000e18 <col:7, col:9> 'unsigned long long [2]' lvalue .m 0x7fd892825d40
+    | | | |   |   `-DeclRefExpr 0x7fd893000df0 <col:7> 'union (anonymous union at c_files/pr54703.c:9:1)':'union (anonymous at c_files/pr54703.c:9:1)' lvalue Var 0x7fd892825e60 'u' 'union (anonymous union at c_files/pr54703.c:9:1)':'union (anonymous at c_files/pr54703.c:9:1)'
+    | | | |   `-IntegerLiteral 0x7fd893000e50 <col:11> 'int' 0
+    | | | `-IntegerLiteral 0x7fd893000ed8 <col:17> 'unsigned long long' 4236748739167061328
+    | | `-BinaryOperator 0x7fd8930010e8 <col:42, col:57> 'int' '!='
+    | |   |-ImplicitCastExpr 0x7fd8930010b8 <col:42, col:47> 'unsigned long long' <LValueToRValue>
+    | |   | `-ArraySubscriptExpr 0x7fd893000fd0 <col:42, col:47> 'unsigned long long' lvalue
+    | |   |   |-ImplicitCastExpr 0x7fd893000fb8 <col:42, col:44> 'unsigned long long *' <ArrayToPointerDecay>
+    | |   |   | `-MemberExpr 0x7fd893000f60 <col:42, col:44> 'unsigned long long [2]' lvalue .m 0x7fd892825d40
+    | |   |   |   `-DeclRefExpr 0x7fd893000f38 <col:42> 'union (anonymous union at c_files/pr54703.c:9:1)':'union (anonymous at c_files/pr54703.c:9:1)' lvalue Var 0x7fd892825e60 'u' 'union (anonymous union at c_files/pr54703.c:9:1)':'union (anonymous at c_files/pr54703.c:9:1)'
+    | |   |   `-IntegerLiteral 0x7fd893000f98 <col:46> 'int' 1
+    | |   `-ImplicitCastExpr 0x7fd8930010d0 <col:52, col:57> 'unsigned long long' <LValueToRValue>
+    | |     `-ArraySubscriptExpr 0x7fd893001090 <col:52, col:57> 'unsigned long long' lvalue
+    | |       |-ImplicitCastExpr 0x7fd893001078 <col:52, col:54> 'unsigned long long *' <ArrayToPointerDecay>
+    | |       | `-MemberExpr 0x7fd893001020 <col:52, col:54> 'unsigned long long [2]' lvalue .m 0x7fd892825d40
+    | |       |   `-DeclRefExpr 0x7fd893000ff8 <col:52> 'union (anonymous union at c_files/pr54703.c:9:1)':'union (anonymous at c_files/pr54703.c:9:1)' lvalue Var 0x7fd892825e60 'u' 'union (anonymous union at c_files/pr54703.c:9:1)':'union (anonymous at c_files/pr54703.c:9:1)'
+    | |       `-IntegerLiteral 0x7fd893001058 <col:56> 'int' 0
+    | |-CallExpr 0x7fd8930011f0 <line:34:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fd8930011d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd893001188 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fd892825ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fd893001270 <line:35:3, col:10>
+      `-IntegerLiteral 0x7fd893001250 <col:10> 'int' 0

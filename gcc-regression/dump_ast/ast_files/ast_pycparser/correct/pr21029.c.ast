@@ -1,0 +1,242 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'char']
+        Constant: int, 123
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['signed', 'char']
+      DoWhile: 
+        Constant: int, 1
+        If: 
+          BinaryOp: <
+            Assignment: =
+              ID: j
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['signed', 'char']
+                ID: i
+            Constant: int, 0
+          Break: 
+          UnaryOp: p++
+            ID: i
+      Return: 
+        ID: i
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f1, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'short']
+        Constant: int, 123
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['signed', 'char']
+      DoWhile: 
+        Constant: int, 1
+        If: 
+          BinaryOp: <
+            Assignment: =
+              ID: j
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['signed', 'char']
+                ID: i
+            Constant: int, 0
+          Break: 
+          UnaryOp: p++
+            ID: i
+      Return: 
+        ID: i
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f2, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'char']
+        Constant: int, 123
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['signed', 'short']
+      DoWhile: 
+        Constant: int, 1
+        If: 
+          BinaryOp: <
+            Assignment: =
+              ID: j
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['signed', 'short']
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['signed', 'char']
+                  ID: i
+            Constant: int, 0
+          Break: 
+          UnaryOp: p++
+            ID: i
+      Return: 
+        ID: i
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f3, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['signed', 'short']
+        Constant: int, 5
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['signed', 'char']
+      DoWhile: 
+        Constant: int, 1
+        If: 
+          BinaryOp: <
+            Assignment: =
+              ID: j
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['signed', 'char']
+                ID: i
+            Constant: int, 0
+          Break: 
+          Assignment: +=
+            ID: i
+            Constant: int, 255
+      Return: 
+        ID: i
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f4, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['signed', 'short']
+        UnaryOp: -
+          Constant: int, 123
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['signed', 'int']
+      DoWhile: 
+        Constant: int, 1
+        If: 
+          BinaryOp: >
+            Assignment: =
+              ID: j
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['signed', 'int']
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['signed', 'char']
+                  ID: i
+            Constant: int, 0
+          Break: 
+          Assignment: +=
+            ID: i
+            Constant: int, 255
+      Return: 
+        ID: i
+  FuncDef: 
+    Decl: f5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f5, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['signed', 'long']
+        UnaryOp: -
+          Constant: int, 123
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['signed', 'char']
+      DoWhile: 
+        Constant: int, 1
+        If: 
+          BinaryOp: >
+            Assignment: =
+              ID: j
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['signed', 'char']
+                ID: i
+            Constant: int, 0
+          Break: 
+          Assignment: +=
+            ID: i
+            Constant: int, 255
+      Return: 
+        ID: i
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: f
+      FuncCall: 
+        ID: f1
+      FuncCall: 
+        ID: f2
+      FuncCall: 
+        ID: f3
+      FuncCall: 
+        ID: f4
+      FuncCall: 
+        ID: f5
+      Return: 
+        Constant: int, 0

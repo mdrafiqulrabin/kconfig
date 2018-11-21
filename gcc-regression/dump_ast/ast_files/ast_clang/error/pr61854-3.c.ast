@@ -1,0 +1,20 @@
+c_files/pr61854-3.c:5:10: fatal error: 'pr61854-3.h' file not found
+#include "pr61854-3.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7ffca10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffca1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffca1026740 '__int128'
+|-TypedefDecl 0x7ffca1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffca1026760 'unsigned __int128'
+|-TypedefDecl 0x7ffca1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffca1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffca1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffca1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffca1026dc0 'char *'
+|   `-BuiltinType 0x7ffca1026560 'char'
+|-TypedefDecl 0x7ffca10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffca1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffca1026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffca1026e58 '__va_list_tag'
+`-VarDecl 0x7ffca1027138 <c_files/pr61854-3.c:6:1, col:5> col:5 i 'int'

@@ -1,0 +1,69 @@
+c_files/pr17306-2.c:11:26: warning: unknown attribute 'eightbit_data' ignored [-Wunknown-attributes]
+struct x __attribute__ ((eightbit_data)) foo;
+                         ^
+c_files/pr17306-2.c:16:4: warning: implicit declaration of function 'oof' is invalid in C99 [-Wimplicit-function-declaration]
+   oof ();
+   ^
+c_files/pr17306-2.c:17:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr17306-2.c:23:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+4 warnings generated.
+TranslationUnitDecl 0x7fa86d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa86d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa86d026740 '__int128'
+|-TypedefDecl 0x7fa86d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa86d026760 'unsigned __int128'
+|-TypedefDecl 0x7fa86d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa86d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa86d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa86d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa86d026dc0 'char *'
+|   `-BuiltinType 0x7fa86d026560 'char'
+|-TypedefDecl 0x7fa86d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa86d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa86d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa86d026e58 '__va_list_tag'
+|-RecordDecl 0x7fa86d027120 <c_files/pr17306-2.c:6:1, line:9:1> line:6:8 struct x definition
+| |-FieldDecl 0x7fa86d825a00 <line:7:3, col:8> col:8 referenced x 'char'
+| `-FieldDecl 0x7fa86d825a58 <line:8:3, col:8> col:8 referenced y 'char'
+|-VarDecl 0x7fa86d825af0 <line:11:1, col:42> col:42 used foo 'struct x':'struct x'
+|-FunctionDecl 0x7fa86d825be0 <line:13:1, line:17:1> line:13:5 bar 'int ()'
+| `-CompoundStmt 0x7fa86d825f90 <line:14:1, line:17:1>
+|   `-IfStmt 0x7fa86d825f58 <line:15:2, line:16:9>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fa86d825d90 <line:15:6, col:24> 'int' '!='
+|     | |-ParenExpr 0x7fa86d825d50 <col:6, col:19> 'int'
+|     | | `-BinaryOperator 0x7fa86d825d28 <col:7, col:15> 'int' '&'
+|     | |   |-ImplicitCastExpr 0x7fa86d825d10 <col:7, col:11> 'int' <IntegralCast>
+|     | |   | `-ImplicitCastExpr 0x7fa86d825cf8 <col:7, col:11> 'char' <LValueToRValue>
+|     | |   |   `-MemberExpr 0x7fa86d825ca0 <col:7, col:11> 'char' lvalue .y 0x7fa86d825a58
+|     | |   |     `-DeclRefExpr 0x7fa86d825c78 <col:7> 'struct x':'struct x' lvalue Var 0x7fa86d825af0 'foo' 'struct x':'struct x'
+|     | |   `-IntegerLiteral 0x7fa86d825cd8 <col:15> 'int' 128
+|     | `-IntegerLiteral 0x7fa86d825d70 <col:24> 'int' 0
+|     |-CallExpr 0x7fa86d825f30 <line:16:4, col:9> 'int'
+|     | `-ImplicitCastExpr 0x7fa86d825f18 <col:4> 'int (*)()' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fa86d825ec8 <col:4> 'int ()' Function 0x7fa86d825e30 'oof' 'int ()'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fa86d825e30 <<invalid sloc>> col:4 implicit used oof 'int ()'
+`-FunctionDecl 0x7fa86d825fd8 <line:19:1, line:23:1> line:19:5 com 'int ()'
+  `-CompoundStmt 0x7fa86d826250 <line:20:1, line:23:1>
+    `-IfStmt 0x7fa86d826218 <line:21:2, line:22:9>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa86d826188 <line:21:6, col:24> 'int' '!='
+      | |-ParenExpr 0x7fa86d826148 <col:6, col:19> 'int'
+      | | `-BinaryOperator 0x7fa86d826120 <col:7, col:15> 'int' '&'
+      | |   |-ImplicitCastExpr 0x7fa86d826108 <col:7, col:11> 'int' <IntegralCast>
+      | |   | `-ImplicitCastExpr 0x7fa86d8260f0 <col:7, col:11> 'char' <LValueToRValue>
+      | |   |   `-MemberExpr 0x7fa86d826098 <col:7, col:11> 'char' lvalue .x 0x7fa86d825a00
+      | |   |     `-DeclRefExpr 0x7fa86d826070 <col:7> 'struct x':'struct x' lvalue Var 0x7fa86d825af0 'foo' 'struct x':'struct x'
+      | |   `-IntegerLiteral 0x7fa86d8260d0 <col:15> 'int' 128
+      | `-IntegerLiteral 0x7fa86d826168 <col:24> 'int' 0
+      |-CallExpr 0x7fa86d8261f0 <line:22:4, col:9> 'int'
+      | `-ImplicitCastExpr 0x7fa86d8261d8 <col:4> 'int (*)()' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fa86d8261b0 <col:4> 'int ()' Function 0x7fa86d825e30 'oof' 'int ()'
+      `-<<<NULL>>>

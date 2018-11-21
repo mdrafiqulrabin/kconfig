@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fc2480166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc248016c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc248016940 '__int128'
+|-TypedefDecl 0x7fc248016c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc248016960 'unsigned __int128'
+|-TypedefDecl 0x7fc248016f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc248016d70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc248016ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc248017000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc248016fc0 'char *'
+|   `-BuiltinType 0x7fc248016760 'char'
+|-TypedefDecl 0x7fc2480172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc248017270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc2480170e0 'struct __va_list_tag'
+|     `-Record 0x7fc248017058 '__va_list_tag'
+|-VarDecl 0x7fc248017338 <c_files/pr84682-2.c:3:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7fc248825a48 <line:4:1, line:10:1> line:4:6 b 'void ()'
+  `-CompoundStmt 0x7fc248825e98 <col:10, line:10:1>
+    |-DeclStmt 0x7fc248825b58 <line:5:3, col:10>
+    | `-VarDecl 0x7fc248825af8 <col:3, col:9> col:9 used c 'float'
+    |-ForStmt 0x7fc248825c50 <line:6:3, line:7:5>
+    | |-DeclStmt 0x7fc248825be8 <line:6:8, col:13>
+    | | `-VarDecl 0x7fc248825b88 <col:8, col:12> col:12 used d 'int'
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fc248825c28 <col:15> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fc248825c00 <col:15> 'int' lvalue Var 0x7fc248825b88 'd' 'int'
+    | |-<<<NULL>>>
+    | `-NullStmt 0x7fc248825c40 <line:7:5>
+    |-BinaryOperator 0x7fc248825d08 <line:8:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7fc248825c88 <col:3> 'int' lvalue Var 0x7fc248017338 'a' 'int'
+    | `-ImplicitCastExpr 0x7fc248825cf0 <col:7> 'int' <FloatingToIntegral>
+    |   `-ImplicitCastExpr 0x7fc248825cd8 <col:7> 'float' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fc248825cb0 <col:7> 'float' lvalue Var 0x7fc248825af8 'c' 'float'
+    `-GCCAsmStmt 0x7fc248825e38 <line:9:3, col:22>
+      `-ImplicitCastExpr 0x7fc248825e20 <col:20> 'float' <LValueToRValue>
+        `-DeclRefExpr 0x7fc248825df8 <col:20> 'float' lvalue Var 0x7fc248825af8 'c' 'float'

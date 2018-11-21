@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7fa2338264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa233826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa233826740 '__int128'
+|-TypedefDecl 0x7fa233826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa233826760 'unsigned __int128'
+|-TypedefDecl 0x7fa233826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa233826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa233826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa233826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa233826dc0 'char *'
+|   `-BuiltinType 0x7fa233826560 'char'
+|-TypedefDecl 0x7fa2338270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa233827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa233826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa233826e58 '__va_list_tag'
+|-VarDecl 0x7fa233827138 <c_files/pr35729.c:7:1, col:28> col:20 used g_361 'const volatile int' cinit
+| `-ImplicitCastExpr 0x7fa233877400 <col:28> 'int' <IntegralCast>
+|   `-IntegerLiteral 0x7fa2338271d8 <col:28> 'long' 3
+|-VarDecl 0x7fa233877430 <line:8:1, col:20> col:14 used g_2 'volatile int' cinit
+| `-ImplicitCastExpr 0x7fa2338774b0 <col:20> 'int' <IntegralCast>
+|   `-IntegerLiteral 0x7fa233877490 <col:20> 'long' 0
+`-FunctionDecl 0x7fa233877590 <line:9:1, line:15:1> line:9:6 func_1 'void (void)'
+  `-CompoundStmt 0x7fa233877890 <line:10:1, line:15:1>
+    `-ForStmt 0x7fa233877858 <line:11:3, line:14:5>
+      |-BinaryOperator 0x7fa233877670 <line:11:8, col:14> 'int' '='
+      | |-DeclRefExpr 0x7fa233877628 <col:8> 'volatile int' lvalue Var 0x7fa233877430 'g_2' 'volatile int'
+      | `-IntegerLiteral 0x7fa233877650 <col:14> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa2338776f8 <col:17, col:23> 'int' '>'
+      | |-ImplicitCastExpr 0x7fa2338776e0 <col:17> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fa233877698 <col:17> 'volatile int' lvalue Var 0x7fa233877430 'g_2' 'volatile int'
+      | `-IntegerLiteral 0x7fa2338776c0 <col:23> 'int' 10
+      |-UnaryOperator 0x7fa233877748 <col:27, col:30> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fa233877720 <col:27> 'volatile int' lvalue Var 0x7fa233877430 'g_2' 'volatile int'
+      `-CompoundStmt 0x7fa233877838 <line:12:5, line:14:5>
+        `-DeclStmt 0x7fa233877820 <line:13:7, col:24>
+          `-VarDecl 0x7fa233877780 <col:7, col:19> col:11 l_357 'int' cinit
+            `-ImplicitCastExpr 0x7fa233877808 <col:19> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7fa2338777e0 <col:19> 'const volatile int' lvalue Var 0x7fa233827138 'g_361' 'const volatile int'

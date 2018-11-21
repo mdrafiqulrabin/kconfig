@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7fdf258264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdf25826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdf25826740 '__int128'
+|-TypedefDecl 0x7fdf25826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdf25826760 'unsigned __int128'
+|-TypedefDecl 0x7fdf25826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdf25826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdf25826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdf25826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdf25826dc0 'char *'
+|   `-BuiltinType 0x7fdf25826560 'char'
+|-TypedefDecl 0x7fdf258270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdf25827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdf25826ee0 'struct __va_list_tag'
+|     `-Record 0x7fdf25826e58 '__va_list_tag'
+|-RecordDecl 0x7fdf25827120 <c_files/pr71245-1.c:5:9, line:9:1> line:5:9 union definition
+| |-FieldDecl 0x7fdf26025a00 <line:7:3, col:22> col:22 referenced ll 'unsigned long long'
+| `-FieldDecl 0x7fdf26025a60 <line:8:3, col:10> col:10 referenced d 'double'
+|-TypedefDecl 0x7fdf26025b00 <line:5:1, line:9:3> col:3 referenced u_t 'union u_t':'u_t'
+| `-ElaboratedType 0x7fdf26025ab0 'union u_t' sugar
+|   `-RecordType 0x7fdf258271b0 'u_t'
+|     `-Record 0x7fdf25827120 ''
+|-VarDecl 0x7fdf26025ba0 <line:11:1, col:20> col:5 used d 'u_t':'u_t' cinit
+| `-InitListExpr 0x7fdf26025ce8 <col:9, col:20> 'u_t':'u_t' field Field 0x7fdf26025a60 'd' 'double'
+|   `-FloatingLiteral 0x7fdf26025c40 <col:16> 'double' 5.000000e+00
+|-FunctionDecl 0x7fdf26025df0 <line:13:1, line:20:1> line:13:6 foo_d 'void (void)'
+| `-CompoundStmt 0x7fdf260265a8 <line:14:1, line:20:1>
+|   |-DeclStmt 0x7fdf26025ef8 <line:15:3, col:10>
+|   | `-VarDecl 0x7fdf26025e98 <col:3, col:7> col:7 used tmp 'u_t':'u_t'
+|   |-BinaryOperator 0x7fdf260261f8 <line:17:3, col:52> 'unsigned long long' '='
+|   | |-MemberExpr 0x7fdf26025f38 <col:3, col:7> 'unsigned long long' lvalue .ll 0x7fdf26025a00
+|   | | `-DeclRefExpr 0x7fdf26025f10 <col:3> 'u_t':'u_t' lvalue Var 0x7fdf26025e98 'tmp' 'u_t':'u_t'
+|   | `-AtomicExpr 0x7fdf260261a8 <col:12, col:52> 'unsigned long long'
+|   |   |-UnaryOperator 0x7fdf260260e8 <col:29, col:32> 'unsigned long long *' prefix '&'
+|   |   | `-MemberExpr 0x7fdf26026080 <col:30, col:32> 'unsigned long long' lvalue .ll 0x7fdf26025a00
+|   |   |   `-DeclRefExpr 0x7fdf26026058 <col:30> 'u_t':'u_t' lvalue Var 0x7fdf26025ba0 'd' 'u_t':'u_t'
+|   |   `-IntegerLiteral 0x7fdf26026108 <<built-in>:16:26> 'int' 5
+|   |-CompoundAssignOperator 0x7fdf260262f0 <c_files/pr71245-1.c:18:3, col:12> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-MemberExpr 0x7fdf26026298 <col:3, col:7> 'double' lvalue .d 0x7fdf26025a60
+|   | | `-DeclRefExpr 0x7fdf26026270 <col:3> 'u_t':'u_t' lvalue Var 0x7fdf26025e98 'tmp' 'u_t':'u_t'
+|   | `-FloatingLiteral 0x7fdf260262d0 <col:12> 'double' 1.000000e+00
+|   `-AtomicExpr 0x7fdf26026558 <line:19:3, col:52> 'void'
+|     |-UnaryOperator 0x7fdf26026448 <col:21, col:24> 'unsigned long long *' prefix '&'
+|     | `-MemberExpr 0x7fdf26026410 <col:22, col:24> 'unsigned long long' lvalue .ll 0x7fdf26025a00
+|     |   `-DeclRefExpr 0x7fdf260263e8 <col:22> 'u_t':'u_t' lvalue Var 0x7fdf26025ba0 'd' 'u_t':'u_t'
+|     |-IntegerLiteral 0x7fdf260264c8 <<built-in>:16:26> 'int' 5
+|     `-ImplicitCastExpr 0x7fdf26026540 <c_files/pr71245-1.c:19:28, col:32> 'unsigned long long' <LValueToRValue>
+|       `-MemberExpr 0x7fdf26026490 <col:28, col:32> 'unsigned long long' lvalue .ll 0x7fdf26025a00
+|         `-DeclRefExpr 0x7fdf26026468 <col:28> 'u_t':'u_t' lvalue Var 0x7fdf26025e98 'tmp' 'u_t':'u_t'
+|-FunctionDecl 0x7fdf26025f98 <line:17:12> col:12 implicit used __atomic_load_n 'void ()' extern
+`-FunctionDecl 0x7fdf26026328 <line:19:3> col:3 implicit used __atomic_store_n 'void ()' extern

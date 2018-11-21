@@ -1,0 +1,51 @@
+FileAST: 
+  Decl: kd, [], [], []
+    TypeDecl: kd, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: n2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: n2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: so, [], ['static'], []
+        TypeDecl: so, []
+          IdentifierType: ['int']
+      Decl: i5, [], ['static'], []
+        TypeDecl: i5, []
+          IdentifierType: ['short', 'int']
+      Decl: wj, [], [], []
+        TypeDecl: wj, []
+          IdentifierType: ['int']
+      Decl: il, [], [], []
+        PtrDecl: []
+          TypeDecl: il, []
+            IdentifierType: ['int']
+      Decl: nk, [], [], []
+        PtrDecl: []
+          TypeDecl: nk, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: so
+      For: 
+        Assignment: =
+          ID: wj
+          Constant: int, 0
+        BinaryOp: <
+          ID: wj
+          Constant: int, 2
+        UnaryOp: ++
+          ID: wj
+        Assignment: =
+          UnaryOp: *
+            ID: nk
+          BinaryOp: ||
+            Assignment: +=
+              ID: i5
+              UnaryOp: *
+                ID: il
+            ID: kd

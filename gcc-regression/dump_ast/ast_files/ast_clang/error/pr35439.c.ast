@@ -1,0 +1,20 @@
+c_files/pr35439.c:5:7: error: array has incomplete element type 'void'
+void x[1];      /* { dg-error "array of voids" } */
+      ^
+1 error generated.
+TranslationUnitDecl 0x7ff42b0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff42b026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff42b026740 '__int128'
+|-TypedefDecl 0x7ff42b026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff42b026760 'unsigned __int128'
+|-TypedefDecl 0x7ff42b026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff42b026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff42b026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff42b026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff42b026dc0 'char *'
+|   `-BuiltinType 0x7ff42b026560 'char'
+|-TypedefDecl 0x7ff42b0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff42b027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff42b026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff42b026e58 '__va_list_tag'
+`-VarDecl 0x7ff42b077748 <c_files/pr35439.c:5:1, col:6> col:6 invalid x 'int'

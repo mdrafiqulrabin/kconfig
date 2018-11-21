@@ -1,0 +1,101 @@
+c_files/pr60257.c:16:5: warning: implicit conversion from enumeration type 'enum E2' to different enumeration type 'enum E1' [-Wenum-conversion]
+  { B } /* { dg-warning "5:enum conversion in initialization is invalid in C\[+\]\[+\]" } */
+  ~ ^
+c_files/pr60257.c:31:28: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+  union U u = { .i = ++i, .l = 1 }; /* { dg-warning "32:initialized field with side-effects overwritten" } */
+                          ~^
+c_files/pr60257.c:31:22: note: previous initialization is here
+  union U u = { .i = ++i, .l = 1 }; /* { dg-warning "32:initialized field with side-effects overwritten" } */
+                     ^~~
+c_files/pr60257.c:32:27: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+  union U u2 = { .i = 1, .l = 3 }; /* { dg-warning "31:initialized field overwritten" } */
+                         ~^
+c_files/pr60257.c:32:23: note: previous initialization is here
+  union U u2 = { .i = 1, .l = 3 }; /* { dg-warning "31:initialized field overwritten" } */
+                      ^
+c_files/pr60257.c:33:26: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+  int a[] = { i++, [0] = 1 }; /* { dg-warning "26:initialized field with side-effects overwritten" } */
+                         ^
+c_files/pr60257.c:33:15: note: previous initialization is here
+  int a[] = { i++, [0] = 1 }; /* { dg-warning "26:initialized field with side-effects overwritten" } */
+              ^~~
+c_files/pr60257.c:34:25: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+  int a2[] = { i, [0] = 1 }; /* { dg-warning "25:initialized field overwritten" } */
+                        ^
+c_files/pr60257.c:34:16: note: previous initialization is here
+  int a2[] = { i, [0] = 1 }; /* { dg-warning "25:initialized field overwritten" } */
+               ^
+c_files/pr60257.c:35:26: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+  struct R r = { 1, .a = 2 }; /* { dg-warning "26:initialized field overwritten" } */
+                         ^
+c_files/pr60257.c:35:18: note: previous initialization is here
+  struct R r = { 1, .a = 2 }; /* { dg-warning "26:initialized field overwritten" } */
+                 ^
+c_files/pr60257.c:36:29: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+  struct R r2 = { ++i, .a = 2 }; /* { dg-warning "29:initialized field with side-effects overwritten" } */
+                            ^
+c_files/pr60257.c:36:19: note: previous initialization is here
+  struct R r2 = { ++i, .a = 2 }; /* { dg-warning "29:initialized field with side-effects overwritten" } */
+                  ^~~
+7 warnings generated.
+TranslationUnitDecl 0x7f99ad8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f99ad826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f99ad826740 '__int128'
+|-TypedefDecl 0x7f99ad826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f99ad826760 'unsigned __int128'
+|-TypedefDecl 0x7f99ad826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f99ad826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f99ad826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f99ad826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f99ad826dc0 'char *'
+|   `-BuiltinType 0x7f99ad826560 'char'
+|-TypedefDecl 0x7f99ad8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f99ad827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f99ad826ee0 'struct __va_list_tag'
+|     `-Record 0x7f99ad826e58 '__va_list_tag'
+|-EnumDecl 0x7f99ad827120 <c_files/pr60257.c:6:1, col:13> col:6 E1
+| `-EnumConstantDecl 0x7f99ad877a00 <col:11> col:11 A 'int'
+|-EnumDecl 0x7f99ad877a48 <line:7:1, col:13> col:6 E2
+| `-EnumConstantDecl 0x7f99ad877b00 <col:11> col:11 referenced B 'int'
+|-RecordDecl 0x7f99ad877b48 <line:9:1, line:12:1> line:9:8 struct S definition
+| `-FieldDecl 0x7f99ad877c60 <line:11:3, col:14> col:11 e 'enum E1':'enum E1'
+|   `-IntegerLiteral 0x7f99ad877bf0 <col:14> 'int' 3
+|-VarDecl 0x7f99ad877d68 <line:14:1, line:17:1> line:14:10 s 'struct S [1]' cinit
+| `-InitListExpr 0x7f99ad877ec0 <line:15:1, line:17:1> 'struct S [1]'
+|   `-InitListExpr 0x7f99ad877f00 <line:16:3, col:7> 'struct S':'struct S'
+|     `-ImplicitCastExpr 0x7f99ad877f50 <col:5> 'enum E1':'enum E1' <IntegralCast>
+|       `-DeclRefExpr 0x7f99ad877e08 <col:5> 'int' EnumConstant 0x7f99ad877b00 'B' 'int'
+|-RecordDecl 0x7f99ad8783a0 <line:19:1, line:22:1> line:19:7 union U definition
+| |-FieldDecl 0x7f99ad878468 <line:20:3, col:7> col:7 i 'int'
+| `-FieldDecl 0x7f99ad8784c8 <line:21:3, col:17> col:17 l 'long long'
+|-RecordDecl 0x7f99ad878510 <line:24:1, line:26:1> line:24:8 struct R definition
+| `-FieldDecl 0x7f99ad8785d8 <line:25:3, col:7> col:7 a 'int'
+`-FunctionDecl 0x7f99ad878700 <line:28:1, line:37:1> line:29:1 foo 'void (int)'
+  |-ParmVarDecl 0x7f99ad878638 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7f99ad879438 <line:30:1, line:37:1>
+    |-DeclStmt 0x7f99ad8789e8 <line:31:3, col:35>
+    | `-VarDecl 0x7f99ad8787f0 <col:3, col:34> col:11 u 'union U':'union U' cinit
+    |   `-InitListExpr 0x7f99ad878988 <col:15, col:34> 'union U':'union U' field Field 0x7f99ad8784c8 'l' 'long long'
+    |     `-ImplicitCastExpr 0x7f99ad8789d0 <col:32> 'long long' <IntegralCast>
+    |       `-IntegerLiteral 0x7f99ad8788d8 <col:32> 'int' 1
+    |-DeclStmt 0x7f99ad878bf0 <line:32:3, col:34>
+    | `-VarDecl 0x7f99ad878a20 <col:3, col:33> col:11 u2 'union U':'union U' cinit
+    |   `-InitListExpr 0x7f99ad878b90 <col:16, col:33> 'union U':'union U' field Field 0x7f99ad8784c8 'l' 'long long'
+    |     `-ImplicitCastExpr 0x7f99ad878bd8 <col:31> 'long long' <IntegralCast>
+    |       `-IntegerLiteral 0x7f99ad878ae0 <col:31> 'int' 3
+    |-DeclStmt 0x7f99ad878e68 <line:33:3, col:29>
+    | `-VarDecl 0x7f99ad878c60 <col:3, col:28> col:7 a 'int [1]' cinit
+    |   `-InitListExpr 0x7f99ad878de0 <col:13, col:28> 'int [1]'
+    |     `-IntegerLiteral 0x7f99ad878d28 <col:26> 'int' 1
+    |-DeclStmt 0x7f99ad879068 <line:34:3, col:28>
+    | `-VarDecl 0x7f99ad878ea8 <col:3, col:27> col:7 a2 'int [1]' cinit
+    |   `-InitListExpr 0x7f99ad879008 <col:14, col:27> 'int [1]'
+    |     `-IntegerLiteral 0x7f99ad878f50 <col:25> 'int' 1
+    |-DeclStmt 0x7f99ad879248 <line:35:3, col:29>
+    | `-VarDecl 0x7f99ad8790d0 <col:3, col:28> col:12 r 'struct R':'struct R' cinit
+    |   `-InitListExpr 0x7f99ad879200 <col:16, col:28> 'struct R':'struct R'
+    |     `-IntegerLiteral 0x7f99ad879150 <col:26> 'int' 2
+    `-DeclStmt 0x7f99ad879420 <line:36:3, col:32>
+      `-VarDecl 0x7f99ad879280 <col:3, col:31> col:12 r2 'struct R':'struct R' cinit
+        `-InitListExpr 0x7f99ad8793d8 <col:17, col:31> 'struct R':'struct R'
+          `-IntegerLiteral 0x7f99ad879328 <col:29> 'int' 2

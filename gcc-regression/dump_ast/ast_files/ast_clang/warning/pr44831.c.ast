@@ -1,0 +1,75 @@
+c_files/pr44831.c:14:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7fccdc0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fccdc026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fccdc026740 '__int128'
+|-TypedefDecl 0x7fccdc026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fccdc026760 'unsigned __int128'
+|-TypedefDecl 0x7fccdc026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fccdc026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fccdc026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fccdc026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fccdc026dc0 'char *'
+|   `-BuiltinType 0x7fccdc026560 'char'
+|-TypedefDecl 0x7fccdc0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fccdc027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fccdc026ee0 'struct __va_list_tag'
+|     `-Record 0x7fccdc026e58 '__va_list_tag'
+|-TypedefDecl 0x7fccdc027138 <c_files/pr44831.c:1:1, col:23> col:23 referenced UCHAR 'unsigned char'
+| `-BuiltinType 0x7fccdc026620 'unsigned char'
+|-TypedefDecl 0x7fccdc825a00 <col:1, col:31> col:31 PUCHAR 'unsigned char *'
+| `-PointerType 0x7fccdc027190 'unsigned char *'
+|   `-BuiltinType 0x7fccdc026620 'unsigned char'
+|-TypedefDecl 0x7fccdc825a88 <line:2:1, col:15> col:15 referenced HANDLE 'void *'
+| `-PointerType 0x7fccdc0269a0 'void *'
+|   `-BuiltinType 0x7fccdc026520 'void'
+|-RecordDecl 0x7fccdc825ae0 <line:3:9, line:5:1> line:3:16 struct _NCB definition
+| `-FieldDecl 0x7fccdc825c68 <line:4:5, col:25> col:11 referenced ncb_reserve 'UCHAR [10]'
+|-TypedefDecl 0x7fccdc825d00 <line:3:1, line:5:3> col:3 NCB 'struct _NCB':'struct _NCB'
+| `-ElaboratedType 0x7fccdc825cb0 'struct _NCB' sugar
+|   `-RecordType 0x7fccdc825b70 'struct _NCB'
+|     `-Record 0x7fccdc825ae0 '_NCB'
+|-TypedefDecl 0x7fccdc825de0 <line:3:1, line:5:9> col:9 referenced PNCB 'struct _NCB *'
+| `-PointerType 0x7fccdc825d90 'struct _NCB *'
+|   `-ElaboratedType 0x7fccdc825cb0 'struct _NCB' sugar
+|     `-RecordType 0x7fccdc825b70 'struct _NCB'
+|       `-Record 0x7fccdc825ae0 '_NCB'
+|-RecordDecl 0x7fccdc825e58 <line:6:1, line:8:1> line:6:8 struct NBCmdQueue definition
+| `-FieldDecl 0x7fccdc825f30 <line:7:5, col:10> col:10 referenced head 'PNCB':'struct _NCB *'
+`-FunctionDecl 0x7fccdc826210 <line:9:1, line:14:1> line:9:7 NBCmdQueueFindNBC 'PNCB *(struct NBCmdQueue *, PNCB)'
+  |-ParmVarDecl 0x7fccdc826030 <col:25, col:44> col:44 used queue 'struct NBCmdQueue *'
+  |-ParmVarDecl 0x7fccdc8260a0 <col:51, col:56> col:56 used ncb 'PNCB':'struct _NCB *'
+  `-CompoundStmt 0x7fccdc8267e8 <line:10:1, line:14:1>
+    |-DeclStmt 0x7fccdc826400 <line:11:3, col:27>
+    | `-VarDecl 0x7fccdc826308 <col:3, col:23> col:9 used ret 'PNCB *' cinit
+    |   `-UnaryOperator 0x7fccdc8263e0 <col:15, col:23> 'PNCB *' prefix '&'
+    |     `-MemberExpr 0x7fccdc8263a8 <col:16, col:23> 'PNCB':'struct _NCB *' lvalue ->head 0x7fccdc825f30
+    |       `-ImplicitCastExpr 0x7fccdc826390 <col:16> 'struct NBCmdQueue *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fccdc826368 <col:16> 'struct NBCmdQueue *' lvalue ParmVar 0x7fccdc826030 'queue' 'struct NBCmdQueue *'
+    `-WhileStmt 0x7fccdc8267c8 <line:12:3, line:13:56>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fccdc826538 <line:12:10, col:25> 'int' '&&'
+      | |-ImplicitCastExpr 0x7fccdc826520 <col:10> 'PNCB *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fccdc826418 <col:10> 'PNCB *' lvalue Var 0x7fccdc826308 'ret' 'PNCB *'
+      | `-BinaryOperator 0x7fccdc8264f8 <col:17, col:25> 'int' '!='
+      |   |-ImplicitCastExpr 0x7fccdc8264c8 <col:17, col:18> 'PNCB':'struct _NCB *' <LValueToRValue>
+      |   | `-UnaryOperator 0x7fccdc826480 <col:17, col:18> 'PNCB':'struct _NCB *' lvalue prefix '*'
+      |   |   `-ImplicitCastExpr 0x7fccdc826468 <col:18> 'PNCB *' <LValueToRValue>
+      |   |     `-DeclRefExpr 0x7fccdc826440 <col:18> 'PNCB *' lvalue Var 0x7fccdc826308 'ret' 'PNCB *'
+      |   `-ImplicitCastExpr 0x7fccdc8264e0 <col:25> 'PNCB':'struct _NCB *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fccdc8264a0 <col:25> 'PNCB':'struct _NCB *' lvalue ParmVar 0x7fccdc8260a0 'ncb' 'PNCB':'struct _NCB *'
+      `-BinaryOperator 0x7fccdc8267a0 <line:13:5, col:56> 'PNCB *' '='
+        |-DeclRefExpr 0x7fccdc826560 <col:5> 'PNCB *' lvalue Var 0x7fccdc826308 'ret' 'PNCB *'
+        `-CStyleCastExpr 0x7fccdc826778 <col:11, col:56> 'PNCB *' <BitCast>
+          `-ParenExpr 0x7fccdc826758 <col:19, col:56> 'UCHAR *'
+            `-BinaryOperator 0x7fccdc8266f0 <col:20, col:55> 'UCHAR *' '+'
+              |-ImplicitCastExpr 0x7fccdc8266d8 <col:20, col:28> 'UCHAR *' <ArrayToPointerDecay>
+              | `-MemberExpr 0x7fccdc826620 <col:20, col:28> 'UCHAR [10]' lvalue ->ncb_reserve 0x7fccdc825c68
+              |   `-ImplicitCastExpr 0x7fccdc826608 <col:20, col:25> 'PNCB':'struct _NCB *' <LValueToRValue>
+              |     `-ParenExpr 0x7fccdc8265e8 <col:20, col:25> 'PNCB':'struct _NCB *' lvalue
+              |       `-UnaryOperator 0x7fccdc8265c8 <col:21, col:22> 'PNCB':'struct _NCB *' lvalue prefix '*'
+              |         `-ImplicitCastExpr 0x7fccdc8265b0 <col:22> 'PNCB *' <LValueToRValue>
+              |           `-DeclRefExpr 0x7fccdc826588 <col:22> 'PNCB *' lvalue Var 0x7fccdc826308 'ret' 'PNCB *'
+              `-UnaryExprOrTypeTraitExpr 0x7fccdc826690 <col:42, col:55> 'unsigned long' sizeof 'HANDLE':'void *'

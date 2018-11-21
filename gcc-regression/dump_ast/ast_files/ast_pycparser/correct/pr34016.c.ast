@@ -1,0 +1,76 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['double']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: gr, [], [], []
+        ArrayDecl: []
+          TypeDecl: gr, []
+            IdentifierType: ['double']
+          Constant: int, 36
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <=
+          ID: i
+          Constant: int, 5
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <=
+              ID: j
+              Constant: int, 5
+            UnaryOp: p++
+              ID: j
+            Assignment: =
+              ArrayRef: 
+                ID: gr
+                BinaryOp: +
+                  ID: i
+                  BinaryOp: *
+                    ID: j
+                    Constant: int, 6
+              Constant: float, 0.0
+          If: 
+            BinaryOp: <=
+              ID: i
+              Constant: int, 2
+            Assignment: =
+              ArrayRef: 
+                ID: gr
+                BinaryOp: +
+                  ID: i
+                  BinaryOp: *
+                    ID: i
+                    Constant: int, 6
+              Constant: float, 1.0
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: gr

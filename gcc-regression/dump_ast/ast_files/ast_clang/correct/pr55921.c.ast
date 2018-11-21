@@ -1,0 +1,67 @@
+TranslationUnitDecl 0x7ff0c20264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff0c2026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff0c2026740 '__int128'
+|-TypedefDecl 0x7ff0c2026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff0c2026760 'unsigned __int128'
+|-TypedefDecl 0x7ff0c2026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff0c2026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff0c2026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff0c2026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff0c2026dc0 'char *'
+|   `-BuiltinType 0x7ff0c2026560 'char'
+|-TypedefDecl 0x7ff0c20270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff0c2027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff0c2026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff0c2026e58 '__va_list_tag'
+|-RecordDecl 0x7ff0c2027120 <c_files/pr55921.c:3:9, line:7:1> line:3:9 union definition
+| |-FieldDecl 0x7ff0c2825a00 <line:5:3, col:18> col:18 cf '_Complex float'
+| `-FieldDecl 0x7ff0c2825a60 <line:6:3, col:13> col:13 referenced ll 'long long'
+|-TypedefDecl 0x7ff0c2825b00 <line:3:1, line:7:3> col:3 referenced ucf 'union ucf':'ucf'
+| `-ElaboratedType 0x7ff0c2825ab0 'union ucf' sugar
+|   `-RecordType 0x7ff0c20271b0 'ucf'
+|     `-Record 0x7ff0c2027120 ''
+`-FunctionDecl 0x7ff0c2825e10 <line:9:1, line:21:1> line:10:1 foo 'void (ucf *, ucf *, _Complex float)'
+  |-ParmVarDecl 0x7ff0c2825bf8 <col:6, col:11> col:11 used in 'ucf *'
+  |-ParmVarDecl 0x7ff0c2825c68 <col:15, col:20> col:20 used out 'ucf *'
+  |-ParmVarDecl 0x7ff0c2825cd8 <col:25, col:40> col:40 used r '_Complex float'
+  `-CompoundStmt 0x7ff0c2826878 <line:11:1, line:21:1>
+    |-DeclStmt 0x7ff0c2825f78 <line:12:3, col:8>
+    | `-VarDecl 0x7ff0c2825f18 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7ff0c2826000 <line:13:3, col:11>
+    | `-VarDecl 0x7ff0c2825fa0 <col:3, col:7> col:7 used ucf1 'ucf':'ucf'
+    |-DeclStmt 0x7ff0c2826088 <line:14:3, col:20>
+    | `-VarDecl 0x7ff0c2826028 <col:3, col:18> col:18 used cf '_Complex float'
+    |-BinaryOperator 0x7ff0c28261f8 <line:16:3, col:19> 'long long' '='
+    | |-MemberExpr 0x7ff0c28260c8 <col:3, col:8> 'long long' lvalue .ll 0x7ff0c2825a60
+    | | `-DeclRefExpr 0x7ff0c28260a0 <col:3> 'ucf':'ucf' lvalue Var 0x7ff0c2825fa0 'ucf1' 'ucf':'ucf'
+    | `-ImplicitCastExpr 0x7ff0c28261e0 <col:13, col:19> 'long long' <LValueToRValue>
+    |   `-MemberExpr 0x7ff0c28261a8 <col:13, col:19> 'long long' lvalue .ll 0x7ff0c2825a60
+    |     `-ArraySubscriptExpr 0x7ff0c2826180 <col:13, col:17> 'ucf':'ucf' lvalue
+    |       |-ImplicitCastExpr 0x7ff0c2826150 <col:13> 'ucf *' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7ff0c2826100 <col:13> 'ucf *' lvalue ParmVar 0x7ff0c2825bf8 'in' 'ucf *'
+    |       `-ImplicitCastExpr 0x7ff0c2826168 <col:16> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7ff0c2826128 <col:16> 'int' lvalue Var 0x7ff0c2825f18 'i' 'int'
+    |-GCCAsmStmt 0x7ff0c2826440 <line:17:3, col:40>
+    | |-DeclRefExpr 0x7ff0c2826338 <col:21> '_Complex float' lvalue Var 0x7ff0c2826028 'cf' '_Complex float'
+    | `-ImplicitCastExpr 0x7ff0c2826428 <col:32, col:37> 'long long' <LValueToRValue>
+    |   `-MemberExpr 0x7ff0c28263f0 <col:32, col:37> 'long long' lvalue .ll 0x7ff0c2825a60
+    |     `-DeclRefExpr 0x7ff0c28263c8 <col:32> 'ucf':'ucf' lvalue Var 0x7ff0c2825fa0 'ucf1' 'ucf':'ucf'
+    |-CompoundAssignOperator 0x7ff0c2826520 <line:18:3, col:9> '_Complex float' '*=' ComputeLHSTy='_Complex float' ComputeResultTy='_Complex float'
+    | |-DeclRefExpr 0x7ff0c28264b8 <col:3> '_Complex float' lvalue Var 0x7ff0c2826028 'cf' '_Complex float'
+    | `-ImplicitCastExpr 0x7ff0c2826508 <col:9> '_Complex float' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c28264e0 <col:9> '_Complex float' lvalue ParmVar 0x7ff0c2825cd8 'r' '_Complex float'
+    |-GCCAsmStmt 0x7ff0c2826680 <line:19:3, col:40>
+    | |-MemberExpr 0x7ff0c28265d8 <col:21, col:26> 'long long' lvalue .ll 0x7ff0c2825a60
+    | | `-DeclRefExpr 0x7ff0c28265b0 <col:21> 'ucf':'ucf' lvalue Var 0x7ff0c2825fa0 'ucf1' 'ucf':'ucf'
+    | `-ImplicitCastExpr 0x7ff0c2826668 <col:37> '_Complex float' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff0c2826640 <col:37> '_Complex float' lvalue Var 0x7ff0c2826028 'cf' '_Complex float'
+    `-BinaryOperator 0x7ff0c2826850 <line:20:3, col:20> 'long long' '='
+      |-MemberExpr 0x7ff0c28267a0 <col:3, col:10> 'long long' lvalue .ll 0x7ff0c2825a60
+      | `-ArraySubscriptExpr 0x7ff0c2826778 <col:3, col:8> 'ucf':'ucf' lvalue
+      |   |-ImplicitCastExpr 0x7ff0c2826748 <col:3> 'ucf *' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7ff0c28266f8 <col:3> 'ucf *' lvalue ParmVar 0x7ff0c2825c68 'out' 'ucf *'
+      |   `-ImplicitCastExpr 0x7ff0c2826760 <col:7> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7ff0c2826720 <col:7> 'int' lvalue Var 0x7ff0c2825f18 'i' 'int'
+      `-ImplicitCastExpr 0x7ff0c2826838 <col:15, col:20> 'long long' <LValueToRValue>
+        `-MemberExpr 0x7ff0c2826800 <col:15, col:20> 'long long' lvalue .ll 0x7ff0c2825a60
+          `-DeclRefExpr 0x7ff0c28267d8 <col:15> 'ucf':'ucf' lvalue Var 0x7ff0c2825fa0 'ucf1' 'ucf':'ucf'

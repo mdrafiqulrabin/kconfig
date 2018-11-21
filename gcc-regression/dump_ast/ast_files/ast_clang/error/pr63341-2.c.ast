@@ -1,0 +1,222 @@
+c_files/pr63341-2.c:3:10: fatal error: 'tree-vect.h' file not found
+#include "tree-vect.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7f8f038264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8f03826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8f03826740 '__int128'
+|-TypedefDecl 0x7f8f03826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8f03826760 'unsigned __int128'
+|-TypedefDecl 0x7f8f03826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8f03826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8f03826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8f03826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8f03826dc0 'char *'
+|   `-BuiltinType 0x7f8f03826560 'char'
+|-TypedefDecl 0x7f8f038270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8f03827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8f03826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8f03826e58 '__va_list_tag'
+|-RecordDecl 0x7f8f03827120 <c_files/pr63341-2.c:5:9, col:54> col:15 union U definition
+| |-PackedAttr 0x7f8f04026aa8 <col:71>
+| |-FieldDecl 0x7f8f04026a00 <col:19, col:34> col:34 referenced s 'unsigned short'
+| `-FieldDecl 0x7f8f04026a60 <col:37, col:51> col:51 c 'unsigned char'
+|-TypedefDecl 0x7f8f04026b40 <col:1, col:80> col:80 referenced U 'union U':'union U'
+| `-ElaboratedType 0x7f8f04026af0 'union U' sugar
+|   `-RecordType 0x7f8f038271b0 'union U'
+|     `-Record 0x7f8f03827120 'U'
+|-RecordDecl 0x7f8f04026bb0 <line:6:1, col:59> col:8 struct S definition
+| |-FieldDecl 0x7f8f04026c90 <col:12, col:17> col:17 e 'char'
+| | `-AlignedAttr 0x7f8f04026cd8 <col:34, col:45> aligned
+| |   `-IntegerLiteral 0x7f8f04026c60 <col:43> 'int' 64
+| `-FieldDecl 0x7f8f04026e58 <col:50, col:56> col:52 referenced s 'U [32]'
+|-VarDecl 0x7f8f04026ef0 <line:7:1, line:10:84> line:7:10 used t 'struct S':'struct S' cinit
+| `-InitListExpr 0x7f8f0402e048 <col:14, line:10:84> 'struct S':'struct S'
+|   |-ImplicitCastExpr 0x7f8f0402e098 <line:7:15> 'char' <IntegralCast>
+|   | `-IntegerLiteral 0x7f8f04026f90 <col:15> 'int' 0
+|   `-InitListExpr 0x7f8f0402e0b0 <col:18, line:10:83> 'U [32]'
+|     |-InitListExpr 0x7f8f0402e1f0 <line:7:19, col:26> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e238 <col:20> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04026fb0 <col:20> 'int' 20496
+|     |-InitListExpr 0x7f8f0402e250 <col:29, col:36> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e298 <col:30> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04027018 <col:30> 'int' 20753
+|     |-InitListExpr 0x7f8f0402e2b0 <col:39, col:46> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e2f8 <col:40> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04027080 <col:40> 'int' 21010
+|     |-InitListExpr 0x7f8f0402e310 <col:49, col:56> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e358 <col:50> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f040270e8 <col:50> 'int' 21267
+|     |-InitListExpr 0x7f8f0402e370 <col:59, col:66> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e3b8 <col:60> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04027150 <col:60> 'int' 21524
+|     |-InitListExpr 0x7f8f0402e3d0 <col:69, col:76> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e418 <col:70> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f040271b8 <col:70> 'int' 21781
+|     |-InitListExpr 0x7f8f0402e430 <col:79, col:86> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e478 <col:80> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04027220 <col:80> 'int' 22038
+|     |-InitListExpr 0x7f8f0402e490 <col:89, col:96> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e4d8 <col:90> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04027288 <col:90> 'int' 22295
+|     |-InitListExpr 0x7f8f0402e4f0 <line:8:5, col:12> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e538 <col:6> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f040272f0 <col:6> 'int' 22552
+|     |-InitListExpr 0x7f8f0402e550 <col:15, col:22> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e598 <col:16> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04027358 <col:16> 'int' 22809
+|     |-InitListExpr 0x7f8f0402e5b0 <col:25, col:32> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e5f8 <col:26> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f040273c0 <col:26> 'int' 23066
+|     |-InitListExpr 0x7f8f0402e610 <col:35, col:42> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e658 <col:36> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04027428 <col:36> 'int' 23323
+|     |-InitListExpr 0x7f8f0402e670 <col:45, col:52> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e6b8 <col:46> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04027490 <col:46> 'int' 23580
+|     |-InitListExpr 0x7f8f0402e6d0 <col:55, col:62> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e718 <col:56> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f040274f8 <col:56> 'int' 23837
+|     |-InitListExpr 0x7f8f0402e730 <col:65, col:72> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e778 <col:66> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04027560 <col:66> 'int' 24094
+|     |-InitListExpr 0x7f8f0402e790 <col:75, col:82> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e7d8 <col:76> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f040275c8 <col:76> 'int' 24351
+|     |-InitListExpr 0x7f8f0402e7f0 <line:9:5, col:12> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e838 <col:6> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04027630 <col:6> 'int' 24608
+|     |-InitListExpr 0x7f8f0402e850 <col:15, col:22> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e898 <col:16> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04027698 <col:16> 'int' 24865
+|     |-InitListExpr 0x7f8f0402e8b0 <col:25, col:32> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e8f8 <col:26> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04027700 <col:26> 'int' 25122
+|     |-InitListExpr 0x7f8f0402e910 <col:35, col:42> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e958 <col:36> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04027768 <col:36> 'int' 25379
+|     |-InitListExpr 0x7f8f0402e970 <col:45, col:52> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402e9b8 <col:46> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f040277d0 <col:46> 'int' 25636
+|     |-InitListExpr 0x7f8f0402e9d0 <col:55, col:62> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402ea18 <col:56> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04027838 <col:56> 'int' 25893
+|     |-InitListExpr 0x7f8f0402ea30 <col:65, col:72> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402ea78 <col:66> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f040278a0 <col:66> 'int' 26150
+|     |-InitListExpr 0x7f8f0402ea90 <col:75, col:82> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402ead8 <col:76> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04027908 <col:76> 'int' 26407
+|     |-InitListExpr 0x7f8f0402eaf0 <line:10:5, col:12> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402eb38 <col:6> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f04027970 <col:6> 'int' 26664
+|     |-InitListExpr 0x7f8f0402eb50 <col:15, col:22> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402eb98 <col:16> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f040279d8 <col:16> 'int' 26921
+|     |-InitListExpr 0x7f8f0402ebb0 <col:25, col:32> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402ec00 <col:26> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f0402dc48 <col:26> 'int' 27178
+|     |-InitListExpr 0x7f8f0402ec18 <col:35, col:42> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402ec60 <col:36> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f0402dcb0 <col:36> 'int' 27435
+|     |-InitListExpr 0x7f8f0402ec78 <col:45, col:52> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402ecc0 <col:46> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f0402dd18 <col:46> 'int' 27692
+|     |-InitListExpr 0x7f8f0402ecd8 <col:55, col:62> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402ed20 <col:56> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f0402dd80 <col:56> 'int' 27949
+|     |-InitListExpr 0x7f8f0402ed38 <col:65, col:72> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f8f0402ed80 <col:66> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8f0402dde8 <col:66> 'int' 28206
+|     `-InitListExpr 0x7f8f0402ed98 <col:75, col:82> 'U':'union U' field Field 0x7f8f04026a00 's' 'unsigned short'
+|       `-ImplicitCastExpr 0x7f8f0402ede0 <col:76> 'unsigned short' <IntegralCast>
+|         `-IntegerLiteral 0x7f8f0402de50 <col:76> 'int' 28463
+|-VarDecl 0x7f8f0402ee80 <line:11:1, col:28> col:16 used d 'unsigned short [32]' cinit
+| `-InitListExpr 0x7f8f0402ef48 <col:24, col:28> 'unsigned short [32]'
+|   |-array filler
+|   | `-ImplicitValueInitExpr 0x7f8f0402efa8 <<invalid sloc>> 'unsigned short'
+|   `-ImplicitCastExpr 0x7f8f0402ef88 <col:26> 'unsigned short' <IntegralCast>
+|     `-IntegerLiteral 0x7f8f0402eee0 <col:26> 'int' 1
+|-FunctionDecl 0x7f8f0402f008 <line:13:1, line:24:1> line:14:1 used foo 'void ()'
+| |-CompoundStmt 0x7f8f0402fd28 <line:15:1, line:24:1>
+| | |-DeclStmt 0x7f8f0402f160 <line:16:3, col:8>
+| | | `-VarDecl 0x7f8f0402f100 <col:3, col:7> col:7 used i 'int'
+| | |-ForStmt 0x7f8f0402f610 <line:17:3, line:18:23>
+| | | |-BinaryOperator 0x7f8f0402f1c0 <line:17:8, col:12> 'int' '='
+| | | | |-DeclRefExpr 0x7f8f0402f178 <col:8> 'int' lvalue Var 0x7f8f0402f100 'i' 'int'
+| | | | `-IntegerLiteral 0x7f8f0402f1a0 <col:12> 'int' 0
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7f8f0402f248 <col:15, col:19> 'int' '<'
+| | | | |-ImplicitCastExpr 0x7f8f0402f230 <col:15> 'int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7f8f0402f1e8 <col:15> 'int' lvalue Var 0x7f8f0402f100 'i' 'int'
+| | | | `-IntegerLiteral 0x7f8f0402f210 <col:19> 'int' 32
+| | | |-UnaryOperator 0x7f8f0402f298 <col:23, col:24> 'int' postfix '++'
+| | | | `-DeclRefExpr 0x7f8f0402f270 <col:23> 'int' lvalue Var 0x7f8f0402f100 'i' 'int'
+| | | `-BinaryOperator 0x7f8f0402f598 <line:18:5, col:23> 'unsigned short' '='
+| | |   |-ArraySubscriptExpr 0x7f8f0402f368 <col:5, col:8> 'unsigned short' lvalue
+| | |   | |-ImplicitCastExpr 0x7f8f0402f338 <col:5> 'unsigned short *' <ArrayToPointerDecay>
+| | |   | | `-DeclRefExpr 0x7f8f0402f2b8 <col:5> 'unsigned short [32]' lvalue Var 0x7f8f0402ee80 'd' 'unsigned short [32]'
+| | |   | `-ImplicitCastExpr 0x7f8f0402f350 <col:7> 'int' <LValueToRValue>
+| | |   |   `-DeclRefExpr 0x7f8f0402f2e0 <col:7> 'int' lvalue Var 0x7f8f0402f100 'i' 'int'
+| | |   `-ImplicitCastExpr 0x7f8f0402f580 <col:12, col:23> 'unsigned short' <IntegralCast>
+| | |     `-BinaryOperator 0x7f8f0402f558 <col:12, col:23> 'int' '+'
+| | |       |-ImplicitCastExpr 0x7f8f0402f540 <col:12, col:19> 'int' <IntegralCast>
+| | |       | `-ImplicitCastExpr 0x7f8f0402f528 <col:12, col:19> 'unsigned short' <LValueToRValue>
+| | |       |   `-MemberExpr 0x7f8f0402f4d0 <col:12, col:19> 'unsigned short' lvalue .s 0x7f8f04026a00
+| | |       |     `-ArraySubscriptExpr 0x7f8f0402f4a8 <col:12, col:17> 'U':'union U' lvalue
+| | |       |       |-ImplicitCastExpr 0x7f8f0402f478 <col:12, col:14> 'U *' <ArrayToPointerDecay>
+| | |       |       | `-MemberExpr 0x7f8f0402f3b8 <col:12, col:14> 'U [32]' lvalue .s 0x7f8f04026e58
+| | |       |       |   `-DeclRefExpr 0x7f8f0402f390 <col:12> 'struct S':'struct S' lvalue Var 0x7f8f04026ef0 't' 'struct S':'struct S'
+| | |       |       `-ImplicitCastExpr 0x7f8f0402f490 <col:16> 'int' <LValueToRValue>
+| | |       |         `-DeclRefExpr 0x7f8f0402f3f0 <col:16> 'int' lvalue Var 0x7f8f0402f100 'i' 'int'
+| | |       `-IntegerLiteral 0x7f8f0402f508 <col:23> 'int' 4
+| | `-ForStmt 0x7f8f0402fcf0 <line:19:3, line:23:38>
+| |   |-BinaryOperator 0x7f8f0402f690 <line:19:8, col:12> 'int' '='
+| |   | |-DeclRefExpr 0x7f8f0402f648 <col:8> 'int' lvalue Var 0x7f8f0402f100 'i' 'int'
+| |   | `-IntegerLiteral 0x7f8f0402f670 <col:12> 'int' 0
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7f8f0402f718 <col:15, col:19> 'int' '<'
+| |   | |-ImplicitCastExpr 0x7f8f0402f700 <col:15> 'int' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7f8f0402f6b8 <col:15> 'int' lvalue Var 0x7f8f0402f100 'i' 'int'
+| |   | `-IntegerLiteral 0x7f8f0402f6e0 <col:19> 'int' 32
+| |   |-UnaryOperator 0x7f8f0402f768 <col:23, col:24> 'int' postfix '++'
+| |   | `-DeclRefExpr 0x7f8f0402f740 <col:23> 'int' lvalue Var 0x7f8f0402f100 'i' 'int'
+| |   `-IfStmt 0x7f8f0402fcb8 <line:20:5, line:23:38>
+| |     |-<<<NULL>>>
+| |     |-<<<NULL>>>
+| |     |-BinaryOperator 0x7f8f0402f9f0 <line:20:9, col:28> 'int' '!='
+| |     | |-ImplicitCastExpr 0x7f8f0402f9d8 <col:9, col:12> 'int' <IntegralCast>
+| |     | | `-ImplicitCastExpr 0x7f8f0402f9c0 <col:9, col:12> 'unsigned short' <LValueToRValue>
+| |     | |   `-ArraySubscriptExpr 0x7f8f0402f808 <col:9, col:12> 'unsigned short' lvalue
+| |     | |     |-ImplicitCastExpr 0x7f8f0402f7d8 <col:9> 'unsigned short *' <ArrayToPointerDecay>
+| |     | |     | `-DeclRefExpr 0x7f8f0402f788 <col:9> 'unsigned short [32]' lvalue Var 0x7f8f0402ee80 'd' 'unsigned short [32]'
+| |     | |     `-ImplicitCastExpr 0x7f8f0402f7f0 <col:11> 'int' <LValueToRValue>
+| |     | |       `-DeclRefExpr 0x7f8f0402f7b0 <col:11> 'int' lvalue Var 0x7f8f0402f100 'i' 'int'
+| |     | `-BinaryOperator 0x7f8f0402f998 <col:17, col:28> 'int' '+'
+| |     |   |-ImplicitCastExpr 0x7f8f0402f980 <col:17, col:24> 'int' <IntegralCast>
+| |     |   | `-ImplicitCastExpr 0x7f8f0402f968 <col:17, col:24> 'unsigned short' <LValueToRValue>
+| |     |   |   `-MemberExpr 0x7f8f0402f910 <col:17, col:24> 'unsigned short' lvalue .s 0x7f8f04026a00
+| |     |   |     `-ArraySubscriptExpr 0x7f8f0402f8e8 <col:17, col:22> 'U':'union U' lvalue
+| |     |   |       |-ImplicitCastExpr 0x7f8f0402f8b8 <col:17, col:19> 'U *' <ArrayToPointerDecay>
+| |     |   |       | `-MemberExpr 0x7f8f0402f858 <col:17, col:19> 'U [32]' lvalue .s 0x7f8f04026e58
+| |     |   |       |   `-DeclRefExpr 0x7f8f0402f830 <col:17> 'struct S':'struct S' lvalue Var 0x7f8f04026ef0 't' 'struct S':'struct S'
+| |     |   |       `-ImplicitCastExpr 0x7f8f0402f8d0 <col:21> 'int' <LValueToRValue>
+| |     |   |         `-DeclRefExpr 0x7f8f0402f890 <col:21> 'int' lvalue Var 0x7f8f0402f100 'i' 'int'
+| |     |   `-IntegerLiteral 0x7f8f0402f948 <col:28> 'int' 4
+| |     |-CallExpr 0x7f8f0402fb50 <line:21:7, col:14> 'void'
+| |     | `-ImplicitCastExpr 0x7f8f0402fb38 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |     |   `-DeclRefExpr 0x7f8f0402fae8 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7f8f0402fa50 'abort' 'void (void) __attribute__((noreturn))'
+| |     `-GCCAsmStmt 0x7f8f0402fc68 <line:23:7, col:38>
+| `-NoInlineAttr 0x7f8f0402f0a0 <line:13:16>
+|-FunctionDecl 0x7f8f0402fa50 <line:21:7> col:7 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f8f0402fdb0 <line:26:1, line:32:1> line:27:1 main 'int ()'
+| `-CompoundStmt 0x7f8f04030060 <line:28:1, line:32:1>
+|   |-CallExpr 0x7f8f0402ff70 <line:29:3, col:15> 'int'
+|   | `-ImplicitCastExpr 0x7f8f0402ff58 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7f8f0402ff08 <col:3> 'int ()' Function 0x7f8f0402fe70 'check_vect' 'int ()'
+|   |-CallExpr 0x7f8f04030000 <line:30:3, col:8> 'void'
+|   | `-ImplicitCastExpr 0x7f8f0402ffe8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7f8f0402ff98 <col:3> 'void ()' Function 0x7f8f0402f008 'foo' 'void ()'
+|   `-ReturnStmt 0x7f8f04030048 <line:31:3, col:10>
+|     `-IntegerLiteral 0x7f8f04030028 <col:10> 'int' 0
+`-FunctionDecl 0x7f8f0402fe70 <<invalid sloc>> line:29:3 implicit used check_vect 'int ()'

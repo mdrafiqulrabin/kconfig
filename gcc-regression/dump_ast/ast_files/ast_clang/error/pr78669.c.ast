@@ -1,0 +1,72 @@
+c_files/pr78669.c:12:13: error: cannot convert between vector type '__attribute__((__vector_size__(4 * sizeof(char)))) char' (vector of 4 'char' values) and vector type 'v64u128' (vector of 4 '__int128' values) as implicit conversion would cause truncation
+  v64u128_0 |= (v64u128){} == v64u128_0;
+            ^
+c_files/pr78669.c:13:13: error: assigning to 'v64u128' (vector of 4 '__int128' values) from incompatible type '__attribute__((__vector_size__(4 * sizeof(char)))) char' (vector of 4 'char' values)
+  v64u128_3 = (v64u128){} >= v64u128_3;
+            ^ ~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr78669.c:17:38: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+static void __attribute__((noinline, noclone))
+                                     ^
+1 warning and 2 errors generated.
+TranslationUnitDecl 0x7fd0720264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd072026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd072026740 '__int128'
+|-TypedefDecl 0x7fd072026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd072026760 'unsigned __int128'
+|-TypedefDecl 0x7fd072026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd072026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd072026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd072026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd072026dc0 'char *'
+|   `-BuiltinType 0x7fd072026560 'char'
+|-TypedefDecl 0x7fd0720270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd072027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd072026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd072026e58 '__va_list_tag'
+|-TypedefDecl 0x7fd072027138 <c_files/pr78669.c:4:1, col:18> col:18 referenced u128 '__int128'
+| `-BuiltinType 0x7fd072026740 '__int128'
+|-TypedefDecl 0x7fd072826a00 <line:5:1, col:18> col:18 referenced v64u128 '__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+| `-VectorType 0x7fd0720271b0 '__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' 4
+|   `-BuiltinType 0x7fd072026740 '__int128'
+|-VarDecl 0x7fd072826a90 <line:7:1, col:9> col:9 used v64u128_g 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+|-FunctionDecl 0x7fd072826cc0 <line:9:1, line:15:1> line:10:1 used baz 'v64u128 (v64u128, v64u128)' static inline
+| |-ParmVarDecl 0x7fd072826b40 <col:5, col:13> col:13 used v64u128_0 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+| |-ParmVarDecl 0x7fd072826bb0 <col:24, col:32> col:32 used v64u128_3 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+| `-CompoundStmt 0x7fd072827580 <line:11:1, line:15:1>
+|   `-ReturnStmt 0x7fd072827568 <line:14:3, col:22>
+|     `-BinaryOperator 0x7fd072827540 <col:10, col:22> 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' '+'
+|       |-ImplicitCastExpr 0x7fd072827510 <col:10> 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fd0728274c0 <col:10> 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' lvalue ParmVar 0x7fd072826b40 'v64u128_0' 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+|       `-ImplicitCastExpr 0x7fd072827528 <col:22> 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7fd0728274e8 <col:22> 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' lvalue ParmVar 0x7fd072826bb0 'v64u128_3' 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+|-FunctionDecl 0x7fd072827750 <line:17:1, line:21:1> line:18:1 used bar 'void (u128, v64u128)' static
+| |-ParmVarDecl 0x7fd0728275d0 <col:5, col:10> col:10 used u128_0 'u128':'__int128'
+| |-ParmVarDecl 0x7fd072827640 <col:18, col:26> col:26 used v64u128_3 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+| |-CompoundStmt 0x7fd072828bb0 <line:19:1, line:21:1>
+| | `-BinaryOperator 0x7fd072828b88 <line:20:3, col:62> 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' '='
+| |   |-DeclRefExpr 0x7fd072827840 <col:3> 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' lvalue Var 0x7fd072826a90 'v64u128_g' 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+| |   `-CallExpr 0x7fd072828b20 <col:15, col:62> 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+| |     |-ImplicitCastExpr 0x7fd072828b08 <col:15> 'v64u128 (*)(v64u128, v64u128)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fd072827868 <col:15> 'v64u128 (v64u128, v64u128)' Function 0x7fd072826cc0 'baz' 'v64u128 (v64u128, v64u128)'
+| |     |-ImplicitCastExpr 0x7fd072828b58 <col:19, col:50> 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' <LValueToRValue>
+| |     | `-CompoundLiteralExpr 0x7fd072828a58 <col:19, col:50> 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' lvalue
+| |     |   `-InitListExpr 0x7fd0728279b8 <col:28, col:50> 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+| |     |     |-BinaryOperator 0x7fd072827918 <col:29, col:40> 'u128':'__int128' '<<'
+| |     |     | |-CStyleCastExpr 0x7fd0728278d0 <col:29, col:35> 'u128':'__int128' <IntegralCast>
+| |     |     | | `-IntegerLiteral 0x7fd0728278a0 <col:35> 'int' 1
+| |     |     | `-IntegerLiteral 0x7fd0728278f8 <col:40> 'int' 64
+| |     |     `-ImplicitCastExpr 0x7fd072828a20 <col:44> 'u128':'__int128' <LValueToRValue>
+| |     |       `-DeclRefExpr 0x7fd072827940 <col:44> 'u128':'__int128' lvalue ParmVar 0x7fd0728275d0 'u128_0' 'u128':'__int128'
+| |     `-ImplicitCastExpr 0x7fd072828b70 <col:53> 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fd072828a80 <col:53> 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' lvalue ParmVar 0x7fd072827640 'v64u128_3' 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+| `-NoInlineAttr 0x7fd0728277f8 <line:17:28>
+`-FunctionDecl 0x7fd072828ce0 <line:23:1, line:27:1> line:24:1 foo 'void (v64u128)'
+  |-ParmVarDecl 0x7fd072828be0 <col:5, col:13> col:13 used v64u128_3 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+  `-CompoundStmt 0x7fd072828ec8 <line:25:1, line:27:1>
+    `-CallExpr 0x7fd072828e60 <line:26:3, col:19> 'void'
+      |-ImplicitCastExpr 0x7fd072828e48 <col:3> 'void (*)(u128, v64u128)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd072828d80 <col:3> 'void (u128, v64u128)' Function 0x7fd072827750 'bar' 'void (u128, v64u128)'
+      |-ImplicitCastExpr 0x7fd072828e98 <col:7> 'u128':'__int128' <IntegralCast>
+      | `-IntegerLiteral 0x7fd072828da8 <col:7> 'int' 3
+      `-ImplicitCastExpr 0x7fd072828eb0 <col:10> 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' <LValueToRValue>
+        `-DeclRefExpr 0x7fd072828dc8 <col:10> 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' lvalue ParmVar 0x7fd072828be0 'v64u128_3' 'v64u128':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'

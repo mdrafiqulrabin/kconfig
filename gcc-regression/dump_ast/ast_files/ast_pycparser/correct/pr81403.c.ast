@@ -1,0 +1,97 @@
+FileAST: 
+  Decl: var_9, [], [], []
+    TypeDecl: var_9, []
+      IdentifierType: ['short']
+    Constant: int, 19581
+  Decl: var_33, [], [], []
+    TypeDecl: var_33, []
+      IdentifierType: ['unsigned', 'char']
+    Constant: int, 21
+  Decl: var_55, [], [], []
+    TypeDecl: var_55, []
+      IdentifierType: ['long', 'long', 'int']
+    Constant: int, 286697804684061197LL
+  Decl: var_59, [], [], []
+    TypeDecl: var_59, []
+      IdentifierType: ['long', 'long', 'int']
+    UnaryOp: -
+      Constant: int, 1962393262513510540LL
+  Decl: var_71, [], [], []
+    TypeDecl: var_71, []
+      IdentifierType: ['long', 'long', 'int']
+    Constant: int, 4731868609112929952LL
+  Decl: var_773, [], [], []
+    TypeDecl: var_773, []
+      IdentifierType: ['long', 'long', 'int']
+    UnaryOp: -
+      Constant: int, 4784633456247777769LL
+  Decl: var_776, [], [], []
+    TypeDecl: var_776, []
+      IdentifierType: ['short']
+    Constant: int, 5894
+  Decl: var_1321, [], [], []
+    TypeDecl: var_1321, []
+      IdentifierType: ['long', 'long', 'int']
+    Constant: int, 7573221950916697355LL
+  Decl: uc, [], [], []
+    TypeDecl: uc, []
+      IdentifierType: ['unsigned', 'char']
+    Constant: int, 217
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: var_55
+        Assignment: =
+          ID: var_71
+          Constant: int, 0
+      If: 
+        BinaryOp: !=
+          ID: var_9
+          UnaryOp: ~
+            BinaryOp: <
+              Constant: int, 0
+              ID: uc
+        Assignment: =
+          ID: var_773
+          Constant: int, 0
+        Assignment: =
+          ID: var_776
+          BinaryOp: *
+            BinaryOp: /
+              Constant: int, 1
+              UnaryOp: ~
+                ID: var_9
+            UnaryOp: -
+              Constant: int, 1
+      If: 
+        ID: var_33
+        Assignment: =
+          ID: var_59
+          BinaryOp: &
+            UnaryOp: ~
+              ID: var_9
+            Constant: int, 10393
+      Assignment: =
+        ID: var_1321
+        UnaryOp: ~
+          ID: var_9
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo
+      If: 
+        BinaryOp: !=
+          ID: var_59
+          Constant: int, 8320
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,72 @@
+FileAST: 
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['int']
+          Decl: in, [], [], []
+            PtrDecl: []
+              TypeDecl: in, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: out, [], [], []
+            PtrDecl: []
+              TypeDecl: out, []
+                IdentifierType: ['unsigned', 'char']
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: xr, [], [], []
+        TypeDecl: xr, []
+          IdentifierType: ['unsigned', 'char']
+      Decl: xg, [], [], []
+        TypeDecl: xg, []
+          IdentifierType: ['unsigned', 'char']
+      Decl: xy, [], [], []
+        TypeDecl: xy, []
+          IdentifierType: ['unsigned', 'char']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: len
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: xr
+            UnaryOp: *
+              UnaryOp: p++
+                ID: in
+          Assignment: =
+            ID: xg
+            UnaryOp: *
+              UnaryOp: p++
+                ID: in
+          Assignment: =
+            ID: xy
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+              BinaryOp: >>
+                BinaryOp: +
+                  BinaryOp: *
+                    Constant: int, 19595
+                    ID: xr
+                  BinaryOp: *
+                    Constant: int, 38470
+                    ID: xg
+                Constant: int, 16
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: out
+            ID: xy

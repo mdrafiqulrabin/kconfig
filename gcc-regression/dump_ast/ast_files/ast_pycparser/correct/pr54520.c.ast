@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: a, [], [], []
+    PtrDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+        ID: a
+      While: 
+        BinaryOp: &&
+          ID: p
+          BinaryOp: !=
+            UnaryOp: *
+              ID: p
+            Constant: char, '\0'
+        Compound: 
+          While: 
+            BinaryOp: ==
+              UnaryOp: *
+                ID: p
+              Constant: char, '\t'
+            Assignment: =
+              UnaryOp: *
+                UnaryOp: p++
+                  ID: p
+              Constant: char, '\0'
+          If: 
+            BinaryOp: !=
+              UnaryOp: *
+                ID: p
+              Constant: char, '\0'
+            Assignment: =
+              ID: p
+              Constant: int, 0

@@ -1,0 +1,135 @@
+FileAST: 
+  Typedef: p, [], ['typedef']
+    TypeDecl: p, []
+      Struct: s
+        Decl: d, [], [], []
+          TypeDecl: d, []
+            IdentifierType: ['unsigned', 'long', 'long']
+        Decl: t, [], [], []
+          TypeDecl: t, []
+            IdentifierType: ['long', 'long']
+  FuncDef: 
+    Decl: sh, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: buf, [], [], []
+            PtrDecl: []
+              TypeDecl: buf, []
+                IdentifierType: ['unsigned', 'char']
+        TypeDecl: sh, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: uhdr, [], [], []
+        PtrDecl: []
+          TypeDecl: uhdr, []
+            IdentifierType: ['p']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['p']
+          ID: buf
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: uhdr
+          ID: d
+        BinaryOp: |
+          BinaryOp: |
+            BinaryOp: |
+              BinaryOp: >>
+                BinaryOp: &
+                  StructRef: ->
+                    ID: uhdr
+                    ID: d
+                  Constant: int, 0xff00000000000000LL
+                Constant: int, 56
+              BinaryOp: >>
+                BinaryOp: &
+                  StructRef: ->
+                    ID: uhdr
+                    ID: d
+                  Constant: int, 0x0000ff0000000000LL
+                Constant: int, 24
+            BinaryOp: <<
+              BinaryOp: &
+                StructRef: ->
+                  ID: uhdr
+                  ID: d
+                Constant: int, 0x00000000ff000000LL
+              Constant: int, 8
+          BinaryOp: <<
+            BinaryOp: &
+              StructRef: ->
+                ID: uhdr
+                ID: d
+              Constant: int, 0x00000000000000ffLL
+            Constant: int, 56
+      Assignment: =
+        StructRef: ->
+          ID: uhdr
+          ID: t
+        BinaryOp: |
+          BinaryOp: |
+            BinaryOp: |
+              BinaryOp: |
+                BinaryOp: |
+                  BinaryOp: >>
+                    BinaryOp: &
+                      StructRef: ->
+                        ID: uhdr
+                        ID: t
+                      Constant: int, 0xff00000000000000LL
+                    Constant: int, 56
+                  BinaryOp: >>
+                    BinaryOp: &
+                      StructRef: ->
+                        ID: uhdr
+                        ID: t
+                      Constant: int, 0x0000ff0000000000LL
+                    Constant: int, 24
+                BinaryOp: >>
+                  BinaryOp: &
+                    StructRef: ->
+                      ID: uhdr
+                      ID: t
+                    Constant: int, 0x000000ff00000000LL
+                  Constant: int, 8
+              BinaryOp: <<
+                BinaryOp: &
+                  StructRef: ->
+                    ID: uhdr
+                    ID: t
+                  Constant: int, 0x00000000ff000000LL
+                Constant: int, 8
+            BinaryOp: <<
+              BinaryOp: &
+                StructRef: ->
+                  ID: uhdr
+                  ID: t
+                Constant: int, 0x000000000000ff00LL
+              Constant: int, 40
+          BinaryOp: <<
+            BinaryOp: &
+              StructRef: ->
+                ID: uhdr
+                ID: t
+              Constant: int, 0x00000000000000ffLL
+            Constant: int, 56
+      Assignment: +=
+        ID: i
+        Constant: int, 4
+      If: 
+        BinaryOp: <
+          ID: x
+          ID: i
+        Return: 
+          Constant: int, 0
+        Return: 
+          Constant: int, 1

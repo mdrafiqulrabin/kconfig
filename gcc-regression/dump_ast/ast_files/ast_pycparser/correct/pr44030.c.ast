@@ -1,0 +1,102 @@
+FileAST: 
+  Typedef: int32_t, [], ['typedef']
+    TypeDecl: int32_t, []
+      IdentifierType: ['int']
+  Typedef: uint32_t, [], ['typedef']
+    TypeDecl: uint32_t, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: safe_sub_func_uint32_t_u_u, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ui1, [], [], []
+            TypeDecl: ui1, []
+              IdentifierType: ['uint32_t']
+          Decl: ui2, [], [], []
+            TypeDecl: ui2, []
+              IdentifierType: ['uint32_t']
+        TypeDecl: safe_sub_func_uint32_t_u_u, []
+          IdentifierType: ['uint32_t']
+    Compound: 
+      Return: 
+        BinaryOp: -
+          ID: ui1
+          ID: ui2
+  Decl: l_105, [], [], []
+    ArrayDecl: []
+      TypeDecl: l_105, []
+        IdentifierType: ['int32_t']
+      Constant: int, 7
+  Decl: g_4, [], [], []
+    TypeDecl: g_4, []
+      IdentifierType: ['int32_t']
+  Decl: g_54, [], [], []
+    PtrDecl: []
+      TypeDecl: g_54, []
+        IdentifierType: ['int32_t']
+    UnaryOp: &
+      ID: g_4
+  FuncDef: 
+    Decl: func, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p_73, [], [], []
+            TypeDecl: p_73, []
+              IdentifierType: ['int32_t']
+          Decl: p_74, [], [], []
+            PtrDecl: []
+              TypeDecl: p_74, []
+                IdentifierType: ['int32_t']
+          Decl: p_75, [], [], []
+            TypeDecl: p_75, []
+              IdentifierType: ['int32_t']
+          Decl: p_76, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: p_76, []
+                  IdentifierType: ['int32_t']
+          Decl: p_77, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: p_77, []
+                  IdentifierType: ['int32_t']
+        PtrDecl: []
+          TypeDecl: func, []
+            IdentifierType: ['int32_t']
+    Compound: 
+      Label: lbl_110
+        For: 
+          Assignment: =
+            ID: g_4
+            Constant: int, 0
+          ID: g_4
+          Assignment: =
+            ID: g_4
+            Constant: int, 1
+          Compound: 
+      For: 
+        Assignment: =
+          ID: p_75
+          UnaryOp: -
+            Constant: int, 28
+        ID: p_75
+        Assignment: =
+          ID: p_75
+          FuncCall: 
+            ID: safe_sub_func_uint32_t_u_u
+            ExprList: 
+              ID: p_75
+              Constant: int, 1
+        Compound: 
+          If: 
+            ID: g_4
+            Goto: lbl_110
+          Assignment: =
+            UnaryOp: *
+              ID: g_54
+            Constant: int, 0
+      Return: 
+        UnaryOp: &
+          ArrayRef: 
+            ID: l_105
+            Constant: int, 5

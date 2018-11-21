@@ -1,0 +1,125 @@
+c_files/pr71083.c:9:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone))
+                         ^
+c_files/pr71083.c:25:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone))
+                         ^
+2 warnings generated.
+TranslationUnitDecl 0x7f86b28264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f86b2826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f86b2826740 '__int128'
+|-TypedefDecl 0x7f86b2826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f86b2826760 'unsigned __int128'
+|-TypedefDecl 0x7f86b2826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f86b2826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f86b2826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f86b2826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f86b2826dc0 'char *'
+|   `-BuiltinType 0x7f86b2826560 'char'
+|-TypedefDecl 0x7f86b28270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f86b2827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f86b2826ee0 'struct __va_list_tag'
+|     `-Record 0x7f86b2826e58 '__va_list_tag'
+|-TypedefDecl 0x7f86b2827138 <c_files/pr71083.c:1:15, col:39> col:39 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7f86b2826660 'unsigned int'
+|-RecordDecl 0x7f86b3025a00 <line:3:1, line:7:1> line:3:8 struct lock_chain definition
+| |-FieldDecl 0x7f86b3025b00 <line:4:3, col:25> col:12 irq_context 'uint32_t':'unsigned int'
+| | `-IntegerLiteral 0x7f86b3025ad0 <col:25> 'int' 2
+| |-FieldDecl 0x7f86b3025b78 <col:3, line:5:12> col:5 depth 'uint32_t':'unsigned int'
+| | `-IntegerLiteral 0x7f86b3025b48 <col:12> 'int' 6
+| `-FieldDecl 0x7f86b3025bf0 <line:4:3, line:6:11> col:5 referenced base 'uint32_t':'unsigned int'
+|   `-IntegerLiteral 0x7f86b3025bc0 <col:11> 'int' 24
+|-FunctionDecl 0x7f86b3025e08 <line:9:1, line:18:1> line:10:21 used foo 'struct lock_chain *(struct lock_chain *)'
+| |-ParmVarDecl 0x7f86b3025cf0 <col:26, col:45> col:45 used chain 'struct lock_chain *'
+| |-CompoundStmt 0x7f86b30263f8 <line:11:1, line:18:1>
+| | |-DeclStmt 0x7f86b3025fa8 <line:12:3, col:8>
+| | | `-VarDecl 0x7f86b3025f48 <col:3, col:7> col:7 used i 'int'
+| | |-ForStmt 0x7f86b3026368 <line:13:3, line:16:5>
+| | | |-BinaryOperator 0x7f86b3026008 <line:13:8, col:12> 'int' '='
+| | | | |-DeclRefExpr 0x7f86b3025fc0 <col:8> 'int' lvalue Var 0x7f86b3025f48 'i' 'int'
+| | | | `-IntegerLiteral 0x7f86b3025fe8 <col:12> 'int' 0
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7f86b3026090 <col:15, col:19> 'int' '<'
+| | | | |-ImplicitCastExpr 0x7f86b3026078 <col:15> 'int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7f86b3026030 <col:15> 'int' lvalue Var 0x7f86b3025f48 'i' 'int'
+| | | | `-IntegerLiteral 0x7f86b3026058 <col:19> 'int' 100
+| | | |-UnaryOperator 0x7f86b30260e0 <col:24, col:25> 'int' postfix '++'
+| | | | `-DeclRefExpr 0x7f86b30260b8 <col:24> 'int' lvalue Var 0x7f86b3025f48 'i' 'int'
+| | | `-CompoundStmt 0x7f86b3026348 <line:14:5, line:16:5>
+| | |   `-BinaryOperator 0x7f86b3026320 <line:15:7, col:34> 'uint32_t':'unsigned int' '='
+| | |     |-MemberExpr 0x7f86b30261f0 <col:7, col:18> 'uint32_t':'unsigned int' lvalue bitfield .base 0x7f86b3025bf0
+| | |     | `-ArraySubscriptExpr 0x7f86b30261c8 <col:7, col:16> 'struct lock_chain':'struct lock_chain' lvalue
+| | |     |   |-ImplicitCastExpr 0x7f86b30261b0 <col:7> 'struct lock_chain *' <LValueToRValue>
+| | |     |   | `-DeclRefExpr 0x7f86b3026100 <col:7> 'struct lock_chain *' lvalue ParmVar 0x7f86b3025cf0 'chain' 'struct lock_chain *'
+| | |     |   `-BinaryOperator 0x7f86b3026188 <col:13, col:15> 'int' '+'
+| | |     |     |-ImplicitCastExpr 0x7f86b3026170 <col:13> 'int' <LValueToRValue>
+| | |     |     | `-DeclRefExpr 0x7f86b3026128 <col:13> 'int' lvalue Var 0x7f86b3025f48 'i' 'int'
+| | |     |     `-IntegerLiteral 0x7f86b3026150 <col:15> 'int' 1
+| | |     `-ImplicitCastExpr 0x7f86b3026308 <col:25, col:34> 'uint32_t':'unsigned int' <LValueToRValue>
+| | |       `-MemberExpr 0x7f86b30262d0 <col:25, col:34> 'uint32_t':'unsigned int' lvalue bitfield .base 0x7f86b3025bf0
+| | |         `-ArraySubscriptExpr 0x7f86b30262a8 <col:25, col:32> 'struct lock_chain':'struct lock_chain' lvalue
+| | |           |-ImplicitCastExpr 0x7f86b3026278 <col:25> 'struct lock_chain *' <LValueToRValue>
+| | |           | `-DeclRefExpr 0x7f86b3026228 <col:25> 'struct lock_chain *' lvalue ParmVar 0x7f86b3025cf0 'chain' 'struct lock_chain *'
+| | |           `-ImplicitCastExpr 0x7f86b3026290 <col:31> 'int' <LValueToRValue>
+| | |             `-DeclRefExpr 0x7f86b3026250 <col:31> 'int' lvalue Var 0x7f86b3025f48 'i' 'int'
+| | `-ReturnStmt 0x7f86b30263e0 <line:17:3, col:10>
+| |   `-ImplicitCastExpr 0x7f86b30263c8 <col:10> 'struct lock_chain *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f86b30263a0 <col:10> 'struct lock_chain *' lvalue ParmVar 0x7f86b3025cf0 'chain' 'struct lock_chain *'
+| `-NoInlineAttr 0x7f86b3025ea8 <line:9:16>
+|-RecordDecl 0x7f86b3026428 <line:20:1, line:23:1> line:20:8 struct lock_chain1 definition
+| |-PackedAttr 0x7f86b3026588 <line:23:18>
+| |-FieldDecl 0x7f86b30264e0 <line:21:3, col:8> col:8 x 'char'
+| `-FieldDecl 0x7f86b3026540 <line:22:3, col:18> col:18 referenced base 'unsigned short'
+|-FunctionDecl 0x7f86b3026798 <line:25:1, line:34:1> line:26:22 used bar 'struct lock_chain1 *(struct lock_chain1 *)'
+| |-ParmVarDecl 0x7f86b3026680 <col:27, col:47> col:47 used chain 'struct lock_chain1 *'
+| |-CompoundStmt 0x7f86b3027d68 <line:27:1, line:34:1>
+| | |-DeclStmt 0x7f86b30268f8 <line:28:3, col:8>
+| | | `-VarDecl 0x7f86b3026898 <col:3, col:7> col:7 used i 'int'
+| | |-ForStmt 0x7f86b3027cd8 <line:29:3, line:32:5>
+| | | |-BinaryOperator 0x7f86b3026958 <line:29:8, col:12> 'int' '='
+| | | | |-DeclRefExpr 0x7f86b3026910 <col:8> 'int' lvalue Var 0x7f86b3026898 'i' 'int'
+| | | | `-IntegerLiteral 0x7f86b3026938 <col:12> 'int' 0
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7f86b3027a00 <col:15, col:19> 'int' '<'
+| | | | |-ImplicitCastExpr 0x7f86b30269c8 <col:15> 'int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7f86b3026980 <col:15> 'int' lvalue Var 0x7f86b3026898 'i' 'int'
+| | | | `-IntegerLiteral 0x7f86b30269a8 <col:19> 'int' 100
+| | | |-UnaryOperator 0x7f86b3027a50 <col:24, col:25> 'int' postfix '++'
+| | | | `-DeclRefExpr 0x7f86b3027a28 <col:24> 'int' lvalue Var 0x7f86b3026898 'i' 'int'
+| | | `-CompoundStmt 0x7f86b3027cb8 <line:30:5, line:32:5>
+| | |   `-BinaryOperator 0x7f86b3027c90 <line:31:7, col:34> 'unsigned short' '='
+| | |     |-MemberExpr 0x7f86b3027b60 <col:7, col:18> 'unsigned short' lvalue .base 0x7f86b3026540
+| | |     | `-ArraySubscriptExpr 0x7f86b3027b38 <col:7, col:16> 'struct lock_chain1':'struct lock_chain1' lvalue
+| | |     |   |-ImplicitCastExpr 0x7f86b3027b20 <col:7> 'struct lock_chain1 *' <LValueToRValue>
+| | |     |   | `-DeclRefExpr 0x7f86b3027a70 <col:7> 'struct lock_chain1 *' lvalue ParmVar 0x7f86b3026680 'chain' 'struct lock_chain1 *'
+| | |     |   `-BinaryOperator 0x7f86b3027af8 <col:13, col:15> 'int' '+'
+| | |     |     |-ImplicitCastExpr 0x7f86b3027ae0 <col:13> 'int' <LValueToRValue>
+| | |     |     | `-DeclRefExpr 0x7f86b3027a98 <col:13> 'int' lvalue Var 0x7f86b3026898 'i' 'int'
+| | |     |     `-IntegerLiteral 0x7f86b3027ac0 <col:15> 'int' 1
+| | |     `-ImplicitCastExpr 0x7f86b3027c78 <col:25, col:34> 'unsigned short' <LValueToRValue>
+| | |       `-MemberExpr 0x7f86b3027c40 <col:25, col:34> 'unsigned short' lvalue .base 0x7f86b3026540
+| | |         `-ArraySubscriptExpr 0x7f86b3027c18 <col:25, col:32> 'struct lock_chain1':'struct lock_chain1' lvalue
+| | |           |-ImplicitCastExpr 0x7f86b3027be8 <col:25> 'struct lock_chain1 *' <LValueToRValue>
+| | |           | `-DeclRefExpr 0x7f86b3027b98 <col:25> 'struct lock_chain1 *' lvalue ParmVar 0x7f86b3026680 'chain' 'struct lock_chain1 *'
+| | |           `-ImplicitCastExpr 0x7f86b3027c00 <col:31> 'int' <LValueToRValue>
+| | |             `-DeclRefExpr 0x7f86b3027bc0 <col:31> 'int' lvalue Var 0x7f86b3026898 'i' 'int'
+| | `-ReturnStmt 0x7f86b3027d50 <line:33:3, col:10>
+| |   `-ImplicitCastExpr 0x7f86b3027d38 <col:10> 'struct lock_chain1 *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f86b3027d10 <col:10> 'struct lock_chain1 *' lvalue ParmVar 0x7f86b3026680 'chain' 'struct lock_chain1 *'
+| `-NoInlineAttr 0x7f86b3026838 <line:25:16>
+|-VarDecl 0x7f86b3027eb8 <line:36:1, col:28> col:19 used test 'struct lock_chain [101]'
+|-VarDecl 0x7f86b3028038 <line:37:1, col:30> col:20 used test1 'struct lock_chain1 [101]'
+`-FunctionDecl 0x7f86b30280f0 <line:39:1, line:45:1> line:40:1 main 'int ()'
+  `-CompoundStmt 0x7f86b30283e0 <line:41:1, line:45:1>
+    |-CallExpr 0x7f86b3028250 <line:42:3, col:12> 'struct lock_chain *'
+    | |-ImplicitCastExpr 0x7f86b3028238 <col:3> 'struct lock_chain *(*)(struct lock_chain *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f86b3028188 <col:3> 'struct lock_chain *(struct lock_chain *)' Function 0x7f86b3025e08 'foo' 'struct lock_chain *(struct lock_chain *)'
+    | `-ImplicitCastExpr 0x7f86b3028280 <col:8> 'struct lock_chain *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7f86b30281b0 <col:8> 'struct lock_chain [101]' lvalue Var 0x7f86b3027eb8 'test' 'struct lock_chain [101]'
+    |-CallExpr 0x7f86b3028360 <line:43:3, col:13> 'struct lock_chain1 *'
+    | |-ImplicitCastExpr 0x7f86b3028348 <col:3> 'struct lock_chain1 *(*)(struct lock_chain1 *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f86b3028298 <col:3> 'struct lock_chain1 *(struct lock_chain1 *)' Function 0x7f86b3026798 'bar' 'struct lock_chain1 *(struct lock_chain1 *)'
+    | `-ImplicitCastExpr 0x7f86b3028390 <col:8> 'struct lock_chain1 *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7f86b30282c0 <col:8> 'struct lock_chain1 [101]' lvalue Var 0x7f86b3028038 'test1' 'struct lock_chain1 [101]'
+    `-ReturnStmt 0x7f86b30283c8 <line:44:3, col:10>
+      `-IntegerLiteral 0x7f86b30283a8 <col:10> 'int' 0

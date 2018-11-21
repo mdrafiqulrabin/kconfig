@@ -1,0 +1,74 @@
+c_files/pr83547.c:8:10: warning: expression result unused [-Wunused-value]
+  if (({ 0; 0; }))
+         ^
+c_files/pr83547.c:10:3: error: statement requires expression of scalar type ('void' invalid)
+  if (({ }))            /* { dg-error "void value not ignored as it ought to be" } */
+  ^   ~~~~~
+c_files/pr83547.c:12:15: warning: expression result unused [-Wunused-value]
+  if (({ 0; { 0; } }))  /* { dg-error "void value not ignored as it ought to be" } */
+              ^
+c_files/pr83547.c:12:10: warning: expression result unused [-Wunused-value]
+  if (({ 0; { 0; } }))  /* { dg-error "void value not ignored as it ought to be" } */
+         ^
+c_files/pr83547.c:12:3: error: statement requires expression of scalar type ('void' invalid)
+  if (({ 0; { 0; } }))  /* { dg-error "void value not ignored as it ought to be" } */
+  ^   ~~~~~~~~~~~~~~~
+c_files/pr83547.c:14:10: warning: expression result unused [-Wunused-value]
+  if (({ 0; {} }))      /* { dg-error "void value not ignored as it ought to be" } */
+         ^
+c_files/pr83547.c:14:3: error: statement requires expression of scalar type ('void' invalid)
+  if (({ 0; {} }))      /* { dg-error "void value not ignored as it ought to be" } */
+  ^   ~~~~~~~~~~~
+4 warnings and 3 errors generated.
+TranslationUnitDecl 0x7fb3b08264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb3b0826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb3b0826740 '__int128'
+|-TypedefDecl 0x7fb3b0826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb3b0826760 'unsigned __int128'
+|-TypedefDecl 0x7fb3b0826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb3b0826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb3b0826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb3b0826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb3b0826dc0 'char *'
+|   `-BuiltinType 0x7fb3b0826560 'char'
+|-TypedefDecl 0x7fb3b08270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb3b0827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb3b0826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb3b0826e58 '__va_list_tag'
+`-FunctionDecl 0x7fb3b1025a00 <c_files/pr83547.c:3:1, line:16:1> line:4:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb3b10262a0 <line:5:1, line:16:1>
+    |-IfStmt 0x7fb3b1025b48 <line:6:3, line:7:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-StmtExpr 0x7fb3b1025b18 <line:6:7, col:14> 'int'
+    | | `-CompoundStmt 0x7fb3b1025af8 <col:8, col:13>
+    | |   `-IntegerLiteral 0x7fb3b1025ad8 <col:10> 'int' 0
+    | |-NullStmt 0x7fb3b1025b38 <line:7:5>
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fb3b1025c18 <line:8:3, line:9:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-StmtExpr 0x7fb3b1025be8 <line:8:7, col:17> 'int'
+    | | `-CompoundStmt 0x7fb3b1025bc0 <col:8, col:16>
+    | |   |-IntegerLiteral 0x7fb3b1025b80 <col:10> 'int' 0
+    | |   `-IntegerLiteral 0x7fb3b1025ba0 <col:13> 'int' 0
+    | |-NullStmt 0x7fb3b1025c08 <line:9:5>
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fb3b1026070 <line:10:3, line:11:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7fb3b1026050 <<invalid sloc>> '_Bool'
+    | |-NullStmt 0x7fb3b1026040 <col:5>
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fb3b1026180 <line:12:3, line:13:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7fb3b1026160 <<invalid sloc>> '_Bool'
+    | |-NullStmt 0x7fb3b1026150 <col:5>
+    | `-<<<NULL>>>
+    `-IfStmt 0x7fb3b1026268 <line:14:3, line:15:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-OpaqueValueExpr 0x7fb3b1026248 <<invalid sloc>> '_Bool'
+      |-NullStmt 0x7fb3b1026238 <col:5>
+      `-<<<NULL>>>

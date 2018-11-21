@@ -1,0 +1,168 @@
+FileAST: 
+  Typedef: T, ['const'], ['typedef']
+    ArrayDecl: []
+      TypeDecl: T, ['const']
+        IdentifierType: ['int']
+  Typedef: U, ['const'], ['typedef']
+    ArrayDecl: []
+      TypeDecl: U, ['const']
+        IdentifierType: ['int']
+      Constant: int, 1
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['T']
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ID: p
+          Constant: int, 0
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            ArrayDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['U']
+              Constant: int, 2
+        TypeDecl: fn2, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ArrayRef: 
+            ID: p
+            Constant: int, 0
+          Constant: int, 0
+  FuncDef: 
+    Decl: fn3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            ArrayDecl: []
+              ArrayDecl: []
+                TypeDecl: p, []
+                  IdentifierType: ['U']
+                Constant: int, 3
+              Constant: int, 2
+        TypeDecl: fn3, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ArrayRef: 
+            ArrayRef: 
+              ID: p
+              Constant: int, 0
+            Constant: int, 0
+          Constant: int, 0
+  FuncDef: 
+    Decl: fn4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['U']
+        TypeDecl: fn4, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ArrayRef: 
+            ID: p
+            Constant: int, 0
+          Constant: int, 0
+  FuncDef: 
+    Decl: fn5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              ArrayDecl: []
+                TypeDecl: p, []
+                  IdentifierType: ['U']
+                Constant: int, 1
+        TypeDecl: fn5, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ArrayRef: 
+            UnaryOp: *
+              ID: p
+            Constant: int, 0
+          Constant: int, 0
+  FuncDef: 
+    Decl: fn6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              ArrayDecl: []
+                ArrayDecl: []
+                  TypeDecl: p, []
+                    IdentifierType: ['U']
+                  Constant: int, 2
+                Constant: int, 1
+        TypeDecl: fn6, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ArrayRef: 
+            ArrayRef: 
+              UnaryOp: *
+                ID: p
+              Constant: int, 0
+            Constant: int, 0
+          Constant: int, 0
+  FuncDef: 
+    Decl: fn7, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: p, []
+                  IdentifierType: ['U']
+        TypeDecl: fn7, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ArrayRef: 
+            ArrayRef: 
+              ID: p
+              Constant: int, 0
+            Constant: int, 0
+          Constant: int, 0
+  FuncDef: 
+    Decl: fn8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                ArrayDecl: []
+                  TypeDecl: p, []
+                    IdentifierType: ['U']
+                  Constant: int, 1
+        TypeDecl: fn8, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ArrayRef: 
+            ArrayRef: 
+              UnaryOp: *
+                ID: p
+              Constant: int, 0
+            Constant: int, 0
+          Constant: int, 0

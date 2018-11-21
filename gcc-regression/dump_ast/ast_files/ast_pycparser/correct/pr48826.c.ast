@@ -1,0 +1,28 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: pc, [], [], []
+        PtrDecl: ['const']
+          TypeDecl: pc, []
+            IdentifierType: ['int']
+        FuncCall: 
+          ID: __builtin_return_address
+          ExprList: 
+            Constant: int, 0
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: pc

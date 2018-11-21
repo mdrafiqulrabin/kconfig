@@ -1,0 +1,239 @@
+TranslationUnitDecl 0x7fcdbe0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcdbe026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcdbe026740 '__int128'
+|-TypedefDecl 0x7fcdbe026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcdbe026760 'unsigned __int128'
+|-TypedefDecl 0x7fcdbe026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcdbe026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcdbe026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcdbe026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcdbe026dc0 'char *'
+|   `-BuiltinType 0x7fcdbe026560 'char'
+|-TypedefDecl 0x7fcdbe0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcdbe027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcdbe026ee0 'struct __va_list_tag'
+|     `-Record 0x7fcdbe026e58 '__va_list_tag'
+|-TypedefDecl 0x7fcdbe027138 <c_files/pr65456.c:8:1, col:23> col:23 referenced UChar 'unsigned char'
+| `-BuiltinType 0x7fcdbe026620 'unsigned char'
+|-TypedefDecl 0x7fcdbe0271a8 <line:9:1, col:24> col:24 referenced UShort 'unsigned short'
+| `-BuiltinType 0x7fcdbe026640 'unsigned short'
+|-TypedefDecl 0x7fcdbe825a18 <line:10:1, col:22> col:22 referenced UWord 'unsigned int'
+| `-BuiltinType 0x7fcdbe026660 'unsigned int'
+|-TypedefDecl 0x7fcdbe825a88 <line:12:1, col:23> col:23 referenced SizeT 'unsigned long'
+| `-BuiltinType 0x7fcdbe026680 'unsigned long'
+|-TypedefDecl 0x7fcdbe825af8 <line:13:1, col:23> col:23 referenced Addr 'unsigned long'
+| `-BuiltinType 0x7fcdbe026680 'unsigned long'
+|-FunctionDecl 0x7fcdbe825dd8 <line:15:7> col:7 implicit memmove 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fcdbe825e70 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fcdbe825ed0 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fcdbe825f30 <<invalid sloc>> <invalid sloc> 'unsigned long'
+`-FunctionDecl 0x7fcdbe825fa8 prev 0x7fcdbe825dd8 <col:1, line:62:1> line:15:7 memmove 'void *(void *, const void *, unsigned long)'
+  |-ParmVarDecl 0x7fcdbe825b68 <col:15, col:21> col:21 used dst 'void *'
+  |-ParmVarDecl 0x7fcdbe825c10 <col:26, col:38> col:38 used src 'const void *'
+  |-ParmVarDecl 0x7fcdbe825ca0 <col:43, col:49> col:49 used len 'SizeT':'unsigned long'
+  `-CompoundStmt 0x7fcdbe828f70 <line:16:1, line:62:1>
+    |-DeclStmt 0x7fcdbe826140 <line:17:3, col:32>
+    | `-VarDecl 0x7fcdbe826090 <col:3, col:31> col:14 used WS 'const Addr':'const unsigned long' cinit
+    |   `-UnaryExprOrTypeTraitExpr 0x7fcdbe826120 <col:19, col:31> 'unsigned long' sizeof 'UWord':'unsigned int'
+    |-DeclStmt 0x7fcdbe8262c0 <line:18:3, col:25>
+    | `-VarDecl 0x7fcdbe826168 <col:3, col:24> col:14 used WM 'const Addr':'const unsigned long' cinit
+    |   `-BinaryOperator 0x7fcdbe826240 <col:19, col:24> 'unsigned long' '-'
+    |     |-ImplicitCastExpr 0x7fcdbe826210 <col:19> 'Addr':'unsigned long' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fcdbe8261c8 <col:19> 'const Addr':'const unsigned long' lvalue Var 0x7fcdbe826090 'WS' 'const Addr':'const unsigned long'
+    |     `-ImplicitCastExpr 0x7fcdbe826228 <col:24> 'unsigned long' <IntegralCast>
+    |       `-IntegerLiteral 0x7fcdbe8261f0 <col:24> 'int' 1
+    |-DeclStmt 0x7fcdbe826388 <line:21:3, col:16>
+    | `-VarDecl 0x7fcdbe8262e8 <col:3, col:13> col:9 used n 'SizeT':'unsigned long' cinit
+    |   `-ImplicitCastExpr 0x7fcdbe826370 <col:13> 'SizeT':'unsigned long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fcdbe826348 <col:13> 'SizeT':'unsigned long' lvalue ParmVar 0x7fcdbe825ca0 'len' 'SizeT':'unsigned long'
+    |-DeclStmt 0x7fcdbe826488 <line:22:3, col:22>
+    | `-VarDecl 0x7fcdbe8263b0 <col:3, col:19> col:8 used d 'Addr':'unsigned long' cinit
+    |   `-CStyleCastExpr 0x7fcdbe826460 <col:12, col:19> 'Addr':'unsigned long' <PointerToIntegral>
+    |     `-ImplicitCastExpr 0x7fcdbe826448 <col:19> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fcdbe826410 <col:19> 'void *' lvalue ParmVar 0x7fcdbe825b68 'dst' 'void *'
+    |-DeclStmt 0x7fcdbe826588 <line:23:3, col:22>
+    | `-VarDecl 0x7fcdbe8264b0 <col:3, col:19> col:8 used s 'Addr':'unsigned long' cinit
+    |   `-CStyleCastExpr 0x7fcdbe826560 <col:12, col:19> 'Addr':'unsigned long' <PointerToIntegral>
+    |     `-ImplicitCastExpr 0x7fcdbe826548 <col:19> 'const void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fcdbe826510 <col:19> 'const void *' lvalue ParmVar 0x7fcdbe825c10 'src' 'const void *'
+    |-IfStmt 0x7fcdbe8283c8 <line:25:3, line:43:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcdbe826728 <line:25:7, col:25> 'int' '=='
+    | | |-ParenExpr 0x7fcdbe8266d0 <col:7, col:20> 'unsigned long'
+    | | | `-BinaryOperator 0x7fcdbe8266a8 <col:8, col:18> 'unsigned long' '&'
+    | | |   |-ParenExpr 0x7fcdbe826648 <col:8, col:14> 'unsigned long'
+    | | |   | `-BinaryOperator 0x7fcdbe826620 <col:9, col:13> 'unsigned long' '^'
+    | | |   |   |-ImplicitCastExpr 0x7fcdbe8265f0 <col:9> 'Addr':'unsigned long' <LValueToRValue>
+    | | |   |   | `-DeclRefExpr 0x7fcdbe8265a0 <col:9> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8264b0 's' 'Addr':'unsigned long'
+    | | |   |   `-ImplicitCastExpr 0x7fcdbe826608 <col:13> 'Addr':'unsigned long' <LValueToRValue>
+    | | |   |     `-DeclRefExpr 0x7fcdbe8265c8 <col:13> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8263b0 'd' 'Addr':'unsigned long'
+    | | |   `-ImplicitCastExpr 0x7fcdbe826690 <col:18> 'Addr':'unsigned long' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fcdbe826668 <col:18> 'const Addr':'const unsigned long' lvalue Var 0x7fcdbe826168 'WM' 'const Addr':'const unsigned long'
+    | | `-ImplicitCastExpr 0x7fcdbe826710 <col:25> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fcdbe8266f0 <col:25> 'int' 0
+    | |-CompoundStmt 0x7fcdbe828398 <col:28, line:43:3>
+    | | |-WhileStmt 0x7fcdbe827da0 <line:28:5, line:33:5>
+    | | | |-<<<NULL>>>
+    | | | |-BinaryOperator 0x7fcdbe826970 <line:28:12, col:34> 'int' '&&'
+    | | | | |-BinaryOperator 0x7fcdbe8268a8 <col:12, col:24> 'int' '!='
+    | | | | | |-ParenExpr 0x7fcdbe826850 <col:12, col:19> 'unsigned long'
+    | | | | | | `-BinaryOperator 0x7fcdbe826828 <col:13, col:17> 'unsigned long' '&'
+    | | | | | |   |-ImplicitCastExpr 0x7fcdbe8267f8 <col:13> 'Addr':'unsigned long' <LValueToRValue>
+    | | | | | |   | `-DeclRefExpr 0x7fcdbe8267a8 <col:13> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8264b0 's' 'Addr':'unsigned long'
+    | | | | | |   `-ImplicitCastExpr 0x7fcdbe826810 <col:17> 'Addr':'unsigned long' <LValueToRValue>
+    | | | | | |     `-DeclRefExpr 0x7fcdbe8267d0 <col:17> 'const Addr':'const unsigned long' lvalue Var 0x7fcdbe826168 'WM' 'const Addr':'const unsigned long'
+    | | | | | `-ImplicitCastExpr 0x7fcdbe826890 <col:24> 'unsigned long' <IntegralCast>
+    | | | | |   `-IntegerLiteral 0x7fcdbe826870 <col:24> 'int' 0
+    | | | | `-BinaryOperator 0x7fcdbe826948 <col:29, col:34> 'int' '>='
+    | | | |   |-ImplicitCastExpr 0x7fcdbe826918 <col:29> 'SizeT':'unsigned long' <LValueToRValue>
+    | | | |   | `-DeclRefExpr 0x7fcdbe8268d0 <col:29> 'SizeT':'unsigned long' lvalue Var 0x7fcdbe8262e8 'n' 'SizeT':'unsigned long'
+    | | | |   `-ImplicitCastExpr 0x7fcdbe826930 <col:34> 'unsigned long' <IntegralCast>
+    | | | |     `-IntegerLiteral 0x7fcdbe8268f8 <col:34> 'int' 1
+    | | | `-CompoundStmt 0x7fcdbe827d68 <col:37, line:33:5>
+    | | |   |-BinaryOperator 0x7fcdbe827b78 <line:29:7, col:33> 'UChar':'unsigned char' '='
+    | | |   | |-UnaryOperator 0x7fcdbe827aa8 <col:7, col:18> 'UChar':'unsigned char' lvalue prefix '*'
+    | | |   | | `-CStyleCastExpr 0x7fcdbe827a80 <col:8, col:18> 'UChar *' <IntegralToPointer>
+    | | |   | |   `-ImplicitCastExpr 0x7fcdbe827a68 <col:18> 'Addr':'unsigned long' <LValueToRValue>
+    | | |   | |     `-DeclRefExpr 0x7fcdbe8269c0 <col:18> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8263b0 'd' 'Addr':'unsigned long'
+    | | |   | `-ImplicitCastExpr 0x7fcdbe827b60 <col:22, col:33> 'UChar':'unsigned char' <LValueToRValue>
+    | | |   |   `-UnaryOperator 0x7fcdbe827b40 <col:22, col:33> 'UChar':'unsigned char' lvalue prefix '*'
+    | | |   |     `-CStyleCastExpr 0x7fcdbe827b18 <col:23, col:33> 'UChar *' <IntegralToPointer>
+    | | |   |       `-ImplicitCastExpr 0x7fcdbe827b00 <col:33> 'Addr':'unsigned long' <LValueToRValue>
+    | | |   |         `-DeclRefExpr 0x7fcdbe827ac8 <col:33> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8264b0 's' 'Addr':'unsigned long'
+    | | |   |-CompoundAssignOperator 0x7fcdbe827c00 <line:30:7, col:12> 'Addr':'unsigned long' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    | | |   | |-DeclRefExpr 0x7fcdbe827ba0 <col:7> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8264b0 's' 'Addr':'unsigned long'
+    | | |   | `-ImplicitCastExpr 0x7fcdbe827be8 <col:12> 'unsigned long' <IntegralCast>
+    | | |   |   `-IntegerLiteral 0x7fcdbe827bc8 <col:12> 'int' 1
+    | | |   |-CompoundAssignOperator 0x7fcdbe827c98 <line:31:7, col:12> 'Addr':'unsigned long' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    | | |   | |-DeclRefExpr 0x7fcdbe827c38 <col:7> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8263b0 'd' 'Addr':'unsigned long'
+    | | |   | `-ImplicitCastExpr 0x7fcdbe827c80 <col:12> 'unsigned long' <IntegralCast>
+    | | |   |   `-IntegerLiteral 0x7fcdbe827c60 <col:12> 'int' 1
+    | | |   `-CompoundAssignOperator 0x7fcdbe827d30 <line:32:7, col:12> 'SizeT':'unsigned long' '-=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    | | |     |-DeclRefExpr 0x7fcdbe827cd0 <col:7> 'SizeT':'unsigned long' lvalue Var 0x7fcdbe8262e8 'n' 'SizeT':'unsigned long'
+    | | |     `-ImplicitCastExpr 0x7fcdbe827d18 <col:12> 'unsigned long' <IntegralCast>
+    | | |       `-IntegerLiteral 0x7fcdbe827cf8 <col:12> 'int' 1
+    | | |-WhileStmt 0x7fcdbe828248 <line:35:5, line:40:5>
+    | | | |-<<<NULL>>>
+    | | | |-BinaryOperator 0x7fcdbe827e40 <line:35:12, col:17> 'int' '>='
+    | | | | |-ImplicitCastExpr 0x7fcdbe827e10 <col:12> 'SizeT':'unsigned long' <LValueToRValue>
+    | | | | | `-DeclRefExpr 0x7fcdbe827dc0 <col:12> 'SizeT':'unsigned long' lvalue Var 0x7fcdbe8262e8 'n' 'SizeT':'unsigned long'
+    | | | | `-ImplicitCastExpr 0x7fcdbe827e28 <col:17> 'Addr':'unsigned long' <LValueToRValue>
+    | | | |   `-DeclRefExpr 0x7fcdbe827de8 <col:17> 'const Addr':'const unsigned long' lvalue Var 0x7fcdbe826090 'WS' 'const Addr':'const unsigned long'
+    | | | `-CompoundStmt 0x7fcdbe828210 <col:21, line:40:5>
+    | | |   |-BinaryOperator 0x7fcdbe828008 <line:36:7, col:33> 'UWord':'unsigned int' '='
+    | | |   | |-UnaryOperator 0x7fcdbe827f38 <col:7, col:18> 'UWord':'unsigned int' lvalue prefix '*'
+    | | |   | | `-CStyleCastExpr 0x7fcdbe827f10 <col:8, col:18> 'UWord *' <IntegralToPointer>
+    | | |   | |   `-ImplicitCastExpr 0x7fcdbe827ef8 <col:18> 'Addr':'unsigned long' <LValueToRValue>
+    | | |   | |     `-DeclRefExpr 0x7fcdbe827e68 <col:18> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8263b0 'd' 'Addr':'unsigned long'
+    | | |   | `-ImplicitCastExpr 0x7fcdbe827ff0 <col:22, col:33> 'UWord':'unsigned int' <LValueToRValue>
+    | | |   |   `-UnaryOperator 0x7fcdbe827fd0 <col:22, col:33> 'UWord':'unsigned int' lvalue prefix '*'
+    | | |   |     `-CStyleCastExpr 0x7fcdbe827fa8 <col:23, col:33> 'UWord *' <IntegralToPointer>
+    | | |   |       `-ImplicitCastExpr 0x7fcdbe827f90 <col:33> 'Addr':'unsigned long' <LValueToRValue>
+    | | |   |         `-DeclRefExpr 0x7fcdbe827f58 <col:33> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8264b0 's' 'Addr':'unsigned long'
+    | | |   |-CompoundAssignOperator 0x7fcdbe828098 <line:37:7, col:12> 'Addr':'unsigned long' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    | | |   | |-DeclRefExpr 0x7fcdbe828030 <col:7> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8264b0 's' 'Addr':'unsigned long'
+    | | |   | `-ImplicitCastExpr 0x7fcdbe828080 <col:12> 'Addr':'unsigned long' <LValueToRValue>
+    | | |   |   `-DeclRefExpr 0x7fcdbe828058 <col:12> 'const Addr':'const unsigned long' lvalue Var 0x7fcdbe826090 'WS' 'const Addr':'const unsigned long'
+    | | |   |-CompoundAssignOperator 0x7fcdbe828138 <line:38:7, col:12> 'Addr':'unsigned long' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    | | |   | |-DeclRefExpr 0x7fcdbe8280d0 <col:7> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8263b0 'd' 'Addr':'unsigned long'
+    | | |   | `-ImplicitCastExpr 0x7fcdbe828120 <col:12> 'Addr':'unsigned long' <LValueToRValue>
+    | | |   |   `-DeclRefExpr 0x7fcdbe8280f8 <col:12> 'const Addr':'const unsigned long' lvalue Var 0x7fcdbe826090 'WS' 'const Addr':'const unsigned long'
+    | | |   `-CompoundAssignOperator 0x7fcdbe8281d8 <line:39:7, col:12> 'SizeT':'unsigned long' '-=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    | | |     |-DeclRefExpr 0x7fcdbe828170 <col:7> 'SizeT':'unsigned long' lvalue Var 0x7fcdbe8262e8 'n' 'SizeT':'unsigned long'
+    | | |     `-ImplicitCastExpr 0x7fcdbe8281c0 <col:12> 'Addr':'unsigned long' <LValueToRValue>
+    | | |       `-DeclRefExpr 0x7fcdbe828198 <col:12> 'const Addr':'const unsigned long' lvalue Var 0x7fcdbe826090 'WS' 'const Addr':'const unsigned long'
+    | | `-IfStmt 0x7fcdbe828360 <line:41:5, line:42:14>
+    | |   |-<<<NULL>>>
+    | |   |-<<<NULL>>>
+    | |   |-BinaryOperator 0x7fcdbe8282e0 <line:41:9, col:14> 'int' '=='
+    | |   | |-ImplicitCastExpr 0x7fcdbe8282b0 <col:9> 'SizeT':'unsigned long' <LValueToRValue>
+    | |   | | `-DeclRefExpr 0x7fcdbe828268 <col:9> 'SizeT':'unsigned long' lvalue Var 0x7fcdbe8262e8 'n' 'SizeT':'unsigned long'
+    | |   | `-ImplicitCastExpr 0x7fcdbe8282c8 <col:14> 'unsigned long' <IntegralCast>
+    | |   |   `-IntegerLiteral 0x7fcdbe828290 <col:14> 'int' 0
+    | |   |-ReturnStmt 0x7fcdbe828348 <line:42:7, col:14>
+    | |   | `-ImplicitCastExpr 0x7fcdbe828330 <col:14> 'void *' <LValueToRValue>
+    | |   |   `-DeclRefExpr 0x7fcdbe828308 <col:14> 'void *' lvalue ParmVar 0x7fcdbe825b68 'dst' 'void *'
+    | |   `-<<<NULL>>>
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fcdbe828ab0 <line:44:3, line:52:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcdbe828580 <line:44:7, col:24> 'int' '=='
+    | | |-ParenExpr 0x7fcdbe828528 <col:7, col:19> 'unsigned long'
+    | | | `-BinaryOperator 0x7fcdbe828500 <col:8, col:18> 'unsigned long' '&'
+    | | |   |-ParenExpr 0x7fcdbe8284a8 <col:8, col:14> 'unsigned long'
+    | | |   | `-BinaryOperator 0x7fcdbe828480 <col:9, col:13> 'unsigned long' '|'
+    | | |   |   |-ImplicitCastExpr 0x7fcdbe828450 <col:9> 'Addr':'unsigned long' <LValueToRValue>
+    | | |   |   | `-DeclRefExpr 0x7fcdbe828400 <col:9> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8264b0 's' 'Addr':'unsigned long'
+    | | |   |   `-ImplicitCastExpr 0x7fcdbe828468 <col:13> 'Addr':'unsigned long' <LValueToRValue>
+    | | |   |     `-DeclRefExpr 0x7fcdbe828428 <col:13> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8263b0 'd' 'Addr':'unsigned long'
+    | | |   `-ImplicitCastExpr 0x7fcdbe8284e8 <col:18> 'unsigned long' <IntegralCast>
+    | | |     `-IntegerLiteral 0x7fcdbe8284c8 <col:18> 'int' 1
+    | | `-ImplicitCastExpr 0x7fcdbe828568 <col:24> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fcdbe828548 <col:24> 'int' 0
+    | |-CompoundStmt 0x7fcdbe828a90 <col:27, line:52:3>
+    | | `-WhileStmt 0x7fcdbe828a70 <line:46:5, line:51:5>
+    | |   |-<<<NULL>>>
+    | |   |-BinaryOperator 0x7fcdbe828620 <line:46:12, col:17> 'int' '>='
+    | |   | |-ImplicitCastExpr 0x7fcdbe8285f0 <col:12> 'SizeT':'unsigned long' <LValueToRValue>
+    | |   | | `-DeclRefExpr 0x7fcdbe8285a8 <col:12> 'SizeT':'unsigned long' lvalue Var 0x7fcdbe8262e8 'n' 'SizeT':'unsigned long'
+    | |   | `-ImplicitCastExpr 0x7fcdbe828608 <col:17> 'unsigned long' <IntegralCast>
+    | |   |   `-IntegerLiteral 0x7fcdbe8285d0 <col:17> 'int' 2
+    | |   `-CompoundStmt 0x7fcdbe828a38 <col:20, line:51:5>
+    | |     |-BinaryOperator 0x7fcdbe828818 <line:47:7, col:35> 'UShort':'unsigned short' '='
+    | |     | |-UnaryOperator 0x7fcdbe828748 <col:7, col:19> 'UShort':'unsigned short' lvalue prefix '*'
+    | |     | | `-CStyleCastExpr 0x7fcdbe828720 <col:8, col:19> 'UShort *' <IntegralToPointer>
+    | |     | |   `-ImplicitCastExpr 0x7fcdbe828708 <col:19> 'Addr':'unsigned long' <LValueToRValue>
+    | |     | |     `-DeclRefExpr 0x7fcdbe828670 <col:19> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8263b0 'd' 'Addr':'unsigned long'
+    | |     | `-ImplicitCastExpr 0x7fcdbe828800 <col:23, col:35> 'UShort':'unsigned short' <LValueToRValue>
+    | |     |   `-UnaryOperator 0x7fcdbe8287e0 <col:23, col:35> 'UShort':'unsigned short' lvalue prefix '*'
+    | |     |     `-CStyleCastExpr 0x7fcdbe8287b8 <col:24, col:35> 'UShort *' <IntegralToPointer>
+    | |     |       `-ImplicitCastExpr 0x7fcdbe8287a0 <col:35> 'Addr':'unsigned long' <LValueToRValue>
+    | |     |         `-DeclRefExpr 0x7fcdbe828768 <col:35> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8264b0 's' 'Addr':'unsigned long'
+    | |     |-CompoundAssignOperator 0x7fcdbe8288a0 <line:48:7, col:12> 'Addr':'unsigned long' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    | |     | |-DeclRefExpr 0x7fcdbe828840 <col:7> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8264b0 's' 'Addr':'unsigned long'
+    | |     | `-ImplicitCastExpr 0x7fcdbe828888 <col:12> 'unsigned long' <IntegralCast>
+    | |     |   `-IntegerLiteral 0x7fcdbe828868 <col:12> 'int' 2
+    | |     |-CompoundAssignOperator 0x7fcdbe828938 <line:49:7, col:12> 'Addr':'unsigned long' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    | |     | |-DeclRefExpr 0x7fcdbe8288d8 <col:7> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8263b0 'd' 'Addr':'unsigned long'
+    | |     | `-ImplicitCastExpr 0x7fcdbe828920 <col:12> 'unsigned long' <IntegralCast>
+    | |     |   `-IntegerLiteral 0x7fcdbe828900 <col:12> 'int' 2
+    | |     `-CompoundAssignOperator 0x7fcdbe828a00 <line:50:7, col:12> 'SizeT':'unsigned long' '-=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    | |       |-DeclRefExpr 0x7fcdbe828970 <col:7> 'SizeT':'unsigned long' lvalue Var 0x7fcdbe8262e8 'n' 'SizeT':'unsigned long'
+    | |       `-ImplicitCastExpr 0x7fcdbe8289b8 <col:12> 'unsigned long' <IntegralCast>
+    | |         `-IntegerLiteral 0x7fcdbe828998 <col:12> 'int' 2
+    | `-<<<NULL>>>
+    |-WhileStmt 0x7fcdbe828ef8 <line:54:3, line:59:3>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcdbe828b60 <line:54:10, col:15> 'int' '>='
+    | | |-ImplicitCastExpr 0x7fcdbe828b30 <col:10> 'SizeT':'unsigned long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fcdbe828ae8 <col:10> 'SizeT':'unsigned long' lvalue Var 0x7fcdbe8262e8 'n' 'SizeT':'unsigned long'
+    | | `-ImplicitCastExpr 0x7fcdbe828b48 <col:15> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fcdbe828b10 <col:15> 'int' 1
+    | `-CompoundStmt 0x7fcdbe828ec0 <col:18, line:59:3>
+    |   |-BinaryOperator 0x7fcdbe828cd0 <line:55:5, col:31> 'UChar':'unsigned char' '='
+    |   | |-UnaryOperator 0x7fcdbe828c00 <col:5, col:16> 'UChar':'unsigned char' lvalue prefix '*'
+    |   | | `-CStyleCastExpr 0x7fcdbe828bd8 <col:6, col:16> 'UChar *' <IntegralToPointer>
+    |   | |   `-ImplicitCastExpr 0x7fcdbe828bc0 <col:16> 'Addr':'unsigned long' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7fcdbe828b88 <col:16> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8263b0 'd' 'Addr':'unsigned long'
+    |   | `-ImplicitCastExpr 0x7fcdbe828cb8 <col:20, col:31> 'UChar':'unsigned char' <LValueToRValue>
+    |   |   `-UnaryOperator 0x7fcdbe828c98 <col:20, col:31> 'UChar':'unsigned char' lvalue prefix '*'
+    |   |     `-CStyleCastExpr 0x7fcdbe828c70 <col:21, col:31> 'UChar *' <IntegralToPointer>
+    |   |       `-ImplicitCastExpr 0x7fcdbe828c58 <col:31> 'Addr':'unsigned long' <LValueToRValue>
+    |   |         `-DeclRefExpr 0x7fcdbe828c20 <col:31> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8264b0 's' 'Addr':'unsigned long'
+    |   |-CompoundAssignOperator 0x7fcdbe828d58 <line:56:5, col:10> 'Addr':'unsigned long' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    |   | |-DeclRefExpr 0x7fcdbe828cf8 <col:5> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8264b0 's' 'Addr':'unsigned long'
+    |   | `-ImplicitCastExpr 0x7fcdbe828d40 <col:10> 'unsigned long' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7fcdbe828d20 <col:10> 'int' 1
+    |   |-CompoundAssignOperator 0x7fcdbe828df0 <line:57:5, col:10> 'Addr':'unsigned long' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    |   | |-DeclRefExpr 0x7fcdbe828d90 <col:5> 'Addr':'unsigned long' lvalue Var 0x7fcdbe8263b0 'd' 'Addr':'unsigned long'
+    |   | `-ImplicitCastExpr 0x7fcdbe828dd8 <col:10> 'unsigned long' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7fcdbe828db8 <col:10> 'int' 1
+    |   `-CompoundAssignOperator 0x7fcdbe828e88 <line:58:5, col:10> 'SizeT':'unsigned long' '-=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    |     |-DeclRefExpr 0x7fcdbe828e28 <col:5> 'SizeT':'unsigned long' lvalue Var 0x7fcdbe8262e8 'n' 'SizeT':'unsigned long'
+    |     `-ImplicitCastExpr 0x7fcdbe828e70 <col:10> 'unsigned long' <IntegralCast>
+    |       `-IntegerLiteral 0x7fcdbe828e50 <col:10> 'int' 1
+    `-ReturnStmt 0x7fcdbe828f58 <line:61:3, col:10>
+      `-ImplicitCastExpr 0x7fcdbe828f40 <col:10> 'void *' <LValueToRValue>
+        `-DeclRefExpr 0x7fcdbe828f18 <col:10> 'void *' lvalue ParmVar 0x7fcdbe825b68 'dst' 'void *'

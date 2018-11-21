@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7f98618264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9861826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9861826740 '__int128'
+|-TypedefDecl 0x7f9861826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9861826760 'unsigned __int128'
+|-TypedefDecl 0x7f9861826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9861826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9861826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9861826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9861826dc0 'char *'
+|   `-BuiltinType 0x7f9861826560 'char'
+|-TypedefDecl 0x7f98618270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9861827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9861826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9861826e58 '__va_list_tag'
+|-TypedefDecl 0x7f9861827178 <c_files/pr34856.c:4:1, col:30> col:30 referenced qword '__attribute__((__vector_size__(16 * sizeof(signed char)))) signed char'
+| `-VectorType 0x7f9861827140 '__attribute__((__vector_size__(16 * sizeof(signed char)))) signed char' 16
+|   `-BuiltinType 0x7f9861826580 'signed char'
+|-TypedefDecl 0x7f9862026a38 <line:5:1, col:31> col:31 referenced VU32 '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7f9862026a00 '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' 4
+|   `-BuiltinType 0x7f9861826660 'unsigned int'
+|-VarDecl 0x7f9862026b60 <line:6:1, col:23> col:14 used g 'short [208]' extern
+|-FunctionDecl 0x7f9862026d30 <line:7:1, col:13> col:6 used f 'void (qword)'
+| `-ParmVarDecl 0x7f9862026c30 <col:8> col:13 'qword':'__attribute__((__vector_size__(16 * sizeof(signed char)))) signed char'
+`-FunctionDecl 0x7f9862026eb0 <line:8:1, line:17:1> line:8:6 f1 'void (unsigned int)'
+  |-ParmVarDecl 0x7f9862026de8 <col:10, col:19> col:19 used ctr 'unsigned int'
+  `-CompoundStmt 0x7f98620274b0 <line:9:1, line:17:1>
+    |-DeclStmt 0x7f9862026fe0 <line:10:3, col:11>
+    | `-VarDecl 0x7f9862026f80 <col:3, col:8> col:8 used pin 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+    |-BinaryOperator 0x7f9862027278 <line:11:3, col:37> 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' '='
+    | |-DeclRefExpr 0x7f9862026ff8 <col:3> 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7f9862026f80 'pin' 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+    | `-ImplicitCastExpr 0x7f9862027260 <col:9, col:37> 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+    |   `-CompoundLiteralExpr 0x7f9862027238 <col:9, col:37> 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue
+    |     `-InitListExpr 0x7f9862027190 <col:15, col:37> 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+    |       `-ImplicitCastExpr 0x7f98620271f0 <col:16, col:36> 'unsigned int' <IntegralCast>
+    |         `-CStyleCastExpr 0x7f9862027120 <col:16, col:36> 'unsigned long' <PointerToIntegral>
+    |           `-UnaryOperator 0x7f98620270e8 <col:31, col:36> 'short *' prefix '&'
+    |             `-ArraySubscriptExpr 0x7f98620270c0 <col:32, col:36> 'short' lvalue
+    |               |-ImplicitCastExpr 0x7f98620270a8 <col:32> 'short *' <ArrayToPointerDecay>
+    |               | `-DeclRefExpr 0x7f9862027030 <col:32> 'short [208]' lvalue Var 0x7f9862026b60 'g' 'short [208]'
+    |               `-IntegerLiteral 0x7f9862027058 <col:34> 'int' 16
+    `-DoStmt 0x7f9862027490 <line:12:3, line:16:10>
+      |-CompoundStmt 0x7f9862027428 <line:12:6, line:15:3>
+      | |-CallExpr 0x7f98620273b0 <line:13:4, col:16> 'void'
+      | | |-ImplicitCastExpr 0x7f9862027398 <col:4> 'void (*)(qword)' <FunctionToPointerDecay>
+      | | | `-DeclRefExpr 0x7f98620272a0 <col:4> 'void (qword)' Function 0x7f9862026d30 'f' 'void (qword)'
+      | | `-CStyleCastExpr 0x7f9862027318 <col:6, col:13> 'qword':'__attribute__((__vector_size__(16 * sizeof(signed char)))) signed char' <BitCast>
+      | |   `-ImplicitCastExpr 0x7f9862027300 <col:13> 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7f98620272c8 <col:13> 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7f9862026f80 'pin' 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+      | `-UnaryOperator 0x7f9862027408 <line:14:4, col:7> 'unsigned int' postfix '--'
+      |   `-DeclRefExpr 0x7f98620273e0 <col:4> 'unsigned int' lvalue ParmVar 0x7f9862026de8 'ctr' 'unsigned int'
+      `-ImplicitCastExpr 0x7f9862027478 <line:16:7> 'unsigned int' <LValueToRValue>
+        `-DeclRefExpr 0x7f9862027450 <col:7> 'unsigned int' lvalue ParmVar 0x7f9862026de8 'ctr' 'unsigned int'

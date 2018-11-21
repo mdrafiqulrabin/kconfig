@@ -1,0 +1,462 @@
+TranslationUnitDecl 0x7f822d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f822d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f822d026740 '__int128'
+|-TypedefDecl 0x7f822d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f822d026760 'unsigned __int128'
+|-TypedefDecl 0x7f822d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f822d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f822d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f822d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f822d026dc0 'char *'
+|   `-BuiltinType 0x7f822d026560 'char'
+|-TypedefDecl 0x7f822d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f822d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f822d026ee0 'struct __va_list_tag'
+|     `-Record 0x7f822d026e58 '__va_list_tag'
+|-TypedefDecl 0x7f822d027138 <c_files/pr79777.c:3:1, col:24> col:24 referenced __u16 'unsigned short'
+| `-BuiltinType 0x7f822d026640 'unsigned short'
+|-TypedefDecl 0x7f822d0271a8 <line:8:3, col:24> col:24 referenced __u32 'unsigned int'
+| `-BuiltinType 0x7f822d026660 'unsigned int'
+|-TypedefDecl 0x7f822d825a18 <line:9:3, col:24> col:24 referenced u32 'unsigned int'
+| `-BuiltinType 0x7f822d026660 'unsigned int'
+|-TypedefDecl 0x7f822d825a88 <line:11:1, col:23> col:23 referenced u8 'unsigned char'
+| `-BuiltinType 0x7f822d026620 'unsigned char'
+|-TypedefDecl 0x7f822d825b10 <line:12:1, col:15> col:15 referenced __le16 '__u16':'unsigned short'
+| `-TypedefType 0x7f822d825ae0 '__u16' sugar
+|   |-Typedef 0x7f822d027138 '__u16'
+|   `-BuiltinType 0x7f822d026640 'unsigned short'
+|-TypedefDecl 0x7f822d825ba0 <line:13:1, col:15> col:15 referenced __le32 '__u32':'unsigned int'
+| `-TypedefType 0x7f822d825b70 '__u32' sugar
+|   |-Typedef 0x7f822d0271a8 '__u32'
+|   `-BuiltinType 0x7f822d026660 'unsigned int'
+|-TypedefDecl 0x7f822d825c30 <line:14:1, col:13> col:13 referenced secno 'u32':'unsigned int'
+| `-TypedefType 0x7f822d825c00 'u32' sugar
+|   |-Typedef 0x7f822d825a18 'u32'
+|   `-BuiltinType 0x7f822d026660 'unsigned int'
+|-RecordDecl 0x7f822d825c88 <line:15:1, line:18:1> line:15:8 struct bplus_internal_node definition
+| |-FieldDecl 0x7f822d825d60 <line:16:5, col:12> col:12 referenced file_secno '__le32':'unsigned int'
+| `-FieldDecl 0x7f822d825db8 <line:17:5, col:12> col:12 referenced down '__le32':'unsigned int'
+|-RecordDecl 0x7f822d825e00 <line:19:1, line:26:1> line:19:8 struct bplus_header definition
+| |-FieldDecl 0x7f822d825ee0 <line:20:5, col:8> col:8 referenced n_used_nodes 'u8':'unsigned char'
+| |-FieldDecl 0x7f822d825f60 <line:21:5, col:12> col:12 referenced first_free '__le16':'unsigned short'
+| |-RecordDecl 0x7f822d825fa8 <line:22:5, line:24:5> line:22:5 union definition
+| | `-FieldDecl 0x7f822d826148 <line:23:2, col:39> col:29 referenced internal 'struct bplus_internal_node [0]'
+| `-FieldDecl 0x7f822d826230 <line:22:5, line:25:5> col:5 referenced u 'union (anonymous union at c_files/pr79777.c:22:5)':'union bplus_header::(anonymous at c_files/pr79777.c:22:5)'
+|-FunctionDecl 0x7f822d826390 <line:28:1, col:26> col:7 used __fswab16 '__u16 (__u16)'
+| `-ParmVarDecl 0x7f822d826288 <col:17, col:23> col:23 val '__u16':'unsigned short'
+|-FunctionDecl 0x7f822d826580 <line:29:1, col:26> col:7 used __fswab32 '__u32 (__u32)'
+| `-ParmVarDecl 0x7f822d826480 <col:17, col:23> col:23 val '__u32':'unsigned int'
+|-FunctionDecl 0x7f822d826730 <line:30:1, col:27> col:6 used hpfs_ea_remove 'void (__u32)'
+| `-ParmVarDecl 0x7f822d826630 <col:22> col:27 '__u32':'unsigned int'
+|-FunctionDecl 0x7f822d826b40 <line:32:1, line:43:1> line:32:6 hpfs_truncate_btree 'void (secno, int, unsigned int, struct bplus_header *)'
+| |-ParmVarDecl 0x7f822d826800 <col:26, col:32> col:32 f 'secno':'unsigned int'
+| |-ParmVarDecl 0x7f822d826878 <col:35, col:39> col:39 fno 'int'
+| |-ParmVarDecl 0x7f822d8268f0 <col:44, col:53> col:53 used secs 'unsigned int'
+| |-ParmVarDecl 0x7f822d826a00 <col:59, col:80> col:80 used btree 'struct bplus_header *'
+| `-CompoundStmt 0x7f822d831738 <line:33:1, line:43:1>
+|   |-DeclStmt 0x7f822d826d00 <line:34:3, col:11>
+|   | |-VarDecl 0x7f822d826c10 <col:3, col:7> col:7 used i 'int'
+|   | `-VarDecl 0x7f822d826c88 <col:3, col:10> col:10 used j 'int'
+|   |-ForStmt 0x7f822d829c80 <line:35:3, line:36:551>
+|   | |-BinaryOperator 0x7f822d826d60 <line:35:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7f822d826d18 <col:8> 'int' lvalue Var 0x7f822d826c10 'i' 'int'
+|   | | `-IntegerLiteral 0x7f822d826d40 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f822d826e70 <col:15, col:26> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f822d826e28 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f822d826d88 <col:15> 'int' lvalue Var 0x7f822d826c10 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7f822d826e58 <col:19, col:26> 'int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7f822d826e40 <col:19, col:26> 'u8':'unsigned char' <LValueToRValue>
+|   | |     `-MemberExpr 0x7f822d826df0 <col:19, col:26> 'u8':'unsigned char' lvalue ->n_used_nodes 0x7f822d825ee0
+|   | |       `-ImplicitCastExpr 0x7f822d826dd8 <col:19> 'struct bplus_header *' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x7f822d826db0 <col:19> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|   | |-UnaryOperator 0x7f822d826ec0 <col:40, col:41> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f822d826e98 <col:40> 'int' lvalue Var 0x7f822d826c10 'i' 'int'
+|   | `-IfStmt 0x7f822d829c48 <line:36:5, col:551>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7f822d829bc0 <col:9, col:540> 'int' '>='
+|   |   | |-ParenExpr 0x7f822d829b60 <col:9, col:535> 'unsigned int'
+|   |   | | `-ConditionalOperator 0x7f822d829b30 <col:10, col:534> 'unsigned int'
+|   |   | |   |-CallExpr 0x7f822d827390 <col:10, col:89> 'int'
+|   |   | |   | |-ImplicitCastExpr 0x7f822d827378 <col:10> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | |   | | `-DeclRefExpr 0x7f822d826ff8 <col:10> '<builtin fn type>' Function 0x7f822d826f08 '__builtin_constant_p' 'int ()'
+|   |   | |   | `-CStyleCastExpr 0x7f822d827320 <col:31, col:88> '__u32':'unsigned int' <NoOp>
+|   |   | |   |   `-ParenExpr 0x7f822d827300 <col:38, col:88> '__u32':'unsigned int'
+|   |   | |   |     `-CStyleCastExpr 0x7f822d827298 <col:39, col:87> '__u32':'unsigned int' <NoOp>
+|   |   | |   |       `-CStyleCastExpr 0x7f822d827260 <col:47, col:87> '__le32':'unsigned int' <NoOp>
+|   |   | |   |         `-ImplicitCastExpr 0x7f822d827248 <col:55, col:87> '__le32':'unsigned int' <LValueToRValue>
+|   |   | |   |           `-ParenExpr 0x7f822d827228 <col:55, col:87> '__le32':'unsigned int' lvalue
+|   |   | |   |             `-MemberExpr 0x7f822d8271b0 <col:56, col:77> '__le32':'unsigned int' lvalue .file_secno 0x7f822d825d60
+|   |   | |   |               `-ArraySubscriptExpr 0x7f822d827188 <col:56, col:75> 'struct bplus_internal_node':'struct bplus_internal_node' lvalue
+|   |   | |   |                 |-ImplicitCastExpr 0x7f822d827158 <col:56, col:65> 'struct bplus_internal_node *' <ArrayToPointerDecay>
+|   |   | |   |                 | `-MemberExpr 0x7f822d827098 <col:56, col:65> 'struct bplus_internal_node [0]' lvalue .internal 0x7f822d826148
+|   |   | |   |                 |   `-MemberExpr 0x7f822d827060 <col:56, col:63> 'union (anonymous union at c_files/pr79777.c:22:5)':'union bplus_header::(anonymous at c_files/pr79777.c:22:5)' lvalue ->u 0x7f822d826230
+|   |   | |   |                 |     `-ImplicitCastExpr 0x7f822d827048 <col:56> 'struct bplus_header *' <LValueToRValue>
+|   |   | |   |                 |       `-DeclRefExpr 0x7f822d827020 <col:56> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|   |   | |   |                 `-ImplicitCastExpr 0x7f822d827170 <col:74> 'int' <LValueToRValue>
+|   |   | |   |                   `-DeclRefExpr 0x7f822d8270d0 <col:74> 'int' lvalue Var 0x7f822d826c10 'i' 'int'
+|   |   | |   |-ParenExpr 0x7f822d829800 <col:93, col:471> '__u32':'unsigned int'
+|   |   | |   | `-CStyleCastExpr 0x7f822d8297d8 <col:94, col:470> '__u32':'unsigned int' <NoOp>
+|   |   | |   |   `-ParenExpr 0x7f822d8297b8 <col:101, col:470> 'unsigned int'
+|   |   | |   |     `-BinaryOperator 0x7f822d829750 <col:103, col:469> 'unsigned int' '|'
+|   |   | |   |       |-BinaryOperator 0x7f822d829358 <col:103, col:376> 'unsigned int' '|'
+|   |   | |   |       | |-BinaryOperator 0x7f822d828f60 <col:103, col:284> 'unsigned int' '|'
+|   |   | |   |       | | |-ParenExpr 0x7f822d827770 <col:103, col:192> 'unsigned int'
+|   |   | |   |       | | | `-BinaryOperator 0x7f822d827748 <col:104, col:190> 'unsigned int' '<<'
+|   |   | |   |       | | |   |-ParenExpr 0x7f822d827708 <col:104, col:185> 'unsigned int'
+|   |   | |   |       | | |   | `-BinaryOperator 0x7f822d8276e0 <col:105, col:173> 'unsigned int' '&'
+|   |   | |   |       | | |   |   |-CStyleCastExpr 0x7f822d827660 <col:105, col:162> '__u32':'unsigned int' <NoOp>
+|   |   | |   |       | | |   |   | `-ParenExpr 0x7f822d827640 <col:112, col:162> '__u32':'unsigned int'
+|   |   | |   |       | | |   |   |   `-CStyleCastExpr 0x7f822d8275d8 <col:113, col:161> '__u32':'unsigned int' <NoOp>
+|   |   | |   |       | | |   |   |     `-CStyleCastExpr 0x7f822d8275a0 <col:121, col:161> '__le32':'unsigned int' <NoOp>
+|   |   | |   |       | | |   |   |       `-ImplicitCastExpr 0x7f822d827588 <col:129, col:161> '__le32':'unsigned int' <LValueToRValue>
+|   |   | |   |       | | |   |   |         `-ParenExpr 0x7f822d827568 <col:129, col:161> '__le32':'unsigned int' lvalue
+|   |   | |   |       | | |   |   |           `-MemberExpr 0x7f822d8274f0 <col:130, col:151> '__le32':'unsigned int' lvalue .file_secno 0x7f822d825d60
+|   |   | |   |       | | |   |   |             `-ArraySubscriptExpr 0x7f822d8274c8 <col:130, col:149> 'struct bplus_internal_node':'struct bplus_internal_node' lvalue
+|   |   | |   |       | | |   |   |               |-ImplicitCastExpr 0x7f822d827498 <col:130, col:139> 'struct bplus_internal_node *' <ArrayToPointerDecay>
+|   |   | |   |       | | |   |   |               | `-MemberExpr 0x7f822d827438 <col:130, col:139> 'struct bplus_internal_node [0]' lvalue .internal 0x7f822d826148
+|   |   | |   |       | | |   |   |               |   `-MemberExpr 0x7f822d827400 <col:130, col:137> 'union (anonymous union at c_files/pr79777.c:22:5)':'union bplus_header::(anonymous at c_files/pr79777.c:22:5)' lvalue ->u 0x7f822d826230
+|   |   | |   |       | | |   |   |               |     `-ImplicitCastExpr 0x7f822d8273e8 <col:130> 'struct bplus_header *' <LValueToRValue>
+|   |   | |   |       | | |   |   |               |       `-DeclRefExpr 0x7f822d8273c0 <col:130> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|   |   | |   |       | | |   |   |               `-ImplicitCastExpr 0x7f822d8274b0 <col:148> 'int' <LValueToRValue>
+|   |   | |   |       | | |   |   |                 `-DeclRefExpr 0x7f822d827470 <col:148> 'int' lvalue Var 0x7f822d826c10 'i' 'int'
+|   |   | |   |       | | |   |   `-CStyleCastExpr 0x7f822d8276b8 <col:166, col:173> '__u32':'unsigned int' <IntegralCast>
+|   |   | |   |       | | |   |     `-IntegerLiteral 0x7f822d827688 <col:173> 'unsigned long' 255
+|   |   | |   |       | | |   `-IntegerLiteral 0x7f822d827728 <col:190> 'int' 24
+|   |   | |   |       | | `-ParenExpr 0x7f822d828f40 <col:196, col:284> 'unsigned int'
+|   |   | |   |       | |   `-BinaryOperator 0x7f822d828f18 <col:197, col:283> 'unsigned int' '<<'
+|   |   | |   |       | |     |-ParenExpr 0x7f822d828ed8 <col:197, col:278> 'unsigned int'
+|   |   | |   |       | |     | `-BinaryOperator 0x7f822d828eb0 <col:198, col:266> 'unsigned int' '&'
+|   |   | |   |       | |     |   |-CStyleCastExpr 0x7f822d828e30 <col:198, col:255> '__u32':'unsigned int' <NoOp>
+|   |   | |   |       | |     |   | `-ParenExpr 0x7f822d828e10 <col:205, col:255> '__u32':'unsigned int'
+|   |   | |   |       | |     |   |   `-CStyleCastExpr 0x7f822d8279a8 <col:206, col:254> '__u32':'unsigned int' <NoOp>
+|   |   | |   |       | |     |   |     `-CStyleCastExpr 0x7f822d827970 <col:214, col:254> '__le32':'unsigned int' <NoOp>
+|   |   | |   |       | |     |   |       `-ImplicitCastExpr 0x7f822d827958 <col:222, col:254> '__le32':'unsigned int' <LValueToRValue>
+|   |   | |   |       | |     |   |         `-ParenExpr 0x7f822d827938 <col:222, col:254> '__le32':'unsigned int' lvalue
+|   |   | |   |       | |     |   |           `-MemberExpr 0x7f822d8278c0 <col:223, col:244> '__le32':'unsigned int' lvalue .file_secno 0x7f822d825d60
+|   |   | |   |       | |     |   |             `-ArraySubscriptExpr 0x7f822d827898 <col:223, col:242> 'struct bplus_internal_node':'struct bplus_internal_node' lvalue
+|   |   | |   |       | |     |   |               |-ImplicitCastExpr 0x7f822d827868 <col:223, col:232> 'struct bplus_internal_node *' <ArrayToPointerDecay>
+|   |   | |   |       | |     |   |               | `-MemberExpr 0x7f822d827808 <col:223, col:232> 'struct bplus_internal_node [0]' lvalue .internal 0x7f822d826148
+|   |   | |   |       | |     |   |               |   `-MemberExpr 0x7f822d8277d0 <col:223, col:230> 'union (anonymous union at c_files/pr79777.c:22:5)':'union bplus_header::(anonymous at c_files/pr79777.c:22:5)' lvalue ->u 0x7f822d826230
+|   |   | |   |       | |     |   |               |     `-ImplicitCastExpr 0x7f822d8277b8 <col:223> 'struct bplus_header *' <LValueToRValue>
+|   |   | |   |       | |     |   |               |       `-DeclRefExpr 0x7f822d827790 <col:223> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|   |   | |   |       | |     |   |               `-ImplicitCastExpr 0x7f822d827880 <col:241> 'int' <LValueToRValue>
+|   |   | |   |       | |     |   |                 `-DeclRefExpr 0x7f822d827840 <col:241> 'int' lvalue Var 0x7f822d826c10 'i' 'int'
+|   |   | |   |       | |     |   `-CStyleCastExpr 0x7f822d828e88 <col:259, col:266> '__u32':'unsigned int' <IntegralCast>
+|   |   | |   |       | |     |     `-IntegerLiteral 0x7f822d828e58 <col:266> 'unsigned long' 65280
+|   |   | |   |       | |     `-IntegerLiteral 0x7f822d828ef8 <col:283> 'int' 8
+|   |   | |   |       | `-ParenExpr 0x7f822d829338 <col:288, col:376> 'unsigned int'
+|   |   | |   |       |   `-BinaryOperator 0x7f822d829310 <col:289, col:375> 'unsigned int' '>>'
+|   |   | |   |       |     |-ParenExpr 0x7f822d8292d0 <col:289, col:370> 'unsigned int'
+|   |   | |   |       |     | `-BinaryOperator 0x7f822d8292a8 <col:290, col:358> 'unsigned int' '&'
+|   |   | |   |       |     |   |-CStyleCastExpr 0x7f822d829228 <col:290, col:347> '__u32':'unsigned int' <NoOp>
+|   |   | |   |       |     |   | `-ParenExpr 0x7f822d829208 <col:297, col:347> '__u32':'unsigned int'
+|   |   | |   |       |     |   |   `-CStyleCastExpr 0x7f822d8291a0 <col:298, col:346> '__u32':'unsigned int' <NoOp>
+|   |   | |   |       |     |   |     `-CStyleCastExpr 0x7f822d829168 <col:306, col:346> '__le32':'unsigned int' <NoOp>
+|   |   | |   |       |     |   |       `-ImplicitCastExpr 0x7f822d829150 <col:314, col:346> '__le32':'unsigned int' <LValueToRValue>
+|   |   | |   |       |     |   |         `-ParenExpr 0x7f822d829130 <col:314, col:346> '__le32':'unsigned int' lvalue
+|   |   | |   |       |     |   |           `-MemberExpr 0x7f822d8290b8 <col:315, col:336> '__le32':'unsigned int' lvalue .file_secno 0x7f822d825d60
+|   |   | |   |       |     |   |             `-ArraySubscriptExpr 0x7f822d829090 <col:315, col:334> 'struct bplus_internal_node':'struct bplus_internal_node' lvalue
+|   |   | |   |       |     |   |               |-ImplicitCastExpr 0x7f822d829060 <col:315, col:324> 'struct bplus_internal_node *' <ArrayToPointerDecay>
+|   |   | |   |       |     |   |               | `-MemberExpr 0x7f822d829000 <col:315, col:324> 'struct bplus_internal_node [0]' lvalue .internal 0x7f822d826148
+|   |   | |   |       |     |   |               |   `-MemberExpr 0x7f822d828fc8 <col:315, col:322> 'union (anonymous union at c_files/pr79777.c:22:5)':'union bplus_header::(anonymous at c_files/pr79777.c:22:5)' lvalue ->u 0x7f822d826230
+|   |   | |   |       |     |   |               |     `-ImplicitCastExpr 0x7f822d828fb0 <col:315> 'struct bplus_header *' <LValueToRValue>
+|   |   | |   |       |     |   |               |       `-DeclRefExpr 0x7f822d828f88 <col:315> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|   |   | |   |       |     |   |               `-ImplicitCastExpr 0x7f822d829078 <col:333> 'int' <LValueToRValue>
+|   |   | |   |       |     |   |                 `-DeclRefExpr 0x7f822d829038 <col:333> 'int' lvalue Var 0x7f822d826c10 'i' 'int'
+|   |   | |   |       |     |   `-CStyleCastExpr 0x7f822d829280 <col:351, col:358> '__u32':'unsigned int' <IntegralCast>
+|   |   | |   |       |     |     `-IntegerLiteral 0x7f822d829250 <col:358> 'unsigned long' 16711680
+|   |   | |   |       |     `-IntegerLiteral 0x7f822d8292f0 <col:375> 'int' 8
+|   |   | |   |       `-ParenExpr 0x7f822d829730 <col:380, col:469> 'unsigned int'
+|   |   | |   |         `-BinaryOperator 0x7f822d829708 <col:381, col:467> 'unsigned int' '>>'
+|   |   | |   |           |-ParenExpr 0x7f822d8296c8 <col:381, col:462> 'unsigned int'
+|   |   | |   |           | `-BinaryOperator 0x7f822d8296a0 <col:382, col:450> 'unsigned int' '&'
+|   |   | |   |           |   |-CStyleCastExpr 0x7f822d829620 <col:382, col:439> '__u32':'unsigned int' <NoOp>
+|   |   | |   |           |   | `-ParenExpr 0x7f822d829600 <col:389, col:439> '__u32':'unsigned int'
+|   |   | |   |           |   |   `-CStyleCastExpr 0x7f822d829598 <col:390, col:438> '__u32':'unsigned int' <NoOp>
+|   |   | |   |           |   |     `-CStyleCastExpr 0x7f822d829560 <col:398, col:438> '__le32':'unsigned int' <NoOp>
+|   |   | |   |           |   |       `-ImplicitCastExpr 0x7f822d829548 <col:406, col:438> '__le32':'unsigned int' <LValueToRValue>
+|   |   | |   |           |   |         `-ParenExpr 0x7f822d829528 <col:406, col:438> '__le32':'unsigned int' lvalue
+|   |   | |   |           |   |           `-MemberExpr 0x7f822d8294b0 <col:407, col:428> '__le32':'unsigned int' lvalue .file_secno 0x7f822d825d60
+|   |   | |   |           |   |             `-ArraySubscriptExpr 0x7f822d829488 <col:407, col:426> 'struct bplus_internal_node':'struct bplus_internal_node' lvalue
+|   |   | |   |           |   |               |-ImplicitCastExpr 0x7f822d829458 <col:407, col:416> 'struct bplus_internal_node *' <ArrayToPointerDecay>
+|   |   | |   |           |   |               | `-MemberExpr 0x7f822d8293f8 <col:407, col:416> 'struct bplus_internal_node [0]' lvalue .internal 0x7f822d826148
+|   |   | |   |           |   |               |   `-MemberExpr 0x7f822d8293c0 <col:407, col:414> 'union (anonymous union at c_files/pr79777.c:22:5)':'union bplus_header::(anonymous at c_files/pr79777.c:22:5)' lvalue ->u 0x7f822d826230
+|   |   | |   |           |   |               |     `-ImplicitCastExpr 0x7f822d8293a8 <col:407> 'struct bplus_header *' <LValueToRValue>
+|   |   | |   |           |   |               |       `-DeclRefExpr 0x7f822d829380 <col:407> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|   |   | |   |           |   |               `-ImplicitCastExpr 0x7f822d829470 <col:425> 'int' <LValueToRValue>
+|   |   | |   |           |   |                 `-DeclRefExpr 0x7f822d829430 <col:425> 'int' lvalue Var 0x7f822d826c10 'i' 'int'
+|   |   | |   |           |   `-CStyleCastExpr 0x7f822d829678 <col:443, col:450> '__u32':'unsigned int' <IntegralCast>
+|   |   | |   |           |     `-IntegerLiteral 0x7f822d829648 <col:450> 'unsigned long' 4278190080
+|   |   | |   |           `-IntegerLiteral 0x7f822d8296e8 <col:467> 'int' 24
+|   |   | |   `-CallExpr 0x7f822d829b00 <col:475, col:534> '__u32':'unsigned int'
+|   |   | |     |-ImplicitCastExpr 0x7f822d829ae8 <col:475> '__u32 (*)(__u32)' <FunctionToPointerDecay>
+|   |   | |     | `-DeclRefExpr 0x7f822d829820 <col:475> '__u32 (__u32)' Function 0x7f822d826580 '__fswab32' '__u32 (__u32)'
+|   |   | |     `-CStyleCastExpr 0x7f822d829a60 <col:485, col:533> '__u32':'unsigned int' <NoOp>
+|   |   | |       `-CStyleCastExpr 0x7f822d829a28 <col:493, col:533> '__le32':'unsigned int' <NoOp>
+|   |   | |         `-ImplicitCastExpr 0x7f822d829a10 <col:501, col:533> '__le32':'unsigned int' <LValueToRValue>
+|   |   | |           `-ParenExpr 0x7f822d8299f0 <col:501, col:533> '__le32':'unsigned int' lvalue
+|   |   | |             `-MemberExpr 0x7f822d829978 <col:502, col:523> '__le32':'unsigned int' lvalue .file_secno 0x7f822d825d60
+|   |   | |               `-ArraySubscriptExpr 0x7f822d829950 <col:502, col:521> 'struct bplus_internal_node':'struct bplus_internal_node' lvalue
+|   |   | |                 |-ImplicitCastExpr 0x7f822d829920 <col:502, col:511> 'struct bplus_internal_node *' <ArrayToPointerDecay>
+|   |   | |                 | `-MemberExpr 0x7f822d8298c0 <col:502, col:511> 'struct bplus_internal_node [0]' lvalue .internal 0x7f822d826148
+|   |   | |                 |   `-MemberExpr 0x7f822d829888 <col:502, col:509> 'union (anonymous union at c_files/pr79777.c:22:5)':'union bplus_header::(anonymous at c_files/pr79777.c:22:5)' lvalue ->u 0x7f822d826230
+|   |   | |                 |     `-ImplicitCastExpr 0x7f822d829870 <col:502> 'struct bplus_header *' <LValueToRValue>
+|   |   | |                 |       `-DeclRefExpr 0x7f822d829848 <col:502> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|   |   | |                 `-ImplicitCastExpr 0x7f822d829938 <col:520> 'int' <LValueToRValue>
+|   |   | |                   `-DeclRefExpr 0x7f822d8298f8 <col:520> 'int' lvalue Var 0x7f822d826c10 'i' 'int'
+|   |   | `-ImplicitCastExpr 0x7f822d829ba8 <col:540> 'unsigned int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7f822d829b80 <col:540> 'unsigned int' lvalue ParmVar 0x7f822d8268f0 'secs' 'unsigned int'
+|   |   |-GotoStmt 0x7f822d829c30 <col:546, col:551> 'f' 0x7f822d829be8
+|   |   `-<<<NULL>>>
+|   |-ReturnStmt 0x7f822d829cb8 <line:37:3>
+|   |-LabelStmt 0x7f822d8308a8 <line:38:1, line:40:511> 'f'
+|   | `-ForStmt 0x7f822d830870 <line:39:3, line:40:511>
+|   |   |-BinaryOperator 0x7f822d829d80 <line:39:8, col:16> 'int' '='
+|   |   | |-DeclRefExpr 0x7f822d829cd0 <col:8> 'int' lvalue Var 0x7f822d826c88 'j' 'int'
+|   |   | `-BinaryOperator 0x7f822d829d58 <col:12, col:16> 'int' '+'
+|   |   |   |-ImplicitCastExpr 0x7f822d829d40 <col:12> 'int' <LValueToRValue>
+|   |   |   | `-DeclRefExpr 0x7f822d829cf8 <col:12> 'int' lvalue Var 0x7f822d826c10 'i' 'int'
+|   |   |   `-IntegerLiteral 0x7f822d829d20 <col:16> 'int' 1
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7f822d82f098 <col:19, col:30> 'int' '<'
+|   |   | |-ImplicitCastExpr 0x7f822d82f050 <col:19> 'int' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7f822d829da8 <col:19> 'int' lvalue Var 0x7f822d826c88 'j' 'int'
+|   |   | `-ImplicitCastExpr 0x7f822d82f080 <col:23, col:30> 'int' <IntegralCast>
+|   |   |   `-ImplicitCastExpr 0x7f822d82f068 <col:23, col:30> 'u8':'unsigned char' <LValueToRValue>
+|   |   |     `-MemberExpr 0x7f822d82f018 <col:23, col:30> 'u8':'unsigned char' lvalue ->n_used_nodes 0x7f822d825ee0
+|   |   |       `-ImplicitCastExpr 0x7f822d82f000 <col:23> 'struct bplus_header *' <LValueToRValue>
+|   |   |         `-DeclRefExpr 0x7f822d829dd0 <col:23> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|   |   |-UnaryOperator 0x7f822d82f0e8 <col:44, col:45> 'int' postfix '++'
+|   |   | `-DeclRefExpr 0x7f822d82f0c0 <col:44> 'int' lvalue Var 0x7f822d826c88 'j' 'int'
+|   |   `-CallExpr 0x7f822d830840 <line:40:5, col:511> 'void'
+|   |     |-ImplicitCastExpr 0x7f822d830828 <col:5> 'void (*)(__u32)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f822d82f108 <col:5> 'void (__u32)' Function 0x7f822d826730 'hpfs_ea_remove' 'void (__u32)'
+|   |     `-ParenExpr 0x7f822d8307a8 <col:20, col:510> 'unsigned int'
+|   |       `-ConditionalOperator 0x7f822d830778 <col:21, col:509> 'unsigned int'
+|   |         |-CallExpr 0x7f822d82f438 <col:21, col:94> 'int'
+|   |         | |-ImplicitCastExpr 0x7f822d82f420 <col:21> 'int (*)()' <BuiltinFnToFnPtr>
+|   |         | | `-DeclRefExpr 0x7f822d82f130 <col:21> '<builtin fn type>' Function 0x7f822d826f08 '__builtin_constant_p' 'int ()'
+|   |         | `-CStyleCastExpr 0x7f822d82f3f8 <col:42, col:93> '__u32':'unsigned int' <NoOp>
+|   |         |   `-ParenExpr 0x7f822d82f3d8 <col:49, col:93> '__u32':'unsigned int'
+|   |         |     `-CStyleCastExpr 0x7f822d82f370 <col:50, col:92> '__u32':'unsigned int' <NoOp>
+|   |         |       `-CStyleCastExpr 0x7f822d82f338 <col:58, col:92> '__le32':'unsigned int' <NoOp>
+|   |         |         `-ImplicitCastExpr 0x7f822d82f320 <col:66, col:92> '__le32':'unsigned int' <LValueToRValue>
+|   |         |           `-ParenExpr 0x7f822d82f300 <col:66, col:92> '__le32':'unsigned int' lvalue
+|   |         |             `-MemberExpr 0x7f822d82f288 <col:67, col:88> '__le32':'unsigned int' lvalue .down 0x7f822d825db8
+|   |         |               `-ArraySubscriptExpr 0x7f822d82f260 <col:67, col:86> 'struct bplus_internal_node':'struct bplus_internal_node' lvalue
+|   |         |                 |-ImplicitCastExpr 0x7f822d82f230 <col:67, col:76> 'struct bplus_internal_node *' <ArrayToPointerDecay>
+|   |         |                 | `-MemberExpr 0x7f822d82f1d0 <col:67, col:76> 'struct bplus_internal_node [0]' lvalue .internal 0x7f822d826148
+|   |         |                 |   `-MemberExpr 0x7f822d82f198 <col:67, col:74> 'union (anonymous union at c_files/pr79777.c:22:5)':'union bplus_header::(anonymous at c_files/pr79777.c:22:5)' lvalue ->u 0x7f822d826230
+|   |         |                 |     `-ImplicitCastExpr 0x7f822d82f180 <col:67> 'struct bplus_header *' <LValueToRValue>
+|   |         |                 |       `-DeclRefExpr 0x7f822d82f158 <col:67> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|   |         |                 `-ImplicitCastExpr 0x7f822d82f248 <col:85> 'int' <LValueToRValue>
+|   |         |                   `-DeclRefExpr 0x7f822d82f208 <col:85> 'int' lvalue Var 0x7f822d826c88 'j' 'int'
+|   |         |-ParenExpr 0x7f822d8304a8 <col:98, col:452> '__u32':'unsigned int'
+|   |         | `-CStyleCastExpr 0x7f822d830480 <col:99, col:451> '__u32':'unsigned int' <NoOp>
+|   |         |   `-ParenExpr 0x7f822d830460 <col:106, col:451> 'unsigned int'
+|   |         |     `-BinaryOperator 0x7f822d8303f8 <col:108, col:450> 'unsigned int' '|'
+|   |         |       |-BinaryOperator 0x7f822d830000 <col:108, col:363> 'unsigned int' '|'
+|   |         |       | |-BinaryOperator 0x7f822d82fc08 <col:108, col:277> 'unsigned int' '|'
+|   |         |       | | |-ParenExpr 0x7f822d82f818 <col:108, col:191> 'unsigned int'
+|   |         |       | | | `-BinaryOperator 0x7f822d82f7f0 <col:109, col:189> 'unsigned int' '<<'
+|   |         |       | | |   |-ParenExpr 0x7f822d82f7b0 <col:109, col:184> 'unsigned int'
+|   |         |       | | |   | `-BinaryOperator 0x7f822d82f788 <col:110, col:172> 'unsigned int' '&'
+|   |         |       | | |   |   |-CStyleCastExpr 0x7f822d82f708 <col:110, col:161> '__u32':'unsigned int' <NoOp>
+|   |         |       | | |   |   | `-ParenExpr 0x7f822d82f6e8 <col:117, col:161> '__u32':'unsigned int'
+|   |         |       | | |   |   |   `-CStyleCastExpr 0x7f822d82f680 <col:118, col:160> '__u32':'unsigned int' <NoOp>
+|   |         |       | | |   |   |     `-CStyleCastExpr 0x7f822d82f648 <col:126, col:160> '__le32':'unsigned int' <NoOp>
+|   |         |       | | |   |   |       `-ImplicitCastExpr 0x7f822d82f630 <col:134, col:160> '__le32':'unsigned int' <LValueToRValue>
+|   |         |       | | |   |   |         `-ParenExpr 0x7f822d82f610 <col:134, col:160> '__le32':'unsigned int' lvalue
+|   |         |       | | |   |   |           `-MemberExpr 0x7f822d82f598 <col:135, col:156> '__le32':'unsigned int' lvalue .down 0x7f822d825db8
+|   |         |       | | |   |   |             `-ArraySubscriptExpr 0x7f822d82f570 <col:135, col:154> 'struct bplus_internal_node':'struct bplus_internal_node' lvalue
+|   |         |       | | |   |   |               |-ImplicitCastExpr 0x7f822d82f540 <col:135, col:144> 'struct bplus_internal_node *' <ArrayToPointerDecay>
+|   |         |       | | |   |   |               | `-MemberExpr 0x7f822d82f4e0 <col:135, col:144> 'struct bplus_internal_node [0]' lvalue .internal 0x7f822d826148
+|   |         |       | | |   |   |               |   `-MemberExpr 0x7f822d82f4a8 <col:135, col:142> 'union (anonymous union at c_files/pr79777.c:22:5)':'union bplus_header::(anonymous at c_files/pr79777.c:22:5)' lvalue ->u 0x7f822d826230
+|   |         |       | | |   |   |               |     `-ImplicitCastExpr 0x7f822d82f490 <col:135> 'struct bplus_header *' <LValueToRValue>
+|   |         |       | | |   |   |               |       `-DeclRefExpr 0x7f822d82f468 <col:135> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|   |         |       | | |   |   |               `-ImplicitCastExpr 0x7f822d82f558 <col:153> 'int' <LValueToRValue>
+|   |         |       | | |   |   |                 `-DeclRefExpr 0x7f822d82f518 <col:153> 'int' lvalue Var 0x7f822d826c88 'j' 'int'
+|   |         |       | | |   |   `-CStyleCastExpr 0x7f822d82f760 <col:165, col:172> '__u32':'unsigned int' <IntegralCast>
+|   |         |       | | |   |     `-IntegerLiteral 0x7f822d82f730 <col:172> 'unsigned long' 255
+|   |         |       | | |   `-IntegerLiteral 0x7f822d82f7d0 <col:189> 'int' 24
+|   |         |       | | `-ParenExpr 0x7f822d82fbe8 <col:195, col:277> 'unsigned int'
+|   |         |       | |   `-BinaryOperator 0x7f822d82fbc0 <col:196, col:276> 'unsigned int' '<<'
+|   |         |       | |     |-ParenExpr 0x7f822d82fb80 <col:196, col:271> 'unsigned int'
+|   |         |       | |     | `-BinaryOperator 0x7f822d82fb58 <col:197, col:259> 'unsigned int' '&'
+|   |         |       | |     |   |-CStyleCastExpr 0x7f822d82fad8 <col:197, col:248> '__u32':'unsigned int' <NoOp>
+|   |         |       | |     |   | `-ParenExpr 0x7f822d82fab8 <col:204, col:248> '__u32':'unsigned int'
+|   |         |       | |     |   |   `-CStyleCastExpr 0x7f822d82fa50 <col:205, col:247> '__u32':'unsigned int' <NoOp>
+|   |         |       | |     |   |     `-CStyleCastExpr 0x7f822d82fa18 <col:213, col:247> '__le32':'unsigned int' <NoOp>
+|   |         |       | |     |   |       `-ImplicitCastExpr 0x7f822d82fa00 <col:221, col:247> '__le32':'unsigned int' <LValueToRValue>
+|   |         |       | |     |   |         `-ParenExpr 0x7f822d82f9e0 <col:221, col:247> '__le32':'unsigned int' lvalue
+|   |         |       | |     |   |           `-MemberExpr 0x7f822d82f968 <col:222, col:243> '__le32':'unsigned int' lvalue .down 0x7f822d825db8
+|   |         |       | |     |   |             `-ArraySubscriptExpr 0x7f822d82f940 <col:222, col:241> 'struct bplus_internal_node':'struct bplus_internal_node' lvalue
+|   |         |       | |     |   |               |-ImplicitCastExpr 0x7f822d82f910 <col:222, col:231> 'struct bplus_internal_node *' <ArrayToPointerDecay>
+|   |         |       | |     |   |               | `-MemberExpr 0x7f822d82f8b0 <col:222, col:231> 'struct bplus_internal_node [0]' lvalue .internal 0x7f822d826148
+|   |         |       | |     |   |               |   `-MemberExpr 0x7f822d82f878 <col:222, col:229> 'union (anonymous union at c_files/pr79777.c:22:5)':'union bplus_header::(anonymous at c_files/pr79777.c:22:5)' lvalue ->u 0x7f822d826230
+|   |         |       | |     |   |               |     `-ImplicitCastExpr 0x7f822d82f860 <col:222> 'struct bplus_header *' <LValueToRValue>
+|   |         |       | |     |   |               |       `-DeclRefExpr 0x7f822d82f838 <col:222> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|   |         |       | |     |   |               `-ImplicitCastExpr 0x7f822d82f928 <col:240> 'int' <LValueToRValue>
+|   |         |       | |     |   |                 `-DeclRefExpr 0x7f822d82f8e8 <col:240> 'int' lvalue Var 0x7f822d826c88 'j' 'int'
+|   |         |       | |     |   `-CStyleCastExpr 0x7f822d82fb30 <col:252, col:259> '__u32':'unsigned int' <IntegralCast>
+|   |         |       | |     |     `-IntegerLiteral 0x7f822d82fb00 <col:259> 'unsigned long' 65280
+|   |         |       | |     `-IntegerLiteral 0x7f822d82fba0 <col:276> 'int' 8
+|   |         |       | `-ParenExpr 0x7f822d82ffe0 <col:281, col:363> 'unsigned int'
+|   |         |       |   `-BinaryOperator 0x7f822d82ffb8 <col:282, col:362> 'unsigned int' '>>'
+|   |         |       |     |-ParenExpr 0x7f822d82ff78 <col:282, col:357> 'unsigned int'
+|   |         |       |     | `-BinaryOperator 0x7f822d82ff50 <col:283, col:345> 'unsigned int' '&'
+|   |         |       |     |   |-CStyleCastExpr 0x7f822d82fed0 <col:283, col:334> '__u32':'unsigned int' <NoOp>
+|   |         |       |     |   | `-ParenExpr 0x7f822d82feb0 <col:290, col:334> '__u32':'unsigned int'
+|   |         |       |     |   |   `-CStyleCastExpr 0x7f822d82fe48 <col:291, col:333> '__u32':'unsigned int' <NoOp>
+|   |         |       |     |   |     `-CStyleCastExpr 0x7f822d82fe10 <col:299, col:333> '__le32':'unsigned int' <NoOp>
+|   |         |       |     |   |       `-ImplicitCastExpr 0x7f822d82fdf8 <col:307, col:333> '__le32':'unsigned int' <LValueToRValue>
+|   |         |       |     |   |         `-ParenExpr 0x7f822d82fdd8 <col:307, col:333> '__le32':'unsigned int' lvalue
+|   |         |       |     |   |           `-MemberExpr 0x7f822d82fd60 <col:308, col:329> '__le32':'unsigned int' lvalue .down 0x7f822d825db8
+|   |         |       |     |   |             `-ArraySubscriptExpr 0x7f822d82fd38 <col:308, col:327> 'struct bplus_internal_node':'struct bplus_internal_node' lvalue
+|   |         |       |     |   |               |-ImplicitCastExpr 0x7f822d82fd08 <col:308, col:317> 'struct bplus_internal_node *' <ArrayToPointerDecay>
+|   |         |       |     |   |               | `-MemberExpr 0x7f822d82fca8 <col:308, col:317> 'struct bplus_internal_node [0]' lvalue .internal 0x7f822d826148
+|   |         |       |     |   |               |   `-MemberExpr 0x7f822d82fc70 <col:308, col:315> 'union (anonymous union at c_files/pr79777.c:22:5)':'union bplus_header::(anonymous at c_files/pr79777.c:22:5)' lvalue ->u 0x7f822d826230
+|   |         |       |     |   |               |     `-ImplicitCastExpr 0x7f822d82fc58 <col:308> 'struct bplus_header *' <LValueToRValue>
+|   |         |       |     |   |               |       `-DeclRefExpr 0x7f822d82fc30 <col:308> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|   |         |       |     |   |               `-ImplicitCastExpr 0x7f822d82fd20 <col:326> 'int' <LValueToRValue>
+|   |         |       |     |   |                 `-DeclRefExpr 0x7f822d82fce0 <col:326> 'int' lvalue Var 0x7f822d826c88 'j' 'int'
+|   |         |       |     |   `-CStyleCastExpr 0x7f822d82ff28 <col:338, col:345> '__u32':'unsigned int' <IntegralCast>
+|   |         |       |     |     `-IntegerLiteral 0x7f822d82fef8 <col:345> 'unsigned long' 16711680
+|   |         |       |     `-IntegerLiteral 0x7f822d82ff98 <col:362> 'int' 8
+|   |         |       `-ParenExpr 0x7f822d8303d8 <col:367, col:450> 'unsigned int'
+|   |         |         `-BinaryOperator 0x7f822d8303b0 <col:368, col:448> 'unsigned int' '>>'
+|   |         |           |-ParenExpr 0x7f822d830370 <col:368, col:443> 'unsigned int'
+|   |         |           | `-BinaryOperator 0x7f822d830348 <col:369, col:431> 'unsigned int' '&'
+|   |         |           |   |-CStyleCastExpr 0x7f822d8302c8 <col:369, col:420> '__u32':'unsigned int' <NoOp>
+|   |         |           |   | `-ParenExpr 0x7f822d8302a8 <col:376, col:420> '__u32':'unsigned int'
+|   |         |           |   |   `-CStyleCastExpr 0x7f822d830240 <col:377, col:419> '__u32':'unsigned int' <NoOp>
+|   |         |           |   |     `-CStyleCastExpr 0x7f822d830208 <col:385, col:419> '__le32':'unsigned int' <NoOp>
+|   |         |           |   |       `-ImplicitCastExpr 0x7f822d8301f0 <col:393, col:419> '__le32':'unsigned int' <LValueToRValue>
+|   |         |           |   |         `-ParenExpr 0x7f822d8301d0 <col:393, col:419> '__le32':'unsigned int' lvalue
+|   |         |           |   |           `-MemberExpr 0x7f822d830158 <col:394, col:415> '__le32':'unsigned int' lvalue .down 0x7f822d825db8
+|   |         |           |   |             `-ArraySubscriptExpr 0x7f822d830130 <col:394, col:413> 'struct bplus_internal_node':'struct bplus_internal_node' lvalue
+|   |         |           |   |               |-ImplicitCastExpr 0x7f822d830100 <col:394, col:403> 'struct bplus_internal_node *' <ArrayToPointerDecay>
+|   |         |           |   |               | `-MemberExpr 0x7f822d8300a0 <col:394, col:403> 'struct bplus_internal_node [0]' lvalue .internal 0x7f822d826148
+|   |         |           |   |               |   `-MemberExpr 0x7f822d830068 <col:394, col:401> 'union (anonymous union at c_files/pr79777.c:22:5)':'union bplus_header::(anonymous at c_files/pr79777.c:22:5)' lvalue ->u 0x7f822d826230
+|   |         |           |   |               |     `-ImplicitCastExpr 0x7f822d830050 <col:394> 'struct bplus_header *' <LValueToRValue>
+|   |         |           |   |               |       `-DeclRefExpr 0x7f822d830028 <col:394> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|   |         |           |   |               `-ImplicitCastExpr 0x7f822d830118 <col:412> 'int' <LValueToRValue>
+|   |         |           |   |                 `-DeclRefExpr 0x7f822d8300d8 <col:412> 'int' lvalue Var 0x7f822d826c88 'j' 'int'
+|   |         |           |   `-CStyleCastExpr 0x7f822d830320 <col:424, col:431> '__u32':'unsigned int' <IntegralCast>
+|   |         |           |     `-IntegerLiteral 0x7f822d8302f0 <col:431> 'unsigned long' 4278190080
+|   |         |           `-IntegerLiteral 0x7f822d830390 <col:448> 'int' 24
+|   |         `-CallExpr 0x7f822d830748 <col:456, col:509> '__u32':'unsigned int'
+|   |           |-ImplicitCastExpr 0x7f822d830730 <col:456> '__u32 (*)(__u32)' <FunctionToPointerDecay>
+|   |           | `-DeclRefExpr 0x7f822d8304c8 <col:456> '__u32 (__u32)' Function 0x7f822d826580 '__fswab32' '__u32 (__u32)'
+|   |           `-CStyleCastExpr 0x7f822d830708 <col:466, col:508> '__u32':'unsigned int' <NoOp>
+|   |             `-CStyleCastExpr 0x7f822d8306d0 <col:474, col:508> '__le32':'unsigned int' <NoOp>
+|   |               `-ImplicitCastExpr 0x7f822d8306b8 <col:482, col:508> '__le32':'unsigned int' <LValueToRValue>
+|   |                 `-ParenExpr 0x7f822d830698 <col:482, col:508> '__le32':'unsigned int' lvalue
+|   |                   `-MemberExpr 0x7f822d830620 <col:483, col:504> '__le32':'unsigned int' lvalue .down 0x7f822d825db8
+|   |                     `-ArraySubscriptExpr 0x7f822d8305f8 <col:483, col:502> 'struct bplus_internal_node':'struct bplus_internal_node' lvalue
+|   |                       |-ImplicitCastExpr 0x7f822d8305c8 <col:483, col:492> 'struct bplus_internal_node *' <ArrayToPointerDecay>
+|   |                       | `-MemberExpr 0x7f822d830568 <col:483, col:492> 'struct bplus_internal_node [0]' lvalue .internal 0x7f822d826148
+|   |                       |   `-MemberExpr 0x7f822d830530 <col:483, col:490> 'union (anonymous union at c_files/pr79777.c:22:5)':'union bplus_header::(anonymous at c_files/pr79777.c:22:5)' lvalue ->u 0x7f822d826230
+|   |                       |     `-ImplicitCastExpr 0x7f822d830518 <col:483> 'struct bplus_header *' <LValueToRValue>
+|   |                       |       `-DeclRefExpr 0x7f822d8304f0 <col:483> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|   |                       `-ImplicitCastExpr 0x7f822d8305e0 <col:501> 'int' <LValueToRValue>
+|   |                         `-DeclRefExpr 0x7f822d8305a0 <col:501> 'int' lvalue Var 0x7f822d826c88 'j' 'int'
+|   |-BinaryOperator 0x7f822d8309d8 <line:41:3, col:29> 'u8':'unsigned char' '='
+|   | |-MemberExpr 0x7f822d830900 <col:3, col:10> 'u8':'unsigned char' lvalue ->n_used_nodes 0x7f822d825ee0
+|   | | `-ImplicitCastExpr 0x7f822d8308e8 <col:3> 'struct bplus_header *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f822d8308c0 <col:3> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|   | `-ImplicitCastExpr 0x7f822d8309c0 <col:25, col:29> 'u8':'unsigned char' <IntegralCast>
+|   |   `-BinaryOperator 0x7f822d830998 <col:25, col:29> 'int' '+'
+|   |     |-ImplicitCastExpr 0x7f822d830980 <col:25> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f822d830938 <col:25> 'int' lvalue Var 0x7f822d826c10 'i' 'int'
+|   |     `-IntegerLiteral 0x7f822d830960 <col:29> 'int' 1
+|   `-BinaryOperator 0x7f822d831710 <line:42:3, col:284> '__le16':'unsigned short' '='
+|     |-MemberExpr 0x7f822d830a40 <col:3, col:10> '__le16':'unsigned short' lvalue ->first_free 0x7f822d825f60
+|     | `-ImplicitCastExpr 0x7f822d830a28 <col:3> 'struct bplus_header *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f822d830a00 <col:3> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|     `-ParenExpr 0x7f822d8316f0 <col:23, col:284> '__le16':'unsigned short'
+|       `-CStyleCastExpr 0x7f822d8316c8 <col:24, col:283> '__le16':'unsigned short' <IntegralCast>
+|         `-ParenExpr 0x7f822d8316a8 <col:33, col:283> 'int'
+|           `-ConditionalOperator 0x7f822d831638 <col:34, col:282> 'int'
+|             |-CallExpr 0x7f822d830c98 <col:34, col:93> 'int'
+|             | |-ImplicitCastExpr 0x7f822d830c80 <col:34> 'int (*)()' <BuiltinFnToFnPtr>
+|             | | `-DeclRefExpr 0x7f822d830a78 <col:34> '<builtin fn type>' Function 0x7f822d826f08 '__builtin_constant_p' 'int ()'
+|             | `-CStyleCastExpr 0x7f822d830c58 <col:55, col:92> '__u16':'unsigned short' <IntegralCast>
+|             |   `-ParenExpr 0x7f822d830c38 <col:62, col:92> 'int'
+|             |     `-ParenExpr 0x7f822d830bd8 <col:63, col:91> 'int'
+|             |       `-BinaryOperator 0x7f822d830bb0 <col:64, col:79> 'int' '+'
+|             |         |-IntegerLiteral 0x7f822d830aa0 <col:64> 'int' 8
+|             |         `-BinaryOperator 0x7f822d830b88 <col:68, col:79> 'int' '*'
+|             |           |-IntegerLiteral 0x7f822d830ac0 <col:68> 'int' 8
+|             |           `-ImplicitCastExpr 0x7f822d830b70 <col:72, col:79> 'int' <IntegralCast>
+|             |             `-ImplicitCastExpr 0x7f822d830b58 <col:72, col:79> 'u8':'unsigned char' <LValueToRValue>
+|             |               `-MemberExpr 0x7f822d830b20 <col:72, col:79> 'u8':'unsigned char' lvalue ->n_used_nodes 0x7f822d825ee0
+|             |                 `-ImplicitCastExpr 0x7f822d830b08 <col:72> 'struct bplus_header *' <LValueToRValue>
+|             |                   `-DeclRefExpr 0x7f822d830ae0 <col:72> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|             |-ImplicitCastExpr 0x7f822d831608 <col:97, col:239> 'int' <IntegralCast>
+|             | `-ParenExpr 0x7f822d8313a8 <col:97, col:239> '__u16':'unsigned short'
+|             |   `-CStyleCastExpr 0x7f822d831380 <col:98, col:238> '__u16':'unsigned short' <IntegralCast>
+|             |     `-ParenExpr 0x7f822d831360 <col:105, col:238> 'int'
+|             |       `-BinaryOperator 0x7f822d8312f8 <col:107, col:237> 'int' '|'
+|             |         |-ParenExpr 0x7f822d830fc0 <col:107, col:170> 'int'
+|             |         | `-BinaryOperator 0x7f822d830f98 <col:108, col:169> 'int' '<<'
+|             |         |   |-ParenExpr 0x7f822d830f58 <col:108, col:164> 'int'
+|             |         |   | `-BinaryOperator 0x7f822d830f30 <col:109, col:157> 'int' '&'
+|             |         |   |   |-ImplicitCastExpr 0x7f822d830f00 <col:109, col:146> 'int' <IntegralCast>
+|             |         |   |   | `-CStyleCastExpr 0x7f822d830e80 <col:109, col:146> '__u16':'unsigned short' <IntegralCast>
+|             |         |   |   |   `-ParenExpr 0x7f822d830e60 <col:116, col:146> 'int'
+|             |         |   |   |     `-ParenExpr 0x7f822d830e00 <col:117, col:145> 'int'
+|             |         |   |   |       `-BinaryOperator 0x7f822d830dd8 <col:118, col:133> 'int' '+'
+|             |         |   |   |         |-IntegerLiteral 0x7f822d830cc8 <col:118> 'int' 8
+|             |         |   |   |         `-BinaryOperator 0x7f822d830db0 <col:122, col:133> 'int' '*'
+|             |         |   |   |           |-IntegerLiteral 0x7f822d830ce8 <col:122> 'int' 8
+|             |         |   |   |           `-ImplicitCastExpr 0x7f822d830d98 <col:126, col:133> 'int' <IntegralCast>
+|             |         |   |   |             `-ImplicitCastExpr 0x7f822d830d80 <col:126, col:133> 'u8':'unsigned char' <LValueToRValue>
+|             |         |   |   |               `-MemberExpr 0x7f822d830d48 <col:126, col:133> 'u8':'unsigned char' lvalue ->n_used_nodes 0x7f822d825ee0
+|             |         |   |   |                 `-ImplicitCastExpr 0x7f822d830d30 <col:126> 'struct bplus_header *' <LValueToRValue>
+|             |         |   |   |                   `-DeclRefExpr 0x7f822d830d08 <col:126> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|             |         |   |   `-ImplicitCastExpr 0x7f822d830f18 <col:150, col:157> 'int' <IntegralCast>
+|             |         |   |     `-CStyleCastExpr 0x7f822d830ed8 <col:150, col:157> '__u16':'unsigned short' <IntegralCast>
+|             |         |   |       `-IntegerLiteral 0x7f822d830ea8 <col:157> 'unsigned int' 255
+|             |         |   `-IntegerLiteral 0x7f822d830f78 <col:169> 'int' 8
+|             |         `-ParenExpr 0x7f822d8312d8 <col:174, col:237> 'int'
+|             |           `-BinaryOperator 0x7f822d8312b0 <col:175, col:236> 'int' '>>'
+|             |             |-ParenExpr 0x7f822d831270 <col:175, col:231> 'int'
+|             |             | `-BinaryOperator 0x7f822d831248 <col:176, col:224> 'int' '&'
+|             |             |   |-ImplicitCastExpr 0x7f822d831218 <col:176, col:213> 'int' <IntegralCast>
+|             |             |   | `-CStyleCastExpr 0x7f822d831198 <col:176, col:213> '__u16':'unsigned short' <IntegralCast>
+|             |             |   |   `-ParenExpr 0x7f822d831178 <col:183, col:213> 'int'
+|             |             |   |     `-ParenExpr 0x7f822d831118 <col:184, col:212> 'int'
+|             |             |   |       `-BinaryOperator 0x7f822d8310f0 <col:185, col:200> 'int' '+'
+|             |             |   |         |-IntegerLiteral 0x7f822d830fe0 <col:185> 'int' 8
+|             |             |   |         `-BinaryOperator 0x7f822d8310c8 <col:189, col:200> 'int' '*'
+|             |             |   |           |-IntegerLiteral 0x7f822d831000 <col:189> 'int' 8
+|             |             |   |           `-ImplicitCastExpr 0x7f822d8310b0 <col:193, col:200> 'int' <IntegralCast>
+|             |             |   |             `-ImplicitCastExpr 0x7f822d831098 <col:193, col:200> 'u8':'unsigned char' <LValueToRValue>
+|             |             |   |               `-MemberExpr 0x7f822d831060 <col:193, col:200> 'u8':'unsigned char' lvalue ->n_used_nodes 0x7f822d825ee0
+|             |             |   |                 `-ImplicitCastExpr 0x7f822d831048 <col:193> 'struct bplus_header *' <LValueToRValue>
+|             |             |   |                   `-DeclRefExpr 0x7f822d831020 <col:193> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+|             |             |   `-ImplicitCastExpr 0x7f822d831230 <col:217, col:224> 'int' <IntegralCast>
+|             |             |     `-CStyleCastExpr 0x7f822d8311f0 <col:217, col:224> '__u16':'unsigned short' <IntegralCast>
+|             |             |       `-IntegerLiteral 0x7f822d8311c0 <col:224> 'unsigned int' 65280
+|             |             `-IntegerLiteral 0x7f822d831290 <col:236> 'int' 8
+|             `-ImplicitCastExpr 0x7f822d831620 <col:243, col:282> 'int' <IntegralCast>
+|               `-CallExpr 0x7f822d8315c0 <col:243, col:282> '__u16':'unsigned short'
+|                 |-ImplicitCastExpr 0x7f822d8315a8 <col:243> '__u16 (*)(__u16)' <FunctionToPointerDecay>
+|                 | `-DeclRefExpr 0x7f822d8313c8 <col:243> '__u16 (__u16)' Function 0x7f822d826390 '__fswab16' '__u16 (__u16)'
+|                 `-ImplicitCastExpr 0x7f822d8315f0 <col:253, col:281> '__u16':'unsigned short' <IntegralCast>
+|                   `-ParenExpr 0x7f822d831528 <col:253, col:281> 'int'
+|                     `-BinaryOperator 0x7f822d831500 <col:254, col:269> 'int' '+'
+|                       |-IntegerLiteral 0x7f822d8313f0 <col:254> 'int' 8
+|                       `-BinaryOperator 0x7f822d8314d8 <col:258, col:269> 'int' '*'
+|                         |-IntegerLiteral 0x7f822d831410 <col:258> 'int' 8
+|                         `-ImplicitCastExpr 0x7f822d8314c0 <col:262, col:269> 'int' <IntegralCast>
+|                           `-ImplicitCastExpr 0x7f822d8314a8 <col:262, col:269> 'u8':'unsigned char' <LValueToRValue>
+|                             `-MemberExpr 0x7f822d831470 <col:262, col:269> 'u8':'unsigned char' lvalue ->n_used_nodes 0x7f822d825ee0
+|                               `-ImplicitCastExpr 0x7f822d831458 <col:262> 'struct bplus_header *' <LValueToRValue>
+|                                 `-DeclRefExpr 0x7f822d831430 <col:262> 'struct bplus_header *' lvalue ParmVar 0x7f822d826a00 'btree' 'struct bplus_header *'
+`-FunctionDecl 0x7f822d826f08 <line:36:10> col:10 implicit used __builtin_constant_p 'int ()' extern
+  |-NoThrowAttr 0x7f822d826fa0 <col:10> Implicit
+  `-ConstAttr 0x7f822d826fe8 <col:10> Implicit

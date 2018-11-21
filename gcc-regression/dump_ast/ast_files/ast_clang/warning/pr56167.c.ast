@@ -1,0 +1,40 @@
+c_files/pr56167.c:4:40: warning: unknown attribute 'error' ignored [-Wunknown-attributes]
+extern void foo (void) __attribute__ ((error (0)));     /* { dg-warning "attribute ignored" } */
+                                       ^
+c_files/pr56167.c:5:40: warning: unknown attribute 'warning' ignored [-Wunknown-attributes]
+extern void bar (void) __attribute__ ((warning (0)));   /* { dg-warning "attribute ignored" } */
+                                       ^
+c_files/pr56167.c:6:25: warning: unknown attribute 'error' ignored [-Wunknown-attributes]
+int var __attribute__ ((error ("foo")));                /* { dg-warning "attribute ignored" } */
+                        ^
+3 warnings generated.
+TranslationUnitDecl 0x7ffc6f825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffc6f826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffc6f825d40 '__int128'
+|-TypedefDecl 0x7ffc6f826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffc6f825d60 'unsigned __int128'
+|-TypedefDecl 0x7ffc6f826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffc6f826170 'struct __NSConstantString_tag'
+|   `-Record 0x7ffc6f8260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffc6f826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffc6f8263c0 'char *'
+|   `-BuiltinType 0x7ffc6f825b60 'char'
+|-TypedefDecl 0x7ffc6f8266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffc6f826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffc6f8264e0 'struct __va_list_tag'
+|     `-Record 0x7ffc6f826458 '__va_list_tag'
+|-FunctionDecl 0x7ffc6f027400 <c_files/pr56167.c:4:1, col:50> col:13 used foo 'void (void)' extern
+|-FunctionDecl 0x7ffc6f027588 <line:5:1, col:52> col:13 used bar 'void (void)' extern
+|-VarDecl 0x7ffc6f0276a0 <line:6:1, col:5> col:5 used var 'int'
+`-FunctionDecl 0x7ffc6f027750 <line:8:1, line:15:1> line:9:1 main 'int ()'
+  `-CompoundStmt 0x7ffc6f027960 <line:10:1, line:15:1>
+    |-CallExpr 0x7ffc6f027850 <line:11:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7ffc6f027838 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7ffc6f0277e8 <col:3> 'void (void)' Function 0x7ffc6f027400 'foo' 'void (void)'
+    |-CallExpr 0x7ffc6f0278b8 <line:12:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7ffc6f0278a0 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7ffc6f027878 <col:3> 'void (void)' Function 0x7ffc6f027588 'bar' 'void (void)'
+    |-UnaryOperator 0x7ffc6f027908 <line:13:3, col:6> 'int' postfix '++'
+    | `-DeclRefExpr 0x7ffc6f0278e0 <col:3> 'int' lvalue Var 0x7ffc6f0276a0 'var' 'int'
+    `-ReturnStmt 0x7ffc6f027948 <line:14:3, col:10>
+      `-IntegerLiteral 0x7ffc6f027928 <col:10> 'int' 0

@@ -1,0 +1,81 @@
+FileAST: 
+  Decl: e, [], [], []
+    ArrayDecl: []
+      TypeDecl: e, []
+        IdentifierType: ['char']
+      Constant: int, 200
+  Decl: s, [], [], []
+    TypeDecl: s, []
+      Struct: S
+        Decl: a, [], [], []
+          ArrayDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['char']
+            Constant: int, 100
+        Decl: b, [], [], []
+          ArrayDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['char']
+            Constant: int, 100
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: __builtin_memcmp
+          ExprList: 
+            StructRef: .
+              ID: s
+              ID: a
+            ID: e
+            Constant: int, 100
+      Assignment: +=
+        ID: i
+        FuncCall: 
+          ID: __builtin_memcmp
+          ExprList: 
+            StructRef: .
+              ID: s
+              ID: a
+            ID: e
+            Constant: int, 200
+      Return: 
+        ID: i
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['char']
+          Decl: c, [], [], []
+            PtrDecl: []
+              TypeDecl: c, []
+                IdentifierType: ['char']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_memmove
+        ExprList: 
+          ID: c
+          ID: b
+          ArrayRef: 
+            ID: a
+            ArrayRef: 
+              ID: b
+              Constant: int, 0

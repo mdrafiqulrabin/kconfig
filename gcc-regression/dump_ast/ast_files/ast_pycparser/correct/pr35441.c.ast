@@ -1,0 +1,101 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: p, []
+                  IdentifierType: ['char']
+          Decl: q, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: q, []
+                  IdentifierType: ['char']
+        TypeDecl: foo1, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        BinaryOp: -
+          ID: p
+          ID: q
+  FuncDef: 
+    Decl: foo2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['double']
+        TypeDecl: foo2, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        BinaryOp: /
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: foo3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['unsigned']
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+        TypeDecl: foo3, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        BinaryOp: |
+          BinaryOp: <<
+            ID: i
+            ID: j
+          BinaryOp: >>
+            ID: i
+            BinaryOp: -
+              Constant: int, 32
+              ID: j
+      FuncCall: 
+        BinaryOp: |
+          BinaryOp: >>
+            ID: i
+            ID: j
+          BinaryOp: <<
+            ID: i
+            BinaryOp: -
+              Constant: int, 32
+              ID: j
+  FuncDef: 
+    Decl: foo4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['char']
+          Decl: q, [], [], []
+            PtrDecl: []
+              TypeDecl: q, []
+                IdentifierType: ['char']
+        TypeDecl: foo4, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        TernaryOp: 
+          BinaryOp: <
+            ID: p
+            ID: q
+          ID: p
+          ID: q
+      FuncCall: 
+        TernaryOp: 
+          BinaryOp: >
+            ID: p
+            ID: q
+          ID: p
+          ID: q

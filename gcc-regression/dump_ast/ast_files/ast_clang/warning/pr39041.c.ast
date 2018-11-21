@@ -1,0 +1,127 @@
+c_files/pr39041.c:28:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7fd0058264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd005826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd005826740 '__int128'
+|-TypedefDecl 0x7fd005826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd005826760 'unsigned __int128'
+|-TypedefDecl 0x7fd005826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd005826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd005826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd005826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd005826dc0 'char *'
+|   `-BuiltinType 0x7fd005826560 'char'
+|-TypedefDecl 0x7fd0058270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd005827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd005826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd005826e58 '__va_list_tag'
+|-FunctionDecl 0x7fd006025ad8 <c_files/pr39041.c:1:1, line:8:1> line:1:5 used test_bit 'int (int, void *)'
+| |-ParmVarDecl 0x7fd005827138 <col:14, col:18> col:18 used nr 'int'
+| |-ParmVarDecl 0x7fd006025a00 <col:22, col:28> col:28 used addr 'void *'
+| `-CompoundStmt 0x7fd006025ff8 <line:2:1, line:8:1>
+|   |-DeclStmt 0x7fd006025ce0 <line:3:3, col:23>
+|   | `-VarDecl 0x7fd006025c00 <col:3, col:19> col:8 used a 'int *' cinit
+|   |   `-CStyleCastExpr 0x7fd006025cb8 <col:12, col:19> 'int *' <BitCast>
+|   |     `-ImplicitCastExpr 0x7fd006025ca0 <col:19> 'void *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd006025c60 <col:19> 'void *' lvalue ParmVar 0x7fd006025a00 'addr' 'void *'
+|   |-DeclStmt 0x7fd006025d70 <line:4:3, col:11>
+|   | `-VarDecl 0x7fd006025d10 <col:3, col:7> col:7 used mask 'int'
+|   |-CompoundAssignOperator 0x7fd006025df0 <line:5:3, col:8> 'int *' '+=' ComputeLHSTy='int *' ComputeResultTy='int *'
+|   | |-DeclRefExpr 0x7fd006025d88 <col:3> 'int *' lvalue Var 0x7fd006025c00 'a' 'int *'
+|   | `-ImplicitCastExpr 0x7fd006025dd8 <col:8> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fd006025db0 <col:8> 'int' lvalue ParmVar 0x7fd005827138 'nr' 'int'
+|   |-BinaryOperator 0x7fd006025ed8 <line:6:3, col:15> 'int' '='
+|   | |-DeclRefExpr 0x7fd006025e28 <col:3> 'int' lvalue Var 0x7fd006025d10 'mask' 'int'
+|   | `-BinaryOperator 0x7fd006025eb0 <col:10, col:15> 'int' '<<'
+|   |   |-IntegerLiteral 0x7fd006025e50 <col:10> 'int' 1
+|   |   `-ImplicitCastExpr 0x7fd006025e98 <col:15> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd006025e70 <col:15> 'int' lvalue ParmVar 0x7fd005827138 'nr' 'int'
+|   `-ReturnStmt 0x7fd006025fe0 <line:7:3, col:18>
+|     `-BinaryOperator 0x7fd006025fb8 <col:10, col:18> 'int' '&'
+|       |-ImplicitCastExpr 0x7fd006025f88 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fd006025f00 <col:10> 'int' lvalue Var 0x7fd006025d10 'mask' 'int'
+|       `-ImplicitCastExpr 0x7fd006025fa0 <col:17, col:18> 'int' <LValueToRValue>
+|         `-UnaryOperator 0x7fd006025f68 <col:17, col:18> 'int' lvalue prefix '*'
+|           `-ImplicitCastExpr 0x7fd006025f50 <col:18> 'int *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fd006025f28 <col:18> 'int *' lvalue Var 0x7fd006025c00 'a' 'int *'
+|-RecordDecl 0x7fd006026038 <line:9:1, line:13:1> line:9:1 struct definition
+| |-RecordDecl 0x7fd0060260e0 <line:10:5, line:12:5> line:10:5 struct definition
+| | `-FieldDecl 0x7fd0060261a8 <line:11:2, col:6> col:6 referenced disabled 'int'
+| `-FieldDecl 0x7fd006026350 <line:10:5, line:12:14> col:8 referenced data 'struct (anonymous struct at c_files/pr39041.c:10:5) *[1]'
+|-VarDecl 0x7fd0060263f0 <line:9:1, line:13:3> col:3 used trace 'struct (anonymous struct at c_files/pr39041.c:9:1)':'struct (anonymous at c_files/pr39041.c:9:1)'
+|-RecordDecl 0x7fd006026468 <line:14:1, line:16:1> line:14:1 struct definition
+| `-FieldDecl 0x7fd006026590 <line:15:5, col:20> col:14 referenced bits 'unsigned int [1]'
+|-VarDecl 0x7fd006026630 <line:14:1, line:16:3> col:3 used cpumask 'struct (anonymous struct at c_files/pr39041.c:14:1)':'struct (anonymous at c_files/pr39041.c:14:1)'
+|-FunctionDecl 0x7fd006026780 <line:17:1, col:15> col:6 used inc 'void (int *)'
+| `-ParmVarDecl 0x7fd0060266c0 <col:10, col:14> col:15 'int *'
+|-FunctionDecl 0x7fd0060268c0 <line:18:1, col:15> col:6 used dec 'void (int *)'
+| `-ParmVarDecl 0x7fd006026838 <col:10, col:14> col:15 'int *'
+`-FunctionDecl 0x7fd006027a28 <line:19:1, line:28:1> line:19:5 foo 'int (void)'
+  `-CompoundStmt 0x7fd006028468 <line:20:1, line:28:1>
+    |-DeclStmt 0x7fd006027b38 <line:21:3, col:10>
+    | `-VarDecl 0x7fd006027ad8 <col:3, col:7> col:7 used cpu 'int'
+    `-ForStmt 0x7fd006028430 <line:22:3, line:27:3>
+      |-BinaryOperator 0x7fd006027b98 <line:22:8, col:14> 'int' '='
+      | |-DeclRefExpr 0x7fd006027b50 <col:8> 'int' lvalue Var 0x7fd006027ad8 'cpu' 'int'
+      | `-IntegerLiteral 0x7fd006027b78 <col:14> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd006027c20 <col:17, col:23> 'int' '<'
+      | |-ImplicitCastExpr 0x7fd006027c08 <col:17> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd006027bc0 <col:17> 'int' lvalue Var 0x7fd006027ad8 'cpu' 'int'
+      | `-IntegerLiteral 0x7fd006027be8 <col:23> 'int' 1
+      |-UnaryOperator 0x7fd006027c70 <col:26, col:29> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fd006027c48 <col:26> 'int' lvalue Var 0x7fd006027ad8 'cpu' 'int'
+      `-CompoundStmt 0x7fd006028408 <col:33, line:27:3>
+        |-IfStmt 0x7fd006028070 <line:23:7, line:24:32>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-CallExpr 0x7fd006027d80 <line:23:11, col:37> 'int'
+        | | |-ImplicitCastExpr 0x7fd006027d68 <col:11> 'int (*)(int, void *)' <FunctionToPointerDecay>
+        | | | `-DeclRefExpr 0x7fd006027c90 <col:11> 'int (int, void *)' Function 0x7fd006025ad8 'test_bit' 'int (int, void *)'
+        | | |-ImplicitCastExpr 0x7fd006027db8 <col:20> 'int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fd006027cb8 <col:20> 'int' lvalue Var 0x7fd006027ad8 'cpu' 'int'
+        | | `-ImplicitCastExpr 0x7fd006027e10 <col:25, col:33> 'void *' <BitCast>
+        | |   `-ImplicitCastExpr 0x7fd006027df8 <col:25, col:33> 'unsigned int *' <ArrayToPointerDecay>
+        | |     `-MemberExpr 0x7fd006027d08 <col:25, col:33> 'unsigned int [1]' lvalue .bits 0x7fd006026590
+        | |       `-DeclRefExpr 0x7fd006027ce0 <col:25> 'struct (anonymous struct at c_files/pr39041.c:14:1)':'struct (anonymous at c_files/pr39041.c:14:1)' lvalue Var 0x7fd006026630 'cpumask' 'struct (anonymous struct at c_files/pr39041.c:14:1)':'struct (anonymous at c_files/pr39041.c:14:1)'
+        | |-CallExpr 0x7fd006028040 <line:24:2, col:32> 'void'
+        | | |-ImplicitCastExpr 0x7fd006028028 <col:2> 'void (*)(int *)' <FunctionToPointerDecay>
+        | | | `-DeclRefExpr 0x7fd006027e28 <col:2> 'void (int *)' Function 0x7fd006026780 'inc' 'void (int *)'
+        | | `-UnaryOperator 0x7fd006027fe0 <col:6, col:24> 'int *' prefix '&'
+        | |   `-MemberExpr 0x7fd006027fa8 <col:7, col:24> 'int' lvalue ->disabled 0x7fd0060261a8
+        | |     `-ImplicitCastExpr 0x7fd006027f90 <col:7, col:21> 'struct (anonymous struct at c_files/pr39041.c:10:5) *' <LValueToRValue>
+        | |       `-ArraySubscriptExpr 0x7fd006027f68 <col:7, col:21> 'struct (anonymous struct at c_files/pr39041.c:10:5) *' lvalue
+        | |         |-ImplicitCastExpr 0x7fd006027f38 <col:7, col:13> 'struct (anonymous struct at c_files/pr39041.c:10:5) **' <ArrayToPointerDecay>
+        | |         | `-MemberExpr 0x7fd006027e78 <col:7, col:13> 'struct (anonymous struct at c_files/pr39041.c:10:5) *[1]' lvalue .data 0x7fd006026350
+        | |         |   `-DeclRefExpr 0x7fd006027e50 <col:7> 'struct (anonymous struct at c_files/pr39041.c:9:1)':'struct (anonymous at c_files/pr39041.c:9:1)' lvalue Var 0x7fd0060263f0 'trace' 'struct (anonymous struct at c_files/pr39041.c:9:1)':'struct (anonymous at c_files/pr39041.c:9:1)'
+        | |         `-ImplicitCastExpr 0x7fd006027f50 <col:18> 'int' <LValueToRValue>
+        | |           `-DeclRefExpr 0x7fd006027eb0 <col:18> 'int' lvalue Var 0x7fd006027ad8 'cpu' 'int'
+        | `-<<<NULL>>>
+        `-IfStmt 0x7fd0060283d0 <line:25:7, line:26:32>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-UnaryOperator 0x7fd0060281f0 <line:25:11, col:38> 'int' prefix '!'
+          | `-CallExpr 0x7fd006028170 <col:12, col:38> 'int'
+          |   |-ImplicitCastExpr 0x7fd006028158 <col:12> 'int (*)(int, void *)' <FunctionToPointerDecay>
+          |   | `-DeclRefExpr 0x7fd0060280a8 <col:12> 'int (int, void *)' Function 0x7fd006025ad8 'test_bit' 'int (int, void *)'
+          |   |-ImplicitCastExpr 0x7fd0060281a8 <col:21> 'int' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7fd0060280d0 <col:21> 'int' lvalue Var 0x7fd006027ad8 'cpu' 'int'
+          |   `-ImplicitCastExpr 0x7fd0060281d8 <col:26, col:34> 'void *' <BitCast>
+          |     `-ImplicitCastExpr 0x7fd0060281c0 <col:26, col:34> 'unsigned int *' <ArrayToPointerDecay>
+          |       `-MemberExpr 0x7fd006028120 <col:26, col:34> 'unsigned int [1]' lvalue .bits 0x7fd006026590
+          |         `-DeclRefExpr 0x7fd0060280f8 <col:26> 'struct (anonymous struct at c_files/pr39041.c:14:1)':'struct (anonymous at c_files/pr39041.c:14:1)' lvalue Var 0x7fd006026630 'cpumask' 'struct (anonymous struct at c_files/pr39041.c:14:1)':'struct (anonymous at c_files/pr39041.c:14:1)'
+          |-CallExpr 0x7fd0060283a0 <line:26:2, col:32> 'void'
+          | |-ImplicitCastExpr 0x7fd006028388 <col:2> 'void (*)(int *)' <FunctionToPointerDecay>
+          | | `-DeclRefExpr 0x7fd006028210 <col:2> 'void (int *)' Function 0x7fd0060268c0 'dec' 'void (int *)'
+          | `-UnaryOperator 0x7fd006028368 <col:6, col:24> 'int *' prefix '&'
+          |   `-MemberExpr 0x7fd006028330 <col:7, col:24> 'int' lvalue ->disabled 0x7fd0060261a8
+          |     `-ImplicitCastExpr 0x7fd006028318 <col:7, col:21> 'struct (anonymous struct at c_files/pr39041.c:10:5) *' <LValueToRValue>
+          |       `-ArraySubscriptExpr 0x7fd0060282f0 <col:7, col:21> 'struct (anonymous struct at c_files/pr39041.c:10:5) *' lvalue
+          |         |-ImplicitCastExpr 0x7fd0060282c0 <col:7, col:13> 'struct (anonymous struct at c_files/pr39041.c:10:5) **' <ArrayToPointerDecay>
+          |         | `-MemberExpr 0x7fd006028260 <col:7, col:13> 'struct (anonymous struct at c_files/pr39041.c:10:5) *[1]' lvalue .data 0x7fd006026350
+          |         |   `-DeclRefExpr 0x7fd006028238 <col:7> 'struct (anonymous struct at c_files/pr39041.c:9:1)':'struct (anonymous at c_files/pr39041.c:9:1)' lvalue Var 0x7fd0060263f0 'trace' 'struct (anonymous struct at c_files/pr39041.c:9:1)':'struct (anonymous at c_files/pr39041.c:9:1)'
+          |         `-ImplicitCastExpr 0x7fd0060282d8 <col:18> 'int' <LValueToRValue>
+          |           `-DeclRefExpr 0x7fd006028298 <col:18> 'int' lvalue Var 0x7fd006027ad8 'cpu' 'int'
+          `-<<<NULL>>>

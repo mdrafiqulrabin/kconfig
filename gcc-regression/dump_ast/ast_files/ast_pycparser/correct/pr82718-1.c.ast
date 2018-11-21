@@ -1,0 +1,177 @@
+FileAST: 
+  Decl: e, [], ['extern'], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long']
+      TypeDecl: foo, []
+        IdentifierType: ['long']
+  Decl: None, [], [], []
+    Struct: S
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['unsigned', 'long']
+  FuncDef: 
+    Decl: bv, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['void']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['unsigned', 'long']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['unsigned', 'long']
+        TypeDecl: bv, []
+          IdentifierType: ['long']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['long']
+        Constant: int, 0
+      DoWhile: 
+        BinaryOp: <
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'long']
+            ID: a
+          ID: z
+        Compound: 
+          Decl: g, [], [], []
+            TypeDecl: g, []
+              IdentifierType: ['long']
+          DoWhile: 
+            BinaryOp: &&
+              BinaryOp: ==
+                ID: g
+                UnaryOp: -
+                  Constant: int, 1L
+              BinaryOp: ==
+                ID: e
+                Constant: int, 9959
+            Assignment: =
+              ID: g
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['long', 'int']
+                FuncCall: 
+                  ID: foo
+                  ExprList: 
+                    ID: x
+                    BinaryOp: +
+                      ID: y
+                      ID: a
+                    BinaryOp: -
+                      ID: z
+                      ID: a
+                    BinaryOp: +
+                      ID: w
+                      ID: a
+          If: 
+            BinaryOp: <=
+              ID: g
+              Constant: int, 0
+            Return: 
+              TernaryOp: 
+                BinaryOp: <
+                  ID: g
+                  Constant: int, 0
+                ID: g
+                ID: a
+          Assignment: +=
+            ID: a
+            ID: g
+      Return: 
+        ID: a
+  FuncDef: 
+    Decl: baz, ['const'], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: S
+        PtrDecl: []
+          TypeDecl: baz, ['const']
+            IdentifierType: ['char']
+    Compound: 
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['unsigned', 'long']
+        Constant: int, 8
+      Decl: j, [], [], []
+        PtrDecl: []
+          TypeDecl: j, []
+            IdentifierType: ['char']
+        Constant: int, 0
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['unsigned', 'long']
+        StructRef: ->
+          ID: x
+          ID: f
+      If: 
+        FuncCall: 
+          ID: __builtin_expect
+          ExprList: 
+            UnaryOp: !
+              UnaryOp: !
+                BinaryOp: !=
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned', 'long']
+                    FuncCall: 
+                      ID: bv
+                      ExprList: 
+                        StructRef: ->
+                          ID: x
+                          ID: f
+                        ID: j
+                        ID: z
+                        BinaryOp: +
+                          BinaryOp: +
+                            StructRef: ->
+                              ID: x
+                              ID: t
+                            ID: h
+                          Constant: int, 10
+                  ID: z
+            Constant: int, 0
+        Return: 
+          Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: x
+          ID: s
+        ID: z
+      Return: 
+        ID: j

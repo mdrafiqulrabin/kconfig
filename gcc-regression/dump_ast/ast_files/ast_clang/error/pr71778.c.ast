@@ -1,0 +1,55 @@
+c_files/pr71778.c:6:9: error: unknown type name '__simd128_int32_t'
+typedef __simd128_int32_t int32x4_t;
+        ^
+c_files/pr71778.c:9:53: warning: unknown attribute '__artificial__' ignored [-Wunknown-attributes]
+__attribute__  ((__always_inline__, __gnu_inline__, __artificial__))
+                                                    ^
+c_files/pr71778.c:16:21: error: use of unknown builtin '__builtin_neon_vshrs_nv4si' [-Wimplicit-function-declaration]
+  return (int32x4_t)__builtin_neon_vshrs_nv4si (__a, __b); /* { dg-error "argument 2 must be a constant immediate" } */
+                    ^
+1 warning and 2 errors generated.
+TranslationUnitDecl 0x7f97d5025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f97d5026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f97d5025d40 '__int128'
+|-TypedefDecl 0x7f97d5026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f97d5025d60 'unsigned __int128'
+|-TypedefDecl 0x7f97d5026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f97d5026170 'struct __NSConstantString_tag'
+|   `-Record 0x7f97d50260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f97d5026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f97d50263c0 'char *'
+|   `-BuiltinType 0x7f97d5025b60 'char'
+|-TypedefDecl 0x7f97d50266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f97d5026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f97d50264e0 'struct __va_list_tag'
+|     `-Record 0x7f97d5026458 '__va_list_tag'
+|-TypedefDecl 0x7f97d5026750 <c_files/pr71778.c:6:1, col:27> col:27 referenced invalid int32x4_t 'int'
+| `-BuiltinType 0x7f97d5025bc0 'int'
+|-FunctionDecl 0x7f97d5078b90 <line:8:15, line:17:1> line:10:1 used vshrq_n_s32 'int32x4_t (int32x4_t, const int)' extern inline
+| |-ParmVarDecl 0x7f97d5078a00 <col:14, col:24> col:24 used __a 'int32x4_t':'int'
+| |-ParmVarDecl 0x7f97d5078a78 <col:29, col:39> col:39 used __b 'const int'
+| |-CompoundStmt 0x7f97d5078f28 <line:11:1, line:17:1>
+| | `-ReturnStmt 0x7f97d5078f10 <line:16:3, col:57>
+| |   `-CStyleCastExpr 0x7f97d5078ee8 <col:10, col:57> 'int32x4_t':'int' <NoOp>
+| |     `-CallExpr 0x7f97d5078e70 <col:21, col:57> 'int'
+| |       |-ImplicitCastExpr 0x7f97d5078e58 <col:21> 'int (*)()' <FunctionToPointerDecay>
+| |       | `-DeclRefExpr 0x7f97d5078db8 <col:21> 'int ()' Function 0x7f97d5078d20 '__builtin_neon_vshrs_nv4si' 'int ()'
+| |       |-ImplicitCastExpr 0x7f97d5078ea8 <col:49> 'int32x4_t':'int' <LValueToRValue>
+| |       | `-DeclRefExpr 0x7f97d5078de0 <col:49> 'int32x4_t':'int' lvalue ParmVar 0x7f97d5078a00 '__a' 'int32x4_t':'int'
+| |       `-ImplicitCastExpr 0x7f97d5078ec0 <col:54> 'int' <LValueToRValue>
+| |         `-DeclRefExpr 0x7f97d5078e08 <col:54> 'const int' lvalue ParmVar 0x7f97d5078a78 '__b' 'const int'
+| |-GNUInlineAttr 0x7f97d5078c38 <line:9:37>
+| `-AlwaysInlineAttr 0x7f97d5078c80 <col:18> always_inline
+|-FunctionDecl 0x7f97d5078d20 <<invalid sloc>> line:16:21 implicit used __builtin_neon_vshrs_nv4si 'int ()'
+`-FunctionDecl 0x7f97d50790a0 <line:19:1, line:23:1> line:20:1 shift 'int32x4_t (int32x4_t, int)'
+  |-ParmVarDecl 0x7f97d5078f58 <col:8, col:18> col:18 used a 'int32x4_t':'int'
+  |-ParmVarDecl 0x7f97d5078fd0 <col:21, col:25> col:25 used b 'int'
+  `-CompoundStmt 0x7f97d50792b0 <line:21:1, line:23:1>
+    `-ReturnStmt 0x7f97d5079298 <line:22:3, col:27>
+      `-CallExpr 0x7f97d5079230 <col:10, col:27> 'int32x4_t':'int'
+        |-ImplicitCastExpr 0x7f97d5079218 <col:10> 'int32x4_t (*)(int32x4_t, const int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f97d5079148 <col:10> 'int32x4_t (int32x4_t, const int)' Function 0x7f97d5078b90 'vshrq_n_s32' 'int32x4_t (int32x4_t, const int)'
+        |-ImplicitCastExpr 0x7f97d5079268 <col:23> 'int32x4_t':'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f97d5079170 <col:23> 'int32x4_t':'int' lvalue ParmVar 0x7f97d5078f58 'a' 'int32x4_t':'int'
+        `-ImplicitCastExpr 0x7f97d5079280 <col:26> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f97d5079198 <col:26> 'int' lvalue ParmVar 0x7f97d5078fd0 'b' 'int'

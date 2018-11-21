@@ -1,0 +1,64 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: oldrho, [], [], []
+        TypeDecl: oldrho, []
+          IdentifierType: ['double']
+      Decl: beta, [], [], []
+        TypeDecl: beta, []
+          IdentifierType: ['double']
+        Constant: float, 0.0
+      Decl: work, [], [], []
+        TypeDecl: work, []
+          IdentifierType: ['double']
+        Constant: float, 1.0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 1
+        BinaryOp: <=
+          ID: i
+          Constant: int, 2
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: rho, [], [], []
+            TypeDecl: rho, []
+              IdentifierType: ['double']
+            BinaryOp: *
+              ID: work
+              ID: work
+          If: 
+            BinaryOp: !=
+              ID: i
+              Constant: int, 1
+            Assignment: =
+              ID: beta
+              BinaryOp: /
+                ID: rho
+                ID: oldrho
+          If: 
+            BinaryOp: ==
+              ID: beta
+              Constant: float, 1.0
+            FuncCall: 
+              ID: abort
+          Assignment: /=
+            ID: work
+            Constant: float, 2.0
+          Assignment: =
+            ID: oldrho
+            ID: rho
+      Return: 
+        Constant: int, 0

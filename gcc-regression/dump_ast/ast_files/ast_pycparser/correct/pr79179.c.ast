@@ -1,0 +1,47 @@
+FileAST: 
+  Pragma: pack(1)
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Struct: None
+        Decl: None, [], [], []
+          TypeDecl: None, []
+            IdentifierType: ['signed']
+          Constant: int, 1
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['unsigned', 'long']
+  FuncDef: 
+    Decl: c, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: c, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: b
+          ID: a
+        Constant: int, 0
+      For: 
+        BinaryOp: <=
+          StructRef: .
+            ID: b
+            ID: a
+          Constant: int, 45
+        Assignment: =
+          StructRef: .
+            ID: b
+            ID: a
+          BinaryOp: +
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['long']
+              StructRef: .
+                ID: b
+                ID: a
+            Constant: int, 1
+        EmptyStatement: 

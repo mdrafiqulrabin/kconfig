@@ -1,0 +1,40 @@
+FileAST: 
+  Decl: te, [], [], []
+    ArrayDecl: []
+      TypeDecl: te, []
+        IdentifierType: ['int']
+      Constant: int, 9
+  FuncDef: 
+    Decl: dt, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: cz, [], [], []
+            TypeDecl: cz, []
+              IdentifierType: ['int']
+        TypeDecl: dt, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        BinaryOp: <
+          ID: cz
+          Constant: int, 1
+        Compound: 
+          Decl: xy, [], [], []
+            TypeDecl: xy, []
+              IdentifierType: ['int']
+          For: 
+            Assignment: =
+              ID: xy
+              Constant: int, 0
+            BinaryOp: <
+              ID: xy
+              Constant: int, 9
+            UnaryOp: ++
+              ID: xy
+            Assignment: =
+              ArrayRef: 
+                ID: te
+                ID: xy
+              Constant: int, 0
+          UnaryOp: ++
+            ID: cz

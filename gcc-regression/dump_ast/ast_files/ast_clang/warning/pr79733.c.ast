@@ -1,0 +1,64 @@
+c_files/pr79733.c:8:52: warning: unknown attribute '__artificial__' ignored [-Wunknown-attributes]
+__attribute__ ((__gnu_inline__, __always_inline__, __artificial__))
+                                                   ^
+1 warning generated.
+TranslationUnitDecl 0x7ff8110264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff811026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff811026740 '__int128'
+|-TypedefDecl 0x7ff811026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff811026760 'unsigned __int128'
+|-TypedefDecl 0x7ff811026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff811026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff811026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff811026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff811026dc0 'char *'
+|   `-BuiltinType 0x7ff811026560 'char'
+|-TypedefDecl 0x7ff8110270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff811027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff811026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff811026e58 '__va_list_tag'
+|-TypedefDecl 0x7ff811027138 <c_files/pr79733.c:5:1, col:24> col:24 referenced __mmask16 'unsigned short'
+| `-BuiltinType 0x7ff811026640 'unsigned short'
+|-FunctionDecl 0x7ff811826b88 <line:7:1, line:13:1> line:9:1 used _mm512_kortestc 'int (__mmask16, __mmask16)' extern inline
+| |-ParmVarDecl 0x7ff811826a00 <col:18, col:28> col:28 used __A '__mmask16':'unsigned short'
+| |-ParmVarDecl 0x7ff811826a70 <col:33, col:43> col:43 used __B '__mmask16':'unsigned short'
+| |-CompoundStmt 0x7ff811827030 <line:10:1, line:13:1>
+| | `-ReturnStmt 0x7ff811827018 <line:11:3, line:12:64>
+| |   `-ImplicitCastExpr 0x7ff811827000 <line:11:10, line:12:64> 'int' <IntegralCast>
+| |     `-CStyleCastExpr 0x7ff811826fd8 <line:11:10, line:12:64> '__mmask16':'unsigned short' <IntegralCast>
+| |       `-CallExpr 0x7ff811826f90 <line:11:22, line:12:64> 'int'
+| |         |-ImplicitCastExpr 0x7ff811826f78 <line:11:22> 'int (*)(unsigned short, unsigned short)' <BuiltinFnToFnPtr>
+| |         | `-DeclRefExpr 0x7ff811826e30 <col:22> '<builtin fn type>' Function 0x7ff811826cc8 '__builtin_ia32_kortestchi' 'int (unsigned short, unsigned short)'
+| |         |-CStyleCastExpr 0x7ff811826ea8 <col:49, col:61> '__mmask16':'unsigned short' <NoOp>
+| |         | `-ImplicitCastExpr 0x7ff811826e90 <col:61> '__mmask16':'unsigned short' <LValueToRValue>
+| |         |   `-DeclRefExpr 0x7ff811826e58 <col:61> '__mmask16':'unsigned short' lvalue ParmVar 0x7ff811826a00 '__A' '__mmask16':'unsigned short'
+| |         `-CStyleCastExpr 0x7ff811826f20 <line:12:49, col:61> '__mmask16':'unsigned short' <NoOp>
+| |           `-ImplicitCastExpr 0x7ff811826f08 <col:61> '__mmask16':'unsigned short' <LValueToRValue>
+| |             `-DeclRefExpr 0x7ff811826ed0 <col:61> '__mmask16':'unsigned short' lvalue ParmVar 0x7ff811826a70 '__B' '__mmask16':'unsigned short'
+| |-AlwaysInlineAttr 0x7ff811826c30 <line:8:33> always_inline
+| `-GNUInlineAttr 0x7ff811826c78 <col:17>
+|-FunctionDecl 0x7ff811826cc8 <line:11:22> col:22 implicit used __builtin_ia32_kortestchi 'int (unsigned short, unsigned short)' extern
+| |-ParmVarDecl 0x7ff811826d60 <<invalid sloc>> <invalid sloc> 'unsigned short'
+| `-ParmVarDecl 0x7ff811826dc0 <<invalid sloc>> <invalid sloc> 'unsigned short'
+`-FunctionDecl 0x7ff811827098 <line:15:1, line:23:1> line:16:1 avx512f_test 'void ()'
+  `-CompoundStmt 0x7ff8118274c8 <line:17:1, line:23:1>
+    |-DeclStmt 0x7ff8118271d8 <line:18:3, col:28>
+    | `-VarDecl 0x7ff811827140 <col:3, col:27> col:22 used k1 'volatile __mmask16':'volatile unsigned short' cinit
+    |   `-ImplicitCastExpr 0x7ff8118271c0 <col:27> '__mmask16':'unsigned short' <IntegralCast>
+    |     `-IntegerLiteral 0x7ff8118271a0 <col:27> 'int' 0
+    |-DeclStmt 0x7ff811827298 <line:19:3, col:19>
+    | `-VarDecl 0x7ff811827200 <col:3, col:18> col:13 used k2 '__mmask16':'unsigned short' cinit
+    |   `-ImplicitCastExpr 0x7ff811827280 <col:18> '__mmask16':'unsigned short' <IntegralCast>
+    |     `-IntegerLiteral 0x7ff811827260 <col:18> 'int' 0
+    |-DeclStmt 0x7ff811827328 <line:20:3, col:19>
+    | `-VarDecl 0x7ff8118272c8 <col:3, col:18> col:18 used r 'volatile short'
+    `-BinaryOperator 0x7ff8118274a0 <line:22:3, col:30> 'short' '='
+      |-DeclRefExpr 0x7ff811827340 <col:3> 'volatile short' lvalue Var 0x7ff8118272c8 'r' 'volatile short'
+      `-ImplicitCastExpr 0x7ff811827488 <col:7, col:30> 'short' <IntegralCast>
+        `-CallExpr 0x7ff811827420 <col:7, col:30> 'int'
+          |-ImplicitCastExpr 0x7ff811827408 <col:7> 'int (*)(__mmask16, __mmask16)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7ff811827368 <col:7> 'int (__mmask16, __mmask16)' Function 0x7ff811826b88 '_mm512_kortestc' 'int (__mmask16, __mmask16)'
+          |-ImplicitCastExpr 0x7ff811827458 <col:24> '__mmask16':'unsigned short' <LValueToRValue>
+          | `-DeclRefExpr 0x7ff811827390 <col:24> 'volatile __mmask16':'volatile unsigned short' lvalue Var 0x7ff811827140 'k1' 'volatile __mmask16':'volatile unsigned short'
+          `-ImplicitCastExpr 0x7ff811827470 <col:28> '__mmask16':'unsigned short' <LValueToRValue>
+            `-DeclRefExpr 0x7ff8118273b8 <col:28> '__mmask16':'unsigned short' lvalue Var 0x7ff811827200 'k2' '__mmask16':'unsigned short'

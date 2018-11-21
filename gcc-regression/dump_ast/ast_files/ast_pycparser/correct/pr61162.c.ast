@@ -1,0 +1,28 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: e
+      EnumeratorList: 
+        Enumerator: A
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fn1, []
+          Enum: e
+    Compound: 
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          Enum: e
+      Decl: q, [], [], []
+        TypeDecl: q, []
+          Enum: e
+        Constant: int, 0
+      Assignment: =
+        ID: e
+        Constant: int, 0
+      Constant: int, 1
+      Return: 
+        Constant: int, 0

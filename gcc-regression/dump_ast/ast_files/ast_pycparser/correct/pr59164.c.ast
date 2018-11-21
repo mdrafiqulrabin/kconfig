@@ -1,0 +1,82 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    ArrayDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['long']
+      Constant: int, 10
+  Decl: c, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        Constant: int, 8
+      Constant: int, 10
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['int']
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: >>
+          Constant: int, 1
+          ID: p1
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fn2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: a
+          Constant: int, 1
+        BinaryOp: <=
+          ID: a
+          Constant: int, 4
+        UnaryOp: p++
+          ID: a
+        Compound: 
+          Assignment: =
+            ID: f
+            FuncCall: 
+              ID: fn1
+              ExprList: 
+                BinaryOp: <
+                  Constant: int, 0
+                  ArrayRef: 
+                    ArrayRef: 
+                      ID: c
+                      ID: a
+                    Constant: int, 0
+          If: 
+            BinaryOp: ||
+              ID: f
+              ID: d
+            Assignment: =
+              ID: e
+              Assignment: =
+                ArrayRef: 
+                  ID: b
+                  ID: a
+                Constant: int, 1

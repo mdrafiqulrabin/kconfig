@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7f94ce0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f94ce026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f94ce026740 '__int128'
+|-TypedefDecl 0x7f94ce026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f94ce026760 'unsigned __int128'
+|-TypedefDecl 0x7f94ce026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f94ce026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f94ce026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f94ce026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f94ce026dc0 'char *'
+|   `-BuiltinType 0x7f94ce026560 'char'
+|-TypedefDecl 0x7f94ce0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f94ce027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f94ce026ee0 'struct __va_list_tag'
+|     `-Record 0x7f94ce026e58 '__va_list_tag'
+|-RecordDecl 0x7f94ce027120 <c_files/pr43971.c:4:1, line:6:1> line:4:7 union ktime definition
+| `-FieldDecl 0x7f94cf000000 <line:5:5, col:10> col:10 referenced tv64 'long'
+|-TypedefDecl 0x7f94cf0000a0 <line:7:1, col:21> col:21 referenced ktime_t 'union ktime':'union ktime'
+| `-ElaboratedType 0x7f94cf000050 'union ktime' sugar
+|   `-RecordType 0x7f94ce0271b0 'union ktime'
+|     `-Record 0x7f94ce027120 'ktime'
+`-FunctionDecl 0x7f94cf0002b0 <line:8:1, line:14:1> line:9:1 do_one_initcall 'ktime_t (ktime_t, ktime_t)'
+  |-ParmVarDecl 0x7f94cf000130 <col:17, col:25> col:25 used rettime 'ktime_t':'union ktime'
+  |-ParmVarDecl 0x7f94cf0001a0 <col:34, col:42> col:42 used calltime 'ktime_t':'union ktime'
+  `-CompoundStmt 0x7f94cf000780 <line:10:1, line:14:1>
+    |-DeclStmt 0x7f94cf000408 <line:11:5, col:18>
+    | `-VarDecl 0x7f94cf0003a8 <col:5, col:13> col:13 used delta 'ktime_t':'union ktime'
+    |-BinaryOperator 0x7f94cf000700 <line:12:5, col:72> 'ktime_t':'union ktime' '='
+    | |-DeclRefExpr 0x7f94cf000420 <col:5> 'ktime_t':'union ktime' lvalue Var 0x7f94cf0003a8 'delta' 'ktime_t':'union ktime'
+    | `-StmtExpr 0x7f94cf0006e0 <col:13, col:72> 'ktime_t':'union ktime'
+    |   `-CompoundStmt 0x7f94cf0006c0 <col:14, col:71>
+    |     `-ImplicitCastExpr 0x7f94cf0006a8 <col:16, col:68> 'ktime_t':'union ktime' <LValueToRValue>
+    |       `-CompoundLiteralExpr 0x7f94cf000680 <col:16, col:68> 'ktime_t':'union ktime' lvalue
+    |         `-InitListExpr 0x7f94cf000638 <col:25, col:68> 'ktime_t':'union ktime' field Field 0x7f94cf000000 'tv64' 'long'
+    |           `-BinaryOperator 0x7f94cf000588 <col:35, col:63> 'long' '-'
+    |             |-ImplicitCastExpr 0x7f94cf000558 <col:35, col:45> 'long' <LValueToRValue>
+    |             | `-MemberExpr 0x7f94cf0004a0 <col:35, col:45> 'long' lvalue .tv64 0x7f94cf000000
+    |             |   `-ParenExpr 0x7f94cf000480 <col:35, col:43> 'ktime_t':'union ktime' lvalue
+    |             |     `-DeclRefExpr 0x7f94cf000458 <col:36> 'ktime_t':'union ktime' lvalue ParmVar 0x7f94cf000130 'rettime' 'ktime_t':'union ktime'
+    |             `-ImplicitCastExpr 0x7f94cf000570 <col:52, col:63> 'long' <LValueToRValue>
+    |               `-MemberExpr 0x7f94cf000520 <col:52, col:63> 'long' lvalue .tv64 0x7f94cf000000
+    |                 `-ParenExpr 0x7f94cf000500 <col:52, col:61> 'ktime_t':'union ktime' lvalue
+    |                   `-DeclRefExpr 0x7f94cf0004d8 <col:53> 'ktime_t':'union ktime' lvalue ParmVar 0x7f94cf0001a0 'calltime' 'ktime_t':'union ktime'
+    `-ReturnStmt 0x7f94cf000768 <line:13:5, col:12>
+      `-ImplicitCastExpr 0x7f94cf000750 <col:12> 'ktime_t':'union ktime' <LValueToRValue>
+        `-DeclRefExpr 0x7f94cf000728 <col:12> 'ktime_t':'union ktime' lvalue Var 0x7f94cf0003a8 'delta' 'ktime_t':'union ktime'

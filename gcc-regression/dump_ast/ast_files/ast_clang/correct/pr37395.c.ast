@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7ff8480264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff848026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff848026740 '__int128'
+|-TypedefDecl 0x7ff848026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff848026760 'unsigned __int128'
+|-TypedefDecl 0x7ff848026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff848026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff848026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff848026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff848026dc0 'char *'
+|   `-BuiltinType 0x7ff848026560 'char'
+|-TypedefDecl 0x7ff8480270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff848027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff848026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff848026e58 '__va_list_tag'
+`-FunctionDecl 0x7ff848077430 <c_files/pr37395.c:3:1, line:11:1> line:4:1 f 'int (int)'
+  |-ParmVarDecl 0x7ff848027138 <col:4, col:8> col:8 used j 'int'
+  `-CompoundStmt 0x7ff848077878 <line:5:1, line:11:1>
+    |-DeclStmt 0x7ff848077588 <line:6:3, col:8>
+    | `-VarDecl 0x7ff848077528 <col:3, col:7> col:7 used i 'int'
+    |-GCCAsmStmt 0x7ff848077690 <line:7:3, col:29>
+    | `-DeclRefExpr 0x7ff848077668 <col:27> 'int' lvalue Var 0x7ff848077528 'i' 'int'
+    |-IfStmt 0x7ff8480777e8 <line:8:3, line:9:9>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff848077750 <line:8:7, col:12> 'int' '>='
+    | | |-ImplicitCastExpr 0x7ff848077738 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff8480776f0 <col:7> 'int' lvalue Var 0x7ff848077528 'i' 'int'
+    | | `-IntegerLiteral 0x7ff848077718 <col:12> 'int' 0
+    | |-BinaryOperator 0x7ff8480777c0 <line:9:5, col:9> 'int' '='
+    | | |-DeclRefExpr 0x7ff848077778 <col:5> 'int' lvalue ParmVar 0x7ff848027138 'j' 'int'
+    | | `-IntegerLiteral 0x7ff8480777a0 <col:9> 'int' 0
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ff848077860 <line:10:3, col:10>
+      `-ImplicitCastExpr 0x7ff848077848 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7ff848077820 <col:10> 'int' lvalue ParmVar 0x7ff848027138 'j' 'int'

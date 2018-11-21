@@ -1,0 +1,2204 @@
+TranslationUnitDecl 0x7ff6bd01c6d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff6bd01cc20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff6bd01c940 '__int128'
+|-TypedefDecl 0x7ff6bd01cc90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff6bd01c960 'unsigned __int128'
+|-TypedefDecl 0x7ff6bd01cf68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff6bd01cd70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff6bd01cce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff6bd01d000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff6bd01cfc0 'char *'
+|   `-BuiltinType 0x7ff6bd01c760 'char'
+|-TypedefDecl 0x7ff6bd01d2c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff6bd01d270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff6bd01d0e0 'struct __va_list_tag'
+|     `-Record 0x7ff6bd01d058 '__va_list_tag'
+|-TypedefDecl 0x7ff6bd01d338 </usr/include/math.h:44:5, col:19> col:19 float_t 'float'
+| `-BuiltinType 0x7ff6bd01c8c0 'float'
+|-TypedefDecl 0x7ff6bd01d3a8 <line:45:5, col:20> col:20 double_t 'double'
+| `-BuiltinType 0x7ff6bd01c8e0 'double'
+|-FunctionDecl 0x7ff6bc8a42c8 <line:111:1, col:35> col:12 __math_errhandling 'int (void)' extern
+|-FunctionDecl 0x7ff6bc8a4488 <line:144:1, col:31> col:12 __fpclassifyf 'int (float)' extern
+| `-ParmVarDecl 0x7ff6bc8a43b8 <col:26> col:31 'float'
+|-FunctionDecl 0x7ff6bc8a4608 <line:145:1, col:32> col:12 __fpclassifyd 'int (double)' extern
+| `-ParmVarDecl 0x7ff6bc8a4540 <col:26> col:32 'double'
+|-FunctionDecl 0x7ff6bc8a4788 <line:146:1, col:37> col:12 __fpclassifyl 'int (long double)' extern
+| `-ParmVarDecl 0x7ff6bc8a46c0 <col:26, col:31> col:37 'long double'
+|-FunctionDecl 0x7ff6bc8a48d0 </usr/include/sys/cdefs.h:300:36, /usr/include/math.h:188:52> col:28 used __inline_isfinitef 'int (float)' inline
+| |-ParmVarDecl 0x7ff6bc8a4840 <col:47> col:52 'float'
+| `-AlwaysInlineAttr 0x7ff6bc8a4970 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8a4a60 <line:300:36, /usr/include/math.h:189:53> col:28 used __inline_isfinited 'int (double)' inline
+| |-ParmVarDecl 0x7ff6bc8a49d0 <col:47> col:53 'double'
+| `-AlwaysInlineAttr 0x7ff6bc8a4b00 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8a4bf0 <line:300:36, /usr/include/math.h:190:58> col:28 used __inline_isfinitel 'int (long double)' inline
+| |-ParmVarDecl 0x7ff6bc8a4b60 <col:47, col:52> col:58 'long double'
+| `-AlwaysInlineAttr 0x7ff6bc8a4c90 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8a4d80 <line:300:36, /usr/include/math.h:191:49> col:28 __inline_isinff 'int (float)' inline
+| |-ParmVarDecl 0x7ff6bc8a4cf0 <col:44> col:49 'float'
+| `-AlwaysInlineAttr 0x7ff6bc8a4e20 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8a4f10 <line:300:36, /usr/include/math.h:192:50> col:28 __inline_isinfd 'int (double)' inline
+| |-ParmVarDecl 0x7ff6bc8a4e80 <col:44> col:50 'double'
+| `-AlwaysInlineAttr 0x7ff6bc8a4fb0 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8a50a0 <line:300:36, /usr/include/math.h:193:55> col:28 __inline_isinfl 'int (long double)' inline
+| |-ParmVarDecl 0x7ff6bc8a5010 <col:44, col:49> col:55 'long double'
+| `-AlwaysInlineAttr 0x7ff6bc8a5140 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8a9230 <line:300:36, /usr/include/math.h:194:49> col:28 __inline_isnanf 'int (float)' inline
+| |-ParmVarDecl 0x7ff6bc8a51a0 <col:44> col:49 'float'
+| `-AlwaysInlineAttr 0x7ff6bc8a92d0 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8a93c0 <line:300:36, /usr/include/math.h:195:50> col:28 __inline_isnand 'int (double)' inline
+| |-ParmVarDecl 0x7ff6bc8a9330 <col:44> col:50 'double'
+| `-AlwaysInlineAttr 0x7ff6bc8a9460 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8a9550 <line:300:36, /usr/include/math.h:196:55> col:28 __inline_isnanl 'int (long double)' inline
+| |-ParmVarDecl 0x7ff6bc8a94c0 <col:44, col:49> col:55 'long double'
+| `-AlwaysInlineAttr 0x7ff6bc8a95f0 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8a96e0 <line:300:36, /usr/include/math.h:197:52> col:28 __inline_isnormalf 'int (float)' inline
+| |-ParmVarDecl 0x7ff6bc8a9650 <col:47> col:52 'float'
+| `-AlwaysInlineAttr 0x7ff6bc8a9780 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8a9870 <line:300:36, /usr/include/math.h:198:53> col:28 __inline_isnormald 'int (double)' inline
+| |-ParmVarDecl 0x7ff6bc8a97e0 <col:47> col:53 'double'
+| `-AlwaysInlineAttr 0x7ff6bc8a9910 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8a9a00 <line:300:36, /usr/include/math.h:199:58> col:28 __inline_isnormall 'int (long double)' inline
+| |-ParmVarDecl 0x7ff6bc8a9970 <col:47, col:52> col:58 'long double'
+| `-AlwaysInlineAttr 0x7ff6bc8a9aa0 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8a9b90 <line:300:36, /usr/include/math.h:200:51> col:28 __inline_signbitf 'int (float)' inline
+| |-ParmVarDecl 0x7ff6bc8a9b00 <col:46> col:51 'float'
+| `-AlwaysInlineAttr 0x7ff6bc8a9c30 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8a9d20 <line:300:36, /usr/include/math.h:201:52> col:28 __inline_signbitd 'int (double)' inline
+| |-ParmVarDecl 0x7ff6bc8a9c90 <col:46> col:52 'double'
+| `-AlwaysInlineAttr 0x7ff6bc8a9dc0 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8a9eb0 <line:300:36, /usr/include/math.h:202:57> col:28 __inline_signbitl 'int (long double)' inline
+| |-ParmVarDecl 0x7ff6bc8a9e20 <col:46, col:51> col:57 'long double'
+| `-AlwaysInlineAttr 0x7ff6bc8a9f50 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8aa040 prev 0x7ff6bc8a48d0 <line:300:36, /usr/include/math.h:206:1> line:204:28 used __inline_isfinitef 'int (float)' inline
+| |-ParmVarDecl 0x7ff6bc8a9fb0 <col:47, col:53> col:53 used __x 'float'
+| |-CompoundStmt 0x7ff6bc8aa690 <col:58, line:206:1>
+| | `-ReturnStmt 0x7ff6bc8aa678 <line:205:5, col:65>
+| |   `-BinaryOperator 0x7ff6bc8aa650 <col:12, col:65> 'int' '&&'
+| |     |-BinaryOperator 0x7ff6bc8aa1a8 <col:12, col:19> 'int' '=='
+| |     | |-ImplicitCastExpr 0x7ff6bc8aa178 <col:12> 'float' <LValueToRValue>
+| |     | | `-DeclRefExpr 0x7ff6bc8aa128 <col:12> 'float' lvalue ParmVar 0x7ff6bc8a9fb0 '__x' 'float'
+| |     | `-ImplicitCastExpr 0x7ff6bc8aa190 <col:19> 'float' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7ff6bc8aa150 <col:19> 'float' lvalue ParmVar 0x7ff6bc8a9fb0 '__x' 'float'
+| |     `-BinaryOperator 0x7ff6bc8aa628 <col:26, col:65> 'int' '!='
+| |       |-CallExpr 0x7ff6bc8aa420 <col:26, col:45> 'float'
+| |       | |-ImplicitCastExpr 0x7ff6bc8aa408 <col:26> 'float (*)(float)' <BuiltinFnToFnPtr>
+| |       | | `-DeclRefExpr 0x7ff6bc8aa390 <col:26> '<builtin fn type>' Function 0x7ff6bc8aa238 '__builtin_fabsf' 'float (float)'
+| |       | `-ImplicitCastExpr 0x7ff6bc8aa450 <col:42> 'float' <LValueToRValue>
+| |       |   `-DeclRefExpr 0x7ff6bc8aa3b8 <col:42> 'float' lvalue ParmVar 0x7ff6bc8a9fb0 '__x' 'float'
+| |       `-CallExpr 0x7ff6bc8aa600 <col:50, col:65> 'float'
+| |         `-ImplicitCastExpr 0x7ff6bc8aa5e8 <col:50> 'float (*)(void)' <BuiltinFnToFnPtr>
+| |           `-DeclRefExpr 0x7ff6bc8aa590 <col:50> '<builtin fn type>' Function 0x7ff6bc8aa4a0 '__builtin_inff' 'float (void)'
+| `-AlwaysInlineAttr 0x7ff6bc8aa0e0 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8aa238 </usr/include/math.h:205:26> col:26 implicit used __builtin_fabsf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8aa2d0 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7ff6bc8aa338 <col:26> Implicit
+| `-ConstAttr 0x7ff6bc8aa380 <col:26> Implicit
+|-FunctionDecl 0x7ff6bc8aa4a0 <col:50> col:50 implicit used __builtin_inff 'float (void)' extern
+| |-NoThrowAttr 0x7ff6bc8aa538 <col:50> Implicit
+| `-ConstAttr 0x7ff6bc8aa580 <col:50> Implicit
+|-FunctionDecl 0x7ff6bc8aa758 prev 0x7ff6bc8a4a60 </usr/include/sys/cdefs.h:300:36, /usr/include/math.h:209:1> line:207:28 used __inline_isfinited 'int (double)' inline
+| |-ParmVarDecl 0x7ff6bc8aa6c8 <col:47, col:54> col:54 used __x 'double'
+| |-CompoundStmt 0x7ff6bc8aad80 <col:59, line:209:1>
+| | `-ReturnStmt 0x7ff6bc8aad68 <line:208:5, col:63>
+| |   `-BinaryOperator 0x7ff6bc8aad40 <col:12, col:63> 'int' '&&'
+| |     |-BinaryOperator 0x7ff6bc8aa8c0 <col:12, col:19> 'int' '=='
+| |     | |-ImplicitCastExpr 0x7ff6bc8aa890 <col:12> 'double' <LValueToRValue>
+| |     | | `-DeclRefExpr 0x7ff6bc8aa840 <col:12> 'double' lvalue ParmVar 0x7ff6bc8aa6c8 '__x' 'double'
+| |     | `-ImplicitCastExpr 0x7ff6bc8aa8a8 <col:19> 'double' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7ff6bc8aa868 <col:19> 'double' lvalue ParmVar 0x7ff6bc8aa6c8 '__x' 'double'
+| |     `-BinaryOperator 0x7ff6bc8aad18 <col:26, col:63> 'int' '!='
+| |       |-CallExpr 0x7ff6bc8aab10 <col:26, col:44> 'double'
+| |       | |-ImplicitCastExpr 0x7ff6bc8aaaf8 <col:26> 'double (*)(double)' <BuiltinFnToFnPtr>
+| |       | | `-DeclRefExpr 0x7ff6bc8aaa80 <col:26> '<builtin fn type>' Function 0x7ff6bc8aa928 '__builtin_fabs' 'double (double)'
+| |       | `-ImplicitCastExpr 0x7ff6bc8aab40 <col:41> 'double' <LValueToRValue>
+| |       |   `-DeclRefExpr 0x7ff6bc8aaaa8 <col:41> 'double' lvalue ParmVar 0x7ff6bc8aa6c8 '__x' 'double'
+| |       `-CallExpr 0x7ff6bc8aacf0 <col:49, col:63> 'double'
+| |         `-ImplicitCastExpr 0x7ff6bc8aacd8 <col:49> 'double (*)(void)' <BuiltinFnToFnPtr>
+| |           `-DeclRefExpr 0x7ff6bc8aac80 <col:49> '<builtin fn type>' Function 0x7ff6bc8aab90 '__builtin_inf' 'double (void)'
+| `-AlwaysInlineAttr 0x7ff6bc8aa7f8 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8aa928 </usr/include/math.h:208:26> col:26 implicit used __builtin_fabs 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8aa9c0 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7ff6bc8aaa28 <col:26> Implicit
+| `-ConstAttr 0x7ff6bc8aaa70 <col:26> Implicit
+|-FunctionDecl 0x7ff6bc8aab90 <col:49> col:49 implicit used __builtin_inf 'double (void)' extern
+| |-NoThrowAttr 0x7ff6bc8aac28 <col:49> Implicit
+| `-ConstAttr 0x7ff6bc8aac70 <col:49> Implicit
+|-FunctionDecl 0x7ff6bc8aae48 prev 0x7ff6bc8a4bf0 </usr/include/sys/cdefs.h:300:36, /usr/include/math.h:212:1> line:210:28 used __inline_isfinitel 'int (long double)' inline
+| |-ParmVarDecl 0x7ff6bc8aadb8 <col:47, col:59> col:59 used __x 'long double'
+| |-CompoundStmt 0x7ff6bc8ab470 <col:64, line:212:1>
+| | `-ReturnStmt 0x7ff6bc8ab458 <line:211:5, col:65>
+| |   `-BinaryOperator 0x7ff6bc8ab430 <col:12, col:65> 'int' '&&'
+| |     |-BinaryOperator 0x7ff6bc8aafb0 <col:12, col:19> 'int' '=='
+| |     | |-ImplicitCastExpr 0x7ff6bc8aaf80 <col:12> 'long double' <LValueToRValue>
+| |     | | `-DeclRefExpr 0x7ff6bc8aaf30 <col:12> 'long double' lvalue ParmVar 0x7ff6bc8aadb8 '__x' 'long double'
+| |     | `-ImplicitCastExpr 0x7ff6bc8aaf98 <col:19> 'long double' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7ff6bc8aaf58 <col:19> 'long double' lvalue ParmVar 0x7ff6bc8aadb8 '__x' 'long double'
+| |     `-BinaryOperator 0x7ff6bc8ab408 <col:26, col:65> 'int' '!='
+| |       |-CallExpr 0x7ff6bc8ab200 <col:26, col:45> 'long double'
+| |       | |-ImplicitCastExpr 0x7ff6bc8ab1e8 <col:26> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+| |       | | `-DeclRefExpr 0x7ff6bc8ab170 <col:26> '<builtin fn type>' Function 0x7ff6bc8ab018 '__builtin_fabsl' 'long double (long double)'
+| |       | `-ImplicitCastExpr 0x7ff6bc8ab230 <col:42> 'long double' <LValueToRValue>
+| |       |   `-DeclRefExpr 0x7ff6bc8ab198 <col:42> 'long double' lvalue ParmVar 0x7ff6bc8aadb8 '__x' 'long double'
+| |       `-CallExpr 0x7ff6bc8ab3e0 <col:50, col:65> 'long double'
+| |         `-ImplicitCastExpr 0x7ff6bc8ab3c8 <col:50> 'long double (*)(void)' <BuiltinFnToFnPtr>
+| |           `-DeclRefExpr 0x7ff6bc8ab370 <col:50> '<builtin fn type>' Function 0x7ff6bc8ab280 '__builtin_infl' 'long double (void)'
+| `-AlwaysInlineAttr 0x7ff6bc8aaee8 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8ab018 </usr/include/math.h:211:26> col:26 implicit used __builtin_fabsl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8ab0b0 <<invalid sloc>> <invalid sloc> 'long double'
+| |-NoThrowAttr 0x7ff6bc8ab118 <col:26> Implicit
+| `-ConstAttr 0x7ff6bc8ab160 <col:26> Implicit
+|-FunctionDecl 0x7ff6bc8ab280 <col:50> col:50 implicit used __builtin_infl 'long double (void)' extern
+| |-NoThrowAttr 0x7ff6bc8ab318 <col:50> Implicit
+| `-ConstAttr 0x7ff6bc8ab360 <col:50> Implicit
+|-FunctionDecl 0x7ff6bc8ab538 prev 0x7ff6bc8a4d80 </usr/include/sys/cdefs.h:300:36, /usr/include/math.h:215:1> line:213:28 __inline_isinff 'int (float)' inline
+| |-ParmVarDecl 0x7ff6bc8ab4a8 <col:44, col:50> col:50 used __x 'float'
+| |-CompoundStmt 0x7ff6bc8ab778 <col:55, line:215:1>
+| | `-ReturnStmt 0x7ff6bc8ab760 <line:214:5, col:51>
+| |   `-BinaryOperator 0x7ff6bc8ab738 <col:12, col:51> 'int' '=='
+| |     |-CallExpr 0x7ff6bc8ab688 <col:12, col:31> 'float'
+| |     | |-ImplicitCastExpr 0x7ff6bc8ab670 <col:12> 'float (*)(float)' <BuiltinFnToFnPtr>
+| |     | | `-DeclRefExpr 0x7ff6bc8ab620 <col:12> '<builtin fn type>' Function 0x7ff6bc8aa238 '__builtin_fabsf' 'float (float)'
+| |     | `-ImplicitCastExpr 0x7ff6bc8ab6b8 <col:28> 'float' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7ff6bc8ab648 <col:28> 'float' lvalue ParmVar 0x7ff6bc8ab4a8 '__x' 'float'
+| |     `-CallExpr 0x7ff6bc8ab710 <col:36, col:51> 'float'
+| |       `-ImplicitCastExpr 0x7ff6bc8ab6f8 <col:36> 'float (*)(void)' <BuiltinFnToFnPtr>
+| |         `-DeclRefExpr 0x7ff6bc8ab6d0 <col:36> '<builtin fn type>' Function 0x7ff6bc8aa4a0 '__builtin_inff' 'float (void)'
+| `-AlwaysInlineAttr 0x7ff6bc8ab5d8 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8ab840 prev 0x7ff6bc8a4f10 <line:300:36, /usr/include/math.h:218:1> line:216:28 __inline_isinfd 'int (double)' inline
+| |-ParmVarDecl 0x7ff6bc8ab7b0 <col:44, col:51> col:51 used __x 'double'
+| |-CompoundStmt 0x7ff6bc8aba80 <col:56, line:218:1>
+| | `-ReturnStmt 0x7ff6bc8aba68 <line:217:5, col:49>
+| |   `-BinaryOperator 0x7ff6bc8aba40 <col:12, col:49> 'int' '=='
+| |     |-CallExpr 0x7ff6bc8ab990 <col:12, col:30> 'double'
+| |     | |-ImplicitCastExpr 0x7ff6bc8ab978 <col:12> 'double (*)(double)' <BuiltinFnToFnPtr>
+| |     | | `-DeclRefExpr 0x7ff6bc8ab928 <col:12> '<builtin fn type>' Function 0x7ff6bc8aa928 '__builtin_fabs' 'double (double)'
+| |     | `-ImplicitCastExpr 0x7ff6bc8ab9c0 <col:27> 'double' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7ff6bc8ab950 <col:27> 'double' lvalue ParmVar 0x7ff6bc8ab7b0 '__x' 'double'
+| |     `-CallExpr 0x7ff6bc8aba18 <col:35, col:49> 'double'
+| |       `-ImplicitCastExpr 0x7ff6bc8aba00 <col:35> 'double (*)(void)' <BuiltinFnToFnPtr>
+| |         `-DeclRefExpr 0x7ff6bc8ab9d8 <col:35> '<builtin fn type>' Function 0x7ff6bc8aab90 '__builtin_inf' 'double (void)'
+| `-AlwaysInlineAttr 0x7ff6bc8ab8e0 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8abb48 prev 0x7ff6bc8a50a0 <line:300:36, /usr/include/math.h:221:1> line:219:28 __inline_isinfl 'int (long double)' inline
+| |-ParmVarDecl 0x7ff6bc8abab8 <col:44, col:56> col:56 used __x 'long double'
+| |-CompoundStmt 0x7ff6bc8abd88 <col:61, line:221:1>
+| | `-ReturnStmt 0x7ff6bc8abd70 <line:220:5, col:51>
+| |   `-BinaryOperator 0x7ff6bc8abd48 <col:12, col:51> 'int' '=='
+| |     |-CallExpr 0x7ff6bc8abc98 <col:12, col:31> 'long double'
+| |     | |-ImplicitCastExpr 0x7ff6bc8abc80 <col:12> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+| |     | | `-DeclRefExpr 0x7ff6bc8abc30 <col:12> '<builtin fn type>' Function 0x7ff6bc8ab018 '__builtin_fabsl' 'long double (long double)'
+| |     | `-ImplicitCastExpr 0x7ff6bc8abcc8 <col:28> 'long double' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7ff6bc8abc58 <col:28> 'long double' lvalue ParmVar 0x7ff6bc8abab8 '__x' 'long double'
+| |     `-CallExpr 0x7ff6bc8abd20 <col:36, col:51> 'long double'
+| |       `-ImplicitCastExpr 0x7ff6bc8abd08 <col:36> 'long double (*)(void)' <BuiltinFnToFnPtr>
+| |         `-DeclRefExpr 0x7ff6bc8abce0 <col:36> '<builtin fn type>' Function 0x7ff6bc8ab280 '__builtin_infl' 'long double (void)'
+| `-AlwaysInlineAttr 0x7ff6bc8abbe8 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8abe50 prev 0x7ff6bc8a9230 <line:300:36, /usr/include/math.h:224:1> line:222:28 __inline_isnanf 'int (float)' inline
+| |-ParmVarDecl 0x7ff6bc8abdc0 <col:44, col:50> col:50 used __x 'float'
+| |-CompoundStmt 0x7ff6bc8abff8 <col:55, line:224:1>
+| | `-ReturnStmt 0x7ff6bc8abfe0 <line:223:5, col:19>
+| |   `-BinaryOperator 0x7ff6bc8abfb8 <col:12, col:19> 'int' '!='
+| |     |-ImplicitCastExpr 0x7ff6bc8abf88 <col:12> 'float' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7ff6bc8abf38 <col:12> 'float' lvalue ParmVar 0x7ff6bc8abdc0 '__x' 'float'
+| |     `-ImplicitCastExpr 0x7ff6bc8abfa0 <col:19> 'float' <LValueToRValue>
+| |       `-DeclRefExpr 0x7ff6bc8abf60 <col:19> 'float' lvalue ParmVar 0x7ff6bc8abdc0 '__x' 'float'
+| `-AlwaysInlineAttr 0x7ff6bc8abef0 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8ac0c0 prev 0x7ff6bc8a93c0 <line:300:36, /usr/include/math.h:227:1> line:225:28 __inline_isnand 'int (double)' inline
+| |-ParmVarDecl 0x7ff6bc8ac030 <col:44, col:51> col:51 used __x 'double'
+| |-CompoundStmt 0x7ff6bc8ac270 <col:56, line:227:1>
+| | `-ReturnStmt 0x7ff6bc8ac258 <line:226:5, col:19>
+| |   `-BinaryOperator 0x7ff6bc8ac230 <col:12, col:19> 'int' '!='
+| |     |-ImplicitCastExpr 0x7ff6bc8ac200 <col:12> 'double' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7ff6bc8ac1a8 <col:12> 'double' lvalue ParmVar 0x7ff6bc8ac030 '__x' 'double'
+| |     `-ImplicitCastExpr 0x7ff6bc8ac218 <col:19> 'double' <LValueToRValue>
+| |       `-DeclRefExpr 0x7ff6bc8ac1d0 <col:19> 'double' lvalue ParmVar 0x7ff6bc8ac030 '__x' 'double'
+| `-AlwaysInlineAttr 0x7ff6bc8ac160 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8ac338 prev 0x7ff6bc8a9550 <line:300:36, /usr/include/math.h:230:1> line:228:28 __inline_isnanl 'int (long double)' inline
+| |-ParmVarDecl 0x7ff6bc8ac2a8 <col:44, col:56> col:56 used __x 'long double'
+| |-CompoundStmt 0x7ff6bc8ac4e0 <col:61, line:230:1>
+| | `-ReturnStmt 0x7ff6bc8ac4c8 <line:229:5, col:19>
+| |   `-BinaryOperator 0x7ff6bc8ac4a0 <col:12, col:19> 'int' '!='
+| |     |-ImplicitCastExpr 0x7ff6bc8ac470 <col:12> 'long double' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7ff6bc8ac420 <col:12> 'long double' lvalue ParmVar 0x7ff6bc8ac2a8 '__x' 'long double'
+| |     `-ImplicitCastExpr 0x7ff6bc8ac488 <col:19> 'long double' <LValueToRValue>
+| |       `-DeclRefExpr 0x7ff6bc8ac448 <col:19> 'long double' lvalue ParmVar 0x7ff6bc8ac2a8 '__x' 'long double'
+| `-AlwaysInlineAttr 0x7ff6bc8ac3d8 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8ac5a8 prev 0x7ff6bc8a9b90 <line:300:36, /usr/include/math.h:235:1> line:231:28 __inline_signbitf 'int (float)' inline
+| |-ParmVarDecl 0x7ff6bc8ac518 <col:46, col:52> col:52 used __x 'float'
+| |-CompoundStmt 0x7ff6bc8acb60 <col:57, line:235:1>
+| | |-DeclStmt 0x7ff6bc8ac8c8 <line:232:5, col:47>
+| | | |-RecordDecl 0x7ff6bc8ac690 <col:5, col:42> col:5 union definition
+| | | | |-FieldDecl 0x7ff6bc8ac758 <col:13, col:19> col:19 referenced __f 'float'
+| | | | `-FieldDecl 0x7ff6bc8ac7b8 <col:24, col:37> col:37 referenced __u 'unsigned int'
+| | | `-VarDecl 0x7ff6bc8ac850 <col:5, col:44> col:44 used __u 'union (anonymous union at /usr/include/math.h:232:5)':'union (anonymous at /usr/include/math.h:232:5)'
+| | |-BinaryOperator 0x7ff6bc8ac980 <line:233:5, col:15> 'float' '='
+| | | |-MemberExpr 0x7ff6bc8ac908 <col:5, col:9> 'float' lvalue .__f 0x7ff6bc8ac758
+| | | | `-DeclRefExpr 0x7ff6bc8ac8e0 <col:5> 'union (anonymous union at /usr/include/math.h:232:5)':'union (anonymous at /usr/include/math.h:232:5)' lvalue Var 0x7ff6bc8ac850 '__u' 'union (anonymous union at /usr/include/math.h:232:5)':'union (anonymous at /usr/include/math.h:232:5)'
+| | | `-ImplicitCastExpr 0x7ff6bc8ac968 <col:15> 'float' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7ff6bc8ac940 <col:15> 'float' lvalue ParmVar 0x7ff6bc8ac518 '__x' 'float'
+| | `-ReturnStmt 0x7ff6bc8acb48 <line:234:5, col:31>
+| |   `-CStyleCastExpr 0x7ff6bc8acad0 <col:12, col:31> 'int' <IntegralCast>
+| |     `-ParenExpr 0x7ff6bc8acab0 <col:17, col:31> 'unsigned int'
+| |       `-BinaryOperator 0x7ff6bc8aca40 <col:18, col:29> 'unsigned int' '>>'
+| |         |-ImplicitCastExpr 0x7ff6bc8aca28 <col:18, col:22> 'unsigned int' <LValueToRValue>
+| |         | `-MemberExpr 0x7ff6bc8ac9d0 <col:18, col:22> 'unsigned int' lvalue .__u 0x7ff6bc8ac7b8
+| |         |   `-DeclRefExpr 0x7ff6bc8ac9a8 <col:18> 'union (anonymous union at /usr/include/math.h:232:5)':'union (anonymous at /usr/include/math.h:232:5)' lvalue Var 0x7ff6bc8ac850 '__u' 'union (anonymous union at /usr/include/math.h:232:5)':'union (anonymous at /usr/include/math.h:232:5)'
+| |         `-IntegerLiteral 0x7ff6bc8aca08 <col:29> 'int' 31
+| `-AlwaysInlineAttr 0x7ff6bc8ac648 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8acc38 prev 0x7ff6bc8a9d20 <line:300:36, /usr/include/math.h:240:1> line:236:28 __inline_signbitd 'int (double)' inline
+| |-ParmVarDecl 0x7ff6bc8acba8 <col:46, col:53> col:53 used __x 'double'
+| |-CompoundStmt 0x7ff6bc8ae200 <col:58, line:240:1>
+| | |-DeclStmt 0x7ff6bc8acf58 <line:237:5, col:54>
+| | | |-RecordDecl 0x7ff6bc8acd20 <col:5, col:49> col:5 union definition
+| | | | |-FieldDecl 0x7ff6bc8acde8 <col:13, col:20> col:20 referenced __f 'double'
+| | | | `-FieldDecl 0x7ff6bc8ace48 <col:25, col:44> col:44 referenced __u 'unsigned long long'
+| | | `-VarDecl 0x7ff6bc8acee0 <col:5, col:51> col:51 used __u 'union (anonymous union at /usr/include/math.h:237:5)':'union (anonymous at /usr/include/math.h:237:5)'
+| | |-BinaryOperator 0x7ff6bc8ad010 <line:238:5, col:15> 'double' '='
+| | | |-MemberExpr 0x7ff6bc8acf98 <col:5, col:9> 'double' lvalue .__f 0x7ff6bc8acde8
+| | | | `-DeclRefExpr 0x7ff6bc8acf70 <col:5> 'union (anonymous union at /usr/include/math.h:237:5)':'union (anonymous at /usr/include/math.h:237:5)' lvalue Var 0x7ff6bc8acee0 '__u' 'union (anonymous union at /usr/include/math.h:237:5)':'union (anonymous at /usr/include/math.h:237:5)'
+| | | `-ImplicitCastExpr 0x7ff6bc8acff8 <col:15> 'double' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7ff6bc8acfd0 <col:15> 'double' lvalue ParmVar 0x7ff6bc8acba8 '__x' 'double'
+| | `-ReturnStmt 0x7ff6bc8ad1d8 <line:239:5, col:31>
+| |   `-CStyleCastExpr 0x7ff6bc8ad160 <col:12, col:31> 'int' <IntegralCast>
+| |     `-ParenExpr 0x7ff6bc8ad140 <col:17, col:31> 'unsigned long long'
+| |       `-BinaryOperator 0x7ff6bc8ad0d0 <col:18, col:29> 'unsigned long long' '>>'
+| |         |-ImplicitCastExpr 0x7ff6bc8ad0b8 <col:18, col:22> 'unsigned long long' <LValueToRValue>
+| |         | `-MemberExpr 0x7ff6bc8ad060 <col:18, col:22> 'unsigned long long' lvalue .__u 0x7ff6bc8ace48
+| |         |   `-DeclRefExpr 0x7ff6bc8ad038 <col:18> 'union (anonymous union at /usr/include/math.h:237:5)':'union (anonymous at /usr/include/math.h:237:5)' lvalue Var 0x7ff6bc8acee0 '__u' 'union (anonymous union at /usr/include/math.h:237:5)':'union (anonymous at /usr/include/math.h:237:5)'
+| |         `-IntegerLiteral 0x7ff6bc8ad098 <col:29> 'int' 63
+| `-AlwaysInlineAttr 0x7ff6bc8accd8 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8ae2d8 prev 0x7ff6bc8a9eb0 <line:300:36, /usr/include/math.h:249:1> line:242:28 __inline_signbitl 'int (long double)' inline
+| |-ParmVarDecl 0x7ff6bc8ae248 <col:46, col:58> col:58 used __x 'long double'
+| |-CompoundStmt 0x7ff6bc8aeae0 <col:63, line:249:1>
+| | |-DeclStmt 0x7ff6bc8ae7a8 <line:243:5, line:246:10>
+| | | |-RecordDecl 0x7ff6bc8ae3c0 <line:243:5, line:246:5> line:243:5 union definition
+| | | | |-FieldDecl 0x7ff6bc8ae488 <line:244:9, col:21> col:21 referenced __ld 'long double'
+| | | | |-RecordDecl 0x7ff6bc8ae4d0 <line:245:9, col:64> col:9 struct definition
+| | | | | |-FieldDecl 0x7ff6bc8ae598 <col:17, col:36> col:36 __m 'unsigned long long'
+| | | | | `-FieldDecl 0x7ff6bc8ae5f8 <col:41, col:56> col:56 referenced __sexp 'unsigned short'
+| | | | `-FieldDecl 0x7ff6bc8ae690 <col:9, col:66> col:66 referenced __p 'struct (anonymous struct at /usr/include/math.h:245:9)':'struct (anonymous at /usr/include/math.h:245:9)'
+| | | `-VarDecl 0x7ff6bc8ae730 <line:243:5, line:246:7> col:7 used __u 'union (anonymous union at /usr/include/math.h:243:5)':'union (anonymous at /usr/include/math.h:243:5)'
+| | |-BinaryOperator 0x7ff6bc8ae860 <line:247:5, col:16> 'long double' '='
+| | | |-MemberExpr 0x7ff6bc8ae7e8 <col:5, col:9> 'long double' lvalue .__ld 0x7ff6bc8ae488
+| | | | `-DeclRefExpr 0x7ff6bc8ae7c0 <col:5> 'union (anonymous union at /usr/include/math.h:243:5)':'union (anonymous at /usr/include/math.h:243:5)' lvalue Var 0x7ff6bc8ae730 '__u' 'union (anonymous union at /usr/include/math.h:243:5)':'union (anonymous at /usr/include/math.h:243:5)'
+| | | `-ImplicitCastExpr 0x7ff6bc8ae848 <col:16> 'long double' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7ff6bc8ae820 <col:16> 'long double' lvalue ParmVar 0x7ff6bc8ae248 '__x' 'long double'
+| | `-ReturnStmt 0x7ff6bc8aeac8 <line:248:5, col:38>
+| |   `-CStyleCastExpr 0x7ff6bc8aea00 <col:12, col:38> 'int' <NoOp>
+| |     `-ParenExpr 0x7ff6bc8ae9e0 <col:17, col:38> 'int'
+| |       `-BinaryOperator 0x7ff6bc8ae970 <col:18, col:36> 'int' '>>'
+| |         |-ImplicitCastExpr 0x7ff6bc8ae958 <col:18, col:26> 'int' <IntegralCast>
+| |         | `-ImplicitCastExpr 0x7ff6bc8ae940 <col:18, col:26> 'unsigned short' <LValueToRValue>
+| |         |   `-MemberExpr 0x7ff6bc8ae8e8 <col:18, col:26> 'unsigned short' lvalue .__sexp 0x7ff6bc8ae5f8
+| |         |     `-MemberExpr 0x7ff6bc8ae8b0 <col:18, col:22> 'struct (anonymous struct at /usr/include/math.h:245:9)':'struct (anonymous at /usr/include/math.h:245:9)' lvalue .__p 0x7ff6bc8ae690
+| |         |       `-DeclRefExpr 0x7ff6bc8ae888 <col:18> 'union (anonymous union at /usr/include/math.h:243:5)':'union (anonymous at /usr/include/math.h:243:5)' lvalue Var 0x7ff6bc8ae730 '__u' 'union (anonymous union at /usr/include/math.h:243:5)':'union (anonymous at /usr/include/math.h:243:5)'
+| |         `-IntegerLiteral 0x7ff6bc8ae920 <col:36> 'int' 15
+| `-AlwaysInlineAttr 0x7ff6bc8ae378 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8aebb8 prev 0x7ff6bc8a96e0 <line:300:36, /usr/include/math.h:259:1> line:257:28 __inline_isnormalf 'int (float)' inline
+| |-ParmVarDecl 0x7ff6bc8aeb28 <col:47, col:53> col:53 used __x 'float'
+| |-CompoundStmt 0x7ff6bc8aeeb0 <col:58, line:259:1>
+| | `-ReturnStmt 0x7ff6bc8aee98 <line:258:5, <built-in>:109:21>
+| |   `-BinaryOperator 0x7ff6bc8aee70 </usr/include/math.h:258:12, <built-in>:109:21> 'int' '&&'
+| |     |-CallExpr 0x7ff6bc8aed30 </usr/include/math.h:258:12, col:34> 'int'
+| |     | |-ImplicitCastExpr 0x7ff6bc8aed18 <col:12> 'int (*)(float)' <FunctionToPointerDecay>
+| |     | | `-DeclRefExpr 0x7ff6bc8aeca0 <col:12> 'int (float)' Function 0x7ff6bc8aa040 '__inline_isfinitef' 'int (float)'
+| |     | `-ImplicitCastExpr 0x7ff6bc8aed60 <col:31> 'float' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7ff6bc8aecc8 <col:31> 'float' lvalue ParmVar 0x7ff6bc8aeb28 '__x' 'float'
+| |     `-BinaryOperator 0x7ff6bc8aee48 <col:39, <built-in>:109:21> 'int' '>='
+| |       |-CallExpr 0x7ff6bc8aede0 </usr/include/math.h:258:39, col:58> 'float'
+| |       | |-ImplicitCastExpr 0x7ff6bc8aedc8 <col:39> 'float (*)(float)' <BuiltinFnToFnPtr>
+| |       | | `-DeclRefExpr 0x7ff6bc8aed78 <col:39> '<builtin fn type>' Function 0x7ff6bc8aa238 '__builtin_fabsf' 'float (float)'
+| |       | `-ImplicitCastExpr 0x7ff6bc8aee10 <col:55> 'float' <LValueToRValue>
+| |       |   `-DeclRefExpr 0x7ff6bc8aeda0 <col:55> 'float' lvalue ParmVar 0x7ff6bc8aeb28 '__x' 'float'
+| |       `-FloatingLiteral 0x7ff6bc8aee28 <<built-in>:109:21> 'float' 1.175494e-38
+| `-AlwaysInlineAttr 0x7ff6bc8aec58 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8aef78 prev 0x7ff6bc8a9870 <line:300:36, /usr/include/math.h:262:1> line:260:28 __inline_isnormald 'int (double)' inline
+| |-ParmVarDecl 0x7ff6bc8aeee8 <col:47, col:54> col:54 used __x 'double'
+| |-CompoundStmt 0x7ff6bc8af688 <col:59, line:262:1>
+| | `-ReturnStmt 0x7ff6bc8af670 <line:261:5, <built-in>:123:21>
+| |   `-BinaryOperator 0x7ff6bc8af648 </usr/include/math.h:261:12, <built-in>:123:21> 'int' '&&'
+| |     |-CallExpr 0x7ff6bc8af0f0 </usr/include/math.h:261:12, col:34> 'int'
+| |     | |-ImplicitCastExpr 0x7ff6bc8af0d8 <col:12> 'int (*)(double)' <FunctionToPointerDecay>
+| |     | | `-DeclRefExpr 0x7ff6bc8af060 <col:12> 'int (double)' Function 0x7ff6bc8aa758 '__inline_isfinited' 'int (double)'
+| |     | `-ImplicitCastExpr 0x7ff6bc8af120 <col:31> 'double' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7ff6bc8af088 <col:31> 'double' lvalue ParmVar 0x7ff6bc8aeee8 '__x' 'double'
+| |     `-BinaryOperator 0x7ff6bc8af620 <col:39, <built-in>:123:21> 'int' '>='
+| |       |-CallExpr 0x7ff6bc8af1a0 </usr/include/math.h:261:39, col:57> 'double'
+| |       | |-ImplicitCastExpr 0x7ff6bc8af188 <col:39> 'double (*)(double)' <BuiltinFnToFnPtr>
+| |       | | `-DeclRefExpr 0x7ff6bc8af138 <col:39> '<builtin fn type>' Function 0x7ff6bc8aa928 '__builtin_fabs' 'double (double)'
+| |       | `-ImplicitCastExpr 0x7ff6bc8af1d0 <col:54> 'double' <LValueToRValue>
+| |       |   `-DeclRefExpr 0x7ff6bc8af160 <col:54> 'double' lvalue ParmVar 0x7ff6bc8aeee8 '__x' 'double'
+| |       `-FloatingLiteral 0x7ff6bc8af600 <<built-in>:123:21> 'double' 2.225074e-308
+| `-AlwaysInlineAttr 0x7ff6bc8af018 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8af750 prev 0x7ff6bc8a9a00 <line:300:36, /usr/include/math.h:265:1> line:263:28 __inline_isnormall 'int (long double)' inline
+| |-ParmVarDecl 0x7ff6bc8af6c0 <col:47, col:59> col:59 used __x 'long double'
+| |-CompoundStmt 0x7ff6bc8afa60 <col:64, line:265:1>
+| | `-ReturnStmt 0x7ff6bc8afa48 <line:264:5, <built-in>:137:22>
+| |   `-BinaryOperator 0x7ff6bc8afa20 </usr/include/math.h:264:12, <built-in>:137:22> 'int' '&&'
+| |     |-CallExpr 0x7ff6bc8af8d0 </usr/include/math.h:264:12, col:34> 'int'
+| |     | |-ImplicitCastExpr 0x7ff6bc8af8b8 <col:12> 'int (*)(long double)' <FunctionToPointerDecay>
+| |     | | `-DeclRefExpr 0x7ff6bc8af838 <col:12> 'int (long double)' Function 0x7ff6bc8aae48 '__inline_isfinitel' 'int (long double)'
+| |     | `-ImplicitCastExpr 0x7ff6bc8af900 <col:31> 'long double' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7ff6bc8af860 <col:31> 'long double' lvalue ParmVar 0x7ff6bc8af6c0 '__x' 'long double'
+| |     `-BinaryOperator 0x7ff6bc8af9f8 <col:39, <built-in>:137:22> 'int' '>='
+| |       |-CallExpr 0x7ff6bc8af980 </usr/include/math.h:264:39, col:58> 'long double'
+| |       | |-ImplicitCastExpr 0x7ff6bc8af968 <col:39> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+| |       | | `-DeclRefExpr 0x7ff6bc8af918 <col:39> '<builtin fn type>' Function 0x7ff6bc8ab018 '__builtin_fabsl' 'long double (long double)'
+| |       | `-ImplicitCastExpr 0x7ff6bc8af9b0 <col:55> 'long double' <LValueToRValue>
+| |       |   `-DeclRefExpr 0x7ff6bc8af940 <col:55> 'long double' lvalue ParmVar 0x7ff6bc8af6c0 '__x' 'long double'
+| |       `-FloatingLiteral 0x7ff6bc8af9c8 <<built-in>:137:22> 'long double' 0.000000e+00
+| `-AlwaysInlineAttr 0x7ff6bc8af7f0 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8afb28 </usr/include/math.h:322:14> col:14 implicit acosf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8afbc0 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8afc28 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8afc70 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8afc80 prev 0x7ff6bc8afb28 <col:1, col:25> col:14 acosf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8afa98 <col:20> col:25 'float'
+| |-ConstAttr 0x7ff6bc8afd58 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8afd68 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8afe20 <line:323:15> col:15 implicit acos 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8afeb8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8aff20 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8aff68 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8aff78 prev 0x7ff6bc8afe20 <col:1, col:26> col:15 acos 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8afd90 <col:20> col:26 'double'
+| |-ConstAttr 0x7ff6bc8b0050 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b0060 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b0118 <line:324:20> col:20 implicit acosl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b01b0 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8b0218 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8b0260 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8b0270 prev 0x7ff6bc8b0118 <col:1, col:37> col:20 acosl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b0088 <col:26, col:31> col:37 'long double'
+| |-ConstAttr 0x7ff6bc8b0348 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b0358 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b0410 <line:326:14> col:14 implicit asinf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b04a8 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8b0510 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8b0558 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8b0568 prev 0x7ff6bc8b0410 <col:1, col:25> col:14 asinf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b0380 <col:20> col:25 'float'
+| |-ConstAttr 0x7ff6bc8b0a40 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b0a50 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b0b08 <line:327:15> col:15 implicit asin 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b0ba0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8b0c08 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8b0c50 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8b0c60 prev 0x7ff6bc8b0b08 <col:1, col:26> col:15 asin 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b0a78 <col:20> col:26 'double'
+| |-ConstAttr 0x7ff6bc8b0d38 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b0d48 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b0e00 <line:328:20> col:20 implicit asinl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b0e98 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8b0f00 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8b0f48 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8b0f58 prev 0x7ff6bc8b0e00 <col:1, col:37> col:20 asinl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b0d70 <col:26, col:31> col:37 'long double'
+| |-ConstAttr 0x7ff6bc8b1030 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b1040 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b10f8 <line:330:14> col:14 implicit atanf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b1190 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8b11f8 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8b1240 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8b1250 prev 0x7ff6bc8b10f8 <col:1, col:25> col:14 atanf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b1068 <col:20> col:25 'float'
+| |-ConstAttr 0x7ff6bc8b1328 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b1338 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b13f0 <line:331:15> col:15 implicit atan 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b1488 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8b14f0 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8b1538 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8b1548 prev 0x7ff6bc8b13f0 <col:1, col:26> col:15 atan 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b1360 <col:20> col:26 'double'
+| |-ConstAttr 0x7ff6bc8b1620 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b1630 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b16e8 <line:332:20> col:20 implicit atanl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b1780 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8b17e8 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8b1830 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8b1840 prev 0x7ff6bc8b16e8 <col:1, col:37> col:20 atanl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b1658 <col:26, col:31> col:37 'long double'
+| |-ConstAttr 0x7ff6bc8b1918 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b1928 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc856ad8 <line:334:14> col:14 implicit atan2f 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc856b70 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc856bd0 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc856c40 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc856c88 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc856c98 prev 0x7ff6bc856ad8 <col:1, col:33> col:14 atan2f 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8b1950 <col:21> col:26 'float'
+| |-ParmVarDecl 0x7ff6bc856a00 <col:28> col:33 'float'
+| |-ConstAttr 0x7ff6bc856d78 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc856d88 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc856f08 <line:335:15> col:15 implicit atan2 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc856fa0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc857000 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc857070 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8570b8 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8570c8 prev 0x7ff6bc856f08 <col:1, col:35> col:15 atan2 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc856db0 <col:21> col:27 'double'
+| |-ParmVarDecl 0x7ff6bc856e28 <col:29> col:35 'double'
+| |-ConstAttr 0x7ff6bc8571a8 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8571b8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc857338 <line:336:20> col:20 implicit atan2l 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8573d0 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc857430 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8574a0 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8574e8 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8574f8 prev 0x7ff6bc857338 <col:1, col:51> col:20 atan2l 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8571e0 <col:27, col:32> col:38 'long double'
+| |-ParmVarDecl 0x7ff6bc857258 <col:40, col:45> col:51 'long double'
+| |-ConstAttr 0x7ff6bc8575d8 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8575e8 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8576a0 <line:338:14> col:14 implicit cosf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc857738 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8577a0 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8577e8 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8577f8 prev 0x7ff6bc8576a0 <col:1, col:24> col:14 cosf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc857610 <col:19> col:24 'float'
+| |-ConstAttr 0x7ff6bc8578d0 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8578e0 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b2200 <line:339:15> col:15 implicit cos 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b2298 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8b2300 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8b2348 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8b2358 prev 0x7ff6bc8b2200 <col:1, col:25> col:15 cos 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc857908 <col:19> col:25 'double'
+| |-ConstAttr 0x7ff6bc8b2430 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b2440 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b24f8 <line:340:20> col:20 implicit cosl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b2590 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8b25f8 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8b2640 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8b2650 prev 0x7ff6bc8b24f8 <col:1, col:36> col:20 cosl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b2468 <col:25, col:30> col:36 'long double'
+| |-ConstAttr 0x7ff6bc8b2728 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b2738 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b27f0 <line:342:14> col:14 implicit sinf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b2888 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8b28f0 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8b2938 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8b2948 prev 0x7ff6bc8b27f0 <col:1, col:24> col:14 sinf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b2760 <col:19> col:24 'float'
+| |-ConstAttr 0x7ff6bc8b2a20 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b2a30 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b2ae8 <line:343:15> col:15 implicit sin 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b2b80 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8b2be8 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8b2c30 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8b2c40 prev 0x7ff6bc8b2ae8 <col:1, col:25> col:15 sin 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b2a58 <col:19> col:25 'double'
+| |-ConstAttr 0x7ff6bc8b2d18 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b2d28 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b2de0 <line:344:20> col:20 implicit sinl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b2e78 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8b2ee0 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8b2f28 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8b2f38 prev 0x7ff6bc8b2de0 <col:1, col:36> col:20 sinl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b2d50 <col:25, col:30> col:36 'long double'
+| |-ConstAttr 0x7ff6bc8b3010 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b3020 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b30d8 <line:346:14> col:14 implicit tanf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b3170 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8b31d8 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8b3238 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8b3248 prev 0x7ff6bc8b30d8 <col:1, col:24> col:14 tanf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b3048 <col:19> col:24 'float'
+| |-ConstAttr 0x7ff6bc8b3320 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b3330 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b33e8 <line:347:15> col:15 implicit tan 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b3480 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8b34e8 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8b3530 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8b3540 prev 0x7ff6bc8b33e8 <col:1, col:25> col:15 tan 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b3358 <col:19> col:25 'double'
+| |-ConstAttr 0x7ff6bc8b3618 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b3628 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b36e0 <line:348:20> col:20 implicit tanl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b3778 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8b37e0 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8b3828 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8b3838 prev 0x7ff6bc8b36e0 <col:1, col:36> col:20 tanl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b3650 <col:25, col:30> col:36 'long double'
+| |-ConstAttr 0x7ff6bc8b3910 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b3920 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b39d8 <line:350:14> col:14 implicit acoshf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b3a70 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8b3ad8 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8b3b20 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8b3b30 prev 0x7ff6bc8b39d8 <col:1, col:26> col:14 acoshf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b3948 <col:21> col:26 'float'
+| |-ConstAttr 0x7ff6bc8b3c08 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b3c18 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b3cd0 <line:351:15> col:15 implicit acosh 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b3d68 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8b3dd0 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8b3e18 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8b3e28 prev 0x7ff6bc8b3cd0 <col:1, col:27> col:15 acosh 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b3c40 <col:21> col:27 'double'
+| |-ConstAttr 0x7ff6bc8b3f00 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b3f10 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b3fc8 <line:352:20> col:20 implicit acoshl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b4060 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8b40c8 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8b4110 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8b4120 prev 0x7ff6bc8b3fc8 <col:1, col:38> col:20 acoshl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b3f38 <col:27, col:32> col:38 'long double'
+| |-ConstAttr 0x7ff6bc8b4200 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b4210 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b42c8 <line:354:14> col:14 implicit asinhf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b4360 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8b43c8 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8b4410 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8b4420 prev 0x7ff6bc8b42c8 <col:1, col:26> col:14 asinhf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b4238 <col:21> col:26 'float'
+| |-ConstAttr 0x7ff6bc8b44f8 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b4508 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b45c0 <line:355:15> col:15 implicit asinh 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b4658 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8b46c0 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8b4708 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8b4718 prev 0x7ff6bc8b45c0 <col:1, col:27> col:15 asinh 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b4530 <col:21> col:27 'double'
+| |-ConstAttr 0x7ff6bc8b47f0 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b4800 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b48b8 <line:356:20> col:20 implicit asinhl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b4950 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8b49b8 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8b4a00 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8b4a10 prev 0x7ff6bc8b48b8 <col:1, col:38> col:20 asinhl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b4828 <col:27, col:32> col:38 'long double'
+| |-ConstAttr 0x7ff6bc8b4ae8 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b4af8 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b4bb0 <line:358:14> col:14 implicit atanhf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b4c48 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8b4cb0 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8b4cf8 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8b4d08 prev 0x7ff6bc8b4bb0 <col:1, col:26> col:14 atanhf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b4b20 <col:21> col:26 'float'
+| |-ConstAttr 0x7ff6bc8b4de0 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b4df0 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b4ea8 <line:359:15> col:15 implicit atanh 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b4f40 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8b4fa8 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8b4ff0 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8b5000 prev 0x7ff6bc8b4ea8 <col:1, col:27> col:15 atanh 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b4e18 <col:21> col:27 'double'
+| |-ConstAttr 0x7ff6bc8b50d8 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b50e8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b6200 <line:360:20> col:20 implicit atanhl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b6298 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8b6300 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8b6348 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8b6358 prev 0x7ff6bc8b6200 <col:1, col:38> col:20 atanhl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b5110 <col:27, col:32> col:38 'long double'
+| |-ConstAttr 0x7ff6bc8b6430 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b6440 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b64f8 <line:362:14> col:14 implicit coshf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b6590 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8b65f8 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8b6640 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8b6650 prev 0x7ff6bc8b64f8 <col:1, col:25> col:14 coshf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b6468 <col:20> col:25 'float'
+| |-ConstAttr 0x7ff6bc8b6728 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b6738 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b67f0 <line:363:15> col:15 implicit cosh 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b6888 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8b68f0 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8b6938 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8b6948 prev 0x7ff6bc8b67f0 <col:1, col:26> col:15 cosh 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b6760 <col:20> col:26 'double'
+| |-ConstAttr 0x7ff6bc8b6a20 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b6a30 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b6ae8 <line:364:20> col:20 implicit coshl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b6b80 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8b6be8 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8b6c30 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8b6c40 prev 0x7ff6bc8b6ae8 <col:1, col:37> col:20 coshl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b6a58 <col:26, col:31> col:37 'long double'
+| |-ConstAttr 0x7ff6bc8b6d18 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b6d28 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b6de0 <line:366:14> col:14 implicit sinhf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b6e78 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8b6ee0 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8b6f28 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8b6f38 prev 0x7ff6bc8b6de0 <col:1, col:25> col:14 sinhf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b6d50 <col:20> col:25 'float'
+| |-ConstAttr 0x7ff6bc8b7010 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b7020 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b70d8 <line:367:15> col:15 implicit sinh 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b7170 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8b71d8 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8b7238 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8b7248 prev 0x7ff6bc8b70d8 <col:1, col:26> col:15 sinh 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b7048 <col:20> col:26 'double'
+| |-ConstAttr 0x7ff6bc8b7320 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b7330 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b73e8 <line:368:20> col:20 implicit sinhl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b7480 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8b74e8 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8b7530 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8b7540 prev 0x7ff6bc8b73e8 <col:1, col:37> col:20 sinhl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b7358 <col:26, col:31> col:37 'long double'
+| |-ConstAttr 0x7ff6bc8b7618 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b7628 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b76e0 <line:370:14> col:14 implicit tanhf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b7778 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8b77e0 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8b7828 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8b7838 prev 0x7ff6bc8b76e0 <col:1, col:25> col:14 tanhf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b7650 <col:20> col:25 'float'
+| |-ConstAttr 0x7ff6bc8b7910 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b7920 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b79d8 <line:371:15> col:15 implicit tanh 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b7a70 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8b7ad8 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8b7b20 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8b7b30 prev 0x7ff6bc8b79d8 <col:1, col:26> col:15 tanh 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b7948 <col:20> col:26 'double'
+| |-ConstAttr 0x7ff6bc8b7c08 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b7c18 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b7cd0 <line:372:20> col:20 implicit tanhl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b7d68 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8b7dd0 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8b7e18 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8b7e28 prev 0x7ff6bc8b7cd0 <col:1, col:37> col:20 tanhl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b7c40 <col:26, col:31> col:37 'long double'
+| |-ConstAttr 0x7ff6bc8b7f00 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b7f10 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b7fc8 <line:374:14> col:14 implicit expf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b8060 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8b80c8 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8b8110 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8b8120 prev 0x7ff6bc8b7fc8 <col:1, col:24> col:14 expf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b7f38 <col:19> col:24 'float'
+| |-ConstAttr 0x7ff6bc8b8200 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b8210 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b82c8 <line:375:15> col:15 implicit exp 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b8360 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8b83c8 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8b8410 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8b8420 prev 0x7ff6bc8b82c8 <col:1, col:25> col:15 exp 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b8238 <col:19> col:25 'double'
+| |-ConstAttr 0x7ff6bc8b84f8 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b8508 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b85c0 <line:376:20> col:20 implicit expl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b8658 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8b86c0 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8b8708 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8b8718 prev 0x7ff6bc8b85c0 <col:1, col:36> col:20 expl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b8530 <col:25, col:30> col:36 'long double'
+| |-ConstAttr 0x7ff6bc8b87f0 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b8800 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b88b8 <line:378:14> col:14 implicit exp2f 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b8950 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8b89b8 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8b8a00 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8b8a10 prev 0x7ff6bc8b88b8 <col:1, col:25> col:14 exp2f 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b8828 <col:20> col:25 'float'
+| |-ConstAttr 0x7ff6bc8b8ae8 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b8af8 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b8bb0 <line:379:15> col:15 implicit exp2 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b8c48 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8b8cb0 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8b8cf8 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8b8d08 prev 0x7ff6bc8b8bb0 <col:1, col:26> col:15 exp2 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b8b20 <col:20> col:26 'double'
+| |-ConstAttr 0x7ff6bc8b8de0 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b8df0 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b8ea8 <line:380:20> col:20 implicit exp2l 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b8f40 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8b8fa8 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8b8ff0 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8b9000 prev 0x7ff6bc8b8ea8 <col:1, col:37> col:20 exp2l 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b8e18 <col:26, col:31> col:37 'long double'
+| |-ConstAttr 0x7ff6bc8b90d8 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b90e8 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b9200 <line:382:14> col:14 implicit expm1f 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b9298 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8b9300 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8b9348 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8b9358 prev 0x7ff6bc8b9200 <col:1, col:26> col:14 expm1f 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b9110 <col:21> col:26 'float'
+| |-ConstAttr 0x7ff6bc8b9430 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b9440 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b94f8 <line:383:15> col:15 implicit expm1 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b9590 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8b95f8 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8b9640 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8b9650 prev 0x7ff6bc8b94f8 <col:1, col:27> col:15 expm1 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b9468 <col:21> col:27 'double'
+| |-ConstAttr 0x7ff6bc8b9728 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b9738 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b97f0 <line:384:20> col:20 implicit expm1l 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b9888 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8b98f0 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8b9938 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8b9948 prev 0x7ff6bc8b97f0 <col:1, col:38> col:20 expm1l 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8b9760 <col:27, col:32> col:38 'long double'
+| |-ConstAttr 0x7ff6bc8b9a20 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b9a30 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b9ae8 <line:386:14> col:14 implicit logf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b9b80 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8b9be8 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8b9c30 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8b9c40 prev 0x7ff6bc8b9ae8 <col:1, col:24> col:14 logf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b9a58 <col:19> col:24 'float'
+| |-ConstAttr 0x7ff6bc8b9d18 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b9d28 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b9de0 <line:387:15> col:15 implicit log 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b9e78 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8b9ee0 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8b9f28 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8b9f38 prev 0x7ff6bc8b9de0 <col:1, col:25> col:15 log 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b9d50 <col:19> col:25 'double'
+| |-ConstAttr 0x7ff6bc8ba010 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8ba020 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8ba0d8 <line:388:20> col:20 implicit logl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8ba170 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8ba1d8 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8ba238 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8ba248 prev 0x7ff6bc8ba0d8 <col:1, col:36> col:20 logl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8ba048 <col:25, col:30> col:36 'long double'
+| |-ConstAttr 0x7ff6bc8ba320 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8ba330 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8ba3e8 <line:390:14> col:14 implicit log10f 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8ba480 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8ba4e8 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8ba530 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8ba540 prev 0x7ff6bc8ba3e8 <col:1, col:26> col:14 log10f 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8ba358 <col:21> col:26 'float'
+| |-ConstAttr 0x7ff6bc8ba618 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8ba628 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8ba6e0 <line:391:15> col:15 implicit log10 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8ba778 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8ba7e0 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8ba828 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8ba838 prev 0x7ff6bc8ba6e0 <col:1, col:27> col:15 log10 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8ba650 <col:21> col:27 'double'
+| |-ConstAttr 0x7ff6bc8ba910 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8ba920 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8ba9d8 <line:392:20> col:20 implicit log10l 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8baa70 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8baad8 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8bab20 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8bab30 prev 0x7ff6bc8ba9d8 <col:1, col:38> col:20 log10l 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8ba948 <col:27, col:32> col:38 'long double'
+| |-ConstAttr 0x7ff6bc8bac08 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8bac18 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bacd0 <line:394:14> col:14 implicit log2f 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8bad68 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8badd0 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8bae18 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8bae28 prev 0x7ff6bc8bacd0 <col:1, col:25> col:14 log2f 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8bac40 <col:20> col:25 'float'
+| |-ConstAttr 0x7ff6bc8baf00 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8baf10 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bafc8 <line:395:15> col:15 implicit log2 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8bb060 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8bb0c8 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8bb110 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8bb120 prev 0x7ff6bc8bafc8 <col:1, col:26> col:15 log2 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8baf38 <col:20> col:26 'double'
+| |-ConstAttr 0x7ff6bc8bb200 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8bb210 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bb2c8 <line:396:20> col:20 implicit log2l 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8bb360 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8bb3c8 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8bb410 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8bb420 prev 0x7ff6bc8bb2c8 <col:1, col:37> col:20 log2l 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8bb238 <col:26, col:31> col:37 'long double'
+| |-ConstAttr 0x7ff6bc8bb4f8 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8bb508 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bb5c0 <line:398:14> col:14 implicit log1pf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8bb658 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8bb6c0 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8bb708 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8bb718 prev 0x7ff6bc8bb5c0 <col:1, col:26> col:14 log1pf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8bb530 <col:21> col:26 'float'
+| |-ConstAttr 0x7ff6bc8bb7f0 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8bb800 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bb8b8 <line:399:15> col:15 implicit log1p 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8bb950 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8bb9b8 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8bba00 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8bba10 prev 0x7ff6bc8bb8b8 <col:1, col:27> col:15 log1p 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8bb828 <col:21> col:27 'double'
+| |-ConstAttr 0x7ff6bc8bbae8 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8bbaf8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bbbb0 <line:400:20> col:20 implicit log1pl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8bbc48 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8bbcb0 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8bbcf8 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8bbd08 prev 0x7ff6bc8bbbb0 <col:1, col:38> col:20 log1pl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8bbb20 <col:27, col:32> col:38 'long double'
+| |-ConstAttr 0x7ff6bc8bbde0 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8bbdf0 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bbea8 <line:402:14> col:14 implicit logbf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8bbf40 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8bbfa8 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8bbff0 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8bc000 prev 0x7ff6bc8bbea8 <col:1, col:25> col:14 logbf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8bbe18 <col:20> col:25 'float'
+| |-ConstAttr 0x7ff6bc8bc0d8 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8bc0e8 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bc200 <line:403:15> col:15 implicit logb 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8bc298 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8bc300 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8bc348 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8bc358 prev 0x7ff6bc8bc200 <col:1, col:26> col:15 logb 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8bc110 <col:20> col:26 'double'
+| |-ConstAttr 0x7ff6bc8bc430 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8bc440 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bc4f8 <line:404:20> col:20 implicit logbl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8bc590 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8bc5f8 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8bc640 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8bc650 prev 0x7ff6bc8bc4f8 <col:1, col:37> col:20 logbl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8bc468 <col:26, col:31> col:37 'long double'
+| |-ConstAttr 0x7ff6bc8bc728 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8bc738 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bc8d8 <line:406:14> col:14 implicit modff 'float (float, float *)' extern
+| |-ParmVarDecl 0x7ff6bc8bc970 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8bc9d0 <<invalid sloc>> <invalid sloc> 'float *'
+| `-NoThrowAttr 0x7ff6bc8bca40 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8bca88 prev 0x7ff6bc8bc8d8 <col:1, col:34> col:14 modff 'float (float, float *)' extern
+| |-ParmVarDecl 0x7ff6bc8bc760 <col:20> col:25 'float'
+| |-ParmVarDecl 0x7ff6bc8bc800 <col:27, col:33> col:34 'float *'
+| `-NoThrowAttr 0x7ff6bc8bcb68 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bcd08 <line:407:15> col:15 implicit modf 'double (double, double *)' extern
+| |-ParmVarDecl 0x7ff6bc8bcda0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8bce00 <<invalid sloc>> <invalid sloc> 'double *'
+| `-NoThrowAttr 0x7ff6bc8bce70 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8bceb8 prev 0x7ff6bc8bcd08 <col:1, col:36> col:15 modf 'double (double, double *)' extern
+| |-ParmVarDecl 0x7ff6bc8bcb90 <col:20> col:26 'double'
+| |-ParmVarDecl 0x7ff6bc8bcc30 <col:28, col:35> col:36 'double *'
+| `-NoThrowAttr 0x7ff6bc8bcf98 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bd138 <line:408:20> col:20 implicit modfl 'long double (long double, long double *)' extern
+| |-ParmVarDecl 0x7ff6bc8bd200 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8bd260 <<invalid sloc>> <invalid sloc> 'long double *'
+| `-NoThrowAttr 0x7ff6bc8bd2d0 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8bd318 prev 0x7ff6bc8bd138 <col:1, col:52> col:20 modfl 'long double (long double, long double *)' extern
+| |-ParmVarDecl 0x7ff6bc8bcfc0 <col:26, col:31> col:37 'long double'
+| |-ParmVarDecl 0x7ff6bc8bd060 <col:39, col:51> col:52 'long double *'
+| `-NoThrowAttr 0x7ff6bc8bd3f8 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bd578 <line:410:14> col:14 implicit ldexpf 'float (float, int)' extern
+| |-ParmVarDecl 0x7ff6bc8bd610 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8bd670 <<invalid sloc>> <invalid sloc> 'int'
+| |-ConstAttr 0x7ff6bc8bd6e0 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8bd728 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8bd738 prev 0x7ff6bc8bd578 <col:1, col:31> col:14 ldexpf 'float (float, int)' extern
+| |-ParmVarDecl 0x7ff6bc8bd420 <col:21> col:26 'float'
+| |-ParmVarDecl 0x7ff6bc8bd498 <col:28> col:31 'int'
+| |-ConstAttr 0x7ff6bc8bd818 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8bd828 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bd9a8 <line:411:15> col:15 implicit ldexp 'double (double, int)' extern
+| |-ParmVarDecl 0x7ff6bc8bda40 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8bdaa0 <<invalid sloc>> <invalid sloc> 'int'
+| |-ConstAttr 0x7ff6bc8bdb10 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8bdb58 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8bdb68 prev 0x7ff6bc8bd9a8 <col:1, col:32> col:15 ldexp 'double (double, int)' extern
+| |-ParmVarDecl 0x7ff6bc8bd850 <col:21> col:27 'double'
+| |-ParmVarDecl 0x7ff6bc8bd8c8 <col:29> col:32 'int'
+| |-ConstAttr 0x7ff6bc8bdc48 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8bdc58 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bddd8 <line:412:20> col:20 implicit ldexpl 'long double (long double, int)' extern
+| |-ParmVarDecl 0x7ff6bc8bde70 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8bded0 <<invalid sloc>> <invalid sloc> 'int'
+| |-ConstAttr 0x7ff6bc8bdf40 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8bdf88 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8bdf98 prev 0x7ff6bc8bddd8 <col:1, col:43> col:20 ldexpl 'long double (long double, int)' extern
+| |-ParmVarDecl 0x7ff6bc8bdc80 <col:27, col:32> col:38 'long double'
+| |-ParmVarDecl 0x7ff6bc8bdcf8 <col:40> col:43 'int'
+| |-ConstAttr 0x7ff6bc8be078 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8be088 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8be238 <line:414:14> col:14 implicit frexpf 'float (float, int *)' extern
+| |-ParmVarDecl 0x7ff6bc8be2d0 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8be330 <<invalid sloc>> <invalid sloc> 'int *'
+| `-NoThrowAttr 0x7ff6bc8be3a0 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8be3e8 prev 0x7ff6bc8be238 <col:1, col:33> col:14 frexpf 'float (float, int *)' extern
+| |-ParmVarDecl 0x7ff6bc8be0b0 <col:21> col:26 'float'
+| |-ParmVarDecl 0x7ff6bc8be150 <col:28, col:32> col:33 'int *'
+| `-NoThrowAttr 0x7ff6bc8be4c8 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8be648 <line:415:15> col:15 implicit frexp 'double (double, int *)' extern
+| |-ParmVarDecl 0x7ff6bc8be6e0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8be740 <<invalid sloc>> <invalid sloc> 'int *'
+| `-NoThrowAttr 0x7ff6bc8be7b0 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8be7f8 prev 0x7ff6bc8be648 <col:1, col:34> col:15 frexp 'double (double, int *)' extern
+| |-ParmVarDecl 0x7ff6bc8be4f0 <col:21> col:27 'double'
+| |-ParmVarDecl 0x7ff6bc8be568 <col:29, col:33> col:34 'int *'
+| `-NoThrowAttr 0x7ff6bc8be8d8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bea58 <line:416:20> col:20 implicit frexpl 'long double (long double, int *)' extern
+| |-ParmVarDecl 0x7ff6bc8beaf0 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8beb50 <<invalid sloc>> <invalid sloc> 'int *'
+| `-NoThrowAttr 0x7ff6bc8bebc0 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8bec08 prev 0x7ff6bc8bea58 <col:1, col:45> col:20 frexpl 'long double (long double, int *)' extern
+| |-ParmVarDecl 0x7ff6bc8be900 <col:27, col:32> col:38 'long double'
+| |-ParmVarDecl 0x7ff6bc8be978 <col:40, col:44> col:45 'int *'
+| `-NoThrowAttr 0x7ff6bc8bece8 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8beda0 <line:418:12> col:12 implicit ilogbf 'int (float)' extern
+| |-ParmVarDecl 0x7ff6bc8bee38 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8beea0 <col:12> Implicit
+| `-NoThrowAttr 0x7ff6bc8beee8 <col:12> Implicit
+|-FunctionDecl 0x7ff6bc8beef8 prev 0x7ff6bc8beda0 <col:1, col:24> col:12 ilogbf 'int (float)' extern
+| |-ParmVarDecl 0x7ff6bc8bed10 <col:19> col:24 'float'
+| |-ConstAttr 0x7ff6bc8befd0 <col:12> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8befe0 <col:12> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bf098 <line:419:12> col:12 implicit ilogb 'int (double)' extern
+| |-ParmVarDecl 0x7ff6bc8bf130 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8bf198 <col:12> Implicit
+| `-NoThrowAttr 0x7ff6bc8bf1e0 <col:12> Implicit
+|-FunctionDecl 0x7ff6bc8bf200 prev 0x7ff6bc8bf098 <col:1, col:24> col:12 ilogb 'int (double)' extern
+| |-ParmVarDecl 0x7ff6bc8bf008 <col:18> col:24 'double'
+| |-ConstAttr 0x7ff6bc8bf2d8 <col:12> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8bf2e8 <col:12> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bf3a0 <line:420:12> col:12 implicit ilogbl 'int (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8bf438 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8bf4a0 <col:12> Implicit
+| `-NoThrowAttr 0x7ff6bc8bf4e8 <col:12> Implicit
+|-FunctionDecl 0x7ff6bc8bf4f8 prev 0x7ff6bc8bf3a0 <col:1, col:30> col:12 ilogbl 'int (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8bf310 <col:19, col:24> col:30 'long double'
+| |-ConstAttr 0x7ff6bc8bf5d0 <col:12> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8bf5e0 <col:12> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bf718 <line:422:14> col:14 implicit scalbnf 'float (float, int)' extern
+| |-ParmVarDecl 0x7ff6bc8bf7b0 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8bf810 <<invalid sloc>> <invalid sloc> 'int'
+| |-ConstAttr 0x7ff6bc8bf880 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8bf8c8 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8bf8d8 prev 0x7ff6bc8bf718 <col:1, col:32> col:14 scalbnf 'float (float, int)' extern
+| |-ParmVarDecl 0x7ff6bc8bf608 <col:22> col:27 'float'
+| |-ParmVarDecl 0x7ff6bc8bf680 <col:29> col:32 'int'
+| |-ConstAttr 0x7ff6bc8bf9b8 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8bf9c8 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bfb00 <line:423:15> col:15 implicit scalbn 'double (double, int)' extern
+| |-ParmVarDecl 0x7ff6bc8bfb98 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8bfbf8 <<invalid sloc>> <invalid sloc> 'int'
+| |-ConstAttr 0x7ff6bc8bfc68 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8bfcb0 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8bfcc0 prev 0x7ff6bc8bfb00 <col:1, col:33> col:15 scalbn 'double (double, int)' extern
+| |-ParmVarDecl 0x7ff6bc8bf9f0 <col:22> col:28 'double'
+| |-ParmVarDecl 0x7ff6bc8bfa68 <col:30> col:33 'int'
+| |-ConstAttr 0x7ff6bc8bfda0 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8bfdb0 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8bfee8 <line:424:20> col:20 implicit scalbnl 'long double (long double, int)' extern
+| |-ParmVarDecl 0x7ff6bc8bff80 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8bffe0 <<invalid sloc>> <invalid sloc> 'int'
+| |-ConstAttr 0x7ff6bc8c0050 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8c0098 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8c00a8 prev 0x7ff6bc8bfee8 <col:1, col:44> col:20 scalbnl 'long double (long double, int)' extern
+| |-ParmVarDecl 0x7ff6bc8bfdd8 <col:28, col:33> col:39 'long double'
+| |-ParmVarDecl 0x7ff6bc8bfe50 <col:41> col:44 'int'
+| |-ConstAttr 0x7ff6bc8c0188 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c0198 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b5358 <line:426:14> col:14 implicit scalblnf 'float (float, long)' extern
+| |-ParmVarDecl 0x7ff6bc8b53f0 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8b5450 <<invalid sloc>> <invalid sloc> 'long'
+| |-ConstAttr 0x7ff6bc8b54c0 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8b5508 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8b5518 prev 0x7ff6bc8b5358 <col:1, col:38> col:14 scalblnf 'float (float, long)' extern
+| |-ParmVarDecl 0x7ff6bc8b5200 <col:23> col:28 'float'
+| |-ParmVarDecl 0x7ff6bc8b5278 <col:30, col:35> col:38 'long'
+| |-ConstAttr 0x7ff6bc8b55f8 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b5608 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b5788 <line:427:15> col:15 implicit scalbln 'double (double, long)' extern
+| |-ParmVarDecl 0x7ff6bc8b5820 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8b5880 <<invalid sloc>> <invalid sloc> 'long'
+| |-ConstAttr 0x7ff6bc8b58f0 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8b5938 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8b5948 prev 0x7ff6bc8b5788 <col:1, col:39> col:15 scalbln 'double (double, long)' extern
+| |-ParmVarDecl 0x7ff6bc8b5630 <col:23> col:29 'double'
+| |-ParmVarDecl 0x7ff6bc8b56a8 <col:31, col:36> col:39 'long'
+| |-ConstAttr 0x7ff6bc8b5a28 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b5a38 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b5bb8 <line:428:20> col:20 implicit scalblnl 'long double (long double, long)' extern
+| |-ParmVarDecl 0x7ff6bc8b5c50 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8b5cb0 <<invalid sloc>> <invalid sloc> 'long'
+| |-ConstAttr 0x7ff6bc8b5d20 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8b5d68 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8b5d78 prev 0x7ff6bc8b5bb8 <col:1, col:50> col:20 scalblnl 'long double (long double, long)' extern
+| |-ParmVarDecl 0x7ff6bc8b5a60 <col:29, col:34> col:40 'long double'
+| |-ParmVarDecl 0x7ff6bc8b5ad8 <col:42, col:47> col:50 'long'
+| |-ConstAttr 0x7ff6bc8b5e58 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8b5e68 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8b5f20 <line:430:14> col:14 implicit fabsf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b5fb8 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7ff6bc8b6020 <col:14> Implicit
+| `-ConstAttr 0x7ff6bc8b6068 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8b6078 prev 0x7ff6bc8b5f20 <col:1, col:25> col:14 fabsf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8b5e90 <col:20> col:25 'float'
+| |-NoThrowAttr 0x7ff6bc8b6150 <col:14> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8b6160 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c2230 <line:431:15> col:15 implicit fabs 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c22c8 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7ff6bc8c2330 <col:15> Implicit
+| `-ConstAttr 0x7ff6bc8c2378 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8c2388 prev 0x7ff6bc8c2230 <col:1, col:26> col:15 fabs 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8b6188 <col:20> col:26 'double'
+| |-NoThrowAttr 0x7ff6bc8c2460 <col:15> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8c2470 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c2528 <line:432:20> col:20 implicit fabsl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c25c0 <<invalid sloc>> <invalid sloc> 'long double'
+| |-NoThrowAttr 0x7ff6bc8c2628 <col:20> Implicit
+| `-ConstAttr 0x7ff6bc8c2670 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8c2680 prev 0x7ff6bc8c2528 <col:1, col:37> col:20 fabsl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c2498 <col:26, col:31> col:37 'long double'
+| |-NoThrowAttr 0x7ff6bc8c2758 <col:20> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8c2768 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c2820 <line:434:14> col:14 implicit cbrtf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c28b8 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8c2920 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8c2968 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8c2978 prev 0x7ff6bc8c2820 <col:1, col:25> col:14 cbrtf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c2790 <col:20> col:25 'float'
+| |-ConstAttr 0x7ff6bc8c2a50 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c2a60 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c2b18 <line:435:15> col:15 implicit cbrt 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c2bb0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8c2c18 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8c2c60 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8c2c70 prev 0x7ff6bc8c2b18 <col:1, col:26> col:15 cbrt 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c2a88 <col:20> col:26 'double'
+| |-ConstAttr 0x7ff6bc8c2d48 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c2d58 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c2e10 <line:436:20> col:20 implicit cbrtl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c2ea8 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8c2f10 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8c2f58 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8c2f68 prev 0x7ff6bc8c2e10 <col:1, col:37> col:20 cbrtl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c2d80 <col:26, col:31> col:37 'long double'
+| |-ConstAttr 0x7ff6bc8c3040 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c3050 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c3200 <line:438:14> col:14 implicit hypotf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8c3298 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8c32f8 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8c3368 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8c33b0 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8c33c0 prev 0x7ff6bc8c3200 <col:1, col:33> col:14 hypotf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8c3078 <col:21> col:26 'float'
+| |-ParmVarDecl 0x7ff6bc8c30f0 <col:28> col:33 'float'
+| |-ConstAttr 0x7ff6bc8c34a0 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c34b0 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c35e8 <line:439:15> col:15 implicit hypot 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8c3680 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8c36e0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8c3750 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8c3798 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8c37a8 prev 0x7ff6bc8c35e8 <col:1, col:35> col:15 hypot 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8c34d8 <col:21> col:27 'double'
+| |-ParmVarDecl 0x7ff6bc8c3550 <col:29> col:35 'double'
+| |-ConstAttr 0x7ff6bc8c3888 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c3898 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c39d0 <line:440:20> col:20 implicit hypotl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c3a68 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8c3ac8 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8c3b38 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8c3b80 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8c3b90 prev 0x7ff6bc8c39d0 <col:1, col:51> col:20 hypotl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c38c0 <col:27, col:32> col:38 'long double'
+| |-ParmVarDecl 0x7ff6bc8c3938 <col:40, col:45> col:51 'long double'
+| |-ConstAttr 0x7ff6bc8c3c70 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c3c80 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c3db8 <line:442:14> col:14 implicit powf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8c3e50 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8c3eb0 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8c3f20 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8c3f68 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8c3f78 prev 0x7ff6bc8c3db8 <col:1, col:31> col:14 powf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8c3ca8 <col:19> col:24 'float'
+| |-ParmVarDecl 0x7ff6bc8c3d20 <col:26> col:31 'float'
+| |-ConstAttr 0x7ff6bc8c4058 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c4068 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c4200 <line:443:15> col:15 implicit pow 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8c4298 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8c42f8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8c4368 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8c43b0 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8c43c0 prev 0x7ff6bc8c4200 <col:1, col:33> col:15 pow 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8c4090 <col:19> col:25 'double'
+| |-ParmVarDecl 0x7ff6bc8c4108 <col:27> col:33 'double'
+| |-ConstAttr 0x7ff6bc8c44a0 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c44b0 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c45e8 <line:444:20> col:20 implicit powl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c4680 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8c46e0 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8c4750 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8c4798 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8c47a8 prev 0x7ff6bc8c45e8 <col:1, col:49> col:20 powl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c44d8 <col:25, col:30> col:36 'long double'
+| |-ParmVarDecl 0x7ff6bc8c4550 <col:38, col:43> col:49 'long double'
+| |-ConstAttr 0x7ff6bc8c4888 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c4898 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c4950 <line:446:14> col:14 implicit sqrtf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c49e8 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8c4a50 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8c4a98 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8c4aa8 prev 0x7ff6bc8c4950 <col:1, col:25> col:14 sqrtf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c48c0 <col:20> col:25 'float'
+| |-ConstAttr 0x7ff6bc8c4b80 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c4b90 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c4c48 <line:447:15> col:15 implicit used sqrt 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c4ce0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8c4d48 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8c4d90 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8c4da0 prev 0x7ff6bc8c4c48 <col:1, col:26> col:15 used sqrt 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c4bb8 <col:20> col:26 'double'
+| |-ConstAttr 0x7ff6bc8c4e78 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c4e88 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c4f40 <line:448:20> col:20 implicit sqrtl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c4fd8 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8c5040 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8c5088 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8c5098 prev 0x7ff6bc8c4f40 <col:1, col:37> col:20 sqrtl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c4eb0 <col:26, col:31> col:37 'long double'
+| |-ConstAttr 0x7ff6bc8c5170 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c5180 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c5290 <line:450:14> col:14 implicit erff 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c5328 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8c5390 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8c53d8 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8c53e8 prev 0x7ff6bc8c5290 <col:1, col:24> col:14 erff 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c5200 <col:19> col:24 'float'
+| |-ConstAttr 0x7ff6bc8c54c0 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c54d0 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c5588 <line:451:15> col:15 implicit erf 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c5620 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8c5688 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8c56d0 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8c56e0 prev 0x7ff6bc8c5588 <col:1, col:25> col:15 erf 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c54f8 <col:19> col:25 'double'
+| |-ConstAttr 0x7ff6bc8c57b8 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c57c8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c5880 <line:452:20> col:20 implicit erfl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c5918 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8c5980 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8c59c8 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8c59d8 prev 0x7ff6bc8c5880 <col:1, col:36> col:20 erfl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c57f0 <col:25, col:30> col:36 'long double'
+| |-ConstAttr 0x7ff6bc8c5ab0 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c5ac0 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c5b78 <line:454:14> col:14 implicit erfcf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c5c10 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8c5c78 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8c5cc0 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8c5cd0 prev 0x7ff6bc8c5b78 <col:1, col:25> col:14 erfcf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c5ae8 <col:20> col:25 'float'
+| |-ConstAttr 0x7ff6bc8c5da8 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c5db8 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c5e70 <line:455:15> col:15 implicit erfc 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c5f08 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8c5f70 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8c5fb8 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8c5fc8 prev 0x7ff6bc8c5e70 <col:1, col:26> col:15 erfc 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c5de0 <col:20> col:26 'double'
+| |-ConstAttr 0x7ff6bc8c60a0 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c60b0 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c6168 <line:456:20> col:20 implicit erfcl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c6200 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8c6268 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8c62b0 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8c62c0 prev 0x7ff6bc8c6168 <col:1, col:37> col:20 erfcl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c60d8 <col:26, col:31> col:37 'long double'
+| |-ConstAttr 0x7ff6bc8c6398 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c63a8 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c6460 <line:461:14> col:14 implicit lgammaf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c64f8 <<invalid sloc>> <invalid sloc> 'float'
+| `-NoThrowAttr 0x7ff6bc8c6560 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8c65a8 prev 0x7ff6bc8c6460 <col:1, col:27> col:14 lgammaf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c63d0 <col:22> col:27 'float'
+| `-NoThrowAttr 0x7ff6bc8c6680 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c6738 <line:462:15> col:15 implicit lgamma 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c67d0 <<invalid sloc>> <invalid sloc> 'double'
+| `-NoThrowAttr 0x7ff6bc8c6838 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8c6880 prev 0x7ff6bc8c6738 <col:1, col:28> col:15 lgamma 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c66a8 <col:22> col:28 'double'
+| `-NoThrowAttr 0x7ff6bc8c6958 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c6a10 <line:463:20> col:20 implicit lgammal 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c6aa8 <<invalid sloc>> <invalid sloc> 'long double'
+| `-NoThrowAttr 0x7ff6bc8c6b10 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8c6b58 prev 0x7ff6bc8c6a10 <col:1, col:39> col:20 lgammal 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c6980 <col:28, col:33> col:39 'long double'
+| `-NoThrowAttr 0x7ff6bc8c6c30 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c6ce8 <line:465:14> col:14 implicit tgammaf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c6d80 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8c6de8 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8c6e30 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8c6e40 prev 0x7ff6bc8c6ce8 <col:1, col:27> col:14 tgammaf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c6c58 <col:22> col:27 'float'
+| |-ConstAttr 0x7ff6bc8c6f18 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c6f28 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c6fe0 <line:466:15> col:15 implicit tgamma 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c7078 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8c70e0 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8c7128 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8c7138 prev 0x7ff6bc8c6fe0 <col:1, col:28> col:15 tgamma 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c6f50 <col:22> col:28 'double'
+| |-ConstAttr 0x7ff6bc8c7238 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c7248 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c7300 <line:467:20> col:20 implicit tgammal 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c7398 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8c7400 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8c7448 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8c7458 prev 0x7ff6bc8c7300 <col:1, col:39> col:20 tgammal 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c7270 <col:28, col:33> col:39 'long double'
+| |-ConstAttr 0x7ff6bc8c7530 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c7540 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c75f8 <line:469:14> col:14 implicit ceilf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c7690 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7ff6bc8c76f8 <col:14> Implicit
+| `-ConstAttr 0x7ff6bc8c7740 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8c7750 prev 0x7ff6bc8c75f8 <col:1, col:25> col:14 ceilf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c7568 <col:20> col:25 'float'
+| |-NoThrowAttr 0x7ff6bc8c7828 <col:14> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8c7838 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c78f0 <line:470:15> col:15 implicit ceil 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c7988 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7ff6bc8c79f0 <col:15> Implicit
+| `-ConstAttr 0x7ff6bc8c7a38 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8c7a48 prev 0x7ff6bc8c78f0 <col:1, col:26> col:15 ceil 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c7860 <col:20> col:26 'double'
+| |-NoThrowAttr 0x7ff6bc8c7b20 <col:15> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8c7b30 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c7be8 <line:471:20> col:20 implicit ceill 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c7c80 <<invalid sloc>> <invalid sloc> 'long double'
+| |-NoThrowAttr 0x7ff6bc8c7ce8 <col:20> Implicit
+| `-ConstAttr 0x7ff6bc8c7d30 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8c7d40 prev 0x7ff6bc8c7be8 <col:1, col:37> col:20 ceill 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c7b58 <col:26, col:31> col:37 'long double'
+| |-NoThrowAttr 0x7ff6bc8c7e18 <col:20> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8c7e28 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c7ee0 <line:473:14> col:14 implicit floorf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c7f78 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7ff6bc8c7fe0 <col:14> Implicit
+| `-ConstAttr 0x7ff6bc8c8028 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8c8038 prev 0x7ff6bc8c7ee0 <col:1, col:26> col:14 floorf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c7e50 <col:21> col:26 'float'
+| |-NoThrowAttr 0x7ff6bc8c8110 <col:14> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8c8120 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c8200 <line:474:15> col:15 implicit floor 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c8298 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7ff6bc8c8300 <col:15> Implicit
+| `-ConstAttr 0x7ff6bc8c8348 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8c8358 prev 0x7ff6bc8c8200 <col:1, col:27> col:15 floor 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c8148 <col:21> col:27 'double'
+| |-NoThrowAttr 0x7ff6bc8c8430 <col:15> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8c8440 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c84f8 <line:475:20> col:20 implicit floorl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c8590 <<invalid sloc>> <invalid sloc> 'long double'
+| |-NoThrowAttr 0x7ff6bc8c85f8 <col:20> Implicit
+| `-ConstAttr 0x7ff6bc8c8640 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8c8650 prev 0x7ff6bc8c84f8 <col:1, col:38> col:20 floorl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c8468 <col:27, col:32> col:38 'long double'
+| |-NoThrowAttr 0x7ff6bc8c8728 <col:20> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8c8738 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c87f0 <line:477:14> col:14 implicit nearbyintf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c8888 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7ff6bc8c88f0 <col:14> Implicit
+| `-ConstAttr 0x7ff6bc8c8938 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8c8948 prev 0x7ff6bc8c87f0 <col:1, col:30> col:14 nearbyintf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c8760 <col:25> col:30 'float'
+| |-NoThrowAttr 0x7ff6bc8c8a20 <col:14> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8c8a30 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c8ae8 <line:478:15> col:15 implicit nearbyint 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c8b80 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7ff6bc8c8be8 <col:15> Implicit
+| `-ConstAttr 0x7ff6bc8c8c30 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8c8c40 prev 0x7ff6bc8c8ae8 <col:1, col:31> col:15 nearbyint 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c8a58 <col:25> col:31 'double'
+| |-NoThrowAttr 0x7ff6bc8c8d18 <col:15> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8c8d28 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c8de0 <line:479:20> col:20 implicit nearbyintl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c8e78 <<invalid sloc>> <invalid sloc> 'long double'
+| |-NoThrowAttr 0x7ff6bc8c8ee0 <col:20> Implicit
+| `-ConstAttr 0x7ff6bc8c8f28 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8c8f38 prev 0x7ff6bc8c8de0 <col:1, col:42> col:20 nearbyintl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c8d50 <col:31, col:36> col:42 'long double'
+| |-NoThrowAttr 0x7ff6bc8c9010 <col:20> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8c9020 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c90d8 <line:481:14> col:14 implicit rintf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c9170 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7ff6bc8c91d8 <col:14> Implicit
+| `-ConstAttr 0x7ff6bc8c9238 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8c9248 prev 0x7ff6bc8c90d8 <col:1, col:25> col:14 rintf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c9048 <col:20> col:25 'float'
+| |-NoThrowAttr 0x7ff6bc8c9320 <col:14> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8c9330 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c93e8 <line:482:15> col:15 implicit rint 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c9480 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7ff6bc8c94e8 <col:15> Implicit
+| `-ConstAttr 0x7ff6bc8c9530 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8c9540 prev 0x7ff6bc8c93e8 <col:1, col:26> col:15 rint 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c9358 <col:20> col:26 'double'
+| |-NoThrowAttr 0x7ff6bc8c9618 <col:15> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8c9628 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c96e0 <line:483:20> col:20 implicit rintl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c9778 <<invalid sloc>> <invalid sloc> 'long double'
+| |-NoThrowAttr 0x7ff6bc8c97e0 <col:20> Implicit
+| `-ConstAttr 0x7ff6bc8c9828 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8c9838 prev 0x7ff6bc8c96e0 <col:1, col:37> col:20 rintl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c9650 <col:26, col:31> col:37 'long double'
+| |-NoThrowAttr 0x7ff6bc8c9910 <col:20> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8c9920 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c9a18 <line:485:17> col:17 implicit lrintf 'long (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c9ab0 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8c9b18 <col:17> Implicit
+| `-NoThrowAttr 0x7ff6bc8c9b60 <col:17> Implicit
+|-FunctionDecl 0x7ff6bc8c9b70 prev 0x7ff6bc8c9a18 <col:1, col:29> col:17 lrintf 'long (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c9948 <col:24> col:29 'float'
+| |-ConstAttr 0x7ff6bc8c9c48 <col:17> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c9c58 <col:17> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c9d48 <line:486:17> col:17 implicit lrint 'long (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c9de0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8c9e48 <col:17> Implicit
+| `-NoThrowAttr 0x7ff6bc8c9e90 <col:17> Implicit
+|-FunctionDecl 0x7ff6bc8c9ea0 prev 0x7ff6bc8c9d48 <col:1, col:29> col:17 lrint 'long (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c9c80 <col:23> col:29 'double'
+| |-ConstAttr 0x7ff6bc8c9f78 <col:17> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c9f88 <col:17> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8ca078 <line:487:17> col:17 implicit lrintl 'long (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8ca110 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8ca178 <col:17> Implicit
+| `-NoThrowAttr 0x7ff6bc8ca1c0 <col:17> Implicit
+|-FunctionDecl 0x7ff6bc8ca200 prev 0x7ff6bc8ca078 <col:1, col:35> col:17 lrintl 'long (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8c9fb0 <col:24, col:29> col:35 'long double'
+| |-ConstAttr 0x7ff6bc8ca2d8 <col:17> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8ca2e8 <col:17> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8ca3a0 <line:489:14> col:14 implicit roundf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8ca438 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7ff6bc8ca4a0 <col:14> Implicit
+| `-ConstAttr 0x7ff6bc8ca4e8 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8ca4f8 prev 0x7ff6bc8ca3a0 <col:1, col:26> col:14 roundf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8ca310 <col:21> col:26 'float'
+| |-NoThrowAttr 0x7ff6bc8ca5d0 <col:14> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8ca5e0 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8ca698 <line:490:15> col:15 implicit round 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8ca730 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7ff6bc8ca798 <col:15> Implicit
+| `-ConstAttr 0x7ff6bc8ca7e0 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8ca7f0 prev 0x7ff6bc8ca698 <col:1, col:27> col:15 round 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8ca608 <col:21> col:27 'double'
+| |-NoThrowAttr 0x7ff6bc8ca8c8 <col:15> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8ca8d8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8ca990 <line:491:20> col:20 implicit roundl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8caa28 <<invalid sloc>> <invalid sloc> 'long double'
+| |-NoThrowAttr 0x7ff6bc8caa90 <col:20> Implicit
+| `-ConstAttr 0x7ff6bc8caad8 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8caae8 prev 0x7ff6bc8ca990 <col:1, col:38> col:20 roundl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8ca900 <col:27, col:32> col:38 'long double'
+| |-NoThrowAttr 0x7ff6bc8cabc0 <col:20> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8cabd0 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cac88 <line:493:17> col:17 implicit lroundf 'long (float)' extern
+| |-ParmVarDecl 0x7ff6bc8cad20 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8cad88 <col:17> Implicit
+| `-NoThrowAttr 0x7ff6bc8cadd0 <col:17> Implicit
+|-FunctionDecl 0x7ff6bc8cade0 prev 0x7ff6bc8cac88 <col:1, col:30> col:17 lroundf 'long (float)' extern
+| |-ParmVarDecl 0x7ff6bc8cabf8 <col:25> col:30 'float'
+| |-ConstAttr 0x7ff6bc8caeb8 <col:17> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8caec8 <col:17> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8caf80 <line:494:17> col:17 implicit lround 'long (double)' extern
+| |-ParmVarDecl 0x7ff6bc8cb018 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8cb080 <col:17> Implicit
+| `-NoThrowAttr 0x7ff6bc8cb0c8 <col:17> Implicit
+|-FunctionDecl 0x7ff6bc8cb0d8 prev 0x7ff6bc8caf80 <col:1, col:30> col:17 lround 'long (double)' extern
+| |-ParmVarDecl 0x7ff6bc8caef0 <col:24> col:30 'double'
+| |-ConstAttr 0x7ff6bc8cb1b0 <col:17> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8cb1c0 <col:17> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cb290 <line:495:17> col:17 implicit lroundl 'long (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8cb328 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8cb390 <col:17> Implicit
+| `-NoThrowAttr 0x7ff6bc8cb3d8 <col:17> Implicit
+|-FunctionDecl 0x7ff6bc8cb3e8 prev 0x7ff6bc8cb290 <col:1, col:36> col:17 lroundl 'long (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8cb200 <col:25, col:30> col:36 'long double'
+| |-ConstAttr 0x7ff6bc8cb4c0 <col:17> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8cb4d0 <col:17> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cb5c8 <line:500:22> col:22 implicit llrintf 'long long (float)' extern
+| |-ParmVarDecl 0x7ff6bc8cb660 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8cb6c8 <col:22> Implicit
+| `-NoThrowAttr 0x7ff6bc8cb710 <col:22> Implicit
+|-FunctionDecl 0x7ff6bc8cb720 prev 0x7ff6bc8cb5c8 <col:1, col:35> col:22 llrintf 'long long (float)' extern
+| |-ParmVarDecl 0x7ff6bc8cb4f8 <col:30> col:35 'float'
+| |-ConstAttr 0x7ff6bc8cb7f8 <col:22> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8cb808 <col:22> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cb8f8 <line:501:22> col:22 implicit llrint 'long long (double)' extern
+| |-ParmVarDecl 0x7ff6bc8cb990 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8cb9f8 <col:22> Implicit
+| `-NoThrowAttr 0x7ff6bc8cba40 <col:22> Implicit
+|-FunctionDecl 0x7ff6bc8cba50 prev 0x7ff6bc8cb8f8 <col:1, col:35> col:22 llrint 'long long (double)' extern
+| |-ParmVarDecl 0x7ff6bc8cb830 <col:29> col:35 'double'
+| |-ConstAttr 0x7ff6bc8cbb28 <col:22> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8cbb38 <col:22> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cbc28 <line:502:22> col:22 implicit llrintl 'long long (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8cbcc0 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8cbd28 <col:22> Implicit
+| `-NoThrowAttr 0x7ff6bc8cbd70 <col:22> Implicit
+|-FunctionDecl 0x7ff6bc8cbd80 prev 0x7ff6bc8cbc28 <col:1, col:41> col:22 llrintl 'long long (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8cbb60 <col:30, col:35> col:41 'long double'
+| |-ConstAttr 0x7ff6bc8cbe58 <col:22> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8cbe68 <col:22> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cbf20 <line:504:22> col:22 implicit llroundf 'long long (float)' extern
+| |-ParmVarDecl 0x7ff6bc8cbfb8 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8cc020 <col:22> Implicit
+| `-NoThrowAttr 0x7ff6bc8cc068 <col:22> Implicit
+|-FunctionDecl 0x7ff6bc8cc078 prev 0x7ff6bc8cbf20 <col:1, col:36> col:22 llroundf 'long long (float)' extern
+| |-ParmVarDecl 0x7ff6bc8cbe90 <col:31> col:36 'float'
+| |-ConstAttr 0x7ff6bc8cc150 <col:22> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8cc160 <col:22> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cc230 <line:505:22> col:22 implicit llround 'long long (double)' extern
+| |-ParmVarDecl 0x7ff6bc8cc2c8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8cc330 <col:22> Implicit
+| `-NoThrowAttr 0x7ff6bc8cc378 <col:22> Implicit
+|-FunctionDecl 0x7ff6bc8cc388 prev 0x7ff6bc8cc230 <col:1, col:36> col:22 llround 'long long (double)' extern
+| |-ParmVarDecl 0x7ff6bc8cc188 <col:30> col:36 'double'
+| |-ConstAttr 0x7ff6bc8cc460 <col:22> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8cc470 <col:22> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cc528 <line:506:22> col:22 implicit llroundl 'long long (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8cc5c0 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8cc628 <col:22> Implicit
+| `-NoThrowAttr 0x7ff6bc8cc670 <col:22> Implicit
+|-FunctionDecl 0x7ff6bc8cc680 prev 0x7ff6bc8cc528 <col:1, col:42> col:22 llroundl 'long long (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8cc498 <col:31, col:36> col:42 'long double'
+| |-ConstAttr 0x7ff6bc8cc758 <col:22> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8cc768 <col:22> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cc820 <line:509:14> col:14 implicit truncf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8cc8b8 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7ff6bc8cc920 <col:14> Implicit
+| `-ConstAttr 0x7ff6bc8cc968 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8cc978 prev 0x7ff6bc8cc820 <col:1, col:26> col:14 truncf 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8cc790 <col:21> col:26 'float'
+| |-NoThrowAttr 0x7ff6bc8cca50 <col:14> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8cca60 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8ccb18 <line:510:15> col:15 implicit trunc 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8ccbb0 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7ff6bc8ccc18 <col:15> Implicit
+| `-ConstAttr 0x7ff6bc8ccc60 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8ccc70 prev 0x7ff6bc8ccb18 <col:1, col:27> col:15 trunc 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8cca88 <col:21> col:27 'double'
+| |-NoThrowAttr 0x7ff6bc8ccd48 <col:15> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8ccd58 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cce10 <line:511:20> col:20 implicit truncl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8ccea8 <<invalid sloc>> <invalid sloc> 'long double'
+| |-NoThrowAttr 0x7ff6bc8ccf10 <col:20> Implicit
+| `-ConstAttr 0x7ff6bc8ccf58 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8ccf68 prev 0x7ff6bc8cce10 <col:1, col:38> col:20 truncl 'long double (long double)' extern
+| |-ParmVarDecl 0x7ff6bc8ccd80 <col:27, col:32> col:38 'long double'
+| |-NoThrowAttr 0x7ff6bc8cd040 <col:20> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8cd050 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cd200 <line:513:14> col:14 implicit fmodf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8cd298 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8cd2f8 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8cd368 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8cd3b0 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8cd3c0 prev 0x7ff6bc8cd200 <col:1, col:32> col:14 fmodf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8cd078 <col:20> col:25 'float'
+| |-ParmVarDecl 0x7ff6bc8cd0f0 <col:27> col:32 'float'
+| |-ConstAttr 0x7ff6bc8cd4a0 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8cd4b0 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cd5e8 <line:514:15> col:15 implicit fmod 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8cd680 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8cd6e0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8cd750 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8cd798 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8cd7a8 prev 0x7ff6bc8cd5e8 <col:1, col:34> col:15 fmod 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8cd4d8 <col:20> col:26 'double'
+| |-ParmVarDecl 0x7ff6bc8cd550 <col:28> col:34 'double'
+| |-ConstAttr 0x7ff6bc8cd888 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8cd898 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cd9d0 <line:515:20> col:20 implicit fmodl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8cda68 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8cdac8 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8cdb38 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8cdb80 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8cdb90 prev 0x7ff6bc8cd9d0 <col:1, col:50> col:20 fmodl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8cd8c0 <col:26, col:31> col:37 'long double'
+| |-ParmVarDecl 0x7ff6bc8cd938 <col:39, col:44> col:50 'long double'
+| |-ConstAttr 0x7ff6bc8cdc70 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8cdc80 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cddb8 <line:517:14> col:14 implicit remainderf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8cde50 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8cdeb0 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8cdf20 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8cdf68 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8cdf78 prev 0x7ff6bc8cddb8 <col:1, col:37> col:14 remainderf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8cdca8 <col:25> col:30 'float'
+| |-ParmVarDecl 0x7ff6bc8cdd20 <col:32> col:37 'float'
+| |-ConstAttr 0x7ff6bc8ce058 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8ce068 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8ce200 <line:518:15> col:15 implicit remainder 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8ce298 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8ce2f8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8ce368 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8ce3b0 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8ce3c0 prev 0x7ff6bc8ce200 <col:1, col:39> col:15 remainder 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8ce090 <col:25> col:31 'double'
+| |-ParmVarDecl 0x7ff6bc8ce108 <col:33> col:39 'double'
+| |-ConstAttr 0x7ff6bc8ce4a0 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8ce4b0 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8ce5e8 <line:519:20> col:20 implicit remainderl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8ce680 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8ce6e0 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8ce750 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8ce798 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8ce7a8 prev 0x7ff6bc8ce5e8 <col:1, col:55> col:20 remainderl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8ce4d8 <col:31, col:36> col:42 'long double'
+| |-ParmVarDecl 0x7ff6bc8ce550 <col:44, col:49> col:55 'long double'
+| |-ConstAttr 0x7ff6bc8ce888 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8ce898 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cea98 <line:521:1, col:41> col:14 remquof 'float (float, float, int *)' extern
+| |-ParmVarDecl 0x7ff6bc8ce8c0 <col:22> col:27 'float'
+| |-ParmVarDecl 0x7ff6bc8ce938 <col:29> col:34 'float'
+| `-ParmVarDecl 0x7ff6bc8ce9b0 <col:36, col:40> col:41 'int *'
+|-FunctionDecl 0x7ff6bc8ced38 <line:522:1, col:43> col:15 remquo 'double (double, double, int *)' extern
+| |-ParmVarDecl 0x7ff6bc8ceb60 <col:22> col:28 'double'
+| |-ParmVarDecl 0x7ff6bc8cebd8 <col:30> col:36 'double'
+| `-ParmVarDecl 0x7ff6bc8cec50 <col:38, col:42> col:43 'int *'
+|-FunctionDecl 0x7ff6bc8cefd8 <line:523:1, col:59> col:20 remquol 'long double (long double, long double, int *)' extern
+| |-ParmVarDecl 0x7ff6bc8cee00 <col:28, col:33> col:39 'long double'
+| |-ParmVarDecl 0x7ff6bc8cee78 <col:41, col:46> col:52 'long double'
+| `-ParmVarDecl 0x7ff6bc8ceef0 <col:54, col:58> col:59 'int *'
+|-FunctionDecl 0x7ff6bc8cf200 <line:525:14> col:14 implicit copysignf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8cf298 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8cf2f8 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7ff6bc8cf368 <col:14> Implicit
+| `-ConstAttr 0x7ff6bc8cf3b0 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8cf3c0 prev 0x7ff6bc8cf200 <col:1, col:36> col:14 copysignf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8cf0a0 <col:24> col:29 'float'
+| |-ParmVarDecl 0x7ff6bc8cf118 <col:31> col:36 'float'
+| |-NoThrowAttr 0x7ff6bc8cf4a0 <col:14> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8cf4b0 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cf5e8 <line:526:15> col:15 implicit copysign 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8cf680 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8cf6e0 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7ff6bc8cf750 <col:15> Implicit
+| `-ConstAttr 0x7ff6bc8cf798 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8cf7a8 prev 0x7ff6bc8cf5e8 <col:1, col:38> col:15 copysign 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8cf4d8 <col:24> col:30 'double'
+| |-ParmVarDecl 0x7ff6bc8cf550 <col:32> col:38 'double'
+| |-NoThrowAttr 0x7ff6bc8cf888 <col:15> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8cf898 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cf9d0 <line:527:20> col:20 implicit copysignl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8cfa68 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8cfac8 <<invalid sloc>> <invalid sloc> 'long double'
+| |-NoThrowAttr 0x7ff6bc8cfb38 <col:20> Implicit
+| `-ConstAttr 0x7ff6bc8cfb80 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8cfb90 prev 0x7ff6bc8cf9d0 <col:1, col:54> col:20 copysignl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8cf8c0 <col:30, col:35> col:41 'long double'
+| |-ParmVarDecl 0x7ff6bc8cf938 <col:43, col:48> col:54 'long double'
+| |-NoThrowAttr 0x7ff6bc8cfc70 <col:20> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8cfc80 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8cfd78 <line:529:14> col:14 implicit nanf 'float (const char *)' extern
+| |-ParmVarDecl 0x7ff6bc8cfe10 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-NoThrowAttr 0x7ff6bc8cfe78 <col:14> Implicit
+| `-ConstAttr 0x7ff6bc8cfec0 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8cfed0 prev 0x7ff6bc8cfd78 <col:1, col:31> col:14 nanf 'float (const char *)' extern
+| |-ParmVarDecl 0x7ff6bc8cfca8 <col:19, col:30> col:31 'const char *'
+| |-NoThrowAttr 0x7ff6bc8cffa8 <col:14> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8cffb8 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d00a8 <line:530:15> col:15 implicit nan 'double (const char *)' extern
+| |-ParmVarDecl 0x7ff6bc8d0140 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-NoThrowAttr 0x7ff6bc8d01a8 <col:15> Implicit
+| `-ConstAttr 0x7ff6bc8d01f0 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8d0200 prev 0x7ff6bc8d00a8 <col:1, col:31> col:15 nan 'double (const char *)' extern
+| |-ParmVarDecl 0x7ff6bc8cffe0 <col:19, col:30> col:31 'const char *'
+| |-NoThrowAttr 0x7ff6bc8d02d8 <col:15> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8d02e8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d03d8 <line:531:20> col:20 implicit nanl 'long double (const char *)' extern
+| |-ParmVarDecl 0x7ff6bc8d0470 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-NoThrowAttr 0x7ff6bc8d04d8 <col:20> Implicit
+| `-ConstAttr 0x7ff6bc8d0520 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8d0530 prev 0x7ff6bc8d03d8 <col:1, col:37> col:20 nanl 'long double (const char *)' extern
+| |-ParmVarDecl 0x7ff6bc8d0310 <col:25, col:36> col:37 'const char *'
+| |-NoThrowAttr 0x7ff6bc8d0608 <col:20> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8d0618 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d0750 <line:533:14> col:14 implicit nextafterf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8d07e8 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8d0848 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8d08b8 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8d0900 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8d0910 prev 0x7ff6bc8d0750 <col:1, col:37> col:14 nextafterf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8d0640 <col:25> col:30 'float'
+| |-ParmVarDecl 0x7ff6bc8d06b8 <col:32> col:37 'float'
+| |-ConstAttr 0x7ff6bc8d09f0 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d0a00 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d0b38 <line:534:15> col:15 implicit nextafter 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8d0bd0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8d0c30 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8d0ca0 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8d0ce8 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8d0cf8 prev 0x7ff6bc8d0b38 <col:1, col:39> col:15 nextafter 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8d0a28 <col:25> col:31 'double'
+| |-ParmVarDecl 0x7ff6bc8d0aa0 <col:33> col:39 'double'
+| |-ConstAttr 0x7ff6bc8d0dd8 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d0de8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d0f20 <line:535:20> col:20 implicit nextafterl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8d0fb8 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8d1018 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8d1088 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8d10d0 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8d10e0 prev 0x7ff6bc8d0f20 <col:1, col:55> col:20 nextafterl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8d0e10 <col:31, col:36> col:42 'long double'
+| |-ParmVarDecl 0x7ff6bc8d0e88 <col:44, col:49> col:55 'long double'
+| |-ConstAttr 0x7ff6bc8d11c0 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d11d0 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d1358 <line:537:15> col:15 implicit nexttoward 'double (double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8d13f0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8d1450 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8d14c0 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8d1508 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8d1518 prev 0x7ff6bc8d1358 <col:1, col:45> col:15 nexttoward 'double (double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8d1200 <col:26> col:32 'double'
+| |-ParmVarDecl 0x7ff6bc8d1278 <col:34, col:39> col:45 'long double'
+| |-ConstAttr 0x7ff6bc8d15f8 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d1608 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d1788 <line:538:14> col:14 implicit nexttowardf 'float (float, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8d1820 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8d1880 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8d18f0 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8d1938 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8d1948 prev 0x7ff6bc8d1788 <col:1, col:44> col:14 nexttowardf 'float (float, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8d1630 <col:26> col:31 'float'
+| |-ParmVarDecl 0x7ff6bc8d16a8 <col:33, col:38> col:44 'long double'
+| |-ConstAttr 0x7ff6bc8d1a28 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d1a38 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d1b70 <line:539:20> col:20 implicit nexttowardl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8d1c08 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8d1c68 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8d1cd8 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8d1d20 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8d1d30 prev 0x7ff6bc8d1b70 <col:1, col:56> col:20 nexttowardl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8d1a60 <col:32, col:37> col:43 'long double'
+| |-ParmVarDecl 0x7ff6bc8d1ad8 <col:45, col:50> col:56 'long double'
+| |-ConstAttr 0x7ff6bc8d1e10 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d1e20 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d1f58 <line:541:14> col:14 implicit fdimf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8d1ff0 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8d2050 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8d20c0 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8d2108 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8d2118 prev 0x7ff6bc8d1f58 <col:1, col:32> col:14 fdimf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8d1e48 <col:20> col:25 'float'
+| |-ParmVarDecl 0x7ff6bc8d1ec0 <col:27> col:32 'float'
+| |-ConstAttr 0x7ff6bc8d2200 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d2210 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d2348 <line:542:15> col:15 implicit fdim 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8d23e0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8d2440 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8d24b0 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8d24f8 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8d2508 prev 0x7ff6bc8d2348 <col:1, col:34> col:15 fdim 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8d2238 <col:20> col:26 'double'
+| |-ParmVarDecl 0x7ff6bc8d22b0 <col:28> col:34 'double'
+| |-ConstAttr 0x7ff6bc8d25e8 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d25f8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d2730 <line:543:20> col:20 implicit fdiml 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8d27c8 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8d2828 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8d2898 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8d28e0 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8d28f0 prev 0x7ff6bc8d2730 <col:1, col:50> col:20 fdiml 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8d2620 <col:26, col:31> col:37 'long double'
+| |-ParmVarDecl 0x7ff6bc8d2698 <col:39, col:44> col:50 'long double'
+| |-ConstAttr 0x7ff6bc8d29d0 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d29e0 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d2b18 <line:545:14> col:14 implicit fmaxf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8d2bb0 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8d2c10 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7ff6bc8d2c80 <col:14> Implicit
+| `-ConstAttr 0x7ff6bc8d2cc8 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8d2cd8 prev 0x7ff6bc8d2b18 <col:1, col:32> col:14 fmaxf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8d2a08 <col:20> col:25 'float'
+| |-ParmVarDecl 0x7ff6bc8d2a80 <col:27> col:32 'float'
+| |-NoThrowAttr 0x7ff6bc8d2db8 <col:14> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8d2dc8 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d2f00 <line:546:15> col:15 implicit fmax 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8d2f98 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8d2ff8 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7ff6bc8d3068 <col:15> Implicit
+| `-ConstAttr 0x7ff6bc8d30b0 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8d30c0 prev 0x7ff6bc8d2f00 <col:1, col:34> col:15 fmax 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8d2df0 <col:20> col:26 'double'
+| |-ParmVarDecl 0x7ff6bc8d2e68 <col:28> col:34 'double'
+| |-NoThrowAttr 0x7ff6bc8d31a0 <col:15> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8d31b0 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d4310 <line:547:20> col:20 implicit fmaxl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8d43a8 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8d4408 <<invalid sloc>> <invalid sloc> 'long double'
+| |-NoThrowAttr 0x7ff6bc8d4478 <col:20> Implicit
+| `-ConstAttr 0x7ff6bc8d44c0 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8d44d0 prev 0x7ff6bc8d4310 <col:1, col:50> col:20 fmaxl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8d4200 <col:26, col:31> col:37 'long double'
+| |-ParmVarDecl 0x7ff6bc8d4278 <col:39, col:44> col:50 'long double'
+| |-NoThrowAttr 0x7ff6bc8d45b0 <col:20> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8d45c0 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d46f8 <line:549:14> col:14 implicit fminf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8d4790 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8d47f0 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7ff6bc8d4860 <col:14> Implicit
+| `-ConstAttr 0x7ff6bc8d48a8 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8d48b8 prev 0x7ff6bc8d46f8 <col:1, col:32> col:14 fminf 'float (float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8d45e8 <col:20> col:25 'float'
+| |-ParmVarDecl 0x7ff6bc8d4660 <col:27> col:32 'float'
+| |-NoThrowAttr 0x7ff6bc8d4998 <col:14> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8d49a8 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d4ae0 <line:550:15> col:15 implicit fmin 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8d4b78 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8d4bd8 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7ff6bc8d4c48 <col:15> Implicit
+| `-ConstAttr 0x7ff6bc8d4c90 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8d4ca0 prev 0x7ff6bc8d4ae0 <col:1, col:34> col:15 fmin 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8d49d0 <col:20> col:26 'double'
+| |-ParmVarDecl 0x7ff6bc8d4a48 <col:28> col:34 'double'
+| |-NoThrowAttr 0x7ff6bc8d4d80 <col:15> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8d4d90 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d4ec8 <line:551:20> col:20 implicit fminl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8d4f60 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8d4fc0 <<invalid sloc>> <invalid sloc> 'long double'
+| |-NoThrowAttr 0x7ff6bc8d5030 <col:20> Implicit
+| `-ConstAttr 0x7ff6bc8d5078 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8d5088 prev 0x7ff6bc8d4ec8 <col:1, col:50> col:20 fminl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8d4db8 <col:26, col:31> col:37 'long double'
+| |-ParmVarDecl 0x7ff6bc8d4e30 <col:39, col:44> col:50 'long double'
+| |-NoThrowAttr 0x7ff6bc8d5168 <col:20> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8d5178 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d5378 <line:553:14> col:14 implicit fmaf 'float (float, float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8d5410 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8d5470 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7ff6bc8d54d0 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8d5548 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8d5590 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8d55a0 prev 0x7ff6bc8d5378 <col:1, col:38> col:14 fmaf 'float (float, float, float)' extern
+| |-ParmVarDecl 0x7ff6bc8d51a0 <col:19> col:24 'float'
+| |-ParmVarDecl 0x7ff6bc8d5218 <col:26> col:31 'float'
+| |-ParmVarDecl 0x7ff6bc8d5290 <col:33> col:38 'float'
+| |-ConstAttr 0x7ff6bc8d5688 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d5698 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d5898 <line:554:15> col:15 implicit fma 'double (double, double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8d5930 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8d5990 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7ff6bc8d59f0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8d5a68 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8d5ab0 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8d5ac0 prev 0x7ff6bc8d5898 <col:1, col:41> col:15 fma 'double (double, double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8d56c0 <col:19> col:25 'double'
+| |-ParmVarDecl 0x7ff6bc8d5738 <col:27> col:33 'double'
+| |-ParmVarDecl 0x7ff6bc8d57b0 <col:35> col:41 'double'
+| |-ConstAttr 0x7ff6bc8d5ba8 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d5bb8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d5db8 <line:555:20> col:20 implicit fmal 'long double (long double, long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8d5e50 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8d5eb0 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7ff6bc8d5f10 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7ff6bc8d5f88 <col:20> Implicit
+| `-NoThrowAttr 0x7ff6bc8d5fd0 <col:20> Implicit
+|-FunctionDecl 0x7ff6bc8d5fe0 prev 0x7ff6bc8d5db8 <col:1, col:62> col:20 fmal 'long double (long double, long double, long double)' extern
+| |-ParmVarDecl 0x7ff6bc8d5be0 <col:25, col:30> col:36 'long double'
+| |-ParmVarDecl 0x7ff6bc8d5c58 <col:38, col:43> col:49 'long double'
+| |-ParmVarDecl 0x7ff6bc8d5cd0 <col:51, col:56> col:62 'long double'
+| |-ConstAttr 0x7ff6bc8d60c8 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d60d8 <col:20> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d6200 <line:565:1, /usr/include/AvailabilityInternal.h:29628:140> /usr/include/math.h:565:14 __inff 'float (void)' extern
+| `-AvailabilityAttr 0x7ff6bc8d6298 </usr/include/AvailabilityInternal.h:29628:87, col:138> macos 10.0 10.9 0 "" ""
+|-FunctionDecl 0x7ff6bc8d63e0 </usr/include/math.h:566:1, /usr/include/AvailabilityInternal.h:29628:140> /usr/include/math.h:566:15 __inf 'double (void)' extern
+| `-AvailabilityAttr 0x7ff6bc8d6478 </usr/include/AvailabilityInternal.h:29628:87, col:138> macos 10.0 10.9 0 "" ""
+|-FunctionDecl 0x7ff6bc8d65c0 </usr/include/math.h:567:1, /usr/include/AvailabilityInternal.h:29628:140> /usr/include/math.h:567:20 __infl 'long double (void)' extern
+| `-AvailabilityAttr 0x7ff6bc8d6658 </usr/include/AvailabilityInternal.h:29628:87, col:138> macos 10.0 10.9 0 "" ""
+|-FunctionDecl 0x7ff6bc8d67a0 </usr/include/math.h:569:1, /usr/include/AvailabilityInternal.h:29573:124> /usr/include/math.h:569:14 __nan 'float (void)' extern
+| `-AvailabilityAttr 0x7ff6bc8d6838 </usr/include/AvailabilityInternal.h:29573:87, col:122> macos 10.0 0 0 "" ""
+|-FunctionDecl 0x7ff6bc8d6990 </usr/include/math.h:597:14> col:14 implicit __exp10f 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8d6a28 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8d6a90 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8d6ad8 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8d6ae8 prev 0x7ff6bc8d6990 <col:1, /usr/include/AvailabilityInternal.h:30734:124> /usr/include/math.h:597:14 __exp10f 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8d68f0 <col:23> col:28 'float'
+| |-AvailabilityAttr 0x7ff6bc8d6b88 </usr/include/AvailabilityInternal.h:30734:87, col:122> macos 10.9 0 0 "" ""
+| |-ConstAttr 0x7ff6bc8d6c28 </usr/include/math.h:597:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d6c38 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d6d00 <line:598:15> col:15 implicit __exp10 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8d6d98 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8d6e00 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8d6e48 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8d6e58 prev 0x7ff6bc8d6d00 <col:1, /usr/include/AvailabilityInternal.h:30734:124> /usr/include/math.h:598:15 __exp10 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8d6c60 <col:23> col:29 'double'
+| |-AvailabilityAttr 0x7ff6bc8d6ef8 </usr/include/AvailabilityInternal.h:30734:87, col:122> macos 10.9 0 0 "" ""
+| |-ConstAttr 0x7ff6bc8d6f98 </usr/include/math.h:598:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d6fa8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d7200 </usr/include/sys/cdefs.h:300:36, /usr/include/math.h:604:78> col:29 __sincosf 'void (float, float *, float *)' inline
+| |-ParmVarDecl 0x7ff6bc8d6fd0 <col:39, col:45> col:45 __x 'float'
+| |-ParmVarDecl 0x7ff6bc8d7048 <col:50, col:57> col:57 __sinp 'float *'
+| |-ParmVarDecl 0x7ff6bc8d70c0 <col:65, col:72> col:72 __cosp 'float *'
+| `-AlwaysInlineAttr 0x7ff6bc8d72b0 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8d74e0 <line:300:36, /usr/include/math.h:605:80> col:29 __sincos 'void (double, double *, double *)' inline
+| |-ParmVarDecl 0x7ff6bc8d7310 <col:38, col:45> col:45 __x 'double'
+| |-ParmVarDecl 0x7ff6bc8d7388 <col:50, col:58> col:58 __sinp 'double *'
+| |-ParmVarDecl 0x7ff6bc8d7400 <col:66, col:74> col:74 __cosp 'double *'
+| `-AlwaysInlineAttr 0x7ff6bc8d7590 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8d7690 </usr/include/math.h:614:14> col:14 implicit __cospif 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8d7728 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8d7790 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8d77d8 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8d77e8 prev 0x7ff6bc8d7690 <col:1, /usr/include/AvailabilityInternal.h:30734:124> /usr/include/math.h:614:14 __cospif 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8d75f0 <col:23> col:28 'float'
+| |-AvailabilityAttr 0x7ff6bc8d7888 </usr/include/AvailabilityInternal.h:30734:87, col:122> macos 10.9 0 0 "" ""
+| |-ConstAttr 0x7ff6bc8d7928 </usr/include/math.h:614:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d7938 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d7a00 <line:615:15> col:15 implicit __cospi 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8d7a98 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8d7b00 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8d7b48 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8d7b58 prev 0x7ff6bc8d7a00 <col:1, /usr/include/AvailabilityInternal.h:30734:124> /usr/include/math.h:615:15 __cospi 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8d7960 <col:23> col:29 'double'
+| |-AvailabilityAttr 0x7ff6bc8d7bf8 </usr/include/AvailabilityInternal.h:30734:87, col:122> macos 10.9 0 0 "" ""
+| |-ConstAttr 0x7ff6bc8d7c98 </usr/include/math.h:615:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d7ca8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d7d70 <line:616:14> col:14 implicit __sinpif 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8d7e08 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8d7e70 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8d7eb8 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8d7ec8 prev 0x7ff6bc8d7d70 <col:1, /usr/include/AvailabilityInternal.h:30734:124> /usr/include/math.h:616:14 __sinpif 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8d7cd0 <col:23> col:28 'float'
+| |-AvailabilityAttr 0x7ff6bc8d7f68 </usr/include/AvailabilityInternal.h:30734:87, col:122> macos 10.9 0 0 "" ""
+| |-ConstAttr 0x7ff6bc8d8008 </usr/include/math.h:616:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8d8018 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8d80e0 <line:617:15> col:15 implicit __sinpi 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8d8178 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8d81e0 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8c0238 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8c0248 prev 0x7ff6bc8d80e0 <col:1, /usr/include/AvailabilityInternal.h:30734:124> /usr/include/math.h:617:15 __sinpi 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8d8040 <col:23> col:29 'double'
+| |-AvailabilityAttr 0x7ff6bc8c02e8 </usr/include/AvailabilityInternal.h:30734:87, col:122> macos 10.9 0 0 "" ""
+| |-ConstAttr 0x7ff6bc8c0388 </usr/include/math.h:617:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c0398 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c0460 <line:618:14> col:14 implicit __tanpif 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c04f8 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff6bc8c0560 <col:14> Implicit
+| `-NoThrowAttr 0x7ff6bc8c05a8 <col:14> Implicit
+|-FunctionDecl 0x7ff6bc8c05b8 prev 0x7ff6bc8c0460 <col:1, /usr/include/AvailabilityInternal.h:30734:124> /usr/include/math.h:618:14 __tanpif 'float (float)' extern
+| |-ParmVarDecl 0x7ff6bc8c03c0 <col:23> col:28 'float'
+| |-AvailabilityAttr 0x7ff6bc8c0658 </usr/include/AvailabilityInternal.h:30734:87, col:122> macos 10.9 0 0 "" ""
+| |-ConstAttr 0x7ff6bc8c06f8 </usr/include/math.h:618:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c0708 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c07d0 <line:619:15> col:15 implicit __tanpi 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c0868 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff6bc8c08d0 <col:15> Implicit
+| `-NoThrowAttr 0x7ff6bc8c0918 <col:15> Implicit
+|-FunctionDecl 0x7ff6bc8c0928 prev 0x7ff6bc8c07d0 <col:1, /usr/include/AvailabilityInternal.h:30734:124> /usr/include/math.h:619:15 __tanpi 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8c0730 <col:23> col:29 'double'
+| |-AvailabilityAttr 0x7ff6bc8c09c8 </usr/include/AvailabilityInternal.h:30734:87, col:122> macos 10.9 0 0 "" ""
+| |-ConstAttr 0x7ff6bc8c0a68 </usr/include/math.h:619:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff6bc8c0a78 <col:15> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8c0c28 </usr/include/sys/cdefs.h:300:36, /usr/include/math.h:645:80> col:29 __sincospif 'void (float, float *, float *)' inline
+| |-ParmVarDecl 0x7ff6bc8c0aa0 <col:41, col:47> col:47 __x 'float'
+| |-ParmVarDecl 0x7ff6bc8c0b18 <col:52, col:59> col:59 __sinp 'float *'
+| |-ParmVarDecl 0x7ff6bc8c0b90 <col:67, col:74> col:74 __cosp 'float *'
+| `-AlwaysInlineAttr 0x7ff6bc8c0cd8 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8c0ec0 <line:300:36, /usr/include/math.h:646:82> col:29 __sincospi 'void (double, double *, double *)' inline
+| |-ParmVarDecl 0x7ff6bc8c0d38 <col:40, col:47> col:47 __x 'double'
+| |-ParmVarDecl 0x7ff6bc8c0db0 <col:52, col:60> col:60 __sinp 'double *'
+| |-ParmVarDecl 0x7ff6bc8c0e28 <col:68, col:76> col:76 __cosp 'double *'
+| `-AlwaysInlineAttr 0x7ff6bc8c0f70 </usr/include/sys/cdefs.h:313:68> always_inline
+|-RecordDecl 0x7ff6bc8c0fb8 </usr/include/math.h:653:1, col:51> col:8 struct __float2 definition
+| |-FieldDecl 0x7ff6bc8c1078 <col:19, col:25> col:25 referenced __sinval 'float'
+| `-FieldDecl 0x7ff6bc8c10d8 <col:35, col:41> col:41 referenced __cosval 'float'
+|-RecordDecl 0x7ff6bc8c1120 <line:654:1, col:54> col:8 struct __double2 definition
+| |-FieldDecl 0x7ff6bc8e2200 <col:20, col:27> col:27 referenced __sinval 'double'
+| `-FieldDecl 0x7ff6bc8e2260 <col:37, col:44> col:44 referenced __cosval 'double'
+|-FunctionDecl 0x7ff6bc8e2400 <line:656:1, col:45> col:24 used __sincosf_stret 'struct __float2 (float)' extern
+| `-ParmVarDecl 0x7ff6bc8e22c0 <col:40> col:45 'float'
+|-FunctionDecl 0x7ff6bc8e2600 <line:657:1, col:46> col:25 used __sincos_stret 'struct __double2 (double)' extern
+| `-ParmVarDecl 0x7ff6bc8e24b8 <col:40> col:46 'double'
+|-FunctionDecl 0x7ff6bc8e2750 <line:658:1, col:47> col:24 used __sincospif_stret 'struct __float2 (float)' extern
+| `-ParmVarDecl 0x7ff6bc8e26b8 <col:42> col:47 'float'
+|-FunctionDecl 0x7ff6bc8e28a0 <line:659:1, col:48> col:25 used __sincospi_stret 'struct __double2 (double)' extern
+| `-ParmVarDecl 0x7ff6bc8e2808 <col:42> col:48 'double'
+|-FunctionDecl 0x7ff6bc8e2ae0 prev 0x7ff6bc8d7200 </usr/include/sys/cdefs.h:300:36, /usr/include/math.h:664:1> line:661:29 __sincosf 'void (float, float *, float *)' inline
+| |-ParmVarDecl 0x7ff6bc8e2958 <col:39, col:45> col:45 used __x 'float'
+| |-ParmVarDecl 0x7ff6bc8e29d0 <col:50, col:57> col:57 used __sinp 'float *'
+| |-ParmVarDecl 0x7ff6bc8e2a48 <col:65, col:72> col:72 used __cosp 'float *'
+| |-CompoundStmt 0x7ff6bc8e2f80 <col:80, line:664:1>
+| | |-DeclStmt 0x7ff6bc8e2d68 <line:662:5, col:57>
+| | | `-VarDecl 0x7ff6bc8e2bf8 <col:5, col:56> col:27 used __stret 'const struct __float2':'const struct __float2' cinit
+| | |   `-CallExpr 0x7ff6bc8e2d20 <col:37, col:56> 'struct __float2':'struct __float2'
+| | |     |-ImplicitCastExpr 0x7ff6bc8e2d08 <col:37> 'struct __float2 (*)(float)' <FunctionToPointerDecay>
+| | |     | `-DeclRefExpr 0x7ff6bc8e2c58 <col:37> 'struct __float2 (float)' Function 0x7ff6bc8e2400 '__sincosf_stret' 'struct __float2 (float)'
+| | |     `-ImplicitCastExpr 0x7ff6bc8e2d50 <col:53> 'float' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7ff6bc8e2c80 <col:53> 'float' lvalue ParmVar 0x7ff6bc8e2958 '__x' 'float'
+| | |-BinaryOperator 0x7ff6bc8e2e58 <line:663:5, col:23> 'float' '='
+| | | |-UnaryOperator 0x7ff6bc8e2dc0 <col:5, col:6> 'float' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7ff6bc8e2da8 <col:6> 'float *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7ff6bc8e2d80 <col:6> 'float *' lvalue ParmVar 0x7ff6bc8e29d0 '__sinp' 'float *'
+| | | `-ImplicitCastExpr 0x7ff6bc8e2e40 <col:15, col:23> 'float' <LValueToRValue>
+| | |   `-MemberExpr 0x7ff6bc8e2e08 <col:15, col:23> 'const float' lvalue .__sinval 0x7ff6bc8c1078
+| | |     `-DeclRefExpr 0x7ff6bc8e2de0 <col:15> 'const struct __float2':'const struct __float2' lvalue Var 0x7ff6bc8e2bf8 '__stret' 'const struct __float2':'const struct __float2'
+| | `-BinaryOperator 0x7ff6bc8e2f58 <col:33, col:51> 'float' '='
+| |   |-UnaryOperator 0x7ff6bc8e2ec0 <col:33, col:34> 'float' lvalue prefix '*'
+| |   | `-ImplicitCastExpr 0x7ff6bc8e2ea8 <col:34> 'float *' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7ff6bc8e2e80 <col:34> 'float *' lvalue ParmVar 0x7ff6bc8e2a48 '__cosp' 'float *'
+| |   `-ImplicitCastExpr 0x7ff6bc8e2f40 <col:43, col:51> 'float' <LValueToRValue>
+| |     `-MemberExpr 0x7ff6bc8e2f08 <col:43, col:51> 'const float' lvalue .__cosval 0x7ff6bc8c10d8
+| |       `-DeclRefExpr 0x7ff6bc8e2ee0 <col:43> 'const struct __float2':'const struct __float2' lvalue Var 0x7ff6bc8e2bf8 '__stret' 'const struct __float2':'const struct __float2'
+| `-AlwaysInlineAttr 0x7ff6bc8e2b90 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8e3150 prev 0x7ff6bc8d74e0 <line:300:36, /usr/include/math.h:669:1> line:666:29 __sincos 'void (double, double *, double *)' inline
+| |-ParmVarDecl 0x7ff6bc8e2fc8 <col:38, col:45> col:45 used __x 'double'
+| |-ParmVarDecl 0x7ff6bc8e3040 <col:50, col:58> col:58 used __sinp 'double *'
+| |-ParmVarDecl 0x7ff6bc8e30b8 <col:66, col:74> col:74 used __cosp 'double *'
+| |-CompoundStmt 0x7ff6bc8e35f0 <col:82, line:669:1>
+| | |-DeclStmt 0x7ff6bc8e33d8 <line:667:5, col:57>
+| | | `-VarDecl 0x7ff6bc8e3268 <col:5, col:56> col:28 used __stret 'const struct __double2':'const struct __double2' cinit
+| | |   `-CallExpr 0x7ff6bc8e3390 <col:38, col:56> 'struct __double2':'struct __double2'
+| | |     |-ImplicitCastExpr 0x7ff6bc8e3378 <col:38> 'struct __double2 (*)(double)' <FunctionToPointerDecay>
+| | |     | `-DeclRefExpr 0x7ff6bc8e32c8 <col:38> 'struct __double2 (double)' Function 0x7ff6bc8e2600 '__sincos_stret' 'struct __double2 (double)'
+| | |     `-ImplicitCastExpr 0x7ff6bc8e33c0 <col:53> 'double' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7ff6bc8e32f0 <col:53> 'double' lvalue ParmVar 0x7ff6bc8e2fc8 '__x' 'double'
+| | |-BinaryOperator 0x7ff6bc8e34c8 <line:668:5, col:23> 'double' '='
+| | | |-UnaryOperator 0x7ff6bc8e3430 <col:5, col:6> 'double' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7ff6bc8e3418 <col:6> 'double *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7ff6bc8e33f0 <col:6> 'double *' lvalue ParmVar 0x7ff6bc8e3040 '__sinp' 'double *'
+| | | `-ImplicitCastExpr 0x7ff6bc8e34b0 <col:15, col:23> 'double' <LValueToRValue>
+| | |   `-MemberExpr 0x7ff6bc8e3478 <col:15, col:23> 'const double' lvalue .__sinval 0x7ff6bc8e2200
+| | |     `-DeclRefExpr 0x7ff6bc8e3450 <col:15> 'const struct __double2':'const struct __double2' lvalue Var 0x7ff6bc8e3268 '__stret' 'const struct __double2':'const struct __double2'
+| | `-BinaryOperator 0x7ff6bc8e35c8 <col:33, col:51> 'double' '='
+| |   |-UnaryOperator 0x7ff6bc8e3530 <col:33, col:34> 'double' lvalue prefix '*'
+| |   | `-ImplicitCastExpr 0x7ff6bc8e3518 <col:34> 'double *' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7ff6bc8e34f0 <col:34> 'double *' lvalue ParmVar 0x7ff6bc8e30b8 '__cosp' 'double *'
+| |   `-ImplicitCastExpr 0x7ff6bc8e35b0 <col:43, col:51> 'double' <LValueToRValue>
+| |     `-MemberExpr 0x7ff6bc8e3578 <col:43, col:51> 'const double' lvalue .__cosval 0x7ff6bc8e2260
+| |       `-DeclRefExpr 0x7ff6bc8e3550 <col:43> 'const struct __double2':'const struct __double2' lvalue Var 0x7ff6bc8e3268 '__stret' 'const struct __double2':'const struct __double2'
+| `-AlwaysInlineAttr 0x7ff6bc8e3200 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8e37c0 prev 0x7ff6bc8c0c28 <line:300:36, /usr/include/math.h:674:1> line:671:29 __sincospif 'void (float, float *, float *)' inline
+| |-ParmVarDecl 0x7ff6bc8e3638 <col:41, col:47> col:47 used __x 'float'
+| |-ParmVarDecl 0x7ff6bc8e36b0 <col:52, col:59> col:59 used __sinp 'float *'
+| |-ParmVarDecl 0x7ff6bc8e3728 <col:67, col:74> col:74 used __cosp 'float *'
+| |-CompoundStmt 0x7ff6bc8e3c00 <col:82, line:674:1>
+| | |-DeclStmt 0x7ff6bc8e39e8 <line:672:5, col:59>
+| | | `-VarDecl 0x7ff6bc8e38d8 <col:5, col:58> col:27 used __stret 'const struct __float2':'const struct __float2' cinit
+| | |   `-CallExpr 0x7ff6bc8e39a0 <col:37, col:58> 'struct __float2':'struct __float2'
+| | |     |-ImplicitCastExpr 0x7ff6bc8e3988 <col:37> 'struct __float2 (*)(float)' <FunctionToPointerDecay>
+| | |     | `-DeclRefExpr 0x7ff6bc8e3938 <col:37> 'struct __float2 (float)' Function 0x7ff6bc8e2750 '__sincospif_stret' 'struct __float2 (float)'
+| | |     `-ImplicitCastExpr 0x7ff6bc8e39d0 <col:55> 'float' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7ff6bc8e3960 <col:55> 'float' lvalue ParmVar 0x7ff6bc8e3638 '__x' 'float'
+| | |-BinaryOperator 0x7ff6bc8e3ad8 <line:673:5, col:23> 'float' '='
+| | | |-UnaryOperator 0x7ff6bc8e3a40 <col:5, col:6> 'float' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7ff6bc8e3a28 <col:6> 'float *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7ff6bc8e3a00 <col:6> 'float *' lvalue ParmVar 0x7ff6bc8e36b0 '__sinp' 'float *'
+| | | `-ImplicitCastExpr 0x7ff6bc8e3ac0 <col:15, col:23> 'float' <LValueToRValue>
+| | |   `-MemberExpr 0x7ff6bc8e3a88 <col:15, col:23> 'const float' lvalue .__sinval 0x7ff6bc8c1078
+| | |     `-DeclRefExpr 0x7ff6bc8e3a60 <col:15> 'const struct __float2':'const struct __float2' lvalue Var 0x7ff6bc8e38d8 '__stret' 'const struct __float2':'const struct __float2'
+| | `-BinaryOperator 0x7ff6bc8e3bd8 <col:33, col:51> 'float' '='
+| |   |-UnaryOperator 0x7ff6bc8e3b40 <col:33, col:34> 'float' lvalue prefix '*'
+| |   | `-ImplicitCastExpr 0x7ff6bc8e3b28 <col:34> 'float *' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7ff6bc8e3b00 <col:34> 'float *' lvalue ParmVar 0x7ff6bc8e3728 '__cosp' 'float *'
+| |   `-ImplicitCastExpr 0x7ff6bc8e3bc0 <col:43, col:51> 'float' <LValueToRValue>
+| |     `-MemberExpr 0x7ff6bc8e3b88 <col:43, col:51> 'const float' lvalue .__cosval 0x7ff6bc8c10d8
+| |       `-DeclRefExpr 0x7ff6bc8e3b60 <col:43> 'const struct __float2':'const struct __float2' lvalue Var 0x7ff6bc8e38d8 '__stret' 'const struct __float2':'const struct __float2'
+| `-AlwaysInlineAttr 0x7ff6bc8e3870 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8e3dd0 prev 0x7ff6bc8c0ec0 <line:300:36, /usr/include/math.h:679:1> line:676:29 __sincospi 'void (double, double *, double *)' inline
+| |-ParmVarDecl 0x7ff6bc8e3c48 <col:40, col:47> col:47 used __x 'double'
+| |-ParmVarDecl 0x7ff6bc8e3cc0 <col:52, col:60> col:60 used __sinp 'double *'
+| |-ParmVarDecl 0x7ff6bc8e3d38 <col:68, col:76> col:76 used __cosp 'double *'
+| |-CompoundStmt 0x7ff6bc8e4228 <col:84, line:679:1>
+| | |-DeclStmt 0x7ff6bc8e3ff8 <line:677:5, col:59>
+| | | `-VarDecl 0x7ff6bc8e3ee8 <col:5, col:58> col:28 used __stret 'const struct __double2':'const struct __double2' cinit
+| | |   `-CallExpr 0x7ff6bc8e3fb0 <col:38, col:58> 'struct __double2':'struct __double2'
+| | |     |-ImplicitCastExpr 0x7ff6bc8e3f98 <col:38> 'struct __double2 (*)(double)' <FunctionToPointerDecay>
+| | |     | `-DeclRefExpr 0x7ff6bc8e3f48 <col:38> 'struct __double2 (double)' Function 0x7ff6bc8e28a0 '__sincospi_stret' 'struct __double2 (double)'
+| | |     `-ImplicitCastExpr 0x7ff6bc8e3fe0 <col:55> 'double' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7ff6bc8e3f70 <col:55> 'double' lvalue ParmVar 0x7ff6bc8e3c48 '__x' 'double'
+| | |-BinaryOperator 0x7ff6bc8e40e8 <line:678:5, col:23> 'double' '='
+| | | |-UnaryOperator 0x7ff6bc8e4050 <col:5, col:6> 'double' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7ff6bc8e4038 <col:6> 'double *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7ff6bc8e4010 <col:6> 'double *' lvalue ParmVar 0x7ff6bc8e3cc0 '__sinp' 'double *'
+| | | `-ImplicitCastExpr 0x7ff6bc8e40d0 <col:15, col:23> 'double' <LValueToRValue>
+| | |   `-MemberExpr 0x7ff6bc8e4098 <col:15, col:23> 'const double' lvalue .__sinval 0x7ff6bc8e2200
+| | |     `-DeclRefExpr 0x7ff6bc8e4070 <col:15> 'const struct __double2':'const struct __double2' lvalue Var 0x7ff6bc8e3ee8 '__stret' 'const struct __double2':'const struct __double2'
+| | `-BinaryOperator 0x7ff6bc8e4200 <col:33, col:51> 'double' '='
+| |   |-UnaryOperator 0x7ff6bc8e4150 <col:33, col:34> 'double' lvalue prefix '*'
+| |   | `-ImplicitCastExpr 0x7ff6bc8e4138 <col:34> 'double *' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7ff6bc8e4110 <col:34> 'double *' lvalue ParmVar 0x7ff6bc8e3d38 '__cosp' 'double *'
+| |   `-ImplicitCastExpr 0x7ff6bc8e41d0 <col:43, col:51> 'double' <LValueToRValue>
+| |     `-MemberExpr 0x7ff6bc8e4198 <col:43, col:51> 'const double' lvalue .__cosval 0x7ff6bc8e2260
+| |       `-DeclRefExpr 0x7ff6bc8e4170 <col:43> 'const struct __double2':'const struct __double2' lvalue Var 0x7ff6bc8e3ee8 '__stret' 'const struct __double2':'const struct __double2'
+| `-AlwaysInlineAttr 0x7ff6bc8e3e80 </usr/include/sys/cdefs.h:313:68> always_inline
+|-FunctionDecl 0x7ff6bc8e4310 </usr/include/math.h:687:1, /usr/include/AvailabilityInternal.h:29573:124> /usr/include/math.h:687:15 j0 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8e4270 <col:18> col:24 'double'
+| `-AvailabilityAttr 0x7ff6bc8e43b0 </usr/include/AvailabilityInternal.h:29573:87, col:122> macos 10.0 0 0 "" ""
+|-FunctionDecl 0x7ff6bc8e4508 </usr/include/math.h:688:1, /usr/include/AvailabilityInternal.h:29573:124> /usr/include/math.h:688:15 j1 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8e4468 <col:18> col:24 'double'
+| `-AvailabilityAttr 0x7ff6bc8e45a8 </usr/include/AvailabilityInternal.h:29573:87, col:122> macos 10.0 0 0 "" ""
+|-FunctionDecl 0x7ff6bc8e47c8 </usr/include/math.h:689:1, /usr/include/AvailabilityInternal.h:29573:124> /usr/include/math.h:689:15 jn 'double (int, double)' extern
+| |-ParmVarDecl 0x7ff6bc8e4660 <col:18> col:21 'int'
+| |-ParmVarDecl 0x7ff6bc8e46d8 <col:23> col:29 'double'
+| `-AvailabilityAttr 0x7ff6bc8e4870 </usr/include/AvailabilityInternal.h:29573:87, col:122> macos 10.0 0 0 "" ""
+|-FunctionDecl 0x7ff6bc8e49c8 </usr/include/math.h:690:1, /usr/include/AvailabilityInternal.h:29573:124> /usr/include/math.h:690:15 y0 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8e4928 <col:18> col:24 'double'
+| `-AvailabilityAttr 0x7ff6bc8e4a68 </usr/include/AvailabilityInternal.h:29573:87, col:122> macos 10.0 0 0 "" ""
+|-FunctionDecl 0x7ff6bc8e4bc0 </usr/include/math.h:691:1, /usr/include/AvailabilityInternal.h:29573:124> /usr/include/math.h:691:15 y1 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8e4b20 <col:18> col:24 'double'
+| `-AvailabilityAttr 0x7ff6bc8e4c60 </usr/include/AvailabilityInternal.h:29573:87, col:122> macos 10.0 0 0 "" ""
+|-FunctionDecl 0x7ff6bc8e4e38 </usr/include/math.h:692:1, /usr/include/AvailabilityInternal.h:29573:124> /usr/include/math.h:692:15 yn 'double (int, double)' extern
+| |-ParmVarDecl 0x7ff6bc8e4d18 <col:18> col:21 'int'
+| |-ParmVarDecl 0x7ff6bc8e4d90 <col:23> col:29 'double'
+| `-AvailabilityAttr 0x7ff6bc8e4ee0 </usr/include/AvailabilityInternal.h:29573:87, col:122> macos 10.0 0 0 "" ""
+|-FunctionDecl 0x7ff6bc8e50a8 </usr/include/math.h:693:1, col:35> col:15 scalb 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8e4f98 <col:21> col:27 'double'
+| `-ParmVarDecl 0x7ff6bc8e5010 <col:29> col:35 'double'
+|-VarDecl 0x7ff6bc8e5168 <line:694:1, col:12> col:12 signgam 'int' extern
+|-FunctionDecl 0x7ff6bc8e72a0 <line:751:1, /usr/include/AvailabilityInternal.h:29628:140> /usr/include/math.h:751:17 rinttol 'long (double)' extern
+| |-ParmVarDecl 0x7ff6bc8e7200 <col:25> col:31 'double'
+| `-AvailabilityAttr 0x7ff6bc8e7340 </usr/include/AvailabilityInternal.h:29628:87, col:138> macos 10.0 10.9 0 "" ""
+|-FunctionDecl 0x7ff6bc8e7498 </usr/include/math.h:753:1, /usr/include/AvailabilityInternal.h:29628:140> /usr/include/math.h:753:17 roundtol 'long (double)' extern
+| |-ParmVarDecl 0x7ff6bc8e73f8 <col:26> col:32 'double'
+| `-AvailabilityAttr 0x7ff6bc8e7538 </usr/include/AvailabilityInternal.h:29628:87, col:138> macos 10.0 10.9 0 "" ""
+|-FunctionDecl 0x7ff6bc8e7710 </usr/include/math.h:755:1, /usr/include/AvailabilityInternal.h:29628:140> /usr/include/math.h:755:15 drem 'double (double, double)' extern
+| |-ParmVarDecl 0x7ff6bc8e75f0 <col:20> col:26 'double'
+| |-ParmVarDecl 0x7ff6bc8e7668 <col:28> col:34 'double'
+| `-AvailabilityAttr 0x7ff6bc8e77b8 </usr/include/AvailabilityInternal.h:29628:87, col:138> macos 10.0 10.9 0 "" ""
+|-FunctionDecl 0x7ff6bc8e7910 </usr/include/math.h:757:12> col:12 implicit finite 'int (double)' extern
+| |-ParmVarDecl 0x7ff6bc8e79a8 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7ff6bc8e7a10 <col:12> Implicit
+| `-ConstAttr 0x7ff6bc8e7a58 <col:12> Implicit
+|-FunctionDecl 0x7ff6bc8e7a68 prev 0x7ff6bc8e7910 <col:1, /usr/include/AvailabilityInternal.h:29628:140> /usr/include/math.h:757:12 finite 'int (double)' extern
+| |-ParmVarDecl 0x7ff6bc8e7870 <col:19> col:25 'double'
+| |-AvailabilityAttr 0x7ff6bc8e7b08 </usr/include/AvailabilityInternal.h:29628:87, col:138> macos 10.0 10.9 0 "" ""
+| |-NoThrowAttr 0x7ff6bc8e7ba8 </usr/include/math.h:757:12> Inherited Implicit
+| `-ConstAttr 0x7ff6bc8e7bb8 <col:12> Inherited Implicit
+|-FunctionDecl 0x7ff6bc8e7c80 <line:759:1, /usr/include/AvailabilityInternal.h:29628:140> /usr/include/math.h:759:15 gamma 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8e7be0 <col:21> col:27 'double'
+| `-AvailabilityAttr 0x7ff6bc8e7d20 </usr/include/AvailabilityInternal.h:29628:87, col:138> macos 10.0 10.9 0 "" ""
+|-FunctionDecl 0x7ff6bc8e7e78 </usr/include/math.h:761:1, /usr/include/AvailabilityInternal.h:29628:140> /usr/include/math.h:761:15 significand 'double (double)' extern
+| |-ParmVarDecl 0x7ff6bc8e7dd8 <col:27> col:33 'double'
+| `-AvailabilityAttr 0x7ff6bc8e7f18 </usr/include/AvailabilityInternal.h:29628:87, col:138> macos 10.0 10.9 0 "" ""
+|-RecordDecl 0x7ff6bc8e7fb8 </usr/include/math.h:764:1, line:770:1> line:764:8 struct exception definition
+| |-FieldDecl 0x7ff6bc8e8078 <line:765:5, col:9> col:9 type 'int'
+| |-FieldDecl 0x7ff6bc8e80d8 <line:766:5, col:11> col:11 name 'char *'
+| |-FieldDecl 0x7ff6bc8e8138 <line:767:5, col:12> col:12 arg1 'double'
+| |-FieldDecl 0x7ff6bc8e8198 <line:768:5, col:12> col:12 arg2 'double'
+| `-FieldDecl 0x7ff6bc8e8200 <line:769:5, col:12> col:12 retval 'double'
+|-FunctionDecl 0x7ff6bc8e8418 <line:772:1, /usr/include/AvailabilityInternal.h:29628:140> /usr/include/math.h:772:12 matherr 'int (struct exception *)' extern
+| |-ParmVarDecl 0x7ff6bc8e8300 <col:20, col:37> col:38 'struct exception *'
+| `-AvailabilityAttr 0x7ff6bc8e84b8 </usr/include/AvailabilityInternal.h:29628:87, col:138> macos 10.0 10.9 0 "" ""
+|-RecordDecl 0x7ff6bc8e8558 <c_files/pr61403.c:6:1, line:11:1> line:6:8 struct XYZ definition
+| |-FieldDecl 0x7ff6bc8e8618 <line:8:3, col:9> col:9 referenced x 'float'
+| |-FieldDecl 0x7ff6bc8e8678 <line:9:3, col:9> col:9 referenced y 'float'
+| `-FieldDecl 0x7ff6bc8e86d8 <line:10:3, col:9> col:9 referenced z 'float'
+`-FunctionDecl 0x7ff6bc8e8a00 <line:13:1, line:24:1> line:14:1 norm 'void (struct XYZ *, struct XYZ *, int)'
+  |-ParmVarDecl 0x7ff6bc8e87d0 <col:7, col:19> col:19 used in 'struct XYZ *'
+  |-ParmVarDecl 0x7ff6bc8e8858 <col:23, col:35> col:35 used out 'struct XYZ *'
+  |-ParmVarDecl 0x7ff6bc8e88d0 <col:40, col:44> col:44 used size 'int'
+  `-CompoundStmt 0x7ff6bc87bc10 <line:15:1, line:24:1>
+    |-DeclStmt 0x7ff6bc8e8b28 <line:16:3, col:8>
+    | `-VarDecl 0x7ff6bc8e8ac8 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7ff6bc87bbd8 <line:17:3, line:23:5>
+      |-BinaryOperator 0x7ff6bc8e8b88 <line:17:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7ff6bc8e8b40 <col:8> 'int' lvalue Var 0x7ff6bc8e8ac8 'i' 'int'
+      | `-IntegerLiteral 0x7ff6bc8e8b68 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff6bc8e8c30 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7ff6bc8e8c00 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff6bc8e8bb0 <col:15> 'int' lvalue Var 0x7ff6bc8e8ac8 'i' 'int'
+      | `-ImplicitCastExpr 0x7ff6bc8e8c18 <col:19> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ff6bc8e8bd8 <col:19> 'int' lvalue ParmVar 0x7ff6bc8e88d0 'size' 'int'
+      |-UnaryOperator 0x7ff6bc8e8c80 <col:25, col:27> 'int' prefix '++'
+      | `-DeclRefExpr 0x7ff6bc8e8c58 <col:27> 'int' lvalue Var 0x7ff6bc8e8ac8 'i' 'int'
+      `-CompoundStmt 0x7ff6bc87bba0 <line:18:5, line:23:5>
+        |-DeclStmt 0x7ff6bc87b450 <line:19:7, col:81>
+        | `-VarDecl 0x7ff6bc8e8cb8 <col:7, col:80> col:13 used n 'float' cinit
+        |   `-ImplicitCastExpr 0x7ff6bc87b438 <col:17, col:80> 'float' <FloatingCast>
+        |     `-CallExpr 0x7ff6bc87b3f0 <col:17, col:80> 'double'
+        |       |-ImplicitCastExpr 0x7ff6bc87b3d8 <col:17> 'double (*)(double)' <FunctionToPointerDecay>
+        |       | `-DeclRefExpr 0x7ff6bc8e8d18 <col:17> 'double (double)' Function 0x7ff6bc8c4da0 'sqrt' 'double (double)'
+        |       `-ImplicitCastExpr 0x7ff6bc87b420 <col:23, col:79> 'double' <FloatingCast>
+        |         `-BinaryOperator 0x7ff6bc87b3b0 <col:23, col:79> 'float' '+'
+        |           |-BinaryOperator 0x7ff6bc8e9170 <col:23, col:59> 'float' '+'
+        |           | |-BinaryOperator 0x7ff6bc8e8f30 <col:23, col:39> 'float' '*'
+        |           | | |-ImplicitCastExpr 0x7ff6bc8e8f00 <col:23, col:29> 'float' <LValueToRValue>
+        |           | | | `-MemberExpr 0x7ff6bc8e8de8 <col:23, col:29> 'float' lvalue .x 0x7ff6bc8e8618
+        |           | | |   `-ArraySubscriptExpr 0x7ff6bc8e8dc0 <col:23, col:27> 'struct XYZ':'struct XYZ' lvalue
+        |           | | |     |-ImplicitCastExpr 0x7ff6bc8e8d90 <col:23> 'struct XYZ *' <LValueToRValue>
+        |           | | |     | `-DeclRefExpr 0x7ff6bc8e8d40 <col:23> 'struct XYZ *' lvalue ParmVar 0x7ff6bc8e87d0 'in' 'struct XYZ *'
+        |           | | |     `-ImplicitCastExpr 0x7ff6bc8e8da8 <col:26> 'int' <LValueToRValue>
+        |           | | |       `-DeclRefExpr 0x7ff6bc8e8d68 <col:26> 'int' lvalue Var 0x7ff6bc8e8ac8 'i' 'int'
+        |           | | `-ImplicitCastExpr 0x7ff6bc8e8f18 <col:33, col:39> 'float' <LValueToRValue>
+        |           | |   `-MemberExpr 0x7ff6bc8e8ec8 <col:33, col:39> 'float' lvalue .x 0x7ff6bc8e8618
+        |           | |     `-ArraySubscriptExpr 0x7ff6bc8e8ea0 <col:33, col:37> 'struct XYZ':'struct XYZ' lvalue
+        |           | |       |-ImplicitCastExpr 0x7ff6bc8e8e70 <col:33> 'struct XYZ *' <LValueToRValue>
+        |           | |       | `-DeclRefExpr 0x7ff6bc8e8e20 <col:33> 'struct XYZ *' lvalue ParmVar 0x7ff6bc8e87d0 'in' 'struct XYZ *'
+        |           | |       `-ImplicitCastExpr 0x7ff6bc8e8e88 <col:36> 'int' <LValueToRValue>
+        |           | |         `-DeclRefExpr 0x7ff6bc8e8e48 <col:36> 'int' lvalue Var 0x7ff6bc8e8ac8 'i' 'int'
+        |           | `-BinaryOperator 0x7ff6bc8e9148 <col:43, col:59> 'float' '*'
+        |           |   |-ImplicitCastExpr 0x7ff6bc8e9118 <col:43, col:49> 'float' <LValueToRValue>
+        |           |   | `-MemberExpr 0x7ff6bc8e9000 <col:43, col:49> 'float' lvalue .y 0x7ff6bc8e8678
+        |           |   |   `-ArraySubscriptExpr 0x7ff6bc8e8fd8 <col:43, col:47> 'struct XYZ':'struct XYZ' lvalue
+        |           |   |     |-ImplicitCastExpr 0x7ff6bc8e8fa8 <col:43> 'struct XYZ *' <LValueToRValue>
+        |           |   |     | `-DeclRefExpr 0x7ff6bc8e8f58 <col:43> 'struct XYZ *' lvalue ParmVar 0x7ff6bc8e87d0 'in' 'struct XYZ *'
+        |           |   |     `-ImplicitCastExpr 0x7ff6bc8e8fc0 <col:46> 'int' <LValueToRValue>
+        |           |   |       `-DeclRefExpr 0x7ff6bc8e8f80 <col:46> 'int' lvalue Var 0x7ff6bc8e8ac8 'i' 'int'
+        |           |   `-ImplicitCastExpr 0x7ff6bc8e9130 <col:53, col:59> 'float' <LValueToRValue>
+        |           |     `-MemberExpr 0x7ff6bc8e90e0 <col:53, col:59> 'float' lvalue .y 0x7ff6bc8e8678
+        |           |       `-ArraySubscriptExpr 0x7ff6bc8e90b8 <col:53, col:57> 'struct XYZ':'struct XYZ' lvalue
+        |           |         |-ImplicitCastExpr 0x7ff6bc8e9088 <col:53> 'struct XYZ *' <LValueToRValue>
+        |           |         | `-DeclRefExpr 0x7ff6bc8e9038 <col:53> 'struct XYZ *' lvalue ParmVar 0x7ff6bc8e87d0 'in' 'struct XYZ *'
+        |           |         `-ImplicitCastExpr 0x7ff6bc8e90a0 <col:56> 'int' <LValueToRValue>
+        |           |           `-DeclRefExpr 0x7ff6bc8e9060 <col:56> 'int' lvalue Var 0x7ff6bc8e8ac8 'i' 'int'
+        |           `-BinaryOperator 0x7ff6bc87b388 <col:63, col:79> 'float' '*'
+        |             |-ImplicitCastExpr 0x7ff6bc87b358 <col:63, col:69> 'float' <LValueToRValue>
+        |             | `-MemberExpr 0x7ff6bc87b240 <col:63, col:69> 'float' lvalue .z 0x7ff6bc8e86d8
+        |             |   `-ArraySubscriptExpr 0x7ff6bc87b218 <col:63, col:67> 'struct XYZ':'struct XYZ' lvalue
+        |             |     |-ImplicitCastExpr 0x7ff6bc8e91e8 <col:63> 'struct XYZ *' <LValueToRValue>
+        |             |     | `-DeclRefExpr 0x7ff6bc8e9198 <col:63> 'struct XYZ *' lvalue ParmVar 0x7ff6bc8e87d0 'in' 'struct XYZ *'
+        |             |     `-ImplicitCastExpr 0x7ff6bc87b200 <col:66> 'int' <LValueToRValue>
+        |             |       `-DeclRefExpr 0x7ff6bc8e91c0 <col:66> 'int' lvalue Var 0x7ff6bc8e8ac8 'i' 'int'
+        |             `-ImplicitCastExpr 0x7ff6bc87b370 <col:73, col:79> 'float' <LValueToRValue>
+        |               `-MemberExpr 0x7ff6bc87b320 <col:73, col:79> 'float' lvalue .z 0x7ff6bc8e86d8
+        |                 `-ArraySubscriptExpr 0x7ff6bc87b2f8 <col:73, col:77> 'struct XYZ':'struct XYZ' lvalue
+        |                   |-ImplicitCastExpr 0x7ff6bc87b2c8 <col:73> 'struct XYZ *' <LValueToRValue>
+        |                   | `-DeclRefExpr 0x7ff6bc87b278 <col:73> 'struct XYZ *' lvalue ParmVar 0x7ff6bc8e87d0 'in' 'struct XYZ *'
+        |                   `-ImplicitCastExpr 0x7ff6bc87b2e0 <col:76> 'int' <LValueToRValue>
+        |                     `-DeclRefExpr 0x7ff6bc87b2a0 <col:76> 'int' lvalue Var 0x7ff6bc8e8ac8 'i' 'int'
+        |-BinaryOperator 0x7ff6bc87b6a8 <line:20:7, col:28> 'float' '='
+        | |-MemberExpr 0x7ff6bc87b510 <col:7, col:14> 'float' lvalue .x 0x7ff6bc8e8618
+        | | `-ArraySubscriptExpr 0x7ff6bc87b4e8 <col:7, col:12> 'struct XYZ':'struct XYZ' lvalue
+        | |   |-ImplicitCastExpr 0x7ff6bc87b4b8 <col:7> 'struct XYZ *' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7ff6bc87b468 <col:7> 'struct XYZ *' lvalue ParmVar 0x7ff6bc8e8858 'out' 'struct XYZ *'
+        | |   `-ImplicitCastExpr 0x7ff6bc87b4d0 <col:11> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7ff6bc87b490 <col:11> 'int' lvalue Var 0x7ff6bc8e8ac8 'i' 'int'
+        | `-BinaryOperator 0x7ff6bc87b680 <col:18, col:28> 'float' '/'
+        |   |-ImplicitCastExpr 0x7ff6bc87b650 <col:18, col:24> 'float' <LValueToRValue>
+        |   | `-MemberExpr 0x7ff6bc87b5f0 <col:18, col:24> 'float' lvalue .x 0x7ff6bc8e8618
+        |   |   `-ArraySubscriptExpr 0x7ff6bc87b5c8 <col:18, col:22> 'struct XYZ':'struct XYZ' lvalue
+        |   |     |-ImplicitCastExpr 0x7ff6bc87b598 <col:18> 'struct XYZ *' <LValueToRValue>
+        |   |     | `-DeclRefExpr 0x7ff6bc87b548 <col:18> 'struct XYZ *' lvalue ParmVar 0x7ff6bc8e87d0 'in' 'struct XYZ *'
+        |   |     `-ImplicitCastExpr 0x7ff6bc87b5b0 <col:21> 'int' <LValueToRValue>
+        |   |       `-DeclRefExpr 0x7ff6bc87b570 <col:21> 'int' lvalue Var 0x7ff6bc8e8ac8 'i' 'int'
+        |   `-ImplicitCastExpr 0x7ff6bc87b668 <col:28> 'float' <LValueToRValue>
+        |     `-DeclRefExpr 0x7ff6bc87b628 <col:28> 'float' lvalue Var 0x7ff6bc8e8cb8 'n' 'float'
+        |-BinaryOperator 0x7ff6bc87b910 <line:21:7, col:28> 'float' '='
+        | |-MemberExpr 0x7ff6bc87b778 <col:7, col:14> 'float' lvalue .y 0x7ff6bc8e8678
+        | | `-ArraySubscriptExpr 0x7ff6bc87b750 <col:7, col:12> 'struct XYZ':'struct XYZ' lvalue
+        | |   |-ImplicitCastExpr 0x7ff6bc87b720 <col:7> 'struct XYZ *' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7ff6bc87b6d0 <col:7> 'struct XYZ *' lvalue ParmVar 0x7ff6bc8e8858 'out' 'struct XYZ *'
+        | |   `-ImplicitCastExpr 0x7ff6bc87b738 <col:11> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7ff6bc87b6f8 <col:11> 'int' lvalue Var 0x7ff6bc8e8ac8 'i' 'int'
+        | `-BinaryOperator 0x7ff6bc87b8e8 <col:18, col:28> 'float' '/'
+        |   |-ImplicitCastExpr 0x7ff6bc87b8b8 <col:18, col:24> 'float' <LValueToRValue>
+        |   | `-MemberExpr 0x7ff6bc87b858 <col:18, col:24> 'float' lvalue .y 0x7ff6bc8e8678
+        |   |   `-ArraySubscriptExpr 0x7ff6bc87b830 <col:18, col:22> 'struct XYZ':'struct XYZ' lvalue
+        |   |     |-ImplicitCastExpr 0x7ff6bc87b800 <col:18> 'struct XYZ *' <LValueToRValue>
+        |   |     | `-DeclRefExpr 0x7ff6bc87b7b0 <col:18> 'struct XYZ *' lvalue ParmVar 0x7ff6bc8e87d0 'in' 'struct XYZ *'
+        |   |     `-ImplicitCastExpr 0x7ff6bc87b818 <col:21> 'int' <LValueToRValue>
+        |   |       `-DeclRefExpr 0x7ff6bc87b7d8 <col:21> 'int' lvalue Var 0x7ff6bc8e8ac8 'i' 'int'
+        |   `-ImplicitCastExpr 0x7ff6bc87b8d0 <col:28> 'float' <LValueToRValue>
+        |     `-DeclRefExpr 0x7ff6bc87b890 <col:28> 'float' lvalue Var 0x7ff6bc8e8cb8 'n' 'float'
+        `-BinaryOperator 0x7ff6bc87bb78 <line:22:7, col:28> 'float' '='
+          |-MemberExpr 0x7ff6bc87b9e0 <col:7, col:14> 'float' lvalue .z 0x7ff6bc8e86d8
+          | `-ArraySubscriptExpr 0x7ff6bc87b9b8 <col:7, col:12> 'struct XYZ':'struct XYZ' lvalue
+          |   |-ImplicitCastExpr 0x7ff6bc87b988 <col:7> 'struct XYZ *' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7ff6bc87b938 <col:7> 'struct XYZ *' lvalue ParmVar 0x7ff6bc8e8858 'out' 'struct XYZ *'
+          |   `-ImplicitCastExpr 0x7ff6bc87b9a0 <col:11> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7ff6bc87b960 <col:11> 'int' lvalue Var 0x7ff6bc8e8ac8 'i' 'int'
+          `-BinaryOperator 0x7ff6bc87bb50 <col:18, col:28> 'float' '/'
+            |-ImplicitCastExpr 0x7ff6bc87bb20 <col:18, col:24> 'float' <LValueToRValue>
+            | `-MemberExpr 0x7ff6bc87bac0 <col:18, col:24> 'float' lvalue .z 0x7ff6bc8e86d8
+            |   `-ArraySubscriptExpr 0x7ff6bc87ba98 <col:18, col:22> 'struct XYZ':'struct XYZ' lvalue
+            |     |-ImplicitCastExpr 0x7ff6bc87ba68 <col:18> 'struct XYZ *' <LValueToRValue>
+            |     | `-DeclRefExpr 0x7ff6bc87ba18 <col:18> 'struct XYZ *' lvalue ParmVar 0x7ff6bc8e87d0 'in' 'struct XYZ *'
+            |     `-ImplicitCastExpr 0x7ff6bc87ba80 <col:21> 'int' <LValueToRValue>
+            |       `-DeclRefExpr 0x7ff6bc87ba40 <col:21> 'int' lvalue Var 0x7ff6bc8e8ac8 'i' 'int'
+            `-ImplicitCastExpr 0x7ff6bc87bb38 <col:28> 'float' <LValueToRValue>
+              `-DeclRefExpr 0x7ff6bc87baf8 <col:28> 'float' lvalue Var 0x7ff6bc8e8cb8 'n' 'float'

@@ -1,0 +1,40 @@
+c_files/pr84945.c:12:11: error: invalid cpu feature string for builtin
+      && (__builtin_cpu_supports ("avx512vnni")
+          ^                       ~~~~~~~~~~~~
+c_files/pr84945.c:13:7: error: invalid cpu feature string for builtin
+          || __builtin_cpu_supports ("avx512bitalg")))
+             ^                       ~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7f944d8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f944d826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f944d826740 '__int128'
+|-TypedefDecl 0x7f944d826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f944d826760 'unsigned __int128'
+|-TypedefDecl 0x7f944d826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f944d826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f944d826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f944d826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f944d826dc0 'char *'
+|   `-BuiltinType 0x7f944d826560 'char'
+|-TypedefDecl 0x7f944d8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f944d827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f944d826ee0 'struct __va_list_tag'
+|     `-Record 0x7f944d826e58 '__va_list_tag'
+|-FunctionDecl 0x7f944d877400 <c_files/pr84945.c:5:1, line:16:1> line:6:1 main 'int ()'
+| `-CompoundStmt 0x7f944d877c78 <line:7:1, line:16:1>
+|   |-IfStmt 0x7f944d877c08 <line:11:3, line:14:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x7f944d877be8 <<invalid sloc>> '_Bool'
+|   | |-CallExpr 0x7f944d877bc0 <col:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f944d877ba8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f944d877b50 <col:5> '<builtin fn type>' Function 0x7f944d877a70 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f944d877c60 <line:15:3, col:10>
+|     `-IntegerLiteral 0x7f944d877c40 <col:10> 'int' 0
+|-FunctionDecl 0x7f944d877518 <line:11:8> col:8 implicit used __builtin_cpu_supports '_Bool (const char *)' extern
+| |-ParmVarDecl 0x7f944d8775b0 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-NoThrowAttr 0x7f944d877618 <col:8> Implicit
+| `-ConstAttr 0x7f944d877660 <col:8> Implicit
+`-FunctionDecl 0x7f944d877a70 <line:14:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f944d877b08 <col:5> Implicit

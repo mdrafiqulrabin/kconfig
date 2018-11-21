@@ -1,0 +1,99 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S0
+      Decl: f7, [], [], []
+        TypeDecl: f7, []
+          IdentifierType: ['int']
+  Decl: g_50, [], [], []
+    TypeDecl: g_50, []
+      Struct: S0
+  Decl: g_70, [], [], []
+    TypeDecl: g_70, []
+      IdentifierType: ['int']
+  Decl: g_76, [], [], []
+    TypeDecl: g_76, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p_56, [], [], []
+            TypeDecl: p_56, []
+              IdentifierType: ['long', 'long']
+          Decl: p_57, [], [], []
+            PtrDecl: []
+              TypeDecl: p_57, []
+                IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: l_77, [], [], []
+        PtrDecl: []
+          TypeDecl: l_77, []
+            IdentifierType: ['int']
+      Decl: l_101, [], [], []
+        TypeDecl: l_101, []
+          IdentifierType: ['int']
+      For: 
+        ID: g_70
+        Compound: 
+          Decl: l_78, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: l_78, []
+                  IdentifierType: ['int']
+            UnaryOp: &
+              ID: l_77
+          If: 
+            StructRef: .
+              ID: g_50
+              ID: f7
+            Continue: 
+          Assignment: =
+            UnaryOp: *
+              ID: l_78
+            Constant: int, 0
+      For: 
+        Assignment: =
+          ID: g_76
+          Constant: int, 1
+        BinaryOp: >=
+          ID: g_76
+          Constant: int, 0
+        UnaryOp: p--
+          ID: g_76
+        Compound: 
+          Decl: l_90, [], [], []
+            PtrDecl: []
+              TypeDecl: l_90, []
+                IdentifierType: ['int']
+          For: 
+            Assignment: =
+              ID: l_101
+              Constant: int, 4
+            BinaryOp: >=
+              ID: l_101
+              Constant: int, 0
+            UnaryOp: p--
+              ID: l_101
+            If: 
+              ID: l_101
+              Assignment: =
+                UnaryOp: *
+                  ID: l_90
+                Constant: int, 0
+              Compound: 
+                Decl: l_113, [], [], []
+                  PtrDecl: []
+                    PtrDecl: []
+                      TypeDecl: l_113, []
+                        IdentifierType: ['int']
+                  UnaryOp: &
+                    ID: l_77
+                Assignment: =
+                  UnaryOp: *
+                    ID: l_113
+                  ID: p_57
+      Return: 
+        UnaryOp: *
+          ID: l_77

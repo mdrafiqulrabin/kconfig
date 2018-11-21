@@ -1,0 +1,168 @@
+FileAST: 
+  Typedef: gzFile, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: gzFile, []
+        IdentifierType: ['void']
+  Typedef: gz_state, [], ['typedef']
+    TypeDecl: gz_state, []
+      Struct: None
+        Decl: mode, [], [], []
+          TypeDecl: mode, []
+            IdentifierType: ['int']
+        Decl: direct, [], [], []
+          TypeDecl: direct, []
+            IdentifierType: ['int']
+        Decl: seek, [], [], []
+          TypeDecl: seek, []
+            IdentifierType: ['int']
+        Decl: err, [], [], []
+          TypeDecl: err, []
+            IdentifierType: ['int']
+        Decl: msg, [], [], []
+          PtrDecl: []
+            TypeDecl: msg, []
+              IdentifierType: ['char']
+  Decl: gz_error, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: state, [], [], []
+          PtrDecl: []
+            TypeDecl: state, []
+              IdentifierType: ['gz_state']
+        Decl: err, [], [], []
+          TypeDecl: err, []
+            IdentifierType: ['int']
+        Decl: msg, [], [], []
+          PtrDecl: []
+            TypeDecl: msg, []
+              IdentifierType: ['char']
+      TypeDecl: gz_error, []
+        IdentifierType: ['void']
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: gz_reset, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: state, [], [], []
+            PtrDecl: []
+              TypeDecl: state, []
+                IdentifierType: ['gz_state']
+        TypeDecl: gz_reset, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          StructRef: ->
+            ID: state
+            ID: mode
+          Constant: int, 7247
+        Compound: 
+          Assignment: =
+            StructRef: ->
+              ID: state
+              ID: direct
+            Constant: int, 1
+      Assignment: =
+        StructRef: ->
+          ID: state
+          ID: seek
+        Constant: int, 0
+      FuncCall: 
+        ID: gz_error
+        ExprList: 
+          ID: state
+          Constant: int, 0
+          Constant: int, 0
+  FuncDef: 
+    Decl: gzbuffer, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: file, [], [], []
+            PtrDecl: []
+              TypeDecl: file, []
+                IdentifierType: ['void']
+          Decl: size, [], [], []
+            TypeDecl: size, []
+              IdentifierType: ['int']
+        TypeDecl: gzbuffer, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: state, [], [], []
+        PtrDecl: []
+          TypeDecl: state, []
+            IdentifierType: ['gz_state']
+      FuncCall: 
+        ID: gz_reset
+        ExprList: 
+          ID: state
+  FuncDef: 
+    Decl: gz_error, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: state, [], [], []
+            PtrDecl: []
+              TypeDecl: state, []
+                IdentifierType: ['gz_state']
+          Decl: err, [], [], []
+            TypeDecl: err, []
+              IdentifierType: ['int']
+          Decl: msg, [], [], []
+            PtrDecl: []
+              TypeDecl: msg, []
+                IdentifierType: ['char']
+        TypeDecl: gz_error, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          StructRef: ->
+            ID: state
+            ID: msg
+          Constant: int, 0
+        Compound: 
+          If: 
+            BinaryOp: !=
+              StructRef: ->
+                ID: state
+                ID: err
+              UnaryOp: -
+                Constant: int, 4
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                StructRef: ->
+                  ID: state
+                  ID: msg
+      If: 
+        BinaryOp: ==
+          ID: msg
+          Constant: int, 0
+        Return: 
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          StructRef: ->
+            ID: state
+            ID: msg
+          ID: msg

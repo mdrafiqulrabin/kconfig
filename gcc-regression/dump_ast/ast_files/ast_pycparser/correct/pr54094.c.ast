@@ -1,0 +1,72 @@
+FileAST: 
+  FuncDef: 
+    Decl: dwt_deinterleave_h, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['int']
+          Decl: dn, [], [], []
+            TypeDecl: dn, []
+              IdentifierType: ['int']
+          Decl: sn, [], [], []
+            TypeDecl: sn, []
+              IdentifierType: ['int']
+          Decl: cas, [], [], []
+            TypeDecl: cas, []
+              IdentifierType: ['int']
+        TypeDecl: dwt_deinterleave_h, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: sn
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: b
+            ID: i
+          ArrayRef: 
+            ID: a
+            BinaryOp: +
+              BinaryOp: *
+                Constant: int, 2
+                ID: i
+              ID: cas
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: dn
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: b
+            BinaryOp: +
+              ID: sn
+              ID: i
+          ArrayRef: 
+            ID: a
+            BinaryOp: -
+              BinaryOp: +
+                BinaryOp: *
+                  Constant: int, 2
+                  ID: i
+                Constant: int, 1
+              ID: cas

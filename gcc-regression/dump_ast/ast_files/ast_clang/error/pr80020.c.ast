@@ -1,0 +1,91 @@
+c_files/pr80020.c:14:13: error: use of unknown builtin '__builtin_aligned_alloc' [-Wimplicit-function-declaration]
+  void *p = __builtin_aligned_alloc (Align, Size);
+            ^
+c_files/pr80020.c:14:9: warning: incompatible integer to pointer conversion initializing 'void *' with an expression of type 'int' [-Wint-conversion]
+  void *p = __builtin_aligned_alloc (Align, Size);
+        ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7ff4610264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff461026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff461026740 '__int128'
+|-TypedefDecl 0x7ff461026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff461026760 'unsigned __int128'
+|-TypedefDecl 0x7ff461026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff461026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff461026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff461026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff461026dc0 'char *'
+|   `-BuiltinType 0x7ff461026560 'char'
+|-TypedefDecl 0x7ff4610270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff461027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff461026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff461026e58 '__va_list_tag'
+|-FunctionDecl 0x7ff461825a00 <c_files/pr80020.c:5:1, col:17> col:6 used sink 'void (void *)'
+| `-ParmVarDecl 0x7ff461027138 <col:12, col:16> col:17 'void *'
+|-FunctionDecl 0x7ff461825ba0 <line:7:1, line:23:1> line:7:6 foo 'void (void)'
+| `-CompoundStmt 0x7ff461828058 <line:8:1, line:23:1>
+|   |-DeclStmt 0x7ff461825dc0 <line:9:3, line:12:4>
+|   | `-EnumDecl 0x7ff461825c38 <line:9:3, line:12:3> line:9:3
+|   |   |-EnumConstantDecl 0x7ff461825d10 <line:10:5, col:13> col:5 referenced Align 'int'
+|   |   | `-IntegerLiteral 0x7ff461825cf0 <col:13> 'int' 32
+|   |   `-EnumConstantDecl 0x7ff461825d78 <line:11:5, col:12> col:5 referenced Size 'int'
+|   |     `-IntegerLiteral 0x7ff461825d58 <col:12> 'int' 123
+|   |-DeclStmt 0x7ff461826410 <line:14:3, col:50>
+|   | `-VarDecl 0x7ff461825df0 <col:3, col:49> col:9 used p 'void *' cinit
+|   |   `-ImplicitCastExpr 0x7ff461826048 <col:13, col:49> 'void *' <IntegralToPointer>
+|   |     `-CallExpr 0x7ff461826010 <col:13, col:49> 'int'
+|   |       |-ImplicitCastExpr 0x7ff461825ff8 <col:13> 'int (*)()' <FunctionToPointerDecay>
+|   |       | `-DeclRefExpr 0x7ff461825f58 <col:13> 'int ()' Function 0x7ff461825ec0 '__builtin_aligned_alloc' 'int ()'
+|   |       |-DeclRefExpr 0x7ff461825f80 <col:38> 'int' EnumConstant 0x7ff461825d10 'Align' 'int'
+|   |       `-DeclRefExpr 0x7ff461825fa8 <col:45> 'int' EnumConstant 0x7ff461825d78 'Size' 'int'
+|   |-DeclStmt 0x7ff461826810 <line:15:3, col:44>
+|   | `-VarDecl 0x7ff461826440 <col:3, col:43> col:12 used n 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7ff4618267f8 <col:16, col:43> 'unsigned int' <IntegralCast>
+|   |     `-CallExpr 0x7ff461826790 <col:16, col:43> 'unsigned long'
+|   |       |-ImplicitCastExpr 0x7ff461826778 <col:16> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7ff4618266c0 <col:16> '<builtin fn type>' Function 0x7ff461826510 '__builtin_object_size' 'unsigned long (const void *, int)'
+|   |       |-ImplicitCastExpr 0x7ff4618267e0 <col:39> 'const void *' <BitCast>
+|   |       | `-ImplicitCastExpr 0x7ff4618267c8 <col:39> 'void *' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7ff4618266e8 <col:39> 'void *' lvalue Var 0x7ff461825df0 'p' 'void *'
+|   |       `-IntegerLiteral 0x7ff461826710 <col:42> 'int' 0
+|   |-IfStmt 0x7ff461827a98 <line:17:3, line:18:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff4618268a8 <line:17:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7ff461826878 <col:7> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ff461826828 <col:7> 'unsigned int' lvalue Var 0x7ff461826440 'n' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7ff461826890 <col:12> 'unsigned int' <IntegralCast>
+|   | |   `-DeclRefExpr 0x7ff461826850 <col:12> 'int' EnumConstant 0x7ff461825d78 'Size' 'int'
+|   | |-CallExpr 0x7ff461827a70 <line:18:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7ff461827a58 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7ff461827a00 <col:5> '<builtin fn type>' Function 0x7ff461826900 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7ff461827ed0 <line:20:3, col:40> 'void *'
+|   | |-ImplicitCastExpr 0x7ff461827eb8 <col:3> 'void *(*)(void *, int, unsigned long, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7ff461827da0 <col:3> '<builtin fn type>' Function 0x7ff461827b20 '__builtin___memset_chk' 'void *(void *, int, unsigned long, unsigned long)'
+|   | |-ImplicitCastExpr 0x7ff461827f18 <col:27> 'void *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7ff461827dc8 <col:27> 'void *' lvalue Var 0x7ff461825df0 'p' 'void *'
+|   | |-IntegerLiteral 0x7ff461827df0 <col:30> 'int' 0
+|   | |-ImplicitCastExpr 0x7ff461827f30 <col:33> 'unsigned long' <IntegralCast>
+|   | | `-DeclRefExpr 0x7ff461827e10 <col:33> 'int' EnumConstant 0x7ff461825d78 'Size' 'int'
+|   | `-ImplicitCastExpr 0x7ff461827f60 <col:39> 'unsigned long' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7ff461827f48 <col:39> 'unsigned int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7ff461827e38 <col:39> 'unsigned int' lvalue Var 0x7ff461826440 'n' 'unsigned int'
+|   `-CallExpr 0x7ff461828010 <line:22:3, col:10> 'void'
+|     |-ImplicitCastExpr 0x7ff461827ff8 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7ff461827f78 <col:3> 'void (void *)' Function 0x7ff461825a00 'sink' 'void (void *)'
+|     `-ImplicitCastExpr 0x7ff461828040 <col:9> 'void *' <LValueToRValue>
+|       `-DeclRefExpr 0x7ff461827fa0 <col:9> 'void *' lvalue Var 0x7ff461825df0 'p' 'void *'
+|-FunctionDecl 0x7ff461825ec0 <<invalid sloc>> line:14:13 implicit used __builtin_aligned_alloc 'int ()'
+|-FunctionDecl 0x7ff461826510 <line:15:16> col:16 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+| |-ParmVarDecl 0x7ff4618265a8 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7ff461826608 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7ff461826678 <col:16> Implicit
+|-FunctionDecl 0x7ff461826900 <line:18:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7ff461826998 <col:5> Implicit
+`-FunctionDecl 0x7ff461827b20 <line:20:3> col:3 implicit used __builtin___memset_chk 'void *(void *, int, unsigned long, unsigned long)' extern
+  |-ParmVarDecl 0x7ff461827bb8 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7ff461827c18 <<invalid sloc>> <invalid sloc> 'int'
+  |-ParmVarDecl 0x7ff461827c78 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  |-ParmVarDecl 0x7ff461827cd8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7ff461827d58 <col:3> Implicit

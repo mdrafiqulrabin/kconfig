@@ -1,0 +1,25 @@
+FileAST: 
+  Decl: s, [], [], []
+    TypeDecl: s, []
+      Struct: foo
+  Decl: t, ['volatile'], [], []
+    TypeDecl: t, ['volatile']
+      Struct: foo
+  Decl: None, [], [], []
+    Struct: foo
+      Decl: z, ['const'], [], []
+        TypeDecl: z, ['const']
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: t
+        ID: s

@@ -1,0 +1,63 @@
+TranslationUnitDecl 0x7faa260264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faa26026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faa26026740 '__int128'
+|-TypedefDecl 0x7faa26026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faa26026760 'unsigned __int128'
+|-TypedefDecl 0x7faa26026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faa26026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faa26026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faa26026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faa26026dc0 'char *'
+|   `-BuiltinType 0x7faa26026560 'char'
+|-TypedefDecl 0x7faa260270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faa26027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faa26026ee0 'struct __va_list_tag'
+|     `-Record 0x7faa26026e58 '__va_list_tag'
+|-RecordDecl 0x7faa26027120 <c_files/pr55920.c:3:1, col:24> col:8 struct A definition
+| |-PackedAttr 0x7faa26825a48 <col:41>
+| `-FieldDecl 0x7faa26825a00 <col:12, col:21> col:21 referenced a 'unsigned int'
+|-RecordDecl 0x7faa26825a90 <line:4:1, col:40> col:8 struct B definition
+| |-FieldDecl 0x7faa26825b58 <col:12, col:16> col:16 referenced b 'int'
+| `-FieldDecl 0x7faa26825c20 <col:19, col:37> col:33 referenced c 'unsigned char [16]'
+|-FunctionDecl 0x7faa26825dc0 <line:5:1, col:19> col:6 used bar 'void (struct A)'
+| `-ParmVarDecl 0x7faa26825cc0 <col:11, col:18> col:19 'struct A':'struct A'
+|-FunctionDecl 0x7faa26826050 <line:7:1, line:16:1> line:8:1 foo 'void (struct B *)'
+| |-ParmVarDecl 0x7faa26825f50 <col:6, col:16> col:16 used x 'struct B *'
+| `-CompoundStmt 0x7faa26826998 <line:9:1, line:16:1>
+|   |-DeclStmt 0x7faa26826170 <line:10:3, col:13>
+|   | `-VarDecl 0x7faa26826110 <col:3, col:12> col:12 used a 'struct A':'struct A'
+|   |-IfStmt 0x7faa26826850 <line:11:3, line:14:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7faa26826200 <line:11:7, col:10> 'int' <LValueToRValue>
+|   | | `-MemberExpr 0x7faa268261c8 <col:7, col:10> 'int' lvalue ->b 0x7faa26825b58
+|   | |   `-ImplicitCastExpr 0x7faa268261b0 <col:7> 'struct B *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7faa26826188 <col:7> 'struct B *' lvalue ParmVar 0x7faa26825f50 'x' 'struct B *'
+|   | |-CallExpr 0x7faa268266c0 <line:12:5, col:41> 'void *'
+|   | | |-ImplicitCastExpr 0x7faa268266a8 <col:5> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7faa268264b0 <col:5> '<builtin fn type>' Function 0x7faa26826298 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | | |-ImplicitCastExpr 0x7faa26826700 <col:23, col:24> 'void *' <BitCast>
+|   | | | `-UnaryOperator 0x7faa26826558 <col:23, col:24> 'struct A *' prefix '&'
+|   | | |   `-DeclRefExpr 0x7faa268264d8 <col:24> 'struct A':'struct A' lvalue Var 0x7faa26826110 'a' 'struct A':'struct A'
+|   | | |-ImplicitCastExpr 0x7faa26826730 <col:27, col:30> 'const void *' <BitCast>
+|   | | | `-ImplicitCastExpr 0x7faa26826718 <col:27, col:30> 'unsigned char *' <ArrayToPointerDecay>
+|   | | |   `-MemberExpr 0x7faa268265b8 <col:27, col:30> 'unsigned char [16]' lvalue ->c 0x7faa26825c20
+|   | | |     `-ImplicitCastExpr 0x7faa268265a0 <col:27> 'struct B *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7faa26826578 <col:27> 'struct B *' lvalue ParmVar 0x7faa26825f50 'x' 'struct B *'
+|   | | `-UnaryExprOrTypeTraitExpr 0x7faa26826618 <col:33, col:40> 'unsigned long' sizeof
+|   | |   `-DeclRefExpr 0x7faa268265f0 <col:40> 'struct A':'struct A' lvalue Var 0x7faa26826110 'a' 'struct A':'struct A'
+|   | `-BinaryOperator 0x7faa268267e0 <line:14:5, col:11> 'unsigned int' '='
+|   |   |-MemberExpr 0x7faa26826770 <col:5, col:7> 'unsigned int' lvalue .a 0x7faa26825a00
+|   |   | `-DeclRefExpr 0x7faa26826748 <col:5> 'struct A':'struct A' lvalue Var 0x7faa26826110 'a' 'struct A':'struct A'
+|   |   `-ImplicitCastExpr 0x7faa268267c8 <col:11> 'unsigned int' <IntegralCast>
+|   |     `-IntegerLiteral 0x7faa268267a8 <col:11> 'int' 0
+|   `-CallExpr 0x7faa26826950 <line:15:3, col:9> 'void'
+|     |-ImplicitCastExpr 0x7faa26826938 <col:3> 'void (*)(struct A)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7faa26826888 <col:3> 'void (struct A)' Function 0x7faa26825dc0 'bar' 'void (struct A)'
+|     `-ImplicitCastExpr 0x7faa26826980 <col:8> 'struct A':'struct A' <LValueToRValue>
+|       `-DeclRefExpr 0x7faa268268b0 <col:8> 'struct A':'struct A' lvalue Var 0x7faa26826110 'a' 'struct A':'struct A'
+`-FunctionDecl 0x7faa26826298 <line:12:5> col:5 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7faa26826330 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7faa26826390 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7faa268263f0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7faa26826468 <col:5> Implicit

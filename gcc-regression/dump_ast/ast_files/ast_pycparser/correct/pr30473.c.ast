@@ -1,0 +1,41 @@
+FileAST: 
+  Decl: sprintf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        EllipsisParam: 
+      TypeDecl: sprintf, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: buf1, [], [], []
+            PtrDecl: []
+              TypeDecl: buf1, []
+                IdentifierType: ['char']
+          Decl: buf2, [], [], []
+            PtrDecl: []
+              TypeDecl: buf2, []
+                IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: sprintf
+        ExprList: 
+          ID: buf1
+          Constant: string, "%s"
+          Constant: string, "abcde"
+      FuncCall: 
+        ID: sprintf
+        ExprList: 
+          ID: buf2
+          Constant: string, "%s"

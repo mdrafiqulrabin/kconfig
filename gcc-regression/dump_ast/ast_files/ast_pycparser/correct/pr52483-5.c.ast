@@ -1,0 +1,61 @@
+FileAST: 
+  FuncDef: 
+    Decl: test_00, ['volatile'], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['volatile'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['volatile']
+                IdentifierType: ['char']
+        PtrDecl: []
+          TypeDecl: test_00, ['volatile']
+            IdentifierType: ['char']
+    Compound: 
+      Decl: xx, [], [], []
+        TypeDecl: xx, []
+          IdentifierType: ['int']
+        UnaryOp: *
+          UnaryOp: p++
+            ID: x
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: test_01, ['volatile'], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['volatile'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['volatile']
+                IdentifierType: ['short']
+        PtrDecl: []
+          TypeDecl: test_01, ['volatile']
+            IdentifierType: ['short']
+    Compound: 
+      Decl: xx, [], [], []
+        TypeDecl: xx, []
+          IdentifierType: ['int']
+        UnaryOp: *
+          UnaryOp: p++
+            ID: x
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: test_02, ['volatile'], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['volatile'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['volatile']
+                IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: test_02, ['volatile']
+            IdentifierType: ['int']
+    Compound: 
+      Decl: xx, [], [], []
+        TypeDecl: xx, []
+          IdentifierType: ['int']
+        UnaryOp: *
+          UnaryOp: p++
+            ID: x
+      Return: 
+        ID: x

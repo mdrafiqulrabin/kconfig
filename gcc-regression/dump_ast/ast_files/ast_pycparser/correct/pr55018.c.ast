@@ -1,0 +1,40 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 0
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+        Constant: int, 3
+      If: 
+        ID: x
+        Assignment: =
+          ID: b
+          Constant: int, 0
+      Label: lab
+        If: 
+          ID: x
+          Goto: lab
+      UnaryOp: p++
+        ID: a
+      If: 
+        BinaryOp: !=
+          ID: b
+          Constant: int, 2
+        FuncCall: 
+          ID: __builtin_printf
+          ExprList: 
+            Constant: string, "%u"
+            ID: a
+      Goto: lab

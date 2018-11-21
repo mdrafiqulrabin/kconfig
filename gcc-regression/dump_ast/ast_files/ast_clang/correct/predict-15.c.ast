@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7ff6690264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff669026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff669026740 '__int128'
+|-TypedefDecl 0x7ff669026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff669026760 'unsigned __int128'
+|-TypedefDecl 0x7ff669026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff669026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff669026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff669026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff669026dc0 'char *'
+|   `-BuiltinType 0x7ff669026560 'char'
+|-TypedefDecl 0x7ff6690270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff669027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff669026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff669026e58 '__va_list_tag'
+`-FunctionDecl 0x7ff6698000d8 <c_files/predict-15.c:4:1, line:15:1> line:4:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7ff669027138 <col:10, col:14> col:14 used argc 'int'
+  |-ParmVarDecl 0x7ff669800000 <col:20, col:27> col:27 argv 'char **'
+  `-CompoundStmt 0x7ff669800388 <line:5:1, line:15:1>
+    |-IfStmt 0x7ff669800300 <line:6:3, line:11:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff669800220 <line:6:7, col:15> 'int' '=='
+    | | |-ImplicitCastExpr 0x7ff669800208 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff6698001c0 <col:7> 'int' lvalue ParmVar 0x7ff669027138 'argc' 'int'
+    | | `-IntegerLiteral 0x7ff6698001e8 <col:15> 'int' 123
+    | |-GotoStmt 0x7ff669800290 <line:7:5, col:10> 'exit' 0x7ff669800248
+    | `-CompoundStmt 0x7ff6698002e0 <line:9:5, line:11:5>
+    |   `-ReturnStmt 0x7ff6698002c8 <line:10:7, col:14>
+    |     `-IntegerLiteral 0x7ff6698002a8 <col:14> 'int' 0
+    `-LabelStmt 0x7ff669800370 <line:13:1, line:14:10> 'exit'
+      `-ReturnStmt 0x7ff669800358 <col:3, col:10>
+        `-IntegerLiteral 0x7ff669800338 <col:10> 'int' 1

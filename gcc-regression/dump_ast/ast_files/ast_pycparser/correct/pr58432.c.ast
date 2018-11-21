@@ -1,0 +1,51 @@
+FileAST: 
+  Decl: a, [], [], []
+    PtrDecl: []
+      TypeDecl: a, []
+        Struct: None
+          Decl: prefix, [], [], []
+            TypeDecl: prefix, []
+              IdentifierType: ['int']
+          Decl: dir_idx, [], [], []
+            TypeDecl: dir_idx, []
+              IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        PtrDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+      Decl: d, [], [], []
+        PtrDecl: []
+          TypeDecl: d, []
+            IdentifierType: ['int']
+      For: 
+        ID: b
+        UnaryOp: p++
+          ID: b
+        If: 
+          ArrayRef: 
+            ID: d
+            ID: b
+          Compound: 
+            Assignment: =
+              ArrayRef: 
+                ID: c
+                ID: b
+              ArrayRef: 
+                ID: d
+                ID: b
+            Assignment: =
+              StructRef: .
+                ArrayRef: 
+                  ID: a
+                  Constant: int, 0
+                ID: dir_idx
+              Constant: int, 0

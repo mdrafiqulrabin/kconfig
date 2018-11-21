@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7f92030264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9203026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9203026740 '__int128'
+|-TypedefDecl 0x7f9203026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9203026760 'unsigned __int128'
+|-TypedefDecl 0x7f9203026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9203026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9203026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9203026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9203026dc0 'char *'
+|   `-BuiltinType 0x7f9203026560 'char'
+|-TypedefDecl 0x7f92030270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9203027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9203026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9203026e58 '__va_list_tag'
+|-FunctionDecl 0x7f9203027168 <c_files/pr25874.c:3:1, col:10> col:6 used foo 'void ()'
+|-FunctionDecl 0x7f9203825a60 <line:5:1, line:11:1> line:5:13 used bar 'void ()' inline
+| `-CompoundStmt 0x7f9203825d90 <line:6:1, line:11:1>
+|   |-DeclStmt 0x7f9203825b70 <line:7:3, col:8>
+|   | `-VarDecl 0x7f9203825b10 <col:3, col:7> col:7 used i 'int'
+|   `-ForStmt 0x7f9203825d58 <line:8:3, line:10:9>
+|     |-BinaryOperator 0x7f9203825bd0 <line:8:9, col:11> 'int' '='
+|     | |-DeclRefExpr 0x7f9203825b88 <col:9> 'int' lvalue Var 0x7f9203825b10 'i' 'int'
+|     | `-IntegerLiteral 0x7f9203825bb0 <col:11> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9203825c58 <col:14, col:16> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f9203825c40 <col:14> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f9203825bf8 <col:14> 'int' lvalue Var 0x7f9203825b10 'i' 'int'
+|     | `-IntegerLiteral 0x7f9203825c20 <col:16> 'int' 1
+|     |-UnaryOperator 0x7f9203825ca8 <col:19, col:21> 'int' prefix '++'
+|     | `-DeclRefExpr 0x7f9203825c80 <col:21> 'int' lvalue Var 0x7f9203825b10 'i' 'int'
+|     `-CallExpr 0x7f9203825d30 <line:10:5, col:9> 'void'
+|       `-ImplicitCastExpr 0x7f9203825d18 <col:5> 'void (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f9203825cc8 <col:5> 'void ()' Function 0x7f9203027168 'foo' 'void ()'
+`-FunctionDecl 0x7f9203825dd8 <line:13:1, line:17:1> line:13:6 baz 'void ()'
+  `-CompoundStmt 0x7f9203825ed8 <line:14:1, line:17:1>
+    `-CallExpr 0x7f9203825eb0 <line:16:3, col:7> 'void'
+      `-ImplicitCastExpr 0x7f9203825e98 <col:3> 'void (*)()' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7f9203825e70 <col:3> 'void ()' Function 0x7f9203825a60 'bar' 'void ()'

@@ -1,0 +1,127 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+      Constant: int, 20
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 12
+        Constant: int, 1
+      For: 
+        Assignment: =
+          ID: e
+          Constant: int, 0
+        BinaryOp: <
+          ID: e
+          Constant: int, 3
+        UnaryOp: p++
+          ID: e
+        For: 
+          Assignment: =
+            ID: d
+            Constant: int, 0
+          BinaryOp: <
+            ID: d
+            Constant: int, 2
+          UnaryOp: p++
+            ID: d
+          Compound: 
+            For: 
+              Assignment: =
+                ID: f
+                Constant: int, 0
+              BinaryOp: <
+                ID: f
+                Constant: int, 2
+              UnaryOp: p++
+                ID: f
+              Compound: 
+                Assignment: ^=
+                  ID: g
+                  BinaryOp: >
+                    ArrayRef: 
+                      ID: a
+                      Constant: int, 12
+                    Constant: int, 1
+                If: 
+                  ID: g
+                  Return: 
+                    Constant: int, 0
+                If: 
+                  ID: b
+                  Break: 
+            For: 
+              Assignment: =
+                ID: c
+                Constant: int, 0
+              BinaryOp: <
+                ID: c
+                Constant: int, 1
+              UnaryOp: p++
+                ID: c
+              Assignment: =
+                ArrayRef: 
+                  ID: a
+                  ID: d
+                ArrayRef: 
+                  ID: a
+                  BinaryOp: +
+                    BinaryOp: *
+                      ID: e
+                      Constant: int, 3
+                    Constant: int, 9
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: fn1
+      If: 
+        BinaryOp: !=
+          ArrayRef: 
+            ID: a
+            Constant: int, 0
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

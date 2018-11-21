@@ -1,0 +1,306 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['float']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['float']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['float']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['float']
+        TypeDecl: foo, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: ac, [], [], []
+        TypeDecl: ac, []
+          IdentifierType: ['float']
+      Decl: bd, [], [], []
+        TypeDecl: bd, []
+          IdentifierType: ['float']
+      Decl: ad, [], [], []
+        TypeDecl: ad, []
+          IdentifierType: ['float']
+      Decl: bc, [], [], []
+        TypeDecl: bc, []
+          IdentifierType: ['float']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['float']
+      Assignment: =
+        ID: ac
+        BinaryOp: *
+          ID: a
+          ID: c
+      Assignment: =
+        ID: bd
+        BinaryOp: *
+          ID: b
+          ID: d
+      Assignment: =
+        ID: ad
+        BinaryOp: *
+          ID: a
+          ID: d
+      Assignment: =
+        ID: bc
+        BinaryOp: *
+          ID: b
+          ID: c
+      If: 
+        BinaryOp: ||
+          FuncCall: 
+            ID: __builtin_expect
+            ExprList: 
+              BinaryOp: &
+                UnaryOp: !
+                  FuncCall: 
+                    ID: __builtin_expect
+                    ExprList: 
+                      BinaryOp: !=
+                        ID: a
+                        ID: a
+                      Constant: int, 0
+                UnaryOp: !
+                  FuncCall: 
+                    ID: __builtin_expect
+                    ExprList: 
+                      UnaryOp: !
+                        FuncCall: 
+                          ID: __builtin_expect
+                          ExprList: 
+                            BinaryOp: !=
+                              BinaryOp: -
+                                ID: a
+                                ID: a
+                              BinaryOp: -
+                                ID: a
+                                ID: a
+                            Constant: int, 0
+                      Constant: int, 1
+              Constant: int, 0
+          FuncCall: 
+            ID: __builtin_expect
+            ExprList: 
+              BinaryOp: &
+                UnaryOp: !
+                  FuncCall: 
+                    ID: __builtin_expect
+                    ExprList: 
+                      BinaryOp: !=
+                        ID: b
+                        ID: b
+                      Constant: int, 0
+                UnaryOp: !
+                  FuncCall: 
+                    ID: __builtin_expect
+                    ExprList: 
+                      UnaryOp: !
+                        FuncCall: 
+                          ID: __builtin_expect
+                          ExprList: 
+                            BinaryOp: !=
+                              BinaryOp: -
+                                ID: b
+                                ID: b
+                              BinaryOp: -
+                                ID: b
+                                ID: b
+                            Constant: int, 0
+                      Constant: int, 1
+              Constant: int, 0
+        Assignment: =
+          ID: a
+          FuncCall: 
+            ID: __builtin_copysignf
+            ExprList: 
+              TernaryOp: 
+                FuncCall: 
+                  ID: __builtin_expect
+                  ExprList: 
+                    BinaryOp: &
+                      UnaryOp: !
+                        FuncCall: 
+                          ID: __builtin_expect
+                          ExprList: 
+                            BinaryOp: !=
+                              ID: a
+                              ID: a
+                            Constant: int, 0
+                      UnaryOp: !
+                        FuncCall: 
+                          ID: __builtin_expect
+                          ExprList: 
+                            UnaryOp: !
+                              FuncCall: 
+                                ID: __builtin_expect
+                                ExprList: 
+                                  BinaryOp: !=
+                                    BinaryOp: -
+                                      ID: a
+                                      ID: a
+                                    BinaryOp: -
+                                      ID: a
+                                      ID: a
+                                  Constant: int, 0
+                            Constant: int, 1
+                    Constant: int, 0
+                Constant: int, 1
+                Constant: int, 0
+              ID: a
+      Assignment: =
+        ID: c
+        FuncCall: 
+          ID: __builtin_copysignf
+          ExprList: 
+            TernaryOp: 
+              FuncCall: 
+                ID: __builtin_expect
+                ExprList: 
+                  BinaryOp: &
+                    UnaryOp: !
+                      FuncCall: 
+                        ID: __builtin_expect
+                        ExprList: 
+                          BinaryOp: !=
+                            ID: c
+                            ID: c
+                          Constant: int, 0
+                    UnaryOp: !
+                      FuncCall: 
+                        ID: __builtin_expect
+                        ExprList: 
+                          UnaryOp: !
+                            FuncCall: 
+                              ID: __builtin_expect
+                              ExprList: 
+                                BinaryOp: !=
+                                  BinaryOp: -
+                                    ID: c
+                                    ID: c
+                                  BinaryOp: -
+                                    ID: c
+                                    ID: c
+                                Constant: int, 0
+                          Constant: int, 1
+                  Constant: int, 0
+              Constant: int, 1
+              Constant: int, 0
+            ID: c
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            FuncCall: 
+              ID: __builtin_expect
+              ExprList: 
+                BinaryOp: &
+                  UnaryOp: !
+                    FuncCall: 
+                      ID: __builtin_expect
+                      ExprList: 
+                        BinaryOp: !=
+                          ID: ac
+                          ID: ac
+                        Constant: int, 0
+                  UnaryOp: !
+                    FuncCall: 
+                      ID: __builtin_expect
+                      ExprList: 
+                        UnaryOp: !
+                          FuncCall: 
+                            ID: __builtin_expect
+                            ExprList: 
+                              BinaryOp: !=
+                                BinaryOp: -
+                                  ID: ac
+                                  ID: ac
+                                BinaryOp: -
+                                  ID: ac
+                                  ID: ac
+                              Constant: int, 0
+                        Constant: int, 1
+                Constant: int, 0
+            FuncCall: 
+              ID: __builtin_expect
+              ExprList: 
+                BinaryOp: &
+                  UnaryOp: !
+                    FuncCall: 
+                      ID: __builtin_expect
+                      ExprList: 
+                        BinaryOp: !=
+                          ID: bd
+                          ID: bd
+                        Constant: int, 0
+                  UnaryOp: !
+                    FuncCall: 
+                      ID: __builtin_expect
+                      ExprList: 
+                        UnaryOp: !
+                          FuncCall: 
+                            ID: __builtin_expect
+                            ExprList: 
+                              BinaryOp: !=
+                                BinaryOp: -
+                                  ID: bd
+                                  ID: bd
+                                BinaryOp: -
+                                  ID: bd
+                                  ID: bd
+                              Constant: int, 0
+                        Constant: int, 1
+                Constant: int, 0
+          FuncCall: 
+            ID: __builtin_expect
+            ExprList: 
+              BinaryOp: &
+                UnaryOp: !
+                  FuncCall: 
+                    ID: __builtin_expect
+                    ExprList: 
+                      BinaryOp: !=
+                        ID: bc
+                        ID: bc
+                      Constant: int, 0
+                UnaryOp: !
+                  FuncCall: 
+                    ID: __builtin_expect
+                    ExprList: 
+                      UnaryOp: !
+                        FuncCall: 
+                          ID: __builtin_expect
+                          ExprList: 
+                            BinaryOp: !=
+                              BinaryOp: -
+                                ID: bc
+                                ID: bc
+                              BinaryOp: -
+                                ID: bc
+                                ID: bc
+                            Constant: int, 0
+                      Constant: int, 1
+              Constant: int, 0
+        Assignment: =
+          ID: d
+          FuncCall: 
+            ID: __builtin_copysignf
+            ExprList: 
+              Constant: int, 0
+              ID: d
+      Assignment: =
+        ID: y
+        BinaryOp: +
+          BinaryOp: *
+            ID: a
+            ID: d
+          BinaryOp: *
+            ID: b
+            ID: c
+      Return: 
+        ID: y

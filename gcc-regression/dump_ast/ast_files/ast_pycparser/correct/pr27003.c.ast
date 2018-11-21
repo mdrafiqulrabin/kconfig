@@ -1,0 +1,81 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['unsigned', 'int']
+        ID: x
+      While: 
+        UnaryOp: --
+          ID: x
+        Assignment: *=
+          ID: r
+          ID: x
+      Return: 
+        ID: r
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: bar, []
+          IdentifierType: ['unsigned', 'long', 'long']
+    Compound: 
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['unsigned', 'long', 'long']
+        ID: x
+      While: 
+        UnaryOp: --
+          ID: x
+        Assignment: *=
+          ID: r
+          ID: x
+      Return: 
+        ID: r
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: !=
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                Constant: int, 5
+            Constant: int, 120
+          BinaryOp: !=
+            FuncCall: 
+              ID: bar
+              ExprList: 
+                Constant: int, 5
+            Constant: int, 120
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

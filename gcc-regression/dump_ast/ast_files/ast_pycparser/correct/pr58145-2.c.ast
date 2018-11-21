@@ -1,0 +1,171 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: data, [], [], []
+        TypeDecl: data, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 32
+  Decl: None, [], [], []
+    Struct: T
+      Decl: data, [], [], []
+        TypeDecl: data, []
+          IdentifierType: ['unsigned', 'int']
+  Decl: s2, ['volatile'], [], []
+    TypeDecl: s2, ['volatile']
+      Struct: S
+  FuncDef: 
+    Decl: f1, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['int']
+        TypeDecl: f1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          Struct: S
+        InitList: 
+          NamedInitializer: 
+            ID: val
+            ID: data
+      Assignment: =
+        UnaryOp: *
+          Cast: 
+            Typename: None, ['volatile']
+              PtrDecl: []
+                TypeDecl: None, ['volatile']
+                  Struct: S
+            Constant: int, 0x880000UL
+        ID: s
+  FuncDef: 
+    Decl: f2, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['int']
+        TypeDecl: f2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          Struct: T
+        InitList: 
+          NamedInitializer: 
+            ID: val
+            ID: data
+      Assignment: =
+        UnaryOp: *
+          Cast: 
+            Typename: None, ['volatile']
+              PtrDecl: []
+                TypeDecl: None, ['volatile']
+                  Struct: T
+            Constant: int, 0x880000UL
+        ID: t
+  FuncDef: 
+    Decl: f3, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['int']
+        TypeDecl: f3, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          Cast: 
+            Typename: None, ['volatile']
+              PtrDecl: []
+                TypeDecl: None, ['volatile']
+                  IdentifierType: ['unsigned', 'int']
+            Constant: int, 0x880000UL
+        ID: val
+  FuncDef: 
+    Decl: f4, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['int']
+        TypeDecl: f4, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          Struct: S
+        InitList: 
+          NamedInitializer: 
+            ID: val
+            ID: data
+      Assignment: =
+        ID: s2
+        ID: s
+  FuncDef: 
+    Decl: f5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f5, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 100
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: f1
+          ExprList: 
+            Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 100
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: f2
+          ExprList: 
+            Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 100
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: f3
+          ExprList: 
+            Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 100
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: f4
+          ExprList: 
+            Constant: int, 0

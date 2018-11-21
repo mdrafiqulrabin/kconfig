@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7f99058264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9905826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9905826740 '__int128'
+|-TypedefDecl 0x7f9905826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9905826760 'unsigned __int128'
+|-TypedefDecl 0x7f9905826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9905826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9905826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9905826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9905826dc0 'char *'
+|   `-BuiltinType 0x7f9905826560 'char'
+|-TypedefDecl 0x7f99058270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9905827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9905826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9905826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9906025a30 <c_files/pr36073.c:4:15> col:15 implicit used log 'double (double)' extern
+| |-ParmVarDecl 0x7f9906025ac8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f9906025b30 <col:15> Implicit
+| `-NoThrowAttr 0x7f9906025b78 <col:15> Implicit
+|-FunctionDecl 0x7f9906025b88 prev 0x7f9906025a30 <col:1, col:28> col:15 used log 'double (double)' extern
+| |-ParmVarDecl 0x7f9905827138 <col:20, col:27> col:27 x 'double'
+| |-ConstAttr 0x7f9906025c60 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7f9906025c70 <col:15> Inherited Implicit
+|-FunctionDecl 0x7f9906025d48 <line:5:1, col:19> col:12 used f 'int (void)' extern
+|-VarDecl 0x7f9906025e38 <line:7:1, col:8> col:8 used cached_value 'double'
+`-FunctionDecl 0x7f9906025f60 <line:9:1, line:12:1> line:9:6 g 'void (void)'
+  `-CompoundStmt 0x7f9906026190 <line:10:1, line:12:1>
+    `-BinaryOperator 0x7f9906026168 <line:11:3, col:27> 'double' '='
+      |-DeclRefExpr 0x7f9906025ff8 <col:3> 'double' lvalue Var 0x7f9906025e38 'cached_value' 'double'
+      `-CallExpr 0x7f9906026120 <col:18, col:27> 'double'
+        |-ImplicitCastExpr 0x7f9906026108 <col:18> 'double (*)(double)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f9906026020 <col:18> 'double (double)' Function 0x7f9906025b88 'log' 'double (double)'
+        `-ImplicitCastExpr 0x7f9906026150 <col:23, col:26> 'double' <IntegralToFloating>
+          `-CallExpr 0x7f99060260b0 <col:23, col:26> 'int'
+            `-ImplicitCastExpr 0x7f9906026098 <col:23> 'int (*)(void)' <FunctionToPointerDecay>
+              `-DeclRefExpr 0x7f9906026048 <col:23> 'int (void)' Function 0x7f9906025d48 'f' 'int (void)'

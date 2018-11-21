@@ -1,0 +1,106 @@
+FileAST: 
+  Typedef: a, [], ['typedef']
+    TypeDecl: a, []
+      Struct: a
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              Struct: a
+  Decl: d, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: d, []
+        IdentifierType: ['int']
+  Decl: g, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: g, []
+        IdentifierType: ['int']
+  Decl: h, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: h, []
+        IdentifierType: ['int']
+  Decl: _setjmp, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: _setjmp, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: c, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: c, []
+          IdentifierType: ['int']
+    Compound: 
+      TernaryOp: 
+        Constant: int, 1
+        FuncCall: 
+          ID: d
+        Constant: int, 0
+      Decl: e, [], [], []
+        PtrDecl: []
+          TypeDecl: e, []
+            IdentifierType: ['a']
+      While: 
+        ID: e
+        Compound: 
+          Assignment: =
+            ID: e
+            TernaryOp: 
+              BinaryOp: ==
+                ID: e
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['a']
+                  ID: c
+              Constant: int, 0
+              StructRef: ->
+                ID: e
+                ID: b
+          While: 
+            ID: e
+            Compound: 
+              Decl: f, [], [], []
+                TypeDecl: f, []
+                  IdentifierType: ['int']
+                Constant: int, 0
+              FuncCall: 
+                ID: g
+              If: 
+                FuncCall: 
+                  ID: _setjmp
+                  ExprList: 
+                    Constant: int, 0
+                Compound: 
+                  If: 
+                    BinaryOp: &
+                      ID: f
+                      Constant: int, 6
+                    Compound: 
+                      EmptyStatement: 
+                    If: 
+                      BinaryOp: &
+                        ID: f
+                        Constant: int, 2
+                      Compound: 
+                        FuncCall: 
+                          ID: h

@@ -1,0 +1,23 @@
+c_files/pr65210.c:7:39: warning: unknown attribute 'address' ignored [-Wunknown-attributes]
+volatile char q __attribute__((io_low,address(0x81)));
+                                      ^
+c_files/pr65210.c:7:32: warning: unknown attribute 'io_low' ignored [-Wunknown-attributes]
+volatile char q __attribute__((io_low,address(0x81)));
+                               ^
+2 warnings generated.
+TranslationUnitDecl 0x7fd0e80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd0e8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd0e8026740 '__int128'
+|-TypedefDecl 0x7fd0e8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd0e8026760 'unsigned __int128'
+|-TypedefDecl 0x7fd0e8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd0e8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd0e8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd0e8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd0e8026dc0 'char *'
+|   `-BuiltinType 0x7fd0e8026560 'char'
+|-TypedefDecl 0x7fd0e80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd0e8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd0e8026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd0e8026e58 '__va_list_tag'
+`-VarDecl 0x7fd0e8027150 <c_files/pr65210.c:7:1, col:15> col:15 q 'volatile char'

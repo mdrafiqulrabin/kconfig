@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fb093018ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb093019420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb093019140 '__int128'
+|-TypedefDecl 0x7fb093019490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb093019160 'unsigned __int128'
+|-TypedefDecl 0x7fb093019768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb093019570 'struct __NSConstantString_tag'
+|   `-Record 0x7fb0930194e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb093019800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb0930197c0 'char *'
+|   `-BuiltinType 0x7fb093018f60 'char'
+|-TypedefDecl 0x7fb093019ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb093019a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb0930198e0 'struct __va_list_tag'
+|     `-Record 0x7fb093019858 '__va_list_tag'
+|-TypedefDecl 0x7fb093019b38 <c_files/pr31541.c:1:1, col:23> col:23 referenced Uchar 'unsigned char'
+| `-BuiltinType 0x7fb093019020 'unsigned char'
+|-RecordDecl 0x7fb093825a00 <line:2:1, line:4:1> line:2:8 struct scsi_mode_header definition
+| `-FieldDecl 0x7fb093825ae8 <line:3:2, col:33> col:16 sense_data_len 'unsigned char'
+|   `-IntegerLiteral 0x7fb093825ab0 <col:33> 'int' 8
+`-FunctionDecl 0x7fb093825bf8 <line:5:1, line:9:1> line:5:5 f 'int (void)'
+  `-CompoundStmt 0x7fb093825f68 <line:6:1, line:9:1>
+    |-DeclStmt 0x7fb093825d80 <line:7:2, col:28>
+    | `-VarDecl 0x7fb093825d20 <col:2, col:26> col:26 used md 'struct scsi_mode_header':'struct scsi_mode_header'
+    `-ReturnStmt 0x7fb093825f50 <line:8:1, col:18>
+      `-ImplicitCastExpr 0x7fb093825f38 <col:8, col:18> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fb093825f20 <col:8, col:18> 'Uchar':'unsigned char' <LValueToRValue>
+          `-UnaryOperator 0x7fb093825f00 <col:8, col:18> 'Uchar':'unsigned char' lvalue prefix '*'
+            `-CStyleCastExpr 0x7fb093825ed8 <col:9, col:18> 'Uchar *' <BitCast>
+              `-UnaryOperator 0x7fb093825e48 <col:17, col:18> 'struct scsi_mode_header *' prefix '&'
+                `-DeclRefExpr 0x7fb093825dc0 <col:18> 'struct scsi_mode_header':'struct scsi_mode_header' lvalue Var 0x7fb093825d20 'md' 'struct scsi_mode_header':'struct scsi_mode_header'

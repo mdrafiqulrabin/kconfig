@@ -1,0 +1,56 @@
+c_files/pr67317-3.c:11:3: error: use of unknown builtin '__builtin_ia32_sbb_u32' [-Wimplicit-function-declaration]
+  __builtin_ia32_sbb_u32
+  ^
+1 error generated.
+TranslationUnitDecl 0x7ff5818264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff581826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff581826740 '__int128'
+|-TypedefDecl 0x7ff581826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff581826760 'unsigned __int128'
+|-TypedefDecl 0x7ff581826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff581826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff581826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff581826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff581826dc0 'char *'
+|   `-BuiltinType 0x7ff581826560 'char'
+|-TypedefDecl 0x7ff5818270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff581827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff581826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff581826e58 '__va_list_tag'
+|-TypedefDecl 0x7ff581827138 <c_files/pr67317-3.c:5:1, col:22> col:22 referenced u32 'unsigned int'
+| `-BuiltinType 0x7ff581826660 'unsigned int'
+|-FunctionDecl 0x7ff582025c90 <line:7:1, line:15:1> line:7:5 testcarry_u32 'u32 (u32, u32, u32, u32)'
+| |-ParmVarDecl 0x7ff582025a00 <col:20, col:24> col:24 used a 'u32':'unsigned int'
+| |-ParmVarDecl 0x7ff582025a70 <col:27, col:31> col:31 used b 'u32':'unsigned int'
+| |-ParmVarDecl 0x7ff582025ae0 <col:34, col:38> col:38 used c 'u32':'unsigned int'
+| |-ParmVarDecl 0x7ff582025b50 <col:41, col:45> col:45 used d 'u32':'unsigned int'
+| `-CompoundStmt 0x7ff5820263a0 <line:8:1, line:15:1>
+|   |-DeclStmt 0x7ff582025e80 <line:9:3, col:23>
+|   | |-VarDecl 0x7ff582025d98 <col:3, col:7> col:7 used result0 'u32':'unsigned int'
+|   | `-VarDecl 0x7ff582025e08 <col:3, col:16> col:16 used result1 'u32':'unsigned int'
+|   |-CallExpr 0x7ff582026268 <line:11:3, line:12:64> 'int'
+|   | |-ImplicitCastExpr 0x7ff582026250 <line:11:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ff582025f98 <col:3> 'int ()' Function 0x7ff582025f00 '__builtin_ia32_sbb_u32' 'int ()'
+|   | |-CallExpr 0x7ff582026140 <line:12:6, col:47> 'int'
+|   | | |-ImplicitCastExpr 0x7ff582026128 <col:6> 'int (*)()' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7ff582025fc0 <col:6> 'int ()' Function 0x7ff582025f00 '__builtin_ia32_sbb_u32' 'int ()'
+|   | | |-IntegerLiteral 0x7ff582025fe8 <col:30> 'int' 0
+|   | | |-ImplicitCastExpr 0x7ff582026188 <col:33> 'u32':'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ff582026008 <col:33> 'u32':'unsigned int' lvalue ParmVar 0x7ff582025a00 'a' 'u32':'unsigned int'
+|   | | |-ImplicitCastExpr 0x7ff5820261a0 <col:36> 'u32':'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ff582026030 <col:36> 'u32':'unsigned int' lvalue ParmVar 0x7ff582025ae0 'c' 'u32':'unsigned int'
+|   | | `-UnaryOperator 0x7ff5820260d8 <col:39, col:40> 'u32 *' prefix '&'
+|   | |   `-DeclRefExpr 0x7ff582026058 <col:40> 'u32':'unsigned int' lvalue Var 0x7ff582025d98 'result0' 'u32':'unsigned int'
+|   | |-ImplicitCastExpr 0x7ff5820262b0 <col:50> 'u32':'unsigned int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7ff5820261b8 <col:50> 'u32':'unsigned int' lvalue ParmVar 0x7ff582025a70 'b' 'u32':'unsigned int'
+|   | |-ImplicitCastExpr 0x7ff5820262c8 <col:53> 'u32':'unsigned int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7ff5820261e0 <col:53> 'u32':'unsigned int' lvalue ParmVar 0x7ff582025b50 'd' 'u32':'unsigned int'
+|   | `-UnaryOperator 0x7ff582026230 <col:56, col:57> 'u32 *' prefix '&'
+|   |   `-DeclRefExpr 0x7ff582026208 <col:57> 'u32':'unsigned int' lvalue Var 0x7ff582025e08 'result1' 'u32':'unsigned int'
+|   `-ReturnStmt 0x7ff582026388 <line:14:3, col:20>
+|     `-BinaryOperator 0x7ff582026360 <col:10, col:20> 'unsigned int' '^'
+|       |-ImplicitCastExpr 0x7ff582026330 <col:10> 'u32':'unsigned int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff5820262e0 <col:10> 'u32':'unsigned int' lvalue Var 0x7ff582025d98 'result0' 'u32':'unsigned int'
+|       `-ImplicitCastExpr 0x7ff582026348 <col:20> 'u32':'unsigned int' <LValueToRValue>
+|         `-DeclRefExpr 0x7ff582026308 <col:20> 'u32':'unsigned int' lvalue Var 0x7ff582025e08 'result1' 'u32':'unsigned int'
+`-FunctionDecl 0x7ff582025f00 <<invalid sloc>> line:11:3 implicit used __builtin_ia32_sbb_u32 'int ()'

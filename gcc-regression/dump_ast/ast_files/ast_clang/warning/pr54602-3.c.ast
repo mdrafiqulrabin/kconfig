@@ -1,0 +1,31 @@
+c_files/pr54602-3.c:7:21: warning: unknown attribute 'interrupt_handler' ignored [-Wunknown-attributes]
+int __attribute__ ((interrupt_handler))
+                    ^
+1 warning generated.
+TranslationUnitDecl 0x7fd5728264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd572826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd572826740 '__int128'
+|-TypedefDecl 0x7fd572826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd572826760 'unsigned __int128'
+|-TypedefDecl 0x7fd572826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd572826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd572826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd572826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd572826dc0 'char *'
+|   `-BuiltinType 0x7fd572826560 'char'
+|-TypedefDecl 0x7fd5728270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd572827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd572826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd572826e58 '__va_list_tag'
+`-FunctionDecl 0x7fd573026be8 <c_files/pr54602-3.c:7:1, line:11:1> line:8:1 test00 'int (int, int, int, int)'
+  |-ParmVarDecl 0x7fd572827138 <col:9, col:13> col:13 used a 'int'
+  |-ParmVarDecl 0x7fd573026a00 <col:16, col:20> col:20 used b 'int'
+  |-ParmVarDecl 0x7fd573026a78 <col:23, col:27> col:27 c 'int'
+  |-ParmVarDecl 0x7fd573026af0 <col:30, col:34> col:34 d 'int'
+  `-CompoundStmt 0x7fd573026da0 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fd573026d88 <line:10:3, col:14>
+      `-BinaryOperator 0x7fd573026d60 <col:10, col:14> 'int' '+'
+        |-ImplicitCastExpr 0x7fd573026d30 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fd573026ce0 <col:10> 'int' lvalue ParmVar 0x7fd572827138 'a' 'int'
+        `-ImplicitCastExpr 0x7fd573026d48 <col:14> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fd573026d08 <col:14> 'int' lvalue ParmVar 0x7fd573026a00 'b' 'int'

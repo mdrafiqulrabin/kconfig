@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7f8a850264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8a85026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8a85026740 '__int128'
+|-TypedefDecl 0x7f8a85026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8a85026760 'unsigned __int128'
+|-TypedefDecl 0x7f8a85026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8a85026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8a85026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8a85026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8a85026dc0 'char *'
+|   `-BuiltinType 0x7f8a85026560 'char'
+|-TypedefDecl 0x7f8a850270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8a85027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8a85026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8a85026e58 '__va_list_tag'
+|-VarDecl 0x7f8a850271a0 <c_files/pr82096.c:5:1, col:23> col:18 used AL 'long long [24]' static
+|-FunctionDecl 0x7f8a85825b08 <line:7:1, line:11:1> line:8:1 check_ok 'int (void)'
+| `-CompoundStmt 0x7f8a85826150 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7f8a85826138 <line:10:3, col:77>
+|     `-ImplicitCastExpr 0x7f8a85826120 <col:10, col:77> 'int' <IntegralCast>
+|       `-ParenExpr 0x7f8a85826100 <col:10, col:77> '_Bool'
+|         `-CallExpr 0x7f8a85825dc0 <col:11, col:76> '_Bool'
+|           |-ImplicitCastExpr 0x7f8a858260e8 <col:11> '_Bool (*)(volatile long long *, long long, long long, ...)' <BuiltinFnToFnPtr>
+|           | `-DeclRefExpr 0x7f8a85826090 <col:11> '<builtin fn type>' Function 0x7f8a85825e78 '__sync_bool_compare_and_swap_8' '_Bool (volatile long long *, long long, long long, ...)'
+|           |-BinaryOperator 0x7f8a85825d10 <col:41, col:44> 'long long *' '+'
+|           | |-ImplicitCastExpr 0x7f8a85825cf8 <col:41> 'long long *' <ArrayToPointerDecay>
+|           | | `-DeclRefExpr 0x7f8a85825c88 <col:41> 'long long [24]' lvalue Var 0x7f8a850271a0 'AL' 'long long [24]'
+|           | `-IntegerLiteral 0x7f8a85825cb0 <col:44> 'int' 1
+|           |-IntegerLiteral 0x7f8a85825d38 <col:47> 'long long' 8589934595
+|           `-IntegerLiteral 0x7f8a85825d58 <col:62> 'long long' 78187493520
+|-FunctionDecl 0x7f8a85825bc8 <col:11> col:11 implicit used __sync_bool_compare_and_swap 'void ()' extern
+`-FunctionDecl 0x7f8a85825e78 <col:11> col:11 implicit __sync_bool_compare_and_swap_8 '_Bool (volatile long long *, long long, long long, ...)' extern
+  |-ParmVarDecl 0x7f8a85825f10 <<invalid sloc>> <invalid sloc> 'volatile long long *'
+  |-ParmVarDecl 0x7f8a85825f70 <<invalid sloc>> <invalid sloc> 'long long'
+  |-ParmVarDecl 0x7f8a85825fd0 <<invalid sloc>> <invalid sloc> 'long long'
+  `-NoThrowAttr 0x7f8a85826048 <col:11> Implicit

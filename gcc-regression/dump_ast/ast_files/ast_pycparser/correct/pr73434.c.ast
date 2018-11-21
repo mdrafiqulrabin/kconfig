@@ -1,0 +1,65 @@
+FileAST: 
+  Typedef: A, [], ['typedef']
+    TypeDecl: A, []
+      Struct: None
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['unsigned', 'char']
+  Typedef: B, [], ['typedef']
+    TypeDecl: B, []
+      Struct: None
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['unsigned', 'char']
+  Decl: idx, [], [], []
+    TypeDecl: idx, []
+      IdentifierType: ['int']
+    Constant: int, 0
+  Decl: objs, [], [], []
+    ArrayDecl: []
+      TypeDecl: objs, []
+        IdentifierType: ['A']
+      Constant: int, 1
+    InitList: 
+      InitList: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: b, [], [], []
+        PtrDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['B']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['B']
+          UnaryOp: &
+            ArrayRef: 
+              ID: objs
+              ID: idx
+      UnaryOp: p++
+        StructRef: ->
+          ID: b
+          ID: x
+      If: 
+        StructRef: ->
+          ID: b
+          ID: x
+        Assignment: =
+          StructRef: ->
+            ID: b
+            ID: x
+          Constant: int, 0
+      If: 
+        StructRef: ->
+          ID: b
+          ID: x
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

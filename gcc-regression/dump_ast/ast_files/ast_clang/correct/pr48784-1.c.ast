@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7f9f9b0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9f9b026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9f9b026740 '__int128'
+|-TypedefDecl 0x7f9f9b026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9f9b026760 'unsigned __int128'
+|-TypedefDecl 0x7f9f9b026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9f9b026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9f9b026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9f9b026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9f9b026dc0 'char *'
+|   `-BuiltinType 0x7f9f9b026560 'char'
+|-TypedefDecl 0x7f9f9b0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9f9b027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9f9b026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9f9b026e58 '__va_list_tag'
+|-FunctionDecl 0x7f9f9b825a30 <c_files/pr48784-1.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9f9b825ac8 prev 0x7f9f9b825a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7f9f9b825b80 <line:8:10, line:12:1> line:8:17 struct S0 definition
+| |-MaxFieldAlignmentAttr 0x7f9f9b825c30 <<invalid sloc>> Implicit 8
+| |-FieldDecl 0x7f9f9b825cb0 <line:9:4, col:15> col:11 a 'int'
+| | `-IntegerLiteral 0x7f9f9b825c78 <col:15> 'int' 7
+| `-FieldDecl 0x7f9f9b825d30 <line:10:4, col:17> col:13 referenced b 'unsigned int'
+|   `-IntegerLiteral 0x7f9f9b825cf8 <col:17> 'int' 28
+|-VarDecl 0x7f9f9b825dd0 <line:8:1, line:12:19> col:3 used g 'volatile struct S0':'volatile struct S0' cinit
+| `-InitListExpr 0x7f9f9b825f00 <col:7, col:19> 'struct S0':'struct S0'
+|   |-IntegerLiteral 0x7f9f9b825e70 <col:8> 'int' 0
+|   `-ImplicitCastExpr 0x7f9f9b825f50 <col:10> 'unsigned int' <IntegralCast>
+|     `-IntegerLiteral 0x7f9f9b825e90 <col:10> 'int' 268435455
+`-FunctionDecl 0x7f9f9b825fd0 <line:14:1, line:19:1> line:14:5 main 'int ()'
+  `-CompoundStmt 0x7f9f9b826318 <col:12, line:19:1>
+    |-DeclStmt 0x7f9f9b826158 <line:15:3, col:19>
+    | `-VarDecl 0x7f9f9b826080 <col:3, col:18> col:12 used b 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7f9f9b826140 <col:16, col:18> 'unsigned int' <LValueToRValue>
+    |     `-MemberExpr 0x7f9f9b826108 <col:16, col:18> 'volatile unsigned int' lvalue bitfield .b 0x7f9f9b825d30
+    |       `-DeclRefExpr 0x7f9f9b8260e0 <col:16> 'volatile struct S0':'volatile struct S0' lvalue Var 0x7f9f9b825dd0 'g' 'volatile struct S0':'volatile struct S0'
+    |-IfStmt 0x7f9f9b8262a8 <line:16:3, line:17:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9f9b8261e8 <line:16:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f9f9b8261b8 <col:7> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f9f9b826170 <col:7> 'unsigned int' lvalue Var 0x7f9f9b826080 'b' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7f9f9b8261d0 <col:12> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f9f9b826198 <col:12> 'int' 268435455
+    | |-CallExpr 0x7f9f9b826280 <line:17:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f9f9b826268 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f9f9b826210 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9f9b825ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f9f9b826300 <line:18:3, col:10>
+      `-IntegerLiteral 0x7f9f9b8262e0 <col:10> 'int' 0

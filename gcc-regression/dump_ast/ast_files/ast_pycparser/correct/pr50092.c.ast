@@ -1,0 +1,50 @@
+FileAST: 
+  Decl: v, ['volatile'], [], []
+    TypeDecl: v, ['volatile']
+      IdentifierType: ['int']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['long', 'double']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  Decl: baz, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['_Complex', 'long', 'double']
+      TypeDecl: baz, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: w, [], [], []
+        ArrayDecl: []
+          TypeDecl: w, []
+            IdentifierType: ['_Complex', 'long', 'double']
+          Constant: int, 100000000
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: /
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['long', 'double']
+              ID: v
+            Constant: float, 2147483648.0
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: w

@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7fcf8a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcf8a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcf8a826740 '__int128'
+|-TypedefDecl 0x7fcf8a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcf8a826760 'unsigned __int128'
+|-TypedefDecl 0x7fcf8a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcf8a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcf8a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcf8a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcf8a826dc0 'char *'
+|   `-BuiltinType 0x7fcf8a826560 'char'
+|-TypedefDecl 0x7fcf8a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcf8a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcf8a826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcf8a826e58 '__va_list_tag'
+|-RecordDecl 0x7fcf8a827120 <c_files/pr33563.c:3:1, line:6:1> line:3:8 struct T definition
+| |-FieldDecl 0x7fcf8a81b200 <line:5:3, col:7> col:7 referenced a 'int'
+| `-FieldDecl 0x7fcf8a81b260 <col:3, col:10> col:10 referenced b 'int'
+|-VarDecl 0x7fcf8a81b300 <line:3:1, line:6:3> col:3 used t 'struct T':'struct T'
+|-VarDecl 0x7fcf8a81b3c0 <line:3:1, line:6:6> col:6 used q 'struct T':'struct T'
+|-FunctionDecl 0x7fcf8a81b508 <line:8:1, line:21:1> line:8:5 main 'int (void)'
+| `-CompoundStmt 0x7fcf8a81bc78 <line:9:1, line:21:1>
+|   |-DeclStmt 0x7fcf8a81b6b0 <line:10:3, col:14>
+|   | `-VarDecl 0x7fcf8a81b650 <col:3, col:13> col:13 p 'struct T *'
+|   |-BinaryOperator 0x7fcf8a81b748 <line:12:3, col:9> 'int' '='
+|   | |-MemberExpr 0x7fcf8a81b6f0 <col:3, col:5> 'int' lvalue .a 0x7fcf8a81b200
+|   | | `-DeclRefExpr 0x7fcf8a81b6c8 <col:3> 'struct T':'struct T' lvalue Var 0x7fcf8a81b300 't' 'struct T':'struct T'
+|   | `-IntegerLiteral 0x7fcf8a81b728 <col:9> 'int' 1
+|   |-BinaryOperator 0x7fcf8a81b840 <line:13:3, col:9> 'int' '='
+|   | |-MemberExpr 0x7fcf8a81b7e8 <col:3, col:5> 'int' lvalue .b 0x7fcf8a81b260
+|   | | `-DeclRefExpr 0x7fcf8a81b7c0 <col:3> 'struct T':'struct T' lvalue Var 0x7fcf8a81b300 't' 'struct T':'struct T'
+|   | `-IntegerLiteral 0x7fcf8a81b820 <col:9> 'int' 2
+|   |-BinaryOperator 0x7fcf8a81b8d0 <line:14:3, col:7> 'struct T':'struct T' '='
+|   | |-DeclRefExpr 0x7fcf8a81b868 <col:3> 'struct T':'struct T' lvalue Var 0x7fcf8a81b3c0 'q' 'struct T':'struct T'
+|   | `-ImplicitCastExpr 0x7fcf8a81b8b8 <col:7> 'struct T':'struct T' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fcf8a81b890 <col:7> 'struct T':'struct T' lvalue Var 0x7fcf8a81b300 't' 'struct T':'struct T'
+|   |-BinaryOperator 0x7fcf8a81b978 <line:15:3, col:9> 'int' '='
+|   | |-MemberExpr 0x7fcf8a81b920 <col:3, col:5> 'int' lvalue .a 0x7fcf8a81b200
+|   | | `-DeclRefExpr 0x7fcf8a81b8f8 <col:3> 'struct T':'struct T' lvalue Var 0x7fcf8a81b300 't' 'struct T':'struct T'
+|   | `-IntegerLiteral 0x7fcf8a81b958 <col:9> 'int' 3
+|   |-IfStmt 0x7fcf8a81bc08 <line:17:3, line:18:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fcf8a81ba38 <line:17:7, col:14> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fcf8a81ba20 <col:7, col:9> 'int' <LValueToRValue>
+|   | | | `-MemberExpr 0x7fcf8a81b9c8 <col:7, col:9> 'int' lvalue .a 0x7fcf8a81b200
+|   | | |   `-DeclRefExpr 0x7fcf8a81b9a0 <col:7> 'struct T':'struct T' lvalue Var 0x7fcf8a81b3c0 'q' 'struct T':'struct T'
+|   | | `-IntegerLiteral 0x7fcf8a81ba00 <col:14> 'int' 1
+|   | |-CallExpr 0x7fcf8a81bbe0 <line:18:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fcf8a81bbc8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fcf8a81bb70 <col:5> '<builtin fn type>' Function 0x7fcf8a81ba90 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fcf8a81bc60 <line:20:3, col:10>
+|     `-IntegerLiteral 0x7fcf8a81bc40 <col:10> 'int' 0
+`-FunctionDecl 0x7fcf8a81ba90 <line:18:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fcf8a81bb28 <col:5> Implicit

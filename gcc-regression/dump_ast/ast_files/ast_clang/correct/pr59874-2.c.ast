@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7ff8388264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff838826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff838826740 '__int128'
+|-TypedefDecl 0x7ff838826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff838826760 'unsigned __int128'
+|-TypedefDecl 0x7ff838826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff838826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff838826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff838826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff838826dc0 'char *'
+|   `-BuiltinType 0x7ff838826560 'char'
+|-TypedefDecl 0x7ff8388270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff838827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff838826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff838826e58 '__va_list_tag'
+|-FunctionDecl 0x7ff839025a30 <c_files/pr59874-2.c:6:1, line:10:1> line:7:1 foo 'unsigned int (unsigned short)'
+| |-ParmVarDecl 0x7ff838827138 <col:6, col:21> col:21 used x 'unsigned short'
+| `-CompoundStmt 0x7ff839025e58 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7ff839025e40 <line:9:3, col:35>
+|     `-ConditionalOperator 0x7ff839025e10 <col:10, col:35> 'unsigned int'
+|       |-ImplicitCastExpr 0x7ff839025de0 <col:10> 'int' <IntegralCast>
+|       | `-ImplicitCastExpr 0x7ff839025dc8 <col:10> 'unsigned short' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7ff839025b10 <col:10> 'unsigned short' lvalue ParmVar 0x7ff838827138 'x' 'unsigned short'
+|       |-ImplicitCastExpr 0x7ff839025df8 <col:14, col:31> 'unsigned int' <IntegralCast>
+|       | `-CallExpr 0x7ff839025d60 <col:14, col:31> 'int'
+|       |   |-ImplicitCastExpr 0x7ff839025d48 <col:14> 'int (*)(unsigned short)' <BuiltinFnToFnPtr>
+|       |   | `-DeclRefExpr 0x7ff839025cd0 <col:14> '<builtin fn type>' Function 0x7ff839025b78 '__builtin_clzs' 'int (unsigned short)'
+|       |   `-ImplicitCastExpr 0x7ff839025d90 <col:30> 'unsigned short' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7ff839025cf8 <col:30> 'unsigned short' lvalue ParmVar 0x7ff838827138 'x' 'unsigned short'
+|       `-IntegerLiteral 0x7ff839025da8 <col:35> 'unsigned int' 16
+`-FunctionDecl 0x7ff839025b78 <col:14> col:14 implicit used __builtin_clzs 'int (unsigned short)' extern
+  |-ParmVarDecl 0x7ff839025c10 <<invalid sloc>> <invalid sloc> 'unsigned short'
+  |-NoThrowAttr 0x7ff839025c78 <col:14> Implicit
+  `-ConstAttr 0x7ff839025cc0 <col:14> Implicit

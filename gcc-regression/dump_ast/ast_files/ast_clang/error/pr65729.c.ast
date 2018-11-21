@@ -1,0 +1,28 @@
+c_files/pr65729.c:8:22: error: invalid output constraint '+gw' in asm
+  asm volatile ("" : "+gw" (x));
+                     ^
+1 error generated.
+TranslationUnitDecl 0x7fa9e70264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa9e7026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa9e7026740 '__int128'
+|-TypedefDecl 0x7fa9e7026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa9e7026760 'unsigned __int128'
+|-TypedefDecl 0x7fa9e7026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa9e7026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa9e7026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa9e7026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa9e7026dc0 'char *'
+|   `-BuiltinType 0x7fa9e7026560 'char'
+|-TypedefDecl 0x7fa9e70270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa9e7027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa9e7026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa9e7026e58 '__va_list_tag'
+`-FunctionDecl 0x7fa9e7825a00 <c_files/pr65729.c:5:1, line:10:1> line:5:5 foo 'int (void)'
+  `-CompoundStmt 0x7fa9e7825cf0 <line:6:1, line:10:1>
+    |-DeclStmt 0x7fa9e7825b70 <line:7:3, col:17>
+    | `-VarDecl 0x7fa9e7825af0 <col:3, col:14> col:10 used x 'double' cinit
+    |   `-FloatingLiteral 0x7fa9e7825b50 <col:14> 'double' 0.000000e+00
+    `-ReturnStmt 0x7fa9e7825cd8 <line:9:3, col:10>
+      `-ImplicitCastExpr 0x7fa9e7825cc0 <col:10> 'int' <FloatingToIntegral>
+        `-ImplicitCastExpr 0x7fa9e7825ca8 <col:10> 'double' <LValueToRValue>
+          `-DeclRefExpr 0x7fa9e7825c80 <col:10> 'double' lvalue Var 0x7fa9e7825af0 'x' 'double'

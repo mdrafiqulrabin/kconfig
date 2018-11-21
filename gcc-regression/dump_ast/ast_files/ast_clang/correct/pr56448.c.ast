@@ -1,0 +1,83 @@
+TranslationUnitDecl 0x7fe1890264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe189026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe189026740 '__int128'
+|-TypedefDecl 0x7fe189026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe189026760 'unsigned __int128'
+|-TypedefDecl 0x7fe189026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe189026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe189026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe189026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe189026dc0 'char *'
+|   `-BuiltinType 0x7fe189026560 'char'
+|-TypedefDecl 0x7fe1890270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe189027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe189026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe189026e58 '__va_list_tag'
+|-VarDecl 0x7fe189825a00 <c_files/pr56448.c:3:1, col:17> col:14 used a 'volatile int [1]'
+|-VarDecl 0x7fe189825ab8 <line:4:1, col:5> col:5 used b 'int'
+`-FunctionDecl 0x7fe189825b68 <line:6:1, line:14:1> line:7:1 foo 'void ()'
+  `-CompoundStmt 0x7fe189826770 <line:8:1, line:14:1>
+    `-ForStmt 0x7fe189826738 <line:9:3, line:13:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7fe189826710 <line:10:5, line:13:5>
+        |-DeclStmt 0x7fe189826518 <line:11:7, col:93>
+        | `-VarDecl 0x7fe189825d20 <col:7, col:92> col:12 used c 'int *[3][6]' cinit
+        |   `-InitListExpr 0x7fe189826220 <col:22, col:92> 'int *[3][6]'
+        |     |-InitListExpr 0x7fe189826278 <col:24, col:40> 'int *[6]'
+        |     | |-ImplicitCastExpr 0x7fe1898262e8 <col:24> 'int *' <NullToPointer>
+        |     | | `-IntegerLiteral 0x7fe189825d80 <col:24> 'int' 0
+        |     | |-ImplicitCastExpr 0x7fe189826300 <col:27> 'int *' <NullToPointer>
+        |     | | `-IntegerLiteral 0x7fe189825da0 <col:27> 'int' 0
+        |     | |-ImplicitCastExpr 0x7fe189826318 <col:30> 'int *' <NullToPointer>
+        |     | | `-IntegerLiteral 0x7fe189825dc0 <col:30> 'int' 0
+        |     | |-UnaryOperator 0x7fe189825e08 <col:33, col:34> 'int *' prefix '&'
+        |     | | `-DeclRefExpr 0x7fe189825de0 <col:34> 'int' lvalue Var 0x7fe189825ab8 'b' 'int'
+        |     | |-ImplicitCastExpr 0x7fe189826330 <col:37> 'int *' <NullToPointer>
+        |     | | `-IntegerLiteral 0x7fe189825e28 <col:37> 'int' 0
+        |     | `-ImplicitCastExpr 0x7fe189826348 <col:40> 'int *' <NullToPointer>
+        |     |   `-IntegerLiteral 0x7fe189825e48 <col:40> 'int' 0
+        |     |-InitListExpr 0x7fe189826360 <col:43, col:59> 'int *[6]'
+        |     | |-ImplicitCastExpr 0x7fe1898263d0 <col:43> 'int *' <NullToPointer>
+        |     | | `-IntegerLiteral 0x7fe189825e68 <col:43> 'int' 0
+        |     | |-ImplicitCastExpr 0x7fe1898263e8 <col:46> 'int *' <NullToPointer>
+        |     | | `-IntegerLiteral 0x7fe189825e88 <col:46> 'int' 0
+        |     | |-UnaryOperator 0x7fe189825ed0 <col:49, col:50> 'int *' prefix '&'
+        |     | | `-DeclRefExpr 0x7fe189825ea8 <col:50> 'int' lvalue Var 0x7fe189825ab8 'b' 'int'
+        |     | |-ImplicitCastExpr 0x7fe189826400 <col:53> 'int *' <NullToPointer>
+        |     | | `-IntegerLiteral 0x7fe189825ef0 <col:53> 'int' 0
+        |     | |-ImplicitCastExpr 0x7fe189826418 <col:56> 'int *' <NullToPointer>
+        |     | | `-IntegerLiteral 0x7fe189825f10 <col:56> 'int' 0
+        |     | `-ImplicitCastExpr 0x7fe189826430 <col:59> 'int *' <NullToPointer>
+        |     |   `-IntegerLiteral 0x7fe189825f30 <col:59> 'int' 0
+        |     `-InitListExpr 0x7fe189826448 <col:62, col:90> 'int *[6]'
+        |       |-ImplicitCastExpr 0x7fe1898264b8 <col:62> 'int *' <NullToPointer>
+        |       | `-IntegerLiteral 0x7fe189825f50 <col:62> 'int' 0
+        |       |-ImplicitCastExpr 0x7fe1898264d0 <col:65> 'int *' <NullToPointer>
+        |       | `-IntegerLiteral 0x7fe189825f70 <col:65> 'int' 0
+        |       |-ImplicitCastExpr 0x7fe1898264e8 <col:68> 'int *' <NullToPointer>
+        |       | `-IntegerLiteral 0x7fe189825f90 <col:68> 'int' 0
+        |       |-ImplicitCastExpr 0x7fe189826500 <col:71> 'int *' <NullToPointer>
+        |       | `-IntegerLiteral 0x7fe189825fb0 <col:71> 'int' 0
+        |       |-UnaryOperator 0x7fe189825ff8 <col:74, col:75> 'int *' prefix '&'
+        |       | `-DeclRefExpr 0x7fe189825fd0 <col:75> 'int' lvalue Var 0x7fe189825ab8 'b' 'int'
+        |       `-CStyleCastExpr 0x7fe189826128 <col:78, col:90> 'int *' <BitCast>
+        |         `-UnaryOperator 0x7fe1898260c8 <col:86, col:90> 'volatile int *' prefix '&'
+        |           `-ArraySubscriptExpr 0x7fe1898260a0 <col:87, col:90> 'volatile int' lvalue
+        |             |-ImplicitCastExpr 0x7fe189826088 <col:87> 'volatile int *' <ArrayToPointerDecay>
+        |             | `-DeclRefExpr 0x7fe189826018 <col:87> 'volatile int [1]' lvalue Var 0x7fe189825a00 'a' 'volatile int [1]'
+        |             `-IntegerLiteral 0x7fe189826040 <col:89> 'int' 0
+        `-BinaryOperator 0x7fe1898266e8 <line:12:7, col:18> 'int' '='
+          |-DeclRefExpr 0x7fe189826530 <col:7> 'int' lvalue Var 0x7fe189825ab8 'b' 'int'
+          `-ImplicitCastExpr 0x7fe1898266d0 <col:11, col:18> 'int' <LValueToRValue>
+            `-UnaryOperator 0x7fe1898266b0 <col:11, col:18> 'int' lvalue prefix '*'
+              `-ImplicitCastExpr 0x7fe189826698 <col:12, col:18> 'int *' <LValueToRValue>
+                `-ArraySubscriptExpr 0x7fe189826670 <col:12, col:18> 'int *' lvalue
+                  |-ImplicitCastExpr 0x7fe189826658 <col:12, col:15> 'int **' <ArrayToPointerDecay>
+                  | `-ArraySubscriptExpr 0x7fe1898265e0 <col:12, col:15> 'int *[6]' lvalue
+                  |   |-ImplicitCastExpr 0x7fe1898265c8 <col:12> 'int *(*)[6]' <ArrayToPointerDecay>
+                  |   | `-DeclRefExpr 0x7fe189826558 <col:12> 'int *[3][6]' lvalue Var 0x7fe189825d20 'c' 'int *[3][6]'
+                  |   `-IntegerLiteral 0x7fe189826580 <col:14> 'int' 2
+                  `-IntegerLiteral 0x7fe189826608 <col:17> 'int' 5

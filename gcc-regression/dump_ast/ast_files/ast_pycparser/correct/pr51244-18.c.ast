@@ -1,0 +1,421 @@
+FileAST: 
+  Typedef: Char, [], ['typedef']
+    TypeDecl: Char, []
+      IdentifierType: ['char']
+  Typedef: Bool, [], ['typedef']
+    TypeDecl: Bool, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: UChar, [], ['typedef']
+    TypeDecl: UChar, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: Int32, [], ['typedef']
+    TypeDecl: Int32, []
+      IdentifierType: ['int']
+  Typedef: UInt32, [], ['typedef']
+    TypeDecl: UInt32, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: Int16, [], ['typedef']
+    TypeDecl: Int16, []
+      IdentifierType: ['short']
+  Typedef: UInt16, [], ['typedef']
+    TypeDecl: UInt16, []
+      IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: mainGtU, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: i1, [], [], []
+            TypeDecl: i1, []
+              IdentifierType: ['UInt32']
+          Decl: i2, [], [], []
+            TypeDecl: i2, []
+              IdentifierType: ['UInt32']
+          Decl: block, [], [], []
+            PtrDecl: []
+              TypeDecl: block, []
+                IdentifierType: ['UChar']
+          Decl: quadrant, [], [], []
+            PtrDecl: []
+              TypeDecl: quadrant, []
+                IdentifierType: ['UInt16']
+          Decl: nblock, [], [], []
+            TypeDecl: nblock, []
+              IdentifierType: ['UInt32']
+          Decl: budget, [], [], []
+            PtrDecl: []
+              TypeDecl: budget, []
+                IdentifierType: ['Int32']
+        TypeDecl: mainGtU, []
+          IdentifierType: ['Bool']
+    Compound: 
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['Int32']
+      Decl: c1, [], [], []
+        TypeDecl: c1, []
+          IdentifierType: ['UChar']
+      Decl: c2, [], [], []
+        TypeDecl: c2, []
+          IdentifierType: ['UChar']
+      Decl: s1, [], [], []
+        TypeDecl: s1, []
+          IdentifierType: ['UInt16']
+      Decl: s2, [], [], []
+        TypeDecl: s2, []
+          IdentifierType: ['UInt16']
+      Assignment: =
+        ID: k
+        BinaryOp: +
+          ID: nblock
+          Constant: int, 8
+      DoWhile: 
+        BinaryOp: >=
+          ID: k
+          Constant: int, 0
+        Compound: 
+          Assignment: =
+            ID: c1
+            ArrayRef: 
+              ID: block
+              ID: i1
+          Assignment: =
+            ID: c2
+            ArrayRef: 
+              ID: block
+              ID: i2
+          If: 
+            BinaryOp: !=
+              ID: c1
+              ID: c2
+            Return: 
+              BinaryOp: >
+                ID: c1
+                ID: c2
+          Assignment: =
+            ID: s1
+            ArrayRef: 
+              ID: quadrant
+              ID: i1
+          Assignment: =
+            ID: s2
+            ArrayRef: 
+              ID: quadrant
+              ID: i2
+          If: 
+            BinaryOp: !=
+              ID: s1
+              ID: s2
+            Return: 
+              BinaryOp: >
+                ID: s1
+                ID: s2
+          UnaryOp: p++
+            ID: i1
+          UnaryOp: p++
+            ID: i2
+          Assignment: -=
+            ID: k
+            Constant: int, 8
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: mainSimpleSort, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: ptr, [], [], []
+            PtrDecl: []
+              TypeDecl: ptr, []
+                IdentifierType: ['UInt32']
+          Decl: block, [], [], []
+            PtrDecl: []
+              TypeDecl: block, []
+                IdentifierType: ['UChar']
+          Decl: quadrant, [], [], []
+            PtrDecl: []
+              TypeDecl: quadrant, []
+                IdentifierType: ['UInt16']
+          Decl: nblock, [], [], []
+            TypeDecl: nblock, []
+              IdentifierType: ['Int32']
+          Decl: lo, [], [], []
+            TypeDecl: lo, []
+              IdentifierType: ['Int32']
+          Decl: hi, [], [], []
+            TypeDecl: hi, []
+              IdentifierType: ['Int32']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['Int32']
+          Decl: budget, [], [], []
+            PtrDecl: []
+              TypeDecl: budget, []
+                IdentifierType: ['Int32']
+        TypeDecl: mainSimpleSort, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['Int32']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['Int32']
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['Int32']
+      Decl: bigN, [], [], []
+        TypeDecl: bigN, []
+          IdentifierType: ['Int32']
+      Decl: hp, [], [], []
+        TypeDecl: hp, []
+          IdentifierType: ['Int32']
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['UInt32']
+      Assignment: =
+        ID: bigN
+        BinaryOp: +
+          BinaryOp: -
+            ID: hi
+            ID: lo
+          Constant: int, 1
+      Assignment: =
+        ID: hp
+        Constant: int, 0
+      Assignment: =
+        ID: h
+        Constant: int, 1
+      Assignment: =
+        ID: j
+        BinaryOp: +
+          ID: lo
+          ID: h
+      Assignment: =
+        ID: v
+        ArrayRef: 
+          ID: ptr
+          ID: j
+      While: 
+        FuncCall: 
+          ID: mainGtU
+          ExprList: 
+            BinaryOp: +
+              ArrayRef: 
+                ID: ptr
+                BinaryOp: -
+                  ID: j
+                  ID: h
+              ID: d
+            BinaryOp: +
+              ID: v
+              ID: d
+            ID: block
+            ID: quadrant
+            ID: nblock
+            ID: budget
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: ptr
+              ID: j
+            ArrayRef: 
+              ID: ptr
+              BinaryOp: -
+                ID: j
+                ID: h
+          Assignment: =
+            ID: j
+            BinaryOp: -
+              ID: j
+              ID: h
+  FuncDef: 
+    Decl: mainQSort3, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: ptr, [], [], []
+            PtrDecl: []
+              TypeDecl: ptr, []
+                IdentifierType: ['UInt32']
+          Decl: block, [], [], []
+            PtrDecl: []
+              TypeDecl: block, []
+                IdentifierType: ['UChar']
+          Decl: quadrant, [], [], []
+            PtrDecl: []
+              TypeDecl: quadrant, []
+                IdentifierType: ['UInt16']
+          Decl: nblock, [], [], []
+            TypeDecl: nblock, []
+              IdentifierType: ['Int32']
+          Decl: loSt, [], [], []
+            TypeDecl: loSt, []
+              IdentifierType: ['Int32']
+          Decl: hiSt, [], [], []
+            TypeDecl: hiSt, []
+              IdentifierType: ['Int32']
+          Decl: dSt, [], [], []
+            TypeDecl: dSt, []
+              IdentifierType: ['Int32']
+          Decl: budget, [], [], []
+            PtrDecl: []
+              TypeDecl: budget, []
+                IdentifierType: ['Int32']
+        TypeDecl: mainQSort3, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: unLo, [], [], []
+        TypeDecl: unLo, []
+          IdentifierType: ['Int32']
+      Decl: unHi, [], [], []
+        TypeDecl: unHi, []
+          IdentifierType: ['Int32']
+      Decl: ltLo, [], [], []
+        TypeDecl: ltLo, []
+          IdentifierType: ['Int32']
+      Decl: gtHi, [], [], []
+        TypeDecl: gtHi, []
+          IdentifierType: ['Int32']
+      Decl: sp, [], [], []
+        TypeDecl: sp, []
+          IdentifierType: ['Int32']
+      Decl: lo, [], [], []
+        TypeDecl: lo, []
+          IdentifierType: ['Int32']
+      Decl: hi, [], [], []
+        TypeDecl: hi, []
+          IdentifierType: ['Int32']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['Int32']
+      Decl: stackLo, [], [], []
+        ArrayDecl: []
+          TypeDecl: stackLo, []
+            IdentifierType: ['Int32']
+          Constant: int, 100
+      Decl: stackHi, [], [], []
+        ArrayDecl: []
+          TypeDecl: stackHi, []
+            IdentifierType: ['Int32']
+          Constant: int, 100
+      Decl: stackD, [], [], []
+        ArrayDecl: []
+          TypeDecl: stackD, []
+            IdentifierType: ['Int32']
+          Constant: int, 100
+      Assignment: =
+        ID: sp
+        Constant: int, 0
+      Assignment: =
+        ArrayRef: 
+          ID: stackLo
+          ID: sp
+        ID: loSt
+      Assignment: =
+        ArrayRef: 
+          ID: stackHi
+          ID: sp
+        ID: hiSt
+      Assignment: =
+        ArrayRef: 
+          ID: stackD
+          ID: sp
+        ID: dSt
+      Assignment: =
+        ID: lo
+        ArrayRef: 
+          ID: stackLo
+          ID: sp
+      Assignment: =
+        ID: hi
+        ArrayRef: 
+          ID: stackHi
+          ID: sp
+      Assignment: =
+        ID: d
+        ArrayRef: 
+          ID: stackD
+          ID: sp
+      FuncCall: 
+        ID: mainSimpleSort
+        ExprList: 
+          ID: ptr
+          ID: block
+          ID: quadrant
+          ID: nblock
+          ID: lo
+          ID: hi
+          ID: d
+          ID: budget
+  FuncDef: 
+    Decl: mainSort, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ptr, [], [], []
+            PtrDecl: []
+              TypeDecl: ptr, []
+                IdentifierType: ['UInt32']
+          Decl: block, [], [], []
+            PtrDecl: []
+              TypeDecl: block, []
+                IdentifierType: ['UChar']
+          Decl: quadrant, [], [], []
+            PtrDecl: []
+              TypeDecl: quadrant, []
+                IdentifierType: ['UInt16']
+          Decl: ftab, [], [], []
+            PtrDecl: []
+              TypeDecl: ftab, []
+                IdentifierType: ['UInt32']
+          Decl: nblock, [], [], []
+            TypeDecl: nblock, []
+              IdentifierType: ['Int32']
+          Decl: verb, [], [], []
+            TypeDecl: verb, []
+              IdentifierType: ['Int32']
+          Decl: budget, [], [], []
+            PtrDecl: []
+              TypeDecl: budget, []
+                IdentifierType: ['Int32']
+        TypeDecl: mainSort, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: sb, [], [], []
+        TypeDecl: sb, []
+          IdentifierType: ['Int32']
+        Constant: int, 0
+      Decl: lo, [], [], []
+        TypeDecl: lo, []
+          IdentifierType: ['Int32']
+        BinaryOp: &
+          ArrayRef: 
+            ID: ftab
+            ID: sb
+          UnaryOp: ~
+            BinaryOp: <<
+              Constant: int, 1
+              Constant: int, 21
+      Decl: hi, [], [], []
+        TypeDecl: hi, []
+          IdentifierType: ['Int32']
+        BinaryOp: -
+          BinaryOp: &
+            ArrayRef: 
+              ID: ftab
+              BinaryOp: +
+                ID: sb
+                Constant: int, 1
+            UnaryOp: ~
+              BinaryOp: <<
+                Constant: int, 1
+                Constant: int, 21
+          Constant: int, 1
+      FuncCall: 
+        ID: mainQSort3
+        ExprList: 
+          ID: ptr
+          ID: block
+          ID: quadrant
+          ID: nblock
+          ID: lo
+          ID: hi
+          Constant: int, 2
+          ID: budget

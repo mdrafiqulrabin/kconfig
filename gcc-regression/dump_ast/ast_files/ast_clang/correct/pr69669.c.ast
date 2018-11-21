@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fbf7b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbf7b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbf7b826740 '__int128'
+|-TypedefDecl 0x7fbf7b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbf7b826760 'unsigned __int128'
+|-TypedefDecl 0x7fbf7b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbf7b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbf7b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbf7b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbf7b826dc0 'char *'
+|   `-BuiltinType 0x7fbf7b826560 'char'
+|-TypedefDecl 0x7fbf7b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbf7b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbf7b826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbf7b826e58 '__va_list_tag'
+|-EnumDecl 0x7fbf7b827130 <c_files/pr69669.c:5:1, col:42> col:32 E
+| |-ModeAttr 0x7fbf7c026a00 <col:21, col:28> QI
+| `-EnumConstantDecl 0x7fbf7c026a70 <col:36, col:40> col:36 F 'int'
+|   `-IntegerLiteral 0x7fbf7c026a50 <col:40> 'int' 1
+`-FunctionDecl 0x7fbf7c026d00 <line:7:1, line:11:1> line:8:1 foo 'void (enum E *, int)'
+  |-ParmVarDecl 0x7fbf7c026b70 <col:6, col:14> col:14 used x 'enum E *'
+  |-ParmVarDecl 0x7fbf7c026be8 <col:17, col:21> col:21 used y 'int'
+  `-CompoundStmt 0x7fbf7c026ef8 <line:9:1, line:11:1>
+    `-BinaryOperator 0x7fbf7c026ed0 <line:10:3, col:17> 'enum E':'enum E' '='
+      |-UnaryOperator 0x7fbf7c026e28 <col:3, col:4> 'enum E':'enum E' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fbf7c026e10 <col:4> 'enum E *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fbf7c026de8 <col:4> 'enum E *' lvalue ParmVar 0x7fbf7c026b70 'x' 'enum E *'
+      `-CStyleCastExpr 0x7fbf7c026ea8 <col:8, col:17> 'enum E':'enum E' <IntegralCast>
+        `-ImplicitCastExpr 0x7fbf7c026e90 <col:17> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fbf7c026e48 <col:17> 'int' lvalue ParmVar 0x7fbf7c026be8 'y' 'int'

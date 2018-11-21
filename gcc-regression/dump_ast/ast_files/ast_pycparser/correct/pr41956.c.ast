@@ -1,0 +1,68 @@
+FileAST: 
+  FuncDef: 
+    Decl: K, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: gpwgts, [], [], []
+            PtrDecl: []
+              TypeDecl: gpwgts, []
+                IdentifierType: ['int']
+          Decl: badminpwgt, [], [], []
+            PtrDecl: []
+              TypeDecl: badminpwgt, []
+                IdentifierType: ['int']
+          Decl: badmaxpwgt, [], [], []
+            PtrDecl: []
+              TypeDecl: badmaxpwgt, []
+                IdentifierType: ['int']
+        TypeDecl: K, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        Assignment: +=
+          ID: i
+          Constant: int, 2
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: badminpwgt
+              ID: i
+            Assignment: =
+              ArrayRef: 
+                ID: badminpwgt
+                BinaryOp: +
+                  ID: i
+                  Constant: int, 1
+              BinaryOp: +
+                ArrayRef: 
+                  ID: gpwgts
+                  ID: i
+                ArrayRef: 
+                  ID: gpwgts
+                  ID: i
+          Assignment: =
+            ArrayRef: 
+              ID: badmaxpwgt
+              ID: i
+            Assignment: =
+              ArrayRef: 
+                ID: badmaxpwgt
+                BinaryOp: +
+                  ID: i
+                  Constant: int, 1
+              BinaryOp: +
+                ArrayRef: 
+                  ID: gpwgts
+                  ID: i
+                ArrayRef: 
+                  ID: gpwgts
+                  ID: i

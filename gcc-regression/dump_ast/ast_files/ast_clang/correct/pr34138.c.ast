@@ -1,0 +1,62 @@
+TranslationUnitDecl 0x7fbbd28264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbbd2826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbbd2826740 '__int128'
+|-TypedefDecl 0x7fbbd2826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbbd2826760 'unsigned __int128'
+|-TypedefDecl 0x7fbbd2826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbbd2826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbbd2826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbbd2826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbbd2826dc0 'char *'
+|   `-BuiltinType 0x7fbbd2826560 'char'
+|-TypedefDecl 0x7fbbd28270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbbd2827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbbd2826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbbd2826e58 '__va_list_tag'
+|-FunctionDecl 0x7fbbd3025a00 <c_files/pr34138.c:1:1, col:30> col:13 used free 'void (void *)' extern
+| `-ParmVarDecl 0x7fbbd2827138 <col:19, col:25> col:25 __ptr 'void *'
+|-RecordDecl 0x7fbbd3025ae0 <line:2:1, line:6:1> line:2:8 struct shparam definition
+| |-FieldDecl 0x7fbbd3025bd0 <line:4:3, col:10> col:10 referenced p 'char **'
+| `-FieldDecl 0x7fbbd3025c30 <line:5:3, col:7> col:7 foo 'int'
+|-VarDecl 0x7fbbd3025cd0 <line:7:1, col:23> col:23 used shellparam 'struct shparam':'struct shparam' static
+|-FunctionDecl 0x7fbbd3025f40 <line:8:1, line:12:1> line:8:13 used freeparam 'void (volatile struct shparam *, char **)' inline
+| |-ParmVarDecl 0x7fbbd3025db0 <col:24, col:49> col:49 used param 'volatile struct shparam *'
+| |-ParmVarDecl 0x7fbbd3025e28 <col:56, col:63> col:63 used ap 'char **'
+| `-CompoundStmt 0x7fbbd3026320 <line:9:1, line:12:1>
+|   |-CallExpr 0x7fbbd3026160 <line:10:3, col:23> 'void'
+|   | |-ImplicitCastExpr 0x7fbbd3026148 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fbbd3025fe8 <col:3> 'void (void *)' Function 0x7fbbd3025a00 'free' 'void (void *)'
+|   | `-CStyleCastExpr 0x7fbbd30260f0 <col:9, col:22> 'void *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fbbd30260d8 <col:18, col:22> 'char *' <LValueToRValue>
+|   |     `-ParenExpr 0x7fbbd30260b8 <col:18, col:22> 'char *' lvalue
+|   |       `-UnaryOperator 0x7fbbd3026050 <col:19, col:20> 'char *' lvalue prefix '*'
+|   |         `-ImplicitCastExpr 0x7fbbd3026038 <col:20> 'char **' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fbbd3026010 <col:20> 'char **' lvalue ParmVar 0x7fbbd3025e28 'ap' 'char **'
+|   `-CallExpr 0x7fbbd30262f0 <line:11:3, col:28> 'void'
+|     |-ImplicitCastExpr 0x7fbbd30262d8 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fbbd3026190 <col:3> 'void (void *)' Function 0x7fbbd3025a00 'free' 'void (void *)'
+|     `-CStyleCastExpr 0x7fbbd30262b0 <col:9, col:27> 'void *' <BitCast>
+|       `-ImplicitCastExpr 0x7fbbd3026298 <col:18, col:27> 'char **' <LValueToRValue>
+|         `-ParenExpr 0x7fbbd3026278 <col:18, col:27> 'char **volatile' lvalue
+|           `-MemberExpr 0x7fbbd30261f8 <col:19, col:26> 'char **volatile' lvalue ->p 0x7fbbd3025bd0
+|             `-ImplicitCastExpr 0x7fbbd30261e0 <col:19> 'volatile struct shparam *' <LValueToRValue>
+|               `-DeclRefExpr 0x7fbbd30261b8 <col:19> 'volatile struct shparam *' lvalue ParmVar 0x7fbbd3025db0 'param' 'volatile struct shparam *'
+|-FunctionDecl 0x7fbbd3026420 <line:13:1, line:16:1> line:13:6 used dotcmd 'void (char **)'
+| |-ParmVarDecl 0x7fbbd3026360 <col:14, col:21> col:21 used p 'char **'
+| `-CompoundStmt 0x7fbbd3026688 <line:14:1, line:16:1>
+|   `-CallExpr 0x7fbbd3026620 <line:15:3, col:28> 'void'
+|     |-ImplicitCastExpr 0x7fbbd3026608 <col:3> 'void (*)(volatile struct shparam *, char **)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fbbd30264c0 <col:3> 'void (volatile struct shparam *, char **)' Function 0x7fbbd3025f40 'freeparam' 'void (volatile struct shparam *, char **)'
+|     |-ImplicitCastExpr 0x7fbbd3026658 <col:14, col:15> 'volatile struct shparam *' <BitCast>
+|     | `-UnaryOperator 0x7fbbd3026568 <col:14, col:15> 'struct shparam *' prefix '&'
+|     |   `-DeclRefExpr 0x7fbbd30264e8 <col:15> 'struct shparam':'struct shparam' lvalue Var 0x7fbbd3025cd0 'shellparam' 'struct shparam':'struct shparam'
+|     `-ImplicitCastExpr 0x7fbbd3026670 <col:27> 'char **' <LValueToRValue>
+|       `-DeclRefExpr 0x7fbbd3026588 <col:27> 'char **' lvalue ParmVar 0x7fbbd3026360 'p' 'char **'
+`-FunctionDecl 0x7fbbd3026770 <line:17:1, line:21:1> line:17:6 evaltree 'void (void)'
+  `-CompoundStmt 0x7fbbd3027a68 <line:18:1, line:21:1>
+    |-DeclStmt 0x7fbbd30269a0 <line:19:3, col:27>
+    | `-VarDecl 0x7fbbd3026940 <col:3, col:26> col:10 used evalfn 'void (*)(char **)'
+    `-BinaryOperator 0x7fbbd3027a40 <line:20:3, col:12> 'void (*)(char **)' '='
+      |-DeclRefExpr 0x7fbbd30269b8 <col:3> 'void (*)(char **)' lvalue Var 0x7fbbd3026940 'evalfn' 'void (*)(char **)'
+      `-ImplicitCastExpr 0x7fbbd3027a28 <col:12> 'void (*)(char **)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fbbd3027a00 <col:12> 'void (char **)' Function 0x7fbbd3026420 'dotcmd' 'void (char **)'

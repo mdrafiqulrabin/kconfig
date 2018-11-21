@@ -1,0 +1,146 @@
+FileAST: 
+  Typedef: jmp_buf, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: jmp_buf, []
+        Struct: __jmp_buf_tag
+          Decl: buf, [], [], []
+            ArrayDecl: []
+              TypeDecl: buf, []
+                IdentifierType: ['char']
+              Constant: int, 1024
+      Constant: int, 1
+  Decl: setjmp, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['jmp_buf']
+      TypeDecl: setjmp, []
+        IdentifierType: ['int']
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'int']
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  Decl: baz, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: baz, []
+          IdentifierType: ['jmp_buf']
+  Decl: None, [], [], []
+    Struct: C
+      Decl: c1, [], [], []
+        TypeDecl: c1, []
+          IdentifierType: ['int']
+      Decl: c2, [], [], []
+        TypeDecl: c2, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: c3, [], [], []
+        TypeDecl: c3, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: c4, [], [], []
+        TypeDecl: c4, []
+          IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: C
+          Decl: y, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: y, ['const']
+                IdentifierType: ['int']
+          Decl: z, [], [], []
+            PtrDecl: []
+              TypeDecl: z, []
+                IdentifierType: ['unsigned', 'int']
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: g, [], [], []
+            TypeDecl: g, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 0
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['unsigned', 'long']
+      FuncCall: 
+        ID: setjmp
+        ExprList: 
+          UnaryOp: *
+            FuncCall: 
+              ID: baz
+      Assignment: =
+        ID: f
+        BinaryOp: +
+          Constant: int, 1
+          ID: d
+      If: 
+        BinaryOp: &&
+          BinaryOp: &&
+            BinaryOp: ||
+              StructRef: ->
+                ID: x
+                ID: c1
+              StructRef: ->
+                ID: x
+                ID: c2
+            ID: g
+          BinaryOp: ||
+            UnaryOp: !
+              ID: e
+            BinaryOp: >=
+              ID: d
+              Constant: int, 8
+        Assignment: =
+          ID: d
+          Constant: int, 16
+        Assignment: =
+          ID: d
+          Constant: int, 8
+      If: 
+        BinaryOp: &&
+          BinaryOp: &&
+            BinaryOp: ||
+              BinaryOp: &&
+                UnaryOp: !
+                  StructRef: ->
+                    ID: x
+                    ID: c3
+                UnaryOp: !
+                  StructRef: ->
+                    ID: x
+                    ID: c4
+              BinaryOp: ==
+                UnaryOp: *
+                  ID: y
+                Constant: int, 0
+            UnaryOp: !
+              ID: e
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              ID: z
+        Assignment: =
+          UnaryOp: *
+            ID: z
+          BinaryOp: +
+            Constant: int, 1
+            ID: f

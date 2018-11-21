@@ -1,0 +1,82 @@
+c_files/pr62090.c:7:38: warning: incompatible redeclaration of library function 'sprintf' [-Wincompatible-library-redeclaration]
+__attribute__ ((__gnu_inline__)) int sprintf (int *p1, char *p2, ...)
+                                     ^
+c_files/pr62090.c:7:38: note: 'sprintf' is a builtin with type 'int (char *, const char *, ...)'
+c_files/pr62090.c:10:48: error: use of unknown builtin '__builtin_va_arg_pack' [-Wimplicit-function-declaration]
+  return __builtin___sprintf_chk (0, 0, a, p2, __builtin_va_arg_pack ());
+                                               ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7ff6028264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff602826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff602826740 '__int128'
+|-TypedefDecl 0x7ff602826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff602826760 'unsigned __int128'
+|-TypedefDecl 0x7ff602826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff602826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff602826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff602826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff602826dc0 'char *'
+|   `-BuiltinType 0x7ff602826560 'char'
+|-TypedefDecl 0x7ff6028270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff602827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff602826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff602826e58 '__va_list_tag'
+|-VarDecl 0x7ff602827138 <c_files/pr62090.c:4:1, col:6> col:6 used a 'long'
+|-VarDecl 0x7ff603025a40 <line:5:1, col:6> col:6 used b 'int *'
+|-FunctionDecl 0x7ff603025c50 <line:7:38> col:38 implicit used sprintf 'int (char *, const char *, ...)' extern
+| |-ParmVarDecl 0x7ff603025ce8 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7ff603025d48 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7ff603025db8 <col:38> Implicit printf 2 3
+|-FunctionDecl 0x7ff603025e10 prev 0x7ff603025c50 <line:6:1, line:11:1> line:7:38 used sprintf 'int (int *, char *, ...)' extern inline
+| |-ParmVarDecl 0x7ff603025ab8 <col:47, col:52> col:52 p1 'int *'
+| |-ParmVarDecl 0x7ff603025b30 <col:56, col:62> col:62 used p2 'char *'
+| |-CompoundStmt 0x7ff6038012a0 <line:8:1, line:11:1>
+| | |-BinaryOperator 0x7ff603026628 <line:9:3, col:34> 'long' '='
+| | | |-DeclRefExpr 0x7ff6030262c0 <col:3> 'long' lvalue Var 0x7ff602827138 'a' 'long'
+| | | `-ImplicitCastExpr 0x7ff603026610 <col:7, col:34> 'long' <IntegralCast>
+| | |   `-CallExpr 0x7ff6030265c0 <col:7, col:34> 'unsigned long'
+| | |     |-ImplicitCastExpr 0x7ff6030265a8 <col:7> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+| | |     | `-DeclRefExpr 0x7ff603026510 <col:7> '<builtin fn type>' Function 0x7ff603026360 '__builtin_object_size' 'unsigned long (const void *, int)'
+| | |     |-ImplicitCastExpr 0x7ff6030265f8 <col:30> 'const void *' <NullToPointer>
+| | |     | `-IntegerLiteral 0x7ff603026538 <col:30> 'int' 0
+| | |     `-IntegerLiteral 0x7ff603026558 <col:33> 'int' 0
+| | `-ReturnStmt 0x7ff603801288 <line:10:3, col:72>
+| |   `-CallExpr 0x7ff6038011c0 <col:10, col:72> 'int'
+| |     |-ImplicitCastExpr 0x7ff6038011a8 <col:10> 'int (*)(char *, int, unsigned long, const char *, ...)' <BuiltinFnToFnPtr>
+| |     | `-DeclRefExpr 0x7ff603026930 <col:10> '<builtin fn type>' Function 0x7ff6030266a0 '__builtin___sprintf_chk' 'int (char *, int, unsigned long, const char *, ...)'
+| |     |-ImplicitCastExpr 0x7ff603801210 <col:35> 'char *' <NullToPointer>
+| |     | `-IntegerLiteral 0x7ff603026958 <col:35> 'int' 0
+| |     |-IntegerLiteral 0x7ff603026978 <col:38> 'int' 0
+| |     |-ImplicitCastExpr 0x7ff603801240 <col:41> 'unsigned long' <IntegralCast>
+| |     | `-ImplicitCastExpr 0x7ff603801228 <col:41> 'long' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7ff603026998 <col:41> 'long' lvalue Var 0x7ff602827138 'a' 'long'
+| |     |-ImplicitCastExpr 0x7ff603801270 <col:44> 'const char *' <BitCast>
+| |     | `-ImplicitCastExpr 0x7ff603801258 <col:44> 'char *' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7ff6030269c0 <col:44> 'char *' lvalue ParmVar 0x7ff603025b30 'p2' 'char *'
+| |     `-CallExpr 0x7ff603801150 <col:48, col:71> 'int'
+| |       `-ImplicitCastExpr 0x7ff603801138 <col:48> 'int (*)()' <FunctionToPointerDecay>
+| |         `-DeclRefExpr 0x7ff6038010e8 <col:48> 'int ()' Function 0x7ff603801050 '__builtin_va_arg_pack' 'int ()'
+| |-GNUInlineAttr 0x7ff603025eb8 <line:7:17>
+| `-AlwaysInlineAttr 0x7ff603025f00 <line:6:33> always_inline
+|-FunctionDecl 0x7ff603026360 <line:9:7> col:7 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+| |-ParmVarDecl 0x7ff6030263f8 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7ff603026458 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7ff6030264c8 <col:7> Implicit
+|-FunctionDecl 0x7ff6030266a0 <line:10:10> col:10 implicit used __builtin___sprintf_chk 'int (char *, int, unsigned long, const char *, ...)' extern
+| |-ParmVarDecl 0x7ff603026738 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7ff603026798 <<invalid sloc>> <invalid sloc> 'int'
+| |-ParmVarDecl 0x7ff6030267f8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7ff603026858 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7ff6030268d8 <col:10> Implicit printf 4 5
+|-FunctionDecl 0x7ff603801050 <<invalid sloc>> col:48 implicit used __builtin_va_arg_pack 'int ()'
+`-FunctionDecl 0x7ff603801318 <line:13:1, line:17:1> line:14:1 log_bad_request 'void ()'
+  `-CompoundStmt 0x7ff603801570 <line:15:1, line:17:1>
+    `-CompoundAssignOperator 0x7ff603801538 <line:16:3, col:25> 'int *' '+=' ComputeLHSTy='int *' ComputeResultTy='int *'
+      |-DeclRefExpr 0x7ff6038013b0 <col:3> 'int *' lvalue Var 0x7ff603025a40 'b' 'int *'
+      `-CallExpr 0x7ff6038014d0 <col:8, col:25> 'int'
+        |-ImplicitCastExpr 0x7ff6038014b8 <col:8> 'int (*)(int *, char *, ...)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7ff6038013d8 <col:8> 'int (int *, char *, ...)' Function 0x7ff603025e10 'sprintf' 'int (int *, char *, ...)'
+        |-ImplicitCastExpr 0x7ff603801508 <col:17> 'int *' <NullToPointer>
+        | `-IntegerLiteral 0x7ff603801400 <col:17> 'int' 0
+        `-ImplicitCastExpr 0x7ff603801520 <col:20> 'char *' <ArrayToPointerDecay>
+          `-StringLiteral 0x7ff603801458 <col:20> 'char [4]' lvalue "foo"

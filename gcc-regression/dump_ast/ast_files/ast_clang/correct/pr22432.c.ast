@@ -1,0 +1,110 @@
+TranslationUnitDecl 0x7fe6ed8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe6ed826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe6ed826740 '__int128'
+|-TypedefDecl 0x7fe6ed826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe6ed826760 'unsigned __int128'
+|-TypedefDecl 0x7fe6ed826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe6ed826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe6ed826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe6ed826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe6ed826dc0 'char *'
+|   `-BuiltinType 0x7fe6ed826560 'char'
+|-TypedefDecl 0x7fe6ed8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe6ed827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe6ed826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe6ed826e58 '__va_list_tag'
+|-TypedefDecl 0x7fe6ed827178 <c_files/pr22432.c:5:1, col:13> col:13 referenced v2si '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7fe6ed827140 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7fe6ed8265c0 'int'
+|-TypedefDecl 0x7fe6ed878438 <line:6:1, col:15> col:15 referenced v4hi '__attribute__((__vector_size__(4 * sizeof(short)))) short'
+| `-VectorType 0x7fe6ed878400 '__attribute__((__vector_size__(4 * sizeof(short)))) short' 4
+|   `-BuiltinType 0x7fe6ed8265a0 'short'
+|-TypedefDecl 0x7fe6ed8784e8 <line:7:1, col:14> col:14 referenced v8qi '__attribute__((__vector_size__(8 * sizeof(char)))) char'
+| `-VectorType 0x7fe6ed8784b0 '__attribute__((__vector_size__(8 * sizeof(char)))) char' 8
+|   `-BuiltinType 0x7fe6ed826560 'char'
+|-FunctionDecl 0x7fe6ed8786d8 <line:9:1, line:20:1> line:10:1 foo 'int (unsigned int *, unsigned int *)'
+| |-ParmVarDecl 0x7fe6ed878580 <col:6, col:20> col:20 used a 'unsigned int *'
+| |-ParmVarDecl 0x7fe6ed8785f8 <col:23, col:37> col:37 used b 'unsigned int *'
+| `-CompoundStmt 0x7fe6ed87ab60 <line:11:1, line:20:1>
+|   |-DeclStmt 0x7fe6ed878948 <line:12:3, col:20>
+|   | |-VarDecl 0x7fe6ed8787d8 <col:3, col:13> col:13 used i 'long long'
+|   | |-VarDecl 0x7fe6ed878850 <col:3, col:16> col:16 used j 'long long'
+|   | `-VarDecl 0x7fe6ed8788c8 <col:3, col:19> col:19 used k 'long long'
+|   |-BinaryOperator 0x7fe6ed878cc8 <line:14:3, col:54> 'long long' '='
+|   | |-DeclRefExpr 0x7fe6ed878960 <col:3> 'long long' lvalue Var 0x7fe6ed8787d8 'i' 'long long'
+|   | `-CStyleCastExpr 0x7fe6ed878ca0 <col:7, col:54> 'long long' <BitCast>
+|   |   `-CallExpr 0x7fe6ed878c20 <col:19, col:54> '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|   |     |-ImplicitCastExpr 0x7fe6ed878c08 <col:19> '__attribute__((__vector_size__(2 * sizeof(int)))) int (*)(int, int)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fe6ed878b38 <col:19> '<builtin fn type>' Function 0x7fe6ed8789d0 '__builtin_ia32_vec_init_v2si' '__attribute__((__vector_size__(2 * sizeof(int)))) int (int, int)'
+|   |     |-ImplicitCastExpr 0x7fe6ed878c70 <col:49, col:50> 'int' <IntegralCast>
+|   |     | `-ImplicitCastExpr 0x7fe6ed878c58 <col:49, col:50> 'unsigned int' <LValueToRValue>
+|   |     |   `-UnaryOperator 0x7fe6ed878ba0 <col:49, col:50> 'unsigned int' lvalue prefix '*'
+|   |     |     `-ImplicitCastExpr 0x7fe6ed878b88 <col:50> 'unsigned int *' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7fe6ed878b60 <col:50> 'unsigned int *' lvalue ParmVar 0x7fe6ed878580 'a' 'unsigned int *'
+|   |     `-IntegerLiteral 0x7fe6ed878bc0 <col:53> 'int' 0
+|   |-BinaryOperator 0x7fe6ed878e80 <line:15:3, col:54> 'long long' '='
+|   | |-DeclRefExpr 0x7fe6ed878cf0 <col:3> 'long long' lvalue Var 0x7fe6ed878850 'j' 'long long'
+|   | `-CStyleCastExpr 0x7fe6ed878e58 <col:7, col:54> 'long long' <BitCast>
+|   |   `-CallExpr 0x7fe6ed878dd8 <col:19, col:54> '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|   |     |-ImplicitCastExpr 0x7fe6ed878dc0 <col:19> '__attribute__((__vector_size__(2 * sizeof(int)))) int (*)(int, int)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fe6ed878d18 <col:19> '<builtin fn type>' Function 0x7fe6ed8789d0 '__builtin_ia32_vec_init_v2si' '__attribute__((__vector_size__(2 * sizeof(int)))) int (int, int)'
+|   |     |-ImplicitCastExpr 0x7fe6ed878e28 <col:49, col:50> 'int' <IntegralCast>
+|   |     | `-ImplicitCastExpr 0x7fe6ed878e10 <col:49, col:50> 'unsigned int' <LValueToRValue>
+|   |     |   `-UnaryOperator 0x7fe6ed878d80 <col:49, col:50> 'unsigned int' lvalue prefix '*'
+|   |     |     `-ImplicitCastExpr 0x7fe6ed878d68 <col:50> 'unsigned int *' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7fe6ed878d40 <col:50> 'unsigned int *' lvalue ParmVar 0x7fe6ed8785f8 'b' 'unsigned int *'
+|   |     `-IntegerLiteral 0x7fe6ed878da0 <col:53> 'int' 0
+|   |-BinaryOperator 0x7fe6ed879248 <line:16:3, col:65> 'long long' '='
+|   | |-DeclRefExpr 0x7fe6ed878ea8 <col:3> 'long long' lvalue Var 0x7fe6ed8787d8 'i' 'long long'
+|   | `-CStyleCastExpr 0x7fe6ed879220 <col:7, col:65> 'long long' <BitCast>
+|   |   `-CallExpr 0x7fe6ed8791d0 <col:19, col:65> '__attribute__((__vector_size__(8 * sizeof(char)))) char'
+|   |     |-ImplicitCastExpr 0x7fe6ed8791b8 <col:19> '__attribute__((__vector_size__(8 * sizeof(char)))) char (*)(__attribute__((__vector_size__(8 * sizeof(char)))) char, __attribute__((__vector_size__(8 * sizeof(char)))) char)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fe6ed879078 <col:19> '<builtin fn type>' Function 0x7fe6ed878f10 '__builtin_ia32_punpcklbw' '__attribute__((__vector_size__(8 * sizeof(char)))) char (__attribute__((__vector_size__(8 * sizeof(char)))) char, __attribute__((__vector_size__(8 * sizeof(char)))) char)'
+|   |     |-CStyleCastExpr 0x7fe6ed879110 <col:45, col:52> 'v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char' <BitCast>
+|   |     | `-ImplicitCastExpr 0x7fe6ed8790f8 <col:52> 'long long' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fe6ed8790c0 <col:52> 'long long' lvalue Var 0x7fe6ed8787d8 'i' 'long long'
+|   |     `-CStyleCastExpr 0x7fe6ed879168 <col:55, col:62> 'v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char' <BitCast>
+|   |       `-IntegerLiteral 0x7fe6ed879138 <col:62> 'long long' 0
+|   |-BinaryOperator 0x7fe6ed87a428 <line:17:3, col:65> 'long long' '='
+|   | |-DeclRefExpr 0x7fe6ed879270 <col:3> 'long long' lvalue Var 0x7fe6ed878850 'j' 'long long'
+|   | `-CStyleCastExpr 0x7fe6ed87a400 <col:7, col:65> 'long long' <BitCast>
+|   |   `-CallExpr 0x7fe6ed8793a8 <col:19, col:65> '__attribute__((__vector_size__(8 * sizeof(char)))) char'
+|   |     |-ImplicitCastExpr 0x7fe6ed879390 <col:19> '__attribute__((__vector_size__(8 * sizeof(char)))) char (*)(__attribute__((__vector_size__(8 * sizeof(char)))) char, __attribute__((__vector_size__(8 * sizeof(char)))) char)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fe6ed879298 <col:19> '<builtin fn type>' Function 0x7fe6ed878f10 '__builtin_ia32_punpcklbw' '__attribute__((__vector_size__(8 * sizeof(char)))) char (__attribute__((__vector_size__(8 * sizeof(char)))) char, __attribute__((__vector_size__(8 * sizeof(char)))) char)'
+|   |     |-CStyleCastExpr 0x7fe6ed879310 <col:45, col:52> 'v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char' <BitCast>
+|   |     | `-ImplicitCastExpr 0x7fe6ed8792f8 <col:52> 'long long' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fe6ed8792c0 <col:52> 'long long' lvalue Var 0x7fe6ed878850 'j' 'long long'
+|   |     `-CStyleCastExpr 0x7fe6ed879368 <col:55, col:62> 'v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char' <BitCast>
+|   |       `-IntegerLiteral 0x7fe6ed879338 <col:62> 'long long' 0
+|   |-BinaryOperator 0x7fe6ed87a818 <line:18:3, col:59> 'long long' '='
+|   | |-DeclRefExpr 0x7fe6ed87a450 <col:3> 'long long' lvalue Var 0x7fe6ed8788c8 'k' 'long long'
+|   | `-CStyleCastExpr 0x7fe6ed87a7f0 <col:7, col:59> 'long long' <BitCast>
+|   |   `-CallExpr 0x7fe6ed87a7a0 <col:19, col:59> '__attribute__((__vector_size__(4 * sizeof(short)))) short'
+|   |     |-ImplicitCastExpr 0x7fe6ed87a788 <col:19> '__attribute__((__vector_size__(4 * sizeof(short)))) short (*)(__attribute__((__vector_size__(4 * sizeof(short)))) short, __attribute__((__vector_size__(4 * sizeof(short)))) short)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fe6ed87a628 <col:19> '<builtin fn type>' Function 0x7fe6ed87a4c0 '__builtin_ia32_paddw' '__attribute__((__vector_size__(4 * sizeof(short)))) short (__attribute__((__vector_size__(4 * sizeof(short)))) short, __attribute__((__vector_size__(4 * sizeof(short)))) short)'
+|   |     |-CStyleCastExpr 0x7fe6ed87a6c0 <col:41, col:48> 'v4hi':'__attribute__((__vector_size__(4 * sizeof(short)))) short' <BitCast>
+|   |     | `-ImplicitCastExpr 0x7fe6ed87a6a8 <col:48> 'long long' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fe6ed87a670 <col:48> 'long long' lvalue Var 0x7fe6ed8787d8 'i' 'long long'
+|   |     `-CStyleCastExpr 0x7fe6ed87a738 <col:51, col:58> 'v4hi':'__attribute__((__vector_size__(4 * sizeof(short)))) short' <BitCast>
+|   |       `-ImplicitCastExpr 0x7fe6ed87a720 <col:58> 'long long' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fe6ed87a6e8 <col:58> 'long long' lvalue Var 0x7fe6ed878850 'j' 'long long'
+|   `-ReturnStmt 0x7fe6ed87ab48 <line:19:3, col:50>
+|     `-CallExpr 0x7fe6ed87ab10 <col:10, col:50> 'int'
+|       |-ImplicitCastExpr 0x7fe6ed87aaf8 <col:10> 'int (*)(__attribute__((__vector_size__(2 * sizeof(int)))) int, int)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fe6ed87a9e8 <col:10> '<builtin fn type>' Function 0x7fe6ed87a880 '__builtin_ia32_vec_ext_v2si' 'int (__attribute__((__vector_size__(2 * sizeof(int)))) int, int)'
+|       |-CStyleCastExpr 0x7fe6ed87aa80 <col:39, col:46> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <BitCast>
+|       | `-ImplicitCastExpr 0x7fe6ed87aa68 <col:46> 'long long' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fe6ed87aa30 <col:46> 'long long' lvalue Var 0x7fe6ed8788c8 'k' 'long long'
+|       `-IntegerLiteral 0x7fe6ed87aaa8 <col:49> 'int' 0
+|-FunctionDecl 0x7fe6ed8789d0 <line:14:19> col:19 implicit used __builtin_ia32_vec_init_v2si '__attribute__((__vector_size__(2 * sizeof(int)))) int (int, int)' extern
+| |-ParmVarDecl 0x7fe6ed878a68 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7fe6ed878ac8 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fe6ed878f10 <line:16:19> col:19 implicit used __builtin_ia32_punpcklbw '__attribute__((__vector_size__(8 * sizeof(char)))) char (__attribute__((__vector_size__(8 * sizeof(char)))) char, __attribute__((__vector_size__(8 * sizeof(char)))) char)' extern
+| |-ParmVarDecl 0x7fe6ed878fa8 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(8 * sizeof(char)))) char'
+| `-ParmVarDecl 0x7fe6ed879008 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(8 * sizeof(char)))) char'
+|-FunctionDecl 0x7fe6ed87a4c0 <line:18:19> col:19 implicit used __builtin_ia32_paddw '__attribute__((__vector_size__(4 * sizeof(short)))) short (__attribute__((__vector_size__(4 * sizeof(short)))) short, __attribute__((__vector_size__(4 * sizeof(short)))) short)' extern
+| |-ParmVarDecl 0x7fe6ed87a558 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(4 * sizeof(short)))) short'
+| `-ParmVarDecl 0x7fe6ed87a5b8 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(4 * sizeof(short)))) short'
+`-FunctionDecl 0x7fe6ed87a880 <line:19:10> col:10 implicit used __builtin_ia32_vec_ext_v2si 'int (__attribute__((__vector_size__(2 * sizeof(int)))) int, int)' extern
+  |-ParmVarDecl 0x7fe6ed87a918 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+  `-ParmVarDecl 0x7fe6ed87a978 <<invalid sloc>> <invalid sloc> 'int'

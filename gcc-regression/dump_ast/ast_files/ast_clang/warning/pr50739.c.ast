@@ -1,0 +1,29 @@
+c_files/pr50739.c:6:31: warning: unknown attribute '__progmem__' ignored [-Wunknown-attributes]
+const char a[] __attribute__((__progmem__))= "a";
+                              ^
+c_files/pr50739.c:7:31: warning: unknown attribute '__progmem__' ignored [-Wunknown-attributes]
+const char b[] __attribute__((__progmem__))= "b";
+                              ^
+2 warnings generated.
+TranslationUnitDecl 0x7fd2e80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd2e8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd2e8026740 '__int128'
+|-TypedefDecl 0x7fd2e8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd2e8026760 'unsigned __int128'
+|-TypedefDecl 0x7fd2e8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd2e8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd2e8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd2e8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd2e8026dc0 'char *'
+|   `-BuiltinType 0x7fd2e8026560 'char'
+|-TypedefDecl 0x7fd2e80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd2e8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd2e8026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd2e8026e58 '__va_list_tag'
+|-VarDecl 0x7fd2e8027138 <c_files/pr50739.c:4:1, col:12> col:7 ca 'char *' cinit
+| `-ImplicitCastExpr 0x7fd2e8825a68 <col:12> 'char *' <ArrayToPointerDecay>
+|   `-StringLiteral 0x7fd2e8825a38 <col:12> 'char [4]' lvalue "123"
+|-VarDecl 0x7fd2e8825af8 <line:6:1, col:46> col:12 a 'const char [2]' cinit
+| `-StringLiteral 0x7fd2e8825b98 <col:46> 'const char [2]' lvalue "a"
+`-VarDecl 0x7fd2e8825c28 <line:7:1, col:46> col:12 b 'const char [2]' cinit
+  `-StringLiteral 0x7fd2e8825c88 <col:46> 'const char [2]' lvalue "b"

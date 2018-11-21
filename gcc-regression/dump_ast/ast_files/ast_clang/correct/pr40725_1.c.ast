@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7fe7cc0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe7cc026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe7cc026740 '__int128'
+|-TypedefDecl 0x7fe7cc026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe7cc026760 'unsigned __int128'
+|-TypedefDecl 0x7fe7cc026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe7cc026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe7cc026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe7cc026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe7cc026dc0 'char *'
+|   `-BuiltinType 0x7fe7cc026560 'char'
+|-TypedefDecl 0x7fe7cc0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe7cc027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe7cc026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe7cc026e58 '__va_list_tag'
+|-RecordDecl 0x7fe7cc027120 <c_files/pr40725_1.c:1:9, line:4:1> line:1:16 struct c_type_1 definition
+| `-FieldDecl 0x7fe7cc077400 <line:3:3, col:7> col:7 referenced j 'int'
+|-TypedefDecl 0x7fe7cc0774a0 <line:1:1, line:4:3> col:3 referenced c_type_1_t 'struct c_type_1':'struct c_type_1'
+| `-ElaboratedType 0x7fe7cc077450 'struct c_type_1' sugar
+|   `-RecordType 0x7fe7cc0271b0 'struct c_type_1'
+|     `-Record 0x7fe7cc027120 'c_type_1'
+|-FunctionDecl 0x7fe7cc077720 <line:5:1, col:45> col:6 used sub0 'void (c_type_1_t *, int)'
+| |-ParmVarDecl 0x7fe7cc077598 <col:11, col:23> col:23 c_type 'c_type_1_t *'
+| `-ParmVarDecl 0x7fe7cc077610 <col:31, col:35> col:35 expected_j 'int'
+`-FunctionDecl 0x7fe7cc077998 <line:6:1, line:12:1> line:6:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fe7cc077820 <col:10, col:14> col:14 argc 'int'
+  |-ParmVarDecl 0x7fe7cc0778c0 <col:20, col:27> col:27 argv 'char **'
+  `-CompoundStmt 0x7fe7cc077d88 <line:7:1, line:12:1>
+    |-DeclStmt 0x7fe7cc077ab0 <line:8:3, col:20>
+    | `-VarDecl 0x7fe7cc077a50 <col:3, col:14> col:14 used c_type 'c_type_1_t':'struct c_type_1'
+    |-BinaryOperator 0x7fe7cc077b48 <line:9:3, col:14> 'int' '='
+    | |-MemberExpr 0x7fe7cc077af0 <col:3, col:10> 'int' lvalue .j 0x7fe7cc077400
+    | | `-DeclRefExpr 0x7fe7cc077ac8 <col:3> 'c_type_1_t':'struct c_type_1' lvalue Var 0x7fe7cc077a50 'c_type' 'c_type_1_t':'struct c_type_1'
+    | `-IntegerLiteral 0x7fe7cc077b28 <col:14> 'int' 11
+    |-CallExpr 0x7fe7cc077d00 <line:10:3, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fe7cc077ce8 <col:3> 'void (*)(c_type_1_t *, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe7cc077bb8 <col:3> 'void (c_type_1_t *, int)' Function 0x7fe7cc077720 'sub0' 'void (c_type_1_t *, int)'
+    | |-UnaryOperator 0x7fe7cc077c08 <col:8, col:9> 'c_type_1_t *' prefix '&'
+    | | `-DeclRefExpr 0x7fe7cc077be0 <col:9> 'c_type_1_t':'struct c_type_1' lvalue Var 0x7fe7cc077a50 'c_type' 'c_type_1_t':'struct c_type_1'
+    | `-ImplicitCastExpr 0x7fe7cc077d38 <col:17, col:24> 'int' <LValueToRValue>
+    |   `-MemberExpr 0x7fe7cc077c50 <col:17, col:24> 'int' lvalue .j 0x7fe7cc077400
+    |     `-DeclRefExpr 0x7fe7cc077c28 <col:17> 'c_type_1_t':'struct c_type_1' lvalue Var 0x7fe7cc077a50 'c_type' 'c_type_1_t':'struct c_type_1'
+    `-ReturnStmt 0x7fe7cc077d70 <line:11:3, col:10>
+      `-IntegerLiteral 0x7fe7cc077d50 <col:10> 'int' 0

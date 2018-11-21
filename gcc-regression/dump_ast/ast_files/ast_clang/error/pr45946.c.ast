@@ -1,0 +1,56 @@
+c_files/pr45946.c:7:6: error: GNU decimal type extension not supported
+bar (_Decimal128, _Decimal128, _Decimal128, _Decimal128, _Decimal128,
+     ^
+c_files/pr45946.c:7:19: error: GNU decimal type extension not supported
+bar (_Decimal128, _Decimal128, _Decimal128, _Decimal128, _Decimal128,
+                  ^
+c_files/pr45946.c:7:32: error: GNU decimal type extension not supported
+bar (_Decimal128, _Decimal128, _Decimal128, _Decimal128, _Decimal128,
+                               ^
+c_files/pr45946.c:7:45: error: GNU decimal type extension not supported
+bar (_Decimal128, _Decimal128, _Decimal128, _Decimal128, _Decimal128,
+                                            ^
+c_files/pr45946.c:7:58: error: GNU decimal type extension not supported
+bar (_Decimal128, _Decimal128, _Decimal128, _Decimal128, _Decimal128,
+                                                         ^
+c_files/pr45946.c:8:6: error: GNU decimal type extension not supported
+     _Decimal128, _Decimal128, _Decimal128, _Decimal128);
+     ^
+c_files/pr45946.c:8:19: error: GNU decimal type extension not supported
+     _Decimal128, _Decimal128, _Decimal128, _Decimal128);
+                  ^
+c_files/pr45946.c:8:32: error: GNU decimal type extension not supported
+     _Decimal128, _Decimal128, _Decimal128, _Decimal128);
+                               ^
+c_files/pr45946.c:8:45: error: GNU decimal type extension not supported
+     _Decimal128, _Decimal128, _Decimal128, _Decimal128);
+                                            ^
+9 errors generated.
+TranslationUnitDecl 0x1050264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x105026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x105026740 '__int128'
+|-TypedefDecl 0x105026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x105026760 'unsigned __int128'
+|-TypedefDecl 0x105026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x105026b70 'struct __NSConstantString_tag'
+|   `-Record 0x105026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x105026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x105026dc0 'char *'
+|   `-BuiltinType 0x105026560 'char'
+|-TypedefDecl 0x1050270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x105027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x105026ee0 'struct __va_list_tag'
+|     `-Record 0x105026e58 '__va_list_tag'
+|-FunctionDecl 0x105826e90 <c_files/pr45946.c:5:1, line:8:56> line:7:1 invalid bar 'void (int, int, int, int, int, int, int, int, int)'
+| |-ParmVarDecl 0x105027138 <col:6, <invalid sloc>> col:17 invalid 'int'
+| |-ParmVarDecl 0x105826a00 <col:19, <invalid sloc>> col:30 invalid 'int'
+| |-ParmVarDecl 0x105826a78 <col:32, <invalid sloc>> col:43 invalid 'int'
+| |-ParmVarDecl 0x105826af0 <col:45, <invalid sloc>> col:56 invalid 'int'
+| |-ParmVarDecl 0x105826b68 <col:58, <invalid sloc>> col:69 invalid 'int'
+| |-ParmVarDecl 0x105826be0 <line:8:6, <invalid sloc>> col:17 invalid 'int'
+| |-ParmVarDecl 0x105826c58 <col:19, <invalid sloc>> col:30 invalid 'int'
+| |-ParmVarDecl 0x105826cd0 <col:32, <invalid sloc>> col:43 invalid 'int'
+| |-ParmVarDecl 0x105826d48 <col:45, <invalid sloc>> col:56 invalid 'int'
+| `-NoInlineAttr 0x105826f70 <line:6:16>
+`-FunctionDecl 0x105827080 <line:10:1, line:14:1> line:11:1 foo 'void (void)'
+  `-CompoundStmt 0x105827278 <line:12:1, line:14:1>

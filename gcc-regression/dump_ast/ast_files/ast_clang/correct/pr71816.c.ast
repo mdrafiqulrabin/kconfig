@@ -1,0 +1,89 @@
+TranslationUnitDecl 0x7fe3a6825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe3a6826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe3a6825d40 '__int128'
+|-TypedefDecl 0x7fe3a6826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe3a6825d60 'unsigned __int128'
+|-TypedefDecl 0x7fe3a6826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe3a6826170 'struct __NSConstantString_tag'
+|   `-Record 0x7fe3a68260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe3a6826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe3a68263c0 'char *'
+|   `-BuiltinType 0x7fe3a6825b60 'char'
+|-TypedefDecl 0x7fe3a68266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe3a6826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe3a68264e0 'struct __va_list_tag'
+|     `-Record 0x7fe3a6826458 '__va_list_tag'
+|-VarDecl 0x7fe3a6826738 <c_files/pr71816.c:3:1, col:7> col:7 used ext2fs_resize_mem_p 'void *'
+|-RecordDecl 0x7fe3a7022c00 <line:4:1, line:6:1> line:4:8 struct ext2_icount_el definition
+| `-FieldDecl 0x7fe3a7022cc8 <line:5:5, col:9> col:9 referenced ino 'int'
+|-VarDecl 0x7fe3a7022dc0 <line:4:1, line:6:5> col:5 used insert_icount_el_icount_1 'struct ext2_icount_el *'
+|-VarDecl 0x7fe3a7022e50 <line:7:1, col:5> col:5 used insert_icount_el_icount 'int'
+|-VarDecl 0x7fe3a7022ec8 <col:1, col:30> col:30 used insert_icount_el_new_size 'int'
+|-FunctionDecl 0x7fe3a7023008 <line:8:7> col:7 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fe3a70230a0 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fe3a7023100 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fe3a7023160 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fe3a70231d8 prev 0x7fe3a7023008 <col:1, col:14> col:7 used memcpy 'void *(void *, const void *, unsigned long)'
+| |-ParmVarDecl 0x7fe3a7023270 <<invalid sloc>> <invalid sloc> implicit 'void *'
+| |-ParmVarDecl 0x7fe3a70232d0 <<invalid sloc>> <invalid sloc> implicit 'const void *'
+| `-ParmVarDecl 0x7fe3a7023330 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
+|-FunctionDecl 0x7fe3a7023410 <line:9:7> col:7 implicit used realloc 'void *(void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fe3a70234a8 <<invalid sloc>> <invalid sloc> 'void *'
+| `-ParmVarDecl 0x7fe3a7023508 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fe3a7023578 prev 0x7fe3a7023410 <col:1, col:15> col:7 used realloc 'void *(void *, unsigned long)'
+| |-ParmVarDecl 0x7fe3a7023610 <<invalid sloc>> <invalid sloc> implicit 'void *'
+| `-ParmVarDecl 0x7fe3a7023670 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
+|-FunctionDecl 0x7fe3a70237c8 <line:10:1, line:15:1> line:10:5 used ext2fs_resize_mem 'int (void *)'
+| |-ParmVarDecl 0x7fe3a70236f8 <col:23, col:29> col:29 used p1 'void *'
+| `-CompoundStmt 0x7fe3a7023cf8 <col:33, line:15:1>
+|   |-DeclStmt 0x7fe3a7023900 <line:11:5, col:17>
+|   | `-VarDecl 0x7fe3a7023880 <col:5, col:16> col:9 used size 'int' cinit
+|   |   `-IntegerLiteral 0x7fe3a70238e0 <col:16> 'int' 0
+|   |-CallExpr 0x7fe3a7023aa0 <line:12:5, col:65> 'void *'
+|   | |-ImplicitCastExpr 0x7fe3a7023a88 <col:5> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fe3a7023918 <col:5> 'void *(void *, const void *, unsigned long)' Function 0x7fe3a70231d8 'memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7fe3a7023ae0 <col:12, col:13> 'void *' <BitCast>
+|   | | `-UnaryOperator 0x7fe3a7023998 <col:12, col:13> 'void **' prefix '&'
+|   | |   `-DeclRefExpr 0x7fe3a7023940 <col:13> 'void *' lvalue Var 0x7fe3a6826738 'ext2fs_resize_mem_p' 'void *'
+|   | |-ImplicitCastExpr 0x7fe3a7023b10 <col:34> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7fe3a7023af8 <col:34> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fe3a70239b8 <col:34> 'void *' lvalue ParmVar 0x7fe3a70236f8 'p1' 'void *'
+|   | `-UnaryExprOrTypeTraitExpr 0x7fe3a7023a28 <col:38, col:64> 'unsigned long' sizeof
+|   |   `-ParenExpr 0x7fe3a7023a08 <col:44, col:64> 'void *' lvalue
+|   |     `-DeclRefExpr 0x7fe3a70239e0 <col:45> 'void *' lvalue Var 0x7fe3a6826738 'ext2fs_resize_mem_p' 'void *'
+|   |-CallExpr 0x7fe3a7023c40 <line:13:5, col:39> 'void *'
+|   | |-ImplicitCastExpr 0x7fe3a7023c28 <col:5> 'void *(*)(void *, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fe3a7023b28 <col:5> 'void *(void *, unsigned long)' Function 0x7fe3a7023578 'realloc' 'void *(void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7fe3a7023c78 <col:13, col:14> 'void *' <BitCast>
+|   | | `-UnaryOperator 0x7fe3a7023b78 <col:13, col:14> 'void **' prefix '&'
+|   | |   `-DeclRefExpr 0x7fe3a7023b50 <col:14> 'void *' lvalue Var 0x7fe3a6826738 'ext2fs_resize_mem_p' 'void *'
+|   | `-ImplicitCastExpr 0x7fe3a7023ca8 <col:35> 'unsigned long' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7fe3a7023c90 <col:35> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fe3a7023b98 <col:35> 'int' lvalue Var 0x7fe3a7023880 'size' 'int'
+|   `-ReturnStmt 0x7fe3a7023ce0 <line:14:5, col:12>
+|     `-IntegerLiteral 0x7fe3a7023cc0 <col:12> 'int' 0
+`-FunctionDecl 0x7fe3a7023dc0 <line:16:1, line:21:1> line:16:24 insert_icount_el 'struct ext2_icount_el *()'
+  `-CompoundStmt 0x7fe3a70241a8 <col:43, line:21:1>
+    |-IfStmt 0x7fe3a7023fc0 <line:17:5, line:18:64>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fe3a7023e80 <line:17:9> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe3a7023e58 <col:9> 'int' lvalue Var 0x7fe3a7022e50 'insert_icount_el_icount' 'int'
+    | |-BinaryOperator 0x7fe3a7023f98 <line:18:7, col:64> 'int' '='
+    | | |-DeclRefExpr 0x7fe3a7023e98 <col:7> 'int' lvalue Var 0x7fe3a7022ec8 'insert_icount_el_new_size' 'int'
+    | | `-ImplicitCastExpr 0x7fe3a7023f80 <col:35, col:64> 'int' <LValueToRValue>
+    | |   `-MemberExpr 0x7fe3a7023f48 <col:35, col:64> 'int' lvalue .ino 0x7fe3a7022cc8
+    | |     `-ArraySubscriptExpr 0x7fe3a7023f20 <col:35, col:62> 'struct ext2_icount_el':'struct ext2_icount_el' lvalue
+    | |       |-ImplicitCastExpr 0x7fe3a7023f08 <col:35> 'struct ext2_icount_el *' <LValueToRValue>
+    | |       | `-DeclRefExpr 0x7fe3a7023ec0 <col:35> 'struct ext2_icount_el *' lvalue Var 0x7fe3a7022dc0 'insert_icount_el_icount_1' 'struct ext2_icount_el *'
+    | |       `-IntegerLiteral 0x7fe3a7023ee8 <col:61> 'int' 0
+    | `-<<<NULL>>>
+    |-CallExpr 0x7fe3a7024110 <line:19:5, col:49> 'int'
+    | |-ImplicitCastExpr 0x7fe3a70240f8 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe3a7023ff8 <col:5> 'int (void *)' Function 0x7fe3a70237c8 'ext2fs_resize_mem' 'int (void *)'
+    | `-ImplicitCastExpr 0x7fe3a7024140 <col:23, col:24> 'void *' <BitCast>
+    |   `-UnaryOperator 0x7fe3a70240a8 <col:23, col:24> 'struct ext2_icount_el **' prefix '&'
+    |     `-DeclRefExpr 0x7fe3a7024020 <col:24> 'struct ext2_icount_el *' lvalue Var 0x7fe3a7022dc0 'insert_icount_el_icount_1' 'struct ext2_icount_el *'
+    `-ReturnStmt 0x7fe3a7024190 <line:20:5, col:12>
+      `-ImplicitCastExpr 0x7fe3a7024178 <col:12> 'struct ext2_icount_el *' <NullToPointer>
+        `-IntegerLiteral 0x7fe3a7024158 <col:12> 'int' 0

@@ -1,0 +1,65 @@
+c_files/pr79275.c:13:3: error: use of unknown builtin '__builtin_sprintf' [-Wimplicit-function-declaration]
+  __builtin_sprintf (dst, "%.*s %.*s", (int)n, s, (int)n, s);   /* { dg-bogus "INT_MAX" } */
+  ^
+1 error generated.
+TranslationUnitDecl 0x7fd79d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd79d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd79d026740 '__int128'
+|-TypedefDecl 0x7fd79d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd79d026760 'unsigned __int128'
+|-TypedefDecl 0x7fd79d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd79d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd79d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd79d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd79d026dc0 'char *'
+|   `-BuiltinType 0x7fd79d026560 'char'
+|-TypedefDecl 0x7fd79d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd79d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd79d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd79d026e58 '__va_list_tag'
+|-TypedefDecl 0x7fd79d027138 <c_files/pr79275.c:6:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fd79d026680 'unsigned long'
+|-FunctionDecl 0x7fd79d851a40 <line:8:1, line:14:1> line:8:6 f 'void (char *, size_t, const char *)'
+| |-ParmVarDecl 0x7fd79d851800 <col:9, col:15> col:15 used dst 'char *'
+| |-ParmVarDecl 0x7fd79d851890 <col:20, col:27> col:27 used n 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7fd79d851908 <col:30, col:42> col:42 used s 'const char *'
+| `-CompoundStmt 0x7fd79d8521b8 <line:9:1, line:14:1>
+|   |-IfStmt 0x7fd79d851d68 <line:10:3, line:11:9>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fd79d851cb8 <line:10:7, col:34> 'int' '||'
+|   | | |-BinaryOperator 0x7fd79d851ba8 <col:7, col:11> 'int' '<'
+|   | | | |-ImplicitCastExpr 0x7fd79d851b78 <col:7> 'size_t':'unsigned long' <LValueToRValue>
+|   | | | | `-DeclRefExpr 0x7fd79d851b30 <col:7> 'size_t':'unsigned long' lvalue ParmVar 0x7fd79d851890 'n' 'size_t':'unsigned long'
+|   | | | `-ImplicitCastExpr 0x7fd79d851b90 <col:11> 'unsigned long' <IntegralCast>
+|   | | |   `-IntegerLiteral 0x7fd79d851b58 <col:11> 'int' 2
+|   | | `-BinaryOperator 0x7fd79d851c90 <<built-in>:33:21, c_files/pr79275.c:10:34> 'int' '<'
+|   | |   |-ImplicitCastExpr 0x7fd79d851c78 <<built-in>:33:21, c_files/pr79275.c:10:30> 'unsigned long' <IntegralCast>
+|   | |   | `-BinaryOperator 0x7fd79d851c10 <<built-in>:33:21, c_files/pr79275.c:10:30> 'int' '-'
+|   | |   |   |-IntegerLiteral 0x7fd79d851bd0 <<built-in>:33:21> 'int' 2147483647
+|   | |   |   `-IntegerLiteral 0x7fd79d851bf0 <c_files/pr79275.c:10:30> 'int' 2
+|   | |   `-ImplicitCastExpr 0x7fd79d851c60 <col:34> 'size_t':'unsigned long' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fd79d851c38 <col:34> 'size_t':'unsigned long' lvalue ParmVar 0x7fd79d851890 'n' 'size_t':'unsigned long'
+|   | |-BinaryOperator 0x7fd79d851d40 <line:11:5, col:9> 'size_t':'unsigned long' '='
+|   | | |-DeclRefExpr 0x7fd79d851ce0 <col:5> 'size_t':'unsigned long' lvalue ParmVar 0x7fd79d851890 'n' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fd79d851d28 <col:9> 'size_t':'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fd79d851d08 <col:9> 'int' 2
+|   | `-<<<NULL>>>
+|   `-CallExpr 0x7fd79d852100 <line:13:3, col:60> 'int'
+|     |-ImplicitCastExpr 0x7fd79d8520e8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd79d851ea8 <col:3> 'int ()' Function 0x7fd79d851e10 '__builtin_sprintf' 'int ()'
+|     |-ImplicitCastExpr 0x7fd79d852158 <col:22> 'char *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fd79d851ed0 <col:22> 'char *' lvalue ParmVar 0x7fd79d851800 'dst' 'char *'
+|     |-ImplicitCastExpr 0x7fd79d852170 <col:27> 'char *' <ArrayToPointerDecay>
+|     | `-StringLiteral 0x7fd79d851f38 <col:27> 'char [10]' lvalue "%.*s %.*s"
+|     |-CStyleCastExpr 0x7fd79d851fc8 <col:40, col:45> 'int' <IntegralCast>
+|     | `-ImplicitCastExpr 0x7fd79d851fb0 <col:45> 'size_t':'unsigned long' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd79d851f70 <col:45> 'size_t':'unsigned long' lvalue ParmVar 0x7fd79d851890 'n' 'size_t':'unsigned long'
+|     |-ImplicitCastExpr 0x7fd79d852188 <col:48> 'const char *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fd79d851ff0 <col:48> 'const char *' lvalue ParmVar 0x7fd79d851908 's' 'const char *'
+|     |-CStyleCastExpr 0x7fd79d852070 <col:51, col:56> 'int' <IntegralCast>
+|     | `-ImplicitCastExpr 0x7fd79d852058 <col:56> 'size_t':'unsigned long' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd79d852018 <col:56> 'size_t':'unsigned long' lvalue ParmVar 0x7fd79d851890 'n' 'size_t':'unsigned long'
+|     `-ImplicitCastExpr 0x7fd79d8521a0 <col:59> 'const char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd79d852098 <col:59> 'const char *' lvalue ParmVar 0x7fd79d851908 's' 'const char *'
+`-FunctionDecl 0x7fd79d851e10 <<invalid sloc>> col:3 implicit used __builtin_sprintf 'int ()'

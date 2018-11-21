@@ -1,0 +1,37 @@
+FileAST: 
+  FuncDef: 
+    Decl: fi, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: v0, [], [], []
+            PtrDecl: []
+              TypeDecl: v0, []
+                IdentifierType: ['unsigned', 'long', 'int']
+          Decl: ow, [], [], []
+            TypeDecl: ow, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: q2, [], [], []
+            TypeDecl: q2, []
+              IdentifierType: ['int']
+        TypeDecl: fi, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          BinaryOp: +
+            ID: ow
+            ID: q2
+          Constant: int, 0
+        If: 
+          BinaryOp: ==
+            ID: q2
+            Constant: int, 1
+          Compound: 
+            Assignment: |=
+              UnaryOp: *
+                ID: v0
+              ID: q2
+            Assignment: ^=
+              ID: q2
+              UnaryOp: *
+                ID: v0

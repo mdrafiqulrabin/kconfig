@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7fbaec8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbaec826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbaec826740 '__int128'
+|-TypedefDecl 0x7fbaec826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbaec826760 'unsigned __int128'
+|-TypedefDecl 0x7fbaec826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbaec826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbaec826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbaec826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbaec826dc0 'char *'
+|   `-BuiltinType 0x7fbaec826560 'char'
+|-TypedefDecl 0x7fbaec8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbaec827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbaec826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbaec826e58 '__va_list_tag'
+|-TypedefDecl 0x7fbaec827178 <c_files/pr79904-2.c:5:1, col:21> col:21 referenced V '__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char'
+| `-VectorType 0x7fbaec827140 '__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' 8
+|   `-BuiltinType 0x7fbaec826580 'signed char'
+`-FunctionDecl 0x7fbaed026b70 <line:7:1, line:11:1> line:8:1 foo 'void (V *)'
+  |-ParmVarDecl 0x7fbaed026a68 <col:6, col:9> col:9 used a 'V *'
+  `-CompoundStmt 0x7fbaed027088 <line:9:1, line:11:1>
+    `-BinaryOperator 0x7fbaed027060 <line:10:3, col:43> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' '='
+      |-UnaryOperator 0x7fbaed026c90 <col:3, col:4> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fbaed026c78 <col:4> 'V *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fbaed026c50 <col:4> 'V *' lvalue ParmVar 0x7fbaed026a68 'a' 'V *'
+      `-BinaryOperator 0x7fbaed027038 <col:8, col:43> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' '*'
+        |-ImplicitCastExpr 0x7fbaed027008 <col:8, col:9> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' <LValueToRValue>
+        | `-UnaryOperator 0x7fbaed026cf0 <col:8, col:9> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' lvalue prefix '*'
+        |   `-ImplicitCastExpr 0x7fbaed026cd8 <col:9> 'V *' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fbaed026cb0 <col:9> 'V *' lvalue ParmVar 0x7fbaed026a68 'a' 'V *'
+        `-ImplicitCastExpr 0x7fbaed027020 <col:13, col:43> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' <LValueToRValue>
+          `-CompoundLiteralExpr 0x7fbaed026fe0 <col:13, col:43> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' lvalue
+            `-InitListExpr 0x7fbaed026ea0 <col:17, col:43> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char'
+              |-ImplicitCastExpr 0x7fbaed026f20 <col:19> 'signed char' <IntegralCast>
+              | `-IntegerLiteral 0x7fbaed026d20 <col:19> 'int' 3
+              |-ImplicitCastExpr 0x7fbaed026f38 <col:22> 'signed char' <IntegralCast>
+              | `-IntegerLiteral 0x7fbaed026d40 <col:22> 'int' 4
+              |-ImplicitCastExpr 0x7fbaed026f50 <col:25> 'signed char' <IntegralCast>
+              | `-IntegerLiteral 0x7fbaed026d60 <col:25> 'int' 5
+              |-ImplicitCastExpr 0x7fbaed026f68 <col:28> 'signed char' <IntegralCast>
+              | `-IntegerLiteral 0x7fbaed026d80 <col:28> 'int' 6
+              |-ImplicitCastExpr 0x7fbaed026f80 <col:31> 'signed char' <IntegralCast>
+              | `-IntegerLiteral 0x7fbaed026da0 <col:31> 'int' 7
+              |-ImplicitCastExpr 0x7fbaed026f98 <col:34> 'signed char' <IntegralCast>
+              | `-IntegerLiteral 0x7fbaed026dc0 <col:34> 'int' 8
+              |-ImplicitCastExpr 0x7fbaed026fb0 <col:37> 'signed char' <IntegralCast>
+              | `-IntegerLiteral 0x7fbaed026de0 <col:37> 'int' 9
+              `-ImplicitCastExpr 0x7fbaed026fc8 <col:40> 'signed char' <IntegralCast>
+                `-IntegerLiteral 0x7fbaed026e00 <col:40> 'int' 10

@@ -1,0 +1,252 @@
+c_files/pr65947-7.c:3:10: fatal error: 'tree-vect.h' file not found
+#include "tree-vect.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fc52f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc52f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc52f026740 '__int128'
+|-TypedefDecl 0x7fc52f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc52f026760 'unsigned __int128'
+|-TypedefDecl 0x7fc52f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc52f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc52f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc52f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc52f026dc0 'char *'
+|   `-BuiltinType 0x7fc52f026560 'char'
+|-TypedefDecl 0x7fc52f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc52f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc52f026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc52f026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc52f079a20 <c_files/pr65947-7.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc52f079ab8 prev 0x7fc52f079a20 <col:1, col:51> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc52f079d98 <line:12:1, line:25:1> line:13:1 used condition_reduction 'int (short *, int, int *)'
+| |-ParmVarDecl 0x7fc52f079b90 <col:22, col:29> col:29 used a 'short *'
+| |-ParmVarDecl 0x7fc52f079c08 <col:32, col:36> col:36 used min_v 'int'
+| |-ParmVarDecl 0x7fc52f079cb0 <col:43, col:48> col:48 used b 'int *'
+| `-CompoundStmt 0x7fc52f07a560 <line:14:1, line:25:1>
+|   |-DeclStmt 0x7fc52f079f68 <line:15:3, col:20>
+|   | `-VarDecl 0x7fc52f079ea0 <col:3, col:18> col:7 used last 'int' cinit
+|   |   `-BinaryOperator 0x7fc52f079f40 <line:7:11, line:15:18> 'int' '+'
+|   |     |-IntegerLiteral 0x7fc52f079f00 <line:7:11> 'int' 43
+|   |     `-IntegerLiteral 0x7fc52f079f20 <line:15:18> 'int' 65
+|   |-DeclStmt 0x7fc52f079ff8 <line:16:3, col:13>
+|   | `-VarDecl 0x7fc52f079f98 <col:3, col:9> col:9 used aval 'short'
+|   |-ForStmt 0x7fc52f07a4d0 <line:18:3, line:23:5>
+|   | |-DeclStmt 0x7fc52f07a0a8 <line:18:8, col:17>
+|   | | `-VarDecl 0x7fc52f07a028 <col:8, col:16> col:12 used i 'int' cinit
+|   | |   `-IntegerLiteral 0x7fc52f07a088 <col:16> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc52f07a120 <col:19, line:7:11> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fc52f07a108 <line:18:19> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc52f07a0c0 <col:19> 'int' lvalue Var 0x7fc52f07a028 'i' 'int'
+|   | | `-IntegerLiteral 0x7fc52f07a0e8 <line:7:11> 'int' 43
+|   | |-UnaryOperator 0x7fc52f07a170 <line:18:26, col:27> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fc52f07a148 <col:26> 'int' lvalue Var 0x7fc52f07a028 'i' 'int'
+|   | `-CompoundStmt 0x7fc52f07a4a8 <line:19:5, line:23:5>
+|   |   |-BinaryOperator 0x7fc52f07a278 <line:20:7, col:17> 'short' '='
+|   |   | |-DeclRefExpr 0x7fc52f07a190 <col:7> 'short' lvalue Var 0x7fc52f079f98 'aval' 'short'
+|   |   | `-ImplicitCastExpr 0x7fc52f07a260 <col:14, col:17> 'short' <LValueToRValue>
+|   |   |   `-ArraySubscriptExpr 0x7fc52f07a238 <col:14, col:17> 'short' lvalue
+|   |   |     |-ImplicitCastExpr 0x7fc52f07a208 <col:14> 'short *' <LValueToRValue>
+|   |   |     | `-DeclRefExpr 0x7fc52f07a1b8 <col:14> 'short *' lvalue ParmVar 0x7fc52f079b90 'a' 'short *'
+|   |   |     `-ImplicitCastExpr 0x7fc52f07a220 <col:16> 'int' <LValueToRValue>
+|   |   |       `-DeclRefExpr 0x7fc52f07a1e0 <col:16> 'int' lvalue Var 0x7fc52f07a028 'i' 'int'
+|   |   `-IfStmt 0x7fc52f07a470 <line:21:7, line:22:9>
+|   |     |-<<<NULL>>>
+|   |     |-<<<NULL>>>
+|   |     |-BinaryOperator 0x7fc52f07a3a0 <line:21:11, col:18> 'int' '<'
+|   |     | |-ImplicitCastExpr 0x7fc52f07a370 <col:11, col:14> 'int' <LValueToRValue>
+|   |     | | `-ArraySubscriptExpr 0x7fc52f07a320 <col:11, col:14> 'int' lvalue
+|   |     | |   |-ImplicitCastExpr 0x7fc52f07a2f0 <col:11> 'int *' <LValueToRValue>
+|   |     | |   | `-DeclRefExpr 0x7fc52f07a2a0 <col:11> 'int *' lvalue ParmVar 0x7fc52f079cb0 'b' 'int *'
+|   |     | |   `-ImplicitCastExpr 0x7fc52f07a308 <col:13> 'int' <LValueToRValue>
+|   |     | |     `-DeclRefExpr 0x7fc52f07a2c8 <col:13> 'int' lvalue Var 0x7fc52f07a028 'i' 'int'
+|   |     | `-ImplicitCastExpr 0x7fc52f07a388 <col:18> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc52f07a348 <col:18> 'int' lvalue ParmVar 0x7fc52f079c08 'min_v' 'int'
+|   |     |-BinaryOperator 0x7fc52f07a448 <line:22:2, col:9> 'int' '='
+|   |     | |-DeclRefExpr 0x7fc52f07a3c8 <col:2> 'int' lvalue Var 0x7fc52f079ea0 'last' 'int'
+|   |     | `-ImplicitCastExpr 0x7fc52f07a430 <col:9> 'int' <IntegralCast>
+|   |     |   `-ImplicitCastExpr 0x7fc52f07a418 <col:9> 'short' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7fc52f07a3f0 <col:9> 'short' lvalue Var 0x7fc52f079f98 'aval' 'short'
+|   |     `-<<<NULL>>>
+|   `-ReturnStmt 0x7fc52f07a548 <line:24:3, col:10>
+|     `-ImplicitCastExpr 0x7fc52f07a530 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc52f07a508 <col:10> 'int' lvalue Var 0x7fc52f079ea0 'last' 'int'
+|-FunctionDecl 0x7fc52f07a668 <line:27:1, line:53:1> line:28:1 main 'int (void)'
+| `-CompoundStmt 0x7fc52f07c518 <line:29:1, line:53:1>
+|   |-DeclStmt 0x7fc52f07b598 <line:30:3, line:36:4>
+|   | `-VarDecl 0x7fc52f07a7b0 <line:30:3, line:36:3> line:30:9 used a 'short [43]' cinit
+|   |   `-InitListExpr 0x7fc52f07aff8 <col:16, line:36:3> 'short [43]'
+|   |     |-ImplicitCastExpr 0x7fc52f07b190 <line:31:3> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07a810 <col:3> 'int' 31
+|   |     |-ImplicitCastExpr 0x7fc52f07b1a8 <col:7, col:8> 'short' <IntegralCast>
+|   |     | `-UnaryOperator 0x7fc52f07a850 <col:7, col:8> 'int' prefix '-'
+|   |     |   `-IntegerLiteral 0x7fc52f07a830 <col:8> 'int' 32
+|   |     |-ImplicitCastExpr 0x7fc52f07b1c0 <col:12> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07a870 <col:12> 'int' 133
+|   |     |-ImplicitCastExpr 0x7fc52f07b1d8 <col:17> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07a890 <col:17> 'int' 324
+|   |     |-ImplicitCastExpr 0x7fc52f07b1f0 <col:22> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07a8b0 <col:22> 'int' 335
+|   |     |-ImplicitCastExpr 0x7fc52f07b208 <col:27> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07a8d0 <col:27> 'int' 36
+|   |     |-ImplicitCastExpr 0x7fc52f07b220 <col:31> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07a8f0 <col:31> 'int' 37
+|   |     |-ImplicitCastExpr 0x7fc52f07b238 <col:35> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07a910 <col:35> 'int' 45
+|   |     |-ImplicitCastExpr 0x7fc52f07b250 <col:39> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07a930 <col:39> 'int' 11
+|   |     |-ImplicitCastExpr 0x7fc52f07b268 <col:43> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07a950 <col:43> 'int' 65
+|   |     |-ImplicitCastExpr 0x7fc52f07b280 <line:32:3> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07a970 <col:3> 'int' 1
+|   |     |-ImplicitCastExpr 0x7fc52f07b298 <col:6, col:7> 'short' <IntegralCast>
+|   |     | `-UnaryOperator 0x7fc52f07a9b0 <col:6, col:7> 'int' prefix '-'
+|   |     |   `-IntegerLiteral 0x7fc52f07a990 <col:7> 'int' 28
+|   |     |-ImplicitCastExpr 0x7fc52f07b2b0 <col:11> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07a9d0 <col:11> 'int' 3
+|   |     |-ImplicitCastExpr 0x7fc52f07b2c8 <col:14> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07aa00 <col:14> 'int' 48
+|   |     |-ImplicitCastExpr 0x7fc52f07b2e0 <col:18> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07aa20 <col:18> 'int' 5
+|   |     |-ImplicitCastExpr 0x7fc52f07b2f8 <col:21, col:22> 'short' <IntegralCast>
+|   |     | `-UnaryOperator 0x7fc52f07aa60 <col:21, col:22> 'int' prefix '-'
+|   |     |   `-IntegerLiteral 0x7fc52f07aa40 <col:22> 'int' 68
+|   |     |-ImplicitCastExpr 0x7fc52f07b310 <col:26> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07aa80 <col:26> 'int' 7
+|   |     |-ImplicitCastExpr 0x7fc52f07b328 <col:29> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07aaa0 <col:29> 'int' 88
+|   |     |-ImplicitCastExpr 0x7fc52f07b340 <col:33> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07aac0 <col:33> 'int' 89
+|   |     |-ImplicitCastExpr 0x7fc52f07b358 <col:37> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07aae0 <col:37> 'int' 180
+|   |     |-ImplicitCastExpr 0x7fc52f07b370 <line:33:3> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07ab00 <col:3> 'int' 121
+|   |     |-ImplicitCastExpr 0x7fc52f07b388 <col:8, col:9> 'short' <IntegralCast>
+|   |     | `-UnaryOperator 0x7fc52f07ab40 <col:8, col:9> 'int' prefix '-'
+|   |     |   `-IntegerLiteral 0x7fc52f07ab20 <col:9> 'int' 122
+|   |     |-ImplicitCastExpr 0x7fc52f07b3a0 <col:14> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07ab60 <col:14> 'int' 123
+|   |     |-ImplicitCastExpr 0x7fc52f07b3b8 <col:19> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07ab80 <col:19> 'int' 124
+|   |     |-ImplicitCastExpr 0x7fc52f07b3d0 <col:24, col:25> 'short' <IntegralCast>
+|   |     | `-UnaryOperator 0x7fc52f07abc0 <col:24, col:25> 'int' prefix '-'
+|   |     |   `-IntegerLiteral 0x7fc52f07aba0 <col:25> 'int' 125
+|   |     |-ImplicitCastExpr 0x7fc52f07b3e8 <col:30> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07abe0 <col:30> 'int' 126
+|   |     |-ImplicitCastExpr 0x7fc52f07b400 <col:35> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07ac00 <col:35> 'int' 127
+|   |     |-ImplicitCastExpr 0x7fc52f07b418 <col:40> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07ac20 <col:40> 'int' 128
+|   |     |-ImplicitCastExpr 0x7fc52f07b430 <col:45> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07ac40 <col:45> 'int' 129
+|   |     |-ImplicitCastExpr 0x7fc52f07b448 <col:50> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07ac60 <col:50> 'int' 130
+|   |     |-ImplicitCastExpr 0x7fc52f07b460 <line:34:3> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07ac80 <col:3> 'int' 11
+|   |     |-ImplicitCastExpr 0x7fc52f07b478 <col:7> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07aca0 <col:7> 'int' 12
+|   |     |-ImplicitCastExpr 0x7fc52f07b490 <col:11> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07acc0 <col:11> 'int' 13
+|   |     |-ImplicitCastExpr 0x7fc52f07b4a8 <col:15> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07ace0 <col:15> 'int' 14
+|   |     |-ImplicitCastExpr 0x7fc52f07b4c0 <col:19, col:20> 'short' <IntegralCast>
+|   |     | `-UnaryOperator 0x7fc52f07ad20 <col:19, col:20> 'int' prefix '-'
+|   |     |   `-IntegerLiteral 0x7fc52f07ad00 <col:20> 'int' 15
+|   |     |-ImplicitCastExpr 0x7fc52f07b4d8 <col:24, col:25> 'short' <IntegralCast>
+|   |     | `-UnaryOperator 0x7fc52f07ad60 <col:24, col:25> 'int' prefix '-'
+|   |     |   `-IntegerLiteral 0x7fc52f07ad40 <col:25> 'int' 16
+|   |     |-ImplicitCastExpr 0x7fc52f07b4f0 <col:29> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07ad80 <col:29> 'int' 17
+|   |     |-ImplicitCastExpr 0x7fc52f07b508 <col:33> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07ada0 <col:33> 'int' 18
+|   |     |-ImplicitCastExpr 0x7fc52f07b520 <col:37> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07adc0 <col:37> 'int' 19
+|   |     |-ImplicitCastExpr 0x7fc52f07b538 <col:41> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07ade0 <col:41> 'int' 20
+|   |     |-ImplicitCastExpr 0x7fc52f07b550 <line:35:3> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07ae00 <col:3> 'int' 33
+|   |     |-ImplicitCastExpr 0x7fc52f07b568 <col:7> 'short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fc52f07ae20 <col:7> 'int' 27
+|   |     `-ImplicitCastExpr 0x7fc52f07b580 <col:11> 'short' <IntegralCast>
+|   |       `-IntegerLiteral 0x7fc52f07ae40 <col:11> 'int' 99
+|   |-DeclStmt 0x7fc52f07c010 <line:37:3, line:43:4>
+|   | `-VarDecl 0x7fc52f07b630 <line:37:3, line:43:3> line:37:7 used b 'int [43]' cinit
+|   |   `-InitListExpr 0x7fc52f07be78 <col:14, line:43:3> 'int [43]'
+|   |     |-IntegerLiteral 0x7fc52f07b690 <line:38:3> 'int' 11
+|   |     |-UnaryOperator 0x7fc52f07b6d0 <col:7, col:8> 'int' prefix '-'
+|   |     | `-IntegerLiteral 0x7fc52f07b6b0 <col:8> 'int' 12
+|   |     |-UnaryOperator 0x7fc52f07b710 <col:12, col:13> 'int' prefix '-'
+|   |     | `-IntegerLiteral 0x7fc52f07b6f0 <col:13> 'int' 13
+|   |     |-IntegerLiteral 0x7fc52f07b730 <col:17> 'int' 14
+|   |     |-IntegerLiteral 0x7fc52f07b750 <col:21> 'int' 15
+|   |     |-IntegerLiteral 0x7fc52f07b770 <col:25> 'int' 16
+|   |     |-IntegerLiteral 0x7fc52f07b790 <col:29> 'int' 17
+|   |     |-IntegerLiteral 0x7fc52f07b7b0 <col:33> 'int' 18
+|   |     |-IntegerLiteral 0x7fc52f07b7d0 <col:37> 'int' 19
+|   |     |-IntegerLiteral 0x7fc52f07b7f0 <col:41> 'int' 20
+|   |     |-IntegerLiteral 0x7fc52f07b810 <line:39:3> 'int' 21
+|   |     |-UnaryOperator 0x7fc52f07b850 <col:7, col:8> 'int' prefix '-'
+|   |     | `-IntegerLiteral 0x7fc52f07b830 <col:8> 'int' 22
+|   |     |-IntegerLiteral 0x7fc52f07b870 <col:12> 'int' 23
+|   |     |-IntegerLiteral 0x7fc52f07b890 <col:16> 'int' 24
+|   |     |-UnaryOperator 0x7fc52f07b8d0 <col:20, col:21> 'int' prefix '-'
+|   |     | `-IntegerLiteral 0x7fc52f07b8b0 <col:21> 'int' 25
+|   |     |-IntegerLiteral 0x7fc52f07b8f0 <col:25> 'int' 26
+|   |     |-IntegerLiteral 0x7fc52f07b910 <col:29> 'int' 27
+|   |     |-IntegerLiteral 0x7fc52f07b930 <col:33> 'int' 28
+|   |     |-IntegerLiteral 0x7fc52f07b950 <col:37> 'int' 29
+|   |     |-IntegerLiteral 0x7fc52f07b970 <col:41> 'int' 30
+|   |     |-IntegerLiteral 0x7fc52f07b990 <line:40:3> 'int' 1
+|   |     |-IntegerLiteral 0x7fc52f07b9b0 <col:6> 'int' 62
+|   |     |-IntegerLiteral 0x7fc52f07b9d0 <col:10> 'int' 3
+|   |     |-IntegerLiteral 0x7fc52f07ba00 <col:13> 'int' 14
+|   |     |-UnaryOperator 0x7fc52f07ba40 <col:17, col:18> 'int' prefix '-'
+|   |     | `-IntegerLiteral 0x7fc52f07ba20 <col:18> 'int' 15
+|   |     |-IntegerLiteral 0x7fc52f07ba60 <col:22> 'int' 6
+|   |     |-IntegerLiteral 0x7fc52f07ba80 <col:25> 'int' 37
+|   |     |-IntegerLiteral 0x7fc52f07baa0 <col:29> 'int' 48
+|   |     |-IntegerLiteral 0x7fc52f07bac0 <col:33> 'int' 99
+|   |     |-IntegerLiteral 0x7fc52f07bae0 <col:37> 'int' 10
+|   |     |-IntegerLiteral 0x7fc52f07bb00 <line:41:3> 'int' 31
+|   |     |-UnaryOperator 0x7fc52f07bb40 <col:7, col:8> 'int' prefix '-'
+|   |     | `-IntegerLiteral 0x7fc52f07bb20 <col:8> 'int' 32
+|   |     |-IntegerLiteral 0x7fc52f07bb60 <col:12> 'int' 33
+|   |     |-IntegerLiteral 0x7fc52f07bb80 <col:16> 'int' 34
+|   |     |-UnaryOperator 0x7fc52f07bbc0 <col:20, col:21> 'int' prefix '-'
+|   |     | `-IntegerLiteral 0x7fc52f07bba0 <col:21> 'int' 35
+|   |     |-IntegerLiteral 0x7fc52f07bbe0 <col:25> 'int' 36
+|   |     |-IntegerLiteral 0x7fc52f07bc00 <col:29> 'int' 37
+|   |     |-IntegerLiteral 0x7fc52f07bc20 <col:33> 'int' 56
+|   |     |-IntegerLiteral 0x7fc52f07bc40 <col:37> 'int' 54
+|   |     |-IntegerLiteral 0x7fc52f07bc60 <col:41> 'int' 22
+|   |     |-IntegerLiteral 0x7fc52f07bc80 <line:42:3> 'int' 73
+|   |     |-IntegerLiteral 0x7fc52f07bca0 <col:7> 'int' 2
+|   |     `-IntegerLiteral 0x7fc52f07bcc0 <col:10> 'int' 87
+|   |-CallExpr 0x7fc52f07c180 <line:45:3, col:15> 'int'
+|   | `-ImplicitCastExpr 0x7fc52f07c168 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fc52f07c118 <col:3> 'int ()' Function 0x7fc52f07c080 'check_vect' 'int ()'
+|   |-DeclStmt 0x7fc52f07c370 <line:47:3, col:43>
+|   | `-VarDecl 0x7fc52f07c1c0 <col:3, col:42> col:7 used ret 'int' cinit
+|   |   `-CallExpr 0x7fc52f07c300 <col:13, col:42> 'int'
+|   |     |-ImplicitCastExpr 0x7fc52f07c2e8 <col:13> 'int (*)(short *, int, int *)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fc52f07c220 <col:13> 'int (short *, int, int *)' Function 0x7fc52f079d98 'condition_reduction' 'int (short *, int, int *)'
+|   |     |-ImplicitCastExpr 0x7fc52f07c340 <col:34> 'short *' <ArrayToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fc52f07c248 <col:34> 'short [43]' lvalue Var 0x7fc52f07a7b0 'a' 'short [43]'
+|   |     |-IntegerLiteral 0x7fc52f07c270 <col:37> 'int' 16
+|   |     `-ImplicitCastExpr 0x7fc52f07c358 <col:41> 'int *' <ArrayToPointerDecay>
+|   |       `-DeclRefExpr 0x7fc52f07c290 <col:41> 'int [43]' lvalue Var 0x7fc52f07b630 'b' 'int [43]'
+|   |-IfStmt 0x7fc52f07c4a8 <line:49:3, line:50:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc52f07c3e8 <line:49:7, col:14> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fc52f07c3d0 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc52f07c388 <col:7> 'int' lvalue Var 0x7fc52f07c1c0 'ret' 'int'
+|   | | `-IntegerLiteral 0x7fc52f07c3b0 <col:14> 'int' 27
+|   | |-CallExpr 0x7fc52f07c480 <line:50:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7fc52f07c468 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fc52f07c410 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc52f079ab8 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fc52f07c500 <line:52:3, col:10>
+|     `-IntegerLiteral 0x7fc52f07c4e0 <col:10> 'int' 0
+`-FunctionDecl 0x7fc52f07c080 <<invalid sloc>> line:45:3 implicit used check_vect 'int ()'

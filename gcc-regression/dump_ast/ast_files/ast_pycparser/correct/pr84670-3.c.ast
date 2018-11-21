@@ -1,0 +1,130 @@
+FileAST: 
+  Typedef: u8, [], ['typedef']
+    TypeDecl: u8, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: u16, [], ['typedef']
+    TypeDecl: u16, []
+      IdentifierType: ['unsigned', 'short']
+  Typedef: u32, [], ['typedef']
+    TypeDecl: u32, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: acpi_rs_length, [], ['typedef']
+    TypeDecl: acpi_rs_length, []
+      IdentifierType: ['u16']
+  Typedef: acpi_rsdesc_size, [], ['typedef']
+    TypeDecl: acpi_rsdesc_size, []
+      IdentifierType: ['u32']
+  Decl: None, [], [], []
+    Struct: acpi_resource_source
+      Decl: string_length, [], [], []
+        TypeDecl: string_length, []
+          IdentifierType: ['u16']
+      Decl: string_ptr, [], [], []
+        PtrDecl: []
+          TypeDecl: string_ptr, []
+            IdentifierType: ['char']
+  FuncDef: 
+    Decl: acpi_rs_strcpy, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: destination, [], [], []
+            PtrDecl: []
+              TypeDecl: destination, []
+                IdentifierType: ['char']
+          Decl: source, [], [], []
+            PtrDecl: []
+              TypeDecl: source, []
+                IdentifierType: ['char']
+        TypeDecl: acpi_rs_strcpy, []
+          IdentifierType: ['u16']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['u16']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        ArrayRef: 
+          ID: source
+          ID: i
+        UnaryOp: p++
+          ID: i
+        Compound: 
+      Return: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['u16']
+          BinaryOp: +
+            ID: i
+            Constant: int, 1
+  Decl: None, [], [], []
+    Union: aml_resource
+  FuncDef: 
+    Decl: acpi_rs_get_resource_source, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: resource_length, [], [], []
+            TypeDecl: resource_length, []
+              IdentifierType: ['acpi_rs_length']
+          Decl: minimum_length, [], [], []
+            TypeDecl: minimum_length, []
+              IdentifierType: ['acpi_rs_length']
+          Decl: resource_source, [], [], []
+            PtrDecl: []
+              TypeDecl: resource_source, []
+                Struct: acpi_resource_source
+          Decl: aml, [], [], []
+            PtrDecl: []
+              TypeDecl: aml, []
+                Union: aml_resource
+          Decl: string_ptr, [], [], []
+            PtrDecl: []
+              TypeDecl: string_ptr, []
+                IdentifierType: ['char']
+        TypeDecl: acpi_rs_get_resource_source, []
+          IdentifierType: ['acpi_rs_length']
+    Compound: 
+      Decl: total_length, [], [], []
+        TypeDecl: total_length, []
+          IdentifierType: ['acpi_rsdesc_size']
+      Decl: aml_resource_source, [], [], []
+        PtrDecl: []
+          TypeDecl: aml_resource_source, []
+            IdentifierType: ['u8']
+      If: 
+        BinaryOp: >
+          ID: total_length
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['acpi_rsdesc_size']
+            BinaryOp: +
+              ID: minimum_length
+              Constant: int, 1
+        Compound: 
+          Assignment: =
+            StructRef: ->
+              ID: resource_source
+              ID: string_length
+            FuncCall: 
+              ID: acpi_rs_strcpy
+              ExprList: 
+                StructRef: ->
+                  ID: resource_source
+                  ID: string_ptr
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['char']
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['void']
+                    UnaryOp: &
+                      ArrayRef: 
+                        ID: aml_resource_source
+                        Constant: int, 1

@@ -1,0 +1,58 @@
+c_files/pr79757-1.c:11:10: error: a parameter list without types is only allowed in a function definition
+  int a (z)
+         ^
+c_files/pr79757-1.c:11:12: error: expected ';' at end of declaration
+  int a (z)
+           ^
+           ;
+c_files/pr79757-1.c:20:10: error: a parameter list without types is only allowed in a function definition
+  int a (z)
+         ^
+c_files/pr79757-1.c:20:12: error: expected ';' at end of declaration
+  int a (z)
+           ^
+           ;
+4 errors generated.
+TranslationUnitDecl 0x7fe2c18264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe2c1826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe2c1826740 '__int128'
+|-TypedefDecl 0x7fe2c1826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe2c1826760 'unsigned __int128'
+|-TypedefDecl 0x7fe2c1826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe2c1826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe2c1826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe2c1826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe2c1826dc0 'char *'
+|   `-BuiltinType 0x7fe2c1826560 'char'
+|-TypedefDecl 0x7fe2c18270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe2c1827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe2c1826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe2c1826e58 '__va_list_tag'
+|-VarDecl 0x7fe2c1827138 <c_files/pr79757-1.c:6:1, col:19> col:19 used x 'unsigned __int128'
+|-VarDecl 0x7fe2c2025a00 <col:1, col:22> col:22 used y 'unsigned __int128'
+|-FunctionDecl 0x7fe2c2025b40 <line:8:1, line:15:1> line:9:1 fn1 'void (void)'
+| `-CompoundStmt 0x7fe2c2025e58 <line:10:1, line:15:1>
+|   |-DeclStmt 0x7fe2c2025cd8 <line:11:3, line:12:5>
+|   | `-FunctionDecl 0x7fe2c2025c30 parent 0x7fe2c18264d0 <line:11:3, col:11> col:7 invalid a 'int ()'
+|   |-DeclStmt 0x7fe2c2025e28 <line:12:5, col:33>
+|   | `-VarDecl 0x7fe2c2025d08 <col:5, col:32> col:24 z 'unsigned long long' cinit
+|   |   `-ImplicitCastExpr 0x7fe2c2025e10 <col:28, col:32> 'unsigned long long' <IntegralCast>
+|   |     `-BinaryOperator 0x7fe2c2025de8 <col:28, col:32> 'unsigned __int128' '/'
+|   |       |-ImplicitCastExpr 0x7fe2c2025db8 <col:28> 'unsigned __int128' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fe2c2025d68 <col:28> 'unsigned __int128' lvalue Var 0x7fe2c1827138 'x' 'unsigned __int128'
+|   |       `-ImplicitCastExpr 0x7fe2c2025dd0 <col:32> 'unsigned __int128' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fe2c2025d90 <col:32> 'unsigned __int128' lvalue Var 0x7fe2c2025a00 'y' 'unsigned __int128'
+|   `-CompoundStmt 0x7fe2c2025e40 <line:13:3, line:14:3>
+`-FunctionDecl 0x7fe2c2025f18 <line:17:1, line:24:1> line:18:1 fn2 'void (void)'
+  `-CompoundStmt 0x7fe2c2026200 <line:19:1, line:24:1>
+    |-DeclStmt 0x7fe2c2026080 <line:20:3, line:21:5>
+    | `-FunctionDecl 0x7fe2c2025fd8 parent 0x7fe2c18264d0 <line:20:3, col:11> col:7 invalid a 'int ()'
+    |-DeclStmt 0x7fe2c20261d0 <line:21:5, col:34>
+    | `-VarDecl 0x7fe2c20260b0 <col:5, col:33> col:24 z 'unsigned long long' cinit
+    |   `-ImplicitCastExpr 0x7fe2c20261b8 <col:28, col:33> 'unsigned long long' <IntegralCast>
+    |     `-BinaryOperator 0x7fe2c2026190 <col:28, col:33> 'unsigned __int128' '>>'
+    |       |-ImplicitCastExpr 0x7fe2c2026160 <col:28> 'unsigned __int128' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7fe2c2026110 <col:28> 'unsigned __int128' lvalue Var 0x7fe2c1827138 'x' 'unsigned __int128'
+    |       `-ImplicitCastExpr 0x7fe2c2026178 <col:33> 'unsigned __int128' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fe2c2026138 <col:33> 'unsigned __int128' lvalue Var 0x7fe2c2025a00 'y' 'unsigned __int128'
+    `-CompoundStmt 0x7fe2c20261e8 <line:22:3, line:23:3>

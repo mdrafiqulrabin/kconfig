@@ -1,0 +1,59 @@
+FileAST: 
+  Decl: uc, [], [], []
+    TypeDecl: uc, []
+      IdentifierType: ['unsigned', 'char']
+  Decl: sc, [], [], []
+    TypeDecl: sc, []
+      IdentifierType: ['signed', 'char']
+  Decl: us, [], [], []
+    TypeDecl: us, []
+      IdentifierType: ['unsigned', 'short']
+  Decl: ss, [], [], []
+    TypeDecl: ss, []
+      IdentifierType: ['signed', 'short']
+  Decl: u, [], [], []
+    TypeDecl: u, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_printf
+        ExprList: 
+          Constant: string, "%u\n"
+          ID: uc
+      FuncCall: 
+        ID: __builtin_printf
+        ExprList: 
+          Constant: string, "%u\n"
+          ID: sc
+      FuncCall: 
+        ID: __builtin_printf
+        ExprList: 
+          Constant: string, "%u\n"
+          ID: us
+      FuncCall: 
+        ID: __builtin_printf
+        ExprList: 
+          Constant: string, "%u\n"
+          ID: ss
+      FuncCall: 
+        ID: __builtin_printf
+        ExprList: 
+          Constant: string, "%u\n"
+          ID: u
+      FuncCall: 
+        ID: __builtin_printf
+        ExprList: 
+          Constant: string, "%u\n"
+          ID: i

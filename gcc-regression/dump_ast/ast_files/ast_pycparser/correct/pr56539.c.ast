@@ -1,0 +1,41 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['char']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned']
+        TypeDecl: foo, []
+          IdentifierType: ['short']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: >
+            ID: y
+            Constant: int, 1
+          BinaryOp: +
+            BinaryOp: -
+              ArrayRef: 
+                ID: x
+                BinaryOp: -
+                  ID: y
+                  Constant: int, 1
+              Constant: char, '0'
+            BinaryOp: *
+              Constant: int, 10
+              FuncCall: 
+                ID: foo
+                ExprList: 
+                  ID: x
+                  BinaryOp: -
+                    ID: y
+                    Constant: int, 1
+          BinaryOp: -
+            UnaryOp: *
+              ID: x
+            Constant: char, '0'

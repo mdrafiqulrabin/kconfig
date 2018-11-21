@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7f907b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f907b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f907b826740 '__int128'
+|-TypedefDecl 0x7f907b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f907b826760 'unsigned __int128'
+|-TypedefDecl 0x7f907b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f907b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f907b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f907b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f907b826dc0 'char *'
+|   `-BuiltinType 0x7f907b826560 'char'
+|-TypedefDecl 0x7f907b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f907b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f907b826ee0 'struct __va_list_tag'
+|     `-Record 0x7f907b826e58 '__va_list_tag'
+|-TypedefDecl 0x7f907b827178 <c_files/pr31486.c:4:1, col:16> col:16 referenced __v2df '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7f907b827140 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7f907b8266e0 'double'
+|-VarDecl 0x7f907b878400 <line:6:1, col:23> col:8 used b '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+| `-InitListExpr 0x7f907b878530 <col:12, col:23> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |-FloatingLiteral 0x7f907b8784a0 <col:14> 'double' 1.100000e+00
+|   `-FloatingLiteral 0x7f907b8784c0 <col:19> 'double' 1.200000e+00
+|-FunctionDecl 0x7f907b878710 <line:8:1, col:37> col:15 used a2 '__v2df (__v2df, __v2df)' extern
+| |-ParmVarDecl 0x7f907b878590 <col:19, col:26> col:26 a '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-ParmVarDecl 0x7f907b878600 <col:29, col:36> col:36 b '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+`-FunctionDecl 0x7f907b878808 <line:10:1, line:13:1> line:10:6 test2 'void ()'
+  `-CompoundStmt 0x7f907b878a40 <line:11:1, line:13:1>
+    `-BinaryOperator 0x7f907b878a18 <line:12:3, col:15> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '='
+      |-DeclRefExpr 0x7f907b8788a0 <col:3> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7f907b878400 'b' '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+      `-CallExpr 0x7f907b8789b0 <col:7, col:15> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+        |-ImplicitCastExpr 0x7f907b878998 <col:7> '__v2df (*)(__v2df, __v2df)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f907b8788c8 <col:7> '__v2df (__v2df, __v2df)' Function 0x7f907b878710 'a2' '__v2df (__v2df, __v2df)'
+        |-ImplicitCastExpr 0x7f907b8789e8 <col:11> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+        | `-DeclRefExpr 0x7f907b8788f0 <col:11> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7f907b878400 'b' '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+        `-ImplicitCastExpr 0x7f907b878a00 <col:14> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+          `-DeclRefExpr 0x7f907b878918 <col:14> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7f907b878400 'b' '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'

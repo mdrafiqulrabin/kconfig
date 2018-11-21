@@ -1,0 +1,31 @@
+c_files/pr59011.c:12:3: error: function definition is not allowed here
+  {
+  ^
+c_files/pr59011.c:22:3: warning: implicit declaration of function 'bar' is invalid in C99 [-Wimplicit-function-declaration]
+  bar ();
+  ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7f8af88258d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8af8825e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8af8825b40 '__int128'
+|-TypedefDecl 0x7f8af8825e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8af8825b60 'unsigned __int128'
+|-TypedefDecl 0x7f8af8826168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8af8825f70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8af8825ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8af8826200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8af88261c0 'char *'
+|   `-BuiltinType 0x7f8af8825960 'char'
+|-TypedefDecl 0x7f8af88264c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8af8826470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8af88262e0 'struct __va_list_tag'
+|     `-Record 0x7f8af8826258 '__va_list_tag'
+|-FunctionDecl 0x7f8af9826000 <c_files/pr59011.c:6:1, line:23:1> line:7:1 foo 'void (int)'
+| |-ParmVarDecl 0x7f8af8826538 <col:6, col:10> col:10 used m 'int'
+| `-CompoundStmt 0x7f8af98263e8 <line:8:1, line:23:1>
+|   |-DeclStmt 0x7f8af98261e0 <line:9:3, col:11>
+|   | `-VarDecl 0x7f8af9826180 <col:3, col:10> col:7 a 'int [m]'
+|   `-CallExpr 0x7f8af98263c0 <line:22:3, col:8> 'int'
+|     `-ImplicitCastExpr 0x7f8af98263a8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f8af9826358 <col:3> 'int ()' Function 0x7f8af98262c0 'bar' 'int ()'
+`-FunctionDecl 0x7f8af98262c0 <<invalid sloc>> col:3 implicit used bar 'int ()'

@@ -1,0 +1,131 @@
+TranslationUnitDecl 0x7fc9d48264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc9d4826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc9d4826740 '__int128'
+|-TypedefDecl 0x7fc9d4826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc9d4826760 'unsigned __int128'
+|-TypedefDecl 0x7fc9d4826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc9d4826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc9d4826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc9d4826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc9d4826dc0 'char *'
+|   `-BuiltinType 0x7fc9d4826560 'char'
+|-TypedefDecl 0x7fc9d48270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc9d4827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc9d4826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc9d4826e58 '__va_list_tag'
+|-TypedefDecl 0x7fc9d4827138 <c_files/pr40501.c:11:1, col:18> col:18 referenced int64_t 'long'
+| `-BuiltinType 0x7fc9d48265e0 'long'
+`-FunctionDecl 0x7fc9d5025b00 <line:13:1, line:24:1> line:14:1 swap64 'int64_t (int64_t)'
+  |-ParmVarDecl 0x7fc9d5025a00 <col:9, col:17> col:17 used n 'int64_t':'long'
+  `-CompoundStmt 0x7fc9d5027b70 <line:15:1, line:24:1>
+    `-ReturnStmt 0x7fc9d5027b58 <line:16:3, line:23:42>
+      `-ParenExpr 0x7fc9d5027b38 <line:16:10, line:23:42> 'long'
+        `-BinaryOperator 0x7fc9d5027b10 <line:16:11, line:23:41> 'long' '|'
+          |-BinaryOperator 0x7fc9d5026910 <line:16:11, line:22:41> 'long' '|'
+          | |-BinaryOperator 0x7fc9d5026718 <line:16:11, line:21:41> 'long' '|'
+          | | |-BinaryOperator 0x7fc9d5026520 <line:16:11, line:20:40> 'long' '|'
+          | | | |-BinaryOperator 0x7fc9d5026328 <line:16:11, line:19:40> 'long' '|'
+          | | | | |-BinaryOperator 0x7fc9d5026130 <line:16:11, line:18:41> 'long' '|'
+          | | | | | |-BinaryOperator 0x7fc9d5025f38 <line:16:11, line:17:40> 'long' '|'
+          | | | | | | |-ParenExpr 0x7fc9d5025d48 <line:16:11, col:43> 'long'
+          | | | | | | | `-BinaryOperator 0x7fc9d5025d20 <col:12, col:41> 'long' '<<'
+          | | | | | | |   |-ParenExpr 0x7fc9d5025ce0 <col:12, col:36> 'long'
+          | | | | | | |   | `-BinaryOperator 0x7fc9d5025cb8 <col:13, col:35> 'long' '&'
+          | | | | | | |   |   |-ImplicitCastExpr 0x7fc9d5025ca0 <col:13> 'int64_t':'long' <LValueToRValue>
+          | | | | | | |   |   | `-DeclRefExpr 0x7fc9d5025be0 <col:13> 'int64_t':'long' lvalue ParmVar 0x7fc9d5025a00 'n' 'int64_t':'long'
+          | | | | | | |   |   `-ParenExpr 0x7fc9d5025c80 <col:17, col:35> 'int64_t':'long'
+          | | | | | | |   |     `-ParenExpr 0x7fc9d5025c60 <col:18, col:33> 'int64_t':'long'
+          | | | | | | |   |       `-CStyleCastExpr 0x7fc9d5025c38 <col:19, col:29> 'int64_t':'long' <IntegralCast>
+          | | | | | | |   |         `-IntegerLiteral 0x7fc9d5025c08 <col:29> 'int' 255
+          | | | | | | |   `-IntegerLiteral 0x7fc9d5025d00 <col:41> 'int' 56
+          | | | | | | `-ParenExpr 0x7fc9d5025f18 <line:17:4, col:40> 'long'
+          | | | | | |   `-BinaryOperator 0x7fc9d5025ef0 <col:5, col:38> 'long' '<<'
+          | | | | | |     |-ParenExpr 0x7fc9d5025eb0 <col:5, col:33> 'long'
+          | | | | | |     | `-BinaryOperator 0x7fc9d5025e88 <col:6, col:32> 'long' '&'
+          | | | | | |     |   |-ImplicitCastExpr 0x7fc9d5025e70 <col:6> 'int64_t':'long' <LValueToRValue>
+          | | | | | |     |   | `-DeclRefExpr 0x7fc9d5025d68 <col:6> 'int64_t':'long' lvalue ParmVar 0x7fc9d5025a00 'n' 'int64_t':'long'
+          | | | | | |     |   `-ParenExpr 0x7fc9d5025e50 <col:10, col:32> 'int64_t':'long'
+          | | | | | |     |     `-BinaryOperator 0x7fc9d5025e28 <col:11, col:31> 'int64_t':'long' '<<'
+          | | | | | |     |       |-ParenExpr 0x7fc9d5025de8 <col:11, col:26> 'int64_t':'long'
+          | | | | | |     |       | `-CStyleCastExpr 0x7fc9d5025dc0 <col:12, col:22> 'int64_t':'long' <IntegralCast>
+          | | | | | |     |       |   `-IntegerLiteral 0x7fc9d5025d90 <col:22> 'int' 255
+          | | | | | |     |       `-IntegerLiteral 0x7fc9d5025e08 <col:31> 'int' 8
+          | | | | | |     `-IntegerLiteral 0x7fc9d5025ed0 <col:38> 'int' 40
+          | | | | | `-ParenExpr 0x7fc9d5026110 <line:18:4, col:41> 'long'
+          | | | | |   `-BinaryOperator 0x7fc9d50260e8 <col:5, col:39> 'long' '<<'
+          | | | | |     |-ParenExpr 0x7fc9d50260a8 <col:5, col:34> 'long'
+          | | | | |     | `-BinaryOperator 0x7fc9d5026080 <col:6, col:33> 'long' '&'
+          | | | | |     |   |-ImplicitCastExpr 0x7fc9d5026068 <col:6> 'int64_t':'long' <LValueToRValue>
+          | | | | |     |   | `-DeclRefExpr 0x7fc9d5025f60 <col:6> 'int64_t':'long' lvalue ParmVar 0x7fc9d5025a00 'n' 'int64_t':'long'
+          | | | | |     |   `-ParenExpr 0x7fc9d5026048 <col:10, col:33> 'int64_t':'long'
+          | | | | |     |     `-BinaryOperator 0x7fc9d5026020 <col:11, col:31> 'int64_t':'long' '<<'
+          | | | | |     |       |-ParenExpr 0x7fc9d5025fe0 <col:11, col:26> 'int64_t':'long'
+          | | | | |     |       | `-CStyleCastExpr 0x7fc9d5025fb8 <col:12, col:22> 'int64_t':'long' <IntegralCast>
+          | | | | |     |       |   `-IntegerLiteral 0x7fc9d5025f88 <col:22> 'int' 255
+          | | | | |     |       `-IntegerLiteral 0x7fc9d5026000 <col:31> 'int' 16
+          | | | | |     `-IntegerLiteral 0x7fc9d50260c8 <col:39> 'int' 24
+          | | | | `-ParenExpr 0x7fc9d5026308 <line:19:4, col:40> 'long'
+          | | | |   `-BinaryOperator 0x7fc9d50262e0 <col:5, col:39> 'long' '<<'
+          | | | |     |-ParenExpr 0x7fc9d50262a0 <col:5, col:34> 'long'
+          | | | |     | `-BinaryOperator 0x7fc9d5026278 <col:6, col:33> 'long' '&'
+          | | | |     |   |-ImplicitCastExpr 0x7fc9d5026260 <col:6> 'int64_t':'long' <LValueToRValue>
+          | | | |     |   | `-DeclRefExpr 0x7fc9d5026158 <col:6> 'int64_t':'long' lvalue ParmVar 0x7fc9d5025a00 'n' 'int64_t':'long'
+          | | | |     |   `-ParenExpr 0x7fc9d5026240 <col:10, col:33> 'int64_t':'long'
+          | | | |     |     `-BinaryOperator 0x7fc9d5026218 <col:11, col:31> 'int64_t':'long' '<<'
+          | | | |     |       |-ParenExpr 0x7fc9d50261d8 <col:11, col:26> 'int64_t':'long'
+          | | | |     |       | `-CStyleCastExpr 0x7fc9d50261b0 <col:12, col:22> 'int64_t':'long' <IntegralCast>
+          | | | |     |       |   `-IntegerLiteral 0x7fc9d5026180 <col:22> 'int' 255
+          | | | |     |       `-IntegerLiteral 0x7fc9d50261f8 <col:31> 'int' 24
+          | | | |     `-IntegerLiteral 0x7fc9d50262c0 <col:39> 'int' 8
+          | | | `-ParenExpr 0x7fc9d5026500 <line:20:4, col:40> 'long'
+          | | |   `-BinaryOperator 0x7fc9d50264d8 <col:5, col:39> 'long' '>>'
+          | | |     |-ParenExpr 0x7fc9d5026498 <col:5, col:34> 'long'
+          | | |     | `-BinaryOperator 0x7fc9d5026470 <col:6, col:33> 'long' '&'
+          | | |     |   |-ImplicitCastExpr 0x7fc9d5026458 <col:6> 'int64_t':'long' <LValueToRValue>
+          | | |     |   | `-DeclRefExpr 0x7fc9d5026350 <col:6> 'int64_t':'long' lvalue ParmVar 0x7fc9d5025a00 'n' 'int64_t':'long'
+          | | |     |   `-ParenExpr 0x7fc9d5026438 <col:10, col:33> 'int64_t':'long'
+          | | |     |     `-BinaryOperator 0x7fc9d5026410 <col:11, col:31> 'int64_t':'long' '<<'
+          | | |     |       |-ParenExpr 0x7fc9d50263d0 <col:11, col:26> 'int64_t':'long'
+          | | |     |       | `-CStyleCastExpr 0x7fc9d50263a8 <col:12, col:22> 'int64_t':'long' <IntegralCast>
+          | | |     |       |   `-IntegerLiteral 0x7fc9d5026378 <col:22> 'int' 255
+          | | |     |       `-IntegerLiteral 0x7fc9d50263f0 <col:31> 'int' 32
+          | | |     `-IntegerLiteral 0x7fc9d50264b8 <col:39> 'int' 8
+          | | `-ParenExpr 0x7fc9d50266f8 <line:21:4, col:41> 'long'
+          | |   `-BinaryOperator 0x7fc9d50266d0 <col:5, col:39> 'long' '>>'
+          | |     |-ParenExpr 0x7fc9d5026690 <col:5, col:34> 'long'
+          | |     | `-BinaryOperator 0x7fc9d5026668 <col:6, col:33> 'long' '&'
+          | |     |   |-ImplicitCastExpr 0x7fc9d5026650 <col:6> 'int64_t':'long' <LValueToRValue>
+          | |     |   | `-DeclRefExpr 0x7fc9d5026548 <col:6> 'int64_t':'long' lvalue ParmVar 0x7fc9d5025a00 'n' 'int64_t':'long'
+          | |     |   `-ParenExpr 0x7fc9d5026630 <col:10, col:33> 'int64_t':'long'
+          | |     |     `-BinaryOperator 0x7fc9d5026608 <col:11, col:31> 'int64_t':'long' '<<'
+          | |     |       |-ParenExpr 0x7fc9d50265c8 <col:11, col:26> 'int64_t':'long'
+          | |     |       | `-CStyleCastExpr 0x7fc9d50265a0 <col:12, col:22> 'int64_t':'long' <IntegralCast>
+          | |     |       |   `-IntegerLiteral 0x7fc9d5026570 <col:22> 'int' 255
+          | |     |       `-IntegerLiteral 0x7fc9d50265e8 <col:31> 'int' 40
+          | |     `-IntegerLiteral 0x7fc9d50266b0 <col:39> 'int' 24
+          | `-ParenExpr 0x7fc9d50268f0 <line:22:4, col:41> 'long'
+          |   `-BinaryOperator 0x7fc9d50268c8 <col:5, col:39> 'long' '>>'
+          |     |-ParenExpr 0x7fc9d5026888 <col:5, col:34> 'long'
+          |     | `-BinaryOperator 0x7fc9d5026860 <col:6, col:33> 'long' '&'
+          |     |   |-ImplicitCastExpr 0x7fc9d5026848 <col:6> 'int64_t':'long' <LValueToRValue>
+          |     |   | `-DeclRefExpr 0x7fc9d5026740 <col:6> 'int64_t':'long' lvalue ParmVar 0x7fc9d5025a00 'n' 'int64_t':'long'
+          |     |   `-ParenExpr 0x7fc9d5026828 <col:10, col:33> 'int64_t':'long'
+          |     |     `-BinaryOperator 0x7fc9d5026800 <col:11, col:31> 'int64_t':'long' '<<'
+          |     |       |-ParenExpr 0x7fc9d50267c0 <col:11, col:26> 'int64_t':'long'
+          |     |       | `-CStyleCastExpr 0x7fc9d5026798 <col:12, col:22> 'int64_t':'long' <IntegralCast>
+          |     |       |   `-IntegerLiteral 0x7fc9d5026768 <col:22> 'int' 255
+          |     |       `-IntegerLiteral 0x7fc9d50267e0 <col:31> 'int' 48
+          |     `-IntegerLiteral 0x7fc9d50268a8 <col:39> 'int' 40
+          `-ParenExpr 0x7fc9d5027af0 <line:23:4, col:41> 'long'
+            `-BinaryOperator 0x7fc9d5027ac8 <col:5, col:39> 'long' '>>'
+              |-ParenExpr 0x7fc9d5027a88 <col:5, col:34> 'long'
+              | `-BinaryOperator 0x7fc9d5027a60 <col:6, col:33> 'long' '&'
+              |   |-ImplicitCastExpr 0x7fc9d5027a48 <col:6> 'int64_t':'long' <LValueToRValue>
+              |   | `-DeclRefExpr 0x7fc9d5026938 <col:6> 'int64_t':'long' lvalue ParmVar 0x7fc9d5025a00 'n' 'int64_t':'long'
+              |   `-ParenExpr 0x7fc9d5027a28 <col:10, col:33> 'int64_t':'long'
+              |     `-BinaryOperator 0x7fc9d5027a00 <col:11, col:31> 'int64_t':'long' '<<'
+              |       |-ParenExpr 0x7fc9d50269b8 <col:11, col:26> 'int64_t':'long'
+              |       | `-CStyleCastExpr 0x7fc9d5026990 <col:12, col:22> 'int64_t':'long' <IntegralCast>
+              |       |   `-IntegerLiteral 0x7fc9d5026960 <col:22> 'int' 255
+              |       `-IntegerLiteral 0x7fc9d50269d8 <col:31> 'int' 56
+              `-IntegerLiteral 0x7fc9d5027aa8 <col:39> 'int' 56

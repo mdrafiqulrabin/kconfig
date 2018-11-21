@@ -1,0 +1,40 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+        Constant: int, 5
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+        Constant: int, 6
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: __builtin_snprintf
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 0
+            Constant: string, "a%nb%nc"
+            UnaryOp: &
+              ID: a
+            UnaryOp: &
+              ID: b
+      If: 
+        BinaryOp: !=
+          BinaryOp: +
+            BinaryOp: +
+              ID: a
+              ID: b
+            ID: c
+          Constant: int, 6
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

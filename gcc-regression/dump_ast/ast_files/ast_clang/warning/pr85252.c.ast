@@ -1,0 +1,36 @@
+c_files/pr85252.c:8:22: warning: initializer-string for char array is too long
+  static char b[0] = "b";       /* { dg-warning "initializer-string for array of chars is too long" } */
+                     ^~~
+c_files/pr85252.c:10:22: warning: initializer-string for char array is too long
+  static char d[1] = "de";      /* { dg-warning "initializer-string for array of chars is too long" } */
+                     ^~~~
+2 warnings generated.
+TranslationUnitDecl 0x7fb33e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb33e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb33e026740 '__int128'
+|-TypedefDecl 0x7fb33e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb33e026760 'unsigned __int128'
+|-TypedefDecl 0x7fb33e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb33e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb33e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb33e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb33e026dc0 'char *'
+|   `-BuiltinType 0x7fb33e026560 'char'
+|-TypedefDecl 0x7fb33e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb33e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb33e026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb33e026e58 '__va_list_tag'
+`-FunctionDecl 0x7fb33e825a00 <c_files/pr85252.c:4:1, line:11:1> line:5:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb33e825f70 <line:6:1, line:11:1>
+    |-DeclStmt 0x7fb33e825c20 <line:7:3, col:24>
+    | `-VarDecl 0x7fb33e825b58 <col:3, col:22> col:15 a 'char [0]' static cinit
+    |   `-StringLiteral 0x7fb33e825bf8 <col:22> 'char [0]' lvalue ""
+    |-DeclStmt 0x7fb33e825d48 <line:8:3, col:25>
+    | `-VarDecl 0x7fb33e825c78 <col:3, col:22> col:15 b 'char [0]' static cinit
+    |   `-StringLiteral 0x7fb33e825d18 <col:22> 'char [0]' lvalue "b"
+    |-DeclStmt 0x7fb33e825e30 <line:9:3, col:25>
+    | `-VarDecl 0x7fb33e825da0 <col:3, col:22> col:15 c 'char [1]' static cinit
+    |   `-StringLiteral 0x7fb33e825e00 <col:22> 'char [1]' lvalue "c"
+    `-DeclStmt 0x7fb33e825f58 <line:10:3, col:26>
+      `-VarDecl 0x7fb33e825e88 <col:3, col:22> col:15 d 'char [1]' static cinit
+        `-StringLiteral 0x7fb33e825f28 <col:22> 'char [1]' lvalue "de"

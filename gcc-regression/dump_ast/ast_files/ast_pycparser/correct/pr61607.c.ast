@@ -1,0 +1,75 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dst, [], [], []
+            ArrayDecl: []
+              TypeDecl: dst, []
+                IdentifierType: ['int']
+              Constant: int, 3
+          Decl: R, [], [], []
+            TypeDecl: R, []
+              IdentifierType: ['int']
+        TypeDecl: f2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: inter, [], [], []
+        ArrayDecl: []
+          TypeDecl: inter, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      Decl: inter0p, [], [], []
+        TypeDecl: inter0p, []
+          IdentifierType: ['_Bool']
+        Constant: int, 0
+      Decl: inter1p, [], [], []
+        TypeDecl: inter1p, []
+          IdentifierType: ['_Bool']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 1
+        BinaryOp: <
+          ID: i
+          ID: R
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: inter0p
+            Constant: int, 1
+          Assignment: =
+            ID: inter1p
+            Constant: int, 1
+      If: 
+        ID: inter0p
+        Assignment: =
+          ArrayRef: 
+            ID: inter
+            Constant: int, 0
+          Constant: int, 1
+      If: 
+        ID: inter1p
+        Assignment: =
+          ArrayRef: 
+            ID: inter
+            Constant: int, 1
+          Constant: int, 1
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: inter

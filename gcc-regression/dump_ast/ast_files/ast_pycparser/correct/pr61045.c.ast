@@ -1,0 +1,33 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+        ID: __INT_MAX__
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['int']
+        BinaryOp: >
+          BinaryOp: -
+            ID: a
+            Constant: int, 2
+          BinaryOp: -
+            ID: b
+            Constant: int, 1
+      If: 
+        BinaryOp: !=
+          ID: t
+          Constant: int, 0
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

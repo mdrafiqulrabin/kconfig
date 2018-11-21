@@ -1,0 +1,83 @@
+TranslationUnitDecl 0x7f8ce780bad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8ce780c020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8ce780bd40 '__int128'
+|-TypedefDecl 0x7f8ce780c090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8ce780bd60 'unsigned __int128'
+|-TypedefDecl 0x7f8ce780c368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8ce780c170 'struct __NSConstantString_tag'
+|   `-Record 0x7f8ce780c0e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8ce780c400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8ce780c3c0 'char *'
+|   `-BuiltinType 0x7f8ce780bb60 'char'
+|-TypedefDecl 0x7f8ce780c6c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8ce780c670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8ce780c4e0 'struct __va_list_tag'
+|     `-Record 0x7f8ce780c458 '__va_list_tag'
+|-VarDecl 0x7f8ce780c738 <c_files/pr35356-3.c:4:1, col:5> col:5 used winner 'int'
+|-VarDecl 0x7f8ce7837600 <col:1, col:13> col:13 used numf2s 'int'
+|-VarDecl 0x7f8ce78376f8 <line:5:1, col:10> col:10 used tds 'double **'
+|-VarDecl 0x7f8ce7837770 <line:6:1, col:8> col:8 used d 'double'
+|-VarDecl 0x7f8ce78377e8 <col:1, col:11> col:11 used tsum 'double'
+|-RecordDecl 0x7f8ce7837860 <line:8:9, line:10:1> line:8:9 struct definition
+| `-FieldDecl 0x7f8ce7837928 <line:9:3, col:10> col:10 referenced y 'double'
+|-TypedefDecl 0x7f8ce78379c0 <line:8:1, line:10:3> col:3 referenced xyz 'struct xyz':'xyz'
+| `-ElaboratedType 0x7f8ce7837970 'struct xyz' sugar
+|   `-RecordType 0x7f8ce78378f0 'xyz'
+|     `-Record 0x7f8ce7837860 ''
+|-VarDecl 0x7f8ce7837ab8 <line:12:1, col:6> col:6 used Y 'xyz *'
+|-VarDecl 0x7f8ce7837b30 <line:13:1, col:5> col:5 used ti 'int'
+`-FunctionDecl 0x7f8ce7837c58 <line:15:1, line:26:1> line:16:1 match 'double (void)'
+  `-CompoundStmt 0x7f8ce7838468 <line:17:1, line:26:1>
+    |-DeclStmt 0x7f8ce7837df8 <line:18:3, col:18>
+    | |-VarDecl 0x7f8ce7837d08 <col:3, col:7> col:7 used tj 'int'
+    | `-VarDecl 0x7f8ce7837d80 <col:3, col:11> col:11 tresult 'int'
+    |-ForStmt 0x7f8ce78383d8 <line:20:3, line:23:29>
+    | |-BinaryOperator 0x7f8ce7837e58 <line:20:8, col:13> 'int' '='
+    | | |-DeclRefExpr 0x7f8ce7837e10 <col:8> 'int' lvalue Var 0x7f8ce7837d08 'tj' 'int'
+    | | `-IntegerLiteral 0x7f8ce7837e38 <col:13> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8ce7837f00 <col:16, col:21> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f8ce7837ed0 <col:16> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f8ce7837e80 <col:16> 'int' lvalue Var 0x7f8ce7837d08 'tj' 'int'
+    | | `-ImplicitCastExpr 0x7f8ce7837ee8 <col:21> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f8ce7837ea8 <col:21> 'int' lvalue Var 0x7f8ce7837600 'numf2s' 'int'
+    | |-UnaryOperator 0x7f8ce7837f50 <col:29, col:31> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7f8ce7837f28 <col:29> 'int' lvalue Var 0x7f8ce7837d08 'tj' 'int'
+    | `-IfStmt 0x7f8ce78383a0 <line:21:5, line:23:29>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7f8ce7838170 <line:21:9, line:22:15> 'int' '&&'
+    |   | |-BinaryOperator 0x7f8ce7837ff0 <line:21:9, col:15> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7f8ce7837fc0 <col:9> 'int' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x7f8ce7837f70 <col:9> 'int' lvalue Var 0x7f8ce7837d08 'tj' 'int'
+    |   | | `-ImplicitCastExpr 0x7f8ce7837fd8 <col:15> 'int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7f8ce7837f98 <col:15> 'int' lvalue Var 0x7f8ce780c738 'winner' 'int'
+    |   | `-BinaryOperator 0x7f8ce7838148 <line:22:5, col:15> 'int' '>'
+    |   |   |-ImplicitCastExpr 0x7f8ce7838118 <col:5, col:11> 'double' <LValueToRValue>
+    |   |   | `-MemberExpr 0x7f8ce78380c0 <col:5, col:11> 'double' lvalue .y 0x7f8ce7837928
+    |   |   |   `-ArraySubscriptExpr 0x7f8ce7838098 <col:5, col:9> 'xyz':'xyz' lvalue
+    |   |   |     |-ImplicitCastExpr 0x7f8ce7838068 <col:5> 'xyz *' <LValueToRValue>
+    |   |   |     | `-DeclRefExpr 0x7f8ce7838018 <col:5> 'xyz *' lvalue Var 0x7f8ce7837ab8 'Y' 'xyz *'
+    |   |   |     `-ImplicitCastExpr 0x7f8ce7838080 <col:7> 'int' <LValueToRValue>
+    |   |   |       `-DeclRefExpr 0x7f8ce7838040 <col:7> 'int' lvalue Var 0x7f8ce7837d08 'tj' 'int'
+    |   |   `-ImplicitCastExpr 0x7f8ce7838130 <col:15> 'double' <IntegralToFloating>
+    |   |     `-IntegerLiteral 0x7f8ce78380f8 <col:15> 'int' 0
+    |   |-CompoundAssignOperator 0x7f8ce7838368 <line:23:7, col:29> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |-DeclRefExpr 0x7f8ce7838198 <col:7> 'double' lvalue Var 0x7f8ce78377e8 'tsum' 'double'
+    |   | `-BinaryOperator 0x7f8ce7838340 <col:15, col:29> 'double' '*'
+    |   |   |-ImplicitCastExpr 0x7f8ce7838310 <col:15, col:25> 'double' <LValueToRValue>
+    |   |   | `-ArraySubscriptExpr 0x7f8ce78382c0 <col:15, col:25> 'double' lvalue
+    |   |   |   |-ImplicitCastExpr 0x7f8ce7838290 <col:15, col:21> 'double *' <LValueToRValue>
+    |   |   |   | `-ArraySubscriptExpr 0x7f8ce7838240 <col:15, col:21> 'double *' lvalue
+    |   |   |   |   |-ImplicitCastExpr 0x7f8ce7838210 <col:15> 'double **' <LValueToRValue>
+    |   |   |   |   | `-DeclRefExpr 0x7f8ce78381c0 <col:15> 'double **' lvalue Var 0x7f8ce78376f8 'tds' 'double **'
+    |   |   |   |   `-ImplicitCastExpr 0x7f8ce7838228 <col:19> 'int' <LValueToRValue>
+    |   |   |   |     `-DeclRefExpr 0x7f8ce78381e8 <col:19> 'int' lvalue Var 0x7f8ce7837b30 'ti' 'int'
+    |   |   |   `-ImplicitCastExpr 0x7f8ce78382a8 <col:23> 'int' <LValueToRValue>
+    |   |   |     `-DeclRefExpr 0x7f8ce7838268 <col:23> 'int' lvalue Var 0x7f8ce7837d08 'tj' 'int'
+    |   |   `-ImplicitCastExpr 0x7f8ce7838328 <col:29> 'double' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7f8ce78382e8 <col:29> 'double' lvalue Var 0x7f8ce7837770 'd' 'double'
+    |   `-<<<NULL>>>
+    `-ReturnStmt 0x7f8ce7838450 <line:25:3, col:10>
+      `-ImplicitCastExpr 0x7f8ce7838438 <col:10> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7f8ce7838410 <col:10> 'double' lvalue Var 0x7f8ce78377e8 'tsum' 'double'

@@ -1,0 +1,113 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: count, [], [], []
+            TypeDecl: count, []
+              IdentifierType: ['int']
+          Decl: list, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: list, []
+                  IdentifierType: ['char']
+        PtrDecl: []
+          TypeDecl: foo, []
+            IdentifierType: ['char']
+    Compound: 
+      Decl: minaddr, [], [], []
+        PtrDecl: []
+          TypeDecl: minaddr, []
+            IdentifierType: ['char']
+        ArrayRef: 
+          ID: list
+          Constant: int, 0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: count
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: addr, [], [], []
+            PtrDecl: []
+              TypeDecl: addr, []
+                IdentifierType: ['char']
+            ArrayRef: 
+              ID: list
+              ID: i
+          If: 
+            BinaryOp: <
+              ID: addr
+              ID: minaddr
+            Assignment: =
+              ID: minaddr
+              ID: addr
+      Return: 
+        ID: minaddr
+  FuncDef: 
+    Decl: foo2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: count, [], [], []
+            TypeDecl: count, []
+              IdentifierType: ['int']
+          Decl: list, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: list, []
+                  IdentifierType: ['char']
+        PtrDecl: []
+          TypeDecl: foo2, []
+            IdentifierType: ['char']
+    Compound: 
+      Decl: maxaddr, [], [], []
+        PtrDecl: []
+          TypeDecl: maxaddr, []
+            IdentifierType: ['char']
+        ArrayRef: 
+          ID: list
+          Constant: int, 0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: count
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: addr, [], [], []
+            PtrDecl: []
+              TypeDecl: addr, []
+                IdentifierType: ['char']
+            ArrayRef: 
+              ID: list
+              ID: i
+          If: 
+            BinaryOp: >
+              ID: addr
+              ID: maxaddr
+            Assignment: =
+              ID: maxaddr
+              ID: addr
+      Return: 
+        ID: maxaddr

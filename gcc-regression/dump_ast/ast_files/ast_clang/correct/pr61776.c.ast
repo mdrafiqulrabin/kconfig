@@ -1,0 +1,102 @@
+TranslationUnitDecl 0x7fe0360264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe036026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe036026740 '__int128'
+|-TypedefDecl 0x7fe036026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe036026760 'unsigned __int128'
+|-TypedefDecl 0x7fe036026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe036026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe036026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe036026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe036026dc0 'char *'
+|   `-BuiltinType 0x7fe036026560 'char'
+|-TypedefDecl 0x7fe0360270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe036027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe036026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe036026e58 '__va_list_tag'
+|-TypedefDecl 0x7fe03689c8d0 </usr/include/setjmp.h:37:1, col:27> col:13 referenced jmp_buf 'int [37]'
+| `-ConstantArrayType 0x7fe03689c870 'int [37]' 37 
+|   `-BuiltinType 0x7fe0360265c0 'int'
+|-TypedefDecl 0x7fe03689cb10 <line:38:1, col:34> col:13 referenced sigjmp_buf 'int [38]'
+| `-ConstantArrayType 0x7fe03689cab0 'int [38]' 38 
+|   `-BuiltinType 0x7fe0360265c0 'int'
+|-FunctionDecl 0x7fe03689cd08 <line:87:12> col:12 implicit used setjmp 'int (int *)' extern
+| |-ParmVarDecl 0x7fe03689cda0 <<invalid sloc>> <invalid sloc> 'int *'
+| `-ReturnsTwiceAttr 0x7fe03689ce08 <col:12> Implicit
+|-FunctionDecl 0x7fe03689ce50 prev 0x7fe03689cd08 <col:1, col:26> col:12 used setjmp 'int (int *)' extern
+| |-ParmVarDecl 0x7fe03689cc00 <col:19> col:26 'int *':'int *'
+| `-ReturnsTwiceAttr 0x7fe03689cf28 <col:12> Inherited Implicit
+|-FunctionDecl 0x7fe03689d150 <line:88:13> col:13 implicit longjmp 'void (int *, int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7fe03689d1e8 <<invalid sloc>> <invalid sloc> 'int *'
+| `-ParmVarDecl 0x7fe03689d248 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fe03689d2b8 prev 0x7fe03689d150 <col:1, /usr/include/sys/cdefs.h:155:42> /usr/include/setjmp.h:88:13 longjmp 'void (int *, int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7fe03689cf48 <col:21> col:28 'int *':'int *'
+| `-ParmVarDecl 0x7fe03689cfc0 <col:30> col:33 'int'
+|-FunctionDecl 0x7fe03689d400 <line:91:5> col:5 implicit _setjmp 'int (int *)' extern
+| |-ParmVarDecl 0x7fe03689d498 <<invalid sloc>> <invalid sloc> 'int *'
+| `-ReturnsTwiceAttr 0x7fe03689d500 <col:5> Implicit
+|-FunctionDecl 0x7fe03689d548 prev 0x7fe03689d400 <col:1, col:20> col:5 _setjmp 'int (int *)'
+| |-ParmVarDecl 0x7fe03689d370 <col:13> col:20 'int *':'int *'
+| `-ReturnsTwiceAttr 0x7fe03689d620 <col:5> Inherited Implicit
+|-FunctionDecl 0x7fe03689d748 <line:92:6> col:6 implicit _longjmp 'void (int *, int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7fe03689e800 <<invalid sloc>> <invalid sloc> 'int *'
+| `-ParmVarDecl 0x7fe03689e860 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fe03689e8d0 prev 0x7fe03689d748 <col:1, /usr/include/sys/cdefs.h:155:42> /usr/include/setjmp.h:92:6 _longjmp 'void (int *, int) __attribute__((noreturn))'
+| |-ParmVarDecl 0x7fe03689d640 <col:15> col:22 'int *':'int *'
+| `-ParmVarDecl 0x7fe03689d6b8 <col:24> col:27 'int'
+|-FunctionDecl 0x7fe03689eb78 <line:93:5> col:5 implicit sigsetjmp 'int (int *, int)' extern
+| |-ParmVarDecl 0x7fe03689ec10 <<invalid sloc>> <invalid sloc> 'int *'
+| |-ParmVarDecl 0x7fe03689ec70 <<invalid sloc>> <invalid sloc> 'int'
+| `-ReturnsTwiceAttr 0x7fe03689ece0 <col:5> Implicit
+|-FunctionDecl 0x7fe03689ed28 prev 0x7fe03689eb78 <col:1, col:30> col:5 sigsetjmp 'int (int *, int)'
+| |-ParmVarDecl 0x7fe03689e9e0 <col:15> col:25 'int *':'int *'
+| |-ParmVarDecl 0x7fe03689ea58 <col:27> col:30 'int'
+| `-ReturnsTwiceAttr 0x7fe03689ee08 <col:5> Inherited Implicit
+|-FunctionDecl 0x7fe03689efb0 <line:94:6> col:6 implicit siglongjmp 'void (int *, int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7fe03689f048 <<invalid sloc>> <invalid sloc> 'int *'
+| `-ParmVarDecl 0x7fe03689f0a8 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fe03689f118 prev 0x7fe03689efb0 <col:1, /usr/include/sys/cdefs.h:155:42> /usr/include/setjmp.h:94:6 siglongjmp 'void (int *, int) __attribute__((noreturn))'
+| |-ParmVarDecl 0x7fe03689ee28 <col:17> col:27 'int *':'int *'
+| `-ParmVarDecl 0x7fe03689eea0 <col:29> col:32 'int'
+|-FunctionDecl 0x7fe03689f280 <line:98:1, col:23> col:6 longjmperror 'void (void)'
+|-VarDecl 0x7fe03689f370 <c_files/pr61776.c:7:1, col:5> col:5 used cond1 'int'
+|-VarDecl 0x7fe03689f3e8 <col:1, col:12> col:12 used cond2 'int'
+|-FunctionDecl 0x7fe03689f4b0 <line:9:1, col:35> col:5 used goo 'int ()'
+| `-NoInlineAttr 0x7fe03689f548 <col:26>
+|-FunctionDecl 0x7fe03689f5b8 prev 0x7fe03689f4b0 <line:11:1, line:16:1> line:11:5 used goo 'int ()'
+| |-CompoundStmt 0x7fe03689f780 <col:11, line:16:1>
+| | `-IfStmt 0x7fe03689f748 <line:12:2, line:15:11>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-ImplicitCastExpr 0x7fe03689f6c0 <line:12:6> 'int' <LValueToRValue>
+| |   | `-DeclRefExpr 0x7fe03689f698 <col:6> 'int' lvalue Var 0x7fe03689f370 'cond1' 'int'
+| |   |-ReturnStmt 0x7fe03689f6f8 <line:13:4, col:11>
+| |   | `-IntegerLiteral 0x7fe03689f6d8 <col:11> 'int' 1
+| |   `-ReturnStmt 0x7fe03689f730 <line:15:4, col:11>
+| |     `-IntegerLiteral 0x7fe03689f710 <col:11> 'int' 2
+| `-NoInlineAttr 0x7fe03689f688 <line:9:26> Inherited
+|-VarDecl 0x7fe0368a0800 <line:18:1, col:9> col:9 used env 'jmp_buf':'int [37]'
+`-FunctionDecl 0x7fe0368a0888 <line:19:1, line:28:1> line:19:5 foo 'int ()'
+  `-CompoundStmt 0x7fe0368a0cb0 <col:11, line:28:1>
+    |-DeclStmt 0x7fe0368a0998 <line:20:2, col:7>
+    | `-VarDecl 0x7fe0368a0938 <col:2, col:6> col:6 used a 'int'
+    |-CallExpr 0x7fe0368a0a40 <line:22:2, col:12> 'int'
+    | |-ImplicitCastExpr 0x7fe0368a0a28 <col:2> 'int (*)(int *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe0368a09b0 <col:2> 'int (int *)' Function 0x7fe03689ce50 'setjmp' 'int (int *)'
+    | `-ImplicitCastExpr 0x7fe0368a0a70 <col:9> 'int *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7fe0368a09d8 <col:9> 'jmp_buf':'int [37]' lvalue Var 0x7fe0368a0800 'env' 'jmp_buf':'int [37]'
+    |-IfStmt 0x7fe0368a0c20 <line:23:2, line:26:8>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fe0368a0ab0 <line:23:6> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe0368a0a88 <col:6> 'int' lvalue Var 0x7fe03689f3e8 'cond2' 'int'
+    | |-BinaryOperator 0x7fe0368a0b88 <line:24:4, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fe0368a0ac8 <col:4> 'int' lvalue Var 0x7fe0368a0938 'a' 'int'
+    | | `-CallExpr 0x7fe0368a0b60 <col:8, col:12> 'int'
+    | |   `-ImplicitCastExpr 0x7fe0368a0b48 <col:8> 'int (*)()' <FunctionToPointerDecay>
+    | |     `-DeclRefExpr 0x7fe0368a0af0 <col:8> 'int ()' Function 0x7fe03689f5b8 'goo' 'int ()'
+    | `-BinaryOperator 0x7fe0368a0bf8 <line:26:4, col:8> 'int' '='
+    |   |-DeclRefExpr 0x7fe0368a0bb0 <col:4> 'int' lvalue Var 0x7fe0368a0938 'a' 'int'
+    |   `-IntegerLiteral 0x7fe0368a0bd8 <col:8> 'int' 3
+    `-ReturnStmt 0x7fe0368a0c98 <line:27:2, col:9>
+      `-ImplicitCastExpr 0x7fe0368a0c80 <col:9> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fe0368a0c58 <col:9> 'int' lvalue Var 0x7fe0368a0938 'a' 'int'

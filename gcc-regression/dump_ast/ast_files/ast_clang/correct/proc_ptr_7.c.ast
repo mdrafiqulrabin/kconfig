@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fd1198264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd119826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd119826740 '__int128'
+|-TypedefDecl 0x7fd119826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd119826760 'unsigned __int128'
+|-TypedefDecl 0x7fd119826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd119826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd119826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd119826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd119826dc0 'char *'
+|   `-BuiltinType 0x7fd119826560 'char'
+|-TypedefDecl 0x7fd1198270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd119827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd119826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd119826e58 '__va_list_tag'
+|-FunctionDecl 0x7fd11a025a00 <c_files/proc_ptr_7.c:4:1, line:6:1> line:4:5 used f 'int (void)'
+| `-CompoundStmt 0x7fd11a025b10 <col:13, line:6:1>
+|   `-ReturnStmt 0x7fd11a025af8 <line:5:3, col:10>
+|     `-IntegerLiteral 0x7fd11a025ad8 <col:10> 'int' 42
+`-FunctionDecl 0x7fd11a025dc0 <line:8:1, line:10:1> line:8:6 assignf_ 'void (int (**)(void))'
+  |-ParmVarDecl 0x7fd11a025cc0 <col:15, col:30> col:21 used ptr 'int (**)(void)'
+  `-CompoundStmt 0x7fd11a025f28 <col:33, line:10:1>
+    `-BinaryOperator 0x7fd11a025f00 <line:9:3, col:10> 'int (*)(void)' '='
+      |-UnaryOperator 0x7fd11a025ea0 <col:3, col:4> 'int (*)(void)' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fd11a025e88 <col:4> 'int (**)(void)' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fd11a025e60 <col:4> 'int (**)(void)' lvalue ParmVar 0x7fd11a025cc0 'ptr' 'int (**)(void)'
+      `-ImplicitCastExpr 0x7fd11a025ee8 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fd11a025ec0 <col:10> 'int (void)' Function 0x7fd11a025a00 'f' 'int (void)'

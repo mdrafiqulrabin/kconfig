@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7faf480264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faf48026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faf48026740 '__int128'
+|-TypedefDecl 0x7faf48026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faf48026760 'unsigned __int128'
+|-TypedefDecl 0x7faf48026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faf48026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faf48026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faf48026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faf48026dc0 'char *'
+|   `-BuiltinType 0x7faf48026560 'char'
+|-TypedefDecl 0x7faf480270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faf48027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faf48026ee0 'struct __va_list_tag'
+|     `-Record 0x7faf48026e58 '__va_list_tag'
+|-RecordDecl 0x7faf48027120 <c_files/pr41282.c:1:1, line:4:1> line:1:8 struct S definition
+| `-FieldDecl 0x7faf48825a00 <line:3:3, col:16> col:16 iu 'unsigned int'
+|-RecordDecl 0x7faf48825a48 <line:6:1, line:10:1> line:6:7 union U definition
+| |-FieldDecl 0x7faf48825b40 <line:8:3, col:12> col:12 referenced s 'struct S':'struct S'
+| `-FieldDecl 0x7faf48825ba0 <line:9:3, col:14> col:14 referenced is 'int'
+|-FunctionDecl 0x7faf48825c80 <line:12:1, col:24> col:19 used bar 'int ()' extern
+`-FunctionDecl 0x7faf48825e60 <line:14:1, line:20:1> line:14:10 foo 'struct S (void)'
+  `-CompoundStmt 0x7faf488261c0 <line:15:1, line:20:1>
+    |-DeclStmt 0x7faf48825fb0 <line:16:3, col:12>
+    | `-VarDecl 0x7faf48825f50 <col:3, col:11> col:11 used u 'union U':'union U'
+    |-BinaryOperator 0x7faf488260b8 <line:18:3, col:15> 'int' '='
+    | |-MemberExpr 0x7faf48825ff0 <col:3, col:5> 'int' lvalue .is 0x7faf48825ba0
+    | | `-DeclRefExpr 0x7faf48825fc8 <col:3> 'union U':'union U' lvalue Var 0x7faf48825f50 'u' 'union U':'union U'
+    | `-CallExpr 0x7faf48826090 <col:10, col:15> 'int'
+    |   `-ImplicitCastExpr 0x7faf48826078 <col:10> 'int (*)()' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7faf48826028 <col:10> 'int ()' Function 0x7faf48825c80 'bar' 'int ()'
+    `-ReturnStmt 0x7faf488261a8 <line:19:3, col:12>
+      `-ImplicitCastExpr 0x7faf48826190 <col:10, col:12> 'struct S':'struct S' <LValueToRValue>
+        `-MemberExpr 0x7faf48826158 <col:10, col:12> 'struct S':'struct S' lvalue .s 0x7faf48825b40
+          `-DeclRefExpr 0x7faf48826130 <col:10> 'union U':'union U' lvalue Var 0x7faf48825f50 'u' 'union U':'union U'

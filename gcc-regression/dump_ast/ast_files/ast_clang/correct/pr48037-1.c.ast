@@ -1,0 +1,58 @@
+TranslationUnitDecl 0x7f99910264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9991026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9991026740 '__int128'
+|-TypedefDecl 0x7f9991026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9991026760 'unsigned __int128'
+|-TypedefDecl 0x7f9991026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9991026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9991026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9991026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9991026dc0 'char *'
+|   `-BuiltinType 0x7f9991026560 'char'
+|-TypedefDecl 0x7f99910270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9991027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9991026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9991026e58 '__va_list_tag'
+|-TypedefDecl 0x7f9991027178 <c_files/pr48037-1.c:4:1, col:16> col:16 referenced __m128d '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7f9991027140 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7f99910266e0 'double'
+|-FunctionDecl 0x7f9991826b00 <line:5:1, line:11:1> line:5:9 vsqrt1 '__m128d (const __m128d)'
+| |-ParmVarDecl 0x7f9991826a00 <col:17, col:31> col:31 used x 'const __m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double const'
+| `-CompoundStmt 0x7f9991827428 <line:6:1, line:11:1>
+|   |-DeclStmt 0x7f9991826d90 <line:7:3, col:57>
+|   | `-VarDecl 0x7f9991826c20 <col:3, col:56> col:36 used y 'const double *const __restrict' cinit
+|   |   `-CStyleCastExpr 0x7f9991826d68 <col:40, col:56> 'const double *' <BitCast>
+|   |     `-UnaryOperator 0x7f9991826d08 <col:55, col:56> 'const __m128d *' prefix '&'
+|   |       `-DeclRefExpr 0x7f9991826c80 <col:56> 'const __m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double const' lvalue ParmVar 0x7f9991826a00 'x' 'const __m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double const'
+|   |-DeclStmt 0x7f99918270e8 <line:8:3, col:40>
+|   | `-VarDecl 0x7f9991826dc0 <col:3, col:39> col:16 used a 'const double' cinit
+|   |   `-CallExpr 0x7f99918270a0 <col:20, col:39> 'double'
+|   |     |-ImplicitCastExpr 0x7f9991827088 <col:20> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f9991826fb0 <col:20> '<builtin fn type>' Function 0x7f9991826e58 '__builtin_sqrt' 'double (double)'
+|   |     `-ImplicitCastExpr 0x7f99918270d0 <col:35, col:38> 'double' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7f9991827038 <col:35, col:38> 'const double' lvalue
+|   |         |-ImplicitCastExpr 0x7f9991827020 <col:35> 'const double *' <LValueToRValue>
+|   |         | `-DeclRefExpr 0x7f9991826fd8 <col:35> 'const double *const __restrict' lvalue Var 0x7f9991826c20 'y' 'const double *const __restrict'
+|   |         `-IntegerLiteral 0x7f9991827000 <col:37> 'int' 0
+|   |-DeclStmt 0x7f9991827288 <line:9:3, col:40>
+|   | `-VarDecl 0x7f9991827118 <col:3, col:39> col:16 used b 'const double' cinit
+|   |   `-CallExpr 0x7f9991827240 <col:20, col:39> 'double'
+|   |     |-ImplicitCastExpr 0x7f9991827228 <col:20> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f9991827178 <col:20> '<builtin fn type>' Function 0x7f9991826e58 '__builtin_sqrt' 'double (double)'
+|   |     `-ImplicitCastExpr 0x7f9991827270 <col:35, col:38> 'double' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7f9991827200 <col:35, col:38> 'const double' lvalue
+|   |         |-ImplicitCastExpr 0x7f99918271e8 <col:35> 'const double *' <LValueToRValue>
+|   |         | `-DeclRefExpr 0x7f99918271a0 <col:35> 'const double *const __restrict' lvalue Var 0x7f9991826c20 'y' 'const double *const __restrict'
+|   |         `-IntegerLiteral 0x7f99918271c8 <col:37> 'int' 1
+|   `-ReturnStmt 0x7f9991827410 <line:10:3, col:27>
+|     `-ImplicitCastExpr 0x7f99918273f8 <col:10, col:27> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|       `-CompoundLiteralExpr 0x7f99918273d0 <col:10, col:27> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue
+|         `-InitListExpr 0x7f9991827350 <col:20, col:27> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|           |-ImplicitCastExpr 0x7f99918273a0 <col:22> 'double' <LValueToRValue>
+|           | `-DeclRefExpr 0x7f99918272b0 <col:22> 'const double' lvalue Var 0x7f9991826dc0 'a' 'const double'
+|           `-ImplicitCastExpr 0x7f99918273b8 <col:25> 'double' <LValueToRValue>
+|             `-DeclRefExpr 0x7f99918272d8 <col:25> 'const double' lvalue Var 0x7f9991827118 'b' 'const double'
+`-FunctionDecl 0x7f9991826e58 <line:8:20> col:20 implicit used __builtin_sqrt 'double (double)' extern
+  |-ParmVarDecl 0x7f9991826ef0 <<invalid sloc>> <invalid sloc> 'double'
+  |-NoThrowAttr 0x7f9991826f58 <col:20> Implicit
+  `-ConstAttr 0x7f9991826fa0 <col:20> Implicit

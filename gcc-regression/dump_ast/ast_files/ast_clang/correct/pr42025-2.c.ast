@@ -1,0 +1,73 @@
+TranslationUnitDecl 0x7f8c048264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8c04826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8c04826740 '__int128'
+|-TypedefDecl 0x7f8c04826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8c04826760 'unsigned __int128'
+|-TypedefDecl 0x7f8c04826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8c04826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8c04826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8c04826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8c04826dc0 'char *'
+|   `-BuiltinType 0x7f8c04826560 'char'
+|-TypedefDecl 0x7f8c048270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8c04827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8c04826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8c04826e58 '__va_list_tag'
+|-RecordDecl 0x7f8c04827120 <c_files/pr42025-2.c:1:9, line:4:1> line:1:9 struct definition
+| `-FieldDecl 0x7f8c04877400 <line:3:3, col:9> col:9 p 'void *'
+|-TypedefDecl 0x7f8c048774a0 <line:1:1, line:4:3> col:3 referenced Ptr 'struct Ptr':'Ptr'
+| `-ElaboratedType 0x7f8c04877450 'struct Ptr' sugar
+|   `-RecordType 0x7f8c048271b0 'Ptr'
+|     `-Record 0x7f8c04827120 ''
+|-RecordDecl 0x7f8c04877510 <line:6:1, line:14:1> line:6:8 struct A definition
+| |-FieldDecl 0x7f8c048775d8 <line:8:3, col:7> col:7 referenced i 'int'
+| |-RecordDecl 0x7f8c04877620 <line:9:3, line:13:3> line:9:3 union definition
+| | |-FieldDecl 0x7f8c04877700 <line:11:5, col:9> col:9 referenced p 'Ptr':'Ptr'
+| | `-FieldDecl 0x7f8c04877760 <line:12:5, col:11> col:11 referenced q 'char *'
+| `-FieldDecl 0x7f8c04877840 <line:9:3, line:13:5> col:5 referenced u 'union (anonymous union at c_files/pr42025-2.c:9:3)':'union A::(anonymous at c_files/pr42025-2.c:9:3)'
+|-FunctionDecl 0x7f8c04877980 <line:16:1, col:27> col:12 used get_stuff 'Ptr (void)' extern
+|-FunctionDecl 0x7f8c04877b30 <line:17:1, col:30> col:13 used use_stuff 'void (char *)' extern
+| `-ParmVarDecl 0x7f8c04877a70 <col:24, col:29> col:30 'char *'
+|-FunctionDecl 0x7f8c04877db0 <line:19:1, line:27:1> line:19:13 used foo 'void (struct A, char *)' static
+| |-ParmVarDecl 0x7f8c04877c20 <col:17, col:26> col:26 used p 'struct A':'struct A'
+| |-ParmVarDecl 0x7f8c04877c98 <col:29, col:35> col:35 used q 'char *'
+| `-CompoundStmt 0x7f8c048782d8 <line:20:1, line:27:1>
+|   |-IfStmt 0x7f8c04878150 <line:21:3, line:24:13>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f8c04877eb8 <line:21:7, col:9> 'int' <LValueToRValue>
+|   | | `-MemberExpr 0x7f8c04877e80 <col:7, col:9> 'int' lvalue .i 0x7f8c048775d8
+|   | |   `-DeclRefExpr 0x7f8c04877e58 <col:7> 'struct A':'struct A' lvalue ParmVar 0x7f8c04877c20 'p' 'struct A':'struct A'
+|   | |-BinaryOperator 0x7f8c04878028 <line:22:5, col:24> 'Ptr':'Ptr' '='
+|   | | |-MemberExpr 0x7f8c04877f30 <col:5, col:9> 'Ptr':'Ptr' lvalue .p 0x7f8c04877700
+|   | | | `-MemberExpr 0x7f8c04877ef8 <col:5, col:7> 'union (anonymous union at c_files/pr42025-2.c:9:3)':'union A::(anonymous at c_files/pr42025-2.c:9:3)' lvalue .u 0x7f8c04877840
+|   | | |   `-DeclRefExpr 0x7f8c04877ed0 <col:5> 'struct A':'struct A' lvalue ParmVar 0x7f8c04877c20 'p' 'struct A':'struct A'
+|   | | `-CallExpr 0x7f8c04878000 <col:13, col:24> 'Ptr':'Ptr'
+|   | |   `-ImplicitCastExpr 0x7f8c04877fe8 <col:13> 'Ptr (*)(void)' <FunctionToPointerDecay>
+|   | |     `-DeclRefExpr 0x7f8c04877f68 <col:13> 'Ptr (void)' Function 0x7f8c04877980 'get_stuff' 'Ptr (void)'
+|   | `-BinaryOperator 0x7f8c04878128 <line:24:5, col:13> 'char *' '='
+|   |   |-MemberExpr 0x7f8c048780b0 <col:5, col:9> 'char *' lvalue .q 0x7f8c04877760
+|   |   | `-MemberExpr 0x7f8c04878078 <col:5, col:7> 'union (anonymous union at c_files/pr42025-2.c:9:3)':'union A::(anonymous at c_files/pr42025-2.c:9:3)' lvalue .u 0x7f8c04877840
+|   |   |   `-DeclRefExpr 0x7f8c04878050 <col:5> 'struct A':'struct A' lvalue ParmVar 0x7f8c04877c20 'p' 'struct A':'struct A'
+|   |   `-ImplicitCastExpr 0x7f8c04878110 <col:13> 'char *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8c048780e8 <col:13> 'char *' lvalue ParmVar 0x7f8c04877c98 'q' 'char *'
+|   `-CallExpr 0x7f8c04878290 <line:26:3, col:19> 'void'
+|     |-ImplicitCastExpr 0x7f8c04878278 <col:3> 'void (*)(char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f8c04878188 <col:3> 'void (char *)' Function 0x7f8c04877b30 'use_stuff' 'void (char *)'
+|     `-ImplicitCastExpr 0x7f8c048782c0 <col:14, col:18> 'char *' <LValueToRValue>
+|       `-MemberExpr 0x7f8c04878210 <col:14, col:18> 'char *' lvalue .q 0x7f8c04877760
+|         `-MemberExpr 0x7f8c048781d8 <col:14, col:16> 'union (anonymous union at c_files/pr42025-2.c:9:3)':'union A::(anonymous at c_files/pr42025-2.c:9:3)' lvalue .u 0x7f8c04877840
+|           `-DeclRefExpr 0x7f8c048781b0 <col:14> 'struct A':'struct A' lvalue ParmVar 0x7f8c04877c20 'p' 'struct A':'struct A'
+`-FunctionDecl 0x7f8c04878510 <line:29:1, line:32:1> line:29:6 bar 'void (struct A *, char *)'
+  |-ParmVarDecl 0x7f8c04878380 <col:10, col:20> col:20 used p 'struct A *'
+  |-ParmVarDecl 0x7f8c04878400 <col:23, col:29> col:29 used q 'char *'
+  `-CompoundStmt 0x7f8c04878748 <line:30:1, line:32:1>
+    `-CallExpr 0x7f8c048786e0 <line:31:3, col:12> 'void'
+      |-ImplicitCastExpr 0x7f8c048786c8 <col:3> 'void (*)(struct A, char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8c048785b8 <col:3> 'void (struct A, char *)' Function 0x7f8c04877db0 'foo' 'void (struct A, char *)'
+      |-ImplicitCastExpr 0x7f8c04878718 <col:7, col:8> 'struct A':'struct A' <LValueToRValue>
+      | `-UnaryOperator 0x7f8c04878620 <col:7, col:8> 'struct A':'struct A' lvalue prefix '*'
+      |   `-ImplicitCastExpr 0x7f8c04878608 <col:8> 'struct A *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7f8c048785e0 <col:8> 'struct A *' lvalue ParmVar 0x7f8c04878380 'p' 'struct A *'
+      `-ImplicitCastExpr 0x7f8c04878730 <col:11> 'char *' <LValueToRValue>
+        `-DeclRefExpr 0x7f8c04878640 <col:11> 'char *' lvalue ParmVar 0x7f8c04878400 'q' 'char *'

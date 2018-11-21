@@ -1,0 +1,86 @@
+FileAST: 
+  Decl: ae, [], [], []
+    TypeDecl: ae, []
+      IdentifierType: ['int']
+  Decl: vs, [], [], []
+    TypeDecl: vs, []
+      IdentifierType: ['int']
+  Decl: ue, [], [], []
+    TypeDecl: ue, []
+      IdentifierType: ['char']
+  Decl: kc, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['char']
+      TypeDecl: kc, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: pm, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: pm, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: v9, [], [], []
+        TypeDecl: v9, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: gf, [], [], []
+        TypeDecl: gf, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Assignment: =
+        ID: vs
+        Constant: int, 1
+      While: 
+        ID: vs
+        Compound: 
+          Assignment: -=
+            ID: gf
+            ID: ue
+          FuncCall: 
+            ID: kc
+            ExprList: 
+              ID: ue
+          For: 
+            Assignment: =
+              ID: ae
+              Constant: int, 0
+            BinaryOp: <
+              ID: ae
+              Constant: int, 70
+            UnaryOp: ++
+              ID: ae
+            Compound: 
+          Assignment: &=
+            ID: ae
+            Constant: int, 4
+          BinaryOp: &&
+            BinaryOp: ^
+              ID: ae
+              BinaryOp: !=
+                ID: gf
+                Constant: int, 0
+            BinaryOp: !=
+              Assignment: =
+                ID: ue
+                Constant: int, 0
+              Constant: int, 0
+      Assignment: =
+        ID: v9
+        BinaryOp: +
+          ID: ue
+          Constant: int, 1
+      BinaryOp: &&
+        BinaryOp: -
+          ID: ue
+          ID: v9
+        BinaryOp: !=
+          Assignment: =
+            ID: ue
+            Constant: int, 0
+          Constant: int, 0

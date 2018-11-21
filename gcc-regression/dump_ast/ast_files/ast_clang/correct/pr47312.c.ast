@@ -1,0 +1,98 @@
+TranslationUnitDecl 0x7fd4888264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd488826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd488826740 '__int128'
+|-TypedefDecl 0x7fd488826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd488826760 'unsigned __int128'
+|-TypedefDecl 0x7fd488826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd488826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd488826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd488826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd488826dc0 'char *'
+|   `-BuiltinType 0x7fd488826560 'char'
+|-TypedefDecl 0x7fd4888270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd488827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd488826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd488826e58 '__va_list_tag'
+|-FunctionDecl 0x7fd489025b68 <c_files/pr47312.c:9:15> col:15 implicit used fma 'double (double, double, double)' extern
+| |-ParmVarDecl 0x7fd489025c00 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7fd489025c60 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7fd489025cc0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fd489025d38 <col:15> Implicit
+| `-NoThrowAttr 0x7fd489025d80 <col:15> Implicit
+|-FunctionDecl 0x7fd489025d90 prev 0x7fd489025b68 <col:1, col:42> col:15 used fma 'double (double, double, double)' extern
+| |-ParmVarDecl 0x7fd488827138 <col:20> col:26 'double'
+| |-ParmVarDecl 0x7fd489025a00 <col:28> col:34 'double'
+| |-ParmVarDecl 0x7fd489025a78 <col:36> col:42 'double'
+| |-ConstAttr 0x7fd489025e78 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7fd489025e88 <col:15> Inherited Implicit
+|-FunctionDecl 0x7fd489026088 <line:10:14> col:14 implicit used fmaf 'float (float, float, float)' extern
+| |-ParmVarDecl 0x7fd489026120 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7fd489026180 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7fd4890261e0 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7fd489026258 <col:14> Implicit
+| `-NoThrowAttr 0x7fd4890262a0 <col:14> Implicit
+|-FunctionDecl 0x7fd4890262b0 prev 0x7fd489026088 <col:1, col:39> col:14 used fmaf 'float (float, float, float)' extern
+| |-ParmVarDecl 0x7fd489025eb0 <col:20> col:25 'float'
+| |-ParmVarDecl 0x7fd489025f28 <col:27> col:32 'float'
+| |-ParmVarDecl 0x7fd489025fa0 <col:34> col:39 'float'
+| |-ConstAttr 0x7fd489026398 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7fd4890263a8 <col:14> Inherited Implicit
+|-FunctionDecl 0x7fd4890265a8 <line:11:20> col:20 implicit used fmal 'long double (long double, long double, long double)' extern
+| |-ParmVarDecl 0x7fd489026640 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7fd4890266a0 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7fd489026700 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7fd489026778 <col:20> Implicit
+| `-NoThrowAttr 0x7fd4890267c0 <col:20> Implicit
+|-FunctionDecl 0x7fd4890267d0 prev 0x7fd4890265a8 <col:1, col:63> col:20 used fmal 'long double (long double, long double, long double)' extern
+| |-ParmVarDecl 0x7fd4890263d0 <col:26, col:31> col:37 'long double'
+| |-ParmVarDecl 0x7fd489026448 <col:39, col:44> col:50 'long double'
+| |-ParmVarDecl 0x7fd4890264c0 <col:52, col:57> col:63 'long double'
+| |-ConstAttr 0x7fd4890268b8 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7fd4890268c8 <col:20> Inherited Implicit
+|-VarDecl 0x7fd4890268f0 <line:13:1, col:16> col:16 used f 'volatile float'
+|-VarDecl 0x7fd489026a00 <line:14:1, col:17> col:17 used d 'volatile double'
+|-VarDecl 0x7fd489026a78 <line:15:1, col:22> col:22 used ld 'volatile long double'
+`-FunctionDecl 0x7fd489026b30 <line:17:1, line:25:1> line:18:1 main 'int ()'
+  `-CompoundStmt 0x7fd4890274b8 <line:19:1, line:25:1>
+    |-BinaryOperator 0x7fd489026d58 <line:20:3, col:20> 'float' '='
+    | |-DeclRefExpr 0x7fd489026bc8 <col:3> 'volatile float' lvalue Var 0x7fd4890268f0 'f' 'volatile float'
+    | `-CallExpr 0x7fd489026cd0 <col:7, col:20> 'float'
+    |   |-ImplicitCastExpr 0x7fd489026cb8 <col:7> 'float (*)(float, float, float)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fd489026bf0 <col:7> 'float (float, float, float)' Function 0x7fd4890262b0 'fmaf' 'float (float, float, float)'
+    |   |-ImplicitCastExpr 0x7fd489026d10 <col:13> 'float' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fd489026c18 <col:13> 'volatile float' lvalue Var 0x7fd4890268f0 'f' 'volatile float'
+    |   |-ImplicitCastExpr 0x7fd489026d28 <col:16> 'float' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fd489026c40 <col:16> 'volatile float' lvalue Var 0x7fd4890268f0 'f' 'volatile float'
+    |   `-ImplicitCastExpr 0x7fd489026d40 <col:19> 'float' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fd489026c68 <col:19> 'volatile float' lvalue Var 0x7fd4890268f0 'f' 'volatile float'
+    |-BinaryOperator 0x7fd489026f18 <line:21:3, col:19> 'double' '='
+    | |-DeclRefExpr 0x7fd489026d80 <col:3> 'volatile double' lvalue Var 0x7fd489026a00 'd' 'volatile double'
+    | `-CallExpr 0x7fd489026e90 <col:7, col:19> 'double'
+    |   |-ImplicitCastExpr 0x7fd489026e78 <col:7> 'double (*)(double, double, double)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fd489026da8 <col:7> 'double (double, double, double)' Function 0x7fd489025d90 'fma' 'double (double, double, double)'
+    |   |-ImplicitCastExpr 0x7fd489026ed0 <col:12> 'double' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fd489026dd0 <col:12> 'volatile double' lvalue Var 0x7fd489026a00 'd' 'volatile double'
+    |   |-ImplicitCastExpr 0x7fd489026ee8 <col:15> 'double' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fd489026df8 <col:15> 'volatile double' lvalue Var 0x7fd489026a00 'd' 'volatile double'
+    |   `-ImplicitCastExpr 0x7fd489026f00 <col:18> 'double' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fd489026e20 <col:18> 'volatile double' lvalue Var 0x7fd489026a00 'd' 'volatile double'
+    |-BinaryOperator 0x7fd4890270d8 <line:22:3, col:24> 'long double' '='
+    | |-DeclRefExpr 0x7fd489026f40 <col:3> 'volatile long double' lvalue Var 0x7fd489026a78 'ld' 'volatile long double'
+    | `-CallExpr 0x7fd489027050 <col:8, col:24> 'long double'
+    |   |-ImplicitCastExpr 0x7fd489027038 <col:8> 'long double (*)(long double, long double, long double)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fd489026f68 <col:8> 'long double (long double, long double, long double)' Function 0x7fd4890267d0 'fmal' 'long double (long double, long double, long double)'
+    |   |-ImplicitCastExpr 0x7fd489027090 <col:14> 'long double' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fd489026f90 <col:14> 'volatile long double' lvalue Var 0x7fd489026a78 'ld' 'volatile long double'
+    |   |-ImplicitCastExpr 0x7fd4890270a8 <col:18> 'long double' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fd489026fb8 <col:18> 'volatile long double' lvalue Var 0x7fd489026a78 'ld' 'volatile long double'
+    |   `-ImplicitCastExpr 0x7fd4890270c0 <col:22> 'long double' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fd489026fe0 <col:22> 'volatile long double' lvalue Var 0x7fd489026a78 'ld' 'volatile long double'
+    |-GCCAsmStmt 0x7fd4890273e8 <line:23:3, col:68>
+    | |-UnaryOperator 0x7fd489027218 <col:33, col:34> 'volatile float *' prefix '&'
+    | | `-DeclRefExpr 0x7fd4890271c8 <col:34> 'volatile float' lvalue Var 0x7fd4890268f0 'f' 'volatile float'
+    | |-UnaryOperator 0x7fd4890272b8 <col:43, col:44> 'volatile double *' prefix '&'
+    | | `-DeclRefExpr 0x7fd489027268 <col:44> 'volatile double' lvalue Var 0x7fd489026a00 'd' 'volatile double'
+    | `-UnaryOperator 0x7fd489027358 <col:53, col:54> 'volatile long double *' prefix '&'
+    |   `-DeclRefExpr 0x7fd489027308 <col:54> 'volatile long double' lvalue Var 0x7fd489026a78 'ld' 'volatile long double'
+    `-ReturnStmt 0x7fd4890274a0 <line:24:3, col:10>
+      `-IntegerLiteral 0x7fd489027480 <col:10> 'int' 0

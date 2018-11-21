@@ -1,0 +1,45 @@
+c_files/pr53589.c:13:9: error: 'asm goto' constructs are not supported yet
+  __asm goto ("# %l[lab]" : : : : lab);
+        ^
+1 error generated.
+TranslationUnitDecl 0x7fac61825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fac61826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fac61825d40 '__int128'
+|-TypedefDecl 0x7fac61826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fac61825d60 'unsigned __int128'
+|-TypedefDecl 0x7fac61826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fac61826170 'struct __NSConstantString_tag'
+|   `-Record 0x7fac618260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fac61826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fac618263c0 'char *'
+|   `-BuiltinType 0x7fac61825b60 'char'
+|-TypedefDecl 0x7fac618266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fac61826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fac618264e0 'struct __va_list_tag'
+|     `-Record 0x7fac61826458 '__va_list_tag'
+|-FunctionDecl 0x7fac61027420 <c_files/pr53589.c:4:1, col:53> col:13 used foo 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fac610275d0 <line:6:1, line:15:1> line:7:1 bar 'void (int)'
+  |-ParmVarDecl 0x7fac61027510 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fac61027908 <line:8:1, line:15:1>
+    |-IfStmt 0x7fac61027788 <line:9:3, line:10:10>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fac610276d0 <line:9:7, col:11> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fac610276b8 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fac61027670 <col:7> 'int' lvalue ParmVar 0x7fac61027510 'x' 'int'
+    | | `-IntegerLiteral 0x7fac61027698 <col:11> 'int' 0
+    | |-CallExpr 0x7fac61027760 <line:10:5, col:10> 'void'
+    | | `-ImplicitCastExpr 0x7fac61027748 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fac610276f8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fac61027420 'foo' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fac61027860 <line:11:3, line:12:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fac61027820 <line:11:7, col:12> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fac61027808 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fac610277c0 <col:7> 'int' lvalue ParmVar 0x7fac61027510 'x' 'int'
+    | | `-IntegerLiteral 0x7fac610277e8 <col:12> 'int' 0
+    | |-ReturnStmt 0x7fac61027848 <line:12:5>
+    | `-<<<NULL>>>
+    `-LabelStmt 0x7fac610278f0 <line:14:1, col:5> 'lab'
+      `-NullStmt 0x7fac61027898 <col:5>

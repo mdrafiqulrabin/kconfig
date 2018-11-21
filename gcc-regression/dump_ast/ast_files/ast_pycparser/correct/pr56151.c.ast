@@ -1,0 +1,25 @@
+FileAST: 
+  Decl: vara, [], [], []
+    TypeDecl: vara, []
+      IdentifierType: ['int']
+  Decl: varb, [], [], []
+    TypeDecl: varb, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: vara
+        BinaryOp: |
+          ID: varb
+          ID: vara

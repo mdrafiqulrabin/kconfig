@@ -1,0 +1,33 @@
+c_files/pr57189.c:9:10: error: use of unknown builtin '__builtin_ia32_vec_ext_v4si' [-Wimplicit-function-declaration]
+  return __builtin_ia32_vec_ext_v4si (__A, 0);
+         ^
+1 error generated.
+TranslationUnitDecl 0x7fc56a8078d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc56a807e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc56a807b40 '__int128'
+|-TypedefDecl 0x7fc56a807e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc56a807b60 'unsigned __int128'
+|-TypedefDecl 0x7fc56a808168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc56a807f70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc56a807ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc56a808200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc56a8081c0 'char *'
+|   `-BuiltinType 0x7fc56a807960 'char'
+|-TypedefDecl 0x7fc56a8084c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc56a808470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc56a8082e0 'struct __va_list_tag'
+|     `-Record 0x7fc56a808258 '__va_list_tag'
+|-TypedefDecl 0x7fc56a808578 <c_files/pr57189.c:5:1, col:13> col:13 referenced __v4si '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fc56a808540 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fc56a8079c0 'int'
+|-FunctionDecl 0x7fc56a85df08 <line:7:1, line:10:1> line:7:5 test 'int (__v4si)'
+| |-ParmVarDecl 0x7fc56a85de00 <col:11, col:18> col:18 used __A '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-CompoundStmt 0x7fc56a85e208 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7fc56a85e1f0 <line:9:3, col:45>
+|     `-CallExpr 0x7fc56a85e1a0 <col:10, col:45> 'int'
+|       |-ImplicitCastExpr 0x7fc56a85e188 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fc56a85e0e8 <col:10> 'int ()' Function 0x7fc56a85e050 '__builtin_ia32_vec_ext_v4si' 'int ()'
+|       |-ImplicitCastExpr 0x7fc56a85e1d8 <col:39> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fc56a85e110 <col:39> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7fc56a85de00 '__A' '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|       `-IntegerLiteral 0x7fc56a85e138 <col:44> 'int' 0
+`-FunctionDecl 0x7fc56a85e050 <<invalid sloc>> col:10 implicit used __builtin_ia32_vec_ext_v4si 'int ()'

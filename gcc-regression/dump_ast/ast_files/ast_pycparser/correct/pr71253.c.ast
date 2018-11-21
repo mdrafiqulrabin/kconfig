@@ -1,0 +1,104 @@
+FileAST: 
+  Decl: jo, [], [], []
+    TypeDecl: jo, []
+      IdentifierType: ['int']
+  Decl: af, [], [], []
+    TypeDecl: af, []
+      IdentifierType: ['int']
+  Decl: yb, [], [], []
+    TypeDecl: yb, []
+      IdentifierType: ['int']
+  Decl: wt, [], [], []
+    TypeDecl: wt, []
+      IdentifierType: ['long', 'int']
+  FuncDef: 
+    Decl: nr, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: nr, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: bf, [], [], []
+        PtrDecl: []
+          TypeDecl: bf, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: yb
+      For: 
+        Compound: 
+          While: 
+            BinaryOp: !=
+              ID: jo
+              Constant: int, 0
+            Compound: 
+              Decl: ad, [], [], []
+                PtrDecl: []
+                  TypeDecl: ad, []
+                    IdentifierType: ['long', 'int']
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['long', 'int']
+                  UnaryOp: &
+                    ID: yb
+              For: 
+                Compound: 
+                  Decl: fv, [], [], []
+                    TypeDecl: fv, []
+                      IdentifierType: ['int']
+                  For: 
+                    Assignment: =
+                      UnaryOp: *
+                        ID: ad
+                      Constant: int, 1
+                    BinaryOp: <
+                      UnaryOp: *
+                        ID: ad
+                      Constant: int, 3
+                    UnaryOp: ++
+                      UnaryOp: *
+                        ID: ad
+                    Compound: 
+                      Assignment: =
+                        ID: af
+                        UnaryOp: *
+                          ID: bf
+                      Assignment: =
+                        ID: fv
+                        ID: wt
+                  Assignment: =
+                    ID: bf
+                    Cast: 
+                      Typename: None, []
+                        PtrDecl: []
+                          TypeDecl: None, []
+                            IdentifierType: ['int']
+                      UnaryOp: &
+                        ID: wt
+                  Assignment: =
+                    ID: ad
+                    UnaryOp: &
+                      ID: wt
+                  DoWhile: 
+                    BinaryOp: !=
+                      ID: jo
+                      Constant: int, 0
+                    Compound: 
+                      Assignment: =
+                        ID: jo
+                        Assignment: =
+                          ID: wt
+                          TernaryOp: 
+                            BinaryOp: !=
+                              ID: wt
+                              Constant: int, 0
+                            Constant: int, 1
+                            ID: fv
+          Assignment: =
+            ID: bf
+            UnaryOp: &
+              ID: af

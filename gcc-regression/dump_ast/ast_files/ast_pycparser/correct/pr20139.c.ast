@@ -1,0 +1,48 @@
+FileAST: 
+  Decl: fabs, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: fabs, []
+        IdentifierType: ['double']
+  Decl: link_error, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: link_error, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, [], [], []
+        TypeDecl: p, []
+          IdentifierType: ['double']
+      Decl: q, [], [], []
+        TypeDecl: q, []
+          IdentifierType: ['double']
+      Assignment: =
+        ID: p
+        FuncCall: 
+          ID: fabs
+          ExprList: 
+            ID: x
+      Assignment: =
+        ID: q
+        Constant: float, 0.0
+      If: 
+        BinaryOp: <
+          ID: p
+          ID: q
+        FuncCall: 
+          ID: link_error

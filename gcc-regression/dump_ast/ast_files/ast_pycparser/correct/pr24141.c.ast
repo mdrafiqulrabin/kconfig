@@ -1,0 +1,93 @@
+FileAST: 
+  Decl: abort, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: i
+        Constant: int, 1
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      If: 
+        BinaryOp: ==
+          ID: a
+          Constant: int, 0
+        Assignment: =
+          ID: c
+          Constant: int, 1
+      If: 
+        ID: c
+        Return: 
+      If: 
+        BinaryOp: ==
+          ID: c
+          Constant: int, 1
+        Assignment: =
+          ID: c
+          Constant: int, 0
+      If: 
+        BinaryOp: ==
+          ID: b
+          Constant: int, 0
+        Assignment: =
+          ID: c
+          Constant: int, 1
+      If: 
+        ID: c
+        FuncCall: 
+          ID: g
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: f
+        ExprList: 
+          Constant: int, 1
+          Constant: int, 0
+      If: 
+        BinaryOp: !=
+          ID: i
+          Constant: int, 1
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

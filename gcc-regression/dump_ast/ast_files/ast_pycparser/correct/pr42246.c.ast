@@ -1,0 +1,174 @@
+FileAST: 
+  Typedef: PIECE, [], ['typedef']
+    TypeDecl: PIECE, []
+      Enum: None
+        EnumeratorList: 
+          Enumerator: empty
+            Constant: int, 0
+          Enumerator: pawn
+            Constant: int, 1
+          Enumerator: knight
+            Constant: int, 2
+          Enumerator: king
+            Constant: int, 3
+          Enumerator: bishop
+            Constant: int, 5
+          Enumerator: rook
+            Constant: int, 6
+          Enumerator: queen
+            Constant: int, 7
+  Decl: p_values, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: p_values, []
+        IdentifierType: ['int']
+      Constant: int, 15
+  Decl: last, [], ['extern'], []
+    ArrayDecl: []
+      PtrDecl: []
+        TypeDecl: last, []
+          IdentifierType: ['int']
+      Constant: int, 65
+  FuncDef: 
+    Decl: Quiesce, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: alpha, [], [], []
+            TypeDecl: alpha, []
+              IdentifierType: ['int']
+          Decl: beta, [], [], []
+            TypeDecl: beta, []
+              IdentifierType: ['int']
+          Decl: wtm, [], [], []
+            TypeDecl: wtm, []
+              IdentifierType: ['int']
+          Decl: ply, [], [], []
+            TypeDecl: ply, []
+              IdentifierType: ['int']
+        TypeDecl: Quiesce, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: initial_alpha, [], ['register'], []
+        TypeDecl: initial_alpha, []
+          IdentifierType: ['int']
+      Decl: value, [], ['register'], []
+        TypeDecl: value, []
+          IdentifierType: ['int']
+      Decl: delta, [], ['register'], []
+        TypeDecl: delta, []
+          IdentifierType: ['int']
+      Decl: goodmv, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: goodmv, []
+            IdentifierType: ['int']
+      Decl: movep, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: movep, []
+            IdentifierType: ['int']
+      Decl: moves, [], ['register'], []
+        TypeDecl: moves, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: sortv, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: sortv, []
+            IdentifierType: ['int']
+      Decl: temp, [], ['register'], []
+        TypeDecl: temp, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: movep
+          ArrayRef: 
+            ID: last
+            BinaryOp: -
+              ID: ply
+              Constant: int, 1
+        BinaryOp: <
+          ID: movep
+          ArrayRef: 
+            ID: last
+            ID: ply
+        UnaryOp: p++
+          ID: movep
+        If: 
+          BinaryOp: >=
+            BinaryOp: +
+              ArrayRef: 
+                ID: p_values
+                BinaryOp: +
+                  BinaryOp: &
+                    BinaryOp: >>
+                      UnaryOp: *
+                        ID: movep
+                      Constant: int, 15
+                    Constant: int, 7
+                  Constant: int, 7
+              ArrayRef: 
+                ID: p_values
+                BinaryOp: +
+                  BinaryOp: &
+                    BinaryOp: >>
+                      UnaryOp: *
+                        ID: movep
+                      Constant: int, 18
+                    Constant: int, 7
+                  Constant: int, 7
+            ID: delta
+          Compound: 
+            Decl: done, [], ['register'], []
+              TypeDecl: done, []
+                IdentifierType: ['int']
+            Decl: end, [], ['register'], []
+              PtrDecl: []
+                TypeDecl: end, []
+                  IdentifierType: ['int']
+              BinaryOp: -
+                BinaryOp: +
+                  ArrayRef: 
+                    ID: last
+                    BinaryOp: -
+                      ID: ply
+                      Constant: int, 1
+                  ID: moves
+                Constant: int, 1
+            DoWhile: 
+              UnaryOp: !
+                ID: done
+              Compound: 
+                Assignment: =
+                  ID: done
+                  Constant: int, 1
+                Assignment: =
+                  ID: movep
+                  ArrayRef: 
+                    ID: last
+                    BinaryOp: -
+                      ID: ply
+                      Constant: int, 1
+                For: 
+                  BinaryOp: <
+                    ID: movep
+                    ID: end
+                  ExprList: 
+                    UnaryOp: p++
+                      ID: movep
+                    UnaryOp: p++
+                      ID: sortv
+                  If: 
+                    BinaryOp: <
+                      UnaryOp: *
+                        ID: sortv
+                      UnaryOp: *
+                        BinaryOp: +
+                          ID: sortv
+                          Constant: int, 1
+                    Compound: 
+                      Assignment: =
+                        UnaryOp: *
+                          BinaryOp: +
+                            ID: movep
+                            Constant: int, 1
+                        ID: temp
+                      Assignment: =
+                        ID: done
+                        Constant: int, 0

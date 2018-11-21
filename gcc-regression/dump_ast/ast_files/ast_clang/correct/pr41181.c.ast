@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7ffe2a0238d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffe2a023e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffe2a023b40 '__int128'
+|-TypedefDecl 0x7ffe2a023e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffe2a023b60 'unsigned __int128'
+|-TypedefDecl 0x7ffe2a024168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffe2a023f70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffe2a023ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffe2a024200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffe2a0241c0 'char *'
+|   `-BuiltinType 0x7ffe2a023960 'char'
+|-TypedefDecl 0x7ffe2a0244c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffe2a024470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffe2a0242e0 'struct __va_list_tag'
+|     `-Record 0x7ffe2a024258 '__va_list_tag'
+|-VarDecl 0x7ffe2a024598 <c_files/pr41181.c:3:1, col:16> col:6 used paths 'char [1024]'
+|-FunctionDecl 0x7ffe29828d80 <line:4:1, line:7:1> line:4:13 used x264_slicetype_path 'void (char (*)[250], int, int)' static
+| |-ParmVarDecl 0x7ffe29828b58 <col:33, col:55> col:40 used best_paths 'char (*)[250]'
+| |-ParmVarDecl 0x7ffe29828bd0 <col:58, col:62> col:62 used n 'int'
+| |-ParmVarDecl 0x7ffe29828c48 <col:65, col:69> col:69 used length 'int'
+| `-CompoundStmt 0x7ffe29829340 <line:5:1, line:7:1>
+|   `-CallExpr 0x7ffe29829270 <line:6:5, col:51> 'void *'
+|     |-ImplicitCastExpr 0x7ffe29829258 <col:5> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7ffe298290c0 <col:5> '<builtin fn type>' Function 0x7ffe29828ea8 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|     |-ImplicitCastExpr 0x7ffe298292c8 <col:23, col:35> 'void *' <BitCast>
+|     | `-ImplicitCastExpr 0x7ffe298292b0 <col:23, col:35> 'char *' <ArrayToPointerDecay>
+|     |   `-ArraySubscriptExpr 0x7ffe29829168 <col:23, col:35> 'char [250]':'char [250]' lvalue
+|     |     |-ImplicitCastExpr 0x7ffe29829138 <col:23> 'char (*)[250]' <LValueToRValue>
+|     |     | `-DeclRefExpr 0x7ffe298290e8 <col:23> 'char (*)[250]' lvalue ParmVar 0x7ffe29828b58 'best_paths' 'char (*)[250]'
+|     |     `-ImplicitCastExpr 0x7ffe29829150 <col:34> 'int' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7ffe29829110 <col:34> 'int' lvalue ParmVar 0x7ffe29828bd0 'n' 'int'
+|     |-ImplicitCastExpr 0x7ffe298292f8 <col:38> 'const void *' <BitCast>
+|     | `-ImplicitCastExpr 0x7ffe298292e0 <col:38> 'char *' <ArrayToPointerDecay>
+|     |   `-DeclRefExpr 0x7ffe29829190 <col:38> 'char [1024]' lvalue Var 0x7ffe2a024598 'paths' 'char [1024]'
+|     `-ImplicitCastExpr 0x7ffe29829328 <col:45> 'unsigned long' <IntegralCast>
+|       `-ImplicitCastExpr 0x7ffe29829310 <col:45> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7ffe298291b8 <col:45> 'int' lvalue ParmVar 0x7ffe29828c48 'length' 'int'
+|-FunctionDecl 0x7ffe29828ea8 <col:5> col:5 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7ffe29828f40 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7ffe29828fa0 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7ffe29829000 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7ffe29829078 <col:5> Implicit
+`-FunctionDecl 0x7ffe298294c0 <line:8:1, line:12:1> line:8:6 x264_slicetype_analyse 'void (int, int)'
+  |-ParmVarDecl 0x7ffe29829378 <col:29, col:33> col:33 used n 'int'
+  |-ParmVarDecl 0x7ffe298293f0 <col:36, col:40> col:40 used length 'int'
+  `-CompoundStmt 0x7ffe29829828 <line:9:1, line:12:1>
+    |-DeclStmt 0x7ffe29829678 <line:10:5, col:30>
+    | `-VarDecl 0x7ffe29829618 <col:5, col:29> col:10 used best_paths 'char [250][250]'
+    `-CallExpr 0x7ffe298297a0 <line:11:5, col:47> 'void'
+      |-ImplicitCastExpr 0x7ffe29829788 <col:5> 'void (*)(char (*)[250], int, int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ffe29829690 <col:5> 'void (char (*)[250], int, int)' Function 0x7ffe29828d80 'x264_slicetype_path' 'void (char (*)[250], int, int)'
+      |-ImplicitCastExpr 0x7ffe298297e0 <col:26> 'char (*)[250]' <ArrayToPointerDecay>
+      | `-DeclRefExpr 0x7ffe298296b8 <col:26> 'char [250][250]' lvalue Var 0x7ffe29829618 'best_paths' 'char [250][250]'
+      |-ImplicitCastExpr 0x7ffe298297f8 <col:38> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7ffe298296e0 <col:38> 'int' lvalue ParmVar 0x7ffe29829378 'n' 'int'
+      `-ImplicitCastExpr 0x7ffe29829810 <col:41> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7ffe29829708 <col:41> 'int' lvalue ParmVar 0x7ffe298293f0 'length' 'int'

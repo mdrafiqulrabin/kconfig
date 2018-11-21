@@ -1,0 +1,91 @@
+c_files/pr59940.c:16:8: warning: implicit conversion from 'float' to 'sitype' (aka 'int') changes value from 3.2 to 3 [-Wliteral-conversion]
+  si = 3.2f; /* { dg-warning "8:conversion" } */
+     ~ ^~~~
+c_files/pr59940.c:17:8: warning: implicit conversion from 'int' to 'unsigned char' changes value from 256 to 0 [-Wconstant-conversion]
+  uc = 256; /* { dg-warning "8:-Woverflow" } */
+     ~ ^~~
+c_files/pr59940.c:18:8: warning: implicit conversion from 'long' to 'sitype' (aka 'int') changes value from 34359738368 to 0 [-Wconstant-conversion]
+  si = 0x800000000; /* { dg-warning "8:-Woverflow" } */
+     ~ ^~~~~~~~~~~
+c_files/pr59940.c:26:6: error: too few arguments to function call, expected 1, have 0
+  f (); /* { dg-error "3:too few arguments to function" } */
+  ~  ^
+c_files/pr59940.c:5:1: note: 'f' declared here
+int f (unsigned int);
+^
+c_files/pr59940.c:27:6: error: too many arguments to function call, expected 0, have 1
+  g (0xa); /* { dg-error "3:too many arguments to function" } */
+  ~  ^~~
+c_files/pr59940.c:8:1: note: 'g' declared here
+int
+^
+3 warnings and 2 errors generated.
+TranslationUnitDecl 0x7febd6019ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7febd601a020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7febd6019d40 '__int128'
+|-TypedefDecl 0x7febd601a090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7febd6019d60 'unsigned __int128'
+|-TypedefDecl 0x7febd601a368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7febd601a170 'struct __NSConstantString_tag'
+|   `-Record 0x7febd601a0e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7febd601a400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7febd601a3c0 'char *'
+|   `-BuiltinType 0x7febd6019b60 'char'
+|-TypedefDecl 0x7febd601a6c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7febd601a670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7febd601a4e0 'struct __va_list_tag'
+|     `-Record 0x7febd601a458 '__va_list_tag'
+|-FunctionDecl 0x7febd6825a30 <c_files/pr59940.c:5:1, col:20> col:5 used f 'int (unsigned int)'
+| `-ParmVarDecl 0x7febd601a738 <col:8, col:17> col:20 'unsigned int'
+|-TypedefDecl 0x7febd6825b38 <line:6:1, col:13> col:13 referenced sitype 'int'
+| |-BuiltinType 0x7febd6019bc0 'int'
+| `-ModeAttr 0x7febd6825ba0 <col:35, col:42> SI
+|-FunctionDecl 0x7febd6825cb8 <line:8:1, line:21:1> line:9:1 used g 'int (void)'
+| `-CompoundStmt 0x7febd6826808 <line:10:1, line:21:1>
+|   |-DeclStmt 0x7febd6825e00 <line:11:3, col:17>
+|   | `-VarDecl 0x7febd6825d80 <col:3, col:15> col:10 used si 'sitype':'int' cinit
+|   |   `-IntegerLiteral 0x7febd6825de0 <col:15> 'int' 12
+|   |-DeclStmt 0x7febd6825ee8 <line:12:3, col:23>
+|   | `-VarDecl 0x7febd6825e30 <col:3, col:22> col:16 used ui 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7febd6825ed0 <col:21, col:22> 'unsigned int' <IntegralCast>
+|   |     `-UnaryOperator 0x7febd6825eb0 <col:21, col:22> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x7febd6825e90 <col:22> 'int' 1
+|   |-DeclStmt 0x7febd6825f78 <line:13:3, col:19>
+|   | `-VarDecl 0x7febd6825f18 <col:3, col:17> col:17 used uc 'unsigned char'
+|   |-BinaryOperator 0x7febd6826010 <line:14:3, col:8> 'unsigned int' '='
+|   | |-DeclRefExpr 0x7febd6825f90 <col:3> 'unsigned int' lvalue Var 0x7febd6825e30 'ui' 'unsigned int'
+|   | `-ImplicitCastExpr 0x7febd6825ff8 <col:8> 'unsigned int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7febd6825fe0 <col:8> 'sitype':'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7febd6825fb8 <col:8> 'sitype':'int' lvalue Var 0x7febd6825d80 'si' 'sitype':'int'
+|   |-BinaryOperator 0x7febd6826098 <line:15:3, col:8> 'sitype':'int' '='
+|   | |-DeclRefExpr 0x7febd6826038 <col:3> 'sitype':'int' lvalue Var 0x7febd6825d80 'si' 'sitype':'int'
+|   | `-ImplicitCastExpr 0x7febd6826080 <col:8> 'sitype':'int' <IntegralCast>
+|   |   `-IntegerLiteral 0x7febd6826060 <col:8> 'unsigned int' 2147483648
+|   |-BinaryOperator 0x7febd6826120 <line:16:3, col:8> 'sitype':'int' '='
+|   | |-DeclRefExpr 0x7febd68260c0 <col:3> 'sitype':'int' lvalue Var 0x7febd6825d80 'si' 'sitype':'int'
+|   | `-ImplicitCastExpr 0x7febd6826108 <col:8> 'sitype':'int' <FloatingToIntegral>
+|   |   `-FloatingLiteral 0x7febd68260e8 <col:8> 'float' 3.200000e+00
+|   |-BinaryOperator 0x7febd6826560 <line:17:3, col:8> 'unsigned char' '='
+|   | |-DeclRefExpr 0x7febd6826500 <col:3> 'unsigned char' lvalue Var 0x7febd6825f18 'uc' 'unsigned char'
+|   | `-ImplicitCastExpr 0x7febd6826548 <col:8> 'unsigned char' <IntegralCast>
+|   |   `-IntegerLiteral 0x7febd6826528 <col:8> 'int' 256
+|   |-BinaryOperator 0x7febd68265e8 <line:18:3, col:8> 'sitype':'int' '='
+|   | |-DeclRefExpr 0x7febd6826588 <col:3> 'sitype':'int' lvalue Var 0x7febd6825d80 'si' 'sitype':'int'
+|   | `-ImplicitCastExpr 0x7febd68265d0 <col:8> 'sitype':'int' <IntegralCast>
+|   |   `-IntegerLiteral 0x7febd68265b0 <col:8> 'long' 34359738368
+|   `-ReturnStmt 0x7febd68267f0 <line:19:3, line:20:17>
+|     `-BinaryOperator 0x7febd68267c8 <line:19:10, line:20:17> 'int' '+'
+|       |-CallExpr 0x7febd68266a0 <line:19:10, col:15> 'int'
+|       | |-ImplicitCastExpr 0x7febd6826688 <col:10> 'int (*)(unsigned int)' <FunctionToPointerDecay>
+|       | | `-DeclRefExpr 0x7febd6826610 <col:10> 'int (unsigned int)' Function 0x7febd6825a30 'f' 'int (unsigned int)'
+|       | `-ImplicitCastExpr 0x7febd68266e8 <col:13> 'unsigned int' <IntegralCast>
+|       |   `-ImplicitCastExpr 0x7febd68266d0 <col:13> 'sitype':'int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7febd6826638 <col:13> 'sitype':'int' lvalue Var 0x7febd6825d80 'si' 'sitype':'int'
+|       `-CallExpr 0x7febd6826768 <line:20:12, col:17> 'int'
+|         |-ImplicitCastExpr 0x7febd6826750 <col:12> 'int (*)(unsigned int)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7febd6826700 <col:12> 'int (unsigned int)' Function 0x7febd6825a30 'f' 'int (unsigned int)'
+|         `-ImplicitCastExpr 0x7febd68267b0 <col:15> 'unsigned int' <IntegralCast>
+|           `-ImplicitCastExpr 0x7febd6826798 <col:15> 'sitype':'int' <LValueToRValue>
+|             `-DeclRefExpr 0x7febd6826728 <col:15> 'sitype':'int' lvalue Var 0x7febd6825d80 'si' 'sitype':'int'
+`-FunctionDecl 0x7febd6826900 <line:23:1, line:28:1> line:24:1 y 'int (void)'
+  `-CompoundStmt 0x7febd6827ad0 <line:25:1, line:28:1>

@@ -1,0 +1,51 @@
+FileAST: 
+  FuncDef: 
+    Decl: FFT, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: X, [], [], []
+            PtrDecl: []
+              TypeDecl: X, []
+                IdentifierType: ['_Complex']
+          Decl: length, [], [], []
+            TypeDecl: length, []
+              IdentifierType: ['int']
+        TypeDecl: FFT, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['unsigned']
+      For: 
+        BinaryOp: <
+          ID: i
+          ID: length
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: X
+              ID: i
+            Constant: int, 0
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              ID: length
+            UnaryOp: p++
+              ID: j
+            Assignment: =
+              ArrayRef: 
+                ID: X
+                ID: i
+              BinaryOp: /
+                ArrayRef: 
+                  ID: X
+                  ID: i
+                ID: length

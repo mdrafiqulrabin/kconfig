@@ -1,0 +1,70 @@
+c_files/pr59917-2.c:6:12: warning: declaration of built-in function 'setjmp' requires inclusion of the header <setjmp.h> [-Wbuiltin-requires-header]
+extern int setjmp (struct J[1]);
+           ^
+1 warning generated.
+TranslationUnitDecl 0x7f91b50252d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f91b5025820 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f91b5025540 '__int128'
+|-TypedefDecl 0x7f91b5025890 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f91b5025560 'unsigned __int128'
+|-TypedefDecl 0x7f91b5025b68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f91b5025970 'struct __NSConstantString_tag'
+|   `-Record 0x7f91b50258e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f91b5025c00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f91b5025bc0 'char *'
+|   `-BuiltinType 0x7f91b5025360 'char'
+|-TypedefDecl 0x7f91b5025ec8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f91b5025e70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f91b5025ce0 'struct __va_list_tag'
+|     `-Record 0x7f91b5025c58 '__va_list_tag'
+|-RecordDecl 0x7f91b5025f20 <c_files/pr59917-2.c:5:1, col:25> col:8 struct J definition
+| `-FieldDecl 0x7f91b5076260 <col:12, col:22> col:17 buf 'long [8]'
+|-FunctionDecl 0x7f91b5076598 <line:6:1, col:31> col:12 used setjmp 'int (struct J *)' extern
+| |-ParmVarDecl 0x7f91b5076490 <col:20, col:30> col:28 'struct J *':'struct J *'
+| `-ReturnsTwiceAttr 0x7f91b5076678 <col:12> Implicit
+|-FunctionDecl 0x7f91b50767a0 <line:7:1, col:14> col:6 used foo 'void (int)'
+| `-ParmVarDecl 0x7f91b50766d8 <col:11> col:14 'int'
+`-FunctionDecl 0x7f91b5076900 <line:9:1, line:22:1> line:10:1 bar 'void (void)'
+  `-CompoundStmt 0x7f91b5077058 <line:11:1, line:22:1>
+    |-DeclStmt 0x7f91b5076a10 <line:12:3, col:8>
+    | `-VarDecl 0x7f91b50769b0 <col:3, col:7> col:7 used k 'int'
+    |-CallExpr 0x7f91b5076ad0 <line:13:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f91b5076ab8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f91b5076a28 <col:3> 'void (int)' Function 0x7f91b50767a0 'foo' 'void (int)'
+    | `-UnaryOperator 0x7f91b5076a70 <col:8, col:9> 'int' prefix '-'
+    |   `-IntegerLiteral 0x7f91b5076a50 <col:9> 'int' 1
+    |-ForStmt 0x7f91b5076f70 <line:15:3, line:20:5>
+    | |-BinaryOperator 0x7f91b5076b48 <line:15:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7f91b5076b00 <col:8> 'int' lvalue Var 0x7f91b50769b0 'k' 'int'
+    | | `-IntegerLiteral 0x7f91b5076b28 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f91b5076bd0 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f91b5076bb8 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f91b5076b70 <col:15> 'int' lvalue Var 0x7f91b50769b0 'k' 'int'
+    | | `-IntegerLiteral 0x7f91b5076b98 <col:19> 'int' 10
+    | |-UnaryOperator 0x7f91b5076c20 <col:23, col:25> 'int' prefix '++'
+    | | `-DeclRefExpr 0x7f91b5076bf8 <col:25> 'int' lvalue Var 0x7f91b50769b0 'k' 'int'
+    | `-CompoundStmt 0x7f91b5076f48 <line:16:5, line:20:5>
+    |   |-DeclStmt 0x7f91b5076cf0 <line:17:7, col:20>
+    |   | `-VarDecl 0x7f91b5076c90 <col:7, col:19> col:16 used j 'struct J [1]'
+    |   `-IfStmt 0x7f91b5076f10 <line:18:7, line:19:8>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7f91b5076e38 <line:18:11, col:25> 'int' '=='
+    |     | |-CallExpr 0x7f91b5076dd0 <col:11, col:20> 'int'
+    |     | | |-ImplicitCastExpr 0x7f91b5076db8 <col:11> 'int (*)(struct J *)' <FunctionToPointerDecay>
+    |     | | | `-DeclRefExpr 0x7f91b5076d08 <col:11> 'int (struct J *)' Function 0x7f91b5076598 'setjmp' 'int (struct J *)'
+    |     | | `-ImplicitCastExpr 0x7f91b5076e00 <col:19> 'struct J *' <ArrayToPointerDecay>
+    |     | |   `-DeclRefExpr 0x7f91b5076d30 <col:19> 'struct J [1]' lvalue Var 0x7f91b5076c90 'j' 'struct J [1]'
+    |     | `-IntegerLiteral 0x7f91b5076e18 <col:25> 'int' 0
+    |     |-CallExpr 0x7f91b5076ec8 <line:19:2, col:8> 'void'
+    |     | |-ImplicitCastExpr 0x7f91b5076eb0 <col:2> 'void (*)(int)' <FunctionToPointerDecay>
+    |     | | `-DeclRefExpr 0x7f91b5076e60 <col:2> 'void (int)' Function 0x7f91b50767a0 'foo' 'void (int)'
+    |     | `-ImplicitCastExpr 0x7f91b5076ef8 <col:7> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f91b5076e88 <col:7> 'int' lvalue Var 0x7f91b50769b0 'k' 'int'
+    |     `-<<<NULL>>>
+    `-CallExpr 0x7f91b5077028 <line:21:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7f91b5077010 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f91b5076fa8 <col:3> 'void (int)' Function 0x7f91b50767a0 'foo' 'void (int)'
+      `-UnaryOperator 0x7f91b5076ff0 <col:8, col:9> 'int' prefix '-'
+        `-IntegerLiteral 0x7f91b5076fd0 <col:9> 'int' 2

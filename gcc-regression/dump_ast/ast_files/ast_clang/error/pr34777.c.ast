@@ -1,0 +1,116 @@
+c_files/pr34777.c:8:32: error: unknown register name 'r3' in asm
+  register long __sc3 __asm__ ("r3") = 90;
+                               ^
+c_files/pr34777.c:9:32: error: unknown register name 'r4' in asm
+  register long __sc4 __asm__ ("r4") = (long) start;
+                               ^
+c_files/pr34777.c:10:32: error: unknown register name 'r5' in asm
+  register long __sc5 __asm__ ("r5") = (long) length;
+                               ^
+c_files/pr34777.c:11:32: error: unknown register name 'r6' in asm
+  register long __sc6 __asm__ ("r6") = (long) prot;
+                               ^
+c_files/pr34777.c:12:32: error: unknown register name 'r7' in asm
+  register long __sc7 __asm__ ("r7") = (long) flags;
+                               ^
+c_files/pr34777.c:13:32: error: unknown register name 'r0' in asm
+  register long __sc0 __asm__ ("r0") = (long) fd;
+                               ^
+c_files/pr34777.c:14:32: error: unknown register name 'r1' in asm
+  register long __sc1 __asm__ ("r1") = (long) offset;
+                               ^
+c_files/pr34777.c:16:6: error: invalid output constraint '=z' in asm
+                        : "=z" (__sc0)
+                          ^
+8 errors generated.
+TranslationUnitDecl 0x7f9b2e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9b2e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9b2e826740 '__int128'
+|-TypedefDecl 0x7f9b2e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9b2e826760 'unsigned __int128'
+|-TypedefDecl 0x7f9b2e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9b2e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9b2e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9b2e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9b2e826dc0 'char *'
+|   `-BuiltinType 0x7f9b2e826560 'char'
+|-TypedefDecl 0x7f9b2e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9b2e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9b2e826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9b2e826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9b2e878af8 <c_files/pr34777.c:4:1, line:21:1> line:5:1 used _dl_mmap 'void *(void *, int, int, int, int, int)' static inline
+| |-ParmVarDecl 0x7f9b2e827138 <col:11, col:18> col:18 used start 'void *'
+| |-ParmVarDecl 0x7f9b2e878800 <col:25, col:29> col:29 used length 'int'
+| |-ParmVarDecl 0x7f9b2e878878 <col:37, col:41> col:41 used prot 'int'
+| |-ParmVarDecl 0x7f9b2e8788f0 <col:47, col:51> col:51 used flags 'int'
+| |-ParmVarDecl 0x7f9b2e878968 <col:58, col:62> col:62 used fd 'int'
+| |-ParmVarDecl 0x7f9b2e8789e0 <line:6:4, col:8> col:8 used offset 'int'
+| |-CompoundStmt 0x7f9b2e87abd8 <line:7:1, line:21:1>
+| | |-DeclStmt 0x7f9b2e878dc0 <line:8:3, col:42>
+| | | `-VarDecl 0x7f9b2e878cd0 <col:3, col:40> col:17 used __sc3 'long' register cinit
+| | |   |-ImplicitCastExpr 0x7f9b2e878da8 <col:40> 'long' <IntegralCast>
+| | |   | `-IntegerLiteral 0x7f9b2e878d88 <col:40> 'int' 90
+| | |   `-AsmLabelAttr 0x7f9b2e878d30 <col:32> "r3"
+| | |-DeclStmt 0x7f9b2e878f58 <line:9:3, col:52>
+| | | `-VarDecl 0x7f9b2e878e20 <col:3, col:47> col:17 used __sc4 'long' register cinit
+| | |   |-CStyleCastExpr 0x7f9b2e878f30 <col:40, col:47> 'long' <PointerToIntegral>
+| | |   | `-ImplicitCastExpr 0x7f9b2e878f18 <col:47> 'void *' <LValueToRValue>
+| | |   |   `-DeclRefExpr 0x7f9b2e878ed8 <col:47> 'void *' lvalue ParmVar 0x7f9b2e827138 'start' 'void *'
+| | |   `-AsmLabelAttr 0x7f9b2e878e80 <col:32> "r4"
+| | |-DeclStmt 0x7f9b2e8790f0 <line:10:3, col:53>
+| | | `-VarDecl 0x7f9b2e878fb8 <col:3, col:47> col:17 used __sc5 'long' register cinit
+| | |   |-CStyleCastExpr 0x7f9b2e8790c8 <col:40, col:47> 'long' <IntegralCast>
+| | |   | `-ImplicitCastExpr 0x7f9b2e8790b0 <col:47> 'int' <LValueToRValue>
+| | |   |   `-DeclRefExpr 0x7f9b2e879070 <col:47> 'int' lvalue ParmVar 0x7f9b2e878800 'length' 'int'
+| | |   `-AsmLabelAttr 0x7f9b2e879018 <col:32> "r5"
+| | |-DeclStmt 0x7f9b2e879288 <line:11:3, col:51>
+| | | `-VarDecl 0x7f9b2e879150 <col:3, col:47> col:17 used __sc6 'long' register cinit
+| | |   |-CStyleCastExpr 0x7f9b2e879260 <col:40, col:47> 'long' <IntegralCast>
+| | |   | `-ImplicitCastExpr 0x7f9b2e879248 <col:47> 'int' <LValueToRValue>
+| | |   |   `-DeclRefExpr 0x7f9b2e879208 <col:47> 'int' lvalue ParmVar 0x7f9b2e878878 'prot' 'int'
+| | |   `-AsmLabelAttr 0x7f9b2e8791b0 <col:32> "r6"
+| | |-DeclStmt 0x7f9b2e879420 <line:12:3, col:52>
+| | | `-VarDecl 0x7f9b2e8792e8 <col:3, col:47> col:17 used __sc7 'long' register cinit
+| | |   |-CStyleCastExpr 0x7f9b2e8793f8 <col:40, col:47> 'long' <IntegralCast>
+| | |   | `-ImplicitCastExpr 0x7f9b2e8793e0 <col:47> 'int' <LValueToRValue>
+| | |   |   `-DeclRefExpr 0x7f9b2e8793a0 <col:47> 'int' lvalue ParmVar 0x7f9b2e8788f0 'flags' 'int'
+| | |   `-AsmLabelAttr 0x7f9b2e879348 <col:32> "r7"
+| | |-DeclStmt 0x7f9b2e8795b8 <line:13:3, col:49>
+| | | `-VarDecl 0x7f9b2e879480 <col:3, col:47> col:17 used __sc0 'long' register cinit
+| | |   |-CStyleCastExpr 0x7f9b2e879590 <col:40, col:47> 'long' <IntegralCast>
+| | |   | `-ImplicitCastExpr 0x7f9b2e879578 <col:47> 'int' <LValueToRValue>
+| | |   |   `-DeclRefExpr 0x7f9b2e879538 <col:47> 'int' lvalue ParmVar 0x7f9b2e878968 'fd' 'int'
+| | |   `-AsmLabelAttr 0x7f9b2e8794e0 <col:32> "r0"
+| | `-DeclStmt 0x7f9b2e879750 <line:14:3, col:53>
+| |   `-VarDecl 0x7f9b2e879618 <col:3, col:47> col:17 used __sc1 'long' register cinit
+| |     |-CStyleCastExpr 0x7f9b2e879728 <col:40, col:47> 'long' <IntegralCast>
+| |     | `-ImplicitCastExpr 0x7f9b2e879710 <col:47> 'int' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7f9b2e8796d0 <col:47> 'int' lvalue ParmVar 0x7f9b2e8789e0 'offset' 'int'
+| |     `-AsmLabelAttr 0x7f9b2e879678 <col:32> "r1"
+| `-AlwaysInlineAttr 0x7f9b2e878bc0 <line:4:33> always_inline
+|-VarDecl 0x7f9b2e87ac40 <line:23:1, col:12> col:12 used _dl_pagesize 'int' extern
+`-FunctionDecl 0x7f9b2e87ae00 <line:24:1, line:29:1> line:25:1 _dl_dprintf 'void (int, const char *, ...)'
+  |-ParmVarDecl 0x7f9b2e87acb8 <col:13, col:17> col:17 fd 'int'
+  |-ParmVarDecl 0x7f9b2e87ad30 <col:21, col:33> col:33 fmt 'const char *'
+  `-CompoundStmt 0x7f9b2e87b230 <line:26:1, line:29:1>
+    |-DeclStmt 0x7f9b2e87af20 <line:27:3, col:19>
+    | `-VarDecl 0x7f9b2e87aec0 <col:3, col:16> col:16 used buf 'char *' static
+    `-BinaryOperator 0x7f9b2e87b208 <line:28:3, col:74> 'char *' '='
+      |-DeclRefExpr 0x7f9b2e87af38 <col:3> 'char *' lvalue Var 0x7f9b2e87aec0 'buf' 'char *'
+      `-ImplicitCastExpr 0x7f9b2e87b1f0 <col:9, col:74> 'char *' <BitCast>
+        `-CallExpr 0x7f9b2e87b180 <col:9, col:74> 'void *'
+          |-ImplicitCastExpr 0x7f9b2e87b168 <col:9> 'void *(*)(void *, int, int, int, int, int)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7f9b2e87af60 <col:9> 'void *(void *, int, int, int, int, int)' Function 0x7f9b2e878af8 '_dl_mmap' 'void *(void *, int, int, int, int, int)'
+          |-CStyleCastExpr 0x7f9b2e87afc0 <col:19, col:28> 'void *' <NullToPointer>
+          | `-IntegerLiteral 0x7f9b2e87af88 <col:28> 'int' 0
+          |-ImplicitCastExpr 0x7f9b2e87b1d8 <col:31> 'int' <LValueToRValue>
+          | `-DeclRefExpr 0x7f9b2e87afe8 <col:31> 'int' lvalue Var 0x7f9b2e87ac40 '_dl_pagesize' 'int'
+          |-BinaryOperator 0x7f9b2e87b050 <col:45, col:51> 'int' '|'
+          | |-IntegerLiteral 0x7f9b2e87b010 <col:45> 'int' 1
+          | `-IntegerLiteral 0x7f9b2e87b030 <col:51> 'int' 2
+          |-BinaryOperator 0x7f9b2e87b0b8 <col:56, col:63> 'int' '|'
+          | |-IntegerLiteral 0x7f9b2e87b078 <col:56> 'int' 2
+          | `-IntegerLiteral 0x7f9b2e87b098 <col:63> 'int' 32
+          |-UnaryOperator 0x7f9b2e87b100 <col:69, col:70> 'int' prefix '-'
+          | `-IntegerLiteral 0x7f9b2e87b0e0 <col:70> 'int' 1
+          `-IntegerLiteral 0x7f9b2e87b120 <col:73> 'int' 0

@@ -1,0 +1,76 @@
+c_files/pr27907.c:16:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+fann_run (struct fann *ann, fann_type * input)
+^
+c_files/pr27907.c:23:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+TranslationUnitDecl 0x7feaa10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feaa1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feaa1026740 '__int128'
+|-TypedefDecl 0x7feaa1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feaa1026760 'unsigned __int128'
+|-TypedefDecl 0x7feaa1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feaa1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7feaa1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7feaa1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feaa1026dc0 'char *'
+|   `-BuiltinType 0x7feaa1026560 'char'
+|-TypedefDecl 0x7feaa10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feaa1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feaa1026ee0 'struct __va_list_tag'
+|     `-Record 0x7feaa1026e58 '__va_list_tag'
+|-TypedefDecl 0x7feaa1027138 <c_files/pr27907.c:1:1, col:16> col:16 referenced fann_type 'double'
+| `-BuiltinType 0x7feaa10266e0 'double'
+|-RecordDecl 0x7feaa1825a00 <line:2:9, col:18> col:9 struct definition
+|-TypedefDecl 0x7feaa1825b00 <col:1, col:20> col:20 _G_fpos64_t 'struct _G_fpos64_t':'_G_fpos64_t'
+| `-ElaboratedType 0x7feaa1825ab0 'struct _G_fpos64_t' sugar
+|   `-RecordType 0x7feaa1825a90 '_G_fpos64_t'
+|     `-Record 0x7feaa1825a00 ''
+|-RecordDecl 0x7feaa1825b70 <line:3:1, line:6:1> line:3:8 struct fann_neuron definition
+| |-PackedAttr 0x7feaa1825c98 <line:7:17>
+| `-FieldDecl 0x7feaa1825c50 <line:5:5, col:15> col:15 referenced value 'fann_type':'double'
+|-RecordDecl 0x7feaa1825ce0 <line:8:1, line:11:1> line:8:8 struct fann_layer definition
+| `-FieldDecl 0x7feaa1825e40 <line:10:5, col:25> col:25 referenced last_neuron 'struct fann_neuron *'
+|-RecordDecl 0x7feaa1825e88 <line:12:1, line:15:1> line:12:8 struct fann definition
+| `-FieldDecl 0x7feaa1825fe0 <line:14:5, col:24> col:24 referenced first_layer 'struct fann_layer *'
+`-FunctionDecl 0x7feaa18262c8 <line:16:1, line:23:1> line:16:1 fann_run 'int (struct fann *, fann_type *)'
+  |-ParmVarDecl 0x7feaa18260e0 <col:11, col:24> col:24 used ann 'struct fann *'
+  |-ParmVarDecl 0x7feaa18261a8 <col:29, col:41> col:41 input 'fann_type *'
+  `-CompoundStmt 0x7feaa18269e8 <line:17:1, line:23:1>
+    |-DeclStmt 0x7feaa1826568 <line:18:3, col:55>
+    | |-VarDecl 0x7feaa18263d8 <col:3, col:22> col:22 used layer_it 'struct fann_layer *'
+    | |-VarDecl 0x7feaa1826460 <col:3, col:33> col:33 layer_it2 'struct fann_layer *'
+    | `-VarDecl 0x7feaa18264e8 <col:3, col:45> col:45 used last_layer 'struct fann_layer *'
+    `-ForStmt 0x7feaa18269b0 <line:19:3, line:22:5>
+      |-BinaryOperator 0x7feaa1826680 <line:19:8, col:38> 'struct fann_layer *' '='
+      | |-DeclRefExpr 0x7feaa1826580 <col:8> 'struct fann_layer *' lvalue Var 0x7feaa18263d8 'layer_it' 'struct fann_layer *'
+      | `-BinaryOperator 0x7feaa1826658 <col:19, col:38> 'struct fann_layer *' '+'
+      |   |-ImplicitCastExpr 0x7feaa1826640 <col:19, col:24> 'struct fann_layer *' <LValueToRValue>
+      |   | `-MemberExpr 0x7feaa18265e8 <col:19, col:24> 'struct fann_layer *' lvalue ->first_layer 0x7feaa1825fe0
+      |   |   `-ImplicitCastExpr 0x7feaa18265d0 <col:19> 'struct fann *' <LValueToRValue>
+      |   |     `-DeclRefExpr 0x7feaa18265a8 <col:19> 'struct fann *' lvalue ParmVar 0x7feaa18260e0 'ann' 'struct fann *'
+      |   `-IntegerLiteral 0x7feaa1826620 <col:38> 'int' 1
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7feaa1826728 <col:41, col:53> 'int' '!='
+      | |-ImplicitCastExpr 0x7feaa18266f8 <col:41> 'struct fann_layer *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7feaa18266a8 <col:41> 'struct fann_layer *' lvalue Var 0x7feaa18263d8 'layer_it' 'struct fann_layer *'
+      | `-ImplicitCastExpr 0x7feaa1826710 <col:53> 'struct fann_layer *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7feaa18266d0 <col:53> 'struct fann_layer *' lvalue Var 0x7feaa18264e8 'last_layer' 'struct fann_layer *'
+      |-UnaryOperator 0x7feaa1826778 <col:65, col:73> 'struct fann_layer *' postfix '++'
+      | `-DeclRefExpr 0x7feaa1826750 <col:65> 'struct fann_layer *' lvalue Var 0x7feaa18263d8 'layer_it' 'struct fann_layer *'
+      `-CompoundStmt 0x7feaa1826990 <line:20:5, line:22:5>
+        `-BinaryOperator 0x7feaa1826968 <line:21:7, col:50> 'fann_type':'double' '='
+          |-MemberExpr 0x7feaa18268f8 <col:7, col:42> 'fann_type':'double' lvalue ->value 0x7feaa1825c50
+          | `-ParenExpr 0x7feaa18268d8 <col:7, col:39> 'struct fann_neuron *'
+          |   `-BinaryOperator 0x7feaa18268b0 <col:8, col:38> 'struct fann_neuron *' '-'
+          |     |-ImplicitCastExpr 0x7feaa1826898 <col:8, col:24> 'struct fann_neuron *' <LValueToRValue>
+          |     | `-MemberExpr 0x7feaa1826840 <col:8, col:24> 'struct fann_neuron *' lvalue ->last_neuron 0x7feaa1825e40
+          |     |   `-ParenExpr 0x7feaa1826820 <col:8, col:21> 'struct fann_layer *'
+          |     |     `-BinaryOperator 0x7feaa18267f8 <col:9, col:20> 'struct fann_layer *' '-'
+          |     |       |-ImplicitCastExpr 0x7feaa18267e0 <col:9> 'struct fann_layer *' <LValueToRValue>
+          |     |       | `-DeclRefExpr 0x7feaa1826798 <col:9> 'struct fann_layer *' lvalue Var 0x7feaa18263d8 'layer_it' 'struct fann_layer *'
+          |     |       `-IntegerLiteral 0x7feaa18267c0 <col:20> 'int' 1
+          |     `-IntegerLiteral 0x7feaa1826878 <col:38> 'int' 1
+          `-ImplicitCastExpr 0x7feaa1826950 <col:50> 'fann_type':'double' <IntegralToFloating>
+            `-IntegerLiteral 0x7feaa1826930 <col:50> 'int' 1
